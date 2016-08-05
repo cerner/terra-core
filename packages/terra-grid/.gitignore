@@ -1,0 +1,49 @@
+# From https://github.com/github/gitignore
+#  - Node.gitignore
+#  - Ruby.gitignore
+#  - Sass.gitignore
+
+*.bridgesupport
+*.css.map
+*.gem
+*.log
+*.pid
+*.pid.lock
+*.rbc
+*.seed
+.dat*
+.grunt
+.lock-wscript
+.node_repl_history
+.npm
+.nyc_output
+.repl_history
+.rvmrc
+.sass-cache/
+/.bundle/
+/.config
+/.yardoc/
+/_yardoc/
+/coverage/
+/doc/
+/InstalledFiles
+/lib/bundler/man/
+/pkg/
+/rdoc/
+/spec/examples.txt
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/tmp/
+/vendor/bundle
+build-iPhoneOS/
+build-iPhoneSimulator/
+build/
+build/Release
+coverage
+jspm_packages
+lib-cov
+logs
+node_modules
+npm-debug.log*
+pids

@@ -1,0 +1,21 @@
+{
+  "name": "terra-grid",
+  "version": "0.0.0",
+  "description": "Under construction",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-grid.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-grid",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-grid/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-grid#readme"
+}
