@@ -1,0 +1,12 @@
+@import 'terra-legacy-theme';
+@import 'terra-application';
+@import 'terra-grid';
+
+
+// CODE FOR VISUAL TESTING
+// stylelint-disable selector-class-pattern
+.demo-bar {
+  background-color: #ffdab9;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}

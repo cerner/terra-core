@@ -1,0 +1,58 @@
+// Grid Component Mixins
+// ========================================================
+
+@mixin terra-grid-column-size($columns, $total-columns: $terra-grid-total-columns) {
+  flex-basis: percentage($columns / $total-columns);
+  max-width: percentage($columns / $total-columns);
+}
+
+@mixin terra-grid-modifier-classes($size: '') {
+  @if $size != '' {
+    $size: -#{$size};
+  }
+
+  .terra-Grid--start#{$size} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .terra-Grid--center#{$size} {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .terra-Grid--end#{$size} {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .terra-Grid--top#{$size} {
+    align-items: flex-start;
+  }
+
+  .terra-Grid--middle#{$size} {
+    align-items: center;
+  }
+
+  .terra-Grid--bottom#{$size} {
+    align-items: flex-end;
+  }
+
+  .terra-Grid--around#{$size} {
+    justify-content: space-around;
+  }
+
+  .terra-Grid--between#{$size} {
+    justify-content: space-between;
+  }
+
+  .terra-Grid--reverse#{$size} {
+    flex-direction: row-reverse;
+  }
+
+  .terra-Grid--auto#{$size} {
+    .terra-Grid-col {
+      flex-basis: 0;
+    }
+  }
+}

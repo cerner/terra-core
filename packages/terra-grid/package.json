@@ -1,7 +1,7 @@
 {
   "name": "terra-grid",
-  "version": "0.0.0",
-  "description": "Under construction",
+  "version": "0.1.0",
+  "description": "Provides a flexbox based grid system",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-grid.git"
@@ -17,5 +17,33 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-grid/issues"
   },
-  "homepage": "https://github.com/cerner/terra-grid#readme"
+  "homepage": "https://github.com/cerner/terra-grid#readme",
+  "scripts": {
+    "lint": "npm run lint-js && npm run lint-scss",
+    "lint-js": "eslint .",
+    "lint-scss": "stylelint src/**/*.scss",
+    "start": "npm run lint && webpack-dev-server --hot --inline --progress --colors --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.0",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb-base": "^5.0.3",
+    "eslint-plugin-import": "^1.14.0",
+    "html-loader": "^0.4.4",
+    "node-sass": "^3.7.0",
+    "postcss-loader": "^0.10.1",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "stylelint": "^7.1.0",
+    "stylelint-config-sass-guidelines": "^1.1.0",
+    "terra-application": ">= 0.2.0",
+    "terra-legacy-theme": ">= 0.1.0-rc.1  < 1.0.0",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.15.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "extract-text-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^2.22.0"
+  }
 }

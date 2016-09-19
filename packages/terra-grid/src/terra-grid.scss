@@ -1,0 +1,52 @@
+@import 'terra/grid/variables';
+@import 'terra/grid/mixins';
+
+// Grid Component
+// ========================================================
+
+.terra-Grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  margin-left: -($terra-grid-gutter-width * 0.5);
+  margin-right: -($terra-grid-gutter-width * 0.5);
+}
+
+.terra-Grid-col {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 100%;
+  padding-left: ($terra-grid-gutter-width * 0.5);
+  padding-right: ($terra-grid-gutter-width * 0.5);
+}
+
+// Create column classes
+@for $i from 1 through $terra-grid-total-columns {
+  .terra-Grid-col--#{$i} {
+    @include terra-grid-column-size($i, $terra-grid-total-columns);
+  }
+}
+
+@include terra-grid-modifier-classes();
+
+// Create responsive styles
+@each $size-name, $size-width in $terra-grid-breakpoints {
+  @media screen and (min-width: $size-width) {
+
+    @include terra-grid-modifier-classes($size-name);
+
+    // Responsive column classes
+    @for $i from 1 through $terra-grid-total-columns {
+      .terra-Grid-col--#{$size-name}-#{$i} {
+        @include terra-grid-column-size($i, $terra-grid-total-columns);
+      }
+    }
+  }
+}
+
