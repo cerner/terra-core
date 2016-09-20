@@ -1,0 +1,172 @@
+@import './terra/button/variables';
+@import './terra/button/mixins';
+
+// Button Component
+// ====================================================
+
+// html input[type='button'].terra-Button selector used to
+// prevent a WebKit bug destroys native `audio` and `video` controls
+// in Android 4. More info:
+// https://github.com/necolas/normalize.css/issues/20
+// https://code.google.com/p/android/issues/detail?id=34301
+// appearance: button; set to correct the inability to style
+// clickable types in iOS and Safari.
+// Appearance needs to be applied only to button/input elements, as
+// applying to anchor element will cause render issue.
+// More info:
+// https://github.com/necolas/normalize.css/issues/566
+// https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
+// stylelint-disable selector-no-qualifying-type
+button.terra-Button,
+html input[type='button'].terra-Button,
+input[type='reset'].terra-Button,
+input[type='submit'].terra-Button {
+  appearance: button;  // autoprefix fix into -webkit-appearance
+}
+// stylelint-enable selector-no-qualifying-type
+
+.terra-Button {
+  border-radius: $terra-button-border-radius;
+  border-style: $terra-button-border-style;
+  border-width: $terra-button-border-width;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $terra-button-font-family;
+  font-size: $terra-button-font-size;
+  font-weight: $terra-button-font-weight;
+  line-height: 1.429; // 20px when html font size is computed to 14px
+  margin: $terra-button-margin;
+  padding: $terra-button-padding;
+  text-align: center;
+  text-transform: $terra-button-text-transform;
+  touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+  user-select: none; // Prevent text selection on buttons on mobile devices
+  vertical-align: middle;
+  white-space: normal;
+
+  // Removes extra space Firefox adds to button elements
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: default;
+    opacity: 0.7;
+    pointer-events: none; // prevent pointer interaction for anchor elements
+  }
+
+  // Remove margin used to add space between buttons
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+// Color modifiers
+.terra-Button--default {
+  @include terra-button-color($terra-button-default-color-scheme);
+}
+
+.terra-Button--primary {
+  @include terra-button-color($terra-button-primary-color-scheme);
+}
+
+.terra-Button--secondary {
+  @include terra-button-color($terra-button-secondary-color-scheme);
+}
+
+.terra-Button--positive {
+  @include terra-button-color($terra-button-positive-color-scheme);
+}
+
+.terra-Button--negative {
+  @include terra-button-color($terra-button-negative-color-scheme);
+}
+
+.terra-Button--warning {
+  @include terra-button-color($terra-button-warning-color-scheme);
+}
+
+.terra-Button--info {
+  @include terra-button-color($terra-button-info-color-scheme);
+}
+
+// Button outline modifiers
+.terra-Button--outlineDefault {
+  @include terra-button-outline($terra-button-default-color-scheme);
+}
+
+.terra-Button--outlinePrimary {
+  @include terra-button-outline($terra-button-primary-color-scheme);
+}
+
+.terra-Button--outlineSecondary {
+  @include terra-button-outline($terra-button-secondary-color-scheme);
+}
+
+.terra-Button--outlinePositive {
+  @include terra-button-outline($terra-button-positive-color-scheme);
+}
+
+.terra-Button--outlineNegative {
+  @include terra-button-outline($terra-button-negative-color-scheme);
+}
+
+.terra-Button--outlineWarning {
+  @include terra-button-outline($terra-button-warning-color-scheme);
+}
+
+.terra-Button--outlineInfo {
+  @include terra-button-outline($terra-button-info-color-scheme);
+}
+
+// Button link modifiers
+.terra-Button--linkDefault {
+  @include terra-button-link($terra-button-default-color-scheme);
+}
+
+.terra-Button--linkPrimary {
+  @include terra-button-link($terra-button-primary-color-scheme);
+}
+
+.terra-Button--linkSecondary {
+  @include terra-button-link($terra-button-secondary-color-scheme);
+}
+
+.terra-Button--linkPositive {
+  @include terra-button-link($terra-button-positive-color-scheme);
+}
+
+.terra-Button--linkNegative {
+  @include terra-button-link($terra-button-negative-color-scheme);
+}
+
+.terra-Button--linkWarning {
+  @include terra-button-link($terra-button-warning-color-scheme);
+}
+
+.terra-Button--linkInfo {
+  @include terra-button-link($terra-button-info-color-scheme);
+}
+
+// Button size modifiers
+.terra-Button--tiny {
+  font-size: map-get($terra-button-font-sizes, tiny);
+}
+
+.terra-Button--small {
+  font-size: map-get($terra-button-font-sizes, small);
+}
+
+.terra-Button--medium {
+  font-size: map-get($terra-button-font-sizes, medium);
+}
+
+.terra-Button--large {
+  font-size: map-get($terra-button-font-sizes, large);
+}
+
+.terra-Button--huge {
+  font-size: map-get($terra-button-font-sizes, huge);
+}
