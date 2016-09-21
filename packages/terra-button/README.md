@@ -1,12 +1,25 @@
-# Terra Button
+# Terra Button _(Currently in beta)_
 
 The terra-button component provides users a way to trigger actions in the UI.
 It can be modified in color, size, and type, and can optionally display an icon.
 
+- [Getting Started](#getting-started)
+- [Documentation](#documentation)
+- [Dependencies](#dependencies)
+- [Supported Browsers](#supported-browsers)
+- [Contributing](#contributing)
+- [LICENSE](#license)
+
 ## Getting Started
+
 - Install with [npm](https://www.npmjs.com): `npm install terra-button`
 - [Download the latest version](https://github.com/cerner/terra-button/archive/master.zip)
 - Clone the repo: `git clone https://github.com/cerner/terra-button.git`
+
+## Documentation
+
+Documentation for this component is spilt into individual files.
+One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
 
@@ -15,6 +28,7 @@ See the [documentation](docs/).
 > [terra-legacy-theme](https://github.com/cerner/terra-legacy-theme): Provides global themeable variables.
 
 ## Supported Browsers
+
 | Browser                     | Version |
 |-----------------------------|---------|
 | Chrome & Chrome for Android | Current |
@@ -23,10 +37,9 @@ See the [documentation](docs/).
 | Internet Explorer           | 10 & 11 |
 | Safari & Mobile Safari      | Current |
 
-
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 ## LICENSE
 
