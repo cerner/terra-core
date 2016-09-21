@@ -5,11 +5,22 @@
 
 The terra-grid component provides a flexbox based grid system.
 
-## Getting Started
+- [Getting Started](#getting-started)
+- [Documentation](#documentation)
+- [Dependencies](#dependencies)
+- [Supported Browsers](#supported-browsers)
+- [Contributing](#contributing)
+- [LICENSE](#license)
 
+## Getting Started
 - Install with [npm](https://www.npmjs.com): `npm install terra-grid`
 - [Download the latest version](https://github.com/cerner/terra-grid/archive/master.zip)
 - Clone the repo: `git clone https://github.com/cerner/terra-grid.git`
+
+## Documentation
+
+Documentation for this component is spilt into individual files.
+One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
 
@@ -27,6 +38,8 @@ See the [documentation](docs/).
 | Safari & Mobile Safari      | Current |
 
 ## Contributing
+
+Please read through our contributing guidelines. Included are directions for issue reporting and pull requests.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
