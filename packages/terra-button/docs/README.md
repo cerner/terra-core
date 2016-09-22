@@ -1,9 +1,10 @@
-# Terra Button
+# Terra Button Documentation
 
-The terra-button component provides users a way to trigger actions in the UI.
-It can be modified in color, size, and type, and can optionally display an icon.
+- [Terra Button](terra-button.md)
 
-## Getting Started
-- Install with [npm](https://www.npmjs.com): `npm install terra-button`
-- [Download the latest version](https://github.com/cerner/terra-button/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-button.git`
+Additional modifiers:
+
+- [Color](terra-button-color.md)
+- [Link](terra-button-link.md)
+- [Outline](terra-button-outline.md)
+- [Size](terra-button-size.md)

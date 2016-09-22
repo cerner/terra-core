@@ -32,7 +32,7 @@ input[type='submit'].terra-Button {
   cursor: pointer;
   display: inline-block;
   font-family: $terra-button-font-family;
-  font-size: $terra-button-font-size;
+  font-size: map-get($terra-button-font-sizes, medium);
   font-weight: $terra-button-font-weight;
   line-height: 1.429; // 20px when html font size is computed to 14px
   margin: $terra-button-margin;
