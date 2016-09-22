@@ -5,7 +5,6 @@ $terra-button-border-radius: 0.25em !default;
 $terra-button-border-style: solid !default;
 $terra-button-border-width: 1px !default;
 $terra-button-font-family: $terra-font-family !default;
-$terra-button-font-size: 1rem !default;
 $terra-button-font-weight: 400 !default;
 $terra-button-margin: 0 0.714em 0 0 !default;
 $terra-button-padding: 0.286em 0.714em !default;
@@ -126,7 +125,7 @@ $terra-button-info-color-scheme: (
 $terra-button-font-sizes: (
   tiny: 0.5rem,
   small: 0.8rem,
-  medium: 1.1rem,
+  medium: 1rem,
   large: 1.4rem,
   huge: 1.7rem
 ) !default;
