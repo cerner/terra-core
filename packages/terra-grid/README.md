@@ -13,6 +13,7 @@ The terra-grid component provides a flexbox based grid system.
 - [LICENSE](#license)
 
 ## Getting Started
+
 - Install with [npm](https://www.npmjs.com): `npm install terra-grid`
 - [Download the latest version](https://github.com/cerner/terra-grid/archive/master.zip)
 - Clone the repo: `git clone https://github.com/cerner/terra-grid.git`
@@ -29,6 +30,7 @@ See the [documentation](docs/).
 > [terra-legacy-theme](https://github.com/cerner/terra-legacy-theme): Provides global themeable variables.
 
 ## Supported Browsers
+
 | Browser                     | Version |
 |-----------------------------|---------|
 | Chrome & Chrome for Android | Current |
@@ -39,9 +41,7 @@ See the [documentation](docs/).
 
 ## Contributing
 
-Please read through our contributing guidelines. Included are directions for issue reporting and pull requests.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 ## LICENSE
 
