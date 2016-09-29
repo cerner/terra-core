@@ -66,6 +66,7 @@
   &.is-hovered,
   &:active,
   &.is-active {
+    color: darken(map-get($color-map, link-color), 10%);
     text-decoration: underline;
   }
 
