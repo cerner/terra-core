@@ -2,6 +2,9 @@
 
 - [Terra Button](terra-button.md)
 
+Themeable variables:
+- [Themeable Variables](themeable-variables.md)
+
 Additional modifiers:
 
 - [Color](terra-button-color.md)
