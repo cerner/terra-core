@@ -15,10 +15,7 @@ Variables to `theme` the terra-button component.
 
 | Variable Name                        | Default value      | Usage                         |
 |--------------------------------------|--------------------|-------------------------------|
-| $terra-button-border-radius          | 0.25em             | Set the button border radius  |
-| $terra-button-border-style           | solid              | Set the button border style   |
 | $terra-button-border-width           | 1px                | Set the button border width   |
-| $terra-button-font-family            | $terra-font-family | Set the button font family    |
 | $terra-button-font-weight            | 400                | Set the button font weight    |
 | $terra-button-margin                 | 0 0.714em 0 0      | Set the button margin         |
 | $terra-button-padding                | 0.286em 0.714em    | Set the button padding        |

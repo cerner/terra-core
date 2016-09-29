@@ -26,12 +26,12 @@ input[type='submit'].terra-Button {
 // stylelint-enable selector-no-qualifying-type
 
 .terra-Button {
-  border-radius: $terra-button-border-radius;
-  border-style: $terra-button-border-style;
+  border-radius: 0.25em;
+  border-style: solid;
   border-width: $terra-button-border-width;
   cursor: pointer;
   display: inline-block;
-  font-family: $terra-button-font-family;
+  font-family: $terra-font-family;
   font-size: map-get($terra-button-font-sizes, medium);
   font-weight: $terra-button-font-weight;
   line-height: 1.429; // 20px when html font size is computed to 14px
@@ -58,7 +58,7 @@ input[type='submit'].terra-Button {
   }
 
   // Remove margin used to add space between buttons
-  &:last-of-type {
+  &:last-child {
     margin-right: 0;
   }
 }
