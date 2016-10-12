@@ -2,6 +2,7 @@
 
 [![NPM version](http://img.shields.io/npm/v/terra-grid.svg)](https://www.npmjs.org/package/terra-grid)
 [![Build Status](https://travis-ci.org/cerner/terra-grid.svg?branch=master)](https://travis-ci.org/cerner/terra-grid)
+[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
 The terra-grid component provides a flexbox based grid system.
 
