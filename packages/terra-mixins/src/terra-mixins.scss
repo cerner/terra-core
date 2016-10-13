@@ -1,0 +1,511 @@
+// Mixins
+// ====================================================
+
+@mixin terra-border-color-start($color) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-left-color: $color;
+    }
+
+    [dir='rtl'] & {
+      border-right-color: $color;
+    }
+  } @else {
+    border-left-color: $color;
+  }
+}
+
+@mixin terra-border-color-end($color) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-right-color: $color;
+    }
+
+    [dir='rtl'] & {
+      border-left-color: $color;
+    }
+  } @else {
+    border-right-color: $color;
+  }
+}
+
+@mixin terra-border-style-start($style) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-left-style: $style;
+    }
+
+    [dir='rtl'] & {
+      border-right-style: $style;
+    }
+  } @else {
+    border-left-style: $style;
+  }
+}
+
+@mixin terra-border-style-end($style) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-right-style: $style;
+    }
+
+    [dir='rtl'] & {
+      border-left-style: $style;
+    }
+  } @else {
+    border-right-style: $style;
+  }
+}
+
+@mixin terra-border-width-start($width) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-left-width: $width;
+    }
+
+    [dir='rtl'] & {
+      border-right-width: $width;
+    }
+  } @else {
+    border-left-width: $width;
+  }
+}
+
+@mixin terra-border-width-end($width) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-right-width: $width;
+    }
+
+    [dir='rtl'] & {
+      border-left-width: $width;
+    }
+  } @else {
+    border-right-width: $width;
+  }
+}
+
+@mixin terra-border-start ($width, $style, $color) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-left: $width $style $color;
+    }
+
+    [dir='rtl'] & {
+      border-right: $width $style $color;
+    }
+  } @else {
+    border-left: $width $style $color;
+  }
+}
+
+@mixin terra-border-end ($width, $style, $color) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-right: $width $style $color;
+    }
+
+    [dir='rtl'] & {
+      border-left: $width $style $color;
+    }
+  } @else {
+    border-right: $width $style $color;
+  }
+}
+
+@mixin terra-border-top-radius-start($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-top-left-radius: $radius;
+    }
+
+    [dir='rtl'] & {
+      border-top-right-radius: $radius;
+    }
+  } @else {
+    border-top-left-radius: $radius;
+  }
+}
+
+@mixin terra-border-top-radius-end($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-top-right-radius: $radius;
+    }
+
+    [dir='rtl'] & {
+      border-top-left-radius: $radius;
+    }
+  } @else {
+    border-top-right-radius: $radius;
+  }
+}
+
+@mixin terra-border-bottom-radius-start($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-bottom-left-radius: $radius;
+    }
+
+    [dir='rtl'] & {
+      border-bottom-right-radius: $radius;
+    }
+  } @else {
+    border-bottom-left-radius: $radius;
+  }
+}
+
+@mixin terra-border-bottom-radius-end($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-bottom-right-radius: $radius;
+    }
+
+    [dir='rtl'] & {
+      border-bottom-left-radius: $radius;
+    }
+  } @else {
+    border-bottom-right-radius: $radius;
+  }
+}
+
+@mixin terra-border-top-radius($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] &,
+    [dir='rtl'] & {
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+  } @else {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+}
+
+@mixin terra-border-bottom-radius($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] &,
+    [dir='rtl'] & {
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+  } @else {
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
+
+@mixin terra-border-radius-start($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-bottom-left-radius: $radius;
+      border-top-left-radius: $radius;
+    }
+
+    [dir='rtl'] & {
+      border-bottom-right-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+  } @else {
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+  }
+}
+
+@mixin terra-border-radius-end($radius) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      border-bottom-right-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+
+    [dir='rtl'] & {
+      border-bottom-left-radius: $radius;
+      border-top-left-radius: $radius;
+    }
+  } @else {
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+}
+
+@mixin terra-clear-both() {
+  @if $terra-bidi {
+    [dir='ltr'] &,
+    [dir='rtl'] & {
+      clear: both;
+    }
+  } @else {
+    clear: both;
+  }
+}
+
+@mixin terra-clear-start() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      clear: left;
+    }
+
+    [dir='rtl'] & {
+      clear: right;
+    }
+  } @else {
+    clear: left;
+  }
+}
+
+@mixin terra-clear-end() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      clear: right;
+    }
+
+    [dir='rtl'] & {
+      clear: left;
+    }
+  } @else {
+    clear: right;
+  }
+}
+
+@mixin terra-float-start() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      float: left;
+    }
+
+    [dir='rtl'] & {
+      float: right;
+    }
+  } @else {
+    float: left;
+  }
+}
+
+@mixin terra-float-end() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      float: right;
+    }
+
+    [dir='rtl'] & {
+      float: left;
+    }
+  } @else {
+    float: right;
+  }
+}
+
+@mixin terra-float-none() {
+  @if $terra-bidi {
+    [dir='ltr'] &,
+    [dir='rtl'] & {
+      float: none;
+    }
+  } @else {
+    float: none;
+  }
+}
+
+@mixin terra-margin-start ($margin) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      margin-left: $margin;
+    }
+
+    [dir='rtl'] & {
+      margin-right: $margin;
+    }
+  } @else {
+    margin-left: $margin;
+  }
+}
+
+@mixin terra-margin-end ($margin) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      margin-right: $margin;
+    }
+
+    [dir='rtl'] & {
+      margin-left: $margin;
+    }
+  } @else {
+    margin-right: $margin;
+  }
+}
+
+@mixin terra-margin-horizontal ($margin-start, $margin-end) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      margin-left: $margin-start;
+      margin-right: $margin-end;
+    }
+
+    [dir='rtl'] & {
+      margin-left: $margin-end;
+      margin-right: $margin-start;
+    }
+  } @else {
+    margin-left: $margin-start;
+    margin-right: $margin-end;
+  }
+}
+
+@mixin terra-padding-start ($padding) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      padding-left: $padding;
+    }
+
+    [dir='rtl'] & {
+      padding-right: $padding;
+    }
+  } @else {
+    padding-left: $padding;
+  }
+}
+
+@mixin terra-padding-end ($padding) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      padding-right: $padding;
+    }
+
+    [dir='rtl'] & {
+      padding-left: $padding;
+    }
+  } @else {
+    padding-right: $padding;
+  }
+}
+
+@mixin terra-padding-horizontal ($padding-start, $padding-end) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      padding-left: $padding-start;
+      padding-right: $padding-end;
+    }
+
+    [dir='rtl'] & {
+      padding-left: $padding-end;
+      padding-right: $padding-start;
+    }
+  } @else {
+    padding-left: $padding-start;
+    padding-right: $padding-end;
+  }
+}
+
+@mixin terra-position-start ($value) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      left: $value;
+    }
+
+    [dir='rtl'] & {
+      right: $value;
+    }
+  } @else {
+    left: $value;
+  }
+}
+
+@mixin terra-position-end ($value) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      right: $value;
+    }
+
+    [dir='rtl'] & {
+      left: $value;
+    }
+  } @else {
+    right: $value;
+  }
+}
+
+@mixin terra-text-align-start() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      text-align: left;
+    }
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
+  } @else {
+    text-align: left;
+  }
+}
+
+@mixin terra-text-align-end() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      text-align: right;
+    }
+
+    [dir='rtl'] & {
+      text-align: left;
+    }
+  } @else {
+    text-align: right;
+  }
+}
+
+@mixin terra-text-align-center() {
+  @if $terra-bidi {
+    [dir='ltr'] &,
+    [dir='rtl'] & {
+      text-align: center;
+    }
+  } @else {
+    text-align: center;
+  }
+}
+
+@mixin terra-translate($x, $y) {
+  @if $terra-bidi {
+    $x-inverse: ($x * -1);
+
+    @if ($x != 0) {
+      [dir='ltr'] & {
+        transform: translate($x, $y);
+      }
+
+      [dir='rtl'] & {
+        transform: translate($x-inverse, $y);
+      }
+    } @else {
+      [dir='ltr'] &,
+      [dir='rtl'] & {
+        transform: translate($x, $y);
+      }
+    }
+  } @else {
+    transform: translate($x, $y);
+  }
+}
+
+@mixin terra-translate3d($x, $y, $z) {
+  @if $terra-bidi {
+    $x-inverse: ($x * -1);
+
+    @if ($x != 0) {
+      [dir='ltr'] & {
+        transform: translate3d($x, $y, $z);
+      }
+
+      [dir='rtl'] & {
+        transform: translate3d($x-inverse, $y, $z);
+      }
+    } @else {
+      [dir='ltr'] &,
+      [dir='rtl'] & {
+        transform: translate3d($x, $y, $z);
+      }
+    }
+  } @else {
+    transform: translate3d($x, $y $z);
+  }
+}
