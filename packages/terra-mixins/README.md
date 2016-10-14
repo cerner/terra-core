@@ -1,4 +1,4 @@
-# Terra Mixins _(Currently in beta)_
+# Terra Mixins
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins)
