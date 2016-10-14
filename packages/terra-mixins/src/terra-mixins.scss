@@ -1,6 +1,23 @@
 // Mixins
 // ====================================================
 
+// Clearfix mixin
+// Used to self clear floated child elements
+// More info: h5bp.com/q
+@mixin terra-clearfix() {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    line-height: 0;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// Bidirectional mixins
 @mixin terra-border-color-start($color) {
   @if $terra-bidi {
     [dir='ltr'] & {
