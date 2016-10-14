@@ -22,6 +22,9 @@
     "lint": "npm run lint-js && npm run lint-scss",
     "lint-js": "eslint .",
     "lint-scss": "stylelint src/**/*.scss",
+    "release:major": "npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
+    "release:patch": "npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",
     "start": "npm run lint && webpack-dev-server --hot --inline --progress --colors --host 0.0.0.0"
   },
   "devDependencies": {
