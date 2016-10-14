@@ -12,7 +12,7 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
 
 ### Bidirectionality (bidi) Mixins
 
-Terra leverages the `dir` attribute set on the opening HTML tag for styles to render correctly. 
+Terra leverages the `dir` attribute set on the opening HTML tag for styles to render correctly.
 The dir attribute indicates the directionality of the element's text.
 
 Terra supports the following dir attribute values:
@@ -117,7 +117,7 @@ Adds both the top and bottom border radii for the `start` or `end` text directio
 #### terra-clear-both
 Adds the `clear: both;` style with appropriate specificity for bidi styles when needed.
 
-#### terra-clear-start / terra-clear-start 
+#### terra-clear-start / terra-clear-start
 Adds clear styles in either the `start` or `end` text direction.
 
 #### terra-float-start / terra-float-end
@@ -200,3 +200,10 @@ Center align text with appropriate specificity for bidi styles when needed.
 | $x    | Translate x-coordinates |
 | $y    | Translate y-coordinates |
 | $z    | Translate z-coordinates |
+
+### Clearfix Mixin
+
+Terra provides a clearfix mixin to contain floats without resorting to using presentational markup.
+
+#### terra-clearfix
+Used on containing element to clear floated child elements.
