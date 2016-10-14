@@ -1,4 +1,4 @@
-# Terra Mixins _(Currently in beta)_
+# Terra Mixins
 
 The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.
 
