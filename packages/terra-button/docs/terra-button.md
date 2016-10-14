@@ -1,4 +1,4 @@
-# Terra Button _(Currently in beta)_
+# Terra Button
 
 The terra-button component provides users a way to trigger actions in the UI.
 It can be modified in color, size, and type, and can optionally display an icon.

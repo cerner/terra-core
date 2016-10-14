@@ -1,3 +1,4 @@
-@import 'terra-legacy-theme';
-@import 'terra-application';
+@import 'node_modules/terra-legacy-theme/src/terra-legacy-theme';
+@import 'node_modules/terra-application/src/terra-application';
+$terra-bidi: true;
 @import 'terra-button';
