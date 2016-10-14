@@ -1,6 +1,6 @@
 {
   "name": "terra-mixins",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Global mixins for use throughout the Terra ecosystem",
   "repository": {
     "type": "git",
