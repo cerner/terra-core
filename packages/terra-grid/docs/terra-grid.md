@@ -1,4 +1,4 @@
-# Terra Grid _(Currently in beta)_
+# Terra Grid
 
 The terra-grid component provides a flexbox based grid system.
 
