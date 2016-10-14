@@ -27,10 +27,6 @@ One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
 
-## Dependencies
-
-> [terra-legacy-theme](https://github.com/cerner/terra-legacy-theme): Provides global themeable variables.
-
 ## Supported Browsers
 
 | Browser                     | Version |
