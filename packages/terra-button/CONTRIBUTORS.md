@@ -5,7 +5,7 @@ Cerner Corporation
 - Matt Butler [@matt-butler]
 - Rory Hardy [@gneatgeek]
 - Tao Zhang [@windse7en]
-
+- Tatiana Alexenko [@bunnyLord]
 
 
 [@bjankord]: https://github.com/bjankord
@@ -13,3 +13,4 @@ Cerner Corporation
 [@matt-butler]: https://github.com/matt-butler
 [@gneatgeek]: https://github.com/gneatgeek
 [@windse7en]:https://github.com/windse7en
+[@bunnyLord]:https://github.com/bunnyLord
