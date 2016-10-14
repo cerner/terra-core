@@ -2,13 +2,19 @@
 
 Variables to `theme` the terra-button component.
 
-| Variable Name                        | Default value      | Usage                         |
-|--------------------------------------|--------------------|-------------------------------|
-| $terra-button-border-width           | 1px                | Set the button border width   |
-| $terra-button-font-weight            | 400                | Set the button font weight    |
-| $terra-button-margin                 | 0 0.714em 0 0      | Set the button margin         |
-| $terra-button-padding                | 0.286em 0.714em    | Set the button padding        |
-| $terra-button-text-transform         | none               | Set the button text transform |
+| Variable Name                | Default value | Usage                         |
+|------------------------------|---------------|-------------------------------|
+| $terra-button-border-width   | 1px           | Set the button border width   |
+| $terra-button-font-weight    | 400           | Set the button font weight    |
+| $terra-button-margin-top     | 0.357em       | Set the top button margin     |
+| $terra-button-margin-right   | 0.714em       | Set the right button margin   |
+| $terra-button-margin-bottom  | 0.357em       | Set the bottom button margin  |
+| $terra-button-margin-left    | 0             | Set the left button margin    |
+| $terra-button-padding-top    | 0.286em       | Set the top button padding    |
+| $terra-button-padding-right  | 0.714em       | Set the right button padding  |
+| $terra-button-padding-bottom | 0.286em       | Set the bottom button padding |
+| $terra-button-padding-left   | 0.714em       | Set the left button padding   |
+| $terra-button-text-transform | none          | Set the button text transform |
 
 ### Variable Maps
 

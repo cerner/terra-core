@@ -1,3 +1,4 @@
+@import 'node_modules/terra-mixins/src/terra-mixins';
 @import './terra/button/variables';
 @import './terra/button/mixins';
 
@@ -26,6 +27,10 @@ input[type='submit'].terra-Button {
 // stylelint-enable selector-no-qualifying-type
 
 .terra-Button {
+  @include terra-margin-horizontal($terra-button-margin-left, $terra-button-margin-right);
+  @include terra-padding-horizontal($terra-button-padding-left, $terra-button-padding-right);
+  @include terra-text-align-center;
+
   border-radius: 0.25em;
   border-style: solid;
   border-width: $terra-button-border-width;
@@ -35,9 +40,10 @@ input[type='submit'].terra-Button {
   font-size: map-get($terra-button-font-sizes, medium);
   font-weight: $terra-button-font-weight;
   line-height: 1.429; // 20px when html font size is computed to 14px
-  margin: $terra-button-margin;
-  padding: $terra-button-padding;
-  text-align: center;
+  margin-bottom: $terra-button-margin-bottom;
+  margin-top: $terra-button-margin-top;
+  padding-bottom: $terra-button-padding-bottom;
+  padding-top: $terra-button-padding-top;
   text-transform: $terra-button-text-transform;
   touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
   user-select: none; // Prevent text selection on buttons on mobile devices
@@ -59,7 +65,7 @@ input[type='submit'].terra-Button {
 
   // Remove margin used to add space between buttons
   &:last-child {
-    margin-right: 0;
+    @include terra-margin-end(0);
   }
 }
 
