@@ -2,6 +2,6 @@
 
 - [Terra Mixins](terra-mixins.md)
 
-Additional modifiers:
+Themeable variables:
 
-- {insert links to documentation markdown files}
+- [Themeable Variables](themeable-variables.md)

@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/cerner/terra-mixins.svg?branch=master)](https://travis-ci.org/cerner/terra-mixins)
 [![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
-{insert description}
+The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)

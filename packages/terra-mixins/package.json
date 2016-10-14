@@ -24,8 +24,7 @@
     "lint-scss": "stylelint src/**/*.scss",
     "release:patch": "npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",
     "release:minor": "npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "release:major": "npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "start": "npm run lint && webpack-dev-server --hot --inline --progress --colors --host 0.0.0.0"
+    "release:major": "npm version major -m \"Released version %s\" && npm publish && git push --follow-tags"
   },
   "devDependencies": {
     "css-loader": "^0.23.0",
@@ -38,11 +37,7 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
     "stylelint": "^7.1.0",
-    "stylelint-config-sass-guidelines": "^1.1.0",
-    "terra-application": "^0.2.0",
-    "terra-legacy-theme": ">= 0.1.0-rc.1  < 1.0.0",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.15.1"
+    "stylelint-config-sass-guidelines": "^1.1.0"
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
