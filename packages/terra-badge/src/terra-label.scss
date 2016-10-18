@@ -1,0 +1,80 @@
+@import 'node_modules/terra-mixins/src/terra-mixins';
+@import './terra/label/variables';
+@import './terra/label/mixins';
+
+
+.terra-Label {
+  border-radius: $terra-label-border-radius;
+  display: $terra-label-display;
+  font-size: map-get($terra-label-font-sizes, small);
+  font-weight: $terra-label-font-weight;
+  line-height: $terra-label-line-height;
+  padding-bottom: $terra-label-padding-bottom;
+  padding-left: $terra-label-padding-right;
+  padding-right: $terra-label-padding-left;
+  padding-top: $terra-label-padding-top;
+}
+
+.terra-Label--tiny {
+  font-size: map-get($terra-label-font-sizes, tiny);
+}
+
+.terra-Label--small {
+  font-size: map-get($terra-label-font-sizes, small);
+}
+
+.terra-Label--medium {
+  font-size: map-get($terra-label-font-sizes, medium);
+}
+
+.terra-Label--large {
+  font-size: map-get($terra-label-font-sizes, large);
+}
+
+.terra-Label--huge {
+  font-size: map-get($terra-label-font-sizes, huge);
+}
+
+.terra-Label--default {
+  @include terra-label-color($terra-label-default-color-scheme);
+}
+
+.terra-Label--primary {
+  @include terra-label-color($terra-label-primary-color-scheme);
+}
+
+.terra-Label--secondary {
+  @include terra-label-color($terra-label-secondary-color-scheme);
+}
+
+.terra-Label--positive {
+  @include terra-label-color($terra-label-positive-color-scheme);
+}
+
+.terra-Label--negative {
+  @include terra-label-color($terra-label-negative-color-scheme);
+}
+
+.terra-Label--warning {
+  @include terra-label-color($terra-label-warning-color-scheme);
+}
+
+.terra-Label--info {
+  @include terra-label-color($terra-label-info-color-scheme);
+}
+
+
+.terra-Label--badge {
+  border-radius: $terra-label-badge-border-radius;
+  border-radius: 0.25em;
+  font-weight: 700;
+  min-width: 1.65em;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.terra-Label:empty {
+  display: none;
+}

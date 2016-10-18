@@ -1,0 +1,4 @@
+@mixin terra-label-color($color-map) {
+  background-color: map-get($color-map, background-color);
+  color: map-get($color-map, color);
+}
