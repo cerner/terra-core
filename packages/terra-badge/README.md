@@ -1,11 +1,11 @@
-# Terra Label _(Under construction)_
+# Terra Label
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-label.svg)](https://www.npmjs.org/package/terra-label)
 [![Build Status](https://travis-ci.org/cerner/terra-label.svg?branch=master)](https://travis-ci.org/cerner/terra-label)
 [![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
-{insert description}
+The terra-label component displays content classification.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)

@@ -4,14 +4,15 @@
 
 
 .terra-Label {
+  @include terra-padding-end($terra-label-padding-right);
+  @include terra-padding-start($terra-label-padding-left);
+
   border-radius: $terra-label-border-radius;
   display: $terra-label-display;
   font-size: map-get($terra-label-font-sizes, small);
   font-weight: $terra-label-font-weight;
   line-height: $terra-label-line-height;
   padding-bottom: $terra-label-padding-bottom;
-  padding-left: $terra-label-padding-right;
-  padding-right: $terra-label-padding-left;
   padding-top: $terra-label-padding-top;
 }
 

@@ -3,8 +3,11 @@
 - [Terra Label](terra-label.md)
 
 Themeable variables:
+
 - [Themeable Variables](themeable-variables.md)
 
 Additional modifiers:
 
-- {insert links to documentation markdown files}
+- [Badge](terra-label-badge.md)
+- [Context](terra-label-context.md)
+- [Size](terra-label-size.md)
