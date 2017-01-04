@@ -56,6 +56,11 @@ input[type='submit'].terra-Button {
     padding: 0;
   }
 
+  &:-moz-focusring {
+    outline: 2px solid -moz-mac-focusring;
+    -moz-outline-radius: 0.45em;
+  }
+
   &:disabled,
   &.is-disabled {
     cursor: default;
