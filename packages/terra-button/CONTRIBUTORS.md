@@ -6,6 +6,7 @@ Cerner Corporation
 - Rory Hardy [@gneatgeek]
 - Tao Zhang [@windse7en]
 - Tatiana Alexenko [@bunnyLord]
+- Aaron S. McRuer [@Nerdenator]
 
 
 [@bjankord]: https://github.com/bjankord
@@ -14,3 +15,4 @@ Cerner Corporation
 [@gneatgeek]: https://github.com/gneatgeek
 [@windse7en]:https://github.com/windse7en
 [@bunnyLord]:https://github.com/bunnyLord
+[@Nerdenator]:https://github.com/nerdenator
