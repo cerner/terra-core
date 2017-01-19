@@ -525,6 +525,6 @@
       }
     }
   } @else {
-    transform: translate3d($x, $y $z);
+    transform: translate3d($x, $y, $z);
   }
 }
