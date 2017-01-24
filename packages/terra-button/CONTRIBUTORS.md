@@ -7,6 +7,7 @@ Cerner Corporation
 - Tao Zhang [@windse7en]
 - Tatiana Alexenko [@bunnyLord]
 - Aaron S. McRuer [@Nerdenator]
+- Stephen Esser [@StephenEsser]
 
 
 [@bjankord]: https://github.com/bjankord
@@ -16,3 +17,4 @@ Cerner Corporation
 [@windse7en]:https://github.com/windse7en
 [@bunnyLord]:https://github.com/bunnyLord
 [@Nerdenator]:https://github.com/nerdenator
+[@StephenEsser]:https://github.com/StephenEsser

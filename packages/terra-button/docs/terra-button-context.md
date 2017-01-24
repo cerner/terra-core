@@ -11,3 +11,15 @@ Buttons can be colored by placing any of the following classes on the `terra-But
 | `terra-Button--negative`  | Sets the colors of the button based on the negative button color scheme  |
 | `terra-Button--warning`   | Sets the colors of the button based on the warning button color scheme   |
 | `terra-Button--info`      | Sets the colors of the button based on the info button color scheme      |
+
+### React Intent
+
+| Prop            | Type      | Default   | Description                                                                                              |
+|-----------------|-----------|-----------|----------------------------------------------------------------------------------------------------------|
+| `intent`        | String    | "default" | Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`   |
+
+### React Usage
+
+```
+<Button intent="primary" />
+```

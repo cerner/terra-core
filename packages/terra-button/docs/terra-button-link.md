@@ -11,3 +11,15 @@ Buttons can be styled to display as a link by placing any of the following class
 | `terra-Button--linkNegative`  | Sets the style of the button to display as a link with colors of the button based on the negative button color scheme  |
 | `terra-Button--linkWarning`   | Sets the style of the button to display as a link with colors of the button based on the warning button color scheme   |
 | `terra-Button--linkInfo`      | Sets the style of the button to display as a link with colors of the button based on the info button color scheme      |
+
+### React Variant
+
+| Prop            | Type      | Default   | Description                                                                                                                                          |
+|-----------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `variant`       | String    |           | Sets the button variant. One of `link` or `outline`                                                                                                  |
+
+### React Usage
+
+```
+<Button intent="primary" variant="link" />
+```
