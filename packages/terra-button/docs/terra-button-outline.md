@@ -11,3 +11,15 @@ Buttons can be styled to display with a transparent background and outline by pl
 | `terra-Button--outlineNegative`  | Sets the style of the button to display with a transparent background and outline with colors of the button based on the negative button color scheme  |
 | `terra-Button--outlineWarning`   | Sets the style of the button to display with a transparent background and outline with colors of the button based on the warning button color scheme   |
 | `terra-Button--outlineInfo`      | Sets the style of the button to display with a transparent background and outline with colors of the button based on the info button color scheme      |
+
+### React Variant
+
+| Prop            | Type      | Default   | Description                                                                                                                                                                                                                                                                                                 |
+|-----------------|-----------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `variant`       | String    |           | Sets the button variant. One of `link` or `outline`                                                                                                  |
+
+### React Usage
+
+```
+<Button intent="primary" variant="outline" />
+```

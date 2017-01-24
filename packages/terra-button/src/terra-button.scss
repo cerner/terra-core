@@ -1,6 +1,6 @@
 @import 'node_modules/terra-mixins/src/terra-mixins';
-@import './terra/button/variables';
-@import './terra/button/mixins';
+@import './variables';
+@import './mixins';
 
 // Button Component
 // ====================================================
@@ -44,6 +44,7 @@ input[type='submit'].terra-Button {
   margin-top: $terra-button-margin-top;
   padding-bottom: $terra-button-padding-bottom;
   padding-top: $terra-button-padding-top;
+  text-decoration: none;
   text-transform: $terra-button-text-transform;
   touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
   user-select: none; // Prevent text selection on buttons on mobile devices
@@ -72,6 +73,14 @@ input[type='submit'].terra-Button {
   &:last-child {
     @include terra-margin-end(0);
   }
+}
+
+.terra-Button-text:first-child:not(:last-child) {
+  @include terra-margin-end($terra-button-child-margin);
+}
+
+.terra-Button-text:nth-child(2) {
+  @include terra-margin-start($terra-button-child-margin);
 }
 
 // Color modifiers
