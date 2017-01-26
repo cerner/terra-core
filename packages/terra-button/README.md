@@ -17,7 +17,9 @@ It can be modified in color, size, and type, and can optionally display an icon.
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-button`
+- Install from [npmjs](https://www.npmjs.com)
+  - `npm install terra-button`
+  - `yarn install terra-button`
 - [Download the latest version](https://github.com/cerner/terra-button/archive/master.zip)
 - Clone the repo: `git clone https://github.com/cerner/terra-button.git`
 
@@ -44,7 +46,7 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 
 ## LICENSE
 
-Copyright 2016 Cerner Innovation, Inc.
+Copyright 2017 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

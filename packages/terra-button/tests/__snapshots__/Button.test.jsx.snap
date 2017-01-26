@@ -1,0 +1,645 @@
+exports[`Storyshots Block Default Block 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--block"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Default Block
+  </span>
+</button>
+`;
+
+exports[`Storyshots Block Link Warning Block 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkWarning terra-Button--block"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Warning Block
+  </span>
+</button>
+`;
+
+exports[`Storyshots Block Outline Secondary Block 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlineSecondary terra-Button--block"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Secondary Block
+  </span>
+</button>
+`;
+
+exports[`Storyshots Block Primary Block 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--primary terra-Button--block"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Primary Block
+  </span>
+</button>
+`;
+
+exports[`Storyshots Disabled Disabled 1`] = `
+<button
+  aria-disabled={true}
+  className="terra-Button terra-Button--default is-disabled"
+  disabled={true}
+  href={undefined}
+  onClick={undefined}
+  tabIndex="-1">
+  <span
+    className="terra-Button-text">
+    Disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Disabled Disabled with link primary 1`] = `
+<button
+  aria-disabled={true}
+  className="terra-Button terra-Button--linkPrimary is-disabled"
+  disabled={true}
+  href={undefined}
+  onClick={undefined}
+  tabIndex="-1">
+  <span
+    className="terra-Button-text">
+    Disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Disabled Disabled with outline primary 1`] = `
+<button
+  aria-disabled={true}
+  className="terra-Button terra-Button--outlinePrimary is-disabled"
+  disabled={true}
+  href={undefined}
+  onClick={undefined}
+  tabIndex="-1">
+  <span
+    className="terra-Button-text">
+    Disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Disabled Disabled with primary intent 1`] = `
+<button
+  aria-disabled={true}
+  className="terra-Button terra-Button--primary is-disabled"
+  disabled={true}
+  href={undefined}
+  onClick={undefined}
+  tabIndex="-1">
+  <span
+    className="terra-Button-text">
+    Disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Icons Default icon 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    style={
+      Object {
+        "backgroundColor": "black",
+        "color": "black",
+        "height": "1em",
+        "width": "1em",
+      }
+    }>
+    ...
+  </span>
+  <span
+    className="terra-Button-text">
+    Default Icon
+  </span>
+</button>
+`;
+
+exports[`Storyshots Icons Reversed icon 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Default Icon
+  </span>
+  <span
+    style={
+      Object {
+        "backgroundColor": "black",
+        "color": "black",
+        "height": "1em",
+        "width": "1em",
+      }
+    }>
+    ...
+  </span>
+</button>
+`;
+
+exports[`Storyshots Intent Info 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--info"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Info
+  </span>
+</button>
+`;
+
+exports[`Storyshots Intent Negative 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--negative"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Negative
+  </span>
+</button>
+`;
+
+exports[`Storyshots Intent Positive 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--positive"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Positive
+  </span>
+</button>
+`;
+
+exports[`Storyshots Intent Primary 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--primary"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Primary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Intent Secondary 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--secondary"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Secondary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Intent Warning 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--warning"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Warning
+  </span>
+</button>
+`;
+
+exports[`Storyshots Link Variant Link Info 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkInfo"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Info
+  </span>
+</button>
+`;
+
+exports[`Storyshots Link Variant Link Negative 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkNegative"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Negative
+  </span>
+</button>
+`;
+
+exports[`Storyshots Link Variant Link Positive 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkPositive"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Positive
+  </span>
+</button>
+`;
+
+exports[`Storyshots Link Variant Link Primary 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkPrimary"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Primary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Link Variant Link Secondary 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkSecondary"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Secondary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Link Variant Link Warning 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkWarning"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Link Warning
+  </span>
+</button>
+`;
+
+exports[`Storyshots Outline Variant Outline Info 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlineInfo"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Info
+  </span>
+</button>
+`;
+
+exports[`Storyshots Outline Variant Outline Negative 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlineNegative"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Negative
+  </span>
+</button>
+`;
+
+exports[`Storyshots Outline Variant Outline Positive 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlinePositive"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Positive
+  </span>
+</button>
+`;
+
+exports[`Storyshots Outline Variant Outline Primary 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlinePrimary"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Primary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Outline Variant Outline Secondary 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlineSecondary"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Secondary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Outline Variant Outline Warning 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlineWarning"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Outline Warning
+  </span>
+</button>
+`;
+
+exports[`Storyshots Size Default 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Default
+  </span>
+</button>
+`;
+
+exports[`Storyshots Size Huge 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--huge"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Huge
+  </span>
+</button>
+`;
+
+exports[`Storyshots Size Large 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--large"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Large
+  </span>
+</button>
+`;
+
+exports[`Storyshots Size Medium 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--medium"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Medium
+  </span>
+</button>
+`;
+
+exports[`Storyshots Size Small 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--small"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Small
+  </span>
+</button>
+`;
+
+exports[`Storyshots Size Tiny 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--tiny"
+  disabled={false}
+  href={undefined}
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Tiny
+  </span>
+</button>
+`;
+
+exports[`Storyshots href with an href prop 1`] = `
+<a
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  href="#"
+  onClick={undefined}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    I am rendered with an anchor tag
+  </span>
+</a>
+`;
+
+exports[`Storyshots onClick Alert onClick 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  href={undefined}
+  onClick={[Function]}
+  tabIndex={undefined}>
+  <span
+    className="terra-Button-text">
+    Click Me
+  </span>
+</button>
+`;
+
+exports[`test should render a Button with merged attributes 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default TestClass"
+  data-mock="data"
+  disabled={false}
+  style={
+    Object {
+      "height": "100px",
+    }
+  } />
+`;
+
+exports[`test should render a default component 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false} />
+`;
+
+exports[`test should render a default link component 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--linkDefault"
+  disabled={false} />
+`;
+
+exports[`test should render a default outline component 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--outlineDefault"
+  disabled={false} />
+`;
+
+exports[`test should render a icon 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--tiny"
+  disabled={false}>
+  <img
+    alt="icon" />
+</button>
+`;
+
+exports[`test should render a icon and a text 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default terra-Button--tiny"
+  disabled={false}>
+  <img
+    alt="icon" />
+  <span
+    className="terra-Button-text">
+    text
+  </span>
+</button>
+`;
+
+exports[`test should render as an anchor when provided an href 1`] = `
+<a
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  href="MockHref">
+  <span
+    className="terra-Button-text">
+    href
+  </span>
+</a>
+`;
+
+exports[`test should render as disabled when set 1`] = `
+<button
+  aria-disabled={true}
+  className="terra-Button terra-Button--default is-disabled"
+  disabled={true}
+  tabIndex="-1">
+  <span
+    className="terra-Button-text">
+    Disabled
+  </span>
+</button>
+`;

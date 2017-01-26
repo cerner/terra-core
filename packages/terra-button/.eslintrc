@@ -1,5 +1,3 @@
-// Use this file as a starting point for your project's .eslintrc.
-// Copy this file, and add rule overrides as needed.
 {
   "extends": "airbnb",
   "plugins": [
@@ -10,5 +8,9 @@
   "env": {
     "browser": true,
     "jest": true
+  },
+  "rules": {
+    "max-len": "off", // Remove warnings on max line length exceeding 100 characters
+    "react/require-default-props": "off" // Disabled the requirement to default all non-required props
   }
 }
