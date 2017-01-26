@@ -1,5 +1,7 @@
 language: node_js
-node_js:
-  - '6'
-  - '6.3'
-script: npm run test
+script:
+  - yarn test
+cache:
+  yarn: true
+  directories:
+    - node_modules
