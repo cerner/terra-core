@@ -19,8 +19,8 @@ const display5 = <Display text="display 5" />;
 const display6 = <Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-const longDisplay1 = <Display text="display1display1display1display1display1display1display1" />;
-const longDisplay2 = <Display text="display2display2display2display2display2display2display2" />;
+const longDisplay1 = <Display text="display1display1display1display1display1display1display1display1display1display1display1display1display1display1" />;
+const longDisplay2 = <Display text="display2display2display2display2display2display2display2display2display2display2display2display2display2display2" />;
 const longDisplays = [longDisplay1, longDisplay2];
 
 const styleDisplay1 = <Display text="display 1" style="secondary" />;
