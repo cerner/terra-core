@@ -1,6 +1,6 @@
 {
   "name": "terra-compact-tile",
-  "main": "lib/TerraCompactTile.js",
+  "main": "lib/CompactTile.js",
   "version": "0.1.0",
   "description": "terra-compact-tile",
   "repository": {
@@ -32,6 +32,9 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addons": "^1.5.0",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
+    "@kadira/storybook-addon-options": "^1.0.1",
     "autoprefixer": "^6.6.1",
     "babel-cli": "^6.18.0",
     "babel-jest": "^18.0.0",
@@ -52,7 +55,10 @@
     "node-sass": "^4.3.0",
     "postcss-loader": "^1.2.2",
     "react-addons-test-utils": "^15.4.2",
+    "react-storybook-addon-props-combinations": "^0.3.0",
     "sass-loader": "^4.1.1",
+    "storybook-addon-a11y": "0.0.4",
+    "storybook-addon-i18n-tools": "^1.0.0",
     "storyshots": "^3.2.0",
     "style-loader": "^0.13.1",
     "stylelint": "^7.7.1",
@@ -75,6 +81,7 @@
     "lint-js": "eslint --ext .js,.jsx src",
     "lint-scss": "stylelint src/**/*.scss",
     "pretest": "yarn lint",
+    "prepublish": "yarn build",
     "release:major": "yarn test && yarn build && npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
     "release:minor": "yarn test && yarn build && npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
     "release:patch": "yarn test && yarn build && npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",

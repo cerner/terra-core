@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import './terra-compact-tile.scss';
+import './compact-tile.scss';
 
 // import Display from './Display';
 // import Comment from './Comment';
@@ -53,12 +53,13 @@ export default class CompactTile extends React.Component {
     return (
       <div className="terra-CompactTile-row" key={rowKey}>
         {row.map((display, contentIndex) => {
+          const contentKey = contentIndex;
           const contentClasses = CompactTile.classesForContent(rowIndex,
                                                                rowCount,
                                                                contentIndex,
                                                                theme);
           return (
-            <div {...{ className: contentClasses }} key={contentIndex}>
+            <div {...{ className: contentClasses }} key={contentKey}>
               {display}
             </div>
           );

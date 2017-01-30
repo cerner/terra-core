@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import path from 'path';
-import './terra-compact-tile-display.scss';
+import './compact-tile-display.scss';
 
 class Display extends React.Component {
 

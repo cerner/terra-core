@@ -1,6 +1,6 @@
 @import 'node_modules/terra-mixins/src/terra-mixins';
-@import './terra/compact-tile/variables';
-@import './terra/compact-tile/mixins';
+@import './variables';
+@import './mixins';
 
 .terra-CompactTile {
   display: flex;

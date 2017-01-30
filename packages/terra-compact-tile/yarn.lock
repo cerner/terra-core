@@ -14,9 +14,25 @@
     json-stringify-safe "^5.0.1"
     react-inspector "^1.1.0"
 
+"@kadira/storybook-addon-knobs@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@kadira/storybook-addon-knobs/-/storybook-addon-knobs-1.7.1.tgz#5c6278c2c67652408358a7ee49e789fd1396b831"
+  dependencies:
+    babel-runtime "^6.5.0"
+    deep-equal "^1.0.1"
+    insert-css "^1.0.0"
+    moment "^2.15.0"
+    react-color "^2.4.3"
+    react-datetime "^2.6.0"
+    react-textarea-autosize "^4.0.5"
+
 "@kadira/storybook-addon-links@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@kadira/storybook-addon-links/-/storybook-addon-links-1.0.1.tgz#566136a8020b60f82f146ef37d93b0c86de969d8"
+
+"@kadira/storybook-addon-options@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kadira/storybook-addon-options/-/storybook-addon-options-1.0.1.tgz#ab51e474417d76d1cb8e39752c11a410acd7f23c"
 
 "@kadira/storybook-addons@^1.5.0":
   version "1.6.1"
@@ -373,6 +389,10 @@ aws-sign2@~0.6.0:
 aws4@^1.2.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.5.0.tgz#0a29ffb79c31c9e712eeb087e8e7a64b4a56d755"
+
+axe-core@^2.0.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-2.1.7.tgz#4f66f2b3ee3b58ec2d3db4339dd124c5b33b79c3"
 
 babel-cli@^6.18.0:
   version "6.22.2"
@@ -1389,7 +1409,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@^2.2.3, classnames@^2.2.5:
+classnames@^2.2.0, classnames@^2.2.3, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -3062,6 +3082,10 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
+insert-css@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-1.1.0.tgz#4a3f7a3e783877381bb8471a6452d1d27315db9e"
+
 interpret@^0.6.4:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-0.6.6.tgz#fecd7a18e7ce5ca6abfb953e1f86213a49f1625b"
@@ -3917,7 +3941,7 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3995,6 +4019,10 @@ marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
+material-colors@^1.2.1:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.5.tgz#5292593e6754cb1bcc2b98030e4e0d6a3afc9ea1"
+
 math-expression-evaluator@^1.2.14:
   version "1.2.15"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.15.tgz#38dc5f0194c5bf5ff1c690ad4c4b64df71ac0187"
@@ -4042,7 +4070,7 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
-merge@^1.1.3:
+merge@^1.1.3, merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
@@ -4113,6 +4141,10 @@ minimist@^1.1.0, minimist@^1.1.1, minimist@^1.1.3, minimist@^1.2.0:
 mobx@^2.3.4:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-2.7.0.tgz#cf3d82d18c0ca7f458d8f2a240817b3dc7e54a01"
+
+moment@^2.15.0:
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.17.1.tgz#fed9506063f36b10f066c8b59a144d7faebe1d82"
 
 ms@0.7.1:
   version "0.7.1"
@@ -4344,9 +4376,17 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
+
 object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+
+object-hash@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.1.5.tgz#bdd844e030d0861b692ca175c6cab6868ec233d7"
 
 object-is@^1.0.1:
   version "1.0.1"
@@ -4581,6 +4621,10 @@ path-type@^2.0.0:
 pbkdf2-compat@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pbkdf2-compat/-/pbkdf2-compat-2.0.1.tgz#b6e0c8fa99494d94e0511575802a59a5c142f288"
+
+performance-now@^0.2.0, performance-now@~0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
 pify@^2.0.0:
   version "2.3.0"
@@ -5075,6 +5119,12 @@ querystringify@0.0.x:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-0.0.4.tgz#0cf7f84f9463ff0ae51c4c4b142d95be37724d9c"
 
+raf@^3.1.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.3.0.tgz#93845eeffc773f8129039f677f80a36044eee2c3"
+  dependencies:
+    performance-now "~0.2.0"
+
 randomatic@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.6.tgz#110dcabff397e9dcff7c0789ccc0a49adf1ec5bb"
@@ -5101,6 +5151,22 @@ react-addons-test-utils@^15.4.2:
   dependencies:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
+
+react-color@^2.4.3:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.11.1.tgz#7a1fabd599a49c21ef2a548de00335a392d5d410"
+  dependencies:
+    lodash "^4.0.1"
+    material-colors "^1.2.1"
+    reactcss "^1.1.1"
+    tinycolor2 "^1.1.2"
+
+react-datetime@^2.6.0:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.8.3.tgz#0ef74b3505cfc517b44ac113bbd6cdbc50d3e308"
+  dependencies:
+    object-assign "^3.0.0"
+    react-onclickoutside "^4.1.0"
 
 react-docgen@^2.12.1:
   version "2.13.0"
@@ -5165,12 +5231,32 @@ react-modal@^1.2.0, react-modal@^1.2.1:
     exenv "1.2.0"
     lodash.assign "^4.2.0"
 
+react-motion@^0.4.4:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.4.7.tgz#f77331ec7920bdb0d0cfc37eb6ffa10571bf42c7"
+  dependencies:
+    performance-now "^0.2.0"
+    raf "^3.1.0"
+
+react-onclickoutside@^4.1.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-4.9.0.tgz#2908c3136e244102bea5e5437a838a528d5d2995"
+  dependencies:
+    object-assign "^4.0.1"
+
 react-simple-di@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-simple-di/-/react-simple-di-1.2.0.tgz#dde0e5bf689f391ef2ab02c9043b213fe239c6d0"
   dependencies:
     babel-runtime "6.x.x"
     hoist-non-react-statics "1.x.x"
+
+react-storybook-addon-props-combinations@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-storybook-addon-props-combinations/-/react-storybook-addon-props-combinations-0.3.0.tgz#55f41cfb3f45f820f897d1325e4b57dfb6efab58"
+  dependencies:
+    object-hash "^1.1.5"
+    pretty-format "^18.1.0"
 
 react-stubber@^1.0.0:
   version "1.0.0"
@@ -5185,12 +5271,31 @@ react-test-renderer@^15.3.1:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
+react-textarea-autosize@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-4.0.5.tgz#55379f6a6fa575fc87d1b8de2756e57e3b6c995d"
+
+react-toggle-button@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-toggle-button/-/react-toggle-button-2.1.0.tgz#fb174ccc335feb8d21d6929f3b26a14fb0b00901"
+  dependencies:
+    react-motion "^0.4.4"
+
 react@^15.4.1, react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
+reactcss@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/reactcss/-/reactcss-1.1.1.tgz#9f16fc737fae08daa23bf8a3429bd9f54e162b52"
+  dependencies:
+    classnames "^2.2.0"
+    lodash "^4.0.1"
+    merge "^1.2.0"
     object-assign "^4.1.0"
 
 read-file-stdin@^0.2.1:
@@ -5781,6 +5886,18 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+storybook-addon-a11y@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/storybook-addon-a11y/-/storybook-addon-a11y-0.0.4.tgz#2983c0e7f82dfdbdf9f8237dd72746bb49055aac"
+  dependencies:
+    axe-core "^2.0.7"
+
+storybook-addon-i18n-tools@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/storybook-addon-i18n-tools/-/storybook-addon-i18n-tools-1.0.0.tgz#276f5637acfccb12f7867abfb091f7599bddcfb0"
+  dependencies:
+    react-toggle-button "^2.1.0"
+
 storyshots@^3.2.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/storyshots/-/storyshots-3.2.1.tgz#192c9288f9d228c559a462384b5b45c182f5aba5"
@@ -6136,6 +6253,10 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
+
+tinycolor2@^1.1.2:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
 
 tmpl@1.0.x:
   version "1.0.4"
