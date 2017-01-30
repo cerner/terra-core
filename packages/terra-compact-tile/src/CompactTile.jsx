@@ -142,7 +142,7 @@ export default class CompactTile extends React.Component {
 CompactTile.defaultProps = {
   layout: 'oneColumn',
   theme: 'defaultTheme',
-  isTruncated: true,
+  isTruncated: false,
   accessoryAlignment: 'alignCenter',
 };
 

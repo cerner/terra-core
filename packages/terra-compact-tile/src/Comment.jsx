@@ -39,7 +39,7 @@ Comment.propTypes = {
 };
 
 Comment.defaultProps = {
-  isTruncated: true,
+  isTruncated: false,
 };
 
 export const includePaths = path.join(__dirname, '../src/');

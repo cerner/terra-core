@@ -50,7 +50,7 @@ const styles = [
 ];
 
 Display.defaultProps = {
-  isTruncated: true,
+  isTruncated: false,
 };
 
 Display.propTypes = {
