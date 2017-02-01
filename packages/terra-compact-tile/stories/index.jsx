@@ -44,17 +44,13 @@ const alignmentOptions = {
 
 const testElement = <img alt="Graphic" />;
 
-const display1 = <Display text="display 1" />;
-const display2 = <Display text="display 2" />;
+const display1 = <Display text="display1display1display1display1display1display1display1display1display1display1display1display1display1display1" />;
+const display2 = <Display text="display2display2display2display2display2display2display2display2display2display2display2display2display2display2" />;
 const display3 = <Display text="display 3" />;
 const display4 = <Display text="display 4" />;
 const display5 = <Display text="display 5" />;
 const display6 = <Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
-
-const longDisplay1 = <Display text="display1display1display1display1display1display1display1display1display1display1display1display1display1display1" />;
-const longDisplay2 = <Display text="display2display2display2display2display2display2display2display2display2display2display2display2display2display2" />;
-const longDisplays = [longDisplay1, longDisplay2];
 
 const styleDisplay1 = <Display text="display 1" style="secondary" />;
 const styleDisplay2 = <Display text="display 2" style="strikeThrough" />;
@@ -72,16 +68,6 @@ const params = {
   comment,
 };
 
-const paramsDouble = {
-  layout: 'twoColumns',
-  theme: 'defaultTheme',
-  displays: displays,
-  leftAccessory: testElement,
-  rightAccessory: testElement,
-  accessoryAlignment: 'alignCenter',
-  comment,
-};
-
 const stories = storiesOf('Terra CompactTile', module);
 
 stories
@@ -92,33 +78,13 @@ stories
       isTruncated={boolean('Is Truncated', false)}
       displays={displays}
       leftAccessory={testElement}
+      rightAccessory={testElement}
       accessoryAlignment={select(alignmentLabel, alignmentOptions, 'alignCenter')}
       comment={comment}
     />
   ))
-  .add('Without props', () => (
-    <CompactTile displays={displays} />
-  ))
-  .add('With two columns', () => (
-    <CompactTile layout="twoColumns" displays={displays} />
-  ))
-  .add('With two columns left', () => (
-    <CompactTile theme="leftEmphasisTheme" layout="twoColumns" displays={displays} />
-  ))
-  .add('With 1 column and 1 graphic', () => (
-    <CompactTile {...params} />
-  ))
-  .add('With 2 columns and 2 graphics', () => (
-    <CompactTile {...paramsDouble} />
-  ))
   .add('With two rows', () => (
     <CompactTile layout="twoColumns" displays={[display1, display2, display3, display4]} />
-  ))
-  .add('With long text', () => (
-    <CompactTile layout="twoColumns" displays={longDisplays} />
-  ))
-  .add('With long text with truncation', () => (
-    <CompactTile layout="twoColumns" isTruncated={true} displays={longDisplays} />
   ))
   .add('With styles', () => (
     <CompactTile displays={styleDisplays} />
