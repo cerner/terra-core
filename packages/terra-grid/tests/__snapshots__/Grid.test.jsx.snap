@@ -1,0 +1,82 @@
+exports[`Storyshots Grid  Without props 1`] = `
+<span>
+  <button
+    className="terra-Grid terra-Grid--default"
+    onClick={[Function]}>
+    Terra, 
+    default
+  </button>
+</span>
+`;
+
+exports[`test should render a default component 1`] = `
+<button
+  className="terra-Grid terra-Grid--default"
+  onClick={[Function]}>
+  Terra, 
+  default
+</button>
+`;
+
+exports[`test should render a primary component 1`] = `
+<button
+  className="terra-Grid terra-Grid--primary"
+  onClick={[Function]}>
+  Terra, 
+  primary
+</button>
+`;
+
+exports[`test should toggle the class u-selected on default 1`] = `
+<button
+  className="terra-Grid terra-Grid--default"
+  onClick={[Function]}>
+  Terra, 
+  default
+</button>
+`;
+
+exports[`test should toggle the class u-selected on default 2`] = `
+<button
+  className="terra-Grid terra-Grid--default u-selected"
+  onClick={[Function]}>
+  Terra, 
+  default
+</button>
+`;
+
+exports[`test should toggle the class u-selected on default 3`] = `
+<button
+  className="terra-Grid terra-Grid--default"
+  onClick={[Function]}>
+  Terra, 
+  default
+</button>
+`;
+
+exports[`test should toggle the class u-selected on primary 1`] = `
+<button
+  className="terra-Grid terra-Grid--primary"
+  onClick={[Function]}>
+  Terra, 
+  primary
+</button>
+`;
+
+exports[`test should toggle the class u-selected on primary 2`] = `
+<button
+  className="terra-Grid terra-Grid--primary u-selected"
+  onClick={[Function]}>
+  Terra, 
+  primary
+</button>
+`;
+
+exports[`test should toggle the class u-selected on primary 3`] = `
+<button
+  className="terra-Grid terra-Grid--primary"
+  onClick={[Function]}>
+  Terra, 
+  primary
+</button>
+`;

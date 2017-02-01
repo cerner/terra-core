@@ -1,5 +1,6 @@
 # Terra Grid
 
+
 [![NPM version](http://img.shields.io/npm/v/terra-grid.svg)](https://www.npmjs.org/package/terra-grid)
 [![Build Status](https://travis-ci.org/cerner/terra-grid.svg?branch=master)](https://travis-ci.org/cerner/terra-grid)
 [![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
@@ -8,14 +9,15 @@ The terra-grid component provides a flexbox based grid system.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
-- [Dependencies](#dependencies)
 - [Supported Browsers](#supported-browsers)
 - [Contributing](#contributing)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-grid`
+- Install from [npmjs](https://www.npmjs.com)
+  - `npm install terra-grid`
+  - `yarn install terra-grid`
 - [Download the latest version](https://github.com/cerner/terra-grid/archive/master.zip)
 - Clone the repo: `git clone https://github.com/cerner/terra-grid.git`
 
@@ -42,7 +44,7 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 
 ## LICENSE
 
-Copyright 2016 Cerner Innovation, Inc.
+Copyright 2017 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
