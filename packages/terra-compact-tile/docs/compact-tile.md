@@ -45,10 +45,10 @@ import CompactTile from 'terra-compact-tile';
 
 | Prop | Type | Default | Description|
 |------|------|---------|------------|
-|`layout`|String|`oneColumn`|The number of columns used to layout display, one or two.|
-|`theme`|String|`defaultTheme`|The emphasis of text, left or default right.|
+|`layout`|String|`oneColumn`|The number of columns used to layout display. One of `oneColumn` or `twoColumns`.|
+|`theme`|String|`defaultTheme`|The emphasis of text, left or default right. One of `defaultTheme` or `leftEmphasisTheme`. |
 |`isTruncated`|Bool|false|The indicator if text should be truncated by default across the tile.|
-|`accessoryAlignment`|String|`center`|The vertical alignment left and right accessories.|
+|`accessoryAlignment`|String|`alignCenter`|The vertical alignment left and right accessories. One of `alignTop` or `alignCenter`.|
 |`leftAccessory`|Element||The left aligned accessory, generally a graphic.|
 |`rightAccessory`|Element||The right aligned accessory, generally a graphic.|
 |`displays`|Array||An array of Display React elements.|

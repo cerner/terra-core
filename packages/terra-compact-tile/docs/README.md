@@ -1,11 +1,4 @@
-# Terra Compact Tile Documentation
+# Terra CompactTile Documentation
 
-- [Terra Compact Tile](terra-compact-tile.md)
-
-Additional modifiers:
-
-- {insert links to documentation markdown files}
-
-Usage:
-
-- {insert usage}
+[CompactTile](compact-tile.md)
+[Themeable Variables](themeable-variables.md)

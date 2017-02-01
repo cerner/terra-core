@@ -11,10 +11,10 @@ class Comment extends React.Component {
       return null;
     }
     // TODO add a comment graphic
-    // commentDisplay.graphic = comment icon
-    // const commentGraphic = <TerraGraphic icon_class='icon-comment'
-    //                                      size='text-body'
-    //                                      class='terra-CompactCard-comment--graphic'>;
+    // commentDisplay.icon = comment icon
+    // const commentIcon = <TerraIcon icon_class='icon-comment'
+    //                                size='text-body'
+    //                                class='terra-CompactCard-comment--icon'>;
 
     const commentAttributes = Object.assign({}, this.props.attributes);
     commentAttributes.className = classNames([

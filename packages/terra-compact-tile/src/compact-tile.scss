@@ -3,12 +3,11 @@
 @import './mixins';
 
 // Temporary until it is added to application.
-html {
-  word-wrap: break-word;
-  word-break: break-word;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+.terra-CompactTile {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 87.5%;
-  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 .terra-CompactTile {
@@ -97,8 +96,8 @@ html {
   color: $terra-compact-card-comment-color;
 }
 
-.terra-CompactTile-comment--graphic {
-  color: $terra-compact-card-comment-graphic-color;
+.terra-CompactTile-comment--icon {
+  color: $terra-compact-card-comment-icon-color;
 }
 
 // Selection
@@ -107,7 +106,7 @@ html {
   .terra-CompactTile-text,
   .terra-CompactTile-text--inlineGraphic,
   .terra-CompactTile-comment,
-  .terra-CompactTile-comment--graphic {
+  .terra-CompactTile-comment--icon {
     color: $terra-compact-card-text-inverse-color !important;
   }
 }
@@ -135,7 +134,6 @@ html {
 }
 
 .terra-CompactTile--twoColumns {
-  //  .terra-CompactTile-rowContainer {
   .terra-CompactTile-content:nth-child(odd) {
     flex: 1 1 auto;
     text-align: left;
@@ -156,7 +154,6 @@ html {
       min-width: 10px; // Need min-width, as IE10 will completely squish display
     }
   }
-  //  }
 }
 
 // We need to style content that appears out of the rowContainer (i.e. the comment).
