@@ -75,7 +75,7 @@ var Display = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'terra-CompactTile-text--inlineGraphic' },
+        { className: 'terra-CompactTile-text--inlineIcon' },
         icon
       );
     }
@@ -87,7 +87,7 @@ var Display = function (_React$Component) {
 var styles = ['secondary', 'attention', 'strikeThrough'];
 
 Display.defaultProps = {
-  isTruncated: true
+  isTruncated: false
 };
 
 Display.propTypes = {

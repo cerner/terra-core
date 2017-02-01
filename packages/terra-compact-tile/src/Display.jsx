@@ -11,7 +11,7 @@ class Display extends React.Component {
     }
 
     return (
-      <div className="terra-CompactTile-text--inlineGraphic">
+      <div className="terra-CompactTile-text--inlineIcon">
         {icon}
       </div>
     );

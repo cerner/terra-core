@@ -178,7 +178,7 @@ exports.default = CompactTile;
 CompactTile.defaultProps = {
   layout: 'oneColumn',
   theme: 'defaultTheme',
-  isTruncated: true,
+  isTruncated: false,
   accessoryAlignment: 'alignCenter'
 };
 

@@ -49,10 +49,10 @@ var Comment = function (_React$Component) {
         return null;
       }
       // TODO add a comment graphic
-      // commentDisplay.graphic = comment icon
-      // const commentGraphic = <TerraGraphic icon_class='icon-comment'
-      //                                      size='text-body'
-      //                                      class='terra-CompactCard-comment--graphic'>;
+      // commentDisplay.icon = comment icon
+      // const commentIcon = <TerraIcon icon_class='icon-comment'
+      //                                size='text-body'
+      //                                class='terra-CompactCard-comment--icon'>;
 
       var commentAttributes = _extends({}, this.props.attributes);
       commentAttributes.className = (0, _classnames2.default)(['terra-CompactTile-comment', commentAttributes.className]);
@@ -75,7 +75,7 @@ Comment.propTypes = {
 };
 
 Comment.defaultProps = {
-  isTruncated: true
+  isTruncated: false
 };
 
 var includePaths = exports.includePaths = _path2.default.join(__dirname, '../src/');
