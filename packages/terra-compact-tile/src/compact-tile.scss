@@ -94,10 +94,14 @@
 .terra-CompactTile-comment {
   @include terra-text-body;
   color: $terra-compact-card-comment-color;
+
+//  .terra-Icon {
+//    fill: $terra-compact-card-comment-icon-color;
+//  }
 }
 
 .terra-CompactTile-comment--icon {
-  color: $terra-compact-card-comment-icon-color;
+  fill: $terra-compact-card-comment-icon-color;
 }
 
 // Selection
