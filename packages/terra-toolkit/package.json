@@ -45,7 +45,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.26.0",
-    "jasmine": "^2.5.2",
     "jasmine-es6": "^0.4.0",
     "jasmine-spec-reporter": "^3.1.0",
     "jsonfile": "^2.4.0",
