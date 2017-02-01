@@ -54,13 +54,20 @@ var Comment = function (_React$Component) {
       //                                size='text-body'
       //                                class='terra-CompactCard-comment--icon'>;
 
+      var commentIcon = _react2.default.createElement(
+        'svg',
+        { className: 'terra-Icon terra-CompactTile-comment--icon is-bidi', 'aria-hidden': 'true', viewBox: '0 0 48 48', xmlns: 'http://www.w3.org/2000/svg', 'data-name': 'Layer 1', width: '1em', height: '1em' },
+        _react2.default.createElement('path', { d: 'M46 2.1H2a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h31.2L45 45.9V34.1h1a2 2 0 0 0 2-2v-28a2 2 0 0 0-2-2z' })
+      );
+
       var commentAttributes = _extends({}, this.props.attributes);
       commentAttributes.className = (0, _classnames2.default)(['terra-CompactTile-comment', commentAttributes.className]);
 
       return _react2.default.createElement(_Display2.default, {
         text: this.props.text,
         isTruncated: this.props.isTruncated,
-        attributes: commentAttributes
+        attributes: commentAttributes,
+        icon: commentIcon
       });
     }
   }]);

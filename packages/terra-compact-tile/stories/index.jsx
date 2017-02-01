@@ -1,13 +1,46 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
-import CompactTile from '../src/CompactTile';
-import Comment from '../src/Comment';
-import Display from '../src/Display';
-
+import { addDecorator, storiesOf } from '@kadira/storybook';
 import { checkA11y } from 'storybook-addon-a11y';
 import 'storybook-addon-i18n-tools';
 import { withKnobs, boolean, select } from '@kadira/storybook-addon-knobs';
 import { setOptions } from '@kadira/storybook-addon-options';
+
+import CompactTile from '../src/CompactTile';
+import Comment from '../src/Comment';
+import Display from '../src/Display';
+
+setOptions({
+  name: 'Terra CompactTile Storybook',
+  url: 'https://github.com/cerner/terra-compact-tile',
+  goFullScreen: false,
+  showLeftPanel: true,
+  showDownPanel: true,
+  showSearchBox: false,
+  downPanelInRight: true,
+  sortStoriesByKind: false,
+});
+
+addDecorator(checkA11y);
+addDecorator(withKnobs);
+
+
+const layoutLabel = 'Column Layout';
+const layoutOptions = {
+  oneColumn: 'oneColumn',
+  twoColumns: 'twoColumns',
+};
+
+const themeLabel = 'Theme';
+const themeOptions = {
+  defaultTheme: 'defaultTheme',
+  leftEmphasisTheme: 'leftEmphasisTheme',
+};
+
+const alignmentLabel = 'Accessory Alignment';
+const alignmentOptions = {
+  alignTop: 'alignTop',
+  alignCenter: 'alignCenter',
+};
 
 const testElement = <img alt="Graphic" />;
 
@@ -49,7 +82,20 @@ const paramsDouble = {
   comment,
 };
 
-storiesOf('TerraCompactTile ', module)
+const stories = storiesOf('Terra CompactTile', module);
+
+stories
+  .add('With Params', () => (
+    <CompactTile
+      layout={select(layoutLabel, layoutOptions, 'oneColumn') }
+      theme={select(themeLabel, themeOptions, 'defaultTheme')}
+      isTruncated={boolean('Is Truncated', false)}
+      displays={displays}
+      leftAccessory={testElement}
+      accessoryAlignment={select(alignmentLabel, alignmentOptions, 'alignCenter')}
+      comment={comment}
+    />
+  ))
   .add('Without props', () => (
     <CompactTile displays={displays} />
   ))
@@ -76,4 +122,4 @@ storiesOf('TerraCompactTile ', module)
   ))
   .add('With styles', () => (
     <CompactTile displays={styleDisplays} />
-  ))
+  ));
