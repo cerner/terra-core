@@ -17,7 +17,6 @@
     "build": "babel src --out-dir lib",
     "lint": "yarn lint-js",
     "lint-js": "eslint --ext .js .",
-    "prepublish": "yarn build",
     "pretest": "yarn lint",
     "release:major": "yarn test && yarn build && yarn version major -m \"Released version %s\" && yarn publish && git push --follow-tags",
     "release:minor": "yarn test && yarn build && yarn version minor -m \"Released version %s\" && yarn publish && git push --follow-tags",
