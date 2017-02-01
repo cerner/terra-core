@@ -1,0 +1,66 @@
+{
+  "name": "terra-toolkit",
+  "version": "0.1.0",
+  "description": "Utilities to help when developing terra modules",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-toolkit.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-toolkit",
+    "UI"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "lint": "yarn lint-js",
+    "lint-js": "eslint --ext .js .",
+    "prepublish": "yarn build",
+    "pretest": "yarn lint",
+    "release:major": "yarn test && yarn build && yarn version major -m \"Released version %s\" && yarn publish && git push --follow-tags",
+    "release:minor": "yarn test && yarn build && yarn version minor -m \"Released version %s\" && yarn publish && git push --follow-tags",
+    "release:patch": "yarn test && yarn build && yarn version patch -m \"Released version %s\" && yarn publish && git push --follow-tags",
+    "test": "yarn test:spec && yarn test:features",
+    "test:spec": "JASMINE_CONFIG_PATH=tests/spec/jasmine.json jasmine",
+    "test:features": "JASMINE_CONFIG_PATH=tests/features/jasmine.json jasmine"
+  },
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-toolkit/issues"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.26.0",
+    "jasmine": "^2.5.2",
+    "jasmine-es6": "^0.4.0",
+    "jasmine-spec-reporter": "^3.1.0",
+    "jsonfile": "^2.4.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^3.13.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "postcss-loader": "^0.10.1",
+    "sass-loader": "^3.2.3",
+    "selenium-webdriver": "^3.0.1",
+    "sha1": "^1.1.1",
+    "style-loader": "^0.13.1",
+    "terra-application": "^0.2.0",
+    "terra-legacy-theme": "^0.1.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

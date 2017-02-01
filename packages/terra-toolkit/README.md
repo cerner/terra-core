@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/cerner/terra-toolkit.svg?branch=master)](https://travis-ci.org/cerner/terra-toolkit)
 [![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
-{insert description}
+Terra Toolkit is a utility module used to facilitate developmen of Terra projects.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -20,9 +20,6 @@
 
 ## Documentation
 
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
 See the [documentation](docs/).
 
 ## Contributing
@@ -31,7 +28,7 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 
 ## LICENSE
 
-Copyright 2016 Cerner Innovation, Inc.
+Copyright 2017 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
