@@ -4,7 +4,7 @@ import testRunner from '../../src/test-runner';
 function tests() {
   describe('TestHelper and TestRunner', () => {
     it('Runs the test suite correctly', (done) => {
-      jasmine.driver.get('http://localhost:8080/').then(() =>
+      jasmine.driver.get('http://localhost:18080/').then(() =>
         jasmine.driver.findElement(selenium.By.className('test')).getText(),
       )
       .then((text) => {

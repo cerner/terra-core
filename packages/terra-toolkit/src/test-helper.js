@@ -39,7 +39,7 @@ export default function (config) {
     server = new WebpackDevServer(webpack(config), {
       quiet: true,
     });
-    server.listen(8080, '0.0.0.0');
+    server.listen(18080, '0.0.0.0');
   });
 
   afterAll(() => {

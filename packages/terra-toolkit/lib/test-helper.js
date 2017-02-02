@@ -40,7 +40,7 @@ exports.default = function (config) {
     server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
       quiet: true
     });
-    server.listen(8080, '0.0.0.0');
+    server.listen(18080, '0.0.0.0');
   });
 
   afterAll(function () {
