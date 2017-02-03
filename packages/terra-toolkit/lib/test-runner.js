@@ -8,13 +8,12 @@ exports.default = function (testRunners, customWindowSizes) {
   var windowSizes = {};
   if (!customWindowSizes) {
     windowSizes = {
-      trvm_xxs: [400, 768],
-      trvm_xs: [580, 768],
-      trvm_sm: [760, 768],
-      trvm_md: [1024, 768],
-      desktop: [1276, 768],
-      trvm_xl: [1540, 768],
-      trvm_xxl: [2068, 768]
+      tiny: [470, 768],
+      small: [622, 768],
+      medium: [838, 768],
+      large: [1000, 768],
+      huge: [1210, 768],
+      enormous: [1300, 768]
     };
   } else {
     windowSizes = customWindowSizes;
