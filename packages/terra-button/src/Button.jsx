@@ -2,6 +2,28 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import '../src/terra-button.scss';
 
+const propTypes = {
+  attributes: PropTypes.oneOfType([PropTypes.object]),
+  isBlock: PropTypes.bool,
+  children: PropTypes.node,
+  icon: PropTypes.element,
+  intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
+  isDisabled: PropTypes.bool,
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  isReversed: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  text: PropTypes.string,
+  variant: PropTypes.oneOf(['link', 'outline']),
+};
+
+const defaultProps = {
+  isBlock: false,
+  intent: 'default',
+  isDisabled: false,
+  isReversed: false,
+};
+
 const Button = (props) => {
   const attributes = Object.assign({}, props.attributes);
   const text = props.text ? <span className="terra-Button-text">{props.text}</span> : null;
@@ -34,26 +56,7 @@ const Button = (props) => {
   return React.createElement(props.href ? 'a' : 'button', attributes, ...order);
 };
 
-Button.propTypes = {
-  attributes: PropTypes.oneOfType([PropTypes.object]),
-  isBlock: PropTypes.bool,
-  children: PropTypes.node,
-  icon: PropTypes.element,
-  intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
-  isDisabled: PropTypes.bool,
-  href: PropTypes.string,
-  onClick: PropTypes.func,
-  isReversed: PropTypes.bool,
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  text: PropTypes.string,
-  variant: PropTypes.oneOf(['link', 'outline']),
-};
-
-Button.defaultProps = {
-  isBlock: false,
-  intent: 'default',
-  isDisabled: false,
-  isReversed: false,
-};
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 export default Button;

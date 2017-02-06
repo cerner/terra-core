@@ -20,6 +20,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var propTypes = {
+  attributes: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  isBlock: _react.PropTypes.bool,
+  children: _react.PropTypes.node,
+  icon: _react.PropTypes.element,
+  intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
+  isDisabled: _react.PropTypes.bool,
+  href: _react.PropTypes.string,
+  onClick: _react.PropTypes.func,
+  isReversed: _react.PropTypes.bool,
+  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  text: _react.PropTypes.string,
+  variant: _react.PropTypes.oneOf(['link', 'outline'])
+};
+
+var defaultProps = {
+  isBlock: false,
+  intent: 'default',
+  isDisabled: false,
+  isReversed: false
+};
+
 var Button = function Button(props) {
   var attributes = _extends({}, props.attributes);
   var text = props.text ? _react2.default.createElement(
@@ -49,26 +71,7 @@ var Button = function Button(props) {
   return _react2.default.createElement.apply(_react2.default, [props.href ? 'a' : 'button', attributes].concat(order));
 };
 
-Button.propTypes = {
-  attributes: _react.PropTypes.oneOfType([_react.PropTypes.object]),
-  isBlock: _react.PropTypes.bool,
-  children: _react.PropTypes.node,
-  icon: _react.PropTypes.element,
-  intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
-  isDisabled: _react.PropTypes.bool,
-  href: _react.PropTypes.string,
-  onClick: _react.PropTypes.func,
-  isReversed: _react.PropTypes.bool,
-  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  text: _react.PropTypes.string,
-  variant: _react.PropTypes.oneOf(['link', 'outline'])
-};
-
-Button.defaultProps = {
-  isBlock: false,
-  intent: 'default',
-  isDisabled: false,
-  isReversed: false
-};
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 exports.default = Button;
