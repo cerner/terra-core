@@ -12,4 +12,10 @@ console.error = (message) => {
     throw new Error(message);
   }
 };
+
+// Mock storybook-addon-options
+jest.mock('@kadira/storybook-addon-options');
+// Mock storybook-addon-i18n-tools npm module
+jest.mock('storybook-addon-i18n-tools', () => {});
+
 /* eslint-enable no-console */

@@ -1,52 +1,129 @@
 import React from 'react';
-import initStoryshots from 'storyshots';
 import Arrange from '../src/Arrange';
 
-const defaultVariety = <Arrange />;
-const primaryVariety = <Arrange name="primary" variant="terra-Arrange--primary" />;
+describe('Arrange', () => {
+  const fitStart = <img src="http:///uploads/2016/09/telegraph-1.jpg" alt="panda" />;
+  const fitEnd = React.createElement('a', { href: 'http://www.example.com' });
+  const text = 'FIll text';
+  const fill = <div>{text}</div>;
+  // Snapshot Tests
+  describe('default', () => {
+    const arrange = <Arrange fitStart={fitStart} fill={fill} fitEnd={fitEnd} />;
 
-// Run snapshot tests for react-storybook
-initStoryshots();
+    it('should render a arrange component with given fit and fill', () => {
+      const wrapper = shallow(arrange);
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 
-// Snapshot Tests
-it('should render a default component', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper).toMatchSnapshot();
-});
+  describe('when two fits and one fill is passed with align set', () => {
+    it('should render a arrange component with fit and fill aligned to top', () => {
+      const arrangeAlignAll = <Arrange fitEnd={fitEnd} fill={fill} />;
+      const wrapper = shallow(arrangeAlignAll);
+      expect(wrapper).toMatchSnapshot();
+    });
 
-it('should render a primary component', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper).toMatchSnapshot();
-});
+    it('should render a arrange component with fit and fill aligned to center', () => {
+      const arrangeAlignAll = <Arrange fitEnd={fitEnd} fill={fill} align="center" />;
+      const wrapper = shallow(arrangeAlignAll);
+      expect(wrapper).toMatchSnapshot();
+    });
 
+    it('should render a arrange component with fit and fill aligned to bottom', () => {
+      const arrangeAlignAll = <Arrange fitStart={fitStart} fill={fill} align="bottom" />;
+      const wrapper = shallow(arrangeAlignAll);
+      expect(wrapper).toMatchSnapshot();
+    });
 
-// Prop Tests
-it('should have the class terra-Arrange--default', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper.prop('className')).toContain('terra-Arrange terra-Arrange--default');
-});
+    it('should render a arrange component with fit and fill aligned to stretch', () => {
+      const arrangeAlignAll = <Arrange fitStart={fitStart} fill={fill} align="stretch" />;
+      const wrapper = shallow(arrangeAlignAll);
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 
-it('should have the class terra-Arrange--primary', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper.prop('className')).toContain('terra-Arrange terra-Arrange--primary');
-});
+  // Prop Tests
+  describe('props validation', () => {
+    it('should log warning in console when no fit provided', () => {
+      // eslint-disable-next-line no-console
+      console.warn = jest.genMockFunction();
+      const arrange = <Arrange fill={fill} />;
+      const wrapper = shallow(arrange);
+      expect(wrapper).toThrowError(Error);
+      // eslint-disable-next-line no-console
+      expect(console.warn.mock.calls.length).toEqual(1);
+    });
+  });
 
+  it('should have all prop set correctly', () => {
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="center" />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.unrendered.props.fitStart.type).toEqual('img');
+    expect(wrapper.unrendered.props.fitEnd.type).toEqual('a');
+    expect(wrapper.unrendered.props.fill.type).toEqual('div');
+    expect(wrapper.unrendered.props.align).toEqual('center');
+  });
 
-// Event Tests
-it('should toggle the class u-selected on default', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Arrange--default').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Arrange--default').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-});
+  it('should have align prop undefined when align not pass', () => {
+    const arrange = <Arrange fitStart={fitStart} fill={fill} />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.unrendered.props.alignFitStart).toEqual(undefined);
+    expect(wrapper.unrendered.props.alignFitEnd).toEqual(undefined);
+    expect(wrapper.unrendered.props.alignFill).toEqual(undefined);
+  });
 
-it('should toggle the class u-selected on primary', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Arrange--primary').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Arrange--primary').simulate('click');
-  expect(wrapper).toMatchSnapshot();
+  // Structure test
+  it('should have fit and fill with the default class when align is not set', () => {
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.childAt(0).hasClass('terra-Arrange-fitStart')).toEqual(true);
+    expect(wrapper.childAt(1).hasClass('terra-Arrange-fill')).toEqual(true);
+    expect(wrapper.childAt(2).hasClass('terra-Arrange-fitEnd')).toEqual(true);
+  });
+
+  it('should have fit and fill with the required class when fitStart and fill set to top and stretch"', () => {
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} alignFitStart="center" alignFill="stretch" />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.childAt(0).hasClass('terra-Arrange-fitStart--center')).toEqual(true);
+    expect(wrapper.childAt(1).hasClass('terra-Arrange-fill--stretch')).toEqual(true);
+    expect(wrapper.childAt(2).hasClass('terra-Arrange-fitEnd')).toEqual(true);
+  });
+
+  it('should have fit and fill with the required class when fitStart, fitEnd and fill set to stretch, bottom and stretch"', () => {
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} alignFitStart="stretch" alignFill="stretch" alignFitEnd="bottom" />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.childAt(0).hasClass('terra-Arrange-fitStart--stretch')).toEqual(true);
+    expect(wrapper.childAt(1).hasClass('terra-Arrange-fill--stretch')).toEqual(true);
+    expect(wrapper.childAt(2).hasClass('terra-Arrange-fitEnd--bottom')).toEqual(true);
+  });
+
+  it('should have child with the correct class when align is set to stretch', () => {
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="stretch" />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.childAt(0).hasClass('terra-Arrange-fitStart--stretch')).toEqual(true);
+    expect(wrapper.childAt(1).hasClass('terra-Arrange-fill--stretch')).toEqual(true);
+    expect(wrapper.childAt(2).hasClass('terra-Arrange-fitEnd--stretch')).toEqual(true);
+  });
+
+  it('should have child with the correct class when align is set and overwrites individual fit and fill ', () => {
+    const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="stretch" alignFitStart="center" />;
+    const wrapper = shallow(arrange);
+    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.childAt(0).hasClass('terra-Arrange-fitStart--stretch')).toEqual(true);
+    expect(wrapper.childAt(1).hasClass('terra-Arrange-fill--stretch')).toEqual(true);
+    expect(wrapper.childAt(2).hasClass('terra-Arrange-fitEnd--stretch')).toEqual(true);
+  });
+
+  // Custom prop testing
+  it('should render a arrange component with given className', () => {
+    const className = 'testA testB testC';
+    const arrange = <Arrange fitStart={fitStart} fill={fill} className={className} />;
+    const wrapper = shallow(arrange);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
