@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/terra-button.scss';
+import '../src/button.scss';
 
 const propTypes = {
   attributes: PropTypes.oneOfType([PropTypes.object]),
