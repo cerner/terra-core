@@ -2,5 +2,8 @@
 <script>
   var root = document.getElementsByTagName( 'html' )[0];
   root.setAttribute( 'class', 'terra-Application' );
-  root.setAttribute( 'dir', 'ltr' );
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var body = document.getElementsByTagName( 'body' )[0];
+    body.setAttribute( 'dir', 'ltr' );
+  });
 </script>

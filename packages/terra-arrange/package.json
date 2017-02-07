@@ -2,7 +2,7 @@
   "name": "terra-arrange",
   "main": "lib/Arrange.js",
   "version": "0.1.0",
-  "description": "terra-arrange",
+  "description": "The arrange component is used for horizontally arranging and vertically aligning a single row of container elements.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-arrange.git"
@@ -32,6 +32,9 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addons": "^1.5.0",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
+    "@kadira/storybook-addon-options": "^1.0.1",
     "autoprefixer": "^6.6.1",
     "babel-cli": "^6.18.0",
     "babel-jest": "^18.0.0",
@@ -52,7 +55,10 @@
     "node-sass": "^4.3.0",
     "postcss-loader": "^1.2.2",
     "react-addons-test-utils": "^15.4.2",
+    "react-storybook-addon-props-combinations": "^0.3.0",
     "sass-loader": "^4.1.1",
+    "storybook-addon-a11y": "0.0.4",
+    "storybook-addon-i18n-tools": "^1.0.0",
     "storyshots": "^3.2.0",
     "style-loader": "^0.13.1",
     "stylelint": "^7.7.1",
@@ -81,6 +87,7 @@
     "start": "start-storybook -p 8080",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "webpack-dev": "yarn run lint-js && webpack-dev-server --host=0.0.0.0 --config .storybook/webpack.dev.config.js"
   }
 }
