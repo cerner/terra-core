@@ -1,0 +1,120 @@
+exports[`Arrange default should render a arrange component with given fit and fill 1`] = `
+<div
+  className="terra-Arrange">
+  <div
+    className="terra-Arrange-fitStart">
+    <img
+      alt="panda"
+      src="http:///uploads/2016/09/telegraph-1.jpg" />
+  </div>
+  <div
+    className="terra-Arrange-fill">
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="terra-Arrange-fitEnd">
+    <a
+      href="http://www.example.com" />
+  </div>
+</div>
+`;
+
+exports[`Arrange should render a arrange component with given className 1`] = `
+<div
+  className="terra-Arrange testA testB testC">
+  <div
+    className="terra-Arrange-fitStart">
+    <img
+      alt="panda"
+      src="http:///uploads/2016/09/telegraph-1.jpg" />
+  </div>
+  <div
+    className="terra-Arrange-fill">
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="terra-Arrange-fitEnd" />
+</div>
+`;
+
+exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to bottom 1`] = `
+<div
+  className="terra-Arrange">
+  <div
+    className="terra-Arrange-fitStart terra-Arrange-fitStart--bottom">
+    <img
+      alt="panda"
+      src="http:///uploads/2016/09/telegraph-1.jpg" />
+  </div>
+  <div
+    className="terra-Arrange-fill terra-Arrange-fill--bottom">
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="terra-Arrange-fitEnd terra-Arrange-fitEnd--bottom" />
+</div>
+`;
+
+exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to center 1`] = `
+<div
+  className="terra-Arrange">
+  <div
+    className="terra-Arrange-fitStart terra-Arrange-fitStart--center" />
+  <div
+    className="terra-Arrange-fill terra-Arrange-fill--center">
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="terra-Arrange-fitEnd terra-Arrange-fitEnd--center">
+    <a
+      href="http://www.example.com" />
+  </div>
+</div>
+`;
+
+exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to stretch 1`] = `
+<div
+  className="terra-Arrange">
+  <div
+    className="terra-Arrange-fitStart terra-Arrange-fitStart--stretch">
+    <img
+      alt="panda"
+      src="http:///uploads/2016/09/telegraph-1.jpg" />
+  </div>
+  <div
+    className="terra-Arrange-fill terra-Arrange-fill--stretch">
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="terra-Arrange-fitEnd terra-Arrange-fitEnd--stretch" />
+</div>
+`;
+
+exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to top 1`] = `
+<div
+  className="terra-Arrange">
+  <div
+    className="terra-Arrange-fitStart" />
+  <div
+    className="terra-Arrange-fill">
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="terra-Arrange-fitEnd">
+    <a
+      href="http://www.example.com" />
+  </div>
+</div>
+`;
