@@ -29,8 +29,6 @@ const Button = ({
   icon,
   intent,
   isDisabled,
-  // href,
-  // onClick,
   isReversed,
   size,
   text,
@@ -56,8 +54,6 @@ const Button = ({
   ]);
 
   attributes.disabled = isDisabled;
-  // attributes.href = href;
-  // attributes.onClick = onClick;
   attributes.tabIndex = isDisabled ? '-1' : undefined;
   attributes['aria-disabled'] = isDisabled;
 
