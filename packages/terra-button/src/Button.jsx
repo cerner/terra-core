@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import '../src/button.scss';
 
 const propTypes = {
-  attributes: PropTypes.oneOfType([PropTypes.object]),
   isBlock: PropTypes.bool,
   children: PropTypes.node,
   icon: PropTypes.element,
@@ -24,36 +23,49 @@ const defaultProps = {
   isReversed: false,
 };
 
-const Button = (props) => {
-  const attributes = Object.assign({}, props.attributes);
-  const text = props.text ? <span className="terra-Button-text">{props.text}</span> : null;
+const Button = ({
+  isBlock,
+  children,
+  icon,
+  intent,
+  isDisabled,
+  // href,
+  // onClick,
+  isReversed,
+  size,
+  text,
+  variant,
+  ...customProps
+  }) => {
+  const attributes = Object.assign({}, customProps);
+  const buttonText = text ? <span className="terra-Button-text">{text}</span> : null;
 
-  let style = props.intent;
+  let style = intent;
   const titleize = s => s.charAt(0).toUpperCase() + s.slice(1);
-  if (props.variant) {
-    style = `${props.variant}${titleize(props.intent)}`;
+  if (variant) {
+    style = `${variant}${titleize(intent)}`;
   }
 
   attributes.className = classNames([
     'terra-Button',
     `terra-Button--${style}`,
-    { 'is-disabled': props.isDisabled },
-    { [`terra-Button--${props.size}`]: props.size },
-    { 'terra-Button--block': props.isBlock },
+    { 'is-disabled': isDisabled },
+    { [`terra-Button--${size}`]: size },
+    { 'terra-Button--block': isBlock },
     attributes.className,
   ]);
 
-  attributes.disabled = props.isDisabled;
-  attributes.href = props.href;
-  attributes.onClick = props.onClick;
-  attributes.tabIndex = props.isDisabled ? '-1' : undefined;
-  attributes['aria-disabled'] = props.isDisabled;
+  attributes.disabled = isDisabled;
+  // attributes.href = href;
+  // attributes.onClick = onClick;
+  attributes.tabIndex = isDisabled ? '-1' : undefined;
+  attributes['aria-disabled'] = isDisabled;
 
-  const order = props.isReversed ?
-    [text, props.icon, props.children] :
-    [props.icon, text, props.children];
+  const order = isReversed ?
+    [buttonText, icon, children] :
+    [icon, buttonText, children];
 
-  return React.createElement(props.href ? 'a' : 'button', attributes, ...order);
+  return React.createElement(attributes.href ? 'a' : 'button', attributes, ...order);
 };
 
 Button.propTypes = propTypes;

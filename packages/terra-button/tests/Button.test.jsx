@@ -34,8 +34,7 @@ it('should render a icon and a text', () => {
 });
 
 it('should render a Button with merged attributes', () => {
-  const attributes = { className: 'TestClass', 'data-mock': 'data', style: { height: '100px' } };
-  const button = shallow(<Button attributes={attributes} />);
+  const button = shallow(<Button className="TestClass" data-mock="data" style={{ height: '100px' }} />);
   expect(button).toMatchSnapshot();
 });
 
@@ -130,19 +129,16 @@ it('should render as an anchor tag when provided an href', () => {
 
 // Attributes
 it('should merge classes passed in with attributes', () => {
-  const attributes = { className: 'TestClass' };
-  const button = shallow(<Button attributes={attributes} />);
+  const button = shallow(<Button className="TestClass" />);
   expect(button.prop('className')).toContain('TestClass');
 });
 
 it('should append data passed in with attributes', () => {
-  const attributes = { 'data-terra-button-mock': 'MockData' };
-  const button = shallow(<Button attributes={attributes} />);
+  const button = shallow(<Button data-terra-button-mock="MockData" />);
   expect(button.prop('data-terra-button-mock')).toContain('MockData');
 });
 
 it('should append styles passed in with attributes', () => {
-  const attributes = { style: { height: '100px' } };
-  const button = shallow(<Button attributes={attributes} />);
+  const button = shallow(<Button style={{ height: '100px' }} />);
   expect(button.prop('style')).toEqual({ height: '100px' });
 });
