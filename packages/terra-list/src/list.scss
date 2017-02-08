@@ -2,129 +2,9 @@
 @import './variables';
 @import './mixins';
 
-.terraVM-u-chevron {
-  .padding-end(@gutter);
-
-  position: relative; // relative position so the chevron can use absolute position to vertically center itself
-  display: block;
-
-  &:after {
-    .icon();
-    .position-end(@baseline);
-    .rem(margin-top, -(@_base-line-height / 2));
-    .medium-heading-size();
-    color: @medium-bg-20;
-    position: absolute;
-    top: 50%;
-
-    @{ltr} & {
-      content: @icon-angle-right;
-    }
-
-    @{rtl} & {
-      content: @icon-angle-left;
-    }
-  }
-}
-
-.terraVM-u-gridWidths (@i) when (@i > 0) {
-  .terraVM-u-gridWidths(@i - 1);
-
-  & > .terraVM-List-item--grid[data-number-of-columns="@{i}"] {
-    width: calc(~"100% / @{i}");
-  }
-}
-
-.terraVM-List[data-terra-js-mq-sizes~='sm'] {
-
-  & > .terraVM-List-item--grid {
-    display: inline-block;
-    vertical-align: bottom;
-  }
-
-  & > .terraVM-List-item--grid-border-left {
-    border-left: 1px solid @border-color;
-  }
-
-  & > .terraVM-List-item--grid-border-right {
-    border-right: 1px solid @border-color;
-  }
-
-  & > .terraVM-List-item--grid-border-top {
-    border-top: 1px solid @border-color;
-  }
-
-  .terraVM-u-gridWidths(6);
-}
-
-.terraVM-List.list-padded > li {
-  .rem(padding-top, 10px);
-  .rem(padding-bottom, 10px);
-}
-
-// ------------------------
-// Lists
-// --------------------------------------------------
-// 1. Base styles
-// 2. List modifiers
-
-// Base styles
-// --------------------------------------------------
-// Ordered and unordered lists
-ol,
-ul {
-  & ol,
-  & ul {
-    margin-bottom: 0;
-  }
-}
-
-nav ul {
-  .list-unstyled();
-}
-
-// Description lists
-dt {
-  .text-bold();
-}
-
-// List modifiers
-// --------------------------------------------------
-// Note additional styles are defined in reset-normalize as needed.
-
-// Flush
-// Removes left spacing to keep list flush with other content
-.list-flush {
-  .margin-start(@gutter);
-
-  // Because we removed left spacing, nested lists need help.
-  ol,
-  ul {
-    .margin-start(@gutter);
-  }
-}
-
-// Removes left spacing and bullet points.
-// Only useful in a reset-normalize context, and best used as a mixin.
-  .list-unstyled {
-    .padding-start(0);
-    list-style: none;
-    margin: 0;
-
-    dt {
-      .text-normal();
-    }
-
-    dd {
-      .margin-start(0);
-    }
-  }
-
 // Inline
 // Extends .list-unstyled, displays list items inline
 .list-inline {
-  .list-unstyled();
-
   > li {
     .separate-elements-inline(@gutter, margin);
     display: inline-block;
@@ -146,60 +26,10 @@ dt {
       .border-end(0);
     }
   }
-
-  // Match look and feel of description lists with our 'fake' description lists
-  &.dl-invert-emphasis {
-    .text-bold();
-
-    dfn {
-      .text-normal();
-    }
-  }
 }
 
-// Padded
-// Extends .list-unstyled, adds extra vertical spacing between list items
-.list-padded {
-  .list-unstyled();
-
-  > li {
-    .rem(padding-top; (@baseline * 2));
-    .rem(padding-bottom; (@baseline * 2)); // account for existing bottom margin
-  }
-}
-
-// Padded sides
-// Extends .list-unstyled, adds extra spacing on the left and right sides of list items
-.list-padded-sides {
-  .list-unstyled();
-
-  > li {
-    .rem(padding-left; @gutter);
-    .rem(padding-right; @gutter);
-  }
-}
-
-// Padded tight
-// Extends .list-unstyled, adds half the amount of extra vertical spacing as .list-padded
-.list-padded-tight {
-  .list-unstyled();
-
-  > li {
-    .rem(padding-top; @baseline);
-    .rem(padding-bottom; (@baseline - 1)); // account for existing bottom margin
-
-    &:first-child {
-      .rem(padding-top; (@baseline - 1)); // account for existing bottom margin
-    }
-  }
-}
-
-// Divided
-// Extends .list-unstyled and adds horizontal divider between list items
-// --------------------------------------------------
-.list-divided-tight {
-  .list-unstyled();
-
+// Divided tight
+.list-divided {
   > li {
     .border-bottom();
 
@@ -208,97 +38,6 @@ dt {
     }
   }
 }
-
-// Divided large
-// Extends .list-padded and adds horizontal divider between list items
-// --------------------------------------------------
-.list-divided-large {
-  .list-divided-tight();
-  .list-padded();
-  > li {
-    .rem(padding-top; (@baseline * 2) );
-    .rem(padding-bottom; ((@baseline * 2)-1)); // account for existing bottom margin
-
-    &:first-child {
-      .rem(padding-top; ((@baseline * 2)-1) ); // account for existing bottom margin
-    }
-  }
-}
-
-// Divided tight
-// Extends .list-padded-tight and adds horizontal divier between list items
-.list-divided {
-  .list-divided-tight();
-  .list-padded-tight();
-}
-
-// Paired description lists
-// Align paired terms and descriptions inline (one pair per line)
-// Stack term and definition if text length forces wrapping.
-.dl-paired {
-  .clearfix();
-
-  dt {
-    .float-clear-start();
-    .margin-end(@baseline);
-    max-width: 100%;
-  }
-
-  dd {
-    .float-start();
-    .margin-start(0);
-    max-width: 100%;
-  }
-}
-
-// Invert default emphasis styling of terms and descriptions
-.dl-invert-emphasis {
-  dt {
-    .text-normal();
-  }
-
-  dd {
-    .text-bold();
-  }
-}
-
-// Grouped and gridded description lists
-.dl-grouped {
-  .border-bottom();
-
-  dt, dd {
-    .rem(padding; @baseline);
-  }
-
-  dt {
-    .border-top();
-    .float-clear-start();
-    display: block;
-    width: 30%; // Magic number. Reevaluate after UIDEV-918.
-  }
-
-  dd {
-    .border-start(1px; solid);
-
-    @{ltr} & {
-      margin-left: 30%;  // match dt width
-    }
-
-    @{rtl} & {
-      margin-right: 30%;
-    }
-  }
-
-  dt + dd {
-    .border-top();  // create new rule separating dt/dd sets
-  }
-
-  //dt has more than one resulting dd
-  dd + dd {
-    .border-top(@color: @medium-bg-40);
-  }
-}
-
 
 // Key-value lists
 // Align keys to the left and values to the right of the container.
@@ -347,7 +86,7 @@ dt {
   cursor: pointer;
 
   &:hover {
-      background-color: @hover-background;
+    background-color: @hover-background;
   }
 
   &[aria-selected] {
@@ -369,60 +108,5 @@ dt {
     &[aria-selected] {
       background-color: @selected-background;
     }
-  }
-}
-
-
-// Linked lists.
-.list-linked {
-  .list-divided-tight();
-
-  > li {
-    > a {
-      .rem(padding-top; @baseline);
-      .rem(padding-bottom; (@baseline - 1)); // account for existing bottom margin
-      position: relative; // relative position so the chevron can use absolute position to vertically center itself
-      display: block;
-      text-decoration: none;
-    }
-
-    &:first-child > a {
-      .rem(padding-top; (@baseline - 1)); // account for existing bottom margin
-    }
-  }
-
-  &.chevron > li > a {
-    .padding-end(@gutter);
-
-    &:after {
-      .icon();
-      .position-end(@baseline);
-      .rem(margin-top, -(@_base-line-height / 2));
-      .medium-heading-size();
-      color: @medium-bg-20;
-      position: absolute;
-      top: 50%;
-
-      @{ltr} & {
-        content: @icon-angle-right;
-      }
-
-      @{rtl} & {
-        content: @icon-angle-left;
-      }
-    }
-  }
-}
-
-// LATE DEFINITIONS
-// These styles are defined at the end of the file to prevent the need of !important.
-
-// Thin
-// Removes top and bottom padding from all li elements.
-.list-thin {
-  li,
-  li:first-child {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
