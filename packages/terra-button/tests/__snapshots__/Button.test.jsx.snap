@@ -3,8 +3,6 @@ exports[`Storyshots Block Default Block 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--block"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -18,8 +16,6 @@ exports[`Storyshots Block Link Warning Block 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkWarning terra-Button--block"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -33,8 +29,6 @@ exports[`Storyshots Block Outline Secondary Block 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlineSecondary terra-Button--block"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -48,8 +42,6 @@ exports[`Storyshots Block Primary Block 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--primary terra-Button--block"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -63,8 +55,6 @@ exports[`Storyshots Disabled Disabled 1`] = `
   aria-disabled={true}
   className="terra-Button terra-Button--default is-disabled"
   disabled={true}
-  href={undefined}
-  onClick={undefined}
   tabIndex="-1">
   <span
     className="terra-Button-text">
@@ -78,8 +68,6 @@ exports[`Storyshots Disabled Disabled with link primary 1`] = `
   aria-disabled={true}
   className="terra-Button terra-Button--linkPrimary is-disabled"
   disabled={true}
-  href={undefined}
-  onClick={undefined}
   tabIndex="-1">
   <span
     className="terra-Button-text">
@@ -93,8 +81,6 @@ exports[`Storyshots Disabled Disabled with outline primary 1`] = `
   aria-disabled={true}
   className="terra-Button terra-Button--outlinePrimary is-disabled"
   disabled={true}
-  href={undefined}
-  onClick={undefined}
   tabIndex="-1">
   <span
     className="terra-Button-text">
@@ -108,8 +94,6 @@ exports[`Storyshots Disabled Disabled with primary intent 1`] = `
   aria-disabled={true}
   className="terra-Button terra-Button--primary is-disabled"
   disabled={true}
-  href={undefined}
-  onClick={undefined}
   tabIndex="-1">
   <span
     className="terra-Button-text">
@@ -123,8 +107,6 @@ exports[`Storyshots Icons Default icon 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     style={
@@ -149,8 +131,6 @@ exports[`Storyshots Icons Reversed icon 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -175,8 +155,6 @@ exports[`Storyshots Intent Info 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--info"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -190,8 +168,6 @@ exports[`Storyshots Intent Negative 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--negative"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -205,8 +181,6 @@ exports[`Storyshots Intent Positive 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--positive"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -220,8 +194,6 @@ exports[`Storyshots Intent Primary 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--primary"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -235,8 +207,6 @@ exports[`Storyshots Intent Secondary 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--secondary"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -250,8 +220,6 @@ exports[`Storyshots Intent Warning 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--warning"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -265,8 +233,6 @@ exports[`Storyshots Link Variant Link Info 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkInfo"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -280,8 +246,6 @@ exports[`Storyshots Link Variant Link Negative 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkNegative"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -295,8 +259,6 @@ exports[`Storyshots Link Variant Link Positive 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkPositive"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -310,8 +272,6 @@ exports[`Storyshots Link Variant Link Primary 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkPrimary"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -325,8 +285,6 @@ exports[`Storyshots Link Variant Link Secondary 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkSecondary"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -340,8 +298,6 @@ exports[`Storyshots Link Variant Link Warning 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--linkWarning"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -355,8 +311,6 @@ exports[`Storyshots Outline Variant Outline Info 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlineInfo"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -370,8 +324,6 @@ exports[`Storyshots Outline Variant Outline Negative 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlineNegative"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -385,8 +337,6 @@ exports[`Storyshots Outline Variant Outline Positive 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlinePositive"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -400,8 +350,6 @@ exports[`Storyshots Outline Variant Outline Primary 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlinePrimary"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -415,8 +363,6 @@ exports[`Storyshots Outline Variant Outline Secondary 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlineSecondary"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -430,8 +376,6 @@ exports[`Storyshots Outline Variant Outline Warning 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--outlineWarning"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -445,8 +389,6 @@ exports[`Storyshots Size Default 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -460,8 +402,6 @@ exports[`Storyshots Size Huge 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--huge"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -475,8 +415,6 @@ exports[`Storyshots Size Large 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--large"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -490,8 +428,6 @@ exports[`Storyshots Size Medium 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--medium"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -505,8 +441,6 @@ exports[`Storyshots Size Small 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--small"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -520,8 +454,6 @@ exports[`Storyshots Size Tiny 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--tiny"
   disabled={false}
-  href={undefined}
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -536,7 +468,6 @@ exports[`Storyshots href with an href prop 1`] = `
   className="terra-Button terra-Button--default"
   disabled={false}
   href="#"
-  onClick={undefined}
   tabIndex={undefined}>
   <span
     className="terra-Button-text">
@@ -550,7 +481,6 @@ exports[`Storyshots onClick Alert onClick 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default"
   disabled={false}
-  href={undefined}
   onClick={[Function]}
   tabIndex={undefined}>
   <span

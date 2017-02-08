@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -20,8 +18,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 var propTypes = {
-  attributes: _react.PropTypes.oneOfType([_react.PropTypes.object]),
   isBlock: _react.PropTypes.bool,
   children: _react.PropTypes.node,
   icon: _react.PropTypes.element,
@@ -42,33 +41,44 @@ var defaultProps = {
   isReversed: false
 };
 
-var Button = function Button(props) {
-  var attributes = _extends({}, props.attributes);
-  var text = props.text ? _react2.default.createElement(
+var Button = function Button(_ref) {
+  var isBlock = _ref.isBlock,
+      children = _ref.children,
+      icon = _ref.icon,
+      intent = _ref.intent,
+      isDisabled = _ref.isDisabled,
+      isReversed = _ref.isReversed,
+      size = _ref.size,
+      text = _ref.text,
+      variant = _ref.variant,
+      customProps = _objectWithoutProperties(_ref, ['isBlock', 'children', 'icon', 'intent', 'isDisabled', 'isReversed', 'size', 'text', 'variant']);
+
+  var attributes = Object.assign({}, customProps);
+  var buttonText = text ? _react2.default.createElement(
     'span',
     { className: 'terra-Button-text' },
-    props.text
+    text
   ) : null;
 
-  var style = props.intent;
+  var style = intent;
   var titleize = function titleize(s) {
     return s.charAt(0).toUpperCase() + s.slice(1);
   };
-  if (props.variant) {
-    style = '' + props.variant + titleize(props.intent);
+  if (variant) {
+    style = '' + variant + titleize(intent);
   }
 
-  attributes.className = (0, _classnames2.default)(['terra-Button', 'terra-Button--' + style, { 'is-disabled': props.isDisabled }, _defineProperty({}, 'terra-Button--' + props.size, props.size), { 'terra-Button--block': props.isBlock }, attributes.className]);
+  attributes.className = (0, _classnames2.default)(['terra-Button', 'terra-Button--' + style, { 'is-disabled': isDisabled }, _defineProperty({}, 'terra-Button--' + size, size), { 'terra-Button--block': isBlock }, attributes.className]);
 
-  attributes.disabled = props.isDisabled;
-  attributes.href = props.href;
-  attributes.onClick = props.onClick;
-  attributes.tabIndex = props.isDisabled ? '-1' : undefined;
-  attributes['aria-disabled'] = props.isDisabled;
+  attributes.disabled = isDisabled;
+  // attributes.href = href;
+  // attributes.onClick = onClick;
+  attributes.tabIndex = isDisabled ? '-1' : undefined;
+  attributes['aria-disabled'] = isDisabled;
 
-  var order = props.isReversed ? [text, props.icon, props.children] : [props.icon, text, props.children];
+  var order = isReversed ? [buttonText, icon, children] : [icon, buttonText, children];
 
-  return _react2.default.createElement.apply(_react2.default, [props.href ? 'a' : 'button', attributes].concat(order));
+  return _react2.default.createElement.apply(_react2.default, [attributes.href ? 'a' : 'button', attributes].concat(order));
 };
 
 Button.propTypes = propTypes;
