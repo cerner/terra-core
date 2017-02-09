@@ -1,13 +1,9 @@
-# Terra Label Documentation
+## Terra Badge Documentation
 
-- [Terra Label](terra-label.md)
-
-Themeable variables:
-
-- [Themeable Variables](themeable-variables.md)
+- [Terra Badge](terra-badge.md)
 
 Additional modifiers:
 
-- [Badge](terra-label-badge.md)
-- [Context](terra-label-context.md)
-- [Size](terra-label-size.md)
+- [Intent](terra-badge-intent.md)
+- [Size](terra-badge-size.md)
+- [isReversed](terra-badge-order.md)

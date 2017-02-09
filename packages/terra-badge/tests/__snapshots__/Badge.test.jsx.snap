@@ -1,0 +1,266 @@
+exports[`Storyshots Badge Default (Renders nothing as text and icon properties are not supplied) 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--default" />
+`;
+
+exports[`Storyshots Custom Props Additional negative style overrides the supplied positive intent and has the additional prop lang set as English. 1`] = `
+<span
+  className="terra-Badge terra-Badge--large terra-Badge--positive terra-Badge--negative"
+  lang="English">
+  <span
+    style={
+      Object {
+        "backgroundColor": "black",
+        "color": "black",
+        "height": "0.5em",
+        "width": "0.5em",
+      }
+    }>
+    ...
+  </span>
+</span>
+`;
+
+exports[`Storyshots Icon Default Order 1`] = `
+<span
+  className="terra-Badge terra-Badge--large terra-Badge--secondary">
+  <span
+    style={
+      Object {
+        "backgroundColor": "black",
+        "color": "black",
+        "height": "0.5em",
+        "width": "0.5em",
+      }
+    }>
+    ...
+  </span>
+  <span
+    className="terra-Badge-text">
+    Default Order
+  </span>
+</span>
+`;
+
+exports[`Storyshots Icon Icon without Text 1`] = `
+<span
+  className="terra-Badge terra-Badge--large terra-Badge--secondary">
+  <span
+    style={
+      Object {
+        "backgroundColor": "black",
+        "color": "black",
+        "height": "0.5em",
+        "width": "0.5em",
+      }
+    }>
+    ...
+  </span>
+</span>
+`;
+
+exports[`Storyshots Icon Reversed Order 1`] = `
+<span
+  className="terra-Badge terra-Badge--large terra-Badge--secondary">
+  <span
+    className="terra-Badge-text">
+    Order
+  </span>
+  <span
+    style={
+      Object {
+        "backgroundColor": "black",
+        "color": "black",
+        "height": "0.5em",
+        "width": "0.5em",
+      }
+    }>
+    ...
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Default 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Default
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Info 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--info">
+  <span
+    className="terra-Badge-text">
+    Info
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Negative 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--negative">
+  <span
+    className="terra-Badge-text">
+    Negative
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Positive 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--positive">
+  <span
+    className="terra-Badge-text">
+    Postive
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Primary 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--primary">
+  <span
+    className="terra-Badge-text">
+    Primary
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Secondary 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--secondary">
+  <span
+    className="terra-Badge-text">
+    Secondary
+  </span>
+</span>
+`;
+
+exports[`Storyshots Intent Warning 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--warning">
+  <span
+    className="terra-Badge-text">
+    Warning
+  </span>
+</span>
+`;
+
+exports[`Storyshots Size Huge 1`] = `
+<span
+  className="terra-Badge terra-Badge--huge terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Huge
+  </span>
+</span>
+`;
+
+exports[`Storyshots Size Large 1`] = `
+<span
+  className="terra-Badge terra-Badge--large terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Large
+  </span>
+</span>
+`;
+
+exports[`Storyshots Size Medium 1`] = `
+<span
+  className="terra-Badge terra-Badge--medium terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Medium
+  </span>
+</span>
+`;
+
+exports[`Storyshots Size Small (Default) 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Small
+  </span>
+</span>
+`;
+
+exports[`Storyshots Size Tiny 1`] = `
+<span
+  className="terra-Badge terra-Badge--tiny terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Tiny
+  </span>
+</span>
+`;
+
+exports[`test should render a badge component in the order, icon and text with medium size 1`] = `
+<span
+  className="terra-Badge terra-Badge--medium terra-Badge--default">
+  <img
+    alt="Test icon" />
+  <span
+    className="terra-Badge-text">
+    Test value
+  </span>
+</span>
+`;
+
+exports[`test should render a badge component in the order, text and icon with info intent 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--info">
+  <span
+    className="terra-Badge-text">
+    Test value
+  </span>
+  <img
+    alt="Test icon" />
+</span>
+`;
+
+exports[`test should render a badge component with icon and medium size 1`] = `
+<span
+  className="terra-Badge terra-Badge--medium terra-Badge--default">
+  <img
+    alt="Test icon" />
+</span>
+`;
+
+exports[`test should render a badge component with icon and warning intent 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--warning">
+  <img
+    alt="Test icon" />
+</span>
+`;
+
+exports[`test should render a badge component with text and large size 1`] = `
+<span
+  className="terra-Badge terra-Badge--large terra-Badge--default">
+  <span
+    className="terra-Badge-text">
+    Large
+  </span>
+</span>
+`;
+
+exports[`test should render a badge component with text and secondary intent 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--secondary">
+  <span
+    className="terra-Badge-text">
+    Secondary
+  </span>
+</span>
+`;
+
+exports[`test should render a default component with nothing 1`] = `
+<span
+  className="terra-Badge terra-Badge--small terra-Badge--default" />
+`;

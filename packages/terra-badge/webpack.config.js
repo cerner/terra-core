@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    'terra-label': path.join(__dirname, 'src', 'webpack'),
+    'terra-badge': path.join(__dirname, 'src', 'webpack'),
   },
   module: {
     loaders: [

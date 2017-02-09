@@ -1,11 +1,11 @@
-# Terra Label
+# Terra Badge
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-label.svg)](https://www.npmjs.org/package/terra-label)
-[![Build Status](https://travis-ci.org/cerner/terra-label.svg?branch=master)](https://travis-ci.org/cerner/terra-label)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
+[![NPM version](http://img.shields.io/npm/v/terra-badge.svg)](https://www.npmjs.org/package/terra-badge)
+[![Build Status](https://travis-ci.org/cerner/terra-badge.svg?branch=master)](https://travis-ci.org/cerner/terra-badge)
+[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?badge=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
-The terra-label component displays content classification.
+The terra-badge component displays content classification.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -16,9 +16,9 @@ The terra-label component displays content classification.
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-label`
-- [Download the latest version](https://github.com/cerner/terra-label/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-label.git`
+- Install with [npm](https://www.npmjs.com): `npm install terra-badge`
+- [Download the latest version](https://github.com/cerner/terra-badge/archive/master.zip)
+- Clone the repo: `git clone https://github.com/cerner/terra-badge.git`
 
 ## Documentation
 

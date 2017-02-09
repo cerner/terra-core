@@ -7,6 +7,7 @@ If you have anything else that you think may be relevant to this issue, list it 
 Please add your name to the [CONTRIBUTORS.md] file. Adding your name to the [CONTRIBUTORS.md] file signifies agreement to all rights and reservations provided by the [License].
 
 Thanks for contributing to Terra. 
+@cerner/terra
 
 [CONTRIBUTORS.md]: ../blob/master/CONTRIBUTORS.md
 [License]: ../blob/master/LICENSE

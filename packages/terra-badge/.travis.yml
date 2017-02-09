@@ -1,5 +1,10 @@
 language: node_js
-node_js:
-  - '6'
-  - '6.3'
-script: npm run lint
+script:
+  - yarn test
+cache:
+  yarn: true
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
