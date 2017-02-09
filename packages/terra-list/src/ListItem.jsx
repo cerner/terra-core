@@ -17,11 +17,6 @@ const defaultProps = {
 };
 
 class ListItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-  }
-
   static classesForListItemFromProps(isSelected, isSelectable, hasChevron) {
     return classNames(['terra-ListItem',
       { 'terra-ListItem--selected': isSelected },
@@ -30,8 +25,13 @@ class ListItem extends React.Component {
     ]);
   }
 
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
   render() {
-    const { content, isSelected, isSelectable, ...customProps } = this.props;
+    const { content, isSelected, isSelectable, hasChevron, ...customProps } = this.props;
     const listItemClasses = ListItem.classesForListItemFromProps(isSelected, isSelectable, hasChevron);
     const listItemClassNames = classNames([
       listItemClasses,
