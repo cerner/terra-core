@@ -6,26 +6,29 @@ const propTypes = {
   items: PropTypes.arrayOf(PropTypes.element),
   itemsSelectable: PropTypes.bool,
   isDivided: PropTypes.bool,
+  hasChevrons: PropTypes.bool,
 };
 
 const defaultProps = {
   items: [],
   itemsSelectable: false,
   isDivided: false,
+  hasChevrons: false,
 };
 
 class List extends React.Component {
 
-  static classesForListFromProps(isDivided, itemsSelectable) {
+  static classesForListFromProps(isDivided, itemsSelectable, hasChevrons) {
     return classNames(['terra-List',
       { 'terra-List-selectable': itemsSelectable },
       { 'terra-List-divided': isDivided },
+      { 'terra-List-chevrons': hasChevrons },
     ]);
   }
 
   render() {
-    const { items, itemsSelectable, isDivided, ...customProps } = this.props;
-    const listClasses = List.classesForListFromProps(isDivided, itemsSelectable);
+    const { items, itemsSelectable, isDivided, hasChevrons, ...customProps } = this.props;
+    const listClasses = List.classesForListFromProps(isDivided, itemsSelectable, hasChevrons);
     const listClassNames = classNames([
       listClasses,
       customProps.className,
