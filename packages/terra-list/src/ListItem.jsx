@@ -17,10 +17,10 @@ const defaultProps = {
 };
 
 class ListItem extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.handleOnClick = this.handleOnClick.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
 
   static classesForListItemFromProps(isSelected, isSelectable, hasChevron) {
     return classNames(['terra-ListItem',

@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import '../src/list.scss';
+import List from './List';
 
 const propTypes = {
   items: PropTypes.arrayOf(PropTypes.element),
-  itemsSelectable: PropTypes.bool,
   isDivided: PropTypes.bool,
   hasChevrons: PropTypes.bool,
   isMultiselect: PropTypes.bool,
@@ -12,16 +11,13 @@ const propTypes = {
 
 const defaultProps = {
   items: [],
-  itemsSelectable: false,
   isDivided: false,
   hasChevrons: true,
   isMultiselect: false,
 };
 
 class SelectableList extends React.Component {
-  static processItemSelection(items, isMultiselect) {
-    const indexes = SelectableList.selectedIndexesFromItem(items, isMultiselect);
-
+  static processItemSelection(items, indexes) {
     return items.map((item, index) => {
       const newSelected = indexes.includes(index);
       const newProps = {};
@@ -34,7 +30,7 @@ class SelectableList extends React.Component {
     });
   }
 
-  static selectedIndexesFromItem(items, isMultiselect) {
+  static selectedIndexesFromItems(items, isMultiselect) {
     const selectedIndexes = items.map((item, index) => {
       if (item.props.isSelected) {
         return index;
@@ -45,26 +41,58 @@ class SelectableList extends React.Component {
     return isMultiselect ? selectedIndexes : [selectedIndexes[0]];
   }
 
-  static classesForListFromProps(isDivided, itemsSelectable, isMultiselect) {
-    return classNames(['terra-List',
-      { 'terra-List-selectable': itemsSelectable },
-      { 'terra-List-multi-selectable': isMultiselect },
-      { 'terra-List-divided': isDivided },
-    ]);
+  static shouldUpdateIndexes(indexes) {
+    if (indexes.length !== this.state.selectedIndexes.length) {
+      return true;
+    }
+
+    for (let i = indexes.length - 1; i >= 0; i -= 1) {
+      if (this.state.selectedIndexes.includes(indexes[i]) !== true) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   constructor(props) {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
-    this.state = { selections: SelectableList.selectedIndexesFromItem() };
+    this.state = { selectedIndexes: SelectableList.selectedIndexesFromItems(this.props.items, this.props.isMultiselect) };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const nextIndexes = SelectableList.selectedIndexesFromItems(nextProps.items, nextProps.isMultiselect);
+
+    if (SelectableList.shouldUpdateIndexes(nextIndexes)) {
+      this.setState({ selectedIndexes: nextIndexes });
+    }
+  }
+
+  handleOnClick(event, index) {
+    let newIndexes = [];
+    if (this.props.isMultiselect && this.state.selectedIndexes.length) {
+      if (this.state.selectedIndexes.includes(index)) {
+        newIndexes = this.state.selectedIndexes.slice();
+        newIndexes.splice(newIndexes.indexOf(index), 1);
+      } else {
+        newIndexes = this.state.selectedIndexes.concat([index]);
+      }
+    } else {
+      newIndexes.push(index);
+    }
+
+    if (SelectableList.shouldUpdateIndexes(newIndexes)) {
+      this.setState({ selectedIndexes: newIndexes });
+    }
   }
 
   wrapOnClicks(items) {
     return items.map((item) => {
       const previousBlock = item.props.onClick;
       const referenceThis = this;
-      const wrappedBlock = (event) => {
-        referenceThis.handleOnClick(event);
+      const wrappedBlock = (event, index) => {
+        referenceThis.handleOnClick(event, index);
 
         if (previousBlock) {
           previousBlock(event);
@@ -76,26 +104,18 @@ class SelectableList extends React.Component {
     });
   }
 
-  handleOnClick(event) {
-    const targetElement = event.eventTarget;
-    // targetElmenet.willRecieveUpdate(isSelected: true)
-    // { selections: List.selectedIndexesFromItem() }
-    this.setState();
-  }
-
   render() {
-    const { items, itemsSelectable, isDivided, hasChevrons, isMultiselect, ...customProps } = this.props;
-    const itemsWithSelection = SelectableList.processItemSelection(items, itemsSelectable, isMultiselect);
-    const listClasses = SelectableList.classesForListFromProps(isDivided, itemsSelectable, isMultiselect);
-    const listClassNames = classNames([
-      listClasses,
-      customProps.className,
-    ]);
+    const { items, isDivided, hasChevrons, ...customProps } = this.props;
+    const itemsWithSelection = SelectableList.processItemSelection(items, this.state.selectedIndexes);
 
     return (
-      <div {...customProps} className={listClassNames}>
-        {itemsWithSelection}
-      </div>
+      <List
+        items={itemsWithSelection}
+        itemsSelectable
+        isDivided={isDivided}
+        hasChevrons={hasChevrons}
+        {...customProps}
+      />
     );
   }
 }
