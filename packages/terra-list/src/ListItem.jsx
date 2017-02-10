@@ -19,7 +19,7 @@ const defaultProps = {
 class ListItem extends React.Component {
   static classesForListItemFromProps(isSelected, isSelectable, hasChevron) {
     return classNames(['terra-ListItem',
-      { 'terra-ListItem--selected': isSelected },
+      { 'terra-ListItem--selected': isSelected }, // use aria-selected?
       { 'terra-ListItem-selectable': isSelectable },
       { 'terra-ListItem-chevron': hasChevron },
     ]);

@@ -1,28 +1,28 @@
-@import 'node_modules/terra-mixins/src/terra-mixins';
-@import './variables';
-@import './mixins';
+// @import 'node_modules/terra-mixins/src/terra-mixins';
+// @import './variables';
+// @import './mixins';
 
-.terraVM-u-chevron {
-  .padding-end(@gutter);
+// .terraVM-u-chevron {
+//   .padding-end(@gutter);
 
-  position: relative; // relative position so the chevron can use absolute position to vertically center itself
-  display: block;
+//   position: relative; // relative position so the chevron can use absolute position to vertically center itself
+//   display: block;
 
-  &:after {
-    .icon();
-    .position-end(@baseline);
-    .rem(margin-top, -(@_base-line-height / 2));
-    .medium-heading-size();
-    color: @medium-bg-20;
-    position: absolute;
-    top: 50%;
+//   &:after {
+//     .icon();
+//     .position-end(@baseline);
+//     .rem(margin-top, -(@_base-line-height / 2));
+//     .medium-heading-size();
+//     color: @medium-bg-20;
+//     position: absolute;
+//     top: 50%;
 
-    @{ltr} & {
-      content: @icon-angle-right;
-    }
+//     @{ltr} & {
+//       content: @icon-angle-right;
+//     }
 
-    @{rtl} & {
-      content: @icon-angle-left;
-    }
-  }
-}
+//     @{rtl} & {
+//       content: @icon-angle-left;
+//     }
+//   }
+// }
