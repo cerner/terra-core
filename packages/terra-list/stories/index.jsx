@@ -7,6 +7,8 @@ import { checkA11y } from 'storybook-addon-a11y';
 import 'storybook-addon-i18n-tools';
 
 import List from '../src/List';
+import ListItem from '../src/ListItem';
+import SelectableList from '../src/SelectableList';
 
 setOptions({
   name: 'List',
@@ -21,7 +23,15 @@ setOptions({
 
 addDecorator(checkA11y);
 
-storiesOf('List ', module)
+const display1 = <ListItem key='123' />;
+const display2 = <ListItem key='124' />;
+const display3 = <ListItem key='125' />;
+const display4 = <ListItem key='126' />;
+const display5 = <ListItem key='127' />;
+const display6 = <ListItem key='128' />;
+const displays = [display1, display2, display3, display4, display5, display6];
+
+storiesOf('SelectableList ', module)
   .add('Without props', () => (
-    <List />
+    <SelectableList items={displays} />
   ));

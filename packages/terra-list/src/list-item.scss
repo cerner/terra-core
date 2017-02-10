@@ -1,6 +1,6 @@
-// @import 'node_modules/terra-mixins/src/terra-mixins';
-// @import './variables';
-// @import './mixins';
+@import 'node_modules/terra-mixins/src/terra-mixins';
+@import './variables';
+@import './mixins';
 
 // .terraVM-u-chevron {
 //   .padding-end(@gutter);
@@ -26,3 +26,12 @@
 //     }
 //   }
 // }
+
+.terra-ListItem {
+  border-bottom: solid 1px;
+  height: 20px;
+}
+
+.terra-ListItem:hover {background-color: rgba(0, 143, 239, 0.53);}
+
+.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}

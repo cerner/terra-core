@@ -41,7 +41,21 @@ class SelectableList extends React.Component {
     return isMultiselect ? selectedIndexes : [selectedIndexes[0]];
   }
 
-  static shouldUpdateIndexes(indexes) {
+  constructor(props) {
+    super(props);
+    this.handleOnClick = this.handleOnClick.bind(this);
+    this.state = { selectedIndexes: SelectableList.selectedIndexesFromItems(this.props.items, this.props.isMultiselect) };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const nextIndexes = SelectableList.selectedIndexesFromItems(nextProps.items, nextProps.isMultiselect);
+
+    if (this.shouldUpdateIndexes(nextIndexes)) {
+      this.setState({ selectedIndexes: nextIndexes });
+    }
+  }
+
+  shouldUpdateIndexes(indexes) {
     if (indexes.length !== this.state.selectedIndexes.length) {
       return true;
     }
@@ -53,20 +67,6 @@ class SelectableList extends React.Component {
     }
 
     return false;
-  }
-
-  constructor(props) {
-    super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
-    this.state = { selectedIndexes: SelectableList.selectedIndexesFromItems(this.props.items, this.props.isMultiselect) };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const nextIndexes = SelectableList.selectedIndexesFromItems(nextProps.items, nextProps.isMultiselect);
-
-    if (SelectableList.shouldUpdateIndexes(nextIndexes)) {
-      this.setState({ selectedIndexes: nextIndexes });
-    }
   }
 
   handleOnClick(event, index) {
@@ -82,16 +82,16 @@ class SelectableList extends React.Component {
       newIndexes.push(index);
     }
 
-    if (SelectableList.shouldUpdateIndexes(newIndexes)) {
+    if (this.shouldUpdateIndexes(newIndexes)) {
       this.setState({ selectedIndexes: newIndexes });
     }
   }
 
   wrapOnClicks(items) {
-    return items.map((item) => {
+    return items.map((item, index) => {
       const previousBlock = item.props.onClick;
       const referenceThis = this;
-      const wrappedBlock = (event, index) => {
+      const wrappedBlock = (event) => {
         referenceThis.handleOnClick(event, index);
 
         if (previousBlock) {
@@ -105,8 +105,10 @@ class SelectableList extends React.Component {
   }
 
   render() {
-    const { items, isDivided, hasChevrons, ...customProps } = this.props;
-    const itemsWithSelection = SelectableList.processItemSelection(items, this.state.selectedIndexes);
+    const { items, isDivided, hasChevrons, isMultiselect, ...customProps } = this.props;
+    const itemsWithSelection = this.wrapOnClicks(SelectableList.processItemSelection(items, this.state.selectedIndexes));
+
+    console.log(isMultiselect);
 
     return (
       <List

@@ -25,10 +25,6 @@ class ListItem extends React.Component {
     ]);
   }
 
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-  }
 
   render() {
     const { content, isSelected, isSelectable, hasChevron, ...customProps } = this.props;
