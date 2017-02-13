@@ -6,6 +6,7 @@ import WebpackDevServer from 'webpack-dev-server';
 module.exports = {
   beforeEach: (browser, done) => {
     /* eslint-disable global-require, import/no-dynamic-require */
+    console.log(browser.globals.testConfigPath);
     const config = require(browser.globals.testConfigPath);
     /* eslint-enable global-require, import/no-dynamic-require */
     this.server = new WebpackDevServer(webpack(config), {

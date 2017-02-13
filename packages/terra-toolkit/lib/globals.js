@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = {
   beforeEach: function beforeEach(browser, done) {
     /* eslint-disable global-require, import/no-dynamic-require */
+    console.log(browser.globals.testConfigPath);
     var config = require(browser.globals.testConfigPath);
     /* eslint-enable global-require, import/no-dynamic-require */
     undefined.server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
