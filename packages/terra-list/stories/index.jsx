@@ -23,15 +23,18 @@ setOptions({
 
 addDecorator(checkA11y);
 
-const display1 = <ListItem key='123' />;
-const display2 = <ListItem key='124' />;
-const display3 = <ListItem key='125' />;
-const display4 = <ListItem key='126' />;
-const display5 = <ListItem key='127' />;
-const display6 = <ListItem key='128' />;
+const display1 = <ListItem key="123" />;
+const display2 = <ListItem key="124" />;
+const display3 = <ListItem key="125" />;
+const display4 = <ListItem key="126" />;
+const display5 = <ListItem key="127" />;
+const display6 = <ListItem key="128" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
 storiesOf('SelectableList ', module)
-  .add('Without props', () => (
+  .add('With single select', () => (
     <SelectableList items={displays} />
+  ))
+  .add('With multi select', () => (
+    <SelectableList items={displays} isMultiselect />
   ));

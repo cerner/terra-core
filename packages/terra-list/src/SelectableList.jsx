@@ -105,7 +105,7 @@ class SelectableList extends React.Component {
   }
 
   render() {
-    const { items, isDivided, hasChevrons, isMultiselect, ...customProps } = this.props;
+    const { items, isDivided, hasChevrons, isMultiselect, ...customProps } = this.props; // more custom props to beginning
     const itemsWithSelection = this.wrapOnClicks(SelectableList.processItemSelection(items, this.state.selectedIndexes));
 
     console.log(isMultiselect);
@@ -125,4 +125,4 @@ class SelectableList extends React.Component {
 SelectableList.propTypes = propTypes;
 SelectableList.defaultProps = defaultProps;
 
-export default SelectableList;
+export default SelectableList;// split into multi and single
