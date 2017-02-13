@@ -1,53 +1,18 @@
-// For stateless components, use a functional component
-// For stateful components, use a class
-
-// https://facebook.github.io/react/docs/components-and-props.html#functional-and-class-components
-
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
-import '../src/grid.scss';
 
-class Grid extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isSelected: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+import GridRow from './GridRow';
+import GridColumn from './GridColumn';
 
-  handleClick() {
-    this.setState({ isSelected: !this.state.isSelected });
-  }
+import './grid.scss';
 
-  render() {
-    const classes = classNames(['terra-Grid',
-      this.props.variant,
-      this.state.isSelected && 'u-selected',
-    ]);
-
-
-    if (!this.props.name) {
-      return null;
-    }
-    if (!this.props.variant) {
-      return null;
-    }
-    return (<button
-      className={classes}
-      onClick={this.handleClick}
-    >Terra, {this.props.name}</button>);
-  }
-}
-
-Grid.propTypes = {
-  name: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
+const propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
-Grid.defaultProps = {
-  name: 'default',
-  variant: 'terra-Grid--default',
-};
+const Grid = props => (<div {...props} />);
+
+Grid.propTypes = propTypes;
+Grid.Row = GridRow;
+Grid.Column = GridColumn;
 
 export default Grid;

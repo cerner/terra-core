@@ -2,24 +2,46 @@
 @import './variables';
 @import './mixins';
 
+// Grid Component
+// ========================================================
+
 .terra-Grid {
-  border: 1px solid #d3d3d3;
-  color: #000;
-  font-size: 42px;
-  margin: 0.5em;
-  padding: 0.5em;
-  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  @include terra-margin-start(- $terra-grid-gutter-width * 0.5);
+  @include terra-margin-end(- $terra-grid-gutter-width * 0.5);
 }
 
-.terra-Grid--default {
-  background-color: #d3d3d3;
+.terra-Grid-col {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 100%;
+  @include terra-padding-start($terra-grid-gutter-width * 0.5);
+  @include terra-padding-end($terra-grid-gutter-width * 0.5);
 }
 
-.terra-Grid--primary {
-  background-color: #add8e6;
+// Create column classes
+@for $i from 1 through 12 {
+  .terra-Grid-col--#{$i} {
+    @include terra-grid-column-size($i);
+  }
 }
 
-.u-selected {
-  outline: #0f0 solid 8px;
+// Create responsive styles
+@each $size-name, $size-width in $terra-breakpoints {
+  @media screen and (min-width: $size-width) {
+    // Responsive column classes
+    @for $i from 1 through 12 {
+      .terra-Grid-col--#{$size-name}-#{$i} {
+        @include terra-grid-column-size($i);
+      }
+    }
+  }
 }
-

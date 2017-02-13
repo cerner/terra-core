@@ -438,12 +438,11 @@ exports[`Storyshots Grid  Responsive Grid Columns 1`] = `
 </span>
 `;
 
-exports[`test should render a default Grid 1`] = `
-<div>
-  <GridRow>
-    <GridColumn>
-      Test
-    </GridColumn>
-  </GridRow>
+exports[`test should render a default component 1`] = `
+<div
+  className="terra-Grid">
+  <GridColumn>
+    Test
+  </GridColumn>
 </div>
 `;
