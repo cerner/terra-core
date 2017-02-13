@@ -4,18 +4,6 @@ import '../src/arrange.scss';
 
 const alignmentTypes = ['center', 'bottom', 'stretch'];
 
-const ObjectFilter = (obj, predicate) => {
-  const filtered = Object
-                     .keys(obj)
-                     .filter(key => predicate(key, obj[key]))
-                     .map(key => ({ [key]: obj[key] }));
-  return Object.assign({}, ...filtered);
-};
-
-const CustomProps = (props, propTypes) =>
-  ObjectFilter(props, key => !Object.prototype.hasOwnProperty.call(propTypes, key));
-
-
 const propTypes = {
   fitStart: PropTypes.element,
   fill: PropTypes.element.isRequired,
@@ -26,47 +14,55 @@ const propTypes = {
   alignFill: PropTypes.oneOf(alignmentTypes),
 };
 
-const Arrange = (props) => {
-  const customProps = CustomProps(props, Arrange.propTypes);
+const Arrange = ({
+  fitStart,
+  fill,
+  fitEnd,
+  align,
+  alignFitStart,
+  alignFill,
+  alignFitEnd,
+  ...customProps
+  }) => {
+  let alignmentFitStart = alignFitStart;
+  let alignmentFill = alignFill;
+  let alignmentFitEnd = alignFitEnd;
 
-  let { alignFitStart, alignFitEnd, alignFill } = props;
-
-  if (props.align !== undefined) {
-    alignFitStart = alignFitEnd = alignFill = props.align;
+  if (align !== undefined) {
+    alignmentFitStart = alignmentFitEnd = alignmentFill = align;
   }
 
-  const arrangeClass = classNames('terra-Arrange', { [`${customProps.className}`]: customProps.className });
+  const arrangeClassNames = classNames('terra-Arrange', { [`${customProps.className}`]: customProps.className });
 
   const fitStartClass = classNames([
     'terra-Arrange-fitStart',
-    { [`terra-Arrange-fitStart--${alignFitStart}`]: alignFitStart },
+    { [`terra-Arrange-fitStart--${alignmentFitStart}`]: alignmentFitStart },
   ]);
 
   const fitEndClass = classNames([
     'terra-Arrange-fitEnd',
-    { [`terra-Arrange-fitEnd--${alignFitEnd}`]: alignFitEnd },
+    { [`terra-Arrange-fitEnd--${alignmentFitEnd}`]: alignmentFitEnd },
   ]);
 
   const fillClass = classNames([
     'terra-Arrange-fill',
-    { [`terra-Arrange-fill--${alignFill}`]: alignFill },
+    { [`terra-Arrange-fill--${alignmentFill}`]: alignmentFill },
   ]);
 
-  if (props.fitStart === undefined && props.fitEnd === undefined) {
-    // eslint-disable-next-line no-console
-    console.warn('At least one of the props: [fitStart, fitEnd] should be supplied.');
+  if (fitStart === undefined && fitEnd === undefined) {
+    throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
 
   return (
-    <div {...customProps} className={arrangeClass} >
+    <div {...customProps} className={arrangeClassNames} >
       <div className={fitStartClass}>
-        {props.fitStart}
+        {fitStart}
       </div>
       <div className={fillClass}>
-        {props.fill}
+        {fill}
       </div>
       <div className={fitEndClass}>
-        {props.fitEnd}
+        {fitEnd}
       </div>
     </div>
   );

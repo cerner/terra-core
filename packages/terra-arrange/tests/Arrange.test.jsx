@@ -44,14 +44,12 @@ describe('Arrange', () => {
 
   // Prop Tests
   describe('props validation', () => {
-    it('should log warning in console when no fit provided', () => {
-      // eslint-disable-next-line no-console
-      console.warn = jest.genMockFunction();
-      const arrange = <Arrange fill={fill} />;
-      const wrapper = shallow(arrange);
-      expect(wrapper).toThrowError(Error);
-      // eslint-disable-next-line no-console
-      expect(console.warn.mock.calls.length).toEqual(1);
+    it('should log error in console when no fit provided', () => {
+      try {
+        shallow(<Arrange fill={fill} />);
+      } catch (object) {
+        expect(object.message).toContain('At least one of the props: [fitStart, fitEnd] should be supplied.');
+      }
     });
   });
 
@@ -120,9 +118,9 @@ describe('Arrange', () => {
   });
 
   // Custom prop testing
-  it('should render a arrange component with given className', () => {
+  it('should render a arrange component with given className and id', () => {
     const className = 'testA testB testC';
-    const arrange = <Arrange fitStart={fitStart} fill={fill} className={className} />;
+    const arrange = <Arrange fitStart={fitStart} fill={fill} className={className} id="testkey" />;
     const wrapper = shallow(arrange);
     expect(wrapper).toMatchSnapshot();
   });
