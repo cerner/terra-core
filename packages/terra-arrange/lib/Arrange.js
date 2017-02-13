@@ -18,26 +18,11 @@ require('../src/arrange.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 var alignmentTypes = ['center', 'bottom', 'stretch'];
-
-var ObjectFilter = function ObjectFilter(obj, predicate) {
-  var filtered = Object.keys(obj).filter(function (key) {
-    return predicate(key, obj[key]);
-  }).map(function (key) {
-    return _defineProperty({}, key, obj[key]);
-  });
-  return _extends.apply(undefined, [{}].concat(_toConsumableArray(filtered)));
-};
-
-var CustomProps = function CustomProps(props, propTypes) {
-  return ObjectFilter(props, function (key) {
-    return !Object.prototype.hasOwnProperty.call(propTypes, key);
-  });
-};
 
 var propTypes = {
   fitStart: _react.PropTypes.element,
@@ -49,48 +34,53 @@ var propTypes = {
   alignFill: _react.PropTypes.oneOf(alignmentTypes)
 };
 
-var Arrange = function Arrange(props) {
-  var customProps = CustomProps(props, Arrange.propTypes);
+var Arrange = function Arrange(_ref) {
+  var fitStart = _ref.fitStart,
+      fill = _ref.fill,
+      fitEnd = _ref.fitEnd,
+      align = _ref.align,
+      alignFitStart = _ref.alignFitStart,
+      alignFill = _ref.alignFill,
+      alignFitEnd = _ref.alignFitEnd,
+      customProps = _objectWithoutProperties(_ref, ['fitStart', 'fill', 'fitEnd', 'align', 'alignFitStart', 'alignFill', 'alignFitEnd']);
 
-  var alignFitStart = props.alignFitStart,
-      alignFitEnd = props.alignFitEnd,
-      alignFill = props.alignFill;
+  var alignmentFitStart = alignFitStart;
+  var alignmentFill = alignFill;
+  var alignmentFitEnd = alignFitEnd;
 
-
-  if (props.align !== undefined) {
-    alignFitStart = alignFitEnd = alignFill = props.align;
+  if (align !== undefined) {
+    alignmentFitStart = alignmentFitEnd = alignmentFill = align;
   }
 
-  var arrangeClass = (0, _classnames2.default)('terra-Arrange', _defineProperty({}, '' + customProps.className, customProps.className));
+  var arrangeClassNames = (0, _classnames2.default)('terra-Arrange', _defineProperty({}, '' + customProps.className, customProps.className));
 
-  var fitStartClass = (0, _classnames2.default)(['terra-Arrange-fitStart', _defineProperty({}, 'terra-Arrange-fitStart--' + alignFitStart, alignFitStart)]);
+  var fitStartClass = (0, _classnames2.default)(['terra-Arrange-fitStart', _defineProperty({}, 'terra-Arrange-fitStart--' + alignmentFitStart, alignmentFitStart)]);
 
-  var fitEndClass = (0, _classnames2.default)(['terra-Arrange-fitEnd', _defineProperty({}, 'terra-Arrange-fitEnd--' + alignFitEnd, alignFitEnd)]);
+  var fitEndClass = (0, _classnames2.default)(['terra-Arrange-fitEnd', _defineProperty({}, 'terra-Arrange-fitEnd--' + alignmentFitEnd, alignmentFitEnd)]);
 
-  var fillClass = (0, _classnames2.default)(['terra-Arrange-fill', _defineProperty({}, 'terra-Arrange-fill--' + alignFill, alignFill)]);
+  var fillClass = (0, _classnames2.default)(['terra-Arrange-fill', _defineProperty({}, 'terra-Arrange-fill--' + alignmentFill, alignmentFill)]);
 
-  if (props.fitStart === undefined && props.fitEnd === undefined) {
-    // eslint-disable-next-line no-console
-    console.warn('At least one of the props: [fitStart, fitEnd] should be supplied.');
+  if (fitStart === undefined && fitEnd === undefined) {
+    throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
 
   return _react2.default.createElement(
     'div',
-    _extends({}, customProps, { className: arrangeClass }),
+    _extends({}, customProps, { className: arrangeClassNames }),
     _react2.default.createElement(
       'div',
       { className: fitStartClass },
-      props.fitStart
+      fitStart
     ),
     _react2.default.createElement(
       'div',
       { className: fillClass },
-      props.fill
+      fill
     ),
     _react2.default.createElement(
       'div',
       { className: fitEndClass },
-      props.fitEnd
+      fitEnd
     )
   );
 };

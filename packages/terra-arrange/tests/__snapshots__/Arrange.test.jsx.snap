@@ -21,9 +21,10 @@ exports[`Arrange default should render a arrange component with given fit and fi
 </div>
 `;
 
-exports[`Arrange should render a arrange component with given className 1`] = `
+exports[`Arrange should render a arrange component with given className and id 1`] = `
 <div
-  className="terra-Arrange testA testB testC">
+  className="terra-Arrange testA testB testC"
+  id="testkey">
   <div
     className="terra-Arrange-fitStart">
     <img

@@ -137,13 +137,13 @@ storiesOf('Terra Arrange With Custom Props', module)
       />
     </ArrangeWrapper>
   ))
-  .add('With a custom key', () => (
+  .add('With a custom id', () => (
     <ArrangeWrapper>
       <Arrange
         fitStart={image}
         fill={simpleText}
         align={select(alignmentLabel, alignmentOptions, 'center')}
-        key="TestKey"
+        id="TestKey"
       />
     </ArrangeWrapper>
   ));
