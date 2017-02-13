@@ -1,41 +1,36 @@
 # Terra Toolkit Documentation
 
-Two testing utilities are exported from this module: testHelper and testRunner.
+This toolkit is designed to help support nightwatch tests.  It provides configuration as well as helper functions that can be used during test runs.
 
-## Test Helper
+## Test Settings
 
-testHelper sets up the testing environment using a passed in webpack configuration:
-
-```javascript
-import testHelper from '../../src/test-helper';
-import config from './test.config';
-
-testHelper(config);
-```
-
-## Test Runner
-
-testRunner is passed an array of test functions and an optional set of window sizes on which to run the tests.  If no set of window sizes is passed in, a default set is used:
+testSettings sets up the testing environment using a passed in path to a webpack configuration.  There is also a nightwatch json configuration file that can be used to set up some conventions for nightwatch tests:
 
 ```javascript
-import { By } from 'selenium-webdriver';
-import testRunner from '../../src/test-runner';
+const testSettings = require('terra-toolkit').testSettings;
+const resolve = require('path').resolve;
 
-function tests() {
-  describe('TestHelper and TestRunner', () => {
-    it('Runs the test suite correctly', (done) => {
-      jasmine.driver.get('http://localhost:8080/').then(() =>
-        jasmine.driver.findElement(By.className('test')).getText(),
-      )
-      .then((text) => {
-        expect(text).toBe('Test');
-        done();
-      });
-    });
-  });
-}
+module.exports = ((settings) => {
+  const returnSettings = settings;
+  returnSettings.test_settings = testSettings(resolve('./tests/features/test.config'));
+  return returnSettings;
+})(require('./node_modules/terra-toolkit/src/nightwatch.json'));
 
-testRunner([tests], { test: [580, 768] });
+This sets up various environments that can be run via nightwatch.  Currently, these configurations are named in the form <driver>-<size> where drivers are default (phantomjs), chrome, firefox, and safari and sizes are tiny, small, medium, large, huge, and enormous.
 ```
 
-Screenshots will be generated automatically at the end of each test run unless the `SKIP_SCREENSHOTS` environment variable is set to true.
+## Screenshot
+
+Screenshot is set up to use the web driver to take a screenshot of whatever is currently loaded.  It is highly recommended to set up a screenshot to be taken at the end of every test.
+
+```javascript
+const screenshot = require('terra-toolkit').screenshot;
+
+module.exports = {
+  afterEach: (browser, done) => {
+    screenshot(browser, done);
+  },
+};
+
+The screenshots will be placed in the target/nightwatch directory in a folder matching the test description and web driver.  The file name will be the size appended with the optional tag that is passed in.
+``` 
