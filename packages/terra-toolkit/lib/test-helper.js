@@ -8,25 +8,25 @@ exports.default = function (config) {
   jasmine.getEnv().clearReporters();
   jasmine.getEnv().addReporter(new _jasmineSpecReporter2.default.SpecReporter());
   jasmine.getEnv().addReporter({
-    jasmineStarted: function jasmineStarted() {
+    jasmineStarted: () => {
       if (process.env.SKIP_SCREENSHOTS !== 'true') {
         jasmine.terraToolkitTestResults = new _testResults2.default();
       }
     },
 
-    jasmineDone: function jasmineDone() {
+    jasmineDone: () => {
       if (jasmine.terraToolkitTestResults !== undefined) {
         jasmine.terraToolkitTestResults.save();
       }
     },
 
-    specStarted: function specStarted(result) {
+    specStarted: result => {
       if (jasmine.terraToolkitTestResults !== undefined) {
         jasmine.terraToolkitTestResults.start(result);
       }
     },
 
-    specDone: function specDone() {
+    specDone: () => {
       if (jasmine.terraToolkitTestResults !== undefined) {
         jasmine.terraToolkitTestResults.finish();
       }
@@ -35,15 +35,15 @@ exports.default = function (config) {
 
   jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
 
-  var server = void 0;
-  beforeAll(function () {
+  let server;
+  beforeAll(() => {
     server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
       quiet: true
     });
     server.listen(18080, '0.0.0.0');
   });
 
-  afterAll(function () {
+  afterAll(() => {
     server.close();
   });
 };

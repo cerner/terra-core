@@ -1,5 +1,7 @@
 'use strict';
 
+var _this = this; /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+
 var _webpack = require('webpack');
 
 var _webpack2 = _interopRequireDefault(_webpack);
@@ -10,23 +12,20 @@ var _webpackDevServer2 = _interopRequireDefault(_webpackDevServer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
 module.exports = {
-  beforeEach: function beforeEach(browser, done) {
+  beforeEach: (browser, done) => {
     /* eslint-disable global-require, import/no-dynamic-require */
-    console.log(browser.globals.testConfigPath);
-    var config = require(browser.globals.testConfigPath);
+    const config = require(browser.globals.testConfigPath);
     /* eslint-enable global-require, import/no-dynamic-require */
-    undefined.server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
+    _this.server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
       quiet: true
     });
 
-    undefined.server.listen(browser.globals.webpackDevServerPort, '0.0.0.0');
+    _this.server.listen(browser.globals.webpackDevServerPort, '0.0.0.0');
     browser.resizeWindow(browser.globals.width, browser.globals.height, done);
   },
-  afterEach: function afterEach(browser, done) {
-    undefined.server.close();
+  afterEach: (browser, done) => {
+    _this.server.close();
     browser.end(done);
   }
 };

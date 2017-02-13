@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (testRunners, customWindowSizes) {
-  var windowSizes = {};
+  let windowSizes = {};
   if (!customWindowSizes) {
     windowSizes = {
       tiny: [470, 768],
@@ -19,26 +19,26 @@ exports.default = function (testRunners, customWindowSizes) {
     windowSizes = customWindowSizes;
   }
 
-  Object.keys(windowSizes).forEach(function (key) {
-    var sizeArray = windowSizes[key];
-    var width = sizeArray[0];
-    var height = sizeArray[1];
+  Object.keys(windowSizes).forEach(key => {
+    const sizeArray = windowSizes[key];
+    const width = sizeArray[0];
+    const height = sizeArray[1];
 
-    var driverName = 'phantomjs_' + key;
-    describe('' + driverName, function () {
-      beforeAll(function (done) {
+    const driverName = `phantomjs_${key}`;
+    describe(`${driverName}`, () => {
+      beforeAll(done => {
         jasmine.driverName = driverName;
         jasmine.driver = new _seleniumWebdriver2.default.Builder().forBrowser('phantomjs').build();
-        jasmine.driver.manage().window().setSize(width, height).then(function () {
+        jasmine.driver.manage().window().setSize(width, height).then(() => {
           done();
         });
       });
 
-      testRunners.forEach(function (testRunner) {
+      testRunners.forEach(testRunner => {
         testRunner(key);
       });
 
-      afterAll(function (done) {
+      afterAll(done => {
         jasmine.driver.quit().then(done);
       });
     });
