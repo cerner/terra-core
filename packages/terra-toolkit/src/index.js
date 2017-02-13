@@ -1,7 +1,5 @@
-import testRunner from './test-runner';
-import testHelper from './test-helper';
-import globals from './globals';
+import screenshot from './screenshot';
+import testSettings from './test-settings';
 
-exports.testRunner = testRunner;
-exports.testHelper = testHelper;
-exports.globals = globals;
+exports.screenshot = screenshot;
+exports.testSettings = testSettings;

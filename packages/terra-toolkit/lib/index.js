@@ -1,19 +1,14 @@
 'use strict';
 
-var _testRunner = require('./test-runner');
+var _screenshot = require('./screenshot');
 
-var _testRunner2 = _interopRequireDefault(_testRunner);
+var _screenshot2 = _interopRequireDefault(_screenshot);
 
-var _testHelper = require('./test-helper');
+var _testSettings = require('./test-settings');
 
-var _testHelper2 = _interopRequireDefault(_testHelper);
-
-var _globals = require('./globals');
-
-var _globals2 = _interopRequireDefault(_globals);
+var _testSettings2 = _interopRequireDefault(_testSettings);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.testRunner = _testRunner2.default;
-exports.testHelper = _testHelper2.default;
-exports.globals = _globals2.default;
+exports.screenshot = _screenshot2.default;
+exports.testSettings = _testSettings2.default;
