@@ -14,7 +14,7 @@ module.exports = ((settings) => {
   const returnSettings = settings;
   returnSettings.test_settings = testSettings(resolve('./tests/features/test.config'));
   return returnSettings;
-})(require('./node_modules/terra-toolkit/src/nightwatch.json'));
+})(require('./node_modules/terra-toolkit/lib/nightwatch.json'));
 
 This sets up various environments that can be run via nightwatch.  Currently, these configurations are named in the form <driver>-<size> where drivers are default (phantomjs), chrome, firefox, and safari and sizes are tiny, small, medium, large, huge, and enormous.
 ```
