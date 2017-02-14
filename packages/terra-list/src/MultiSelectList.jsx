@@ -5,32 +5,26 @@ import List from './List';
 const propTypes = {
   items: PropTypes.arrayOf(PropTypes.element),
   isDivided: PropTypes.bool,
-  hasChevrons: PropTypes.bool,
-  isMultiselect: PropTypes.bool,
 };
 
 const defaultProps = {
   items: [],
   isDivided: false,
-  hasChevrons: true,
-  isMultiselect: false,
 };
 
-class SelectableList extends React.Component {
+class MultiSelectList extends React.Component {
   static processItemSelection(items, indexes) {
     return items.map((item, index) => {
       const newSelected = indexes.includes(index);
-      const newProps = {};
-
-      if (newSelected !== item.isSelected) {
-        newProps.isSelected = newSelected;
+      if (newSelected === item.isSelected) {
+        return item;
       }
 
-      return React.cloneElement(item, newProps);
+      return React.cloneElement(item, { isSelected: newSelected });
     });
   }
 
-  static selectedIndexesFromItems(items, isMultiselect) {
+  static selectedIndexesFromItems(items) {
     const selectedIndexes = items.map((item, index) => {
       if (item.props.isSelected) {
         return index;
@@ -38,17 +32,17 @@ class SelectableList extends React.Component {
       return false;
     });
 
-    return isMultiselect ? selectedIndexes : [selectedIndexes[0]];
+    return selectedIndexes;
   }
 
   constructor(props) {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
-    this.state = { selectedIndexes: SelectableList.selectedIndexesFromItems(this.props.items, this.props.isMultiselect) };
+    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.items) };
   }
 
   componentWillReceiveProps(nextProps) {
-    const nextIndexes = SelectableList.selectedIndexesFromItems(nextProps.items, nextProps.isMultiselect);
+    const nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.items);
 
     if (this.shouldUpdateIndexes(nextIndexes)) {
       this.setState({ selectedIndexes: nextIndexes });
@@ -71,7 +65,7 @@ class SelectableList extends React.Component {
 
   handleOnClick(event, index) {
     let newIndexes = [];
-    if (this.props.isMultiselect && this.state.selectedIndexes.length) {
+    if (this.state.selectedIndexes.length) {
       if (this.state.selectedIndexes.includes(index)) {
         newIndexes = this.state.selectedIndexes.slice();
         newIndexes.splice(newIndexes.indexOf(index), 1);
@@ -105,24 +99,21 @@ class SelectableList extends React.Component {
   }
 
   render() {
-    const { items, isDivided, hasChevrons, isMultiselect, ...customProps } = this.props; // more custom props to beginning
-    const itemsWithSelection = this.wrapOnClicks(SelectableList.processItemSelection(items, this.state.selectedIndexes));
-
-    console.log(isMultiselect);
+    const { items, isDivided, ...customProps } = this.props;
+    const itemsWithSelection = this.wrapOnClicks(MultiSelectList.processItemSelection(items, this.state.selectedIndexes));
 
     return (
       <List
         items={itemsWithSelection}
         itemsSelectable
         isDivided={isDivided}
-        hasChevrons={hasChevrons}
         {...customProps}
       />
     );
   }
 }
 
-SelectableList.propTypes = propTypes;
-SelectableList.defaultProps = defaultProps;
+MultiSelectList.propTypes = propTypes;
+MultiSelectList.defaultProps = defaultProps;
 
-export default SelectableList;// split into multi and single
+export default MultiSelectList;

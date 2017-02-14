@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import '../src/list-item.scss';
 
 const propTypes = {
+  className: PropTypes.string,
   content: PropTypes.element,
   isSelected: PropTypes.bool,
   isSelectable: PropTypes.bool,
@@ -10,37 +11,35 @@ const propTypes = {
 };
 
 const defaultProps = {
+  className: '',
   content: undefined,
   isSelected: false,
   isSelectable: false,
   hasChevron: false,
 };
 
-class ListItem extends React.Component {
-  static classesForListItemFromProps(isSelected, isSelectable, hasChevron) {
-    return classNames(['terra-ListItem',
-      { 'terra-ListItem--selected': isSelected }, // use aria-selected?
-      { 'terra-ListItem-selectable': isSelectable },
-      { 'terra-ListItem-chevron': hasChevron },
-    ]);
-  }
+const ListItem = ({
+    className,
+    content,
+    isSelected,
+    isSelectable,
+    hasChevron,
+    ...customProps
+  }) => {
+  const listItemClassNames = classNames([
+    'terra-ListItem',
+    { 'terra-ListItem--selected': isSelected },
+    { 'terra-ListItem-selectable': isSelectable },
+    { 'terra-ListItem-chevron': hasChevron },
+    className,
+  ]);
 
-
-  render() {
-    const { content, isSelected, isSelectable, hasChevron, ...customProps } = this.props;
-    const listItemClasses = ListItem.classesForListItemFromProps(isSelected, isSelectable, hasChevron);
-    const listItemClassNames = classNames([
-      listItemClasses,
-      customProps.className,
-    ]);
-
-    return (
-      <div {...customProps} className={listItemClassNames}>
-        {content}
-      </div>
-    );
-  }
-}
+  return (
+    <div {...customProps} className={listItemClassNames}>
+      {content}
+    </div>
+  );
+};
 
 ListItem.propTypes = propTypes;
 ListItem.defaultProps = defaultProps;

@@ -8,7 +8,8 @@ import 'storybook-addon-i18n-tools';
 
 import List from '../src/List';
 import ListItem from '../src/ListItem';
-import SelectableList from '../src/SelectableList';
+import SingleSelectList from '../src/SingleSelectList';
+import MultiSelectList from '../src/MultiSelectList';
 
 setOptions({
   name: 'List',
@@ -33,8 +34,8 @@ const displays = [display1, display2, display3, display4, display5, display6];
 
 storiesOf('SelectableList ', module)
   .add('With single select', () => (
-    <SelectableList items={displays} />
+    <SingleSelectList items={displays} />
   ))
   .add('With multi select', () => (
-    <SelectableList items={displays} isMultiselect />
+    <MultiSelectList items={displays} />
   ));
