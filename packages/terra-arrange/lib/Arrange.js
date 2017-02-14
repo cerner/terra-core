@@ -25,12 +25,35 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var alignmentTypes = ['center', 'bottom', 'stretch'];
 
 var propTypes = {
+  /**
+   * The content to display in the body of the fitStart
+   */
   fitStart: _react.PropTypes.element,
+  /**
+   * The content to display in the body of the fill
+   */
   fill: _react.PropTypes.element.isRequired,
+  /**
+   * The content to display in the body of the fitEnd
+   */
   fitEnd: _react.PropTypes.element,
+  /**
+   * The vertical orientation of all three containers.
+   * It will override the aligment of alignFitStart, alignFill and alignFitEnd if given.
+   * One of: `center`, `bottom`, `stretch`.
+   */
   align: _react.PropTypes.oneOf(alignmentTypes),
+  /**
+   * The vertical orientation of fitStart. One of: `center`, `bottom`, `stretch`.
+   */
   alignFitStart: _react.PropTypes.oneOf(alignmentTypes),
+  /**
+   * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`.
+   */
   alignFitEnd: _react.PropTypes.oneOf(alignmentTypes),
+  /**
+   * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
+   */
   alignFill: _react.PropTypes.oneOf(alignmentTypes)
 };
 
