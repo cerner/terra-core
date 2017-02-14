@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": "off", // Remove warnings on max line length exceeding 100 characters
+    "react/require-default-props": "off", // Disabled the requirement to default all non-required props
+    "no-multi-assign": "off" // TODO: Decide if we want to turn this on. It was turned on in eslint-config-airbnb-base v14.1.0
+  },
+    "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true
+  }
+}

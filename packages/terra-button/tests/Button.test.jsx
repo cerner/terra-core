@@ -1,9 +1,5 @@
 import React from 'react';
-import initStoryshots from 'storyshots';
 import Button from '../src/Button';
-
-// Run snapshot tests for react-storybook
-initStoryshots();
 
 // Snapshot Tests
 it('should render a default component', () => {

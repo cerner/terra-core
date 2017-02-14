@@ -1,0 +1,11 @@
+{
+  "setupFiles": [
+    "../../jestsetup.js"
+  ],
+  "snapshotSerializers": [
+    "../../node_modules/enzyme-to-json/serializer"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "identity-obj-proxy"
+  }
+}
