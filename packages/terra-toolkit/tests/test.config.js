@@ -4,12 +4,11 @@
 
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.join(__dirname, 'fixtures', 'index'),
+    index: path.join(__dirname, 'nightwatch', 'fixtures', 'index'),
   },
   module: {
     loaders: [
@@ -20,7 +19,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!postcss!sass'),
+        loader: 'style!css!postcss!sass',
       },
     ],
   },
@@ -29,9 +28,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
   },
   plugins: [
-    new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'fixtures', 'index.html'),
+      template: path.join(__dirname, 'nightwatch', 'fixtures', 'index.html'),
+      chunks: ['index'],
     }),
   ],
   postcss: [
@@ -47,5 +46,8 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.webpack.js', '.js', '.jsx'],
+  },
+  sassLoader: {
+    data: `@import "${path.resolve('node_modules/terra-legacy-theme/src/terra-legacy-theme.scss')}"; @import "${path.resolve('node_modules/terra-application/src/terra-application.scss')}"; $terra-bidi: true;`,
   },
 };
