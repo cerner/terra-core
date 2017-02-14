@@ -28,6 +28,21 @@
       "\\.(css|scss)$": "identity-obj-proxy"
     }
   },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "deploy": "build-storybook && gh-pages -d storybook-static",
+    "lint": "yarn lint-js && yarn lint-scss",
+    "lint-js": "eslint --ext .js,.jsx .",
+    "lint-scss": "stylelint src/**/*.scss",
+    "pretest": "yarn lint",
+    "release:major": "yarn test && yarn build && npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
+    "release:minor": "yarn test && yarn build && npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
+    "release:patch": "yarn test && yarn build && npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",
+    "start": "start-storybook -p 8080",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
     "babel-cli": "^6.18.0",
@@ -64,20 +79,5 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-mixins": "^1.0.0"
-  },
-  "scripts": {
-    "build": "babel src --out-dir lib",
-    "deploy": "build-storybook && gh-pages -d storybook-static",
-    "lint": "yarn lint-js && yarn lint-scss",
-    "lint-js": "eslint --ext .js,.jsx .",
-    "lint-scss": "stylelint src/**/*.scss",
-    "pretest": "yarn lint",
-    "release:major": "yarn test && yarn build && npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "release:minor": "yarn test && yarn build && npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "release:patch": "yarn test && yarn build && npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "start": "start-storybook -p 8080",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
   }
 }
