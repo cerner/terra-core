@@ -1,8 +1,7 @@
 language: node_js
+jdk: oraclejdk8
 script:
   - yarn test
-jdk:
-  - oraclejdk8
 cache:
   yarn: true
   directories:
