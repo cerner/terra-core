@@ -29,19 +29,12 @@
     }
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "deploy": "build-storybook && gh-pages -d storybook-static",
-    "lint": "yarn lint-js && yarn lint-scss",
-    "lint-js": "eslint --ext .js,.jsx .",
-    "lint-scss": "stylelint src/**/*.scss",
-    "pretest": "yarn lint",
-    "release:major": "yarn test && yarn build && npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "release:minor": "yarn test && yarn build && npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "release:patch": "yarn test && yarn build && npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "start": "start-storybook -p 8080",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "bootstrap": "lerna bootstrap",
+    "compile": "lerna run compile",
+    "lint": "lerna run lint",
+    "lint-js": "lerna run lint-js",
+    "lint-scss": "lerna run lint-scss",
+    "pretest": "npm run lint"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
