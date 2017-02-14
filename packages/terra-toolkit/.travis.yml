@@ -1,11 +1,10 @@
 language: node_js
+sudo: required
 jdk: oraclejdk8
-sudo: false
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
+install: true
 script:
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
   - yarn test
 cache:
   yarn: true
