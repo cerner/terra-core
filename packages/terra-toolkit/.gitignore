@@ -30,6 +30,8 @@
 /lib/bundler/man/
 /pkg/
 /rdoc/
+/reports
+/screenshots
 /spec/examples.txt
 /spec/reports/
 /target
