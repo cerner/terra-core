@@ -22,13 +22,14 @@
   "homepage": "https://github.cerner.com/terra/terra-ui#readme",
   "scripts": {
     "compile": "../../node_modules/.bin/babel src --out-dir lib",
-    "lint": "npm run lint-js && npm run lint-scss",
-    "lint-js": "../../node_modules/.bin/eslint --ext .js,.jsx src",
-    "lint-scss": "../../node_modules/.bin/stylelint src/**/*.scss",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "../../node_modules/.bin/eslint --ext .js,.jsx src",
+    "lint:scss": "../../node_modules/.bin/stylelint src/**/*.scss",
     "pretest": "npm run lint",
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push --follow-tags",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push --follow-tags",
-    "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags"
+    "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push --follow-tags",
+    "test": "../../node_modules/.bin/jest --config ../../jestconfig.json"
   },
   "peerDependencies": {
     "react": "^15.4.2",

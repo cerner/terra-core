@@ -18,8 +18,12 @@
     "url": "https://github.com/cerner/terra-ui/issues"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "packages/**/src/*.js",
+      "packages/**/src/*.jsx"
+    ],
     "setupFiles": [
-      "./tests/jestsetup.js"
+      "./jestsetup.js"
     ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
@@ -32,9 +36,11 @@
     "bootstrap": "lerna bootstrap",
     "compile": "lerna run compile",
     "lint": "lerna run lint",
-    "lint-js": "lerna run lint-js",
-    "lint-scss": "lerna run lint-scss",
-    "pretest": "npm run lint"
+    "lint:js": "lerna run lint:js",
+    "lint:scss": "lerna run lint:scss",
+    "jest": "jest",
+    "jest:coverage": "jest --coverage",
+    "test": "lerna exec --concurrency 1 npm test"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
