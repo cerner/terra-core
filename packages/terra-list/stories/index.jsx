@@ -37,5 +37,5 @@ storiesOf('SelectableList ', module)
     <SingleSelectList items={displays} />
   ))
   .add('With multi select', () => (
-    <MultiSelectList items={displays} />
+    <MultiSelectList items={displays} maxSelectionCount={3} />
   ));

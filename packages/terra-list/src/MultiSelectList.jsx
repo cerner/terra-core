@@ -5,11 +5,15 @@ import List from './List';
 const propTypes = {
   items: PropTypes.arrayOf(PropTypes.element),
   isDivided: PropTypes.bool,
+  onSelection: PropTypes.func,
+  maxSelectionCount: PropTypes.number,
 };
 
 const defaultProps = {
   items: [],
   isDivided: false,
+  onSelection: undefined,
+  maxSelectionCount: 0,
 };
 
 class MultiSelectList extends React.Component {
@@ -24,13 +28,13 @@ class MultiSelectList extends React.Component {
     });
   }
 
-  static selectedIndexesFromItems(items) {
-    const selectedIndexes = items.map((item, index) => {
-      if (item.props.isSelected) {
-        return index;
+  static selectedIndexesFromItems(items, maxSelectionCount) {
+    const selectedIndexes = [];
+    for (let i = 0; i < items.length; i += 1) {
+      if (selectedIndexes.length < maxSelectionCount && items[i].props.isSelected) {
+        selectedIndexes.push(i);
       }
-      return false;
-    });
+    }
 
     return selectedIndexes;
   }
@@ -38,7 +42,7 @@ class MultiSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
-    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.items) };
+    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.items, this.props.maxSelectionCount) };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -81,12 +85,30 @@ class MultiSelectList extends React.Component {
     }
   }
 
+  shouldHandleClick(index) {
+    if (this.state.selectedIndexes.length < this.props.maxSelectionCount) {
+      return true;
+    }
+    if (this.state.selectedIndexes.includes(index)) {
+      return true;
+    }
+    return false;
+  }
+
   wrapOnClicks(items) {
     return items.map((item, index) => {
       const previousBlock = item.props.onClick;
       const referenceThis = this;
       const wrappedBlock = (event) => {
+        if (!referenceThis.shouldHandleClick(index)) {
+          return;
+        }
+
         referenceThis.handleOnClick(event, index);
+
+        if (referenceThis.onSelection) {
+          referenceThis.onSelection(event, index);
+        }
 
         if (previousBlock) {
           previousBlock(event);
@@ -98,9 +120,17 @@ class MultiSelectList extends React.Component {
     });
   }
 
+  unusedVariables(variable) {
+    return variable === this;
+  }
+
   render() {
-    const { items, isDivided, ...customProps } = this.props;
+    const { items, isDivided, onSelection, maxSelectionCount, ...customProps } = this.props;
     const itemsWithSelection = this.wrapOnClicks(MultiSelectList.processItemSelection(items, this.state.selectedIndexes));
+
+    // Figure out how to handle this scenario.
+    this.unusedVariables(onSelection);
+    this.unusedVariables(maxSelectionCount);
 
     return (
       <List

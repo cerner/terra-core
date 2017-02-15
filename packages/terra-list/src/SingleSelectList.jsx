@@ -6,12 +6,14 @@ const propTypes = {
   items: PropTypes.arrayOf(PropTypes.element),
   isDivided: PropTypes.bool,
   hasChevrons: PropTypes.bool,
+  onSelection: PropTypes.func,
 };
 
 const defaultProps = {
   items: [],
   isDivided: false,
   hasChevrons: true,
+  onSelection: undefined,
 };
 
 class SingleSelectList extends React.Component {
@@ -70,6 +72,10 @@ class SingleSelectList extends React.Component {
       const wrappedBlock = (event) => {
         referenceThis.handleOnClick(event, index);
 
+        if (referenceThis.onSelection) {
+          referenceThis.onSelection(event, index);
+        }
+
         if (previousBlock) {
           previousBlock(event);
         }
@@ -80,9 +86,16 @@ class SingleSelectList extends React.Component {
     });
   }
 
+  unusedVariables(variable) {
+    return variable === this;
+  }
+
   render() {
-    const { items, isDivided, hasChevrons, ...customProps } = this.props;
+    const { items, isDivided, hasChevrons, onSelection, ...customProps } = this.props;
     const itemsWithSelection = this.wrapOnClicks(SingleSelectList.processItemSelection(items, this.state.selectedIndex));
+
+    // Figure out how to handle this scenario.
+    this.unusedVariables(onSelection);
 
     return (
       <List
