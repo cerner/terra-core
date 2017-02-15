@@ -4,9 +4,8 @@ import '../src/list.scss';
 import ListItem from './ListItem';
 
 const propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.optionalString,
   items: PropTypes.arrayOf(PropTypes.element),
-  itemsSelectable: PropTypes.bool,
   isDivided: PropTypes.bool,
   hasChevrons: PropTypes.bool,
 };
@@ -14,7 +13,6 @@ const propTypes = {
 const defaultProps = {
   className: '',
   items: [],
-  itemsSelectable: false,
   isDivided: false,
   hasChevrons: false,
 };
@@ -22,14 +20,12 @@ const defaultProps = {
 const List = ({
     className,
     items,
-    itemsSelectable,
     isDivided,
     hasChevrons,
     ...customProps
   }) => {
   const listClassNames = classNames([
     'terra-List',
-    { 'terra-List-selectable': itemsSelectable },
     { 'terra-List-divided': isDivided },
     { 'terra-List-chevrons': hasChevrons },
     className,

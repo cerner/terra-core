@@ -29,13 +29,19 @@ const display2 = <ListItem key="124" />;
 const display3 = <ListItem key="125" />;
 const display4 = <ListItem key="126" />;
 const display5 = <ListItem key="127" />;
-const display6 = <ListItem key="128" />;
+const display6 = <ListItem key="128" isSelectable={false} />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
 storiesOf('SelectableList ', module)
-  .add('With single select', () => (
-    <SingleSelectList items={displays} />
+  .add('List', () => (
+    <List items={displays} />
   ))
-  .add('With multi select', () => (
-    <MultiSelectList items={displays} maxSelectionCount={3} />
+  .add('List Divided', () => (
+    <List items={displays} isDivided />
+  ))
+  .add('SingleSelectList', () => (
+    <SingleSelectList items={displays} isDivided />
+  ))
+  .add('MultiSelectList', () => (
+    <MultiSelectList items={displays} maxSelectionCount={3} isDivided />
   ));

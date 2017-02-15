@@ -114,7 +114,13 @@ class MultiSelectList extends React.Component {
           previousBlock(event);
         }
       };
-      const newProps = { onClick: wrappedBlock };
+
+      let newProps = { onClick: wrappedBlock };
+      if (item.props.isSelectable === undefined) {
+        newProps.isSelectable = true;
+      } else if (!item.props.isSelectable) {
+        newProps = {};
+      }
 
       return React.cloneElement(item, newProps);
     });

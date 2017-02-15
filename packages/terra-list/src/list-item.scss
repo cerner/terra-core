@@ -3,37 +3,40 @@
 @import './mixins';
 
 // .terraVM-u-chevron {
-//   .padding-end(@gutter);
+//   // .padding-end(@gutter);
 
 //   position: relative; // relative position so the chevron can use absolute position to vertically center itself
 //   display: block;
 
 //   &:after {
-//     .icon();
-//     .position-end(@baseline);
-//     .rem(margin-top, -(@_base-line-height / 2));
-//     .medium-heading-size();
-//     color: @medium-bg-20;
+//     // .icon();
+//     // .position-end(@baseline);
+//     // .rem(margin-top, -(@_base-line-height / 2));
+//     // .medium-heading-size();
+//     // color: @medium-bg-20;
 //     position: absolute;
 //     top: 50%;
 
-//     @{ltr} & {
-//       content: @icon-angle-right;
-//     }
+//   //   @{ltr} & {
+//   //     content: @icon-angle-right;
+//   //   }
 
-//     @{rtl} & {
-//       content: @icon-angle-left;
-//     }
+//   //   @{rtl} & {
+//   //     content: @icon-angle-left;
+//   //   }
 //   }
 // }
 
 .terra-ListItem {
-  border-bottom: solid 1px;
   height: 20px;
 }
 
-.terra-ListItem:hover {background-color: rgba(0, 143, 239, 0.53);}
+.terra-ListItem-selectable {
+  cursor: pointer;
 
-.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
+  &.terra-ListItem:hover {background-color: rgba(0, 143, 239, 0.53);}
 
-.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}
+  &.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
+
+  &.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}
+}

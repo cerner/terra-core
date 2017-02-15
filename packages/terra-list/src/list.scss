@@ -1,84 +1,12 @@
-// @import 'node_modules/terra-mixins/src/terra-mixins';
-// @import './variables';
-// @import './mixins';
+@import 'node_modules/terra-mixins/src/terra-mixins';
+@import './variables';
+@import './mixins';
 
-// // Inline
-// // Extends .list-unstyled, displays list items inline
-// .list-inline {
-//   > li {
-//     .separate-elements-inline(@gutter, margin);
-//     display: inline-block;
-//     max-width: 100%;
-//   }
+.terra-List-divided {
+  > * {border-bottom: solid 1px;}
 
-//   dfn {
-//     .text-bold();
-//     font-style: normal;
-//   }
-
-//   // Add dividing border between list items
-//   &.list-inline-divided > li {
-//     .border-end();
-//     .separate-elements-inline(@half-gutter, margin);
-//     .separate-elements-inline(@half-gutter, padding);
-
-//     &:last-child {
-//       .border-end(0);
-//     }
-//   }
-// }
-
-// // Divided tight
-// .list-divided {
-//   > li {
-//     .border-bottom();
-
-//     &:first-child {
-//       .border-top();
-//     }
-//   }
-// }
-
-// // Key-value lists
-// // Align keys to the left and values to the right of the container.
-// .list-key-value {
-//   .list-divided();
-
-//   li {
-//     .clearfix();
-
-//     > *,
-//     > a > * {
-//       .float-end();
-
-//       &:first-child {
-//         .float-start();
-//         .text-bold();
-//       }
-//     }
-
-//     // Requires first-child for higher specificity than >*:first-child
-//     > a:first-child {
-//       .clearfix();
-//       .float-none();
-//       .text-normal();
-//       display: block;
-//     }
-//   }
-// }
-
-// .key-value-invert {
-//   li {
-//     > *,
-//     > a > * {
-//       .text-bold();
-
-//       &:first-child {
-//         .text-normal();
-//       }
-//     }
-//   }
-// }
+  &:first-child {border-top: solid 1px;}
+}
 
 // // Selectable lists
 // .list-selectable > li,

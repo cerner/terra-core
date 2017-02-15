@@ -14,7 +14,7 @@ const defaultProps = {
   className: '',
   content: undefined,
   isSelected: false,
-  isSelectable: false,
+  isSelectable: undefined,
   hasChevron: false,
 };
 
