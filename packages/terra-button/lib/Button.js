@@ -71,8 +71,6 @@ var Button = function Button(_ref) {
   attributes.className = (0, _classnames2.default)(['terra-Button', 'terra-Button--' + style, { 'is-disabled': isDisabled }, _defineProperty({}, 'terra-Button--' + size, size), { 'terra-Button--block': isBlock }, attributes.className]);
 
   attributes.disabled = isDisabled;
-  // attributes.href = href;
-  // attributes.onClick = onClick;
   attributes.tabIndex = isDisabled ? '-1' : undefined;
   attributes['aria-disabled'] = isDisabled;
 
