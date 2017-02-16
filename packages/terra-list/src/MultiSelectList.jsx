@@ -41,7 +41,7 @@ class MultiSelectList extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
     this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.items, this.props.maxSelectionCount) };
   }
 
@@ -67,7 +67,7 @@ class MultiSelectList extends React.Component {
     return false;
   }
 
-  handleOnClick(event, index) {
+  handleSelection(event, index) {
     let newIndexes = [];
     if (this.state.selectedIndexes.length) {
       if (this.state.selectedIndexes.includes(index)) {
@@ -80,12 +80,10 @@ class MultiSelectList extends React.Component {
       newIndexes.push(index);
     }
 
-    if (this.shouldUpdateIndexes(newIndexes)) {
-      this.setState({ selectedIndexes: newIndexes });
-    }
+    this.setState({ selectedIndexes: newIndexes });
   }
 
-  shouldHandleClick(index) {
+  shouldHandleSelection(index) {
     if (this.state.selectedIndexes.length < this.props.maxSelectionCount) {
       return true;
     }
@@ -97,25 +95,23 @@ class MultiSelectList extends React.Component {
 
   wrapOnClicks(items) {
     return items.map((item, index) => {
-      const previousBlock = item.props.onClick;
+      const initialOnClick = item.props.onClick;
       const referenceThis = this;
-      const wrappedBlock = (event) => {
-        if (!referenceThis.shouldHandleClick(index)) {
-          return;
+      const wrappedOnClick = (event) => {
+        if (referenceThis.shouldHandleSelection(index)) {
+          referenceThis.handleSelection(event, index);
+
+          if (referenceThis.onSelection) {
+            referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
+          }
         }
 
-        referenceThis.handleOnClick(event, index);
-
-        if (referenceThis.onSelection) {
-          referenceThis.onSelection(event, index);
-        }
-
-        if (previousBlock) {
-          previousBlock(event);
+        if (initialOnClick) {
+          initialOnClick(event);
         }
       };
 
-      let newProps = { onClick: wrappedBlock };
+      let newProps = { onClick: wrappedOnClick };
       if (item.props.isSelectable === undefined) {
         newProps.isSelectable = true;
       } else if (!item.props.isSelectable) {

@@ -43,45 +43,45 @@ class SingleSelectList extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
     this.state = { selectedIndex: SingleSelectList.selectedIndexFromItems(this.props.items) };
   }
 
   componentWillReceiveProps(nextProps) {
     const index = SingleSelectList.selectedIndexFromItems(nextProps.items, nextProps.isMultiselect);
 
-    if (this.shouldUpdateIndex(index)) {
+    if (index.length !== this.state.selectedIndex) {
       this.setState({ selectedIndexes: index });
     }
   }
 
-  shouldUpdateIndex(index) {
-    return index.length !== this.state.selectedIndex;
+  handleSelection(event, index) {
+    this.setState({ selectedIndex: index });
   }
 
-  handleOnClick(event, index) {
-    if (this.shouldUpdateIndex(index)) {
-      this.setState({ selectedIndex: index });
-    }
+  shouldHandleSelection(index) {
+    return index.length !== this.state.selectedIndex;
   }
 
   wrapOnClicks(items) {
     return items.map((item, index) => {
-      const previousBlock = item.props.onClick;
+      const initialOnClick = item.props.onClick;
       const referenceThis = this;
-      const wrappedBlock = (event) => {
-        referenceThis.handleOnClick(event, index);
+      const wrappedOnClick = (event) => {
+        if (referenceThis.shouldHandleSelection(index)) {
+          referenceThis.handleSelection(event, index);
 
-        if (referenceThis.onSelection) {
-          referenceThis.onSelection(event, index);
+          if (referenceThis.onSelection) {
+            referenceThis.onSelection(event, referenceThis.state.selectedIndex);
+          }
         }
 
-        if (previousBlock) {
-          previousBlock(event);
+        if (initialOnClick) {
+          initialOnClick(event);
         }
       };
 
-      let newProps = { onClick: wrappedBlock };
+      let newProps = { onClick: wrappedOnClick };
       if (item.props.isSelectable === undefined) {
         newProps.isSelectable = true;
       } else if (!item.props.isSelectable) {
