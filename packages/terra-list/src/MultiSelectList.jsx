@@ -31,7 +31,11 @@ class MultiSelectList extends React.Component {
   static selectedIndexesFromItems(items, maxSelectionCount) {
     const selectedIndexes = [];
     for (let i = 0; i < items.length; i += 1) {
-      if (selectedIndexes.length < maxSelectionCount && items[i].props.isSelected) {
+      if (selectedIndexes.length >= maxSelectionCount) {
+        break;
+      }
+
+      if (items[i].props.isSelected) {
         selectedIndexes.push(i);
       }
     }

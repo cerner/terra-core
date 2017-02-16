@@ -30,15 +30,12 @@ class SingleSelectList extends React.Component {
   }
 
   static selectedIndexFromItems(items) {
-    let selectedIndex = -1;
-    for (let i = items.length - 1; i >= 0; i -= 1) {
+    for (let i = 0; i < items.length; i += 1) {
       if (items[i].props === true) {
-        selectedIndex = i;
-        return false;
+        return i;
       }
     }
-
-    return selectedIndex;
+    return -1;
   }
 
   constructor(props) {
