@@ -1,0 +1,25 @@
+@import 'node_modules/terra-mixins/src/terra-mixins';
+@import './variables';
+@import './mixins';
+
+.terra-ProgressBar {
+  border: 1px solid #d3d3d3;
+  color: #000;
+  font-size: 42px;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.terra-ProgressBar--default {
+  background-color: #d3d3d3;
+}
+
+.terra-ProgressBar--primary {
+  background-color: #add8e6;
+}
+
+.u-selected {
+  outline: #0f0 solid 8px;
+}
+
