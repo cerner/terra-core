@@ -34,7 +34,7 @@
 .terra-ListItem-selectable {
   cursor: pointer;
 
-  &.terra-ListItem:hover {background-color: rgba(0, 143, 239, 0.53);}
+  &.terra-ListItem:hover {background-color: $terra-primary-color-10;}
 
   &.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
 

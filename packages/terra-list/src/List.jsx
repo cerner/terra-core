@@ -32,9 +32,9 @@ const List = ({
   ]);
 
   return (
-    <div {...customProps} className={listClassNames}>
+    <ul {...customProps} className={listClassNames}>
       {items}
-    </div>
+    </ul>
   );
 };
 

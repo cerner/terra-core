@@ -35,9 +35,9 @@ const ListItem = ({
   ]);
 
   return (
-    <div {...customProps} className={listItemClassNames}>
+    <li {...customProps} className={listItemClassNames}>
       {content}
-    </div>
+    </li>
   );
 };
 
