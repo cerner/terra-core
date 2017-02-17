@@ -2,30 +2,34 @@
 @import './variables';
 @import './mixins';
 
-// .terraVM-u-chevron {
-//   // .padding-end(@gutter);
+.terra-ListItem-chevron {
+  // .padding-end(@gutter);
+  display: block;
+  position: relative; // relative position so the chevron can use absolute position to vertically center itself
 
-//   position: relative; // relative position so the chevron can use absolute position to vertically center itself
-//   display: block;
+  &::after {
+    display: inline-block;
+    // font-family: @icon-font-family;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    // font-weight: @normal-font-weight;
+    position: absolute;
+    speak: none;
+    text-decoration: inherit;
+    top: 50%;
+    // .position-end(@baseline);
+    // .rem(margin-top, -(@_base-line-height / 2));
+    // .medium-heading-size();
+    // color: @medium-bg-20;
+    [dir='ltr'] & {
+      content: '\f106';
+    }
 
-//   &:after {
-//     // .icon();
-//     // .position-end(@baseline);
-//     // .rem(margin-top, -(@_base-line-height / 2));
-//     // .medium-heading-size();
-//     // color: @medium-bg-20;
-//     position: absolute;
-//     top: 50%;
-
-//   //   @{ltr} & {
-//   //     content: @icon-angle-right;
-//   //   }
-
-//   //   @{rtl} & {
-//   //     content: @icon-angle-left;
-//   //   }
-//   }
-// }
+    [dir='rtl'] & {
+      content: '\f105';
+    }
+  }
+}
 
 .terra-ListItem {
   height: 20px;

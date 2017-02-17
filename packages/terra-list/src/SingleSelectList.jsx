@@ -129,7 +129,6 @@ class SingleSelectList extends React.Component {
     return (
       <List
         items={clonedChildItems}
-        itemsSelectable
         isDivided={isDivided}
         hasChevrons={hasChevrons}
         {...customProps}

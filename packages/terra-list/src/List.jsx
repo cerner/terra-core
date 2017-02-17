@@ -4,7 +4,7 @@ import '../src/list.scss';
 import ListItem from './ListItem';
 
 const propTypes = {
-  className: PropTypes.optionalString,
+  className: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.element),
   isDivided: PropTypes.bool,
   hasChevrons: PropTypes.bool,

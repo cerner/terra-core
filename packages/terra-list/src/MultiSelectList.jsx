@@ -150,7 +150,6 @@ class MultiSelectList extends React.Component {
     return (
       <List
         items={clonedChildItems}
-        itemsSelectable
         isDivided={isDivided}
         {...customProps}
       />
