@@ -17,17 +17,6 @@ const defaultProps = {
 };
 
 class MultiSelectList extends React.Component {
-  static processItemSelection(items, indexes) {
-    return items.map((item, index) => {
-      const newSelected = indexes.includes(index);
-      if (newSelected === item.isSelected) {
-        return item;
-      }
-
-      return React.cloneElement(item, { isSelected: newSelected });
-    });
-  }
-
   static selectedIndexesFromItems(items, maxSelectionCount) {
     const selectedIndexes = [];
     for (let i = 0; i < items.length; i += 1) {
@@ -97,33 +86,53 @@ class MultiSelectList extends React.Component {
     return false;
   }
 
-  wrapOnClicks(items) {
+  cloneChildItems(items) {
+    const disableUnselectedItems = this.state.selectedIndexes.length >= this.props.maxSelectionCount;
+
     return items.map((item, index) => {
-      const initialOnClick = item.props.onClick;
-      const referenceThis = this;
-      const wrappedOnClick = (event) => {
-        if (referenceThis.shouldHandleSelection(index)) {
-          referenceThis.handleSelection(event, index);
-
-          if (referenceThis.onSelection) {
-            referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
-          }
-        }
-
-        if (initialOnClick) {
-          initialOnClick(event);
-        }
-      };
-
-      let newProps = { onClick: wrappedOnClick };
-      if (item.props.isSelectable === undefined) {
-        newProps.isSelectable = true;
-      } else if (!item.props.isSelectable) {
-        newProps = {};
-      }
+      const wrappedOnClick = this.wrappedOnClickForItem(item, index);
+      const newProps = this.newPropsForItem(item, index, wrappedOnClick, disableUnselectedItems);
 
       return React.cloneElement(item, newProps);
     });
+  }
+
+  wrappedOnClickForItem(item, index) {
+    const initialOnClick = item.props.onClick;
+    const referenceThis = this;
+    return (event) => {
+      if (referenceThis.shouldHandleSelection(index)) {
+        referenceThis.handleSelection(event, index);
+
+        if (referenceThis.onSelection) {
+          referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
+        }
+      }
+
+      if (initialOnClick) {
+        initialOnClick(event);
+      }
+    };
+  }
+
+  newPropsForItem(item, index, onClick, disableUnselectedItems) {
+    const isSelected = this.state.selectedIndexes.includes(index);
+
+    let newProps = { onClick };
+    if (isSelected !== item.isSelected) {
+      newProps.isSelected = isSelected;
+    }
+
+    if (item.props.isSelectable === undefined) {
+      newProps.isSelectable = true;
+    } else if (!item.props.isSelectable) {
+      newProps = {};
+    }
+
+    if (disableUnselectedItems && isSelected !== true) {
+      newProps.isSelectable = false;
+    }
+    return newProps;
   }
 
   unusedVariables(variable) {
@@ -132,7 +141,7 @@ class MultiSelectList extends React.Component {
 
   render() {
     const { items, isDivided, onSelection, maxSelectionCount, ...customProps } = this.props;
-    const itemsWithSelection = this.wrapOnClicks(MultiSelectList.processItemSelection(items, this.state.selectedIndexes));
+    const clonedChildItems = this.cloneChildItems(items);
 
     // Figure out how to handle this scenario.
     this.unusedVariables(onSelection);
@@ -140,7 +149,7 @@ class MultiSelectList extends React.Component {
 
     return (
       <List
-        items={itemsWithSelection}
+        items={clonedChildItems}
         itemsSelectable
         isDivided={isDivided}
         {...customProps}

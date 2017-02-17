@@ -38,6 +38,17 @@ class SingleSelectList extends React.Component {
     return -1;
   }
 
+  static propsForItem(item, onClick) {
+    let newProps = { onClick };
+    if (item.props.isSelectable === undefined) {
+      newProps.isSelectable = true;
+    } else if (!item.props.isSelectable) {
+      newProps = {};
+    }
+
+    return newProps;
+  }
+
   constructor(props) {
     super(props);
     this.handleSelection = this.handleSelection.bind(this);
@@ -47,7 +58,7 @@ class SingleSelectList extends React.Component {
   componentWillReceiveProps(nextProps) {
     const index = SingleSelectList.selectedIndexFromItems(nextProps.items, nextProps.isMultiselect);
 
-    if (index.length !== this.state.selectedIndex) {
+    if (index !== this.state.selectedIndex) {
       this.setState({ selectedIndexes: index });
     }
   }
@@ -57,36 +68,51 @@ class SingleSelectList extends React.Component {
   }
 
   shouldHandleSelection(index) {
-    return index.length !== this.state.selectedIndex;
+    return index !== this.state.selectedIndex;
   }
 
-  wrapOnClicks(items) {
+  cloneChildItems(items) {
     return items.map((item, index) => {
-      const initialOnClick = item.props.onClick;
-      const referenceThis = this;
-      const wrappedOnClick = (event) => {
-        if (referenceThis.shouldHandleSelection(index)) {
-          referenceThis.handleSelection(event, index);
-
-          if (referenceThis.onSelection) {
-            referenceThis.onSelection(event, referenceThis.state.selectedIndex);
-          }
-        }
-
-        if (initialOnClick) {
-          initialOnClick(event);
-        }
-      };
-
-      let newProps = { onClick: wrappedOnClick };
-      if (item.props.isSelectable === undefined) {
-        newProps.isSelectable = true;
-      } else if (!item.props.isSelectable) {
-        newProps = {};
-      }
+      const wrappedOnClick = this.wrappedOnClickForItem(item, index);
+      const newProps = this.newPropsForItem(item, index, wrappedOnClick);
 
       return React.cloneElement(item, newProps);
     });
+  }
+
+  wrappedOnClickForItem(item, index) {
+    const initialOnClick = item.props.onClick;
+    const referenceThis = this;
+    return (event) => {
+      if (referenceThis.shouldHandleSelection(index)) {
+        referenceThis.handleSelection(event, index);
+
+        if (referenceThis.onSelection) {
+          referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
+        }
+      }
+
+      if (initialOnClick) {
+        initialOnClick(event);
+      }
+    };
+  }
+
+  newPropsForItem(item, index, onClick) {
+    const isSelected = this.state.selectedIndex === index;
+
+    let newProps = { onClick };
+    if (isSelected !== item.isSelected) {
+      newProps.isSelected = isSelected;
+    }
+
+    if (item.props.isSelectable === undefined) {
+      newProps.isSelectable = true;
+    } else if (!item.props.isSelectable) {
+      newProps = {};
+    }
+
+    return newProps;
   }
 
   unusedVariables(variable) {
@@ -95,14 +121,14 @@ class SingleSelectList extends React.Component {
 
   render() {
     const { items, isDivided, hasChevrons, onSelection, ...customProps } = this.props;
-    const itemsWithSelection = this.wrapOnClicks(SingleSelectList.processItemSelection(items, this.state.selectedIndex));
+    const clonedChildItems = this.cloneChildItems(items);
 
     // Figure out how to handle this scenario.
     this.unusedVariables(onSelection);
 
     return (
       <List
-        items={itemsWithSelection}
+        items={clonedChildItems}
         itemsSelectable
         isDivided={isDivided}
         hasChevrons={hasChevrons}
