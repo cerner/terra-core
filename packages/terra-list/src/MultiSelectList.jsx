@@ -17,6 +17,7 @@ const defaultProps = {
 };
 
 class MultiSelectList extends React.Component {
+
   static selectedIndexesFromItems(items, maxSelectionCount) {
     const selectedIndexes = [];
     for (let i = 0; i < items.length; i += 1) {
@@ -99,13 +100,12 @@ class MultiSelectList extends React.Component {
 
   wrappedOnClickForItem(item, index) {
     const initialOnClick = item.props.onClick;
-    const referenceThis = this;
     return (event) => {
-      if (referenceThis.shouldHandleSelection(index)) {
-        referenceThis.handleSelection(event, index);
+      if (this.shouldHandleSelection(index)) {
+        this.handleSelection(event, index);
 
-        if (referenceThis.onSelection) {
-          referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
+        if (this.onSelection) {
+          this.onSelection(event, this.state.selectedIndexes);
         }
       }
 

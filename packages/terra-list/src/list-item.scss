@@ -3,7 +3,7 @@
 @import './mixins';
 
 .terra-ListItem-chevron {
-  // .padding-end(@gutter); // (gutter) need this to give space for the chevron
+  // .padding-end(20px); // (gutter) need this to give space for the chevron
   display: block;
   position: relative; // relative position so the chevron can use absolute position to vertically center itself
 
