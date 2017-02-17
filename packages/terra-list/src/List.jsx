@@ -7,27 +7,23 @@ const propTypes = {
   className: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.element),
   isDivided: PropTypes.bool,
-  hasChevrons: PropTypes.bool,
 };
 
 const defaultProps = {
   className: '',
   items: [],
   isDivided: false,
-  hasChevrons: false,
 };
 
 const List = ({
     className,
     items,
     isDivided,
-    hasChevrons,
     ...customProps
   }) => {
   const listClassNames = classNames([
     'terra-List',
     { 'terra-List-divided': isDivided },
-    { 'terra-List-chevrons': hasChevrons },
     className,
   ]);
 

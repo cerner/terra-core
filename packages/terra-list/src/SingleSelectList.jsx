@@ -112,6 +112,10 @@ class SingleSelectList extends React.Component {
       newProps = {};
     }
 
+    if (item.props.hasChevron === undefined) {
+      newProps.hasChevron = this.props.hasChevrons;
+    }
+
     return newProps;
   }
 
@@ -130,7 +134,6 @@ class SingleSelectList extends React.Component {
       <List
         items={clonedChildItems}
         isDivided={isDivided}
-        hasChevrons={hasChevrons}
         {...customProps}
       />
     );

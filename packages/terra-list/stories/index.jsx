@@ -39,10 +39,10 @@ storiesOf('SelectableList ', module)
   .add('List Divided', () => (
     <List items={displays} isDivided />
   ))
-  .add('List Divided', () => (
-    <List items={displays} isDivided hasChevrons />
-  ))
   .add('SingleSelectList', () => (
+    <SingleSelectList items={displays} isDivided hasChevrons={false} />
+  ))
+  .add('SingleSelectList Chevrons', () => (
     <SingleSelectList items={displays} isDivided hasChevrons />
   ))
   .add('MultiSelectList', () => (
