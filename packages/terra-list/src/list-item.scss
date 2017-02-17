@@ -3,11 +3,12 @@
 @import './mixins';
 
 .terra-ListItem-chevron {
-  // .padding-end(@gutter);
+  // .padding-end(@gutter); // (gutter) need this to give space for the chevron
   display: block;
   position: relative; // relative position so the chevron can use absolute position to vertically center itself
 
   &::after {
+    @include terra-position-end(10px); // (@base-line)
     display: inline-block;
     // font-family: @icon-font-family;
     -webkit-font-smoothing: antialiased;
@@ -17,10 +18,10 @@
     speak: none;
     text-decoration: inherit;
     top: 50%;
-    // .position-end(@baseline);
-    // .rem(margin-top, -(@_base-line-height / 2));
     // .medium-heading-size();
     // color: @medium-bg-20;
+    transform: translate(0, -50%);
+
     [dir='ltr'] & {
       content: '\f106';
     }
