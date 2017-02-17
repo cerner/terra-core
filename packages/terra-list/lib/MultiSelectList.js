@@ -31,14 +31,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var propTypes = {
   items: _react.PropTypes.arrayOf(_react.PropTypes.element),
   isDivided: _react.PropTypes.bool,
-  onSelection: _react.PropTypes.func,
+  onChange: _react.PropTypes.func,
   maxSelectionCount: _react.PropTypes.number
 };
 
 var defaultProps = {
   items: [],
   isDivided: false,
-  onSelection: undefined,
+  onChange: undefined,
   maxSelectionCount: 0
 };
 
@@ -142,14 +142,15 @@ var MultiSelectList = function (_React$Component) {
   }, {
     key: 'wrappedOnClickForItem',
     value: function wrappedOnClickForItem(item, index) {
-      var initialOnClick = item.props.onClick;
-      var referenceThis = this;
-      return function (event) {
-        if (referenceThis.shouldHandleSelection(index)) {
-          referenceThis.handleSelection(event, index);
+      var _this3 = this;
 
-          if (referenceThis.onSelection) {
-            referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
+      var initialOnClick = item.props.onClick;
+      return function (event) {
+        if (_this3.shouldHandleSelection(index)) {
+          _this3.handleSelection(event, index);
+
+          if (_this3.onChange) {
+            _this3.onChange(event, _this3.state.selectedIndexes);
           }
         }
 
@@ -190,14 +191,14 @@ var MultiSelectList = function (_React$Component) {
       var _props = this.props,
           items = _props.items,
           isDivided = _props.isDivided,
-          onSelection = _props.onSelection,
+          onChange = _props.onChange,
           maxSelectionCount = _props.maxSelectionCount,
-          customProps = _objectWithoutProperties(_props, ['items', 'isDivided', 'onSelection', 'maxSelectionCount']);
+          customProps = _objectWithoutProperties(_props, ['items', 'isDivided', 'onChange', 'maxSelectionCount']);
 
       var clonedChildItems = this.cloneChildItems(items);
 
       // Figure out how to handle this scenario.
-      this.unusedVariables(onSelection);
+      this.unusedVariables(onChange);
       this.unusedVariables(maxSelectionCount);
 
       return _react2.default.createElement(_List2.default, _extends({

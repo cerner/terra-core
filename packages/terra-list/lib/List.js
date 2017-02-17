@@ -27,25 +27,22 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var propTypes = {
   className: _react.PropTypes.string,
   items: _react.PropTypes.arrayOf(_react.PropTypes.element),
-  isDivided: _react.PropTypes.bool,
-  hasChevrons: _react.PropTypes.bool
+  isDivided: _react.PropTypes.bool
 };
 
 var defaultProps = {
   className: '',
   items: [],
-  isDivided: false,
-  hasChevrons: false
+  isDivided: false
 };
 
 var List = function List(_ref) {
   var className = _ref.className,
       items = _ref.items,
       isDivided = _ref.isDivided,
-      hasChevrons = _ref.hasChevrons,
-      customProps = _objectWithoutProperties(_ref, ['className', 'items', 'isDivided', 'hasChevrons']);
+      customProps = _objectWithoutProperties(_ref, ['className', 'items', 'isDivided']);
 
-  var listClassNames = (0, _classnames2.default)(['terra-List', { 'terra-List-divided': isDivided }, { 'terra-List-chevrons': hasChevrons }, className]);
+  var listClassNames = (0, _classnames2.default)(['terra-List', { 'terra-List-divided': isDivided }, className]);
 
   return _react2.default.createElement(
     'ul',

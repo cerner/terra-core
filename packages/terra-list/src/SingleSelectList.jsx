@@ -6,14 +6,14 @@ const propTypes = {
   items: PropTypes.arrayOf(PropTypes.element),
   isDivided: PropTypes.bool,
   hasChevrons: PropTypes.bool,
-  onSelection: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 const defaultProps = {
   items: [],
   isDivided: false,
   hasChevrons: true,
-  onSelection: undefined,
+  onChange: undefined,
 };
 
 class SingleSelectList extends React.Component {
@@ -75,8 +75,8 @@ class SingleSelectList extends React.Component {
       if (this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
 
-        if (this.onSelection) {
-          this.onSelection(event, this.state.selectedIndexes);
+        if (this.onChange) {
+          this.onChange(event, this.state.selectedIndexes);
         }
       }
 
@@ -112,11 +112,12 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const { items, isDivided, hasChevrons, onSelection, ...customProps } = this.props;
+    const { items, isDivided, hasChevrons, onChange, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(items);
 
     // Figure out how to handle this scenario.
-    this.unusedVariables(onSelection);
+    this.unusedVariables(onChange);
+    this.unusedVariables(hasChevrons);
 
     return (
       <List

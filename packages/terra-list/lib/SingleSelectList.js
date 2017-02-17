@@ -32,33 +32,20 @@ var propTypes = {
   items: _react.PropTypes.arrayOf(_react.PropTypes.element),
   isDivided: _react.PropTypes.bool,
   hasChevrons: _react.PropTypes.bool,
-  onSelection: _react.PropTypes.func
+  onChange: _react.PropTypes.func
 };
 
 var defaultProps = {
   items: [],
   isDivided: false,
   hasChevrons: true,
-  onSelection: undefined
+  onChange: undefined
 };
 
 var SingleSelectList = function (_React$Component) {
   _inherits(SingleSelectList, _React$Component);
 
   _createClass(SingleSelectList, null, [{
-    key: 'processItemSelection',
-    value: function processItemSelection(items, selectedIndex) {
-      return items.map(function (item, index) {
-        var newSelected = index === selectedIndex;
-
-        if (newSelected === item.isSelected) {
-          return item;
-        }
-
-        return _react2.default.cloneElement(item, { isSelected: newSelected });
-      });
-    }
-  }, {
     key: 'selectedIndexFromItems',
     value: function selectedIndexFromItems(items) {
       for (var i = 0; i < items.length; i += 1) {
@@ -126,14 +113,15 @@ var SingleSelectList = function (_React$Component) {
   }, {
     key: 'wrappedOnClickForItem',
     value: function wrappedOnClickForItem(item, index) {
-      var initialOnClick = item.props.onClick;
-      var referenceThis = this;
-      return function (event) {
-        if (referenceThis.shouldHandleSelection(index)) {
-          referenceThis.handleSelection(event, index);
+      var _this3 = this;
 
-          if (referenceThis.onSelection) {
-            referenceThis.onSelection(event, referenceThis.state.selectedIndexes);
+      var initialOnClick = item.props.onClick;
+      return function (event) {
+        if (_this3.shouldHandleSelection(index)) {
+          _this3.handleSelection(event, index);
+
+          if (_this3.onChange) {
+            _this3.onChange(event, _this3.state.selectedIndexes);
           }
         }
 
@@ -158,6 +146,10 @@ var SingleSelectList = function (_React$Component) {
         newProps = {};
       }
 
+      if (item.props.hasChevron === undefined) {
+        newProps.hasChevron = this.props.hasChevrons;
+      }
+
       return newProps;
     }
   }, {
@@ -172,18 +164,18 @@ var SingleSelectList = function (_React$Component) {
           items = _props.items,
           isDivided = _props.isDivided,
           hasChevrons = _props.hasChevrons,
-          onSelection = _props.onSelection,
-          customProps = _objectWithoutProperties(_props, ['items', 'isDivided', 'hasChevrons', 'onSelection']);
+          onChange = _props.onChange,
+          customProps = _objectWithoutProperties(_props, ['items', 'isDivided', 'hasChevrons', 'onChange']);
 
       var clonedChildItems = this.cloneChildItems(items);
 
       // Figure out how to handle this scenario.
-      this.unusedVariables(onSelection);
+      this.unusedVariables(onChange);
+      this.unusedVariables(hasChevrons);
 
       return _react2.default.createElement(_List2.default, _extends({
         items: clonedChildItems,
-        isDivided: isDivided,
-        hasChevrons: hasChevrons
+        isDivided: isDivided
       }, customProps));
     }
   }]);
