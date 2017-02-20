@@ -19,8 +19,8 @@ import ButtonIcon from './ButtonIcon';
 
 const ButtonExamples = () => (
   <div>
-    <Markdown src={ReadMe} />
-    <PropsTable src={ButtonSrc} />
+    <Markdown id="readme" src={ReadMe} />
+    <PropsTable id="props" src={ButtonSrc} />
     <h2 id="intent">Intent</h2>
     <ButtonIntent />
     <h2 id="outline-variant">Outline Variant</h2>
