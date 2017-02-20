@@ -7,7 +7,6 @@ import { checkA11y } from 'storybook-addon-a11y';
 import 'storybook-addon-i18n-tools';
 
 import List from '../src/List';
-import ListItem from '../src/ListItem';
 import SingleSelectList from '../src/SingleSelectList';
 import MultiSelectList from '../src/MultiSelectList';
 
@@ -24,27 +23,47 @@ setOptions({
 
 addDecorator(checkA11y);
 
-const display1 = <ListItem key="123" />;
-const display2 = <ListItem key="124" />;
-const display3 = <ListItem key="125" />;
-const display4 = <ListItem key="126" />;
-const display5 = <ListItem key="127" />;
-const display6 = <ListItem key="128" isSelectable={false} />;
+const display1 = <List.Item key="123" />;
+const display2 = <List.Item key="124" />;
+const display3 = <List.Item key="125" />;
+const display4 = <List.Item key="126" />;
+const display5 = <List.Item key="127" />;
+const display6 = <List.Item key="128" isSelectable={false} />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
 storiesOf('SelectableList ', module)
   .add('List', () => (
-    <List items={displays} />
+    <List>
+      <List.Item key="123" />
+      <List.Item key="124" />
+      <List.Item key="125" />
+      <List.Item key="126" />
+      <List.Item key="127" />
+      <List.Item key="128" isSelectable={false} />
+    </List>
   ))
   .add('List Divided', () => (
-    <List items={displays} isDivided />
+    <List isDivided>
+      <List.Item key="123" />
+      <List.Item key="124" />
+      <List.Item key="125" />
+      <List.Item key="126" />
+      <List.Item key="127" />
+      <List.Item key="128" isSelectable={false} />
+    </List>
   ))
   .add('SingleSelectList', () => (
-    <SingleSelectList items={displays} isDivided hasChevrons={false} />
+    <SingleSelectList isDivided hasChevrons={false}>
+      {displays}
+    </SingleSelectList>
   ))
   .add('SingleSelectList Chevrons', () => (
-    <SingleSelectList items={displays} isDivided hasChevrons />
+    <SingleSelectList isDivided hasChevrons>
+      {displays}
+    </SingleSelectList>
   ))
   .add('MultiSelectList', () => (
-    <MultiSelectList items={displays} maxSelectionCount={3} isDivided />
+    <MultiSelectList maxSelectionCount={3} isDivided>
+      {displays}
+    </MultiSelectList>
   ));

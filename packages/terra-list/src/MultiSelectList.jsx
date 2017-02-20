@@ -3,14 +3,14 @@ import '../src/list.scss';
 import List from './List';
 
 const propTypes = {
-  items: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.node,
   isDivided: PropTypes.bool,
   onChange: PropTypes.func,
   maxSelectionCount: PropTypes.number,
 };
 
 const defaultProps = {
-  items: [],
+  children: [],
   isDivided: false,
   onChange: undefined,
   maxSelectionCount: 0,
@@ -36,11 +36,11 @@ class MultiSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelection = this.handleSelection.bind(this);
-    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.items, this.props.maxSelectionCount) };
+    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.children, this.props.maxSelectionCount) };
   }
 
   componentWillReceiveProps(nextProps) {
-    const nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.items);
+    const nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children);
 
     if (this.shouldUpdateIndexes(nextIndexes)) {
       this.setState({ selectedIndexes: nextIndexes });
@@ -140,8 +140,8 @@ class MultiSelectList extends React.Component {
   }
 
   render() {
-    const { items, isDivided, onChange, maxSelectionCount, ...customProps } = this.props;
-    const clonedChildItems = this.cloneChildItems(items);
+    const { children, isDivided, onChange, maxSelectionCount, ...customProps } = this.props;
+    const clonedChildItems = this.cloneChildItems(children);
 
     // Figure out how to handle this scenario.
     this.unusedVariables(onChange);
@@ -149,10 +149,11 @@ class MultiSelectList extends React.Component {
 
     return (
       <List
-        items={clonedChildItems}
         isDivided={isDivided}
         {...customProps}
-      />
+      >
+        {clonedChildItems}
+      </List>
     );
   }
 }

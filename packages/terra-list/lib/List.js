@@ -26,28 +26,28 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   className: _react.PropTypes.string,
-  items: _react.PropTypes.arrayOf(_react.PropTypes.element),
+  children: _react.PropTypes.node,
   isDivided: _react.PropTypes.bool
 };
 
 var defaultProps = {
   className: '',
-  items: [],
+  children: [],
   isDivided: false
 };
 
 var List = function List(_ref) {
   var className = _ref.className,
-      items = _ref.items,
+      children = _ref.children,
       isDivided = _ref.isDivided,
-      customProps = _objectWithoutProperties(_ref, ['className', 'items', 'isDivided']);
+      customProps = _objectWithoutProperties(_ref, ['className', 'children', 'isDivided']);
 
   var listClassNames = (0, _classnames2.default)(['terra-List', { 'terra-List-divided': isDivided }, className]);
 
   return _react2.default.createElement(
     'ul',
     _extends({}, customProps, { className: listClassNames }),
-    items
+    children
   );
 };
 

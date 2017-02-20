@@ -29,14 +29,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
-  items: _react.PropTypes.arrayOf(_react.PropTypes.element),
+  children: _react.PropTypes.node,
   isDivided: _react.PropTypes.bool,
   onChange: _react.PropTypes.func,
   maxSelectionCount: _react.PropTypes.number
 };
 
 var defaultProps = {
-  items: [],
+  children: [],
   isDivided: false,
   onChange: undefined,
   maxSelectionCount: 0
@@ -69,14 +69,14 @@ var MultiSelectList = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (MultiSelectList.__proto__ || Object.getPrototypeOf(MultiSelectList)).call(this, props));
 
     _this.handleSelection = _this.handleSelection.bind(_this);
-    _this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(_this.props.items, _this.props.maxSelectionCount) };
+    _this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(_this.props.children, _this.props.maxSelectionCount) };
     return _this;
   }
 
   _createClass(MultiSelectList, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      var nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.items);
+      var nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children);
 
       if (this.shouldUpdateIndexes(nextIndexes)) {
         this.setState({ selectedIndexes: nextIndexes });
@@ -189,22 +189,25 @@ var MultiSelectList = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          items = _props.items,
+          children = _props.children,
           isDivided = _props.isDivided,
           onChange = _props.onChange,
           maxSelectionCount = _props.maxSelectionCount,
-          customProps = _objectWithoutProperties(_props, ['items', 'isDivided', 'onChange', 'maxSelectionCount']);
+          customProps = _objectWithoutProperties(_props, ['children', 'isDivided', 'onChange', 'maxSelectionCount']);
 
-      var clonedChildItems = this.cloneChildItems(items);
+      var clonedChildItems = this.cloneChildItems(children);
 
       // Figure out how to handle this scenario.
       this.unusedVariables(onChange);
       this.unusedVariables(maxSelectionCount);
 
-      return _react2.default.createElement(_List2.default, _extends({
-        items: clonedChildItems,
-        isDivided: isDivided
-      }, customProps));
+      return _react2.default.createElement(
+        _List2.default,
+        _extends({
+          isDivided: isDivided
+        }, customProps),
+        clonedChildItems
+      );
     }
   }]);
 

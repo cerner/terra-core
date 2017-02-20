@@ -5,19 +5,19 @@ import ListItem from './ListItem';
 
 const propTypes = {
   className: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.node,
   isDivided: PropTypes.bool,
 };
 
 const defaultProps = {
   className: '',
-  items: [],
+  children: [],
   isDivided: false,
 };
 
 const List = ({
     className,
-    items,
+    children,
     isDivided,
     ...customProps
   }) => {
@@ -29,7 +29,7 @@ const List = ({
 
   return (
     <ul {...customProps} className={listClassNames}>
-      {items}
+      {children}
     </ul>
   );
 };

@@ -3,14 +3,14 @@ import '../src/list.scss';
 import List from './List';
 
 const propTypes = {
-  items: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.node,
   isDivided: PropTypes.bool,
   hasChevrons: PropTypes.bool,
   onChange: PropTypes.func,
 };
 
 const defaultProps = {
-  items: [],
+  children: [],
   isDivided: false,
   hasChevrons: true,
   onChange: undefined,
@@ -41,11 +41,11 @@ class SingleSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelection = this.handleSelection.bind(this);
-    this.state = { selectedIndex: SingleSelectList.selectedIndexFromItems(this.props.items) };
+    this.state = { selectedIndex: SingleSelectList.selectedIndexFromItems(this.props.children) };
   }
 
   componentWillReceiveProps(nextProps) {
-    const index = SingleSelectList.selectedIndexFromItems(nextProps.items, nextProps.isMultiselect);
+    const index = SingleSelectList.selectedIndexFromItems(nextProps.children);
 
     if (index !== this.state.selectedIndex) {
       this.setState({ selectedIndexes: index });
@@ -112,8 +112,8 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const { items, isDivided, hasChevrons, onChange, ...customProps } = this.props;
-    const clonedChildItems = this.cloneChildItems(items);
+    const { children, isDivided, hasChevrons, onChange, ...customProps } = this.props;
+    const clonedChildItems = this.cloneChildItems(children);
 
     // Figure out how to handle this scenario.
     this.unusedVariables(onChange);
@@ -121,10 +121,11 @@ class SingleSelectList extends React.Component {
 
     return (
       <List
-        items={clonedChildItems}
         isDivided={isDivided}
         {...customProps}
-      />
+      >
+        {clonedChildItems}
+      </List>
     );
   }
 }
