@@ -31,7 +31,7 @@ class Display extends React.Component {
     const textAttributes = {};
     textAttributes.className = classNames(['terra-CompactTile-text',
       { 'terra-CompactTile-text--isTruncated': this.props.isTruncated },
-      { [`terra-CompactTile-text--${this.props.style}`]: this.props.style },
+      { [`terra-CompactTile-text--${this.props.textStyle}`]: this.props.textStyle },
     ]);
 
     return (
@@ -43,7 +43,7 @@ class Display extends React.Component {
   }
 }
 
-const styles = [
+const textStyles = [
   'secondary',
   'attention',
   'strikeThrough',
@@ -55,7 +55,7 @@ Display.defaultProps = {
 
 Display.propTypes = {
   text: PropTypes.string,
-  style: PropTypes.oneOf(styles),
+  textStyle: PropTypes.oneOf(textStyles),
   isTruncated: PropTypes.bool,
   icon: PropTypes.element,
   attributes: PropTypes.oneOfType([PropTypes.object]),

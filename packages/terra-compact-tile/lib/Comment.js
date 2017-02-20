@@ -21,6 +21,10 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
+var _comment = require('terra-icon/lib/icon/themeable/comment.svg');
+
+var _comment2 = _interopRequireDefault(_comment);
+
 var _Display = require('./Display');
 
 var _Display2 = _interopRequireDefault(_Display);
@@ -48,17 +52,7 @@ var Comment = function (_React$Component) {
       if (!this.props || !this.props.text.length) {
         return null;
       }
-      // TODO add a comment graphic
-      // commentDisplay.icon = comment icon
-      // const commentIcon = <TerraIcon icon_class='icon-comment'
-      //                                size='text-body'
-      //                                class='terra-CompactCard-comment--icon'>;
-
-      var commentIcon = _react2.default.createElement(
-        'svg',
-        { className: 'terra-Icon terra-CompactTile-comment--icon is-bidi', 'aria-hidden': 'true', viewBox: '0 0 48 48', xmlns: 'http://www.w3.org/2000/svg', 'data-name': 'Layer 1', width: '1em', height: '1em' },
-        _react2.default.createElement('path', { d: 'M46 2.1H2a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h31.2L45 45.9V34.1h1a2 2 0 0 0 2-2v-28a2 2 0 0 0-2-2z' })
-      );
+      var commentIcon = _react2.default.createElement(_comment2.default, null);
 
       var commentAttributes = _extends({}, this.props.attributes);
       commentAttributes.className = (0, _classnames2.default)(['terra-CompactTile-comment', commentAttributes.className]);

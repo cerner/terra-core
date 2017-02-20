@@ -52,17 +52,17 @@ const display5 = <Display text="display 5" />;
 const display6 = <Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-const styleDisplay1 = <Display text="display 1" style="secondary" />;
-const styleDisplay2 = <Display text="display 2" style="strikeThrough" />;
-const styleDisplay3 = <Display text="display 3" style="attention" />;
+const styleDisplay1 = <Display text="display 1" textStyle="secondary" />;
+const styleDisplay2 = <Display text="display 2" textStyle="strikeThrough" />;
+const styleDisplay3 = <Display text="display 3" textStyle="attention" />;
 const styleDisplays = [styleDisplay1, styleDisplay2, styleDisplay3];
 
-const comment = <Comment  text="Here lies a comment, taken from us in it's prime." />
+const comment = <Comment text="Here lies a comment, taken from us in it's prime." />;
 
 const params = {
   layout: 'oneColumn',
   theme: 'defaultTheme',
-  displays: displays,
+  displays,
   leftAccessory: testElement,
   accessoryAlignment: 'alignCenter',
   comment,
@@ -73,7 +73,7 @@ const stories = storiesOf('Terra CompactTile', module);
 stories
   .add('With Params', () => (
     <CompactTile
-      layout={select(layoutLabel, layoutOptions, 'oneColumn') }
+      layout={select(layoutLabel, layoutOptions, 'oneColumn')}
       theme={select(themeLabel, themeOptions, 'defaultTheme')}
       isTruncated={boolean('Is Truncated', false)}
       displays={displays}

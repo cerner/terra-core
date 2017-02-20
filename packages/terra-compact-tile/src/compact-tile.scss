@@ -29,17 +29,17 @@
   overflow: hidden;
 }
 
-// For font-icons, enforce a default font-size and line-height
-.terra-CompactTile-accessory > .terra-Icon > .terra-Icon-icon {
-  font-size: 24px !important;
-  line-height: 30px !important;
-}
+// // For font-icons, enforce a default font-size and line-height
+// .terra-CompactTile-accessory > .terra-Icon > .terra-Icon-icon {
+//   font-size: 24px !important;
+//   line-height: 30px !important;
+// }
 
-// For SVGs, lock the element height
-.terra-CompactTile-accessory > .terra-Icon > svg {
-  max-height: 60px !important;
-  max-width: 60px !important;
-}
+// // For SVGs, lock the element height
+// .terra-CompactTile-accessory > .terra-Icon > svg {
+//   max-height: 60px !important;
+//   max-width: 60px !important;
+// }
 
 .terra-CompactTile-accessory--alignTop {
   align-items: flex-start;
@@ -94,10 +94,6 @@
 .terra-CompactTile-comment {
   @include terra-text-body;
   color: $terra-compact-card-comment-color;
-
-//  .terra-Icon {
-//    fill: $terra-compact-card-comment-icon-color;
-//  }
 }
 
 .terra-CompactTile-comment--icon {

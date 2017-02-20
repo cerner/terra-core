@@ -53,7 +53,7 @@ var Display = function (_React$Component) {
       displayAttributes.className = (0, _classnames2.default)(['terra-CompactTile-display', displayAttributes.className]);
 
       var textAttributes = {};
-      textAttributes.className = (0, _classnames2.default)(['terra-CompactTile-text', { 'terra-CompactTile-text--isTruncated': this.props.isTruncated }, _defineProperty({}, 'terra-CompactTile-text--' + this.props.style, this.props.style)]);
+      textAttributes.className = (0, _classnames2.default)(['terra-CompactTile-text', { 'terra-CompactTile-text--isTruncated': this.props.isTruncated }, _defineProperty({}, 'terra-CompactTile-text--' + this.props.textStyle, this.props.textStyle)]);
 
       return _react2.default.createElement(
         'div',
@@ -84,7 +84,7 @@ var Display = function (_React$Component) {
   return Display;
 }(_react2.default.Component);
 
-var styles = ['secondary', 'attention', 'strikeThrough'];
+var textStyles = ['secondary', 'attention', 'strikeThrough'];
 
 Display.defaultProps = {
   isTruncated: false
@@ -92,7 +92,7 @@ Display.defaultProps = {
 
 Display.propTypes = {
   text: _react.PropTypes.string,
-  style: _react.PropTypes.oneOf(styles),
+  textStyle: _react.PropTypes.oneOf(textStyles),
   isTruncated: _react.PropTypes.bool,
   icon: _react.PropTypes.element,
   attributes: _react.PropTypes.oneOfType([_react.PropTypes.object])
