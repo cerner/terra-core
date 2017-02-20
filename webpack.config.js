@@ -30,12 +30,8 @@ module.exports = {
         loader: 'babel!terra-react-svg-loader',
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         loader: ExtractTextPlugin.extract('style', 'css!postcss!sass'),
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css-loader'),
       },
       {
         test: /\.md$/,
