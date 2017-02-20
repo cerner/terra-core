@@ -37,13 +37,15 @@ const ListItem = ({
 
   let chevron;
   if (hasChevron) {
-    chevron = <ChevronRight height="10" width="10" className="terra-ListItem-chevron" />;
+    chevron = <ChevronRight height="10" width="10" />;
   }
 
   return (
     <li {...customProps} className={listItemClassNames}>
       {content}
-      {chevron}
+      <span className="terra-ListItem-chevron">
+        {chevron}
+      </span>
     </li>
   );
 };

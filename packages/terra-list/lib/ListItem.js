@@ -52,14 +52,18 @@ var ListItem = function ListItem(_ref) {
 
   var chevron = void 0;
   if (hasChevron) {
-    chevron = _react2.default.createElement(_chevronRight2.default, { height: '10', width: '10', className: 'terra-ListItem-chevron' });
+    chevron = _react2.default.createElement(_chevronRight2.default, { height: '10', width: '10' });
   }
 
   return _react2.default.createElement(
     'li',
     _extends({}, customProps, { className: listItemClassNames }),
     content,
-    chevron
+    _react2.default.createElement(
+      'span',
+      { className: 'terra-ListItem-chevron' },
+      chevron
+    )
   );
 };
 

@@ -17,19 +17,20 @@
   .terra-ListItem-chevron {
     @include terra-position-end(10px);
     display: inline-block;
-    fill: $terra-base-color-30;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
+    height: 20px;
     position: absolute;
     speak: none;
     text-decoration: inherit;
     top: 50%;
     transform: translate(0, -50%);
   }
+  .terra-ListItem-chevron > * {color: $terra-base-color-30;}
 }
 
 .terra-ListItem {
-  height: 20px;
+  height: 50px;
 }
 
 .terra-ListItem-isSelectable {
@@ -37,7 +38,7 @@
 
   &.terra-ListItem:hover {background-color: $terra-primary-color-10;}
 
-  &.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
+  // &.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
 
-  &.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}
+  // &.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}
 }

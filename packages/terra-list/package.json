@@ -71,9 +71,9 @@
     "classnames": "^2.2.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-mixins": "^1.0.0",
     "terra-icon": "git://github.com/cerner/terra-icon.git#master",
-    "terra-react-svg-loader": "git://github.cerner.com/terra/terra-react-svg-loader#master"
+    "terra-mixins": "^1.0.0",
+    "terra-react-svg-loader": "git://github.com/cerner/terra-react-svg-loader.git#master"
   },
   "scripts": {
     "build": "babel src --out-dir lib",
