@@ -12,7 +12,7 @@ module.exports = {
     examples: path.join(__dirname, 'site', 'index'),
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
+    root: path.join(__dirname, 'node_modules'),
   },
   module: {
     loaders: [
@@ -24,6 +24,10 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader',
+      },
+      {
+        test: /\.svg$/,
+        loader: 'babel!terra-react-svg-loader',
       },
       {
         test: /\.scss$/,

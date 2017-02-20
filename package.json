@@ -80,6 +80,7 @@
     "stylelint-config-sass-guidelines": "^2.0.0",
     "terra-application": "^0.2.0",
     "terra-legacy-theme": "^0.1.0",
+    "terra-react-svg-loader": "git://github.com/cerner/terra-react-svg-loader.git#master",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
