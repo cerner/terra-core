@@ -863,12 +863,6 @@ babel-plugin-transform-flow-strip-types@^6.22.0, babel-plugin-transform-flow-str
     babel-plugin-syntax-flow "^6.18.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-object-assign@^6.8.0:
-  version "6.22.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-assign/-/babel-plugin-transform-object-assign-6.22.0.tgz#f99d2f66f1a0b0d498e346c5359684740caa20ba"
-  dependencies:
-    babel-runtime "^6.22.0"
-
 babel-plugin-transform-object-rest-spread@6.16.0:
   version "6.16.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.16.0.tgz#db441d56fffc1999052fdebe2e2f25ebd28e36a9"
@@ -3936,7 +3930,7 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -6182,6 +6176,15 @@ terra-application@^0.2.0:
     extract-text-webpack-plugin "^1.0.0"
     html-webpack-plugin "^2.22.0"
 
+"terra-icon@git://github.com/cerner/terra-icon.git#master":
+  version "0.1.0"
+  resolved "git://github.com/cerner/terra-icon.git#1099f190820c321149ce36a087dcca8044b550ab"
+  dependencies:
+    classnames "^2.2.5"
+    lodash "^4.17.4"
+    react "^15.4.2"
+    react-dom "^15.4.2"
+
 terra-legacy-theme@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/terra-legacy-theme/-/terra-legacy-theme-0.1.0.tgz#fc2ba2a37050903edc2fc362e6ba0bc9d88670f1"
@@ -6193,6 +6196,17 @@ terra-mixins@^1.0.0:
     autoprefixer "^6.4.0"
     extract-text-webpack-plugin "^1.0.0"
     html-webpack-plugin "^2.22.0"
+
+"terra-react-svg-loader@git://github.cerner.com/terra/terra-react-svg-loader#master":
+  version "0.1.0"
+  resolved "git://github.cerner.com/terra/terra-react-svg-loader#715aff3cc2a8511d7f5147f928dfa2ab4725f3aa"
+  dependencies:
+    classnames "^2.2.5"
+    jsdom "^9.9.1"
+    lodash "^4.17.4"
+    react "^15.4.2"
+    react-dom "^15.4.2"
+    terra-mixins "^1.0.0"
 
 test-exclude@^3.3.0:
   version "3.3.0"

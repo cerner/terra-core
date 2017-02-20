@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import ChevronRight from 'terra-icon/lib/icon/themeable/chevronRight.svg';
 import '../src/list-item.scss';
 
 const propTypes = {
@@ -29,14 +30,20 @@ const ListItem = ({
   const listItemClassNames = classNames([
     'terra-ListItem',
     { 'terra-ListItem--selected': isSelected },
-    { 'terra-ListItem-selectable': isSelectable },
-    { 'terra-ListItem-chevron': hasChevron },
+    { 'terra-ListItem-isSelectable': isSelectable },
+    { 'terra-ListItem-hasChevron': hasChevron },
     className,
   ]);
+
+  let chevron;
+  if (hasChevron) {
+    chevron = <ChevronRight height="10" width="10" className="terra-ListItem-chevron" />;
+  }
 
   return (
     <li {...customProps} className={listItemClassNames}>
       {content}
+      {chevron}
     </li>
   );
 };

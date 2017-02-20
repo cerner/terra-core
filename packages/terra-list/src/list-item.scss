@@ -2,33 +2,29 @@
 @import './variables';
 @import './mixins';
 
-.terra-ListItem-chevron {
-  // .padding-end(20px); // (gutter) need this to give space for the chevron
+.terra-ListItem-hasChevron {
   display: block;
   position: relative; // relative position so the chevron can use absolute position to vertically center itself
 
-  &::after {
-    @include terra-position-end(10px); // (@base-line)
+  [dir='ltr'] & {
+    padding-right: 20px;
+  }
+
+  [dir='rtl'] & {
+    padding-left: 20px;
+  }
+
+  .terra-ListItem-chevron {
+    @include terra-position-end(10px);
     display: inline-block;
-    // font-family: @icon-font-family;
+    fill: $terra-base-color-30;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
-    // font-weight: @normal-font-weight;
     position: absolute;
     speak: none;
     text-decoration: inherit;
     top: 50%;
-    // .medium-heading-size();
-    // color: @medium-bg-20;
     transform: translate(0, -50%);
-
-    [dir='ltr'] & {
-      content: '\f106';
-    }
-
-    [dir='rtl'] & {
-      content: '\f105';
-    }
   }
 }
 
@@ -36,7 +32,7 @@
   height: 20px;
 }
 
-.terra-ListItem-selectable {
+.terra-ListItem-isSelectable {
   cursor: pointer;
 
   &.terra-ListItem:hover {background-color: $terra-primary-color-10;}

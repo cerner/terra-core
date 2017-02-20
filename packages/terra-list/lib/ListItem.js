@@ -14,6 +14,10 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _chevronRight = require('terra-icon/lib/icon/themeable/chevronRight.svg');
+
+var _chevronRight2 = _interopRequireDefault(_chevronRight);
+
 require('../src/list-item.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -44,12 +48,18 @@ var ListItem = function ListItem(_ref) {
       hasChevron = _ref.hasChevron,
       customProps = _objectWithoutProperties(_ref, ['className', 'content', 'isSelected', 'isSelectable', 'hasChevron']);
 
-  var listItemClassNames = (0, _classnames2.default)(['terra-ListItem', { 'terra-ListItem--selected': isSelected }, { 'terra-ListItem-selectable': isSelectable }, { 'terra-ListItem-chevron': hasChevron }, className]);
+  var listItemClassNames = (0, _classnames2.default)(['terra-ListItem', { 'terra-ListItem--selected': isSelected }, { 'terra-ListItem-isSelectable': isSelectable }, { 'terra-ListItem-hasChevron': hasChevron }, className]);
+
+  var chevron = void 0;
+  if (hasChevron) {
+    chevron = _react2.default.createElement(_chevronRight2.default, { height: '10', width: '10', className: 'terra-ListItem-chevron' });
+  }
 
   return _react2.default.createElement(
     'li',
     _extends({}, customProps, { className: listItemClassNames }),
-    content
+    content,
+    chevron
   );
 };
 

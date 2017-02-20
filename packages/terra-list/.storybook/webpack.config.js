@@ -8,6 +8,10 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style!css!postcss!sass',
       },
+      {
+        test: /\.svg$/,
+        loader: 'babel!terra-react-svg-loader',
+      },
     ],
   },
   sassLoader: {
