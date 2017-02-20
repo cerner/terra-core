@@ -1,6 +1,6 @@
 'use strict';
 
-const windowSizes = {
+var windowSizes = {
   tiny: [470, 768],
   small: [622, 768],
   medium: [838, 768],
@@ -9,7 +9,7 @@ const windowSizes = {
   enormous: [1300, 768]
 };
 
-const drivers = {
+var drivers = {
   default: {
     launch_url: 'http://localhost',
     selenium_port: 4444,
@@ -51,13 +51,13 @@ const drivers = {
   }
 };
 
-module.exports = testConfigPath => {
-  const testingConfiguration = {};
+module.exports = function (testConfigPath) {
+  var testingConfiguration = {};
 
-  let currentPort = 19000;
-  Object.keys(drivers).forEach(driverKey => {
-    Object.keys(windowSizes).forEach(windowSizeKey => {
-      const key = `${driverKey}-${windowSizeKey}`;
+  var currentPort = 19000;
+  Object.keys(drivers).forEach(function (driverKey) {
+    Object.keys(windowSizes).forEach(function (windowSizeKey) {
+      var key = driverKey + '-' + windowSizeKey;
       testingConfiguration[key] = Object.assign({}, drivers[driverKey]);
       testingConfiguration[key].globals = {};
       testingConfiguration[key].globals.width = windowSizes[windowSizeKey][0];
