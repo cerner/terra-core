@@ -3,16 +3,50 @@ import classNames from 'classnames';
 import '../src/button.scss';
 
 const propTypes = {
+  /**
+   * Whether or not the button should display as a block
+   */
   isBlock: PropTypes.bool,
+  /**
+   * JSX children
+   */
   children: PropTypes.node,
+  /**
+   * An optional icon. Nested inline with the text when provided
+   */
   icon: PropTypes.element,
+  /**
+   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`
+   */
   intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
+  /**
+   * Whether or not the button should be disabled
+   */
   isDisabled: PropTypes.bool,
+  /**
+   * Sets the href. When set will render the component as an anchor tag
+   */
   href: PropTypes.string,
+  /**
+   * Callback function triggered when clicked
+   */
   onClick: PropTypes.func,
+  /**
+   * Reverses the position of the icon and text
+   */
   isReversed: PropTypes.bool,
+  /**
+   * Sets the button size. One of tiny, small, medium, large, huge
+   * @type String
+   */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Sets the button text
+   */
   text: PropTypes.string,
+  /**
+   * Sets the button variant. One of link or outline
+   */
   variant: PropTypes.oneOf(['link', 'outline']),
 };
 

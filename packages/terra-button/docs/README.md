@@ -1,12 +1,22 @@
-# Terra Button Documentation
-- [Terra Button](terra-button.md)
+# Terra Button
 
-Themeable variables:
-- [Themeable Variables](themeable-variables.md)
+The terra-button component provides users a way to trigger actions in the UI.
+It can be modified in color, size, and type, and can optionally display an icon.
 
-Additional modifiers:
-- [Block](terra-button-block.md)
-- [Color](terra-button-color.md)
-- [Link](terra-button-link.md)
-- [Outline](terra-button-outline.md)
-- [Size](terra-button-size.md)
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-button`
+  - `yarn install terra-button`
+- [Download the latest version](https://github.com/cerner/terra-button/archive/master.zip)
+- Clone the repo: `git clone https://github.com/cerner/terra-button.git`
+- Run the project with: `npm run start`
+
+## Usage
+
+```jsx
+import React from 'react';
+import Button from 'terra-button';
+
+<Button text="Default" />
+```
