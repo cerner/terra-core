@@ -3,8 +3,8 @@ const windowSizes = {
   small: [622, 768],
   medium: [838, 768],
   large: [1000, 768],
-  huge: [1210, 768],
-  enormous: [1300, 768],
+  huge: [1300, 768],
+  enormous: [1500, 768],
 };
 
 const drivers = {
