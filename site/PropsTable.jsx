@@ -4,7 +4,7 @@ import { parse } from 'react-docgen';
 import Markdown from './Markdown';
 
 const propTypes = {
-  src: PropTypes.element.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 /**
