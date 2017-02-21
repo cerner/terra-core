@@ -1,11 +1,34 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import './compact-tile.scss';
+import Display from './Display';
+import Comment from './Comment';
 
-// import Display from './Display';
-// import Comment from './Comment';
+const propTypes = {
+  className: PropTypes.string,
+  layout: PropTypes.oneOf(['oneColumn', 'twoColumns']),
+  textEmphasis: PropTypes.oneOf(['default', 'left']),
+  isTruncated: PropTypes.bool,
+  accessoryAlignment: PropTypes.oneOf(['alignTop', 'alignCenter']),
+  leftAccessory: PropTypes.element,
+  rightAccessory: PropTypes.element,
+  displays: PropTypes.arrayOf(PropTypes.element),
+  comment: PropTypes.element,
+};
 
-export default class CompactTile extends React.Component {
+const defaultProps = {
+  className: '',
+  layout: 'oneColumn',
+  textEmphasis: 'default',
+  isTruncated: false,
+  accessoryAlignment: 'alignCenter',
+  leftAccessory: undefined,
+  rightAccessory: undefined,
+  display: [],
+  comment: undefined,
+};
+
+class CompactTile extends React.Component {
 
   static renderAccessory(accessory) {
     return (
@@ -15,7 +38,7 @@ export default class CompactTile extends React.Component {
     );
   }
 
-  static renderRows(displays, layout, theme) {
+  static renderRows(displays, layout, emphasis) {
     if (displays === null || displays === undefined || !displays.length) {
       return undefined;
     }
@@ -41,14 +64,14 @@ export default class CompactTile extends React.Component {
     return (
       <div className="terra-CompactTile-rowContainer">
         {displayGroups.map((group, index) => {
-          const row = CompactTile.renderRow(group, index, displayGroups.length, theme);
+          const row = CompactTile.renderRow(group, index, displayGroups.length, emphasis);
           return row;
         })}
       </div>
     );
   }
 
-  static renderRow(row, rowIndex, rowCount, theme) {
+  static renderRow(row, rowIndex, rowCount, emphasis) {
     const rowKey = rowIndex;
     return (
       <div className="terra-CompactTile-row" key={rowKey}>
@@ -57,7 +80,7 @@ export default class CompactTile extends React.Component {
           const contentClasses = CompactTile.classesForContent(rowIndex,
                                                                rowCount,
                                                                contentIndex,
-                                                               theme);
+                                                               emphasis);
           return (
             <div {...{ className: contentClasses }} key={contentKey}>
               {display}
@@ -68,17 +91,17 @@ export default class CompactTile extends React.Component {
     );
   }
 
-  static classesForContent(rowIndex, rowCount, contentIndex, theme) {
+  static classesForContent(rowIndex, rowCount, contentIndex, emphasis) {
     let classes;
-    if (theme === 'leftEmphasisTheme') {
-      classes = CompactTile.leftThemeContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
+    if (emphasis === 'left') {
+      classes = CompactTile.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
     } else {
-      classes = CompactTile.defaultThemeContentClassesFromIndexes(rowIndex, rowCount);
+      classes = CompactTile.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
     }
     return ['terra-CompactTile-content'].concat(classes).join(' ');
   }
 
-  static defaultThemeContentClassesFromIndexes(rowIndex, rowCount) {
+  static defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount) {
     let contentSize = 'terra-CompactTile-content--primarySize';
     let contentColor = 'terra-CompactTile-content--primaryColor';
 
@@ -97,63 +120,51 @@ export default class CompactTile extends React.Component {
     return [contentSize, contentColor];
   }
 
-  static leftThemeContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
+  static leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
     if (contentIndex === 1) {
       return ['terra-CompactTile-content--secondarySize', 'terra-CompactTile-content--secondaryColor'];
     }
 
-    return CompactTile.defaultThemeContentClassesFromIndexes(rowIndex, rowCount);
-  }
-
-  static classesForTileFromProps(layout, theme, alignment, truncated) {
-    return classNames(['terra-CompactTile',
-      { 'terra-CompactTile--isTruncated': truncated },
-      { [`terra-CompactTile--${layout}`]: layout },
-      { [`terra-CompactTile--${theme}`]: theme },
-      { [`terra-CompactTile-accessory--${alignment}`]: alignment },
-    ]);
+    return CompactTile.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
   }
 
   render() {
-    const tileClasses = CompactTile.classesForTileFromProps(this.props.layout,
-                                                            this.props.theme,
-                                                            this.props.accessoryAlignment,
-                                                            this.props.isTruncated);
+    const { className,
+            layout,
+            textEmphasis,
+            isTruncated,
+            accessoryAlignment,
+            leftAccessory,
+            rightAccessory,
+            displays,
+            comment,
+            ...customProps } = this.props;
 
-    const tileAttributes = Object.assign({}, this.props.attributes);
-    tileAttributes.className = classNames([
-      tileClasses,
-      tileAttributes.className,
+    const tileClassNames = classNames([
+      'terra-CompactTile',
+      { 'terra-CompactTile--isTruncated': isTruncated },
+      { [`terra-CompactTile--${layout}`]: layout },
+      { [`terra-CompactTile-accessory--${accessoryAlignment}`]: accessoryAlignment },
+      className,
     ]);
 
     return (
-      <div {...tileAttributes}>
-        {CompactTile.renderAccessory(this.props.leftAccessory)}
+      <div {...customProps} className={tileClassNames}>
+        {CompactTile.renderAccessory(leftAccessory)}
         <div className="terra-CompactTile-body">
-          {CompactTile.renderRows(this.props.displays, this.props.layout, this.props.theme)}
-          {this.props.comment}
+          {CompactTile.renderRows(displays, layout, textEmphasis)}
+          {comment}
         </div>
-        {CompactTile.renderAccessory(this.props.rightAccessory)}
+        {CompactTile.renderAccessory(rightAccessory)}
       </div>
     );
   }
 }
 
-CompactTile.defaultProps = {
-  layout: 'oneColumn',
-  theme: 'defaultTheme',
-  isTruncated: false,
-  accessoryAlignment: 'alignCenter',
-};
+CompactTile.propTypes = propTypes;
+CompactTile.defaultProps = defaultProps;
+CompactTile.Display = Display;
+CompactTile.Comment = Comment;
 
-CompactTile.propTypes = {
-  layout: PropTypes.oneOf(['oneColumn', 'twoColumns']),
-  theme: PropTypes.oneOf(['defaultTheme', 'leftEmphasisTheme']),
-  isTruncated: PropTypes.bool,
-  accessoryAlignment: PropTypes.oneOf(['alignTop', 'alignCenter']),
-  leftAccessory: PropTypes.element,
-  rightAccessory: PropTypes.element,
-  displays: PropTypes.arrayOf(PropTypes.element),
-  comment: PropTypes.element,
-  attributes: PropTypes.oneOfType([PropTypes.object]),
-};
+export default CompactTile;
+

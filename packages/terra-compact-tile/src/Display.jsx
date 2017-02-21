@@ -1,47 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import path from 'path';
 import './compact-tile-display.scss';
-
-class Display extends React.Component {
-
-  static renderIcon(icon) {
-    if (!icon) {
-      return null;
-    }
-
-    return (
-      <div className="terra-CompactTile-text--inlineIcon">
-        {icon}
-      </div>
-    );
-  }
-
-  render() {
-    if (!this.props) {
-      return null;
-    }
-
-    const displayAttributes = Object.assign({}, this.props.attributes);
-    displayAttributes.className = classNames([
-      'terra-CompactTile-display',
-      displayAttributes.className,
-    ]);
-
-    const textAttributes = {};
-    textAttributes.className = classNames(['terra-CompactTile-text',
-      { 'terra-CompactTile-text--isTruncated': this.props.isTruncated },
-      { [`terra-CompactTile-text--${this.props.textStyle}`]: this.props.textStyle },
-    ]);
-
-    return (
-      <div {...displayAttributes}>
-        {Display.renderIcon(this.props.icon)}
-        <div {...textAttributes}>{this.props.text}</div>
-      </div>
-    );
-  }
-}
 
 const textStyles = [
   'secondary',
@@ -49,18 +8,55 @@ const textStyles = [
   'strikeThrough',
 ];
 
-Display.defaultProps = {
-  isTruncated: false,
-};
-
-Display.propTypes = {
+const propTypes = {
+  className: PropTypes.string,
   text: PropTypes.string,
   textStyle: PropTypes.oneOf(textStyles),
   isTruncated: PropTypes.bool,
   icon: PropTypes.element,
-  attributes: PropTypes.oneOfType([PropTypes.object]),
 };
 
-export const includePaths = path.join(__dirname, '../src/');
+const defaultProps = {
+  className: '',
+  text: '',
+  textStyle: undefined,
+  isTruncated: false,
+  icon: undefined,
+};
+
+const Display = ({
+    className,
+    text,
+    textStyle,
+    isTruncated,
+    icon,
+    ...customProps
+  }) => {
+  const displayClassNames = classNames([
+    'terra-CompactTile-display',
+    className,
+  ]);
+
+  const textClassNames = classNames([
+    'terra-CompactTile-text',
+    { 'terra-CompactTile-text--isTruncated': isTruncated },
+    { [`terra-CompactTile-text--${textStyle}`]: textStyle },
+  ]);
+
+  let displayIcon;
+  if (icon) {
+    displayIcon = <div className="terra-CompactTile-text--inlineIcon">{icon}</div>;
+  }
+
+  return (
+    <div {...customProps} className={displayClassNames}>
+      {displayIcon}
+      <div className={textClassNames}>{text}</div>
+    </div>
+  );
+};
+
+Display.propTypes = propTypes;
+Display.defaultProps = defaultProps;
 
 export default Display;

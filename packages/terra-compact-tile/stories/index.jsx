@@ -6,8 +6,6 @@ import { withKnobs, boolean, select } from '@kadira/storybook-addon-knobs';
 import { setOptions } from '@kadira/storybook-addon-options';
 
 import CompactTile from '../src/CompactTile';
-import Comment from '../src/Comment';
-import Display from '../src/Display';
 
 setOptions({
   name: 'Terra CompactTile Storybook',
@@ -30,10 +28,10 @@ const layoutOptions = {
   twoColumns: 'twoColumns',
 };
 
-const themeLabel = 'Theme';
+const themeLabel = 'Text Emphasis';
 const themeOptions = {
-  defaultTheme: 'defaultTheme',
-  leftEmphasisTheme: 'leftEmphasisTheme',
+  default: 'default',
+  left: 'left',
 };
 
 const alignmentLabel = 'Accessory Alignment';
@@ -44,20 +42,20 @@ const alignmentOptions = {
 
 const testElement = <img alt="Graphic" />;
 
-const display1 = <Display text="display1display1display1display1display1display1display1display1display1display1display1display1display1display1" />;
-const display2 = <Display text="display2display2display2display2display2display2display2display2display2display2display2display2display2display2" />;
-const display3 = <Display text="display 3" />;
-const display4 = <Display text="display 4" />;
-const display5 = <Display text="display 5" />;
-const display6 = <Display text="display 6" />;
+const display1 = <CompactTile.Display text="display1display1display1display1display1display1display1display1display1display1display1display1display1display1" />;
+const display2 = <CompactTile.Display text="display2display2display2display2display2display2display2display2display2display2display2display2display2display2" />;
+const display3 = <CompactTile.Display text="display 3" />;
+const display4 = <CompactTile.Display text="display 4" />;
+const display5 = <CompactTile.Display text="display 5" />;
+const display6 = <CompactTile.Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-const styleDisplay1 = <Display text="display 1" textStyle="secondary" />;
-const styleDisplay2 = <Display text="display 2" textStyle="strikeThrough" />;
-const styleDisplay3 = <Display text="display 3" textStyle="attention" />;
+const styleDisplay1 = <CompactTile.Display text="display 1" textStyle="secondary" />;
+const styleDisplay2 = <CompactTile.Display text="display 2" textStyle="strikeThrough" />;
+const styleDisplay3 = <CompactTile.Display text="display 3" textStyle="attention" />;
 const styleDisplays = [styleDisplay1, styleDisplay2, styleDisplay3];
 
-const comment = <Comment text="Here lies a comment, taken from us in it's prime." />;
+const comment = <CompactTile.Comment text="Here lies a comment, taken from us in it's prime." />;
 
 const params = {
   layout: 'oneColumn',
@@ -74,7 +72,7 @@ stories
   .add('With Params', () => (
     <CompactTile
       layout={select(layoutLabel, layoutOptions, 'oneColumn')}
-      theme={select(themeLabel, themeOptions, 'defaultTheme')}
+      textEmphasis={select(themeLabel, themeOptions, 'default')}
       isTruncated={boolean('Is Truncated', false)}
       displays={displays}
       leftAccessory={testElement}

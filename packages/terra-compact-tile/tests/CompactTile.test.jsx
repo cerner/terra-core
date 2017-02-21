@@ -12,24 +12,24 @@ it('should render a default component', () => {
 });
 
 it('should render with 1 display', () => {
-  const display1 = <Display text="display 1" />;
+  const display1 = <CompactTile.Display text="display 1" />;
   const displays = [display1];
   const compactTile = shallow(<CompactTile displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render with 2 displays', () => {
-  const display1 = <Display text="display 1" />;
-  const display2 = <Display text="display 2" />;
+  const display1 = <CompactTile.Display text="display 1" />;
+  const display2 = <CompactTile.Display text="display 2" />;
   const displays = [display1, display2];
   const compactTile = shallow(<CompactTile displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render with 3 displays', () => {
-  const display1 = <Display text="display 1" />;
-  const display2 = <Display text="display 2" />;
-  const display3 = <Display text="display 3" />;
+  const display1 = <CompactTile.Display text="display 1" />;
+  const display2 = <CompactTile.Display text="display 2" />;
+  const display3 = <CompactTile.Display text="display 3" />;
   const displays = [display1, display2, display3];
   const compactTile = shallow(<CompactTile displays={displays} />);
   expect(compactTile).toMatchSnapshot();
@@ -37,22 +37,22 @@ it('should render with 3 displays', () => {
 
 it('should render with a display and graphic', () => {
   const testElement = <img alt="Graphic" />;
-const display1 = <Display text="display 1" icon={ testElement } />;
-const displays = [display1];
-const compactTile = shallow(<CompactTile displays={displays} />);
-expect(compactTile).toMatchSnapshot();
+  const display1 = <CompactTile.Display text="display 1" icon={ testElement } />;
+  const displays = [display1];
+  const compactTile = shallow(<CompactTile displays={displays} />);
+  expect(compactTile).toMatchSnapshot();
 });
 
 it('should render truncated display', () => {
-  const display1 = <Display text="display1display1display1display1display1display1display1display1"
-isTruncated={true} />;
-const displays = [display1];
-const compactTile = shallow(<CompactTile displays={displays} />);
-expect(compactTile).toMatchSnapshot();
+  const display1 = <CompactTile.Display text="display1display1display1display1display1display1display1display1"
+  isTruncated={true} />;
+  const displays = [display1];
+  const compactTile = shallow(<CompactTile displays={displays} />);
+  expect(compactTile).toMatchSnapshot();
 });
 
 it('should render a comment', () => {
-  const comment = <Comment text="comment" style="attention" isTruncated={false} />;
+  const comment = <CompactTile.Comment text="comment" style="attention" isTruncated={false} />;
   const params = {
     layout: 'oneColumn',
     theme: 'defaultTheme',
@@ -64,24 +64,24 @@ it('should render a comment', () => {
 });
 
 it('should render 1 left theme display', () => {
-  const display1 = <Display text="display 1" />;
+  const display1 = <CompactTile.Display text="display 1" />;
   const displays = [display1];
   const compactTile = shallow(<CompactTile theme="leftEmphasisTheme" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render 2 left theme displays', () => {
-  const display1 = <Display text="display 1" />;
-  const display2 = <Display text="display 2" />;
+  const display1 = <CompactTile.Display text="display 1" />;
+  const display2 = <CompactTile.Display text="display 2" />;
   const displays = [display1, display2];
   const compactTile = shallow(<CompactTile theme="leftEmphasisTheme" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render 3 left theme displays', () => {
-  const display1 = <Display text="display 1" />;
-  const display2 = <Display text="display 2" />;
-  const display3 = <Display text="display 3" />;
+  const display1 = <CompactTile.Display text="display 1" />;
+  const display2 = <CompactTile.Display text="display 2" />;
+  const display3 = <CompactTile.Display text="display 3" />;
   const displays = [display1, display2, display3];
   const compactTile = shallow(<CompactTile theme="leftEmphasisTheme" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
@@ -138,16 +138,16 @@ it('should render an accessory center aligned', () => {
 });
 
 it('should render one column', () => {
-  const display1 = <Display text="display 1" />;
-  const display2 = <Display text="display 2" />;
+  const display1 = <CompactTile.Display text="display 1" />;
+  const display2 = <CompactTile.Display text="display 2" />;
   const displays = [display1, display2];
   const compactTile = shallow(<CompactTile layout="oneColumn" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render two columns', () => {
-  const display1 = <Display text="display 1" />;
-  const display2 = <Display text="display 2" />;
+  const display1 = <CompactTile.Display text="display 1" />;
+  const display2 = <CompactTile.Display text="display 2" />;
   const displays = [display1, display2];
   const compactTile = shallow(<CompactTile layout="twoColumns" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
