@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import '../src/arrange.scss';
 
-const alignmentTypes = ['top', 'center', 'bottom', 'stretch'];
+const alignmentTypes = ['center', 'bottom', 'stretch'];
 
 const propTypes = {
   /**
