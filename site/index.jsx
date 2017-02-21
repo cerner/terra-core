@@ -8,8 +8,10 @@ import ButtonExamples from '../packages/terra-button/examples/index';
 const App = () => (
   <div>
     <bdo dir="ltr">
-      <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} >ltr</button>
-      <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
+      <div>
+        <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} >ltr</button>
+        <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
+      </div>
     </bdo>
     <ArrangeExamples />
     <ButtonExamples />
