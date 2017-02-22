@@ -37,25 +37,24 @@ it('should render with 3 displays', () => {
 
 it('should render with a display and graphic', () => {
   const testElement = <img alt="Graphic" />;
-  const display1 = <CompactTile.Display text="display 1" icon={ testElement } />;
+  const display1 = <CompactTile.Display text="display 1" icon={testElement} />;
   const displays = [display1];
   const compactTile = shallow(<CompactTile displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render truncated display', () => {
-  const display1 = <CompactTile.Display text="display1display1display1display1display1display1display1display1"
-  isTruncated={true} />;
+  const display1 = <CompactTile.Display text="display1display1display1display1display1display1display1display1" isTruncated />;
   const displays = [display1];
   const compactTile = shallow(<CompactTile displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
 it('should render a comment', () => {
-  const comment = <CompactTile.Comment text="comment" style="attention" isTruncated={false} />;
+  const comment = <CompactTile.Comment text="comment" textStyle="attention" isTruncated={false} />;
   const params = {
     layout: 'oneColumn',
-    theme: 'defaultTheme',
+    textEmphasis: 'default',
     displays: [],
     comment,
   };
@@ -66,7 +65,7 @@ it('should render a comment', () => {
 it('should render 1 left theme display', () => {
   const display1 = <CompactTile.Display text="display 1" />;
   const displays = [display1];
-  const compactTile = shallow(<CompactTile theme="leftEmphasisTheme" displays={displays} />);
+  const compactTile = shallow(<CompactTile textEmphasis="left" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
@@ -74,7 +73,7 @@ it('should render 2 left theme displays', () => {
   const display1 = <CompactTile.Display text="display 1" />;
   const display2 = <CompactTile.Display text="display 2" />;
   const displays = [display1, display2];
-  const compactTile = shallow(<CompactTile theme="leftEmphasisTheme" displays={displays} />);
+  const compactTile = shallow(<CompactTile textEmphasis="left" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
@@ -83,7 +82,7 @@ it('should render 3 left theme displays', () => {
   const display2 = <CompactTile.Display text="display 2" />;
   const display3 = <CompactTile.Display text="display 3" />;
   const displays = [display1, display2, display3];
-  const compactTile = shallow(<CompactTile theme="leftEmphasisTheme" displays={displays} />);
+  const compactTile = shallow(<CompactTile textEmphasis="left" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
 });
 
@@ -151,36 +150,4 @@ it('should render two columns', () => {
   const displays = [display1, display2];
   const compactTile = shallow(<CompactTile layout="twoColumns" displays={displays} />);
   expect(compactTile).toMatchSnapshot();
-});
-
-
-// Prop Tests
-it('should have the class terra-CompactTile--default', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper.prop('className')).toContain('terra-CompactTile terra-CompactTile--default');
-});
-
-it('should have the class terra-CompactTile--primary', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper.prop('className')).toContain('terra-CompactTile terra-CompactTile--primary');
-});
-
-
-// Event Tests
-it('should toggle the class u-selected on default', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-CompactTile--default').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-CompactTile--default').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-});
-
-it('should toggle the class u-selected on primary', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-CompactTile--primary').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-CompactTile--primary').simulate('click');
-  expect(wrapper).toMatchSnapshot();
 });
