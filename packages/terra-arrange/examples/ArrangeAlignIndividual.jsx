@@ -10,6 +10,7 @@ class ArrangeAlignIndividual extends React.Component {
       fitEnd: true,
       fill: true,
     };
+    this.handleSelectChange = this.handleSelectChange.bind(this);
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
