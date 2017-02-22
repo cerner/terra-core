@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './site.scss';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import App from './App';
+import Home from './Home';
 // Examples
-import ArrangeExamples from '../packages/terra-arrange/examples/index';
 import ButtonExamples from '../packages/terra-button/examples/index';
+import ArrangeExamples from '../packages/terra-arrange/examples/index';
 
-const App = () => (
-  <div>
-    <div dir="ltr">
-      <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} >ltr</button>
-      <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
-    </div>
-    <ArrangeExamples />
-    <ButtonExamples />
-  </div>
-);
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home} />
+      <Route path="/arrange/" component={ArrangeExamples} />
+      <Route path="/button/" component={ButtonExamples} />
+    </Route>
+  </Router>
+), document.getElementById('root'));
