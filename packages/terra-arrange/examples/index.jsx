@@ -5,7 +5,7 @@ import Markdown from '../../../site/Markdown';
 import ReadMe from '../docs/README.md';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ArrangeSrc from '!raw!../src/Arrange.jsx';
+import ArrangeSrc from '!raw-loader!../src/Arrange.jsx';
 // Example Files
 import ArrangeAlignAll from './ArrangeAlignAll';
 import ArrangeAlignIndividual from './ArrangeAlignIndividual';
