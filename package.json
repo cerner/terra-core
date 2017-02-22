@@ -35,13 +35,15 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "compile": "lerna run compile",
-    "lint": "lerna run lint",
+    "lint": "eslint . && lerna run lint",
     "lint:js": "lerna run lint:js",
     "lint:scss": "lerna run lint:scss",
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "test": "lerna exec --concurrency 1 npm test",
-    "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0"
+    "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
+    "webpack": "webpack --config webpack.prod.config.js -p --progress ",
+    "deploy": "npm run webpack && gh-pages -d build"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
@@ -53,6 +55,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "clean-webpack-plugin": "^0.1.15",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
     "enzyme-to-json": "^1.4.5",
@@ -62,6 +65,7 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^1.0.0",
+    "gh-pages": "^0.12.0",
     "github-markdown-css": "^2.4.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
