@@ -17,6 +17,7 @@ const defaultProps = {
 /* eslint react/no-danger:0 */
 const Markdown = props => (
   <div
+    dir="ltr"
     className="markdown-body"
     style={{ listStyle: 'initial' }}
     dangerouslySetInnerHTML={{ __html: marked(props.src) }}

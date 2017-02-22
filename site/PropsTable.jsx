@@ -4,7 +4,7 @@ import { parse } from 'react-docgen';
 import Markdown from './Markdown';
 
 const propTypes = {
-  src: PropTypes.element.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 /**
@@ -24,7 +24,7 @@ const PropsTable = ({ src, ...customProps }) => {
   const componentProps = componentMetaData.props;
 
   return (
-    <div className="markdown-body">
+    <div dir="ltr" className="markdown-body">
       <h2 id="props">Props</h2>
       <table {...customProps}>
         <thead>
