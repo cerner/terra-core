@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    examples: path.join(__dirname, 'site', 'index'),
+    examples: path.join(__dirname, 'site', 'Index'),
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
