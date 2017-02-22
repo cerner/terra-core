@@ -59,7 +59,7 @@ const comment = <CompactTile.Comment text="Here lies a comment, taken from us in
 
 const params = {
   layout: 'oneColumn',
-  theme: 'defaultTheme',
+  textEmphasis: 'default',
   displays,
   leftAccessory: testElement,
   accessoryAlignment: 'alignCenter',

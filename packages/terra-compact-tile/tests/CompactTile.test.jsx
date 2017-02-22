@@ -90,7 +90,7 @@ it('should render a left accessory', () => {
   const testElement = <img alt="Graphic" />;
   const params = {
     layout: 'oneColumn',
-    theme: 'defaultTheme',
+    textEmphasis: 'default',
     displays: [],
     leftAccessory: testElement,
   };
@@ -102,7 +102,7 @@ it('should render a right accessory', () => {
   const testElement = <img alt="Graphic" />;
   const params = {
     layout: 'oneColumn',
-    theme: 'defaultTheme',
+    textEmphasis: 'default',
     displays: [],
     rightAccessory: testElement,
   };
@@ -114,7 +114,7 @@ it('should render an accessory top aligned', () => {
   const testElement = <img alt="Graphic" />;
   const params = {
     layout: 'oneColumn',
-    theme: 'defaultTheme',
+    textEmphasis: 'default',
     displays: [],
     leftAccessory: testElement,
     accessoryAlignment: 'alignTop',
@@ -127,7 +127,7 @@ it('should render an accessory center aligned', () => {
   const testElement = <img alt="Graphic" />;
   const params = {
     layout: 'oneColumn',
-    theme: 'defaultTheme',
+    textEmphasis: 'default',
     displays: [],
     leftAccessory: testElement,
     accessoryAlignment: 'alignCenter',
