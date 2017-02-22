@@ -132,5 +132,6 @@ class SingleSelectList extends React.Component {
 
 SingleSelectList.propTypes = propTypes;
 SingleSelectList.defaultProps = defaultProps;
+SingleSelectList.Item = List.Item;
 
 export default SingleSelectList;

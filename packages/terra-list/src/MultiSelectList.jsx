@@ -160,5 +160,6 @@ class MultiSelectList extends React.Component {
 
 MultiSelectList.propTypes = propTypes;
 MultiSelectList.defaultProps = defaultProps;
+MultiSelectList.Item = List.Item;
 
 export default MultiSelectList;

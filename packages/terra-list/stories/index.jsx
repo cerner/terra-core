@@ -31,7 +31,7 @@ const display5 = <List.Item key="127" />;
 const display6 = <List.Item key="128" isSelectable={false} />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-storiesOf('SelectableList ', module)
+storiesOf('List Variants ', module)
   .add('List', () => (
     <List>
       <List.Item key="123" />
