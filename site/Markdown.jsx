@@ -16,13 +16,12 @@ const defaultProps = {
 
 /* eslint react/no-danger:0 */
 const Markdown = props => (
-  <bdo dir="ltr">
-    <div
-      className="markdown-body"
-      style={{ listStyle: 'initial' }}
-      dangerouslySetInnerHTML={{ __html: marked(props.src) }}
-    />
-  </bdo>
+  <div
+    dir="ltr"
+    className="markdown-body"
+    style={{ listStyle: 'initial' }}
+    dangerouslySetInnerHTML={{ __html: marked(props.src) }}
+  />
 );
 
 Markdown.propTypes = propTypes;

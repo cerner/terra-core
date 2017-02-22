@@ -24,8 +24,7 @@ const PropsTable = ({ src, ...customProps }) => {
   const componentProps = componentMetaData.props;
 
   return (
-    <bdo dir="ltr">
-      <div className="markdown-body">
+    <div dir="ltr" className="markdown-body">
       <h2 id="props">Props</h2>
       <table {...customProps}>
         <thead>
@@ -65,7 +64,6 @@ const PropsTable = ({ src, ...customProps }) => {
         </tbody>
       </table>
     </div>
-    </bdo>
   );
 };
 
