@@ -1,0 +1,51 @@
+exports[`test should render isDivided 1`] = `
+<ul
+  className="terra-List terra-List-divided">
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+</ul>
+`;
+
+exports[`test should render with items 1`] = `
+<ul
+  className="terra-List">
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+  <ListItem
+    className=""
+    hasChevron={false}
+    isSelected={false} />
+</ul>
+`;

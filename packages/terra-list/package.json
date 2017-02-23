@@ -27,7 +27,8 @@
       "<rootDir>/node_modules/enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss|svg)$": "identity-obj-proxy"
+      "\\.(css|scss)$": "identity-obj-proxy",
+      "\\.(svg)$": "<rootDir>/tests/mock/mockSvg"
     }
   },
   "devDependencies": {
