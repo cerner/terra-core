@@ -5,8 +5,8 @@ var windowSizes = {
   small: [622, 768],
   medium: [838, 768],
   large: [1000, 768],
-  huge: [1210, 768],
-  enormous: [1300, 768]
+  huge: [1300, 768],
+  enormous: [1500, 768]
 };
 
 var drivers = {
@@ -23,7 +23,7 @@ var drivers = {
       browserName: 'phantomjs',
       javascriptEnabled: true,
       acceptSslCerts: true,
-      'phantomjs.binary.path': 'node_modules/phantomjs-prebuilt/bin/phantomjs',
+      'phantomjs.binary.path': '../../node_modules/phantomjs-prebuilt/bin/phantomjs',
       'phantomjs.cli.args': []
     }
   },

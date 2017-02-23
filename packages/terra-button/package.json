@@ -29,7 +29,13 @@
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
-    "test": "../../node_modules/.bin/jest --config ../../jestconfig.json"
+    "test": "npm run test:spec && npm run test:nightwatch2",
+    "test:spec": "../../node_modules/.bin/jest --config ../../jestconfig.json",
+    "test:nightwatch": "../../node_modules/.bin/nightwatch -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
+    "test:nightwatch2": "../../run_default.js"
+  },
+  "devDependencies": {
+    "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",

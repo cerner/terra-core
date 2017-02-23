@@ -21,7 +21,7 @@ const drivers = {
       browserName: 'phantomjs',
       javascriptEnabled: true,
       acceptSslCerts: true,
-      'phantomjs.binary.path': 'node_modules/phantomjs-prebuilt/bin/phantomjs',
+      'phantomjs.binary.path': '../../node_modules/phantomjs-prebuilt/bin/phantomjs',
       'phantomjs.cli.args': [],
     },
   },

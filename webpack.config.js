@@ -40,12 +40,13 @@ module.exports = {
     ],
   },
   sassLoader: {
-    data: `@import "${path.resolve('node_modules/terra-legacy-theme/src/terra-legacy-theme.scss')}"; @import "${path.resolve('node_modules/terra-application/src/terra-application.scss')}"; $terra-bidi: true;`,
+    data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/terra-legacy-theme.scss'))}"; @import "${path.resolve(path.join(__dirname, 'node_modules/terra-application/src/terra-application.scss'))}"; $terra-bidi: true;`,
   },
   plugins: [
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlWebpackPlugin({
-      template: 'site/index.html',
+      template: path.join(__dirname, 'site', 'index.html'),
+      chunks: ['terra-ui'],
     }),
   ],
   postcss: [
@@ -60,6 +61,6 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.webpack.js', '.js', '.jsx'],
   },
 };
