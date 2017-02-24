@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.cerner.com/terra/terra-ui#readme",
   "scripts": {
-    "compile": "../../node_modules/.bin/babel src --out-dir lib --copy-files",
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rm -rf lib",
+    "compile:build": "../../node_modules/.bin/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "../../node_modules/.bin/eslint **/*.js, **/*.jsx",
     "lint:scss": "../../node_modules/.bin/stylelint src/**/*.scss",
