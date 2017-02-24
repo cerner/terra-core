@@ -31,9 +31,10 @@
   "dependencies": {
     "nightwatch": "^0.9.12",
     "phantomjs-prebuilt": "^2.1.14",
-    "selenium-server-standalone-jar": "^3.0.1",
+    "selenium-server-standalone-jar": "3.1.0",
     "terra-application": "^0.2.0",
     "terra-legacy-theme": "^0.1.0",
+    "terra-mixins": "^1.0.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }

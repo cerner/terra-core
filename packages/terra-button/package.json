@@ -29,17 +29,27 @@
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
-    "test": "npm run test:spec && npm run test:nightwatch2",
+    "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "../../node_modules/.bin/jest --config ../../jestconfig.json",
-    "test:nightwatch": "../../node_modules/.bin/nightwatch -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
-    "test:nightwatch2": "../../run_default.js"
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
+    "test:nightwatch-chrome": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous",
+    "test:nightwatch-firefox": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous",
+    "test:nightwatch-safari": "npm run test:nightwatch-safari-tiny && npm run test:nightwatch-safari-small && npm run test:nightwatch-safari-medium && npm run test:nightwatch-safari-large && npm run test:nightwatch-safari-huge && npm run test:nightwatch-safari-enormous",
+    "test:nightwatch-safari-tiny": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e safari-tiny",
+    "test:nightwatch-safari-small": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e safari-small",
+    "test:nightwatch-safari-medium": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e safari-medium",
+    "test:nightwatch-safari-large": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e safari-large",
+    "test:nightwatch-safari-huge": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e safari-huge",
+    "test:nightwatch-safari-enormous": "../../node_modules/.bin/nightwatch --config tests/nightwatch.conf.js -e safari-enormous"
   },
   "devDependencies": {
     "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2"
   },
   "dependencies": {
     "classnames": "^2.2.5",

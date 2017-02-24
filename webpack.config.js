@@ -63,4 +63,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.webpack.js', '.js', '.jsx'],
   },
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, 'dist'),
+  },
 };
