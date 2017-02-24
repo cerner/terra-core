@@ -45,7 +45,7 @@
     "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
     "webpack": "webpack --config webpack.prod.config.js -p --progress --profile --json > build/stats.json",
     "deploy": "npm run webpack && gh-pages -d build",
-    "prepush": "npm test"
+    "prepush": "npm test && npm run compile && git diff --exit-code packages/*/lib/*"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
