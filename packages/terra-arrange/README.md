@@ -2,7 +2,7 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange)
-[![Build Status](https://travis-ci.org/cerner/terra-arrange.svg?branch=master)](https://travis-ci.org/cerner/terra-arrange)
+[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 [![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
 The arrange component allows an item that has an intrinsic width, such as an icon or an image, to be offset from a group of associated content. When the group of associated content wraps, it will stay aligned next to the offset content rather than wrap below it.
