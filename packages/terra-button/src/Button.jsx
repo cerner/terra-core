@@ -8,7 +8,7 @@ const propTypes = {
    */
   isBlock: PropTypes.bool,
   /**
-   * JSX children
+   * Child Nodes
    */
   children: PropTypes.node,
   /**
