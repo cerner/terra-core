@@ -17,7 +17,7 @@ module.exports = {
     /* eslint-enable global-require, import/no-dynamic-require */
     var globals = browser.globals;
     globals.server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
-      quiet: true
+      quiet: false
     });
 
     globals.server.listen(browser.globals.webpackDevServerPort, '0.0.0.0');
