@@ -35,6 +35,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "lint": "eslint . && eslint **/*.js, **/*.jsx  && lerna run lint",
     "lint:js": "lerna run lint:js",
@@ -44,7 +45,8 @@
     "test": "lerna exec --concurrency 1 npm test",
     "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
     "webpack": "webpack --config webpack.prod.config.js -p --progress --profile --json > build/stats.json",
-    "deploy": "npm run webpack && gh-pages -d build"
+    "deploy": "npm run webpack && gh-pages -d build",
+    "prepush": "npm test && npm run compile && git diff --exit-code packages/*/lib/*"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
@@ -70,6 +72,7 @@
     "github-markdown-css": "^2.4.1",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
+    "husky": "^0.13.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^18.1.0",
     "json-loader": "^0.5.4",
