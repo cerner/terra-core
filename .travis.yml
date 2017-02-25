@@ -4,6 +4,7 @@ jdk: oraclejdk8
 before_script:
   - sudo apt-get update && sudo apt-get install oracle-java8-installer
 script:
+  - npm run bootstrap
   - npm test
 branches:
   only:
