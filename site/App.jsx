@@ -14,8 +14,9 @@ const App = props => (
     </div>
     <ul dir="ltr">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/arrange/">Arrange</Link></li>
-      <li><Link to="/button/">Buttons</Link></li>
+      <li><Link to="/site/arrange">Arrange</Link></li>
+      <li><Link to="/site/button">Buttons</Link></li>
+      <li><Link to="/tests">Tests</Link></li>
     </ul>
     {props.children}
   </div>
