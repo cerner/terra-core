@@ -28,7 +28,7 @@ var propTypes = {
    */
   isBlock: _react.PropTypes.bool,
   /**
-   * JSX children
+   * Child Nodes
    */
   children: _react.PropTypes.node,
   /**
