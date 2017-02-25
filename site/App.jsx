@@ -22,6 +22,6 @@ const App = props => (
   </div>
 );
 
-App.PropTypes = propTypes;
+App.propTypes = propTypes;
 
 export default App;

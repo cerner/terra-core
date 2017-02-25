@@ -14,7 +14,7 @@ config.plugins.push(new webpack.DefinePlugin({
 }));
 
 // Clean build before running
-config.plugins.push(new CleanPlugin('build'));
+config.plugins.push(new CleanPlugin('build', { exclude: ['stats.json'] }));
 
 // Create output file
 config.output = {
