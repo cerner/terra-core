@@ -6,10 +6,6 @@ before_script:
   - java -version
 script:
   - npm test
-cache:
-  yarn: true
-  directories:
-    - node_modules
 branches:
   only:
     - master
