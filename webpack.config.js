@@ -9,10 +9,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    'terra-ui': path.join(__dirname, 'site', 'Index'),
+    'terra-ui': path.resolve(path.join(__dirname, 'site', 'Index')),
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    root: path.resolve(path.join(__dirname, 'node_modules')),
   },
   module: {
     loaders: [
