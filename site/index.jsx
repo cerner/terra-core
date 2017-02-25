@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
 import App from './App';
 import Home from './Home';
-// Examples
+// Examples and Tests
 import ButtonExamples from '../packages/terra-button/examples/index';
 import ButtonTestRoutes from '../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import ArrangeExamples from '../packages/terra-arrange/examples/index';
