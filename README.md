@@ -1,5 +1,7 @@
 # Terra UI
 
+[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
+
 - [Supported Browsers](#supported-browsers)
 - [Contributing](#contributing)
 - [LICENSE](#license)
