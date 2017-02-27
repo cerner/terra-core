@@ -1,16 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const shell = require('shelljs');
 
-// Test all packages
-shell.echo('Testing and linting all packages...');
-
-if (shell.exec('npm test').code !== 0) {
-  shell.echo('Error: test or lint failure.');
-  shell.exit(1);
-} else {
-  shell.echo('All testing and linting successful.');
-}
-
 // Compile all packages
 shell.echo('Compiling all packages...');
 
