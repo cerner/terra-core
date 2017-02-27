@@ -38,7 +38,7 @@
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "lint": "eslint . && eslint **/*.js, **/*.jsx  && lerna run lint",
-    "lint:js": "lerna run lint:js",
+    "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
     "jest": "jest",
     "jest:coverage": "jest --coverage",
