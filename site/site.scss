@@ -1,10 +1,15 @@
 // Styles specific to development only
 // stylelint-disable
- 
+
 #root {
   padding: 20px;
 }
 
 .markdown-body {
   margin-bottom: 20px;
+}
+
+.demo-bar {
+  background-color: #eee;
+  padding: 10px;
 }
