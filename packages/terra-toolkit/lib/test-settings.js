@@ -1,5 +1,7 @@
 'use strict';
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var windowSizes = {
   tiny: [470, 768],
   small: [622, 768],
@@ -58,7 +60,7 @@ module.exports = function (testConfigPath) {
   Object.keys(drivers).forEach(function (driverKey) {
     Object.keys(windowSizes).forEach(function (windowSizeKey) {
       var key = driverKey + '-' + windowSizeKey;
-      testingConfiguration[key] = Object.assign({}, drivers[driverKey]);
+      testingConfiguration[key] = _extends({}, drivers[driverKey]);
       testingConfiguration[key].globals = {};
       testingConfiguration[key].globals.width = windowSizes[windowSizeKey][0];
       testingConfiguration[key].globals.height = windowSizes[windowSizeKey][1];
