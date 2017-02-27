@@ -37,7 +37,7 @@ var defaultProps = {
   content: undefined,
   isSelected: false,
   isSelectable: undefined,
-  hasChevron: undefined
+  hasChevron: false
 };
 
 var ListItem = function ListItem(_ref) {

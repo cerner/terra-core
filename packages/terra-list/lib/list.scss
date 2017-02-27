@@ -1,0 +1,41 @@
+@import 'node_modules/terra-mixins/src/terra-mixins';
+@import './variables';
+@import './mixins';
+
+.terra-List {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.terra-List-divided {
+  > * {border-bottom: solid 1px;}
+
+  &:first-child {border-top: solid 1px;}
+}
+
+// // Selectable lists
+// .list-selectable > li,
+// .list-multi-selectable > li {
+
+//   &[aria-selected] {
+//     background-color: @selected-background;
+//     color: @selected-color;
+
+//     // Need to call out <a> explicitly to override our default styles.
+//     a {
+//       color: @selected-color;
+//     }
+//   }
+
+//   // Reset hover cursor and background for list items that can not be selected/unselected
+//   &.selection-static:hover {
+//     background-color: inherit;
+//     cursor: default;
+
+//     // Need to override the specificity from `&.selection-static:hover`
+//     &[aria-selected] {
+//       background-color: @selected-background;
+//     }
+//   }
+// }

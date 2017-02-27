@@ -188,5 +188,6 @@ var SingleSelectList = function (_React$Component) {
 
 SingleSelectList.propTypes = propTypes;
 SingleSelectList.defaultProps = defaultProps;
+SingleSelectList.Item = _List2.default.Item;
 
 exports.default = SingleSelectList;

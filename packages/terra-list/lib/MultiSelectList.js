@@ -216,5 +216,6 @@ var MultiSelectList = function (_React$Component) {
 
 MultiSelectList.propTypes = propTypes;
 MultiSelectList.defaultProps = defaultProps;
+MultiSelectList.Item = _List2.default.Item;
 
 exports.default = MultiSelectList;
