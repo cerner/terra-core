@@ -1,6 +1,6 @@
 Cerner Corporation
 
-- {First Name} {Last Name} [@{github username}]
+- Matt Butler [@Matt-Butler]
 
-[@{github username}]: https://github.com/{github username}
+[@Matt-Butler]: https://github.com/Matt-Butler
 
