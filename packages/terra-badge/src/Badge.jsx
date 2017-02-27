@@ -37,7 +37,7 @@ const defaultProps = {
   intent: 'default',
   isReversed: false,
   size: 'small',
-  test: null,
+  text: null,
 };
 
 const Badge = ({

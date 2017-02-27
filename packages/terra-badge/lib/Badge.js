@@ -24,28 +24,28 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   /**
-   * Child Nodes
+   * Child Nodes.
    */
   children: _react.PropTypes.node,
   /**
-   * An optional icon. Nested inline with the text when provided
+   * An optional icon. Nested inline with the text when provided.
    */
   icon: _react.PropTypes.element,
   /**
-   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`
+   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
   intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
-   * Reverses the position of the icon and text
+   * Reverses the position of the icon and text.
    */
   isReversed: _react.PropTypes.bool,
   /**
-   * Sets the button size. One of tiny, small, medium, large, huge
+   * Sets the button size. One of tiny, small, medium, large, huge.
    * @type String
    */
   size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
-   * Sets the button text
+   * Sets the button text.
    */
   text: _react.PropTypes.string
 };
@@ -56,7 +56,7 @@ var defaultProps = {
   intent: 'default',
   isReversed: false,
   size: 'small',
-  test: null
+  text: null
 };
 
 var Badge = function Badge(_ref) {
