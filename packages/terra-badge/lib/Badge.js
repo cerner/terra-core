@@ -32,7 +32,7 @@ var propTypes = {
    */
   icon: _react.PropTypes.element,
   /**
-   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
+   * Sets the badge color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
   intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
@@ -40,12 +40,12 @@ var propTypes = {
    */
   isReversed: _react.PropTypes.bool,
   /**
-   * Sets the button size. One of tiny, small, medium, large, huge.
+   * Sets the badge size. One of tiny, small, medium, large, huge.
    * @type String
    */
   size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
-   * Sets the button text.
+   * Sets the badge text.
    */
   text: _react.PropTypes.string
 };
