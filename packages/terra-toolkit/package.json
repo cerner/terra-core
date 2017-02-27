@@ -15,14 +15,14 @@
     "UI"
   ],
   "scripts": {
-    "compile": "../../node_modules/.bin/babel src --out-dir lib --copy-files",
+    "compile": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "../../node_modules/.bin/eslint **/*.js, **/*.jsx",
+    "lint:js": "$(cd ..; npm bin)/eslint **/*.js, **/*.jsx",
     "pretest": "npm run lint",
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
-    "test": "../../node_modules/.bin/nightwatch -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
+    "test": "$(cd ..; npm bin)/nightwatch -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
   },
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
