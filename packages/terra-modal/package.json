@@ -1,0 +1,47 @@
+{
+  "name": "terra-modal",
+  "main": "lib/Modal.js",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Modals are dialog prompts containing additional information to be revealed to the user. Modals consists of an backdrop, a modal dialog with a header and body, and a close button.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.cerner.com/terra/terra-ui.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-modal",
+    "Modal",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.cerner.com/terra/terra-ui/issues"
+  },
+  "homepage": "https://github.cerner.com/terra/terra-ui#readme",
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rm -rf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "release:major": "npm test && node ../../scripts/release/release.js major",
+    "release:minor": "npm test && node ../../scripts/release/release.js minor",
+    "release:patch": "npm test && node ../../scripts/release/release.js patch",
+    "test": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "terra-button": "file:../terra-button",
+    "terra-icon": "https://github.com/cerner/terra-icon",
+    "terra-legacy-theme": "https://github.com/cerner/terra-legacy-theme.git",
+    "terra-mixins": "^1.0.0"
+  }
+}

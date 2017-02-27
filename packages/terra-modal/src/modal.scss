@@ -1,0 +1,81 @@
+@import 'node_modules/terra-legacy-theme/src/terra-legacy-theme';
+
+.terra-Modal-backdrop {
+  background-color: #1c1f21;
+  border: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.terra-Modal-dialog {
+  background-color: #fff;
+  border-radius: 0.25em;
+  left: 0;
+  margin: 0 auto;
+  outline: 0;
+  position: fixed;
+  right: 0;
+  top: 5%;
+  width: 85%;
+  z-index: 1001;
+}
+
+.terra-Modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.terra-Modal--close {
+  background: transparent;
+  border: 0;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: transparent;
+    color: inherit;
+  }
+}
+
+.terra-Modal-body {
+  overflow-y: auto;
+}
+
+.terra-Modal--open {
+  overflow: hidden;
+}
+
+.terra-Modal--tiny {
+  max-width: $terra-tiny-breakpoint;
+}
+
+.terra-Modal--small {
+  max-width: $terra-small-breakpoint;
+}
+
+.terra-Modal--medium {
+  max-width: $terra-medium-breakpoint;
+}
+
+.terra-Modal--large {
+  max-width: $terra-large-breakpoint;
+}
+
+.terra-Modal--huge {
+  max-width: $terra-huge-breakpoint;
+}
+
+.terra-Modal--fullScreen {
+  border-radius: 0;
+  height: 100%;
+  max-width: none;
+  top: 0;
+  width: 100%;
+}
