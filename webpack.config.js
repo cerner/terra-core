@@ -9,10 +9,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    'terra-ui': path.join(__dirname, 'site', 'Index'),
+    'terra-ui': path.resolve(path.join(__dirname, 'site', 'Index')),
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    root: path.resolve(path.join(__dirname, 'node_modules')),
   },
   module: {
     loaders: [
@@ -40,12 +40,13 @@ module.exports = {
     ],
   },
   sassLoader: {
-    data: `@import "${path.resolve('node_modules/terra-legacy-theme/src/terra-legacy-theme.scss')}"; @import "${path.resolve('node_modules/terra-application/src/terra-application.scss')}"; $terra-bidi: true;`,
+    data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/terra-legacy-theme.scss'))}"; @import "${path.resolve(path.join(__dirname, 'node_modules/terra-application/src/terra-application.scss'))}"; $terra-bidi: true;`,
   },
   plugins: [
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlWebpackPlugin({
-      template: 'site/index.html',
+      template: path.join(__dirname, 'site', 'index.html'),
+      chunks: ['terra-ui'],
     }),
   ],
   postcss: [
@@ -61,5 +62,9 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
+  },
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, 'dist'),
   },
 };
