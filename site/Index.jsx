@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
@@ -9,7 +10,7 @@ import ArrangeExamples from '../packages/terra-arrange/examples/index';
 import BadgeExamples from '../packages/terra-badge/examples/index';
 import ButtonExamples from '../packages/terra-button/examples/index';
 
-//Tests
+// Tests
 import ButtonTestRoutes from '../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import TestLinks from './TestLinks';
 

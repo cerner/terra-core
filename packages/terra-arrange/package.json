@@ -28,7 +28,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "pretest": "npm run lint",
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
