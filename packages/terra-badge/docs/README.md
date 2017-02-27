@@ -1,9 +1,18 @@
-## Terra Badge Documentation
+# Terra Badge
 
-- [Terra Badge](terra-badge.md)
+The badge component displays content classification.
 
-Additional modifiers:
+## Getting Started
 
-- [Intent](terra-badge-intent.md)
-- [Size](terra-badge-size.md)
-- [isReversed](terra-badge-order.md)
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-badge`
+  - `yarn install terra-badge`
+
+## Usage
+
+```jsx
+import React from 'react';
+import Badge from 'terra-badge';
+
+<Badge text="Default" />
+```

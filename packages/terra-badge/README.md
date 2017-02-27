@@ -1,9 +1,7 @@
 # Terra Badge
 
-
 [![NPM version](http://img.shields.io/npm/v/terra-badge.svg)](https://www.npmjs.org/package/terra-badge)
-[![Build Status](https://travis-ci.org/cerner/terra-badge.svg?branch=master)](https://travis-ci.org/cerner/terra-badge)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?badge=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
+[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
 The terra-badge component displays content classification.
 
@@ -17,8 +15,6 @@ The terra-badge component displays content classification.
 ## Getting Started
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-badge`
-- [Download the latest version](https://github.com/cerner/terra-badge/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-badge.git`
 
 ## Documentation
 
@@ -43,7 +39,7 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 
 ## LICENSE
 
-Copyright 2016 Cerner Innovation, Inc.
+Copyright 2017 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

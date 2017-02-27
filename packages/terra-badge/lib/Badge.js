@@ -14,13 +14,50 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('../src/terra-badge.scss');
+require('./Badge.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var propTypes = {
+  /**
+   * Child Nodes
+   */
+  children: _react.PropTypes.node,
+  /**
+   * An optional icon. Nested inline with the text when provided
+   */
+  icon: _react.PropTypes.element,
+  /**
+   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`
+   */
+  intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
+  /**
+   * Reverses the position of the icon and text
+   */
+  isReversed: _react.PropTypes.bool,
+  /**
+   * Sets the button size. One of tiny, small, medium, large, huge
+   * @type String
+   */
+  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Sets the button text
+   */
+  text: _react.PropTypes.string
+};
+
+var defaultProps = {
+  children: null,
+  icon: null,
+  intent: 'default',
+  isReversed: false,
+  size: 'small',
+  test: null
+};
 
 var Badge = function Badge(_ref) {
   var size = _ref.size,
@@ -43,19 +80,7 @@ var Badge = function Badge(_ref) {
   return _react2.default.createElement.apply(_react2.default, ['span', _extends({}, additionalProps, { className: classes })].concat(content));
 };
 
-Badge.propTypes = {
-  text: _react.PropTypes.string,
-  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
-  isReversed: _react.PropTypes.bool,
-  icon: _react.PropTypes.element,
-  children: _react.PropTypes.node
-};
-
-Badge.defaultProps = {
-  size: 'small',
-  intent: 'default',
-  isReversed: false
-};
+Badge.propTypes = propTypes;
+Badge.defaultProps = defaultProps;
 
 exports.default = Badge;

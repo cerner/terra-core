@@ -1,10 +1,5 @@
 import React from 'react';
-import initStoryshots from 'storyshots';
 import Badge from '../src/Badge';
-
-
-// Run snapshot tests for react-storybook
-initStoryshots();
 
 const iconValue = <img alt="Test icon" />;
 // Snapshot Tests

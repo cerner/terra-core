@@ -1,7 +1,44 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-import '../src/terra-badge.scss';
+import './Badge.scss';
+
+const propTypes = {
+  /**
+   * Child Nodes.
+   */
+  children: PropTypes.node,
+  /**
+   * An optional icon. Nested inline with the text when provided.
+   */
+  icon: PropTypes.element,
+  /**
+   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
+   */
+  intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
+  /**
+   * Reverses the position of the icon and text.
+   */
+  isReversed: PropTypes.bool,
+  /**
+   * Sets the button size. One of tiny, small, medium, large, huge.
+   * @type String
+   */
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Sets the button text.
+   */
+  text: PropTypes.string,
+};
+
+const defaultProps = {
+  children: null,
+  icon: null,
+  intent: 'default',
+  isReversed: false,
+  size: 'small',
+  test: null,
+};
 
 const Badge = ({
   size,
@@ -25,19 +62,7 @@ const Badge = ({
   return React.createElement('span', { ...additionalProps, className: classes }, ...content);
 };
 
-Badge.propTypes = {
-  text: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
-  isReversed: PropTypes.bool,
-  icon: PropTypes.element,
-  children: PropTypes.node,
-};
-
-Badge.defaultProps = {
-  size: 'small',
-  intent: 'default',
-  isReversed: false,
-};
+Badge.propTypes = propTypes;
+Badge.defaultProps = defaultProps;
 
 export default Badge;

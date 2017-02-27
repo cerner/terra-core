@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Badge from '../src/Badge';
 
 storiesOf('Badge', module)
