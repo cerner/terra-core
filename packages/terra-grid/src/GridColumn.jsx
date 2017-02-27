@@ -12,14 +12,38 @@ const columnRange = (props, propName) => {
 };
 
 const propTypes = {
-  className: PropTypes.string,
+  /**
+   * The component that will be displayed in cell level.
+   */
   children: PropTypes.node,
+  /**
+   * Custom class name that can be assigned to grid column.
+   */
+  className: PropTypes.string,
+  /**
+   * The number of columns across all breakpoints. From 1-12(inclusively).
+   */
   col: columnRange,
-  tiny: columnRange,
-  small: columnRange,
-  medium: columnRange,
-  large: columnRange,
+  /**
+   * The number of columns starts from huge breakpoint. From 1-12(inclusively).
+   */
   huge: columnRange,
+  /**
+   * The number of columns starts from large breakpoint. From 1-12 (inclusively).
+   */
+  large: columnRange,
+  /**
+   * The number of columns starts from medium breakpoint. From 1-12 (inclusively).
+   */
+  medium: columnRange,
+  /**
+   * The number of columns starts from small breakpoint. From 1-12 (inclusively).
+   */
+  small: columnRange,
+  /**
+   * The number of columns starts from tiny breakpoint. From 1-12 (inclusively).
+   */
+  tiny: columnRange,
 };
 
 const GridColumn = ({

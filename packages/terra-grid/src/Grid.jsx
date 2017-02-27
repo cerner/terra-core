@@ -3,9 +3,12 @@ import React, { PropTypes } from 'react';
 import GridRow from './GridRow';
 import GridColumn from './GridColumn';
 
-import './grid.scss';
+import './Grid.scss';
 
 const propTypes = {
+  /**
+   * The component that will be displayed at row level.
+   */
   children: PropTypes.node.isRequired,
 };
 
