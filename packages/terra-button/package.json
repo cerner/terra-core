@@ -26,7 +26,7 @@
     "compile:clean": "rm -rf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "$(cd ..; npm bin)/eslint **/*.js, **/*.jsx",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "pretest": "npm run lint",
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
