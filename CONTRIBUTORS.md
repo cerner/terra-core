@@ -1,6 +1,6 @@
 Cerner Corporation
 
-- {First Name} {Last Name} [@{github username}]
+- Ryan Manuel [@ryanthemanuel]
 
-[@{github username}]: https://github.com/{github username}
+[@ryanthemanuel]: https://github.com/ryanthemanuel
 
