@@ -42,6 +42,7 @@
     "lint:scss": "lerna run lint:scss",
     "jest": "jest",
     "jest:coverage": "jest --coverage",
+    "postinstall": "npm run bootstrap",
     "test": "lerna exec --concurrency 1 npm test",
     "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
     "webpack": "webpack --config webpack.prod.config.js -p --progress --profile --json > build/stats.json",
