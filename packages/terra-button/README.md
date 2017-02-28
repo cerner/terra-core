@@ -3,25 +3,17 @@
 
 [![NPM version](http://img.shields.io/npm/v/terra-button.svg)](https://www.npmjs.org/package/terra-button)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
 The terra-button component provides users a way to trigger actions in the UI.
 It can be modified in color, size, and type, and can optionally display an icon.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
-- [Dependencies](#dependencies)
-- [Supported Browsers](#supported-browsers)
-- [Contributing](#contributing)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com)
-  - `npm install terra-button`
-  - `yarn install terra-button`
-- [Download the latest version](https://github.com/cerner/terra-button/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-button.git`
+- Install with [npm](https://www.npmjs.com): `npm install terra-button`
 
 ## Documentation
 
@@ -29,20 +21,6 @@ Documentation for this component is spilt into individual files.
 One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
-
-## Supported Browsers
-
-| Browser                     | Version |
-|-----------------------------|---------|
-| Chrome & Chrome for Android | Current |
-| Edge                        | Current |
-| Firefox                     | Current |
-| Internet Explorer           | 10 & 11 |
-| Safari & Mobile Safari      | Current |
-
-## Contributing
-
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 ## LICENSE
 
