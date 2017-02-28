@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/button.scss';
+import './Button.scss';
 
 const propTypes = {
   /**
