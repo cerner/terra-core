@@ -1,52 +1,53 @@
 import React from 'react';
-import initStoryshots from 'storyshots';
+import Arrange from 'terra-arrange';
 import Status from '../src/Status';
 
-const defaultVariety = <Status />;
-const primaryVariety = <Status name="primary" variant="terra-Status--primary" />;
-
-// Run snapshot tests for react-storybook
-initStoryshots();
+const image = <img src="http" alt="panda" />;
+const icon = <svg xmlns="http://www.w3.org/2000/svg" width="75" height="100" style={{ display: 'block' }} fill="#8bc34a" viewBox="0 0 1000 1000"><path d="M525 841.3c-7.5 " /></svg>;
+const ipsum = 'Lorem labore et dolore magna aliqua.';
+const simpleText = <div>{ipsum}</div>;
+const arrange = <Arrange fitStart={image} fill={simpleText} />;
 
 // Snapshot Tests
-it('should render a default component', () => {
-  const wrapper = shallow(defaultVariety);
+it('should render a image with status', () => {
+  const imageWithStatus = <Status color="red" >{image}</Status>;
+  const wrapper = shallow(imageWithStatus);
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a primary component', () => {
-  const wrapper = shallow(primaryVariety);
+it('should render a icon with status', () => {
+  const iconWithStatus = <Status color="grey" >{icon}</Status>;
+  const wrapper = shallow(iconWithStatus);
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a simpleText with status', () => {
+  const simpleTextWithStatus = <Status color="blue" >{simpleText}</Status>;
+  const wrapper = shallow(simpleTextWithStatus);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a arrange with status and customProps', () => {
+  const arrangeWithStatus = <Status color="green" id="id" >{arrange}</Status>;
+  const wrapper = shallow(arrangeWithStatus);
+  expect(wrapper).toMatchSnapshot();
+});
 
 // Prop Tests
-it('should have the class terra-Status--default', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper.prop('className')).toContain('terra-Status terra-Status--default');
+it('should have all props including customProps set correctly', () => {
+  const arrangeWithStatus = <Status color="green" id="id" >{arrange}</Status>;
+  const wrapper = shallow(arrangeWithStatus);
+  expect(wrapper.unrendered.props.color).toEqual('green');
+  expect(wrapper.unrendered.props.id).toEqual('id');
+  expect(wrapper.unrendered.props.children).toEqual(arrange);
 });
 
-it('should have the class terra-Status--primary', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper.prop('className')).toContain('terra-Status terra-Status--primary');
+// Structure test
+it('should have indicator section of component with correct class, style and type', () => {
+  const arrangeWithStatus = <Status color="green" className="testClass" >{arrange}</Status>;
+  const wrapper = shallow(arrangeWithStatus);
+  expect(wrapper.node.props.style.borderColor).toEqual('green');
+  expect(wrapper.node.props.className).toContain('terra-Status');
+  expect(wrapper.node.props.className).toContain('testClass');
 });
 
-
-// Event Tests
-it('should toggle the class u-selected on default', () => {
-  const wrapper = shallow(defaultVariety);
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Status--default').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Status--default').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-});
-
-it('should toggle the class u-selected on primary', () => {
-  const wrapper = shallow(primaryVariety);
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Status--primary').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-  wrapper.find('.terra-Status--primary').simulate('click');
-  expect(wrapper).toMatchSnapshot();
-});

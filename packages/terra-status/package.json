@@ -63,6 +63,7 @@
     "stylelint": "^7.7.1",
     "stylelint-config-sass-guidelines": "^1.1.1",
     "terra-application": "^0.2.0",
+    "terra-arrange": "https://github.com/cerner/terra-arrange.git",
     "terra-legacy-theme": "^0.1.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
@@ -86,6 +87,7 @@
     "start": "start-storybook -p 8080",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "webpack-dev": "yarn run lint-js && webpack-dev-server --host=0.0.0.0 --config .storybook/webpack.dev.config.js"
   }
 }

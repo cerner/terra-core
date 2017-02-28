@@ -1,6 +1,5 @@
 Cerner Corporation
 
-- {First Name} {Last Name} [@{github username}]
+- Altamash Fakki [@amf9t2]
 
-[@{github username}]: https://github.com/{github username}
-
+[@amf9t2]: https://github.com/amf9t2
