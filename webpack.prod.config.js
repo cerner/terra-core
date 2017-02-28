@@ -1,6 +1,7 @@
 // By default eslint assumes packages imported are supposed to be dependencies,
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
+
 const webpack = require('webpack');
 const config = require('./webpack.config');
 const CleanPlugin = require('clean-webpack-plugin');

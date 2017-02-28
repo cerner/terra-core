@@ -1,6 +1,13 @@
 language: node_js
+sudo: required
+jdk: oraclejdk8
+before_script:
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
 script:
   - npm test
 branches:
   only:
     - master
+cache:
+  directories:
+    - node_modules
