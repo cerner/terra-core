@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/arrange.scss';
+import './Arrange.scss';
 
 const alignmentTypes = ['center', 'bottom', 'stretch'];
 
