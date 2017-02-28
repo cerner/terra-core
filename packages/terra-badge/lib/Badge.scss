@@ -3,6 +3,9 @@
 @import './mixins';
 
 .terra-Badge {
+  @include terra-padding-start($terra-badge-padding-left);
+  @include terra-padding-end($terra-badge-padding-right);
+
   border-radius: $terra-badge-border-radius;
   display: $terra-badge-display;
   font-size: map-get($terra-badge-font-sizes, small);
@@ -10,8 +13,6 @@
   line-height: $terra-badge-line-height;
   min-width: 1.65em;
   padding-bottom: $terra-badge-padding-bottom;
-  padding-left: $terra-badge-padding-right;
-  padding-right: $terra-badge-padding-left;
   padding-top: $terra-badge-padding-top;
   position: relative;
   text-align: center;
