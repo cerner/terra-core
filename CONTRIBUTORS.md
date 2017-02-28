@@ -4,8 +4,10 @@ Cerner Corporation
 - Matt Butler [@Matt-Butler]
 - Brett Jankord [@bjankord]
 - Matt Henkes [@mjhenkes]
+- Stephen Esser [@StephenEsser]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
 [@bjankord]: https://github.com/bjankord
 [@mjhenkes]: https://github.com/mjhenkes
+[@StephenEsser]: https://github.com/StephenEsser
