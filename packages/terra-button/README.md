@@ -13,9 +13,7 @@ It can be modified in color, size, and type, and can optionally display an icon.
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com)
-  - `npm install terra-button`
-  - `yarn install terra-button`
+- Install with [npm](https://www.npmjs.com): `npm install terra-button`
 
 ## Documentation
 

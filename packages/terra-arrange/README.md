@@ -12,9 +12,7 @@ The arrange component allows an item that has an intrinsic width, such as an ico
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com)
-  - `npm install terra-arrange`
-  - `yarn install terra-arrange`
+- Install with [npm](https://www.npmjs.com): `npm install terra-arrange`
 
 ## Documentation
 
