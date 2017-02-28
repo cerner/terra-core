@@ -6,6 +6,9 @@
 // ========================================================
 
 .terra-Grid {
+  @include terra-margin-start(- $terra-grid-gutter-width * 0.5);
+  @include terra-margin-end(- $terra-grid-gutter-width * 0.5);
+
   box-sizing: border-box;
   display: flex;
   flex-basis: auto;
@@ -13,18 +16,17 @@
   flex-grow: 0;
   flex-shrink: 1;
   flex-wrap: wrap;
-  @include terra-margin-start(- $terra-grid-gutter-width * 0.5);
-  @include terra-margin-end(- $terra-grid-gutter-width * 0.5);
 }
 
 .terra-Grid-col {
+  @include terra-padding-start($terra-grid-gutter-width * 0.5);
+  @include terra-padding-end($terra-grid-gutter-width * 0.5);
+
   box-sizing: border-box;
   flex-basis: 100%;
   flex-grow: 1;
   flex-shrink: 0;
   max-width: 100%;
-  @include terra-padding-start($terra-grid-gutter-width * 0.5);
-  @include terra-padding-end($terra-grid-gutter-width * 0.5);
 }
 
 // Create column classes
