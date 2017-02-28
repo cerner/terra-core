@@ -7,9 +7,6 @@ The terra-badge component displays content classification.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
-- [Dependencies](#dependencies)
-- [Supported Browsers](#supported-browsers)
-- [Contributing](#contributing)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -22,20 +19,6 @@ Documentation for this component is spilt into individual files.
 One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
-
-## Supported Browsers
-
-| Browser                     | Version |
-|-----------------------------|---------|
-| Chrome & Chrome for Android | Current |
-| Edge                        | Current |
-| Firefox                     | Current |
-| Internet Explorer           | 10 & 11 |
-| Safari & Mobile Safari      | Current |
-
-## Contributing
-
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 ## LICENSE
 
