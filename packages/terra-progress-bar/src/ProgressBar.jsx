@@ -3,52 +3,49 @@ import classNames from 'classnames';
 import '../src/progress-bar.scss';
 
 const propTypes = {
-  name: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  value: PropTypes.number.isRequired,
+  max: PropTypes.number,
 };
 
 const defaultProps = {
-  name: 'default',
-  variant: 'terra-ProgressBar--default',
+  color: '#007cc3', // Default color of the ProgressBar fill
+  height: 'small',
+  max: 100,
+  value: 0,
 };
 
-class ProgressBar extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isSelected: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+const ProgressBar = ({
+  height,
+  value,
+  max,
+  ...customProps
+}) => {
+  const classes = classNames([
+    'terra-ProgressBar',
+    { [`terra-ProgressBar--${height}`]: height },
+    customProps.className,
+  ]);
 
-  handleClick() {
-    this.setState({ isSelected: !this.state.isSelected });
-  }
+  const normalizedValue = (value / max) * 100;
 
-  render() {
-    const { name, variant, ...customProps } = this.props;
-    const classes = classNames(['terra-ProgressBar',
-      variant,
-      this.state.isSelected && 'u-selected',
-      customProps.className,
-    ]);
-
-
-    if (!name) {
-      return null;
-    }
-    if (!variant) {
-      return null;
-    }
-    return (<button
+  return (
+    <progress
       {...customProps}
+      style={{ color: customProps.color }}
       className={classes}
-      onClick={this.handleClick}
-    >Terra, {name}</button>);
-  }
-}
+      max={100}
+      value={normalizedValue}
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={normalizedValue}
+      tabIndex="-1"
+    />);
+};
 
 ProgressBar.propTypes = propTypes;
+
 ProgressBar.defaultProps = defaultProps;
 
 export default ProgressBar;

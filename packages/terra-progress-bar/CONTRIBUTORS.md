@@ -1,6 +1,5 @@
 Cerner Corporation
 
-- {First Name} {Last Name} [@{github username}]
+- Siddharth Kalluru [@sid141288]
 
-[@{github username}]: https://github.com/{github username}
-
+[@sid141288]: https://github.com/sid141288
