@@ -26,15 +26,15 @@ var alignmentTypes = ['center', 'bottom', 'stretch'];
 
 var propTypes = {
   /**
-   * The content to display in the body of the fitStart
+   * The content to display in the body of the fitStart.
    */
   fitStart: _react.PropTypes.element,
   /**
-   * The content to display in the body of the fill
+   * The content to display in the body of the fill.
    */
   fill: _react.PropTypes.element.isRequired,
   /**
-   * The content to display in the body of the fitEnd
+   * The content to display in the body of the fitEnd.
    */
   fitEnd: _react.PropTypes.element,
   /**

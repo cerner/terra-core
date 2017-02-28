@@ -6,15 +6,15 @@ const alignmentTypes = ['center', 'bottom', 'stretch'];
 
 const propTypes = {
   /**
-   * The content to display in the body of the fitStart
+   * The content to display in the body of the fitStart.
    */
   fitStart: PropTypes.element,
   /**
-   * The content to display in the body of the fill
+   * The content to display in the body of the fill.
    */
   fill: PropTypes.element.isRequired,
   /**
-   * The content to display in the body of the fitEnd
+   * The content to display in the body of the fitEnd.
    */
   fitEnd: PropTypes.element,
   /**
