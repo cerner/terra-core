@@ -9,8 +9,9 @@ import Home from './Home';
 import ArrangeExamples from '../packages/terra-arrange/examples/index';
 import BadgeExamples from '../packages/terra-badge/examples/index';
 import ButtonExamples from '../packages/terra-button/examples/index';
+import GridExamples from '../packages/terra-grid/examples/Index';
 
-// Tests
+// Test
 import ButtonTestRoutes from '../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import TestLinks from './TestLinks';
 
@@ -22,6 +23,7 @@ ReactDOM.render((
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
+      <Route path="grid" component={GridExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}

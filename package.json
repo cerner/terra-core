@@ -42,6 +42,7 @@
     "lint:scss": "lerna run lint:scss",
     "jest": "jest",
     "jest:coverage": "jest --coverage",
+    "pretest": "npm run lint",
     "postinstall": "npm run bootstrap",
     "test": "lerna exec --concurrency 1 npm test",
     "pretest": "npm run lint",
