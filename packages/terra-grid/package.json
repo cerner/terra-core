@@ -1,9 +1,9 @@
 {
-  "name": "terra-arrange",
-  "main": "lib/Arrange.js",
+  "name": "terra-grid",
+  "main": "lib/Grid.js",
   "private": true,
-  "version": "0.1.0",
-  "description": "The arrange component is used for horizontally arranging and vertically aligning a single row of container elements.",
+  "version": "1.0.0",
+  "description": "The grid component provides a flexbox based grid system.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-ui.git"
@@ -11,8 +11,8 @@
   "keywords": [
     "Cerner",
     "Terra",
-    "terra-arrange",
-    "Arrange",
+    "terra-grid",
+    "Grid",
     "UI"
   ],
   "author": "Cerner Corporation",

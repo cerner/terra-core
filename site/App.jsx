@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Link } from 'react-router';
 import './site.scss';
@@ -16,6 +17,7 @@ const App = props => (
       <li><Link to="/">Home</Link></li>
       <li><Link to="/site/arrange">Arrange</Link></li>
       <li><Link to="/site/button">Buttons</Link></li>
+      <li><Link to="/site/grid">Grid</Link></li>
       <li><Link to="/tests">Tests</Link></li>
     </ul>
     {props.children}

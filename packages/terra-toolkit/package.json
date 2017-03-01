@@ -18,7 +18,6 @@
     "compile": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint **/*.js, **/*.jsx",
-    "pretest": "npm run lint",
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
