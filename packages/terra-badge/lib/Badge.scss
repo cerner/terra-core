@@ -76,7 +76,3 @@
 .terra-Badge--info {
   @include terra-badge-color($terra-badge-info-color-scheme);
 }
-
-.terra-Badge:empty {
-  display: none;
-}
