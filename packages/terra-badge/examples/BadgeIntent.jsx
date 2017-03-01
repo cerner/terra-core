@@ -1,7 +1,6 @@
 import React from 'react';
 import Badge from '../src/Badge';
 
-
 const BadgeIntent = () => (
   <div>
     <Badge text="Default" />
