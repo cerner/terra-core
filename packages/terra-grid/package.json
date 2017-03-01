@@ -1,6 +1,6 @@
 {
   "name": "terra-grid",
-  "main": "lib/grid.js",
+  "main": "lib/Grid.js",
   "private": true,
   "version": "1.0.0",
   "description": "The grid component provides a flexbox based grid system.",
