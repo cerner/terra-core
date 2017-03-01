@@ -6,7 +6,7 @@
   "description": "Modals are dialog prompts containing additional information to be revealed to the user. Modals consists of an backdrop, a modal dialog with a header and body, and a close button.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.cerner.com/terra/terra-ui.git"
+    "url": "git+https://github.com/terra/terra-ui.git"
   },
   "keywords": [
     "Cerner",
@@ -18,9 +18,9 @@
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.cerner.com/terra/terra-ui/issues"
+    "url": "https://github.com/terra/terra-ui/issues"
   },
-  "homepage": "https://github.cerner.com/terra/terra-ui#readme",
+  "homepage": "https://github.com/terra/terra-ui#readme",
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
@@ -39,9 +39,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-button": "file:../terra-button",
-    "terra-icon": "https://github.com/cerner/terra-icon",
-    "terra-legacy-theme": "https://github.com/cerner/terra-legacy-theme.git",
     "terra-mixins": "^1.0.0"
   }
 }
