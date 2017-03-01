@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
-import Portal from '../src/Portal';
-import Backdrop from '../src/Backdrop';
-import Dialog from '../src/Dialog';
-import ModalManager from '../src/ModalManager';
-import '../src/Modal.scss';
+import Portal from './Portal';
+import Backdrop from './Backdrop';
+import Dialog from './Dialog';
+import ModalManager from './ModalManager';
+import './Modal.scss';
 
 const modalManager = new ModalManager();
 
