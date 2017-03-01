@@ -7,6 +7,7 @@ import Home from './Home';
 
 // Examples
 import ArrangeExamples from '../packages/terra-arrange/examples/index';
+import BadgeExamples from '../packages/terra-badge/examples/index';
 import ButtonExamples from '../packages/terra-button/examples/index';
 import GridExamples from '../packages/terra-grid/examples/Index';
 
@@ -20,6 +21,7 @@ ReactDOM.render((
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
       <Route path="arrange" component={ArrangeExamples} />
+      <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="grid" component={GridExamples} />
     </Route>

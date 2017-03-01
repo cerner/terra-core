@@ -45,6 +45,7 @@
     "pretest": "npm run lint",
     "postinstall": "npm run bootstrap",
     "test": "lerna exec --concurrency 1 npm test",
+    "pretest": "npm run lint",
     "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
     "webpack": "webpack --config webpack.prod.config.js -p --progress --profile --json > build/stats.json",
     "deploy": "npm run webpack && gh-pages -d build",
