@@ -7,9 +7,6 @@ The arrange component provides content containers with a fit (start and/or end r
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-arrange`
   - `yarn install terra-arrange`
-- [Download the latest version](https://github.com/cerner/terra-arrange/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-arrange.git`
-- Run the project with: `npm start`
 
 ## Usage
 
