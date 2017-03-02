@@ -4,8 +4,7 @@ const testSettings = require('./lib/index').testSettings;
 const resolve = require('path').resolve;
 
 module.exports = ((settings) => {
-  const returnSettings = settings;
-  returnSettings.test_settings = testSettings(resolve('./tests/test.config'));
+  const returnSettings = testSettings(resolve('./tests/test.config'), settings);
   returnSettings.globals_path = './lib/globals.js';
   return returnSettings;
 })(require('./lib/nightwatch.json'));
