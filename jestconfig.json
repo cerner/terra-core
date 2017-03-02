@@ -6,6 +6,6 @@
     "../../node_modules/enzyme-to-json/serializer"
   ],
   "moduleNameMapper": {
-    "\\.(css|scss)$": "identity-obj-proxy"
+    "\\.(css|scss|svg)$": "identity-obj-proxy"
   }
 }

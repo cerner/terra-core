@@ -1,5 +1,5 @@
 import React from 'react';
-import MultiSelectList from '../src/MultiSelectList';
+import MultiSelectList from '../../src/MultiSelectList';
 
 // Snapshot Tests
 it('should render a default component', () => {

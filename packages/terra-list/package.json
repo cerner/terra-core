@@ -19,11 +19,6 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-ui/issues"
   },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(svg)$": "<rootDir>/tests/mock/mockSvg"
-    }
-  },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -37,6 +32,9 @@
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
     "test": "../../node_modules/.bin/jest --config ../../jestconfig.json"
+  },
+  "devDependencies": {
+    "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",

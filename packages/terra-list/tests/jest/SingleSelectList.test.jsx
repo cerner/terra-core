@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleSelectList from '../src/SingleSelectList';
+import SingleSelectList from '../../src/SingleSelectList';
 
 // Snapshot Tests
 it('should render a default component', () => {

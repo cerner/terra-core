@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from '../src/ListItem';
+import ListItem from '../../src/ListItem';
 
 // Snapshot Tests
 it('should render with className', () => {
@@ -23,7 +23,7 @@ it('should render with isSelectable', () => {
   expect(item).toMatchSnapshot();
 });
 
-it('should render with isSelectable and hasChevron', () => {
-  const item = shallow(<ListItem isSelectable hasChevron />);
-  expect(item).toMatchSnapshot();
-});
+// it('should render with isSelectable and hasChevron', () => {
+//   const item = shallow(<ListItem isSelectable hasChevron />);
+//   expect(item).toMatchSnapshot();
+// });

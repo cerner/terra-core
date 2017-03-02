@@ -17,18 +17,6 @@ exports[`test should render with isSelectable 1`] = `
   className="terra-ListItem terra-ListItem-isSelectable" />
 `;
 
-exports[`test should render with isSelectable and hasChevron 1`] = `
-<li
-  className="terra-ListItem terra-ListItem-isSelectable terra-ListItem-hasChevron">
-  <span
-    className="terra-ListItem-chevron">
-    <mockSvg
-      height="10"
-      width="10" />
-  </span>
-</li>
-`;
-
 exports[`test should render with selected 1`] = `
 <li
   className="terra-ListItem terra-ListItem--selected" />
