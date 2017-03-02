@@ -2,16 +2,12 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins)
-[![Build Status](https://travis-ci.org/cerner/terra-mixins.svg?branch=master)](https://travis-ci.org/cerner/terra-mixins)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
+[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
 The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
-- [Dependencies](#dependencies)
-- [Supported Browsers](#supported-browsers)
-- [Contributing](#contributing)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -26,20 +22,6 @@ Documentation for this component is spilt into individual files.
 One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
-
-## Supported Browsers
-
-| Browser                     | Version |
-|-----------------------------|---------|
-| Chrome & Chrome for Android | Current |
-| Edge                        | Current |
-| Firefox                     | Current |
-| Internet Explorer           | 10 & 11 |
-| Safari & Mobile Safari      | Current |
-
-## Contributing
-
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 ## LICENSE
 
