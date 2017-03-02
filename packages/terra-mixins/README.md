@@ -13,8 +13,6 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
 ## Getting Started
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-mixins`
-- [Download the latest version](https://github.com/cerner/terra-mixins/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-mixins.git`
 
 ## Documentation
 
@@ -25,7 +23,7 @@ See the [documentation](docs/).
 
 ## LICENSE
 
-Copyright 2016 Cerner Innovation, Inc.
+Copyright 2017 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
