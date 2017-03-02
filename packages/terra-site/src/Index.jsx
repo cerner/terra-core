@@ -6,13 +6,13 @@ import App from './App';
 import Home from './Home';
 
 // Examples
-import ArrangeExamples from '../packages/terra-arrange/examples/index';
-import BadgeExamples from '../packages/terra-badge/examples/index';
-import ButtonExamples from '../packages/terra-button/examples/index';
-import GridExamples from '../packages/terra-grid/examples/Index';
+import ArrangeExamples from '../../../packages/terra-arrange/examples/index';
+import BadgeExamples from '../../../packages/terra-badge/examples/index';
+import ButtonExamples from '../../../packages/terra-button/examples/index';
+import GridExamples from '../../../packages/terra-grid/examples/Index';
 
 // Test
-import ButtonTestRoutes from '../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
+import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
