@@ -2,7 +2,7 @@
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
 
-const config = require('../../../webpack.config');
+const config = require('../../../packages/terra-site/webpack.config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
