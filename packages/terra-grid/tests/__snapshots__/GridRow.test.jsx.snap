@@ -1,0 +1,8 @@
+exports[`test should render a default component 1`] = `
+<div
+  className="terra-Grid">
+  <GridColumn>
+    Test
+  </GridColumn>
+</div>
+`;

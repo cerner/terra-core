@@ -1,0 +1,9 @@
+exports[`test should render a default Grid 1`] = `
+<div>
+  <GridRow>
+    <GridColumn>
+      Test
+    </GridColumn>
+  </GridRow>
+</div>
+`;

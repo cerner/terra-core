@@ -2,7 +2,7 @@
   "name": "terra-button",
   "main": "lib/Button.js",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "The terra-button component provides users a way to trigger actions in the UI.",
   "repository": {
     "type": "git",
@@ -28,23 +28,16 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "pretest": "npm run lint",
-    "release:major": "npm run test && node ../../scripts/release/release.js major",
-    "release:minor": "npm run test && node ../../scripts/release/release.js minor",
-    "release:patch": "npm run test && node ../../scripts/release/release.js patch",
+    "release:major": "npm test && node ../../scripts/release/release.js major",
+    "release:minor": "npm test && node ../../scripts/release/release.js minor",
+    "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
     "test:nightwatch-default": "node ../../scripts/nightwatch/nightwatch.js",
     "test:nightwatch-chrome": "node ../../scripts/nightwatch/nightwatch.js chrome",
     "test:nightwatch-firefox": "node ../../scripts/nightwatch/nightwatch.js firefox",
-    "test:nightwatch-safari": "npm run test:nightwatch-safari-tiny && npm run test:nightwatch-safari-small && npm run test:nightwatch-safari-medium && npm run test:nightwatch-safari-large && npm run test:nightwatch-safari-huge && npm run test:nightwatch-safari-enormous",
-    "test:nightwatch-safari-tiny": "$(cd ..; npm bin)/nightwatch --config tests/nightwatch.conf.js -e safari-tiny",
-    "test:nightwatch-safari-small": "$(cd ..; npm bin)/nightwatch --config tests/nightwatch.conf.js -e safari-small",
-    "test:nightwatch-safari-medium": "$(cd ..; npm bin)/nightwatch --config tests/nightwatch.conf.js -e safari-medium",
-    "test:nightwatch-safari-large": "$(cd ..; npm bin)/nightwatch --config tests/nightwatch.conf.js -e safari-large",
-    "test:nightwatch-safari-huge": "$(cd ..; npm bin)/nightwatch --config tests/nightwatch.conf.js -e safari-huge",
-    "test:nightwatch-safari-enormous": "$(cd ..; npm bin)/nightwatch --config tests/nightwatch.conf.js -e safari-enormous"
+    "test:nightwatch-safari": "node ../../scripts/nightwatch/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
     "terra-toolkit": "^0.1.0"
