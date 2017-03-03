@@ -14,6 +14,9 @@ import GridExamples from '../../../packages/terra-grid/examples/Index';
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import ListTestRoutes from '../../../packages/terra-list/tests/nightwatch/list/ListTestRoutes';
+import ListItemTestRoutes from '../../../packages/terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
+import SingleSelectListTestRoutes from '../../../packages/terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
+import MultiSelectListTestRoutes from '../../../packages/terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -29,5 +32,8 @@ ReactDOM.render((
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {ListTestRoutes}
+    {ListItemTestRoutes}
+    {SingleSelectListTestRoutes}
+    {MultiSelectListTestRoutes}
   </Router>
 ), document.getElementById('root'));
