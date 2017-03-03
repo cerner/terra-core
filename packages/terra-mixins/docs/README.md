@@ -10,8 +10,14 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
 
 ## Usage
 
+SCSS
 ```scss
 @import '~terra-mixins';
+```
+
+JS (webpack)
+```js
+import 'terra-mixins';
 ```
 
 ### Bidirectionality (bidi) Mixins
