@@ -13,7 +13,7 @@ const defaultProps = {
   children: [],
   isDivided: false,
   onChange: undefined,
-  maxSelectionCount: 0,
+  maxSelectionCount: undefined,
 };
 
 class MultiSelectList extends React.Component {
@@ -36,11 +36,11 @@ class MultiSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelection = this.handleSelection.bind(this);
-    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.children, this.props.maxSelectionCount) };
+    this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.children, this.validatedMaxCount()) };
   }
 
   componentWillReceiveProps(nextProps) {
-    const nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children);
+    const nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children, this.validatedMaxCount());
 
     if (this.shouldUpdateIndexes(nextIndexes)) {
       this.setState({ selectedIndexes: nextIndexes });
@@ -78,7 +78,7 @@ class MultiSelectList extends React.Component {
   }
 
   shouldHandleSelection(index) {
-    if (this.state.selectedIndexes.length < this.props.maxSelectionCount) {
+    if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
       return true;
     }
     if (this.state.selectedIndexes.includes(index)) {
@@ -88,7 +88,7 @@ class MultiSelectList extends React.Component {
   }
 
   cloneChildItems(items) {
-    const disableUnselectedItems = this.state.selectedIndexes.length >= this.props.maxSelectionCount;
+    const disableUnselectedItems = this.state.selectedIndexes.length >= this.validatedMaxCount();
 
     return items.map((item, index) => {
       const wrappedOnClick = this.wrappedOnClickForItem(item, index);
@@ -133,6 +133,13 @@ class MultiSelectList extends React.Component {
       newProps.isSelectable = false;
     }
     return newProps;
+  }
+
+  validatedMaxCount() {
+    if (this.props.maxSelectionCount !== undefined) {
+      return this.props.maxSelectionCount;
+    }
+    return this.props.children.length;
   }
 
   unusedVariables(variable) {

@@ -22,9 +22,9 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/items-divided`)
       .assert.cssClassPresent('.terra-List', 'terra-List-divided');
   },
-  'Displays a items in the list with a max selection count': (browser) => {
+  'Displays a items in the list with a chevron': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/max-count`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/chevron`)
       .assert.elementPresent('.terra-List');
   },
   'Displays a items in the list with a function set for on change': (browser) => {
