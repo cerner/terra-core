@@ -39,7 +39,7 @@ var defaultProps = {
   children: [],
   isDivided: false,
   onChange: undefined,
-  maxSelectionCount: 0
+  maxSelectionCount: undefined
 };
 
 var MultiSelectList = function (_React$Component) {
@@ -69,14 +69,14 @@ var MultiSelectList = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (MultiSelectList.__proto__ || Object.getPrototypeOf(MultiSelectList)).call(this, props));
 
     _this.handleSelection = _this.handleSelection.bind(_this);
-    _this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(_this.props.children, _this.props.maxSelectionCount) };
+    _this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(_this.props.children, _this.validatedMaxCount()) };
     return _this;
   }
 
   _createClass(MultiSelectList, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      var nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children);
+      var nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children, this.validatedMaxCount());
 
       if (this.shouldUpdateIndexes(nextIndexes)) {
         this.setState({ selectedIndexes: nextIndexes });
@@ -117,7 +117,7 @@ var MultiSelectList = function (_React$Component) {
   }, {
     key: 'shouldHandleSelection',
     value: function shouldHandleSelection(index) {
-      if (this.state.selectedIndexes.length < this.props.maxSelectionCount) {
+      if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
         return true;
       }
       if (this.state.selectedIndexes.includes(index)) {
@@ -130,7 +130,7 @@ var MultiSelectList = function (_React$Component) {
     value: function cloneChildItems(items) {
       var _this2 = this;
 
-      var disableUnselectedItems = this.state.selectedIndexes.length >= this.props.maxSelectionCount;
+      var disableUnselectedItems = this.state.selectedIndexes.length >= this.validatedMaxCount();
 
       return items.map(function (item, index) {
         var wrappedOnClick = _this2.wrappedOnClickForItem(item, index);
@@ -179,6 +179,14 @@ var MultiSelectList = function (_React$Component) {
         newProps.isSelectable = false;
       }
       return newProps;
+    }
+  }, {
+    key: 'validatedMaxCount',
+    value: function validatedMaxCount() {
+      if (this.props.maxSelectionCount !== undefined) {
+        return this.props.maxSelectionCount;
+      }
+      return this.props.children.length;
     }
   }, {
     key: 'unusedVariables',
