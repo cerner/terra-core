@@ -31,7 +31,13 @@
     "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
-    "test": "../../node_modules/.bin/jest --config ../../jestconfig.json"
+    "test": "npm run test:spec && npm run test:nightwatch-default",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "node ../../scripts/nightwatch/nightwatch.js",
+    "test:nightwatch-chrome": "node ../../scripts/nightwatch/nightwatch.js chrome",
+    "test:nightwatch-firefox": "node ../../scripts/nightwatch/nightwatch.js firefox",
+    "test:nightwatch-safari": "node ../../scripts/nightwatch/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
     "terra-toolkit": "^0.1.0"

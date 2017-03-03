@@ -13,6 +13,7 @@ import GridExamples from '../../../packages/terra-grid/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
+import ListTestRoutes from '../../../packages/terra-list/tests/nightwatch/list/ListTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -27,5 +28,6 @@ ReactDOM.render((
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
+    {ListTestRoutes}
   </Router>
 ), document.getElementById('root'));
