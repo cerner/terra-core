@@ -14,11 +14,15 @@ module.exports = {
         module.sauceConnectProcess = sauceConnectProcess;
         done();
       });
+    } else {
+      done();
     }
   },
   after: (done) => {
     if (module.sauceConnectProcess) {
       module.sauceConnectProcess.close(done);
+    } else {
+      done();
     }
   },
   beforeEach: (browser, done) => {
@@ -39,6 +43,8 @@ module.exports = {
 
     if (process.env.REMOTE === 'true') {
       updateSauce(browser, done);
+    } else {
+      done();
     }
   },
 };

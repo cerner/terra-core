@@ -29,11 +29,15 @@ module.exports = {
         module.sauceConnectProcess = sauceConnectProcess;
         done();
       });
+    } else {
+      done();
     }
   },
   after: function after(done) {
     if (module.sauceConnectProcess) {
       module.sauceConnectProcess.close(done);
+    } else {
+      done();
     }
   },
   beforeEach: function beforeEach(browser, done) {
@@ -54,6 +58,8 @@ module.exports = {
 
     if (process.env.REMOTE === 'true') {
       (0, _updateSauce2.default)(browser, done);
+    } else {
+      done();
     }
   }
 };

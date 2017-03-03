@@ -23,7 +23,9 @@ var drivers = {
     desiredCapabilities: {
       browserName: 'phantomjs',
       javascriptEnabled: true,
-      acceptSslCerts: true
+      acceptSslCerts: true,
+      'phantomjs.binary.path': '../../node_modules/phantomjs-prebuilt/bin/phantomjs',
+      'phantomjs.cli.args': []
     }
   },
   chrome: {
@@ -77,7 +79,7 @@ module.exports = function (testConfigPath, settings) {
   var testingConfiguration = {};
 
   testingConfiguration.default = _extends({}, drivers.default);
-  testingConfiguration.default['phantomjs.binary.path'] = '../../node_modules/phantomjs-prebuilt/bin/phantomjs';
+
   if (remote) {
     returnSettings.selenium.start_process = false;
     testingConfiguration.default.selenium_port = 80;
