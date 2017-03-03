@@ -8,9 +8,34 @@ var _webpackDevServer = require('webpack-dev-server');
 
 var _webpackDevServer2 = _interopRequireDefault(_webpackDevServer);
 
+var _sauceConnectLauncher = require('sauce-connect-launcher');
+
+var _sauceConnectLauncher2 = _interopRequireDefault(_sauceConnectLauncher);
+
+var _updateSauce = require('./update-sauce');
+
+var _updateSauce2 = _interopRequireDefault(_updateSauce);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
+  before: function before(done) {
+    if (process.env.REMOTE === 'true') {
+      (0, _sauceConnectLauncher2.default)({
+        username: process.env.SAUCE_USERNAME,
+        accessKey: process.env.SAUCE_ACCESS_KEY,
+        port: 4446
+      }, function (_, sauceConnectProcess) {
+        module.sauceConnectProcess = sauceConnectProcess;
+        done();
+      });
+    }
+  },
+  after: function after(done) {
+    if (module.sauceConnectProcess) {
+      module.sauceConnectProcess.close(done);
+    }
+  },
   beforeEach: function beforeEach(browser, done) {
     /* eslint-disable global-require, import/no-dynamic-require */
     var config = require(browser.globals.testConfigPath);
@@ -26,5 +51,9 @@ module.exports = {
   afterEach: function afterEach(browser, done) {
     browser.globals.server.close();
     browser.end(done);
+
+    if (process.env.REMOTE === 'true') {
+      (0, _updateSauce2.default)(browser, done);
+    }
   }
 };

@@ -18,21 +18,10 @@ var drivers = {
     selenium_host: 'localhost',
     silent: true,
     screenshots: {
-      enabled: true,
-      path: 'screenshots'
+      enabled: false
     },
     desiredCapabilities: {
       browserName: 'phantomjs',
-      javascriptEnabled: true,
-      acceptSslCerts: true,
-      'phantomjs.binary.path': '../../node_modules/phantomjs-prebuilt/bin/phantomjs',
-      'phantomjs.cli.args': []
-    }
-  },
-  firefox: {
-    desiredCapabilities: {
-      browserName: 'firefox',
-      marionette: true,
       javascriptEnabled: true,
       acceptSslCerts: true
     }
@@ -40,21 +29,62 @@ var drivers = {
   chrome: {
     desiredCapabilities: {
       browserName: 'chrome',
-      javascriptEnabled: true,
-      acceptSslCerts: true
+      platform: 'Windows 10',
+      version: 'latest'
+    }
+  },
+  ie10: {
+    desiredCapabilities: {
+      browserName: 'internet explorer',
+      platform: 'Windows 8',
+      version: '10.0'
+    }
+  },
+  ie11: {
+    desiredCapabilities: {
+      browserName: 'internet explorer',
+      platform: 'Windows 10',
+      version: 'latest'
+    }
+  },
+  edge: {
+    desiredCapabilities: {
+      browserName: 'microsoftedge',
+      platform: 'Windows 10',
+      version: 'latest'
+    }
+  },
+  firefox: {
+    desiredCapabilities: {
+      browserName: 'firefox',
+      platform: 'Windows 10',
+      version: 'latest'
     }
   },
   safari: {
     desiredCapabilities: {
       browserName: 'safari',
-      javascriptEnabled: true,
-      acceptSslCerts: true
+      platform: 'macOS 10.12',
+      version: 'latest'
     }
   }
 };
 
 module.exports = function (testConfigPath, settings) {
+  var remote = process.env.REMOTE === 'true';
+
+  var returnSettings = settings;
   var testingConfiguration = {};
+
+  testingConfiguration.default = _extends({}, drivers.default);
+  testingConfiguration.default['phantomjs.binary.path'] = '../../node_modules/phantomjs-prebuilt/bin/phantomjs';
+  if (remote) {
+    returnSettings.selenium.start_process = false;
+    testingConfiguration.default.selenium_port = 80;
+    testingConfiguration.default.selenium_host = 'ondemand.saucelabs.com';
+    testingConfiguration.default.username = process.env.SAUCE_USERNAME;
+    testingConfiguration.default.access_key = process.env.SAUCE_ACCESS_KEY;
+  }
 
   var currentPort = 19000;
   Object.keys(drivers).forEach(function (driverKey) {
@@ -69,7 +99,6 @@ module.exports = function (testConfigPath, settings) {
       currentPort += 1;
     });
   });
-  var returnSettings = settings;
   returnSettings.test_settings = testingConfiguration;
   return returnSettings;
 };
