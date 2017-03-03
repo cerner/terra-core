@@ -49,7 +49,7 @@ const drivers = {
   },
 };
 
-module.exports = (testConfigPath) => {
+module.exports = (testConfigPath, settings) => {
   const testingConfiguration = {};
 
   let currentPort = 19000;
@@ -65,5 +65,7 @@ module.exports = (testConfigPath) => {
       currentPort += 1;
     });
   });
-  return testingConfiguration;
+  const returnSettings = settings;
+  returnSettings.test_settings = testingConfiguration;
+  return returnSettings;
 };

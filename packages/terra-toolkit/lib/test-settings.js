@@ -53,7 +53,7 @@ var drivers = {
   }
 };
 
-module.exports = function (testConfigPath) {
+module.exports = function (testConfigPath, settings) {
   var testingConfiguration = {};
 
   var currentPort = 19000;
@@ -69,5 +69,7 @@ module.exports = function (testConfigPath) {
       currentPort += 1;
     });
   });
-  return testingConfiguration;
+  var returnSettings = settings;
+  returnSettings.test_settings = testingConfiguration;
+  return returnSettings;
 };

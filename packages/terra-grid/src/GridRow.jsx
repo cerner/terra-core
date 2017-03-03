@@ -1,0 +1,37 @@
+import React, { PropTypes } from 'react';
+import classNames from 'classnames';
+
+const propTypes = {
+  /**
+   * The component that will be displayed at column level.
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * Custom class name that can be assigned to grid row.
+   */
+  className: PropTypes.string,
+};
+
+const GridRow = ({
+    className,
+    children,
+    ...customProps
+  }) => {
+  const rowClassNames = classNames([
+    'terra-Grid',
+    className,
+  ]);
+
+  return (
+    <div
+      {...customProps}
+      className={rowClassNames}
+    >
+      {children}
+    </div>
+  );
+};
+
+GridRow.propTypes = propTypes;
+
+export default GridRow;
