@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-mixins": "git+https://github.com/cerner/terra-mixins.git#master"
+    "terra-mixins": "^1.0.0"
   }
 }
