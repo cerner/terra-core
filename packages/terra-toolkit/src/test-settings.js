@@ -84,7 +84,7 @@ module.exports = (testConfigPath, settings) => {
     testingConfiguration.default.access_key = process.env.SAUCE_ACCESS_KEY;
   }
 
-  let currentPort = 19000;
+  // let currentPort = 19000;
   Object.keys(drivers).forEach((driverKey) => {
     Object.keys(windowSizes).forEach((windowSizeKey) => {
       const key = `${driverKey}-${windowSizeKey}`;
@@ -93,8 +93,8 @@ module.exports = (testConfigPath, settings) => {
       testingConfiguration[key].globals.width = windowSizes[windowSizeKey][0];
       testingConfiguration[key].globals.height = windowSizes[windowSizeKey][1];
       testingConfiguration[key].globals.testConfigPath = testConfigPath;
-      testingConfiguration[key].globals.webpackDevServerPort = currentPort;
-      currentPort += 1;
+      testingConfiguration[key].globals.webpackDevServerPort = 8080;
+      // currentPort += 1;
     });
   });
   returnSettings.test_settings = testingConfiguration;
