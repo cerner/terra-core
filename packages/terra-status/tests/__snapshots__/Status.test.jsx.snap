@@ -1,0 +1,89 @@
+exports[`test should render a arrange with status and customProps 1`] = `
+<div
+  className="terra-Status"
+  id="id"
+  style={
+    Object {
+      "borderColor": "green",
+    }
+  }>
+  <Arrange
+    fill={
+      <div>
+        Lorem labore et dolore magna aliqua.
+      </div>
+    }
+    fitStart={
+      <img
+        alt="placeholder"
+        height="150"
+        src="http://placehold.it/350x150"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        width="300" />
+    } />
+</div>
+`;
+
+exports[`test should render a icon with status 1`] = `
+<div
+  className="terra-Status"
+  style={
+    Object {
+      "borderColor": "grey",
+    }
+  }>
+  <svg
+    fill="#8bc34a"
+    height="100"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    viewBox="0 0 1000 1000"
+    width="75"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M525 841.3c-7.5 " />
+  </svg>
+</div>
+`;
+
+exports[`test should render a image with status 1`] = `
+<div
+  className="terra-Status"
+  style={
+    Object {
+      "borderColor": "red",
+    }
+  }>
+  <img
+    alt="placeholder"
+    height="150"
+    src="http://placehold.it/350x150"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    width="300" />
+</div>
+`;
+
+exports[`test should render a simpleText with status 1`] = `
+<div
+  className="terra-Status"
+  style={
+    Object {
+      "borderColor": "blue",
+    }
+  }>
+  <div>
+    Lorem labore et dolore magna aliqua.
+  </div>
+</div>
+`;
