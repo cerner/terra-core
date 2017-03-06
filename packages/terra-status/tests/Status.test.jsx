@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Arrange from 'terra-arrange';
 import Status from '../src/Status';
@@ -50,4 +51,3 @@ it('should have indicator section of component with correct class, style and typ
   expect(wrapper.node.props.className).toContain('terra-Status');
   expect(wrapper.node.props.className).toContain('testClass');
 });
-
