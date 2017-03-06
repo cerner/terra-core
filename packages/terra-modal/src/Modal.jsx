@@ -34,6 +34,10 @@ const propTypes = {
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
+   * Set the height of modal dialog in px, max-height = windows.height * 85%
+   */
+  height: PropTypes.number,
+  /**
    * Callback function for closing the modal
    */
   onRequestClose: PropTypes.func.isRequired,
@@ -142,6 +146,7 @@ class Modal extends React.Component {
             ariaLabel={this.props.ariaLabel}
             isFullScreen={this.props.isFullScreen}
             size={this.props.size}
+            height={this.props.height}
             onRequestClose={this.props.onRequestClose}
             hasCloseButton={this.props.hasCloseButton}
             header={this.props.header}

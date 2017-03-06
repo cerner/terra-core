@@ -27,6 +27,9 @@ class Portal extends React.Component {
       this.renderContent(nextProps);
     } else if (this.props.isOpen && !nextProps.isOpen) {
       this.unrenderContent();
+    } else if (this.props.isOpen && nextProps.isOpen) {
+      this.unrenderContent();
+      this.renderContent(nextProps);
     }
   }
 

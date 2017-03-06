@@ -22,6 +22,10 @@ const propTypes = {
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
+   * Set the height of modal dialog in px, max-height = windows.height * 85
+   */
+  height: PropTypes.number,
+  /**
    * Callback function for closing the modal
    */
   onRequestClose: PropTypes.func.isRequired,
@@ -65,10 +69,26 @@ class Dialog extends React.Component {
   updateBodyHeight() {
     const headerHeight = this.dialog.firstElementChild.offsetHeight;
     const footerHeight = this.dialog.lastElementChild.offsetHeight;
+    const headerfooter = headerHeight + footerHeight;
     if (this.props.isFullScreen) {
-      this.setState({ bodyHeight: window.innerHeight - headerHeight - footerHeight });
+      this.setState({
+        bodyHeight: window.innerHeight - headerfooter,
+        bodyMaxHeight: undefined,
+      });
+    } else if (this.props.height) {
+      const height = Math.min(
+        this.props.height - headerfooter,
+        (window.innerHeight * 0.85) - headerfooter,
+      );
+      this.setState({
+        bodyHeight: height,
+        bodyMaxHeight: undefined,
+      });
     } else {
-      this.setState({ bodyMaxHeight: (window.innerHeight * 0.85) - headerHeight - footerHeight });
+      this.setState({
+        bodyMaxHeight: (window.innerHeight * 0.85) - headerfooter,
+        bodyHeight: undefined,
+      });
     }
   }
 
@@ -91,6 +111,7 @@ class Dialog extends React.Component {
         ref={(dialog) => { this.dialog = dialog; }}
       >
         <div className="terra-Modal-header">
+          <div>{this.props.header}</div>
           {this.props.hasCloseButton &&
             <Button
               aria-label="modal-close"
@@ -100,7 +121,6 @@ class Dialog extends React.Component {
               onClick={this.props.onRequestClose}
             />
           }
-          {this.props.header}
         </div>
         <div className="terra-Modal-body" style={bodyStyle}>
           {this.props.body}

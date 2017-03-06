@@ -25,7 +25,9 @@ const propTypes = {
   footer: PropTypes.node,
   canCloseOnBackdropClick: PropTypes.bool,
   size: PropTypes.string,
+  height: PropTypes.number,
   hasCloseButton: PropTypes.bool,
+  isFullScreen: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -58,8 +60,10 @@ class ModalWrapper extends Component {
           header={this.props.header}
           footer={this.props.footer}
           size={this.props.size}
+          height={this.props.height}
           hasCloseButton={this.props.hasCloseButton}
           canCloseOnBackdropClick={this.props.canCloseOnBackdropClick}
+          isFullScreen={this.props.isFullScreen}
         />
       </div>
     );
