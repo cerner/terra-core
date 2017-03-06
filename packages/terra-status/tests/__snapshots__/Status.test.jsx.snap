@@ -15,8 +15,15 @@ exports[`test should render a arrange with status and customProps 1`] = `
     }
     fitStart={
       <img
-        alt="panda"
-        src="http" />
+        alt="placeholder"
+        height="150"
+        src="http://placehold.it/350x150"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        width="300" />
     } />
 </div>
 `;
@@ -55,8 +62,15 @@ exports[`test should render a image with status 1`] = `
     }
   }>
   <img
-    alt="panda"
-    src="http" />
+    alt="placeholder"
+    height="150"
+    src="http://placehold.it/350x150"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    width="300" />
 </div>
 `;
 

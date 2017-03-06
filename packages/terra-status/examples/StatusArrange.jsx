@@ -3,7 +3,7 @@ import React from 'react';
 import Arrange from 'terra-arrange';
 import Status from '../src/Status';
 
-const image = <img style={{ display: 'block' }} height="100" width="150" src="http://3w6kx9401skz1bup4i1gs9ne.wpengine.netdna-cdn.com/wp-content/uploads/2016/09/telegraph-1.jpg" alt="a happy panda" />;
+const image = <img style={{ display: 'block' }} height="150" width="300" src="http://placehold.it/350x150" alt="placeholder" />;
 const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
 
 const StatusArrange = () => (

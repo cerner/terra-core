@@ -3,7 +3,7 @@ import React from 'react';
 import Arrange from 'terra-arrange';
 import Status from '../src/Status';
 
-const image = <img src="http" alt="panda" />;
+const image = <img style={{ display: 'block' }} height="150" width="300" src="http://placehold.it/350x150" alt="placeholder" />;
 const icon = <svg xmlns="http://www.w3.org/2000/svg" width="75" height="100" style={{ display: 'block' }} fill="#8bc34a" viewBox="0 0 1000 1000"><path d="M525 841.3c-7.5 " /></svg>;
 const ipsum = 'Lorem labore et dolore magna aliqua.';
 const simpleText = <div>{ipsum}</div>;
