@@ -9,9 +9,7 @@ const isChildProcess = process.argv.find(arg => arg === '--parallel-mode');
 if (isChildProcess) {
   Nightwatch.cli((argv) => {
     argv._source = argv._.slice(0); // eslint-disable-line
-    Nightwatch.runner(argv, () => {
-      process.exit(0);
-    });
+    Nightwatch.runner(argv);
   });
 } else {
   launchServer(() => {

@@ -18,9 +18,7 @@ var isChildProcess = process.argv.find(function (arg) {
 if (isChildProcess) {
   _nightwatch2.default.cli(function (argv) {
     argv._source = argv._.slice(0); // eslint-disable-line
-    _nightwatch2.default.runner(argv, function () {
-      process.exit(0);
-    });
+    _nightwatch2.default.runner(argv);
   });
 } else {
   (0, _serverLauncher.launchServer)(function () {

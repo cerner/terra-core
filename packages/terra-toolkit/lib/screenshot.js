@@ -7,5 +7,6 @@ module.exports = function (browser, callback, tag) {
   }
   var width = browser.globals.width;
   var height = browser.globals.height;
-  browser.saveScreenshot('target/nightwatch/' + browser.currentTest.name + '/' + browser.options.desiredCapabilities.browserName + '-' + browser.options.desiredCapabilities.version + '/' + width + 'x' + height + '_' + imageTag + '.png', callback);
+  var version = browser.options.desiredCapabilities.version ? browser.options.desiredCapabilities.version : 'latest';
+  browser.saveScreenshot('target/nightwatch/' + browser.currentTest.name + '/' + browser.options.desiredCapabilities.browserName + '-' + version + '/' + width + 'x' + height + '_' + imageTag + '.png', callback);
 };
