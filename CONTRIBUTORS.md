@@ -9,7 +9,7 @@ Cerner Corporation
 - Altamash Fakki [@amf9t2]
 - Tao Zhang [@windse7en]
 - Aaron McRuer [@Nerdenator]
-- Anusha Redd Ganapuram [@aganapuram]
+- Anusha Reddy Ganapuram [@aganapuram]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
