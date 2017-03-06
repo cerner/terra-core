@@ -1,19 +1,20 @@
-# Terra Status Documentation
+# Terra Status
 
-Status component adds a color bar to the left (right in RTL mode) of an content to signify a specific status.
+The status component provides a customizable color indictor to signify a specific condition.
 
-### API Props
-| Prop            | Type   | Required   | Description                                                          |
-|-----------------|-----------|-----------|----------------------------------------------------------------------|
-| color        | String   |  Yes    | The color of indicator. It can be color code in either format (yellow, #00ff00, rgb(255,0,255))       |
-| children        | Element   |  Yes  | Component to display next to the indicator |
+## Getting Started
 
-### Component Usage
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-status`
+  - `yarn install terra-status`
 
-```
-<Status color='blue' > {component} </Status>;
+## Usage
 
-<Status color='#00ff00' > {component} </Status>;
+```jsx
+import React from 'react';
+import Status from 'terra-status';
 
-<Status color='rgb(255,0,255)' > {component} </Status>;
+<Status color="red">{simpleText}</Status>
+<Status color="#00ff00">{simpleText}</Status>
+<Status color="rgb(0,0,255)">{simpleText}</Status>
 ```

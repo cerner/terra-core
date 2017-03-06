@@ -1,9 +1,15 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/status.scss';
+import '../src/Status.scss';
 
 const propTypes = {
+  /**
+   * Child node. Component to display next to the status indicator.
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * The color of the status indicator. Accepts a CSS color value.
+   */
   color: PropTypes.string.isRequired,
 };
 
