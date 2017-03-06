@@ -20,4 +20,4 @@ Cerner Corporation
 [@amf9t2]: https://github.com/amf9t2
 [@windse7en]: https://github.com/windse7en
 [@Nerdenator]: https://github.com/Nerdenator
-[@agnapuram]: https://github.com/aganapuram
+[@aganapuram]: https://github.com/aganapuram
