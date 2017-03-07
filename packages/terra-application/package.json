@@ -24,15 +24,6 @@
   "devDependencies": {
     "terra-toolkit": "^0.1.0"
   },
-  "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "react": "^15.4.2",
-    "terra-mixins": "^1.0.0"
-  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
