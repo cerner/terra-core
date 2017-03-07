@@ -1,9 +1,9 @@
-# Terra Grid
+# Terra Status
 
-[![NPM version](http://img.shields.io/npm/v/terra-grid.svg)](https://www.npmjs.org/package/terra-grid)
+[![NPM version](http://img.shields.io/npm/v/terra-status.svg)](https://www.npmjs.org/package/terra-status)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-The terra-grid component provides a flexbox based grid system.
+The status component provides a customizable color indictor to signify a specific condition.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -11,7 +11,7 @@ The terra-grid component provides a flexbox based grid system.
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-grid`
+- Install with [npm](https://www.npmjs.com): `npm install terra-status`
 
 ## Documentation
 
