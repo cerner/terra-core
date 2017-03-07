@@ -11,4 +11,4 @@
 ## Usage
 Having text standout ca be achieved by assigning following two modifier classes to a text container.
 - `terra-Standout`
-- `.terra-Standout--notice`
+- `terra-Standout--notice`
