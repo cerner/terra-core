@@ -9,6 +9,7 @@ import Home from './Home';
 import ArrangeExamples from '../../../packages/terra-arrange/examples/index';
 import BadgeExamples from '../../../packages/terra-badge/examples/index';
 import ButtonExamples from '../../../packages/terra-button/examples/index';
+import ContentExamples from '../../../packages/terra-content/examples/Index';
 import GridExamples from '../../../packages/terra-grid/examples/Index';
 import ImageExamples from '../../../packages/terra-image/examples/Index'
 import StatusExamples from '../../../packages/terra-status/examples/Index';
@@ -25,6 +26,7 @@ ReactDOM.render((
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
+      <Route path="content" component={ContentExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="image" component={ImageExamples} />
       <Route path="status" component={StatusExamples} />
