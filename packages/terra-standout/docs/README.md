@@ -9,6 +9,6 @@
   - `yarn add terra-standout`
 
 ## Usage
-Having text standout ca be achieved by assigning following two modifier classes to a text container.
+Having text standout, can be achieved by assigning following two modifier classes to a text container.
 - `terra-Standout`
 - `terra-Standout--notice`
