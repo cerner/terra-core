@@ -22,9 +22,7 @@ module.exports = function (browser, callback) {
   function responseCallback(res) {
     res.setEncoding('utf8');
     res.on('data', function () {});
-    res.on('end', function () {
-      callback();
-    });
+    res.on('end', callback);
   }
 
   try {

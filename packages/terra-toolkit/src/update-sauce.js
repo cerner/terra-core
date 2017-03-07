@@ -16,9 +16,7 @@ module.exports = (browser, callback) => {
   function responseCallback(res) {
     res.setEncoding('utf8');
     res.on('data', () => {});
-    res.on('end', () => {
-      callback();
-    });
+    res.on('end', callback);
   }
 
   try {
