@@ -88,7 +88,6 @@ module.exports = function (testConfigPath, settings) {
     testingConfiguration.default.access_key = process.env.SAUCE_ACCESS_KEY;
   }
 
-  // let currentPort = 19000;
   Object.keys(drivers).forEach(function (driverKey) {
     Object.keys(windowSizes).forEach(function (windowSizeKey) {
       var key = driverKey + '-' + windowSizeKey;
@@ -98,7 +97,11 @@ module.exports = function (testConfigPath, settings) {
       testingConfiguration[key].globals.height = windowSizes[windowSizeKey][1];
       testingConfiguration[key].globals.testConfigPath = testConfigPath;
       testingConfiguration[key].globals.webpackDevServerPort = 8080;
-      // currentPort += 1;
+
+      if (!remote) {
+        testingConfiguration[key].desiredCapabilities.version = undefined;
+        testingConfiguration[key].desiredCapabilities.platform = undefined;
+      }
     });
   });
   returnSettings.test_settings = testingConfiguration;

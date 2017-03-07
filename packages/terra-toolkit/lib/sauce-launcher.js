@@ -18,7 +18,6 @@ exports.launchSauceConnect = function () {
           module.sauceConnectProcess = sauceConnectProcess;
           resolve();
         } else {
-          console.log(error);
           reject(Error(error));
         }
       });

@@ -11,7 +11,6 @@ exports.launchSauceConnect = () => new Promise((resolve, reject) => {
         module.sauceConnectProcess = sauceConnectProcess;
         resolve();
       } else {
-        console.log(error);
         reject(Error(error));
       }
     });

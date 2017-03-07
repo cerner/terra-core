@@ -5,9 +5,9 @@ var _nightwatch = require('nightwatch');
 
 var _nightwatch2 = _interopRequireDefault(_nightwatch);
 
-var _sauceLauncher = require('./sauce-launcher');
+var _sauceLauncher = require('../sauce-launcher');
 
-var _serverLauncher = require('./server-launcher');
+var _serverLauncher = require('../server-launcher');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51,5 +51,7 @@ if (isChildProcess) {
     return Promise.all([(0, _sauceLauncher.closeSauceConnect)(), (0, _serverLauncher.closeServer)()]);
   }).then(function () {
     process.exit(exitCode);
+  }).catch(function () {
+    process.exit(1);
   });
 }

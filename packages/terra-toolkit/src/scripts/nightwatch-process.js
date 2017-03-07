@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import Nightwatch from 'nightwatch';
-import { launchSauceConnect, closeSauceConnect } from './sauce-launcher';
-import { launchServer, closeServer } from './server-launcher';
+import { launchSauceConnect, closeSauceConnect } from '../sauce-launcher';
+import { launchServer, closeServer } from '../server-launcher';
 
 const isChildProcess = process.argv.find(arg => arg === '--parallel-mode');
 
@@ -44,5 +44,8 @@ if (isChildProcess) {
   ))
   .then(() => {
     process.exit(exitCode);
+  })
+  .catch(() => {
+    process.exit(1);
   });
 }
