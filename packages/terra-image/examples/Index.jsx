@@ -10,18 +10,18 @@ const ImageExamples = () => (
 	  <h2>Fluid Examples</h2>
 
 	  <p>Image width and height are smaller than container. To fill the container, increase the width of the image.</p>
-	  <div class="image-container1">
-	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle terra-Image--fluid">
+	  <div className="image-container1">
+	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle terra-Image--fluid"/>
 	  </div>
 
 	  <p>Image width is larger than the container. Image height is smaller than the container.</p>
-	  <div class="image-container2">
-	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle terra-Image--fluid">
+	  <div className="image-container2">
+	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle terra-Image--fluid"/>
 	  </div>
 
 	  <p>Image width is smaller than the container. Image height is larger than the container.</p>
-	  <div class="image-container3">
-	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle terra-Image--fluid">
+	  <div className="image-container3">
+	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle terra-Image--fluid"/>
 	  </div>
 	</article>
 	<br />
@@ -30,18 +30,18 @@ const ImageExamples = () => (
 	  <h2>Non Fluid Examples</h2>
 
 	  <p>Image width and height are smaller than container.</p>
-	  <div class="image-container1">
-	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle">
+	  <div className="image-container1">
+	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle"/>
 	  </div>
 
 	  <p>Image width is larger than the container. Image height is smaller than the container.</p>
-	  <div class="image-container2">
-	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle">
+	  <div className="image-container2">
+	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle"/>
 	  </div>
 
 	  <p>Image width is smaller than the container. Image height is larger than the container.</p>
-	  <div class="image-container3">
-	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle">
+	  <div className="image-container3">
+	    <img src="http://lorempixel.com/150/150/nature/" alt="rounded" class="terra-Image terra-Image--circle"/>
 	  </div>
 	</article>
 	<br />
@@ -77,19 +77,19 @@ const ImageExamples = () => (
 	<br />
 	<br />
 	<h2>Circle Image Example</h2>
-	<img src="http://lorempixel.com/320/320/nature/" alt="example of circle image styles" class="terra-Image terra-Image--circle">
+	<img src="http://lorempixel.com/320/320/nature/" alt="example of circle image styles" class="terra-Image terra-Image--circle"/>
 	<br />
 	<br />
 	<h2>Fluid Rounded Image Example</h2>
-	<img src="http://lorempixel.com/1920/480/nature/" alt="example of fluid rounded image styles" class="terra-Image terra-Image--rounded terra-Image--fluid">
+	<img src="http://lorempixel.com/1920/480/nature/" alt="example of fluid rounded image styles" class="terra-Image terra-Image--rounded terra-Image--fluid"/>
 	<br />
 	<br />
 	<h2>Rounded Image Exapmle</h2>
-	<img src="http://lorempixel.com/320/320/nature/" alt="example of rounded image styles" class="terra-Image terra-Image--rounded">
+	<img src="http://lorempixel.com/320/320/nature/" alt="example of rounded image styles" class="terra-Image terra-Image--rounded"/>
 	<br />
 	<br />
 	<h2>Thumbnail Image Example</h2>
-	<img src="http://lorempixel.com/320/320/nature/" alt="example of thumbnail image styles" class="terra-Image terra-Image--thumbnail">
+	<img src="http://lorempixel.com/320/320/nature/" alt="example of thumbnail image styles" class="terra-Image terra-Image--thumbnail"/>
   </div>
 );
 
