@@ -1,6 +1,6 @@
 # Terra Image
 
-{insert description}
+The terra-image component provides styling for visual imagery.
 
 ## Getting Started
 
@@ -10,9 +10,4 @@
 
 ## Usage
 
-```jsx
-import React from 'react';
-import Image from 'terra-image';
-
-<Image {props.......} />
-```
+Add the class terra-Image to the img tag. There are additional modifier classes for border radius such as rounded, circle, and thumbnail. There is also a fluid class to adjust width into the parent container.
