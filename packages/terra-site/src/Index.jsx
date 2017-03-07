@@ -10,7 +10,7 @@ import ArrangeExamples from '../../../packages/terra-arrange/examples/index';
 import BadgeExamples from '../../../packages/terra-badge/examples/index';
 import ButtonExamples from '../../../packages/terra-button/examples/index';
 import GridExamples from '../../../packages/terra-grid/examples/Index';
-import ImageExamples from '../../../packages/terra-image/examples/Index'
+import ImageExamples from '../../../packages/terra-image/examples/Index';
 import StatusExamples from '../../../packages/terra-status/examples/Index';
 
 // Test
