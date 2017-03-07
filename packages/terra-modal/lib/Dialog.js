@@ -49,6 +49,10 @@ var propTypes = {
    */
   size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
+   * Set the height of modal dialog in px, max-height = windows.height * 85
+   */
+  height: _react.PropTypes.number,
+  /**
    * Callback function for closing the modal
    */
   onRequestClose: _react.PropTypes.func.isRequired,
@@ -96,14 +100,32 @@ var Dialog = function (_React$Component) {
       window.addEventListener('resize', this.updateBodyHeight);
     }
   }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('resize', this.updateBodyHeight);
+    }
+  }, {
     key: 'updateBodyHeight',
     value: function updateBodyHeight() {
       var headerHeight = this.dialog.firstElementChild.offsetHeight;
       var footerHeight = this.dialog.lastElementChild.offsetHeight;
+      var headerfooter = headerHeight + footerHeight;
       if (this.props.isFullScreen) {
-        this.setState({ bodyHeight: window.innerHeight - headerHeight - footerHeight });
+        this.setState({
+          bodyHeight: window.innerHeight - headerfooter,
+          bodyMaxHeight: undefined
+        });
+      } else if (this.props.height) {
+        var height = Math.min(this.props.height - headerfooter, window.innerHeight * 0.85 - headerfooter);
+        this.setState({
+          bodyHeight: height,
+          bodyMaxHeight: undefined
+        });
       } else {
-        this.setState({ bodyMaxHeight: window.innerHeight * 0.85 - headerHeight - footerHeight });
+        this.setState({
+          bodyMaxHeight: window.innerHeight * 0.85 - headerfooter,
+          bodyHeight: undefined
+        });
       }
     }
   }, {
@@ -130,14 +152,18 @@ var Dialog = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'terra-Modal-header' },
+          _react2.default.createElement(
+            'div',
+            null,
+            this.props.header
+          ),
           this.props.hasCloseButton && _react2.default.createElement(_terraButton2.default, {
             'aria-label': 'modal-close',
             title: 'modal-close',
             className: 'terra-Modal--close',
             icon: _react2.default.createElement(_close2.default, null),
             onClick: this.props.onRequestClose
-          }),
-          this.props.header
+          })
         ),
         _react2.default.createElement(
           'div',
