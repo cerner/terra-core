@@ -30,9 +30,6 @@
   "dependencies": {
   "terra-mixins": "1.0.0"
   },
-  "dependencies": {
-    "terra-mixins": "^1.0.0"
-  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
