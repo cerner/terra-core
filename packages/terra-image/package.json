@@ -28,6 +28,9 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
+  "dependencies": {
+    "terra-mixins": "^1.0.0"
+  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
