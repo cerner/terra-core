@@ -1,3 +1,5 @@
+@import '~terra-mixins';
+
 .terra-Modal-backdrop {
   background-color: #1c1f21;
   border: 0;
@@ -32,6 +34,7 @@
 .terra-Modal--close {
   background: transparent;
   border: 0;
+  @include terra-padding-end(1em);
 
   &:active,
   &:focus,

@@ -66,6 +66,10 @@ class Dialog extends React.Component {
     window.addEventListener('resize', this.updateBodyHeight);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateBodyHeight);
+  }
+
   updateBodyHeight() {
     const headerHeight = this.dialog.firstElementChild.offsetHeight;
     const footerHeight = this.dialog.lastElementChild.offsetHeight;
