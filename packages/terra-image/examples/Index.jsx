@@ -4,6 +4,24 @@ import Markdown from '../../../packages/terra-site/src/Markdown';
 import ReadMe from '../docs/README.md';
 import '../src/Image.scss';
 
+const imagecontainerStyle1 = {
+  backgroundColor: '#ffe4c4',
+  width: 200,
+  height: 200,
+};
+const imagecontainerStyle2 = {
+  backgroundColor: '#ffe4c4',
+  width: 100,
+  height: 200,
+};
+const imagecontainerStyle3 = {
+  backgroundColor: '#ffe4c4',
+  width: 100,
+  height: 100,
+  marginBottom: 100,
+};
+
+
 const ImageExamples = () => (
   <div>
     <Markdown id="readme" src={ReadMe} />
@@ -62,24 +80,6 @@ const ImageExamples = () => (
     <h2>Thumbnail Image Example</h2>
     <img src="http://lorempixel.com/320/320/nature/" alt="example of thumbnail styles" className="terra-Image terra-Image--thumbnail" />
   </div>
-
 );
-
-const imagecontainerStyle1 = {
-    backgroundColor: '#ffe4c4',
-    width: 200,
-    height: 200,
-};
-const imagecontainerStyle2 = {
-    backgroundColor: '#ffe4c4',
-    width: 100,
-    height: 200,
-};
- const imagecontainerStyle3 = {
-    backgroundColor: '#ffe4c4',
-    width: 100,
-    height: 100,
-    marginBottom: 100,
-};
 
 export default ImageExamples;
