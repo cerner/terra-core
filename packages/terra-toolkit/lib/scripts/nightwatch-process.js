@@ -45,13 +45,17 @@ if (isChildProcess) {
         });
       });
     });
-  }).catch(function () {
+  }).catch(function (error) {
+    // eslint-disable-next-line no-console
+    console.log(error);
     exitCode = 1;
   }).then(function () {
     return Promise.all([(0, _sauceLauncher.closeSauceConnect)(), (0, _serverLauncher.closeServer)()]);
   }).then(function () {
     process.exit(exitCode);
-  }).catch(function () {
+  }).catch(function (error) {
+    // eslint-disable-next-line no-console
+    console.log(error);
     process.exit(1);
   });
 }

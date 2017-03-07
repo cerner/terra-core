@@ -13,6 +13,14 @@ module.exports = (browser, callback) => {
 
   const requestPath = `/rest/v1/${username}/jobs/${sessionId}`;
 
+  function responseCallback(res) {
+    res.setEncoding('utf8');
+    res.on('data', () => {});
+    res.on('end', () => {
+      callback();
+    });
+  }
+
   try {
     const req = https.request({
       hostname: 'saucelabs.com',
@@ -23,11 +31,13 @@ module.exports = (browser, callback) => {
         'Content-Type': 'application/json',
         'Content-Length': data.length,
       },
-    });
+    }, responseCallback);
 
     req.write(data);
     req.end();
   } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log(error);
     callback();
   }
 };

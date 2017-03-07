@@ -36,7 +36,9 @@ if (isChildProcess) {
       });
     });
   }))
-  .catch(() => {
+  .catch((error) => {
+    // eslint-disable-next-line no-console
+    console.log(error);
     exitCode = 1;
   })
   .then(() => (
@@ -45,7 +47,9 @@ if (isChildProcess) {
   .then(() => {
     process.exit(exitCode);
   })
-  .catch(() => {
+  .catch((error) => {
+    // eslint-disable-next-line no-console
+    console.log(error);
     process.exit(1);
   });
 }

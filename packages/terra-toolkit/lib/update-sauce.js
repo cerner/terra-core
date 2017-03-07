@@ -19,6 +19,14 @@ module.exports = function (browser, callback) {
 
   var requestPath = '/rest/v1/' + username + '/jobs/' + sessionId;
 
+  function responseCallback(res) {
+    res.setEncoding('utf8');
+    res.on('data', function () {});
+    res.on('end', function () {
+      callback();
+    });
+  }
+
   try {
     var req = _https2.default.request({
       hostname: 'saucelabs.com',
@@ -29,11 +37,13 @@ module.exports = function (browser, callback) {
         'Content-Type': 'application/json',
         'Content-Length': data.length
       }
-    });
+    }, responseCallback);
 
     req.write(data);
     req.end();
   } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log(error);
     callback();
   }
 };

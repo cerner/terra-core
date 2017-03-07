@@ -5,12 +5,14 @@ module.exports = {
     browser.resizeWindow(browser.globals.width, browser.globals.height, done);
   },
   afterEach: (browser, done) => {
-    browser.end(() => {
-      if (process.env.REMOTE === 'true') {
-        updateSauce(browser, done);
-      } else {
-        done();
-      }
-    });
+    function endBrowser() {
+      browser.end(done);
+    }
+
+    if (process.env.REMOTE === 'true') {
+      updateSauce(browser, endBrowser);
+    } else {
+      endBrowser();
+    }
   },
 };
