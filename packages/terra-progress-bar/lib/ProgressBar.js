@@ -14,7 +14,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('../src/progress-bar.scss');
+require('./ProgressBar.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,9 +23,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
+  /**
+   * The color of the progress bar. Accepts a CSS color value.
+   */
   color: _react.PropTypes.string,
+  /**
+   * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
+   */
   height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Sets the fill-value of the progress bar with respect to the `max` prop.
+   */
   value: _react.PropTypes.number.isRequired,
+  /**
+   * Sets the maximum possible fill-value.
+   */
   max: _react.PropTypes.number
 };
 

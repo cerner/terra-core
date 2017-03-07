@@ -1,11 +1,23 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/progress-bar.scss';
+import './ProgressBar.scss';
 
 const propTypes = {
+  /**
+   * The color of the progress bar. Accepts a CSS color value.
+   */
   color: PropTypes.string,
+  /**
+   * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
+   */
   height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Sets the fill-value of the progress bar with respect to the `max` prop.
+   */
   value: PropTypes.number.isRequired,
+  /**
+   * Sets the maximum possible fill-value.
+   */
   max: PropTypes.number,
 };
 
