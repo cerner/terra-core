@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import config from '../../terra-site/webpack.config';
 
-exports.launchServer = (done) => {
+exports.launchServer = () => new Promise((resolve) => {
   let compiler;
   if (process.env.WEBPACK_CONFIG_PATH) {
     /* eslint-disable global-require, import/no-dynamic-require */
@@ -11,24 +11,19 @@ exports.launchServer = (done) => {
   } else {
     compiler = webpack(config);
   }
-  compiler.plugin('done', done);
+  compiler.plugin('done', resolve);
 
   module.server = new WebpackDevServer(compiler, {
     quiet: true,
   });
 
-  // module.server.on('connection', () => {
-  //   console.log('Connection!!');
-  // });
-
-  // module.server.on('connect', () => {
-  //   console.log('Connection!!');
-  // });
-
   module.server.listen(8080, '0.0.0.0');
-};
+});
 
-exports.closeServer = (done) => {
-  module.server.close();
-  done();
-};
+exports.closeServer = () => new Promise((resolve) => {
+  if (module.server) {
+    module.server.close(resolve());
+  } else {
+    resolve();
+  }
+});

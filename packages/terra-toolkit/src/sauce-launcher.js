@@ -1,24 +1,29 @@
 import sauceConnectLauncher from 'sauce-connect-launcher';
 
-exports.launchSauceConnect = (done) => {
+exports.launchSauceConnect = () => new Promise((resolve, reject) => {
   if (process.env.REMOTE === 'true') {
     sauceConnectLauncher({
       username: process.env.SAUCE_USERNAME,
       accessKey: process.env.SAUCE_ACCESS_KEY,
       port: 4446,
-    }, (_, sauceConnectProcess) => {
-      module.sauceConnectProcess = sauceConnectProcess;
-      done();
+    }, (error, sauceConnectProcess) => {
+      if (!error) {
+        module.sauceConnectProcess = sauceConnectProcess;
+        resolve();
+      } else {
+        console.log(error);
+        reject(Error(error));
+      }
     });
   } else {
-    done();
+    resolve();
   }
-};
+});
 
-exports.closeSauceConnect = (done) => {
-  if (process.env.REMOTE === 'true') {
-    module.sauceConnectProcess.close(done);
+exports.closeSauceConnect = () => new Promise((resolve) => {
+  if (module.sauceConnectProcess) {
+    module.sauceConnectProcess.close(resolve);
   } else {
-    done();
+    resolve();
   }
-};
+});

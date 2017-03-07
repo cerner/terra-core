@@ -17,22 +17,39 @@ var isChildProcess = process.argv.find(function (arg) {
 
 if (isChildProcess) {
   _nightwatch2.default.cli(function (argv) {
-    argv._source = argv._.slice(0); // eslint-disable-line
-    _nightwatch2.default.runner(argv);
+    var updatedArgv = argv;
+    /* eslint-disable no-underscore-dangle */
+    updatedArgv._source = argv._.slice(0);
+    /* eslint-enable no-underscore-dangle */
+    _nightwatch2.default.runner(updatedArgv, function (success) {
+      if (!success) {
+        process.exit(1);
+      }
+    });
   });
 } else {
-  (0, _serverLauncher.launchServer)(function () {
-    (0, _sauceLauncher.launchSauceConnect)(function () {
+  var exitCode = 0;
+  Promise.all([(0, _serverLauncher.launchServer)(), (0, _sauceLauncher.launchSauceConnect)()]).then(function () {
+    return new Promise(function (resolve, reject) {
       _nightwatch2.default.cli(function (argv) {
-        argv._source = argv._.slice(0); // eslint-disable-line
-        _nightwatch2.default.runner(argv, function () {
-          (0, _sauceLauncher.closeSauceConnect)(function () {
-            (0, _serverLauncher.closeServer)(function () {
-              process.exit(0);
-            });
-          });
+        var updatedArgv = argv;
+        /* eslint-disable no-underscore-dangle */
+        updatedArgv._source = argv._.slice(0);
+        /* eslint-enable no-underscore-dangle */
+        _nightwatch2.default.runner(updatedArgv, function (success) {
+          if (!success) {
+            reject(success);
+          } else {
+            resolve();
+          }
         });
       });
     });
+  }).catch(function () {
+    exitCode = 1;
+  }).then(function () {
+    return Promise.all([(0, _sauceLauncher.closeSauceConnect)(), (0, _serverLauncher.closeServer)()]);
+  }).then(function () {
+    process.exit(exitCode);
   });
 }
