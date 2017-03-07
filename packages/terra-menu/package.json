@@ -1,6 +1,6 @@
 {
   "name": "terra-menu",
-  "main": "lib/Menu.js",
+  "main": "lib/Menu.scss",
   "private": true,
   "version": "0.1.0",
   "description": "terra-menu",
