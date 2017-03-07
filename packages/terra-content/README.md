@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-content.svg)](https://www.npmjs.org/package/terra-content)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-{insert description}
+The content component provides styles for commonly used HTML elements such as headers, paragraphs, lists, images, and more. This component ensures consistent styling between different browsers in a similar fashion to normalize.css. These styles are in a component as opposed to being used globally to ensure that Terra is opt in. As a result, other solutions will not be styled by this component.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
