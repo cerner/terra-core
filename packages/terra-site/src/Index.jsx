@@ -11,6 +11,7 @@ import BadgeExamples from '../../../packages/terra-badge/examples/index';
 import ButtonExamples from '../../../packages/terra-button/examples/index';
 import ContentExamples from '../../../packages/terra-content/examples/Index';
 import GridExamples from '../../../packages/terra-grid/examples/Index';
+import MenuExamples from '../../../packages/terra-menu/examples/Index';
 import ImageExamples from '../../../packages/terra-image/examples/Index';
 import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/Index';
 import StatusExamples from '../../../packages/terra-status/examples/Index';
@@ -29,6 +30,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="grid" component={GridExamples} />
+      <Route path="menu" component={MenuExamples} />
       <Route path="image" component={ImageExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="status" component={StatusExamples} />
