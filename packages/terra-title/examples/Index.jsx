@@ -7,6 +7,7 @@ import '../src/Title.scss';
 
 const TitleExamples = () => (
   <div>
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
     <Markdown id="readme" src={ReadMe} />
     <h2 id="caption">Caption</h2>
     <h1 className="terra-Title terra-Title--tiny terra-Title--horizontalMiddle">
