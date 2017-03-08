@@ -1,0 +1,3 @@
+@mixin terra-progress-bar-height($thickness) {
+  height: map-get($terra-progress-bar-sizes, $thickness);
+}
