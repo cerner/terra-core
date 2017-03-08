@@ -5,5 +5,6 @@ module.exports = (browser, callback, tag) => {
   }
   const width = browser.globals.width;
   const height = browser.globals.height;
-  browser.saveScreenshot(`target/nightwatch/${browser.currentTest.name}/${browser.options.desiredCapabilities.browserName}/${width}x${height}_${imageTag}.png`, callback);
+  const version = browser.options.desiredCapabilities.version ? browser.options.desiredCapabilities.version : 'latest';
+  browser.saveScreenshot(`target/nightwatch/${browser.currentTest.name}/${browser.options.desiredCapabilities.browserName}-${version}/${width}x${height}_${imageTag}.png`, callback);
 };

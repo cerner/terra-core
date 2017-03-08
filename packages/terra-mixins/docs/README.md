@@ -6,7 +6,7 @@ The terra-mixins component supplies global mixins for use throughout the Terra e
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-mixins`
-  - `yarn install terra-mixins`
+  - `yarn add terra-mixins`
 
 ## Usage
 
