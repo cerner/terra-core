@@ -10,7 +10,7 @@ The legacy-theme component sets global variables for the entire application. Glo
 
 ## Usage
 
-In your webpack config, add the following:
+In your webpack v1 config, add the following:
 
 ```js
 module: {
@@ -22,6 +22,6 @@ module: {
   ],
 },
 sassLoader: {
-  data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/LegacyTheme.scss'))}";`,
+  data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/lib/LegacyTheme.scss'))}";`,
 },
 ```
