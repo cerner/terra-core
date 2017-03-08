@@ -39,7 +39,7 @@
     "react-docgen": "^2.13.0",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.2",
-    "terra-application": "^0.2.0",
+    "terra-application": "0.3.0",
     "terra-arrange": "^0.1.0",
     "terra-button": "^0.1.0",
     "terra-legacy-theme": "^0.1.0",

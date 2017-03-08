@@ -6,6 +6,7 @@ import App from './App';
 import Home from './Home';
 
 // Examples
+import ApplicationExamples from '../../../packages/terra-application/examples/Index';
 import ArrangeExamples from '../../../packages/terra-arrange/examples/index';
 import BadgeExamples from '../../../packages/terra-badge/examples/index';
 import ButtonExamples from '../../../packages/terra-button/examples/index';
@@ -26,6 +27,7 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
+      <Route path="application" component={ApplicationExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
