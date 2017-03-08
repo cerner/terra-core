@@ -25,6 +25,7 @@ const App = props => (
       <li><Link to="/site/image">Image</Link></li>
       <li><Link to="/site/progress-bar">Progress Bar</Link></li>
       <li><Link to="/site/status">Status</Link></li>
+      <li><Link to="/site/title">Title</Link></li>
       <li><Link to="/tests">Tests</Link></li>
     </ul>
     {props.children}

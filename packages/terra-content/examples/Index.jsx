@@ -2,6 +2,7 @@
 import React from 'react';
 import Markdown from '../../../packages/terra-site/src/Markdown';
 import ReadMe from '../docs/README.md';
+import '../src/Content.scss';
 
 const ContentExamples = () => (
   <div>
