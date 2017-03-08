@@ -6,7 +6,7 @@ The grid component provides a flexbox based grid system.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-grid`
-  - `yarn install terra-grid`
+  - `yarn add terra-grid`
 
 ## Usage
 
