@@ -1,0 +1,48 @@
+{
+  "name": "terra-content",
+  "main": "lib/Content.js",
+  "private": true,
+  "version": "0.1.0",
+  "description": "terra-content",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-ui.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-content",
+    "Content",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-ui/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-ui#readme",
+  "devDependencies": {
+    "terra-toolkit": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.4.2",
+    "terra-mixins": "^1.0.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rm -rf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "release:major": "npm test && node ../../scripts/release/release.js major",
+    "release:minor": "npm test && node ../../scripts/release/release.js minor",
+    "release:patch": "npm test && node ../../scripts/release/release.js patch",
+    "test": "echo \"Warning: no test written\" && exit 0"
+  }
+}
