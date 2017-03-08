@@ -1,30 +1,41 @@
-'use strict';
+"use strict";
 
-var _webpack = require('webpack');
-
-var _webpack2 = _interopRequireDefault(_webpack);
-
-var _webpackDevServer = require('webpack-dev-server');
-
-var _webpackDevServer2 = _interopRequireDefault(_webpackDevServer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+// import webpack from 'webpack';
+// import WebpackDevServer from 'webpack-dev-server';
+// import updateSauce from './update-sauce';
+// import { launchSauceConnect, closeSauceConnect } from './sauce-launcher';
 
 module.exports = {
-  beforeEach: function beforeEach(browser, done) {
-    /* eslint-disable global-require, import/no-dynamic-require */
-    var config = require(browser.globals.testConfigPath);
-    /* eslint-enable global-require, import/no-dynamic-require */
-    var globals = browser.globals;
-    globals.server = new _webpackDevServer2.default((0, _webpack2.default)(config), {
-      quiet: true
-    });
+  // before: (done) => {
+  //   if (process.env.REMOTE === 'true') {
+  //     launchSauceConnect(done);
+  //   } else {
+  //     done();
+  //   }
+  // },
+  // after: (done) => {
+  //   closeSauceConnect(done);
+  // },
+  // beforeEach: (browser, done) => {
+  //   /* eslint-disable global-require, import/no-dynamic-require */
+  //   const config = require(browser.globals.testConfigPath);
+  //   /* eslint-enable global-require, import/no-dynamic-require */
+  //   const globals = browser.globals;
+  //   globals.server = new WebpackDevServer(webpack(config), {
+  //     quiet: true,
+  //   });
 
-    globals.server.listen(browser.globals.webpackDevServerPort, '0.0.0.0');
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-  afterEach: function afterEach(browser, done) {
-    browser.globals.server.close();
-    browser.end(done);
-  }
+  //   globals.server.listen(browser.globals.webpackDevServerPort, '0.0.0.0');
+  //   browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  // },
+  // afterEach: (browser, done) => {
+  //   browser.globals.server.close();
+  //   browser.end(done);
+
+  //   if (process.env.REMOTE === 'true') {
+  //     updateSauce(browser, done);
+  //   } else {
+  //     done();
+  //   }
+  // },
 };

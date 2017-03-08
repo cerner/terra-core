@@ -14,8 +14,7 @@ const drivers = {
     selenium_host: 'localhost',
     silent: true,
     screenshots: {
-      enabled: true,
-      path: 'screenshots',
+      enabled: false,
     },
     desiredCapabilities: {
       browserName: 'phantomjs',
@@ -25,34 +24,67 @@ const drivers = {
       'phantomjs.cli.args': [],
     },
   },
-  firefox: {
-    desiredCapabilities: {
-      browserName: 'firefox',
-      marionette: true,
-      javascriptEnabled: true,
-      acceptSslCerts: true,
-    },
-  },
   chrome: {
     desiredCapabilities: {
       browserName: 'chrome',
-      javascriptEnabled: true,
-      acceptSslCerts: true,
+      platform: 'Windows 10',
+      version: 'latest',
+    },
+  },
+  ie10: {
+    desiredCapabilities: {
+      browserName: 'internet explorer',
+      platform: 'Windows 8',
+      version: '10.0',
+    },
+  },
+  ie11: {
+    desiredCapabilities: {
+      browserName: 'internet explorer',
+      platform: 'Windows 10',
+      version: 'latest',
+    },
+  },
+  edge: {
+    desiredCapabilities: {
+      browserName: 'microsoftedge',
+      platform: 'Windows 10',
+      version: 'latest',
+    },
+  },
+  firefox: {
+    desiredCapabilities: {
+      browserName: 'firefox',
+      platform: 'Windows 10',
+      version: 'latest',
     },
   },
   safari: {
     desiredCapabilities: {
       browserName: 'safari',
-      javascriptEnabled: true,
-      acceptSslCerts: true,
+      platform: 'macOS 10.12',
+      version: 'latest',
     },
   },
 };
 
 module.exports = (testConfigPath, settings) => {
+  const remote = process.env.REMOTE === 'true';
+
+  const returnSettings = settings;
   const testingConfiguration = {};
 
-  let currentPort = 19000;
+  testingConfiguration.default = Object.assign({}, drivers.default);
+
+  if (remote) {
+    returnSettings.selenium.start_process = false;
+    testingConfiguration.default.selenium_port = 80;
+    testingConfiguration.default.selenium_host = 'ondemand.saucelabs.com';
+    testingConfiguration.default.username = process.env.SAUCE_USERNAME;
+    testingConfiguration.default.access_key = process.env.SAUCE_ACCESS_KEY;
+  }
+
+  // let currentPort = 19000;
   Object.keys(drivers).forEach((driverKey) => {
     Object.keys(windowSizes).forEach((windowSizeKey) => {
       const key = `${driverKey}-${windowSizeKey}`;
@@ -61,11 +93,10 @@ module.exports = (testConfigPath, settings) => {
       testingConfiguration[key].globals.width = windowSizes[windowSizeKey][0];
       testingConfiguration[key].globals.height = windowSizes[windowSizeKey][1];
       testingConfiguration[key].globals.testConfigPath = testConfigPath;
-      testingConfiguration[key].globals.webpackDevServerPort = currentPort;
-      currentPort += 1;
+      testingConfiguration[key].globals.webpackDevServerPort = 8080;
+      // currentPort += 1;
     });
   });
-  const returnSettings = settings;
   returnSettings.test_settings = testingConfiguration;
   return returnSettings;
 };
