@@ -11,7 +11,7 @@ The terra-grid component provides a flexbox based grid system.
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-arrange`
+- Install with [npm](https://www.npmjs.com): `npm install terra-grid`
 
 ## Documentation
 
