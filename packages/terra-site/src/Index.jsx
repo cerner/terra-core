@@ -15,6 +15,7 @@ import MenuExamples from '../../../packages/terra-menu/examples/Index';
 import ImageExamples from '../../../packages/terra-image/examples/Index';
 import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/Index';
 import StatusExamples from '../../../packages/terra-status/examples/Index';
+import TitleExamples from '../../../packages/terra-title/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
@@ -34,6 +35,7 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="status" component={StatusExamples} />
+      <Route path="title" component={TitleExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
