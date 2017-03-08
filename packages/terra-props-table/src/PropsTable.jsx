@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { PropTypes } from 'react';
 import { parse } from 'react-docgen';
-import Markdown from './Markdown';
+import Markdown from '../../../packages/terra-markdown/src/Markdown';
 
 const propTypes = {
   src: PropTypes.string.isRequired,
