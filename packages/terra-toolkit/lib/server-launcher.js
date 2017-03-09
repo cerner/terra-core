@@ -8,10 +8,6 @@ var _webpackDevServer = require('webpack-dev-server');
 
 var _webpackDevServer2 = _interopRequireDefault(_webpackDevServer);
 
-var _webpack3 = require('../../terra-site/webpack.config');
-
-var _webpack4 = _interopRequireDefault(_webpack3);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.launchServer = function () {
