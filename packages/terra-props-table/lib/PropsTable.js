@@ -12,9 +12,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDocgen = require('react-docgen');
 
-var _Markdown = require('../../../packages/terra-markdown/src/Markdown');
+var _terraMarkdown = require('terra-markdown');
 
-var _Markdown2 = _interopRequireDefault(_Markdown);
+var _terraMarkdown2 = _interopRequireDefault(_terraMarkdown);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -135,7 +135,7 @@ var PropsTable = function PropsTable(_ref) {
             _react2.default.createElement(
               'td',
               null,
-              _react2.default.createElement(_Markdown2.default, { src: prop.description })
+              _react2.default.createElement(_terraMarkdown2.default, { src: prop.description })
             )
           );
         })
