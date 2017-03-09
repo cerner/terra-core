@@ -22,6 +22,7 @@
     "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
     "test": "npm run test:nightwatch-default",
+    "test:spec": "npm run test:nightwatch-default",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
     "test:nightwatch-default": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
   },
