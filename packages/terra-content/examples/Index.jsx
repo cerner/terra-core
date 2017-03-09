@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Markdown from '../../../packages/terra-site/src/Markdown';
+import Markdown from 'terra-markdown';
 import ReadMe from '../docs/README.md';
+import '../src/Content.scss';
 
 const ContentExamples = () => (
   <div>

@@ -7,7 +7,7 @@ It can be modified in color, size, and type, and can optionally display an icon.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-button`
-  - `yarn install terra-button`
+  - `yarn add terra-button`
 
 ## Usage
 
