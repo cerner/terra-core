@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "devDependencies": {
+    "cerner-one-icons": "git+https://github.cerner.com/ux/cerner-one-icons.git",
     "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
@@ -34,6 +35,10 @@
     "terra-mixins": "^1.0.0"
   },
   "scripts": {
+    "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
+    "compilescripts:clean": "rm -rf scripts/lib",
+    "compilescripts:build": "$(cd ..; npm bin)/babel scripts/src --out-dir scripts/lib --copy-files",
+    "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
