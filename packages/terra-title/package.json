@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.1.0",
-    "terra-markdown": "0.1.0"
+    "terra-markdown": "0.1.0",
+    "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
   "terra-mixins": "1.0.0"
