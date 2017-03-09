@@ -1,10 +1,10 @@
-# Terra Arrange
+# Terra Slide Panel
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange)
+[![NPM version](http://img.shields.io/npm/v/terra-slide-panel.svg)](https://www.npmjs.org/package/terra-slide-panel)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-The arrange component allows an item that has an intrinsic width, such as an icon or an image, to be offset from a group of associated content. When the group of associated content wraps, it will stay aligned next to the offset content rather than wrap below it.
+The Terra SlidePanel component is a progressive disclosure mechanism that allows additional content to be shown and hidden in a variety of ways.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -12,7 +12,7 @@ The arrange component allows an item that has an intrinsic width, such as an ico
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-arrange`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-slide-panel`
 
 ## Documentation
 

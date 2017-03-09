@@ -1,0 +1,29 @@
+@import './variables';
+
+@mixin terra-slide-panel-shadow-start() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      box-shadow: -1px 0 5px $terra-base-color-30;
+    }
+
+    [dir='rtl'] & {
+      box-shadow: 1px 0 5px $terra-base-color-30;
+    }
+  } @else {
+    box-shadow: -1px 0 5px $terra-base-color-30;
+  }
+}
+
+@mixin terra-slide-panel-shadow-end() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      box-shadow: 1px 0 5px $terra-base-color-30;
+    }
+
+    [dir='rtl'] & {
+      box-shadow: -1px 0 5px $terra-base-color-30;
+    }
+  } @else {
+    box-shadow: 1px 0 5px $terra-base-color-30;
+  }
+}
