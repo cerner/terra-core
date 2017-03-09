@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import config from '../../terra-site/webpack.config';
 
 exports.launchServer = () => new Promise((resolve) => {
   let compiler;
