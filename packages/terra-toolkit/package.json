@@ -23,10 +23,7 @@
     "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
     "test": "npm run test:nightwatch-default",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch.js",
-    "test:nightwatch-chrome": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch.js chrome",
-    "test:nightwatch-firefox": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch.js firefox",
-    "test:nightwatch-safari": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch-non-parallel.js safari"
+    "test:nightwatch-default": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
   },
   "author": "Cerner Corporation",
   "license": "Apache-2.0",

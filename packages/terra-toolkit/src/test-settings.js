@@ -1,3 +1,6 @@
+import seleniumServerStandaloneJar from 'selenium-server-standalone-jar';
+import phantomjs from 'phantomjs-prebuilt';
+
 const windowSizes = {
   tiny: [470, 768],
   small: [622, 768],
@@ -20,8 +23,6 @@ const drivers = {
       browserName: 'phantomjs',
       javascriptEnabled: true,
       acceptSslCerts: true,
-      'phantomjs.binary.path': '../../node_modules/phantomjs-prebuilt/bin/phantomjs',
-      'phantomjs.cli.args': [],
     },
   },
   chrome: {
@@ -75,6 +76,7 @@ module.exports = (testConfigPath, settings) => {
   const testingConfiguration = {};
 
   testingConfiguration.default = Object.assign({}, drivers.default);
+  testingConfiguration.default.desiredCapabilities['phantomjs.binary.path'] = phantomjs.path;
 
   if (remote) {
     returnSettings.selenium.start_process = false;
@@ -82,6 +84,9 @@ module.exports = (testConfigPath, settings) => {
     testingConfiguration.default.selenium_host = 'ondemand.saucelabs.com';
     testingConfiguration.default.username = process.env.SAUCE_USERNAME;
     testingConfiguration.default.access_key = process.env.SAUCE_ACCESS_KEY;
+  } else {
+    returnSettings.selenium.start_process = true;
+    returnSettings.selenium.server_path = seleniumServerStandaloneJar.path;
   }
 
   Object.keys(drivers).forEach((driverKey) => {

@@ -45,6 +45,7 @@
     "pretest": "npm run lint",
     "postinstall": "npm run bootstrap",
     "test": "lerna exec --concurrency 1 npm test",
+    "test:nightwatch": "node ./packages/terra-toolkit/lib/scripts/nightwatch.js chrome",
     "pretest": "npm run lint",
     "prepush": "node scripts/prepush/index.js",
     "start": "cd packages/terra-site && npm run start"
