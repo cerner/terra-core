@@ -21,9 +21,6 @@
     "url": "https://github.com/cerner/terra-ui/issues"
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
-  "devDependencies": {
-    "terra-toolkit": "^0.1.0"
-  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
