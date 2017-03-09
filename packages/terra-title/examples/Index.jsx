@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Markdown from '../../../packages/terra-markdown/src/Markdown';
+import Markdown from 'terra-markdown';
 import ReadMe from '../docs/README.md';
 import '../src/Title.scss';
 
