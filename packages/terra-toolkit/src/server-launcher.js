@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import config from '../../terra-site/webpack.config';
 
 exports.launchServer = () => new Promise((resolve) => {
   let compiler;
@@ -9,7 +8,9 @@ exports.launchServer = () => new Promise((resolve) => {
     compiler = webpack(require(process.env.WEBPACK_CONFIG_PATH));
     /* eslint-enable global-require, import/no-dynamic-require */
   } else {
-    compiler = webpack(config);
+    /* eslint-disable global-require, import/no-dynamic-require */
+    compiler = webpack(require('../../terra-site/webpack.config'));
+    /* eslint-enable global-require, import/no-dynamic-require */
   }
   compiler.plugin('done', resolve);
 
