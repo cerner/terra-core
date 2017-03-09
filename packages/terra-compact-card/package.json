@@ -1,0 +1,49 @@
+{
+  "name": "terra-compact-card",
+  "main": "lib/CompactCard.js",
+  "version": "0.1.0",
+  "description": "terra-compact-card",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-ui.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-compact-card",
+    "TerraCompactCard",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-ui/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-ui#readme",
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rm -rf lib",
+    "compile:build": "../../node_modules/.bin/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "../../node_modules/.bin/stylelint src/**/*.scss",
+    "pretest": "npm run lint",
+    "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
+    "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
+    "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
+    "test": "../../node_modules/.bin/jest --config ../../jestconfig.json"
+  },
+  "devDependencies": {
+    "terra-toolkit": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "terra-mixins": "^1.0.0",
+    "terra-icon": "git://github.com/cerner/terra-icon.git#master",
+    "terra-react-svg-loader": "git://github.com/cerner/terra-react-svg-loader.git#master"
+  }
+}
