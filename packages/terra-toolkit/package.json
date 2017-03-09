@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Utilities to help when developing terra modules",
   "main": "lib/index.js",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-toolkit.git"
