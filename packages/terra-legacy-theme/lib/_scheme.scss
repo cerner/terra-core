@@ -1,38 +1,6 @@
-// Text Color
-$terra-text-color-10: $terra-grey-10 !default;
-$terra-text-color-20: $terra-grey-20 !default;
-$terra-text-color-30: $terra-grey-30 !default;
-$terra-text-color-40: $terra-grey-40 !default;
-$terra-text-color-50: $terra-grey-50 !default;
-$terra-text-color-60: $terra-grey-60 !default;
-$terra-text-color-70: $terra-grey-70 !default;
-$terra-text-color-80: $terra-grey-80 !default;
-$terra-text-color-90: $terra-grey-90 !default;
-$terra-text-color-100: $terra-grey-100 !default;
 
-// Base Color
-$terra-base-color-10: $terra-grey-10 !default;
-$terra-base-color-20: $terra-grey-20 !default;
-$terra-base-color-30: $terra-grey-30 !default;
-$terra-base-color-40: $terra-grey-40 !default;
-$terra-base-color-50: $terra-grey-50 !default;
-$terra-base-color-60: $terra-grey-60 !default;
-$terra-base-color-70: $terra-grey-70 !default;
-$terra-base-color-80: $terra-grey-80 !default;
-$terra-base-color-90: $terra-grey-90 !default;
-$terra-base-color-100: $terra-grey-100 !default;
 
-// Primary Color
-$terra-primary-color-10: $terra-blue-10 !default;
-$terra-primary-color-20: $terra-blue-20 !default;
-$terra-primary-color-30: $terra-blue-30 !default;
-$terra-primary-color-40: $terra-blue-40 !default;
-$terra-primary-color-50: $terra-blue-50 !default;
-$terra-primary-color-60: $terra-blue-60 !default;
-$terra-primary-color-70: $terra-blue-70 !default;
-$terra-primary-color-80: $terra-blue-80 !default;
-$terra-primary-color-90: $terra-blue-90 !default;
-$terra-primary-color-100: $terra-blue-100 !default;
+
 
 // Secondary Color
 $terra-secondary-color-10: $terra-green-10 !default;
@@ -94,10 +62,3 @@ $terra-info-color-70: $terra-blue-70 !default;
 $terra-info-color-80: $terra-blue-80 !default;
 $terra-info-color-90: $terra-blue-90 !default;
 $terra-info-color-100: $terra-blue-100 !default;
-
-// Clinical Colors
-// These colors should not be editable/overridden without guidance from UX
-$terra-clinical-critical-color: #c00 !default;
-$terra-clinical-high-color: #ff6100 !default;
-$terra-clinical-low-color: #0053e6 !default;
-$terra-clinical-abnormal-color: #654a08 !default;
