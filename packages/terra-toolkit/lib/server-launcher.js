@@ -22,7 +22,9 @@ exports.launchServer = function () {
       compiler = (0, _webpack2.default)(require(process.env.WEBPACK_CONFIG_PATH));
       /* eslint-enable global-require, import/no-dynamic-require */
     } else {
-      compiler = (0, _webpack2.default)(_webpack4.default);
+      /* eslint-disable global-require, import/no-dynamic-require */
+      compiler = (0, _webpack2.default)(require('../../terra-site/webpack.config'));
+      /* eslint-enable global-require, import/no-dynamic-require */
     }
     compiler.plugin('done', resolve);
 
