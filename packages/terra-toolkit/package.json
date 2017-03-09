@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-toolkit.git"
+    "url": "git+https://github.com/cerner/terra-ui.git"
   },
   "keywords": [
     "Cerner",
@@ -27,7 +27,7 @@
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cerner/terra-toolkit/issues"
+    "url": "https://github.com/cerner/terra-ui/issues"
   },
   "devDependencies": {
     "terra-application": "^0.2.0",
