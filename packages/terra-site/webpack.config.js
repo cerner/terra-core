@@ -40,7 +40,7 @@ module.exports = {
     ],
   },
   sassLoader: {
-    data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/terra-legacy-theme.scss'))}"; @import "${path.resolve(path.join(__dirname, 'node_modules/terra-application/src/Application.scss'))}"; $terra-bidi: true;`,
+    data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/lib/LegacyTheme.scss'))}"; @import "${path.resolve(path.join(__dirname, 'node_modules/terra-application/src/Application.scss'))}"; $terra-bidi: true;`,
   },
   plugins: [
     new ExtractTextPlugin('[name]-[hash].css'),

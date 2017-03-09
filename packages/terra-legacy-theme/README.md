@@ -1,10 +1,9 @@
-# Terra Arrange
+# Terra Legacy Theme
 
-
-[![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange)
+[![NPM version](http://img.shields.io/npm/v/terra-legacy-theme.svg)](https://www.npmjs.org/package/terra-legacy-theme)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-The arrange component allows an item that has an intrinsic width, such as an icon or an image, to be offset from a group of associated content. When the group of associated content wraps, it will stay aligned next to the offset content rather than wrap below it.
+The legacy-theme component sets global variables for the entire application. Global variables are included for responsive breakpoints, colors, and typography.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -12,7 +11,7 @@ The arrange component allows an item that has an intrinsic width, such as an ico
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-arrange`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-legacy-theme`
 
 ## Documentation
 
