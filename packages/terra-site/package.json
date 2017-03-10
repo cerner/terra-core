@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "terra-markdown": "0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",
@@ -36,14 +37,14 @@
     "node-sass": "^4.5.0",
     "postcss-loader": "^1.3.3",
     "raw-loader": "^0.5.1",
-    "react-docgen": "^2.13.0",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.2",
     "terra-application": "0.3.0",
     "terra-arrange": "^0.1.0",
     "terra-button": "^0.1.0",
-    "terra-legacy-theme": "^0.1.0",
+    "terra-legacy-theme": "0.2.0",
     "terra-react-svg-loader": "git://github.com/cerner/terra-react-svg-loader.git#master",
+    "terra-toolkit": "^0.1.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "webpack-stats-plugin": "^0.1.4"

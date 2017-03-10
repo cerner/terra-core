@@ -2,6 +2,16 @@
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _seleniumServerStandaloneJar = require('selenium-server-standalone-jar');
+
+var _seleniumServerStandaloneJar2 = _interopRequireDefault(_seleniumServerStandaloneJar);
+
+var _phantomjsPrebuilt = require('phantomjs-prebuilt');
+
+var _phantomjsPrebuilt2 = _interopRequireDefault(_phantomjsPrebuilt);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var windowSizes = {
   tiny: [470, 768],
   small: [622, 768],
@@ -23,9 +33,7 @@ var drivers = {
     desiredCapabilities: {
       browserName: 'phantomjs',
       javascriptEnabled: true,
-      acceptSslCerts: true,
-      'phantomjs.binary.path': '../../node_modules/phantomjs-prebuilt/bin/phantomjs',
-      'phantomjs.cli.args': []
+      acceptSslCerts: true
     }
   },
   chrome: {
@@ -79,6 +87,7 @@ module.exports = function (testConfigPath, settings) {
   var testingConfiguration = {};
 
   testingConfiguration.default = _extends({}, drivers.default);
+  testingConfiguration.default.desiredCapabilities['phantomjs.binary.path'] = _phantomjsPrebuilt2.default.path;
 
   if (remote) {
     returnSettings.selenium.start_process = false;
@@ -86,6 +95,9 @@ module.exports = function (testConfigPath, settings) {
     testingConfiguration.default.selenium_host = 'ondemand.saucelabs.com';
     testingConfiguration.default.username = process.env.SAUCE_USERNAME;
     testingConfiguration.default.access_key = process.env.SAUCE_ACCESS_KEY;
+  } else {
+    returnSettings.selenium.start_process = true;
+    returnSettings.selenium.server_path = _seleniumServerStandaloneJar2.default.path;
   }
 
   Object.keys(drivers).forEach(function (driverKey) {
