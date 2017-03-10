@@ -11,6 +11,7 @@ Cerner Corporation
 - Aaron McRuer [@Nerdenator]
 - Anusha Reddy Ganapuram [@aganapuram]
 - Siddharth Kalluru [@sid141288]
+- Tatiana Alexenko [@bunnyLord]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -24,3 +25,4 @@ Cerner Corporation
 [@aganapuram]: https://github.com/aganapuram
 [@sid141288]: https://github.com/sid141288
 [@tbiethman]: https://github.com/tbiethman
+[@bunnyLord]: https://github.com/bunnyLord
