@@ -56,19 +56,19 @@ Map Structure
 
 | Name                      | Default value   | Usage                                                       |
 |---------------------------|-----------------|-------------------------------------------------------------|
-| active-background-color   | $terra-primary-color-100  | Set the button active state background color      |
+| active-background-color   | $terra-blue-100           | Set the button active state background color      |
 | active-border-color       | $terra-grey-90            | Set the button active state border color          |
 | active-color              | $terra-white              | Set the button active state text color            |
-| background-color          | $terra-primary-color-80   | Set the button default state background color     |
-| border-color              | $terra-primary-color-90   | Set the button default state border color         |
+| background-color          | $terra-blue-80            | Set the button default state background color     |
+| border-color              | $terra-blue-90            | Set the button default state border color         |
 | color                     | $terra-white              | Set the button default state text color           |
-| disabled-background-color | $terra-primary-color-20   | Set the button disabled state background color    |
-| disabled-border-color     | $terra-primary-color-30   | Set the button disabled state border color        |
+| disabled-background-color | $terra-blue-20            | Set the button disabled state background color    |
+| disabled-border-color     | $terra-blue-30            | Set the button disabled state border color        |
 | disabled-color            | $terra-grey-50            | Set the button disabled state text color          |
-| hover-background-color    | $terra-primary-color-90   | Set the button hover/focus state background color |
+| hover-background-color    | $terra-blue-90            | Set the button hover/focus state background color |
 | hover-color               | $terra-white              | Set the button hover/focus state text color       |
-| link-color                | $terra-primary-color-90   | Set the link button text color                    |
-| outline-color             | $terra-primary-color-90   | Set the outline button text color                 |
+| link-color                | $terra-blue-90            | Set the link button text color                    |
+| outline-color             | $terra-blue-90            | Set the outline button text color                 |
 
 __$terra-button-secondary-color-scheme__
 
@@ -76,19 +76,19 @@ Map Structure
 
 | Name                      | Default value              | Usage                                             |
 |---------------------------|----------------------------|---------------------------------------------------|
-| active-background-color   | $terra-secondary-color-90  | Set the button active state background color      |
-| active-border-color       | $terra-secondary-color-100 | Set the button active state border color          |
+| active-background-color   | $terra-green-90            | Set the button active state background color      |
+| active-border-color       | $terra-green-100           | Set the button active state border color          |
 | active-color              | $terra-white               | Set the button active state text color            |
-| background-color          | $terra-secondary-color-50  | Set the button default state background color     |
-| border-color              | $terra-secondary-color-80  | Set the button default state border color         |
-| color                     | $terra-black               | Set the button default state text color           |
-| disabled-background-color | $terra-secondary-color-20  | Set the button disabled state background color    |
-| disabled-border-color     | $terra-secondary-color-30  | Set the button disabled state border color        |
+| background-color          | $terra-green-50            | Set the button default state background color     |
+| border-color              | $terra-green-80            | Set the button default state border color         |
+| color                     | $terra-dark                | Set the button default state text color           |
+| disabled-background-color | $terra-green-20            | Set the button disabled state background color    |
+| disabled-border-color     | $terra-green-30            | Set the button disabled state border color        |
 | disabled-color            | $terra-grey-50             | Set the button disabled state text color          |
-| hover-background-color    | $terra-secondary-color-60  | Set the button hover/focus state background color |
-| hover-color               | $terra-black               | Set the button hover/focus state text color       |
-| link-color                | $terra-secondary-color-90  | Set the link button text color                    |
-| outline-color             | $terra-secondary-color-90  | Set the outline button text color                 |
+| hover-background-color    | $terra-green-60            | Set the button hover/focus state background color |
+| hover-color               | $terra-dark                | Set the button hover/focus state text color       |
+| link-color                | $terra-green-90            | Set the link button text color                    |
+| outline-color             | $terra-green-90            | Set the outline button text color                 |
 
 __$terra-button-positive-color-scheme__
 
@@ -96,19 +96,19 @@ Map Structure
 
 | Name                      | Default value             | Usage                                             |
 |---------------------------|---------------------------|---------------------------------------------------|
-| active-background-color   | $terra-positive-color-90  | Set the button active state background color      |
-| active-border-color       | $terra-positive-color-100 | Set the button active state border color          |
+| active-background-color   | $terra-green-90           | Set the button active state background color      |
+| active-border-color       | $terra-green-100          | Set the button active state border color          |
 | active-color              | $terra-white              | Set the button active state text color            |
-| background-color          | $terra-positve-color-50   | Set the button default state background color     |
-| border-color              | $terra-positve-color-80   | Set the button default state border color         |
-| color                     | $terra-black              | Set the button default state text color           |
-| disabled-background-color | $terra-positve-color-20   | Set the button disabled state background color    |
-| disabled-border-color     | $terra-positve-color-30   | Set the button disabled state border color        |
+| background-color          | $terra-green-50           | Set the button default state background color     |
+| border-color              | $terra-green-80           | Set the button default state border color         |
+| color                     | $terra-dark               | Set the button default state text color           |
+| disabled-background-color | $terra-green-20           | Set the button disabled state background color    |
+| disabled-border-color     | $terra-green-30           | Set the button disabled state border color        |
 | disabled-color            | $terra-grey-50            | Set the button disabled state text color          |
-| hover-background-color    | $terra-positve-color-60   | Set the button hover/focus state background color |
-| hover-color               | $terra-black              | Set the button hover/focus state text color       |
-| link-color                | $terra-positve-color-90   | Set the link button text color                    |
-| outline-color             | $terra-positve-color-90   | Set the outline button text color                 |
+| hover-background-color    | $terra-green-60           | Set the button hover/focus state background color |
+| hover-color               | $terra-dark               | Set the button hover/focus state text color       |
+| link-color                | $terra-green-90           | Set the link button text color                    |
+| outline-color             | $terra-green-90           | Set the outline button text color                 |
 
 __$terra-button-negative-color-scheme__
 
@@ -116,19 +116,19 @@ Map Structure
 
 | Name                      | Default value              | Usage                                             |
 |---------------------------|----------------------------|---------------------------------------------------|
-| active-background-color   | $terra-negative-color-90   | Set the button active state background color      |
-| active-border-color       | $terra-negative-color-100  | Set the button active state border color          |
+| active-background-color   | $terra-red-90              | Set the button active state background color      |
+| active-border-color       | $terra-red-100             | Set the button active state border color          |
 | active-color              | $terra-white               | Set the button active state text color            |
-| background-color          | $terra-negative-color-70   | Set the button default state background color     |
-| border-color              | $terra-negative-color-80   | Set the button default state border color         |
+| background-color          | $terra-red-70              | Set the button default state background color     |
+| border-color              | $terra-red-80              | Set the button default state border color         |
 | color                     | $terra-white               | Set the button default state text color           |
-| disabled-background-color | $terra-negative-color-20   | Set the button disabled state background color    |
-| disabled-border-color     | $terra-negative-color-30   | Set the button disabled state border color        |
+| disabled-background-color | $terra-red-20              | Set the button disabled state background color    |
+| disabled-border-color     | $terra-red-30              | Set the button disabled state border color        |
 | disabled-color            | $terra-grey-50             | Set the button disabled state text color          |
-| hover-background-color    | $terra-negative-color-80   | Set the button hover/focus state background color |
+| hover-background-color    | $terra-red-80              | Set the button hover/focus state background color |
 | hover-color               | $terra-white               | Set the button hover/focus state text color       |
-| link-color                | $terra-negative-color-80   | Set the link button text color                    |
-| outline-color             | $terra-negative-color-80   | Set the outline button text color                 |
+| link-color                | $terra-red-80              | Set the link button text color                    |
+| outline-color             | $terra-red-80              | Set the outline button text color                 |
 
 __$terra-button-warning-color-scheme__
 
@@ -136,19 +136,19 @@ Map Structure
 
 | Name                      | Default value              | Usage                                             |
 |---------------------------|----------------------------|---------------------------------------------------|
-| active-background-color   | $terra-warning-color-100   | Set the button active state background color      |
-| active-border-color       | $terra-warning-color-100   | Set the button active state border color          |
+| active-background-color   | $terra-orange-100          | Set the button active state background color      |
+| active-border-color       | $terra-orange-100          | Set the button active state border color          |
 | active-color              | $terra-white               | Set the button active state text color            |
-| background-color          | $terra-warning-color-60    | Set the button default state background color     |
-| border-color              | $terra-warning-color-100   | Set the button default state border color         |
-| color                     | $terra-black               | Set the button default state text color           |
-| disabled-background-color | $terra-warning-color-20    | Set the button disabled state background color    |
-| disabled-border-color     | $terra-warning-color-30    | Set the button disabled state border color        |
+| background-color          | $terra-orange-60           | Set the button default state background color     |
+| border-color              | $terra-orange-100          | Set the button default state border color         |
+| color                     | $terra-dark                | Set the button default state text color           |
+| disabled-background-color | $terra-orange-20           | Set the button disabled state background color    |
+| disabled-border-color     | $terra-orange-30           | Set the button disabled state border color        |
 | disabled-color            | $terra-grey-50             | Set the button disabled state text color          |
-| hover-background-color    | $terra-warning-color-70    | Set the button hover/focus state background color |
-| hover-color               | $terra-black               | Set the button hover/focus state text color       |
-| link-color                | $terra-warning-color-100   | Set the link button text color                    |
-| outline-color             | $terra-warning-color-100   | Set the outline button text color                 |
+| hover-background-color    | $terra-orange-70           | Set the button hover/focus state background color |
+| hover-color               | $terra-dark                | Set the button hover/focus state text color       |
+| link-color                | $terra-orange-100          | Set the link button text color                    |
+| outline-color             | $terra-orange-100          | Set the outline button text color                 |
 
 __$terra-button-info-color-scheme__
 
@@ -156,16 +156,16 @@ Map Structure
 
 | Name                      | Default value         | Usage                                             |
 |---------------------------|-----------------------|---------------------------------------------------|
-| active-background-color   | $terra-info-color-100 | Set the button active state background color      |
+| active-background-color   | $terra-blue-100       | Set the button active state background color      |
 | active-border-color       | $terra-grey-90        | Set the button active state border color          |
 | active-color              | $terra-white          | Set the button active state text color            |
-| background-color          | $terra-info-color-80  | Set the button default state background color     |
-| border-color              | $terra-info-color-90  | Set the button default state border color         |
+| background-color          | $terra-blue-80        | Set the button default state background color     |
+| border-color              | $terra-blue-90        | Set the button default state border color         |
 | color                     | $terra-white          | Set the button default state text color           |
-| disabled-background-color | $terra-info-color-20  | Set the button disabled state background color    |
-| disabled-border-color     | $terra-info-color-30  | Set the button disabled state border color        |
+| disabled-background-color | $terra-blue-20        | Set the button disabled state background color    |
+| disabled-border-color     | $terra-blue-30        | Set the button disabled state border color        |
 | disabled-color            | $terra-grey-50        | Set the button disabled state text color          |
-| hover-background-color    | $terra-info-color-90  | Set the button hover/focus state background color |
+| hover-background-color    | $terra-blue-90        | Set the button hover/focus state background color |
 | hover-color               | $terra-white          | Set the button hover/focus state text color       |
-| link-color                | $terra-info-color-90  | Set the link button text color                    |
-| outline-color             | $terra-info-color-90  | Set the outline button text color                 |
+| link-color                | $terra-blue-90        | Set the link button text color                    |
+| outline-color             | $terra-blue-90        | Set the outline button text color                 |
