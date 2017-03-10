@@ -4,12 +4,12 @@
 const shell = require('shelljs');
 
 const driver = process.argv[2] || 'default';
-const script = `$(cd ..; npm bin)/../../packages/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-tiny &&
-                $(cd ..; npm bin)/../../packages/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-small &&
-                $(cd ..; npm bin)/../../packages/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-medium &&
-                $(cd ..; npm bin)/../../packages/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-large &&
-                $(cd ..; npm bin)/../../packages/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-huge &&
-                $(cd ..; npm bin)/../../packages/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-enormous`;
+const script = `./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-tiny &&
+                ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-small &&
+                ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-medium &&
+                ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-large &&
+                ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-huge &&
+                ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e ${driver}-enormous`;
 
 if (shell.exec(script).code !== 0) {
   shell.exit(1);

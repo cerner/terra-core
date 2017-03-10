@@ -1,11 +1,10 @@
-# Terra Toolkit
+# Terra Markdown
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-toolkit.svg)](https://www.npmjs.org/package/terra-toolkit)
-[![Build Status](https://travis-ci.org/cerner/terra-toolkit.svg?branch=master)](https://travis-ci.org/cerner/terra-toolkit)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
+[![NPM version](http://img.shields.io/npm/v/terra-markdown.svg)](https://www.npmjs.org/package/terra-markdown)
+[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-Terra Toolkit is a utility module used to facilitate developmen of Terra projects.
+React component to display the content of markdown files.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -13,9 +12,12 @@ Terra Toolkit is a utility module used to facilitate developmen of Terra project
 
 ## Getting Started
 
-- Install with [npm](https://www.npmjs.com): `npm install terra-toolkit`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-markdown`
 
 ## Documentation
+
+Documentation for this component is spilt into individual files.
+One file for the main component and one file for each component modifier.
 
 See the [documentation](docs/).
 
