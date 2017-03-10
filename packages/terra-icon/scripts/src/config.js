@@ -6,4 +6,5 @@ export const CernerOneIcons = {
 export const TerraIcon = {
   csvFile: 'src/cerner-one-icons.csv',
   svgDir: 'src/svg/',
+  iconDir: 'src/icon/',
 };

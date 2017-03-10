@@ -24,10 +24,11 @@
   "devDependencies": {
     "cerner-one-icons": "git+https://github.cerner.com/ux/cerner-one-icons.git",
     "csvtojson": "^1.1.4",
+    "jsdom": "^9.11.0",
     "svgo": "^0.7.2",
-    "terra-toolkit": "^0.1.0",
     "terra-markdown": "^0.1.0",
-    "terra-props-table": "^0.1.0"
+    "terra-props-table": "^0.1.0",
+    "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -44,6 +45,7 @@
     "compilescripts:build": "$(cd ..; npm bin)/babel scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
+    "generate-icon": "node scripts/lib/generate-icon/index.js",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",

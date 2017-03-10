@@ -13,7 +13,7 @@ var csvObject = function csvObject(name, filepath, themeable, bidi) {
 
   this.name = name;
   this.svgSrc = 'node_modules/cerner-one-icons/' + filepath;
-  this.svgDest = _config.TerraIcon.svgDir + '/' + name + '.svg';
+  this.svgDest = '' + _config.TerraIcon.svgDir + name + '.svg';
   this.isThemeable = !!themeable;
   this.isBidi = bidi === 'bi-directional';
   this.isSpin = name === 'spinner';
