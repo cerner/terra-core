@@ -8,10 +8,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 require('./Icon.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27,7 +23,7 @@ var defaultProps = {
 };
 
 var Icon = function Icon(props) {
-  return _react2.default.createElement('div', null);
+  return _react2.default.createElement('div', props);
 };
 
 Icon.propTypes = propTypes;

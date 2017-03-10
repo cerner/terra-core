@@ -1,12 +1,13 @@
 const fs = require('fs');
 
 const readSvg = csvObject => new Promise((resolve, reject) => {
-  fs.readFile(csvObject.svgSrc, 'utf-8', (error, svg) => {
+  const objectCsv = Object.assign({}, csvObject);
+  fs.readFile(objectCsv.svgSrc, 'utf-8', (error, svg) => {
     if (error) {
       reject(error);
     } else {
-      csvObject.svg = svg;
-      resolve(csvObject);
+      objectCsv.svg = svg;
+      resolve(objectCsv);
     }
   });
 });

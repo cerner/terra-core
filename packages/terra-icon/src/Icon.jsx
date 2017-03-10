@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import './Icon.scss';
 
 const propTypes = {
@@ -12,8 +11,8 @@ const defaultProps = {
   variant: 'terra-Icon--default',
 };
 
-const Icon = (props) => (
-  <div />
+const Icon = props => (
+  <div {...props} />
 );
 
 Icon.propTypes = propTypes;

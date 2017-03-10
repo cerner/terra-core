@@ -1,12 +1,10 @@
 import classNames from 'classnames';
 
 const svgoConfig = (csvObject) => {
-
   const classes = classNames({ 'is-static': !csvObject.isThemeable },
                              { 'is-themeable': csvObject.isThemeable },
                              { 'is-spin': csvObject.isSpin },
                              { 'is-bidi': csvObject.isBidi });
-  console.log(classes);
   return {
     plugins: [
       {
@@ -22,7 +20,6 @@ const svgoConfig = (csvObject) => {
       },
     ],
   };
-
 };
 
 module.exports = svgoConfig;

@@ -1,16 +1,8 @@
 'use strict';
 
-var _fs = require('fs');
-
-var _fs2 = _interopRequireDefault(_fs);
-
 var _csvtojson = require('csvtojson');
 
 var _csvtojson2 = _interopRequireDefault(_csvtojson);
-
-var _shelljs = require('shelljs');
-
-var _shelljs2 = _interopRequireDefault(_shelljs);
 
 var _removeMakeDirectories = require('./removeMakeDirectories');
 
@@ -32,7 +24,7 @@ var _writeSvg = require('./writeSvg');
 
 var _writeSvg2 = _interopRequireDefault(_writeSvg);
 
-var _config = require('../config.js');
+var _config = require('../config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47,5 +39,7 @@ var csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
 (0, _csvtojson2.default)({ noheader: true, headers: csvHeaders }).fromFile(_config.TerraIcon.csvFile).on('json', function (jsonObj) {
   var csvObject = new _csvObject2.default(jsonObj.name, jsonObj.filepath, jsonObj.themeable, jsonObj.bidi);
 
-  (0, _readSvg2.default)(csvObject).then(_optimizeSvg2.default).then(_writeSvg2.default).catch(console.error);
+  (0, _readSvg2.default)(csvObject).then(_optimizeSvg2.default).then(_writeSvg2.default)
+  // eslint-disable-next-line no-console
+  .catch(console.error);
 });

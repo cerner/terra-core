@@ -1,8 +1,8 @@
-const shell = require('shelljs');
-import { TerraIcon } from '../config.js';
+/* eslint-disable import/no-extraneous-dependencies */
+import shell from 'shelljs';
+import { TerraIcon } from '../config';
 
 const removeMakeDirectories = () => {
-
   // Delete destination directory
   shell.rm('-rf', TerraIcon.svgDir);
 

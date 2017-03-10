@@ -1,17 +1,20 @@
 'use strict';
 
-var _config = require('../config.js');
+var _shelljs = require('shelljs');
 
-var shell = require('shelljs');
+var _shelljs2 = _interopRequireDefault(_shelljs);
 
+var _config = require('../config');
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* eslint-disable import/no-extraneous-dependencies */
 var removeMakeDirectories = function removeMakeDirectories() {
-
   // Delete destination directory
-  shell.rm('-rf', _config.TerraIcon.svgDir);
+  _shelljs2.default.rm('-rf', _config.TerraIcon.svgDir);
 
   // Create destination directories
-  shell.mkdir(_config.TerraIcon.svgDir);
+  _shelljs2.default.mkdir(_config.TerraIcon.svgDir);
 };
 
 module.exports = removeMakeDirectories;

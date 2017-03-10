@@ -1,13 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import fs from 'fs';
 import csv from 'csvtojson';
-import shell from 'shelljs';
 import removeMakeDirectories from './removeMakeDirectories';
 import CsvObject from './csvObject';
 import readSvg from './readSvg';
 import optimizeSvg from './optimizeSvg';
 import writeSvg from './writeSvg';
-import { CernerOneIcons, TerraIcon } from '../config.js';
+import { TerraIcon } from '../config';
 /* eslint-enable import/no-extraneous-dependencies */
 
 removeMakeDirectories();
@@ -22,5 +20,6 @@ csv({ noheader: true, headers: csvHeaders }).fromFile(TerraIcon.csvFile).on('jso
   readSvg(csvObject)
     .then(optimizeSvg)
     .then(writeSvg)
+    // eslint-disable-next-line no-console
     .catch(console.error);
 });
