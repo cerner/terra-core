@@ -5,11 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 var CernerOneIcons = exports.CernerOneIcons = {
   csvFile: 'node_modules/cerner-one-icons/src/CernerOneIcons-CSV.csv',
-  svgDir: 'node_modules/cerner-one-icons/src/icons'
+  svgDir: 'node_modules/cerner-one-icons/src/icons/'
 };
 
 var TerraIcon = exports.TerraIcon = {
   csvFile: 'src/cerner-one-icons.csv',
-  svgDir: 'src/svg',
-  iconDir: 'src/icon'
+  svgDir: 'src/svg/'
 };

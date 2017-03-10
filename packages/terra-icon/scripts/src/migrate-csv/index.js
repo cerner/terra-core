@@ -10,3 +10,4 @@ shell.rm('-r', TerraIcon.csvFile);
 fs.createReadStream(CernerOneIcons.csvFile).pipe(fs.createWriteStream(TerraIcon.csvFile));
 
 console.log(`Copied ${CernerOneIcons.csvFile} to ${TerraIcon.csvFile}`);
+
