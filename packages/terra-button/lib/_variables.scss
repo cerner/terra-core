@@ -35,99 +35,99 @@ $terra-button-default-color-scheme: (
 ) !default;
 
 $terra-button-primary-color-scheme: (
-  active-background-color: $terra-primary-color-100,
+  active-background-color: $terra-blue-100,
   active-border-color: $terra-grey-90,
   active-color: $terra-white,
-  background-color: $terra-primary-color-80,
-  border-color: $terra-primary-color-90,
+  background-color: $terra-blue-80,
+  border-color: $terra-blue-90,
   color: $terra-white,
-  disabled-background-color: $terra-primary-color-20,
-  disabled-border-color: $terra-primary-color-30,
+  disabled-background-color: $terra-blue-20,
+  disabled-border-color: $terra-blue-30,
   disabled-color: $terra-grey-50,
-  hover-background-color: $terra-primary-color-90,
+  hover-background-color: $terra-blue-90,
   hover-color: $terra-white,
-  link-color: $terra-primary-color-90,
-  outline-color: $terra-primary-color-90
+  link-color: $terra-blue-90,
+  outline-color: $terra-blue-90
 ) !default;
 
 $terra-button-secondary-color-scheme: (
-  active-background-color: $terra-secondary-color-90,
-  active-border-color: $terra-secondary-color-100,
+  active-background-color: $terra-green-90,
+  active-border-color: $terra-green-100,
   active-color: $terra-white,
-  background-color: $terra-secondary-color-50,
-  border-color: $terra-secondary-color-80,
-  color: $terra-black,
-  disabled-background-color: $terra-secondary-color-20,
-  disabled-border-color: $terra-secondary-color-30,
+  background-color: $terra-green-50,
+  border-color: $terra-green-80,
+  color: $terra-dark,
+  disabled-background-color: $terra-green-20,
+  disabled-border-color: $terra-green-30,
   disabled-color: $terra-grey-50,
-  hover-background-color: $terra-secondary-color-60,
-  hover-color: $terra-black,
-  link-color: $terra-secondary-color-90,
-  outline-color: $terra-secondary-color-90
+  hover-background-color: $terra-green-60,
+  hover-color: $terra-dark,
+  link-color: $terra-green-90,
+  outline-color: $terra-green-90
 ) !default;
 
 $terra-button-positive-color-scheme: (
-  active-background-color: $terra-positive-color-90,
-  active-border-color: $terra-positive-color-100,
+  active-background-color: $terra-green-90,
+  active-border-color: $terra-green-100,
   active-color: $terra-white,
-  background-color: $terra-positive-color-50,
-  border-color: $terra-positive-color-80,
-  color: $terra-black,
-  disabled-background-color: $terra-positive-color-20,
-  disabled-border-color: $terra-positive-color-30,
+  background-color: $terra-green-50,
+  border-color: $terra-green-80,
+  color: $terra-dark,
+  disabled-background-color: $terra-green-20,
+  disabled-border-color: $terra-green-30,
   disabled-color: $terra-grey-50,
-  hover-background-color: $terra-positive-color-60,
-  hover-color: $terra-black,
-  link-color: $terra-positive-color-90,
-  outline-color: $terra-positive-color-90
+  hover-background-color: $terra-green-60,
+  hover-color: $terra-dark,
+  link-color: $terra-green-90,
+  outline-color: $terra-green-90
 ) !default;
 
 $terra-button-negative-color-scheme: (
-  active-background-color: $terra-negative-color-90,
-  active-border-color: $terra-negative-color-100,
+  active-background-color: $terra-red-90,
+  active-border-color: $terra-red-100,
   active-color: $terra-white,
-  background-color: $terra-negative-color-70,
-  border-color: $terra-negative-color-80,
+  background-color: $terra-red-70,
+  border-color: $terra-red-80,
   color: $terra-white,
-  disabled-background-color: $terra-negative-color-20,
-  disabled-border-color: $terra-negative-color-30,
+  disabled-background-color: $terra-red-20,
+  disabled-border-color: $terra-red-30,
   disabled-color: $terra-grey-50,
-  hover-background-color: $terra-negative-color-80,
+  hover-background-color: $terra-red-80,
   hover-color: $terra-white,
-  link-color: $terra-negative-color-80,
-  outline-color: $terra-negative-color-80
+  link-color: $terra-red-80,
+  outline-color: $terra-red-80
 ) !default;
 
 $terra-button-warning-color-scheme: (
-  active-background-color: $terra-warning-color-100,
-  active-border-color: $terra-warning-color-100,
+  active-background-color: $terra-orange-100,
+  active-border-color: $terra-orange-100,
   active-color: $terra-white,
-  background-color: $terra-warning-color-60,
-  border-color: $terra-warning-color-100,
-  color: $terra-black,
-  disabled-background-color: $terra-warning-color-20,
-  disabled-border-color: $terra-warning-color-30,
+  background-color: $terra-orange-60,
+  border-color: $terra-orange-100,
+  color: $terra-dark,
+  disabled-background-color: $terra-orange-20,
+  disabled-border-color: $terra-orange-30,
   disabled-color: $terra-grey-50,
-  hover-background-color: $terra-warning-color-70,
-  hover-color: $terra-black,
-  link-color: $terra-warning-color-100,
-  outline-color: $terra-warning-color-100
+  hover-background-color: $terra-orange-70,
+  hover-color: $terra-dark,
+  link-color: $terra-orange-100,
+  outline-color: $terra-orange-100
 ) !default;
 
 $terra-button-info-color-scheme: (
-  active-background-color: $terra-info-color-100,
+  active-background-color: $terra-blue-100,
   active-border-color: $terra-grey-90,
   active-color: $terra-white,
-  background-color: $terra-info-color-80,
-  border-color: $terra-info-color-90,
+  background-color: $terra-blue-80,
+  border-color: $terra-blue-90,
   color: $terra-white,
-  disabled-background-color: $terra-info-color-20,
-  disabled-border-color: $terra-info-color-30,
+  disabled-background-color: $terra-blue-20,
+  disabled-border-color: $terra-blue-30,
   disabled-color: $terra-grey-50,
-  hover-background-color: $terra-info-color-90,
+  hover-background-color: $terra-blue-90,
   hover-color: $terra-white,
-  link-color: $terra-info-color-90,
-  outline-color: $terra-info-color-90
+  link-color: $terra-blue-90,
+  outline-color: $terra-blue-90
 ) !default;
 
 $terra-button-font-sizes: (

@@ -42,7 +42,7 @@ Map Structure
 
 | Name              | Default value             | Usage                                        |
 |-------------------|---------------------------|----------------------------------------------|
-| background-color  | $terra-primary-color-100  | Set the label primary state background color |
+| background-color  | $terra-blue-100           | Set the label primary state background color |
 | color             | $terra-white              | Set the label primary state text color       |
 
 __$terra-label-secondary-color-scheme__
@@ -51,7 +51,7 @@ Map Structure
 
 | Name              | Default value             | Usage                                          |
 |-------------------|---------------------------|------------------------------------------------|
-| background-color  | $terra-secondary-color-90 | Set the label secondary state background color |
+| background-color  | $terra-green-90           | Set the label secondary state background color |
 | color             | $terra-white              | Set the label secondary state text color       |
 
 __$terra-label-positive-color-scheme__
@@ -60,7 +60,7 @@ Map Structure
 
 | Name              | Default value             | Usage                                         |
 |-------------------|---------------------------|-----------------------------------------------|
-| background-color  | $terra-positive-color-90  | Set the label positive state background color |
+| background-color  | $terra-green-90           | Set the label positive state background color |
 | color             | $terra-white              | Set the label positive state text color       |
 
 __$terra-label-negative-color-scheme__
@@ -69,7 +69,7 @@ Map Structure
 
 | Name              | Default value             | Usage                                         |
 |-------------------|---------------------------|-----------------------------------------------|
-| background-color  | $terra-negative-color-90  | Set the label negative state background color |
+| background-color  | $terra-red-90             | Set the label negative state background color |
 | color             | $terra-white              | Set the label negative state text color       |
 
 __$terra-label-warning-color-scheme__
@@ -78,7 +78,7 @@ Map Structure
 
 | Name              | Default value             | Usage                                        |
 |-------------------|---------------------------|----------------------------------------------|
-| background-color  | $terra-warning-color-100  | Set the label warning state background color |
+| background-color  | $terra-orange-100         | Set the label warning state background color |
 | color             | $terra-white              | Set the label warning state text color       |
 
 
@@ -88,5 +88,5 @@ Map Structure
 
 | Name              | Default value             | Usage                                     |
 |-------------------|---------------------------|-------------------------------------------|
-| background-color  | $terra-info-color-100     | Set the label info state background color |
+| background-color  | $terra-blue-100           | Set the label info state background color |
 | color             | $terra-white              | Set the label info state background color |
