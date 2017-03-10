@@ -35,11 +35,6 @@
     "terra-legacy-theme": "^0.1.0",
     "terra-mixins": "^1.0.0"
   },
-  "devDependencies": {
-    "terra-application": "^0.2.0",
-    "terra-legacy-theme": "^0.1.0",
-    "terra-mixins": "^1.0.0"
-  },
   "dependencies": {
     "nightwatch": "^0.9.12",
     "phantomjs-prebuilt": "^2.1.14",
