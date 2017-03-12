@@ -9,7 +9,7 @@ const propTypes = {
    */
   isBidi: PropTypes.bool,
   /**
-   * Should the SVG rotate".
+   * Should the SVG rotate.
    */
   isSpin: PropTypes.bool,
   /**

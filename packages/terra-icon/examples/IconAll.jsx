@@ -1,8 +1,12 @@
 import React from 'react';
-import IconAdd from '../src/icon/IconAdd';
+import { IconAdd } from '../src/Icon.jsx';
+import { IconAbnormal} from '../src/Icon.jsx';
 
 const IconAll = () => (
-  <IconAdd />
+  <div>
+    <IconAdd />
+    <IconAbnormal />
+  </div>
 );
 
 export default IconAll;

@@ -28,7 +28,7 @@ var propTypes = {
    */
   isBidi: _react.PropTypes.bool,
   /**
-   * Should the SVG rotate".
+   * Should the SVG rotate.
    */
   isSpin: _react.PropTypes.bool,
   /**

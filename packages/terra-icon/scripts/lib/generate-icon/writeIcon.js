@@ -28,7 +28,8 @@ var writeIcon = function writeIcon(reactIcon) {
       if (error) {
         reject(error);
       } else {
-        resolve(console.log('Created ' + reactIcon.name + ' at ' + reactIcon.file));
+        console.log('Created ' + reactIcon.name + ' at ' + reactIcon.file);
+        resolve(reactIcon.name);
       }
     });
   });

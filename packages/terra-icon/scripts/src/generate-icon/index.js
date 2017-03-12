@@ -6,6 +6,7 @@ import removeMakeDirectories from './removeMakeDirectories';
 import parseSvg from './parseSvg';
 import renderJsx from './renderJsx';
 import writeIcon from './writeIcon';
+import writeIconExport from './writeIconExport';
 import { TerraIcon } from '../config';
 /* eslint-enable import/no-extraneous-dependencies */
 
@@ -22,5 +23,6 @@ const svgs = fs.readdirSync(TerraIcon.svgDir)
 svgs.forEach(function(svg) {
     parseSvg(svg)
       .then(renderJsx)
-      .then(writeIcon);
+      .then(writeIcon)
+      .then(writeIconExport);
 });

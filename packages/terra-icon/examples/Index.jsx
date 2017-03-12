@@ -6,7 +6,7 @@ import ReadMe from '../docs/README.md';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import IconSrc from '!raw-loader!../src/IconBase.jsx';
-import IconAll from './IconAll';
+import IconAll from './IconAll.jsx';
 
 const IconExamples = () => (
   <div>
