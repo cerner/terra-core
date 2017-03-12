@@ -1,6 +1,6 @@
 import React from 'react';
-import IconBase from '../IconBase';
 import classNames from 'classnames';
+import IconBase from '../IconBase';
 
 const SvgIcon = customProps => {
   const attributes = Object.assign({}, customProps);

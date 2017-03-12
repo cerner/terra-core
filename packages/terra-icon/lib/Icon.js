@@ -13,6 +13,15 @@ Object.defineProperty(exports, 'IconAbnormal', {
   }
 });
 
+var _IconAddPerson = require('./icon/IconAddPerson.jsx');
+
+Object.defineProperty(exports, 'IconAddPerson', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconAddPerson).default;
+  }
+});
+
 var _IconAlert = require('./icon/IconAlert.jsx');
 
 Object.defineProperty(exports, 'IconAlert', {
@@ -22,21 +31,12 @@ Object.defineProperty(exports, 'IconAlert', {
   }
 });
 
-var _IconAdd = require('./icon/IconAdd.jsx');
+var _IconAnnouncement = require('./icon/IconAnnouncement.jsx');
 
-Object.defineProperty(exports, 'IconAdd', {
+Object.defineProperty(exports, 'IconAnnouncement', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconAdd).default;
-  }
-});
-
-var _IconAddPerson = require('./icon/IconAddPerson.jsx');
-
-Object.defineProperty(exports, 'IconAddPerson', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconAddPerson).default;
+    return _interopRequireDefault(_IconAnnouncement).default;
   }
 });
 
@@ -58,57 +58,12 @@ Object.defineProperty(exports, 'IconAnalytics', {
   }
 });
 
-var _IconArchive = require('./icon/IconArchive.jsx');
-
-Object.defineProperty(exports, 'IconArchive', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconArchive).default;
-  }
-});
-
-var _IconAnnouncement = require('./icon/IconAnnouncement.jsx');
-
-Object.defineProperty(exports, 'IconAnnouncement', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconAnnouncement).default;
-  }
-});
-
 var _IconAttachment = require('./icon/IconAttachment.jsx');
 
 Object.defineProperty(exports, 'IconAttachment', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconAttachment).default;
-  }
-});
-
-var _IconAvailable = require('./icon/IconAvailable.jsx');
-
-Object.defineProperty(exports, 'IconAvailable', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconAvailable).default;
-  }
-});
-
-var _IconAway = require('./icon/IconAway.jsx');
-
-Object.defineProperty(exports, 'IconAway', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconAway).default;
-  }
-});
-
-var _IconBriefcase = require('./icon/IconBriefcase.jsx');
-
-Object.defineProperty(exports, 'IconBriefcase', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconBriefcase).default;
   }
 });
 
@@ -121,12 +76,39 @@ Object.defineProperty(exports, 'IconBookmark', {
   }
 });
 
-var _IconBusy = require('./icon/IconBusy.jsx');
+var _IconAway = require('./icon/IconAway.jsx');
 
-Object.defineProperty(exports, 'IconBusy', {
+Object.defineProperty(exports, 'IconAway', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconBusy).default;
+    return _interopRequireDefault(_IconAway).default;
+  }
+});
+
+var _IconArchive = require('./icon/IconArchive.jsx');
+
+Object.defineProperty(exports, 'IconArchive', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconArchive).default;
+  }
+});
+
+var _IconAvailable = require('./icon/IconAvailable.jsx');
+
+Object.defineProperty(exports, 'IconAvailable', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconAvailable).default;
+  }
+});
+
+var _IconAdd = require('./icon/IconAdd.jsx');
+
+Object.defineProperty(exports, 'IconAdd', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconAdd).default;
   }
 });
 
@@ -139,12 +121,39 @@ Object.defineProperty(exports, 'IconCalendar', {
   }
 });
 
+var _IconBusy = require('./icon/IconBusy.jsx');
+
+Object.defineProperty(exports, 'IconBusy', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconBusy).default;
+  }
+});
+
 var _IconCalculator = require('./icon/IconCalculator.jsx');
 
 Object.defineProperty(exports, 'IconCalculator', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconCalculator).default;
+  }
+});
+
+var _IconCancel = require('./icon/IconCancel.jsx');
+
+Object.defineProperty(exports, 'IconCancel', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconCancel).default;
+  }
+});
+
+var _IconBriefcase = require('./icon/IconBriefcase.jsx');
+
+Object.defineProperty(exports, 'IconBriefcase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconBriefcase).default;
   }
 });
 
@@ -166,33 +175,6 @@ Object.defineProperty(exports, 'IconCaretLeft', {
   }
 });
 
-var _IconCaretDown = require('./icon/IconCaretDown.jsx');
-
-Object.defineProperty(exports, 'IconCaretDown', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconCaretDown).default;
-  }
-});
-
-var _IconCaretRight = require('./icon/IconCaretRight.jsx');
-
-Object.defineProperty(exports, 'IconCaretRight', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconCaretRight).default;
-  }
-});
-
-var _IconCancel = require('./icon/IconCancel.jsx');
-
-Object.defineProperty(exports, 'IconCancel', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconCancel).default;
-  }
-});
-
 var _IconCaretUp = require('./icon/IconCaretUp.jsx');
 
 Object.defineProperty(exports, 'IconCaretUp', {
@@ -202,30 +184,12 @@ Object.defineProperty(exports, 'IconCaretUp', {
   }
 });
 
-var _IconCheckmark = require('./icon/IconCheckmark.jsx');
+var _IconCaretDown = require('./icon/IconCaretDown.jsx');
 
-Object.defineProperty(exports, 'IconCheckmark', {
+Object.defineProperty(exports, 'IconCaretDown', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconCheckmark).default;
-  }
-});
-
-var _IconChevron = require('./icon/IconChevron.jsx');
-
-Object.defineProperty(exports, 'IconChevron', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconChevron).default;
-  }
-});
-
-var _IconChevronDown = require('./icon/IconChevronDown.jsx');
-
-Object.defineProperty(exports, 'IconChevronDown', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconChevronDown).default;
+    return _interopRequireDefault(_IconCaretDown).default;
   }
 });
 
@@ -238,21 +202,21 @@ Object.defineProperty(exports, 'IconChecklist', {
   }
 });
 
-var _IconChevronRight = require('./icon/IconChevronRight.jsx');
+var _IconCheckmark = require('./icon/IconCheckmark.jsx');
 
-Object.defineProperty(exports, 'IconChevronRight', {
+Object.defineProperty(exports, 'IconCheckmark', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconChevronRight).default;
+    return _interopRequireDefault(_IconCheckmark).default;
   }
 });
 
-var _IconChevronUp = require('./icon/IconChevronUp.jsx');
+var _IconChevronDown = require('./icon/IconChevronDown.jsx');
 
-Object.defineProperty(exports, 'IconChevronUp', {
+Object.defineProperty(exports, 'IconChevronDown', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconChevronUp).default;
+    return _interopRequireDefault(_IconChevronDown).default;
   }
 });
 
@@ -265,21 +229,39 @@ Object.defineProperty(exports, 'IconChevronLeft', {
   }
 });
 
+var _IconChevron = require('./icon/IconChevron.jsx');
+
+Object.defineProperty(exports, 'IconChevron', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconChevron).default;
+  }
+});
+
+var _IconCaretRight = require('./icon/IconCaretRight.jsx');
+
+Object.defineProperty(exports, 'IconCaretRight', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconCaretRight).default;
+  }
+});
+
+var _IconChevronUp = require('./icon/IconChevronUp.jsx');
+
+Object.defineProperty(exports, 'IconChevronUp', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconChevronUp).default;
+  }
+});
+
 var _IconClipboard = require('./icon/IconClipboard.jsx');
 
 Object.defineProperty(exports, 'IconClipboard', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconClipboard).default;
-  }
-});
-
-var _IconClear = require('./icon/IconClear.jsx');
-
-Object.defineProperty(exports, 'IconClear', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconClear).default;
   }
 });
 
@@ -292,21 +274,12 @@ Object.defineProperty(exports, 'IconClock', {
   }
 });
 
-var _IconComment = require('./icon/IconComment.jsx');
+var _IconClear = require('./icon/IconClear.jsx');
 
-Object.defineProperty(exports, 'IconComment', {
+Object.defineProperty(exports, 'IconClear', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconComment).default;
-  }
-});
-
-var _IconComplete = require('./icon/IconComplete.jsx');
-
-Object.defineProperty(exports, 'IconComplete', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconComplete).default;
+    return _interopRequireDefault(_IconClear).default;
   }
 });
 
@@ -319,12 +292,21 @@ Object.defineProperty(exports, 'IconClose', {
   }
 });
 
-var _IconCommit = require('./icon/IconCommit.jsx');
+var _IconComment = require('./icon/IconComment.jsx');
 
-Object.defineProperty(exports, 'IconCommit', {
+Object.defineProperty(exports, 'IconComment', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconCommit).default;
+    return _interopRequireDefault(_IconComment).default;
+  }
+});
+
+var _IconChevronRight = require('./icon/IconChevronRight.jsx');
+
+Object.defineProperty(exports, 'IconChevronRight', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconChevronRight).default;
   }
 });
 
@@ -337,21 +319,21 @@ Object.defineProperty(exports, 'IconCritical', {
   }
 });
 
+var _IconCommit = require('./icon/IconCommit.jsx');
+
+Object.defineProperty(exports, 'IconCommit', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconCommit).default;
+  }
+});
+
 var _IconDeviceAlert = require('./icon/IconDeviceAlert.jsx');
 
 Object.defineProperty(exports, 'IconDeviceAlert', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconDeviceAlert).default;
-  }
-});
-
-var _IconDeviceCheck = require('./icon/IconDeviceCheck.jsx');
-
-Object.defineProperty(exports, 'IconDeviceCheck', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconDeviceCheck).default;
   }
 });
 
@@ -364,12 +346,21 @@ Object.defineProperty(exports, 'IconDevice', {
   }
 });
 
-var _IconDoNotDisturb = require('./icon/IconDoNotDisturb.jsx');
+var _IconComplete = require('./icon/IconComplete.jsx');
 
-Object.defineProperty(exports, 'IconDoNotDisturb', {
+Object.defineProperty(exports, 'IconComplete', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconDoNotDisturb).default;
+    return _interopRequireDefault(_IconComplete).default;
+  }
+});
+
+var _IconDeviceCheck = require('./icon/IconDeviceCheck.jsx');
+
+Object.defineProperty(exports, 'IconDeviceCheck', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconDeviceCheck).default;
   }
 });
 
@@ -382,21 +373,21 @@ Object.defineProperty(exports, 'IconDiamond', {
   }
 });
 
+var _IconDoorOpen = require('./icon/IconDoorOpen.jsx');
+
+Object.defineProperty(exports, 'IconDoorOpen', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconDoorOpen).default;
+  }
+});
+
 var _IconDocuments = require('./icon/IconDocuments.jsx');
 
 Object.defineProperty(exports, 'IconDocuments', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconDocuments).default;
-  }
-});
-
-var _IconDown = require('./icon/IconDown.jsx');
-
-Object.defineProperty(exports, 'IconDown', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconDown).default;
   }
 });
 
@@ -409,12 +400,12 @@ Object.defineProperty(exports, 'IconDownload', {
   }
 });
 
-var _IconDoorOpen = require('./icon/IconDoorOpen.jsx');
+var _IconDoNotDisturb = require('./icon/IconDoNotDisturb.jsx');
 
-Object.defineProperty(exports, 'IconDoorOpen', {
+Object.defineProperty(exports, 'IconDoNotDisturb', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconDoorOpen).default;
+    return _interopRequireDefault(_IconDoNotDisturb).default;
   }
 });
 
@@ -463,12 +454,12 @@ Object.defineProperty(exports, 'IconEnvelope', {
   }
 });
 
-var _IconError = require('./icon/IconError.jsx');
+var _IconDown = require('./icon/IconDown.jsx');
 
-Object.defineProperty(exports, 'IconError', {
+Object.defineProperty(exports, 'IconDown', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconError).default;
+    return _interopRequireDefault(_IconDown).default;
   }
 });
 
@@ -499,15 +490,6 @@ Object.defineProperty(exports, 'IconExpandMore', {
   }
 });
 
-var _IconFlag = require('./icon/IconFlag.jsx');
-
-Object.defineProperty(exports, 'IconFlag', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconFlag).default;
-  }
-});
-
 var _IconFeatured = require('./icon/IconFeatured.jsx');
 
 Object.defineProperty(exports, 'IconFeatured', {
@@ -517,48 +499,12 @@ Object.defineProperty(exports, 'IconFeatured', {
   }
 });
 
-var _IconFolder = require('./icon/IconFolder.jsx');
+var _IconError = require('./icon/IconError.jsx');
 
-Object.defineProperty(exports, 'IconFolder', {
+Object.defineProperty(exports, 'IconError', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconFolder).default;
-  }
-});
-
-var _IconFlowsheet = require('./icon/IconFlowsheet.jsx');
-
-Object.defineProperty(exports, 'IconFlowsheet', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconFlowsheet).default;
-  }
-});
-
-var _IconFunnel = require('./icon/IconFunnel.jsx');
-
-Object.defineProperty(exports, 'IconFunnel', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconFunnel).default;
-  }
-});
-
-var _IconForward = require('./icon/IconForward.jsx');
-
-Object.defineProperty(exports, 'IconForward', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconForward).default;
-  }
-});
-
-var _IconGapChecking = require('./icon/IconGapChecking.jsx');
-
-Object.defineProperty(exports, 'IconGapChecking', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconGapChecking).default;
+    return _interopRequireDefault(_IconError).default;
   }
 });
 
@@ -571,12 +517,48 @@ Object.defineProperty(exports, 'IconFirst', {
   }
 });
 
-var _IconHelpInverse = require('./icon/IconHelpInverse.jsx');
+var _IconFlowsheet = require('./icon/IconFlowsheet.jsx');
 
-Object.defineProperty(exports, 'IconHelpInverse', {
+Object.defineProperty(exports, 'IconFlowsheet', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconHelpInverse).default;
+    return _interopRequireDefault(_IconFlowsheet).default;
+  }
+});
+
+var _IconForward = require('./icon/IconForward.jsx');
+
+Object.defineProperty(exports, 'IconForward', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconForward).default;
+  }
+});
+
+var _IconFlag = require('./icon/IconFlag.jsx');
+
+Object.defineProperty(exports, 'IconFlag', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconFlag).default;
+  }
+});
+
+var _IconGapChecking = require('./icon/IconGapChecking.jsx');
+
+Object.defineProperty(exports, 'IconGapChecking', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconGapChecking).default;
+  }
+});
+
+var _IconFolder = require('./icon/IconFolder.jsx');
+
+Object.defineProperty(exports, 'IconFolder', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconFolder).default;
   }
 });
 
@@ -589,12 +571,12 @@ Object.defineProperty(exports, 'IconGlasses', {
   }
 });
 
-var _IconHigh = require('./icon/IconHigh.jsx');
+var _IconFunnel = require('./icon/IconFunnel.jsx');
 
-Object.defineProperty(exports, 'IconHigh', {
+Object.defineProperty(exports, 'IconFunnel', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconHigh).default;
+    return _interopRequireDefault(_IconFunnel).default;
   }
 });
 
@@ -616,6 +598,15 @@ Object.defineProperty(exports, 'IconHighPriority', {
   }
 });
 
+var _IconHigh = require('./icon/IconHigh.jsx');
+
+Object.defineProperty(exports, 'IconHigh', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconHigh).default;
+  }
+});
+
 var _IconHospital = require('./icon/IconHospital.jsx');
 
 Object.defineProperty(exports, 'IconHospital', {
@@ -625,21 +616,12 @@ Object.defineProperty(exports, 'IconHospital', {
   }
 });
 
-var _IconIPass = require('./icon/IconIPass.jsx');
+var _IconHelpInverse = require('./icon/IconHelpInverse.jsx');
 
-Object.defineProperty(exports, 'IconIPass', {
+Object.defineProperty(exports, 'IconHelpInverse', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconIPass).default;
-  }
-});
-
-var _IconImage = require('./icon/IconImage.jsx');
-
-Object.defineProperty(exports, 'IconImage', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconImage).default;
+    return _interopRequireDefault(_IconHelpInverse).default;
   }
 });
 
@@ -652,12 +634,21 @@ Object.defineProperty(exports, 'IconHouse', {
   }
 });
 
-var _IconInformation = require('./icon/IconInformation.jsx');
+var _IconIPass = require('./icon/IconIPass.jsx');
 
-Object.defineProperty(exports, 'IconInformation', {
+Object.defineProperty(exports, 'IconIPass', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconInformation).default;
+    return _interopRequireDefault(_IconIPass).default;
+  }
+});
+
+var _IconIncomplete = require('./icon/IconIncomplete.jsx');
+
+Object.defineProperty(exports, 'IconIncomplete', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconIncomplete).default;
   }
 });
 
@@ -670,12 +661,21 @@ Object.defineProperty(exports, 'IconImplant', {
   }
 });
 
-var _IconIncomplete = require('./icon/IconIncomplete.jsx');
+var _IconImage = require('./icon/IconImage.jsx');
 
-Object.defineProperty(exports, 'IconIncomplete', {
+Object.defineProperty(exports, 'IconImage', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconIncomplete).default;
+    return _interopRequireDefault(_IconImage).default;
+  }
+});
+
+var _IconInformation = require('./icon/IconInformation.jsx');
+
+Object.defineProperty(exports, 'IconInformation', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconInformation).default;
   }
 });
 
@@ -706,15 +706,6 @@ Object.defineProperty(exports, 'IconLast', {
   }
 });
 
-var _IconKnurling = require('./icon/IconKnurling.jsx');
-
-Object.defineProperty(exports, 'IconKnurling', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconKnurling).default;
-  }
-});
-
 var _IconLeft = require('./icon/IconLeft.jsx');
 
 Object.defineProperty(exports, 'IconLeft', {
@@ -724,12 +715,12 @@ Object.defineProperty(exports, 'IconLeft', {
   }
 });
 
-var _IconLeftPane = require('./icon/IconLeftPane.jsx');
+var _IconKnurling = require('./icon/IconKnurling.jsx');
 
-Object.defineProperty(exports, 'IconLeftPane', {
+Object.defineProperty(exports, 'IconKnurling', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconLeftPane).default;
+    return _interopRequireDefault(_IconKnurling).default;
   }
 });
 
@@ -742,30 +733,12 @@ Object.defineProperty(exports, 'IconLightbulb', {
   }
 });
 
-var _IconLookback = require('./icon/IconLookback.jsx');
+var _IconLeftPane = require('./icon/IconLeftPane.jsx');
 
-Object.defineProperty(exports, 'IconLookback', {
+Object.defineProperty(exports, 'IconLeftPane', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconLookback).default;
-  }
-});
-
-var _IconLow = require('./icon/IconLow.jsx');
-
-Object.defineProperty(exports, 'IconLow', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconLow).default;
-  }
-});
-
-var _IconList = require('./icon/IconList.jsx');
-
-Object.defineProperty(exports, 'IconList', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconList).default;
+    return _interopRequireDefault(_IconLeftPane).default;
   }
 });
 
@@ -787,12 +760,30 @@ Object.defineProperty(exports, 'IconMax', {
   }
 });
 
-var _IconMaximize = require('./icon/IconMaximize.jsx');
+var _IconLow = require('./icon/IconLow.jsx');
 
-Object.defineProperty(exports, 'IconMaximize', {
+Object.defineProperty(exports, 'IconLow', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconMaximize).default;
+    return _interopRequireDefault(_IconLow).default;
+  }
+});
+
+var _IconLookback = require('./icon/IconLookback.jsx');
+
+Object.defineProperty(exports, 'IconLookback', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconLookback).default;
+  }
+});
+
+var _IconList = require('./icon/IconList.jsx');
+
+Object.defineProperty(exports, 'IconList', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconList).default;
   }
 });
 
@@ -805,21 +796,21 @@ Object.defineProperty(exports, 'IconMenu', {
   }
 });
 
+var _IconNext = require('./icon/IconNext.jsx');
+
+Object.defineProperty(exports, 'IconNext', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconNext).default;
+  }
+});
+
 var _IconMinimize = require('./icon/IconMinimize.jsx');
 
 Object.defineProperty(exports, 'IconMinimize', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconMinimize).default;
-  }
-});
-
-var _IconMinus = require('./icon/IconMinus.jsx');
-
-Object.defineProperty(exports, 'IconMinus', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconMinus).default;
   }
 });
 
@@ -832,66 +823,12 @@ Object.defineProperty(exports, 'IconMin', {
   }
 });
 
-var _IconNotMet = require('./icon/IconNotMet.jsx');
+var _IconMinus = require('./icon/IconMinus.jsx');
 
-Object.defineProperty(exports, 'IconNotMet', {
+Object.defineProperty(exports, 'IconMinus', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconNotMet).default;
-  }
-});
-
-var _IconNext = require('./icon/IconNext.jsx');
-
-Object.defineProperty(exports, 'IconNext', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconNext).default;
-  }
-});
-
-var _IconOverDue = require('./icon/IconOverDue.jsx');
-
-Object.defineProperty(exports, 'IconOverDue', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconOverDue).default;
-  }
-});
-
-var _IconPadlock = require('./icon/IconPadlock.jsx');
-
-Object.defineProperty(exports, 'IconPadlock', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPadlock).default;
-  }
-});
-
-var _IconNotification = require('./icon/IconNotification.jsx');
-
-Object.defineProperty(exports, 'IconNotification', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconNotification).default;
-  }
-});
-
-var _IconPanelLeft = require('./icon/IconPanelLeft.jsx');
-
-Object.defineProperty(exports, 'IconPanelLeft', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPanelLeft).default;
-  }
-});
-
-var _IconPanelRight = require('./icon/IconPanelRight.jsx');
-
-Object.defineProperty(exports, 'IconPanelRight', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPanelRight).default;
+    return _interopRequireDefault(_IconMinus).default;
   }
 });
 
@@ -904,39 +841,84 @@ Object.defineProperty(exports, 'IconModified', {
   }
 });
 
+var _IconNotMet = require('./icon/IconNotMet.jsx');
+
+Object.defineProperty(exports, 'IconNotMet', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconNotMet).default;
+  }
+});
+
+var _IconNotification = require('./icon/IconNotification.jsx');
+
+Object.defineProperty(exports, 'IconNotification', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconNotification).default;
+  }
+});
+
+var _IconOverDue = require('./icon/IconOverDue.jsx');
+
+Object.defineProperty(exports, 'IconOverDue', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconOverDue).default;
+  }
+});
+
+var _IconMaximize = require('./icon/IconMaximize.jsx');
+
+Object.defineProperty(exports, 'IconMaximize', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconMaximize).default;
+  }
+});
+
+var _IconPanelRight = require('./icon/IconPanelRight.jsx');
+
+Object.defineProperty(exports, 'IconPanelRight', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPanelRight).default;
+  }
+});
+
+var _IconPadlock = require('./icon/IconPadlock.jsx');
+
+Object.defineProperty(exports, 'IconPadlock', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPadlock).default;
+  }
+});
+
+var _IconPaperFolded = require('./icon/IconPaperFolded.jsx');
+
+Object.defineProperty(exports, 'IconPaperFolded', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPaperFolded).default;
+  }
+});
+
+var _IconPanelLeft = require('./icon/IconPanelLeft.jsx');
+
+Object.defineProperty(exports, 'IconPanelLeft', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPanelLeft).default;
+  }
+});
+
 var _IconPaperPencil = require('./icon/IconPaperPencil.jsx');
 
 Object.defineProperty(exports, 'IconPaperPencil', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconPaperPencil).default;
-  }
-});
-
-var _IconPending = require('./icon/IconPending.jsx');
-
-Object.defineProperty(exports, 'IconPending', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPending).default;
-  }
-});
-
-var _IconPersonHospital = require('./icon/IconPersonHospital.jsx');
-
-Object.defineProperty(exports, 'IconPersonHospital', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPersonHospital).default;
-  }
-});
-
-var _IconPersonnelPerson = require('./icon/IconPersonnelPerson.jsx');
-
-Object.defineProperty(exports, 'IconPersonnelPerson', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPersonnelPerson).default;
   }
 });
 
@@ -949,6 +931,33 @@ Object.defineProperty(exports, 'IconPerson', {
   }
 });
 
+var _IconPersonHospital = require('./icon/IconPersonHospital.jsx');
+
+Object.defineProperty(exports, 'IconPersonHospital', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPersonHospital).default;
+  }
+});
+
+var _IconPending = require('./icon/IconPending.jsx');
+
+Object.defineProperty(exports, 'IconPending', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPending).default;
+  }
+});
+
+var _IconPersonnelPerson = require('./icon/IconPersonnelPerson.jsx');
+
+Object.defineProperty(exports, 'IconPersonnelPerson', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconPersonnelPerson).default;
+  }
+});
+
 var _IconPharmacyReject = require('./icon/IconPharmacyReject.jsx');
 
 Object.defineProperty(exports, 'IconPharmacyReject', {
@@ -958,12 +967,12 @@ Object.defineProperty(exports, 'IconPharmacyReject', {
   }
 });
 
-var _IconPhone = require('./icon/IconPhone.jsx');
+var _IconPrevious = require('./icon/IconPrevious.jsx');
 
-Object.defineProperty(exports, 'IconPhone', {
+Object.defineProperty(exports, 'IconPrevious', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconPhone).default;
+    return _interopRequireDefault(_IconPrevious).default;
   }
 });
 
@@ -973,15 +982,6 @@ Object.defineProperty(exports, 'IconPharmacyReview', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconPharmacyReview).default;
-  }
-});
-
-var _IconPaperFolded = require('./icon/IconPaperFolded.jsx');
-
-Object.defineProperty(exports, 'IconPaperFolded', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPaperFolded).default;
   }
 });
 
@@ -1003,12 +1003,12 @@ Object.defineProperty(exports, 'IconPrinter', {
   }
 });
 
-var _IconProvider = require('./icon/IconProvider.jsx');
+var _IconPhone = require('./icon/IconPhone.jsx');
 
-Object.defineProperty(exports, 'IconProvider', {
+Object.defineProperty(exports, 'IconPhone', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconProvider).default;
+    return _interopRequireDefault(_IconPhone).default;
   }
 });
 
@@ -1018,6 +1018,15 @@ Object.defineProperty(exports, 'IconProjects', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconProjects).default;
+  }
+});
+
+var _IconProvider = require('./icon/IconProvider.jsx');
+
+Object.defineProperty(exports, 'IconProvider', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconProvider).default;
   }
 });
 
@@ -1057,39 +1066,12 @@ Object.defineProperty(exports, 'IconReplyAll', {
   }
 });
 
-var _IconPrevious = require('./icon/IconPrevious.jsx');
-
-Object.defineProperty(exports, 'IconPrevious', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconPrevious).default;
-  }
-});
-
 var _IconRight = require('./icon/IconRight.jsx');
 
 Object.defineProperty(exports, 'IconRight', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconRight).default;
-  }
-});
-
-var _IconSave = require('./icon/IconSave.jsx');
-
-Object.defineProperty(exports, 'IconSave', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconSave).default;
-  }
-});
-
-var _IconScratchPad = require('./icon/IconScratchPad.jsx');
-
-Object.defineProperty(exports, 'IconScratchPad', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconScratchPad).default;
   }
 });
 
@@ -1111,12 +1093,39 @@ Object.defineProperty(exports, 'IconSearch', {
   }
 });
 
+var _IconScratchPad = require('./icon/IconScratchPad.jsx');
+
+Object.defineProperty(exports, 'IconScratchPad', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconScratchPad).default;
+  }
+});
+
+var _IconSave = require('./icon/IconSave.jsx');
+
+Object.defineProperty(exports, 'IconSave', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconSave).default;
+  }
+});
+
 var _IconSend = require('./icon/IconSend.jsx');
 
 Object.defineProperty(exports, 'IconSend', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconSend).default;
+  }
+});
+
+var _IconSortAscending = require('./icon/IconSortAscending.jsx');
+
+Object.defineProperty(exports, 'IconSortAscending', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconSortAscending).default;
   }
 });
 
@@ -1129,12 +1138,12 @@ Object.defineProperty(exports, 'IconSettings', {
   }
 });
 
-var _IconSortAscending = require('./icon/IconSortAscending.jsx');
+var _IconSortDescending = require('./icon/IconSortDescending.jsx');
 
-Object.defineProperty(exports, 'IconSortAscending', {
+Object.defineProperty(exports, 'IconSortDescending', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconSortAscending).default;
+    return _interopRequireDefault(_IconSortDescending).default;
   }
 });
 
@@ -1156,30 +1165,21 @@ Object.defineProperty(exports, 'IconSpinner', {
   }
 });
 
-var _IconTable = require('./icon/IconTable.jsx');
-
-Object.defineProperty(exports, 'IconTable', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconTable).default;
-  }
-});
-
-var _IconSortDescending = require('./icon/IconSortDescending.jsx');
-
-Object.defineProperty(exports, 'IconSortDescending', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconSortDescending).default;
-  }
-});
-
 var _IconSuccessInverse = require('./icon/IconSuccessInverse.jsx');
 
 Object.defineProperty(exports, 'IconSuccessInverse', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconSuccessInverse).default;
+  }
+});
+
+var _IconTable = require('./icon/IconTable.jsx');
+
+Object.defineProperty(exports, 'IconTable', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconTable).default;
   }
 });
 
@@ -1192,12 +1192,12 @@ Object.defineProperty(exports, 'IconTag', {
   }
 });
 
-var _IconTile = require('./icon/IconTile.jsx');
+var _IconTrash = require('./icon/IconTrash.jsx');
 
-Object.defineProperty(exports, 'IconTile', {
+Object.defineProperty(exports, 'IconTrash', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconTile).default;
+    return _interopRequireDefault(_IconTrash).default;
   }
 });
 
@@ -1219,12 +1219,12 @@ Object.defineProperty(exports, 'IconTrophy', {
   }
 });
 
-var _IconTrash = require('./icon/IconTrash.jsx');
+var _IconUnknown = require('./icon/IconUnknown.jsx');
 
-Object.defineProperty(exports, 'IconTrash', {
+Object.defineProperty(exports, 'IconUnknown', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconTrash).default;
+    return _interopRequireDefault(_IconUnknown).default;
   }
 });
 
@@ -1237,12 +1237,12 @@ Object.defineProperty(exports, 'IconUnavailable', {
   }
 });
 
-var _IconUnknown = require('./icon/IconUnknown.jsx');
+var _IconTile = require('./icon/IconTile.jsx');
 
-Object.defineProperty(exports, 'IconUnknown', {
+Object.defineProperty(exports, 'IconTile', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconUnknown).default;
+    return _interopRequireDefault(_IconTile).default;
   }
 });
 
@@ -1273,21 +1273,21 @@ Object.defineProperty(exports, 'IconUpload', {
   }
 });
 
-var _IconUsers = require('./icon/IconUsers.jsx');
-
-Object.defineProperty(exports, 'IconUsers', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_IconUsers).default;
-  }
-});
-
 var _IconVisualization = require('./icon/IconVisualization.jsx');
 
 Object.defineProperty(exports, 'IconVisualization', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_IconVisualization).default;
+  }
+});
+
+var _IconWarning = require('./icon/IconWarning.jsx');
+
+Object.defineProperty(exports, 'IconWarning', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_IconWarning).default;
   }
 });
 
@@ -1300,12 +1300,12 @@ Object.defineProperty(exports, 'IconZoomIn', {
   }
 });
 
-var _IconWarning = require('./icon/IconWarning.jsx');
+var _IconUsers = require('./icon/IconUsers.jsx');
 
-Object.defineProperty(exports, 'IconWarning', {
+Object.defineProperty(exports, 'IconUsers', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_IconWarning).default;
+    return _interopRequireDefault(_IconUsers).default;
   }
 });
 

@@ -15,7 +15,7 @@ const propTypes = {
   /**
    * Child nodes.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * Height of SVG.
    */
@@ -45,9 +45,10 @@ const defaultProps = {
   focusable: false,
 };
 
-const Icon = ({
+const IconBase = ({
   isBidi,
   isSpin,
+  children,
   ...customProps
   }) => {
   const attributes = Object.assign({}, customProps);
@@ -67,10 +68,10 @@ const Icon = ({
     attributes['aria-hidden'] = 'true';
   }
 
-  return <svg {...attributes}>{attributes.children}</svg>;
+  return <svg {...attributes}>{children}</svg>;
 };
 
-Icon.propTypes = propTypes;
-Icon.defaultProps = defaultProps;
+IconBase.propTypes = propTypes;
+IconBase.defaultProps = defaultProps;
 
-export default Icon;
+export default IconBase;

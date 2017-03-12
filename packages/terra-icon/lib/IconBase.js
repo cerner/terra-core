@@ -34,7 +34,7 @@ var propTypes = {
   /**
    * Child nodes.
    */
-  children: _react.PropTypes.node.isRequired,
+  children: _react.PropTypes.node,
   /**
    * Height of SVG.
    */
@@ -64,10 +64,11 @@ var defaultProps = {
   focusable: false
 };
 
-var Icon = function Icon(_ref) {
+var IconBase = function IconBase(_ref) {
   var isBidi = _ref.isBidi,
       isSpin = _ref.isSpin,
-      customProps = _objectWithoutProperties(_ref, ['isBidi', 'isSpin']);
+      children = _ref.children,
+      customProps = _objectWithoutProperties(_ref, ['isBidi', 'isSpin', 'children']);
 
   var attributes = _extends({}, customProps);
 
@@ -84,11 +85,11 @@ var Icon = function Icon(_ref) {
   return _react2.default.createElement(
     'svg',
     attributes,
-    attributes.children
+    children
   );
 };
 
-Icon.propTypes = propTypes;
-Icon.defaultProps = defaultProps;
+IconBase.propTypes = propTypes;
+IconBase.defaultProps = defaultProps;
 
-exports.default = Icon;
+exports.default = IconBase;

@@ -11,5 +11,7 @@ var CernerOneIcons = exports.CernerOneIcons = {
 var TerraIcon = exports.TerraIcon = {
   csvFile: 'src/cerner-one-icons.csv',
   svgDir: 'src/svg/',
-  iconDir: 'src/icon/'
+  iconDir: 'src/icon/',
+  iconExport: 'src/Icon.jsx',
+  exampleDir: 'example/'
 };

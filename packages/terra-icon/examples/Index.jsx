@@ -6,12 +6,13 @@ import ReadMe from '../docs/README.md';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import IconSrc from '!raw-loader!../src/IconBase.jsx';
-import IconAll from './IconAll.jsx';
+import IconAll from './IconAll';
 
 const IconExamples = () => (
   <div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={IconSrc} />
+    <h2 id="all_icons">All Icons</h2>
     <IconAll />
   </div>
 );

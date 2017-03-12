@@ -10,13 +10,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _IconBase = require('../IconBase');
-
-var _IconBase2 = _interopRequireDefault(_IconBase);
-
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _IconBase = require('../IconBase');
+
+var _IconBase2 = _interopRequireDefault(_IconBase);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
