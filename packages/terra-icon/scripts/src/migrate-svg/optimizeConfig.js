@@ -1,11 +1,9 @@
 import classNames from 'classnames';
 
 const svgoConfig = (csvObject) => {
-  const classes = classNames({ 'is-static': !csvObject.isThemeable },
-                             { 'is-themeable': csvObject.isThemeable },
-                             { 'is-spin': csvObject.isSpin },
+  const classes = classNames({ 'is-spin': csvObject.isSpin },
                              { 'is-bidi': csvObject.isBidi });
-  return {
+  let config = {
     plugins: [
       {
         mergePaths: false,
@@ -13,13 +11,15 @@ const svgoConfig = (csvObject) => {
       {
         removeTitle: true,
       },
-      {
-        addClassesToSVGElement: {
-          className: classes,
-        },
-      },
     ],
   };
+
+  // if is-spin or is-bidi exists, add to svg
+  if (classes) {
+    config.plugins.push({ addClassesToSVGElement: { className: classes }});
+  }
+
+  return config;
 };
 
-module.exports = svgoConfig;
+export default svgoConfig;

@@ -28,10 +28,8 @@ const generateIconAll = iconObjs => new Promise((resolve, reject) => {
   outputfile.write(`<div>\n`);
   iconObjs.forEach((iconObj) => {
     outputfile.write(`  <div>\n`);
-    outputfile.write(`    <div>\n`);
-    outputfile.write(`      ${iconObj.syntaxComponent}\n`);
-    outputfile.write(`      ${iconObj.name}\n`);
-    outputfile.write(`    </div>\n`);
+    outputfile.write(`    ${iconObj.syntaxComponent}\n`);
+    outputfile.write(`    ${iconObj.name}\n`);
     outputfile.write(`  </div>\n`);
   });
   outputfile.write(`</div>\n`);

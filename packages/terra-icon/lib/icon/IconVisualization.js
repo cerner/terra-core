@@ -22,7 +22,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var SvgIcon = function SvgIcon(customProps) {
   var attributes = _extends({}, customProps);
-  attributes.className = (0, _classnames2.default)("is-themeable", attributes.className);
 
   return _react2.default.createElement(
     _IconBase2.default,
@@ -32,6 +31,6 @@ var SvgIcon = function SvgIcon(customProps) {
 };
 
 SvgIcon.displayName = "IconVisualization";
-SvgIcon.defaultProps = { "className": "is-themeable", "viewBox": "0 0 48 48", "xmlns": "http://www.w3.org/2000/svg", "data-name": "Layer 1", "isBidi": true };
+SvgIcon.defaultProps = { "className": "", "viewBox": "0 0 48 48", "xmlns": "http://www.w3.org/2000/svg", "data-name": "Layer 1", "isBidi": true };
 
 exports.default = SvgIcon;

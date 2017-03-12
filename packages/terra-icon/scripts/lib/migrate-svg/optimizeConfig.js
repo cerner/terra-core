@@ -1,5 +1,9 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -7,18 +11,21 @@ var _classnames2 = _interopRequireDefault(_classnames);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var svgoConfig = function svgoConfig(csvObject) {
-  var classes = (0, _classnames2.default)({ 'is-static': !csvObject.isThemeable }, { 'is-themeable': csvObject.isThemeable }, { 'is-spin': csvObject.isSpin }, { 'is-bidi': csvObject.isBidi });
-  return {
+  var classes = (0, _classnames2.default)({ 'is-spin': csvObject.isSpin }, { 'is-bidi': csvObject.isBidi });
+  var config = {
     plugins: [{
       mergePaths: false
     }, {
       removeTitle: true
-    }, {
-      addClassesToSVGElement: {
-        className: classes
-      }
     }]
   };
+
+  // if is-spin or is-bidi exists, add to svg
+  if (classes) {
+    config.plugins.push({ addClassesToSVGElement: { className: classes } });
+  }
+
+  return config;
 };
 
-module.exports = svgoConfig;
+exports.default = svgoConfig;

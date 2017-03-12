@@ -149,880 +149,588 @@ import { IconImplant } from '../src/Icon.jsx';
 const IconAll = () => (
 <div>
   <div>
-    <div>
-      <IconAdd />
-      add
-    </div>
+    <IconAdd />
+    add
   </div>
   <div>
-    <div>
-      <IconSearch />
-      search
-    </div>
+    <IconSearch />
+    search
   </div>
   <div>
-    <div>
-      <IconCommit />
-      commit
-    </div>
+    <IconCommit />
+    commit
   </div>
   <div>
-    <div>
-      <IconCheckmark />
-      checkmark
-    </div>
+    <IconCheckmark />
+    checkmark
   </div>
   <div>
-    <div>
-      <IconSuccess />
-      success
-    </div>
+    <IconSuccess />
+    success
   </div>
   <div>
-    <div>
-      <IconSuccessInverse />
-      success_inverse
-    </div>
+    <IconSuccessInverse />
+    success_inverse
   </div>
   <div>
-    <div>
-      <IconAvailable />
-      available
-    </div>
+    <IconAvailable />
+    available
   </div>
   <div>
-    <div>
-      <IconComplete />
-      complete
-    </div>
+    <IconComplete />
+    complete
   </div>
   <div>
-    <div>
-      <IconTrash />
-      trash
-    </div>
+    <IconTrash />
+    trash
   </div>
   <div>
-    <div>
-      <IconPaperFolded />
-      paperFolded
-    </div>
+    <IconPaperFolded />
+    paperFolded
   </div>
   <div>
-    <div>
-      <IconPrinter />
-      printer
-    </div>
+    <IconPrinter />
+    printer
   </div>
   <div>
-    <div>
-      <IconComment />
-      comment
-    </div>
+    <IconComment />
+    comment
   </div>
   <div>
-    <div>
-      <IconBookmark />
-      bookmark
-    </div>
+    <IconBookmark />
+    bookmark
   </div>
   <div>
-    <div>
-      <IconModified />
-      modified
-    </div>
+    <IconModified />
+    modified
   </div>
   <div>
-    <div>
-      <IconFirst />
-      first
-    </div>
+    <IconFirst />
+    first
   </div>
   <div>
-    <div>
-      <IconFolder />
-      folder
-    </div>
+    <IconFolder />
+    folder
   </div>
   <div>
-    <div>
-      <IconAttachment />
-      attachment
-    </div>
+    <IconAttachment />
+    attachment
   </div>
   <div>
-    <div>
-      <IconSend />
-      send
-    </div>
+    <IconSend />
+    send
   </div>
   <div>
-    <div>
-      <IconPill />
-      pill
-    </div>
+    <IconPill />
+    pill
   </div>
   <div>
-    <div>
-      <IconCritical />
-      critical
-    </div>
+    <IconCritical />
+    critical
   </div>
   <div>
-    <div>
-      <IconVisualization />
-      visualization
-    </div>
+    <IconVisualization />
+    visualization
   </div>
   <div>
-    <div>
-      <IconLightbulb />
-      lightbulb
-    </div>
+    <IconLightbulb />
+    lightbulb
   </div>
   <div>
-    <div>
-      <IconForward />
-      forward
-    </div>
+    <IconForward />
+    forward
   </div>
   <div>
-    <div>
-      <IconProjects />
-      projects
-    </div>
+    <IconProjects />
+    projects
   </div>
   <div>
-    <div>
-      <IconReplyAll />
-      replyAll
-    </div>
+    <IconReplyAll />
+    replyAll
   </div>
   <div>
-    <div>
-      <IconFlag />
-      flag
-    </div>
+    <IconFlag />
+    flag
   </div>
   <div>
-    <div>
-      <IconCalculator />
-      calculator
-    </div>
+    <IconCalculator />
+    calculator
   </div>
   <div>
-    <div>
-      <IconCaretRight />
-      caretRight
-    </div>
+    <IconCaretRight />
+    caretRight
   </div>
   <div>
-    <div>
-      <IconCaretLeft />
-      caretLeft
-    </div>
+    <IconCaretLeft />
+    caretLeft
   </div>
   <div>
-    <div>
-      <IconCaretUp />
-      caretUp
-    </div>
+    <IconCaretUp />
+    caretUp
   </div>
   <div>
-    <div>
-      <IconCaretDown />
-      caretDown
-    </div>
+    <IconCaretDown />
+    caretDown
   </div>
   <div>
-    <div>
-      <IconScheduled />
-      scheduled
-    </div>
+    <IconScheduled />
+    scheduled
   </div>
   <div>
-    <div>
-      <IconTrophy />
-      trophy
-    </div>
+    <IconTrophy />
+    trophy
   </div>
   <div>
-    <div>
-      <IconChevronLeft />
-      chevronLeft
-    </div>
+    <IconChevronLeft />
+    chevronLeft
   </div>
   <div>
-    <div>
-      <IconPrevious />
-      previous
-    </div>
+    <IconPrevious />
+    previous
   </div>
   <div>
-    <div>
-      <IconChevronRight />
-      chevronRight
-    </div>
+    <IconChevronRight />
+    chevronRight
   </div>
   <div>
-    <div>
-      <IconNext />
-      next
-    </div>
+    <IconNext />
+    next
   </div>
   <div>
-    <div>
-      <IconChevronUp />
-      chevronUp
-    </div>
+    <IconChevronUp />
+    chevronUp
   </div>
   <div>
-    <div>
-      <IconExpandLess />
-      expandLess
-    </div>
+    <IconExpandLess />
+    expandLess
   </div>
   <div>
-    <div>
-      <IconChevron />
-      chevron
-    </div>
+    <IconChevron />
+    chevron
   </div>
   <div>
-    <div>
-      <IconChevronDown />
-      chevronDown
-    </div>
+    <IconChevronDown />
+    chevronDown
   </div>
   <div>
-    <div>
-      <IconExpandMore />
-      expandMore
-    </div>
+    <IconExpandMore />
+    expandMore
   </div>
   <div>
-    <div>
-      <IconClock />
-      clock
-    </div>
+    <IconClock />
+    clock
   </div>
   <div>
-    <div>
-      <IconAway />
-      away
-    </div>
+    <IconAway />
+    away
   </div>
   <div>
-    <div>
-      <IconSortAscending />
-      sortAscending
-    </div>
+    <IconSortAscending />
+    sortAscending
   </div>
   <div>
-    <div>
-      <IconSortDescending />
-      sortDescending
-    </div>
+    <IconSortDescending />
+    sortDescending
   </div>
   <div>
-    <div>
-      <IconTreemap />
-      treemap
-    </div>
+    <IconTreemap />
+    treemap
   </div>
   <div>
-    <div>
-      <IconGlasses />
-      glasses
-    </div>
+    <IconGlasses />
+    glasses
   </div>
   <div>
-    <div>
-      <IconImage />
-      image
-    </div>
+    <IconImage />
+    image
   </div>
   <div>
-    <div>
-      <IconDoorOpen />
-      doorOpen
-    </div>
+    <IconDoorOpen />
+    doorOpen
   </div>
   <div>
-    <div>
-      <IconEllipses />
-      ellipses
-    </div>
+    <IconEllipses />
+    ellipses
   </div>
   <div>
-    <div>
-      <IconExclamation />
-      exclamation
-    </div>
+    <IconExclamation />
+    exclamation
   </div>
   <div>
-    <div>
-      <IconHighPriority />
-      highPriority
-    </div>
+    <IconHighPriority />
+    highPriority
   </div>
   <div>
-    <div>
-      <IconAlert />
-      alert
-    </div>
+    <IconAlert />
+    alert
   </div>
   <div>
-    <div>
-      <IconWarning />
-      warning
-    </div>
+    <IconWarning />
+    warning
   </div>
   <div>
-    <div>
-      <IconItalicI />
-      italic-i
-    </div>
+    <IconItalicI />
+    italic-i
   </div>
   <div>
-    <div>
-      <IconInformation />
-      information
-    </div>
+    <IconInformation />
+    information
   </div>
   <div>
-    <div>
-      <IconInformationInverse />
-      information_inverse
-    </div>
+    <IconInformationInverse />
+    information_inverse
   </div>
   <div>
-    <div>
-      <IconMinus />
-      minus
-    </div>
+    <IconMinus />
+    minus
   </div>
   <div>
-    <div>
-      <IconError />
-      error
-    </div>
+    <IconError />
+    error
   </div>
   <div>
-    <div>
-      <IconDoNotDisturb />
-      doNotDisturb
-    </div>
+    <IconDoNotDisturb />
+    doNotDisturb
   </div>
   <div>
-    <div>
-      <IconClose />
-      close
-    </div>
+    <IconClose />
+    close
   </div>
   <div>
-    <div>
-      <IconClear />
-      clear
-    </div>
+    <IconClear />
+    clear
   </div>
   <div>
-    <div>
-      <IconNotMet />
-      notMet
-    </div>
+    <IconNotMet />
+    notMet
   </div>
   <div>
-    <div>
-      <IconIncomplete />
-      incomplete
-    </div>
+    <IconIncomplete />
+    incomplete
   </div>
   <div>
-    <div>
-      <IconPerson />
-      person
-    </div>
+    <IconPerson />
+    person
   </div>
   <div>
-    <div>
-      <IconLeft />
-      left
-    </div>
+    <IconLeft />
+    left
   </div>
   <div>
-    <div>
-      <IconRight />
-      right
-    </div>
+    <IconRight />
+    right
   </div>
   <div>
-    <div>
-      <IconUp />
-      up
-    </div>
+    <IconUp />
+    up
   </div>
   <div>
-    <div>
-      <IconDown />
-      down
-    </div>
+    <IconDown />
+    down
   </div>
   <div>
-    <div>
-      <IconSettings />
-      settings
-    </div>
+    <IconSettings />
+    settings
   </div>
   <div>
-    <div>
-      <IconEdit />
-      edit
-    </div>
+    <IconEdit />
+    edit
   </div>
   <div>
-    <div>
-      <IconCalendar />
-      calendar
-    </div>
+    <IconCalendar />
+    calendar
   </div>
   <div>
-    <div>
-      <IconLookback />
-      lookback
-    </div>
+    <IconLookback />
+    lookback
   </div>
   <div>
-    <div>
-      <IconRefresh />
-      refresh
-    </div>
+    <IconRefresh />
+    refresh
   </div>
   <div>
-    <div>
-      <IconProvider />
-      provider
-    </div>
+    <IconProvider />
+    provider
   </div>
   <div>
-    <div>
-      <IconPadlock />
-      padlock
-    </div>
+    <IconPadlock />
+    padlock
   </div>
   <div>
-    <div>
-      <IconFeatured />
-      featured
-    </div>
+    <IconFeatured />
+    featured
   </div>
   <div>
-    <div>
-      <IconArchive />
-      archive
-    </div>
+    <IconArchive />
+    archive
   </div>
   <div>
-    <div>
-      <IconFunnel />
-      funnel
-    </div>
+    <IconFunnel />
+    funnel
   </div>
   <div>
-    <div>
-      <IconDocuments />
-      documents
-    </div>
+    <IconDocuments />
+    documents
   </div>
   <div>
-    <div>
-      <IconHelp />
-      help
-    </div>
+    <IconHelp />
+    help
   </div>
   <div>
-    <div>
-      <IconHelpInverse />
-      help_inverse
-    </div>
+    <IconHelpInverse />
+    help_inverse
   </div>
   <div>
-    <div>
-      <IconUnknown />
-      unknown
-    </div>
+    <IconUnknown />
+    unknown
   </div>
   <div>
-    <div>
-      <IconHouse />
-      house
-    </div>
+    <IconHouse />
+    house
   </div>
   <div>
-    <div>
-      <IconSave />
-      save
-    </div>
+    <IconSave />
+    save
   </div>
   <div>
-    <div>
-      <IconHospital />
-      hospital
-    </div>
+    <IconHospital />
+    hospital
   </div>
   <div>
-    <div>
-      <IconPending />
-      pending
-    </div>
+    <IconPending />
+    pending
   </div>
   <div>
-    <div>
-      <IconAnalytics />
-      analytics
-    </div>
+    <IconAnalytics />
+    analytics
   </div>
   <div>
-    <div>
-      <IconAnnouncement />
-      announcement
-    </div>
+    <IconAnnouncement />
+    announcement
   </div>
   <div>
-    <div>
-      <IconCamera />
-      camera
-    </div>
+    <IconCamera />
+    camera
   </div>
   <div>
-    <div>
-      <IconBriefcase />
-      briefcase
-    </div>
+    <IconBriefcase />
+    briefcase
   </div>
   <div>
-    <div>
-      <IconLink />
-      link
-    </div>
+    <IconLink />
+    link
   </div>
   <div>
-    <div>
-      <IconList />
-      list
-    </div>
+    <IconList />
+    list
   </div>
   <div>
-    <div>
-      <IconMenu />
-      menu
-    </div>
+    <IconMenu />
+    menu
   </div>
   <div>
-    <div>
-      <IconChecklist />
-      checklist
-    </div>
+    <IconChecklist />
+    checklist
   </div>
   <div>
-    <div>
-      <IconUnlock />
-      unlock
-    </div>
+    <IconUnlock />
+    unlock
   </div>
   <div>
-    <div>
-      <IconDue />
-      due
-    </div>
+    <IconDue />
+    due
   </div>
   <div>
-    <div>
-      <IconDueSoon />
-      dueSoon
-    </div>
+    <IconDueSoon />
+    dueSoon
   </div>
   <div>
-    <div>
-      <IconSpinner />
-      spinner
-    </div>
+    <IconSpinner />
+    spinner
   </div>
   <div>
-    <div>
-      <IconTile />
-      tile
-    </div>
+    <IconTile />
+    tile
   </div>
   <div>
-    <div>
-      <IconOverDue />
-      overDue
-    </div>
+    <IconOverDue />
+    overDue
   </div>
   <div>
-    <div>
-      <IconUsers />
-      users
-    </div>
+    <IconUsers />
+    users
   </div>
   <div>
-    <div>
-      <IconKnurling />
-      knurling
-    </div>
+    <IconKnurling />
+    knurling
   </div>
   <div>
-    <div>
-      <IconAddPerson />
-      addPerson
-    </div>
+    <IconAddPerson />
+    addPerson
   </div>
   <div>
-    <div>
-      <IconUpload />
-      upload
-    </div>
+    <IconUpload />
+    upload
   </div>
   <div>
-    <div>
-      <IconDownload />
-      download
-    </div>
+    <IconDownload />
+    download
   </div>
   <div>
-    <div>
-      <IconCancel />
-      cancel
-    </div>
+    <IconCancel />
+    cancel
   </div>
   <div>
-    <div>
-      <IconMaximize />
-      maximize
-    </div>
+    <IconMaximize />
+    maximize
   </div>
   <div>
-    <div>
-      <IconMinimize />
-      minimize
-    </div>
+    <IconMinimize />
+    minimize
   </div>
   <div>
-    <div>
-      <IconReply />
-      reply
-    </div>
+    <IconReply />
+    reply
   </div>
   <div>
-    <div>
-      <IconTable />
-      table
-    </div>
+    <IconTable />
+    table
   </div>
   <div>
-    <div>
-      <IconRequired />
-      required
-    </div>
+    <IconRequired />
+    required
   </div>
   <div>
-    <div>
-      <IconGapChecking />
-      gap checking
-    </div>
+    <IconGapChecking />
+    gap checking
   </div>
   <div>
-    <div>
-      <IconPersonHospital />
-      personHospital
-    </div>
+    <IconPersonHospital />
+    personHospital
   </div>
   <div>
-    <div>
-      <IconPersonnelPerson />
-      personnelPerson
-    </div>
+    <IconPersonnelPerson />
+    personnelPerson
   </div>
   <div>
-    <div>
-      <IconHigh />
-      high
-    </div>
+    <IconHigh />
+    high
   </div>
   <div>
-    <div>
-      <IconLow />
-      low
-    </div>
+    <IconLow />
+    low
   </div>
   <div>
-    <div>
-      <IconMax />
-      max
-    </div>
+    <IconMax />
+    max
   </div>
   <div>
-    <div>
-      <IconMin />
-      min
-    </div>
+    <IconMin />
+    min
   </div>
   <div>
-    <div>
-      <IconAbnormal />
-      abnormal
-    </div>
+    <IconAbnormal />
+    abnormal
   </div>
   <div>
-    <div>
-      <IconLeftPane />
-      leftPane
-    </div>
+    <IconLeftPane />
+    leftPane
   </div>
   <div>
-    <div>
-      <IconFlowsheet />
-      flowsheet
-    </div>
+    <IconFlowsheet />
+    flowsheet
   </div>
   <div>
-    <div>
-      <IconNotification />
-      notification
-    </div>
+    <IconNotification />
+    notification
   </div>
   <div>
-    <div>
-      <IconLast />
-      last
-    </div>
+    <IconLast />
+    last
   </div>
   <div>
-    <div>
-      <IconDevice />
-      device
-    </div>
+    <IconDevice />
+    device
   </div>
   <div>
-    <div>
-      <IconDeviceCheck />
-      deviceCheck
-    </div>
+    <IconDeviceCheck />
+    deviceCheck
   </div>
   <div>
-    <div>
-      <IconDeviceAlert />
-      deviceAlert
-    </div>
+    <IconDeviceAlert />
+    deviceAlert
   </div>
   <div>
-    <div>
-      <IconPaperPencil />
-      paperPencil
-    </div>
+    <IconPaperPencil />
+    paperPencil
   </div>
   <div>
-    <div>
-      <IconClipboard />
-      clipboard
-    </div>
+    <IconClipboard />
+    clipboard
   </div>
   <div>
-    <div>
-      <IconZoomOut />
-      zoomOut
-    </div>
+    <IconZoomOut />
+    zoomOut
   </div>
   <div>
-    <div>
-      <IconZoomIn />
-      zoomIn
-    </div>
+    <IconZoomIn />
+    zoomIn
   </div>
   <div>
-    <div>
-      <IconDiamond />
-      diamond
-    </div>
+    <IconDiamond />
+    diamond
   </div>
   <div>
-    <div>
-      <IconEnvelope />
-      envelope
-    </div>
+    <IconEnvelope />
+    envelope
   </div>
   <div>
-    <div>
-      <IconAllergy />
-      allergy
-    </div>
+    <IconAllergy />
+    allergy
   </div>
   <div>
-    <div>
-      <IconPhone />
-      phone
-    </div>
+    <IconPhone />
+    phone
   </div>
   <div>
-    <div>
-      <IconPanelLeft />
-      panelLeft
-    </div>
+    <IconPanelLeft />
+    panelLeft
   </div>
   <div>
-    <div>
-      <IconPanelRight />
-      panelRight
-    </div>
+    <IconPanelRight />
+    panelRight
   </div>
   <div>
-    <div>
-      <IconTag />
-      tag
-    </div>
+    <IconTag />
+    tag
   </div>
   <div>
-    <div>
-      <IconIPass />
-      iPass
-    </div>
+    <IconIPass />
+    iPass
   </div>
   <div>
-    <div>
-      <IconScratchPad />
-      scratchPad
-    </div>
+    <IconScratchPad />
+    scratchPad
   </div>
   <div>
-    <div>
-      <IconPharmacyReview />
-      pharmacyReview
-    </div>
+    <IconPharmacyReview />
+    pharmacyReview
   </div>
   <div>
-    <div>
-      <IconPharmacyReject />
-      pharmacyReject
-    </div>
+    <IconPharmacyReject />
+    pharmacyReject
   </div>
   <div>
-    <div>
-      <IconBusy />
-      busy
-    </div>
+    <IconBusy />
+    busy
   </div>
   <div>
-    <div>
-      <IconUnavailable />
-      unavailable
-    </div>
+    <IconUnavailable />
+    unavailable
   </div>
   <div>
-    <div>
-      <IconImplant />
-      implant
-    </div>
+    <IconImplant />
+    implant
   </div>
 </div>
 );

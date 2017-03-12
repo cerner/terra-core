@@ -4,7 +4,6 @@ import IconBase from '../IconBase';
 
 const SvgIcon = customProps => {
   const attributes = Object.assign({}, customProps);
-  attributes.className = classNames("is-themeable", attributes.className);
 
   return (
     <IconBase {...attributes}>
@@ -14,6 +13,6 @@ const SvgIcon = customProps => {
 };
 
 SvgIcon.displayName = "IconKnurling";
-SvgIcon.defaultProps = {"className":"is-themeable","viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;

@@ -1,6 +1,6 @@
 # Terra Icon
 
-{insert description}
+The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.
 
 ## Getting Started
 
@@ -9,10 +9,14 @@
   - `yarn add terra-icon`
 
 ## Usage
+Each Icon can be imported individually.
 
 ```jsx
 import React from 'react';
-import Icon from 'terra-icon';
+import { IconAdd, IconEdit } from 'terra-icon';
 
-<Icon {props.......} />
+<div>
+  <IconAdd />
+  <IconEdit />
+</div>
 ```

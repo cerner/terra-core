@@ -41,10 +41,8 @@ var generateIconAll = function generateIconAll(iconObjs) {
     outputfile.write('<div>\n');
     iconObjs.forEach(function (iconObj) {
       outputfile.write('  <div>\n');
-      outputfile.write('    <div>\n');
-      outputfile.write('      ' + iconObj.syntaxComponent + '\n');
-      outputfile.write('      ' + iconObj.name + '\n');
-      outputfile.write('    </div>\n');
+      outputfile.write('    ' + iconObj.syntaxComponent + '\n');
+      outputfile.write('    ' + iconObj.name + '\n');
       outputfile.write('  </div>\n');
     });
     outputfile.write('</div>\n');
