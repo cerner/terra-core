@@ -47,7 +47,7 @@ var propTypes = {
    * String that labels the current element. If 'aria-label' is present,
    * role is set to 'img' and aria-hidden is removed.
    */
-  'aria-label': _react.PropTypes.string,
+  ariaLabel: _react.PropTypes.string,
   /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
@@ -60,7 +60,7 @@ var defaultProps = {
   children: null,
   height: '1em',
   width: '1em',
-  'aria-label': null,
+  ariaLabel: null,
   focusable: false
 };
 
@@ -68,19 +68,29 @@ var IconBase = function IconBase(_ref) {
   var isBidi = _ref.isBidi,
       isSpin = _ref.isSpin,
       children = _ref.children,
-      customProps = _objectWithoutProperties(_ref, ['isBidi', 'isSpin', 'children']);
+      height = _ref.height,
+      width = _ref.width,
+      ariaLabel = _ref.ariaLabel,
+      focusable = _ref.focusable,
+      customProps = _objectWithoutProperties(_ref, ['isBidi', 'isSpin', 'children', 'height', 'width', 'ariaLabel', 'focusable']);
 
   var attributes = _extends({}, customProps);
 
+  // append to existing classNames
   attributes.className = (0, _classnames2.default)('terra-Icon', { 'is-bidi': isBidi }, { 'is-spin': isSpin }, attributes.className);
 
   // aria-label is present, remove aria-hidden, set role to img
-  if (attributes['aria-label']) {
+  if (ariaLabel) {
+    attributes['aria-label'] = ariaLabel;
     attributes.role = 'img';
     attributes['aria-hidden'] = null;
   } else {
     attributes['aria-hidden'] = 'true';
   }
+
+  attributes.height = height;
+  attributes.width = width;
+  attributes.focusable = focusable;
 
   return _react2.default.createElement(
     'svg',

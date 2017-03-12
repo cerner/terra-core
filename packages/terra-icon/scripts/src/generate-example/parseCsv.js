@@ -7,6 +7,7 @@ const parseCsv = () => new Promise((resolve, reject) => {
   // Parse the csv file to json
   csv({ noheader: true, headers: csvHeaders }).fromFile(TerraIcon.csvFile)
   .transf((jsonObj)=>{
+    // TODO: move transformation into it's own file
     jsonObj.componentName = `Icon${_.upperFirst(_.camelCase(jsonObj.name))}`;
     jsonObj.filepath = `${TerraIcon.iconDir}${jsonObj.componentName}.jsx`;
     jsonObj.themeable = !!jsonObj.themeable;

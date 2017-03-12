@@ -28,7 +28,7 @@ const propTypes = {
    * String that labels the current element. If 'aria-label' is present,
    * role is set to 'img' and aria-hidden is removed.
    */
-  'aria-label': PropTypes.string,
+  ariaLabel: PropTypes.string,
   /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
@@ -41,7 +41,7 @@ const defaultProps = {
   children: null,
   height: '1em',
   width: '1em',
-  'aria-label': null,
+  ariaLabel: null,
   focusable: false,
 };
 
@@ -49,10 +49,15 @@ const IconBase = ({
   isBidi,
   isSpin,
   children,
+  height,
+  width,
+  ariaLabel,
+  focusable,
   ...customProps
   }) => {
   const attributes = Object.assign({}, customProps);
 
+  // append to existing classNames
   attributes.className = classNames(
     'terra-Icon',
     { 'is-bidi': isBidi },
@@ -61,12 +66,17 @@ const IconBase = ({
   );
 
   // aria-label is present, remove aria-hidden, set role to img
-  if (attributes['aria-label']) {
+  if (ariaLabel) {
+    attributes['aria-label'] = ariaLabel;
     attributes.role = 'img';
     attributes['aria-hidden'] = null;
   } else {
     attributes['aria-hidden'] = 'true';
   }
+
+  attributes.height = height;
+  attributes.width = width;
+  attributes.focusable = focusable;
 
   return <svg {...attributes}>{children}</svg>;
 };
