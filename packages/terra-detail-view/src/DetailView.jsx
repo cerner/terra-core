@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import DetailViewSubtitle from './DetailViewSubtitle';
-import '../src/DetailView.scss';
+import './DetailView.scss';
 
 const propTypes = {
   /**

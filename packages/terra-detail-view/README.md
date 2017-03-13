@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-detail-view.svg)](https://www.npmjs.org/package/terra-detail-view)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-{insert description}
+The Detail View component allows you to create a view with text at different levels of importance. A detail view can contain a title, subtitle, graphic visualization, and a list of components that can display information at a more detailed level.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
