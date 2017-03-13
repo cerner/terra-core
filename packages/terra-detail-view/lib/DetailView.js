@@ -18,7 +18,7 @@ var _DetailViewSubtitle = require('./DetailViewSubtitle');
 
 var _DetailViewSubtitle2 = _interopRequireDefault(_DetailViewSubtitle);
 
-require('../src/DetailView.scss');
+require('./DetailView.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
