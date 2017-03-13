@@ -19,10 +19,12 @@ import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/I
 import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
+import DetailViewExamples from '../../../packages/terra-detail-view/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import DetailViewTestRoutes from '../../../packages/terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -43,9 +45,11 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="detail-view" component={DetailViewExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
+    {DetailViewTestRoutes}
   </Router>
 ), document.getElementById('root'));
