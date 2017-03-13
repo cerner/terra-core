@@ -15,7 +15,7 @@ import React from 'react';
 import DetailView from 'terra-detail-view';
 
 <DetailView {
-  title={<div className="terra-Title terra-Title--huge">Header</div>}
+  title={<div className="terra-Title terra-Title--large">Header</div>}
   subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
   graph={<div> This is where a graph would go </div>}
   details={[<Grid />]}
