@@ -12,6 +12,7 @@ Cerner Corporation
 - Anusha Reddy Ganapuram [@aganapuram]
 - Siddharth Kalluru [@sid141288]
 - Ben Cai [@benbcai]
+- Tyler Biethman [@tbiethman]
 - Tatiana Alexenko [@bunnyLord]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
