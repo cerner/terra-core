@@ -1,8 +1,8 @@
 import React from 'react';
 
-//IconAdd by default, isBidi: false, isSpin: false
-//IconSpinner by default, isBidi: false, isSpin: true
-//IconComment by default, isBidi: true, isSpin: false
+// IconAdd by default, isBidi: false, isSpin: false
+// IconSpinner by default, isBidi: false, isSpin: true
+// IconComment by default, isBidi: true, isSpin: false
 import { IconAdd, IconSpinner, IconComment } from '../../src/Icon';
 
 describe('Icon', () => {
@@ -20,7 +20,7 @@ describe('Icon', () => {
       expect(wrapper).toMatchSnapshot();
     });
     it('should render IconBase with custom-class', () => {
-      const wrapper = render(<IconAdd className="custom-class"/>);
+      const wrapper = render(<IconAdd className="custom-class" />);
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -30,11 +30,11 @@ describe('Icon', () => {
         expect(wrapper.prop('height')).toEqual('1em');
       });
       it('should have height=50', () => {
-        const wrapper = shallow(<IconAdd height="50"/>);
+        const wrapper = shallow(<IconAdd height="50" />);
         expect(wrapper.prop('height')).toEqual('50');
       });
       it('should have height="4em"', () => {
-        const wrapper = shallow(<IconAdd height="4em"/>);
+        const wrapper = shallow(<IconAdd height="4em" />);
         expect(wrapper.prop('height')).toEqual('4em');
       });
     });
@@ -45,11 +45,11 @@ describe('Icon', () => {
         expect(wrapper.prop('width')).toEqual('1em');
       });
       it('should have width=50', () => {
-        const wrapper = shallow(<IconAdd width="50"/>);
+        const wrapper = shallow(<IconAdd width="50" />);
         expect(wrapper.prop('width')).toEqual('50');
       });
       it('should have width="4em"', () => {
-        const wrapper = shallow(<IconAdd width="4em"/>);
+        const wrapper = shallow(<IconAdd width="4em" />);
         expect(wrapper.prop('width')).toEqual('4em');
       });
     });
@@ -94,7 +94,7 @@ describe('Icon', () => {
       });
       it('should have ariaLabel={some value}', () => {
         const wrapper = shallow(<IconAdd ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual("some value");
+        expect(wrapper.prop('ariaLabel')).toEqual('some value');
       });
     });
   });
@@ -113,7 +113,7 @@ describe('Icon', () => {
       expect(wrapper).toMatchSnapshot();
     });
     it('should render IconBase with custom-class', () => {
-      const wrapper = render(<IconSpinner className="custom-class"/>);
+      const wrapper = render(<IconSpinner className="custom-class" />);
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -123,11 +123,11 @@ describe('Icon', () => {
         expect(wrapper.prop('height')).toEqual('1em');
       });
       it('should have height=50', () => {
-        const wrapper = shallow(<IconSpinner height="50"/>);
+        const wrapper = shallow(<IconSpinner height="50" />);
         expect(wrapper.prop('height')).toEqual('50');
       });
       it('should have height="4em"', () => {
-        const wrapper = shallow(<IconSpinner height="4em"/>);
+        const wrapper = shallow(<IconSpinner height="4em" />);
         expect(wrapper.prop('height')).toEqual('4em');
       });
     });
@@ -138,11 +138,11 @@ describe('Icon', () => {
         expect(wrapper.prop('width')).toEqual('1em');
       });
       it('should have width=50', () => {
-        const wrapper = shallow(<IconSpinner width="50"/>);
+        const wrapper = shallow(<IconSpinner width="50" />);
         expect(wrapper.prop('width')).toEqual('50');
       });
       it('should have width="4em"', () => {
-        const wrapper = shallow(<IconSpinner width="4em"/>);
+        const wrapper = shallow(<IconSpinner width="4em" />);
         expect(wrapper.prop('width')).toEqual('4em');
       });
     });
@@ -187,7 +187,7 @@ describe('Icon', () => {
       });
       it('should have ariaLabel={some value}', () => {
         const wrapper = shallow(<IconSpinner ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual("some value");
+        expect(wrapper.prop('ariaLabel')).toEqual('some value');
       });
     });
   });
@@ -207,7 +207,7 @@ describe('Icon', () => {
       expect(wrapper).toMatchSnapshot();
     });
     it('should render IconBase with custom-class', () => {
-      const wrapper = render(<IconComment className="custom-class"/>);
+      const wrapper = render(<IconComment className="custom-class" />);
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -217,11 +217,11 @@ describe('Icon', () => {
         expect(wrapper.prop('height')).toEqual('1em');
       });
       it('should have height=50', () => {
-        const wrapper = shallow(<IconComment height="50"/>);
+        const wrapper = shallow(<IconComment height="50" />);
         expect(wrapper.prop('height')).toEqual('50');
       });
       it('should have height="4em"', () => {
-        const wrapper = shallow(<IconComment height="4em"/>);
+        const wrapper = shallow(<IconComment height="4em" />);
         expect(wrapper.prop('height')).toEqual('4em');
       });
     });
@@ -232,11 +232,11 @@ describe('Icon', () => {
         expect(wrapper.prop('width')).toEqual('1em');
       });
       it('should have width=50', () => {
-        const wrapper = shallow(<IconComment width="50"/>);
+        const wrapper = shallow(<IconComment width="50" />);
         expect(wrapper.prop('width')).toEqual('50');
       });
       it('should have width="4em"', () => {
-        const wrapper = shallow(<IconComment width="4em"/>);
+        const wrapper = shallow(<IconComment width="4em" />);
         expect(wrapper.prop('width')).toEqual('4em');
       });
     });
@@ -281,7 +281,7 @@ describe('Icon', () => {
       });
       it('should have ariaLabel={some value}', () => {
         const wrapper = shallow(<IconComment ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual("some value");
+        expect(wrapper.prop('ariaLabel')).toEqual('some value');
       });
     });
   });

@@ -11,7 +11,7 @@ const writeIcon = reactIcon => new Promise((resolve, reject) => {
     if (error) {
       reject(error);
     } else {
-      console.log(`Created ${reactIcon.name} at ${reactIcon.file}`)
+      console.log(`Created ${reactIcon.name} at ${reactIcon.file}`);
       resolve(reactIcon.name);
     }
   });

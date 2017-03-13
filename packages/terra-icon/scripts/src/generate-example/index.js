@@ -12,4 +12,3 @@ import generateIconAll from './generateIconAll';
 parseCsv()
 .then(generateIconAll);
 
-

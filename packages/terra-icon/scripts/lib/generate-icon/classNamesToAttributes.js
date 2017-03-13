@@ -4,7 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var classNamesToAttributes = function classNamesToAttributes(attributes) {
-
   if (attributes.className) {
     // remove is-bidi css class and add isBidi as an attribute
     if (attributes.className.includes('is-bidi')) {
@@ -19,7 +18,7 @@ var classNamesToAttributes = function classNamesToAttributes(attributes) {
     }
 
     // remove trailing whitespace
-    attributes.className = attributes.className.replace(/^\s+|\s+$/g, "");
+    attributes.className = attributes.className.replace(/^\s+|\s+$/g, '');
   }
 
   return attributes;

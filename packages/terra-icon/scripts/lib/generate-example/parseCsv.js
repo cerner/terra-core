@@ -22,6 +22,7 @@ var parseCsv = function parseCsv() {
   return new Promise(function (resolve, reject) {
     // Parse the csv file to json
     (0, _csvtojson2.default)({ noheader: true, headers: csvHeaders }).fromFile(_config.TerraIcon.csvFile).transf(function (jsonObj) {
+      // TODO: move transformation into it's own file
       jsonObj.componentName = 'Icon' + _lodash2.default.upperFirst(_lodash2.default.camelCase(jsonObj.name));
       jsonObj.filepath = '' + _config.TerraIcon.iconDir + jsonObj.componentName + '.jsx';
       jsonObj.themeable = !!jsonObj.themeable;

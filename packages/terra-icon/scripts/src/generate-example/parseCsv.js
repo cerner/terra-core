@@ -6,7 +6,7 @@ const csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
 const parseCsv = () => new Promise((resolve, reject) => {
   // Parse the csv file to json
   csv({ noheader: true, headers: csvHeaders }).fromFile(TerraIcon.csvFile)
-  .transf((jsonObj)=>{
+  .transf((jsonObj) => {
     // TODO: move transformation into it's own file
     jsonObj.componentName = `Icon${_.upperFirst(_.camelCase(jsonObj.name))}`;
     jsonObj.filepath = `${TerraIcon.iconDir}${jsonObj.componentName}.jsx`;
@@ -15,11 +15,11 @@ const parseCsv = () => new Promise((resolve, reject) => {
     jsonObj.spinner = (jsonObj.name === 'IconSpinner');
     jsonObj.syntaxComponent = `<${jsonObj.componentName} />`;
     jsonObj.syntaxImport = `import { ${jsonObj.componentName} } from '../${TerraIcon.iconExport}';\n`;
-  }).on('end_parsed',function(jsonObj){
+  }).on('end_parsed', (jsonObj) => {
     resolve(jsonObj);
-  }).on('error',(error)=>{
+  }).on('error', (error) => {
     reject(error);
-  })
+  });
 });
 
 export default parseCsv;

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 const svgoConfig = (csvObject) => {
   const classes = classNames({ 'is-spin': csvObject.isSpin },
                              { 'is-bidi': csvObject.isBidi });
-  let config = {
+  const config = {
     plugins: [
       {
         mergePaths: false,
@@ -16,7 +16,7 @@ const svgoConfig = (csvObject) => {
 
   // if is-spin or is-bidi exists, add to svg
   if (classes) {
-    config.plugins.push({ addClassesToSVGElement: { className: classes }});
+    config.plugins.push({ addClassesToSVGElement: { className: classes } });
   }
 
   return config;
