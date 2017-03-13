@@ -1,6 +1,7 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import template from 'lodash/template';
 import fs from 'fs';
 import path from 'path';
-import template from 'lodash/template';
 import ReactIcon from './ReactIcon';
 
 const templatePath = path.join(__dirname, './template.txt');

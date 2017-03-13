@@ -1,6 +1,4 @@
 import fs from 'fs';
-import path from 'path';
-import template from 'lodash/template';
 
 /**
  * generateJsx - Takes an Icon object as input and returns a React component
@@ -11,6 +9,7 @@ const writeIcon = reactIcon => new Promise((resolve, reject) => {
     if (error) {
       reject(error);
     } else {
+      // eslint-disable-next-line no-console
       console.log(`Created ${reactIcon.name} at ${reactIcon.file}`);
       resolve(reactIcon.name);
     }

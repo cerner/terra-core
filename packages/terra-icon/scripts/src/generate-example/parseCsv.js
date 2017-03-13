@@ -1,6 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import csv from 'csvtojson';
 import _ from 'lodash';
 import { TerraIcon } from '../config';
+/* eslint-enable import/no-extraneous-dependencies */
+
 const csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
 
 const parseCsv = () => new Promise((resolve, reject) => {
@@ -8,6 +11,7 @@ const parseCsv = () => new Promise((resolve, reject) => {
   csv({ noheader: true, headers: csvHeaders }).fromFile(TerraIcon.csvFile)
   .transf((jsonObj) => {
     // TODO: move transformation into it's own file
+    /* eslint-disable  no-param-reassign */
     jsonObj.componentName = `Icon${_.upperFirst(_.camelCase(jsonObj.name))}`;
     jsonObj.filepath = `${TerraIcon.iconDir}${jsonObj.componentName}.jsx`;
     jsonObj.themeable = !!jsonObj.themeable;
@@ -15,9 +19,12 @@ const parseCsv = () => new Promise((resolve, reject) => {
     jsonObj.spinner = (jsonObj.name === 'IconSpinner');
     jsonObj.syntaxComponent = `<${jsonObj.componentName} />`;
     jsonObj.syntaxImport = `import { ${jsonObj.componentName} } from '../${TerraIcon.iconExport}';\n`;
-  }).on('end_parsed', (jsonObj) => {
+    /* eslint-enable  no-param-reassign */
+  })
+  .on('end_parsed', (jsonObj) => {
     resolve(jsonObj);
-  }).on('error', (error) => {
+  })
+  .on('error', (error) => {
     reject(error);
   });
 });

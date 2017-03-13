@@ -1,9 +1,5 @@
 'use strict';
 
-var _removeMakeDirectories = require('./removeMakeDirectories');
-
-var _removeMakeDirectories2 = _interopRequireDefault(_removeMakeDirectories);
-
 var _parseCsv = require('./parseCsv');
 
 var _parseCsv2 = _interopRequireDefault(_parseCsv);
@@ -16,6 +12,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* eslint-enable import/no-extraneous-dependencies */
 
-// removeMakeDirectories();
-
-(0, _parseCsv2.default)().then(_generateIconAll2.default); /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies */
+(0, _parseCsv2.default)().then(_generateIconAll2.default);

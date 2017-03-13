@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import fs from 'fs';
 import path from 'path';
-import shell from 'shelljs';
 import removeMakeDirectories from './removeMakeDirectories';
 import parseSvg from './parseSvg';
 import renderJsx from './renderJsx';

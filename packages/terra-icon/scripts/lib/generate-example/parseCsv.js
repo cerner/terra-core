@@ -16,13 +16,17 @@ var _config = require('../config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
+/* eslint-enable import/no-extraneous-dependencies */
+
+var csvHeaders = ['name', 'filepath', 'themeable', 'bidi']; /* eslint-disable import/no-extraneous-dependencies */
+
 
 var parseCsv = function parseCsv() {
   return new Promise(function (resolve, reject) {
     // Parse the csv file to json
     (0, _csvtojson2.default)({ noheader: true, headers: csvHeaders }).fromFile(_config.TerraIcon.csvFile).transf(function (jsonObj) {
       // TODO: move transformation into it's own file
+      /* eslint-disable  no-param-reassign */
       jsonObj.componentName = 'Icon' + _lodash2.default.upperFirst(_lodash2.default.camelCase(jsonObj.name));
       jsonObj.filepath = '' + _config.TerraIcon.iconDir + jsonObj.componentName + '.jsx';
       jsonObj.themeable = !!jsonObj.themeable;
@@ -30,6 +34,7 @@ var parseCsv = function parseCsv() {
       jsonObj.spinner = jsonObj.name === 'IconSpinner';
       jsonObj.syntaxComponent = '<' + jsonObj.componentName + ' />';
       jsonObj.syntaxImport = 'import { ' + jsonObj.componentName + ' } from \'../' + _config.TerraIcon.iconExport + '\';\n';
+      /* eslint-enable  no-param-reassign */
     }).on('end_parsed', function (jsonObj) {
       resolve(jsonObj);
     }).on('error', function (error) {

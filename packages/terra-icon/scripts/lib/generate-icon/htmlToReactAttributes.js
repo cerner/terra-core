@@ -37,6 +37,5 @@ var htmlToReactAttributes = function htmlToReactAttributes(attributeName) {
   }
 
   return _lodash2.default.camelCase(attributeName);
-};
-
+}; // eslint-disable-next-line import/no-extraneous-dependencies
 exports.default = htmlToReactAttributes;

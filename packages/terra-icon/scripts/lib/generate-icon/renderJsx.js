@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _template = require('lodash/template');
+
+var _template2 = _interopRequireDefault(_template);
+
 var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
@@ -12,16 +16,13 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
-var _template = require('lodash/template');
-
-var _template2 = _interopRequireDefault(_template);
-
 var _ReactIcon = require('./ReactIcon');
 
 var _ReactIcon2 = _interopRequireDefault(_ReactIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 var templatePath = _path2.default.join(__dirname, './template.txt');
 
 /**

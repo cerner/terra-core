@@ -8,10 +8,6 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
-var _shelljs = require('shelljs');
-
-var _shelljs2 = _interopRequireDefault(_shelljs);
-
 var _removeMakeDirectories = require('./removeMakeDirectories');
 
 var _removeMakeDirectories2 = _interopRequireDefault(_removeMakeDirectories);
@@ -38,10 +34,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* eslint-enable import/no-extraneous-dependencies */
 
+/* eslint-disable import/no-extraneous-dependencies */
 (0, _removeMakeDirectories2.default)();
 
 // get filepath for every svg
-/* eslint-disable import/no-extraneous-dependencies */
 var svgs = _fs2.default.readdirSync(_config.TerraIcon.svgDir)
 // Only load svg files
 .filter(function (f) {

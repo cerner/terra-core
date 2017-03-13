@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import _ from 'lodash';
 import transformChildren from './transformChildren';
 import htmlToReactAttributes from './htmlToReactAttributes';

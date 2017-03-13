@@ -8,14 +8,6 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
-var _path = require('path');
-
-var _path2 = _interopRequireDefault(_path);
-
-var _template = require('lodash/template');
-
-var _template2 = _interopRequireDefault(_template);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
@@ -28,6 +20,7 @@ var writeIcon = function writeIcon(reactIcon) {
       if (error) {
         reject(error);
       } else {
+        // eslint-disable-next-line no-console
         console.log('Created ' + reactIcon.name + ' at ' + reactIcon.file);
         resolve(reactIcon.name);
       }

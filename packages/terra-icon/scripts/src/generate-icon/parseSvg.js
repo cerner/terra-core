@@ -1,7 +1,8 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import jsdom from 'jsdom';
 import fs from 'fs';
 import path from 'path';
-import jsdom from 'jsdom';
-import Icon from './icon';
+import Icon from './Icon';
 
 const parseSvg = filepath => new Promise((resolve, reject) => {
   const source = fs.readFileSync(filepath, 'utf-8');
