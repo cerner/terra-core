@@ -22,7 +22,7 @@
 }
 
 .terra-DetailView-divider {
-  border-color: $terra-base-color-20;
+  border-color: $terra-detail-view-divider-color;
   border-style: solid;
   border-width: 1px 0 0;
   margin: 0;
@@ -30,7 +30,7 @@
 }
 
 .terra-DetailView-subtitle {
-  color: $terra-text-color-30;
+  color: $terra-grey-30;
   font-size: $terra-detail-view-subtitle-font-size;
   line-height: $terra-detail-view-subtitle-line-height;
   margin-bottom: $terra-detail-view-subtitle-margin-bottom;
