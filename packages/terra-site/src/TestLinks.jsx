@@ -6,6 +6,7 @@ const TestLinks = () => (
   <div>
     <ul>
       <li><Link to="/tests/button-tests">Button Tests</Link></li>
+      <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
       <li><Link to="/tests/slide-panel-tests">SlidePanel Tests</Link></li>
     </ul>
   </div>

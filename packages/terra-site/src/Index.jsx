@@ -23,6 +23,7 @@ import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Ind
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
+import DatePickerTestRoutes from '../../../packages/terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import TestLinks from './TestLinks';
 
@@ -48,6 +49,7 @@ ReactDOM.render((
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
+    {DatePickerTestRoutes}
     {SlidePanelTestRoutes}
   </Router>
 ), document.getElementById('root'));

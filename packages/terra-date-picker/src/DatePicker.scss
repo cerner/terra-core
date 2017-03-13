@@ -26,38 +26,34 @@
 
 /* ignore the selector-class-pattern rule for selector classes in third party components */
 /* stylelint-disable selector-class-pattern */
-.react-datepicker__day--highlighted {
-  background-color: $terra-secondary-color-50;
+.react-datepicker__day.react-datepicker__day--highlighted {
+  // background-color: $terra-secondary-color-50;
   border-radius: 0.3rem;
-  color: $terra-white; 
+  color: $terra-date-picker-day-color-highlighted; 
 }
 
 .react-datepicker__day--highlighted:hover {
-  background-color: $terra-secondary-color-60; 
+  // background-color: $terra-secondary-color-60; 
 }
 
 .react-datepicker__day.react-datepicker__day--keyboard-selected,
 .react-datepicker__day.react-datepicker__day--selected,
 .react-datepicker__day.react-datepicker__day--in-range,
 .react-datepicker__day.react-datepicker__day--in-selecting-range {
-  color: $terra-white;
+  color: $terra-date-picker-day-color-selected;
 }
 
 .react-datepicker__day {
-  color: $terra-blue-60;
+  color: $terra-date-picker-day-color;
 }
 
 .react-datepicker__day--outside-month {
-  color: $terra-black;
+  color: $terra-date-picker-day-color-outside-month;
 }
 
 .react-datepicker__day--disabled {
-  color: $terra-grey-30;
+  color: $terra-date-picker-day-color-disabled;
 }
 /* stylelint-enable */
-
-
-
-
 
 

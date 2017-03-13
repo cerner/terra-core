@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import DatePicker from '../src/DatePicker';
+import DatePicker from '../../../lib/DatePicker';
 
 const CustomInputWithButton = (props) => {
   const customInput =

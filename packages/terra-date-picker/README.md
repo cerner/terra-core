@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-date-picker.svg)](https://www.npmjs.org/package/terra-date-picker)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-The terra-date-picker component is used to manually enter a date in an input field or select a date from the date picker.
+The terra-date-picker component provides users a way to enter or select a date from the date picker.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)

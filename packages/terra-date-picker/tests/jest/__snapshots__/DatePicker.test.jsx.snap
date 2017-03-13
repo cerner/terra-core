@@ -1,0 +1,510 @@
+exports[`test should render a date picker in portal 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    portal={true}
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker that opens to a specific date 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    openToDate={"1999-09-09T05:00:00.000Z"}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with disabled dates 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    excludeDates={
+      Array [
+        "2017-03-09T21:29:19.380Z",
+        "2017-03-11T21:29:19.381Z",
+      ]
+    }
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with filtered dates 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    filterDate={[Function]}
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with highlighted dates 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    highlightDates={
+      Array [
+        "2017-03-07T21:29:19.386Z",
+        "2017-03-13T20:29:19.386Z",
+      ]
+    }
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with included dates 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    includeDates={
+      Array [
+        "2017-03-10T21:29:19.389Z",
+        "2017-03-09T21:29:19.389Z",
+        "2017-03-11T21:29:19.389Z",
+      ]
+    }
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with min and max dates 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    maxDate={"2017-03-16T20:29:19.392Z"}
+    minDate={"2017-03-10T21:29:19.392Z"}
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with the Today button 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today123"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with the Today button hidden 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with the month and year dropdowns hidden 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar="MMMM YYYY"
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={false}
+    showYearDropdown={false}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date picker with two months 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={2}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a date range 1`] = `
+<div
+  className="terra-DatePicker-range">
+  <DatePicker
+    hideTodayButton={false}
+    isEndDateRange={false}
+    isStartDateRange={true}
+    monthsShown={1}
+    onChange={[Function]}
+    withPortal={false} />
+  <DatePicker
+    hideTodayButton={false}
+    isEndDateRange={true}
+    isStartDateRange={false}
+    monthsShown={1}
+    onChange={[Function]}
+    withPortal={false} />
+</div>
+`;
+
+exports[`test should render a default date input and date picker 1`] = `
+<div
+  className="terra-DatePicker">
+  <DatePicker
+    className="terra-DatePicker-input"
+    dateFormat="MM/DD/YYYY"
+    dateFormatCalendar=" "
+    disabled={false}
+    disabledKeyboardNavigation={false}
+    dropdownMode="select"
+    fixedHeight={true}
+    locale="en-US"
+    monthsShown={1}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMonthChange={[Function]}
+    placeholderText="MM/DD/YYYY"
+    popoverAttachment="top left"
+    popoverTargetAttachment="bottom left"
+    popoverTargetOffset="10px 0"
+    selectsEnd={false}
+    selectsStart={false}
+    showMonthDropdown={true}
+    showYearDropdown={true}
+    tetherConstraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "window",
+        },
+      ]
+    }
+    todayButton="Today"
+    utcOffset={-360}
+    withPortal={false} />
+</div>
+`;

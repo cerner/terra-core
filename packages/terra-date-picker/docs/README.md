@@ -1,6 +1,6 @@
 # Terra Date Picker
 
-The terra-date-picker component is used to manually enter a date in an input field or select a date from the date picker.
+The terra-date-picker component provides users a way to enter or select a date from the date picker.
 
 ## Getting Started
 
