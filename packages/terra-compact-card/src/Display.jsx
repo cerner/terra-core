@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import './compact-card-display.scss';
+import './Display.scss';
 
 const textStyles = [
   'secondary',
@@ -9,15 +9,25 @@ const textStyles = [
 ];
 
 const propTypes = {
-  className: PropTypes.string,
+  /**
+   * The text to be displayed for the comment.
+   */
   text: PropTypes.string,
+  /**
+   * The visual styles to be applied to the display element.
+   */
   textStyle: PropTypes.oneOf(textStyles),
+  /**
+   * Whether or not the text should be truncated.
+   */
   isTruncated: PropTypes.bool,
+  /**
+   * The icon react element to be displayed next to the display text.
+   */
   icon: PropTypes.element,
 };
 
 const defaultProps = {
-  className: '',
   text: '',
   textStyle: undefined,
   isTruncated: false,
@@ -25,7 +35,6 @@ const defaultProps = {
 };
 
 const Display = ({
-    className,
     text,
     textStyle,
     isTruncated,
@@ -34,7 +43,7 @@ const Display = ({
   }) => {
   const displayClassNames = classNames([
     'terra-CompactCard-display',
-    className,
+    customProps.className,
   ]);
 
   const textClassNames = classNames([

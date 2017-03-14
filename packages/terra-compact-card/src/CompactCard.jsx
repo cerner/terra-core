@@ -1,23 +1,45 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import './compact-card.scss';
+import './CompactCard.scss';
 import Display from './Display';
 import Comment from './Comment';
 
 const propTypes = {
-  className: PropTypes.string,
+  /**
+   * The column layout in which to present the displays.
+   */
   layout: PropTypes.oneOf(['oneColumn', 'twoColumns']),
+  /**
+   * The text color emphasis when using two columns.
+   */
   textEmphasis: PropTypes.oneOf(['default', 'left']),
+  /**
+   * Whether or not all text on the card should be truncated.
+   */
   isTruncated: PropTypes.bool,
+  /**
+   * The vertical alignment of the left and right accesories.
+   */
   accessoryAlignment: PropTypes.oneOf(['alignTop', 'alignCenter']),
+  /**
+   * The react element to be placed in the left accessory position.
+   */
   leftAccessory: PropTypes.element,
+  /**
+   * The react element to be placed in the right accessory position.
+   */
   rightAccessory: PropTypes.element,
+  /**
+   * An array of react display elements to be presented.
+   */
   displays: PropTypes.arrayOf(PropTypes.element),
+  /**
+   * THe react element for the comment element.
+   */
   comment: PropTypes.element,
 };
 
 const defaultProps = {
-  className: '',
   layout: 'oneColumn',
   textEmphasis: 'default',
   isTruncated: false,
@@ -129,8 +151,7 @@ class CompactCard extends React.Component {
   }
 
   render() {
-    const { className,
-            layout,
+    const { layout,
             textEmphasis,
             isTruncated,
             accessoryAlignment,
@@ -145,7 +166,7 @@ class CompactCard extends React.Component {
       { 'terra-CompactCard--isTruncated': isTruncated },
       { [`terra-CompactCard--${layout}`]: layout },
       { [`terra-CompactCard-accessory--${accessoryAlignment}`]: accessoryAlignment },
-      className,
+      customProps.className,
     ]);
 
     return (

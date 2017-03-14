@@ -1,11 +1,16 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import CommentIndicator from 'terra-icon/lib/icon/themeable/comment.svg';
+import CommentIndicator from 'terra-icon/lib/icon/IconComment';
 import Display from './Display';
 
 const propTypes = {
-  className: PropTypes.string,
+  /**
+   * The text to be displayed for the comment.
+   */
   text: PropTypes.string,
+  /**
+   * Whether or not the text should be truncated in display.
+   */
   isTruncated: PropTypes.bool,
 };
 
@@ -16,14 +21,13 @@ const defaultProps = {
 };
 
 const Comment = ({
-    className,
     text,
     isTruncated,
     ...customProps
   }) => {
   const commentClassNames = classNames([
     'terra-CompactCard-comment',
-    className,
+    customProps.className,
   ]);
 
   const commentIcon = <CommentIndicator />;
@@ -33,8 +37,8 @@ const Comment = ({
       text={text}
       isTruncated={isTruncated}
       icon={commentIcon}
-      className={commentClassNames}
       {...customProps}
+      className={commentClassNames}
     />
   );
 };

@@ -14,7 +14,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('./compact-card-display.scss');
+require('./Display.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,15 +25,25 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var textStyles = ['secondary', 'attention', 'strikeThrough'];
 
 var propTypes = {
-  className: _react.PropTypes.string,
+  /**
+   * The text to be displayed for the comment.
+   */
   text: _react.PropTypes.string,
+  /**
+   * The visual styles to be applied to the display element.
+   */
   textStyle: _react.PropTypes.oneOf(textStyles),
+  /**
+   * Whether or not the text should be truncated.
+   */
   isTruncated: _react.PropTypes.bool,
+  /**
+   * The icon react element to be displayed next to the display text.
+   */
   icon: _react.PropTypes.element
 };
 
 var defaultProps = {
-  className: '',
   text: '',
   textStyle: undefined,
   isTruncated: false,
@@ -41,14 +51,13 @@ var defaultProps = {
 };
 
 var Display = function Display(_ref) {
-  var className = _ref.className,
-      text = _ref.text,
+  var text = _ref.text,
       textStyle = _ref.textStyle,
       isTruncated = _ref.isTruncated,
       icon = _ref.icon,
-      customProps = _objectWithoutProperties(_ref, ['className', 'text', 'textStyle', 'isTruncated', 'icon']);
+      customProps = _objectWithoutProperties(_ref, ['text', 'textStyle', 'isTruncated', 'icon']);
 
-  var displayClassNames = (0, _classnames2.default)(['terra-CompactCard-display', className]);
+  var displayClassNames = (0, _classnames2.default)(['terra-CompactCard-display', customProps.className]);
 
   var textClassNames = (0, _classnames2.default)(['terra-CompactCard-text', { 'terra-CompactCard-text--isTruncated': isTruncated }, _defineProperty({}, 'terra-CompactCard-text--' + textStyle, textStyle)]);
 

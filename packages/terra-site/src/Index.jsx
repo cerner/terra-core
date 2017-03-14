@@ -20,6 +20,7 @@ import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/I
 import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
+import CompactCardExamples from '../../../packages/terra-compact-card/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
@@ -45,6 +46,7 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="compact-card" component={CompactCardExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}

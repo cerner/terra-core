@@ -16,7 +16,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('./compact-card.scss');
+require('./CompactCard.scss');
 
 var _Display = require('./Display');
 
@@ -39,19 +39,41 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
-  className: _react.PropTypes.string,
+  /**
+   * The column layout in which to present the displays.
+   */
   layout: _react.PropTypes.oneOf(['oneColumn', 'twoColumns']),
+  /**
+   * The text color emphasis when using two columns.
+   */
   textEmphasis: _react.PropTypes.oneOf(['default', 'left']),
+  /**
+   * Whether or not all text on the card should be truncated.
+   */
   isTruncated: _react.PropTypes.bool,
+  /**
+   * The vertical alignment of the left and right accesories.
+   */
   accessoryAlignment: _react.PropTypes.oneOf(['alignTop', 'alignCenter']),
+  /**
+   * The react element to be placed in the left accessory position.
+   */
   leftAccessory: _react.PropTypes.element,
+  /**
+   * The react element to be placed in the right accessory position.
+   */
   rightAccessory: _react.PropTypes.element,
+  /**
+   * An array of react display elements to be presented.
+   */
   displays: _react.PropTypes.arrayOf(_react.PropTypes.element),
+  /**
+   * THe react element for the comment element.
+   */
   comment: _react.PropTypes.element
 };
 
 var defaultProps = {
-  className: '',
   layout: 'oneColumn',
   textEmphasis: 'default',
   isTruncated: false,
@@ -75,7 +97,6 @@ var CompactCard = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          className = _props.className,
           layout = _props.layout,
           textEmphasis = _props.textEmphasis,
           isTruncated = _props.isTruncated,
@@ -84,9 +105,9 @@ var CompactCard = function (_React$Component) {
           rightAccessory = _props.rightAccessory,
           displays = _props.displays,
           comment = _props.comment,
-          customProps = _objectWithoutProperties(_props, ['className', 'layout', 'textEmphasis', 'isTruncated', 'accessoryAlignment', 'leftAccessory', 'rightAccessory', 'displays', 'comment']);
+          customProps = _objectWithoutProperties(_props, ['layout', 'textEmphasis', 'isTruncated', 'accessoryAlignment', 'leftAccessory', 'rightAccessory', 'displays', 'comment']);
 
-      var cardClassNames = (0, _classnames2.default)(['terra-CompactCard', { 'terra-CompactCard--isTruncated': isTruncated }, _defineProperty({}, 'terra-CompactCard--' + layout, layout), _defineProperty({}, 'terra-CompactCard-accessory--' + accessoryAlignment, accessoryAlignment), className]);
+      var cardClassNames = (0, _classnames2.default)(['terra-CompactCard', { 'terra-CompactCard--isTruncated': isTruncated }, _defineProperty({}, 'terra-CompactCard--' + layout, layout), _defineProperty({}, 'terra-CompactCard-accessory--' + accessoryAlignment, accessoryAlignment), customProps.className]);
 
       return _react2.default.createElement(
         'div',

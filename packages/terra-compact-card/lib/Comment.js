@@ -14,9 +14,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _comment = require('terra-icon/lib/icon/themeable/comment.svg');
+var _IconComment = require('terra-icon/lib/icon/IconComment');
 
-var _comment2 = _interopRequireDefault(_comment);
+var _IconComment2 = _interopRequireDefault(_IconComment);
 
 var _Display = require('./Display');
 
@@ -27,8 +27,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
-  className: _react.PropTypes.string,
+  /**
+   * The text to be displayed for the comment.
+   */
   text: _react.PropTypes.string,
+  /**
+   * Whether or not the text should be truncated in display.
+   */
   isTruncated: _react.PropTypes.bool
 };
 
@@ -39,21 +44,21 @@ var defaultProps = {
 };
 
 var Comment = function Comment(_ref) {
-  var className = _ref.className,
-      text = _ref.text,
+  var text = _ref.text,
       isTruncated = _ref.isTruncated,
-      customProps = _objectWithoutProperties(_ref, ['className', 'text', 'isTruncated']);
+      customProps = _objectWithoutProperties(_ref, ['text', 'isTruncated']);
 
-  var commentClassNames = (0, _classnames2.default)(['terra-CompactCard-comment', className]);
+  var commentClassNames = (0, _classnames2.default)(['terra-CompactCard-comment', customProps.className]);
 
-  var commentIcon = _react2.default.createElement(_comment2.default, null);
+  var commentIcon = _react2.default.createElement(_IconComment2.default, null);
 
   return _react2.default.createElement(_Display2.default, _extends({
     text: text,
     isTruncated: isTruncated,
-    icon: commentIcon,
+    icon: commentIcon
+  }, customProps, {
     className: commentClassNames
-  }, customProps));
+  }));
 };
 
 Comment.propTypes = propTypes;

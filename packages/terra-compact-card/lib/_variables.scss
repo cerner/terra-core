@@ -1,15 +1,13 @@
-@import 'node_modules/terra-legacy-theme/src/terra-legacy-theme';
-
 //comment
-$terra-compact-card-comment-color: $terra-text-color-70 !default;
-$terra-compact-card-comment-icon-color: $terra-base-color-30 !default;
+$terra-compact-card-comment-color: $terra-grey-70 !default;
+$terra-compact-card-comment-icon-color: $terra-grey-30 !default;
 
 //content styles
 $terra-compact-card-content-primary-color: $terra-black !default;
-$terra-compact-card-content-secondary-color: $terra-text-color-70 !default;
+$terra-compact-card-content-secondary-color: $terra-grey-70 !default;
 
 //text styles
-$terra-compact-card-text-inverse-color: $terra-base-color-10 !default;
-$terra-compact-card-text-secondary-color: $terra-text-color-70 !default;
+$terra-compact-card-text-inverse-color: $terra-grey-10 !default;
+$terra-compact-card-text-secondary-color: $terra-grey-70 !default;
 $terra-compact-card-text-attention-color: $terra-clinical-critical-color !default;
 $terra-compact-card-text-attention-weight: 700 !default;
