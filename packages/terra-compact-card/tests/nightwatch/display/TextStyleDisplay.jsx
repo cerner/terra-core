@@ -2,12 +2,12 @@ import React from 'react';
 
 import Display from '../../../lib/Display';
 
-const SecondaryDisplay = () => <Display text="test text" textStyle="secondary" />;
-const AttentionDisplay = () => <Display text="test text" textStyle="attention" />;
-const StrikeThroughDisplay = () => <Display text="test text" textStyle="strike-through" />;
+const cards = () => (
+  <div>
+    <Display text="test text" textStyle="secondary" id="test-display-secondary" />
+    <Display text="test text" textStyle="attention" id="test-display-attention" />
+    <Display text="test text" textStyle="strikeThrough" id="test-display-strike-through" />
+  </div>
+);
 
-export {
-  SecondaryDisplay,
-  AttentionDisplay,
-  StrikeThroughDisplay,
-};
+export default cards;
