@@ -68,7 +68,7 @@ var propTypes = {
    */
   displays: _react.PropTypes.arrayOf(_react.PropTypes.element),
   /**
-   * THe react element for the comment element.
+   * The react element for the comment element.
    */
   comment: _react.PropTypes.element
 };

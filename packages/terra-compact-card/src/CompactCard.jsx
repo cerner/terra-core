@@ -34,7 +34,7 @@ const propTypes = {
    */
   displays: PropTypes.arrayOf(PropTypes.element),
   /**
-   * THe react element for the comment element.
+   * The react element for the comment element.
    */
   comment: PropTypes.element,
 };

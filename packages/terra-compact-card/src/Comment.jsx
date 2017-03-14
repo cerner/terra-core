@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import CommentIndicator from 'terra-icon/lib/icon/IconComment';
 import Display from './Display';
+import './Comment.scss';
 
 const propTypes = {
   /**
