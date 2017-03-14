@@ -65,16 +65,12 @@
 .terra-CompactCard-text--inlineIcon {
   @include terra-padding-end(5px);
   flex: 0 0 auto;
+  height: 20px !important;
+  max-width: 20px !important;
 }
 
 .terra-CompactCard-text--inlineIcon > .terra-Icon {
-  height: 20px !important;
-}
-
-// For SVGs, lock the element height
-.terra-CompactCard-text--inlineIcon > .terra-Icon > svg {
-  height: 20px !important;
-  max-width: 20px !important;
+  font-size: 1rem;
 }
 
 // Truncation
