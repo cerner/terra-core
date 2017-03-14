@@ -12,4 +12,3 @@ Variables to `theme` the Terra CompactTile component.
 | `$terra-compact-card-text-secondary-color` | `$terra-text-color-30` | Sets the text color to the secondary style color. |
 | `$terra-compact-card-text-attention-color` | `$terra-clinical-critical-color` | Sets the text color to the attention style color. |
 | `$$terra-compact-card-text-attention-weight` | `700` | Set the text weight. |
-

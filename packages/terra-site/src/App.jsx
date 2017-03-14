@@ -29,6 +29,7 @@ const App = props => (
       <li><Link to="/site/status">Status</Link></li>
       <li><Link to="/site/title">Title</Link></li>
       <li><Link to="/site/slide-panel">Slide Panel</Link></li>
+      <li><Link to="/site/compact-card">Compact Card</Link></li>
       <li><Link to="/tests">Tests</Link></li>
     </ul>
     {props.children}

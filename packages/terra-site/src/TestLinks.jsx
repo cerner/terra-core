@@ -7,6 +7,7 @@ const TestLinks = () => (
     <ul>
       <li><Link to="/tests/button-tests">Button Tests</Link></li>
       <li><Link to="/tests/slide-panel-tests">SlidePanel Tests</Link></li>
+      <li><Link to="/tests/compact-card-tests">CompactCard Tests</Link></li>
     </ul>
   </div>
 );
