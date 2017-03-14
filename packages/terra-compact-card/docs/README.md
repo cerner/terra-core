@@ -21,7 +21,7 @@ import CompactCard from 'CompactCard;
   accessoryAlignment="top"
   leftAccesory=<img alt="Graphic" />
   displays={[<CompactCard.Display text="display 1" />, <CompactCard.Display text="display 2" />]}
-  comment=<Comment text="comment" />
+  comment=<CompactCard.Comment text="comment" />
 />
 
 <Display
@@ -33,7 +33,7 @@ import CompactCard from 'CompactCard;
 
 <Comment
   text="display text"
-  style="attention"
+  textStyle="attention"
   isTruncated=true
 />
 ```
