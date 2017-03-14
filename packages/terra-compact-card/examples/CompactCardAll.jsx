@@ -13,11 +13,12 @@ const displays = [display1, display2, display3, display4, display5, display6];
 const accessoryLeft = <img alt="Graphic Left" />;
 const accessoryRight = <img alt="Graphic Right" />;
 
-const comment = <Comment text="test comment" />;
+const comment = <CompactCard.Comment text="test comment" />;
 
 export default () => <CompactCard
   displays={displays}
   layout="twoColumns"
+  isTruncated
   textEmphasis="left"
   leftAccessory={accessoryLeft}
   rightAccessory={accessoryRight}
