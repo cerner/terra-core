@@ -80,7 +80,7 @@ var defaultProps = {
   accessoryAlignment: 'alignCenter',
   leftAccessory: undefined,
   rightAccessory: undefined,
-  display: [],
+  displays: [],
   comment: undefined
 };
 
