@@ -10,12 +10,12 @@ const display5 = <CompactCard.Display text="display 5" key="127" />;
 const display6 = <CompactCard.Display text="display 6" key="128" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-const OneColumnLayoutCompactCard = () => <CompactCard displays={displays} />;
-const TwoColumnLayoutCompactCard = () => <CompactCard displays={displays} layout="twoColumns" />;
-const LeftThemeLayoutCompactCard = () => <CompactCard displays={displays} layout="twoColumns" textEmphasis="left" />;
+const cards = () => (
+  <div>
+    <CompactCard displays={displays} id="test-displays" />
+    <CompactCard displays={displays} layout="twoColumns" id="test-displays-two" />
+    <CompactCard displays={displays} layout="twoColumns" textEmphasis="left" id="test-displays-two-left" />
+  </div>
+);
 
-export {
-  OneColumnLayoutCompactCard,
-  TwoColumnLayoutCompactCard,
-  LeftThemeLayoutCompactCard,
-};
+export default cards;
