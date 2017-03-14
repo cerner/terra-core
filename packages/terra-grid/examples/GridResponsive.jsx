@@ -8,7 +8,7 @@ const GridResponsive = () => (
         <div className="demo-bar">First Column content</div>
       </Grid.Column>
       <Grid.Column tiny={12} small={4} medium={8} large={6}>
-        <div className="demo-bar">First Column content</div>
+        <div className="demo-bar">Second Column content</div>
       </Grid.Column>
     </Grid.Row>
   </Grid>
