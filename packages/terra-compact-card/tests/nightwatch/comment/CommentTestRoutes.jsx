@@ -8,9 +8,9 @@ import TextComment from './TextComment';
 
 const routes = (
   <div>
-    <Route path="/tests/comment-tests" component={CommentTests} />
-    <Route path="/tests/comment-tests/default" component={DefaultComment} />
-    <Route path="/tests/comment-tests/displays" component={TextComment} />
+    <Route path="/tests/compact-card-comment-tests" component={CommentTests} />
+    <Route path="/tests/compact-card-comment-tests/default" component={DefaultComment} />
+    <Route path="/tests/compact-card-comment-tests/text" component={TextComment} />
   </div>
 );
 

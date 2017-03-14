@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 const CommentTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/comment-tests/default">Default Comment</Link></li>
-      <li><Link to="/tests/comment-tests/text">Text Comment</Link></li>
+      <li><Link to="/tests/compact-card-comment-tests/default">Default Comment</Link></li>
+      <li><Link to="/tests/compact-card-comment-tests/text">Text Comment</Link></li>
     </ul>
   </div>
 );

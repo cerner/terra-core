@@ -25,6 +25,9 @@ import CompactCardExamples from '../../../packages/terra-compact-card/examples/I
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import CompactCardTestRoutes from '../../../packages/terra-compact-card/tests/nightwatch/compact-card/CompactCardTestRoutes';
+import CommentTestRoutes from '../../../packages/terra-compact-card/tests/nightwatch/comment/CommentTestRoutes';
+import DisplayTestRoutes from '../../../packages/terra-compact-card/tests/nightwatch/display/DisplayTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -51,5 +54,8 @@ ReactDOM.render((
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
+    {CompactCardTestRoutes}
+    {CommentTestRoutes}
+    {DisplayTestRoutes}
   </Router>
 ), document.getElementById('root'));
