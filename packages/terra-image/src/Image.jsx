@@ -4,27 +4,27 @@ import './Image.scss';
 
 const propTypes = {
   /**
-  *
-  */
+   * The source for the image which will be displayed.
+   */
   src: PropTypes.string.isRequired,
   /**
-   *
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`. 
    */
   variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
   /**
-   *
+   * Sets the behavior for the image, which can be `fluid` or `nonfluid`.
    */
   behavior: PropTypes.oneOf(['fluid', 'nonfluid']),
   /**
-   *
+   * The text content that specifies an alternative text for an image.
    */
   alt: PropTypes.string,
   /**
-   *
+   * Sets the height of the image.
    */
   height: PropTypes.number,
   /**
-   *
+   * Sets the width of the image.
    */
   width: PropTypes.number,
 };
@@ -48,14 +48,15 @@ const Image = ({
   	'terra-Image',
   	{[`terra-Image--${variant}`]: variant },
   	{[`terra-Image--${behavior}`]: behavior},
-  	customProps.className
+  	customProps.className,
   ]);
 
   return (
     <img {...customProps}
     className={classes}
   	/>);
-  // React.createNewElement('img', {...customProps, className: classes } );
+   
+   /* React.createNewElement('img', {...customProps, className: classes } );*/
 };
 
 

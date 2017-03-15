@@ -4,7 +4,7 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from '../docs/README.md';
 import ImageSrc from '!raw-loader!../src/Image.jsx';
-import '../src/Image.scss';
+/* import '../src/Image.scss';*/
 
 const imagecontainerStyle1 = {
   backgroundColor: '#ffe4c4',
