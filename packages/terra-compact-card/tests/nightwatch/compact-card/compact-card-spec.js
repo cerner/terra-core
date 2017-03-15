@@ -26,16 +26,21 @@ module.exports = {
       .assert.containsText('#test-displays-two .terra-CompactCard-row:nth-child(2) .terra-CompactCard-content:nth-child(1)', 'display 3')
       .assert.containsText('#test-displays-two .terra-CompactCard-row:nth-child(2) .terra-CompactCard-content:nth-child(2)', 'display 4')
       .assert.containsText('#test-displays-two .terra-CompactCard-row:nth-child(3) .terra-CompactCard-content:nth-child(1)', 'display 5')
-      .assert.containsText('#test-displays-two .terra-CompactCard-row:nth-child(3) .terra-CompactCard-content:nth-child(2)', 'display 6');
+      .assert.containsText('#test-displays-two .terra-CompactCard-row:nth-child(3) .terra-CompactCard-content:nth-child(2)', 'display 6')
+      .assert.cssClassPresent('#test-displays-two-left .terra-CompactCard-row:nth-child(1) .terra-CompactCard-content:nth-child(2)', 'terra-CompactCard-content--secondaryColor')
+      .assert.cssClassPresent('#test-displays-two-left .terra-CompactCard-row:nth-child(2) .terra-CompactCard-content:nth-child(2)', 'terra-CompactCard-content--secondaryColor')
+      .assert.cssClassPresent('#test-displays-two-left .terra-CompactCard-row:nth-child(3) .terra-CompactCard-content:nth-child(2)', 'terra-CompactCard-content--secondaryColor');
   },
   'Displays a compact card with accessories set': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/compact-card-tests/accessory`)
-      .assert.cssClassPresent('.terra-CompactCard-accessory > :first-child', 'graphic');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/compact-card-tests/accessory`);
+    browser.expect.element('#test-left-accessory .terra-CompactCard-accessory:nth-child(1) > :first-child').to.be.present;
+    browser.expect.element('#test-left-accessory .terra-CompactCard-accessory:nth-child(3) > :first-child').to.not.be.present;
+    browser.expect.element('#test-right-accessory .terra-CompactCard-accessory:nth-child(1) > :first-child').to.not.be.present;
+    browser.expect.element('#test-right-accessory .terra-CompactCard-accessory:nth-child(3) > :first-child').to.be.present;
+    browser.assert.cssClassPresent('#test-both-accessory-top', 'terra-CompactCard-accessory--alignTop');
   },
   'Displays a compact card with a comment set': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/compact-card-tests/comment`)
-      .assert.cssClassPresent('.terra-CompactCard-accessory > :first-child', 'graphic');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/compact-card-tests/comment`);
+    browser.expect.element('.terra-CompactCard-body .terra-CompactCard-comment').to.be.present;
   },
 };
