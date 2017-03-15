@@ -24,27 +24,27 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   /**
-  *
-  */
+   * The source for the image which will be displayed.
+   */
   src: _react.PropTypes.string.isRequired,
   /**
-   *
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`. 
    */
   variant: _react.PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
   /**
-   *
+   * Sets the behavior for the image, which can be `fluid` or `nonfluid`.
    */
   behavior: _react.PropTypes.oneOf(['fluid', 'nonfluid']),
   /**
-   *
+   * The text content that specifies an alternative text for an image.
    */
   alt: _react.PropTypes.string,
   /**
-   *
+   * Sets the height of the image.
    */
   height: _react.PropTypes.number,
   /**
-   *
+   * Sets the width of the image.
    */
   width: _react.PropTypes.number
 };
@@ -69,7 +69,8 @@ var Image = function Image(_ref) {
   return _react2.default.createElement('img', _extends({}, customProps, {
     className: classes
   }));
-  // React.createNewElement('img', {...customProps, className: classes } );
+
+  /* React.createNewElement('img', {...customProps, className: classes } );*/
 };
 
 Image.propTypes = propTypes;
