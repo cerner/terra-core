@@ -14,18 +14,17 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _chevronRight = require('terra-icon/lib/icon/themeable/chevronRight.svg');
+var _IconChevronRight = require('terra-icon/lib/icon/IconChevronRight');
 
-var _chevronRight2 = _interopRequireDefault(_chevronRight);
+var _IconChevronRight2 = _interopRequireDefault(_IconChevronRight);
 
-require('../src/list-item.scss');
+require('../src/ListItem.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
-  className: _react.PropTypes.string,
   content: _react.PropTypes.element,
   isSelected: _react.PropTypes.bool,
   isSelectable: _react.PropTypes.bool,
@@ -33,7 +32,6 @@ var propTypes = {
 };
 
 var defaultProps = {
-  className: '',
   content: undefined,
   isSelected: false,
   isSelectable: undefined,
@@ -41,21 +39,20 @@ var defaultProps = {
 };
 
 var ListItem = function ListItem(_ref) {
-  var className = _ref.className,
-      content = _ref.content,
+  var content = _ref.content,
       isSelected = _ref.isSelected,
       isSelectable = _ref.isSelectable,
       hasChevron = _ref.hasChevron,
-      customProps = _objectWithoutProperties(_ref, ['className', 'content', 'isSelected', 'isSelectable', 'hasChevron']);
+      customProps = _objectWithoutProperties(_ref, ['content', 'isSelected', 'isSelectable', 'hasChevron']);
 
-  var listItemClassNames = (0, _classnames2.default)(['terra-ListItem', { 'terra-ListItem--selected': isSelected }, { 'terra-ListItem-isSelectable': isSelectable }, { 'terra-ListItem-hasChevron': hasChevron }, className]);
+  var listItemClassNames = (0, _classnames2.default)(['terra-ListItem', { 'terra-ListItem--selected': isSelected }, { 'terra-ListItem-isSelectable': isSelectable }, { 'terra-ListItem-hasChevron': hasChevron }, customProps.className]);
 
   var chevron = void 0;
   if (hasChevron) {
     chevron = _react2.default.createElement(
       'span',
       { className: 'terra-ListItem-chevron' },
-      _react2.default.createElement(_chevronRight2.default, { height: '10', width: '10' })
+      _react2.default.createElement(_IconChevronRight2.default, { height: '10', width: '10' })
     );
   }
 
