@@ -4,7 +4,8 @@
 [![NPM version](http://img.shields.io/npm/v/terra-responsive-element.svg)](https://www.npmjs.org/package/terra-responsive-element)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-{insert description}
+The ResponsiveElement conditionally renders components based on viewport size.
+The viewport can be set to the immediate parent or window.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)

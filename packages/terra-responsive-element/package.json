@@ -3,7 +3,7 @@
   "main": "lib/ResponsiveElement.js",
   "private": true,
   "version": "0.1.0",
-  "description": "terra-responsive-element",
+  "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-ui.git"
