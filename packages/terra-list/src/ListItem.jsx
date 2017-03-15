@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import ChevronRight from 'terra-icon/lib/icon/themeable/chevronRight.svg';
-import '../src/list-item.scss';
+import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
+import '../src/ListItem.scss';
 
 const propTypes = {
-  className: PropTypes.string,
   content: PropTypes.element,
   isSelected: PropTypes.bool,
   isSelectable: PropTypes.bool,
@@ -12,7 +11,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  className: '',
   content: undefined,
   isSelected: false,
   isSelectable: undefined,
@@ -20,7 +18,6 @@ const defaultProps = {
 };
 
 const ListItem = ({
-    className,
     content,
     isSelected,
     isSelectable,
@@ -32,7 +29,7 @@ const ListItem = ({
     { 'terra-ListItem--selected': isSelected },
     { 'terra-ListItem-isSelectable': isSelectable },
     { 'terra-ListItem-hasChevron': hasChevron },
-    className,
+    customProps.className,
   ]);
 
   let chevron;

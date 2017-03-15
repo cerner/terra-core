@@ -20,26 +20,12 @@
     "url": "https://github.com/cerner/terra-ui/issues"
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
-  "scripts": {
-    "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
-    "compile:build": "../../node_modules/.bin/babel src --out-dir lib --copy-files",
-    "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "../../node_modules/.bin/eslint **/*.js, **/*.jsx",
-    "lint:scss": "../../node_modules/.bin/stylelint src/**/*.scss",
-    "pretest": "npm run lint",
-    "release:major": "npm test && npm run compile && npm version major -m \"Released version %s\" && npm publish && git push",
-    "release:minor": "npm test && npm run compile && npm version minor -m \"Released version %s\" && npm publish && git push",
-    "release:patch": "npm test && npm run compile && npm version patch -m \"Released version %s\" && npm publish && git push",
-    "test": "npm run test:spec && npm run test:nightwatch-default",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
-    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "node ../../scripts/nightwatch/nightwatch.js",
-    "test:nightwatch-chrome": "node ../../scripts/nightwatch/nightwatch.js chrome",
-    "test:nightwatch-firefox": "node ../../scripts/nightwatch/nightwatch.js firefox",
-    "test:nightwatch-safari": "node ../../scripts/nightwatch/nightwatch-non-parallel.js safari"
-  },
-  "devDependencies": {
+    "devDependencies": {
+    "csvtojson": "^1.1.4",
+    "jsdom": "^9.11.0",
+    "svgo": "^0.7.2",
+    "terra-markdown": "^0.1.0",
+    "terra-props-table": "^0.1.0",
     "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
@@ -49,7 +35,26 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "terra-mixins": "^1.0.0",
-    "terra-icon": "git://github.com/cerner/terra-icon.git#master",
-    "terra-react-svg-loader": "git://github.com/cerner/terra-react-svg-loader.git#master"
+    "terra-icon": "^0.1.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rm -rf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "release:major": "npm test && node ../../scripts/release/release.js major",
+    "release:minor": "npm test && node ../../scripts/release/release.js minor",
+    "release:patch": "npm test && node ../../scripts/release/release.js patch",
+    "test": "npm run test:spec && npm run test:nightwatch-default",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari",
+    "test:remote": "REMOTE=true node ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js",
+    "test:remote:all": "REMOTE=true node ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js --env chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous,firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous,ie10-tiny,ie10-small,ie10-medium,ie10-large,ie10-huge,ie10-enormous,ie11-tiny,ie11-small,ie11-medium,ie11-large,ie11-huge,ie11-enormous,edge-tiny,edge-small,edge-medium,edge-large,edge-huge,edge-enormous,safari-tiny,safari-small,safari-medium,safari-large,safari-huge,safari-enormous"
   }
 }

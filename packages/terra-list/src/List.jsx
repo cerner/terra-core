@@ -4,19 +4,16 @@ import '../src/list.scss';
 import ListItem from './ListItem';
 
 const propTypes = {
-  className: PropTypes.string,
   children: PropTypes.node,
   isDivided: PropTypes.bool,
 };
 
 const defaultProps = {
-  className: '',
   children: [],
   isDivided: false,
 };
 
 const List = ({
-    className,
     children,
     isDivided,
     ...customProps
@@ -24,7 +21,7 @@ const List = ({
   const listClassNames = classNames([
     'terra-List',
     { 'terra-List-divided': isDivided },
-    className,
+    customProps.className,
   ]);
 
   return (
