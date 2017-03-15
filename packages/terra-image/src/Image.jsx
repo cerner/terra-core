@@ -3,18 +3,61 @@ import classNames from 'classnames';
 import './Image.scss';
 
 const propTypes = {
-  name: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
+  /**
+  *
+  */
+  src: PropTypes.string.isRequired,
+  /**
+   *
+   */
+  variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
+  /**
+   *
+   */
+  behavior: PropTypes.oneOf(['fluid', 'nonfluid']),
+  /**
+   *
+   */
+  alt: PropTypes.string,
+  /**
+   *
+   */
+  height: PropTypes.number,
+  /**
+   *
+   */
+  width: PropTypes.number,
 };
 
 const defaultProps = {
-  name: 'default',
-  variant: 'terra-Image--default',
+  variant: 'default',
+  behavior: 'nonfluid',
+  alt: ' ',
 };
 
-const Image = (props) => (
-  <div />
-);
+const Image = ({
+  src,
+  variant,
+  isFluid,
+  alt,
+  height,
+  width,
+  ...customProps
+}) => {
+  const classes = classNames([
+  	'terra-Image',
+  	{[`terra-Image--${variant}`]: variant },
+  	{[`terra-Image--${behavior}`]: behavior},
+  	customProps.className
+  ]);
+
+  return (
+    <img {...customProps}
+    className={classes}
+  	/>);
+  // React.createNewElement('img', {...customProps, className: classes } );
+};
+
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;

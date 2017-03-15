@@ -1,7 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from '../docs/README.md';
+import ImageSrc from '!raw-loader!../src/Image.jsx';
 import '../src/Image.scss';
 
 const imagecontainerStyle1 = {
@@ -25,22 +27,23 @@ const imagecontainerStyle3 = {
 const ImageExamples = () => (
   <div>
     <Markdown id="readme" src={ReadMe} />
+    <PropsTable id="props" src={ImageSrc} />
     <article>
       <h2>Fluid Examples</h2>
 
       <p>Image width and height are smaller than container. To fill the container, increase the width of the image.</p>
       <div style={imagecontainerStyle1}>
-        <img src="http://lorempixel.com/150/150/nature/" alt="rounded" className="terra-Image terra-Image--circle terra-Image--fluid" />
+        <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" behavior="fluid" />
       </div>
 
       <p>Image width is larger than the container. Image height is smaller than the container.</p>
       <div style={imagecontainerStyle2}>
-        <img src="http://lorempixel.com/150/150/nature/" alt="rounded" className="terra-Image terra-Image--circle terra-Image--fluid" />
+        <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="circle" behavior="fluid" />
       </div>
 
       <p>Image width is smaller than the container. Image height is larger than the container.</p>
       <div style={imagecontainerStyle3}>
-        <img src="http://lorempixel.com/150/150/nature/" alt="rounded" className="terra-Image terra-Image--circle terra-Image--fluid" />
+        <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="default" behavior="fluid"/>
       </div>
     </article>
     <br />
@@ -49,20 +52,25 @@ const ImageExamples = () => (
       <h2>Non Fluid Examples</h2>
 
       <p>Image width and height are smaller than container.</p>
-      <div style={imagecontainerStyle1}>
-        <img src="http://lorempixel.com/150/150/nature/" alt="rounded" className="terra-Image terra-Image--circle" />
-      </div>
+      <span style={imagecontainerStyle1}>
+        <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" />
+      </span>
 
       <p>Image width is larger than the container. Image height is smaller than the container.</p>
-      <div style={imagecontainerStyle2}>
-        <img src="http://lorempixel.com/150/150/nature/" alt="rounded" className="terra-Image terra-Image--circle" />
-      </div>
+      <span style={imagecontainerStyle2}>
+        <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="thumbnail" />
+      </span>
 
       <p>Image width is smaller than the container. Image height is larger than the container.</p>
-      <div style={imagecontainerStyle3}>
-        <img src="http://lorempixel.com/150/150/nature/" alt="rounded" className="terra-Image terra-Image--circle" />
-      </div>
+      <span style={imagecontainerStyle3}>
+        <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="default" />
+      </span>
     </article>
+    <br />
+    <br />
+    <div>
+    <h2>Default Image Style</h2>
+    <Image src="http://lorempixel.com/320/320/nature/" alt="example of defualt styles" variant="default" />
     <br />
     <br />
     <h2>Circle Image Example</h2>
@@ -79,6 +87,7 @@ const ImageExamples = () => (
     <br />
     <h2>Thumbnail Image Example</h2>
     <img src="http://lorempixel.com/320/320/nature/" alt="example of thumbnail styles" className="terra-Image terra-Image--thumbnail" />
+    </div>
   </div>
 );
 
