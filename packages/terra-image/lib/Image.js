@@ -58,19 +58,17 @@ var defaultProps = {
 var Image = function Image(_ref) {
   var src = _ref.src,
       variant = _ref.variant,
-      isFluid = _ref.isFluid,
+      behavior = _ref.behavior,
       alt = _ref.alt,
       height = _ref.height,
       width = _ref.width,
-      customProps = _objectWithoutProperties(_ref, ['src', 'variant', 'isFluid', 'alt', 'height', 'width']);
+      customProps = _objectWithoutProperties(_ref, ['src', 'variant', 'behavior', 'alt', 'height', 'width']);
 
   var classes = (0, _classnames2.default)(['terra-Image', _defineProperty({}, 'terra-Image--' + variant, variant), _defineProperty({}, 'terra-Image--' + behavior, behavior), customProps.className]);
 
   return _react2.default.createElement('img', _extends({}, customProps, {
     className: classes
   }));
-
-  /* React.createNewElement('img', {...customProps, className: classes } );*/
 };
 
 Image.propTypes = propTypes;

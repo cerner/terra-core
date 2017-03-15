@@ -38,7 +38,7 @@ const defaultProps = {
 const Image = ({
   src,
   variant,
-  isFluid,
+  behavior,
   alt,
   height,
   width,
@@ -46,17 +46,16 @@ const Image = ({
 }) => {
   const classes = classNames([
   	'terra-Image',
-  	{[`terra-Image--${variant}`]: variant },
-  	{[`terra-Image--${behavior}`]: behavior},
+  	{ [`terra-Image--${variant}`]: variant },
+  	{ [`terra-Image--${behavior}`]: behavior},
   	customProps.className,
   ]);
 
   return (
-    <img {...customProps}
+    <img 
+    {...customProps}
     className={classes}
   	/>);
-   
-   /* React.createNewElement('img', {...customProps, className: classes } );*/
 };
 
 
