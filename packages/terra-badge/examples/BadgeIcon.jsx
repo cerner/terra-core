@@ -1,7 +1,8 @@
 import React from 'react';
 import Badge from '../src/Badge';
+import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
 
-const Icon = <span style={{ backgroundColor: 'black', color: 'black', height: '1em', width: '1em' }}>....</span>;
+const Icon = <IconBookmark />;
 
 const BadgeIcon = () => (
   <div>

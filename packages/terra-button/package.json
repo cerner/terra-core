@@ -51,6 +51,7 @@
     "react-dom": "^15.4.2"
   },
   "dependencies": {
+    "terra-icon": "^0.0.0",
     "classnames": "^2.2.5",
     "terra-mixins": "^1.0.0"
   }

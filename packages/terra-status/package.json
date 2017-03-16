@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "terra-icon": "^0.0.0",
     "terra-mixins": "^1.0.0"
   }
 }
