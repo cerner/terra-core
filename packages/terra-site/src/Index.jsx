@@ -20,11 +20,13 @@ import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/I
 import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
+import ResponsiveElementExamples from '../../../packages/terra-responsive-element/examples/Index';
 import ClinicalItemViewExamples from '../../../packages/terra-clinical-item-view/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import ResponsiveElementTestRoutes from '../../../packages/terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import ClinicalItemViewTestRoutes from '../../../packages/terra-clinical-item-view/tests/nightwatch/clinical-item-view/ClinicalItemViewTestRoutes';
 import CommentTestRoutes from '../../../packages/terra-clinical-item-view/tests/nightwatch/comment/CommentTestRoutes';
 import DisplayTestRoutes from '../../../packages/terra-clinical-item-view/tests/nightwatch/display/DisplayTestRoutes';
@@ -49,11 +51,13 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
+    {ResponsiveElementTestRoutes}
     {ClinicalItemViewTestRoutes}
     {CommentTestRoutes}
     {DisplayTestRoutes}
