@@ -7,21 +7,15 @@ it('should render a default component', () => {
   expect(responsiveElement).toMatchSnapshot();
 });
 
-it('should merge classes passed in through props', () => {
+it('should apply classes passed in through props', () => {
   const responsiveElement = shallow(<ResponsiveElement className="TestClass" />);
   expect(responsiveElement).toMatchSnapshot();
-});
-
-// Prop Tests
-it('should have the class terra-ResponsiveElement', () => {
-  const responsiveElement = shallow(<ResponsiveElement />);
-  expect(responsiveElement.prop('className')).toContain('terra-ResponsiveElement');
 });
 
 // Custom Props
 it('should merge classes passed in through props', () => {
   const responsiveElement = shallow(<ResponsiveElement className="TestClass" />);
-  expect(responsiveElement.prop('className')).toContain('terra-ResponsiveElement TestClass');
+  expect(responsiveElement.prop('className')).toContain('TestClass');
 });
 
 it('should pass custom props onto the root element', () => {

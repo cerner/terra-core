@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-require('../src/breakpoints.scss');
+require('./breakpoints.scss');
 
 var breakpoints = void 0;
 

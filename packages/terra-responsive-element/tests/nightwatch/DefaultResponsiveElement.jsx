@@ -12,6 +12,7 @@ const windowSizes = {
 
 const responsiveElement = (
   <ResponsiveElement
+    className="terra-ResponsiveElement"
     defaultElement={<div>Default</div>}
     tiny={<div>Tiny</div>}
     small={<div>Small</div>}

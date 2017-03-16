@@ -1,4 +1,4 @@
-import '../src/breakpoints.scss';
+import './breakpoints.scss';
 
 let breakpoints;
 

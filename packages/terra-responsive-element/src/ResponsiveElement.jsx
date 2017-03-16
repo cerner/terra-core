@@ -1,9 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { PropTypes } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
-import classNames from 'classnames';
 import getBreakpoints from './breakpoints';
-import './ResponsiveElement.scss';
 
 const propTypes = {
   /**
@@ -103,13 +100,8 @@ class ResponsiveElement extends React.Component {
     /* eslint-disable no-unused-vars */
     const { defaultElement, tiny, small, medium, large, huge, responsiveTo, ...customProps } = this.props;
 
-    const className = classNames(
-      'terra-ResponsiveElement',
-      { [`${customProps.className}`]: customProps.className },
-    );
-
     return (
-      <div {...customProps} ref={this.setContainer} className={className}>
+      <div {...customProps} ref={this.setContainer}>
         {this.state.element}
       </div>
     );
