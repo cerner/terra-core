@@ -28,17 +28,17 @@ var propTypes = {
    */
   src: _react.PropTypes.string.isRequired,
   /**
-   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`. 
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
    */
   variant: _react.PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
   /**
-   * Sets the behavior for the image, which can be `fluid` or `nonfluid`.
+   * Sets the fluid behavior of the image, which is `nonfluid` by default.
    */
-  behavior: _react.PropTypes.oneOf(['fluid', 'nonfluid']),
+  isFluid: _react.PropTypes.bool,
   /**
    * The text content that specifies an alternative text for an image.
    */
-  alt: _react.PropTypes.string,
+  alt: _react.PropTypes.string.isRequired,
   /**
    * Sets the height of the image.
    */
@@ -51,22 +51,27 @@ var propTypes = {
 
 var defaultProps = {
   variant: 'default',
-  behavior: 'nonfluid',
+  isFluid: false,
   alt: ' '
 };
 
 var Image = function Image(_ref) {
   var src = _ref.src,
       variant = _ref.variant,
-      behavior = _ref.behavior,
+      isFluid = _ref.isFluid,
       alt = _ref.alt,
       height = _ref.height,
       width = _ref.width,
-      customProps = _objectWithoutProperties(_ref, ['src', 'variant', 'behavior', 'alt', 'height', 'width']);
+      customProps = _objectWithoutProperties(_ref, ['src', 'variant', 'isFluid', 'alt', 'height', 'width']);
 
-  var classes = (0, _classnames2.default)(['terra-Image', _defineProperty({}, 'terra-Image--' + variant, variant), _defineProperty({}, 'terra-Image--' + behavior, behavior), customProps.className]);
+  var classes = (0, _classnames2.default)(['terra-Image', _defineProperty({}, 'terra-Image--' + variant, variant), { 'terra-Image--fluid': isFluid }, customProps.className]);
 
-  return _react2.default.createElement('img', _extends({}, customProps, {
+  return _react2.default.createElement('img', _extends({
+    src: src,
+    alt: alt,
+    height: height,
+    width: width
+  }, customProps, {
     className: classes
   }));
 };

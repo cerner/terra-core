@@ -8,17 +8,17 @@ const propTypes = {
    */
   src: PropTypes.string.isRequired,
   /**
-   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`. 
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
    */
   variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
   /**
-   * Sets the behavior for the image, which can be `fluid` or `nonfluid`.
+   * Sets the fluid behavior of the image, which is `nonfluid` by default.
    */
-  behavior: PropTypes.oneOf(['fluid', 'nonfluid']),
+  isFluid: PropTypes.bool,
   /**
    * The text content that specifies an alternative text for an image.
    */
-  alt: PropTypes.string,
+  alt: PropTypes.string.isRequired,
   /**
    * Sets the height of the image.
    */
@@ -31,31 +31,35 @@ const propTypes = {
 
 const defaultProps = {
   variant: 'default',
-  behavior: 'nonfluid',
+  isFluid: false,
   alt: ' ',
 };
 
 const Image = ({
   src,
   variant,
-  behavior,
+  isFluid,
   alt,
   height,
   width,
   ...customProps
 }) => {
   const classes = classNames([
-  	'terra-Image',
-  	{ [`terra-Image--${variant}`]: variant },
-  	{ [`terra-Image--${behavior}`]: behavior},
-  	customProps.className,
+    'terra-Image',
+    { [`terra-Image--${variant}`]: variant },
+    { 'terra-Image--fluid': isFluid },
+    customProps.className,
   ]);
 
   return (
-    <img 
-    {...customProps}
-    className={classes}
-  	/>);
+    <img
+      src={src}
+      alt={alt}
+      height={height}
+      width={width}
+      {...customProps}
+      className={classes}
+    />);
 };
 
 
