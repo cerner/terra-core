@@ -26,13 +26,13 @@
     top: 50%;
     transform: translate(0, -50%);
   }
-  .terra-ListItem-chevron > * {color: $terra-base-color-30;}
+  .terra-ListItem-chevron > * {color: $terra-grey-30;}
 }
 
 .terra-ListItem-isSelectable {
   cursor: pointer;
 
-  &.terra-ListItem:hover {background-color: $terra-primary-color-10;}
+  &.terra-ListItem:hover {background-color: $terra-blue-10;}
 
   // &.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
 

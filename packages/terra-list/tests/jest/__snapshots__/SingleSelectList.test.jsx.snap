@@ -1,12 +1,10 @@
 exports[`test should render a default component 1`] = `
 <List
-  className=""
   isDivided={false} />
 `;
 
 exports[`test should render with hasChevrons 1`] = `
 <List
-  className=""
   isDivided={false}>
   <type
     hasChevron={true}
@@ -18,7 +16,6 @@ exports[`test should render with hasChevrons 1`] = `
 
 exports[`test should render with isDivided 1`] = `
 <List
-  className=""
   isDivided={true}>
   <type
     hasChevron={true}
@@ -30,7 +27,6 @@ exports[`test should render with isDivided 1`] = `
 
 exports[`test should render with items 1`] = `
 <List
-  className=""
   isDivided={false}>
   <type
     hasChevron={true}
@@ -62,7 +58,6 @@ exports[`test should render with items 1`] = `
 
 exports[`test should select an item 1`] = `
 <List
-  className=""
   isDivided={false}>
   <ListItem
     className="stuff1"
@@ -71,7 +66,7 @@ exports[`test should select an item 1`] = `
         text1
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]} />
@@ -82,7 +77,7 @@ exports[`test should select an item 1`] = `
         text2
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -93,7 +88,7 @@ exports[`test should select an item 1`] = `
         text3
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -104,7 +99,7 @@ exports[`test should select an item 1`] = `
         text4
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -115,7 +110,7 @@ exports[`test should select an item 1`] = `
         text5
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -124,7 +119,6 @@ exports[`test should select an item 1`] = `
 
 exports[`test should select an item 2`] = `
 <List
-  className=""
   isDivided={false}>
   <ListItem
     className="stuff1"
@@ -133,7 +127,7 @@ exports[`test should select an item 2`] = `
         text1
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -144,7 +138,7 @@ exports[`test should select an item 2`] = `
         text2
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]} />
@@ -155,7 +149,7 @@ exports[`test should select an item 2`] = `
         text3
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -166,7 +160,7 @@ exports[`test should select an item 2`] = `
         text4
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -177,7 +171,7 @@ exports[`test should select an item 2`] = `
         text5
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -186,7 +180,6 @@ exports[`test should select an item 2`] = `
 
 exports[`test should select an item 3`] = `
 <List
-  className=""
   isDivided={false}>
   <ListItem
     className="stuff1"
@@ -195,7 +188,7 @@ exports[`test should select an item 3`] = `
         text1
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -206,7 +199,7 @@ exports[`test should select an item 3`] = `
         text2
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -217,7 +210,7 @@ exports[`test should select an item 3`] = `
         text3
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]} />
@@ -228,7 +221,7 @@ exports[`test should select an item 3`] = `
         text4
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -239,7 +232,7 @@ exports[`test should select an item 3`] = `
         text5
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -248,7 +241,6 @@ exports[`test should select an item 3`] = `
 
 exports[`test should select an item 4`] = `
 <List
-  className=""
   isDivided={false}>
   <ListItem
     className="stuff1"
@@ -257,7 +249,7 @@ exports[`test should select an item 4`] = `
         text1
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]} />
@@ -268,7 +260,7 @@ exports[`test should select an item 4`] = `
         text2
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -279,7 +271,7 @@ exports[`test should select an item 4`] = `
         text3
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -290,7 +282,7 @@ exports[`test should select an item 4`] = `
         text4
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
@@ -301,7 +293,7 @@ exports[`test should select an item 4`] = `
         text5
       </p>
     }
-    hasChevron={false}
+    hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]} />
