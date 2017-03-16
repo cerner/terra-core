@@ -17,12 +17,14 @@ const getBreakpoints = () => {
 
   document.body.appendChild(datasource);
 
-  data = window.getComputedStyle(datasource, 'before').getPropertyValue('content');
+  data = window.getComputedStyle(datasource, ':before').getPropertyValue('content');
   data = data.replace(/^['"]+|\s+|\\|(;\s?})+|['"]$/g, '');
+
+  breakpoints = JSON.parse(data);
 
   document.body.removeChild(datasource);
 
-  return JSON.parse(data);
+  return breakpoints;
 };
 
 export default getBreakpoints;
