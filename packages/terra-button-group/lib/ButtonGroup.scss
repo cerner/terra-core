@@ -16,7 +16,7 @@
   }
 
   > .terra-ButtonGroup-button + .terra-ButtonGroup-button {
-    @include terra-margin-start(-1px);
+    @include terra-margin-start(-$terra-button-border-width);
   }
 
   > .terra-ButtonGroup-button:first-child {

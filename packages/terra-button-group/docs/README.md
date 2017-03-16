@@ -1,6 +1,6 @@
 # Terra Button Group
 
-{insert description}
+ The Terra Button Group component groups buttons and maintains a toggle selection state. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
 
 ## Getting Started
 
