@@ -20,10 +20,12 @@ import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/I
 import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
+import ResponsiveElementExamples from '../../../packages/terra-responsive-element/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import ResponsiveElementTestRoutes from '../../../packages/terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -45,9 +47,11 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="responsive-element" component={ResponsiveElementExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
+    {ResponsiveElementTestRoutes}
   </Router>
 ), document.getElementById('root'));
