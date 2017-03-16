@@ -1,5 +1,5 @@
 import React from 'react';
 
-import Icon from '../../lib/Icon';
+import IconAdd from '../../lib/icon/IconAdd';
 
-export default () => <Icon />;
+export default () => <IconAdd />;

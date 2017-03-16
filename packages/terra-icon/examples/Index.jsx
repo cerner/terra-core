@@ -12,7 +12,6 @@ import IconHeightWidth from './IconHeightWidth';
 import IconAria from './IconAria';
 import IconAppendClass from './IconAppendClass';
 
-
 const IconExamples = () => (
   <div>
     <Markdown id="readme" src={ReadMe} />
