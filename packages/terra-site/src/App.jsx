@@ -22,6 +22,7 @@ const App = props => (
       <li><Link to="/site/content">Content</Link></li>
       <li><Link to="/site/datepicker">Date Picker</Link></li>
       <li><Link to="/site/grid">Grid</Link></li>
+      <li><Link to="/site/icon">Icon</Link></li>
       <li><Link to="/site/standout">Standout</Link></li>
       <li><Link to="/site/menu">Menu</Link></li>
       <li><Link to="/site/image">Image</Link></li>

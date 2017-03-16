@@ -15,7 +15,7 @@
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
-    "deploy": "npm run webpack && gh-pages -d build",
+    "deploy": "webpack --config webpack.prod.config && gh-pages -d build",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore"
   },
