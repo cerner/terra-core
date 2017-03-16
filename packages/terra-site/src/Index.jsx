@@ -25,6 +25,7 @@ import ResponsiveElementExamples from '../../../packages/terra-responsive-elemen
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import ResponsiveElementTestRoutes from '../../../packages/terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -51,5 +52,6 @@ ReactDOM.render((
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
+    {ResponsiveElementTestRoutes}
   </Router>
 ), document.getElementById('root'));
