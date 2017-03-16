@@ -37,6 +37,7 @@
     "bootstrap": "lerna bootstrap",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
+    "deploy": "lerna run --scope terra-site deploy",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
