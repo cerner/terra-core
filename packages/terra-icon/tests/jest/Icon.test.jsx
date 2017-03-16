@@ -3,7 +3,9 @@ import React from 'react';
 // IconAdd by default, isBidi: false, isSpin: false
 // IconSpinner by default, isBidi: false, isSpin: true
 // IconComment by default, isBidi: true, isSpin: false
-import { IconAdd, IconSpinner, IconComment } from '../../src/Icon';
+import IconAdd from '../../src/icon/IconAdd';
+import IconSpinner from '../../src/icon/IconSpinner';
+import IconComment from '../../src/icon/IconComment';
 
 describe('Icon', () => {
   describe('IconAdd', () => {

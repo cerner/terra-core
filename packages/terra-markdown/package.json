@@ -2,7 +2,7 @@
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "terra-markdown",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.1.0"
+    "terra-toolkit": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
