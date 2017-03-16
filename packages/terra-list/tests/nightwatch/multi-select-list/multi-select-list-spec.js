@@ -12,22 +12,24 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/default`)
       .assert.elementPresent('.terra-List');
   },
-  'Displays a items in the list': (browser) => {
+  'Displays a items in the multi select list': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/items`)
-      .assert.elementPresent('.terra-List');
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(1)', 'test 1')
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(2)', 'test 2')
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(3)', 'test 3');
   },
-  'Displays a items in the list divided': (browser) => {
+  'Displays a items in the multi select list divided': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/items-divided`)
       .assert.cssClassPresent('.terra-List', 'terra-List-divided');
   },
-  'Displays a items in the list with a max selection count': (browser) => {
+  'Displays a items in the multi select list with a max selection count': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/max-count`)
       .assert.elementPresent('.terra-List');
   },
-  'Displays a items in the list with a function set for on change': (browser) => {
+  'Displays a items in the multi select list with a function set for on change': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/on-change`)
       .assert.elementPresent('.terra-List');
