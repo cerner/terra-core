@@ -26,10 +26,6 @@ module.exports = {
         loader: 'json-loader',
       },
       {
-        test: /\.svg$/,
-        loader: 'babel!terra-react-svg-loader',
-      },
-      {
         test: /\.(scss|css)$/,
         loader: ExtractTextPlugin.extract('style', 'css!postcss!sass'),
       },
