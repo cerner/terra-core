@@ -25,11 +25,11 @@
      />
         );
    return (
-     <div style={{ border: '1px dashed grey', width: '100%', marginTop: '10px', padding: '5px' }}>
-       <div style={{ borderRight: '1px dashed grey', display: 'inline-block', width: '20%', padding: '5px' }}>
+     <div style={{ border: '1px dashed', width: '100%', marginTop: '10px', padding: '5px' }}>
+       <div style={{ borderRight: '1px dashed', display: 'inline-block', width: '20%', padding: '5px' }}>
          {responsiveElement}
        </div>
-       <div style={{ borderRight: '1px dashed grey', display: 'inline-block', width: '50%', padding: '5px' }}>
+       <div style={{ borderRight: '1px dashed', display: 'inline-block', width: '50%', padding: '5px' }}>
          {responsiveElement}
        </div>
        <div style={{ display: 'inline-block', width: '20%', padding: '5px' }}>

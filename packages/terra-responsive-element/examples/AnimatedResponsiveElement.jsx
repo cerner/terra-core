@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 const AnimatedResponsiveElement = ({ responsiveTo }) => (
-  <div className="terra-AnimatedResponsiveElement" style={{ border: '1px dashed grey', padding: '5px' }}>
+  <div className="terra-AnimatedResponsiveElement">
     <ResponsiveElement
       responsiveTo={responsiveTo}
       tiny={<div>Tiny</div>}

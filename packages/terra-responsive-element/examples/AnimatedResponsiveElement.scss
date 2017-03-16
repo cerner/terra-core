@@ -1,5 +1,7 @@
 .terra-AnimatedResponsiveElement {
   animation: grow-and-shrink 10s infinite;
+  border: 1px dashed;
+  padding: 5px;
 }
 
 @keyframes grow-and-shrink {
