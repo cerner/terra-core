@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import './ClincalItemView.scss';
+import './ClinicalItemView.scss';
 import Display from './Display';
 import Comment from './Comment';
 
@@ -50,11 +50,11 @@ const defaultProps = {
   comment: undefined,
 };
 
-class ClincalItemView extends React.Component {
+class ClinicalItemView extends React.Component {
 
   static renderAccessory(accessory) {
     return (
-      <div className="terra-ClincalItemView-accessory">
+      <div className="terra-ClinicalItemView-accessory">
         {accessory}
       </div>
     );
@@ -84,9 +84,9 @@ class ClincalItemView extends React.Component {
     }
 
     return (
-      <div className="terra-ClincalItemView-rowContainer">
+      <div className="terra-ClinicalItemView-rowContainer">
         {displayGroups.map((group, index) => {
-          const row = ClincalItemView.renderRow(group, index, displayGroups.length, emphasis);
+          const row = ClinicalItemView.renderRow(group, index, displayGroups.length, emphasis);
           return row;
         })}
       </div>
@@ -96,10 +96,10 @@ class ClincalItemView extends React.Component {
   static renderRow(row, rowIndex, rowCount, emphasis) {
     const rowKey = rowIndex;
     return (
-      <div className="terra-ClincalItemView-row" key={rowKey}>
+      <div className="terra-ClinicalItemView-row" key={rowKey}>
         {row.map((display, contentIndex) => {
           const contentKey = contentIndex;
-          const contentClasses = ClincalItemView.classesForContent(rowIndex,
+          const contentClasses = ClinicalItemView.classesForContent(rowIndex,
                                                                rowCount,
                                                                contentIndex,
                                                                emphasis);
@@ -116,27 +116,27 @@ class ClincalItemView extends React.Component {
   static classesForContent(rowIndex, rowCount, contentIndex, emphasis) {
     let classes;
     if (emphasis === 'left') {
-      classes = ClincalItemView.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
+      classes = ClinicalItemView.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
     } else {
-      classes = ClincalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
+      classes = ClinicalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
     }
-    return ['terra-ClincalItemView-content'].concat(classes).join(' ');
+    return ['terra-ClinicalItemView-content'].concat(classes).join(' ');
   }
 
   static defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount) {
-    let contentSize = 'terra-ClincalItemView-content--primarySize';
-    let contentColor = 'terra-ClincalItemView-content--primaryColor';
+    let contentSize = 'terra-ClinicalItemView-content--primarySize';
+    let contentColor = 'terra-ClinicalItemView-content--primaryColor';
 
     if (rowIndex > 0) {
-      contentSize = 'terra-ClincalItemView-content--secondarySize';
+      contentSize = 'terra-ClinicalItemView-content--secondarySize';
     }
 
     if (rowCount === 2 && rowIndex === 1) {
-      contentColor = 'terra-ClincalItemView-content--secondaryColor';
+      contentColor = 'terra-ClinicalItemView-content--secondaryColor';
     }
 
     if (rowIndex >= 2) {
-      contentColor = 'terra-ClincalItemView-content--secondaryColor';
+      contentColor = 'terra-ClinicalItemView-content--secondaryColor';
     }
 
     return [contentSize, contentColor];
@@ -144,10 +144,10 @@ class ClincalItemView extends React.Component {
 
   static leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
     if (contentIndex === 1) {
-      return ['terra-ClincalItemView-content--secondarySize', 'terra-ClincalItemView-content--secondaryColor'];
+      return ['terra-ClinicalItemView-content--secondarySize', 'terra-ClinicalItemView-content--secondaryColor'];
     }
 
-    return ClincalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
+    return ClinicalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
   }
 
   render() {
@@ -162,30 +162,30 @@ class ClincalItemView extends React.Component {
             ...customProps } = this.props;
 
     const viewClassNames = classNames([
-      'terra-ClincalItemView',
-      { 'terra-ClincalItemView--isTruncated': isTruncated },
-      { [`terra-ClincalItemView--${layout}`]: layout },
-      { [`terra-ClincalItemView-accessory--${accessoryAlignment}`]: accessoryAlignment },
+      'terra-ClinicalItemView',
+      { 'terra-ClinicalItemView--isTruncated': isTruncated },
+      { [`terra-ClinicalItemView--${layout}`]: layout },
+      { [`terra-ClinicalItemView-accessory--${accessoryAlignment}`]: accessoryAlignment },
       customProps.className,
     ]);
 
     return (
       <div {...customProps} className={viewClassNames}>
-        {ClincalItemView.renderAccessory(leftAccessory)}
-        <div className="terra-ClincalItemView-body">
-          {ClincalItemView.renderRows(displays, layout, textEmphasis)}
+        {ClinicalItemView.renderAccessory(leftAccessory)}
+        <div className="terra-ClinicalItemView-body">
+          {ClinicalItemView.renderRows(displays, layout, textEmphasis)}
           {comment}
         </div>
-        {ClincalItemView.renderAccessory(rightAccessory)}
+        {ClinicalItemView.renderAccessory(rightAccessory)}
       </div>
     );
   }
 }
 
-ClincalItemView.propTypes = propTypes;
-ClincalItemView.defaultProps = defaultProps;
-ClincalItemView.Display = Display;
-ClincalItemView.Comment = Comment;
+ClinicalItemView.propTypes = propTypes;
+ClinicalItemView.defaultProps = defaultProps;
+ClinicalItemView.Display = Display;
+ClinicalItemView.Comment = Comment;
 
-export default ClincalItemView;
+export default ClinicalItemView;
 
