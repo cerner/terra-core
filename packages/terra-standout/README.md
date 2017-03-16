@@ -7,7 +7,7 @@
 {TBD}
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-standout/docs)
 - [LICENSE](#license)
 
 ## Getting Started

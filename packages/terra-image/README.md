@@ -7,7 +7,7 @@
 The terra-image component provides styling for visual imagery.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-image/docs)
 - [LICENSE](#license)
 
 ## Getting Started

@@ -6,7 +6,7 @@
 The legacy-theme component sets global variables for the entire application. Global variables are included for responsive breakpoints, colors, and typography.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-legacy-theme/docs)
 - [LICENSE](#license)
 
 ## Getting Started

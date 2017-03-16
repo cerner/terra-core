@@ -8,7 +8,7 @@ The terra-button component provides users a way to trigger actions in the UI.
 It can be modified in color, size, and type, and can optionally display an icon.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-button/docs)
 - [LICENSE](#license)
 
 ## Getting Started

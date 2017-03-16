@@ -7,7 +7,7 @@
 The terra-menu component displays grouped navigation actions. It can be used for site wide navigation or for switching between documents in a container.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-menu/docs)
 - [LICENSE](#license)
 
 ## Getting Started

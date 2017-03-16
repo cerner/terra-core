@@ -7,7 +7,7 @@
 The Terra SlidePanel component is a progressive disclosure mechanism that allows additional content to be shown and hidden in a variety of ways.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-slide-panel/docs)
 - [LICENSE](#license)
 
 ## Getting Started

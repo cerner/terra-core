@@ -6,7 +6,7 @@
 The status component provides a customizable color indictor to signify a specific condition.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-status/docs)
 - [LICENSE](#license)
 
 ## Getting Started

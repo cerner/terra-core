@@ -6,7 +6,7 @@
 The terra-title component provides a short summary of content. It can be modified in size, orientation, and can optionally display a graphic and/or caption.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-title/docs)
 - [LICENSE](#license)
 
 ## Getting Started

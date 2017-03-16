@@ -7,7 +7,7 @@
 React component to render a table view for the props metadata of another react component.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-props-table/docs)
 - [LICENSE](#license)
 
 ## Getting Started

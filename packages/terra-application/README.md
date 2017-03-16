@@ -7,7 +7,7 @@
 The application component sets global styles for the entire application. Global styles include font, colors, margins, and sizes.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-application/docs)
 - [LICENSE](#license)
 
 ## Getting Started

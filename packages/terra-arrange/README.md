@@ -7,7 +7,7 @@
 The arrange component allows an item that has an intrinsic width, such as an icon or an image, to be offset from a group of associated content. When the group of associated content wraps, it will stay aligned next to the offset content rather than wrap below it.
 
 - [Getting Started](#getting-started)
-- [Documentation](docs/)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-arrange/docs)
 - [LICENSE](#license)
 
 ## Getting Started
