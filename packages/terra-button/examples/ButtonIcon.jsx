@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../src/Button';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
+import Button from '../src/Button';
 
 const Icon = <IconEdit />;
 
