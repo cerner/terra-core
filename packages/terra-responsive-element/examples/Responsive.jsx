@@ -13,21 +13,15 @@
  };
 
  const Responsive = ({ responsiveTo }) => {
-   const tiny = <div>Tiny</div>;
-   const small = <div>Small</div>;
-   const medium = <div>Medium</div>;
-   const large = <div>Large</div>;
-   const huge = <div>Huge</div>;
-   const defaultElement = <div>Default</div>;
    const responsiveElement = (
      <ResponsiveElement
        responsiveTo={responsiveTo}
-       defaultElement={defaultElement}
-       tiny={tiny}
-       small={small}
-       medium={medium}
-       large={large}
-       huge={huge}
+       defaultElement={<div>Default</div>}
+       tiny={<div>Tiny</div>}
+       small={<div>Small</div>}
+       medium={<div>Medium</div>}
+       large={<div>Large</div>}
+       huge={<div>Huge</div>}
      />
         );
    return (

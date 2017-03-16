@@ -1,0 +1,9 @@
+.terra-AnimatedResponsiveElement {
+  animation: grow-and-shrink 10s infinite;
+}
+
+@keyframes grow-and-shrink {
+  0% { width: 20%; }
+  50% { width: 100%; }
+  100% { width: 20%; }
+}
