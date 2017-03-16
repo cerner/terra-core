@@ -16,7 +16,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('./CompactCard.scss');
+require('./ClincalItemView.scss');
 
 var _Display = require('./Display');
 
@@ -48,7 +48,7 @@ var propTypes = {
    */
   textEmphasis: _react.PropTypes.oneOf(['default', 'left']),
   /**
-   * Whether or not all text on the card should be truncated.
+   * Whether or not all text on the view should be truncated.
    */
   isTruncated: _react.PropTypes.bool,
   /**
@@ -84,16 +84,16 @@ var defaultProps = {
   comment: undefined
 };
 
-var CompactCard = function (_React$Component) {
-  _inherits(CompactCard, _React$Component);
+var ClincalItemView = function (_React$Component) {
+  _inherits(ClincalItemView, _React$Component);
 
-  function CompactCard() {
-    _classCallCheck(this, CompactCard);
+  function ClincalItemView() {
+    _classCallCheck(this, ClincalItemView);
 
-    return _possibleConstructorReturn(this, (CompactCard.__proto__ || Object.getPrototypeOf(CompactCard)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ClincalItemView.__proto__ || Object.getPrototypeOf(ClincalItemView)).apply(this, arguments));
   }
 
-  _createClass(CompactCard, [{
+  _createClass(ClincalItemView, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -107,19 +107,19 @@ var CompactCard = function (_React$Component) {
           comment = _props.comment,
           customProps = _objectWithoutProperties(_props, ['layout', 'textEmphasis', 'isTruncated', 'accessoryAlignment', 'leftAccessory', 'rightAccessory', 'displays', 'comment']);
 
-      var cardClassNames = (0, _classnames2.default)(['terra-CompactCard', { 'terra-CompactCard--isTruncated': isTruncated }, _defineProperty({}, 'terra-CompactCard--' + layout, layout), _defineProperty({}, 'terra-CompactCard-accessory--' + accessoryAlignment, accessoryAlignment), customProps.className]);
+      var viewClassNames = (0, _classnames2.default)(['terra-ClincalItemView', { 'terra-ClincalItemView--isTruncated': isTruncated }, _defineProperty({}, 'terra-ClincalItemView--' + layout, layout), _defineProperty({}, 'terra-ClincalItemView-accessory--' + accessoryAlignment, accessoryAlignment), customProps.className]);
 
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: cardClassNames }),
-        CompactCard.renderAccessory(leftAccessory),
+        _extends({}, customProps, { className: viewClassNames }),
+        ClincalItemView.renderAccessory(leftAccessory),
         _react2.default.createElement(
           'div',
-          { className: 'terra-CompactCard-body' },
-          CompactCard.renderRows(displays, layout, textEmphasis),
+          { className: 'terra-ClincalItemView-body' },
+          ClincalItemView.renderRows(displays, layout, textEmphasis),
           comment
         ),
-        CompactCard.renderAccessory(rightAccessory)
+        ClincalItemView.renderAccessory(rightAccessory)
       );
     }
   }], [{
@@ -127,7 +127,7 @@ var CompactCard = function (_React$Component) {
     value: function renderAccessory(accessory) {
       return _react2.default.createElement(
         'div',
-        { className: 'terra-CompactCard-accessory' },
+        { className: 'terra-ClincalItemView-accessory' },
         accessory
       );
     }
@@ -158,9 +158,9 @@ var CompactCard = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'terra-CompactCard-rowContainer' },
+        { className: 'terra-ClincalItemView-rowContainer' },
         displayGroups.map(function (group, index) {
-          var row = CompactCard.renderRow(group, index, displayGroups.length, emphasis);
+          var row = ClincalItemView.renderRow(group, index, displayGroups.length, emphasis);
           return row;
         })
       );
@@ -171,10 +171,10 @@ var CompactCard = function (_React$Component) {
       var rowKey = rowIndex;
       return _react2.default.createElement(
         'div',
-        { className: 'terra-CompactCard-row', key: rowKey },
+        { className: 'terra-ClincalItemView-row', key: rowKey },
         row.map(function (display, contentIndex) {
           var contentKey = contentIndex;
-          var contentClasses = CompactCard.classesForContent(rowIndex, rowCount, contentIndex, emphasis);
+          var contentClasses = ClincalItemView.classesForContent(rowIndex, rowCount, contentIndex, emphasis);
           return _react2.default.createElement(
             'div',
             _extends({ className: contentClasses }, { key: contentKey }),
@@ -188,28 +188,28 @@ var CompactCard = function (_React$Component) {
     value: function classesForContent(rowIndex, rowCount, contentIndex, emphasis) {
       var classes = void 0;
       if (emphasis === 'left') {
-        classes = CompactCard.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
+        classes = ClincalItemView.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
       } else {
-        classes = CompactCard.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
+        classes = ClincalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
       }
-      return ['terra-CompactCard-content'].concat(classes).join(' ');
+      return ['terra-ClincalItemView-content'].concat(classes).join(' ');
     }
   }, {
     key: 'defaultEmphasisContentClassesFromIndexes',
     value: function defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount) {
-      var contentSize = 'terra-CompactCard-content--primarySize';
-      var contentColor = 'terra-CompactCard-content--primaryColor';
+      var contentSize = 'terra-ClincalItemView-content--primarySize';
+      var contentColor = 'terra-ClincalItemView-content--primaryColor';
 
       if (rowIndex > 0) {
-        contentSize = 'terra-CompactCard-content--secondarySize';
+        contentSize = 'terra-ClincalItemView-content--secondarySize';
       }
 
       if (rowCount === 2 && rowIndex === 1) {
-        contentColor = 'terra-CompactCard-content--secondaryColor';
+        contentColor = 'terra-ClincalItemView-content--secondaryColor';
       }
 
       if (rowIndex >= 2) {
-        contentColor = 'terra-CompactCard-content--secondaryColor';
+        contentColor = 'terra-ClincalItemView-content--secondaryColor';
       }
 
       return [contentSize, contentColor];
@@ -218,19 +218,19 @@ var CompactCard = function (_React$Component) {
     key: 'leftEmphasisContentClassesFromIndexes',
     value: function leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
       if (contentIndex === 1) {
-        return ['terra-CompactCard-content--secondarySize', 'terra-CompactCard-content--secondaryColor'];
+        return ['terra-ClincalItemView-content--secondarySize', 'terra-ClincalItemView-content--secondaryColor'];
       }
 
-      return CompactCard.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
+      return ClincalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
     }
   }]);
 
-  return CompactCard;
+  return ClincalItemView;
 }(_react2.default.Component);
 
-CompactCard.propTypes = propTypes;
-CompactCard.defaultProps = defaultProps;
-CompactCard.Display = _Display2.default;
-CompactCard.Comment = _Comment2.default;
+ClincalItemView.propTypes = propTypes;
+ClincalItemView.defaultProps = defaultProps;
+ClincalItemView.Display = _Display2.default;
+ClincalItemView.Comment = _Comment2.default;
 
-exports.default = CompactCard;
+exports.default = ClincalItemView;

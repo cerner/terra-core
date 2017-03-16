@@ -2,7 +2,7 @@ import React from 'react';
 
 import Display from '../../../lib/Display';
 
-const cards = () => (
+const views = () => (
   <div>
     <Display text="test text" textStyle="secondary" id="test-display-secondary" />
     <Display text="test text" textStyle="attention" id="test-display-attention" />
@@ -10,4 +10,4 @@ const cards = () => (
   </div>
 );
 
-export default cards;
+export default views;

@@ -2,19 +2,19 @@
 
 import React from 'react';
 import { Route } from 'react-router';
-import CompactCardTests from './CompactCardTests';
-import DefaultCompactCard from './DefaultCompactCard';
-import DisplaysCompactCard from './DisplaysCompactCard';
-import AccessoryCompactCard from './AccessoryCompactCard';
-import CommentCompactCard from './CommentCompactCard';
+import ClinicalItemViewTests from './ClinicalItemViewTests';
+import DefaultClinicalItemView from './DefaultClinicalItemView';
+import DisplaysClinicalItemView from './DisplaysClinicalItemView';
+import AccessoryClinicalItemView from './AccessoryClinicalItemView';
+import CommentClinicalItemView from './CommentClinicalItemView';
 
 const routes = (
   <div>
-    <Route path="/tests/compact-card-tests" component={CompactCardTests} />
-    <Route path="/tests/compact-card-tests/default" component={DefaultCompactCard} />
-    <Route path="/tests/compact-card-tests/displays" component={DisplaysCompactCard} />
-    <Route path="/tests/compact-card-tests/accessory" component={AccessoryCompactCard} />
-    <Route path="/tests/compact-card-tests/comment" component={CommentCompactCard} />
+    <Route path="/tests/clinical-item-view-tests" component={ClinicalItemViewTests} />
+    <Route path="/tests/clinical-item-view-tests/default" component={DefaultClinicalItemView} />
+    <Route path="/tests/clinical-item-view-tests/displays" component={DisplaysClinicalItemView} />
+    <Route path="/tests/clinical-item-view-tests/accessory" component={AccessoryClinicalItemView} />
+    <Route path="/tests/clinical-item-view-tests/comment" component={CommentClinicalItemView} />
   </div>
 );
 

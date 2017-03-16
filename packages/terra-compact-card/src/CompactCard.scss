@@ -3,14 +3,14 @@
 @import './mixins';
 
 // Temporary until it is added to application.
-.terra-CompactCard {
+.terra-ClinicalItemView {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 87.5%;
   word-break: break-word;
   word-wrap: break-word;
 }
 
-.terra-CompactCard {
+.terra-ClinicalItemView {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -19,7 +19,7 @@
 
 // Accessory
 
-.terra-CompactCard-accessory {
+.terra-ClinicalItemView-accessory {
   // Accessory is of fixed size and does not shrink or grow.
   flex: 0 0 auto;
   margin: 5px;
@@ -29,79 +29,79 @@
   overflow: hidden;
 }
 
-.terra-CompactCard-accessory--alignTop {
+.terra-ClinicalItemView-accessory--alignTop {
   align-items: flex-start;
 }
 
-.terra-CompactCard-accessory--alignCenter {
+.terra-ClinicalItemView-accessory--alignCenter {
   align-items: center;
 }
 
 // Content Layout
 
-.terra-CompactCard-body {
+.terra-ClinicalItemView-body {
   flex: 1 1 auto;
   margin: 5px;
   min-width: 0;
   overflow: hidden; // VERY IMPORTANT FOR IE10
 }
 
-.terra-CompactCard-row {
+.terra-ClinicalItemView-row {
   display: flex;
   width: 100%;
 }
 
-.terra-CompactCard-content {
+.terra-ClinicalItemView-content {
   align-items: center;
   display: flex;
   overflow: hidden; // VERY IMPORTANT FOR IE10
 }
 
-.terra-CompactCard-text {
+.terra-ClinicalItemView-text {
   flex: 1 1 auto;
   min-width: 10px; // Need min-width, as IE10 will completely squish display
 }
 
-.terra-CompactCard-text--inlineIcon {
+.terra-ClinicalItemView-text--inlineIcon {
   @include terra-padding-end(5px);
   flex: 0 0 auto;
   height: 20px !important;
   max-width: 20px !important;
 }
 
-.terra-CompactCard-text--inlineIcon > .terra-Icon {
+.terra-ClinicalItemView-text--inlineIcon > .terra-Icon {
   font-size: 1rem;
 }
 
 // Truncation
 
-.terra-CompactCard--isTruncated .terra-CompactCard-text,
-.terra-CompactCard-text--isTruncated {
+.terra-ClinicalItemView--isTruncated .terra-ClinicalItemView-text,
+.terra-ClinicalItemView-text--isTruncated {
   @include terra-text-truncate;
 }
 
 // Layouts
 
-.terra-CompactCard--oneColumn {
-  .terra-CompactCard-rowContainer {
-    .terra-CompactCard-row {
+.terra-ClinicalItemView--oneColumn {
+  .terra-ClinicalItemView-rowContainer {
+    .terra-ClinicalItemView-row {
       flex-flow: column nowrap;
       justify-content: flex-start;
     }
 
-    .terra-CompactCard-content {
+    .terra-ClinicalItemView-content {
       width: 100%;
     }
   }
 }
 
-.terra-CompactCard--twoColumns {
-  .terra-CompactCard-content:nth-child(odd) {
+.terra-ClinicalItemView--twoColumns {
+  .terra-ClinicalItemView-content:nth-child(odd) {
     flex: 1 1 auto;
     text-align: left;
   }
 
-  .terra-CompactCard-content:nth-child(even) {
+  .terra-ClinicalItemView-content:nth-child(even) {
     @include terra-padding-start(5px);
 
     flex: 1 0 auto;
@@ -111,7 +111,7 @@
     // prematurely squished and maximize the available space for all labels.
     max-width: 60%;
 
-    .terra-CompactCard-text {
+    .terra-ClinicalItemView-text {
       flex: 0 1 auto;
       min-width: 10px; // Need min-width, as IE10 will completely squish display
     }
@@ -119,55 +119,55 @@
 }
 
 // We need to style content that appears out of the rowContainer (i.e. the comment).
-.terra-CompactCard-content {
-  .terra-CompactCard-text,
-  .terra-CompactCard-text--inlineIcon {
+.terra-ClinicalItemView-content {
+  .terra-ClinicalItemView-text,
+  .terra-ClinicalItemView-text--inlineIcon {
     @include terra-text-body;
-    color: $terra-compact-card-content-secondary-color;
+    color: $terra-clinical-item-view-content-secondary-color;
   }
 }
 
 //Emphasis Content Styles
-.terra-CompactCard-content--primaryColor {
-  .terra-CompactCard-text,
-  .terra-CompactCard-text--inlineIcon {
-    color: $terra-compact-card-content-primary-color;
+.terra-ClinicalItemView-content--primaryColor {
+  .terra-ClinicalItemView-text,
+  .terra-ClinicalItemView-text--inlineIcon {
+    color: $terra-clinical-item-view-content-primary-color;
   }
 }
 
-.terra-CompactCard-content--primarySize {
-  .terra-CompactCard-text,
-  .terra-CompactCard-text--inlineIcon {
+.terra-ClinicalItemView-content--primarySize {
+  .terra-ClinicalItemView-text,
+  .terra-ClinicalItemView-text--inlineIcon {
     @include terra-x-small-heading;
   }
 }
 
-.terra-CompactCard-content--secondaryColor {
-  .terra-CompactCard-text,
-  .terra-CompactCard-text--inlineIcon {
-    color: $terra-compact-card-content-secondary-color;
+.terra-ClinicalItemView-content--secondaryColor {
+  .terra-ClinicalItemView-text,
+  .terra-ClinicalItemView-text--inlineIcon {
+    color: $terra-clinical-item-view-content-secondary-color;
   }
 }
 
-.terra-CompactCard-content--secondarySize {
-  .terra-CompactCard-text,
-  .terra-CompactCard-text--inlineIcon {
+.terra-ClinicalItemView-content--secondarySize {
+  .terra-ClinicalItemView-text,
+  .terra-ClinicalItemView-text--inlineIcon {
     @include terra-text-body;
   }
 }
 
 // Text Styles
 
-.terra-CompactCard-text--secondary {
-  color: $terra-compact-card-text-secondary-color !important;
+.terra-ClinicalItemView-text--secondary {
+  color: $terra-clinical-item-view-text-secondary-color !important;
 }
 
-.terra-CompactCard-text--attention {
-  color: $terra-compact-card-text-attention-color !important;
-  font-weight: $terra-compact-card-text-attention-weight !important;
+.terra-ClinicalItemView-text--attention {
+  color: $terra-clinical-item-view-text-attention-color !important;
+  font-weight: $terra-clinical-item-view-text-attention-weight !important;
 }
 
-.terra-CompactCard-text--strikeThrough {
+.terra-ClinicalItemView-text--strikeThrough {
   text-decoration: line-through !important;
 }
 

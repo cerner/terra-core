@@ -1,27 +1,27 @@
-# Terra Compact Card
+# Terra Clinical Item View
 
-The Terra CompactCard component allows displays to be organized into rows and column and themed, while providing means to add accessory elements.
+The Terra ClinicalItemView component allows displays to be organized into rows and column and themed, while providing means to add accessory elements.
 
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-compact-card`
-  - `yarn add terra-compact-card`
+  - `npm install terra-clinical-item-view`
+  - `yarn add terra-clinical-item-view`
 
 ## React Usage
 
 The React component can be initialized like so:
 ```
-import CompactCard from 'CompactCard;
+import ClinicalItemView from 'ClinicalItemView;
 
-<CompactCard
+<ClinicalItemView
   layout="oneColumn"
   textEmphasis="default"
   isTruncated=true
   accessoryAlignment="top"
   leftAccesory=<img alt="Graphic" />
-  displays={[<CompactCard.Display text="display 1" />, <CompactCard.Display text="display 2" />]}
-  comment=<CompactCard.Comment text="comment" />
+  displays={[<ClinicalItemView.Display text="display 1" />, <ClinicalItemView.Display text="display 2" />]}
+  comment=<ClinicalItemView.Comment text="comment" />
 />
 
 <Display

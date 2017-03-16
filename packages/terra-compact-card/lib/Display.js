@@ -57,15 +57,15 @@ var Display = function Display(_ref) {
       icon = _ref.icon,
       customProps = _objectWithoutProperties(_ref, ['text', 'textStyle', 'isTruncated', 'icon']);
 
-  var displayClassNames = (0, _classnames2.default)(['terra-CompactCard-display', customProps.className]);
+  var displayClassNames = (0, _classnames2.default)(['terra-ClinicalItemView-display', customProps.className]);
 
-  var textClassNames = (0, _classnames2.default)(['terra-CompactCard-text', { 'terra-CompactCard-text--isTruncated': isTruncated }, _defineProperty({}, 'terra-CompactCard-text--' + textStyle, textStyle)]);
+  var textClassNames = (0, _classnames2.default)(['terra-ClinicalItemView-text', { 'terra-ClinicalItemView-text--isTruncated': isTruncated }, _defineProperty({}, 'terra-ClinicalItemView-text--' + textStyle, textStyle)]);
 
   var displayIcon = void 0;
   if (icon) {
     displayIcon = _react2.default.createElement(
       'div',
-      { className: 'terra-CompactCard-text--inlineIcon' },
+      { className: 'terra-ClinicalItemView-text--inlineIcon' },
       icon
     );
   }

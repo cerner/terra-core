@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import './CompactCard.scss';
+import './ClincalItemView.scss';
 import Display from './Display';
 import Comment from './Comment';
 
@@ -14,7 +14,7 @@ const propTypes = {
    */
   textEmphasis: PropTypes.oneOf(['default', 'left']),
   /**
-   * Whether or not all text on the card should be truncated.
+   * Whether or not all text on the view should be truncated.
    */
   isTruncated: PropTypes.bool,
   /**
@@ -50,11 +50,11 @@ const defaultProps = {
   comment: undefined,
 };
 
-class CompactCard extends React.Component {
+class ClincalItemView extends React.Component {
 
   static renderAccessory(accessory) {
     return (
-      <div className="terra-CompactCard-accessory">
+      <div className="terra-ClincalItemView-accessory">
         {accessory}
       </div>
     );
@@ -84,9 +84,9 @@ class CompactCard extends React.Component {
     }
 
     return (
-      <div className="terra-CompactCard-rowContainer">
+      <div className="terra-ClincalItemView-rowContainer">
         {displayGroups.map((group, index) => {
-          const row = CompactCard.renderRow(group, index, displayGroups.length, emphasis);
+          const row = ClincalItemView.renderRow(group, index, displayGroups.length, emphasis);
           return row;
         })}
       </div>
@@ -96,10 +96,10 @@ class CompactCard extends React.Component {
   static renderRow(row, rowIndex, rowCount, emphasis) {
     const rowKey = rowIndex;
     return (
-      <div className="terra-CompactCard-row" key={rowKey}>
+      <div className="terra-ClincalItemView-row" key={rowKey}>
         {row.map((display, contentIndex) => {
           const contentKey = contentIndex;
-          const contentClasses = CompactCard.classesForContent(rowIndex,
+          const contentClasses = ClincalItemView.classesForContent(rowIndex,
                                                                rowCount,
                                                                contentIndex,
                                                                emphasis);
@@ -116,27 +116,27 @@ class CompactCard extends React.Component {
   static classesForContent(rowIndex, rowCount, contentIndex, emphasis) {
     let classes;
     if (emphasis === 'left') {
-      classes = CompactCard.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
+      classes = ClincalItemView.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
     } else {
-      classes = CompactCard.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
+      classes = ClincalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
     }
-    return ['terra-CompactCard-content'].concat(classes).join(' ');
+    return ['terra-ClincalItemView-content'].concat(classes).join(' ');
   }
 
   static defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount) {
-    let contentSize = 'terra-CompactCard-content--primarySize';
-    let contentColor = 'terra-CompactCard-content--primaryColor';
+    let contentSize = 'terra-ClincalItemView-content--primarySize';
+    let contentColor = 'terra-ClincalItemView-content--primaryColor';
 
     if (rowIndex > 0) {
-      contentSize = 'terra-CompactCard-content--secondarySize';
+      contentSize = 'terra-ClincalItemView-content--secondarySize';
     }
 
     if (rowCount === 2 && rowIndex === 1) {
-      contentColor = 'terra-CompactCard-content--secondaryColor';
+      contentColor = 'terra-ClincalItemView-content--secondaryColor';
     }
 
     if (rowIndex >= 2) {
-      contentColor = 'terra-CompactCard-content--secondaryColor';
+      contentColor = 'terra-ClincalItemView-content--secondaryColor';
     }
 
     return [contentSize, contentColor];
@@ -144,10 +144,10 @@ class CompactCard extends React.Component {
 
   static leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
     if (contentIndex === 1) {
-      return ['terra-CompactCard-content--secondarySize', 'terra-CompactCard-content--secondaryColor'];
+      return ['terra-ClincalItemView-content--secondarySize', 'terra-ClincalItemView-content--secondaryColor'];
     }
 
-    return CompactCard.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
+    return ClincalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
   }
 
   render() {
@@ -161,31 +161,31 @@ class CompactCard extends React.Component {
             comment,
             ...customProps } = this.props;
 
-    const cardClassNames = classNames([
-      'terra-CompactCard',
-      { 'terra-CompactCard--isTruncated': isTruncated },
-      { [`terra-CompactCard--${layout}`]: layout },
-      { [`terra-CompactCard-accessory--${accessoryAlignment}`]: accessoryAlignment },
+    const viewClassNames = classNames([
+      'terra-ClincalItemView',
+      { 'terra-ClincalItemView--isTruncated': isTruncated },
+      { [`terra-ClincalItemView--${layout}`]: layout },
+      { [`terra-ClincalItemView-accessory--${accessoryAlignment}`]: accessoryAlignment },
       customProps.className,
     ]);
 
     return (
-      <div {...customProps} className={cardClassNames}>
-        {CompactCard.renderAccessory(leftAccessory)}
-        <div className="terra-CompactCard-body">
-          {CompactCard.renderRows(displays, layout, textEmphasis)}
+      <div {...customProps} className={viewClassNames}>
+        {ClincalItemView.renderAccessory(leftAccessory)}
+        <div className="terra-ClincalItemView-body">
+          {ClincalItemView.renderRows(displays, layout, textEmphasis)}
           {comment}
         </div>
-        {CompactCard.renderAccessory(rightAccessory)}
+        {ClincalItemView.renderAccessory(rightAccessory)}
       </div>
     );
   }
 }
 
-CompactCard.propTypes = propTypes;
-CompactCard.defaultProps = defaultProps;
-CompactCard.Display = Display;
-CompactCard.Comment = Comment;
+ClincalItemView.propTypes = propTypes;
+ClincalItemView.defaultProps = defaultProps;
+ClincalItemView.Display = Display;
+ClincalItemView.Comment = Comment;
 
-export default CompactCard;
+export default ClincalItemView;
 

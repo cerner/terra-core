@@ -1,7 +1,7 @@
 import React from 'react';
 
-import CompactCard from '../lib/CompactCard';
+import ClinicalItemView from '../lib/ClinicalItemView';
 
-const comment1 = <CompactCard.Comment text="comment1comment1comment1comment1comment1comment1comment1comment1comment1comment1comment1comment1" />;
+const comment1 = <ClinicalItemView.Comment text="comment1comment1comment1comment1comment1comment1comment1comment1comment1comment1comment1comment1" />;
 
-export default () => <CompactCard comment={comment1} />;
+export default () => <ClinicalItemView comment={comment1} />;

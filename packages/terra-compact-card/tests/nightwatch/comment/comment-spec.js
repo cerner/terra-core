@@ -8,13 +8,13 @@ module.exports = {
     screenshot(browser, done);
   },
 
-  'Displays a compact card with default props': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/compact-card-comment-tests/default`);
-    browser.expect.element('.terra-CompactCard-comment').to.be.present;
+  'Displays a clinical item view with default props': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/clinical-item-view-comment-tests/default`);
+    browser.expect.element('.terra-ClinicalItemView-comment').to.be.present;
   },
-  'Displays a compact card with displays present': (browser) => {
+  'Displays a clinical item view with displays present': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/compact-card-comment-tests/text`)
-      .assert.containsText('.terra-CompactCard-comment', 'test comment');
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/clinical-item-view-comment-tests/text`)
+      .assert.containsText('.terra-ClinicalItemView-comment', 'test comment');
   },
 };

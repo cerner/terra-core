@@ -42,19 +42,19 @@ const Display = ({
     ...customProps
   }) => {
   const displayClassNames = classNames([
-    'terra-CompactCard-display',
+    'terra-ClinicalItemView-display',
     customProps.className,
   ]);
 
   const textClassNames = classNames([
-    'terra-CompactCard-text',
-    { 'terra-CompactCard-text--isTruncated': isTruncated },
-    { [`terra-CompactCard-text--${textStyle}`]: textStyle },
+    'terra-ClinicalItemView-text',
+    { 'terra-ClinicalItemView-text--isTruncated': isTruncated },
+    { [`terra-ClinicalItemView-text--${textStyle}`]: textStyle },
   ]);
 
   let displayIcon;
   if (icon) {
-    displayIcon = <div className="terra-CompactCard-text--inlineIcon">{icon}</div>;
+    displayIcon = <div className="terra-ClinicalItemView-text--inlineIcon">{icon}</div>;
   }
 
   return (

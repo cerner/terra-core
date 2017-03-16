@@ -50,7 +50,7 @@ var Comment = function Comment(_ref) {
       isTruncated = _ref.isTruncated,
       customProps = _objectWithoutProperties(_ref, ['text', 'isTruncated']);
 
-  var commentClassNames = (0, _classnames2.default)(['terra-CompactCard-comment', customProps.className]);
+  var commentClassNames = (0, _classnames2.default)(['terra-ClinicalItemView-comment', customProps.className]);
 
   var commentIcon = _react2.default.createElement(_IconComment2.default, null);
 

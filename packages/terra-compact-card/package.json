@@ -1,8 +1,8 @@
 {
-  "name": "terra-compact-card",
-  "main": "lib/CompactCard.js",
+  "name": "terra-clinical-item-view",
+  "main": "lib/ClinicalItemView.js",
   "version": "0.1.0",
-  "description": "terra-compact-card",
+  "description": "terra-clinical-item-view",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-ui.git"
@@ -10,8 +10,8 @@
   "keywords": [
     "Cerner",
     "Terra",
-    "terra-compact-card",
-    "TerraCompactCard",
+    "terra-clinical-item-view",
+    "TerraClinicalItemView",
     "UI"
   ],
   "author": "Cerner Corporation",

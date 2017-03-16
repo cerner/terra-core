@@ -1,11 +1,11 @@
 @import './variables';
 @import './mixins';
 
-.terra-CompactCard-comment {
+.terra-ClinicalItemView-comment {
   @include terra-text-body;
-  color: $terra-compact-card-comment-color;
+  color: $terra-clinical-item-view-comment-color;
 }
 
-.terra-CompactCard-comment--icon {
-  fill: $terra-compact-card-comment-icon-color;
+.terra-ClinicalItemView-comment--icon {
+  fill: $terra-clinical-item-view-comment-icon-color;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
 
-import CompactCard from '../../../lib/CompactCard';
+import ClinicalItemView from '../../../lib/ClinicalItemView';
 
-export default () => <CompactCard />;
+export default () => <ClinicalItemView />;

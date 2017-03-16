@@ -1,16 +1,16 @@
 import React from 'react';
 
-import CompactCard from '../../../lib/CompactCard';
+import ClincalItemView from '../../../lib/ClincalItemView';
 
 const accessoryLeft = <img alt="Graphic Left" />;
 const accessoryRight = <img alt="Graphic Right" />;
 
-const cards = () => (
+const views = () => (
   <div>
-    <CompactCard leftAccessory={accessoryLeft} id="test-left-accessory" />
-    <CompactCard rightAccessory={accessoryRight} id="test-right-accessory" />
-    <CompactCard leftAccessory={accessoryLeft} rightAccessory={accessoryRight} accessoryAlignment="alignTop" id="test-both-accessory-top" />
+    <ClincalItemView leftAccessory={accessoryLeft} id="test-left-accessory" />
+    <ClincalItemView rightAccessory={accessoryRight} id="test-right-accessory" />
+    <ClincalItemView leftAccessory={accessoryLeft} rightAccessory={accessoryRight} accessoryAlignment="alignTop" id="test-both-accessory-top" />
   </div>
 );
 
-export default cards;
+export default views;
