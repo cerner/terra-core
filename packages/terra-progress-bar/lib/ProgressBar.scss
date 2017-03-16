@@ -10,6 +10,10 @@
   overflow: hidden;
   width: 100%;
 
+  &:focus {
+    outline: none;
+  }
+
   &[value] {
     appearance: none;
     border: 0; // Remove Firefox and Opera border
@@ -50,6 +54,10 @@
   .terra-ProgressBar {
     border-radius: 0.5em;
     overflow: hidden;
+
+    &:focus {
+      outline: none;
+    }
 
     &[value] {
       background-color: $terra-grey-20;
