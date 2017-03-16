@@ -160,6 +160,7 @@ var ResponsiveElement = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      /* eslint-disable import/no-unused-vars */
       var _props = this.props,
           defaultElement = _props.defaultElement,
           tiny = _props.tiny,
