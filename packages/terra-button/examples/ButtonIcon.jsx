@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
 import Button from '../src/Button';
 
