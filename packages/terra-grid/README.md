@@ -6,19 +6,12 @@
 The terra-grid component provides a flexbox based grid system.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](docs/)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-grid`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 

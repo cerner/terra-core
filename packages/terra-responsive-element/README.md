@@ -8,19 +8,12 @@ The ResponsiveElement conditionally renders components based on viewport size.
 The viewport can be set to the immediate parent or window.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](docs/)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-responsive-element`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 

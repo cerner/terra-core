@@ -6,19 +6,12 @@
 The legacy-theme component sets global variables for the entire application. Global variables are included for responsive breakpoints, colors, and typography.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](docs/)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-legacy-theme`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 

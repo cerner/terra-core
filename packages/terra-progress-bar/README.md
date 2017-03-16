@@ -8,19 +8,12 @@ The progress bar component provides users a way to display the progress of proce
 Note: The progress bar displays fill with respect to percentage (value between 0 and 100). If `max` isn't specified in the input to the component, then `value` corresponds to a percentage value.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](docs/)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-progress-bar`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 

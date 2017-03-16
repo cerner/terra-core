@@ -7,19 +7,12 @@
 The content component provides styles for commonly used HTML elements such as headers, paragraphs, lists, images, and more. This component ensures consistent styling between different browsers in a similar fashion to normalize.css. These styles are in a component as opposed to being used globally to ensure that Terra is opt in. As a result, other solutions will not be styled by this component.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](docs/)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-content`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 
