@@ -23,7 +23,7 @@ it('should render with isSelectable', () => {
   expect(item).toMatchSnapshot();
 });
 
-// it('should render with isSelectable and hasChevron', () => {
-//   const item = shallow(<ListItem isSelectable hasChevron />);
-//   expect(item).toMatchSnapshot();
-// });
+it('should render with isSelectable and hasChevron', () => {
+  const item = shallow(<ListItem isSelectable hasChevron />);
+  expect(item).toMatchSnapshot();
+});
