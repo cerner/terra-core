@@ -1,10 +1,16 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/list.scss';
+import '../src/List.scss';
 import ListItem from './ListItem';
 
 const propTypes = {
+  /**
+   * The children list items passed to the component.
+   */
   children: PropTypes.node,
+  /**
+   * Whether or not the child list items should have a border color applied.
+   */
   isDivided: PropTypes.bool,
 };
 

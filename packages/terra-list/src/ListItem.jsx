@@ -4,9 +4,21 @@ import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import '../src/ListItem.scss';
 
 const propTypes = {
+  /**
+   * The content element to be placed inside the list item for display.
+   */
   content: PropTypes.element,
+  /**
+   * Whether or not the list item should have selection styles applied.
+   */
   isSelected: PropTypes.bool,
+  /**
+   * Whether or not the list item should have styles to indicate the item is selectable.
+   */
   isSelectable: PropTypes.bool,
+  /**
+   * Whether or not the list item has a disclosure indicator presented.
+   */
   hasChevron: PropTypes.bool,
 };
 

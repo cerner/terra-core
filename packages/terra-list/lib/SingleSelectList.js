@@ -12,8 +12,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('../src/list.scss');
-
 var _List = require('./List');
 
 var _List2 = _interopRequireDefault(_List);
@@ -29,9 +27,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
+  /**
+   * The children list items passed to the component.
+   */
   children: _react.PropTypes.node,
+  /**
+   * Whether or not the child list items should have a border color applied.
+   */
   isDivided: _react.PropTypes.bool,
+  /**
+   * Whether or not the child list items has a disclosure indicator presented.
+   */
   hasChevrons: _react.PropTypes.bool,
+  /**
+   * A callback event that will be triggered when selection state changes.
+   */
   onChange: _react.PropTypes.func
 };
 

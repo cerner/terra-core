@@ -25,9 +25,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
+  /**
+   * The content element to be placed inside the list item for display.
+   */
   content: _react.PropTypes.element,
+  /**
+   * Whether or not the list item should have selection styles applied.
+   */
   isSelected: _react.PropTypes.bool,
+  /**
+   * Whether or not the list item should have styles to indicate the item is selectable.
+   */
   isSelectable: _react.PropTypes.bool,
+  /**
+   * Whether or not the list item has a disclosure indicator presented.
+   */
   hasChevron: _react.PropTypes.bool
 };
 

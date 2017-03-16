@@ -1,11 +1,22 @@
 import React, { PropTypes } from 'react';
-import '../src/list.scss';
 import List from './List';
 
 const propTypes = {
+  /**
+   * The children list items passed to the component.
+   */
   children: PropTypes.node,
+  /**
+   * Whether or not the child list items should have a border color applied.
+   */
   isDivided: PropTypes.bool,
+  /**
+   * Whether or not the child list items has a disclosure indicator presented.
+   */
   hasChevrons: PropTypes.bool,
+  /**
+   * A callback event that will be triggered when selection state changes.
+   */
   onChange: PropTypes.func,
 };
 

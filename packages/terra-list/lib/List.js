@@ -14,7 +14,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('../src/list.scss');
+require('../src/List.scss');
 
 var _ListItem = require('./ListItem');
 
@@ -25,7 +25,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
+  /**
+   * The children list items passed to the component.
+   */
   children: _react.PropTypes.node,
+  /**
+   * Whether or not the child list items should have a border color applied.
+   */
   isDivided: _react.PropTypes.bool
 };
 
