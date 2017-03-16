@@ -13,29 +13,23 @@
  };
 
  const Responsive = ({ responsiveTo }) => {
-   const tiny = <div>Tiny</div>;
-   const small = <div>Small</div>;
-   const medium = <div>Medium</div>;
-   const large = <div>Large</div>;
-   const huge = <div>Huge</div>;
-   const defaultElement = <div>Default</div>;
    const responsiveElement = (
      <ResponsiveElement
        responsiveTo={responsiveTo}
-       defaultElement={defaultElement}
-       tiny={tiny}
-       small={small}
-       medium={medium}
-       large={large}
-       huge={huge}
+       defaultElement={<div>Default</div>}
+       tiny={<div>Tiny</div>}
+       small={<div>Small</div>}
+       medium={<div>Medium</div>}
+       large={<div>Large</div>}
+       huge={<div>Huge</div>}
      />
         );
    return (
-     <div style={{ border: '1px dashed grey', width: '100%', marginTop: '10px', padding: '5px' }}>
-       <div style={{ borderRight: '1px dashed grey', display: 'inline-block', width: '20%', padding: '5px' }}>
+     <div style={{ border: '1px dashed', width: '100%', marginTop: '10px', padding: '5px' }}>
+       <div style={{ borderRight: '1px dashed', display: 'inline-block', width: '20%', padding: '5px' }}>
          {responsiveElement}
        </div>
-       <div style={{ borderRight: '1px dashed grey', display: 'inline-block', width: '50%', padding: '5px' }}>
+       <div style={{ borderRight: '1px dashed', display: 'inline-block', width: '50%', padding: '5px' }}>
          {responsiveElement}
        </div>
        <div style={{ display: 'inline-block', width: '20%', padding: '5px' }}>
