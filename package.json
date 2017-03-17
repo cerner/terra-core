@@ -1,22 +1,22 @@
 {
-  "name": "terra-ui",
+  "name": "terra-core",
   "private": true,
   "version": "0.1.0",
-  "description": "terra-ui",
+  "description": "terra-core",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-ui.git"
+    "url": "git+https://github.com/cerner/terra-core.git"
   },
   "keywords": [
     "Cerner",
     "Terra",
-    "Terra UI",
-    "terra-ui"
+    "Terra Core",
+    "terra-core"
   ],
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cerner/terra-ui/issues"
+    "url": "https://github.com/cerner/terra-core/issues"
   },
   "jest": {
     "collectCoverageFrom": [

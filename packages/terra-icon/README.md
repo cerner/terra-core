@@ -2,12 +2,12 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-icon.svg)](https://www.npmjs.org/package/terra-icon)
-[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-icon/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-icon/docs)
 - [LICENSE](#license)
 
 ## Getting Started
