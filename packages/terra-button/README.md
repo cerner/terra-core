@@ -2,13 +2,13 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-button.svg)](https://www.npmjs.org/package/terra-button)
-[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The terra-button component provides users a way to trigger actions in the UI.
 It can be modified in color, size, and type, and can optionally display an icon.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-button/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-button/docs)
 - [LICENSE](#license)
 
 ## Getting Started
