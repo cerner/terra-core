@@ -177,7 +177,7 @@ var ClinicalItemView = function (_React$Component) {
           var contentClasses = ClinicalItemView.classesForContent(rowIndex, rowCount, contentIndex, emphasis);
           return _react2.default.createElement(
             'div',
-            _extends({ className: contentClasses }, { key: contentKey }),
+            { className: contentClasses, key: contentKey },
             display
           );
         })
