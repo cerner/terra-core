@@ -1,4 +1,4 @@
-# Terra Compact Tile
+# Terra Client Item View
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-clinical-item-view.svg)](https://www.npmjs.org/package/terra-clinical-item-view)
