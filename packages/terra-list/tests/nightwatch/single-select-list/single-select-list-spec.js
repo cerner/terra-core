@@ -17,7 +17,10 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/items`)
       .assert.containsText('.terra-List .terra-ListItem:nth-child(1)', 'test 1')
       .assert.containsText('.terra-List .terra-ListItem:nth-child(2)', 'test 2')
-      .assert.containsText('.terra-List .terra-ListItem:nth-child(3)', 'test 3');
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(3)', 'test 3')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected')
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
   },
   'Displays a items in the list divided': (browser) => {
     browser

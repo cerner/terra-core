@@ -59,7 +59,7 @@ var SingleSelectList = function (_React$Component) {
     key: 'selectedIndexFromItems',
     value: function selectedIndexFromItems(items) {
       for (var i = 0; i < items.length; i += 1) {
-        if (items[i].props === true) {
+        if (items[i].props.isSelected === true) {
           return i;
         }
       }

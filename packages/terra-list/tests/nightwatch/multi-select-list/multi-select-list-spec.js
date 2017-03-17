@@ -27,7 +27,9 @@ module.exports = {
   'Displays a items in the multi select list with a max selection count': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/max-count`)
-      .assert.elementPresent('.terra-List');
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected')
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
   },
   'Displays a items in the multi select list with a function set for on change': (browser) => {
     browser

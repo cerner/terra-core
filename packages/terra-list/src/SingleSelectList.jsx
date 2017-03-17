@@ -31,7 +31,7 @@ class SingleSelectList extends React.Component {
 
   static selectedIndexFromItems(items) {
     for (let i = 0; i < items.length; i += 1) {
-      if (items[i].props === true) {
+      if (items[i].props.isSelected === true) {
         return i;
       }
     }
