@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-i18n.svg)](https://www.npmjs.org/package/terra-i18n)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related fils are loading on demand.
+The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
