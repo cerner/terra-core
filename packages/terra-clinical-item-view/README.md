@@ -1,11 +1,10 @@
 # Terra Compact Tile
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-compact-tile.svg)](https://www.npmjs.org/package/terra-compact-tile)
-[![Build Status](https://travis-ci.org/cerner/terra-compact-tile.svg?branch=master)](https://travis-ci.org/cerner/terra-compact-tile)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
+[![NPM version](http://img.shields.io/npm/v/terra-clinical-item-view.svg)](https://www.npmjs.org/package/terra-clinical-item-view)
+[![Build Status](https://travis-ci.org/cerner/terra-clinical-item-view.svg?branch=master)](https://travis-ci.org/cerner/terra-clinical-item-view)
 
-{insert description}
+The Terra ClinicalItemView component allows displays to be organized into rows and column and themed, while providing means to add accessory elements.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
@@ -16,10 +15,10 @@
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com)
-  - `npm install terra-compact-tile`
-  - `yarn install terra-compact-tile`
-- [Download the latest version](https://github.com/cerner/terra-compact-tile/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-compact-tile.git`
+  - `npm install terra-clinical-item-view`
+  - `yarn install terra-clinical-item-view`
+- [Download the latest version](https://github.com/cerner/terra-clinical-item-view/archive/master.zip)
+- Clone the repo: `git clone https://github.com/cerner/terra-clinical-item-view.git`
 
 ## Documentation
 
