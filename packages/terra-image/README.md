@@ -2,12 +2,12 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-image.svg)](https://www.npmjs.org/package/terra-image)
-[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The terra-image component provides styling for visual imagery.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-image/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-image/docs)
 - [LICENSE](#license)
 
 ## Getting Started
