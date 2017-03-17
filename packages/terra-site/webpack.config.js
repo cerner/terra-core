@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    'terra-ui': path.resolve(path.join(__dirname, 'src', 'Index')),
+    'terra-core': path.resolve(path.join(__dirname, 'src', 'Index')),
   },
   resolveLoader: {
     root: path.resolve(path.join(__dirname, 'node_modules')),
@@ -42,7 +42,7 @@ module.exports = {
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
-      chunks: ['terra-ui'],
+      chunks: ['terra-core'],
     }),
   ],
   postcss: [
