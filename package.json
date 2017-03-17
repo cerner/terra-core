@@ -35,6 +35,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "clean:all": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "deploy": "lerna run --scope terra-site deploy",
@@ -44,6 +45,7 @@
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "pretest": "npm run lint",
+    "preinstall": "npm run clean:all",
     "postinstall": "npm run bootstrap",
     "test": "lerna exec --concurrency 1 npm test",
     "prepush": "node scripts/prepush/index.js",
