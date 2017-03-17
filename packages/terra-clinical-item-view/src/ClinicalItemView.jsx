@@ -104,7 +104,7 @@ class ClinicalItemView extends React.Component {
                                                                contentIndex,
                                                                emphasis);
           return (
-            <div {...{ className: contentClasses }} key={contentKey}>
+            <div className={contentClasses} key={contentKey}>
               {display}
             </div>
           );
