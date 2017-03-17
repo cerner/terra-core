@@ -13,7 +13,8 @@ Each Icon can be imported individually.
 
 ```jsx
 import React from 'react';
-import { IconAdd, IconEdit } from 'terra-icon';
+import IconAdd from 'terra-icon/lib/icon/IconAdd';
+import IconEdit from 'terra-icon/lib/icon/IconEdit';
 
 <div>
   <IconAdd />
