@@ -3,9 +3,8 @@
 
 [![NPM version](http://img.shields.io/npm/v/terra-list.svg)](https://www.npmjs.org/package/terra-list)
 [![Build Status](https://travis-ci.org/cerner/terra-list.svg?branch=master)](https://travis-ci.org/cerner/terra-list)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
-{insert description}
+The Terra List is a structural component to arrange content within list/listitems.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
