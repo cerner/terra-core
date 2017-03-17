@@ -13,6 +13,7 @@ Cerner Corporation
 - Siddharth Kalluru [@sid141288]
 - Tyler Biethman [@tbiethman]
 - Tatiana Alexenko [@bunnyLord]
+- Dave Kasper [@dkasper-was-taken]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -27,3 +28,4 @@ Cerner Corporation
 [@sid141288]: https://github.com/sid141288
 [@tbiethman]: https://github.com/tbiethman
 [@bunnyLord]: https://github.com/bunnyLord
+[@dkasper-was-taken]: https://github.com/dkasper-was-taken
