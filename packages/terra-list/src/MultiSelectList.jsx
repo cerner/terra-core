@@ -64,7 +64,7 @@ class MultiSelectList extends React.Component {
     }
 
     for (let i = indexes.length - 1; i >= 0; i -= 1) {
-      if (this.state.selectedIndexes.includes(indexes[i]) !== true) {
+      if (this.state.selectedIndexes.indexOf(indexes[i]) >= 0) {
         return true;
       }
     }
@@ -75,7 +75,7 @@ class MultiSelectList extends React.Component {
   handleSelection(event, index) {
     let newIndexes = [];
     if (this.state.selectedIndexes.length) {
-      if (this.state.selectedIndexes.includes(index)) {
+      if (this.state.selectedIndexes.indexOf(index) >= 0) {
         newIndexes = this.state.selectedIndexes.slice();
         newIndexes.splice(newIndexes.indexOf(index), 1);
       } else {
@@ -92,7 +92,7 @@ class MultiSelectList extends React.Component {
     if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
       return true;
     }
-    if (this.state.selectedIndexes.includes(index)) {
+    if (this.state.selectedIndexes.indexOf(index) >= 0) {
       return true;
     }
     return false;
@@ -127,7 +127,7 @@ class MultiSelectList extends React.Component {
   }
 
   newPropsForItem(item, index, onClick, disableUnselectedItems) {
-    const isSelected = this.state.selectedIndexes.includes(index);
+    const isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
 
     let newProps = { onClick };
     if (isSelected !== item.isSelected) {

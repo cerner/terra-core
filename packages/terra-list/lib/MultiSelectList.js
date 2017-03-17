@@ -100,7 +100,7 @@ var MultiSelectList = function (_React$Component) {
       }
 
       for (var i = indexes.length - 1; i >= 0; i -= 1) {
-        if (this.state.selectedIndexes.includes(indexes[i]) !== true) {
+        if (this.state.selectedIndexes.indexOf(indexes[i]) >= 0) {
           return true;
         }
       }
@@ -112,7 +112,7 @@ var MultiSelectList = function (_React$Component) {
     value: function handleSelection(event, index) {
       var newIndexes = [];
       if (this.state.selectedIndexes.length) {
-        if (this.state.selectedIndexes.includes(index)) {
+        if (this.state.selectedIndexes.indexOf(index) >= 0) {
           newIndexes = this.state.selectedIndexes.slice();
           newIndexes.splice(newIndexes.indexOf(index), 1);
         } else {
@@ -130,7 +130,7 @@ var MultiSelectList = function (_React$Component) {
       if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
         return true;
       }
-      if (this.state.selectedIndexes.includes(index)) {
+      if (this.state.selectedIndexes.indexOf(index) >= 0) {
         return true;
       }
       return false;
@@ -172,7 +172,7 @@ var MultiSelectList = function (_React$Component) {
   }, {
     key: 'newPropsForItem',
     value: function newPropsForItem(item, index, onClick, disableUnselectedItems) {
-      var isSelected = this.state.selectedIndexes.includes(index);
+      var isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
 
       var newProps = { onClick: onClick };
       if (isSelected !== item.isSelected) {
