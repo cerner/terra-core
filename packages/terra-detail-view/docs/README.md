@@ -1,6 +1,6 @@
 # Terra Detail View
 
-The Detail View component allows you to create a view with text at different levels of importance. A detail view can contain a title, subtitles, info, and a list of elements that can display information at a more detailed level.
+The Detail View component allows you to create a view with text at different levels of importance. A detail view can contain a title, subtitles, a data visualization, and a list of elements that can display information at a more detailed level.
 
 ## Getting Started
 

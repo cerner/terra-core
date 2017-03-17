@@ -59,7 +59,7 @@ var propTypes = {
 var defaultProps = {
   subtitles: [],
   details: [],
-  divided: true
+  isDivided: true
 };
 
 var DetailView = function DetailView(_ref) {
