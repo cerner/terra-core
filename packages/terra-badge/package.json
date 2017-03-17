@@ -36,11 +36,11 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-mixins": "1.0.1"
+    "terra-mixins": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-mixins": "1.0.1"
+    "terra-mixins": "^1.0.0"
   },
   "devDependencies": {
     "terra-markdown": "^0.0.0",
