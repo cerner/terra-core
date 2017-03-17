@@ -2,7 +2,7 @@
   "name": "terra-progress-bar",
   "main": "lib/ProgressBar.js",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "terra-progress-bar",
   "repository": {
     "type": "git",
@@ -38,9 +38,9 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
-    "terra-markdown": "0.1.0",
-    "terra-props-table": "0.1.0",
-    "terra-toolkit": "^0.1.0"
+    "terra-markdown": "^0.0.0",
+    "terra-props-table": "^0.0.0",
+    "terra-toolkit": "^0.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",

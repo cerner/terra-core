@@ -7,19 +7,12 @@
 {TBD}
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-standout/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-standout`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 
