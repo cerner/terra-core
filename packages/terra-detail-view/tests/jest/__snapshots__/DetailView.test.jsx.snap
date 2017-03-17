@@ -44,10 +44,10 @@ exports[`test should render details 1`] = `
     className="terra-DetailView-title">
     <div
       className="terra-DetailView-primaryText">
-      <div
+      <h1
         className="terra-Title terra-Title--huge">
         Header
-      </div>
+      </h1>
     </div>
     <DetailViewSubtitle
       text="Subtitle 1" />
@@ -75,10 +75,10 @@ exports[`test should render footer 1`] = `
     className="terra-DetailView-title">
     <div
       className="terra-DetailView-primaryText">
-      <div
+      <h1
         className="terra-Title terra-Title--huge">
         Header
-      </div>
+      </h1>
     </div>
     <DetailViewSubtitle
       text="Subtitle 1" />
@@ -108,10 +108,10 @@ exports[`test should render graph 1`] = `
     className="terra-DetailView-title">
     <div
       className="terra-DetailView-primaryText">
-      <div
+      <h1
         className="terra-Title terra-Title--huge">
         Header
-      </div>
+      </h1>
     </div>
     <DetailViewSubtitle
       text="Subtitle 1" />
@@ -137,10 +137,10 @@ exports[`test should render subtitles 1`] = `
     className="terra-DetailView-title">
     <div
       className="terra-DetailView-primaryText">
-      <div
+      <h1
         className="terra-Title terra-Title--huge">
         Header
-      </div>
+      </h1>
     </div>
     <DetailViewSubtitle
       text="Subtitle 1" />
@@ -163,10 +163,10 @@ exports[`test should render without a divider when indicated 1`] = `
     className="terra-DetailView-title">
     <div
       className="terra-DetailView-primaryText">
-      <div
+      <h1
         className="terra-Title terra-Title--huge">
         Header
-      </div>
+      </h1>
     </div>
     <DetailViewSubtitle
       text="Subtitle 1" />

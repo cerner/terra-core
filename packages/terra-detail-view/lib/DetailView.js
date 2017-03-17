@@ -53,7 +53,7 @@ var propTypes = {
   /**
    * Indicates if sections should be devided
    **/
-  divided: _react.PropTypes.bool
+  isDivided: _react.PropTypes.bool
 };
 
 var defaultProps = {
@@ -68,8 +68,8 @@ var DetailView = function DetailView(_ref) {
       graph = _ref.graph,
       details = _ref.details,
       footer = _ref.footer,
-      divided = _ref.divided,
-      customProps = _objectWithoutProperties(_ref, ['title', 'subtitles', 'graph', 'details', 'footer', 'divided']);
+      isDivided = _ref.isDivided,
+      customProps = _objectWithoutProperties(_ref, ['title', 'subtitles', 'graph', 'details', 'footer', 'isDivided']);
 
   var attributes = _extends({}, customProps);
   attributes.className = (0, _classnames2.default)(['terra-DetailView', attributes.className]);
@@ -77,7 +77,7 @@ var DetailView = function DetailView(_ref) {
   var divider = null;
   var dividedDetails = [];
 
-  if (divided) {
+  if (isDivided) {
     divider = _react2.default.createElement('hr', { className: 'terra-DetailView-divider' });
 
     for (var i = 0; i < details.length; i += 1) {

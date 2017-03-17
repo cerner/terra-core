@@ -25,7 +25,7 @@ it('should render a title', () => {
 it('should render subtitles', () => {
   const detailView = (
     <DetailView
-      title={<div className="terra-Title terra-Title--huge">Header</div>}
+      title={<h1 className="terra-Title terra-Title--huge">Header</h1>}
       subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
     />);
   const wrapper = shallow(detailView);
@@ -35,7 +35,7 @@ it('should render subtitles', () => {
 it('should render graph', () => {
   const detailView = (
     <DetailView
-      title={<div className="terra-Title terra-Title--huge">Header</div>}
+      title={<h1 className="terra-Title terra-Title--huge">Header</h1>}
       subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
       graph={<div> This is where a graph would go </div>}
     />);
@@ -46,7 +46,7 @@ it('should render graph', () => {
 it('should render details', () => {
   const detailView = (
     <DetailView
-      title={<div className="terra-Title terra-Title--huge">Header</div>}
+      title={<h1 className="terra-Title terra-Title--huge">Header</h1>}
       subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
       details={[<p key="DetailInformation"> Detail information </p>]}
     />);
@@ -57,7 +57,7 @@ it('should render details', () => {
 it('should render footer', () => {
   const detailView = (
     <DetailView
-      title={<div className="terra-Title terra-Title--huge">Header</div>}
+      title={<h1 className="terra-Title terra-Title--huge">Header</h1>}
       subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
       details={[<p key="DetailInformation"> Detail information </p>]}
       footer="Footer text"
@@ -69,11 +69,11 @@ it('should render footer', () => {
 it('should render without a divider when indicated', () => {
   const detailView = (
     <DetailView
-      title={<div className="terra-Title terra-Title--huge">Header</div>}
+      title={<h1 className="terra-Title terra-Title--huge">Header</h1>}
       subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
       details={[<p key="DetailInformation"> Detail information </p>]}
       footer="Footer text"
-      divided={false}
+      isDivided={false}
     />);
   const wrapper = shallow(detailView);
   expect(wrapper).toMatchSnapshot();

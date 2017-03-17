@@ -32,16 +32,16 @@ const propTypes = {
   /**
    * Indicates if sections should be devided
    **/
-  divided: PropTypes.bool,
+  isDivided: PropTypes.bool,
 };
 
 const defaultProps = {
   subtitles: [],
   details: [],
-  divided: true,
+  isDivided: true,
 };
 
-const DetailView = ({ title, subtitles, graph, details, footer, divided, ...customProps }) => {
+const DetailView = ({ title, subtitles, graph, details, footer, isDivided, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
   attributes.className = classNames(['terra-DetailView',
     attributes.className,
@@ -50,7 +50,7 @@ const DetailView = ({ title, subtitles, graph, details, footer, divided, ...cust
   let divider = null;
   let dividedDetails = [];
 
-  if (divided) {
+  if (isDivided) {
     divider = (<hr className="terra-DetailView-divider" />);
 
     for (let i = 0; i < details.length; i += 1) {
