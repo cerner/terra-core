@@ -26,10 +26,10 @@
     "terra-toolkit": "^0.1.1"
   },
   "peerDependencies": {
-  "terra-mixins": "1.0.0"
+    "terra-mixins": "^1.0.0"
   },
   "dependencies": {
-  "terra-mixins": "1.0.0"
+    "terra-mixins": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
