@@ -22,16 +22,16 @@
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "devDependencies": {
-    "terra-markdown": "0.0.0",
+    "terra-markdown": "^0.0.0",
     "terra-toolkit": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "terra-mixins": "1.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "^15.4.2",
     "react-docgen": "^2.13.0",
     "terra-mixins": "1.0.1"
   },

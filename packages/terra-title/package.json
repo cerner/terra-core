@@ -21,16 +21,6 @@
     "url": "https://github.com/cerner/terra-ui/issues"
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
-  "devDependencies": {
-    "terra-markdown": "^0.0.0",
-    "terra-toolkit": "^0.1.1"
-  },
-  "peerDependencies": {
-  "terra-mixins": "1.0.0"
-  },
-  "dependencies": {
-    "terra-mixins": "1.0.0"
-  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",
@@ -42,5 +32,15 @@
     "release:minor": "npm test && node ../../scripts/release/release.js minor",
     "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "echo \"Warning: no test written\" && exit 0"
+  },
+  "devDependencies": {
+    "terra-markdown": "^0.0.0",
+    "terra-toolkit": "^0.1.1"
+  },
+  "peerDependencies": {
+    "terra-mixins": "1.0.1"
+  },
+  "dependencies": {
+    "terra-mixins": "1.0.1"
   }
 }

@@ -31,7 +31,8 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "cerner-one-icons": "git+https://github.cerner.com/ux/cerner-one-icons.git#af52c0dd92cfd56e1be1f9bef0f114de7294fed3"
+    "cerner-one-icons": "git+https://github.cerner.com/ux/cerner-one-icons.git#af52c0dd92cfd56e1be1f9bef0f114de7294fed3",
+    "terra-mixins": "1.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
