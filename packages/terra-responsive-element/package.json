@@ -2,7 +2,7 @@
   "name": "terra-responsive-element",
   "main": "lib/ResponsiveElement.js",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.1.0"
+    "terra-props-table": "^0.0.0",
+    "terra-markdown": "^0.0.0",
+    "terra-toolkit": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -31,9 +33,7 @@
   "dependencies": {
     "react": "^15.4.2",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-mixins": "^1.0.0",
-    "terra-props-table": "0.1.0",
-    "terra-markdown": "0.1.0"
+    "terra-mixins": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
