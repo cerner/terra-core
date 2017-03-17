@@ -1,7 +1,9 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import IconEdit from 'terra-icon/lib/icon/IconEdit';
 import Button from '../src/Button';
 
-const Icon = <span style={{ backgroundColor: 'black', color: 'black', height: '1em', width: '1em' }}>....</span>;
+const Icon = <IconEdit />;
 
 const ButtonIcon = () => (
   <div>

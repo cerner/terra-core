@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "terra-arrange": "0.0.0",
+    "terra-icon": "^0.0.0",
     "terra-markdown": "^0.0.0",
     "terra-props-table": "^0.0.0",
     "terra-toolkit": "^0.1.1"
