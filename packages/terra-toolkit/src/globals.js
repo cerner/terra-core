@@ -1,12 +1,16 @@
+import { createSpectreRun } from './spectre';
 import updateSauce from './update-sauce';
 
 module.exports = {
   beforeEach: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+    createSpectreRun(browser, done);
   },
   afterEach: (browser, done) => {
     function endBrowser() {
-      browser.end(done);
+      browser.end(() => {
+        console.log('After each done is being called');
+        done();
+      });
     }
 
     if (process.env.REMOTE === 'true') {
@@ -14,5 +18,6 @@ module.exports = {
     } else {
       endBrowser();
     }
+    console.log('After each is done being called');
   },
 };

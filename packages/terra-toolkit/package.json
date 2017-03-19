@@ -38,6 +38,7 @@
   "dependencies": {
     "nightwatch": "^0.9.12",
     "phantomjs-prebuilt": "^2.1.14",
+    "request": "^2.81.0",
     "sauce-connect-launcher": "^1.2.0",
     "selenium-server-standalone-jar": "3.2.0",
     "shelljs": "^0.7.6",

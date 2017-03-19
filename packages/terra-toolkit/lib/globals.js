@@ -1,5 +1,7 @@
 'use strict';
 
+var _spectre = require('./spectre');
+
 var _updateSauce = require('./update-sauce');
 
 var _updateSauce2 = _interopRequireDefault(_updateSauce);
@@ -8,11 +10,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 module.exports = {
   beforeEach: function beforeEach(browser, done) {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+    (0, _spectre.createSpectreRun)(browser, done);
   },
   afterEach: function afterEach(browser, done) {
     function endBrowser() {
-      browser.end(done);
+      browser.end(function () {
+        console.log('After each done is being called');
+        done();
+      });
     }
 
     if (process.env.REMOTE === 'true') {
@@ -20,5 +25,6 @@ module.exports = {
     } else {
       endBrowser();
     }
+    console.log('After each is done being called');
   }
 };
