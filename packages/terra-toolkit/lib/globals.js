@@ -14,10 +14,7 @@ module.exports = {
   },
   afterEach: function afterEach(browser, done) {
     function endBrowser() {
-      browser.end(function () {
-        console.log('After each done is being called');
-        done();
-      });
+      browser.end(done);
     }
 
     if (process.env.REMOTE === 'true') {
@@ -25,6 +22,5 @@ module.exports = {
     } else {
       endBrowser();
     }
-    console.log('After each is done being called');
   }
 };

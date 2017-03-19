@@ -12,14 +12,9 @@ exports.createSpectreRun = (browser, callback) => {
     res.setEncoding('utf8');
     res.on('data', (responseData) => {
       const updatedBrowserGlobals = browser.globals;
-      // eslint-disable-next-line no-console
-      console.log(`id ${JSON.parse(responseData).id}`);
       updatedBrowserGlobals.spectreRunId = JSON.parse(responseData).id;
     });
-    res.on('end', () => {
-      console.log('call done');
-      callback();
-    });
+    res.on('end', callback);
   }
 
   try {
@@ -37,8 +32,6 @@ exports.createSpectreRun = (browser, callback) => {
     req.write(data);
     req.end();
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.log(`calling callback due to error: ${error}`);
     callback();
   }
 };
@@ -48,9 +41,6 @@ exports.createSpectreTest = (browser, imagePath, callback) => {
     if (err) {
       // eslint-disable-next-line no-console
       console.error('upload failed:', err);
-    } else {
-      // eslint-disable-next-line no-console
-      console.log('Upload successful!  Server responded');
     }
     callback();
   }
