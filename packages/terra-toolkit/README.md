@@ -7,7 +7,7 @@
 Terra Toolkit is a utility module used to facilitate developmen of Terra projects.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-toolkit/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-toolkit/docs)
 - [LICENSE](#license)
 
 ## Getting Started
