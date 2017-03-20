@@ -20,7 +20,7 @@
     "url": "https://github.com/cerner/terra-ui/issues"
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
-    "devDependencies": {
+  "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
     "svgo": "^0.7.2",
