@@ -3,7 +3,9 @@ import localeData from 'react-intl/locale-data/fr';
 
 addLocaleData(localeData);
 
-const messages = {};
+const messages = {
+  'Terra.ajax.error': 'Échec du chargement du contenu.',
+};
 
 module.exports = {
   load: true,

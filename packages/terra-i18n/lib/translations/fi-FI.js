@@ -10,7 +10,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _reactIntl.addLocaleData)(_fi2.default);
 
-var messages = {};
+var messages = {
+  'Terra.ajax.error': 'This content failed to load.n9KZ Pi~'
+};
 
 module.exports = {
   load: true,
