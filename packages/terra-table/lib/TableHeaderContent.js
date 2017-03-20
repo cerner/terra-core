@@ -10,6 +10,14 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _IconCaretDown = require('terra-icon/lib/icon/IconCaretDown');
+
+var _IconCaretDown2 = _interopRequireDefault(_IconCaretDown);
+
+var _IconCaretUp = require('terra-icon/lib/icon/IconCaretUp');
+
+var _IconCaretUp2 = _interopRequireDefault(_IconCaretUp);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -31,6 +39,9 @@ var propTypes = {
 var defaultProps = {
   minWidth: 'small'
 };
+
+var iconDown = _react2.default.createElement(_IconCaretDown2.default, null);
+var iconUp = _react2.default.createElement(_IconCaretUp2.default, null);
 
 var TableHeaderContent = function TableHeaderContent(_ref) {
   var display = _ref.display,
@@ -57,12 +68,12 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
       _react2.default.createElement(
         'span',
         { className: ascSortInd },
-        '\u2191'
+        iconUp
       ),
       _react2.default.createElement(
         'span',
         { className: descSortInd },
-        '\u2193'
+        iconDown
       )
     )
   );
