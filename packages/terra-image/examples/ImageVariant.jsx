@@ -3,6 +3,7 @@ import Image from '../src/Image';
 
 const ImageVariant = () => (
   <div>
+    <p>
     <h2>Default Image Style</h2>
     <Image src="http://lorempixel.com/320/320/nature/" alt="example of defualt styles" />
     <br />
@@ -31,6 +32,7 @@ const ImageVariant = () => (
     <Image src="http://lorempixel.com/1920/480/nature/" alt="example of thumbnail styles" variant="thumbnail" isFluid />
     <br />
     <br />
+    </p>
   </div>
 );
 
