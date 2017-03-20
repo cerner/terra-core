@@ -29,6 +29,7 @@ const App = props => (
       <li><Link to="/site/status">Status</Link></li>
       <li><Link to="/site/title">Title</Link></li>
       <li><Link to="/site/slide-panel">Slide Panel</Link></li>
+      <li><Link to="/site/i18n">I18n</Link></li>
       <li><Link to="/site/responsive-element">Responsive Element</Link></li>
       <li><Link to="/site/detail-view">Detail View</Link></li>
 
