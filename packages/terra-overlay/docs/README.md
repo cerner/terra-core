@@ -1,9 +1,10 @@
 # Terra Overlay
 
-Overlay is fullscreen semi-transparent element that overlays content usually to mark it as disabled.
-Overlays are used for:
+Overlay is an element that overlays the viewport or a DOM element usually to mark it as disabled.
+Common usage:
 - Shade out main content while mobile menus are open
-- Share out main content while modals are open
+- Shade out main content while modals are open
+- Shade out a panel and display a loading indicator while ajax call is running
 
 ## Getting Started
 

@@ -1,0 +1,30 @@
+@import '~terra-mixins';
+
+.terra-Overlay {
+  background-color: #1c1f21;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $terra-z-index-4;
+}
+
+.terra-Overlay-content {
+  max-height: 100%;
+  max-width: 100%;
+  outline: 0;
+  overflow: auto;
+  z-index: $terra-z-index-6;
+}
+
+.terra-Overlay--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terra-Overlay--open {
+  overflow: hidden !important;
+}
