@@ -21,6 +21,7 @@ import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
 import ResponsiveElementExamples from '../../../packages/terra-responsive-element/examples/Index';
+import TableExamples from '../../../packages/terra-table/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
@@ -48,6 +49,7 @@ ReactDOM.render((
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
+      <Route path="table" component={TableExamples} />      
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
