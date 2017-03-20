@@ -45,7 +45,6 @@
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "pretest": "npm run lint",
-    "preinstall": "npm run clean:all",
     "postinstall": "npm run bootstrap",
     "test": "lerna exec --concurrency 1 npm test",
     "prepush": "node scripts/prepush/index.js",
