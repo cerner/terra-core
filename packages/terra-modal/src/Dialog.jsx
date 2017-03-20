@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Button from 'terra-button';
-import CloseButton from 'terra-icon/lib/icon/themeable/close.svg';
+import CloseButton from 'terra-icon/lib/icon/IconClose';
 
 /**
  * The <Dialog/> component contains the information in a modal, including header/body/footer.
@@ -116,7 +116,8 @@ class Dialog extends React.Component {
       >
         <div className="terra-Modal-header">
           <div>{this.props.header}</div>
-          {this.props.hasCloseButton &&
+          {
+            this.props.hasCloseButton &&
             <Button
               aria-label="modal-close"
               title="modal-close"
