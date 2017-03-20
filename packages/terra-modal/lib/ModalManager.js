@@ -4,9 +4,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _set = require('babel-runtime/core-js/set');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _set2 = _interopRequireDefault(_set);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * ModalManager is used for monitoring the enter and exit of multiple modals on the same page.
@@ -15,12 +25,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 var ModalManager = function () {
   function ModalManager() {
-    _classCallCheck(this, ModalManager);
+    (0, _classCallCheck3.default)(this, ModalManager);
 
-    this.modals = new Set();
+    this.modals = new _set2.default();
   }
 
-  _createClass(ModalManager, [{
+  (0, _createClass3.default)(ModalManager, [{
     key: 'add',
     value: function add(modal) {
       this.modals.add(modal);
@@ -42,7 +52,6 @@ var ModalManager = function () {
       }
     }
   }]);
-
   return ModalManager;
 }();
 

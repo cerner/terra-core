@@ -34,11 +34,15 @@
     "test": "npm run test:spec",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "dependencies": {
+    "babel-runtime": "^6.23.0",
     "classnames": "^2.2.5",
     "terra-button": "^0.1.0",
     "terra-icon": "^0.0.0",
