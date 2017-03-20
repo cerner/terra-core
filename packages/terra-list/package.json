@@ -35,7 +35,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "terra-mixins": "^1.0.0",
-    "terra-icon": "^0.1.0"
+    "terra-icon": "^0.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
