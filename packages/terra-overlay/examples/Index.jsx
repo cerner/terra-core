@@ -24,7 +24,7 @@ const OverlayExamples = () => (
     <OverlayStyle />
     <h2 id="overlay-focus">Overlay Focus</h2>
     <OverlayTrapFocus />
-    <h2 id="overlay-on-element">Overlay Focus</h2>
+    <h2 id="overlay-on-element">Overlay On Element</h2>
     <OverlayOnElement />
   </div>
 );
