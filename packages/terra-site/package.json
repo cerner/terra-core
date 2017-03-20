@@ -17,7 +17,9 @@
     "start": "webpack-dev-server --hot --inline --display-error-details --progress --colors --host 0.0.0.0",
     "deploy": "webpack --config webpack.prod.config && gh-pages -d build",
     "lint": "npm run lint:js",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore"
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "test": "npm run test:spec",
+    "test:spec": "echo \"Warning: no test written\" && exit 0"
   },
   "dependencies": {
     "react": "^15.4.2",
