@@ -18,9 +18,9 @@ var _terraButton = require('terra-button');
 
 var _terraButton2 = _interopRequireDefault(_terraButton);
 
-var _close = require('terra-icon/lib/icon/themeable/close.svg');
+var _IconClose = require('terra-icon/lib/icon/IconClose');
 
-var _close2 = _interopRequireDefault(_close);
+var _IconClose2 = _interopRequireDefault(_IconClose);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -161,7 +161,7 @@ var Dialog = function (_React$Component) {
             'aria-label': 'modal-close',
             title: 'modal-close',
             className: 'terra-Modal--close',
-            icon: _react2.default.createElement(_close2.default, null),
+            icon: _react2.default.createElement(_IconClose2.default, null),
             onClick: this.props.onRequestClose
           })
         ),
