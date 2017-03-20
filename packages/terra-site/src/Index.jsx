@@ -21,6 +21,7 @@ import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
 import ResponsiveElementExamples from '../../../packages/terra-responsive-element/examples/Index';
+import OverlayExamples from '../../../packages/terra-overlay/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
@@ -43,6 +44,7 @@ ReactDOM.render((
       <Route path="standout" component={StandoutExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="image" component={ImageExamples} />
+      <Route path="overlay" component={OverlayExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
