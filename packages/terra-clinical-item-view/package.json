@@ -1,11 +1,11 @@
 {
   "name": "terra-clinical-item-view",
   "main": "lib/ClinicalItemView.js",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "terra-clinical-item-view",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-ui.git"
+    "url": "git+https://github.com/cerner/terra-core.git"
   },
   "keywords": [
     "Cerner",
@@ -17,15 +17,12 @@
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cerner/terra-ui/issues"
+    "url": "https://github.com/cerner/terra-core/issues"
   },
-  "homepage": "https://github.com/cerner/terra-ui#readme",
+  "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "csvtojson": "^1.1.4",
-    "jsdom": "^9.11.0",
-    "svgo": "^0.7.2",
-    "terra-markdown": "^0.1.0",
-    "terra-props-table": "^0.1.0",
+    "terra-markdown": "^0.0.0",
+    "terra-props-table": "^0.0.0",
     "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {

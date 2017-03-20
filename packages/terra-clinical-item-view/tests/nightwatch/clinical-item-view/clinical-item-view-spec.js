@@ -33,10 +33,10 @@ module.exports = {
   },
   'Displays a clinical item view with accessories set': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/clinical-item-view-tests/accessory`);
-    browser.expect.element('#test-left-accessory .terra-ClinicalItemView-accessory:nth-child(1) > :first-child').to.be.present;
-    browser.expect.element('#test-left-accessory .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.not.be.present;
-    browser.expect.element('#test-right-accessory .terra-ClinicalItemView-accessory:nth-child(1) > :first-child').to.not.be.present;
-    browser.expect.element('#test-right-accessory .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.be.present;
+    browser.expect.element('#test-start-accessory .terra-ClinicalItemView-accessory:nth-child(1) > :first-child').to.be.present;
+    browser.expect.element('#test-start-accessory .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.not.be.present;
+    browser.expect.element('#test-end-accessory .terra-ClinicalItemView-accessory:nth-child(1) > :first-child').to.not.be.present;
+    browser.expect.element('#test-end-accessory .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.be.present;
     browser.assert.cssClassPresent('#test-both-accessory-top', 'terra-ClinicalItemView-accessory--alignTop');
   },
   'Displays a clinical item view with a comment set': (browser) => {

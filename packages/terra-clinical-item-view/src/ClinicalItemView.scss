@@ -4,8 +4,8 @@
 
 // Temporary until it is added to application.
 .terra-ClinicalItemView {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 87.5%;
+  font-family: $terra-font-family;
+  font-size: $terra-application-font-size;
   word-break: break-word;
   word-wrap: break-word;
 }

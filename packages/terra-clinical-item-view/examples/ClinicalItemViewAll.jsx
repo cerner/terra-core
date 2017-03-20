@@ -10,8 +10,8 @@ const display5 = <ClinicalItemView.Display text="display 5" />;
 const display6 = <ClinicalItemView.Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-const accessoryLeft = <img alt="Graphic Left" />;
-const accessoryRight = <img alt="Graphic Right" />;
+const accessoryStart = <img alt="Graphic Start" />;
+const accessoryEnd = <img alt="Graphic End" />;
 
 const comment = <ClinicalItemView.Comment text="test comment" />;
 
@@ -20,7 +20,7 @@ export default () => <ClinicalItemView
   layout="twoColumns"
   isTruncated
   textEmphasis="left"
-  leftAccessory={accessoryLeft}
-  rightAccessory={accessoryRight}
+  startAccessory={accessoryStart}
+  endAccessory={accessoryEnd}
   comment={comment}
 />;

@@ -58,49 +58,49 @@ it('should render a comment', () => {
   expect(clinicalItemView).toMatchSnapshot();
 });
 
-it('should render 1 left theme display', () => {
+it('should render 1 start theme display', () => {
   const display1 = <ClinicalItemView.Display text="display 1" />;
   const displays = [display1];
-  const clinicalItemView = shallow(<ClinicalItemView textEmphasis="left" displays={displays} />);
+  const clinicalItemView = shallow(<ClinicalItemView textEmphasis="start" displays={displays} />);
   expect(clinicalItemView).toMatchSnapshot();
 });
 
-it('should render 2 left theme displays', () => {
+it('should render 2 start theme displays', () => {
   const display1 = <ClinicalItemView.Display text="display 1" />;
   const display2 = <ClinicalItemView.Display text="display 2" />;
   const displays = [display1, display2];
-  const clinicalItemView = shallow(<ClinicalItemView textEmphasis="left" displays={displays} />);
+  const clinicalItemView = shallow(<ClinicalItemView textEmphasis="start" displays={displays} />);
   expect(clinicalItemView).toMatchSnapshot();
 });
 
-it('should render 3 left theme displays', () => {
+it('should render 3 start theme displays', () => {
   const display1 = <ClinicalItemView.Display text="display 1" />;
   const display2 = <ClinicalItemView.Display text="display 2" />;
   const display3 = <ClinicalItemView.Display text="display 3" />;
   const displays = [display1, display2, display3];
-  const clinicalItemView = shallow(<ClinicalItemView textEmphasis="left" displays={displays} />);
+  const clinicalItemView = shallow(<ClinicalItemView textEmphasis="start" displays={displays} />);
   expect(clinicalItemView).toMatchSnapshot();
 });
 
-it('should render a left accessory', () => {
+it('should render a start accessory', () => {
   const testElement = <img alt="Graphic" />;
   const params = {
     layout: 'oneColumn',
     textEmphasis: 'default',
     displays: [],
-    leftAccessory: testElement,
+    startAccessory: testElement,
   };
   const clinicalItemView = shallow(<ClinicalItemView {...params} />);
   expect(clinicalItemView).toMatchSnapshot();
 });
 
-it('should render a right accessory', () => {
+it('should render a end accessory', () => {
   const testElement = <img alt="Graphic" />;
   const params = {
     layout: 'oneColumn',
     textEmphasis: 'default',
     displays: [],
-    rightAccessory: testElement,
+    endAccessory: testElement,
   };
   const clinicalItemView = shallow(<ClinicalItemView {...params} />);
   expect(clinicalItemView).toMatchSnapshot();
@@ -112,7 +112,7 @@ it('should render an accessory top aligned', () => {
     layout: 'oneColumn',
     textEmphasis: 'default',
     displays: [],
-    leftAccessory: testElement,
+    startAccessory: testElement,
     accessoryAlignment: 'alignTop',
   };
   const clinicalItemView = shallow(<ClinicalItemView {...params} />);
@@ -125,7 +125,7 @@ it('should render an accessory center aligned', () => {
     layout: 'oneColumn',
     textEmphasis: 'default',
     displays: [],
-    leftAccessory: testElement,
+    startAccessory: testElement,
     accessoryAlignment: 'alignCenter',
   };
   const clinicalItemView = shallow(<ClinicalItemView {...params} />);

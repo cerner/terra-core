@@ -2,14 +2,14 @@ import React from 'react';
 
 import ClinicalItemView from '../../../lib/ClinicalItemView';
 
-const accessoryLeft = <img alt="Graphic Left" />;
-const accessoryRight = <img alt="Graphic Right" />;
+const accessoryStart = <img alt="Graphic Start" />;
+const accessoryEnd = <img alt="Graphic End" />;
 
 const views = () => (
   <div>
-    <ClinicalItemView leftAccessory={accessoryLeft} id="test-left-accessory" />
-    <ClinicalItemView rightAccessory={accessoryRight} id="test-right-accessory" />
-    <ClinicalItemView leftAccessory={accessoryLeft} rightAccessory={accessoryRight} accessoryAlignment="alignTop" id="test-both-accessory-top" />
+    <ClinicalItemView startAccessory={accessoryStart} id="test-start-accessory" />
+    <ClinicalItemView endAccessory={accessoryEnd} id="test-end-accessory" />
+    <ClinicalItemView leftAccessory={accessoryStart} endAccessory={accessoryEnd} accessoryAlignment="alignTop" id="test-both-accessory-top" />
   </div>
 );
 
