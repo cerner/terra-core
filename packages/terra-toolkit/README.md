@@ -3,28 +3,16 @@
 
 [![NPM version](http://img.shields.io/npm/v/terra-toolkit.svg)](https://www.npmjs.org/package/terra-toolkit)
 [![Build Status](https://travis-ci.org/cerner/terra-toolkit.svg?branch=master)](https://travis-ci.org/cerner/terra-toolkit)
-[![Stories in Ready](https://badge.waffle.io/cerner/terra-ui.com.svg?label=ready&title=Ready)](http://waffle.io/cerner/terra-ui.com)
 
 Terra Toolkit is a utility module used to facilitate developmen of Terra projects.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-toolkit/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-toolkit`
-- [Download the latest version](https://github.com/cerner/terra-toolkit/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-toolkit.git`
-
-## Documentation
-
-See the [documentation](docs/).
-
-## Contributing
-
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 ## LICENSE
 

@@ -10,6 +10,9 @@ Cerner Corporation
 - Tao Zhang [@windse7en]
 - Aaron McRuer [@Nerdenator]
 - Anusha Reddy Ganapuram [@aganapuram]
+- Siddharth Kalluru [@sid141288]
+- Tyler Biethman [@tbiethman]
+- Tatiana Alexenko [@bunnyLord]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -21,3 +24,6 @@ Cerner Corporation
 [@windse7en]: https://github.com/windse7en
 [@Nerdenator]: https://github.com/Nerdenator
 [@aganapuram]: https://github.com/aganapuram
+[@sid141288]: https://github.com/sid141288
+[@tbiethman]: https://github.com/tbiethman
+[@bunnyLord]: https://github.com/bunnyLord

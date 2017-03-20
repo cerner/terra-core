@@ -1,0 +1,3 @@
+exports[`i18nLoader when callback is not function throws error 1`] = `"Second argument must be function"`;
+
+exports[`i18nLoader when locale is not supported throws error 1`] = `"invalidLocale is not supported, supported locales:en,en-US,en-GB,es,de,fi-FI,fr,pt"`;

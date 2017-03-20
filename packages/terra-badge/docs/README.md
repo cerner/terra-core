@@ -6,7 +6,7 @@ The badge component displays content classification.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-badge`
-  - `yarn install terra-badge`
+  - `yarn add terra-badge`
 
 ## Usage
 
