@@ -12,7 +12,7 @@ Thanks.
 * Check that the issue has not already been fixed in the `master` branch.
 * Open an issue with a descriptive title and a summary.
 * Please be as clear and explicit as you can in your description of the problem.
-* Please state the version of Operating System, Browser, and terra-ui you are using in the description.
+* Please state the version of Operating System, Browser, and terra-core you are using in the description.
 * Include any relevant code in the issue summary.
 
 ## Pull Requests
@@ -29,7 +29,7 @@ Thanks.
 * Open a [pull request][6].
 * The pull request will be reviewed by the community and merged by the project committers.
 
-[1]: https://github.com/cerner/terra-ui/issues
+[1]: https://github.com/cerner/terra-core/issues
 [2]: http://gun.io/blog/how-to-github-fork-branch-and-pull-request
 [3]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 [4]: ./LICENSE
