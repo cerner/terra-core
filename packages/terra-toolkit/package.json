@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-ui.git"
+    "url": "git+https://github.com/cerner/terra-core.git"
   },
   "keywords": [
     "Cerner",
@@ -27,12 +27,11 @@
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cerner/terra-ui/issues"
+    "url": "https://github.com/cerner/terra-core/issues"
   },
   "devDependencies": {
     "terra-application": "^0.2.0",
-    "terra-legacy-theme": "^0.1.0",
-    "terra-mixins": "^1.0.0"
+    "terra-legacy-theme": "^0.1.0"
   },
   "dependencies": {
     "html-webpack-plugin": "^2.28.0",
