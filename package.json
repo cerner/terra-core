@@ -47,7 +47,8 @@
     "pretest": "npm run lint",
     "preinstall": "npm run clean:all",
     "postinstall": "npm run bootstrap",
-    "test": "lerna exec --concurrency 1 npm test",
+    "test": "lerna exec --concurrency 1 npm run test:spec && npm run test:nightwatch-default",
+    "test:nightwatch-default": "node ./packages/terra-toolkit/lib/scripts/nightwatch-process.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
     "prepush": "node scripts/prepush/index.js",
     "start": "cd packages/terra-site && npm run start"
   },
