@@ -34,7 +34,7 @@
     }
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap", 
     "clean:all": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
