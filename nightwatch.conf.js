@@ -7,6 +7,12 @@ const nightwatchConfiguration = require('./packages/terra-toolkit/lib/nightwatch
 module.exports = ((settings) => {
   const updatedSettings = testSettings(resolve('./packages/terra-site/webpack.config'), settings);
   updatedSettings.globals_path = './packages/terra-toolkit/lib/globals.js';
-  updatedSettings.src_folders = ['packages/terra-button/tests/nightwatch', 'packages/terra-slide-panel/tests/nightwatch'];
+  updatedSettings.src_folders = ['packages/terra-button/tests/nightwatch',
+    'packages/terra-i18n/tests/nightwatch',
+    'packages/terra-icon/tests/nightwatch',
+    'packages/terra-image/tests/nightwatch',
+    'packages/terra-responsive-element/tests/nightwatch',
+    'packages/terra-slide-panel/tests/nightwatch',
+  ];
   return updatedSettings;
 })(nightwatchConfiguration);
