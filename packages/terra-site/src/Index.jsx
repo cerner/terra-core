@@ -6,12 +6,12 @@ import App from './App';
 import Home from './Home';
 
 // Examples
-import ApplicationExamples from '../../../packages/terra-application/examples/Index';
-import ArrangeExamples from '../../../packages/terra-arrange/examples/index';
-import BadgeExamples from '../../../packages/terra-badge/examples/index';
-import ButtonExamples from '../../../packages/terra-button/examples/index';
-import ContentExamples from '../../../packages/terra-content/examples/Index';
-import GridExamples from '../../../packages/terra-grid/examples/Index';
+import ApplicationExamples from './components/application/Index';
+import ArrangeExamples from './components/arrange/Index';
+import BadgeExamples from './components/badge/Index';
+import ButtonExamples from './components/button/Index';
+import ContentExamples from '.components/content/Index';
+import GridExamples from '.components/grid/Index';
 import IconExamples from '../../../packages/terra-icon/examples/Index';
 import StandoutExamples from '../../../packages/terra-standout/examples/Index';
 import MenuExamples from '../../../packages/terra-menu/examples/Index';
