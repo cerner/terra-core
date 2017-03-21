@@ -12,7 +12,7 @@ The Terra List is a structural component to arrange content within list/listitem
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-clinical-item-view`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-list`
 
 ## LICENSE
 
