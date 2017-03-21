@@ -8,7 +8,7 @@ const DetailViewDivided = () => (
     title="Header"
     subtitles={['Subtitle 1', 'Subtitle 2']}
     graph={<div style={{ border: '1px solid black', height: '20em', width: '25em', marginBottom: '0.714rem' }}>This is where any visualizations would go</div>}
-    details={[
+    details={[(
       <Grid key="detailInfo">
         <Grid.Row>
           <Grid.Column col={6}>
@@ -26,8 +26,8 @@ const DetailViewDivided = () => (
             <div>Second Row - Second Column content</div>
           </Grid.Column>
         </Grid.Row>
-      </Grid>,
-    ]}
+      </Grid>
+    )]}
     footer="Footer Text"
     isDivided={false}
   />
