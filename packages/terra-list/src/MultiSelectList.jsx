@@ -166,10 +166,7 @@ class MultiSelectList extends React.Component {
     this.unusedVariables(maxSelectionCount);
 
     return (
-      <List
-        isDivided={isDivided}
-        {...customProps}
-      >
+      <List isDivided={isDivided} {...customProps} tabindex="0">
         {clonedChildItems}
       </List>
     );
