@@ -1,22 +1,22 @@
 {
-  "name": "terra-ui",
+  "name": "terra-core",
   "private": true,
   "version": "0.1.0",
-  "description": "terra-ui",
+  "description": "terra-core",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-ui.git"
+    "url": "git+https://github.com/cerner/terra-core.git"
   },
   "keywords": [
     "Cerner",
     "Terra",
-    "Terra UI",
-    "terra-ui"
+    "Terra Core",
+    "terra-core"
   ],
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cerner/terra-ui/issues"
+    "url": "https://github.com/cerner/terra-core/issues"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -35,6 +35,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "clean:all": "rm -rf ./node_modules && rm -rf ./packages/*/node_modules",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "deploy": "lerna run --scope terra-site deploy",
@@ -44,8 +45,10 @@
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "pretest": "npm run lint",
+    "preinstall": "npm run clean:all",
     "postinstall": "npm run bootstrap",
-    "test": "lerna exec --concurrency 1 npm test",
+    "test": "lerna exec --concurrency 1 npm run test:spec && npm run test:nightwatch-default",
+    "test:nightwatch-default": "node ./packages/terra-toolkit/lib/scripts/nightwatch-process.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
     "prepush": "node scripts/prepush/index.js",
     "start": "cd packages/terra-site && npm run start"
   },
