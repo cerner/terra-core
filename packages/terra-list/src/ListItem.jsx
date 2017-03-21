@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
-import '../src/ListItem.scss';
+import './ListItem.scss';
 
 const propTypes = {
   /**

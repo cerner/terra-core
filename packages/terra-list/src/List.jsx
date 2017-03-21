@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import '../src/List.scss';
+import './List.scss';
 import ListItem from './ListItem';
 
 const propTypes = {
