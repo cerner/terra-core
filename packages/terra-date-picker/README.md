@@ -1,24 +1,17 @@
 # Terra Date Picker
 
 [![NPM version](http://img.shields.io/npm/v/terra-date-picker.svg)](https://www.npmjs.org/package/terra-date-picker)
-[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The terra-date-picker component provides users a way to enter or select a date from the date picker.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install with [npm](https://www.npmjs.com): `npm install terra-date-picker`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
 
 ## LICENSE
 

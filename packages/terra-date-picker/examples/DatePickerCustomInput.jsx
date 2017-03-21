@@ -1,30 +1,33 @@
 import React, { PropTypes } from 'react';
 import DatePicker from '../src/DatePicker';
 
-const CustomInputWithButton = (props) => {
-  const customInput =
-  (<div className="terra-DatePicker-custom">
-    <input
-      className="terra-DatePicker-custom-input react-datepicker-ignore-onclickoutside"
-      value={props.value}
-      onChange={props.onChange}
-      placeholder={props.placeholder}
-      type="text"
-    />
-    <button
-      className="terra-DatePicker-custom-button react-datepicker-ignore-onclickoutside"
-      onClick={props.onClick}
-      onKeyDown={props.onKeyDown}
-    />
-  </div>);
-
-  return customInput;
-};
+// eslint-disable-next-line react/prefer-stateless-function
+class CustomInputWithButton extends React.PureComponent {
+  render() {
+    return (
+      (<div className="terra-DatePicker-custom">
+        <input
+          className="terra-DatePicker-custom-input react-datepicker-ignore-onclickoutside"
+          value={this.props.value}
+          onChange={this.props.onChange}
+          placeholder={this.props.placeholder}
+          type="text"
+        />
+        <button
+          className="terra-DatePicker-custom-button react-datepicker-ignore-onclickoutside"
+          onClick={this.props.onClick}
+          onKeyDown={this.props.onKeyDown}
+        />
+      </div>)
+    );
+  }
+}
 
 CustomInputWithButton.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
   onKeyDown: PropTypes.func,
+  placeholder: PropTypes.string,
   value: PropTypes.string,
 };
 

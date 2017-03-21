@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
-import '../src/DatePicker.scss';
+import './DatePicker.scss';
+import ResponsiveElement from '../../../packages/terra-responsive-element/lib/ResponsiveElement';
 
 const propTypes = {
   /**
@@ -46,7 +47,7 @@ const propTypes = {
    */
   openToDate: PropTypes.object,
   /**
-   *
+   * The selected date to show in the date input.
    */
   selectedDate: PropTypes.object,
   /**
@@ -93,7 +94,7 @@ const defaultProps = {
   isStartDateRange: false,
   showMonthDropdown: undefined,
   showYearDropdown: undefined,
-  withPortal: false,
+  withPortal: undefined,
   todayButton: undefined,
   hideTodayButton: false,
 };
@@ -182,8 +183,8 @@ class DatePicker extends React.Component {
       defaultTodayButton = 'Today'; // TODO: Need to translate
     }
 
-    return (
-      <div className="terra-DatePicker">
+    const portalPicker =
+      (<div className="terra-DatePicker">
         <ReactDatePicker
           {...customProps}
           className={classes}
@@ -203,7 +204,7 @@ class DatePicker extends React.Component {
           selectsStart={isStartDateRange}
           startDate={startDate}
           todayButton={defaultTodayButton}
-          withPortal={withPortal}
+          withPortal={withPortal === undefined ? true : withPortal}
           dateFormatCalendar={dateFormatCalendar}
           dateFormat={momentDateFormat}
           fixedHeight
@@ -213,7 +214,47 @@ class DatePicker extends React.Component {
           showMonthDropdown={defaultMonthDropdown}
           showYearDropdown={defaultYearDropdown}
         />
-      </div>
+      </div>);
+
+    const popupPicker =
+      (<div className="terra-DatePicker">
+        <ReactDatePicker
+          {...customProps}
+          className={classes}
+          selected={selectedDate || this.state.startDate}
+          onChange={this.handleChange}
+          customInput={customInput}
+          endDate={endDate}
+          excludeDates={excludeDates}
+          filterDate={filterDate}
+          highlightDates={highlightDates}
+          includeDates={includeDates}
+          maxDate={maxDate}
+          minDate={minDate}
+          monthsShown={monthsShown}
+          openToDate={openToDate}
+          selectsEnd={isEndDateRange}
+          selectsStart={isStartDateRange}
+          startDate={startDate}
+          todayButton={defaultTodayButton}
+          withPortal={withPortal === undefined ? false : withPortal}
+          dateFormatCalendar={dateFormatCalendar}
+          dateFormat={momentDateFormat}
+          fixedHeight
+          locale={userLocale}
+          placeholderText={momentDateFormat}
+          dropdownMode={'select'}
+          showMonthDropdown={defaultMonthDropdown}
+          showYearDropdown={defaultYearDropdown}
+        />
+      </div>);
+
+    return (
+      <ResponsiveElement
+        responsiveTo="window"
+        defaultElement={portalPicker}
+        medium={popupPicker}
+      />
     );
   }
 }

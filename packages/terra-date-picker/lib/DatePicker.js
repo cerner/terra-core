@@ -24,7 +24,11 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-require('../src/DatePicker.scss');
+require('./DatePicker.scss');
+
+var _ResponsiveElement = require('../../../packages/terra-responsive-element/lib/ResponsiveElement');
+
+var _ResponsiveElement2 = _interopRequireDefault(_ResponsiveElement);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -78,7 +82,7 @@ var propTypes = {
    */
   openToDate: _react.PropTypes.object,
   /**
-   *
+   * The selected date to show in the date input.
    */
   selectedDate: _react.PropTypes.object,
   /**
@@ -125,7 +129,7 @@ var defaultProps = {
   isStartDateRange: false,
   showMonthDropdown: undefined,
   showYearDropdown: undefined,
-  withPortal: false,
+  withPortal: undefined,
   todayButton: undefined,
   hideTodayButton: false
 };
@@ -223,7 +227,7 @@ var DatePicker = function (_React$Component) {
         defaultTodayButton = 'Today'; // TODO: Need to translate
       }
 
-      return _react2.default.createElement(
+      var portalPicker = _react2.default.createElement(
         'div',
         { className: 'terra-DatePicker' },
         _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
@@ -244,7 +248,7 @@ var DatePicker = function (_React$Component) {
           selectsStart: isStartDateRange,
           startDate: startDate,
           todayButton: defaultTodayButton,
-          withPortal: withPortal,
+          withPortal: withPortal === undefined ? true : withPortal,
           dateFormatCalendar: dateFormatCalendar,
           dateFormat: momentDateFormat,
           fixedHeight: true,
@@ -255,6 +259,45 @@ var DatePicker = function (_React$Component) {
           showYearDropdown: defaultYearDropdown
         }))
       );
+
+      var popupPicker = _react2.default.createElement(
+        'div',
+        { className: 'terra-DatePicker' },
+        _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
+          className: classes,
+          selected: selectedDate || this.state.startDate,
+          onChange: this.handleChange,
+          customInput: customInput,
+          endDate: endDate,
+          excludeDates: excludeDates,
+          filterDate: filterDate,
+          highlightDates: highlightDates,
+          includeDates: includeDates,
+          maxDate: maxDate,
+          minDate: minDate,
+          monthsShown: monthsShown,
+          openToDate: openToDate,
+          selectsEnd: isEndDateRange,
+          selectsStart: isStartDateRange,
+          startDate: startDate,
+          todayButton: defaultTodayButton,
+          withPortal: withPortal === undefined ? false : withPortal,
+          dateFormatCalendar: dateFormatCalendar,
+          dateFormat: momentDateFormat,
+          fixedHeight: true,
+          locale: userLocale,
+          placeholderText: momentDateFormat,
+          dropdownMode: 'select',
+          showMonthDropdown: defaultMonthDropdown,
+          showYearDropdown: defaultYearDropdown
+        }))
+      );
+
+      return _react2.default.createElement(_ResponsiveElement2.default, {
+        responsiveTo: 'window',
+        defaultElement: portalPicker,
+        medium: popupPicker
+      });
     }
   }]);
 
