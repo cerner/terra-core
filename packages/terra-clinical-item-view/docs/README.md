@@ -43,10 +43,10 @@ import ClinicalItemView from 'ClinicalItemView;
 | Prop | Type | Default | Description|
 |------|------|---------|------------|
 |`layout`|String|`oneColumn`|The number of columns used to layout display. One of `oneColumn` or `twoColumns`.|
-|`textEmphasis`|String|`default`|The emphasis of text, left or default right. One of `defaultTheme` or `leftEmphasisTheme`. |
+|`textEmphasis`|String|`default`|The emphasis of text, left or default right. One of `default` or `start`. |
 |`isTruncated`|Bool|false|The indicator if text should be truncated by default across the tile.|
 |`accessoryAlignment`|String|`alignCenter`|The vertical alignment left and right accessories. One of `alignTop` or `alignCenter`.|
-|`leftAccessory`|Element||The left aligned accessory, generally a graphic.|
-|`rightAccessory`|Element||The right aligned accessory, generally a graphic.|
+|`startAccessory`|Element||The start aligned accessory, generally a graphic.|
+|`endAccessory`|Element||The end aligned accessory, generally a graphic.|
 |`displays`|Array||An array of Display React elements.|
 |`comment`|Element||A Comment React element.|

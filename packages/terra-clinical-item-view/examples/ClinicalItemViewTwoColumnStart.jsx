@@ -10,4 +10,4 @@ const display5 = <ClinicalItemView.Display text="display 5" />;
 const display6 = <ClinicalItemView.Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-export default () => <ClinicalItemView displays={displays} layout="twoColumns" textEmphasis="left" />;
+export default () => <ClinicalItemView displays={displays} layout="twoColumns" textEmphasis="start" />;

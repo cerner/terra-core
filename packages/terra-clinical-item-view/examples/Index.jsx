@@ -9,7 +9,7 @@ import ClinicalItemViewSrc from '!raw-loader!../src/ClinicalItemView.jsx';
 // Example Files
 import ClinicalItemViewStandard from './ClinicalItemViewStandard';
 import ClinicalItemViewTwoColumn from './ClinicalItemViewTwoColumn';
-import ClinicalItemViewTwoColumnLeft from './ClinicalItemViewTwoColumnLeft';
+import ClinicalItemViewTwoColumnStart from './ClinicalItemViewTwoColumnStart';
 import ClinicalItemViewComment from './ClinicalItemViewComment';
 import ClinicalItemViewAll from './ClinicalItemViewAll';
 
@@ -22,7 +22,7 @@ const ClinicalItemViewExamples = () => (
     <h2 id="outline-variant">Two Column ClinicalItemView</h2>
     <ClinicalItemViewTwoColumn />
     <h2 id="link-variant">Left Emphasis ClinicalItemView</h2>
-    <ClinicalItemViewTwoColumnLeft />
+    <ClinicalItemViewTwoColumnStart />
     <h2 id="link-variant">Comment ClinicalItemView</h2>
     <ClinicalItemViewComment />
     <h2 id="link-variant">All Elements ClinicalItemView</h2>

@@ -2,44 +2,17 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-clinical-item-view.svg)](https://www.npmjs.org/package/terra-clinical-item-view)
-[![Build Status](https://travis-ci.org/cerner/terra-clinical-item-view.svg?branch=master)](https://travis-ci.org/cerner/terra-clinical-item-view)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The Terra ClinicalItemView component allows displays to be organized into rows and column and themed, while providing means to add accessory elements.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
-- [Supported Browsers](#supported-browsers)
-- [Contributing](#contributing)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-clinical-item-view/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com)
-  - `npm install terra-clinical-item-view`
-  - `yarn install terra-clinical-item-view`
-- [Download the latest version](https://github.com/cerner/terra-clinical-item-view/archive/master.zip)
-- Clone the repo: `git clone https://github.com/cerner/terra-clinical-item-view.git`
-
-## Documentation
-
-Documentation for this component is spilt into individual files.
-One file for the main component and one file for each component modifier.
-
-See the [documentation](docs/).
-
-## Supported Browsers
-
-| Browser                     | Version |
-|-----------------------------|---------|
-| Chrome & Chrome for Android | Current |
-| Edge                        | Current |
-| Firefox                     | Current |
-| Internet Explorer           | 10 & 11 |
-| Safari & Mobile Safari      | Current |
-
-## Contributing
-
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-list`
 
 ## LICENSE
 
