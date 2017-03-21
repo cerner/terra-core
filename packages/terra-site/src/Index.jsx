@@ -12,6 +12,7 @@ import BadgeExamples from '../../../packages/terra-badge/examples/index';
 import ButtonExamples from '../../../packages/terra-button/examples/index';
 import ContentExamples from '../../../packages/terra-content/examples/Index';
 import GridExamples from '../../../packages/terra-grid/examples/Index';
+import ModalExamples from '../../../packages/terra-modal/examples/index';
 import IconExamples from '../../../packages/terra-icon/examples/Index';
 import StandoutExamples from '../../../packages/terra-standout/examples/Index';
 import MenuExamples from '../../../packages/terra-menu/examples/Index';
@@ -41,6 +42,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="grid" component={GridExamples} />
+      <Route path="modal" component={ModalExamples} />
       <Route path="icon" component={IconExamples} />
       <Route path="standout" component={StandoutExamples} />
       <Route path="menu" component={MenuExamples} />
