@@ -3,7 +3,7 @@
   "main": "lib/Overlay.js",
   "private": true,
   "version": "0.0.0",
-  "description": "terra-overlay",
+  "description": "Overlay is an element that overlays the viewport or a DOM element usually to mark it as disabled",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -12,7 +12,6 @@
     "Cerner",
     "Terra",
     "terra-overlay",
-    "ResponsiveElement",
     "UI"
   ],
   "author": "Cerner Corporation",

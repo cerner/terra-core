@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Portal from './Portal';
 import OverlayManager from './OverlayManager';
-
 import './Overlay.scss';
 
 const ESCAPE = 27;
@@ -24,7 +23,7 @@ const propTypes = {
   /**
    * Callback function for closing the overlay
    */
-  onRequestClose: PropTypes.func,
+  onRequestClose: PropTypes.func.isRequired,
   /**
    * Allow closing overlay by clicking backdrop
    */
@@ -50,7 +49,6 @@ const defaultProps = {
 class Overlay extends React.Component {
   constructor() {
     super();
-    this.state = {};
     this.trapFocus = this.trapFocus.bind(this);
     this.handleEscKeyup = this.handleEscKeyup.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
@@ -132,13 +130,13 @@ class Overlay extends React.Component {
       { 'terra-Overlay--center': centerContent },
       customProps.className,
     );
-    const onELementPosition = isFullScreen ? null : {
+    const onElementPosition = isFullScreen ? null : {
       position: 'absolute',
       top: container.scrollTop,
       left: container.scrollLeft,
     };
     const overlayStyle = {
-      ...onELementPosition,
+      ...onElementPosition,
       ...customProps.style,
     };
     /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -149,6 +147,7 @@ class Overlay extends React.Component {
           className={overlayClass}
           onClick={this.handleClickOutside}
           style={overlayStyle}
+          {...customProps}
         >
           <div
             tabIndex={0}

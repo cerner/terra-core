@@ -55,7 +55,7 @@ var propTypes = {
   /**
    * Callback function for closing the overlay
    */
-  onRequestClose: _react.PropTypes.func,
+  onRequestClose: _react.PropTypes.func.isRequired,
   /**
    * Allow closing overlay by clicking backdrop
    */
@@ -86,7 +86,6 @@ var Overlay = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Overlay.__proto__ || Object.getPrototypeOf(Overlay)).call(this));
 
-    _this.state = {};
     _this.trapFocus = _this.trapFocus.bind(_this);
     _this.handleEscKeyup = _this.handleEscKeyup.bind(_this);
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
@@ -178,26 +177,26 @@ var Overlay = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['isOpen', 'isFullScreen', 'container', 'onRequestClose', 'canClickOutsideClose', 'centerContent', 'children']);
 
       var overlayClass = (0, _classnames2.default)('terra-Overlay', { 'terra-Overlay--center': centerContent }, customProps.className);
-      var onELementPosition = isFullScreen ? null : {
+      var onElementPosition = isFullScreen ? null : {
         position: 'absolute',
         top: container.scrollTop,
         left: container.scrollLeft
       };
-      var overlayStyle = _extends({}, onELementPosition, customProps.style);
+      var overlayStyle = _extends({}, onElementPosition, customProps.style);
       /* eslint-disable jsx-a11y/no-static-element-interactions */
       return _react2.default.createElement(
         _Portal2.default,
         { isOpen: isOpen, target: container },
         _react2.default.createElement(
           'div',
-          {
+          _extends({
             ref: function ref(overlay) {
               _this2.overlay = overlay;
             },
             className: overlayClass,
             onClick: this.handleClickOutside,
             style: overlayStyle
-          },
+          }, customProps),
           _react2.default.createElement(
             'div',
             {

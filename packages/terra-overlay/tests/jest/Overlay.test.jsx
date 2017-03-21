@@ -2,6 +2,7 @@ import React from 'react';
 import Overlay from '../../src/Overlay';
 
 const content = <div>I am the content</div>;
+const mockFn = jest.fn();
 const div = document.createElement('div');
 document.body.appendChild(div);
 
@@ -10,7 +11,7 @@ describe('<Overlay />', () => {
     // <body><div/><body>
     expect(document.body.children).toHaveLength(1);
 
-    const wrapper = mount(<Overlay />, div);
+    const wrapper = mount(<Overlay onRequestClose={mockFn} />, div);
     // <body><div><!-- react-empty --></div></body>
     wrapper.setProps({ isOpen: true });
     // <body class='terra-Overlay--open'>
@@ -39,7 +40,11 @@ describe('<Overlay />', () => {
     document.body.appendChild(target);
     // <body><div/><div id='target'/><body>
     const wrapper = mount(
-      <Overlay container={target} isFullScreen={false}>{content}</Overlay>,
+      <Overlay
+        container={target}
+        isFullScreen={false}
+        onRequestClose={mockFn}
+      >{content}</Overlay>,
       div,
     );
     // <body>
