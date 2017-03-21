@@ -14,7 +14,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('../src/List.scss');
+require('./List.scss');
 
 var _ListItem = require('./ListItem');
 

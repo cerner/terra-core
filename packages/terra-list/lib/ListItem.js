@@ -18,7 +18,7 @@ var _IconChevronRight = require('terra-icon/lib/icon/IconChevronRight');
 
 var _IconChevronRight2 = _interopRequireDefault(_IconChevronRight);
 
-require('../src/ListItem.scss');
+require('./ListItem.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
