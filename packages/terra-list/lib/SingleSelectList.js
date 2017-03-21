@@ -185,9 +185,7 @@ var SingleSelectList = function (_React$Component) {
 
       return _react2.default.createElement(
         _List2.default,
-        _extends({
-          isDivided: isDivided
-        }, customProps),
+        _extends({ isDivided: isDivided }, customProps, { tabindex: '0' }),
         clonedChildItems
       );
     }
