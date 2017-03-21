@@ -138,7 +138,7 @@
 .terra-ClinicalItemView-content--primarySize {
   .terra-ClinicalItemView-text,
   .terra-ClinicalItemView-text--inlineIcon {
-    @include terra-x-small-heading;
+    @include terra-clinical-tiny-heading;
   }
 }
 
@@ -152,7 +152,7 @@
 .terra-ClinicalItemView-content--secondarySize {
   .terra-ClinicalItemView-text,
   .terra-ClinicalItemView-text--inlineIcon {
-    @include terra-text-body;
+    @include terra-clinical-text-body;
   }
 }
 

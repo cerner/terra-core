@@ -2,7 +2,7 @@
 @import './mixins';
 
 .terra-ClinicalItemView-comment {
-  @include terra-text-body;
+  @include terra-clinical-text-body;
   color: $terra-clinical-item-view-comment-color;
 }
 
