@@ -20,11 +20,13 @@ import ProgressBarExamples from '../../../packages/terra-progress-bar/examples/I
 import StatusExamples from '../../../packages/terra-status/examples/Index';
 import TitleExamples from '../../../packages/terra-title/examples/Index';
 import SlidePanelExamples from '../../../packages/terra-slide-panel/examples/Index';
+import I18nExamples from '../../../packages/terra-i18n/examples/Index';
 import ResponsiveElementExamples from '../../../packages/terra-responsive-element/examples/Index';
 import OverlayExamples from '../../../packages/terra-overlay/examples/Index';
 
 // Test
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
+import I18nTestRoutes from '../../../packages/terra-i18n/tests/nightwatch/I18nTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import ResponsiveElementTestRoutes from '../../../packages/terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import TestLinks from './TestLinks';
@@ -49,11 +51,13 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="i18n" component={I18nExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
+    {I18nTestRoutes}
     {ResponsiveElementTestRoutes}
   </Router>
 ), document.getElementById('root'));
