@@ -50,7 +50,7 @@
     "test:nightwatch-default": "node ./packages/terra-toolkit/lib/scripts/nightwatch-process.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
     "prepush": "node scripts/prepush/index.js",
     "start": "cd packages/terra-site && npm run start",
-    "reinstall": "npm run clean:all && npm install"
+    "clean:install": "npm run clean:all && npm install"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
