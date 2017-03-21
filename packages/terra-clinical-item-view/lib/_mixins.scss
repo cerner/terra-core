@@ -1,6 +1,6 @@
 @mixin terra-text-body {
   font-size: 1.1428571428571428rem;
-  line-height: 1.4285714285714286rem;
+  line-height: 1.4285714285714286;
 
   @media screen and (min-width: 760px) {
     font-size: 1rem;
@@ -9,10 +9,10 @@
 
 @mixin terra-x-small-heading {
   font-size: 1.1428571428571428rem;
-  line-height: 1.4285714285714286rem;
+  line-height: 1.4285714285714286;
 }
 
-@mixin terra-text-truncate {
+@mixin terra-clinical-text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

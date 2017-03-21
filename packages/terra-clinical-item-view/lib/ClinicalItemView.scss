@@ -77,7 +77,7 @@
 
 .terra-ClinicalItemView--isTruncated .terra-ClinicalItemView-text,
 .terra-ClinicalItemView-text--isTruncated {
-  @include terra-text-truncate;
+  @include terra-clinical-text-truncate;
 }
 
 // Layouts
