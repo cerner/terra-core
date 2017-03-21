@@ -15,7 +15,7 @@ Releasing the project requires these steps:
 
 - Execute a release script. Make sure to follow [semantic versioning][semantic-versioning].
 
-  Each package should have the follow scripts:
+  Each package should have the following scripts:
     - `npm run release:major`  x.0.0
     - `npm run release:minor`  0.x.0
     - `npm run release:patch`  0.0.x
