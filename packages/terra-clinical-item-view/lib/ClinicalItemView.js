@@ -46,23 +46,23 @@ var propTypes = {
   /**
    * The text color emphasis when using two columns.
    */
-  textEmphasis: _react.PropTypes.oneOf(['default', 'left']),
+  textEmphasis: _react.PropTypes.oneOf(['default', 'start']),
   /**
    * Whether or not all text on the view should be truncated.
    */
   isTruncated: _react.PropTypes.bool,
   /**
-   * The vertical alignment of the left and right accesories.
+   * The vertical alignment of the start and end accesories.
    */
   accessoryAlignment: _react.PropTypes.oneOf(['alignTop', 'alignCenter']),
   /**
-   * The react element to be placed in the left accessory position.
+   * The react element to be placed in the start aligned accessory position.
    */
-  leftAccessory: _react.PropTypes.element,
+  startAccessory: _react.PropTypes.element,
   /**
-   * The react element to be placed in the right accessory position.
+   * The react element to be placed in the end aligned accessory position.
    */
-  rightAccessory: _react.PropTypes.element,
+  endAccessory: _react.PropTypes.element,
   /**
    * An array of react display elements to be presented.
    */
@@ -78,8 +78,8 @@ var defaultProps = {
   textEmphasis: 'default',
   isTruncated: false,
   accessoryAlignment: 'alignCenter',
-  leftAccessory: undefined,
-  rightAccessory: undefined,
+  startAccessory: undefined,
+  endAccessory: undefined,
   displays: [],
   comment: undefined
 };
@@ -101,25 +101,25 @@ var ClinicalItemView = function (_React$Component) {
           textEmphasis = _props.textEmphasis,
           isTruncated = _props.isTruncated,
           accessoryAlignment = _props.accessoryAlignment,
-          leftAccessory = _props.leftAccessory,
-          rightAccessory = _props.rightAccessory,
+          startAccessory = _props.startAccessory,
+          endAccessory = _props.endAccessory,
           displays = _props.displays,
           comment = _props.comment,
-          customProps = _objectWithoutProperties(_props, ['layout', 'textEmphasis', 'isTruncated', 'accessoryAlignment', 'leftAccessory', 'rightAccessory', 'displays', 'comment']);
+          customProps = _objectWithoutProperties(_props, ['layout', 'textEmphasis', 'isTruncated', 'accessoryAlignment', 'startAccessory', 'endAccessory', 'displays', 'comment']);
 
       var viewClassNames = (0, _classnames2.default)(['terra-ClinicalItemView', { 'terra-ClinicalItemView--isTruncated': isTruncated }, _defineProperty({}, 'terra-ClinicalItemView--' + layout, layout), _defineProperty({}, 'terra-ClinicalItemView-accessory--' + accessoryAlignment, accessoryAlignment), customProps.className]);
 
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: viewClassNames }),
-        ClinicalItemView.renderAccessory(leftAccessory),
+        ClinicalItemView.renderAccessory(startAccessory),
         _react2.default.createElement(
           'div',
           { className: 'terra-ClinicalItemView-body' },
           ClinicalItemView.renderRows(displays, layout, textEmphasis),
           comment
         ),
-        ClinicalItemView.renderAccessory(rightAccessory)
+        ClinicalItemView.renderAccessory(endAccessory)
       );
     }
   }], [{
@@ -187,8 +187,8 @@ var ClinicalItemView = function (_React$Component) {
     key: 'classesForContent',
     value: function classesForContent(rowIndex, rowCount, contentIndex, emphasis) {
       var classes = void 0;
-      if (emphasis === 'left') {
-        classes = ClinicalItemView.leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
+      if (emphasis === 'start') {
+        classes = ClinicalItemView.startEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex);
       } else {
         classes = ClinicalItemView.defaultEmphasisContentClassesFromIndexes(rowIndex, rowCount);
       }
@@ -215,8 +215,8 @@ var ClinicalItemView = function (_React$Component) {
       return [contentSize, contentColor];
     }
   }, {
-    key: 'leftEmphasisContentClassesFromIndexes',
-    value: function leftEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
+    key: 'startEmphasisContentClassesFromIndexes',
+    value: function startEmphasisContentClassesFromIndexes(rowIndex, rowCount, contentIndex) {
       if (contentIndex === 1) {
         return ['terra-ClinicalItemView-content--secondarySize', 'terra-ClinicalItemView-content--secondaryColor'];
       }

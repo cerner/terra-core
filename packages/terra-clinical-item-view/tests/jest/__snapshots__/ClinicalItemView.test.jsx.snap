@@ -1,4 +1,4 @@
-exports[`test should render 1 left theme display 1`] = `
+exports[`test should render 1 start theme display 1`] = `
 <div
   className="terra-ClinicalItemView terra-ClinicalItemView--oneColumn terra-ClinicalItemView-accessory--alignCenter">
   <div
@@ -23,7 +23,7 @@ exports[`test should render 1 left theme display 1`] = `
 </div>
 `;
 
-exports[`test should render 2 left theme displays 1`] = `
+exports[`test should render 2 start theme displays 1`] = `
 <div
   className="terra-ClinicalItemView terra-ClinicalItemView--oneColumn terra-ClinicalItemView-accessory--alignCenter">
   <div
@@ -57,7 +57,7 @@ exports[`test should render 2 left theme displays 1`] = `
 </div>
 `;
 
-exports[`test should render 3 left theme displays 1`] = `
+exports[`test should render 3 start theme displays 1`] = `
 <div
   className="terra-ClinicalItemView terra-ClinicalItemView--oneColumn terra-ClinicalItemView-accessory--alignCenter">
   <div
@@ -130,33 +130,33 @@ exports[`test should render a default component 1`] = `
 </div>
 `;
 
-exports[`test should render a left accessory 1`] = `
+exports[`test should render a end accessory 1`] = `
 <div
   className="terra-ClinicalItemView terra-ClinicalItemView--oneColumn terra-ClinicalItemView-accessory--alignCenter">
+  <div
+    className="terra-ClinicalItemView-accessory" />
+  <div
+    className="terra-ClinicalItemView-body" />
   <div
     className="terra-ClinicalItemView-accessory">
     <img
       alt="Graphic" />
   </div>
-  <div
-    className="terra-ClinicalItemView-body" />
-  <div
-    className="terra-ClinicalItemView-accessory" />
 </div>
 `;
 
-exports[`test should render a right accessory 1`] = `
+exports[`test should render a start accessory 1`] = `
 <div
   className="terra-ClinicalItemView terra-ClinicalItemView--oneColumn terra-ClinicalItemView-accessory--alignCenter">
-  <div
-    className="terra-ClinicalItemView-accessory" />
-  <div
-    className="terra-ClinicalItemView-body" />
   <div
     className="terra-ClinicalItemView-accessory">
     <img
       alt="Graphic" />
   </div>
+  <div
+    className="terra-ClinicalItemView-body" />
+  <div
+    className="terra-ClinicalItemView-accessory" />
 </div>
 `;
 
