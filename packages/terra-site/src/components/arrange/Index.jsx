@@ -8,7 +8,7 @@ import ReadMe from 'terra-arrange/docs/README.md';
 import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange.jsx';
 // Example Files
 import { icon, IconWrapper, image, simpleText } from './examplesetup';
-import ArrangeAlignment from './ArrangeAlignment';;
+import ArrangeAlignment from './ArrangeAlignment';
 
 const ArrangeExamples = () => (
   <div>

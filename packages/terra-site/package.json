@@ -24,7 +24,7 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-markdown": "^0.0.0",
+    "react-intl": "^2.2.3",
     "terra-application": "^0.2.0",
     "terra-arrange": "^0.0.0",
     "terra-badge": "^0.0.0",
@@ -40,6 +40,7 @@
     "terra-mixins": "^1.0.1",
     "terra-progress-bar": "^0.0.0",
     "terra-props-table": "^0.0.0",
+    "terra-responsive-element": "^0.0.0",
     "terra-slide-panel": "^0.0.0",
     "terra-standout": "^0.0.0",
     "terra-status": "^0.0.0",
