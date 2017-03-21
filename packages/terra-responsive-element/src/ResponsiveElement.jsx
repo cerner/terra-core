@@ -74,17 +74,17 @@ class ResponsiveElement extends React.Component {
     let element;
     const { tiny, small, medium, large, huge } = getBreakpoints();
     if (width >= huge && this.props.huge) {
-      element = this.props.huge;
+      element = 'huge';
     } else if (width >= large && this.props.large) {
-      element = this.props.large;
+      element = 'large';
     } else if (width >= medium && this.props.medium) {
-      element = this.props.medium;
+      element = 'medium';
     } else if (width >= small && this.props.small) {
-      element = this.props.small;
+      element = 'small';
     } else if (width >= tiny && this.props.tiny) {
-      element = this.props.tiny;
+      element = 'tiny';
     } else {
-      element = this.props.defaultElement;
+      element = 'defaultElement';
     }
 
     if (this.state.element !== element) {
@@ -102,7 +102,7 @@ class ResponsiveElement extends React.Component {
 
     return (
       <div {...customProps} ref={this.setContainer}>
-        {this.state.element}
+        {this.props[this.state.element]}
       </div>
     );
   }
