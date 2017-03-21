@@ -4,14 +4,65 @@ jdk: oraclejdk8
 before_script:
   - sudo apt-get update && sudo apt-get install oracle-java8-installer
 script:
-  - npm test
+  - cd packages/$DIRECTORY && npm test
 branches:
   only:
     - master
 cache:
   directories:
     - node_modules
+    - packages/terra-application/node_modules
+    - packages/terra-arrange/node_modules
+    - packages/terra-badge/node_modules
+    - packages/terra-button/node_modules
+    - packages/terra-content/node_modules
+    - packages/terra-grid/node_modules
+    - packages/terra-i18n/node_modules
+    - packages/terra-icon/node_modules
+    - packages/terra-image/node_modules
+    - packages/terra-legacy-theme/node_modules
+    - packages/terra-markdown/node_modules
+    - packages/terra-menu/node_modules
+    - packages/terra-mixins/node_modules
+    - packages/terra-progress-bar/node_modules
+    - packages/terra-props-table/node_modules
+    - packages/terra-responsive-element/node_modules
+    - packages/terra-site/node_modules
+    - packages/terra-slide-panel/node_modules
+    - packages/terra-standout/node_modules
+    - packages/terra-status/node_modules
+    - packages/terra-title/node_modules
+    - packages/terra-toolkit/node_modules
 env:
+  matrix:
+    - DIRECTORY=terra-application
+    - DIRECTORY=terra-arrange
+    - DIRECTORY=terra-badge
+    - DIRECTORY=terra-button
+    - DIRECTORY=terra-content
+    - DIRECTORY=terra-grid
+    - DIRECTORY=terra-i18n
+    - DIRECTORY=terra-icon
+    - DIRECTORY=terra-image
+    - DIRECTORY=terra-legacy-theme
+    - DIRECTORY=terra-markdown
+    - DIRECTORY=terra-menu
+    - DIRECTORY=terra-mixins
+    - DIRECTORY=terra-progress-bar
+    - DIRECTORY=terra-props-table
+    - DIRECTORY=terra-responsive-element
+    - DIRECTORY=terra-site
+    - DIRECTORY=terra-slide-panel
+    - DIRECTORY=terra-standout
+    - DIRECTORY=terra-status
+    - DIRECTORY=terra-title
+    - DIRECTORY=terra-toolkit
+    - DIRECTORY=terra-button
+    - DIRECTORY=terra-i18n
+    - DIRECTORY=terra-icon
+    - DIRECTORY=terra-image
+    - DIRECTORY=terra-responsive-element
+    - DIRECTORY=terra-slide-panel
   global:
     - SAUCE_USERNAME=cerner
     - secure: xbS6srAElIfUiioKUO8IQzGoFhwgI0VXu7yXjMixlJ8FX3pdXCH3w67HtpgdfW/9Uy04N2UmhH6vpmPmuE0geZI/tuMavLYpokvqVWg0SQuA1im28uBuIia65lxrQTrHOxCvrfNT5kjSvuuZ9bASJseh4HpmKbDXz2FszslDstZVvS/pOeO/7qKzS2pgQVO4SLsDveAODzqeUZEllQlsyPjuY90KBSWvxhJ6cB+IglK/8yS/FJMkVFTnFrlAWv10oD9wNiQvOfnn/y0+UjSyFiCJogOoRxAGNPZQ8q6QIWNgquEfL+/Lg0N2B+MHNwimQXg4Nk4yT4nyg7j+wT8eFANnOl9Q84sY1QxMRxtn6CpFNEHX+2zfAsdUEKdhm/mHJxxhEMJcFjlK1FqpJGF/eV5fYXRt2semrk/72l+kApCUPwgohR43pN2B9Fmwnb4ScEL5VaOcsZOeTUlLlZacjcWeW8CpvhEdTU9H1uRzKyqAsnzfEKT+qAontgbvGyuduzykTRuWgR5T4F1NiT0vjJ1XGkX3RoX4mZG0HnagU7Kg3CAoNLvveCPO12m5mHFSeG3W4WD0lI01fICh4dHsipHkHQwTHMw3nd4MoxH4erRqSDfoatfkgY0iNN8rgfCH/5iNgg5jwnyLz4MymgwZt4NzpQGjvDTxP442XHY1AVg=
