@@ -1,6 +1,6 @@
 {
   "name": "terra-content",
-  "main": "lib/Content.js",
+  "main": "lib/Content.scss",
   "private": true,
   "version": "0.0.0",
   "description": "terra-content",
