@@ -2,25 +2,26 @@ import http from 'http';
 import request from 'request';
 import fs from 'fs';
 
-exports.createSpectreRun = (browser, callback) => {
+exports.createSpectreRun = () => new Promise((resolve, reject) => {
   const data = JSON.stringify({
     project: 'terra-ui',
-    suite: `${browser.currentTest.module}-${browser.options.desiredCapabilities.browserName}-${browser.globals.windowSizeKey}`,
+    suite: 'Full Suite',
   });
 
   function responseCallback(res) {
+    let spectreRunId = 0;
     res.setEncoding('utf8');
     res.on('data', (responseData) => {
-      const updatedBrowserGlobals = browser.globals;
-      updatedBrowserGlobals.spectreRunId = JSON.parse(responseData).id;
+      spectreRunId = JSON.parse(responseData).id;
     });
-    res.on('end', callback);
+    res.on('end', () => {
+      resolve(spectreRunId);
+    });
   }
 
   try {
     const req = http.request({
-      hostname: 'localhost',
-      port: 3000,
+      hostname: 'monstrous-screen-grabber.herokuapp.com',
       path: '/runs',
       method: 'POST',
       headers: {
@@ -32,9 +33,9 @@ exports.createSpectreRun = (browser, callback) => {
     req.write(data);
     req.end();
   } catch (error) {
-    callback();
+    reject(Error(error));
   }
-};
+});
 
 exports.createSpectreTest = (browser, imagePath, callback) => {
   function responseCallback(err) {
@@ -46,15 +47,15 @@ exports.createSpectreTest = (browser, imagePath, callback) => {
   }
 
   const formData = {};
-  formData['test[run_id]'] = browser.globals.spectreRunId;
-  formData['test[name]'] = browser.currentTest.name;
+  formData['test[run_id]'] = process.env.spectreRunId;
+  formData['test[name]'] = `${browser.currentTest.module} - ${browser.currentTest.name}`;
   formData['test[platform]'] = browser.options.desiredCapabilities.platform ? browser.options.desiredCapabilities.platform : 'default';
   formData['test[browser]'] = browser.options.desiredCapabilities.browserName;
   formData['test[size]'] = browser.globals.width;
   formData['test[screenshot]'] = fs.createReadStream(imagePath);
 
   request.post({
-    url: 'http://localhost:3000/tests',
+    url: 'http://monstrous-screen-grabber.herokuapp.com/tests',
     formData,
   }, responseCallback);
 };

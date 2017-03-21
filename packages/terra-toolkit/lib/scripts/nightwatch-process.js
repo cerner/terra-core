@@ -9,6 +9,8 @@ var _sauceLauncher = require('../sauce-launcher');
 
 var _serverLauncher = require('../server-launcher');
 
+var _spectre = require('../spectre');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var isChildProcess = process.argv.find(function (arg) {
@@ -29,10 +31,11 @@ if (isChildProcess) {
   });
 } else {
   var exitCode = 0;
-  Promise.all([(0, _serverLauncher.launchServer)(), (0, _sauceLauncher.launchSauceConnect)()]).then(function () {
+  Promise.all([(0, _serverLauncher.launchServer)(), (0, _sauceLauncher.launchSauceConnect)(), (0, _spectre.createSpectreRun)()]).then(function (spectreRunId) {
     return new Promise(function (resolve, reject) {
       _nightwatch2.default.cli(function (argv) {
         var updatedArgv = argv;
+        process.env.spectreRunId = spectreRunId[2];
         /* eslint-disable no-underscore-dangle */
         updatedArgv._source = argv._.slice(0);
         /* eslint-enable no-underscore-dangle */
