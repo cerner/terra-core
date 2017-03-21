@@ -176,27 +176,26 @@ var Overlay = function (_React$Component) {
           children = _props.children,
           customProps = _objectWithoutProperties(_props, ['isOpen', 'isFullScreen', 'container', 'onRequestClose', 'canClickOutsideClose', 'centerContent', 'children']);
 
-      var overlayClass = (0, _classnames2.default)('terra-Overlay', { 'terra-Overlay--center': centerContent }, customProps.className);
+      var attributes = _extends({}, customProps);
+      attributes.className = (0, _classnames2.default)('terra-Overlay', { 'terra-Overlay--center': centerContent }, attributes.className);
       var onElementPosition = isFullScreen ? null : {
         position: 'absolute',
         top: container.scrollTop,
         left: container.scrollLeft
       };
-      var overlayStyle = _extends({}, onElementPosition, customProps.style);
+      attributes.style = _extends({}, onElementPosition, attributes.style);
       /* eslint-disable jsx-a11y/no-static-element-interactions */
       return _react2.default.createElement(
         _Portal2.default,
         { isOpen: isOpen, target: container },
         _react2.default.createElement(
           'div',
-          _extends({
+          _extends({}, attributes, {
             ref: function ref(overlay) {
               _this2.overlay = overlay;
             },
-            className: overlayClass,
-            onClick: this.handleClickOutside,
-            style: overlayStyle
-          }, customProps),
+            onClick: this.handleClickOutside
+          }),
           _react2.default.createElement(
             'div',
             {

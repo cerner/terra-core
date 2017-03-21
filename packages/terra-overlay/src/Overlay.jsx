@@ -125,29 +125,28 @@ class Overlay extends React.Component {
       children,
       ...customProps
     } = this.props;
-    const overlayClass = classNames(
+    const attributes = Object.assign({}, customProps);
+    attributes.className = classNames(
       'terra-Overlay',
       { 'terra-Overlay--center': centerContent },
-      customProps.className,
+      attributes.className,
     );
     const onElementPosition = isFullScreen ? null : {
       position: 'absolute',
       top: container.scrollTop,
       left: container.scrollLeft,
     };
-    const overlayStyle = {
+    attributes.style = {
       ...onElementPosition,
-      ...customProps.style,
+      ...attributes.style,
     };
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <Portal isOpen={isOpen} target={container}>
         <div
+          {...attributes}
           ref={(overlay) => { this.overlay = overlay; }}
-          className={overlayClass}
           onClick={this.handleClickOutside}
-          style={overlayStyle}
-          {...customProps}
         >
           <div
             tabIndex={0}
