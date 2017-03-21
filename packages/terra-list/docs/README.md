@@ -21,22 +21,21 @@ import SlidePanel from 'terra-slide-panel';
   hasChevron={false}
 />
 
-<List
-  items={[<List.Item content={[<h1 blurb />} />, <List.Item content={[<h1 blurb />} />]}
-  isDivided={true}
-/>
+<List isDivided={true}>
+  <List.Item content={[<h1 blurb />} />
+  <List.Item content={[<h1 blurb />} />
+</List>
 
-<SingleSelectList
-  items={[<List.Item content={[<h1 blurb />} />, <List.Item content={[<h1 blurb />} />]}
-  isDivided={true}
-  hasChevrons={false}
-/>
+<SingleSelectList isDivided={true} hasChevrons={false}>
+  <SingleSelectList.Item content={[<h1 blurb />} />
+  <SingleSelectList.Item content={[<h1 blurb />} />
+</SingleSelectList>
 
-<MultiSelectList
-  items={[<List.Item content={[<h1 blurb />} />, <List.Item content={[<h1 blurb />} />]}
-  isDivided={true}
-  maxSelectionCount={3}
-/>
+<MultiSelectList isDivided={true} maxSelectionCount={3}>
+  <MultiSelectList.Item content={[<h1 blurb />} />
+  <MultiSelectList.Item content={[<h1 blurb />} />
+</MultiSelectList>
+
 ```
 ## React Props
 
@@ -49,19 +48,16 @@ The *ListItem* React component will have the following API:
 
 The *List* React component will have the following API:
 ||Prop||Type||Description||
-|`items`|Array|An array of ListItem React elements.|
 |`isDivided`|Bool|The indicator if a border style should be applied to child items.|
 
 The *SingleSelectList* React component will have the following API:
 ||Prop||Type||Description||
-|`items`|Array|An array of ListItem React elements.|
 |`isDivided`|Bool|The indicator if a border style should be applied to child items.|
 |`hasChevrons`|Bool|The indicator if a chevron should be displayed on selectable items.|
-|`onSelection`|Function|Common callback containing the event and index of selection.|
+|`onChange`|Function|Common callback containing the event and index of selection.|
 
 The *MultiSelectList* React component will have the following API:
 ||Prop||Type||Description||
-|`items`|Array|An array of ListItem React elements.|
 |`isDivided`|Bool|The indicator if a border style should be applied to child items.|
 |`maxSelectionCount`|Number|The maximum number of selected items.|
-|`onSelection`|Function|Common callback containing the event and index of selection.|
+|`onChange`|Function|Common callback containing the event and index of selection.|
