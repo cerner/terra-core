@@ -14,7 +14,7 @@ const views = () => (
   <div>
     <ClinicalItemView displays={displays} id="test-displays" />
     <ClinicalItemView displays={displays} layout="twoColumns" id="test-displays-two" />
-    <ClinicalItemView displays={displays} layout="twoColumns" textEmphasis="left" id="test-displays-two-left" />
+    <ClinicalItemView displays={displays} layout="twoColumns" textEmphasis="start" id="test-displays-two-left" />
   </div>
 );
 
