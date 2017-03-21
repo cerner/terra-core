@@ -20,6 +20,6 @@ import DetailView from 'terra-detail-view';
   graph={<div> This is where a graph would go </div>}
   details={[<Grid />]}
   footer="Footer text"
-  divided
+  isDivided
 } />
 ```

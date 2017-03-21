@@ -2,26 +2,29 @@
 @import './variables';
 
 .terra-DetailView {
-  padding: $terra-detail-view-padding;
+  padding: 1.428rem;
 
   > * {
-    padding-bottom: $terra-detail-view-padding;
+    padding-bottom: 1.428rem;
   }
 }
 
 .terra-DetailView-primaryText {
-  margin-bottom: 0.714em;
+  font-size: 1.428rem;
+  line-height: 1.428;
+  margin-bottom: 0.357rem;
+  margin-top: 0;
 }
 
 .terra-DetailView-footerText {
-  color: $terra-detail-view-footer-color;
-  font-size: $terra-detail-view-footer-font-size;
-  line-height: $terra-detail-view-footer-line-height;
   @include terra-text-align-center();
+  color: $terra-grey-50;
+  font-size: 1rem;
+  line-height: 1.428;
 }
 
 .terra-DetailView-divider {
-  border-color: $terra-detail-view-divider-color;
+  border-color: $terra-grey-20;
   border-style: solid;
   border-width: 1px 0 0;
   margin: 0;
@@ -30,9 +33,9 @@
 
 .terra-DetailView-subtitle {
   color: $terra-grey-30;
-  font-size: $terra-detail-view-subtitle-font-size;
-  line-height: $terra-detail-view-subtitle-line-height;
-  margin-bottom: $terra-detail-view-subtitle-margin-bottom;
+  font-size: 1.286rem;
+  line-height: 1.428rem;
+  margin-bottom: 0.357rem;
 
   &:last-child {
     margin: 0;

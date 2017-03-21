@@ -6,8 +6,8 @@ import DetailView from '../../lib/DetailView';
 
 const DetailViewNoDivider = () => (
   <DetailView
-    title={<h1 className="terra-Title terra-Title--large">Header</h1>}
-    subtitles={[<DetailView.Subtitle text="Subtitle 1" key="Subtitle1" />, <DetailView.Subtitle text="Subtitle 2" key="Subtitle2" />]}
+    title="Header"
+    subtitles={['Subtitle 1', 'Subtitle 2']}
     graph={<div style={{ border: '1px solid black', height: '20em', width: '25em', marginBottom: '0.714rem' }}>This is where any visualizations would go</div>}
     details={[
       <Grid key="detailInfo">

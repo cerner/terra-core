@@ -14,10 +14,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _DetailViewSubtitle = require('./DetailViewSubtitle');
-
-var _DetailViewSubtitle2 = _interopRequireDefault(_DetailViewSubtitle);
-
 require('./DetailView.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -26,14 +22,14 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   /**
-   * The title display for the view
+   * The title to display
    **/
-  title: _react.PropTypes.element,
+  title: _react.PropTypes.string,
 
   /**
-   * List of subtitle displays
+   * List of subtitle strings
    **/
-  subtitles: _react.PropTypes.arrayOf(_react.PropTypes.element),
+  subtitles: _react.PropTypes.arrayOf(_react.PropTypes.string),
 
   /**
    * Display for visualization data
@@ -57,6 +53,7 @@ var propTypes = {
 };
 
 var defaultProps = {
+  title: '',
   subtitles: [],
   details: [],
   isDivided: true
@@ -77,6 +74,17 @@ var DetailView = function DetailView(_ref) {
   var divider = null;
   var dividedDetails = [];
 
+  var subtitleElements = subtitles.map(function (subtitle, i) {
+    return (
+      // eslint-disable-next-line react/no-array-index-key
+      _react2.default.createElement(
+        'div',
+        { className: 'terra-DetailView-subtitle', key: i },
+        subtitle
+      )
+    );
+  });
+
   if (isDivided) {
     divider = _react2.default.createElement('hr', { className: 'terra-DetailView-divider' });
 
@@ -95,11 +103,11 @@ var DetailView = function DetailView(_ref) {
       'div',
       { className: 'terra-DetailView-title' },
       _react2.default.createElement(
-        'div',
+        'h1',
         { className: 'terra-DetailView-primaryText' },
         title
       ),
-      subtitles
+      subtitleElements
     ),
     divider,
     graph,
@@ -116,7 +124,5 @@ var DetailView = function DetailView(_ref) {
 DetailView.propTypes = propTypes;
 
 DetailView.defaultProps = defaultProps;
-
-DetailView.Subtitle = _DetailViewSubtitle2.default;
 
 exports.default = DetailView;

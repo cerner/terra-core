@@ -1,18 +1,17 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import DetailViewSubtitle from './DetailViewSubtitle';
 import './DetailView.scss';
 
 const propTypes = {
   /**
-   * The title display for the view
+   * The title to display
    **/
-  title: PropTypes.element,
+  title: PropTypes.string,
 
   /**
-   * List of subtitle displays
+   * List of subtitle strings
    **/
-  subtitles: PropTypes.arrayOf(PropTypes.element),
+  subtitles: PropTypes.arrayOf(PropTypes.string),
 
   /**
    * Display for visualization data
@@ -36,6 +35,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  title: '',
   subtitles: [],
   details: [],
   isDivided: true,
@@ -49,6 +49,11 @@ const DetailView = ({ title, subtitles, graph, details, footer, isDivided, ...cu
 
   let divider = null;
   let dividedDetails = [];
+
+  const subtitleElements = subtitles.map((subtitle, i) => (
+    // eslint-disable-next-line react/no-array-index-key
+    <div className="terra-DetailView-subtitle" key={i}>{subtitle}</div>
+  ));
 
   if (isDivided) {
     divider = (<hr className="terra-DetailView-divider" />);
@@ -64,8 +69,8 @@ const DetailView = ({ title, subtitles, graph, details, footer, isDivided, ...cu
   return (
     <div {...attributes}>
       <div className="terra-DetailView-title">
-        <div className="terra-DetailView-primaryText">{title}</div>
-        {subtitles}
+        <h1 className="terra-DetailView-primaryText">{title}</h1>
+        {subtitleElements}
       </div>
       {divider}
       {graph}
@@ -81,8 +86,6 @@ const DetailView = ({ title, subtitles, graph, details, footer, isDivided, ...cu
 DetailView.propTypes = propTypes;
 
 DetailView.defaultProps = defaultProps;
-
-DetailView.Subtitle = DetailViewSubtitle;
 
 export default DetailView;
 
