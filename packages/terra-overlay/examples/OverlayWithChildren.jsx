@@ -11,7 +11,7 @@ const content = (
   </p>
 );
 
-export default class OverlayWithChildren extends Component {
+class OverlayWithChildren extends Component {
   constructor() {
     super();
     this.state = { isOpen: false };
@@ -36,3 +36,5 @@ export default class OverlayWithChildren extends Component {
     );
   }
 }
+
+export default OverlayWithChildren;

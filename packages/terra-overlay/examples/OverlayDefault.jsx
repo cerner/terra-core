@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Button from 'terra-button';
 import Overlay from '../src/Overlay';
 
-export default class OverlayDefault extends Component {
+class OverlayDefault extends Component {
   constructor() {
     super();
     this.state = { isOpen: false };
@@ -26,3 +26,5 @@ export default class OverlayDefault extends Component {
     );
   }
 }
+
+export default OverlayDefault;

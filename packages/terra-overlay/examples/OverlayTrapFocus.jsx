@@ -12,7 +12,7 @@ const content = (
   </div>
 );
 
-export default class OverlayTrapFocus extends Component {
+class OverlayTrapFocus extends Component {
   constructor() {
     super();
     this.state = { isOpen: false };
@@ -37,3 +37,5 @@ export default class OverlayTrapFocus extends Component {
     );
   }
 }
+
+export default OverlayTrapFocus;

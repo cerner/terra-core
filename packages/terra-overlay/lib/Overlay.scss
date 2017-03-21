@@ -1,7 +1,5 @@
-@import '~terra-mixins';
-
 .terra-Overlay {
-  background-color: #1c1f21;
+  background-color: $terra-dark;
   height: 100%;
   left: 0;
   opacity: 0.8;

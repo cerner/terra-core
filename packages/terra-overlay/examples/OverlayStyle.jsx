@@ -12,7 +12,7 @@ const content = (
   </p>
 );
 
-export default class OverlayStyle extends Component {
+class OverlayStyle extends Component {
   constructor() {
     super();
     this.state = { isOpen: false, isOpen1: false };
@@ -38,3 +38,5 @@ export default class OverlayStyle extends Component {
     );
   }
 }
+
+export default OverlayStyle;

@@ -20,7 +20,7 @@ function getLines(n) {
   return lines;
 }
 
-export default class OverlayWithChildren extends Component {
+class OverlayOnElement extends Component {
   constructor() {
     super();
     this.state = { isOpen: false };
@@ -62,3 +62,5 @@ export default class OverlayWithChildren extends Component {
     );
   }
 }
+
+export default OverlayOnElement;

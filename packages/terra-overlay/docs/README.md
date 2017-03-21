@@ -17,10 +17,10 @@ Common usage:
 ```jsx
 import React, { Component } from 'react';
 import Button from 'terra-button';
-import Overlay from '../src/Overlay';
+import Overlay from 'terra-overlay';
 import './MyStyle.css';
 
-export default class OverlayFullScreen extends Component {
+class OverlayFullScreen extends Component {
   constructor() {
     super();
     this.state = { isOpen: false };
@@ -47,7 +47,7 @@ export default class OverlayFullScreen extends Component {
   }
 }
 
-export default class OverlayOnElement extends Component {
+class OverlayOnElement extends Component {
   constructor() {
     super();
     this.state = { isOpen: false };
@@ -73,5 +73,10 @@ export default class OverlayOnElement extends Component {
       </div>
     );
   }
+}
+
+export {
+  OverlayFullScreen,
+  OverlayOnElement,
 }
 ```

@@ -5,6 +5,7 @@ import OverlayManager from './OverlayManager';
 
 import './Overlay.scss';
 
+const ESCAPE = 27;
 const overlayManager = new OverlayManager();
 
 const propTypes = {
@@ -104,7 +105,7 @@ class Overlay extends React.Component {
   }
 
   handleEscKeyup(e) {
-    if (e.keyCode === 27) {
+    if (e.keyCode === ESCAPE) {
       this.props.onRequestClose();
     }
   }
