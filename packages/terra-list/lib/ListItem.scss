@@ -1,17 +1,15 @@
 @import '~terra-mixins';
-@import './variables';
-@import './mixins';
 
 .terra-ListItem-hasChevron {
   display: block;
   position: relative; // relative position so the chevron can use absolute position to vertically center itself
 
   [dir='ltr'] & {
-    padding-right: 20px;
+    @include terra-padding-end(20px);
   }
 
   [dir='rtl'] & {
-    padding-left: 20px;
+    @include terra-padding-start(20px);
   }
 
   .terra-ListItem-chevron {
