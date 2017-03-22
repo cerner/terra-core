@@ -2,8 +2,17 @@ import React, { PropTypes } from 'react';
 import TableRows from './TableRows';
 
 const propTypes = {
+  /**
+   * The children passed to the component
+   */
   children: PropTypes.node,
+  /**
+   * The maximum height for all the rows in a table
+   */
   height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * A callback function for onClick action
+   */
   onClick: PropTypes.func,
 };
 

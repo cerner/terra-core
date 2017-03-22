@@ -9,7 +9,13 @@ import TableSingleSelectableRows from './SingleSelectableRows';
 import './Table.scss';
 
 const propTypes = {
+  /**
+   * The children passed to the component
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * Whether or not the rows should be zebra striped
+   */
   isStriped: PropTypes.bool,
 };
 

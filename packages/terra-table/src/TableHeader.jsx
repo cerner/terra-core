@@ -2,9 +2,18 @@ import React, { PropTypes } from 'react';
 import TableHeaderContent from './TableHeaderContent';
 
 const propTypes = {
-  onClick: PropTypes.func,
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * The children passed to the component
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * A callback function for onClick action
+   */
+  onClick: PropTypes.func,
+  /**
+   * The maximum height for the header in a table
+   */
+  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 };
 
 const defaultProps = {

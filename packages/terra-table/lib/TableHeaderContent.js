@@ -29,10 +29,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
+  /**
+   * Content to be displayed for the column header
+   */
   display: _react.PropTypes.node.isRequired,
+  /**
+   * The minimum width for the column
+   */
   minWidth: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Whether or not data in table is sorted
+   */
   sort: _react.PropTypes.oneOf(['asc', 'desc']),
+  /**
+   * The maximum height for the cell content in a table
+   */
   height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * A callback function for onClick action
+   */
   onClick: _react.PropTypes.func
 };
 

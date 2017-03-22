@@ -45,7 +45,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
+  /**
+   * The children passed to the component
+   */
   children: _react.PropTypes.node.isRequired,
+  /**
+   * Whether or not the rows should be zebra striped
+   */
   isStriped: _react.PropTypes.bool
 };
 

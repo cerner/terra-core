@@ -3,11 +3,29 @@ import classNames from 'classnames';
 import TableRowContent from './TableRowContent';
 
 const propTypes = {
+  /**
+   * The children passed to the component
+   */
   children: PropTypes.node,
+  /**
+   * Whether or not row is selected
+   */
   isSelected: PropTypes.bool,
+  /**
+   * The maximum height for the row in a table
+   */
   height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * A callback function for onClick action
+   */
   onClick: PropTypes.func,
+  /**
+   * Whether or not row is selectable
+   */
   isSelectable: PropTypes.bool,
+  /**
+   * A classname to put on row component of table
+   */
   className: PropTypes.string,
 };
 

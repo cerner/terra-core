@@ -27,8 +27,17 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
+  /**
+   * The children passed to the component
+   */
   children: _react.PropTypes.node,
+  /**
+   * The maximum height for all the rows in a table
+   */
   height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * A callback function for onClick action
+   */
   onClick: _react.PropTypes.func
 };
 

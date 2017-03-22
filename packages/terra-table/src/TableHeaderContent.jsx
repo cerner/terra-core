@@ -4,10 +4,25 @@ import IconUp from 'terra-icon/lib/icon/IconCaretUp';
 import classNames from 'classnames';
 
 const propTypes = {
+  /**
+   * Content to be displayed for the column header
+   */
   display: PropTypes.node.isRequired,
+  /**
+   * The minimum width for the column
+   */
   minWidth: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * Whether or not data in table is sorted
+   */
   sort: PropTypes.oneOf(['asc', 'desc']),
+  /**
+   * The maximum height for the cell content in a table
+   */
   height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * A callback function for onClick action
+   */
   onClick: PropTypes.func,
 };
 

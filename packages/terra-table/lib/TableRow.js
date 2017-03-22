@@ -23,11 +23,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
+  /**
+   * The children passed to the component
+   */
   children: _react.PropTypes.node,
+  /**
+   * Whether or not row is selected
+   */
   isSelected: _react.PropTypes.bool,
+  /**
+   * The maximum height for the row in a table
+   */
   height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  /**
+   * A callback function for onClick action
+   */
   onClick: _react.PropTypes.func,
+  /**
+   * Whether or not row is selectable
+   */
   isSelectable: _react.PropTypes.bool,
+  /**
+   * A classname to put on row component of table
+   */
   className: _react.PropTypes.string
 };
 
