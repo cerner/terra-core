@@ -40,7 +40,7 @@
     "test:nightwatch-safari": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
-    "terra-toolkit": "^0.1.1"
+    "terra-toolkit": "^0.x.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
