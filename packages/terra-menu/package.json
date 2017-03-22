@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.x.x"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "terra-mixins": "^1.0.0"

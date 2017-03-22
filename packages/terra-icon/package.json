@@ -24,7 +24,7 @@
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
     "svgo": "^0.7.2",
-    "terra-toolkit": "^0.x.x"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
