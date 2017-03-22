@@ -1,14 +1,14 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const deTransaltions = require('../../lib/translations/de.js').messages;
-const enTransaltions = require('../../lib/translations/en.js').messages;
-const enGBTransaltions = require('../../lib/translations/en-GB.js').messages;
-const enUSTransaltions = require('../../lib/translations/en-US.js').messages;
-const esTransaltions = require('../../lib/translations/es.js').messages;
-const fiFITransaltions = require('../../lib/translations/fi-FI.js').messages;
-const frTransaltions = require('../../lib/translations/fr.js').messages;
-const ptTransaltions = require('../../lib/translations/pt.js').messages;
+const deTranslations = require('../../lib/translations/de.js').messages;
+const enTranslations = require('../../lib/translations/en.js').messages;
+const enGBTranslations = require('../../lib/translations/en-GB.js').messages;
+const enUSTranslations = require('../../lib/translations/en-US.js').messages;
+const esTranslations = require('../../lib/translations/es.js').messages;
+const fiFITranslations = require('../../lib/translations/fi-FI.js').messages;
+const frTranslations = require('../../lib/translations/fr.js').messages;
+const ptTranslations = require('../../lib/translations/pt.js').messages;
 
-const defaultTranslations = enTransaltions;
+const defaultTranslations = enTranslations;
 
 const screenshot = require('terra-toolkit').screenshot;
 
@@ -32,7 +32,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="de"]')
       .pause(pauseInms)
-      .assert.containsText('div', deTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', deTranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in en': (browser) => {
@@ -41,7 +41,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="en"]')
       .pause(pauseInms)
-      .assert.containsText('div', enTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', enTranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in en-GB': (browser) => {
@@ -50,7 +50,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="en-GB"]')
       .pause(pauseInms)
-      .assert.containsText('div', enGBTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', enGBTranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in en-US': (browser) => {
@@ -59,7 +59,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="en-US"]')
       .pause(pauseInms)
-      .assert.containsText('div', enUSTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', enUSTranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in es': (browser) => {
@@ -68,7 +68,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="es"]')
       .pause(pauseInms)
-      .assert.containsText('div', esTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', esTranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in fi-FI': (browser) => {
@@ -77,7 +77,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="fi-FI"]')
       .pause(pauseInms)
-      .assert.containsText('div', fiFITransaltions['Terra.ajax.error']);
+      .assert.containsText('div', fiFITranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in fr': (browser) => {
@@ -86,7 +86,7 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="fr"]')
       .pause(pauseInms)
-      .assert.containsText('div', frTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', frTranslations['Terra.ajax.error']);
   },
 
   'Displays ajax error message in pt': (browser) => {
@@ -95,6 +95,6 @@ module.exports = {
       .waitForElementVisible('select', 1000)
       .click('select option[value="pt"]')
       .pause(pauseInms)
-      .assert.containsText('div', ptTransaltions['Terra.ajax.error']);
+      .assert.containsText('div', ptTranslations['Terra.ajax.error']);
   },
 };
