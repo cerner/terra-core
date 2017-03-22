@@ -1,7 +1,9 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
 import Badge from '../src/Badge';
 
-const Icon = <span style={{ backgroundColor: 'black', color: 'black', height: '1em', width: '1em' }}>....</span>;
+const Icon = <IconBookmark />;
 
 const BadgeIcon = () => (
   <div>

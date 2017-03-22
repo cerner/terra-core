@@ -2,11 +2,11 @@
   "name": "terra-menu",
   "main": "lib/Menu.scss",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "terra-menu",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-ui.git"
+    "url": "git+https://github.com/cerner/terra-core.git"
   },
   "keywords": [
     "Cerner",
@@ -18,18 +18,18 @@
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cerner/terra-ui/issues"
+    "url": "https://github.com/cerner/terra-core/issues"
   },
-  "homepage": "https://github.com/cerner/terra-ui#readme",
+  "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-markdown": "0.1.0",
-    "terra-toolkit": "^0.1.0"
+    "terra-markdown": "^0.0.0",
+    "terra-toolkit": "^0.1.1"
   },
   "peerDependencies": {
-    "terra-mixins": "1.0.0"
+    "terra-mixins": "^1.0.0"
   },
   "dependencies": {
-    "terra-mixins": "1.0.0"
+    "terra-mixins": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -41,6 +41,7 @@
     "release:major": "npm test && node ../../scripts/release/release.js major",
     "release:minor": "npm test && node ../../scripts/release/release.js minor",
     "release:patch": "npm test && node ../../scripts/release/release.js patch",
-    "test": "echo \"Warning: no test written\" && exit 0"
+    "test": "npm run test:spec",
+    "test:spec": "echo \"Warning: no test written\" && exit 0"
   }
 }

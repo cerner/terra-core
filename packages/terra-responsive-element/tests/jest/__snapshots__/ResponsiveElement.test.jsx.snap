@@ -1,0 +1,6 @@
+exports[`test should apply classes passed in through props 1`] = `
+<div
+  className="TestClass" />
+`;
+
+exports[`test should render a default component 1`] = `<div />`;
