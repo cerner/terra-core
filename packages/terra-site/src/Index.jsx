@@ -6,22 +6,22 @@ import App from './App';
 import Home from './Home';
 
 // Examples
-import ApplicationExamples from './components/application/Index';
-import ArrangeExamples from './components/arrange/Index';
-import BadgeExamples from './components/badge/Index';
-import ButtonExamples from './components/button/Index';
-import ContentExamples from './components/content/Index';
-import GridExamples from './components/grid/Index';
-import I18nExamples from './components/i18n/Index';
-import IconExamples from './components/icon/Index';
-import ImageExamples from './components/image/Index';
-import MenuExamples from './components/menu/Index';
-import ProgressBarExamples from './components/progress-bar/Index';
-import ResponsiveElementExamples from './components/responsive-element/Index';
-import SlidePanelExamples from './components/slide-panel/Index';
-import StandoutExamples from './components/standout/Index';
-import StatusExamples from './components/status/Index';
-import TitleExamples from './components/title/Index';
+import ApplicationExamples from './examples/application/Index';
+import ArrangeExamples from './examples/arrange/Index';
+import BadgeExamples from './examples/badge/Index';
+import ButtonExamples from './examples/button/Index';
+import ContentExamples from './examples/content/Index';
+import GridExamples from './examples/grid/Index';
+import I18nExamples from './examples/i18n/Index';
+import IconExamples from './examples/icon/Index';
+import ImageExamples from './examples/image/Index';
+import MenuExamples from './examples/menu/Index';
+import ProgressBarExamples from './examples/progress-bar/Index';
+import ResponsiveElementExamples from './examples/responsive-element/Index';
+import SlidePanelExamples from './examples/slide-panel/Index';
+import StandoutExamples from './examples/standout/Index';
+import StatusExamples from './examples/status/Index';
+import TitleExamples from './examples/title/Index';
 
 // Test
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
