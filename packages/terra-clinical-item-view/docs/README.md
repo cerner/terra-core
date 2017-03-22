@@ -12,7 +12,7 @@ The Terra ClinicalItemView component allows displays to be organized into rows a
 
 The React component can be initialized like so:
 ```
-import ClinicalItemView from 'ClinicalItemView;
+import ClinicalItemView from 'terra-clinical-item-view';
 
 <ClinicalItemView
   layout="oneColumn"
