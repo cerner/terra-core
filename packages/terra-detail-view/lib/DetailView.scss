@@ -1,5 +1,4 @@
 @import '~terra-mixins';
-@import './variables';
 
 .terra-DetailView {
   padding: 1.428rem;
@@ -34,7 +33,7 @@
 .terra-DetailView-subtitle {
   color: $terra-grey-30;
   font-size: 1.286rem;
-  line-height: 1.428rem;
+  line-height: 1.428;
   margin-bottom: 0.357rem;
 
   &:last-child {
