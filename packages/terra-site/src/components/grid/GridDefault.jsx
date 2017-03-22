@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from 'terra-grid/src/Grid';
+import Grid from 'terra-grid';
 
 const GridDefault = () => (
   <Grid>

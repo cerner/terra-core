@@ -1,7 +1,7 @@
 import React from 'react';
 import SlidePanelMainContent from './SlidePanelMainContent';
 import SlidePanelPanelContent from './SlidePanelPanelContent';
-import SlidePanel from 'terra-slide-panel/src/SlidePanel';
+import SlidePanel from 'terra-slide-panel';
 
 const SlidePanelEnd = () => (
   <SlidePanel

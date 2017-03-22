@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from 'terra-progress-bar/src/ProgressBar';
+import ProgressBar from 'terra-progress-bar';
 
 const ProgressBarColor = () => (
   <div>

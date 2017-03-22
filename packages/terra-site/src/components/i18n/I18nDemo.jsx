@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { I18nProvider, i18nLoader } from 'terra-i18n/src/I18n';
+import { I18nProvider, i18nLoader } from 'terra-i18n';
 
 class Demo extends React.Component {
   constructor(props) {

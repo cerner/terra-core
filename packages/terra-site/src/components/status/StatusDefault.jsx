@@ -1,5 +1,5 @@
 import React from 'react';
-import Status from 'terra-status/src/Status';
+import Status from 'terra-status';
 
 const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
 

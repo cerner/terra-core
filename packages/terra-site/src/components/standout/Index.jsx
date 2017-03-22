@@ -2,7 +2,7 @@
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-standout/docs/README.md';
-import 'terra-standout/src/Standout.scss';
+import 'terra-standout';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 

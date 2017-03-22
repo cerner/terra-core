@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'terra-image/src/Image';
+import Image from 'terra-image';
 
 const imagecontainerStyle1 = {
   backgroundColor: '#ffe4c4',

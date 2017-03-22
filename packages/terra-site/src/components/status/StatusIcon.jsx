@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import IconDue from 'terra-icon/lib/icon/IconDue';
-import Status from 'terra-status/src/Status';
+import Status from 'terra-status';
 
 const icon = <IconDue height="60" width="60" />;
 

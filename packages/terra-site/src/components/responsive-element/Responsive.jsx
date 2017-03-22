@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
- import ResponsiveElement from 'terra-responsive-element/src/ResponsiveElement';
+ import ResponsiveElement from 'terra-responsive-element';
 
  const propTypes = {
   /**

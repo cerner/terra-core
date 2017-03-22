@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Arrange from 'terra-arrange/src/Arrange';
+import Arrange from 'terra-arrange';
 import { ArrangeWrapper, alignLabels, alignOptions } from './examplesetup';
 
 const alignmentTypes = ['all', 'individual'];

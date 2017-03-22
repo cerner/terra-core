@@ -2,7 +2,7 @@
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-title/docs/README.md';
-import 'terra-title/src/Title.scss';
+import 'terra-title';
 
 
 const TitleExamples = () => (
