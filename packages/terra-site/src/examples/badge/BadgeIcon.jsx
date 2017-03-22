@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
 import Badge from 'terra-badge';
 

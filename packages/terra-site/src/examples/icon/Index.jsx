@@ -1,16 +1,18 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-icon/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import IconSrc from '!raw-loader!terra-icon/src/IconBase';
+
+// Example Files
 import IconAll from './IconAll';
+import IconAppendClass from './IconAppendClass';
+import IconAria from './IconAria';
 import IconBidi from './IconBidi';
 import IconHeightWidth from './IconHeightWidth';
-import IconAria from './IconAria';
-import IconAppendClass from './IconAppendClass';
 
 const IconExamples = () => (
   <div>

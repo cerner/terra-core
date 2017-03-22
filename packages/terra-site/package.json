@@ -25,6 +25,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-intl": "^2.2.3",
+    "react-router": "^3.0.2",
     "terra-application": "^0.2.0",
     "terra-arrange": "^0.0.0",
     "terra-badge": "^0.0.0",

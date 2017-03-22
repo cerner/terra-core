@@ -1,7 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-content/docs/README.md';
+// eslint-disable-next-line import/extensions
 import 'terra-content';
 
 const ContentExamples = () => (

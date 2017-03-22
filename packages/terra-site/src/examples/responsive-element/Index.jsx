@@ -1,13 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-responsive-element/docs/README.md';
-import AnimatedResponsiveElement from './AnimatedResponsiveElement';
-import Responsive from './Responsive';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ResponsiveElementSrc from '!raw-loader!terra-responsive-element/src/ResponsiveElement.jsx';
+import ResponsiveElementSrc from '!raw-loader!terra-responsive-element/src/ResponsiveElement';
+
+// Example Files
+import Responsive from './Responsive';
+import AnimatedResponsiveElement from './AnimatedResponsiveElement';
 
 const ResponsiveElementExamples = () => (
   <div>

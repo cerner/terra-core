@@ -1,10 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-menu/docs/README.md';
+// eslint-disable-next-line import/extensions
 import 'terra-menu';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 
 const MenuExamples = () => (
   <div>

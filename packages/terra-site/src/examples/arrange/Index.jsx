@@ -1,11 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-arrange/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange.jsx';
+import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange';
+
 // Example Files
 import { icon, IconWrapper, image, simpleText } from './examplesetup';
 import ArrangeAlignment from './ArrangeAlignment';

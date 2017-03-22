@@ -1,11 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-badge/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import BadgeSrc from '!raw-loader!terra-badge/src/Badge.jsx';
+import BadgeSrc from '!raw-loader!terra-badge/src/Badge';
+
 // Example Files
 import BadgeIntent from './BadgeIntent';
 import BadgeSize from './BadgeSize';

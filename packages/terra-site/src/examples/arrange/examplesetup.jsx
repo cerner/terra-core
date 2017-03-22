@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
 const icon = <IconAlert width="4em" height="4em" />;

@@ -1,11 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-button/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ButtonSrc from '!raw-loader!terra-button/src/Button.jsx';
+import ButtonSrc from '!raw-loader!terra-button/src/Button';
+
 // Example Files
 import ButtonIntent from './ButtonIntent';
 import ButtonOutline from './ButtonOutline';

@@ -1,13 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-i18n/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import I18nProvider from '!raw-loader!terra-i18n/src/I18nProvider.jsx';
+import I18nProvider from '!raw-loader!terra-i18n/src/I18nProvider';
 
-// examples
+// Example Files
 import I18nDemo from './I18nDemo';
 
 const I18nExamples = () => (

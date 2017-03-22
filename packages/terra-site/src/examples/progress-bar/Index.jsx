@@ -1,11 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-progress-bar/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ProgressBarSrc from '!raw-loader!terra-progress-bar/src/ProgressBar.jsx';
+import ProgressBarSrc from '!raw-loader!terra-progress-bar/src/ProgressBar';
+
 // Example Files
 import ProgressBarDefault from './ProgressBarDefault';
 import ProgressBarSize from './ProgressBarSize';

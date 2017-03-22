@@ -1,11 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-status/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import StatusSrc from '!raw-loader!terra-status/src/Status.jsx';
+import StatusSrc from '!raw-loader!terra-status/src/Status';
+
 // Example Files
 import StatusDefault from './StatusDefault';
 import StatusImage from './StatusImage';

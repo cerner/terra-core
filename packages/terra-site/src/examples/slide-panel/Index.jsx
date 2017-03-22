@@ -1,11 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-slide-panel/docs/README.md';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import SlidePanelSrc from '!raw-loader!terra-slide-panel/src/SlidePanel.jsx';
+import SlidePanelSrc from '!raw-loader!terra-slide-panel/src/SlidePanel';
+
 // Example Files
 import SlidePanelOverlay from './SlidePanelOverlay';
 import SlidePanelSquish from './SlidePanelSquish';

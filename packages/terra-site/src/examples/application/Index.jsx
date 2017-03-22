@@ -1,9 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-application/docs/README.md';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 
 const ApplicationExamples = () => (
   <div>

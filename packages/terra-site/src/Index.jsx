@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
@@ -24,11 +23,13 @@ import StatusExamples from './examples/status/Index';
 import TitleExamples from './examples/title/Index';
 
 // Test
+/* eslint-disable import/first */
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
-import I18nTestRoutes from '../../../packages/terra-i18n/tests/nightwatch/I18nTestRoutes';
+import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import TestLinks from './TestLinks';
+/* eslint-enable import/first */
 
 ReactDOM.render((
   <Router history={hashHistory}>

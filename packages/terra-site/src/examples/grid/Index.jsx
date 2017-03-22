@@ -1,14 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-grid/docs/README.md';
+
 // Component Source
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
-import GridSrc from '!raw-loader!terra-grid/src/Grid.jsx';
-import GridRowSrc from '!raw-loader!terra-grid/src/GridRow.jsx';
-import GridColumnSrc from '!raw-loader!terra-grid/src/GridColumn.jsx';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
+/* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved, import/extensions */
+import GridSrc from '!raw-loader!terra-grid/src/Grid';
+import GridRowSrc from '!raw-loader!terra-grid/src/GridRow';
+import GridColumnSrc from '!raw-loader!terra-grid/src/GridColumn';
+/* eslint-enable import/no-webpack-loader-syntax, import/no-unresolved, import/extensions */
+
 // Example Files
 import GridDefault from './GridDefault';
 import GridResponsive from './GridResponsive';
