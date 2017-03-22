@@ -3,7 +3,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 import TableTests from './TableTests';
-import DefaultTable from './DefaultTable';
+import DefaultTable from './components/NoStripedTable';
 
 const routes = (
   <div>

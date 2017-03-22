@@ -27,6 +27,7 @@ import TableExamples from '../../../packages/terra-table/examples/Index';
 import ButtonTestRoutes from '../../../packages/terra-button/tests/nightwatch/ButtonTestRoutes';
 import SlidePanelTestRoutes from '../../../packages/terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import ResponsiveElementTestRoutes from '../../../packages/terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
+import TableTestRoutes from '../../../packages/terra-table/tests/nightwatch/TableTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -55,5 +56,6 @@ ReactDOM.render((
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
     {ResponsiveElementTestRoutes}
+    {TableTestRoutes}
   </Router>
 ), document.getElementById('root'));
