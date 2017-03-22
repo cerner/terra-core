@@ -31,18 +31,46 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
+  /**
+   * Callback function when the state changes
+   **/
   onChange: _react.PropTypes.func,
+
+  /**
+   * Sets the button color scheme. One of `defaut` or `secondary`
+   **/
   intent: _react.PropTypes.oneOf(['default', 'secondary']),
+
+  /**
+   * Sets the button size. One of tiny, small, medium, large, huge
+   **/
   size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  compact: _react.PropTypes.bool,
-  selectable: _react.PropTypes.bool,
-  buttons: _react.PropTypes.arrayOf(_react.PropTypes.shape({ type: _react.PropTypes.oneOf([_ButtonGroupButton2.default]) })),
+
+  /**
+   * Indicates if the buttons should have reduced top and bottom padding
+   **/
+  isCompact: _react.PropTypes.bool,
+
+  /**
+   * Indicates if the button group should have toggle-style selectability
+   **/
+  isSelectable: _react.PropTypes.bool,
+
+  /**
+   * Button group button components that should be grouped together
+   **/
+  buttons: _react.PropTypes.arrayOf(_react.PropTypes.element),
+
+  /**
+   * Child nodes
+   **/
   children: _react.PropTypes.node
 };
 
 var defaultProps = {
   buttons: [],
-  children: []
+  children: [],
+  intent: 'default'
 };
 
 var ButtonGroup = function (_React$Component) {
@@ -50,8 +78,8 @@ var ButtonGroup = function (_React$Component) {
 
   _createClass(ButtonGroup, null, [{
     key: 'getInitialState',
-    value: function getInitialState(buttons, selectable) {
-      if (!selectable) {
+    value: function getInitialState(buttons, isSelectable) {
+      if (!isSelectable) {
         return null;
       }
 
@@ -72,7 +100,7 @@ var ButtonGroup = function (_React$Component) {
 
     _this.handleOnClick = _this.handleOnClick.bind(_this);
     _this.state = {
-      selectedIndex: ButtonGroup.getInitialState(_this.props.buttons.concat(_this.props.children), _this.props.selectable)
+      selectedIndex: ButtonGroup.getInitialState(_this.props.buttons.concat(_this.props.children), _this.props.isSelectable)
     };
     return _this;
   }
@@ -80,7 +108,7 @@ var ButtonGroup = function (_React$Component) {
   _createClass(ButtonGroup, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      var newState = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.selectable);
+      var newState = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.isSelectable);
 
       if (newState !== this.state.selectedIndex) {
         this.setState({ selectedIndex: newState });
@@ -90,7 +118,7 @@ var ButtonGroup = function (_React$Component) {
     key: 'handleOnClick',
     value: function handleOnClick(event, index) {
       // No need to re-render if the button clicked is already selected
-      if (this.state.selectedIndex === index) {
+      if (this.state.selectedIndex !== index) {
         this.setState({ selectedIndex: index });
 
         if (this.props.onChange) {
@@ -118,22 +146,33 @@ var ButtonGroup = function (_React$Component) {
       var _this3 = this;
 
       var _props = this.props,
-          selectable = _props.selectable,
+          onChange = _props.onChange,
+          intent = _props.intent,
+          size = _props.size,
+          isCompact = _props.isCompact,
+          isSelectable = _props.isSelectable,
           buttons = _props.buttons,
           children = _props.children,
-          extraProps = _objectWithoutProperties(_props, ['selectable', 'buttons', 'children']);
+          extraProps = _objectWithoutProperties(_props, ['onChange', 'intent', 'size', 'isCompact', 'isSelectable', 'buttons', 'children']);
 
       extraProps.className = (0, _classnames2.default)(['terra-ButtonGroup', extraProps.className]);
 
       var allButtons = buttons.concat(children);
 
       allButtons = allButtons.map(function (button, i) {
+        var onClick = void 0;
+        if (isSelectable) {
+          onClick = _this3.wrapOnClick(button, i);
+        } else {
+          onClick = button.props.onClick;
+        }
+
         return _react2.default.cloneElement(button, {
-          onClick: _this3.wrapOnClick(button, i),
+          onClick: onClick,
           isSelected: _this3.state.selectedIndex === i,
           size: _this3.props.size,
           intent: _this3.props.intent,
-          compact: _this3.props.compact
+          compact: _this3.props.isCompact
         });
       });
 
