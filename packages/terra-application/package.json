@@ -21,9 +21,6 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "terra-markdown": "^0.0.0"
-  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",

@@ -9,7 +9,7 @@ const views = () => (
   <div>
     <ClinicalItemView startAccessory={accessoryStart} id="test-start-accessory" />
     <ClinicalItemView endAccessory={accessoryEnd} id="test-end-accessory" />
-    <ClinicalItemView leftAccessory={accessoryStart} endAccessory={accessoryEnd} accessoryAlignment="alignTop" id="test-both-accessory-top" />
+    <ClinicalItemView startAccessory={accessoryStart} endAccessory={accessoryEnd} accessoryAlignment="alignTop" id="test-both-accessory-top" />
   </div>
 );
 

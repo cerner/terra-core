@@ -37,6 +37,8 @@ module.exports = {
     browser.expect.element('#test-start-accessory .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.not.be.present;
     browser.expect.element('#test-end-accessory .terra-ClinicalItemView-accessory:nth-child(1) > :first-child').to.not.be.present;
     browser.expect.element('#test-end-accessory .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.be.present;
+    browser.expect.element('#test-both-accessory-top .terra-ClinicalItemView-accessory:nth-child(1) > :first-child').to.be.present;
+    browser.expect.element('#test-both-accessory-top .terra-ClinicalItemView-accessory:nth-child(3) > :first-child').to.be.present;
     browser.assert.cssClassPresent('#test-both-accessory-top', 'terra-ClinicalItemView-accessory--alignTop');
   },
   'Displays a clinical item view with a comment set': (browser) => {
