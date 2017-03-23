@@ -8,7 +8,7 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-icon', done);
   },
 
   'Displays a default button with the provided text': (browser) => {

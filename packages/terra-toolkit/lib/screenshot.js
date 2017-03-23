@@ -2,7 +2,7 @@
 
 var _spectre = require('./spectre');
 
-module.exports = function (browser, callback, tag) {
+module.exports = function (browser, suiteName, callback, tag) {
   var imageTag = tag;
   if (imageTag === undefined) {
     imageTag = '0';
@@ -13,7 +13,9 @@ module.exports = function (browser, callback, tag) {
   var imagePath = 'target/' + browser.currentTest.module + '/' + browser.currentTest.name + '/' + browser.options.desiredCapabilities.browserName + '-' + version + '/' + width + 'x' + height + '_' + imageTag + '.png';
   browser.saveScreenshot(imagePath, function () {
     if (process.env.SAVE_TO_SPECTRE === 'true') {
-      (0, _spectre.createSpectreTest)(browser, imagePath, callback);
+      (0, _spectre.createSpectreTest)(browser, imagePath, suiteName, callback);
+    } else {
+      callback();
     }
   });
 };

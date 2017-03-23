@@ -2,22 +2,23 @@ import http from 'http';
 import request from 'request';
 import fs from 'fs';
 
-exports.createSpectreRun = () => new Promise((resolve, reject) => {
+exports.createSpectreRun = (spectreRunMap, suiteName) => () => new Promise((resolve, reject) => {
+  const returnedSpectreRunMap = spectreRunMap;
+
   function responseCallback(res) {
-    let spectreRunId = 0;
     res.setEncoding('utf8');
     res.on('data', (responseData) => {
-      spectreRunId = JSON.parse(responseData).id;
+      returnedSpectreRunMap[suiteName] = JSON.parse(responseData).id;
     });
     res.on('end', () => {
-      resolve(spectreRunId);
+      resolve(returnedSpectreRunMap);
     });
   }
 
   if (process.env.SAVE_TO_SPECTRE === 'true') {
     const data = JSON.stringify({
       project: 'terra-ui',
-      suite: 'Full Suite',
+      suite: suiteName,
     });
 
     try {
@@ -37,11 +38,11 @@ exports.createSpectreRun = () => new Promise((resolve, reject) => {
       reject(Error(error));
     }
   } else {
-    resolve(0);
+    resolve();
   }
 });
 
-exports.createSpectreTest = (browser, imagePath, callback) => {
+exports.createSpectreTest = (browser, imagePath, suiteName, callback) => {
   function responseCallback(err) {
     if (err) {
       // eslint-disable-next-line no-console
@@ -51,12 +52,15 @@ exports.createSpectreTest = (browser, imagePath, callback) => {
   }
 
   if (process.env.SAVE_TO_SPECTRE === 'true') {
+    const version = browser.options.desiredCapabilities.version ? browser.options.desiredCapabilities.version : 'latest';
+    const browserName = `${browser.options.desiredCapabilities.browserName}-${version}`;
+
     const formData = {};
-    formData['test[run_id]'] = process.env.spectreRunId;
-    formData['test[name]'] = `${browser.currentTest.module} - ${browser.currentTest.name}`;
+    formData['test[run_id]'] = JSON.parse(process.env.spectreRunMap)[suiteName];
+    formData['test[name]'] = `${browser.currentTest.name}`;
     formData['test[platform]'] = browser.options.desiredCapabilities.platform ? browser.options.desiredCapabilities.platform : 'default';
-    formData['test[browser]'] = browser.options.desiredCapabilities.browserName;
-    formData['test[size]'] = browser.globals.width;
+    formData['test[browser]'] = browserName;
+    formData['test[size]'] = browser.globals.windowSizeKey;
     formData['test[screenshot]'] = fs.createReadStream(imagePath);
 
     request.post({

@@ -8,7 +8,7 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-toolkit', done);
   },
 
   'Runs the test suite correctly': (browser) => {

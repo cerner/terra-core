@@ -9,7 +9,7 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-slide-panel', done);
   },
 
   'Displays a the SlidePanel with defaulted props': (browser) => {

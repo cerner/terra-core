@@ -17,7 +17,7 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-responsive-element', done);
   },
 
   'Displays the default element when contained within a parent of default size': (browser) => {
