@@ -24,11 +24,11 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
+var _terraResponsiveElement = require('terra-responsive-element');
+
+var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);
+
 require('./DatePicker.scss');
-
-var _ResponsiveElement = require('../../../packages/terra-responsive-element/lib/ResponsiveElement');
-
-var _ResponsiveElement2 = _interopRequireDefault(_ResponsiveElement);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -293,7 +293,7 @@ var DatePicker = function (_React$Component) {
         }))
       );
 
-      return _react2.default.createElement(_ResponsiveElement2.default, {
+      return _react2.default.createElement(_terraResponsiveElement2.default, {
         responsiveTo: 'window',
         defaultElement: portalPicker,
         medium: popupPicker
