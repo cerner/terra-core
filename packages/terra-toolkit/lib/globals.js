@@ -9,7 +9,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = {
   afterEach: function afterEach(browser, done) {
     function endBrowser() {
-      browser.end(done);
+      browser.end();
+      done();
     }
 
     if (process.env.REMOTE === 'true') {

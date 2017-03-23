@@ -16,11 +16,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.createSpectreRun = function () {
   return new Promise(function (resolve, reject) {
-    var data = JSON.stringify({
-      project: 'terra-ui',
-      suite: 'Full Suite'
-    });
-
     function responseCallback(res) {
       var spectreRunId = 0;
       res.setEncoding('utf8');
@@ -32,21 +27,30 @@ exports.createSpectreRun = function () {
       });
     }
 
-    try {
-      var req = _http2.default.request({
-        hostname: 'monstrous-screen-grabber.herokuapp.com',
-        path: '/runs',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Content-Length': data.length
-        }
-      }, responseCallback);
+    if (process.env.SAVE_TO_SPECTRE === 'true') {
+      var data = JSON.stringify({
+        project: 'terra-ui',
+        suite: 'Full Suite'
+      });
 
-      req.write(data);
-      req.end();
-    } catch (error) {
-      reject(Error(error));
+      try {
+        var req = _http2.default.request({
+          hostname: 'monstrous-screen-grabber.herokuapp.com',
+          path: '/runs',
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length
+          }
+        }, responseCallback);
+
+        req.write(data);
+        req.end();
+      } catch (error) {
+        reject(Error(error));
+      }
+    } else {
+      resolve(0);
     }
   });
 };
@@ -60,16 +64,20 @@ exports.createSpectreTest = function (browser, imagePath, callback) {
     callback();
   }
 
-  var formData = {};
-  formData['test[run_id]'] = process.env.spectreRunId;
-  formData['test[name]'] = browser.currentTest.module + ' - ' + browser.currentTest.name;
-  formData['test[platform]'] = browser.options.desiredCapabilities.platform ? browser.options.desiredCapabilities.platform : 'default';
-  formData['test[browser]'] = browser.options.desiredCapabilities.browserName;
-  formData['test[size]'] = browser.globals.width;
-  formData['test[screenshot]'] = _fs2.default.createReadStream(imagePath);
+  if (process.env.SAVE_TO_SPECTRE === 'true') {
+    var formData = {};
+    formData['test[run_id]'] = process.env.spectreRunId;
+    formData['test[name]'] = browser.currentTest.module + ' - ' + browser.currentTest.name;
+    formData['test[platform]'] = browser.options.desiredCapabilities.platform ? browser.options.desiredCapabilities.platform : 'default';
+    formData['test[browser]'] = browser.options.desiredCapabilities.browserName;
+    formData['test[size]'] = browser.globals.width;
+    formData['test[screenshot]'] = _fs2.default.createReadStream(imagePath);
 
-  _request2.default.post({
-    url: 'http://monstrous-screen-grabber.herokuapp.com/tests',
-    formData: formData
-  }, responseCallback);
+    _request2.default.post({
+      url: 'http://monstrous-screen-grabber.herokuapp.com/tests',
+      formData: formData
+    }, responseCallback);
+  } else {
+    callback();
+  }
 };

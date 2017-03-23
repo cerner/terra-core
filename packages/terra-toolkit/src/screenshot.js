@@ -10,6 +10,8 @@ module.exports = (browser, callback, tag) => {
   const version = browser.options.desiredCapabilities.version ? browser.options.desiredCapabilities.version : 'latest';
   const imagePath = `target/${browser.currentTest.module}/${browser.currentTest.name}/${browser.options.desiredCapabilities.browserName}-${version}/${width}x${height}_${imageTag}.png`;
   browser.saveScreenshot(imagePath, () => {
-    createSpectreTest(browser, imagePath, callback);
+    if (process.env.SAVE_TO_SPECTRE === 'true') {
+      createSpectreTest(browser, imagePath, callback);
+    }
   });
 };

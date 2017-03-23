@@ -12,6 +12,8 @@ module.exports = function (browser, callback, tag) {
   var version = browser.options.desiredCapabilities.version ? browser.options.desiredCapabilities.version : 'latest';
   var imagePath = 'target/' + browser.currentTest.module + '/' + browser.currentTest.name + '/' + browser.options.desiredCapabilities.browserName + '-' + version + '/' + width + 'x' + height + '_' + imageTag + '.png';
   browser.saveScreenshot(imagePath, function () {
-    (0, _spectre.createSpectreTest)(browser, imagePath, callback);
+    if (process.env.SAVE_TO_SPECTRE === 'true') {
+      (0, _spectre.createSpectreTest)(browser, imagePath, callback);
+    }
   });
 };
