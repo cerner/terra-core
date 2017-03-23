@@ -42,10 +42,7 @@
     "test:remote:all": "REMOTE=true node ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js --env chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous,firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous,ie10-tiny,ie10-small,ie10-medium,ie10-large,ie10-huge,ie10-enormous,ie11-tiny,ie11-small,ie11-medium,ie11-large,ie11-huge,ie11-enormous,edge-tiny,edge-small,edge-medium,edge-large,edge-huge,edge-enormous,safari-tiny,safari-small,safari-medium,safari-large,safari-huge,safari-enormous"
   },
   "devDependencies": {
-    "terra-icon": "^0.0.0",
-    "terra-markdown": "^0.0.0",
-    "terra-props-table": "^0.0.0",
-    "terra-toolkit": "^0.1.1"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
