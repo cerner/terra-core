@@ -35,8 +35,7 @@
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   },
   "devDependencies": {
-    "terra-markdown": "^0.0.0",
-    "terra-toolkit": "^0.1.1"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "terra-mixins": "^1.0.0"

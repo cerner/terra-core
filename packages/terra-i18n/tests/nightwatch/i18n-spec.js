@@ -1,16 +1,18 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const deTransaltions = require('../../lib/translations/de.js').messages;
-const enTransaltions = require('../../lib/translations/en.js').messages;
-const enGBTransaltions = require('../../lib/translations/en-GB.js').messages;
-const enUSTransaltions = require('../../lib/translations/en-US.js').messages;
-const esTransaltions = require('../../lib/translations/es.js').messages;
-const fiFITransaltions = require('../../lib/translations/fi-FI.js').messages;
-const frTransaltions = require('../../lib/translations/fr.js').messages;
-const ptTransaltions = require('../../lib/translations/pt.js').messages;
+const deTranslations = require('../../lib/translations/de.js').messages;
+const enTranslations = require('../../lib/translations/en.js').messages;
+const enGBTranslations = require('../../lib/translations/en-GB.js').messages;
+const enUSTranslations = require('../../lib/translations/en-US.js').messages;
+const esTranslations = require('../../lib/translations/es.js').messages;
+const fiFITranslations = require('../../lib/translations/fi-FI.js').messages;
+const frTranslations = require('../../lib/translations/fr.js').messages;
+const ptTranslations = require('../../lib/translations/pt.js').messages;
 
-const defaultTranslations = enTransaltions;
+const defaultTranslations = enTranslations;
 
 const screenshot = require('terra-toolkit').screenshot;
+
+const waitInms = 1000;
 
 module.exports = {
   afterEach: (browser, done) => {
@@ -20,62 +22,80 @@ module.exports = {
   'Displays ajax error message in default': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .assert.containsText('div', defaultTranslations['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms);
+
+    browser.expect.element('div').text.to.contain(defaultTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in de': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="de"]')
-      .assert.containsText('div', deTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="de"]');
+
+    browser.expect.element('div').text.to.contain(deTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in en': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="en"]')
-      .assert.containsText('div', enTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="en"]');
+
+    browser.expect.element('div').text.to.contain(enTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in en-GB': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="en-GB"]')
-      .assert.containsText('div', enGBTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="en-GB"]');
+
+    browser.expect.element('div').text.to.contain(enGBTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in en-US': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="en-US"]')
-      .assert.containsText('div', enUSTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="en-US"]');
+
+    browser.expect.element('div').text.to.contain(enUSTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in es': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="es"]')
-      .assert.containsText('div', esTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="es"]');
+
+    browser.expect.element('div').text.to.contain(esTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in fi-FI': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="fi-FI"]')
-      .assert.containsText('div', fiFITransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="fi-FI"]');
+
+    browser.expect.element('div').text.to.contain(fiFITranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in fr': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="fr"]')
-      .assert.containsText('div', frTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="fr"]');
+
+    browser.expect.element('div').text.to.contain(frTranslations['Terra.ajax.error']).before(waitInms);
   },
 
   'Displays ajax error message in pt': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
-      .click('select option[value="pt"]')
-      .assert.containsText('div', ptTransaltions['Terra.ajax.error']);
+      .waitForElementVisible('select', waitInms)
+      .click('select option[value="pt"]');
+
+    browser.expect.element('div').text.to.contain(ptTranslations['Terra.ajax.error']).before(waitInms);
   },
 };
