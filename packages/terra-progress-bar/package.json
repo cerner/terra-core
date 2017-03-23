@@ -35,9 +35,7 @@
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   },
   "devDependencies": {
-    "terra-markdown": "^0.0.0",
-    "terra-props-table": "^0.0.0",
-    "terra-toolkit": "^0.1.1"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
