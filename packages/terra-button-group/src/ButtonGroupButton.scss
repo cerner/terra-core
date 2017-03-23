@@ -1,0 +1,20 @@
+.terra-ButtonGroup-button {
+  @include terra-border-radius-start(0);
+  @include terra-border-radius-end(0);
+  @include terra-margin-horizontal(0, 0);
+  margin-bottom: 0;
+  margin-top: 0;
+  outline: 0;
+}
+
+.terra-ButtonGroup-button + .terra-ButtonGroup-button {
+  @include terra-margin-start(-1px);
+}
+
+.terra-ButtonGroup-button:first-child {
+  @include terra-border-radius-start(0.25em);
+}
+
+.terra-ButtonGroup-button:last-child {
+  @include terra-border-radius-end(0.25em);
+}

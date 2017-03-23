@@ -11,9 +11,9 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * Sets the button color scheme. One of `defaut` or `secondary`
+   * Sets the button group style variation. One of `defaut` or `secondary`
    **/
-  intent: PropTypes.oneOf(['default', 'secondary']),
+  variant: PropTypes.oneOf(['default', 'secondary']),
 
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
@@ -42,9 +42,11 @@ const propTypes = {
 };
 
 const defaultProps = {
+  variant: 'default',
+  isCompact: false,
+  isSelectable: false,
   buttons: [],
   children: [],
-  intent: 'default',
 };
 
 class ButtonGroup extends React.Component {
@@ -99,8 +101,8 @@ class ButtonGroup extends React.Component {
   }
 
   render() {
-    const { onChange, intent, size, isCompact, isSelectable, buttons, children, ...extraProps } = this.props;
-    extraProps.className = classNames(['terra-ButtonGroup',
+    const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...extraProps } = this.props;
+    const buttonGroupClassNames = classNames(['terra-ButtonGroup',
       extraProps.className,
     ]);
 
@@ -118,13 +120,13 @@ class ButtonGroup extends React.Component {
         onClick,
         isSelected: this.state.selectedIndex === i,
         size: this.props.size,
-        intent: this.props.intent,
+        variant: this.props.variant,
         compact: this.props.isCompact,
       });
     });
 
     return (
-      <div {...extraProps}>
+      <div {...extraProps} className={buttonGroupClassNames}>
         {allButtons}
       </div>
     );
