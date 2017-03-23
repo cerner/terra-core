@@ -22,7 +22,7 @@ import DatePickerOpenToDate from './DatePickerOpenToDate';
 import DatePickerPortal from './DatePickerPortal';
 import DatePickerStartDate from './DatePickerStartDate';
 import DatePickerTodayButton from './DatePickerTodayButton';
-import DateRange from './DateRange';
+import DatePickerRange from './DatePickerRange';
 
 const DatePickerExamples = () => (
   <div>
@@ -59,7 +59,7 @@ const DatePickerExamples = () => (
     <h2 id="today-button">Today Button</h2>
     <DatePickerTodayButton />
     <h2 id="date-range">Date Range</h2>
-    <DateRange />
+    <DatePickerRange />
   </div>
 );
 

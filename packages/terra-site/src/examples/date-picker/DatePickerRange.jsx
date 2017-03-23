@@ -1,8 +1,8 @@
 import React from 'react';
 import moment from 'moment';
-import DatePicker from 'terra-date-picker';
+import DateRange from 'terra-date-picker/lib/DateRange';
 
-const DateRangeExample = () => (
+const DatePickerRange = () => (
   <div>
     <DateRange
       startDate={moment().add(1, 'days')}
@@ -11,4 +11,4 @@ const DateRangeExample = () => (
   </div>
 );
 
-export default DateRangeExample;
+export default DatePickerRange;

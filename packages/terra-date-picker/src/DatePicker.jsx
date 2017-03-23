@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
+import ResponsiveElement from 'terra-responsive-element';
 import './DatePicker.scss';
-import ResponsiveElement from '../../../packages/terra-responsive-element/lib/ResponsiveElement';
 
 const propTypes = {
   /**

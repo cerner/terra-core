@@ -1,11 +1,11 @@
 .terra-DatePicker-custom-input {
   border: 1px solid #aeaeae;
-  
   box-shadow: inset 0 2px 2px #e9e9e9;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
-  margin-top: 0;
-  padding: 6px 10px 5px;
+  margin-bottom: 0.357em;
+  margin-top: 0.357em;
+  padding: 6px 10px 6px;
   vertical-align: middle;
 
   @if $terra-bidi {
@@ -26,25 +26,9 @@
     box-shadow: inset 0 2px 2px #e9e9e9, 0 0 10px 0 rgba(73, 107, 125, 0.3);
     outline: none;
   }
-
 }
 
 .terra-DatePicker-custom-button {
-  background: $terra-white url('http://www.famfamfam.com/lab/icons/silk/icons/date.png') 7px 7px no-repeat;
-  background-color: $terra-white;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  border: 1px solid #aeaeae;
-  
-  color: $terra-white;
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 29px;
-  
-  margin-top: 0;
-  vertical-align: middle;
-  width: 32px;
-
   @if $terra-bidi {
     [dir='ltr'] & {
       border-radius: 0 4px 4px 0;
@@ -57,12 +41,6 @@
   } @else {
     border-radius: 0 4px 4px 0;
     margin-left: -1px;
-  }
-
-  &:focus {
-    border-color: $terra-blue-60;
-    box-shadow: inset 0 2px 2px #e9e9e9, 0 0 10px 0 rgba(73, 107, 125, 0.3);
-    outline: none;
   }
 }
 
