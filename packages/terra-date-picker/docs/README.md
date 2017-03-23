@@ -11,6 +11,10 @@ The terra-date-picker component provides users a way to enter or select a date f
 ## Usage
 
 ```jsx
+import React from 'react';
+import DatePicker from 'terra-date-picker';
+
+//Renders a date picker
 <DatePicker
   minDate={moment()}
   maxDate={moment().add(30, 'days')}
@@ -22,10 +26,12 @@ The terra-date-picker component provides users a way to enter or select a date f
   filterDate={isWeekday}
 />
 
+//Renders a date picker with a custom input
 <DatePicker
   customInput={<CustomInputWithButton />}
 />
 
+//Renders a date range
 <DateRange
   startDate={moment().add(1, 'days')}
   endDate={moment().add(7, 'days')}
@@ -36,29 +42,24 @@ const isWeekday = (date) => {
   return day !== 0 && day !== 6;
 };
 
-const CustomInputWithButton = (props) => {
-  const customInput =
-  (<div
-    className="terra-DatePicker-custom"
-  >
-    <input
-      className="terra-DatePicker-custom-input"
-      value={props.value}
-      onChange={props.onChange}
-      type="text"
-    />
-    <button
-      className="terra-DatePicker-custom-button react-datepicker-ignore-onclickoutside"
-      onClick={props.onClick}
-    />
-  </div>);
-
-  return customInput;
+class CustomInputWithButton extends React.PureComponent {
+  render() {
+    return (
+      (<div className="terra-DatePicker-custom">
+        <input
+          type="text"
+          value={this.props.value}
+          onChange={this.props.onChange}
+          placeholder={this.props.placeholder}
+        />
+        <Button
+          onClick={this.props.onClick}
+          onKeyDown={this.props.onKeyDown}
+          icon={Icon}
+        />
+      </div>)
+    );
+  }
 };
 
-CustomInputWithButton.propTypes = {
-  onClick: React.PropTypes.func,
-  value: React.PropTypes.string,
-  onChange: React.PropTypes.func,
-};
 ```

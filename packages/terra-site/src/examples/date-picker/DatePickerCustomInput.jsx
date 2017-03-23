@@ -12,10 +12,10 @@ class CustomInputWithButton extends React.PureComponent {
       (<div className="terra-DatePicker-custom">
         <input
           className="terra-DatePicker-custom-input react-datepicker-ignore-onclickoutside"
+          type="text"
           value={this.props.value}
           onChange={this.props.onChange}
           placeholder={this.props.placeholder}
-          type="text"
         />
         <Button
           className="terra-DatePicker-custom-button react-datepicker-ignore-onclickoutside"
