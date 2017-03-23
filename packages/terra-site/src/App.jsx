@@ -21,15 +21,16 @@ const App = props => (
       <li><Link to="/site/button">Button</Link></li>
       <li><Link to="/site/content">Content</Link></li>
       <li><Link to="/site/grid">Grid</Link></li>
+      <li><Link to="/site/i18n">I18n</Link></li>
       <li><Link to="/site/icon">Icon</Link></li>
-      <li><Link to="/site/standout">Standout</Link></li>
-      <li><Link to="/site/menu">Menu</Link></li>
       <li><Link to="/site/image">Image</Link></li>
+      <li><Link to="/site/menu">Menu</Link></li>
       <li><Link to="/site/progress-bar">Progress Bar</Link></li>
+      <li><Link to="/site/responsive-element">Responsive Element</Link></li>
+      <li><Link to="/site/slide-panel">Slide Panel</Link></li>
+      <li><Link to="/site/standout">Standout</Link></li>
       <li><Link to="/site/status">Status</Link></li>
       <li><Link to="/site/title">Title</Link></li>
-      <li><Link to="/site/slide-panel">Slide Panel</Link></li>
-      <li><Link to="/site/responsive-element">Responsive Element</Link></li>
       <li><Link to="/tests">Tests</Link></li>
     </ul>
     {props.children}

@@ -22,8 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-markdown": "^0.0.0",
-    "terra-toolkit": "^0.1.1"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -33,6 +32,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react-docgen": "^2.13.0",
+    "terra-markdown": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {
@@ -44,6 +44,7 @@
     "release:major": "npm test && node ../../scripts/release/release.js major",
     "release:minor": "npm test && node ../../scripts/release/release.js minor",
     "release:patch": "npm test && node ../../scripts/release/release.js patch",
-    "test": "echo \"Warning: no test written\" && exit 0"
+    "test": "npm run test:spec",
+    "test:spec": "echo \"Warning: no test written\" && exit 0"
   }
 }
