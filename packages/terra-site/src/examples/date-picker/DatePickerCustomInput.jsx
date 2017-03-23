@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import DatePicker from '../src/DatePicker';
+import DatePicker from 'terra-date-picker';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class CustomInputWithButton extends React.PureComponent {

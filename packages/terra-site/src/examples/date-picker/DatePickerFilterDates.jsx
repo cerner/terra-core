@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from '../src/DatePicker';
+import DatePicker from 'terra-date-picker';
 
 const isWeekday = (date) => {
   const day = date.day();

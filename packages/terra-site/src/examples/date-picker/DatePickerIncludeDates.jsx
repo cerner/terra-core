@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import DatePicker from '../src/DatePicker';
+import DatePicker from 'terra-date-picker';
 
 const DatePickerIncludeDates = () => (
   <div>

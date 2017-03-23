@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import DateRange from '../src/DateRange';
+import DatePicker from 'terra-date-picker';
 
 const DateRangeExample = () => (
   <div>
