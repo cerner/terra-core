@@ -7,8 +7,6 @@ import DefaultTable from './components/NoStripedTable';
 import SingleRowSelectableTable from './components/SingleRowSelectableTable';
 import StripedTable from './components/StripedTable';
 import TableWithHighlightedRows from './components/TableWithHighlightedRows';
-import TableWithNonSelectableRow from './components/TableWithNonSelectableRow';
-import TableWithSortingIndicator from './components/TableWithSortingIndicator';
 
 const routes = (
   <div>
