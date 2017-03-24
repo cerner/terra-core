@@ -133,9 +133,7 @@ class ClinicalItemView extends React.Component {
 
     if (rowCount === 2 && rowIndex === 1) {
       contentColor = 'terra-ClinicalItemView-content--secondaryColor';
-    }
-
-    if (rowIndex >= 2) {
+    } else if (rowIndex >= 2) {
       contentColor = 'terra-ClinicalItemView-content--secondaryColor';
     }
 

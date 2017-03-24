@@ -17,7 +17,7 @@ import ClinicalItemView from 'terra-clinical-item-view';
 <ClinicalItemView
   layout="oneColumn"
   textEmphasis="default"
-  isTruncated=true
+  isTruncated
   accessoryAlignment="top"
   leftAccesory=<img alt="Graphic" />
   displays={[<ClinicalItemView.Display text="display 1" />, <ClinicalItemView.Display text="display 2" />]}
@@ -27,14 +27,14 @@ import ClinicalItemView from 'terra-clinical-item-view';
 <Display
   text="display text"
   textStyle="attention"
-  isTruncated=true
+  isTruncated
   icon=<img alt="Graphic" />
 />
 
 <Comment
   text="display text"
   textStyle="attention"
-  isTruncated=true
+  isTruncated
 />
 ```
 
