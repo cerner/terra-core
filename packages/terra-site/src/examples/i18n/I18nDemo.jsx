@@ -11,8 +11,11 @@ class Demo extends React.Component {
       locale: props.locale,
       messages: {},
     };
-    i18nLoader(props.locale, this.setState, this);
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
+  }
+
+  componentDidMount() {
+    i18nLoader(this.props.locale, this.setState, this);
   }
 
   handleLocaleChange(e) {
