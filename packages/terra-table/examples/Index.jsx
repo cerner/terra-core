@@ -16,6 +16,11 @@ import TableRowContentSrc from '!raw-loader!../src/TableRowContent.jsx';
 
 import NoStripedTable from './NoStripedTable';
 import StripedTable from './StripedTable';
+import TableWithHighlightedRows from './TableWithHighlightedRows';
+import SingleRowSelectableTable from './SingleRowSelectableTable';
+import TableWithNonSelectableRow from './TableWithNonSelectableRow';
+import TableWithSortingIndicator from './TableWithSortingIndicator';
+import TableWithMaxHeight from './TableWithMaxHeight';
 
 const TableExamples = () => (
   <div>
@@ -38,6 +43,16 @@ const TableExamples = () => (
     <NoStripedTable />
     <h2>Table with zebra stripes</h2>
     <StripedTable />
+    <h2>Table with some rows selected. Table will not select or deselect any row</h2>
+    <TableWithHighlightedRows />
+    <h2>Selectable table. Only one row can be selected</h2>
+    <SingleRowSelectableTable />
+    <h2>Selectable table with second row as non selectable</h2>
+    <TableWithNonSelectableRow />
+    <h2>Table with sorting indicator</h2>
+    <TableWithSortingIndicator />
+    <h2>Table with maximum height set on row and header</h2>
+    <TableWithMaxHeight />
     <h2>Other table</h2>
     <Table>
       <Table.Header>
