@@ -12,7 +12,7 @@ The Terra ClinicalItemView component allows displays to be organized into rows a
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-list`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-clinical-item-view`
 
 ## LICENSE
 

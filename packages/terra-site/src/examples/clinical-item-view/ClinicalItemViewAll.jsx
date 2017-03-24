@@ -19,7 +19,7 @@ export default () => <ClinicalItemView
   displays={displays}
   layout="twoColumns"
   isTruncated
-  textEmphasis="left"
+  textEmphasis="start"
   startAccessory={accessoryStart}
   endAccessory={accessoryEnd}
   comment={comment}
