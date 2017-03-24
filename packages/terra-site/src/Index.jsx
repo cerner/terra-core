@@ -10,7 +10,7 @@ import ArrangeExamples from './examples/arrange/Index';
 import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ContentExamples from './examples/content/Index';
-import DetailViewExamples from '../../../packages/terra-detail-view/examples/Index';
+import DetailViewExamples from './examples/detail-view/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
@@ -26,7 +26,7 @@ import TitleExamples from './examples/title/Index';
 // Test
 /* eslint-disable import/first */
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
-import DetailViewTestRoutes from '../../../packages/terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
+import DetailViewTestRoutes from 'terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
@@ -43,6 +43,7 @@ ReactDOM.render((
       <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="content" component={ContentExamples} />
+      <Route path="detail-view" component={DetailViewExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
@@ -54,7 +55,6 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
-      <Route path="detail-view" component={DetailViewExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}

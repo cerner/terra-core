@@ -1,11 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import ReadMe from '../docs/README.md';
+import ReadMe from 'terra-detail-view/docs/README.md';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import DetailViewSrc from '!raw-loader!../src/DetailView.jsx';
+import DetailViewSrc from '!raw-loader!terra-detail-view/src/DetailView.jsx';
 
 // Example files
 import DetailViewDivided from './DetailViewDivided';
