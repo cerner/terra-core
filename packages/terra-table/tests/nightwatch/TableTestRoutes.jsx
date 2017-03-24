@@ -17,8 +17,6 @@ const routes = (
     <Route path="/tests/table-tests/selectableTable" component={SingleRowSelectableTable} />
     <Route path="/tests/table-tests/stripedTable" component={StripedTable} />
     <Route path="/tests/table-tests/tableWithHighlightedRows" component={TableWithHighlightedRows} />
-    <Route path="/tests/table-tests/tableWithNonSelectableRow" component={TableWithNonSelectableRow} />
-    <Route path="/tests/table-tests/tableWithSortingIndicator" component={TableWithSortingIndicator} />
   </div>
 );
 
