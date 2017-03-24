@@ -53,31 +53,6 @@ const TableExamples = () => (
     <TableWithSortingIndicator />
     <h2>Table with maximum height set on row and header</h2>
     <TableWithMaxHeight />
-    <h2>Other table</h2>
-    <Table>
-      <Table.Header>
-        <Table.HeaderContent display={'Column Heading 1 Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={1} minWidth={'huge'} />
-        <Table.HeaderContent display={'Column Heading 2'} key={2} minWidth={'medium'} sort={'asc'}/>
-        <Table.HeaderContent display={'Column Heading 3 Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={3} minWidth={'large'} />
-      </Table.Header>
-      <Table.SingleSelectableRows>
-        <Table.Row isSelected isSelectable={false} key={0}>
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={1} />
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={2} />
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={3} />
-        </Table.Row>
-        <Table.Row isSelected key={1}>
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={1} />
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={2} />
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={3} />
-        </Table.Row>
-        <Table.Row isSelected={false} key={2}>
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={1} />
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={2} />
-          <Table.RowContent display={'Vey long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text Very long button text'} key={3} />
-        </Table.Row>
-      </Table.SingleSelectableRows>
-    </Table>
   </div>
 );
 
