@@ -12,9 +12,11 @@ The Terra List is a structural component to arrange content within list/listitem
 
 ```jsx
 import React from 'react';
-import SlidePanel from 'terra-slide-panel';
+import List from 'terra-list';
+import SingleSelectList from 'terra-list/lib/SingleSelectList';
+import MultiSelectList from 'terra-list/lib/MultiSelectList';
 
-<ListItem
+<List.Item
   content={[<h1 blurb />}
   isSelected={true}
   isSelectable={true}

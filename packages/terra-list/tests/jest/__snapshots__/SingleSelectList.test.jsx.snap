@@ -1,13 +1,13 @@
 exports[`test should render a default component 1`] = `
 <List
   isDivided={false}
-  tabindex="0" />
+  tabIndex="0" />
 `;
 
 exports[`test should render with hasChevrons 1`] = `
 <List
   isDivided={false}
-  tabindex="0">
+  tabIndex="0">
   <type
     hasChevron={true}
     isSelectable={true}
@@ -19,7 +19,7 @@ exports[`test should render with hasChevrons 1`] = `
 exports[`test should render with isDivided 1`] = `
 <List
   isDivided={true}
-  tabindex="0">
+  tabIndex="0">
   <type
     hasChevron={true}
     isSelectable={true}
@@ -31,7 +31,7 @@ exports[`test should render with isDivided 1`] = `
 exports[`test should render with items 1`] = `
 <List
   isDivided={false}
-  tabindex="0">
+  tabIndex="0">
   <type
     hasChevron={true}
     isSelectable={true}
@@ -63,7 +63,7 @@ exports[`test should render with items 1`] = `
 exports[`test should select an item 1`] = `
 <List
   isDivided={false}
-  tabindex="0">
+  tabIndex="0">
   <ListItem
     className="stuff1"
     content={
@@ -125,7 +125,7 @@ exports[`test should select an item 1`] = `
 exports[`test should select an item 2`] = `
 <List
   isDivided={false}
-  tabindex="0">
+  tabIndex="0">
   <ListItem
     className="stuff1"
     content={
@@ -187,7 +187,7 @@ exports[`test should select an item 2`] = `
 exports[`test should select an item 3`] = `
 <List
   isDivided={false}
-  tabindex="0">
+  tabIndex="0">
   <ListItem
     className="stuff1"
     content={
@@ -249,7 +249,7 @@ exports[`test should select an item 3`] = `
 exports[`test should select an item 4`] = `
 <List
   isDivided={false}
-  tabindex="0">
+  tabIndex="0">
   <ListItem
     className="stuff1"
     content={

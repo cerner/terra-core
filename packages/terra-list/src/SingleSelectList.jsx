@@ -131,7 +131,7 @@ class SingleSelectList extends React.Component {
     this.unusedVariables(hasChevrons);
 
     return (
-      <List isDivided={isDivided} {...customProps} tabindex="0">
+      <List isDivided={isDivided} {...customProps} tabIndex="0">
         {clonedChildItems}
       </List>
     );
