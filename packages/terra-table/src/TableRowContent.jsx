@@ -17,13 +17,13 @@ const TableRowContent = ({
   height,
   ...customProps
   }) => {
-  const contentClassName = classNames([
-    { [`terra-Table-height-${height}`]: height },
-    'terra-Table-content',
-  ]);
+  if(height) {
+    customProps['data-max-height'] = height;
+  }
+  
   return (
     <td {...customProps}>
-      <div className={contentClassName}>{display}</div>
+      <div>{display}</div>
     </td>
   );
 };

@@ -3,54 +3,59 @@
 @import './mixins';
 @import './terra-table';
 
-.terra-Table-width-tiny {
-  min-width: 40px;
+[data-column-min-width='tiny'] {
+  min-width: $terra-table-cell-min-width-tiny;
 }
 
-.terra-Table-width-small {
-  min-width: 60px;
+[data-column-min-width='small'] {
+  min-width: $terra-table-cell-min-width-small;
 }
 
-.terra-Table-width-medium {
-  min-width: 80px;
+[data-column-min-width='medium'] {
+  min-width: $terra-table-cell-min-width-medium;
 }
 
-.terra-Table-width-large {
-  min-width: 120px;
+[data-column-min-width='large'] {
+  min-width: $terra-table-cell-min-width-large;
 }
 
-.terra-Table-width-huge {
-  min-width: 150px;
+[data-column-min-width='huge'] {
+  min-width: $terra-table-cell-min-width-huge;
 }
 
-.terra-Table-content {
-  min-height: 20px;
-  overflow: auto;
+[data-max-height='tiny'] {
+  > div {
+    overflow: auto;
+    max-height: $terra-table-cell-max-height-tiny;
+  }
 }
 
-.terra-Table-height-tiny,
-.terra-Table-headerHeight-tiny {
-  max-height: 26px;
+[data-max-height='small'] {
+  > div {
+    overflow: auto;
+    max-height: $terra-table-cell-max-height-small;
+  }
 }
 
-.terra-Table-height-small,
-.terra-Table-headerHeight-small {
-  max-height: 46px;
+[data-max-height='medium'] {
+  > div {
+    overflow: auto;
+    max-height: $terra-table-cell-max-height-medium;
+  }
 }
 
-.terra-Table-height-medium,
-.terra-Table-headerHeight-medium {
-  max-height: 66px;
+[data-max-height='large'] {
+  > div {
+    overflow: auto;
+    max-height: $terra-table-cell-max-height-large;
+  }
 }
 
-.terra-Table-height-large,
-.terra-Table-headerHeight-large {
-  max-height: 86px;
-}
-
-.terra-Table-height-huge,
-.terra-Table-headerHeight-huge {
-  max-height: 106px;
+[data-max-height='huge'] {
+  > div {
+    overflow: auto;
+    max-height: $terra-table-cell-max-height-huge;
+  }
 }
 
 .terra-Table--isSelected {

@@ -24,6 +24,10 @@ const propTypes = {
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
+  /**
+   * The class to put on th tag
+   */
+  className: PropTypes.string,
 };
 
 const defaultProps = {
@@ -38,30 +42,31 @@ const TableHeaderContent = ({
   height,
   minWidth,
   sort,
+  className,
   ...customProps
   }) => {
-  const headerContentClassNames = classNames([
-    { [`terra-Table-headerHeight-${height}`]: height },
-    'terra-Table-content',
-  ]);
-
   const contentClassName = classNames([
-    { [`terra-Table-width-${minWidth}`]: minWidth },
+    'terra-Table-header',
+    className,
   ]);
 
   const ascSortInd = classNames([
-    { 'terra-Table-sort-indicator': sort === 'asc' },
+    'terra-Table-sort-indicator',
     { 'terra-Table-hidden': sort !== 'asc' },
   ]);
 
   const descSortInd = classNames([
-    { 'terra-Table-sort-indicator': sort === 'desc' },
+    'terra-Table-sort-indicator',
     { 'terra-Table-hidden': sort !== 'desc' },
   ]);
 
+  if(height) {
+    customProps['data-max-height'] = height;
+  }
+
   return (
-    <th className={contentClassName} {...customProps}>
-      <div className={headerContentClassNames}>
+    <th className={contentClassName} data-column-min-width = {minWidth} {...customProps}>
+      <div>
         {display}
         <span className={ascSortInd}>{iconUp}</span>
         <span className={descSortInd}>{iconDown}</span>

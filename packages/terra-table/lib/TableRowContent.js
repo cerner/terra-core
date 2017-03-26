@@ -14,8 +14,6 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
@@ -34,13 +32,16 @@ var TableRowContent = function TableRowContent(_ref) {
       height = _ref.height,
       customProps = _objectWithoutProperties(_ref, ['display', 'height']);
 
-  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-height-' + height, height), 'terra-Table-content']);
+  if (height) {
+    customProps['data-max-height'] = height;
+  }
+
   return _react2.default.createElement(
     'td',
     customProps,
     _react2.default.createElement(
       'div',
-      { className: contentClassName },
+      null,
       display
     )
   );

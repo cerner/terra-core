@@ -24,8 +24,6 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
@@ -48,7 +46,11 @@ var propTypes = {
   /**
    * A callback function for onClick action
    */
-  onClick: _react.PropTypes.func
+  onClick: _react.PropTypes.func,
+  /**
+   * The class to put on th tag
+   */
+  className: _react.PropTypes.string
 };
 
 var defaultProps = {
@@ -63,22 +65,25 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
       height = _ref.height,
       minWidth = _ref.minWidth,
       sort = _ref.sort,
-      customProps = _objectWithoutProperties(_ref, ['display', 'height', 'minWidth', 'sort']);
+      className = _ref.className,
+      customProps = _objectWithoutProperties(_ref, ['display', 'height', 'minWidth', 'sort', 'className']);
 
-  var headerContentClassNames = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-headerHeight-' + height, height), 'terra-Table-content']);
+  var contentClassName = (0, _classnames2.default)(['terra-Table-header', className]);
 
-  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-width-' + minWidth, minWidth)]);
+  var ascSortInd = (0, _classnames2.default)(['terra-Table-sort-indicator', { 'terra-Table-hidden': sort !== 'asc' }]);
 
-  var ascSortInd = (0, _classnames2.default)([{ 'terra-Table-sort-indicator': sort === 'asc' }, { 'terra-Table-hidden': sort !== 'asc' }]);
+  var descSortInd = (0, _classnames2.default)(['terra-Table-sort-indicator', { 'terra-Table-hidden': sort !== 'desc' }]);
 
-  var descSortInd = (0, _classnames2.default)([{ 'terra-Table-sort-indicator': sort === 'desc' }, { 'terra-Table-hidden': sort !== 'desc' }]);
+  if (height) {
+    customProps['data-max-height'] = height;
+  }
 
   return _react2.default.createElement(
     'th',
-    _extends({ className: contentClassName }, customProps),
+    _extends({ className: contentClassName, 'data-column-min-width': minWidth }, customProps),
     _react2.default.createElement(
       'div',
-      { className: headerContentClassNames },
+      null,
       display,
       _react2.default.createElement(
         'span',
