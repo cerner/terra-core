@@ -31,6 +31,7 @@
     "terra-badge": "^0.x",
     "terra-button": "^0.x",
     "terra-content": "^0.x",
+    "terra-detail-view": "^0.x",
     "terra-grid": "^1.0.0",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
