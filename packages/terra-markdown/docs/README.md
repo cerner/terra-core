@@ -12,8 +12,8 @@ React component to display the content of markdown files.
 
 ```jsx
 import React from 'react';
-import Markdown from '../../terra-markdown/src/Markdown';
-import ReadMe from '../docs/README.md';
+import Markdown from 'terra-markdown';
+import ReadMe from '{component}/docs/README.md';
 
 <Markdown id="readme" src={ReadMe} />
 ```
