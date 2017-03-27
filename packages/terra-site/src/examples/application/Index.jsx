@@ -2,8 +2,11 @@ import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-application/docs/README.md';
 
+import Version from './Version';
+
 const ApplicationExamples = () => (
   <div>
+    <Version/>
     <Markdown id="readme" src={ReadMe} />
     <h2>Application</h2>
     <div>
