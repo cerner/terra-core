@@ -11,6 +11,7 @@ import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ClinicalItemViewExamples from './examples/clinical-item-view/Index';
 import ContentExamples from './examples/content/Index';
+import ContentContainerExamples from './examples/content-container/Index';
 import DetailViewExamples from './examples/detail-view/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
@@ -53,6 +54,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
       <Route path="content" component={ContentExamples} />
+      <Route path="content-container" component={ContentContainerExamples} />
       <Route path="detail-view" component={DetailViewExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
