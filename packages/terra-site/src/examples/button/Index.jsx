@@ -2,6 +2,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-button/docs/README.md';
+import { version } from 'terra-button/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -20,6 +21,7 @@ import ButtonIcon from './ButtonIcon';
 
 const ButtonExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonSrc} />
     <h2 id="intent">Intent</h2>

@@ -2,6 +2,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-grid/docs/README.md';
+import { version } from 'terra-grid/package.json';
 
 // Component Source
 /* eslint-disable import/no-webpack-loader-syntax, import/no-unresolved, import/extensions */
@@ -17,6 +18,7 @@ import GridNested from './GridNested';
 
 const GridExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h2>Grid</h2>
     <PropsTable id="props" src={GridSrc} />
