@@ -96,6 +96,7 @@ module.exports = (testConfigPath, settings) => {
       testingConfiguration[key].globals = {};
       testingConfiguration[key].globals.width = windowSizes[windowSizeKey][0];
       testingConfiguration[key].globals.height = windowSizes[windowSizeKey][1];
+      testingConfiguration[key].globals.windowSizeKey = windowSizeKey;
       testingConfiguration[key].globals.testConfigPath = testConfigPath;
       testingConfiguration[key].globals.webpackDevServerPort = 8080;
 

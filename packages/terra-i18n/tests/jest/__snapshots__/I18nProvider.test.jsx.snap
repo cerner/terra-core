@@ -1,0 +1,13 @@
+exports[`I18nProvider for snapshot tests renders a default I18nProvider 1`] = `
+<IntlProvider
+  locale="en"
+  messages={
+    Object {
+      "Terra": "Terra",
+    }
+  }>
+  <div>
+    <Children />
+  </div>
+</IntlProvider>
+`;

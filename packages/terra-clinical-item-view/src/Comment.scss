@@ -1,0 +1,11 @@
+@import './variables';
+@import './mixins';
+
+.terra-ClinicalItemView-comment {
+  @include terra-clinical-text-body;
+  color: $terra-clinical-item-view-comment-color;
+}
+
+.terra-ClinicalItemView-comment--icon {
+  fill: $terra-clinical-item-view-comment-icon-color;
+}

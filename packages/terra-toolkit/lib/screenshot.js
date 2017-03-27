@@ -8,5 +8,5 @@ module.exports = function (browser, callback, tag) {
   var width = browser.globals.width;
   var height = browser.globals.height;
   var version = browser.options.desiredCapabilities.version ? browser.options.desiredCapabilities.version : 'latest';
-  browser.saveScreenshot('target/nightwatch/' + browser.currentTest.name + '/' + browser.options.desiredCapabilities.browserName + '-' + version + '/' + width + 'x' + height + '_' + imageTag + '.png', callback);
+  browser.saveScreenshot('target/' + browser.currentTest.module + '/' + browser.currentTest.name + '/' + browser.options.desiredCapabilities.browserName + '-' + version + '/' + width + 'x' + height + '_' + imageTag + '.png', callback);
 };

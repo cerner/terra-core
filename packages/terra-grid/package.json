@@ -31,12 +31,11 @@
     "release:major": "npm test && node ../../scripts/release/release.js major",
     "release:minor": "npm test && node ../../scripts/release/release.js minor",
     "release:patch": "npm test && node ../../scripts/release/release.js patch",
-    "test": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+    "test": "npm run test:spec",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   },
   "devDependencies": {
-    "terra-markdown": "^0.0.0",
-    "terra-props-table": "^0.0.0",
-    "terra-toolkit": "^0.1.1"
+    "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
