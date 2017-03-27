@@ -58,9 +58,9 @@ var ButtonGroupButton = function ButtonGroupButton(_ref) {
       icon = _ref.icon,
       isReversed = _ref.isReversed,
       children = _ref.children,
-      otherProps = _objectWithoutProperties(_ref, ['isSelected', 'text', 'icon', 'isReversed', 'children']);
+      customProps = _objectWithoutProperties(_ref, ['isSelected', 'text', 'icon', 'isReversed', 'children']);
 
-  var attributes = _extends({}, otherProps);
+  var attributes = _extends({}, customProps);
   var buttonText = text ? _react2.default.createElement(
     'span',
     { className: 'terra-ButtonGroupButton-text' },

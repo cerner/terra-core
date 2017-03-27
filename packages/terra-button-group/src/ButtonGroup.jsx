@@ -101,12 +101,12 @@ class ButtonGroup extends React.Component {
   }
 
   render() {
-    const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...extraProps } = this.props;
+    const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...customProps } = this.props;
     const buttonGroupClassNames = classNames(['terra-ButtonGroup',
       `terra-ButtonGroup--${variant}`,
       { 'terra-ButtonGroup--compact': isCompact },
       { [`terra-ButtonGroup--${size}`]: size },
-      extraProps.className,
+      customProps.className,
     ]);
 
     let allButtons = buttons.concat(children);
@@ -126,7 +126,7 @@ class ButtonGroup extends React.Component {
     });
 
     return (
-      <div {...extraProps} className={buttonGroupClassNames}>
+      <div {...customProps} className={buttonGroupClassNames}>
         {allButtons}
       </div>
     );

@@ -35,8 +35,8 @@ const defaultProps = {
   isReversed: false,
 };
 
-const ButtonGroupButton = ({ isSelected, text, icon, isReversed, children, ...otherProps }) => {
-  const attributes = Object.assign({}, otherProps);
+const ButtonGroupButton = ({ isSelected, text, icon, isReversed, children, ...customProps }) => {
+  const attributes = Object.assign({}, customProps);
   const buttonText = text ? <span className="terra-ButtonGroupButton-text">{text}</span> : null;
 
   const order = isReversed ?

@@ -2,7 +2,7 @@
   "name": "terra-button-group",
   "main": "lib/ButtonGroup.js",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "terra-button-group",
   "repository": {
     "type": "git",
@@ -22,9 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.1.0",
-    "terra-props-table": "^0.0.0",
-    "terra-markdown": "^0.0.0"
+    "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -48,9 +46,9 @@
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "node ../../scripts/nightwatch/nightwatch.js",
-    "test:nightwatch-chrome": "node ../../scripts/nightwatch/nightwatch.js chrome",
-    "test:nightwatch-firefox": "node ../../scripts/nightwatch/nightwatch.js firefox",
-    "test:nightwatch-safari": "node ../../scripts/nightwatch/nightwatch-non-parallel.js safari"
+    "test:nightwatch-default": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   }
 }

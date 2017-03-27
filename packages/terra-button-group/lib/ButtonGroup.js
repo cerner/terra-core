@@ -159,9 +159,9 @@ var ButtonGroup = function (_React$Component) {
           isSelectable = _props.isSelectable,
           buttons = _props.buttons,
           children = _props.children,
-          extraProps = _objectWithoutProperties(_props, ['onChange', 'variant', 'size', 'isCompact', 'isSelectable', 'buttons', 'children']);
+          customProps = _objectWithoutProperties(_props, ['onChange', 'variant', 'size', 'isCompact', 'isSelectable', 'buttons', 'children']);
 
-      var buttonGroupClassNames = (0, _classnames2.default)(['terra-ButtonGroup', 'terra-ButtonGroup--' + variant, { 'terra-ButtonGroup--compact': isCompact }, _defineProperty({}, 'terra-ButtonGroup--' + size, size), extraProps.className]);
+      var buttonGroupClassNames = (0, _classnames2.default)(['terra-ButtonGroup', 'terra-ButtonGroup--' + variant, { 'terra-ButtonGroup--compact': isCompact }, _defineProperty({}, 'terra-ButtonGroup--' + size, size), customProps.className]);
 
       var allButtons = buttons.concat(children);
 
@@ -181,7 +181,7 @@ var ButtonGroup = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, extraProps, { className: buttonGroupClassNames }),
+        _extends({}, customProps, { className: buttonGroupClassNames }),
         allButtons
       );
     }

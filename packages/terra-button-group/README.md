@@ -4,10 +4,10 @@
 [![NPM version](http://img.shields.io/npm/v/terra-button-group.svg)](https://www.npmjs.org/package/terra-button-group)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-{insert description}
+The Terra Button Group component groups buttons and can maintain a toggle selection state. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-button-group/docs)
 - [LICENSE](#license)
 
 ## Getting Started
