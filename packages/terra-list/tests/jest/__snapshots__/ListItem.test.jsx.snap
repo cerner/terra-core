@@ -1,0 +1,40 @@
+exports[`test should render with className 1`] = `
+<li
+  className="terra-ListItem textClass" />
+`;
+
+exports[`test should render with content 1`] = `
+<li
+  className="terra-ListItem">
+  <p>
+    text
+  </p>
+</li>
+`;
+
+exports[`test should render with isSelectable 1`] = `
+<li
+  className="terra-ListItem terra-ListItem-isSelectable" />
+`;
+
+exports[`test should render with isSelectable and hasChevron 1`] = `
+<li
+  className="terra-ListItem terra-ListItem-isSelectable terra-ListItem-hasChevron">
+  <span
+    className="terra-ListItem-chevron">
+    <IconChevronRight
+      className=""
+      data-name="Layer 1"
+      height="10"
+      isBidi={true}
+      viewBox="0 0 48 48"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg" />
+  </span>
+</li>
+`;
+
+exports[`test should render with selected 1`] = `
+<li
+  className="terra-ListItem terra-ListItem--selected" />
+`;
