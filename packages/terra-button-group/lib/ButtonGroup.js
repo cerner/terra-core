@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -22,6 +24,8 @@ require('./ButtonGroup.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37,9 +41,9 @@ var propTypes = {
   onChange: _react.PropTypes.func,
 
   /**
-   * Sets the button color scheme. One of `defaut` or `secondary`
+   * Sets the button group style variation. One of `defaut` or `secondary`
    **/
-  intent: _react.PropTypes.oneOf(['default', 'secondary']),
+  variant: _react.PropTypes.oneOf(['default', 'secondary']),
 
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
@@ -68,9 +72,11 @@ var propTypes = {
 };
 
 var defaultProps = {
+  variant: 'default',
+  isCompact: false,
+  isSelectable: false,
   buttons: [],
-  children: [],
-  intent: 'default'
+  children: []
 };
 
 var ButtonGroup = function (_React$Component) {
@@ -147,15 +153,15 @@ var ButtonGroup = function (_React$Component) {
 
       var _props = this.props,
           onChange = _props.onChange,
-          intent = _props.intent,
+          variant = _props.variant,
           size = _props.size,
           isCompact = _props.isCompact,
           isSelectable = _props.isSelectable,
           buttons = _props.buttons,
           children = _props.children,
-          extraProps = _objectWithoutProperties(_props, ['onChange', 'intent', 'size', 'isCompact', 'isSelectable', 'buttons', 'children']);
+          extraProps = _objectWithoutProperties(_props, ['onChange', 'variant', 'size', 'isCompact', 'isSelectable', 'buttons', 'children']);
 
-      extraProps.className = (0, _classnames2.default)(['terra-ButtonGroup', extraProps.className]);
+      var buttonGroupClassNames = (0, _classnames2.default)(['terra-ButtonGroup', 'terra-ButtonGroup--' + variant, { 'terra-ButtonGroup--compact': isCompact }, _defineProperty({}, 'terra-ButtonGroup--' + size, size), extraProps.className]);
 
       var allButtons = buttons.concat(children);
 
@@ -169,16 +175,13 @@ var ButtonGroup = function (_React$Component) {
 
         return _react2.default.cloneElement(button, {
           onClick: onClick,
-          isSelected: _this3.state.selectedIndex === i,
-          size: _this3.props.size,
-          intent: _this3.props.intent,
-          compact: _this3.props.isCompact
+          isSelected: _this3.state.selectedIndex === i
         });
       });
 
       return _react2.default.createElement(
         'div',
-        extraProps,
+        _extends({}, extraProps, { className: buttonGroupClassNames }),
         allButtons
       );
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from '../src/ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 
 const ButtonGroupIntent = () => (
   <div>
@@ -12,7 +12,7 @@ const ButtonGroupIntent = () => (
     <br />
     <div>
       <ButtonGroup
-        intent="secondary"
+        variant="secondary"
         buttons={[<ButtonGroup.Button text="Secondary" key="secondary1" />,
           <ButtonGroup.Button text="Secondary" key="secondary2" />]}
       />

@@ -26,6 +26,7 @@ import TitleExamples from './examples/title/Index';
 // Test
 /* eslint-disable import/first */
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
+import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
@@ -41,6 +42,7 @@ ReactDOM.render((
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
+      <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
@@ -48,15 +50,15 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
+      <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="standout" component={StandoutExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
-      <Route path="responsive-element" component={ResponsiveElementExamples} />
-      <Route path="button-group" component={ButtonGroupExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
+    {ButtonGroupTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {ResponsiveElementTestRoutes}

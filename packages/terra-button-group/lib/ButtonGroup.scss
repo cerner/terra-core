@@ -4,25 +4,60 @@
 .terra-ButtonGroup {
   display: inline-block;
   white-space: nowrap;
+}
 
-  .terra-ButtonGroup-button {
-    @include terra-border-radius-start(0);
-    @include terra-border-radius-end(0);
-    @include terra-margin-horizontal(0, 0);
-    margin-bottom: 0;
-    margin-top: 0;
-    outline: 0;
+.terra-ButtonGroup > * {
+  border-color: $terra-grey-30;
+  border-width: 1px;
+  color: $terra-grey-90;
+  font-size: map-get($terra-button-group-font-sizes, medium);
+
+  &:focus,
+  &:hover {
+    background-color: $terra-grey-30;
+    color: $terra-grey-100;
   }
 
-  > .terra-ButtonGroup-button + .terra-ButtonGroup-button {
-    @include terra-margin-start(-1px);
+  &:active,
+  &.is-selected {
+    background-color: $terra-grey-80;
+    border-color: $terra-grey-80;
+    color: $terra-white;
   }
+}
 
-  > .terra-ButtonGroup-button:first-child {
-    @include terra-border-radius-start(0.25em);
-  }
+// Button size modifiers
+.terra-ButtonGroup--tiny > * {
+  font-size: map-get($terra-button-group-font-sizes, tiny);
+}
 
-  > .terra-ButtonGroup-button:last-child {
-    @include terra-border-radius-end(0.25em);
-  }
+.terra-ButtonGroup--small > * {
+  font-size: map-get($terra-button-group-font-sizes, small);
+}
+
+.terra-ButtonGroup--medium > * {
+  font-size: map-get($terra-button-group-font-sizes, medium);
+}
+
+.terra-ButtonGroup--large > * {
+  font-size: map-get($terra-button-group-font-sizes, large);
+}
+
+.terra-ButtonGroup--huge > * {
+  font-size: map-get($terra-button-group-font-sizes, huge);
+}
+
+// Variant Modifiers
+.terra-ButtonGroup--default > * {
+  background-color: $terra-grey-20;
+}
+
+.terra-ButtonGroup--secondary > * {
+  background-color: transparent;  
+}
+
+// Compact
+.terra-ButtonGroup--compact > * {
+  padding-bottom: 0;
+  padding-top: 0;
 }

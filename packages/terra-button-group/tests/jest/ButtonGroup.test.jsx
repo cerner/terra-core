@@ -6,13 +6,13 @@ it('should render a default component', () => {
   expect(buttonGroup).toMatchSnapshot();
 });
 
-it('should render a button group with intent = default', () => {
-  const buttonGroup = shallow(<ButtonGroup intent="default" />);
+it('should render a button group with variant = default', () => {
+  const buttonGroup = shallow(<ButtonGroup variant="default" />);
   expect(buttonGroup).toMatchSnapshot();
 });
 
-it('should render a button group with intent = secondary', () => {
-  const buttonGroup = shallow(<ButtonGroup intent="secondary" />);
+it('should render a button group with variant = secondary', () => {
+  const buttonGroup = shallow(<ButtonGroup variant="secondary" />);
   expect(buttonGroup).toMatchSnapshot();
 });
 
@@ -52,14 +52,14 @@ it('should render a selectable button group', () => {
 });
 
 it('should render a button group with buttons', () => {
-  const buttonGroup = shallow(<ButtonGroup buttons={[<ButtonGroup.Button />]} />);
+  const buttonGroup = shallow(<ButtonGroup buttons={[<ButtonGroup.Button key="1" />]} />);
   expect(buttonGroup).toMatchSnapshot();
 });
 
 it('should render a button group with children', () => {
   const buttonGroup = shallow((
     <ButtonGroup>
-      <ButtonGroup.Button />
+      <ButtonGroup.Button key="1" />
     </ButtonGroup>
   ));
   expect(buttonGroup).toMatchSnapshot();
