@@ -2,28 +2,28 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import ReadMe from '../docs/README.md';
+import ReadMe from 'terra-table/docs/README.md';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import TableSrc from '!raw-loader!../src/Table.jsx';
+import TableSrc from '!raw-loader!terra-table/src/Table';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import SingleSelectableRowsSrc from '!raw-loader!../src/SingleSelectableRows.jsx';
+import SingleSelectableRowsSrc from '!raw-loader!terra-table/src/SingleSelectableRows';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import TableHeaderSrc from '!raw-loader!../src/TableHeader.jsx';
+import TableHeaderSrc from '!raw-loader!terra-table/src/TableHeader';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import TableHeaderContentSrc from '!raw-loader!../src/TableHeaderContent.jsx';
+import TableHeaderContentSrc from '!raw-loader!terra-table/src/TableHeaderContent';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import TableRowSrc from '!raw-loader!../src/TableRow.jsx';
+import TableRowSrc from '!raw-loader!terra-table/src/TableRow';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import TableRowsSrc from '!raw-loader!../src/TableRows.jsx';
+import TableRowsSrc from '!raw-loader!terra-table/src/TableRows';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import TableRowContentSrc from '!raw-loader!../src/TableRowContent.jsx';
+import TableRowContentSrc from '!raw-loader!terra-table/src/TableRowContent';
 
 import NoStripedTable from './NoStripedTable';
 import StripedTable from './StripedTable';

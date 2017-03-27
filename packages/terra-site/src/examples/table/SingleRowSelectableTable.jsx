@@ -1,5 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import Table from '../src/Table';
+import Table from 'terra-table';
 
 const SingleRowSelectableTable = () => (
   <Table isStriped={false}>
