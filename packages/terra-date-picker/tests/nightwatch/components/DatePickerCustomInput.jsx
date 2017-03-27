@@ -5,14 +5,14 @@ const CustomInputWithButton = (props) => {
   const customInput =
   (<div className="terra-DatePicker-custom">
     <input
-      className="terra-DatePicker-custom-input react-datepicker-ignore-onclickoutside"
+      className="terra-DatePicker-custom-input"
       value={props.value}
       onChange={props.onChange}
       placeholder={props.placeholder}
       type="text"
     />
     <button
-      className="terra-DatePicker-custom-button react-datepicker-ignore-onclickoutside"
+      className="terra-DatePicker-custom-button"
       onClick={props.onClick}
       onKeyDown={props.onKeyDown}
     />

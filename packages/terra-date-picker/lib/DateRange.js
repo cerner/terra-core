@@ -12,7 +12,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _DatePicker = require('../src/DatePicker');
+var _DatePicker = require('../lib/DatePicker');
 
 var _DatePicker2 = _interopRequireDefault(_DatePicker);
 

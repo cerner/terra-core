@@ -18,11 +18,7 @@ import DatePicker from 'terra-date-picker';
 <DatePicker
   minDate={moment()}
   maxDate={moment().add(30, 'days')}
-  todayButton="Today"
-  showMonthDropdown={false}
-  showYearDropdown={false}
   excludeDates={moment().add(1, 'days')}
-  highlightDates={moment().add(2, 'days')}
   filterDate={isWeekday}
 />
 

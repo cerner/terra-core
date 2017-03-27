@@ -1,26 +1,33 @@
 import React, { PropTypes } from 'react';
-import DatePicker from 'terra-date-picker';
+import Button from 'terra-button';
+import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
+
+const Icon = <IconCalendar />;
 
 // eslint-disable-next-line react/prefer-stateless-function
-class CustomInputWithButton extends React.PureComponent {
+class DatePickerInput extends React.Component {
   render() {
     return (
-      (<div className="terra-DatePicker-custom">
+      (<div className="terra-DatePicker-customInput">
         <input
-          className="terra-DatePicker-custom-input"
+          className="terra-DatePicker-input"
           type="text"
           value={this.props.value}
           onChange={this.props.onChange}
           placeholder={this.props.placeholder}
-          onKeyDown={this.props.onKeyDown}
+        />
+        <Button
+          className="terra-DatePicker-button"
           onClick={this.props.onClick}
+          onKeyDown={this.props.onKeyDown}
+          icon={Icon}
         />
       </div>)
     );
   }
 }
 
-CustomInputWithButton.propTypes = {
+DatePickerInput.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
   onKeyDown: PropTypes.func,
@@ -28,12 +35,4 @@ CustomInputWithButton.propTypes = {
   value: PropTypes.string,
 };
 
-const DatePickerCustomInput = () => (
-  <div>
-    <DatePicker
-      customInput={<CustomInputWithButton />}
-    />
-  </div>
-);
-
-export default DatePickerCustomInput;
+export default DatePickerInput;

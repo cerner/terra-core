@@ -7,19 +7,7 @@
   margin-top: 0.357em;
   padding: 6px 10px 6px;
   vertical-align: middle;
-
-  @if $terra-bidi {
-    [dir='ltr'] & {
-      border-radius: 4px 0 0 4px;
-    }
-
-    [dir='rtl'] & {
-      border-radius: 0 4px 4px 0;
-      margin-left: -1px;
-    }
-  } @else {
-    border-radius: 4px 0 0 4px;
-  }
+  border-radius: 4px;
 
   &:focus {
     border-color: $terra-blue-60;
@@ -27,23 +15,3 @@
     outline: none;
   }
 }
-
-.terra-DatePicker-custom-button {
-  @if $terra-bidi {
-    [dir='ltr'] & {
-      border-radius: 0 4px 4px 0;
-      margin-left: -1px;
-    }
-
-    [dir='rtl'] & {
-      border-radius: 4px 0 0 4px;
-    }
-  } @else {
-    border-radius: 0 4px 4px 0;
-    margin-left: -1px;
-  }
-}
-
-
-
-

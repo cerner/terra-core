@@ -31,9 +31,11 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "moment": "^2.17.1",
-    "react-datepicker": "^0.43.0",
-    "terra-responsive-element": "^0.x",
-    "terra-mixins": "^1.0.0"
+    "react-datepicker": "^0.44.0",
+    "terra-button": "^0.x",
+    "terra-icon": "^0.x",
+    "terra-mixins": "^1.0.0",
+    "terra-responsive-element": "^0.x"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

@@ -28,7 +28,11 @@ var _terraResponsiveElement = require('terra-responsive-element');
 
 var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);
 
-require('./DatePicker.scss');
+var _DateInput = require('../lib/DateInput');
+
+var _DateInput2 = _interopRequireDefault(_DateInput);
+
+require('../lib/DatePicker.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58,10 +62,6 @@ var propTypes = {
    */
   filterDate: _react.PropTypes.func,
   /**
-   * An array of moment objects that represent the dates to highlight in the picker.
-   */
-  highlightDates: _react.PropTypes.arrayOf(_react.PropTypes.object),
-  /**
    * An array of moment objects that represent the dates to enable in the picker. All Other dates will be disabled.
    */
   includeDates: _react.PropTypes.arrayOf(_react.PropTypes.object),
@@ -73,14 +73,6 @@ var propTypes = {
    * A moment object to represents the minimum date that can be selected.
    */
   minDate: _react.PropTypes.object,
-  /**
-   * The number of adjacent months to display in the picker.
-   */
-  monthsShown: _react.PropTypes.number,
-  /**
-   * When no date is selected the date picker will be opened to this moment object instead of defaulting to show the current month.
-   */
-  openToDate: _react.PropTypes.object,
   /**
    * The selected date to show in the date input.
    */
@@ -94,25 +86,9 @@ var propTypes = {
    */
   isStartDateRange: _react.PropTypes.bool,
   /**
-   * Indicates to show a month dropdown for selecting other months of the year.
-   */
-  showMonthDropdown: _react.PropTypes.bool,
-  /**
-   * Indicates to show a year dropdown for selecting a different year.
-   */
-  showYearDropdown: _react.PropTypes.bool,
-  /**
    * The default start date for a date range.
    */
   startDate: _react.PropTypes.object,
-  /**
-   * Indicates to show the today button select selecting today's date.
-   */
-  todayButton: _react.PropTypes.string,
-  /**
-   * Indicates to hide the today button.
-   */
-  hideTodayButton: _react.PropTypes.bool,
   /**
    * Indicates to display the picker in a full screen overlay.
    */
@@ -124,14 +100,9 @@ var propTypes = {
 };
 
 var defaultProps = {
-  monthsShown: 1,
   isEndDateRange: false,
   isStartDateRange: false,
-  showMonthDropdown: undefined,
-  showYearDropdown: undefined,
-  withPortal: undefined,
-  todayButton: undefined,
-  hideTodayButton: false
+  withPortal: undefined
 };
 
 var DatePicker = function (_React$Component) {
@@ -169,24 +140,20 @@ var DatePicker = function (_React$Component) {
           endDate = _props.endDate,
           excludeDates = _props.excludeDates,
           filterDate = _props.filterDate,
-          highlightDates = _props.highlightDates,
           includeDates = _props.includeDates,
           maxDate = _props.maxDate,
           minDate = _props.minDate,
-          monthsShown = _props.monthsShown,
-          openToDate = _props.openToDate,
           isEndDateRange = _props.isEndDateRange,
           isStartDateRange = _props.isStartDateRange,
           selectedDate = _props.selectedDate,
-          showMonthDropdown = _props.showMonthDropdown,
-          showYearDropdown = _props.showYearDropdown,
           startDate = _props.startDate,
-          todayButton = _props.todayButton,
-          hideTodayButton = _props.hideTodayButton,
           withPortal = _props.withPortal,
-          customProps = _objectWithoutProperties(_props, ['customInput', 'endDate', 'excludeDates', 'filterDate', 'highlightDates', 'includeDates', 'maxDate', 'minDate', 'monthsShown', 'openToDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'showMonthDropdown', 'showYearDropdown', 'startDate', 'todayButton', 'hideTodayButton', 'withPortal']);
+          customProps = _objectWithoutProperties(_props, ['customInput', 'endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate', 'withPortal']);
 
-      var classes = (0, _classnames2.default)(['terra-DatePicker-input']);
+      var classes = (0, _classnames2.default)(['terra-DatePicker']);
+
+      // TODO: Need translation from date_util
+      var todayString = 'Today';
 
       // TODO: Set the locale using the local data file defined by i18n
       var userLocale = window.navigator.language;
@@ -196,104 +163,58 @@ var DatePicker = function (_React$Component) {
       localMoment.locale(userLocale);
       var momentDateFormat = localMoment.localeData().longDateFormat('L');
 
-      // Show the month drop down by default. Hide only if explicitly set to false.
-      var defaultMonthDropdown = true;
-      if (showMonthDropdown === false) {
-        defaultMonthDropdown = false;
-      }
+      var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
+        selected: selectedDate || this.state.startDate,
+        onChange: this.handleChange,
+        customInput: customInput || _react2.default.createElement(_DateInput2.default, null),
+        endDate: endDate,
+        excludeDates: excludeDates,
+        filterDate: filterDate,
+        includeDates: includeDates,
+        maxDate: maxDate,
+        minDate: minDate,
+        selectsEnd: isEndDateRange,
+        selectsStart: isStartDateRange,
+        startDate: startDate,
+        todayButton: todayString,
+        withPortal: withPortal === undefined ? true : withPortal,
+        dateFormatCalendar: ' ',
+        dateFormat: momentDateFormat,
+        fixedHeight: true,
+        locale: userLocale,
+        placeholderText: momentDateFormat,
+        dropdownMode: 'select',
+        showMonthDropdown: true,
+        showYearDropdown: true
+      }));
 
-      // Show the year drop down by default. Hide only if explicitly set to false.
-      var defaultYearDropdown = true;
-      if (showYearDropdown === false) {
-        defaultYearDropdown = false;
-      }
-
-      // Show the month label only if the month drop down is hidden.
-      // Show the year label only if the year drop down is hidden.
-      // An empty space format will clear the month/year label.
-      var dateFormatCalendar = ' ';
-      if (!defaultMonthDropdown && !defaultYearDropdown) {
-        dateFormatCalendar = 'MMMM YYYY';
-      } else if (!defaultMonthDropdown && defaultYearDropdown) {
-        dateFormatCalendar = 'MMMM';
-      } else if (defaultMonthDropdown && !defaultYearDropdown) {
-        dateFormatCalendar = 'YYYY';
-      }
-
-      var defaultTodayButton = todayButton;
-      if (hideTodayButton) {
-        defaultTodayButton = undefined;
-      } else if (todayButton === undefined) {
-        defaultTodayButton = 'Today'; // TODO: Need to translate
-      }
-
-      var portalPicker = _react2.default.createElement(
-        'div',
-        { className: 'terra-DatePicker' },
-        _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
-          className: classes,
-          selected: selectedDate || this.state.startDate,
-          onChange: this.handleChange,
-          customInput: customInput,
-          endDate: endDate,
-          excludeDates: excludeDates,
-          filterDate: filterDate,
-          highlightDates: highlightDates,
-          includeDates: includeDates,
-          maxDate: maxDate,
-          minDate: minDate,
-          monthsShown: monthsShown,
-          openToDate: openToDate,
-          selectsEnd: isEndDateRange,
-          selectsStart: isStartDateRange,
-          startDate: startDate,
-          todayButton: defaultTodayButton,
-          withPortal: withPortal === undefined ? true : withPortal,
-          dateFormatCalendar: dateFormatCalendar,
-          dateFormat: momentDateFormat,
-          fixedHeight: true,
-          locale: userLocale,
-          placeholderText: momentDateFormat,
-          dropdownMode: 'select',
-          showMonthDropdown: defaultMonthDropdown,
-          showYearDropdown: defaultYearDropdown
-        }))
-      );
-
-      var popupPicker = _react2.default.createElement(
-        'div',
-        { className: 'terra-DatePicker' },
-        _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
-          className: classes,
-          selected: selectedDate || this.state.startDate,
-          onChange: this.handleChange,
-          customInput: customInput,
-          endDate: endDate,
-          excludeDates: excludeDates,
-          filterDate: filterDate,
-          highlightDates: highlightDates,
-          includeDates: includeDates,
-          maxDate: maxDate,
-          minDate: minDate,
-          monthsShown: monthsShown,
-          openToDate: openToDate,
-          selectsEnd: isEndDateRange,
-          selectsStart: isStartDateRange,
-          startDate: startDate,
-          todayButton: defaultTodayButton,
-          withPortal: withPortal === undefined ? false : withPortal,
-          dateFormatCalendar: dateFormatCalendar,
-          dateFormat: momentDateFormat,
-          fixedHeight: true,
-          locale: userLocale,
-          placeholderText: momentDateFormat,
-          dropdownMode: 'select',
-          showMonthDropdown: defaultMonthDropdown,
-          showYearDropdown: defaultYearDropdown
-        }))
-      );
+      var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
+        selected: selectedDate || this.state.startDate,
+        onChange: this.handleChange,
+        customInput: customInput || _react2.default.createElement(_DateInput2.default, null),
+        endDate: endDate,
+        excludeDates: excludeDates,
+        filterDate: filterDate,
+        includeDates: includeDates,
+        maxDate: maxDate,
+        minDate: minDate,
+        selectsEnd: isEndDateRange,
+        selectsStart: isStartDateRange,
+        startDate: startDate,
+        todayButton: todayString,
+        withPortal: withPortal === undefined ? false : withPortal,
+        dateFormatCalendar: ' ',
+        dateFormat: momentDateFormat,
+        fixedHeight: true,
+        locale: userLocale,
+        placeholderText: momentDateFormat,
+        dropdownMode: 'select',
+        showMonthDropdown: true,
+        showYearDropdown: true
+      }));
 
       return _react2.default.createElement(_terraResponsiveElement2.default, {
+        className: classes,
         responsiveTo: 'window',
         defaultElement: portalPicker,
         medium: popupPicker
