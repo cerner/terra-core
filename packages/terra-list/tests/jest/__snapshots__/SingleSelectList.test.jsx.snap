@@ -1,0 +1,309 @@
+exports[`test should render a default component 1`] = `
+<List
+  isDivided={false}
+  tabIndex="0" />
+`;
+
+exports[`test should render with hasChevrons 1`] = `
+<List
+  isDivided={false}
+  tabIndex="0">
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;
+
+exports[`test should render with isDivided 1`] = `
+<List
+  isDivided={true}
+  tabIndex="0">
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;
+
+exports[`test should render with items 1`] = `
+<List
+  isDivided={false}
+  tabIndex="0">
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <type
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;
+
+exports[`test should select an item 1`] = `
+<List
+  isDivided={false}
+  tabIndex="0">
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;
+
+exports[`test should select an item 2`] = `
+<List
+  isDivided={false}
+  tabIndex="0">
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;
+
+exports[`test should select an item 3`] = `
+<List
+  isDivided={false}
+  tabIndex="0">
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;
+
+exports[`test should select an item 4`] = `
+<List
+  isDivided={false}
+  tabIndex="0">
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={true}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]} />
+</List>
+`;

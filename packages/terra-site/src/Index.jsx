@@ -16,6 +16,7 @@ import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
+import ListExamples from './examples/list/Index';
 import MenuExamples from './examples/menu/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
@@ -34,6 +35,10 @@ import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelT
 import ClinicalItemViewTestRoutes from 'terra-clinical-item-view/tests/nightwatch/clinical-item-view/ClinicalItemViewTestRoutes';
 import CommentTestRoutes from 'terra-clinical-item-view/tests/nightwatch/comment/CommentTestRoutes';
 import DisplayTestRoutes from 'terra-clinical-item-view/tests/nightwatch/display/DisplayTestRoutes';
+import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
+import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
+import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
+import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -53,6 +58,7 @@ ReactDOM.render((
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
       <Route path="image" component={ImageExamples} />
+      <Route path="list" component={ListExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
@@ -70,5 +76,9 @@ ReactDOM.render((
     {ClinicalItemViewTestRoutes}
     {CommentTestRoutes}
     {DisplayTestRoutes}
+    {ListTestRoutes}
+    {ListItemTestRoutes}
+    {SingleSelectListTestRoutes}
+    {MultiSelectListTestRoutes}
   </Router>
 ), document.getElementById('root'));
