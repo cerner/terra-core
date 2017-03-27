@@ -79,7 +79,7 @@ var TableRow = function TableRow(_ref) {
       onClick = _ref.onClick,
       customProps = _objectWithoutProperties(_ref, ['className', 'children', 'isSelected', 'isSelectable', 'height', 'onClick']);
 
-  var rowClassNames = (0, _classnames2.default)([{ 'terra-Table--isSelected': isSelected }, { 'terra-Table--isSelectable': isSelectable }, className]);
+  var rowClassNames = (0, _classnames2.default)([{ 'terra-Table--isSelected': isSelected }, { 'terra-Table--isSelectable': isSelectable }, 'terra-Table-row', className]);
 
   var cloneChildren = cloneChildItems(children, height, onClick);
   return _react2.default.createElement(

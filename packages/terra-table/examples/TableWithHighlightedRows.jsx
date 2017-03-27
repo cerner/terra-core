@@ -9,7 +9,7 @@ const TableWithHighlightedRows = () => (
       <Table.HeaderContent display={'Column Heading 3'} key={3} minWidth={'large'} />
     </Table.Header>
     <Table.Rows>
-      <Table.Row isSelected={true} key={0}>
+      <Table.Row isSelected key={0}>
         <Table.RowContent display={'Table Data'} key={1} />
         <Table.RowContent display={'Table Data'} key={2} />
         <Table.RowContent display={'Table Data'} key={3} />
@@ -24,7 +24,7 @@ const TableWithHighlightedRows = () => (
         <Table.RowContent display={'Table Data'} key={2} />
         <Table.RowContent display={'Table Data'} key={3} />
       </Table.Row>
-      <Table.Row isSelected={true} key={3}>
+      <Table.Row isSelected key={3}>
         <Table.RowContent display={'Table Data'} key={1} />
         <Table.RowContent display={'Table Data'} key={2} />
         <Table.RowContent display={'Table Data'} key={3} />

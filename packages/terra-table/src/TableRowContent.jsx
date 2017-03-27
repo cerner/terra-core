@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 
 const propTypes = {
   /**
@@ -17,12 +16,11 @@ const TableRowContent = ({
   height,
   ...customProps
   }) => {
-  if(height) {
-    customProps['data-max-height'] = height;
-  }
-  
+  const heightProperty = {
+    'data-max-height': height,
+  };
   return (
-    <td {...customProps}>
+    <td {...heightProperty} {...customProps}>
       <div>{display}</div>
     </td>
   );

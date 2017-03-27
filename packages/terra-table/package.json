@@ -24,7 +24,6 @@
   "devDependencies": {
     "terra-markdown": "^0.0.0",
     "terra-props-table": "^0.0.0",
-    "terra-icon": "^0.0.0",
     "terra-toolkit": "^0.1.0"
   },
   "peerDependencies": {
@@ -35,6 +34,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^15.4.2",
+    "terra-icon": "^0.0.0",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {

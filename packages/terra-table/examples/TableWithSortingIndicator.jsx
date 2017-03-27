@@ -5,7 +5,7 @@ const TableWithSortingIndicator = () => (
   <Table isStriped={false}>
     <Table.Header>
       <Table.HeaderContent display={'Column Heading 1'} key={1} minWidth={'small'} />
-      <Table.HeaderContent display={'Column Heading 2'} key={2} minWidth={'medium'} sort={'asc'}/>
+      <Table.HeaderContent display={'Column Heading 2'} key={2} minWidth={'medium'} sort={'asc'} />
       <Table.HeaderContent display={'Column Heading 3'} key={3} minWidth={'large'} />
     </Table.Header>
     <Table.SingleSelectableRows>

@@ -60,6 +60,7 @@ const TableRow = ({
   const rowClassNames = classNames([
     { 'terra-Table--isSelected': isSelected },
     { 'terra-Table--isSelectable': isSelectable },
+    'terra-Table-row',
     className,
   ]);
 

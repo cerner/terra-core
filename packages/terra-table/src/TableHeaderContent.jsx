@@ -60,12 +60,12 @@ const TableHeaderContent = ({
     { 'terra-Table-hidden': sort !== 'desc' },
   ]);
 
-  if(height) {
-    customProps['data-max-height'] = height;
-  }
+  const heightProperty = {
+    'data-max-height': height,
+  };
 
   return (
-    <th className={contentClassName} data-column-min-width = {minWidth} {...customProps}>
+    <th className={contentClassName} data-column-min-width={minWidth} {...heightProperty} {...customProps}>
       <div>
         {display}
         <span className={ascSortInd}>{iconUp}</span>

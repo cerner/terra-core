@@ -25,36 +25,36 @@
 
 [data-max-height='tiny'] {
   > div {
-    overflow: auto;
     max-height: $terra-table-cell-max-height-tiny;
+    overflow: auto;
   }
 }
 
 [data-max-height='small'] {
   > div {
-    overflow: auto;
     max-height: $terra-table-cell-max-height-small;
+    overflow: auto;
   }
 }
 
 [data-max-height='medium'] {
   > div {
-    overflow: auto;
     max-height: $terra-table-cell-max-height-medium;
+    overflow: auto;
   }
 }
 
 [data-max-height='large'] {
   > div {
-    overflow: auto;
     max-height: $terra-table-cell-max-height-large;
+    overflow: auto;
   }
 }
 
 [data-max-height='huge'] {
   > div {
-    overflow: auto;
     max-height: $terra-table-cell-max-height-huge;
+    overflow: auto;
   }
 }
 

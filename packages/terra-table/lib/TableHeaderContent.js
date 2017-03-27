@@ -74,13 +74,13 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
 
   var descSortInd = (0, _classnames2.default)(['terra-Table-sort-indicator', { 'terra-Table-hidden': sort !== 'desc' }]);
 
-  if (height) {
-    customProps['data-max-height'] = height;
-  }
+  var heightProperty = {
+    'data-max-height': height
+  };
 
   return _react2.default.createElement(
     'th',
-    _extends({ className: contentClassName, 'data-column-min-width': minWidth }, customProps),
+    _extends({ className: contentClassName, 'data-column-min-width': minWidth }, heightProperty, customProps),
     _react2.default.createElement(
       'div',
       null,

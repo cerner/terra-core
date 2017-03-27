@@ -50,7 +50,7 @@ ReactDOM.render((
       <Route path="title" component={TitleExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
-      <Route path="table" component={TableExamples} />      
+      <Route path="table" component={TableExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
