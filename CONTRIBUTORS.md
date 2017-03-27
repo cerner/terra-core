@@ -29,5 +29,5 @@ Cerner Corporation
 [@sid141288]: https://github.com/sid141288
 [@tbiethman]: https://github.com/tbiethman
 [@bunnyLord]: https://github.com/bunnyLord
-[@dkasper-was-taken]: https://github.com/dkasper-was-taken
 [@jmsv6d]: https://github.com/jmsv6d
+[@dkasper-was-taken]: https://github.com/dkasper-was-taken
