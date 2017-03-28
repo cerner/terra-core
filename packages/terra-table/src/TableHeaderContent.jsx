@@ -20,10 +20,6 @@ const propTypes = {
    * The maximum height for the cell content in a table
    */
   height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  /**
-   * A callback function for onClick action
-   */
-  onClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -59,8 +55,12 @@ const TableHeaderContent = ({
     'data-max-height': height,
   };
 
+  const dataSort = {
+    'data-sort': sort,
+  };
+
   return (
-    <th {...customProps} className={contentClassName} data-column-min-width={minWidth} {...heightProperty}>
+    <th {...customProps} className={contentClassName} data-column-min-width={minWidth} {...heightProperty} {...dataSort}>
       <div>
         {display}
         <span className={ascSortInd}>{iconUp}</span>

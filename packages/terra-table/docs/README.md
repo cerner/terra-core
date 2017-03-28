@@ -10,7 +10,7 @@ The Terra Table is a structural component to arrange content within table.
 
 ## Usage
 
-### Selectable Table
+### Table
 ```jsx
 import React from 'react';
 import Table from 'terra-table';

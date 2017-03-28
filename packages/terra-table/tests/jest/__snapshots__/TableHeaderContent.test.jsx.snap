@@ -27,7 +27,8 @@ exports[`test should render default table header content tag 1`] = `
 exports[`test should render table header content tag with ascending sort indicator 1`] = `
 <th
   className="terra-Table-header"
-  data-column-min-width="small">
+  data-column-min-width="small"
+  data-sort="asc">
   <div>
     Column Heading
     <span
@@ -53,7 +54,8 @@ exports[`test should render table header content tag with ascending sort indicat
 exports[`test should render table header content tag with descending sort indicator 1`] = `
 <th
   className="terra-Table-header"
-  data-column-min-width="small">
+  data-column-min-width="small"
+  data-sort="desc">
   <div>
     Column Heading
     <span

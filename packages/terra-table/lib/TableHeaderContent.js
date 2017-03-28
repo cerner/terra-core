@@ -42,11 +42,7 @@ var propTypes = {
   /**
    * The maximum height for the cell content in a table
    */
-  height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  /**
-   * A callback function for onClick action
-   */
-  onClick: _react.PropTypes.func
+  height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge'])
 };
 
 var defaultProps = {
@@ -73,9 +69,13 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
     'data-max-height': height
   };
 
+  var dataSort = {
+    'data-sort': sort
+  };
+
   return _react2.default.createElement(
     'th',
-    _extends({}, customProps, { className: contentClassName, 'data-column-min-width': minWidth }, heightProperty),
+    _extends({}, customProps, { className: contentClassName, 'data-column-min-width': minWidth }, heightProperty, dataSort),
     _react2.default.createElement(
       'div',
       null,

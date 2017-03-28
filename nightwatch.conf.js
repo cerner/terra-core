@@ -13,6 +13,7 @@ module.exports = ((settings) => {
     'packages/terra-image/tests/nightwatch',
     'packages/terra-responsive-element/tests/nightwatch',
     'packages/terra-slide-panel/tests/nightwatch',
+    'packages/terra-table/tests/nightwatch',
   ];
   return updatedSettings;
 })(nightwatchConfiguration);
