@@ -108,10 +108,10 @@ class DatePicker extends React.Component {
     // TODO: Need translation from date_util
     const todayString = 'Today';
 
-    // TODO: Set the locale using the local data file defined by i18n
+    // TODO: Get the locale from date_util
     const userLocale = window.navigator.language;
 
-    // TODO: The date format needs to be fetched from the locale data file when the i18n work is complete.
+    // TODO: Get date format from date_util
     const localMoment = moment();
     localMoment.locale(userLocale);
     const momentDateFormat = localMoment.localeData().longDateFormat('L');
