@@ -15,7 +15,7 @@ const displays = [display1, display2, display3, display4, display5, display6];
 const itemView1 = <ClinicalItemView displays={displays} />;
 const itemView2 = <ClinicalItemView displays={displays} />;
 
-const button1 = <Button text="header button">;
+const button1 = <Button text="header button" />;
 
 const container = () => (
   <ContentContainer header={button1} fill>
