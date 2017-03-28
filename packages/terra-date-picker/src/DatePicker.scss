@@ -3,36 +3,34 @@
 
 .terra-DatePicker {
   display: inline-block;
-  margin-left: 0.357em;
-  position: relative;
+  min-width: 14.643em; 
 }
 
 .terra-DatePicker-input {
-  border: 1px solid #aeaeae;
-  box-shadow: inset 0 2px 2px #e9e9e9;
-  font-size: 14px;
-  line-height: 16px;
-  margin-bottom: 0.357em;
-  margin-top: 0.357em;
-  padding: 6px 10px;
+  border: 0.071em solid $terra-grey-40;
+  box-shadow: inset 0 0.143em 0.143em $terra-grey-20;
+  font-size: 1em;
+  height: 1.143em;
+  line-height: 1.143em;
+  margin: 0.357em 0;
+  padding: 0.429em 0.714em;
   vertical-align: middle;
 
   @if $terra-bidi {
     [dir='ltr'] & {
-      border-radius: 4px 0 0 4px;
+      border-radius: 0.286em 0 0 0.286em;
     }
 
     [dir='rtl'] & {
-      border-radius: 0 4px 4px 0;
-      margin-left: -1px;
+      border-radius: 0 0.286em 0.286em 0;
+      margin-left: -0.071em;
     }
   } @else {
-    border-radius: 4px 0 0 4px;
+    border-radius: 0.286em 0 0 0.286em;
   }
 
   &:focus {
     border-color: $terra-blue-60;
-    box-shadow: inset 0 2px 2px #e9e9e9, 0 0 10px 0 rgba(73, 107, 125, 0.3);
     outline: none;
   }
 }
@@ -40,21 +38,17 @@
 .terra-DatePicker-button {
   @if $terra-bidi {
     [dir='ltr'] & {
-      border-radius: 0 4px 4px 0;
-      margin-left: -1px;
+      border-radius: 0 0.286em 0.286em 0;
+      margin-left: -0.071em;
     }
 
     [dir='rtl'] & {
-      border-radius: 4px 0 0 4px;
+      border-radius: 0.286em 0 0 0.286em;
     }
   } @else {
-    border-radius: 0 4px 4px 0;
-    margin-left: -1px;
+    border-radius: 0 0.286em 0.286em 0;
+    margin-left: -0.071em;
   }
-}
-
-.terra-DatePicker-range {
-  display: inline-block;
 }
 
 
