@@ -12,7 +12,7 @@ var _marked = require('marked');
 
 var _marked2 = _interopRequireDefault(_marked);
 
-require('github-markdown-css/github-markdown.css');
+require('github-markdown-css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21,7 +21,8 @@ var propTypes = {
    * Markdown content to parse
    */
   src: _react.PropTypes.string
-}; /* eslint-disable import/no-extraneous-dependencies */
+};
+// eslint-disable-next-line import/extensions
 
 
 var defaultProps = {
