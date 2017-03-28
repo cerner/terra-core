@@ -26,13 +26,15 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "terra-base": "^0.x",
+    "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^15.4.2",
-    "terra-mixins": "^1.0.0",
-    "terra-icon": "^0.0.0"
+    "terra-icon": "^0.x",
+    "terra-mixins": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

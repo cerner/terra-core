@@ -7,6 +7,7 @@ import Home from './Home';
 // Examples
 import ApplicationExamples from './examples/application/Index';
 import ArrangeExamples from './examples/arrange/Index';
+import BaseExamples from './examples/base/Index';
 import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ClinicalItemViewExamples from './examples/clinical-item-view/Index';
@@ -27,6 +28,7 @@ import TitleExamples from './examples/title/Index';
 
 // Test
 /* eslint-disable import/first */
+import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import DetailViewTestRoutes from 'terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
@@ -50,6 +52,7 @@ ReactDOM.render((
       <Route path="application" component={ApplicationExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
+      <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
       <Route path="content" component={ContentExamples} />
@@ -68,6 +71,7 @@ ReactDOM.render((
       <Route path="responsive-element" component={ResponsiveElementExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
+    {BaseTestRoutes}
     {ButtonTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
