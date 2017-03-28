@@ -1,14 +1,15 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Table from '../../../lib/Table';
 
-const NoStripedTable = () => (
+const TableWithSortingIndicator = () => (
   <Table isStriped={false}>
     <Table.Header>
       <Table.HeaderContent display={'Column Heading 1'} key={1} minWidth={'small'} />
-      <Table.HeaderContent display={'Column Heading 2'} key={2} minWidth={'medium'} />
+      <Table.HeaderContent display={'Column Heading 2'} key={2} minWidth={'medium'} sort={'asc'} />
       <Table.HeaderContent display={'Column Heading 3'} key={3} minWidth={'large'} />
     </Table.Header>
-    <Table.Rows>
+    <Table.SingleSelectableRows>
       <Table.Row key={0}>
         <Table.RowContent display={'Row 1 Cell 1'} key={1} />
         <Table.RowContent display={'Row 1 Cell 2'} key={2} />
@@ -24,8 +25,8 @@ const NoStripedTable = () => (
         <Table.RowContent display={'Row 3 Cell 2'} key={2} />
         <Table.RowContent display={'Row 3 Cell 3'} key={3} />
       </Table.Row>
-    </Table.Rows>
+    </Table.SingleSelectableRows>
   </Table>
 );
 
-export default NoStripedTable;
+export default TableWithSortingIndicator;

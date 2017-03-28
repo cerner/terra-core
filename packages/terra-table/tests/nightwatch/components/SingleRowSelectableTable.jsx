@@ -10,19 +10,19 @@ const SingleRowSelectableTable = () => (
     </Table.Header>
     <Table.SingleSelectableRows>
       <Table.Row isSelected key={0}>
-        <Table.RowContent display={'Table Data'} key={1} />
-        <Table.RowContent display={'Table Data'} key={2} />
-        <Table.RowContent display={'Table Data'} key={3} />
+        <Table.RowContent display={'Row 1 Cell 1'} key={1} />
+        <Table.RowContent display={'Row 1 Cell 2'} key={2} />
+        <Table.RowContent display={'Row 1 Cell 3'} key={3} />
       </Table.Row>
       <Table.Row key={1}>
-        <Table.RowContent display={'Table Data'} key={1} />
-        <Table.RowContent display={'Table Data'} key={2} />
-        <Table.RowContent display={'Table Data'} key={3} />
+        <Table.RowContent display={'Row 2 Cell 1'} key={1} />
+        <Table.RowContent display={'Row 2 Cell 2'} key={2} />
+        <Table.RowContent display={'Row 2 Cell 3'} key={3} />
       </Table.Row>
       <Table.Row key={2}>
-        <Table.RowContent display={'Table Data'} key={1} />
-        <Table.RowContent display={'Table Data'} key={2} />
-        <Table.RowContent display={'Table Data'} key={3} />
+        <Table.RowContent display={'Row 3 Cell 1'} key={1} />
+        <Table.RowContent display={'Row 3 Cell 2'} key={2} />
+        <Table.RowContent display={'Row 3 Cell 3'} key={3} />
       </Table.Row>
     </Table.SingleSelectableRows>
   </Table>
