@@ -24,10 +24,6 @@ const propTypes = {
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
-  /**
-   * The class to put on th tag
-   */
-  className: PropTypes.string,
 };
 
 const defaultProps = {
@@ -42,12 +38,11 @@ const TableHeaderContent = ({
   height,
   minWidth,
   sort,
-  className,
   ...customProps
   }) => {
   const contentClassName = classNames([
     'terra-Table-header',
-    className,
+    customProps.className,
   ]);
 
   const ascSortInd = classNames([
@@ -65,7 +60,7 @@ const TableHeaderContent = ({
   };
 
   return (
-    <th className={contentClassName} data-column-min-width={minWidth} {...heightProperty} {...customProps}>
+    <th {...customProps} className={contentClassName} data-column-min-width={minWidth} {...heightProperty}>
       <div>
         {display}
         <span className={ascSortInd}>{iconUp}</span>

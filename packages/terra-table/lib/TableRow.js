@@ -36,26 +36,17 @@ var propTypes = {
    */
   height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
-   * A callback function for onClick action
-   */
-  onClick: _react.PropTypes.func,
-  /**
    * Whether or not row is selectable
    */
-  isSelectable: _react.PropTypes.bool,
-  /**
-   * A classname to put on row component of table
-   */
-  className: _react.PropTypes.string
+  isSelectable: _react.PropTypes.bool
 };
 
 var defaultProps = {
   isSelected: false,
-  isSelectable: undefined,
-  className: ''
+  isSelectable: undefined
 };
 
-function cloneChildItems(children, height, onClick) {
+function cloneChildItems(children, height) {
   var childrenArray = _react2.default.Children.toArray(children);
   if (childrenArray.length > 16) {
     console.log('Number of Columns are ' + _react2.default.Children.count(children) + '. This is more than columns limit');
@@ -64,27 +55,25 @@ function cloneChildItems(children, height, onClick) {
     return index < 16;
   }).map(function (child) {
     if (child.type === _TableRowContent2.default) {
-      return _react2.default.cloneElement(child, { height: height, onClick: onClick });
+      return _react2.default.cloneElement(child, { height: height });
     }
     return child;
   });
 }
 
 var TableRow = function TableRow(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
+  var children = _ref.children,
       isSelected = _ref.isSelected,
       isSelectable = _ref.isSelectable,
       height = _ref.height,
-      onClick = _ref.onClick,
-      customProps = _objectWithoutProperties(_ref, ['className', 'children', 'isSelected', 'isSelectable', 'height', 'onClick']);
+      customProps = _objectWithoutProperties(_ref, ['children', 'isSelected', 'isSelectable', 'height']);
 
-  var rowClassNames = (0, _classnames2.default)([{ 'terra-Table--isSelected': isSelected }, { 'terra-Table--isSelectable': isSelectable }, 'terra-Table-row', className]);
+  var rowClassNames = (0, _classnames2.default)([{ 'terra-Table--isSelected': isSelected }, { 'terra-Table--isSelectable': isSelectable }, 'terra-Table-row', customProps.className]);
 
-  var cloneChildren = cloneChildItems(children, height, onClick);
+  var cloneChildren = cloneChildItems(children, height);
   return _react2.default.createElement(
     'tr',
-    _extends({ className: rowClassNames }, customProps),
+    _extends({}, customProps, { className: rowClassNames }),
     cloneChildren
   );
 };

@@ -1,0 +1,15 @@
+exports[`test should render table header tag 1`] = `
+<thead>
+  <tr>
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+  </tr>
+</thead>
+`;

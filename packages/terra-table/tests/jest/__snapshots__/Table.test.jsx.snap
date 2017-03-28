@@ -1,0 +1,73 @@
+exports[`test should render a default table 1`] = `
+<table
+  className="terra-Table terra-Table--striped">
+  <TableHeader>
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+  </TableHeader>
+  <TableRows>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+    </TableRow>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+    </TableRow>
+  </TableRows>
+</table>
+`;
+
+exports[`test should render a table without zebra stripes 1`] = `
+<table
+  className="terra-Table">
+  <TableHeader>
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+    <TableHeaderContent
+      display="Column Heading"
+      minWidth="small" />
+  </TableHeader>
+  <TableRows>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+    </TableRow>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+      <TableRowContent
+        display="Table Data" />
+    </TableRow>
+  </TableRows>
+</table>
+`;

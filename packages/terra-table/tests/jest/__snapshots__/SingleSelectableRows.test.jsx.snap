@@ -1,0 +1,54 @@
+exports[`test should render SingleSelectableRows tag 1`] = `
+<TableRows>
+  <TableRow
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}>
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+  </TableRow>
+  <TableRow
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}>
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should render SingleSelectableRows with maximum height set 1`] = `
+<TableRows
+  height="medium">
+  <TableRow
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}>
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+  </TableRow>
+  <TableRow
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}>
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+    <TableRowContent
+      display="Table Data" />
+  </TableRow>
+</TableRows>
+`;

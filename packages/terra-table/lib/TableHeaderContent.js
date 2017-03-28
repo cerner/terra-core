@@ -46,11 +46,7 @@ var propTypes = {
   /**
    * A callback function for onClick action
    */
-  onClick: _react.PropTypes.func,
-  /**
-   * The class to put on th tag
-   */
-  className: _react.PropTypes.string
+  onClick: _react.PropTypes.func
 };
 
 var defaultProps = {
@@ -65,10 +61,9 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
       height = _ref.height,
       minWidth = _ref.minWidth,
       sort = _ref.sort,
-      className = _ref.className,
-      customProps = _objectWithoutProperties(_ref, ['display', 'height', 'minWidth', 'sort', 'className']);
+      customProps = _objectWithoutProperties(_ref, ['display', 'height', 'minWidth', 'sort']);
 
-  var contentClassName = (0, _classnames2.default)(['terra-Table-header', className]);
+  var contentClassName = (0, _classnames2.default)(['terra-Table-header', customProps.className]);
 
   var ascSortInd = (0, _classnames2.default)(['terra-Table-sort-indicator', { 'terra-Table-hidden': sort !== 'asc' }]);
 
@@ -80,7 +75,7 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
 
   return _react2.default.createElement(
     'th',
-    _extends({ className: contentClassName, 'data-column-min-width': minWidth }, heightProperty, customProps),
+    _extends({}, customProps, { className: contentClassName, 'data-column-min-width': minWidth }, heightProperty),
     _react2.default.createElement(
       'div',
       null,
