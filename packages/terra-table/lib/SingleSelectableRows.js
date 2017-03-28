@@ -52,9 +52,12 @@ var SingleSelectableRows = function (_React$Component) {
     key: 'selectedRowIndex',
     value: function selectedRowIndex(rows) {
       // Find the first row which is selected and is selectable
-      return rows.findIndex(function (row) {
-        return row.props.isSelected && row.props.isSelectable !== false;
-      });
+      for (var i = 0; i < rows.length; i += 1) {
+        if (rows[i].props.isSelected === true && rows[i].props.isSelectable !== false) {
+          return i;
+        }
+      }
+      return -1;
     }
   }]);
 

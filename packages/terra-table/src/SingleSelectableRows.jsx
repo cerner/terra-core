@@ -23,7 +23,12 @@ const defaultProps = {
 class SingleSelectableRows extends React.Component {
   static selectedRowIndex(rows) {
     // Find the first row which is selected and is selectable
-    return rows.findIndex(row => row.props.isSelected && row.props.isSelectable !== false);
+    for (let i = 0; i < rows.length; i += 1) {
+      if (rows[i].props.isSelected === true && rows[i].props.isSelectable !== false) {
+        return i;
+      }
+    }
+    return -1;
   }
 
   constructor(props) {
