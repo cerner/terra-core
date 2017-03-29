@@ -12,8 +12,12 @@ const windowSizes = {
 };
 
 module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-responsive-element', done);
   },
 
   'Displays the default element when contained within a parent of default size': (browser) => {
