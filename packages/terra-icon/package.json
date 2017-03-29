@@ -23,13 +23,13 @@
   "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
     "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "cerner-one-icons": "git+https://github.cerner.com/ux/cerner-one-icons.git#af52c0dd92cfd56e1be1f9bef0f114de7294fed3",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {

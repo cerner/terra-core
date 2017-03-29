@@ -76,6 +76,7 @@ refresh,src/icons/0051_arrowsCircle_a.svg,themeable ,
 provider,src/icons/0053_provider_a.svg,themeable ,
 padlock,src/icons/0054_padlock_a.svg,themeable ,
 featured,src/icons/0056_star_a.svg,themeable ,
+featuredOutline,src/icons/0056_star_a_outline.svg,themeable ,
 archive,src/icons/0058_box_a.svg,themeable ,
 funnel,src/icons/0059_funnel_a.svg,themeable ,
 documents,src/icons/0060_papers_a.svg,themeable ,
@@ -144,3 +145,10 @@ pharmacyReject,src/icons/0146_roundRectangleLinePlusCancel_a.svg,,
 busy,src/icons/0147_circle_i_heavy.svg,themeable ,
 unavailable,src/icons/0147_circle_i_light.svg,themeable ,
 implant,src/icons/0148_pointedLine_a.svg,themeable ,
+protocol,src/icons/0149_linesThreeSquares_a.svg,themeable ,
+videoCamera,src/icons/0150_videoCamera_a.svg,themeable ,bi-directional
+noSignal,src/icons/0151_wifiCircleLine_i.svg,themeable ,bi-directional
+reload,src/icons/0152_circleArrow_a.svg,themeable ,
+recurringEvent,src/icons/0153_calendarCircleArrow_a.svg,themeable ,
+separate,src/icons/0154_lineTwoArrows_a.svg,themeable ,bi-directional
+merge,src/icons/0155_connectedLinesArrow_a.svg,themeable ,bi-directional
