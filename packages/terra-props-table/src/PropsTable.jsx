@@ -25,7 +25,7 @@ const PropsTable = ({ src, ...customProps }) => {
 
   return (
     <div dir="ltr" className="markdown-body">
-      <h2 id="props">Props</h2>
+      <h2>Props</h2>
       <table {...customProps}>
         <thead>
           <tr>
@@ -48,15 +48,15 @@ const PropsTable = ({ src, ...customProps }) => {
             }
 
             return (
-              <tr key={key}>
-                <td style={{ color: 'rgb(17, 147, 154)' }}>{key}</td>
+              <tr key={key} style={{ fontSize: '90%' }}>
+                <td style={{ fontWeight: 'bold' }}>{key}</td>
                 <td>{(prop.type ? type : '')}</td>
                 {(prop.required ?
-                  <td style={{ color: 'rgb(255, 76, 34)' }}>required</td>
-              : <td style={{ color: '#c6c6c6' }}>optional</td>)}
+                  <td style={{ color: '#d53700' }}>required</td>
+              : <td style={{ color: '#444' }}>optional</td>)}
                 {(prop.defaultValue ?
-                  <td style={{ color: 'rgb(236, 171, 32)' }}>{prop.defaultValue.value}</td>
-              : <td style={{ color: '#c6c6c6' }}>none</td>)}
+                  <td style={{ fontWeight: 'bold' }}>{prop.defaultValue.value}</td>
+              : <td style={{ color: '#444' }}>none</td>)}
                 <td><Markdown src={prop.description} /></td>
               </tr>
             );
