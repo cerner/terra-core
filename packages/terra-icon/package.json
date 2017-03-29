@@ -23,7 +23,7 @@
   "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
-    "cerner-one-icons": "git+https://github.com/cerner/one-cerner-style-icons.git#2e0f04a572e828aff3f1f39dfcb1c496fedd46c6",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
     "terra-toolkit": "^0.x"
   },
