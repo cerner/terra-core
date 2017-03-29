@@ -114,10 +114,10 @@ var ButtonGroup = function (_React$Component) {
   _createClass(ButtonGroup, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      var newState = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.isSelectable);
+      var newSelectedIndex = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.isSelectable);
 
-      if (newState !== this.state.selectedIndex) {
-        this.setState({ selectedIndex: newState });
+      if (newSelectedIndex !== this.state.selectedIndex) {
+        this.setState({ selectedIndex: newSelectedIndex });
       }
     }
   }, {
