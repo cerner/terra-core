@@ -1,0 +1,31 @@
+exports[`test should render isDivided 1`] = `
+<ul
+  className="terra-List terra-List-divided">
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+</ul>
+`;
+
+exports[`test should render with items 1`] = `
+<ul
+  className="terra-List">
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+  <ListItem
+    isSelected={false} />
+</ul>
+`;

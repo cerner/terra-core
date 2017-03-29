@@ -1,7 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { PropTypes } from 'react';
 import marked from 'marked';
-import 'github-markdown-css/github-markdown.css';
+// eslint-disable-next-line import/extensions
+import 'github-markdown-css';
 
 const propTypes = {
   /**
