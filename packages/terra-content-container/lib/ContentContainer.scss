@@ -13,7 +13,6 @@
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
-      position: absolute;
     }
   }
 }
@@ -31,6 +30,7 @@
 
     > .terra-ContentContainer-main-normalizer {
       height: 100%;
+      position: absolute;
       width: 100%;
     }
   }

@@ -18,9 +18,11 @@ const itemView2 = <ClinicalItemView displays={displays} />;
 const button1 = <Button text="header button" />;
 
 const container = () => (
-  <ContentContainer header={button1} fill>
-    <ClinicalItemView displays={displays} />
-    <ClinicalItemView displays={displays} />
-  </ContentContainer>);
+  <div style={{ height: '200px', overflow: 'auto' }}>
+	  <ContentContainer header={button1} fill>
+	    <ClinicalItemView displays={displays} />
+	    <ClinicalItemView displays={displays} />
+	  </ContentContainer>
+  </div>);
 
 export default container;
