@@ -6,12 +6,10 @@ import DatePicker from 'terra-date-picker';
 import DateRange from 'terra-date-picker/lib/DateRange';
 import ReadMe from 'terra-date-picker/docs/README.md';
 import { version } from 'terra-date-picker/package.json';
-import './Index.scss';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import DatePickerSrc from '!raw-loader!terra-date-picker/src/DatePicker';
 // Example Files
-import DatePickerCustomInput from './DatePickerCustomInput';
 import DatePickerFilterDates from './DatePickerFilterDates';
 import DatePickerOnChange from './DatePickerOnChange';
 
@@ -22,8 +20,6 @@ const DatePickerExamples = () => (
     <PropsTable id="props" src={DatePickerSrc} />
     <h2 id="default">Default</h2>
     <DatePicker />
-    <h2 id="custom-input">Custom Input</h2>
-    <DatePickerCustomInput />
     <h2 id="exclude-dates">ExcludeDates</h2>
     <DatePicker
       excludeDates={[moment().subtract(1, 'days'), moment().add(1, 'days')]}

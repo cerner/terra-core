@@ -7,7 +7,6 @@ const DatePickerTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/date-picker-tests/default">DatePicker - Default</Link></li>
-      <li><Link to="/tests/date-picker-tests/custom-input">DatePicker - Custom Input</Link></li>
       <li><Link to="/tests/date-picker-tests/exclude-dates">DatePicker - Exclude Dates</Link></li>
       <li><Link to="/tests/date-picker-tests/filter-dates">DatePicker - Filter Dates</Link></li>
       <li><Link to="/tests/date-picker-tests/include-dates">DatePicker - Include Dates</Link></li>

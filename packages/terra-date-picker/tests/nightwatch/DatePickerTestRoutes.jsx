@@ -4,7 +4,6 @@ import React from 'react';
 import { Route } from 'react-router';
 import DatePickerTests from './DatePickerTests';
 import DatePickerDefault from './components/DatePickerDefault';
-import DatePickerCustomInput from './components/DatePickerCustomInput';
 import DatePickerExcludeDates from './components/DatePickerExcludeDates';
 import DatePickerFilterDates from './components/DatePickerFilterDates';
 import DatePickerIncludeDates from './components/DatePickerIncludeDates';
@@ -18,7 +17,6 @@ const routes = (
   <div>
     <Route path="/tests/date-picker-tests" component={DatePickerTests} />
     <Route path="/tests/date-picker-tests/default" component={DatePickerDefault} />
-    <Route path="/tests/date-picker-tests/custom-input" component={DatePickerCustomInput} />
     <Route path="/tests/date-picker-tests/exclude-dates" component={DatePickerExcludeDates} />
     <Route path="/tests/date-picker-tests/filter-dates" component={DatePickerFilterDates} />
     <Route path="/tests/date-picker-tests/include-dates" component={DatePickerIncludeDates} />

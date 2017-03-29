@@ -46,10 +46,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * A customized date input to use for entering and displaying the date.
-   */
-  customInput: _react.PropTypes.node,
-  /**
    * A moment object to use as the default end date for a date range.
    */
   endDate: _react.PropTypes.object,
@@ -136,7 +132,6 @@ var DatePicker = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          customInput = _props.customInput,
           endDate = _props.endDate,
           excludeDates = _props.excludeDates,
           filterDate = _props.filterDate,
@@ -148,7 +143,7 @@ var DatePicker = function (_React$Component) {
           selectedDate = _props.selectedDate,
           startDate = _props.startDate,
           withPortal = _props.withPortal,
-          customProps = _objectWithoutProperties(_props, ['customInput', 'endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate', 'withPortal']);
+          customProps = _objectWithoutProperties(_props, ['endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate', 'withPortal']);
 
       var classes = (0, _classnames2.default)(['terra-DatePicker']);
 
@@ -166,7 +161,7 @@ var DatePicker = function (_React$Component) {
       var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
         selected: selectedDate || this.state.startDate,
         onChange: this.handleChange,
-        customInput: customInput || _react2.default.createElement(_DateInput2.default, null),
+        customInput: _react2.default.createElement(_DateInput2.default, null),
         endDate: endDate,
         excludeDates: excludeDates,
         filterDate: filterDate,
@@ -191,7 +186,7 @@ var DatePicker = function (_React$Component) {
       var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
         selected: selectedDate || this.state.startDate,
         onChange: this.handleChange,
-        customInput: customInput || _react2.default.createElement(_DateInput2.default, null),
+        customInput: _react2.default.createElement(_DateInput2.default, null),
         endDate: endDate,
         excludeDates: excludeDates,
         filterDate: filterDate,

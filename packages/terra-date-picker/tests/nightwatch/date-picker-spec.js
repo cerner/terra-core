@@ -19,14 +19,6 @@ module.exports = {
     browser.expect.element('.react-datepicker__year-dropdown-container--select').to.be.present;
   },
 
-  'Displays the DatePicker with a custom input. Clicking the input does not open the date picker': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/custom-input`);
-
-    browser.click('.terra-DatePicker-custom-input');
-
-    browser.expect.element('.react-datepicker').to.not.be.present;
-  },
-
   'Displays the DatePicker with excluded dates being disabled': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/exclude-dates`);
 

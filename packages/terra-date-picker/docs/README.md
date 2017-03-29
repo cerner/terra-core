@@ -22,11 +22,6 @@ import DatePicker from 'terra-date-picker';
   filterDate={isWeekday}
 />
 
-//Renders a date picker with a custom input
-<DatePicker
-  customInput={<CustomInputWithButton />}
-/>
-
 //Renders a date range
 <DateRange
   startDate={moment().add(1, 'days')}
@@ -36,26 +31,6 @@ import DatePicker from 'terra-date-picker';
 const isWeekday = (date) => {
   const day = date.day();
   return day !== 0 && day !== 6;
-};
-
-class CustomInputWithButton extends React.PureComponent {
-  render() {
-    return (
-      (<div className="terra-DatePicker-custom">
-        <input
-          type="text"
-          value={this.props.value}
-          onChange={this.props.onChange}
-          placeholder={this.props.placeholder}
-        />
-        <Button
-          onClick={this.props.onClick}
-          onKeyDown={this.props.onKeyDown}
-          icon={Icon}
-        />
-      </div>)
-    );
-  }
 };
 
 ```
