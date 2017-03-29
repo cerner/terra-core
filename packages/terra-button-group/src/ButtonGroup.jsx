@@ -71,10 +71,10 @@ class ButtonGroup extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const newState = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.isSelectable);
+    const newSelectedIndex = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.isSelectable);
 
-    if (newState !== this.state.selectedIndex) {
-      this.setState({ selectedIndex: newState });
+    if (newSelectedIndex !== this.state.selectedIndex) {
+      this.setState({ selectedIndex: newSelectedIndex });
     }
   }
 
