@@ -12,17 +12,14 @@ const display5 = <ClinicalItemView.Display text="display 5" />;
 const display6 = <ClinicalItemView.Display text="display 6" />;
 const displays = [display1, display2, display3, display4, display5, display6];
 
-const itemView1 = <ClinicalItemView displays={displays} />;
-const itemView2 = <ClinicalItemView displays={displays} />;
-
 const button1 = <Button text="header button" />;
 
 const container = () => (
   <div style={{ height: '200px', overflow: 'auto' }}>
-	  <ContentContainer header={button1} fill>
-	    <ClinicalItemView displays={displays} />
-	    <ClinicalItemView displays={displays} />
-	  </ContentContainer>
+    <ContentContainer header={button1} fill>
+      <ClinicalItemView displays={displays} />
+      <ClinicalItemView displays={displays} />
+    </ContentContainer>
   </div>);
 
 export default container;
