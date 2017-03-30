@@ -3,8 +3,17 @@ import classNames from 'classnames';
 import './ContentContainer.scss';
 
 const ContentContainer = ({
+  /**
+   * The header element to be placed within the header area.
+   */
   header,
+  /**
+   * The children to be placed within the main content area.
+   */
   children,
+  /**
+   * Whether or not the container should expanded to fill its parent element.
+   */
   fill,
   ...customProps
   }) => {
