@@ -1,11 +1,14 @@
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-content/docs/README.md';
+import { version } from 'terra-content/package.json';
+
 // eslint-disable-next-line import/extensions
 import 'terra-content';
 
 const ContentExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h2>Content</h2>
     <div className="terra-Content">
