@@ -12,7 +12,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _DatePicker = require('../lib/DatePicker');
+var _DatePicker = require('./DatePicker');
 
 var _DatePicker2 = _interopRequireDefault(_DatePicker);
 
@@ -25,8 +25,17 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
+  /**
+   * A moment object to use as the default end date for a date range.
+   */
   endDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  /**
+   * A moment object to use as the default start date for a date range.
+   */
   startDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  /**
+   * A callback function to execute when a valid date is selected or entered.
+   */
   onChange: _react.PropTypes.func
 };
 

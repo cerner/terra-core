@@ -37,10 +37,6 @@ const DatePickerExamples = () => (
     />
     <h2 id="on-change">On Change</h2>
     <DatePickerOnChange />
-    <h2 id="portal">Portal</h2>
-    <DatePicker
-      withPortal
-    />
     <h2 id="start-date">Start Date</h2>
     <DatePicker
       startDate={moment()}

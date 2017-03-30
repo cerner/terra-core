@@ -12,7 +12,6 @@ const DatePickerTests = () => (
       <li><Link to="/tests/date-picker-tests/include-dates">DatePicker - Include Dates</Link></li>
       <li><Link to="/tests/date-picker-tests/min-max">DatePicker - Min Max</Link></li>
       <li><Link to="/tests/date-picker-tests/on-change">DatePicker - On Change</Link></li>
-      <li><Link to="/tests/date-picker-tests/portal">DatePicker - Portal</Link></li>
       <li><Link to="/tests/date-picker-tests/start-date">DatePicker - Start Date</Link></li>
       <li><Link to="/tests/date-picker-tests/date-range">DatePicker - Date Range</Link></li>
     </ul>

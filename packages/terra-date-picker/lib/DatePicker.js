@@ -12,10 +12,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _reactDatepicker = require('react-datepicker');
 
 var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
@@ -28,11 +24,11 @@ var _terraResponsiveElement = require('terra-responsive-element');
 
 var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);
 
-var _DateInput = require('../lib/DateInput');
+var _DateInput = require('./DateInput');
 
 var _DateInput2 = _interopRequireDefault(_DateInput);
 
-require('../lib/DatePicker.scss');
+require('./DatePicker.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -62,18 +58,6 @@ var propTypes = {
    */
   includeDates: _react.PropTypes.arrayOf(_react.PropTypes.object),
   /**
-   * A moment object to represents the maximum date that can be selected.
-   */
-  maxDate: _react.PropTypes.object,
-  /**
-   * A moment object to represents the minimum date that can be selected.
-   */
-  minDate: _react.PropTypes.object,
-  /**
-   * The selected date to show in the date input.
-   */
-  selectedDate: _react.PropTypes.object,
-  /**
    * Indicates the end date picker of a date range.
    */
   isEndDateRange: _react.PropTypes.bool,
@@ -82,23 +66,30 @@ var propTypes = {
    */
   isStartDateRange: _react.PropTypes.bool,
   /**
-   * The default start date for a date range.
+   * A moment object to represents the maximum date that can be selected.
    */
-  startDate: _react.PropTypes.object,
+  maxDate: _react.PropTypes.object,
   /**
-   * Indicates to display the picker in a full screen overlay.
+   * A moment object to represents the minimum date that can be selected.
    */
-  withPortal: _react.PropTypes.bool,
+  minDate: _react.PropTypes.object,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
-  onChange: _react.PropTypes.func
+  onChange: _react.PropTypes.func,
+  /**
+   * The selected date to show in the date input.
+   */
+  selectedDate: _react.PropTypes.object,
+  /**
+   * A moment object to use as the default start date for a date range.
+   */
+  startDate: _react.PropTypes.object
 };
 
 var defaultProps = {
   isEndDateRange: false,
-  isStartDateRange: false,
-  withPortal: undefined
+  isStartDateRange: false
 };
 
 var DatePicker = function (_React$Component) {
@@ -142,12 +133,11 @@ var DatePicker = function (_React$Component) {
           isStartDateRange = _props.isStartDateRange,
           selectedDate = _props.selectedDate,
           startDate = _props.startDate,
-          withPortal = _props.withPortal,
-          customProps = _objectWithoutProperties(_props, ['endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate', 'withPortal']);
-
-      var classes = (0, _classnames2.default)(['terra-DatePicker']);
+          customProps = _objectWithoutProperties(_props, ['endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate']);
 
       // TODO: Need translation from date_util
+
+
       var todayString = 'Today';
 
       // TODO: Get the locale from date_util
@@ -172,7 +162,7 @@ var DatePicker = function (_React$Component) {
         selectsStart: isStartDateRange,
         startDate: startDate,
         todayButton: todayString,
-        withPortal: withPortal === undefined ? true : withPortal,
+        withPortal: true,
         dateFormatCalendar: ' ',
         dateFormat: momentDateFormat,
         fixedHeight: true,
@@ -197,7 +187,6 @@ var DatePicker = function (_React$Component) {
         selectsStart: isStartDateRange,
         startDate: startDate,
         todayButton: todayString,
-        withPortal: withPortal === undefined ? false : withPortal,
         dateFormatCalendar: ' ',
         dateFormat: momentDateFormat,
         fixedHeight: true,
@@ -209,7 +198,7 @@ var DatePicker = function (_React$Component) {
       }));
 
       return _react2.default.createElement(_terraResponsiveElement2.default, {
-        className: classes,
+        className: 'terra-DatePicker',
         responsiveTo: 'window',
         defaultElement: portalPicker,
         medium: popupPicker

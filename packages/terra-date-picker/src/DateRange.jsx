@@ -1,9 +1,18 @@
 import React, { PropTypes } from 'react';
-import DatePicker from '../lib/DatePicker';
+import DatePicker from './DatePicker';
 
 const propTypes = {
+  /**
+   * A moment object to use as the default end date for a date range.
+   */
   endDate: PropTypes.oneOfType([PropTypes.object]),
+  /**
+   * A moment object to use as the default start date for a date range.
+   */
   startDate: PropTypes.oneOfType([PropTypes.object]),
+  /**
+   * A callback function to execute when a valid date is selected or entered.
+   */
   onChange: PropTypes.func,
 };
 

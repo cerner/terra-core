@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
 import ResponsiveElement from 'terra-responsive-element';
-import DateInput from '../lib/DateInput';
-import '../lib/DatePicker.scss';
+import DateInput from './DateInput';
+import './DatePicker.scss';
 
 const propTypes = {
   /**
@@ -24,18 +23,6 @@ const propTypes = {
    */
   includeDates: PropTypes.arrayOf(PropTypes.object),
   /**
-   * A moment object to represents the maximum date that can be selected.
-   */
-  maxDate: PropTypes.object,
-  /**
-   * A moment object to represents the minimum date that can be selected.
-   */
-  minDate: PropTypes.object,
-  /**
-   * The selected date to show in the date input.
-   */
-  selectedDate: PropTypes.object,
-  /**
    * Indicates the end date picker of a date range.
    */
   isEndDateRange: PropTypes.bool,
@@ -44,23 +31,30 @@ const propTypes = {
    */
   isStartDateRange: PropTypes.bool,
   /**
-   * The default start date for a date range.
+   * A moment object to represents the maximum date that can be selected.
    */
-  startDate: PropTypes.object,
+  maxDate: PropTypes.object,
   /**
-   * Indicates to display the picker in a full screen overlay.
+   * A moment object to represents the minimum date that can be selected.
    */
-  withPortal: PropTypes.bool,
+  minDate: PropTypes.object,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
   onChange: PropTypes.func,
+  /**
+   * The selected date to show in the date input.
+   */
+  selectedDate: PropTypes.object,
+  /**
+   * A moment object to use as the default start date for a date range.
+   */
+  startDate: PropTypes.object,
 };
 
 const defaultProps = {
   isEndDateRange: false,
   isStartDateRange: false,
-  withPortal: undefined,
 };
 
 class DatePicker extends React.Component {
@@ -95,10 +89,8 @@ class DatePicker extends React.Component {
       isStartDateRange,
       selectedDate,
       startDate,
-      withPortal,
       ...customProps
     } = this.props;
-    const classes = classNames(['terra-DatePicker']);
 
     // TODO: Need translation from date_util
     const todayString = 'Today';
@@ -127,7 +119,7 @@ class DatePicker extends React.Component {
         selectsStart={isStartDateRange}
         startDate={startDate}
         todayButton={todayString}
-        withPortal={withPortal === undefined ? true : withPortal}
+        withPortal
         dateFormatCalendar=" "
         dateFormat={momentDateFormat}
         fixedHeight
@@ -154,7 +146,6 @@ class DatePicker extends React.Component {
         selectsStart={isStartDateRange}
         startDate={startDate}
         todayButton={todayString}
-        withPortal={withPortal === undefined ? false : withPortal}
         dateFormatCalendar=" "
         dateFormat={momentDateFormat}
         fixedHeight
@@ -167,7 +158,7 @@ class DatePicker extends React.Component {
 
     return (
       <ResponsiveElement
-        className={classes}
+        className="terra-DatePicker"
         responsiveTo="window"
         defaultElement={portalPicker}
         medium={popupPicker}

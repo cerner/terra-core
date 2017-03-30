@@ -28,6 +28,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var Icon = _react2.default.createElement(_IconCalendar2.default, null);
 
+var propTypes = {
+  /**
+   * A callback function to execute when a valid date is selected or entered.
+   */
+  onChange: _react.PropTypes.func,
+  /**
+   * The onInputClick callback function from react-datepicker to show the picker when clicked.
+   */
+  onClick: _react.PropTypes.func,
+  /**
+   * The onInputKeyDown callback function from react-datepicker to handle keyboard navigation.
+   */
+  onKeyDown: _react.PropTypes.func,
+  /**
+   * The placeholder text to display in the date input.
+   */
+  placeholder: _react.PropTypes.string,
+  /**
+   * The selected or entered date value to display in the date input.
+   */
+  value: _react.PropTypes.string
+};
+
 // eslint-disable-next-line react/prefer-stateless-function
 
 var DatePickerInput = function (_React$Component) {
@@ -65,12 +88,6 @@ var DatePickerInput = function (_React$Component) {
   return DatePickerInput;
 }(_react2.default.Component);
 
-DatePickerInput.propTypes = {
-  onChange: _react.PropTypes.func,
-  onClick: _react.PropTypes.func,
-  onKeyDown: _react.PropTypes.func,
-  placeholder: _react.PropTypes.string,
-  value: _react.PropTypes.string
-};
+DatePickerInput.propTypes = propTypes;
 
 exports.default = DatePickerInput;

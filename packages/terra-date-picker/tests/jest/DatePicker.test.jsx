@@ -55,9 +55,3 @@ it('should render a date picker with min and max dates', () => {
   const wrapper = shallow(datePicker);
   expect(wrapper).toMatchSnapshot();
 });
-
-it('should render a date picker in portal', () => {
-  const datePicker = <DatePicker portal utcOffset={0} />;
-  const wrapper = shallow(datePicker);
-  expect(wrapper).toMatchSnapshot();
-});
