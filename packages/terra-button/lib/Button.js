@@ -24,6 +24,18 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   /**
+   * Child Nodes
+   */
+  children: _react.PropTypes.node,
+  /**
+   * Sets the href. When set will render the component as an anchor tag
+   */
+  href: _react.PropTypes.string,
+  /**
+   * An optional icon. Nested inline with the text when provided
+   */
+  icon: _react.PropTypes.element,
+  /**
    * Whether or not the button should display as a block
    */
   isBlock: _react.PropTypes.bool,
@@ -32,29 +44,17 @@ var propTypes = {
    */
   isCompact: _react.PropTypes.bool,
   /**
-   * Child Nodes
-   */
-  children: _react.PropTypes.node,
-  /**
-   * An optional icon. Nested inline with the text when provided
-   */
-  icon: _react.PropTypes.element,
-  /**
    * Whether or not the button should be disabled
    */
   isDisabled: _react.PropTypes.bool,
   /**
-   * Sets the href. When set will render the component as an anchor tag
+   * Reverses the position of the icon and text
    */
-  href: _react.PropTypes.string,
+  isReversed: _react.PropTypes.bool,
   /**
    * Callback function triggered when clicked
    */
   onClick: _react.PropTypes.func,
-  /**
-   * Reverses the position of the icon and text
-   */
-  isReversed: _react.PropTypes.bool,
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
    */
@@ -78,16 +78,16 @@ var defaultProps = {
 };
 
 var Button = function Button(_ref) {
-  var isBlock = _ref.isBlock,
-      isCompact = _ref.isCompact,
-      children = _ref.children,
+  var children = _ref.children,
       icon = _ref.icon,
+      isBlock = _ref.isBlock,
+      isCompact = _ref.isCompact,
       isDisabled = _ref.isDisabled,
       isReversed = _ref.isReversed,
       size = _ref.size,
       text = _ref.text,
       variant = _ref.variant,
-      customProps = _objectWithoutProperties(_ref, ['isBlock', 'isCompact', 'children', 'icon', 'isDisabled', 'isReversed', 'size', 'text', 'variant']);
+      customProps = _objectWithoutProperties(_ref, ['children', 'icon', 'isBlock', 'isCompact', 'isDisabled', 'isReversed', 'size', 'text', 'variant']);
 
   var attributes = _extends({}, customProps);
   var buttonText = text ? _react2.default.createElement(
