@@ -4,11 +4,11 @@ import './ContentContainer.scss';
 
 const ContentContainer = ({
   /**
-   * The header element to be placed within the header area.
+   * The header element to be placed within the header area of the container.
    */
   header,
   /**
-   * The children to be placed within the main content area.
+   * The children to be placed within the main content area of the container.
    */
   children,
   /**
