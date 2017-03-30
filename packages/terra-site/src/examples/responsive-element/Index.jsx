@@ -2,6 +2,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-responsive-element/docs/README.md';
+import { version } from 'terra-responsive-element/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -13,6 +14,7 @@ import AnimatedResponsiveElement from './AnimatedResponsiveElement';
 
 const ResponsiveElementExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ResponsiveElementSrc} />
     <h2>Responsive to Parent</h2>
