@@ -37,7 +37,7 @@ exports[`test should render a date picker in portal 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={true} />
   }
   medium={
@@ -76,7 +76,7 @@ exports[`test should render a date picker in portal 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={false} />
   }
   responsiveTo="window" />
@@ -126,7 +126,7 @@ exports[`test should render a date picker with disabled dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={true} />
   }
   medium={
@@ -170,7 +170,7 @@ exports[`test should render a date picker with disabled dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={false} />
   }
   responsiveTo="window" />
@@ -215,7 +215,7 @@ exports[`test should render a date picker with filtered dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={true} />
   }
   medium={
@@ -254,7 +254,7 @@ exports[`test should render a date picker with filtered dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={false} />
   }
   responsiveTo="window" />
@@ -305,7 +305,7 @@ exports[`test should render a date picker with included dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={true} />
   }
   medium={
@@ -350,7 +350,7 @@ exports[`test should render a date picker with included dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={false} />
   }
   responsiveTo="window" />
@@ -396,7 +396,7 @@ exports[`test should render a date picker with min and max dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={true} />
   }
   medium={
@@ -436,7 +436,7 @@ exports[`test should render a date picker with min and max dates 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={false} />
   }
   responsiveTo="window" />
@@ -449,12 +449,12 @@ exports[`test should render a date range 1`] = `
     isEndDateRange={false}
     isStartDateRange={true}
     onChange={[Function]}
-    utcOffset={-300} />
+    utcOffset={0} />
   <DatePicker
     isEndDateRange={true}
     isStartDateRange={false}
     onChange={[Function]}
-    utcOffset={-300} />
+    utcOffset={0} />
 </div>
 `;
 
@@ -496,7 +496,7 @@ exports[`test should render a default date input and date picker 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={true} />
   }
   medium={
@@ -534,7 +534,7 @@ exports[`test should render a default date input and date picker 1`] = `
         ]
       }
       todayButton="Today"
-      utcOffset={-300}
+      utcOffset={0}
       withPortal={false} />
   }
   responsiveTo="window" />
