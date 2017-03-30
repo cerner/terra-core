@@ -1,6 +1,6 @@
 export const CernerOneIcons = {
-  csvFile: 'node_modules/cerner-one-icons/src/CernerOneIcons-CSV.csv',
-  svgDir: 'node_modules/cerner-one-icons/src/icons/',
+  csvFile: 'node_modules/one-cerner-style-icons/src/CernerOneIcons-CSV.csv',
+  svgDir: 'node_modules/one-cerner-style-icons/src/icons/',
 };
 
 export const TerraIcon = {

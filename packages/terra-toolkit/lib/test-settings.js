@@ -105,6 +105,8 @@ module.exports = function (testConfigPath, settings) {
       var key = driverKey + '-' + windowSizeKey;
       testingConfiguration[key] = _extends({}, drivers[driverKey]);
       testingConfiguration[key].globals = {};
+      // TODO: Tweak this value.  Not sure what's ideal.  It's necessary to transfer screen grabs though.
+      testingConfiguration[key].globals.asyncHookTimeout = 30000;
       testingConfiguration[key].globals.width = windowSizes[windowSizeKey][0];
       testingConfiguration[key].globals.height = windowSizes[windowSizeKey][1];
       testingConfiguration[key].globals.windowSizeKey = windowSizeKey;

@@ -3,8 +3,12 @@
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-button', done);
   },
 
   'Displays a default button with the provided text': (browser) => {
@@ -28,7 +32,7 @@ module.exports = {
   'Displays a disabled link with the provided text': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/disabled-link`)
-      .assert.containsText('.terra-Button.terra-Button--linkDefault.is-disabled', 'Disabled Link');
+      .assert.containsText('.terra-Button.terra-Button--link.is-disabled', 'Disabled Link');
   },
 
   'Displays as a primary button with the provided text': (browser) => {
@@ -43,40 +47,10 @@ module.exports = {
       .assert.containsText('.terra-Button.terra-Button--secondary', 'Secondary');
   },
 
-  'Displays as a positive button with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/positive`)
-      .assert.containsText('.terra-Button.terra-Button--positive', 'Positive');
-  },
-
-  'Displays as a negative button with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/negative`)
-      .assert.containsText('.terra-Button.terra-Button--negative', 'Negative');
-  },
-
-  'Displays as a warning button with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/warning`)
-      .assert.containsText('.terra-Button.terra-Button--warning', 'Warning');
-  },
-
-  'Displays as an info button with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/info`)
-      .assert.containsText('.terra-Button.terra-Button--info', 'Info');
-  },
-
-  'Displays with a transparent background with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/outline`)
-      .assert.containsText('.terra-Button.terra-Button--outlineDefault', 'Outline');
-  },
-
   'Displays as a link with the provided text': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/link`)
-      .assert.containsText('.terra-Button.terra-Button--linkDefault', 'Link');
+      .assert.containsText('.terra-Button.terra-Button--link', 'Link');
   },
 
   'Displays as a tiny button with the provided text': (browser) => {
@@ -123,10 +97,16 @@ module.exports = {
       .assert.cssClassPresent('.terra-Button.terra-Button--default > :first-child', 'test');
   },
 
-  'Displays an button with icons and text reversed': (browser) => {
+  'Displays a button with icons and text reversed': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/icon-reversed`)
       .assert.containsText('.terra-Button.terra-Button--default > :first-child', 'Button with Icon and reversed')
       .assert.cssClassPresent('.terra-Button.terra-Button--default > :last-child', 'test');
+  },
+
+  'Displays as a compact button with the provided text': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/compact`)
+      .assert.containsText('.terra-Button.terra-Button--compact', 'Compact');
   },
 };
