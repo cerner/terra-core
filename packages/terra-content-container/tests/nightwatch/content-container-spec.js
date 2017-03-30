@@ -4,8 +4,12 @@
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-content-container', done);
   },
 
   'Displays a content container with default props': (browser) => {
@@ -19,6 +23,6 @@ module.exports = {
   'Displays a content container with fill': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/content-container-tests/fill`)
-      .assert.cssClassPresent('.terra-ContentContainer', '.terra-ContentContainer--fill');
+      .assert.cssClassPresent('.terra-ContentContainer', 'terra-ContentContainer--fill');
   },
 };
