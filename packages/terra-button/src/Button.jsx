@@ -4,6 +4,18 @@ import './Button.scss';
 
 const propTypes = {
   /**
+   * Child Nodes
+   */
+  children: PropTypes.node,
+  /**
+   * Sets the href. When set will render the component as an anchor tag
+   */
+  href: PropTypes.string,
+  /**
+   * An optional icon. Nested inline with the text when provided
+   */
+  icon: PropTypes.element,
+  /**
    * Whether or not the button should display as a block
    */
   isBlock: PropTypes.bool,
@@ -12,29 +24,17 @@ const propTypes = {
    */
   isCompact: PropTypes.bool,
   /**
-   * Child Nodes
-   */
-  children: PropTypes.node,
-  /**
-   * An optional icon. Nested inline with the text when provided
-   */
-  icon: PropTypes.element,
-  /**
    * Whether or not the button should be disabled
    */
   isDisabled: PropTypes.bool,
   /**
-   * Sets the href. When set will render the component as an anchor tag
+   * Reverses the position of the icon and text
    */
-  href: PropTypes.string,
+  isReversed: PropTypes.bool,
   /**
    * Callback function triggered when clicked
    */
   onClick: PropTypes.func,
-  /**
-   * Reverses the position of the icon and text
-   */
-  isReversed: PropTypes.bool,
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
    */
@@ -58,10 +58,10 @@ const defaultProps = {
 };
 
 const Button = ({
-  isBlock,
-  isCompact,
   children,
   icon,
+  isBlock,
+  isCompact,
   isDisabled,
   isReversed,
   size,
