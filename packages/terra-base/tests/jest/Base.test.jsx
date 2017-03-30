@@ -17,7 +17,7 @@ it('should support rendering an array of elements as a children', () => {
   expect(base).toMatchSnapshot();
 });
 
-it('should render a Button with merged attributes', () => {
+it('should render the component with merged attributes', () => {
   const base = shallow(<Base className="TestClass" data-mock="data" id="TestId">String</Base>);
   expect(base).toMatchSnapshot();
 });

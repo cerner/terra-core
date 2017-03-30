@@ -1,4 +1,4 @@
-exports[`test should render a Button with merged attributes 1`] = `
+exports[`test should render the component with merged attributes 1`] = `
 <div
   className="TestClass"
   data-mock="data"
