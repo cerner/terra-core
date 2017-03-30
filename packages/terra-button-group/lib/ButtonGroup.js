@@ -36,19 +36,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * Callback function when the state changes
+   * Button group button components that should be grouped together
    **/
-  onChange: _react.PropTypes.func,
+  buttons: _react.PropTypes.arrayOf(_react.PropTypes.element),
 
   /**
-   * Sets the button group style variation. One of `defaut` or `secondary`
+   * Child nodes
    **/
-  variant: _react.PropTypes.oneOf(['default', 'secondary']),
-
-  /**
-   * Sets the button size. One of tiny, small, medium, large, huge
-   **/
-  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  children: _react.PropTypes.node,
 
   /**
    * Indicates if the buttons should have reduced top and bottom padding
@@ -61,14 +56,19 @@ var propTypes = {
   isSelectable: _react.PropTypes.bool,
 
   /**
-   * Button group button components that should be grouped together
+   * Callback function when the state changes
    **/
-  buttons: _react.PropTypes.arrayOf(_react.PropTypes.element),
+  onChange: _react.PropTypes.func,
 
   /**
-   * Child nodes
+   * Sets the button size. One of tiny, small, medium, large, huge
    **/
-  children: _react.PropTypes.node
+  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+
+  /**
+   * Sets the button group style variation. One of `defaut` or `secondary`
+   **/
+  variant: _react.PropTypes.oneOf(['default', 'secondary'])
 };
 
 var defaultProps = {
