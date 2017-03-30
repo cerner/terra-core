@@ -40,6 +40,7 @@ import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
+import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -82,5 +83,6 @@ ReactDOM.render((
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {ContentContainerTestRoutes}
   </Router>
 ), document.getElementById('root'));

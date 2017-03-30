@@ -13,6 +13,7 @@ const TestLinks = () => (
       <li><Link to="/tests/clinical-item-view-tests">ClinicalItemView Tests</Link></li>
       <li><Link to="/tests/clinical-item-view-display-tests">ClinicalItemView.Display Tests</Link></li>
       <li><Link to="/tests/clinical-item-view-comment-tests">ClinicalItemView.Comment Tests</Link></li>
+      <li><Link to="/tests/content-container-tests">ContentContainer Tests</Link></li>
       <li><Link to="/tests/list-tests">List Tests</Link></li>
       <li><Link to="/tests/list-item-tests">ListItem Tests</Link></li>
       <li><Link to="/tests/single-select-list-tests">SingleSelectList Tests</Link></li>

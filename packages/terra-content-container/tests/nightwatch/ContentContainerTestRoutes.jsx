@@ -9,8 +9,8 @@ import FillContentContainer from './FillContentContainer';
 const routes = (
   <div>
     <Route path="/tests/content-container-tests" component={ContentContainerTests} />
-    <Route path="/tests/content-container-tests/content-container-default" component={DefaultContentContainer} />
-    <Route path="/tests/content-container-tests/content-container-fill" component={FillContentContainer} />
+    <Route path="/tests/content-container-tests/default" component={DefaultContentContainer} />
+    <Route path="/tests/content-container-tests/fill" component={FillContentContainer} />
   </div>
 );
 

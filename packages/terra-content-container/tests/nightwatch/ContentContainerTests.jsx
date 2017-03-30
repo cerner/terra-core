@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 const ContentContainerTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/content-container-tests/content-container-default">ContentContainer - default</Link></li>
-      <li><Link to="/tests/content-container-tests/content-container-fill">ContentContainer - fill</Link></li>
+      <li><Link to="/tests/content-container-tests/default">ContentContainer - default</Link></li>
+      <li><Link to="/tests/content-container-tests/fill">ContentContainer - fill</Link></li>
     </ul>
   </div>
 );
