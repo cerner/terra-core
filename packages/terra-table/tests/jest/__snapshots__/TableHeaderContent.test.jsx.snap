@@ -4,22 +4,6 @@ exports[`test should render default table header content tag 1`] = `
   data-column-min-width="small">
   <div>
     Column Heading
-    <span
-      className="terra-Table-sort-indicator terra-Table-hidden">
-      <IconCaretUp
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
-    </span>
-    <span
-      className="terra-Table-sort-indicator terra-Table-hidden">
-      <IconCaretDown
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
-    </span>
   </div>
 </th>
 `;
@@ -39,14 +23,6 @@ exports[`test should render table header content tag with ascending sort indicat
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg" />
     </span>
-    <span
-      className="terra-Table-sort-indicator terra-Table-hidden">
-      <IconCaretDown
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
-    </span>
   </div>
 </th>
 `;
@@ -58,14 +34,6 @@ exports[`test should render table header content tag with descending sort indica
   data-sort="desc">
   <div>
     Column Heading
-    <span
-      className="terra-Table-sort-indicator terra-Table-hidden">
-      <IconCaretUp
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
-    </span>
     <span
       className="terra-Table-sort-indicator">
       <IconCaretDown

@@ -41,16 +41,6 @@ const TableHeaderContent = ({
     customProps.className,
   ]);
 
-  const ascSortInd = classNames([
-    'terra-Table-sort-indicator',
-    { 'terra-Table-hidden': sort !== 'asc' },
-  ]);
-
-  const descSortInd = classNames([
-    'terra-Table-sort-indicator',
-    { 'terra-Table-hidden': sort !== 'desc' },
-  ]);
-
   const heightProperty = {
     'data-max-height': height,
   };
@@ -59,12 +49,18 @@ const TableHeaderContent = ({
     'data-sort': sort,
   };
 
+  let sortIndicator = null;
+  if (sort === 'asc') {
+    sortIndicator = <span className={'terra-Table-sort-indicator'}>{iconUp}</span>;
+  } else if (sort === 'desc') {
+    sortIndicator = <span className={'terra-Table-sort-indicator'}>{iconDown}</span>;
+  }
+
   return (
     <th {...customProps} className={contentClassName} data-column-min-width={minWidth} {...heightProperty} {...dataSort}>
       <div>
         {display}
-        <span className={ascSortInd}>{iconUp}</span>
-        <span className={descSortInd}>{iconDown}</span>
+        {sortIndicator}
       </div>
     </th>
   );

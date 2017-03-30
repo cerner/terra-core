@@ -61,10 +61,6 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
 
   var contentClassName = (0, _classnames2.default)(['terra-Table-header', customProps.className]);
 
-  var ascSortInd = (0, _classnames2.default)(['terra-Table-sort-indicator', { 'terra-Table-hidden': sort !== 'asc' }]);
-
-  var descSortInd = (0, _classnames2.default)(['terra-Table-sort-indicator', { 'terra-Table-hidden': sort !== 'desc' }]);
-
   var heightProperty = {
     'data-max-height': height
   };
@@ -73,6 +69,21 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
     'data-sort': sort
   };
 
+  var sortIndicator = null;
+  if (sort === 'asc') {
+    sortIndicator = _react2.default.createElement(
+      'span',
+      { className: 'terra-Table-sort-indicator' },
+      iconUp
+    );
+  } else if (sort === 'desc') {
+    sortIndicator = _react2.default.createElement(
+      'span',
+      { className: 'terra-Table-sort-indicator' },
+      iconDown
+    );
+  }
+
   return _react2.default.createElement(
     'th',
     _extends({}, customProps, { className: contentClassName, 'data-column-min-width': minWidth }, heightProperty, dataSort),
@@ -80,16 +91,7 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
       'div',
       null,
       display,
-      _react2.default.createElement(
-        'span',
-        { className: ascSortInd },
-        iconUp
-      ),
-      _react2.default.createElement(
-        'span',
-        { className: descSortInd },
-        iconDown
-      )
+      sortIndicator
     )
   );
 };

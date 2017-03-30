@@ -4,26 +4,15 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-table/docs/README.md';
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import TableSrc from '!raw-loader!terra-table/src/Table';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import SingleSelectableRowsSrc from '!raw-loader!terra-table/src/SingleSelectableRows';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TableHeaderSrc from '!raw-loader!terra-table/src/TableHeader';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TableHeaderContentSrc from '!raw-loader!terra-table/src/TableHeaderContent';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TableRowSrc from '!raw-loader!terra-table/src/TableRow';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TableRowsSrc from '!raw-loader!terra-table/src/TableRows';
-// Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TableRowContentSrc from '!raw-loader!terra-table/src/TableRowContent';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 import NoStripedTable from './NoStripedTable';
 import StripedTable from './StripedTable';

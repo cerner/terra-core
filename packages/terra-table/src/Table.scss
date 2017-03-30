@@ -62,10 +62,10 @@
   background-color: $terra-blue-20 !important;
 }
 
-.terra-Table-hidden {
-  visibility: hidden;
+.terra-Table--isSelectable {
+  cursor: pointer;
 }
 
 .terra-Table-sort-indicator {
-  float: right;
+  @include terra-float-end();
 }
