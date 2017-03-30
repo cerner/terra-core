@@ -4,8 +4,12 @@
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-detail-view', done);
   },
 
   'Displays a divided Detail View with provided components': (browser) => {
