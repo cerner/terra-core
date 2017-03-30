@@ -1,11 +1,14 @@
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-standout/docs/README.md';
+import { version } from 'terra-standout/package.json';
+
 // eslint-disable-next-line import/extensions
 import 'terra-standout';
 
 const StandoutExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h1>Standout</h1>
     <div className="terra-Standout">

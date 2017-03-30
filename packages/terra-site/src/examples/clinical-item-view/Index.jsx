@@ -3,9 +3,12 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-clinical-item-view/docs/README.md';
+import { version } from 'terra-clinical-item-view/package.json';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import ClinicalItemViewSrc from '!raw-loader!terra-clinical-item-view/src/ClinicalItemView.jsx';
+
 // Example Files
 import ClinicalItemViewStandard from './ClinicalItemViewStandard';
 import ClinicalItemViewTwoColumn from './ClinicalItemViewTwoColumn';
@@ -15,6 +18,7 @@ import ClinicalItemViewAll from './ClinicalItemViewAll';
 
 const ClinicalItemViewExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ClinicalItemViewSrc} />
     <h2 id="standard">Standard Displays</h2>

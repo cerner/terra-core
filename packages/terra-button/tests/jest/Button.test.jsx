@@ -2,28 +2,33 @@ import React from 'react';
 import Button from '../../src/Button';
 
 // Snapshot Tests
-it('should render a default component', () => {
+it('should render a default button', () => {
   const button = shallow(<Button />);
   expect(button).toMatchSnapshot();
 });
 
-it('should render a default link component', () => {
+it('should render a link button', () => {
   const button = shallow(<Button variant="link" />);
   expect(button).toMatchSnapshot();
 });
 
-it('should render a default outline component', () => {
-  const button = shallow(<Button variant="outline" />);
+it('should render a primary button', () => {
+  const button = shallow(<Button variant="primary" />);
   expect(button).toMatchSnapshot();
 });
 
-it('should render a icon', () => {
+it('should render a secondary button', () => {
+  const button = shallow(<Button variant="secondary" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render an icon', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} size="tiny" />);
   expect(button).toMatchSnapshot();
 });
 
-it('should render a icon and a text', () => {
+it('should render an icon and a text', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} size="tiny" text="text" />);
   expect(button).toMatchSnapshot();
@@ -50,8 +55,8 @@ it('should have the class terra-Button--default', () => {
   expect(button.prop('className')).toContain('terra-Button terra-Button--default');
 });
 
-it('should have the class terra-Button--primary when type is set to primary', () => {
-  const button = shallow(<Button intent="primary" />);
+it('should have the class terra-Button--primary when variant is set to primary', () => {
+  const button = shallow(<Button variant="primary" />);
   expect(button.prop('className')).toContain('terra-Button--primary');
 });
 
@@ -70,19 +75,19 @@ it('should have the class terra-Button--block when block is enabled', () => {
   expect(button.prop('className')).toContain('terra-Button--block');
 });
 
-it('should have the class terra-Button--outlineDefault when an outline variant', () => {
-  const button = shallow(<Button variant="outline" />);
-  expect(button.prop('className')).toContain('terra-Button--outlineDefault');
+it('should have the class terra-Button--compact when compact is enabled', () => {
+  const button = shallow(<Button isCompact />);
+  expect(button.prop('className')).toContain('terra-Button--compact');
 });
 
-it('should have the class terra-Button--linkDefault when a link variant', () => {
-  const button = shallow(<Button variant="outline" />);
-  expect(button.prop('className')).toContain('terra-Button--outlineDefault');
+it('should have the class terra-Button--secondary when an secondary variant', () => {
+  const button = shallow(<Button variant="secondary" />);
+  expect(button.prop('className')).toContain('terra-Button--secondary');
 });
 
-it('should have the class terra-Button--linkPrimary when a link variant and primary intent', () => {
-  const button = shallow(<Button intent="primary" variant="link" />);
-  expect(button.prop('className')).toContain('terra-Button--linkPrimary');
+it('should have the class terra-Button--link when a link variant', () => {
+  const button = shallow(<Button variant="link" />);
+  expect(button.prop('className')).toContain('terra-Button--link');
 });
 
 it('should be disabled when set', () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-badge/docs/README.md';
+import { version } from 'terra-badge/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -14,6 +15,7 @@ import BadgeIcon from './BadgeIcon';
 
 const BadgeExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={BadgeSrc} />
     <h2 id="default">Intent</h2>
