@@ -6,19 +6,14 @@ import './ButtonGroup.scss';
 
 const propTypes = {
   /**
-   * Callback function when the state changes
+   * Button group button components that should be grouped together
    **/
-  onChange: PropTypes.func,
+  buttons: PropTypes.arrayOf(PropTypes.element),
 
   /**
-   * Sets the button group style variation. One of `defaut` or `secondary`
+   * Child nodes
    **/
-  variant: PropTypes.oneOf(['default', 'secondary']),
-
-  /**
-   * Sets the button size. One of tiny, small, medium, large, huge
-   **/
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  children: PropTypes.node,
 
   /**
    * Indicates if the buttons should have reduced top and bottom padding
@@ -31,14 +26,19 @@ const propTypes = {
   isSelectable: PropTypes.bool,
 
   /**
-   * Button group button components that should be grouped together
+   * Callback function when the state changes
    **/
-  buttons: PropTypes.arrayOf(PropTypes.element),
+  onChange: PropTypes.func,
 
   /**
-   * Child nodes
+   * Sets the button size. One of tiny, small, medium, large, huge
    **/
-  children: PropTypes.node,
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+
+  /**
+   * Sets the button group style variation. One of `defaut` or `secondary`
+   **/
+  variant: PropTypes.oneOf(['default', 'secondary']),
 };
 
 const defaultProps = {
