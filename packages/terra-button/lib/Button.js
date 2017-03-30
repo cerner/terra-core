@@ -28,6 +28,10 @@ var propTypes = {
    */
   isBlock: _react.PropTypes.bool,
   /**
+   * Whether or not the button has reduced padding
+   */
+  isCompact: _react.PropTypes.bool,
+  /**
    * Child Nodes
    */
   children: _react.PropTypes.node,
@@ -35,10 +39,6 @@ var propTypes = {
    * An optional icon. Nested inline with the text when provided
    */
   icon: _react.PropTypes.element,
-  /**
-   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`
-   */
-  intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
   /**
    * Whether or not the button should be disabled
    */
@@ -57,7 +57,6 @@ var propTypes = {
   isReversed: _react.PropTypes.bool,
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
-   * @type String
    */
   size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
@@ -65,29 +64,30 @@ var propTypes = {
    */
   text: _react.PropTypes.string,
   /**
-   * Sets the button variant. One of link or outline
+   * Sets the button variant. One of primary, secondary, or link
    */
-  variant: _react.PropTypes.oneOf(['link', 'outline'])
+  variant: _react.PropTypes.oneOf(['default', 'link', 'primary', 'secondary'])
 };
 
 var defaultProps = {
   isBlock: false,
-  intent: 'default',
+  isCompact: false,
   isDisabled: false,
-  isReversed: false
+  isReversed: false,
+  variant: 'default'
 };
 
 var Button = function Button(_ref) {
   var isBlock = _ref.isBlock,
+      isCompact = _ref.isCompact,
       children = _ref.children,
       icon = _ref.icon,
-      intent = _ref.intent,
       isDisabled = _ref.isDisabled,
       isReversed = _ref.isReversed,
       size = _ref.size,
       text = _ref.text,
       variant = _ref.variant,
-      customProps = _objectWithoutProperties(_ref, ['isBlock', 'children', 'icon', 'intent', 'isDisabled', 'isReversed', 'size', 'text', 'variant']);
+      customProps = _objectWithoutProperties(_ref, ['isBlock', 'isCompact', 'children', 'icon', 'isDisabled', 'isReversed', 'size', 'text', 'variant']);
 
   var attributes = _extends({}, customProps);
   var buttonText = text ? _react2.default.createElement(
@@ -96,15 +96,7 @@ var Button = function Button(_ref) {
     text
   ) : null;
 
-  var style = intent;
-  var titleize = function titleize(s) {
-    return s.charAt(0).toUpperCase() + s.slice(1);
-  };
-  if (variant) {
-    style = '' + variant + titleize(intent);
-  }
-
-  attributes.className = (0, _classnames2.default)(['terra-Button', 'terra-Button--' + style, { 'is-disabled': isDisabled }, _defineProperty({}, 'terra-Button--' + size, size), { 'terra-Button--block': isBlock }, attributes.className]);
+  attributes.className = (0, _classnames2.default)(['terra-Button', 'terra-Button--' + variant, { 'is-disabled': isDisabled }, _defineProperty({}, 'terra-Button--' + size, size), { 'terra-Button--block': isBlock }, { 'terra-Button--compact': isCompact }, attributes.className]);
 
   attributes.disabled = isDisabled;
   attributes.tabIndex = isDisabled ? '-1' : undefined;

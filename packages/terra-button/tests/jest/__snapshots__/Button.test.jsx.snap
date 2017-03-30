@@ -11,28 +11,35 @@ exports[`test should render a Button with merged attributes 1`] = `
   } />
 `;
 
-exports[`test should render a default component 1`] = `
+exports[`test should render a default button 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--default"
   disabled={false} />
 `;
 
-exports[`test should render a default link component 1`] = `
+exports[`test should render a link button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--linkDefault"
+  className="terra-Button terra-Button--link"
   disabled={false} />
 `;
 
-exports[`test should render a default outline component 1`] = `
+exports[`test should render a primary button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--outlineDefault"
+  className="terra-Button terra-Button--primary"
   disabled={false} />
 `;
 
-exports[`test should render a icon 1`] = `
+exports[`test should render a secondary button 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--secondary"
+  disabled={false} />
+`;
+
+exports[`test should render an icon 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--tiny"
@@ -42,7 +49,7 @@ exports[`test should render a icon 1`] = `
 </button>
 `;
 
-exports[`test should render a icon and a text 1`] = `
+exports[`test should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--tiny"
