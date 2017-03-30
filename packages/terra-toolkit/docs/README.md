@@ -27,7 +27,7 @@ const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-widget', done);
   },
 };
 ```

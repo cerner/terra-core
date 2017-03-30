@@ -12,7 +12,7 @@ var csvObject = function csvObject(name, filepath, themeable, bidi) {
   _classCallCheck(this, csvObject);
 
   this.name = name;
-  this.svgSrc = 'node_modules/cerner-one-icons/' + filepath;
+  this.svgSrc = 'node_modules/one-cerner-style-icons/' + filepath;
   this.svgDest = '' + _config.TerraIcon.svgDir + name + '.svg';
   this.isThemeable = !!themeable;
   this.isBidi = bidi === 'bi-directional';
