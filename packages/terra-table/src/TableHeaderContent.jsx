@@ -7,7 +7,7 @@ const propTypes = {
   /**
    * Content to be displayed for the column header
    */
-  display: PropTypes.node.isRequired,
+  content: PropTypes.node.isRequired,
   /**
    * The minimum width for the column
    */
@@ -30,20 +30,18 @@ const iconDown = <IconDown />;
 const iconUp = <IconUp />;
 
 const TableHeaderContent = ({
-  display,
+  content,
   height,
   minWidth,
   sort,
   ...customProps
   }) => {
   const contentClassName = classNames([
+    { [`terra-Table-min-width--${minWidth}`]: minWidth },
+    { [`terra-Table-header-max-height--${height}`]: height },
     'terra-Table-header',
     customProps.className,
   ]);
-
-  const heightProperty = {
-    'data-max-height': height,
-  };
 
   const dataSort = {
     'data-sort': sort,
@@ -57,9 +55,9 @@ const TableHeaderContent = ({
   }
 
   return (
-    <th {...customProps} className={contentClassName} data-column-min-width={minWidth} {...heightProperty} {...dataSort}>
+    <th {...customProps} className={contentClassName} {...dataSort}>
       <div>
-        {display}
+        {content}
         {sortIndicator}
       </div>
     </th>

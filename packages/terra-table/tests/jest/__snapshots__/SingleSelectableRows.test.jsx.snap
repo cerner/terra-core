@@ -3,24 +3,26 @@ exports[`test should render SingleSelectableRows tag 1`] = `
   <TableRow
     isSelectable={true}
     isSelected={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+    tabIndex="0">
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
   </TableRow>
   <TableRow
     isSelectable={true}
     isSelected={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+    tabIndex="0">
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
   </TableRow>
 </TableRows>
 `;
@@ -31,24 +33,26 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
   <TableRow
     isSelectable={true}
     isSelected={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+    tabIndex="0">
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
   </TableRow>
   <TableRow
     isSelectable={true}
     isSelected={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+    tabIndex="0">
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
     <TableRowContent
-      display="Table Data" />
+      content="Table Data" />
   </TableRow>
 </TableRows>
 `;

@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
 const propTypes = {
   /**
    * Content to be displayed for the row cell
    */
-  display: PropTypes.any.isRequired,
+  content: PropTypes.any.isRequired,
   /**
    * The maximum height for the cell content in a table
    */
@@ -12,16 +13,19 @@ const propTypes = {
 };
 
 const TableRowContent = ({
-  display,
+  content,
   height,
   ...customProps
   }) => {
-  const heightProperty = {
-    'data-max-height': height,
-  };
+  const contentClassName = classNames([
+    { [`terra-Table-row-max-height--${height}`]: height },
+    'terra-Table-cell',
+    customProps.className,
+  ]);
+
   return (
-    <td {...heightProperty} {...customProps}>
-      <div>{display}</div>
+    <td {...customProps} className={contentClassName}>
+      <div>{content}</div>
     </td>
   );
 };

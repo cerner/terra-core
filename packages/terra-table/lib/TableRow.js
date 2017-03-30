@@ -42,8 +42,7 @@ var propTypes = {
 };
 
 var defaultProps = {
-  isSelected: false,
-  isSelectable: undefined
+  isSelected: false
 };
 
 function cloneChildItems(children, height) {

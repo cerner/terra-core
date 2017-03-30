@@ -1,7 +1,6 @@
 exports[`test should render default table header content tag 1`] = `
 <th
-  className="terra-Table-header"
-  data-column-min-width="small">
+  className="terra-Table-min-width--small terra-Table-header">
   <div>
     Column Heading
   </div>
@@ -10,8 +9,7 @@ exports[`test should render default table header content tag 1`] = `
 
 exports[`test should render table header content tag with ascending sort indicator 1`] = `
 <th
-  className="terra-Table-header"
-  data-column-min-width="small"
+  className="terra-Table-min-width--small terra-Table-header"
   data-sort="asc">
   <div>
     Column Heading
@@ -29,8 +27,7 @@ exports[`test should render table header content tag with ascending sort indicat
 
 exports[`test should render table header content tag with descending sort indicator 1`] = `
 <th
-  className="terra-Table-header"
-  data-column-min-width="small"
+  className="terra-Table-min-width--small terra-Table-header"
   data-sort="desc">
   <div>
     Column Heading
@@ -42,6 +39,15 @@ exports[`test should render table header content tag with descending sort indica
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg" />
     </span>
+  </div>
+</th>
+`;
+
+exports[`test should render table header content tag with maximum height fixed 1`] = `
+<th
+  className="terra-Table-min-width--small terra-Table-header-max-height--small terra-Table-header">
+  <div>
+    Column Heading
   </div>
 </th>
 `;

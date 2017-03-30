@@ -23,7 +23,6 @@ const propTypes = {
 
 const defaultProps = {
   isSelected: false,
-  isSelectable: undefined,
 };
 
 function cloneChildItems(children, height) {

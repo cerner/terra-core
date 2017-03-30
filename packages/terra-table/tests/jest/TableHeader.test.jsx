@@ -2,9 +2,9 @@ import React from 'react';
 import Table from '../../src/Table';
 
 // Constants
-const headerData1 = <Table.HeaderContent display={'Column Heading'} key={1} />;
-const headerData2 = <Table.HeaderContent display={'Column Heading'} key={2} />;
-const headerData3 = <Table.HeaderContent display={'Column Heading'} key={3} />;
+const headerData1 = <Table.HeaderContent content={'Column Heading'} key={1} />;
+const headerData2 = <Table.HeaderContent content={'Column Heading'} key={2} />;
+const headerData3 = <Table.HeaderContent content={'Column Heading'} key={3} />;
 const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test

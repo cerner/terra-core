@@ -24,13 +24,15 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
   /**
    * Content to be displayed for the column header
    */
-  display: _react.PropTypes.node.isRequired,
+  content: _react.PropTypes.node.isRequired,
   /**
    * The minimum width for the column
    */
@@ -53,17 +55,13 @@ var iconDown = _react2.default.createElement(_IconCaretDown2.default, null);
 var iconUp = _react2.default.createElement(_IconCaretUp2.default, null);
 
 var TableHeaderContent = function TableHeaderContent(_ref) {
-  var display = _ref.display,
+  var content = _ref.content,
       height = _ref.height,
       minWidth = _ref.minWidth,
       sort = _ref.sort,
-      customProps = _objectWithoutProperties(_ref, ['display', 'height', 'minWidth', 'sort']);
+      customProps = _objectWithoutProperties(_ref, ['content', 'height', 'minWidth', 'sort']);
 
-  var contentClassName = (0, _classnames2.default)(['terra-Table-header', customProps.className]);
-
-  var heightProperty = {
-    'data-max-height': height
-  };
+  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-min-width--' + minWidth, minWidth), _defineProperty({}, 'terra-Table-header-max-height--' + height, height), 'terra-Table-header', customProps.className]);
 
   var dataSort = {
     'data-sort': sort
@@ -86,11 +84,11 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
 
   return _react2.default.createElement(
     'th',
-    _extends({}, customProps, { className: contentClassName, 'data-column-min-width': minWidth }, heightProperty, dataSort),
+    _extends({}, customProps, { className: contentClassName }, dataSort),
     _react2.default.createElement(
       'div',
       null,
-      display,
+      content,
       sortIndicator
     )
   );

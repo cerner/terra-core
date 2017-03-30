@@ -120,6 +120,11 @@ var SingleSelectableRows = function (_React$Component) {
         newProps.isSelectable = true;
       }
 
+      // Add tabIndex on rows to navigate through keyboard tab key for selectable row
+      if (newProps.isSelectable || isSelectable) {
+        newProps.tabIndex = '0';
+      }
+
       return newProps;
     }
   }, {
