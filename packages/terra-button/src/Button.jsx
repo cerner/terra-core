@@ -4,40 +4,39 @@ import './Button.scss';
 
 const propTypes = {
   /**
-   * Whether or not the button should display as a block
-   */
-  isBlock: PropTypes.bool,
-  /**
    * Child Nodes
    */
   children: PropTypes.node,
-  /**
-   * An optional icon. Nested inline with the text when provided
-   */
-  icon: PropTypes.element,
-  /**
-   * Sets the button color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`
-   */
-  intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'positive', 'negative', 'warning', 'info']),
-  /**
-   * Whether or not the button should be disabled
-   */
-  isDisabled: PropTypes.bool,
   /**
    * Sets the href. When set will render the component as an anchor tag
    */
   href: PropTypes.string,
   /**
-   * Callback function triggered when clicked
+   * An optional icon. Nested inline with the text when provided
    */
-  onClick: PropTypes.func,
+  icon: PropTypes.element,
+  /**
+   * Whether or not the button should display as a block
+   */
+  isBlock: PropTypes.bool,
+  /**
+   * Whether or not the button has reduced padding
+   */
+  isCompact: PropTypes.bool,
+  /**
+   * Whether or not the button should be disabled
+   */
+  isDisabled: PropTypes.bool,
   /**
    * Reverses the position of the icon and text
    */
   isReversed: PropTypes.bool,
   /**
+   * Callback function triggered when clicked
+   */
+  onClick: PropTypes.func,
+  /**
    * Sets the button size. One of tiny, small, medium, large, huge
-   * @type String
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
@@ -45,23 +44,24 @@ const propTypes = {
    */
   text: PropTypes.string,
   /**
-   * Sets the button variant. One of link or outline
+   * Sets the button variant. One of primary, secondary, or link
    */
-  variant: PropTypes.oneOf(['link', 'outline']),
+  variant: PropTypes.oneOf(['default', 'link', 'primary', 'secondary']),
 };
 
 const defaultProps = {
   isBlock: false,
-  intent: 'default',
+  isCompact: false,
   isDisabled: false,
   isReversed: false,
+  variant: 'default',
 };
 
 const Button = ({
-  isBlock,
   children,
   icon,
-  intent,
+  isBlock,
+  isCompact,
   isDisabled,
   isReversed,
   size,
@@ -72,18 +72,13 @@ const Button = ({
   const attributes = Object.assign({}, customProps);
   const buttonText = text ? <span className="terra-Button-text">{text}</span> : null;
 
-  let style = intent;
-  const titleize = s => s.charAt(0).toUpperCase() + s.slice(1);
-  if (variant) {
-    style = `${variant}${titleize(intent)}`;
-  }
-
   attributes.className = classNames([
     'terra-Button',
-    `terra-Button--${style}`,
+    `terra-Button--${variant}`,
     { 'is-disabled': isDisabled },
     { [`terra-Button--${size}`]: size },
     { 'terra-Button--block': isBlock },
+    { 'terra-Button--compact': isCompact },
     attributes.className,
   ]);
 

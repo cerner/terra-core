@@ -2,6 +2,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-arrange/docs/README.md';
+import { version } from 'terra-arrange/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -13,6 +14,7 @@ import ArrangeAlignment from './ArrangeAlignment';
 
 const ArrangeExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ArrangeSrc} />
     <h2 id="align-all">Align All Containers</h2>
