@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContentContainer from 'terra-content-container';
+import ContentContainer from '../../lib/ContentContainer';
 
 const header = <p>header</p>;
 const content = <p>content</p>;
