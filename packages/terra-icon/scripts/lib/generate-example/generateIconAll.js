@@ -10,7 +10,7 @@ var _fs2 = _interopRequireDefault(_fs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var outputfile = _fs2.default.createWriteStream('./examples/IconAll.jsx', { flags: 'w' });
+var outputfile = _fs2.default.createWriteStream('../../packages/terra-site/src/examples/icon/IconAll.jsx', { flags: 'w' });
 
 var generateIconAll = function generateIconAll(iconObjs) {
   return new Promise(function (resolve) {

@@ -4,8 +4,12 @@
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-slide-panel', done);
   },
 
   'Displays a the SlidePanel with defaulted props': (browser) => {
