@@ -75,7 +75,7 @@ var propTypes = {
    */
   deceasedDate: _react.PropTypes.string,
   /**
-   * Additional Details to dissplay in the banner.
+   * Additional Details to display in the banner.
    */
   additionalDetails: _react.PropTypes.node,
   /**
