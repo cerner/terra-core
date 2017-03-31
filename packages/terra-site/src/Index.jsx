@@ -9,6 +9,7 @@ import ApplicationExamples from './examples/application/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
+import ButtonGroupExamples from './examples/button-group/Index';
 import ClinicalItemViewExamples from './examples/clinical-item-view/Index';
 import ContentExamples from './examples/content/Index';
 import ContentContainerExamples from './examples/content-container/Index';
@@ -29,6 +30,7 @@ import TitleExamples from './examples/title/Index';
 // Test
 /* eslint-disable import/first */
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
+import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import DetailViewTestRoutes from 'terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
@@ -53,6 +55,7 @@ ReactDOM.render((
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="button" component={ButtonExamples} />
+      <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
@@ -64,14 +67,15 @@ ReactDOM.render((
       <Route path="list" component={ListExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
+      <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="standout" component={StandoutExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
-      <Route path="responsive-element" component={ResponsiveElementExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ButtonTestRoutes}
+    {ButtonGroupTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {ResponsiveElementTestRoutes}

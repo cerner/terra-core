@@ -30,6 +30,7 @@
     "terra-arrange": "^0.x",
     "terra-badge": "^0.x",
     "terra-button": "^0.x",
+    "terra-button-group": "^0.x",
     "terra-clinical-item-view": "^0.x",
     "terra-content": "^0.x",
     "terra-content-container": "^0.x",
