@@ -4,8 +4,6 @@
 
 // Temporary until it is added to application.
 .terra-ClinicalItemView {
-  font-family: $terra-font-family;
-  font-size: $terra-application-font-size;
   word-break: break-word;
   word-wrap: break-word;
 }
@@ -170,6 +168,3 @@
 .terra-ClinicalItemView-text--strikeThrough {
   text-decoration: line-through !important;
 }
-
-
-
