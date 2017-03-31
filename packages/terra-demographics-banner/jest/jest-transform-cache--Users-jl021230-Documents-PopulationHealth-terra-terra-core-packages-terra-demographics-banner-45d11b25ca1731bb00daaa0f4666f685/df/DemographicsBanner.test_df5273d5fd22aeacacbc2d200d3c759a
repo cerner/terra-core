@@ -1,0 +1,73 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_DemographicsBanner = require('../../src/DemographicsBanner'); /* istanbul ignore next */var _DemographicsBanner2 = _interopRequireDefault(_DemographicsBanner);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('DemographicsBanner', function () {
+  it('renders a blank banner properly', function () {
+    var banner = shallow( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DemographicsBanner2.default, /* istanbul ignore next */null));
+    expect(banner).toMatchSnapshot();
+  });
+
+  it('renders a banner that has basic information', function () {
+    var banner = shallow(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DemographicsBanner2.default, /* istanbul ignore next */{
+      age: '24',
+      gender: 'F',
+      personName: 'Terra Demographics Banner',
+      dateOfBirth: 'March 30, 2017' }));
+
+
+
+    expect(banner).toMatchSnapshot();
+  });
+
+  it('renders the banner that contains additional information', function () {
+    var banner = shallow(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DemographicsBanner2.default, /* istanbul ignore next */{
+      photo: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ alt: 'My Cat', src: 'http://lorempixel.com/100/100/animals/7/' }),
+      personName: 'Johnathon Doe',
+      preferredFirstName: 'John',
+      gender: 'Male',
+      age: '25 Years',
+      dateOfBirth: 'May 9, 1993',
+      additionalDetails: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: 'risk-score' }, /* istanbul ignore next */'5%'),
+      identifiers: { MRN: 12343, REA: '3JSDA' },
+      applicationRows: [{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }] }));
+
+
+
+    expect(banner).toMatchSnapshot();
+  });
+
+  it('renders the banner appropriately for a deceased person', function () {
+    var banner = shallow(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DemographicsBanner2.default, /* istanbul ignore next */{
+      age: '24',
+      gender: 'F',
+      personName: 'Old Terra Demographics Banner',
+      dateOfBirth: 'June 15, 2014',
+      deceasedDate: 'March 30, 2017' }));
+
+
+
+    expect(banner).toMatchSnapshot();
+  });
+
+  it('renders the banner properly for a deceased person with additional application content', function () {
+    var banner = shallow(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DemographicsBanner2.default, /* istanbul ignore next */{
+      photo: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ alt: 'My Cat', src: 'http://lorempixel.com/100/100/animals/7/' }),
+      personName: 'Johnathon Doe',
+      preferredFirstName: 'John',
+      gender: 'Male',
+      age: '25 Years',
+      deceased: 'March 5, 2016',
+      dateOfBirth: 'May 9, 1993',
+      additionalDetails: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: 'risk-score' }, /* istanbul ignore next */'5%'),
+      identifiers: { MRN: 12343, REA: '3JSDA' },
+      applicationRows: [{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }] }));
+
+
+
+    expect(banner).toMatchSnapshot();
+  });
+});

@@ -1,0 +1,169 @@
+/* istanbul ignore next */'use strict';var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+var /* istanbul ignore next */_shortid = require('shortid'); /* istanbul ignore next */var _shortid2 = _interopRequireDefault(_shortid);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
+
+var propTypes = {
+  /**
+                   * Full Name of the person
+                   */
+  personName: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                  * The persons preferred first name if they have one.
+                                                                  */
+  preferredFirstName: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                          * Photo to display in the banner
+                                                                          */
+  photo: /* istanbul ignore next */_react.PropTypes.node,
+  /**
+                                                           * Age of the person.
+                                                           */
+  age: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                           * Gender of the Person
+                                                           */
+  gender: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                              * Additional key value identifiers of a person's demographic information
+                                                              */
+  identifiers: /* istanbul ignore next */_react.PropTypes.object,
+  /**
+                                                                   * The persons date of birth
+                                                                   */
+  dateOfBirth: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                   * The persons gestational age.
+                                                                   */
+  gestationalAge: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                      * The column layout in which to present the displays.
+                                                                      */
+  postMenstrualAge: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                        * The person's deceased date. Will display the banner as deceased if this value is provided
+                                                                        */
+  deceasedDate: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                    * Additional Details to dissplay in the banner.
+                                                                    */
+  additionalDetails: /* istanbul ignore next */_react.PropTypes.node,
+  /**
+                                                                       * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
+                                                                       */
+  applicationRows: /* istanbul ignore next */_react.PropTypes.array,
+  /**
+                                                                      * intl object
+                                                                      */
+  intl: /* istanbul ignore next */_reactIntl.intlShape };
+
+
+var defaultProps = {
+  personName: null,
+  preferredFirstName: null,
+  photo: null,
+  age: null,
+  sex: null,
+  identifiers: {},
+  dateOfBirth: null,
+  gestationalAge: null,
+  postMenstrualAge: null,
+  deceasedDate: null,
+  additionalDetails: null,
+  applicationRows: [],
+  intl: null }; /* istanbul ignore next */var
+
+
+DemographicsBannerDisplay = function (_React$Component) {_inherits(DemographicsBannerDisplay, _React$Component);function DemographicsBannerDisplay() {_classCallCheck(this, DemographicsBannerDisplay);return _possibleConstructorReturn(this, (DemographicsBannerDisplay.__proto__ || Object.getPrototypeOf(DemographicsBannerDisplay)).apply(this, arguments));}_createClass(DemographicsBannerDisplay, [{ key: 'additionalApplicationRows', value: function additionalApplicationRows()
+    {
+      return this.props.applicationRows.map(function (row) /* istanbul ignore next */{return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ key: /* istanbul ignore next */_shortid2.default.generate(), className: 'terra-DemographicsBanner--row' }, /* istanbul ignore next */'Object.keys(row).map((key) => (',
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: /* istanbul ignore next */'additional-row-' + key + '-' + row[key] }, key, /* istanbul ignore next */': ', /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'b', /* istanbul ignore next */null, row[key])), /* istanbul ignore next */'))'));});
+
+
+
+    } }, { key: 'personDetails', value: function personDetails()
+
+    {
+      var noDataMessage = this.props.intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
+      var dateOfBirth = this.props.dateOfBirth || noDataMessage;
+
+      var elements = [
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: 'age' }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'b', /* istanbul ignore next */null, this.props.age || noDataMessage)),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: 'gender' }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'b', /* istanbul ignore next */null, this.props.gender || noDataMessage)),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: 'dob' },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedHTMLMessage, /* istanbul ignore next */{ id: 'Terra.demographicsBanner.dateOfBirth', values: { dob: dateOfBirth } }))];
+
+
+
+      if (this.props.gestationalAge) {
+        elements.push( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: 'ga' }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedHTMLMessage, /* istanbul ignore next */{ id: 'Terra.demographicsBanner.gestationalAge', values: { gestationalAge: this.props.gestationalAge } })));
+      }
+
+      if (this.props.postMenstrualAge) {
+        elements.push( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: 'pma' }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedHTMLMessage, /* istanbul ignore next */{ id: 'Terra.demographicsBanner.postMenstrualAge', values: { postMenstrualAge: this.props.postMenstrualAge } })));
+      }
+
+      if (this.props.deceasedDate) {
+        elements.push( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: 'deceased' }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedHTMLMessage, /* istanbul ignore next */{ id: 'Terra.demographicsBanner.deceased', values: { deceasedDate: this.props.deceasedDate } })));
+      }
+
+      return elements;
+    } }, { key: 'applicationIdentifiers', value: function applicationIdentifiers()
+
+
+    {
+      var identifiers = this.props.identifiers;
+
+      if (identifiers) {
+        return Object.keys(identifiers).map(function (key) /* istanbul ignore next */{return (
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ key: /* istanbul ignore next */'identifier-' + key }, key, /* istanbul ignore next */': ', /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'b', /* istanbul ignore next */null, identifiers[key])));});
+
+      } else {
+        return null;
+      }
+    } }, { key: 'render', value: function render()
+
+    {
+      var mainClass = 'terra-DemographicsBanner';
+
+      if (this.props.deceasedDate) {
+        mainClass += '--deceased';
+      }
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: mainClass },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+            this.props.photo),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--content' },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--row' },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */null,
+                this.props.personName || /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedHTMLMessage, /* istanbul ignore next */{ id: 'Terra.demographicsBanner.noDataProvided' }),
+                this.props.preferredFirstName && /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--preferred-first-name' },
+                  this.props.preferredFirstName)),
+
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--application-content' },
+                this.props.additionalDetails)),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--row' },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--person-details' },
+                this.personDetails()),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'terra-DemographicsBanner--identifiers' },
+                this.applicationIdentifiers())),
+
+
+            this.additionalApplicationRows())));
+
+
+
+    } }]);return DemographicsBannerDisplay;}( /* istanbul ignore next */_react2.default.Component);
+
+
+DemographicsBannerDisplay.propTypes = propTypes;
+DemographicsBannerDisplay.defaultProps = defaultProps;
+
+var DemographicsBannerDisplayLocalized = /* istanbul ignore next */(0, _reactIntl.injectIntl)(DemographicsBannerDisplay);

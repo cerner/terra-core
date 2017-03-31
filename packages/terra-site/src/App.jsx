@@ -22,6 +22,7 @@ const App = props => (
       <li><Link to="/site/button-group">Button Group</Link></li>
       <li><Link to="/site/clinical-item-view">Clinical Item View</Link></li>
       <li><Link to="/site/content">Content</Link></li>
+      <li><Link to="/site/demographics">Demographics</Link></li>
       <li><Link to="/site/detail-view">Detail View</Link></li>
       <li><Link to="/site/grid">Grid</Link></li>
       <li><Link to="/site/i18n">I18n</Link></li>

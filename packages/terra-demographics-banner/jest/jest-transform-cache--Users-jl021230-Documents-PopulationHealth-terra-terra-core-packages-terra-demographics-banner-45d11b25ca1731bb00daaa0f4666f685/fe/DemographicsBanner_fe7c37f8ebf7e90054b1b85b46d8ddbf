@@ -1,0 +1,122 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_terraI18n = require('terra-i18n');
+
+/* istanbul ignore next */require('./DemographicsBanner.scss');
+var /* istanbul ignore next */_DemographicsBannerDisplay = require('./DemographicsBannerDisplay'); /* istanbul ignore next */var _DemographicsBannerDisplay2 = _interopRequireDefault(_DemographicsBannerDisplay);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} /* eslint-disable global-require, import/no-dynamic-require */
+
+var propTypes = {
+  /**
+                   * Full Name of the person
+                   */
+  personName: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                  * The persons preferred first name if they have one.
+                                                                  */
+  preferredFirstName: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                          * Photo to display in the banner
+                                                                          */
+  photo: /* istanbul ignore next */_react.PropTypes.node,
+  /**
+                                                           * Age of the person.
+                                                           */
+  age: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                           * Gender of the Person
+                                                           */
+  gender: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                              * Locale to display the banner with
+                                                              */
+  locale: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                              * Additional key value identifiers of a person's demographic information
+                                                              */
+  identifiers: /* istanbul ignore next */_react.PropTypes.object,
+  /**
+                                                                   * The persons date of birth
+                                                                   */
+  dateOfBirth: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                   * The persons gestational age.
+                                                                   */
+  gestationalAge: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                      * The column layout in which to present the displays.
+                                                                      */
+  postMenstrualAge: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                        * The person's deceased date. Will display the banner as deceased if this value is provided
+                                                                        */
+  deceasedDate: /* istanbul ignore next */_react.PropTypes.string,
+  /**
+                                                                    * Additional Details to dissplay in the banner.
+                                                                    */
+  additionalDetails: /* istanbul ignore next */_react.PropTypes.node,
+  /**
+                                                                       * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
+                                                                       */
+  applicationRows: /* istanbul ignore next */_react.PropTypes.array };
+
+
+var defaultProps = {
+  personName: null,
+  preferredFirstName: null,
+  photo: null,
+  age: null,
+  sex: null,
+  identifiers: {},
+  locale: 'en',
+  dateOfBirth: null,
+  gestationalAge: null,
+  postMenstrualAge: null,
+  deceasedDate: null,
+  additionalDetails: null,
+  applicationRows: [] }; /* istanbul ignore next */var
+
+
+DemographicsBanner = function (_React$Component) {_inherits(DemographicsBanner, _React$Component);
+  function /* istanbul ignore next */DemographicsBanner(props) {/* istanbul ignore next */_classCallCheck(this, DemographicsBanner);var _this = _possibleConstructorReturn(this, (DemographicsBanner.__proto__ || Object.getPrototypeOf(DemographicsBanner)).call(this,
+    props));
+
+    /* istanbul ignore next */_this.state = {
+      demographicsMessages: require( /* istanbul ignore next */'./translations/' + props.locale + '.js') }; /* istanbul ignore next */return _this;
+
+  }_createClass(DemographicsBanner, [{ key: 'componentDidMount', value: function componentDidMount()
+
+    {
+      /* istanbul ignore next */(0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
+    } }, { key: 'render', value: function render()
+
+    {
+      if (this.state.load) {
+        return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_terraI18n.I18nProvider, /* istanbul ignore next */{ locale: this.state.locale, messages: /* istanbul ignore next */_extends(this.state.messages, this.state.demographicsMessages) },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DemographicsBannerDisplay2.default, /* istanbul ignore next */{
+              personName: this.props.personName,
+              preferredFirstName: this.props.preferredFirstName,
+              photo: this.props.photo,
+              age: this.props.age,
+              gender: this.props.gender,
+              locale: this.props.locale,
+              identifiers: this.props.identifiers,
+              dateOfBirth: this.props.dateOfBirth,
+              gestationalAge: this.props.gestationalAge,
+              postMenstrualAge: this.props.postMenstrualAge,
+              deceasedDate: this.props.deceasedDate,
+              additionalDetails: this.props.additionalDetails,
+              applicationRows: this.props.applicationRows })));
+
+
+
+      }
+
+      return null;
+    } }]);return DemographicsBanner;}( /* istanbul ignore next */_react2.default.Component);
+
+
+DemographicsBanner.propTypes = propTypes;
+DemographicsBanner.defaultProps = defaultProps; /* istanbul ignore next */exports.default =
+
+DemographicsBanner;

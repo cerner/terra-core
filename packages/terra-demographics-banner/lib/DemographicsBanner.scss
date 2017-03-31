@@ -1,0 +1,71 @@
+/* stylelint-disable  */
+
+@import '~terra-mixins';
+@import './variables';
+@import './mixins';
+
+%terra-demographics-banner {
+  background: $demographics-background;
+  color: #fff;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  h1 {
+    margin: 0;
+
+    .terra-DemographicsBanner--preferred-first-name {
+      margin: auto 5px;
+
+      &::before,
+      &::after {
+        content: '"';
+      }
+    }
+  }
+}
+
+.terra-DemographicsBanner {
+  @extend %terra-demographics-banner;
+}
+
+.terra-DemographicsBanner--deceased {
+  @extend %terra-demographics-banner;
+  background: $demographics-background-deceased;
+}
+
+.terra-DemographicsBanner--row {
+  display: flex;
+
+  span + span {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.terra-DemographicsBanner--content {
+  flex-grow: 1;
+  margin: auto 10px;
+}
+
+.terra-DemographicsBanner--application-content,
+.terra-DemographicsBanner--identifiers {
+  margin-left: auto;
+}
+
+[dir='rtl'] {
+  .terra-DemographicsBanner--row {
+    span + span {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+
+  .terra-DemographicsBanner--application-content,
+  .terra-DemographicsBanner--identifiers {
+    margin-left: inherit;
+    margin-right: auto;
+  }
+}
+

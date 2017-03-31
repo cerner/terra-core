@@ -1,0 +1,9 @@
+exports[`DemographicsBanner renders a banner that has basic information 1`] = `null`;
+
+exports[`DemographicsBanner renders a blank banner properly 1`] = `null`;
+
+exports[`DemographicsBanner renders the banner appropriately for a deceased person 1`] = `null`;
+
+exports[`DemographicsBanner renders the banner properly for a deceased person with additional application content 1`] = `null`;
+
+exports[`DemographicsBanner renders the banner that contains additional information 1`] = `null`;
