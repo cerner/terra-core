@@ -33,18 +33,3 @@ it('should render with icon and text reversed', () => {
   const button = shallow(<Button icon={testElement} text="text" isReversed />);
   expect(button).toMatchSnapshot();
 });
-
-it('should not render as disabled', () => {
-  const button = shallow(<Button isDisabled />);
-  expect(button).toMatchSnapshot();
-});
-
-it('should not render an href', () => {
-  const button = shallow(<Button href="/fakeURL" />);
-  expect(button).toMatchSnapshot();
-});
-
-it('should not render as a block element', () => {
-  const button = shallow(<Button isBlock />);
-  expect(button).toMatchSnapshot();
-});
