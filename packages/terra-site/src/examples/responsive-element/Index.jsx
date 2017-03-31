@@ -17,7 +17,7 @@ const ResponsiveElementExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ResponsiveElementSrc} />
     <h2>Responsive to Parent</h2>
-    <h4>All Breakpoints</h4>
+    <h3>All Breakpoints</h3>
     <ResponsiveExample
       defaultElement={<div>Default</div>}
       tiny={<div>Tiny</div>}
@@ -27,13 +27,13 @@ const ResponsiveElementExamples = () => (
       huge={<div>Huge</div>}
     />
     <br />
-    <h4>Default and Medium Breakpoints</h4>
+    <h3>Default and Medium Breakpoints</h3>
     <ResponsiveExample
       defaultElement={<div>Default</div>}
       medium={<div>Medium</div>}
     />
     <br />
-    <h4>Only Medium</h4>
+    <h3>Only Medium</h3>
     <h5>Note: Does not render elements when smaller than medium.</h5>
     <ResponsiveExample medium={<div>Medium</div>} />
     <h2>Responsive to Window</h2>
