@@ -1,5 +1,5 @@
 @import '~terra-mixins';
-@import '../node_modules/react-datepicker/dist/react-datepicker.min';
+@import '~react-datepicker/dist/react-datepicker.min';
 
 .terra-DatePicker {
   display: inline-block;
@@ -7,6 +7,7 @@
 }
 
 .terra-DatePicker-input {
+  @include terra-border-radius-start(0.286em);
   border: 0.071em solid $terra-grey-40;
   box-shadow: inset 0 0.143em 0.143em $terra-grey-20;
   font-size: 1em;
@@ -17,16 +18,9 @@
   vertical-align: middle;
 
   @if $terra-bidi {
-    [dir='ltr'] & {
-      border-radius: 0.286em 0 0 0.286em;
-    }
-
     [dir='rtl'] & {
-      border-radius: 0 0.286em 0.286em 0;
       margin-left: -0.071em;
     }
-  } @else {
-    border-radius: 0.286em 0 0 0.286em;
   }
 
   &:focus {
@@ -36,17 +30,13 @@
 }
 
 .terra-DatePicker-button {
+  @include terra-border-radius-start(0);
+
   @if $terra-bidi {
     [dir='ltr'] & {
-      border-radius: 0 0.286em 0.286em 0;
       margin-left: -0.071em;
     }
-
-    [dir='rtl'] & {
-      border-radius: 0.286em 0 0 0.286em;
-    }
   } @else {
-    border-radius: 0 0.286em 0.286em 0;
     margin-left: -0.071em;
   }
 }

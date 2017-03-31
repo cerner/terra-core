@@ -28,14 +28,12 @@ class DateRange extends React.Component {
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
 
-  handleChange({ startDate, endDate }) {
-    let startDateForRange = startDate || this.state.startDate;
-    let endDateForRange = endDate || this.state.endDate;
+  handleChange({ startDate = this.state.startDate, endDate = this.state.endDate }) {
+    let startDateForRange = startDate;
+    let endDateForRange = endDate;
 
     if (startDateForRange.isAfter(endDateForRange)) {
-      const tempDate = startDateForRange;
-      startDateForRange = endDateForRange;
-      endDateForRange = tempDate;
+      [startDateForRange, endDateForRange] = [endDateForRange, startDateForRange];
     }
 
     this.setState({ startDate: startDateForRange, endDate: endDateForRange });
@@ -56,20 +54,20 @@ class DateRange extends React.Component {
   render() {
     return (<div className="terra-DatePicker-range">
       <DatePicker
-        {...this.props}
         selectedDate={this.state.startDate}
         isStartDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
         onChange={this.handleChangeStart}
+        {...this.props}
       />
       <DatePicker
-        {...this.props}
         selectedDate={this.state.endDate}
         isEndDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
         onChange={this.handleChangeEnd}
+        {...this.props}
       />
     </div>);
   }

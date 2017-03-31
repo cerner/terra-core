@@ -59,16 +59,18 @@ var DateRange = function (_React$Component) {
   _createClass(DateRange, [{
     key: 'handleChange',
     value: function handleChange(_ref) {
-      var startDate = _ref.startDate,
-          endDate = _ref.endDate;
+      var _ref$startDate = _ref.startDate,
+          startDate = _ref$startDate === undefined ? this.state.startDate : _ref$startDate,
+          _ref$endDate = _ref.endDate,
+          endDate = _ref$endDate === undefined ? this.state.endDate : _ref$endDate;
 
-      var startDateForRange = startDate || this.state.startDate;
-      var endDateForRange = endDate || this.state.endDate;
+      var startDateForRange = startDate;
+      var endDateForRange = endDate;
 
       if (startDateForRange.isAfter(endDateForRange)) {
-        var tempDate = startDateForRange;
-        startDateForRange = endDateForRange;
-        endDateForRange = tempDate;
+        var _ref2 = [endDateForRange, startDateForRange];
+        startDateForRange = _ref2[0];
+        endDateForRange = _ref2[1];
       }
 
       this.setState({ startDate: startDateForRange, endDate: endDateForRange });
@@ -93,20 +95,20 @@ var DateRange = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'terra-DatePicker-range' },
-        _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
+        _react2.default.createElement(_DatePicker2.default, _extends({
           selectedDate: this.state.startDate,
           isStartDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
           onChange: this.handleChangeStart
-        })),
-        _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
+        }, this.props)),
+        _react2.default.createElement(_DatePicker2.default, _extends({
           selectedDate: this.state.endDate,
           isEndDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
           onChange: this.handleChangeEnd
-        }))
+        }, this.props))
       );
     }
   }]);

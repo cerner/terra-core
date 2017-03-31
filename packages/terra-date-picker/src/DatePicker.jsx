@@ -105,7 +105,6 @@ class DatePicker extends React.Component {
 
     const portalPicker =
       (<ReactDatePicker
-        {...customProps}
         selected={selectedDate || this.state.startDate}
         onChange={this.handleChange}
         customInput={<DateInput />}
@@ -128,11 +127,11 @@ class DatePicker extends React.Component {
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
+        {...customProps}
       />);
 
     const popupPicker =
       (<ReactDatePicker
-        {...customProps}
         selected={selectedDate || this.state.startDate}
         onChange={this.handleChange}
         customInput={<DateInput />}
@@ -154,6 +153,7 @@ class DatePicker extends React.Component {
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
+        {...customProps}
       />);
 
     return (
