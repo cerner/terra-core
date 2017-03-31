@@ -24,8 +24,6 @@ require('./ButtonGroup.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -161,7 +159,7 @@ var ButtonGroup = function (_React$Component) {
           children = _props.children,
           customProps = _objectWithoutProperties(_props, ['onChange', 'variant', 'size', 'isCompact', 'isSelectable', 'buttons', 'children']);
 
-      var buttonGroupClassNames = (0, _classnames2.default)(['terra-ButtonGroup', 'terra-ButtonGroup--' + variant, { 'terra-ButtonGroup--compact': isCompact }, _defineProperty({}, 'terra-ButtonGroup--' + size, size), customProps.className]);
+      var buttonGroupClassNames = (0, _classnames2.default)(['terra-ButtonGroup', customProps.className]);
 
       var allButtons = buttons.concat(children);
 
@@ -175,6 +173,9 @@ var ButtonGroup = function (_React$Component) {
 
         return _react2.default.cloneElement(button, {
           onClick: onClick,
+          variant: variant,
+          isCompact: isCompact,
+          size: size,
           isSelected: _this3.state.selectedIndex === i
         });
       });
