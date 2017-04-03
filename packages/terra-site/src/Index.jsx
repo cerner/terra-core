@@ -18,6 +18,7 @@ import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import MenuExamples from './examples/menu/Index';
+import ModalExamples from './examples/modal/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
@@ -60,6 +61,7 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
       <Route path="menu" component={MenuExamples} />
+      <Route path="modal" component={ModalExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="standout" component={StandoutExamples} />
