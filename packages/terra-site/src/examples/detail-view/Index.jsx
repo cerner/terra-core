@@ -2,6 +2,8 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-detail-view/docs/README.md';
+import { version } from 'terra-detail-view/package.json';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import DetailViewSrc from '!raw-loader!terra-detail-view/src/DetailView.jsx';
@@ -12,6 +14,7 @@ import DetailViewNoDivider from './DetailViewNoDivider';
 
 const DetailViewExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h2>Detail View</h2>
     <PropsTable id="props" src={DetailViewSrc} />

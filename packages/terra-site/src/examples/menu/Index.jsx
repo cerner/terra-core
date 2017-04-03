@@ -1,11 +1,14 @@
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-menu/docs/README.md';
+import { version } from 'terra-menu/package.json';
+
 // eslint-disable-next-line import/extensions
 import 'terra-menu';
 
 const MenuExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h1>Orientation</h1>
     <div className="terra-Menu terra-Menu--horizontal">

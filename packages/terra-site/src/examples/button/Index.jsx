@@ -2,32 +2,31 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-button/docs/README.md';
+import { version } from 'terra-button/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import ButtonSrc from '!raw-loader!terra-button/src/Button';
 
 // Example Files
-import ButtonIntent from './ButtonIntent';
-import ButtonOutline from './ButtonOutline';
-import ButtonLink from './ButtonLink';
 import ButtonSize from './ButtonSize';
 import ButtonBlock from './ButtonBlock';
 import ButtonAnchor from './ButtonAnchor';
 import ButtonDisabled from './ButtonDisabled';
 import ButtonOnClick from './ButtonOnClick';
 import ButtonIcon from './ButtonIcon';
+import ButtonVariant from './ButtonVariant';
+import ButtonCompact from './ButtonCompact';
 
 const ButtonExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonSrc} />
-    <h2 id="intent">Intent</h2>
-    <ButtonIntent />
-    <h2 id="outline-variant">Outline Variant</h2>
-    <ButtonOutline />
-    <h2 id="link-variant">Link Variant</h2>
-    <ButtonLink />
+    <h2 id="variant">Variant</h2>
+    <ButtonVariant />
+    <h2 id="compact">Compact</h2>
+    <ButtonCompact />
     <h2 id="size">Size</h2>
     <ButtonSize />
     <h2 id="block">Block</h2>

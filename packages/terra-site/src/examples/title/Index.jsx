@@ -1,11 +1,14 @@
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-title/docs/README.md';
+import { version } from 'terra-title/package.json';
+
 // eslint-disable-next-line import/extensions
 import 'terra-title';
 
 const TitleExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
     <Markdown id="readme" src={ReadMe} />
     <h2 id="caption">Caption</h2>
