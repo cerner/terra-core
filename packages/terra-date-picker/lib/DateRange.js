@@ -95,20 +95,20 @@ var DateRange = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'terra-DatePicker-range' },
-        _react2.default.createElement(_DatePicker2.default, _extends({
+        _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
           selectedDate: this.state.startDate,
           isStartDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
           onChange: this.handleChangeStart
-        }, this.props)),
-        _react2.default.createElement(_DatePicker2.default, _extends({
+        })),
+        _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
           selectedDate: this.state.endDate,
           isEndDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
           onChange: this.handleChangeEnd
-        }, this.props))
+        }))
       );
     }
   }]);

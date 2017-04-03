@@ -148,7 +148,7 @@ var DatePicker = function (_React$Component) {
       localMoment.locale(userLocale);
       var momentDateFormat = localMoment.localeData().longDateFormat('L');
 
-      var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({
+      var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
         selected: selectedDate || this.state.startDate,
         onChange: this.handleChange,
         customInput: _react2.default.createElement(_DateInput2.default, null),
@@ -171,9 +171,9 @@ var DatePicker = function (_React$Component) {
         dropdownMode: 'select',
         showMonthDropdown: true,
         showYearDropdown: true
-      }, customProps));
+      }));
 
-      var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({
+      var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
         selected: selectedDate || this.state.startDate,
         onChange: this.handleChange,
         customInput: _react2.default.createElement(_DateInput2.default, null),
@@ -195,7 +195,7 @@ var DatePicker = function (_React$Component) {
         dropdownMode: 'select',
         showMonthDropdown: true,
         showYearDropdown: true
-      }, customProps));
+      }));
 
       return _react2.default.createElement(_terraResponsiveElement2.default, {
         className: 'terra-DatePicker',

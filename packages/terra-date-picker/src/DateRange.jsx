@@ -54,20 +54,20 @@ class DateRange extends React.Component {
   render() {
     return (<div className="terra-DatePicker-range">
       <DatePicker
+        {...this.props}
         selectedDate={this.state.startDate}
         isStartDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
         onChange={this.handleChangeStart}
-        {...this.props}
       />
       <DatePicker
+        {...this.props}
         selectedDate={this.state.endDate}
         isEndDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
         onChange={this.handleChangeEnd}
-        {...this.props}
       />
     </div>);
   }
