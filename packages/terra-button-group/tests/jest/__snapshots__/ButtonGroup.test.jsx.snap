@@ -1,0 +1,67 @@
+exports[`test should render a button group with buttons 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default">
+  <ButtonGroupButton
+    isReversed={false}
+    isSelected={false} />
+</div>
+`;
+
+exports[`test should render a button group with children 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default">
+  <ButtonGroupButton
+    isReversed={false}
+    isSelected={false} />
+</div>
+`;
+
+exports[`test should render a button group with size = huge 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default terra-ButtonGroup--huge" />
+`;
+
+exports[`test should render a button group with size = large 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default terra-ButtonGroup--large" />
+`;
+
+exports[`test should render a button group with size = medium 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default terra-ButtonGroup--medium" />
+`;
+
+exports[`test should render a button group with size = small 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default terra-ButtonGroup--small" />
+`;
+
+exports[`test should render a button group with size = tiny 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default terra-ButtonGroup--tiny" />
+`;
+
+exports[`test should render a button group with variant = default 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default" />
+`;
+
+exports[`test should render a button group with variant = secondary 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--secondary" />
+`;
+
+exports[`test should render a compact button group 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default terra-ButtonGroup--compact" />
+`;
+
+exports[`test should render a default component 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default" />
+`;
+
+exports[`test should render a selectable button group 1`] = `
+<div
+  className="terra-ButtonGroup terra-ButtonGroup--default" />
+`;
