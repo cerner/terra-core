@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-demographics-banner.svg)](https://www.npmjs.org/package/terra-demographics-banner)
 [![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
 
-{insert description}
+The demographics component is used to display demographic information about a person in a condensed, easy to read format.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-demographics-banner/docs)
