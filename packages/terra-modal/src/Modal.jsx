@@ -1,19 +1,23 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-const FocusTrap = require('focus-trap-react');
-const displace = require('react-displace');
+import FocusTrap from 'focus-trap-react';
+import Portal from 'react-portal';
 import './Modal.scss';
 
 const propTypes = {
   ariaLabel: PropTypes.string.isRequired,
+  beforeClose: PropTypes.func,
   children: PropTypes.node,
   classNameModal: PropTypes.string,
   classNameOverlay: PropTypes.string,
-  closeOnOverlay: PropTypes.bool,
-  getApplicationNode: PropTypes.func.isRequired,
+  closeOnEsc:  PropTypes.bool,
+  closeOnOutsideClick: PropTypes.bool,
   isFullscreen: PropTypes.bool,
   isOpen: PropTypes.bool,
-  onRequestClose: PropTypes.func,
+  onClose: PropTypes.func,
+  onOpen: PropTypes.func,
+  onUpdate: PropTypes.func,
+  openByClickOn: PropTypes.element,
   role: PropTypes.string,
 };
 
@@ -22,44 +26,32 @@ const defaultProps = {
   children: null,
   classNameModal: null,
   classNameOverlay: null,
-  closeOnOverlay: true,
-  getApplicationNode: null,
+  closeOnEsc: true,
+  closeOnOutsideClick: true,
   isFullscreen: false,
   isOpen: false,
-  onRequestClose: null,
+  openByClickOn: null,
   role: 'dialog',
 };
 
 
 class Modal extends React.Component {
-  componentDidMount() {
-    const applicationNode = this.getApplicationNode();
-    if (applicationNode) {
-      applicationNode.setAttribute('aria-hidden', 'true');
-    }
-  }
-
-  componentWillUnmount() {
-    const applicationNode = this.getApplicationNode();
-    if (applicationNode) {
-      applicationNode.setAttribute('aria-hidden', 'false');
-    }
-  }
-
-  getApplicationNode() {
-    return this.props.getApplicationNode();
-  }
-
-  clickOverlay(e) {
-    e.preventDefault();
-
-    if (this.props.onRequestClose) {
-      this.onRequestClose();
-    }
-  }
-
   render() {
-    const { ariaLabel, classNameModal, classNameOverlay, children, closeOnOverlay, getApplicationNode, isFullscreen, isOpen, onRequestClose, role, ...customProps } = this.props;
+    const { ariaLabel,
+            beforeClose,
+            children,
+            classNameModal,
+            classNameOverlay,
+            closeOnEsc,
+            closeOnOutsideClick,
+            isFullscreen,
+            isOpen,
+            onClose,
+            onOpen,
+            onUpdate,
+            openByClickOn,
+            role,
+            ...customProps } = this.props;
 
     if (!isOpen) {
       return null;
@@ -76,15 +68,27 @@ class Modal extends React.Component {
       'terra-Modal-overlay',
     ]);
 
-    customProps['aria-label'] = ariaLabel;
-
     return (
-      <div className="matt">
-        <div {...customProps} className={modalClassName}>
-          {children}
+      <Portal isOpen={this.props.isOpen}
+              openByClickOn={this.props.openByClickOn}
+              closeOnEsc={this.props.closeOnEsc}
+              closeOnOutsideClick={this.props.closeOnOutsideClick}
+              onOpen={this.props.onOpen}
+              beforeClose={this.props.beforeClose}
+              onClose={this.props.onClose}
+              onUpdate={this.props.onUpdate}
+      >
+        <div>
+          <FocusTrap>
+            <div className={modalClassName}
+                 aria-label={ariaLabel}
+                 role={role}
+            >
+              {children}
+            </div>
+          </FocusTrap>
         </div>
-        <div className={overlayClassName} onClick={e => this.clickOverlay(e)} />
-      </div>
+      </Portal>
     );
   }
 }
@@ -93,10 +97,4 @@ class Modal extends React.Component {
 Modal.propTypes = propTypes;
 Modal.defaultProps = defaultProps;
 
-let DisplacedModal = displace(Modal);
-
-DisplacedModal.renderTo = function(input) {
-  return displace(Modal, { renderTo: input });
-};
-
-export default DisplacedModal;
+export default Modal;

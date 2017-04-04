@@ -14,6 +14,10 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _focusTrapReact = require('focus-trap-react');
+
+var _focusTrapReact2 = _interopRequireDefault(_focusTrapReact);
+
 var _reactPortal = require('react-portal');
 
 var _reactPortal2 = _interopRequireDefault(_reactPortal);
@@ -32,22 +36,32 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   ariaLabel: _react.PropTypes.string.isRequired,
+  beforeClose: _react.PropTypes.func,
   children: _react.PropTypes.node,
-  closeOnOverlay: _react.PropTypes.bool,
-  getApplicationNode: _react.PropTypes.func.isRequired,
+  classNameModal: _react.PropTypes.string,
+  classNameOverlay: _react.PropTypes.string,
+  closeOnEsc: _react.PropTypes.bool,
+  closeOnOutsideClick: _react.PropTypes.bool,
   isFullscreen: _react.PropTypes.bool,
   isOpen: _react.PropTypes.bool,
-  onRequestClose: _react.PropTypes.func
+  onClose: _react.PropTypes.func,
+  onOpen: _react.PropTypes.func,
+  onUpdate: _react.PropTypes.func,
+  openByClickOn: _react.PropTypes.element,
+  role: _react.PropTypes.string
 };
 
 var defaultProps = {
   ariaLabel: null,
   children: null,
-  closeOnOverlay: true,
-  getApplicationNode: null,
+  classNameModal: null,
+  classNameOverlay: null,
+  closeOnEsc: true,
+  closeOnOutsideClick: true,
   isFullscreen: false,
   isOpen: false,
-  onRequestClose: null
+  openByClickOn: null,
+  role: 'dialog'
 };
 
 var Modal = function (_React$Component) {
@@ -60,71 +74,60 @@ var Modal = function (_React$Component) {
   }
 
   _createClass(Modal, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var applicationNode = this.getApplicationNode();
-      if (applicationNode) {
-        applicationNode.setAttribute('aria-hidden', 'true');
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      var applicationNode = this.getApplicationNode();
-      if (applicationNode) {
-        applicationNode.setAttribute('aria-hidden', 'false');
-      }
-    }
-  }, {
-    key: 'getApplicationNode',
-    value: function getApplicationNode() {
-      return this.props.getApplicationNode();
-    }
-  }, {
-    key: 'clickOverlay',
-    value: function clickOverlay(e) {
-      e.preventDefault();
-
-      if (this.props.onRequestClose) {
-        this.props.onRequestClose();
-      }
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       var _props = this.props,
           ariaLabel = _props.ariaLabel,
+          beforeClose = _props.beforeClose,
           children = _props.children,
-          closeOnOverlay = _props.closeOnOverlay,
-          getApplicationNode = _props.getApplicationNode,
+          classNameModal = _props.classNameModal,
+          classNameOverlay = _props.classNameOverlay,
+          closeOnEsc = _props.closeOnEsc,
+          closeOnOutsideClick = _props.closeOnOutsideClick,
           isFullscreen = _props.isFullscreen,
           isOpen = _props.isOpen,
-          onRequestClose = _props.onRequestClose,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'closeOnOverlay', 'getApplicationNode', 'isFullscreen', 'isOpen', 'onRequestClose']);
+          onClose = _props.onClose,
+          onOpen = _props.onOpen,
+          onUpdate = _props.onUpdate,
+          openByClickOn = _props.openByClickOn,
+          role = _props.role,
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpen', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
 
       if (!isOpen) {
         return null;
       }
 
-      customProps.className = (0, _classnames2.default)([customProps.className, 'terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }]);
+      var modalClassName = (0, _classnames2.default)([classNameModal, 'terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }]);
 
-      customProps['aria-label'] = ariaLabel;
-
-      customProps.role = customProps.role || 'dialog';
+      var overlayClassName = (0, _classnames2.default)([classNameOverlay, 'terra-Modal-overlay']);
 
       return _react2.default.createElement(
         _reactPortal2.default,
-        { closeOnEsc: true, closeOnOutsideClick: true },
+        { isOpen: this.props.isOpen,
+          openByClickOn: this.props.openByClickOn,
+          closeOnEsc: this.props.closeOnEsc,
+          closeOnOutsideClick: this.props.closeOnOutsideClick,
+          onOpen: this.props.onOpen,
+          beforeClose: this.props.beforeClose,
+          onClose: this.props.onClose,
+          onUpdate: this.props.onUpdate
+        },
         _react2.default.createElement(
           'div',
-          customProps,
-          children
-        ),
-        _react2.default.createElement('div', { className: 'terra-Modal-overlay', onClick: function onClick(e) {
-            return _this2.clickOverlay(e);
-          } })
+          null,
+          _react2.default.createElement(
+            _focusTrapReact2.default,
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: modalClassName,
+                'aria-label': ariaLabel,
+                role: role
+              },
+              children
+            )
+          )
+        )
       );
     }
   }]);

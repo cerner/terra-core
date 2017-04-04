@@ -10,7 +10,6 @@ import ModalSrc from '!raw-loader!terra-modal/src/Modal';
 
 // Example Files
 import ModalDefault from './ModalDefault';
-import ModalFullscreen from './ModalFullscreen';
 
 const ModalExamples = () => (
   <div>
@@ -19,8 +18,6 @@ const ModalExamples = () => (
     <PropsTable id="props" src={ModalSrc} />
     <h2 id="default">Default</h2>
     <ModalDefault />
-    <h2 id="fullscreen">Fullscreen</h2>
-    <ModalFullscreen />
   </div>
 );
 
