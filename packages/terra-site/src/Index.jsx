@@ -5,7 +5,6 @@ import App from './App';
 import Home from './Home';
 
 // Examples
-import ApplicationExamples from './examples/application/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import BaseExamples from './examples/base/Index';
 import BadgeExamples from './examples/badge/Index';
@@ -51,7 +50,6 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
-      <Route path="application" component={ApplicationExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="base" component={BaseExamples} />
