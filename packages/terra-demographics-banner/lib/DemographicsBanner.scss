@@ -33,8 +33,8 @@
   display: flex;
 
   span + span {
+    @include terra-margin-start(0.357rem);
     display: inline-block;
-    margin-left: 5px;
   }
 }
 
@@ -45,21 +45,5 @@
 
 .terra-DemographicsBanner--application-content,
 .terra-DemographicsBanner--identifiers {
-  margin-left: auto;
+  @include terra-margin-start(auto);
 }
-
-[dir='rtl'] {
-  .terra-DemographicsBanner--row {
-    span + span {
-      margin-left: 0;
-      margin-right: 5px;
-    }
-  }
-
-  .terra-DemographicsBanner--application-content,
-  .terra-DemographicsBanner--identifiers {
-    margin-left: inherit;
-    margin-right: auto;
-  }
-}
-
