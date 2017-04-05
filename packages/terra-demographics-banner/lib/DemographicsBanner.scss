@@ -4,7 +4,7 @@
 @import './variables';
 @import './mixins';
 
-%terra-demographics-banner {
+.terra-DemographicsBanner {
   background: $demographics-background;
   color: #fff;
   display: -ms-flex;
@@ -26,12 +26,7 @@
   }
 }
 
-.terra-DemographicsBanner {
-  @extend %terra-demographics-banner;
-}
-
 .terra-DemographicsBanner--deceased {
-  @extend %terra-demographics-banner;
   background: $demographics-background-deceased;
 }
 

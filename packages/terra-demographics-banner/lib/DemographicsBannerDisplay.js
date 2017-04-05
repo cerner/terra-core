@@ -16,6 +16,10 @@ var _shortid = require('shortid');
 
 var _shortid2 = _interopRequireDefault(_shortid);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -207,15 +211,11 @@ var DemographicsBannerDisplay = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var mainClass = 'terra-DemographicsBanner';
-
-      if (this.props.deceasedDate) {
-        mainClass += '--deceased';
-      }
+      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': this.props.deceasedDate });
 
       return _react2.default.createElement(
         'section',
-        { className: mainClass },
+        { className: mainClasses },
         _react2.default.createElement(
           'div',
           null,

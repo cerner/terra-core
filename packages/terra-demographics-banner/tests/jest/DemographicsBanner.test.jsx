@@ -1,73 +1,80 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
+import i18nLoader from 'terra-i18n/lib/i18nLoader';
+
 import DemographicsBanner from '../../src/DemographicsBanner';
 
-describe('DemographicsBanner', () => {
-  it('renders a blank banner properly', () => {
-    const banner = shallow(<DemographicsBanner />);
-    expect(banner).toMatchSnapshot();
-  });
+jest.mock('terra-i18n/lib/i18nLoader');
 
-  it('renders a banner that has basic information', () => {
-    const banner = shallow(
-      <DemographicsBanner
-        age="24"
-        gender="F"
-        personName="Terra Demographics Banner"
-        dateOfBirth="March 30, 2017"
-      />,
-    );
+i18nLoader.mockImplementation((locale, setState, component) => {
+  setState.call(component, { ...component.state, load: true, messages: {} });
+});
 
-    expect(banner).toMatchSnapshot();
-  });
+it('renders a blank banner properly', () => {
+  const banner = renderer.create(<DemographicsBanner />).toJSON();
+  expect(banner).toMatchSnapshot();
+});
 
-  it('renders the banner that contains additional information', () => {
-    const banner = shallow(
-      <DemographicsBanner
-        photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
-        personName="Johnathon Doe"
-        preferredFirstName="John"
-        gender="Male"
-        age="25 Years"
-        dateOfBirth="May 9, 1993"
-        additionalDetails={<span className="risk-score">5%</span>}
-        identifiers={{ MRN: 12343, REA: '3JSDA' }}
-        applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
-      />,
-    );
+it('renders a banner that has basic information', () => {
+  const banner = renderer.create(
+    <DemographicsBanner
+      age="24"
+      gender="F"
+      personName="Terra Demographics Banner"
+      dateOfBirth="March 30, 2017"
+    />,
+  ).toJSON();
 
-    expect(banner).toMatchSnapshot();
-  });
+  expect(banner).toMatchSnapshot();
+});
 
-  it('renders the banner appropriately for a deceased person', () => {
-    const banner = shallow(
-      <DemographicsBanner
-        age="24"
-        gender="F"
-        personName="Old Terra Demographics Banner"
-        dateOfBirth="June 15, 2014"
-        deceasedDate="March 30, 2017"
-      />,
-    );
+it('renders the banner that contains additional information', () => {
+  const banner = renderer.create(
+    <DemographicsBanner
+      photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
+      personName="Johnathon Doe"
+      preferredFirstName="John"
+      gender="Male"
+      age="25 Years"
+      dateOfBirth="May 9, 1993"
+      additionalDetails={<span className="risk-score">5%</span>}
+      identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
+    />,
+  ).toJSON();
 
-    expect(banner).toMatchSnapshot();
-  });
+  expect(banner).toMatchSnapshot();
+});
 
-  it('renders the banner properly for a deceased person with additional application content', () => {
-    const banner = shallow(
-      <DemographicsBanner
-        photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
-        personName="Johnathon Doe"
-        preferredFirstName="John"
-        gender="Male"
-        age="25 Years"
-        deceased="March 5, 2016"
-        dateOfBirth="May 9, 1993"
-        additionalDetails={<span className="risk-score">5%</span>}
-        identifiers={{ MRN: 12343, REA: '3JSDA' }}
-        applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
-      />,
-    );
+it('renders the banner appropriately for a deceased person', () => {
+  const banner = renderer.create(
+    <DemographicsBanner
+      age="24"
+      gender="F"
+      personName="Old Terra Demographics Banner"
+      dateOfBirth="June 15, 2014"
+      deceasedDate="March 30, 2017"
+    />,
+  ).toJSON();
 
-    expect(banner).toMatchSnapshot();
-  });
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders the banner properly for a deceased person with additional application content', () => {
+  const banner = renderer.create(
+    <DemographicsBanner
+      photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
+      personName="Johnathon Doe"
+      preferredFirstName="John"
+      gender="Male"
+      age="25 Years"
+      deceased="March 5, 2016"
+      dateOfBirth="May 9, 1993"
+      additionalDetails={<span className="risk-score">5%</span>}
+      identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
+    />,
+  ).toJSON();
+
+  expect(banner).toMatchSnapshot();
 });

@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { FormattedHTMLMessage, injectIntl, intlShape } from 'react-intl';
 import shortid from 'shortid';
+import classNames from 'classnames';
 
 const propTypes = {
   /**
@@ -124,14 +125,13 @@ class DemographicsBannerDisplay extends React.Component {
   }
 
   render() {
-    let mainClass = 'terra-DemographicsBanner';
-
-    if (this.props.deceasedDate) {
-      mainClass += '--deceased';
-    }
+    const mainClasses = classNames(
+      'terra-DemographicsBanner',
+      { 'terra-DemographicsBanner--deceased': this.props.deceasedDate },
+    );
 
     return (
-      <section className={mainClass}>
+      <section className={mainClasses}>
         <div>
           {this.props.photo}
         </div>

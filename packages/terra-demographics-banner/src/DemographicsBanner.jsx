@@ -1,6 +1,7 @@
 /* eslint-disable global-require, import/no-dynamic-require */
 import React, { PropTypes } from 'react';
-import { I18nProvider, i18nLoader } from 'terra-i18n';
+import i18nLoader from 'terra-i18n/lib/i18nLoader';
+import I18nProvider from 'terra-i18n/lib/I18nProvider';
 
 import './DemographicsBanner.scss';
 import DemographicsBannerDisplay from './DemographicsBannerDisplay';
@@ -92,7 +93,7 @@ class DemographicsBanner extends React.Component {
   render() {
     if (this.state.load) {
       return (
-        <I18nProvider locale={this.state.locale} messages={Object.assign(this.state.messages, this.state.demographicsMessages)}>
+        <I18nProvider locale={this.props.locale} messages={Object.assign(this.state.messages, this.state.demographicsMessages)}>
           <DemographicsBannerDisplay
             personName={this.props.personName}
             preferredFirstName={this.props.preferredFirstName}
