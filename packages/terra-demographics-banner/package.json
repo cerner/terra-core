@@ -37,7 +37,7 @@
     "react-intl": "^2.2.3",
     "react-test-renderer": "^15.4.2",
     "shortid": "^2.2.8",
-    "terra-base": "^0.1.0",
+    "terra-base": "^0.x",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0",
