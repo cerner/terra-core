@@ -16,7 +16,6 @@ const App = props => (
     </div>
     <ul dir="ltr">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/site/application">Application</Link></li>
       <li><Link to="/site/arrange">Arrange</Link></li>
       <li><Link to="/site/base">Base</Link></li>
       <li><Link to="/site/badge">Badge</Link></li>
