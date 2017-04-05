@@ -12,7 +12,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _terraI18n = require('terra-i18n');
+var _i18nLoader = require('terra-i18n/lib/i18nLoader');
+
+var _i18nLoader2 = _interopRequireDefault(_i18nLoader);
+
+var _I18nProvider = require('terra-i18n/lib/I18nProvider');
+
+var _I18nProvider2 = _interopRequireDefault(_I18nProvider);
 
 require('./DemographicsBanner.scss');
 
@@ -117,15 +123,15 @@ var DemographicsBanner = function (_React$Component) {
   _createClass(DemographicsBanner, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      (0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
+      (0, _i18nLoader2.default)(this.props.locale, this.setState, this);
     }
   }, {
     key: 'render',
     value: function render() {
       if (this.state.load) {
         return _react2.default.createElement(
-          _terraI18n.I18nProvider,
-          { locale: this.state.locale, messages: _extends(this.state.messages, this.state.demographicsMessages) },
+          _I18nProvider2.default,
+          { locale: this.props.locale, messages: _extends(this.state.messages, this.state.demographicsMessages) },
           _react2.default.createElement(_DemographicsBannerDisplay2.default, {
             personName: this.props.personName,
             preferredFirstName: this.props.preferredFirstName,
