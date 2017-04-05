@@ -6,16 +6,16 @@
 
 .terra-DemographicsBanner {
   background: $demographics-background;
-  color: #fff;
+  color: $demographics-foreground;
   display: flex;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 0.714em;
+  padding: 0.714em;
 
   h1 {
     margin: 0;
 
     .terra-DemographicsBanner--preferred-first-name {
-      margin: auto 5px;
+      margin: auto 0.357em;
 
       &::before,
       &::after {
@@ -40,7 +40,7 @@
 
 .terra-DemographicsBanner--content {
   flex-grow: 1;
-  margin: auto 10px;
+  margin: auto 0.714em;
 }
 
 .terra-DemographicsBanner--application-content,
