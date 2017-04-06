@@ -3,9 +3,14 @@
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
-  afterEach: (browser, done) => {
-    screenshot(browser, done);
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
   },
+
+  afterEach: (browser, done) => {
+    screenshot(browser, 'terra-demographics-banner', done);
+  },
+
   'Displays a blank demographics banner with the empty text identifier': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`);
     browser.expect.element('.terra-DemographicsBanner').to.be.present;
