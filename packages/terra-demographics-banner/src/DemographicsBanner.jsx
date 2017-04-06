@@ -96,7 +96,7 @@ class DemographicsBanner extends React.Component {
 
     if (this.state.load) {
       return (
-        <I18nProvider locale={this.props.locale} messages={Object.assign(this.state.messages, this.state.demographicsMessages)}>
+        <I18nProvider locale={this.props.locale} messages={Object.assign({}, this.state.messages, this.state.demographicsMessages)}>
           <DemographicsBannerDisplay {...bannerProps} />
         </I18nProvider>
       );

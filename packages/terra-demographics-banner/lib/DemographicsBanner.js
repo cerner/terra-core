@@ -134,7 +134,7 @@ var DemographicsBanner = function (_React$Component) {
       if (this.state.load) {
         return _react2.default.createElement(
           _I18nProvider2.default,
-          { locale: this.props.locale, messages: _extends(this.state.messages, this.state.demographicsMessages) },
+          { locale: this.props.locale, messages: _extends({}, this.state.messages, this.state.demographicsMessages) },
           _react2.default.createElement(_DemographicsBannerDisplay2.default, bannerProps)
         );
       }

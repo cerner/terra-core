@@ -7,7 +7,7 @@ import DemographicsBanner from '../../src/DemographicsBanner';
 jest.mock('terra-i18n/lib/i18nLoader');
 
 i18nLoader.mockImplementation((locale, setState, component) => {
-  setState.call(component, { ...component.state, load: true, messages: {} });
+  setState.call(component, { ...component.state, load: true});
 });
 
 it('renders a blank banner properly', () => {
