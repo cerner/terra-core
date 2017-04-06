@@ -63,7 +63,7 @@ const defaultProps = {
   preferredFirstName: null,
   photo: null,
   age: null,
-  sex: null,
+  gender: null,
   identifiers: {},
   dateOfBirth: null,
   gestationalAge: null,
@@ -125,13 +125,30 @@ class DemographicsBannerDisplay extends React.Component {
   }
 
   render() {
-    const { ...customProps } = this.props;
+    const {
+      personName,
+      preferredFirstName,
+      photo,
+      age,
+      gender,
+      identifiers,
+      dateOfBirth,
+      gestationalAge,
+      postMenstrualAge,
+      deceasedDate,
+      additionalDetails,
+      applicationRows,
+      intl,
+      ...customProps
+    } = this.props;
 
     const mainClasses = classNames(
       'terra-DemographicsBanner',
-      { 'terra-DemographicsBanner--deceased': this.props.deceasedDate },
+      { 'terra-DemographicsBanner--deceased': deceasedDate },
       customProps.className,
     );
+
+    delete customProps.className;
 
     return (
       <section className={mainClasses} {...customProps}>
@@ -141,13 +158,13 @@ class DemographicsBannerDisplay extends React.Component {
         <div className="terra-DemographicsBanner--content">
           <div className="terra-DemographicsBanner--row">
             <h1 className="terra-DemographicsBanner--person-name">
-              { this.props.personName || <FormattedHTMLMessage id="Terra.demographicsBanner.noDataProvided" /> }
-              { this.props.preferredFirstName && <span className="terra-DemographicsBanner--preferred-first-name">
-                { this.props.preferredFirstName }
+              { personName || <FormattedHTMLMessage id="Terra.demographicsBanner.noDataProvided" /> }
+              { preferredFirstName && <span className="terra-DemographicsBanner--preferred-first-name">
+                { preferredFirstName }
               </span> }
             </h1>
             <div className="terra-DemographicsBanner--application-content">
-              {this.props.additionalDetails}
+              {additionalDetails}
             </div>
           </div>
           <div className="terra-DemographicsBanner--row">

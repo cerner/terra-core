@@ -91,12 +91,13 @@ class DemographicsBanner extends React.Component {
   }
 
   render() {
-    const { ...customProps } = this.props;
+    const bannerProps = Object.assign({}, this.props);
+    delete bannerProps.locale;
 
     if (this.state.load) {
       return (
         <I18nProvider locale={this.props.locale} messages={Object.assign(this.state.messages, this.state.demographicsMessages)}>
-          <DemographicsBannerDisplay {...this.props} {...customProps} />
+          <DemographicsBannerDisplay {...bannerProps} />
         </I18nProvider>
       );
     }

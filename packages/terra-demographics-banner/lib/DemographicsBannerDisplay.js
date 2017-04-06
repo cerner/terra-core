@@ -92,7 +92,7 @@ var defaultProps = {
   preferredFirstName: null,
   photo: null,
   age: null,
-  sex: null,
+  gender: null,
   identifiers: {},
   dateOfBirth: null,
   gestationalAge: null,
@@ -215,9 +215,25 @@ var DemographicsBannerDisplay = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var customProps = _objectWithoutProperties(this.props, []);
+      var _props = this.props,
+          personName = _props.personName,
+          preferredFirstName = _props.preferredFirstName,
+          photo = _props.photo,
+          age = _props.age,
+          gender = _props.gender,
+          identifiers = _props.identifiers,
+          dateOfBirth = _props.dateOfBirth,
+          gestationalAge = _props.gestationalAge,
+          postMenstrualAge = _props.postMenstrualAge,
+          deceasedDate = _props.deceasedDate,
+          additionalDetails = _props.additionalDetails,
+          applicationRows = _props.applicationRows,
+          intl = _props.intl,
+          customProps = _objectWithoutProperties(_props, ['personName', 'preferredFirstName', 'photo', 'age', 'gender', 'identifiers', 'dateOfBirth', 'gestationalAge', 'postMenstrualAge', 'deceasedDate', 'additionalDetails', 'applicationRows', 'intl']);
 
-      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': this.props.deceasedDate }, customProps.className);
+      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
+
+      delete customProps.className;
 
       return _react2.default.createElement(
         'section',
@@ -236,17 +252,17 @@ var DemographicsBannerDisplay = function (_React$Component) {
             _react2.default.createElement(
               'h1',
               { className: 'terra-DemographicsBanner--person-name' },
-              this.props.personName || _react2.default.createElement(_reactIntl.FormattedHTMLMessage, { id: 'Terra.demographicsBanner.noDataProvided' }),
-              this.props.preferredFirstName && _react2.default.createElement(
+              personName || _react2.default.createElement(_reactIntl.FormattedHTMLMessage, { id: 'Terra.demographicsBanner.noDataProvided' }),
+              preferredFirstName && _react2.default.createElement(
                 'span',
                 { className: 'terra-DemographicsBanner--preferred-first-name' },
-                this.props.preferredFirstName
+                preferredFirstName
               )
             ),
             _react2.default.createElement(
               'div',
               { className: 'terra-DemographicsBanner--application-content' },
-              this.props.additionalDetails
+              additionalDetails
             )
           ),
           _react2.default.createElement(

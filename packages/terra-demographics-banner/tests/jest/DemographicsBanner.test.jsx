@@ -60,6 +60,26 @@ it('renders the banner appropriately for a deceased person', () => {
   expect(banner).toMatchSnapshot();
 });
 
+it('renders the banner appropriately for a person with gestational and post menstrual dates', () => {
+  const banner = renderer.create(
+    <DemographicsBanner
+      photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
+      personName="Johnathon Doe"
+      preferredFirstName="John"
+      gender="Male"
+      age="25 Years"
+      dateOfBirth="May 9, 1993"
+      gestationalAge="April 5, 2016"
+      postMenstrualAge="April 7, 2016"
+      additionalDetails={<span className="risk-score">5%</span>}
+      identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
+    />,
+  ).toJSON();
+
+  expect(banner).toMatchSnapshot();
+});
+
 it('renders the banner properly for a deceased person with additional application content', () => {
   const banner = renderer.create(
     <DemographicsBanner
@@ -68,7 +88,7 @@ it('renders the banner properly for a deceased person with additional applicatio
       preferredFirstName="John"
       gender="Male"
       age="25 Years"
-      deceased="March 5, 2016"
+      deceasedDate="March 5, 2016"
       dateOfBirth="May 9, 1993"
       additionalDetails={<span className="risk-score">5%</span>}
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
