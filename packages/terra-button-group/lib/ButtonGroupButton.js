@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _terraButton = require('terra-button');
+
+var _terraButton2 = _interopRequireDefault(_terraButton);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -54,25 +58,16 @@ var defaultProps = {
 
 var ButtonGroupButton = function ButtonGroupButton(_ref) {
   var isSelected = _ref.isSelected,
-      text = _ref.text,
-      icon = _ref.icon,
-      isReversed = _ref.isReversed,
-      children = _ref.children,
-      customProps = _objectWithoutProperties(_ref, ['isSelected', 'text', 'icon', 'isReversed', 'children']);
+      customProps = _objectWithoutProperties(_ref, ['isSelected']);
 
   var attributes = _extends({}, customProps);
-  var buttonText = text ? _react2.default.createElement(
-    'span',
-    { className: 'terra-ButtonGroupButton-text' },
-    text
-  ) : null;
 
-  var order = isReversed ? [buttonText, icon, children] : [icon, buttonText, children];
-
-  attributes.className = (0, _classnames2.default)(['terra-ButtonGroupButton', { 'is-selected': isSelected }, attributes.className]);
+  var buttonClassName = (0, _classnames2.default)(['terra-ButtonGroupButton', { 'is-active': isSelected }, attributes.className]);
   attributes['aria-selected'] = isSelected;
 
-  return _react2.default.createElement.apply(_react2.default, ['button', attributes].concat(order));
+  return _react2.default.createElement(_terraButton2.default, _extends({}, attributes, {
+    className: buttonClassName
+  }));
 };
 
 ButtonGroupButton.propTypes = propTypes;

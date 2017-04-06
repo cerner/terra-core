@@ -4,41 +4,12 @@
   @include terra-border-radius-start(0);
   @include terra-border-radius-end(0);
   @include terra-margin-horizontal(0, 0);
-  @include terra-padding-horizontal(0.714em, 0.714em);
-  @include terra-text-align-center;
-  appearance: button;
-
-  border-radius: 0.25em;
+  
   border-style: solid;
   border-width: 1px;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $terra-font-family;
-  font-weight: 400;
-  line-height: 1.429; // 20px when html font size is computed to 14px
   margin-bottom: 0;
   margin-top: 0;
   outline: 0;
-  padding-bottom: 0.286em;
-  padding-top: 0.286em;
-  text-decoration: none;
-  text-transform: none;
-  touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
-  user-select: none; // Prevent text selection on buttons on mobile devices
-  vertical-align: middle;
-
-  white-space: normal;
-
-  // Removes extra space Firefox adds to button elements
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-
-  // Remove margin used to add space between buttons
-  &:last-child {
-    @include terra-margin-end(0);
-  }
 }
 
 .terra-ButtonGroupButton + .terra-ButtonGroupButton {

@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Button from 'terra-button';
 import classNames from 'classnames';
 
 import './ButtonGroupButton.scss';
@@ -35,22 +36,22 @@ const defaultProps = {
   isReversed: false,
 };
 
-const ButtonGroupButton = ({ isSelected, text, icon, isReversed, children, ...customProps }) => {
+
+const ButtonGroupButton = ({ isSelected, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
-  const buttonText = text ? <span className="terra-ButtonGroupButton-text">{text}</span> : null;
 
-  const order = isReversed ?
-    [buttonText, icon, children] :
-    [icon, buttonText, children];
-
-  attributes.className = classNames([
+  const buttonClassName = classNames([
     'terra-ButtonGroupButton',
-    { 'is-selected': isSelected },
+    { 'is-active': isSelected },
     attributes.className,
   ]);
   attributes['aria-selected'] = isSelected;
 
-  return React.createElement('button', attributes, ...order);
+  return (
+    <Button
+      {...attributes}
+      className={buttonClassName}
+    />);
 };
 
 ButtonGroupButton.propTypes = propTypes;

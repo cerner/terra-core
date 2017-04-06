@@ -3,6 +3,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-button-group/docs/README.md';
+import { version } from 'terra-button-group/package.json';
 // Component Source
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import ButtonGroupSrc from '!raw-loader!terra-button-group/src/ButtonGroup.jsx';
@@ -19,6 +20,7 @@ import ButtonGroupOnChange from './ButtonGroupOnChange';
 
 const ButtonGroupExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h2>Button Group</h2>
     <PropsTable id="props" src={ButtonGroupSrc} />
