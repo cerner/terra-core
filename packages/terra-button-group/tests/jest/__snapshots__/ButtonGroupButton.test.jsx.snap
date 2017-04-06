@@ -1,57 +1,80 @@
 exports[`test should render a default component 1`] = `
-<button
+<Button
   aria-selected={false}
-  className="terra-ButtonGroupButton" />
+  className="terra-ButtonGroupButton"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  variant="default" />
 `;
 
 exports[`test should render as selected 1`] = `
-<button
+<Button
   aria-selected={true}
-  className="terra-ButtonGroupButton is-selected" />
+  className="terra-ButtonGroupButton is-active"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  variant="default" />
 `;
 
 exports[`test should render with icon and text 1`] = `
-<button
+<Button
   aria-selected={false}
-  className="terra-ButtonGroupButton">
-  <img
-    alt="icon" />
-  <span
-    className="terra-ButtonGroupButton-text">
-    text
-  </span>
-</button>
+  className="terra-ButtonGroupButton"
+  icon={
+    <img
+      alt="icon" />
+  }
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  text="text"
+  variant="default" />
 `;
 
 exports[`test should render with icon and text reversed 1`] = `
-<button
+<Button
   aria-selected={false}
-  className="terra-ButtonGroupButton">
-  <span
-    className="terra-ButtonGroupButton-text">
-    text
-  </span>
-  <img
-    alt="icon" />
-</button>
+  className="terra-ButtonGroupButton"
+  icon={
+    <img
+      alt="icon" />
+  }
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={true}
+  text="text"
+  variant="default" />
 `;
 
 exports[`test should render with icon only 1`] = `
-<button
+<Button
   aria-selected={false}
-  className="terra-ButtonGroupButton">
-  <img
-    alt="icon" />
-</button>
+  className="terra-ButtonGroupButton"
+  icon={
+    <img
+      alt="icon" />
+  }
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  variant="default" />
 `;
 
 exports[`test should render with text 1`] = `
-<button
+<Button
   aria-selected={false}
-  className="terra-ButtonGroupButton">
-  <span
-    className="terra-ButtonGroupButton-text">
-    text
-  </span>
-</button>
+  className="terra-ButtonGroupButton"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  text="text"
+  variant="default" />
 `;
