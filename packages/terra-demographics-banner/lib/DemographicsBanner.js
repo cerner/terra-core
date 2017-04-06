@@ -28,11 +28,13 @@ var _DemographicsBannerDisplay2 = _interopRequireDefault(_DemographicsBannerDisp
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable global-require, import/no-dynamic-require */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable global-require, import/no-dynamic-require, react/no-unused-prop-types */
 
 
 var propTypes = {
@@ -128,25 +130,13 @@ var DemographicsBanner = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var customProps = _objectWithoutProperties(this.props, []);
+
       if (this.state.load) {
         return _react2.default.createElement(
           _I18nProvider2.default,
           { locale: this.props.locale, messages: _extends(this.state.messages, this.state.demographicsMessages) },
-          _react2.default.createElement(_DemographicsBannerDisplay2.default, {
-            personName: this.props.personName,
-            preferredFirstName: this.props.preferredFirstName,
-            photo: this.props.photo,
-            age: this.props.age,
-            gender: this.props.gender,
-            locale: this.props.locale,
-            identifiers: this.props.identifiers,
-            dateOfBirth: this.props.dateOfBirth,
-            gestationalAge: this.props.gestationalAge,
-            postMenstrualAge: this.props.postMenstrualAge,
-            deceasedDate: this.props.deceasedDate,
-            additionalDetails: this.props.additionalDetails,
-            applicationRows: this.props.applicationRows
-          })
+          _react2.default.createElement(_DemographicsBannerDisplay2.default, _extends({}, this.props, customProps))
         );
       }
 

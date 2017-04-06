@@ -125,13 +125,16 @@ class DemographicsBannerDisplay extends React.Component {
   }
 
   render() {
+    const { ...customProps } = this.props;
+
     const mainClasses = classNames(
       'terra-DemographicsBanner',
       { 'terra-DemographicsBanner--deceased': this.props.deceasedDate },
+      customProps.className,
     );
 
     return (
-      <section className={mainClasses}>
+      <section className={mainClasses} {...customProps}>
         <div>
           {this.props.photo}
         </div>

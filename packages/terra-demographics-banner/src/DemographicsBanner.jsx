@@ -1,4 +1,4 @@
-/* eslint-disable global-require, import/no-dynamic-require */
+/* eslint-disable global-require, import/no-dynamic-require, react/no-unused-prop-types */
 import React, { PropTypes } from 'react';
 import i18nLoader from 'terra-i18n/lib/i18nLoader';
 import I18nProvider from 'terra-i18n/lib/I18nProvider';
@@ -91,24 +91,12 @@ class DemographicsBanner extends React.Component {
   }
 
   render() {
+    const { ...customProps } = this.props;
+
     if (this.state.load) {
       return (
         <I18nProvider locale={this.props.locale} messages={Object.assign(this.state.messages, this.state.demographicsMessages)}>
-          <DemographicsBannerDisplay
-            personName={this.props.personName}
-            preferredFirstName={this.props.preferredFirstName}
-            photo={this.props.photo}
-            age={this.props.age}
-            gender={this.props.gender}
-            locale={this.props.locale}
-            identifiers={this.props.identifiers}
-            dateOfBirth={this.props.dateOfBirth}
-            gestationalAge={this.props.gestationalAge}
-            postMenstrualAge={this.props.postMenstrualAge}
-            deceasedDate={this.props.deceasedDate}
-            additionalDetails={this.props.additionalDetails}
-            applicationRows={this.props.applicationRows}
-          />
+          <DemographicsBannerDisplay {...this.props} {...customProps} />
         </I18nProvider>
       );
     }
