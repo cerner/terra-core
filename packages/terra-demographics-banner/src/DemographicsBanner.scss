@@ -1,0 +1,47 @@
+@import '~terra-mixins';
+@import './variables';
+@import './mixins';
+
+.terra-DemographicsBanner {
+  background: $demographics-background;
+  color: $demographics-foreground;
+  display: flex;
+  margin-bottom: 0.714em;
+  padding: 0.714em;
+}
+
+.terra-DemographicsBanner--person-name {
+  margin: 0;
+}
+
+.terra-DemographicsBanner--preferred-first-name {
+  margin: auto 0.357em;
+
+  &::before,
+  &::after {
+    content: '"';
+  }
+}
+
+.terra-DemographicsBanner--deceased {
+  background: $demographics-background-deceased;
+}
+
+.terra-DemographicsBanner--row {
+  display: flex;
+
+  span + span {
+    @include terra-margin-start(0.357rem);
+    display: inline-block;
+  }
+}
+
+.terra-DemographicsBanner--content {
+  flex-grow: 1;
+  margin: auto 0.714em;
+}
+
+.terra-DemographicsBanner--application-content,
+.terra-DemographicsBanner--identifiers {
+  @include terra-margin-start(auto);
+}

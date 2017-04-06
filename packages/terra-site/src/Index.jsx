@@ -12,12 +12,11 @@ import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import ClinicalItemViewExamples from './examples/clinical-item-view/Index';
 import ContentExamples from './examples/content/Index';
+import DemographicsBannerExamples from './examples/demographics-banner/Index';
 import DetailViewExamples from './examples/detail-view/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
-import ImageExamples from './examples/image/Index';
-import ListExamples from './examples/list/Index';
 import MenuExamples from './examples/menu/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
@@ -42,6 +41,7 @@ import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
+import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -57,12 +57,12 @@ ReactDOM.render((
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
       <Route path="content" component={ContentExamples} />
+      <Route path="demographics" component={DemographicsBannerExamples} />
       <Route path="detail-view" component={DetailViewExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
-      <Route path="image" component={ImageExamples} />
-      <Route path="list" component={ListExamples} />
+      <Route path="standout" component={StandoutExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
@@ -86,5 +86,6 @@ ReactDOM.render((
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {DemographicsBannerTestRoutes}
   </Router>
 ), document.getElementById('root'));
