@@ -6,11 +6,11 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     onClick={[Function]}
     tabIndex="0">
     <TableRowContent
-      content="Table Data" />
+      content="John Smith" />
     <TableRowContent
-      content="Table Data" />
+      content="123 Adams Drive" />
     <TableRowContent
-      content="Table Data" />
+      content="111-222-3333" />
   </TableRow>
   <TableRow
     isSelectable={true}
@@ -18,11 +18,11 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     onClick={[Function]}
     tabIndex="0">
     <TableRowContent
-      content="Table Data" />
+      content="John Smith" />
     <TableRowContent
-      content="Table Data" />
+      content="123 Adams Drive" />
     <TableRowContent
-      content="Table Data" />
+      content="111-222-3333" />
   </TableRow>
 </TableRows>
 `;
@@ -36,11 +36,11 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     onClick={[Function]}
     tabIndex="0">
     <TableRowContent
-      content="Table Data" />
+      content="John Smith" />
     <TableRowContent
-      content="Table Data" />
+      content="123 Adams Drive" />
     <TableRowContent
-      content="Table Data" />
+      content="111-222-3333" />
   </TableRow>
   <TableRow
     isSelectable={true}
@@ -48,11 +48,11 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     onClick={[Function]}
     tabIndex="0">
     <TableRowContent
-      content="Table Data" />
+      content="John Smith" />
     <TableRowContent
-      content="Table Data" />
+      content="123 Adams Drive" />
     <TableRowContent
-      content="Table Data" />
+      content="111-222-3333" />
   </TableRow>
 </TableRows>
 `;

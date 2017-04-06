@@ -2,11 +2,11 @@ exports[`test should render a default table row 1`] = `
 <tr
   className="terra-Table-row">
   <TableRowContent
-    content="Table Data" />
+    content="John Smith" />
   <TableRowContent
-    content="Table Data" />
+    content="123 Adams Drive" />
   <TableRowContent
-    content="Table Data" />
+    content="111-222-3333" />
 </tr>
 `;
 
@@ -14,11 +14,11 @@ exports[`test should render a selectable table row 1`] = `
 <tr
   className="terra-Table--isSelectable terra-Table-row">
   <TableRowContent
-    content="Table Data" />
+    content="John Smith" />
   <TableRowContent
-    content="Table Data" />
+    content="123 Adams Drive" />
   <TableRowContent
-    content="Table Data" />
+    content="111-222-3333" />
 </tr>
 `;
 
@@ -26,10 +26,10 @@ exports[`test should render a selected table row 1`] = `
 <tr
   className="terra-Table--isSelected terra-Table-row">
   <TableRowContent
-    content="Table Data" />
+    content="John Smith" />
   <TableRowContent
-    content="Table Data" />
+    content="123 Adams Drive" />
   <TableRowContent
-    content="Table Data" />
+    content="111-222-3333" />
 </tr>
 `;

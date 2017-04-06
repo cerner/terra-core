@@ -3,33 +3,33 @@ exports[`test should render a default table 1`] = `
   className="terra-Table terra-Table--striped">
   <TableHeader>
     <TableHeaderContent
-      content="Column Heading"
+      content="Name"
       minWidth="small" />
     <TableHeaderContent
-      content="Column Heading"
+      content="Address"
       minWidth="small" />
     <TableHeaderContent
-      content="Column Heading"
+      content="Phone Number"
       minWidth="small" />
   </TableHeader>
   <TableRows>
     <TableRow
       isSelected={false}>
       <TableRowContent
-        content="Table Data" />
+        content="John Smith" />
       <TableRowContent
-        content="Table Data" />
+        content="123 Adams Drive" />
       <TableRowContent
-        content="Table Data" />
+        content="111-222-3333" />
     </TableRow>
     <TableRow
       isSelected={false}>
       <TableRowContent
-        content="Table Data" />
+        content="John Smith" />
       <TableRowContent
-        content="Table Data" />
+        content="123 Adams Drive" />
       <TableRowContent
-        content="Table Data" />
+        content="111-222-3333" />
     </TableRow>
   </TableRows>
 </table>
@@ -40,33 +40,33 @@ exports[`test should render a table without zebra stripes 1`] = `
   className="terra-Table">
   <TableHeader>
     <TableHeaderContent
-      content="Column Heading"
+      content="Name"
       minWidth="small" />
     <TableHeaderContent
-      content="Column Heading"
+      content="Address"
       minWidth="small" />
     <TableHeaderContent
-      content="Column Heading"
+      content="Phone Number"
       minWidth="small" />
   </TableHeader>
   <TableRows>
     <TableRow
       isSelected={false}>
       <TableRowContent
-        content="Table Data" />
+        content="John Smith" />
       <TableRowContent
-        content="Table Data" />
+        content="123 Adams Drive" />
       <TableRowContent
-        content="Table Data" />
+        content="111-222-3333" />
     </TableRow>
     <TableRow
       isSelected={false}>
       <TableRowContent
-        content="Table Data" />
+        content="John Smith" />
       <TableRowContent
-        content="Table Data" />
+        content="123 Adams Drive" />
       <TableRowContent
-        content="Table Data" />
+        content="111-222-3333" />
     </TableRow>
   </TableRows>
 </table>

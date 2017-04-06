@@ -21,21 +21,21 @@ module.exports = {
   'Displays a default table and verify the provided text': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/default`)
-      .assert.containsText('.terra-Table-header:nth-child(1)', 'Column Heading 1')
+      .assert.containsText('.terra-Table-header:nth-child(1)', 'Name')
       .assert.cssClassPresent('.terra-Table-header:nth-child(1)', 'terra-Table-min-width--small')
-      .assert.containsText('.terra-Table-header:nth-child(2)', 'Column Heading 2')
+      .assert.containsText('.terra-Table-header:nth-child(2)', 'Address')
       .assert.cssClassPresent('.terra-Table-header:nth-child(2)', 'terra-Table-min-width--medium')
-      .assert.containsText('.terra-Table-header:nth-child(3)', 'Column Heading 3')
+      .assert.containsText('.terra-Table-header:nth-child(3)', 'Phone Number')
       .assert.cssClassPresent('.terra-Table-header:nth-child(3)', 'terra-Table-min-width--large')
-      .assert.containsText('tr:nth-child(1) td:nth-child(1)', 'Row 1 Cell 1')
-      .assert.containsText('tr:nth-child(1) td:nth-child(2)', 'Row 1 Cell 2')
-      .assert.containsText('tr:nth-child(1) td:nth-child(3)', 'Row 1 Cell 3')
-      .assert.containsText('tr:nth-child(2) td:nth-child(1)', 'Row 2 Cell 1')
-      .assert.containsText('tr:nth-child(2) td:nth-child(2)', 'Row 2 Cell 2')
-      .assert.containsText('tr:nth-child(2) td:nth-child(3)', 'Row 2 Cell 3')
-      .assert.containsText('tr:nth-child(3) td:nth-child(1)', 'Row 3 Cell 1')
-      .assert.containsText('tr:nth-child(3) td:nth-child(2)', 'Row 3 Cell 2')
-      .assert.containsText('tr:nth-child(3) td:nth-child(3)', 'Row 3 Cell 3');
+      .assert.containsText('tr:nth-child(1) td:nth-child(1)', 'John Smith')
+      .assert.containsText('tr:nth-child(1) td:nth-child(2)', '123 Adams Drive')
+      .assert.containsText('tr:nth-child(1) td:nth-child(3)', '111-222-3333')
+      .assert.containsText('tr:nth-child(2) td:nth-child(1)', 'Jane Smith')
+      .assert.containsText('tr:nth-child(2) td:nth-child(2)', '321 Drive Street')
+      .assert.containsText('tr:nth-child(2) td:nth-child(3)', '111-222-3333')
+      .assert.containsText('tr:nth-child(3) td:nth-child(1)', 'Dave Smith')
+      .assert.containsText('tr:nth-child(3) td:nth-child(2)', '213 Raymond Road')
+      .assert.containsText('tr:nth-child(3) td:nth-child(3)', '111-222-3333');
   },
 
   'Displays a table without the stripes': (browser) => {

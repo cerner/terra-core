@@ -1,12 +1,10 @@
 import React from 'react';
 import Table from '../../src/Table';
 
-const shortid = require('shortid');
-
 // Constants
-const cellData1 = <Table.RowContent content={'Table Data'} key={shortid.generate()} />;
-const cellData2 = <Table.RowContent content={'Table Data'} key={shortid.generate()} />;
-const cellData3 = <Table.RowContent content={'Table Data'} key={shortid.generate()} />;
+const cellData1 = <Table.RowContent content={'John Smith'} key={'NAME'} />;
+const cellData2 = <Table.RowContent content={'123 Adams Drive'} key={'ADDRESS'} />;
+const cellData3 = <Table.RowContent content={'111-222-3333'} key={'PHONE_NUMBER'} />;
 const rowData = [cellData1, cellData2, cellData3];
 
 // Snapshot test
