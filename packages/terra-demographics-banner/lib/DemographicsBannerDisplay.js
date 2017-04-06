@@ -235,7 +235,7 @@ var DemographicsBannerDisplay = function (_React$Component) {
             { className: 'terra-DemographicsBanner--row' },
             _react2.default.createElement(
               'h1',
-              null,
+              { className: 'terra-DemographicsBanner--person-name' },
               this.props.personName || _react2.default.createElement(_reactIntl.FormattedHTMLMessage, { id: 'Terra.demographicsBanner.noDataProvided' }),
               this.props.preferredFirstName && _react2.default.createElement(
                 'span',

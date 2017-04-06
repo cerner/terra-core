@@ -10,18 +10,18 @@
   display: flex;
   margin-bottom: 0.714em;
   padding: 0.714em;
+}
 
-  h1 {
-    margin: 0;
+.terra-DemographicsBanner--person-name {
+  margin: 0;
+}
 
-    .terra-DemographicsBanner--preferred-first-name {
-      margin: auto 0.357em;
+.terra-DemographicsBanner--preferred-first-name {
+  margin: auto 0.357em;
 
-      &::before,
-      &::after {
-        content: '"';
-      }
-    }
+  &::before,
+  &::after {
+    content: '"';
   }
 }
 

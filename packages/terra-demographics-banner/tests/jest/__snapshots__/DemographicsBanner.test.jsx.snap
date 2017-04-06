@@ -52,7 +52,8 @@ exports[`test renders a banner that has basic information 1`] = `
       className="terra-DemographicsBanner--content">
       <div
         className="terra-DemographicsBanner--row">
-        <h1>
+        <h1
+          className="terra-DemographicsBanner--person-name">
           Terra Demographics Banner
         </h1>
         <div
@@ -143,7 +144,8 @@ exports[`test renders a blank banner properly 1`] = `
       className="terra-DemographicsBanner--content">
       <div
         className="terra-DemographicsBanner--row">
-        <h1>
+        <h1
+          className="terra-DemographicsBanner--person-name">
           <span
             dangerouslySetInnerHTML={
               Object {
@@ -239,7 +241,8 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       className="terra-DemographicsBanner--content">
       <div
         className="terra-DemographicsBanner--row">
-        <h1>
+        <h1
+          className="terra-DemographicsBanner--person-name">
           Old Terra Demographics Banner
         </h1>
         <div
@@ -367,7 +370,8 @@ exports[`test renders the banner properly for a deceased person with additional 
       className="terra-DemographicsBanner--content">
       <div
         className="terra-DemographicsBanner--row">
-        <h1>
+        <h1
+          className="terra-DemographicsBanner--person-name">
           Johnathon Doe
           <span
             className="terra-DemographicsBanner--preferred-first-name">
@@ -537,7 +541,8 @@ exports[`test renders the banner that contains additional information 1`] = `
       className="terra-DemographicsBanner--content">
       <div
         className="terra-DemographicsBanner--row">
-        <h1>
+        <h1
+          className="terra-DemographicsBanner--person-name">
           Johnathon Doe
           <span
             className="terra-DemographicsBanner--preferred-first-name">

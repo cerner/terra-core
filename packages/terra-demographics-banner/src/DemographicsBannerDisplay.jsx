@@ -140,7 +140,7 @@ class DemographicsBannerDisplay extends React.Component {
         </div>
         <div className="terra-DemographicsBanner--content">
           <div className="terra-DemographicsBanner--row">
-            <h1>
+            <h1 className="terra-DemographicsBanner--person-name">
               { this.props.personName || <FormattedHTMLMessage id="Terra.demographicsBanner.noDataProvided" /> }
               { this.props.preferredFirstName && <span className="terra-DemographicsBanner--preferred-first-name">
                 { this.props.preferredFirstName }
