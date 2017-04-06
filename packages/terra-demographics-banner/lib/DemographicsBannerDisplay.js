@@ -34,73 +34,73 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * Full Name of the person
+   * Additional Details to display in the banner.
    */
-  personName: _react.PropTypes.string,
-  /**
-   * The persons preferred first name if they have one.
-   */
-  preferredFirstName: _react.PropTypes.string,
-  /**
-   * Photo to display in the banner
-   */
-  photo: _react.PropTypes.node,
+  additionalDetails: _react.PropTypes.node,
   /**
    * Age of the person.
    */
   age: _react.PropTypes.string,
   /**
-   * Gender of the Person
+   * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
    */
-  gender: _react.PropTypes.string,
-  /**
-   * Additional key value identifiers of a person's demographic information
-   */
-  identifiers: _react.PropTypes.object,
+  applicationRows: _react.PropTypes.array,
   /**
    * The persons date of birth
    */
   dateOfBirth: _react.PropTypes.string,
   /**
+   * The person's deceased date. Will display the banner as deceased if this value is provided
+   */
+  deceasedDate: _react.PropTypes.string,
+  /**
+   * Gender of the Person
+   */
+  gender: _react.PropTypes.string,
+  /**
    * The persons gestational age.
    */
   gestationalAge: _react.PropTypes.string,
+  /**
+   * Additional key value identifiers of a person's demographic information
+   */
+  identifiers: _react.PropTypes.object,
+  /**
+   * intl object
+   */
+  intl: _reactIntl.intlShape,
+  /**
+   * Full Name of the person
+   */
+  personName: _react.PropTypes.string,
+  /**
+   * Photo to display in the banner
+   */
+  photo: _react.PropTypes.node,
   /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: _react.PropTypes.string,
   /**
-   * The person's deceased date. Will display the banner as deceased if this value is provided
+   * The persons preferred first name if they have one.
    */
-  deceasedDate: _react.PropTypes.string,
-  /**
-   * Additional Details to display in the banner.
-   */
-  additionalDetails: _react.PropTypes.node,
-  /**
-   * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
-   */
-  applicationRows: _react.PropTypes.array,
-  /**
-   * intl object
-   */
-  intl: _reactIntl.intlShape
+  preferredFirstName: _react.PropTypes.string
 };
 
 var defaultProps = {
-  personName: null,
-  preferredFirstName: null,
-  photo: null,
-  age: null,
-  gender: null,
-  identifiers: {},
-  dateOfBirth: null,
-  gestationalAge: null,
-  postMenstrualAge: null,
-  deceasedDate: null,
   additionalDetails: null,
+  age: null,
   applicationRows: [],
-  intl: null
+  dateOfBirth: null,
+  deceasedDate: null,
+  gender: null,
+  gestationalAge: null,
+  identifiers: {},
+  intl: null,
+  personName: null,
+  photo: null,
+  postMenstrualAge: null,
+  preferredFirstName: null
 };
 
 var DemographicsBannerDisplay = function (_React$Component) {
@@ -216,20 +216,20 @@ var DemographicsBannerDisplay = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          personName = _props.personName,
-          preferredFirstName = _props.preferredFirstName,
-          photo = _props.photo,
           age = _props.age,
-          gender = _props.gender,
-          identifiers = _props.identifiers,
-          dateOfBirth = _props.dateOfBirth,
-          gestationalAge = _props.gestationalAge,
-          postMenstrualAge = _props.postMenstrualAge,
-          deceasedDate = _props.deceasedDate,
           additionalDetails = _props.additionalDetails,
           applicationRows = _props.applicationRows,
+          dateOfBirth = _props.dateOfBirth,
+          deceasedDate = _props.deceasedDate,
+          gender = _props.gender,
+          gestationalAge = _props.gestationalAge,
+          identifiers = _props.identifiers,
           intl = _props.intl,
-          customProps = _objectWithoutProperties(_props, ['personName', 'preferredFirstName', 'photo', 'age', 'gender', 'identifiers', 'dateOfBirth', 'gestationalAge', 'postMenstrualAge', 'deceasedDate', 'additionalDetails', 'applicationRows', 'intl']);
+          personName = _props.personName,
+          photo = _props.photo,
+          postMenstrualAge = _props.postMenstrualAge,
+          preferredFirstName = _props.preferredFirstName,
+          customProps = _objectWithoutProperties(_props, ['age', 'additionalDetails', 'applicationRows', 'dateOfBirth', 'deceasedDate', 'gender', 'gestationalAge', 'identifiers', 'intl', 'personName', 'photo', 'postMenstrualAge', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 

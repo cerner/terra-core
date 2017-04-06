@@ -8,73 +8,73 @@ import DemographicsBannerDisplay from './DemographicsBannerDisplay';
 
 const propTypes = {
   /**
-   * Full Name of the person
+   * Additional Details to display in the banner.
    */
-  personName: PropTypes.string,
-  /**
-   * The persons preferred first name if they have one.
-   */
-  preferredFirstName: PropTypes.string,
-  /**
-   * Photo to display in the banner
-   */
-  photo: PropTypes.node,
+  additionalDetails: PropTypes.node,
   /**
    * Age of the person.
    */
   age: PropTypes.string,
   /**
-   * Gender of the Person
+   * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
    */
-  gender: PropTypes.string,
-  /**
-   * Locale to display the banner with
-   */
-  locale: PropTypes.string,
-  /**
-   * Additional key value identifiers of a person's demographic information
-   */
-  identifiers: PropTypes.object,
+  applicationRows: PropTypes.array,
   /**
    * The persons date of birth
    */
   dateOfBirth: PropTypes.string,
   /**
+   * The person's deceased date. Will display the banner as deceased if this value is provided
+   */
+  deceasedDate: PropTypes.string,
+  /**
+   * Gender of the Person
+   */
+  gender: PropTypes.string,
+  /**
    * The persons gestational age.
    */
   gestationalAge: PropTypes.string,
+  /**
+   * Additional key value identifiers of a person's demographic information
+   */
+  identifiers: PropTypes.object,
+  /**
+   * Locale to display the banner with
+   */
+  locale: PropTypes.string,
+  /**
+   * Full Name of the person
+   */
+  personName: PropTypes.string,
+  /**
+   * Photo to display in the banner
+   */
+  photo: PropTypes.node,
   /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
   /**
-   * The person's deceased date. Will display the banner as deceased if this value is provided
+   * The persons preferred first name if they have one.
    */
-  deceasedDate: PropTypes.string,
-  /**
-   * Additional Details to display in the banner.
-   */
-  additionalDetails: PropTypes.node,
-  /**
-   * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
-   */
-  applicationRows: PropTypes.array,
+  preferredFirstName: PropTypes.string,
 };
 
 const defaultProps = {
-  personName: null,
-  preferredFirstName: null,
-  photo: null,
+  additionalDetails: null,
   age: null,
+  applicationRows: [],
+  dateOfBirth: null,
+  deceasedDate: null,
   gender: null,
+  gestationalAge: null,
   identifiers: {},
   locale: 'en',
-  dateOfBirth: null,
-  gestationalAge: null,
+  personName: null,
+  photo: null,
   postMenstrualAge: null,
-  deceasedDate: null,
-  additionalDetails: null,
-  applicationRows: [],
+  preferredFirstName: null,
 };
 
 class DemographicsBanner extends React.Component {

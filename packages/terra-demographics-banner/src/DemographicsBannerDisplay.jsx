@@ -5,73 +5,73 @@ import classNames from 'classnames';
 
 const propTypes = {
   /**
-   * Full Name of the person
+   * Additional Details to display in the banner.
    */
-  personName: PropTypes.string,
-  /**
-   * The persons preferred first name if they have one.
-   */
-  preferredFirstName: PropTypes.string,
-  /**
-   * Photo to display in the banner
-   */
-  photo: PropTypes.node,
+  additionalDetails: PropTypes.node,
   /**
    * Age of the person.
    */
   age: PropTypes.string,
   /**
-   * Gender of the Person
+   * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
    */
-  gender: PropTypes.string,
-  /**
-   * Additional key value identifiers of a person's demographic information
-   */
-  identifiers: PropTypes.object,
+  applicationRows: PropTypes.array,
   /**
    * The persons date of birth
    */
   dateOfBirth: PropTypes.string,
   /**
+   * The person's deceased date. Will display the banner as deceased if this value is provided
+   */
+  deceasedDate: PropTypes.string,
+  /**
+   * Gender of the Person
+   */
+  gender: PropTypes.string,
+  /**
    * The persons gestational age.
    */
   gestationalAge: PropTypes.string,
+  /**
+   * Additional key value identifiers of a person's demographic information
+   */
+  identifiers: PropTypes.object,
+  /**
+   * intl object
+   */
+  intl: intlShape,
+  /**
+   * Full Name of the person
+   */
+  personName: PropTypes.string,
+  /**
+   * Photo to display in the banner
+   */
+  photo: PropTypes.node,
   /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
   /**
-   * The person's deceased date. Will display the banner as deceased if this value is provided
+   * The persons preferred first name if they have one.
    */
-  deceasedDate: PropTypes.string,
-  /**
-   * Additional Details to display in the banner.
-   */
-  additionalDetails: PropTypes.node,
-  /**
-   * Additional rows of key value pairs to add to the demographics banner. The rows will be added after the person rows.
-   */
-  applicationRows: PropTypes.array,
-  /**
-   * intl object
-   */
-  intl: intlShape,
+  preferredFirstName: PropTypes.string,
 };
 
 const defaultProps = {
-  personName: null,
-  preferredFirstName: null,
-  photo: null,
-  age: null,
-  gender: null,
-  identifiers: {},
-  dateOfBirth: null,
-  gestationalAge: null,
-  postMenstrualAge: null,
-  deceasedDate: null,
   additionalDetails: null,
+  age: null,
   applicationRows: [],
+  dateOfBirth: null,
+  deceasedDate: null,
+  gender: null,
+  gestationalAge: null,
+  identifiers: {},
   intl: null,
+  personName: null,
+  photo: null,
+  postMenstrualAge: null,
+  preferredFirstName: null,
 };
 
 class DemographicsBannerDisplay extends React.Component {
@@ -126,19 +126,19 @@ class DemographicsBannerDisplay extends React.Component {
 
   render() {
     const {
-      personName,
-      preferredFirstName,
-      photo,
       age,
-      gender,
-      identifiers,
-      dateOfBirth,
-      gestationalAge,
-      postMenstrualAge,
-      deceasedDate,
       additionalDetails,
       applicationRows,
+      dateOfBirth,
+      deceasedDate,
+      gender,
+      gestationalAge,
+      identifiers,
       intl,
+      personName,
+      photo,
+      postMenstrualAge,
+      preferredFirstName,
       ...customProps
     } = this.props;
 
