@@ -1,0 +1,17 @@
+exports[`test should render a default table row content 1`] = `
+<td
+  className="terra-Table-cell">
+  <div>
+    Table Data
+  </div>
+</td>
+`;
+
+exports[`test should render a table row content with maximum height 1`] = `
+<td
+  className="terra-Table-row-max-height--small terra-Table-cell">
+  <div>
+    Table Data
+  </div>
+</td>
+`;
