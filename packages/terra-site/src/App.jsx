@@ -16,7 +16,6 @@ const App = props => (
     </div>
     <ul dir="ltr">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/site/application">Application</Link></li>
       <li><Link to="/site/arrange">Arrange</Link></li>
       <li><Link to="/site/base">Base</Link></li>
       <li><Link to="/site/badge">Badge</Link></li>
@@ -37,6 +36,7 @@ const App = props => (
       <li><Link to="/site/slide-panel">Slide Panel</Link></li>
       <li><Link to="/site/standout">Standout</Link></li>
       <li><Link to="/site/status">Status</Link></li>
+      <li><Link to="/site/table">Table</Link></li>
       <li><Link to="/site/title">Title</Link></li>
       <li><Link to="/tests">Tests</Link></li>
     </ul>

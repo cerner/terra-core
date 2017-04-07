@@ -27,7 +27,6 @@
     "react-dom": "^15.4.2",
     "react-intl": "^2.2.3",
     "react-router": "^3.0.2",
-    "terra-application": "^0.x",
     "terra-arrange": "^0.x",
     "terra-badge": "^0.x",
     "terra-base": "^0.x",
@@ -52,7 +51,8 @@
     "terra-slide-panel": "^0.x",
     "terra-standout": "^0.x",
     "terra-status": "^0.x",
-    "terra-title": "^0.x"
+    "terra-title": "^0.x",
+    "terra-table": "^0.x"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",

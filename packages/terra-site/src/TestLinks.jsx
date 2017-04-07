@@ -7,7 +7,7 @@ const TestLinks = () => (
     <ul>
       <li><Link to="/tests/base-tests">Base Tests</Link></li>
       <li><Link to="/tests/button-tests">Button Tests</Link></li>
-      <li><Link to="/test/button-group-tests">Button Group Tests</Link></li>
+      <li><Link to="/tests/button-group-tests">Button Group Tests</Link></li>
       <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
       <li><Link to="/tests/detail-view-tests">Detail View Tests</Link></li>
       <li><Link to="/tests/i18n-tests">I18n Tests</Link></li>
@@ -20,6 +20,7 @@ const TestLinks = () => (
       <li><Link to="/tests/list-item-tests">ListItem Tests</Link></li>
       <li><Link to="/tests/single-select-list-tests">SingleSelectList Tests</Link></li>
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
+      <li><Link to="/tests/table-tests">Table Tests</Link></li>
     </ul>
   </div>
 );

@@ -103,9 +103,6 @@ class ButtonGroup extends React.Component {
   render() {
     const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...customProps } = this.props;
     const buttonGroupClassNames = classNames(['terra-ButtonGroup',
-      `terra-ButtonGroup--${variant}`,
-      { 'terra-ButtonGroup--compact': isCompact },
-      { [`terra-ButtonGroup--${size}`]: size },
       customProps.className,
     ]);
 
@@ -121,6 +118,9 @@ class ButtonGroup extends React.Component {
 
       return React.cloneElement(button, {
         onClick,
+        variant,
+        isCompact,
+        size,
         isSelected: this.state.selectedIndex === i,
       });
     });

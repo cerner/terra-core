@@ -16,6 +16,7 @@ Cerner Corporation
 - Tatiana Alexenko [@bunnyLord]
 - Jaime Mackey [@jmsv6d]
 - Dave Kasper [@dkasper-was-taken]
+- Nikhil Agrawal [@nagrawal3]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -33,3 +34,4 @@ Cerner Corporation
 [@bunnyLord]: https://github.com/bunnyLord
 [@jmsv6d]: https://github.com/jmsv6d
 [@dkasper-was-taken]: https://github.com/dkasper-was-taken
+[@nagrawal3]: https://github.com/nagrawal3
