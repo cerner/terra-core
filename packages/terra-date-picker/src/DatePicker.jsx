@@ -96,7 +96,7 @@ class DatePicker extends React.Component {
     const todayString = 'Today';
 
     // TODO: Get the locale from date_util
-    const userLocale = window.navigator.language;
+    const userLocale = 'en-US';
 
     // TODO: Get date format from date_util
     const localMoment = moment();
@@ -161,7 +161,7 @@ class DatePicker extends React.Component {
         className="terra-DatePicker"
         responsiveTo="window"
         defaultElement={portalPicker}
-        medium={popupPicker}
+        small={popupPicker}
       />
     );
   }

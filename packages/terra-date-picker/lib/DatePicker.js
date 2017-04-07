@@ -141,7 +141,7 @@ var DatePicker = function (_React$Component) {
       var todayString = 'Today';
 
       // TODO: Get the locale from date_util
-      var userLocale = window.navigator.language;
+      var userLocale = 'en-US';
 
       // TODO: Get date format from date_util
       var localMoment = (0, _moment2.default)();
@@ -201,7 +201,7 @@ var DatePicker = function (_React$Component) {
         className: 'terra-DatePicker',
         responsiveTo: 'window',
         defaultElement: portalPicker,
-        medium: popupPicker
+        small: popupPicker
       });
     }
   }]);
