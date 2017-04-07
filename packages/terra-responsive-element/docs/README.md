@@ -3,7 +3,11 @@
 The ResponsiveElement conditionally renders components based on viewport size.
 The viewport can be set to the immediate parent or window.
 
-*Note: It is not necessary to set each breakpoint. If a breakpoint is not set the component will look at each successive smaller breakpoint until one is found.*
+## Additional Notes:
+
+It is not necessary to set each breakpoint. If a breakpoint is not set the component will look at each successive smaller breakpoint until one is found.
+
+The ResponsiveElement observes the available width. Meaning padding, borders, and margins set on the parent are not included in the calculation. Modifying box-sizing will impact how these properties are used in an elements width calculation. For more details see: https://css-tricks.com/almanac/properties/b/box-sizing/
 
 ## Getting Started
 

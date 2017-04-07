@@ -1,0 +1,73 @@
+exports[`test should render a default table 1`] = `
+<table
+  className="terra-Table terra-Table--striped">
+  <TableHeader>
+    <TableHeaderContent
+      content="Name"
+      minWidth="small" />
+    <TableHeaderContent
+      content="Address"
+      minWidth="small" />
+    <TableHeaderContent
+      content="Phone Number"
+      minWidth="small" />
+  </TableHeader>
+  <TableRows>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        content="John Smith" />
+      <TableRowContent
+        content="123 Adams Drive" />
+      <TableRowContent
+        content="111-222-3333" />
+    </TableRow>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        content="John Smith" />
+      <TableRowContent
+        content="123 Adams Drive" />
+      <TableRowContent
+        content="111-222-3333" />
+    </TableRow>
+  </TableRows>
+</table>
+`;
+
+exports[`test should render a table without zebra stripes 1`] = `
+<table
+  className="terra-Table">
+  <TableHeader>
+    <TableHeaderContent
+      content="Name"
+      minWidth="small" />
+    <TableHeaderContent
+      content="Address"
+      minWidth="small" />
+    <TableHeaderContent
+      content="Phone Number"
+      minWidth="small" />
+  </TableHeader>
+  <TableRows>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        content="John Smith" />
+      <TableRowContent
+        content="123 Adams Drive" />
+      <TableRowContent
+        content="111-222-3333" />
+    </TableRow>
+    <TableRow
+      isSelected={false}>
+      <TableRowContent
+        content="John Smith" />
+      <TableRowContent
+        content="123 Adams Drive" />
+      <TableRowContent
+        content="111-222-3333" />
+    </TableRow>
+  </TableRows>
+</table>
+`;
