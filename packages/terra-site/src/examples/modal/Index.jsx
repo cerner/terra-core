@@ -10,6 +10,8 @@ import ModalSrc from '!raw-loader!terra-modal/src/Modal';
 
 // Example Files
 import ModalDefault from './ModalDefault';
+import ModalIsOpen from './ModalIsOpen';
+import ModalOpenByClickOn from './ModalOpenByClickOn';
 
 const ModalExamples = () => (
   <div>
@@ -17,6 +19,10 @@ const ModalExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <h2 id="default">Default</h2>
     <ModalDefault />
+    <h2 id="isOpen">isOpen</h2>
+    <ModalIsOpen />
+    <h2 id="openByClickOn">openByClickOn</h2>
+    <ModalOpenByClickOn />
   </div>
 );
 

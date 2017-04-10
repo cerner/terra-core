@@ -5,10 +5,15 @@ class ModalDialog extends React.Component {
   render() {
     return (
       <FocusTrap>
-        <div onClick={this.props.closePortal} className="terra-Modal-overlay" />
-        <div className="terra-Modal" role='dialog'>
+        <div
+         onClick={this.props.closePortal}
+         className={this.props.classNameOverlay}/>
+        <div
+          className={'terra-Modal'}
+          role={this.props.role}
+        >
           {this.props.children}
-          <p><button onClick={this.props.closePortal}>Close this</button></p>
+          <p><button onClick={this.props.closePortal}>Close openByClickOn modal</button></p>
         </div>
       </FocusTrap>
     );

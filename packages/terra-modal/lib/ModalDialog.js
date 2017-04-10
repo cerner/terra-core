@@ -37,10 +37,15 @@ var ModalDialog = function (_React$Component) {
       return _react2.default.createElement(
         _focusTrapReact2.default,
         null,
-        _react2.default.createElement('div', { onClick: this.props.closePortal, className: 'terra-Modal-overlay' }),
+        _react2.default.createElement('div', {
+          onClick: this.props.closePortal,
+          className: this.props.classNameOverlay }),
         _react2.default.createElement(
           'div',
-          { className: 'terra-Modal', role: 'dialog' },
+          {
+            className: 'terra-Modal',
+            role: this.props.role
+          },
           this.props.children,
           _react2.default.createElement(
             'p',
@@ -48,7 +53,7 @@ var ModalDialog = function (_React$Component) {
             _react2.default.createElement(
               'button',
               { onClick: this.props.closePortal },
-              'Close this'
+              'Close openByClickOn modal'
             )
           )
         )

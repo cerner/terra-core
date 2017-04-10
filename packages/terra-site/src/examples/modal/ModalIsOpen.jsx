@@ -42,9 +42,6 @@ class ModalDefault extends React.Component {
  }
 
  render() {
-    const button1 = <button>Open terra modal 1</button>;
-    const button2 = <button onClick={this.handleOpenModal}>Open terra modal 2</button>;
-
     return (
       <div>
       <Modal
@@ -52,7 +49,6 @@ class ModalDefault extends React.Component {
         isOpened={this.state.isOpened}
         closeOnEsc
         closeOnOutsideClick
-        openByClickOn={button1}
         onClose={this.onClose}
         onOpen={this.onOpen}
         onUpdate={this.onUpdate}
@@ -66,7 +62,7 @@ class ModalDefault extends React.Component {
           <button onClick={this.handleCloseModal}>Close isOpen modal</button>
         </div>
       </Modal>
-      {button2}
+      <button onClick={this.handleOpenModal}>Open isOpen modal</button>
       </div>
     );
   }

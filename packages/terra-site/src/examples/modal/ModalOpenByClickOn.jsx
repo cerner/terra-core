@@ -9,8 +9,6 @@ class ModalDefault extends React.Component {
       isOpened: false
     };
 
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   onClose() {
@@ -29,22 +27,8 @@ class ModalDefault extends React.Component {
     console.log('beforeClose');
   }
 
- handleOpenModal() {
-  console.log('preOpenModal: ' + this.state.isOpened);
-  this.setState({ isOpened: true });
-  console.log('postOpenModal: ' + this.state.isOpened);
- }
-
- handleCloseModal() {
-  console.log('preCloseModal: ' + this.state.isOpened);
-  this.setState({ isOpened: false });
-  console.log('postCloseModal: ' + this.state.isOpened);
- }
 
  render() {
-    const button1 = <button>Open terra modal 1</button>;
-    const button2 = <button onClick={this.handleOpenModal}>Open terra modal 2</button>;
-
     return (
       <div>
       <Modal
@@ -52,7 +36,7 @@ class ModalDefault extends React.Component {
         isOpened={this.state.isOpened}
         closeOnEsc
         closeOnOutsideClick
-        openByClickOn={button1}
+        openByClickOn={<button>Open openByClickOn modal</button>}
         onClose={this.onClose}
         onOpen={this.onOpen}
         onUpdate={this.onUpdate}
@@ -63,10 +47,8 @@ class ModalDefault extends React.Component {
           <hr/>
           <p>The Terra Modal is appended to the document body.</p>
           <p>Modal is assigned a role of 'dialog' for accessibility.</p>
-          <button onClick={this.handleCloseModal}>Close isOpen modal</button>
         </div>
       </Modal>
-      {button2}
       </div>
     );
   }
