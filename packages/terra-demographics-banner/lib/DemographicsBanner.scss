@@ -30,6 +30,10 @@
 
 .terra-DemographicsBanner--deceased {
   background: $demographics-background-deceased;
+
+  .terra-DemographicsBanner--profile-photo {
+    opacity: 0.7;
+  }
 }
 
 .terra-DemographicsBanner--row {

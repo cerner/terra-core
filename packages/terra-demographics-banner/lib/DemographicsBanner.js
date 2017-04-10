@@ -218,7 +218,7 @@ var DemographicsBanner = function (_React$Component) {
         _extends({ className: mainClasses }, customProps),
         _react2.default.createElement(
           'div',
-          null,
+          { className: 'terra-DemographicsBanner--profile-photo' },
           this.props.photo
         ),
         _react2.default.createElement(

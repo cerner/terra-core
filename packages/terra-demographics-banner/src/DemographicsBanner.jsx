@@ -146,7 +146,7 @@ class DemographicsBanner extends React.Component {
 
     return (
       <section className={mainClasses} {...customProps}>
-        <div>
+        <div className="terra-DemographicsBanner--profile-photo">
           {this.props.photo}
         </div>
         <div className="terra-DemographicsBanner--content">

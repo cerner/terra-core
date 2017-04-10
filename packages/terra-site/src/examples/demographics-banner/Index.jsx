@@ -44,6 +44,7 @@ const DemographicsBannerExamples = () => (
       deceasedDate="March 12, 2017"
       gender="True Male"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
       personName="Johnathon Doe"
       preferredFirstName="John"
     />
