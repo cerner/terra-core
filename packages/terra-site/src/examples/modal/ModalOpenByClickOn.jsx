@@ -4,11 +4,6 @@ import Modal from '../../../../terra-modal/src/Modal';
 class ModalDefault extends React.Component {
   constructor() {
     super();
-
-    this.state = {
-      isOpened: false
-    };
-
   }
 
   onClose() {
@@ -27,16 +22,15 @@ class ModalDefault extends React.Component {
     console.log('beforeClose');
   }
 
-
  render() {
+    const openButton = <button>Open Modal</button>;
     return (
       <div>
       <Modal
         ariaLabel="Terra Modal"
-        isOpened={this.state.isOpened}
         closeOnEsc
         closeOnOutsideClick
-        openByClickOn={<button>Open openByClickOn modal</button>}
+        openByClickOn={openButton}
         onClose={this.onClose}
         onOpen={this.onOpen}
         onUpdate={this.onUpdate}

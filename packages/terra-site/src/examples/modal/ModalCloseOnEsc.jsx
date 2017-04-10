@@ -12,23 +12,6 @@ class ModalDefault extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-
-  onClose() {
-    console.log('onClose');
-  }
-
-  onOpen() {
-    console.log('onOpen');
-  }
-
-  onUpdate() {
-    console.log('onUpdate');
-  }
-
-  beforeClose() {
-    console.log('beforeClose');
-  }
-
  handleOpenModal() {
   this.setState({ isOpened: true });
  }
@@ -43,11 +26,8 @@ class ModalDefault extends React.Component {
       <Modal
         ariaLabel="Terra Modal"
         isOpened={this.state.isOpened}
-        closeOnEsc
+        closeOnEsc={false}
         closeOnOutsideClick
-        onClose={this.onClose}
-        onOpen={this.onOpen}
-        onUpdate={this.onUpdate}
       >
         <div>
           <h1>Terra Modal</h1>

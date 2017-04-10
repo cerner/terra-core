@@ -7,13 +7,16 @@ class ModalDialog extends React.Component {
       <FocusTrap>
         <div
          onClick={this.props.closePortal}
-         className={this.props.classNameOverlay}/>
+         className={'terra-Modal-overlay'}/>
         <div
+          aria-label={this.props.ariaLabel}
           className={'terra-Modal'}
           role={this.props.role}
         >
           {this.props.children}
-          <p><button onClick={this.props.closePortal}>Close openByClickOn modal</button></p>
+          {/* The modal can also be setup to close when using openByClickon */}
+          {/* This would be used if we wanted to add an x on the top right for every modal */}
+          {/*<p><button onClick={this.props.closePortal}>Close openByClickOn modal</button></p> */}
         </div>
       </FocusTrap>
     );

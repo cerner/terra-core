@@ -33,14 +33,11 @@ const defaultProps = {
 };
 
 class Modal extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     const {
            ariaLabel,
            isOpened,
+           isFullscreen,
            closeOnEsc,
            closeOnOutsideClick,
            openByClickOn,
@@ -55,9 +52,10 @@ class Modal extends React.Component {
 
 
     return (
-        <Portal isOpened={isOpened}
+        <Portal
+                isOpened={isOpened}
                 closeOnEsc={this.props.closeOnEsc}
-                closeOnOutsideClick={this.props.closeOnOutsideClick}
+                closeOnOutsideClick={closeOnOutsideClick}
                 openByClickOn={this.props.openByClickOn}
                 onClose={this.props.onClose}
                 onOpen={this.props.onOpen}
@@ -65,6 +63,7 @@ class Modal extends React.Component {
                 beforeClose={this.props.beforeClose}
         >
           <ModalDialog
+            ariaLabel={ariaLabel}
             classNameModal={classNameModal}
             classNameModal={classNameOverlay}
             role={role}
