@@ -10,19 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
+var _focusTrapReact = require('focus-trap-react');
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactPortal = require('react-portal');
-
-var _reactPortal2 = _interopRequireDefault(_reactPortal);
-
-var _ModalDialog = require('./ModalDialog');
-
-var _ModalDialog2 = _interopRequireDefault(_ModalDialog);
-
-require('./Modal.scss');
+var _focusTrapReact2 = _interopRequireDefault(_focusTrapReact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,68 +22,41 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var propTypes = {
-  ariaLabel: _react.PropTypes.string.isRequired,
-  beforeClose: _react.PropTypes.func,
-  children: _react.PropTypes.node,
-  classNameModal: _react.PropTypes.string,
-  classNameOverlay: _react.PropTypes.string,
-  closeOnEsc: _react.PropTypes.bool,
-  closeOnOutsideClick: _react.PropTypes.bool,
-  isFullscreen: _react.PropTypes.bool,
-  isOpen: _react.PropTypes.bool,
-  onClose: _react.PropTypes.func,
-  onOpen: _react.PropTypes.func,
-  onUpdate: _react.PropTypes.func,
-  openByClickOn: _react.PropTypes.element,
-  role: _react.PropTypes.string
-};
+var ModalDialog = function (_React$Component) {
+  _inherits(ModalDialog, _React$Component);
 
-var defaultProps = {
-  ariaLabel: null,
-  children: null,
-  classNameModal: null,
-  classNameOverlay: null,
-  closeOnEsc: true,
-  closeOnOutsideClick: true,
-  isFullscreen: false,
-  isOpen: false,
-  openByClickOn: null,
-  role: 'dialog'
-};
+  function ModalDialog() {
+    _classCallCheck(this, ModalDialog);
 
-var Modal = function (_React$Component) {
-  _inherits(Modal, _React$Component);
-
-  function Modal() {
-    _classCallCheck(this, Modal);
-
-    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ModalDialog.__proto__ || Object.getPrototypeOf(ModalDialog)).apply(this, arguments));
   }
 
-  _createClass(Modal, [{
+  _createClass(ModalDialog, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        _reactPortal2.default,
-        { closeOnEsc: this.props.closeOnEsc,
-          closeOnOutsideClick: this.props.closeOnOutsideClick,
-          openByClickOn: this.props.openByClickOn,
-          onClose: this.props.onClose,
-          onOpen: this.props.onOpen,
-          onUpdate: this.props.onUpdate,
-          beforeClose: this.props.beforeClose
-        },
+        _focusTrapReact2.default,
+        null,
+        _react2.default.createElement('div', { onClick: this.props.closePortal, className: 'terra-Modal-overlay' }),
         _react2.default.createElement(
-          _ModalDialog2.default,
-          null,
-          this.props.children
+          'div',
+          { className: 'terra-Modal', role: 'dialog' },
+          this.props.children,
+          _react2.default.createElement(
+            'p',
+            null,
+            _react2.default.createElement(
+              'button',
+              { onClick: this.props.closePortal },
+              'Close this'
+            )
+          )
         )
       );
     }
   }]);
 
-  return Modal;
+  return ModalDialog;
 }(_react2.default.Component);
 
-exports.default = Modal;
+exports.default = ModalDialog;

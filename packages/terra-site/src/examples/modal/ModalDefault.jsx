@@ -1,31 +1,42 @@
 import React from 'react';
 import Modal from '../../../../terra-modal/src/Modal';
+import ModalContent from './ModalContent';
 
 class ModalDefault extends React.Component {
-  constructor() {
-    super();
-    this.state = {isOpen: true};
+  onClose() {
+    console.log('onClose');
   }
 
-  render() {
-    const button1 = <button>Open portal with pseudo modal</button>;
+  onOpen() {
+    console.log('onOpen');
+  }
+
+  onUpdate() {
+    console.log('onUpdate');
+  }
+
+  beforeClose() {
+    console.log('beforeClose');
+  }
+
+ render() {
+    const button1 = <button>Open terra modal</button>;
 
     return (
-      <div>
-        <Modal
-          isOpen={this.state.isOpen}
-          openByClickOn={button1}
-          ariaLabel={'Terra Modal'}
-        >
-            <h1>Modal Content 1</h1>
-            <h2>Modal Content 2</h2>
-            <hr/>
-            <button>Close this</button>
-        </Modal>
-      </div>
+      <Modal
+        closeOnEsc
+        closeOnOutsideClick
+        openByClickOn={button1}
+        onClose={this.onClose}
+        onOpen={this.onOpen}
+        onUpdate={this.onUpdate}
+      >
+        <ModalContent />
+      </Modal>
     );
   }
 }
+
 
 export default ModalDefault;
 

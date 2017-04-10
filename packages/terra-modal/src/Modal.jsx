@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
-import classNames from 'classnames';
-import FocusTrap from 'focus-trap-react';
+import React, {PropTypes} from 'react';
+import ReactDOM from 'react-dom';
 import Portal from 'react-portal';
+import ModalDialog from './ModalDialog';
 import './Modal.scss';
 
 const propTypes = {
@@ -34,67 +34,26 @@ const defaultProps = {
   role: 'dialog',
 };
 
-
 class Modal extends React.Component {
+
   render() {
-    const { ariaLabel,
-            beforeClose,
-            children,
-            classNameModal,
-            classNameOverlay,
-            closeOnEsc,
-            closeOnOutsideClick,
-            isFullscreen,
-            isOpen,
-            onClose,
-            onOpen,
-            onUpdate,
-            openByClickOn,
-            role,
-            ...customProps } = this.props;
-
-    if (!isOpen) {
-      return null;
-    }
-
-    let modalClassName = classNames([
-      classNameModal,
-      'terra-Modal',
-      { 'terra-Modal--fullscreen': isFullscreen },
-    ]);
-
-    let overlayClassName = classNames([
-      classNameOverlay,
-      'terra-Modal-overlay',
-    ]);
-
     return (
-      <Portal isOpen={this.props.isOpen}
-              openByClickOn={this.props.openByClickOn}
-              closeOnEsc={this.props.closeOnEsc}
-              closeOnOutsideClick={this.props.closeOnOutsideClick}
-              onOpen={this.props.onOpen}
-              beforeClose={this.props.beforeClose}
-              onClose={this.props.onClose}
-              onUpdate={this.props.onUpdate}
-      >
-        <div>
-          <FocusTrap>
-            <div className={modalClassName}
-                 aria-label={ariaLabel}
-                 role={role}
-            >
-              {children}
-            </div>
-          </FocusTrap>
-        </div>
-      </Portal>
+
+        <Portal closeOnEsc={this.props.closeOnEsc}
+                closeOnOutsideClick={this.props.closeOnOutsideClick}
+                openByClickOn={this.props.openByClickOn}
+                onClose={this.props.onClose}
+                onOpen={this.props.onOpen}
+                onUpdate={this.props.onUpdate}
+                beforeClose={this.props.beforeClose}
+        >
+          <ModalDialog>
+            {this.props.children}
+          </ModalDialog>
+        </Portal>
     );
   }
+
 }
 
-
-Modal.propTypes = propTypes;
-Modal.defaultProps = defaultProps;
-
-export default Modal;
+ export default Modal;

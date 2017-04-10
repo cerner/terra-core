@@ -15,7 +15,6 @@ const ModalExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={ModalSrc} />
     <h2 id="default">Default</h2>
     <ModalDefault />
   </div>

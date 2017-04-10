@@ -13,11 +13,11 @@
   top: 10px;
   right: 10px;
   bottom: 10px;
-  border-style: solid;
+  border-radius: 5px;
 
   @media screen and (min-width: 48em) {
     &:not(.terra-Modal--fullscreen) {
-      border-radius: 5px;
+
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
       height: auto;
       left: 50%;
