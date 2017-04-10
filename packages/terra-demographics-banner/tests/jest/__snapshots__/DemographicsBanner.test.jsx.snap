@@ -1,7 +1,8 @@
 exports[`test renders a banner that has basic information 1`] = `
 <section
   className="terra-DemographicsBanner">
-  <div />
+  <div
+    className="terra-DemographicsBanner--profile-photo" />
   <div
     className="terra-DemographicsBanner--content">
     <div
@@ -44,7 +45,8 @@ exports[`test renders a banner that has basic information 1`] = `
 exports[`test renders a blank banner properly 1`] = `
 <section
   className="terra-DemographicsBanner">
-  <div />
+  <div
+    className="terra-DemographicsBanner--profile-photo" />
   <div
     className="terra-DemographicsBanner--content">
     <div
@@ -87,7 +89,8 @@ exports[`test renders a blank banner properly 1`] = `
 exports[`test renders the banner appropriately for a deceased person 1`] = `
 <section
   className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
-  <div />
+  <div
+    className="terra-DemographicsBanner--profile-photo" />
   <div
     className="terra-DemographicsBanner--content">
     <div
@@ -136,7 +139,8 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
 exports[`test renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
 <section
   className="terra-DemographicsBanner">
-  <div>
+  <div
+    className="terra-DemographicsBanner--profile-photo">
     <img
       alt="My Cat"
       src="http://lorempixel.com/100/100/animals/7/" />
@@ -246,7 +250,8 @@ exports[`test renders the banner appropriately for a person with gestational and
 exports[`test renders the banner properly for a deceased person with additional application content 1`] = `
 <section
   className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
-  <div>
+  <div
+    className="terra-DemographicsBanner--profile-photo">
     <img
       alt="My Cat"
       src="http://lorempixel.com/100/100/animals/7/" />
@@ -350,7 +355,8 @@ exports[`test renders the banner properly for a deceased person with additional 
 exports[`test renders the banner that contains additional information 1`] = `
 <section
   className="terra-DemographicsBanner">
-  <div>
+  <div
+    className="terra-DemographicsBanner--profile-photo">
     <img
       alt="My Cat"
       src="http://lorempixel.com/100/100/animals/7/" />
