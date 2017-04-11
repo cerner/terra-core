@@ -3,11 +3,9 @@ import moment from 'moment';
 import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerStartDate = () => (
-  <div>
-    <DatePicker
-      startDate={moment()}
-    />
-  </div>
+  <DatePicker
+    startDate={moment()}
+  />
 );
 
 export default DatePickerStartDate;

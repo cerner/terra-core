@@ -3,12 +3,10 @@ import moment from 'moment';
 import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerMinMax = () => (
-  <div>
-    <DatePicker
-      minDate={moment()}
-      maxDate={moment().add(6, 'days')}
-    />
-  </div>
+  <DatePicker
+    minDate={moment()}
+    maxDate={moment().add(6, 'days')}
+  />
 );
 
 export default DatePickerMinMax;
