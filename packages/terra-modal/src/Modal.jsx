@@ -57,10 +57,10 @@ class Modal extends React.Component {
                 closeOnEsc={this.props.closeOnEsc}
                 closeOnOutsideClick={closeOnOutsideClick}
                 openByClickOn={this.props.openByClickOn}
-                onClose={this.props.onClose}
-                onOpen={this.props.onOpen}
-                onUpdate={this.props.onUpdate}
-                beforeClose={this.props.beforeClose}
+                onClose={onClose}
+                onOpen={onOpen}
+                onUpdate={onUpdate}
+                beforeClose={beforeClose}
         >
           <ModalDialog
             ariaLabel={ariaLabel}
