@@ -46,7 +46,7 @@ const propTypes = {
    */
   photo: PropTypes.node,
   /**
-   * The column layout in which to present the displays.
+   * The person's post menstrual age.
    */
   postMenstrualAge: PropTypes.string,
   /**

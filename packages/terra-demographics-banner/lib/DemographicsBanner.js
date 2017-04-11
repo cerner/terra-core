@@ -71,7 +71,7 @@ var propTypes = {
    */
   photo: _react.PropTypes.node,
   /**
-   * The column layout in which to present the displays.
+   * The person's post menstrual age.
    */
   postMenstrualAge: _react.PropTypes.string,
   /**
