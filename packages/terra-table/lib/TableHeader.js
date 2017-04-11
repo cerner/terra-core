@@ -42,6 +42,7 @@ function cloneChildItems(children, height, onClick) {
   };
   var childrenArray = _react2.default.Children.toArray(children);
   if (childrenArray.length > 16) {
+    // eslint-disable-next-line no-console
     console.log('Number of Columns are ' + _react2.default.Children.count(children) + '. This is more than columns limit');
   }
   // Filtering children to render only 16 columns
