@@ -57,14 +57,14 @@ const propTypes = {
 
 const defaultProps = {
   additionalDetails: null,
-  age: null,
+  age: '--',
   applicationRows: [],
-  dateOfBirth: null,
+  dateOfBirth: 'DOB: --',
   deceasedDate: null,
-  gender: null,
+  gender: '--',
   gestationalAge: null,
   identifiers: {},
-  personName: null,
+  personName: '--',
   photo: null,
   postMenstrualAge: null,
   preferredFirstName: null,
@@ -83,13 +83,10 @@ class DemographicsBanner extends React.Component {
   }
 
   personDetails() {
-    const noDataMessage = '--';
-    const dateOfBirth = this.props.dateOfBirth || `DOB: ${noDataMessage}`;
-
     const elements = [
-      <span key="age"><b>{ this.props.age || noDataMessage }</b></span>,
-      <span key="gender"><b>{ this.props.gender || noDataMessage }</b></span>,
-      <span key="dob" dangerouslySetInnerHTML={{ __html: dateOfBirth }} />,
+      <span key="age"><b>{ this.props.age }</b></span>,
+      <span key="gender"><b>{ this.props.gender }</b></span>,
+      <span key="dob" dangerouslySetInnerHTML={{ __html: this.props.dateOfBirth }} />,
     ];
 
     if (this.props.gestationalAge) {
@@ -152,7 +149,7 @@ class DemographicsBanner extends React.Component {
         <div className="terra-DemographicsBanner--content">
           <div className="terra-DemographicsBanner--row">
             <h1 className="terra-DemographicsBanner--person-name">
-              { personName || '--' }
+              { personName }
               { preferredFirstName && <span className="terra-DemographicsBanner--preferred-first-name">
                 { preferredFirstName }
               </span> }

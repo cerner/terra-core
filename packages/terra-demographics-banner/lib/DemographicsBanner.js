@@ -82,14 +82,14 @@ var propTypes = {
 
 var defaultProps = {
   additionalDetails: null,
-  age: null,
+  age: '--',
   applicationRows: [],
-  dateOfBirth: null,
+  dateOfBirth: 'DOB: --',
   deceasedDate: null,
-  gender: null,
+  gender: '--',
   gestationalAge: null,
   identifiers: {},
-  personName: null,
+  personName: '--',
   photo: null,
   postMenstrualAge: null,
   preferredFirstName: null
@@ -133,16 +133,13 @@ var DemographicsBanner = function (_React$Component) {
   }, {
     key: 'personDetails',
     value: function personDetails() {
-      var noDataMessage = '--';
-      var dateOfBirth = this.props.dateOfBirth || 'DOB: ' + noDataMessage;
-
       var elements = [_react2.default.createElement(
         'span',
         { key: 'age' },
         _react2.default.createElement(
           'b',
           null,
-          this.props.age || noDataMessage
+          this.props.age
         )
       ), _react2.default.createElement(
         'span',
@@ -150,9 +147,9 @@ var DemographicsBanner = function (_React$Component) {
         _react2.default.createElement(
           'b',
           null,
-          this.props.gender || noDataMessage
+          this.props.gender
         )
-      ), _react2.default.createElement('span', { key: 'dob', dangerouslySetInnerHTML: { __html: dateOfBirth } })];
+      ), _react2.default.createElement('span', { key: 'dob', dangerouslySetInnerHTML: { __html: this.props.dateOfBirth } })];
 
       if (this.props.gestationalAge) {
         elements.push(_react2.default.createElement('span', { key: 'ga', dangerouslySetInnerHTML: { __html: this.props.gestationalAge } }));
@@ -230,7 +227,7 @@ var DemographicsBanner = function (_React$Component) {
             _react2.default.createElement(
               'h1',
               { className: 'terra-DemographicsBanner--person-name' },
-              personName || '--',
+              personName,
               preferredFirstName && _react2.default.createElement(
                 'span',
                 { className: 'terra-DemographicsBanner--preferred-first-name' },
