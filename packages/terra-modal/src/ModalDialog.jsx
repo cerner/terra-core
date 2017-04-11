@@ -6,11 +6,14 @@ class ModalDialog extends React.Component {
     return (
       <FocusTrap>
         <div
-         onClick={this.props.closePortal}
-         className={'terra-Modal-overlay'}/>
+         closeOnOutsideClick onClick={(this.props.closeOnOutsideClick) ? this.props.closePortal: null}
+         className={this.props.classNameOverlay}
+         tabIndex="-1"
+        >
+        </div>
         <div
           aria-label={this.props.ariaLabel}
-          className={'terra-Modal'}
+          className={this.props.classNameModal}
           role={this.props.role}
         >
           {this.props.children}

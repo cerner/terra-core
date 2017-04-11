@@ -2,16 +2,19 @@ import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Portal from 'react-portal';
 import ModalDialog from './ModalDialog';
+import classNames from 'classnames';
 import './Modal.scss';
 
 const propTypes = {
   ariaLabel: PropTypes.string.isRequired,
   beforeClose: PropTypes.func,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  classNameModal: PropTypes.string,
+  classNameOverlay: PropTypes.string,
   closeOnEsc:  PropTypes.bool,
   closeOnOutsideClick: PropTypes.bool,
   isFullscreen: PropTypes.bool,
-  isOpen: PropTypes.bool,
+  isOpened: PropTypes.bool,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
   onUpdate: PropTypes.func,
@@ -22,8 +25,8 @@ const propTypes = {
 const defaultProps = {
   ariaLabel: null,
   children: null,
-  classNameModal: 'terra-Modal',
-  classNameOverlay: 'terra-Modal-overlay',
+  classNameModal: null,
+  classNameOverlay: null,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   isFullscreen: false,
@@ -35,21 +38,27 @@ const defaultProps = {
 class Modal extends React.Component {
   render() {
     const {
-           ariaLabel,
-           isOpened,
-           isFullscreen,
-           closeOnEsc,
-           closeOnOutsideClick,
-           openByClickOn,
-           onClose,
-           onOpen,
-           onUpdate,
-           beforeClose,
-           classNameModal,
-           classNameOverlay,
-           role,
+          ariaLabel,
+          beforeClose,
+          classNameModal,
+          classNameOverlay,
+          closeOnEsc,
+          closeOnOutsideClick,
+          isFullscreen,
+          isOpened,
+          onClose,
+          onOpen,
+          onUpdate,
+          openByClickOn,
+          role,
            ...customProps} = this.props;
 
+    const modalClassName = classNames(['terra-Modal',
+      { 'terra-Modal--fullscreen': isFullscreen },
+      classNameModal,
+      ]);
+
+    const overlayClassName = classNames(['terra-Modal-overlay', classNameOverlay]);
 
     return (
         <Portal
@@ -63,9 +72,10 @@ class Modal extends React.Component {
                 beforeClose={beforeClose}
         >
           <ModalDialog
+            closeOnOutsideClick={closeOnOutsideClick}
             ariaLabel={ariaLabel}
-            classNameModal={classNameModal}
-            classNameModal={classNameOverlay}
+            classNameModal={modalClassName}
+            classNameOverlay={overlayClassName}
             role={role}
           >
             {this.props.children}

@@ -4,6 +4,8 @@ import Modal from '../../../../terra-modal/src/Modal';
 class ModalDefault extends React.Component {
   constructor() {
     super();
+
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   onClose() {
@@ -20,6 +22,10 @@ class ModalDefault extends React.Component {
 
   beforeClose() {
     console.log('beforeClose');
+  }
+
+  handleCloseModal() {
+    this.setState({ isOpened: false });
   }
 
  render() {
@@ -41,6 +47,7 @@ class ModalDefault extends React.Component {
           <hr/>
           <p>The Terra Modal is appended to the document body.</p>
           <p>Modal is assigned a role of 'dialog' for accessibility.</p>
+          <button onClick={this.handleCloseModal}>Close Modal</button>
         </div>
       </Modal>
       </div>

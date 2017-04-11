@@ -43,7 +43,7 @@
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:js": "eslint --ext .js,.jsx . --fix",
     "lint:scss": "lerna run lint:scss",
     "prepush": "node scripts/prepush/index.js",
     "pretest": "npm run lint",

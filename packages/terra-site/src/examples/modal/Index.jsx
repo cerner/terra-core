@@ -14,6 +14,7 @@ import ModalOpenByClickOn from './ModalOpenByClickOn';
 import ModalCloseOnEsc from './ModalCloseOnEsc';
 import ModalIsFullscreen from './ModalIsFullscreen';
 import ModalCloseOnOutsideClick from './ModalCloseOnOutsideClick';
+import ModalAppendClassName from './ModalAppendClassName';
 
 const ModalExamples = () => (
   <div>
@@ -23,12 +24,15 @@ const ModalExamples = () => (
     <ModalIsOpen />
     <h2 id="openByClickOn">openByClickOn</h2>
     <ModalOpenByClickOn />
-    <h2 id="closeOnEsc">closeOnEsc</h2>
+    <hr/>
+    <h2 id="closeOnEsc">Disable closeOnEsc</h2>
     <ModalCloseOnEsc />
-    <h2 id="closeOnOutsideClick">closeOnOutsideClick</h2>
+    <h2 id="closeOnOutsideClick">Disable closeOnOutsideClick</h2>
     <ModalCloseOnOutsideClick />
-    <h2 id="isFullscreen">isFullscreen</h2>
+    <h2 id="isFullscreen">Enable isFullscreen</h2>
     <ModalIsFullscreen />
+    <h2 id="appendClass">Append ClassName</h2>
+    <ModalAppendClassName />
   </div>
 );
 
