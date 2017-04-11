@@ -104,6 +104,7 @@ var DatePicker = function (_React$Component) {
       startDate: props.startDate,
       endDate: props.endDate
     };
+
     _this.handleChange = _this.handleChange.bind(_this);
     return _this;
   }

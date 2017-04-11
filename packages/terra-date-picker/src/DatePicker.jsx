@@ -60,10 +60,12 @@ const defaultProps = {
 class DatePicker extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       startDate: props.startDate,
       endDate: props.endDate,
     };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
