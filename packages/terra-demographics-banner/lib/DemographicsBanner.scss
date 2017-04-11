@@ -19,6 +19,14 @@
   margin: 0;
 }
 
+.terra-DemographicsBanner--person-details {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .terra-DemographicsBanner--preferred-first-name {
   margin: auto 0.357em;
 
@@ -39,10 +47,10 @@
 
 .terra-DemographicsBanner--row {
   display: flex;
+  overflow: hidden;
 
   span + span {
     @include terra-margin-start(0.357rem);
-    display: inline-block;
   }
 
   @media screen and (max-width: $terra-small-breakpoint) {
@@ -54,6 +62,7 @@
 .terra-DemographicsBanner--content {
   flex-grow: 1;
   margin: auto 0.714em;
+  overflow: hidden;
 
   @media screen and (max-width: $terra-small-breakpoint) {
     margin: auto 0;
