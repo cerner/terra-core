@@ -22,11 +22,13 @@ var _ModalDialog = require('./ModalDialog');
 
 var _ModalDialog2 = _interopRequireDefault(_ModalDialog);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 require('./Modal.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -39,11 +41,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var propTypes = {
   ariaLabel: _react.PropTypes.string.isRequired,
   beforeClose: _react.PropTypes.func,
-  children: _react.PropTypes.node,
+  children: _react.PropTypes.node.isRequired,
+  classNameModal: _react.PropTypes.string,
+  classNameOverlay: _react.PropTypes.string,
   closeOnEsc: _react.PropTypes.bool,
   closeOnOutsideClick: _react.PropTypes.bool,
   isFullscreen: _react.PropTypes.bool,
-  isOpen: _react.PropTypes.bool,
+  isOpened: _react.PropTypes.bool,
   onClose: _react.PropTypes.func,
   onOpen: _react.PropTypes.func,
   onUpdate: _react.PropTypes.func,
@@ -54,8 +58,8 @@ var propTypes = {
 var defaultProps = {
   ariaLabel: null,
   children: null,
-  classNameModal: 'terra-Modal',
-  classNameOverlay: 'terra-Modal-overlay',
+  classNameModal: null,
+  classNameOverlay: null,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   isFullscreen: false,
@@ -70,45 +74,53 @@ var Modal = function (_React$Component) {
   function Modal() {
     _classCallCheck(this, Modal);
 
-    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this));
+    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
   }
 
   _createClass(Modal, [{
     key: 'render',
     value: function render() {
-      var _React$createElement;
-
       var _props = this.props,
           ariaLabel = _props.ariaLabel,
-          isOpened = _props.isOpened,
-          closeOnEsc = _props.closeOnEsc,
-          closeOnOutsideClick = _props.closeOnOutsideClick,
-          openByClickOn = _props.openByClickOn,
-          onClose = _props.onClose,
-          onOpen = _props.onOpen,
-          onUpdate = _props.onUpdate,
           beforeClose = _props.beforeClose,
           classNameModal = _props.classNameModal,
           classNameOverlay = _props.classNameOverlay,
+          closeOnEsc = _props.closeOnEsc,
+          closeOnOutsideClick = _props.closeOnOutsideClick,
+          isFullscreen = _props.isFullscreen,
+          isOpened = _props.isOpened,
+          onClose = _props.onClose,
+          onOpen = _props.onOpen,
+          onUpdate = _props.onUpdate,
+          openByClickOn = _props.openByClickOn,
           role = _props.role,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'isOpened', 'closeOnEsc', 'closeOnOutsideClick', 'openByClickOn', 'onClose', 'onOpen', 'onUpdate', 'beforeClose', 'classNameModal', 'classNameOverlay', 'role']);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
+
+      var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, classNameModal]);
+
+      var overlayClassName = (0, _classnames2.default)(['terra-Modal-overlay', classNameOverlay]);
 
       return _react2.default.createElement(
         _reactPortal2.default,
-        { isOpened: isOpened,
+        {
+          isOpened: isOpened,
           closeOnEsc: this.props.closeOnEsc,
-          closeOnOutsideClick: this.props.closeOnOutsideClick,
+          closeOnOutsideClick: closeOnOutsideClick,
           openByClickOn: this.props.openByClickOn,
-          onClose: this.props.onClose,
-          onOpen: this.props.onOpen,
-          onUpdate: this.props.onUpdate,
-          beforeClose: this.props.beforeClose
+          onClose: onClose,
+          onOpen: onOpen,
+          onUpdate: onUpdate,
+          beforeClose: beforeClose
         },
         _react2.default.createElement(
           _ModalDialog2.default,
-          (_React$createElement = {
-            classNameModal: classNameModal
-          }, _defineProperty(_React$createElement, 'classNameModal', classNameOverlay), _defineProperty(_React$createElement, 'role', role), _React$createElement),
+          {
+            closeOnOutsideClick: closeOnOutsideClick,
+            ariaLabel: ariaLabel,
+            classNameModal: modalClassName,
+            classNameOverlay: overlayClassName,
+            role: role
+          },
           this.props.children
         )
       );

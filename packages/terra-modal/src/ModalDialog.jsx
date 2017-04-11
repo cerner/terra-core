@@ -5,8 +5,7 @@ class ModalDialog extends React.Component {
   render() {
     return (
       <FocusTrap>
-        <div
-         closeOnOutsideClick onClick={(this.props.closeOnOutsideClick) ? this.props.closePortal: null}
+        <div onClick={(this.props.closeOnOutsideClick) ? this.props.closePortal: null}
          className={this.props.classNameOverlay}
          tabIndex="-1"
         >

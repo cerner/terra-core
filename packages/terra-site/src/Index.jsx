@@ -26,6 +26,7 @@ import SlidePanelExamples from './examples/slide-panel/Index';
 import StandoutExamples from './examples/standout/Index';
 import StatusExamples from './examples/status/Index';
 import TitleExamples from './examples/title/Index';
+import TableExamples from './examples/table/Index';
 
 // Test
 /* eslint-disable import/first */
@@ -43,6 +44,7 @@ import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
+import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -72,6 +74,7 @@ ReactDOM.render((
       <Route path="standout" component={StandoutExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="title" component={TitleExamples} />
+      <Route path="table" component={TableExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {BaseTestRoutes}
@@ -88,5 +91,6 @@ ReactDOM.render((
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {TableTestRoutes}
   </Router>
 ), document.getElementById('root'));
