@@ -1,0 +1,21 @@
+exports[`test should render an open modal 1`] = `
+<Portal
+  closeOnEsc={true}
+  closeOnOutsideClick={true}
+  isOpened={true}
+  onClose={[Function]}
+  onOpen={[Function]}
+  onUpdate={[Function]}
+  openByClickOn={null}>
+  <ModalDialog
+    ariaLabel="test modal"
+    classNameModal="terra-Modal"
+    classNameOverlay="terra-Modal-overlay"
+    closeOnOutsideClick={true}
+    role="dialog">
+    <div>
+      IsOpened
+    </div>
+  </ModalDialog>
+</Portal>
+`;

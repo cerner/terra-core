@@ -6,7 +6,6 @@
   background-color: #fff;
   display: block;
   max-height: 100%;
-  overflow-y: auto;
   position: fixed;
   z-index: 9999;
   left: 10px;
@@ -19,12 +18,12 @@
     &:not(.terra-Modal--fullscreen) {
 
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-      height: auto;
       left: 50%;
       margin: 0 auto;
       max-height: calc(100% - 100px);
       max-width: 40em;
       top: 50%;
+      bottom: auto;
       transform: translate(-50%, -50%);
     }
   }

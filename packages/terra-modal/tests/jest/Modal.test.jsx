@@ -1,6 +1,8 @@
-// import React from 'react';
-// import Modal from '../../src/Modal';
+import React from 'react';
+import Modal from '../../src/Modal';
 
-// it('should render a default component', () => {
-//   expect(1).toEqual(1);
-// });
+
+it('should render an open modal', () => {
+  const modal = shallow(<Modal ariaLabel={'test modal'} isOpened><div>IsOpened</div></Modal>);
+  expect(modal).toMatchSnapshot();
+});

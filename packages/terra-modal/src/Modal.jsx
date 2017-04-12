@@ -36,6 +36,17 @@ const defaultProps = {
 };
 
 class Modal extends React.Component {
+
+  componentDidMount() {
+    console.log('componentDidMount');
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+    document.documentElement.style.overflow = null;
+  }
+
   render() {
     const {
           ariaLabel,

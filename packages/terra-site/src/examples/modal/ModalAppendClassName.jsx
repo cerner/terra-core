@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from '../../../../terra-modal/src/Modal';
+import './ModalExample.scss';
 
 class ModalDefault extends React.Component {
   constructor() {
@@ -31,7 +32,7 @@ class ModalDefault extends React.Component {
         classNameOverlay={'appended-overlay-class'}
       >
         <div>
-          <h1>Terra Modal</h1>
+          <h1>Rainbow Modal</h1>
           <button onClick={this.handleCloseModal}>Close Modal</button>
         </div>
       </Modal>
