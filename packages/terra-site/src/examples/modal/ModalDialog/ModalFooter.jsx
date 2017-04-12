@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const ModalFooter = ({ children, ...customProps }) => {
-  return (
-    <div className={'terra-Modal-footer'} {...customProps} >
-      {children}
-    </div>
-  );
+const propTypes = {
+  children: PropTypes.node,
 };
 
+const defaultProps = {
+  children: null,
+};
+
+const ModalFooter = ({ children, ...customProps }) => (
+  <div className={'terra-Modal-footer'} {...customProps} >
+    {children}
+  </div>
+  );
+
+
+ModalFooter.propTypes = propTypes;
+ModalFooter.defaultProps = defaultProps;
+
 export default ModalFooter;
+

@@ -3,7 +3,7 @@
   "main": "lib/Modal.js",
   "private": true,
   "version": "0.0.0",
-  "description": "terra-modal",
+  "description": "Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-ui.git"

@@ -12,19 +12,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
+var _focusTrapReact = require('focus-trap-react');
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _focusTrapReact2 = _interopRequireDefault(_focusTrapReact);
 
-var _reactPortal = require('react-portal');
+var _ModalOverlay = require('./ModalOverlay');
 
-var _reactPortal2 = _interopRequireDefault(_reactPortal);
-
-var _ModalContent = require('./ModalContent');
-
-var _ModalContent2 = _interopRequireDefault(_ModalContent);
-
-require('./Modal.scss');
+var _ModalOverlay2 = _interopRequireDefault(_ModalOverlay);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38,18 +32,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   ariaLabel: _react.PropTypes.string.isRequired,
-  beforeClose: _react.PropTypes.func,
   children: _react.PropTypes.node.isRequired,
   classNameModal: _react.PropTypes.string,
   classNameOverlay: _react.PropTypes.string,
-  closeOnEsc: _react.PropTypes.bool,
   closeOnOutsideClick: _react.PropTypes.bool,
-  isFullscreen: _react.PropTypes.bool,
-  isOpened: _react.PropTypes.bool,
-  onClose: _react.PropTypes.func,
-  onOpen: _react.PropTypes.func,
-  onUpdate: _react.PropTypes.func,
-  openByClickOn: _react.PropTypes.element,
+  closePortal: _react.PropTypes.func,
   role: _react.PropTypes.string
 };
 
@@ -58,80 +45,72 @@ var defaultProps = {
   children: null,
   classNameModal: null,
   classNameOverlay: null,
-  closeOnEsc: true,
   closeOnOutsideClick: true,
-  isFullscreen: false,
-  isOpened: false,
-  openByClickOn: null,
-  role: 'document'
+  role: 'dialog'
 };
 
-var Modal = function (_React$Component) {
-  _inherits(Modal, _React$Component);
+var ModalContent = function (_React$Component) {
+  _inherits(ModalContent, _React$Component);
 
-  function Modal(props) {
-    _classCallCheck(this, Modal);
+  function ModalContent() {
+    _classCallCheck(this, ModalContent);
 
-    var _this = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this, props));
-
-    _this.state = { isOpened: props.isOpened };
-    return _this;
+    return _possibleConstructorReturn(this, (ModalContent.__proto__ || Object.getPrototypeOf(ModalContent)).apply(this, arguments));
   }
 
-  _createClass(Modal, [{
+  _createClass(ModalContent, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      // eslint-disable-next-line no-console
+      console.log('Modal: componentDidMount');
+      // Disable background scrolling
+      document.body.style.overflow = 'hidden';
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      // eslint-disable-next-line no-console
+      console.log('Modal: componentWillUnmount');
+      // Enable background scrolling
+      document.body.style.overflow = null;
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
           ariaLabel = _props.ariaLabel,
-          beforeClose = _props.beforeClose,
           children = _props.children,
           classNameModal = _props.classNameModal,
           classNameOverlay = _props.classNameOverlay,
-          closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
-          isFullscreen = _props.isFullscreen,
-          onClose = _props.onClose,
-          onOpen = _props.onOpen,
-          onUpdate = _props.onUpdate,
-          openByClickOn = _props.openByClickOn,
+          closePortal = _props.closePortal,
           role = _props.role,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
-
-      var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, classNameModal]);
-
-      var overlayClassName = (0, _classnames2.default)(['terra-Modal-overlay', classNameOverlay]);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnOutsideClick', 'closePortal', 'role']);
 
       return _react2.default.createElement(
-        _reactPortal2.default,
-        _extends({
-          isOpened: this.state.isOpened,
-          closeOnEsc: closeOnEsc,
-          closeOnOutsideClick: closeOnOutsideClick,
-          openByClickOn: openByClickOn,
-          onClose: onClose,
-          onOpen: onOpen,
-          onUpdate: onUpdate,
-          beforeClose: beforeClose
-        }, customProps),
+        _focusTrapReact2.default,
+        null,
         _react2.default.createElement(
-          _ModalContent2.default,
-          {
-            closeOnOutsideClick: closeOnOutsideClick,
-            ariaLabel: ariaLabel,
-            classNameModal: modalClassName,
-            classNameOverlay: overlayClassName,
+          'div',
+          _extends({
+            'aria-label': ariaLabel,
+            className: classNameModal,
             role: role
-          },
+          }, customProps),
           children
-        )
+        ),
+        _react2.default.createElement(_ModalOverlay2.default, {
+          onClick: closeOnOutsideClick ? closePortal : null,
+          className: classNameOverlay
+        })
       );
     }
   }]);
 
-  return Modal;
+  return ModalContent;
 }(_react2.default.Component);
 
-Modal.propTypes = propTypes;
-Modal.defaultProps = defaultProps;
+ModalContent.propTypes = propTypes;
+ModalContent.defaultProps = defaultProps;
 
-exports.default = Modal;
+exports.default = ModalContent;

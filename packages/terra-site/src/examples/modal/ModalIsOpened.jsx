@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from '../../../../terra-modal/src/Modal';
-import './ModalAppendClassName.scss';
 
 class ModalDefault extends React.Component {
   constructor() {
@@ -13,6 +12,7 @@ class ModalDefault extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
 
   handleOpenModal() {
     this.setState({ isOpened: true });
@@ -28,11 +28,9 @@ class ModalDefault extends React.Component {
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
-          classNameModal={'appended-modal-class'}
-          classNameOverlay={'appended-overlay-class'}
         >
           <div>
-            <h1>Rainbow Modal</h1>
+            <h1>Terra Modal</h1>
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>
@@ -42,6 +40,4 @@ class ModalDefault extends React.Component {
   }
 }
 
-
 export default ModalDefault;
-

@@ -9,24 +9,25 @@ import { version } from 'terra-modal/package.json';
 import ModalSrc from '!raw-loader!terra-modal/src/Modal';
 
 // Example Files
-import ModalIsOpen from './ModalIsOpen';
+import ModalIsOpened from './ModalIsOpened';
 import ModalOpenByClickOn from './ModalOpenByClickOn';
-import ModalCloseOnEsc from './ModalCloseOnEsc';
+import ModalCloseOnEsc from './ModalDisableCloseOnEsc';
 import ModalIsFullscreen from './ModalIsFullscreen';
-import ModalCloseOnOutsideClick from './ModalCloseOnOutsideClick';
+import ModalCloseOnOutsideClick from './ModalDisableCloseOnOutsideClick';
 import ModalAppendClassName from './ModalAppendClassName';
-import ModalStyled from './ModalStyled';
-import ModalLargeContent from './ModalLargeContent';
+import ModalContainLargeContent from './ModalContainLargeContent';
+import ModalDialog from './ModalDialog/ModalDialog';
 
 const ModalExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <h2 id="isOpen">isOpen</h2>
-    <ModalIsOpen />
+    <PropsTable id="props-table" src={ModalSrc} />
+    <h2 id="isOpened">ModalIsOpened</h2>
+    <ModalIsOpened />
     <h2 id="openByClickOn">openByClickOn</h2>
     <ModalOpenByClickOn />
-    <hr/>
+    <hr />
     <h2 id="closeOnEsc">Disable closeOnEsc</h2>
     <ModalCloseOnEsc />
     <h2 id="closeOnOutsideClick">Disable closeOnOutsideClick</h2>
@@ -35,10 +36,10 @@ const ModalExamples = () => (
     <ModalIsFullscreen />
     <h2 id="append-class">Append ClassName</h2>
     <ModalAppendClassName />
-    <h2 id="styled-modal">Styled Modal</h2>
-    <ModalStyled />
-    <h2 id="appendClass">Large Content</h2>
-    <ModalLargeContent />
+    <h2 id="containlargecontent">ModalContainLargeContent</h2>
+    <ModalContainLargeContent />
+    <h2 id="modal-dialog">Styled Modal Dialog</h2>
+    <ModalDialog />
   </div>
 );
 

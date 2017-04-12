@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const ModalSubheader = ({ children, ...customProps }) => {
-  return (
-    <h2 className={'terra-Modal-subheader'} {...customProps} >
-      {children}
-    </h2>
-  );
+const propTypes = {
+  children: PropTypes.node,
 };
+
+const defaultProps = {
+  children: null,
+};
+
+const ModalSubheader = ({ children, ...customProps }) => (
+  <h2 className={'terra-Modal-subheader'} {...customProps} >
+    {children}
+  </h2>
+  );
+
+ModalSubheader.propTypes = propTypes;
+ModalSubheader.defaultProps = defaultProps;
 
 export default ModalSubheader;

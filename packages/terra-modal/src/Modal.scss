@@ -1,40 +1,30 @@
 @import '~terra-mixins';
 @import './variables';
-@import './mixins';
 
 .terra-Modal {
   background-color: #fff;
+  border-radius: 5px;
+  bottom: 10px;
   display: block;
+  left: 10px;
   max-height: 100%;
   position: fixed;
-  z-index: 9999;
-  left: 10px;
-  top: 10px;
   right: 10px;
-  bottom: 10px;
-  border-radius: 5px;
+  top: 10px;
+  z-index: $terra-z-index-6 + 1;
 
   @media screen and (min-width: 48em) {
     &:not(.terra-Modal--fullscreen) {
-
+      bottom: auto;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
       left: 50%;
       margin: 0 auto;
       max-height: calc(100% - 100px);
       max-width: 40em;
       top: 50%;
-      bottom: auto;
       transform: translate(-50%, -50%);
     }
   }
 }
 
-.terra-Modal-overlay {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 9998;
-  background-color: rgba(0, 0, 0, 0.4);
-}
+
