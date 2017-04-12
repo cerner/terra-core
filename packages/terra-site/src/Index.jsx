@@ -88,10 +88,12 @@ ReactDOM.render((
     {DetailViewTestRoutes}
     {ClinicalItemViewTestRoutes}
     {CommentTestRoutes}
+    {ContentContainerTestRoutes}
     {DisplayTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {TableTestRoutes}
   </Router>
 ), document.getElementById('root'));
