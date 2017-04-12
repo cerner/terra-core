@@ -1,23 +1,23 @@
 import React from 'react';
 
 import ContentContainer from 'terra-content-container';
-import ClinicalItemView from 'terra-clinical-item-view';
 import Button from 'terra-button';
 
-const display1 = <ClinicalItemView.Display text="display1display1display1display1display1display1display1display1display1display1display1display1display1display1" />;
-const display2 = <ClinicalItemView.Display text="display2display2display2display2display2display2display2display2display2display2display2display2display2display2" />;
-const display3 = <ClinicalItemView.Display text="display 3" />;
-const display4 = <ClinicalItemView.Display text="display 4" />;
-const display5 = <ClinicalItemView.Display text="display 5" />;
-const display6 = <ClinicalItemView.Display text="display 6" />;
+const display1 = <p>display1display1display1display1display1display1display1display1display1display1display1display1display1display1</p>;
+const display2 = <p>display2display2display2display2display2display2display2display2display2display2display2display2display2display2</p>;
+const display3 = <p>display 3</p>;
+const display4 = <p>display 4</p>;
+const display5 = <p>display 5</p>;
+const display6 = <p>display 6</p>;
 const displays = [display1, display2, display3, display4, display5, display6];
 
 const button1 = <Button text="header button" />;
 
 const container = () => (
   <ContentContainer header={button1}>
-    <ClinicalItemView displays={displays} />
-    <ClinicalItemView displays={displays} />
+    {displays}
+    {displays}
+    {displays}
   </ContentContainer>);
 
 export default container;

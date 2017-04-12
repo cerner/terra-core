@@ -2,18 +2,30 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import './ContentContainer.scss';
 
-const ContentContainer = ({
+const propTypes = {
   /**
    * The header element to be placed within the header area of the container.
    */
-  header,
+  header: PropTypes.node,
   /**
    * The children to be placed within the main content area of the container.
    */
-  children,
+  children: PropTypes.node,
   /**
    * Whether or not the container should expanded to fill its parent element.
    */
+  fill: PropTypes.bool,
+};
+
+const defaultProps = {
+  header: undefined,
+  children: undefined,
+  fill: false,
+};
+
+const ContentContainer = ({
+  header,
+  children,
   fill,
   ...customProps
   }) => {
@@ -24,10 +36,7 @@ const ContentContainer = ({
   ]);
 
   return (
-    <div
-      {...customProps}
-      className={contentLayoutClassNames}
-    >
+    <div {...customProps} className={contentLayoutClassNames}>
       <div className="terra-ContentContainer-header">
         {header}
       </div>
@@ -40,10 +49,7 @@ const ContentContainer = ({
   );
 };
 
-ContentContainer.propTypes = {
-  header: PropTypes.node,
-  children: PropTypes.node,
-  fill: PropTypes.bool,
-};
+ContentContainer.propTypes = propTypes;
+ContentContainer.defaultProps = defaultProps;
 
 export default ContentContainer;

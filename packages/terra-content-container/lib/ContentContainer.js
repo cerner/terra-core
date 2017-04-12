@@ -20,6 +20,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+var propTypes = {
+  /**
+   * The header element to be placed within the header area of the container.
+   */
+  header: _react.PropTypes.node,
+  /**
+   * The children to be placed within the main content area of the container.
+   */
+  children: _react.PropTypes.node,
+  /**
+   * Whether or not the container should expanded to fill its parent element.
+   */
+  fill: _react.PropTypes.bool
+};
+
+var defaultProps = {
+  header: undefined,
+  children: undefined,
+  fill: false
+};
+
 var ContentContainer = function ContentContainer(_ref) {
   var header = _ref.header,
       children = _ref.children,
@@ -30,9 +51,7 @@ var ContentContainer = function ContentContainer(_ref) {
 
   return _react2.default.createElement(
     'div',
-    _extends({}, customProps, {
-      className: contentLayoutClassNames
-    }),
+    _extends({}, customProps, { className: contentLayoutClassNames }),
     _react2.default.createElement(
       'div',
       { className: 'terra-ContentContainer-header' },
@@ -50,10 +69,7 @@ var ContentContainer = function ContentContainer(_ref) {
   );
 };
 
-ContentContainer.propTypes = {
-  header: _react.PropTypes.node,
-  children: _react.PropTypes.node,
-  fill: _react.PropTypes.bool
-};
+ContentContainer.propTypes = propTypes;
+ContentContainer.defaultProps = defaultProps;
 
 exports.default = ContentContainer;
