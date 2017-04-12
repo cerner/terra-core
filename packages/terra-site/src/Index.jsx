@@ -82,8 +82,6 @@ ReactDOM.render((
     {I18nTestRoutes}
     {ResponsiveElementTestRoutes}
     {DetailViewTestRoutes}
-    {CommentTestRoutes}
-    {DisplayTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
