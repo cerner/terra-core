@@ -10,7 +10,6 @@ import BaseExamples from './examples/base/Index';
 import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
-import ClinicalItemViewExamples from './examples/clinical-item-view/Index';
 import ContentExamples from './examples/content/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
@@ -40,9 +39,6 @@ import DetailViewTestRoutes from 'terra-detail-view/tests/nightwatch/DetailViewT
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
-import ClinicalItemViewTestRoutes from 'terra-clinical-item-view/tests/nightwatch/clinical-item-view/ClinicalItemViewTestRoutes';
-import CommentTestRoutes from 'terra-clinical-item-view/tests/nightwatch/comment/CommentTestRoutes';
-import DisplayTestRoutes from 'terra-clinical-item-view/tests/nightwatch/display/DisplayTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
@@ -62,7 +58,6 @@ ReactDOM.render((
       <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
-      <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
@@ -90,10 +85,7 @@ ReactDOM.render((
     {I18nTestRoutes}
     {ResponsiveElementTestRoutes}
     {DetailViewTestRoutes}
-    {ClinicalItemViewTestRoutes}
-    {CommentTestRoutes}
     {ContentContainerTestRoutes}
-    {DisplayTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
