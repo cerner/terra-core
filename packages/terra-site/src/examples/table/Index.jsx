@@ -3,6 +3,8 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-table/docs/README.md';
+import { version } from 'terra-list/package.json';
+
 // Component Source
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import TableSrc from '!raw-loader!terra-table/src/Table';
@@ -24,6 +26,7 @@ import TableWithMaxHeight from './TableWithMaxHeight';
 
 const TableExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <h2>Table</h2>
     <PropsTable id="props-table" src={TableSrc} />

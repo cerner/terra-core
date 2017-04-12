@@ -25,8 +25,9 @@ import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StandoutExamples from './examples/standout/Index';
 import StatusExamples from './examples/status/Index';
-import TitleExamples from './examples/title/Index';
 import TableExamples from './examples/table/Index';
+import TitleExamples from './examples/title/Index';
+
 
 // Test
 /* eslint-disable import/first */
