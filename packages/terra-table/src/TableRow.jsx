@@ -28,6 +28,7 @@ const defaultProps = {
 function cloneChildItems(children, height) {
   const childrenArray = React.Children.toArray(children);
   if (childrenArray.length > 16) {
+    // eslint-disable-next-line no-console
     console.log(`Number of Columns are ${React.Children.count(children)}. This is more than columns limit`);
   }
   return childrenArray.filter((child, index) => index < 16).map((child) => {
