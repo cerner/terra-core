@@ -22,7 +22,7 @@
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   },
   "dependencies": {
-    "moment": "^2.17.1",
+    "moment": "^2.18.1",
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-intl": "^2.2.3",
@@ -51,6 +51,7 @@
     "terra-slide-panel": "^0.x",
     "terra-standout": "^0.x",
     "terra-status": "^0.x",
+    "terra-time-input": "^0.x",
     "terra-title": "^0.x",
     "terra-table": "^0.x"
   },

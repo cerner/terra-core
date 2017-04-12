@@ -37,6 +37,7 @@ const App = props => (
       <li><Link to="/site/standout">Standout</Link></li>
       <li><Link to="/site/status">Status</Link></li>
       <li><Link to="/site/table">Table</Link></li>
+      <li><Link to="/site/time-input">Time Input</Link></li>
       <li><Link to="/site/title">Title</Link></li>
       <li><Link to="/tests">Tests</Link></li>
     </ul>

@@ -1,0 +1,51 @@
+exports[`test should render a default time input 1`] = `
+<div
+  className="terra-TimeInput">
+  <MaskedInput
+    className="terra-TimeInput-input"
+    defaultValue=""
+    keepCharPositions={true}
+    mask={
+      Array [
+        /[0-9]/,
+        /[0-9]/,
+        ":",
+        /[0-9]/,
+        /[0-9]/,
+      ]
+    }
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    pipe={[Function]}
+    placeholder="HH:mm"
+    placeholderChar=" "
+    type="text"
+    value="" />
+</div>
+`;
+
+exports[`test should render a time input with a default time 1`] = `
+<div
+  className="terra-TimeInput">
+  <MaskedInput
+    className="terra-TimeInput-input"
+    defaultValue="00:00"
+    keepCharPositions={true}
+    mask={
+      Array [
+        /[0-9]/,
+        /[0-9]/,
+        ":",
+        /[0-9]/,
+        /[0-9]/,
+      ]
+    }
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    pipe={[Function]}
+    placeholder="HH:mm"
+    placeholderChar=" "
+    type="text"
+    value="00:00" />
+</div>
+`;
