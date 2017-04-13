@@ -29,7 +29,7 @@
     "terra-base": "^0.x"
   },
   "dependencies": {
-    "react-docgen": "^2.13.0",
+    "react-docgen": "2.13.0",
     "terra-markdown": "^0.x"
   },
   "scripts": {
