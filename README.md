@@ -2,7 +2,7 @@
 <p align="center">
   <img height="128" width="128" src="https://github.com/cerner/terra-core/raw/master/terra.png">
 </p>
-<!-- Logo -->
+
 <!-- Name -->
 <h1 align="center">
   Terra Core

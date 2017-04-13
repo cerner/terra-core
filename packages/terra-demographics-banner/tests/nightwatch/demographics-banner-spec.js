@@ -1,3 +1,4 @@
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-disable no-unused-expressions */
 
 const screenshot = require('terra-toolkit').screenshot;

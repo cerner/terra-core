@@ -32,6 +32,9 @@
     "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0"
   },
+  "devDependencies": {
+    "terra-toolkit": "^0.x"
+  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rm -rf lib",

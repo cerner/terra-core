@@ -1,28 +1,27 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner properly', () => {
-  const banner = renderer.create(<DemographicsBanner />).toJSON();
+  const banner = shallow(<DemographicsBanner />);
   expect(banner).toMatchSnapshot();
 });
 
 it('renders a banner that has basic information', () => {
-  const banner = renderer.create(
+  const banner = shallow(
     <DemographicsBanner
       age="24"
       dateOfBirth="March 30, 2017"
       gender="F"
       personName="Terra Demographics Banner"
     />,
-  ).toJSON();
+  );
 
   expect(banner).toMatchSnapshot();
 });
 
 it('renders the banner that contains additional information', () => {
-  const banner = renderer.create(
+  const banner = shallow(
     <DemographicsBanner
       additionalDetails={<span className="risk-score">5%</span>}
       age="25 Years"
@@ -34,13 +33,13 @@ it('renders the banner that contains additional information', () => {
       personName="Johnathon Doe"
       preferredFirstName="John"
     />,
-  ).toJSON();
+  );
 
   expect(banner).toMatchSnapshot();
 });
 
 it('renders the banner appropriately for a deceased person', () => {
-  const banner = renderer.create(
+  const banner = shallow(
     <DemographicsBanner
       age="24"
       gender="F"
@@ -48,13 +47,13 @@ it('renders the banner appropriately for a deceased person', () => {
       deceasedDate="March 30, 2017"
       personName="Old Terra Demographics Banner"
     />,
-  ).toJSON();
+  );
 
   expect(banner).toMatchSnapshot();
 });
 
 it('renders the banner appropriately for a person with gestational and post menstrual dates', () => {
-  const banner = renderer.create(
+  const banner = shallow(
     <DemographicsBanner
       additionalDetails={<span className="risk-score">5%</span>}
       age="25 Years"
@@ -68,13 +67,13 @@ it('renders the banner appropriately for a person with gestational and post mens
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
     />,
-  ).toJSON();
+  );
 
   expect(banner).toMatchSnapshot();
 });
 
 it('renders the banner properly for a deceased person with additional application content', () => {
-  const banner = renderer.create(
+  const banner = shallow(
     <DemographicsBanner
       additionalDetails={<span className="risk-score">5%</span>}
       age="25 Years"
@@ -87,7 +86,7 @@ it('renders the banner properly for a deceased person with additional applicatio
       photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
       preferredFirstName="John"
     />,
-  ).toJSON();
+  );
 
   expect(banner).toMatchSnapshot();
 });
