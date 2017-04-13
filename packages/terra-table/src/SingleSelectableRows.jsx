@@ -69,12 +69,14 @@ class SingleSelectableRows extends React.Component {
     const initialOnKeyDown = this.props.onKeyDown;
 
     return (event) => {
-      if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
-        this.handleSelection(event, index);
-      }
+      if (event.nativeEvent.keyCode === Number(13)) {
+        if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+          this.handleSelection(event, index);
+        }
 
-      if (initialOnKeyDown) {
-        initialOnKeyDown(event);
+        if (initialOnKeyDown) {
+          initialOnKeyDown(event);
+        }
       }
     };
   }

@@ -112,12 +112,14 @@ var SingleSelectableRows = function (_React$Component) {
       var initialOnKeyDown = this.props.onKeyDown;
 
       return function (event) {
-        if (row.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
-          _this3.handleSelection(event, index);
-        }
+        if (event.nativeEvent.keyCode === Number(13)) {
+          if (row.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
+            _this3.handleSelection(event, index);
+          }
 
-        if (initialOnKeyDown) {
-          initialOnKeyDown(event);
+          if (initialOnKeyDown) {
+            initialOnKeyDown(event);
+          }
         }
       };
     }
