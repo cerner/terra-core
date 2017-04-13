@@ -29,15 +29,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "react-intl": "^2.2.3",
-    "react-test-renderer": "^15.4.2",
-    "shortid": "^2.2.8",
-    "terra-base": "^0.x",
     "terra-icon": "^0.x",
-    "terra-mixins": "^1.0.0",
-    "terra-toolkit": "^0.x"
+    "terra-mixins": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
