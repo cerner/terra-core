@@ -24,7 +24,6 @@ const App = props => (
       <li><Link to="/site/content">Content</Link></li>
       <li><Link to="/site/content-container">Content Container</Link></li>
       <li><Link to="/site/datepicker">Date Picker</Link></li>
-      <li><Link to="/site/detail-view">Detail View</Link></li>
       <li><Link to="/site/grid">Grid</Link></li>
       <li><Link to="/site/i18n">I18n</Link></li>
       <li><Link to="/site/icon">Icon</Link></li>

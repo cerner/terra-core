@@ -1,3 +1,0 @@
-# Themeable Variables
-
-None
