@@ -12,7 +12,6 @@ import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import ContentExamples from './examples/content/Index';
 import DatePickerExamples from './examples/date-picker/Index';
-import DetailViewExamples from './examples/detail-view/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
@@ -34,7 +33,6 @@ import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
-import DetailViewTestRoutes from 'terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
@@ -58,7 +56,6 @@ ReactDOM.render((
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
-      <Route path="detail-view" component={DetailViewExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
@@ -81,7 +78,6 @@ ReactDOM.render((
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {ResponsiveElementTestRoutes}
-    {DetailViewTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
