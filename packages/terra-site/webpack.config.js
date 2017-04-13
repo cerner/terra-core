@@ -58,6 +58,9 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
+
+    // See https://github.com/facebook/react/issues/8026
+    alias: { react: path.resolve(__dirname, 'node_modules', 'react') },
   },
   output: {
     filename: '[name].js',
