@@ -14,17 +14,25 @@ const propTypes = {
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
+  /**
+  * A callback function for onKeyDown action for tab key
+  */
+  onKeyDown: PropTypes.func,
 };
 
 const defaultProps = {
   onClick: undefined,
+  onKeyDown: undefined,
 };
 
-function cloneChildItems(children, height, onClick) {
+function cloneChildItems(children, height, onClick, onKeyDown) {
   return children.map((child) => {
     const newProps = { height };
     if (onClick) {
       newProps.onClick = onClick;
+    }
+    if (onKeyDown) {
+      newProps.onKeyDown = onKeyDown;
     }
     if (child.type === TableRow) {
       return React.cloneElement(child, newProps);
@@ -37,9 +45,10 @@ const TableRows = ({
   children,
   height,
   onClick,
+  onKeyDown,
   ...customProps
 }) => {
-  const cloneChildren = cloneChildItems(children, height, onClick);
+  const cloneChildren = cloneChildItems(children, height, onClick, onKeyDown);
   return (
     <tbody {...customProps}>
       {cloneChildren}

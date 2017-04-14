@@ -4,6 +4,7 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
     <TableRowContent
       content="John Smith" />
@@ -16,6 +17,7 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
     <TableRowContent
       content="John Smith" />
@@ -34,6 +36,7 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
     <TableRowContent
       content="John Smith" />
@@ -46,6 +49,7 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
     <TableRowContent
       content="John Smith" />
