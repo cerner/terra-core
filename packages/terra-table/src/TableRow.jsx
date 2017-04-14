@@ -53,6 +53,8 @@ const TableRow = ({
     customProps.className,
   ]);
 
+  customProps['aria-selected'] = isSelected ? true : null;
+
   const cloneChildren = cloneChildItems(children, height);
   return (
     <tr {...customProps} className={rowClassNames}>
