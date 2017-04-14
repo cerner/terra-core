@@ -26,6 +26,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var KEYCODES = {
+  ENTER: 13
+};
+
 var propTypes = {
   /**
    * The children passed to the component
@@ -112,14 +116,14 @@ var SingleSelectableRows = function (_React$Component) {
       var initialOnKeyDown = this.props.onKeyDown;
 
       return function (event) {
-        if (event.nativeEvent.keyCode === Number(13)) {
+        if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
           if (row.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
             _this3.handleSelection(event, index);
           }
+        }
 
-          if (initialOnKeyDown) {
-            initialOnKeyDown(event);
-          }
+        if (initialOnKeyDown) {
+          initialOnKeyDown(event);
         }
       };
     }

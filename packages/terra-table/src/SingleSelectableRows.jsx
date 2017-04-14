@@ -1,6 +1,10 @@
 import React, { PropTypes } from 'react';
 import TableRows from './TableRows';
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
   /**
    * The children passed to the component
@@ -69,14 +73,14 @@ class SingleSelectableRows extends React.Component {
     const initialOnKeyDown = this.props.onKeyDown;
 
     return (event) => {
-      if (event.nativeEvent.keyCode === Number(13)) {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
         if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
+      }
 
-        if (initialOnKeyDown) {
-          initialOnKeyDown(event);
-        }
+      if (initialOnKeyDown) {
+        initialOnKeyDown(event);
       }
     };
   }
