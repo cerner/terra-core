@@ -11,35 +11,26 @@ import ModalSrc from '!raw-loader!terra-modal/src/Modal';
 // Example Files
 import ModalIsOpened from './ModalIsOpened';
 import ModalOpenByClickOn from './ModalOpenByClickOn';
-import ModalCloseOnEsc from './ModalDisableCloseOnEsc';
+import ModalDisableCloseOnEscCloseOnOutsideClick from './ModalDisableCloseOnEscCloseOnOutsideClick';
 import ModalIsFullscreen from './ModalIsFullscreen';
-import ModalCloseOnOutsideClick from './ModalDisableCloseOnOutsideClick';
 import ModalAppendClassName from './ModalAppendClassName';
-import ModalContainLargeContent from './ModalContainLargeContent';
-import ModalDialog from './ModalDialog/ModalDialog';
 
 const ModalExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props-table" src={ModalSrc} />
-    <h2 id="isOpened">ModalIsOpened</h2>
+    <h2 id="isOpened">Using isOpened prop</h2>
     <ModalIsOpened />
-    <h2 id="openByClickOn">openByClickOn</h2>
+    <h2 id="openByClickOn">Using openByClickOn prop</h2>
     <ModalOpenByClickOn />
     <hr />
-    <h2 id="closeOnEsc">Disable closeOnEsc</h2>
-    <ModalCloseOnEsc />
-    <h2 id="closeOnOutsideClick">Disable closeOnOutsideClick</h2>
-    <ModalCloseOnOutsideClick />
+    <h2 id="closeOnEsc-closeOnOutsideClick">Disable Close on esc and close on outside click</h2>
+    <ModalDisableCloseOnEscCloseOnOutsideClick />
     <h2 id="isFullscreen">Enable isFullscreen</h2>
     <ModalIsFullscreen />
     <h2 id="append-class">Append ClassName</h2>
     <ModalAppendClassName />
-    <h2 id="containlargecontent">ModalContainLargeContent</h2>
-    <ModalContainLargeContent />
-    <h2 id="modal-dialog">Styled Modal Dialog</h2>
-    <ModalDialog />
   </div>
 );
 

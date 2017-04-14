@@ -5,19 +5,61 @@ import ModalContent from './ModalContent';
 import './Modal.scss';
 
 const propTypes = {
+  /**
+   * String that labels the modal for screen readers
+   **/
   ariaLabel: PropTypes.string.isRequired,
+  /**
+   * This callback is called when the closing event is triggered but it prevents normal removal from the DOM. So, you can do some DOMNode animation first and then call removeFromDOM() that removes the modal from DOM.
+   **/
   beforeClose: PropTypes.func,
+  /**
+   * Content inside the modal dialog
+   **/
   children: PropTypes.element.isRequired,
+  /**
+   * CSS classnames that are append to the modal
+   **/
   classNameModal: PropTypes.string,
+  /**
+   * CSS classnames that are append to the overlay
+   **/
   classNameOverlay: PropTypes.string,
+  /**
+   * If set to true, the modal will close when the esc key is pressed
+   **/
   closeOnEsc: PropTypes.bool,
+  /**
+   * If set to true, the modal will close when a mouseclick is triggered outside the modal
+   **/
   closeOnOutsideClick: PropTypes.bool,
+  /**
+   * If set to true, the modal will be fullscreen on all breakpoint sizes
+   **/
   isFullscreen: PropTypes.bool,
+  /**
+   * If set to true, the modal will rendered as opened
+   **/
   isOpened: PropTypes.bool,
+  /**
+   * This callback is called when the modal closes and after beforeClose.
+   **/
   onClose: PropTypes.func,
+  /**
+   * This callback is called when the modal is opened and rendered (useful for animating the DOMNode).
+   **/
   onOpen: PropTypes.func,
+  /**
+   * This callback is called when the modal is (re)rendered.
+   **/
   onUpdate: PropTypes.func,
+  /**
+   * The second way how to open the modal. This element will be rendered by the modal immediately with onClick handler that triggers modal opening. Notice that you don't have to deal with the open/close state (like when using the isOpen prop).
+   **/
   openByClickOn: PropTypes.element,
+  /**
+   * Role attribute on the modal dialog
+   **/
   role: PropTypes.string,
 };
 

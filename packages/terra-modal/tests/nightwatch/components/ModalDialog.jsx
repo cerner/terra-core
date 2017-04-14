@@ -1,11 +1,10 @@
 import React from 'react';
-import IconClose from 'terra-icon/lib/icon/IconClose';
+import IconClose from 'terra-icon/lib/icon/IconClose'; // eslint-disable-line
 import Modal from '../../../../terra-modal/src/Modal';
 import ModalHeader from './ModalDialog/ModalHeader';
 import ModalSubheader from './ModalDialog/ModalSubheader';
 import ModalBody from './ModalDialog/ModalBody';
 import ModalFooter from './ModalDialog/ModalFooter';
-import ModalDialog from './ModalDialog/ModalDialog';
 import './ModalDialog/ModalDialog.scss';
 
 class ModalDefault extends React.Component {
@@ -35,7 +34,7 @@ class ModalDefault extends React.Component {
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
         >
-          <ModalDialog>
+          <div>
             <ModalHeader>
             Header
             <button className={'terra-Modal-close'} onClick={this.handleCloseModal}>
@@ -49,7 +48,7 @@ class ModalDefault extends React.Component {
             <ModalFooter>
               <button onClick={this.handleCloseModal}>Close Modal</button>
             </ModalFooter>
-          </ModalDialog>
+          </div>
         </Modal>
         <button onClick={this.handleOpenModal}>Open Modal</button>
       </div>

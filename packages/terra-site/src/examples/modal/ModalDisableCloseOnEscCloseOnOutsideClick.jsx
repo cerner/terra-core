@@ -27,6 +27,7 @@ class ModalDefault extends React.Component {
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
           closeOnEsc={false}
+          closeOnOutsideClick={false}
         >
           <div>
             <h1>Terra Modal</h1>

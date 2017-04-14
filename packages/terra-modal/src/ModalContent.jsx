@@ -52,6 +52,7 @@ class ModalContent extends React.Component {
           className={classNameOverlay}
         />
         <div
+          tabIndex="<0> </0>"
           aria-label={ariaLabel}
           className={classNameModal}
           role={role}

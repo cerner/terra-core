@@ -13,7 +13,7 @@ module.exports = {
 
   'isOpen prop': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-open`)
       .waitForElementPresent('.button-open-modal', 1000)
       .waitForElementNotPresent('.terra-Modal', 1000)
       .click('.button-open-modal')

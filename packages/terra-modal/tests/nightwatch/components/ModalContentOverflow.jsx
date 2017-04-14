@@ -6,7 +6,7 @@ class ModalDefault extends React.Component {
     super();
 
     this.state = {
-      isOpened: false,
+      isOpened: true,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);

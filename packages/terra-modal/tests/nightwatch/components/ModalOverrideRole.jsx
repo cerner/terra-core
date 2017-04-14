@@ -22,19 +22,16 @@ class ModalDefault extends React.Component {
   }
 
   render() {
+    const newRole = 'button';
     return (
       <div>
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
-          role={'button'}
+          role={newRole}
         >
           <div>
-            <h1>Terra Modal</h1>
-            <h2>Subtitle</h2>
-            <hr />
-            <p>The Terra Modal is appended to the document body.</p>
-            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
+            <p>The role is overriden to <b>{newRole}</b></p>
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>

@@ -9,7 +9,7 @@ const defaultProps = {
   classNameOverlay: null,
 };
 
-const ModalOverlay = ({ classNameOverlay, ...customProps }) => <div tabIndex="-1" className={classNameOverlay} {...customProps} />;
+const ModalOverlay = ({ classNameOverlay, ...customProps }) => <div className={classNameOverlay} {...customProps} />;
 
 ModalOverlay.propTypes = propTypes;
 ModalOverlay.defaultProps = defaultProps;
