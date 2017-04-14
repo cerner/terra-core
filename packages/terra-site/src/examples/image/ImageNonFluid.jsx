@@ -13,7 +13,7 @@ const imagecontainerStyle2 = {
 };
 const imagecontainerStyle3 = {
   backgroundColor: '#ffe4c4',
-  width: 100,
+  width: 200,
   height: 100,
   marginBottom: 100,
 };
