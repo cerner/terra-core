@@ -4,19 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _terraI18n = require('terra-i18n');
-
-var _BaseStyles = require('./BaseStyles');
-
-var _BaseStyles2 = _interopRequireDefault(_BaseStyles);
+require('./Base.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,83 +24,56 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * The component that will be wrapped by i18n provider.
+   * The component(s) that will be wrapped by `<Base />`.
    */
-  children: _react.PropTypes.node.isRequired,
-  /**
-   * Customized translations provided by consuming application.
-   */
-  customMessages: _react.PropTypes.object,
-  /**
-   * The locale name.
-   */
-  locale: _react.PropTypes.string
+  children: _react.PropTypes.node.isRequired
 };
 
-var defaultProps = {
-  customMessages: {},
-  locale: 'en'
-};
+var BaseStyles = function (_React$Component) {
+  _inherits(BaseStyles, _React$Component);
 
-var Base = function (_React$Component) {
-  _inherits(Base, _React$Component);
+  function BaseStyles() {
+    _classCallCheck(this, BaseStyles);
 
-  function Base(props) {
-    _classCallCheck(this, Base);
-
-    var _this = _possibleConstructorReturn(this, (Base.__proto__ || Object.getPrototypeOf(Base)).call(this, props));
-
-    _this.state = {
-      load: false,
-      locale: props.locale,
-      messages: {}
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (BaseStyles.__proto__ || Object.getPrototypeOf(BaseStyles)).apply(this, arguments));
   }
 
-  _createClass(Base, [{
+  _createClass(BaseStyles, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      (0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      if (this.props === nextProps) return;
-      (0, _terraI18n.i18nLoader)(nextProps.locale, this.setState, this);
+      // Checks to run when not in production
+      if (process.env.NODE_ENV !== 'production') {
+        // Check to ensure terra-Base class is set on html element
+        if (!new RegExp('(^|\\s)terra-Base(\\s|$)').test(document.documentElement.className)) {
+          // eslint-disable-next-line
+          console.warn('The html element is missing the terra-Base class.');
+        }
+
+        // Check to ensure dir attribute is set on html element
+        if (!document.documentElement.hasAttribute('dir')) {
+          // eslint-disable-next-line
+          console.warn('The html element is missing the dir attribute. For terra directionality based styles to render correctly, add dir="ltr" or dir="rtl" to the html element.');
+        }
+      }
     }
   }, {
     key: 'render',
     value: function render() {
-      if (!this.state.load) return null;
-
       var _props = this.props,
-          locale = _props.locale,
-          customMessages = _props.customMessages,
-          customProps = _objectWithoutProperties(_props, ['locale', 'customMessages']);
-
-      var messages = _extends({}, this.state.messages, customMessages);
+          children = _props.children,
+          customProps = _objectWithoutProperties(_props, ['children']);
 
       return _react2.default.createElement(
-        _terraI18n.I18nProvider,
-        {
-          locale: this.state.locale,
-          messages: messages
-        },
-        _react2.default.createElement(
-          _BaseStyles2.default,
-          customProps,
-          this.props.children
-        )
+        'div',
+        customProps,
+        children
       );
     }
   }]);
 
-  return Base;
+  return BaseStyles;
 }(_react2.default.Component);
 
-Base.propTypes = propTypes;
+BaseStyles.propTypes = propTypes;
 
-Base.defaultProps = defaultProps;
-
-exports.default = Base;
+exports.default = BaseStyles;

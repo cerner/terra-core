@@ -21,3 +21,11 @@ it('should render the component with merged attributes', () => {
   const base = shallow(<Base className="TestClass" data-mock="data" id="TestId">String</Base>);
   expect(base).toMatchSnapshot();
 });
+
+it('should render the component with customMessages', () => {
+  const customMessages = {
+    'App.test': 'App test',
+  };
+  const base = shallow(<Base customMessages={customMessages}>customMessages</Base>);
+  expect(base).toMatchSnapshot();
+});
