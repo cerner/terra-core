@@ -11,7 +11,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactIntl.addLocaleData)(_de2.default);
 
 var messages = {
-  'Terra.ajax.error': 'Inhalt konnte nicht geladen werden.'
+  'Terra.ajax.error': 'Inhalt konnte nicht geladen werden.',
+  'Terra.demographicsBanner.dateOfBirth': 'Geburtsdatum: ',
+  'Terra.demographicsBanner.deceased': 'Verstorben: ',
+  'Terra.demographicsBanner.gestationalAge': 'GA: ',
+  'Terra.demographicsBanner.noDataProvided': '--',
+  'Terra.demographicsBanner.postMenstrualAge': 'Postmenstruelles Alter: '
 };
 
 module.exports = {
