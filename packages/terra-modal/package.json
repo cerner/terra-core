@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-ui#readme",
   "devDependencies": {
+    "terra-icon": "0.x",
     "terra-toolkit": "^0.x"
   },
   "peerDependencies": {

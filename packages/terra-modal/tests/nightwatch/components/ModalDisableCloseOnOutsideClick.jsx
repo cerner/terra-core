@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from '../../lib/Modal';
+import Modal from '../../../lib/Modal';
 
 class ModalDefault extends React.Component {
   constructor() {
@@ -26,14 +26,18 @@ class ModalDefault extends React.Component {
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
-          closeOnEsc={false}
+          closeOnOutsideClick={false}
         >
           <div>
             <h1>Terra Modal</h1>
+            <h2>Subtitle</h2>
+            <hr />
+            <p>The Terra Modal is appended to the document body.</p>
+            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

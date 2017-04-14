@@ -6,15 +6,15 @@ import { Link } from 'react-router';
 const ModalTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/modal-tests/is-open">isOpen</Link></li>
-      <li><Link to="/tests/modal-tests/open-by-click-on">openByClickOn</Link></li>
-      <li><Link to="/tests/modal-tests/disable-close-on-esc">disableCloseOnEsc</Link></li>
-      <li><Link to="/tests/modal-tests/disable-close-on-outside-click">disableCloseOnOutsideClick</Link></li>
-      <li><Link to="/tests/modal-tests/is-fullscreen">isFullscreen</Link></li>
+      <li><Link to="/tests/modal-tests/default">Using isOpen prop</Link></li>
+      <li><Link to="/tests/modal-tests/open-by-click-on">Using openByClickOn prop</Link></li>
+      <li><Link to="/tests/modal-tests/disable-close-on-esc">Disable Close On Esc</Link></li>
+      <li><Link to="/tests/modal-tests/disable-close-on-outside-click">Disable Close On Outside Click</Link></li>
+      <li><Link to="/tests/modal-tests/is-fullscreen">Fullscreen</Link></li>
+      <li><Link to="/tests/modal-tests/override-role">Override Role</Link></li>
+      <li><Link to="/tests/modal-tests/event-hooks">Event Hooks</Link></li>
     </ul>
   </div>
 );
 
 export default ModalTests;
-
-

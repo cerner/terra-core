@@ -34,6 +34,7 @@ const defaultProps = {
   role: 'document',
 };
 
+/* eslint-disable react/prefer-stateless-function */
 class Modal extends React.Component {
   render() {
     const {
