@@ -10,7 +10,7 @@ const BaseTests = () => (
       <li><Link to="/tests/arrange-tests/aligned-all-arrange-fit-end-fill">Aligned Arrange with FitEnd and Fill</Link></li>
       <li><Link to="/tests/arrange-tests/aligned-all-arrange-fit-start-fill">Aligned Arrange with FitStart and Fill</Link></li>
       <li><Link to="/tests/arrange-tests/aligned-individually-fit-start">Individually Aligned FitStart</Link></li>
-      <li><Link to="/tests/arrange-tests/aligned-individually-fill">Individually Aligned Fillt</Link></li>
+      <li><Link to="/tests/arrange-tests/aligned-individually-fill">Individually Aligned Fill</Link></li>
       <li><Link to="/tests/arrange-tests/aligned-individually-fit-end">Individually Aligned FitEnd</Link></li>
     </ul>
   </div>

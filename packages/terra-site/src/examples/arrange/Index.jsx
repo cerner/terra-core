@@ -9,7 +9,7 @@ import { version } from 'terra-arrange/package.json';
 import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange';
 
 // Example Files
-import { icon, IconWrapper, image, simpleText } from './examplesetup';
+import { icon, image, simpleText } from './examplesetup';
 import ArrangeAlignment from './ArrangeAlignment';
 
 const ArrangeExamples = () => (

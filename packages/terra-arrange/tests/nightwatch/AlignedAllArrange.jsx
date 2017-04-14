@@ -1,6 +1,6 @@
 import React from 'react';
 import Arrange from '../../lib/Arrange';
-import { ArrangeWrapper, IconWrapper, image, simpleText } from './examplesetup';
+import { ArrangeWrapper, IconWrapper, image, simpleText, longText } from './examplesetup';
 
 const AlignedAllArrange = () => (
   <div>
@@ -35,6 +35,15 @@ const AlignedAllArrange = () => (
         align="stretch"
         fitStart={image}
         fill={simpleText}
+        fitEnd={<IconWrapper />}
+      />
+    </ArrangeWrapper>
+
+    <ArrangeWrapper>
+      <Arrange
+        align="stretch"
+        fitStart={<IconWrapper />}
+        fill={longText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
