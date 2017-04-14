@@ -4,7 +4,7 @@ import Image from 'terra-image';
 const ImageVariant = () => (
   <div>
     <p>Default Image Style</p>
-    <Image src="http://lorempixel.com/320/320/nature/" alt="example of defualt styles" />
+    <Image src="http://lorempixel.com/320/320/nature/" alt="example of default styles" />
     <p>Default Image without alt</p>
     <Image src="http://lorempixel.com/320/320/nature/" variant="default" />
     <p>Circle Style</p>
