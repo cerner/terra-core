@@ -61,16 +61,12 @@ var ModalContent = function (_React$Component) {
   _createClass(ModalContent, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      // eslint-disable-next-line no-console
-      console.log('Modal: componentDidMount');
       // Disable background scrolling
       document.body.style.overflow = 'hidden';
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      // eslint-disable-next-line no-console
-      console.log('Modal: componentWillUnmount');
       // Enable background scrolling
       document.body.style.overflow = null;
     }
@@ -90,6 +86,10 @@ var ModalContent = function (_React$Component) {
       return _react2.default.createElement(
         _focusTrapReact2.default,
         null,
+        _react2.default.createElement(_ModalOverlay2.default, {
+          onClick: closeOnOutsideClick ? closePortal : null,
+          className: classNameOverlay
+        }),
         _react2.default.createElement(
           'div',
           _extends({
@@ -98,11 +98,7 @@ var ModalContent = function (_React$Component) {
             role: role
           }, customProps),
           children
-        ),
-        _react2.default.createElement(_ModalOverlay2.default, {
-          onClick: closeOnOutsideClick ? closePortal : null,
-          className: classNameOverlay
-        })
+        )
       );
     }
   }]);

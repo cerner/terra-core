@@ -8,7 +8,7 @@ exports[`test should mount an open modal 1`] = `
   isFullscreen={false}
   isOpened={true}
   openByClickOn={null}
-  role="dialog">
+  role="document">
   <Portal
     closeOnEsc={true}
     closeOnOutsideClick={true}
@@ -36,7 +36,7 @@ exports[`test should shallow an open modal 1`] = `
     classNameModal="terra-Modal"
     classNameOverlay="terra-Modal-overlay"
     closeOnOutsideClick={true}
-    role="dialog">
+    role="document">
     <div>
       IsOpened
       <button>

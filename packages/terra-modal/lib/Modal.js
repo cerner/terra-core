@@ -39,7 +39,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var propTypes = {
   ariaLabel: _react.PropTypes.string.isRequired,
   beforeClose: _react.PropTypes.func,
-  children: _react.PropTypes.node.isRequired,
+  children: _react.PropTypes.element.isRequired,
   classNameModal: _react.PropTypes.string,
   classNameOverlay: _react.PropTypes.string,
   closeOnEsc: _react.PropTypes.bool,
@@ -69,13 +69,10 @@ var defaultProps = {
 var Modal = function (_React$Component) {
   _inherits(Modal, _React$Component);
 
-  function Modal(props) {
+  function Modal() {
     _classCallCheck(this, Modal);
 
-    var _this = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this, props));
-
-    _this.state = { isOpened: props.isOpened };
-    return _this;
+    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
   }
 
   _createClass(Modal, [{
@@ -104,7 +101,7 @@ var Modal = function (_React$Component) {
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
-          isOpened: this.state.isOpened,
+          isOpened: this.props.isOpened,
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
           openByClickOn: openByClickOn,
