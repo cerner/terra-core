@@ -1,6 +1,10 @@
 import React, { PropTypes } from 'react';
 import TableRows from './TableRows';
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
   /**
    * The children passed to the component
@@ -14,10 +18,15 @@ const propTypes = {
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
+  /**
+  * A callback function for onKeyDown action for tab key
+  */
+  onKeyDown: PropTypes.func,
 };
 
 const defaultProps = {
   onClick: undefined,
+  onKeyDown: undefined,
 };
 
 class SingleSelectableRows extends React.Component {
@@ -60,10 +69,26 @@ class SingleSelectableRows extends React.Component {
     };
   }
 
-  newPropsForRow(row, index, onClick) {
+  wrappedOnKeyDownForRow(row, index) {
+    const initialOnKeyDown = this.props.onKeyDown;
+
+    return (event) => {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+        if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+          this.handleSelection(event, index);
+        }
+      }
+
+      if (initialOnKeyDown) {
+        initialOnKeyDown(event);
+      }
+    };
+  }
+
+  newPropsForRow(row, index, onClick, onKeyDown) {
     const isSelected = this.state.selectedIndex === index;
 
-    const newProps = { onClick };
+    const newProps = { onClick, onKeyDown };
 
     // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
     // This will ensure that only one row will be selected at a moment of time.
@@ -90,7 +115,8 @@ class SingleSelectableRows extends React.Component {
   clonedChildItems(rows) {
     return rows.map((row, index) => {
       const wrappedOnClick = this.wrappedOnClickForRow(row, index);
-      const newProps = this.newPropsForRow(row, index, wrappedOnClick);
+      const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
+      const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
       return React.cloneElement(row, newProps);
     });
   }
@@ -100,6 +126,9 @@ class SingleSelectableRows extends React.Component {
     const clonedChilItems = this.clonedChildItems(children);
     if ('onClick' in customProps) {
       delete customProps.onClick;
+    }
+    if ('onKeyDown' in customProps) {
+      delete customProps.onKeyDown;
     }
     return (
       <TableRows height={height} {...customProps}>

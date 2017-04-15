@@ -27,11 +27,11 @@ const ImageNonFluid = () => (
     </div>
     <p>Image width is larger than the container. Image height is smaller than the container.</p>
     <div style={imagecontainerStyle2}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="thumbnail" />
+      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" />
     </div>
     <p>Image width is smaller than the container. Image height is larger than the container.</p>
     <div style={imagecontainerStyle3}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="circle" />
+      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" />
     </div>
   </div>
 );
