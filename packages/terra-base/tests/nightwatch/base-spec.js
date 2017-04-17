@@ -34,6 +34,6 @@ module.exports = {
       .waitForElementVisible('button', waitInms)
       .click('button');
 
-    browser.expect.element('div').text.to.contain('en').before(waitInms);
+    browser.expect.element('div').text.to.contain('en-US').before(waitInms);
   },
 };

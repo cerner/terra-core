@@ -1,9 +1,66 @@
-exports[`test should render the component with customMessages 1`] = `null`;
+exports[`test should render the component with customMessages 1`] = `
+<I18nProvider
+  locale="en"
+  messages={
+    Object {
+      "App.test": "App test",
+    }
+  }>
+  <BaseStyles>
+    customMessages
+  </BaseStyles>
+</I18nProvider>
+`;
 
-exports[`test should render the component with merged attributes 1`] = `null`;
+exports[`test should render the component with merged attributes 1`] = `
+<I18nProvider
+  locale="en"
+  messages={Object {}}>
+  <BaseStyles
+    className="TestClass"
+    data-mock="data"
+    id="TestId">
+    String
+  </BaseStyles>
+</I18nProvider>
+`;
 
-exports[`test should support rendering a string as children 1`] = `null`;
+exports[`test should support rendering a string as children 1`] = `
+<I18nProvider
+  locale="en"
+  messages={Object {}}>
+  <BaseStyles>
+    String
+  </BaseStyles>
+</I18nProvider>
+`;
 
-exports[`test should support rendering an array of elements as a children 1`] = `null`;
+exports[`test should support rendering an array of elements as a children 1`] = `
+<I18nProvider
+  locale="en"
+  messages={Object {}}>
+  <BaseStyles>
+    <h1>
+      Heading
+    </h1>
+    <p>
+      Element 1
+    </p>
+    <p>
+      Element 2
+    </p>
+  </BaseStyles>
+</I18nProvider>
+`;
 
-exports[`test should support rendering an element as children 1`] = `null`;
+exports[`test should support rendering an element as children 1`] = `
+<I18nProvider
+  locale="en"
+  messages={Object {}}>
+  <BaseStyles>
+    <p>
+      Element
+    </p>
+  </BaseStyles>
+</I18nProvider>
+`;

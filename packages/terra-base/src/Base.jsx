@@ -6,7 +6,7 @@ import BaseStyles from './BaseStyles';
 
 const propTypes = {
   /**
-   * The component that will be wrapped by i18n provider.
+   * The component(s) that will be wrapped by `<Base />`.
    */
   children: PropTypes.node.isRequired,
   /**
