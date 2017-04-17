@@ -2,33 +2,33 @@ exports[`test should render a default table 1`] = `
 <table
   className="terra-Table terra-Table--striped">
   <TableHeader>
-    <TableHeaderContent
+    <TableHeaderCell
       content="Name"
       minWidth="small" />
-    <TableHeaderContent
+    <TableHeaderCell
       content="Address"
       minWidth="small" />
-    <TableHeaderContent
+    <TableHeaderCell
       content="Phone Number"
       minWidth="small" />
   </TableHeader>
   <TableRows>
     <TableRow
       isSelected={false}>
-      <TableRowContent
+      <TableCell
         content="John Smith" />
-      <TableRowContent
+      <TableCell
         content="123 Adams Drive" />
-      <TableRowContent
+      <TableCell
         content="111-222-3333" />
     </TableRow>
     <TableRow
       isSelected={false}>
-      <TableRowContent
+      <TableCell
         content="John Smith" />
-      <TableRowContent
+      <TableCell
         content="123 Adams Drive" />
-      <TableRowContent
+      <TableCell
         content="111-222-3333" />
     </TableRow>
   </TableRows>
@@ -39,33 +39,33 @@ exports[`test should render a table without zebra stripes 1`] = `
 <table
   className="terra-Table">
   <TableHeader>
-    <TableHeaderContent
+    <TableHeaderCell
       content="Name"
       minWidth="small" />
-    <TableHeaderContent
+    <TableHeaderCell
       content="Address"
       minWidth="small" />
-    <TableHeaderContent
+    <TableHeaderCell
       content="Phone Number"
       minWidth="small" />
   </TableHeader>
   <TableRows>
     <TableRow
       isSelected={false}>
-      <TableRowContent
+      <TableCell
         content="John Smith" />
-      <TableRowContent
+      <TableCell
         content="123 Adams Drive" />
-      <TableRowContent
+      <TableCell
         content="111-222-3333" />
     </TableRow>
     <TableRow
       isSelected={false}>
-      <TableRowContent
+      <TableCell
         content="John Smith" />
-      <TableRowContent
+      <TableCell
         content="123 Adams Drive" />
-      <TableRowContent
+      <TableCell
         content="111-222-3333" />
     </TableRow>
   </TableRows>

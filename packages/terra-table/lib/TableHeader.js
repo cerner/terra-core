@@ -8,9 +8,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TableHeaderContent = require('./TableHeaderContent');
+var _TableHeaderCell = require('./TableHeaderCell');
 
-var _TableHeaderContent2 = _interopRequireDefault(_TableHeaderContent);
+var _TableHeaderCell2 = _interopRequireDefault(_TableHeaderCell);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49,7 +49,7 @@ function cloneChildItems(children, height, onClick) {
   return childrenArray.filter(function (child, index) {
     return index < 16;
   }).map(function (child) {
-    if (child.type === _TableHeaderContent2.default) {
+    if (child.type === _TableHeaderCell2.default) {
       return _react2.default.cloneElement(child, newProps);
     }
     return child;

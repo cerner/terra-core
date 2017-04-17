@@ -30,6 +30,7 @@ import TitleExamples from './examples/title/Index';
 
 // Test
 /* eslint-disable import/first */
+import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
@@ -74,6 +75,7 @@ ReactDOM.render((
       <Route path="table" component={TableExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
+    {ArrangeTestRoutes}
     {BaseTestRoutes}
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
