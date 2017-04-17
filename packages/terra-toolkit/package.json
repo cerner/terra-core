@@ -1,6 +1,6 @@
 {
   "name": "terra-toolkit",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Utilities to help when developing terra modules",
   "main": "lib/index.js",
   "repository": {
@@ -23,7 +23,7 @@
     "test": "npm run test:nightwatch-default",
     "test:spec": "npm run test:nightwatch-default",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-toolkit WEBPACK_CONFIG_PATH=../tests/test.config node ./lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js -e default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
   },
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
@@ -35,9 +35,12 @@
     "terra-legacy-theme": "^0.x"
   },
   "dependencies": {
+    "glob": "^7.1.1",
     "html-webpack-plugin": "^2.28.0",
+    "load-json-file": "^2.0.0",
     "nightwatch": "^0.9.12",
     "phantomjs-prebuilt": "^2.1.14",
+    "request": "^2.81.0",
     "sauce-connect-launcher": "^1.2.0",
     "selenium-server-standalone-jar": "3.2.0",
     "shelljs": "^0.7.6",

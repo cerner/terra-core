@@ -15,8 +15,12 @@ const screenshot = require('terra-toolkit').screenshot;
 const waitInms = 1000;
 
 module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
   afterEach: (browser, done) => {
-    screenshot(browser, done);
+    screenshot(browser, 'terra-i18n', done);
   },
 
   'Displays ajax error message in default': (browser) => {

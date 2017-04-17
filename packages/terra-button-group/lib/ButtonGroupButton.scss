@@ -1,0 +1,25 @@
+@import '~terra-mixins';
+
+.terra-ButtonGroupButton {
+  @include terra-border-radius-start(0);
+  @include terra-border-radius-end(0);
+  @include terra-margin-horizontal(0, 0);
+  
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 0;
+  margin-top: 0;
+  outline: 0;
+}
+
+.terra-ButtonGroupButton + .terra-ButtonGroupButton {
+  @include terra-margin-start(-1px);
+}
+
+.terra-ButtonGroupButton:first-child {
+  @include terra-border-radius-start(0.25em);
+}
+
+.terra-ButtonGroupButton:last-child {
+  @include terra-border-radius-end(0.25em);
+}

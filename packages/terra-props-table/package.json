@@ -1,8 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.2.1",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -27,13 +26,11 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-mixins": "^1.0.0"
+    "terra-base": "^0.x"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "react-docgen": "^2.13.0",
-    "terra-markdown": "^0.x",
-    "terra-mixins": "^1.0.0"
+    "react-docgen": "2.13.0",
+    "terra-markdown": "^0.x"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

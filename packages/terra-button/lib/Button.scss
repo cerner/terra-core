@@ -51,15 +51,16 @@ input[type='submit'].terra-Button {
   vertical-align: middle;
   white-space: normal;
 
-  // Removes extra space Firefox adds to button elements
+  // Remove the inner border and padding in Firefox.
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
 
+  // Restore the focus styles unset by the previous rule.
   &:-moz-focusring {
-    outline: 2px solid -moz-mac-focusring;
-    -moz-outline-radius: 0.45em;
+    outline: 1px dotted $terra-dark;
+    -moz-outline-radius: 0.25em;
   }
 
   &:disabled,
@@ -83,7 +84,7 @@ input[type='submit'].terra-Button {
   @include terra-margin-start($terra-button-child-margin);
 }
 
-// Color modifiers
+// Button modifiers
 .terra-Button--default {
   @include terra-button-color($terra-button-default-color-scheme);
 }
@@ -93,81 +94,11 @@ input[type='submit'].terra-Button {
 }
 
 .terra-Button--secondary {
-  @include terra-button-color($terra-button-secondary-color-scheme);
+  @include terra-button-secondary($terra-button-secondary-color-scheme);
 }
 
-.terra-Button--positive {
-  @include terra-button-color($terra-button-positive-color-scheme);
-}
-
-.terra-Button--negative {
-  @include terra-button-color($terra-button-negative-color-scheme);
-}
-
-.terra-Button--warning {
-  @include terra-button-color($terra-button-warning-color-scheme);
-}
-
-.terra-Button--info {
-  @include terra-button-color($terra-button-info-color-scheme);
-}
-
-// Button outline modifiers
-.terra-Button--outlineDefault {
-  @include terra-button-outline($terra-button-default-color-scheme);
-}
-
-.terra-Button--outlinePrimary {
-  @include terra-button-outline($terra-button-primary-color-scheme);
-}
-
-.terra-Button--outlineSecondary {
-  @include terra-button-outline($terra-button-secondary-color-scheme);
-}
-
-.terra-Button--outlinePositive {
-  @include terra-button-outline($terra-button-positive-color-scheme);
-}
-
-.terra-Button--outlineNegative {
-  @include terra-button-outline($terra-button-negative-color-scheme);
-}
-
-.terra-Button--outlineWarning {
-  @include terra-button-outline($terra-button-warning-color-scheme);
-}
-
-.terra-Button--outlineInfo {
-  @include terra-button-outline($terra-button-info-color-scheme);
-}
-
-// Button link modifiers
-.terra-Button--linkDefault {
-  @include terra-button-link($terra-button-default-color-scheme);
-}
-
-.terra-Button--linkPrimary {
-  @include terra-button-link($terra-button-primary-color-scheme);
-}
-
-.terra-Button--linkSecondary {
-  @include terra-button-link($terra-button-secondary-color-scheme);
-}
-
-.terra-Button--linkPositive {
-  @include terra-button-link($terra-button-positive-color-scheme);
-}
-
-.terra-Button--linkNegative {
-  @include terra-button-link($terra-button-negative-color-scheme);
-}
-
-.terra-Button--linkWarning {
-  @include terra-button-link($terra-button-warning-color-scheme);
-}
-
-.terra-Button--linkInfo {
-  @include terra-button-link($terra-button-info-color-scheme);
+.terra-Button--link {
+  @include terra-button-link($terra-button-link-color-scheme);
 }
 
 // Button size modifiers
@@ -191,7 +122,13 @@ input[type='submit'].terra-Button {
   font-size: map-get($terra-button-font-sizes, huge);
 }
 
+// Button style modifiers
 .terra-Button--block {
   display: block;
   width: 100%;
+}
+
+.terra-Button--compact {
+  padding-bottom: $terra-button-compact-padding-top;
+  padding-top: $terra-button-compact-padding-bottom;
 }

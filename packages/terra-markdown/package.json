@@ -1,8 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "terra-markdown",
   "repository": {
     "type": "git",
@@ -21,17 +20,14 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "terra-toolkit": "^0.x"
-  },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-mixins": "^1.0.0"
+    "terra-base": "^0.x"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "terra-mixins": "^1.0.0"
+    "marked": "^0.3.6",
+    "github-markdown-css": "^2.4.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

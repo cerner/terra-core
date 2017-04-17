@@ -1,7 +1,6 @@
 {
   "name": "terra-icon",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -23,18 +22,18 @@
   "devDependencies": {
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
     "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "cerner-one-icons": "git+https://github.cerner.com/ux/cerner-one-icons.git#af52c0dd92cfd56e1be1f9bef0f114de7294fed3",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "^15.4.2",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {
@@ -58,9 +57,9 @@
     "test": "npm run test:spec",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "node ../../scripts/nightwatch/nightwatch.js",
-    "test:nightwatch-chrome": "node ../../scripts/nightwatch/nightwatch.js chrome",
-    "test:nightwatch-firefox": "node ../../scripts/nightwatch/nightwatch.js firefox",
-    "test:nightwatch-safari": "node ../../scripts/nightwatch/nightwatch-non-parallel.js safari"
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-icon node ../../scripts/nightwatch/nightwatch.js",
+    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-icon node ../../scripts/nightwatch/nightwatch.js chrome",
+    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-icon node ../../scripts/nightwatch/nightwatch.js firefox",
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-icon node ../../scripts/nightwatch/nightwatch-non-parallel.js safari"
   }
 }

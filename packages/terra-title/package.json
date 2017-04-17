@@ -38,6 +38,7 @@
     "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {

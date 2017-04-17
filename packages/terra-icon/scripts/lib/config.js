@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var CernerOneIcons = exports.CernerOneIcons = {
-  csvFile: 'node_modules/cerner-one-icons/src/CernerOneIcons-CSV.csv',
-  svgDir: 'node_modules/cerner-one-icons/src/icons/'
+  csvFile: 'node_modules/one-cerner-style-icons/src/CernerOneIcons-CSV.csv',
+  svgDir: 'node_modules/one-cerner-style-icons/src/icons/'
 };
 
 var TerraIcon = exports.TerraIcon = {

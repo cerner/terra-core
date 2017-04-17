@@ -34,10 +34,10 @@
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js",
-    "test:nightwatch-chrome": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
-    "test:nightwatch-firefox": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
-    "test:nightwatch-safari": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-image node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-image node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-image node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-image node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
     "terra-toolkit": "^0.x"
@@ -45,6 +45,7 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {

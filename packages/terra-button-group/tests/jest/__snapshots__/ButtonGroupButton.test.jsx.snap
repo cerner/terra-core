@@ -1,0 +1,80 @@
+exports[`test should render a default component 1`] = `
+<Button
+  aria-selected={false}
+  className="terra-ButtonGroupButton"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  variant="default" />
+`;
+
+exports[`test should render as selected 1`] = `
+<Button
+  aria-selected={true}
+  className="terra-ButtonGroupButton is-active"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  variant="default" />
+`;
+
+exports[`test should render with icon and text 1`] = `
+<Button
+  aria-selected={false}
+  className="terra-ButtonGroupButton"
+  icon={
+    <img
+      alt="icon" />
+  }
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  text="text"
+  variant="default" />
+`;
+
+exports[`test should render with icon and text reversed 1`] = `
+<Button
+  aria-selected={false}
+  className="terra-ButtonGroupButton"
+  icon={
+    <img
+      alt="icon" />
+  }
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={true}
+  text="text"
+  variant="default" />
+`;
+
+exports[`test should render with icon only 1`] = `
+<Button
+  aria-selected={false}
+  className="terra-ButtonGroupButton"
+  icon={
+    <img
+      alt="icon" />
+  }
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  variant="default" />
+`;
+
+exports[`test should render with text 1`] = `
+<Button
+  aria-selected={false}
+  className="terra-ButtonGroupButton"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isReversed={false}
+  text="text"
+  variant="default" />
+`;

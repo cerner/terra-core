@@ -49,7 +49,7 @@ var PropsTable = function PropsTable(_ref) {
     { dir: 'ltr', className: 'markdown-body' },
     _react2.default.createElement(
       'h2',
-      { id: 'props' },
+      null,
       'Props'
     ),
     _react2.default.createElement(
@@ -103,10 +103,10 @@ var PropsTable = function PropsTable(_ref) {
 
           return _react2.default.createElement(
             'tr',
-            { key: key },
+            { key: key, style: { fontSize: '90%' } },
             _react2.default.createElement(
               'td',
-              { style: { color: 'rgb(17, 147, 154)' } },
+              { style: { fontWeight: 'bold' } },
               key
             ),
             _react2.default.createElement(
@@ -116,20 +116,20 @@ var PropsTable = function PropsTable(_ref) {
             ),
             prop.required ? _react2.default.createElement(
               'td',
-              { style: { color: 'rgb(255, 76, 34)' } },
+              { style: { color: '#d53700' } },
               'required'
             ) : _react2.default.createElement(
               'td',
-              { style: { color: '#c6c6c6' } },
+              { style: { color: '#444' } },
               'optional'
             ),
             prop.defaultValue ? _react2.default.createElement(
               'td',
-              { style: { color: 'rgb(236, 171, 32)' } },
+              { style: { fontWeight: 'bold' } },
               prop.defaultValue.value
             ) : _react2.default.createElement(
               'td',
-              { style: { color: '#c6c6c6' } },
+              { style: { color: '#444' } },
               'none'
             ),
             _react2.default.createElement(
