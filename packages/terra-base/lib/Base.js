@@ -30,7 +30,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * The component that will be wrapped by i18n provider.
+   * The component(s) that will be wrapped by `<Base />`.
    */
   children: _react.PropTypes.node.isRequired,
   /**
