@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../../../lib/Modal';
 
-class ModalDefault extends React.Component {
+class ModalIsFullscreen extends React.Component {
   constructor() {
     super();
 
@@ -45,5 +45,5 @@ class ModalDefault extends React.Component {
 }
 
 
-export default ModalDefault;
+export default ModalIsFullscreen;
 

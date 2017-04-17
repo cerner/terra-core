@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../../../lib/Modal';
 
-class ModalDefault extends React.Component {
+class ModalEventHooks extends React.Component {
   constructor() {
     super();
 
@@ -15,24 +15,32 @@ class ModalDefault extends React.Component {
     this.handleOnOpen = this.handleOnOpen.bind(this);
     this.handleOnClose = this.handleOnClose.bind(this);
     this.handleOnUpdate = this.handleOnUpdate.bind(this);
+    this.handleBeforeClose = this.handleBeforeClose.bind(this);
   }
 
+
+  /* eslint-disable */
   handleOnOpen(node) {
-    console.log('onOpen'); // eslint-disable-line
+    const onOpenElement = document.getElementById('onOpen');
+    onOpenElement.innerHTML = 'onOpen: Called';
   }
 
   handleOnClose() {
-    console.log('onClose'); // eslint-disable-line
+    const onOpenElement = document.getElementById('onClose');
+    onOpenElement.innerHTML = 'onClose: Called';
   }
 
   handleOnUpdate() {
-    console.log('onUpdate'); // eslint-disable-line
+    const onOpenElement = document.getElementById('onUpdate');
+    onOpenElement.innerHTML = 'onUpdate: Called';
   }
 
   handleBeforeClose(node, callback) {
-    console.log('beforeClose'); // eslint-disable-line
+    const onOpenElement = document.getElementById('beforeClose');
+    onOpenElement.innerHTML = 'beforeClose: Called';
     callback();
   }
+  /* eslint-enable */
 
   handleOpenModal() {
     this.setState({ isOpened: true });
@@ -63,9 +71,13 @@ class ModalDefault extends React.Component {
           </div>
         </Modal>
         <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
+        <div id="onOpen">onOpen: Not Called</div>
+        <div id="onUpdate">onUpdate: Not Called</div>
+        <div id="onClose">onClose: Not Called</div>
+        <div id="beforeClose">beforeClose: Not Called</div>
       </div>
     );
   }
 }
 
-export default ModalDefault;
+export default ModalEventHooks;

@@ -13,7 +13,6 @@ import ModalIsOpened from './ModalIsOpened';
 import ModalOpenByClickOn from './ModalOpenByClickOn';
 import ModalDisableCloseOnEscCloseOnOutsideClick from './ModalDisableCloseOnEscCloseOnOutsideClick';
 import ModalIsFullscreen from './ModalIsFullscreen';
-import ModalAppendClassName from './ModalAppendClassName';
 
 const ModalExamples = () => (
   <div>
@@ -29,8 +28,6 @@ const ModalExamples = () => (
     <ModalDisableCloseOnEscCloseOnOutsideClick />
     <h2 id="isFullscreen">Enable isFullscreen</h2>
     <ModalIsFullscreen />
-    <h2 id="append-class">Append ClassName</h2>
-    <ModalAppendClassName />
   </div>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../../../lib/Modal';
 
-class ModalDefault extends React.Component {
+class ModalDisableCloseOnOutsideClick extends React.Component {
   constructor() {
     super();
 
@@ -43,4 +43,4 @@ class ModalDefault extends React.Component {
   }
 }
 
-export default ModalDefault;
+export default ModalDisableCloseOnOutsideClick;

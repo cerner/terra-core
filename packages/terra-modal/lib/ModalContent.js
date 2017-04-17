@@ -93,6 +93,7 @@ var ModalContent = function (_React$Component) {
         _react2.default.createElement(
           'div',
           _extends({
+            tabIndex: '0',
             'aria-label': ariaLabel,
             className: classNameModal,
             role: role

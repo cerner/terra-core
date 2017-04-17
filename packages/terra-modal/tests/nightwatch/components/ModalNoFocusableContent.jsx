@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../../../lib/Modal';
 
-class ModalDefault extends React.Component {
+class ModalNoFocusableContent extends React.Component {
   constructor() {
     super();
 
@@ -26,19 +26,10 @@ class ModalDefault extends React.Component {
     return (
       <div>
         <Modal
-          classNameOverlay="overlay-custom-class"
-          classNameModal="modal-custom-class"
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
         >
-          <div>
-            <h1>Terra Modal</h1>
-            <h2>Subtitle</h2>
-            <hr />
-            <p>The Terra Modal is appended to the document body.</p>
-            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
-            <button onClick={this.handleCloseModal}>Close Modal</button>
-          </div>
+          <div>No focusable content inside the modal.</div>
         </Modal>
         <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
@@ -46,4 +37,4 @@ class ModalDefault extends React.Component {
   }
 }
 
-export default ModalDefault;
+export default ModalNoFocusableContent;

@@ -37,19 +37,61 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
+  /**
+   * String that labels the modal for screen readers
+   **/
   ariaLabel: _react.PropTypes.string.isRequired,
+  /**
+   * This callback is called when the closing event is triggered but it prevents normal removal from the DOM. So, you can do some DOMNode animation first and then call removeFromDOM() that removes the modal from DOM.
+   **/
   beforeClose: _react.PropTypes.func,
+  /**
+   * Content inside the modal dialog
+   **/
   children: _react.PropTypes.element.isRequired,
+  /**
+   * CSS classnames that are append to the modal
+   **/
   classNameModal: _react.PropTypes.string,
+  /**
+   * CSS classnames that are append to the overlay
+   **/
   classNameOverlay: _react.PropTypes.string,
+  /**
+   * If set to true, the modal will close when the esc key is pressed
+   **/
   closeOnEsc: _react.PropTypes.bool,
+  /**
+   * If set to true, the modal will close when a mouseclick is triggered outside the modal
+   **/
   closeOnOutsideClick: _react.PropTypes.bool,
+  /**
+   * If set to true, the modal will be fullscreen on all breakpoint sizes
+   **/
   isFullscreen: _react.PropTypes.bool,
+  /**
+   * If set to true, the modal will rendered as opened
+   **/
   isOpened: _react.PropTypes.bool,
+  /**
+   * This callback is called when the modal closes and after beforeClose.
+   **/
   onClose: _react.PropTypes.func,
+  /**
+   * This callback is called when the modal is opened and rendered (useful for animating the DOMNode).
+   **/
   onOpen: _react.PropTypes.func,
+  /**
+   * This callback is called when the modal is (re)rendered.
+   **/
   onUpdate: _react.PropTypes.func,
+  /**
+   * The second way how to open the modal. This element will be rendered by the modal immediately with onClick handler that triggers modal opening. Notice that you don't have to deal with the open/close state (like when using the isOpen prop).
+   **/
   openByClickOn: _react.PropTypes.element,
+  /**
+   * Role attribute on the modal dialog
+   **/
   role: _react.PropTypes.string
 };
 
@@ -65,6 +107,8 @@ var defaultProps = {
   openByClickOn: null,
   role: 'document'
 };
+
+/* eslint-disable react/prefer-stateless-function */
 
 var Modal = function (_React$Component) {
   _inherits(Modal, _React$Component);

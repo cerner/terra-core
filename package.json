@@ -1,7 +1,7 @@
 {
   "name": "terra-core",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "terra-core",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "eslint --ext .js,.jsx . --fix",
+    "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
     "prepush": "node scripts/prepush/index.js",
     "pretest": "npm run lint",

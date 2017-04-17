@@ -28,7 +28,7 @@ var ModalOverlay = function ModalOverlay(_ref) {
   var classNameOverlay = _ref.classNameOverlay,
       customProps = _objectWithoutProperties(_ref, ['classNameOverlay']);
 
-  return _react2.default.createElement('div', _extends({ tabIndex: '-1', className: classNameOverlay }, customProps));
+  return _react2.default.createElement('div', _extends({ className: classNameOverlay }, customProps));
 };
 
 ModalOverlay.propTypes = propTypes;

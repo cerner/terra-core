@@ -1,18 +1,19 @@
 import React from 'react';
-import Modal from '../../../../terra-modal/src/Modal';
-import './ModalAppendClassName.scss';
+import Modal from '../../../lib/Modal';
+import './ModalAppendClass.scss';
 
-class ModalDefault extends React.Component {
+class ModalAppendClass extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      isOpened: false,
+      isOpened: true,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
+
 
   handleOpenModal() {
     this.setState({ isOpened: true });
@@ -26,22 +27,24 @@ class ModalDefault extends React.Component {
     return (
       <div>
         <Modal
+          classNameOverlay="overlay-custom-class"
+          classNameModal="modal-custom-class"
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
-          classNameModal={'appended-modal-class'}
-          classNameOverlay={'appended-overlay-class'}
         >
           <div>
-            <h1>Rainbow Modal</h1>
+            <h1>Terra Modal</h1>
+            <h2>Subtitle</h2>
+            <hr />
+            <p>The Terra Modal is appended to the document body.</p>
+            <p>{'Modal is assigned a role of \'document\' for accessibility.'}</p>
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button className="button-open-modal" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }
 }
 
-
-export default ModalDefault;
-
+export default ModalAppendClass;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../../../../terra-modal/src/Modal';
 
-class ModalDefault extends React.Component {
+class ModalContentOverflow extends React.Component {
   constructor() {
     super();
 
@@ -44,5 +44,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 }
 
 
-export default ModalDefault;
+export default ModalContentOverflow;
 

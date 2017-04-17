@@ -7,7 +7,7 @@ import ModalBody from './ModalDialog/ModalBody';
 import ModalFooter from './ModalDialog/ModalFooter';
 import './ModalDialog/ModalDialog.scss';
 
-class ModalDefault extends React.Component {
+class ModalDialog extends React.Component {
   constructor() {
     super();
 
@@ -57,5 +57,5 @@ class ModalDefault extends React.Component {
 }
 
 
-export default ModalDefault;
+export default ModalDialog;
 

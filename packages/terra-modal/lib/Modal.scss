@@ -1,5 +1,4 @@
 @import '~terra-mixins';
-@import './variables';
 
 .terra-Modal {
   background-color: #fff;
@@ -8,6 +7,9 @@
   display: block;
   left: 10px;
   max-height: 100%;
+  outline: none;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: fixed;
   right: 10px;
   top: 10px;
@@ -21,10 +23,9 @@
       margin: 0 auto;
       max-height: calc(100% - 100px);
       max-width: 40em;
+      right: auto;
       top: 50%;
       transform: translate(-50%, -50%);
     }
   }
 }
-
-
