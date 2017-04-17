@@ -2,7 +2,7 @@
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
-const autoprefixer = require('autoprefixer');
+const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -12,50 +12,50 @@ module.exports = {
   },
   module: {
     loaders: [{
-        test: /\.(jsx|js)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader',
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [{
-            loader: "css-loader"
-          }, {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function() {
-                return [
-                  require('autoprefixer')({
-                    browsers: [
-                      'ie >= 10',
-                      'last 2 versions',
-                      'last 2 android versions',
-                      'last 2 and_chr versions',
-                      'iOS >= 8',
-                    ],
-                  })
-                ];
-              }
-            }
-          }, {
-            loader: "sass-loader",
-            options: {
-              data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/LegacyTheme.scss'))}"; $terra-bidi: true;`,
-            }
-          }, ]
-        })
+      test: /\.(jsx|js)$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+    },
+    {
+      test: /\.json$/,
+      loader: 'json-loader',
+    },
+    {
+      test: /\.(scss|css)$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [{
+          loader: 'css-loader',
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            plugins() {
+              return [
+                Autoprefixer({
+                  browsers: [
+                    'ie >= 10',
+                    'last 2 versions',
+                    'last 2 android versions',
+                    'last 2 and_chr versions',
+                    'iOS >= 8',
+                  ],
+                }),
+              ];
+            },
+          },
+        }, {
+          loader: 'sass-loader',
+          options: {
+            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/LegacyTheme.scss'))}"; $terra-bidi: true;`,
+          },
+        }],
+      }),
 
-      },
-      {
-        test: /\.md$/,
-        loader: 'raw-loader',
-      },
+    },
+    {
+      test: /\.md$/,
+      loader: 'raw-loader',
+    },
     ],
   },
   plugins: [
@@ -74,21 +74,21 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
   },
   devServer: {
-      host: '0.0.0.0',
-      stats: {
-        assets: true,
-        children: false,
-        chunks: false,
-        hash: false,
-        modules: false,
-        publicPath: false,
-        timings: true,
-        version: true,
-        warnings: true
-      },
-      overlay: {
-        warnings: true,
-        errors: true
-      }
-    }
+    host: '0.0.0.0',
+    stats: {
+      assets: true,
+      children: false,
+      chunks: false,
+      hash: false,
+      modules: false,
+      publicPath: false,
+      timings: true,
+      version: true,
+      warnings: true,
+    },
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
+  },
 };

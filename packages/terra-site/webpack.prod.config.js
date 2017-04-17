@@ -16,7 +16,9 @@ config.plugins.push(new webpack.DefinePlugin({
 
 // Clean build before running
 config.plugins.push(new CleanPlugin('build', { exclude: ['stats.json'] }));
-config.plugins.push(new webpack.LoaderOptionsPlugin({minimize: true}));
+
+// Minify css and js
+config.plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
 
 
 // Create output file
