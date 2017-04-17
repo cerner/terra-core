@@ -143,7 +143,7 @@ var TimeInput = function (_React$Component) {
           defaultValue: this.state.defaultTime,
           onChange: this.onChange,
           placeholder: TimeInput.timeFormat(),
-          mask: [/[0-9]/, /[0-9]/, ':', /[0-9]/, /[0-9]/],
+          mask: [/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/],
           keepCharPositions: true,
           placeholderChar: ' ',
           pipe: autoCorrectedTimePipe,
