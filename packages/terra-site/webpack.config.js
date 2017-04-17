@@ -73,6 +73,7 @@ module.exports = {
     filename: '[name].js',
     path: path.join(__dirname, 'dist'),
   },
+  devtool: 'cheap-source-map',
   devServer: {
     host: '0.0.0.0',
     stats: {
