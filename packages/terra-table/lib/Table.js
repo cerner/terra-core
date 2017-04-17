@@ -18,9 +18,9 @@ var _TableHeader = require('./TableHeader');
 
 var _TableHeader2 = _interopRequireDefault(_TableHeader);
 
-var _TableHeaderContent = require('./TableHeaderContent');
+var _TableHeaderCell = require('./TableHeaderCell');
 
-var _TableHeaderContent2 = _interopRequireDefault(_TableHeaderContent);
+var _TableHeaderCell2 = _interopRequireDefault(_TableHeaderCell);
 
 var _TableRows = require('./TableRows');
 
@@ -30,9 +30,9 @@ var _TableRow = require('./TableRow');
 
 var _TableRow2 = _interopRequireDefault(_TableRow);
 
-var _TableRowContent = require('./TableRowContent');
+var _TableCell = require('./TableCell');
 
-var _TableRowContent2 = _interopRequireDefault(_TableRowContent);
+var _TableCell2 = _interopRequireDefault(_TableCell);
 
 var _SingleSelectableRows = require('./SingleSelectableRows');
 
@@ -76,9 +76,9 @@ Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 Table.Rows = _TableRows2.default;
 Table.Header = _TableHeader2.default;
-Table.HeaderContent = _TableHeaderContent2.default;
+Table.HeaderCell = _TableHeaderCell2.default;
 Table.Row = _TableRow2.default;
-Table.RowContent = _TableRowContent2.default;
+Table.Cell = _TableCell2.default;
 Table.SingleSelectableRows = _SingleSelectableRows2.default;
 
 exports.default = Table;

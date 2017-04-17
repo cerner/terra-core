@@ -1,7 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "terra-base": "^0.x"
   },
   "dependencies": {
-    "react-docgen": "^2.13.0",
+    "react-docgen": "2.13.0",
     "terra-markdown": "^0.x"
   },
   "scripts": {

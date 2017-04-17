@@ -10,10 +10,8 @@ import BaseExamples from './examples/base/Index';
 import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
-import ClinicalItemViewExamples from './examples/clinical-item-view/Index';
 import ContentExamples from './examples/content/Index';
 import DatePickerExamples from './examples/date-picker/Index';
-import DetailViewExamples from './examples/detail-view/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
@@ -32,17 +30,14 @@ import TitleExamples from './examples/title/Index';
 
 // Test
 /* eslint-disable import/first */
+import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
-import DetailViewTestRoutes from 'terra-detail-view/tests/nightwatch/DetailViewTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
-import ClinicalItemViewTestRoutes from 'terra-clinical-item-view/tests/nightwatch/clinical-item-view/ClinicalItemViewTestRoutes';
-import CommentTestRoutes from 'terra-clinical-item-view/tests/nightwatch/comment/CommentTestRoutes';
-import DisplayTestRoutes from 'terra-clinical-item-view/tests/nightwatch/display/DisplayTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
@@ -62,10 +57,8 @@ ReactDOM.render((
       <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
-      <Route path="clinical-item-view" component={ClinicalItemViewExamples} />
       <Route path="content" component={ContentExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
-      <Route path="detail-view" component={DetailViewExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
@@ -82,6 +75,7 @@ ReactDOM.render((
       <Route path="table" component={TableExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
+    {ArrangeTestRoutes}
     {BaseTestRoutes}
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
@@ -89,10 +83,6 @@ ReactDOM.render((
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {ResponsiveElementTestRoutes}
-    {DetailViewTestRoutes}
-    {ClinicalItemViewTestRoutes}
-    {CommentTestRoutes}
-    {DisplayTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
