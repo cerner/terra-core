@@ -4,24 +4,26 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
-    <TableRowContent
+    <TableCell
       content="John Smith" />
-    <TableRowContent
+    <TableCell
       content="123 Adams Drive" />
-    <TableRowContent
+    <TableCell
       content="111-222-3333" />
   </TableRow>
   <TableRow
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
-    <TableRowContent
+    <TableCell
       content="John Smith" />
-    <TableRowContent
+    <TableCell
       content="123 Adams Drive" />
-    <TableRowContent
+    <TableCell
       content="111-222-3333" />
   </TableRow>
 </TableRows>
@@ -34,24 +36,26 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
-    <TableRowContent
+    <TableCell
       content="John Smith" />
-    <TableRowContent
+    <TableCell
       content="123 Adams Drive" />
-    <TableRowContent
+    <TableCell
       content="111-222-3333" />
   </TableRow>
   <TableRow
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
     tabIndex="0">
-    <TableRowContent
+    <TableCell
       content="John Smith" />
-    <TableRowContent
+    <TableCell
       content="123 Adams Drive" />
-    <TableRowContent
+    <TableCell
       content="111-222-3333" />
   </TableRow>
 </TableRows>

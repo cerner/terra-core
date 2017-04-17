@@ -80,5 +80,41 @@ module.exports = {
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
   },
-};
 
+  'Toggle aria-selected on seletable rows': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
+    browser.click('.terra-Table-row:nth-child(1)');
+    browser.expect.element('.terra-Table-row:nth-child(1)').to.have.attribute('aria-selected').which.contains('true');
+    browser.expect.element('.terra-Table-row:nth-child(2)').to.have.attribute('aria-selected').which.contains('false');
+    browser.expect.element('.terra-Table-row:nth-child(3)').to.have.attribute('aria-selected').which.contains('false');
+
+    browser.click('.terra-Table-row:nth-child(2)');
+    browser.expect.element('.terra-Table-row:nth-child(1)').to.have.attribute('aria-selected').which.contains('false');
+    browser.expect.element('.terra-Table-row:nth-child(2)').to.have.attribute('aria-selected').which.contains('true');
+    browser.expect.element('.terra-Table-row:nth-child(3)').to.have.attribute('aria-selected').which.contains('false');
+
+    browser.click('.terra-Table-row:nth-child(3)');
+    browser.expect.element('.terra-Table-row:nth-child(1)').to.have.attribute('aria-selected').which.contains('false');
+    browser.expect.element('.terra-Table-row:nth-child(2)').to.have.attribute('aria-selected').which.contains('false');
+    browser.expect.element('.terra-Table-row:nth-child(3)').to.have.attribute('aria-selected').which.contains('true');
+  },
+
+  'Display a table highlighting rows upon enter': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
+
+    browser.sendKeys('.terra-Table-row:nth-child(1)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+
+    browser.sendKeys('.terra-Table-row:nth-child(2)', browser.Keys.ENTER);
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+
+    browser.sendKeys('.terra-Table-row:nth-child(3)', browser.Keys.ENTER);
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+  },
+};

@@ -26,6 +26,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var KEYCODES = {
+  ENTER: 13
+};
+
 var propTypes = {
   /**
    * The children passed to the component
@@ -38,11 +42,16 @@ var propTypes = {
   /**
    * A callback function for onClick action
    */
-  onClick: _react.PropTypes.func
+  onClick: _react.PropTypes.func,
+  /**
+  * A callback function for onKeyDown action for tab key
+  */
+  onKeyDown: _react.PropTypes.func
 };
 
 var defaultProps = {
-  onClick: undefined
+  onClick: undefined,
+  onKeyDown: undefined
 };
 
 var SingleSelectableRows = function (_React$Component) {
@@ -100,11 +109,30 @@ var SingleSelectableRows = function (_React$Component) {
       };
     }
   }, {
+    key: 'wrappedOnKeyDownForRow',
+    value: function wrappedOnKeyDownForRow(row, index) {
+      var _this3 = this;
+
+      var initialOnKeyDown = this.props.onKeyDown;
+
+      return function (event) {
+        if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+          if (row.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
+            _this3.handleSelection(event, index);
+          }
+        }
+
+        if (initialOnKeyDown) {
+          initialOnKeyDown(event);
+        }
+      };
+    }
+  }, {
     key: 'newPropsForRow',
-    value: function newPropsForRow(row, index, onClick) {
+    value: function newPropsForRow(row, index, onClick, onKeyDown) {
       var isSelected = this.state.selectedIndex === index;
 
-      var newProps = { onClick: onClick };
+      var newProps = { onClick: onClick, onKeyDown: onKeyDown };
 
       // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
       // This will ensure that only one row will be selected at a moment of time.
@@ -130,11 +158,12 @@ var SingleSelectableRows = function (_React$Component) {
   }, {
     key: 'clonedChildItems',
     value: function clonedChildItems(rows) {
-      var _this3 = this;
+      var _this4 = this;
 
       return rows.map(function (row, index) {
-        var wrappedOnClick = _this3.wrappedOnClickForRow(row, index);
-        var newProps = _this3.newPropsForRow(row, index, wrappedOnClick);
+        var wrappedOnClick = _this4.wrappedOnClickForRow(row, index);
+        var wrappedOnKeyDown = _this4.wrappedOnKeyDownForRow(row, index);
+        var newProps = _this4.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
         return _react2.default.cloneElement(row, newProps);
       });
     }
@@ -149,6 +178,9 @@ var SingleSelectableRows = function (_React$Component) {
       var clonedChilItems = this.clonedChildItems(children);
       if ('onClick' in customProps) {
         delete customProps.onClick;
+      }
+      if ('onKeyDown' in customProps) {
+        delete customProps.onKeyDown;
       }
       return _react2.default.createElement(
         _TableRows2.default,

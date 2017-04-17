@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import TableHeader from './TableHeader';
-import TableHeaderContent from './TableHeaderContent';
+import TableHeaderCell from './TableHeaderCell';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
-import TableRowContent from './TableRowContent';
+import TableCell from './TableCell';
 import TableSingleSelectableRows from './SingleSelectableRows';
 import './Table.scss';
 
@@ -44,9 +44,9 @@ Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 Table.Rows = TableRows;
 Table.Header = TableHeader;
-Table.HeaderContent = TableHeaderContent;
+Table.HeaderCell = TableHeaderCell;
 Table.Row = TableRow;
-Table.RowContent = TableRowContent;
+Table.Cell = TableCell;
 Table.SingleSelectableRows = TableSingleSelectableRows;
 
 export default Table;
