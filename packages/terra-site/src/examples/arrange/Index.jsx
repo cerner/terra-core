@@ -9,7 +9,7 @@ import { version } from 'terra-arrange/package.json';
 import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange';
 
 // Example Files
-import { icon, IconWrapper, image, simpleText } from './examplesetup';
+import { icon, image, simpleText } from './examplesetup';
 import ArrangeAlignment from './ArrangeAlignment';
 
 const ArrangeExamples = () => (
@@ -29,8 +29,6 @@ const ArrangeExamples = () => (
     <ArrangeAlignment alignment="individual" fill={simpleText} fitEnd={icon} />
     <br />
     <ArrangeAlignment alignment="individual" fitStart={image} fill={simpleText} fitEnd={icon} />
-    <h2 id="fit-bg-color">Background Color in Fit</h2>
-    <ArrangeAlignment alignment="individual" fitStart={image} fill={simpleText} fitEnd={<IconWrapper>{icon}</IconWrapper>} />
   </div>
 );
 
