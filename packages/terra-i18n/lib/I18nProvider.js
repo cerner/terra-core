@@ -32,21 +32,22 @@ var propTypes = {
 };
 
 var I18nProvider = function I18nProvider(props) {
-  var locale = props.locale,
+  var children = props.children,
+      locale = props.locale,
       messages = props.messages,
-      customProps = _objectWithoutProperties(props, ['locale', 'messages']);
+      customProps = _objectWithoutProperties(props, ['children', 'locale', 'messages']);
 
   return _react2.default.createElement(
     _reactIntl.IntlProvider,
     _extends({}, customProps, {
-      locale: props.locale,
-      key: props.locale,
-      messages: props.messages
+      locale: locale,
+      key: locale,
+      messages: messages
     }),
     _react2.default.createElement(
       'div',
       null,
-      props.children
+      children
     )
   );
 };
