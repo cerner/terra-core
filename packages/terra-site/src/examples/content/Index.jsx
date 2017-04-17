@@ -92,9 +92,7 @@ const ContentExamples = () => (
       <p>Code element inside of pre element</p>
       <pre>
         <code>
-          {`a {
-            color: @link-color;
-          `}
+          {'a {\n  color: @link-color;\n}'}
         </code>
       </pre>
     </div>
