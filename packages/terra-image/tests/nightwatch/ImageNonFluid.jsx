@@ -1,5 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import React from 'react';
-import Image from 'terra-image';
+import Image from '../../lib/Image';
 
 const imagecontainerStyle1 = {
   backgroundColor: '#ffe4c4',
