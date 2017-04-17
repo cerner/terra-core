@@ -1,8 +1,5 @@
 import React, { PropTypes } from 'react';
 
-/* eslint-disable import/no-extraneous-dependencies */
-import IconSuccessInverse from 'terra-icon/lib/icon/IconSuccessInverse';
-
 // Block style is required since images are inline by default. This could be resolved by someones normalize.css
 const image = <img style={{ display: 'block' }} height="100" width="150" src="http://3w6kx9401skz1bup4i1gs9ne.wpengine.netdna-cdn.com/wp-content/uploads/2016/09/telegraph-1.jpg" alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
@@ -21,7 +18,9 @@ ArrangeWrapper.propTypes = {
 
 const IconWrapper = () => (
   <div style={{ backgroundColor: '#ff5722' }}>
-    <IconSuccessInverse style={{ fontSize: '4em' }} />
+    <svg className="terra-Icon" height="4em" width="4em" viewBox="0 0 48 48">
+      <path d="M24 0h-.1C10.7 0 0 10.8 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24S37.3 0 24 0zm-4 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z" fill="#FFF" />
+    </svg>
   </div>
 );
 
