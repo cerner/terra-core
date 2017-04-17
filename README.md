@@ -38,6 +38,7 @@
 | terra-mixins       | [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins) | :white_check_mark: |
 | terra-progress-bar      | [![NPM version](http://img.shields.io/npm/v/terra-progress-bar.svg)](https://www.npmjs.org/package/terra-progress-bar) | :large_orange_diamond: |
 | terra-props-table  | [![NPM version](http://img.shields.io/npm/v/terra-props-table.svg)](https://www.npmjs.org/package/terra-props-table) | :large_orange_diamond: |
+| terra-responsive-element | [![NPM version](http://img.shields.io/npm/v/terra-responsive-element.svg)](https://www.npmjs.org/package/terra-responsive-element) | :large_orange_diamond: |
 | terra-status      | [![NPM version](http://img.shields.io/npm/v/terra-status.svg)](https://www.npmjs.org/package/terra-status) | :large_orange_diamond: |
 | terra-table        | [![NPM version](http://img.shields.io/npm/v/terra-table.svg)](https://www.npmjs.org/package/terra-table) | :construction: |
 | terra-toolkit      | [![NPM version](http://img.shields.io/npm/v/terra-toolkit.svg)](https://www.npmjs.org/package/terra-toolkit) | :large_orange_diamond: |
