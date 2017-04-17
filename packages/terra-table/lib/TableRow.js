@@ -73,7 +73,7 @@ var TableRow = function TableRow(_ref) {
   var cloneChildren = cloneChildItems(children, height);
   return _react2.default.createElement(
     'tr',
-    _extends({}, customProps, { className: rowClassNames }),
+    _extends({}, customProps, { 'aria-selected': isSelected, className: rowClassNames }),
     cloneChildren
   );
 };
