@@ -70,12 +70,10 @@ var TableRow = function TableRow(_ref) {
 
   var rowClassNames = (0, _classnames2.default)([{ 'terra-Table--isSelected': isSelected }, { 'terra-Table--isSelectable': isSelectable }, 'terra-Table-row', customProps.className]);
 
-  customProps['aria-selected'] = isSelected ? true : false;
-
   var cloneChildren = cloneChildItems(children, height);
   return _react2.default.createElement(
     'tr',
-    _extends({}, customProps, { className: rowClassNames }),
+    _extends({}, customProps, { 'aria-selected': isSelected, className: rowClassNames }),
     cloneChildren
   );
 };
