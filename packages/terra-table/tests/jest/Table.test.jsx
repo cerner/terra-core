@@ -2,16 +2,16 @@ import React from 'react';
 import Table from '../../src/Table';
 
 // Constants
-const cellData1 = <Table.RowContent content={'John Smith'} key={'NAME'} />;
-const cellData2 = <Table.RowContent content={'123 Adams Drive'} key={'ADDRESS'} />;
-const cellData3 = <Table.RowContent content={'111-222-3333'} key={'PHONE_NUMBER'} />;
+const cellData1 = <Table.Cell content={'John Smith'} key={'NAME'} />;
+const cellData2 = <Table.Cell content={'123 Adams Drive'} key={'ADDRESS'} />;
+const cellData3 = <Table.Cell content={'111-222-3333'} key={'PHONE_NUMBER'} />;
 const rowData = [cellData1, cellData2, cellData3];
 const row1 = <Table.Row key={'PERSON_0'}>{rowData}</Table.Row>;
 const row2 = <Table.Row key={'PERSON_1'}>{rowData}</Table.Row>;
 const rows = [row1, row2];
-const headerData1 = <Table.HeaderContent content={'Name'} key={'NAME'} />;
-const headerData2 = <Table.HeaderContent content={'Address'} key={'ADDRESS'} />;
-const headerData3 = <Table.HeaderContent content={'Phone Number'} key={'PHONE_NUMBER'} />;
+const headerData1 = <Table.HeaderCell content={'Name'} key={'NAME'} />;
+const headerData2 = <Table.HeaderCell content={'Address'} key={'ADDRESS'} />;
+const headerData3 = <Table.HeaderCell content={'Phone Number'} key={'PHONE_NUMBER'} />;
 const header = [headerData1, headerData2, headerData3];
 
 // Snapshot test

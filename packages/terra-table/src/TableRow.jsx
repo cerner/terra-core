@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import TableRowContent from './TableRowContent';
+import TableCell from './TableCell';
 
 const propTypes = {
   /**
@@ -32,7 +32,7 @@ function cloneChildItems(children, height) {
     console.log(`Number of Columns are ${React.Children.count(children)}. This is more than columns limit`);
   }
   return childrenArray.filter((child, index) => index < 16).map((child) => {
-    if (child.type === TableRowContent) {
+    if (child.type === TableCell) {
       return React.cloneElement(child, { height });
     }
     return child;
@@ -55,7 +55,7 @@ const TableRow = ({
 
   const cloneChildren = cloneChildItems(children, height);
   return (
-    <tr {...customProps} className={rowClassNames}>
+    <tr {...customProps} aria-selected={isSelected} className={rowClassNames}>
       {cloneChildren}
     </tr>
   );
