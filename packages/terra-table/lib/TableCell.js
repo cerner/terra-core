@@ -31,7 +31,7 @@ var propTypes = {
   height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge'])
 };
 
-var TableRowContent = function TableRowContent(_ref) {
+var TableCell = function TableCell(_ref) {
   var content = _ref.content,
       height = _ref.height,
       customProps = _objectWithoutProperties(_ref, ['content', 'height']);
@@ -49,6 +49,6 @@ var TableRowContent = function TableRowContent(_ref) {
   );
 };
 
-TableRowContent.propTypes = propTypes;
+TableCell.propTypes = propTypes;
 
-exports.default = TableRowContent;
+exports.default = TableCell;
