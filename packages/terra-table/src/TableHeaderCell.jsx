@@ -29,7 +29,7 @@ const defaultProps = {
 const iconDown = <IconDown />;
 const iconUp = <IconUp />;
 
-const TableHeaderContent = ({
+const TableHeaderCell = ({
   content,
   height,
   minWidth,
@@ -64,7 +64,7 @@ const TableHeaderContent = ({
   );
 };
 
-TableHeaderContent.propTypes = propTypes;
-TableHeaderContent.defaultProps = defaultProps;
+TableHeaderCell.propTypes = propTypes;
+TableHeaderCell.defaultProps = defaultProps;
 
-export default TableHeaderContent;
+export default TableHeaderCell;

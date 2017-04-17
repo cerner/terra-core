@@ -12,7 +12,7 @@ const propTypes = {
   height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 };
 
-const TableRowContent = ({
+const TableCell = ({
   content,
   height,
   ...customProps
@@ -30,6 +30,6 @@ const TableRowContent = ({
   );
 };
 
-TableRowContent.propTypes = propTypes;
+TableCell.propTypes = propTypes;
 
-export default TableRowContent;
+export default TableCell;
