@@ -10,18 +10,19 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Customized translations provided by consuming application.
-   */
-  customMessages: PropTypes.object,
-  /**
    * The locale name.
    */
-  locale: PropTypes.string,
+  locale: PropTypes.string.isRequired,
+  /**
+   * Customized translations provided by consuming application
+   * only for current locale.
+   */
+  customMessages: PropTypes.object,
 };
 
 const defaultProps = {
-  customMessages: {},
   locale: 'en',
+  customMessages: {},
 };
 
 class Base extends React.Component {
@@ -47,6 +48,7 @@ class Base extends React.Component {
     if (!this.state.load) return null;
 
     const {
+      children,
       locale,
       customMessages,
       ...customProps
@@ -60,7 +62,7 @@ class Base extends React.Component {
         messages={messages}
       >
         <BaseStyles {...customProps}>
-          {this.props.children}
+          {children}
         </BaseStyles>
       </I18nProvider>
     );

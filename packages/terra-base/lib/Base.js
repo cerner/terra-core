@@ -34,18 +34,19 @@ var propTypes = {
    */
   children: _react.PropTypes.node.isRequired,
   /**
-   * Customized translations provided by consuming application.
-   */
-  customMessages: _react.PropTypes.object,
-  /**
    * The locale name.
    */
-  locale: _react.PropTypes.string
+  locale: _react.PropTypes.string.isRequired,
+  /**
+   * Customized translations provided by consuming application
+   * only for current locale.
+   */
+  customMessages: _react.PropTypes.object
 };
 
 var defaultProps = {
-  customMessages: {},
-  locale: 'en'
+  locale: 'en',
+  customMessages: {}
 };
 
 var Base = function (_React$Component) {
@@ -81,9 +82,10 @@ var Base = function (_React$Component) {
       if (!this.state.load) return null;
 
       var _props = this.props,
+          children = _props.children,
           locale = _props.locale,
           customMessages = _props.customMessages,
-          customProps = _objectWithoutProperties(_props, ['locale', 'customMessages']);
+          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages']);
 
       var messages = _extends({}, this.state.messages, customMessages);
 
@@ -96,7 +98,7 @@ var Base = function (_React$Component) {
         _react2.default.createElement(
           _BaseStyles2.default,
           customProps,
-          this.props.children
+          children
         )
       );
     }
