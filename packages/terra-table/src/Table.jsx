@@ -17,6 +17,9 @@ const propTypes = {
    * Whether or not the rows should be zebra striped
    */
   isStriped: PropTypes.bool,
+  /**
+   * Whether or not the table cells should be padded
+   */
   isPadded: PropTypes.bool,
 };
 

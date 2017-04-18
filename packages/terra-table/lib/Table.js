@@ -53,6 +53,9 @@ var propTypes = {
    * Whether or not the rows should be zebra striped
    */
   isStriped: _react.PropTypes.bool,
+  /**
+   * Whether or not the table cells should be padded
+   */
   isPadded: _react.PropTypes.bool
 };
 
