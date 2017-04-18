@@ -1,6 +1,8 @@
 // By default eslint assumes packages imported are supposed to be dependencies,
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
+const webpack = require('webpack');
+
 const path = require('path');
 const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -64,6 +66,7 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['terra-core'],
     }),
+    new webpack.NamedChunksPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
