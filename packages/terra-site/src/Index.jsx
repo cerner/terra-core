@@ -11,6 +11,7 @@ import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import ContentExamples from './examples/content/Index';
+import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
@@ -34,8 +35,10 @@ import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes'
 import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
+import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
+import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
@@ -58,6 +61,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="content" component={ContentExamples} />
+      <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
@@ -82,7 +86,9 @@ ReactDOM.render((
     {DatePickerTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
+    {ImageTestRoutes}
     {ResponsiveElementTestRoutes}
+    {ContentContainerTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}

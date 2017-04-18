@@ -7,10 +7,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The maximum height for all the rows in a table
-   */
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  /**
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
@@ -25,9 +21,9 @@ const defaultProps = {
   onKeyDown: undefined,
 };
 
-function cloneChildItems(children, height, onClick, onKeyDown) {
+function cloneChildItems(children, onClick, onKeyDown) {
   return children.map((child) => {
-    const newProps = { height };
+    const newProps = {};
     if (onClick) {
       newProps.onClick = onClick;
     }
@@ -43,12 +39,11 @@ function cloneChildItems(children, height, onClick, onKeyDown) {
 
 const TableRows = ({
   children,
-  height,
   onClick,
   onKeyDown,
   ...customProps
 }) => {
-  const cloneChildren = cloneChildItems(children, height, onClick, onKeyDown);
+  const cloneChildren = cloneChildItems(children, onClick, onKeyDown);
   return (
     <tbody {...customProps}>
       {cloneChildren}

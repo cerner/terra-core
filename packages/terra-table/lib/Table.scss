@@ -18,14 +18,11 @@
 
   th,
   td {
-    @include terra-padding-horizontal($terra-table-cell-padding-left, $terra-table-cell-padding-right);
     @include terra-text-align-start;
 
     border: $terra-table-cell-border-width solid $terra-table-cell-border-color;
     border-bottom: 0;
     display: block;
-    padding-bottom: $terra-table-cell-padding-bottom;
-    padding-top: $terra-table-cell-padding-top;
 
     &::before {
       content: attr(data-heading);
@@ -102,13 +99,13 @@
   }
 }
 
-.terra-Table--small {
+.terra-Table--padded {
   th,
   td {
     @include terra-padding-horizontal($terra-table-cell-padding-left, $terra-table-cell-padding-right);
 
-    padding-bottom: $terra-table-cell-small-padding-bottom;
-    padding-top: $terra-table-cell-small-padding-top;
+    padding-bottom: $terra-table-cell-padding-bottom;
+    padding-top: $terra-table-cell-padding-top;
   }
 }
 
@@ -125,7 +122,7 @@
     tbody tr:nth-of-type(even) {
       background-color: $terra-table-row-striped-background-color;
     }
-    
+
     /* Compound selector depth required for specificity */
     /* stylelint-disable-next-line selector-max-compound-selectors */
     tbody tr:nth-of-type(even) th {
@@ -163,56 +160,6 @@
 
 .terra-Table-min-width--huge {
   min-width: $terra-table-cell-min-width-huge;
-}
-
-.terra-Table-header-max-height--tiny > div {
-  max-height: $terra-table-header-max-height-tiny;
-  overflow: auto;
-}
-
-.terra-Table-header-max-height--small > div {
-  max-height: $terra-table-header-max-height-small;
-  overflow: auto;
-}
-
-.terra-Table-header-max-height--medium > div {
-  max-height: $terra-table-header-max-height-medium;
-  overflow: auto;
-}
-
-.terra-Table-header-max-height--large > div {
-  max-height: $terra-table-header-max-height-large;
-  overflow: auto;
-}
-
-.terra-Table-header-max-height--huge > div {
-  max-height: $terra-table-header-max-height-huge;
-  overflow: auto;
-}
-
-.terra-Table-row-max-height--tiny > div {
-  max-height: $terra-table-row-max-height-tiny;
-  overflow: auto;
-}
-
-.terra-Table-row-max-height--small > div {
-  max-height: $terra-table-row-max-height-small;
-  overflow: auto;
-}
-
-.terra-Table-row-max-height--medium > div {
-  max-height: $terra-table-row-max-height-medium;
-  overflow: auto;
-}
-
-.terra-Table-row-max-height--large > div {
-  max-height: $terra-table-row-max-height-large;
-  overflow: auto;
-}
-
-.terra-Table-row-max-height--huge > div {
-  max-height: $terra-table-row-max-height-huge;
-  overflow: auto;
 }
 
 .terra-Table--isSelected {
