@@ -15,6 +15,8 @@ import ModalIsOpen from './components/ModalIsOpen';
 import ModalOpenByClickOn from './components/ModalOpenByClickOn';
 import ModalOverrideRole from './components/ModalOverrideRole';
 import ModalNoFocusableContent from './components/ModalNoFocusableContent';
+import ModalScrollableTrue from './components/ModalScrollableTrue';
+import ModalScrollableFalse from './components/ModalScrollableFalse';
 
 const routes = (
   <div>
@@ -30,6 +32,8 @@ const routes = (
     <Route path="/tests/modal-tests/open-by-click-on" component={ModalOpenByClickOn} />
     <Route path="/tests/modal-tests/override-role" component={ModalOverrideRole} />
     <Route path="/tests/modal-tests/no-focusable-content" component={ModalNoFocusableContent} />
+    <Route path="/tests/modal-tests/scrollable-true" component={ModalScrollableTrue} />
+    <Route path="/tests/modal-tests/scrollable-false" component={ModalScrollableFalse} />
   </div>
 );
 

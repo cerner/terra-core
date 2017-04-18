@@ -8,8 +8,7 @@
   left: 10px;
   max-height: 100%;
   outline: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   position: fixed;
   right: 10px;
   top: 10px;
@@ -28,4 +27,8 @@
       transform: translate(-50%, -50%);
     }
   }
+}
+
+.terra-Modal--scrollable {
+  overflow-y: scroll;
 }

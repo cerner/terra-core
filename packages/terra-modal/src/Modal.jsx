@@ -42,6 +42,10 @@ const propTypes = {
    **/
   isOpened: PropTypes.bool,
   /**
+   * String that labels the modal for screen readers
+   **/
+  isScrollable: PropTypes.bool,
+  /**
    * This callback is called when the modal closes and after beforeClose.
    **/
   onClose: PropTypes.func,
@@ -72,6 +76,7 @@ const defaultProps = {
   closeOnOutsideClick: true,
   isFullscreen: false,
   isOpened: false,
+  isScrollable: false,
   openByClickOn: null,
   role: 'document',
 };
@@ -88,6 +93,8 @@ class Modal extends React.Component {
           closeOnEsc,
           closeOnOutsideClick,
           isFullscreen,
+          isOpened,
+          isScrollable,
           onClose,
           onOpen,
           onUpdate,
@@ -97,6 +104,7 @@ class Modal extends React.Component {
 
     const modalClassName = classNames(['terra-Modal',
       { 'terra-Modal--fullscreen': isFullscreen },
+      { 'terra-Modal--scrollable': isScrollable },
       classNameModal,
     ]);
 
@@ -104,7 +112,7 @@ class Modal extends React.Component {
 
     return (
       <Portal
-        isOpened={this.props.isOpened}
+        isOpened={isOpened}
         closeOnEsc={closeOnEsc}
         closeOnOutsideClick={closeOnOutsideClick}
         openByClickOn={openByClickOn}

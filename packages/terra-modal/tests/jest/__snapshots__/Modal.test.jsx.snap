@@ -9,6 +9,7 @@ exports[`test should mount an open modal 1`] = `
       closeOnOutsideClick={true}
       isFullscreen={false}
       isOpened={true}
+      isScrollable={false}
       openByClickOn={null}
       role="document">
       <Portal
@@ -46,6 +47,7 @@ exports[`test should shallow an open modal 1`] = `
     closeOnOutsideClick={true}
     isFullscreen={false}
     isOpened={true}
+    isScrollable={false}
     openByClickOn={null}
     role="document">
     <div>

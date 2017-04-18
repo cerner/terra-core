@@ -74,6 +74,10 @@ var propTypes = {
    **/
   isOpened: _react.PropTypes.bool,
   /**
+   * String that labels the modal for screen readers
+   **/
+  isScrollable: _react.PropTypes.bool,
+  /**
    * This callback is called when the modal closes and after beforeClose.
    **/
   onClose: _react.PropTypes.func,
@@ -104,6 +108,7 @@ var defaultProps = {
   closeOnOutsideClick: true,
   isFullscreen: false,
   isOpened: false,
+  isScrollable: false,
   openByClickOn: null,
   role: 'document'
 };
@@ -131,21 +136,23 @@ var Modal = function (_React$Component) {
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           isFullscreen = _props.isFullscreen,
+          isOpened = _props.isOpened,
+          isScrollable = _props.isScrollable,
           onClose = _props.onClose,
           onOpen = _props.onOpen,
           onUpdate = _props.onUpdate,
           openByClickOn = _props.openByClickOn,
           role = _props.role,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
 
-      var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, classNameModal]);
+      var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, { 'terra-Modal--scrollable': isScrollable }, classNameModal]);
 
       var overlayClassName = (0, _classnames2.default)(['terra-Modal-overlay', classNameOverlay]);
 
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
-          isOpened: this.props.isOpened,
+          isOpened: isOpened,
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
           openByClickOn: openByClickOn,

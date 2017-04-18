@@ -209,4 +209,24 @@ module.exports = {
       .expect.element('body').to.have.attribute('style').which.equals('');
   },
 
+  'isScrollable default value': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
+      .waitForElementPresent('.terra-Modal', 1000)
+      .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal');
+  },
+
+  'isScrollable={false}': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-false`)
+      .waitForElementPresent('.terra-Modal', 1000)
+      .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal');
+  },
+
+  'isScrollable={true}': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-true`)
+      .waitForElementPresent('.terra-Modal', 1000)
+      .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal terra-Modal--scrollable');
+  },
 };
