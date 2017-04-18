@@ -14,9 +14,9 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _TableRowContent = require('./TableRowContent');
+var _TableCell = require('./TableCell');
 
-var _TableRowContent2 = _interopRequireDefault(_TableRowContent);
+var _TableCell2 = _interopRequireDefault(_TableCell);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54,7 +54,7 @@ function cloneChildItems(children, height) {
   return childrenArray.filter(function (child, index) {
     return index < 16;
   }).map(function (child) {
-    if (child.type === _TableRowContent2.default) {
+    if (child.type === _TableCell2.default) {
       return _react2.default.cloneElement(child, { height: height });
     }
     return child;
@@ -73,7 +73,7 @@ var TableRow = function TableRow(_ref) {
   var cloneChildren = cloneChildItems(children, height);
   return _react2.default.createElement(
     'tr',
-    _extends({}, customProps, { className: rowClassNames }),
+    _extends({}, customProps, { 'aria-selected': isSelected, className: rowClassNames }),
     cloneChildren
   );
 };

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import TableHeaderContent from './TableHeaderContent';
+import TableHeaderCell from './TableHeaderCell';
 
 const propTypes = {
   /**
@@ -32,7 +32,7 @@ function cloneChildItems(children, height, onClick) {
   }
   // Filtering children to render only 16 columns
   return childrenArray.filter((child, index) => index < 16).map((child) => {
-    if (child.type === TableHeaderContent) {
+    if (child.type === TableHeaderCell) {
       return React.cloneElement(child, newProps);
     }
     return child;

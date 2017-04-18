@@ -13,7 +13,7 @@ const imagecontainerStyle2 = {
 };
 const imagecontainerStyle3 = {
   backgroundColor: '#ffe4c4',
-  width: 100,
+  width: 200,
   height: 100,
   marginBottom: 100,
 };
@@ -27,11 +27,11 @@ const ImageFluid = () => (
     </div>
     <p>Image width is larger than the container. Image height is smaller than the container.</p>
     <div style={imagecontainerStyle2}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="circle" isFluid />
+      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" isFluid />
     </div>
     <p>Image width is smaller than the container. Image height is larger than the container.</p>
     <div style={imagecontainerStyle3}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="circle" isFluid />
+      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" isFluid />
     </div>
   </div>
 );
