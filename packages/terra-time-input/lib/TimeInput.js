@@ -42,7 +42,7 @@ var propTypes = {
    */
   defaultTime: _react.PropTypes.object,
   /**
-  * A callback function to execute when a valid time entered.
+  * A callback function to execute when a time value is entered.
   */
   onChange: _react.PropTypes.func
 };
@@ -88,14 +88,14 @@ var TimeInput = function (_React$Component) {
       value: TimeInput.formattedTime(_this.props.defaultTime)
     };
 
-    _this.onChange = _this.onChange.bind(_this);
+    _this.handleChange = _this.handleChange.bind(_this);
     _this.handleInputKeyDown = _this.handleInputKeyDown.bind(_this);
     return _this;
   }
 
   _createClass(TimeInput, [{
-    key: 'onChange',
-    value: function onChange(event) {
+    key: 'handleChange',
+    value: function handleChange(event) {
       if (event.target.value === this.state.value) {
         return;
       }
@@ -111,7 +111,7 @@ var TimeInput = function (_React$Component) {
   }, {
     key: 'handleInputKeyDown',
     value: function handleInputKeyDown(event) {
-      var copy = (0, _moment2.default)(this.state.value, TimeInput.timeFormat());
+      var copy = (0, _moment2.default)(this.state.value, TimeInput.timeFormat(), true);
 
       if (!copy.isValid()) {
         return;
@@ -131,8 +131,6 @@ var TimeInput = function (_React$Component) {
           onChange = _props.onChange,
           customProps = _objectWithoutProperties(_props, ['defaultTime', 'onChange']);
 
-      var autoCorrectedTimePipe = (0, _TimePipe2.default)(TimeInput.timeFormat());
-
       return _react2.default.createElement(
         'div',
         { className: 'terra-TimeInput' },
@@ -141,12 +139,12 @@ var TimeInput = function (_React$Component) {
           type: 'text',
           value: this.state.value,
           defaultValue: this.state.defaultTime,
-          onChange: this.onChange,
+          onChange: this.handleChange,
           placeholder: TimeInput.timeFormat(),
           mask: [/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/],
           keepCharPositions: true,
           placeholderChar: ' ',
-          pipe: autoCorrectedTimePipe,
+          pipe: (0, _TimePipe2.default)(TimeInput.timeFormat()),
           onKeyDown: this.handleInputKeyDown
         }))
       );

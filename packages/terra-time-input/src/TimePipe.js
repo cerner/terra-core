@@ -1,4 +1,4 @@
-export default function createAutoCorrectedTimePipe(timeFormat = 'HH:mm') {
+export default function TimePipe(timeFormat = 'HH:mm') {
   return function processConformedValue(conformedValue) {
     const timeFormatArray = timeFormat.split(/[^Hm]+/);
     const maxValue = { HH: 23, mm: 59 };

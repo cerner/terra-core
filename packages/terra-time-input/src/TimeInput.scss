@@ -1,5 +1,10 @@
 @import '~terra-mixins';
 
+.terra-TimeInput {
+  display: inline-block;
+  min-width: 12em; 
+}
+
 .terra-TimeInput-input {
   @include terra-border-radius-start(0.286em);
   @include terra-border-radius-end(0.286em);
@@ -10,12 +15,6 @@
   margin: 0.357em 0;
   padding: 0.429em 0.714em;
   vertical-align: middle;
-
-  @if $terra-bidi {
-    [dir='rtl'] & {
-      margin-left: -0.071em;
-    }
-  }
 
   &:focus {
     border-color: $terra-blue-60;

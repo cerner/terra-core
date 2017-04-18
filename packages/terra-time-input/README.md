@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-time-input component is an input for entering time. Its text masking feature enforces entering time that conforms to the time format.
+The terra-time-input component is an input for entering time. During time entry the value is masked to conform to the time format.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input/docs)

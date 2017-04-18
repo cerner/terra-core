@@ -18,9 +18,9 @@ const TimeInputExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TimeInputSrc} />
-    <h2 id="default">Default</h2>
+    <h2 id="default">Without Default Time</h2>
     <TimeInput />
-    <h2 id="default">Default Time</h2>
+    <h2 id="default">With Default Time</h2>
     <TimeInput defaultTime={moment()} />
   </div>
 );

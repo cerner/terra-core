@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import moment from 'moment';
 import TextMask from 'react-text-mask';
-import createAutoCorrectedTimePipe from './TimePipe';
+import TimePipe from './TimePipe';
 import './TimeInput.scss';
 
 const propTypes = {
@@ -10,7 +10,7 @@ const propTypes = {
    */
   defaultTime: PropTypes.object,
     /**
-   * A callback function to execute when a valid time entered.
+   * A callback function to execute when a time value is entered.
    */
   onChange: PropTypes.func,
 };
@@ -47,11 +47,11 @@ class TimeInput extends React.Component {
       value: TimeInput.formattedTime(this.props.defaultTime),
     };
 
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleInputKeyDown = this.handleInputKeyDown.bind(this);
   }
 
-  onChange(event) {
+  handleChange(event) {
     if (event.target.value === this.state.value) {
       return;
     }
@@ -66,7 +66,7 @@ class TimeInput extends React.Component {
   }
 
   handleInputKeyDown(event) {
-    const copy = moment(this.state.value, TimeInput.timeFormat());
+    const copy = moment(this.state.value, TimeInput.timeFormat(), true);
 
     if (!copy.isValid()) {
       return;
@@ -86,8 +86,6 @@ class TimeInput extends React.Component {
       ...customProps
     } = this.props;
 
-    const autoCorrectedTimePipe = createAutoCorrectedTimePipe(TimeInput.timeFormat());
-
     return (
       <div className="terra-TimeInput">
         <TextMask
@@ -96,12 +94,12 @@ class TimeInput extends React.Component {
           type="text"
           value={this.state.value}
           defaultValue={this.state.defaultTime}
-          onChange={this.onChange}
+          onChange={this.handleChange}
           placeholder={TimeInput.timeFormat()}
           mask={[/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/]}
           keepCharPositions
           placeholderChar=" "
-          pipe={autoCorrectedTimePipe}
+          pipe={TimePipe(TimeInput.timeFormat())}
           onKeyDown={this.handleInputKeyDown}
         />
       </div>
