@@ -17,20 +17,24 @@ const propTypes = {
    * Whether or not the rows should be zebra striped
    */
   isStriped: PropTypes.bool,
+  isPadded: PropTypes.bool,
 };
 
 const defaultProps = {
   isStriped: true,
+  isPadded: true,
 };
 
 const Table = ({
   children,
   isStriped,
+  isPadded,
   ...customProps
   }) => {
   const tableClassNames = classNames([
     'terra-Table',
     { 'terra-Table--striped': isStriped },
+    { 'terra-Table--padded': isPadded },
     customProps.className,
   ]);
   return (

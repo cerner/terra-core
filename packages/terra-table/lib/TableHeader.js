@@ -24,20 +24,15 @@ var propTypes = {
   /**
    * A callback function for onClick action
    */
-  onClick: _react.PropTypes.func,
-  /**
-   * The maximum height for the header in a table
-   */
-  height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge'])
+  onClick: _react.PropTypes.func
 };
 
 var defaultProps = {
   onClick: undefined
 };
 
-function cloneChildItems(children, height, onClick) {
+function cloneChildItems(children, onClick) {
   var newProps = {
-    height: height,
     onClick: onClick
   };
   var childrenArray = _react2.default.Children.toArray(children);
@@ -58,11 +53,10 @@ function cloneChildItems(children, height, onClick) {
 
 var TableHeader = function TableHeader(_ref) {
   var children = _ref.children,
-      height = _ref.height,
       onClick = _ref.onClick,
-      customProps = _objectWithoutProperties(_ref, ['children', 'height', 'onClick']);
+      customProps = _objectWithoutProperties(_ref, ['children', 'onClick']);
 
-  var cloneChildren = cloneChildItems(children, height, onClick);
+  var cloneChildren = cloneChildItems(children, onClick);
   return _react2.default.createElement(
     'thead',
     customProps,
