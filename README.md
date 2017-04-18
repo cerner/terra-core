@@ -26,6 +26,7 @@
 
 | Terra Package      | Version | Status |
 |--------------------|---------|--------|
+| terra-arrange       | [![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange) | :large_orange_diamond: |
 | terra-application  | [![NPM version](http://img.shields.io/npm/v/terra-application.svg)](https://www.npmjs.org/package/terra-application) | :x: |
 | terra-badge       | [![NPM version](http://img.shields.io/npm/v/terra-badge.svg)](https://www.npmjs.org/package/terra-badge) | :large_orange_diamond: |
 | terra-base       | [![NPM version](http://img.shields.io/npm/v/terra-base.svg)](https://www.npmjs.org/package/terra-base) | :large_orange_diamond: |
