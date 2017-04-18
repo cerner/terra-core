@@ -11,6 +11,7 @@ import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import ContentExamples from './examples/content/Index';
+import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
@@ -43,6 +44,7 @@ import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTe
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
+import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -57,6 +59,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="content" component={ContentExamples} />
+      <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
@@ -82,6 +85,7 @@ ReactDOM.render((
     {I18nTestRoutes}
     {ImageTestRoutes}
     {ResponsiveElementTestRoutes}
+    {ContentContainerTestRoutes}
     {ListTestRoutes}
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
