@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 const App = props => (
-  <Base>
+  <Base locale="en-US">
     <div dir="ltr">
       <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} >ltr</button>
       <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>

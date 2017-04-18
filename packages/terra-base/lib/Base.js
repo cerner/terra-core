@@ -45,7 +45,6 @@ var propTypes = {
 };
 
 var defaultProps = {
-  locale: 'en',
   customMessages: {}
 };
 

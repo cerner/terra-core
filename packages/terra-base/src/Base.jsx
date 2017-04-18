@@ -21,7 +21,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  locale: 'en',
   customMessages: {},
 };
 

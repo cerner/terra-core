@@ -1,6 +1,6 @@
 exports[`test should render the component with customMessages 1`] = `
 <I18nProvider
-  locale="en"
+  locale="en-US"
   messages={
     Object {
       "App.test": "App test",
@@ -14,7 +14,7 @@ exports[`test should render the component with customMessages 1`] = `
 
 exports[`test should render the component with merged attributes 1`] = `
 <I18nProvider
-  locale="en"
+  locale="en-US"
   messages={Object {}}>
   <BaseStyles
     className="TestClass"
@@ -27,7 +27,7 @@ exports[`test should render the component with merged attributes 1`] = `
 
 exports[`test should support rendering a string as children 1`] = `
 <I18nProvider
-  locale="en"
+  locale="en-US"
   messages={Object {}}>
   <BaseStyles>
     String
@@ -37,7 +37,7 @@ exports[`test should support rendering a string as children 1`] = `
 
 exports[`test should support rendering an array of elements as a children 1`] = `
 <I18nProvider
-  locale="en"
+  locale="en-US"
   messages={Object {}}>
   <BaseStyles>
     <h1>
@@ -55,7 +55,7 @@ exports[`test should support rendering an array of elements as a children 1`] = 
 
 exports[`test should support rendering an element as children 1`] = `
 <I18nProvider
-  locale="en"
+  locale="en-US"
   messages={Object {}}>
   <BaseStyles>
     <p>

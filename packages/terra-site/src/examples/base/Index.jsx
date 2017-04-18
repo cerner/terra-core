@@ -16,7 +16,7 @@ class BaseExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      locale: 'en',
+      locale: 'en-US',
     };
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
   }
@@ -34,7 +34,7 @@ class BaseExamples extends React.Component {
         <Markdown id="readme" src={ReadMe} />
         <PropsTable id="props" src={BaseSrc} />
         <div>
-          <Base>
+          <Base locale={this.state.locale}>
             <h1>Globale BaseStyles example</h1>
             <p>Sample paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
