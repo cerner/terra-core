@@ -10,19 +10,14 @@ const propTypes = {
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
-  /**
-   * The maximum height for the header in a table
-   */
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 };
 
 const defaultProps = {
   onClick: undefined,
 };
 
-function cloneChildItems(children, height, onClick) {
+function cloneChildItems(children, onClick) {
   const newProps = {
-    height,
     onClick,
   };
   const childrenArray = React.Children.toArray(children);
@@ -41,11 +36,10 @@ function cloneChildItems(children, height, onClick) {
 
 const TableHeader = ({
   children,
-  height,
   onClick,
   ...customProps
   }) => {
-  const cloneChildren = cloneChildItems(children, height, onClick);
+  const cloneChildren = cloneChildItems(children, onClick);
   return (
     <thead {...customProps}>
       <tr>

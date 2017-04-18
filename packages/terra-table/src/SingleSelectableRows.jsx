@@ -11,10 +11,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The maximum height for all the rows in a table
-   */
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  /**
    * A callback function for onClick action
    */
   onClick: PropTypes.func,
@@ -122,7 +118,7 @@ class SingleSelectableRows extends React.Component {
   }
 
   render() {
-    const { children, height, ...customProps } = this.props;
+    const { children, ...customProps } = this.props;
     const clonedChilItems = this.clonedChildItems(children);
     if ('onClick' in customProps) {
       delete customProps.onClick;
@@ -131,7 +127,7 @@ class SingleSelectableRows extends React.Component {
       delete customProps.onKeyDown;
     }
     return (
-      <TableRows height={height} {...customProps}>
+      <TableRows {...customProps}>
         {clonedChilItems}
       </TableRows>
     );

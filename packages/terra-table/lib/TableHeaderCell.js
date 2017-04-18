@@ -40,11 +40,7 @@ var propTypes = {
   /**
    * Whether or not data in table is sorted
    */
-  sort: _react.PropTypes.oneOf(['asc', 'desc']),
-  /**
-   * The maximum height for the cell content in a table
-   */
-  height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge'])
+  sort: _react.PropTypes.oneOf(['asc', 'desc'])
 };
 
 var defaultProps = {
@@ -56,12 +52,11 @@ var iconUp = _react2.default.createElement(_IconCaretUp2.default, null);
 
 var TableHeaderCell = function TableHeaderCell(_ref) {
   var content = _ref.content,
-      height = _ref.height,
       minWidth = _ref.minWidth,
       sort = _ref.sort,
-      customProps = _objectWithoutProperties(_ref, ['content', 'height', 'minWidth', 'sort']);
+      customProps = _objectWithoutProperties(_ref, ['content', 'minWidth', 'sort']);
 
-  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-min-width--' + minWidth, minWidth), _defineProperty({}, 'terra-Table-header-max-height--' + height, height), 'terra-Table-header', customProps.className]);
+  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-min-width--' + minWidth, minWidth), 'terra-Table-header', customProps.className]);
 
   var dataSort = {
     'data-sort': sort
@@ -85,12 +80,8 @@ var TableHeaderCell = function TableHeaderCell(_ref) {
   return _react2.default.createElement(
     'th',
     _extends({}, customProps, { className: contentClassName }, dataSort),
-    _react2.default.createElement(
-      'div',
-      null,
-      content,
-      sortIndicator
-    )
+    content,
+    sortIndicator
   );
 };
 

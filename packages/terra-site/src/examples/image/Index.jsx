@@ -9,18 +9,14 @@ import { version } from 'terra-image/package.json';
 import ImageSrc from '!raw-loader!terra-image/src/Image';
 
 // Example Files
-import ImageVariant from './ImageVariant';
-import ImageFluid from './ImageFluid';
-import ImageNonFluid from './ImageNonFluid';
+import ImageDefault from './ImageDefault';
 
 const ImageExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ImageSrc} />
-    <ImageVariant />
-    <ImageFluid />
-    <ImageNonFluid />
+    <ImageDefault />
   </div>
 );
 
