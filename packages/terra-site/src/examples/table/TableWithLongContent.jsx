@@ -2,7 +2,7 @@
 import React from 'react';
 import Table from 'terra-table';
 
-const TableWithMaxHeight = () => (
+const TableWithLongContent = () => (
   <Table isStriped={false}>
     <Table.Header height={'small'}>
       <Table.HeaderCell content={'Column Heading 1'} key={'COLUMN_0'} minWidth={'small'} />
@@ -29,4 +29,4 @@ const TableWithMaxHeight = () => (
   </Table>
 );
 
-export default TableWithMaxHeight;
+export default TableWithLongContent;

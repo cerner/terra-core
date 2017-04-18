@@ -17,12 +17,14 @@ import TableCellSrc from '!raw-loader!terra-table/src/TableCell';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 import NoStripedTable from './NoStripedTable';
+import NoPaddingTable from './NoPaddingTable';
 import StripedTable from './StripedTable';
 import TableWithHighlightedRows from './TableWithHighlightedRows';
 import SingleRowSelectableTable from './SingleRowSelectableTable';
 import TableWithNonSelectableRow from './TableWithNonSelectableRow';
 import TableWithSortingIndicator from './TableWithSortingIndicator';
-import TableWithMaxHeight from './TableWithMaxHeight';
+import TableWithLongContent from './TableWithLongContent';
+import TableWithCustomCells from './TableWithCustomCells';
 
 const TableExamples = () => (
   <div>
@@ -44,18 +46,30 @@ const TableExamples = () => (
     <PropsTable id="props-tablecell" src={TableCellSrc} />
     <h2>Table without zebra stripes</h2>
     <NoStripedTable />
+    <br />
     <h2>Table with zebra stripes</h2>
     <StripedTable />
+    <br />
+    <h2>Table without padding</h2>
+    <NoPaddingTable />
+    <br />
     <h2>Table with some rows selected. Table will not select or deselect any row</h2>
     <TableWithHighlightedRows />
+    <br />
     <h2>Selectable table. Only one row can be selected</h2>
     <SingleRowSelectableTable />
+    <br />
     <h2>Selectable table with second row as non selectable</h2>
     <TableWithNonSelectableRow />
+    <br />
     <h2>Table with sorting indicator</h2>
     <TableWithSortingIndicator />
-    <h2>Table with maximum height set on row and header</h2>
-    <TableWithMaxHeight />
+    <br />
+    <h2>Table with long content</h2>
+    <TableWithLongContent />
+    <br />
+    <h2>Table with custom cells</h2>
+    <TableWithCustomCells />
   </div>
 );
 
