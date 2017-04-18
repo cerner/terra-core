@@ -52,19 +52,25 @@ var propTypes = {
   /**
    * Whether or not the rows should be zebra striped
    */
-  isStriped: _react.PropTypes.bool
+  isStriped: _react.PropTypes.bool,
+  /**
+   * Whether or not the table cells should be padded
+   */
+  isPadded: _react.PropTypes.bool
 };
 
 var defaultProps = {
-  isStriped: true
+  isStriped: true,
+  isPadded: true
 };
 
 var Table = function Table(_ref) {
   var children = _ref.children,
       isStriped = _ref.isStriped,
-      customProps = _objectWithoutProperties(_ref, ['children', 'isStriped']);
+      isPadded = _ref.isPadded,
+      customProps = _objectWithoutProperties(_ref, ['children', 'isStriped', 'isPadded']);
 
-  var tableClassNames = (0, _classnames2.default)(['terra-Table', { 'terra-Table--striped': isStriped }, customProps.className]);
+  var tableClassNames = (0, _classnames2.default)(['terra-Table', { 'terra-Table--striped': isStriped }, { 'terra-Table--padded': isPadded }, customProps.className]);
   return _react2.default.createElement(
     'table',
     _extends({}, customProps, { className: tableClassNames }),

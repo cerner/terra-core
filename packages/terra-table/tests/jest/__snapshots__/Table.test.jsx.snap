@@ -1,5 +1,42 @@
 exports[`test should render a default table 1`] = `
 <table
+  className="terra-Table terra-Table--striped terra-Table--padded">
+  <TableHeader>
+    <TableHeaderCell
+      content="Name"
+      minWidth="small" />
+    <TableHeaderCell
+      content="Address"
+      minWidth="small" />
+    <TableHeaderCell
+      content="Phone Number"
+      minWidth="small" />
+  </TableHeader>
+  <TableRows>
+    <TableRow
+      isSelected={false}>
+      <TableCell
+        content="John Smith" />
+      <TableCell
+        content="123 Adams Drive" />
+      <TableCell
+        content="111-222-3333" />
+    </TableRow>
+    <TableRow
+      isSelected={false}>
+      <TableCell
+        content="John Smith" />
+      <TableCell
+        content="123 Adams Drive" />
+      <TableCell
+        content="111-222-3333" />
+    </TableRow>
+  </TableRows>
+</table>
+`;
+
+exports[`test should render a table without padding 1`] = `
+<table
   className="terra-Table terra-Table--striped">
   <TableHeader>
     <TableHeaderCell
@@ -37,7 +74,7 @@ exports[`test should render a default table 1`] = `
 
 exports[`test should render a table without zebra stripes 1`] = `
 <table
-  className="terra-Table">
+  className="terra-Table terra-Table--padded">
   <TableHeader>
     <TableHeaderCell
       content="Name"

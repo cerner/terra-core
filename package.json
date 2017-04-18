@@ -49,7 +49,7 @@
     "pretest": "npm run lint",
     "postinstall": "npm run bootstrap",
     "start": "cd packages/terra-site && npm run start",
-    "test": "lerna exec --concurrency 1 npm run test:spec && npm run test:nightwatch-default",
+    "test": "npm run jest && npm run test:nightwatch-default",
     "test:nightwatch-default": "node ./packages/terra-toolkit/lib/scripts/nightwatch-process.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
   },
   "devDependencies": {
