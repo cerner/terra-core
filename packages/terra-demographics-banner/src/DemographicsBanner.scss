@@ -1,0 +1,79 @@
+@import '~terra-mixins';
+@import './variables';
+@import './mixins';
+
+.terra-DemographicsBanner {
+  background: $demographics-background;
+  color: $demographics-foreground;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.714em;
+  padding: 0.714em;
+
+  @media screen and (max-width: $terra-small-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.terra-DemographicsBanner--person-name {
+  margin: 0;
+}
+
+.terra-DemographicsBanner--person-details {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.terra-DemographicsBanner--preferred-first-name {
+  margin: auto 0.357em;
+
+  &::before,
+  &::after {
+    content: '"';
+  }
+}
+
+.terra-DemographicsBanner--deceased {
+  background: $demographics-background-deceased;
+  color: $demographics-foreground-deceased;
+
+  .terra-DemographicsBanner--profile-photo {
+    opacity: 0.7;
+  }
+}
+
+.terra-DemographicsBanner--row {
+  display: flex;
+  overflow: hidden;
+
+  span + span {
+    @include terra-margin-start(0.357rem);
+  }
+
+  @media screen and (max-width: $terra-small-breakpoint) {
+    @include terra-margin-start(0);
+    flex-direction: column;
+  }  
+}
+
+.terra-DemographicsBanner--content {
+  flex-grow: 1;
+  margin: auto 0.714em;
+  overflow: hidden;
+
+  @media screen and (max-width: $terra-small-breakpoint) {
+    margin: auto 0;
+  }
+}
+
+.terra-DemographicsBanner--application-content,
+.terra-DemographicsBanner--identifiers {
+  @include terra-margin-start(auto);
+
+  @media screen and (max-width: $terra-small-breakpoint) {
+    @include terra-margin-start(0);
+  }  
+}

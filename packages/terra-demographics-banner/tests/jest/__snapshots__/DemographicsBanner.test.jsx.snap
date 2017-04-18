@@ -1,0 +1,452 @@
+exports[`test renders a banner that has basic information 1`] = `
+<section
+  className="terra-DemographicsBanner">
+  <div
+    className="terra-DemographicsBanner--profile-photo" />
+  <div
+    className="terra-DemographicsBanner--content">
+    <div
+      className="terra-DemographicsBanner--row">
+      <h1
+        className="terra-DemographicsBanner--person-name">
+        Terra Demographics Banner
+      </h1>
+      <div
+        className="terra-DemographicsBanner--application-content" />
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <div
+        className="terra-DemographicsBanner--person-details">
+        <span>
+          <b>
+            24
+          </b>
+        </span>
+        <span>
+          <b>
+            F
+          </b>
+        </span>
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "March 30, 2017",
+            }
+          } />
+      </div>
+      <div
+        className="terra-DemographicsBanner--identifiers" />
+    </div>
+  </div>
+</section>
+`;
+
+exports[`test renders a blank banner properly 1`] = `
+<section
+  className="terra-DemographicsBanner">
+  <div
+    className="terra-DemographicsBanner--profile-photo" />
+  <div
+    className="terra-DemographicsBanner--content">
+    <div
+      className="terra-DemographicsBanner--row">
+      <h1
+        className="terra-DemographicsBanner--person-name">
+        --
+      </h1>
+      <div
+        className="terra-DemographicsBanner--application-content" />
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <div
+        className="terra-DemographicsBanner--person-details">
+        <span>
+          <b>
+            --
+          </b>
+        </span>
+        <span>
+          <b>
+            --
+          </b>
+        </span>
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "DOB: --",
+            }
+          } />
+      </div>
+      <div
+        className="terra-DemographicsBanner--identifiers" />
+    </div>
+  </div>
+</section>
+`;
+
+exports[`test renders the banner appropriately for a deceased person 1`] = `
+<section
+  className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
+  <div
+    className="terra-DemographicsBanner--profile-photo" />
+  <div
+    className="terra-DemographicsBanner--content">
+    <div
+      className="terra-DemographicsBanner--row">
+      <h1
+        className="terra-DemographicsBanner--person-name">
+        Old Terra Demographics Banner
+      </h1>
+      <div
+        className="terra-DemographicsBanner--application-content" />
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <div
+        className="terra-DemographicsBanner--person-details">
+        <span>
+          <b>
+            24
+          </b>
+        </span>
+        <span>
+          <b>
+            F
+          </b>
+        </span>
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "June 15, 2014",
+            }
+          } />
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "March 30, 2017",
+            }
+          } />
+      </div>
+      <div
+        className="terra-DemographicsBanner--identifiers" />
+    </div>
+  </div>
+</section>
+`;
+
+exports[`test renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
+<section
+  className="terra-DemographicsBanner">
+  <div
+    className="terra-DemographicsBanner--profile-photo">
+    <img
+      alt="My Cat"
+      src="http://lorempixel.com/100/100/animals/7/" />
+  </div>
+  <div
+    className="terra-DemographicsBanner--content">
+    <div
+      className="terra-DemographicsBanner--row">
+      <h1
+        className="terra-DemographicsBanner--person-name">
+        Johnathon Doe
+        <span
+          className="terra-DemographicsBanner--preferred-first-name">
+          John
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner--application-content">
+        <span
+          className="risk-score">
+          5%
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <div
+        className="terra-DemographicsBanner--person-details">
+        <span>
+          <b>
+            25 Years
+          </b>
+        </span>
+        <span>
+          <b>
+            Male
+          </b>
+        </span>
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "May 9, 1993",
+            }
+          } />
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "April 5, 2016",
+            }
+          } />
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "April 7, 2016",
+            }
+          } />
+      </div>
+      <div
+        className="terra-DemographicsBanner--identifiers">
+        <span>
+          MRN
+          : 
+          <b>
+            12343
+          </b>
+        </span>
+        <span>
+          REA
+          : 
+          <b>
+            3JSDA
+          </b>
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <span>
+        Address
+        : 
+        <b>
+          1501 Walnut St. Apt #123
+        </b>
+      </span>
+      <span>
+        City
+        : 
+        <b>
+          Kansas City MO
+        </b>
+      </span>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <span>
+        ZIP
+        : 
+        <b>
+          64108
+        </b>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`test renders the banner properly for a deceased person with additional application content 1`] = `
+<section
+  className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
+  <div
+    className="terra-DemographicsBanner--profile-photo">
+    <img
+      alt="My Cat"
+      src="http://lorempixel.com/100/100/animals/7/" />
+  </div>
+  <div
+    className="terra-DemographicsBanner--content">
+    <div
+      className="terra-DemographicsBanner--row">
+      <h1
+        className="terra-DemographicsBanner--person-name">
+        Johnathon Doe
+        <span
+          className="terra-DemographicsBanner--preferred-first-name">
+          John
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner--application-content">
+        <span
+          className="risk-score">
+          5%
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <div
+        className="terra-DemographicsBanner--person-details">
+        <span>
+          <b>
+            25 Years
+          </b>
+        </span>
+        <span>
+          <b>
+            Male
+          </b>
+        </span>
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "May 9, 1993",
+            }
+          } />
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "March 5, 2016",
+            }
+          } />
+      </div>
+      <div
+        className="terra-DemographicsBanner--identifiers">
+        <span>
+          MRN
+          : 
+          <b>
+            12343
+          </b>
+        </span>
+        <span>
+          REA
+          : 
+          <b>
+            3JSDA
+          </b>
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <span>
+        Address
+        : 
+        <b>
+          1501 Walnut St. Apt #123
+        </b>
+      </span>
+      <span>
+        City
+        : 
+        <b>
+          Kansas City MO
+        </b>
+      </span>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <span>
+        ZIP
+        : 
+        <b>
+          64108
+        </b>
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`test renders the banner that contains additional information 1`] = `
+<section
+  className="terra-DemographicsBanner">
+  <div
+    className="terra-DemographicsBanner--profile-photo">
+    <img
+      alt="My Cat"
+      src="http://lorempixel.com/100/100/animals/7/" />
+  </div>
+  <div
+    className="terra-DemographicsBanner--content">
+    <div
+      className="terra-DemographicsBanner--row">
+      <h1
+        className="terra-DemographicsBanner--person-name">
+        Johnathon Doe
+        <span
+          className="terra-DemographicsBanner--preferred-first-name">
+          John
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner--application-content">
+        <span
+          className="risk-score">
+          5%
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <div
+        className="terra-DemographicsBanner--person-details">
+        <span>
+          <b>
+            25 Years
+          </b>
+        </span>
+        <span>
+          <b>
+            Male
+          </b>
+        </span>
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "May 9, 1993",
+            }
+          } />
+      </div>
+      <div
+        className="terra-DemographicsBanner--identifiers">
+        <span>
+          MRN
+          : 
+          <b>
+            12343
+          </b>
+        </span>
+        <span>
+          REA
+          : 
+          <b>
+            3JSDA
+          </b>
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <span>
+        Address
+        : 
+        <b>
+          1501 Walnut St. Apt #123
+        </b>
+      </span>
+      <span>
+        City
+        : 
+        <b>
+          Kansas City MO
+        </b>
+      </span>
+    </div>
+    <div
+      className="terra-DemographicsBanner--row">
+      <span>
+        ZIP
+        : 
+        <b>
+          64108
+        </b>
+      </span>
+    </div>
+  </div>
+</section>
+`;

@@ -17,6 +17,7 @@ Cerner Corporation
 - Jaime Mackey [@jmsv6d]
 - Dave Kasper [@dkasper-was-taken]
 - Nikhil Agrawal [@nagrawal3]
+- Jake LaCombe [@jakelacombe]
 - Emily Rohrbough [@emilyrohrbough]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -36,4 +37,5 @@ Cerner Corporation
 [@jmsv6d]: https://github.com/jmsv6d
 [@dkasper-was-taken]: https://github.com/dkasper-was-taken
 [@nagrawal3]: https://github.com/nagrawal3
+[@jakelacombe]: https://github.com/JakeLaCombe
 [@emilyrohrbough]: https://github.com/emilyrohrbough

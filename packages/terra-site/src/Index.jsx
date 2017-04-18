@@ -11,6 +11,7 @@ import BadgeExamples from './examples/badge/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import ContentExamples from './examples/content/Index';
+import DemographicsBannerExamples from './examples/demographics-banner/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
@@ -42,6 +43,7 @@ import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
+import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
@@ -57,6 +59,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="content" component={ContentExamples} />
+      <Route path="demographics" component={DemographicsBannerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
@@ -86,6 +89,7 @@ ReactDOM.render((
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {DemographicsBannerTestRoutes}
     {TableTestRoutes}
   </Router>
 ), document.getElementById('root'));
