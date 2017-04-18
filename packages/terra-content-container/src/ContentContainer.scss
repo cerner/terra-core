@@ -10,7 +10,6 @@
     flex: 1 1 auto;
 
     > .terra-ContentContainer-main-normalizer {
-      overflow: auto;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
     }
@@ -30,6 +29,7 @@
 
     > .terra-ContentContainer-main-normalizer {
       height: 100%;
+      overflow: auto;
       position: absolute;
       width: 100%;
     }
