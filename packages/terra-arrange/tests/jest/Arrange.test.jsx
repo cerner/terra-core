@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrange from '../src/Arrange';
+import Arrange from '../../src/Arrange';
 
 describe('Arrange', () => {
   const fitStart = <img src="http:///uploads/2016/09/telegraph-1.jpg" alt="panda" />;

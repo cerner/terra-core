@@ -54,7 +54,7 @@ var defaultProps = {
 var iconDown = _react2.default.createElement(_IconCaretDown2.default, null);
 var iconUp = _react2.default.createElement(_IconCaretUp2.default, null);
 
-var TableHeaderContent = function TableHeaderContent(_ref) {
+var TableHeaderCell = function TableHeaderCell(_ref) {
   var content = _ref.content,
       height = _ref.height,
       minWidth = _ref.minWidth,
@@ -94,7 +94,7 @@ var TableHeaderContent = function TableHeaderContent(_ref) {
   );
 };
 
-TableHeaderContent.propTypes = propTypes;
-TableHeaderContent.defaultProps = defaultProps;
+TableHeaderCell.propTypes = propTypes;
+TableHeaderCell.defaultProps = defaultProps;
 
-exports.default = TableHeaderContent;
+exports.default = TableHeaderCell;
