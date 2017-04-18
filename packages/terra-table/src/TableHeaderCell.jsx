@@ -16,10 +16,6 @@ const propTypes = {
    * Whether or not data in table is sorted
    */
   sort: PropTypes.oneOf(['asc', 'desc']),
-  /**
-   * The maximum height for the cell content in a table
-   */
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 };
 
 const defaultProps = {
@@ -31,14 +27,12 @@ const iconUp = <IconUp />;
 
 const TableHeaderCell = ({
   content,
-  height,
   minWidth,
   sort,
   ...customProps
   }) => {
   const contentClassName = classNames([
     { [`terra-Table-min-width--${minWidth}`]: minWidth },
-    { [`terra-Table-header-max-height--${height}`]: height },
     'terra-Table-header',
     customProps.className,
   ]);
@@ -56,10 +50,8 @@ const TableHeaderCell = ({
 
   return (
     <th {...customProps} className={contentClassName} {...dataSort}>
-      <div>
-        {content}
-        {sortIndicator}
-      </div>
+      {content}
+      {sortIndicator}
     </th>
   );
 };
