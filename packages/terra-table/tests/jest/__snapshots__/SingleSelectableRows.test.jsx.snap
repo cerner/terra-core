@@ -30,8 +30,7 @@ exports[`test should render SingleSelectableRows tag 1`] = `
 `;
 
 exports[`test should render SingleSelectableRows with maximum height set 1`] = `
-<TableRows
-  height="medium">
+<TableRows>
   <TableRow
     isSelectable={true}
     isSelected={false}
