@@ -16,8 +16,6 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _reactIntl = require('react-intl');
-
 var _reactTextMask = require('react-text-mask');
 
 var _reactTextMask2 = _interopRequireDefault(_reactTextMask);
@@ -25,8 +23,6 @@ var _reactTextMask2 = _interopRequireDefault(_reactTextMask);
 var _TimePipe = require('./TimePipe');
 
 var _TimePipe2 = _interopRequireDefault(_TimePipe);
-
-var _terraI18n = require('terra-i18n');
 
 require('./TimeInput.scss');
 
@@ -38,8 +34,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable global-require, import/no-dynamic-require */
-
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
   /**
@@ -49,11 +44,7 @@ var propTypes = {
   /**
   * A callback function to execute when a time value is entered.
   */
-  onChange: _react.PropTypes.func,
-  /**
-   * Locale to format the time
-   */
-  locale: _react.PropTypes.string.isRequired
+  onChange: _react.PropTypes.func
 };
 
 var defaultProps = {
@@ -64,17 +55,37 @@ var defaultProps = {
 var TimeInput = function (_React$Component) {
   _inherits(TimeInput, _React$Component);
 
+  _createClass(TimeInput, null, [{
+    key: 'userLocale',
+    value: function userLocale() {
+      // TODO: Get the locale from date_util
+      return 'en-US';
+    }
+  }, {
+    key: 'timeFormat',
+    value: function timeFormat() {
+      // TODO: Get the time format based on the locale.
+      return 'HH:mm';
+    }
+  }, {
+    key: 'formattedTime',
+    value: function formattedTime(timeMoment) {
+      if (timeMoment) {
+        return timeMoment.clone().locale(TimeInput.userLocale()).format(TimeInput.timeFormat());
+      }
+
+      return '';
+    }
+  }]);
+
   function TimeInput(props) {
     _classCallCheck(this, TimeInput);
 
     var _this = _possibleConstructorReturn(this, (TimeInput.__proto__ || Object.getPrototypeOf(TimeInput)).call(this, props));
 
     _this.state = {
-      load: false,
-      locale: props.locale,
-      timeMessages: require('./translations/' + props.locale + '.js'),
-      defaultTime: _this.formattedTime(_this.props.defaultTime),
-      value: _this.formattedTime(_this.props.defaultTime)
+      defaultTime: TimeInput.formattedTime(_this.props.defaultTime),
+      value: TimeInput.formattedTime(_this.props.defaultTime)
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -83,26 +94,6 @@ var TimeInput = function (_React$Component) {
   }
 
   _createClass(TimeInput, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      (0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      if (this.props === nextProps) return;
-      (0, _terraI18n.i18nLoader)(nextProps.locale, this.setState, this);
-    }
-  }, {
-    key: 'formattedTime',
-    value: function formattedTime(timeMoment) {
-      if (timeMoment) {
-        return timeMoment.clone().locale(this.props.locale).format(_react2.default.createElement(_reactIntl.FormattedMessage, { id: 'Terra.timeInput.format' }));
-      }
-
-      return '';
-    }
-  }, {
     key: 'handleChange',
     value: function handleChange(event) {
       if (event.target.value === this.state.value) {
@@ -120,52 +111,42 @@ var TimeInput = function (_React$Component) {
   }, {
     key: 'handleInputKeyDown',
     value: function handleInputKeyDown(event) {
-      var copy = (0, _moment2.default)(this.state.value, _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'Terra.timeInput.format' }), true);
+      var copy = (0, _moment2.default)(this.state.value, TimeInput.timeFormat(), true);
 
       if (!copy.isValid()) {
         return;
       }
 
       if (event.key === 'ArrowUp') {
-        this.setState({ value: this.formattedTime(copy.add(1, 'minutes')) });
+        this.setState({ value: TimeInput.formattedTime(copy.add(1, 'minutes')) });
       } else if (event.key === 'ArrowDown') {
-        this.setState({ value: this.formattedTime(copy.subtract(1, 'minutes')) });
+        this.setState({ value: TimeInput.formattedTime(copy.subtract(1, 'minutes')) });
       }
     }
   }, {
     key: 'render',
     value: function render() {
-      if (!this.state.load) return null;
-
       var _props = this.props,
           defaultTime = _props.defaultTime,
-          locale = _props.locale,
           onChange = _props.onChange,
-          customProps = _objectWithoutProperties(_props, ['defaultTime', 'locale', 'onChange']);
+          customProps = _objectWithoutProperties(_props, ['defaultTime', 'onChange']);
 
       return _react2.default.createElement(
-        _terraI18n.I18nProvider,
-        {
-          locale: this.props.locale,
-          messages: this.state.timeMessages
-        },
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-TimeInput' },
-          _react2.default.createElement(_reactTextMask2.default, _extends({}, customProps, {
-            className: 'terra-TimeInput-input',
-            type: 'text',
-            value: this.state.value,
-            defaultValue: this.state.defaultTime,
-            onChange: this.handleChange,
-            placeholder: _react2.default.createElement(_reactIntl.FormattedMessage, { id: 'Terra.timeInput.format' }),
-            mask: [/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/],
-            keepCharPositions: true,
-            placeholderChar: ' ',
-            pipe: (0, _TimePipe2.default)(_react2.default.createElement(_reactIntl.FormattedMessage, { id: 'Terra.timeInput.format' })),
-            onKeyDown: this.handleInputKeyDown
-          }))
-        )
+        'div',
+        { className: 'terra-TimeInput' },
+        _react2.default.createElement(_reactTextMask2.default, _extends({}, customProps, {
+          className: 'terra-TimeInput-input',
+          type: 'text',
+          value: this.state.value,
+          defaultValue: this.state.defaultTime,
+          onChange: this.handleChange,
+          placeholder: TimeInput.timeFormat(),
+          mask: [/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/],
+          keepCharPositions: true,
+          placeholderChar: ' ',
+          pipe: (0, _TimePipe2.default)(TimeInput.timeFormat()),
+          onKeyDown: this.handleInputKeyDown
+        }))
       );
     }
   }]);
