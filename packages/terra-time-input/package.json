@@ -28,11 +28,14 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^0.x",
+    "terra-i18n": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {
     "moment": "^2.18.1",
+    "react-intl": "^2.2.3",
     "react-text-mask": "^4.1.0",
+    "terra-i18n": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {
