@@ -10,7 +10,7 @@ const propTypes = {
   /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  progressbarHeight: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the fill-value of the progress bar with respect to the `max` prop.
    */
@@ -23,20 +23,20 @@ const propTypes = {
 
 const defaultProps = {
   color: '#007cc3', // Default color of the ProgressBar fill
-  height: 'small',
+  progressbarHeight: 'small',
   max: 100,
   value: 0,
 };
 
 const ProgressBar = ({
-  height,
+  progressbarHeight,
   value,
   max,
   ...customProps
 }) => {
   const classes = classNames([
     'terra-ProgressBar',
-    { [`terra-ProgressBar--${height}`]: height },
+    { [`terra-ProgressBar--${progressbarHeight}`]: progressbarHeight },
     customProps.className,
   ]);
 
