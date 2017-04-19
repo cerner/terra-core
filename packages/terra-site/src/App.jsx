@@ -29,7 +29,6 @@ const App = props => (
       <li><Link to="/site/icon">Icon</Link></li>
       <li><Link to="/site/image">Image</Link></li>
       <li><Link to="/site/list">List</Link></li>
-      <li><Link to="/site/menu">Menu</Link></li>
       <li><Link to="/site/progress-bar">Progress Bar</Link></li>
       <li><Link to="/site/responsive-element">Responsive Element</Link></li>
       <li><Link to="/site/slide-panel">Slide Panel</Link></li>
