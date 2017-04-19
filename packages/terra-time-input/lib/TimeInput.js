@@ -12,13 +12,11 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactIntl = require('react-intl');
-
-var _terraI18n = require('terra-i18n');
-
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
+
+var _reactIntl = require('react-intl');
 
 var _reactTextMask = require('react-text-mask');
 
@@ -27,6 +25,8 @@ var _reactTextMask2 = _interopRequireDefault(_reactTextMask);
 var _TimePipe = require('./TimePipe');
 
 var _TimePipe2 = _interopRequireDefault(_TimePipe);
+
+var _terraI18n = require('terra-i18n');
 
 require('./TimeInput.scss');
 
@@ -73,8 +73,8 @@ var TimeInput = function (_React$Component) {
       load: false,
       locale: props.locale,
       timeMessages: require('./translations/' + props.locale + '.js'),
-      defaultTime: null,
-      value: null
+      defaultTime: _this.formattedTime(_this.props.defaultTime),
+      value: _this.formattedTime(_this.props.defaultTime)
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -86,11 +86,6 @@ var TimeInput = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       (0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
-
-      this.state = {
-        defaultTime: this.formattedTime(this.props.defaultTime),
-        value: this.formattedTime(this.props.defaultTime)
-      };
     }
   }, {
     key: 'componentWillReceiveProps',
@@ -102,7 +97,6 @@ var TimeInput = function (_React$Component) {
     key: 'formattedTime',
     value: function formattedTime(timeMoment) {
       if (timeMoment) {
-        debugger;
         return timeMoment.clone().locale(this.props.locale).format(_react2.default.createElement(_reactIntl.FormattedMessage, { id: 'Terra.timeInput.format' }));
       }
 
