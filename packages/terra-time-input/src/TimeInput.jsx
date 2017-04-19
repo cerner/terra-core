@@ -22,12 +22,12 @@ const defaultProps = {
 
 class TimeInput extends React.Component {
   static userLocale() {
-    // TODO: Get the locale from date_util
+    // TODO: Get the locale from i18nProvider
     return 'en-US';
   }
 
   static timeFormat() {
-    // TODO: Get the time format based on the locale.
+    // TODO: Get the time format translation.
     return 'HH:mm';
   }
 

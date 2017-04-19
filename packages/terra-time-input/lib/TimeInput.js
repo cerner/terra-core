@@ -58,13 +58,13 @@ var TimeInput = function (_React$Component) {
   _createClass(TimeInput, null, [{
     key: 'userLocale',
     value: function userLocale() {
-      // TODO: Get the locale from date_util
+      // TODO: Get the locale from i18nProvider
       return 'en-US';
     }
   }, {
     key: 'timeFormat',
     value: function timeFormat() {
-      // TODO: Get the time format based on the locale.
+      // TODO: Get the time format translation.
       return 'HH:mm';
     }
   }, {
