@@ -20,6 +20,7 @@ const TestLinks = () => (
       <li><Link to="/tests/single-select-list-tests">SingleSelectList Tests</Link></li>
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
+      <li><Link to="/tests/popup-tests">Popup Tests</Link></li>
     </ul>
   </div>
 );
