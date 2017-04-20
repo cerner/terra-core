@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import './Arrange.scss';
 
 const alignmentTypes = ['center', 'bottom', 'stretch'];

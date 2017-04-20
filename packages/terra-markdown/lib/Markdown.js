@@ -12,6 +12,8 @@ var _marked = require('marked');
 
 var _marked2 = _interopRequireDefault(_marked);
 
+require('terra-base/lib/baseStyles');
+
 require('github-markdown-css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

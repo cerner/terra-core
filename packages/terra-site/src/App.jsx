@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import Base from 'terra-base';
 import React from 'react';
 import { Link } from 'react-router';
 import './site.scss';
@@ -9,7 +8,7 @@ const propTypes = {
 };
 
 const App = props => (
-  <Base>
+  <div>
     <div dir="ltr">
       <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} >ltr</button>
       <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
@@ -39,7 +38,7 @@ const App = props => (
       <li><Link to="/tests">Tests</Link></li>
     </ul>
     {props.children}
-  </Base>
+  </div>
 );
 
 App.propTypes = propTypes;
