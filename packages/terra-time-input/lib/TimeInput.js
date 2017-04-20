@@ -111,16 +111,16 @@ var TimeInput = function (_React$Component) {
   }, {
     key: 'handleInputKeyDown',
     value: function handleInputKeyDown(event) {
-      var copy = (0, _moment2.default)(this.state.value, TimeInput.timeFormat(), true);
+      var momentTime = (0, _moment2.default)(this.state.value, TimeInput.timeFormat(), true);
 
-      if (!copy.isValid()) {
+      if (!momentTime.isValid()) {
         return;
       }
 
       if (event.key === 'ArrowUp') {
-        this.setState({ value: TimeInput.formattedTime(copy.add(1, 'minutes')) });
+        this.setState({ value: TimeInput.formattedTime(momentTime.add(1, 'minutes')) });
       } else if (event.key === 'ArrowDown') {
-        this.setState({ value: TimeInput.formattedTime(copy.subtract(1, 'minutes')) });
+        this.setState({ value: TimeInput.formattedTime(momentTime.subtract(1, 'minutes')) });
       }
     }
   }, {
