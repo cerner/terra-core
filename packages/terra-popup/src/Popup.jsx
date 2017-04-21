@@ -53,13 +53,19 @@ class Popup extends React.Component {
     this._destroy();
   }
 
-  disable = () => this._tether.disable();
+  disable () {
+    this._tether.disable();
+  }
 
-  enable = () => this._tether.enable();
+  enable () {
+    this._tether.enable();
+  }
 
-  position = () => this._tether.position();
+  position () {
+    this._tether.position();
+  }
 
-  _destroy = () => {
+  _destroy () {
     if (this._elementParentNode) {
       ReactDOM.unmountComponentAtNode(this._elementParentNode);
       this._elementParentNode.parentNode.removeChild(this._elementParentNode);
@@ -73,7 +79,7 @@ class Popup extends React.Component {
     this._tether = null;
   }
 
-  _update = () => {
+  _update () {
     const { content, renderElementTag, renderElementTo } = this.props;
 
     // if no element component provided, bail out
@@ -104,7 +110,7 @@ class Popup extends React.Component {
     )
   }
 
-  _updateTether = () => {
+  _updateTether () {
     const { renderElementTag, renderElementTo, ...customProps } = this.props // eslint-disable-line no-unused-vars
     const tetherOptions = {
       target: this._targetNode,
