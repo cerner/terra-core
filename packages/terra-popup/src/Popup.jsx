@@ -50,7 +50,7 @@ class Popup extends React.Component {
   constructor(props) {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.state({open: this.props.isOpen})
+    this.state = {open: this.props.isOpen};
   }
 
   componentDidMount() {
@@ -111,7 +111,7 @@ class Popup extends React.Component {
     const { content, renderElementTag, renderElementTo } = this.props;
 
     // if no element component provided, bail out
-    if (!content) {
+    if (!content || !this.state.open) {
       // destroy Tether elements if they have been created
       if (this._tether) {
         this._destroy();
@@ -129,7 +129,7 @@ class Popup extends React.Component {
       renderTo.appendChild(this._elementParentNode);
     }
 
-    const wrappedContent = <WrappedPopupFrame onClickOutside={this.handleClickOutside}>content</WrappedPopupFrame>;
+    const wrappedContent = <WrappedPopupFrame onClickOutside={this.handleClickOutside}>{content}</WrappedPopupFrame>;
 
     // render element component into the DOM
     ReactDOM.unstable_renderSubtreeIntoContainer(
@@ -141,7 +141,7 @@ class Popup extends React.Component {
   }
 
   _updateTether() {
-    const { renderElementTag, renderElementTo, ...customProps } = this.props // eslint-disable-line no-unused-vars
+    const { renderElementTag, renderElementTo, onClickOutside, isOpen, target, content, ...customProps } = this.props // eslint-disable-line no-unused-vars
     const tetherOptions = {
       target: this._targetNode,
       element: this._elementParentNode,

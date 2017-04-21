@@ -13,21 +13,32 @@ const defaultProps = {
   children: [],
 };
 
-const PopupFrame = ({
-    children,
-    ...customProps
-  }) => {
-  const frameClassNames = classNames([
-    'terra-PopupFrame',
-    customProps.className,
-  ]);
+class PopupFrame extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
 
-  return (
-    <ul {...customProps} className={frameClassNames}>
-      {children}
-    </ul>
-  );
-};
+  handleClickOutside(event) {
+    if (this.props.onClickOutside) {
+      this.props.onClickOutside(event);
+    }
+  }
+
+  render() {
+    const { children, onClickOutside, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
+    const frameClassNames = classNames([
+      'terra-PopupFrame',
+      customProps.className,
+    ]);
+
+    return (
+      <div {...customProps} className={frameClassNames}>
+        {children}
+      </div>
+    );
+  }
+}
 
 PopupFrame.propTypes = propTypes;
 PopupFrame.defaultProps = defaultProps;

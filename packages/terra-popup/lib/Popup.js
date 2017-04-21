@@ -82,7 +82,7 @@ var Popup = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).call(this, props));
 
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
-    _this.state({ open: _this.props.isOpen });
+    _this.state = { open: _this.props.isOpen };
     return _this;
   }
 
@@ -162,7 +162,7 @@ var Popup = function (_React$Component) {
 
       // if no element component provided, bail out
 
-      if (!content) {
+      if (!content || !this.state.open) {
         // destroy Tether elements if they have been created
         if (this._tether) {
           this._destroy();
@@ -183,7 +183,7 @@ var Popup = function (_React$Component) {
       var wrappedContent = _react2.default.createElement(
         WrappedPopupFrame,
         { onClickOutside: this.handleClickOutside },
-        'content'
+        content
       );
 
       // render element component into the DOM
@@ -198,7 +198,11 @@ var Popup = function (_React$Component) {
       var _props2 = this.props,
           renderElementTag = _props2.renderElementTag,
           renderElementTo = _props2.renderElementTo,
-          customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo']); // eslint-disable-line no-unused-vars
+          onClickOutside = _props2.onClickOutside,
+          isOpen = _props2.isOpen,
+          target = _props2.target,
+          content = _props2.content,
+          customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo', 'onClickOutside', 'isOpen', 'target', 'content']); // eslint-disable-line no-unused-vars
 
 
       var tetherOptions = _extends({
