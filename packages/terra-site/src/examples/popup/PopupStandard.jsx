@@ -18,11 +18,16 @@ class DummyApp extends React.Component {
     this.setState({open: false});
   }
 
+  // event.preventDefault();
+  // this.setState({open: false});
+
   render() {
     let contentSection;
     if (this.state.open) {
       contentSection = <p>i'm a popup content</p>;
     }
+
+    const constraints = [{to: 'window', attachment: 'together'}];
 
     return (
       <Popup 
@@ -33,6 +38,7 @@ class DummyApp extends React.Component {
         targetAttachment="top right"
         onClickOutside={this.handleClickOutside}
         isOpen={this.state.open}
+        constraints={constraints}
         >
       </Popup>
     );
