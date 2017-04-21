@@ -95,7 +95,7 @@ var SingleSelectList = function (_React$Component) {
       var index = SingleSelectList.selectedIndexFromItems(nextProps.children);
 
       if (index !== this.state.selectedIndex) {
-        this.setState({ selectedIndexes: index });
+        this.setState({ selectedIndex: index });
       }
     }
   }, {
@@ -131,7 +131,7 @@ var SingleSelectList = function (_React$Component) {
           _this3.handleSelection(event, index);
 
           if (_this3.onChange) {
-            _this3.onChange(event, _this3.state.selectedIndexes);
+            _this3.onChange(event, _this3.state.selectedIndex);
           }
         }
 
