@@ -44,11 +44,11 @@ var propTypes = {
   /**
    * Sets the height of the image.
    */
-  height: _react.PropTypes.number,
+  height: _react.PropTypes.string,
   /**
    * Sets the width of the image.
    */
-  width: _react.PropTypes.number
+  width: _react.PropTypes.string
 };
 
 var defaultProps = {
