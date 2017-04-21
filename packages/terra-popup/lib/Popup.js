@@ -82,6 +82,7 @@ var Popup = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).call(this, props));
 
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
+    _this.state({ open: _this.props.isOpen });
     return _this;
   }
 
@@ -100,6 +101,13 @@ var Popup = function (_React$Component) {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       this._destroy();
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.state.open !== nextProps.isOpen) {
+        this.setState({ open: nextProps.isOpen });
+      }
     }
   }, {
     key: 'disable',

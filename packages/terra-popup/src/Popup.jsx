@@ -50,6 +50,7 @@ class Popup extends React.Component {
   constructor(props) {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.state({open: this.props.isOpen})
   }
 
   componentDidMount() {
@@ -63,6 +64,12 @@ class Popup extends React.Component {
 
   componentWillUnmount() {
     this._destroy();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.state.open !== nextProps.isOpen) {
+      this.setState({ open: nextProps.isOpen });
+    }
   }
 
   disable() {

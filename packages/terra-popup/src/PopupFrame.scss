@@ -1,0 +1,9 @@
+@import '~terra-mixins';
+
+.terra-PopupFrame {
+  background-color: rgba(239, 68, 0, 0.53);
+  border: 1px solid;
+  height: 200px;
+  overflow: hidden;
+  width: 200px;
+}
