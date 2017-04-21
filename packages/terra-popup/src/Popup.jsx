@@ -129,7 +129,7 @@ class Popup extends React.Component {
       renderTo.appendChild(this._elementParentNode);
     }
 
-    const wrappedContent = <WrappedPopupFrame onClickOutside={this.handleClickOutside}>{content}</WrappedPopupFrame>;
+    const wrappedContent = <WrappedPopupFrame closeOnEsc onClickOutside={this.handleClickOutside}>{content}</WrappedPopupFrame>;
 
     // render element component into the DOM
     ReactDOM.unstable_renderSubtreeIntoContainer(

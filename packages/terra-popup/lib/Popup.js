@@ -182,7 +182,7 @@ var Popup = function (_React$Component) {
 
       var wrappedContent = _react2.default.createElement(
         WrappedPopupFrame,
-        { onClickOutside: this.handleClickOutside },
+        { closeOnEsc: true, onClickOutside: this.handleClickOutside },
         content
       );
 
