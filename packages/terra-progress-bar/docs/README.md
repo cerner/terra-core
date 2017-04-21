@@ -17,13 +17,13 @@ import React from 'react';
 import ProgressBar from 'terra-progress-bar';
 
 <ProgressBar
-  height="tiny"
+  heightSize="tiny"
   value={3}
   max={10}
 />
 
 <ProgressBar
-  height="tiny"
+  heightSize="tiny"
   value={40}
   color="Orange"
 />

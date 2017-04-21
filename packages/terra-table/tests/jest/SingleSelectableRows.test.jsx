@@ -18,7 +18,7 @@ it('should render SingleSelectableRows tag', () => {
 });
 
 it('should render SingleSelectableRows with maximum height set', () => {
-  const defaultTableRows = <Table.SingleSelectableRows height={'medium'}>{rows}</Table.SingleSelectableRows>;
+  const defaultTableRows = <Table.SingleSelectableRows>{rows}</Table.SingleSelectableRows>;
   const tableRows = shallow(defaultTableRows);
   expect(tableRows).toMatchSnapshot();
 });

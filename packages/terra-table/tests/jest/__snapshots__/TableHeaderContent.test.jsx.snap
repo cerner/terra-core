@@ -39,8 +39,7 @@ exports[`test should render table header content tag with descending sort indica
 
 exports[`test should render table header content tag with maximum height fixed 1`] = `
 <th
-  className="terra-Table-min-width--small terra-Table-header"
-  height="small">
+  className="terra-Table-min-width--small terra-Table-header">
   Column Heading
 </th>
 `;
