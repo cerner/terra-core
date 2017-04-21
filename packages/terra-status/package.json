@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "terra-arrange": "^0.x",
-    "terra-icon": "^0.x",
     "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
