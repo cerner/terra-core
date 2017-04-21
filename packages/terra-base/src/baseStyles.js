@@ -1,16 +1,4 @@
-/**
- * The following code is used to ensure global styles are loaded only once in an app
- * that consumes terra components.
- */
-if (!global.baseStylesLoaded) {
-  /* eslint-disable global-require */
-  require('./Base.scss');
-}
-
-/**
- * Once global styles are loaded, set global to prevent duplication of global styles
- */
-global.baseStylesLoaded = true;
+import './Base.scss';
 
 // Checks to run when not in production
 if (process.env.NODE_ENV !== 'production') {
