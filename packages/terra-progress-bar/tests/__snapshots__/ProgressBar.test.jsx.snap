@@ -1,4 +1,4 @@
-exports[`test should render a ProgressBar component with default height 50% fill and custom props and style 1`] = `
+exports[`test should render a ProgressBar component with default heightSize 50% fill and custom props and style 1`] = `
 <progress
   aria-valuemax={100}
   aria-valuemin={0}
@@ -16,7 +16,7 @@ exports[`test should render a ProgressBar component with default height 50% fill
   value={50} />
 `;
 
-exports[`test should render a ProgressBar component with large height and 60% fill 1`] = `
+exports[`test should render a ProgressBar component with large heightSize and 60% fill 1`] = `
 <progress
   aria-valuemax={100}
   aria-valuemin={0}
@@ -33,7 +33,7 @@ exports[`test should render a ProgressBar component with large height and 60% fi
   value={60} />
 `;
 
-exports[`test should render a ProgressBar component with tiny height and 15% fill 1`] = `
+exports[`test should render a ProgressBar component with tiny heightSize and 15% fill 1`] = `
 <progress
   aria-valuemax={100}
   aria-valuemin={0}
