@@ -26,12 +26,14 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-onclickoutside": "^5.11.1",
     "tether": "^1.4.0",
     "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "react-onclickoutside": "^5.11.1",
     "tether": "^1.4.0",
     "terra-mixins": "^1.0.0"
   },
