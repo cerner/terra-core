@@ -12,10 +12,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _reactPortal = require('react-portal');
 
 var _reactPortal2 = _interopRequireDefault(_reactPortal);
@@ -48,7 +44,7 @@ var propTypes = {
   /**
    * Content inside the modal dialog
    **/
-  children: _react.PropTypes.element.isRequired,
+  children: _react.PropTypes.node.isRequired,
   /**
    * CSS classnames that are append to the modal
    **/
@@ -74,7 +70,9 @@ var propTypes = {
    **/
   isOpened: _react.PropTypes.bool,
   /**
-   * String that labels the modal for screen readers
+   * If set to true, the modal dialog with have overflow-y set to scroll.
+   * It is recommended not to use this prop and instead create a HOC
+   * with the modal dialog body set to scroll.
    **/
   isScrollable: _react.PropTypes.bool,
   /**
@@ -145,10 +143,6 @@ var Modal = function (_React$Component) {
           role = _props.role,
           customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
 
-      var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, { 'terra-Modal--scrollable': isScrollable }, classNameModal]);
-
-      var overlayClassName = (0, _classnames2.default)(['terra-Modal-overlay', classNameOverlay]);
-
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
@@ -166,9 +160,11 @@ var Modal = function (_React$Component) {
           {
             closeOnOutsideClick: closeOnOutsideClick,
             ariaLabel: ariaLabel,
-            classNameModal: modalClassName,
-            classNameOverlay: overlayClassName,
-            role: role
+            classNameModal: classNameModal,
+            classNameOverlay: classNameOverlay,
+            role: role,
+            isFullscreen: isFullscreen,
+            isScrollable: isScrollable
           },
           children
         )

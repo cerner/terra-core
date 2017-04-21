@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _focusTrapReact = require('focus-trap-react');
 
 var _focusTrapReact2 = _interopRequireDefault(_focusTrapReact);
@@ -37,6 +41,8 @@ var propTypes = {
   classNameOverlay: _react.PropTypes.string,
   closeOnOutsideClick: _react.PropTypes.bool,
   closePortal: _react.PropTypes.func,
+  isFullscreen: _react.PropTypes.bool,
+  isScrollable: _react.PropTypes.bool,
   role: _react.PropTypes.string
 };
 
@@ -46,8 +52,12 @@ var defaultProps = {
   classNameModal: null,
   classNameOverlay: null,
   closeOnOutsideClick: true,
+  isFullscreen: false,
+  isScrollable: false,
   role: 'dialog'
 };
+
+/* eslint-disable react/prefer-stateless-function */
 
 var ModalContent = function (_React$Component) {
   _inherits(ModalContent, _React$Component);
@@ -59,18 +69,6 @@ var ModalContent = function (_React$Component) {
   }
 
   _createClass(ModalContent, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      // Disable background scrolling
-      document.body.style.overflow = 'hidden';
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      // Enable background scrolling
-      document.body.style.overflow = null;
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -81,7 +79,11 @@ var ModalContent = function (_React$Component) {
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closePortal = _props.closePortal,
           role = _props.role,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnOutsideClick', 'closePortal', 'role']);
+          isFullscreen = _props.isFullscreen,
+          isScrollable = _props.isScrollable,
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnOutsideClick', 'closePortal', 'role', 'isFullscreen', 'isScrollable']);
+
+      var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, { 'terra-Modal--scrollable': isScrollable }, classNameModal]);
 
       return _react2.default.createElement(
         _focusTrapReact2.default,
@@ -95,7 +97,7 @@ var ModalContent = function (_React$Component) {
           _extends({
             tabIndex: '0',
             'aria-label': ariaLabel,
-            className: classNameModal,
+            className: modalClassName,
             role: role
           }, customProps),
           children

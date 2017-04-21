@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import Portal from 'react-portal';
 import ModalContent from './ModalContent';
 import './Modal.scss';
@@ -16,7 +15,7 @@ const propTypes = {
   /**
    * Content inside the modal dialog
    **/
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   /**
    * CSS classnames that are append to the modal
    **/
@@ -42,7 +41,9 @@ const propTypes = {
    **/
   isOpened: PropTypes.bool,
   /**
-   * String that labels the modal for screen readers
+   * If set to true, the modal dialog with have overflow-y set to scroll.
+   * It is recommended not to use this prop and instead create a HOC
+   * with the modal dialog body set to scroll.
    **/
   isScrollable: PropTypes.bool,
   /**
@@ -102,14 +103,6 @@ class Modal extends React.Component {
           role,
            ...customProps } = this.props;
 
-    const modalClassName = classNames(['terra-Modal',
-      { 'terra-Modal--fullscreen': isFullscreen },
-      { 'terra-Modal--scrollable': isScrollable },
-      classNameModal,
-    ]);
-
-    const overlayClassName = classNames(['terra-Modal-overlay', classNameOverlay]);
-
     return (
       <Portal
         isOpened={isOpened}
@@ -125,9 +118,11 @@ class Modal extends React.Component {
         <ModalContent
           closeOnOutsideClick={closeOnOutsideClick}
           ariaLabel={ariaLabel}
-          classNameModal={modalClassName}
-          classNameOverlay={overlayClassName}
+          classNameModal={classNameModal}
+          classNameOverlay={classNameOverlay}
           role={role}
+          isFullscreen={isFullscreen}
+          isScrollable={isScrollable}
         >
           {children}
         </ModalContent>

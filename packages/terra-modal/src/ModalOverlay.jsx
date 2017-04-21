@@ -1,17 +1,30 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import classNames from 'classnames';
 import './ModalOverlay.scss';
 
-const propTypes = {
-  classNameOverlay: PropTypes.string,
-};
+class ModalOverlay extends React.Component {
 
-const defaultProps = {
-  classNameOverlay: null,
-};
+  componentDidMount() {
+    // Disable scrolling on the page when Overlay is displayed
+    document.documentElement.style.overflow = 'hidden';
+  }
 
-const ModalOverlay = ({ classNameOverlay, ...customProps }) => <div className={classNameOverlay} {...customProps} />;
+  componentWillUnmount() {
+    // Enable scrolling on the page since Overlay has gone away
+    document.documentElement.style.overflow = null;
+  }
 
-ModalOverlay.propTypes = propTypes;
-ModalOverlay.defaultProps = defaultProps;
+  render() {
+    const { ...customProps } = this.props;
+    const attributes = Object.assign({}, customProps);
+
+    attributes.className = classNames([
+      'terra-Modal-overlay',
+      attributes.className,
+    ]);
+
+    return <div {...attributes} />;
+  }
+}
 
 export default ModalOverlay;

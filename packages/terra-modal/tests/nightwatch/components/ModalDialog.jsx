@@ -1,6 +1,6 @@
 import React from 'react';
 import IconClose from 'terra-icon/lib/icon/IconClose'; // eslint-disable-line
-import Modal from '../../../../terra-modal/src/Modal';
+import Modal from '../../../lib/Modal';
 import ModalHeader from './ModalDialog/ModalHeader';
 import ModalSubheader from './ModalDialog/ModalSubheader';
 import ModalBody from './ModalDialog/ModalBody';

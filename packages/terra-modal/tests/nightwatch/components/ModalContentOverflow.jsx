@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from '../../../../terra-modal/src/Modal';
+import Modal from '../../../lib/Modal';
 
 class ModalContentOverflow extends React.Component {
   constructor() {

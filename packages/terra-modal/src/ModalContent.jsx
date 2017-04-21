@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import ModalOverlay from './ModalOverlay';
 
@@ -9,6 +10,8 @@ const propTypes = {
   classNameOverlay: PropTypes.string,
   closeOnOutsideClick: PropTypes.bool,
   closePortal: PropTypes.func,
+  isFullscreen: PropTypes.bool,
+  isScrollable: PropTypes.bool,
   role: PropTypes.string,
 };
 
@@ -18,22 +21,13 @@ const defaultProps = {
   classNameModal: null,
   classNameOverlay: null,
   closeOnOutsideClick: true,
+  isFullscreen: false,
+  isScrollable: false,
   role: 'dialog',
 };
 
-
+/* eslint-disable react/prefer-stateless-function */
 class ModalContent extends React.Component {
-
-  componentDidMount() {
-    // Disable background scrolling
-    document.body.style.overflow = 'hidden';
-  }
-
-  componentWillUnmount() {
-    // Enable background scrolling
-    document.body.style.overflow = null;
-  }
-
   render() {
     const {
         ariaLabel,
@@ -43,7 +37,15 @@ class ModalContent extends React.Component {
         closeOnOutsideClick,
         closePortal,
         role,
+        isFullscreen,
+        isScrollable,
         ...customProps } = this.props;
+
+    const modalClassName = classNames(['terra-Modal',
+      { 'terra-Modal--fullscreen': isFullscreen },
+      { 'terra-Modal--scrollable': isScrollable },
+      classNameModal,
+    ]);
 
     return (
       <FocusTrap>
@@ -54,7 +56,7 @@ class ModalContent extends React.Component {
         <div
           tabIndex="0"
           aria-label={ariaLabel}
-          className={classNameModal}
+          className={modalClassName}
           role={role}
           {...customProps}
         >

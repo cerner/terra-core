@@ -201,12 +201,12 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
       .waitForElementPresent('.terra-Modal', 1000)
-      .expect.element('body').to.have.attribute('style').which.equals('overflow: hidden;');
+      .expect.element('html').to.have.attribute('style').which.equals('overflow: hidden;');
 
     browser
       .click('.terra-Modal-overlay')
       .waitForElementNotPresent('.terra-Modal', 1000)
-      .expect.element('body').to.have.attribute('style').which.equals('');
+      .expect.element('html').to.have.attribute('style').which.equals('');
   },
 
   'isScrollable default value': (browser) => {
