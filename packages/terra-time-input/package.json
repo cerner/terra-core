@@ -33,6 +33,7 @@
   "dependencies": {
     "moment": "^2.18.1",
     "react-text-mask": "^4.1.0",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {

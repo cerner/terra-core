@@ -84,8 +84,8 @@ var TimeInput = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (TimeInput.__proto__ || Object.getPrototypeOf(TimeInput)).call(this, props));
 
     _this.state = {
-      defaultTime: TimeInput.formattedTime(_this.props.defaultTime),
-      value: TimeInput.formattedTime(_this.props.defaultTime)
+      defaultTime: TimeInput.formattedTime(props.defaultTime),
+      value: TimeInput.formattedTime(props.defaultTime)
     };
 
     _this.handleChange = _this.handleChange.bind(_this);

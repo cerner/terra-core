@@ -43,8 +43,8 @@ class TimeInput extends React.Component {
     super(props);
 
     this.state = {
-      defaultTime: TimeInput.formattedTime(this.props.defaultTime),
-      value: TimeInput.formattedTime(this.props.defaultTime),
+      defaultTime: TimeInput.formattedTime(props.defaultTime),
+      value: TimeInput.formattedTime(props.defaultTime),
     };
 
     this.handleChange = this.handleChange.bind(this);
