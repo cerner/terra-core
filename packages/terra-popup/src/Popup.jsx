@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
+import onClickOutside from 'react-onclickoutside'
+import PopupFrame from './PopupFrame'
 
 const attachmentPositions = [
   'top left',
@@ -30,42 +32,61 @@ const propTypes = {
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(attachmentPositions),
   targetModifier: PropTypes.string,
-  targetOffset: PropTypes.string
+  targetOffset: PropTypes.string,
+  onClickOutside: PropTypes.func,
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
   renderElementTag: 'div',
-  renderElementTo: null
+  renderElementTo: null,
+  onClickOutside: undefined,
+  isOpen: false,
 };
 
-class Popup extends React.Component {
+const WrappedPopupFrame = onClickOutside(PopupFrame);
 
-  componentDidMount () {
+class Popup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  componentDidMount() {
     this._targetNode = ReactDOM.findDOMNode(this);
     this._update();
   }
 
-  componentDidUpdate () {
+  componentDidUpdate() {
     this._update();
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this._destroy();
   }
 
-  disable () {
+  disable() {
     this._tether.disable();
   }
 
-  enable () {
+  enable() {
     this._tether.enable();
   }
 
-  position () {
+  position() {
     this._tether.position();
   }
 
-  _destroy () {
+  handleClickOutside(event) {
+    this.setOpen(false);
+    this.props.onClickOutside(event);
+  }
+
+  setOpen(open) {
+    this.setState({open});
+  }
+  
+  _destroy() {
     if (this._elementParentNode) {
       ReactDOM.unmountComponentAtNode(this._elementParentNode);
       this._elementParentNode.parentNode.removeChild(this._elementParentNode);
@@ -79,7 +100,7 @@ class Popup extends React.Component {
     this._tether = null;
   }
 
-  _update () {
+  _update() {
     const { content, renderElementTag, renderElementTo } = this.props;
 
     // if no element component provided, bail out
@@ -101,16 +122,18 @@ class Popup extends React.Component {
       renderTo.appendChild(this._elementParentNode);
     }
 
+    const wrappedContent = <WrappedPopupFrame onClickOutside={this.handleClickOutside}>content</WrappedPopupFrame>;
+
     // render element component into the DOM
     ReactDOM.unstable_renderSubtreeIntoContainer(
-      this, content, this._elementParentNode, () => {
+      this, wrappedContent, this._elementParentNode, () => {
         // don't update Tether until the subtree has finished rendering
         this._updateTether();
       }
     )
   }
 
-  _updateTether () {
+  _updateTether() {
     const { renderElementTag, renderElementTo, ...customProps } = this.props // eslint-disable-line no-unused-vars
     const tetherOptions = {
       target: this._targetNode,

@@ -24,6 +24,14 @@ var _tether = require('tether');
 
 var _tether2 = _interopRequireDefault(_tether);
 
+var _reactOnclickoutside = require('react-onclickoutside');
+
+var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
+
+var _PopupFrame = require('./PopupFrame');
+
+var _PopupFrame2 = _interopRequireDefault(_PopupFrame);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -51,21 +59,30 @@ var propTypes = {
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(attachmentPositions),
   targetModifier: _react.PropTypes.string,
-  targetOffset: _react.PropTypes.string
+  targetOffset: _react.PropTypes.string,
+  onClickOutside: _react.PropTypes.func,
+  isOpen: _react.PropTypes.bool
 };
 
 var defaultProps = {
   renderElementTag: 'div',
-  renderElementTo: null
+  renderElementTo: null,
+  onClickOutside: undefined,
+  isOpen: false
 };
+
+var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default);
 
 var Popup = function (_React$Component) {
   _inherits(Popup, _React$Component);
 
-  function Popup() {
+  function Popup(props) {
     _classCallCheck(this, Popup);
 
-    return _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).call(this, props));
+
+    _this.handleClickOutside = _this.handleClickOutside.bind(_this);
+    return _this;
   }
 
   _createClass(Popup, [{
@@ -98,6 +115,17 @@ var Popup = function (_React$Component) {
     key: 'position',
     value: function position() {
       this._tether.position();
+    }
+  }, {
+    key: 'handleClickOutside',
+    value: function handleClickOutside(event) {
+      this.setOpen(false);
+      this.props.onClickOutside(event);
+    }
+  }, {
+    key: 'setOpen',
+    value: function setOpen(open) {
+      this.setState({ open: open });
     }
   }, {
     key: '_destroy',
@@ -144,8 +172,14 @@ var Popup = function (_React$Component) {
         renderTo.appendChild(this._elementParentNode);
       }
 
+      var wrappedContent = _react2.default.createElement(
+        WrappedPopupFrame,
+        { onClickOutside: this.handleClickOutside },
+        'content'
+      );
+
       // render element component into the DOM
-      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, content, this._elementParentNode, function () {
+      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, wrappedContent, this._elementParentNode, function () {
         // don't update Tether until the subtree has finished rendering
         _this2._updateTether();
       });
