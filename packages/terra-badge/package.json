@@ -49,7 +49,6 @@
     "terra-mixins": "^1.0.0"
   },
   "devDependencies": {
-    "terra-toolkit": "^0.x",
-    "terra-icon": "^0.x"
+    "terra-toolkit": "^0.x"
   }
 }
