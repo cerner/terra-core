@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import IconDown from 'terra-icon/lib/icon/IconCaretDown';
 import IconUp from 'terra-icon/lib/icon/IconCaretUp';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 
 const propTypes = {
   /**
