@@ -31,11 +31,11 @@ var propTypes = {
   messages: _react.PropTypes.object.isRequired
 };
 
-var I18nProvider = function I18nProvider(props) {
-  var children = props.children,
-      locale = props.locale,
-      messages = props.messages,
-      customProps = _objectWithoutProperties(props, ['children', 'locale', 'messages']);
+var I18nProvider = function I18nProvider(_ref) {
+  var children = _ref.children,
+      locale = _ref.locale,
+      messages = _ref.messages,
+      customProps = _objectWithoutProperties(_ref, ['children', 'locale', 'messages']);
 
   return _react2.default.createElement(
     _reactIntl.IntlProvider,
