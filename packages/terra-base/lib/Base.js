@@ -14,9 +14,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _terraI18n = require('terra-i18n');
 
-var _BaseStyles = require('./BaseStyles');
-
-var _BaseStyles2 = _interopRequireDefault(_BaseStyles);
+require('./baseStyles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -95,7 +93,7 @@ var Base = function (_React$Component) {
           messages: messages
         },
         _react2.default.createElement(
-          _BaseStyles2.default,
+          'div',
           customProps,
           children
         )

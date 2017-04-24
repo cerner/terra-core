@@ -16,6 +16,8 @@ var _resizeObserverPolyfill = require('resize-observer-polyfill');
 
 var _resizeObserverPolyfill2 = _interopRequireDefault(_resizeObserverPolyfill);
 
+require('terra-base/lib/baseStyles');
+
 var _breakpoints = require('./breakpoints');
 
 var _breakpoints2 = _interopRequireDefault(_breakpoints);

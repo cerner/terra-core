@@ -3,19 +3,19 @@ import ProgressBar from 'terra-progress-bar';
 
 const ProgressBarSize = () => (
   <div>
-    <ProgressBar height="tiny" value={15} />
+    <ProgressBar heightSize="tiny" value={15} />
     <br />
     <br />
-    <ProgressBar height="small" value={30} />
+    <ProgressBar heightSize="small" value={30} />
     <br />
     <br />
-    <ProgressBar height="medium" value={45} />
+    <ProgressBar heightSize="medium" value={45} />
     <br />
     <br />
-    <ProgressBar height="large" value={60} />
+    <ProgressBar heightSize="large" value={60} />
     <br />
     <br />
-    <ProgressBar height="huge" value={75} />
+    <ProgressBar heightSize="huge" value={75} />
   </div>
 );
 

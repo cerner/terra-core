@@ -14,6 +14,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+require('terra-base/lib/baseStyles');
+
 var _TableHeader = require('./TableHeader');
 
 var _TableHeader2 = _interopRequireDefault(_TableHeader);

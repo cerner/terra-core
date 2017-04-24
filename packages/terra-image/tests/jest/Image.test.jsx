@@ -18,11 +18,11 @@ it('should render a default component', () => {
 
 /* Default component with a height and width */
 it('should render a default image component with a specified height and width', () => {
-  const wrapper = shallow(<Image src="http://lorempixel.com/320/320/nature/" height={200} width={300} alt="default image" />);
+  const wrapper = shallow(<Image src="http://lorempixel.com/320/320/nature/" height={'200'} width={'300'} alt="default image" />);
   expect(wrapper.prop('className')).toContain('terra-Image--default');
   expect(wrapper.prop('alt')).toEqual('default image');
-  expect(wrapper.prop('height')).toEqual(200);
-  expect(wrapper.prop('width')).toEqual(300);
+  expect(wrapper.prop('height')).toEqual('200');
+  expect(wrapper.prop('width')).toEqual('300');
 });
 
 /* Image with a rounded variant */

@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react';
-
 import { I18nProvider, i18nLoader } from 'terra-i18n';
-
-import BaseStyles from './BaseStyles';
+import './baseStyles';
 
 const propTypes = {
   /**
@@ -60,9 +58,9 @@ class Base extends React.Component {
         locale={this.state.locale}
         messages={messages}
       >
-        <BaseStyles {...customProps}>
+        <div {...customProps}>
           {children}
-        </BaseStyles>
+        </div>
       </I18nProvider>
     );
   }

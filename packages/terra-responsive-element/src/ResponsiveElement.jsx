@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
+import 'terra-base/lib/baseStyles';
 import getBreakpoints from './breakpoints';
 
 const propTypes = {
