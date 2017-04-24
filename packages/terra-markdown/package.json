@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "marked": "^0.3.6",
-    "github-markdown-css": "^2.4.1"
+    "github-markdown-css": "^2.4.1",
+    "terra-base": "^0.x"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

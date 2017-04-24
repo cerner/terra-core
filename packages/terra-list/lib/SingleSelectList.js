@@ -12,6 +12,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('terra-base/lib/baseStyles');
+
 var _List = require('./List');
 
 var _List2 = _interopRequireDefault(_List);

@@ -8,6 +8,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('terra-base/lib/baseStyles');
+
 var _TableHeaderCell = require('./TableHeaderCell');
 
 var _TableHeaderCell2 = _interopRequireDefault(_TableHeaderCell);
