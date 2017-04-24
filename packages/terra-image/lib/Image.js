@@ -14,6 +14,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+require('terra-base/lib/baseStyles');
+
 require('./Image.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -42,11 +44,11 @@ var propTypes = {
   /**
    * Sets the height of the image.
    */
-  height: _react.PropTypes.number,
+  height: _react.PropTypes.string,
   /**
    * Sets the width of the image.
    */
-  width: _react.PropTypes.number
+  width: _react.PropTypes.string
 };
 
 var defaultProps = {

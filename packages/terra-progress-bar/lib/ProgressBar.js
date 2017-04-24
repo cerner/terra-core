@@ -14,6 +14,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+require('terra-base/lib/baseStyles');
+
 require('./ProgressBar.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -30,7 +32,7 @@ var propTypes = {
   /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
-  height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  heightSize: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the fill-value of the progress bar with respect to the `max` prop.
    */
@@ -43,18 +45,18 @@ var propTypes = {
 
 var defaultProps = {
   color: '#007cc3', // Default color of the ProgressBar fill
-  height: 'small',
+  heightSize: 'small',
   max: 100,
   value: 0
 };
 
 var ProgressBar = function ProgressBar(_ref) {
-  var height = _ref.height,
+  var heightSize = _ref.heightSize,
       value = _ref.value,
       max = _ref.max,
-      customProps = _objectWithoutProperties(_ref, ['height', 'value', 'max']);
+      customProps = _objectWithoutProperties(_ref, ['heightSize', 'value', 'max']);
 
-  var classes = (0, _classnames2.default)(['terra-ProgressBar', _defineProperty({}, 'terra-ProgressBar--' + height, height), customProps.className]);
+  var classes = (0, _classnames2.default)(['terra-ProgressBar', _defineProperty({}, 'terra-ProgressBar--' + heightSize, heightSize), customProps.className]);
 
   var normalizedValue = value / max * 100;
 

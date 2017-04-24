@@ -13,3 +13,10 @@
   background-color: #eee;
   padding: 10px;
 }
+
+.site-nav {
+  & > li {
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+  }
+}

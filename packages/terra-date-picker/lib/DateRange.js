@@ -12,6 +12,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('terra-base/lib/baseStyles');
+
 var _DatePicker = require('./DatePicker');
 
 var _DatePicker2 = _interopRequireDefault(_DatePicker);

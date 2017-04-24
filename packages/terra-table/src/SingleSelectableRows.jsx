@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
 
 const KEYCODES = {

@@ -36,6 +36,7 @@
   "dependencies": {
     "moment": "^2.17.1",
     "react-datepicker": "^0.44.0",
+    "terra-base": "^0.x",
     "terra-button": "^0.x",
     "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0",
