@@ -20,6 +20,8 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
+require('terra-base/lib/baseStyles');
+
 var _terraResponsiveElement = require('terra-responsive-element');
 
 var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);

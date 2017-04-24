@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-
+import 'terra-base/lib/baseStyles';
 import GridRow from './GridRow';
 import GridColumn from './GridColumn';
 

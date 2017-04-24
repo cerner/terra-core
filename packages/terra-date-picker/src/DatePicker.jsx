@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
+import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
 import DateInput from './DateInput';
 import './DatePicker.scss';
