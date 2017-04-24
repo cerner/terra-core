@@ -6,9 +6,9 @@ exports[`test should render the component with customMessages 1`] = `
       "App.test": "App test",
     }
   }>
-  <BaseStyles>
+  <div>
     customMessages
-  </BaseStyles>
+  </div>
 </I18nProvider>
 `;
 
@@ -16,12 +16,12 @@ exports[`test should render the component with merged attributes 1`] = `
 <I18nProvider
   locale="en-US"
   messages={Object {}}>
-  <BaseStyles
+  <div
     className="TestClass"
     data-mock="data"
     id="TestId">
     String
-  </BaseStyles>
+  </div>
 </I18nProvider>
 `;
 
@@ -29,9 +29,9 @@ exports[`test should support rendering a string as children 1`] = `
 <I18nProvider
   locale="en-US"
   messages={Object {}}>
-  <BaseStyles>
+  <div>
     String
-  </BaseStyles>
+  </div>
 </I18nProvider>
 `;
 
@@ -39,7 +39,7 @@ exports[`test should support rendering an array of elements as a children 1`] = 
 <I18nProvider
   locale="en-US"
   messages={Object {}}>
-  <BaseStyles>
+  <div>
     <h1>
       Heading
     </h1>
@@ -49,7 +49,7 @@ exports[`test should support rendering an array of elements as a children 1`] = 
     <p>
       Element 2
     </p>
-  </BaseStyles>
+  </div>
 </I18nProvider>
 `;
 
@@ -57,10 +57,10 @@ exports[`test should support rendering an element as children 1`] = `
 <I18nProvider
   locale="en-US"
   messages={Object {}}>
-  <BaseStyles>
+  <div>
     <p>
       Element
     </p>
-  </BaseStyles>
+  </div>
 </I18nProvider>
 `;
