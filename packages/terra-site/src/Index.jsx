@@ -6,8 +6,8 @@ import Home from './Home';
 
 // Examples
 import ArrangeExamples from './examples/arrange/Index';
-import BaseExamples from './examples/base/Index';
 import BadgeExamples from './examples/badge/Index';
+import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import ContentExamples from './examples/content/Index';
@@ -30,6 +30,7 @@ import TitleExamples from './examples/title/Index';
 // Test
 /* eslint-disable import/first */
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
+import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
 import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
@@ -44,6 +45,7 @@ import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-selec
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
+import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -75,6 +77,7 @@ ReactDOM.render((
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
+    {BadgeTestRoutes}
     {BaseTestRoutes}
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
@@ -88,6 +91,7 @@ ReactDOM.render((
     {ListItemTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {StatusTestRoutes}
     {TableTestRoutes}
   </Router>
 ), document.getElementById('root'));

@@ -6,6 +6,7 @@ const TestLinks = () => (
   <div>
     <ul>
       <li><Link to="/tests/arrange-tests">Arrange Tests</Link></li>
+      <li><Link to="/tests/badge-tests">Badge Tests</Link></li>
       <li><Link to="/tests/base-tests">Base Tests</Link></li>
       <li><Link to="/tests/button-tests">Button Tests</Link></li>
       <li><Link to="/tests/button-group-tests">Button Group Tests</Link></li>
@@ -19,6 +20,7 @@ const TestLinks = () => (
       <li><Link to="/tests/list-item-tests">ListItem Tests</Link></li>
       <li><Link to="/tests/single-select-list-tests">SingleSelectList Tests</Link></li>
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
+      <li><Link to="/tests/status-tests">Status Tests</Link></li>
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
     </ul>
   </div>
