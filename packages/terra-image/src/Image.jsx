@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import './Image.scss';
 
 const propTypes = {
@@ -22,11 +23,11 @@ const propTypes = {
   /**
    * Sets the height of the image.
    */
-  height: PropTypes.number,
+  height: PropTypes.string,
   /**
    * Sets the width of the image.
    */
-  width: PropTypes.number,
+  width: PropTypes.string,
 };
 
 const defaultProps = {

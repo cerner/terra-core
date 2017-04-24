@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Button from 'terra-button';
 import classNames from 'classnames';
-
+import 'terra-base/lib/baseStyles';
 import './ButtonGroupButton.scss';
 
 const propTypes = {

@@ -1,18 +1,18 @@
-# Terra Menu
+# Terra ContentContainer
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-menu.svg)](https://www.npmjs.org/package/terra-menu)
+[![NPM version](http://img.shields.io/npm/v/terra-content-container.svg)](https://www.npmjs.org/package/terra-content-container)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-menu component displays grouped navigation actions. It can be used for site wide navigation or for switching between documents in a container.
+The Terra ContentContainer is a structural component for the purpose of arranging content with a header.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-menu/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-content-container/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-menu`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-content-container`
 
 ## LICENSE
 

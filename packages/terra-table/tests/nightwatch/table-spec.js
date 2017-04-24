@@ -45,6 +45,13 @@ module.exports = {
       .assert.cssClassNotPresent('.terra-Table', '.terra-Table--striped');
   },
 
+  'Displays a table without padding': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/no-padding`)
+      .assert.elementPresent('.terra-Table')
+      .assert.cssClassNotPresent('.terra-Table', '.terra-Table--padded');
+  },
+
   'Display a sorting indicator': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-sort-indicator`)

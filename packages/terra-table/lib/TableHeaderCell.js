@@ -22,6 +22,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+require('terra-base/lib/baseStyles');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -40,11 +42,7 @@ var propTypes = {
   /**
    * Whether or not data in table is sorted
    */
-  sort: _react.PropTypes.oneOf(['asc', 'desc']),
-  /**
-   * The maximum height for the cell content in a table
-   */
-  height: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge'])
+  sort: _react.PropTypes.oneOf(['asc', 'desc'])
 };
 
 var defaultProps = {
@@ -56,12 +54,11 @@ var iconUp = _react2.default.createElement(_IconCaretUp2.default, null);
 
 var TableHeaderCell = function TableHeaderCell(_ref) {
   var content = _ref.content,
-      height = _ref.height,
       minWidth = _ref.minWidth,
       sort = _ref.sort,
-      customProps = _objectWithoutProperties(_ref, ['content', 'height', 'minWidth', 'sort']);
+      customProps = _objectWithoutProperties(_ref, ['content', 'minWidth', 'sort']);
 
-  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-min-width--' + minWidth, minWidth), _defineProperty({}, 'terra-Table-header-max-height--' + height, height), 'terra-Table-header', customProps.className]);
+  var contentClassName = (0, _classnames2.default)([_defineProperty({}, 'terra-Table-min-width--' + minWidth, minWidth), 'terra-Table-header', customProps.className]);
 
   var dataSort = {
     'data-sort': sort
@@ -85,12 +82,8 @@ var TableHeaderCell = function TableHeaderCell(_ref) {
   return _react2.default.createElement(
     'th',
     _extends({}, customProps, { className: contentClassName }, dataSort),
-    _react2.default.createElement(
-      'div',
-      null,
-      content,
-      sortIndicator
-    )
+    content,
+    sortIndicator
   );
 };
 
