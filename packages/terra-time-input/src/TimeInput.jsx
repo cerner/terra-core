@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import moment from 'moment';
 import TextMask from 'react-text-mask';
+import 'terra-base/lib/baseStyles';
 import TimePipe from './TimePipe';
 import './TimeInput.scss';
 

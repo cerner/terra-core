@@ -20,6 +20,8 @@ var _reactTextMask = require('react-text-mask');
 
 var _reactTextMask2 = _interopRequireDefault(_reactTextMask);
 
+require('terra-base/lib/baseStyles');
+
 var _TimePipe = require('./TimePipe');
 
 var _TimePipe2 = _interopRequireDefault(_TimePipe);
