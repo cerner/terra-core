@@ -15,3 +15,7 @@ console.error = (message) => {
     throw new Error(message);
   }
 };
+
+const htmlTag = document.getElementsByTagName('html')[0];
+htmlTag.setAttribute('class', 'terra-Base');
+htmlTag.setAttribute('dir', 'ltr');
