@@ -1,0 +1,65 @@
+exports[`test should mount an open modal 1`] = `
+<ModalExample>
+  <div>
+    <Modal
+      ariaLabel="Terra Modal"
+      classNameModal={null}
+      classNameOverlay={null}
+      closeOnEsc={true}
+      closeOnOutsideClick={true}
+      isFullscreen={false}
+      isOpened={true}
+      isScrollable={false}
+      role="document">
+      <Portal
+        closeOnEsc={true}
+        closeOnOutsideClick={true}
+        isOpened={true}
+        onClose={[Function]}
+        onOpen={[Function]}
+        onUpdate={[Function]} />
+    </Modal>
+    <button
+      onClick={[Function]}>
+      Open Modal
+    </button>
+  </div>
+</ModalExample>
+`;
+
+exports[`test should render an open modal 1`] = `
+<div>
+  <button>
+    Open Modal
+  </button>
+</div>
+`;
+
+exports[`test should shallow an open modal 1`] = `
+<div>
+  <Modal
+    ariaLabel="Terra Modal"
+    classNameModal={null}
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={true}
+    isFullscreen={false}
+    isOpened={true}
+    isScrollable={false}
+    role="document">
+    <div>
+      <h1>
+        Terra Modal
+      </h1>
+      <button
+        onClick={[Function]}>
+        Close Modal
+      </button>
+    </div>
+  </Modal>
+  <button
+    onClick={[Function]}>
+    Open Modal
+  </button>
+</div>
+`;
