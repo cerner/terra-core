@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from '../src/Badge';
+import Badge from '../../src/Badge';
 
 const iconValue = <img alt="Test icon" />;
 // Snapshot Tests
