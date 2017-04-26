@@ -88,10 +88,6 @@ var propTypes = {
    **/
   onUpdate: _react.PropTypes.func,
   /**
-   * The second way how to open the modal. This element will be rendered by the modal immediately with onClick handler that triggers modal opening. Notice that you don't have to deal with the open/close state (like when using the isOpen prop).
-   **/
-  openByClickOn: _react.PropTypes.element,
-  /**
    * Role attribute on the modal dialog
    **/
   role: _react.PropTypes.string
@@ -107,7 +103,6 @@ var defaultProps = {
   isFullscreen: false,
   isOpened: false,
   isScrollable: false,
-  openByClickOn: null,
   role: 'document'
 };
 
@@ -139,9 +134,8 @@ var Modal = function (_React$Component) {
           onClose = _props.onClose,
           onOpen = _props.onOpen,
           onUpdate = _props.onUpdate,
-          openByClickOn = _props.openByClickOn,
           role = _props.role,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'openByClickOn', 'role']);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'role']);
 
       return _react2.default.createElement(
         _reactPortal2.default,
@@ -149,7 +143,6 @@ var Modal = function (_React$Component) {
           isOpened: isOpened,
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
-          openByClickOn: openByClickOn,
           onClose: onClose,
           onOpen: onOpen,
           onUpdate: onUpdate,

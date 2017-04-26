@@ -21,17 +21,6 @@ module.exports = {
       .waitForElementNotPresent('.terra-Modal', 1000);
   },
 
-  'openByClickOn prop': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/open-by-click-on`)
-      .waitForElementPresent('.button-open-modal', 1000)
-      .waitForElementNotPresent('.terra-Modal', 1000)
-      .click('.button-open-modal')
-      .waitForElementPresent('.terra-Modal', 1000)
-      .click('.terra-Modal-overlay')
-      .waitForElementNotPresent('.terra-Modal', 1000);
-  },
-
   'isFullscreen={true}': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-fullscreen`)

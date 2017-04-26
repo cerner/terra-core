@@ -12,7 +12,6 @@ import ModalDisableCloseOnOutsideClick from './components/ModalDisableCloseOnOut
 import ModalEventHooks from './components/ModalEventHooks';
 import ModalIsFullscreen from './components/ModalIsFullscreen';
 import ModalIsOpen from './components/ModalIsOpen';
-import ModalOpenByClickOn from './components/ModalOpenByClickOn';
 import ModalOverrideRole from './components/ModalOverrideRole';
 import ModalNoFocusableContent from './components/ModalNoFocusableContent';
 import ModalScrollableTrue from './components/ModalScrollableTrue';
@@ -29,7 +28,6 @@ const routes = (
     <Route path="/tests/modal-tests/event-hooks" component={ModalEventHooks} />
     <Route path="/tests/modal-tests/is-fullscreen" component={ModalIsFullscreen} />
     <Route path="/tests/modal-tests/is-open" component={ModalIsOpen} />
-    <Route path="/tests/modal-tests/open-by-click-on" component={ModalOpenByClickOn} />
     <Route path="/tests/modal-tests/override-role" component={ModalOverrideRole} />
     <Route path="/tests/modal-tests/no-focusable-content" component={ModalNoFocusableContent} />
     <Route path="/tests/modal-tests/scrollable-true" component={ModalScrollableTrue} />

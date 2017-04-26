@@ -13,7 +13,6 @@ class ModalIsOpened extends React.Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-
   handleOpenModal() {
     this.setState({ isOpened: true });
   }

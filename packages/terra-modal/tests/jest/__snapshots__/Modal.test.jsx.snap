@@ -10,7 +10,6 @@ exports[`test should mount an open modal 1`] = `
       isFullscreen={false}
       isOpened={true}
       isScrollable={false}
-      openByClickOn={null}
       role="document">
       <Portal
         closeOnEsc={true}
@@ -18,8 +17,7 @@ exports[`test should mount an open modal 1`] = `
         isOpened={true}
         onClose={[Function]}
         onOpen={[Function]}
-        onUpdate={[Function]}
-        openByClickOn={null} />
+        onUpdate={[Function]} />
     </Modal>
     <button
       onClick={[Function]}>
@@ -48,7 +46,6 @@ exports[`test should shallow an open modal 1`] = `
     isFullscreen={false}
     isOpened={true}
     isScrollable={false}
-    openByClickOn={null}
     role="document">
     <div>
       <h1>

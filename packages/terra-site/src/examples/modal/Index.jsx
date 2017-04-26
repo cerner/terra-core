@@ -10,7 +10,6 @@ import ModalSrc from '!raw-loader!terra-modal/src/Modal';
 
 // Example Files
 import ModalIsOpened from './ModalIsOpened';
-import ModalOpenByClickOn from './ModalOpenByClickOn';
 import ModalDisableCloseOnEscCloseOnOutsideClick from './ModalDisableCloseOnEscCloseOnOutsideClick';
 import ModalIsFullscreen from './ModalIsFullscreen';
 
@@ -21,9 +20,6 @@ const ModalExamples = () => (
     <PropsTable id="props-table" src={ModalSrc} />
     <h2 id="isOpened">Using isOpened prop</h2>
     <ModalIsOpened />
-    <h2 id="openByClickOn">Using openByClickOn prop</h2>
-    <ModalOpenByClickOn />
-    <hr />
     <h2 id="closeOnEsc-closeOnOutsideClick">Disable Close on esc and close on outside click</h2>
     <ModalDisableCloseOnEscCloseOnOutsideClick />
     <h2 id="isFullscreen">Enable isFullscreen</h2>
