@@ -1,7 +1,7 @@
 Cerner Corporation
 
 - Ryan Manuel [@ryanthemanuel]
-- Matt Butler [@Matt-Butler]
+- Matthew Butler [@Matt-Butler]
 - Brett Jankord [@bjankord]
 - Matt Henkes [@mjhenkes]
 - Stephen Esser [@StephenEsser]
