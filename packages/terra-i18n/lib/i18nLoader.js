@@ -8,13 +8,17 @@ var _translationLoaders = require('./translationLoaders');
 
 var _translationLoaders2 = _interopRequireDefault(_translationLoaders);
 
+var _i18nSupportedLanguages = require('./i18nSupportedLanguages');
+
+var _i18nSupportedLanguages2 = _interopRequireDefault(_i18nSupportedLanguages);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* eslint-disable */
-var hasIntl = typeof Intl !== 'undefined';
+var hasIntl = typeof Intl !== 'undefined'; /* eslint-disable */
+
 
 var permitParams = function permitParams(locale, callback) {
-  var supportedLocales = ['en', 'en-US', 'en-GB', 'es', 'de', 'fi-FI', 'fr', 'pt'];
+  var supportedLocales = _i18nSupportedLanguages2.default;
   if (supportedLocales.indexOf(locale) < 0) {
     throw new Error(locale + ' is not supported, supported locales:' + supportedLocales);
   }

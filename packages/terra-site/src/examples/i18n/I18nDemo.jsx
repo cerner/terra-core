@@ -8,14 +8,14 @@ class Demo extends React.Component {
     super(props);
     this.state = {
       load: false,
-      locale: props.locale,
+      locale: 'en-US',
       messages: {},
     };
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
   }
 
   componentDidMount() {
-    i18nLoader(this.props.locale, this.setState, this);
+    i18nLoader(this.state.locale, this.setState, this);
   }
 
   handleLocaleChange(e) {

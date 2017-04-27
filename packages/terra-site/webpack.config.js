@@ -6,6 +6,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const I18nAggregatorPlugin = require('./node_modules/terra-i18n/lib/I18nAggregatorPlugin');
 
 module.exports = {
   entry: {
@@ -44,6 +45,7 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['terra-core'],
     }),
+    new I18nAggregatorPlugin(),
   ],
   postcss: [
     autoprefixer({
@@ -58,9 +60,13 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
+    modulesDirectories: [path.resolve(__dirname, 'aggregatedTranslations'), 'node_modules'],
 
     // See https://github.com/facebook/react/issues/8026
-    alias: { react: path.resolve(__dirname, 'node_modules', 'react') },
+    alias: {
+      react: path.resolve(__dirname, 'node_modules', 'react'),
+      'react-intl': path.resolve(__dirname, 'node_modules', 'react-intl'),
+    },
   },
   output: {
     filename: '[name].js',

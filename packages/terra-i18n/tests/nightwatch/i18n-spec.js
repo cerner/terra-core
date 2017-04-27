@@ -1,12 +1,12 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const deTranslations = require('../../lib/translations/de.js').messages;
-const enTranslations = require('../../lib/translations/en.js').messages;
-const enGBTranslations = require('../../lib/translations/en-GB.js').messages;
-const enUSTranslations = require('../../lib/translations/en-US.js').messages;
-const esTranslations = require('../../lib/translations/es.js').messages;
-const fiFITranslations = require('../../lib/translations/fi-FI.js').messages;
-const frTranslations = require('../../lib/translations/fr.js').messages;
-const ptTranslations = require('../../lib/translations/pt.js').messages;
+const deTranslations = require('../../translations/de.js').messages;
+const enTranslations = require('../../translations/en.js').messages;
+const enGBTranslations = require('../../translations/en-GB.js').messages;
+const enUSTranslations = require('../../translations/en-US.js').messages;
+const esTranslations = require('../../translations/es.js').messages;
+const fiFITranslations = require('../../translations/fi-FI.js').messages;
+const frTranslations = require('../../translations/fr.js').messages;
+const ptTranslations = require('../../translations/pt.js').messages;
 
 const defaultTranslations = enTranslations;
 

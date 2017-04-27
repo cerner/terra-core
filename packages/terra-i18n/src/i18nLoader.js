@@ -2,10 +2,12 @@
 import intlLoaders from './intlLoaders';
 import translationLoaders from './translationLoaders';
 
+import i18nSupportedLanguages from './i18nSupportedLanguages';
+
 const hasIntl = typeof (Intl) !== 'undefined';
 
 const permitParams = (locale, callback) => {
-  const supportedLocales = ['en', 'en-US', 'en-GB', 'es', 'de', 'fi-FI', 'fr', 'pt'];
+  const supportedLocales = i18nSupportedLanguages;
   if (supportedLocales.indexOf(locale) < 0) {
     throw new Error(`${locale} is not supported, supported locales:${supportedLocales}`);
   }
