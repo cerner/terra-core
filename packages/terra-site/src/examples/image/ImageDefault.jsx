@@ -12,7 +12,7 @@ const ImageDefault = () => (
     <h2>Thumbnail</h2>
     <Image src="http://lorempixel.com/150/150/nature/" alt="thumbnail image" variant="thumbnail" />
     <h2>Fluid</h2>
-    <Image src="http://lorempixel.com/1000/200/nature/" alt="fluid image" isFluid />
+    <Image src="http://placehold.it/1000x200" alt="fluid image" isFluid />
   </div>
 );
 
