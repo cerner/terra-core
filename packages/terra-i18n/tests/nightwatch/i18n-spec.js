@@ -1,16 +1,18 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const deTranslations = require('../../translations/de.js').messages;
-const enTranslations = require('../../translations/en.js').messages;
-const enGBTranslations = require('../../translations/en-GB.js').messages;
-const enUSTranslations = require('../../translations/en-US.js').messages;
-const esTranslations = require('../../translations/es.js').messages;
-const fiFITranslations = require('../../translations/fi-FI.js').messages;
-const frTranslations = require('../../translations/fr.js').messages;
-const ptTranslations = require('../../translations/pt.js').messages;
+const screenshot = require('terra-toolkit').screenshot;
+const fs = require('fs');
+const path = require('path');
+
+const deTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'de.json'), 'utf8'));
+const enTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'en-US.json'), 'utf8'));
+const enGBTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'en-GB.json'), 'utf8'));
+const enUSTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'en.json'), 'utf8'));
+const esTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'es.json'), 'utf8'));
+const fiFITranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'fi-FI.json'), 'utf8'));
+const frTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'fr.json'), 'utf8'));
+const ptTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'pt.json'), 'utf8'));
 
 const defaultTranslations = enTranslations;
-
-const screenshot = require('terra-toolkit').screenshot;
 
 const waitInms = 1000;
 
