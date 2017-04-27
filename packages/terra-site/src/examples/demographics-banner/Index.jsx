@@ -26,7 +26,7 @@ const DemographicsBannerExamples = () => (
     <DemographicsBanner />
     <h1>Demographics Banner with App Content</h1>
     <DemographicsBanner
-      additionalDetails={<span className="risk-score">5%</span>}
+      additionalDetails={<p>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</p>}
       age="25 Years"
       dateOfBirth="May 9, 1993"
       dateOfBirthLabel="DOB"
@@ -38,7 +38,6 @@ const DemographicsBannerExamples = () => (
     />
     <h1>Deceased Demographics Banners</h1>
     <DemographicsBanner
-      additionalDetails={<span className="risk-score">5%</span>}
       age="25 Years"
       dateOfBirth="May 9, 1992"
       dateOfBirthLabel="DOB"
@@ -53,6 +52,23 @@ const DemographicsBannerExamples = () => (
     <h1>Demographics Banner with Gestational and Post Menstrural ages</h1>
     <DemographicsBanner
       additionalDetails={<span className="risk-score">5%</span>}
+      age="25 Years"
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      gender="Male"
+      gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
+      identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
+      personName="Johnathon Doe"
+      postMenstrualAge="April 7, 2016"
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John"
+    />
+    <h1>Demographics Banner with truncated additional details for Mobile</h1>
+    <DemographicsBanner
+      additionalDetails={<p>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</p>}
+      additionalDetailsTruncated
       age="25 Years"
       dateOfBirth="May 9, 1993"
       dateOfBirthLabel="DOB"
