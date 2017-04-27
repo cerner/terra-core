@@ -30,10 +30,6 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
-  "devDependencies": {
-    "terra-application": "^0.x",
-    "terra-legacy-theme": "^0.x"
-  },
   "dependencies": {
     "glob": "^7.1.1",
     "html-webpack-plugin": "^2.28.0",
