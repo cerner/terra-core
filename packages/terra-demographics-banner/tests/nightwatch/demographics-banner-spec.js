@@ -56,7 +56,7 @@ module.exports = {
       .element('.terra-DemographicsBanner--additional-details')
       .text
       .to
-      .contain('5%');
+      .contain('St. Johns West Wing Room Cardiac Unit 253');
 
     if (width < windowSizes.small[0]) {
       browser

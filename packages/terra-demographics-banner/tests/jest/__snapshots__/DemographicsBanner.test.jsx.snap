@@ -3,10 +3,7 @@ exports[`test renders a banner that has basic information 1`] = `
   defaultElement={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -30,10 +27,7 @@ exports[`test renders a banner that has basic information 1`] = `
   medium={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo" />
       <div
@@ -69,10 +63,7 @@ exports[`test renders a banner that has basic information 1`] = `
   small={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo" />
       <div
@@ -107,10 +98,7 @@ exports[`test renders a banner that has basic information 1`] = `
   tiny={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -138,10 +126,7 @@ exports[`test renders a blank banner properly 1`] = `
   defaultElement={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -165,10 +150,7 @@ exports[`test renders a blank banner properly 1`] = `
   medium={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo" />
       <div
@@ -204,10 +186,7 @@ exports[`test renders a blank banner properly 1`] = `
   small={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo" />
       <div
@@ -242,10 +221,7 @@ exports[`test renders a blank banner properly 1`] = `
   tiny={
     <section
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -273,10 +249,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
   defaultElement={
     <section
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -303,10 +276,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
   medium={
     <section
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo" />
       <div
@@ -345,10 +315,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
   small={
     <section
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo" />
       <div
@@ -386,10 +353,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
   tiny={
     <section
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -431,10 +395,7 @@ exports[`test renders the banner appropriately for a person with gestational and
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -490,10 +451,7 @@ exports[`test renders the banner appropriately for a person with gestational and
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo">
         <img
@@ -566,10 +524,7 @@ exports[`test renders the banner appropriately for a person with gestational and
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo">
         <img
@@ -641,10 +596,7 @@ exports[`test renders the banner appropriately for a person with gestational and
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -704,10 +656,7 @@ exports[`test renders the banner properly for a deceased person with additional 
         ]
       }
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -760,10 +709,7 @@ exports[`test renders the banner properly for a deceased person with additional 
         ]
       }
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo">
         <img
@@ -833,10 +779,7 @@ exports[`test renders the banner properly for a deceased person with additional 
         ]
       }
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo">
         <img
@@ -905,10 +848,7 @@ exports[`test renders the banner properly for a deceased person with additional 
         ]
       }
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -965,10 +905,7 @@ exports[`test renders the banner that contains additional information 1`] = `
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
@@ -1018,10 +955,7 @@ exports[`test renders the banner that contains additional information 1`] = `
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo">
         <img
@@ -1088,10 +1022,7 @@ exports[`test renders the banner that contains additional information 1`] = `
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <div
         className="terra-DemographicsBanner--profile-photo">
         <img
@@ -1157,10 +1088,7 @@ exports[`test renders the banner that contains additional information 1`] = `
         ]
       }
       className="terra-DemographicsBanner"
-      dateOfBirthLabel="DOB"
-      deceasedDateLabel="Deceased"
-      gestationalAgeLabel={null}
-      postMenstrualAgeLabel={null}>
+      dateOfBirthLabel="DOB">
       <h1
         className="terra-DemographicsBanner--person-name">
         <span>
