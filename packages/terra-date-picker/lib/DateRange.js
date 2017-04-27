@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
 require('terra-base/lib/baseStyles');
 
 var _DatePicker = require('./DatePicker');
@@ -28,13 +32,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * A moment object to use as the default end date for a date range.
+   * An ISO 8601 string representation of the default end date for a date range.
    */
-  endDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  endDate: _react.PropTypes.string,
   /**
-   * A moment object to use as the default start date for a date range.
+   * An ISO 8601 string representation of the selected start date.
    */
-  startDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  startDate: _react.PropTypes.string,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
@@ -44,12 +48,22 @@ var propTypes = {
 var DateRange = function (_React$Component) {
   _inherits(DateRange, _React$Component);
 
+  _createClass(DateRange, null, [{
+    key: 'safeMoment',
+    value: function safeMoment(dateISO8601) {
+      var momentDate = _moment2.default.utc(dateISO8601);
+
+      return momentDate.isValid() ? momentDate : null;
+    }
+  }]);
+
   function DateRange(props) {
     _classCallCheck(this, DateRange);
 
     var _this = _possibleConstructorReturn(this, (DateRange.__proto__ || Object.getPrototypeOf(DateRange)).call(this, props));
 
     _this.state = {
+      format: 'MM/DD/YYYY', // TODO: Get the format from i18n
       startDate: props.startDate,
       endDate: props.endDate
     };
@@ -69,7 +83,7 @@ var DateRange = function (_React$Component) {
       var startDateForRange = startDate;
       var endDateForRange = endDate;
 
-      if (startDateForRange.isAfter(endDateForRange)) {
+      if (_moment2.default.utc(startDateForRange, this.state.format).isAfter(_moment2.default.utc(endDateForRange, this.state.format))) {
         var _ref2 = [endDateForRange, startDateForRange];
         startDateForRange = _ref2[0];
         endDateForRange = _ref2[1];
@@ -98,14 +112,14 @@ var DateRange = function (_React$Component) {
         'div',
         { className: 'terra-DatePicker-range' },
         _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
-          selectedDate: this.state.startDate,
+          defaultDate: this.state.startDate,
           isStartDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
           onChange: this.handleChangeStart
         })),
         _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
-          selectedDate: this.state.endDate,
+          defaultDate: this.state.endDate,
           isEndDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
