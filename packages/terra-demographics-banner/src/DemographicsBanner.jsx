@@ -167,12 +167,15 @@ class DemographicsBanner extends React.Component {
       additionalDetailsTruncated,
       dateOfBirth,
       deceasedDate,
+      deceasedDateLabel,
       gender,
       gestationalAge,
+      gestationalAgeLabel,
       identifiers,
       personName,
       photo,
       postMenstrualAge,
+      postMenstrualAgeLabel,
       preferredFirstName,
       ...customProps
     } = this.props;
@@ -222,12 +225,15 @@ class DemographicsBanner extends React.Component {
       additionalDetailsTruncated,
       dateOfBirth,
       deceasedDate,
+      deceasedDateLabel,
       gender,
       gestationalAge,
+      gestationalAgeLabel,
       identifiers,
       personName,
       photo,
       postMenstrualAge,
+      postMenstrualAgeLabel,
       preferredFirstName,
       ...customProps
     } = this.props;
