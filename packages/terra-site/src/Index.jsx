@@ -50,6 +50,7 @@ import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import ProgressBarRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -101,5 +102,6 @@ ReactDOM.render((
     {StatusTestRoutes}
     {TableTestRoutes}
     {ModalTestRoutes}
+    {ProgressBarRoutes}
   </Router>
 ), document.getElementById('root'));
