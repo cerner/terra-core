@@ -34,10 +34,10 @@ const ButtonGroupExamples = () => (
     <ButtonGroupCompact />
     <h2>Icons</h2>
     <ButtonGroupWithIcons />
+    <h2>Unselectable With On Click Set</h2>
+    <ButtonGroupOnClick />
     <h2>Selectable</h2>
     <ButtonGroupSelectable />
-    <h2>On Click</h2>
-    <ButtonGroupOnClick />
     <h2>On Change</h2>
     <ButtonGroupOnChange />
   </div>
