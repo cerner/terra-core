@@ -30,12 +30,9 @@ function apply(options) {
   _i18nSupportedLanguages2.default.forEach(function (language) {
     var currentLanguageMessages = {};
     getDirectories(_path2.default.resolve(options.baseDirectory, 'node_modules')).forEach(function (module) {
-      var translationFile = _path2.default.resolve(options.baseDirectory, 'node_modules', module, 'translations', language + '.js');
+      var translationFile = _path2.default.resolve(options.baseDirectory, 'node_modules', module, 'translations', language + '.json');
       if (_fs2.default.existsSync(translationFile)) {
-        /* eslint-disable global-require, import/no-dynamic-require */
-        var translationForModule = require(translationFile);
-        /* eslint-enable global-require, import/no-dynamic-require */
-        _extends(currentLanguageMessages, translationForModule.messages);
+        _extends(currentLanguageMessages, JSON.parse(_fs2.default.readFileSync(translationFile, 'utf8')));
       }
     });
 

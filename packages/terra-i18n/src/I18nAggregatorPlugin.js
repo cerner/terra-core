@@ -12,12 +12,9 @@ function apply(options) {
   i18nSupportedLanguages.forEach((language) => {
     const currentLanguageMessages = {};
     getDirectories(path.resolve(options.baseDirectory, 'node_modules')).forEach((module) => {
-      const translationFile = path.resolve(options.baseDirectory, 'node_modules', module, 'translations', `${language}.js`);
+      const translationFile = path.resolve(options.baseDirectory, 'node_modules', module, 'translations', `${language}.json`);
       if (fs.existsSync(translationFile)) {
-        /* eslint-disable global-require, import/no-dynamic-require */
-        const translationForModule = require(translationFile);
-        /* eslint-enable global-require, import/no-dynamic-require */
-        Object.assign(currentLanguageMessages, translationForModule.messages);
+        Object.assign(currentLanguageMessages, JSON.parse(fs.readFileSync(translationFile, 'utf8')));
       }
     });
 
