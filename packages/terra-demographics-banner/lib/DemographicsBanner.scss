@@ -19,7 +19,7 @@
   }
 }
 
-.terra-demographicsBanner--value {
+.terra-DemographicsBanner--value {
   display: inline-flex;
 
   @if $terra-bidi {
@@ -48,13 +48,13 @@
   }
 }
 
-.terra-demographicsBanner--value-label {
+.terra-DemographicsBanner--value-label {
   @include terra-margin-end(0.357em);
 }
 
 .terra-DemographicsBanner--person-name {
-  margin: 0;
   flex: 2;
+  margin: 0;
 }
 
 .terra-DemographicsBanner--person-details {

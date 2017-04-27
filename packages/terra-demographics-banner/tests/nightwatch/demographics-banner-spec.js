@@ -26,7 +26,7 @@ module.exports = {
     browser.expect.element('.terra-DemographicsBanner').to.be.present;
     browser.expect.element('.terra-DemographicsBanner--preferred-first-name').to.not.be.present;
     browser.expect.element('.terra-DemographicsBanner--person-name').text.to.contain('--');
-    browser.expect.element('.terra-DemographicsBanner--person-details').text.to.contain("DOB:\n--");
+    browser.expect.element('.terra-DemographicsBanner--person-details').text.to.contain('DOB:\n--');
   },
   'Displays all the content when it is provided to the banner': (browser) => {
     const width = browser.globals.width;
@@ -49,8 +49,7 @@ module.exports = {
       .element('.terra-DemographicsBanner .terra-DemographicsBanner--person-details')
       .text
       .to
-      .contain("25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993"
-      );
+      .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993');
 
     browser
       .expect

@@ -6,7 +6,7 @@ export default () =>
   <DemographicsBanner
     additionalDetails={<span className="risk-score">5%</span>}
     age="25 Years"
-    applicationContentTruncated={true}
+    additionalDetailsTruncated
     dateOfBirth="May 9, 1993"
     dateOfBirthLabel="DOB"
     gestationalAge="May 11, 1993"

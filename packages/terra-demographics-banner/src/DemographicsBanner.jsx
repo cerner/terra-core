@@ -93,8 +93,8 @@ const defaultProps = {
 
 // eslint-disable-next-line react/prop-types
 const DemographicsBannerValue = ({ label, value }) => (
-  <span className="terra-demographicsBanner--value">
-    { label && <span className="terra-demographicsBanner--value-label">{`${label}:`}</span> }
+  <span className="terra-DemographicsBanner--value">
+    { label && <span className="terra-DemographicsBanner--value-label">{`${label}:`}</span> }
     <b>{value}</b>
   </span>
 );
@@ -102,42 +102,42 @@ const DemographicsBannerValue = ({ label, value }) => (
 class DemographicsBanner extends React.Component {
   personDetails() {
     const elements = [
-      <DemographicsBannerValue key="age" value={ this.props.age } />,
-      <DemographicsBannerValue key="gender" value={ this.props.gender } />,
-      <DemographicsBannerValue 
-        key="dob" 
-        label={ this.props.dateOfBirthLabel } 
-        value={ this.props.dateOfBirth }
+      <DemographicsBannerValue key="age" value={this.props.age} />,
+      <DemographicsBannerValue key="gender" value={this.props.gender} />,
+      <DemographicsBannerValue
+        key="dob"
+        label={this.props.dateOfBirthLabel}
+        value={this.props.dateOfBirth}
       />,
     ];
 
     if (this.props.gestationalAge) {
       elements.push(
-        <DemographicsBannerValue 
-          key="ga" 
-          label={ this.props.gestationalAgeLabel } 
-          value={ this.props.gestationalAge }
-        />
+        <DemographicsBannerValue
+          key="ga"
+          label={this.props.gestationalAgeLabel}
+          value={this.props.gestationalAge}
+        />,
       );
     }
 
     if (this.props.postMenstrualAge) {
       elements.push(
-        <DemographicsBannerValue 
-          key="pma" 
-          label={ this.props.postMenstrualAgeLabel } 
-          value={ this.props.postMenstrualAge }
-        />
+        <DemographicsBannerValue
+          key="pma"
+          label={this.props.postMenstrualAgeLabel}
+          value={this.props.postMenstrualAge}
+        />,
       );
     }
 
     if (this.props.deceasedDate) {
       elements.push(
-        <DemographicsBannerValue 
-          key="deceased" 
-          label={ this.props.deceasedDateLabel } 
-          value={ this.props.deceasedDate }
-        />
+        <DemographicsBannerValue
+          key="deceased"
+          label={this.props.deceasedDateLabel}
+          value={this.props.deceasedDate}
+        />,
       );
     }
 
@@ -149,10 +149,10 @@ class DemographicsBanner extends React.Component {
 
     if (identifiers) {
       return Object.keys(identifiers).map(key =>
-        <DemographicsBannerValue 
-          key={`identifier-${key}`} 
-          label={ key } 
-          value={ identifiers[key] }
+        <DemographicsBannerValue
+          key={`identifier-${key}`}
+          label={key}
+          value={identifiers[key]}
         />,
       );
     }
@@ -242,7 +242,7 @@ class DemographicsBanner extends React.Component {
 
     const additionalDetailsClasses = classNames(
       'terra-DemographicsBanner--additional-details',
-      { 'terra-DemographicsBanner--truncated' : additionalDetailsTruncated }
+      { 'terra-DemographicsBanner--truncated': additionalDetailsTruncated },
     );
 
     return (
@@ -272,7 +272,7 @@ class DemographicsBanner extends React.Component {
         responsiveTo="window"
         defaultElement={this.renderSmallDemographicsBanner()}
         tiny={this.renderSmallDemographicsBanner()}
-        small={this.renderLargeDemographicsBanner()} 
+        small={this.renderLargeDemographicsBanner()}
         medium={this.renderLargeDemographicsBanner()}
       />
     );
