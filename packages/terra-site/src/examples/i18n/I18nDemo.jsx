@@ -7,7 +7,7 @@ class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: false,
+      areTranslationsLoaded: false,
       locale: 'en-US',
       messages: {},
     };
@@ -23,7 +23,7 @@ class Demo extends React.Component {
   }
 
   render() {
-    if (!this.state.load) {
+    if (!this.state.areTranslationsLoaded) {
       return <div />;
     }
     return (

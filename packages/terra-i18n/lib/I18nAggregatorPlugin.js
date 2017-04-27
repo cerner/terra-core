@@ -20,9 +20,7 @@ var _i18nSupportedLanguages2 = _interopRequireDefault(_i18nSupportedLanguages);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function I18nAggregatorPlugin() {}
-
-I18nAggregatorPlugin.prototype.apply = function (compiler) {
+function apply(options) {
   function getDirectories(srcPath) {
     return _fs2.default.readdirSync(srcPath).filter(function (file) {
       return _fs2.default.statSync(_path2.default.join(srcPath, file)).isDirectory();
@@ -31,8 +29,8 @@ I18nAggregatorPlugin.prototype.apply = function (compiler) {
 
   _i18nSupportedLanguages2.default.forEach(function (language) {
     var currentLanguageMessages = {};
-    getDirectories(_path2.default.resolve(compiler.context, 'node_modules')).forEach(function (module) {
-      var translationFile = _path2.default.resolve(compiler.context, 'node_modules', module, 'translations', language + '.js');
+    getDirectories(_path2.default.resolve(options.baseDirectory, 'node_modules')).forEach(function (module) {
+      var translationFile = _path2.default.resolve(options.baseDirectory, 'node_modules', module, 'translations', language + '.js');
       if (_fs2.default.existsSync(translationFile)) {
         /* eslint-disable global-require, import/no-dynamic-require */
         var translationForModule = require(translationFile);
@@ -42,10 +40,25 @@ I18nAggregatorPlugin.prototype.apply = function (compiler) {
     });
 
     if (currentLanguageMessages !== {}) {
-      (0, _mkdirp2.default)(_path2.default.resolve(compiler.context, 'aggregatedTranslations'));
-      _fs2.default.writeFileSync(_path2.default.resolve(compiler.context, 'aggregatedTranslations', language + '.js'), 'import { addLocaleData } from \'react-intl\';\nimport localeData from \'react-intl/locale-data/' + language.split('-')[0] + '\';\n\naddLocaleData(localeData);\n\nconst messages = ' + JSON.stringify(currentLanguageMessages, null, 2) + ';\n\nmodule.exports = {\n  load: true,\n  locale: \'' + language + '\',\n  messages,\n};');
+      (0, _mkdirp2.default)(_path2.default.resolve(options.baseDirectory, 'aggregated-translations'));
+      _fs2.default.writeFileSync(_path2.default.resolve(options.baseDirectory, 'aggregated-translations', language + '.js'), 'import { addLocaleData } from \'react-intl\';\nimport localeData from \'react-intl/locale-data/' + language.split('-')[0] + '\';\n\naddLocaleData(localeData);\n\nconst messages = ' + JSON.stringify(currentLanguageMessages, null, 2) + ';\n\nmodule.exports = {\n  areTranslationsLoaded: true,\n  locale: \'' + language + '\',\n  messages,\n};');
     }
   });
-};
+}
 
-module.exports = I18nAggregatorPlugin;
+module.exports = function (options) {
+  var updatedOptions = options;
+  if (updatedOptions instanceof Array) {
+    updatedOptions = {
+      include: updatedOptions
+    };
+  }
+
+  if (!Array.isArray(updatedOptions.include)) {
+    updatedOptions.include = [updatedOptions.include];
+  }
+
+  return {
+    apply: apply.bind(undefined, updatedOptions)
+  };
+};

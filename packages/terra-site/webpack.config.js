@@ -45,7 +45,9 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['terra-core'],
     }),
-    new I18nAggregatorPlugin(),
+    new I18nAggregatorPlugin({
+      baseDirectory: __dirname,
+    }),
   ],
   postcss: [
     autoprefixer({
@@ -60,7 +62,7 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    modulesDirectories: [path.resolve(__dirname, 'aggregatedTranslations'), 'node_modules'],
+    modulesDirectories: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
 
     // See https://github.com/facebook/react/issues/8026
     alias: {
