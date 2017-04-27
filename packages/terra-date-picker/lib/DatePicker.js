@@ -44,6 +44,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
+   * An ISO 8601 string representation of the default date to show in the date input.
+   */
+  defaultDate: _react.PropTypes.string,
+  /**
    * An ISO 8601 string representation of the default end date for a date range.
    */
   endDate: _react.PropTypes.string,
@@ -80,11 +84,7 @@ var propTypes = {
    */
   onChange: _react.PropTypes.func,
   /**
-   * An ISO 8601 string representation of the default date to show in the date input. This is typically used in the date range. selectDate is different from startDate in that it is used to default into the
-   */
-  defaultDate: _react.PropTypes.string,
-  /**
-   * An ISO 8601 string representation of the selected start date.
+   * An ISO 8601 string representation of the selected start date. startDate represents the currently selected date after some change has been made where as defaultDate represents the initial default date that shows in the input before any change is made.
    */
   startDate: _react.PropTypes.string
 };

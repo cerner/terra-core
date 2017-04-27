@@ -8,6 +8,10 @@ import './DatePicker.scss';
 
 const propTypes = {
   /**
+   * An ISO 8601 string representation of the default date to show in the date input.
+   */
+  defaultDate: PropTypes.string,
+  /**
    * An ISO 8601 string representation of the default end date for a date range.
    */
   endDate: PropTypes.string,
@@ -44,11 +48,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * An ISO 8601 string representation of the default date to show in the date input. This is typically used in the date range. selectDate is different from startDate in that it is used to default into the
-   */
-  defaultDate: PropTypes.string,
-  /**
-   * An ISO 8601 string representation of the selected start date.
+   * An ISO 8601 string representation of the selected start date. startDate represents the currently selected date after some change has been made where as defaultDate represents the initial default date that shows in the input before any change is made.
    */
   startDate: PropTypes.string,
 };
