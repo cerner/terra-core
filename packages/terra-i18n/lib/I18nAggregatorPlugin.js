@@ -40,6 +40,7 @@ I18nAggregatorPlugin.prototype.apply = function (compiler) {
         _extends(currentLanguageMessages, translationForModule.messages);
       }
     });
+
     if (currentLanguageMessages !== {}) {
       (0, _mkdirp2.default)(_path2.default.resolve(compiler.context, 'aggregatedTranslations'));
       _fs2.default.writeFileSync(_path2.default.resolve(compiler.context, 'aggregatedTranslations', language + '.js'), 'import { addLocaleData } from \'react-intl\';\nimport localeData from \'react-intl/locale-data/' + language.split('-')[0] + '\';\n\naddLocaleData(localeData);\n\nconst messages = ' + JSON.stringify(currentLanguageMessages, null, 2) + ';\n\nmodule.exports = {\n  load: true,\n  locale: \'' + language + '\',\n  messages,\n};');
