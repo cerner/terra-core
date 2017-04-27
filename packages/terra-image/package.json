@@ -1,8 +1,7 @@
 {
   "name": "terra-image",
   "main": "lib/Image.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "terra-image",
   "repository": {
     "type": "git",
@@ -50,6 +49,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   }
 }

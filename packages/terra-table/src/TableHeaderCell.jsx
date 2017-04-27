@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import IconDown from 'terra-icon/lib/icon/IconCaretDown';
 import IconUp from 'terra-icon/lib/icon/IconCaretUp';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 
 const propTypes = {
   /**
@@ -16,10 +17,6 @@ const propTypes = {
    * Whether or not data in table is sorted
    */
   sort: PropTypes.oneOf(['asc', 'desc']),
-  /**
-   * The maximum height for the cell content in a table
-   */
-  height: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 };
 
 const defaultProps = {
@@ -31,14 +28,12 @@ const iconUp = <IconUp />;
 
 const TableHeaderCell = ({
   content,
-  height,
   minWidth,
   sort,
   ...customProps
   }) => {
   const contentClassName = classNames([
     { [`terra-Table-min-width--${minWidth}`]: minWidth },
-    { [`terra-Table-header-max-height--${height}`]: height },
     'terra-Table-header',
     customProps.className,
   ]);
@@ -56,10 +51,8 @@ const TableHeaderCell = ({
 
   return (
     <th {...customProps} className={contentClassName} {...dataSort}>
-      <div>
-        {content}
-        {sortIndicator}
-      </div>
+      {content}
+      {sortIndicator}
     </th>
   );
 };

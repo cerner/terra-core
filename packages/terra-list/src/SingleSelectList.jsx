@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import 'terra-base/lib/baseStyles';
 import List from './List';
 
 const propTypes = {
@@ -59,7 +60,7 @@ class SingleSelectList extends React.Component {
     const index = SingleSelectList.selectedIndexFromItems(nextProps.children);
 
     if (index !== this.state.selectedIndex) {
-      this.setState({ selectedIndexes: index });
+      this.setState({ selectedIndex: index });
     }
   }
 
@@ -87,7 +88,7 @@ class SingleSelectList extends React.Component {
         this.handleSelection(event, index);
 
         if (this.onChange) {
-          this.onChange(event, this.state.selectedIndexes);
+          this.onChange(event, this.state.selectedIndex);
         }
       }
 

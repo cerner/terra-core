@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {

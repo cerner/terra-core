@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-
+import 'terra-base/lib/baseStyles';
 import ButtonGroupButton from './ButtonGroupButton';
 import './ButtonGroup.scss';
 
@@ -140,4 +140,3 @@ ButtonGroup.defaultProps = defaultProps;
 ButtonGroup.Button = ButtonGroupButton;
 
 export default ButtonGroup;
-

@@ -1,0 +1,34 @@
+@import '~terra-mixins';
+
+.terra-Modal {
+  @include terra-position-start(10px);
+  @include terra-position-end(10px);
+  background-color: $terra-white;
+  border-radius: 5px;
+  bottom: 10px;
+  display: block;
+  max-height: 100%;
+  outline: none;
+  overflow: hidden;
+  position: fixed;
+  top: 10px;
+  z-index: $terra-z-index-6 + 1;
+
+  @media screen and (min-width: 48em) {
+    &:not(.terra-Modal--fullscreen) {
+      bottom: auto;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      left: 50%;
+      margin: 0 auto;
+      max-height: calc(100% - 100px);
+      max-width: 40em;
+      right: auto;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.terra-Modal--scrollable {
+  overflow-y: scroll;
+}

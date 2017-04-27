@@ -1,6 +1,6 @@
 @import '~terra-mixins';
 
-.terra-ButtonGroupButton {
+.terra-ButtonGroup .terra-ButtonGroupButton {
   @include terra-border-radius-start(0);
   @include terra-border-radius-end(0);
   @include terra-margin-horizontal(0, 0);
@@ -9,7 +9,12 @@
   border-width: 1px;
   margin-bottom: 0;
   margin-top: 0;
-  outline: 0;
+  position: relative;
+
+  &:focus {
+    // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
+    z-index: $terra-z-index-1;
+  }
 }
 
 .terra-ButtonGroupButton + .terra-ButtonGroupButton {

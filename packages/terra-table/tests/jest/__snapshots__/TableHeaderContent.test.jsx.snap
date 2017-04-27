@@ -1,9 +1,7 @@
 exports[`test should render default table header content tag 1`] = `
 <th
   className="terra-Table-min-width--small terra-Table-header">
-  <div>
-    Column Heading
-  </div>
+  Column Heading
 </th>
 `;
 
@@ -11,17 +9,15 @@ exports[`test should render table header content tag with ascending sort indicat
 <th
   className="terra-Table-min-width--small terra-Table-header"
   data-sort="asc">
-  <div>
-    Column Heading
-    <span
-      className="terra-Table-sort-indicator">
-      <IconCaretUp
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
-    </span>
-  </div>
+  Column Heading
+  <span
+    className="terra-Table-sort-indicator">
+    <IconCaretUp
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg" />
+  </span>
 </th>
 `;
 
@@ -29,25 +25,21 @@ exports[`test should render table header content tag with descending sort indica
 <th
   className="terra-Table-min-width--small terra-Table-header"
   data-sort="desc">
-  <div>
-    Column Heading
-    <span
-      className="terra-Table-sort-indicator">
-      <IconCaretDown
-        className=""
-        isBidi={true}
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
-    </span>
-  </div>
+  Column Heading
+  <span
+    className="terra-Table-sort-indicator">
+    <IconCaretDown
+      className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg" />
+  </span>
 </th>
 `;
 
 exports[`test should render table header content tag with maximum height fixed 1`] = `
 <th
-  className="terra-Table-min-width--small terra-Table-header-max-height--small terra-Table-header">
-  <div>
-    Column Heading
-  </div>
+  className="terra-Table-min-width--small terra-Table-header">
+  Column Heading
 </th>
 `;

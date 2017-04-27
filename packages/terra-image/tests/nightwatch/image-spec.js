@@ -15,5 +15,12 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/default`);
   },
+  'Displays non fluid image examples': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/non-fluid`);
+  },
+  'Displays fluid image examples': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/fluid`);
+  },
 };
-

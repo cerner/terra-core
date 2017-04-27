@@ -9,7 +9,7 @@ it('should render a default table row content', () => {
 });
 
 it('should render a table row content with maximum height', () => {
-  const tableRowContentTag = <Table.Cell content={'Table Data'} height={'small'} />;
+  const tableRowContentTag = <Table.Cell content={'Table Data'} />;
   const tableRowContent = shallow(tableRowContentTag);
   expect(tableRowContent).toMatchSnapshot();
 });

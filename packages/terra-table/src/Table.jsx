@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import TableHeader from './TableHeader';
 import TableHeaderCell from './TableHeaderCell';
 import TableRows from './TableRows';
@@ -17,20 +18,27 @@ const propTypes = {
    * Whether or not the rows should be zebra striped
    */
   isStriped: PropTypes.bool,
+  /**
+   * Whether or not the table cells should be padded
+   */
+  isPadded: PropTypes.bool,
 };
 
 const defaultProps = {
   isStriped: true,
+  isPadded: true,
 };
 
 const Table = ({
   children,
   isStriped,
+  isPadded,
   ...customProps
   }) => {
   const tableClassNames = classNames([
     'terra-Table',
     { 'terra-Table--striped': isStriped },
+    { 'terra-Table--padded': isPadded },
     customProps.className,
   ]);
   return (
