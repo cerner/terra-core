@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from '../src/ProgressBar';
+import ProgressBar from '../../src/ProgressBar';
 
 // Snapshot Tests
 it('should render a default component', () => {
