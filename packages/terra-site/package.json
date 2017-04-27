@@ -23,7 +23,7 @@
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   },
   "dependencies": {
-    "es6-promise": "^4.1.0",
+    "babel-polyfill": "^6.23.0",
     "moment": "^2.17.1",
     "react": "15.4.2",
     "react-dom": "15.4.2",
