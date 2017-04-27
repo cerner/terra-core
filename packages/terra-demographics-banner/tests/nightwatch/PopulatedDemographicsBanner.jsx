@@ -4,7 +4,7 @@ import DemographicsBanner from '../../lib/DemographicsBanner';
 
 export default () =>
   <DemographicsBanner
-    additionalDetails={<span className="risk-score">5%</span>}
+    additionalDetails={<p>St. Johns West Wing Room 253</p>}
     age="25 Years"
     additionalDetailsTruncated
     dateOfBirth="May 9, 1993"

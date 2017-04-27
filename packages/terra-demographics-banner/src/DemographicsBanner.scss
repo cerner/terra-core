@@ -12,10 +12,6 @@
 
   @media screen and (max-width: 767px) {
     display: block;
-
-    span + span {
-      @include terra-margin-start(0.357rem);
-    }
   }
 }
 
