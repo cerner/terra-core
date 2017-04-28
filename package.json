@@ -35,7 +35,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean:all": "rimraf ./node_modules && rimraf ./packages/*/node_modules",
+    "clean:all": "rimraf ./packages/*/node_modules && rimraf ./node_modules",
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
