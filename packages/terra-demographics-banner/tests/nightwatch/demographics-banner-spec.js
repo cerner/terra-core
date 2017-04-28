@@ -24,36 +24,36 @@ module.exports = {
   'Displays a blank demographics banner with the empty text identifier': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`);
     browser.expect.element('.terra-DemographicsBanner').to.be.present;
-    browser.expect.element('.terra-DemographicsBanner--preferred-first-name').to.not.be.present;
-    browser.expect.element('.terra-DemographicsBanner--person-name').text.to.contain('--');
-    browser.expect.element('.terra-DemographicsBanner--person-details').text.to.contain('DOB:\n--');
+    browser.expect.element('.terra-DemographicsBanner-preferred-first-name').to.not.be.present;
+    browser.expect.element('.terra-DemographicsBanner-person-name').text.to.contain('--');
+    browser.expect.element('.terra-DemographicsBanner-person-details').text.to.contain('DOB:\n--');
   },
   'Displays all the content when it is provided to the banner': (browser) => {
     const width = browser.globals.width;
 
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/populated`);
-    browser.expect.element('.terra-DemographicsBanner').to.be.present;
-    browser.expect.element('.terra-DemographicsBanner--preferred-first-name').to.be.present;
 
-    browser.expect.element('.terra-DemographicsBanner--preferred-first-name').text.to.contain('John');
+    browser.expect.element('.terra-DemographicsBanner').to.be.present;
+    browser.expect.element('.terra-DemographicsBanner-preferred-first-name').to.be.present;
+    browser.expect.element('.terra-DemographicsBanner-preferred-first-name').text.to.contain('John');
 
     browser
       .expect
-      .element('.terra-DemographicsBanner--person-name')
+      .element('.terra-DemographicsBanner-person-name')
       .text
       .to
       .contain('Johnathon Doe');
 
     browser
       .expect
-      .element('.terra-DemographicsBanner .terra-DemographicsBanner--person-details')
+      .element('.terra-DemographicsBanner .terra-DemographicsBanner-person-details')
       .text
       .to
       .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993');
 
     browser
       .expect
-      .element('.terra-DemographicsBanner--additional-details')
+      .element('.terra-DemographicsBanner-additional-details')
       .text
       .to
       .contain('St. Johns West Wing Room Cardiac Unit 253');
@@ -61,31 +61,32 @@ module.exports = {
     if (width < windowSizes.small[0]) {
       browser
         .expect
-        .element('.terra-DemographicsBanner--additional-details.terra-DemographicsBanner--truncated')
+        .element('.terra-DemographicsBanner-additional-details.terra-DemographicsBanner--truncated')
         .to
         .be
         .present;
 
       browser
         .expect
-        .element('.terra-DemographicsBanner--additional-details.terra-DemographicsBanner--truncated')
-        .to
-        .be
-        .present;
-
-      browser
-        .expect
-        .element('.terra-DemographicsBanner--person-details')
+        .element('.terra-DemographicsBanner-person-details')
         .text
         .to
         .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993\nMRN:\n12343\nREA:\n3JSDA');
     } else {
       browser
         .expect
-        .element('.terra-DemographicsBanner--identifiers')
+        .element('.terra-DemographicsBanner-identifiers')
         .text
         .to
         .contain('MRN:\n12343\nREA:\n3JSDA');
+
+      browser
+        .expect
+        .element('.terra-DemographicsBanner-additional-details.terra-DemographicsBanner--truncated')
+        .to
+        .not
+        .be
+        .present;
     }
   },
   'Displays a deceased demographics banner': (browser) => {

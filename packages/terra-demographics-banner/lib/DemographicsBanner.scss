@@ -14,7 +14,7 @@
   }
 }
 
-.terra-DemographicsBanner--value {
+.terra-DemographicsBanner-value {
   display: inline-flex;
 
   @if $terra-bidi {
@@ -43,20 +43,20 @@
   }
 }
 
-.terra-DemographicsBanner--value-label {
+.terra-DemographicsBanner-value-label {
   @include terra-margin-end(0.357em);
 }
 
-.terra-DemographicsBanner--person-name {
+.terra-DemographicsBanner-person-name {
   margin: 0;
 }
 
-.terra-DemographicsBanner--person-details {
+.terra-DemographicsBanner-person-details {
   flex: 1;
   min-width: 0;
 }
 
-.terra-DemographicsBanner--preferred-first-name {
+.terra-DemographicsBanner-preferred-first-name {
   margin: 0 0.357em;
 
   &::before,
@@ -69,22 +69,22 @@
   background: $demographics-background-deceased;
   color: $demographics-foreground-deceased;
 
-  .terra-DemographicsBanner--profile-photo {
+  .terra-DemographicsBanner-profile-photo {
     opacity: 0.7;
   }
 }
 
-.terra-DemographicsBanner--row {
+.terra-DemographicsBanner-row {
   display: flex;
 }
 
-.terra-DemographicsBanner--content {
+.terra-DemographicsBanner-content {
   flex-grow: 1;
   margin: auto 0.714em;
 }
 
-.terra-DemographicsBanner--additional-details,
-.terra-DemographicsBanner--identifiers {
+.terra-DemographicsBanner-additional-details,
+.terra-DemographicsBanner-identifiers {
   @include terra-margin-start(auto); 
 }
 

@@ -93,8 +93,8 @@ const defaultProps = {
 
 // eslint-disable-next-line react/prop-types
 const DemographicsBannerValue = ({ label, value }) => (
-  <span className="terra-DemographicsBanner--value">
-    { label && <span className="terra-DemographicsBanner--value-label">{`${label}:`}</span> }
+  <span className="terra-DemographicsBanner-value">
+    { label && <span className="terra-DemographicsBanner-value-label">{`${label}:`}</span> }
     <b>{value}</b>
   </span>
 );
@@ -190,26 +190,26 @@ class DemographicsBanner extends React.Component {
 
     return (
       <section className={mainClasses} {...customProps}>
-        <div className="terra-DemographicsBanner--profile-photo">
+        <div className="terra-DemographicsBanner-profile-photo">
           {this.props.photo}
         </div>
-        <div className="terra-DemographicsBanner--content">
-          <div className="terra-DemographicsBanner--row">
-            <h1 className="terra-DemographicsBanner--person-name">
+        <div className="terra-DemographicsBanner-content">
+          <div className="terra-DemographicsBanner-row">
+            <h1 className="terra-DemographicsBanner-person-name">
               { personName }
-              { preferredFirstName && <span className="terra-DemographicsBanner--preferred-first-name">
+              { preferredFirstName && <span className="terra-DemographicsBanner-preferred-first-name">
                 { preferredFirstName }
               </span> }
             </h1>
-            <div className="terra-DemographicsBanner--additional-details">
+            <div className="terra-DemographicsBanner-additional-details">
               {additionalDetails}
             </div>
           </div>
-          <div className="terra-DemographicsBanner--row">
-            <div className="terra-DemographicsBanner--person-details">
+          <div className="terra-DemographicsBanner-row">
+            <div className="terra-DemographicsBanner-person-details">
               {this.personDetails()}
             </div>
-            <div className="terra-DemographicsBanner--identifiers">
+            <div className="terra-DemographicsBanner-identifiers">
               {this.applicationIdentifiers()}
             </div>
           </div>
@@ -247,21 +247,21 @@ class DemographicsBanner extends React.Component {
     delete customProps.className;
 
     const additionalDetailsClasses = classNames(
-      'terra-DemographicsBanner--additional-details',
+      'terra-DemographicsBanner-additional-details',
       { 'terra-DemographicsBanner--truncated': additionalDetailsTruncated },
     );
 
     return (
       <section className={mainClasses} {...customProps}>
-        <h1 className="terra-DemographicsBanner--person-name">
+        <h1 className="terra-DemographicsBanner-person-name">
           <span>
             { personName }
-            { preferredFirstName && <span className="terra-DemographicsBanner--preferred-first-name">
+            { preferredFirstName && <span className="terra-DemographicsBanner-preferred-first-name">
               { preferredFirstName }
             </span> }
           </span>
         </h1>
-        <div className="terra-DemographicsBanner--person-details">
+        <div className="terra-DemographicsBanner-person-details">
           {this.personDetails()}
           {this.applicationIdentifiers()}
         </div>

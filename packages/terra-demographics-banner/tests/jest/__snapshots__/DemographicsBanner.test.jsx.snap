@@ -5,13 +5,13 @@ exports[`test renders a banner that has basic information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Terra Demographics Banner
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="24" />
         <DemographicsBannerValue
@@ -21,7 +21,7 @@ exports[`test renders a banner that has basic information 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details" />
+        className="terra-DemographicsBanner-additional-details" />
     </section>
   }
   medium={
@@ -29,22 +29,22 @@ exports[`test renders a banner that has basic information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo" />
+        className="terra-DemographicsBanner-profile-photo" />
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details" />
+            className="terra-DemographicsBanner-additional-details" />
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="24" />
             <DemographicsBannerValue
@@ -54,7 +54,7 @@ exports[`test renders a banner that has basic information 1`] = `
               value="March 30, 2017" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers" />
+            className="terra-DemographicsBanner-identifiers" />
         </div>
       </div>
     </section>
@@ -65,22 +65,22 @@ exports[`test renders a banner that has basic information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo" />
+        className="terra-DemographicsBanner-profile-photo" />
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details" />
+            className="terra-DemographicsBanner-additional-details" />
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="24" />
             <DemographicsBannerValue
@@ -90,7 +90,7 @@ exports[`test renders a banner that has basic information 1`] = `
               value="March 30, 2017" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers" />
+            className="terra-DemographicsBanner-identifiers" />
         </div>
       </div>
     </section>
@@ -100,13 +100,13 @@ exports[`test renders a banner that has basic information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Terra Demographics Banner
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="24" />
         <DemographicsBannerValue
@@ -116,7 +116,7 @@ exports[`test renders a banner that has basic information 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details" />
+        className="terra-DemographicsBanner-additional-details" />
     </section>
   } />
 `;
@@ -128,13 +128,13 @@ exports[`test renders a blank banner properly 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           --
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="--" />
         <DemographicsBannerValue
@@ -144,7 +144,7 @@ exports[`test renders a blank banner properly 1`] = `
           value="--" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details" />
+        className="terra-DemographicsBanner-additional-details" />
     </section>
   }
   medium={
@@ -152,22 +152,22 @@ exports[`test renders a blank banner properly 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo" />
+        className="terra-DemographicsBanner-profile-photo" />
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             --
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details" />
+            className="terra-DemographicsBanner-additional-details" />
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="--" />
             <DemographicsBannerValue
@@ -177,7 +177,7 @@ exports[`test renders a blank banner properly 1`] = `
               value="--" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers" />
+            className="terra-DemographicsBanner-identifiers" />
         </div>
       </div>
     </section>
@@ -188,22 +188,22 @@ exports[`test renders a blank banner properly 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo" />
+        className="terra-DemographicsBanner-profile-photo" />
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             --
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details" />
+            className="terra-DemographicsBanner-additional-details" />
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="--" />
             <DemographicsBannerValue
@@ -213,7 +213,7 @@ exports[`test renders a blank banner properly 1`] = `
               value="--" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers" />
+            className="terra-DemographicsBanner-identifiers" />
         </div>
       </div>
     </section>
@@ -223,13 +223,13 @@ exports[`test renders a blank banner properly 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           --
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="--" />
         <DemographicsBannerValue
@@ -239,7 +239,7 @@ exports[`test renders a blank banner properly 1`] = `
           value="--" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details" />
+        className="terra-DemographicsBanner-additional-details" />
     </section>
   } />
 `;
@@ -251,13 +251,13 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Old Terra Demographics Banner
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="24" />
         <DemographicsBannerValue
@@ -270,7 +270,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details" />
+        className="terra-DemographicsBanner-additional-details" />
     </section>
   }
   medium={
@@ -278,22 +278,22 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo" />
+        className="terra-DemographicsBanner-profile-photo" />
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Old Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details" />
+            className="terra-DemographicsBanner-additional-details" />
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="24" />
             <DemographicsBannerValue
@@ -306,7 +306,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
               value="March 30, 2017" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers" />
+            className="terra-DemographicsBanner-identifiers" />
         </div>
       </div>
     </section>
@@ -317,22 +317,22 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo" />
+        className="terra-DemographicsBanner-profile-photo" />
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Old Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details" />
+            className="terra-DemographicsBanner-additional-details" />
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="24" />
             <DemographicsBannerValue
@@ -345,7 +345,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
               value="March 30, 2017" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers" />
+            className="terra-DemographicsBanner-identifiers" />
         </div>
       </div>
     </section>
@@ -355,13 +355,13 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Old Terra Demographics Banner
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="24" />
         <DemographicsBannerValue
@@ -374,7 +374,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details" />
+        className="terra-DemographicsBanner-additional-details" />
     </section>
   } />
 `;
@@ -397,17 +397,17 @@ exports[`test renders the banner appropriately for a person with gestational and
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Johnathon Doe
           <span
-            className="terra-DemographicsBanner--preferred-first-name">
+            className="terra-DemographicsBanner-preferred-first-name">
             John
           </span>
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -429,7 +429,7 @@ exports[`test renders the banner appropriately for a person with gestational and
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details">
+        className="terra-DemographicsBanner-additional-details">
         <span
           className="risk-score">
           5%
@@ -453,25 +453,25 @@ exports[`test renders the banner appropriately for a person with gestational and
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo">
+        className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
           src="http://lorempixel.com/100/100/animals/7/" />
       </div>
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Johnathon Doe
             <span
-              className="terra-DemographicsBanner--preferred-first-name">
+              className="terra-DemographicsBanner-preferred-first-name">
               John
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details">
+            className="terra-DemographicsBanner-additional-details">
             <span
               className="risk-score">
               5%
@@ -479,9 +479,9 @@ exports[`test renders the banner appropriately for a person with gestational and
           </div>
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="25 Years" />
             <DemographicsBannerValue
@@ -497,7 +497,7 @@ exports[`test renders the banner appropriately for a person with gestational and
               value="April 7, 2016" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers">
+            className="terra-DemographicsBanner-identifiers">
             <DemographicsBannerValue
               label="MRN"
               value={12343} />
@@ -526,25 +526,25 @@ exports[`test renders the banner appropriately for a person with gestational and
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo">
+        className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
           src="http://lorempixel.com/100/100/animals/7/" />
       </div>
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Johnathon Doe
             <span
-              className="terra-DemographicsBanner--preferred-first-name">
+              className="terra-DemographicsBanner-preferred-first-name">
               John
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details">
+            className="terra-DemographicsBanner-additional-details">
             <span
               className="risk-score">
               5%
@@ -552,9 +552,9 @@ exports[`test renders the banner appropriately for a person with gestational and
           </div>
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="25 Years" />
             <DemographicsBannerValue
@@ -570,7 +570,7 @@ exports[`test renders the banner appropriately for a person with gestational and
               value="April 7, 2016" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers">
+            className="terra-DemographicsBanner-identifiers">
             <DemographicsBannerValue
               label="MRN"
               value={12343} />
@@ -598,17 +598,17 @@ exports[`test renders the banner appropriately for a person with gestational and
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Johnathon Doe
           <span
-            className="terra-DemographicsBanner--preferred-first-name">
+            className="terra-DemographicsBanner-preferred-first-name">
             John
           </span>
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -630,7 +630,7 @@ exports[`test renders the banner appropriately for a person with gestational and
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details">
+        className="terra-DemographicsBanner-additional-details">
         <span
           className="risk-score">
           5%
@@ -658,17 +658,17 @@ exports[`test renders the banner properly for a deceased person with additional 
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Johnathon Doe
           <span
-            className="terra-DemographicsBanner--preferred-first-name">
+            className="terra-DemographicsBanner-preferred-first-name">
             John
           </span>
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -687,7 +687,7 @@ exports[`test renders the banner properly for a deceased person with additional 
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details">
+        className="terra-DemographicsBanner-additional-details">
         <span
           className="risk-score">
           5%
@@ -711,25 +711,25 @@ exports[`test renders the banner properly for a deceased person with additional 
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo">
+        className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
           src="http://lorempixel.com/100/100/animals/7/" />
       </div>
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Johnathon Doe
             <span
-              className="terra-DemographicsBanner--preferred-first-name">
+              className="terra-DemographicsBanner-preferred-first-name">
               John
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details">
+            className="terra-DemographicsBanner-additional-details">
             <span
               className="risk-score">
               5%
@@ -737,9 +737,9 @@ exports[`test renders the banner properly for a deceased person with additional 
           </div>
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="25 Years" />
             <DemographicsBannerValue
@@ -752,7 +752,7 @@ exports[`test renders the banner properly for a deceased person with additional 
               value="March 5, 2016" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers">
+            className="terra-DemographicsBanner-identifiers">
             <DemographicsBannerValue
               label="MRN"
               value={12343} />
@@ -781,25 +781,25 @@ exports[`test renders the banner properly for a deceased person with additional 
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo">
+        className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
           src="http://lorempixel.com/100/100/animals/7/" />
       </div>
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Johnathon Doe
             <span
-              className="terra-DemographicsBanner--preferred-first-name">
+              className="terra-DemographicsBanner-preferred-first-name">
               John
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details">
+            className="terra-DemographicsBanner-additional-details">
             <span
               className="risk-score">
               5%
@@ -807,9 +807,9 @@ exports[`test renders the banner properly for a deceased person with additional 
           </div>
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="25 Years" />
             <DemographicsBannerValue
@@ -822,7 +822,7 @@ exports[`test renders the banner properly for a deceased person with additional 
               value="March 5, 2016" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers">
+            className="terra-DemographicsBanner-identifiers">
             <DemographicsBannerValue
               label="MRN"
               value={12343} />
@@ -850,17 +850,17 @@ exports[`test renders the banner properly for a deceased person with additional 
       className="terra-DemographicsBanner terra-DemographicsBanner--deceased"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Johnathon Doe
           <span
-            className="terra-DemographicsBanner--preferred-first-name">
+            className="terra-DemographicsBanner-preferred-first-name">
             John
           </span>
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -879,7 +879,7 @@ exports[`test renders the banner properly for a deceased person with additional 
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details">
+        className="terra-DemographicsBanner-additional-details">
         <span
           className="risk-score">
           5%
@@ -907,17 +907,17 @@ exports[`test renders the banner that contains additional information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Johnathon Doe
           <span
-            className="terra-DemographicsBanner--preferred-first-name">
+            className="terra-DemographicsBanner-preferred-first-name">
             John
           </span>
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -933,7 +933,7 @@ exports[`test renders the banner that contains additional information 1`] = `
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details">
+        className="terra-DemographicsBanner-additional-details">
         <span
           className="risk-score">
           5%
@@ -957,25 +957,25 @@ exports[`test renders the banner that contains additional information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo">
+        className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
           src="http://lorempixel.com/100/100/animals/7/" />
       </div>
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Johnathon Doe
             <span
-              className="terra-DemographicsBanner--preferred-first-name">
+              className="terra-DemographicsBanner-preferred-first-name">
               John
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details">
+            className="terra-DemographicsBanner-additional-details">
             <span
               className="risk-score">
               5%
@@ -983,9 +983,9 @@ exports[`test renders the banner that contains additional information 1`] = `
           </div>
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="25 Years" />
             <DemographicsBannerValue
@@ -995,7 +995,7 @@ exports[`test renders the banner that contains additional information 1`] = `
               value="May 9, 1993" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers">
+            className="terra-DemographicsBanner-identifiers">
             <DemographicsBannerValue
               label="MRN"
               value={12343} />
@@ -1024,25 +1024,25 @@ exports[`test renders the banner that contains additional information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <div
-        className="terra-DemographicsBanner--profile-photo">
+        className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
           src="http://lorempixel.com/100/100/animals/7/" />
       </div>
       <div
-        className="terra-DemographicsBanner--content">
+        className="terra-DemographicsBanner-content">
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <h1
-            className="terra-DemographicsBanner--person-name">
+            className="terra-DemographicsBanner-person-name">
             Johnathon Doe
             <span
-              className="terra-DemographicsBanner--preferred-first-name">
+              className="terra-DemographicsBanner-preferred-first-name">
               John
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner--additional-details">
+            className="terra-DemographicsBanner-additional-details">
             <span
               className="risk-score">
               5%
@@ -1050,9 +1050,9 @@ exports[`test renders the banner that contains additional information 1`] = `
           </div>
         </div>
         <div
-          className="terra-DemographicsBanner--row">
+          className="terra-DemographicsBanner-row">
           <div
-            className="terra-DemographicsBanner--person-details">
+            className="terra-DemographicsBanner-person-details">
             <DemographicsBannerValue
               value="25 Years" />
             <DemographicsBannerValue
@@ -1062,7 +1062,7 @@ exports[`test renders the banner that contains additional information 1`] = `
               value="May 9, 1993" />
           </div>
           <div
-            className="terra-DemographicsBanner--identifiers">
+            className="terra-DemographicsBanner-identifiers">
             <DemographicsBannerValue
               label="MRN"
               value={12343} />
@@ -1090,17 +1090,17 @@ exports[`test renders the banner that contains additional information 1`] = `
       className="terra-DemographicsBanner"
       dateOfBirthLabel="DOB">
       <h1
-        className="terra-DemographicsBanner--person-name">
+        className="terra-DemographicsBanner-person-name">
         <span>
           Johnathon Doe
           <span
-            className="terra-DemographicsBanner--preferred-first-name">
+            className="terra-DemographicsBanner-preferred-first-name">
             John
           </span>
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner--person-details">
+        className="terra-DemographicsBanner-person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -1116,7 +1116,7 @@ exports[`test renders the banner that contains additional information 1`] = `
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner--additional-details">
+        className="terra-DemographicsBanner-additional-details">
         <span
           className="risk-score">
           5%

@@ -125,10 +125,10 @@ var DemographicsBannerValue = function DemographicsBannerValue(_ref) {
       value = _ref.value;
   return _react2.default.createElement(
     'span',
-    { className: 'terra-DemographicsBanner--value' },
+    { className: 'terra-DemographicsBanner-value' },
     label && _react2.default.createElement(
       'span',
-      { className: 'terra-DemographicsBanner--value-label' },
+      { className: 'terra-DemographicsBanner-value-label' },
       label + ':'
     ),
     _react2.default.createElement(
@@ -230,42 +230,42 @@ var DemographicsBanner = function (_React$Component) {
         _extends({ className: mainClasses }, customProps),
         _react2.default.createElement(
           'div',
-          { className: 'terra-DemographicsBanner--profile-photo' },
+          { className: 'terra-DemographicsBanner-profile-photo' },
           this.props.photo
         ),
         _react2.default.createElement(
           'div',
-          { className: 'terra-DemographicsBanner--content' },
+          { className: 'terra-DemographicsBanner-content' },
           _react2.default.createElement(
             'div',
-            { className: 'terra-DemographicsBanner--row' },
+            { className: 'terra-DemographicsBanner-row' },
             _react2.default.createElement(
               'h1',
-              { className: 'terra-DemographicsBanner--person-name' },
+              { className: 'terra-DemographicsBanner-person-name' },
               personName,
               preferredFirstName && _react2.default.createElement(
                 'span',
-                { className: 'terra-DemographicsBanner--preferred-first-name' },
+                { className: 'terra-DemographicsBanner-preferred-first-name' },
                 preferredFirstName
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'terra-DemographicsBanner--additional-details' },
+              { className: 'terra-DemographicsBanner-additional-details' },
               additionalDetails
             )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'terra-DemographicsBanner--row' },
+            { className: 'terra-DemographicsBanner-row' },
             _react2.default.createElement(
               'div',
-              { className: 'terra-DemographicsBanner--person-details' },
+              { className: 'terra-DemographicsBanner-person-details' },
               this.personDetails()
             ),
             _react2.default.createElement(
               'div',
-              { className: 'terra-DemographicsBanner--identifiers' },
+              { className: 'terra-DemographicsBanner-identifiers' },
               this.applicationIdentifiers()
             )
           )
@@ -297,28 +297,28 @@ var DemographicsBanner = function (_React$Component) {
 
       delete customProps.className;
 
-      var additionalDetailsClasses = (0, _classnames2.default)('terra-DemographicsBanner--additional-details', { 'terra-DemographicsBanner--truncated': additionalDetailsTruncated });
+      var additionalDetailsClasses = (0, _classnames2.default)('terra-DemographicsBanner-additional-details', { 'terra-DemographicsBanner--truncated': additionalDetailsTruncated });
 
       return _react2.default.createElement(
         'section',
         _extends({ className: mainClasses }, customProps),
         _react2.default.createElement(
           'h1',
-          { className: 'terra-DemographicsBanner--person-name' },
+          { className: 'terra-DemographicsBanner-person-name' },
           _react2.default.createElement(
             'span',
             null,
             personName,
             preferredFirstName && _react2.default.createElement(
               'span',
-              { className: 'terra-DemographicsBanner--preferred-first-name' },
+              { className: 'terra-DemographicsBanner-preferred-first-name' },
               preferredFirstName
             )
           )
         ),
         _react2.default.createElement(
           'div',
-          { className: 'terra-DemographicsBanner--person-details' },
+          { className: 'terra-DemographicsBanner-person-details' },
           this.personDetails(),
           this.applicationIdentifiers()
         ),
