@@ -46,26 +46,12 @@ module.exports = {
 
     browser
       .expect
-      .element('.terra-DemographicsBanner .terra-DemographicsBanner-person-details')
-      .text
-      .to
-      .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993');
-
-    browser
-      .expect
       .element('.terra-DemographicsBanner-additional-details')
       .text
       .to
       .contain('St. Johns West Wing Room Cardiac Unit 253');
 
     if (width < windowSizes.small[0]) {
-      browser
-        .expect
-        .element('.terra-DemographicsBanner-additional-details.terra-DemographicsBanner--truncated')
-        .to
-        .be
-        .present;
-
       browser
         .expect
         .element('.terra-DemographicsBanner-person-details')
@@ -82,11 +68,10 @@ module.exports = {
 
       browser
         .expect
-        .element('.terra-DemographicsBanner-additional-details.terra-DemographicsBanner--truncated')
+        .element('.terra-DemographicsBanner .terra-DemographicsBanner-person-details')
+        .text
         .to
-        .not
-        .be
-        .present;
+        .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993');
     }
   },
   'Displays a deceased demographics banner': (browser) => {

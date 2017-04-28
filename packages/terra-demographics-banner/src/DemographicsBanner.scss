@@ -87,9 +87,3 @@
 .terra-DemographicsBanner-identifiers {
   @include terra-margin-start(auto); 
 }
-
-.terra-DemographicsBanner--truncated {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}

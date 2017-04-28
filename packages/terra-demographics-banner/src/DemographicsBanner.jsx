@@ -11,10 +11,6 @@ const propTypes = {
    */
   additionalDetails: PropTypes.node,
   /**
-   * Determines whether to truncate the application content on small screen sizes
-   */
-  additionalDetailsTruncated: PropTypes.bool,
-  /**
    * Age of the person.
    */
   age: PropTypes.string,
@@ -74,7 +70,6 @@ const propTypes = {
 
 const defaultProps = {
   additionalDetails: null,
-  additionalDetailsTruncated: false,
   age: '--',
   dateOfBirth: '--',
   dateOfBirthLabel: 'DOB',
@@ -164,7 +159,6 @@ class DemographicsBanner extends React.Component {
     const {
       age,
       additionalDetails,
-      additionalDetailsTruncated,
       dateOfBirth,
       deceasedDate,
       deceasedDateLabel,
@@ -222,7 +216,6 @@ class DemographicsBanner extends React.Component {
     const {
       age,
       additionalDetails,
-      additionalDetailsTruncated,
       dateOfBirth,
       deceasedDate,
       deceasedDateLabel,
@@ -246,11 +239,6 @@ class DemographicsBanner extends React.Component {
 
     delete customProps.className;
 
-    const additionalDetailsClasses = classNames(
-      'terra-DemographicsBanner-additional-details',
-      { 'terra-DemographicsBanner--truncated': additionalDetailsTruncated },
-    );
-
     return (
       <section className={mainClasses} {...customProps}>
         <h1 className="terra-DemographicsBanner-person-name">
@@ -265,7 +253,7 @@ class DemographicsBanner extends React.Component {
           {this.personDetails()}
           {this.applicationIdentifiers()}
         </div>
-        <div className={additionalDetailsClasses}>
+        <div className="terra-DemographicsBanner-additional-details">
           {additionalDetails}
         </div>
       </section>

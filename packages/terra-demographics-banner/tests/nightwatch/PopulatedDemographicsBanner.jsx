@@ -6,7 +6,6 @@ export default () =>
   <DemographicsBanner
     additionalDetails={<p>St. Johns West Wing Room Cardiac Unit 253</p>}
     age="25 Years"
-    additionalDetailsTruncated
     dateOfBirth="May 9, 1993"
     dateOfBirthLabel="DOB"
     gestationalAge="May 11, 1993"

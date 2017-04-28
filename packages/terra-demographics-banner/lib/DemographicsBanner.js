@@ -39,10 +39,6 @@ var propTypes = {
    */
   additionalDetails: _react.PropTypes.node,
   /**
-   * Determines whether to truncate the application content on small screen sizes
-   */
-  additionalDetailsTruncated: _react.PropTypes.bool,
-  /**
    * Age of the person.
    */
   age: _react.PropTypes.string,
@@ -102,7 +98,6 @@ var propTypes = {
 
 var defaultProps = {
   additionalDetails: null,
-  additionalDetailsTruncated: false,
   age: '--',
   dateOfBirth: '--',
   dateOfBirthLabel: 'DOB',
@@ -206,7 +201,6 @@ var DemographicsBanner = function (_React$Component) {
       var _props = this.props,
           age = _props.age,
           additionalDetails = _props.additionalDetails,
-          additionalDetailsTruncated = _props.additionalDetailsTruncated,
           dateOfBirth = _props.dateOfBirth,
           deceasedDate = _props.deceasedDate,
           deceasedDateLabel = _props.deceasedDateLabel,
@@ -219,7 +213,7 @@ var DemographicsBanner = function (_React$Component) {
           postMenstrualAge = _props.postMenstrualAge,
           postMenstrualAgeLabel = _props.postMenstrualAgeLabel,
           preferredFirstName = _props.preferredFirstName,
-          customProps = _objectWithoutProperties(_props, ['age', 'additionalDetails', 'additionalDetailsTruncated', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+          customProps = _objectWithoutProperties(_props, ['age', 'additionalDetails', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
@@ -278,7 +272,6 @@ var DemographicsBanner = function (_React$Component) {
       var _props2 = this.props,
           age = _props2.age,
           additionalDetails = _props2.additionalDetails,
-          additionalDetailsTruncated = _props2.additionalDetailsTruncated,
           dateOfBirth = _props2.dateOfBirth,
           deceasedDate = _props2.deceasedDate,
           deceasedDateLabel = _props2.deceasedDateLabel,
@@ -291,13 +284,11 @@ var DemographicsBanner = function (_React$Component) {
           postMenstrualAge = _props2.postMenstrualAge,
           postMenstrualAgeLabel = _props2.postMenstrualAgeLabel,
           preferredFirstName = _props2.preferredFirstName,
-          customProps = _objectWithoutProperties(_props2, ['age', 'additionalDetails', 'additionalDetailsTruncated', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+          customProps = _objectWithoutProperties(_props2, ['age', 'additionalDetails', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
       delete customProps.className;
-
-      var additionalDetailsClasses = (0, _classnames2.default)('terra-DemographicsBanner-additional-details', { 'terra-DemographicsBanner--truncated': additionalDetailsTruncated });
 
       return _react2.default.createElement(
         'section',
@@ -324,7 +315,7 @@ var DemographicsBanner = function (_React$Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: additionalDetailsClasses },
+          { className: 'terra-DemographicsBanner-additional-details' },
           additionalDetails
         )
       );

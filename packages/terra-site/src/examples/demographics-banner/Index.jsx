@@ -8,7 +8,6 @@ import DemographicsBanner from 'terra-demographics-banner';
 
 import DemographicsBannerAdditionalAges from './DemographicsBannerAdditionalAges';
 import DemographicsBannerAdditionalDetails from './DemographicsBannerAdditionalDetails';
-import DemographicsBannerAdditionalDetailsTruncated from './DemographicsBannerAdditionalDetailsTruncated';
 import DemographicsBannerBasic from './DemographicsBannerBasic';
 import DemographicsBannerDeceased from './DemographicsBannerDeceased';
 
@@ -30,8 +29,6 @@ const DemographicsBannerExamples = () => (
     <DemographicsBannerAdditionalAges />
     <h1>Demographics Banner with Additional Details</h1>
     <DemographicsBannerAdditionalDetails />
-    <h1>Demographics Banner with Additional Details Truncated for Mobile</h1>
-    <DemographicsBannerAdditionalDetailsTruncated />
   </div>
 );
 
