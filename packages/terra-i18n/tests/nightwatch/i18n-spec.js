@@ -12,7 +12,7 @@ const defaultTranslations = enTranslations;
 
 const screenshot = require('terra-toolkit').screenshot;
 
-const waitInms = 1000;
+const waitInms = 3000;
 
 module.exports = {
   before: (browser, done) => {

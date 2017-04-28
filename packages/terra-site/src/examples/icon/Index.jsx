@@ -19,6 +19,7 @@ const IconExamples = () => (
     <PropsTable id="props" src={IconSrc} />
     <h2 id="static_icons">Static Icons</h2>
     <IconStatic />
+    <br />
     <h2 id="themeable_icons">Themeable Icons</h2>
     <IconThemeable />
   </div>
