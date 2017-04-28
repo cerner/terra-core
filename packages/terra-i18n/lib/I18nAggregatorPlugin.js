@@ -14,20 +14,24 @@ var _mkdirp = require('mkdirp');
 
 var _mkdirp2 = _interopRequireDefault(_mkdirp);
 
-var _i18nSupportedLanguages = require('./i18nSupportedLanguages');
+var _i18nSupportedLocales = require('./i18nSupportedLocales');
 
-var _i18nSupportedLanguages2 = _interopRequireDefault(_i18nSupportedLanguages);
+var _i18nSupportedLocales2 = _interopRequireDefault(_i18nSupportedLocales);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function apply(options) {
-  function getDirectories(srcPath) {
-    return _fs2.default.readdirSync(srcPath).filter(function (file) {
-      return _fs2.default.statSync(_path2.default.join(srcPath, file)).isDirectory();
-    });
-  }
+function generateTranslationFile(language, messages) {
+  return 'import { addLocaleData } from \'react-intl\';\nimport localeData from \'react-intl/locale-data/' + language.split('-')[0] + '\';\n\naddLocaleData(localeData);\n\nconst messages = ' + JSON.stringify(messages, null, 2) + ';\n\nmodule.exports = {\n  areTranslationsLoaded: true,\n  locale: \'' + language + '\',\n  messages,\n};';
+}
 
-  _i18nSupportedLanguages2.default.forEach(function (language) {
+function getDirectories(srcPath) {
+  return _fs2.default.readdirSync(srcPath).filter(function (file) {
+    return _fs2.default.statSync(_path2.default.join(srcPath, file)).isDirectory();
+  });
+}
+
+function apply(options) {
+  _i18nSupportedLocales2.default.forEach(function (language) {
     var currentLanguageMessages = {};
     getDirectories(_path2.default.resolve(options.baseDirectory, 'node_modules')).forEach(function (module) {
       var translationFile = _path2.default.resolve(options.baseDirectory, 'node_modules', module, 'translations', language + '.json');
@@ -38,7 +42,7 @@ function apply(options) {
 
     if (currentLanguageMessages !== {}) {
       (0, _mkdirp2.default)(_path2.default.resolve(options.baseDirectory, 'aggregated-translations'));
-      _fs2.default.writeFileSync(_path2.default.resolve(options.baseDirectory, 'aggregated-translations', language + '.js'), 'import { addLocaleData } from \'react-intl\';\nimport localeData from \'react-intl/locale-data/' + language.split('-')[0] + '\';\n\naddLocaleData(localeData);\n\nconst messages = ' + JSON.stringify(currentLanguageMessages, null, 2) + ';\n\nmodule.exports = {\n  areTranslationsLoaded: true,\n  locale: \'' + language + '\',\n  messages,\n};');
+      _fs2.default.writeFileSync(_path2.default.resolve(options.baseDirectory, 'aggregated-translations', language + '.js'), generateTranslationFile(language, currentLanguageMessages));
     }
   });
 }

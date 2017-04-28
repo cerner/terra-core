@@ -8,9 +8,9 @@ var _translationLoaders = require('./translationLoaders');
 
 var _translationLoaders2 = _interopRequireDefault(_translationLoaders);
 
-var _i18nSupportedLanguages = require('./i18nSupportedLanguages');
+var _i18nSupportedLocales = require('./i18nSupportedLocales');
 
-var _i18nSupportedLanguages2 = _interopRequireDefault(_i18nSupportedLanguages);
+var _i18nSupportedLocales2 = _interopRequireDefault(_i18nSupportedLocales);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18,9 +18,8 @@ var hasIntl = typeof Intl !== 'undefined'; /* eslint-disable */
 
 
 var permitParams = function permitParams(locale, callback) {
-  var supportedLocales = _i18nSupportedLanguages2.default;
-  if (supportedLocales.indexOf(locale) < 0) {
-    throw new Error(locale + ' is not supported, supported locales:' + supportedLocales);
+  if (_i18nSupportedLocales2.default.indexOf(locale) < 0) {
+    throw new Error(locale + ' is not supported, supported locales:' + _i18nSupportedLocales2.default);
   }
   if (typeof callback !== 'function') {
     throw new Error('Second argument must be function');

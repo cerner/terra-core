@@ -6,7 +6,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const I18nAggregatorPlugin = require('./node_modules/terra-i18n/lib/I18nAggregatorPlugin');
+const I18nAggregatorPlugin = require('terra-i18n/lib/I18nAggregatorPlugin');
 
 module.exports = {
   entry: {

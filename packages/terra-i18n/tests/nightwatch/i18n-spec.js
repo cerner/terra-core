@@ -3,14 +3,18 @@ const screenshot = require('terra-toolkit').screenshot;
 const fs = require('fs');
 const path = require('path');
 
-const deTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'de.json'), 'utf8'));
-const enTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'en-US.json'), 'utf8'));
-const enGBTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'en-GB.json'), 'utf8'));
-const enUSTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'en.json'), 'utf8'));
-const esTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'es.json'), 'utf8'));
-const fiFITranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'fi-FI.json'), 'utf8'));
-const frTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'fr.json'), 'utf8'));
-const ptTranslations = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', 'pt.json'), 'utf8'));
+function loadTranslationsForLocale(locale) {
+  return JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', `${locale}.json`), 'utf8'));
+}
+
+const deTranslations = loadTranslationsForLocale('de');
+const enTranslations = loadTranslationsForLocale('en');
+const enGBTranslations = loadTranslationsForLocale('en-GB');
+const enUSTranslations = loadTranslationsForLocale('en-US');
+const esTranslations = loadTranslationsForLocale('es');
+const fiFITranslations = loadTranslationsForLocale('fi-FI');
+const frTranslations = loadTranslationsForLocale('fr');
+const ptTranslations = loadTranslationsForLocale('pt');
 
 const defaultTranslations = enTranslations;
 
