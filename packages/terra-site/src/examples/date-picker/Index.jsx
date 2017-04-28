@@ -2,8 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import DatePicker from 'terra-date-picker/src/DatePicker';
-import DateRange from 'terra-date-picker/src/DateRange';
+import DatePicker from 'terra-date-picker';
+import DateRange from 'terra-date-picker/lib/DateRange';
 import ReadMe from 'terra-date-picker/docs/README.md';
 import { version } from 'terra-date-picker/package.json';
 // Component Source
@@ -39,9 +39,9 @@ const DatePickerExamples = () => (
     />
     <h2 id="on-change">On Change</h2>
     <DatePickerOnChange />
-    <h2 id="start-date">Start Date</h2>
+    <h2 id="start-date">Default Date</h2>
     <DatePicker
-      defaultDate={moment().format(dateFormat)}
+      selectedDate={moment().format(dateFormat)}
     />
     <h2 id="date-range">Date Range</h2>
     <DateRange

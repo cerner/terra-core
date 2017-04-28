@@ -44,11 +44,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * An ISO 8601 string representation of the default date to show in the date input.
-   */
-  defaultDate: _react.PropTypes.string,
-  /**
-   * An ISO 8601 string representation of the default end date for a date range.
+   * An ISO 8601 string representation of the end date for a date range.
    */
   endDate: _react.PropTypes.string,
   /**
@@ -84,7 +80,11 @@ var propTypes = {
    */
   onChange: _react.PropTypes.func,
   /**
-   * An ISO 8601 string representation of the selected start date. startDate represents the currently selected date after some change has been made where as defaultDate represents the initial default date that shows in the input before any change is made.
+   * An ISO 8601 string representation of the initial default date to show in the date input. This is analogous to defaultValue for a form input field.
+   */
+  selectedDate: _react.PropTypes.string,
+  /**
+   * An ISO 8601 string representation of the start date for a date range.
    */
   startDate: _react.PropTypes.string
 };
@@ -104,7 +104,7 @@ var DatePicker = function (_React$Component) {
     key: 'safeMoment',
     value: function safeMoment(date) {
       if (date && dateFormat) {
-        var momentDate = _moment2.default.utc(date, dateFormat);
+        var momentDate = (0, _moment2.default)(date, dateFormat);
         return momentDate.isValid() ? momentDate : date;
       }
 
@@ -118,7 +118,7 @@ var DatePicker = function (_React$Component) {
       if (dates) {
         var index = 0;
         for (index = 0; index < dates.length; index += 1) {
-          var momentDate = _moment2.default.utc(dates[index], dateFormat);
+          var momentDate = (0, _moment2.default)(dates[index], dateFormat);
           if (momentDate.isValid()) {
             momentDates.push(momentDate);
           }
@@ -135,8 +135,7 @@ var DatePicker = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (DatePicker.__proto__ || Object.getPrototypeOf(DatePicker)).call(this, props));
 
     _this.state = {
-      startDate: DatePicker.safeMoment(props.startDate),
-      endDate: DatePicker.safeMoment(props.endDate)
+      selectedDate: DatePicker.safeMoment(props.selectedDate)
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -147,7 +146,7 @@ var DatePicker = function (_React$Component) {
     key: 'handleChange',
     value: function handleChange(date) {
       this.setState({
-        startDate: date
+        selectedDate: date
       });
 
       if (this.props.onChange) {
@@ -166,9 +165,9 @@ var DatePicker = function (_React$Component) {
           minDate = _props.minDate,
           isEndDateRange = _props.isEndDateRange,
           isStartDateRange = _props.isStartDateRange,
-          defaultDate = _props.defaultDate,
+          selectedDate = _props.selectedDate,
           startDate = _props.startDate,
-          customProps = _objectWithoutProperties(_props, ['endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'defaultDate', 'startDate']);
+          customProps = _objectWithoutProperties(_props, ['endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate']);
 
       // TODO: Need translation from date_util
 
@@ -180,11 +179,11 @@ var DatePicker = function (_React$Component) {
       var endMomentDate = DatePicker.safeMoment(endDate);
       var maxMomentDate = DatePicker.safeMoment(maxDate);
       var minMomentDate = DatePicker.safeMoment(minDate);
-      var defaultMomentDate = DatePicker.safeMoment(defaultDate);
+      var selectedMomentDate = DatePicker.safeMoment(selectedDate);
       var startMomentDate = DatePicker.safeMoment(startDate);
 
       var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
-        selected: defaultMomentDate || this.state.startDate,
+        selected: selectedMomentDate || this.state.selectedDate,
         onChange: this.handleChange,
         customInput: _react2.default.createElement(_DateInput2.default, null),
         endDate: endMomentDate,
@@ -209,7 +208,7 @@ var DatePicker = function (_React$Component) {
       }));
 
       var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
-        selected: defaultMomentDate || this.state.startDate,
+        selected: selectedMomentDate || this.state.selectedDate,
         onChange: this.handleChange,
         customInput: _react2.default.createElement(_DateInput2.default, null),
         endDate: endMomentDate,

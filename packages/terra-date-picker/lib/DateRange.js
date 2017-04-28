@@ -51,7 +51,7 @@ var DateRange = function (_React$Component) {
   _createClass(DateRange, null, [{
     key: 'safeMoment',
     value: function safeMoment(dateISO8601) {
-      var momentDate = _moment2.default.utc(dateISO8601);
+      var momentDate = (0, _moment2.default)(dateISO8601);
 
       return momentDate.isValid() ? momentDate : null;
     }
@@ -83,7 +83,7 @@ var DateRange = function (_React$Component) {
       var startDateForRange = startDate;
       var endDateForRange = endDate;
 
-      if (_moment2.default.utc(startDateForRange, this.state.format).isAfter(_moment2.default.utc(endDateForRange, this.state.format))) {
+      if ((0, _moment2.default)(startDateForRange, this.state.format).isAfter((0, _moment2.default)(endDateForRange, this.state.format))) {
         var _ref2 = [endDateForRange, startDateForRange];
         startDateForRange = _ref2[0];
         endDateForRange = _ref2[1];
@@ -112,14 +112,14 @@ var DateRange = function (_React$Component) {
         'div',
         { className: 'terra-DatePicker-range' },
         _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
-          defaultDate: this.state.startDate,
+          selectedDate: this.state.startDate,
           isStartDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,
           onChange: this.handleChangeStart
         })),
         _react2.default.createElement(_DatePicker2.default, _extends({}, this.props, {
-          defaultDate: this.state.endDate,
+          selectedDate: this.state.endDate,
           isEndDateRange: true,
           startDate: this.state.startDate,
           endDate: this.state.endDate,

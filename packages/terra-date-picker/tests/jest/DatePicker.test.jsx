@@ -21,7 +21,7 @@ it('should render a date range', () => {
 
 it('should render a date picker with disabled dates', () => {
   const datePicker = (<DatePicker
-    excludeDates={['04/01/2016', '04/03/2016']}
+    excludeDates={['04-01-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
     utcOffset={0}
   />);
   const wrapper = shallow(datePicker);
@@ -36,7 +36,7 @@ it('should render a date picker with filtered dates', () => {
 
 it('should render a date picker with included dates', () => {
   const datePicker = (<DatePicker
-    includeDates={['04/01/2016', '04/02/2016', '04/03/2016']}
+    includeDates={['04-01-2017T00:00:00.000Z', '04-02-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
     utcOffset={0}
   />);
   const wrapper = shallow(datePicker);
@@ -45,8 +45,8 @@ it('should render a date picker with included dates', () => {
 
 it('should render a date picker with min and max dates', () => {
   const datePicker = (<DatePicker
-    minDate={'04/01/2016'}
-    maxDate={'04/10/2016'}
+    minDate={'04-01-20171T00:00:00.000Z'}
+    maxDate={'04-10-2017T00:00:00.000Z'}
     utcOffset={0}
   />);
   const wrapper = shallow(datePicker);

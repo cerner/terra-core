@@ -8,11 +8,7 @@ import './DatePicker.scss';
 
 const propTypes = {
   /**
-   * An ISO 8601 string representation of the default date to show in the date input.
-   */
-  defaultDate: PropTypes.string,
-  /**
-   * An ISO 8601 string representation of the default end date for a date range.
+   * An ISO 8601 string representation of the end date for a date range.
    */
   endDate: PropTypes.string,
   /**
@@ -48,7 +44,11 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * An ISO 8601 string representation of the selected start date. startDate represents the currently selected date after some change has been made where as defaultDate represents the initial default date that shows in the input before any change is made.
+   * An ISO 8601 string representation of the initial default date to show in the date input. This prop name is derived from react-datepicker but is analogous to defaultValue for a form input field.
+   */
+  selectedDate: PropTypes.string,
+  /**
+   * An ISO 8601 string representation of the start date for a date range.
    */
   startDate: PropTypes.string,
 };
@@ -65,7 +65,7 @@ class DatePicker extends React.Component {
 
   static safeMoment(date) {
     if (date && dateFormat) {
-      const momentDate = moment.utc(date, dateFormat);
+      const momentDate = moment(date, dateFormat);
       return momentDate.isValid() ? momentDate : date;
     }
 
@@ -78,7 +78,7 @@ class DatePicker extends React.Component {
     if (dates) {
       let index = 0;
       for (index = 0; index < dates.length; index += 1) {
-        const momentDate = moment.utc(dates[index], dateFormat);
+        const momentDate = moment(dates[index], dateFormat);
         if (momentDate.isValid()) {
           momentDates.push(momentDate);
         }
@@ -92,8 +92,7 @@ class DatePicker extends React.Component {
     super(props);
 
     this.state = {
-      startDate: DatePicker.safeMoment(props.startDate),
-      endDate: DatePicker.safeMoment(props.endDate),
+      selectedDate: DatePicker.safeMoment(props.selectedDate),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -101,7 +100,7 @@ class DatePicker extends React.Component {
 
   handleChange(date) {
     this.setState({
-      startDate: date,
+      selectedDate: date,
     });
 
     if (this.props.onChange) {
@@ -119,7 +118,7 @@ class DatePicker extends React.Component {
       minDate,
       isEndDateRange,
       isStartDateRange,
-      defaultDate,
+      selectedDate,
       startDate,
       ...customProps
     } = this.props;
@@ -132,13 +131,13 @@ class DatePicker extends React.Component {
     const endMomentDate = DatePicker.safeMoment(endDate);
     const maxMomentDate = DatePicker.safeMoment(maxDate);
     const minMomentDate = DatePicker.safeMoment(minDate);
-    const defaultMomentDate = DatePicker.safeMoment(defaultDate);
+    const selectedMomentDate = DatePicker.safeMoment(selectedDate);
     const startMomentDate = DatePicker.safeMoment(startDate);
 
     const portalPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={defaultMomentDate || this.state.startDate}
+        selected={selectedMomentDate || this.state.selectedDate}
         onChange={this.handleChange}
         customInput={<DateInput />}
         endDate={endMomentDate}
@@ -165,7 +164,7 @@ class DatePicker extends React.Component {
     const popupPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={defaultMomentDate || this.state.startDate}
+        selected={selectedMomentDate || this.state.selectedDate}
         onChange={this.handleChange}
         customInput={<DateInput />}
         endDate={endMomentDate}

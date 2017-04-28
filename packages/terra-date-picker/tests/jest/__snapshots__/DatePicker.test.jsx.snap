@@ -12,8 +12,8 @@ exports[`test should render a date picker with disabled dates 1`] = `
       dropdownMode="select"
       excludeDates={
         Array [
-          "2016-04-01T00:00:00.000Z",
-          "2016-04-03T00:00:00.000Z",
+          "2017-04-01T05:00:00.000Z",
+          "2017-04-03T05:00:00.000Z",
         ]
       }
       fixedHeight={true}
@@ -57,8 +57,8 @@ exports[`test should render a date picker with disabled dates 1`] = `
       dropdownMode="select"
       excludeDates={
         Array [
-          "2016-04-01T00:00:00.000Z",
-          "2016-04-03T00:00:00.000Z",
+          "2017-04-01T05:00:00.000Z",
+          "2017-04-03T05:00:00.000Z",
         ]
       }
       fixedHeight={true}
@@ -191,9 +191,9 @@ exports[`test should render a date picker with included dates 1`] = `
       fixedHeight={true}
       includeDates={
         Array [
-          "2016-04-01T00:00:00.000Z",
-          "2016-04-02T00:00:00.000Z",
-          "2016-04-03T00:00:00.000Z",
+          "2017-04-01T05:00:00.000Z",
+          "2017-04-02T05:00:00.000Z",
+          "2017-04-03T05:00:00.000Z",
         ]
       }
       locale="en-US"
@@ -237,9 +237,9 @@ exports[`test should render a date picker with included dates 1`] = `
       fixedHeight={true}
       includeDates={
         Array [
-          "2016-04-01T00:00:00.000Z",
-          "2016-04-02T00:00:00.000Z",
-          "2016-04-03T00:00:00.000Z",
+          "2017-04-01T05:00:00.000Z",
+          "2017-04-02T05:00:00.000Z",
+          "2017-04-03T05:00:00.000Z",
         ]
       }
       locale="en-US"
@@ -286,8 +286,8 @@ exports[`test should render a date picker with min and max dates 1`] = `
       dropdownMode="select"
       fixedHeight={true}
       locale="en-US"
-      maxDate={"2016-04-10T00:00:00.000Z"}
-      minDate={"2016-04-01T00:00:00.000Z"}
+      maxDate={"2017-04-10T05:00:00.000Z"}
+      minDate={"2017-04-01T05:00:00.000Z"}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}
@@ -327,8 +327,8 @@ exports[`test should render a date picker with min and max dates 1`] = `
       dropdownMode="select"
       fixedHeight={true}
       locale="en-US"
-      maxDate={"2016-04-10T00:00:00.000Z"}
-      minDate={"2016-04-01T00:00:00.000Z"}
+      maxDate={"2017-04-10T05:00:00.000Z"}
+      minDate={"2017-04-01T05:00:00.000Z"}
       monthsShown={1}
       onBlur={[Function]}
       onChange={[Function]}

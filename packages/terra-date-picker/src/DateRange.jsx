@@ -20,7 +20,7 @@ const propTypes = {
 
 class DateRange extends React.Component {
   static safeMoment(dateISO8601) {
-    const momentDate = moment.utc(dateISO8601);
+    const momentDate = moment(dateISO8601);
 
     return momentDate.isValid() ? momentDate : null;
   }
@@ -40,7 +40,7 @@ class DateRange extends React.Component {
     let startDateForRange = startDate;
     let endDateForRange = endDate;
 
-    if (moment.utc(startDateForRange, this.state.format).isAfter(moment.utc(endDateForRange, this.state.format))) {
+    if (moment(startDateForRange, this.state.format).isAfter(moment(endDateForRange, this.state.format))) {
       [startDateForRange, endDateForRange] = [endDateForRange, startDateForRange];
     }
 
@@ -63,7 +63,7 @@ class DateRange extends React.Component {
     return (<div className="terra-DatePicker-range">
       <DatePicker
         {...this.props}
-        defaultDate={this.state.startDate}
+        selectedDate={this.state.startDate}
         isStartDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
@@ -71,7 +71,7 @@ class DateRange extends React.Component {
       />
       <DatePicker
         {...this.props}
-        defaultDate={this.state.endDate}
+        selectedDate={this.state.endDate}
         isEndDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
