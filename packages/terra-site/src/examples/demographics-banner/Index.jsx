@@ -5,6 +5,13 @@ import Markdown from 'terra-markdown';
 import ReadMe from 'terra-demographics-banner/docs/README.md';
 import DemographicsBanner from 'terra-demographics-banner';
 
+
+import DemographicsBannerAdditionalAges from './DemographicsBannerAdditionalAges';
+import DemographicsBannerAdditionalDetails from './DemographicsBannerAdditionalDetails';
+import DemographicsBannerAdditionalDetailsTruncated from './DemographicsBannerAdditionalDetailsTruncated';
+import DemographicsBannerBasic from './DemographicsBannerBasic';
+import DemographicsBannerDeceased from './DemographicsBannerDeceased';
+
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import DemographicsBannerSrc from '!raw-loader!terra-demographics-banner/src/DemographicsBanner.jsx';
@@ -14,74 +21,17 @@ const DemographicsBannerExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={DemographicsBannerSrc} />
     <h1>Basic Demographics Banner</h1>
-    <DemographicsBanner
-      age="25 Years"
-      dateOfBirth="May 9, 1993"
-      dateOfBirthLabel="DOB"
-      gender="Male"
-      personName="Johnathon Doe"
-      preferredFirstName="John"
-    />
+    <DemographicsBannerBasic />
     <h1>Demographics Banner with Missing Data</h1>
     <DemographicsBanner />
-    <h1>Demographics Banner with App Content</h1>
-    <DemographicsBanner
-      additionalDetails={<p>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</p>}
-      age="25 Years"
-      dateOfBirth="May 9, 1993"
-      dateOfBirthLabel="DOB"
-      gender="Male"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      personName="Johnathon Doe"
-      photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
-      preferredFirstName="John"
-    />
     <h1>Deceased Demographics Banners</h1>
-    <DemographicsBanner
-      age="25 Years"
-      dateOfBirth="May 9, 1992"
-      dateOfBirthLabel="DOB"
-      deceasedDate="March 12, 2017"
-      deceasedDateLabel="Deceased"
-      gender="True Male"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
-      personName="Johnathon Doe"
-      preferredFirstName="John"
-    />
+    <DemographicsBannerDeceased />
     <h1>Demographics Banner with Gestational and Post Menstrural ages</h1>
-    <DemographicsBanner
-      additionalDetails={<span className="risk-score">5%</span>}
-      age="25 Years"
-      dateOfBirth="May 9, 1993"
-      dateOfBirthLabel="DOB"
-      gender="Male"
-      gestationalAge="April 5, 2016"
-      gestationalAgeLabel="GA"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
-      personName="Johnathon Doe"
-      postMenstrualAge="April 7, 2016"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
-    <h1>Demographics Banner with truncated additional details for Mobile</h1>
-    <DemographicsBanner
-      additionalDetails={<p>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</p>}
-      additionalDetailsTruncated
-      age="25 Years"
-      dateOfBirth="May 9, 1993"
-      dateOfBirthLabel="DOB"
-      gender="Male"
-      gestationalAge="April 5, 2016"
-      gestationalAgeLabel="GA"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
-      personName="Johnathon Doe"
-      postMenstrualAge="April 7, 2016"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+    <DemographicsBannerAdditionalAges />
+    <h1>Demographics Banner with Additional Details</h1>
+    <DemographicsBannerAdditionalDetails />
+    <h1>Demographics Banner with Additional Details Truncated for Mobile</h1>
+    <DemographicsBannerAdditionalDetailsTruncated />
   </div>
 );
 
