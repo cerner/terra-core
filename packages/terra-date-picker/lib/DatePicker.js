@@ -80,7 +80,7 @@ var propTypes = {
    */
   onChange: _react.PropTypes.func,
   /**
-   * An ISO 8601 string representation of the initial default date to show in the date input. This is analogous to defaultValue for a form input field.
+   * An ISO 8601 string representation of the initial default date to show in the date input. This prop name is derived from react-datepicker but is analogous to defaultValue for a form input field.
    */
   selectedDate: _react.PropTypes.string,
   /**
