@@ -21,7 +21,7 @@ exports[`test renders a banner that has basic information 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details" />
+        className="terra-DemographicsBanner-application-content" />
     </section>
   }
   medium={
@@ -39,7 +39,7 @@ exports[`test renders a banner that has basic information 1`] = `
             Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details" />
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -75,7 +75,7 @@ exports[`test renders a banner that has basic information 1`] = `
             Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details" />
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -116,7 +116,7 @@ exports[`test renders a banner that has basic information 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details" />
+        className="terra-DemographicsBanner-application-content" />
     </section>
   } />
 `;
@@ -144,7 +144,7 @@ exports[`test renders a blank banner properly 1`] = `
           value="--" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details" />
+        className="terra-DemographicsBanner-application-content" />
     </section>
   }
   medium={
@@ -162,7 +162,7 @@ exports[`test renders a blank banner properly 1`] = `
             --
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details" />
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -198,7 +198,7 @@ exports[`test renders a blank banner properly 1`] = `
             --
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details" />
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -239,7 +239,7 @@ exports[`test renders a blank banner properly 1`] = `
           value="--" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details" />
+        className="terra-DemographicsBanner-application-content" />
     </section>
   } />
 `;
@@ -270,7 +270,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details" />
+        className="terra-DemographicsBanner-application-content" />
     </section>
   }
   medium={
@@ -288,7 +288,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
             Old Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details" />
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -327,7 +327,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
             Old Terra Demographics Banner
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details" />
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -374,7 +374,7 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
           value="March 30, 2017" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details" />
+        className="terra-DemographicsBanner-application-content" />
     </section>
   } />
 `;
@@ -383,6 +383,12 @@ exports[`test renders the banner appropriately for a person with gestational and
 <ResponsiveElement
   defaultElement={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -429,16 +435,17 @@ exports[`test renders the banner appropriately for a person with gestational and
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details">
-        <span
-          className="risk-score">
-          5%
-        </span>
-      </div>
+        className="terra-DemographicsBanner-application-content" />
     </section>
   }
   medium={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -471,12 +478,7 @@ exports[`test renders the banner appropriately for a person with gestational and
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details">
-            <span
-              className="risk-score">
-              5%
-            </span>
-          </div>
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -512,6 +514,12 @@ exports[`test renders the banner appropriately for a person with gestational and
   responsiveTo="window"
   small={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -544,12 +552,7 @@ exports[`test renders the banner appropriately for a person with gestational and
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details">
-            <span
-              className="risk-score">
-              5%
-            </span>
-          </div>
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -584,6 +587,12 @@ exports[`test renders the banner appropriately for a person with gestational and
   }
   tiny={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -630,12 +639,7 @@ exports[`test renders the banner appropriately for a person with gestational and
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details">
-        <span
-          className="risk-score">
-          5%
-        </span>
-      </div>
+        className="terra-DemographicsBanner-application-content" />
     </section>
   } />
 `;
@@ -644,6 +648,12 @@ exports[`test renders the banner properly for a deceased person with additional 
 <ResponsiveElement
   defaultElement={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -687,16 +697,17 @@ exports[`test renders the banner properly for a deceased person with additional 
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details">
-        <span
-          className="risk-score">
-          5%
-        </span>
-      </div>
+        className="terra-DemographicsBanner-application-content" />
     </section>
   }
   medium={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -729,12 +740,7 @@ exports[`test renders the banner properly for a deceased person with additional 
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details">
-            <span
-              className="risk-score">
-              5%
-            </span>
-          </div>
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -767,6 +773,12 @@ exports[`test renders the banner properly for a deceased person with additional 
   responsiveTo="window"
   small={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -799,12 +811,7 @@ exports[`test renders the banner properly for a deceased person with additional 
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details">
-            <span
-              className="risk-score">
-              5%
-            </span>
-          </div>
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -836,6 +843,12 @@ exports[`test renders the banner properly for a deceased person with additional 
   }
   tiny={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -879,12 +892,7 @@ exports[`test renders the banner properly for a deceased person with additional 
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details">
-        <span
-          className="risk-score">
-          5%
-        </span>
-      </div>
+        className="terra-DemographicsBanner-application-content" />
     </section>
   } />
 `;
@@ -893,6 +901,12 @@ exports[`test renders the banner that contains additional information 1`] = `
 <ResponsiveElement
   defaultElement={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -933,16 +947,17 @@ exports[`test renders the banner that contains additional information 1`] = `
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details">
-        <span
-          className="risk-score">
-          5%
-        </span>
-      </div>
+        className="terra-DemographicsBanner-application-content" />
     </section>
   }
   medium={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -975,12 +990,7 @@ exports[`test renders the banner that contains additional information 1`] = `
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details">
-            <span
-              className="risk-score">
-              5%
-            </span>
-          </div>
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -1010,6 +1020,12 @@ exports[`test renders the banner that contains additional information 1`] = `
   responsiveTo="window"
   small={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -1042,12 +1058,7 @@ exports[`test renders the banner that contains additional information 1`] = `
             </span>
           </h1>
           <div
-            className="terra-DemographicsBanner-additional-details">
-            <span
-              className="risk-score">
-              5%
-            </span>
-          </div>
+            className="terra-DemographicsBanner-application-content" />
         </div>
         <div
           className="terra-DemographicsBanner-row">
@@ -1076,6 +1087,12 @@ exports[`test renders the banner that contains additional information 1`] = `
   }
   tiny={
     <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
       applicationRows={
         Array [
           Object {
@@ -1116,12 +1133,7 @@ exports[`test renders the banner that contains additional information 1`] = `
           value="3JSDA" />
       </div>
       <div
-        className="terra-DemographicsBanner-additional-details">
-        <span
-          className="risk-score">
-          5%
-        </span>
-      </div>
+        className="terra-DemographicsBanner-application-content" />
     </section>
   } />
 `;

@@ -15,7 +15,7 @@ import React from 'react';
 import DemographicsBanner from 'terra-demographics-banner';
 
 <DemographicsBanner
-  additionalDetails={<span className="risk-score">5%</span>}
+  applicationContent={<span className="risk-score">5%</span>}
   age="25 Years"
   dateOfBirth="May 9, 1993"
   dateOfBirthLabel="DOB"

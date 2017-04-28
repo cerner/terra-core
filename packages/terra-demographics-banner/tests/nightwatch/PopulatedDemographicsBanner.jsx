@@ -4,7 +4,7 @@ import DemographicsBanner from '../../lib/DemographicsBanner';
 
 export default () =>
   <DemographicsBanner
-    additionalDetails={<p>St. Johns West Wing Room Cardiac Unit 253</p>}
+    applicationContent={<p>St. Johns West Wing Room Cardiac Unit 253</p>}
     age="25 Years"
     dateOfBirth="May 9, 1993"
     dateOfBirthLabel="DOB"

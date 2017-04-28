@@ -46,7 +46,7 @@ module.exports = {
 
     browser
       .expect
-      .element('.terra-DemographicsBanner-additional-details')
+      .element('.terra-DemographicsBanner-application-content')
       .text
       .to
       .contain('St. Johns West Wing Room Cardiac Unit 253');

@@ -35,9 +35,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * Additional Details to display in the banner.
+   * Application Content to display in the banner.
    */
-  additionalDetails: _react.PropTypes.node,
+  applicationContent: _react.PropTypes.node,
   /**
    * Age of the person.
    */
@@ -97,7 +97,7 @@ var propTypes = {
 };
 
 var defaultProps = {
-  additionalDetails: null,
+  applicationContent: null,
   age: '--',
   dateOfBirth: '--',
   dateOfBirthLabel: 'DOB',
@@ -200,7 +200,7 @@ var DemographicsBanner = function (_React$Component) {
     value: function renderLargeDemographicsBanner() {
       var _props = this.props,
           age = _props.age,
-          additionalDetails = _props.additionalDetails,
+          applicationContent = _props.applicationContent,
           dateOfBirth = _props.dateOfBirth,
           deceasedDate = _props.deceasedDate,
           deceasedDateLabel = _props.deceasedDateLabel,
@@ -213,7 +213,7 @@ var DemographicsBanner = function (_React$Component) {
           postMenstrualAge = _props.postMenstrualAge,
           postMenstrualAgeLabel = _props.postMenstrualAgeLabel,
           preferredFirstName = _props.preferredFirstName,
-          customProps = _objectWithoutProperties(_props, ['age', 'additionalDetails', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+          customProps = _objectWithoutProperties(_props, ['age', 'applicationContent', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
@@ -245,8 +245,8 @@ var DemographicsBanner = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'terra-DemographicsBanner-additional-details' },
-              additionalDetails
+              { className: 'terra-DemographicsBanner-application-content' },
+              applicationContent
             )
           ),
           _react2.default.createElement(
@@ -271,7 +271,7 @@ var DemographicsBanner = function (_React$Component) {
     value: function renderSmallDemographicsBanner() {
       var _props2 = this.props,
           age = _props2.age,
-          additionalDetails = _props2.additionalDetails,
+          applicationContent = _props2.applicationContent,
           dateOfBirth = _props2.dateOfBirth,
           deceasedDate = _props2.deceasedDate,
           deceasedDateLabel = _props2.deceasedDateLabel,
@@ -284,7 +284,7 @@ var DemographicsBanner = function (_React$Component) {
           postMenstrualAge = _props2.postMenstrualAge,
           postMenstrualAgeLabel = _props2.postMenstrualAgeLabel,
           preferredFirstName = _props2.preferredFirstName,
-          customProps = _objectWithoutProperties(_props2, ['age', 'additionalDetails', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+          customProps = _objectWithoutProperties(_props2, ['age', 'applicationContent', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
@@ -315,8 +315,8 @@ var DemographicsBanner = function (_React$Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'terra-DemographicsBanner-additional-details' },
-          additionalDetails
+          { className: 'terra-DemographicsBanner-application-content' },
+          applicationContent
         )
       );
     }

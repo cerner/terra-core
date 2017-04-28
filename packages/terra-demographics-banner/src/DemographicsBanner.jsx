@@ -7,9 +7,9 @@ import './DemographicsBanner.scss';
 
 const propTypes = {
   /**
-   * Additional Details to display in the banner.
+   * Application Content to display in the banner.
    */
-  additionalDetails: PropTypes.node,
+  applicationContent: PropTypes.node,
   /**
    * Age of the person.
    */
@@ -69,7 +69,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  additionalDetails: null,
+  applicationContent: null,
   age: '--',
   dateOfBirth: '--',
   dateOfBirthLabel: 'DOB',
@@ -158,7 +158,7 @@ class DemographicsBanner extends React.Component {
   renderLargeDemographicsBanner() {
     const {
       age,
-      additionalDetails,
+      applicationContent,
       dateOfBirth,
       deceasedDate,
       deceasedDateLabel,
@@ -195,8 +195,8 @@ class DemographicsBanner extends React.Component {
                 { preferredFirstName }
               </span> }
             </h1>
-            <div className="terra-DemographicsBanner-additional-details">
-              {additionalDetails}
+            <div className="terra-DemographicsBanner-application-content">
+              {applicationContent}
             </div>
           </div>
           <div className="terra-DemographicsBanner-row">
@@ -215,7 +215,7 @@ class DemographicsBanner extends React.Component {
   renderSmallDemographicsBanner() {
     const {
       age,
-      additionalDetails,
+      applicationContent,
       dateOfBirth,
       deceasedDate,
       deceasedDateLabel,
@@ -253,8 +253,8 @@ class DemographicsBanner extends React.Component {
           {this.personDetails()}
           {this.applicationIdentifiers()}
         </div>
-        <div className="terra-DemographicsBanner-additional-details">
-          {additionalDetails}
+        <div className="terra-DemographicsBanner-application-content">
+          {applicationContent}
         </div>
       </section>
     );

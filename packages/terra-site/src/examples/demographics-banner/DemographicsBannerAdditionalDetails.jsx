@@ -3,7 +3,7 @@ import DemographicsBanner from 'terra-demographics-banner';
 
 const DemographicsBannerAdditionalDetails = () => (
   <DemographicsBanner
-    additionalDetails={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
+    applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
     age="25 Years"
     dateOfBirth="May 9, 1993"
     dateOfBirthLabel="DOB"
