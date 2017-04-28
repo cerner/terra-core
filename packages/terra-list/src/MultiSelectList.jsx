@@ -2,6 +2,10 @@ import React, { PropTypes } from 'react';
 import 'terra-base/lib/baseStyles';
 import List from './List';
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
   /**
    * The children list items passed to the component.
@@ -37,7 +41,7 @@ class MultiSelectList extends React.Component {
         break;
       }
 
-      if (items[i].props.isSelected) {
+      if (items[i].props.isSelected && items[i].props.isSelectable !== false) {
         selectedIndexes.push(i);
       }
     }
@@ -48,6 +52,7 @@ class MultiSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelection = this.handleSelection.bind(this);
+    this.shouldHandleSelection = this.shouldHandleSelection.bind(this);
     this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.children, this.validatedMaxCount()) };
   }
 
@@ -90,7 +95,7 @@ class MultiSelectList extends React.Component {
   }
 
   shouldHandleSelection(index) {
-    if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
+    if (this.state.selectedIndexes.length <= this.validatedMaxCount()) {
       return true;
     }
     if (this.state.selectedIndexes.indexOf(index) >= 0) {
@@ -104,7 +109,8 @@ class MultiSelectList extends React.Component {
 
     return items.map((item, index) => {
       const wrappedOnClick = this.wrappedOnClickForItem(item, index);
-      const newProps = this.newPropsForItem(item, index, wrappedOnClick, disableUnselectedItems);
+      const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(item, index);
+      const newProps = this.newPropsForItem(item, index, wrappedOnClick, wrappedOnKeyDown, disableUnselectedItems);
 
       return React.cloneElement(item, newProps);
     });
@@ -113,7 +119,7 @@ class MultiSelectList extends React.Component {
   wrappedOnClickForItem(item, index) {
     const initialOnClick = item.props.onClick;
     return (event) => {
-      if (this.shouldHandleSelection(index)) {
+      if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
 
         if (this.onChange) {
@@ -127,18 +133,47 @@ class MultiSelectList extends React.Component {
     };
   }
 
-  newPropsForItem(item, index, onClick, disableUnselectedItems) {
+  wrappedOnKeyDownForItem(item, index) {
+    const initialOnKeyDown = item.props.onKeyDown;
+
+    return (event) => {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+        if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+          this.handleSelection(event, index);
+        }
+
+        if (this.onChange) {
+          this.onChange(event, this.state.selectedIndexes);
+        }
+      }
+
+      if (initialOnKeyDown) {
+        initialOnKeyDown(event);
+      }
+    };
+  }
+
+  newPropsForItem(item, index, onClick, onKeyDown, disableUnselectedItems) {
     const isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
 
-    let newProps = { onClick };
+    const newProps = { onClick, onKeyDown };
+
+    // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
     if (isSelected !== item.isSelected) {
       newProps.isSelected = isSelected;
     }
 
-    if (item.props.isSelectable === undefined) {
+    // By default isSelectable attribute for the Item is undefined, as this is selectable list,
+    // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
+    // then the item will not be selectable
+    const isSelectable = item.props.isSelectable;
+    if (isSelectable === undefined) {
       newProps.isSelectable = true;
-    } else if (!item.props.isSelectable) {
-      newProps = {};
+    }
+
+    // Add tabIndex on items to navigate through keyboard tab key for selectable litst
+    if (newProps.isSelectable || isSelectable) {
+      newProps.tabIndex = '0';
     }
 
     if (disableUnselectedItems && isSelected !== true) {
@@ -154,20 +189,19 @@ class MultiSelectList extends React.Component {
     return this.props.children.length;
   }
 
-  unusedVariables(variable) {
-    return variable === this;
-  }
-
   render() {
-    const { children, isDivided, onChange, maxSelectionCount, ...customProps } = this.props;
+    const { children, isDivided, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
-    // Figure out how to handle this scenario.
-    this.unusedVariables(onChange);
-    this.unusedVariables(maxSelectionCount);
+    if ('onChange' in customProps) {
+      delete customProps.onChange;
+    }
+    if ('maxSelectionCount' in customProps) {
+      delete customProps.maxSelectionCount;
+    }
 
     return (
-      <List isDivided={isDivided} {...customProps} tabIndex="0">
+      <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}
       </List>
     );
