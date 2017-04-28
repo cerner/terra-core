@@ -7,7 +7,7 @@
 The demographics component is used to display demographic information about a person in a condensed, easy to read format.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-ui/tree/master/packages/terra-demographics-banner/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner/docs)
 - [LICENSE](#license)
 
 ## Getting Started
