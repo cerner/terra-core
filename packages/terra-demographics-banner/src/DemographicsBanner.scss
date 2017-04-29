@@ -48,12 +48,22 @@
 }
 
 .terra-DemographicsBanner-person-name {
+  flex: 2;
   margin: 0;
+}
+
+.terra-DemographicsBanner-identifiers {
+  @include terra-margin-start(auto); 
+
+  flex: 1;
+
+  @media screen and (min-width: 767px) {
+    @include terra-text-align-end();
+  }
 }
 
 .terra-DemographicsBanner-person-details {
   flex: 1;
-  min-width: 0;
 }
 
 .terra-DemographicsBanner-preferred-first-name {
@@ -83,7 +93,12 @@
   margin: auto 0.714em;
 }
 
-.terra-DemographicsBanner-application-content,
-.terra-DemographicsBanner-identifiers {
+.terra-DemographicsBanner-application-content {
   @include terra-margin-start(auto); 
+
+  flex: 1;
+
+  @media screen and (min-width: 767px) {
+    @include terra-text-align-end();
+  }
 }
