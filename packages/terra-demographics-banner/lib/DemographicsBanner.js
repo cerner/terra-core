@@ -202,6 +202,7 @@ var DemographicsBanner = function (_React$Component) {
           age = _props.age,
           applicationContent = _props.applicationContent,
           dateOfBirth = _props.dateOfBirth,
+          dateOfBirthLabel = _props.dateOfBirthLabel,
           deceasedDate = _props.deceasedDate,
           deceasedDateLabel = _props.deceasedDateLabel,
           gender = _props.gender,
@@ -213,7 +214,7 @@ var DemographicsBanner = function (_React$Component) {
           postMenstrualAge = _props.postMenstrualAge,
           postMenstrualAgeLabel = _props.postMenstrualAgeLabel,
           preferredFirstName = _props.preferredFirstName,
-          customProps = _objectWithoutProperties(_props, ['age', 'applicationContent', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+          customProps = _objectWithoutProperties(_props, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
@@ -273,6 +274,7 @@ var DemographicsBanner = function (_React$Component) {
           age = _props2.age,
           applicationContent = _props2.applicationContent,
           dateOfBirth = _props2.dateOfBirth,
+          dateOfBirthLabel = _props2.dateOfBirthLabel,
           deceasedDate = _props2.deceasedDate,
           deceasedDateLabel = _props2.deceasedDateLabel,
           gender = _props2.gender,
@@ -284,7 +286,7 @@ var DemographicsBanner = function (_React$Component) {
           postMenstrualAge = _props2.postMenstrualAge,
           postMenstrualAgeLabel = _props2.postMenstrualAgeLabel,
           preferredFirstName = _props2.preferredFirstName,
-          customProps = _objectWithoutProperties(_props2, ['age', 'applicationContent', 'dateOfBirth', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+          customProps = _objectWithoutProperties(_props2, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
       var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
