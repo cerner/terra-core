@@ -53,7 +53,6 @@ module.exports = {
           },
         }],
       }),
-
     },
     {
       test: /\.md$/,
@@ -72,20 +71,9 @@ module.exports = {
     }),
     new webpack.NamedChunksPlugin(),
   ],
-  postcss: [
-    Autoprefixer({
-      browsers: [
-        'ie >= 10',
-        'last 2 versions',
-        'last 2 android versions',
-        'last 2 and_chr versions',
-        'iOS >= 8',
-      ],
-    }),
-  ],
   resolve: {
     extensions: ['.js', '.jsx'],
-    modulesDirectories: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
 
     // See https://github.com/facebook/react/issues/8026
     alias: {
