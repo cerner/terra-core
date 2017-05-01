@@ -8,6 +8,10 @@ import './DatePicker.scss';
 
 const propTypes = {
   /**
+   * Custom attributes to apply to the date input.
+   */
+  attrs: PropTypes.object,
+  /**
    * A moment object to use as the default end date for a date range.
    */
   endDate: PropTypes.object,
@@ -82,6 +86,7 @@ class DatePicker extends React.Component {
 
   render() {
     const {
+      attrs,
       endDate,
       excludeDates,
       filterDate,
@@ -111,7 +116,7 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={selectedDate || this.state.startDate}
         onChange={this.handleChange}
-        customInput={<DateInput />}
+        customInput={<DateInput attrs={attrs} />}
         endDate={endDate}
         excludeDates={excludeDates}
         filterDate={filterDate}
@@ -138,7 +143,7 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={selectedDate || this.state.startDate}
         onChange={this.handleChange}
-        customInput={<DateInput />}
+        customInput={<DateInput attrs={attrs} />}
         endDate={endDate}
         excludeDates={excludeDates}
         filterDate={filterDate}
