@@ -16,11 +16,11 @@ var _reactPortal = require('react-portal');
 
 var _reactPortal2 = _interopRequireDefault(_reactPortal);
 
+require('terra-base/lib/baseStyles');
+
 var _ModalContent = require('./ModalContent');
 
 var _ModalContent2 = _interopRequireDefault(_ModalContent);
-
-require('terra-base/lib/baseStyles');
 
 require('./Modal.scss');
 

@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import ModalOverlay from './ModalOverlay';
 import 'terra-base/lib/baseStyles';
+import ModalOverlay from './ModalOverlay';
 
 const propTypes = {
   ariaLabel: PropTypes.string.isRequired,
