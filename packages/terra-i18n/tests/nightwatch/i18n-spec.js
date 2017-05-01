@@ -18,7 +18,8 @@ const ptTranslations = loadTranslationsForLocale('pt');
 
 const defaultTranslations = enTranslations;
 
-const waitInms = 1000;
+const waitInms = 3000;
+
 
 module.exports = {
   before: (browser, done) => {

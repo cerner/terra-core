@@ -5,6 +5,7 @@
 const webpack = require('webpack');
 const config = require('./webpack.config');
 const CleanPlugin = require('clean-webpack-plugin');
+const path = require('path');
 
 // https://facebook.github.io/react/docs/optimizing-performance.html#use-the-production-build
 config.plugins.push(new webpack.DefinePlugin({
@@ -16,9 +17,13 @@ config.plugins.push(new webpack.DefinePlugin({
 // Clean build before running
 config.plugins.push(new CleanPlugin('build', { exclude: ['stats.json'] }));
 
+// Minify css and js
+config.plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
+
+
 // Create output file
 config.output = {
-  path: 'build',
+  path: path.resolve('build'),
   filename: '[name]-[hash].js',
 };
 

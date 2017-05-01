@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
@@ -48,7 +49,8 @@ import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
-import ProgressBarRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
+import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
+import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -88,6 +90,7 @@ ReactDOM.render((
     {DatePickerTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
+    {IconTestRoutes}
     {ImageTestRoutes}
     {ResponsiveElementTestRoutes}
     {ContentContainerTestRoutes}
@@ -98,6 +101,7 @@ ReactDOM.render((
     {StatusTestRoutes}
     {TableTestRoutes}
     {ModalTestRoutes}
-    {ProgressBarRoutes}
+    {ProgressBarTestRoutes}
+    {IconTestRoutes}
   </Router>
 ), document.getElementById('root'));
