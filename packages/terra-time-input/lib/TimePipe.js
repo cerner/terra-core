@@ -3,11 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = TimePipe;
-function TimePipe() {
-  var timeFormat = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'HH:mm';
-
+function TimePipe(timeFormat) {
   return function processConformedValue(conformedValue) {
+    if (!timeFormat || timeFormat.length < 0) {
+      return false;
+    }
+
     var timeFormatArray = timeFormat.split(/[^Hm]+/);
     var maxValue = { HH: 23, mm: 59 };
     var minValue = { HH: 0, mm: 0 };
@@ -32,3 +33,5 @@ function TimePipe() {
     };
   };
 }
+
+exports.default = TimePipe;

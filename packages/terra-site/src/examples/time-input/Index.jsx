@@ -21,7 +21,8 @@ const TimeInputExamples = () => (
     <h2 id="default">Without Default Time</h2>
     <TimeInput />
     <h2 id="default">With Default Time</h2>
-    <TimeInput defaultTime={moment()} />
+    <TimeInput value={moment().format('HH:mm')}
+    />
   </div>
 );
 

@@ -26,6 +26,10 @@ var _TimePipe = require('./TimePipe');
 
 var _TimePipe2 = _interopRequireDefault(_TimePipe);
 
+var _TimeUtil = require('./TimeUtil');
+
+var _TimeUtil2 = _interopRequireDefault(_TimeUtil);
+
 require('./TimeInput.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -40,18 +44,28 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * A moment object to use as the default initial time.
+   * Custom attributes to apply to the time input.
    */
-  defaultTime: _react.PropTypes.object,
+  attrs: _react.PropTypes.object,
+  /**
+   * An ISO 8601 string representation of the default time.
+   */
+  defaultValue: _react.PropTypes.string,
   /**
   * A callback function to execute when a time value is entered.
   */
-  onChange: _react.PropTypes.func
+  onChange: _react.PropTypes.func,
+  /**
+   * An ISO 8601 string representation of the time value in the input.
+   */
+  value: _react.PropTypes.string
 };
 
 var defaultProps = {
-  defaultTime: null,
-  onChange: null
+  attrs: undefined,
+  defaultValue: undefined,
+  onChange: null,
+  value: undefined
 };
 
 var TimeInput = function (_React$Component) {
@@ -69,15 +83,6 @@ var TimeInput = function (_React$Component) {
       // TODO: Get the time format translation.
       return 'HH:mm';
     }
-  }, {
-    key: 'formattedTime',
-    value: function formattedTime(timeMoment) {
-      if (timeMoment) {
-        return timeMoment.clone().locale(TimeInput.userLocale()).format(TimeInput.timeFormat());
-      }
-
-      return '';
-    }
   }]);
 
   function TimeInput(props) {
@@ -86,8 +91,8 @@ var TimeInput = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (TimeInput.__proto__ || Object.getPrototypeOf(TimeInput)).call(this, props));
 
     _this.state = {
-      defaultTime: TimeInput.formattedTime(props.defaultTime),
-      value: TimeInput.formattedTime(props.defaultTime)
+      defaultValue: _TimeUtil2.default.formattedTime(props.defaultValue, TimeInput.timeFormat()),
+      value: _TimeUtil2.default.formattedTime(props.value, TimeInput.timeFormat())
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -107,7 +112,7 @@ var TimeInput = function (_React$Component) {
       });
 
       if (this.props.onChange) {
-        this.props.onChange(event);
+        this.props.onChange(event.target.value, event);
       }
     }
   }, {
@@ -119,28 +124,41 @@ var TimeInput = function (_React$Component) {
         return;
       }
 
+      var updateTime = false;
+
       if (event.key === 'ArrowUp') {
-        this.setState({ value: TimeInput.formattedTime(momentTime.add(1, 'minutes')) });
+        momentTime = momentTime.add(1, 'minutes');
+        updateTime = true;
       } else if (event.key === 'ArrowDown') {
-        this.setState({ value: TimeInput.formattedTime(momentTime.subtract(1, 'minutes')) });
+        momentTime = momentTime.subtract(1, 'minutes');
+        updateTime = true;
+      }
+
+      if (updateTime) {
+        var incrementedTime = momentTime.format(TimeInput.timeFormat());
+        this.setState({ value: incrementedTime });
       }
     }
   }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          defaultTime = _props.defaultTime,
+          attrs = _props.attrs,
+          defaultValue = _props.defaultValue,
           onChange = _props.onChange,
-          customProps = _objectWithoutProperties(_props, ['defaultTime', 'onChange']);
+          value = _props.value,
+          customProps = _objectWithoutProperties(_props, ['attrs', 'defaultValue', 'onChange', 'value']);
+
+      var attributes = _extends({}, customProps, attrs);
 
       return _react2.default.createElement(
         'div',
         { className: 'terra-TimeInput' },
-        _react2.default.createElement(_reactTextMask2.default, _extends({}, customProps, {
+        _react2.default.createElement(_reactTextMask2.default, _extends({}, attributes, {
           className: 'terra-TimeInput-input',
           type: 'text',
           value: this.state.value,
-          defaultValue: this.state.defaultTime,
+          defaultValue: this.state.defaultValue,
           onChange: this.handleChange,
           placeholder: TimeInput.timeFormat(),
           mask: [/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/],

@@ -1,5 +1,9 @@
-export default function TimePipe(timeFormat = 'HH:mm') {
+function TimePipe(timeFormat) {
   return function processConformedValue(conformedValue) {
+    if (!timeFormat || timeFormat.length < 0) {
+      return false;
+    }
+
     const timeFormatArray = timeFormat.split(/[^Hm]+/);
     const maxValue = { HH: 23, mm: 59 };
     const minValue = { HH: 0, mm: 0 };
@@ -24,3 +28,6 @@ export default function TimePipe(timeFormat = 'HH:mm') {
     };
   };
 }
+
+export default TimePipe;
+

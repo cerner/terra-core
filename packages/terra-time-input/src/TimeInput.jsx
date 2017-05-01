@@ -3,22 +3,33 @@ import moment from 'moment';
 import TextMask from 'react-text-mask';
 import 'terra-base/lib/baseStyles';
 import TimePipe from './TimePipe';
+import TimeUtil from './TimeUtil';
 import './TimeInput.scss';
 
 const propTypes = {
   /**
-   * A moment object to use as the default initial time.
+   * Custom attributes to apply to the time input.
    */
-  defaultTime: PropTypes.object,
+  attrs: PropTypes.object,
+  /**
+   * An ISO 8601 string representation of the default time.
+   */
+  defaultValue: PropTypes.string,
     /**
    * A callback function to execute when a time value is entered.
    */
   onChange: PropTypes.func,
+  /**
+   * An ISO 8601 string representation of the time value in the input.
+   */
+  value: PropTypes.string,
 };
 
 const defaultProps = {
-  defaultTime: null,
+  attrs: undefined,
+  defaultValue: undefined,
   onChange: null,
+  value: undefined,
 };
 
 class TimeInput extends React.Component {
@@ -32,20 +43,12 @@ class TimeInput extends React.Component {
     return 'HH:mm';
   }
 
-  static formattedTime(timeMoment) {
-    if (timeMoment) {
-      return timeMoment.clone().locale(TimeInput.userLocale()).format(TimeInput.timeFormat());
-    }
-
-    return '';
-  }
-
   constructor(props) {
     super(props);
 
     this.state = {
-      defaultTime: TimeInput.formattedTime(props.defaultTime),
-      value: TimeInput.formattedTime(props.defaultTime),
+      defaultValue: TimeUtil.formattedTime(props.defaultValue, TimeInput.timeFormat()),
+      value: TimeUtil.formattedTime(props.value, TimeInput.timeFormat()),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -62,39 +65,52 @@ class TimeInput extends React.Component {
     });
 
     if (this.props.onChange) {
-      this.props.onChange(event);
+      this.props.onChange(event.target.value, event);
     }
   }
 
   handleInputKeyDown(event) {
-    const momentTime = moment(this.state.value, TimeInput.timeFormat(), true);
+    let momentTime = moment(this.state.value, TimeInput.timeFormat(), true);
 
     if (!momentTime.isValid()) {
       return;
     }
 
+    let updateTime = false;
+
     if (event.key === 'ArrowUp') {
-      this.setState({ value: TimeInput.formattedTime(momentTime.add(1, 'minutes')) });
+      momentTime = momentTime.add(1, 'minutes');
+      updateTime = true;
     } else if (event.key === 'ArrowDown') {
-      this.setState({ value: TimeInput.formattedTime(momentTime.subtract(1, 'minutes')) });
+      momentTime = momentTime.subtract(1, 'minutes');
+      updateTime = true;
+    }
+
+    if (updateTime) {
+      const incrementedTime = momentTime.format(TimeInput.timeFormat());
+      this.setState({ value: incrementedTime });
     }
   }
 
   render() {
     const {
-      defaultTime,
+      attrs,
+      defaultValue,
       onChange,
+      value,
       ...customProps
     } = this.props;
+
+    const attributes = { ...customProps, ...attrs };
 
     return (
       <div className="terra-TimeInput">
         <TextMask
-          {...customProps}
+          {...attributes}
           className="terra-TimeInput-input"
           type="text"
           value={this.state.value}
-          defaultValue={this.state.defaultTime}
+          defaultValue={this.state.defaultValue}
           onChange={this.handleChange}
           placeholder={TimeInput.timeFormat()}
           mask={[/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/]}
