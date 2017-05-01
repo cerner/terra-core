@@ -14,33 +14,25 @@ class DummyApp extends React.Component {
     this.setState({open: true});
   }
 
-  handleClickOutside(event) {
+  handleRequestClose(event) {
     this.setState({open: false});
   }
 
-  // event.preventDefault();
-  // this.setState({open: false});
-
   render() {
-    let contentSection;
-    if (this.state.open) {
-      contentSection = <p>i'm a popup content</p>;
-    }
+    const contentSection = <p>i'm a popup content</p>;
 
     const constraints = [{to: 'window', attachment: 'together'}];
 
     return (
-      <Popup 
-        attachment="bottom left"
-        content={contentSection}
-        enabled
+      <PopupPresenter 
+        constraints={constraints}
+        content={content}
+        contentAttachment="bottom left"
+        isOpen={this.state.open}
         target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
         targetAttachment="top right"
-        onClickOutside={this.handleClickOutside}
-        isOpen={this.state.open}
-        constraints={constraints}
-        >
-      </Popup>
+        onRequestClose={this.handleRequestClose}
+      />
     );
   }
 }

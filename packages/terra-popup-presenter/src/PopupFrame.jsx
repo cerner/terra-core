@@ -8,15 +8,28 @@ const KEYCODES = {
 
 const propTypes = {
   /**
-   * The children list items passed to the component.
+   * The child elements passed to the component.
    */
   children: PropTypes.node,
+  /**
+   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   */
   closeOnEsc: PropTypes.bool,
+  /**
+   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   */
+  closeOnOutsideClick: PropTypes.bool,
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
+  onClose: PropTypes.func,
 };
 
 const defaultProps = {
   children: [],
-  closeOnEsc: false,
+  closeOnEsc: true,
+  closeOnOutsideClick: true,
+  onClose: undefined,
 };
 
 class PopupFrame extends React.Component {
@@ -39,19 +52,19 @@ class PopupFrame extends React.Component {
   }
 
   handleClickOutside(event) {
-    if (this.props.onClickOutside) {
-      this.props.onClickOutside(event);
+    if (this.props.closeOnOutsideClick && this.props.onClose) {
+      this.props.onClose(event);
     }
   }
 
   handleKeydown(event) {
-    if (event.keyCode === KEYCODES.ESCAPE) {
-      this.props.onClickOutside(event);
+    if (event.keyCode === KEYCODES.ESCAPE && this.props.onClose) {
+      this.props.onClose(event);
     }
   }
 
   render() {
-    const { children, onClickOutside, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
+    const { children, onClose, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
     const frameClassNames = classNames([
       'terra-PopupFrame',
       customProps.className,

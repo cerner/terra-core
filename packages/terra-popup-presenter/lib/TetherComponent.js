@@ -12,10 +12,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -23,14 +19,6 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 var _tether = require('tether');
 
 var _tether2 = _interopRequireDefault(_tether);
-
-var _reactOnclickoutside = require('react-onclickoutside');
-
-var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
-
-var _PopupFrame = require('./PopupFrame');
-
-var _PopupFrame2 = _interopRequireDefault(_PopupFrame);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,48 +33,42 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
 var propTypes = {
-  /**
-   * The children list items passed to the component.
-   */
-  attachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
+  classes: _react.PropTypes.object,
+  className: _react.PropTypes.string,
+  classPrefix: _react.PropTypes.string,
   content: _react.PropTypes.element,
-  enabled: _react.PropTypes.bool,
-  offset: _react.PropTypes.string,
-  // optimizations: PropTypes.object,
+  constraints: _react.PropTypes.array,
+  contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
+  contentOffset: _react.PropTypes.string,
+  id: _react.PropTypes.string,
+  isEnabled: _react.PropTypes.bool,
+  optimizations: _react.PropTypes.object,
   renderElementTag: _react.PropTypes.string,
-  renderElementTo: _react.PropTypes.any,
+  renderElementTo: _react.PropTypes.oneOfType(renderElementToPropTypes),
   style: _react.PropTypes.object,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(attachmentPositions),
   targetModifier: _react.PropTypes.string,
   targetOffset: _react.PropTypes.string,
-  onClickOutside: _react.PropTypes.func,
-  isOpen: _react.PropTypes.bool
+  onUpdate: _react.PropTypes.func,
+  onRepositioned: _react.PropTypes.func
 };
 
 var defaultProps = {
   renderElementTag: 'div',
-  renderElementTo: null,
-  onClickOutside: undefined,
-  isOpen: false
+  renderElementTo: null
 };
 
-var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default);
+var TetherComponent = function (_React$Component) {
+  _inherits(TetherComponent, _React$Component);
 
-var Popup = function (_React$Component) {
-  _inherits(Popup, _React$Component);
+  function TetherComponent() {
+    _classCallCheck(this, TetherComponent);
 
-  function Popup(props) {
-    _classCallCheck(this, Popup);
-
-    var _this = _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).call(this, props));
-
-    _this.handleClickOutside = _this.handleClickOutside.bind(_this);
-    _this.state = { open: _this.props.isOpen };
-    return _this;
+    return _possibleConstructorReturn(this, (TetherComponent.__proto__ || Object.getPrototypeOf(TetherComponent)).apply(this, arguments));
   }
 
-  _createClass(Popup, [{
+  _createClass(TetherComponent, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       this._targetNode = _reactDom2.default.findDOMNode(this);
@@ -103,13 +85,6 @@ var Popup = function (_React$Component) {
       this._destroy();
     }
   }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      if (this.state.open !== nextProps.isOpen) {
-        this.setState({ open: nextProps.isOpen });
-      }
-    }
-  }, {
     key: 'disable',
     value: function disable() {
       this._tether.disable();
@@ -123,17 +98,6 @@ var Popup = function (_React$Component) {
     key: 'position',
     value: function position() {
       this._tether.position();
-    }
-  }, {
-    key: 'handleClickOutside',
-    value: function handleClickOutside(event) {
-      this.setOpen(false);
-      this.props.onClickOutside(event);
-    }
-  }, {
-    key: 'setOpen',
-    value: function setOpen(open) {
-      this.setState({ open: open });
     }
   }, {
     key: '_destroy',
@@ -160,35 +124,22 @@ var Popup = function (_React$Component) {
           renderElementTag = _props.renderElementTag,
           renderElementTo = _props.renderElementTo;
 
-      // if no element component provided, bail out
 
-      if (!content || !this.state.open) {
-        // destroy Tether elements if they have been created
+      if (!content) {
         if (this._tether) {
           this._destroy();
         }
         return;
       }
 
-      // create element node container if it hasn't been yet
       if (!this._elementParentNode) {
-        // create a node that we can stick our content Component in
         this._elementParentNode = document.createElement(renderElementTag);
 
-        // append node to the end of the body
         var renderTo = renderElementTo || document.body;
         renderTo.appendChild(this._elementParentNode);
       }
 
-      var wrappedContent = _react2.default.createElement(
-        WrappedPopupFrame,
-        { closeOnEsc: true, onClickOutside: this.handleClickOutside },
-        content
-      );
-
-      // render element component into the DOM
-      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, wrappedContent, this._elementParentNode, function () {
-        // don't update Tether until the subtree has finished rendering
+      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, content, this._elementParentNode, function () {
         _this2._updateTether();
       });
     }
@@ -198,16 +149,19 @@ var Popup = function (_React$Component) {
       var _props2 = this.props,
           renderElementTag = _props2.renderElementTag,
           renderElementTo = _props2.renderElementTo,
-          onClickOutside = _props2.onClickOutside,
-          isOpen = _props2.isOpen,
+          isEnabled = _props2.isEnabled,
           target = _props2.target,
           content = _props2.content,
-          customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo', 'onClickOutside', 'isOpen', 'target', 'content']); // eslint-disable-line no-unused-vars
-
+          contentAttachment = _props2.contentAttachment,
+          contentOffset = _props2.contentOffset,
+          customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo', 'isEnabled', 'target', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
 
       var tetherOptions = _extends({
-        target: this._targetNode,
-        element: this._elementParentNode
+        attachment: contentAttachment,
+        element: this._elementParentNode,
+        enabled: isEnabled,
+        offset: contentOffset,
+        target: this._targetNode
       }, customProps);
 
       if (!this._tether) {
@@ -225,10 +179,11 @@ var Popup = function (_React$Component) {
     }
   }]);
 
-  return Popup;
+  return TetherComponent;
 }(_react2.default.Component);
 
-Popup.propTypes = propTypes;
-Popup.defaultProps = defaultProps;
+TetherComponent.propTypes = propTypes;
+TetherComponent.defaultProps = defaultProps;
+TetherComponent.attachmentPositions = attachmentPositions;
 
-exports.default = Popup;
+exports.default = TetherComponent;

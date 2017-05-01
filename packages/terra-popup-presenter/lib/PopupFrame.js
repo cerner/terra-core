@@ -34,15 +34,28 @@ var KEYCODES = {
 
 var propTypes = {
   /**
-   * The children list items passed to the component.
+   * The child elements passed to the component.
    */
   children: _react.PropTypes.node,
-  closeOnEsc: _react.PropTypes.bool
+  /**
+   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   */
+  closeOnEsc: _react.PropTypes.bool,
+  /**
+   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   */
+  closeOnOutsideClick: _react.PropTypes.bool,
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
+  onClose: _react.PropTypes.func
 };
 
 var defaultProps = {
   children: [],
-  closeOnEsc: false
+  closeOnEsc: true,
+  closeOnOutsideClick: true,
+  onClose: undefined
 };
 
 var PopupFrame = function (_React$Component) {
@@ -75,15 +88,15 @@ var PopupFrame = function (_React$Component) {
   }, {
     key: 'handleClickOutside',
     value: function handleClickOutside(event) {
-      if (this.props.onClickOutside) {
-        this.props.onClickOutside(event);
+      if (this.props.closeOnOutsideClick && this.props.onClose) {
+        this.props.onClose(event);
       }
     }
   }, {
     key: 'handleKeydown',
     value: function handleKeydown(event) {
-      if (event.keyCode === KEYCODES.ESCAPE) {
-        this.props.onClickOutside(event);
+      if (event.keyCode === KEYCODES.ESCAPE && this.props.onClose) {
+        this.props.onClose(event);
       }
     }
   }, {
@@ -91,10 +104,10 @@ var PopupFrame = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           children = _props.children,
-          onClickOutside = _props.onClickOutside,
+          onClose = _props.onClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
-          customProps = _objectWithoutProperties(_props, ['children', 'onClickOutside', 'enableOnClickOutside', 'disableOnClickOutside']);
+          customProps = _objectWithoutProperties(_props, ['children', 'onClose', 'enableOnClickOutside', 'disableOnClickOutside']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', customProps.className]);
 
