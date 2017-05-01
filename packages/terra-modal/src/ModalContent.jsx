@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
+import 'terra-base/lib/baseStyles';
 import ModalOverlay from './ModalOverlay';
 
 const propTypes = {
