@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react';
 import Portal from 'react-portal';
 import ModalContent from './ModalContent';
+import 'terra-base/lib/baseStyles';
 import './Modal.scss';
+
 
 const propTypes = {
   /**

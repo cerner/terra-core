@@ -20,6 +20,8 @@ var _ModalContent = require('./ModalContent');
 
 var _ModalContent2 = _interopRequireDefault(_ModalContent);
 
+require('terra-base/lib/baseStyles');
+
 require('./Modal.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
