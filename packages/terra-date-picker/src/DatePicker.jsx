@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import ReactDatePicker from 'react-datepicker';
-import moment from 'moment';
 import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
 import DateInput from './DateInput';
+import DateUtil from './DateUtil';
 import './DatePicker.scss';
 
 const propTypes = {
@@ -53,46 +53,19 @@ const propTypes = {
   startDate: PropTypes.string,
 };
 
-const locale = 'en-US'; // TODO: Get the locale from i18n
-const dateFormat = 'MM/DD/YYYY'; // TODO: Get the locale from i18n
-
 const defaultProps = {
   isEndDateRange: false,
   isStartDateRange: false,
 };
 
 class DatePicker extends React.Component {
-
-  static safeMoment(date) {
-    if (date && dateFormat) {
-      const momentDate = moment(date, dateFormat);
-      return momentDate.isValid() ? momentDate : date;
-    }
-
-    return date;
-  }
-
-  static createMomentsFromISO8601(dates) {
-    const momentDates = [];
-
-    if (dates) {
-      let index = 0;
-      for (index = 0; index < dates.length; index += 1) {
-        const momentDate = moment(dates[index], dateFormat);
-        if (momentDate.isValid()) {
-          momentDates.push(momentDate);
-        }
-      }
-    }
-
-    return momentDates.length > 0 ? momentDates : dates;
-  }
-
   constructor(props) {
     super(props);
 
     this.state = {
-      selectedDate: DatePicker.safeMoment(props.selectedDate),
+      locale: 'en-US', // TODO: Get the locale from i18n
+      dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
+      selectedDate: DateUtil.createSafeMoment(props.selectedDate, 'MM/DD/YYYY'),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -104,7 +77,8 @@ class DatePicker extends React.Component {
     });
 
     if (this.props.onChange) {
-      this.props.onChange(date.format(dateFormat));
+      const dateString = date && date.isValid() ? date.format(this.state.dateFormat) : '';
+      this.props.onChange(dateString);
     }
   }
 
@@ -126,18 +100,22 @@ class DatePicker extends React.Component {
     // TODO: Need translation from date_util
     const todayString = 'Today';
 
-    const exludeMomentDates = DatePicker.createMomentsFromISO8601(excludeDates);
-    const includeMomentDates = DatePicker.createMomentsFromISO8601(includeDates);
-    const endMomentDate = DatePicker.safeMoment(endDate);
-    const maxMomentDate = DatePicker.safeMoment(maxDate);
-    const minMomentDate = DatePicker.safeMoment(minDate);
-    const selectedMomentDate = DatePicker.safeMoment(selectedDate);
-    const startMomentDate = DatePicker.safeMoment(startDate);
+    const exludeMomentDates = DateUtil.filterSafeMoments(excludeDates, this.state.dateFormat);
+    const includeMomentDates = DateUtil.filterSafeMoments(includeDates, this.state.dateFormat);
+    const endMomentDate = DateUtil.createSafeMoment(endDate, this.state.dateFormat);
+    const maxMomentDate = DateUtil.createSafeMoment(maxDate, this.state.dateFormat);
+    const minMomentDate = DateUtil.createSafeMoment(minDate, this.state.dateFormat);
+    const startMomentDate = DateUtil.createSafeMoment(startDate, this.state.dateFormat);
+
+    let selectedMomentDate = this.state.selectedDate;
+    if (isStartDateRange || isEndDateRange) {
+      selectedMomentDate = DateUtil.createSafeMoment(selectedDate, this.state.dateFormat);
+    }
 
     const portalPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={selectedMomentDate || this.state.selectedDate}
+        selected={selectedMomentDate}
         onChange={this.handleChange}
         customInput={<DateInput />}
         endDate={endMomentDate}
@@ -152,10 +130,10 @@ class DatePicker extends React.Component {
         todayButton={todayString}
         withPortal
         dateFormatCalendar=" "
-        dateFormat={dateFormat}
+        dateFormat={this.state.dateFormat}
         fixedHeight
-        locale={locale}
-        placeholderText={dateFormat}
+        locale={this.state.locale}
+        placeholderText={this.state.dateFormat}
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
@@ -164,7 +142,7 @@ class DatePicker extends React.Component {
     const popupPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={selectedMomentDate || this.state.selectedDate}
+        selected={selectedMomentDate}
         onChange={this.handleChange}
         customInput={<DateInput />}
         endDate={endMomentDate}
@@ -178,10 +156,10 @@ class DatePicker extends React.Component {
         startDate={startMomentDate}
         todayButton={todayString}
         dateFormatCalendar=" "
-        dateFormat={dateFormat}
+        dateFormat={this.state.dateFormat}
         fixedHeight
-        locale={locale}
-        placeholderText={dateFormat}
+        locale={this.state.locale}
+        placeholderText={this.state.dateFormat}
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown

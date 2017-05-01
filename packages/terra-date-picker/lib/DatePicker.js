@@ -16,10 +16,6 @@ var _reactDatepicker = require('react-datepicker');
 
 var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
 
-var _moment = require('moment');
-
-var _moment2 = _interopRequireDefault(_moment);
-
 require('terra-base/lib/baseStyles');
 
 var _terraResponsiveElement = require('terra-responsive-element');
@@ -29,6 +25,10 @@ var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);
 var _DateInput = require('./DateInput');
 
 var _DateInput2 = _interopRequireDefault(_DateInput);
+
+var _DateUtil = require('./DateUtil');
+
+var _DateUtil2 = _interopRequireDefault(_DateUtil);
 
 require('./DatePicker.scss');
 
@@ -89,9 +89,6 @@ var propTypes = {
   startDate: _react.PropTypes.string
 };
 
-var locale = 'en-US'; // TODO: Get the locale from i18n
-var dateFormat = 'MM/DD/YYYY'; // TODO: Get the locale from i18n
-
 var defaultProps = {
   isEndDateRange: false,
   isStartDateRange: false
@@ -100,42 +97,15 @@ var defaultProps = {
 var DatePicker = function (_React$Component) {
   _inherits(DatePicker, _React$Component);
 
-  _createClass(DatePicker, null, [{
-    key: 'safeMoment',
-    value: function safeMoment(date) {
-      if (date && dateFormat) {
-        var momentDate = (0, _moment2.default)(date, dateFormat);
-        return momentDate.isValid() ? momentDate : date;
-      }
-
-      return date;
-    }
-  }, {
-    key: 'createMomentsFromISO8601',
-    value: function createMomentsFromISO8601(dates) {
-      var momentDates = [];
-
-      if (dates) {
-        var index = 0;
-        for (index = 0; index < dates.length; index += 1) {
-          var momentDate = (0, _moment2.default)(dates[index], dateFormat);
-          if (momentDate.isValid()) {
-            momentDates.push(momentDate);
-          }
-        }
-      }
-
-      return momentDates.length > 0 ? momentDates : dates;
-    }
-  }]);
-
   function DatePicker(props) {
     _classCallCheck(this, DatePicker);
 
     var _this = _possibleConstructorReturn(this, (DatePicker.__proto__ || Object.getPrototypeOf(DatePicker)).call(this, props));
 
     _this.state = {
-      selectedDate: DatePicker.safeMoment(props.selectedDate)
+      locale: 'en-US', // TODO: Get the locale from i18n
+      dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
+      selectedDate: _DateUtil2.default.createSafeMoment(props.selectedDate, 'MM/DD/YYYY')
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -150,7 +120,8 @@ var DatePicker = function (_React$Component) {
       });
 
       if (this.props.onChange) {
-        this.props.onChange(date.format(dateFormat));
+        var dateString = date && date.isValid() ? date.format(this.state.dateFormat) : '';
+        this.props.onChange(dateString);
       }
     }
   }, {
@@ -174,16 +145,20 @@ var DatePicker = function (_React$Component) {
 
       var todayString = 'Today';
 
-      var exludeMomentDates = DatePicker.createMomentsFromISO8601(excludeDates);
-      var includeMomentDates = DatePicker.createMomentsFromISO8601(includeDates);
-      var endMomentDate = DatePicker.safeMoment(endDate);
-      var maxMomentDate = DatePicker.safeMoment(maxDate);
-      var minMomentDate = DatePicker.safeMoment(minDate);
-      var selectedMomentDate = DatePicker.safeMoment(selectedDate);
-      var startMomentDate = DatePicker.safeMoment(startDate);
+      var exludeMomentDates = _DateUtil2.default.filterSafeMoments(excludeDates, this.state.dateFormat);
+      var includeMomentDates = _DateUtil2.default.filterSafeMoments(includeDates, this.state.dateFormat);
+      var endMomentDate = _DateUtil2.default.createSafeMoment(endDate, this.state.dateFormat);
+      var maxMomentDate = _DateUtil2.default.createSafeMoment(maxDate, this.state.dateFormat);
+      var minMomentDate = _DateUtil2.default.createSafeMoment(minDate, this.state.dateFormat);
+      var startMomentDate = _DateUtil2.default.createSafeMoment(startDate, this.state.dateFormat);
+
+      var selectedMomentDate = this.state.selectedDate;
+      if (isStartDateRange || isEndDateRange) {
+        selectedMomentDate = _DateUtil2.default.createSafeMoment(selectedDate, this.state.dateFormat);
+      }
 
       var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
-        selected: selectedMomentDate || this.state.selectedDate,
+        selected: selectedMomentDate,
         onChange: this.handleChange,
         customInput: _react2.default.createElement(_DateInput2.default, null),
         endDate: endMomentDate,
@@ -198,17 +173,17 @@ var DatePicker = function (_React$Component) {
         todayButton: todayString,
         withPortal: true,
         dateFormatCalendar: ' ',
-        dateFormat: dateFormat,
+        dateFormat: this.state.dateFormat,
         fixedHeight: true,
-        locale: locale,
-        placeholderText: dateFormat,
+        locale: this.state.locale,
+        placeholderText: this.state.dateFormat,
         dropdownMode: 'select',
         showMonthDropdown: true,
         showYearDropdown: true
       }));
 
       var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
-        selected: selectedMomentDate || this.state.selectedDate,
+        selected: selectedMomentDate,
         onChange: this.handleChange,
         customInput: _react2.default.createElement(_DateInput2.default, null),
         endDate: endMomentDate,
@@ -222,10 +197,10 @@ var DatePicker = function (_React$Component) {
         startDate: startMomentDate,
         todayButton: todayString,
         dateFormatCalendar: ' ',
-        dateFormat: dateFormat,
+        dateFormat: this.state.dateFormat,
         fixedHeight: true,
-        locale: locale,
-        placeholderText: dateFormat,
+        locale: this.state.locale,
+        placeholderText: this.state.dateFormat,
         dropdownMode: 'select',
         showMonthDropdown: true,
         showYearDropdown: true

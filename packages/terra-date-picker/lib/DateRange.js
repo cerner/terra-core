@@ -48,15 +48,6 @@ var propTypes = {
 var DateRange = function (_React$Component) {
   _inherits(DateRange, _React$Component);
 
-  _createClass(DateRange, null, [{
-    key: 'safeMoment',
-    value: function safeMoment(dateISO8601) {
-      var momentDate = (0, _moment2.default)(dateISO8601);
-
-      return momentDate.isValid() ? momentDate : null;
-    }
-  }]);
-
   function DateRange(props) {
     _classCallCheck(this, DateRange);
 

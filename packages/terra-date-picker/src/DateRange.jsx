@@ -19,12 +19,6 @@ const propTypes = {
 };
 
 class DateRange extends React.Component {
-  static safeMoment(dateISO8601) {
-    const momentDate = moment(dateISO8601);
-
-    return momentDate.isValid() ? momentDate : null;
-  }
-
   constructor(props) {
     super(props);
     this.state = {
