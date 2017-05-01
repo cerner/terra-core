@@ -30,10 +30,6 @@
   "bugs": {
     "url": "https://github.com/cerner/terra-core/issues"
   },
-  "devDependencies": {
-    "terra-application": "^0.x",
-    "terra-legacy-theme": "^0.x"
-  },
   "dependencies": {
     "glob": "^7.1.1",
     "html-webpack-plugin": "^2.28.0",
@@ -44,7 +40,7 @@
     "sauce-connect-launcher": "^1.2.0",
     "selenium-server-standalone-jar": "3.2.0",
     "shelljs": "^0.7.6",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

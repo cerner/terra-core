@@ -22,7 +22,7 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:scss",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",

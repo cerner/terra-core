@@ -1,8 +1,7 @@
 {
   "name": "terra-button-group",
   "main": "lib/ButtonGroup.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "terra-button-group",
   "repository": {
     "type": "git",
@@ -33,12 +32,13 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0",
     "terra-button": "^0.x"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",

@@ -8,6 +8,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('terra-base/lib/baseStyles');
+
 var _TableRow = require('./TableRow');
 
 var _TableRow2 = _interopRequireDefault(_TableRow);

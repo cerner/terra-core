@@ -12,6 +12,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('terra-base/lib/baseStyles');
+
 var _List = require('./List');
 
 var _List2 = _interopRequireDefault(_List);
@@ -25,6 +27,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var KEYCODES = {
+  ENTER: 13
+};
 
 var propTypes = {
   /**
@@ -64,7 +70,7 @@ var MultiSelectList = function (_React$Component) {
           break;
         }
 
-        if (items[i].props.isSelected) {
+        if (items[i].props.isSelected && items[i].props.isSelectable !== false) {
           selectedIndexes.push(i);
         }
       }
@@ -79,6 +85,7 @@ var MultiSelectList = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (MultiSelectList.__proto__ || Object.getPrototypeOf(MultiSelectList)).call(this, props));
 
     _this.handleSelection = _this.handleSelection.bind(_this);
+    _this.shouldHandleSelection = _this.shouldHandleSelection.bind(_this);
     _this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(_this.props.children, _this.validatedMaxCount()) };
     return _this;
   }
@@ -127,7 +134,7 @@ var MultiSelectList = function (_React$Component) {
   }, {
     key: 'shouldHandleSelection',
     value: function shouldHandleSelection(index) {
-      if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
+      if (this.state.selectedIndexes.length <= this.validatedMaxCount()) {
         return true;
       }
       if (this.state.selectedIndexes.indexOf(index) >= 0) {
@@ -144,7 +151,8 @@ var MultiSelectList = function (_React$Component) {
 
       return items.map(function (item, index) {
         var wrappedOnClick = _this2.wrappedOnClickForItem(item, index);
-        var newProps = _this2.newPropsForItem(item, index, wrappedOnClick, disableUnselectedItems);
+        var wrappedOnKeyDown = _this2.wrappedOnKeyDownForItem(item, index);
+        var newProps = _this2.newPropsForItem(item, index, wrappedOnClick, wrappedOnKeyDown, disableUnselectedItems);
 
         return _react2.default.cloneElement(item, newProps);
       });
@@ -156,7 +164,7 @@ var MultiSelectList = function (_React$Component) {
 
       var initialOnClick = item.props.onClick;
       return function (event) {
-        if (_this3.shouldHandleSelection(index)) {
+        if (item.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
           _this3.handleSelection(event, index);
 
           if (_this3.onChange) {
@@ -170,19 +178,51 @@ var MultiSelectList = function (_React$Component) {
       };
     }
   }, {
+    key: 'wrappedOnKeyDownForItem',
+    value: function wrappedOnKeyDownForItem(item, index) {
+      var _this4 = this;
+
+      var initialOnKeyDown = item.props.onKeyDown;
+
+      return function (event) {
+        if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+          if (item.props.isSelectable !== false && _this4.shouldHandleSelection(index)) {
+            _this4.handleSelection(event, index);
+          }
+
+          if (_this4.onChange) {
+            _this4.onChange(event, _this4.state.selectedIndexes);
+          }
+        }
+
+        if (initialOnKeyDown) {
+          initialOnKeyDown(event);
+        }
+      };
+    }
+  }, {
     key: 'newPropsForItem',
-    value: function newPropsForItem(item, index, onClick, disableUnselectedItems) {
+    value: function newPropsForItem(item, index, onClick, onKeyDown, disableUnselectedItems) {
       var isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
 
-      var newProps = { onClick: onClick };
+      var newProps = { onClick: onClick, onKeyDown: onKeyDown };
+
+      // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
       if (isSelected !== item.isSelected) {
         newProps.isSelected = isSelected;
       }
 
-      if (item.props.isSelectable === undefined) {
+      // By default isSelectable attribute for the Item is undefined, as this is selectable list,
+      // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
+      // then the item will not be selectable
+      var isSelectable = item.props.isSelectable;
+      if (isSelectable === undefined) {
         newProps.isSelectable = true;
-      } else if (!item.props.isSelectable) {
-        newProps = {};
+      }
+
+      // Add tabIndex on items to navigate through keyboard tab key for selectable litst
+      if (newProps.isSelectable || isSelectable) {
+        newProps.tabIndex = '0';
       }
 
       if (disableUnselectedItems && isSelected !== true) {
@@ -199,29 +239,25 @@ var MultiSelectList = function (_React$Component) {
       return this.props.children.length;
     }
   }, {
-    key: 'unusedVariables',
-    value: function unusedVariables(variable) {
-      return variable === this;
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
           children = _props.children,
           isDivided = _props.isDivided,
-          onChange = _props.onChange,
-          maxSelectionCount = _props.maxSelectionCount,
-          customProps = _objectWithoutProperties(_props, ['children', 'isDivided', 'onChange', 'maxSelectionCount']);
+          customProps = _objectWithoutProperties(_props, ['children', 'isDivided']);
 
       var clonedChildItems = this.cloneChildItems(children);
 
-      // Figure out how to handle this scenario.
-      this.unusedVariables(onChange);
-      this.unusedVariables(maxSelectionCount);
+      if ('onChange' in customProps) {
+        delete customProps.onChange;
+      }
+      if ('maxSelectionCount' in customProps) {
+        delete customProps.maxSelectionCount;
+      }
 
       return _react2.default.createElement(
         _List2.default,
-        _extends({ isDivided: isDivided }, customProps, { tabIndex: '0' }),
+        _extends({ isDivided: isDivided }, customProps),
         clonedChildItems
       );
     }

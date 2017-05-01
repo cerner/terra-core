@@ -6,10 +6,6 @@ Variables to `theme` the terra-button component.
 |------------------------------|---------------|-------------------------------|
 | $terra-button-border-width   | 1px           | Set the button border width   |
 | $terra-button-font-weight    | 400           | Set the button font weight    |
-| $terra-button-margin-top     | 0.357em       | Set the top button margin     |
-| $terra-button-margin-right   | 0.714em       | Set the right button margin   |
-| $terra-button-margin-bottom  | 0.357em       | Set the bottom button margin  |
-| $terra-button-margin-left    | 0             | Set the left button margin    |
 | $terra-button-padding-top    | 0.286em       | Set the top button padding    |
 | $terra-button-padding-right  | 0.714em       | Set the right button padding  |
 | $terra-button-padding-bottom | 0.286em       | Set the bottom button padding |

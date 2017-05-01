@@ -36,6 +36,7 @@
   "dependencies": {
     "moment": "^2.17.1",
     "react-datepicker": "^0.44.0",
+    "terra-base": "^0.x",
     "terra-button": "^0.x",
     "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0",
@@ -43,7 +44,7 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
