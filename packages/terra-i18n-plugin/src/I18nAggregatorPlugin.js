@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
 
-import supportedLocales from './i18nSupportedLocales';
+import supportedLocales from 'terra-i18n/lib/i18nSupportedLocales';
 
 function generateTranslationFile(language, messages) {
   return `import { addLocaleData } from 'react-intl';

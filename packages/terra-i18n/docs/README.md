@@ -10,8 +10,6 @@ The terra-i18n component provides the internationalization to the React componen
 
 ## Usage
 
-### I18nProvider and i18nLoader
-
 ```jsx
 import { I18nProvider, i18nLoader } from 'terra-i18n';
 
@@ -29,27 +27,3 @@ Note that the state of the object needs to contain keys as follows for the i18nL
   messages: {},
 }
 ```
-
-### I18nAggregatorPlugin
-
-This plugin needs to be added to the list of plugins available in your webpack config with a required option of baseDirectory:
-
-```js
-new I18nAggregatorPlugin({
-  baseDirectory: __dirname,
-}
-```
-
-By including this plugin, all dependencies will be examined for translation files in a translation folder at the root of the directory for supported locales (e.g. de.js or en.js) formatted as follows:
-
-```js
-const messages = {
-  'Terra.ajax.error': 'Inhalt konnte nicht geladen werden.',
-};
-
-module.exports = {
-  messages,
-};
-```
-
-Then all of the messages for a given language across all dependencies will be aggregated into an overall translation file for that language and placed into an aggregated-translations directory.  In order for these resulting files to be able to be loaded by terra-i18n, that directory then needs to be added to the list of directories that the webpack resolver looks into.

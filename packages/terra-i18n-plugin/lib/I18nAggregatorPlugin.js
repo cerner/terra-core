@@ -14,7 +14,7 @@ var _mkdirp = require('mkdirp');
 
 var _mkdirp2 = _interopRequireDefault(_mkdirp);
 
-var _i18nSupportedLocales = require('./i18nSupportedLocales');
+var _i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 
 var _i18nSupportedLocales2 = _interopRequireDefault(_i18nSupportedLocales);
 
