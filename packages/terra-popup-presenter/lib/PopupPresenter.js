@@ -131,8 +131,6 @@ var PopupPresenter = function (_React$Component) {
         tetherOptions.targetAttachment = targetAttachment;
       }
 
-      console.log(tetherOptions);
-
       return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
     }
   }]);

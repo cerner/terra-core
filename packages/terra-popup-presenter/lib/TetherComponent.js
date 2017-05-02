@@ -156,8 +156,6 @@ var TetherComponent = function (_React$Component) {
           contentOffset = _props2.contentOffset,
           customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo', 'isEnabled', 'target', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
 
-      console.log(this.props);
-
       var tetherOptions = _extends({
         attachment: contentAttachment,
         element: this._elementParentNode,

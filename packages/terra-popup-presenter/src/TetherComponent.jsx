@@ -117,8 +117,6 @@ class TetherComponent extends React.Component {
       ...customProps 
       } = this.props; // eslint-disable-line no-unused-vars
 
-    console.log(this.props);
-
     const tetherOptions = {
       attachment: contentAttachment,
       element: this._elementParentNode,
