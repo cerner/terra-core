@@ -30,7 +30,7 @@ class SingleSelectableRows extends React.Component {
   static selectedRowIndex(rows) {
     // Find the first row which is selected and is selectable
     for (let i = 0; i < rows.length; i += 1) {
-      if (rows[i].props.isSelected === true && rows[i].props.isSelectable !== false) {
+      if (rows[i].props.isSelected === true && rows[i].props.isSelectable) {
         return i;
       }
     }
@@ -56,7 +56,7 @@ class SingleSelectableRows extends React.Component {
     const initialOnClick = this.props.onClick;
 
     return (event) => {
-      if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+      if (row.props.isSelectable && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
       }
 
@@ -71,7 +71,7 @@ class SingleSelectableRows extends React.Component {
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+        if (row.props.isSelectable && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
       }
@@ -93,16 +93,10 @@ class SingleSelectableRows extends React.Component {
       newProps.isSelected = isSelected;
     }
 
-    const isSelectable = row.props.isSelectable;
-    // By default isSelectable attribute for the TableRow is undefined, as this is selectable table,
-    // we will make row selectable by default. If consumer specify the row attribute isSelectable as false,
-    // then row will not be selectable
-    if (isSelectable === undefined) {
-      newProps.isSelectable = true;
-    }
+    newProps.isSelectable = row.props.isSelectable;
 
     // Add tabIndex on rows to navigate through keyboard tab key for selectable row
-    if (newProps.isSelectable || isSelectable) {
+    if (newProps.isSelectable) {
       newProps.tabIndex = '0';
     }
 

@@ -58,7 +58,7 @@ var SingleSelectableRows = function (_React$Component) {
     value: function selectedRowIndex(rows) {
       // Find the first row which is selected and is selectable
       for (var i = 0; i < rows.length; i += 1) {
-        if (rows[i].props.isSelected === true && rows[i].props.isSelectable !== false) {
+        if (rows[i].props.isSelected === true && rows[i].props.isSelectable) {
           return i;
         }
       }
@@ -95,7 +95,7 @@ var SingleSelectableRows = function (_React$Component) {
       var initialOnClick = this.props.onClick;
 
       return function (event) {
-        if (row.props.isSelectable !== false && _this2.shouldHandleSelection(index)) {
+        if (row.props.isSelectable && _this2.shouldHandleSelection(index)) {
           _this2.handleSelection(event, index);
         }
 
@@ -113,7 +113,7 @@ var SingleSelectableRows = function (_React$Component) {
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (row.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
+          if (row.props.isSelectable && _this3.shouldHandleSelection(index)) {
             _this3.handleSelection(event, index);
           }
         }
@@ -136,16 +136,13 @@ var SingleSelectableRows = function (_React$Component) {
         newProps.isSelected = isSelected;
       }
 
-      var isSelectable = row.props.isSelectable;
-      // By default isSelectable attribute for the TableRow is undefined, as this is selectable table,
-      // we will make row selectable by default. If consumer specify the row attribute isSelectable as false,
-      // then row will not be selectable
-      if (isSelectable === undefined) {
-        newProps.isSelectable = true;
-      }
+      // if (row.props.isSelectable) {
+      //   newProps.isSelectable = true;
+      // }
+      newProps.isSelectable = row.props.isSelectable;
 
       // Add tabIndex on rows to navigate through keyboard tab key for selectable row
-      if (newProps.isSelectable || isSelectable) {
+      if (newProps.isSelectable) {
         newProps.tabIndex = '0';
       }
 
