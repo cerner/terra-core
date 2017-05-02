@@ -20,3 +20,40 @@ exports[`test should render TableRows tag 1`] = `
   </TableRow>
 </tbody>
 `;
+
+exports[`test should render with multiple rows 1`] = `
+<tbody>
+  <TableRow
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</tbody>
+`;
+
+exports[`test should render with one row 1`] = `
+<tbody>
+  <TableRow
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</tbody>
+`;
