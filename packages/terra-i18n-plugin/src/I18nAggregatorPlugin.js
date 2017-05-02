@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
 
-import supportedLocales from 'terra-i18n/lib/i18nSupportedLocales';
+import supportedLocales from './i18nSupportedLocales';
 
 function generateTranslationFile(language, messages) {
   return `import { addLocaleData } from 'react-intl';
@@ -37,6 +37,8 @@ function apply(options) {
       mkdirp(path.resolve(options.baseDirectory, 'aggregated-translations'));
       fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
         generateTranslationFile(language, currentLanguageMessages));
+    } else {
+      throw new Error('Translation file found for ' + `${language}.json` + ', but translations were not loaded correctly. Please check that your translated modules were installed correctly.');
     }
   });
 }

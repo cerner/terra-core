@@ -14,7 +14,7 @@ var _mkdirp = require('mkdirp');
 
 var _mkdirp2 = _interopRequireDefault(_mkdirp);
 
-var _i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
+var _i18nSupportedLocales = require('./i18nSupportedLocales');
 
 var _i18nSupportedLocales2 = _interopRequireDefault(_i18nSupportedLocales);
 
@@ -43,6 +43,8 @@ function apply(options) {
     if (currentLanguageMessages !== {}) {
       (0, _mkdirp2.default)(_path2.default.resolve(options.baseDirectory, 'aggregated-translations'));
       _fs2.default.writeFileSync(_path2.default.resolve(options.baseDirectory, 'aggregated-translations', language + '.js'), generateTranslationFile(language, currentLanguageMessages));
+    } else {
+      throw new Error('Translation file found for ' + (language + '.json') + ', but translations were not loaded correctly. Please check that your translated modules were installed correctly.');
     }
   });
 }
