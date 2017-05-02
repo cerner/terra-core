@@ -130,6 +130,9 @@ var MultiSelectList = function (_React$Component) {
       }
 
       this.setState({ selectedIndexes: newIndexes });
+      if (this.props.onChange) {
+        this.props.onChange(event, newIndexes);
+      }
     }
   }, {
     key: 'shouldHandleSelection',
@@ -166,10 +169,6 @@ var MultiSelectList = function (_React$Component) {
       return function (event) {
         if (item.props.isSelectable && _this3.shouldHandleSelection(index)) {
           _this3.handleSelection(event, index);
-
-          if (_this3.onChange) {
-            _this3.onChange(event, _this3.state.selectedIndexes);
-          }
         }
 
         if (initialOnClick) {
@@ -188,10 +187,6 @@ var MultiSelectList = function (_React$Component) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
           if (item.props.isSelectable && _this4.shouldHandleSelection(index)) {
             _this4.handleSelection(event, index);
-          }
-
-          if (_this4.onChange) {
-            _this4.onChange(event, _this4.state.selectedIndexes);
           }
         }
 
@@ -224,6 +219,7 @@ var MultiSelectList = function (_React$Component) {
       if (disableUnselectedItems && isSelected !== true) {
         newProps.isSelectable = false;
       }
+
       return newProps;
     }
   }, {
@@ -237,6 +233,7 @@ var MultiSelectList = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      /* eslint-disable no-unused-vars */
       var _props = this.props,
           children = _props.children,
           isDivided = _props.isDivided,
@@ -250,7 +247,6 @@ var MultiSelectList = function (_React$Component) {
       if ('maxSelectionCount' in customProps) {
         delete customProps.maxSelectionCount;
       }
-
       return _react2.default.createElement(
         _List2.default,
         _extends({ isDivided: isDivided }, customProps),

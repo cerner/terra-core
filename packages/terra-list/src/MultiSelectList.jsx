@@ -92,6 +92,9 @@ class MultiSelectList extends React.Component {
     }
 
     this.setState({ selectedIndexes: newIndexes });
+    if (this.props.onChange) {
+      this.props.onChange(event, newIndexes);
+    }
   }
 
   shouldHandleSelection(index) {
@@ -121,10 +124,6 @@ class MultiSelectList extends React.Component {
     return (event) => {
       if (item.props.isSelectable && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
-
-        if (this.onChange) {
-          this.onChange(event, this.state.selectedIndexes);
-        }
       }
 
       if (initialOnClick) {
@@ -140,10 +139,6 @@ class MultiSelectList extends React.Component {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
         if (item.props.isSelectable && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
-        }
-
-        if (this.onChange) {
-          this.onChange(event, this.state.selectedIndexes);
         }
       }
 
@@ -175,6 +170,7 @@ class MultiSelectList extends React.Component {
     if (disableUnselectedItems && isSelected !== true) {
       newProps.isSelectable = false;
     }
+
     return newProps;
   }
 
@@ -186,6 +182,7 @@ class MultiSelectList extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars */
     const { children, isDivided, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
@@ -195,7 +192,6 @@ class MultiSelectList extends React.Component {
     if ('maxSelectionCount' in customProps) {
       delete customProps.maxSelectionCount;
     }
-
     return (
       <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}

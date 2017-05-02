@@ -97,6 +97,9 @@ var SingleSelectList = function (_React$Component) {
     key: 'handleSelection',
     value: function handleSelection(event, index) {
       this.setState({ selectedIndex: index });
+      if (this.props.onChange) {
+        this.props.onChange(event, index);
+      }
     }
   }, {
     key: 'shouldHandleSelection',
@@ -124,12 +127,8 @@ var SingleSelectList = function (_React$Component) {
       var initialOnClick = item.props.onClick;
 
       return function (event) {
-        if (item.props.isSelectable && _this3.shouldHandleSelection(index)) {
+        if (_this3.shouldHandleSelection(index)) {
           _this3.handleSelection(event, index);
-
-          if (_this3.onChange) {
-            _this3.onChange(event, _this3.state.selectedIndex);
-          }
         }
 
         if (initialOnClick) {
@@ -146,12 +145,8 @@ var SingleSelectList = function (_React$Component) {
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (item.props.isSelectable && _this4.shouldHandleSelection(index)) {
+          if (_this4.shouldHandleSelection(index)) {
             _this4.handleSelection(event, index);
-          }
-
-          if (_this4.onChange) {
-            _this4.onChange(event, _this4.state.selectedIndex);
           }
         }
 

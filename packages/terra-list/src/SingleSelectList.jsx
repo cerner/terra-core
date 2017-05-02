@@ -60,6 +60,9 @@ class SingleSelectList extends React.Component {
 
   handleSelection(event, index) {
     this.setState({ selectedIndex: index });
+    if (this.props.onChange) {
+      this.props.onChange(event, index);
+    }
   }
 
   shouldHandleSelection(index) {
@@ -80,12 +83,8 @@ class SingleSelectList extends React.Component {
     const initialOnClick = item.props.onClick;
 
     return (event) => {
-      if (item.props.isSelectable && this.shouldHandleSelection(index)) {
+      if (this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
-
-        if (this.onChange) {
-          this.onChange(event, this.state.selectedIndex);
-        }
       }
 
       if (initialOnClick) {
@@ -99,12 +98,8 @@ class SingleSelectList extends React.Component {
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (item.props.isSelectable && this.shouldHandleSelection(index)) {
+        if (this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
-        }
-
-        if (this.onChange) {
-          this.onChange(event, this.state.selectedIndex);
         }
       }
 
