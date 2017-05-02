@@ -136,9 +136,6 @@ var SingleSelectableRows = function (_React$Component) {
         newProps.isSelected = isSelected;
       }
 
-      // if (row.props.isSelectable) {
-      //   newProps.isSelectable = true;
-      // }
       newProps.isSelectable = row.props.isSelectable;
 
       // Add tabIndex on rows to navigate through keyboard tab key for selectable row
