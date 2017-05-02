@@ -1,6 +1,6 @@
 @import '~terra-mixins';
 
-.terra-ButtonGroupButton {
+.terra-ButtonGroup .terra-ButtonGroupButton {
   @include terra-border-radius-start(0);
   @include terra-border-radius-end(0);
   @include terra-margin-horizontal(0, 0);
