@@ -98,7 +98,7 @@ var PopupPresenter = function (_React$Component) {
             className: className,
             closeOnEsc: closeOnEsc,
             closeOnOutsideClick: closeOnOutsideClick,
-            onClose: onRequestClose },
+            onRequestClose: onRequestClose },
           content
         );
       }

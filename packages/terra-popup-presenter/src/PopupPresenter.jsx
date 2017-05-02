@@ -54,7 +54,7 @@ class PopupPresenter extends React.Component {
           className={className}
           closeOnEsc={closeOnEsc}
           closeOnOutsideClick={closeOnOutsideClick}
-          onClose={onRequestClose}>{content}
+          onRequestClose={onRequestClose}>{content}
         </WrappedPopupFrame>
       );
     }

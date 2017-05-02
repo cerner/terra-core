@@ -22,14 +22,14 @@ const propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  onClose: PropTypes.func,
+  onRequestClose: PropTypes.func,
 };
 
 const defaultProps = {
   children: [],
   closeOnEsc: true,
   closeOnOutsideClick: true,
-  onClose: undefined,
+  onRequestClose: undefined,
 };
 
 class PopupFrame extends React.Component {
@@ -52,19 +52,19 @@ class PopupFrame extends React.Component {
   }
 
   handleClickOutside(event) {
-    if (this.props.closeOnOutsideClick && this.props.onClose) {
-      this.props.onClose(event);
+    if (this.props.closeOnOutsideClick && this.props.onRequestClose) {
+      this.props.onRequestClose(event);
     }
   }
 
   handleKeydown(event) {
-    if (event.keyCode === KEYCODES.ESCAPE && this.props.onClose) {
-      this.props.onClose(event);
+    if (event.keyCode === KEYCODES.ESCAPE && this.props.onRequestClose) {
+      this.props.onRequestClose(event);
     }
   }
 
   render() {
-    const { children, closeOnEsc, closeOnOutsideClick, onClose, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
+    const { children, closeOnEsc, closeOnOutsideClick, onRequestClose, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
     const frameClassNames = classNames([
       'terra-PopupFrame',
       customProps.className,
