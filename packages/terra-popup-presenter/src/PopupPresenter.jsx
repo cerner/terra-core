@@ -16,7 +16,7 @@ const propTypes = {
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
   isOpen: PropTypes.bool,
-  onClose: PropTypes.func,
+  onRequestClose: PropTypes.func,
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
   targetOffset: PropTypes.string,
@@ -45,12 +45,7 @@ class PopupPresenter extends React.Component {
       targetAttachment,
       targetOffset,
       ...customProps 
-      } = this.props; // eslint-disable-line no-unused-vars
-
-    let clickOutsideHandler;
-    if (closeOnOutsideClick) {
-      clickOutsideHandler = this.handleClickOutside;
-    }
+    } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
     if (isOpen && content) {

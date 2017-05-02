@@ -51,7 +51,7 @@ var propTypes = {
   contentAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
   isOpen: _react.PropTypes.bool,
-  onClose: _react.PropTypes.func,
+  onRequestClose: _react.PropTypes.func,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions),
   targetOffset: _react.PropTypes.string
@@ -89,11 +89,6 @@ var PopupPresenter = function (_React$Component) {
           targetAttachment = _props.targetAttachment,
           targetOffset = _props.targetOffset,
           customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'target', 'targetAttachment', 'targetOffset']); // eslint-disable-line no-unused-vars
-
-      var clickOutsideHandler = void 0;
-      if (closeOnOutsideClick) {
-        clickOutsideHandler = this.handleClickOutside;
-      }
 
       var wrappedContent = void 0;
       if (isOpen && content) {
