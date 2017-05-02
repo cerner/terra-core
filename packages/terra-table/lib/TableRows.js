@@ -39,7 +39,7 @@ var defaultProps = {
 };
 
 function cloneChildItems(children, onClick, onKeyDown) {
-  return children.map(function (child) {
+  return _react2.default.Children.map(children, function (child) {
     var newProps = {};
     if (onClick) {
       newProps.onClick = onClick;
