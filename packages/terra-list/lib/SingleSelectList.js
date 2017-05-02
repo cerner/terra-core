@@ -65,7 +65,7 @@ var SingleSelectList = function (_React$Component) {
     key: 'selectedIndexFromItems',
     value: function selectedIndexFromItems(items) {
       for (var i = 0; i < items.length; i += 1) {
-        if (items[i].props.isSelected === true && items[i].props.isSelectable !== false) {
+        if (items[i].props.isSelected === true && items[i].props.isSelectable) {
           return i;
         }
       }
@@ -124,7 +124,7 @@ var SingleSelectList = function (_React$Component) {
       var initialOnClick = item.props.onClick;
 
       return function (event) {
-        if (item.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
+        if (item.props.isSelectable && _this3.shouldHandleSelection(index)) {
           _this3.handleSelection(event, index);
 
           if (_this3.onChange) {
@@ -146,7 +146,7 @@ var SingleSelectList = function (_React$Component) {
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (item.props.isSelectable !== false && _this4.shouldHandleSelection(index)) {
+          if (item.props.isSelectable && _this4.shouldHandleSelection(index)) {
             _this4.handleSelection(event, index);
           }
 
@@ -171,22 +171,13 @@ var SingleSelectList = function (_React$Component) {
         newProps.isSelected = isSelected;
       }
 
-      // By default isSelectable attribute for the Item is undefined, as this is selectable list,
-      // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
-      // then the item will not be selectable
-      var isSelectable = item.props.isSelectable;
-      if (isSelectable === undefined) {
-        newProps.isSelectable = true;
-      }
-
+      newProps.isSelectable = item.props.isSelectable;
       // Add tabIndex on items to navigate through keyboard tab key for selectable litst
-      if (newProps.isSelectable || isSelectable) {
+      if (newProps.isSelectable) {
         newProps.tabIndex = '0';
       }
 
-      if (item.props.hasChevron === undefined) {
-        newProps.hasChevron = this.props.hasChevrons;
-      }
+      newProps.hasChevron = this.props.hasChevrons;
 
       return newProps;
     }

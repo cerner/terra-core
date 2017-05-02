@@ -41,7 +41,7 @@ class MultiSelectList extends React.Component {
         break;
       }
 
-      if (items[i].props.isSelected && items[i].props.isSelectable !== false) {
+      if (items[i].props.isSelected && items[i].props.isSelectable) {
         selectedIndexes.push(i);
       }
     }
@@ -95,7 +95,7 @@ class MultiSelectList extends React.Component {
   }
 
   shouldHandleSelection(index) {
-    if (this.state.selectedIndexes.length <= this.validatedMaxCount()) {
+    if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
       return true;
     }
     if (this.state.selectedIndexes.indexOf(index) >= 0) {
@@ -119,7 +119,7 @@ class MultiSelectList extends React.Component {
   wrappedOnClickForItem(item, index) {
     const initialOnClick = item.props.onClick;
     return (event) => {
-      if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+      if (item.props.isSelectable && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
 
         if (this.onChange) {
@@ -138,7 +138,7 @@ class MultiSelectList extends React.Component {
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+        if (item.props.isSelectable && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
 
@@ -163,16 +163,10 @@ class MultiSelectList extends React.Component {
       newProps.isSelected = isSelected;
     }
 
-    // By default isSelectable attribute for the Item is undefined, as this is selectable list,
-    // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
-    // then the item will not be selectable
-    const isSelectable = item.props.isSelectable;
-    if (isSelectable === undefined) {
-      newProps.isSelectable = true;
-    }
+    newProps.isSelectable = item.props.isSelectable;
 
     // Add tabIndex on items to navigate through keyboard tab key for selectable litst
-    if (newProps.isSelectable || isSelectable) {
+    if (newProps.isSelectable) {
       newProps.tabIndex = '0';
     }
 

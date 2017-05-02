@@ -29,7 +29,7 @@ const ListExamples = () => (
     <ListDemo />
     <h2 id="single">Single Select List</h2>
     <SingleSelectListDemo />
-    <h2 id="multi">Multi Select List</h2>
+    <h2 id="multi">Multi Select List With Maximum Selection of 2</h2>
     <MultiSelectListDemo />
   </div>
 );

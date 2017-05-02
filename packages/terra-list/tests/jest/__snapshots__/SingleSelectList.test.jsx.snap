@@ -6,7 +6,7 @@ exports[`test should render a default component 1`] = `
 exports[`test should render with hasChevrons 1`] = `
 <List
   isDivided={false}>
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
@@ -19,7 +19,7 @@ exports[`test should render with hasChevrons 1`] = `
 exports[`test should render with isDivided 1`] = `
 <List
   isDivided={true}>
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
@@ -32,35 +32,35 @@ exports[`test should render with isDivided 1`] = `
 exports[`test should render with items 1`] = `
 <List
   isDivided={false}>
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
-  <type
+  <ListItem
     hasChevron={true}
     isSelectable={true}
     isSelected={false}
