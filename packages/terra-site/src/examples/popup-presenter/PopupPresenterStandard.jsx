@@ -1,12 +1,12 @@
 import React from 'react';
-import Popup from 'terra-popup';
+import PopupPresenter from 'terra-popup-presenter';
 import Button from 'terra-button';
 
 class DummyApp extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleRequestClose = this.handleRequestClose.bind(this);
     this.state = {open: false};
   }
 
@@ -26,7 +26,7 @@ class DummyApp extends React.Component {
     return (
       <PopupPresenter 
         constraints={constraints}
-        content={content}
+        content={contentSection}
         contentAttachment="bottom left"
         isOpen={this.state.open}
         target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}

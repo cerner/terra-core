@@ -44,7 +44,7 @@ var propTypes = {
   isEnabled: _react.PropTypes.bool,
   optimizations: _react.PropTypes.object,
   renderElementTag: _react.PropTypes.string,
-  renderElementTo: _react.PropTypes.oneOfType(renderElementToPropTypes),
+  renderElementTo: _react.PropTypes.any,
   style: _react.PropTypes.object,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(attachmentPositions),
@@ -156,13 +156,21 @@ var TetherComponent = function (_React$Component) {
           contentOffset = _props2.contentOffset,
           customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo', 'isEnabled', 'target', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
 
+      console.log(this.props);
+
       var tetherOptions = _extends({
         attachment: contentAttachment,
         element: this._elementParentNode,
-        enabled: isEnabled,
-        offset: contentOffset,
         target: this._targetNode
       }, customProps);
+
+      //Aliased parameters
+      if (contentOffset) {
+        tetherOptions.offset = contentOffset;
+      }
+      if (isEnabled !== undefined) {
+        tetherOptions.enabled = isEnabled;
+      }
 
       if (!this._tether) {
         this._tether = new _tether2.default(tetherOptions);

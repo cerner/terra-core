@@ -104,10 +104,12 @@ var PopupFrame = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           children = _props.children,
+          closeOnEsc = _props.closeOnEsc,
+          closeOnOutsideClick = _props.closeOnOutsideClick,
           onClose = _props.onClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
-          customProps = _objectWithoutProperties(_props, ['children', 'onClose', 'enableOnClickOutside', 'disableOnClickOutside']);
+          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'onClose', 'enableOnClickOutside', 'disableOnClickOutside']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', customProps.className]);
 

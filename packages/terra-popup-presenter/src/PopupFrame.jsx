@@ -64,7 +64,7 @@ class PopupFrame extends React.Component {
   }
 
   render() {
-    const { children, onClose, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
+    const { children, closeOnEsc, closeOnOutsideClick, onClose, enableOnClickOutside, disableOnClickOutside, ...customProps } = this.props;
     const frameClassNames = classNames([
       'terra-PopupFrame',
       customProps.className,

@@ -16,7 +16,7 @@ const propTypes = {
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
   isOpen: PropTypes.bool,
-  onClose: PropTypes.close,
+  onClose: PropTypes.func,
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
   targetOffset: PropTypes.string,
@@ -24,8 +24,6 @@ const propTypes = {
 
 const defaultProps = {
   isOpen: false,
-  renderElementTag: 'div',
-  renderElementTo: null,
 };
 
 const WrappedPopupFrame = onClickOutside(PopupFrame);
@@ -66,18 +64,30 @@ class PopupPresenter extends React.Component {
       );
     }
 
-    return (
-      <TetherComponent
-        constraints={constraints}
-        content={wrappedContent}
-        contentAttachment={contentAttachment}
-        contentOffset={contentOffset}
-        isEnabled={true}
-        target={target}
-        targetAttachment={targetAttachment}
-        targetOffset={targetOffset}
-      />
-    );
+    const tetherOptions = {
+      contentAttachment,
+      isEnabled: true,
+      target,
+    };
+
+    //Optional parameters
+    if (wrappedContent) {
+      tetherOptions.content = wrappedContent;
+    }
+    if (constraints) {
+      tetherOptions.constraints = constraints;
+    }
+    if (contentOffset) {
+      tetherOptions.offset = contentOffset;
+    }
+    if (targetOffset) {
+      tetherOptions.targetOffset = targetOffset;
+    }
+    if (targetAttachment) {
+      tetherOptions.targetAttachment = targetAttachment;
+    }
+
+    return <TetherComponent {...tetherOptions} />;
   }
 }
 

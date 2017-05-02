@@ -51,16 +51,14 @@ var propTypes = {
   contentAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
   isOpen: _react.PropTypes.bool,
-  onClose: _react.PropTypes.close,
+  onClose: _react.PropTypes.func,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions),
   targetOffset: _react.PropTypes.string
 };
 
 var defaultProps = {
-  isOpen: false,
-  renderElementTag: 'div',
-  renderElementTo: null
+  isOpen: false
 };
 
 var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default);
@@ -110,16 +108,32 @@ var PopupPresenter = function (_React$Component) {
         );
       }
 
-      return _react2.default.createElement(_TetherComponent2.default, {
-        constraints: constraints,
-        content: wrappedContent,
+      var tetherOptions = {
         contentAttachment: contentAttachment,
-        contentOffset: contentOffset,
         isEnabled: true,
-        target: target,
-        targetAttachment: targetAttachment,
-        targetOffset: targetOffset
-      });
+        target: target
+      };
+
+      //Optional parameters
+      if (wrappedContent) {
+        tetherOptions.content = wrappedContent;
+      }
+      if (constraints) {
+        tetherOptions.constraints = constraints;
+      }
+      if (contentOffset) {
+        tetherOptions.offset = contentOffset;
+      }
+      if (targetOffset) {
+        tetherOptions.targetOffset = targetOffset;
+      }
+      if (targetAttachment) {
+        tetherOptions.targetAttachment = targetAttachment;
+      }
+
+      console.log(tetherOptions);
+
+      return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
     }
   }]);
 

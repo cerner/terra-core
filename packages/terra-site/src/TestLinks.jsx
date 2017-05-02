@@ -25,7 +25,7 @@ const TestLinks = () => (
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
       <li><Link to="/tests/modal-tests">Modal Tests</Link></li>
       <li><Link to="/tests/progress-bar-tests">ProgressBar Tests</Link></li>
-      <li><Link to="/tests/popup-tests">Popup Tests</Link></li>
+      <li><Link to="/tests/popup-presenter-tests">Popup Tests</Link></li>
     </ul>
   </div>
 );

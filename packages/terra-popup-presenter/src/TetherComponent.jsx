@@ -26,7 +26,7 @@ const propTypes = {
   isEnabled: PropTypes.bool,
   optimizations: PropTypes.object,
   renderElementTag: PropTypes.string,
-  renderElementTo: PropTypes.oneOfType(renderElementToPropTypes),
+  renderElementTo: PropTypes.any,
   style: PropTypes.object,
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(attachmentPositions),
@@ -117,13 +117,21 @@ class TetherComponent extends React.Component {
       ...customProps 
       } = this.props; // eslint-disable-line no-unused-vars
 
+    console.log(this.props);
+
     const tetherOptions = {
       attachment: contentAttachment,
       element: this._elementParentNode,
-      enabled: isEnabled,
-      offset: contentOffset,
       target: this._targetNode,
       ...customProps,
+    }
+
+    //Aliased parameters
+    if (contentOffset) {
+      tetherOptions.offset = contentOffset;
+    }
+    if (isEnabled !== undefined) {
+      tetherOptions.enabled = isEnabled;
     }
 
     if (!this._tether) {
