@@ -1,0 +1,22 @@
+exports[`test should render a Field that has children in it 1`] = `
+<p
+  className="terra-Form-field"
+  name="foo"
+  value="bar">
+  <input
+    type="text"
+    value="Test" />
+</p>
+`;
+
+exports[`test should render a Field that has the error, label, and help props set 1`] = `
+<p
+  className="terra-Form-field"
+  name="foo"
+  value="bar" />
+`;
+
+exports[`test should render a default component 1`] = `
+<p
+  className="terra-Form-field" />
+`;
