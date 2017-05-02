@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-date-picker.svg)](https://www.npmjs.org/package/terra-date-picker)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-date-picker component provides users a way to enter or select a date from the date picker. terra-date-picker is essentailly a wrapper for [react-datepicker](https://github.com/Hacker0x01/react-datepicker) and leverages many of its props. One important difference between terra-date-picker and [react-datepicker](https://github.com/Hacker0x01/react-datepicker) is that all of the date props in [react-datepicker](https://github.com/Hacker0x01/react-datepicker) must be a [moment](http://momentjs.com/docs/) object whereas the date props in terra-date-picker are ISO 8601 string representation of the date.
+The terra-date-picker component provides users a way to enter or select a date from the date picker. terra-date-picker is essentially a wrapper for [react-datepicker](https://github.com/Hacker0x01/react-datepicker) and leverages many of its props. One important difference between terra-date-picker and [react-datepicker](https://github.com/Hacker0x01/react-datepicker) is that all of the date props in [react-datepicker](https://github.com/Hacker0x01/react-datepicker) must be a [moment](http://momentjs.com/docs/) object whereas the date props in terra-date-picker are ISO 8601 string representation of the date.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker/docs)
