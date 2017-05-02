@@ -36,7 +36,7 @@ class SingleSelectList extends React.Component {
 
   static selectedIndexFromItems(items) {
     for (let i = 0; i < items.length; i += 1) {
-      if (items[i].props.isSelected === true && items[i].props.isSelectable) {
+      if (items[i].props.isSelected && items[i].props.isSelectable) {
         return i;
       }
     }
@@ -116,17 +116,21 @@ class SingleSelectList extends React.Component {
 
   newPropsForItem(item, index, onClick, onKeyDown) {
     const isSelected = this.state.selectedIndex === index;
+    const newProps = { };
 
-    const newProps = { onClick, onKeyDown };
     // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
     if (isSelected !== item.isSelected) {
       newProps.isSelected = isSelected;
     }
 
     newProps.isSelectable = item.props.isSelectable;
-    // Add tabIndex on items to navigate through keyboard tab key for selectable litst
+
+    // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+    // onClick and onKeyDown functions.
     if (newProps.isSelectable) {
       newProps.tabIndex = '0';
+      newProps.onClick = onClick;
+      newProps.onKeyDown = onKeyDown;
     }
 
     newProps.hasChevron = this.props.hasChevrons;

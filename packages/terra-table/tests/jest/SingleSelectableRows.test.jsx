@@ -22,3 +22,10 @@ it('should render SingleSelectableRows with maximum height set', () => {
   const tableRows = shallow(defaultTableRows);
   expect(tableRows).toMatchSnapshot();
 });
+
+it('should render SingleSelectableRows one selectable row and one non-selectable row', () => {
+  const row3 = <Table.Row key={'PERSON_1'} >{rowData}</Table.Row>;
+  const defaultTableRows = <Table.SingleSelectableRows>{[row1, row3]}</Table.SingleSelectableRows>;
+  const tableRows = shallow(defaultTableRows);
+  expect(tableRows).toMatchSnapshot();
+});

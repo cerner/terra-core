@@ -18,6 +18,14 @@ it('should render with items', () => {
   expect(singleSelect).toMatchSnapshot();
 });
 
+it('should render with a selectable and non-selectable item', () => {
+  const item1 = <SingleSelectList.Item key="123" isSelectable />;
+  const item2 = <SingleSelectList.Item key="124" />;
+  const items = [item1, item2];
+  const singleSelect = shallow(<SingleSelectList>{items}</SingleSelectList>);
+  expect(singleSelect).toMatchSnapshot();
+});
+
 it('should render with isDivided', () => {
   const item1 = <SingleSelectList.Item key="123" isSelectable />;
   const items = [item1];

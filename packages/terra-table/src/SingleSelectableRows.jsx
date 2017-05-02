@@ -30,7 +30,7 @@ class SingleSelectableRows extends React.Component {
   static selectedRowIndex(rows) {
     // Find the first row which is selected and is selectable
     for (let i = 0; i < rows.length; i += 1) {
-      if (rows[i].props.isSelected === true && rows[i].props.isSelectable) {
+      if (rows[i].props.isSelected && rows[i].props.isSelectable) {
         return i;
       }
     }
@@ -84,8 +84,7 @@ class SingleSelectableRows extends React.Component {
 
   newPropsForRow(row, index, onClick, onKeyDown) {
     const isSelected = this.state.selectedIndex === index;
-
-    const newProps = { onClick, onKeyDown };
+    const newProps = { };
 
     // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
     // This will ensure that only one row will be selected at a moment of time.
@@ -95,9 +94,12 @@ class SingleSelectableRows extends React.Component {
 
     newProps.isSelectable = row.props.isSelectable;
 
-    // Add tabIndex on rows to navigate through keyboard tab key for selectable row
+    // If selectable, add tabIndex on rows to navigate through keyboard tab key for selectable row and add
+    // onClick and onKeyDown functions.
     if (newProps.isSelectable) {
       newProps.tabIndex = '0';
+      newProps.onClick = onClick;
+      newProps.onKeyDown = onKeyDown;
     }
 
     return newProps;

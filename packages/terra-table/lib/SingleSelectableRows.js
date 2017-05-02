@@ -58,7 +58,7 @@ var SingleSelectableRows = function (_React$Component) {
     value: function selectedRowIndex(rows) {
       // Find the first row which is selected and is selectable
       for (var i = 0; i < rows.length; i += 1) {
-        if (rows[i].props.isSelected === true && rows[i].props.isSelectable) {
+        if (rows[i].props.isSelected && rows[i].props.isSelectable) {
           return i;
         }
       }
@@ -127,8 +127,7 @@ var SingleSelectableRows = function (_React$Component) {
     key: 'newPropsForRow',
     value: function newPropsForRow(row, index, onClick, onKeyDown) {
       var isSelected = this.state.selectedIndex === index;
-
-      var newProps = { onClick: onClick, onKeyDown: onKeyDown };
+      var newProps = {};
 
       // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
       // This will ensure that only one row will be selected at a moment of time.
@@ -138,9 +137,12 @@ var SingleSelectableRows = function (_React$Component) {
 
       newProps.isSelectable = row.props.isSelectable;
 
-      // Add tabIndex on rows to navigate through keyboard tab key for selectable row
+      // If selectable, add tabIndex on rows to navigate through keyboard tab key for selectable row and add
+      // onClick and onKeyDown functions.
       if (newProps.isSelectable) {
         newProps.tabIndex = '0';
+        newProps.onClick = onClick;
+        newProps.onKeyDown = onKeyDown;
       }
 
       return newProps;

@@ -204,8 +204,7 @@ var MultiSelectList = function (_React$Component) {
     key: 'newPropsForItem',
     value: function newPropsForItem(item, index, onClick, onKeyDown, disableUnselectedItems) {
       var isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
-
-      var newProps = { onClick: onClick, onKeyDown: onKeyDown };
+      var newProps = {};
 
       // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
       if (isSelected !== item.isSelected) {
@@ -214,9 +213,12 @@ var MultiSelectList = function (_React$Component) {
 
       newProps.isSelectable = item.props.isSelectable;
 
-      // Add tabIndex on items to navigate through keyboard tab key for selectable litst
+      // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+      // onClick and onKeyDown functions.
       if (newProps.isSelectable) {
         newProps.tabIndex = '0';
+        newProps.onClick = onClick;
+        newProps.onKeyDown = onKeyDown;
       }
 
       if (disableUnselectedItems && isSelected !== true) {

@@ -155,8 +155,7 @@ class MultiSelectList extends React.Component {
 
   newPropsForItem(item, index, onClick, onKeyDown, disableUnselectedItems) {
     const isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
-
-    const newProps = { onClick, onKeyDown };
+    const newProps = { };
 
     // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
     if (isSelected !== item.isSelected) {
@@ -165,9 +164,12 @@ class MultiSelectList extends React.Component {
 
     newProps.isSelectable = item.props.isSelectable;
 
-    // Add tabIndex on items to navigate through keyboard tab key for selectable litst
+    // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+    // onClick and onKeyDown functions.
     if (newProps.isSelectable) {
       newProps.tabIndex = '0';
+      newProps.onClick = onClick;
+      newProps.onKeyDown = onKeyDown;
     }
 
     if (disableUnselectedItems && isSelected !== true) {
