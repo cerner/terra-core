@@ -17,7 +17,7 @@ it('should render a default date input and date picker', () => {
 });
 
 it('should render a default date input with custom input attributes', () => {
-  const datePicker = <DatePicker utcOffset={0} attrs={{ name: 'date-input', id: 'terra-date-input' }} />;
+  const datePicker = <DatePicker utcOffset={0} inputAttributes={{ name: 'date-input', id: 'terra-date-input' }} />;
   const wrapper = shallow(datePicker);
   expect(wrapper).toMatchSnapshot();
 });

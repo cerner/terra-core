@@ -463,7 +463,7 @@ exports[`test should render a default date input with custom input attributes 1`
     <DatePicker
       customInput={
         <DatePickerInput
-          attrs={
+          inputAttributes={
             Object {
               "id": "terra-date-input",
               "name": "date-input",
@@ -510,7 +510,7 @@ exports[`test should render a default date input with custom input attributes 1`
     <DatePicker
       customInput={
         <DatePickerInput
-          attrs={
+          inputAttributes={
             Object {
               "id": "terra-date-input",
               "name": "date-input",

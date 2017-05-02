@@ -34,9 +34,9 @@ var Icon = _react2.default.createElement(_IconCalendar2.default, null);
 
 var propTypes = {
   /**
-   * Custom attributes to apply to the date input.
+   * Custom input attributes to apply to the date input.
    */
-  attrs: _react.PropTypes.object,
+  inputAttributes: _react.PropTypes.object,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
@@ -76,7 +76,7 @@ var DatePickerInput = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'terra-DatePicker-customInput' },
-        _react2.default.createElement('input', _extends({}, this.props.attrs, { // TODO: When forms is available, this.props.attrs should be passed to the attrs props in the TextField component (attrs={this.props.attrs}) instead of destructuring the attrs prop here.
+        _react2.default.createElement('input', _extends({}, this.props.inputAttributes, { // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className: 'terra-DatePicker-input',
           type: 'text',
           value: this.props.value,
