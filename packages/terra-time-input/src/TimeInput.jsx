@@ -8,13 +8,13 @@ import './TimeInput.scss';
 
 const propTypes = {
   /**
-   * Custom attributes to apply to the time input.
-   */
-  attrs: PropTypes.object,
-  /**
    * An ISO 8601 string representation of the default time.
    */
   defaultValue: PropTypes.string,
+  /**
+   * Custom input attributes to apply to the time input.
+   */
+  inputAttributes: PropTypes.object,
     /**
    * A callback function to execute when a time value is entered.
    */
@@ -26,7 +26,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  attrs: undefined,
+  inputAttributes: undefined,
   defaultValue: undefined,
   onChange: null,
   value: undefined,
@@ -94,14 +94,14 @@ class TimeInput extends React.Component {
 
   render() {
     const {
-      attrs,
+      inputAttributes,
       defaultValue,
       onChange,
       value,
       ...customProps
     } = this.props;
 
-    const attributes = { ...customProps, ...attrs };
+    const attributes = { ...customProps, ...inputAttributes };
 
     return (
       <div className="terra-TimeInput">

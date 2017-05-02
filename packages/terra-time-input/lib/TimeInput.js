@@ -44,13 +44,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * Custom attributes to apply to the time input.
-   */
-  attrs: _react.PropTypes.object,
-  /**
    * An ISO 8601 string representation of the default time.
    */
   defaultValue: _react.PropTypes.string,
+  /**
+   * Custom input attributes to apply to the time input.
+   */
+  inputAttributes: _react.PropTypes.object,
   /**
   * A callback function to execute when a time value is entered.
   */
@@ -62,7 +62,7 @@ var propTypes = {
 };
 
 var defaultProps = {
-  attrs: undefined,
+  inputAttributes: undefined,
   defaultValue: undefined,
   onChange: null,
   value: undefined
@@ -143,13 +143,13 @@ var TimeInput = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          attrs = _props.attrs,
+          inputAttributes = _props.inputAttributes,
           defaultValue = _props.defaultValue,
           onChange = _props.onChange,
           value = _props.value,
-          customProps = _objectWithoutProperties(_props, ['attrs', 'defaultValue', 'onChange', 'value']);
+          customProps = _objectWithoutProperties(_props, ['inputAttributes', 'defaultValue', 'onChange', 'value']);
 
-      var attributes = _extends({}, customProps, attrs);
+      var attributes = _extends({}, customProps, inputAttributes);
 
       return _react2.default.createElement(
         'div',

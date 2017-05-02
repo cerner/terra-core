@@ -8,7 +8,7 @@ it('should render a default time input', () => {
 });
 
 it('should render a time input with custom attributes', () => {
-  const timeInput = <TimeInput attrs={{ name: 'time-input', id: 'terra-time-input' }} />;
+  const timeInput = <TimeInput inputAttributes={{ name: 'time-input', id: 'terra-time-input' }} />;
   const wrapper = shallow(timeInput);
   expect(wrapper).toMatchSnapshot();
 });
