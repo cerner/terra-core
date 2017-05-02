@@ -16,3 +16,15 @@ it('should render TableRows tag', () => {
   const tableRows = shallow(defaultTableRows);
   expect(tableRows).toMatchSnapshot();
 });
+
+it('should render with one row', () => {
+  const defaultTableRows = <Table.Rows>{[row1]}</Table.Rows>;
+  const tableRows = shallow(defaultTableRows);
+  expect(tableRows).toMatchSnapshot();
+});
+
+it('should render with multiple rows', () => {
+  const defaultTableRows = <Table.Rows>{rows}</Table.Rows>;
+  const tableRows = shallow(defaultTableRows);
+  expect(tableRows).toMatchSnapshot();
+});

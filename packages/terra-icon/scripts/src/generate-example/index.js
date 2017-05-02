@@ -1,7 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import parseCsv from './parseCsv';
-import generateIconAll from './generateIconAll';
+import generateThemeableIcons from './generateThemeableIcons';
+import generateStaticIcons from './generateStaticIcons';
 /* eslint-enable import/no-extraneous-dependencies */
 
 parseCsv()
-.then(generateIconAll);
+.then(generateStaticIcons)
+.then(generateThemeableIcons);
+
