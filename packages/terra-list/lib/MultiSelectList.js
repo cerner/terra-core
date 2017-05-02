@@ -233,7 +233,6 @@ var MultiSelectList = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      /* eslint-disable no-unused-vars */
       var _props = this.props,
           children = _props.children,
           isDivided = _props.isDivided,

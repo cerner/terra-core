@@ -182,7 +182,6 @@ class MultiSelectList extends React.Component {
   }
 
   render() {
-    /* eslint-disable no-unused-vars */
     const { children, isDivided, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
