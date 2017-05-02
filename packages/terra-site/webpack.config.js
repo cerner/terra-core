@@ -72,7 +72,8 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       react: path.resolve(__dirname, 'node_modules/react'),
-      moment: path.resolve(__dirname, 'node_modules', 'moment'),
+      moment: path.resolve(__dirname, 'node_modules/moment'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
     },
   },
   output: {
