@@ -330,9 +330,7 @@ var DemographicsBanner = function (_React$Component) {
       return _react2.default.createElement(_terraResponsiveElement2.default, {
         responsiveTo: 'window',
         defaultElement: this.renderSmallDemographicsBanner(),
-        tiny: this.renderSmallDemographicsBanner(),
-        small: this.renderLargeDemographicsBanner(),
-        medium: this.renderLargeDemographicsBanner()
+        small: this.renderLargeDemographicsBanner()
       });
     }
   }]);

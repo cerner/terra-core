@@ -268,9 +268,7 @@ class DemographicsBanner extends React.Component {
       <ResponsiveElement
         responsiveTo="window"
         defaultElement={this.renderSmallDemographicsBanner()}
-        tiny={this.renderSmallDemographicsBanner()}
         small={this.renderLargeDemographicsBanner()}
-        medium={this.renderLargeDemographicsBanner()}
       />
     );
   }
