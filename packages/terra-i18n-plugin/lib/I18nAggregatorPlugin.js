@@ -50,7 +50,7 @@ function aggregateTranslations(options) {
       (0, _mkdirp2.default)(_path2.default.resolve(options.baseDirectory, 'aggregated-translations'));
       _fs2.default.writeFileSync(_path2.default.resolve(options.baseDirectory, 'aggregated-translations', language + '.js'), generateTranslationFile(language, currentLanguageMessages));
     } else {
-      throw new Error('Translation file found for ' + (language + '.json') + ', but translations were not loaded correctly. Please check that your translated modules were installed correctly.');
+      throw new Error('Translation file found for ' + language + '.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.');
     }
   });
 }

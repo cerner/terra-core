@@ -46,7 +46,7 @@ function aggregateTranslations(options) {
       fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
         generateTranslationFile(language, currentLanguageMessages));
     } else {
-      throw new Error('Translation file found for ' + `${language}.json` + ', but translations were not loaded correctly. Please check that your translated modules were installed correctly.');
+      throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
     }
   });
 }
