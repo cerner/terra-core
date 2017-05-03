@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import './ModalOverlay.scss';
+
 
 class ModalOverlay extends React.Component {
 

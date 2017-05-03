@@ -20,6 +20,8 @@ var _focusTrapReact = require('focus-trap-react');
 
 var _focusTrapReact2 = _interopRequireDefault(_focusTrapReact);
 
+require('terra-base/lib/baseStyles');
+
 var _ModalOverlay = require('./ModalOverlay');
 
 var _ModalOverlay2 = _interopRequireDefault(_ModalOverlay);

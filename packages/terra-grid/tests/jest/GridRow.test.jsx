@@ -1,7 +1,7 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import React from 'react';
-import Row from '../src/GridRow';
-import Col from '../src/GridColumn';
+import Row from '../../src/GridRow';
+import Col from '../../src/GridColumn';
 
 // Snapshot Tests
 it('should render a default component', () => {

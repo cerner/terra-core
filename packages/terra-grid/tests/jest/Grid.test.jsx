@@ -1,6 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import React from 'react';
-import Grid from '../src/Grid';
+import Grid from '../../src/Grid';
 
 // Snapshot Tests
 it('should render a default Grid', () => {

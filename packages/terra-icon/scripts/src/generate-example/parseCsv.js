@@ -17,7 +17,7 @@ const parseCsv = () => new Promise((resolve, reject) => {
     jsonObj.themeable = !!jsonObj.themeable;
     jsonObj.bidi = (jsonObj.bidi === 'bi-directional');
     jsonObj.spinner = (jsonObj.name === 'IconSpinner');
-    jsonObj.syntaxComponent = `<${jsonObj.componentName} />`;
+    jsonObj.syntaxComponent = `<${jsonObj.componentName} height='2em' width='2em' />`;
     jsonObj.syntaxImport = `import ${jsonObj.componentName} from 'terra-icon/lib/icon/${jsonObj.componentName}';\n`;
     /* eslint-enable  no-param-reassign */
   })
