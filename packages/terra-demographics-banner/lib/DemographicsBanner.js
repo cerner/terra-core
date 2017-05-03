@@ -20,6 +20,8 @@ var _terraResponsiveElement = require('terra-responsive-element');
 
 var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);
 
+require('terra-base/lib/baseStyles');
+
 require('./DemographicsBanner.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

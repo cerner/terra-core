@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import ResponsiveElement from 'terra-responsive-element';
 
+import 'terra-base/lib/baseStyles';
 import './DemographicsBanner.scss';
 
 const propTypes = {
