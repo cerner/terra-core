@@ -1,18 +1,17 @@
 import React from 'react';
-import Grid from 'terra-grid';
-import './GridExample.scss';
+import Grid from '../../../lib/Grid';
 
-const GridDefault = () => (
+const GridResponsive = () => (
   <Grid>
     <Grid.Row>
-      <Grid.Column col={6}>
+      <Grid.Column tiny={12} small={8} medium={4} large={6}>
         <div className="terra-Grid-example">First Column content</div>
       </Grid.Column>
-      <Grid.Column col={6}>
+      <Grid.Column tiny={12} small={4} medium={8} large={6}>
         <div className="terra-Grid-example">Second Column content</div>
       </Grid.Column>
     </Grid.Row>
   </Grid>
 );
 
-export default GridDefault;
+export default GridResponsive;
