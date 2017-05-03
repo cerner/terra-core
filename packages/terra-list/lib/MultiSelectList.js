@@ -70,7 +70,7 @@ var MultiSelectList = function (_React$Component) {
           break;
         }
 
-        if (items[i].props.isSelected && items[i].props.isSelectable) {
+        if (items[i].props.isSelected) {
           selectedIndexes.push(i);
         }
       }

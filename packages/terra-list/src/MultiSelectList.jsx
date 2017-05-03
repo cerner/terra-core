@@ -41,7 +41,7 @@ class MultiSelectList extends React.Component {
         break;
       }
 
-      if (items[i].props.isSelected && items[i].props.isSelectable) {
+      if (items[i].props.isSelected) {
         selectedIndexes.push(i);
       }
     }
