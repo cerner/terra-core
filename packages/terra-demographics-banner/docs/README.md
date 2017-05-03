@@ -30,3 +30,5 @@ import DemographicsBanner from 'terra-demographics-banner';
   preferredFirstName="John"
 />
 ```
+
+The demographics banner will display differently depending on the resolution of the browser. If the resolution is less than that of the standard tablet width (767px), then the demographics banner will be stacked, and the profile image will not be displayed. If the resolution is greater than or equal to the tablet width, the banner will display horizontally, and the profile image will be displayed to the user.
