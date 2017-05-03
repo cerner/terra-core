@@ -39,11 +39,7 @@ var propTypes = {
   /**
    * Label of the input
    */
-  label: _react.PropTypes.node,
-  /**
-   * Whether the input is required
-   */
-  required: _react.PropTypes.bool
+  label: _react.PropTypes.node
 };
 
 var defaultProps = {
@@ -51,8 +47,7 @@ var defaultProps = {
   error: null,
   help: null,
   isInline: false,
-  label: null,
-  required: false
+  label: null
 };
 
 var Field = function Field(_ref) {
@@ -61,8 +56,7 @@ var Field = function Field(_ref) {
       help = _ref.help,
       isInline = _ref.isInline,
       label = _ref.label,
-      required = _ref.required,
-      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'isInline', 'label', 'required']);
+      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'isInline', 'label']);
 
   var fieldClasses = (0, _classnames2.default)('terra-Form-field', { 'terra-Form-field--inline': isInline }, customProps.className);
 

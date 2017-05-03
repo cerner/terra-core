@@ -23,10 +23,6 @@ const propTypes = {
    * Label of the input
    */
   label: PropTypes.node,
-  /**
-   * Whether the input is required
-   */
-  required: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -35,10 +31,9 @@ const defaultProps = {
   help: null,
   isInline: false,
   label: null,
-  required: false,
 };
 
-const Field = ({ children, error, help, isInline, label, required, ...customProps }) => {
+const Field = ({ children, error, help, isInline, label, ...customProps }) => {
   const fieldClasses = classNames(
     'terra-Form-field',
     { 'terra-Form-field--inline': isInline },

@@ -29,6 +29,5 @@ exports[`test should render a default component 1`] = `
   error={null}
   help={null}
   isInline={false}
-  label={null}
-  required={false} />
+  label={null} />
 `;

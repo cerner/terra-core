@@ -2,6 +2,7 @@ exports[`test should render a Field that has children in it 1`] = `
 <p
   className="terra-Form-field"
   name="foo"
+  required={false}
   value="bar">
   <input
     type="text"
@@ -13,6 +14,7 @@ exports[`test should render a Field that has the error, label, and help props se
 <p
   className="terra-Form-field"
   name="foo"
+  required={false}
   value="bar" />
 `;
 
