@@ -37,7 +37,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * Application Content to display in the banner.
+   * Application content to display in the banner.
    */
   applicationContent: _react.PropTypes.node,
   /**

@@ -8,7 +8,7 @@ import './DemographicsBanner.scss';
 
 const propTypes = {
   /**
-   * Application Content to display in the banner.
+   * Application content to display in the banner.
    */
   applicationContent: PropTypes.node,
   /**
