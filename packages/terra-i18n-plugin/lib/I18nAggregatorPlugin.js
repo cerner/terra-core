@@ -14,10 +14,6 @@ var _mkdirp = require('mkdirp');
 
 var _mkdirp2 = _interopRequireDefault(_mkdirp);
 
-var _i18nSupportedLocales = require('./i18nSupportedLocales');
-
-var _i18nSupportedLocales2 = _interopRequireDefault(_i18nSupportedLocales);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function generateTranslationFile(language, messages) {
@@ -30,9 +26,18 @@ function getDirectories(srcPath) {
   });
 }
 
-function apply(options) {
-  _i18nSupportedLocales2.default.forEach(function (language) {
+function aggregateTranslations(options) {
+  var supportedLocales = options.supportedLocales;
+  supportedLocales.forEach(function (language) {
     var currentLanguageMessages = {};
+
+    // Check base directory for translation file
+    var baseTranslationFile = _path2.default.resolve(options.baseDirectory, 'translations', language + '.json');
+    if (_fs2.default.existsSync(baseTranslationFile)) {
+      _extends(currentLanguageMessages, JSON.parse(_fs2.default.readFileSync(baseTranslationFile, 'utf8')));
+    }
+
+    // Check module directory for translation file
     getDirectories(_path2.default.resolve(options.baseDirectory, 'node_modules')).forEach(function (module) {
       var translationFile = _path2.default.resolve(options.baseDirectory, 'node_modules', module, 'translations', language + '.json');
       if (_fs2.default.existsSync(translationFile)) {
@@ -40,6 +45,7 @@ function apply(options) {
       }
     });
 
+    // Aggregate messages for language in one file
     if (currentLanguageMessages !== {}) {
       (0, _mkdirp2.default)(_path2.default.resolve(options.baseDirectory, 'aggregated-translations'));
       _fs2.default.writeFileSync(_path2.default.resolve(options.baseDirectory, 'aggregated-translations', language + '.js'), generateTranslationFile(language, currentLanguageMessages));
@@ -62,6 +68,6 @@ module.exports = function (options) {
   }
 
   return {
-    apply: apply.bind(undefined, updatedOptions)
+    apply: aggregateTranslations.bind(undefined, updatedOptions)
   };
 };

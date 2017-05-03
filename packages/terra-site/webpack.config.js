@@ -8,6 +8,7 @@ const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
+const supportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 
 module.exports = {
   entry: {
@@ -68,6 +69,7 @@ module.exports = {
     }),
     new I18nAggregatorPlugin({
       baseDirectory: __dirname,
+      supportedLocales: supportedLocales,
     }),
     new webpack.NamedChunksPlugin(),
   ],

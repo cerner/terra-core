@@ -2,8 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
 
-import supportedLocales from './i18nSupportedLocales';
-
 function generateTranslationFile(language, messages) {
   return `import { addLocaleData } from 'react-intl';
 import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
@@ -23,9 +21,18 @@ function getDirectories(srcPath) {
   return fs.readdirSync(srcPath).filter(file => fs.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-function apply(options) {
+function aggregateTranslations(options) {
+  const supportedLocales = options.supportedLocales;
   supportedLocales.forEach((language) => {
     const currentLanguageMessages = {};
+
+    // Check base directory for translation file
+    const baseTranslationFile = path.resolve(options.baseDirectory, 'translations', `${language}.json`);
+    if (fs.existsSync(baseTranslationFile)) {
+      Object.assign(currentLanguageMessages, JSON.parse(fs.readFileSync(baseTranslationFile, 'utf8')));
+    }
+
+    // Check module directory for translation file
     getDirectories(path.resolve(options.baseDirectory, 'node_modules')).forEach((module) => {
       const translationFile = path.resolve(options.baseDirectory, 'node_modules', module, 'translations', `${language}.json`);
       if (fs.existsSync(translationFile)) {
@@ -33,6 +40,7 @@ function apply(options) {
       }
     });
 
+    // Aggregate messages for language in one file
     if (currentLanguageMessages !== {}) {
       mkdirp(path.resolve(options.baseDirectory, 'aggregated-translations'));
       fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
@@ -56,6 +64,6 @@ module.exports = (options) => {
   }
 
   return {
-    apply: apply.bind(this, updatedOptions),
+    apply: aggregateTranslations.bind(this, updatedOptions),
   };
 };
