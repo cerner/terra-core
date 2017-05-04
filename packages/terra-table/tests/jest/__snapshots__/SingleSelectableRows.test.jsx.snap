@@ -1,3 +1,31 @@
+exports[`test should render SingleSelectableRows one selectable row and one non-selectable row 1`] = `
+<TableRows>
+  <TableRow
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
 exports[`test should render SingleSelectableRows tag 1`] = `
 <TableRows>
   <TableRow
