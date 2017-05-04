@@ -1,9 +1,80 @@
 @import '~terra-mixins';
 
-.terra-PopupFrame {
-  background-color: rgba(239, 68, 0, 0.53);
+.terra-PopupFrame-content {
+  background-color: #fcfcfc;
   border: 1px solid;
   height: 200px;
   overflow: hidden;
   width: 200px;
+}
+
+.terra-PopupFrame {
+  display: flex;
+  position: relative;
+
+  .terra-PopupFrame-arrow {
+    flex: 0 0 auto;
+    position: relative;
+  }
+
+  .terra-PopupFrame-content {
+    border-radius: 5px;
+    flex: 0 0 auto;
+    padding: 5px;
+    position: relative;
+  }
+}
+
+.terra-PopupFrame {
+  display: flex;
+
+  .terra-PopupFrame-arrow {
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    order: 0;
+  }
+
+  .terra-PopupFrame-content {
+    flex: 0 0 auto;
+    order: 1;
+  }
+}
+
+// Positional relation for the arrow frame
+.terra-PopupFrame--arrowTop, {
+  flex-direction: column;
+
+  .terra-PopupFrame-arrow {
+    flex-direction: column;
+  }
+}
+
+.terra-PopupFrame--arrowStart {
+  flex-direction: row;
+}
+
+.terra-PopupFrame--arrowEnd {
+  flex-direction: row-reverse;
+}
+
+.terra-PopupFrame--arrowBottom {
+  flex-direction: column-reverse;
+
+  .terra-PopupFrame-arrow {
+    flex-direction: column;
+  }
+}
+
+// Alignment of the child arrow item
+.terra-PopupFrame-arrow--alignStart {
+  align-items: flex-start;
+}
+
+.terra-PopupFrame-arrow--alignCenter {
+  align-items: center; 
+}
+
+.terra-PopupFrame-arrow--alignEnd {
+  align-items: flex-end;
 }

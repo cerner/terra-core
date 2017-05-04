@@ -16,9 +16,15 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _PopupArrow = require('./PopupArrow');
+
+var _PopupArrow2 = _interopRequireDefault(_PopupArrow);
+
 require('./PopupFrame.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -27,6 +33,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var arrowAlignments = ['Start', 'Center', 'End'];
+
+var arrowPositions = ['Top', 'Bottom', 'Start', 'End'];
 
 var KEYCODES = {
   ESCAPE: 27
@@ -48,14 +58,26 @@ var propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  onRequestClose: _react.PropTypes.func
+  onRequestClose: _react.PropTypes.func,
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
+  arrowAlignment: _react.PropTypes.oneOf(arrowAlignments),
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
+  arrowPosition: _react.PropTypes.oneOf(arrowPositions),
+  showArrow: _react.PropTypes.bool
 };
 
 var defaultProps = {
   children: [],
   closeOnEsc: true,
   closeOnOutsideClick: true,
-  onRequestClose: undefined
+  onRequestClose: undefined,
+  arrowAlignment: 'middle',
+  arrowPosition: 'top',
+  showArrow: true
 };
 
 var PopupFrame = function (_React$Component) {
@@ -109,14 +131,33 @@ var PopupFrame = function (_React$Component) {
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
-          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside']);
+          arrowAlignment = _props.arrowAlignment,
+          arrowPosition = _props.arrowPosition,
+          showArrow = _props.showArrow,
+          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowAlignment', 'arrowPosition', 'showArrow']);
 
-      var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', customProps.className]);
+      var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', _defineProperty({}, 'terra-PopupFrame--arrow' + arrowPosition, arrowPosition), customProps.className]);
+
+      var arrowClassNames = (0, _classnames2.default)(['terra-PopupFrame-arrow', _defineProperty({}, 'terra-PopupFrame-arrow--align' + arrowAlignment, arrowAlignment)]);
+
+      var arrow = void 0;
+      if (showArrow) {
+        arrow = _react2.default.createElement(
+          'div',
+          { className: arrowClassNames },
+          _react2.default.createElement(_PopupArrow2.default, { direction: arrowPosition })
+        );
+      }
 
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: frameClassNames }),
-        children
+        arrow,
+        _react2.default.createElement(
+          'div',
+          { className: 'terra-PopupFrame-content' },
+          children
+        )
       );
     }
   }]);

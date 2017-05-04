@@ -29,6 +29,43 @@ const defaultProps = {
 const WrappedPopupFrame = onClickOutside(PopupFrame);
 
 class PopupPresenter extends React.Component {
+  static arrowAlignmentFromAttachment(contentAttachment) {
+    const startAttachments = ['top left', 'bottom left'];
+    const centerAttachments = ['top center', 'bottom center', 'middle left', 'middle right'];
+    const endAttachments = ['top right', 'bottom right'];
+
+    if (startAttachments.indexOf(contentAttachment) >= 0) {
+      return 'Start';
+    }
+    if (centerAttachments.indexOf(contentAttachment) >= 0) {
+      return 'Center';
+    }
+    if (endAttachments.indexOf(contentAttachment) >= 0) {
+      return 'End';
+    }
+    return undefined;
+  }
+
+  static arrowPositionFromAttachment(contentAttachment) {
+    const topAttachments = ['top left', 'top center', 'top right'];
+    const startAttachments = ['middle left'];
+    const endAttachments = ['middle right'];
+    const bottomAttachments = ['bottom left', 'bottom center', 'bottom right'];
+
+    if (topAttachments.indexOf(contentAttachment) >= 0) {
+      return 'Top';
+    }
+    if (startAttachments.indexOf(contentAttachment) >= 0) {
+      return 'Start';
+    }
+    if (endAttachments.indexOf(contentAttachment) >= 0) {
+      return 'End';
+    }
+    if (bottomAttachments.indexOf(contentAttachment) >= 0) {
+      return 'Bottom';
+    }
+    return undefined;
+  }
 
   render () {
     const {
@@ -44,17 +81,26 @@ class PopupPresenter extends React.Component {
       target,
       targetAttachment,
       targetOffset,
+      arrowAlignment,
+      arrowPosition,
       ...customProps 
     } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
     if (isOpen && content) {
+      const frameProps = {
+        className,
+        closeOnEsc,
+        closeOnOutsideClick,
+        onRequestClose,
+        arrowAlignment: PopupPresenter.arrowAlignmentFromAttachment(contentAttachment),
+        arrowPosition: PopupPresenter.arrowPositionFromAttachment(contentAttachment),
+        showArrow: contentAttachment !== 'middle center',
+      };
+
       wrappedContent = (
-        <WrappedPopupFrame 
-          className={className}
-          closeOnEsc={closeOnEsc}
-          closeOnOutsideClick={closeOnOutsideClick}
-          onRequestClose={onRequestClose}>{content}
+        <WrappedPopupFrame {...frameProps}>
+          {content}
         </WrappedPopupFrame>
       );
     }

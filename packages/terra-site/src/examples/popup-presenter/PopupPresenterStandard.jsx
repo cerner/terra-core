@@ -27,10 +27,10 @@ class DummyApp extends React.Component {
       <PopupPresenter 
         constraints={constraints}
         content={contentSection}
-        contentAttachment="bottom left"
+        contentAttachment="bottom center"
         isOpen={this.state.open}
         target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
-        targetAttachment="top right"
+        targetAttachment="top center"
         onRequestClose={this.handleRequestClose}
       />
     );

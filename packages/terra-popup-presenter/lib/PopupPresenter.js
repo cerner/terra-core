@@ -88,17 +88,25 @@ var PopupPresenter = function (_React$Component) {
           target = _props.target,
           targetAttachment = _props.targetAttachment,
           targetOffset = _props.targetOffset,
-          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'target', 'targetAttachment', 'targetOffset']); // eslint-disable-line no-unused-vars
+          arrowAlignment = _props.arrowAlignment,
+          arrowPosition = _props.arrowPosition,
+          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'target', 'targetAttachment', 'targetOffset', 'arrowAlignment', 'arrowPosition']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
       if (isOpen && content) {
+        var frameProps = {
+          className: className,
+          closeOnEsc: closeOnEsc,
+          closeOnOutsideClick: closeOnOutsideClick,
+          onRequestClose: onRequestClose,
+          arrowAlignment: PopupPresenter.arrowAlignmentFromAttachment(contentAttachment),
+          arrowPosition: PopupPresenter.arrowPositionFromAttachment(contentAttachment),
+          showArrow: contentAttachment !== 'middle center'
+        };
+
         wrappedContent = _react2.default.createElement(
           WrappedPopupFrame,
-          {
-            className: className,
-            closeOnEsc: closeOnEsc,
-            closeOnOutsideClick: closeOnOutsideClick,
-            onRequestClose: onRequestClose },
+          frameProps,
           content
         );
       }
@@ -127,6 +135,46 @@ var PopupPresenter = function (_React$Component) {
       }
 
       return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
+    }
+  }], [{
+    key: 'arrowAlignmentFromAttachment',
+    value: function arrowAlignmentFromAttachment(contentAttachment) {
+      var startAttachments = ['top left', 'bottom left'];
+      var centerAttachments = ['top center', 'bottom center', 'middle left', 'middle right'];
+      var endAttachments = ['top right', 'bottom right'];
+
+      if (startAttachments.indexOf(contentAttachment) >= 0) {
+        return 'Start';
+      }
+      if (centerAttachments.indexOf(contentAttachment) >= 0) {
+        return 'Center';
+      }
+      if (endAttachments.indexOf(contentAttachment) >= 0) {
+        return 'End';
+      }
+      return undefined;
+    }
+  }, {
+    key: 'arrowPositionFromAttachment',
+    value: function arrowPositionFromAttachment(contentAttachment) {
+      var topAttachments = ['top left', 'top center', 'top right'];
+      var startAttachments = ['middle left'];
+      var endAttachments = ['middle right'];
+      var bottomAttachments = ['bottom left', 'bottom center', 'bottom right'];
+
+      if (topAttachments.indexOf(contentAttachment) >= 0) {
+        return 'Top';
+      }
+      if (startAttachments.indexOf(contentAttachment) >= 0) {
+        return 'Start';
+      }
+      if (endAttachments.indexOf(contentAttachment) >= 0) {
+        return 'End';
+      }
+      if (bottomAttachments.indexOf(contentAttachment) >= 0) {
+        return 'Bottom';
+      }
+      return undefined;
     }
   }]);
 
