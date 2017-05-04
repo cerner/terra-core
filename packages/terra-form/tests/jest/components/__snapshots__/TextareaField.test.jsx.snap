@@ -1,0 +1,35 @@
+exports[`test should render a TextAreaField with the rest of the props 1`] = `
+<Field
+  error="Name is required"
+  help="The name given to you at birth."
+  isInline={false}
+  label="Profile Description">
+  <Textarea
+    autoFocus={true}
+    cols={null}
+    maxLength={15}
+    minLength={5}
+    name="profile_description"
+    onChange={[Function]}
+    required={true}
+    rows={null}
+    value="" />
+</Field>
+`;
+
+exports[`test should render a default TextAreaField component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}>
+  <Textarea
+    cols={null}
+    maxLength={null}
+    minLength={null}
+    name={null}
+    onChange={[Function]}
+    required={false}
+    rows={null} />
+</Field>
+`;
