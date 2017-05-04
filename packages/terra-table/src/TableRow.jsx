@@ -19,6 +19,7 @@ const propTypes = {
 
 const defaultProps = {
   isSelected: false,
+  isSelectable: false,
 };
 
 const TableRow = ({

@@ -11,6 +11,8 @@ const MultiSelectListTests = () => (
       <li><Link to="/tests/multi-select-list-tests/items-divided">Items Divided MultiSelectList</Link></li>
       <li><Link to="/tests/multi-select-list-tests/max-count">MaxCount MultiSelectList</Link></li>
       <li><Link to="/tests/multi-select-list-tests/on-change">OnChange MultiSelectList</Link></li>
+      <li><Link to="/tests/multi-select-list-tests/max-count-on-change">MaxCount OnChange MultiSelectList</Link></li>
+      <li><Link to="/tests/multi-select-list-tests/no-deselect">MultiSelectList With Non-Deselectable Item</Link></li>
     </ul>
   </div>
 );
