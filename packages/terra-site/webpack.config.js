@@ -70,7 +70,11 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: { react: path.resolve(__dirname, 'node_modules', 'react') },
+    alias: {
+      react: path.resolve(__dirname, 'node_modules/react'),
+      moment: path.resolve(__dirname, 'node_modules/moment'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+    },
   },
   output: {
     filename: '[name].js',

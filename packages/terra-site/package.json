@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "start": "webpack-dev-server --progress ",
-    "compile:prod": "webpack --config webpack.prod.config",
+    "start": "webpack-dev-server --progress",
+    "compile:prod": "webpack --config webpack.prod.config --progress -p --json > stats.json",
     "deploy": "npm run compile:prod && gh-pages -d build",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
