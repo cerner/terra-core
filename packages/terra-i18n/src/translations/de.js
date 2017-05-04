@@ -5,6 +5,11 @@ addLocaleData(localeData);
 
 const messages = {
   'Terra.ajax.error': 'Inhalt konnte nicht geladen werden.',
+  'Terra.demographicsBanner.dateOfBirth': 'Geburtsdatum: ',
+  'Terra.demographicsBanner.deceased': 'Verstorben: ',
+  'Terra.demographicsBanner.gestationalAge': 'GA: ',
+  'Terra.demographicsBanner.noDataProvided': '--',
+  'Terra.demographicsBanner.postMenstrualAge': 'Postmenstruelles Alter: ',
 };
 
 module.exports = {

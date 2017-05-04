@@ -11,7 +11,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactIntl.addLocaleData)(_fi2.default);
 
 var messages = {
-  'Terra.ajax.error': 'This content failed to load.n9KZ Pi~'
+  'Terra.ajax.error': 'This content failed to load.n9KZ Pi~',
+  'Terra.demographicsBanner.dateOfBirth': 'DOB ~: ',
+  'Terra.demographicsBanner.deceased': 'Deceased ##~: ',
+  'Terra.demographicsBanner.gestationalAge': 'GA ~: ',
+  'Terra.demographicsBanner.noDataProvided': '--',
+  'Terra.demographicsBanner.postMenstrualAge': 'PMA ~: '
 };
 
 module.exports = {
