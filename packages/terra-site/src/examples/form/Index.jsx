@@ -10,8 +10,8 @@ import FieldDocs from 'terra-form/docs/Field.md';
 import InputDocs from 'terra-form/docs/Input.md';
 import MultiChoiceFieldDocs from 'terra-form/docs/MultiChoiceField.md';
 import NumberFieldDocs from 'terra-form/docs/NumberField.md';
-import TextareaDocs from 'terra-form/docs/Textarea.md';
-import TextareaFieldDocs from 'terra-form/docs/TextareaField.md';
+import TextareaDocs from 'terra-form/docs/TextArea.md';
+import TextareaFieldDocs from 'terra-form/docs/TextAreaField.md';
 import TextFieldDocs from 'terra-form/docs/TextField.md';
 
 import { version } from 'terra-form/package.json';
