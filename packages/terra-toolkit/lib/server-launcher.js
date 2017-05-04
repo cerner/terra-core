@@ -43,7 +43,7 @@ exports.launchServer = function () {
     compiler.plugin('done', resolve);
 
     module.server = new _webpackDevServer2.default(compiler, {
-      quiet: true
+      quiet: false
     });
 
     module.server.listen(8080, '0.0.0.0');

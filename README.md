@@ -8,6 +8,8 @@
   Terra Core
 </h1>
 
+# Delete this markdown later
+
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 - [Supported Browsers](#supported-browsers)
