@@ -41,7 +41,7 @@ class MultiSelectList extends React.Component {
         break;
       }
 
-      if (items[i].props.isSelected && items[i].props.isSelectable !== false) {
+      if (items[i].props.isSelected) {
         selectedIndexes.push(i);
       }
     }
@@ -92,10 +92,13 @@ class MultiSelectList extends React.Component {
     }
 
     this.setState({ selectedIndexes: newIndexes });
+    if (this.props.onChange) {
+      this.props.onChange(event, newIndexes);
+    }
   }
 
   shouldHandleSelection(index) {
-    if (this.state.selectedIndexes.length <= this.validatedMaxCount()) {
+    if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
       return true;
     }
     if (this.state.selectedIndexes.indexOf(index) >= 0) {
@@ -119,12 +122,8 @@ class MultiSelectList extends React.Component {
   wrappedOnClickForItem(item, index) {
     const initialOnClick = item.props.onClick;
     return (event) => {
-      if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+      if (item.props.isSelectable && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
-
-        if (this.onChange) {
-          this.onChange(event, this.state.selectedIndexes);
-        }
       }
 
       if (initialOnClick) {
@@ -138,12 +137,8 @@ class MultiSelectList extends React.Component {
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+        if (item.props.isSelectable && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
-        }
-
-        if (this.onChange) {
-          this.onChange(event, this.state.selectedIndexes);
         }
       }
 
@@ -155,30 +150,27 @@ class MultiSelectList extends React.Component {
 
   newPropsForItem(item, index, onClick, onKeyDown, disableUnselectedItems) {
     const isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
-
-    const newProps = { onClick, onKeyDown };
+    const newProps = { };
 
     // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
     if (isSelected !== item.isSelected) {
       newProps.isSelected = isSelected;
     }
 
-    // By default isSelectable attribute for the Item is undefined, as this is selectable list,
-    // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
-    // then the item will not be selectable
-    const isSelectable = item.props.isSelectable;
-    if (isSelectable === undefined) {
-      newProps.isSelectable = true;
-    }
+    newProps.isSelectable = item.props.isSelectable;
 
-    // Add tabIndex on items to navigate through keyboard tab key for selectable litst
-    if (newProps.isSelectable || isSelectable) {
+    // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+    // onClick and onKeyDown functions.
+    if (newProps.isSelectable) {
       newProps.tabIndex = '0';
+      newProps.onClick = onClick;
+      newProps.onKeyDown = onKeyDown;
     }
 
     if (disableUnselectedItems && isSelected !== true) {
       newProps.isSelectable = false;
     }
+
     return newProps;
   }
 
@@ -199,7 +191,6 @@ class MultiSelectList extends React.Component {
     if ('maxSelectionCount' in customProps) {
       delete customProps.maxSelectionCount;
     }
-
     return (
       <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}

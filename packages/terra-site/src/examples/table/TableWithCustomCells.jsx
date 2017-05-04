@@ -22,17 +22,17 @@ const TableWithCustomCells = () => (
       <Table.HeaderCell content={'Phone Number'} key={'PHONE_NUMBER'} minWidth={'large'} />
     </Table.Header>
     <Table.SingleSelectableRows>
-      <Table.Row isSelected key={'PERSON_0'}>
+      <Table.Row isSelected isSelectable key={'PERSON_0'}>
         <Table.Cell content={<CustomCell text="John Smith" subtext="Super Cool Person" />} key="NAME" />
         <Table.Cell content={<CustomCell text="123 Adams Drive" subtext="Missouri" />} key="ADDRESS" />
         <Table.Cell content={<CustomCell text="111-222-3333" subtext="Home" />} key="PHONE_NUMBER" />
       </Table.Row>
-      <Table.Row key={'PERSON_1'}>
+      <Table.Row isSelectable key={'PERSON_1'}>
         <Table.Cell content={<CustomCell text="Jane Smith" subtext="Super Cool Person" />} key="NAME" />
         <Table.Cell content={<CustomCell text="321 Drive Street" subtext="Kansas" />} key="ADDRESS" />
         <Table.Cell content={<CustomCell text="111-222-3333" subtext="Cell" />} key="PHONE_NUMBER" />
       </Table.Row>
-      <Table.Row key={'PERSON_2'}>
+      <Table.Row isSelectable key={'PERSON_2'}>
         <Table.Cell content={<CustomCell text="Dave Smith" subtext="Not Super Cool At All" />} key="NAME" />
         <Table.Cell content={<CustomCell text="213 Raymond Road" subtext="Alaska" />} key="ADDRESS" />
         <Table.Cell content={<CustomCell text="111-222-3333" subtext="Work" />} key="PHONE_NUMBER" />
