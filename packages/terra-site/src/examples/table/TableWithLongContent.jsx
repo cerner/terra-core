@@ -10,17 +10,17 @@ const TableWithLongContent = () => (
       <Table.HeaderCell content={'Column Heading 3'} key={'COLUMN_2'} minWidth={'large'} />
     </Table.Header>
     <Table.SingleSelectableRows>
-      <Table.Row key={'ROW_0'}>
+      <Table.Row isSelectable key={'ROW_0'}>
         <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
         <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
         <Table.Cell content={'Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text End table text'} key={'COLUMN_2'} />
       </Table.Row>
-      <Table.Row key={'ROW_1'}>
+      <Table.Row isSelectable key={'ROW_1'}>
         <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
         <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
         <Table.Cell content={'Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text End table text'} key={'COLUMN_2'} />
       </Table.Row>
-      <Table.Row key={'ROW_2'}>
+      <Table.Row isSelectable key={'ROW_2'}>
         <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
         <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
         <Table.Cell content={'Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text Very long table text End table text'} key={'COLUMN_2'} />
