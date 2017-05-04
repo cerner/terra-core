@@ -1,19 +1,23 @@
-import React, { PropTypes } from 'react';
 import './Form.scss';
 
-const propTypes = {
-  name: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
+import ChoiceField from './components/ChoiceField';
+import Control from './components/Control';
+import Field from './components/Field';
+import Input from './components/Input';
+import MultiChoiceField from './components/MultiChoiceField';
+import NumberField from './components/NumberField';
+import Textarea from './components/Textarea';
+import TextareaField from './components/TextareaField';
+import TextField from './components/TextField';
+
+export {
+  ChoiceField,
+  Control,
+  Field,
+  Input,
+  MultiChoiceField,
+  NumberField,
+  Textarea,
+  TextareaField,
+  TextField,
 };
-
-const defaultProps = {
-  name: 'default',
-  variant: 'terra-Form--default',
-};
-
-const Form = () => <div />;
-
-Form.propTypes = propTypes;
-Form.defaultProps = defaultProps;
-
-export default Form;
