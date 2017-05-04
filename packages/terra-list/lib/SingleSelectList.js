@@ -65,7 +65,7 @@ var SingleSelectList = function (_React$Component) {
     key: 'selectedIndexFromItems',
     value: function selectedIndexFromItems(items) {
       for (var i = 0; i < items.length; i += 1) {
-        if (items[i].props.isSelected === true && items[i].props.isSelectable !== false) {
+        if (items[i].props.isSelected && items[i].props.isSelectable) {
           return i;
         }
       }
@@ -97,6 +97,9 @@ var SingleSelectList = function (_React$Component) {
     key: 'handleSelection',
     value: function handleSelection(event, index) {
       this.setState({ selectedIndex: index });
+      if (this.props.onChange) {
+        this.props.onChange(event, index);
+      }
     }
   }, {
     key: 'shouldHandleSelection',
@@ -124,12 +127,8 @@ var SingleSelectList = function (_React$Component) {
       var initialOnClick = item.props.onClick;
 
       return function (event) {
-        if (item.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
+        if (_this3.shouldHandleSelection(index)) {
           _this3.handleSelection(event, index);
-
-          if (_this3.onChange) {
-            _this3.onChange(event, _this3.state.selectedIndex);
-          }
         }
 
         if (initialOnClick) {
@@ -146,12 +145,8 @@ var SingleSelectList = function (_React$Component) {
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (item.props.isSelectable !== false && _this4.shouldHandleSelection(index)) {
+          if (_this4.shouldHandleSelection(index)) {
             _this4.handleSelection(event, index);
-          }
-
-          if (_this4.onChange) {
-            _this4.onChange(event, _this4.state.selectedIndex);
           }
         }
 
@@ -164,29 +159,24 @@ var SingleSelectList = function (_React$Component) {
     key: 'newPropsForItem',
     value: function newPropsForItem(item, index, onClick, onKeyDown) {
       var isSelected = this.state.selectedIndex === index;
+      var newProps = {};
 
-      var newProps = { onClick: onClick, onKeyDown: onKeyDown };
       // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
       if (isSelected !== item.isSelected) {
         newProps.isSelected = isSelected;
       }
 
-      // By default isSelectable attribute for the Item is undefined, as this is selectable list,
-      // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
-      // then the item will not be selectable
-      var isSelectable = item.props.isSelectable;
-      if (isSelectable === undefined) {
-        newProps.isSelectable = true;
-      }
+      newProps.isSelectable = item.props.isSelectable;
 
-      // Add tabIndex on items to navigate through keyboard tab key for selectable litst
-      if (newProps.isSelectable || isSelectable) {
+      // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+      // onClick and onKeyDown functions.
+      if (newProps.isSelectable) {
         newProps.tabIndex = '0';
+        newProps.onClick = onClick;
+        newProps.onKeyDown = onKeyDown;
       }
 
-      if (item.props.hasChevron === undefined) {
-        newProps.hasChevron = this.props.hasChevrons;
-      }
+      newProps.hasChevron = this.props.hasChevrons;
 
       return newProps;
     }
