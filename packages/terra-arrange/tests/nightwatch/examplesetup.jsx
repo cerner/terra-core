@@ -7,7 +7,7 @@ const simpleText = <div>{ipsum}</div>;
 const longText = <div>{ipsum} {ipsum} {ipsum} {ipsum}</div>;
 
 const ArrangeWrapper = props => (
-  <div style={{ width: '500px', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede' }}>
+  <div style={{ width: '100%', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede' }}>
     {props.children}
   </div>
 );
