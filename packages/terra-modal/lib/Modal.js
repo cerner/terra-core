@@ -131,21 +131,17 @@ var Modal = function (_React$Component) {
   _createClass(Modal, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      if (this.props.closeOnEsc) {
-        document.addEventListener('keydown', this.handleKeydown);
-      }
+      document.addEventListener('keydown', this.handleKeydown);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      if (this.props.closeOnEsc) {
-        document.removeEventListener('keydown', this.handleKeydown);
-      }
+      document.removeEventListener('keydown', this.handleKeydown);
     }
   }, {
     key: 'handleKeydown',
     value: function handleKeydown(e) {
-      if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened) {
+      if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened && this.props.closeOnEsc) {
         this.props.onRequestClose();
       }
     }
