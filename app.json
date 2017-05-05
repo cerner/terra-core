@@ -1,15 +1,26 @@
 {
   "name": "terra-core",
-  "scripts": {
-  },
+  "description": "Herou reviews app for terra-core development",
+  "keywords": [
+    "productivity",
+  ],
+  "website": "https://engineering.cerner.com/terra-core/#/site",
+  "repository": "https://github.com/cerner/terra-core",
+  "success_url": "/",
+  "scripts": {},
   "env": {
+    "NODE_MODULES_CACHE": {
+      "description": "No cache",
+      "value": "false"
+    }
   },
   "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
   },
-  "addons": [
-
-  ],
-  "buildpacks": [
-
-  ]
+  "image": "heroku/ruby",
+  "addons": [],
+  "buildpacks": []
 }
