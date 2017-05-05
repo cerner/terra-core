@@ -7,6 +7,8 @@ const path = require('path');
 const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const I18nAggregatorPlugin = require('terra-i18n-plugin');
+const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 
 module.exports = {
   entry: {
@@ -52,7 +54,6 @@ module.exports = {
           },
         }],
       }),
-
     },
     {
       test: /\.md$/,
@@ -66,12 +67,20 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['terra-core'],
     }),
+    new I18nAggregatorPlugin({
+      baseDirectory: __dirname,
+      supportedLocales: i18nSupportedLocales,
+    }),
     new webpack.NamedChunksPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
+
+    // See https://github.com/facebook/react/issues/8026
     alias: {
-      react: path.resolve(__dirname, 'node_modules/react'),
+      react: path.resolve(__dirname, 'node_modules', 'react'),
+      'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
       moment: path.resolve(__dirname, 'node_modules/moment'),
       'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
     },
