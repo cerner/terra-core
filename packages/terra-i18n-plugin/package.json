@@ -1,0 +1,45 @@
+{
+  "name": "terra-i18n-plugin",
+  "main": "lib/I18nAggregatorPlugin.js",
+  "private": true,
+  "version": "0.0.0",
+  "description": "The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-i18n-plugin",
+    "I18n-plugin",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "terra-toolkit": "^0.x"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "release:major": "npm test && node ../../scripts/release/release.js major",
+    "release:minor": "npm test && node ../../scripts/release/release.js minor",
+    "release:patch": "npm test && node ../../scripts/release/release.js patch"
+  }
+}
