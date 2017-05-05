@@ -48,7 +48,7 @@ module.exports = {
         }, {
           loader: 'sass-loader',
           options: {
-            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/LegacyTheme.scss'))}"; $terra-bidi: true;`,
+            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/lib/LegacyTheme.scss'))}"; $terra-bidi: true;`,
           },
         }],
       }),
@@ -70,7 +70,11 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: { react: path.resolve(__dirname, 'node_modules', 'react') },
+    alias: {
+      react: path.resolve(__dirname, 'node_modules/react'),
+      moment: path.resolve(__dirname, 'node_modules/moment'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+    },
   },
   output: {
     filename: '[name].js',

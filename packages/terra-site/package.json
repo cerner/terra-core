@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "start": "webpack-dev-server --progress ",
-    "compile:prod": "webpack --config webpack.prod.config",
+    "start": "webpack-dev-server --progress",
+    "compile:prod": "webpack --config webpack.prod.config --progress -p --json > stats.json",
     "deploy": "npm run compile:prod && gh-pages -d build",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
@@ -37,6 +37,7 @@
     "terra-content": "^0.x",
     "terra-content-container": "^0.x",
     "terra-date-picker": "^0.x",
+    "terra-demographics-banner": "^0.x",
     "terra-grid": "^2.0.0",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
