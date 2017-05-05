@@ -19,7 +19,7 @@ class DummyApp extends React.Component {
   }
 
   render() {
-    const contentSection = <p>i'm a popup content</p>;
+    const contentSection = <p>i'm popup content, hear me roar!</p>;
 
     const constraints = [{to: 'window', attachment: 'together'}];
 
