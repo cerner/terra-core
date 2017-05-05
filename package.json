@@ -50,7 +50,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
-    "prepush": "node scripts/prepush/index.js",
     "pretest": "npm run lint",
     "postinstall": "npm run bootstrap",
     "start": "cd packages/terra-site && npm run start",
