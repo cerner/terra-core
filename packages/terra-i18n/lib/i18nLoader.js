@@ -8,15 +8,18 @@ var _translationLoaders = require('./translationLoaders');
 
 var _translationLoaders2 = _interopRequireDefault(_translationLoaders);
 
+var _i18nSupportedLocales = require('./i18nSupportedLocales');
+
+var _i18nSupportedLocales2 = _interopRequireDefault(_i18nSupportedLocales);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* eslint-disable */
-var hasIntl = typeof Intl !== 'undefined';
+var hasIntl = typeof Intl !== 'undefined'; /* eslint-disable */
+
 
 var permitParams = function permitParams(locale, callback) {
-  var supportedLocales = ['en', 'en-US', 'en-GB', 'es', 'de', 'fi-FI', 'fr', 'pt'];
-  if (supportedLocales.indexOf(locale) < 0) {
-    throw new Error(locale + ' is not supported, supported locales:' + supportedLocales);
+  if (_i18nSupportedLocales2.default.indexOf(locale) < 0) {
+    throw new Error(locale + ' is not supported, supported locales:' + _i18nSupportedLocales2.default);
   }
   if (typeof callback !== 'function') {
     throw new Error('Second argument must be function');

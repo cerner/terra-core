@@ -39,3 +39,4 @@ Cerner Corporation
 [@nagrawal3]: https://github.com/nagrawal3
 [@emilyrohrbough]: https://github.com/emilyrohrbough
 [@gneatgeek]: https://github.com/gneatgeek
+[@JakeLaCombe]: https://github.com/JakeLaCombe
