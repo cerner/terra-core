@@ -50,7 +50,7 @@ module.exports = {
         }, {
           loader: 'sass-loader',
           options: {
-            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/LegacyTheme.scss'))}"; $terra-bidi: true;`,
+            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/lib/LegacyTheme.scss'))}"; $terra-bidi: true;`,
           },
         }],
       }),
@@ -80,7 +80,9 @@ module.exports = {
     // See https://github.com/facebook/react/issues/8026
     alias: {
       react: path.resolve(__dirname, 'node_modules', 'react'),
-      'react-intl': path.resolve(__dirname, 'node_modules', 'react-intl'),
+      'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
+      moment: path.resolve(__dirname, 'node_modules/moment'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
     },
   },
   output: {
