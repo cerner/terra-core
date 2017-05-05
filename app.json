@@ -28,7 +28,7 @@
       "size": "free"
     }
   },
-  "image": "heroku/ruby",
+  "stack": "heroku-16",
   "addons": [],
   "buildpacks": []
 }
