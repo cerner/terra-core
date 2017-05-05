@@ -70,7 +70,7 @@ var MultiSelectList = function (_React$Component) {
           break;
         }
 
-        if (items[i].props.isSelected && items[i].props.isSelectable !== false) {
+        if (items[i].props.isSelected) {
           selectedIndexes.push(i);
         }
       }
@@ -130,11 +130,14 @@ var MultiSelectList = function (_React$Component) {
       }
 
       this.setState({ selectedIndexes: newIndexes });
+      if (this.props.onChange) {
+        this.props.onChange(event, newIndexes);
+      }
     }
   }, {
     key: 'shouldHandleSelection',
     value: function shouldHandleSelection(index) {
-      if (this.state.selectedIndexes.length <= this.validatedMaxCount()) {
+      if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
         return true;
       }
       if (this.state.selectedIndexes.indexOf(index) >= 0) {
@@ -164,12 +167,8 @@ var MultiSelectList = function (_React$Component) {
 
       var initialOnClick = item.props.onClick;
       return function (event) {
-        if (item.props.isSelectable !== false && _this3.shouldHandleSelection(index)) {
+        if (item.props.isSelectable && _this3.shouldHandleSelection(index)) {
           _this3.handleSelection(event, index);
-
-          if (_this3.onChange) {
-            _this3.onChange(event, _this3.state.selectedIndexes);
-          }
         }
 
         if (initialOnClick) {
@@ -186,12 +185,8 @@ var MultiSelectList = function (_React$Component) {
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (item.props.isSelectable !== false && _this4.shouldHandleSelection(index)) {
+          if (item.props.isSelectable && _this4.shouldHandleSelection(index)) {
             _this4.handleSelection(event, index);
-          }
-
-          if (_this4.onChange) {
-            _this4.onChange(event, _this4.state.selectedIndexes);
           }
         }
 
@@ -204,30 +199,27 @@ var MultiSelectList = function (_React$Component) {
     key: 'newPropsForItem',
     value: function newPropsForItem(item, index, onClick, onKeyDown, disableUnselectedItems) {
       var isSelected = this.state.selectedIndexes.indexOf(index) >= 0;
-
-      var newProps = { onClick: onClick, onKeyDown: onKeyDown };
+      var newProps = {};
 
       // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
       if (isSelected !== item.isSelected) {
         newProps.isSelected = isSelected;
       }
 
-      // By default isSelectable attribute for the Item is undefined, as this is selectable list,
-      // we will make item selectable by default. If consumer specify the row attribute isSelectable as false,
-      // then the item will not be selectable
-      var isSelectable = item.props.isSelectable;
-      if (isSelectable === undefined) {
-        newProps.isSelectable = true;
-      }
+      newProps.isSelectable = item.props.isSelectable;
 
-      // Add tabIndex on items to navigate through keyboard tab key for selectable litst
-      if (newProps.isSelectable || isSelectable) {
+      // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+      // onClick and onKeyDown functions.
+      if (newProps.isSelectable) {
         newProps.tabIndex = '0';
+        newProps.onClick = onClick;
+        newProps.onKeyDown = onKeyDown;
       }
 
       if (disableUnselectedItems && isSelected !== true) {
         newProps.isSelectable = false;
       }
+
       return newProps;
     }
   }, {
@@ -254,7 +246,6 @@ var MultiSelectList = function (_React$Component) {
       if ('maxSelectionCount' in customProps) {
         delete customProps.maxSelectionCount;
       }
-
       return _react2.default.createElement(
         _List2.default,
         _extends({ isDivided: isDivided }, customProps),

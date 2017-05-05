@@ -27,13 +27,15 @@
   .terra-ListItem-chevron > * {color: $terra-grey-30;}
 }
 
+// Update with UX styling
+.terra-ListItem--selected {
+  background-color: rgba(239, 68, 0, 0.53);
+}
+
 .terra-ListItem-isSelectable {
   cursor: pointer;
 
   &.terra-ListItem:hover {background-color: $terra-blue-10;}
-
-  // Update with UX styling
-  &.terra-ListItem--selected {background-color: rgba(239, 68, 0, 0.53);}
 
   // Update with UX styling
   &.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}

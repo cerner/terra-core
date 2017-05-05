@@ -36,7 +36,8 @@ var propTypes = {
 };
 
 var defaultProps = {
-  isSelected: false
+  isSelected: false,
+  isSelectable: false
 };
 
 var TableRow = function TableRow(_ref) {

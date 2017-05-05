@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "start": "webpack-dev-server --progress ",
-    "compile:prod": "webpack --config webpack.prod.config",
+    "start": "webpack-dev-server --progress --port ${PORT:-8080}",
+    "compile:prod": "webpack --config webpack.prod.config --progress -p --json > stats.json",
     "deploy": "npm run compile:prod && gh-pages -d build",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
@@ -27,7 +27,7 @@
     "moment": "^2.17.1",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "react-intl": "^2.2.3",
+    "react-intl": "2.2.3",
     "react-router": "^3.0.2",
     "terra-arrange": "^0.x",
     "terra-badge": "^0.x",
@@ -38,6 +38,7 @@
     "terra-content-container": "^0.x",
     "terra-date-picker": "^0.x",
     "terra-form": "^0.x",
+    "terra-demographics-banner": "^0.x",
     "terra-grid": "^2.0.0",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
@@ -72,6 +73,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
+    "terra-i18n-plugin": "^0.x",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   }

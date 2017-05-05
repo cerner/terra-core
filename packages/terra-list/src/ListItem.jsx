@@ -26,8 +26,8 @@ const propTypes = {
 const defaultProps = {
   content: undefined,
   isSelected: false,
-  isSelectable: undefined,
-  hasChevron: undefined,
+  isSelectable: false,
+  hasChevron: false,
 };
 
 const ListItem = ({
