@@ -174,8 +174,6 @@ var Modal = function (_React$Component) {
         _reactPortal2.default,
         _extends({
           isOpened: isOpened,
-          closeOnEsc: false,
-          closeOnOutsideClick: false,
           onClose: onClose,
           onOpen: onOpen,
           onUpdate: onUpdate,

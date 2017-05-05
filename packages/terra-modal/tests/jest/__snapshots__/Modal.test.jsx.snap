@@ -13,8 +13,6 @@ exports[`test should mount an open modal 1`] = `
       onRequestClose={[Function]}
       role="document">
       <Portal
-        closeOnEsc={false}
-        closeOnOutsideClick={false}
         isOpened={true}
         onClose={[Function]}
         onOpen={[Function]}

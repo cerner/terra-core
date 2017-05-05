@@ -133,8 +133,6 @@ class Modal extends React.Component {
     return (
       <Portal
         isOpened={isOpened}
-        closeOnEsc={false}
-        closeOnOutsideClick={false}
         onClose={onClose}
         onOpen={onOpen}
         onUpdate={onUpdate}
