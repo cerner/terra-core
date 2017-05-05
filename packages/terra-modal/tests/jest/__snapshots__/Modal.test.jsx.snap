@@ -10,10 +10,11 @@ exports[`test should mount an open modal 1`] = `
       isFullscreen={false}
       isOpened={true}
       isScrollable={false}
+      onRequestClose={[Function]}
       role="document">
       <Portal
-        closeOnEsc={true}
-        closeOnOutsideClick={true}
+        closeOnEsc={false}
+        closeOnOutsideClick={false}
         isOpened={true}
         onClose={[Function]}
         onOpen={[Function]}
@@ -46,6 +47,7 @@ exports[`test should shallow an open modal 1`] = `
     isFullscreen={false}
     isOpened={true}
     isScrollable={false}
+    onRequestClose={[Function]}
     role="document">
     <div>
       <h1>

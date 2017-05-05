@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'terra-modal';
+import Modal from 'terra-modal/src/Modal';
 
 class ModalIsOpened extends React.Component {
   constructor() {
@@ -27,13 +27,14 @@ class ModalIsOpened extends React.Component {
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>
-            <button onClick={this.handleCloseModal}>Close Modal</button>
+            <button onClick={this.handleCloseModal}>Close isOpen modal</button>
           </div>
         </Modal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button onClick={this.handleOpenModal}>Open isOpen modal</button>
       </div>
     );
   }

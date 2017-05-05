@@ -27,6 +27,7 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
           closeOnOutsideClick={false}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>

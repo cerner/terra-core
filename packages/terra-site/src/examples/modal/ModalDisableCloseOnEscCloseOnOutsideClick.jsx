@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'terra-modal';
+import Modal from 'terra-modal/src/Modal';
 
 class ModalDisableCloseOnEscCloseOnOutsideClick extends React.Component {
   constructor() {
@@ -29,6 +29,7 @@ class ModalDisableCloseOnEscCloseOnOutsideClick extends React.Component {
           isOpened={this.state.isOpened}
           closeOnEsc={false}
           closeOnOutsideClick={false}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>

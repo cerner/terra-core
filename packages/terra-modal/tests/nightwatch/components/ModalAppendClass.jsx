@@ -31,6 +31,7 @@ class ModalAppendClass extends React.Component {
           classNameModal="modal-custom-class"
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>

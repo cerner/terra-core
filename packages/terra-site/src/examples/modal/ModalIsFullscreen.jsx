@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'terra-modal';
+import Modal from 'terra-modal/src/Modal';
 
 class ModalIsFullscreen extends React.Component {
   constructor() {
@@ -33,6 +33,7 @@ class ModalIsFullscreen extends React.Component {
           onClose={this.onClose}
           onOpen={this.onOpen}
           onUpdate={this.onUpdate}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>
