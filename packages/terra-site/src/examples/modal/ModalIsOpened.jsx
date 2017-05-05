@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'terra-modal/src/Modal';
+import Modal from 'terra-modal';
 
 class ModalIsOpened extends React.Component {
   constructor() {
