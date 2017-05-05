@@ -1,0 +1,572 @@
+exports[`test renders a banner that has basic information 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      className="terra-DemographicsBanner">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          Terra Demographics Banner
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="24" />
+        <DemographicsBannerValue
+          value="F" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="March 30, 2017" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      className="terra-DemographicsBanner">
+      <div
+        className="terra-DemographicsBanner-profile-photo" />
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            Terra Demographics Banner
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="24" />
+            <DemographicsBannerValue
+              value="F" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="March 30, 2017" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers" />
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
+exports[`test renders a blank banner properly 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      className="terra-DemographicsBanner">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          --
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="--" />
+        <DemographicsBannerValue
+          value="--" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="--" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      className="terra-DemographicsBanner">
+      <div
+        className="terra-DemographicsBanner-profile-photo" />
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            --
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="--" />
+            <DemographicsBannerValue
+              value="--" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="--" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers" />
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
+exports[`test renders the banner appropriately for a deceased person 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          Old Terra Demographics Banner
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="24" />
+        <DemographicsBannerValue
+          value="F" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="June 15, 2014" />
+        <DemographicsBannerValue
+          label="Deceased"
+          value="March 30, 2017" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
+      <div
+        className="terra-DemographicsBanner-profile-photo" />
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            Old Terra Demographics Banner
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="24" />
+            <DemographicsBannerValue
+              value="F" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="June 15, 2014" />
+            <DemographicsBannerValue
+              label="Deceased"
+              value="March 30, 2017" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers" />
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
+exports[`test renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      className="terra-DemographicsBanner">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          Johnathon Doe
+          <span
+            className="terra-DemographicsBanner-preferred-first-name">
+            John
+          </span>
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="25 Years" />
+        <DemographicsBannerValue
+          value="Male" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="May 9, 1993" />
+        <DemographicsBannerValue
+          label={null}
+          value="April 5, 2016" />
+        <DemographicsBannerValue
+          label={null}
+          value="April 7, 2016" />
+        <DemographicsBannerValue
+          label="MRN"
+          value={12343} />
+        <DemographicsBannerValue
+          label="REA"
+          value="3JSDA" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      className="terra-DemographicsBanner">
+      <div
+        className="terra-DemographicsBanner-profile-photo">
+        <img
+          alt="My Cat"
+          src="http://lorempixel.com/100/100/animals/7/" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            Johnathon Doe
+            <span
+              className="terra-DemographicsBanner-preferred-first-name">
+              John
+            </span>
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="25 Years" />
+            <DemographicsBannerValue
+              value="Male" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="May 9, 1993" />
+            <DemographicsBannerValue
+              label={null}
+              value="April 5, 2016" />
+            <DemographicsBannerValue
+              label={null}
+              value="April 7, 2016" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers">
+            <DemographicsBannerValue
+              label="MRN"
+              value={12343} />
+            <DemographicsBannerValue
+              label="REA"
+              value="3JSDA" />
+          </div>
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
+exports[`test renders the banner properly for a deceased person with additional application content 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          Johnathon Doe
+          <span
+            className="terra-DemographicsBanner-preferred-first-name">
+            John
+          </span>
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="25 Years" />
+        <DemographicsBannerValue
+          value="Male" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="May 9, 1993" />
+        <DemographicsBannerValue
+          label="Deceased"
+          value="March 5, 2016" />
+        <DemographicsBannerValue
+          label="MRN"
+          value={12343} />
+        <DemographicsBannerValue
+          label="REA"
+          value="3JSDA" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      className="terra-DemographicsBanner terra-DemographicsBanner--deceased">
+      <div
+        className="terra-DemographicsBanner-profile-photo">
+        <img
+          alt="My Cat"
+          src="http://lorempixel.com/100/100/animals/7/" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            Johnathon Doe
+            <span
+              className="terra-DemographicsBanner-preferred-first-name">
+              John
+            </span>
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="25 Years" />
+            <DemographicsBannerValue
+              value="Male" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="May 9, 1993" />
+            <DemographicsBannerValue
+              label="Deceased"
+              value="March 5, 2016" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers">
+            <DemographicsBannerValue
+              label="MRN"
+              value={12343} />
+            <DemographicsBannerValue
+              label="REA"
+              value="3JSDA" />
+          </div>
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
+exports[`test renders the banner that contains additional information 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      className="terra-DemographicsBanner">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          Johnathon Doe
+          <span
+            className="terra-DemographicsBanner-preferred-first-name">
+            John
+          </span>
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="25 Years" />
+        <DemographicsBannerValue
+          value="Male" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="May 9, 1993" />
+        <DemographicsBannerValue
+          label="MRN"
+          value={12343} />
+        <DemographicsBannerValue
+          label="REA"
+          value="3JSDA" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      additionalDetails={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      className="terra-DemographicsBanner">
+      <div
+        className="terra-DemographicsBanner-profile-photo">
+        <img
+          alt="My Cat"
+          src="http://lorempixel.com/100/100/animals/7/" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            Johnathon Doe
+            <span
+              className="terra-DemographicsBanner-preferred-first-name">
+              John
+            </span>
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="25 Years" />
+            <DemographicsBannerValue
+              value="Male" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="May 9, 1993" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers">
+            <DemographicsBannerValue
+              label="MRN"
+              value={12343} />
+            <DemographicsBannerValue
+              label="REA"
+              value="3JSDA" />
+          </div>
+        </div>
+      </div>
+    </section>
+  } />
+`;
