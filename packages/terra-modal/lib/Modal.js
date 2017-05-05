@@ -136,6 +136,13 @@ var Modal = function (_React$Component) {
       }
     }
   }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.props.closeOnEsc) {
+        document.removeEventListener('keydown', this.handleKeydown);
+      }
+    }
+  }, {
     key: 'handleKeydown',
     value: function handleKeydown(e) {
       if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened) {
