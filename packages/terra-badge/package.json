@@ -39,8 +39,8 @@
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-badge node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
