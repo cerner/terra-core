@@ -17,3 +17,13 @@ i18nLoader('en', this.setState, this)
 
 <I18nProvider locale={this.state.locale} messages={this.state.messages} />
 ```
+
+Note that the state of the object needs to contain keys as follows for the i18nLoader callback to work properly:
+
+```js
+{
+  areTranslationsLoaded: false,
+  locale: props.locale,
+  messages: {},
+}
+```

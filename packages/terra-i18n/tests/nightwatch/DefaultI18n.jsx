@@ -7,7 +7,7 @@ class Base extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: false,
+      areTranslationsLoaded: false,
       locale: props.locale,
       messages: {},
     };
@@ -23,7 +23,7 @@ class Base extends React.Component {
   }
 
   render() {
-    if (!this.state.load) {
+    if (!this.state.areTranslationsLoaded) {
       return <div />;
     }
     return (
