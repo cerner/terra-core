@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -28,47 +32,47 @@ var propTypes = {
   /**
    * Child Nodes
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * Sets the href. When set will render the component as an anchor tag
    */
-  href: _react.PropTypes.string,
+  href: _propTypes2.default.string,
   /**
    * An optional icon. Nested inline with the text when provided
    */
-  icon: _react.PropTypes.element,
+  icon: _propTypes2.default.element,
   /**
    * Whether or not the button should display as a block
    */
-  isBlock: _react.PropTypes.bool,
+  isBlock: _propTypes2.default.bool,
   /**
    * Whether or not the button has reduced padding
    */
-  isCompact: _react.PropTypes.bool,
+  isCompact: _propTypes2.default.bool,
   /**
    * Whether or not the button should be disabled
    */
-  isDisabled: _react.PropTypes.bool,
+  isDisabled: _propTypes2.default.bool,
   /**
    * Reverses the position of the icon and text
    */
-  isReversed: _react.PropTypes.bool,
+  isReversed: _propTypes2.default.bool,
   /**
    * Callback function triggered when clicked
    */
-  onClick: _react.PropTypes.func,
+  onClick: _propTypes2.default.func,
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
    */
-  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  size: _propTypes2.default.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the button text
    */
-  text: _react.PropTypes.string,
+  text: _propTypes2.default.string,
   /**
    * Sets the button variant. One of primary, secondary, or link
    */
-  variant: _react.PropTypes.oneOf(['default', 'link', 'primary', 'secondary'])
+  variant: _propTypes2.default.oneOf(['default', 'link', 'primary', 'secondary'])
 };
 
 var defaultProps = {

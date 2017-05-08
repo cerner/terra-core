@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 require('terra-base/lib/baseStyles');
 
 var _List = require('./List');
@@ -36,19 +40,19 @@ var propTypes = {
   /**
    * The children list items passed to the component.
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * Whether or not the child list items should have a border color applied.
    */
-  isDivided: _react.PropTypes.bool,
+  isDivided: _propTypes2.default.bool,
   /**
    * Whether or not the child list items has a disclosure indicator presented.
    */
-  hasChevrons: _react.PropTypes.bool,
+  hasChevrons: _propTypes2.default.bool,
   /**
    * A callback event that will be triggered when selection state changes.
    */
-  onChange: _react.PropTypes.func
+  onChange: _propTypes2.default.func
 };
 
 var defaultProps = {

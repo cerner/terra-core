@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -26,42 +30,42 @@ var propTypes = {
   /**
    * The component to display in the main content area.
    */
-  mainContent: _react.PropTypes.node,
+  mainContent: _propTypes2.default.node,
 
   /**
    * The component to display in the panel content area.
    */
-  panelContent: _react.PropTypes.node,
+  panelContent: _propTypes2.default.node,
 
   /**
    * The style of panel presentation. One of `overlay`, `squish`.
    */
-  panelBehavior: _react.PropTypes.oneOf(['overlay', 'squish']),
+  panelBehavior: _propTypes2.default.oneOf(['overlay', 'squish']),
 
   /**
    * The position at which the panel will be displayed. This property honors the current direction setting. One of `start`, `end`.
    */
-  panelPosition: _react.PropTypes.oneOf(['start', 'end']),
+  panelPosition: _propTypes2.default.oneOf(['start', 'end']),
 
   /**
    * The size at which the panel will be displayed. One of `small`, `large`.
    */
-  panelSize: _react.PropTypes.oneOf(['small', 'large']),
+  panelSize: _propTypes2.default.oneOf(['small', 'large']),
 
   /**
    * Whether or not, when open, the panel should be displayed with the full width of the SlidePanel.
    */
-  isFullscreen: _react.PropTypes.bool,
+  isFullscreen: _propTypes2.default.bool,
 
   /**
    * Whether or not the panel should be displayed.
    */
-  isOpen: _react.PropTypes.bool,
+  isOpen: _propTypes2.default.bool,
 
   /**
    * Whether or not the SlidePanel should be sized relative to its parent container.
    */
-  fill: _react.PropTypes.bool
+  fill: _propTypes2.default.bool
 };
 
 var defaultProps = {

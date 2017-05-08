@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactDatepicker = require('react-datepicker');
 
 var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
@@ -46,47 +50,47 @@ var propTypes = {
   /**
    * A moment object to use as the default end date for a date range.
    */
-  endDate: _react.PropTypes.object,
+  endDate: _propTypes2.default.object,
   /**
    * An array of moment objects that represent the dates to disable in the picker.
    */
-  excludeDates: _react.PropTypes.arrayOf(_react.PropTypes.object),
+  excludeDates: _propTypes2.default.arrayOf(_propTypes2.default.object),
   /**
    * A function that gets called for each date in the picker to evaluate which date should be disabled. A return value of true will be enabled and false will be disabled.
    */
-  filterDate: _react.PropTypes.func,
+  filterDate: _propTypes2.default.func,
   /**
    * An array of moment objects that represent the dates to enable in the picker. All Other dates will be disabled.
    */
-  includeDates: _react.PropTypes.arrayOf(_react.PropTypes.object),
+  includeDates: _propTypes2.default.arrayOf(_propTypes2.default.object),
   /**
    * Indicates the end date picker of a date range.
    */
-  isEndDateRange: _react.PropTypes.bool,
+  isEndDateRange: _propTypes2.default.bool,
   /**
    * Indicates the start date picker of a date range.
    */
-  isStartDateRange: _react.PropTypes.bool,
+  isStartDateRange: _propTypes2.default.bool,
   /**
    * A moment object to represents the maximum date that can be selected.
    */
-  maxDate: _react.PropTypes.object,
+  maxDate: _propTypes2.default.object,
   /**
    * A moment object to represents the minimum date that can be selected.
    */
-  minDate: _react.PropTypes.object,
+  minDate: _propTypes2.default.object,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
-  onChange: _react.PropTypes.func,
+  onChange: _propTypes2.default.func,
   /**
    * The selected date to show in the date input.
    */
-  selectedDate: _react.PropTypes.object,
+  selectedDate: _propTypes2.default.object,
   /**
    * A moment object to use as the default start date for a date range.
    */
-  startDate: _react.PropTypes.object
+  startDate: _propTypes2.default.object
 };
 
 var defaultProps = {

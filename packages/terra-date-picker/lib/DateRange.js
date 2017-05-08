@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 require('terra-base/lib/baseStyles');
 
 var _DatePicker = require('./DatePicker');
@@ -30,15 +34,15 @@ var propTypes = {
   /**
    * A moment object to use as the default end date for a date range.
    */
-  endDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  endDate: _propTypes2.default.oneOfType([_propTypes2.default.object]),
   /**
    * A moment object to use as the default start date for a date range.
    */
-  startDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  startDate: _propTypes2.default.oneOfType([_propTypes2.default.object]),
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
-  onChange: _react.PropTypes.func
+  onChange: _propTypes2.default.func
 };
 
 var DateRange = function (_React$Component) {

@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -38,37 +42,37 @@ var propTypes = {
   /**
    * Button group button components that should be grouped together
    **/
-  buttons: _react.PropTypes.arrayOf(_react.PropTypes.element),
+  buttons: _propTypes2.default.arrayOf(_propTypes2.default.element),
 
   /**
    * Child nodes
    **/
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
 
   /**
    * Indicates if the buttons should have reduced top and bottom padding
    **/
-  isCompact: _react.PropTypes.bool,
+  isCompact: _propTypes2.default.bool,
 
   /**
    * Indicates if the button group should have toggle-style selectability
    **/
-  isSelectable: _react.PropTypes.bool,
+  isSelectable: _propTypes2.default.bool,
 
   /**
    * Callback function when the state changes
    **/
-  onChange: _react.PropTypes.func,
+  onChange: _propTypes2.default.func,
 
   /**
    * Sets the button size. One of tiny, small, medium, large, huge
    **/
-  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  size: _propTypes2.default.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 
   /**
    * Sets the button group style variation. One of `defaut` or `secondary`
    **/
-  variant: _react.PropTypes.oneOf(['default', 'secondary'])
+  variant: _propTypes2.default.oneOf(['default', 'secondary'])
 };
 
 var defaultProps = {
