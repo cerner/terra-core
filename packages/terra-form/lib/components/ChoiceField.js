@@ -24,7 +24,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   /**
-   * Choices to populate radio buttosn for
+   * Choices to populate radio buttons for
    */
   choices: _react.PropTypes.array,
   /**

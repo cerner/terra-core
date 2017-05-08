@@ -7,7 +7,7 @@ import Field from './Field';
 
 const propTypes = {
   /**
-   * Choices to populate radio buttosn for
+   * Choices to populate radio buttons for
    */
   choices: PropTypes.array,
   /**
