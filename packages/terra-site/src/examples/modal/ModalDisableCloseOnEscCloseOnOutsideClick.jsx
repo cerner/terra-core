@@ -29,6 +29,7 @@ class ModalDisableCloseOnEscCloseOnOutsideClick extends React.Component {
           isOpened={this.state.isOpened}
           closeOnEsc={false}
           closeOnOutsideClick={false}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>
