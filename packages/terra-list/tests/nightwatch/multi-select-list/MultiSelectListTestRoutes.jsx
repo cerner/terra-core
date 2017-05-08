@@ -8,6 +8,8 @@ import ItemsMultiSelectList from './ItemsMultiSelectList';
 import ItemsDividedMultiSelectList from './ItemsDividedMultiSelectList';
 import MaxCountMultiSelectList from './MaxCountMultiSelectList';
 import OnChangeMultiSelectList from './OnChangeMultiSelectList';
+import OnChangeMultiSelectListWithMaxSelection from './OnChangeMultiSelectListWithMaxSelection';
+import MultiSelectListWithNoDeselectItem from './MultiSelectListWithNoDeselectItem';
 
 const routes = (
   <div>
@@ -17,6 +19,8 @@ const routes = (
     <Route path="/tests/multi-select-list-tests/items-divided" component={ItemsDividedMultiSelectList} />
     <Route path="/tests/multi-select-list-tests/max-count" component={MaxCountMultiSelectList} />
     <Route path="/tests/multi-select-list-tests/on-change" component={OnChangeMultiSelectList} />
+    <Route path="/tests/multi-select-list-tests/max-count-on-change" component={OnChangeMultiSelectListWithMaxSelection} />
+    <Route path="/tests/multi-select-list-tests/no-deselect" component={MultiSelectListWithNoDeselectItem} />
   </div>
 );
 

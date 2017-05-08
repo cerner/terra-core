@@ -14,6 +14,7 @@ import ButtonGroupExamples from './examples/button-group/Index';
 import ContentExamples from './examples/content/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
+import DemographicsBannerExamples from './examples/demographics-banner/Index';
 import GridExamples from './examples/grid/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
@@ -38,6 +39,7 @@ import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
+import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
@@ -49,6 +51,7 @@ import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import TestLinks from './TestLinks';
@@ -67,6 +70,7 @@ ReactDOM.render((
       <Route path="content" component={ContentExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
+      <Route path="demographics-banner" component={DemographicsBannerExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
@@ -88,6 +92,7 @@ ReactDOM.render((
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
     {DatePickerTestRoutes}
+    {DemographicsBannerTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}
@@ -102,6 +107,7 @@ ReactDOM.render((
     {TableTestRoutes}
     {ModalTestRoutes}
     {ProgressBarTestRoutes}
+    {GridTestRoutes}
     {IconTestRoutes}
   </Router>
 ), document.getElementById('root'));

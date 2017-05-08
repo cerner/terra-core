@@ -7,15 +7,15 @@ class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: false,
-      locale: props.locale,
+      areTranslationsLoaded: false,
+      locale: 'en-US',
       messages: {},
     };
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
   }
 
   componentDidMount() {
-    i18nLoader(this.props.locale, this.setState, this);
+    i18nLoader(this.state.locale, this.setState, this);
   }
 
   handleLocaleChange(e) {
@@ -23,7 +23,7 @@ class Demo extends React.Component {
   }
 
   render() {
-    if (!this.state.load) {
+    if (!this.state.areTranslationsLoaded) {
       return <div />;
     }
     return (
