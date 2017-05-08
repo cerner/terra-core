@@ -28,6 +28,7 @@ class ModalIsFullscreen extends React.Component {
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
           isFullscreen
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>

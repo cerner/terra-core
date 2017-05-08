@@ -28,6 +28,7 @@ class ModalNoFocusableContent extends React.Component {
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
+          onRequestClose={this.handleCloseModal}
         >
           <div>No focusable content inside the modal.</div>
         </Modal>
