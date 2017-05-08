@@ -36,6 +36,7 @@
 | terra-icon         | [![NPM version](http://img.shields.io/npm/v/terra-icon.svg)](https://www.npmjs.org/package/terra-icon) | :large_orange_diamond: |
 | terra-image         | [![NPM version](http://img.shields.io/npm/v/terra-image.svg)](https://www.npmjs.org/package/terra-image) | :large_orange_diamond: |
 | terra-legacy-theme | [![NPM version](http://img.shields.io/npm/v/terra-legacy-theme.svg)](https://www.npmjs.org/package/terra-legacy-theme) | :large_orange_diamond: |
+| terra-list | [![NPM version](http://img.shields.io/npm/v/terra-list.svg)](https://www.npmjs.org/package/terra-list) | :large_orange_diamond: |
 | terra-markdown     | [![NPM version](http://img.shields.io/npm/v/terra-markdown.svg)](https://www.npmjs.org/package/terra-markdown) | :large_orange_diamond: |
 | terra-menu         | [![NPM version](http://img.shields.io/npm/v/terra-menu.svg)](https://www.npmjs.org/package/terra-menu) | :x: |
 | terra-mixins       | [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins) | :white_check_mark: |
