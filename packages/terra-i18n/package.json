@@ -33,7 +33,7 @@
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
     "prop-types": "^15.5.8",
-    "react-intl": "2.2.3",
+    "react-intl": "^2.3.0",
     "terra-base": "^0.x"
   },
   "scripts": {
