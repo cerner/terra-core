@@ -33,6 +33,7 @@ class ModalIsFullscreen extends React.Component {
           onClose={this.onClose}
           onOpen={this.onOpen}
           onUpdate={this.onUpdate}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>
