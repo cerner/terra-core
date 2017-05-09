@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 import React from 'react';
+import Button from 'terra-button';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form/docs/README.md';
@@ -33,18 +34,49 @@ import ControlExamples from './examples/Control';
 import FieldExamples from './examples/Field';
 import InputExamples from './examples/Input';
 import FullForm from './examples/FullForm';
-import FormNavigation from './navigation.md';
 import MultiChoiceFieldExamples from './examples/MultiChoiceField';
 import NumberFieldExamples from './examples/NumberField';
 import TextareaExamples from './examples/Textarea';
 import TextareaFieldExamples from './examples/TextareaField';
 import TextFieldExamples from './examples/TextField';
 
+const scrollToComponent = (id) => {
+  document.querySelector(id).scrollIntoView();
+};
+
 const FormsExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <Markdown id="form-navigation" src={FormNavigation} />
+    <h1>Components</h1>
+    <hr />
+    <div>
+      <Button text="Choice Field" variant="link" onClick={() => { scrollToComponent('#choice-field'); }} />
+    </div>
+    <div>
+      <Button text="Control" variant="link" onClick={() => { scrollToComponent('#control'); }} />
+    </div>
+    <div>
+      <Button text="Field" variant="link" onClick={() => { scrollToComponent('#field'); }} />
+    </div>
+    <div>
+      <Button text="Input" variant="link" onClick={() => { scrollToComponent('#input'); }} />
+    </div>
+    <div>
+      <Button text="Multi-Choice Field" variant="link" onClick={() => { scrollToComponent('#multi-choice-field'); }} />
+    </div>
+    <div>
+      <Button text="Number Field" variant="link" onClick={() => { scrollToComponent('#number-field'); }} />
+    </div>
+    <div>
+      <Button text="Textarea" variant="link" onClick={() => { scrollToComponent('#textarea'); }} />
+    </div>
+    <div>
+      <Button text="Textarea Field" variant="link" onClick={() => { scrollToComponent('#textarea-field'); }} />
+    </div>
+    <div>
+      <Button text="Text field" variant="link" onClick={() => { scrollToComponent('#text-field'); }} />
+    </div>
     <Markdown id="choice-field-docs" src={ChoiceFieldDocs} />
     <PropsTable id="choice-field-props" src={ChoiceFieldSrc} />
     <ChoiceFieldExamples />
