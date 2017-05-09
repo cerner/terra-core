@@ -2,8 +2,11 @@
 
 import React, { PropTypes } from 'react';
 
+import 'terra-base/lib/baseStyles';
+
 import Control from './Control';
 import Field from './Field';
+
 
 const propTypes = {
   /**

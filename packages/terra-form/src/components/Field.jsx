@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-boolean-value, jsx-a11y/label-has-for */
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 
 import './Field.scss';
 

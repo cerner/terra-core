@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('terra-base/lib/baseStyles');
+
 var _Control = require('./Control');
 
 var _Control2 = _interopRequireDefault(_Control);
