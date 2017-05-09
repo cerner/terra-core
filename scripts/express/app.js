@@ -12,3 +12,4 @@ app.use('/static', express.static(buildPath));
 app.get('/', (req, res) => res.redirect('/static'));
 app.listen(port);
 console.log(`Listening ${port}`);
+console.log(`Production Environment: ${process.env.NODE_ENV === 'production'}`);
