@@ -26,6 +26,7 @@ class ModalDisableCloseOnEsc extends React.Component {
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
+          onRequestClose={this.handleCloseModal}
           closeOnEsc={false}
         >
           <div>
