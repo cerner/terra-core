@@ -28,7 +28,8 @@
     "react-dom": "^15.4.2"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "terra-i18n": "^0.x"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

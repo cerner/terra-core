@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Link } from 'react-router';
+import Base from 'terra-base';
 import Grid from 'terra-grid';
 import List from 'terra-list';
 import './site.scss';
@@ -10,7 +11,7 @@ const propTypes = {
 };
 
 const App = props => (
-  <div>
+  <Base locale="en-US">
     <Grid>
       <Grid.Row>
         <Grid.Column small={2}>
@@ -50,7 +51,7 @@ const App = props => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
-  </div>
+  </Base>
 );
 
 App.propTypes = propTypes;
