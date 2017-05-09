@@ -28,6 +28,7 @@ class ModalIsOpen extends React.Component {
         <Modal
           ariaLabel="Terra Modal"
           isOpened={this.state.isOpened}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>
