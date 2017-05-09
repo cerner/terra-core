@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
+import './Input.scss';
+
 const propTypes = {
   /**
    * The defaultValue of the input field. Use this to create an uncontrolled input.

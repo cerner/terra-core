@@ -4,15 +4,15 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form/docs/README.md';
-import ChoiceFieldDocs from 'terra-form/docs/ChoiceField.md';
-import ControlDocs from 'terra-form/docs/Control.md';
-import FieldDocs from 'terra-form/docs/Field.md';
-import InputDocs from 'terra-form/docs/Input.md';
-import MultiChoiceFieldDocs from 'terra-form/docs/MultiChoiceField.md';
-import NumberFieldDocs from 'terra-form/docs/NumberField.md';
-import TextareaDocs from 'terra-form/docs/Textarea.md';
-import TextareaFieldDocs from 'terra-form/docs/TextareaField.md';
-import TextFieldDocs from 'terra-form/docs/TextField.md';
+import ChoiceFieldDocs from 'terra-form/docs/components/ChoiceField.md';
+import ControlDocs from 'terra-form/docs/components/Control.md';
+import FieldDocs from 'terra-form/docs/components/Field.md';
+import InputDocs from 'terra-form/docs/components/Input.md';
+import MultiChoiceFieldDocs from 'terra-form/docs/components/MultiChoiceField.md';
+import NumberFieldDocs from 'terra-form/docs/components/NumberField.md';
+import TextareaDocs from 'terra-form/docs/components/Textarea.md';
+import TextareaFieldDocs from 'terra-form/docs/components/TextareaField.md';
+import TextFieldDocs from 'terra-form/docs/components/TextField.md';
 
 import { version } from 'terra-form/package.json';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Textarea } from 'terra-form';
+import Textarea from 'terra-form/lib/components/Textarea';
 
 const TextareaExamples = () => (
   <form>

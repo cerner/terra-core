@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field } from 'terra-form';
+import Field from 'terra-form/lib/components/Field';
 
 const FieldExamples = () => (
   <form>

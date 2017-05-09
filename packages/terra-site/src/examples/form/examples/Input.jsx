@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from 'terra-form';
+import Input from 'terra-form/lib/components/Input';
 
 const InputExamples = () => (
   <form>

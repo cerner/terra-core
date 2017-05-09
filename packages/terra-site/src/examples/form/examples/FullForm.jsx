@@ -1,12 +1,10 @@
 import React from 'react';
+import ChoiceField from 'terra-form/lib/components/ChoiceField';
+import MultiChoiceField from 'terra-form/lib/components/MultiChoiceField';
+import NumberField from 'terra-form/lib/components/NumberField';
+import TextareaField from 'terra-form/lib/components/TextareaField';
+import TextField from 'terra-form/lib/components/TextField';
 
-import {
-  ChoiceField,
-  MultiChoiceField,
-  NumberField,
-  TextareaField,
-  TextField,
-} from 'terra-form';
 
 class FullForm extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Control } from 'terra-form';
+import Control from 'terra-form/lib/components/Control';
 
 const ControlExamples = () => (
   <form>

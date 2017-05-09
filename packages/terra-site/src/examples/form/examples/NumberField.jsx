@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumberField } from 'terra-form';
+import NumberField from 'terra-form/lib/components/NumberField';
 
 const NumberFieldExamples = () => (
   <form>

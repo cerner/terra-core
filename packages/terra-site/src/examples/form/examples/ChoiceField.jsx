@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChoiceField } from 'terra-form';
+import ChoiceField from 'terra-form/lib/components/ChoiceField';
 
 const ChoiceFieldExamples = () => (
   <form>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MultiChoiceField } from 'terra-form';
+import MultiChoiceField from 'terra-form/lib/components/MultiChoiceField';
 
 const MultiChoiceFieldExamples = () => (
   <form>

@@ -2,6 +2,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
+import './Field.scss';
+
 const propTypes = {
   /**
    * Children the Field contains

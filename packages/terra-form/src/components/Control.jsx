@@ -5,6 +5,8 @@ import classNames from 'classnames';
 
 import Input from './Input';
 
+import './Control.scss';
+
 const propTypes = {
   /**
    * The input type

@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
+import './Textarea.scss';
+
 const propTypes = {
   /**
    * How many columns the textarea should have

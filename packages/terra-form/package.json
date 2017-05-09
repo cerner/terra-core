@@ -1,7 +1,5 @@
 {
   "name": "terra-form",
-  "main": "lib/Form.js",
-  "private": true,
   "version": "0.0.0",
   "description": "Components for building forms",
   "repository": {
@@ -26,10 +24,12 @@
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "terra-base": "^0.x"
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {
