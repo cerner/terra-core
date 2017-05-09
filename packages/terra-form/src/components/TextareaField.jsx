@@ -15,7 +15,7 @@ const propTypes = {
    */
   cols: PropTypes.number,
   /**
-   * Initial Value of the input
+   * The defaultValue of the textarea element
    */
   defaultValue: PropTypes.string,
   /**
@@ -55,11 +55,11 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * How many rows the textarea should have.
+   * How many rows the textarea should have
    */
   rows: PropTypes.number,
   /**
-   * Initial Value of the input
+   * The value of the textarea element
    */
   value: PropTypes.string,
 };

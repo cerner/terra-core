@@ -28,7 +28,7 @@ var propTypes = {
    */
   attrs: _react.PropTypes.object,
   /**
-   * Initial Value of the input
+   * The defaultValue of the input element
    */
   defaultValue: _react.PropTypes.string,
   /**
@@ -72,7 +72,7 @@ var propTypes = {
    */
   type: _react.PropTypes.string,
   /**
-   * Initial Value of the input
+   * The value of the input element
    */
   value: _react.PropTypes.string
 };

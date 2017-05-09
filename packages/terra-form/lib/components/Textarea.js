@@ -28,7 +28,7 @@ var propTypes = {
    */
   cols: _react.PropTypes.number,
   /**
-   * Default Value of the input field. Use this to create a uncontrolled input.
+   * The defaultValue of the textarea. Use this to create an uncontrolled input
    */
   defaultValue: _react.PropTypes.string,
   /**
@@ -36,7 +36,7 @@ var propTypes = {
    */
   name: _react.PropTypes.string,
   /**
-   * Function to trigger when value of the textrea is changed.
+   * Function to trigger when value of the textrea is changed
    */
   onChange: _react.PropTypes.func,
   /**
@@ -44,11 +44,11 @@ var propTypes = {
    */
   required: _react.PropTypes.bool,
   /**
-   * How many rows the textarea should have.
+   * How many rows the textarea should have
    */
   rows: _react.PropTypes.number,
   /**
-   * The value of the input field. Use this to create a controlled input.
+   * The value of the textarea. Use this to create a controlled input
    */
   value: _react.PropTypes.string
 };

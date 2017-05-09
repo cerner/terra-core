@@ -52,7 +52,7 @@ var propTypes = {
    */
   name: _react.PropTypes.string,
   /**
-   * Initial Value of the input
+   * The Value of the input element
    */
   value: _react.PropTypes.string
 };

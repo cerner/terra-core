@@ -32,7 +32,7 @@ var propTypes = {
    */
   cols: _react.PropTypes.number,
   /**
-   * Initial Value of the input
+   * The defaultValue of the textarea element
    */
   defaultValue: _react.PropTypes.string,
   /**
@@ -72,11 +72,11 @@ var propTypes = {
    */
   required: _react.PropTypes.bool,
   /**
-   * How many rows the textarea should have.
+   * How many rows the textarea should have
    */
   rows: _react.PropTypes.number,
   /**
-   * Initial Value of the input
+   * The value of the textarea element
    */
   value: _react.PropTypes.string
 };

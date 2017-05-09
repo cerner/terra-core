@@ -11,7 +11,7 @@ const propTypes = {
    */
   attrs: PropTypes.object,
   /**
-   * Default Value of the input field
+   * The defaultValue of the input element
    */
   defaultValue: PropTypes.number,
   /**
@@ -55,7 +55,7 @@ const propTypes = {
    */
   step: PropTypes.number,
   /**
-   * Initial Value of the input
+   * The value of the input element
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

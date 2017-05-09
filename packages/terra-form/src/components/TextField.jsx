@@ -11,7 +11,7 @@ const propTypes = {
    */
   attrs: PropTypes.object,
   /**
-   * Initial Value of the input
+   * The defaultValue of the input element
    */
   defaultValue: PropTypes.string,
   /**
@@ -55,7 +55,7 @@ const propTypes = {
    */
   type: PropTypes.string,
   /**
-   * Initial Value of the input
+   * The value of the input element
    */
   value: PropTypes.string,
 };

@@ -10,7 +10,7 @@ const propTypes = {
    */
   cols: PropTypes.number,
   /**
-   * Default Value of the input field. Use this to create a uncontrolled input.
+   * The defaultValue of the textarea. Use this to create an uncontrolled input
    */
   defaultValue: PropTypes.string,
   /**
@@ -18,7 +18,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Function to trigger when value of the textrea is changed.
+   * Function to trigger when value of the textrea is changed
    */
   onChange: PropTypes.func,
   /**
@@ -26,11 +26,11 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * How many rows the textarea should have.
+   * How many rows the textarea should have
    */
   rows: PropTypes.number,
   /**
-   * The value of the input field. Use this to create a controlled input.
+   * The value of the textarea. Use this to create a controlled input
    */
   value: PropTypes.string,
 };

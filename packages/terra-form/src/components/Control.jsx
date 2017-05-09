@@ -34,7 +34,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Initial Value of the input
+   * The Value of the input element
    */
   value: PropTypes.string,
 };

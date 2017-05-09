@@ -6,7 +6,7 @@ import './Input.scss';
 
 const propTypes = {
   /**
-   * The defaultValue of the input field. Use this to create an uncontrolled input.
+   * The defaultValue of the input field. Use this to create an uncontrolled input
    */
   defaultValue: PropTypes.oneOfType([
     PropTypes.string,
@@ -17,7 +17,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Functional to be called when the input is changed.
+   * Functional to be called when the input is changed
    */
   onChange: PropTypes.func,
   /**

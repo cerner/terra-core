@@ -24,7 +24,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var propTypes = {
   /**
-   * The defaultValue of the input field. Use this to create an uncontrolled input.
+   * The defaultValue of the input field. Use this to create an uncontrolled input
    */
   defaultValue: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
   /**
@@ -32,7 +32,7 @@ var propTypes = {
    */
   name: _react.PropTypes.string,
   /**
-   * Functional to be called when the input is changed.
+   * Functional to be called when the input is changed
    */
   onChange: _react.PropTypes.func,
   /**
