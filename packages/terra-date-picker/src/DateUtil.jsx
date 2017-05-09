@@ -1,7 +1,9 @@
 import moment from 'moment';
 
 class DateUtil {
-  static createSafeMoment(date, format) {
+
+  // Converts an ISO 8601 date into a moment object. If the date is invalid and unable to convert, the originally provided date is returned.
+  static createSafeDate(date, format) {
     if (date && format) {
       const momentDate = moment(date, format);
       return momentDate.isValid() ? momentDate : date;
@@ -10,7 +12,8 @@ class DateUtil {
     return date;
   }
 
-  static filterSafeMoments(dates, format) {
+  // Filters out any invalid dates in the provided list of dates and returns a list of moment objects representation of the valid dates
+  static filterInvalidDates(dates, format) {
     const momentDates = [];
 
     if (dates) {

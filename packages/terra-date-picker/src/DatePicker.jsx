@@ -65,7 +65,7 @@ class DatePicker extends React.Component {
     this.state = {
       locale: 'en-US', // TODO: Get the locale from i18n
       dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
-      selectedDate: DateUtil.createSafeMoment(props.selectedDate, 'MM/DD/YYYY'),
+      selectedDate: DateUtil.createSafeDate(props.selectedDate, 'MM/DD/YYYY'),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -100,16 +100,16 @@ class DatePicker extends React.Component {
     // TODO: Need translation from date_util
     const todayString = 'Today';
 
-    const exludeMomentDates = DateUtil.filterSafeMoments(excludeDates, this.state.dateFormat);
-    const includeMomentDates = DateUtil.filterSafeMoments(includeDates, this.state.dateFormat);
-    const endMomentDate = DateUtil.createSafeMoment(endDate, this.state.dateFormat);
-    const maxMomentDate = DateUtil.createSafeMoment(maxDate, this.state.dateFormat);
-    const minMomentDate = DateUtil.createSafeMoment(minDate, this.state.dateFormat);
-    const startMomentDate = DateUtil.createSafeMoment(startDate, this.state.dateFormat);
+    const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates, this.state.dateFormat);
+    const includeMomentDates = DateUtil.filterInvalidDates(includeDates, this.state.dateFormat);
+    const endMomentDate = DateUtil.createSafeDate(endDate, this.state.dateFormat);
+    const maxMomentDate = DateUtil.createSafeDate(maxDate, this.state.dateFormat);
+    const minMomentDate = DateUtil.createSafeDate(minDate, this.state.dateFormat);
+    const startMomentDate = DateUtil.createSafeDate(startDate, this.state.dateFormat);
 
     let selectedMomentDate = this.state.selectedDate;
     if (isStartDateRange || isEndDateRange) {
-      selectedMomentDate = DateUtil.createSafeMoment(selectedDate, this.state.dateFormat);
+      selectedMomentDate = DateUtil.createSafeDate(selectedDate, this.state.dateFormat);
     }
 
     const portalPicker =

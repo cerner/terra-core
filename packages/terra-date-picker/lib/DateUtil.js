@@ -20,8 +20,11 @@ var DateUtil = function () {
   }
 
   _createClass(DateUtil, null, [{
-    key: 'createSafeMoment',
-    value: function createSafeMoment(date, format) {
+    key: 'createSafeDate',
+
+
+    // Converts an ISO 8601 date into a moment object. If the date is invalid and unable to convert, the originally provided date is returned.
+    value: function createSafeDate(date, format) {
       if (date && format) {
         var momentDate = (0, _moment2.default)(date, format);
         return momentDate.isValid() ? momentDate : date;
@@ -29,9 +32,12 @@ var DateUtil = function () {
 
       return date;
     }
+
+    // Filters out any invalid dates in the provided list of dates and returns a list of moment objects representation of the valid dates
+
   }, {
-    key: 'filterSafeMoments',
-    value: function filterSafeMoments(dates, format) {
+    key: 'filterInvalidDates',
+    value: function filterInvalidDates(dates, format) {
       var momentDates = [];
 
       if (dates) {

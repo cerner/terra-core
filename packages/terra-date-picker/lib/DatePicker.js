@@ -105,7 +105,7 @@ var DatePicker = function (_React$Component) {
     _this.state = {
       locale: 'en-US', // TODO: Get the locale from i18n
       dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
-      selectedDate: _DateUtil2.default.createSafeMoment(props.selectedDate, 'MM/DD/YYYY')
+      selectedDate: _DateUtil2.default.createSafeDate(props.selectedDate, 'MM/DD/YYYY')
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -145,16 +145,16 @@ var DatePicker = function (_React$Component) {
 
       var todayString = 'Today';
 
-      var exludeMomentDates = _DateUtil2.default.filterSafeMoments(excludeDates, this.state.dateFormat);
-      var includeMomentDates = _DateUtil2.default.filterSafeMoments(includeDates, this.state.dateFormat);
-      var endMomentDate = _DateUtil2.default.createSafeMoment(endDate, this.state.dateFormat);
-      var maxMomentDate = _DateUtil2.default.createSafeMoment(maxDate, this.state.dateFormat);
-      var minMomentDate = _DateUtil2.default.createSafeMoment(minDate, this.state.dateFormat);
-      var startMomentDate = _DateUtil2.default.createSafeMoment(startDate, this.state.dateFormat);
+      var exludeMomentDates = _DateUtil2.default.filterInvalidDates(excludeDates, this.state.dateFormat);
+      var includeMomentDates = _DateUtil2.default.filterInvalidDates(includeDates, this.state.dateFormat);
+      var endMomentDate = _DateUtil2.default.createSafeDate(endDate, this.state.dateFormat);
+      var maxMomentDate = _DateUtil2.default.createSafeDate(maxDate, this.state.dateFormat);
+      var minMomentDate = _DateUtil2.default.createSafeDate(minDate, this.state.dateFormat);
+      var startMomentDate = _DateUtil2.default.createSafeDate(startDate, this.state.dateFormat);
 
       var selectedMomentDate = this.state.selectedDate;
       if (isStartDateRange || isEndDateRange) {
-        selectedMomentDate = _DateUtil2.default.createSafeMoment(selectedDate, this.state.dateFormat);
+        selectedMomentDate = _DateUtil2.default.createSafeDate(selectedDate, this.state.dateFormat);
       }
 
       var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
