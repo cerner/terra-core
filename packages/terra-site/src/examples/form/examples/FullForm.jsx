@@ -56,7 +56,7 @@ class FullForm extends React.Component {
     const formData = Object.assign({}, this.state.formData);
 
     if (e.target.type === 'checkbox') {
-      const currentMultiChoiceSelection = this.state.formData[e.target.name];
+      const currentMultiChoiceSelection = formData[e.target.name].slice(0);
       const currentElementIndex = currentMultiChoiceSelection.indexOf(e.target.value);
 
       if (currentElementIndex > -1) {
@@ -64,6 +64,8 @@ class FullForm extends React.Component {
       } else {
         currentMultiChoiceSelection.push(e.target.value);
       }
+
+      formData[e.target.name] = currentMultiChoiceSelection;
     } else {
       formData[e.target.name] = e.target.value;
     }
