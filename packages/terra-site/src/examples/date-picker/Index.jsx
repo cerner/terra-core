@@ -2,8 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import DatePicker from 'terra-date-picker';
-import DateRange from 'terra-date-picker/lib/DateRange';
+import DatePicker from 'terra-date-picker/src/DatePicker';
+import DateRange from 'terra-date-picker/src/DateRange';
 import ReadMe from 'terra-date-picker/docs/README.md';
 import { version } from 'terra-date-picker/package.json';
 // Component Source
@@ -12,6 +12,8 @@ import DatePickerSrc from '!raw-loader!terra-date-picker/src/DatePicker';
 // Example Files
 import DatePickerFilterDates from './DatePickerFilterDates';
 import DatePickerOnChange from './DatePickerOnChange';
+
+const dateFormat = 'MM/DD/YYYY';
 
 const DatePickerExamples = () => (
   <div>
@@ -22,29 +24,29 @@ const DatePickerExamples = () => (
     <DatePicker />
     <h2 id="exclude-dates">ExcludeDates</h2>
     <DatePicker
-      excludeDates={[moment().subtract(1, 'days'), moment().add(1, 'days')]}
+      excludeDates={[moment().subtract(1, 'days').format(dateFormat), moment().add(1, 'days').format(dateFormat)]}
     />
     <h2 id="filter-dates">FilterDates</h2>
     <DatePickerFilterDates />
     <h2 id="include-dates">Include Dates</h2>
     <DatePicker
-      includeDates={[moment(), moment().subtract(1, 'days'), moment().add(1, 'days')]}
+      includeDates={[moment().format(dateFormat), moment().subtract(1, 'days').format(dateFormat), moment().add(1, 'days').format(dateFormat)]}
     />
     <h2 id="min-max">Min Max</h2>
     <DatePicker
-      minDate={moment()}
-      maxDate={moment().add(6, 'days')}
+      minDate={moment().format(dateFormat)}
+      maxDate={moment().add(6, 'days').format(dateFormat)}
     />
     <h2 id="on-change">On Change</h2>
     <DatePickerOnChange />
     <h2 id="start-date">Start Date</h2>
     <DatePicker
-      startDate={moment()}
+      defaultDate={moment().format(dateFormat)}
     />
     <h2 id="date-range">Date Range</h2>
     <DateRange
-      startDate={moment().add(1, 'days')}
-      endDate={moment().add(7, 'days')}
+      startDate={moment().add(1, 'days').format(dateFormat)}
+      endDate={moment().add(7, 'days').format(dateFormat)}
     />
   </div>
 );
