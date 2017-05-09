@@ -48,6 +48,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-base": "^0.x",
+    "terra-button": "^0.x",
     "terra-mixins": "^1.0.0"
   },
   "devDependencies": {

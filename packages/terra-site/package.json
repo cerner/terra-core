@@ -56,7 +56,8 @@
     "terra-standout": "^0.x",
     "terra-status": "^0.x",
     "terra-table": "^0.x",
-    "terra-title": "^0.x"
+    "terra-title": "^0.x",
+    "terra-toggler": "^0.x"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",

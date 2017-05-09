@@ -28,6 +28,7 @@ import StandoutExamples from './examples/standout/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TitleExamples from './examples/title/Index';
+import TogglerExamples from './examples/toggler/Index';
 
 
 // Test
@@ -82,8 +83,9 @@ ReactDOM.render((
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="standout" component={StandoutExamples} />
       <Route path="status" component={StatusExamples} />
-      <Route path="title" component={TitleExamples} />
       <Route path="table" component={TableExamples} />
+      <Route path="title" component={TitleExamples} />
+      <Route path="toggler" component={TogglerExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
