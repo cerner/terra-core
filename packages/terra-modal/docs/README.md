@@ -41,6 +41,7 @@ class MyApp extends React.Component {
         <Modal
           ariaLabel="My Modal"
           isOpened={this.state.isOpened}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>My Modal</h1>

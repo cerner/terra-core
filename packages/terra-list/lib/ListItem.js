@@ -48,8 +48,8 @@ var propTypes = {
 var defaultProps = {
   content: undefined,
   isSelected: false,
-  isSelectable: undefined,
-  hasChevron: undefined
+  isSelectable: false,
+  hasChevron: false
 };
 
 var ListItem = function ListItem(_ref) {

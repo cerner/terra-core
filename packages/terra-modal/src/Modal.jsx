@@ -41,7 +41,7 @@ const propTypes = {
   /**
    * If set to true, the modal will rendered as opened
    **/
-  isOpened: PropTypes.bool,
+  isOpened: PropTypes.bool.isRequired,
   /**
    * If set to true, the modal dialog with have overflow-y set to scroll.
    * It is recommended not to use this prop and instead create a HOC
@@ -56,6 +56,10 @@ const propTypes = {
    * This callback is called when the modal is opened and rendered (useful for animating the DOMNode).
    **/
   onOpen: PropTypes.func,
+  /**
+   * Function to set isOpened={false} and close the modal.
+   **/
+  onRequestClose: PropTypes.func.isRequired,
   /**
    * This callback is called when the modal is (re)rendered.
    **/
@@ -79,8 +83,30 @@ const defaultProps = {
   role: 'document',
 };
 
-/* eslint-disable react/prefer-stateless-function */
+const KEYCODES = {
+  ESCAPE: 27,
+};
+
 class Modal extends React.Component {
+  constructor() {
+    super();
+    this.handleKeydown = this.handleKeydown.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeydown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeydown);
+  }
+
+  handleKeydown(e) {
+    if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened && this.props.closeOnEsc) {
+      this.props.onRequestClose();
+    }
+  }
+
   render() {
     const {
           ariaLabel,
@@ -97,13 +123,12 @@ class Modal extends React.Component {
           onOpen,
           onUpdate,
           role,
+          onRequestClose,
            ...customProps } = this.props;
 
     return (
       <Portal
         isOpened={isOpened}
-        closeOnEsc={closeOnEsc}
-        closeOnOutsideClick={closeOnOutsideClick}
         onClose={onClose}
         onOpen={onOpen}
         onUpdate={onUpdate}
@@ -118,6 +143,7 @@ class Modal extends React.Component {
           role={role}
           isFullscreen={isFullscreen}
           isScrollable={isScrollable}
+          onRequestClose={onRequestClose}
         >
           {children}
         </ModalContent>

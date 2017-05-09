@@ -23,32 +23,38 @@ class ModalEventHooks extends React.Component {
   handleOnOpen(node) {
     const onOpenElement = document.getElementById('onOpen');
     onOpenElement.innerHTML = 'onOpen: Called';
+    console.log('onOpen');
   }
 
   handleOnClose() {
     const onOpenElement = document.getElementById('onClose');
     onOpenElement.innerHTML = 'onClose: Called';
+    console.log('onClose');
   }
 
   handleOnUpdate() {
     const onOpenElement = document.getElementById('onUpdate');
     onOpenElement.innerHTML = 'onUpdate: Called';
+    console.log('onUpdate');
   }
 
   handleBeforeClose(node, callback) {
     const onOpenElement = document.getElementById('beforeClose');
     onOpenElement.innerHTML = 'beforeClose: Called';
+    console.log('beforeClose');
     callback();
   }
-  /* eslint-enable */
 
   handleOpenModal() {
     this.setState({ isOpened: true });
+    console.log('handleOpenModal');
   }
 
   handleCloseModal() {
     this.setState({ isOpened: false });
+    console.log('handleCloseModal == onRequestClose');
   }
+  /* eslint-enable */
 
   render() {
     return (
@@ -60,6 +66,7 @@ class ModalEventHooks extends React.Component {
           onClose={this.handleOnClose}
           onUpdate={this.handleOnUpdate}
           beforeClose={this.handleBeforeClose}
+          onRequestClose={this.handleCloseModal}
         >
           <div>
             <h1>Terra Modal</h1>

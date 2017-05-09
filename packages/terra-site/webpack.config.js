@@ -7,6 +7,8 @@ const path = require('path');
 const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const I18nAggregatorPlugin = require('terra-i18n-plugin');
+const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 
 module.exports = {
   entry: {
@@ -48,11 +50,10 @@ module.exports = {
         }, {
           loader: 'sass-loader',
           options: {
-            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/src/LegacyTheme.scss'))}"; $terra-bidi: true;`,
+            data: `@import "${path.resolve(path.join(__dirname, 'node_modules/terra-legacy-theme/lib/LegacyTheme.scss'))}"; $terra-bidi: true;`,
           },
         }],
       }),
-
     },
     {
       test: /\.md$/,
@@ -66,11 +67,23 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['terra-core'],
     }),
+    new I18nAggregatorPlugin({
+      baseDirectory: __dirname,
+      supportedLocales: i18nSupportedLocales,
+    }),
     new webpack.NamedChunksPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: { react: path.resolve(__dirname, 'node_modules', 'react') },
+    modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
+
+    // See https://github.com/facebook/react/issues/8026
+    alias: {
+      react: path.resolve(__dirname, 'node_modules', 'react'),
+      'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
+      moment: path.resolve(__dirname, 'node_modules/moment'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+    },
   },
   output: {
     filename: '[name].js',
@@ -79,6 +92,7 @@ module.exports = {
   devtool: 'cheap-source-map',
   devServer: {
     host: '0.0.0.0',
+    disableHostCheck: true,
     stats: {
       assets: true,
       children: false,
