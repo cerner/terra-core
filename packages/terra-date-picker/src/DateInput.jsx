@@ -8,6 +8,10 @@ const Icon = <IconCalendar />;
 
 const propTypes = {
   /**
+   * Custom input attributes to apply to the date input.
+   */
+  inputAttributes: PropTypes.object,
+  /**
    * A callback function to execute when a valid date is selected or entered.
    */
   onChange: PropTypes.func,
@@ -35,6 +39,7 @@ class DatePickerInput extends React.Component {
     return (
       (<div className="terra-DatePicker-customInput">
         <input
+          {...this.props.inputAttributes} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className="terra-DatePicker-input"
           type="text"
           value={this.props.value}

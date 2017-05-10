@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -35,6 +37,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Icon = _react2.default.createElement(_IconCalendar2.default, null);
 
 var propTypes = {
+  /**
+   * Custom input attributes to apply to the date input.
+   */
+  inputAttributes: _propTypes2.default.object,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
@@ -74,13 +80,13 @@ var DatePickerInput = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'terra-DatePicker-customInput' },
-        _react2.default.createElement('input', {
+        _react2.default.createElement('input', _extends({}, this.props.inputAttributes, { // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className: 'terra-DatePicker-input',
           type: 'text',
           value: this.props.value,
           onChange: this.props.onChange,
           placeholder: this.props.placeholder
-        }),
+        })),
         _react2.default.createElement(_terraButton2.default, {
           className: 'terra-DatePicker-button',
           onClick: this.props.onClick,
