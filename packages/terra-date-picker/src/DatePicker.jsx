@@ -1,28 +1,28 @@
 import React, { PropTypes } from 'react';
 import ReactDatePicker from 'react-datepicker';
-import moment from 'moment';
 import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
 import DateInput from './DateInput';
+import DateUtil from './DateUtil';
 import './DatePicker.scss';
 
 const propTypes = {
   /**
-   * A moment object to use as the default end date for a date range.
+   * An ISO 8601 string representation of the end date for a date range.
    */
-  endDate: PropTypes.object,
+  endDate: PropTypes.string,
   /**
-   * An array of moment objects that represent the dates to disable in the picker.
+   * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
-  excludeDates: PropTypes.arrayOf(PropTypes.object),
+  excludeDates: PropTypes.arrayOf(PropTypes.string),
   /**
    * A function that gets called for each date in the picker to evaluate which date should be disabled. A return value of true will be enabled and false will be disabled.
    */
   filterDate: PropTypes.func,
   /**
-   * An array of moment objects that represent the dates to enable in the picker. All Other dates will be disabled.
+   * An array of ISO 8601 string representation of the dates to enable in the picker. All Other dates will be disabled.
    */
-  includeDates: PropTypes.arrayOf(PropTypes.object),
+  includeDates: PropTypes.arrayOf(PropTypes.string),
   /**
    * Custom input attributes to apply to the date input.
    */
@@ -36,25 +36,25 @@ const propTypes = {
    */
   isStartDateRange: PropTypes.bool,
   /**
-   * A moment object to represents the maximum date that can be selected.
+   * An ISO 8601 string representation of the maximum date that can be selected.
    */
-  maxDate: PropTypes.object,
+  maxDate: PropTypes.string,
   /**
-   * A moment object to represents the minimum date that can be selected.
+   * An ISO 8601 string representation of the minimum date that can be selected.
    */
-  minDate: PropTypes.object,
+  minDate: PropTypes.string,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
   onChange: PropTypes.func,
   /**
-   * The selected date to show in the date input.
+   * An ISO 8601 string representation of the initial default date to show in the date input. This prop name is derived from react-datepicker but is analogous to defaultValue for a form input field.
    */
-  selectedDate: PropTypes.object,
+  selectedDate: PropTypes.string,
   /**
-   * A moment object to use as the default start date for a date range.
+   * An ISO 8601 string representation of the start date for a date range.
    */
-  startDate: PropTypes.object,
+  startDate: PropTypes.string,
 };
 
 const defaultProps = {
@@ -67,8 +67,9 @@ class DatePicker extends React.Component {
     super(props);
 
     this.state = {
-      startDate: props.startDate,
-      endDate: props.endDate,
+      locale: 'en-US', // TODO: Get the locale from i18n
+      dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
+      selectedDate: DateUtil.createSafeDate(props.selectedDate, 'MM/DD/YYYY'),
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -76,11 +77,12 @@ class DatePicker extends React.Component {
 
   handleChange(date) {
     this.setState({
-      startDate: date,
+      selectedDate: date,
     });
 
     if (this.props.onChange) {
-      this.props.onChange(date);
+      const dateString = date && date.isValid() ? date.format(this.state.dateFormat) : '';
+      this.props.onChange(dateString);
     }
   }
 
@@ -103,36 +105,40 @@ class DatePicker extends React.Component {
     // TODO: Need translation from date_util
     const todayString = 'Today';
 
-    // TODO: Get the locale from date_util
-    const userLocale = 'en-US';
+    const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates, this.state.dateFormat);
+    const includeMomentDates = DateUtil.filterInvalidDates(includeDates, this.state.dateFormat);
+    const endMomentDate = DateUtil.createSafeDate(endDate, this.state.dateFormat);
+    const maxMomentDate = DateUtil.createSafeDate(maxDate, this.state.dateFormat);
+    const minMomentDate = DateUtil.createSafeDate(minDate, this.state.dateFormat);
+    const startMomentDate = DateUtil.createSafeDate(startDate, this.state.dateFormat);
 
-    // TODO: Get date format from date_util
-    const localMoment = moment();
-    localMoment.locale(userLocale);
-    const momentDateFormat = localMoment.localeData().longDateFormat('L');
+    let selectedMomentDate = this.state.selectedDate;
+    if (isStartDateRange || isEndDateRange) {
+      selectedMomentDate = DateUtil.createSafeDate(selectedDate, this.state.dateFormat);
+    }
 
     const portalPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={selectedDate || this.state.startDate}
+        selected={selectedMomentDate}
         onChange={this.handleChange}
         customInput={<DateInput inputAttributes={inputAttributes} />}
-        endDate={endDate}
-        excludeDates={excludeDates}
+        endDate={endMomentDate}
+        excludeDates={exludeMomentDates}
         filterDate={filterDate}
-        includeDates={includeDates}
-        maxDate={maxDate}
-        minDate={minDate}
+        includeDates={includeMomentDates}
+        maxDate={maxMomentDate}
+        minDate={minMomentDate}
         selectsEnd={isEndDateRange}
         selectsStart={isStartDateRange}
-        startDate={startDate}
+        startDate={startMomentDate}
         todayButton={todayString}
         withPortal
         dateFormatCalendar=" "
-        dateFormat={momentDateFormat}
+        dateFormat={this.state.dateFormat}
         fixedHeight
-        locale={userLocale}
-        placeholderText={momentDateFormat}
+        locale={this.state.locale}
+        placeholderText={this.state.dateFormat}
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
@@ -141,24 +147,24 @@ class DatePicker extends React.Component {
     const popupPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={selectedDate || this.state.startDate}
+        selected={selectedMomentDate}
         onChange={this.handleChange}
         customInput={<DateInput inputAttributes={inputAttributes} />}
-        endDate={endDate}
-        excludeDates={excludeDates}
+        endDate={endMomentDate}
+        excludeDates={exludeMomentDates}
         filterDate={filterDate}
-        includeDates={includeDates}
-        maxDate={maxDate}
-        minDate={minDate}
+        includeDates={includeMomentDates}
+        maxDate={maxMomentDate}
+        minDate={minMomentDate}
         selectsEnd={isEndDateRange}
         selectsStart={isStartDateRange}
-        startDate={startDate}
+        startDate={startMomentDate}
         todayButton={todayString}
         dateFormatCalendar=" "
-        dateFormat={momentDateFormat}
+        dateFormat={this.state.dateFormat}
         fixedHeight
-        locale={userLocale}
-        placeholderText={momentDateFormat}
+        locale={this.state.locale}
+        placeholderText={this.state.dateFormat}
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
