@@ -46,6 +46,7 @@ const propTypes = {
    */
   arrowPosition: PropTypes.oneOf(arrowPositions),
   showArrow: PropTypes.bool,
+  arrowPxOffset: PropTypes.number,
 };
 
 const defaultProps = {
@@ -59,6 +60,18 @@ const defaultProps = {
 };
 
 class PopupFrame extends React.Component {
+  static spacerFromOffset(offset, position) {
+    const styleOffset = {};
+    if (['top','bottom'].indexOf(position) >= 0) {
+      styleOffset.width = offset.toString();
+      styleOffset.maxWidth = 'calc(100% - 30px)';
+    } else {
+      styleOffset.height = offset.toString();
+      styleOffset.maxHeight = 'calc(100% - 30px)';
+    }
+    return <div className="terra-PopupFrame-spacer" style={styleOffset} />;
+  }
+
   constructor(props) {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
@@ -116,9 +129,27 @@ class PopupFrame extends React.Component {
 
     let arrow;
     if (showArrow) {
+      let startSpacer;
+      let endSpacer;
+
+      if (arrowPxOffset) {
+        let offset = arrowPxOffset;
+        if (arrowAlignment === 'Center') {
+          offset *= 2;
+        }
+
+        if (offset < 0) {
+          endSpacer = PopupFrame.spacerFromOffset(Math.abs(offset), arrowPosition);
+        } else {
+          startSpacer = PopupFrame.spacerFromOffset(offset, arrowPosition);
+        }
+      }
+
       arrow = (
         <div className={arrowClassNames}>
+          {startSpacer}
           {<PopupArrow direction={arrowPosition} />}
+          {endSpacer}
         </div>
       );
     }

@@ -17,6 +17,7 @@ const propTypes = {
   contentOffset: PropTypes.string,
   isOpen: PropTypes.bool,
   onRequestClose: PropTypes.func,
+  showArrow: PropTypes.bool,
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
   targetOffset: PropTypes.string,
@@ -24,47 +25,63 @@ const propTypes = {
 
 const defaultProps = {
   isOpen: false,
+  showArrow: false,
 };
 
 const WrappedPopupFrame = onClickOutside(PopupFrame);
 
 class PopupPresenter extends React.Component {
   static arrowAlignmentFromAttachment(contentAttachment) {
-    const startAttachments = ['top left', 'bottom left'];
-    const centerAttachments = ['top center', 'bottom center', 'middle left', 'middle right'];
-    const endAttachments = ['top right', 'bottom right'];
+    const parsedValue = PopupPresenter.parseStringPosition(value);
 
-    if (startAttachments.indexOf(contentAttachment) >= 0) {
-      return 'Start';
-    }
-    if (centerAttachments.indexOf(contentAttachment) >= 0) {
+    if (parsedValue.vertical === 'middle' || parsedValue.horizontal === 'center') {
       return 'Center';
-    }
-    if (endAttachments.indexOf(contentAttachment) >= 0) {
+    } else if (parsedValue.horizontal === 'left') {
+      return 'Start';
+    } else {
       return 'End';
     }
-    return undefined;
   }
 
   static arrowPositionFromAttachment(contentAttachment) {
-    const topAttachments = ['top left', 'top center', 'top right'];
-    const startAttachments = ['middle left'];
-    const endAttachments = ['middle right'];
-    const bottomAttachments = ['bottom left', 'bottom center', 'bottom right'];
+    const parsedValue = PopupPresenter.parseStringPosition(value);
 
-    if (topAttachments.indexOf(contentAttachment) >= 0) {
+    if (parsedValue.vertical === 'top') {
       return 'Top';
-    }
-    if (startAttachments.indexOf(contentAttachment) >= 0) {
-      return 'Start';
-    }
-    if (endAttachments.indexOf(contentAttachment) >= 0) {
+    } else if (parsedValue.vertical === 'middle') {
+      if (parsedValue.horizontal === 'left') {
+        return 'Start';
+      }
       return 'End';
-    }
-    if (bottomAttachments.indexOf(contentAttachment) >= 0) {
+    } else {
       return 'Bottom';
     }
-    return undefined;
+  }
+
+  static parseOffset(value) {
+    const parsedValue = PopupPresenter.parseStringPosition(value);
+  }
+
+  static parseStringPosition(value) {
+    const [vertical, horizontal] = value.split(' ');
+    return {vertical, horizontal};
+  }
+
+  static shouldDisplayArrow(showArrow, contentAttachment) {
+    if (showArrow === true && contentAttachment !== 'middle center') {
+      return false;
+    }
+    return showArrow;
+  }
+
+  static calculateArrowOffest(position, contentOffset, targetOffset) {
+    const parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
+    const parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
+
+    if (['top','bottom'].indexOf(position) >= 0) {
+      return parsedContentValue.horizontal + parsedTargetValue.horizontal;
+    }
+    return parsedContentValue.vertical + parsedTargetValue.vertical;
   }
 
   render () {
@@ -83,19 +100,24 @@ class PopupPresenter extends React.Component {
       targetOffset,
       arrowAlignment,
       arrowPosition,
+      showArrow,
       ...customProps 
     } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
     if (isOpen && content) {
+      const arrowAlignment = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
+      const arrowPosition = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
+      const arrowPxOffset = PopupPresenter.calculateArrowOffest(arrowPosition, contentOffset, targetOffset);
       const frameProps = {
         className,
         closeOnEsc,
         closeOnOutsideClick,
         onRequestClose,
-        arrowAlignment: PopupPresenter.arrowAlignmentFromAttachment(contentAttachment),
-        arrowPosition: PopupPresenter.arrowPositionFromAttachment(contentAttachment),
-        showArrow: contentAttachment !== 'middle center',
+        arrowAlignment,
+        arrowPosition,
+        showArrow: PopupPresenter.shouldDisplayArrow(showArraow, contentAttachment),
+        arrowPxOffset,
       };
 
       wrappedContent = (
