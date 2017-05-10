@@ -39,16 +39,34 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
-  header: _propTypes2.default.element.isRequired,
-  isCollapsed: _propTypes2.default.bool,
+  /**
+   * Content in the body of the panel that will be expanded or collapsed
+   **/
+  children: _propTypes2.default.node,
+  /**
+   * Callback function after expanded and after collapsed.
+   **/
   handleToggled: _react2.default.PropTypes.func,
-  children: _propTypes2.default.node
+  /**
+   * Content in the ‘header’ section that acts as a trigger for the collapse/expand action
+   **/
+  header: _propTypes2.default.node.isRequired,
+  /**
+   * Animates expanding and collapsing
+   **/
+  isAnimated: _propTypes2.default.bool,
+  /**
+   * Expands or collapses content
+   **/
+  isOpened: _propTypes2.default.bool
 };
 
 var defaultProps = {
-  isCollapsed: true,
+  children: null,
   handleToggled: null,
-  children: null
+  header: null,
+  isAnimated: true,
+  isOpened: false
 };
 
 var Toggler = function (_React$Component) {
@@ -60,7 +78,7 @@ var Toggler = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Toggler.__proto__ || Object.getPrototypeOf(Toggler)).call(this, props));
 
     _this.state = {
-      isCollapsed: props.isCollapsed
+      isOpened: props.isOpened
     };
 
     _this.handleToggle = _this.handleToggle.bind(_this);
@@ -70,7 +88,7 @@ var Toggler = function (_React$Component) {
   _createClass(Toggler, [{
     key: 'handleToggle',
     value: function handleToggle(event) {
-      this.setState({ isCollapsed: !this.state.isCollapsed });
+      this.setState({ isOpened: !this.state.isOpened });
       if (this.props.handleToggled !== null) {
         this.props.handleToggled(event);
       }
@@ -83,28 +101,30 @@ var Toggler = function (_React$Component) {
       // eslint-disable-next-line no-unused-vars
       var _props = this.props,
           header = _props.header,
-          isCollapsed = _props.isCollapsed,
+          isOpened = _props.isOpened,
+          isAnimated = _props.isAnimated,
           children = _props.children,
           handleToggled = _props.handleToggled,
-          customProps = _objectWithoutProperties(_props, ['header', 'isCollapsed', 'children', 'handleToggled']);
+          customProps = _objectWithoutProperties(_props, ['header', 'isOpened', 'isAnimated', 'children', 'handleToggled']);
 
-      var togglerClass = (0, _classnames2.default)(['terra-Toggler', { 'is-collapsed': this.state.isCollapsed }, { 'is-expanded': !this.state.isCollapsed }, customProps.className]);
+      var togglerClass = (0, _classnames2.default)(['terra-Toggler', { 'is-collapsed': !this.state.isOpened }, { 'is-expanded': this.state.isOpened }, { 'is-animated': isAnimated }, customProps.className]);
 
-      var ariaHidden = isCollapsed ? null : 'true';
+      var ariaHidden = this.state.isOpened ? null : 'true';
+      var ariaExpanded = this.state.isOpened ? 'true' : 'false';
 
       return (
         // TODO: Links in header shouldn't trigger collapse
         _react2.default.createElement(
           'article',
-          _extends({}, customProps, { className: togglerClass }),
+          _extends({}, customProps, { className: togglerClass, role: 'tablist' }),
           _react2.default.createElement(
             _terraButton2.default,
-            { size: 'small', variant: 'link', className: 'terra-Toggler-header', onClick: this.handleToggle },
+            { size: 'small', variant: 'link', className: 'terra-Toggler-header', 'aria-expanded': ariaExpanded, onClick: this.handleToggle },
             header
           ),
           _react2.default.createElement(
             'div',
-            { className: 'terra-Toggler-content', 'aria-hidden': ariaHidden },
+            { className: 'terra-Toggler-content', role: 'tabpanel', 'aria-hidden': ariaHidden },
             children
           )
         )

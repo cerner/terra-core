@@ -55,6 +55,7 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import TogglerTestRoutes from 'terra-toggler/tests/nightwatch/TogglerTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 

@@ -14,7 +14,7 @@
 import React from 'react';
 import Togler from 'terra-toggler';
 
-<Toggler
-
-/>
+  <Toggler header={<p>Click to toggle</p>}>
+    {<p>This visibility of this content can be toggled.</p>}
+  </Toggler>
 ```

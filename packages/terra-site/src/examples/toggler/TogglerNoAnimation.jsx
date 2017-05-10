@@ -5,7 +5,7 @@ const content = <div> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
 const toggleHeader = <p>Click Me</p>;
 
 const TogglerDefault = () => (
-  <Toggler header={toggleHeader}>
+  <Toggler header={toggleHeader} isAnimated={false} >
     {content}
   </Toggler>
 );

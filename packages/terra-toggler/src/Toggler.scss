@@ -1,6 +1,4 @@
 @import '~terra-mixins';
-@import './variables';
-@import './mixins';
 
 // The accordion content panel doesn't have the header highlight, but the other ones do
 .terra-Toggler-header {
@@ -8,7 +6,7 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  line-height: 20px;
+  line-height: 1.5em;
   padding: 0;
   width: 100%;
 }
@@ -17,16 +15,19 @@
   overflow: hidden;
 }
 
-.terra-Toggler.is-collapsed {
-  > .terra-Toggler-content {
-    max-height: 0;
-    transition: max-height 0.25s ease-out;
-  }
+.terra-Toggler.is-collapsed > .terra-Toggler-content {
+  max-height: 0;
 }
 
-.terra-Toggler.is-expanded {
-  > .terra-Toggler-content {
-    max-height: 1000px;
-    transition: max-height 0.25s ease-in;
-  }
+.terra-Toggler.is-expanded > .terra-Toggler-content {
+  max-height: 1000px;
 }
+
+.terra-Toggler.is-collapsed.is-animated > .terra-Toggler-content {
+  transition: max-height 0.25s ease-out;
+}
+
+.terra-Toggler.is-expanded.is-animated > .terra-Toggler-content {
+  transition: max-height 0.25s ease-in;
+}
+
