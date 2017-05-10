@@ -1,10 +1,9 @@
 import React from 'react';
-import moment from 'moment';
 import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerStartDate = () => (
   <DatePicker
-    startDate={moment()}
+    selectedDate={'04-01-2017T00:00:00.000Z'}
   />
 );
 
