@@ -12,6 +12,7 @@ import TogglerSrc from '!raw-loader!terra-toggler/src/Toggler';
 import TogglerDefault from './TogglerDefault';
 import TogglerEvent from './TogglerEvent';
 import TogglerNoAnimation from './TogglerNoAnimation';
+import TogglerRenderOpen from './TogglerRenderOpen';
 
 const TogglerExamples = () => (
   <div>
@@ -24,6 +25,8 @@ const TogglerExamples = () => (
     <TogglerNoAnimation />
     <h2 id="event">Toggler Event</h2>
     <TogglerEvent />
+    <h2 id="render-open">Toggler Render Open</h2>
+    <TogglerRenderOpen />
   </div>
 );
 

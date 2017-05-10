@@ -111,6 +111,6 @@ ReactDOM.render((
     {ModalTestRoutes}
     {ProgressBarTestRoutes}
     {GridTestRoutes}
-    {IconTestRoutes}
+    {TogglerTestRoutes}
   </Router>
 ), document.getElementById('root'));
