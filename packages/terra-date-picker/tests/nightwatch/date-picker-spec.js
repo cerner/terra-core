@@ -13,7 +13,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with defaulted props': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/date-picker-tests/default`);
 
     browser.click('.terra-DatePicker-button');
 
@@ -24,7 +24,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with excluded dates being disabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/exclude-dates`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/date-picker-tests/exclude-dates`);
 
     browser.click('.terra-DatePicker-button');
 
@@ -33,7 +33,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with filtered dates being disabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/filter-dates`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/date-picker-tests/filter-dates`);
 
     browser.click('.terra-DatePicker-button');
 
@@ -42,7 +42,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with include dates being enabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/include-dates`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/date-picker-tests/include-dates`);
 
     browser.click('.terra-DatePicker-button');
 
@@ -51,7 +51,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with min and max dates': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/min-max`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/date-picker-tests/min-max`);
 
     browser.click('.terra-DatePicker-button');
 
@@ -60,7 +60,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with a date range': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/date-range`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/date-picker-tests/date-range`);
 
     browser.click('.terra-DatePicker-button');
 

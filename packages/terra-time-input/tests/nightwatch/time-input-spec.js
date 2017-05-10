@@ -13,14 +13,14 @@ module.exports = {
   },
 
   'Displays the time input with default props': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.expect.element('.terra-TimeInput-input').to.be.present;
     browser.expect.element('.terra-TimeInput-input').to.have.attribute('placeholder').equals('HH:mm');
   },
 
   'Displays the time input with a default time': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default-time`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default-time`);
 
     browser.expect.element('.terra-TimeInput-input').to.be.present;
     browser.expect.element('.terra-TimeInput-input').to.have.attribute('placeholder').equals('HH:mm');
@@ -28,7 +28,7 @@ module.exports = {
   },
 
   'Time input accepts confirmed time entry': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -37,7 +37,7 @@ module.exports = {
   },
 
   'Time input blocks invalid time entry that is >= 3 for the 1st slot in hour': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -46,7 +46,7 @@ module.exports = {
   },
 
   'Time input blocks invalid time entry that is >= 4 for the 2nd slot in hour': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   'Time input blocks invalid time entry that is >= 6 for the 1st slot in minute': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -64,7 +64,7 @@ module.exports = {
   },
 
   'When the time is valid, pressing the DOWN_ARROW key decrements the time by 1 minute': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default-time`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default-time`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -74,7 +74,7 @@ module.exports = {
   },
 
   'When the time is valid, pressing the UP_ARROW key increments the time by 1 minute': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default-time`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default-time`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -84,7 +84,7 @@ module.exports = {
   },
 
   'When the time is invalid, pressing the DOWN_ARROW key does not decrements the time': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.click('.terra-TimeInput-input');
 
@@ -94,7 +94,7 @@ module.exports = {
   },
 
   'When the time is invalid, pressing the UP_ARROW key does not increments the time': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/time-input-tests/default`);
 
     browser.click('.terra-TimeInput-input');
 

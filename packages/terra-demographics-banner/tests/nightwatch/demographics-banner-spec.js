@@ -22,7 +22,7 @@ module.exports = {
   },
 
   'Displays a blank demographics banner with the empty text identifier': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/demographics-banner-tests/blank`);
     browser.expect.element('.terra-DemographicsBanner').to.be.present;
     browser.expect.element('.terra-DemographicsBanner-preferred-first-name').to.not.be.present;
     browser.expect.element('.terra-DemographicsBanner-person-name').text.to.contain('--');
@@ -31,7 +31,7 @@ module.exports = {
   'Displays all the content when it is provided to the banner': (browser) => {
     const width = browser.globals.width;
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/populated`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/demographics-banner-tests/populated`);
 
     browser.expect.element('.terra-DemographicsBanner').to.be.present;
     browser.expect.element('.terra-DemographicsBanner-preferred-first-name').to.be.present;
@@ -75,7 +75,7 @@ module.exports = {
     }
   },
   'Displays a deceased demographics banner': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/demographics-banner-tests/deceased`);
     browser.expect.element('.terra-DemographicsBanner--deceased').to.be.present;
   },
 };

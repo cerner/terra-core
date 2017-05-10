@@ -13,7 +13,7 @@ module.exports = {
 
   'Displays a default button with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/base-tests/default`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/base-tests/default`);
   },
 };
 

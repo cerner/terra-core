@@ -13,14 +13,14 @@ module.exports = {
 
   'Displays a default table with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/default`)
       .assert.elementPresent('.terra-Table')
       .assert.elementPresent('.terra-Table--striped');
   },
 
   'Displays a default table and verify the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/default`)
       .assert.containsText('.terra-Table-header:nth-child(1)', 'Name')
       .assert.cssClassPresent('.terra-Table-header:nth-child(1)', 'terra-Table-min-width--small')
       .assert.containsText('.terra-Table-header:nth-child(2)', 'Address')
@@ -40,45 +40,45 @@ module.exports = {
 
   'Displays a table without the stripes': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/no-striped`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/no-striped`)
       .assert.elementPresent('.terra-Table')
       .assert.cssClassNotPresent('.terra-Table', '.terra-Table--striped');
   },
 
   'Displays a table without padding': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/no-padding`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/no-padding`)
       .assert.elementPresent('.terra-Table')
       .assert.cssClassNotPresent('.terra-Table', '.terra-Table--padded');
   },
 
   'Display a sorting indicator': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-sort-indicator`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/table-sort-indicator`)
       .assert.attributeContains('.terra-Table-header:nth-child(2)', 'data-sort', 'asc');
   },
 
   'Display a table with selected rows': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-highlighted-rows`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/table-highlighted-rows`)
       .assert.elementPresent('.terra-Table--isSelected');
   },
 
   'Displays a table with selectable rows': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/selectable-table`)
       .assert.elementPresent('tr.terra-Table--isSelectable');
   },
 
   'Displays a table with only one row': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/single-row-table`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/single-row-table`);
     browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
     browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
   },
 
   'Display a table highlighting rows upon clicking': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/selectable-table`);
     browser.click('.terra-Table-row:nth-child(1)');
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
@@ -96,7 +96,7 @@ module.exports = {
   },
 
   'Toggle aria-selected on seletable rows': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/selectable-table`);
     browser.click('.terra-Table-row:nth-child(1)');
     browser.expect.element('.terra-Table-row:nth-child(1)').to.have.attribute('aria-selected').which.contains('true');
     browser.expect.element('.terra-Table-row:nth-child(2)').to.have.attribute('aria-selected').which.contains('false');
@@ -114,7 +114,7 @@ module.exports = {
   },
 
   'Display a table highlighting rows upon enter': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/table-tests/selectable-table`);
 
     browser.sendKeys('.terra-Table-row:nth-child(1)', browser.Keys.ENTER);
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');

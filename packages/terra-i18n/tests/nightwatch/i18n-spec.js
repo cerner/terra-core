@@ -32,7 +32,7 @@ module.exports = {
 
   'Displays ajax error message in default': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms);
 
     browser.expect.element('div').text.to.contain(defaultTranslations['Terra.ajax.error']).before(waitInms);
@@ -40,7 +40,7 @@ module.exports = {
 
   'Displays ajax error message in de': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="de"]');
 
@@ -49,7 +49,7 @@ module.exports = {
 
   'Displays ajax error message in en': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="en"]');
 
@@ -58,7 +58,7 @@ module.exports = {
 
   'Displays ajax error message in en-GB': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="en-GB"]');
 
@@ -67,7 +67,7 @@ module.exports = {
 
   'Displays ajax error message in en-US': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="en-US"]');
 
@@ -76,7 +76,7 @@ module.exports = {
 
   'Displays ajax error message in es': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="es"]');
 
@@ -85,7 +85,7 @@ module.exports = {
 
   'Displays ajax error message in fi-FI': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="fi-FI"]');
 
@@ -94,7 +94,7 @@ module.exports = {
 
   'Displays ajax error message in fr': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="fr"]');
 
@@ -103,7 +103,7 @@ module.exports = {
 
   'Displays ajax error message in pt': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/i18n-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/i18n-tests/default`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="pt"]');
 
