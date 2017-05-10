@@ -20,7 +20,16 @@ const getBreakpoints = () => {
   data = window.getComputedStyle(datasource, ':before').getPropertyValue('content');
   data = data.replace(/^['"]+|\s+|\\|(;\s?})+|['"]$/g, '');
 
-  breakpoints = JSON.parse(data);
+  try {
+      breakpoints = JSON.parse(data);
+  } catch(e) {
+      console.error(e);
+      console.error(`JSON.parse(data) failed. data = ${data}`);
+      console.info(`If you have custom breakpoints, the values may be incorrect on this device`);
+      // Temporary fix for the motorola MC40.
+      // See issue: https://github.com/cerner/terra-core/issues/304
+      breakpoints = {"tiny":544,"small":768,"medium":992,"large":1216,"huge":1440};
+  }
 
   document.body.removeChild(datasource);
 
