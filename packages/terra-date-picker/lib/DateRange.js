@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
 require('terra-base/lib/baseStyles');
 
 var _DatePicker = require('./DatePicker');
@@ -28,13 +32,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * A moment object to use as the default end date for a date range.
+   * An ISO 8601 string representation of the default end date for a date range.
    */
-  endDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  endDate: _react.PropTypes.string,
   /**
-   * A moment object to use as the default start date for a date range.
+   * An ISO 8601 string representation of the selected start date.
    */
-  startDate: _react.PropTypes.oneOfType([_react.PropTypes.object]),
+  startDate: _react.PropTypes.string,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
@@ -50,6 +54,7 @@ var DateRange = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (DateRange.__proto__ || Object.getPrototypeOf(DateRange)).call(this, props));
 
     _this.state = {
+      format: 'MM/DD/YYYY', // TODO: Get the format from i18n
       startDate: props.startDate,
       endDate: props.endDate
     };
@@ -69,7 +74,7 @@ var DateRange = function (_React$Component) {
       var startDateForRange = startDate;
       var endDateForRange = endDate;
 
-      if (startDateForRange.isAfter(endDateForRange)) {
+      if ((0, _moment2.default)(startDateForRange, this.state.format).isAfter((0, _moment2.default)(endDateForRange, this.state.format))) {
         var _ref2 = [endDateForRange, startDateForRange];
         startDateForRange = _ref2[0];
         endDateForRange = _ref2[1];

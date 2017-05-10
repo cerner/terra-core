@@ -47,7 +47,7 @@ module.exports = {
     browser.click('.terra-DatePicker-button');
 
     browser.expect.element('.react-datepicker').to.be.present;
-    browser.expect.element('.react-datepicker__day--today').to.be.enabled;
+    browser.expect.element('.react-datepicker__day--today').to.not.be.present;
   },
 
   'Displays the DatePicker with min and max dates': (browser) => {
@@ -56,7 +56,7 @@ module.exports = {
     browser.click('.terra-DatePicker-button');
 
     browser.expect.element('.react-datepicker').to.be.present;
-    browser.expect.element('.react-datepicker__day--today').to.be.enabled;
+    browser.expect.element('.react-datepicker__day--today').to.not.be.present;
   },
 
   'Displays the DatePicker with a date range': (browser) => {

@@ -1,11 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 import DateRange from '../../../lib/DateRange';
 
 const DateRangeExample = () => (
   <DateRange
-    startDate={moment().add(1, 'days')}
-    endDate={moment().add(7, 'days')}
+    startDate={'04-01-2017T00:00:00.000Z'}
+    endDate={'04-10-2017T00:00:00.000Z'}
   />
 );
 

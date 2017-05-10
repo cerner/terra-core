@@ -1,10 +1,9 @@
 import React from 'react';
-import moment from 'moment';
 import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerIncludeDates = () => (
   <DatePicker
-    includeDates={[moment(), moment().subtract(1, 'days'), moment().add(1, 'days')]}
+    includeDates={['04-01-2017T00:00:00.000Z', '04-02-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
   />
 );
 
