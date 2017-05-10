@@ -33,6 +33,10 @@
     display: flex;
     flex: 0 0 auto;
     order: 0;
+
+    .terra-PopupFrame-spacer {
+      flex: 0 0 auto;
+    }
   }
 
   .terra-PopupFrame-content {

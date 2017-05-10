@@ -67,7 +67,8 @@ var propTypes = {
    * The function that should be triggered when a close is indicated.
    */
   arrowPosition: _react.PropTypes.oneOf(arrowPositions),
-  showArrow: _react.PropTypes.bool
+  showArrow: _react.PropTypes.bool,
+  arrowPxOffset: _react.PropTypes.number
 };
 
 var defaultProps = {
@@ -82,6 +83,21 @@ var defaultProps = {
 
 var PopupFrame = function (_React$Component) {
   _inherits(PopupFrame, _React$Component);
+
+  _createClass(PopupFrame, null, [{
+    key: 'spacerFromOffset',
+    value: function spacerFromOffset(offset, position) {
+      var styleOffset = {};
+      if (['top', 'bottom'].indexOf(position) >= 0) {
+        styleOffset.width = offset.toString();
+        styleOffset.maxWidth = 'calc(100% - 30px)';
+      } else {
+        styleOffset.height = offset.toString();
+        styleOffset.maxHeight = 'calc(100% - 30px)';
+      }
+      return _react2.default.createElement('div', { className: 'terra-PopupFrame-spacer', style: styleOffset });
+    }
+  }]);
 
   function PopupFrame(props) {
     _classCallCheck(this, PopupFrame);
@@ -142,10 +158,28 @@ var PopupFrame = function (_React$Component) {
 
       var arrow = void 0;
       if (showArrow) {
+        var startSpacer = void 0;
+        var endSpacer = void 0;
+
+        if (arrowPxOffset) {
+          var offset = arrowPxOffset;
+          if (arrowAlignment === 'Center') {
+            offset *= 2;
+          }
+
+          if (offset < 0) {
+            endSpacer = PopupFrame.spacerFromOffset(Math.abs(offset), arrowPosition);
+          } else {
+            startSpacer = PopupFrame.spacerFromOffset(offset, arrowPosition);
+          }
+        }
+
         arrow = _react2.default.createElement(
           'div',
           { className: arrowClassNames },
-          _react2.default.createElement(_PopupArrow2.default, { direction: arrowPosition })
+          startSpacer,
+          _react2.default.createElement(_PopupArrow2.default, { direction: arrowPosition }),
+          endSpacer
         );
       }
 

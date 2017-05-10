@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -52,13 +54,15 @@ var propTypes = {
   contentOffset: _react.PropTypes.string,
   isOpen: _react.PropTypes.bool,
   onRequestClose: _react.PropTypes.func,
+  showArrow: _react.PropTypes.bool,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions),
   targetOffset: _react.PropTypes.string
 };
 
 var defaultProps = {
-  isOpen: false
+  isOpen: false,
+  showArrow: false
 };
 
 var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default);
@@ -90,18 +94,23 @@ var PopupPresenter = function (_React$Component) {
           targetOffset = _props.targetOffset,
           arrowAlignment = _props.arrowAlignment,
           arrowPosition = _props.arrowPosition,
-          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'target', 'targetAttachment', 'targetOffset', 'arrowAlignment', 'arrowPosition']); // eslint-disable-line no-unused-vars
+          showArrow = _props.showArrow,
+          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'target', 'targetAttachment', 'targetOffset', 'arrowAlignment', 'arrowPosition', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
       if (isOpen && content) {
+        var _arrowAlignment = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
+        var _arrowPosition = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
+        var arrowPxOffset = PopupPresenter.calculateArrowOffest(_arrowPosition, contentOffset, targetOffset);
         var frameProps = {
           className: className,
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
           onRequestClose: onRequestClose,
-          arrowAlignment: PopupPresenter.arrowAlignmentFromAttachment(contentAttachment),
-          arrowPosition: PopupPresenter.arrowPositionFromAttachment(contentAttachment),
-          showArrow: contentAttachment !== 'middle center'
+          arrowAlignment: _arrowAlignment,
+          arrowPosition: _arrowPosition,
+          showArrow: PopupPresenter.shouldDisplayArrow(showArraow, contentAttachment),
+          arrowPxOffset: arrowPxOffset
         };
 
         wrappedContent = _react2.default.createElement(
@@ -139,42 +148,65 @@ var PopupPresenter = function (_React$Component) {
   }], [{
     key: 'arrowAlignmentFromAttachment',
     value: function arrowAlignmentFromAttachment(contentAttachment) {
-      var startAttachments = ['top left', 'bottom left'];
-      var centerAttachments = ['top center', 'bottom center', 'middle left', 'middle right'];
-      var endAttachments = ['top right', 'bottom right'];
+      var parsedValue = PopupPresenter.parseStringPosition(value);
 
-      if (startAttachments.indexOf(contentAttachment) >= 0) {
-        return 'Start';
-      }
-      if (centerAttachments.indexOf(contentAttachment) >= 0) {
+      if (parsedValue.vertical === 'middle' || parsedValue.horizontal === 'center') {
         return 'Center';
-      }
-      if (endAttachments.indexOf(contentAttachment) >= 0) {
+      } else if (parsedValue.horizontal === 'left') {
+        return 'Start';
+      } else {
         return 'End';
       }
-      return undefined;
     }
   }, {
     key: 'arrowPositionFromAttachment',
     value: function arrowPositionFromAttachment(contentAttachment) {
-      var topAttachments = ['top left', 'top center', 'top right'];
-      var startAttachments = ['middle left'];
-      var endAttachments = ['middle right'];
-      var bottomAttachments = ['bottom left', 'bottom center', 'bottom right'];
+      var parsedValue = PopupPresenter.parseStringPosition(value);
 
-      if (topAttachments.indexOf(contentAttachment) >= 0) {
+      if (parsedValue.vertical === 'top') {
         return 'Top';
-      }
-      if (startAttachments.indexOf(contentAttachment) >= 0) {
-        return 'Start';
-      }
-      if (endAttachments.indexOf(contentAttachment) >= 0) {
+      } else if (parsedValue.vertical === 'middle') {
+        if (parsedValue.horizontal === 'left') {
+          return 'Start';
+        }
         return 'End';
-      }
-      if (bottomAttachments.indexOf(contentAttachment) >= 0) {
+      } else {
         return 'Bottom';
       }
-      return undefined;
+    }
+  }, {
+    key: 'parseOffset',
+    value: function parseOffset(value) {
+      var parsedValue = PopupPresenter.parseStringPosition(value);
+    }
+  }, {
+    key: 'parseStringPosition',
+    value: function parseStringPosition(value) {
+      var _value$split = value.split(' '),
+          _value$split2 = _slicedToArray(_value$split, 2),
+          vertical = _value$split2[0],
+          horizontal = _value$split2[1];
+
+      return { vertical: vertical, horizontal: horizontal };
+    }
+  }, {
+    key: 'shouldDisplayArrow',
+    value: function shouldDisplayArrow(showArrow, contentAttachment) {
+      if (showArrow === true && contentAttachment !== 'middle center') {
+        return false;
+      }
+      return showArrow;
+    }
+  }, {
+    key: 'calculateArrowOffest',
+    value: function calculateArrowOffest(position, contentOffset, targetOffset) {
+      var parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
+      var parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
+
+      if (['top', 'bottom'].indexOf(position) >= 0) {
+        return parsedContentValue.horizontal + parsedTargetValue.horizontal;
+      }
+      return parsedContentValue.vertical + parsedTargetValue.vertical;
     }
   }]);
 

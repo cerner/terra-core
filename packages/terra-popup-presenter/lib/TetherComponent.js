@@ -56,7 +56,9 @@ var propTypes = {
 
 var defaultProps = {
   renderElementTag: 'div',
-  renderElementTo: null
+  renderElementTo: null,
+  contentOffset: '0 0',
+  targetOffset: '0 0'
 };
 
 var TetherComponent = function (_React$Component) {
