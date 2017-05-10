@@ -24,6 +24,10 @@ const propTypes = {
    */
   includeDates: PropTypes.arrayOf(PropTypes.object),
   /**
+   * Custom input attributes to apply to the date input.
+   */
+  inputAttributes: PropTypes.object,
+  /**
    * Indicates the end date picker of a date range.
    */
   isEndDateRange: PropTypes.bool,
@@ -82,6 +86,7 @@ class DatePicker extends React.Component {
 
   render() {
     const {
+      inputAttributes,
       endDate,
       excludeDates,
       filterDate,
@@ -111,7 +116,7 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={selectedDate || this.state.startDate}
         onChange={this.handleChange}
-        customInput={<DateInput />}
+        customInput={<DateInput inputAttributes={inputAttributes} />}
         endDate={endDate}
         excludeDates={excludeDates}
         filterDate={filterDate}
@@ -138,7 +143,7 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={selectedDate || this.state.startDate}
         onChange={this.handleChange}
-        customInput={<DateInput />}
+        customInput={<DateInput inputAttributes={inputAttributes} />}
         endDate={endDate}
         excludeDates={excludeDates}
         filterDate={filterDate}
