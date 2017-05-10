@@ -1,16 +1,17 @@
 import React, { PropTypes } from 'react';
+import moment from 'moment';
 import 'terra-base/lib/baseStyles';
 import DatePicker from './DatePicker';
 
 const propTypes = {
   /**
-   * A moment object to use as the default end date for a date range.
+   * An ISO 8601 string representation of the default end date for a date range.
    */
-  endDate: PropTypes.oneOfType([PropTypes.object]),
+  endDate: PropTypes.string,
   /**
-   * A moment object to use as the default start date for a date range.
+   * An ISO 8601 string representation of the selected start date.
    */
-  startDate: PropTypes.oneOfType([PropTypes.object]),
+  startDate: PropTypes.string,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
@@ -18,10 +19,10 @@ const propTypes = {
 };
 
 class DateRange extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
+      format: 'MM/DD/YYYY', // TODO: Get the format from i18n
       startDate: props.startDate,
       endDate: props.endDate,
     };
@@ -33,7 +34,7 @@ class DateRange extends React.Component {
     let startDateForRange = startDate;
     let endDateForRange = endDate;
 
-    if (startDateForRange.isAfter(endDateForRange)) {
+    if (moment(startDateForRange, this.state.format).isAfter(moment(endDateForRange, this.state.format))) {
       [startDateForRange, endDateForRange] = [endDateForRange, startDateForRange];
     }
 
