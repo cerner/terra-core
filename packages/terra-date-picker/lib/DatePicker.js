@@ -60,6 +60,10 @@ var propTypes = {
    */
   includeDates: _react.PropTypes.arrayOf(_react.PropTypes.string),
   /**
+   * Custom input attributes to apply to the date input.
+   */
+  inputAttributes: _react.PropTypes.object,
+  /**
    * Indicates the end date picker of a date range.
    */
   isEndDateRange: _react.PropTypes.bool,
@@ -128,6 +132,7 @@ var DatePicker = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
+          inputAttributes = _props.inputAttributes,
           endDate = _props.endDate,
           excludeDates = _props.excludeDates,
           filterDate = _props.filterDate,
@@ -138,7 +143,7 @@ var DatePicker = function (_React$Component) {
           isStartDateRange = _props.isStartDateRange,
           selectedDate = _props.selectedDate,
           startDate = _props.startDate,
-          customProps = _objectWithoutProperties(_props, ['endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate']);
+          customProps = _objectWithoutProperties(_props, ['inputAttributes', 'endDate', 'excludeDates', 'filterDate', 'includeDates', 'maxDate', 'minDate', 'isEndDateRange', 'isStartDateRange', 'selectedDate', 'startDate']);
 
       // TODO: Need translation from date_util
 
@@ -160,7 +165,7 @@ var DatePicker = function (_React$Component) {
       var portalPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
         selected: selectedMomentDate,
         onChange: this.handleChange,
-        customInput: _react2.default.createElement(_DateInput2.default, null),
+        customInput: _react2.default.createElement(_DateInput2.default, { inputAttributes: inputAttributes }),
         endDate: endMomentDate,
         excludeDates: exludeMomentDates,
         filterDate: filterDate,
@@ -185,7 +190,7 @@ var DatePicker = function (_React$Component) {
       var popupPicker = _react2.default.createElement(_reactDatepicker2.default, _extends({}, customProps, {
         selected: selectedMomentDate,
         onChange: this.handleChange,
-        customInput: _react2.default.createElement(_DateInput2.default, null),
+        customInput: _react2.default.createElement(_DateInput2.default, { inputAttributes: inputAttributes }),
         endDate: endMomentDate,
         excludeDates: exludeMomentDates,
         filterDate: filterDate,

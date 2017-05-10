@@ -179,3 +179,101 @@ exports[`test should render a default date input and date picker 1`] = `
       withPortal={false} />
   } />
 `;
+
+exports[`test should render a default date input with custom input attributes 1`] = `
+<ResponsiveElement
+  className="terra-DatePicker"
+  defaultElement={
+    <DatePicker
+      customInput={
+        <DatePickerInput
+          inputAttributes={
+            Object {
+              "id": "terra-date-input",
+              "name": "date-input",
+            }
+          } />
+      }
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disableDateAutoCorrection={false}
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      fixedHeight={true}
+      locale="en-US"
+      monthsShown={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selectsEnd={false}
+      selectsStart={false}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={true} />
+  }
+  responsiveTo="window"
+  small={
+    <DatePicker
+      customInput={
+        <DatePickerInput
+          inputAttributes={
+            Object {
+              "id": "terra-date-input",
+              "name": "date-input",
+            }
+          } />
+      }
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disableDateAutoCorrection={false}
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      fixedHeight={true}
+      locale="en-US"
+      monthsShown={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selectsEnd={false}
+      selectsStart={false}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={false} />
+  } />
+`;

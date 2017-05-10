@@ -13,6 +13,12 @@ it('should render a default date input and date picker', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a default date input with custom input attributes', () => {
+  const datePicker = <DatePicker utcOffset={0} inputAttributes={{ name: 'date-input', id: 'terra-date-input' }} />;
+  const wrapper = shallow(datePicker);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a date range', () => {
   const dateRange = <DateRange utcOffset={0} />;
   const wrapper = shallow(dateRange);
