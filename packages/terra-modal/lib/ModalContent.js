@@ -42,7 +42,7 @@ var propTypes = {
   classNameModal: _react.PropTypes.string,
   classNameOverlay: _react.PropTypes.string,
   closeOnOutsideClick: _react.PropTypes.bool,
-  closePortal: _react.PropTypes.func,
+  onRequestClose: _react.PropTypes.func.isRequired,
   isFullscreen: _react.PropTypes.bool,
   isScrollable: _react.PropTypes.bool,
   role: _react.PropTypes.string
@@ -79,19 +79,22 @@ var ModalContent = function (_React$Component) {
           classNameModal = _props.classNameModal,
           classNameOverlay = _props.classNameOverlay,
           closeOnOutsideClick = _props.closeOnOutsideClick,
-          closePortal = _props.closePortal,
+          onRequestClose = _props.onRequestClose,
           role = _props.role,
           isFullscreen = _props.isFullscreen,
           isScrollable = _props.isScrollable,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnOutsideClick', 'closePortal', 'role', 'isFullscreen', 'isScrollable']);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnOutsideClick', 'onRequestClose', 'role', 'isFullscreen', 'isScrollable']);
 
       var modalClassName = (0, _classnames2.default)(['terra-Modal', { 'terra-Modal--fullscreen': isFullscreen }, { 'terra-Modal--scrollable': isScrollable }, classNameModal]);
+
+      // Delete the closePortal prop that comes from react-portal.
+      delete customProps.closePortal;
 
       return _react2.default.createElement(
         _focusTrapReact2.default,
         null,
         _react2.default.createElement(_ModalOverlay2.default, {
-          onClick: closeOnOutsideClick ? closePortal : null,
+          onClick: closeOnOutsideClick ? onRequestClose : null,
           className: classNameOverlay
         }),
         _react2.default.createElement(

@@ -70,7 +70,7 @@ var propTypes = {
   /**
    * If set to true, the modal will rendered as opened
    **/
-  isOpened: _react.PropTypes.bool,
+  isOpened: _react.PropTypes.bool.isRequired,
   /**
    * If set to true, the modal dialog with have overflow-y set to scroll.
    * It is recommended not to use this prop and instead create a HOC
@@ -85,6 +85,10 @@ var propTypes = {
    * This callback is called when the modal is opened and rendered (useful for animating the DOMNode).
    **/
   onOpen: _react.PropTypes.func,
+  /**
+   * Function to set isOpened={false} and close the modal.
+   **/
+  onRequestClose: _react.PropTypes.func.isRequired,
   /**
    * This callback is called when the modal is (re)rendered.
    **/
@@ -108,7 +112,9 @@ var defaultProps = {
   role: 'document'
 };
 
-/* eslint-disable react/prefer-stateless-function */
+var KEYCODES = {
+  ESCAPE: 27
+};
 
 var Modal = function (_React$Component) {
   _inherits(Modal, _React$Component);
@@ -116,10 +122,30 @@ var Modal = function (_React$Component) {
   function Modal() {
     _classCallCheck(this, Modal);
 
-    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this));
+
+    _this.handleKeydown = _this.handleKeydown.bind(_this);
+    return _this;
   }
 
   _createClass(Modal, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      document.addEventListener('keydown', this.handleKeydown);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      document.removeEventListener('keydown', this.handleKeydown);
+    }
+  }, {
+    key: 'handleKeydown',
+    value: function handleKeydown(e) {
+      if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened && this.props.closeOnEsc) {
+        this.props.onRequestClose();
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -137,14 +163,13 @@ var Modal = function (_React$Component) {
           onOpen = _props.onOpen,
           onUpdate = _props.onUpdate,
           role = _props.role,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'role']);
+          onRequestClose = _props.onRequestClose,
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'role', 'onRequestClose']);
 
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
           isOpened: isOpened,
-          closeOnEsc: closeOnEsc,
-          closeOnOutsideClick: closeOnOutsideClick,
           onClose: onClose,
           onOpen: onOpen,
           onUpdate: onUpdate,
@@ -159,7 +184,8 @@ var Modal = function (_React$Component) {
             classNameOverlay: classNameOverlay,
             role: role,
             isFullscreen: isFullscreen,
-            isScrollable: isScrollable
+            isScrollable: isScrollable,
+            onRequestClose: onRequestClose
           },
           children
         )
