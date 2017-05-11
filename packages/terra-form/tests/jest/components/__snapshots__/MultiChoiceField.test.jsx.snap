@@ -1,0 +1,34 @@
+exports[`test should render a MultiChoiceField with the rest of the props 1`] = `
+<Field
+  error="This field is required"
+  help="Note: All checked languages should have at least 3 months experience"
+  isInline={false}
+  label="Select the programming languages you have experience with"
+  required={true}>
+  <Control
+    attrs={Object {}}
+    isInline={false}
+    label="C"
+    name="language_experience"
+    onChange={[Function]}
+    type="checkbox"
+    value="C" />
+  <Control
+    attrs={Object {}}
+    isInline={false}
+    label="java"
+    name="language_experience"
+    onChange={[Function]}
+    type="checkbox"
+    value="Java" />
+</Field>
+`;
+
+exports[`test should render a default component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false} />
+`;

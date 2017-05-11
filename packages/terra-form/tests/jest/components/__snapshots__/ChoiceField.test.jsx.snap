@@ -1,0 +1,41 @@
+exports[`test should render a ChoiceField with the rest of the props 1`] = `
+<Field
+  attrs={
+    Object {
+      "className": "healtheintent-application",
+    }
+  }
+  error="This field is required"
+  help="State Locations help determine what campus to place you at"
+  isInline={false}
+  label="What State do you live in?"
+  required={true}>
+  <Control
+    attrs={Object {}}
+    checked={false}
+    isInline={false}
+    label="Kansas"
+    name="children_present"
+    onChange={[Function]}
+    type="radio"
+    value="ks" />
+  <Control
+    attrs={Object {}}
+    checked={false}
+    isInline={false}
+    label="Missouri"
+    name="children_present"
+    onChange={[Function]}
+    type="radio"
+    value="MO" />
+</Field>
+`;
+
+exports[`test should render a default component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false} />
+`;

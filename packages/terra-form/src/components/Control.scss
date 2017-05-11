@@ -1,0 +1,18 @@
+@import '~terra-mixins';
+
+.terra-Form-control {
+  display: block;
+  margin-bottom: 0.714em;
+  width: auto;
+}
+
+@media screen and (min-width: $terra-small-breakpoint) {
+  .terra-Form-control--inline {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.terra-Form-control {
+  @include terra-margin-end(0.714em);
+}
