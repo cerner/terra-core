@@ -32,6 +32,8 @@ var _TetherComponent = require('./TetherComponent');
 
 var _TetherComponent2 = _interopRequireDefault(_TetherComponent);
 
+require('./PopupPresenter.scss');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -48,16 +50,14 @@ var propTypes = {
    */
   closeOnEsc: _react.PropTypes.bool,
   closeOnOutsideClick: _react.PropTypes.bool,
-  constraints: _react.PropTypes.array,
   content: _react.PropTypes.element,
   contentAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
-  contentOffset: _react.PropTypes.string,
   isOpen: _react.PropTypes.bool,
   onRequestClose: _react.PropTypes.func,
+  renderElementTo: _react.PropTypes.any,
   showArrow: _react.PropTypes.bool,
   target: _react.PropTypes.element.isRequired,
-  targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions),
-  targetOffset: _react.PropTypes.string
+  targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions)
 };
 
 var defaultProps = {
@@ -83,33 +83,41 @@ var PopupPresenter = function (_React$Component) {
           className = _props.className,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
-          constraints = _props.constraints,
           content = _props.content,
           contentAttachment = _props.contentAttachment,
-          contentOffset = _props.contentOffset,
           isOpen = _props.isOpen,
           onRequestClose = _props.onRequestClose,
+          renderElementTo = _props.renderElementTo,
           target = _props.target,
           targetAttachment = _props.targetAttachment,
-          targetOffset = _props.targetOffset,
-          arrowAlignment = _props.arrowAlignment,
-          arrowPosition = _props.arrowPosition,
           showArrow = _props.showArrow,
-          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'target', 'targetAttachment', 'targetOffset', 'arrowAlignment', 'arrowPosition', 'showArrow']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
+      var contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
+      var constraints = [{
+        to: 'scrollParent',
+        // attachment: 'together',
+        pin: true
+      }, {
+        to: 'window',
+        // attachment: 'together',
+        pin: true
+      }];
+
       if (isOpen && content) {
-        var _arrowAlignment = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
-        var _arrowPosition = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
-        var arrowPxOffset = PopupPresenter.calculateArrowOffest(_arrowPosition, contentOffset, targetOffset);
+        var arrowAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
+        var arrowPosition = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
+        var arrowPxOffset = PopupPresenter.calculateArrowOffest(arrowPosition, contentOffset, '0 0');
+
         var frameProps = {
           className: className,
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
           onRequestClose: onRequestClose,
-          arrowAlignment: _arrowAlignment,
-          arrowPosition: _arrowPosition,
-          showArrow: PopupPresenter.shouldDisplayArrow(showArraow, contentAttachment),
+          arrowAlignment: arrowAlignment,
+          arrowPosition: arrowPosition,
+          showArrow: PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment),
           arrowPxOffset: arrowPxOffset
         };
 
@@ -136,23 +144,32 @@ var PopupPresenter = function (_React$Component) {
       if (contentOffset) {
         tetherOptions.offset = contentOffset;
       }
-      if (targetOffset) {
-        tetherOptions.targetOffset = targetOffset;
-      }
+      // if (targetOffset) {
+      //   tetherOptions.targetOffset = targetOffset;
+      // }
       if (targetAttachment) {
         tetherOptions.targetAttachment = targetAttachment;
       }
+      if (renderElementTo) {
+        tetherOptions.renderElementTo = renderElementTo;
+      }
 
+      tetherOptions.classes = {
+        element: 'terra-PopupPresenter'
+      };
+
+      //kasper check here if parent node is a modal.... this is going to get messy
+      //Portal or ModalContent
       return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
     }
   }], [{
     key: 'arrowAlignmentFromAttachment',
     value: function arrowAlignmentFromAttachment(contentAttachment) {
-      var parsedValue = PopupPresenter.parseStringPosition(value);
+      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
 
-      if (parsedValue.vertical === 'middle' || parsedValue.horizontal === 'center') {
+      if (parsedAttachment.vertical === 'middle' || parsedAttachment.horizontal === 'center') {
         return 'Center';
-      } else if (parsedValue.horizontal === 'left') {
+      } else if (parsedAttachment.horizontal === 'left') {
         return 'Start';
       } else {
         return 'End';
@@ -161,12 +178,12 @@ var PopupPresenter = function (_React$Component) {
   }, {
     key: 'arrowPositionFromAttachment',
     value: function arrowPositionFromAttachment(contentAttachment) {
-      var parsedValue = PopupPresenter.parseStringPosition(value);
+      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
 
-      if (parsedValue.vertical === 'top') {
+      if (parsedAttachment.vertical === 'top') {
         return 'Top';
-      } else if (parsedValue.vertical === 'middle') {
-        if (parsedValue.horizontal === 'left') {
+      } else if (parsedAttachment.vertical === 'middle') {
+        if (parsedAttachment.horizontal === 'left') {
           return 'Start';
         }
         return 'End';
@@ -178,6 +195,7 @@ var PopupPresenter = function (_React$Component) {
     key: 'parseOffset',
     value: function parseOffset(value) {
       var parsedValue = PopupPresenter.parseStringPosition(value);
+      return { vertical: parseFloat(parsedValue.vertical), horizontal: parseFloat(parsedValue.horizontal) };
     }
   }, {
     key: 'parseStringPosition',
@@ -192,7 +210,7 @@ var PopupPresenter = function (_React$Component) {
   }, {
     key: 'shouldDisplayArrow',
     value: function shouldDisplayArrow(showArrow, contentAttachment) {
-      if (showArrow === true && contentAttachment !== 'middle center') {
+      if (showArrow === true && contentAttachment === 'middle center') {
         return false;
       }
       return showArrow;
@@ -203,10 +221,15 @@ var PopupPresenter = function (_React$Component) {
       var parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
       var parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
 
-      if (['top', 'bottom'].indexOf(position) >= 0) {
+      if (['Top', 'Bottom'].indexOf(position) >= 0) {
         return parsedContentValue.horizontal + parsedTargetValue.horizontal;
       }
       return parsedContentValue.vertical + parsedTargetValue.vertical;
+    }
+  }, {
+    key: 'caculateContentOffset',
+    value: function caculateContentOffset(contentAttachment, targetAttachment) {
+      return '0 0';
     }
   }]);
 

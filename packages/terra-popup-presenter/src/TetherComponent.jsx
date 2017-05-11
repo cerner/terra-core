@@ -39,8 +39,6 @@ const propTypes = {
 const defaultProps = {
   renderElementTag: 'div',
   renderElementTo: null,
-  contentOffset: '0 0',
-  targetOffset: '0 0',
 };
 
 class TetherComponent extends React.Component {

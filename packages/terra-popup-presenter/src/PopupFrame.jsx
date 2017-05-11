@@ -62,7 +62,7 @@ const defaultProps = {
 class PopupFrame extends React.Component {
   static spacerFromOffset(offset, position) {
     const styleOffset = {};
-    if (['top','bottom'].indexOf(position) >= 0) {
+    if (['Top','Bottom'].indexOf(position) >= 0) {
       styleOffset.width = offset.toString();
       styleOffset.maxWidth = 'calc(100% - 30px)';
     } else {
@@ -113,6 +113,7 @@ class PopupFrame extends React.Component {
       arrowAlignment,
       arrowPosition,
       showArrow,
+      arrowPxOffset,
       ...customProps,
     } = this.props;
 
@@ -129,27 +130,14 @@ class PopupFrame extends React.Component {
 
     let arrow;
     if (showArrow) {
-      let startSpacer;
-      let endSpacer;
-
-      if (arrowPxOffset) {
-        let offset = arrowPxOffset;
-        if (arrowAlignment === 'Center') {
-          offset *= 2;
-        }
-
-        if (offset < 0) {
-          endSpacer = PopupFrame.spacerFromOffset(Math.abs(offset), arrowPosition);
-        } else {
-          startSpacer = PopupFrame.spacerFromOffset(offset, arrowPosition);
-        }
+      let offset = arrowPxOffset;
+      if (arrowAlignment === 'Center') {
+        offset *= 2;
       }
 
       arrow = (
         <div className={arrowClassNames}>
-          {startSpacer}
-          {<PopupArrow direction={arrowPosition} />}
-          {endSpacer}
+          {<PopupArrow position={arrowPosition} offset={offset} />}
         </div>
       );
     }

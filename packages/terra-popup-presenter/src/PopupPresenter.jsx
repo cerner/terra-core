@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import onClickOutside from 'react-onclickoutside'
 import PopupFrame from './PopupFrame'
 import TetherComponent from './TetherComponent'
+import './PopupPresenter.scss';
 
 const propTypes = {
   /**
@@ -11,16 +12,14 @@ const propTypes = {
    */
   closeOnEsc: PropTypes.bool,
   closeOnOutsideClick: PropTypes.bool,
-  constraints: PropTypes.array,
   content: PropTypes.element,
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions).isRequired,
-  contentOffset: PropTypes.string,
   isOpen: PropTypes.bool,
   onRequestClose: PropTypes.func,
+  renderElementTo: PropTypes.any,
   showArrow: PropTypes.bool,
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
-  targetOffset: PropTypes.string,
 };
 
 const defaultProps = {
@@ -32,11 +31,11 @@ const WrappedPopupFrame = onClickOutside(PopupFrame);
 
 class PopupPresenter extends React.Component {
   static arrowAlignmentFromAttachment(contentAttachment) {
-    const parsedValue = PopupPresenter.parseStringPosition(value);
+    const parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
 
-    if (parsedValue.vertical === 'middle' || parsedValue.horizontal === 'center') {
+    if (parsedAttachment.vertical === 'middle' || parsedAttachment.horizontal === 'center') {
       return 'Center';
-    } else if (parsedValue.horizontal === 'left') {
+    } else if (parsedAttachment.horizontal === 'left') {
       return 'Start';
     } else {
       return 'End';
@@ -44,12 +43,12 @@ class PopupPresenter extends React.Component {
   }
 
   static arrowPositionFromAttachment(contentAttachment) {
-    const parsedValue = PopupPresenter.parseStringPosition(value);
+    const parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
 
-    if (parsedValue.vertical === 'top') {
+    if (parsedAttachment.vertical === 'top') {
       return 'Top';
-    } else if (parsedValue.vertical === 'middle') {
-      if (parsedValue.horizontal === 'left') {
+    } else if (parsedAttachment.vertical === 'middle') {
+      if (parsedAttachment.horizontal === 'left') {
         return 'Start';
       }
       return 'End';
@@ -60,6 +59,7 @@ class PopupPresenter extends React.Component {
 
   static parseOffset(value) {
     const parsedValue = PopupPresenter.parseStringPosition(value);
+    return {vertical: parseFloat(parsedValue.vertical), horizontal: parseFloat(parsedValue.horizontal)};
   }
 
   static parseStringPosition(value) {
@@ -68,7 +68,7 @@ class PopupPresenter extends React.Component {
   }
 
   static shouldDisplayArrow(showArrow, contentAttachment) {
-    if (showArrow === true && contentAttachment !== 'middle center') {
+    if (showArrow === true && contentAttachment === 'middle center') {
       return false;
     }
     return showArrow;
@@ -78,10 +78,14 @@ class PopupPresenter extends React.Component {
     const parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
     const parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
 
-    if (['top','bottom'].indexOf(position) >= 0) {
+    if (['Top','Bottom'].indexOf(position) >= 0) {
       return parsedContentValue.horizontal + parsedTargetValue.horizontal;
     }
     return parsedContentValue.vertical + parsedTargetValue.vertical;
+  }
+
+  static caculateContentOffset(contentAttachment, targetAttachment) {
+    return '0 0';
   }
 
   render () {
@@ -89,26 +93,37 @@ class PopupPresenter extends React.Component {
       className, 
       closeOnEsc,
       closeOnOutsideClick,
-      constraints,
       content,
       contentAttachment,
-      contentOffset,
       isOpen,
       onRequestClose,
+      renderElementTo,
       target,
       targetAttachment,
-      targetOffset,
-      arrowAlignment,
-      arrowPosition,
       showArrow,
       ...customProps 
     } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
+    const contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
+    const constraints = [
+      {
+        to: 'scrollParent',
+        // attachment: 'together',
+        pin: true
+      },
+      {
+        to: 'window',
+        // attachment: 'together',
+        pin: true
+      }
+    ];
+
     if (isOpen && content) {
-      const arrowAlignment = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
-      const arrowPosition = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
-      const arrowPxOffset = PopupPresenter.calculateArrowOffest(arrowPosition, contentOffset, targetOffset);
+      const arrowAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
+      const arrowPosition = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
+      const arrowPxOffset = PopupPresenter.calculateArrowOffest(arrowPosition, contentOffset, '0 0');
+
       const frameProps = {
         className,
         closeOnEsc,
@@ -116,7 +131,7 @@ class PopupPresenter extends React.Component {
         onRequestClose,
         arrowAlignment,
         arrowPosition,
-        showArrow: PopupPresenter.shouldDisplayArrow(showArraow, contentAttachment),
+        showArrow: PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment),
         arrowPxOffset,
       };
 
@@ -143,13 +158,22 @@ class PopupPresenter extends React.Component {
     if (contentOffset) {
       tetherOptions.offset = contentOffset;
     }
-    if (targetOffset) {
-      tetherOptions.targetOffset = targetOffset;
-    }
+    // if (targetOffset) {
+    //   tetherOptions.targetOffset = targetOffset;
+    // }
     if (targetAttachment) {
       tetherOptions.targetAttachment = targetAttachment;
     }
+    if (renderElementTo) {
+      tetherOptions.renderElementTo = renderElementTo;
+    }
 
+    tetherOptions.classes = {
+      element: 'terra-PopupPresenter'
+    };
+
+    //kasper check here if parent node is a modal.... this is going to get messy
+    //Portal or ModalContent
     return <TetherComponent {...tetherOptions} />;
   }
 }

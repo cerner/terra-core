@@ -19,16 +19,14 @@ class DummyApp extends React.Component {
   }
 
   render() {
-    const contentSection = <p>i'm popup content, hear me roar!</p>;
-
-    const constraints = [{to: 'window', attachment: 'together'}];
+    const contentSection = <p style={{height: '200px', width: '200px'}}>i'm popup content, hear me roar!</p>;
 
     return (
       <PopupPresenter 
-        constraints={constraints}
         content={contentSection}
         contentAttachment="bottom center"
         isOpen={this.state.open}
+        showArrow
         target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
         targetAttachment="top center"
         onRequestClose={this.handleRequestClose}

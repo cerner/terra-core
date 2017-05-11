@@ -7,7 +7,7 @@ import IconCaretUp from 'terra-icon/lib/icon/IconCaretUp';
 import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
 import './PopupArrow.scss';
 
-const arrowDirections = [
+const arrowPositions = [
   'Top',
   'Bottom',
   'Start',
@@ -16,17 +16,32 @@ const arrowDirections = [
 
 const propTypes = {
   /**
-   * The direction of the arrow image.
+   * The position of the arrow image.
    */
-  direction: PropTypes.oneOf(arrowDirections),
+  position: PropTypes.oneOf(arrowPositions),
+  offset: PropTypes.number,
 };
 
 const defaultProps = {
-  direction: 'Top',
+  position: 'Top',
+  offset: 0,
+};
+
+const spacerFromOffset = (offset, position) => {
+  const styleOffset = {};
+  if (['Top','Bottom'].indexOf(position) >= 0) {
+    styleOffset.width = offset.toString() + 'px';
+    styleOffset.maxWidth = 'calc(100% - 30px)';
+  } else {
+    styleOffset.height = offset.toString() + 'px';
+    styleOffset.maxHeight = 'calc(100% - 30px)';
+  }
+  return <div className="terra-PopupArrow-spacer" style={styleOffset} />;
 };
 
 const PopupArrow = ({
-    direction,
+    position,
+    offset,
     ...customProps
   }) => {
   const arrowClassNames = classNames([
@@ -34,12 +49,23 @@ const PopupArrow = ({
     customProps.className,
   ]);
 
+  let startSpacer;
+  let endSpacer;
+  const absOffset = Math.abs(offset);
+  if (absOffset > 0) {
+    if (offset < 0) {
+      endSpacer = spacerFromOffset(absOffset, position);
+    } else {
+      startSpacer = spacerFromOffset(absOffset, position);
+    }
+  }
+
   let arrow;
-  if (direction === 'Bottom') {
+  if (position === 'Bottom') {
     arrow = <IconCaretDown height="30" width="30" />;
-  } else if (direction === 'Start') {
+  } else if (position === 'Start') {
     arrow = <IconCaretLeft height="30" width="30" />;
-  } else if (direction === 'End') {
+  } else if (position === 'End') {
     arrow = <IconCaretRight height="30" width="30" />;
   } else {
     arrow = <IconCaretUp height="30" width="30" />;
@@ -47,7 +73,9 @@ const PopupArrow = ({
 
   return (
     <div {...customProps} className={arrowClassNames}>
+      {startSpacer}
       {arrow}
+      {endSpacer}
     </div>
   );
 };

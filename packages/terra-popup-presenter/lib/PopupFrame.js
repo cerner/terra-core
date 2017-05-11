@@ -88,7 +88,7 @@ var PopupFrame = function (_React$Component) {
     key: 'spacerFromOffset',
     value: function spacerFromOffset(offset, position) {
       var styleOffset = {};
-      if (['top', 'bottom'].indexOf(position) >= 0) {
+      if (['Top', 'Bottom'].indexOf(position) >= 0) {
         styleOffset.width = offset.toString();
         styleOffset.maxWidth = 'calc(100% - 30px)';
       } else {
@@ -150,7 +150,8 @@ var PopupFrame = function (_React$Component) {
           arrowAlignment = _props.arrowAlignment,
           arrowPosition = _props.arrowPosition,
           showArrow = _props.showArrow,
-          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowAlignment', 'arrowPosition', 'showArrow']);
+          arrowPxOffset = _props.arrowPxOffset,
+          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowAlignment', 'arrowPosition', 'showArrow', 'arrowPxOffset']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', _defineProperty({}, 'terra-PopupFrame--arrow' + arrowPosition, arrowPosition), customProps.className]);
 
@@ -158,28 +159,15 @@ var PopupFrame = function (_React$Component) {
 
       var arrow = void 0;
       if (showArrow) {
-        var startSpacer = void 0;
-        var endSpacer = void 0;
-
-        if (arrowPxOffset) {
-          var offset = arrowPxOffset;
-          if (arrowAlignment === 'Center') {
-            offset *= 2;
-          }
-
-          if (offset < 0) {
-            endSpacer = PopupFrame.spacerFromOffset(Math.abs(offset), arrowPosition);
-          } else {
-            startSpacer = PopupFrame.spacerFromOffset(offset, arrowPosition);
-          }
+        var offset = arrowPxOffset;
+        if (arrowAlignment === 'Center') {
+          offset *= 2;
         }
 
         arrow = _react2.default.createElement(
           'div',
           { className: arrowClassNames },
-          startSpacer,
-          _react2.default.createElement(_PopupArrow2.default, { direction: arrowPosition }),
-          endSpacer
+          _react2.default.createElement(_PopupArrow2.default, { position: arrowPosition, offset: offset })
         );
       }
 
