@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
+import TableRow from './TableRow';
 
 const KEYCODES = {
   ENTER: 13,
@@ -108,16 +109,19 @@ class SingleSelectableRows extends React.Component {
 
   clonedChildItems(rows) {
     return rows.map((row, index) => {
-      const wrappedOnClick = this.wrappedOnClickForRow(row, index);
-      const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
-      const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
-      return React.cloneElement(row, newProps);
+      if (row.type === TableRow) {
+        const wrappedOnClick = this.wrappedOnClickForRow(row, index);
+        const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
+        const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
+        return React.cloneElement(row, newProps);
+      }
+      return row;
     });
   }
 
   render() {
     const { children, ...customProps } = this.props;
-    const clonedChilItems = this.clonedChildItems(children);
+    const clonedChildItems = this.clonedChildItems(children);
     if ('onClick' in customProps) {
       delete customProps.onClick;
     }
@@ -126,7 +130,7 @@ class SingleSelectableRows extends React.Component {
     }
     return (
       <TableRows {...customProps}>
-        {clonedChilItems}
+        {clonedChildItems}
       </TableRows>
     );
   }

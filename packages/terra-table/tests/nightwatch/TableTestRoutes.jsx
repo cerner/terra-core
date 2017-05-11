@@ -10,6 +10,7 @@ import SingleRowTable from './components/SingleRowTable';
 import SingleRowSelectableTable from './components/SingleRowSelectableTable';
 import TableWithHighlightedRows from './components/TableWithHighlightedRows';
 import TableWithSortIndicator from './components/TableWithSortIndicator';
+import TableWithSubheaders from './components/TableWithSubheaders';
 
 const routes = (
   <div>
@@ -21,6 +22,7 @@ const routes = (
     <Route path="/tests/table-tests/selectable-table" component={SingleRowSelectableTable} />
     <Route path="/tests/table-tests/table-highlighted-rows" component={TableWithHighlightedRows} />
     <Route path="/tests/table-tests/table-sort-indicator" component={TableWithSortIndicator} />
+    <Route path="/tests/table-tests/table-subheaders" component={TableWithSubheaders} />
   </div>
 );
 

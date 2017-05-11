@@ -14,6 +14,7 @@ import TableHeaderCellSrc from '!raw-loader!terra-table/src/TableHeaderCell';
 import TableRowSrc from '!raw-loader!terra-table/src/TableRow';
 import TableRowsSrc from '!raw-loader!terra-table/src/TableRows';
 import TableCellSrc from '!raw-loader!terra-table/src/TableCell';
+import TableSubheaderSrc from '!raw-loader!terra-table/src/TableSubheader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 import NoStripedTable from './NoStripedTable';
@@ -25,6 +26,7 @@ import TableWithNonSelectableRow from './TableWithNonSelectableRow';
 import TableWithSortingIndicator from './TableWithSortingIndicator';
 import TableWithLongContent from './TableWithLongContent';
 import TableWithCustomCells from './TableWithCustomCells';
+import TableWithSubheaders from './TableWithSubheaders';
 
 const TableExamples = () => (
   <div>
@@ -43,7 +45,9 @@ const TableExamples = () => (
     <h2>Table Row</h2>
     <PropsTable id="props-tableRow" src={TableRowSrc} />
     <h2>Table Cell</h2>
-    <PropsTable id="props-tablecell" src={TableCellSrc} />
+    <PropsTable id="props-tableCell" src={TableCellSrc} />
+    <h2>Table Subheader</h2>
+    <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} />
     <h2>Table without zebra stripes</h2>
     <NoStripedTable />
     <br />
@@ -70,6 +74,9 @@ const TableExamples = () => (
     <br />
     <h2>Table with custom cells</h2>
     <TableWithCustomCells />
+    <br />
+    <h2>Table with subheaders</h2>
+    <TableWithSubheaders />
   </div>
 );
 

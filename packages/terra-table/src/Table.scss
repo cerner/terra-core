@@ -54,6 +54,11 @@
       margin-bottom: 0;
     }
 
+    .terra-Table-subheader {
+      background-color: $terra-table-subheader-background-color;
+      font-weight: bold;
+    }
+
     th,
     td {
       @include terra-text-align-start;

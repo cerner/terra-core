@@ -1,0 +1,39 @@
+import React, { PropTypes } from 'react';
+import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
+
+const propTypes = {
+  /**
+   * Content to be displayed in the subheader row
+   */
+  content: PropTypes.node.isRequired,
+
+  /**
+   * Number of columns the subheader must span
+   */
+  count: PropTypes.number,
+};
+
+const TableSubheader = ({
+  content,
+  count,
+  ...customProps
+}) => {
+  const contentClassName = classNames([
+    'terra-Table-subheader',
+    customProps.className,
+  ]);
+
+  // count is based on the number of columns and assigned in the table component which contains this subheader
+  return (
+    <tr className="terra-Table-subheaderRow">
+      <td {...customProps} className={contentClassName} colSpan={count}>
+        {content}
+      </td>
+    </tr>
+  );
+};
+
+TableSubheader.propTypes = propTypes;
+
+export default TableSubheader;
