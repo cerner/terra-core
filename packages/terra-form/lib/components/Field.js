@@ -43,7 +43,11 @@ var propTypes = {
   /**
    * Label of the input
    */
-  label: _react.PropTypes.node
+  label: _react.PropTypes.node,
+  /**
+   * Determines whether the field is required
+   */
+  required: _react.PropTypes.bool
 };
 
 var defaultProps = {
@@ -51,7 +55,8 @@ var defaultProps = {
   error: null,
   help: null,
   isInline: false,
-  label: null
+  label: null,
+  required: false
 };
 
 var Field = function Field(_ref) {
@@ -60,9 +65,10 @@ var Field = function Field(_ref) {
       help = _ref.help,
       isInline = _ref.isInline,
       label = _ref.label,
-      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'isInline', 'label']);
+      required = _ref.required,
+      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'isInline', 'label', 'required']);
 
-  var fieldClasses = (0, _classnames2.default)('terra-Form-field', { 'terra-Form-field--inline': isInline }, customProps.className);
+  var fieldClasses = (0, _classnames2.default)('terra-Form-field', { 'terra-Form-field--inline': isInline }, { 'terra-Form-field--required': required }, customProps.className);
 
   return _react2.default.createElement(
     'p',

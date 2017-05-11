@@ -3,7 +3,8 @@ exports[`test should render a TextAreaField with the rest of the props 1`] = `
   error="Name is required"
   help="The name given to you at birth."
   isInline={false}
-  label="Profile Description">
+  label="Profile Description"
+  required={false}>
   <Textarea
     autoFocus={true}
     cols={null}
@@ -22,7 +23,8 @@ exports[`test should render a default TextAreaField component 1`] = `
   error={null}
   help={null}
   isInline={false}
-  label={null}>
+  label={null}
+  required={false}>
   <Textarea
     cols={null}
     maxLength={null}

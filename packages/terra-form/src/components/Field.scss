@@ -17,6 +17,7 @@
 
 .terra-Form-label {
   display: block;
+  font-weight: 700;
   margin-bottom: 0.357em;
 }
 
@@ -29,4 +30,13 @@
   color: $terra-red-70;
   display: block;
   margin-top: 0.357em;
+}
+
+.terra-Form-field--required > label:first-child {
+  &::before {
+    @include terra-padding-end(0.357em);
+    color: $terra-red-70;
+    content: '*';
+    display: inline-block;
+  }
 }
