@@ -1,4 +1,5 @@
 @import '~terra-mixins';
+@import './variables';
 
 .terra-ListItem-hasChevron {
   display: block;
@@ -24,19 +25,20 @@
     top: 50%;
     transform: translate(0, -50%);
   }
-  .terra-ListItem-chevron > * {color: $terra-grey-30;}
+  .terra-ListItem-chevron > * {color: $terra-list-chevron;}
 }
 
-// Update with UX styling
 .terra-ListItem--selected {
-  background-color: rgba(239, 68, 0, 0.53);
+  background-color: $terra-list-item-selected;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.08), 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .terra-ListItem-isSelectable {
   cursor: pointer;
 
-  &.terra-ListItem:hover {background-color: $terra-blue-10;}
-
-  // Update with UX styling
-  &.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}
+  &.terra-ListItem:hover {
+    background-color: rgba($terra-list-item-hover, $terra-list-item-hover-opacity);
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.08), 0 2px 3px rgba(0, 0, 0, 0.2);}
+  &.terra-ListItem:focus {outline: none;}
+  &.terra-ListItem--selected:hover {background-color: rgba($terra-list-item-hover, $terra-list-item-hover-opacity);}
 }
