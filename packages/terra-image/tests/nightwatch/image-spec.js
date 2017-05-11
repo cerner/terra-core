@@ -13,14 +13,14 @@ module.exports = {
 
   'Displays a default button with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/default`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/image-tests/default`);
   },
   'Displays non fluid image examples': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/non-fluid`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/image-tests/non-fluid`);
   },
   'Displays fluid image examples': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/fluid`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/image-tests/fluid`);
   },
 };

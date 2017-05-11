@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute, Redirect } from 'react-router';
 import App from './App';
 import Home from './Home';
 
@@ -60,7 +60,7 @@ import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTest
 /* eslint-enable import/first */
 
 ReactDOM.render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />

@@ -13,22 +13,22 @@ module.exports = {
 
   'Displays a default badge with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/default`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/badge-tests/default`);
   },
 
   'Displays intent badges with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/intent`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/badge-tests/intent`);
   },
 
   'Displays size badges with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/size`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/badge-tests/size`);
   },
 
   'Displays icon badges with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/icon`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/badge-tests/icon`);
   },
 };
 

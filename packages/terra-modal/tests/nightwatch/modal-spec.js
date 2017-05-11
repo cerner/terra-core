@@ -12,7 +12,7 @@ module.exports = {
 
   'isOpen prop': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-open`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/is-open`)
       .waitForElementPresent('.button-open-modal', 1000)
       .waitForElementNotPresent('.terra-Modal', 1000)
       .click('.button-open-modal')
@@ -23,19 +23,19 @@ module.exports = {
 
   'isFullscreen={true}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-fullscreen`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/is-fullscreen`)
       .waitForElementPresent('.terra-Modal.terra-Modal--fullscreen', 1000);
   },
 
   'isFullscreen={false}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/disable-close-on-esc`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/disable-close-on-esc`)
       .waitForElementNotPresent('.terra-Modal.terra-Modal--fullscreen', 1000);
   },
 
   'closeOnOutsideClick={true}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-fullscreen`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/is-fullscreen`)
       .waitForElementPresent('.terra-Modal', 1000)
       .click('.terra-Modal-overlay')
       .waitForElementNotPresent('.terra-Modal', 1000);
@@ -43,7 +43,7 @@ module.exports = {
 
   'closeOnOutsideClick={false}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/disable-close-on-outside-click`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/disable-close-on-outside-click`)
       .waitForElementPresent('.terra-Modal', 1000)
       .click('.terra-Modal-overlay')
       .waitForElementPresent('.terra-Modal', 1000);
@@ -51,7 +51,7 @@ module.exports = {
 
   'closeOnEsc={false}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/disable-close-on-esc`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/disable-close-on-esc`)
       .waitForElementPresent('.terra-Modal', 1000)
       .setValue('body', [browser.Keys.ESC])
       .waitForElementPresent('.terra-Modal', 1000);
@@ -59,7 +59,7 @@ module.exports = {
 
   'closeOnEsc={true}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-fullscreen`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/is-fullscreen`)
       .waitForElementPresent('.terra-Modal', 1000)
       .setValue('body', [browser.Keys.ESC])
       .waitForElementPresent('.terra-Modal', 1000);
@@ -67,28 +67,28 @@ module.exports = {
 
   'set ariaLabel': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-fullscreen`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/is-fullscreen`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('aria-label').which.contains('Terra Modal');
   },
 
   'role default value': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/is-fullscreen`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/is-fullscreen`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('role').which.contains('document');
   },
 
   'role is overridable': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/override-role`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/override-role`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('role').which.contains('button');
   },
 
   'event hooks: onOpen': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/event-hooks`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/event-hooks`)
       .waitForElementPresent('.button-open-modal', 1000)
       .waitForElementNotPresent('.terra-Modal', 1000)
       .expect.element('#onOpen').text.to.contain('onOpen: Not Called');
@@ -106,7 +106,7 @@ module.exports = {
 
   'event hooks: onUpdate': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/event-hooks`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/event-hooks`)
       .waitForElementPresent('.button-open-modal', 1000)
       .waitForElementNotPresent('.terra-Modal', 1000)
       .expect.element('#onUpdate').text.to.contain('onUpdate: Not Called');
@@ -125,7 +125,7 @@ module.exports = {
 
   'event hooks: onClose': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/event-hooks`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/event-hooks`)
       .waitForElementPresent('.button-open-modal', 1000)
       .waitForElementNotPresent('.terra-Modal', 1000)
       .expect.element('#onClose').text.to.contain('onClose: Not Called');
@@ -143,7 +143,7 @@ module.exports = {
 
   'event hooks: beforeClose': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/event-hooks`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/event-hooks`)
       .waitForElementPresent('.button-open-modal', 1000)
       .waitForElementNotPresent('.terra-Modal', 1000)
       .expect.element('#beforeClose').text.to.contain('beforeClose: Not Called');
@@ -161,34 +161,34 @@ module.exports = {
 
   'append css class to modal': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/append-class`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/append-class`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('class').which.contains('terra-Modal modal-custom-class');
   },
 
   'append css class to overlay': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/append-class`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/append-class`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal-overlay').to.have.attribute('class').which.contains('terra-Modal-overlay overlay-custom-class');
   },
 
   'content overflow example': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/content-overflow`)
       .waitForElementPresent('.terra-Modal', 1000);
   },
 
   'modal is focusable': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/no-focusable-content`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/no-focusable-content`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('tabindex').which.equals('0');
   },
 
   'background does not scroll when modal is open': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/content-overflow`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('html').to.have.attribute('style').which.equals('overflow: hidden;');
 
@@ -200,21 +200,21 @@ module.exports = {
 
   'isScrollable default value': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/content-overflow`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal');
   },
 
   'isScrollable={false}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-false`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/scrollable-false`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal');
   },
 
   'isScrollable={true}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-true`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/tests/modal-tests/scrollable-true`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal terra-Modal--scrollable');
   },
