@@ -1,8 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand.",
   "repository": {
     "type": "git",
