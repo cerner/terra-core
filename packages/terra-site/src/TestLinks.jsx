@@ -24,7 +24,6 @@ const TestLinks = () => (
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
       <li><Link to="/tests/status-tests">Status Tests</Link></li>
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
-      <li><Link to="/tests/time-input-tests">Time Input Tests</Link></li>
       <li><Link to="/tests/modal-tests">Modal Tests</Link></li>
       <li><Link to="/tests/progress-bar-tests">ProgressBar Tests</Link></li>
       <li><Link to="/tests/grid-tests">Grid Tests</Link></li>
