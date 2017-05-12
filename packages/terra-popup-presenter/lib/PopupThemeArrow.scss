@@ -1,4 +1,0 @@
-@import '../node_modules/tether/src/css/helpers/tether';
-@import '../node_modules/tether/src/css/helpers/tether-theme-arrows';
-@include tether($themePrefix: $themePrefix);
-@include tether-theme-arrows($themePrefix: 'terra-PopupPresenter', $themeName: 'arrows', $arrowSize: 16px, $backgroundColor: #fff, $color: #eee, $useDropShadow: true);

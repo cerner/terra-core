@@ -190,17 +190,24 @@ var TetherComponent = function (_React$Component) {
       this._tether.position();
     }
   }, {
+    key: 'attachmentOverlap',
+    value: function attachmentOverlap(target, presenter) {
+      var targetBounds = _tether2.default.Utils.getBounds(this._targetNode);
+      var presenterBounds = _tether2.default.Utils.getBounds(this._elementParentNode);
+      return { targetBounds: targetBounds, presenterBounds: presenterBounds };
+    }
+  }, {
     key: 'handleOnUpdate',
     value: function handleOnUpdate(event) {
       if (this.props.onUpdate) {
-        this.props.onUpdate(event);
+        this.props.onUpdate(event, this.attachmentOverlap());
       }
     }
   }, {
     key: 'handleOnRepositioned',
     value: function handleOnRepositioned(event) {
       if (this.props.onRepositioned) {
-        this.props.onRepositioned(event);
+        this.props.onRepositioned(event, this.attachmentOverlap());
       }
     }
   }, {

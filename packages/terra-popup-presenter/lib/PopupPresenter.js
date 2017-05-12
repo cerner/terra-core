@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -72,13 +72,98 @@ var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default)
 var PopupPresenter = function (_React$Component) {
   _inherits(PopupPresenter, _React$Component);
 
-  function PopupPresenter() {
+  _createClass(PopupPresenter, null, [{
+    key: 'arrowAlignmentFromAttachment',
+    value: function arrowAlignmentFromAttachment(contentAttachment) {
+      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
+
+      if (parsedAttachment.vertical === 'middle' || parsedAttachment.horizontal === 'center') {
+        return 'Center';
+      } else if (parsedAttachment.horizontal === 'left') {
+        return 'Start';
+      } else {
+        return 'End';
+      }
+    }
+  }, {
+    key: 'arrowPositionFromAttachment',
+    value: function arrowPositionFromAttachment(contentAttachment) {
+      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
+
+      if (parsedAttachment.vertical === 'top') {
+        return 'Top';
+      } else if (parsedAttachment.vertical === 'middle') {
+        if (parsedAttachment.horizontal === 'left') {
+          return 'Start';
+        }
+        return 'End';
+      } else {
+        return 'Bottom';
+      }
+    }
+  }, {
+    key: 'parseOffset',
+    value: function parseOffset(value) {
+      var parsedValue = PopupPresenter.parseStringPosition(value);
+      return { vertical: parseFloat(parsedValue.vertical), horizontal: parseFloat(parsedValue.horizontal) };
+    }
+  }, {
+    key: 'parseStringPosition',
+    value: function parseStringPosition(value) {
+      var _value$split = value.split(' '),
+          _value$split2 = _slicedToArray(_value$split, 2),
+          vertical = _value$split2[0],
+          horizontal = _value$split2[1];
+
+      return { vertical: vertical, horizontal: horizontal };
+    }
+  }, {
+    key: 'shouldDisplayArrow',
+    value: function shouldDisplayArrow(showArrow, contentAttachment) {
+      if (showArrow === true && contentAttachment === 'middle center') {
+        return false;
+      }
+      return showArrow;
+    }
+  }, {
+    key: 'calculateArrowOffest',
+    value: function calculateArrowOffest(position, contentOffset, targetOffset) {
+      var parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
+      var parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
+
+      if (['Top', 'Bottom'].indexOf(position) >= 0) {
+        return parsedContentValue.horizontal + parsedTargetValue.horizontal;
+      }
+      return parsedContentValue.vertical + parsedTargetValue.vertical;
+    }
+  }, {
+    key: 'caculateContentOffset',
+    value: function caculateContentOffset(contentAttachment, targetAttachment) {
+      return '0 0';
+    }
+  }]);
+
+  function PopupPresenter(props) {
     _classCallCheck(this, PopupPresenter);
 
-    return _possibleConstructorReturn(this, (PopupPresenter.__proto__ || Object.getPrototypeOf(PopupPresenter)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (PopupPresenter.__proto__ || Object.getPrototypeOf(PopupPresenter)).call(this, props));
+
+    _this.handleTetherUpdate = _this.handleTetherUpdate.bind(_this);
+    _this.handleTetherRepositioned = _this.handleTetherRepositioned.bind(_this);
+    return _this;
   }
 
   _createClass(PopupPresenter, [{
+    key: 'handleTetherUpdate',
+    value: function handleTetherUpdate(event, targetBounds, presenterBounds) {
+      console.log('update');
+    }
+  }, {
+    key: 'handleTetherRepositioned',
+    value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
+      console.log('repositioned');
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -153,88 +238,17 @@ var PopupPresenter = function (_React$Component) {
       if (contentOffset) {
         tetherOptions.contentOffset = contentOffset;
       }
-      // if (targetOffset) {
-      //   tetherOptions.targetOffset = targetOffset;
-      // }
       if (targetAttachment) {
         tetherOptions.targetAttachment = targetAttachment;
       }
       if (renderElementTo) {
         tetherOptions.renderElementTo = renderElementTo;
       }
-
+      // tetherOptions.onUpdate = this.handleTetherUpdate;
+      tetherOptions.onRepositioned = this.handleTetherRepositioned;
       // tetherOptions.classPrefix = 'terra';
 
       return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
-    }
-  }], [{
-    key: 'arrowAlignmentFromAttachment',
-    value: function arrowAlignmentFromAttachment(contentAttachment) {
-      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
-
-      if (parsedAttachment.vertical === 'middle' || parsedAttachment.horizontal === 'center') {
-        return 'Center';
-      } else if (parsedAttachment.horizontal === 'left') {
-        return 'Start';
-      } else {
-        return 'End';
-      }
-    }
-  }, {
-    key: 'arrowPositionFromAttachment',
-    value: function arrowPositionFromAttachment(contentAttachment) {
-      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
-
-      if (parsedAttachment.vertical === 'top') {
-        return 'Top';
-      } else if (parsedAttachment.vertical === 'middle') {
-        if (parsedAttachment.horizontal === 'left') {
-          return 'Start';
-        }
-        return 'End';
-      } else {
-        return 'Bottom';
-      }
-    }
-  }, {
-    key: 'parseOffset',
-    value: function parseOffset(value) {
-      var parsedValue = PopupPresenter.parseStringPosition(value);
-      return { vertical: parseFloat(parsedValue.vertical), horizontal: parseFloat(parsedValue.horizontal) };
-    }
-  }, {
-    key: 'parseStringPosition',
-    value: function parseStringPosition(value) {
-      var _value$split = value.split(' '),
-          _value$split2 = _slicedToArray(_value$split, 2),
-          vertical = _value$split2[0],
-          horizontal = _value$split2[1];
-
-      return { vertical: vertical, horizontal: horizontal };
-    }
-  }, {
-    key: 'shouldDisplayArrow',
-    value: function shouldDisplayArrow(showArrow, contentAttachment) {
-      if (showArrow === true && contentAttachment === 'middle center') {
-        return false;
-      }
-      return showArrow;
-    }
-  }, {
-    key: 'calculateArrowOffest',
-    value: function calculateArrowOffest(position, contentOffset, targetOffset) {
-      var parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
-      var parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
-
-      if (['Top', 'Bottom'].indexOf(position) >= 0) {
-        return parsedContentValue.horizontal + parsedTargetValue.horizontal;
-      }
-      return parsedContentValue.vertical + parsedTargetValue.vertical;
-    }
-  }, {
-    key: 'caculateContentOffset',
-    value: function caculateContentOffset(contentAttachment, targetAttachment) {
-      return '0 0';
     }
   }]);
 

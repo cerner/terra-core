@@ -150,15 +150,22 @@ class TetherComponent extends React.Component {
     this._tether.position();
   }
 
+  attachmentOverlap(target, presenter)
+  {
+    const targetBounds = Tether.Utils.getBounds(this._targetNode);
+    const presenterBounds = Tether.Utils.getBounds(this._elementParentNode);
+    return {targetBounds, presenterBounds};
+  }
+
   handleOnUpdate(event) {
     if (this.props.onUpdate) {
-      this.props.onUpdate(event);
+      this.props.onUpdate(event, this.attachmentOverlap());
     }
   }
 
   handleOnRepositioned(event) {
     if (this.props.onRepositioned) {
-      this.props.onRepositioned(event);
+      this.props.onRepositioned(event, this.attachmentOverlap());
     }
   }
 

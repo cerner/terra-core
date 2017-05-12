@@ -195,12 +195,7 @@ var PopupFrame = function (_React$Component) {
         if (arrowAlignment === 'Center') {
           offset *= 2;
         }
-
-        arrow = _react2.default.createElement(
-          'div',
-          { className: arrowClassNames },
-          _react2.default.createElement(_PopupArrow2.default, { position: arrowPosition, offset: offset })
-        );
+        arrow = _react2.default.createElement(_PopupArrow2.default, { position: arrowPosition, offset: offset });
       }
 
       var constraintStyle = void 0;
@@ -212,6 +207,7 @@ var PopupFrame = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: frameClassNames, style: constraintStyle }),
+        arrow,
         _react2.default.createElement(
           'div',
           { className: 'terra-PopupFrame-children' },

@@ -36,6 +36,8 @@ require('./PopupArrow.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var arrowPositions = ['Top', 'Bottom', 'Start', 'End'];
@@ -70,7 +72,7 @@ var PopupArrow = function PopupArrow(_ref) {
       offset = _ref.offset,
       customProps = _objectWithoutProperties(_ref, ['position', 'offset']);
 
-  var arrowClassNames = (0, _classnames2.default)(['terra-PopupArrow', customProps.className]);
+  var arrowClassNames = (0, _classnames2.default)(['terra-PopupArrow', _defineProperty({}, 'terra-PopupArrow--align' + position, position), customProps.className]);
 
   var startSpacer = void 0;
   var endSpacer = void 0;
@@ -83,24 +85,18 @@ var PopupArrow = function PopupArrow(_ref) {
     }
   }
 
-  var arrow = void 0;
-  if (position === 'Bottom') {
-    arrow = _react2.default.createElement(_IconCaretDown2.default, { height: '30', width: '30' });
-  } else if (position === 'Start') {
-    arrow = _react2.default.createElement(_IconCaretLeft2.default, { height: '30', width: '30' });
-  } else if (position === 'End') {
-    arrow = _react2.default.createElement(_IconCaretRight2.default, { height: '30', width: '30' });
-  } else {
-    arrow = _react2.default.createElement(_IconCaretUp2.default, { height: '30', width: '30' });
-  }
+  // let arrow;
+  // if (position === 'Bottom') {
+  //   arrow = <IconCaretDown height="30" width="30" />;
+  // } else if (position === 'Start') {
+  //   arrow = <IconCaretLeft height="30" width="30" />;
+  // } else if (position === 'End') {
+  //   arrow = <IconCaretRight height="30" width="30" />;
+  // } else {
+  //   arrow = <IconCaretUp height="30" width="30" />;
+  // }
 
-  return _react2.default.createElement(
-    'div',
-    _extends({}, customProps, { className: arrowClassNames }),
-    startSpacer,
-    arrow,
-    endSpacer
-  );
+  return _react2.default.createElement('div', _extends({}, customProps, { className: arrowClassNames }));
 };
 
 PopupArrow.propTypes = propTypes;

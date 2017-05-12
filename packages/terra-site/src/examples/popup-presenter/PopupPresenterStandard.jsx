@@ -26,11 +26,11 @@ class DummyApp extends React.Component {
         <div style={{position: 'relative', height: '600px', width: '800px'}}>
           <PopupPresenter 
             content={contentSection}
-            contentAttachment="bottom center"
+            contentAttachment="bottom left"
             isOpen={this.state.open}
             showArrow
             target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
-            targetAttachment="top center"
+            targetAttachment="top right"
             onRequestClose={this.handleRequestClose}
             style={{position: 'absolute', top: '400px', left: '200px'}}
             className="drup-test"
@@ -43,4 +43,3 @@ class DummyApp extends React.Component {
 }
 
 export default DummyApp;
-

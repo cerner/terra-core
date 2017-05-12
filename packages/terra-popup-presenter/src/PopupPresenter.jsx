@@ -88,6 +88,20 @@ class PopupPresenter extends React.Component {
     return '0 0';
   }
 
+  constructor(props) {
+    super(props);
+    this.handleTetherUpdate = this.handleTetherUpdate.bind(this);
+    this.handleTetherRepositioned = this.handleTetherRepositioned.bind(this);
+  }
+
+  handleTetherUpdate(event, targetBounds, presenterBounds) {
+    console.log('update');
+  }
+
+  handleTetherRepositioned(event, targetBounds, presenterBounds) {
+    console.log('repositioned');
+  }
+
   render () {
     const {
       closeOnEsc,
@@ -166,16 +180,14 @@ class PopupPresenter extends React.Component {
     if (contentOffset) {
       tetherOptions.contentOffset = contentOffset;
     }
-    // if (targetOffset) {
-    //   tetherOptions.targetOffset = targetOffset;
-    // }
     if (targetAttachment) {
       tetherOptions.targetAttachment = targetAttachment;
     }
     if (renderElementTo) {
       tetherOptions.renderElementTo = renderElementTo;
     }
-
+    // tetherOptions.onUpdate = this.handleTetherUpdate;
+    tetherOptions.onRepositioned = this.handleTetherRepositioned;
     // tetherOptions.classPrefix = 'terra';
 
     return <TetherComponent {...tetherOptions} {...customProps}/>;

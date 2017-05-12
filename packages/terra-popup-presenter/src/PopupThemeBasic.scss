@@ -1,4 +1,0 @@
-@import '../node_modules/tether/src/css/helpers/tether';
-@import '../node_modules/tether/src/css/helpers/tether-theme-basic';
-@include tether($themePrefix: $themePrefix);
-@include tether-theme-basic($themePrefix: 'terra-PopupPresenter', $themeName: 'basic', $backgroundColor: $#fff, $color: #eee);

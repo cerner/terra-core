@@ -46,6 +46,7 @@ const PopupArrow = ({
   }) => {
   const arrowClassNames = classNames([
     'terra-PopupArrow',
+    { [`terra-PopupArrow--align${position}`]: position },
     customProps.className,
   ]);
 
@@ -60,23 +61,19 @@ const PopupArrow = ({
     }
   }
 
-  let arrow;
-  if (position === 'Bottom') {
-    arrow = <IconCaretDown height="30" width="30" />;
-  } else if (position === 'Start') {
-    arrow = <IconCaretLeft height="30" width="30" />;
-  } else if (position === 'End') {
-    arrow = <IconCaretRight height="30" width="30" />;
-  } else {
-    arrow = <IconCaretUp height="30" width="30" />;
-  }
+  // let arrow;
+  // if (position === 'Bottom') {
+  //   arrow = <IconCaretDown height="30" width="30" />;
+  // } else if (position === 'Start') {
+  //   arrow = <IconCaretLeft height="30" width="30" />;
+  // } else if (position === 'End') {
+  //   arrow = <IconCaretRight height="30" width="30" />;
+  // } else {
+  //   arrow = <IconCaretUp height="30" width="30" />;
+  // }
 
   return (
-    <div {...customProps} className={arrowClassNames}>
-      {startSpacer}
-      {arrow}
-      {endSpacer}
-    </div>
+    <div {...customProps} className={arrowClassNames} />
   );
 };
 

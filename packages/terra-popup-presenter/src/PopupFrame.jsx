@@ -165,12 +165,7 @@ class PopupFrame extends React.Component {
       if (arrowAlignment === 'Center') {
         offset *= 2;
       }
-
-      arrow = (
-        <div className={arrowClassNames}>
-          {<PopupArrow position={arrowPosition} offset={offset} />}
-        </div>
-      );
+      arrow = <PopupArrow position={arrowPosition} offset={offset} />;
     }
 
     let constraintStyle;
@@ -181,6 +176,7 @@ class PopupFrame extends React.Component {
 
     return (
       <div {...customProps} className={frameClassNames} style={constraintStyle}>
+        {arrow}
         <div className="terra-PopupFrame-children">
           {children}
         </div>
