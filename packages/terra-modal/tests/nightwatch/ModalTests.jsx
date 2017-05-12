@@ -11,7 +11,6 @@ const ModalTests = () => (
       <li><Link to="/tests/modal-tests/dialog">Dialog Example</Link></li>
       <li><Link to="/tests/modal-tests/disable-close-on-esc">Disable Close On Esc</Link></li>
       <li><Link to="/tests/modal-tests/disable-close-on-outside-click">Disable Close On Outside Click</Link></li>
-      <li><Link to="/tests/modal-tests/event-hooks">Event Hooks</Link></li>
       <li><Link to="/tests/modal-tests/is-fullscreen">Fullscreen</Link></li>
       <li><Link to="/tests/modal-tests/is-open">Using isOpen prop</Link></li>
       <li><Link to="/tests/modal-tests/no-focusable-content">No Focusable Content</Link></li>
