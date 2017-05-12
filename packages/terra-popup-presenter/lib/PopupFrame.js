@@ -71,8 +71,17 @@ var propTypes = {
    * The function that should be triggered when a close is indicated.
    */
   arrowPosition: _react.PropTypes.oneOf(arrowPositions),
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
   showArrow: _react.PropTypes.bool,
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
   arrowPxOffset: _react.PropTypes.number,
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
   constraintContainer: _react.PropTypes.any
 };
 
@@ -203,10 +212,9 @@ var PopupFrame = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: frameClassNames, style: constraintStyle }),
-        arrow,
         _react2.default.createElement(
           'div',
-          { className: 'terra-PopupFrame-content' },
+          { className: 'terra-PopupFrame-children' },
           children
         )
       );

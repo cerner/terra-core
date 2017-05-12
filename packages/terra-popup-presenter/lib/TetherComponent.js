@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -19,6 +23,8 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 var _tether = require('tether');
 
 var _tether2 = _interopRequireDefault(_tether);
+
+require('./TetherComponent.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85,19 +91,21 @@ var TetherComponent = function (_React$Component) {
     value: function componentWillUnmount() {
       this._destroy();
     }
-
-    // disable() {
-    //   this._tether.disable();
-    // }
-
-    // enable() {
-    //   this._tether.enable();
-    // }
-
-    // position() {
-    //   this._tether.position();
-    // }
-
+  }, {
+    key: 'disable',
+    value: function disable() {
+      this._tether.disable();
+    }
+  }, {
+    key: 'enable',
+    value: function enable() {
+      this._tether.enable();
+    }
+  }, {
+    key: 'position',
+    value: function position() {
+      this._tether.position();
+    }
   }, {
     key: '_destroy',
     value: function _destroy() {
@@ -222,9 +230,11 @@ var TetherComponent = function (_React$Component) {
           onRepositioned = _props3.onRepositioned,
           customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
+      var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent', customProps.className]);
+
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { ref: this.setTargetNode }),
+        _extends({}, customProps, { className: wrapperClassNames, ref: this.setTargetNode }),
         this.props.target
       );
     }

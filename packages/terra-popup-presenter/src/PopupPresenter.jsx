@@ -90,7 +90,6 @@ class PopupPresenter extends React.Component {
 
   render () {
     const {
-      className, 
       closeOnEsc,
       closeOnOutsideClick,
       content,
@@ -105,15 +104,28 @@ class PopupPresenter extends React.Component {
     } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
-    const constraintContainer = document.getElementById('terra-FakeModal') || 'window'; //follow up here
+    const constraintContainer = document.getElementById('terra-FakeModal') || 'scrollParent'; //follow up here
     const contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
     const constraints = [
       {
+        to: 'scrollParent',
+        pin: true
+      },
+      {
         to: constraintContainer,
         attachment: 'together',
-        pin: true
       }
     ];
+
+      // {
+      //   to: 'scrollParent',
+      //   pin: true
+      // },
+      // {
+      //   to: constraintContainer,
+      //   attachment: 'together',
+      // }
+
 
     if (isOpen && content) {
       const arrowAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
@@ -121,7 +133,6 @@ class PopupPresenter extends React.Component {
       const arrowPxOffset = PopupPresenter.calculateArrowOffest(arrowPosition, contentOffset, '0 0');
 
       const frameProps = {
-        className,
         closeOnEsc,
         closeOnOutsideClick,
         onRequestClose,
@@ -129,7 +140,7 @@ class PopupPresenter extends React.Component {
         arrowPosition,
         showArrow: PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment),
         arrowPxOffset,
-        constraintContainer,
+        // constraintContainer,
       };
 
       wrappedContent = (
@@ -165,11 +176,9 @@ class PopupPresenter extends React.Component {
       tetherOptions.renderElementTo = renderElementTo;
     }
 
-    tetherOptions.classes = {
-      element: 'terra-PopupPresenter'
-    };
+    // tetherOptions.classPrefix = 'terra';
 
-    return <TetherComponent {...tetherOptions} />;
+    return <TetherComponent {...tetherOptions} {...customProps}/>;
   }
 }
 

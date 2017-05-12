@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
+import './TetherComponent.scss';
 
 const attachmentPositions = [
   'top left',
@@ -58,17 +60,17 @@ class TetherComponent extends React.Component {
     this._destroy();
   }
 
-  // disable() {
-  //   this._tether.disable();
-  // }
+  disable() {
+    this._tether.disable();
+  }
 
-  // enable() {
-  //   this._tether.enable();
-  // }
+  enable() {
+    this._tether.enable();
+  }
 
-  // position() {
-  //   this._tether.position();
-  // }
+  position() {
+    this._tether.position();
+  }
   
   _destroy() {
     if (this._elementParentNode) {
@@ -185,8 +187,13 @@ class TetherComponent extends React.Component {
       ...customProps 
     } = this.props;
 
+    const wrapperClassNames = classNames([
+      'terra-TetherComponent',
+      customProps.className,
+    ]);
+
     return (
-      <div {...customProps} ref={this.setTargetNode}>
+      <div {...customProps} className={wrapperClassNames} ref={this.setTargetNode}>
         {this.props.target}
       </div>
     );

@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -80,7 +82,6 @@ var PopupPresenter = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          className = _props.className,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           content = _props.content,
@@ -91,16 +92,28 @@ var PopupPresenter = function (_React$Component) {
           target = _props.target,
           targetAttachment = _props.targetAttachment,
           showArrow = _props.showArrow,
-          customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
-      var constraintContainer = document.getElementById('terra-FakeModal') || 'window'; //follow up here
+      var constraintContainer = document.getElementById('terra-FakeModal') || 'scrollParent'; //follow up here
       var contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
       var constraints = [{
-        to: constraintContainer,
-        attachment: 'together',
+        to: 'scrollParent',
         pin: true
+      }, {
+        to: constraintContainer,
+        attachment: 'together'
       }];
+
+      // {
+      //   to: 'scrollParent',
+      //   pin: true
+      // },
+      // {
+      //   to: constraintContainer,
+      //   attachment: 'together',
+      // }
+
 
       if (isOpen && content) {
         var arrowAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
@@ -108,15 +121,13 @@ var PopupPresenter = function (_React$Component) {
         var arrowPxOffset = PopupPresenter.calculateArrowOffest(arrowPosition, contentOffset, '0 0');
 
         var frameProps = {
-          className: className,
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
           onRequestClose: onRequestClose,
           arrowAlignment: arrowAlignment,
           arrowPosition: arrowPosition,
           showArrow: PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment),
-          arrowPxOffset: arrowPxOffset,
-          constraintContainer: constraintContainer
+          arrowPxOffset: arrowPxOffset
         };
 
         wrappedContent = _react2.default.createElement(
@@ -152,11 +163,9 @@ var PopupPresenter = function (_React$Component) {
         tetherOptions.renderElementTo = renderElementTo;
       }
 
-      tetherOptions.classes = {
-        element: 'terra-PopupPresenter'
-      };
+      // tetherOptions.classPrefix = 'terra';
 
-      return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
+      return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
     }
   }], [{
     key: 'arrowAlignmentFromAttachment',
