@@ -146,6 +146,8 @@ var TetherComponent = function (_React$Component) {
   }, {
     key: '_updateTether',
     value: function _updateTether() {
+      var _this3 = this;
+
       var _props2 = this.props,
           renderElementTag = _props2.renderElementTag,
           renderElementTo = _props2.renderElementTo,
@@ -170,8 +172,13 @@ var TetherComponent = function (_React$Component) {
         tetherOptions.enabled = isEnabled;
       }
 
+      var loggingFunc = function loggingFunc() {
+        console.log(_this3._elementParentNode.offsetTop);
+      };
+
       if (!this._tether) {
         this._tether = new _tether2.default(tetherOptions);
+        this._tether.on('update', loggingFunc);
       } else {
         this._tether.setOptions(tetherOptions);
       }

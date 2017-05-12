@@ -132,8 +132,13 @@ class TetherComponent extends React.Component {
       tetherOptions.enabled = isEnabled;
     }
 
+    const loggingFunc = () => {
+      console.log(this._elementParentNode.offsetTop);
+    };
+
     if (!this._tether) {
       this._tether = new Tether(tetherOptions);
+      this._tether.on('update', loggingFunc);
     } else {
       this._tether.setOptions(tetherOptions);
     }
