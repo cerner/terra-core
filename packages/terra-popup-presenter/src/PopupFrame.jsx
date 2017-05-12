@@ -34,6 +34,10 @@ const propTypes = {
    */
   closeOnOutsideClick: PropTypes.bool,
   /**
+   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   */
+  closeOnResize: PropTypes.bool,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: PropTypes.func,
@@ -47,15 +51,17 @@ const propTypes = {
   arrowPosition: PropTypes.oneOf(arrowPositions),
   showArrow: PropTypes.bool,
   arrowPxOffset: PropTypes.number,
+  constraintContainer: PropTypes.any,
 };
 
 const defaultProps = {
   children: [],
   closeOnEsc: true,
   closeOnOutsideClick: true,
+  closeOnResize: true,
   onRequestClose: undefined,
-  arrowAlignment: 'middle',
-  arrowPosition: 'top',
+  arrowAlignment: 'Center',
+  arrowPosition: 'Top',
   showArrow: true,
 };
 
@@ -76,17 +82,31 @@ class PopupFrame extends React.Component {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
   componentDidMount() {
     if (this.props.closeOnEsc) {
       document.addEventListener('keydown', this.handleKeydown);
     }
+    if (this.props.closeOnResize) {
+      window.addEventListener('resize', this.handleResize); //might need debounce, and/or use resize observer
+    }
   }
 
   componentWillUnmount() {
     if (this.props.closeOnEsc) {
       document.removeEventListener('keydown', this.handleKeydown);
+    }
+
+    if (this.props.closeOnResize) {
+      document.removeEventListener('resize', this.handleResize);
+    }
+  }
+
+  handleResize(event) {
+    if (this.props.closeOnResize && this.props.onRequestClose) {
+      this.props.onRequestClose(event);
     }
   }
 
@@ -107,6 +127,7 @@ class PopupFrame extends React.Component {
       children,
       closeOnEsc,
       closeOnOutsideClick,
+      closeOnResize,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,
@@ -114,6 +135,7 @@ class PopupFrame extends React.Component {
       arrowPosition,
       showArrow,
       arrowPxOffset,
+      constraintContainer,
       ...customProps,
     } = this.props;
 
@@ -142,8 +164,14 @@ class PopupFrame extends React.Component {
       );
     }
 
+    let constraintStyle;
+    if (this.props.constraintContainer) {
+      const rect = this.props.constraintContainer.getBoundingClientRect();
+      constraintStyle = {maxHeight: rect.height.toString() + 'px', maxWidth: rect.width.toString() + 'px'};
+    }
+
     return (
-      <div {...customProps} className={frameClassNames}>
+      <div {...customProps} className={frameClassNames} style={constraintStyle}>
         {arrow}
         <div className="terra-PopupFrame-content">
           {children}

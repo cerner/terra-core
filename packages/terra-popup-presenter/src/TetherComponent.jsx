@@ -16,18 +16,15 @@ const attachmentPositions = [
 
 const propTypes = {
   classes: PropTypes.object,
-  className: PropTypes.string,
   classPrefix: PropTypes.string,
   content: PropTypes.element,
   constraints: PropTypes.array,
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
-  id: PropTypes.string,
   isEnabled: PropTypes.bool,
   optimizations: PropTypes.object,
   renderElementTag: PropTypes.string,
   renderElementTo: PropTypes.any,
-  style: PropTypes.object,
   target: PropTypes.element.isRequired,
   targetAttachment: PropTypes.oneOf(attachmentPositions),
   targetModifier: PropTypes.string,
@@ -42,8 +39,14 @@ const defaultProps = {
 };
 
 class TetherComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.setTargetNode = this.setTargetNode.bind(this);
+    this.handleOnUpdate = this.handleOnUpdate.bind(this);
+    this.handleOnRepositioned = this.handleOnRepositioned.bind(this);
+  }
+
   componentDidMount() {
-    this._targetNode = ReactDOM.findDOMNode(this);
     this._update();
   }
 
@@ -55,17 +58,17 @@ class TetherComponent extends React.Component {
     this._destroy();
   }
 
-  disable() {
-    this._tether.disable();
-  }
+  // disable() {
+  //   this._tether.disable();
+  // }
 
-  enable() {
-    this._tether.enable();
-  }
+  // enable() {
+  //   this._tether.enable();
+  // }
 
-  position() {
-    this._tether.position();
-  }
+  // position() {
+  //   this._tether.position();
+  // }
   
   _destroy() {
     if (this._elementParentNode) {
@@ -74,6 +77,8 @@ class TetherComponent extends React.Component {
     }
 
     if (this._tether) {
+      this._tether.off('update');
+      this._tether.off('repositioned');
       this._tether.destroy();
     }
 
@@ -132,13 +137,10 @@ class TetherComponent extends React.Component {
       tetherOptions.enabled = isEnabled;
     }
 
-    const loggingFunc = () => {
-      console.log(this._elementParentNode.offsetTop);
-    };
-
     if (!this._tether) {
       this._tether = new Tether(tetherOptions);
-      this._tether.on('update', loggingFunc);
+      this._tether.on('update', this.handleOnUpdate);
+      this._tether.on('repositioned', this.handleOnRepositioned);
     } else {
       this._tether.setOptions(tetherOptions);
     }
@@ -146,8 +148,48 @@ class TetherComponent extends React.Component {
     this._tether.position();
   }
 
+  handleOnUpdate(event) {
+    if (this.props.onUpdate) {
+      this.props.onUpdate(event);
+    }
+  }
+
+  handleOnRepositioned(event) {
+    if (this.props.onRepositioned) {
+      this.props.onRepositioned(event);
+    }
+  }
+
+  setTargetNode(node) {
+    this._targetNode = node;
+  }
+
   render () {
-    return this.props.target;
+    const {
+      classes,
+      classPrefix,
+      content,
+      constraints,
+      contentAttachment,
+      contentOffset,
+      isEnabled,
+      optimizations,
+      renderElementTag,
+      renderElementTo,
+      target,
+      targetAttachment,
+      targetModifier,
+      targetOffset,
+      onUpdate,
+      onRepositioned,
+      ...customProps 
+    } = this.props;
+
+    return (
+      <div {...customProps} ref={this.setTargetNode}>
+        {this.props.target}
+      </div>
+    );
   }
 }
 

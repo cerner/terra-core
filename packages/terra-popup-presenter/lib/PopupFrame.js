@@ -56,6 +56,10 @@ var propTypes = {
    */
   closeOnOutsideClick: _react.PropTypes.bool,
   /**
+   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   */
+  closeOnResize: _react.PropTypes.bool,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: _react.PropTypes.func,
@@ -68,16 +72,18 @@ var propTypes = {
    */
   arrowPosition: _react.PropTypes.oneOf(arrowPositions),
   showArrow: _react.PropTypes.bool,
-  arrowPxOffset: _react.PropTypes.number
+  arrowPxOffset: _react.PropTypes.number,
+  constraintContainer: _react.PropTypes.any
 };
 
 var defaultProps = {
   children: [],
   closeOnEsc: true,
   closeOnOutsideClick: true,
+  closeOnResize: true,
   onRequestClose: undefined,
-  arrowAlignment: 'middle',
-  arrowPosition: 'top',
+  arrowAlignment: 'Center',
+  arrowPosition: 'Top',
   showArrow: true
 };
 
@@ -106,6 +112,7 @@ var PopupFrame = function (_React$Component) {
 
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
     _this.handleKeydown = _this.handleKeydown.bind(_this);
+    _this.handleResize = _this.handleResize.bind(_this);
     return _this;
   }
 
@@ -115,12 +122,26 @@ var PopupFrame = function (_React$Component) {
       if (this.props.closeOnEsc) {
         document.addEventListener('keydown', this.handleKeydown);
       }
+      if (this.props.closeOnResize) {
+        window.addEventListener('resize', this.handleResize); //might need debounce, and/or use resize observer
+      }
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       if (this.props.closeOnEsc) {
         document.removeEventListener('keydown', this.handleKeydown);
+      }
+
+      if (this.props.closeOnResize) {
+        document.removeEventListener('resize', this.handleResize);
+      }
+    }
+  }, {
+    key: 'handleResize',
+    value: function handleResize(event) {
+      if (this.props.closeOnResize && this.props.onRequestClose) {
+        this.props.onRequestClose(event);
       }
     }
   }, {
@@ -144,6 +165,7 @@ var PopupFrame = function (_React$Component) {
           children = _props.children,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
+          closeOnResize = _props.closeOnResize,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
@@ -151,7 +173,8 @@ var PopupFrame = function (_React$Component) {
           arrowPosition = _props.arrowPosition,
           showArrow = _props.showArrow,
           arrowPxOffset = _props.arrowPxOffset,
-          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowAlignment', 'arrowPosition', 'showArrow', 'arrowPxOffset']);
+          constraintContainer = _props.constraintContainer,
+          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowAlignment', 'arrowPosition', 'showArrow', 'arrowPxOffset', 'constraintContainer']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', _defineProperty({}, 'terra-PopupFrame--arrow' + arrowPosition, arrowPosition), customProps.className]);
 
@@ -171,9 +194,15 @@ var PopupFrame = function (_React$Component) {
         );
       }
 
+      var constraintStyle = void 0;
+      if (this.props.constraintContainer) {
+        var rect = this.props.constraintContainer.getBoundingClientRect();
+        constraintStyle = { maxHeight: rect.height.toString() + 'px', maxWidth: rect.width.toString() + 'px' };
+      }
+
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: frameClassNames }),
+        _extends({}, customProps, { className: frameClassNames, style: constraintStyle }),
         arrow,
         _react2.default.createElement(
           'div',

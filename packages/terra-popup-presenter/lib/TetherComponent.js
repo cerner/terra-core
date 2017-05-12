@@ -34,18 +34,15 @@ var attachmentPositions = ['top left', 'top center', 'top right', 'middle left',
 
 var propTypes = {
   classes: _react.PropTypes.object,
-  className: _react.PropTypes.string,
   classPrefix: _react.PropTypes.string,
   content: _react.PropTypes.element,
   constraints: _react.PropTypes.array,
   contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
-  id: _react.PropTypes.string,
   isEnabled: _react.PropTypes.bool,
   optimizations: _react.PropTypes.object,
   renderElementTag: _react.PropTypes.string,
   renderElementTo: _react.PropTypes.any,
-  style: _react.PropTypes.object,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(attachmentPositions),
   targetModifier: _react.PropTypes.string,
@@ -62,16 +59,20 @@ var defaultProps = {
 var TetherComponent = function (_React$Component) {
   _inherits(TetherComponent, _React$Component);
 
-  function TetherComponent() {
+  function TetherComponent(props) {
     _classCallCheck(this, TetherComponent);
 
-    return _possibleConstructorReturn(this, (TetherComponent.__proto__ || Object.getPrototypeOf(TetherComponent)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (TetherComponent.__proto__ || Object.getPrototypeOf(TetherComponent)).call(this, props));
+
+    _this.setTargetNode = _this.setTargetNode.bind(_this);
+    _this.handleOnUpdate = _this.handleOnUpdate.bind(_this);
+    _this.handleOnRepositioned = _this.handleOnRepositioned.bind(_this);
+    return _this;
   }
 
   _createClass(TetherComponent, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this._targetNode = _reactDom2.default.findDOMNode(this);
       this._update();
     }
   }, {
@@ -84,21 +85,19 @@ var TetherComponent = function (_React$Component) {
     value: function componentWillUnmount() {
       this._destroy();
     }
-  }, {
-    key: 'disable',
-    value: function disable() {
-      this._tether.disable();
-    }
-  }, {
-    key: 'enable',
-    value: function enable() {
-      this._tether.enable();
-    }
-  }, {
-    key: 'position',
-    value: function position() {
-      this._tether.position();
-    }
+
+    // disable() {
+    //   this._tether.disable();
+    // }
+
+    // enable() {
+    //   this._tether.enable();
+    // }
+
+    // position() {
+    //   this._tether.position();
+    // }
+
   }, {
     key: '_destroy',
     value: function _destroy() {
@@ -108,6 +107,8 @@ var TetherComponent = function (_React$Component) {
       }
 
       if (this._tether) {
+        this._tether.off('update');
+        this._tether.off('repositioned');
         this._tether.destroy();
       }
 
@@ -146,8 +147,6 @@ var TetherComponent = function (_React$Component) {
   }, {
     key: '_updateTether',
     value: function _updateTether() {
-      var _this3 = this;
-
       var _props2 = this.props,
           renderElementTag = _props2.renderElementTag,
           renderElementTo = _props2.renderElementTo,
@@ -172,13 +171,10 @@ var TetherComponent = function (_React$Component) {
         tetherOptions.enabled = isEnabled;
       }
 
-      var loggingFunc = function loggingFunc() {
-        console.log(_this3._elementParentNode.offsetTop);
-      };
-
       if (!this._tether) {
         this._tether = new _tether2.default(tetherOptions);
-        this._tether.on('update', loggingFunc);
+        this._tether.on('update', this.handleOnUpdate);
+        this._tether.on('repositioned', this.handleOnRepositioned);
       } else {
         this._tether.setOptions(tetherOptions);
       }
@@ -186,9 +182,51 @@ var TetherComponent = function (_React$Component) {
       this._tether.position();
     }
   }, {
+    key: 'handleOnUpdate',
+    value: function handleOnUpdate(event) {
+      if (this.props.onUpdate) {
+        this.props.onUpdate(event);
+      }
+    }
+  }, {
+    key: 'handleOnRepositioned',
+    value: function handleOnRepositioned(event) {
+      if (this.props.onRepositioned) {
+        this.props.onRepositioned(event);
+      }
+    }
+  }, {
+    key: 'setTargetNode',
+    value: function setTargetNode(node) {
+      this._targetNode = node;
+    }
+  }, {
     key: 'render',
     value: function render() {
-      return this.props.target;
+      var _props3 = this.props,
+          classes = _props3.classes,
+          classPrefix = _props3.classPrefix,
+          content = _props3.content,
+          constraints = _props3.constraints,
+          contentAttachment = _props3.contentAttachment,
+          contentOffset = _props3.contentOffset,
+          isEnabled = _props3.isEnabled,
+          optimizations = _props3.optimizations,
+          renderElementTag = _props3.renderElementTag,
+          renderElementTo = _props3.renderElementTo,
+          target = _props3.target,
+          targetAttachment = _props3.targetAttachment,
+          targetModifier = _props3.targetModifier,
+          targetOffset = _props3.targetOffset,
+          onUpdate = _props3.onUpdate,
+          onRepositioned = _props3.onRepositioned,
+          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+
+      return _react2.default.createElement(
+        'div',
+        _extends({}, customProps, { ref: this.setTargetNode }),
+        this.props.target
+      );
     }
   }]);
 

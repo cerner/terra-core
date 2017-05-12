@@ -94,14 +94,11 @@ var PopupPresenter = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['className', 'closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
+      var constraintContainer = document.getElementById('terra-FakeModal') || 'window'; //follow up here
       var contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
       var constraints = [{
-        to: 'scrollParent',
-        // attachment: 'together',
-        pin: true
-      }, {
-        to: 'window',
-        // attachment: 'together',
+        to: constraintContainer,
+        attachment: 'together',
         pin: true
       }];
 
@@ -118,7 +115,8 @@ var PopupPresenter = function (_React$Component) {
           arrowAlignment: arrowAlignment,
           arrowPosition: arrowPosition,
           showArrow: PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment),
-          arrowPxOffset: arrowPxOffset
+          arrowPxOffset: arrowPxOffset,
+          constraintContainer: constraintContainer
         };
 
         wrappedContent = _react2.default.createElement(
@@ -142,7 +140,7 @@ var PopupPresenter = function (_React$Component) {
         tetherOptions.constraints = constraints;
       }
       if (contentOffset) {
-        tetherOptions.offset = contentOffset;
+        tetherOptions.contentOffset = contentOffset;
       }
       // if (targetOffset) {
       //   tetherOptions.targetOffset = targetOffset;
@@ -158,8 +156,6 @@ var PopupPresenter = function (_React$Component) {
         element: 'terra-PopupPresenter'
       };
 
-      //kasper check here if parent node is a modal.... this is going to get messy
-      //Portal or ModalContent
       return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
     }
   }], [{

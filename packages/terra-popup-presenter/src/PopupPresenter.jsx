@@ -105,16 +105,12 @@ class PopupPresenter extends React.Component {
     } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
+    const constraintContainer = document.getElementById('terra-FakeModal') || 'window'; //follow up here
     const contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
     const constraints = [
       {
-        to: 'scrollParent',
-        // attachment: 'together',
-        pin: true
-      },
-      {
-        to: 'window',
-        // attachment: 'together',
+        to: constraintContainer,
+        attachment: 'together',
         pin: true
       }
     ];
@@ -133,6 +129,7 @@ class PopupPresenter extends React.Component {
         arrowPosition,
         showArrow: PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment),
         arrowPxOffset,
+        constraintContainer,
       };
 
       wrappedContent = (
@@ -156,7 +153,7 @@ class PopupPresenter extends React.Component {
       tetherOptions.constraints = constraints;
     }
     if (contentOffset) {
-      tetherOptions.offset = contentOffset;
+      tetherOptions.contentOffset = contentOffset;
     }
     // if (targetOffset) {
     //   tetherOptions.targetOffset = targetOffset;
@@ -172,8 +169,6 @@ class PopupPresenter extends React.Component {
       element: 'terra-PopupPresenter'
     };
 
-    //kasper check here if parent node is a modal.... this is going to get messy
-    //Portal or ModalContent
     return <TetherComponent {...tetherOptions} />;
   }
 }

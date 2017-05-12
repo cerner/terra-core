@@ -22,15 +22,17 @@ class DummyApp extends React.Component {
     const contentSection = <p style={{height: '200px', width: '200px'}}>i'm popup content, hear me roar!</p>;
 
     return (
-      <PopupPresenter 
-        content={contentSection}
-        contentAttachment="bottom center"
-        isOpen={this.state.open}
-        showArrow
-        target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
-        targetAttachment="top center"
-        onRequestClose={this.handleRequestClose}
-      />
+      <div id="terra-FakeModal" style={{height: '150px', width: '150px', backgroundColor: '#27de1c'}}>
+        <PopupPresenter 
+          content={contentSection}
+          contentAttachment="bottom center"
+          isOpen={this.state.open}
+          showArrow
+          target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
+          targetAttachment="top center"
+          onRequestClose={this.handleRequestClose}
+        />
+      </div>
     );
   }
 }
