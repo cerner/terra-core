@@ -57,7 +57,6 @@
     "terra-standout": "^0.x",
     "terra-status": "^0.x",
     "terra-table": "^0.x",
-    "terra-time-input": "^0.x",
     "terra-title": "^0.x"
   },
   "devDependencies": {

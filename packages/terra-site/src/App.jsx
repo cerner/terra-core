@@ -41,7 +41,6 @@ const App = props => (
             <List.Item content={<Link to="/site/standout">Standout</Link>} />
             <List.Item content={<Link to="/site/status">Status</Link>} />
             <List.Item content={<Link to="/site/table">Table</Link>} />
-            <List.Item content={<Link to="/site/time-input">Time Input</Link>} />
             <List.Item content={<Link to="/site/title">Title</Link>} />
             <List.Item content={<Link to="/tests">Tests</Link>} />
           </List>
