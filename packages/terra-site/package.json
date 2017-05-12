@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "start": "webpack-dev-server --progress --port ${PORT:-8080}",
+    "start": "webpack-dev-server --progress",
+    "compile:heroku": "webpack --config webpack.prod.config --progress",
     "compile:prod": "webpack --config webpack.prod.config -p",
     "compile:prod-stats": "webpack --config webpack.prod.config -p --json > stats.json",
     "deploy": "npm run compile:prod && gh-pages -d build",
