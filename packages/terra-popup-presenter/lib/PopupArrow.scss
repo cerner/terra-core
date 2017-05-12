@@ -8,7 +8,7 @@
   position: absolute;
   top: 50%;
   width: 50%;
-  @include terra-translate3d(50%, 50%, 0);
+  @include terra-translate3d(-50%, -50%, 0);
 }
 
 .terra-PopupArrow--alignTop {
