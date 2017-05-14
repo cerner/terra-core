@@ -27,7 +27,7 @@ exports.launchServer = () => new Promise((resolve) => {
   compiler.plugin('done', resolve);
 
   module.server = new WebpackDevServer(compiler, {
-    quiet: true,
+    noInfo: true,
   });
 
   module.server.listen(8080, '0.0.0.0');

@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 import './ModalOverlay.scss';
 
-
 class ModalOverlay extends React.Component {
 
   componentDidMount() {
+    this.overflow = document.documentElement.style.overflow;
     // Disable scrolling on the page when Overlay is displayed
     document.documentElement.style.overflow = 'hidden';
   }
 
   componentWillUnmount() {
     // Enable scrolling on the page since Overlay has gone away
-    document.documentElement.style.overflow = null;
+    document.documentElement.style.overflow = this.overflow;
   }
 
   render() {

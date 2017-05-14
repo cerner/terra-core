@@ -127,6 +127,10 @@ class Modal extends React.Component {
           onRequestClose,
            ...customProps } = this.props;
 
+    if (!isOpened) {
+      return null;
+    }
+
     return (
       <Portal
         isOpened={isOpened}

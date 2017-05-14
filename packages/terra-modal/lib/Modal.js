@@ -170,6 +170,10 @@ var Modal = function (_React$Component) {
           onRequestClose = _props.onRequestClose,
           customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'role', 'onRequestClose']);
 
+      if (!isOpened) {
+        return null;
+      }
+
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
