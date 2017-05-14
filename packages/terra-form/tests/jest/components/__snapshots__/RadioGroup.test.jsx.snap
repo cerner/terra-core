@@ -1,0 +1,29 @@
+exports[`test should render a default radioGroup 1`] = `
+<Fieldset
+  choiceName="name"
+  choiceValue="value"
+  choices={Array []}
+  error={null}
+  help={null}
+  htmlFor={null}
+  isInline={false}
+  legend={null}
+  name={null}
+  onChange={[Function]} />
+`;
+
+exports[`test should render a radioGroup with the rest of the props 1`] = `
+<Fieldset
+  choiceName="name"
+  choiceValue="value"
+  choices={Array []}
+  error="This field is required"
+  help="State Locations help determine what campus to place you at"
+  htmlFor={null}
+  isInline={false}
+  legend="What State do you live in?"
+  name="children_present"
+  onChange={[Function]}
+  required={true}
+  value="children_present" />
+`;

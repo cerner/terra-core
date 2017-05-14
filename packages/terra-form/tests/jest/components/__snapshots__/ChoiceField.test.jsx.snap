@@ -1,5 +1,5 @@
 exports[`test should render a ChoiceField with the rest of the props 1`] = `
-<Field
+<Fieldset
   attrs={
     Object {
       "className": "healtheintent-application",
@@ -7,8 +7,10 @@ exports[`test should render a ChoiceField with the rest of the props 1`] = `
   }
   error="This field is required"
   help="State Locations help determine what campus to place you at"
+  htmlFor={null}
   isInline={false}
   label="What State do you live in?"
+  legend={null}
   required={true}>
   <Control
     attrs={Object {}}
@@ -28,14 +30,14 @@ exports[`test should render a ChoiceField with the rest of the props 1`] = `
     onChange={[Function]}
     type="radio"
     value="MO" />
-</Field>
+</Fieldset>
 `;
 
 exports[`test should render a default component 1`] = `
-<Field
+<Fieldset
   error={null}
   help={null}
+  htmlFor={null}
   isInline={false}
-  label={null}
-  required={false} />
+  legend={null} />
 `;

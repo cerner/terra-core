@@ -1,6 +1,7 @@
 @import '~terra-mixins';
 
 .terra-Form-field {
+  border: 0;
   margin-bottom: 1.428em;
 }
 
@@ -19,6 +20,17 @@
   display: block;
   font-weight: 700;
   margin-bottom: 0.357em;
+}
+
+.terra-Form-legend {
+  border: 0;
+  color: $terra-dark;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.357em;
+  max-width: 100%; // IE11 fix to ensure legends wrap
+  padding: 0;
+  width: auto;
 }
 
 .terra-Form-helpText {

@@ -4,7 +4,7 @@ import MultiChoiceField from 'terra-form/lib/components/MultiChoiceField';
 const MultiChoiceFieldExamples = () => (
   <form>
     <MultiChoiceField
-      label="Mark all of the programming languages you know"
+      legend="Mark all of the programming languages you know"
       name="language"
       help="Every check should indicate at least 3 months of experience"
       choices={[
@@ -17,7 +17,7 @@ const MultiChoiceFieldExamples = () => (
     />
     <div>
       <MultiChoiceField
-        label="What Corporate Challenge events would you like to participate in?"
+        legend="What Corporate Challenge events would you like to participate in?"
         name="sporting_event"
         isInline
         choices={[
@@ -28,7 +28,7 @@ const MultiChoiceFieldExamples = () => (
         ]}
       />
       <MultiChoiceField
-        label="Mark any events you are able to help volunteer."
+        legend="Mark any events you are able to help volunteer."
         name="sporting_event"
         isInline
         choices={[

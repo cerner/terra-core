@@ -3,7 +3,7 @@
 import React, { PropTypes } from 'react';
 
 import Control from './Control';
-import Field from './Field';
+import Fieldset from './Fieldset';
 
 const propTypes = {
   /**
@@ -31,9 +31,9 @@ const propTypes = {
    */
   isInline: PropTypes.bool,
   /**
-   * Label of the input
+   * Legend of the fieldset
    */
-  label: PropTypes.node,
+  legend: PropTypes.node,
   /**
    * Name of the input attribute
    */
@@ -51,7 +51,7 @@ const defaultProps = {
   error: null,
   help: null,
   isInline: false,
-  label: null,
+  legend: null,
   name: null,
   onChange: () => {},
 };
@@ -63,14 +63,14 @@ const MultiChoiceField = ({
   error,
   help,
   isInline,
-  label,
+  legend,
   name,
   onChange,
   ...customProps
 }) => (
-  <Field
+  <Fieldset
     error={error}
-    label={label}
+    legend={legend}
     help={help}
     isInline={isInline}
     {...customProps}
@@ -87,7 +87,7 @@ const MultiChoiceField = ({
         />,
       )
     }
-  </Field>
+  </Fieldset>
 );
 
 MultiChoiceField.propTypes = propTypes;

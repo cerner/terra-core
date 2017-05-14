@@ -4,7 +4,7 @@ import MultiChoiceField from '../../../../lib/components/MultiChoiceField';
 
 const multiChoiceField = () => (
   <MultiChoiceField
-    label="Mark all of the programming languages you know"
+    legend="Mark all of the programming languages you know"
     name="language"
     help="Every check should indicate at least 3 months of experience"
     choices={[

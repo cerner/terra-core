@@ -116,7 +116,7 @@ class FullForm extends React.Component {
             onChange={this.updateFormInput}
           />
           <ChoiceField
-            label="Prime Programming Language"
+            legend="Prime Programming Language"
             name="language"
             help="This is the programming language you are looking to work with most"
             required
@@ -135,7 +135,7 @@ class FullForm extends React.Component {
           />
           <div>
             <MultiChoiceField
-              label="Which Areas of Development are you looking to get involved with?"
+              legend="Which Areas of Development are you looking to get involved with?"
               name="area"
               help="We have specialized areas we try to get our developers matched with"
               required
@@ -153,7 +153,7 @@ class FullForm extends React.Component {
               value={this.state.formData.area}
             />
             <MultiChoiceField
-              label="What locations are you willing to work at?"
+              legend="What locations are you willing to work at?"
               name="location"
               required
               isInline

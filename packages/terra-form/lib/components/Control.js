@@ -67,7 +67,11 @@ var defaultProps = {
   value: undefined
 };
 
-var Control = function Control(_ref) {
+var contextTypes = {
+  radioGroup: _react.PropTypes.any
+};
+
+var Control = function Control(_ref, context) {
   var type = _ref.type,
       attrs = _ref.attrs,
       id = _ref.id,
@@ -77,7 +81,17 @@ var Control = function Control(_ref) {
       value = _ref.value,
       customProps = _objectWithoutProperties(_ref, ['type', 'attrs', 'id', 'isInline', 'label', 'name', 'value']);
 
+  var radioGroup = context.radioGroup;
+
+
   var labelClassNames = (0, _classnames2.default)('terra-Form-control', { 'terra-Form-control--inline': isInline }, customProps.className);
+
+  var inputAttrs = _extends({}, attrs);
+
+  if (radioGroup) {
+    inputAttrs.onChange = radioGroup.onChange;
+    inputAttrs.name = radioGroup.name;
+  }
 
   return _react2.default.createElement(
     'label',
@@ -87,12 +101,13 @@ var Control = function Control(_ref) {
       name: name,
       value: value,
       type: type
-    }, attrs)),
+    }, inputAttrs)),
     label
   );
 };
 
 Control.propTypes = propTypes;
 Control.defaultProps = defaultProps;
+Control.contextTypes = contextTypes;
 
 exports.default = Control;

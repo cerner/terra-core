@@ -4,7 +4,7 @@ import ChoiceField from '../../../../lib/components/ChoiceField';
 
 const choiceField = () => (
   <ChoiceField
-    label="Prime Programming Language"
+    legend="Prime Programming Language"
     name="language"
     help="This is the programming language you are looking to work with most"
     required

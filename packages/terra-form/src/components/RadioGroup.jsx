@@ -4,15 +4,13 @@ import React, { PropTypes } from 'react';
 
 import 'terra-base/lib/baseStyles';
 
-import Control from './Control';
 import Fieldset from './Fieldset';
-
 
 const propTypes = {
   /**
-   * Choices to populate radio buttons for
+   * Children to pass into the fieldset
    */
-  choices: PropTypes.array,
+  children: PropTypes.node,
   /**
    * The property name for the choice object used to set the choice label
    */
@@ -34,7 +32,7 @@ const propTypes = {
    */
   isInline: PropTypes.bool,
   /**
-   * Legend of the fieldset
+   * Label of the input
    */
   legend: PropTypes.node,
   /**
@@ -52,6 +50,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: null,
   choices: [],
   choiceName: 'name',
   choiceValue: 'value',
@@ -64,43 +63,45 @@ const defaultProps = {
   value: undefined,
 };
 
-const ChoiceField = ({
-  choices,
-  choiceName,
-  choiceValue,
-  error,
-  help,
-  isInline,
-  legend,
-  name,
-  onChange,
-  value,
-  ...customProps
-}) => (
-  <Fieldset
-    error={error}
-    legend={legend}
-    help={help}
-    isInline={isInline}
-    {...customProps}
-  >
-    {
-      choices.map(choice =>
-        <Control
-          key={`${choice[choiceName]}-${choice[choiceValue]}`}
-          name={name}
-          value={choice[choiceValue]}
-          label={choice[choiceName]}
-          checked={choice[choiceValue] === value}
-          onChange={onChange}
-          type="radio"
-        />,
-      )
-    }
-  </Fieldset>
-);
+const childContextTypes = {
+  radioGroup: PropTypes.any,
+};
 
-ChoiceField.propTypes = propTypes;
-ChoiceField.defaultProps = defaultProps;
+class RadioGroup extends React.Component {
+  getChildContext() {
+    return {
+      radioGroup: {
+        onChange: this.props.onChange,
+        name: this.props.name,
+      },
+    };
+  }
 
-export default ChoiceField;
+  render() {
+    const {
+      error,
+      help,
+      legend,
+      isInline,
+      ...customProps
+    } = this.props;
+
+    return (
+      <Fieldset
+        error={error}
+        legend={legend}
+        help={help}
+        isInline={isInline}
+        {...customProps}
+      >
+        {this.props.children}
+      </Fieldset>
+    );
+  }
+}
+
+RadioGroup.propTypes = propTypes;
+RadioGroup.defaultProps = defaultProps;
+RadioGroup.childContextTypes = childContextTypes;
+
+export default RadioGroup;

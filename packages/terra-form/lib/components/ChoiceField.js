@@ -16,9 +16,9 @@ var _Control = require('./Control');
 
 var _Control2 = _interopRequireDefault(_Control);
 
-var _Field = require('./Field');
+var _Fieldset = require('./Fieldset');
 
-var _Field2 = _interopRequireDefault(_Field);
+var _Fieldset2 = _interopRequireDefault(_Fieldset);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -50,9 +50,9 @@ var propTypes = {
    */
   isInline: _react.PropTypes.bool,
   /**
-   * Label of the input
+   * Legend of the fieldset
    */
-  label: _react.PropTypes.node,
+  legend: _react.PropTypes.node,
   /**
    * Name of the input attribute
    */
@@ -74,7 +74,7 @@ var defaultProps = {
   error: null,
   help: null,
   isInline: false,
-  label: null,
+  legend: null,
   name: null,
   onChange: function onChange() {},
   value: undefined
@@ -87,17 +87,17 @@ var ChoiceField = function ChoiceField(_ref) {
       error = _ref.error,
       help = _ref.help,
       isInline = _ref.isInline,
-      label = _ref.label,
+      legend = _ref.legend,
       name = _ref.name,
       onChange = _ref.onChange,
       value = _ref.value,
-      customProps = _objectWithoutProperties(_ref, ['choices', 'choiceName', 'choiceValue', 'error', 'help', 'isInline', 'label', 'name', 'onChange', 'value']);
+      customProps = _objectWithoutProperties(_ref, ['choices', 'choiceName', 'choiceValue', 'error', 'help', 'isInline', 'legend', 'name', 'onChange', 'value']);
 
   return _react2.default.createElement(
-    _Field2.default,
+    _Fieldset2.default,
     _extends({
       error: error,
-      label: label,
+      legend: legend,
       help: help,
       isInline: isInline
     }, customProps),

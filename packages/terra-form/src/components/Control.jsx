@@ -49,12 +49,25 @@ const defaultProps = {
   value: undefined,
 };
 
-const Control = ({ type, attrs, id, isInline, label, name, value, ...customProps }) => {
+const contextTypes = {
+  radioGroup: PropTypes.any,
+};
+
+const Control = ({ type, attrs, id, isInline, label, name, value, ...customProps }, context) => {
+  const { radioGroup } = context;
+
   const labelClassNames = classNames(
     'terra-Form-control',
     { 'terra-Form-control--inline': isInline },
     customProps.className,
   );
+
+  const inputAttrs = Object.assign({}, attrs);
+
+  if (radioGroup) {
+    inputAttrs.onChange = radioGroup.onChange;
+    inputAttrs.name = radioGroup.name;
+  }
 
   return (
     <label htmlFor={id} {...customProps} className={labelClassNames}>
@@ -63,7 +76,7 @@ const Control = ({ type, attrs, id, isInline, label, name, value, ...customProps
         name={name}
         value={value}
         type={type}
-        {...attrs}
+        {...inputAttrs}
       />
       {label}
     </label>
@@ -72,5 +85,6 @@ const Control = ({ type, attrs, id, isInline, label, name, value, ...customProps
 
 Control.propTypes = propTypes;
 Control.defaultProps = defaultProps;
+Control.contextTypes = contextTypes;
 
 export default Control;

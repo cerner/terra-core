@@ -13,13 +13,13 @@ module.exports = {
 
   'Displays a default ChoiceField': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/choice-field/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/radio-group/default`)
       .assert.elementPresent('.terra-Form-field');
   },
 
   'Displays a populated ChoiceField with correct label, help message, and choices': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/choice-field/populated`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/radio-group/populated`)
       .assert.elementPresent('.terra-Form-field')
       .assert.elementPresent('input[type="radio"][name="language"][value="c"]')
       .assert.elementPresent('input[type="radio"][name="language"][value="java"]')

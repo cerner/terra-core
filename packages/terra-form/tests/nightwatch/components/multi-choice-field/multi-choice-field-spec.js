@@ -26,7 +26,7 @@ module.exports = {
       .assert.elementPresent('input[type="checkbox"][name="language"][value="ruby"]')
       .assert.elementPresent('input[type="checkbox"][name="language"][value="c++"]')
       .assert.elementPresent('input[type="checkbox"][name="language"][value="javascript"]')
-      .assert.containsText('.terra-Form-field', 'Mark all of the programming languages you know')
+      .assert.containsText('.terra-Form-legend', 'Mark all of the programming languages you know')
       .assert.containsText('.terra-Form-helpText', 'Every check should indicate at least 3 months of experience')
       .assert.containsText('.terra-Form-field', 'C')
       .assert.containsText('.terra-Form-field', 'Java')

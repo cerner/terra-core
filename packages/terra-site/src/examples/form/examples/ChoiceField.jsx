@@ -3,9 +3,8 @@ import ChoiceField from 'terra-form/lib/components/ChoiceField';
 
 const ChoiceFieldExamples = () => (
   <form>
-    <ChoiceField />
     <ChoiceField
-      label="State"
+      legend="State"
       name="state"
       error="This field is required"
       help="This is a choice field"
@@ -15,7 +14,7 @@ const ChoiceFieldExamples = () => (
       choices={[{ name: 'Kansas', value: 'ks' }, { name: 'Missouri', value: 'MO' }]}
     />
     <ChoiceField
-      label="Prime Programming Language"
+      legend="Prime Programming Language"
       name="language"
       help="This is the programming language you are looking to work with most"
       required
@@ -31,7 +30,7 @@ const ChoiceFieldExamples = () => (
     />
     <div>
       <ChoiceField
-        label="What senior level role would you be most interested in?"
+        legend="What senior level role would you be most interested in?"
         name="role"
         required
         isInline
@@ -45,7 +44,7 @@ const ChoiceFieldExamples = () => (
         ]}
       />
       <ChoiceField
-        label="What is your work location preference"
+        legend="What is your work location preference"
         name="location"
         required
         isInline

@@ -16,6 +16,8 @@ import DefaultMultiChoiceField from './components/multi-choice-field/DefaultMult
 import PopulatedMultiChoiceField from './components/multi-choice-field/PopulatedMultiChoiceField';
 import DefaultNumberField from './components/number-field/DefaultNumberField';
 import PopulatedNumberField from './components/number-field/PopulatedNumberField';
+import DefaultRadioGroup from './components/radio-group/DefaultRadioGroup';
+import PopulatedRadioGroup from './components/radio-group/PopulatedRadioGroup';
 import DefaultTextField from './components/text-field/DefaultTextField';
 import PopulatedTextField from './components/text-field/PopulatedTextField';
 import DefaultTextarea from './components/textarea/DefaultTextarea';
@@ -38,6 +40,8 @@ const routes = (
     <Route path="/tests/form-tests/multi-choice-field/populated" component={PopulatedMultiChoiceField} />
     <Route path="/tests/form-tests/number-field/default" component={DefaultNumberField} />
     <Route path="/tests/form-tests/number-field/populated" component={PopulatedNumberField} />
+    <Route path="/tests/form-tests/radio-group/default" component={DefaultRadioGroup} />
+    <Route path="/tests/form-tests/radio-group/populated" component={PopulatedRadioGroup} />
     <Route path="/tests/form-tests/text-field/default" component={DefaultTextField} />
     <Route path="/tests/form-tests/text-field/populated" component={PopulatedTextField} />
     <Route path="/tests/form-tests/textarea/default" component={DefaultTextarea} />

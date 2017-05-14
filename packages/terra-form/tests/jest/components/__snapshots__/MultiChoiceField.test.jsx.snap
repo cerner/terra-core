@@ -1,9 +1,11 @@
 exports[`test should render a MultiChoiceField with the rest of the props 1`] = `
-<Field
+<Fieldset
   error="This field is required"
   help="Note: All checked languages should have at least 3 months experience"
+  htmlFor={null}
   isInline={false}
   label="Select the programming languages you have experience with"
+  legend={null}
   required={true}>
   <Control
     attrs={Object {}}
@@ -21,14 +23,14 @@ exports[`test should render a MultiChoiceField with the rest of the props 1`] = 
     onChange={[Function]}
     type="checkbox"
     value="Java" />
-</Field>
+</Fieldset>
 `;
 
 exports[`test should render a default component 1`] = `
-<Field
+<Fieldset
   error={null}
   help={null}
+  htmlFor={null}
   isInline={false}
-  label={null}
-  required={false} />
+  legend={null} />
 `;
