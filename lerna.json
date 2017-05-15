@@ -3,5 +3,17 @@
   "packages": [
     "packages/*"
   ],
+  "command": {
+    "publish": {
+      "ignore": [
+        "terra-content-container",
+        "terra-content",
+        "terra-modal",
+        "terra-site",
+        "terra-standout",
+        "terra-content"
+      ]
+    }
+  },
   "version": "independent"
 }
