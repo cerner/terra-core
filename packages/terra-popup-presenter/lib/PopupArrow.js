@@ -47,56 +47,25 @@ var propTypes = {
    * The position of the arrow image.
    */
   position: _react.PropTypes.oneOf(arrowPositions),
-  offset: _react.PropTypes.number
+  offset: _react.PropTypes.number,
+  arrowRefCallback: _react.PropTypes.func
 };
 
 var defaultProps = {
   position: 'Top',
-  offset: 0
-};
-
-var spacerFromOffset = function spacerFromOffset(offset, position) {
-  var styleOffset = {};
-  if (['Top', 'Bottom'].indexOf(position) >= 0) {
-    styleOffset.width = offset.toString() + 'px';
-    styleOffset.maxWidth = 'calc(100% - 30px)';
-  } else {
-    styleOffset.height = offset.toString() + 'px';
-    styleOffset.maxHeight = 'calc(100% - 30px)';
-  }
-  return _react2.default.createElement('div', { className: 'terra-PopupArrow-spacer', style: styleOffset });
+  offset: 0,
+  arrowRefCallback: undefined
 };
 
 var PopupArrow = function PopupArrow(_ref) {
   var position = _ref.position,
       offset = _ref.offset,
-      customProps = _objectWithoutProperties(_ref, ['position', 'offset']);
+      arrowRefCallback = _ref.arrowRefCallback,
+      customProps = _objectWithoutProperties(_ref, ['position', 'offset', 'arrowRefCallback']);
 
   var arrowClassNames = (0, _classnames2.default)(['terra-PopupArrow', _defineProperty({}, 'terra-PopupArrow--align' + position, position), customProps.className]);
 
-  var startSpacer = void 0;
-  var endSpacer = void 0;
-  var absOffset = Math.abs(offset);
-  if (absOffset > 0) {
-    if (offset < 0) {
-      endSpacer = spacerFromOffset(absOffset, position);
-    } else {
-      startSpacer = spacerFromOffset(absOffset, position);
-    }
-  }
-
-  // let arrow;
-  // if (position === 'Bottom') {
-  //   arrow = <IconCaretDown height="30" width="30" />;
-  // } else if (position === 'Start') {
-  //   arrow = <IconCaretLeft height="30" width="30" />;
-  // } else if (position === 'End') {
-  //   arrow = <IconCaretRight height="30" width="30" />;
-  // } else {
-  //   arrow = <IconCaretUp height="30" width="30" />;
-  // }
-
-  return _react2.default.createElement('div', _extends({}, customProps, { className: arrowClassNames }));
+  return _react2.default.createElement('div', _extends({}, customProps, { className: arrowClassNames, ref: arrowRefCallback }));
 };
 
 PopupArrow.propTypes = propTypes;

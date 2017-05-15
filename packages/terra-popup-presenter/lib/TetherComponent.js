@@ -191,7 +191,7 @@ var TetherComponent = function (_React$Component) {
     }
   }, {
     key: 'attachmentOverlap',
-    value: function attachmentOverlap(target, presenter) {
+    value: function attachmentOverlap() {
       var targetBounds = _tether2.default.Utils.getBounds(this._targetNode);
       var presenterBounds = _tether2.default.Utils.getBounds(this._elementParentNode);
       return { targetBounds: targetBounds, presenterBounds: presenterBounds };
@@ -200,14 +200,16 @@ var TetherComponent = function (_React$Component) {
     key: 'handleOnUpdate',
     value: function handleOnUpdate(event) {
       if (this.props.onUpdate) {
-        this.props.onUpdate(event, this.attachmentOverlap());
+        var bounds = this.attachmentOverlap();
+        this.props.onUpdate(event, bounds.targetBounds, bounds.presenterBounds);
       }
     }
   }, {
     key: 'handleOnRepositioned',
     value: function handleOnRepositioned(event) {
       if (this.props.onRepositioned) {
-        this.props.onRepositioned(event, this.attachmentOverlap());
+        var bounds = this.attachmentOverlap();
+        this.props.onRepositioned(event, bounds.targetBounds, bounds.presenterBounds);
       }
     }
   }, {

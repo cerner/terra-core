@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import PopupArrow from './PopupArrow'
 import './PopupFrame.scss';
 
 const arrowAlignments = [
@@ -24,7 +23,8 @@ const propTypes = {
   /**
    * The child elements passed to the component.
    */
-  children: PropTypes.node,
+  arrow: PropTypes.element,
+  content: PropTypes.element,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
    */
@@ -44,19 +44,7 @@ const propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  arrowAlignment: PropTypes.oneOf(arrowAlignments),
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
   arrowPosition: PropTypes.oneOf(arrowPositions),
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  showArrow: PropTypes.bool,
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  arrowPxOffset: PropTypes.number,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -64,29 +52,16 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: [],
+  arrow: undefined,
+  content: undefined,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   closeOnResize: true,
   onRequestClose: undefined,
-  arrowAlignment: 'Center',
   arrowPosition: 'Top',
-  showArrow: true,
 };
 
 class PopupFrame extends React.Component {
-  static spacerFromOffset(offset, position) {
-    const styleOffset = {};
-    if (['Top','Bottom'].indexOf(position) >= 0) {
-      styleOffset.width = offset.toString();
-      styleOffset.maxWidth = 'calc(100% - 30px)';
-    } else {
-      styleOffset.height = offset.toString();
-      styleOffset.maxHeight = 'calc(100% - 30px)';
-    }
-    return <div className="terra-PopupFrame-spacer" style={styleOffset} />;
-  }
-
   constructor(props) {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
@@ -133,17 +108,15 @@ class PopupFrame extends React.Component {
 
   render() {
     const { 
-      children,
+      arrow,
+      content,
       closeOnEsc,
       closeOnOutsideClick,
       closeOnResize,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,
-      arrowAlignment,
       arrowPosition,
-      showArrow,
-      arrowPxOffset,
       constraintContainer,
       ...customProps,
     } = this.props;
@@ -154,20 +127,6 @@ class PopupFrame extends React.Component {
       customProps.className,
     ]);
 
-    const arrowClassNames = classNames([
-      'terra-PopupFrame-arrow',
-      { [`terra-PopupFrame-arrow--align${arrowAlignment}`]: arrowAlignment },
-    ]);
-
-    let arrow;
-    if (showArrow) {
-      let offset = arrowPxOffset;
-      if (arrowAlignment === 'Center') {
-        offset *= 2;
-      }
-      arrow = <PopupArrow position={arrowPosition} offset={offset} />;
-    }
-
     let constraintStyle;
     if (this.props.constraintContainer) {
       const rect = this.props.constraintContainer.getBoundingClientRect();
@@ -177,8 +136,8 @@ class PopupFrame extends React.Component {
     return (
       <div {...customProps} className={frameClassNames} style={constraintStyle}>
         {arrow}
-        <div className="terra-PopupFrame-children">
-          {children}
+        <div className="terra-PopupFrame-content">
+          {content}
         </div>
       </div>
     );

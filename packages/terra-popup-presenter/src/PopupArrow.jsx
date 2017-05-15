@@ -20,28 +20,19 @@ const propTypes = {
    */
   position: PropTypes.oneOf(arrowPositions),
   offset: PropTypes.number,
+  arrowRefCallback: PropTypes.func,
 };
 
 const defaultProps = {
   position: 'Top',
   offset: 0,
-};
-
-const spacerFromOffset = (offset, position) => {
-  const styleOffset = {};
-  if (['Top','Bottom'].indexOf(position) >= 0) {
-    styleOffset.width = offset.toString() + 'px';
-    styleOffset.maxWidth = 'calc(100% - 30px)';
-  } else {
-    styleOffset.height = offset.toString() + 'px';
-    styleOffset.maxHeight = 'calc(100% - 30px)';
-  }
-  return <div className="terra-PopupArrow-spacer" style={styleOffset} />;
+  arrowRefCallback: undefined,
 };
 
 const PopupArrow = ({
     position,
     offset,
+    arrowRefCallback,
     ...customProps
   }) => {
   const arrowClassNames = classNames([
@@ -50,30 +41,8 @@ const PopupArrow = ({
     customProps.className,
   ]);
 
-  let startSpacer;
-  let endSpacer;
-  const absOffset = Math.abs(offset);
-  if (absOffset > 0) {
-    if (offset < 0) {
-      endSpacer = spacerFromOffset(absOffset, position);
-    } else {
-      startSpacer = spacerFromOffset(absOffset, position);
-    }
-  }
-
-  // let arrow;
-  // if (position === 'Bottom') {
-  //   arrow = <IconCaretDown height="30" width="30" />;
-  // } else if (position === 'Start') {
-  //   arrow = <IconCaretLeft height="30" width="30" />;
-  // } else if (position === 'End') {
-  //   arrow = <IconCaretRight height="30" width="30" />;
-  // } else {
-  //   arrow = <IconCaretUp height="30" width="30" />;
-  // }
-
   return (
-    <div {...customProps} className={arrowClassNames} />
+    <div {...customProps} className={arrowClassNames} ref={arrowRefCallback}/>
   );
 };
 

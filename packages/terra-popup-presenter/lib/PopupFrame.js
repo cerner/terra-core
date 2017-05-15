@@ -16,10 +16,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _PopupArrow = require('./PopupArrow');
-
-var _PopupArrow2 = _interopRequireDefault(_PopupArrow);
-
 require('./PopupFrame.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -46,7 +42,8 @@ var propTypes = {
   /**
    * The child elements passed to the component.
    */
-  children: _react.PropTypes.node,
+  arrow: _react.PropTypes.element,
+  content: _react.PropTypes.element,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
    */
@@ -66,19 +63,7 @@ var propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  arrowAlignment: _react.PropTypes.oneOf(arrowAlignments),
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
   arrowPosition: _react.PropTypes.oneOf(arrowPositions),
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  showArrow: _react.PropTypes.bool,
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  arrowPxOffset: _react.PropTypes.number,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -86,33 +71,17 @@ var propTypes = {
 };
 
 var defaultProps = {
-  children: [],
+  arrow: undefined,
+  content: undefined,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   closeOnResize: true,
   onRequestClose: undefined,
-  arrowAlignment: 'Center',
-  arrowPosition: 'Top',
-  showArrow: true
+  arrowPosition: 'Top'
 };
 
 var PopupFrame = function (_React$Component) {
   _inherits(PopupFrame, _React$Component);
-
-  _createClass(PopupFrame, null, [{
-    key: 'spacerFromOffset',
-    value: function spacerFromOffset(offset, position) {
-      var styleOffset = {};
-      if (['Top', 'Bottom'].indexOf(position) >= 0) {
-        styleOffset.width = offset.toString();
-        styleOffset.maxWidth = 'calc(100% - 30px)';
-      } else {
-        styleOffset.height = offset.toString();
-        styleOffset.maxHeight = 'calc(100% - 30px)';
-      }
-      return _react2.default.createElement('div', { className: 'terra-PopupFrame-spacer', style: styleOffset });
-    }
-  }]);
 
   function PopupFrame(props) {
     _classCallCheck(this, PopupFrame);
@@ -171,32 +140,19 @@ var PopupFrame = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          children = _props.children,
+          arrow = _props.arrow,
+          content = _props.content,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closeOnResize = _props.closeOnResize,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
-          arrowAlignment = _props.arrowAlignment,
           arrowPosition = _props.arrowPosition,
-          showArrow = _props.showArrow,
-          arrowPxOffset = _props.arrowPxOffset,
           constraintContainer = _props.constraintContainer,
-          customProps = _objectWithoutProperties(_props, ['children', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowAlignment', 'arrowPosition', 'showArrow', 'arrowPxOffset', 'constraintContainer']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'content', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowPosition', 'constraintContainer']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', _defineProperty({}, 'terra-PopupFrame--arrow' + arrowPosition, arrowPosition), customProps.className]);
-
-      var arrowClassNames = (0, _classnames2.default)(['terra-PopupFrame-arrow', _defineProperty({}, 'terra-PopupFrame-arrow--align' + arrowAlignment, arrowAlignment)]);
-
-      var arrow = void 0;
-      if (showArrow) {
-        var offset = arrowPxOffset;
-        if (arrowAlignment === 'Center') {
-          offset *= 2;
-        }
-        arrow = _react2.default.createElement(_PopupArrow2.default, { position: arrowPosition, offset: offset });
-      }
 
       var constraintStyle = void 0;
       if (this.props.constraintContainer) {
@@ -210,8 +166,8 @@ var PopupFrame = function (_React$Component) {
         arrow,
         _react2.default.createElement(
           'div',
-          { className: 'terra-PopupFrame-children' },
-          children
+          { className: 'terra-PopupFrame-content' },
+          content
         )
       );
     }

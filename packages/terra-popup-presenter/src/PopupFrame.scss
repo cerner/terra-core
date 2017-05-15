@@ -1,82 +1,30 @@
 @import '~terra-mixins';
 
 .terra-PopupFrame {
-  background-color: #fff;
-  border: 1px solid;
   max-height: 100%;
   max-width: 100%;
   min-height: 30px;
   min-width: 30px;
+}
+
+.terra-PopupFrame-content {
+  background-color: #fff;
+  border: 1px solid;
   overflow: auto;
 }
 
-// .terra-PopupFrame {
-//   display: flex;
-//   position: relative;
+.terra-PopupFrame--arrowTop {
+  margin-top: 13px;
+}
 
-//   .terra-PopupFrame-arrow {
-//     flex: 0 0 auto;
-//     position: relative;
-//   }
+.terra-PopupFrame--arrowBottom {
+  margin-bottom: 13px;
+}
 
-//   .terra-PopupFrame-content {
-//     border-radius: 5px;
-//     flex: 0 0 auto;
-//     padding: 5px;
-//     position: relative;
-//   }
-// }
+.terra-PopupFrame--arrowStart {
+  margin-left: 13px;
+}
 
-// .terra-PopupFrame {
-//   display: flex;
-
-//   .terra-PopupFrame-arrow {
-//     align-self: stretch;
-//     display: flex;
-//     flex: 0 0 auto;
-//     order: 0;
-//   }
-
-//   .terra-PopupFrame-content {
-//     flex: 0 0 auto;
-//     order: 1;
-//   }
-// }
-
-// // Positional relation for the arrow frame
-// .terra-PopupFrame--arrowTop, {
-//   flex-direction: column;
-
-//   .terra-PopupFrame-arrow {
-//     flex-direction: column;
-//   }
-// }
-
-// .terra-PopupFrame--arrowStart {
-//   flex-direction: row;
-// }
-
-// .terra-PopupFrame--arrowEnd {
-//   flex-direction: row-reverse;
-// }
-
-// .terra-PopupFrame--arrowBottom {
-//   flex-direction: column-reverse;
-
-//   .terra-PopupFrame-arrow {
-//     flex-direction: column;
-//   }
-// }
-
-// // Alignment of the child arrow item
-// .terra-PopupFrame-arrow--alignStart {
-//   align-items: flex-start;
-// }
-
-// .terra-PopupFrame-arrow--alignCenter {
-//   align-items: center; 
-// }
-
-// .terra-PopupFrame-arrow--alignEnd {
-//   align-items: flex-end;
-// }
+.terra-PopupFrame--arrowEnd {
+  margin-right: 13px;
+}

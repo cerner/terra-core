@@ -4,10 +4,10 @@
   color: #000;
   display: none;
   height: 0;
-  left: 0;
+  left: 50%;
   position: absolute;
   top: 50%;
-  width: 50%;
+  width: 0;
   @include terra-translate3d(-50%, -50%, 0);
 }
 
@@ -17,7 +17,8 @@
   border-right: 50px solid transparent;
   border-width: 14px;
   display: block;
-
+  top: 0;
+  @include terra-translate3d(-50%, 0, 0);
 }
 
 .terra-PopupArrow--alignBottom {
@@ -26,21 +27,27 @@
   border-top: 100px solid #e41d1d;
   border-width: 14px;
   display: block;
+  top: 100%;
+  @include terra-translate3d(-50%, -100%, 0);
 }
 
 .terra-PopupArrow--alignStart {
   border-bottom: 50px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 50px solid #e41d1d;
+  border-right: 100px solid #e41d1d;
+  border-top: 50px solid transparent;
   border-width: 14px;
   display: block;
+  left: 0;
+  @include terra-translate3d(0, -50%, 0);
 }
 
 .terra-PopupArrow--alignEnd {
   border-bottom: 50px solid transparent;
   border-color: transparent;
-  border-left: 100px solid transparent;
-  border-top: 50px solid #e41d1d;
+  border-left: 100px solid #e41d1d;
+  border-top: 50px solid transparent;
   border-width: 14px;
   display: block;
+  left: 100%;
+  @include terra-translate3d(-100%, -50%, 0);
 }
