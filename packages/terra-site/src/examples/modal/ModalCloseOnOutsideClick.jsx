@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'terra-modal';
 
-class ModalDisableCloseOnEscCloseOnOutsideClick extends React.Component {
+class ModalCloseOnOutsideClick extends React.Component {
   constructor() {
     super();
 
@@ -25,14 +25,20 @@ class ModalDisableCloseOnEscCloseOnOutsideClick extends React.Component {
     return (
       <div>
         <Modal
-          ariaLabel="Terra Modal"
+          ariaLabel="Modal disable close on outside click"
           isOpened={this.state.isOpened}
-          closeOnEsc={false}
           closeOnOutsideClick={false}
           onRequestClose={this.handleCloseModal}
         >
           <div>
-            <h1>Terra Modal</h1>
+            <h1>Modal disable close on outside click</h1>
+            <br />
+            <p>You can close the modal by:</p>
+            <ul>
+              <li>- Pressing the ESC key</li>
+              <li>- Clicking on the close button</li>
+            </ul>
+            <br />
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>
@@ -42,4 +48,4 @@ class ModalDisableCloseOnEscCloseOnOutsideClick extends React.Component {
   }
 }
 
-export default ModalDisableCloseOnEscCloseOnOutsideClick;
+export default ModalCloseOnOutsideClick;
