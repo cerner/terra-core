@@ -1,0 +1,55 @@
+@import '~terra-mixins';
+@import '../_variables.scss';
+
+.terra-Form-field {
+  border: $terra-form-field-border;
+  margin-bottom: 1.428em;
+}
+
+@media screen and (min-width: $terra-small-breakpoint) {
+  .terra-Form-field--inline {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.terra-Form-field--inline {
+  @include terra-margin-end(0.7143em);
+}
+
+.terra-Form-label {
+  display: block;
+  font-weight: $terra-form-label-font-weight;
+  margin-bottom: 0.357em;
+}
+
+.terra-Form-legend {
+  border: 0;
+  color: $terra-form-legend-color;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.357em;
+  max-width: 100%; // IE11 fix to ensure legends wrap
+  padding: 0;
+  width: auto;
+}
+
+.terra-Form-helpText {
+  display: block;
+  margin-top: 0.357em;
+}
+
+.terra-Form-error {
+  color: $terra-form-error-color;
+  display: block;
+  margin-top: 0.357em;
+}
+
+.terra-Form-field--required > label:first-child {
+  &::before {
+    @include terra-padding-end(0.357em);
+    color: $terra-form-required-color;
+    content: $terra-form-required-indicator;
+    display: inline-block;
+  }
+}
