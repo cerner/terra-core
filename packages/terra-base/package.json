@@ -28,7 +28,8 @@
     "react-dom": "^15.4.2"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

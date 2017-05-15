@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -28,28 +32,28 @@ var propTypes = {
   /**
    * Child Nodes.
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * An optional icon. Nested inline with the text when provided.
    */
-  icon: _react.PropTypes.element,
+  icon: _propTypes2.default.element,
   /**
    * Sets the badge color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
-  intent: _react.PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
+  intent: _propTypes2.default.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
    * Reverses the position of the icon and text.
    */
-  isReversed: _react.PropTypes.bool,
+  isReversed: _propTypes2.default.bool,
   /**
    * Sets the badge size. One of tiny, small, medium, large, huge.
    * @type String
    */
-  size: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  size: _propTypes2.default.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the badge text.
    */
-  text: _react.PropTypes.string
+  text: _propTypes2.default.string
 };
 
 var defaultProps = {

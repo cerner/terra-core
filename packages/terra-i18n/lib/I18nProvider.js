@@ -8,26 +8,28 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactIntl = require('react-intl');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable react/forbid-prop-types */
 
 var propTypes = {
   /**
    * The component that will be wrapped by i18n provider.
    */
-  children: _react.PropTypes.node.isRequired,
+  children: _propTypes2.default.node.isRequired,
   /**
    * The locale name.
    */
-  locale: _react.PropTypes.string.isRequired,
+  locale: _propTypes2.default.string.isRequired,
   /**
    * Translations messages object.
    */
-  messages: _react.PropTypes.object.isRequired
-};
+  messages: _propTypes2.default.object.isRequired
+}; /* eslint-disable react/forbid-prop-types */
 
 var I18nProvider = function I18nProvider(props) {
   return _react2.default.createElement(

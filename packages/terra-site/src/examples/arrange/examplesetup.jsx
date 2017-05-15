@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
 const icon = <IconAlert width="4em" height="4em" />;

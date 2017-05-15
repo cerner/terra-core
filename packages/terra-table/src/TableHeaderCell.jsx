@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import IconDown from 'terra-icon/lib/icon/IconCaretDown';
 import IconUp from 'terra-icon/lib/icon/IconCaretUp';
 import classNames from 'classnames';

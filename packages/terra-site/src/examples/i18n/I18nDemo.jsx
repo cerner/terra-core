@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { I18nProvider, i18nLoader } from 'terra-i18n';
@@ -49,7 +50,7 @@ class Demo extends React.Component {
 }
 
 Demo.propTypes = {
-  locale: React.PropTypes.string,
+  locale: PropTypes.string,
 };
 
 Demo.defaultProps = {
