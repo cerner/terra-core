@@ -25,22 +25,21 @@ class ModalIsFullscreen extends React.Component {
     return (
       <div>
         <Modal
-          ariaLabel="Terra Modal"
+          ariaLabel="Fullscreen Modal"
           isOpened={this.state.isOpened}
           isFullscreen
-          closeOnEsc
-          closeOnOutsideClick
-          onClose={this.onClose}
-          onOpen={this.onOpen}
-          onUpdate={this.onUpdate}
           onRequestClose={this.handleCloseModal}
         >
           <div>
-            <h1>Terra Modal</h1>
-            <button onClick={this.handleCloseModal}>Close isOpen modal</button>
+            <h1>Fullscreen Modal</h1>
+            <br />
+            <p>This modal will always take up the full screen.</p>
+            <p />
+            <br />
+            <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>
-        <button onClick={this.handleOpenModal}>Open isOpen modal</button>
+        <button onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }

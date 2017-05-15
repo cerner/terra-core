@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -29,32 +33,32 @@ var propTypes = {
   /**
    * Should the svg mirror when dir="rtl".
    */
-  isBidi: _react.PropTypes.bool,
+  isBidi: _propTypes2.default.bool,
   /**
    * Should the SVG rotate.
    */
-  isSpin: _react.PropTypes.bool,
+  isSpin: _propTypes2.default.bool,
   /**
    * Child nodes.
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * Height of SVG.
    */
-  height: _react.PropTypes.string,
+  height: _propTypes2.default.string,
   /**
    * Width of SVG.
    */
-  width: _react.PropTypes.string,
+  width: _propTypes2.default.string,
   /**
    * String that labels the current element. If 'aria-label' is present,
    * role is set to 'img' and aria-hidden is removed.
    */
-  ariaLabel: _react.PropTypes.string,
+  ariaLabel: _propTypes2.default.string,
   /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
-  focusable: _react.PropTypes.bool
+  focusable: _propTypes2.default.bool
 };
 
 var defaultProps = {

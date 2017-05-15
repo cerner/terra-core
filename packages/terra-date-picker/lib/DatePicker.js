@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactDatepicker = require('react-datepicker');
 
 var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
@@ -46,51 +50,51 @@ var propTypes = {
   /**
    * An ISO 8601 string representation of the end date for a date range.
    */
-  endDate: _react.PropTypes.string,
+  endDate: _propTypes2.default.string,
   /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
-  excludeDates: _react.PropTypes.arrayOf(_react.PropTypes.string),
+  excludeDates: _propTypes2.default.arrayOf(_propTypes2.default.string),
   /**
    * A function that gets called for each date in the picker to evaluate which date should be disabled. A return value of true will be enabled and false will be disabled.
    */
-  filterDate: _react.PropTypes.func,
+  filterDate: _propTypes2.default.func,
   /**
    * An array of ISO 8601 string representation of the dates to enable in the picker. All Other dates will be disabled.
    */
-  includeDates: _react.PropTypes.arrayOf(_react.PropTypes.string),
+  includeDates: _propTypes2.default.arrayOf(_propTypes2.default.string),
   /**
    * Custom input attributes to apply to the date input.
    */
-  inputAttributes: _react.PropTypes.object,
+  inputAttributes: _propTypes2.default.object,
   /**
    * Indicates the end date picker of a date range.
    */
-  isEndDateRange: _react.PropTypes.bool,
+  isEndDateRange: _propTypes2.default.bool,
   /**
    * Indicates the start date picker of a date range.
    */
-  isStartDateRange: _react.PropTypes.bool,
+  isStartDateRange: _propTypes2.default.bool,
   /**
    * An ISO 8601 string representation of the maximum date that can be selected.
    */
-  maxDate: _react.PropTypes.string,
+  maxDate: _propTypes2.default.string,
   /**
    * An ISO 8601 string representation of the minimum date that can be selected.
    */
-  minDate: _react.PropTypes.string,
+  minDate: _propTypes2.default.string,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
-  onChange: _react.PropTypes.func,
+  onChange: _propTypes2.default.func,
   /**
    * An ISO 8601 string representation of the initial default date to show in the date input. This prop name is derived from react-datepicker but is analogous to defaultValue for a form input field.
    */
-  selectedDate: _react.PropTypes.string,
+  selectedDate: _propTypes2.default.string,
   /**
    * An ISO 8601 string representation of the start date for a date range.
    */
-  startDate: _react.PropTypes.string
+  startDate: _propTypes2.default.string
 };
 
 var defaultProps = {

@@ -28,6 +28,7 @@
   "dependencies": {
     "marked": "^0.3.6",
     "github-markdown-css": "^2.4.1",
+    "prop-types": "^15.5.8",
     "terra-base": "^0.x"
   },
   "scripts": {

@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactPortal = require('react-portal');
 
 var _reactPortal2 = _interopRequireDefault(_reactPortal);
@@ -38,65 +42,49 @@ var propTypes = {
   /**
    * String that labels the modal for screen readers
    **/
-  ariaLabel: _react.PropTypes.string.isRequired,
-  /**
-   * This callback is called when the closing event is triggered but it prevents normal removal from the DOM. So, you can do some DOMNode animation first and then call removeFromDOM() that removes the modal from DOM.
-   **/
-  beforeClose: _react.PropTypes.func,
+  ariaLabel: _propTypes2.default.string.isRequired,
   /**
    * Content inside the modal dialog
    **/
-  children: _react.PropTypes.node.isRequired,
+  children: _propTypes2.default.node.isRequired,
   /**
    * CSS classnames that are append to the modal
    **/
-  classNameModal: _react.PropTypes.string,
+  classNameModal: _propTypes2.default.string,
   /**
    * CSS classnames that are append to the overlay
    **/
-  classNameOverlay: _react.PropTypes.string,
+  classNameOverlay: _propTypes2.default.string,
   /**
    * If set to true, the modal will close when the esc key is pressed
    **/
-  closeOnEsc: _react.PropTypes.bool,
+  closeOnEsc: _propTypes2.default.bool,
   /**
    * If set to true, the modal will close when a mouseclick is triggered outside the modal
    **/
-  closeOnOutsideClick: _react.PropTypes.bool,
+  closeOnOutsideClick: _propTypes2.default.bool,
   /**
    * If set to true, the modal will be fullscreen on all breakpoint sizes
    **/
-  isFullscreen: _react.PropTypes.bool,
+  isFullscreen: _propTypes2.default.bool,
   /**
    * If set to true, the modal will rendered as opened
    **/
-  isOpened: _react.PropTypes.bool.isRequired,
+  isOpened: _propTypes2.default.bool.isRequired,
   /**
    * If set to true, the modal dialog with have overflow-y set to scroll.
    * It is recommended not to use this prop and instead create a HOC
    * with the modal dialog body set to scroll.
    **/
-  isScrollable: _react.PropTypes.bool,
-  /**
-   * This callback is called when the modal closes and after beforeClose.
-   **/
-  onClose: _react.PropTypes.func,
-  /**
-   * This callback is called when the modal is opened and rendered (useful for animating the DOMNode).
-   **/
-  onOpen: _react.PropTypes.func,
+  isScrollable: _propTypes2.default.bool,
   /**
    * Function to set isOpened={false} and close the modal.
    **/
-  onRequestClose: _react.PropTypes.func.isRequired,
-  /**
-   * This callback is called when the modal is (re)rendered.
-   **/
-  onUpdate: _react.PropTypes.func,
+  onRequestClose: _propTypes2.default.func.isRequired,
   /**
    * Role attribute on the modal dialog
    **/
-  role: _react.PropTypes.string
+  role: _propTypes2.default.string
 };
 
 var defaultProps = {
@@ -150,7 +138,6 @@ var Modal = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           ariaLabel = _props.ariaLabel,
-          beforeClose = _props.beforeClose,
           children = _props.children,
           classNameModal = _props.classNameModal,
           classNameOverlay = _props.classNameOverlay,
@@ -159,12 +146,9 @@ var Modal = function (_React$Component) {
           isFullscreen = _props.isFullscreen,
           isOpened = _props.isOpened,
           isScrollable = _props.isScrollable,
-          onClose = _props.onClose,
-          onOpen = _props.onOpen,
-          onUpdate = _props.onUpdate,
           role = _props.role,
           onRequestClose = _props.onRequestClose,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'beforeClose', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'onClose', 'onOpen', 'onUpdate', 'role', 'onRequestClose']);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'role', 'onRequestClose']);
 
       if (!isOpened) {
         return null;
@@ -173,11 +157,7 @@ var Modal = function (_React$Component) {
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
-          isOpened: isOpened,
-          onClose: onClose,
-          onOpen: onOpen,
-          onUpdate: onUpdate,
-          beforeClose: beforeClose
+          isOpened: isOpened
         }, customProps),
         _react2.default.createElement(
           _ModalContent2.default,

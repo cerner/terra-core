@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Portal from 'react-portal';
 import 'terra-base/lib/baseStyles';
 import ModalContent from './ModalContent';
@@ -10,10 +11,6 @@ const propTypes = {
    * String that labels the modal for screen readers
    **/
   ariaLabel: PropTypes.string.isRequired,
-  /**
-   * This callback is called when the closing event is triggered but it prevents normal removal from the DOM. So, you can do some DOMNode animation first and then call removeFromDOM() that removes the modal from DOM.
-   **/
-  beforeClose: PropTypes.func,
   /**
    * Content inside the modal dialog
    **/
@@ -49,21 +46,9 @@ const propTypes = {
    **/
   isScrollable: PropTypes.bool,
   /**
-   * This callback is called when the modal closes and after beforeClose.
-   **/
-  onClose: PropTypes.func,
-  /**
-   * This callback is called when the modal is opened and rendered (useful for animating the DOMNode).
-   **/
-  onOpen: PropTypes.func,
-  /**
    * Function to set isOpened={false} and close the modal.
    **/
   onRequestClose: PropTypes.func.isRequired,
-  /**
-   * This callback is called when the modal is (re)rendered.
-   **/
-  onUpdate: PropTypes.func,
   /**
    * Role attribute on the modal dialog
    **/
@@ -110,7 +95,6 @@ class Modal extends React.Component {
   render() {
     const {
           ariaLabel,
-          beforeClose,
           children,
           classNameModal,
           classNameOverlay,
@@ -119,9 +103,6 @@ class Modal extends React.Component {
           isFullscreen,
           isOpened,
           isScrollable,
-          onClose,
-          onOpen,
-          onUpdate,
           role,
           onRequestClose,
            ...customProps } = this.props;
@@ -133,10 +114,6 @@ class Modal extends React.Component {
     return (
       <Portal
         isOpened={isOpened}
-        onClose={onClose}
-        onOpen={onOpen}
-        onUpdate={onUpdate}
-        beforeClose={beforeClose}
         {...customProps}
       >
         <ModalContent
