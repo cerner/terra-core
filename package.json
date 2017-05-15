@@ -44,7 +44,7 @@
     "compile": "lerna run compile",
     "compile:heroku": "cd packages/terra-site && npm run compile:heroku",
     "deploy": "lerna run --scope terra-site deploy",
-    "heroku-prebuild": "npm install -g lerna@2.0.0-beta.36",
+    "heroku-prebuild": "npm install -g lerna@2.0.0-rc.4",
     "heroku-postbuild": "npm install --only=dev && npm run compile:heroku",
     "jest": "jest",
     "jest:coverage": "jest --coverage",
