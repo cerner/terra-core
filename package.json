@@ -79,7 +79,7 @@
     "husky": "^0.13.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^18.0.0",
-    "lerna": "2.0.0-beta.36",
+    "lerna": "^2.0.0-rc.4",
     "load-json-file": "^2.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
