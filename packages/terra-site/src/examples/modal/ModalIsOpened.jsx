@@ -32,7 +32,7 @@ class ModalIsOpened extends React.Component {
           <div>
             <h1>Default Modal</h1>
             <br />
-            <p>You can close the button by:</p>
+            <p>You can close the modal by:</p>
             <ul>
               <li>- Pressing the ESC key</li>
               <li>- Clicking on the overlay</li>

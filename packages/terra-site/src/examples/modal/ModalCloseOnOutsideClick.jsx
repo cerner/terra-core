@@ -33,7 +33,7 @@ class ModalCloseOnOutsideClick extends React.Component {
           <div>
             <h1>Modal disable close on outside click</h1>
             <br />
-            <p>You can close the button by:</p>
+            <p>You can close the modal by:</p>
             <ul>
               <li>- Pressing the ESC key</li>
               <li>- Clicking on the close button</li>
