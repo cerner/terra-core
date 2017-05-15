@@ -1,6 +1,0 @@
-@import './mixins';
-
-.terra-Breakpoints::before {
-  content: '{"tiny":#{strip($terra-tiny-breakpoint)},"small":#{strip($terra-small-breakpoint)},"medium":#{strip($terra-medium-breakpoint)},"large":#{strip($terra-large-breakpoint)},"huge":#{strip($terra-huge-breakpoint)}}';
-  display: none;
-}
