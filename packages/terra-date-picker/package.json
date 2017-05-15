@@ -1,8 +1,7 @@
 {
   "name": "terra-date-picker",
   "main": "lib/DatePicker.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "The terra-date-picker component provides users a way to enter or select a date from the date picker.",
   "repository": {
     "type": "git",
