@@ -38,7 +38,7 @@ var propTypes = {
   /**
    * A callback function for onKeyDown action for tab key
    */
-  onKeyDown: _react.PropTypes.func
+  onKeyDown: _propTypes2.default.func
 };
 
 var defaultProps = {
@@ -66,10 +66,10 @@ function cloneChildItems(children, onClick, onKeyDown, numberOfCols) {
 }
 
 function getNumberOfColumns(children) {
-  var count = 16;
+  var count = 0;
   var childArray = _react2.default.Children.toArray(children);
   for (var i = 0; i < childArray.length; i += 1) {
-    // If the child is of type TableRow and it has children, then return the count of children.
+    // If the child is a TableRow and it has children, then return the count of the TableRow's children.
     // Assumptions: Number of children will be equal to number of columns. Children of TableRow should be TableCell
     if (childArray[i].type === _TableRow2.default && childArray[i].props.children !== null) {
       count = _react2.default.Children.count(childArray[i].props.children);

@@ -14,6 +14,7 @@ const TableTests = () => (
       <li><Link to="/tests/table-tests/table-highlighted-rows">Highlighted Rows Table</Link></li>
       <li><Link to="/tests/table-tests/table-sort-indicator">Sort Indicator Table Header</Link></li>
       <li><Link to="/tests/table-tests/table-subheaders">Subheaders</Link></li>
+      <li><Link to="/tests/table-tests/table-selectable-subheaders">Selectable Table With Subheaders</Link></li>
     </ul>
   </div>
 );

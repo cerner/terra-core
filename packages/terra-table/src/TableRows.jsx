@@ -44,10 +44,10 @@ function cloneChildItems(children, onClick, onKeyDown, numberOfCols) {
 }
 
 function getNumberOfColumns(children) {
-  let count = 16;
+  let count = 0;
   const childArray = React.Children.toArray(children);
   for (let i = 0; i < childArray.length; i += 1) {
-    // If the child is of type TableRow and it has children, then return the count of children.
+    // If the child is a TableRow and it has children, then return the count of the TableRow's children.
     // Assumptions: Number of children will be equal to number of columns. Children of TableRow should be TableCell
     if (childArray[i].type === TableRow && childArray[i].props.children !== null) {
       count = React.Children.count(childArray[i].props.children);

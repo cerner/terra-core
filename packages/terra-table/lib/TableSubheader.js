@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -24,12 +28,12 @@ var propTypes = {
   /**
    * Content to be displayed in the subheader row
    */
-  content: _react.PropTypes.node.isRequired,
+  content: _propTypes2.default.node.isRequired,
 
   /**
    * Number of columns the subheader must span
    */
-  count: _react.PropTypes.number
+  count: _propTypes2.default.number
 };
 
 var TableSubheader = function TableSubheader(_ref) {
