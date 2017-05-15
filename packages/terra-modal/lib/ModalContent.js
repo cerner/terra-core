@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -37,15 +41,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var propTypes = {
-  ariaLabel: _react.PropTypes.string.isRequired,
-  children: _react.PropTypes.node.isRequired,
-  classNameModal: _react.PropTypes.string,
-  classNameOverlay: _react.PropTypes.string,
-  closeOnOutsideClick: _react.PropTypes.bool,
-  onRequestClose: _react.PropTypes.func.isRequired,
-  isFullscreen: _react.PropTypes.bool,
-  isScrollable: _react.PropTypes.bool,
-  role: _react.PropTypes.string
+  ariaLabel: _propTypes2.default.string.isRequired,
+  children: _propTypes2.default.node.isRequired,
+  classNameModal: _propTypes2.default.string,
+  classNameOverlay: _propTypes2.default.string,
+  closeOnOutsideClick: _propTypes2.default.bool,
+  onRequestClose: _propTypes2.default.func.isRequired,
+  isFullscreen: _propTypes2.default.bool,
+  isScrollable: _propTypes2.default.bool,
+  role: _propTypes2.default.string
 };
 
 var defaultProps = {

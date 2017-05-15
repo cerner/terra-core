@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SlidePanel from 'terra-slide-panel/src/SlidePanel';
 
 const mainContentForSlidePanel = togglePanelHandler => (
@@ -115,12 +116,12 @@ class SlidePanelDemo extends React.Component {
 }
 
 SlidePanelDemo.propTypes = {
-  panelBehavior: React.PropTypes.oneOf(['overlay', 'squish']),
-  panelPosition: React.PropTypes.oneOf(['start', 'end']),
-  panelSize: React.PropTypes.oneOf(['small', 'large']),
-  isFullscreen: React.PropTypes.bool,
-  isOpen: React.PropTypes.bool,
-  fill: React.PropTypes.bool,
+  panelBehavior: PropTypes.oneOf(['overlay', 'squish']),
+  panelPosition: PropTypes.oneOf(['start', 'end']),
+  panelSize: PropTypes.oneOf(['small', 'large']),
+  isFullscreen: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  fill: PropTypes.bool,
 };
 
 export default SlidePanelDemo;

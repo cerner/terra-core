@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -39,63 +43,63 @@ var propTypes = {
   /**
    * Application content to display in the banner.
    */
-  applicationContent: _react.PropTypes.node,
+  applicationContent: _propTypes2.default.node,
   /**
    * Age of the person.
    */
-  age: _react.PropTypes.string,
+  age: _propTypes2.default.string,
   /**
    * The persons date of birth
    */
-  dateOfBirth: _react.PropTypes.string,
+  dateOfBirth: _propTypes2.default.string,
   /**
    * Label to display for the date of birth
    */
-  dateOfBirthLabel: _react.PropTypes.string,
+  dateOfBirthLabel: _propTypes2.default.string,
   /**
    * The person's deceased date. Will display the banner as deceased if this value is provided
    */
-  deceasedDate: _react.PropTypes.string,
+  deceasedDate: _propTypes2.default.string,
   /**
    * Label to display for the deceased date
    */
-  deceasedDateLabel: _react.PropTypes.string,
+  deceasedDateLabel: _propTypes2.default.string,
   /**
    * Gender of the Person
    */
-  gender: _react.PropTypes.string,
+  gender: _propTypes2.default.string,
   /**
    * The persons gestational age.
    */
-  gestationalAge: _react.PropTypes.string,
+  gestationalAge: _propTypes2.default.string,
   /**
    * Label to display for the GestationalAge
    */
-  gestationalAgeLabel: _react.PropTypes.string,
+  gestationalAgeLabel: _propTypes2.default.string,
   /**
    * Additional key value identifiers of a person's demographic information
    */
-  identifiers: _react.PropTypes.object,
+  identifiers: _propTypes2.default.object,
   /**
    * Full Name of the person
    */
-  personName: _react.PropTypes.string,
+  personName: _propTypes2.default.string,
   /**
    * Photo to display in the banner
    */
-  photo: _react.PropTypes.node,
+  photo: _propTypes2.default.node,
   /**
    * The column layout in which to present the displays.
    */
-  postMenstrualAge: _react.PropTypes.string,
+  postMenstrualAge: _propTypes2.default.string,
   /**
    * Label to display for the PostMenstrualAgeLabel
    */
-  postMenstrualAgeLabel: _react.PropTypes.string,
+  postMenstrualAgeLabel: _propTypes2.default.string,
   /**
    * The persons preferred first name if they have one.
    */
-  preferredFirstName: _react.PropTypes.string
+  preferredFirstName: _propTypes2.default.string
 };
 
 var defaultProps = {

@@ -30,6 +30,7 @@
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
     "terra-base": "^0.x",
     "terra-mixins": "^1.0.0"

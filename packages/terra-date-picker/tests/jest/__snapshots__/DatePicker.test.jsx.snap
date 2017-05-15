@@ -2,11 +2,10 @@ exports[`test should render a date picker with filtered dates 1`] = `
 <ResponsiveElement
   className="terra-DatePicker"
   defaultElement={
-    <DatePicker
+    <t
       customInput={<DatePickerInput />}
       dateFormat="MM/DD/YYYY"
       dateFormatCalendar=" "
-      disableDateAutoCorrection={false}
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
@@ -42,11 +41,10 @@ exports[`test should render a date picker with filtered dates 1`] = `
   }
   responsiveTo="window"
   small={
-    <DatePicker
+    <t
       customInput={<DatePickerInput />}
       dateFormat="MM/DD/YYYY"
       dateFormatCalendar=" "
-      disableDateAutoCorrection={false}
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
@@ -102,11 +100,10 @@ exports[`test should render a default date input and date picker 1`] = `
 <ResponsiveElement
   className="terra-DatePicker"
   defaultElement={
-    <DatePicker
+    <t
       customInput={<DatePickerInput />}
       dateFormat="MM/DD/YYYY"
       dateFormatCalendar=" "
-      disableDateAutoCorrection={false}
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
@@ -141,11 +138,10 @@ exports[`test should render a default date input and date picker 1`] = `
   }
   responsiveTo="window"
   small={
-    <DatePicker
+    <t
       customInput={<DatePickerInput />}
       dateFormat="MM/DD/YYYY"
       dateFormatCalendar=" "
-      disableDateAutoCorrection={false}
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
@@ -184,7 +180,7 @@ exports[`test should render a default date input with custom input attributes 1`
 <ResponsiveElement
   className="terra-DatePicker"
   defaultElement={
-    <DatePicker
+    <t
       customInput={
         <DatePickerInput
           inputAttributes={
@@ -196,7 +192,6 @@ exports[`test should render a default date input with custom input attributes 1`
       }
       dateFormat="MM/DD/YYYY"
       dateFormatCalendar=" "
-      disableDateAutoCorrection={false}
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
@@ -231,7 +226,7 @@ exports[`test should render a default date input with custom input attributes 1`
   }
   responsiveTo="window"
   small={
-    <DatePicker
+    <t
       customInput={
         <DatePickerInput
           inputAttributes={
@@ -243,7 +238,6 @@ exports[`test should render a default date input with custom input attributes 1`
       }
       dateFormat="MM/DD/YYYY"
       dateFormatCalendar=" "
-      disableDateAutoCorrection={false}
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"

@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _IconCaretDown = require('terra-icon/lib/icon/IconCaretDown');
 
 var _IconCaretDown2 = _interopRequireDefault(_IconCaretDown);
@@ -34,15 +38,15 @@ var propTypes = {
   /**
    * Content to be displayed for the column header
    */
-  content: _react.PropTypes.node.isRequired,
+  content: _propTypes2.default.node.isRequired,
   /**
    * The minimum width for the column
    */
-  minWidth: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  minWidth: _propTypes2.default.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Whether or not data in table is sorted
    */
-  sort: _react.PropTypes.oneOf(['asc', 'desc'])
+  sort: _propTypes2.default.oneOf(['asc', 'desc'])
 };
 
 var defaultProps = {

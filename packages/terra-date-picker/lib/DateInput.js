@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 require('terra-base/lib/baseStyles');
 
 var _terraButton = require('terra-button');
@@ -36,27 +40,27 @@ var propTypes = {
   /**
    * Custom input attributes to apply to the date input.
    */
-  inputAttributes: _react.PropTypes.object,
+  inputAttributes: _propTypes2.default.object,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
-  onChange: _react.PropTypes.func,
+  onChange: _propTypes2.default.func,
   /**
    * The onInputClick callback function from react-datepicker to show the picker when clicked.
    */
-  onClick: _react.PropTypes.func,
+  onClick: _propTypes2.default.func,
   /**
    * The onInputKeyDown callback function from react-datepicker to handle keyboard navigation.
    */
-  onKeyDown: _react.PropTypes.func,
+  onKeyDown: _propTypes2.default.func,
   /**
    * The placeholder text to display in the date input.
    */
-  placeholder: _react.PropTypes.string,
+  placeholder: _propTypes2.default.string,
   /**
    * The selected or entered date value to display in the date input.
    */
-  value: _react.PropTypes.string
+  value: _propTypes2.default.string
 };
 
 // eslint-disable-next-line react/prefer-stateless-function

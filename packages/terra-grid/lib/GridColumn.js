@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -34,11 +38,11 @@ var propTypes = {
   /**
    * The component that will be displayed in cell level.
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * Custom class name that can be assigned to grid column.
    */
-  className: _react.PropTypes.string,
+  className: _propTypes2.default.string,
   /**
    * The number of columns across all breakpoints. From 1-12(inclusively).
    */

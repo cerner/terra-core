@@ -29,6 +29,7 @@
     "terra-base": "^0.x"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react-docgen": "2.13.0",
     "terra-base": "^0.x",
     "terra-markdown": "^0.x"

@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
@@ -34,15 +38,15 @@ var propTypes = {
   /**
    * An ISO 8601 string representation of the default end date for a date range.
    */
-  endDate: _react.PropTypes.string,
+  endDate: _propTypes2.default.string,
   /**
    * An ISO 8601 string representation of the selected start date.
    */
-  startDate: _react.PropTypes.string,
+  startDate: _propTypes2.default.string,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
-  onChange: _react.PropTypes.func
+  onChange: _propTypes2.default.func
 };
 
 var DateRange = function (_React$Component) {

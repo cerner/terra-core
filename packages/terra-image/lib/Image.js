@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -28,27 +32,27 @@ var propTypes = {
   /**
    * The source for the image which will be displayed.
    */
-  src: _react.PropTypes.string.isRequired,
+  src: _propTypes2.default.string.isRequired,
   /**
    * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
    */
-  variant: _react.PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
+  variant: _propTypes2.default.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
   /**
    * Sets the fluid behavior of the image, which is `nonfluid` by default.
    */
-  isFluid: _react.PropTypes.bool,
+  isFluid: _propTypes2.default.bool,
   /**
    * The text content that specifies an alternative text for an image.
    */
-  alt: _react.PropTypes.string.isRequired,
+  alt: _propTypes2.default.string.isRequired,
   /**
    * Sets the height of the image.
    */
-  height: _react.PropTypes.string,
+  height: _propTypes2.default.string,
   /**
    * Sets the width of the image.
    */
-  width: _react.PropTypes.string
+  width: _propTypes2.default.string
 };
 
 var defaultProps = {
