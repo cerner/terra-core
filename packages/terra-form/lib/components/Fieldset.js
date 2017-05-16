@@ -51,7 +51,11 @@ var propTypes = {
   /**
    * Legend for the input group
    */
-  legend: _propTypes2.default.string
+  legend: _propTypes2.default.string,
+  /**
+   * Determines whether the fieldset is required
+   */
+  required: _propTypes2.default.bool
 };
 
 var defaultProps = {
@@ -60,7 +64,8 @@ var defaultProps = {
   help: null,
   htmlFor: null,
   isInline: false,
-  legend: null
+  legend: null,
+  required: false
 };
 
 var Fieldset = function Fieldset(_ref) {
@@ -70,9 +75,10 @@ var Fieldset = function Fieldset(_ref) {
       htmlFor = _ref.htmlFor,
       isInline = _ref.isInline,
       legend = _ref.legend,
-      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'htmlFor', 'isInline', 'legend']);
+      required = _ref.required,
+      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'htmlFor', 'isInline', 'legend', 'required']);
 
-  var fieldsetClasses = (0, _classnames2.default)('terra-Form-field', { 'terra-Form-field--inline': isInline }, customProps.className);
+  var fieldsetClasses = (0, _classnames2.default)('terra-Form-fieldset', { 'terra-Form-fieldset--inline': isInline }, { 'terra-Form-fieldset--required': required }, customProps.className);
 
   return _react2.default.createElement(
     'fieldset',

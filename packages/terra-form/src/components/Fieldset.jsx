@@ -31,6 +31,10 @@ const propTypes = {
    * Legend for the input group
    */
   legend: PropTypes.string,
+  /**
+   * Determines whether the fieldset is required
+   */
+  required: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -40,12 +44,14 @@ const defaultProps = {
   htmlFor: null,
   isInline: false,
   legend: null,
+  required: false,
 };
 
-const Fieldset = ({ children, error, help, htmlFor, isInline, legend, ...customProps }) => {
+const Fieldset = ({ children, error, help, htmlFor, isInline, legend, required, ...customProps }) => {
   const fieldsetClasses = classNames(
-    'terra-Form-field',
-    { 'terra-Form-field--inline': isInline },
+    'terra-Form-fieldset',
+    { 'terra-Form-fieldset--inline': isInline },
+    { 'terra-Form-fieldset--required': required },
     customProps.className,
   );
 

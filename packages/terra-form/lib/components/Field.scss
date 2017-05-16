@@ -1,19 +1,32 @@
 @import '~terra-mixins';
 @import '../variables';
 
-.terra-Form-field {
+.terra-Form-field,
+.terra-Form-fieldset {
   border: $terra-form-field-border;
   margin-bottom: 1.428em;
 }
 
 @media screen and (min-width: $terra-small-breakpoint) {
-  .terra-Form-field--inline {
+  .terra-Form-field--inline,
+  .terra-Form-fieldset--inline {
     display: inline-block;
     vertical-align: top;
   }
 }
 
-.terra-Form-field--inline {
+.terra-Form-field--required > .terra-Form-label:first-child,
+.terra-Form-fieldset--required > .terra-Form-legend:first-child {
+  &::before {
+    @include terra-padding-end(0.357em);
+    color: $terra-form-required-color;
+    content: $terra-form-required-indicator;
+    display: inline-block;
+  }
+}
+
+.terra-Form-field--inline,
+.terra-Form-fieldset--inline {
   @include terra-margin-end(0.7143em);
 }
 
@@ -45,11 +58,3 @@
   margin-top: 0.357em;
 }
 
-.terra-Form-field--required > label:first-child {
-  &::before {
-    @include terra-padding-end(0.357em);
-    color: $terra-form-required-color;
-    content: $terra-form-required-indicator;
-    display: inline-block;
-  }
-}
