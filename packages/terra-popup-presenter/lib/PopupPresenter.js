@@ -193,48 +193,101 @@ var PopupPresenter = function (_React$Component) {
       return position;
     }
   }, {
-    key: 'arrowStylesFromPosition',
-    value: function arrowStylesFromPosition(position, targetBounds, presenterBounds) {
-      if ('bottom') {
-        var targetAttachment = this.props.targetAttachment;
-        if (!targetAttachment) {
-          targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
-        }
-
-        var alignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
-
-        var _position = -14;
-        if (alignment === 'Middle') {
-          _position += targetBounds.width / 2;
-        } else if (alignment === 'End') {
-          _position += targetBounds.width;
-        }
-        _position += targetBounds.left;
-
-        var insetStart = presenterBounds.left + 13;
-        var insetEnd = presenterBounds.left + presenterBounds.width - 13;
-        if (_position >= insetStart || _position <= insetEnd) {
-          //show arrow && update value
-          var value = insetStart - _position;
-          return value.toString() + 'px';
-        } //else check bounds of targetmatch
-
-        return {};
+    key: 'attachPositionFromAlignment',
+    value: function attachPositionFromAlignment(alignment, start, width) {
+      if (alignment === 'Middle') {
+        return start + width / 2;
+      } else if (alignment === 'End') {
+        return start + width;
       }
+      return start;
+    }
+  }, {
+    key: 'setArrowPosition',
+    value: function setArrowPosition(position, targetBounds, popUpBounds) {
+      var arrowSet = false;
+      var targetAttachment = this.props.targetAttachment;
+      if (!targetAttachment) {
+        targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
+      }
+
+      if (['bottom', 'top'].indexOf(position) >= 0) {
+
+        var insetStart = popUpBounds.left + 13;
+        var insetEnd = popUpBounds.left + popUpBounds.width - 13;
+
+        var targetStart = targetBounds.left;
+        var targetEnd = targetBounds.left + targetBounds.width;
+
+        if (this.horizontalSegmentIntersected(targetBounds, popUpBounds, 13)) {
+          var targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
+          var targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.left, targetBounds.width);
+
+          var contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(this.props.contentAttachment);
+          var contentAttachPosition = this.attachPositionFromAlignment(contentAlignment, popUpBounds.left, popUpBounds.width);
+
+          var offsetValue = void 0;
+          if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
+            offsetValue = Math.abs(contentAttachPosition - targetAttachPosition);
+          }
+
+          this._arrowNode.style.left = offsetValue.toString() + 'px';
+          arrowSet = true;
+        }
+      } else {
+        if (this.verticalSegmentIntersected(targetBounds, popUpBounds)) {
+          var _offsetValue = void 0;
+          this._arrowNode.style.top = arrowOffset;
+          arrowSet = true;
+        }
+      }
+
+      return arrowSet;
+    }
+  }, {
+    key: 'horizontalSegmentIntersected',
+    value: function horizontalSegmentIntersected(targetBounds, popUpBounds, arrowOffset) {
+      var firstStart = popUpBounds.left + arrowOffset;
+      var firstEnd = popUpBounds.left + popUpBounds.width - arrowOffset;
+      var secondStart = targetBounds.left;
+      var secondEnd = targetBounds.left + targetBounds.width;
+
+      return this.segmentsIntersected(firstStart, firstEnd, secondStart, secondEnd);
+    }
+  }, {
+    key: 'verticalSegmentIntersected',
+    value: function verticalSegmentIntersected(targetBounds, popUpBounds, arrowOffset) {
+      var firstStart = popUpBounds.top + arrowOffset;
+      var firstEnd = popUpBounds.top + popUpBounds.height - arrowOffset;
+      var secondStart = targetBounds.top;
+      var secondEnd = targetBounds.top + targetBounds.height;
+
+      return this.segmentsIntersected(firstStart, firstEnd, secondStart, secondEnd);
+    }
+  }, {
+    key: 'segmentsIntersected',
+    value: function segmentsIntersected(firstStart, firstEnd, secondStart, secondEnd) {
+      if (firstStart >= secondStart && firstStart <= secondEnd || firstEnd >= secondStart && firstEnd <= secondEnd) {
+        return true;
+      } else if (secondStart >= firstStart && secondStart <= firstEnd || secondEnd >= firstStart && secondEnd <= firstEnd) {
+        return true;
+      }
+      return false;
     }
   }, {
     key: 'handleTetherUpdate',
     value: function handleTetherUpdate(event, targetBounds, presenterBounds) {
-      var position = this.arrowPositionFromBounds(targetBounds, presenterBounds);
-      this.arrowStyles = this.arrowStylesFromPosition(position, targetBounds, presenterBounds);
+      if (this._arrowNode) {
+        var position = this.arrowPositionFromBounds(targetBounds, presenterBounds);
+        var enabledArrows = this.setArrowPosition(position, targetBounds, presenterBounds);
+      }
     }
   }, {
     key: 'handleTetherRepositioned',
     value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
       if (this._arrowNode) {
         var position = this.arrowPositionFromBounds(targetBounds, presenterBounds);
-        var arrowOffset = this.arrowStylesFromPosition(position, targetBounds, presenterBounds);
-        this._arrowNode.style.left = arrowOffset;
+        var enabledArrows = this.setArrowPosition(position, targetBounds, presenterBounds);
       }
     }
   }, {

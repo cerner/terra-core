@@ -126,46 +126,96 @@ class PopupPresenter extends React.Component {
     return position;
   }
 
-  arrowStylesFromPosition(position, targetBounds, presenterBounds) {
-    if ('bottom') {
-      let targetAttachment = this.props.targetAttachment;
-      if (!targetAttachment) {
-        targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
-      }
-
-      const alignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
-
-      let position = -14;
-      if (alignment === 'Middle') {
-        position +=  targetBounds.width / 2;
-      }else if (alignment === 'End'){
-        position +=  targetBounds.width;
-      }
-      position += targetBounds.left; 
-
-
-      const insetStart = presenterBounds.left + 13;
-      const insetEnd = presenterBounds.left + presenterBounds.width - 13;
-      if (position >= insetStart || position <= insetEnd) {
-        //show arrow && update value
-        const value = insetStart - position;
-        return value.toString() + 'px';
-      } //else check bounds of targetmatch
-
-      return {};
+  attachPositionFromAlignment(alignment, start, width) {
+    if (alignment === 'Middle') {
+      return start + width / 2;
+    }else if (alignment === 'End'){
+      return start + width;
     }
+    return start;
+  }
+
+  setArrowPosition(position, targetBounds, popUpBounds) {
+    let arrowSet = false;
+    let targetAttachment = this.props.targetAttachment;
+    if (!targetAttachment) {
+      targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
+    }
+
+    if (['bottom', 'top'].indexOf(position) >= 0) {
+
+      const insetStart = popUpBounds.left + 13;
+      const insetEnd = popUpBounds.left + popUpBounds.width - 13;
+
+      const targetStart = targetBounds.left;
+      const targetEnd = targetBounds.left + targetBounds.width;
+
+
+      if (this.horizontalSegmentIntersected(targetBounds, popUpBounds, 13)) {
+        const targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
+        const targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.left, targetBounds.width);
+
+        const contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(this.props.contentAttachment);
+        const contentAttachPosition = this.attachPositionFromAlignment(contentAlignment, popUpBounds.left, popUpBounds.width);
+
+
+        let offsetValue;
+        if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
+          offsetValue = Math.abs(contentAttachPosition - targetAttachPosition);
+        }
+
+        this._arrowNode.style.left = offsetValue.toString() + 'px';
+        arrowSet = true;
+      } 
+    } else {
+      if (this.verticalSegmentIntersected(targetBounds, popUpBounds)) {
+        let offsetValue;
+        this._arrowNode.style.top = arrowOffset;
+        arrowSet = true;
+      }
+    }
+
+    return arrowSet;
+  }
+
+  horizontalSegmentIntersected(targetBounds, popUpBounds, arrowOffset) {
+    const firstStart = popUpBounds.left + arrowOffset;
+    const firstEnd = popUpBounds.left + popUpBounds.width - arrowOffset;
+    const secondStart = targetBounds.left;
+    const secondEnd = targetBounds.left + targetBounds.width;
+
+    return this.segmentsIntersected(firstStart, firstEnd, secondStart, secondEnd);
+  }
+
+  verticalSegmentIntersected(targetBounds, popUpBounds, arrowOffset) {
+    const firstStart = popUpBounds.top + arrowOffset;
+    const firstEnd = popUpBounds.top + popUpBounds.height - arrowOffset;
+    const secondStart = targetBounds.top;
+    const secondEnd = targetBounds.top + targetBounds.height;
+
+    return this.segmentsIntersected(firstStart, firstEnd, secondStart, secondEnd);
+  }
+
+  segmentsIntersected(firstStart, firstEnd, secondStart, secondEnd) {
+    if ((firstStart >= secondStart && firstStart<= secondEnd) || (firstEnd >= secondStart && firstEnd <= secondEnd)) {
+      return true;
+    } else if ((secondStart >= firstStart && secondStart<= firstEnd) || (secondEnd >= firstStart && secondEnd <= firstEnd)) {
+      return true;
+    }
+    return false;
   }
 
   handleTetherUpdate(event, targetBounds, presenterBounds) {
-    const position =  this.arrowPositionFromBounds(targetBounds, presenterBounds);
-    this.arrowStyles = this.arrowStylesFromPosition(position, targetBounds, presenterBounds);
+    if (this._arrowNode) {
+      const position =  this.arrowPositionFromBounds(targetBounds, presenterBounds);
+      const enabledArrows = this.setArrowPosition(position, targetBounds, presenterBounds);
+    }
   }
 
   handleTetherRepositioned(event, targetBounds, presenterBounds) {
     if (this._arrowNode) {
       const position =  this.arrowPositionFromBounds(targetBounds, presenterBounds);
-      const arrowOffset = this.arrowStylesFromPosition(position, targetBounds, presenterBounds);
-      this._arrowNode.style.left = arrowOffset;
+      const enabledArrows = this.setArrowPosition(position, targetBounds, presenterBounds);
     }
   }
 

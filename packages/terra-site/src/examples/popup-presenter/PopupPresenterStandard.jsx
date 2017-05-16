@@ -23,7 +23,7 @@ class DummyApp extends React.Component {
 
     return (
       <div id="terra-FakeModal" style={{position: 'relative', height: '400px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
-        <div style={{position: 'relative', height: '600px', width: '800px'}}>
+        <div style={{position: 'relative', height: '600px', width: '1600px'}}>
           <PopupPresenter 
             content={contentSection}
             contentAttachment="bottom left"
@@ -32,7 +32,7 @@ class DummyApp extends React.Component {
             target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
             targetAttachment="top right"
             onRequestClose={this.handleRequestClose}
-            style={{position: 'absolute', top: '400px', left: '200px'}}
+            style={{position: 'absolute', top: '300px', left: '700px'}}
             className="drup-test"
             id="asdf"
           />
