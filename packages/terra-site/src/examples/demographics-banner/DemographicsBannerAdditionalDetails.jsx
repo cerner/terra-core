@@ -1,5 +1,6 @@
 import React from 'react';
 import DemographicsBanner from 'terra-demographics-banner';
+import demographicsImage from '../../assets/demographicsCat.jpg';
 
 const DemographicsBannerAdditionalDetails = () => (
   <DemographicsBanner
@@ -10,7 +11,7 @@ const DemographicsBannerAdditionalDetails = () => (
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     personName="Johnathon Doe"
-    photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
+    photo={<img alt="My Cat" src={demographicsImage} />}
     preferredFirstName="John"
   />
 );

@@ -1,18 +1,20 @@
 import React from 'react';
 import Image from 'terra-image';
+import placeholderPic150x150 from '../../assets/150x150.jpg';
+import placeholderPic1000x200 from '../../assets/1000x200.png';
 
 const ImageDefault = () => (
   <div>
     <h2>Default</h2>
-    <Image src="http://lorempixel.com/150/150/nature/" alt="default image" />
+    <Image src={placeholderPic150x150} alt="default image" />
     <h2>Circle</h2>
-    <Image src="http://lorempixel.com/150/150/nature/" alt="circle image" variant="circle" />
+    <Image src={placeholderPic150x150} alt="circle image" variant="circle" />
     <h2>Rounded</h2>
-    <Image src="http://lorempixel.com/150/150/nature/" alt="rounded image" variant="rounded" />
+    <Image src={placeholderPic150x150} alt="rounded image" variant="rounded" />
     <h2>Thumbnail</h2>
-    <Image src="http://lorempixel.com/150/150/nature/" alt="thumbnail image" variant="thumbnail" />
+    <Image src={placeholderPic150x150} alt="thumbnail image" variant="thumbnail" />
     <h2>Fluid</h2>
-    <Image src="http://placehold.it/1000x200" alt="fluid image" isFluid />
+    <Image src={placeholderPic1000x200} alt="fluid image" isFluid />
   </div>
 );
 
