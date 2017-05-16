@@ -179,16 +179,16 @@ var PopupPresenter = function (_React$Component) {
 
   _createClass(PopupPresenter, [{
     key: 'arrowPositionFromBounds',
-    value: function arrowPositionFromBounds(targetBounds, presenterBounds) {
+    value: function arrowPositionFromBounds(targetBounds, popUpBounds) {
       // need here for the transition
       var position = void 0;
-      if (targetBounds.top >= presenterBounds.bottom) {
+      if (targetBounds.top >= popUpBounds.bottom) {
         position = 'bottom';
-      } else if (targetBounds.right <= presenterBounds.left) {
+      } else if (targetBounds.right <= popUpBounds.left) {
         position = 'left';
-      } else if (targetBounds.left >= presenterBounds.right) {
+      } else if (targetBounds.left >= popUpBounds.right) {
         position = 'right';
-      } else if (targetBounds.bottom <= presenterBounds.top) {
+      } else if (targetBounds.bottom <= popUpBounds.top) {
         position = 'top';
       }
       return position;
