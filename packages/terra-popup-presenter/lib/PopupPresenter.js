@@ -328,25 +328,12 @@ var PopupPresenter = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
-      var constraintContainer = document.getElementById('terra-FakeModal') || 'scrollParent'; //follow up here
       var contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
       var constraints = [{
-        to: 'scrollParent',
-        pin: true
-      }, {
-        to: constraintContainer,
+        to: 'window',
+        pin: true,
         attachment: 'together'
       }];
-
-      // {
-      //   to: 'scrollParent',
-      //   pin: true
-      // },
-      // {
-      //   to: constraintContainer,
-      //   attachment: 'together',
-      // }
-
 
       if (isOpen && content) {
         var arrowAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
@@ -397,9 +384,8 @@ var PopupPresenter = function (_React$Component) {
       if (renderElementTo) {
         tetherOptions.renderElementTo = renderElementTo;
       }
-      // tetherOptions.onUpdate = this.handleTetherUpdate;
       tetherOptions.onRepositioned = this.handleTetherRepositioned;
-      // tetherOptions.classPrefix = 'terra';
+      tetherOptions.classPrefix = 'terra-Popup';
 
       return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
     }
