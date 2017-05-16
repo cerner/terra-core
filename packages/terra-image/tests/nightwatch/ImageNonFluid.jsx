@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from '../../lib/Image';
+import placeholder150x150 from '../assets/150x150.jpg';
 
 const imagecontainerStyle1 = {
   backgroundColor: '#ffe4c4',
@@ -25,15 +26,15 @@ const ImageNonFluid = () => (
     <h2>Non Fluid Examples</h2>
     <p>Image width and height are smaller than container.</p>
     <div style={imagecontainerStyle1}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" />
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
     <p>Image width is larger than the container. Image height is smaller than the container.</p>
     <div style={imagecontainerStyle2}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" />
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
     <p>Image width is smaller than the container. Image height is larger than the container.</p>
     <div style={imagecontainerStyle3}>
-      <Image src="http://lorempixel.com/150/150/nature/" alt="rounded" variant="rounded" />
+      <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
   </div>
 );
