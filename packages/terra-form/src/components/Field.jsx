@@ -51,12 +51,12 @@ const Field = ({ children, error, help, isInline, label, required, ...customProp
   );
 
   return (
-    <p {...customProps} className={fieldClasses}>
+    <div {...customProps} className={fieldClasses}>
       {label && <label className="terra-Form-label">{label}</label>}
       {children}
       {help && <small className="terra-Form-helpText">{help}</small>}
       {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}
-    </p>
+    </div>
   );
 };
 

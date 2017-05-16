@@ -75,7 +75,7 @@ var Field = function Field(_ref) {
   var fieldClasses = (0, _classnames2.default)('terra-Form-field', { 'terra-Form-field--inline': isInline }, { 'terra-Form-field--required': required }, customProps.className);
 
   return _react2.default.createElement(
-    'p',
+    'div',
     _extends({}, customProps, { className: fieldClasses }),
     label && _react2.default.createElement(
       'label',
