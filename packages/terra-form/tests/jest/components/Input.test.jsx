@@ -23,7 +23,7 @@ class ControlledInput extends React.Component {
 }
 
 it('should render a default component', () => {
-  const input = (<Input value="" />);
+  const input = (<Input />);
   const wrapper = shallow(input);
   expect(wrapper).toMatchSnapshot();
 });

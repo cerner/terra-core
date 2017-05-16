@@ -22,6 +22,7 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <form>
+        <p>Controlled</p>
         <Input
           type="text"
           name="foo"

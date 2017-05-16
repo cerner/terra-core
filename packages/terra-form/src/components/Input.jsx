@@ -50,7 +50,7 @@ const Input = ({
     additionalInputProps['aria-required'] = 'true';
   }
 
-  if (value) {
+  if (value !== undefined) {
     additionalInputProps.value = value;
   } else {
     additionalInputProps.defaultValue = defaultValue;
