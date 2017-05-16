@@ -1,6 +1,6 @@
 import React from 'react';
-
 import DemographicsBanner from '../../lib/DemographicsBanner';
+import demographicsCat from '../assets/demographicsCat.jpg';
 
 export default () =>
   <DemographicsBanner
@@ -15,6 +15,6 @@ export default () =>
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     personName="Johnathon Doe"
-    photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
+    photo={<img alt="My Cat" src={demographicsCat} />}
     preferredFirstName="John"
   />;
