@@ -1,7 +1,5 @@
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import shell from 'shelljs';
-import path from 'path';
 
 exports.launchServer = () => new Promise((resolve) => {
   let compiler;

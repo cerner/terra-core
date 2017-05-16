@@ -8,14 +8,6 @@ var _webpackDevServer = require('webpack-dev-server');
 
 var _webpackDevServer2 = _interopRequireDefault(_webpackDevServer);
 
-var _shelljs = require('shelljs');
-
-var _shelljs2 = _interopRequireDefault(_shelljs);
-
-var _path = require('path');
-
-var _path2 = _interopRequireDefault(_path);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.launchServer = function () {
