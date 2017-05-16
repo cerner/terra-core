@@ -37,7 +37,7 @@ function cloneChildItems(children, onClick, onKeyDown, numberOfCols) {
       return React.cloneElement(child, newProps);
     }
     if (child.type === TableSubheader) {
-      return React.cloneElement(child, { count: numberOfCols });
+      return React.cloneElement(child, { colSpan: numberOfCols });
     }
     return child;
   });

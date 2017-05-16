@@ -59,7 +59,7 @@ function cloneChildItems(children, onClick, onKeyDown, numberOfCols) {
       return _react2.default.cloneElement(child, newProps);
     }
     if (child.type === _TableSubheader2.default) {
-      return _react2.default.cloneElement(child, { count: numberOfCols });
+      return _react2.default.cloneElement(child, { colSpan: numberOfCols });
     }
     return child;
   });
