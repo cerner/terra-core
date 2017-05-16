@@ -113,6 +113,7 @@ class PopupPresenter extends React.Component {
   }
 
   arrowPositionFromBounds(targetBounds, presenterBounds) {
+    // need here for the transition
     let position;  
     if (targetBounds.top >= presenterBounds.bottom) {
       position = 'bottom';
@@ -142,16 +143,15 @@ class PopupPresenter extends React.Component {
       targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
     }
 
+    const offset = 13;
+
     if (['bottom', 'top'].indexOf(position) >= 0) {
+      if (this.horizontalSegmentIntersected(targetBounds, popUpBounds, offset)) {
+        const insetStart = popUpBounds.left + offset;
+        const insetEnd = popUpBounds.left + popUpBounds.width - offset;
+        const targetStart = targetBounds.left;
+        const targetEnd = targetBounds.left + targetBounds.width;
 
-      const insetStart = popUpBounds.left + 13;
-      const insetEnd = popUpBounds.left + popUpBounds.width - 13;
-
-      const targetStart = targetBounds.left;
-      const targetEnd = targetBounds.left + targetBounds.width;
-
-
-      if (this.horizontalSegmentIntersected(targetBounds, popUpBounds, 13)) {
         const targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
         const targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.left, targetBounds.width);
 
@@ -169,8 +169,24 @@ class PopupPresenter extends React.Component {
       } 
     } else {
       if (this.verticalSegmentIntersected(targetBounds, popUpBounds)) {
+        const insetStart = popUpBounds.top + offset;
+        const insetEnd = popUpBounds.top + popUpBounds.height - offset;
+        const targetStart = targetBounds.top;
+        const targetEnd = targetBounds.top + targetBounds.height;
+
+        const targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
+        const targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.top, targetBounds.height);
+
+        const contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(this.props.contentAttachment);
+        const contentAttachPosition = this.attachPositionFromAlignment(contentAlignment, popUpBounds.top, popUpBounds.height);
+
+
         let offsetValue;
-        this._arrowNode.style.top = arrowOffset;
+        if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
+          offsetValue = Math.abs(contentAttachPosition - targetAttachPosition);
+        }
+
+        this._arrowNode.style.top = offsetValue.toString() + 'px';
         arrowSet = true;
       }
     }
