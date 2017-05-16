@@ -13,6 +13,5 @@ exports[`test should render a default component 1`] = `
   className="terra-Form-input"
   name={null}
   onChange={[Function]}
-  required={false}
-  value="" />
+  required={false} />
 `;
