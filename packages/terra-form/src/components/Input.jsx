@@ -18,10 +18,6 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Functional to be called when the input is changed
-   */
-  onChange: PropTypes.func,
-  /**
    * Whether the input is required or not
    */
   required: PropTypes.bool,
@@ -37,7 +33,6 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   name: null,
-  onChange: () => {},
   required: false,
   value: undefined,
 };
@@ -45,7 +40,6 @@ const defaultProps = {
 const Input = ({
   defaultValue,
   name,
-  onChange,
   required,
   value,
   ...customProps
@@ -65,7 +59,6 @@ const Input = ({
   return (
     <input
       name={name}
-      onChange={onChange}
       required={required}
       {...additionalInputProps}
       className={classNames('terra-Form-input', additionalInputProps.className)}

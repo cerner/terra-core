@@ -36,10 +36,6 @@ var propTypes = {
    */
   name: _propTypes2.default.string,
   /**
-   * Functional to be called when the input is changed
-   */
-  onChange: _propTypes2.default.func,
-  /**
    * Whether the input is required or not
    */
   required: _propTypes2.default.bool,
@@ -52,7 +48,6 @@ var propTypes = {
 var defaultProps = {
   defaultValue: undefined,
   name: null,
-  onChange: function onChange() {},
   required: false,
   value: undefined
 };
@@ -60,10 +55,9 @@ var defaultProps = {
 var Input = function Input(_ref) {
   var defaultValue = _ref.defaultValue,
       name = _ref.name,
-      onChange = _ref.onChange,
       required = _ref.required,
       value = _ref.value,
-      customProps = _objectWithoutProperties(_ref, ['defaultValue', 'name', 'onChange', 'required', 'value']);
+      customProps = _objectWithoutProperties(_ref, ['defaultValue', 'name', 'required', 'value']);
 
   var additionalInputProps = _extends({}, customProps);
 
@@ -79,7 +73,6 @@ var Input = function Input(_ref) {
 
   return _react2.default.createElement('input', _extends({
     name: name,
-    onChange: onChange,
     required: required
   }, additionalInputProps, {
     className: (0, _classnames2.default)('terra-Form-input', additionalInputProps.className)
