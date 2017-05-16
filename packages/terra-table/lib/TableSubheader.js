@@ -33,13 +33,13 @@ var propTypes = {
   /**
    * Number of columns the subheader must span
    */
-  count: _propTypes2.default.number
+  colSpan: _propTypes2.default.number
 };
 
 var TableSubheader = function TableSubheader(_ref) {
   var content = _ref.content,
-      count = _ref.count,
-      customProps = _objectWithoutProperties(_ref, ['content', 'count']);
+      colSpan = _ref.colSpan,
+      customProps = _objectWithoutProperties(_ref, ['content', 'colSpan']);
 
   var contentClassName = (0, _classnames2.default)(['terra-Table-subheader', customProps.className]);
 
@@ -49,7 +49,7 @@ var TableSubheader = function TableSubheader(_ref) {
     { className: 'terra-Table-subheaderRow' },
     _react2.default.createElement(
       'td',
-      _extends({}, customProps, { className: contentClassName, colSpan: count }),
+      _extends({}, customProps, { className: contentClassName, colSpan: colSpan }),
       content
     )
   );

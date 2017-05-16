@@ -12,12 +12,12 @@ const propTypes = {
   /**
    * Number of columns the subheader must span
    */
-  count: PropTypes.number,
+  colSpan: PropTypes.number,
 };
 
 const TableSubheader = ({
   content,
-  count,
+  colSpan,
   ...customProps
 }) => {
   const contentClassName = classNames([
@@ -28,7 +28,7 @@ const TableSubheader = ({
   // count is based on the number of columns and assigned in the table component which contains this subheader
   return (
     <tr className="terra-Table-subheaderRow">
-      <td {...customProps} className={contentClassName} colSpan={count}>
+      <td {...customProps} className={contentClassName} colSpan={colSpan}>
         {content}
       </td>
     </tr>
