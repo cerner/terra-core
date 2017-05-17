@@ -433,7 +433,7 @@ var PopupPresenter = function (_React$Component) {
         pin: true
       }];
 
-      var tetherOptions = {
+      var tetherOptions = _extends({
         classPrefix: 'terra-Popup',
         constraints: constraints,
         content: wrappedContent,
@@ -444,9 +444,9 @@ var PopupPresenter = function (_React$Component) {
         onRepositioned: this.handleTetherRepositioned,
         target: target,
         targetAttachment: targetAttachment
-      };
+      }, customProps);
 
-      return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
+      return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
     }
   }]);
 

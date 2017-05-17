@@ -22,7 +22,7 @@ class DummyApp extends React.Component {
     const contentSection = <p style={{height: '200px', width: '200px'}}>i'm popup content, hear me roar!</p>;
 
     return (
-      <div id="terra-FakeModal" style={{position: 'relative', height: '400px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
+      <div className="terra-Modal" style={{position: 'relative', height: '400px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
         <div style={{position: 'relative', height: '1200px', width: '1600px'}}>
           <PopupPresenter 
             content={contentSection}

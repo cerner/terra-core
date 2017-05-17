@@ -129,11 +129,16 @@ class TetherComponent extends React.Component {
       }
       return;
     }
-    const overlay = <TetherOverlay displayAboveModal={this._targetInsideModal} />;
 
     const renderTo = renderElementTo || document.body;
     if (!this._elementParentNode) {
+      const elementClassNames = classNames([
+        'terra-TetherComponent-element',
+        { 'terra-TetherComponent-element--modal': this._targetInsideModal },
+      ]);
+
       this._elementParentNode = document.createElement(renderElementTag);
+      this._elementParentNode.className = elementClassNames;
       renderTo.appendChild(this._elementParentNode);
     }
 
@@ -147,6 +152,8 @@ class TetherComponent extends React.Component {
 
   
     if (this.props.disablePageScrolling) {
+      const overlay = <TetherOverlay displayAboveModal={this._targetInsideModal} />;
+      
       if (!this._overlayParentNode) {
         this._overlayParentNode = document.createElement(renderElementTag);
         this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
@@ -254,7 +261,7 @@ class TetherComponent extends React.Component {
     } = this.props;
 
     const wrapperClassNames = classNames([
-      'terra-TetherComponent',
+      'terra-TetherComponent-element',
       customProps.className,
     ]);
 

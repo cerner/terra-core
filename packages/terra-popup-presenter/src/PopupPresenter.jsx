@@ -372,9 +372,10 @@ class PopupPresenter extends React.Component {
       onRepositioned: this.handleTetherRepositioned,
       target,
       targetAttachment,
+      ...customProps
     };
 
-    return <TetherComponent {...tetherOptions} {...customProps} />;
+    return <TetherComponent {...tetherOptions} />;
   }
 }
 
