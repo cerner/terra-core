@@ -335,7 +335,6 @@ class PopupPresenter extends React.Component {
     } = this.props; // eslint-disable-line no-unused-vars
 
     let wrappedContent;
-
     if (isOpen && content) {
       let arrow;
       if (showArrow) {
@@ -353,18 +352,7 @@ class PopupPresenter extends React.Component {
 
       wrappedContent = <WrappedPopupFrame {...frameProps} />;
     }
-
-    const tetherOptions = {
-      contentAttachment,
-      isEnabled: true,
-      target,
-      targetAttachment,
-    };
-
-    //Optional parameters
-    if (wrappedContent) {
-      tetherOptions.content = wrappedContent;
-    }    
+  
     const constraints = [
       {
         to: 'window',
@@ -372,9 +360,18 @@ class PopupPresenter extends React.Component {
         pin: true,
       },
     ];  
-    tetherOptions.constraints = constraints;
-    tetherOptions.onRepositioned = this.handleTetherRepositioned;
-    tetherOptions.classPrefix = 'terra-Popup';
+
+    const tetherOptions = {
+      classPrefix: 'terra-Popup',
+      constraints,
+      content: wrappedContent,
+      contentAttachment,
+      disableAfterPosition: true,
+      isEnabled: true,
+      onRepositioned: this.handleTetherRepositioned,
+      target,
+      targetAttachment,
+    };
 
     return <TetherComponent {...tetherOptions} {...customProps} />;
   }

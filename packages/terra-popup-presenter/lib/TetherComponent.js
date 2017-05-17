@@ -49,7 +49,7 @@ var propTypes = {
   constraints: _react.PropTypes.array,
   contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
-  disableWhenReposition: _react.PropTypes.string,
+  disableAfterPosition: _react.PropTypes.bool,
   isEnabled: _react.PropTypes.bool,
   optimizations: _react.PropTypes.object,
   renderElementTag: _react.PropTypes.string,
@@ -63,6 +63,7 @@ var propTypes = {
 };
 
 var defaultProps = {
+  disableAfterPosition: false,
   renderElementTag: 'div',
   renderElementTo: null
 };
@@ -249,6 +250,10 @@ var TetherComponent = function (_React$Component) {
   }, {
     key: 'handleOnRepositioned',
     value: function handleOnRepositioned(event) {
+      if (this.props.disableAfterPosition) {
+        this.disable();
+      }
+
       if (this.props.onRepositioned) {
         var bounds = this.attachmentOverlap();
         this.props.onRepositioned(event, bounds.targetBounds, bounds.presenterBounds);
@@ -269,6 +274,7 @@ var TetherComponent = function (_React$Component) {
           constraints = _props3.constraints,
           contentAttachment = _props3.contentAttachment,
           contentOffset = _props3.contentOffset,
+          disableAfterPosition = _props3.disableAfterPosition,
           isEnabled = _props3.isEnabled,
           optimizations = _props3.optimizations,
           renderElementTag = _props3.renderElementTag,
@@ -279,7 +285,7 @@ var TetherComponent = function (_React$Component) {
           targetOffset = _props3.targetOffset,
           onUpdate = _props3.onUpdate,
           onRepositioned = _props3.onRepositioned,
-          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'disableAfterPosition', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
       var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent', customProps.className]);
 

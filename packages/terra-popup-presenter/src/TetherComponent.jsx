@@ -24,7 +24,7 @@ const propTypes = {
   constraints: PropTypes.array,
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
-  disableWhenReposition: PropTypes.string,
+  disableAfterPosition: PropTypes.bool,
   isEnabled: PropTypes.bool,
   optimizations: PropTypes.object,
   renderElementTag: PropTypes.string,
@@ -38,6 +38,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  disableAfterPosition: false,
   renderElementTag: 'div',
   renderElementTo: null,
 };
@@ -203,6 +204,10 @@ class TetherComponent extends React.Component {
   }
 
   handleOnRepositioned(event) {
+    if (this.props.disableAfterPosition) {
+      this.disable();
+    }
+
     if (this.props.onRepositioned) {
       const bounds = this.attachmentOverlap();
       this.props.onRepositioned(event, bounds.targetBounds, bounds.presenterBounds);
@@ -221,6 +226,7 @@ class TetherComponent extends React.Component {
       constraints,
       contentAttachment,
       contentOffset,
+      disableAfterPosition,
       isEnabled,
       optimizations,
       renderElementTag,

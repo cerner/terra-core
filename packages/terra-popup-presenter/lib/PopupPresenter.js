@@ -409,7 +409,6 @@ var PopupPresenter = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
-
       if (isOpen && content) {
         var arrow = void 0;
         if (showArrow) {
@@ -428,25 +427,23 @@ var PopupPresenter = function (_React$Component) {
         wrappedContent = _react2.default.createElement(WrappedPopupFrame, frameProps);
       }
 
-      var tetherOptions = {
-        contentAttachment: contentAttachment,
-        isEnabled: true,
-        target: target,
-        targetAttachment: targetAttachment
-      };
-
-      //Optional parameters
-      if (wrappedContent) {
-        tetherOptions.content = wrappedContent;
-      }
       var constraints = [{
         to: 'window',
         attachment: 'together',
         pin: true
       }];
-      tetherOptions.constraints = constraints;
-      tetherOptions.onRepositioned = this.handleTetherRepositioned;
-      tetherOptions.classPrefix = 'terra-Popup';
+
+      var tetherOptions = {
+        classPrefix: 'terra-Popup',
+        constraints: constraints,
+        content: wrappedContent,
+        contentAttachment: contentAttachment,
+        disableAfterPosition: true,
+        isEnabled: true,
+        onRepositioned: this.handleTetherRepositioned,
+        target: target,
+        targetAttachment: targetAttachment
+      };
 
       return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
     }

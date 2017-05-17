@@ -102,7 +102,7 @@ var PopupFrame = function (_React$Component) {
 
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
     _this.handleKeydown = _this.handleKeydown.bind(_this);
-    _this.handleResize = _this.debounce(_this.handleResize.bind(_this), 250);
+    _this.handleResize = _this.debounce(_this.handleResize.bind(_this), 100);
     return _this;
   }
 

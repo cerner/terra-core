@@ -76,7 +76,7 @@ class PopupFrame extends React.Component {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
-    this.handleResize = this.debounce(this.handleResize.bind(this), 250);
+    this.handleResize = this.debounce(this.handleResize.bind(this), 100);
   }
 
   componentDidMount() {
