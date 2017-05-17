@@ -29,8 +29,7 @@ import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TitleExamples from './examples/title/Index';
 
-
-// Test
+// Test Routes
 /* eslint-disable import/first */
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
@@ -56,6 +55,10 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
+
+// Themeable Components
+import ThemeableLinks from './ThemeableLinks';
+import ThemeableRoutes from './ThemeableRoutes';
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -85,6 +88,7 @@ ReactDOM.render((
       <Route path="title" component={TitleExamples} />
       <Route path="table" component={TableExamples} />
     </Route>
+    <Route path="/themeable-components" component={ThemeableLinks} />
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
     {BadgeTestRoutes}
@@ -109,5 +113,6 @@ ReactDOM.render((
     {ProgressBarTestRoutes}
     {GridTestRoutes}
     {IconTestRoutes}
+    {ThemeableRoutes}
   </Router>
 ), document.getElementById('root'));

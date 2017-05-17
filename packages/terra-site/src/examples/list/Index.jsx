@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-list/docs/README.md';
@@ -35,6 +36,9 @@ const ListExamples = () => (
     <PropsTable id="props-singleList" src={SingleSelectListSrc} />
     <h2>Multiple Select List</h2>
     <PropsTable id="props-multiList" src={MultiSelectListSrc} />
+    <h2><Link to="/themeable-components/list">Themeable Varaibles</Link></h2>
+    <br />
+    <h1>Examples </h1>
     <h2 id="list">List</h2>
     <ListDemo />
     <br />
