@@ -42,8 +42,6 @@ require('./PopupPresenter.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62,7 +60,6 @@ var propTypes = {
   contentAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
   isOpen: _react.PropTypes.bool,
   onRequestClose: _react.PropTypes.func,
-  renderElementTo: _react.PropTypes.any,
   showArrow: _react.PropTypes.bool,
   target: _react.PropTypes.element.isRequired,
   targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions)
@@ -140,30 +137,6 @@ var PopupPresenter = function (_React$Component) {
 
       return { vertical: vertical, horizontal: horizontal };
     }
-  }, {
-    key: 'shouldDisplayArrow',
-    value: function shouldDisplayArrow(showArrow, contentAttachment) {
-      if (showArrow === true && contentAttachment === 'middle center') {
-        return false;
-      }
-      return showArrow;
-    }
-  }, {
-    key: 'calculateArrowOffest',
-    value: function calculateArrowOffest(position, contentOffset, targetOffset) {
-      var parsedContentValue = PopupPresenter.parseOffset(contentOffset); // {verticalPx, horizontalPx}
-      var parsedTargetValue = PopupPresenter.parseOffset(targetOffset); // {verticalPx, horizontalPx}
-
-      if (['Top', 'Bottom'].indexOf(position) >= 0) {
-        return parsedContentValue.horizontal + parsedTargetValue.horizontal;
-      }
-      return parsedContentValue.vertical + parsedTargetValue.vertical;
-    }
-  }, {
-    key: 'caculateContentOffset',
-    value: function caculateContentOffset(contentAttachment, targetAttachment) {
-      return '0 14px';
-    }
   }]);
 
   function PopupPresenter(props) {
@@ -174,91 +147,180 @@ var PopupPresenter = function (_React$Component) {
     _this.handleTetherUpdate = _this.handleTetherUpdate.bind(_this);
     _this.handleTetherRepositioned = _this.handleTetherRepositioned.bind(_this);
     _this.setArrowNode = _this.setArrowNode.bind(_this);
+    _this.setFrameNode = _this.setFrameNode.bind(_this);
     return _this;
   }
 
   _createClass(PopupPresenter, [{
-    key: 'arrowPositionFromBounds',
-    value: function arrowPositionFromBounds(targetBounds, popUpBounds) {
-      // need here for the transition
-      var position = void 0;
-      if (targetBounds.top >= popUpBounds.bottom) {
-        position = 'bottom';
-      } else if (targetBounds.right <= popUpBounds.left) {
-        position = 'left';
-      } else if (targetBounds.left >= popUpBounds.right) {
-        position = 'right';
-      } else if (targetBounds.bottom <= popUpBounds.top) {
-        position = 'top';
+    key: 'validPositionsFromBounds',
+    value: function validPositionsFromBounds(targetBounds, popUpBounds) {
+      var pointOverlap = this.cornersOverlapByPopup(targetBounds, popUpBounds);
+
+      if (pointOverlap.topLeft && pointOverlap.topRight && pointOverlap.bottomLeft && pointOverlap.bottomRight) {
+        return [];
       }
-      return position;
+
+      if (pointOverlap.topLeft && pointOverlap.topRight) {
+        return ['bottom'];
+      }
+
+      if (pointOverlap.topRight && pointOverlap.bottomRight) {
+        return ['left'];
+      }
+
+      if (pointOverlap.bottomLeft && pointOverlap.bottomRight) {
+        return ['top'];
+      }
+
+      if (pointOverlap.topLeft && pointOverlap.bottomLeft) {
+        return ['right'];
+      }
+
+      if (pointOverlap.topLeft) {
+        return ['top', 'left'];
+      }
+
+      if (pointOverlap.topRight) {
+        return ['top', 'right'];
+      }
+
+      if (pointOverlap.bottomLeft) {
+        return ['bottom', 'left'];
+      }
+
+      if (pointOverlap.bottomRight) {
+        return ['bottom', 'right'];
+      }
+
+      return ['top', 'bottom', 'left', 'right'];
+    }
+  }, {
+    key: 'cornersOverlapByPopup',
+    value: function cornersOverlapByPopup(targetBounds, popUpBounds) {
+      var pointOverlap = {};
+      var topLeft = { x: targetBounds.left, y: targetBounds.top };
+      var topRight = { x: targetBounds.left + targetBounds.width, y: targetBounds.top };
+      var bottomLeft = { x: targetBounds.left, y: targetBounds.top + targetBounds.height };
+      var bottomRight = { x: targetBounds.left + targetBounds.width, y: targetBounds.top + targetBounds.height };
+
+      pointOverlap.topLeft = this.isPointContainedWithinBounds(topLeft, popUpBounds);
+      pointOverlap.topRight = this.isPointContainedWithinBounds(topRight, popUpBounds);
+      pointOverlap.bottomLeft = this.isPointContainedWithinBounds(bottomLeft, popUpBounds);
+      pointOverlap.bottomRight = this.isPointContainedWithinBounds(bottomRight, popUpBounds);
+
+      return pointOverlap;
+    }
+  }, {
+    key: 'isPointContainedWithinBounds',
+    value: function isPointContainedWithinBounds(point, bounds) {
+      if (point.x < bounds.left || point.x > bounds.left + bounds.width) {
+        return false;
+      } else if (point.y < bounds.top || point.y > bounds.top + bounds.height) {
+        return false;
+      }
+      return true;
     }
   }, {
     key: 'attachPositionFromAlignment',
-    value: function attachPositionFromAlignment(alignment, start, width) {
+    value: function attachPositionFromAlignment(alignment, start, length) {
       if (alignment === 'Middle') {
-        return start + width / 2;
+        return start + length / 2;
       } else if (alignment === 'End') {
-        return start + width;
+        return start + length;
       }
       return start;
     }
   }, {
     key: 'setArrowPosition',
-    value: function setArrowPosition(position, targetBounds, popUpBounds) {
-      var arrowSet = false;
+    value: function setArrowPosition(targetBounds, popUpBounds) {
+      var validPositions = this.validPositionsFromBounds(targetBounds, popUpBounds);
+
       var targetAttachment = this.props.targetAttachment;
       if (!targetAttachment) {
         targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
       }
 
-      var offset = 13;
+      var offset = 10;
+      var arrowClasses = ['terra-PopupArrow--alignTop', 'terra-PopupArrow--alignBottom', 'terra-PopupArrow--alignLeft', 'terra-PopupArrow--alignRight'];
 
-      if (['bottom', 'top'].indexOf(position) >= 0) {
-        if (this.horizontalSegmentIntersected(targetBounds, popUpBounds, offset)) {
-          var insetStart = popUpBounds.left + offset;
-          var insetEnd = popUpBounds.left + popUpBounds.width - offset;
-          var targetStart = targetBounds.left;
-          var targetEnd = targetBounds.left + targetBounds.width;
+      if (validPositions.length === 4 || validPositions.length === 0) {
+        var _arrowNode$classList;
 
-          var targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
-          var targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.left, targetBounds.width);
-
-          var contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(this.props.contentAttachment);
-          var contentAttachPosition = this.attachPositionFromAlignment(contentAlignment, popUpBounds.left, popUpBounds.width);
-
-          var offsetValue = void 0;
-          if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
-            offsetValue = Math.abs(contentAttachPosition - targetAttachPosition);
-          }
-
-          this._arrowNode.style.left = offsetValue.toString() + 'px';
-          arrowSet = true;
-        }
-      } else {
-        if (this.verticalSegmentIntersected(targetBounds, popUpBounds)) {
-          var _insetStart = popUpBounds.top + offset;
-          var _insetEnd = popUpBounds.top + popUpBounds.height - offset;
-          var _targetStart = targetBounds.top;
-          var _targetEnd = targetBounds.top + targetBounds.height;
-
-          var _targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
-          var _targetAttachPosition = this.attachPositionFromAlignment(_targetAlignment, targetBounds.top, targetBounds.height);
-
-          var _contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(this.props.contentAttachment);
-          var _contentAttachPosition = this.attachPositionFromAlignment(_contentAlignment, popUpBounds.top, popUpBounds.height);
-
-          var _offsetValue = void 0;
-          if (_targetAttachPosition >= _insetStart && _targetAttachPosition <= _insetEnd) {
-            _offsetValue = Math.abs(_contentAttachPosition - _targetAttachPosition);
-          }
-
-          this._arrowNode.style.top = _offsetValue.toString() + 'px';
-          arrowSet = true;
-        }
+        (_arrowNode$classList = this._arrowNode.classList).remove.apply(_arrowNode$classList, arrowClasses);
+        return false;
       }
 
-      return arrowSet;
+      var position = validPositions[0]; //fix this work around
+
+      if (position.indexOf('top') >= 0) {
+        var _arrowNode$classList2;
+
+        this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+        (_arrowNode$classList2 = this._arrowNode.classList).remove.apply(_arrowNode$classList2, arrowClasses);
+        this._arrowNode.classList.add(arrowClasses[0]);
+      } else if (position.indexOf('bottom') >= 0) {
+        var _arrowNode$classList3;
+
+        this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+        (_arrowNode$classList3 = this._arrowNode.classList).remove.apply(_arrowNode$classList3, arrowClasses);
+        this._arrowNode.classList.add(arrowClasses[1]);
+      } else if (position.indexOf('left') >= 0) {
+        var _arrowNode$classList4;
+
+        this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+        (_arrowNode$classList4 = this._arrowNode.classList).remove.apply(_arrowNode$classList4, arrowClasses);
+        this._arrowNode.classList.add(arrowClasses[2]);
+      } else {
+        var _arrowNode$classList5;
+
+        this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+        (_arrowNode$classList5 = this._arrowNode.classList).remove.apply(_arrowNode$classList5, arrowClasses);
+        this._arrowNode.classList.add(arrowClasses[3]);
+      }
+
+      return true;
+    }
+  }, {
+    key: 'horizontalOffset',
+    value: function horizontalOffset(targetBounds, popUpBounds, targetAttachment, contentAttachment, offset) {
+      if (this.horizontalSegmentIntersected(targetBounds, popUpBounds, offset)) {
+        var insetStart = popUpBounds.left + offset;
+        var insetEnd = popUpBounds.left + popUpBounds.width - offset;
+        var targetStart = targetBounds.left;
+        var targetEnd = targetBounds.left + targetBounds.width;
+
+        var targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
+        var targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.left, targetBounds.width);
+
+        var contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
+        var contentAttachPosition = this.attachPositionFromAlignment(contentAlignment, popUpBounds.left, popUpBounds.width);
+
+        if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
+          return Math.abs(contentAttachPosition - targetAttachPosition).toString() + 'px';
+        }
+      }
+      return '';
+    }
+  }, {
+    key: 'verticalOffset',
+    value: function verticalOffset(targetBounds, popUpBounds, targetAttachment, contentAttachment, offset) {
+      if (this.verticalSegmentIntersected(targetBounds, popUpBounds)) {
+        var insetStart = popUpBounds.top + offset;
+        var insetEnd = popUpBounds.top + popUpBounds.height - offset;
+        var targetStart = targetBounds.top;
+        var targetEnd = targetBounds.top + targetBounds.height;
+
+        var targetAlignment = PopupPresenter.arrowAlignmentFromAttachment(targetAttachment);
+        var targetAttachPosition = this.attachPositionFromAlignment(targetAlignment, targetBounds.top, targetBounds.height);
+
+        var contentAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
+        var contentAttachPosition = this.attachPositionFromAlignment(contentAlignment, popUpBounds.top, popUpBounds.height);
+
+        if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
+          return Math.abs(contentAttachPosition - targetAttachPosition).toString() + 'px';
+        }
+      }
+      return '';
     }
   }, {
     key: 'horizontalSegmentIntersected',
@@ -294,22 +356,25 @@ var PopupPresenter = function (_React$Component) {
     key: 'handleTetherUpdate',
     value: function handleTetherUpdate(event, targetBounds, presenterBounds) {
       if (this._arrowNode) {
-        var position = this.arrowPositionFromBounds(targetBounds, presenterBounds);
-        var enabledArrows = this.setArrowPosition(position, targetBounds, presenterBounds);
+        var enabledArrows = this.setArrowPosition(targetBounds, presenterBounds);
       }
     }
   }, {
     key: 'handleTetherRepositioned',
     value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
       if (this._arrowNode) {
-        var position = this.arrowPositionFromBounds(targetBounds, presenterBounds);
-        var enabledArrows = this.setArrowPosition(position, targetBounds, presenterBounds);
+        var enabledArrows = this.setArrowPosition(targetBounds, presenterBounds);
       }
     }
   }, {
     key: 'setArrowNode',
     value: function setArrowNode(node) {
       this._arrowNode = node;
+    }
+  }, {
+    key: 'setFrameNode',
+    value: function setFrameNode(node) {
+      this._frameNode = node;
     }
   }, {
     key: 'render',
@@ -328,21 +393,11 @@ var PopupPresenter = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
-      var contentOffset = PopupPresenter.caculateContentOffset(contentAttachment, targetAttachment);
-      var constraints = [{
-        to: 'window',
-        pin: true,
-        attachment: 'together'
-      }];
 
       if (isOpen && content) {
-        var arrowAlignment = PopupPresenter.arrowAlignmentFromAttachment(contentAttachment);
-        var arrowPosition = PopupPresenter.arrowPositionFromAttachment(contentAttachment);
-
         var arrow = void 0;
-        if (PopupPresenter.shouldDisplayArrow(showArrow, contentAttachment)) {
-          var arrowClassNames = (0, _classnames2.default)(['terra-PopupFrame-arrow', _defineProperty({}, 'terra-PopupFrame-arrow--align' + arrowAlignment, arrowAlignment)]);
-          arrow = _react2.default.createElement(_PopupArrow2.default, { position: arrowPosition, arrowRefCallback: this.setArrowNode });
+        if (showArrow) {
+          arrow = _react2.default.createElement(_PopupArrow2.default, { refCallback: this.setArrowNode });
         }
 
         var frameProps = {
@@ -351,39 +406,29 @@ var PopupPresenter = function (_React$Component) {
           closeOnEsc: closeOnEsc,
           closeOnOutsideClick: closeOnOutsideClick,
           onRequestClose: onRequestClose,
-          arrowPosition: arrowPosition
+          refCallback: this.setFrameNode
         };
 
-        wrappedContent = _react2.default.createElement(
-          WrappedPopupFrame,
-          frameProps,
-          arrow,
-          content
-        );
+        wrappedContent = _react2.default.createElement(WrappedPopupFrame, frameProps);
       }
 
       var tetherOptions = {
         contentAttachment: contentAttachment,
         isEnabled: true,
-        target: target
+        target: target,
+        targetAttachment: targetAttachment
       };
 
       //Optional parameters
       if (wrappedContent) {
         tetherOptions.content = wrappedContent;
       }
-      if (constraints) {
-        tetherOptions.constraints = constraints;
-      }
-      if (contentOffset) {
-        tetherOptions.contentOffset = contentOffset;
-      }
-      if (targetAttachment) {
-        tetherOptions.targetAttachment = targetAttachment;
-      }
-      if (renderElementTo) {
-        tetherOptions.renderElementTo = renderElementTo;
-      }
+      var constraints = [{
+        to: 'window',
+        attachment: 'together',
+        pin: true
+      }];
+      tetherOptions.constraints = constraints;
       tetherOptions.onRepositioned = this.handleTetherRepositioned;
       tetherOptions.classPrefix = 'terra-Popup';
 

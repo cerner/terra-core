@@ -20,8 +20,6 @@ require('./PopupFrame.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -43,6 +41,9 @@ var propTypes = {
    * The child elements passed to the component.
    */
   arrow: _react.PropTypes.element,
+  /**
+   * The child elements passed to the component.
+   */
   content: _react.PropTypes.element,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
@@ -63,11 +64,7 @@ var propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  arrowPosition: _react.PropTypes.oneOf(arrowPositions),
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  constraintContainer: _react.PropTypes.any
+  refCallback: _react.PropTypes.func
 };
 
 var defaultProps = {
@@ -77,7 +74,7 @@ var defaultProps = {
   closeOnOutsideClick: true,
   closeOnResize: true,
   onRequestClose: undefined,
-  arrowPosition: 'Top'
+  refCallback: undefined
 };
 
 var PopupFrame = function (_React$Component) {
@@ -148,11 +145,10 @@ var PopupFrame = function (_React$Component) {
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
-          arrowPosition = _props.arrowPosition,
-          constraintContainer = _props.constraintContainer,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'content', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'arrowPosition', 'constraintContainer']);
+          refCallback = _props.refCallback,
+          customProps = _objectWithoutProperties(_props, ['arrow', 'content', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
-      var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', _defineProperty({}, 'terra-PopupFrame--arrow' + arrowPosition, arrowPosition), customProps.className]);
+      var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', { 'terra-PopupFrame-showArrow': arrow }, customProps.className]);
 
       var constraintStyle = void 0;
       if (this.props.constraintContainer) {
@@ -162,7 +158,7 @@ var PopupFrame = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: frameClassNames, style: constraintStyle }),
+        _extends({}, customProps, { className: frameClassNames, style: constraintStyle, ref: refCallback }),
         arrow,
         _react2.default.createElement(
           'div',

@@ -16,56 +16,27 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 require('terra-base/lib/baseStyles');
 
-var _IconCaretRight = require('terra-icon/lib/icon/IconCaretRight');
-
-var _IconCaretRight2 = _interopRequireDefault(_IconCaretRight);
-
-var _IconCaretLeft = require('terra-icon/lib/icon/IconCaretLeft');
-
-var _IconCaretLeft2 = _interopRequireDefault(_IconCaretLeft);
-
-var _IconCaretUp = require('terra-icon/lib/icon/IconCaretUp');
-
-var _IconCaretUp2 = _interopRequireDefault(_IconCaretUp);
-
-var _IconCaretDown = require('terra-icon/lib/icon/IconCaretDown');
-
-var _IconCaretDown2 = _interopRequireDefault(_IconCaretDown);
-
 require('./PopupArrow.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var arrowPositions = ['Top', 'Bottom', 'Start', 'End'];
-
 var propTypes = {
-  /**
-   * The position of the arrow image.
-   */
-  position: _react.PropTypes.oneOf(arrowPositions),
-  offset: _react.PropTypes.number,
-  arrowRefCallback: _react.PropTypes.func
+  refCallback: _react.PropTypes.func
 };
 
 var defaultProps = {
-  position: 'Top',
-  offset: 0,
-  arrowRefCallback: undefined
+  refCallback: undefined
 };
 
 var PopupArrow = function PopupArrow(_ref) {
-  var position = _ref.position,
-      offset = _ref.offset,
-      arrowRefCallback = _ref.arrowRefCallback,
-      customProps = _objectWithoutProperties(_ref, ['position', 'offset', 'arrowRefCallback']);
+  var refCallback = _ref.refCallback,
+      customProps = _objectWithoutProperties(_ref, ['refCallback']);
 
-  var arrowClassNames = (0, _classnames2.default)(['terra-PopupArrow', _defineProperty({}, 'terra-PopupArrow--align' + position, position), customProps.className]);
+  var arrowClassNames = (0, _classnames2.default)(['terra-PopupArrow', customProps.className]);
 
-  return _react2.default.createElement('div', _extends({}, customProps, { className: arrowClassNames, ref: arrowRefCallback }));
+  return _react2.default.createElement('div', _extends({}, customProps, { className: arrowClassNames, ref: refCallback }));
 };
 
 PopupArrow.propTypes = propTypes;

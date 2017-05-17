@@ -1,5 +1,7 @@
 @import '~terra-mixins';
 
+$terra-popup-border-width: 10px;
+
 .terra-PopupArrow {
   color: #000;
   display: none;
@@ -15,7 +17,7 @@
   border-bottom: 100px solid #e41d1d;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-width: 14px;
+  border-width: $terra-popup-border-width;
   display: block;
   top: 0;
   @include terra-translate3d(-50%, 0, 0);
@@ -25,7 +27,7 @@
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 100px solid #e41d1d;
-  border-width: 14px;
+  border-width: $terra-popup-border-width;
   display: block;
   top: 100%;
   @include terra-translate3d(-50%, -100%, 0);
@@ -35,7 +37,7 @@
   border-bottom: 50px solid transparent;
   border-right: 100px solid #e41d1d;
   border-top: 50px solid transparent;
-  border-width: 14px;
+  border-width: $terra-popup-border-width;
   display: block;
   left: 0;
   @include terra-translate3d(0, -50%, 0);
@@ -46,7 +48,7 @@
   border-color: transparent;
   border-left: 100px solid #e41d1d;
   border-top: 50px solid transparent;
-  border-width: 14px;
+  border-width: $terra-popup-border-width;
   display: block;
   left: 100%;
   @include terra-translate3d(-100%, -50%, 0);

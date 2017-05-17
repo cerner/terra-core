@@ -24,6 +24,9 @@ const propTypes = {
    * The child elements passed to the component.
    */
   arrow: PropTypes.element,
+  /**
+   * The child elements passed to the component.
+   */
   content: PropTypes.element,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
@@ -44,11 +47,7 @@ const propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  arrowPosition: PropTypes.oneOf(arrowPositions),
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  constraintContainer: PropTypes.any,
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -58,7 +57,7 @@ const defaultProps = {
   closeOnOutsideClick: true,
   closeOnResize: true,
   onRequestClose: undefined,
-  arrowPosition: 'Top',
+  refCallback: undefined,
 };
 
 class PopupFrame extends React.Component {
@@ -116,14 +115,13 @@ class PopupFrame extends React.Component {
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,
-      arrowPosition,
-      constraintContainer,
+      refCallback,
       ...customProps,
     } = this.props;
 
     const frameClassNames = classNames([
       'terra-PopupFrame',
-      { [`terra-PopupFrame--arrow${arrowPosition}`]: arrowPosition },
+      { 'terra-PopupFrame-showArrow': arrow },
       customProps.className,
     ]);
 
@@ -134,7 +132,7 @@ class PopupFrame extends React.Component {
     }
 
     return (
-      <div {...customProps} className={frameClassNames} style={constraintStyle}>
+      <div {...customProps} className={frameClassNames} style={constraintStyle} ref={refCallback}>
         {arrow}
         <div className="terra-PopupFrame-content">
           {content}
