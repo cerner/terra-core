@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -26,15 +30,15 @@ var propTypes = {
   /**
    * The header element to be placed within the header area of the container.
    */
-  header: _react.PropTypes.node,
+  header: _propTypes2.default.node,
   /**
    * The children to be placed within the main content area of the container.
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * Whether or not the container should expanded to fill its parent element.
    */
-  fill: _react.PropTypes.bool
+  fill: _propTypes2.default.bool
 };
 
 var defaultProps = {

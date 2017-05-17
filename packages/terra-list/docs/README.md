@@ -39,27 +39,3 @@ import MultiSelectList from 'terra-list/lib/MultiSelectList';
 </MultiSelectList>
 
 ```
-## React Props
-
-The *ListItem* React component will have the following API:
-||Prop||Type||Description||
-|`content`|Element|A react element.|
-|`isSelected`|Bool|The indicator if the item is selected.|
-|`itemSelectable`|Bool|The indicator if selection styles should be applied to list item.|
-|`hasChevron`|Bool|The indicator if a chevron should be displayed on the item.|
-
-The *List* React component will have the following API:
-||Prop||Type||Description||
-|`isDivided`|Bool|The indicator if a border style should be applied to child items.|
-
-The *SingleSelectList* React component will have the following API:
-||Prop||Type||Description||
-|`isDivided`|Bool|The indicator if a border style should be applied to child items.|
-|`hasChevrons`|Bool|The indicator if a chevron should be displayed on selectable items.|
-|`onChange`|Function|Common callback containing the event and index of selection.|
-
-The *MultiSelectList* React component will have the following API:
-||Prop||Type||Description||
-|`isDivided`|Bool|The indicator if a border style should be applied to child items.|
-|`maxSelectionCount`|Number|The maximum number of selected items.|
-|`onChange`|Function|Common callback containing the event and index of selection.|

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
 import { ArrangeWrapper, alignLabels, alignOptions } from './examplesetup';
 

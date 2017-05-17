@@ -42,6 +42,7 @@ var ModalOverlay = function (_React$Component) {
   _createClass(ModalOverlay, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      this.overflow = document.documentElement.style.overflow;
       // Disable scrolling on the page when Overlay is displayed
       document.documentElement.style.overflow = 'hidden';
     }
@@ -49,7 +50,7 @@ var ModalOverlay = function (_React$Component) {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       // Enable scrolling on the page since Overlay has gone away
-      document.documentElement.style.overflow = null;
+      document.documentElement.style.overflow = this.overflow;
     }
   }, {
     key: 'render',

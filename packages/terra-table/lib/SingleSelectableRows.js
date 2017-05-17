@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 require('terra-base/lib/baseStyles');
 
 var _TableRows = require('./TableRows');
@@ -34,11 +38,11 @@ var propTypes = {
   /**
    * The children passed to the component
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * A callback function for onChange action
    */
-  onChange: _react.PropTypes.func
+  onChange: _propTypes2.default.func
 };
 
 var defaultProps = {

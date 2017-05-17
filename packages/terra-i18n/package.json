@@ -1,8 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.2.1",
   "description": "The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand.",
   "repository": {
     "type": "git",
@@ -23,7 +22,7 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
     "babel-jest": "^19.0.0",
-    "terra-toolkit": "^0.x"
+    "terra-toolkit": "^0.3.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -32,8 +31,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
-    "react-intl": "2.2.3",
-    "terra-base": "^0.x"
+    "prop-types": "^15.5.8",
+    "react-intl": "^2.3.0",
+    "terra-base": "^0.4.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -41,9 +41,6 @@
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "release:major": "npm test && node ../../scripts/release/release.js major",
-    "release:minor": "npm test && node ../../scripts/release/release.js minor",
-    "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",

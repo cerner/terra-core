@@ -1,11 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerExcludeDates = () => (
   <DatePicker
-    excludeDates={[moment('04/01/2016'), moment('04/03/2016')]}
-    startDate={moment('04/02/2016')}
+    excludeDates={['04-01-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
+    selectedDate={'04-02-2017T00:00:00.000Z'}
   />
 );
 

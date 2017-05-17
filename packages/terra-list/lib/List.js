@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -30,11 +34,11 @@ var propTypes = {
   /**
    * The children list items passed to the component.
    */
-  children: _react.PropTypes.node,
+  children: _propTypes2.default.node,
   /**
    * Whether or not the child list items should have a border color applied.
    */
-  isDivided: _react.PropTypes.bool
+  isDivided: _propTypes2.default.bool
 };
 
 var defaultProps = {

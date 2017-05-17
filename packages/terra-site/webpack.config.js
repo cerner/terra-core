@@ -59,6 +59,12 @@ module.exports = {
       test: /\.md$/,
       loader: 'raw-loader',
     },
+    {
+      test: /\.(png|svg|jpg|gif)$/,
+      use: [
+        'file-loader',
+      ],
+    },
     ],
   },
   plugins: [
@@ -108,5 +114,8 @@ module.exports = {
       warnings: true,
       errors: true,
     },
+  },
+  resolveLoader: {
+    modules: [path.resolve(path.join(__dirname, 'node_modules'))],
   },
 };
