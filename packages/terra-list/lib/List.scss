@@ -5,31 +5,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  @each $item in & {
-    .terra-ListItem--selected + .terra-ListItem--selected {
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    }
-  }
 }
 
-.terra-List-divided {
-  > * {
-    border-top: solid 1px $terra-list-divider-color;
-    &:last-child {border-bottom: solid 1px $terra-list-divider-color;}
-  }
-
-  @each $item in & {
-    .terra-ListItem--selected + .terra-ListItem--selected {
-      border-top: solid 1px $terra-list-divider-color-item-selected;
-    }
-
-    .terra-ListItem--selected + :not(.terra-ListItem--selected) {
-      border-top: solid 1px $terra-list-divider-color-item-selected;
-    }
-
-    :not(.terra-ListItem--selected) + .terra-ListItem--selected {
-      border-top: solid 1px $terra-list-divider-color-item-selected;
-    }
-  }
+.terra-List-divided > li {
+  border-top: solid 1px $terra-list-divider-color;
+  &:last-child {border-bottom: solid 1px $terra-list-divider-color;}
 }

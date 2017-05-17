@@ -20,7 +20,7 @@
   td {
     @include terra-text-align-start;
 
-    border: $terra-table-cell-border-width solid $terra-table-border-color;
+    border: $terra-table-border-width solid $terra-table-border-color;
     border-bottom: 0;
     display: block;
 
@@ -39,17 +39,17 @@
     }
 
     &:last-child {
-      border-bottom: $terra-table-cell-border-width solid $terra-table-border-color;
+      border-bottom: $terra-table-border-width solid $terra-table-border-color;
       margin-bottom: 1em;
     }
   }
 
   // Full behavior
   @media screen and (min-width: $terra-small-breakpoint) {
-    border: $terra-table-cell-border-width solid $terra-table-border-color;
+    border: $terra-table-border-width solid $terra-table-border-color;
 
     tr {
-      border-bottom: $terra-table-tr-border-width solid $terra-table-border-color;
+      border-bottom: $terra-table-border-width solid $terra-table-border-color;
       display: table-row;
       margin-bottom: 0;
     }
@@ -77,7 +77,7 @@
 
     thead {
       background-color: $terra-table-thead-background-color;
-      border-bottom: $terra-table-thead-border-width solid $terra-table-border-color;
+      border-bottom: $terra-table-border-width solid $terra-table-border-color;
       display: table-header-group;
     }
 
@@ -94,7 +94,7 @@
     tfoot tr {
       @include terra-text-align-start;
 
-      border-top: $terra-table-tfoot-border-width solid $terra-table-border-color;
+      border-top: $terra-table-border-width solid $terra-table-border-color;
     }
   }
 }
@@ -110,6 +110,10 @@
 }
 
 .terra-Table--striped {
+  .terra-Table--isSelected:hover {
+    background-color: $terra-table-row-selected-hover-background-color !important;
+  }
+
   tbody td:nth-of-type(even) {
     background-color: $terra-table-row-striped-background-color;
 
@@ -121,12 +125,24 @@
   @media screen and (min-width: $terra-small-breakpoint) {
     tbody tr:nth-of-type(even) {
       background-color: $terra-table-row-striped-background-color;
+
+      /* stylelint-disable-next-line selector-max-compound-selectors */
+      .terra-Table--isSelected {
+        background-color: $terra-table-row-selected-background-color;
+      }
+
     }
 
     /* Compound selector depth required for specificity */
     /* stylelint-disable-next-line selector-max-compound-selectors */
     tbody tr:nth-of-type(even) th {
       background-color: $terra-table-row-striped-th-background-color;
+
+      /* stylelint-disable-next-line selector-max-compound-selectors */
+      .terra-Table--isSelected {
+        background-color: $terra-table-row-selected-background-color;
+      }
+
     }
   }
 }
@@ -163,15 +179,30 @@
 }
 
 .terra-Table--isSelected {
-  background-color: $terra-table-row-selected-background-color !important;
-  box-shadow: $terra-table-row-selected-box-shadow-top, $terra-table-row-seelcted-box-shadow-bottom;
-  outline: $terra-table-tr-border-width solid $terra-table-row-selected-border-color;
+  background-color: $terra-table-row-selected-background-color;
+  box-shadow: $terra-table-row-selected-box-shadow;
 }
 
 .terra-Table--isSelectable {
   cursor: pointer;
-  &.terra-Table-row:hover {background-color: rgba($terra-table-row-hover, $terra-table-row-hover-opacity);}
-  &.terra-Table-row:focus {outline: 1px solid $terra-table-row-focus;}
+
+  &.terra-Table-row:hover {
+    background-color: $terra-table-row-hover-background-color !important;
+    box-shadow: $terra-table-row-hover-box-shadow;
+  }
+
+  &.terra-Table-row:focus {
+    background-color: $terra-table-row-hover-background-color !important;
+  }
+
+  &.terra-Table--isSelected:hover {
+    background-color: $terra-table-row-selected-hover-background-color !important;
+  }
+
+  &.terra-Table--isSelected:focus {
+    background-color: $terra-table-row-selected-hover-background-color !important;
+  }
+
 }
 
 .terra-Table-sort-indicator {
