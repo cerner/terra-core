@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { parse } from 'react-docgen';
+import parse from 'react-docgen/dist/parse';
 import Markdown from 'terra-markdown';
 
 const propTypes = {
