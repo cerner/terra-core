@@ -5,7 +5,6 @@ import onClickOutside from 'react-onclickoutside'
 import PopupFrame from './PopupFrame'
 import PopupArrow from './PopupArrow'
 import TetherComponent from './TetherComponent'
-import './PopupPresenter.scss';
 
 const propTypes = {
   /**

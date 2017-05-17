@@ -61,11 +61,22 @@ const defaultProps = {
 };
 
 class PopupFrame extends React.Component {
+  debounce(fn, delay) {
+    let timer = null;
+    return function () {
+      const context = this, args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        fn.apply(context, args);
+      }, delay);
+    };
+  }
+
   constructor(props) {
     super(props);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
-    this.handleResize = this.handleResize.bind(this);
+    this.handleResize = this.debounce(this.handleResize.bind(this), 250);
   }
 
   componentDidMount() {
@@ -73,7 +84,7 @@ class PopupFrame extends React.Component {
       document.addEventListener('keydown', this.handleKeydown);
     }
     if (this.props.closeOnResize) {
-      window.addEventListener('resize', this.handleResize); //might need debounce, and/or use resize observer
+      window.addEventListener('resize', this.handleResize);
     }
   }
 
@@ -83,7 +94,7 @@ class PopupFrame extends React.Component {
     }
 
     if (this.props.closeOnResize) {
-      document.removeEventListener('resize', this.handleResize);
+      window.removeEventListener('resize', this.handleResize);
     }
   }
 

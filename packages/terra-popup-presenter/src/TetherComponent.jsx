@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
+import TetherOverlay from './TetherOverlay';
 import './TetherComponent.scss';
 
 const attachmentPositions = [
@@ -23,6 +24,7 @@ const propTypes = {
   constraints: PropTypes.array,
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
+  disableWhenReposition: PropTypes.string,
   isEnabled: PropTypes.bool,
   optimizations: PropTypes.object,
   renderElementTag: PropTypes.string,
@@ -41,6 +43,20 @@ const defaultProps = {
 };
 
 class TetherComponent extends React.Component {
+  static isNodeInsideModal(node) {
+    if (node) {
+      let parentNode = node.parentNode;
+      while (parentNode && parentNode.classList) {
+        if (parentNode.classList.contains('terra-Modal')) {
+          return true;
+          break;
+        }
+        parentNode = parentNode.parentNode;
+      }
+    }
+    return false;
+  }
+
   constructor(props) {
     super(props);
     this.setTargetNode = this.setTargetNode.bind(this);
@@ -49,6 +65,7 @@ class TetherComponent extends React.Component {
   }
 
   componentDidMount() {
+    this._targetInsideModal = TetherComponent.isNodeInsideModal(this._targetNode);
     this._update();
   }
 
@@ -61,21 +78,32 @@ class TetherComponent extends React.Component {
   }
 
   disable() {
-    this._tether.disable();
+    if (this._tether) {
+      this._tether.disable();
+    }
   }
 
   enable() {
-    this._tether.enable();
+    if (this._tether) {
+      this._tether.enable();
+    }
   }
 
   position() {
-    this._tether.position();
+    if (this._tether) {
+      this._tether.position();
+    }
   }
-  
+
   _destroy() {
     if (this._elementParentNode) {
       ReactDOM.unmountComponentAtNode(this._elementParentNode);
       this._elementParentNode.parentNode.removeChild(this._elementParentNode);
+    }
+
+    if (this._overlayParentNode) {
+      ReactDOM.unmountComponentAtNode(this._overlayParentNode);
+      this._overlayParentNode.parentNode.removeChild(this._overlayParentNode);
     }
 
     if (this._tether) {
@@ -85,6 +113,7 @@ class TetherComponent extends React.Component {
     }
 
     this._elementParentNode = null;
+    this._overlayParentNode = null;
     this._tether = null;
   }
 
@@ -97,19 +126,28 @@ class TetherComponent extends React.Component {
       }
       return;
     }
+    const overlay = <TetherOverlay displayAboveModal={this._targetInsideModal} />;
 
+    const renderTo = renderElementTo || document.body;
     if (!this._elementParentNode) {
       this._elementParentNode = document.createElement(renderElementTag);
-
-      const renderTo = renderElementTo || document.body;
       renderTo.appendChild(this._elementParentNode);
+    }
+    if (!this._overlayParentNode) {
+      this._overlayParentNode = document.createElement(renderElementTag);
+      this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
+      renderTo.appendChild(this._overlayParentNode);
     }
 
     ReactDOM.unstable_renderSubtreeIntoContainer(
-      this, content, this._elementParentNode, () => {
-        this._updateTether();
+      this, overlay, this._overlayParentNode, () => {
+        ReactDOM.unstable_renderSubtreeIntoContainer(
+          this, content, this._elementParentNode, () => {
+            this._updateTether();
+          }
+        );
       }
-    )
+    );
   }
 
   _updateTether() {
@@ -136,7 +174,7 @@ class TetherComponent extends React.Component {
       tetherOptions.offset = contentOffset;
     }
     if (isEnabled !== undefined) {
-      tetherOptions.enabled = isEnabled;
+      tetherOptions.enabled = true;
     }
 
     if (!this._tether) {

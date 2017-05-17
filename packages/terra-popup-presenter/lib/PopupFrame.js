@@ -80,6 +80,21 @@ var defaultProps = {
 var PopupFrame = function (_React$Component) {
   _inherits(PopupFrame, _React$Component);
 
+  _createClass(PopupFrame, [{
+    key: 'debounce',
+    value: function debounce(fn, delay) {
+      var timer = null;
+      return function () {
+        var context = this,
+            args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          fn.apply(context, args);
+        }, delay);
+      };
+    }
+  }]);
+
   function PopupFrame(props) {
     _classCallCheck(this, PopupFrame);
 
@@ -87,7 +102,7 @@ var PopupFrame = function (_React$Component) {
 
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
     _this.handleKeydown = _this.handleKeydown.bind(_this);
-    _this.handleResize = _this.handleResize.bind(_this);
+    _this.handleResize = _this.debounce(_this.handleResize.bind(_this), 250);
     return _this;
   }
 
@@ -98,7 +113,7 @@ var PopupFrame = function (_React$Component) {
         document.addEventListener('keydown', this.handleKeydown);
       }
       if (this.props.closeOnResize) {
-        window.addEventListener('resize', this.handleResize); //might need debounce, and/or use resize observer
+        window.addEventListener('resize', this.handleResize);
       }
     }
   }, {
@@ -109,7 +124,7 @@ var PopupFrame = function (_React$Component) {
       }
 
       if (this.props.closeOnResize) {
-        document.removeEventListener('resize', this.handleResize);
+        window.removeEventListener('resize', this.handleResize);
       }
     }
   }, {
