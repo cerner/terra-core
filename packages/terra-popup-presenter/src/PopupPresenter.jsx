@@ -182,7 +182,14 @@ class PopupPresenter extends React.Component {
       'terra-PopupArrow--alignRight',
     ];
 
-    if (validPositions.length === 4 || validPositions.length === 0) {
+    const frameClasses = [
+      'terra-PopupFrame--arrowTop',
+      'terra-PopupFrame--arrowBottom',
+      'terra-PopupFrame--arrowLeft',
+      'terra-PopupFrame--arrowRight',
+    ];
+
+    if (validPositions.length === 0) {
       this._arrowNode.classList.remove(...arrowClasses);
       return false;
     }
@@ -191,20 +198,36 @@ class PopupPresenter extends React.Component {
 
     if (position.indexOf('top') >= 0) {
       this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+      
       this._arrowNode.classList.remove(...arrowClasses);
       this._arrowNode.classList.add(arrowClasses[0]);
+
+      this._frameNode.classList.remove(...frameClasses);
+      this._frameNode.classList.add(frameClasses[0]);
     } else if (position.indexOf('bottom') >= 0) {
       this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+      
       this._arrowNode.classList.remove(...arrowClasses);
       this._arrowNode.classList.add(arrowClasses[1]);
+
+      this._frameNode.classList.remove(...frameClasses);
+      this._frameNode.classList.add(frameClasses[1]);
     } else if (position.indexOf('left') >= 0) { 
       this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+      
       this._arrowNode.classList.remove(...arrowClasses);
-      this._arrowNode.classList.add(arrowClasses[2])
+      this._arrowNode.classList.add(arrowClasses[2]);
+
+      this._frameNode.classList.remove(...frameClasses);
+      this._frameNode.classList.add(frameClasses[2]);
     } else {
       this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+      
       this._arrowNode.classList.remove(...arrowClasses);
       this._arrowNode.classList.add(arrowClasses[3]);
+
+      this._frameNode.classList.remove(...frameClasses);
+      this._frameNode.classList.add(frameClasses[3]);
     }
 
     return true;

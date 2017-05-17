@@ -243,7 +243,9 @@ var PopupPresenter = function (_React$Component) {
       var offset = 10;
       var arrowClasses = ['terra-PopupArrow--alignTop', 'terra-PopupArrow--alignBottom', 'terra-PopupArrow--alignLeft', 'terra-PopupArrow--alignRight'];
 
-      if (validPositions.length === 4 || validPositions.length === 0) {
+      var frameClasses = ['terra-PopupFrame--arrowTop', 'terra-PopupFrame--arrowBottom', 'terra-PopupFrame--arrowLeft', 'terra-PopupFrame--arrowRight'];
+
+      if (validPositions.length === 0) {
         var _arrowNode$classList;
 
         (_arrowNode$classList = this._arrowNode.classList).remove.apply(_arrowNode$classList, arrowClasses);
@@ -253,29 +255,45 @@ var PopupPresenter = function (_React$Component) {
       var position = validPositions[0]; //fix this work around
 
       if (position.indexOf('top') >= 0) {
-        var _arrowNode$classList2;
+        var _arrowNode$classList2, _frameNode$classList;
 
         this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+
         (_arrowNode$classList2 = this._arrowNode.classList).remove.apply(_arrowNode$classList2, arrowClasses);
         this._arrowNode.classList.add(arrowClasses[0]);
+
+        (_frameNode$classList = this._frameNode.classList).remove.apply(_frameNode$classList, frameClasses);
+        this._frameNode.classList.add(frameClasses[0]);
       } else if (position.indexOf('bottom') >= 0) {
-        var _arrowNode$classList3;
+        var _arrowNode$classList3, _frameNode$classList2;
 
         this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+
         (_arrowNode$classList3 = this._arrowNode.classList).remove.apply(_arrowNode$classList3, arrowClasses);
         this._arrowNode.classList.add(arrowClasses[1]);
+
+        (_frameNode$classList2 = this._frameNode.classList).remove.apply(_frameNode$classList2, frameClasses);
+        this._frameNode.classList.add(frameClasses[1]);
       } else if (position.indexOf('left') >= 0) {
-        var _arrowNode$classList4;
+        var _arrowNode$classList4, _frameNode$classList3;
 
         this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+
         (_arrowNode$classList4 = this._arrowNode.classList).remove.apply(_arrowNode$classList4, arrowClasses);
         this._arrowNode.classList.add(arrowClasses[2]);
+
+        (_frameNode$classList3 = this._frameNode.classList).remove.apply(_frameNode$classList3, frameClasses);
+        this._frameNode.classList.add(frameClasses[2]);
       } else {
-        var _arrowNode$classList5;
+        var _arrowNode$classList5, _frameNode$classList4;
 
         this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
+
         (_arrowNode$classList5 = this._arrowNode.classList).remove.apply(_arrowNode$classList5, arrowClasses);
         this._arrowNode.classList.add(arrowClasses[3]);
+
+        (_frameNode$classList4 = this._frameNode.classList).remove.apply(_frameNode$classList4, frameClasses);
+        this._frameNode.classList.add(frameClasses[3]);
       }
 
       return true;
@@ -431,6 +449,7 @@ var PopupPresenter = function (_React$Component) {
       tetherOptions.constraints = constraints;
       tetherOptions.onRepositioned = this.handleTetherRepositioned;
       tetherOptions.classPrefix = 'terra-Popup';
+      tetherOptions.targetOffset = '5px 0';
 
       return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
     }
