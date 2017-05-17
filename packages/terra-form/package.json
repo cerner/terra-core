@@ -3,7 +3,7 @@
   "main": "lib/Form.js",
   "private": true,
   "version": "0.0.0",
-  "description": "terra-form",
+  "description": "Components for building forms",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
