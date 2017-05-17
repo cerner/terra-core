@@ -59,7 +59,7 @@ const Fieldset = ({ children, error, help, htmlFor, isInline, legend, required, 
     <fieldset {...customProps} className={fieldsetClasses}>
       {legend && <legend className="terra-Form-legend">{legend}</legend>}
       {children}
-      {help && <small className="terra-Form-helpText">{help}</small>}
+      {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
       {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}
     </fieldset>
   );

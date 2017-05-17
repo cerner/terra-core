@@ -85,7 +85,7 @@ var Field = function Field(_ref) {
     children,
     help && _react2.default.createElement(
       'small',
-      { className: 'terra-Form-helpText' },
+      { className: 'terra-Form-helpText', tabIndex: '-1' },
       help
     ),
     error && _react2.default.createElement(

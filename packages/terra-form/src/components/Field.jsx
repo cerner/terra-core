@@ -54,7 +54,7 @@ const Field = ({ children, error, help, isInline, label, required, ...customProp
     <div {...customProps} className={fieldClasses}>
       {label && <label className="terra-Form-label">{label}</label>}
       {children}
-      {help && <small className="terra-Form-helpText">{help}</small>}
+      {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
       {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}
     </div>
   );
