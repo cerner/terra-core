@@ -25,6 +25,7 @@ const propTypes = {
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
   disableAfterPosition: PropTypes.bool,
+  disablePageScrolling: PropTypes.bool,
   isEnabled: PropTypes.bool,
   optimizations: PropTypes.object,
   renderElementTag: PropTypes.string,
@@ -39,6 +40,7 @@ const propTypes = {
 
 const defaultProps = {
   disableAfterPosition: false,
+  disablePageScrolling: false,
   renderElementTag: 'div',
   renderElementTo: null,
 };
@@ -134,21 +136,31 @@ class TetherComponent extends React.Component {
       this._elementParentNode = document.createElement(renderElementTag);
       renderTo.appendChild(this._elementParentNode);
     }
-    if (!this._overlayParentNode) {
-      this._overlayParentNode = document.createElement(renderElementTag);
-      this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
-      renderTo.appendChild(this._overlayParentNode);
-    }
 
-    ReactDOM.unstable_renderSubtreeIntoContainer(
-      this, overlay, this._overlayParentNode, () => {
-        ReactDOM.unstable_renderSubtreeIntoContainer(
-          this, content, this._elementParentNode, () => {
-            this._updateTether();
-          }
-        );
+    const renderSubContent = () => {
+      ReactDOM.unstable_renderSubtreeIntoContainer(
+        this, content, this._elementParentNode, () => {
+          this._updateTether();
+        }
+      );
+    };
+
+  
+    if (this.props.disablePageScrolling) {
+      if (!this._overlayParentNode) {
+        this._overlayParentNode = document.createElement(renderElementTag);
+        this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
+        renderTo.appendChild(this._overlayParentNode);
       }
-    );
+
+      ReactDOM.unstable_renderSubtreeIntoContainer(
+        this, overlay, this._overlayParentNode, () => {
+          renderSubContent();
+        }
+      );
+    } else {
+      renderSubContent();
+    }
   }
 
   _updateTether() {
@@ -227,6 +239,7 @@ class TetherComponent extends React.Component {
       contentAttachment,
       contentOffset,
       disableAfterPosition,
+      disablePageScrolling,
       isEnabled,
       optimizations,
       renderElementTag,

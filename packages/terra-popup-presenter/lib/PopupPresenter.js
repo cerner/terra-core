@@ -439,6 +439,7 @@ var PopupPresenter = function (_React$Component) {
         content: wrappedContent,
         contentAttachment: contentAttachment,
         disableAfterPosition: true,
+        disablePageScrolling: true,
         isEnabled: true,
         onRepositioned: this.handleTetherRepositioned,
         target: target,

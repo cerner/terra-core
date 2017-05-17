@@ -367,6 +367,7 @@ class PopupPresenter extends React.Component {
       content: wrappedContent,
       contentAttachment,
       disableAfterPosition: true,
+      disablePageScrolling: true,
       isEnabled: true,
       onRepositioned: this.handleTetherRepositioned,
       target,

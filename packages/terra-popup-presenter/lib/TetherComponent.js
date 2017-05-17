@@ -50,6 +50,7 @@ var propTypes = {
   contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
   disableAfterPosition: _react.PropTypes.bool,
+  disablePageScrolling: _react.PropTypes.bool,
   isEnabled: _react.PropTypes.bool,
   optimizations: _react.PropTypes.object,
   renderElementTag: _react.PropTypes.string,
@@ -64,6 +65,7 @@ var propTypes = {
 
 var defaultProps = {
   disableAfterPosition: false,
+  disablePageScrolling: false,
   renderElementTag: 'div',
   renderElementTo: null
 };
@@ -183,17 +185,26 @@ var TetherComponent = function (_React$Component) {
         this._elementParentNode = document.createElement(renderElementTag);
         renderTo.appendChild(this._elementParentNode);
       }
-      if (!this._overlayParentNode) {
-        this._overlayParentNode = document.createElement(renderElementTag);
-        this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
-        renderTo.appendChild(this._overlayParentNode);
-      }
 
-      _reactDom2.default.unstable_renderSubtreeIntoContainer(this, overlay, this._overlayParentNode, function () {
+      var renderSubContent = function renderSubContent() {
         _reactDom2.default.unstable_renderSubtreeIntoContainer(_this2, content, _this2._elementParentNode, function () {
           _this2._updateTether();
         });
-      });
+      };
+
+      if (this.props.disablePageScrolling) {
+        if (!this._overlayParentNode) {
+          this._overlayParentNode = document.createElement(renderElementTag);
+          this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
+          renderTo.appendChild(this._overlayParentNode);
+        }
+
+        _reactDom2.default.unstable_renderSubtreeIntoContainer(this, overlay, this._overlayParentNode, function () {
+          renderSubContent();
+        });
+      } else {
+        renderSubContent();
+      }
     }
   }, {
     key: '_updateTether',
@@ -275,6 +286,7 @@ var TetherComponent = function (_React$Component) {
           contentAttachment = _props3.contentAttachment,
           contentOffset = _props3.contentOffset,
           disableAfterPosition = _props3.disableAfterPosition,
+          disablePageScrolling = _props3.disablePageScrolling,
           isEnabled = _props3.isEnabled,
           optimizations = _props3.optimizations,
           renderElementTag = _props3.renderElementTag,
@@ -285,7 +297,7 @@ var TetherComponent = function (_React$Component) {
           targetOffset = _props3.targetOffset,
           onUpdate = _props3.onUpdate,
           onRepositioned = _props3.onRepositioned,
-          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'disableAfterPosition', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'disableAfterPosition', 'disablePageScrolling', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
       var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent', customProps.className]);
 
