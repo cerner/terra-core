@@ -449,7 +449,6 @@ var PopupPresenter = function (_React$Component) {
       tetherOptions.constraints = constraints;
       tetherOptions.onRepositioned = this.handleTetherRepositioned;
       tetherOptions.classPrefix = 'terra-Popup';
-      tetherOptions.targetOffset = '5px 0';
 
       return _react2.default.createElement(_TetherComponent2.default, _extends({}, tetherOptions, customProps));
     }
