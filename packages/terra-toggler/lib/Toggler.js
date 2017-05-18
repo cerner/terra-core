@@ -92,7 +92,7 @@ var Toggler = function (_React$Component) {
 
   _createClass(Toggler, [{
     key: 'handleToggle',
-    value: function handleToggle(event) {
+    value: function handleToggle() {
       if (this.props.onClose !== null && this.state.isOpened) {
         this.props.onClose();
       } else if (this.props.onOpen !== null && !this.state.isOpened) {

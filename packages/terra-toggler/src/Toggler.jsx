@@ -51,13 +51,13 @@ class Toggler extends React.Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleToggle(event) {
+  handleToggle() {
     if (this.props.onClose !== null && this.state.isOpened) {
       this.props.onClose();
     } else if (this.props.onOpen !== null && !this.state.isOpened) {
       this.props.onOpen();
     }
-    this.setState({isOpened: !this.state.isOpened});
+    this.setState({ isOpened: !this.state.isOpened });
   }
 
   render() {
