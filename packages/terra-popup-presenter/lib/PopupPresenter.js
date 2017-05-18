@@ -78,15 +78,15 @@ var ARROW_OFFSET = 10;
 var ARROW_CLASSES = {
   top: 'terra-PopupArrow--alignTop',
   bottom: 'terra-PopupArrow--alignBottom',
-  left: 'terra-PopupArrow--alignLeft',
-  right: 'terra-PopupArrow--alignRight'
+  left: 'terra-PopupArrow--alignStart',
+  right: 'terra-PopupArrow--alignEnd'
 };
 
 var FRAME_CLASSES = {
   top: 'terra-PopupFrame--arrowTop',
   bottom: 'terra-PopupFrame--arrowBottom',
-  left: 'terra-PopupFrame--arrowLeft',
-  right: 'terra-PopupFrame--arrowRight'
+  left: 'terra-PopupFrame--arrowStart',
+  right: 'terra-PopupFrame--arrowEnd'
 };
 
 var defaultProps = {
@@ -127,9 +127,9 @@ var PopupPresenter = function (_React$Component) {
   }, {
     key: 'attachPositionFromAlignment',
     value: function attachPositionFromAlignment(alignment, start, length) {
-      if (alignment === 'Middle') {
+      if (alignment === 'center') {
         return start + length / 2;
-      } else if (alignment === 'End') {
+      } else if (alignment === 'right') {
         return start + length;
       }
       return start;
@@ -142,13 +142,13 @@ var PopupPresenter = function (_React$Component) {
       if (['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0) {
         if (targetBounds.top < popUpBounds.top && popUpBounds.top > offset) {
           return 'top';
-        } else if (targetBounds.bottom > popUpBounds.bottom && popUpBounds.bottom > offset) {
+        } else if (targetBounds.bottom < popUpBounds.bottom && popUpBounds.bottom > offset) {
           return 'bottom';
         }
       } else {
         if (targetBounds.left < popUpBounds.left && popUpBounds.left > offset) {
           return 'left';
-        } else if (targetBounds.right > popUpBounds.right && popUpBounds.right > offset) {
+        } else if (targetBounds.right < popUpBounds.right && popUpBounds.right > offset) {
           return 'right';
         }
       }
@@ -171,7 +171,7 @@ var PopupPresenter = function (_React$Component) {
     value: function setArrowPosition(targetBounds, popUpBounds) {
       var parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
       var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
-      var originalPosition = isVerticalAlignment >= 0 ? parsedAttachment.vertical : parsedAttachment.horizontal;
+      var originalPosition = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
       var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, this.props.contentAttachment, ARROW_OFFSET);
 
       if (!position) {
@@ -194,28 +194,53 @@ var PopupPresenter = function (_React$Component) {
   }, {
     key: 'leftOffset',
     value: function leftOffset(targetBounds, popUpBounds, arrowAlignment, offset) {
-      var popupStart = popUpBounds.left + offset;
-      var popupEnd = popUpBounds.left + popUpBounds.width - offset;
-
+      var insetRange = popUpBounds.width - offset * 2;
       var targetAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, targetBounds.left, targetBounds.width);
-      var popupAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, popupStart, popupStart - popupEnd);
+      var popupAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, popUpBounds.left, popUpBounds.width);
 
-      if (targetAttachPosition >= insetStart && targetAttachPosition <= insetEnd) {
-        return Math.abs(popupAttachPosition - targetAttachPosition).toString() + 'px';
+      var leftOffset = targetAttachPosition - popupAttachPosition;
+
+      var leftPosition = 0;
+      if (arrowAlignment === 'right') {
+        leftPosition = popUpBounds.width;
+      } else if (arrowAlignment === 'center') {
+        leftPosition = popUpBounds.width / 2;
       }
+
+      var newLeftPosition = leftPosition + leftOffset;
+      if (newLeftPosition > popUpBounds.width) {
+        newLeftPosition = popUpBounds.width;
+      } else if (newLeftPosition < 0) {
+        newLeftPosition = 0;
+      }
+
+      var scaledPosition = insetRange / popUpBounds.width * newLeftPosition;
+
+      return (offset + scaledPosition).toString() + 'px';
     }
   }, {
     key: 'topOffset',
     value: function topOffset(targetBounds, popUpBounds, offset) {
-      var popupStart = popUpBounds.top + offset;
-      var popupEnd = popUpBounds.top + popUpBounds.height - offset;
+      var insetRange = popUpBounds.height - offset * 2;
+      var popupStart = popUpBounds.top;
+      var popupEnd = popUpBounds.top + popUpBounds.height;
 
       var targetAttachPosition = targetBounds.top + targetBounds.height / 2;
-      var popupAttachPosition = popUpBounds.top + (popupStart - popupEnd) / 2;
+      var popupAttachPosition = popUpBounds.top + popUpBounds.height / 2;
 
-      if (targetAttachPosition >= popupStart && targetAttachPosition <= popupEnd) {
-        return Math.abs(popupAttachPosition - targetAttachPosition).toString() + 'px';
+      var topOffset = targetAttachPosition - popupAttachPosition;
+      var topPosition = popUpBounds.height / 2;
+
+      var newTopPosition = topPosition + topOffset;
+      if (newTopPosition > popUpBounds.height) {
+        newTopPosition = popUpBounds.height;
+      } else if (newTopPosition < 0) {
+        newTopPosition = 0;
       }
+
+      var scaledPosition = insetRange / popUpBounds.height * newTopPosition;
+
+      return (offset + scaledPosition).toString() + 'px';
     }
   }, {
     key: 'handleTetherRepositioned',
