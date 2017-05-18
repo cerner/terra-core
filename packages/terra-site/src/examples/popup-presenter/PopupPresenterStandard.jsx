@@ -30,7 +30,6 @@ class DummyApp extends React.Component {
             isOpen={this.state.open}
             showArrow
             target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
-            targetAttachment="top right"
             onRequestClose={this.handleRequestClose}
             style={{position: 'absolute', top: '500px', left: '700px'}}
             className="drup-test"

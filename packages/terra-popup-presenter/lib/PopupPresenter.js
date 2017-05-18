@@ -59,8 +59,7 @@ var propTypes = {
   isOpen: _react.PropTypes.bool,
   onRequestClose: _react.PropTypes.func,
   showArrow: _react.PropTypes.bool,
-  target: _react.PropTypes.element.isRequired,
-  targetAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions)
+  target: _react.PropTypes.element.isRequired
 };
 
 var MIRROR_LR = {
@@ -75,6 +74,11 @@ var MIRROR_TB = {
   bottom: 'top'
 };
 
+var ARROW_OFFSET = 10;
+var ARROW_CLASSES = ['terra-PopupArrow--alignTop', 'terra-PopupArrow--alignBottom', 'terra-PopupArrow--alignLeft', 'terra-PopupArrow--alignRight'];
+
+var FRAME_CLASSES = ['terra-PopupFrame--arrowTop', 'terra-PopupFrame--arrowBottom', 'terra-PopupFrame--arrowLeft', 'terra-PopupFrame--arrowRight'];
+
 var defaultProps = {
   isOpen: false,
   showArrow: false
@@ -86,44 +90,19 @@ var PopupPresenter = function (_React$Component) {
   _inherits(PopupPresenter, _React$Component);
 
   _createClass(PopupPresenter, null, [{
-    key: 'mirroredAttachment',
-    value: function mirroredAttachment(attachment) {
-      return 'top right'; //fix this
-    }
-  }, {
-    key: 'arrowAlignmentFromAttachment',
-    value: function arrowAlignmentFromAttachment(attachment) {
-      var parsedAttachment = PopupPresenter.parseStringPosition(attachment);
+    key: 'mirrorAttachment',
+    value: function mirrorAttachment(attachment) {
+      var parsedValue = parePopupPresenter.parseStringPosition(attachment);
+      var horizontal = parsedValue.horizontal;
+      var vertical = parsedValue.vertical;
 
-      if (parsedAttachment.vertical === 'middle' || parsedAttachment.horizontal === 'center') {
-        return 'Center';
-      } else if (parsedAttachment.horizontal === 'left') {
-        return 'Start';
+      if (parsedValue.vertical === 'middle') {
+        horizontal = MIRROR_LR[parsedValue.horizontal];
       } else {
-        return 'End';
+        vertical = MIRROR_TB[parsedValue.vertical];
       }
-    }
-  }, {
-    key: 'arrowPositionFromAttachment',
-    value: function arrowPositionFromAttachment(attachment) {
-      var parsedAttachment = PopupPresenter.parseStringPosition(attachment);
 
-      if (parsedAttachment.vertical === 'top') {
-        return 'Top';
-      } else if (parsedAttachment.vertical === 'middle') {
-        if (parsedAttachment.horizontal === 'left') {
-          return 'Start';
-        }
-        return 'End';
-      } else {
-        return 'Bottom';
-      }
-    }
-  }, {
-    key: 'parseOffset',
-    value: function parseOffset(value) {
-      var parsedValue = PopupPresenter.parseStringPosition(value);
-      return { vertical: parseFloat(parsedValue.vertical), horizontal: parseFloat(parsedValue.horizontal) };
+      return vertical + ' ' + horizontal;
     }
   }, {
     key: 'parseStringPosition',
@@ -135,23 +114,9 @@ var PopupPresenter = function (_React$Component) {
 
       return { vertical: vertical, horizontal: horizontal };
     }
-  }]);
-
-  function PopupPresenter(props) {
-    _classCallCheck(this, PopupPresenter);
-
-    var _this = _possibleConstructorReturn(this, (PopupPresenter.__proto__ || Object.getPrototypeOf(PopupPresenter)).call(this, props));
-
-    _this.handleTetherUpdate = _this.handleTetherUpdate.bind(_this);
-    _this.handleTetherRepositioned = _this.handleTetherRepositioned.bind(_this);
-    _this.setArrowNode = _this.setArrowNode.bind(_this);
-    _this.setFrameNode = _this.setFrameNode.bind(_this);
-    return _this;
-  }
-
-  _createClass(PopupPresenter, [{
-    key: 'validPositionsFromBounds',
-    value: function validPositionsFromBounds(targetBounds, popUpBounds) {
+  }, {
+    key: 'arrowPositionFromBounds',
+    value: function arrowPositionFromBounds(targetBounds, popUpBounds) {
       var pointOverlap = this.cornersOverlapByPopup(targetBounds, popUpBounds);
 
       if (pointOverlap.topLeft && pointOverlap.topRight && pointOverlap.bottomLeft && pointOverlap.bottomRight) {
@@ -218,7 +183,20 @@ var PopupPresenter = function (_React$Component) {
       }
       return true;
     }
-  }, {
+  }]);
+
+  function PopupPresenter(props) {
+    _classCallCheck(this, PopupPresenter);
+
+    var _this = _possibleConstructorReturn(this, (PopupPresenter.__proto__ || Object.getPrototypeOf(PopupPresenter)).call(this, props));
+
+    _this.handleTetherRepositioned = _this.handleTetherRepositioned.bind(_this);
+    _this.setArrowNode = _this.setArrowNode.bind(_this);
+    _this.setFrameNode = _this.setFrameNode.bind(_this);
+    return _this;
+  }
+
+  _createClass(PopupPresenter, [{
     key: 'attachPositionFromAlignment',
     value: function attachPositionFromAlignment(alignment, start, length) {
       if (alignment === 'Middle') {
@@ -231,70 +209,30 @@ var PopupPresenter = function (_React$Component) {
   }, {
     key: 'setArrowPosition',
     value: function setArrowPosition(targetBounds, popUpBounds) {
-      var validPositions = this.validPositionsFromBounds(targetBounds, popUpBounds);
+      var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds);
+      var targetAttachment = PopupPresenter.mirrorAttachment(this.props.contentAttachment);
 
-      var targetAttachment = this.props.targetAttachment;
-      if (!targetAttachment) {
-        targetAttachment = PopupPresenter.mirroredAttachment(this.props.contentAttachment);
+      if (position) {
+        return;
       }
-
-      var offset = 10;
-      var arrowClasses = ['terra-PopupArrow--alignTop', 'terra-PopupArrow--alignBottom', 'terra-PopupArrow--alignLeft', 'terra-PopupArrow--alignRight'];
-
-      var frameClasses = ['terra-PopupFrame--arrowTop', 'terra-PopupFrame--arrowBottom', 'terra-PopupFrame--arrowLeft', 'terra-PopupFrame--arrowRight'];
-
-      if (validPositions.length === 0) {
-        var _arrowNode$classList;
-
-        (_arrowNode$classList = this._arrowNode.classList).remove.apply(_arrowNode$classList, arrowClasses);
-        return false;
-      }
-
-      var position = validPositions[0]; //fix this work around
 
       if (position.indexOf('top') >= 0) {
-        var _arrowNode$classList2, _frameNode$classList;
-
-        this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
-
-        (_arrowNode$classList2 = this._arrowNode.classList).remove.apply(_arrowNode$classList2, arrowClasses);
-        this._arrowNode.classList.add(arrowClasses[0]);
-
-        (_frameNode$classList = this._frameNode.classList).remove.apply(_frameNode$classList, frameClasses);
-        this._frameNode.classList.add(frameClasses[0]);
+        this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, ARROW_OFFSET);
+        this._arrowNode.classList.add(ARROW_CLASSES[0]);
+        this._frameNode.classList.add(FRAME_CLASSES[0]);
       } else if (position.indexOf('bottom') >= 0) {
-        var _arrowNode$classList3, _frameNode$classList2;
-
-        this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
-
-        (_arrowNode$classList3 = this._arrowNode.classList).remove.apply(_arrowNode$classList3, arrowClasses);
-        this._arrowNode.classList.add(arrowClasses[1]);
-
-        (_frameNode$classList2 = this._frameNode.classList).remove.apply(_frameNode$classList2, frameClasses);
-        this._frameNode.classList.add(frameClasses[1]);
+        this._arrowNode.style.top = this.horizontalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, ARROW_OFFSET);
+        this._arrowNode.classList.add(ARROW_CLASSES[1]);
+        this._frameNode.classList.add(FRAME_CLASSES[1]);
       } else if (position.indexOf('left') >= 0) {
-        var _arrowNode$classList4, _frameNode$classList3;
-
-        this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
-
-        (_arrowNode$classList4 = this._arrowNode.classList).remove.apply(_arrowNode$classList4, arrowClasses);
-        this._arrowNode.classList.add(arrowClasses[2]);
-
-        (_frameNode$classList3 = this._frameNode.classList).remove.apply(_frameNode$classList3, frameClasses);
-        this._frameNode.classList.add(frameClasses[2]);
+        this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, ARROW_OFFSET);
+        this._arrowNode.classList.add(ARROW_CLASSES[2]);
+        this._frameNode.classList.add(FRAME_CLASSES[2]);
       } else {
-        var _arrowNode$classList5, _frameNode$classList4;
-
-        this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, offset);
-
-        (_arrowNode$classList5 = this._arrowNode.classList).remove.apply(_arrowNode$classList5, arrowClasses);
-        this._arrowNode.classList.add(arrowClasses[3]);
-
-        (_frameNode$classList4 = this._frameNode.classList).remove.apply(_frameNode$classList4, frameClasses);
-        this._frameNode.classList.add(frameClasses[3]);
+        this._arrowNode.style.top = this.verticalOffset(targetBounds, popUpBounds, targetAttachment, this.props.contentAttachment, ARROW_OFFSET);
+        this._arrowNode.classList.add(ARROW_CLASSES[3]);
+        this._frameNode.classList.add(FRAME_CLASSES[3]);
       }
-
-      return true;
     }
   }, {
     key: 'horizontalOffset',
@@ -369,17 +307,10 @@ var PopupPresenter = function (_React$Component) {
       return false;
     }
   }, {
-    key: 'handleTetherUpdate',
-    value: function handleTetherUpdate(event, targetBounds, presenterBounds) {
-      if (this._arrowNode) {
-        var enabledArrows = this.setArrowPosition(targetBounds, presenterBounds);
-      }
-    }
-  }, {
     key: 'handleTetherRepositioned',
     value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
       if (this._arrowNode) {
-        var enabledArrows = this.setArrowPosition(targetBounds, presenterBounds);
+        this.setArrowPosition(targetBounds, presenterBounds);
       }
     }
   }, {
@@ -396,17 +327,23 @@ var PopupPresenter = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
+          classes = _props.classes,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           content = _props.content,
           contentAttachment = _props.contentAttachment,
+          contentOffset = _props.contentOffset,
           isOpen = _props.isOpen,
           onRequestClose = _props.onRequestClose,
+          onUpdate = _props.onUpdate,
+          optimizations = _props.optimizations,
+          renderElementTag = _props.renderElementTag,
           renderElementTo = _props.renderElementTo,
-          target = _props.target,
-          targetAttachment = _props.targetAttachment,
           showArrow = _props.showArrow,
-          customProps = _objectWithoutProperties(_props, ['closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'isOpen', 'onRequestClose', 'renderElementTo', 'target', 'targetAttachment', 'showArrow']); // eslint-disable-line no-unused-vars
+          target = _props.target,
+          targetModifier = _props.targetModifier,
+          targetOffset = _props.targetOffset,
+          customProps = _objectWithoutProperties(_props, ['classes', 'closeOnEsc', 'closeOnOutsideClick', 'content', 'contentAttachment', 'contentOffset', 'isOpen', 'onRequestClose', 'onUpdate', 'optimizations', 'renderElementTag', 'renderElementTo', 'showArrow', 'target', 'targetModifier', 'targetOffset']); // eslint-disable-line no-unused-vars
 
       var wrappedContent = void 0;
       if (isOpen && content) {
@@ -433,18 +370,16 @@ var PopupPresenter = function (_React$Component) {
         pin: true
       }];
 
-      var tetherOptions = _extends({
+      var tetherOptions = _extends({}, customProps, {
         classPrefix: 'terra-Popup',
         constraints: constraints,
         content: wrappedContent,
-        contentAttachment: contentAttachment,
         disableAfterPosition: true,
         disablePageScrolling: true,
         isEnabled: true,
         onRepositioned: this.handleTetherRepositioned,
-        target: target,
-        targetAttachment: targetAttachment
-      }, customProps);
+        targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment)
+      });
 
       return _react2.default.createElement(_TetherComponent2.default, tetherOptions);
     }

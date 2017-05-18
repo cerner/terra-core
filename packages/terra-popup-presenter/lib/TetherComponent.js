@@ -45,8 +45,8 @@ var attachmentPositions = ['top left', 'top center', 'top right', 'middle left',
 var propTypes = {
   classes: _react.PropTypes.object,
   classPrefix: _react.PropTypes.string,
-  content: _react.PropTypes.element,
   constraints: _react.PropTypes.array,
+  content: _react.PropTypes.element,
   contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
   disableAfterPosition: _react.PropTypes.bool,
@@ -285,8 +285,8 @@ var TetherComponent = function (_React$Component) {
       var _props3 = this.props,
           classes = _props3.classes,
           classPrefix = _props3.classPrefix,
-          content = _props3.content,
           constraints = _props3.constraints,
+          content = _props3.content,
           contentAttachment = _props3.contentAttachment,
           contentOffset = _props3.contentOffset,
           disableAfterPosition = _props3.disableAfterPosition,
@@ -301,7 +301,7 @@ var TetherComponent = function (_React$Component) {
           targetOffset = _props3.targetOffset,
           onUpdate = _props3.onUpdate,
           onRepositioned = _props3.onRepositioned,
-          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'content', 'constraints', 'contentAttachment', 'contentOffset', 'disableAfterPosition', 'disablePageScrolling', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableAfterPosition', 'disablePageScrolling', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
       var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent-element', customProps.className]);
 

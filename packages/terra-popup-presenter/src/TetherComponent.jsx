@@ -20,8 +20,8 @@ const attachmentPositions = [
 const propTypes = {
   classes: PropTypes.object,
   classPrefix: PropTypes.string,
-  content: PropTypes.element,
   constraints: PropTypes.array,
+  content: PropTypes.element,
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
   disableAfterPosition: PropTypes.bool,
@@ -153,7 +153,7 @@ class TetherComponent extends React.Component {
   
     if (this.props.disablePageScrolling) {
       const overlay = <TetherOverlay displayAboveModal={this._targetInsideModal} />;
-      
+
       if (!this._overlayParentNode) {
         this._overlayParentNode = document.createElement(renderElementTag);
         this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
@@ -241,8 +241,8 @@ class TetherComponent extends React.Component {
     const {
       classes,
       classPrefix,
-      content,
       constraints,
+      content,
       contentAttachment,
       contentOffset,
       disableAfterPosition,
