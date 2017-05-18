@@ -74,7 +74,7 @@ class Toggler extends React.Component {
       customProps.className,
     ]);
 
-    const ariaHidden = this.state.isOpened ? null : 'true';
+    const ariaHidden = this.state.isOpened ? 'false' : 'true';
     const ariaExpanded = this.state.isOpened ? 'true' : 'false';
 
     return (

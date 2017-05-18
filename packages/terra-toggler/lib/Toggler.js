@@ -93,22 +93,17 @@ var Toggler = function (_React$Component) {
   _createClass(Toggler, [{
     key: 'handleToggle',
     value: function handleToggle(event) {
-      this.setState(function (prevState) {
-        return {
-          isOpened: !prevState.isOpened
-        };
-      });
-
       if (this.props.onClose !== null && this.state.isOpened) {
         this.props.onClose();
       } else if (this.props.onOpen !== null && !this.state.isOpened) {
         this.props.onOpen();
       }
+      this.setState({ isOpened: !this.state.isOpened });
     }
   }, {
     key: 'render',
     value: function render() {
-      // Disable this rule because otherwise handleToggled get added to customProps and get applied to the article
+      // Disable this rule because otherwise onOpen and onClose get added to customProps and get applied to the article
       // It is used in above functions, just not part of this render
       // eslint-disable-next-line no-unused-vars
       var _props = this.props,
@@ -122,7 +117,7 @@ var Toggler = function (_React$Component) {
 
       var togglerClass = (0, _classnames2.default)(['terra-Toggler', { 'is-collapsed': !this.state.isOpened }, { 'is-expanded': this.state.isOpened }, { 'is-animated': isAnimated }, customProps.className]);
 
-      var ariaHidden = this.state.isOpened ? null : 'true';
+      var ariaHidden = this.state.isOpened ? 'false' : 'true';
       var ariaExpanded = this.state.isOpened ? 'true' : 'false';
 
       return (
