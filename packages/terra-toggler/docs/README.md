@@ -12,7 +12,7 @@
 
 ```jsx
 import React from 'react';
-import Togler from 'terra-toggler';
+import Toggler from 'terra-toggler';
 
   <Toggler header={<p>Click to toggle</p>}>
     {<p>This visibility of this content can be toggled.</p>}
