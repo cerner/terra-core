@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-// import 'terra-base/lib/baseStyles';
+import 'terra-base/lib/baseStyles';
 import './Alert.scss';
 
 const propTypes = {
@@ -22,7 +22,7 @@ const Alert = ({ name, ...customProps }) => {
     attributes.className,
   ]);
 
-  return (<div {...attributes} className={AlertClassNames} />);
+  return (<div {...attributes} className={AlertClassNames} />)
 };
 
 Alert.propTypes = propTypes;
