@@ -11,9 +11,13 @@ const propTypes = {
    **/
   children: PropTypes.node,
   /**
-   * Callback function after expanded and after collapsed.
+   * Callback function when the toggler is opened.
    **/
-  handleToggled: React.PropTypes.func,
+  onOpen: PropTypes.func,
+  /**
+   * Callback function when the toggler is closed.
+   **/
+  onClose: PropTypes.func,
   /**
    * Content in the ‘header’ section that acts as a trigger for the collapse/expand action
    **/
@@ -30,7 +34,8 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  handleToggled: null,
+  onOpen: null,
+  onClose: null,
   header: null,
   isAnimated: true,
   isOpened: false,
@@ -47,17 +52,19 @@ class Toggler extends React.Component {
   }
 
   handleToggle(event) {
-    this.setState({ isOpened: !this.state.isOpened });
-    if (this.props.handleToggled !== null) {
-      this.props.handleToggled(event);
+    if (this.props.onClose !== null && this.state.isOpened) {
+      this.props.onClose();
+    } else if (this.props.onOpen !== null && !this.state.isOpened) {
+      this.props.onOpen();
     }
+    this.setState({isOpened: !this.state.isOpened});
   }
 
   render() {
-    // Disable this rule because otherwise handleToggled get added to customProps and get applied to the article
+    // Disable this rule because otherwise onOpen and onClose get added to customProps and get applied to the article
     // It is used in above functions, just not part of this render
     // eslint-disable-next-line no-unused-vars
-    const { header, isOpened, isAnimated, children, handleToggled, ...customProps } = this.props;
+    const { header, isOpened, isAnimated, children, onOpen, onClose, ...customProps } = this.props;
 
     const togglerClass = classNames([
       'terra-Toggler',
@@ -72,11 +79,11 @@ class Toggler extends React.Component {
 
     return (
       // TODO: Links in header shouldn't trigger collapse
-      <article {...customProps} className={togglerClass} role="tablist">
+      <article {...customProps} className={togglerClass} >
         <Button size="small" variant="link" className="terra-Toggler-header" aria-expanded={ariaExpanded} onClick={this.handleToggle} >
           {header}
         </Button>
-        <div className="terra-Toggler-content" role="tabpanel" aria-hidden={ariaHidden} >
+        <div className="terra-Toggler-content" aria-hidden={ariaHidden} >
           {children}
         </div>
       </article>

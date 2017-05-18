@@ -44,9 +44,13 @@ var propTypes = {
    **/
   children: _propTypes2.default.node,
   /**
-   * Callback function after expanded and after collapsed.
+   * Callback function when the toggler is opened.
    **/
-  handleToggled: _react2.default.PropTypes.func,
+  onOpen: _propTypes2.default.func,
+  /**
+   * Callback function when the toggler is closed.
+   **/
+  onClose: _propTypes2.default.func,
   /**
    * Content in the ‘header’ section that acts as a trigger for the collapse/expand action
    **/
@@ -63,7 +67,8 @@ var propTypes = {
 
 var defaultProps = {
   children: null,
-  handleToggled: null,
+  onOpen: null,
+  onClose: null,
   header: null,
   isAnimated: true,
   isOpened: false
@@ -88,9 +93,16 @@ var Toggler = function (_React$Component) {
   _createClass(Toggler, [{
     key: 'handleToggle',
     value: function handleToggle(event) {
-      this.setState({ isOpened: !this.state.isOpened });
-      if (this.props.handleToggled !== null) {
-        this.props.handleToggled(event);
+      this.setState(function (prevState) {
+        return {
+          isOpened: !prevState.isOpened
+        };
+      });
+
+      if (this.props.onClose !== null && this.state.isOpened) {
+        this.props.onClose();
+      } else if (this.props.onOpen !== null && !this.state.isOpened) {
+        this.props.onOpen();
       }
     }
   }, {
@@ -104,8 +116,9 @@ var Toggler = function (_React$Component) {
           isOpened = _props.isOpened,
           isAnimated = _props.isAnimated,
           children = _props.children,
-          handleToggled = _props.handleToggled,
-          customProps = _objectWithoutProperties(_props, ['header', 'isOpened', 'isAnimated', 'children', 'handleToggled']);
+          onOpen = _props.onOpen,
+          onClose = _props.onClose,
+          customProps = _objectWithoutProperties(_props, ['header', 'isOpened', 'isAnimated', 'children', 'onOpen', 'onClose']);
 
       var togglerClass = (0, _classnames2.default)(['terra-Toggler', { 'is-collapsed': !this.state.isOpened }, { 'is-expanded': this.state.isOpened }, { 'is-animated': isAnimated }, customProps.className]);
 
@@ -116,7 +129,7 @@ var Toggler = function (_React$Component) {
         // TODO: Links in header shouldn't trigger collapse
         _react2.default.createElement(
           'article',
-          _extends({}, customProps, { className: togglerClass, role: 'tablist' }),
+          _extends({}, customProps, { className: togglerClass }),
           _react2.default.createElement(
             _terraButton2.default,
             { size: 'small', variant: 'link', className: 'terra-Toggler-header', 'aria-expanded': ariaExpanded, onClick: this.handleToggle },
@@ -124,7 +137,7 @@ var Toggler = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'terra-Toggler-content', role: 'tabpanel', 'aria-hidden': ariaHidden },
+            { className: 'terra-Toggler-content', 'aria-hidden': ariaHidden },
             children
           )
         )

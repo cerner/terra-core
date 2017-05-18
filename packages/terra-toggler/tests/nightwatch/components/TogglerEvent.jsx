@@ -7,22 +7,28 @@ const toggleHeader = <p>Click Me</p>;
 class TogglerEvent extends React.Component {
   constructor() {
     super();
-    this.handleToggled = this.handleToggled.bind(this);
+    this.handleOnOpen = this.handleOnOpen.bind(this);
+    this.handleOnClose = this.handleOnClose.bind(this);
   }
 
   /* eslint-disable */
-  handleToggled() {
-    alert('toggled');
+  handleOnOpen() {
+    alert('onOpen');
+  }
+
+  handleOnClose() {
+    alert('onClose');
   }
   /* eslint-enable */
 
   render() {
     return (
-      <Toggler header={toggleHeader} handleToggled={this.handleToggled} >
+      <Toggler header={toggleHeader} onOpen={this.handleOnOpen} onClose={this.handleOnClose} >
         {content}
       </Toggler>
     );
   }
 }
+
 
 export default TogglerEvent;
