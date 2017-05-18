@@ -43,7 +43,6 @@ exports[`test should mount a default toggler 1`] = `
         <p>
           In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
         </p>
-         
         <p>
           Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
         </p>
@@ -98,7 +97,6 @@ exports[`test should mount a opened toggler 1`] = `
         <p>
           In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
         </p>
-         
         <p>
           Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
         </p>
@@ -153,7 +151,6 @@ exports[`test should mount a toggler with no animation 1`] = `
         <p>
           In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
         </p>
-         
         <p>
           Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
         </p>
@@ -185,7 +182,6 @@ exports[`test should render a default toggler 1`] = `
       <p>
         In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
       </p>
-       
       <p>
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
       </p>
@@ -216,7 +212,6 @@ exports[`test should render a opened toggler 1`] = `
       <p>
         In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
       </p>
-       
       <p>
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
       </p>
@@ -247,7 +242,6 @@ exports[`test should render a toggler with no animation 1`] = `
       <p>
         In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
       </p>
-       
       <p>
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
       </p>
@@ -284,7 +278,6 @@ exports[`test should shallow a default toggler 1`] = `
       <p>
         In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
       </p>
-       
       <p>
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
       </p>
@@ -321,7 +314,6 @@ exports[`test should shallow a opened toggler 1`] = `
       <p>
         In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
       </p>
-       
       <p>
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
       </p>
@@ -358,7 +350,6 @@ exports[`test should shallow a toggler with no animation 1`] = `
       <p>
         In ornare fringilla mauris, non vestibulum orci sodales et. Morbi finibus efficitur vulputate. Cras viverra, felis sit amet porttitor tristique, turpis lacus sodales risus, id fermentum nisl lacus non mauris. Phasellus eu dolor justo. Quisque tempor est purus, et scelerisque justo vestibulum vel. Fusce ornare venenatis nibh, sed tristique ipsum luctus vel. Pellentesque in bibendum lorem. Integer mi metus, aliquam eget turpis quis, consectetur placerat diam. Etiam velit felis, viverra eu ultricies sed, feugiat id nisl. Aliquam vestibulum tincidunt felis vitae scelerisque. Nullam rutrum justo ac maximus sodales.
       </p>
-       
       <p>
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel arcu suscipit, aliquet lectus scelerisque, tincidunt nunc. Aliquam ipsum nibh, egestas nec consectetur sit amet, suscipit eget dolor. Duis vitae turpis tempor, elementum mauris dapibus, elementum enim. Duis sodales enim volutpat leo ultrices, sed lacinia mauris sodales. Curabitur vitae viverra dolor. Pellentesque tempus, metus eget tristique malesuada, lectus tortor pulvinar nunc, at hendrerit sem odio placerat ex. Nullam efficitur urna eget sem aliquet hendrerit. Donec imperdiet ante erat, vitae condimentum arcu rhoncus sed.
       </p>
