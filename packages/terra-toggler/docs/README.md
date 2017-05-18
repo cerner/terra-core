@@ -1,6 +1,6 @@
 # Terra Toggler
 
-{ insert description }
+The toggler component provides the ability to hide/disclose content through a toggle.
 
 ## Getting Started
 
