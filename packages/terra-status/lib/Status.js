@@ -36,7 +36,7 @@ var propTypes = {
   /**
    * The color of the status indicator. Accepts a CSS color value.
    */
-  color: _propTypes2.default.string.isRequired
+  color: _propTypes2.default.string
 };
 
 var Status = function Status(_ref) {
