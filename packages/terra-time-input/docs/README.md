@@ -15,7 +15,7 @@ import React from 'react';
 import TimeInput from 'terra-time-input';
 
 <TimeInput 
-  defaultTime={moment()}
+  value={'12:30'}
   onChange={this.handleChange}
 />
 ```
