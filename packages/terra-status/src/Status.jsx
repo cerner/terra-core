@@ -12,7 +12,7 @@ const propTypes = {
   /**
    * The color of the status indicator. Accepts a CSS color value.
    */
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 const Status = ({ color, children, ...customProps }) => {
