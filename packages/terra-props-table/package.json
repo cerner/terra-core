@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "prop-types": "^15.5.8",
-    "react-docgen": "2.13.0",
+    "react-docgen": "2.15.0",
     "terra-base": "^0.4.1",
     "terra-markdown": "^0.4.1"
   },
