@@ -4,12 +4,11 @@ exports[`test should render a ProgressBar component with default heightSize 50% 
   aria-valuemin={0}
   aria-valuenow={50}
   className="terra-ProgressBar terra-ProgressBar--small"
-  color="#8ccc62"
   dir="rtl"
   max={100}
   style={
     Object {
-      "color": "#8ccc62",
+      "color": undefined,
     }
   }
   tabIndex="-1"
@@ -39,11 +38,10 @@ exports[`test should render a ProgressBar component with tiny heightSize and 15%
   aria-valuemin={0}
   aria-valuenow={15}
   className="terra-ProgressBar terra-ProgressBar--tiny"
-  color="#8ccc62"
   max={100}
   style={
     Object {
-      "color": "#8ccc62",
+      "color": undefined,
     }
   }
   tabIndex="-1"
