@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
 
@@ -30,7 +31,7 @@ class SingleSelectableRows extends React.Component {
   static selectedRowIndex(rows) {
     // Find the first row which is selected and is selectable
     for (let i = 0; i < rows.length; i += 1) {
-      if (rows[i].props.isSelected === true && rows[i].props.isSelectable !== false) {
+      if (rows[i].props.isSelected && rows[i].props.isSelectable) {
         return i;
       }
     }
@@ -56,7 +57,7 @@ class SingleSelectableRows extends React.Component {
     const initialOnClick = this.props.onClick;
 
     return (event) => {
-      if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+      if (row.props.isSelectable && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
       }
 
@@ -71,7 +72,7 @@ class SingleSelectableRows extends React.Component {
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (row.props.isSelectable !== false && this.shouldHandleSelection(index)) {
+        if (row.props.isSelectable && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
       }
@@ -84,8 +85,7 @@ class SingleSelectableRows extends React.Component {
 
   newPropsForRow(row, index, onClick, onKeyDown) {
     const isSelected = this.state.selectedIndex === index;
-
-    const newProps = { onClick, onKeyDown };
+    const newProps = { };
 
     // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
     // This will ensure that only one row will be selected at a moment of time.
@@ -93,17 +93,14 @@ class SingleSelectableRows extends React.Component {
       newProps.isSelected = isSelected;
     }
 
-    const isSelectable = row.props.isSelectable;
-    // By default isSelectable attribute for the TableRow is undefined, as this is selectable table,
-    // we will make row selectable by default. If consumer specify the row attribute isSelectable as false,
-    // then row will not be selectable
-    if (isSelectable === undefined) {
-      newProps.isSelectable = true;
-    }
+    newProps.isSelectable = row.props.isSelectable;
 
-    // Add tabIndex on rows to navigate through keyboard tab key for selectable row
-    if (newProps.isSelectable || isSelectable) {
+    // If selectable, add tabIndex on rows to navigate through keyboard tab key for selectable row and add
+    // onClick and onKeyDown functions.
+    if (newProps.isSelectable) {
       newProps.tabIndex = '0';
+      newProps.onClick = onClick;
+      newProps.onKeyDown = onKeyDown;
     }
 
     return newProps;

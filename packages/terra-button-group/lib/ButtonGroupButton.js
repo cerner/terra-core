@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _terraButton = require('terra-button');
 
 var _terraButton2 = _interopRequireDefault(_terraButton);
@@ -30,27 +34,27 @@ var propTypes = {
   /**
    * Indicates if the button should be selected on initial render.
    */
-  isSelected: _react.PropTypes.bool,
+  isSelected: _propTypes2.default.bool,
   /**
    * Sets the button text
    */
-  text: _react.PropTypes.string,
+  text: _propTypes2.default.string,
   /**
    * An optional icon. Nested inline with the text when provided
    */
-  icon: _react.PropTypes.element,
+  icon: _propTypes2.default.element,
   /**
    * Callback function triggered when clicked
    */
-  onClick: _react.PropTypes.func,
+  onClick: _propTypes2.default.func,
   /**
    * Reverses the position of the icon and text
    */
-  isReversed: _react.PropTypes.bool,
+  isReversed: _propTypes2.default.bool,
   /**
    * Child Nodes
    */
-  children: _react.PropTypes.node
+  children: _propTypes2.default.node
 };
 
 var defaultProps = {

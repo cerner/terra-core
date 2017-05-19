@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -30,26 +34,26 @@ var propTypes = {
   /**
    * The content element to be placed inside the list item for display.
    */
-  content: _react.PropTypes.element,
+  content: _propTypes2.default.element,
   /**
    * Whether or not the list item should have selection styles applied.
    */
-  isSelected: _react.PropTypes.bool,
+  isSelected: _propTypes2.default.bool,
   /**
    * Whether or not the list item should have styles to indicate the item is selectable.
    */
-  isSelectable: _react.PropTypes.bool,
+  isSelectable: _propTypes2.default.bool,
   /**
    * Whether or not the list item has a disclosure indicator presented.
    */
-  hasChevron: _react.PropTypes.bool
+  hasChevron: _propTypes2.default.bool
 };
 
 var defaultProps = {
   content: undefined,
   isSelected: false,
-  isSelectable: undefined,
-  hasChevron: undefined
+  isSelectable: false,
+  hasChevron: false
 };
 
 var ListItem = function ListItem(_ref) {

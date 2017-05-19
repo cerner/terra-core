@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRow from './TableRow';
 
@@ -23,7 +24,7 @@ const defaultProps = {
 };
 
 function cloneChildItems(children, onClick, onKeyDown) {
-  return children.map((child) => {
+  return React.Children.map(children, (child) => {
     const newProps = {};
     if (onClick) {
       newProps.onClick = onClick;

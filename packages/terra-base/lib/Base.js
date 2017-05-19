@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _terraI18n = require('terra-i18n');
 
 require('./baseStyles');
@@ -30,16 +34,16 @@ var propTypes = {
   /**
    * The component(s) that will be wrapped by `<Base />`.
    */
-  children: _react.PropTypes.node.isRequired,
+  children: _propTypes2.default.node.isRequired,
   /**
    * The locale name.
    */
-  locale: _react.PropTypes.string.isRequired,
+  locale: _propTypes2.default.string.isRequired,
   /**
    * Customized translations provided by consuming application
    * only for current locale.
    */
-  customMessages: _react.PropTypes.object
+  customMessages: _propTypes2.default.object
 };
 
 var defaultProps = {
@@ -55,7 +59,7 @@ var Base = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Base.__proto__ || Object.getPrototypeOf(Base)).call(this, props));
 
     _this.state = {
-      load: false,
+      areTranslationsLoaded: false,
       locale: props.locale,
       messages: {}
     };
@@ -76,7 +80,7 @@ var Base = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      if (!this.state.load) return null;
+      if (!this.state.areTranslationsLoaded) return null;
 
       var _props = this.props,
           children = _props.children,

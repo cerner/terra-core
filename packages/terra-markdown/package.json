@@ -1,7 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "version": "0.2.0",
+  "version": "0.4.1",
   "description": "terra-markdown",
   "repository": {
     "type": "git",
@@ -23,22 +23,20 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.x"
+    "terra-base": "^0.4.1"
   },
   "dependencies": {
-    "marked": "^0.3.6",
     "github-markdown-css": "^2.4.1",
-    "terra-base": "^0.x"
+    "marked": "^0.3.6",
+    "prop-types": "^15.5.8",
+    "terra-base": "^0.4.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "release:major": "npm test && node ../../scripts/release/release.js major",
-    "release:minor": "npm test && node ../../scripts/release/release.js minor",
-    "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "npm run test:spec",
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   }

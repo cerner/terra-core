@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { I18nProvider, i18nLoader } from 'terra-i18n';
 import './baseStyles';
 
@@ -26,7 +27,7 @@ class Base extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: false,
+      areTranslationsLoaded: false,
       locale: props.locale,
       messages: {},
     };
@@ -42,7 +43,7 @@ class Base extends React.Component {
   }
 
   render() {
-    if (!this.state.load) return null;
+    if (!this.state.areTranslationsLoaded) return null;
 
     const {
       children,

@@ -33,4 +33,9 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/image`)
       .waitForElementVisible('.terra-Status', 1000);
   },
+  'Displays status with no style': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/no-color`)
+      .waitForElementVisible('.terra-Status', 1000);
+  },
 };

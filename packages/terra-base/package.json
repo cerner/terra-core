@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "0.2.0",
+  "version": "0.4.1",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.x"
+    "terra-toolkit": "^0.3.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -29,18 +29,16 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-i18n": "^0.x"
+    "terra-i18n": "^0.x",
+    "prop-types": "^15.5.8"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "release:major": "npm test && node ../../scripts/release/release.js major",
-    "release:minor": "npm test && node ../../scripts/release/release.js minor",
-    "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",

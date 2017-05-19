@@ -1,18 +1,25 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const deTranslations = require('../../lib/translations/de.js').messages;
-const enTranslations = require('../../lib/translations/en.js').messages;
-const enGBTranslations = require('../../lib/translations/en-GB.js').messages;
-const enUSTranslations = require('../../lib/translations/en-US.js').messages;
-const esTranslations = require('../../lib/translations/es.js').messages;
-const fiFITranslations = require('../../lib/translations/fi-FI.js').messages;
-const frTranslations = require('../../lib/translations/fr.js').messages;
-const ptTranslations = require('../../lib/translations/pt.js').messages;
+const screenshot = require('terra-toolkit').screenshot;
+const fs = require('fs');
+const path = require('path');
+
+function loadTranslationsForLocale(locale) {
+  return JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', '..', 'translations', `${locale}.json`), 'utf8'));
+}
+
+const deTranslations = loadTranslationsForLocale('de');
+const enTranslations = loadTranslationsForLocale('en');
+const enGBTranslations = loadTranslationsForLocale('en-GB');
+const enUSTranslations = loadTranslationsForLocale('en-US');
+const esTranslations = loadTranslationsForLocale('es');
+const fiFITranslations = loadTranslationsForLocale('fi-FI');
+const frTranslations = loadTranslationsForLocale('fr');
+const ptTranslations = loadTranslationsForLocale('pt');
 
 const defaultTranslations = enTranslations;
 
-const screenshot = require('terra-toolkit').screenshot;
+const waitInms = 3000;
 
-const waitInms = 1000;
 
 module.exports = {
   before: (browser, done) => {

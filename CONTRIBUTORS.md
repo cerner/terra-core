@@ -19,6 +19,7 @@ Cerner Corporation
 - Nikhil Agrawal [@nagrawal3]
 - Emily Rohrbough [@emilyrohrbough]
 - Rory Hardy [@gneatgeek]
+- Neil Pfeiffer [@neilpfeiffer]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -39,3 +40,5 @@ Cerner Corporation
 [@nagrawal3]: https://github.com/nagrawal3
 [@emilyrohrbough]: https://github.com/emilyrohrbough
 [@gneatgeek]: https://github.com/gneatgeek
+[@JakeLaCombe]: https://github.com/JakeLaCombe
+[@neilpfeiffer]: https://github.com/neilpfeiffer

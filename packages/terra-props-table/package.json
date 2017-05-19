@@ -1,7 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "0.2.1",
+  "version": "0.4.1",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -21,27 +21,25 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.x"
+    "terra-toolkit": "^0.3.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.x"
+    "terra-base": "^0.4.1"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react-docgen": "2.13.0",
-    "terra-base": "^0.x",
-    "terra-markdown": "^0.x"
+    "terra-base": "^0.4.1",
+    "terra-markdown": "^0.4.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "rm -rf lib",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "release:major": "npm test && node ../../scripts/release/release.js major",
-    "release:minor": "npm test && node ../../scripts/release/release.js minor",
-    "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "npm run test:spec",
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   }

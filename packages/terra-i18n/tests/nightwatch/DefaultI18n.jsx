@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { I18nProvider, i18nLoader } from '../../lib/I18n';
@@ -7,7 +8,7 @@ class Base extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: false,
+      areTranslationsLoaded: false,
       locale: props.locale,
       messages: {},
     };
@@ -23,7 +24,7 @@ class Base extends React.Component {
   }
 
   render() {
-    if (!this.state.load) {
+    if (!this.state.areTranslationsLoaded) {
       return <div />;
     }
     return (
@@ -49,7 +50,7 @@ class Base extends React.Component {
 }
 
 Base.propTypes = {
-  locale: React.PropTypes.string,
+  locale: PropTypes.string,
 };
 
 Base.defaultProps = {

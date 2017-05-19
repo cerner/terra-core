@@ -10,6 +10,7 @@ const ResponsiveElementTests = () => (
       <li><Link to="/tests/status-tests/arrange">Status Arrange</Link></li>
       <li><Link to="/tests/status-tests/icon">Status Icon</Link></li>
       <li><Link to="/tests/status-tests/image">Status Image</Link></li>
+      <li><Link to="/tests/status-tests/no-color">Status No Color</Link></li>
     </ul>
   </div>
 );

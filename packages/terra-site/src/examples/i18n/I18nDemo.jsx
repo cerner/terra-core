@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { I18nProvider, i18nLoader } from 'terra-i18n';
@@ -7,15 +8,15 @@ class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: false,
-      locale: props.locale,
+      areTranslationsLoaded: false,
+      locale: 'en-US',
       messages: {},
     };
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
   }
 
   componentDidMount() {
-    i18nLoader(this.props.locale, this.setState, this);
+    i18nLoader(this.state.locale, this.setState, this);
   }
 
   handleLocaleChange(e) {
@@ -23,7 +24,7 @@ class Demo extends React.Component {
   }
 
   render() {
-    if (!this.state.load) {
+    if (!this.state.areTranslationsLoaded) {
       return <div />;
     }
     return (
@@ -33,7 +34,7 @@ class Demo extends React.Component {
       >
         <FormattedMessage id="Terra.ajax.error" />
         <label htmlFor="locale"> Current locale: {this.state.locale} </label>
-        <select onChange={this.handleLocaleChange}>
+        <select value={this.state.locale} onChange={this.handleLocaleChange}>
           <option value="en">en</option>
           <option value="en-GB">en-GB</option>
           <option value="en-US">en-US</option>
@@ -49,7 +50,7 @@ class Demo extends React.Component {
 }
 
 Demo.propTypes = {
-  locale: React.PropTypes.string,
+  locale: PropTypes.string,
 };
 
 Demo.defaultProps = {

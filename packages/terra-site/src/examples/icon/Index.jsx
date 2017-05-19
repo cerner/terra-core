@@ -9,27 +9,19 @@ import { version } from 'terra-icon/package.json';
 import IconSrc from '!raw-loader!terra-icon/src/IconBase';
 
 // Example Files
-import IconAll from './IconAll';
-import IconAppendClass from './IconAppendClass';
-import IconAria from './IconAria';
-import IconBidi from './IconBidi';
-import IconHeightWidth from './IconHeightWidth';
+import IconStatic from './IconStatic';
+import IconThemeable from './IconThemeable';
 
 const IconExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={IconSrc} />
-    <h2 id="all_icons">All Icons</h2>
-    <IconAll />
-    <h2 id="bidi_icons">Bidi Icons</h2>
-    <IconBidi />
-    <h2 id="height_width_icons">Icon Height and Width</h2>
-    <IconHeightWidth />
-    <h2 id="aria_icons">Icon Accessibility</h2>
-    <IconAria />
-    <h2 id="append_class_icons">Append Classes</h2>
-    <IconAppendClass />
+    <h2 id="static_icons">Static Icons</h2>
+    <IconStatic />
+    <br />
+    <h2 id="themeable_icons">Themeable Icons</h2>
+    <IconThemeable />
   </div>
 );
 

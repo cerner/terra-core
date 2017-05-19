@@ -1,13 +1,15 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import pandaPic from '../assets/panda.jpg';
 
 // Block style is required since images are inline by default. This could be resolved by someones normalize.css
-const image = <img style={{ display: 'block' }} height="100" width="150" src="http://3w6kx9401skz1bup4i1gs9ne.wpengine.netdna-cdn.com/wp-content/uploads/2016/09/telegraph-1.jpg" alt="a happy panda" />;
+const image = <img style={{ display: 'block' }} height="100" width="150" src={pandaPic} alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const simpleText = <div>{ipsum}</div>;
 const longText = <div>{ipsum} {ipsum} {ipsum} {ipsum}</div>;
 
 const ArrangeWrapper = props => (
-  <div style={{ width: '500px', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede' }}>
+  <div style={{ width: '100%', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede' }}>
     {props.children}
   </div>
 );

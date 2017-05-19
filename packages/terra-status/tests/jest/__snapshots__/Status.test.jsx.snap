@@ -87,3 +87,12 @@ exports[`test should render a simpleText with status 1`] = `
   </div>
 </div>
 `;
+
+exports[`test should render status with no style 1`] = `
+<div
+  class="terra-Status">
+  <div>
+    Lorem labore et dolore magna aliqua.
+  </div>
+</div>
+`;

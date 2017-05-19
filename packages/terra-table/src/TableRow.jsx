@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 
@@ -19,6 +20,7 @@ const propTypes = {
 
 const defaultProps = {
   isSelected: false,
+  isSelectable: false,
 };
 
 const TableRow = ({

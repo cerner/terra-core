@@ -27,7 +27,6 @@ input[type='submit'].terra-Button {
 // stylelint-enable selector-no-qualifying-type
 
 .terra-Button {
-  @include terra-margin-horizontal($terra-button-margin-left, $terra-button-margin-right);
   @include terra-padding-horizontal($terra-button-padding-left, $terra-button-padding-right);
   @include terra-text-align-center;
 
@@ -40,8 +39,6 @@ input[type='submit'].terra-Button {
   font-size: map-get($terra-button-font-sizes, medium);
   font-weight: $terra-button-font-weight;
   line-height: 1.429; // 20px when html font size is computed to 14px
-  margin-bottom: $terra-button-margin-bottom;
-  margin-top: $terra-button-margin-top;
   padding-bottom: $terra-button-padding-bottom;
   padding-top: $terra-button-padding-top;
   text-decoration: none;
@@ -69,19 +66,6 @@ input[type='submit'].terra-Button {
     opacity: 0.7;
     pointer-events: none; // prevent pointer interaction for anchor elements
   }
-
-  // Remove margin used to add space between buttons
-  &:last-child {
-    @include terra-margin-end(0);
-  }
-}
-
-.terra-Button-text:first-child:not(:last-child) {
-  @include terra-margin-end($terra-button-child-margin);
-}
-
-.terra-Button-text:nth-child(2) {
-  @include terra-margin-start($terra-button-child-margin);
 }
 
 // Button modifiers
