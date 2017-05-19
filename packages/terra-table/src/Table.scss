@@ -70,7 +70,7 @@
 }
 
 
-// Reccommend changing these to .terra-Table-column-min-width--{size}
+// Reccommend changing these to .terra-Table-cell-min-width--{size}
 .terra-Table-min-width--tiny { min-width: $terra-table-cell-min-width-tiny; }
 
 .terra-Table-min-width--small { min-width: $terra-table-cell-min-width-small; }
@@ -80,7 +80,7 @@
 .terra-Table-min-width--large { min-width: $terra-table-cell-min-width-large; }
 
 .terra-Table-min-width--huge { min-width: $terra-table-cell-min-width-huge; }
-// end: Reccommend changing these to .terra-Table-column-min-width--{size}
+// end: Reccommend changing these to .terra-Table-cell-min-width--{size}
 
 
 .terra-Table--padded {
@@ -113,7 +113,6 @@
     }
   }
 }
-
 
 .terra-Table--isSelected {
   background-color: $terra-table-row-selected-background-color;
