@@ -41,7 +41,7 @@ var propTypes = {
    */
   help: _propTypes2.default.node,
   /**
-   * Determines whether the field in an inline field
+   * Determines whether the field is an inline field
    */
   isInline: _propTypes2.default.bool,
   /**

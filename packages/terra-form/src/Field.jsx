@@ -20,7 +20,7 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
-   * Determines whether the field in an inline field
+   * Determines whether the field is an inline field
    */
   isInline: PropTypes.bool,
   /**

@@ -45,7 +45,7 @@ var propTypes = {
    */
   htmlFor: _propTypes2.default.string,
   /**
-   * Determines whether the field in an inline field
+   * Determines whether the fieldset is an inline fieldset
    */
   isInline: _propTypes2.default.bool,
   /**

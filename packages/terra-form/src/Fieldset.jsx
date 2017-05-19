@@ -24,7 +24,7 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Determines whether the field in an inline field
+   * Determines whether the fieldset is an inline fieldset
    */
   isInline: PropTypes.bool,
   /**
