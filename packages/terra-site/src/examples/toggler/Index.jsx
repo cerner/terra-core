@@ -10,9 +10,6 @@ import TogglerSrc from '!raw-loader!terra-toggler/src/Toggler';
 
 // Example Files
 import TogglerDefault from './TogglerDefault';
-import TogglerEvent from './TogglerEvent';
-import TogglerNoAnimation from './TogglerNoAnimation';
-import TogglerRenderOpen from './TogglerRenderOpen';
 
 const TogglerExamples = () => (
   <div>
@@ -21,12 +18,6 @@ const TogglerExamples = () => (
     <PropsTable id="props-table" src={TogglerSrc} />
     <h2 id="default">Toggler Default</h2>
     <TogglerDefault />
-    <h2 id="no-animation">Toggler No Animation</h2>
-    <TogglerNoAnimation />
-    <h2 id="event">Toggler Event</h2>
-    <TogglerEvent />
-    <h2 id="render-open">Toggler Render Open</h2>
-    <TogglerRenderOpen />
   </div>
 );
 

@@ -6,7 +6,7 @@ exports[`test should mount a default toggler 1`] = `
     </p>
   }
   isAnimated={true}
-  isOpened={false}
+  isOpen={false}
   onClose={null}
   onOpen={null}>
   <article
@@ -60,7 +60,7 @@ exports[`test should mount a opened toggler 1`] = `
     </p>
   }
   isAnimated={true}
-  isOpened={true}
+  isOpen={true}
   onClose={null}
   onOpen={null}>
   <article
@@ -114,7 +114,7 @@ exports[`test should mount a toggler with no animation 1`] = `
     </p>
   }
   isAnimated={false}
-  isOpened={false}
+  isOpen={false}
   onClose={null}
   onOpen={null}>
   <article

@@ -36,16 +36,16 @@ it('should mount a toggler with no animation', () => {
 });
 
 it('should shallow a opened toggler', () => {
-  const toggler = shallow(<Toggler isOpened header={toggleHeader} >{content}</Toggler>);
+  const toggler = shallow(<Toggler isOpen header={toggleHeader} >{content}</Toggler>);
   expect(toggler).toMatchSnapshot();
 });
 
 it('should render a opened toggler', () => {
-  const toggler = render(<Toggler isOpened header={toggleHeader} >{content}</Toggler>);
+  const toggler = render(<Toggler isOpen header={toggleHeader} >{content}</Toggler>);
   expect(toggler).toMatchSnapshot();
 });
 
 it('should mount a opened toggler', () => {
-  const toggler = mount(<Toggler isOpened header={toggleHeader} >{content}</Toggler>);
+  const toggler = mount(<Toggler isOpen header={toggleHeader} >{content}</Toggler>);
   expect(toggler).toMatchSnapshot();
 });

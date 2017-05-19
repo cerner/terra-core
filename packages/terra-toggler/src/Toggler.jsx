@@ -9,7 +9,7 @@ const propTypes = {
   /**
    * Content in the body of the panel that will be expanded or collapsed
    **/
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * Callback function when the toggler is opened.
    **/
@@ -29,7 +29,7 @@ const propTypes = {
   /**
    * Expands or collapses content
    **/
-  isOpened: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -38,44 +38,44 @@ const defaultProps = {
   onClose: null,
   header: null,
   isAnimated: true,
-  isOpened: false,
+  isOpen: false,
 };
 
 class Toggler extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpened: props.isOpened,
+      isOpen: props.isOpen,
     };
 
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle() {
-    if (this.props.onClose !== null && this.state.isOpened) {
+    if (this.props.onClose !== null && this.state.isOpen) {
       this.props.onClose();
-    } else if (this.props.onOpen !== null && !this.state.isOpened) {
+    } else if (this.props.onOpen !== null && !this.state.isOpen) {
       this.props.onOpen();
     }
-    this.setState({ isOpened: !this.state.isOpened });
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
     // Disable this rule because otherwise onOpen and onClose get added to customProps and get applied to the article
     // It is used in above functions, just not part of this render
     // eslint-disable-next-line no-unused-vars
-    const { header, isOpened, isAnimated, children, onOpen, onClose, ...customProps } = this.props;
+    const { header, isOpen, isAnimated, children, onOpen, onClose, ...customProps } = this.props;
 
     const togglerClass = classNames([
       'terra-Toggler',
-      { 'is-collapsed': !this.state.isOpened },
-      { 'is-expanded': this.state.isOpened },
+      { 'is-collapsed': !this.state.isOpen },
+      { 'is-expanded': this.state.isOpen },
       { 'is-animated': isAnimated },
       customProps.className,
     ]);
 
-    const ariaHidden = this.state.isOpened ? 'false' : 'true';
-    const ariaExpanded = this.state.isOpened ? 'true' : 'false';
+    const ariaHidden = this.state.isOpen ? 'false' : 'true';
+    const ariaExpanded = this.state.isOpen ? 'true' : 'false';
 
     return (
       // TODO: Links in header shouldn't trigger collapse

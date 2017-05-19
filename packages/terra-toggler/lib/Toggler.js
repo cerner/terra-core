@@ -42,7 +42,7 @@ var propTypes = {
   /**
    * Content in the body of the panel that will be expanded or collapsed
    **/
-  children: _propTypes2.default.node,
+  children: _propTypes2.default.node.isRequired,
   /**
    * Callback function when the toggler is opened.
    **/
@@ -62,7 +62,7 @@ var propTypes = {
   /**
    * Expands or collapses content
    **/
-  isOpened: _propTypes2.default.bool
+  isOpen: _propTypes2.default.bool
 };
 
 var defaultProps = {
@@ -71,7 +71,7 @@ var defaultProps = {
   onClose: null,
   header: null,
   isAnimated: true,
-  isOpened: false
+  isOpen: false
 };
 
 var Toggler = function (_React$Component) {
@@ -83,7 +83,7 @@ var Toggler = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Toggler.__proto__ || Object.getPrototypeOf(Toggler)).call(this, props));
 
     _this.state = {
-      isOpened: props.isOpened
+      isOpen: props.isOpen
     };
 
     _this.handleToggle = _this.handleToggle.bind(_this);
@@ -93,12 +93,12 @@ var Toggler = function (_React$Component) {
   _createClass(Toggler, [{
     key: 'handleToggle',
     value: function handleToggle() {
-      if (this.props.onClose !== null && this.state.isOpened) {
+      if (this.props.onClose !== null && this.state.isOpen) {
         this.props.onClose();
-      } else if (this.props.onOpen !== null && !this.state.isOpened) {
+      } else if (this.props.onOpen !== null && !this.state.isOpen) {
         this.props.onOpen();
       }
-      this.setState({ isOpened: !this.state.isOpened });
+      this.setState({ isOpen: !this.state.isOpen });
     }
   }, {
     key: 'render',
@@ -108,17 +108,17 @@ var Toggler = function (_React$Component) {
       // eslint-disable-next-line no-unused-vars
       var _props = this.props,
           header = _props.header,
-          isOpened = _props.isOpened,
+          isOpen = _props.isOpen,
           isAnimated = _props.isAnimated,
           children = _props.children,
           onOpen = _props.onOpen,
           onClose = _props.onClose,
-          customProps = _objectWithoutProperties(_props, ['header', 'isOpened', 'isAnimated', 'children', 'onOpen', 'onClose']);
+          customProps = _objectWithoutProperties(_props, ['header', 'isOpen', 'isAnimated', 'children', 'onOpen', 'onClose']);
 
-      var togglerClass = (0, _classnames2.default)(['terra-Toggler', { 'is-collapsed': !this.state.isOpened }, { 'is-expanded': this.state.isOpened }, { 'is-animated': isAnimated }, customProps.className]);
+      var togglerClass = (0, _classnames2.default)(['terra-Toggler', { 'is-collapsed': !this.state.isOpen }, { 'is-expanded': this.state.isOpen }, { 'is-animated': isAnimated }, customProps.className]);
 
-      var ariaHidden = this.state.isOpened ? 'false' : 'true';
-      var ariaExpanded = this.state.isOpened ? 'true' : 'false';
+      var ariaHidden = this.state.isOpen ? 'false' : 'true';
+      var ariaExpanded = this.state.isOpen ? 'true' : 'false';
 
       return (
         // TODO: Links in header shouldn't trigger collapse
