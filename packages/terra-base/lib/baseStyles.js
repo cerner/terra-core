@@ -1,6 +1,6 @@
 'use strict';
 
-require('./Base.scss');
+require('./base.scss');
 
 // Checks to run when not in production
 if (process.env.NODE_ENV !== 'production') {

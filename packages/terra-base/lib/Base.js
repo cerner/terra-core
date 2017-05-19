@@ -38,16 +38,18 @@ var propTypes = {
   /**
    * The locale name.
    */
-  locale: _propTypes2.default.string.isRequired,
+  locale: _propTypes2.default.string,
   /**
    * Customized translations provided by consuming application
    * only for current locale.
    */
-  customMessages: _propTypes2.default.object
+  customMessages: _propTypes2.default.object,
+  loadingPlaceHolder: _propTypes2.default.node
 };
 
 var defaultProps = {
-  customMessages: {}
+  customMessages: {},
+  loadingPlaceHolder: null
 };
 
 var Base = function (_React$Component) {
@@ -69,26 +71,38 @@ var Base = function (_React$Component) {
   _createClass(Base, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      (0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
+      if (this.props.locale !== undefined) {
+        (0, _terraI18n.i18nLoader)(this.props.locale, this.setState, this);
+      }
     }
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
       if (this.props === nextProps) return;
-      (0, _terraI18n.i18nLoader)(nextProps.locale, this.setState, this);
+      if (nextProps.locale !== undefined) {
+        (0, _terraI18n.i18nLoader)(nextProps.locale, this.setState, this);
+      }
     }
   }, {
     key: 'render',
     value: function render() {
-      if (!this.state.areTranslationsLoaded) return null;
-
       var _props = this.props,
           children = _props.children,
           locale = _props.locale,
           customMessages = _props.customMessages,
-          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages']);
+          loadingPlaceHolder = _props.loadingPlaceHolder,
+          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages', 'loadingPlaceHolder']);
 
       var messages = _extends({}, this.state.messages, customMessages);
+
+      var childComponent = _react2.default.createElement(
+        'div',
+        customProps,
+        children
+      );
+
+      if (locale === undefined) return childComponent;
+      if (!this.state.areTranslationsLoaded) return loadingPlaceHolder;
 
       return _react2.default.createElement(
         _terraI18n.I18nProvider,
@@ -96,11 +110,7 @@ var Base = function (_React$Component) {
           locale: this.state.locale,
           messages: messages
         },
-        _react2.default.createElement(
-          'div',
-          customProps,
-          children
-        )
+        childComponent
       );
     }
   }]);

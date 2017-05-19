@@ -11,16 +11,18 @@ const propTypes = {
   /**
    * The locale name.
    */
-  locale: PropTypes.string.isRequired,
+  locale: PropTypes.string,
   /**
    * Customized translations provided by consuming application
    * only for current locale.
    */
   customMessages: PropTypes.object,
+  loadingPlaceHolder: PropTypes.node,
 };
 
 const defaultProps = {
   customMessages: {},
+  loadingPlaceHolder: null,
 };
 
 class Base extends React.Component {
@@ -34,34 +36,42 @@ class Base extends React.Component {
   }
 
   componentDidMount() {
-    i18nLoader(this.props.locale, this.setState, this);
+    if (this.props.locale !== undefined) {
+      i18nLoader(this.props.locale, this.setState, this);
+    }
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props === nextProps) return;
-    i18nLoader(nextProps.locale, this.setState, this);
+    if (nextProps.locale !== undefined) {
+      i18nLoader(nextProps.locale, this.setState, this);
+    }
   }
 
   render() {
-    if (!this.state.areTranslationsLoaded) return null;
-
     const {
       children,
       locale,
       customMessages,
+      loadingPlaceHolder,
       ...customProps
     } = this.props;
 
     const messages = Object.assign({}, this.state.messages, customMessages);
+
+    const childComponent = (<div {...customProps}>
+      {children}
+    </div>);
+
+    if (locale === undefined) return childComponent;
+    if (!this.state.areTranslationsLoaded) return loadingPlaceHolder;
 
     return (
       <I18nProvider
         locale={this.state.locale}
         messages={messages}
       >
-        <div {...customProps}>
-          {children}
-        </div>
+        {childComponent}
       </I18nProvider>
     );
   }
