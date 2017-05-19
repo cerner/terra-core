@@ -1,7 +1,7 @@
 @import '~terra-mixins';
 @import './variables';
 
-.terra-Table {
+terra-Table {
   background-color: $terra-table-background-color;
   border-collapse: collapse;
   border-spacing: 0;
@@ -93,22 +93,27 @@
 }
 
 .terra-Table--striped {
-  tbody tr:nth-of-type(even) {
-    background-color: $terra-table-row-striped-background-color;
-
-    &.terra-Table-row:hover {
-      background-color: $terra-table-row-striped-hover-background-color !important;
+  tbody tr {
+    &:nth-of-type(even) {
+      background-color: $terra-table-row-striped-background-color;
     }
-  }
 
-  .terra-Table--isSelected {
-    background-color: $terra-table-row-striped-selected-background-color !important;
+    &.terra-Table--isSelected {
+      background-color: $terra-table-row-striped-selected-background-color !important;
+    }
 
-    &.terra-Table-row:hover {
-      background-color: $terra-table-row-striped-selected-hover-background-color !important;
+    &.terra-Table--isSelectable {
+      &:hover {
+        background-color: $terra-table-row-striped-hover-background-color !important;
+
+        &.terra-Table--isSelected {
+          background-color: $terra-table-row-striped-selected-hover-background-color !important;
+        }
+      }
     }
   }
 }
+
 
 .terra-Table--isSelected {
   background-color: $terra-table-row-selected-background-color;
