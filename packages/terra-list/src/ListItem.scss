@@ -24,38 +24,23 @@
     text-decoration: inherit;
     top: 50%;
     transform: translate(0, -50%);
-  }
-
-  .terra-ListItem-chevron {
     color: $terra-list-chevron-color;
   }
-
 }
 
-.terra-ListItem--selected {
-  background-color: $terra-list-item-selected-background-color;
-  border-bottom-color: $terra-list-item-selected-divider-color;
-  box-shadow: $terra-list-item-selected-box-shadow;
+.terra-ListItem--selected { background-color: $terra-list-item-selected-background-color; }
+
+.terra-List-divided .terra-ListItem--selected {
+  &.terra-ListItem{ border-color: $terra-list-item-selected-divider-color; }
+  + .terra-ListItem{ border-top-color: $terra-list-item-selected-divider-color; }
 }
 
 .terra-ListItem-isSelectable {
   cursor: pointer;
 
-  &.terra-ListItem:hover {
-    background-color: $terra-list-item-hover-background-color !important;
-    box-shadow: $terra-list-item-hover-box-shadow;
-  }
+  &.terra-ListItem:hover,
+  &.terra-ListItem:focus { background-color: $terra-list-item-hover-background-color !important; }
 
-  &.terra-ListItem:focus {
-    background-color: $terra-list-item-hover-background-color !important;
-  }
-
-  &.terra-ListItem--selected:hover {
-    background-color: $terra-list-item-selected-hover-background-color !important;
-  }
-
-  &.terra-ListItem--selected:focus {
-    background-color: $terra-list-item-selected-hover-background-color !important;
-  }
-
+  &.terra-ListItem--selected:hover,
+  &.terra-ListItem--selected:focus { background-color: $terra-list-item-selected-hover-background-color !important; }
 }
