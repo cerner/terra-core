@@ -1,5 +1,7 @@
 @import '~terra-mixins';
 
+$terra-popup-frame-margin: 10px;
+
 .terra-PopupFrame {
   max-height: calc(100vh - 20px);
   max-width: calc(100vw - 20px);
@@ -12,17 +14,17 @@
 }
 
 .terra-PopupFrame--arrowTop {
-  margin-top: 5px;
+  margin-top: $terra-popup-frame-margin;
 }
 
 .terra-PopupFrame--arrowBottom {
-  margin-bottom: 5px;
+  margin-bottom: $terra-popup-frame-margin;
 }
 
 .terra-PopupFrame--arrowStart {
-  margin-left: 5px;
+  margin-left: $terra-popup-frame-margin;
 }
 
 .terra-PopupFrame--arrowEnd {
-  margin-right: 5px;
+  margin-right: $terra-popup-frame-margin;
 }

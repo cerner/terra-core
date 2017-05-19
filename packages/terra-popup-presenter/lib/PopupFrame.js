@@ -28,10 +28,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var arrowAlignments = ['Start', 'Center', 'End'];
-
-var arrowPositions = ['Top', 'Bottom', 'Start', 'End'];
-
 var KEYCODES = {
   ESCAPE: 27
 };
@@ -153,15 +149,15 @@ var PopupFrame = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           arrow = _props.arrow,
-          content = _props.content,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closeOnResize = _props.closeOnResize,
+          content = _props.content,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'content', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', { 'terra-PopupFrame-showArrow': arrow }, customProps.className]);
 

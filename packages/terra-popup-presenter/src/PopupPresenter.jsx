@@ -40,11 +40,25 @@ const ARROW_CLASSES = {
   right: 'terra-PopupArrow--alignEnd',
 };
 
+const ARROW_OPPOSITE_CLASSES = {
+  top: 'terra-PopupArrow--alignBottom',
+  bottom: 'terra-PopupArrow--alignTop',
+  left: 'terra-PopupArrow--alignEnd',
+  right: 'terra-PopupArrow--alignStart',
+};
+
 const FRAME_CLASSES = {
   top: 'terra-PopupFrame--arrowTop',
   bottom: 'terra-PopupFrame--arrowBottom',
   left: 'terra-PopupFrame--arrowStart',
   right: 'terra-PopupFrame--arrowEnd',
+};
+
+const FRAME_OPPOSITE_CLASSES = {
+  top: 'terra-PopupFrame--arrowBottom',
+  bottom: 'terra-PopupFrame--arrowTop',
+  left: 'terra-PopupFrame--arrowEnd',
+  right: 'terra-PopupFrame--arrowStart',
 };
 
 const defaultProps = {
@@ -86,18 +100,22 @@ class PopupPresenter extends React.Component {
 
   static arrowPositionFromBounds(targetBounds, popUpBounds, contentAttachment, offset) {
     const parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
-
+    // need to check for overlap potential
     if (['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0) {
-      if (targetBounds.top < popUpBounds.top && popUpBounds.top > offset) {
-        return 'top'
-      } else if (targetBounds.bottom < popUpBounds.bottom && popUpBounds.bottom > offset) {
-        return 'bottom'
+      if (popUpBounds.left + popUpBounds.width - offset >= targetBounds.left && popUpBounds.left + offset <= targetBounds.left + targetBounds.width) {
+        if (targetBounds.top < popUpBounds.top) {
+          return 'top'
+        } else if (targetBounds.bottom < popUpBounds.bottom) {
+          return 'bottom'
+        }
       }
     } else {
-      if (targetBounds.left < popUpBounds.left && popUpBounds.left > offset) {
-        return 'left'
-      } else if (targetBounds.right < popUpBounds.right && popUpBounds.right > offset) {
-        return 'right'
+      if (popUpBounds.top + popUpBounds.height - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
+        if (targetBounds.left < popUpBounds.left) {
+          return 'left'
+        } else if (targetBounds.right < popUpBounds.right) {
+          return 'right'
+        }
       }
     }
   }
@@ -112,20 +130,22 @@ class PopupPresenter extends React.Component {
   setArrowPosition(targetBounds, popUpBounds) {
     const parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
     const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
-    const originalPosition = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
     const position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, this.props.contentAttachment, ARROW_OFFSET);
 
     if (!position) {
-      this._frameNode.classList.remove(FRAME_CLASSES[originalPosition]);
+      this._arrowNode.classList.remove(ARROW_CLASSES['top']);
+      this._arrowNode.classList.remove(ARROW_CLASSES['bottom']);
+      this._arrowNode.classList.remove(ARROW_CLASSES['left']);
+      this._arrowNode.classList.remove(ARROW_CLASSES['right']);
       return;
     }
 
-    if (position !== originalPosition) {
-      this._frameNode.classList.remove(FRAME_CLASSES[originalPosition]);
-      this._frameNode.classList.add(FRAME_CLASSES[position]);
-    }
+    this._arrowNode.classList.remove(ARROW_OPPOSITE_CLASSES[position])
+    this._frameNode.classList.remove(FRAME_OPPOSITE_CLASSES[position])
 
     this._arrowNode.classList.add(ARROW_CLASSES[position]);
+    this._frameNode.classList.add(FRAME_CLASSES[position]);
+
     if (isVerticalPosition) {
       this._arrowNode.style.left = this.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, ARROW_OFFSET); 
     } else {
@@ -134,7 +154,6 @@ class PopupPresenter extends React.Component {
   }
 
   leftOffset(targetBounds, popUpBounds, arrowAlignment, offset) {
-    const insetRange = popUpBounds.width - offset * 2;
     const targetAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, targetBounds.left, targetBounds.width);
     const popupAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, popUpBounds.left, popUpBounds.width);
 
@@ -148,22 +167,16 @@ class PopupPresenter extends React.Component {
     }
 
     let newLeftPosition = leftPosition + leftOffset;
-    if (newLeftPosition > popUpBounds.width) {
-      newLeftPosition = popUpBounds.width;
-    } else if (newLeftPosition < 0) {
-      newLeftPosition = 0;
+    if (newLeftPosition > popUpBounds.width - offset) {
+      newLeftPosition = popUpBounds.width - offset;
+    } else if (newLeftPosition < offset) {
+      newLeftPosition = offset;
     }
 
-    const scaledPosition = (insetRange / popUpBounds.width) * newLeftPosition;
-
-    return (offset + scaledPosition).toString() + 'px';
+    return (offset + newLeftPosition).toString() + 'px';
   }
 
   topOffset(targetBounds, popUpBounds, offset) {
-    const insetRange = popUpBounds.height - offset * 2;
-    const popupStart = popUpBounds.top;
-    const popupEnd = popUpBounds.top + popUpBounds.height;
-
     const targetAttachPosition = targetBounds.top + targetBounds.height / 2;
     const popupAttachPosition = popUpBounds.top + popUpBounds.height / 2;
 
@@ -171,15 +184,13 @@ class PopupPresenter extends React.Component {
     const topPosition = popUpBounds.height / 2;
 
     let newTopPosition = topPosition + topOffset;
-    if (newTopPosition > popUpBounds.height) {
-      newTopPosition = popUpBounds.height;
-    } else if (newTopPosition < 0) {
-      newTopPosition = 0;
+    if (newTopPosition > popUpBounds.height - offset) {
+      newTopPosition = popUpBounds.height - offset;
+    } else if (newTopPosition < offset) {
+      newTopPosition = offset;
     }
 
-    const scaledPosition = (insetRange / popUpBounds.height) * newTopPosition;
-
-    return (offset + scaledPosition).toString() + 'px';
+    return (offset + newTopPosition).toString() + 'px';
   }
 
   handleTetherRepositioned(event, targetBounds, presenterBounds) {
@@ -218,15 +229,22 @@ class PopupPresenter extends React.Component {
     let wrappedContent;
     if (isOpen && content) {
       let arrow;
+      let frameClasses;
       if (showArrow) {
         arrow = <PopupArrow refCallback={this.setArrowNode} />;
+
+        const parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
+        const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
+        const position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
+        frameClasses = FRAME_CLASSES[position];
       }
 
       const frameProps = {
         arrow,
-        content,
+        className: frameClasses,
         closeOnEsc,
         closeOnOutsideClick,
+        content,
         onRequestClose,
         refCallback: this.setFrameNode,
       };
@@ -247,8 +265,8 @@ class PopupPresenter extends React.Component {
       classPrefix: 'terra-Popup',
       constraints,
       content: wrappedContent,
-      disableAfterPosition: true,
-      disablePageScrolling: true,
+      // disableAfterPosition: true,
+      // disablePageScrolling: true,
       isEnabled: true,
       onRepositioned: this.handleTetherRepositioned,
       targetAttachment: PopupPresenter.mirrorAttachment(this.props.contentAttachment),

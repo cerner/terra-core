@@ -2,19 +2,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import './PopupFrame.scss';
 
-const arrowAlignments = [
-  'Start',
-  'Center',
-  'End',
-];
-
-const arrowPositions = [
-  'Top',
-  'Bottom',
-  'Start',
-  'End',
-];
-
 const KEYCODES = {
   ESCAPE: 27,
 };
@@ -119,10 +106,10 @@ class PopupFrame extends React.Component {
   render() {
     const { 
       arrow,
-      content,
       closeOnEsc,
       closeOnOutsideClick,
       closeOnResize,
+      content,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,

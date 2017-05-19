@@ -20,7 +20,7 @@ $terra-popup-border-width: 10px;
   border-width: $terra-popup-border-width;
   display: block;
   top: 0;
-  @include terra-translate3d(-50%, 0, 0);
+  @include terra-translate3d(-100%, 0, 0);
 }
 
 .terra-PopupArrow--alignBottom {
@@ -30,7 +30,7 @@ $terra-popup-border-width: 10px;
   border-width: $terra-popup-border-width;
   display: block;
   top: 100%;
-  @include terra-translate3d(-50%, -100%, 0);
+  @include terra-translate3d(-100%, -100%, 0);
 }
 
 .terra-PopupArrow--alignStart {
@@ -40,7 +40,7 @@ $terra-popup-border-width: 10px;
   border-width: $terra-popup-border-width;
   display: block;
   left: 0;
-  @include terra-translate3d(0, -50%, 0);
+  @include terra-translate3d(0, -100%, 0);
 }
 
 .terra-PopupArrow--alignEnd {
@@ -51,5 +51,5 @@ $terra-popup-border-width: 10px;
   border-width: $terra-popup-border-width;
   display: block;
   left: 100%;
-  @include terra-translate3d(-100%, -50%, 0);
+  @include terra-translate3d(-100%, -100%, 0);
 }
