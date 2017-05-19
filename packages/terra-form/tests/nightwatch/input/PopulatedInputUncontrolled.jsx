@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Input from '../../../../lib/components/Input';
+import Input from '../../../lib/Input';
 
 const input = () => (
   <Input

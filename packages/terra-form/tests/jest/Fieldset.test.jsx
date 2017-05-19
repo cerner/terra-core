@@ -1,20 +1,19 @@
 /* eslint-disable react/jsx-boolean-value */
 
 import React from 'react';
-import Field from '../../../src/components/Field';
+import Fieldset from '../../src/Fieldset';
 
 it('should render a default component', () => {
-  const field = (<Field />);
+  const field = (<Fieldset />);
   const wrapper = shallow(field);
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a Field that has the error, label, and help props set', () => {
+it('should render a Fieldset that has the error, label, and help props set', () => {
   const input = (
-    <Field
-      required={false}
-      name="foo"
-      value="bar"
+    <Fieldset
+      help="foo"
+      legend="bar"
     />);
 
   const wrapper = shallow(input);
@@ -23,13 +22,12 @@ it('should render a Field that has the error, label, and help props set', () => 
 
 it('should render a Field that has children in it', () => {
   const input = (
-    <Field
-      required={false}
-      name="foo"
-      value="bar"
+    <Fieldset
+      help="foo"
+      legend="bar"
     >
-      <input type="text" value="Test" />
-    </Field>
+      <input type="radio" value="Test" />
+    </Fieldset>
   );
 
   const wrapper = shallow(input);

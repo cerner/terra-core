@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Field from '../../../../lib/components/Field';
+import Field from '../../../lib/Field';
 
 const field = () => (<Field />);
 

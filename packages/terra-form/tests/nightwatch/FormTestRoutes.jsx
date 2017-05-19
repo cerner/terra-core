@@ -4,13 +4,13 @@ import React from 'react';
 import { Route } from 'react-router';
 import FormTests from './FormTests';
 
-import DefaultField from './components/field/DefaultField';
-import PopulatedField from './components/field/PopulatedField';
-import DefaultFieldset from './components/fieldset/DefaultFieldset';
-import PopulatedFieldset from './components/fieldset/PopulatedFieldset';
-import DefaultInput from './components/input/DefaultInput';
-import PopulatedInputUncontrolled from './components/input/PopulatedInputUncontrolled';
-import PopulatedInputControlled from './components/input/PopulatedInputControlled';
+import DefaultField from './field/DefaultField';
+import PopulatedField from './field/PopulatedField';
+import DefaultFieldset from './fieldset/DefaultFieldset';
+import PopulatedFieldset from './fieldset/PopulatedFieldset';
+import DefaultInput from './input/DefaultInput';
+import PopulatedInputUncontrolled from './input/PopulatedInputUncontrolled';
+import PopulatedInputControlled from './input/PopulatedInputControlled';
 
 const routes = (
   <div>

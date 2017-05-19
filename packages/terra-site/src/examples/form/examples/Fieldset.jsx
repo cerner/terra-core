@@ -1,7 +1,7 @@
 import React from 'react';
-import Field from 'terra-form/lib/components/Field';
-import Fieldset from 'terra-form/lib/components/Fieldset';
-import Input from 'terra-form/lib/components/Input';
+import Field from 'terra-form/lib/Field';
+import Fieldset from 'terra-form/lib/Fieldset';
+import Input from 'terra-form/lib/Input';
 
 const FieldsetExamples = () => (
   <form>

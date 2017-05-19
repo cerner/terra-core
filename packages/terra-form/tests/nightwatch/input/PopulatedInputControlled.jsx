@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Input from '../../../../lib/components/Input';
+import Input from '../../../lib/Input';
 
 class ControlledInput extends React.Component {
   constructor(props) {
@@ -22,7 +22,6 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <form>
-        <p>Controlled</p>
         <Input
           type="text"
           name="foo"

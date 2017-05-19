@@ -12,11 +12,11 @@ Components for building forms
 
 Terra has several different form components for building forms.
 
-[Field](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/components/Field.md)
+[Field](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Field.md)
 
-[Fieldset](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/components/Fieldset.md)
+[Fieldset](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Fieldset.md)
 
-[Input](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/components/Input.md)
+[Input](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Input.md)
 
 To use these components, create a React component that contains a form element, and then insert the Terra form components into that form.
 

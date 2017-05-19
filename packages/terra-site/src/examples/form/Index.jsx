@@ -5,16 +5,16 @@ import Button from 'terra-button';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form/docs/README.md';
-import FieldDocs from 'terra-form/docs/components/Field.md';
-import FieldsetDocs from 'terra-form/docs/components/Fieldset.md';
-import InputDocs from 'terra-form/docs/components/Input.md';
+import FieldDocs from 'terra-form/docs/Field.md';
+import FieldsetDocs from 'terra-form/docs/Fieldset.md';
+import InputDocs from 'terra-form/docs/Input.md';
 
 import { version } from 'terra-form/package.json';
 
 // Component Source
-import FieldSrc from '!raw-loader!terra-form/src/components/Field';
-import FieldsetSrc from '!raw-loader!terra-form/src/components/Fieldset';
-import InputSrc from '!raw-loader!terra-form/src/components/Input';
+import FieldSrc from '!raw-loader!terra-form/src/Field';
+import FieldsetSrc from '!raw-loader!terra-form/src/Fieldset';
+import InputSrc from '!raw-loader!terra-form/src/Input';
 
 // Example Files
 import FieldExamples from './examples/Field';

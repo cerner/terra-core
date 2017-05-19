@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Fieldset from '../../../../lib/components/Fieldset';
+import Fieldset from '../../../lib/Fieldset';
 
 const fieldset = () => (
   <Fieldset />
