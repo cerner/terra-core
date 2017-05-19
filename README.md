@@ -32,6 +32,7 @@
 | terra-base       | [![NPM version](http://img.shields.io/npm/v/terra-base.svg)](https://www.npmjs.org/package/terra-base) | :large_orange_diamond: |
 | terra-button       | [![NPM version](http://img.shields.io/npm/v/terra-button.svg)](https://www.npmjs.org/package/terra-button) | :large_orange_diamond: |
 | terra-button-group       | [![NPM version](http://img.shields.io/npm/v/terra-button-group.svg)](https://www.npmjs.org/package/terra-button-group) | :large_orange_diamond: |
+| terra-content-container       | [![NPM version](http://img.shields.io/npm/v/terra-content-container.svg)](https://www.npmjs.org/package/terra-content-container) | :large_orange_diamond: |
 | terra-date-picker       | [![NPM version](http://img.shields.io/npm/v/terra-date-picker.svg)](https://www.npmjs.org/package/terra-date-picker) | :large_orange_diamond: |
 | terra-demographics-banner | [![NPM version](http://img.shields.io/npm/v/terra-demographics-banner.svg)](https://www.npmjs.org/package/terra-demographics-banner) | :large_orange_diamond: |
 | terra-grid         | [![NPM version](http://img.shields.io/npm/v/terra-grid.svg)](https://www.npmjs.org/package/terra-grid) | :white_check_mark: |
