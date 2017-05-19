@@ -51,3 +51,10 @@ it('should have indicator section of component with correct class, style and typ
   expect(wrapper.node.props.className).toContain('terra-Status');
   expect(wrapper.node.props.className).toContain('testClass');
 });
+
+// No Color Provided
+it('should render status with no style', () => {
+  const statusNoColor = <Status>{simpleText}</Status>;
+  const wrapper = render(statusNoColor);
+  expect(wrapper).toMatchSnapshot();
+});
