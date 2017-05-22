@@ -24,7 +24,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#007cc3', // Default color of the ProgressBar fill
   heightSize: 'small',
   max: 100,
   value: 0,
