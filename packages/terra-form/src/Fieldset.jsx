@@ -20,10 +20,6 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
-   * The value for the htmlFor property on the label
-   */
-  htmlFor: PropTypes.string,
-  /**
    * Determines whether the fieldset is an inline fieldset
    */
   isInline: PropTypes.bool,
@@ -41,13 +37,12 @@ const defaultProps = {
   children: null,
   error: null,
   help: null,
-  htmlFor: null,
   isInline: false,
   legend: null,
   required: false,
 };
 
-const Fieldset = ({ children, error, help, htmlFor, isInline, legend, required, ...customProps }) => {
+const Fieldset = ({ children, error, help, isInline, legend, required, ...customProps }) => {
   const fieldsetClasses = classNames(
     'terra-Form-fieldset',
     { 'terra-Form-fieldset--inline': isInline },

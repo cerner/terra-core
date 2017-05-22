@@ -41,10 +41,6 @@ var propTypes = {
    */
   help: _propTypes2.default.node,
   /**
-   * The value for the htmlFor property on the label
-   */
-  htmlFor: _propTypes2.default.string,
-  /**
    * Determines whether the fieldset is an inline fieldset
    */
   isInline: _propTypes2.default.bool,
@@ -62,7 +58,6 @@ var defaultProps = {
   children: null,
   error: null,
   help: null,
-  htmlFor: null,
   isInline: false,
   legend: null,
   required: false
@@ -72,11 +67,10 @@ var Fieldset = function Fieldset(_ref) {
   var children = _ref.children,
       error = _ref.error,
       help = _ref.help,
-      htmlFor = _ref.htmlFor,
       isInline = _ref.isInline,
       legend = _ref.legend,
       required = _ref.required,
-      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'htmlFor', 'isInline', 'legend', 'required']);
+      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'isInline', 'legend', 'required']);
 
   var fieldsetClasses = (0, _classnames2.default)('terra-Form-fieldset', { 'terra-Form-fieldset--inline': isInline }, { 'terra-Form-fieldset--required': required }, customProps.className);
 
