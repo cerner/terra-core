@@ -16,6 +16,12 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+require('terra-base/lib/baseStyles');
+
 var _terraButton = require('terra-button');
 
 var _terraButton2 = _interopRequireDefault(_terraButton);
@@ -23,10 +29,6 @@ var _terraButton2 = _interopRequireDefault(_terraButton);
 var _IconSearch = require('terra-icon/lib/icon/IconSearch');
 
 var _IconSearch2 = _interopRequireDefault(_IconSearch);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
 
 require('./SearchField.scss');
 

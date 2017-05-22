@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
-import classNames from 'classnames';
 import './SearchField.scss';
 
 const propTypes = {
