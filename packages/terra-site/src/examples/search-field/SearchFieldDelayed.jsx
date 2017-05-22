@@ -6,14 +6,9 @@ class SearchFieldDelayed extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleSearch = this.handleSearch.bind(this);
     this.state = {
       searchText: '',
     };
-  }
-
-  handleSearch(text) {
-    this.setState({ searchText: text });
   }
 
   render() {
@@ -22,7 +17,7 @@ class SearchFieldDelayed extends React.Component {
         <div>
           Search Text: {this.state.searchText}
         </div>
-        <SearchField searchDelay={2000} onSearch={this.handleSearch} />
+        <SearchField searchDelay={2000} onSearch={(searchText) => { this.setState({ searchText }); }} />
       </div>
     );
   }

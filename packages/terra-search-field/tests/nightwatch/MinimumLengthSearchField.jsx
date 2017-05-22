@@ -1,10 +1,11 @@
 import React from 'react';
-import SearchField from 'terra-search-field';
+import SearchField from '../../src/SearchField';
 
-class SearchFieldMinimumLength extends React.Component {
+class MinimumLengthSearchField extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       searchText: '',
     };
@@ -13,7 +14,7 @@ class SearchFieldMinimumLength extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div id="search-callback-text">
           Search Text: {this.state.searchText}
         </div>
         <SearchField minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
@@ -23,4 +24,4 @@ class SearchFieldMinimumLength extends React.Component {
 
 }
 
-export default SearchFieldMinimumLength;
+export default MinimumLengthSearchField;

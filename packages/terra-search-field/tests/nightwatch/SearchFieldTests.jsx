@@ -8,6 +8,9 @@ const SearchFieldTests = () => (
     <ul>
       <li><Link to="/tests/search-field-tests/default">Default SearchField</Link></li>
       <li><Link to="/tests/search-field-tests/placeholder">Placeholder SearchField</Link></li>
+      <li><Link to="/tests/search-field-tests/callback">Callback SearchField</Link></li>
+      <li><Link to="/tests/search-field-tests/delayed">Delayed SearchField</Link></li>
+      <li><Link to="/tests/search-field-tests/minimum-length">Minimum Length SearchField</Link></li>
     </ul>
   </div>
 );

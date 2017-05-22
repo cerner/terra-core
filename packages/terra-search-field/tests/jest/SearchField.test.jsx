@@ -22,7 +22,7 @@ describe('Snapshots', () => {
 });
 
 describe('Manual Search', () => {
-  it('triggers search on button press', () => {
+  it('triggers search on button click', () => {
     const onSearch = jest.fn();
     const searchField = shallow(<SearchField onSearch={onSearch} />);
     searchField.setState({ searchText: 'Te' });
