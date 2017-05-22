@@ -47,6 +47,10 @@ class SearchField extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.clearSearchTimeout();
+  }
+
   handleTextChange(event) {
     this.setState({ searchText: event.target.value });
 
@@ -77,7 +81,7 @@ class SearchField extends React.Component {
     ]);
 
     return (
-      <div className={searchFieldClassNames}>
+      <div {...customProps} className={searchFieldClassNames}>
         <input className="terra-SearchField-input" type="search" placeholder={placeholder} value={this.state.searchText} onChange={this.handleTextChange} />
         <Button className="terra-SearchField-button" onClick={this.handleSearch}>
           <IconSearch />
