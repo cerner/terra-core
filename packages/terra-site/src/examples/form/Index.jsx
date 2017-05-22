@@ -17,6 +17,8 @@ import FieldsetSrc from '!raw-loader!terra-form/src/Fieldset';
 import InputSrc from '!raw-loader!terra-form/src/Input';
 
 // Example Files
+import ControlledInputDocs from './docs/ControlledInput.md';
+import ControlledInput from './examples/ControlledInput';
 import FieldExamples from './examples/Field';
 import FieldsetExamples from './examples/Fieldset';
 import InputExamples from './examples/Input';
@@ -49,6 +51,8 @@ const FormsExamples = () => (
     <Markdown id="input-docs" src={InputDocs} />
     <PropsTable id="input-props" src={InputSrc} />
     <InputExamples />
+    <Markdown id="controlled-example" src={ControlledInputDocs} />
+    <ControlledInput />
   </div>
 );
 
