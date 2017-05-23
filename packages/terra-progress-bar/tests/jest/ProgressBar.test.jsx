@@ -13,7 +13,7 @@ it('should render a ProgressBar component with tiny heightSize and 15% fill', ()
 });
 
 it('should render a ProgressBar component with large heightSize and 60% fill', () => {
-  const wrapper = shallow(<ProgressBar heightSize="large" value={60} />);
+  const wrapper = shallow(<ProgressBar heightSize="large" value={60} color="#8ccc62" />);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -25,7 +25,7 @@ it('should render a ProgressBar component with default heightSize 50% fill and c
 // Prop Tests
 describe('Default progress bar', () => {
   it('should have classes terra-ProgressBar, terra-ProgressBar--small and zero fill value', () => {
-    const wrapper = shallow(<ProgressBar />);
+    const wrapper = shallow(<ProgressBar color="#8ccc62" />);
     expect(wrapper.prop('className')).toContain('terra-ProgressBar terra-ProgressBar--small');
     expect(wrapper.prop('value')).toEqual(0);
   });
@@ -33,7 +33,7 @@ describe('Default progress bar', () => {
 
 describe('Progress bar with just heightSize as huge', () => {
   it('should have classes terra-ProgressBar, terra-ProgressBar--huge and 60% fill value', () => {
-    const wrapper = shallow(<ProgressBar heightSize="huge" value={60} />);
+    const wrapper = shallow(<ProgressBar heightSize="huge" value={60} color="#8ccc62" />);
     expect(wrapper.prop('className')).toContain('terra-ProgressBar terra-ProgressBar--huge');
     expect(wrapper.prop('value')).toEqual(60);
   });
