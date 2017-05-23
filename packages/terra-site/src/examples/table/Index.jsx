@@ -38,6 +38,8 @@ const TableExamples = () => (
     <PropsTable id="props-tableHeader" src={TableHeaderSrc} />
     <h2>Table Header Cell</h2>
     <PropsTable id="props-tableHeaderCell" src={TableHeaderCellSrc} />
+    <h2>Table Subheader</h2>
+    <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} />
     <h2>Table Rows</h2>
     <PropsTable id="props-tableRows" src={TableRowsSrc} />
     <h2>Single Selectable Table Row</h2>
@@ -46,8 +48,6 @@ const TableExamples = () => (
     <PropsTable id="props-tableRow" src={TableRowSrc} />
     <h2>Table Cell</h2>
     <PropsTable id="props-tableCell" src={TableCellSrc} />
-    <h2>Table Subheader</h2>
-    <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} />
     <h2>Table without zebra stripes</h2>
     <NoStripedTable />
     <br />
