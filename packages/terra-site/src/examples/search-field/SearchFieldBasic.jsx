@@ -2,7 +2,9 @@ import React from 'react';
 import SearchField from 'terra-search-field';
 
 const view = () => (
-  <SearchField />
+  <div>
+    <SearchField />
+  </div>
 );
 
 export default view;

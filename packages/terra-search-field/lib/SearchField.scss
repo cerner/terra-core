@@ -1,8 +1,7 @@
 @import '~terra-mixins';
 
 .terra-SearchField {
-  display: flex;
-  width: 100%;
+  display: inline-flex;
 
   .terra-SearchField-input {
     @include terra-border-radius-start(0.286em);
@@ -10,6 +9,7 @@
 
     appearance: textfield;
     border: 0.071em solid $terra-grey-15;
+    border-right: 0;
     flex: 1 1 auto;
     font-family: inherit;
     font-size: 1em;
@@ -17,7 +17,6 @@
     margin: 0;
     min-width: 0;
     padding: 0.286rem;
-    width: 100%;
 
     &:focus {
       border-color: $terra-blue-60;

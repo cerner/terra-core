@@ -77,7 +77,8 @@ class SearchField extends React.Component {
 
   render() {
     const { placeholder, ...customProps } = this.props;
-    const searchFieldClassNames = classNames(['terra-SearchField',
+    const searchFieldClassNames = classNames([
+      'terra-SearchField',
       customProps.className,
     ]);
 
