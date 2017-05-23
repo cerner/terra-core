@@ -49,8 +49,8 @@ var propTypes = {
   content: _react.PropTypes.element,
   contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: _react.PropTypes.string,
-  disableAfterPosition: _react.PropTypes.bool,
-  disablePageScrolling: _react.PropTypes.bool,
+  disableOnPosition: _react.PropTypes.bool,
+  disablePageScroll: _react.PropTypes.bool,
   isEnabled: _react.PropTypes.bool,
   optimizations: _react.PropTypes.object,
   renderElementTag: _react.PropTypes.string,
@@ -64,8 +64,8 @@ var propTypes = {
 };
 
 var defaultProps = {
-  disableAfterPosition: false,
-  disablePageScrolling: false,
+  disableOnPosition: false,
+  disablePageScroll: false,
   renderElementTag: 'div',
   renderElementTo: null
 };
@@ -194,7 +194,7 @@ var TetherComponent = function (_React$Component) {
         });
       };
 
-      if (this.props.disablePageScrolling) {
+      if (this.props.disablePageScroll) {
         var overlay = _react2.default.createElement(_TetherOverlay2.default, { displayAboveModal: this._targetInsideModal });
 
         if (!this._overlayParentNode) {
@@ -248,8 +248,8 @@ var TetherComponent = function (_React$Component) {
       this._tether.position();
     }
   }, {
-    key: 'attachmentOverlap',
-    value: function attachmentOverlap() {
+    key: 'getNodeBounds',
+    value: function getNodeBounds() {
       var targetBounds = _tether2.default.Utils.getBounds(this._targetNode);
       var presenterBounds = _tether2.default.Utils.getBounds(this._elementParentNode);
       return { targetBounds: targetBounds, presenterBounds: presenterBounds };
@@ -258,19 +258,19 @@ var TetherComponent = function (_React$Component) {
     key: 'handleOnUpdate',
     value: function handleOnUpdate(event) {
       if (this.props.onUpdate) {
-        var bounds = this.attachmentOverlap();
+        var bounds = this.getNodeBounds();
         this.props.onUpdate(event, bounds.targetBounds, bounds.presenterBounds);
       }
     }
   }, {
     key: 'handleOnRepositioned',
     value: function handleOnRepositioned(event) {
-      if (this.props.disableAfterPosition) {
+      if (this.props.disableOnPosition) {
         this.disable();
       }
 
       if (this.props.onRepositioned) {
-        var bounds = this.attachmentOverlap();
+        var bounds = this.getNodeBounds();
         this.props.onRepositioned(event, bounds.targetBounds, bounds.presenterBounds);
       }
     }
@@ -289,8 +289,8 @@ var TetherComponent = function (_React$Component) {
           content = _props3.content,
           contentAttachment = _props3.contentAttachment,
           contentOffset = _props3.contentOffset,
-          disableAfterPosition = _props3.disableAfterPosition,
-          disablePageScrolling = _props3.disablePageScrolling,
+          disableOnPosition = _props3.disableOnPosition,
+          disablePageScroll = _props3.disablePageScroll,
           isEnabled = _props3.isEnabled,
           optimizations = _props3.optimizations,
           renderElementTag = _props3.renderElementTag,
@@ -301,7 +301,7 @@ var TetherComponent = function (_React$Component) {
           targetOffset = _props3.targetOffset,
           onUpdate = _props3.onUpdate,
           onRepositioned = _props3.onRepositioned,
-          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableAfterPosition', 'disablePageScrolling', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'disablePageScroll', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
       var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent-element', customProps.className]);
 

@@ -24,8 +24,8 @@ const propTypes = {
   content: PropTypes.element,
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
   contentOffset: PropTypes.string,
-  disableAfterPosition: PropTypes.bool,
-  disablePageScrolling: PropTypes.bool,
+  disableOnPosition: PropTypes.bool,
+  disablePageScroll: PropTypes.bool,
   isEnabled: PropTypes.bool,
   optimizations: PropTypes.object,
   renderElementTag: PropTypes.string,
@@ -39,8 +39,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  disableAfterPosition: false,
-  disablePageScrolling: false,
+  disableOnPosition: false,
+  disablePageScroll: false,
   renderElementTag: 'div',
   renderElementTo: null,
 };
@@ -151,7 +151,7 @@ class TetherComponent extends React.Component {
     };
 
   
-    if (this.props.disablePageScrolling) {
+    if (this.props.disablePageScroll) {
       const overlay = <TetherOverlay displayAboveModal={this._targetInsideModal} />;
 
       if (!this._overlayParentNode) {
@@ -208,7 +208,7 @@ class TetherComponent extends React.Component {
     this._tether.position();
   }
 
-  attachmentOverlap()
+  getNodeBounds()
   {
     const targetBounds = Tether.Utils.getBounds(this._targetNode);
     const presenterBounds = Tether.Utils.getBounds(this._elementParentNode);
@@ -217,18 +217,18 @@ class TetherComponent extends React.Component {
 
   handleOnUpdate(event) {
     if (this.props.onUpdate) {
-      const bounds = this.attachmentOverlap();
+      const bounds = this.getNodeBounds();
       this.props.onUpdate(event, bounds.targetBounds, bounds.presenterBounds);
     }
   }
 
   handleOnRepositioned(event) {
-    if (this.props.disableAfterPosition) {
+    if (this.props.disableOnPosition) {
       this.disable();
     }
 
     if (this.props.onRepositioned) {
-      const bounds = this.attachmentOverlap();
+      const bounds = this.getNodeBounds();
       this.props.onRepositioned(event, bounds.targetBounds, bounds.presenterBounds);
     }
   }
@@ -245,8 +245,8 @@ class TetherComponent extends React.Component {
       content,
       contentAttachment,
       contentOffset,
-      disableAfterPosition,
-      disablePageScrolling,
+      disableOnPosition,
+      disablePageScroll,
       isEnabled,
       optimizations,
       renderElementTag,

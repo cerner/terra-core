@@ -28,6 +28,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var FRAME_CLASSES = {
+  top: 'terra-PopupFrame--arrowTop',
+  bottom: 'terra-PopupFrame--arrowBottom',
+  left: 'terra-PopupFrame--arrowLeft',
+  right: 'terra-PopupFrame--arrowRight'
+};
+
+var FRAME_OPPOSITE_CLASSES = {
+  top: 'terra-PopupFrame--arrowBottom',
+  bottom: 'terra-PopupFrame--arrowTop',
+  left: 'terra-PopupFrame--arrowRight',
+  right: 'terra-PopupFrame--arrowLeft'
+};
+
 var KEYCODES = {
   ESCAPE: 27
 };
@@ -161,15 +175,9 @@ var PopupFrame = function (_React$Component) {
 
       var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', { 'terra-PopupFrame-showArrow': arrow }, customProps.className]);
 
-      var constraintStyle = void 0;
-      if (this.props.constraintContainer) {
-        var rect = this.props.constraintContainer.getBoundingClientRect();
-        constraintStyle = { maxHeight: rect.height.toString() + 'px', maxWidth: rect.width.toString() + 'px' };
-      }
-
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: frameClassNames, style: constraintStyle, ref: refCallback }),
+        _extends({}, customProps, { className: frameClassNames, ref: refCallback }),
         arrow,
         _react2.default.createElement(
           'div',
@@ -185,5 +193,7 @@ var PopupFrame = function (_React$Component) {
 
 PopupFrame.propTypes = propTypes;
 PopupFrame.defaultProps = defaultProps;
+PopupFrame.positionClasses = FRAME_CLASSES;
+PopupFrame.oppositePositionClasses = FRAME_OPPOSITE_CLASSES;
 
 exports.default = PopupFrame;

@@ -22,6 +22,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+var ARROW_OFFSET = 10;
+var ARROW_CLASSES = {
+  top: 'terra-PopupArrow--alignTop',
+  bottom: 'terra-PopupArrow--alignBottom',
+  left: 'terra-PopupArrow--alignLeft',
+  right: 'terra-PopupArrow--alignRight'
+};
+
+var ARROW_OPPOSITE_CLASSES = {
+  top: 'terra-PopupArrow--alignBottom',
+  bottom: 'terra-PopupArrow--alignTop',
+  left: 'terra-PopupArrow--alignRight',
+  right: 'terra-PopupArrow--alignLeft'
+};
+
 var propTypes = {
   refCallback: _react.PropTypes.func
 };
@@ -41,5 +56,8 @@ var PopupArrow = function PopupArrow(_ref) {
 
 PopupArrow.propTypes = propTypes;
 PopupArrow.defaultProps = defaultProps;
+PopupArrow.positionClasses = ARROW_CLASSES;
+PopupArrow.oppositePositionClasses = ARROW_OPPOSITE_CLASSES;
+PopupArrow.arrowSize = ARROW_OFFSET;
 
 exports.default = PopupArrow;

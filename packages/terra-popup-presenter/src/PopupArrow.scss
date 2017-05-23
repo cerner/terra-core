@@ -1,7 +1,9 @@
 @import '~terra-mixins';
 
-$terra-popup-border-width: 10px;
+$terra-popup-arrow-size: 10px;
+$terra-popup-arrow-color: #e41d1d;
 
+// These are relative to screen coordinates, so no bi-di concerns
 .terra-PopupArrow {
   color: #000;
   display: none;
@@ -9,47 +11,42 @@ $terra-popup-border-width: 10px;
   left: 50%;
   position: absolute;
   top: 50%;
+  transform: translate3d(-50%, -50, 0);
   width: 0;
-  @include terra-translate3d(-50%, -50%, 0);
 }
 
 .terra-PopupArrow--alignTop {
-  border-bottom: 100px solid #e41d1d;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-width: $terra-popup-border-width;
+  border-bottom: $terra-popup-arrow-size solid $terra-popup-arrow-color;
+  border-left: $terra-popup-arrow-size solid transparent;
+  border-right: $terra-popup-arrow-size solid transparent;
   display: block;
   top: 0;
-  @include terra-translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 
 .terra-PopupArrow--alignBottom {
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 100px solid #e41d1d;
-  border-width: $terra-popup-border-width;
+  border-left: $terra-popup-arrow-size solid transparent;
+  border-right: $terra-popup-arrow-size solid transparent;
+  border-top: $terra-popup-arrow-size solid $terra-popup-arrow-color;
   display: block;
   top: 100%;
-  @include terra-translate3d(-100%, -100%, 0);
+  transform: translate3d(-100%, -100%, 0);
 }
 
-.terra-PopupArrow--alignStart {
-  border-bottom: 50px solid transparent;
-  border-right: 100px solid #e41d1d;
-  border-top: 50px solid transparent;
-  border-width: $terra-popup-border-width;
+.terra-PopupArrow--alignLeft {
+  border-bottom: $terra-popup-arrow-size solid transparent;
+  border-right: $terra-popup-arrow-size solid $terra-popup-arrow-color;
+  border-top: $terra-popup-arrow-size solid transparent;
   display: block;
   left: 0;
-  @include terra-translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
-.terra-PopupArrow--alignEnd {
-  border-bottom: 50px solid transparent;
-  border-color: transparent;
-  border-left: 100px solid #e41d1d;
-  border-top: 50px solid transparent;
-  border-width: $terra-popup-border-width;
+.terra-PopupArrow--alignRight {
+  border-bottom: $terra-popup-arrow-size solid transparent;
+  border-left: $terra-popup-arrow-size solid $terra-popup-arrow-color;
+  border-top: $terra-popup-arrow-size solid transparent;
   display: block;
   left: 100%;
-  @include terra-translate3d(-100%, -100%, 0);
+  transform: translate3d(-100%, -100%, 0);
 }

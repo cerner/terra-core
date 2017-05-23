@@ -21,10 +21,11 @@ $terra-popup-frame-margin: 10px;
   margin-bottom: $terra-popup-frame-margin;
 }
 
-.terra-PopupFrame--arrowStart {
+// These are relative to screen coordinates, so no bi-di concerns
+.terra-PopupFrame--arrowLeft {
   margin-left: $terra-popup-frame-margin;
 }
 
-.terra-PopupFrame--arrowEnd {
+.terra-PopupFrame--arrowRight {
   margin-right: $terra-popup-frame-margin;
 }

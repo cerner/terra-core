@@ -2,6 +2,20 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import './PopupFrame.scss';
 
+const FRAME_CLASSES = {
+  top: 'terra-PopupFrame--arrowTop',
+  bottom: 'terra-PopupFrame--arrowBottom',
+  left: 'terra-PopupFrame--arrowLeft',
+  right: 'terra-PopupFrame--arrowRight',
+};
+
+const FRAME_OPPOSITE_CLASSES = {
+  top: 'terra-PopupFrame--arrowBottom',
+  bottom: 'terra-PopupFrame--arrowTop',
+  left: 'terra-PopupFrame--arrowRight',
+  right: 'terra-PopupFrame--arrowLeft',
+};
+
 const KEYCODES = {
   ESCAPE: 27,
 };
@@ -123,14 +137,8 @@ class PopupFrame extends React.Component {
       customProps.className,
     ]);
 
-    let constraintStyle;
-    if (this.props.constraintContainer) {
-      const rect = this.props.constraintContainer.getBoundingClientRect();
-      constraintStyle = {maxHeight: rect.height.toString() + 'px', maxWidth: rect.width.toString() + 'px'};
-    }
-
     return (
-      <div {...customProps} className={frameClassNames} style={constraintStyle} ref={refCallback}>
+      <div {...customProps} className={frameClassNames} ref={refCallback}>
         {arrow}
         <div className="terra-PopupFrame-content">
           {content}
@@ -142,5 +150,7 @@ class PopupFrame extends React.Component {
 
 PopupFrame.propTypes = propTypes;
 PopupFrame.defaultProps = defaultProps;
+PopupFrame.positionClasses = FRAME_CLASSES;
+PopupFrame.oppositePositionClasses = FRAME_OPPOSITE_CLASSES;
 
 export default PopupFrame;

@@ -74,35 +74,6 @@ var MIRROR_TB = {
   bottom: 'top'
 };
 
-var ARROW_OFFSET = 10;
-var ARROW_CLASSES = {
-  top: 'terra-PopupArrow--alignTop',
-  bottom: 'terra-PopupArrow--alignBottom',
-  left: 'terra-PopupArrow--alignStart',
-  right: 'terra-PopupArrow--alignEnd'
-};
-
-var ARROW_OPPOSITE_CLASSES = {
-  top: 'terra-PopupArrow--alignBottom',
-  bottom: 'terra-PopupArrow--alignTop',
-  left: 'terra-PopupArrow--alignEnd',
-  right: 'terra-PopupArrow--alignStart'
-};
-
-var FRAME_CLASSES = {
-  top: 'terra-PopupFrame--arrowTop',
-  bottom: 'terra-PopupFrame--arrowBottom',
-  left: 'terra-PopupFrame--arrowStart',
-  right: 'terra-PopupFrame--arrowEnd'
-};
-
-var FRAME_OPPOSITE_CLASSES = {
-  top: 'terra-PopupFrame--arrowBottom',
-  bottom: 'terra-PopupFrame--arrowTop',
-  left: 'terra-PopupFrame--arrowEnd',
-  right: 'terra-PopupFrame--arrowStart'
-};
-
 var defaultProps = {
   isOpen: false,
   showArrow: false
@@ -150,10 +121,8 @@ var PopupPresenter = function (_React$Component) {
     }
   }, {
     key: 'arrowPositionFromBounds',
-    value: function arrowPositionFromBounds(targetBounds, popUpBounds, contentAttachment, offset) {
-      var parsedAttachment = PopupPresenter.parseStringPosition(contentAttachment);
-      // need to check for overlap potential
-      if (['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0) {
+    value: function arrowPositionFromBounds(targetBounds, popUpBounds, attachment, offset) {
+      if (['top', 'bottom'].indexOf(attachment.vertical) >= 0) {
         if (popUpBounds.left + popUpBounds.width - offset >= targetBounds.left && popUpBounds.left + offset <= targetBounds.left + targetBounds.width) {
           if (targetBounds.top < popUpBounds.top) {
             return 'top';
@@ -188,27 +157,26 @@ var PopupPresenter = function (_React$Component) {
     key: 'setArrowPosition',
     value: function setArrowPosition(targetBounds, popUpBounds) {
       var parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
-      var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
-      var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, this.props.contentAttachment, ARROW_OFFSET);
+      var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, _PopupArrow2.default.arrowSize);
 
       if (!position) {
-        this._arrowNode.classList.remove(ARROW_CLASSES['top']);
-        this._arrowNode.classList.remove(ARROW_CLASSES['bottom']);
-        this._arrowNode.classList.remove(ARROW_CLASSES['left']);
-        this._arrowNode.classList.remove(ARROW_CLASSES['right']);
+        this._arrowNode.classList.remove(_PopupArrow2.default.positionClasses['top']);
+        this._arrowNode.classList.remove(_PopupArrow2.default.positionClasses['bottom']);
+        this._arrowNode.classList.remove(_PopupArrow2.default.positionClasses['left']);
+        this._arrowNode.classList.remove(_PopupArrow2.default.positionClasses['right']);
         return;
       }
 
-      this._arrowNode.classList.remove(ARROW_OPPOSITE_CLASSES[position]);
-      this._frameNode.classList.remove(FRAME_OPPOSITE_CLASSES[position]);
+      this._arrowNode.classList.remove(_PopupArrow2.default.oppositePositionClasses[position]);
+      this._frameNode.classList.remove(_PopupFrame2.default.oppositePositionClasses[position]);
 
-      this._arrowNode.classList.add(ARROW_CLASSES[position]);
-      this._frameNode.classList.add(FRAME_CLASSES[position]);
+      this._arrowNode.classList.add(_PopupArrow2.default.positionClasses[position]);
+      this._frameNode.classList.add(_PopupFrame2.default.positionClasses[position]);
 
-      if (isVerticalPosition) {
-        this._arrowNode.style.left = this.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, ARROW_OFFSET);
+      if (['top', 'bottom'].indexOf(position) >= 0) {
+        this._arrowNode.style.left = this.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, _PopupArrow2.default.arrowSize);
       } else {
-        this._arrowNode.style.top = this.topOffset(targetBounds, popUpBounds, ARROW_OFFSET);
+        this._arrowNode.style.top = this.topOffset(targetBounds, popUpBounds, _PopupArrow2.default.arrowSize);
       }
     }
   }, {
@@ -300,7 +268,7 @@ var PopupPresenter = function (_React$Component) {
           var parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
           var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
           var position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
-          frameClasses = FRAME_CLASSES[position];
+          frameClasses = _PopupFrame2.default.positionClasses[position];
         }
 
         var frameProps = {
@@ -326,8 +294,8 @@ var PopupPresenter = function (_React$Component) {
         classPrefix: 'terra-Popup',
         constraints: constraints,
         content: wrappedContent,
-        // disableAfterPosition: true,
-        // disablePageScrolling: true,
+        // disableOnPosition: true,
+        // disablePageScroll: true,
         isEnabled: true,
         onRepositioned: this.handleTetherRepositioned,
         targetAttachment: PopupPresenter.mirrorAttachment(this.props.contentAttachment)

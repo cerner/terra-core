@@ -19,14 +19,14 @@ class DummyApp extends React.Component {
   }
 
   render() {
-    const contentSection = <p style={{height: '200px', width: '200px'}}>i'm popup content, hear me roar!</p>;
+    const contentSection = <p style={{height: '200px', width: '400px'}}>i'm popup content, hear me roar!</p>;
 
     return (
       <div className="terra-Modal" style={{position: 'relative', height: '400px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
         <div style={{position: 'relative', height: '1200px', width: '1600px'}}>
           <PopupPresenter 
             content={contentSection}
-            contentAttachment="bottom left"
+            contentAttachment="top left"
             isOpen={this.state.open}
             showArrow
             target={<Button text="popup button launcher" onClick={this.handleButtonClick} />}
