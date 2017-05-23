@@ -10,7 +10,6 @@ const ListItemTests = () => (
       <li><Link to="/tests/list-item-tests/selected">Selected ListItem</Link></li>
       <li><Link to="/tests/list-item-tests/selectable">Selectable ListItem</Link></li>
       <li><Link to="/tests/list-item-tests/chevron">Chevron ListItem</Link></li>
-      <li><Link to="/tests/list-item-tests/content">Content ListItem</Link></li>
     </ul>
   </div>
 );
