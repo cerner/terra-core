@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -43,24 +47,24 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
 var propTypes = {
-  classes: _react.PropTypes.object,
-  classPrefix: _react.PropTypes.string,
-  constraints: _react.PropTypes.array,
-  content: _react.PropTypes.element,
-  contentAttachment: _react.PropTypes.oneOf(attachmentPositions).isRequired,
-  contentOffset: _react.PropTypes.string,
-  disableOnPosition: _react.PropTypes.bool,
-  disablePageScroll: _react.PropTypes.bool,
-  isEnabled: _react.PropTypes.bool,
-  optimizations: _react.PropTypes.object,
-  renderElementTag: _react.PropTypes.string,
-  renderElementTo: _react.PropTypes.any,
-  target: _react.PropTypes.element.isRequired,
-  targetAttachment: _react.PropTypes.oneOf(attachmentPositions),
-  targetModifier: _react.PropTypes.string,
-  targetOffset: _react.PropTypes.string,
-  onUpdate: _react.PropTypes.func,
-  onRepositioned: _react.PropTypes.func
+  classes: _propTypes2.default.object,
+  classPrefix: _propTypes2.default.string,
+  constraints: _propTypes2.default.array,
+  content: _propTypes2.default.element,
+  contentAttachment: _propTypes2.default.oneOf(attachmentPositions).isRequired,
+  contentOffset: _propTypes2.default.string,
+  disableOnPosition: _propTypes2.default.bool,
+  disablePageScroll: _propTypes2.default.bool,
+  isEnabled: _propTypes2.default.bool,
+  optimizations: _propTypes2.default.object,
+  renderElementTag: _propTypes2.default.string,
+  renderElementTo: _propTypes2.default.any,
+  target: _propTypes2.default.element.isRequired,
+  targetAttachment: _propTypes2.default.oneOf(attachmentPositions),
+  targetModifier: _propTypes2.default.string,
+  targetOffset: _propTypes2.default.string,
+  onUpdate: _propTypes2.default.func,
+  onRepositioned: _propTypes2.default.func
 };
 
 var defaultProps = {

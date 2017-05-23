@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -50,31 +54,31 @@ var propTypes = {
   /**
    * The child elements passed to the component.
    */
-  arrow: _react.PropTypes.element,
+  arrow: _propTypes2.default.element,
   /**
    * The child elements passed to the component.
    */
-  content: _react.PropTypes.element,
+  content: _propTypes2.default.element,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
    */
-  closeOnEsc: _react.PropTypes.bool,
+  closeOnEsc: _propTypes2.default.bool,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
    */
-  closeOnOutsideClick: _react.PropTypes.bool,
+  closeOnOutsideClick: _propTypes2.default.bool,
   /**
    * Whether or not the using the escape key should also trigger the onClickOutside event.
    */
-  closeOnResize: _react.PropTypes.bool,
+  closeOnResize: _propTypes2.default.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
-  onRequestClose: _react.PropTypes.func,
+  onRequestClose: _propTypes2.default.func,
   /**
    * The function that should be triggered when a close is indicated.
    */
-  refCallback: _react.PropTypes.func
+  refCallback: _propTypes2.default.func
 };
 
 var defaultProps = {

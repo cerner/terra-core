@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -52,14 +56,14 @@ var propTypes = {
   /**
    * The children list items passed to the component.
    */
-  closeOnEsc: _react.PropTypes.bool,
-  closeOnOutsideClick: _react.PropTypes.bool,
-  content: _react.PropTypes.element,
-  contentAttachment: _react.PropTypes.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
-  isOpen: _react.PropTypes.bool,
-  onRequestClose: _react.PropTypes.func,
-  showArrow: _react.PropTypes.bool,
-  target: _react.PropTypes.element.isRequired
+  closeOnEsc: _propTypes2.default.bool,
+  closeOnOutsideClick: _propTypes2.default.bool,
+  content: _propTypes2.default.element,
+  contentAttachment: _propTypes2.default.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
+  isOpen: _propTypes2.default.bool,
+  onRequestClose: _propTypes2.default.func,
+  showArrow: _propTypes2.default.bool,
+  target: _propTypes2.default.element.isRequired
 };
 
 var MIRROR_LR = {
