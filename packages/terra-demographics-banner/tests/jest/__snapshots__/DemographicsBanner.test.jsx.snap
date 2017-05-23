@@ -273,7 +273,7 @@ exports[`test renders the banner appropriately for a person with gestational and
         className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
-          src="http://lorempixel.com/100/100/animals/7/" />
+          src="" />
       </div>
       <div
         className="terra-DemographicsBanner-content">
@@ -403,7 +403,7 @@ exports[`test renders the banner properly for a deceased person with additional 
         className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
-          src="http://lorempixel.com/100/100/animals/7/" />
+          src="" />
       </div>
       <div
         className="terra-DemographicsBanner-content">
@@ -527,7 +527,7 @@ exports[`test renders the banner that contains additional information 1`] = `
         className="terra-DemographicsBanner-profile-photo">
         <img
           alt="My Cat"
-          src="http://lorempixel.com/100/100/animals/7/" />
+          src="" />
       </div>
       <div
         className="terra-DemographicsBanner-content">

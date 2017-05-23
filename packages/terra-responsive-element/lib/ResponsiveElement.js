@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _resizeObserverPolyfill = require('resize-observer-polyfill');
 
 var _resizeObserverPolyfill2 = _interopRequireDefault(_resizeObserverPolyfill);
@@ -36,31 +40,31 @@ var propTypes = {
   /**
    * An element to be displayed at default breakpoints ( Between 0 and tiny )
   */
-  defaultElement: _react.PropTypes.element,
+  defaultElement: _propTypes2.default.element,
   /**
    * An element to be displayed at tiny breakpoints
    */
-  tiny: _react.PropTypes.element,
+  tiny: _propTypes2.default.element,
   /**
    * An element to be displayed at small breakpoints
    */
-  small: _react.PropTypes.element,
+  small: _propTypes2.default.element,
   /**
    * An element to be displayed at medium breakpoints
    */
-  medium: _react.PropTypes.element,
+  medium: _propTypes2.default.element,
   /**
    * An element to be displayed at large breakpoints
    */
-  large: _react.PropTypes.element,
+  large: _propTypes2.default.element,
   /**
    * An element to be displayed at huge breakpoints
    */
-  huge: _react.PropTypes.element,
+  huge: _propTypes2.default.element,
   /**
    * The viewport the element will be responsive to, one of `window` or `parent`
    */
-  responsiveTo: _react.PropTypes.oneOf(['window', 'parent'])
+  responsiveTo: _propTypes2.default.oneOf(['window', 'parent'])
 };
 
 var defaultProps = {

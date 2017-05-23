@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -28,23 +32,22 @@ var propTypes = {
   /**
    * The color of the progress bar. Accepts a CSS color value.
    */
-  color: _react.PropTypes.string,
+  color: _propTypes2.default.string,
   /**
    * Sets the size of the progress-bar from the following values; `tiny`, `small`, `medium`, `large` and `huge`
    */
-  heightSize: _react.PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  heightSize: _propTypes2.default.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
    * Sets the fill-value of the progress bar with respect to the `max` prop.
    */
-  value: _react.PropTypes.number.isRequired,
+  value: _propTypes2.default.number.isRequired,
   /**
    * Sets the maximum possible fill-value.
    */
-  max: _react.PropTypes.number
+  max: _propTypes2.default.number
 };
 
 var defaultProps = {
-  color: '#007cc3', // Default color of the ProgressBar fill
   heightSize: 'small',
   max: 100,
   value: 0

@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _marked = require('marked');
 
 var _marked2 = _interopRequireDefault(_marked);
@@ -22,7 +26,7 @@ var propTypes = {
   /**
    * Markdown content to parse
    */
-  src: _react.PropTypes.string
+  src: _propTypes2.default.string
 };
 // eslint-disable-next-line import/extensions
 

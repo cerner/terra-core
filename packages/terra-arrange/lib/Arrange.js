@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -30,33 +34,33 @@ var propTypes = {
   /**
    * The content to display in the body of the fitStart.
    */
-  fitStart: _react.PropTypes.element,
+  fitStart: _propTypes2.default.element,
   /**
    * The content to display in the body of the fill.
    */
-  fill: _react.PropTypes.element.isRequired,
+  fill: _propTypes2.default.element.isRequired,
   /**
    * The content to display in the body of the fitEnd.
    */
-  fitEnd: _react.PropTypes.element,
+  fitEnd: _propTypes2.default.element,
   /**
    * The vertical orientation of all three containers.
    * It will override the aligment of alignFitStart, alignFill and alignFitEnd if given.
    * One of: `center`, `bottom`, `stretch`.
    */
-  align: _react.PropTypes.oneOf(alignmentTypes),
+  align: _propTypes2.default.oneOf(alignmentTypes),
   /**
    * The vertical orientation of fitStart. One of: `center`, `bottom`, `stretch`.
    */
-  alignFitStart: _react.PropTypes.oneOf(alignmentTypes),
+  alignFitStart: _propTypes2.default.oneOf(alignmentTypes),
   /**
    * The vertical orientation of fill. One of: `center`, `bottom`, `stretch`.
    */
-  alignFitEnd: _react.PropTypes.oneOf(alignmentTypes),
+  alignFitEnd: _propTypes2.default.oneOf(alignmentTypes),
   /**
    * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
    */
-  alignFill: _react.PropTypes.oneOf(alignmentTypes)
+  alignFill: _propTypes2.default.oneOf(alignmentTypes)
 };
 
 var Arrange = function Arrange(_ref) {

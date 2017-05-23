@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -28,11 +32,11 @@ var propTypes = {
   /**
    * Child node. Component to display next to the status indicator.
    */
-  children: _react.PropTypes.node.isRequired,
+  children: _propTypes2.default.node.isRequired,
   /**
    * The color of the status indicator. Accepts a CSS color value.
    */
-  color: _react.PropTypes.string.isRequired
+  color: _propTypes2.default.string
 };
 
 var Status = function Status(_ref) {

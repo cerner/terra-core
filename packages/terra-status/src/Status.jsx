@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 import './Status.scss';
@@ -11,7 +12,7 @@ const propTypes = {
   /**
    * The color of the status indicator. Accepts a CSS color value.
    */
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 const Status = ({ color, children, ...customProps }) => {

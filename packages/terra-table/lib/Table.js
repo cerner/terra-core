@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -50,15 +54,15 @@ var propTypes = {
   /**
    * The children passed to the component
    */
-  children: _react.PropTypes.node.isRequired,
+  children: _propTypes2.default.node.isRequired,
   /**
    * Whether or not the rows should be zebra striped
    */
-  isStriped: _react.PropTypes.bool,
+  isStriped: _propTypes2.default.bool,
   /**
    * Whether or not the table cells should be padded
    */
-  isPadded: _react.PropTypes.bool
+  isPadded: _propTypes2.default.bool
 };
 
 var defaultProps = {

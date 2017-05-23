@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 import './ProgressBar.scss';
@@ -23,7 +24,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#007cc3', // Default color of the ProgressBar fill
   heightSize: 'small',
   max: 100,
   value: 0,
