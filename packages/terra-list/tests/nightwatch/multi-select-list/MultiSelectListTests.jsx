@@ -7,7 +7,6 @@ const MultiSelectListTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/multi-select-list-tests/default">Default MultiSelectList</Link></li>
-      <li><Link to="/tests/multi-select-list-tests/items">Items MultiSelectList</Link></li>
       <li><Link to="/tests/multi-select-list-tests/items-divided">Items Divided MultiSelectList</Link></li>
       <li><Link to="/tests/multi-select-list-tests/max-count">MaxCount MultiSelectList</Link></li>
       <li><Link to="/tests/multi-select-list-tests/on-change">OnChange MultiSelectList</Link></li>
