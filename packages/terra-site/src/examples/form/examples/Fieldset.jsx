@@ -18,8 +18,9 @@ const FieldsetExamples = () => (
         label="First"
         isInline
         required
+        htmlFor="test"
       >
-        <Input type="text" name="first" defaultValue="" />
+        <Input id="test" type="text" name="first" defaultValue="" />
       </Field>
       <Field
         label="Middle"

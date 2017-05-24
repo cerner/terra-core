@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-boolean-value, jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -20,6 +19,10 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
+   * The htmlFor attribute on the field label.
+   */
+  htmlFor: PropTypes.string,
+  /**
    * Determines whether the field is an inline field
    */
   isInline: PropTypes.bool,
@@ -37,12 +40,13 @@ const defaultProps = {
   children: null,
   error: null,
   help: null,
+  htmlFor: undefined,
   isInline: false,
   label: null,
   required: false,
 };
 
-const Field = ({ children, error, help, isInline, label, required, ...customProps }) => {
+const Field = ({ children, error, help, htmlFor, isInline, label, required, ...customProps }) => {
   const fieldClasses = classNames(
     'terra-Form-field',
     { 'terra-Form-field--inline': isInline },
@@ -52,7 +56,7 @@ const Field = ({ children, error, help, isInline, label, required, ...customProp
 
   return (
     <div {...customProps} className={fieldClasses}>
-      {label && <label className="terra-Form-label">{label}</label>}
+      {label && <label className="terra-Form-label" htmlFor={htmlFor}>{label}</label>}
       {children}
       {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
       {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}

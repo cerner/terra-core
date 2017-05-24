@@ -47,7 +47,7 @@ class ControlledInput extends React.Component {
       <form onSubmit={this.handleFormSubmit}>
         <Field
           label="Current or Most Recent Employment Title"
-          helpText="This is your most recent employment position"
+          help="This is your most recent employment position"
           required
         >
           <Input type="text" name="employment" value={this.state.formData.jobTitle} onChange={this.handleEmploymentUpdate} />

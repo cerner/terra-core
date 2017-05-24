@@ -24,8 +24,7 @@ require('./Field.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; } /* eslint-disable react/jsx-boolean-value, jsx-a11y/label-has-for */
-
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var propTypes = {
   /**
@@ -40,6 +39,10 @@ var propTypes = {
    * Help element to display with the input
    */
   help: _propTypes2.default.node,
+  /**
+   * The htmlFor attribute on the field label.
+   */
+  htmlFor: _propTypes2.default.string,
   /**
    * Determines whether the field is an inline field
    */
@@ -58,6 +61,7 @@ var defaultProps = {
   children: null,
   error: null,
   help: null,
+  htmlFor: undefined,
   isInline: false,
   label: null,
   required: false
@@ -67,10 +71,11 @@ var Field = function Field(_ref) {
   var children = _ref.children,
       error = _ref.error,
       help = _ref.help,
+      htmlFor = _ref.htmlFor,
       isInline = _ref.isInline,
       label = _ref.label,
       required = _ref.required,
-      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'isInline', 'label', 'required']);
+      customProps = _objectWithoutProperties(_ref, ['children', 'error', 'help', 'htmlFor', 'isInline', 'label', 'required']);
 
   var fieldClasses = (0, _classnames2.default)('terra-Form-field', { 'terra-Form-field--inline': isInline }, { 'terra-Form-field--required': required }, customProps.className);
 
@@ -79,7 +84,7 @@ var Field = function Field(_ref) {
     _extends({}, customProps, { className: fieldClasses }),
     label && _react2.default.createElement(
       'label',
-      { className: 'terra-Form-label' },
+      { className: 'terra-Form-label', htmlFor: htmlFor },
       label
     ),
     children,

@@ -27,8 +27,9 @@ it('should render a Field that has children in it', () => {
       required={false}
       name="foo"
       value="bar"
+      htmlFor="test"
     >
-      <input type="text" value="Test" />
+      <input id="test" type="text" value="Test" />
     </Field>
   );
 

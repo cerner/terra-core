@@ -4,6 +4,7 @@ exports[`test should render a Field that has children in it 1`] = `
   name="foo"
   value="bar">
   <input
+    id="test"
     type="text"
     value="Test" />
 </div>
