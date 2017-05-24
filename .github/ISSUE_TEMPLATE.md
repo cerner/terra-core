@@ -20,7 +20,7 @@
 
 ------------------------------------------------------------
 
-<!--- New Component / Enhancement Request Template -->
+<!--- Bug Report Template -->
 
 # Bug Report
 <!--- Describe the issue as best you can. We love screenshots! -->
