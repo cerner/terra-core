@@ -50,6 +50,7 @@
     "terra-markdown": "^0.x",
     "terra-mixins": "^1.0.1",
     "terra-modal": "^0.x",
+    "terra-overlay": "^0.x",
     "terra-progress-bar": "^0.x",
     "terra-props-table": "^0.x",
     "terra-responsive-element": "^0.x",

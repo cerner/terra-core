@@ -1,0 +1,23 @@
+@import '~terra-mixins';
+
+.terra-Overlay {
+  background: 'lightgrey';
+  height: 100%;
+  opacity: 0.9;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.terra-Overlay-content {
+  color: 'white';
+  font-size: 24px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.terra-Overlay-content-text {
+  padding-left: 5px;
+}
