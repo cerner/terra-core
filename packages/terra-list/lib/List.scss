@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-.terra-List-divided > li {
+.terra-List-divided > li.terra-ListItem {
   border-top: solid 1px $terra-list-divider-color;
-  &:last-child {border-bottom: solid 1px $terra-list-divider-color;}
+  &:last-of-type { border-bottom: solid 1px $terra-list-divider-color; }
 }
