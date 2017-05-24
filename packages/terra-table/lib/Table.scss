@@ -49,10 +49,6 @@
       border-top: $terra-table-row-border-topbottom;
       &:last-of-type { border-bottom: $terra-table-row-border-topbottom; }
     }
-    th {
-      @include terra-text-align-start;
-      background-color: $terra-table-row-th-background-color;
-    }
   }
 
   tfoot {
@@ -62,6 +58,14 @@
       border-bottom: $terra-table-tfoot-tr-border-bottom;
     }
   }
+}
+
+.terra-Table-subheader {
+  @include terra-text-align-start;
+  background-color: $terra-table-subheader-background-color;
+  font-size: $terra-table-subheader-font-size;
+  font-weight: $terra-table-subheader-font-weight;
+  color: $terra-table-subheader-color;
 }
 
 .terra-Table-sort-indicator {

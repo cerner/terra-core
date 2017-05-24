@@ -4,7 +4,7 @@
 // Background Colors
 $terra-table-background-color: $terra-white !default;
 $terra-table-thead-background-color: $terra-grey-15 !default;
-$terra-table-row-th-background-color: $terra-grey-25 !default;
+$terra-table-subheader-background-color: $terra-grey-25 !default;
 $terra-table-cell-background-color: $terra-white !default;
 $terra-table-row-striped-background-color: $terra-grey-5 !default;
 $terra-table-row-striped-th-background-color: $terra-grey-25 !default;
@@ -31,9 +31,9 @@ $terra-table-thead-th-color: $terra-dark !default;
 $terra-table-sort-indicator-color: $terra-dark !default;
 
 // Table Subheader Font Styles
-$terra-table-row-th-font-size:1rem !default;
-$terra-table-row-th-font-weight: bold !default;
-$terra-table-row-th-color: $terra-dark !default;
+$terra-table-subheader-font-size:1rem !default;
+$terra-table-subheader-font-weight: bold !default;
+$terra-table-subheader-color: $terra-dark !default;
 
 // Cell Padding
 $terra-table-cell-padding-bottom: 0.5em !default;
