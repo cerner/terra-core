@@ -16,9 +16,6 @@ import MultiSelectListSrc from '!raw-loader!terra-list/src/MultiSelectList.jsx';
 import ListDemo from './ListDemo';
 import SingleSelect from './SingleSelect';
 import MultiSelect from './MultiSelect';
-import MultiSelectWithPreSelectedItem from './MultiSelectWithPreSelectedItem';
-import MultiSelectWithNonSelectableItem from './MultiSelectWithNonSelectableItem';
-import MultiSelectWithNoItemDeselect from './MultiSelectWithNoItemDeselect';
 import MultiSelectMaxSelection from './MultiSelectMaxSelection';
 
 const ListExamples = () => (
@@ -39,19 +36,10 @@ const ListExamples = () => (
     <h2 id="single">Single Select List</h2>
     <SingleSelect />
     <br />
-    <br />
     <h2 id="multi">Multi Select List</h2>
     <MultiSelect />
     <br />
-    <h2 id="multi-pre-selected">Multi Select List With Preselected Item</h2>
-    <MultiSelectWithPreSelectedItem />
-    <br />
-    <h2 id="multi-non-selectable">Multi Select List With Item 3 Non-Selectable</h2>
-    <MultiSelectWithNonSelectableItem />
-    <br />
-    <h2 id="multi-no-deselect">Multi Select List With Item 1 and 2 Selected but Cannot Deselect</h2>
-    <MultiSelectWithNoItemDeselect />
-    <br /><h2 id="multi-max-selection">Multi Select List With Maximum Selection of 2 Items</h2>
+    <h2 id="multi-max-selection">Multi Select List - Maximum Selection of 2 Items</h2>
     <MultiSelectMaxSelection />
   </div>
 );
