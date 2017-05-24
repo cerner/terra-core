@@ -3,12 +3,9 @@
 
 // Background Colors
 $terra-table-background-color: $terra-white !default;
-$terra-table-thead-background-color: $terra-grey-15 !default;
-$terra-table-subheader-background-color: $terra-grey-25 !default;
-$terra-table-cell-background-color: $terra-white !default;
 $terra-table-row-striped-background-color: $terra-grey-5 !default;
-$terra-table-row-striped-th-background-color: $terra-grey-25 !default;
-$terra-table-row-th-background-color: $terra-grey-25 !default;
+$terra-table-subheader-background-color: $terra-grey-25 !default;
+$terra-table-thead-background-color: $terra-grey-15 !default;
 
 // Base Border Styles
 $terra-table-base-border-color: $terra-grey-25 !default;
@@ -40,20 +37,6 @@ $terra-table-cell-padding-bottom: 0.5em !default;
 $terra-table-cell-padding-left: 0.75em !default;
 $terra-table-cell-padding-right: 0.75em !default;
 $terra-table-cell-padding-top: 0.5em !default;
-
-// Table Header Max Height
-$terra-table-header-max-height-tiny: 1.75rem;
-$terra-table-header-max-height-small: 3rem;
-$terra-table-header-max-height-medium: 4rem;
-$terra-table-header-max-height-large: 5rem;
-$terra-table-header-max-height-huge: 6.25rem;
-
-// Table Row Max Height
-$terra-table-row-max-height-tiny: 1.75rem;
-$terra-table-row-max-height-small: 3.25rem;
-$terra-table-row-max-height-medium: 4.75rem;
-$terra-table-row-max-height-large: 6.25rem;
-$terra-table-row-max-height-huge: 7.75rem;
 
 // Table Cell Min Width
 $terra-table-cell-min-width-tiny: 3rem;
