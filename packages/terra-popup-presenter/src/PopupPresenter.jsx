@@ -9,15 +9,36 @@ import TetherComponent from './TetherComponent'
 
 const propTypes = {
   /**
-   * The children list items passed to the component.
+   * Should the popup trigger a close event on esc keydown.
    */
   closeOnEsc: PropTypes.bool,
+  /**
+   * Should the popup trigger a close event click outside.
+   */
   closeOnOutsideClick: PropTypes.bool,
+  /**
+   * Content to be displayed within the popup.
+   */
   content: PropTypes.element,
+  /**
+   * Attachment point for the popup, this will be mirrored to the target.
+   */
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions).isRequired,
+  /**
+   * Should the popup be presented as open.
+   */
   isOpen: PropTypes.bool,
+  /**
+   * Callback function indicating a close condition was met, should be combined with isOpen for state management.
+   */
   onRequestClose: PropTypes.func,
+  /**
+   * Should an arrow be placed at the attachment point.
+   */
   showArrow: PropTypes.bool,
+  /**
+   * Presenting element for the popup.
+   */
   target: PropTypes.element.isRequired,
 };
 

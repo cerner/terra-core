@@ -23,23 +23,23 @@ const KEYCODES = {
 
 const propTypes = {
   /**
-   * The child elements passed to the component.
+   * The arrow to be placed within the popup frame.
    */
   arrow: PropTypes.element,
   /**
-   * The child elements passed to the component.
+   * The content to be presented within the popup.
    */
   content: PropTypes.element,
   /**
-   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
   closeOnEsc: PropTypes.bool,
   /**
-   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   * Whether or not clicking outside the popup should trigger the onRequestClose callback.
    */
   closeOnOutsideClick: PropTypes.bool,
   /**
-   * Whether or not the using the escape key should also trigger the onClickOutside event.
+   * Whether or not resizing the screen should trigger the onRequestClose callback.
    */
   closeOnResize: PropTypes.bool,
   /**
@@ -47,7 +47,7 @@ const propTypes = {
    */
   onRequestClose: PropTypes.func,
   /**
-   * The function that should be triggered when a close is indicated.
+   * The function returning the frame html reference.
    */
   refCallback: PropTypes.func,
 };

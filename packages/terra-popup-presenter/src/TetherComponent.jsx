@@ -16,26 +16,80 @@ const attachmentPositions = [
   'bottom left',
   'bottom center',
   'bottom right',
-]
+];
 
 const propTypes = {
+  /**
+   * A hash of tether classes which should be changed or disabled.
+   */
   classes: PropTypes.object,
+  /**
+   * The prefix placed at the beginning of the default classes.
+   */
   classPrefix: PropTypes.string,
+  /**
+   * Rule set to pass to tether, contraining the content to.
+   */
   constraints: PropTypes.array,
+  /**
+   * Content to display within the tethered frame.
+   */
   content: PropTypes.element,
+  /**
+   * String pair of top, middle, bottom, and left, center, right.
+   */
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
+  /**
+   * String pair of top and left offset, ie "10px -4px".  
+   */
   contentOffset: PropTypes.string,
+  /**
+   * Should tethering be disabled following the initial presentation.
+   */
   disableOnPosition: PropTypes.bool,
+  /**
+   * Should the scrolling eatin overlay be injected.
+   */
   disablePageScroll: PropTypes.bool,
+  /**
+   * Should element be tethered to the page.
+   */
   isEnabled: PropTypes.bool,
+  /**
+   * The ability to disable "gpu" and "moveElement" optimizations.
+   */
   optimizations: PropTypes.object,
+  /**
+   * Element tag for the containg element.
+   */
   renderElementTag: PropTypes.string,
+  /**
+   * Html reference to have content appended to.
+   */
   renderElementTo: PropTypes.any,
+  /**
+   * Required element to be presented and tethered to.
+   */
   target: PropTypes.element.isRequired,
+  /**
+   * String pair of top, middle, bottom, and left, center, right.
+   */
   targetAttachment: PropTypes.oneOf(attachmentPositions),
+  /**
+   * Can be set to 'visible' or 'scroll-handle'.
+   */
   targetModifier: PropTypes.string,
+  /**
+   * String pair of top and left offset, ie "10px -4px".
+   */
   targetOffset: PropTypes.string,
+  /**
+   * Callback function when each tether component is adjusted.
+   */
   onUpdate: PropTypes.func,
+  /**
+   * Callback function when the tether is moved.
+   */
   onRepositioned: PropTypes.func,
 };
 

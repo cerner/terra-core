@@ -47,23 +47,77 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
 var propTypes = {
+  /**
+   * A hash of tether classes which should be changed or disabled.
+   */
   classes: _propTypes2.default.object,
+  /**
+   * The prefix placed at the beginning of the default classes.
+   */
   classPrefix: _propTypes2.default.string,
+  /**
+   * Rule set to pass to tether, contraining the content to.
+   */
   constraints: _propTypes2.default.array,
+  /**
+   * Content to display within the tethered frame.
+   */
   content: _propTypes2.default.element,
+  /**
+   * String pair of top, middle, bottom, and left, center, right.
+   */
   contentAttachment: _propTypes2.default.oneOf(attachmentPositions).isRequired,
+  /**
+   * String pair of top and left offset, ie "10px -4px".  
+   */
   contentOffset: _propTypes2.default.string,
+  /**
+   * Should tethering be disabled following the initial presentation.
+   */
   disableOnPosition: _propTypes2.default.bool,
+  /**
+   * Should the scrolling eatin overlay be injected.
+   */
   disablePageScroll: _propTypes2.default.bool,
+  /**
+   * Should element be tethered to the page.
+   */
   isEnabled: _propTypes2.default.bool,
+  /**
+   * The ability to disable "gpu" and "moveElement" optimizations.
+   */
   optimizations: _propTypes2.default.object,
+  /**
+   * Element tag for the containg element.
+   */
   renderElementTag: _propTypes2.default.string,
+  /**
+   * Html reference to have content appended to.
+   */
   renderElementTo: _propTypes2.default.any,
+  /**
+   * Required element to be presented and tethered to.
+   */
   target: _propTypes2.default.element.isRequired,
+  /**
+   * String pair of top, middle, bottom, and left, center, right.
+   */
   targetAttachment: _propTypes2.default.oneOf(attachmentPositions),
+  /**
+   * Can be set to 'visible' or 'scroll-handle'.
+   */
   targetModifier: _propTypes2.default.string,
+  /**
+   * String pair of top and left offset, ie "10px -4px".
+   */
   targetOffset: _propTypes2.default.string,
+  /**
+   * Callback function when each tether component is adjusted.
+   */
   onUpdate: _propTypes2.default.func,
+  /**
+   * Callback function when the tether is moved.
+   */
   onRepositioned: _propTypes2.default.func
 };
 

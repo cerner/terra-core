@@ -5,6 +5,9 @@ import 'terra-base/lib/baseStyles';
 import './TetherOverlay.scss';
 
 const propTypes = {
+  /**
+   * Whether or not the z-index of the overlay should be placed above that of modal.
+   */
   displayAboveModal: PropTypes.bool,
 };
 

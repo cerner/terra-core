@@ -20,6 +20,9 @@ const ARROW_OPPOSITE_CLASSES = {
 };
 
 const propTypes = {
+  /**
+   * The function returning the frame html reference.
+   */
   refCallback: PropTypes.func,
 };
 

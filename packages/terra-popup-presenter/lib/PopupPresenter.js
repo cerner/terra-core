@@ -54,15 +54,36 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * The children list items passed to the component.
+   * Should the popup trigger a close event on esc keydown.
    */
   closeOnEsc: _propTypes2.default.bool,
+  /**
+   * Should the popup trigger a close event click outside.
+   */
   closeOnOutsideClick: _propTypes2.default.bool,
+  /**
+   * Content to be displayed within the popup.
+   */
   content: _propTypes2.default.element,
+  /**
+   * Attachment point for the popup, this will be mirrored to the target.
+   */
   contentAttachment: _propTypes2.default.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
+  /**
+   * Should the popup be presented as open.
+   */
   isOpen: _propTypes2.default.bool,
+  /**
+   * Callback function indicating a close condition was met, should be combined with isOpen for state management.
+   */
   onRequestClose: _propTypes2.default.func,
+  /**
+   * Should an arrow be placed at the attachment point.
+   */
   showArrow: _propTypes2.default.bool,
+  /**
+   * Presenting element for the popup.
+   */
   target: _propTypes2.default.element.isRequired
 };
 
