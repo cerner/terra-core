@@ -15,6 +15,7 @@
 
   .terra-ListItem-chevron {
     @include terra-position-end(10px);
+    color: $terra-list-chevron-color;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
@@ -24,15 +25,14 @@
     text-decoration: inherit;
     top: 50%;
     transform: translate(0, -50%);
-    color: $terra-list-chevron-color;
   }
 }
 
 .terra-ListItem--selected { background-color: $terra-list-item-selected-background-color; }
 
 .terra-List-divided .terra-ListItem--selected {
-  &.terra-ListItem{ border-color: $terra-list-item-selected-divider-color; }
-  + .terra-ListItem{ border-top-color: $terra-list-item-selected-divider-color; }
+  &.terra-ListItem { border-color: $terra-list-item-selected-divider-color !important; }
+  + .terra-ListItem { border-top-color: $terra-list-item-selected-divider-color; }
 }
 
 .terra-ListItem-isSelectable {

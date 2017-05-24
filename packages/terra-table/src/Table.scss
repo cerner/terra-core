@@ -3,9 +3,9 @@
 
 .terra-Table {
   background-color: $terra-table-background-color;
+  border: $terra-table-border;
   border-collapse: collapse;
   border-spacing: 0;
-  border: $terra-table-border;
   max-width: 100%;
   width: 100%;
 
@@ -32,15 +32,17 @@
   thead {
     background-color: $terra-table-thead-background-color;
     display: table-header-group;
+
     tr {
-      border-top: $terra-table-thead-tr-border-top;
       border-bottom: $terra-table-thead-tr-border-bottom;
+      border-top: $terra-table-thead-tr-border-top;
     }
+
     th {
-      vertical-align: bottom;
+      color: $terra-table-thead-th-color;
       font-size: $terra-table-thead-th-font-size;
       font-weight: $terra-table-thead-th-font-weight;
-      color: $terra-table-thead-th-color;
+      vertical-align: bottom;
     }
   }
 
@@ -54,8 +56,8 @@
   tfoot {
     tr {
       @include terra-text-align-start;
-      border-top: $terra-table-tfoot-tr-border-top;
       border-bottom: $terra-table-tfoot-tr-border-bottom;
+      border-top: $terra-table-tfoot-tr-border-top;
     }
   }
 }
@@ -63,9 +65,9 @@
 .terra-Table-subheader {
   @include terra-text-align-start;
   background-color: $terra-table-subheader-background-color;
+  color: $terra-table-subheader-color;
   font-size: $terra-table-subheader-font-size;
   font-weight: $terra-table-subheader-font-weight;
-  color: $terra-table-subheader-color;
 }
 
 .terra-Table-sort-indicator {
@@ -102,38 +104,38 @@
       background-color: $terra-table-row-striped-background-color;
     }
 
-    &.terra-Table--isSelected {
-      background-color: $terra-table-row-striped-selected-background-color !important;
-    }
+    /* stylelint-disable selector-no-qualifying-type */
+    &.terra-Table--isSelected { background-color: $terra-table-row-striped-selected-background-color !important; }
 
-    &.terra-Table--isSelectable {
-      &:hover {
-        background-color: $terra-table-row-striped-hover-background-color !important;
+    &.terra-Table--isSelectable:hover,
+    &.terra-Table--isSelectable:focus {
+      background-color: $terra-table-row-striped-hover-background-color !important;
 
-        &.terra-Table--isSelected {
-          background-color: $terra-table-row-striped-selected-hover-background-color !important;
-        }
+      &.terra-Table--isSelected {
+        background-color: $terra-table-row-striped-selected-hover-background-color !important;
       }
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 }
 
 .terra-Table--isSelected {
   background-color: $terra-table-row-selected-background-color;
 
-  &.terra-Table-row{ border-color: $terra-table-row-selected-border-color; }
+  &.terra-Table-row { border-color: $terra-table-row-selected-border-color !important; }
   + .terra-Table-row { border-top-color: $terra-table-row-selected-border-color; }
 }
 
 .terra-Table--isSelectable {
   cursor: pointer;
 
-  &.terra-Table-row:hover,
-  &.terra-Table-row:focus {
+  &.terra-Table-row:focus,
+  &.terra-Table-row:hover {
     background-color: $terra-table-row-hover-background-color !important;
   }
-  &.terra-Table--isSelected:hover,
-  &.terra-Table--isSelected:focus {
+
+  &.terra-Table--isSelected:focus,
+  &.terra-Table--isSelected:hover {
     background-color: $terra-table-row-selected-hover-background-color !important;
   }
 }
