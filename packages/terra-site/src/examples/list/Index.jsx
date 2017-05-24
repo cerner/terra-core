@@ -15,8 +15,6 @@ import MultiSelectListSrc from '!raw-loader!terra-list/src/MultiSelectList.jsx';
 // Example Files
 import ListDemo from './ListDemo';
 import SingleSelect from './SingleSelect';
-import SingleSelectWithPreSelectedItem from './SingleSelectWithPreSelectedItem';
-import SingleSelectWithNonSelectableItem from './SingleSelectWithNonSelectableItem';
 import MultiSelect from './MultiSelect';
 import MultiSelectWithPreSelectedItem from './MultiSelectWithPreSelectedItem';
 import MultiSelectWithNonSelectableItem from './MultiSelectWithNonSelectableItem';
@@ -41,11 +39,6 @@ const ListExamples = () => (
     <h2 id="single">Single Select List</h2>
     <SingleSelect />
     <br />
-    <h2 id="single-pre-selected">Single Select List With Preselected Item</h2>
-    <SingleSelectWithPreSelectedItem />
-    <br />
-    <h2 id="single-non-selectable">Single Select List With Item 3 Non-Selectable</h2>
-    <SingleSelectWithNonSelectableItem />
     <br />
     <h2 id="multi">Multi Select List</h2>
     <MultiSelect />
