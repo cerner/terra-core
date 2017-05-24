@@ -75,8 +75,6 @@
   color: $terra-table-sort-indicator-color;
 }
 
-
-// Reccommend changing these to .terra-Table-cell-min-width--{size}
 .terra-Table-min-width--tiny { min-width: $terra-table-cell-min-width-tiny; }
 
 .terra-Table-min-width--small { min-width: $terra-table-cell-min-width-small; }
@@ -86,8 +84,6 @@
 .terra-Table-min-width--large { min-width: $terra-table-cell-min-width-large; }
 
 .terra-Table-min-width--huge { min-width: $terra-table-cell-min-width-huge; }
-// end: Reccommend changing these to .terra-Table-cell-min-width--{size}
-
 
 .terra-Table--padded {
   th,
@@ -104,6 +100,7 @@
       background-color: $terra-table-row-striped-background-color;
     }
 
+    /* Qualifying type required for specificity */
     /* stylelint-disable selector-no-qualifying-type */
     &.terra-Table--isSelected { background-color: $terra-table-row-striped-selected-background-color !important; }
 
