@@ -6,7 +6,6 @@
   "command": {
     "publish": {
       "ignore": [
-        "terra-content-container",
         "terra-content",
         "terra-site",
         "terra-standout",
