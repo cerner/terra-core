@@ -7,14 +7,14 @@ exports[`test should render with a selectable and non-selectable item 1`] = `
 <List
   isDivided={false}>
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={false}
     isSelected={false} />
 </List>
@@ -37,7 +37,7 @@ exports[`test should render with isDivided 1`] = `
 <List
   isDivided={true}>
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -50,35 +50,35 @@ exports[`test should render with items 1`] = `
 <List
   isDivided={false}>
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0" />
   <ListItem
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -97,7 +97,7 @@ exports[`test should select an item 1`] = `
         text1
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]}
@@ -110,7 +110,7 @@ exports[`test should select an item 1`] = `
         text2
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -123,7 +123,7 @@ exports[`test should select an item 1`] = `
         text3
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -136,7 +136,7 @@ exports[`test should select an item 1`] = `
         text4
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -149,7 +149,7 @@ exports[`test should select an item 1`] = `
         text5
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -168,7 +168,7 @@ exports[`test should select an item 2`] = `
         text1
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -181,7 +181,7 @@ exports[`test should select an item 2`] = `
         text2
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]}
@@ -194,7 +194,7 @@ exports[`test should select an item 2`] = `
         text3
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -207,7 +207,7 @@ exports[`test should select an item 2`] = `
         text4
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -220,7 +220,7 @@ exports[`test should select an item 2`] = `
         text5
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -239,7 +239,7 @@ exports[`test should select an item 3`] = `
         text1
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -252,7 +252,7 @@ exports[`test should select an item 3`] = `
         text2
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -265,7 +265,7 @@ exports[`test should select an item 3`] = `
         text3
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]}
@@ -278,7 +278,7 @@ exports[`test should select an item 3`] = `
         text4
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -291,7 +291,7 @@ exports[`test should select an item 3`] = `
         text5
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -310,7 +310,7 @@ exports[`test should select an item 4`] = `
         text1
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={true}
     onClick={[Function]}
@@ -323,7 +323,7 @@ exports[`test should select an item 4`] = `
         text2
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -336,7 +336,7 @@ exports[`test should select an item 4`] = `
         text3
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -349,7 +349,7 @@ exports[`test should select an item 4`] = `
         text4
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -362,7 +362,7 @@ exports[`test should select an item 4`] = `
         text5
       </p>
     }
-    hasChevron={true}
+    hasChevron={false}
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
