@@ -27,12 +27,12 @@ const propTypes = {
   /**
    * Component used as PlaceHolder when the translations loading.
    */
-  loadingPlaceHolder: PropTypes.node,
+  loadingPlaceholder: PropTypes.node,
 };
 
 const defaultProps = {
   customMessages: {},
-  loadingPlaceHolder: null,
+  loadingPlaceholder: null,
 };
 
 class Base extends React.Component {
@@ -63,7 +63,7 @@ class Base extends React.Component {
       children,
       locale,
       customMessages,
-      loadingPlaceHolder,
+      loadingPlaceholder,
       ...customProps
     } = this.props;
 
@@ -76,7 +76,7 @@ class Base extends React.Component {
     const messages = Object.assign({}, this.state.messages, customMessages);
 
     if (locale === undefined) return childComponent;
-    if (!this.state.areTranslationsLoaded) return loadingPlaceHolder;
+    if (!this.state.areTranslationsLoaded) return loadingPlaceholder;
     return (
       <I18nProvider locale={this.state.locale} messages={messages}>
         {childComponent}

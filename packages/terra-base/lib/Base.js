@@ -52,12 +52,12 @@ var propTypes = {
   /**
    * Component used as PlaceHolder when the translations loading.
    */
-  loadingPlaceHolder: _propTypes2.default.node
+  loadingPlaceholder: _propTypes2.default.node
 };
 
 var defaultProps = {
   customMessages: {},
-  loadingPlaceHolder: null
+  loadingPlaceholder: null
 };
 
 var Base = function (_React$Component) {
@@ -98,8 +98,8 @@ var Base = function (_React$Component) {
           children = _props.children,
           locale = _props.locale,
           customMessages = _props.customMessages,
-          loadingPlaceHolder = _props.loadingPlaceHolder,
-          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages', 'loadingPlaceHolder']);
+          loadingPlaceholder = _props.loadingPlaceholder,
+          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages', 'loadingPlaceholder']);
 
       var childComponent = _react2.default.createElement(
         'div',
@@ -110,7 +110,7 @@ var Base = function (_React$Component) {
       var messages = _extends({}, this.state.messages, customMessages);
 
       if (locale === undefined) return childComponent;
-      if (!this.state.areTranslationsLoaded) return loadingPlaceHolder;
+      if (!this.state.areTranslationsLoaded) return loadingPlaceholder;
       return _react2.default.createElement(
         _terraI18n.I18nProvider,
         { locale: this.state.locale, messages: messages },
