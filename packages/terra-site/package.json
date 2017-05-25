@@ -41,6 +41,7 @@
     "terra-content-container": "^0.x",
     "terra-date-picker": "^0.x",
     "terra-demographics-banner": "^0.x",
+    "terra-form": "^0.x",
     "terra-grid": "^2.0.0",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
