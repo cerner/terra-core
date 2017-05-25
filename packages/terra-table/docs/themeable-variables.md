@@ -20,9 +20,9 @@ Variables to `theme` the terra-table component.
 | $terra-table-thead-tr-border-bottom                | 0              | Sets the bottom border of thead row|
 | $terra-table-tfoot-tr-border-top                   | 0              | Sets the top border of tfood row|
 | $terra-table-tfoot-tr-border-bottom                | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the bottom border of tfoot row|
-| $terra-table-row-border-leftright                  | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the right and left border style of table|
-| $terra-table-row-border-topbottom                  | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the top and bottom border style of table|
-| $terra-table-cell-column-border-left               | 0              | Sets the left border between table cells|
+| $terra-table-row-border-vertical                   | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the left and right border style of table|
+| $terra-table-row-border-horizontal                 | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the top and bottom border style of table|
+| $terra-table-cell-border                           | 0              | Sets the border between table cells|
 
 ### Table Header and Subheader Styles
 | Variable Name | Default Value | Usage |

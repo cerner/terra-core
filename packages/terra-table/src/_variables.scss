@@ -17,9 +17,9 @@ $terra-table-thead-tr-border-top: $terra-table-base-border-width solid $terra-ta
 $terra-table-thead-tr-border-bottom: 0 !default;
 $terra-table-tfoot-tr-border-top: 0 !default;
 $terra-table-tfoot-tr-border-bottom: $terra-table-base-border-width solid $terra-table-base-border-color !default;
-$terra-table-row-border-leftright: $terra-table-base-border-width solid $terra-table-base-border-color !default;
-$terra-table-row-border-topbottom: $terra-table-base-border-width solid $terra-table-base-border-color !default;
-$terra-table-cell-column-border-left: 0 !default;
+$terra-table-row-border-vertical: $terra-table-base-border-width solid $terra-table-base-border-color !default;
+$terra-table-row-border-horizontal: $terra-table-base-border-width solid $terra-table-base-border-color !default;
+$terra-table-cell-border: 0 !default;
 
 // Table Header Font Styles
 $terra-table-thead-th-font-size: 1rem !default;
