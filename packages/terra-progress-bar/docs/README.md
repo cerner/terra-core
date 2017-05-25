@@ -20,6 +20,7 @@ import ProgressBar from 'terra-progress-bar';
   heightSize="tiny"
   value={3}
   max={10}
+  color="#8ccc62"
 />
 
 <ProgressBar
