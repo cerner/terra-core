@@ -1,7 +1,7 @@
 {
   "name": "terra-status",
   "main": "lib/Status.js",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "The status component provides a customizable color indictor to signify a specific condition.",
   "repository": {
     "type": "git",
@@ -36,19 +36,19 @@
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-status node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
-    "terra-arrange": "^0.3.2",
-    "terra-toolkit": "^0.3.1"
+    "terra-arrange": "^0.3.3",
+    "terra-toolkit": "^0.3.2"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.4.1",
+    "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.4.1",
+    "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1"
   }
 }
