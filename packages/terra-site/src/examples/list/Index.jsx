@@ -38,7 +38,7 @@ const ListExamples = () => (
     <PropsTable id="props-multiList" src={MultiSelectListSrc} />
     <h2><Link to="/themeable-components/list">Themeable Varaibles</Link></h2>
     <br />
-    <h1>Examples </h1>
+    <h1>Examples</h1>
     <h2 id="list">List</h2>
     <ListDemo />
     <br />

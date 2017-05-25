@@ -9,5 +9,8 @@
 
 .terra-List-divided > .terra-ListItem {
   border-top: solid 1px $terra-list-divider-color;
-  &:last-of-type { border-bottom: solid 1px $terra-list-divider-color; }
+
+  &:last-of-type {
+    border-bottom: solid 1px $terra-list-divider-color;
+  }
 }
