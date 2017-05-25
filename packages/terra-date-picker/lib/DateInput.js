@@ -91,7 +91,8 @@ var DatePickerInput = function (_React$Component) {
           className: 'terra-DatePicker-button',
           onClick: this.props.onClick,
           onKeyDown: this.props.onKeyDown,
-          icon: Icon
+          icon: Icon,
+          type: 'button'
         })
       );
     }
