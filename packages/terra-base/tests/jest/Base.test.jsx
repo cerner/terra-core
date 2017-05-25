@@ -8,6 +8,16 @@ it('should support rendering a string without translation', () => {
   expect(base).toMatchSnapshot();
 });
 
+it('throws error for missing required locale', () => {
+  const messages = { Terra: 'Terra' };
+
+  try {
+    shallow(<Base customMessages={messages} >String</Base>);
+  } catch (e) {
+    expect(e.message).toContain('Missing locale prop');
+  }
+});
+
 it('should support rendering a string as children', () => {
   const base = shallow(<Base locale="en-US">String</Base>);
   base.setState({ load: true });

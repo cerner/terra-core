@@ -43,7 +43,12 @@ var propTypes = {
    * Customized translations provided by consuming application
    * only for current locale.
    */
-  customMessages: _propTypes2.default.object,
+  /* eslint-disable consistent-return */
+  customMessages: function customMessages(props, propName, componentName) {
+    if (Object.keys(props[propName]).length !== 0 && props.locale === undefined) {
+      return new Error('Missing locale prop for ' + propName + ' in ' + componentName + ' props');
+    }
+  },
   loadingPlaceHolder: _propTypes2.default.node
 };
 

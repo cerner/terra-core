@@ -16,7 +16,14 @@ const propTypes = {
    * Customized translations provided by consuming application
    * only for current locale.
    */
-  customMessages: PropTypes.object,
+   /* eslint-disable consistent-return */
+  customMessages: (props, propName, componentName) => {
+    if (Object.keys(props[propName]).length !== 0 && props.locale === undefined) {
+      return new Error(
+        `Missing locale prop for ${propName} in ${componentName} props`,
+      );
+    }
+  },
   loadingPlaceHolder: PropTypes.node,
 };
 
