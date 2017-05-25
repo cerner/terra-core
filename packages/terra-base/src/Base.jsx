@@ -24,6 +24,9 @@ const propTypes = {
       );
     }
   },
+  /**
+   * Component used as PlaceHolder when the translations loading.
+   */
   loadingPlaceHolder: PropTypes.node,
 };
 
@@ -64,20 +67,18 @@ class Base extends React.Component {
       ...customProps
     } = this.props;
 
-    const messages = Object.assign({}, this.state.messages, customMessages);
+    const childComponent = (
+      <div {...customProps}>
+        {children}
+      </div>
+    );
 
-    const childComponent = (<div {...customProps}>
-      {children}
-    </div>);
+    const messages = Object.assign({}, this.state.messages, customMessages);
 
     if (locale === undefined) return childComponent;
     if (!this.state.areTranslationsLoaded) return loadingPlaceHolder;
-
     return (
-      <I18nProvider
-        locale={this.state.locale}
-        messages={messages}
-      >
+      <I18nProvider locale={this.state.locale} messages={messages}>
         {childComponent}
       </I18nProvider>
     );
