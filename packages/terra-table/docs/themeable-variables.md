@@ -18,7 +18,7 @@ Variables to `theme` the terra-table component.
 | $terra-table-border                                | 0              | Sets the table border|
 | $terra-table-thead-tr-border-top                   | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the top border of thead row|
 | $terra-table-thead-tr-border-bottom                | 0              | Sets the bottom border of thead row|
-| $terra-table-tfoot-tr-border-top                   | 0              | Sets the top border of tfood row|
+| $terra-table-tfoot-tr-border-top                   | 0              | Sets the top border of tfoot row|
 | $terra-table-tfoot-tr-border-bottom                | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the bottom border of tfoot row|
 | $terra-table-row-border-vertical                   | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the left and right border style of table|
 | $terra-table-row-border-horizontal                 | $terra-table-base-border-width solid $terra-table-base-border-color | Sets the top and bottom border style of table|
