@@ -4,6 +4,12 @@ exports[`test should render the component with merged attributes 1`] = `null`;
 
 exports[`test should support rendering a string as children 1`] = `null`;
 
+exports[`test should support rendering a string without translation 1`] = `
+<div>
+  String
+</div>
+`;
+
 exports[`test should support rendering an array of elements as a children 1`] = `null`;
 
 exports[`test should support rendering an element as children 1`] = `null`;

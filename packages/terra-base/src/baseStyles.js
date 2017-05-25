@@ -1,4 +1,4 @@
-import './base.scss';
+import './Base.scss';
 
 // Checks to run when not in production
 if (process.env.NODE_ENV !== 'production') {
