@@ -28,6 +28,7 @@ import StandoutExamples from './examples/standout/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TitleExamples from './examples/title/Index';
+import TogglerExamples from './examples/toggler/Index';
 
 
 // Test
@@ -54,6 +55,7 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import TogglerTestRoutes from 'terra-toggler/tests/nightwatch/TogglerTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
@@ -82,8 +84,9 @@ ReactDOM.render((
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="standout" component={StandoutExamples} />
       <Route path="status" component={StatusExamples} />
-      <Route path="title" component={TitleExamples} />
       <Route path="table" component={TableExamples} />
+      <Route path="title" component={TitleExamples} />
+      <Route path="toggler" component={TogglerExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
@@ -108,6 +111,6 @@ ReactDOM.render((
     {ModalTestRoutes}
     {ProgressBarTestRoutes}
     {GridTestRoutes}
-    {IconTestRoutes}
+    {TogglerTestRoutes}
   </Router>
 ), document.getElementById('root'));
