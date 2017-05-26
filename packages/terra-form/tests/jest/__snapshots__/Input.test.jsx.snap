@@ -1,0 +1,15 @@
+exports[`test should render a Input with the rest of the props 1`] = `
+<input
+  aria-required="true"
+  className="terra-Form-input"
+  name="foo"
+  required={true}
+  value="bar" />
+`;
+
+exports[`test should render a default component 1`] = `
+<input
+  className="terra-Form-input"
+  name={null}
+  required={false} />
+`;
