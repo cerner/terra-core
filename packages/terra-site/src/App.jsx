@@ -45,7 +45,6 @@ const App = props => (
             <List.Item content={<Link to="/site/table">Table</Link>} />
             <List.Item content={<Link to="/site/title">Title</Link>} />
             <List.Item content={<Link to="/tests">Tests</Link>} />
-            <List.Item content={<Link to="/themeable-components">Themeable Components</Link>} />
           </List>
         </Grid.Column>
         <Grid.Column small={10}>

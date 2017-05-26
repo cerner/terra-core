@@ -58,10 +58,6 @@ import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import TestLinks from './TestLinks';
 /* eslint-enable import/first */
 
-// Themeable Components
-import ThemeableLinks from './ThemeableLinks';
-import ThemeableRoutes from './ThemeableRoutes';
-
 ReactDOM.render((
   <Router history={hashHistory}>
     <Redirect from="/" to="/site" />
@@ -91,9 +87,7 @@ ReactDOM.render((
       <Route path="title" component={TitleExamples} />
       <Route path="table" component={TableExamples} />
     </Route>
-    <Route path="/themeable-components" component={ThemeableLinks} />
     <Route path="/tests" component={TestLinks} />
-    {ThemeableRoutes}
     {ArrangeTestRoutes}
     {BadgeTestRoutes}
     {BaseTestRoutes}

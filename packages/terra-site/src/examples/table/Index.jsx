@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { Link } from 'react-router';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-table/docs/README.md';
@@ -45,7 +44,6 @@ const TableExamples = () => (
     <PropsTable id="props-tableRow" src={TableRowSrc} />
     <h2>Table Cell</h2>
     <PropsTable id="props-tablecell" src={TableCellSrc} />
-    <h2><Link to="/themeable-components/table">Themeable Varaibles</Link></h2>
     <br />
     <h1>Examples </h1>
     <h2>Table without zebra stripes</h2>
