@@ -26,13 +26,13 @@
 
     &::-webkit-progress-value {
       background-color: currentColor;
-      @include terra-border-end(1px, solid, #FFF);
+      @include terra-border-end(1px solid #FFF);
       @include terra-border-radius-start(0);
     }
 
     &::-ms-fill {
       background-color: currentColor;
-      @include terra-border-end(1px, solid, #FFF);
+      @include terra-border-end(1px solid #FFF);
     }
   }
 
@@ -40,11 +40,11 @@
   &[value='0'] {
     &::-webkit-progress-value {
       @include terra-border-radius-end(0);
-      @include terra-border-end(0, solid, #FFF);
+      @include terra-border-end(0 solid #FFF);
     }
 
     &::-ms-fill {
-      @include terra-border-end(0, solid, #FFF);
+      @include terra-border-end(0 solid #FFF);
     }
   }
 }
@@ -66,17 +66,17 @@
     &[value]::-moz-progress-bar {
       @include terra-border-radius-start(0);
       background-color: currentColor;
-      @include terra-border-end(1px, solid, #FFF);
+      @include terra-border-end(1px solid #FFF);
     }
 
     &[value='100'] {
-      @include terra-border-end(0, solid, #FFF);
+      @include terra-border-end(0 solid #FFF);
     }
 
     &[value='0']::-moz-progress-bar,
     &[value='100']::-moz-progress-bar {
       @include terra-border-radius-end(0);
-      @include terra-border-end(0, solid, #FFF);
+      @include terra-border-end(0 solid #FFF);
     }
   }
 }
