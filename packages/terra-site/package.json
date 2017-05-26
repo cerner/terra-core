@@ -1,6 +1,5 @@
 {
   "name": "terra-site",
-  "private": true,
   "version": "0.0.0",
   "description": "Documentation Site for Functional Verification",
   "repository": {
@@ -15,6 +14,9 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
     "start": "webpack-dev-server --progress",
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "compile:heroku": "webpack --config webpack.prod.config --progress",
     "compile:prod": "webpack --config webpack.prod.config -p",
     "compile:prod-stats": "webpack --config webpack.prod.config -p --json > stats.json",
@@ -25,11 +27,8 @@
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.23.0",
     "moment": "^2.17.1",
     "prop-types": "^15.5.8",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
     "react-intl": "^2.3.0",
     "react-router": "^3.0.5",
     "terra-arrange": "^0.x",
@@ -60,10 +59,15 @@
     "terra-table": "^0.x",
     "terra-title": "^0.x"
   },
+  "peerDependencies":{
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -74,10 +78,12 @@
     "node-sass": "^4.5.2",
     "postcss-loader": "^1.3.3",
     "raw-loader": "^0.5.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "terra-i18n-plugin": "^0.x",
-    "webpack": "2.5.1",
+    "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
 }
