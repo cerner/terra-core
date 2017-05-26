@@ -32,8 +32,6 @@ var _TetherOverlay = require('./TetherOverlay');
 
 var _TetherOverlay2 = _interopRequireDefault(_TetherOverlay);
 
-require('./TetherComponent.scss');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -47,6 +45,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
 var propTypes = {
+  children: _propTypes2.default.node,
   /**
    * A hash of tether classes which should be changed or disabled.
    */
@@ -59,10 +58,6 @@ var propTypes = {
    * Rule set to pass to tether, contraining the content to.
    */
   constraints: _propTypes2.default.array,
-  /**
-   * Content to display within the tethered frame.
-   */
-  content: _propTypes2.default.element,
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
@@ -88,17 +83,9 @@ var propTypes = {
    */
   optimizations: _propTypes2.default.object,
   /**
-   * Element tag for the containg element.
-   */
-  renderElementTag: _propTypes2.default.string,
-  /**
-   * Html reference to have content appended to.
-   */
-  renderElementTo: _propTypes2.default.any,
-  /**
    * Required element to be presented and tethered to.
    */
-  target: _propTypes2.default.element.isRequired,
+  targetRef: _propTypes2.default.func.isRequired,
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
@@ -122,38 +109,20 @@ var propTypes = {
 };
 
 var defaultProps = {
+  children: [],
   disableOnPosition: false,
-  disablePageScroll: false,
-  renderElementTag: 'div',
-  renderElementTo: null
+  disablePageScroll: false
 };
 
 var TetherComponent = function (_React$Component) {
   _inherits(TetherComponent, _React$Component);
-
-  _createClass(TetherComponent, null, [{
-    key: 'isNodeInsideModal',
-    value: function isNodeInsideModal(node) {
-      if (node) {
-        var parentNode = node.parentNode;
-        while (parentNode && parentNode.classList) {
-          if (parentNode.classList.contains('terra-Modal')) {
-            return true;
-            break;
-          }
-          parentNode = parentNode.parentNode;
-        }
-      }
-      return false;
-    }
-  }]);
 
   function TetherComponent(props) {
     _classCallCheck(this, TetherComponent);
 
     var _this = _possibleConstructorReturn(this, (TetherComponent.__proto__ || Object.getPrototypeOf(TetherComponent)).call(this, props));
 
-    _this.setTargetNode = _this.setTargetNode.bind(_this);
+    _this.setElementNode = _this.setElementNode.bind(_this);
     _this.handleOnUpdate = _this.handleOnUpdate.bind(_this);
     _this.handleOnRepositioned = _this.handleOnRepositioned.bind(_this);
     return _this;
@@ -162,7 +131,6 @@ var TetherComponent = function (_React$Component) {
   _createClass(TetherComponent, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this._targetInsideModal = TetherComponent.isNodeInsideModal(this._targetNode);
       this._update();
     }
   }, {
@@ -199,16 +167,6 @@ var TetherComponent = function (_React$Component) {
   }, {
     key: '_destroy',
     value: function _destroy() {
-      if (this._elementParentNode) {
-        _reactDom2.default.unmountComponentAtNode(this._elementParentNode);
-        this._elementParentNode.parentNode.removeChild(this._elementParentNode);
-      }
-
-      if (this._overlayParentNode) {
-        _reactDom2.default.unmountComponentAtNode(this._overlayParentNode);
-        this._overlayParentNode.parentNode.removeChild(this._overlayParentNode);
-      }
-
       if (this._tether) {
         this._tether.off('update');
         this._tether.off('repositioned');
@@ -216,18 +174,12 @@ var TetherComponent = function (_React$Component) {
       }
 
       this._elementParentNode = null;
-      this._overlayParentNode = null;
       this._tether = null;
     }
   }, {
     key: '_update',
     value: function _update() {
-      var _this2 = this;
-
-      var _props = this.props,
-          content = _props.content,
-          renderElementTag = _props.renderElementTag,
-          renderElementTo = _props.renderElementTo;
+      var content = this.props.content;
 
 
       if (!content) {
@@ -237,54 +189,23 @@ var TetherComponent = function (_React$Component) {
         return;
       }
 
-      var renderTo = renderElementTo || document.body;
-      if (!this._elementParentNode) {
-        var elementClassNames = (0, _classnames2.default)(['terra-TetherComponent-element', { 'terra-TetherComponent-element--modal': this._targetInsideModal }]);
-
-        this._elementParentNode = document.createElement(renderElementTag);
-        this._elementParentNode.className = elementClassNames;
-        renderTo.appendChild(this._elementParentNode);
-      }
-
-      var renderSubContent = function renderSubContent() {
-        _reactDom2.default.unstable_renderSubtreeIntoContainer(_this2, content, _this2._elementParentNode, function () {
-          _this2._updateTether();
-        });
-      };
-
-      if (this.props.disablePageScroll) {
-        var overlay = _react2.default.createElement(_TetherOverlay2.default, { displayAboveModal: this._targetInsideModal });
-
-        if (!this._overlayParentNode) {
-          this._overlayParentNode = document.createElement(renderElementTag);
-          this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
-          renderTo.appendChild(this._overlayParentNode);
-        }
-
-        _reactDom2.default.unstable_renderSubtreeIntoContainer(this, overlay, this._overlayParentNode, function () {
-          renderSubContent();
-        });
-      } else {
-        renderSubContent();
-      }
+      this._updateTether();
     }
   }, {
     key: '_updateTether',
     value: function _updateTether() {
-      var _props2 = this.props,
-          renderElementTag = _props2.renderElementTag,
-          renderElementTo = _props2.renderElementTo,
-          isEnabled = _props2.isEnabled,
-          target = _props2.target,
-          content = _props2.content,
-          contentAttachment = _props2.contentAttachment,
-          contentOffset = _props2.contentOffset,
-          customProps = _objectWithoutProperties(_props2, ['renderElementTag', 'renderElementTo', 'isEnabled', 'target', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
+      var _props = this.props,
+          isEnabled = _props.isEnabled,
+          targetRef = _props.targetRef,
+          content = _props.content,
+          contentAttachment = _props.contentAttachment,
+          contentOffset = _props.contentOffset,
+          customProps = _objectWithoutProperties(_props, ['isEnabled', 'targetRef', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
 
       var tetherOptions = _extends({
         attachment: contentAttachment,
-        element: this._elementParentNode,
-        target: this._targetNode
+        element: this._elementNode,
+        target: targetRef()
       }, customProps);
 
       //Aliased parameters
@@ -308,8 +229,8 @@ var TetherComponent = function (_React$Component) {
   }, {
     key: 'getNodeBounds',
     value: function getNodeBounds() {
-      var targetBounds = _tether2.default.Utils.getBounds(this._targetNode);
-      var presenterBounds = _tether2.default.Utils.getBounds(this._elementParentNode);
+      var targetBounds = _tether2.default.Utils.getBounds(this.props.targetRef());
+      var presenterBounds = _tether2.default.Utils.getBounds(this._elementNode);
       return { targetBounds: targetBounds, presenterBounds: presenterBounds };
     }
   }, {
@@ -333,40 +254,39 @@ var TetherComponent = function (_React$Component) {
       }
     }
   }, {
-    key: 'setTargetNode',
-    value: function setTargetNode(node) {
-      this._targetNode = node;
+    key: 'setElementNode',
+    value: function setElementNode(node) {
+      this._elementNode = node;
     }
   }, {
     key: 'render',
     value: function render() {
-      var _props3 = this.props,
-          classes = _props3.classes,
-          classPrefix = _props3.classPrefix,
-          constraints = _props3.constraints,
-          content = _props3.content,
-          contentAttachment = _props3.contentAttachment,
-          contentOffset = _props3.contentOffset,
-          disableOnPosition = _props3.disableOnPosition,
-          disablePageScroll = _props3.disablePageScroll,
-          isEnabled = _props3.isEnabled,
-          optimizations = _props3.optimizations,
-          renderElementTag = _props3.renderElementTag,
-          renderElementTo = _props3.renderElementTo,
-          target = _props3.target,
-          targetAttachment = _props3.targetAttachment,
-          targetModifier = _props3.targetModifier,
-          targetOffset = _props3.targetOffset,
-          onUpdate = _props3.onUpdate,
-          onRepositioned = _props3.onRepositioned,
-          customProps = _objectWithoutProperties(_props3, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'disablePageScroll', 'isEnabled', 'optimizations', 'renderElementTag', 'renderElementTo', 'target', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+      var _props2 = this.props,
+          children = _props2.children,
+          classes = _props2.classes,
+          classPrefix = _props2.classPrefix,
+          closePortal = _props2.closePortal,
+          constraints = _props2.constraints,
+          contentAttachment = _props2.contentAttachment,
+          contentOffset = _props2.contentOffset,
+          disableOnPosition = _props2.disableOnPosition,
+          disablePageScroll = _props2.disablePageScroll,
+          isEnabled = _props2.isEnabled,
+          optimizations = _props2.optimizations,
+          targetRef = _props2.targetRef,
+          targetAttachment = _props2.targetAttachment,
+          targetModifier = _props2.targetModifier,
+          targetOffset = _props2.targetOffset,
+          onUpdate = _props2.onUpdate,
+          onRepositioned = _props2.onRepositioned,
+          customProps = _objectWithoutProperties(_props2, ['children', 'classes', 'classPrefix', 'closePortal', 'constraints', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'disablePageScroll', 'isEnabled', 'optimizations', 'targetRef', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
       var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent-element', customProps.className]);
 
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: wrapperClassNames, ref: this.setTargetNode }),
-        this.props.target
+        _extends({}, customProps, { className: wrapperClassNames, ref: this.setElementNode }),
+        children
       );
     }
   }]);

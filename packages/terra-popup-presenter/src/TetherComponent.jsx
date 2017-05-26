@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
 import TetherOverlay from './TetherOverlay';
-import './TetherComponent.scss';
 
 const attachmentPositions = [
   'top left',
@@ -19,6 +18,7 @@ const attachmentPositions = [
 ];
 
 const propTypes = {
+  children: PropTypes.node,
   /**
    * A hash of tether classes which should be changed or disabled.
    */
@@ -31,10 +31,6 @@ const propTypes = {
    * Rule set to pass to tether, contraining the content to.
    */
   constraints: PropTypes.array,
-  /**
-   * Content to display within the tethered frame.
-   */
-  content: PropTypes.element,
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
@@ -60,17 +56,9 @@ const propTypes = {
    */
   optimizations: PropTypes.object,
   /**
-   * Element tag for the containg element.
-   */
-  renderElementTag: PropTypes.string,
-  /**
-   * Html reference to have content appended to.
-   */
-  renderElementTo: PropTypes.any,
-  /**
    * Required element to be presented and tethered to.
    */
-  target: PropTypes.element.isRequired,
+  targetRef: PropTypes.func.isRequired,
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
@@ -94,36 +82,20 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: [],
   disableOnPosition: false,
   disablePageScroll: false,
-  renderElementTag: 'div',
-  renderElementTo: null,
 };
 
 class TetherComponent extends React.Component {
-  static isNodeInsideModal(node) {
-    if (node) {
-      let parentNode = node.parentNode;
-      while (parentNode && parentNode.classList) {
-        if (parentNode.classList.contains('terra-Modal')) {
-          return true;
-          break;
-        }
-        parentNode = parentNode.parentNode;
-      }
-    }
-    return false;
-  }
-
   constructor(props) {
     super(props);
-    this.setTargetNode = this.setTargetNode.bind(this);
+    this.setElementNode = this.setElementNode.bind(this);
     this.handleOnUpdate = this.handleOnUpdate.bind(this);
     this.handleOnRepositioned = this.handleOnRepositioned.bind(this);
   }
 
   componentDidMount() {
-    this._targetInsideModal = TetherComponent.isNodeInsideModal(this._targetNode);
     this._update();
   }
 
@@ -154,16 +126,6 @@ class TetherComponent extends React.Component {
   }
 
   _destroy() {
-    if (this._elementParentNode) {
-      ReactDOM.unmountComponentAtNode(this._elementParentNode);
-      this._elementParentNode.parentNode.removeChild(this._elementParentNode);
-    }
-
-    if (this._overlayParentNode) {
-      ReactDOM.unmountComponentAtNode(this._overlayParentNode);
-      this._overlayParentNode.parentNode.removeChild(this._overlayParentNode);
-    }
-
     if (this._tether) {
       this._tether.off('update');
       this._tether.off('repositioned');
@@ -171,12 +133,11 @@ class TetherComponent extends React.Component {
     }
 
     this._elementParentNode = null;
-    this._overlayParentNode = null;
     this._tether = null;
   }
 
   _update() {
-    const { content, renderElementTag, renderElementTo } = this.props;
+    const { content } = this.props;
 
     if (!content) {
       if (this._tether) {
@@ -185,52 +146,13 @@ class TetherComponent extends React.Component {
       return;
     }
 
-    const renderTo = renderElementTo || document.body;
-    if (!this._elementParentNode) {
-      const elementClassNames = classNames([
-        'terra-TetherComponent-element',
-        { 'terra-TetherComponent-element--modal': this._targetInsideModal },
-      ]);
-
-      this._elementParentNode = document.createElement(renderElementTag);
-      this._elementParentNode.className = elementClassNames;
-      renderTo.appendChild(this._elementParentNode);
-    }
-
-    const renderSubContent = () => {
-      ReactDOM.unstable_renderSubtreeIntoContainer(
-        this, content, this._elementParentNode, () => {
-          this._updateTether();
-        }
-      );
-    };
-
-  
-    if (this.props.disablePageScroll) {
-      const overlay = <TetherOverlay displayAboveModal={this._targetInsideModal} />;
-
-      if (!this._overlayParentNode) {
-        this._overlayParentNode = document.createElement(renderElementTag);
-        this._overlayParentNode.style.cssText = 'top: 0px;left: 0px;position: absolute;';
-        renderTo.appendChild(this._overlayParentNode);
-      }
-
-      ReactDOM.unstable_renderSubtreeIntoContainer(
-        this, overlay, this._overlayParentNode, () => {
-          renderSubContent();
-        }
-      );
-    } else {
-      renderSubContent();
-    }
+    this._updateTether();
   }
 
   _updateTether() {
     const { 
-      renderElementTag,
-      renderElementTo,
       isEnabled,
-      target,
+      targetRef,
       content,
       contentAttachment,
       contentOffset,
@@ -239,8 +161,8 @@ class TetherComponent extends React.Component {
 
     const tetherOptions = {
       attachment: contentAttachment,
-      element: this._elementParentNode,
-      target: this._targetNode,
+      element: this._elementNode,
+      target: targetRef(),
       ...customProps,
     }
 
@@ -265,8 +187,8 @@ class TetherComponent extends React.Component {
 
   getNodeBounds()
   {
-    const targetBounds = Tether.Utils.getBounds(this._targetNode);
-    const presenterBounds = Tether.Utils.getBounds(this._elementParentNode);
+    const targetBounds = Tether.Utils.getBounds(this.props.targetRef());
+    const presenterBounds = Tether.Utils.getBounds(this._elementNode);
     return {targetBounds, presenterBounds};
   }
 
@@ -288,25 +210,24 @@ class TetherComponent extends React.Component {
     }
   }
 
-  setTargetNode(node) {
-    this._targetNode = node;
+  setElementNode(node) {
+    this._elementNode = node;
   }
 
   render () {
     const {
+      children,
       classes,
       classPrefix,
+      closePortal,
       constraints,
-      content,
       contentAttachment,
       contentOffset,
       disableOnPosition,
       disablePageScroll,
       isEnabled,
       optimizations,
-      renderElementTag,
-      renderElementTo,
-      target,
+      targetRef,
       targetAttachment,
       targetModifier,
       targetOffset,
@@ -321,8 +242,8 @@ class TetherComponent extends React.Component {
     ]);
 
     return (
-      <div {...customProps} className={wrapperClassNames} ref={this.setTargetNode}>
-        {this.props.target}
+      <div {...customProps} className={wrapperClassNames} ref={this.setElementNode}>
+        {children}
       </div>
     );
   }
