@@ -36,11 +36,9 @@
     "terra-base": "^0.x",
     "terra-button": "^0.x",
     "terra-button-group": "^0.x",
-    "terra-content": "^0.x",
     "terra-content-container": "^0.x",
     "terra-date-picker": "^0.x",
     "terra-demographics-banner": "^0.x",
-    "terra-form": "^0.x",
     "terra-grid": "^2.0.0",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
@@ -54,16 +52,18 @@
     "terra-props-table": "^0.x",
     "terra-responsive-element": "^0.x",
     "terra-slide-panel": "^0.x",
-    "terra-standout": "^0.x",
     "terra-status": "^0.x",
-    "terra-table": "^0.x",
-    "terra-title": "^0.x"
+    "terra-table": "^0.x"
   },
   "peerDependencies":{
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "terra-content": "^0.x",
+    "terra-form": "^0.x",
+    "terra-standout": "^0.x",
+    "terra-title": "^0.x",
     "autoprefixer": "^6.7.7",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
