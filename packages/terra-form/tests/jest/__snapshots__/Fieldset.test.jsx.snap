@@ -1,0 +1,37 @@
+exports[`test should render a Field that has children in it 1`] = `
+<fieldset
+  className="terra-Form-fieldset">
+  <legend
+    className="terra-Form-legend">
+    bar
+  </legend>
+  <input
+    type="radio"
+    value="Test" />
+  <small
+    className="terra-Form-helpText"
+    tabIndex="-1">
+    foo
+  </small>
+</fieldset>
+`;
+
+exports[`test should render a Fieldset that has the error, label, and help props set 1`] = `
+<fieldset
+  className="terra-Form-fieldset">
+  <legend
+    className="terra-Form-legend">
+    bar
+  </legend>
+  <small
+    className="terra-Form-helpText"
+    tabIndex="-1">
+    foo
+  </small>
+</fieldset>
+`;
+
+exports[`test should render a default component 1`] = `
+<fieldset
+  className="terra-Form-fieldset" />
+`;
