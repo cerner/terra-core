@@ -22,17 +22,17 @@
   td {
     @include terra-text-align-start;
     border: 0;
-    border-left: $terra-table-cell-border;
+    @include terra-border-start($terra-table-cell-border);
     display: table-cell;
     vertical-align: top;
 
     &:first-of-type {
-      border-left: $terra-table-row-border-vertical;
+      @include terra-border-start($terra-table-row-border-vertical);
     }
 
     &:last-of-type {
-      border-right: $terra-table-cell-border;
-      border-right: $terra-table-row-border-vertical;
+      @include terra-border-end($terra-table-cell-border);
+      @include terra-border-end($terra-table-row-border-vertical);
     }
   }
 
