@@ -17,6 +17,9 @@ const attachmentPositions = [
   'bottom right',
 ];
 
+
+// kasper todo: needs to take in z-index
+
 const propTypes = {
   children: PropTypes.node,
   /**

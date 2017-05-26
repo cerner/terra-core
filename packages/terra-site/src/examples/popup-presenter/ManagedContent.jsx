@@ -32,12 +32,14 @@ class ManagedContent extends React.Component {
 
   render() {
     return (
-      <div style={{position: 'relative', height: '500px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
-        <div style={{display: 'inline-block', position: 'absolute', top: '500px', left: '700px'}} ref={this.setButtonNode}>
-          <Button
-            text="popup button launcher"
-            onClick={this.handleButtonClick}
-          />
+      <div style={{position: 'relative', height: '500px', width: '100%', overflow: 'auto'}}>
+        <div style={{position: 'relative', height: '1500px', width: '1800px', backgroundColor: '#27de1c'}}>
+          <div style={{display: 'inline-block', position: 'absolute', top: '500px', left: '700px'}} ref={this.setButtonNode}>
+            <Button
+              text="popup button launcher"
+              onClick={this.handleButtonClick}
+            />
+          </div>
         </div>
       </div>
     );

@@ -66,7 +66,7 @@ const MIRROR_TB = {
 const defaultProps = {
   isOpen: false,
   showArrow: false,
-  zIndex: '1',
+  zIndex: '',
 };
 
 const WrappedPopupFrame = onClickOutside(PopupFrame);
@@ -207,13 +207,18 @@ class PopupPresenter extends React.Component {
     this._frameNode = node;
   }
 
-  createFrame(content, attachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose) {
+  createFrame(content, boundingFrame, attachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose) {
     let frameClasses;
     if (arrow) {
       const parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
       const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
       const position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
       frameClasses = PopupFrame.positionClasses[position];
+    }
+
+    let frameStyle;
+    if (boundingFrame) {
+      frameStyle = {maxWidth: boundingFrame.clientWidth, maxHeight: boundingFrame.clientHeight};  
     }
 
     const frameProps = {
@@ -224,9 +229,10 @@ class PopupPresenter extends React.Component {
       content,
       onRequestClose,
       refCallback: this.setFrameNode,
+      style: frameStyle,
     };
 
-    return <WrappedPopupFrame {...frameProps} />; //maybe need additional div, not sure
+    return <WrappedPopupFrame {...frameProps} />;
   }
 
   render () {
@@ -250,22 +256,21 @@ class PopupPresenter extends React.Component {
       ...customProps,
     } = this.props; // eslint-disable-line no-unused-vars
 
+    const boundingFrame = boundingRef ? boundingRef() : undefined;
+
     let popupFrame;
     if (isOpen && content) {
       let arrow;
       if (showArrow) {
         arrow = <PopupArrow refCallback={this.setArrowNode} />;
       }
-
-      popupFrame = this.createFrame(content, this.props.contentAttachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose);
+      popupFrame = this.createFrame(content, boundingFrame, this.props.contentAttachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose);
     }
   
-    const bounding = boundingRef ? boundingRef() : undefined;
-    const container = bounding || 'window';
-
+    // todo: discuss also bounding to window and frame
     const constraints = [
       {
-        to: container,
+        to: (boundingFrame || 'window'),
         attachment: 'together',
         pin: true,
       },

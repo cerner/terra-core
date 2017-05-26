@@ -4,8 +4,9 @@ $terra-popup-frame-margin: 10px;
 
 // These are relative to screen coordinates, so no bi-di concerns
 .terra-PopupFrame {
-  max-height: calc(100vh - 20px);
-  max-width: calc(100vw - 20px);
+  // default to maximum of the screen
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 .terra-PopupFrame-content {

@@ -13,7 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-  zIndex: '500',
+  zIndex: '5001',
 };
 
 class PopupManager extends React.Component {
@@ -69,6 +69,7 @@ class PopupManager extends React.Component {
       );
     }
     
+    // todo: determine pattern for zindex
     return (
       <div className="terra-PopupManager" ref={this.setManagerNode}>
         {React.Children.map(children, (child) => {

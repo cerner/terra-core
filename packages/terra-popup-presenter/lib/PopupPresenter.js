@@ -114,7 +114,7 @@ var MIRROR_TB = {
 var defaultProps = {
   isOpen: false,
   showArrow: false,
-  zIndex: '1'
+  zIndex: ''
 };
 
 var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default);
@@ -278,13 +278,18 @@ var PopupPresenter = function (_React$Component) {
     }
   }, {
     key: 'createFrame',
-    value: function createFrame(content, attachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose) {
+    value: function createFrame(content, boundingFrame, attachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose) {
       var frameClasses = void 0;
       if (arrow) {
         var parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
         var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
         var position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
         frameClasses = _PopupFrame2.default.positionClasses[position];
+      }
+
+      var frameStyle = void 0;
+      if (boundingFrame) {
+        frameStyle = { maxWidth: boundingFrame.clientWidth, maxHeight: boundingFrame.clientHeight };
       }
 
       var frameProps = {
@@ -294,10 +299,11 @@ var PopupPresenter = function (_React$Component) {
         closeOnOutsideClick: closeOnOutsideClick,
         content: content,
         onRequestClose: onRequestClose,
-        refCallback: this.setFrameNode
+        refCallback: this.setFrameNode,
+        style: frameStyle
       };
 
-      return _react2.default.createElement(WrappedPopupFrame, frameProps); //maybe need additional div, not sure
+      return _react2.default.createElement(WrappedPopupFrame, frameProps);
     }
   }, {
     key: 'render',
@@ -321,21 +327,20 @@ var PopupPresenter = function (_React$Component) {
           zIndex = _props.zIndex,
           customProps = _objectWithoutProperties(_props, ['boundingRef', 'classes', 'closeOnEsc', 'closeOnOutsideClick', 'content', 'contentOffset', 'isOpen', 'onRequestClose', 'onUpdate', 'optimizations', 'renderElementTag', 'renderElementTo', 'showArrow', 'targetModifier', 'targetOffset', 'zIndex']); // eslint-disable-line no-unused-vars
 
+      var boundingFrame = boundingRef ? boundingRef() : undefined;
+
       var popupFrame = void 0;
       if (isOpen && content) {
         var arrow = void 0;
         if (showArrow) {
           arrow = _react2.default.createElement(_PopupArrow2.default, { refCallback: this.setArrowNode });
         }
-
-        popupFrame = this.createFrame(content, this.props.contentAttachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose);
+        popupFrame = this.createFrame(content, boundingFrame, this.props.contentAttachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose);
       }
 
-      var bounding = boundingRef ? boundingRef() : undefined;
-      var container = bounding || 'window';
-
+      // todo: discuss also bounding to window and frame
       var constraints = [{
-        to: container,
+        to: boundingFrame || 'window',
         attachment: 'together',
         pin: true
       }];

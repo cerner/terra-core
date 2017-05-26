@@ -41,7 +41,7 @@ var propTypes = {
 
 var defaultProps = {
   children: [],
-  zIndex: '500'
+  zIndex: '5001'
 };
 
 var PopupManager = function (_React$Component) {
@@ -112,6 +112,7 @@ var PopupManager = function (_React$Component) {
         });
       }
 
+      // todo: determine pattern for zindex
       return _react2.default.createElement(
         'div',
         { className: 'terra-PopupManager', ref: this.setManagerNode },

@@ -44,6 +44,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
+// kasper todo: needs to take in z-index
+
 var propTypes = {
   children: _propTypes2.default.node,
   /**

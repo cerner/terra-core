@@ -43,6 +43,7 @@ class PopupPresenterStandard extends React.Component {
                 showArrow
                 targetRef={this.getButtonNode}
                 onRequestClose={this.handleRequestClose}
+                zIndex="7000"
               />
               <div style={{display: 'inline-block', position: 'absolute', top: '500px', left: '700px'}} ref={this.setButtonNode}>
                 <Button text="popup button launcher" onClick={this.handleButtonClick} />
