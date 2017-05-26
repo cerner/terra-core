@@ -6,18 +6,18 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
     super();
 
     this.state = {
-      isOpened: true,
+      isOpen: true,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
   handleOpenModal() {
-    this.setState({ isOpened: true });
+    this.setState({ isOpen: true });
   }
 
   handleCloseModal() {
-    this.setState({ isOpened: false });
+    this.setState({ isOpen: false });
   }
 
   render() {
@@ -25,7 +25,7 @@ class ModalDisableCloseOnOutsideClick extends React.Component {
       <div>
         <Modal
           ariaLabel="Terra Modal"
-          isOpened={this.state.isOpened}
+          isOpen={this.state.isOpen}
           closeOnOutsideClick={false}
           onRequestClose={this.handleCloseModal}
         >
