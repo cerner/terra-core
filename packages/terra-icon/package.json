@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -24,18 +24,18 @@
     "jsdom": "^9.11.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
-    "terra-toolkit": "^0.3.1"
+    "terra-toolkit": "^0.3.2"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.4.1",
+    "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.4.1",
+    "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1"
   },
   "scripts": {

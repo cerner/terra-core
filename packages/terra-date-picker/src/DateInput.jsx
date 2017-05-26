@@ -51,6 +51,7 @@ class DatePickerInput extends React.Component {
           onClick={this.props.onClick}
           onKeyDown={this.props.onKeyDown}
           icon={Icon}
+          type="button"
         />
       </div>)
     );

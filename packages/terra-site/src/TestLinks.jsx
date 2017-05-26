@@ -12,6 +12,7 @@ const TestLinks = () => (
       <li><Link to="/tests/button-group-tests">Button Group Tests</Link></li>
       <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
       <li><Link to="/tests/demographics-banner-tests">DemographicsBanner Tests</Link></li>
+      <li><Link to="/tests/form-tests">Form Tests</Link></li>
       <li><Link to="/tests/i18n-tests">I18n Tests</Link></li>
       <li><Link to="/tests/icon-tests">Icon Tests</Link></li>
       <li><Link to="/tests/image-tests">Image Tests</Link></li>
