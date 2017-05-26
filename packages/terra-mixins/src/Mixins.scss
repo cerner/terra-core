@@ -104,31 +104,31 @@
   }
 }
 
-@mixin terra-border-start ($width, $style, $color) {
+@mixin terra-border-start ($border) {
   @if $terra-bidi {
     [dir='ltr'] & {
-      border-left: $width $style $color;
+      border-left: $border;
     }
 
     [dir='rtl'] & {
-      border-right: $width $style $color;
+      border-right: $border;
     }
   } @else {
-    border-left: $width $style $color;
+    border-left: $border;
   }
 }
 
-@mixin terra-border-end ($width, $style, $color) {
+@mixin terra-border-end ($border) {
   @if $terra-bidi {
     [dir='ltr'] & {
-      border-right: $width $style $color;
+      border-right: $border;
     }
 
     [dir='rtl'] & {
-      border-left: $width $style $color;
+      border-left: $border;
     }
   } @else {
-    border-right: $width $style $color;
+    border-right: $border;
   }
 }
 
