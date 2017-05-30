@@ -33,7 +33,7 @@ module.exports = {
   },
   'Displays a content for list item with the provided content': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/content`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/default`)
       .assert.elementPresent('.terra-ListItem p:nth-child(1)')
       .assert.containsText('.terra-ListItem p:nth-child(1)', 'test content');
   },
