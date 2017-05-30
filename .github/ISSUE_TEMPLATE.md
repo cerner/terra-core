@@ -1,7 +1,3 @@
-<!------------------------------------------------------------------->
-<!-- Please fill out the appropriate sections below as best you can. -->
-<!------------------------------------------------------------------->
-
 # Issue Description
 <!-- Describe the issue as best you can. We love screenshots! -->
 
