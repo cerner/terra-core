@@ -48,16 +48,11 @@ var propTypes = {
     if (Object.keys(props[propName]).length !== 0 && props.locale === undefined) {
       return new Error('Missing locale prop for ' + propName + ' in ' + componentName + ' props');
     }
-  },
-  /**
-   * Component used as PlaceHolder when the translations loading.
-   */
-  loadingPlaceholder: _propTypes2.default.node
+  }
 };
 
 var defaultProps = {
-  customMessages: {},
-  loadingPlaceholder: null
+  customMessages: {}
 };
 
 var Base = function (_React$Component) {
@@ -98,8 +93,7 @@ var Base = function (_React$Component) {
           children = _props.children,
           locale = _props.locale,
           customMessages = _props.customMessages,
-          loadingPlaceholder = _props.loadingPlaceholder,
-          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages', 'loadingPlaceholder']);
+          customProps = _objectWithoutProperties(_props, ['children', 'locale', 'customMessages']);
 
       var childComponent = _react2.default.createElement(
         'div',
@@ -110,7 +104,7 @@ var Base = function (_React$Component) {
       var messages = _extends({}, this.state.messages, customMessages);
 
       if (locale === undefined) return childComponent;
-      if (!this.state.areTranslationsLoaded) return loadingPlaceholder;
+      if (!this.state.areTranslationsLoaded) return null;
       return _react2.default.createElement(
         _terraI18n.I18nProvider,
         { locale: this.state.locale, messages: messages },
