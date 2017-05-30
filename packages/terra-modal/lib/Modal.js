@@ -70,7 +70,7 @@ var propTypes = {
   /**
    * If set to true, the modal will rendered as opened
    **/
-  isOpened: _propTypes2.default.bool.isRequired,
+  isOpen: _propTypes2.default.bool.isRequired,
   /**
    * If set to true, the modal dialog with have overflow-y set to scroll.
    * It is recommended not to use this prop and instead create a HOC
@@ -78,7 +78,7 @@ var propTypes = {
    **/
   isScrollable: _propTypes2.default.bool,
   /**
-   * Function to set isOpened={false} and close the modal.
+   * Function to set isOpen={false} and close the modal.
    **/
   onRequestClose: _propTypes2.default.func.isRequired,
   /**
@@ -95,7 +95,7 @@ var defaultProps = {
   closeOnEsc: true,
   closeOnOutsideClick: true,
   isFullscreen: false,
-  isOpened: false,
+  isOpen: false,
   isScrollable: false,
   role: 'document'
 };
@@ -129,7 +129,7 @@ var Modal = function (_React$Component) {
   }, {
     key: 'handleKeydown',
     value: function handleKeydown(e) {
-      if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened && this.props.closeOnEsc) {
+      if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpen && this.props.closeOnEsc) {
         this.props.onRequestClose();
       }
     }
@@ -144,20 +144,20 @@ var Modal = function (_React$Component) {
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           isFullscreen = _props.isFullscreen,
-          isOpened = _props.isOpened,
+          isOpen = _props.isOpen,
           isScrollable = _props.isScrollable,
           role = _props.role,
           onRequestClose = _props.onRequestClose,
-          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpened', 'isScrollable', 'role', 'onRequestClose']);
+          customProps = _objectWithoutProperties(_props, ['ariaLabel', 'children', 'classNameModal', 'classNameOverlay', 'closeOnEsc', 'closeOnOutsideClick', 'isFullscreen', 'isOpen', 'isScrollable', 'role', 'onRequestClose']);
 
-      if (!isOpened) {
+      if (!isOpen) {
         return null;
       }
 
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({
-          isOpened: isOpened
+          isOpened: isOpen
         }, customProps),
         _react2.default.createElement(
           _ModalContent2.default,

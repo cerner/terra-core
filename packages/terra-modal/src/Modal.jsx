@@ -38,7 +38,7 @@ const propTypes = {
   /**
    * If set to true, the modal will rendered as opened
    **/
-  isOpened: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   /**
    * If set to true, the modal dialog with have overflow-y set to scroll.
    * It is recommended not to use this prop and instead create a HOC
@@ -46,7 +46,7 @@ const propTypes = {
    **/
   isScrollable: PropTypes.bool,
   /**
-   * Function to set isOpened={false} and close the modal.
+   * Function to set isOpen={false} and close the modal.
    **/
   onRequestClose: PropTypes.func.isRequired,
   /**
@@ -63,7 +63,7 @@ const defaultProps = {
   closeOnEsc: true,
   closeOnOutsideClick: true,
   isFullscreen: false,
-  isOpened: false,
+  isOpen: false,
   isScrollable: false,
   role: 'document',
 };
@@ -87,7 +87,7 @@ class Modal extends React.Component {
   }
 
   handleKeydown(e) {
-    if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpened && this.props.closeOnEsc) {
+    if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpen && this.props.closeOnEsc) {
       this.props.onRequestClose();
     }
   }
@@ -101,19 +101,19 @@ class Modal extends React.Component {
           closeOnEsc,
           closeOnOutsideClick,
           isFullscreen,
-          isOpened,
+          isOpen,
           isScrollable,
           role,
           onRequestClose,
            ...customProps } = this.props;
 
-    if (!isOpened) {
+    if (!isOpen) {
       return null;
     }
 
     return (
       <Portal
-        isOpened={isOpened}
+        isOpened={isOpen}
         {...customProps}
       >
         <ModalContent
