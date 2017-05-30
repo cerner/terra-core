@@ -8,6 +8,10 @@ import ReadMe from 'terra-form/docs/README.md';
 import FieldDocs from 'terra-form/docs/Field.md';
 import FieldsetDocs from 'terra-form/docs/Fieldset.md';
 import InputDocs from 'terra-form/docs/Input.md';
+import NumberFieldDocs from 'terra-form/docs/NumberField.md';
+import TextareaDocs from 'terra-form/docs/Textarea.md';
+import TextareaFieldDocs from 'terra-form/docs/TextareaField.md';
+import TextFieldDocs from 'terra-form/docs/TextField.md';
 
 import { version } from 'terra-form/package.json';
 
@@ -15,6 +19,10 @@ import { version } from 'terra-form/package.json';
 import FieldSrc from '!raw-loader!terra-form/src/Field';
 import FieldsetSrc from '!raw-loader!terra-form/src/Fieldset';
 import InputSrc from '!raw-loader!terra-form/src/Input';
+import NumberFieldSrc from '!raw-loader!terra-form/src/NumberField';
+import TextareaSrc from '!raw-loader!terra-form/src/Textarea';
+import TextareaFieldSrc from '!raw-loader!terra-form/src/TextareaField';
+import TextFieldSrc from '!raw-loader!terra-form/src/TextField';
 
 // Example Files
 import ControlledInputDocs from './docs/ControlledInput.md';
@@ -22,6 +30,10 @@ import ControlledInput from './examples/ControlledInput';
 import FieldExamples from './examples/Field';
 import FieldsetExamples from './examples/Fieldset';
 import InputExamples from './examples/Input';
+import NumberFieldExamples from './examples/NumberField';
+import TextareaExamples from './examples/Textarea';
+import TextareaFieldExamples from './examples/TextareaField';
+import TextFieldExamples from './examples/TextField';
 
 const scrollToComponent = (id) => {
   document.querySelector(id).scrollIntoView();
@@ -37,10 +49,25 @@ const FormsExamples = () => (
       <Button text="Field" variant="link" onClick={() => { scrollToComponent('#field'); }} />
     </div>
     <div>
-      <Button text="Fieldset" variant="link" onClick={() => { scrollToComponent('#field'); }} />
+      <Button text="Fieldset" variant="link" onClick={() => { scrollToComponent('#fieldset'); }} />
     </div>
     <div>
       <Button text="Input" variant="link" onClick={() => { scrollToComponent('#input'); }} />
+    </div>
+    <div>
+      <Button text="Number Field" variant="link" onClick={() => { scrollToComponent('#number-field'); }} />
+    </div>
+    <div>
+      <Button text="Textarea" variant="link" onClick={() => { scrollToComponent('#textarea'); }} />
+    </div>
+    <div>
+      <Button text="Textarea Field" variant="link" onClick={() => { scrollToComponent('#textarea-field'); }} />
+    </div>
+    <div>
+      <Button text="Text Field" variant="link" onClick={() => { scrollToComponent('#text-field'); }} />
+    </div>
+    <div>
+      <Button text="Controlled Input Example" variant="link" onClick={() => { scrollToComponent('#controlled-input-example'); }} />
     </div>
     <Markdown id="field-docs" src={FieldDocs} />
     <PropsTable id="field-props" src={FieldSrc} />
@@ -51,7 +78,19 @@ const FormsExamples = () => (
     <Markdown id="input-docs" src={InputDocs} />
     <PropsTable id="input-props" src={InputSrc} />
     <InputExamples />
-    <Markdown id="controlled-example" src={ControlledInputDocs} />
+    <Markdown id="number-field-docs" src={NumberFieldDocs} />
+    <PropsTable id="number-field-props" src={NumberFieldSrc} />
+    <NumberFieldExamples />
+    <Markdown id="text-area-docs" src={TextareaDocs} />
+    <PropsTable id="text-area-props" src={TextareaSrc} />
+    <TextareaExamples />
+    <Markdown id="text-area-field-docs" src={TextareaFieldDocs} />
+    <PropsTable id="text-area-field-props" src={TextareaFieldSrc} />
+    <TextareaFieldExamples />
+    <Markdown id="text-field-docs" src={TextFieldDocs} />
+    <PropsTable id="text-field-props" src={TextFieldSrc} />
+    <TextFieldExamples />
+    <Markdown id="controlled-input-example" src={ControlledInputDocs} />
     <ControlledInput />
   </div>
 );

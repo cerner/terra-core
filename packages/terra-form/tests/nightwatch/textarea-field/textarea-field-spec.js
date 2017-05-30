@@ -1,0 +1,49 @@
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+
+const screenshot = require('terra-toolkit').screenshot;
+
+module.exports = {
+  before: (browser, done) => {
+    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+  },
+
+  afterEach: (browser, done) => {
+    screenshot(browser, 'terra-form', done);
+  },
+
+  'Displays a default TextareaField with a number input': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea-field/default`)
+      .assert.elementPresent('.terra-Form-field')
+      .assert.elementPresent('textarea');
+  },
+
+  'Displays a populated TextareaField with correct label, help message, and choices': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea-field/populated_uncontrolled`)
+      .assert.elementPresent('.terra-Form-field')
+      .assert.elementPresent('.terra-Form-field--inline')
+      .assert.containsText('label', 'Profile Description')
+      .assert.containsText('.terra-Form-helpText', 'This is what will be seen on your main page')
+      .assert.containsText('.terra-Form-error', 'Profile Description is required');
+  },
+
+
+  'Properly initializes TextareaField as uncontrolled when passed defaultValue': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea-field/populated_uncontrolled`)
+      .assert.elementPresent('textarea[name="profile_description"][required]')
+      .clearValue('textarea[name="profile_description"]')
+      .setValue('textarea[name="profile_description"]', 'New Profile')
+      .assert.value('textarea[name="profile_description"]', 'New Profile');
+  },
+
+  'Properly initializes TextareaField as controlled when passed value and onChange': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea-field/populated_controlled`)
+      .assert.elementPresent('textarea[name="profile_description"][required]')
+      .clearValue('textarea[name="profile_description"]')
+      .setValue('textarea[name="profile_description"]', 'New Profile')
+      .assert.value('textarea[name="profile_description"]', 'New Profile');
+  },
+};

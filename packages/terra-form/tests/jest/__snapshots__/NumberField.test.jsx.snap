@@ -1,0 +1,35 @@
+exports[`test should render a NumberField with the rest of the props 1`] = `
+<Field
+  error="This field is required"
+  help="Your county\'s office may have this information"
+  isInline={false}
+  label="Sales Tax Rate"
+  required={true}>
+  <Input
+    className="cernerConsumer-application"
+    max={1}
+    min={0}
+    name="sales_tax_rate"
+    required={true}
+    step={0.1}
+    type="number"
+    value={0.075} />
+</Field>
+`;
+
+exports[`test should render a default component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={true}>
+  <Input
+    max={null}
+    min={null}
+    name={null}
+    required={true}
+    step={null}
+    type="number" />
+</Field>
+`;

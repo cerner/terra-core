@@ -1,0 +1,17 @@
+exports[`test should render a TextArea with the rest of the props 1`] = `
+<textarea
+  aria-required="true"
+  className="terra-Form-textarea"
+  cols={15}
+  name="description"
+  required={true}
+  rows={5}
+  value="I\'m a software engineer working at Cerner" />
+`;
+
+exports[`test should render a default TextArea component 1`] = `
+<textarea
+  className="terra-Form-textarea"
+  name={null}
+  required={false} />
+`;
