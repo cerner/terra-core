@@ -36,4 +36,3 @@ More specifically, this command will:
 
 [project-url]: https://www.npmjs.com/org/cerner
 [semantic-versioning]: http://semver.org/
-[release-script]: https://github.com/cerner/terra-core/tree/master/scripts/release
