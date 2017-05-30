@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
+import ExamplePopupContent from './ExamplePopupContent';
 
 class ManagedContent extends React.Component {
   constructor(props) {
@@ -11,12 +12,14 @@ class ManagedContent extends React.Component {
 
   handleButtonClick(event) {
     if (this.props.presentPopup) {
-      const contentSection = <p style={{height: '200px', width: '400px'}}>i'm popup content, hear me roar!</p>;
+      const contentSection = <ExamplePopupContent />;
       const popupData = {
-        targetRef: this.getButtonNode,
-        content: contentSection,
-        contentAttachment: 'top center',
-        showArrow: true,
+        targetRef: this.getButtonNode, // required
+        content: contentSection, // required
+        contentAttachment: 'top center', // bottom middle or top middle? required or optional?
+        showArrow: true, // optional,  default true
+        disableScrolling: true, // adds overlay, optional default false
+        disableCloseHeader: false, // responsive header close button, default false
       };
       this.props.presentPopup(popupData);
     }

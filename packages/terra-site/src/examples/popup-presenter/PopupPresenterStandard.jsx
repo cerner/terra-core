@@ -1,6 +1,7 @@
 import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
 import Button from 'terra-button';
+import ExamplePopupContent from './ExamplePopupContent';
 
 class PopupPresenterStandard extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class PopupPresenterStandard extends React.Component {
   }
 
   render() {
-    const contentSection = <p style={{height: '200px', width: '400px'}}>i'm popup content, hear me roar!</p>;
+    const contentSection = <ExamplePopupContent />;
 
     return (
       <div id="durpplustwo" className="terra-Modal" style={{position: 'relative', height: '500px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
