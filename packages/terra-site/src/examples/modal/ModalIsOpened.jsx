@@ -1,12 +1,12 @@
 import React from 'react';
 import Modal from 'terra-modal';
 
-class ModalIsOpened extends React.Component {
+class ModalIsOpen extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      isOpened: false,
+      isOpen: false,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -14,11 +14,11 @@ class ModalIsOpened extends React.Component {
   }
 
   handleOpenModal() {
-    this.setState({ isOpened: true });
+    this.setState({ isOpen: true });
   }
 
   handleCloseModal() {
-    this.setState({ isOpened: false });
+    this.setState({ isOpen: false });
   }
 
   render() {
@@ -26,7 +26,7 @@ class ModalIsOpened extends React.Component {
       <div>
         <Modal
           ariaLabel="Default Modal"
-          isOpened={this.state.isOpened}
+          isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
         >
           <div>
@@ -51,4 +51,4 @@ class ModalIsOpened extends React.Component {
   }
 }
 
-export default ModalIsOpened;
+export default ModalIsOpen;
