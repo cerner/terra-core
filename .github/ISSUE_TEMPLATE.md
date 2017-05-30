@@ -1,15 +1,5 @@
-<!-- Keep the progress checklist.  -->
-## Progress
-- [ ] Design Input
-- [ ] Expected Behaviour
-- [ ] Tech Design
-- [ ] Development
-- [ ] Functional Validation
-- [ ] UX Validation
-- [ ] Released
-
 <!------------------------------------------------------------------->
-<!-- Please fill out the appropriate template below as best you can. -->
+<!-- Please fill out the appropriate sections below as best you can. -->
 <!------------------------------------------------------------------->
 
 # Issue Description
