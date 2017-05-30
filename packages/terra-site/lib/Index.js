@@ -198,16 +198,17 @@ var _IconTestRoutes = require('terra-icon/tests/nightwatch/IconTestRoutes');
 
 var _IconTestRoutes2 = _interopRequireDefault(_IconTestRoutes);
 
-var _FormTestRoutes = require('terra-form/tests/nightwatch/FormTestRoutes');
-
-var _FormTestRoutes2 = _interopRequireDefault(_FormTestRoutes);
-
 var _TestLinks = require('./TestLinks');
 
 var _TestLinks2 = _interopRequireDefault(_TestLinks);
 
+var _FormTestRoutes = require('terra-form/tests/nightwatch/FormTestRoutes');
+
+var _FormTestRoutes2 = _interopRequireDefault(_FormTestRoutes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* eslint-enable import/no-extraneous-dependencies */
 /* eslint-enable import/first */
 
 // Test
@@ -270,5 +271,8 @@ _reactDom2.default.render(_react2.default.createElement(
   _IconTestRoutes2.default,
   _FormTestRoutes2.default
 ), document.getElementById('root'));
+// Remove eslint-disable as these pacakges are published
+/* eslint-disable import/no-extraneous-dependencies */
+
 
 // Examples

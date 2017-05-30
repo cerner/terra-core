@@ -22,6 +22,8 @@ require('terra-standout');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* eslint-enable import/no-extraneous-dependencies */
+
 var StandoutExamples = function StandoutExamples() {
   return _react2.default.createElement(
     'div',
@@ -80,4 +82,6 @@ var StandoutExamples = function StandoutExamples() {
 };
 
 // eslint-disable-next-line import/extensions
+// remove eslint-disable once terra-standout has been published
+/* eslint-disable import/no-extraneous-dependencies */
 exports.default = StandoutExamples;

@@ -22,6 +22,8 @@ require('terra-content');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* eslint-enable import/no-extraneous-dependencies */
+
 var ContentExamples = function ContentExamples() {
   return _react2.default.createElement(
     'div',
@@ -459,4 +461,6 @@ var ContentExamples = function ContentExamples() {
 };
 
 // eslint-disable-next-line import/extensions
+// remove eslint-disable once terra-content has been published
+/* eslint-disable import/no-extraneous-dependencies */
 exports.default = ContentExamples;

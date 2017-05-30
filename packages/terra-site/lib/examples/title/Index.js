@@ -22,6 +22,8 @@ require('terra-title');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// remove eslint-enable once terra-title has been published
+
 var TitleExamples = function TitleExamples() {
   return _react2.default.createElement(
     'div',
@@ -401,4 +403,6 @@ var TitleExamples = function TitleExamples() {
 };
 
 // eslint-disable-next-line import/extensions
+// remove eslint-disable once terra-title has been published
+/* eslint-disable import/no-extraneous-dependencies */
 exports.default = TitleExamples;

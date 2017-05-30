@@ -22,6 +22,10 @@ var _Input2 = _interopRequireDefault(_Input);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* eslint-enable import/no-extraneous-dependencies */
+
+// remove eslint-disable once terra-form has been published
+/* eslint-disable import/no-extraneous-dependencies */
 var FieldsetExamples = function FieldsetExamples() {
   return _react2.default.createElement(
     'form',
