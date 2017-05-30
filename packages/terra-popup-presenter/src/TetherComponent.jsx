@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
-import TetherOverlay from './TetherOverlay';
 
 const attachmentPositions = [
   'top left',
@@ -17,11 +16,7 @@ const attachmentPositions = [
   'bottom right',
 ];
 
-
-// kasper todo: needs to take in z-index
-
 const propTypes = {
-  children: PropTypes.node,
   /**
    * A hash of tether classes which should be changed or disabled.
    */
@@ -35,6 +30,10 @@ const propTypes = {
    */
   constraints: PropTypes.array,
   /**
+   * The content to be tethered.
+   */
+  content: PropTypes.element,
+  /**
    * String pair of top, middle, bottom, and left, center, right.
    */
   contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
@@ -46,10 +45,6 @@ const propTypes = {
    * Should tethering be disabled following the initial presentation.
    */
   disableOnPosition: PropTypes.bool,
-  /**
-   * Should the scrolling eatin overlay be injected.
-   */
-  disablePageScroll: PropTypes.bool,
   /**
    * Should element be tethered to the page.
    */
@@ -85,9 +80,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: [],
   disableOnPosition: false,
-  disablePageScroll: false,
 };
 
 class TetherComponent extends React.Component {
@@ -129,13 +122,18 @@ class TetherComponent extends React.Component {
   }
 
   _destroy() {
+    if (this._elementNode) {
+      // ReactDOM.unmountComponentAtNode(this._elementNode);
+      this._elementNode.parentNode.removeChild(this._elementNode);
+    }
+
     if (this._tether) {
       this._tether.off('update');
       this._tether.off('repositioned');
       this._tether.destroy();
     }
 
-    this._elementParentNode = null;
+    this._elementNode = null;
     this._tether = null;
   }
 
@@ -219,15 +217,13 @@ class TetherComponent extends React.Component {
 
   render () {
     const {
-      children,
       classes,
       classPrefix,
-      closePortal,
       constraints,
+      content,
       contentAttachment,
       contentOffset,
       disableOnPosition,
-      disablePageScroll,
       isEnabled,
       optimizations,
       targetRef,
@@ -246,7 +242,7 @@ class TetherComponent extends React.Component {
 
     return (
       <div {...customProps} className={wrapperClassNames} ref={this.setElementNode}>
-        {children}
+        {content}
       </div>
     );
   }

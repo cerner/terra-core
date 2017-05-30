@@ -20,7 +20,7 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-require('./PopupFrame.scss');
+require('./Popup.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,18 +32,18 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FRAME_CLASSES = {
-  top: 'terra-PopupFrame--arrowTop',
-  bottom: 'terra-PopupFrame--arrowBottom',
-  left: 'terra-PopupFrame--arrowLeft',
-  right: 'terra-PopupFrame--arrowRight'
+var POPUP_CLASSES = {
+  top: 'terra-Popup--arrowTop',
+  bottom: 'terra-Popup--arrowBottom',
+  left: 'terra-Popup--arrowLeft',
+  right: 'terra-Popup--arrowRight'
 };
 
-var FRAME_OPPOSITE_CLASSES = {
-  top: 'terra-PopupFrame--arrowBottom',
-  bottom: 'terra-PopupFrame--arrowTop',
-  left: 'terra-PopupFrame--arrowRight',
-  right: 'terra-PopupFrame--arrowLeft'
+var POPUP_OPPOSITE_CLASSES = {
+  top: 'terra-Popup--arrowBottom',
+  bottom: 'terra-Popup--arrowTop',
+  left: 'terra-Popup--arrowRight',
+  right: 'terra-Popup--arrowLeft'
 };
 
 var KEYCODES = {
@@ -55,10 +55,6 @@ var propTypes = {
    * The arrow to be placed within the popup frame.
    */
   arrow: _propTypes2.default.element,
-  /**
-   * The content to be presented within the popup.
-   */
-  content: _propTypes2.default.element,
   /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
@@ -72,6 +68,10 @@ var propTypes = {
    */
   closeOnResize: _propTypes2.default.bool,
   /**
+   * The content to be presented within the popup.
+   */
+  content: _propTypes2.default.element.isRequired,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: _propTypes2.default.func,
@@ -83,18 +83,18 @@ var propTypes = {
 
 var defaultProps = {
   arrow: undefined,
-  content: undefined,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   closeOnResize: true,
+  content: undefined,
   onRequestClose: undefined,
   refCallback: undefined
 };
 
-var PopupFrame = function (_React$Component) {
-  _inherits(PopupFrame, _React$Component);
+var Popup = function (_React$Component) {
+  _inherits(Popup, _React$Component);
 
-  _createClass(PopupFrame, [{
+  _createClass(Popup, [{
     key: 'debounce',
     value: function debounce(fn, delay) {
       var timer = null;
@@ -109,10 +109,10 @@ var PopupFrame = function (_React$Component) {
     }
   }]);
 
-  function PopupFrame(props) {
-    _classCallCheck(this, PopupFrame);
+  function Popup(props) {
+    _classCallCheck(this, Popup);
 
-    var _this = _possibleConstructorReturn(this, (PopupFrame.__proto__ || Object.getPrototypeOf(PopupFrame)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Popup.__proto__ || Object.getPrototypeOf(Popup)).call(this, props));
 
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
     _this.handleKeydown = _this.handleKeydown.bind(_this);
@@ -120,7 +120,7 @@ var PopupFrame = function (_React$Component) {
     return _this;
   }
 
-  _createClass(PopupFrame, [{
+  _createClass(Popup, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.closeOnEsc) {
@@ -177,7 +177,9 @@ var PopupFrame = function (_React$Component) {
           refCallback = _props.refCallback,
           customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
-      var frameClassNames = (0, _classnames2.default)(['terra-PopupFrame', { 'terra-PopupFrame-showArrow': arrow }, customProps.className]);
+      var frameClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
+
+      var clonedContent = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
 
       return _react2.default.createElement(
         'div',
@@ -185,19 +187,19 @@ var PopupFrame = function (_React$Component) {
         arrow,
         _react2.default.createElement(
           'div',
-          { className: 'terra-PopupFrame-content' },
-          content
+          { className: 'terra-Popup-content' },
+          clonedContent
         )
       );
     }
   }]);
 
-  return PopupFrame;
+  return Popup;
 }(_react2.default.Component);
 
-PopupFrame.propTypes = propTypes;
-PopupFrame.defaultProps = defaultProps;
-PopupFrame.positionClasses = FRAME_CLASSES;
-PopupFrame.oppositePositionClasses = FRAME_OPPOSITE_CLASSES;
+Popup.propTypes = propTypes;
+Popup.defaultProps = defaultProps;
+Popup.positionClasses = POPUP_CLASSES;
+Popup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
-exports.default = PopupFrame;
+exports.default = Popup;

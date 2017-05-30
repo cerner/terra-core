@@ -98,9 +98,9 @@ var PopupManager = function (_React$Component) {
           zIndex = _props.zIndex;
 
 
-      var popup = void 0;
+      var popupPresenter = void 0;
       if (this.state.isOpen) {
-        popup = _react2.default.createElement(_PopupPresenter2.default, {
+        popupPresenter = _react2.default.createElement(_PopupPresenter2.default, {
           content: this.state.content,
           contentAttachment: this.state.contentAttachment,
           isOpen: this.state.isOpen,
@@ -112,14 +112,13 @@ var PopupManager = function (_React$Component) {
         });
       }
 
-      // todo: determine pattern for zindex
       return _react2.default.createElement(
         'div',
         { className: 'terra-PopupManager', ref: this.setManagerNode },
         _react2.default.Children.map(children, function (child) {
           return _react2.default.cloneElement(child, { presentPopup: _this2.handleRequestOpen });
         }),
-        popup
+        popupPresenter
       );
     }
   }]);

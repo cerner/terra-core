@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
-import './TetherOverlay.scss';
+import './PopupOverlay.scss';
 
 const propTypes = {
   /**
-   * Whether or not the z-index of the overlay should be placed above that of modal.
+   * The string representation of the index.
    */
-  displayAboveModal: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 const defaultProps = {
-  displayAboveModal: false,
+  children: [],
 };
 
-class TetherOverlay extends React.Component {
+class PopupOverlay extends React.Component {
 
   componentDidMount() {
     // Disable scrolling on the page when Overlay is displayed
@@ -28,15 +28,22 @@ class TetherOverlay extends React.Component {
   }
 
   render() {
-    const { displayAboveModal, ...customProps } = this.props;
+    const { children, closePortal, ...customProps } = this.props;
 
     const overlayClassNames = classNames([
-      'terra-TetherOverlay',
-      { 'terra-TetherOverlay--modal': displayAboveModal },
+      'terra-PopupOverlay',
     ]);
 
-    return <div {...customProps} className={overlayClassNames}><div className="terra-TetherOverlay-inner" /></div>;
+    return (
+      <div {...customProps} className={overlayClassNames}>
+        <div className="terra-PopupOverlay-inner" />
+        {children}
+      </div>
+    );
   }
 }
 
-export default TetherOverlay;
+PopupOverlay.propTypes = propTypes;
+PopupOverlay.defaultProps = defaultProps;
+
+export default PopupOverlay;

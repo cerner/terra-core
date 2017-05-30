@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './PopupFrame.scss';
+import './Popup.scss';
 
-const FRAME_CLASSES = {
-  top: 'terra-PopupFrame--arrowTop',
-  bottom: 'terra-PopupFrame--arrowBottom',
-  left: 'terra-PopupFrame--arrowLeft',
-  right: 'terra-PopupFrame--arrowRight',
+const POPUP_CLASSES = {
+  top: 'terra-Popup--arrowTop',
+  bottom: 'terra-Popup--arrowBottom',
+  left: 'terra-Popup--arrowLeft',
+  right: 'terra-Popup--arrowRight',
 };
 
-const FRAME_OPPOSITE_CLASSES = {
-  top: 'terra-PopupFrame--arrowBottom',
-  bottom: 'terra-PopupFrame--arrowTop',
-  left: 'terra-PopupFrame--arrowRight',
-  right: 'terra-PopupFrame--arrowLeft',
+const POPUP_OPPOSITE_CLASSES = {
+  top: 'terra-Popup--arrowBottom',
+  bottom: 'terra-Popup--arrowTop',
+  left: 'terra-Popup--arrowRight',
+  right: 'terra-Popup--arrowLeft',
 };
 
 const KEYCODES = {
@@ -26,10 +26,6 @@ const propTypes = {
    * The arrow to be placed within the popup frame.
    */
   arrow: PropTypes.element,
-  /**
-   * The content to be presented within the popup.
-   */
-  content: PropTypes.element,
   /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
@@ -43,6 +39,10 @@ const propTypes = {
    */
   closeOnResize: PropTypes.bool,
   /**
+   * The content to be presented within the popup.
+   */
+  content: PropTypes.element.isRequired,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: PropTypes.func,
@@ -54,15 +54,15 @@ const propTypes = {
 
 const defaultProps = {
   arrow: undefined,
-  content: undefined,
   closeOnEsc: true,
   closeOnOutsideClick: true,
   closeOnResize: true,
+  content: undefined,
   onRequestClose: undefined,
   refCallback: undefined,
 };
 
-class PopupFrame extends React.Component {
+class Popup extends React.Component {
   debounce(fn, delay) {
     let timer = null;
     return function () {
@@ -133,25 +133,27 @@ class PopupFrame extends React.Component {
     } = this.props;
 
     const frameClassNames = classNames([
-      'terra-PopupFrame',
-      { 'terra-PopupFrame-showArrow': arrow },
+      'terra-Popup',
+      { 'terra-Popup-showArrow': arrow },
       customProps.className,
     ]);
+
+    const clonedContent = React.cloneElement(content, {onRequestClose});
 
     return (
       <div {...customProps} className={frameClassNames} ref={refCallback}>
         {arrow}
-        <div className="terra-PopupFrame-content">
-          {content}
+        <div className="terra-Popup-content">
+          {clonedContent}
         </div>
       </div>
     );
   }
 }
 
-PopupFrame.propTypes = propTypes;
-PopupFrame.defaultProps = defaultProps;
-PopupFrame.positionClasses = FRAME_CLASSES;
-PopupFrame.oppositePositionClasses = FRAME_OPPOSITE_CLASSES;
+Popup.propTypes = propTypes;
+Popup.defaultProps = defaultProps;
+Popup.positionClasses = POPUP_CLASSES;
+Popup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
-export default PopupFrame;
+export default Popup;

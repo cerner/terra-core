@@ -28,10 +28,6 @@ var _tether = require('tether');
 
 var _tether2 = _interopRequireDefault(_tether);
 
-var _TetherOverlay = require('./TetherOverlay');
-
-var _TetherOverlay2 = _interopRequireDefault(_TetherOverlay);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -44,10 +40,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
-// kasper todo: needs to take in z-index
-
 var propTypes = {
-  children: _propTypes2.default.node,
   /**
    * A hash of tether classes which should be changed or disabled.
    */
@@ -61,6 +54,10 @@ var propTypes = {
    */
   constraints: _propTypes2.default.array,
   /**
+   * The content to be tethered.
+   */
+  content: _propTypes2.default.element,
+  /**
    * String pair of top, middle, bottom, and left, center, right.
    */
   contentAttachment: _propTypes2.default.oneOf(attachmentPositions).isRequired,
@@ -72,10 +69,6 @@ var propTypes = {
    * Should tethering be disabled following the initial presentation.
    */
   disableOnPosition: _propTypes2.default.bool,
-  /**
-   * Should the scrolling eatin overlay be injected.
-   */
-  disablePageScroll: _propTypes2.default.bool,
   /**
    * Should element be tethered to the page.
    */
@@ -111,9 +104,7 @@ var propTypes = {
 };
 
 var defaultProps = {
-  children: [],
-  disableOnPosition: false,
-  disablePageScroll: false
+  disableOnPosition: false
 };
 
 var TetherComponent = function (_React$Component) {
@@ -169,13 +160,18 @@ var TetherComponent = function (_React$Component) {
   }, {
     key: '_destroy',
     value: function _destroy() {
+      if (this._elementNode) {
+        // ReactDOM.unmountComponentAtNode(this._elementNode);
+        this._elementNode.parentNode.removeChild(this._elementNode);
+      }
+
       if (this._tether) {
         this._tether.off('update');
         this._tether.off('repositioned');
         this._tether.destroy();
       }
 
-      this._elementParentNode = null;
+      this._elementNode = null;
       this._tether = null;
     }
   }, {
@@ -264,15 +260,13 @@ var TetherComponent = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props2 = this.props,
-          children = _props2.children,
           classes = _props2.classes,
           classPrefix = _props2.classPrefix,
-          closePortal = _props2.closePortal,
           constraints = _props2.constraints,
+          content = _props2.content,
           contentAttachment = _props2.contentAttachment,
           contentOffset = _props2.contentOffset,
           disableOnPosition = _props2.disableOnPosition,
-          disablePageScroll = _props2.disablePageScroll,
           isEnabled = _props2.isEnabled,
           optimizations = _props2.optimizations,
           targetRef = _props2.targetRef,
@@ -281,14 +275,14 @@ var TetherComponent = function (_React$Component) {
           targetOffset = _props2.targetOffset,
           onUpdate = _props2.onUpdate,
           onRepositioned = _props2.onRepositioned,
-          customProps = _objectWithoutProperties(_props2, ['children', 'classes', 'classPrefix', 'closePortal', 'constraints', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'disablePageScroll', 'isEnabled', 'optimizations', 'targetRef', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
+          customProps = _objectWithoutProperties(_props2, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'isEnabled', 'optimizations', 'targetRef', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
       var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent-element', customProps.className]);
 
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: wrapperClassNames, ref: this.setElementNode }),
-        children
+        content
       );
     }
   }]);

@@ -22,7 +22,7 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 require('terra-base/lib/baseStyles');
 
-require('./TetherOverlay.scss');
+require('./PopupOverlay.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,25 +36,25 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
   /**
-   * Whether or not the z-index of the overlay should be placed above that of modal.
+   * The string representation of the index.
    */
-  displayAboveModal: _propTypes2.default.bool
+  children: _propTypes2.default.node
 };
 
 var defaultProps = {
-  displayAboveModal: false
+  children: []
 };
 
-var TetherOverlay = function (_React$Component) {
-  _inherits(TetherOverlay, _React$Component);
+var PopupOverlay = function (_React$Component) {
+  _inherits(PopupOverlay, _React$Component);
 
-  function TetherOverlay() {
-    _classCallCheck(this, TetherOverlay);
+  function PopupOverlay() {
+    _classCallCheck(this, PopupOverlay);
 
-    return _possibleConstructorReturn(this, (TetherOverlay.__proto__ || Object.getPrototypeOf(TetherOverlay)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (PopupOverlay.__proto__ || Object.getPrototypeOf(PopupOverlay)).apply(this, arguments));
   }
 
-  _createClass(TetherOverlay, [{
+  _createClass(PopupOverlay, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       // Disable scrolling on the page when Overlay is displayed
@@ -70,20 +70,25 @@ var TetherOverlay = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          displayAboveModal = _props.displayAboveModal,
-          customProps = _objectWithoutProperties(_props, ['displayAboveModal']);
+          children = _props.children,
+          closePortal = _props.closePortal,
+          customProps = _objectWithoutProperties(_props, ['children', 'closePortal']);
 
-      var overlayClassNames = (0, _classnames2.default)(['terra-TetherOverlay', { 'terra-TetherOverlay--modal': displayAboveModal }]);
+      var overlayClassNames = (0, _classnames2.default)(['terra-PopupOverlay']);
 
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: overlayClassNames }),
-        _react2.default.createElement('div', { className: 'terra-TetherOverlay-inner' })
+        _react2.default.createElement('div', { className: 'terra-PopupOverlay-inner' }),
+        children
       );
     }
   }]);
 
-  return TetherOverlay;
+  return PopupOverlay;
 }(_react2.default.Component);
 
-exports.default = TetherOverlay;
+PopupOverlay.propTypes = propTypes;
+PopupOverlay.defaultProps = defaultProps;
+
+exports.default = PopupOverlay;

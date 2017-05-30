@@ -53,9 +53,9 @@ class PopupManager extends React.Component {
     const { presentPopup, children , zIndex} = this.props;
 
 
-    let popup;
+    let popupPresenter;
     if (this.state.isOpen) {
-      popup = (
+      popupPresenter = (
         <PopupPresenter 
           content={this.state.content}
           contentAttachment={this.state.contentAttachment}
@@ -69,13 +69,12 @@ class PopupManager extends React.Component {
       );
     }
     
-    // todo: determine pattern for zindex
     return (
       <div className="terra-PopupManager" ref={this.setManagerNode}>
         {React.Children.map(children, (child) => {
           return React.cloneElement(child, { presentPopup: this.handleRequestOpen });
         })}
-        {popup}  
+        {popupPresenter}  
       </div>
     );
   }

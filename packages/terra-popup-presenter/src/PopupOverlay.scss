@@ -1,6 +1,6 @@
 @import '~terra-mixins';
 
-.terra-TetherOverlay {
+.terra-PopupOverlay {
   background-color: #fff;
   height: 100%;
   opacity: 0.01;
@@ -19,14 +19,10 @@
   }
 }
 
-.terra-TetherOverlay-inner {
+.terra-PopupOverlay-inner {
   height: 200%;
   position: absolute;
   top: 0;
   width: 200%;
   @include terra-position-start(0);
-}
-
-.terra-TetherOverlay--modal {
-  z-index: $terra-z-index-8;
 }

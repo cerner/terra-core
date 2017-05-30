@@ -30,13 +30,17 @@ var _reactOnclickoutside = require('react-onclickoutside');
 
 var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
 
-var _PopupFrame = require('./PopupFrame');
+var _Popup = require('./Popup');
 
-var _PopupFrame2 = _interopRequireDefault(_PopupFrame);
+var _Popup2 = _interopRequireDefault(_Popup);
 
 var _PopupArrow = require('./PopupArrow');
 
 var _PopupArrow2 = _interopRequireDefault(_PopupArrow);
+
+var _PopupOverlay = require('./PopupOverlay');
+
+var _PopupOverlay2 = _interopRequireDefault(_PopupOverlay);
 
 var _TetherComponent = require('./TetherComponent');
 
@@ -54,7 +58,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // consider dot notation
+
+
+var MIRROR_LR = {
+  center: 'center',
+  left: 'right',
+  right: 'left'
+};
+
+var MIRROR_TB = {
+  middle: 'middle',
+  top: 'bottom',
+  bottom: 'top'
+};
 
 var propTypes = {
   /**
@@ -62,21 +79,13 @@ var propTypes = {
    */
   boundingRef: _propTypes2.default.func,
   /**
-   * Should the popup trigger a close event on esc keydown.
-   */
-  closeOnEsc: _propTypes2.default.bool,
-  /**
-   * Should the popup trigger a close event click outside.
-   */
-  closeOnOutsideClick: _propTypes2.default.bool,
-  /**
-   * Content to be displayed within the popup.
+   * The content to be displayed within the popup.
    */
   content: _propTypes2.default.element,
   /**
    * Attachment point for the popup, this will be mirrored to the target.
    */
-  contentAttachment: _propTypes2.default.oneOf(_TetherComponent2.default.attachmentPositions).isRequired,
+  contentAttachment: _propTypes2.default.oneOf(_TetherComponent2.default.attachmentPositions),
   /**
    * Should the popup be presented as open.
    */
@@ -99,25 +108,15 @@ var propTypes = {
   zIndex: _propTypes2.default.string
 };
 
-var MIRROR_LR = {
-  center: 'center',
-  left: 'right',
-  right: 'left'
-};
-
-var MIRROR_TB = {
-  middle: 'middle',
-  top: 'bottom',
-  bottom: 'top'
-};
-
 var defaultProps = {
+  content: undefined,
+  contentAttachment: 'top center',
   isOpen: false,
   showArrow: false,
   zIndex: ''
 };
 
-var WrappedPopupFrame = (0, _reactOnclickoutside2.default)(_PopupFrame2.default);
+var WrappedPopup = (0, _reactOnclickoutside2.default)(_Popup2.default);
 
 var PopupPresenter = function (_React$Component) {
   _inherits(PopupPresenter, _React$Component);
@@ -235,10 +234,10 @@ var PopupPresenter = function (_React$Component) {
       }
 
       arrowNode.classList.remove(_PopupArrow2.default.oppositePositionClasses[position]);
-      frameNode.classList.remove(_PopupFrame2.default.oppositePositionClasses[position]);
+      frameNode.classList.remove(_Popup2.default.oppositePositionClasses[position]);
 
       arrowNode.classList.add(_PopupArrow2.default.positionClasses[position]);
-      frameNode.classList.add(_PopupFrame2.default.positionClasses[position]);
+      frameNode.classList.add(_Popup2.default.positionClasses[position]);
 
       if (['top', 'bottom'].indexOf(position) >= 0) {
         arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, _PopupArrow2.default.arrowSize);
@@ -277,33 +276,50 @@ var PopupPresenter = function (_React$Component) {
       this._frameNode = node;
     }
   }, {
-    key: 'createFrame',
-    value: function createFrame(content, boundingFrame, attachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose) {
-      var frameClasses = void 0;
+    key: 'createPopup',
+    value: function createPopup(content, boundingFrame, attachment, arrow, onRequestClose) {
+      var popupClasses = void 0;
       if (arrow) {
         var parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
         var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
         var position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
-        frameClasses = _PopupFrame2.default.positionClasses[position];
+        popupClasses = _Popup2.default.positionClasses[position];
       }
 
-      var frameStyle = void 0;
+      var popupStyle = void 0;
       if (boundingFrame) {
-        frameStyle = { maxWidth: boundingFrame.clientWidth, maxHeight: boundingFrame.clientHeight };
+        popupStyle = { maxWidth: boundingFrame.clientWidth, maxHeight: boundingFrame.clientHeight };
       }
 
-      var frameProps = {
+      var popupProps = {
         arrow: arrow,
-        className: frameClasses,
-        closeOnEsc: closeOnEsc,
-        closeOnOutsideClick: closeOnOutsideClick,
         content: content,
+        className: popupClasses,
         onRequestClose: onRequestClose,
         refCallback: this.setFrameNode,
-        style: frameStyle
+        style: popupStyle
       };
 
-      return _react2.default.createElement(WrappedPopupFrame, frameProps);
+      return _react2.default.createElement(WrappedPopup, popupProps);
+    }
+  }, {
+    key: 'createPortalContent',
+    value: function createPortalContent(tetherContent, boundingFrame, zIndex, useOverlay) {
+      var overlayStyle = { zIndex: zIndex };
+      // if (boundingFrame) {
+      //   overlayStyle.maxWidth = boundingFrame.clientWidth;
+      //   overlayStyle.maxHeight = boundingFrame.clientHeight;  
+      // }
+
+      if (!useOverlay) {
+        return tetherContent;
+      }
+
+      return _react2.default.createElement(
+        _PopupOverlay2.default,
+        { style: overlayStyle },
+        tetherContent
+      );
     }
   }, {
     key: 'render',
@@ -311,10 +327,9 @@ var PopupPresenter = function (_React$Component) {
       var _props = this.props,
           boundingRef = _props.boundingRef,
           classes = _props.classes,
-          closeOnEsc = _props.closeOnEsc,
-          closeOnOutsideClick = _props.closeOnOutsideClick,
           content = _props.content,
           contentOffset = _props.contentOffset,
+          contentAttachment = _props.contentAttachment,
           isOpen = _props.isOpen,
           onRequestClose = _props.onRequestClose,
           onUpdate = _props.onUpdate,
@@ -325,20 +340,20 @@ var PopupPresenter = function (_React$Component) {
           targetModifier = _props.targetModifier,
           targetOffset = _props.targetOffset,
           zIndex = _props.zIndex,
-          customProps = _objectWithoutProperties(_props, ['boundingRef', 'classes', 'closeOnEsc', 'closeOnOutsideClick', 'content', 'contentOffset', 'isOpen', 'onRequestClose', 'onUpdate', 'optimizations', 'renderElementTag', 'renderElementTo', 'showArrow', 'targetModifier', 'targetOffset', 'zIndex']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['boundingRef', 'classes', 'content', 'contentOffset', 'contentAttachment', 'isOpen', 'onRequestClose', 'onUpdate', 'optimizations', 'renderElementTag', 'renderElementTo', 'showArrow', 'targetModifier', 'targetOffset', 'zIndex']); // eslint-disable-line no-unused-vars
 
       var boundingFrame = boundingRef ? boundingRef() : undefined;
 
-      var popupFrame = void 0;
+      var popup = void 0;
       if (isOpen && content) {
         var arrow = void 0;
         if (showArrow) {
           arrow = _react2.default.createElement(_PopupArrow2.default, { refCallback: this.setArrowNode });
         }
-        popupFrame = this.createFrame(content, boundingFrame, this.props.contentAttachment, arrow, closeOnEsc, closeOnOutsideClick, onRequestClose);
+        popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose);
       }
 
-      // todo: discuss also bounding to window and frame
+      var disableScrolling = true;
       var constraints = [{
         to: boundingFrame || 'window',
         attachment: 'together',
@@ -346,25 +361,23 @@ var PopupPresenter = function (_React$Component) {
       }];
 
       var tetherOptions = _extends({}, customProps, {
-        classPrefix: 'terra-Popup',
+        classPrefix: 'terra-PopupPresenter',
         constraints: constraints,
-        content: popupFrame,
-        // disableOnPosition: true,
-        // disablePageScroll: true,
+        content: popup,
+        contentAttachment: contentAttachment,
+        disableOnPosition: disableScrolling,
         isEnabled: true,
         onRepositioned: this.handleTetherRepositioned,
-        targetAttachment: PopupPresenter.mirrorAttachment(this.props.contentAttachment),
+        targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment),
         style: { zIndex: zIndex }
       });
+
+      var tetherCotent = _react2.default.createElement(_TetherComponent2.default, tetherOptions);
 
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({}, customProps, { isOpened: isOpen }),
-        _react2.default.createElement(
-          _TetherComponent2.default,
-          tetherOptions,
-          popupFrame
-        )
+        this.createPortalContent(tetherCotent, boundingRef, zIndex, disableScrolling)
       );
     }
   }]);
