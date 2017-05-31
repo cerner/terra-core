@@ -14,18 +14,13 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * A callback function for onClick action
+   * A callback function for onChange action
    */
-  onClick: PropTypes.func,
-  /**
-  * A callback function for onKeyDown action for tab key
-  */
-  onKeyDown: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 const defaultProps = {
-  onClick: undefined,
-  onKeyDown: undefined,
+  onChange: undefined,
 };
 
 class SingleSelectableRows extends React.Component {
@@ -48,6 +43,9 @@ class SingleSelectableRows extends React.Component {
 
   handleSelection(event, index) {
     this.setState({ selectedIndex: index });
+    if (this.props.onChange) {
+      this.props.onChange(event);
+    }
   }
 
   shouldHandleSelection(index) {
@@ -55,10 +53,10 @@ class SingleSelectableRows extends React.Component {
   }
 
   wrappedOnClickForRow(row, index) {
-    const initialOnClick = this.props.onClick;
+    const initialOnClick = row.props.onClick;
 
     return (event) => {
-      if (row.props.isSelectable && this.shouldHandleSelection(index)) {
+      if (this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
       }
 
@@ -69,11 +67,11 @@ class SingleSelectableRows extends React.Component {
   }
 
   wrappedOnKeyDownForRow(row, index) {
-    const initialOnKeyDown = this.props.onKeyDown;
+    const initialOnKeyDown = row.props.onKeyDown;
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (row.props.isSelectable && this.shouldHandleSelection(index)) {
+        if (this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
       }
@@ -122,11 +120,8 @@ class SingleSelectableRows extends React.Component {
   render() {
     const { children, ...customProps } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
-    if ('onClick' in customProps) {
-      delete customProps.onClick;
-    }
-    if ('onKeyDown' in customProps) {
-      delete customProps.onKeyDown;
+    if ('onChange' in customProps) {
+      delete customProps.onChange;
     }
     return (
       <TableRows {...customProps}>

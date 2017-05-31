@@ -44,18 +44,13 @@ var propTypes = {
    */
   children: _propTypes2.default.node,
   /**
-   * A callback function for onClick action
+   * A callback function for onChange action
    */
-  onClick: _propTypes2.default.func,
-  /**
-  * A callback function for onKeyDown action for tab key
-  */
-  onKeyDown: _propTypes2.default.func
+  onChange: _propTypes2.default.func
 };
 
 var defaultProps = {
-  onClick: undefined,
-  onKeyDown: undefined
+  onChange: undefined
 };
 
 var SingleSelectableRows = function (_React$Component) {
@@ -89,6 +84,9 @@ var SingleSelectableRows = function (_React$Component) {
     key: 'handleSelection',
     value: function handleSelection(event, index) {
       this.setState({ selectedIndex: index });
+      if (this.props.onChange) {
+        this.props.onChange(event);
+      }
     }
   }, {
     key: 'shouldHandleSelection',
@@ -100,10 +98,10 @@ var SingleSelectableRows = function (_React$Component) {
     value: function wrappedOnClickForRow(row, index) {
       var _this2 = this;
 
-      var initialOnClick = this.props.onClick;
+      var initialOnClick = row.props.onClick;
 
       return function (event) {
-        if (row.props.isSelectable && _this2.shouldHandleSelection(index)) {
+        if (_this2.shouldHandleSelection(index)) {
           _this2.handleSelection(event, index);
         }
 
@@ -117,11 +115,11 @@ var SingleSelectableRows = function (_React$Component) {
     value: function wrappedOnKeyDownForRow(row, index) {
       var _this3 = this;
 
-      var initialOnKeyDown = this.props.onKeyDown;
+      var initialOnKeyDown = row.props.onKeyDown;
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (row.props.isSelectable && _this3.shouldHandleSelection(index)) {
+          if (_this3.shouldHandleSelection(index)) {
             _this3.handleSelection(event, index);
           }
         }
@@ -178,11 +176,8 @@ var SingleSelectableRows = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['children']);
 
       var clonedChildItems = this.clonedChildItems(children);
-      if ('onClick' in customProps) {
-        delete customProps.onClick;
-      }
-      if ('onKeyDown' in customProps) {
-        delete customProps.onKeyDown;
+      if ('onChange' in customProps) {
+        delete customProps.onChange;
       }
       return _react2.default.createElement(
         _TableRows2.default,
