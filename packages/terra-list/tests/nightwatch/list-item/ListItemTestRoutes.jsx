@@ -7,7 +7,6 @@ import DefaultListItem from './DefaultListItem';
 import SelectedListItem from './SelectedListItem';
 import SelectableListItem from './SelectableListItem';
 import ChevronListItem from './ChevronListItem';
-import ContentListItem from './ContentListItem';
 
 const routes = (
   <div>
@@ -16,7 +15,6 @@ const routes = (
     <Route path="/tests/list-item-tests/selected" component={SelectedListItem} />
     <Route path="/tests/list-item-tests/selectable" component={SelectableListItem} />
     <Route path="/tests/list-item-tests/chevron" component={ChevronListItem} />
-    <Route path="/tests/list-item-tests/content" component={ContentListItem} />
   </div>
 );
 

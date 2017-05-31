@@ -1,5 +1,4 @@
 import React from 'react';
-
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner properly', () => {
@@ -29,7 +28,7 @@ it('renders the banner that contains additional information', () => {
       dateOfBirth="May 9, 1993"
       gender="Male"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
+      photo={<img alt="My Cat" src="" />}
       personName="Johnathon Doe"
       preferredFirstName="John"
     />,
@@ -61,14 +60,26 @@ it('renders the banner appropriately for a person with gestational and post mens
       dateOfBirth="May 9, 1993"
       gender="Male"
       gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
+      photo={<img alt="My Cat" src="" />}
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
+      postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />,
   );
 
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders gestational date with a default label when the label is not provided', () => {
+  const banner = shallow(<DemographicsBanner gestationalAge="April 5, 2016" />);
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders post menstrural date with a default label when the label is not provided', () => {
+  const banner = shallow(<DemographicsBanner postMenstrualAge="April 5, 2016" />);
   expect(banner).toMatchSnapshot();
 });
 
@@ -83,7 +94,7 @@ it('renders the banner properly for a deceased person with additional applicatio
       gender="Male"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       personName="Johnathon Doe"
-      photo={<img alt="My Cat" src="http://lorempixel.com/100/100/animals/7/" />}
+      photo={<img alt="My Cat" src="" />}
       preferredFirstName="John"
     />,
   );

@@ -1,7 +1,7 @@
 {
   "name": "terra-responsive-element",
   "main": "lib/ResponsiveElement.js",
-  "version": "0.2.0",
+  "version": "0.3.2",
   "description": "The terra-responsive-element conditionally renders components based on viewport size",
   "repository": {
     "type": "git",
@@ -21,19 +21,19 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.x"
+    "terra-toolkit": "^0.3.2"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.x",
-    "terra-mixins": "^1.0.0"
+    "terra-base": "^0.4.2",
+    "terra-mixins": "^1.1.1"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-base": "^0.x",
-    "terra-mixins": "^1.0.0"
+    "terra-base": "^0.4.2",
+    "terra-mixins": "^1.1.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -42,9 +42,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "release:major": "npm test && node ../../scripts/release/release.js major",
-    "release:minor": "npm test && node ../../scripts/release/release.js minor",
-    "release:patch": "npm test && node ../../scripts/release/release.js patch",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
