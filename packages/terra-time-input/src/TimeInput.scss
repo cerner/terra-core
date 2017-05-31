@@ -1,23 +1,32 @@
 @import '~terra-mixins';
 
+// stylelint-disable declaration-property-value-blacklist
 .terra-TimeInput {
+  @include terra-border-radius-start(0.25em);
+  @include terra-border-radius-end(0.25em);
+  background-color: transparent;
+  border: $terra-grey-15 solid 1px;
   display: inline-block;
-  min-width: 12em; 
+  margin: 0;
+
+  &.is-focused {
+    border-color: $terra-blue-60;
+    outline: none;
+  }
 }
 
-.terra-TimeInput-input {
-  @include terra-border-radius-start(0.286em);
-  @include terra-border-radius-end(0.286em);
-  border: 0.071em solid $terra-grey-40;
-  box-shadow: inset 0 0.143em 0.143em $terra-grey-20;
-  font-size: 1em;
-  line-height: 1.143;
-  margin: 0.357em 0;
-  padding: 0.429em 0.714em;
-  vertical-align: middle;
+.terra-TimeInput-hour,
+.terra-TimeInput-minute {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  min-width: 2.1em;
+  padding: 0.178em 0;
+  text-align: center;
+  width: 2.1em;
 
   &:focus {
-    border-color: $terra-blue-60;
+    border-color: none;
     outline: none;
   }
 }

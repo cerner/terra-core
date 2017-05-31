@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-time-input component is an input for entering time. During time entry it uses [text-mask](https://github.com/text-mask/text-mask) to mask the input value to conform to the time format.
+The terra-time-input component is an input for entering time. The currently supported time format is the 24-hour format (hh:mm). The time input enforces the entry that masks to the format. The hour input only accepts values between 00 and 23 and the time input only accepts values between 00 and 59. For example, a time of 25:65 cannot be entered.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input/docs)

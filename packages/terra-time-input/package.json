@@ -3,7 +3,7 @@
   "main": "lib/TimeInput.js",
   "private": true,
   "version": "0.0.0",
-  "description": "The terra-time-input component is an input for entering time. During time entry it uses [text-mask](https://github.com/text-mask/text-mask) to mask the input value to conform to the time format.",
+  "description": "The terra-time-input component is an input for entering time. The currently supported time format is the 24-hour format (hh:mm). The time input enforces the entry that masks to the format. The hour input only accepts values between 00 and 23 and the time input only accepts values between 00 and 59. For example, a time of 25:65 cannot be entered.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -28,13 +28,15 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^0.4.1",
+    "terra-form": "^0.x",
     "terra-mixins": "^1.1.1"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "moment": "^2.17.1",
     "prop-types": "^15.5.8",
-    "react-text-mask": "^5.0.2",
     "terra-base": "^0.4.1",
+    "terra-form": "^0.x",
     "terra-mixins": "^1.1.1"
   },
   "scripts": {

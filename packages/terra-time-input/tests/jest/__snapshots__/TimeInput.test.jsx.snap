@@ -1,74 +1,100 @@
 exports[`test should render a default time input 1`] = `
 <div
   className="terra-TimeInput">
-  <t
-    className="terra-TimeInput-input"
-    keepCharPositions={true}
-    mask={
-      Array [
-        /[0-2]/,
-        /[0-9]/,
-        ":",
-        /[0-5]/,
-        /[0-9]/,
-      ]
-    }
+  <Input
+    className="terra-TimeInput-hour"
+    maxLength="2"
+    name={null}
+    onBlur={[Function]}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
-    pipe={[Function]}
-    placeholder="HH:mm"
-    placeholderChar=" "
-    type="text" />
+    placeholder="hh"
+    required={false}
+    type="text"
+    value="" />
+  <span>
+    :
+  </span>
+  <Input
+    className="terra-TimeInput-minute"
+    maxLength="2"
+    name={null}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="mm"
+    required={false}
+    type="text"
+    value="" />
 </div>
 `;
 
 exports[`test should render a time input with a default time 1`] = `
 <div
   className="terra-TimeInput">
-  <t
-    className="terra-TimeInput-input"
-    keepCharPositions={true}
-    mask={
-      Array [
-        /[0-2]/,
-        /[0-9]/,
-        ":",
-        /[0-5]/,
-        /[0-9]/,
-      ]
-    }
+  <Input
+    className="terra-TimeInput-hour"
+    maxLength="2"
+    name={null}
+    onBlur={[Function]}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
-    pipe={[Function]}
-    placeholder="HH:mm"
-    placeholderChar=" "
+    placeholder="hh"
+    required={false}
     type="text"
-    value="10:45" />
+    value="10" />
+  <span>
+    :
+  </span>
+  <Input
+    className="terra-TimeInput-minute"
+    maxLength="2"
+    name={null}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="mm"
+    required={false}
+    type="text"
+    value="45" />
 </div>
 `;
 
 exports[`test should render a time input with custom attributes 1`] = `
 <div
   className="terra-TimeInput">
-  <t
-    className="terra-TimeInput-input"
+  <Input
+    className="terra-TimeInput-hour"
     id="terra-time-input"
-    keepCharPositions={true}
-    mask={
-      Array [
-        /[0-2]/,
-        /[0-9]/,
-        ":",
-        /[0-5]/,
-        /[0-9]/,
-      ]
-    }
+    maxLength="2"
     name="time-input"
+    onBlur={[Function]}
     onChange={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
-    pipe={[Function]}
-    placeholder="HH:mm"
-    placeholderChar=" "
-    type="text" />
+    placeholder="hh"
+    required={false}
+    type="text"
+    value="" />
+  <span>
+    :
+  </span>
+  <Input
+    className="terra-TimeInput-minute"
+    id="terra-time-input"
+    maxLength="2"
+    name="time-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="mm"
+    required={false}
+    type="text"
+    value="" />
 </div>
 `;

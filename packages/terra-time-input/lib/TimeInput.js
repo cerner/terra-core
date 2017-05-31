@@ -16,19 +16,15 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _moment = require('moment');
+var _classnames = require('classnames');
 
-var _moment2 = _interopRequireDefault(_moment);
-
-var _reactTextMask = require('react-text-mask');
-
-var _reactTextMask2 = _interopRequireDefault(_reactTextMask);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 require('terra-base/lib/baseStyles');
 
-var _TimePipe = require('./TimePipe');
+var _Input = require('terra-form/lib/Input');
 
-var _TimePipe2 = _interopRequireDefault(_TimePipe);
+var _Input2 = _interopRequireDefault(_Input);
 
 var _TimeUtil = require('./TimeUtil');
 
@@ -67,6 +63,31 @@ var defaultProps = {
   value: undefined
 };
 
+var inputType = {
+  HOUR: 0,
+  MINUTE: 1
+};
+
+var acceptableKeyCodes = {
+  BACKSPACE: 8,
+  TAB: 9,
+  ARROWLEFT: 37,
+  ARROWUP: 38,
+  ARROWRIGHT: 39,
+  ARROWDOWN: 40,
+  DELETE: 46,
+  DIGIT0: 48,
+  DIGIT1: 49,
+  DIGIT2: 50,
+  DIGIT3: 51,
+  DIGIT4: 52,
+  DIGIT5: 53,
+  DIGIT6: 54,
+  DIGIT7: 55,
+  DIGIT8: 56,
+  DIGIT9: 57
+};
+
 var TimeInput = function (_React$Component) {
   _inherits(TimeInput, _React$Component);
 
@@ -76,57 +97,177 @@ var TimeInput = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (TimeInput.__proto__ || Object.getPrototypeOf(TimeInput)).call(this, props));
 
     _this.state = {
-      timeFormat: 'HH:mm',
-      value: _TimeUtil2.default.formattedTime(props.value, 'HH:mm')
+      timeFormat: 'hh:mm',
+      hour: _TimeUtil2.default.parseHourFromTime(props.value),
+      minute: _TimeUtil2.default.parseMinuteFromTime(props.value),
+      isFocused: false
     };
 
-    _this.handleChange = _this.handleChange.bind(_this);
-    _this.handleInputKeyDown = _this.handleInputKeyDown.bind(_this);
+    _this.handleHourChange = _this.handleHourChange.bind(_this);
+    _this.handleMinuteChange = _this.handleMinuteChange.bind(_this);
+    _this.handleHourInputKeyDown = _this.handleHourInputKeyDown.bind(_this);
+    _this.handleMinuteInputKeyDown = _this.handleMinuteInputKeyDown.bind(_this);
+    _this.handleFocus = _this.handleFocus.bind(_this);
+    _this.handleBlur = _this.handleBlur.bind(_this);
     return _this;
   }
 
   _createClass(TimeInput, [{
+    key: 'handleFocus',
+    value: function handleFocus() {
+      this.setState({ isFocused: true });
+    }
+  }, {
+    key: 'handleBlur',
+    value: function handleBlur() {
+      this.setState({ isFocused: false });
+    }
+  }, {
+    key: 'handleHourChange',
+    value: function handleHourChange(event) {
+      this.handleChange(event, inputType.HOUR);
+    }
+  }, {
+    key: 'handleMinuteChange',
+    value: function handleMinuteChange(event) {
+      this.handleChange(event, inputType.MINUTE);
+    }
+  }, {
     key: 'handleChange',
-    value: function handleChange(event) {
-      if (event.target.value === this.state.value) {
+    value: function handleChange(event, type) {
+      var inputValue = event.target.value;
+      var stateValue = type === inputType.HOUR ? this.state.hour : this.state.minute;
+      var maxValue = type === inputType.HOUR ? 23 : 59;
+
+      // Ignore the entry if the value did not change or it is invalid.
+      if (inputValue === stateValue || Number(inputValue) > maxValue) {
         return;
       }
 
-      this.setState({
-        value: event.target.value
-      });
+      // If the change made was not a deletion of a digit,
+      // then prepend '0' if the input value is a single digit value between 3 and 9 for hour or 6 and 9 for minute.
+      if (inputValue.length >= stateValue.length) {
+        var digitsToPrependZero = type === inputType.HOUR ? ['3', '4', '5', '6', '7', '8', '9'] : ['6', '7', '8', '9'];
+        if (digitsToPrependZero.indexOf(inputValue) > -1) {
+          inputValue = '0'.concat(inputValue);
+        }
+      }
+
+      if (type === inputType.HOUR) {
+        this.setState({ hour: inputValue });
+      } else {
+        this.setState({ minute: inputValue });
+      }
 
       if (this.props.onChange) {
-        this.props.onChange(event.target.value, event);
+        var enteredTime = void 0;
+        if (type === inputType.HOUR) {
+          enteredTime = inputValue.concat(':', this.state.minute);
+        } else {
+          enteredTime = this.state.hour.concat(':', inputValue);
+        }
+
+        this.props.onChange(enteredTime, event);
+      }
+
+      // // Move focus to the minute input if the hour input has a valid and complete entry.
+      if (type === inputType.HOUR && inputValue.length === 2) {
+        this.minuteInput.textInput.focus();
       }
     }
   }, {
+    key: 'handleHourInputKeyDown',
+    value: function handleHourInputKeyDown(event) {
+      this.handleInputKeyDown(event, inputType.HOUR);
+    }
+  }, {
+    key: 'handleMinuteInputKeyDown',
+    value: function handleMinuteInputKeyDown(event) {
+      this.handleInputKeyDown(event, inputType.MINUTE);
+    }
+  }, {
     key: 'handleInputKeyDown',
-    value: function handleInputKeyDown(event) {
-      var momentTime = (0, _moment2.default)(this.state.value, this.state.timeFormat, true);
-
-      if (!momentTime.isValid()) {
+    value: function handleInputKeyDown(event, type) {
+      if (Object.values(acceptableKeyCodes).indexOf(event.keyCode) < 0) {
+        event.preventDefault();
         return;
       }
 
-      var updateTime = false;
+      var stateValue = type === inputType.HOUR ? this.state.hour : this.state.minute;
+      var maxValue = type === inputType.HOUR ? 23 : 59;
+      var updateStateValue = false;
 
-      if (event.key === 'ArrowUp') {
-        momentTime = momentTime.add(1, 'minutes');
-        updateTime = true;
-      } else if (event.key === 'ArrowDown') {
-        momentTime = momentTime.subtract(1, 'minutes');
-        updateTime = true;
+      if (event.keyCode === acceptableKeyCodes.ARROWUP) {
+        // Increment the value by 1 when arrow up is pressed.
+        if (stateValue) {
+          var numericMinute = Number(stateValue);
+
+          if (numericMinute < maxValue) {
+            numericMinute += 1;
+            if (numericMinute < 10) {
+              stateValue = '0'.concat(numericMinute.toString());
+            } else {
+              stateValue = numericMinute.toString();
+            }
+            updateStateValue = true;
+          }
+        } else {
+          stateValue = '00';
+          updateStateValue = true;
+        }
+      } else if (event.keyCode === acceptableKeyCodes.ARROWDOWN) {
+        // Decrement the value by 1 when arrow down is pressed.
+        if (stateValue) {
+          var _numericMinute = Number(stateValue);
+
+          if (_numericMinute > 0) {
+            _numericMinute -= 1;
+            if (_numericMinute < 10) {
+              stateValue = '0'.concat(_numericMinute.toString());
+            } else {
+              stateValue = _numericMinute.toString();
+            }
+            updateStateValue = true;
+          }
+        } else {
+          stateValue = '00';
+          updateStateValue = true;
+        }
+      } else if (event.keyCode === acceptableKeyCodes.ARROWRIGHT) {
+        if (type === inputType.HOUR) {
+          // If the hour is empty or the cursor is after the value, move focus to the minute input when the right arrow is pressed.
+          if (stateValue.length === 0 || stateValue.length === this.hourInput.textInput.selectionEnd) {
+            this.minuteInput.textInput.focus();
+            this.minuteInput.textInput.setSelectionRange(0, 0);
+            event.preventDefault();
+          }
+        }
+      } else if (event.keyCode === acceptableKeyCodes.ARROWLEFT || event.keyCode === acceptableKeyCodes.DELETE || event.keyCode === acceptableKeyCodes.BACKSPACE) {
+        if (type === inputType.MINUTE) {
+          // When the DELETE, BACK, or LEFT ARROW key is pressed and tf the cusor is at the left most position in the minute input, is empty or the cursor is before the value, move focus to the hour input when the left arrow is pressed.
+          if (this.minuteInput.textInput.selectionEnd === 0) {
+            this.hourInput.textInput.focus();
+            if (this.state.hour) {
+              this.minuteInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
+              event.preventDefault();
+            }
+          }
+        }
       }
 
-      if (updateTime) {
-        var incrementedTime = momentTime.format(this.state.timeFormat);
-        this.setState({ value: incrementedTime });
+      if (updateStateValue) {
+        if (type === inputType.HOUR) {
+          this.setState({ hour: stateValue });
+        } else {
+          this.setState({ minute: stateValue });
+        }
       }
     }
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           inputAttributes = _props.inputAttributes,
           onChange = _props.onChange,
@@ -134,21 +275,43 @@ var TimeInput = function (_React$Component) {
           customProps = _objectWithoutProperties(_props, ['inputAttributes', 'onChange', 'value']);
 
       var attributes = _extends({}, customProps, inputAttributes);
+      var timeInputClassName = (0, _classnames2.default)(['terra-TimeInput', { 'is-focused': this.state.isFocused }, attributes.className]);
 
       return _react2.default.createElement(
         'div',
-        { className: 'terra-TimeInput' },
-        _react2.default.createElement(_reactTextMask2.default, _extends({}, attributes, {
-          className: 'terra-TimeInput-input',
+        { className: timeInputClassName },
+        _react2.default.createElement(_Input2.default, _extends({}, attributes, {
+          ref: function ref(inputRef) {
+            _this2.hourInput = inputRef;
+          },
+          className: 'terra-TimeInput-hour',
           type: 'text',
-          value: this.state.value,
-          onChange: this.handleChange,
-          placeholder: this.state.timeFormat,
-          mask: [/[0-2]/, /[0-9]/, ':', /[0-5]/, /[0-9]/],
-          keepCharPositions: true,
-          placeholderChar: ' ',
-          pipe: (0, _TimePipe2.default)(this.state.timeFormat),
-          onKeyDown: this.handleInputKeyDown
+          value: this.state.hour,
+          placeholder: _TimeUtil2.default.splitHour(this.state.timeFormat),
+          maxLength: '2',
+          onChange: this.handleHourChange,
+          onKeyDown: this.handleHourInputKeyDown,
+          onFocus: this.handleFocus,
+          onBlur: this.handleBlur
+        })),
+        _react2.default.createElement(
+          'span',
+          null,
+          ':'
+        ),
+        _react2.default.createElement(_Input2.default, _extends({}, attributes, {
+          ref: function ref(inputRef) {
+            _this2.minuteInput = inputRef;
+          },
+          className: 'terra-TimeInput-minute',
+          type: 'text',
+          value: this.state.minute,
+          placeholder: _TimeUtil2.default.splitMinute(this.state.timeFormat),
+          maxLength: '2',
+          onChange: this.handleMinuteChange,
+          onKeyDown: this.handleMinuteInputKeyDown,
+          onFocus: this.handleFocus,
+          onBlur: this.handleBlur
         }))
       );
     }

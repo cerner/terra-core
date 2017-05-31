@@ -29,7 +29,41 @@ var TimeUtil = function () {
         }
       }
 
-      return undefined;
+      return '';
+    }
+  }, {
+    key: 'parseHourFromTime',
+    value: function parseHourFromTime(time) {
+      var formattedTime = TimeUtil.formattedTime(time, 'HH:mm');
+      return TimeUtil.splitHour(formattedTime);
+    }
+  }, {
+    key: 'parseMinuteFromTime',
+    value: function parseMinuteFromTime(time) {
+      var formattedTime = TimeUtil.formattedTime(time, 'HH:mm');
+      return TimeUtil.splitMinute(formattedTime);
+    }
+  }, {
+    key: 'splitHour',
+    value: function splitHour(time) {
+      if (typeof time === 'string') {
+        var hourAndMinute = time.split(':');
+
+        return hourAndMinute.length > 0 ? hourAndMinute[0] : '';
+      }
+
+      return '';
+    }
+  }, {
+    key: 'splitMinute',
+    value: function splitMinute(time) {
+      if (typeof time === 'string') {
+        var hourAndMinute = time.split(':');
+
+        return hourAndMinute.length > 1 ? hourAndMinute[1] : '';
+      }
+
+      return '';
     }
   }]);
 
