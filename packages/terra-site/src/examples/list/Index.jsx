@@ -30,6 +30,8 @@ const ListExamples = () => (
     <PropsTable id="props-singleList" src={SingleSelectListSrc} />
     <h2>Multiple Select List</h2>
     <PropsTable id="props-multiList" src={MultiSelectListSrc} />
+    <br />
+    <h1>Examples</h1>
     <h2 id="list">List</h2>
     <ListDemo />
     <br />
