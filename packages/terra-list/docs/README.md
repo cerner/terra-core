@@ -1,4 +1,4 @@
-# Terra List Documentation
+# Terra List
 
 The Terra List is a structural component to arrange content within list/listitems.
 
