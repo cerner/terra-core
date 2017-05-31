@@ -20,6 +20,10 @@ var _TableRows = require('./TableRows');
 
 var _TableRows2 = _interopRequireDefault(_TableRows);
 
+var _TableRow = require('./TableRow');
+
+var _TableRow2 = _interopRequireDefault(_TableRow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -40,18 +44,13 @@ var propTypes = {
    */
   children: _propTypes2.default.node,
   /**
-   * A callback function for onClick action
+   * A callback function for onChange action
    */
-  onClick: _propTypes2.default.func,
-  /**
-  * A callback function for onKeyDown action for tab key
-  */
-  onKeyDown: _propTypes2.default.func
+  onChange: _propTypes2.default.func
 };
 
 var defaultProps = {
-  onClick: undefined,
-  onKeyDown: undefined
+  onChange: undefined
 };
 
 var SingleSelectableRows = function (_React$Component) {
@@ -85,6 +84,9 @@ var SingleSelectableRows = function (_React$Component) {
     key: 'handleSelection',
     value: function handleSelection(event, index) {
       this.setState({ selectedIndex: index });
+      if (this.props.onChange) {
+        this.props.onChange(event);
+      }
     }
   }, {
     key: 'shouldHandleSelection',
@@ -96,10 +98,10 @@ var SingleSelectableRows = function (_React$Component) {
     value: function wrappedOnClickForRow(row, index) {
       var _this2 = this;
 
-      var initialOnClick = this.props.onClick;
+      var initialOnClick = row.props.onClick;
 
       return function (event) {
-        if (row.props.isSelectable && _this2.shouldHandleSelection(index)) {
+        if (_this2.shouldHandleSelection(index)) {
           _this2.handleSelection(event, index);
         }
 
@@ -113,11 +115,11 @@ var SingleSelectableRows = function (_React$Component) {
     value: function wrappedOnKeyDownForRow(row, index) {
       var _this3 = this;
 
-      var initialOnKeyDown = this.props.onKeyDown;
+      var initialOnKeyDown = row.props.onKeyDown;
 
       return function (event) {
         if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-          if (row.props.isSelectable && _this3.shouldHandleSelection(index)) {
+          if (_this3.shouldHandleSelection(index)) {
             _this3.handleSelection(event, index);
           }
         }
@@ -157,10 +159,13 @@ var SingleSelectableRows = function (_React$Component) {
       var _this4 = this;
 
       return rows.map(function (row, index) {
-        var wrappedOnClick = _this4.wrappedOnClickForRow(row, index);
-        var wrappedOnKeyDown = _this4.wrappedOnKeyDownForRow(row, index);
-        var newProps = _this4.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
-        return _react2.default.cloneElement(row, newProps);
+        if (row.type === _TableRow2.default) {
+          var wrappedOnClick = _this4.wrappedOnClickForRow(row, index);
+          var wrappedOnKeyDown = _this4.wrappedOnKeyDownForRow(row, index);
+          var newProps = _this4.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
+          return _react2.default.cloneElement(row, newProps);
+        }
+        return row;
       });
     }
   }, {
@@ -170,17 +175,14 @@ var SingleSelectableRows = function (_React$Component) {
           children = _props.children,
           customProps = _objectWithoutProperties(_props, ['children']);
 
-      var clonedChilItems = this.clonedChildItems(children);
-      if ('onClick' in customProps) {
-        delete customProps.onClick;
-      }
-      if ('onKeyDown' in customProps) {
-        delete customProps.onKeyDown;
+      var clonedChildItems = this.clonedChildItems(children);
+      if ('onChange' in customProps) {
+        delete customProps.onChange;
       }
       return _react2.default.createElement(
         _TableRows2.default,
         customProps,
-        clonedChilItems
+        clonedChildItems
       );
     }
   }]);
