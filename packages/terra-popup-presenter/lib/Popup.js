@@ -76,6 +76,14 @@ var propTypes = {
    */
   content: _propTypes2.default.element.isRequired,
   /**
+   * The maximum height to set for popup content.
+   */
+  contentMaxHeight: _propTypes2.default.string,
+  /**
+   * The maximum width of the popup content.
+   */
+  contentMaxWidth: _propTypes2.default.string,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: _propTypes2.default.func,
@@ -91,6 +99,8 @@ var defaultProps = {
   closeOnOutsideClick: true,
   closeOnResize: true,
   content: undefined,
+  contentMaxHeight: undefined,
+  contentMaxWidth: undefined,
   onRequestClose: undefined,
   refCallback: undefined
 };
@@ -175,15 +185,26 @@ var Popup = function (_React$Component) {
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closeOnResize = _props.closeOnResize,
           content = _props.content,
+          contentMaxHeight = _props.contentMaxHeight,
+          contentMaxWidth = _props.contentMaxWidth,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
       var frameClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
 
       var clonedContent = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
+
+      var contentStyle = {};
+      if (contentMaxHeight) {
+        contentStyle.maxHeight = contentMaxHeight;
+      }
+
+      if (contentMaxWidth) {
+        contentStyle.maxWidth = contentMaxWidth;
+      }
 
       return _react2.default.createElement(
         'div',
@@ -191,7 +212,7 @@ var Popup = function (_React$Component) {
         arrow,
         _react2.default.createElement(
           'div',
-          { className: 'terra-Popup-content' },
+          { className: 'terra-Popup-content', style: contentStyle },
           clonedContent
         )
       );

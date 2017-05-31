@@ -44,6 +44,14 @@ const propTypes = {
    */
   content: PropTypes.element.isRequired,
   /**
+   * The maximum height to set for popup content.
+   */
+  contentMaxHeight: PropTypes.string,
+  /**
+   * The maximum width of the popup content.
+   */
+  contentMaxWidth: PropTypes.string,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: PropTypes.func,
@@ -59,6 +67,8 @@ const defaultProps = {
   closeOnOutsideClick: true,
   closeOnResize: true,
   content: undefined,
+  contentMaxHeight: undefined,
+  contentMaxWidth: undefined,
   onRequestClose: undefined,
   refCallback: undefined,
 };
@@ -126,6 +136,8 @@ class Popup extends React.Component {
       closeOnOutsideClick,
       closeOnResize,
       content,
+      contentMaxHeight,
+      contentMaxWidth,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,
@@ -141,10 +153,19 @@ class Popup extends React.Component {
 
     const clonedContent = React.cloneElement(content, {onRequestClose});
 
+    const contentStyle = {};
+    if (contentMaxHeight) {
+      contentStyle.maxHeight = contentMaxHeight;
+    }
+
+    if (contentMaxWidth) {
+      contentStyle.maxWidth = contentMaxWidth;
+    }
+
     return (
       <div {...customProps} className={frameClassNames} ref={refCallback}>
         {arrow}
-        <div className="terra-Popup-content">
+        <div className="terra-Popup-content" style={contentStyle}>
           {clonedContent}
         </div>
       </div>

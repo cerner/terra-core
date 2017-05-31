@@ -280,19 +280,21 @@ var PopupPresenter = function (_React$Component) {
         popupClasses = _Popup2.default.positionClasses[position];
       }
 
-      var popupStyle = void 0;
+      var boundsProps = void 0;
       if (boundingFrame) {
-        popupStyle = { maxWidth: boundingFrame.clientWidth, maxHeight: boundingFrame.clientHeight };
+        boundsProps = {
+          contentMaxWidth: boundingFrame.clientWidth.toString() + 'px',
+          contentMaxHeight: boundingFrame.clientHeight.toString() + 'px'
+        };
       }
 
-      var popupProps = {
+      var popupProps = _extends({
         arrow: arrow,
         content: content,
         className: popupClasses,
         onRequestClose: onRequestClose,
-        refCallback: this.setFrameNode,
-        style: popupStyle
-      };
+        refCallback: this.setFrameNode
+      }, boundsProps);
 
       return _react2.default.createElement(_Popup2.default, popupProps);
     }

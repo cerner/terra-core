@@ -2,18 +2,14 @@
 
 $terra-popup-margin: 9px;
 
-// These are relative to screen coordinates, so no bi-di concerns
-.terra-Popup {
-  // default to maximum of the screen
-  max-height: 100vh;
-  max-width: 100vw;
-}
 
 // might consider another bounding div, to enable a overflow hidden prop
 .terra-Popup-content {
   background-color: #fff;
   border: 1px solid #b2b5b6;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.35);
+  max-height: 100vh;
+  max-width: 100vw;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }

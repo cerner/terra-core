@@ -208,9 +208,12 @@ class PopupPresenter extends React.Component {
       popupClasses = Popup.positionClasses[position];
     }
 
-    let popupStyle;
+    let boundsProps;
     if (boundingFrame) {
-      popupStyle = {maxWidth: boundingFrame.clientWidth, maxHeight: boundingFrame.clientHeight};  
+      boundsProps = {
+        contentMaxWidth: boundingFrame.clientWidth.toString() + 'px', 
+        contentMaxHeight: boundingFrame.clientHeight.toString() + 'px'
+      };  
     }
 
     const popupProps = {
@@ -219,7 +222,7 @@ class PopupPresenter extends React.Component {
       className: popupClasses,
       onRequestClose,
       refCallback: this.setFrameNode,
-      style: popupStyle,
+      ...boundsProps,
     };
 
     return <Popup {...popupProps} />;
