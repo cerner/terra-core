@@ -19,7 +19,7 @@ class ExamplePopupContent extends React.Component {
 
     return (
       <div onClick={onRequestClose}>
-        <p style={{height: '200px', width: '400px'}}>i'm popup content, hear me roar!</p>
+        <p style={{height: '10000px', width: '10000px'}}>i'm popup content, hear me roar!</p>
       </div>
     );
   }

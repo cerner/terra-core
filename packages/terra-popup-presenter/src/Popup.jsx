@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import onClickOutside from 'react-onclickoutside';
+import ContentContainer from 'terra-content-container';
+import IconClose from 'terra-icon/lib/icon/IconClose';
 import './Popup.scss';
 
 const POPUP_CLASSES = {
@@ -59,6 +61,7 @@ const propTypes = {
    * The function returning the frame html reference.
    */
   refCallback: PropTypes.func,
+  isFullScreen: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -71,6 +74,7 @@ const defaultProps = {
   contentMaxWidth: undefined,
   onRequestClose: undefined,
   refCallback: undefined,
+  isFullScreen: false,
 };
 
 class Popup extends React.Component {
@@ -142,12 +146,14 @@ class Popup extends React.Component {
       enableOnClickOutside,
       disableOnClickOutside,
       refCallback,
+      isFullScreen,
       ...customProps,
     } = this.props;
 
-    const frameClassNames = classNames([
+    const popupClassNames = classNames([
       'terra-Popup',
       { 'terra-Popup-showArrow': arrow },
+      { 'terra-Popup--isFullScreen': isFullScreen },
       customProps.className,
     ]);
 
@@ -157,16 +163,30 @@ class Popup extends React.Component {
     if (contentMaxHeight) {
       contentStyle.maxHeight = contentMaxHeight;
     }
-
     if (contentMaxWidth) {
       contentStyle.maxWidth = contentMaxWidth;
     }
 
+    let contentForDisplay = clonedContent;
+    if (isFullScreen) {
+      const containerStyle = {};
+      if (contentMaxHeight) {
+        containerStyle.height = contentMaxHeight;
+      }
+      if (contentMaxWidth) {
+        containerStyle.width = contentMaxWidth;
+      }
+ 
+      const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
+      const header = <div className="terra-Popup-header">{icon}</div>;
+      contentForDisplay = <ContentContainer style={containerStyle} header={header} fill>{clonedContent}</ContentContainer>;
+    }
+
     return (
-      <div {...customProps} className={frameClassNames} ref={refCallback}>
+      <div {...customProps} className={popupClassNames} ref={refCallback}>
         {arrow}
         <div className="terra-Popup-content" style={contentStyle}>
-          {clonedContent}
+          {contentForDisplay}
         </div>
       </div>
     );

@@ -24,6 +24,14 @@ var _reactOnclickoutside = require('react-onclickoutside');
 
 var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
 
+var _terraContentContainer = require('terra-content-container');
+
+var _terraContentContainer2 = _interopRequireDefault(_terraContentContainer);
+
+var _IconClose = require('terra-icon/lib/icon/IconClose');
+
+var _IconClose2 = _interopRequireDefault(_IconClose);
+
 require('./Popup.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -90,7 +98,8 @@ var propTypes = {
   /**
    * The function returning the frame html reference.
    */
-  refCallback: _propTypes2.default.func
+  refCallback: _propTypes2.default.func,
+  isFullScreen: _propTypes2.default.bool
 };
 
 var defaultProps = {
@@ -102,7 +111,8 @@ var defaultProps = {
   contentMaxHeight: undefined,
   contentMaxWidth: undefined,
   onRequestClose: undefined,
-  refCallback: undefined
+  refCallback: undefined,
+  isFullScreen: false
 };
 
 var Popup = function (_React$Component) {
@@ -191,9 +201,10 @@ var Popup = function (_React$Component) {
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          isFullScreen = _props.isFullScreen,
+          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback', 'isFullScreen']);
 
-      var frameClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
+      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, { 'terra-Popup--isFullScreen': isFullScreen }, customProps.className]);
 
       var clonedContent = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
 
@@ -201,19 +212,41 @@ var Popup = function (_React$Component) {
       if (contentMaxHeight) {
         contentStyle.maxHeight = contentMaxHeight;
       }
-
       if (contentMaxWidth) {
         contentStyle.maxWidth = contentMaxWidth;
       }
 
+      var contentForDisplay = clonedContent;
+      if (isFullScreen) {
+        var containerStyle = {};
+        if (contentMaxHeight) {
+          containerStyle.height = contentMaxHeight;
+        }
+        if (contentMaxWidth) {
+          containerStyle.width = contentMaxWidth;
+        }
+
+        var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
+        var header = _react2.default.createElement(
+          'div',
+          { className: 'terra-Popup-header' },
+          icon
+        );
+        contentForDisplay = _react2.default.createElement(
+          _terraContentContainer2.default,
+          { style: containerStyle, header: header, fill: true },
+          clonedContent
+        );
+      }
+
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: frameClassNames, ref: refCallback }),
+        _extends({}, customProps, { className: popupClassNames, ref: refCallback }),
         arrow,
         _react2.default.createElement(
           'div',
           { className: 'terra-Popup-content', style: contentStyle },
-          clonedContent
+          contentForDisplay
         )
       );
     }

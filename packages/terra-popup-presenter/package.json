@@ -30,6 +30,7 @@
     "react-portal": "^3.0.0",
     "tether": "^1.4.0",
     "terra-base": "^0.4.1",
+    "terra-content-container": "^0.2.0",
     "terra-icon": "^0.4.1",
     "terra-mixins": "^1.1.1"
   },
@@ -39,6 +40,7 @@
     "react-portal": "^3.0.0",
     "tether": "^1.4.0",
     "terra-base": "^0.4.1",
+    "terra-content-container": "^0.2.0",
     "terra-icon": "^0.4.1",
     "terra-mixins": "^1.1.1"
   },
