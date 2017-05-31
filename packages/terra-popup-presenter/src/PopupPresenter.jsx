@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom';
-import onClickOutside from 'react-onclickoutside';
 import Popup from './Popup';
 import PopupArrow from './PopupArrow';// consider dot notation
 import PopupOverlay from './PopupOverlay';
@@ -63,8 +62,6 @@ const defaultProps = {
   showArrow: false,
   zIndex: '',
 };
-
-const WrappedPopup = onClickOutside(Popup);
 
 class PopupPresenter extends React.Component {
 
@@ -225,7 +222,7 @@ class PopupPresenter extends React.Component {
       style: popupStyle,
     };
 
-    return <WrappedPopup {...popupProps} />;
+    return <Popup {...popupProps} />;
   }
 
   createPortalContent(tetherContent, boundingFrame, zIndex, useOverlay) {

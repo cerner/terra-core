@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import onClickOutside from 'react-onclickoutside';
 import './Popup.scss';
 
 const POPUP_CLASSES = {
@@ -151,9 +152,10 @@ class Popup extends React.Component {
   }
 }
 
-Popup.propTypes = propTypes;
-Popup.defaultProps = defaultProps;
-Popup.positionClasses = POPUP_CLASSES;
-Popup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
+const WrapperPopup = onClickOutside(Popup);
+WrapperPopup.propTypes = propTypes;
+WrapperPopup.defaultProps = defaultProps;
+WrapperPopup.positionClasses = POPUP_CLASSES;
+WrapperPopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
-export default Popup;
+export default WrapperPopup;

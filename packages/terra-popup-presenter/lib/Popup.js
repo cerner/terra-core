@@ -20,6 +20,10 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _reactOnclickoutside = require('react-onclickoutside');
+
+var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
+
 require('./Popup.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -197,9 +201,10 @@ var Popup = function (_React$Component) {
   return Popup;
 }(_react2.default.Component);
 
-Popup.propTypes = propTypes;
-Popup.defaultProps = defaultProps;
-Popup.positionClasses = POPUP_CLASSES;
-Popup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
+var WrapperPopup = (0, _reactOnclickoutside2.default)(Popup);
+WrapperPopup.propTypes = propTypes;
+WrapperPopup.defaultProps = defaultProps;
+WrapperPopup.positionClasses = POPUP_CLASSES;
+WrapperPopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
-exports.default = Popup;
+exports.default = WrapperPopup;

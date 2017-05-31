@@ -26,10 +26,6 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactOnclickoutside = require('react-onclickoutside');
-
-var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
-
 var _Popup = require('./Popup');
 
 var _Popup2 = _interopRequireDefault(_Popup);
@@ -115,8 +111,6 @@ var defaultProps = {
   showArrow: false,
   zIndex: ''
 };
-
-var WrappedPopup = (0, _reactOnclickoutside2.default)(_Popup2.default);
 
 var PopupPresenter = function (_React$Component) {
   _inherits(PopupPresenter, _React$Component);
@@ -300,7 +294,7 @@ var PopupPresenter = function (_React$Component) {
         style: popupStyle
       };
 
-      return _react2.default.createElement(WrappedPopup, popupProps);
+      return _react2.default.createElement(_Popup2.default, popupProps);
     }
   }, {
     key: 'createPortalContent',
