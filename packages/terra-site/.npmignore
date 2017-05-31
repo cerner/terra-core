@@ -1,8 +1,10 @@
 *.log
 node_modules
 src
-aggregated-translations
+reports
+tests
 build
+aggregated-translations
 stats.json
 lib/App.js
 lib/Home.js
