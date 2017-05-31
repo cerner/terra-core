@@ -14,7 +14,9 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactDocgen = require('react-docgen');
+var _parse = require('react-docgen/dist/parse');
+
+var _parse2 = _interopRequireDefault(_parse);
 
 var _terraMarkdown = require('terra-markdown');
 
@@ -40,7 +42,7 @@ var PropsTable = function PropsTable(_ref) {
    * Runs component source code through react-docgen
    * @type {Object}
    */
-  var componentMetaData = (0, _reactDocgen.parse)(src);
+  var componentMetaData = (0, _parse2.default)(src);
 
   /**
    * Alias for props object from componentMetaData
