@@ -6,10 +6,10 @@
   .terra-SearchField-input {
     @include terra-border-radius-start(0.286em);
     @include terra-border-radius-end(0);
+    @include terra-border-end(0);
 
     appearance: textfield;
     border: 0.071em solid $terra-grey-15;
-    border-right: 0;
     flex: 1 1 auto;
     font-family: inherit;
     font-size: 1em;
