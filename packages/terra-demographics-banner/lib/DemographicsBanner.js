@@ -20,13 +20,13 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _terraResponsiveElement = require('terra-responsive-element');
+var _reactIntl = require('react-intl');
 
-var _terraResponsiveElement2 = _interopRequireDefault(_terraResponsiveElement);
+var _DemographicsBannerDisplay = require('./DemographicsBannerDisplay');
+
+var _DemographicsBannerDisplay2 = _interopRequireDefault(_DemographicsBannerDisplay);
 
 require('terra-base/lib/baseStyles');
-
-require('./DemographicsBanner.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,17 +53,9 @@ var propTypes = {
    */
   dateOfBirth: _propTypes2.default.string,
   /**
-   * Label to display for the date of birth
-   */
-  dateOfBirthLabel: _propTypes2.default.string,
-  /**
    * The person's deceased date. Will display the banner as deceased if this value is provided
    */
   deceasedDate: _propTypes2.default.string,
-  /**
-   * Label to display for the deceased date
-   */
-  deceasedDateLabel: _propTypes2.default.string,
   /**
    * Gender of the Person
    */
@@ -72,10 +64,6 @@ var propTypes = {
    * The persons gestational age.
    */
   gestationalAge: _propTypes2.default.string,
-  /**
-   * Label to display for the GestationalAge
-   */
-  gestationalAgeLabel: _propTypes2.default.string,
   /**
    * Additional key value identifiers of a person's demographic information
    */
@@ -93,10 +81,6 @@ var propTypes = {
    */
   postMenstrualAge: _propTypes2.default.string,
   /**
-   * Label to display for the PostMenstrualAgeLabel
-   */
-  postMenstrualAgeLabel: _propTypes2.default.string,
-  /**
    * The persons preferred first name if they have one.
    */
   preferredFirstName: _propTypes2.default.string
@@ -104,40 +88,16 @@ var propTypes = {
 
 var defaultProps = {
   applicationContent: null,
-  age: '--',
-  dateOfBirth: '--',
-  dateOfBirthLabel: 'DOB',
+  age: undefined,
+  dateOfBirth: undefined,
   deceasedDate: null,
-  deceasedDateLabel: 'Deceased',
-  gender: '--',
+  gender: undefined,
   gestationalAge: null,
-  gestationalAgeLabel: 'GA',
   identifiers: {},
-  personName: '--',
+  personName: undefined,
   photo: null,
   postMenstrualAge: null,
-  postMenstrualAgeLabel: 'PMA',
   preferredFirstName: null
-};
-
-// eslint-disable-next-line react/prop-types
-var DemographicsBannerValue = function DemographicsBannerValue(_ref) {
-  var label = _ref.label,
-      value = _ref.value;
-  return _react2.default.createElement(
-    'span',
-    { className: 'terra-DemographicsBanner-value' },
-    label && _react2.default.createElement(
-      'span',
-      { className: 'terra-DemographicsBanner-value-label' },
-      label + ':'
-    ),
-    _react2.default.createElement(
-      'b',
-      null,
-      value
-    )
-  );
 };
 
 var DemographicsBanner = function (_React$Component) {
@@ -150,192 +110,28 @@ var DemographicsBanner = function (_React$Component) {
   }
 
   _createClass(DemographicsBanner, [{
-    key: 'personDetails',
-    value: function personDetails() {
-      var elements = [_react2.default.createElement(DemographicsBannerValue, { key: 'age', value: this.props.age }), _react2.default.createElement(DemographicsBannerValue, { key: 'gender', value: this.props.gender }), _react2.default.createElement(DemographicsBannerValue, {
-        key: 'dob',
-        label: this.props.dateOfBirthLabel,
-        value: this.props.dateOfBirth
-      })];
-
-      if (this.props.gestationalAge) {
-        elements.push(_react2.default.createElement(DemographicsBannerValue, {
-          key: 'ga',
-          label: this.props.gestationalAgeLabel,
-          value: this.props.gestationalAge
-        }));
-      }
-
-      if (this.props.postMenstrualAge) {
-        elements.push(_react2.default.createElement(DemographicsBannerValue, {
-          key: 'pma',
-          label: this.props.postMenstrualAgeLabel,
-          value: this.props.postMenstrualAge
-        }));
-      }
-
-      if (this.props.deceasedDate) {
-        elements.push(_react2.default.createElement(DemographicsBannerValue, {
-          key: 'deceased',
-          label: this.props.deceasedDateLabel,
-          value: this.props.deceasedDate
-        }));
-      }
-
-      return elements;
-    }
-  }, {
-    key: 'applicationIdentifiers',
-    value: function applicationIdentifiers() {
-      var identifiers = this.props.identifiers;
-
-      if (identifiers) {
-        return Object.keys(identifiers).map(function (key) {
-          return _react2.default.createElement(DemographicsBannerValue, {
-            key: 'identifier-' + key,
-            label: key,
-            value: identifiers[key]
-          });
-        });
-      }
-
-      return null;
-    }
-  }, {
-    key: 'renderLargeDemographicsBanner',
-    value: function renderLargeDemographicsBanner() {
-      var _props = this.props,
-          age = _props.age,
-          applicationContent = _props.applicationContent,
-          dateOfBirth = _props.dateOfBirth,
-          dateOfBirthLabel = _props.dateOfBirthLabel,
-          deceasedDate = _props.deceasedDate,
-          deceasedDateLabel = _props.deceasedDateLabel,
-          gender = _props.gender,
-          gestationalAge = _props.gestationalAge,
-          gestationalAgeLabel = _props.gestationalAgeLabel,
-          identifiers = _props.identifiers,
-          personName = _props.personName,
-          photo = _props.photo,
-          postMenstrualAge = _props.postMenstrualAge,
-          postMenstrualAgeLabel = _props.postMenstrualAgeLabel,
-          preferredFirstName = _props.preferredFirstName,
-          customProps = _objectWithoutProperties(_props, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
-
-      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
-
-      delete customProps.className;
-
-      return _react2.default.createElement(
-        'section',
-        _extends({ className: mainClasses }, customProps),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-profile-photo' },
-          this.props.photo
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-content' },
-          _react2.default.createElement(
-            'div',
-            { className: 'terra-DemographicsBanner-row' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'terra-DemographicsBanner-person-name' },
-              personName,
-              preferredFirstName && _react2.default.createElement(
-                'span',
-                { className: 'terra-DemographicsBanner-preferred-first-name' },
-                preferredFirstName
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'terra-DemographicsBanner-application-content' },
-              applicationContent
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'terra-DemographicsBanner-row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'terra-DemographicsBanner-person-details' },
-              this.personDetails()
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'terra-DemographicsBanner-identifiers' },
-              this.applicationIdentifiers()
-            )
-          )
-        )
-      );
-    }
-  }, {
-    key: 'renderSmallDemographicsBanner',
-    value: function renderSmallDemographicsBanner() {
-      var _props2 = this.props,
-          age = _props2.age,
-          applicationContent = _props2.applicationContent,
-          dateOfBirth = _props2.dateOfBirth,
-          dateOfBirthLabel = _props2.dateOfBirthLabel,
-          deceasedDate = _props2.deceasedDate,
-          deceasedDateLabel = _props2.deceasedDateLabel,
-          gender = _props2.gender,
-          gestationalAge = _props2.gestationalAge,
-          gestationalAgeLabel = _props2.gestationalAgeLabel,
-          identifiers = _props2.identifiers,
-          personName = _props2.personName,
-          photo = _props2.photo,
-          postMenstrualAge = _props2.postMenstrualAge,
-          postMenstrualAgeLabel = _props2.postMenstrualAgeLabel,
-          preferredFirstName = _props2.preferredFirstName,
-          customProps = _objectWithoutProperties(_props2, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
-
-      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
-
-      delete customProps.className;
-
-      return _react2.default.createElement(
-        'section',
-        _extends({ className: mainClasses }, customProps),
-        _react2.default.createElement(
-          'h1',
-          { className: 'terra-DemographicsBanner-person-name' },
-          _react2.default.createElement(
-            'span',
-            null,
-            personName,
-            preferredFirstName && _react2.default.createElement(
-              'span',
-              { className: 'terra-DemographicsBanner-preferred-first-name' },
-              preferredFirstName
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-person-details' },
-          this.personDetails(),
-          this.applicationIdentifiers()
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-application-content' },
-          applicationContent
-        )
-      );
-    }
-  }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_terraResponsiveElement2.default, {
-        responsiveTo: 'window',
-        defaultElement: this.renderSmallDemographicsBanner(),
-        small: this.renderLargeDemographicsBanner()
-      });
+      var _props = this.props,
+          age = _props.age,
+          dateOfBirth = _props.dateOfBirth,
+          gender = _props.gender,
+          personName = _props.personName,
+          intl = _props.intl,
+          customProps = _objectWithoutProperties(_props, ['age', 'dateOfBirth', 'gender', 'personName', 'intl']);
+
+      var noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
+
+      return _react2.default.createElement(_DemographicsBannerDisplay2.default, _extends({}, customProps, {
+        age: age !== undefined ? age : noDataProvided,
+        dateOfBirth: dateOfBirth !== undefined ? dateOfBirth : noDataProvided,
+        gender: gender !== undefined ? gender : noDataProvided,
+        personName: personName !== undefined ? personName : noDataProvided,
+        dateOfBirthLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' }),
+        deceasedDateLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' }),
+        gestationalAgeLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' }),
+        postMenstrualAgeLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' })
+      }));
     }
   }]);
 
@@ -345,4 +141,4 @@ var DemographicsBanner = function (_React$Component) {
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
 
-exports.default = DemographicsBanner;
+exports.default = (0, _reactIntl.injectIntl)(DemographicsBanner);

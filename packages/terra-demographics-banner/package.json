@@ -26,11 +26,13 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-intl": "^2.3.0",
     "terra-base": "^0.4.2"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
+    "react-intl": "^2.3.0",
     "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1",
     "terra-responsive-element": "^0.3.2"

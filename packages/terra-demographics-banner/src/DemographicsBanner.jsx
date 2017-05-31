@@ -2,11 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ResponsiveElement from 'terra-responsive-element';
+import { injectIntl } from 'react-intl';
+import DemographicsBannerDisplay from './DemographicsBannerDisplay';
 
 import 'terra-base/lib/baseStyles';
-import './DemographicsBanner.scss';
-
 const propTypes = {
   /**
    * Application content to display in the banner.
@@ -21,17 +20,9 @@ const propTypes = {
    */
   dateOfBirth: PropTypes.string,
   /**
-   * Label to display for the date of birth
-   */
-  dateOfBirthLabel: PropTypes.string,
-  /**
    * The person's deceased date. Will display the banner as deceased if this value is provided
    */
   deceasedDate: PropTypes.string,
-  /**
-   * Label to display for the deceased date
-   */
-  deceasedDateLabel: PropTypes.string,
   /**
    * Gender of the Person
    */
@@ -40,10 +31,6 @@ const propTypes = {
    * The persons gestational age.
    */
   gestationalAge: PropTypes.string,
-  /**
-   * Label to display for the GestationalAge
-   */
-  gestationalAgeLabel: PropTypes.string,
   /**
    * Additional key value identifiers of a person's demographic information
    */
@@ -61,10 +48,6 @@ const propTypes = {
    */
   postMenstrualAge: PropTypes.string,
   /**
-   * Label to display for the PostMenstrualAgeLabel
-   */
-  postMenstrualAgeLabel: PropTypes.string,
-  /**
    * The persons preferred first name if they have one.
    */
   preferredFirstName: PropTypes.string,
@@ -72,204 +55,42 @@ const propTypes = {
 
 const defaultProps = {
   applicationContent: null,
-  age: '--',
-  dateOfBirth: '--',
-  dateOfBirthLabel: 'DOB',
+  age: undefined,
+  dateOfBirth: undefined,
   deceasedDate: null,
-  deceasedDateLabel: 'Deceased',
-  gender: '--',
+  gender: undefined,
   gestationalAge: null,
-  gestationalAgeLabel: 'GA',
   identifiers: {},
-  personName: '--',
+  personName: undefined,
   photo: null,
   postMenstrualAge: null,
-  postMenstrualAgeLabel: 'PMA',
   preferredFirstName: null,
 };
 
-// eslint-disable-next-line react/prop-types
-const DemographicsBannerValue = ({ label, value }) => (
-  <span className="terra-DemographicsBanner-value">
-    { label && <span className="terra-DemographicsBanner-value-label">{`${label}:`}</span> }
-    <b>{value}</b>
-  </span>
-);
-
 class DemographicsBanner extends React.Component {
-  personDetails() {
-    const elements = [
-      <DemographicsBannerValue key="age" value={this.props.age} />,
-      <DemographicsBannerValue key="gender" value={this.props.gender} />,
-      <DemographicsBannerValue
-        key="dob"
-        label={this.props.dateOfBirthLabel}
-        value={this.props.dateOfBirth}
-      />,
-    ];
-
-    if (this.props.gestationalAge) {
-      elements.push(
-        <DemographicsBannerValue
-          key="ga"
-          label={this.props.gestationalAgeLabel}
-          value={this.props.gestationalAge}
-        />,
-      );
-    }
-
-    if (this.props.postMenstrualAge) {
-      elements.push(
-        <DemographicsBannerValue
-          key="pma"
-          label={this.props.postMenstrualAgeLabel}
-          value={this.props.postMenstrualAge}
-        />,
-      );
-    }
-
-    if (this.props.deceasedDate) {
-      elements.push(
-        <DemographicsBannerValue
-          key="deceased"
-          label={this.props.deceasedDateLabel}
-          value={this.props.deceasedDate}
-        />,
-      );
-    }
-
-    return elements;
-  }
-
-  applicationIdentifiers() {
-    const identifiers = this.props.identifiers;
-
-    if (identifiers) {
-      return Object.keys(identifiers).map(key =>
-        <DemographicsBannerValue
-          key={`identifier-${key}`}
-          label={key}
-          value={identifiers[key]}
-        />,
-      );
-    }
-
-    return null;
-  }
-
-  renderLargeDemographicsBanner() {
-    const {
-      age,
-      applicationContent,
-      dateOfBirth,
-      dateOfBirthLabel,
-      deceasedDate,
-      deceasedDateLabel,
-      gender,
-      gestationalAge,
-      gestationalAgeLabel,
-      identifiers,
-      personName,
-      photo,
-      postMenstrualAge,
-      postMenstrualAgeLabel,
-      preferredFirstName,
-      ...customProps
-    } = this.props;
-
-    const mainClasses = classNames(
-      'terra-DemographicsBanner',
-      { 'terra-DemographicsBanner--deceased': deceasedDate },
-      customProps.className,
-    );
-
-    delete customProps.className;
-
-    return (
-      <section className={mainClasses} {...customProps}>
-        <div className="terra-DemographicsBanner-profile-photo">
-          {this.props.photo}
-        </div>
-        <div className="terra-DemographicsBanner-content">
-          <div className="terra-DemographicsBanner-row">
-            <h1 className="terra-DemographicsBanner-person-name">
-              { personName }
-              { preferredFirstName && <span className="terra-DemographicsBanner-preferred-first-name">
-                { preferredFirstName }
-              </span> }
-            </h1>
-            <div className="terra-DemographicsBanner-application-content">
-              {applicationContent}
-            </div>
-          </div>
-          <div className="terra-DemographicsBanner-row">
-            <div className="terra-DemographicsBanner-person-details">
-              {this.personDetails()}
-            </div>
-            <div className="terra-DemographicsBanner-identifiers">
-              {this.applicationIdentifiers()}
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  renderSmallDemographicsBanner() {
-    const {
-      age,
-      applicationContent,
-      dateOfBirth,
-      dateOfBirthLabel,
-      deceasedDate,
-      deceasedDateLabel,
-      gender,
-      gestationalAge,
-      gestationalAgeLabel,
-      identifiers,
-      personName,
-      photo,
-      postMenstrualAge,
-      postMenstrualAgeLabel,
-      preferredFirstName,
-      ...customProps
-    } = this.props;
-
-    const mainClasses = classNames(
-      'terra-DemographicsBanner',
-      { 'terra-DemographicsBanner--deceased': deceasedDate },
-      customProps.className,
-    );
-
-    delete customProps.className;
-
-    return (
-      <section className={mainClasses} {...customProps}>
-        <h1 className="terra-DemographicsBanner-person-name">
-          <span>
-            { personName }
-            { preferredFirstName && <span className="terra-DemographicsBanner-preferred-first-name">
-              { preferredFirstName }
-            </span> }
-          </span>
-        </h1>
-        <div className="terra-DemographicsBanner-person-details">
-          {this.personDetails()}
-          {this.applicationIdentifiers()}
-        </div>
-        <div className="terra-DemographicsBanner-application-content">
-          {applicationContent}
-        </div>
-      </section>
-    );
-  }
-
   render() {
+    const {
+      age,
+      dateOfBirth,
+      gender,
+      personName,
+      intl,
+      ...customProps
+    } = this.props;
+
+    const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
+
     return (
-      <ResponsiveElement
-        responsiveTo="window"
-        defaultElement={this.renderSmallDemographicsBanner()}
-        small={this.renderLargeDemographicsBanner()}
+      <DemographicsBannerDisplay
+        {...customProps}
+        age={ (age !== undefined) ? age : noDataProvided }
+        dateOfBirth={ (dateOfBirth !== undefined) ? dateOfBirth : noDataProvided }
+        gender={ (gender !== undefined) ? gender : noDataProvided }
+        personName={ (personName !== undefined) ? personName : noDataProvided }
+        dateOfBirthLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' }) }
+        deceasedDateLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' }) }
+        gestationalAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' }) }
+        postMenstrualAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' }) }
       />
     );
   }
@@ -278,4 +99,4 @@ class DemographicsBanner extends React.Component {
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
 
-export default DemographicsBanner;
+export default injectIntl(DemographicsBanner);
