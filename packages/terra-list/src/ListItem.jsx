@@ -48,7 +48,7 @@ const ListItem = ({
 
   let chevron;
   if (hasChevron) {
-    chevron = <span className="terra-ListItem-chevron"><ChevronRight height="10" width="10" /></span>;
+    chevron = <span className="terra-ListItem-chevron"><ChevronRight height="0.8em" width="0.8em" /></span>;
   }
 
   return (

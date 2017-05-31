@@ -7,7 +7,11 @@
 }
 
 .terra-List-divided {
-  > * {border-bottom: solid 1px;}
+  > * {
+    border-bottom: solid 1px;
+  }
 
-  &:first-child {border-top: solid 1px;}
+  &:first-child {
+    border-top: solid 1px;
+  }
 }

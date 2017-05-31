@@ -70,7 +70,7 @@ var ListItem = function ListItem(_ref) {
     chevron = _react2.default.createElement(
       'span',
       { className: 'terra-ListItem-chevron' },
-      _react2.default.createElement(_IconChevronRight2.default, { height: '10', width: '10' })
+      _react2.default.createElement(_IconChevronRight2.default, { height: '0.8em', width: '0.8em' })
     );
   }
 

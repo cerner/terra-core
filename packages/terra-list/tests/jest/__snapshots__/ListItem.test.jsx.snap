@@ -25,10 +25,10 @@ exports[`test should render with isSelectable and hasChevron 1`] = `
     <IconChevronRight
       className=""
       data-name="Layer 1"
-      height="10"
+      height="0.8em"
       isBidi={true}
       viewBox="0 0 48 48"
-      width="10"
+      width="0.8em"
       xmlns="http://www.w3.org/2000/svg" />
   </span>
 </li>
