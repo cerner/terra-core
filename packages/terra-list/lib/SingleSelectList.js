@@ -58,7 +58,7 @@ var propTypes = {
 var defaultProps = {
   children: [],
   isDivided: false,
-  hasChevrons: true,
+  hasChevrons: false,
   onChange: undefined
 };
 
