@@ -122,6 +122,142 @@ exports[`test renders a blank banner properly 1`] = `
   } />
 `;
 
+exports[`test renders gestational date with a default label when the label is not provided 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      className="terra-DemographicsBanner">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          --
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="--" />
+        <DemographicsBannerValue
+          value="--" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="--" />
+        <DemographicsBannerValue
+          label="GA"
+          value="April 5, 2016" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      className="terra-DemographicsBanner">
+      <div
+        className="terra-DemographicsBanner-profile-photo" />
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            --
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="--" />
+            <DemographicsBannerValue
+              value="--" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="--" />
+            <DemographicsBannerValue
+              label="GA"
+              value="April 5, 2016" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers" />
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
+exports[`test renders post menstrural date with a default label when the label is not provided 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <section
+      className="terra-DemographicsBanner">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        <span>
+          --
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="--" />
+        <DemographicsBannerValue
+          value="--" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="--" />
+        <DemographicsBannerValue
+          label="PMA"
+          value="April 5, 2016" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-application-content" />
+    </section>
+  }
+  responsiveTo="window"
+  small={
+    <section
+      className="terra-DemographicsBanner">
+      <div
+        className="terra-DemographicsBanner-profile-photo" />
+      <div
+        className="terra-DemographicsBanner-content">
+        <div
+          className="terra-DemographicsBanner-row">
+          <h1
+            className="terra-DemographicsBanner-person-name">
+            --
+          </h1>
+          <div
+            className="terra-DemographicsBanner-application-content" />
+        </div>
+        <div
+          className="terra-DemographicsBanner-row">
+          <div
+            className="terra-DemographicsBanner-person-details">
+            <DemographicsBannerValue
+              value="--" />
+            <DemographicsBannerValue
+              value="--" />
+            <DemographicsBannerValue
+              label="DOB"
+              value="--" />
+            <DemographicsBannerValue
+              label="PMA"
+              value="April 5, 2016" />
+          </div>
+          <div
+            className="terra-DemographicsBanner-identifiers" />
+        </div>
+      </div>
+    </section>
+  } />
+`;
+
 exports[`test renders the banner appropriately for a deceased person 1`] = `
 <ResponsiveElement
   defaultElement={
@@ -232,10 +368,10 @@ exports[`test renders the banner appropriately for a person with gestational and
           label="DOB"
           value="May 9, 1993" />
         <DemographicsBannerValue
-          label={null}
+          label="GA"
           value="April 5, 2016" />
         <DemographicsBannerValue
-          label={null}
+          label="PMA"
           value="April 7, 2016" />
         <DemographicsBannerValue
           label="MRN"
@@ -302,10 +438,10 @@ exports[`test renders the banner appropriately for a person with gestational and
               label="DOB"
               value="May 9, 1993" />
             <DemographicsBannerValue
-              label={null}
+              label="GA"
               value="April 5, 2016" />
             <DemographicsBannerValue
-              label={null}
+              label="PMA"
               value="April 7, 2016" />
           </div>
           <div
