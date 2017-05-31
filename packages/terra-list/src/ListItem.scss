@@ -1,4 +1,5 @@
 @import '~terra-mixins';
+@import './variables';
 
 .terra-ListItem-hasChevron {
   display: block;
@@ -14,6 +15,7 @@
 
   .terra-ListItem-chevron {
     @include terra-position-end(10px);
+    color: $terra-list-chevron-color;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
@@ -24,19 +26,32 @@
     top: 50%;
     transform: translate(0, -50%);
   }
-  .terra-ListItem-chevron > * {color: $terra-grey-30;}
 }
 
-// Update with UX styling
 .terra-ListItem--selected {
-  background-color: rgba(239, 68, 0, 0.53);
+  background-color: $terra-list-item-selected-background-color;
+}
+
+.terra-List-divided .terra-ListItem--selected {
+  &.terra-ListItem {
+    border-color: $terra-list-item-selected-divider-color !important;
+  }
+
+  + .terra-ListItem {
+    border-top-color: $terra-list-item-selected-divider-color; 
+  }
 }
 
 .terra-ListItem-isSelectable {
   cursor: pointer;
 
-  &.terra-ListItem:hover {background-color: $terra-blue-10;}
+  &.terra-ListItem:hover,
+  &.terra-ListItem:focus {
+    background-color: $terra-list-item-hover-background-color !important;
+  }
 
-  // Update with UX styling
-  &.terra-ListItem--selected:hover {background-color: rgba(83, 0, 239, 0.53);}
+  &.terra-ListItem--selected:hover,
+  &.terra-ListItem--selected:focus {
+    background-color: $terra-list-item-selected-hover-background-color !important;
+  }
 }
