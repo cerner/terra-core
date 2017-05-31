@@ -79,12 +79,12 @@ const defaultProps = {
   deceasedDateLabel: 'Deceased',
   gender: '--',
   gestationalAge: null,
-  gestationalAgeLabel: null,
+  gestationalAgeLabel: 'GA',
   identifiers: {},
   personName: '--',
   photo: null,
   postMenstrualAge: null,
-  postMenstrualAgeLabel: null,
+  postMenstrualAgeLabel: 'PMA',
   preferredFirstName: null,
 };
 
