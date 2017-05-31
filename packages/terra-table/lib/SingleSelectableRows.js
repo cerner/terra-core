@@ -20,6 +20,10 @@ var _TableRows = require('./TableRows');
 
 var _TableRows2 = _interopRequireDefault(_TableRows);
 
+var _TableRow = require('./TableRow');
+
+var _TableRow2 = _interopRequireDefault(_TableRow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -155,10 +159,13 @@ var SingleSelectableRows = function (_React$Component) {
       var _this4 = this;
 
       return rows.map(function (row, index) {
-        var wrappedOnClick = _this4.wrappedOnClickForRow(row, index);
-        var wrappedOnKeyDown = _this4.wrappedOnKeyDownForRow(row, index);
-        var newProps = _this4.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
-        return _react2.default.cloneElement(row, newProps);
+        if (row.type === _TableRow2.default) {
+          var wrappedOnClick = _this4.wrappedOnClickForRow(row, index);
+          var wrappedOnKeyDown = _this4.wrappedOnKeyDownForRow(row, index);
+          var newProps = _this4.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
+          return _react2.default.cloneElement(row, newProps);
+        }
+        return row;
       });
     }
   }, {
@@ -168,14 +175,14 @@ var SingleSelectableRows = function (_React$Component) {
           children = _props.children,
           customProps = _objectWithoutProperties(_props, ['children']);
 
-      var clonedChilItems = this.clonedChildItems(children);
+      var clonedChildItems = this.clonedChildItems(children);
       if ('onChange' in customProps) {
         delete customProps.onChange;
       }
       return _react2.default.createElement(
         _TableRows2.default,
         customProps,
-        clonedChilItems
+        clonedChildItems
       );
     }
   }]);

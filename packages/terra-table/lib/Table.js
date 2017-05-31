@@ -44,6 +44,10 @@ var _SingleSelectableRows = require('./SingleSelectableRows');
 
 var _SingleSelectableRows2 = _interopRequireDefault(_SingleSelectableRows);
 
+var _TableSubheader = require('./TableSubheader');
+
+var _TableSubheader2 = _interopRequireDefault(_TableSubheader);
+
 require('./Table.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -92,5 +96,6 @@ Table.HeaderCell = _TableHeaderCell2.default;
 Table.Row = _TableRow2.default;
 Table.Cell = _TableCell2.default;
 Table.SingleSelectableRows = _SingleSelectableRows2.default;
+Table.Subheader = _TableSubheader2.default;
 
 exports.default = Table;
