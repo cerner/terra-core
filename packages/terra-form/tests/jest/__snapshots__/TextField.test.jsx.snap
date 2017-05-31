@@ -31,3 +31,90 @@ exports[`test should render a default TextField component 1`] = `
     type="text" />
 </Field>
 `;
+
+exports[`test should render as controlled when just a default value is passed into the TextField 1`] = `
+<TextField
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  maxLength={null}
+  minLength={null}
+  name="foo"
+  onChange={[Function]}
+  required={false}
+  type="text"
+  value="foo">
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Input
+        maxLength={null}
+        minLength={null}
+        name="foo"
+        onChange={[Function]}
+        required={false}
+        type="text"
+        value="foo">
+        <input
+          className="terra-Form-input"
+          maxLength={null}
+          minLength={null}
+          name="foo"
+          onChange={[Function]}
+          required={false}
+          type="text"
+          value="foo" />
+      </Input>
+    </div>
+  </Field>
+</TextField>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the TextField 1`] = `
+<TextField
+  defaultValue="foo"
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  maxLength={null}
+  minLength={null}
+  name="foo"
+  required={false}
+  type="text">
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Input
+        defaultValue="foo"
+        maxLength={null}
+        minLength={null}
+        name="foo"
+        required={false}
+        type="text">
+        <input
+          className="terra-Form-input"
+          defaultValue="foo"
+          maxLength={null}
+          minLength={null}
+          name="foo"
+          required={false}
+          type="text" />
+      </Input>
+    </div>
+  </Field>
+</TextField>
+`;

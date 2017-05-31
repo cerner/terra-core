@@ -19,25 +19,7 @@ module.exports = {
 
   'Displays a populated Textarea with correct name': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea/populated_uncontrolled`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea/populated`)
       .assert.elementPresent('textarea[name="job_experience"]');
-  },
-
-  'Properly initializes Textarea as uncontrolled when passed defaultValue': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea/populated_uncontrolled`)
-      .assert.elementPresent('textarea[name="job_experience"][required]')
-      .clearValue('textarea[name="job_experience"]')
-      .setValue('textarea[name="job_experience"]', '3 Years JavaScript')
-      .assert.value('textarea[name="job_experience"]', '3 Years JavaScript');
-  },
-
-  'Properly initializes Textarea as controlled when passed value and onChange': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea/populated_controlled`)
-      .assert.elementPresent('textarea[name="job_experience"][required]')
-      .clearValue('textarea[name="job_experience"]')
-      .setValue('textarea[name="job_experience"]', '3 Years JavaScript')
-      .assert.value('textarea[name="job_experience"]', '3 Years JavaScript');
   },
 };

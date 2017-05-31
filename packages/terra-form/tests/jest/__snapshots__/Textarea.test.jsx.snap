@@ -15,3 +15,31 @@ exports[`test should render a default TextArea component 1`] = `
   name={null}
   required={false} />
 `;
+
+exports[`test should render as controlled when just a default value is passed into the Textarea 1`] = `
+<Textarea
+  name="foo"
+  onChange={[Function]}
+  required={false}
+  value="foo">
+  <textarea
+    className="terra-Form-textarea"
+    name="foo"
+    onChange={[Function]}
+    required={false}
+    value="foo" />
+</Textarea>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
+<Textarea
+  defaultValue="foo"
+  name="foo"
+  required={false}>
+  <textarea
+    className="terra-Form-textarea"
+    defaultValue="foo"
+    name="foo"
+    required={false} />
+</Textarea>
+`;

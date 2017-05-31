@@ -33,3 +33,69 @@ exports[`test should render a default component 1`] = `
     type="number" />
 </Field>
 `;
+
+exports[`test should render as controlled when just a default value is passed into the NumberField 1`] = `
+<NumberField
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  max={null}
+  min={null}
+  name="years_experience"
+  onChange={[Function]}
+  required={true}
+  step={null}
+  value={2}>
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={true}>
+    <div
+      className="terra-Form-field terra-Form-field--required">
+      <Input
+        max={null}
+        min={null}
+        name="years_experience"
+        onChange={[Function]}
+        required={true}
+        step={null}
+        type="number"
+        value={2}>
+        <input
+          aria-required="true"
+          className="terra-Form-input"
+          max={null}
+          min={null}
+          name="years_experience"
+          onChange={[Function]}
+          required={true}
+          step={null}
+          type="number"
+          value={2} />
+      </Input>
+    </div>
+  </Field>
+</NumberField>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the NumberField 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={true}>
+  <Input
+    defaultValue={2}
+    max={null}
+    min={null}
+    name="years_experience"
+    required={true}
+    step={null}
+    type="number" />
+</Field>
+`;
