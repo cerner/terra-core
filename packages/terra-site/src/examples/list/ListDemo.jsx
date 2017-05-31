@@ -1,6 +1,6 @@
 import React from 'react';
 
-import List from 'terra-list/lib/List';
+import List from 'terra-list';
 
 const list = () => (
   <List isDivided>

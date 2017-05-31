@@ -30,8 +30,7 @@ import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TitleExamples from './examples/title/Index';
 
-
-// Test
+// Test Routes
 /* eslint-disable import/first */
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
