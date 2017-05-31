@@ -305,19 +305,13 @@ var PopupPresenter = function (_React$Component) {
   }, {
     key: 'createPortalContent',
     value: function createPortalContent(tetherContent, boundingFrame, zIndex, useOverlay) {
-      var overlayStyle = { zIndex: zIndex };
-      // if (boundingFrame) {
-      //   overlayStyle.maxWidth = boundingFrame.clientWidth;
-      //   overlayStyle.maxHeight = boundingFrame.clientHeight;  
-      // }
-
       if (!useOverlay) {
         return tetherContent;
       }
 
       return _react2.default.createElement(
         _PopupOverlay2.default,
-        { style: overlayStyle },
+        { style: { zIndex: zIndex } },
         tetherContent
       );
     }

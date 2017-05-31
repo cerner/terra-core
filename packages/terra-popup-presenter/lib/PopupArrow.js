@@ -58,7 +58,11 @@ var PopupArrow = function PopupArrow(_ref) {
 
   var arrowClassNames = (0, _classnames2.default)(['terra-PopupArrow', customProps.className]);
 
-  return _react2.default.createElement('div', _extends({}, customProps, { className: arrowClassNames, ref: refCallback }));
+  return _react2.default.createElement(
+    'div',
+    _extends({}, customProps, { className: arrowClassNames, ref: refCallback }),
+    _react2.default.createElement('div', { className: 'terra-PopupArrow-inner' })
+  );
 };
 
 PopupArrow.propTypes = propTypes;

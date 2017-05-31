@@ -229,18 +229,12 @@ class PopupPresenter extends React.Component {
   }
 
   createPortalContent(tetherContent, boundingFrame, zIndex, useOverlay) {
-    const overlayStyle = {zIndex};
-    // if (boundingFrame) {
-    //   overlayStyle.maxWidth = boundingFrame.clientWidth;
-    //   overlayStyle.maxHeight = boundingFrame.clientHeight;  
-    // }
-
     if (!useOverlay) {
       return tetherContent;
     }
 
     return (
-      <PopupOverlay style={overlayStyle}>
+      <PopupOverlay style={{zIndex}}>
         {tetherContent}
       </PopupOverlay>
     );
