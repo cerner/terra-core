@@ -67,33 +67,31 @@ const defaultProps = {
   preferredFirstName: null,
 };
 
-class DemographicsBanner extends React.Component {
-  render() {
-    const {
-      age,
-      dateOfBirth,
-      gender,
-      personName,
-      intl,
-      ...customProps
-    } = this.props;
+const DemographicsBanner = (
+  {
+    age,
+    dateOfBirth,
+    gender,
+    personName,
+    intl,
+    ...customProps
+  },
+) => {
+  const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
-    const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
-
-    return (
-      <DemographicsBannerDisplay
-        {...customProps}
-        age={ (age !== undefined) ? age : noDataProvided }
-        dateOfBirth={ (dateOfBirth !== undefined) ? dateOfBirth : noDataProvided }
-        gender={ (gender !== undefined) ? gender : noDataProvided }
-        personName={ (personName !== undefined) ? personName : noDataProvided }
-        dateOfBirthLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' }) }
-        deceasedDateLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' }) }
-        gestationalAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' }) }
-        postMenstrualAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' }) }
-      />
-    );
-  }
+  return (
+    <DemographicsBannerDisplay
+      {...customProps}
+      age={ (age !== undefined) ? age : noDataProvided }
+      dateOfBirth={ (dateOfBirth !== undefined) ? dateOfBirth : noDataProvided }
+      gender={ (gender !== undefined) ? gender : noDataProvided }
+      personName={ (personName !== undefined) ? personName : noDataProvided }
+      dateOfBirthLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' }) }
+      deceasedDateLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' }) }
+      gestationalAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' }) }
+      postMenstrualAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' }) }
+    />
+  );
 }
 
 DemographicsBanner.propTypes = propTypes;
