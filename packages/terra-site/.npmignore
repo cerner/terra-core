@@ -1,0 +1,11 @@
+*.log
+node_modules
+src
+target
+reports
+tests
+build
+aggregated-translations
+stats.json
+webpack.config.js
+webpack.prod.config.js
