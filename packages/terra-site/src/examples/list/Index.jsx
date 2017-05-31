@@ -15,12 +15,7 @@ import MultiSelectListSrc from '!raw-loader!terra-list/src/MultiSelectList.jsx';
 // Example Files
 import ListDemo from './ListDemo';
 import SingleSelect from './SingleSelect';
-import SingleSelectWithPreSelectedItem from './SingleSelectWithPreSelectedItem';
-import SingleSelectWithNonSelectableItem from './SingleSelectWithNonSelectableItem';
 import MultiSelect from './MultiSelect';
-import MultiSelectWithPreSelectedItem from './MultiSelectWithPreSelectedItem';
-import MultiSelectWithNonSelectableItem from './MultiSelectWithNonSelectableItem';
-import MultiSelectWithNoItemDeselect from './MultiSelectWithNoItemDeselect';
 import MultiSelectMaxSelection from './MultiSelectMaxSelection';
 
 const ListExamples = () => (
@@ -35,30 +30,18 @@ const ListExamples = () => (
     <PropsTable id="props-singleList" src={SingleSelectListSrc} />
     <h2>Multiple Select List</h2>
     <PropsTable id="props-multiList" src={MultiSelectListSrc} />
+    <br />
+    <h1>Examples</h1>
     <h2 id="list">List</h2>
     <ListDemo />
     <br />
     <h2 id="single">Single Select List</h2>
     <SingleSelect />
     <br />
-    <h2 id="single-pre-selected">Single Select List With Preselected Item</h2>
-    <SingleSelectWithPreSelectedItem />
-    <br />
-    <h2 id="single-non-selectable">Single Select List With Item 3 Non-Selectable</h2>
-    <SingleSelectWithNonSelectableItem />
-    <br />
     <h2 id="multi">Multi Select List</h2>
     <MultiSelect />
     <br />
-    <h2 id="multi-pre-selected">Multi Select List With Preselected Item</h2>
-    <MultiSelectWithPreSelectedItem />
-    <br />
-    <h2 id="multi-non-selectable">Multi Select List With Item 3 Non-Selectable</h2>
-    <MultiSelectWithNonSelectableItem />
-    <br />
-    <h2 id="multi-no-deselect">Multi Select List With Item 1 and 2 Selected but Cannot Deselect</h2>
-    <MultiSelectWithNoItemDeselect />
-    <br /><h2 id="multi-max-selection">Multi Select List With Maximum Selection of 2 Items</h2>
+    <h2 id="multi-max-selection">Multi Select List - Maximum Selection of 2 Items</h2>
     <MultiSelectMaxSelection />
   </div>
 );

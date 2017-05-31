@@ -29,7 +29,7 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isDivided: false,
-  hasChevrons: true,
+  hasChevrons: false,
   onChange: undefined,
 };
 
