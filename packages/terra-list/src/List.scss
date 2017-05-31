@@ -1,4 +1,5 @@
 @import '~terra-mixins';
+@import './variables';
 
 .terra-List {
   list-style: none;
@@ -6,8 +7,10 @@
   padding: 0;
 }
 
-.terra-List-divided {
-  > * {border-bottom: solid 1px;}
+.terra-List-divided > .terra-ListItem {
+  border-top: solid 1px $terra-list-divider-color;
 
-  &:first-child {border-top: solid 1px;}
+  &:last-of-type {
+    border-bottom: solid 1px $terra-list-divider-color;
+  }
 }

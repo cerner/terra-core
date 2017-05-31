@@ -6,7 +6,7 @@ class ModalIsFullscreen extends React.Component {
     super();
 
     this.state = {
-      isOpened: false,
+      isOpen: false,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -14,11 +14,11 @@ class ModalIsFullscreen extends React.Component {
   }
 
   handleOpenModal() {
-    this.setState({ isOpened: true });
+    this.setState({ isOpen: true });
   }
 
   handleCloseModal() {
-    this.setState({ isOpened: false });
+    this.setState({ isOpen: false });
   }
 
   render() {
@@ -26,7 +26,7 @@ class ModalIsFullscreen extends React.Component {
       <div>
         <Modal
           ariaLabel="Fullscreen Modal"
-          isOpened={this.state.isOpened}
+          isOpen={this.state.isOpen}
           isFullscreen
           onRequestClose={this.handleCloseModal}
         >
