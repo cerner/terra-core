@@ -201,10 +201,10 @@ var Popup = function (_React$Component) {
   return Popup;
 }(_react2.default.Component);
 
-var WrapperPopup = (0, _reactOnclickoutside2.default)(Popup);
-WrapperPopup.propTypes = propTypes;
-WrapperPopup.defaultProps = defaultProps;
-WrapperPopup.positionClasses = POPUP_CLASSES;
-WrapperPopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
+var onClickOutsidePopup = (0, _reactOnclickoutside2.default)(Popup);
+onClickOutsidePopup.propTypes = propTypes;
+onClickOutsidePopup.defaultProps = defaultProps;
+onClickOutsidePopup.positionClasses = POPUP_CLASSES;
+onClickOutsidePopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
-exports.default = WrapperPopup;
+exports.default = onClickOutsidePopup;

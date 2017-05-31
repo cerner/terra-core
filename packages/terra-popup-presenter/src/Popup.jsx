@@ -152,10 +152,10 @@ class Popup extends React.Component {
   }
 }
 
-const WrapperPopup = onClickOutside(Popup);
-WrapperPopup.propTypes = propTypes;
-WrapperPopup.defaultProps = defaultProps;
-WrapperPopup.positionClasses = POPUP_CLASSES;
-WrapperPopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
+const onClickOutsidePopup = onClickOutside(Popup);
+onClickOutsidePopup.propTypes = propTypes;
+onClickOutsidePopup.defaultProps = defaultProps;
+onClickOutsidePopup.positionClasses = POPUP_CLASSES;
+onClickOutsidePopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
-export default WrapperPopup;
+export default onClickOutsidePopup;
