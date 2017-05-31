@@ -16,7 +16,7 @@ class ManagedContent extends React.Component {
       const popupData = {
         targetRef: this.getButtonNode, // required
         content: contentSection, // required
-        contentAttachment: 'top right', // bottom middle or top middle? required or optional?
+        contentAttachment: 'top center', // bottom middle or top middle? required or optional?
         showArrow: true, // optional,  default true
         disableCloseHeader: false, // responsive header close button, default false
       };

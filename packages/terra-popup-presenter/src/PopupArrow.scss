@@ -1,9 +1,9 @@
 @import '~terra-mixins';
 
 $terra-popup-arrow-size: 10px;
-$terra-popup-arrow-color: rgba(178, 181, 182, 0.75);
+$terra-popup-arrow-color: rgba(178, 181, 182, 0.9);
 $terra-popup-arrow-inner-size: 9px;
-$terra-popup-arrow-inner-inset-size: 3px;
+$terra-popup-arrow-inner-inset-size: 2px;
 $terra-popup-arrow-inner-color: #fff;
 
 // These are relative to screen coordinates, so no bi-di concerns
