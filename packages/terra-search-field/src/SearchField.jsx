@@ -18,7 +18,7 @@ const propTypes = {
   minimumSearchTextLength: PropTypes.number,
 
   /**
-   * How long the component should wait after input before performing an automatic search.
+   * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
   searchDelay: PropTypes.number,
 
