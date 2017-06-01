@@ -39,6 +39,7 @@ const Textarea = ({
   ...customProps
 }) => {
   const additionalTextareaProps = Object.assign({}, customProps);
+  const textareaClasses = classNames('terra-Form-textarea', additionalTextareaProps.className);
 
   if (required) {
     additionalTextareaProps['aria-required'] = 'true';
@@ -55,7 +56,7 @@ const Textarea = ({
       name={name}
       required={required}
       {...additionalTextareaProps}
-      className={classNames('terra-Form-textarea', additionalTextareaProps.className)}
+      className={textareaClasses}
     />
   );
 };
