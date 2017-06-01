@@ -3,7 +3,7 @@
 
 
 .terra-ListItem-chevron {
-  @include terra-padding-end(10px);
+  @include terra-padding-horizontal(10px, 10px);
   display: flex;
 
   > svg {
