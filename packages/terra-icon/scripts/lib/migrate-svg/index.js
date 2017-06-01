@@ -39,7 +39,7 @@ var csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
 (0, _csvtojson2.default)({ noheader: true, headers: csvHeaders }).fromFile(_config.TerraIcon.csvFile).on('json', function (jsonObj) {
   var csvObject = new _csvObject2.default(jsonObj.name, jsonObj.filepath, jsonObj.themeable, jsonObj.bidi);
 
-  (0, _readSvg2.default)(csvObject).then(_optimizeSvg2.default).then(_writeSvg2.default)
+  (0, _readSvg2.default)(csvObject).then(_optimizeSvg2.default).then(_writeSvg2.default
   // eslint-disable-next-line no-console
-  .catch(console.error);
+  ).catch(console.error);
 });

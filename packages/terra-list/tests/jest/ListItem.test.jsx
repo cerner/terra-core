@@ -24,6 +24,6 @@ it('should render with isSelectable', () => {
 });
 
 it('should render with isSelectable and hasChevron', () => {
-  const item = shallow(<ListItem isSelectable hasChevron />);
+  const item = shallow(<ListItem isSelectable hasChevron content={<p>test</p>} />);
   expect(item).toMatchSnapshot();
 });
