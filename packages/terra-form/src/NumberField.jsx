@@ -6,7 +6,7 @@ import Input from './Input';
 
 const propTypes = {
   /**
-   * The defaultValue of the input element
+   * The defaultValue of the input element. Use this to create an uncontrolled input
    */
   defaultValue: PropTypes.number,
   /**
@@ -42,7 +42,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Function to trigger when user changes the input value
+   * Function to trigger when user changes the input value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
   /**
@@ -54,7 +54,7 @@ const propTypes = {
    */
   step: PropTypes.number,
   /**
-   * The value of the input element
+   * The defaultValue of the input element. Use this to create an uncontrolled input.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

@@ -7,7 +7,7 @@ import './Textarea.scss';
 
 const propTypes = {
   /**
-   * The defaultValue of the textarea. Use this to create an uncontrolled input
+   * The defaultValue of the textarea. Use this to create an uncontrolled textarea.
    */
   defaultValue: PropTypes.string,
   /**
@@ -19,7 +19,7 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * The value of the textarea. Use this to create a controlled input
+   * The value of the textarea. Use this to create a controlled textarea.
    */
   value: PropTypes.string,
 };

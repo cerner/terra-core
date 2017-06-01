@@ -6,7 +6,7 @@ import Input from './Input';
 
 const propTypes = {
   /**
-   * The defaultValue of the input element
+   * The defaultValue of the input element. Use this to create an uncontrolled input.
    */
   defaultValue: PropTypes.string,
   /**
@@ -42,7 +42,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Function to trigger when user selects one of the radio buttons
+   * Function to trigger when the user changes the input value. Provide one to create a controlled input.
    */
   onChange: PropTypes.func,
   /**
@@ -54,7 +54,7 @@ const propTypes = {
    */
   type: PropTypes.string,
   /**
-   * The value of the input element
+   * The value of the input element. Use this to create a controlled input.
    */
   value: PropTypes.string,
 };
