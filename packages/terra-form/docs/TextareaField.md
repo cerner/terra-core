@@ -1,6 +1,7 @@
 # Textarea Field
 
-Textaarea Field component for rendering textareas with standard structured style. Uses the Textarea component.
+Textarea Field component for rendering textareas with standard structured style. Uses the Textarea component.
+Also exposes attributes specific to the textarea.
 
 ## Usage
 

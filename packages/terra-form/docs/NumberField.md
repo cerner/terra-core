@@ -1,6 +1,6 @@
 # Number Field
 
-Number Field component for rendering text inputs with standard structured style defaulted to type=number. Also exposes attributes specific to that input type. Uses the input component with the type set to number.
+Number Field component for rendering numeric inputs (inputs with type=number) with standard structured style. Uses the Input element. Also exposes attributes specific to the input.
 
 ## Usage
 

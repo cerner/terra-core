@@ -1,6 +1,6 @@
 # Text Field
 
-Text Field component for rendering text inputs with standard structured style. Uses the Input component.
+Text Field component for rendering text inputs with standard structured style. Uses the Input component. Also exposes attributes specific to the input.
 
 ## Usage
 
