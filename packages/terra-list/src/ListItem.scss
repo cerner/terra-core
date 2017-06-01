@@ -3,18 +3,19 @@
 
 .terra-ListItem {
   display: table;
-  width: 100%;
   outline: none;
+  width: 100%;
 }
 
 .terra-ListItem > * {
- display: table-cell;
- width: 100%;
+  display: table-cell;
+  width: 100%;
 }
 
 .terra-ListItem-chevron {
   @include terra-padding-end(10px);
-  display:flex;
+  display: flex;
+
   > svg {
     color: $terra-grey-30;
   }
