@@ -60,14 +60,26 @@ it('renders the banner appropriately for a person with gestational and post mens
       dateOfBirth="May 9, 1993"
       gender="Male"
       gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       photo={<img alt="My Cat" src="" />}
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
+      postMenstrualAgeLabel="PMA"
       preferredFirstName="John"
     />,
   );
 
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders gestational date with a default label when the label is not provided', () => {
+  const banner = shallow(<DemographicsBanner gestationalAge="April 5, 2016" />);
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders post menstrural date with a default label when the label is not provided', () => {
+  const banner = shallow(<DemographicsBanner postMenstrualAge="April 5, 2016" />);
   expect(banner).toMatchSnapshot();
 });
 

@@ -1,7 +1,7 @@
 {
   "name": "terra-badge",
   "main": "lib/Badge.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "terra-badge",
   "repository": {
     "type": "git",
@@ -38,16 +38,16 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.4.1",
+    "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.4.1",
+    "terra-base": "^0.4.2",
     "terra-mixins": "^1.1.1"
   },
   "devDependencies": {
-    "terra-toolkit": "^0.3.1"
+    "terra-toolkit": "^0.3.2"
   }
 }

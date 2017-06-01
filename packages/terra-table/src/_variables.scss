@@ -1,40 +1,55 @@
 // Table Component Variables
 // ========================================================
 
+// Background Colors
 $terra-table-background-color: $terra-white !default;
-$terra-table-cell-background-color: $terra-white !default;
-$terra-table-cell-border-color: $terra-grey-30 !default;
-$terra-table-cell-border-width: 1px !default;
+$terra-table-row-striped-background-color: $terra-grey-5 !default;
+$terra-table-subheader-background-color: $terra-grey-25 !default;
+$terra-table-thead-background-color: $terra-grey-15 !default;
+
+// Base Border Styles
+$terra-table-base-border-color: $terra-grey-25 !default;
+$terra-table-base-border-width: 1px !default;
+
+// Borders
+$terra-table-border: 0 !default;
+$terra-table-thead-tr-border-top: $terra-table-base-border-width solid $terra-table-base-border-color !default;
+$terra-table-thead-tr-border-bottom: 0 !default;
+$terra-table-tfoot-tr-border-top: 0 !default;
+$terra-table-tfoot-tr-border-bottom: $terra-table-base-border-width solid $terra-table-base-border-color !default;
+$terra-table-row-border-vertical: $terra-table-base-border-width solid $terra-table-base-border-color !default;
+$terra-table-row-border-horizontal: $terra-table-base-border-width solid $terra-table-base-border-color !default;
+$terra-table-cell-border: 0 !default;
+
+// Table Header Font Styles
+$terra-table-thead-th-font-size: 1rem !default;
+$terra-table-thead-th-font-weight: bold !default;
+$terra-table-thead-th-color: $terra-dark !default;
+$terra-table-sort-indicator-color: $terra-dark !default;
+
+// Table Subheader Font Styles
+$terra-table-subheader-font-size: 1rem !default;
+$terra-table-subheader-font-weight: bold !default;
+$terra-table-subheader-color: $terra-dark !default;
+
+// Cell Padding
 $terra-table-cell-padding-bottom: 0.5em !default;
 $terra-table-cell-padding-left: 0.75em !default;
 $terra-table-cell-padding-right: 0.75em !default;
 $terra-table-cell-padding-top: 0.5em !default;
-$terra-table-cell-small-padding-bottom: 0.25em !default;
-$terra-table-cell-small-padding-left: 0.75em !default;
-$terra-table-cell-small-padding-right: 0.75em !default;
-$terra-table-cell-small-padding-top: 0.25em !default;
-$terra-table-row-th-background-color: $terra-grey-10 !default;
-$terra-table-row-striped-th-background-color: $terra-grey-20 !default;
-$terra-table-row-striped-background-color: $terra-grey-10 !default;
-$terra-table-tfoot-border-color: $terra-grey-30 !default;
-$terra-table-tfoot-border-width: 1px !default;
-$terra-table-thead-background-color: $terra-grey-20 !default;
-$terra-table-thead-border-color: $terra-grey-30 !default;
-$terra-table-thead-border-width: 1px !default;
-$terra-table-tr-border-color: $terra-grey-30 !default;
-$terra-table-tr-border-width: 1px !default;
-$terra-table-header-max-height-tiny: 1.75rem;
-$terra-table-header-max-height-small: 3rem;
-$terra-table-header-max-height-medium: 4rem;
-$terra-table-header-max-height-large: 5rem;
-$terra-table-header-max-height-huge: 6.25rem;
-$terra-table-row-max-height-tiny: 1.75rem;
-$terra-table-row-max-height-small: 3.25rem;
-$terra-table-row-max-height-medium: 4.75rem;
-$terra-table-row-max-height-large: 6.25rem;
-$terra-table-row-max-height-huge: 7.75rem;
+
+// Table Cell Min Width
 $terra-table-cell-min-width-tiny: 3rem;
 $terra-table-cell-min-width-small: 4.25rem;
 $terra-table-cell-min-width-medium: 5.75rem;
 $terra-table-cell-min-width-large: 8.5rem;
 $terra-table-cell-min-width-huge: 10.5rem;
+
+// Selection Styles
+$terra-table-row-hover-background-color: $terra-blue-10 !default;
+$terra-table-row-selected-background-color: $terra-blue-10 !default;
+$terra-table-row-selected-hover-background-color: darken($terra-blue-10, 5%) !default;
+$terra-table-row-selected-border-color: $terra-blue-70 !default;
+$terra-table-row-striped-hover-background-color: darken($terra-blue-10, 2%) !default;
+$terra-table-row-striped-selected-background-color: darken($terra-blue-10, 5%) !default;
+$terra-table-row-striped-selected-hover-background-color: darken($terra-blue-10, 10%) !default;

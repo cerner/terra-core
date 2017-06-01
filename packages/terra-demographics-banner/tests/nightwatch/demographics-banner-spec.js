@@ -28,6 +28,7 @@ module.exports = {
     browser.expect.element('.terra-DemographicsBanner-person-name').text.to.contain('--');
     browser.expect.element('.terra-DemographicsBanner-person-details').text.to.contain('DOB:\n--');
   },
+
   'Displays all the content when it is provided to the banner': (browser) => {
     const width = browser.globals.width;
 
@@ -74,8 +75,39 @@ module.exports = {
         .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993');
     }
   },
+
   'Displays a deceased demographics banner': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased`);
     browser.expect.element('.terra-DemographicsBanner--deceased').to.be.present;
+  },
+
+  'Displays a deceased demographics banner with a default label when one is not provided': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased_no_label`);
+    browser
+      .expect
+      .element('.terra-DemographicsBanner-person-details')
+      .text
+      .to
+      .contain('Deceased:\nMarch 12, 2017');
+  },
+
+  'Displays post menstrural age with a default label when one is not provided': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/post_menstrual_age_no_label`);
+    browser
+      .expect
+      .element('.terra-DemographicsBanner-person-details')
+      .text
+      .to
+      .contain('PMA:\nApril 5, 2016');
+  },
+
+  'Displays gestational age with a default label when one is not provided': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/gestational_age_no_label`);
+    browser
+      .expect
+      .element('.terra-DemographicsBanner-person-details')
+      .text
+      .to
+      .contain('GA:\nApril 5, 2016');
   },
 };
