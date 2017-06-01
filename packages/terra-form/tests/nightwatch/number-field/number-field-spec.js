@@ -18,7 +18,7 @@ module.exports = {
       .assert.elementPresent('input[type="number"]');
   },
 
-  'Displays a populated NumberField with correct label, help message, and choices': (browser) => {
+  'Displays a populated inline NumberField with correct label, help message, and error message': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/number-field/populated`)
       .assert.elementPresent('.terra-Form-field')
