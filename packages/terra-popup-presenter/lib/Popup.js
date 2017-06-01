@@ -98,8 +98,7 @@ var propTypes = {
   /**
    * The function returning the frame html reference.
    */
-  refCallback: _propTypes2.default.func,
-  isFullScreen: _propTypes2.default.bool
+  refCallback: _propTypes2.default.func
 };
 
 var defaultProps = {

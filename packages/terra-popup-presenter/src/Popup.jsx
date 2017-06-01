@@ -61,7 +61,6 @@ const propTypes = {
    * The function returning the frame html reference.
    */
   refCallback: PropTypes.func,
-  isFullScreen: PropTypes.bool,
 };
 
 const defaultProps = {
