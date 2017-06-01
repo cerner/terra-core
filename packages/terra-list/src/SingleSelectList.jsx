@@ -71,6 +71,18 @@ class SingleSelectList extends React.Component {
   }
 
   cloneChildItems(items) {
+    if (items === []) {
+      return items;
+    }
+
+    if (items.constructor != Array) {
+      const wrappedOnClick = this.wrappedOnClickForItem(items, 0);
+      const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(items, 0);
+      const newProps = this.newPropsForItem(items, 0, wrappedOnClick, wrappedOnKeyDown);
+
+      return React.cloneElement(items, newProps);
+    }
+
     return items.map((item, index) => {
       const wrappedOnClick = this.wrappedOnClickForItem(item, index);
       const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(item, index);
