@@ -1,3 +1,5 @@
+// remove eslint-disable once terra-content has been published
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-content/docs/README.md';
@@ -5,6 +7,7 @@ import { version } from 'terra-content/package.json';
 
 // eslint-disable-next-line import/extensions
 import 'terra-content';
+/* eslint-enable import/no-extraneous-dependencies */
 
 const ContentExamples = () => (
   <div>
