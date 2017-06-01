@@ -1,6 +1,9 @@
+// remove eslint-disable once terra-form has been published
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Field from 'terra-form/lib/Field';
 import Input from 'terra-form/lib/Input';
+/* eslint-enable import/no-extraneous-dependencies */
 
 const FieldExamples = () => (
   <form>
