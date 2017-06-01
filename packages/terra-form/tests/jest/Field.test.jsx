@@ -9,25 +9,15 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a Field that has the error, label, and help props set', () => {
+it('should render a Field when all the possible props are passed into it', () => {
   const input = (
     <Field
-      required={false}
-      name="foo"
-      value="bar"
-    />);
-
-  const wrapper = shallow(input);
-  expect(wrapper).toMatchSnapshot();
-});
-
-it('should render a Field that has children in it', () => {
-  const input = (
-    <Field
-      required={false}
-      name="foo"
-      value="bar"
+      error="This field is required"
+      help="This is a test input"
       htmlFor="test"
+      label="Text"
+      isInline
+      required
     >
       <input id="test" type="text" value="Test" />
     </Field>

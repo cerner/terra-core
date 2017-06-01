@@ -7,7 +7,7 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a NumberField with the rest of the props', () => {
+it('should render a NumberField when all the possible props are passed into it', () => {
   const input = (
     <NumberField
       label="Sales Tax Rate"
@@ -19,6 +19,7 @@ it('should render a NumberField with the rest of the props', () => {
       min={0}
       step={0.1}
       inputAttrs={{ className: 'cernerConsumer-application' }}
+      isInline
       required
     />);
 

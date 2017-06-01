@@ -1,9 +1,9 @@
-exports[`test should render a Field that has children in it 1`] = `
+exports[`test should render a Fieldset when all the possible props are passed into it 1`] = `
 <fieldset
-  className="terra-Form-fieldset">
+  className="terra-Form-fieldset terra-Form-fieldset--inline terra-Form-fieldset--required">
   <legend
     className="terra-Form-legend">
-    bar
+    Text
   </legend>
   <input
     type="radio"
@@ -11,22 +11,12 @@ exports[`test should render a Field that has children in it 1`] = `
   <small
     className="terra-Form-helpText"
     tabIndex="-1">
-    foo
+    This is a test input
   </small>
-</fieldset>
-`;
-
-exports[`test should render a Fieldset that has the error, label, and help props set 1`] = `
-<fieldset
-  className="terra-Form-fieldset">
-  <legend
-    className="terra-Form-legend">
-    bar
-  </legend>
   <small
-    className="terra-Form-helpText"
+    className="terra-Form-error"
     tabIndex="-1">
-    foo
+    This field is required
   </small>
 </fieldset>
 `;

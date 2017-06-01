@@ -9,22 +9,14 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a Fieldset that has the error, label, and help props set', () => {
+it('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
     <Fieldset
-      help="foo"
-      legend="bar"
-    />);
-
-  const wrapper = shallow(input);
-  expect(wrapper).toMatchSnapshot();
-});
-
-it('should render a Field that has children in it', () => {
-  const input = (
-    <Fieldset
-      help="foo"
-      legend="bar"
+      legend="Text"
+      error="This field is required"
+      help="This is a test input"
+      isInline
+      required
     >
       <input type="radio" value="Test" />
     </Fieldset>

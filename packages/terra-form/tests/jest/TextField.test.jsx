@@ -19,6 +19,7 @@ it('should render a TextField with the rest of the props', () => {
       inputAttrs={{ className: 'healtheintent-application' }}
       minLength={8}
       maxLength={75}
+      isInline
       required
     />);
 

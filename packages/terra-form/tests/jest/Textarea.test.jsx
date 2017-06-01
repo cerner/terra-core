@@ -7,7 +7,7 @@ it('should render a default TextArea component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a TextArea with the rest of the props', () => {
+it('should render a TextArea when all the possible props are passed into it', () => {
   const textarea = (
     <Textarea
       name="description"

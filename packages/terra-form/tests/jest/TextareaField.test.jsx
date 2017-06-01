@@ -17,6 +17,7 @@ it('should render a TextAreaField with the rest of the props', () => {
       maxLength={15}
       minLength={5}
       inputAttrs={{ autoFocus: false }}
+      isInline
       required
     />);
 
