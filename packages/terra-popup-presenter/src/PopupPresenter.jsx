@@ -278,7 +278,7 @@ class PopupPresenter extends React.Component {
       popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
     }
   
-    const allowScrolling = true;// TODO: SET BACK TO FALSE AFTER TESTING
+    const allowScrolling = false;
     const constraints = [
       {
         to: (boundingFrame || 'window'),

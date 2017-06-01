@@ -8,24 +8,26 @@ $terra-popup-margin: 9px;
   width: 100%;
 }
 
-// todo: need proper colors
 .terra-Popup-closeButton {
-  color: #b5bec3;
+  color: $terra-grey-30;
 
   &:hover {
-    color: #677075;
+    color: $terra-grey-70;
   }
 }
 
-// todo: need to use terra defined colors
 .terra-Popup-content {
-  background-color: #fff;
-  border: 1px solid #b2b5b6;
+  background-color: $terra-white;
+  border: 1px solid $terra-grey-35;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.35);
   max-height: 100vh;
   max-width: 100vw;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.terra-Popup-content--fill {
+  box-shadow: none;
 }
 
 .terra-Popup--arrowTop {

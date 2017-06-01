@@ -213,7 +213,7 @@ var Popup = function (_React$Component) {
     }
   }, {
     key: 'addPopupHeader',
-    value: function addPopupHeader(content) {
+    value: function addPopupHeader(content, onRequestClose) {
       var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
       var header = _react2.default.createElement(
         'div',
@@ -257,14 +257,17 @@ var Popup = function (_React$Component) {
       }
 
       var contentForDisplay = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
-      if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
+      var fill = isResponsive && contentMaxWidth <= TINY_BREAKPOINT;
+      if (fill) {
         contentStyle.height = contentStyle.maxHeight;
         contentStyle.width = contentStyle.maxWidth;
 
         if (!disableHeader) {
-          contentForDisplay = this.addPopupHeader(contentForDisplay);
+          contentForDisplay = this.addPopupHeader(contentForDisplay, onRequestClose);
         }
       }
+
+      var contentClassNames = (0, _classnames2.default)(['terra-Popup-content', { 'terra-Popup-content--fill': fill }]);
 
       return _react2.default.createElement(
         'div',
@@ -272,7 +275,7 @@ var Popup = function (_React$Component) {
         arrow,
         _react2.default.createElement(
           'div',
-          { className: 'terra-Popup-content', style: contentStyle },
+          { className: contentClassNames, style: contentStyle },
           contentForDisplay
         )
       );

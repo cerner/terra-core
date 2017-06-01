@@ -348,7 +348,7 @@ var PopupPresenter = function (_React$Component) {
         popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
       }
 
-      var allowScrolling = true; // TODO: SET BACK TO FALSE AFTER TESTING
+      var allowScrolling = false;
       var constraints = [{
         to: boundingFrame || 'window',
         attachment: 'together',

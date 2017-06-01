@@ -4,7 +4,7 @@ $terra-popup-arrow-size: 10px;
 $terra-popup-arrow-color: rgba(178, 181, 182, 0.9);
 $terra-popup-arrow-inner-size: 9px;
 $terra-popup-arrow-inner-inset-size: 2px;
-$terra-popup-arrow-inner-color: #fff;
+$terra-popup-arrow-inner-color: $terra-white;
 
 // These are relative to screen coordinates, so no bi-di concerns
 .terra-PopupArrow {

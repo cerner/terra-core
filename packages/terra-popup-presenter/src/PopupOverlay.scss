@@ -1,7 +1,7 @@
 @import '~terra-mixins';
 
 .terra-PopupOverlay {
-  background-color: #fff;
+  background-color: $terra-white;
   height: 100%;
   opacity: 0.01;
   overflow: -moz-scrollbars-none;
