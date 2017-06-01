@@ -14,15 +14,11 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
+require('terra-base/lib/baseStyles');
 
 var _DemographicsBannerDisplay = require('./DemographicsBannerDisplay');
 
 var _DemographicsBannerDisplay2 = _interopRequireDefault(_DemographicsBannerDisplay);
-
-require('terra-base/lib/baseStyles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -116,6 +112,7 @@ var DemographicsBanner = function DemographicsBanner(_ref, _ref2) {
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
 DemographicsBanner.contextTypes = {
+  /* eslint-disable consistent-return */
   intl: function intl(context) {
     if (context.intl === undefined) {
       return new Error('Please add locale prop to Base component to load translations');
