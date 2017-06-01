@@ -19,7 +19,7 @@ module.exports = {
       .assert.attributeEquals('.terra-SearchField-input', 'placeholder', '');
   },
 
-  'Displays a search field with a placeholder': (browser) => {
+  'Displays a search field with a placeholder value of "Search Text"': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/placeholder`)
       .assert.elementPresent('.terra-SearchField')
@@ -43,7 +43,7 @@ module.exports = {
       .expect.element('#search-callback-text').text.to.equal('Search Text: Sea').before(250);
   },
 
-  'Displays a search field with a custom search delay': (browser) => {
+  'Displays a search field with a search delay of 1000': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/delayed`)
       .setValue('input[type=search]', 'Test')
@@ -53,7 +53,7 @@ module.exports = {
       .expect.element('#search-callback-text').text.to.equal('Search Text: Test').after(1000);
   },
 
-  'Displays a search field with a custom minimum search text length': (browser) => {
+  'Displays a search field with a minimum search text length of 5 characters': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/minimum-length`)
       .setValue('input[type=search]', 'Test')
