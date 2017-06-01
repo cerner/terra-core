@@ -1,6 +1,6 @@
 {
   "name": "terra-site",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Documentation Site for Functional Verification",
   "repository": {
     "type": "git",
@@ -57,15 +57,11 @@
     "terra-time-input": "^0.x",
     "terra-title": "^0.x"
   },
-  "peerDependencies":{
+  "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
-    "terra-content": "^0.x",
-    "terra-form": "^0.x",
-    "terra-standout": "^0.x",
-    "terra-title": "^0.x",
     "autoprefixer": "^6.7.7",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -84,7 +80,11 @@
     "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
+    "terra-content": "^0.x",
+    "terra-form": "^0.x",
     "terra-i18n-plugin": "^0.x",
+    "terra-standout": "^0.x",
+    "terra-title": "^0.x",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
