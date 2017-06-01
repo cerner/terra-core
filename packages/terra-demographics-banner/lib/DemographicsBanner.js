@@ -18,8 +18,6 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _reactIntl = require('react-intl');
-
 var _DemographicsBannerDisplay = require('./DemographicsBannerDisplay');
 
 var _DemographicsBannerDisplay2 = _interopRequireDefault(_DemographicsBannerDisplay);
@@ -92,21 +90,22 @@ var defaultProps = {
   preferredFirstName: null
 };
 
-var DemographicsBanner = function DemographicsBanner(_ref) {
+var DemographicsBanner = function DemographicsBanner(_ref, _ref2) {
+  var intl = _ref2.intl;
+
   var age = _ref.age,
       dateOfBirth = _ref.dateOfBirth,
       gender = _ref.gender,
       personName = _ref.personName,
-      intl = _ref.intl,
-      customProps = _objectWithoutProperties(_ref, ['age', 'dateOfBirth', 'gender', 'personName', 'intl']);
+      customProps = _objectWithoutProperties(_ref, ['age', 'dateOfBirth', 'gender', 'personName']);
 
   var noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   return _react2.default.createElement(_DemographicsBannerDisplay2.default, _extends({}, customProps, {
-    age: age !== undefined ? age : noDataProvided,
-    dateOfBirth: dateOfBirth !== undefined ? dateOfBirth : noDataProvided,
-    gender: gender !== undefined ? gender : noDataProvided,
-    personName: personName !== undefined ? personName : noDataProvided,
+    age: age || noDataProvided,
+    dateOfBirth: dateOfBirth || noDataProvided,
+    gender: gender || noDataProvided,
+    personName: personName || noDataProvided,
     dateOfBirthLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' }),
     deceasedDateLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' }),
     gestationalAgeLabel: intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' }),
@@ -116,5 +115,12 @@ var DemographicsBanner = function DemographicsBanner(_ref) {
 
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
+DemographicsBanner.contextTypes = {
+  intl: function intl(context) {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  }
+};
 
-exports.default = (0, _reactIntl.injectIntl)(DemographicsBanner);
+exports.default = DemographicsBanner;

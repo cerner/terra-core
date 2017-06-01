@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { injectIntl } from 'react-intl';
 import DemographicsBannerDisplay from './DemographicsBannerDisplay';
 
 import 'terra-base/lib/baseStyles';
@@ -73,19 +72,20 @@ const DemographicsBanner = (
     dateOfBirth,
     gender,
     personName,
-    intl,
     ...customProps
-  },
+  }, {
+    intl
+  }
 ) => {
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   return (
     <DemographicsBannerDisplay
       {...customProps}
-      age={ (age !== undefined) ? age : noDataProvided }
-      dateOfBirth={ (dateOfBirth !== undefined) ? dateOfBirth : noDataProvided }
-      gender={ (gender !== undefined) ? gender : noDataProvided }
-      personName={ (personName !== undefined) ? personName : noDataProvided }
+      age={ age || noDataProvided }
+      dateOfBirth={ dateOfBirth || noDataProvided }
+      gender={ gender || noDataProvided }
+      personName={ personName || noDataProvided }
       dateOfBirthLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' }) }
       deceasedDateLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' }) }
       gestationalAgeLabel={ intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' }) }
@@ -96,5 +96,12 @@ const DemographicsBanner = (
 
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
+DemographicsBanner.contextTypes = {
+    intl: (context) => {
+      if (context.intl === undefined) {
+        return new Error('Please add locale prop to Base component to load translations');
+      }
+    },
+};
 
-export default injectIntl(DemographicsBanner);
+export default DemographicsBanner;

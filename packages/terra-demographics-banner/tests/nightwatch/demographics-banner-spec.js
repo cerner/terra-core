@@ -58,7 +58,7 @@ module.exports = {
         .element('.terra-DemographicsBanner-person-details')
         .text
         .to
-        .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993\nMRN:\n12343\nREA:\n3JSDA');
+        .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993\nPMA:\nMay 13, 1993\nMRN:\n12343\nREA:\n3JSDA');
     } else {
       browser
         .expect
