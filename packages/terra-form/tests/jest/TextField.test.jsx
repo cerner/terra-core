@@ -13,7 +13,6 @@ it('should render a TextField with the rest of the props', () => {
       type="email"
       label="Email Address"
       name="email"
-      value=""
       error="This field is required"
       help="This will not be shared with outside sources"
       inputAttrs={{ className: 'healtheintent-application' }}
@@ -28,26 +27,13 @@ it('should render a TextField with the rest of the props', () => {
 });
 
 it('should render as uncontrolled when just a default value is passed into the TextField', () => {
-  const input = (
-    <TextField
-      name="foo"
-      defaultValue="foo"
-    />
-  );
-
+  const input = <TextField defaultValue="foo" />;
   const wrapper = mount(input);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the TextField', () => {
-  const input = (
-    <TextField
-      name="foo"
-      value="foo"
-      onChange={() => {}}
-    />
-  );
-
+  const input = <TextField value="foo" onChange={() => {}} />;
   const wrapper = mount(input);
   expect(wrapper).toMatchSnapshot();
 });

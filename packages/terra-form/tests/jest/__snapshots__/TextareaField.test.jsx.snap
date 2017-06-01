@@ -43,7 +43,7 @@ exports[`test should render as controlled when just a default value is passed in
   label={null}
   maxLength={null}
   minLength={null}
-  name="foo"
+  name={null}
   onChange={[Function]}
   required={false}
   rows={null}
@@ -60,7 +60,7 @@ exports[`test should render as controlled when just a default value is passed in
         cols={null}
         maxLength={null}
         minLength={null}
-        name="foo"
+        name={null}
         onChange={[Function]}
         required={false}
         rows={null}
@@ -70,7 +70,7 @@ exports[`test should render as controlled when just a default value is passed in
           cols={null}
           maxLength={null}
           minLength={null}
-          name="foo"
+          name={null}
           onChange={[Function]}
           required={false}
           rows={null}
@@ -92,7 +92,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
   label={null}
   maxLength={null}
   minLength={null}
-  name="foo"
+  name={null}
   required={false}
   rows={null}>
   <Field
@@ -108,7 +108,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
         defaultValue="foo"
         maxLength={null}
         minLength={null}
-        name="foo"
+        name={null}
         required={false}
         rows={null}>
         <textarea
@@ -117,7 +117,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
           defaultValue="foo"
           maxLength={null}
           minLength={null}
-          name="foo"
+          name={null}
           required={false}
           rows={null} />
       </Textarea>

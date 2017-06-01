@@ -11,8 +11,7 @@ exports[`test should render a TextField with the rest of the props 1`] = `
     minLength={8}
     name="email"
     required={true}
-    type="email"
-    value="" />
+    type="email" />
 </Field>
 `;
 
@@ -41,7 +40,7 @@ exports[`test should render as controlled when just a default value is passed in
   label={null}
   maxLength={null}
   minLength={null}
-  name="foo"
+  name={null}
   onChange={[Function]}
   required={false}
   type="text"
@@ -57,7 +56,7 @@ exports[`test should render as controlled when just a default value is passed in
       <Input
         maxLength={null}
         minLength={null}
-        name="foo"
+        name={null}
         onChange={[Function]}
         required={false}
         type="text"
@@ -66,7 +65,7 @@ exports[`test should render as controlled when just a default value is passed in
           className="terra-Form-input"
           maxLength={null}
           minLength={null}
-          name="foo"
+          name={null}
           onChange={[Function]}
           required={false}
           type="text"
@@ -87,7 +86,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
   label={null}
   maxLength={null}
   minLength={null}
-  name="foo"
+  name={null}
   required={false}
   type="text">
   <Field
@@ -102,7 +101,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
         defaultValue="foo"
         maxLength={null}
         minLength={null}
-        name="foo"
+        name={null}
         required={false}
         type="text">
         <input
@@ -110,7 +109,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
           defaultValue="foo"
           maxLength={null}
           minLength={null}
-          name="foo"
+          name={null}
           required={false}
           type="text" />
       </Input>

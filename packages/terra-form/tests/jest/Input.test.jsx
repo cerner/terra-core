@@ -12,7 +12,6 @@ it('should render a Input with the rest of the props', () => {
     <Input
       required
       name="foo"
-      value="bar"
     />);
 
   const wrapper = shallow(input);
@@ -20,26 +19,13 @@ it('should render a Input with the rest of the props', () => {
 });
 
 it('should render as uncontrolled when just a default value is passed into the function', () => {
-  const input = (
-    <Input
-      name="foo"
-      defaultValue="foo"
-    />
-  );
-
+  const input = <Input defaultValue="foo" />;
   const wrapper = mount(input);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the function', () => {
-  const input = (
-    <Input
-      name="foo"
-      value="foo"
-      onChange={() => {}}
-    />
-  );
-
+  const input = <Input value="foo" onChange={() => {}} />;
   const wrapper = mount(input);
   expect(wrapper).toMatchSnapshot();
 });

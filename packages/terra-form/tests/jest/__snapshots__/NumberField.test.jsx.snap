@@ -12,8 +12,7 @@ exports[`test should render a NumberField when all the possible props are passed
     name="sales_tax_rate"
     required={true}
     step={0.1}
-    type="number"
-    value={0.075} />
+    type="number" />
 </Field>
 `;
 
@@ -43,7 +42,7 @@ exports[`test should render as controlled when just a default value is passed in
   label={null}
   max={null}
   min={null}
-  name="years_experience"
+  name={null}
   onChange={[Function]}
   required={false}
   step={null}
@@ -59,7 +58,7 @@ exports[`test should render as controlled when just a default value is passed in
       <Input
         max={null}
         min={null}
-        name="years_experience"
+        name={null}
         onChange={[Function]}
         required={false}
         step={null}
@@ -69,7 +68,7 @@ exports[`test should render as controlled when just a default value is passed in
           className="terra-Form-input"
           max={null}
           min={null}
-          name="years_experience"
+          name={null}
           onChange={[Function]}
           required={false}
           step={null}
@@ -92,7 +91,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
     defaultValue={2}
     max={null}
     min={null}
-    name="years_experience"
+    name={null}
     required={false}
     step={null}
     type="number" />

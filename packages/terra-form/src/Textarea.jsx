@@ -15,6 +15,10 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Function to trigger when user changes the textarea value. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+  /**
    * Whether the input is required or not
    */
   required: PropTypes.bool,
@@ -27,6 +31,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   name: null,
+  onChange: undefined,
   required: false,
   value: undefined,
 };
@@ -34,6 +39,7 @@ const defaultProps = {
 const Textarea = ({
   defaultValue,
   name,
+  onChange,
   required,
   value,
   ...customProps
@@ -54,6 +60,7 @@ const Textarea = ({
   return (
     <textarea
       name={name}
+      onChange={onChange}
       required={required}
       {...additionalTextareaProps}
       className={textareaClasses}

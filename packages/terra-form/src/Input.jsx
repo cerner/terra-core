@@ -14,6 +14,10 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+   * Function to trigger when user changes the input value. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+  /**
    * Name of the input
    */
   name: PropTypes.string,
@@ -33,6 +37,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   name: null,
+  onChange: undefined,
   required: false,
   value: undefined,
 };
@@ -40,6 +45,7 @@ const defaultProps = {
 const Input = ({
   defaultValue,
   name,
+  onChange,
   required,
   value,
   ...customProps
@@ -59,6 +65,7 @@ const Input = ({
   return (
     <input
       name={name}
+      onChange={onChange}
       required={required}
       {...additionalInputProps}
       className={classNames('terra-Form-input', additionalInputProps.className)}

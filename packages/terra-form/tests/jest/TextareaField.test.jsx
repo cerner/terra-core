@@ -26,26 +26,13 @@ it('should render a TextAreaField with the rest of the props', () => {
 });
 
 it('should render as uncontrolled when just a default value is passed into the TextareaField', () => {
-  const textarea = (
-    <TextareaField
-      name="foo"
-      defaultValue="foo"
-    />
-  );
-
+  const textarea = <TextareaField defaultValue="foo" />;
   const wrapper = mount(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the TextareaField', () => {
-  const textarea = (
-    <TextareaField
-      name="foo"
-      value="foo"
-      onChange={() => {}}
-    />
-  );
-
+  const textarea = <TextareaField value="foo" onChange={() => {}} />;
   const wrapper = mount(textarea);
   expect(wrapper).toMatchSnapshot();
 });
