@@ -61,13 +61,13 @@ it('should select an item when maxSelectionCount is 2', () => {
   expect(multiSelect).toMatchSnapshot();
 });
 
-it('should render with no items', () => {
-  const multiSelect = shallow(<MultiSelectList />);
+it('should mount with no items', () => {
+  const multiSelect = mount(<MultiSelectList />);
   expect(multiSelect).toMatchSnapshot();
 });
 
-it('should render with one items', () => {
+it('should mount with one items', () => {
   const item1 = <MultiSelectList.Item key="123" />;
-  const multiSelect = shallow(<MultiSelectList>{item1}</MultiSelectList>);
+  const multiSelect = mount(<MultiSelectList>{item1}</MultiSelectList>);
   expect(multiSelect).toMatchSnapshot();
 });
