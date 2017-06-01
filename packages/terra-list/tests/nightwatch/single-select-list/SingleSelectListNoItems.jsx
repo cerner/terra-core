@@ -1,10 +1,9 @@
 import React from 'react';
 
-import SingleSelectList from '../../../src/SingleSelectList';
+import SingleSelectList from '../../../lib/SingleSelectList';
 
 const list = () => (
-  <SingleSelectList>
-  </SingleSelectList>
+  <SingleSelectList />
  );
 
 export default list;

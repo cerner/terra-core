@@ -74,6 +74,21 @@ exports[`test should render with items 1`] = `
 </List>
 `;
 
+exports[`test should render with no items 1`] = `
+<List
+  isDivided={false} />
+`;
+
+exports[`test should render with one items 1`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false} />
+</List>
+`;
+
 exports[`test should select an item when maxSelectionCount is 2 1`] = `
 <List
   isDivided={false}>

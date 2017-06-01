@@ -75,7 +75,7 @@ class SingleSelectList extends React.Component {
       return items;
     }
 
-    if (items.constructor != Array) {
+    if (items.constructor !== Array) {
       const wrappedOnClick = this.wrappedOnClickForItem(items, 0);
       const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(items, 0);
       const newProps = this.newPropsForItem(items, 0, wrappedOnClick, wrappedOnKeyDown);

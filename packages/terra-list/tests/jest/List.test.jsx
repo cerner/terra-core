@@ -23,3 +23,14 @@ it('should render isDivided', () => {
   const singleSelect = shallow(<List isDivided>{items}</List>);
   expect(singleSelect).toMatchSnapshot();
 });
+
+it('should mount with no items', () => {
+  const singleSelect = mount(<List />);
+  expect(singleSelect).toMatchSnapshot();
+});
+
+it('should mount with one items', () => {
+  const item1 = <List.Item key="123" />;
+  const singleSelect = mount(<List>{item1}</List>);
+  expect(singleSelect).toMatchSnapshot();
+});

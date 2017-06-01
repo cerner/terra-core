@@ -1,3 +1,60 @@
+exports[`test should mount with isSelectable 1`] = `
+<ListItem
+  hasChevron={false}
+  isSelectable={true}
+  isSelected={false}>
+  <li
+    className="terra-ListItem terra-ListItem-isSelectable" />
+</ListItem>
+`;
+
+exports[`test should mount with isSelectable and hasChevron 1`] = `
+<ListItem
+  hasChevron={true}
+  isSelectable={true}
+  isSelected={false}>
+  <li
+    className="terra-ListItem terra-ListItem-isSelectable terra-ListItem-hasChevron">
+    <span
+      className="terra-ListItem-chevron">
+      <IconChevronRight
+        className=""
+        data-name="Layer 1"
+        height="10"
+        isBidi={true}
+        viewBox="0 0 48 48"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          className=""
+          data-name="Layer 1"
+          focusable={false}
+          height="10"
+          isBidi={true}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="10"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon is-bidi"
+            data-name="Layer 1"
+            focusable={false}
+            height="10"
+            viewBox="0 0 48 48"
+            width="10"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z" />
+          </svg>
+        </IconBase>
+      </IconChevronRight>
+    </span>
+  </li>
+</ListItem>
+`;
+
 exports[`test should render with className 1`] = `
 <li
   className="terra-ListItem textClass" />
@@ -9,28 +66,6 @@ exports[`test should render with content 1`] = `
   <p>
     text
   </p>
-</li>
-`;
-
-exports[`test should render with isSelectable 1`] = `
-<li
-  className="terra-ListItem terra-ListItem-isSelectable" />
-`;
-
-exports[`test should render with isSelectable and hasChevron 1`] = `
-<li
-  className="terra-ListItem terra-ListItem-isSelectable terra-ListItem-hasChevron">
-  <span
-    className="terra-ListItem-chevron">
-    <IconChevronRight
-      className=""
-      data-name="Layer 1"
-      height="10"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      width="10"
-      xmlns="http://www.w3.org/2000/svg" />
-  </span>
 </li>
 `;
 
