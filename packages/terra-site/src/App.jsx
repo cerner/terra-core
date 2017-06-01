@@ -17,7 +17,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      locale: locale,
+      locale,
     };
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
 import { IntlProvider } from 'react-intl';
 import DemographicsBanner from '../../src/DemographicsBanner';
 import messages from '../../translations/en-US.json';
@@ -26,7 +27,7 @@ it('renders the banner wrapper with all props', () => {
         postMenstrualAge="April 7, 2016"
         preferredFirstName="John"
       />
-    </IntlProvider>
+    </IntlProvider>,
   );
 
   expect(banner).toMatchSnapshot();
