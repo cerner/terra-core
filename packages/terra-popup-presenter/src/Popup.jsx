@@ -93,13 +93,6 @@ class Popup extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleResize = this.debounce(this.handleResize.bind(this), 100);
-    this.setRefNode = this.setRefNode.bind(this);
-    this.state = {displayHeader: false};
-  }
-
-
-  componentDidUpdate() {
-    this.updateDisplay();
   }
 
   componentDidMount() {
@@ -109,8 +102,6 @@ class Popup extends React.Component {
     if (this.props.closeOnResize) {
       window.addEventListener('resize', this.handleResize);
     }
-
-    this.updateDisplay();
   }
 
   componentWillUnmount() {
@@ -121,23 +112,6 @@ class Popup extends React.Component {
     if (this.props.closeOnResize) {
       window.removeEventListener('resize', this.handleResize);
     }
-  }
-
-  updateDisplay() {
-    const shouldDisplay = this.shouldDisplayHeader();
-
-    if (shouldDisplay !== this.state.displayHeader) {
-      this.setState({displayHeader: shouldDisplay});
-    }
-  }
-
-  shouldDisplayHeader() {
-    if (this.props.disableHeader) {
-      return false;
-    }
-
-    // debate allowable offeset
-    return this._refNode.clientHeight >= this.props.contentMaxHeight && this._refNode.clientWidth >= this.props.contentMaxWidth;
   }
 
   handleResize(event) {
@@ -156,11 +130,6 @@ class Popup extends React.Component {
     if (event.keyCode === KEYCODES.ESCAPE && this.props.onRequestClose) {
       this.props.onRequestClose(event);
     }
-  }
-
-  setRefNode(node) {
-    this._refNode = node;
-    this.props.refCallback(this._refNode);
   }
 
   render() {
@@ -195,8 +164,9 @@ class Popup extends React.Component {
       contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
     }
 
+    // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
     let contentForDisplay = clonedContent;
-    if (this.state.displayHeader) {
+    if (contentMaxWidth <= 544) {
       const containerStyle = {};
       if (contentMaxHeight) {
         containerStyle.height = contentMaxHeight.toString() + 'px';
@@ -211,7 +181,7 @@ class Popup extends React.Component {
     }
 
     return (
-      <div {...customProps} className={popupClassNames} ref={this.setRefNode}>
+      <div {...customProps} className={popupClassNames} ref={this.refCallback}>
         {arrow}
         <div className="terra-Popup-content" style={contentStyle}>
           {contentForDisplay}

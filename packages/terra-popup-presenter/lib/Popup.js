@@ -140,17 +140,10 @@ var Popup = function (_React$Component) {
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
     _this.handleKeydown = _this.handleKeydown.bind(_this);
     _this.handleResize = _this.debounce(_this.handleResize.bind(_this), 100);
-    _this.setRefNode = _this.setRefNode.bind(_this);
-    _this.state = { displayHeader: false };
     return _this;
   }
 
   _createClass(Popup, [{
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      this.updateDisplay();
-    }
-  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.closeOnEsc) {
@@ -159,8 +152,6 @@ var Popup = function (_React$Component) {
       if (this.props.closeOnResize) {
         window.addEventListener('resize', this.handleResize);
       }
-
-      this.updateDisplay();
     }
   }, {
     key: 'componentWillUnmount',
@@ -172,25 +163,6 @@ var Popup = function (_React$Component) {
       if (this.props.closeOnResize) {
         window.removeEventListener('resize', this.handleResize);
       }
-    }
-  }, {
-    key: 'updateDisplay',
-    value: function updateDisplay() {
-      var shouldDisplay = this.shouldDisplayHeader();
-
-      if (shouldDisplay !== this.state.displayHeader) {
-        this.setState({ displayHeader: shouldDisplay });
-      }
-    }
-  }, {
-    key: 'shouldDisplayHeader',
-    value: function shouldDisplayHeader() {
-      if (this.props.disableHeader) {
-        return false;
-      }
-
-      // debate allowable offeset
-      return this._refNode.clientHeight >= this.props.contentMaxHeight && this._refNode.clientWidth >= this.props.contentMaxWidth;
     }
   }, {
     key: 'handleResize',
@@ -212,12 +184,6 @@ var Popup = function (_React$Component) {
       if (event.keyCode === KEYCODES.ESCAPE && this.props.onRequestClose) {
         this.props.onRequestClose(event);
       }
-    }
-  }, {
-    key: 'setRefNode',
-    value: function setRefNode(node) {
-      this._refNode = node;
-      this.props.refCallback(this._refNode);
     }
   }, {
     key: 'render',
@@ -248,8 +214,9 @@ var Popup = function (_React$Component) {
         contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
       }
 
+      // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
       var contentForDisplay = clonedContent;
-      if (this.state.displayHeader) {
+      if (contentMaxWidth <= 544) {
         var containerStyle = {};
         if (contentMaxHeight) {
           containerStyle.height = contentMaxHeight.toString() + 'px';
@@ -273,7 +240,7 @@ var Popup = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: popupClassNames, ref: this.setRefNode }),
+        _extends({}, customProps, { className: popupClassNames, ref: this.refCallback }),
         arrow,
         _react2.default.createElement(
           'div',

@@ -208,16 +208,17 @@ class PopupPresenter extends React.Component {
       popupClasses = Popup.positionClasses[position];
     }
 
-    //might internalize the code here and just pass it through
     let boundsProps;
     if (boundingFrame) {
       boundsProps = {
         contentMaxHeight: boundingFrame.clientHeight,
+        contentMaxWidth: boundingFrame.clientWidth,
       };
-
-      if (boundingFrame.clientWidth < 544) {
-        boundsProps.contentMaxWidth = boundingFrame.clientWidth;
-      }
+    } else {
+      boundsProps = {
+        contentMaxHeight: window.innerHeight,
+        contentMaxWidth: window.innerWidth,
+      };
     }
 
     const popupProps = {
