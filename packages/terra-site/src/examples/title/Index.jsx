@@ -1,3 +1,5 @@
+// remove eslint-disable once terra-title has been published
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-title/docs/README.md';
@@ -5,6 +7,7 @@ import { version } from 'terra-title/package.json';
 
 // eslint-disable-next-line import/extensions
 import 'terra-title';
+// remove eslint-enable once terra-title has been published
 
 const TitleExamples = () => (
   <div>
