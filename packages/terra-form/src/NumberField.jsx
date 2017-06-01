@@ -73,7 +73,7 @@ const defaultProps = {
   min: null,
   name: null,
   onChange: undefined,
-  required: true,
+  required: false,
   step: null,
   value: undefined,
 };

@@ -23,12 +23,12 @@ exports[`test should render a default component 1`] = `
   help={null}
   isInline={false}
   label={null}
-  required={true}>
+  required={false}>
   <Input
     max={null}
     min={null}
     name={null}
-    required={true}
+    required={false}
     step={null}
     type="number" />
 </Field>
@@ -45,7 +45,7 @@ exports[`test should render as controlled when just a default value is passed in
   min={null}
   name="years_experience"
   onChange={[Function]}
-  required={true}
+  required={false}
   step={null}
   value={2}>
   <Field
@@ -53,26 +53,25 @@ exports[`test should render as controlled when just a default value is passed in
     help={null}
     isInline={false}
     label={null}
-    required={true}>
+    required={false}>
     <div
-      className="terra-Form-field terra-Form-field--required">
+      className="terra-Form-field">
       <Input
         max={null}
         min={null}
         name="years_experience"
         onChange={[Function]}
-        required={true}
+        required={false}
         step={null}
         type="number"
         value={2}>
         <input
-          aria-required="true"
           className="terra-Form-input"
           max={null}
           min={null}
           name="years_experience"
           onChange={[Function]}
-          required={true}
+          required={false}
           step={null}
           type="number"
           value={2} />
@@ -88,13 +87,13 @@ exports[`test should render as uncontrolled when just a default value is passed 
   help={null}
   isInline={false}
   label={null}
-  required={true}>
+  required={false}>
   <Input
     defaultValue={2}
     max={null}
     min={null}
     name="years_experience"
-    required={true}
+    required={false}
     step={null}
     type="number" />
 </Field>
