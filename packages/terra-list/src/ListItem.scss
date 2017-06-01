@@ -1,22 +1,13 @@
 @import '~terra-mixins';
 @import './variables';
 
-.terra-ListItem {
-  display: table;
-  width: 100%;
-}
-
-.terra-ListItem > * {
-  display: table-cell;
-  width: 100%;
-}
 
 .terra-ListItem-chevron {
   @include terra-padding-end(10px);
   display: flex;
 
   > svg {
-    color: $terra-grey-30;
+    color: $terra-list-chevron-color;
   }
 }
 
@@ -30,7 +21,7 @@
   }
 
   + .terra-ListItem {
-    border-top-color: $terra-list-item-selected-divider-color; 
+    border-top-color: $terra-list-item-selected-divider-color;
   }
 }
 

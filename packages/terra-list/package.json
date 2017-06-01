@@ -33,6 +33,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
+    "terra-arrange": "^0.3.3",
     "terra-base": "^0.4.2",
     "terra-icon": "^0.4.2",
     "terra-mixins": "^1.1.1"
