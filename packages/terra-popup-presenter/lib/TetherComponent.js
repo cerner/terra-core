@@ -50,7 +50,8 @@ var propTypes = {
    */
   classPrefix: _propTypes2.default.string,
   /**
-   * Rule set to pass to tether, contraining the content to.
+   * Rule set to pass to tether, contraining the content to by setting 'to', 'attachment', and/or 'pin'.
+   * Also allows for class aliasing or 'outOfBoundsClass' and 'pinnedClass'.
    */
   constraints: _propTypes2.default.array,
   /**
@@ -94,7 +95,7 @@ var propTypes = {
    */
   targetOffset: _propTypes2.default.string,
   /**
-   * Callback function when each tether component is adjusted.
+   * Callback function when each tether component is updated.
    */
   onUpdate: _propTypes2.default.func,
   /**

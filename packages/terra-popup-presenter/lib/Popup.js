@@ -44,6 +44,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/**
+ * Directional classes to be applied by a presenting component.
+ */
 var POPUP_CLASSES = {
   top: 'terra-Popup--arrowTop',
   bottom: 'terra-Popup--arrowBottom',
@@ -51,6 +54,9 @@ var POPUP_CLASSES = {
   right: 'terra-Popup--arrowRight'
 };
 
+/**
+ * Mirrored directional classes, used to flip the arrow on repositioning.
+ */
 var POPUP_OPPOSITE_CLASSES = {
   top: 'terra-Popup--arrowBottom',
   bottom: 'terra-Popup--arrowTop',
@@ -58,9 +64,17 @@ var POPUP_OPPOSITE_CLASSES = {
   right: 'terra-Popup--arrowLeft'
 };
 
+/**
+ * Key code value for the escape key.
+ */
 var KEYCODES = {
   ESCAPE: 27
 };
+
+/**
+ * The tiny breakpoint value, at which to flex responsiveness.
+ */
+var TINY_BREAKPOINT = 544;
 
 var propTypes = {
   /**
@@ -84,17 +98,21 @@ var propTypes = {
    */
   content: _propTypes2.default.element.isRequired,
   /**
-   * The maximum height to set for popup content.
+   * The maximum height to set for popup content, also used with responsive behavior for actual height.
    */
   contentMaxHeight: _propTypes2.default.number,
   /**
-   * The maximum width of the popup content.
+   * The maximum width of the popup content, also used with responsive behavior for actual width.
    */
   contentMaxWidth: _propTypes2.default.number,
   /**
    * Should the default header be disabled at small form factor.
    */
   disableHeader: _propTypes2.default.bool,
+  /**
+   * Should the popup expand to fill at the defined breakpoint.
+   */
+  isResponsive: _propTypes2.default.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -114,6 +132,7 @@ var defaultProps = {
   contentMaxHeight: undefined,
   contentMaxWidth: undefined,
   disableHeader: false,
+  isResponsive: true,
   onRequestClose: undefined,
   refCallback: undefined
 };
@@ -201,11 +220,12 @@ var Popup = function (_React$Component) {
           contentMaxHeight = _props.contentMaxHeight,
           contentMaxWidth = _props.contentMaxWidth,
           disableHeader = _props.disableHeader,
+          isResponsive = _props.isResponsive,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'disableHeader', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
       var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
 
@@ -221,7 +241,7 @@ var Popup = function (_React$Component) {
 
       // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
       var contentForDisplay = clonedContent;
-      if (contentMaxWidth <= 544) {
+      if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
         contentStyle.height = contentStyle.maxHeight;
         contentStyle.width = contentStyle.maxWidth;
 

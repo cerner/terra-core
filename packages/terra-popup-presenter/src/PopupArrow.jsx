@@ -4,7 +4,14 @@ import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 import './PopupArrow.scss';
 
+/**
+ * Half the diameter of the arrow, to use for arrow positioning offset.
+ */
 const ARROW_OFFSET = 10;
+
+/**
+ * Directional classes to be applied by a presenting component.
+ */
 const ARROW_CLASSES = {
   top: 'terra-PopupArrow--alignTop',
   bottom: 'terra-PopupArrow--alignBottom',
@@ -12,6 +19,9 @@ const ARROW_CLASSES = {
   right: 'terra-PopupArrow--alignRight',
 };
 
+/**
+ * Mirrored directional classes, used to flip the arrow on repositioning.
+ */
 const ARROW_OPPOSITE_CLASSES = {
   top: 'terra-PopupArrow--alignBottom',
   bottom: 'terra-PopupArrow--alignTop',

@@ -26,7 +26,8 @@ const propTypes = {
    */
   classPrefix: PropTypes.string,
   /**
-   * Rule set to pass to tether, contraining the content to.
+   * Rule set to pass to tether, contraining the content to by setting 'to', 'attachment', and/or 'pin'.
+   * Also allows for class aliasing or 'outOfBoundsClass' and 'pinnedClass'.
    */
   constraints: PropTypes.array,
   /**
@@ -70,7 +71,7 @@ const propTypes = {
    */
   targetOffset: PropTypes.string,
   /**
-   * Callback function when each tether component is adjusted.
+   * Callback function when each tether component is updated.
    */
   onUpdate: PropTypes.func,
   /**

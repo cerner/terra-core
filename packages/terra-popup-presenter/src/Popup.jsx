@@ -6,6 +6,9 @@ import ContentContainer from 'terra-content-container';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import './Popup.scss';
 
+/**
+ * Directional classes to be applied by a presenting component.
+ */
 const POPUP_CLASSES = {
   top: 'terra-Popup--arrowTop',
   bottom: 'terra-Popup--arrowBottom',
@@ -13,6 +16,9 @@ const POPUP_CLASSES = {
   right: 'terra-Popup--arrowRight',
 };
 
+/**
+ * Mirrored directional classes, used to flip the arrow on repositioning.
+ */
 const POPUP_OPPOSITE_CLASSES = {
   top: 'terra-Popup--arrowBottom',
   bottom: 'terra-Popup--arrowTop',
@@ -20,9 +26,17 @@ const POPUP_OPPOSITE_CLASSES = {
   right: 'terra-Popup--arrowLeft',
 };
 
+/**
+ * Key code value for the escape key.
+ */
 const KEYCODES = {
   ESCAPE: 27,
 };
+
+/**
+ * The tiny breakpoint value, at which to flex responsiveness.
+ */
+const TINY_BREAKPOINT = 544;
 
 const propTypes = {
   /**
@@ -46,17 +60,21 @@ const propTypes = {
    */
   content: PropTypes.element.isRequired,
   /**
-   * The maximum height to set for popup content.
+   * The maximum height to set for popup content, also used with responsive behavior for actual height.
    */
   contentMaxHeight: PropTypes.number,
   /**
-   * The maximum width of the popup content.
+   * The maximum width of the popup content, also used with responsive behavior for actual width.
    */
   contentMaxWidth: PropTypes.number,
   /**
    * Should the default header be disabled at small form factor.
    */
   disableHeader: PropTypes.bool,
+  /**
+   * Should the popup expand to fill at the defined breakpoint.
+   */
+  isResponsive: PropTypes.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -76,6 +94,7 @@ const defaultProps = {
   contentMaxHeight: undefined,
   contentMaxWidth: undefined,
   disableHeader: false,
+  isResponsive: true,
   onRequestClose: undefined,
   refCallback: undefined,
 };
@@ -146,6 +165,7 @@ class Popup extends React.Component {
       contentMaxHeight,
       contentMaxWidth,
       disableHeader,
+      isResponsive,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,
@@ -171,7 +191,7 @@ class Popup extends React.Component {
 
     // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
     let contentForDisplay = clonedContent;
-    if (contentMaxWidth <= 544) {
+    if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
       contentStyle.height = contentStyle.maxHeight;
       contentStyle.width = contentStyle.maxWidth;
 
