@@ -67,6 +67,7 @@ var PopupManager = function (_React$Component) {
         isOpen: true,
         content: popupData.content,
         contentAttachment: popupData.contentAttachment,
+        disableHeader: popupData.disableHeader,
         showArrow: popupData.showArrow,
         targetRef: popupData.targetRef
       };
@@ -103,6 +104,7 @@ var PopupManager = function (_React$Component) {
         popupPresenter = _react2.default.createElement(_PopupPresenter2.default, {
           content: this.state.content,
           contentAttachment: this.state.contentAttachment,
+          disableHeader: this.state.disableHeader,
           isOpen: this.state.isOpen,
           showArrow: this.state.showArrow,
           targetRef: this.state.targetRef,

@@ -54,6 +54,10 @@ const propTypes = {
    */
   contentMaxWidth: PropTypes.number,
   /**
+   * Should the default header be disabled at small form factor.
+   */
+  disableHeader: PropTypes.bool,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: PropTypes.func,
@@ -71,6 +75,7 @@ const defaultProps = {
   content: undefined,
   contentMaxHeight: undefined,
   contentMaxWidth: undefined,
+  disableHeader: false,
   onRequestClose: undefined,
   refCallback: undefined,
 };
@@ -140,6 +145,7 @@ class Popup extends React.Component {
       content,
       contentMaxHeight,
       contentMaxWidth,
+      disableHeader,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,
@@ -166,17 +172,14 @@ class Popup extends React.Component {
     // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
     let contentForDisplay = clonedContent;
     if (contentMaxWidth <= 544) {
-      const containerStyle = {};
-      if (contentMaxHeight) {
-        containerStyle.height = contentMaxHeight.toString() + 'px';
+      contentStyle.height = contentStyle.maxHeight;
+      contentStyle.width = contentStyle.maxWidth;
+
+      if (!disableHeader) {
+        const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
+        const header = <div className="terra-Popup-header">{icon}</div>;
+        contentForDisplay = <ContentContainer header={header} fill>{clonedContent}</ContentContainer>;
       }
-      if (contentMaxWidth) {
-        containerStyle.width = contentMaxWidth.toString() + 'px';
-      }
- 
-      const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
-      const header = <div className="terra-Popup-header">{icon}</div>;
-      contentForDisplay = <ContentContainer style={containerStyle} header={header} fill>{clonedContent}</ContentContainer>;
     }
 
     return (

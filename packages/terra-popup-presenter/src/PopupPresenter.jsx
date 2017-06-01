@@ -34,6 +34,10 @@ const propTypes = {
    */
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
   /**
+   * Should the default header be disabled at small form factor.
+   */
+  disableHeader: PropTypes.bool,
+  /**
    * Should the popup be presented as open.
    */
   isOpen: PropTypes.bool,
@@ -58,6 +62,7 @@ const propTypes = {
 const defaultProps = {
   content: undefined,
   contentAttachment: 'top center',
+  disableHeader: false,
   isOpen: false,
   showArrow: false,
   zIndex: '',
@@ -199,7 +204,7 @@ class PopupPresenter extends React.Component {
     this._frameNode = node;
   }
 
-  createPopup(content, boundingFrame, attachment, arrow, onRequestClose) {
+  createPopup(content, boundingFrame, attachment, arrow, onRequestClose, disableHeader) {
     let popupClasses;
     if (arrow) {
       const parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
@@ -225,6 +230,7 @@ class PopupPresenter extends React.Component {
       arrow,
       content,
       className: popupClasses,
+      disableHeader,
       onRequestClose,
       refCallback: this.setFrameNode,
       ...boundsProps,
@@ -252,6 +258,7 @@ class PopupPresenter extends React.Component {
       content,
       contentOffset,
       contentAttachment,
+      disableHeader,
       isOpen,
       onRequestClose,
       onUpdate,
@@ -273,7 +280,7 @@ class PopupPresenter extends React.Component {
       if (showArrow) {
         arrow = <PopupArrow refCallback={this.setArrowNode} />;
       }
-      popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose);
+      popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader);
     }
   
     const disableScrolling = true;

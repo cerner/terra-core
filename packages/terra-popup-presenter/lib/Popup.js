@@ -92,6 +92,10 @@ var propTypes = {
    */
   contentMaxWidth: _propTypes2.default.number,
   /**
+   * Should the default header be disabled at small form factor.
+   */
+  disableHeader: _propTypes2.default.bool,
+  /**
    * The function that should be triggered when a close is indicated.
    */
   onRequestClose: _propTypes2.default.func,
@@ -109,6 +113,7 @@ var defaultProps = {
   content: undefined,
   contentMaxHeight: undefined,
   contentMaxWidth: undefined,
+  disableHeader: false,
   onRequestClose: undefined,
   refCallback: undefined
 };
@@ -195,11 +200,12 @@ var Popup = function (_React$Component) {
           content = _props.content,
           contentMaxHeight = _props.contentMaxHeight,
           contentMaxWidth = _props.contentMaxWidth,
+          disableHeader = _props.disableHeader,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'disableHeader', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
       var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
 
@@ -216,25 +222,22 @@ var Popup = function (_React$Component) {
       // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
       var contentForDisplay = clonedContent;
       if (contentMaxWidth <= 544) {
-        var containerStyle = {};
-        if (contentMaxHeight) {
-          containerStyle.height = contentMaxHeight.toString() + 'px';
-        }
-        if (contentMaxWidth) {
-          containerStyle.width = contentMaxWidth.toString() + 'px';
-        }
+        contentStyle.height = contentStyle.maxHeight;
+        contentStyle.width = contentStyle.maxWidth;
 
-        var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
-        var header = _react2.default.createElement(
-          'div',
-          { className: 'terra-Popup-header' },
-          icon
-        );
-        contentForDisplay = _react2.default.createElement(
-          _terraContentContainer2.default,
-          { style: containerStyle, header: header, fill: true },
-          clonedContent
-        );
+        if (!disableHeader) {
+          var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
+          var header = _react2.default.createElement(
+            'div',
+            { className: 'terra-Popup-header' },
+            icon
+          );
+          contentForDisplay = _react2.default.createElement(
+            _terraContentContainer2.default,
+            { header: header, fill: true },
+            clonedContent
+          );
+        }
       }
 
       return _react2.default.createElement(

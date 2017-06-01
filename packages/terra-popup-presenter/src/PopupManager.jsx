@@ -31,6 +31,7 @@ class PopupManager extends React.Component {
       isOpen: true,
       content: popupData.content,
       contentAttachment: popupData.contentAttachment,
+      disableHeader: popupData.disableHeader,
       showArrow: popupData.showArrow,
       targetRef: popupData.targetRef,
     };
@@ -59,6 +60,7 @@ class PopupManager extends React.Component {
         <PopupPresenter 
           content={this.state.content}
           contentAttachment={this.state.contentAttachment}
+          disableHeader={this.state.disableHeader}
           isOpen={this.state.isOpen}
           showArrow={this.state.showArrow}
           targetRef={this.state.targetRef}
