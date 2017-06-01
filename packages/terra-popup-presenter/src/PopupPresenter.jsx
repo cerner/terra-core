@@ -158,7 +158,7 @@ class PopupPresenter extends React.Component {
     return (offset + newTopPosition).toString() + 'px';
   }
 
-  static setArrowPosition(targetBounds, popUpBounds, attachment, arrowNode, frameNode) {
+  static setArrowPosition(targetBounds, popUpBounds, attachment, arrowNode, popupNode) {
     const parsedAttachment = PopupPresenter.parseStringPosition(attachment);
     const position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, PopupArrow.arrowSize);
 
@@ -171,10 +171,10 @@ class PopupPresenter extends React.Component {
     }
 
     arrowNode.classList.remove(PopupArrow.oppositePositionClasses[position])
-    frameNode.classList.remove(Popup.oppositePositionClasses[position])
+    popupNode.classList.remove(Popup.oppositePositionClasses[position])
 
     arrowNode.classList.add(PopupArrow.positionClasses[position]);
-    frameNode.classList.add(Popup.positionClasses[position]);
+    popupNode.classList.add(Popup.positionClasses[position]);
 
     if (['top', 'bottom'].indexOf(position) >= 0) {
       arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, PopupArrow.arrowSize); 
@@ -187,12 +187,12 @@ class PopupPresenter extends React.Component {
     super(props);
     this.handleTetherRepositioned = this.handleTetherRepositioned.bind(this);
     this.setArrowNode = this.setArrowNode.bind(this);
-    this.setFrameNode = this.setFrameNode.bind(this);
+    this.setPopupNode = this.setPopupNode.bind(this);
   }
 
   handleTetherRepositioned(event, targetBounds, presenterBounds) {
-    if (this._arrowNode && this._frameNode) {
-      PopupPresenter.setArrowPosition(targetBounds, presenterBounds, this.props.contentAttachment, this._arrowNode, this._frameNode);
+    if (this._arrowNode && this._popupNode) {
+      PopupPresenter.setArrowPosition(targetBounds, presenterBounds, this.props.contentAttachment, this._arrowNode, this._popupNode);
     }
   }
 
@@ -200,8 +200,8 @@ class PopupPresenter extends React.Component {
     this._arrowNode = node;
   }
 
-  setFrameNode(node) {
-    this._frameNode = node;
+  setPopupNode(node) {
+    this._popupNode = node;
   }
 
   createPopup(content, boundingFrame, attachment, arrow, onRequestClose, disableHeader) {
@@ -232,7 +232,7 @@ class PopupPresenter extends React.Component {
       className: popupClasses,
       disableHeader,
       onRequestClose,
-      refCallback: this.setFrameNode,
+      refCallback: this.setPopupNode,
       ...boundsProps,
     };
 

@@ -220,7 +220,7 @@ var PopupPresenter = function (_React$Component) {
     }
   }, {
     key: 'setArrowPosition',
-    value: function setArrowPosition(targetBounds, popUpBounds, attachment, arrowNode, frameNode) {
+    value: function setArrowPosition(targetBounds, popUpBounds, attachment, arrowNode, popupNode) {
       var parsedAttachment = PopupPresenter.parseStringPosition(attachment);
       var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, _PopupArrow2.default.arrowSize);
 
@@ -233,10 +233,10 @@ var PopupPresenter = function (_React$Component) {
       }
 
       arrowNode.classList.remove(_PopupArrow2.default.oppositePositionClasses[position]);
-      frameNode.classList.remove(_Popup2.default.oppositePositionClasses[position]);
+      popupNode.classList.remove(_Popup2.default.oppositePositionClasses[position]);
 
       arrowNode.classList.add(_PopupArrow2.default.positionClasses[position]);
-      frameNode.classList.add(_Popup2.default.positionClasses[position]);
+      popupNode.classList.add(_Popup2.default.positionClasses[position]);
 
       if (['top', 'bottom'].indexOf(position) >= 0) {
         arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, _PopupArrow2.default.arrowSize);
@@ -253,15 +253,15 @@ var PopupPresenter = function (_React$Component) {
 
     _this.handleTetherRepositioned = _this.handleTetherRepositioned.bind(_this);
     _this.setArrowNode = _this.setArrowNode.bind(_this);
-    _this.setFrameNode = _this.setFrameNode.bind(_this);
+    _this.setPopupNode = _this.setPopupNode.bind(_this);
     return _this;
   }
 
   _createClass(PopupPresenter, [{
     key: 'handleTetherRepositioned',
     value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
-      if (this._arrowNode && this._frameNode) {
-        PopupPresenter.setArrowPosition(targetBounds, presenterBounds, this.props.contentAttachment, this._arrowNode, this._frameNode);
+      if (this._arrowNode && this._popupNode) {
+        PopupPresenter.setArrowPosition(targetBounds, presenterBounds, this.props.contentAttachment, this._arrowNode, this._popupNode);
       }
     }
   }, {
@@ -270,9 +270,9 @@ var PopupPresenter = function (_React$Component) {
       this._arrowNode = node;
     }
   }, {
-    key: 'setFrameNode',
-    value: function setFrameNode(node) {
-      this._frameNode = node;
+    key: 'setPopupNode',
+    value: function setPopupNode(node) {
+      this._popupNode = node;
     }
   }, {
     key: 'createPopup',
@@ -304,7 +304,7 @@ var PopupPresenter = function (_React$Component) {
         className: popupClasses,
         disableHeader: disableHeader,
         onRequestClose: onRequestClose,
-        refCallback: this.setFrameNode
+        refCallback: this.setPopupNode
       }, boundsProps);
 
       return _react2.default.createElement(_Popup2.default, popupProps);

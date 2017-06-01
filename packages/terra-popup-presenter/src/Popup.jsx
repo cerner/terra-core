@@ -183,7 +183,7 @@ class Popup extends React.Component {
     }
 
     return (
-      <div {...customProps} className={popupClassNames} ref={this.refCallback}>
+      <div {...customProps} className={popupClassNames} ref={refCallback}>
         {arrow}
         <div className="terra-Popup-content" style={contentStyle}>
           {contentForDisplay}

@@ -242,7 +242,7 @@ var Popup = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: popupClassNames, ref: this.refCallback }),
+        _extends({}, customProps, { className: popupClassNames, ref: refCallback }),
         arrow,
         _react2.default.createElement(
           'div',
