@@ -68,15 +68,35 @@ class TimeInput extends React.Component {
     this.handleHourInputKeyDown = this.handleHourInputKeyDown.bind(this);
     this.handleMinuteInputKeyDown = this.handleMinuteInputKeyDown.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
+    this.handleHourBlur = this.handleHourBlur.bind(this);
+    this.handleMinuteBlur = this.handleMinuteBlur.bind(this);
   }
 
   handleFocus() {
     this.setState({ isFocused: true });
   }
 
-  handleBlur() {
-    this.setState({ isFocused: false });
+  handleHourBlur(event) {
+    this.handleBlur(inputType.HOUR, event);
+  }
+
+  handleMinuteBlur(event) {
+    this.handleBlur(inputType.MINUTE, event);
+  }
+
+  handleBlur(type, event) {
+    let stateValue = event.target.value;
+
+    // Prepend a 0 to the value when losing focus and the value is single digit.
+    if (stateValue.length === 1) {
+      stateValue = '0'.concat(stateValue);
+    }
+
+    if (type === inputType.HOUR) {
+      this.setState({ hour: stateValue, isFocused: false });
+    } else {
+      this.setState({ minute: stateValue, isFocused: false });
+    }
   }
 
   handleHourChange(event) {
@@ -241,7 +261,7 @@ class TimeInput extends React.Component {
           onChange={this.handleHourChange}
           onKeyDown={this.handleHourInputKeyDown}
           onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
+          onBlur={this.handleHourBlur}
         />
         <span>:</span>
         <Input
@@ -255,7 +275,7 @@ class TimeInput extends React.Component {
           onChange={this.handleMinuteChange}
           onKeyDown={this.handleMinuteInputKeyDown}
           onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
+          onBlur={this.handleMinuteBlur}
         />
       </div>
     );

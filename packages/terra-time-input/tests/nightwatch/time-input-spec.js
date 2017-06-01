@@ -41,6 +41,24 @@ module.exports = {
     browser.expect.element('.terra-TimeInput-minute').to.have.attribute('value').equals('34');
   },
 
+  'Prepends 0 on deblur when the value in the hour input is a single digit': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+
+    browser.click('.terra-TimeInput-hour');
+    browser.keys('2');
+    browser.click('.terra-TimeInput-minute');
+    browser.expect.element('.terra-TimeInput-hour').to.have.attribute('value').equals('02');
+  },
+
+  'Prepends 0 on deblur when the value in the minute input is a single digit': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+
+    browser.click('.terra-TimeInput-minute');
+    browser.keys('2');
+    browser.click('.terra-TimeInput-hour');
+    browser.expect.element('.terra-TimeInput-minute').to.have.attribute('value').equals('02');
+  },
+
   'Hour input prepends 0 to the hour if the entered hour is >= 3': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
 
