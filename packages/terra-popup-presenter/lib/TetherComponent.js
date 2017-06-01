@@ -105,6 +105,7 @@ var propTypes = {
 };
 
 var defaultProps = {
+  isEnabled: false,
   disableOnPosition: false
 };
 

@@ -36,10 +36,6 @@ const propTypes = {
   refCallback: PropTypes.func,
 };
 
-const defaultProps = {
-  refCallback: undefined,
-};
-
 const PopupArrow = ({
     refCallback,
     ...customProps
@@ -57,7 +53,6 @@ const PopupArrow = ({
 };
 
 PopupArrow.propTypes = propTypes;
-PopupArrow.defaultProps = defaultProps;
 PopupArrow.positionClasses = ARROW_CLASSES;
 PopupArrow.oppositePositionClasses = ARROW_OPPOSITE_CLASSES;
 PopupArrow.arrowSize = ARROW_OFFSET;

@@ -60,12 +60,11 @@ const propTypes = {
 };
 
 const defaultProps = {
-  content: undefined,
   contentAttachment: 'top center',
   disableHeader: false,
   isOpen: false,
   showArrow: false,
-  zIndex: '',
+  zIndex: '7001',
 };
 
 class PopupPresenter extends React.Component {
@@ -183,6 +182,12 @@ class PopupPresenter extends React.Component {
     }
   }
 
+  static primaryArrowPosition(attachment) {
+    const parsedAttachment = PopupPresenter.parseStringPosition(attachment);
+    const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
+    return isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
+  }
+
   constructor(props) {
     super(props);
     this.handleTetherRepositioned = this.handleTetherRepositioned.bind(this);
@@ -204,15 +209,7 @@ class PopupPresenter extends React.Component {
     this._popupNode = node;
   }
 
-  createPopup(content, boundingFrame, attachment, arrow, onRequestClose, disableHeader) {
-    let popupClasses;
-    if (arrow) {
-      const parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
-      const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
-      const position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
-      popupClasses = Popup.positionClasses[position];
-    }
-
+  createPopup(content, boundingFrame, attachment, arrow, onRequestClose, disableHeader, customProps) {
     let boundsProps;
     if (boundingFrame) {
       boundsProps = {
@@ -227,10 +224,15 @@ class PopupPresenter extends React.Component {
     }
 
     const popupProps = {
+      ...customProps,
       arrow,
+      arrowPosition: PopupPresenter.primaryArrowPosition(attachment),
       content,
-      className: popupClasses,
+      closeOnEsc: true,
+      closeOnOutsideClick: true,
+      closeOnResize: true,
       disableHeader,
+      isResponsive: true,
       onRequestClose,
       refCallback: this.setPopupNode,
       ...boundsProps,
@@ -254,20 +256,13 @@ class PopupPresenter extends React.Component {
   render () {
     const {
       boundingRef,
-      classes,
       content,
-      contentOffset,
       contentAttachment,
       disableHeader,
       isOpen,
       onRequestClose,
-      onUpdate,
-      optimizations,
-      renderElementTag,
-      renderElementTo,
       showArrow,
-      targetModifier,
-      targetOffset,
+      targetRef,
       zIndex,
       ...customProps,
     } = this.props; // eslint-disable-line no-unused-vars
@@ -280,10 +275,10 @@ class PopupPresenter extends React.Component {
       if (showArrow) {
         arrow = <PopupArrow refCallback={this.setArrowNode} />;
       }
-      popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader);
+      popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
     }
   
-    const disableScrolling = true;
+    const allowScrolling = true;
     const constraints = [
       {
         to: (boundingFrame || 'window'),
@@ -293,23 +288,23 @@ class PopupPresenter extends React.Component {
     ];  
 
     const tetherOptions = {
-      ...customProps,
       classPrefix: 'terra-PopupPresenter',
       constraints,
       content: popup,
       contentAttachment,
-      disableOnPosition: disableScrolling,
+      disableOnPosition: !allowScrolling,
       isEnabled: true,
       onRepositioned: this.handleTetherRepositioned,
-      targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment),
       style: {zIndex},
+      targetRef: targetRef,
+      targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment),
     };
 
     const tetherCotent = <TetherComponent {...tetherOptions} />;
 
     return (
-      <Portal {...customProps} isOpened={isOpen}>
-        {this.createPortalContent(tetherCotent, boundingRef, zIndex, disableScrolling)}
+      <Portal isOpened={isOpen}>
+        {this.createPortalContent(tetherCotent, boundingRef, zIndex, !allowScrolling)}
       </Portal>
     );
   }

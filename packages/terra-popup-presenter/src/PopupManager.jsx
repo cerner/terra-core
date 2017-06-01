@@ -13,7 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-  zIndex: '5001',
+  zIndex: '7001',
 };
 
 class PopupManager extends React.Component {

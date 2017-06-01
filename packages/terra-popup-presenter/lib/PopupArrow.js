@@ -58,10 +58,6 @@ var propTypes = {
   refCallback: _propTypes2.default.func
 };
 
-var defaultProps = {
-  refCallback: undefined
-};
-
 var PopupArrow = function PopupArrow(_ref) {
   var refCallback = _ref.refCallback,
       customProps = _objectWithoutProperties(_ref, ['refCallback']);
@@ -76,7 +72,6 @@ var PopupArrow = function PopupArrow(_ref) {
 };
 
 PopupArrow.propTypes = propTypes;
-PopupArrow.defaultProps = defaultProps;
 PopupArrow.positionClasses = ARROW_CLASSES;
 PopupArrow.oppositePositionClasses = ARROW_OPPOSITE_CLASSES;
 PopupArrow.arrowSize = ARROW_OFFSET;

@@ -81,6 +81,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isEnabled: false,
   disableOnPosition: false,
 };
 

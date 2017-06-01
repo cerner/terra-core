@@ -36,6 +36,8 @@ require('./Popup.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71,6 +73,8 @@ var KEYCODES = {
   ESCAPE: 27
 };
 
+var ARROW_POSITIONS = ['top', 'bottom', 'left', 'right'];
+
 /**
  * The tiny breakpoint value, at which to flex responsiveness.
  */
@@ -81,6 +85,10 @@ var propTypes = {
    * The arrow to be placed within the popup frame.
    */
   arrow: _propTypes2.default.element,
+  /**
+   * The initial arrow position.
+   */
+  arrowPosition: _propTypes2.default.oneOf(ARROW_POSITIONS),
   /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
@@ -98,11 +106,11 @@ var propTypes = {
    */
   content: _propTypes2.default.element.isRequired,
   /**
-   * The maximum height to set for popup content, also used with responsive behavior for actual height.
+   * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
    */
   contentMaxHeight: _propTypes2.default.number,
   /**
-   * The maximum width of the popup content, also used with responsive behavior for actual width.
+   * The maximum width of the popup content in px, also used with responsive behavior for actual width.
    */
   contentMaxWidth: _propTypes2.default.number,
   /**
@@ -124,17 +132,12 @@ var propTypes = {
 };
 
 var defaultProps = {
-  arrow: undefined,
-  closeOnEsc: true,
-  closeOnOutsideClick: true,
-  closeOnResize: true,
-  content: undefined,
-  contentMaxHeight: undefined,
-  contentMaxWidth: undefined,
+  arrowPosition: 'top',
+  closeOnEsc: false,
+  closeOnOutsideClick: false,
+  closeOnResize: false,
   disableHeader: false,
-  isResponsive: true,
-  onRequestClose: undefined,
-  refCallback: undefined
+  isResponsive: false
 };
 
 var Popup = function (_React$Component) {
@@ -213,6 +216,7 @@ var Popup = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           arrow = _props.arrow,
+          arrowPosition = _props.arrowPosition,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closeOnResize = _props.closeOnResize,
@@ -225,9 +229,9 @@ var Popup = function (_React$Component) {
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
-      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
+      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, _defineProperty({}, '' + POPUP_CLASSES[arrowPosition], arrow), customProps.className]);
 
       var clonedContent = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
 
@@ -239,7 +243,6 @@ var Popup = function (_React$Component) {
         contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
       }
 
-      // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
       var contentForDisplay = clonedContent;
       if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
         contentStyle.height = contentStyle.maxHeight;

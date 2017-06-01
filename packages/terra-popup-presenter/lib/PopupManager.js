@@ -41,7 +41,7 @@ var propTypes = {
 
 var defaultProps = {
   children: [],
-  zIndex: '5001'
+  zIndex: '7001'
 };
 
 var PopupManager = function (_React$Component) {

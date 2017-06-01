@@ -33,6 +33,13 @@ const KEYCODES = {
   ESCAPE: 27,
 };
 
+const ARROW_POSITIONS = [
+  'top',
+  'bottom',
+  'left',
+  'right'
+];
+
 /**
  * The tiny breakpoint value, at which to flex responsiveness.
  */
@@ -43,6 +50,10 @@ const propTypes = {
    * The arrow to be placed within the popup frame.
    */
   arrow: PropTypes.element,
+  /**
+   * The initial arrow position.
+   */
+  arrowPosition: PropTypes.oneOf(ARROW_POSITIONS),
   /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
@@ -60,11 +71,11 @@ const propTypes = {
    */
   content: PropTypes.element.isRequired,
   /**
-   * The maximum height to set for popup content, also used with responsive behavior for actual height.
+   * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
    */
   contentMaxHeight: PropTypes.number,
   /**
-   * The maximum width of the popup content, also used with responsive behavior for actual width.
+   * The maximum width of the popup content in px, also used with responsive behavior for actual width.
    */
   contentMaxWidth: PropTypes.number,
   /**
@@ -86,17 +97,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  arrow: undefined,
-  closeOnEsc: true,
-  closeOnOutsideClick: true,
-  closeOnResize: true,
-  content: undefined,
-  contentMaxHeight: undefined,
-  contentMaxWidth: undefined,
+  arrowPosition: 'top',
+  closeOnEsc: false,
+  closeOnOutsideClick: false,
+  closeOnResize: false,
   disableHeader: false,
-  isResponsive: true,
-  onRequestClose: undefined,
-  refCallback: undefined,
+  isResponsive: false,
 };
 
 class Popup extends React.Component {
@@ -158,6 +164,7 @@ class Popup extends React.Component {
   render() {
     const { 
       arrow,
+      arrowPosition,
       closeOnEsc,
       closeOnOutsideClick,
       closeOnResize,
@@ -176,6 +183,7 @@ class Popup extends React.Component {
     const popupClassNames = classNames([
       'terra-Popup',
       { 'terra-Popup-showArrow': arrow },
+      { [`${POPUP_CLASSES[arrowPosition]}`]: arrow },
       customProps.className,
     ]);
 
@@ -189,7 +197,6 @@ class Popup extends React.Component {
       contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
     }
 
-    // todo: only way to bypass this hardcoded scenario is using prescriptive sized popups
     let contentForDisplay = clonedContent;
     if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
       contentStyle.height = contentStyle.maxHeight;

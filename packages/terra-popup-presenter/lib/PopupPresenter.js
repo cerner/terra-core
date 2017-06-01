@@ -109,12 +109,11 @@ var propTypes = {
 };
 
 var defaultProps = {
-  content: undefined,
   contentAttachment: 'top center',
   disableHeader: false,
   isOpen: false,
   showArrow: false,
-  zIndex: ''
+  zIndex: '7001'
 };
 
 var PopupPresenter = function (_React$Component) {
@@ -244,6 +243,13 @@ var PopupPresenter = function (_React$Component) {
         arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, _PopupArrow2.default.arrowSize);
       }
     }
+  }, {
+    key: 'primaryArrowPosition',
+    value: function primaryArrowPosition(attachment) {
+      var parsedAttachment = PopupPresenter.parseStringPosition(attachment);
+      var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
+      return isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
+    }
   }]);
 
   function PopupPresenter(props) {
@@ -276,15 +282,7 @@ var PopupPresenter = function (_React$Component) {
     }
   }, {
     key: 'createPopup',
-    value: function createPopup(content, boundingFrame, attachment, arrow, onRequestClose, disableHeader) {
-      var popupClasses = void 0;
-      if (arrow) {
-        var parsedAttachment = PopupPresenter.parseStringPosition(this.props.contentAttachment);
-        var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
-        var position = isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
-        popupClasses = _Popup2.default.positionClasses[position];
-      }
-
+    value: function createPopup(content, boundingFrame, attachment, arrow, onRequestClose, disableHeader, customProps) {
       var boundsProps = void 0;
       if (boundingFrame) {
         boundsProps = {
@@ -298,11 +296,15 @@ var PopupPresenter = function (_React$Component) {
         };
       }
 
-      var popupProps = _extends({
+      var popupProps = _extends({}, customProps, {
         arrow: arrow,
+        arrowPosition: PopupPresenter.primaryArrowPosition(attachment),
         content: content,
-        className: popupClasses,
+        closeOnEsc: true,
+        closeOnOutsideClick: true,
+        closeOnResize: true,
         disableHeader: disableHeader,
+        isResponsive: true,
         onRequestClose: onRequestClose,
         refCallback: this.setPopupNode
       }, boundsProps);
@@ -327,22 +329,15 @@ var PopupPresenter = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           boundingRef = _props.boundingRef,
-          classes = _props.classes,
           content = _props.content,
-          contentOffset = _props.contentOffset,
           contentAttachment = _props.contentAttachment,
           disableHeader = _props.disableHeader,
           isOpen = _props.isOpen,
           onRequestClose = _props.onRequestClose,
-          onUpdate = _props.onUpdate,
-          optimizations = _props.optimizations,
-          renderElementTag = _props.renderElementTag,
-          renderElementTo = _props.renderElementTo,
           showArrow = _props.showArrow,
-          targetModifier = _props.targetModifier,
-          targetOffset = _props.targetOffset,
+          targetRef = _props.targetRef,
           zIndex = _props.zIndex,
-          customProps = _objectWithoutProperties(_props, ['boundingRef', 'classes', 'content', 'contentOffset', 'contentAttachment', 'disableHeader', 'isOpen', 'onRequestClose', 'onUpdate', 'optimizations', 'renderElementTag', 'renderElementTo', 'showArrow', 'targetModifier', 'targetOffset', 'zIndex']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['boundingRef', 'content', 'contentAttachment', 'disableHeader', 'isOpen', 'onRequestClose', 'showArrow', 'targetRef', 'zIndex']); // eslint-disable-line no-unused-vars
 
       var boundingFrame = boundingRef ? boundingRef() : undefined;
 
@@ -352,34 +347,35 @@ var PopupPresenter = function (_React$Component) {
         if (showArrow) {
           arrow = _react2.default.createElement(_PopupArrow2.default, { refCallback: this.setArrowNode });
         }
-        popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader);
+        popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
       }
 
-      var disableScrolling = true;
+      var allowScrolling = true;
       var constraints = [{
         to: boundingFrame || 'window',
         attachment: 'together',
         pin: true
       }];
 
-      var tetherOptions = _extends({}, customProps, {
+      var tetherOptions = {
         classPrefix: 'terra-PopupPresenter',
         constraints: constraints,
         content: popup,
         contentAttachment: contentAttachment,
-        disableOnPosition: disableScrolling,
+        disableOnPosition: !allowScrolling,
         isEnabled: true,
         onRepositioned: this.handleTetherRepositioned,
-        targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment),
-        style: { zIndex: zIndex }
-      });
+        style: { zIndex: zIndex },
+        targetRef: targetRef,
+        targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment)
+      };
 
       var tetherCotent = _react2.default.createElement(_TetherComponent2.default, tetherOptions);
 
       return _react2.default.createElement(
         _reactPortal2.default,
-        _extends({}, customProps, { isOpened: isOpen }),
-        this.createPortalContent(tetherCotent, boundingRef, zIndex, disableScrolling)
+        { isOpened: isOpen },
+        this.createPortalContent(tetherCotent, boundingRef, zIndex, !allowScrolling)
       );
     }
   }]);

@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: $terra-z-index-5;
+  z-index: $terra-z-index-7;
   @include terra-position-start(0);
 
   &::-webkit-scrollbar {
