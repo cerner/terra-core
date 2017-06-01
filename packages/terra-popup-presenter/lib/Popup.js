@@ -86,11 +86,11 @@ var propTypes = {
   /**
    * The maximum height to set for popup content.
    */
-  contentMaxHeight: _propTypes2.default.string,
+  contentMaxHeight: _propTypes2.default.number,
   /**
    * The maximum width of the popup content.
    */
-  contentMaxWidth: _propTypes2.default.string,
+  contentMaxWidth: _propTypes2.default.number,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -111,8 +111,7 @@ var defaultProps = {
   contentMaxHeight: undefined,
   contentMaxWidth: undefined,
   onRequestClose: undefined,
-  refCallback: undefined,
-  isFullScreen: false
+  refCallback: undefined
 };
 
 var Popup = function (_React$Component) {
@@ -141,10 +140,17 @@ var Popup = function (_React$Component) {
     _this.handleClickOutside = _this.handleClickOutside.bind(_this);
     _this.handleKeydown = _this.handleKeydown.bind(_this);
     _this.handleResize = _this.debounce(_this.handleResize.bind(_this), 100);
+    _this.setRefNode = _this.setRefNode.bind(_this);
+    _this.state = { displayHeader: false };
     return _this;
   }
 
   _createClass(Popup, [{
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      this.updateDisplay();
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.closeOnEsc) {
@@ -153,6 +159,8 @@ var Popup = function (_React$Component) {
       if (this.props.closeOnResize) {
         window.addEventListener('resize', this.handleResize);
       }
+
+      this.updateDisplay();
     }
   }, {
     key: 'componentWillUnmount',
@@ -164,6 +172,25 @@ var Popup = function (_React$Component) {
       if (this.props.closeOnResize) {
         window.removeEventListener('resize', this.handleResize);
       }
+    }
+  }, {
+    key: 'updateDisplay',
+    value: function updateDisplay() {
+      var shouldDisplay = this.shouldDisplayHeader();
+
+      if (shouldDisplay !== this.state.displayHeader) {
+        this.setState({ displayHeader: shouldDisplay });
+      }
+    }
+  }, {
+    key: 'shouldDisplayHeader',
+    value: function shouldDisplayHeader() {
+      if (this.props.disableHeader) {
+        return false;
+      }
+
+      // debate allowable offeset
+      return this._refNode.clientHeight >= this.props.contentMaxHeight && this._refNode.clientWidth >= this.props.contentMaxWidth;
     }
   }, {
     key: 'handleResize',
@@ -187,6 +214,12 @@ var Popup = function (_React$Component) {
       }
     }
   }, {
+    key: 'setRefNode',
+    value: function setRefNode(node) {
+      this._refNode = node;
+      this.props.refCallback(this._refNode);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -201,29 +234,28 @@ var Popup = function (_React$Component) {
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          isFullScreen = _props.isFullScreen,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback', 'isFullScreen']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
-      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, { 'terra-Popup--isFullScreen': isFullScreen }, customProps.className]);
+      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, customProps.className]);
 
       var clonedContent = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
 
       var contentStyle = {};
       if (contentMaxHeight) {
-        contentStyle.maxHeight = contentMaxHeight;
+        contentStyle.maxHeight = contentMaxHeight.toString() + 'px';
       }
       if (contentMaxWidth) {
-        contentStyle.maxWidth = contentMaxWidth;
+        contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
       }
 
       var contentForDisplay = clonedContent;
-      if (isFullScreen) {
+      if (this.state.displayHeader) {
         var containerStyle = {};
         if (contentMaxHeight) {
-          containerStyle.height = contentMaxHeight;
+          containerStyle.height = contentMaxHeight.toString() + 'px';
         }
         if (contentMaxWidth) {
-          containerStyle.width = contentMaxWidth;
+          containerStyle.width = contentMaxWidth.toString() + 'px';
         }
 
         var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
@@ -241,7 +273,7 @@ var Popup = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: popupClassNames, ref: refCallback }),
+        _extends({}, customProps, { className: popupClassNames, ref: this.setRefNode }),
         arrow,
         _react2.default.createElement(
           'div',

@@ -48,11 +48,11 @@ const propTypes = {
   /**
    * The maximum height to set for popup content.
    */
-  contentMaxHeight: PropTypes.string,
+  contentMaxHeight: PropTypes.number,
   /**
    * The maximum width of the popup content.
    */
-  contentMaxWidth: PropTypes.string,
+  contentMaxWidth: PropTypes.number,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -74,7 +74,6 @@ const defaultProps = {
   contentMaxWidth: undefined,
   onRequestClose: undefined,
   refCallback: undefined,
-  isFullScreen: false,
 };
 
 class Popup extends React.Component {
@@ -94,6 +93,13 @@ class Popup extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleResize = this.debounce(this.handleResize.bind(this), 100);
+    this.setRefNode = this.setRefNode.bind(this);
+    this.state = {displayHeader: false};
+  }
+
+
+  componentDidUpdate() {
+    this.updateDisplay();
   }
 
   componentDidMount() {
@@ -103,6 +109,8 @@ class Popup extends React.Component {
     if (this.props.closeOnResize) {
       window.addEventListener('resize', this.handleResize);
     }
+
+    this.updateDisplay();
   }
 
   componentWillUnmount() {
@@ -113,6 +121,23 @@ class Popup extends React.Component {
     if (this.props.closeOnResize) {
       window.removeEventListener('resize', this.handleResize);
     }
+  }
+
+  updateDisplay() {
+    const shouldDisplay = this.shouldDisplayHeader();
+
+    if (shouldDisplay !== this.state.displayHeader) {
+      this.setState({displayHeader: shouldDisplay});
+    }
+  }
+
+  shouldDisplayHeader() {
+    if (this.props.disableHeader) {
+      return false;
+    }
+
+    // debate allowable offeset
+    return this._refNode.clientHeight >= this.props.contentMaxHeight && this._refNode.clientWidth >= this.props.contentMaxWidth;
   }
 
   handleResize(event) {
@@ -133,6 +158,11 @@ class Popup extends React.Component {
     }
   }
 
+  setRefNode(node) {
+    this._refNode = node;
+    this.props.refCallback(this._refNode);
+  }
+
   render() {
     const { 
       arrow,
@@ -146,14 +176,12 @@ class Popup extends React.Component {
       enableOnClickOutside,
       disableOnClickOutside,
       refCallback,
-      isFullScreen,
       ...customProps,
     } = this.props;
 
     const popupClassNames = classNames([
       'terra-Popup',
       { 'terra-Popup-showArrow': arrow },
-      { 'terra-Popup--isFullScreen': isFullScreen },
       customProps.className,
     ]);
 
@@ -161,20 +189,20 @@ class Popup extends React.Component {
 
     const contentStyle = {};
     if (contentMaxHeight) {
-      contentStyle.maxHeight = contentMaxHeight;
+      contentStyle.maxHeight = contentMaxHeight.toString() + 'px';
     }
     if (contentMaxWidth) {
-      contentStyle.maxWidth = contentMaxWidth;
+      contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
     }
 
     let contentForDisplay = clonedContent;
-    if (isFullScreen) {
+    if (this.state.displayHeader) {
       const containerStyle = {};
       if (contentMaxHeight) {
-        containerStyle.height = contentMaxHeight;
+        containerStyle.height = contentMaxHeight.toString() + 'px';
       }
       if (contentMaxWidth) {
-        containerStyle.width = contentMaxWidth;
+        containerStyle.width = contentMaxWidth.toString() + 'px';
       }
  
       const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
@@ -183,7 +211,7 @@ class Popup extends React.Component {
     }
 
     return (
-      <div {...customProps} className={popupClassNames} ref={refCallback}>
+      <div {...customProps} className={popupClassNames} ref={this.setRefNode}>
         {arrow}
         <div className="terra-Popup-content" style={contentStyle}>
           {contentForDisplay}

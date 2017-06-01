@@ -212,12 +212,11 @@ class PopupPresenter extends React.Component {
     let boundsProps;
     if (boundingFrame) {
       boundsProps = {
-        contentMaxHeight: boundingFrame.clientHeight.toString() + 'px'
+        contentMaxHeight: boundingFrame.clientHeight,
       };
 
       if (boundingFrame.clientWidth < 544) {
-        boundsProps.contentMaxWidth = boundingFrame.clientWidth.toString() + 'px'; 
-        boundsProps.isFullScreen = true;
+        boundsProps.contentMaxWidth = boundingFrame.clientWidth;
       }
     }
 
