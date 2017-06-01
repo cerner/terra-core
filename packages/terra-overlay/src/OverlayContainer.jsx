@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import './Overlay.scss';
 
 const propTypes = {
- /*
+ /**
  * The overlay and elements to be displayed
  */
   children: PropTypes.node,
