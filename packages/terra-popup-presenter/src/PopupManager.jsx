@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import PopupPresenter from './PopupPresenter';
 import 'terra-base/lib/baseStyles';
-
 import './PopupManager.scss';
 
 const propTypes = {

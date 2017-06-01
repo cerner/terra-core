@@ -161,6 +161,12 @@ class Popup extends React.Component {
     }
   }
 
+  addPopupHeader(content) {
+    const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
+    const header = <div className="terra-Popup-header">{icon}</div>;
+    return <ContentContainer header={header} fill>{content}</ContentContainer>;
+  }
+
   render() {
     const { 
       arrow,
@@ -186,9 +192,7 @@ class Popup extends React.Component {
       { [`${POPUP_CLASSES[arrowPosition]}`]: arrow },
       customProps.className,
     ]);
-
-    const clonedContent = React.cloneElement(content, {onRequestClose});
-
+    
     const contentStyle = {};
     if (contentMaxHeight) {
       contentStyle.maxHeight = contentMaxHeight.toString() + 'px';
@@ -197,15 +201,13 @@ class Popup extends React.Component {
       contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
     }
 
-    let contentForDisplay = clonedContent;
+    let contentForDisplay = React.cloneElement(content, {onRequestClose});
     if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
       contentStyle.height = contentStyle.maxHeight;
       contentStyle.width = contentStyle.maxWidth;
 
       if (!disableHeader) {
-        const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
-        const header = <div className="terra-Popup-header">{icon}</div>;
-        contentForDisplay = <ContentContainer header={header} fill>{clonedContent}</ContentContainer>;
+        contentForDisplay = this.addPopupHeader(contentForDisplay);
       }
     }
 

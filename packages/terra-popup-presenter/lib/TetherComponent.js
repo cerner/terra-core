@@ -38,7 +38,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var attachmentPositions = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
+var ATTACHMENT_POSITIONS = ['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right'];
 
 var propTypes = {
   /**
@@ -61,7 +61,7 @@ var propTypes = {
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
-  contentAttachment: _propTypes2.default.oneOf(attachmentPositions).isRequired,
+  contentAttachment: _propTypes2.default.oneOf(ATTACHMENT_POSITIONS).isRequired,
   /**
    * String pair of top and left offset, ie "10px -4px".  
    */
@@ -85,7 +85,7 @@ var propTypes = {
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
-  targetAttachment: _propTypes2.default.oneOf(attachmentPositions),
+  targetAttachment: _propTypes2.default.oneOf(ATTACHMENT_POSITIONS),
   /**
    * Can be set to 'visible' or 'scroll-handle'.
    */
@@ -163,7 +163,6 @@ var TetherComponent = function (_React$Component) {
     key: '_destroy',
     value: function _destroy() {
       if (this._elementNode) {
-        // ReactDOM.unmountComponentAtNode(this._elementNode);
         this._elementNode.parentNode.removeChild(this._elementNode);
       }
 
@@ -294,6 +293,6 @@ var TetherComponent = function (_React$Component) {
 
 TetherComponent.propTypes = propTypes;
 TetherComponent.defaultProps = defaultProps;
-TetherComponent.attachmentPositions = attachmentPositions;
+TetherComponent.attachmentPositions = ATTACHMENT_POSITIONS;
 
 exports.default = TetherComponent;

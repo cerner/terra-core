@@ -212,6 +212,21 @@ var Popup = function (_React$Component) {
       }
     }
   }, {
+    key: 'addPopupHeader',
+    value: function addPopupHeader(content) {
+      var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
+      var header = _react2.default.createElement(
+        'div',
+        { className: 'terra-Popup-header' },
+        icon
+      );
+      return _react2.default.createElement(
+        _terraContentContainer2.default,
+        { header: header, fill: true },
+        content
+      );
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -233,8 +248,6 @@ var Popup = function (_React$Component) {
 
       var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, _defineProperty({}, '' + POPUP_CLASSES[arrowPosition], arrow), customProps.className]);
 
-      var clonedContent = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
-
       var contentStyle = {};
       if (contentMaxHeight) {
         contentStyle.maxHeight = contentMaxHeight.toString() + 'px';
@@ -243,23 +256,13 @@ var Popup = function (_React$Component) {
         contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
       }
 
-      var contentForDisplay = clonedContent;
+      var contentForDisplay = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
       if (isResponsive && contentMaxWidth <= TINY_BREAKPOINT) {
         contentStyle.height = contentStyle.maxHeight;
         contentStyle.width = contentStyle.maxWidth;
 
         if (!disableHeader) {
-          var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
-          var header = _react2.default.createElement(
-            'div',
-            { className: 'terra-Popup-header' },
-            icon
-          );
-          contentForDisplay = _react2.default.createElement(
-            _terraContentContainer2.default,
-            { header: header, fill: true },
-            clonedContent
-          );
+          contentForDisplay = this.addPopupHeader(contentForDisplay);
         }
       }
 

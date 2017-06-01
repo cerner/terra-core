@@ -223,22 +223,22 @@ class PopupPresenter extends React.Component {
       };
     }
 
-    const popupProps = {
-      ...customProps,
-      arrow,
-      arrowPosition: PopupPresenter.primaryArrowPosition(attachment),
-      content,
-      closeOnEsc: true,
-      closeOnOutsideClick: true,
-      closeOnResize: true,
-      disableHeader,
-      isResponsive: true,
-      onRequestClose,
-      refCallback: this.setPopupNode,
-      ...boundsProps,
-    };
-
-    return <Popup {...popupProps} />;
+    return (
+      <Popup
+        {...customProps}
+        {...boundsProps}
+        arrow={arrow}
+        arrowPosition={PopupPresenter.primaryArrowPosition(attachment)}
+        content={content}
+        closeOnEsc
+        closeOnOutsideClick
+        closeOnResize
+        disableHeader={disableHeader}
+        isResponsive
+        onRequestClose={onRequestClose}
+        refCallback={this.setPopupNode}
+      />
+    );
   }
 
   createPortalContent(tetherContent, boundingFrame, zIndex, useOverlay) {
@@ -278,7 +278,7 @@ class PopupPresenter extends React.Component {
       popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
     }
   
-    const allowScrolling = true;
+    const allowScrolling = true;// TODO: SET BACK TO FALSE AFTER TESTING
     const constraints = [
       {
         to: (boundingFrame || 'window'),
@@ -287,20 +287,20 @@ class PopupPresenter extends React.Component {
       },
     ];  
 
-    const tetherOptions = {
-      classPrefix: 'terra-PopupPresenter',
-      constraints,
-      content: popup,
-      contentAttachment,
-      disableOnPosition: !allowScrolling,
-      isEnabled: true,
-      onRepositioned: this.handleTetherRepositioned,
-      style: {zIndex},
-      targetRef: targetRef,
-      targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment),
-    };
-
-    const tetherCotent = <TetherComponent {...tetherOptions} />;
+    const tetherCotent = (
+      <TetherComponent
+        classPrefix="terra-PopupPresenter"
+        constraints={constraints}
+        content={popup}
+        contentAttachment={contentAttachment}
+        disableOnPosition={!allowScrolling}
+        isEnabled
+        onRepositioned={this.handleTetherRepositioned}
+        style={{zIndex}}
+        targetRef={targetRef}
+        targetAttachment={PopupPresenter.mirrorAttachment(contentAttachment)}
+      />
+    );
 
     return (
       <Portal isOpened={isOpen}>

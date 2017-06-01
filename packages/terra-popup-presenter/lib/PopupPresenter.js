@@ -296,7 +296,7 @@ var PopupPresenter = function (_React$Component) {
         };
       }
 
-      var popupProps = _extends({}, customProps, {
+      return _react2.default.createElement(_Popup2.default, _extends({}, customProps, boundsProps, {
         arrow: arrow,
         arrowPosition: PopupPresenter.primaryArrowPosition(attachment),
         content: content,
@@ -307,9 +307,7 @@ var PopupPresenter = function (_React$Component) {
         isResponsive: true,
         onRequestClose: onRequestClose,
         refCallback: this.setPopupNode
-      }, boundsProps);
-
-      return _react2.default.createElement(_Popup2.default, popupProps);
+      }));
     }
   }, {
     key: 'createPortalContent',
@@ -350,14 +348,14 @@ var PopupPresenter = function (_React$Component) {
         popup = this.createPopup(content, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
       }
 
-      var allowScrolling = true;
+      var allowScrolling = true; // TODO: SET BACK TO FALSE AFTER TESTING
       var constraints = [{
         to: boundingFrame || 'window',
         attachment: 'together',
         pin: true
       }];
 
-      var tetherOptions = {
+      var tetherCotent = _react2.default.createElement(_TetherComponent2.default, {
         classPrefix: 'terra-PopupPresenter',
         constraints: constraints,
         content: popup,
@@ -368,9 +366,7 @@ var PopupPresenter = function (_React$Component) {
         style: { zIndex: zIndex },
         targetRef: targetRef,
         targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment)
-      };
-
-      var tetherCotent = _react2.default.createElement(_TetherComponent2.default, tetherOptions);
+      });
 
       return _react2.default.createElement(
         _reactPortal2.default,

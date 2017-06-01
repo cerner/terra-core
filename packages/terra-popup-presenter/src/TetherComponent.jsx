@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
 
-const attachmentPositions = [
+const ATTACHMENT_POSITIONS = [
   'top left',
   'top center',
   'top right',
@@ -37,7 +37,7 @@ const propTypes = {
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
-  contentAttachment: PropTypes.oneOf(attachmentPositions).isRequired,
+  contentAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS).isRequired,
   /**
    * String pair of top and left offset, ie "10px -4px".  
    */
@@ -61,7 +61,7 @@ const propTypes = {
   /**
    * String pair of top, middle, bottom, and left, center, right.
    */
-  targetAttachment: PropTypes.oneOf(attachmentPositions),
+  targetAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
   /**
    * Can be set to 'visible' or 'scroll-handle'.
    */
@@ -125,7 +125,6 @@ class TetherComponent extends React.Component {
 
   _destroy() {
     if (this._elementNode) {
-      // ReactDOM.unmountComponentAtNode(this._elementNode);
       this._elementNode.parentNode.removeChild(this._elementNode);
     }
 
@@ -252,6 +251,6 @@ class TetherComponent extends React.Component {
 
 TetherComponent.propTypes = propTypes;
 TetherComponent.defaultProps = defaultProps;
-TetherComponent.attachmentPositions = attachmentPositions;
+TetherComponent.attachmentPositions = ATTACHMENT_POSITIONS;
 
 export default TetherComponent;
