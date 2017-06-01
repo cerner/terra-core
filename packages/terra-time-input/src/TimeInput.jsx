@@ -222,17 +222,16 @@ class TimeInput extends React.Component {
       ...customProps
     } = this.props;
 
-    const attributes = { ...customProps, ...inputAttributes };
-    const timeInputClassName = classNames([
+    const timeInputClassNames = classNames([
       'terra-TimeInput',
       { 'is-focused': this.state.isFocused },
-      attributes.className,
+      customProps.className,
     ]);
 
     return (
-      <div className={timeInputClassName}>
+      <div {...customProps} className={timeInputClassNames}>
         <Input
-          {...attributes}
+          {...inputAttributes}
           ref={(inputRef) => { this.hourInput = inputRef; }}
           className="terra-TimeInput-hour"
           type="text"
@@ -246,7 +245,7 @@ class TimeInput extends React.Component {
         />
         <span>:</span>
         <Input
-          {...attributes}
+          {...inputAttributes}
           ref={(inputRef) => { this.minuteInput = inputRef; }}
           className="terra-TimeInput-minute"
           type="text"

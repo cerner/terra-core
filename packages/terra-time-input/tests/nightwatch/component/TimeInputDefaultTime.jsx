@@ -1,12 +1,15 @@
 import React from 'react';
 import TimeInput from '../../../lib/TimeInput';
 
+const handleOnChange = (time, event) => {
+  window.console.log('**handleOnChange** Input value:', event.target.value, ' Updated time:', time);
+};
+
 const TimeInputDefault = () => (
-  <div>
-    <TimeInput
-      value={'12:00'}
-    />
-  </div>
+  <TimeInput
+    value={'12:00'}
+    onChange={handleOnChange}
+  />
 );
 
 export default TimeInputDefault;

@@ -11,7 +11,9 @@ import TimeInput from 'terra-time-input/src/TimeInput';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TimeInputSrc from '!raw-loader!terra-time-input/src/TimeInput';
 
-// Example Files
+const handleOnChange = (time, event) => {
+  window.console.log('**handleOnChange** Input value:', event.target.value, ' Updated time:', time);
+};
 
 const TimeInputExamples = () => (
   <div>
@@ -23,6 +25,7 @@ const TimeInputExamples = () => (
     <h2 id="default">With Default Time</h2>
     <TimeInput
       value={moment().format('HH:mm')}
+      onChange={handleOnChange}
     />
   </div>
 );
