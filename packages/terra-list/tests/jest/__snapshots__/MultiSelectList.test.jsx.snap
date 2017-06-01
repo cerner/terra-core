@@ -212,7 +212,7 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     hasChevron={false}
-    isSelectable={true}
+    isSelectable={false}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -225,7 +225,7 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     hasChevron={false}
-    isSelectable={true}
+    isSelectable={false}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -238,7 +238,7 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     hasChevron={false}
-    isSelectable={true}
+    isSelectable={false}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -283,7 +283,7 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     hasChevron={false}
-    isSelectable={true}
+    isSelectable={false}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -296,7 +296,7 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     hasChevron={false}
-    isSelectable={true}
+    isSelectable={false}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -309,7 +309,7 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     hasChevron={false}
-    isSelectable={true}
+    isSelectable={false}
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
