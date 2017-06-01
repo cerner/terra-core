@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/LegacyTheme.scss",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",

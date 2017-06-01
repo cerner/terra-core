@@ -24,6 +24,6 @@ it('should mount with isSelectable', () => {
 });
 
 it('should mount with isSelectable and hasChevron', () => {
-  const item = mount(<ListItem isSelectable hasChevron />);
+  const item = shallow(<ListItem isSelectable hasChevron content={<p>test</p>} />);
   expect(item).toMatchSnapshot();
 });
