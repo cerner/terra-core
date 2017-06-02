@@ -12,7 +12,7 @@ const propTypes = {
    */
   inputAttributes: PropTypes.object,
     /**
-   * A callback function to execute when a time value is entered.
+   * A callback function to execute when either the hour or minute has been changed. The first parameter is the event. The second parameter is the changed time value.
    */
   onChange: PropTypes.func,
   /**
@@ -140,7 +140,7 @@ class TimeInput extends React.Component {
         enteredTime = this.state.hour.concat(':', inputValue);
       }
 
-      this.props.onChange(enteredTime, event);
+      this.props.onChange(event, enteredTime);
     }
 
     // // Move focus to the minute input if the hour input has a valid and complete entry.
