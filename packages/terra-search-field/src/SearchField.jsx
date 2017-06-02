@@ -82,6 +82,10 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
+    delete customProps.onSearch;
+    delete customProps.minimumSearchTextLength;
+    delete customProps.searchDelay;
+
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <input className="terra-SearchField-input" type="search" placeholder={placeholder} value={this.state.searchText} onChange={this.handleTextChange} />

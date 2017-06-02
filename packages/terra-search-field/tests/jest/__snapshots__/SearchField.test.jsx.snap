@@ -1,8 +1,6 @@
 exports[`Snapshots renders a basic search field 1`] = `
 <div
-  className="terra-SearchField"
-  minimumSearchTextLength={2}
-  searchDelay={250}>
+  className="terra-SearchField">
   <input
     className="terra-SearchField-input"
     onChange={[Function]}
@@ -27,9 +25,7 @@ exports[`Snapshots renders a basic search field 1`] = `
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
-  className="terra-SearchField"
-  minimumSearchTextLength={2}
-  searchDelay={250}>
+  className="terra-SearchField">
   <input
     className="terra-SearchField-input"
     onChange={[Function]}
@@ -54,9 +50,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
-  className="terra-SearchField"
-  minimumSearchTextLength={2}
-  searchDelay={250}>
+  className="terra-SearchField">
   <input
     className="terra-SearchField-input"
     onChange={[Function]}
