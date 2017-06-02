@@ -65,6 +65,15 @@ const defaultProps = {
   preferredFirstName: null,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
 const DemographicsBanner = (
   {
     age,
@@ -95,13 +104,6 @@ const DemographicsBanner = (
 
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
-DemographicsBanner.contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: (context) => {
-    if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
-    }
-  },
-};
+DemographicsBanner.contextTypes = contextTypes;
 
 export default DemographicsBanner;

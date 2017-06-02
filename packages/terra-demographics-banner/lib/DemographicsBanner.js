@@ -86,6 +86,15 @@ var defaultProps = {
   preferredFirstName: null
 };
 
+var contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: function intl(context) {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  }
+};
+
 var DemographicsBanner = function DemographicsBanner(_ref, _ref2) {
   var intl = _ref2.intl;
 
@@ -111,13 +120,6 @@ var DemographicsBanner = function DemographicsBanner(_ref, _ref2) {
 
 DemographicsBanner.propTypes = propTypes;
 DemographicsBanner.defaultProps = defaultProps;
-DemographicsBanner.contextTypes = {
-  /* eslint-disable consistent-return */
-  intl: function intl(context) {
-    if (context.intl === undefined) {
-      return new Error('Please add locale prop to Base component to load translations');
-    }
-  }
-};
+DemographicsBanner.contextTypes = contextTypes;
 
 exports.default = DemographicsBanner;
