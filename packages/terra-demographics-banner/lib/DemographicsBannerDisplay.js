@@ -91,8 +91,7 @@ var propTypes = {
    * The persons preferred first name if they have one.
    */
   preferredFirstName: _propTypes2.default.string
-}; /* eslint-disable global-require, import/no-dynamic-require, react/no-unused-prop-types, react/no-danger */
-
+};
 
 var defaultProps = {
   applicationContent: null,

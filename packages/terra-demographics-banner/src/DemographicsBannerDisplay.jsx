@@ -1,4 +1,3 @@
-/* eslint-disable global-require, import/no-dynamic-require, react/no-unused-prop-types, react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
