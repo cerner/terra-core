@@ -14,23 +14,23 @@ it('should render with items', () => {
   const item4 = <MultiSelectList.Item key="126" isSelectable />;
   const item5 = <MultiSelectList.Item key="127" isSelectable />;
   const items = [item1, item2, item3, item4, item5];
-  const singleSelect = shallow(<MultiSelectList>{items}</MultiSelectList>);
-  expect(singleSelect).toMatchSnapshot();
+  const multiSelect = shallow(<MultiSelectList>{items}</MultiSelectList>);
+  expect(multiSelect).toMatchSnapshot();
 });
 
 it('should render with a selectable and non-selectable item', () => {
   const item1 = <MultiSelectList.Item key="123" isSelectable />;
   const item2 = <MultiSelectList.Item key="124" />;
   const items = [item1, item2];
-  const singleSelect = shallow(<MultiSelectList>{items}</MultiSelectList>);
-  expect(singleSelect).toMatchSnapshot();
+  const multiSelect = shallow(<MultiSelectList>{items}</MultiSelectList>);
+  expect(multiSelect).toMatchSnapshot();
 });
 
 it('should render with isDivided', () => {
   const item1 = <MultiSelectList.Item key="123" isSelectable />;
   const items = [item1];
-  const singleSelect = shallow(<MultiSelectList isDivided>{items}</MultiSelectList>);
-  expect(singleSelect).toMatchSnapshot();
+  const multiSelect = shallow(<MultiSelectList isDivided>{items}</MultiSelectList>);
+  expect(multiSelect).toMatchSnapshot();
 });
 
 // Event Tests
@@ -46,17 +46,28 @@ it('should select an item when maxSelectionCount is 2', () => {
   const item4 = <MultiSelectList.Item content={textContent4} className="stuff4" key="126" isSelectable />;
   const item5 = <MultiSelectList.Item content={textContent5} className="stuff5" key="127" isSelectable />;
   const items = [item1, item2, item3, item4, item5];
-  const singleSelect = shallow(<MultiSelectList maxSelectionCount={2}>{items}</MultiSelectList>);
+  const multiSelect = shallow(<MultiSelectList maxSelectionCount={2}>{items}</MultiSelectList>);
 
-  singleSelect.find('.stuff1').simulate('click');
-  expect(singleSelect).toMatchSnapshot();
+  multiSelect.find('.stuff1').simulate('click');
+  expect(multiSelect).toMatchSnapshot();
 
-  singleSelect.find('.stuff2').simulate('click');
-  expect(singleSelect).toMatchSnapshot();
+  multiSelect.find('.stuff2').simulate('click');
+  expect(multiSelect).toMatchSnapshot();
 
-  singleSelect.find('.stuff3').simulate('click');
-  expect(singleSelect).toMatchSnapshot();
+  multiSelect.find('.stuff3').simulate('click');
+  expect(multiSelect).toMatchSnapshot();
 
-  singleSelect.find('.stuff1').simulate('click');
-  expect(singleSelect).toMatchSnapshot();
+  multiSelect.find('.stuff1').simulate('click');
+  expect(multiSelect).toMatchSnapshot();
+});
+
+it('should mount with no items', () => {
+  const multiSelect = mount(<MultiSelectList />);
+  expect(multiSelect).toMatchSnapshot();
+});
+
+it('should mount with one items', () => {
+  const item1 = <MultiSelectList.Item key="123" />;
+  const multiSelect = mount(<MultiSelectList>{item1}</MultiSelectList>);
+  expect(multiSelect).toMatchSnapshot();
 });
