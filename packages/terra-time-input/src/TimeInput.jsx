@@ -218,7 +218,7 @@ class TimeInput extends React.Component {
         if (this.minuteInput.textInput.selectionEnd === 0) {
           this.hourInput.textInput.focus();
           if (this.state.hour) {
-            this.minuteInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
+            this.hourInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
             event.preventDefault();
           }
         }
