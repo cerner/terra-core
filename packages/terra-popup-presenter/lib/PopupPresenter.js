@@ -145,7 +145,7 @@ var propTypes = {
    */
   showArrow: _propTypes2.default.bool,
   /**
-   * Presenting element for the popup.
+   * Presenting element for the popup to anchor to.
    */
   targetRef: _propTypes2.default.func
 };

@@ -109,7 +109,6 @@ const defaultProps = {
   closeOnOutsideClick: false,
   closeOnResize: false,
   disableHeader: false,
-  isResponsive: false,
 };
 
 class Popup extends React.Component {
@@ -214,7 +213,6 @@ class Popup extends React.Component {
       contentWidth,
       contentWidthMax,
       disableHeader,
-      isResponsive,
       onRequestClose,
       enableOnClickOutside,
       disableOnClickOutside,

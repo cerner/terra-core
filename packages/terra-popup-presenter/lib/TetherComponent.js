@@ -67,7 +67,7 @@ var propTypes = {
    */
   contentOffset: _propTypes2.default.string,
   /**
-   * Should tethering be disabled following the initial presentation.
+   * Should tethering be disabled following the initial positioning.
    */
   disableOnPosition: _propTypes2.default.bool,
   /**

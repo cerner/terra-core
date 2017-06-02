@@ -143,8 +143,7 @@ var defaultProps = {
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
-  disableHeader: false,
-  isResponsive: false
+  disableHeader: false
 };
 
 var Popup = function (_React$Component) {
@@ -279,12 +278,11 @@ var Popup = function (_React$Component) {
           contentWidth = _props.contentWidth,
           contentWidthMax = _props.contentWidthMax,
           disableHeader = _props.disableHeader,
-          isResponsive = _props.isResponsive,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableHeader', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
       var showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
       var contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);

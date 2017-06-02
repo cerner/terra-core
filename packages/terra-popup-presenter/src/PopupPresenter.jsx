@@ -102,7 +102,7 @@ const propTypes = {
    */
   showArrow: PropTypes.bool,
   /**
-   * Presenting element for the popup.
+   * Presenting element for the popup to anchor to.
    */
   targetRef: PropTypes.func,
 };
