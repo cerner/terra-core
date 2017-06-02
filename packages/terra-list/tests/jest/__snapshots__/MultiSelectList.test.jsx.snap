@@ -1,3 +1,33 @@
+exports[`test should mount with no items 1`] = `
+<MultiSelectList
+  isDivided={false}>
+  <List
+    isDivided={false}>
+    <ul
+      className="terra-List" />
+  </List>
+</MultiSelectList>
+`;
+
+exports[`test should mount with one items 1`] = `
+<MultiSelectList
+  isDivided={false}>
+  <List
+    isDivided={false}>
+    <ul
+      className="terra-List">
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}>
+        <li
+          className="terra-ListItem" />
+      </ListItem>
+    </ul>
+  </List>
+</MultiSelectList>
+`;
+
 exports[`test should render a default component 1`] = `
 <List
   isDivided={false} />

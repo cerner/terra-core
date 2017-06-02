@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
+import Arrange from 'terra-arrange';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import './ListItem.scss';
 
@@ -46,15 +47,24 @@ const ListItem = ({
     customProps.className,
   ]);
 
-  let chevron;
+
   if (hasChevron) {
-    chevron = <span className="terra-ListItem-chevron"><ChevronRight height="10" width="10" /></span>;
+    const chevron = <span className="terra-ListItem-chevron"><ChevronRight height="0.8em" width="0.8em" /></span>;
+
+    return (
+      <li {...customProps} className={listItemClassNames}>
+        <Arrange
+          fill={content}
+          fitEnd={chevron}
+          align={'center'}
+        />
+      </li>
+    );
   }
 
   return (
     <li {...customProps} className={listItemClassNames}>
       {content}
-      {chevron}
     </li>
   );
 };

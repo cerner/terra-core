@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
@@ -30,8 +29,7 @@ import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TitleExamples from './examples/title/Index';
 
-
-// Test
+// Test Routes
 /* eslint-disable import/first */
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
@@ -55,8 +53,11 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
-import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import TestLinks from './TestLinks';
+// Remove eslint-disable as these pacakges are published
+/* eslint-disable import/no-extraneous-dependencies */
+import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
+/* eslint-enable import/no-extraneous-dependencies */
 /* eslint-enable import/first */
 
 ReactDOM.render((

@@ -1,3 +1,27 @@
+exports[`test should mount with no items 1`] = `
+<List
+  isDivided={false}>
+  <ul
+    className="terra-List" />
+</List>
+`;
+
+exports[`test should mount with one items 1`] = `
+<List
+  isDivided={false}>
+  <ul
+    className="terra-List">
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}>
+      <li
+        className="terra-ListItem" />
+    </ListItem>
+  </ul>
+</List>
+`;
+
 exports[`test should render isDivided 1`] = `
 <ul
   className="terra-List terra-List-divided">

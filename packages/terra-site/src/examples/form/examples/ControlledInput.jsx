@@ -1,8 +1,11 @@
+// remove eslint-disable once terra-form has been published
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Button from 'terra-button';
 import Field from 'terra-form/lib/Field';
 import Fieldset from 'terra-form/lib/Fieldset';
 import Input from 'terra-form/lib/Input';
+/* eslint-enable import/no-extraneous-dependencies */
 
 class ControlledInput extends React.Component {
   constructor(props) {

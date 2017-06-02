@@ -3,6 +3,7 @@
 
 .terra-Table {
   background-color: $terra-table-background-color;
+  border: $terra-table-border;
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
@@ -13,133 +14,75 @@
   }
 
   tr {
-    display: block;
+    display: table-row;
+    margin-bottom: 0;
   }
 
   th,
   td {
     @include terra-text-align-start;
+    border: 0;
+    @include terra-border-start($terra-table-cell-border);
+    display: table-cell;
+    vertical-align: top;
 
-    border: $terra-table-cell-border-width solid $terra-table-cell-border-color;
-    border-bottom: 0;
-    display: block;
-
-    &::before {
-      content: attr(data-heading);
-      display: block;
-      font-weight: bold;
+    &:first-of-type {
+      @include terra-border-start($terra-table-row-border-vertical);
     }
 
-    // Clears floated :before
-    &::after {
-      @include terra-clear-both;
-
-      content: ' ';
-      display: table;
-    }
-
-    &:last-child {
-      border-bottom: $terra-table-cell-border-width solid $terra-table-cell-border-color;
-      margin-bottom: 1em;
+    &:last-of-type {
+      @include terra-border-end($terra-table-cell-border);
+      @include terra-border-end($terra-table-row-border-vertical);
     }
   }
 
-  // Full behavior
-  @media screen and (min-width: $terra-small-breakpoint) {
-    border: $terra-table-cell-border-width solid $terra-table-cell-border-color;
+  thead {
+    background-color: $terra-table-thead-background-color;
+    display: table-header-group;
 
     tr {
-      border-bottom: $terra-table-tr-border-width solid $terra-table-tr-border-color;
-      display: table-row;
-      margin-bottom: 0;
+      border-bottom: $terra-table-thead-tr-border-bottom;
+      border-top: $terra-table-thead-tr-border-top;
     }
 
-    th,
-    td {
-      @include terra-text-align-start;
-
-      border: 0; // Remove border from compact "card" view
-      display: table-cell;
-      vertical-align: top;
-    }
-
-    th::before,
-    td::before,
-    th::after,
-    td::after {
-      display: none;
-    }
-
-    th:last-child,
-    td:last-child {
-      border: 0; // Remove border from compact "card" view
-    }
-
-    thead {
-      background-color: $terra-table-thead-background-color;
-      border-bottom: $terra-table-thead-border-width solid $terra-table-thead-border-color;
-      display: table-header-group;
-    }
-
-    thead th {
+    th {
+      color: $terra-table-thead-th-color;
+      font-size: $terra-table-thead-th-font-size;
+      font-weight: $terra-table-thead-th-font-weight;
       vertical-align: bottom;
     }
+  }
 
-    tbody th {
-      @include terra-text-align-end;
+  tbody {
+    tr {
+      border-top: $terra-table-row-border-horizontal;
 
-      background-color: $terra-table-row-th-background-color;
+      &:last-of-type {
+        border-bottom: $terra-table-row-border-horizontal;
+      }
     }
+  }
 
-    tfoot tr {
+  tfoot {
+    tr {
       @include terra-text-align-start;
-
-      border-top: $terra-table-tfoot-border-width solid $terra-table-tfoot-border-color;
+      border-bottom: $terra-table-tfoot-tr-border-bottom;
+      border-top: $terra-table-tfoot-tr-border-top;
     }
   }
 }
 
-.terra-Table--padded {
-  th,
-  td {
-    @include terra-padding-horizontal($terra-table-cell-padding-left, $terra-table-cell-padding-right);
-
-    padding-bottom: $terra-table-cell-padding-bottom;
-    padding-top: $terra-table-cell-padding-top;
-  }
+.terra-Table-subheader {
+  @include terra-text-align-start;
+  background-color: $terra-table-subheader-background-color;
+  color: $terra-table-subheader-color;
+  font-size: $terra-table-subheader-font-size;
+  font-weight: $terra-table-subheader-font-weight;
 }
 
-.terra-Table--striped {
-  tbody td:nth-of-type(even) {
-    background-color: $terra-table-row-striped-background-color;
-
-    @media screen and (min-width: $terra-small-breakpoint) {
-      background-color: transparent;
-    }
-  }
-
-  @media screen and (min-width: $terra-small-breakpoint) {
-    tbody tr:nth-of-type(even) {
-      background-color: $terra-table-row-striped-background-color;
-    }
-
-    /* Compound selector depth required for specificity */
-    /* stylelint-disable-next-line selector-max-compound-selectors */
-    tbody tr:nth-of-type(even) th {
-      background-color: $terra-table-row-striped-th-background-color;
-    }
-  }
-}
-
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
-@media print {
-  .terra-Table thead {
-    display: table-header-group;
-  }
-
-  .terra-Table tr {
-    page-break-inside: avoid;
-  }
+.terra-Table-sort-indicator {
+  @include terra-float-end();
+  color: $terra-table-sort-indicator-color;
 }
 
 .terra-Table-min-width--tiny {
@@ -162,14 +105,72 @@
   min-width: $terra-table-cell-min-width-huge;
 }
 
+.terra-Table--padded {
+  th,
+  td {
+    @include terra-padding-horizontal($terra-table-cell-padding-left, $terra-table-cell-padding-right);
+    padding-bottom: $terra-table-cell-padding-bottom;
+    padding-top: $terra-table-cell-padding-top;
+  }
+}
+
+.terra-Table--striped {
+  tbody tr {
+    &:nth-of-type(even) {
+      background-color: $terra-table-row-striped-background-color;
+    }
+
+    /* Qualifying type required for specificity */
+    /* stylelint-disable selector-no-qualifying-type */
+    &.terra-Table--isSelected {
+      background-color: $terra-table-row-striped-selected-background-color !important;
+    }
+
+    &.terra-Table--isSelectable:hover,
+    &.terra-Table--isSelectable:focus {
+      background-color: $terra-table-row-striped-hover-background-color !important;
+
+      &.terra-Table--isSelected {
+        background-color: $terra-table-row-striped-selected-hover-background-color !important;
+      }
+    }
+    /* stylelint-enable selector-no-qualifying-type */
+  }
+}
+
 .terra-Table--isSelected {
-  background-color: $terra-blue-20 !important;
+  background-color: $terra-table-row-selected-background-color;
+
+  &.terra-Table-row {
+    border-color: $terra-table-row-selected-border-color !important;
+  }
+
+  + .terra-Table-row {
+    border-top-color: $terra-table-row-selected-border-color;
+  }
 }
 
 .terra-Table--isSelectable {
   cursor: pointer;
+
+  &.terra-Table-row:focus,
+  &.terra-Table-row:hover {
+    background-color: $terra-table-row-hover-background-color !important;
+  }
+
+  &.terra-Table--isSelected:focus,
+  &.terra-Table--isSelected:hover {
+    background-color: $terra-table-row-selected-hover-background-color !important;
+  }
 }
 
-.terra-Table-sort-indicator {
-  @include terra-float-end();
+// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+@media print {
+  .terra-Table thead {
+    display: table-header-group;
+  }
+
+  .terra-Table tr {
+    page-break-inside: avoid;
+  }
 }
