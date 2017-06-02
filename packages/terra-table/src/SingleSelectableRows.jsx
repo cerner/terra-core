@@ -6,6 +6,7 @@ import TableRow from './TableRow';
 
 const KEYCODES = {
   ENTER: 13,
+  SPACE: 32,
 };
 
 const propTypes = {
@@ -44,7 +45,7 @@ class SingleSelectableRows extends React.Component {
   handleSelection(event, index) {
     this.setState({ selectedIndex: index });
     if (this.props.onChange) {
-      this.props.onChange(event);
+      this.props.onChange(event, index);
     }
   }
 
@@ -70,7 +71,7 @@ class SingleSelectableRows extends React.Component {
     const initialOnKeyDown = row.props.onKeyDown;
 
     return (event) => {
-      if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
         if (this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
@@ -106,7 +107,7 @@ class SingleSelectableRows extends React.Component {
   }
 
   clonedChildItems(rows) {
-    return rows.map((row, index) => {
+    return React.Children.map(rows, (row, index) => {
       if (row.type === TableRow) {
         const wrappedOnClick = this.wrappedOnClickForRow(row, index);
         const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
@@ -129,7 +130,6 @@ class SingleSelectableRows extends React.Component {
       </TableRows>
     );
   }
-
 }
 
 SingleSelectableRows.propTypes = propTypes;
