@@ -81,4 +81,21 @@ module.exports = {
     browser.click('.terra-List .terra-ListItem:nth-child(3)');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
   },
+  'Displays a single select list with one item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/one-item`)
+      .assert.elementPresent('.terra-List');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/one-item`)
+      .assert.elementPresent('.terra-ListItem');
+  },
+  'Displays a single select list with no items': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/no-items`)
+      .assert.elementPresent('.terra-List');
+
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/no-items`)
+      .assert.elementNotPresent('.terra-ListItem');
+  },
 };

@@ -111,12 +111,12 @@ class MultiSelectList extends React.Component {
   cloneChildItems(items) {
     const disableUnselectedItems = this.state.selectedIndexes.length >= this.validatedMaxCount();
 
-    return items.map((item, index) => {
-      const wrappedOnClick = this.wrappedOnClickForItem(item, index);
-      const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(item, index);
-      const newProps = this.newPropsForItem(item, index, wrappedOnClick, wrappedOnKeyDown, disableUnselectedItems);
+    return React.Children.map(items, (child, index) => {
+      const wrappedOnClick = this.wrappedOnClickForItem(child, index);
+      const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(child, index);
+      const newProps = this.newPropsForItem(child, index, wrappedOnClick, wrappedOnKeyDown, disableUnselectedItems);
 
-      return React.cloneElement(item, newProps);
+      return React.cloneElement(child, newProps);
     });
   }
 

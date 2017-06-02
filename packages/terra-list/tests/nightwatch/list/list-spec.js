@@ -28,4 +28,21 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/items-divided`)
       .assert.cssClassPresent('.terra-List', 'terra-List-divided');
   },
+  'Displays a list with one item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/one-item`)
+      .assert.elementPresent('.terra-List');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/one-item`)
+      .assert.elementPresent('.terra-ListItem');
+  },
+  'Displays a list with no items': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/no-items`)
+      .assert.elementPresent('.terra-List');
+
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/no-items`)
+      .assert.elementNotPresent('.terra-ListItem');
+  },
 };

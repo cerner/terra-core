@@ -11,6 +11,8 @@ import OnChangeMultiSelectListWithMaxSelection from './OnChangeMultiSelectListWi
 import MultiSelectListWithNoDeselectItem from './MultiSelectListWithNoDeselectItem';
 import MultiSelectListWithPreselectedItem from './MultiSelectListWithPreselectedItem';
 import MultiSelectListWithNonSelectableItem from './MultiSelectListWithNonSelectableItem';
+import MultiSelectListOneItem from './MultiSelectListOneItem';
+import MultiSelectListNoItems from './MultiSelectListNoItems';
 
 const routes = (
   <div>
@@ -23,6 +25,8 @@ const routes = (
     <Route path="/tests/multi-select-list-tests/no-deselect" component={MultiSelectListWithNoDeselectItem} />
     <Route path="/tests/multi-select-list-tests/preselected" component={MultiSelectListWithPreselectedItem} />
     <Route path="/tests/multi-select-list-tests/non-selectable" component={MultiSelectListWithNonSelectableItem} />
+    <Route path="/tests/multi-select-list-tests/one-item" component={MultiSelectListOneItem} />
+    <Route path="/tests/multi-select-list-tests/no-items" component={MultiSelectListNoItems} />
   </div>
 );
 
