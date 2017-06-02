@@ -8,7 +8,6 @@ import ReadMe from 'terra-popup-presenter/docs/README.md';
 import PopupPresenterSrc from '!raw-loader!terra-popup-presenter/src/PopupPresenter.jsx';
 // Example Files
 import PopupPresenterStandard from './PopupPresenterStandard';
-import PopupManagerStandard from './PopupManagerStandard';
 
 const PopupPresenterExamples = () => (
   <div>
@@ -16,8 +15,6 @@ const PopupPresenterExamples = () => (
     <PropsTable id="props" src={PopupPresenterSrc} />
     <h2 id="standard-popup">Standard PopupPresenter</h2>
     <PopupPresenterStandard />
-    <h2 id="standard-manager">Standard PopupManager</h2>
-    <PopupManagerStandard />
   </div>
 );
 

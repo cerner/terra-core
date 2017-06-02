@@ -75,10 +75,7 @@ var KEYCODES = {
 
 var ARROW_POSITIONS = ['top', 'bottom', 'left', 'right'];
 
-/**
- * The tiny breakpoint value, at which to flex responsiveness.
- */
-var TINY_BREAKPOINT = 544;
+var POPUP_MARGIN = 9;
 
 var propTypes = {
   /**
@@ -89,6 +86,10 @@ var propTypes = {
    * The initial arrow position.
    */
   arrowPosition: _propTypes2.default.oneOf(ARROW_POSITIONS),
+  /**
+   * The children to be presented as the popup's content.
+   */
+  children: _propTypes2.default.node,
   /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
@@ -102,25 +103,25 @@ var propTypes = {
    */
   closeOnResize: _propTypes2.default.bool,
   /**
-   * The content to be presented within the popup.
+   * A the px value of height to be applied to the content container.
    */
-  content: _propTypes2.default.element.isRequired,
+  contentHeight: _propTypes2.default.number,
   /**
    * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
    */
-  contentMaxHeight: _propTypes2.default.number,
+  contentHeightMax: _propTypes2.default.number,
+  /**
+   * A the px value of width to be applied to the content container.
+   */
+  contentWidth: _propTypes2.default.number,
   /**
    * The maximum width of the popup content in px, also used with responsive behavior for actual width.
    */
-  contentMaxWidth: _propTypes2.default.number,
+  contentWidthMax: _propTypes2.default.number,
   /**
    * Should the default header be disabled at small form factor.
    */
   disableHeader: _propTypes2.default.bool,
-  /**
-   * Should the popup expand to fill at the defined breakpoint.
-   */
-  isResponsive: _propTypes2.default.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -133,6 +134,7 @@ var propTypes = {
 
 var defaultProps = {
   arrowPosition: 'top',
+  children: [],
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
@@ -213,7 +215,7 @@ var Popup = function (_React$Component) {
     }
   }, {
     key: 'addPopupHeader',
-    value: function addPopupHeader(content, onRequestClose) {
+    value: function addPopupHeader(children, onRequestClose) {
       var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
       var header = _react2.default.createElement(
         'div',
@@ -223,8 +225,38 @@ var Popup = function (_React$Component) {
       return _react2.default.createElement(
         _terraContentContainer2.default,
         { header: header, fill: true },
-        content
+        children
       );
+    }
+  }, {
+    key: 'isFullScreen',
+    value: function isFullScreen(height, maxHeight, width, maxWidth, disableHeader) {
+      return height >= maxHeight && width >= maxWidth;
+    }
+  }, {
+    key: 'getContentStyle',
+    value: function getContentStyle(height, maxHeight, width, maxWidth) {
+      var validHeight = height <= maxHeight ? height : maxHeight;
+      var validWidth = width <= maxWidth ? width : maxWidth;
+      return { height: validHeight.toString() + 'px', width: validWidth.toString() + 'px' };
+    }
+  }, {
+    key: 'isMarginValid',
+    value: function isMarginValid(dimension, dimensionMax) {
+      return dimensionMax >= dimension + POPUP_MARGIN;
+    }
+  }, {
+    key: 'shouldShowArrow',
+    value: function shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax) {
+      var showArrow = !!arrow;
+      if (showArrow) {
+        if (['top', 'bottom'].indexOf(arrowPosition) >= 0) {
+          showArrow = this.isMarginValid(contentHeight, contentHeightMax);
+        } else {
+          showArrow = this.isMarginValid(contentWidth, contentWidthMax);
+        }
+      }
+      return showArrow;
     }
   }, {
     key: 'render',
@@ -232,51 +264,48 @@ var Popup = function (_React$Component) {
       var _props = this.props,
           arrow = _props.arrow,
           arrowPosition = _props.arrowPosition,
+          children = _props.children,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closeOnResize = _props.closeOnResize,
-          content = _props.content,
-          contentMaxHeight = _props.contentMaxHeight,
-          contentMaxWidth = _props.contentMaxWidth,
+          contentHeight = _props.contentHeight,
+          contentHeightMax = _props.contentHeightMax,
+          contentWidth = _props.contentWidth,
+          contentWidthMax = _props.contentWidthMax,
           disableHeader = _props.disableHeader,
           isResponsive = _props.isResponsive,
           onRequestClose = _props.onRequestClose,
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'content', 'contentMaxHeight', 'contentMaxWidth', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
-      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': arrow }, _defineProperty({}, '' + POPUP_CLASSES[arrowPosition], arrow), customProps.className]);
+      var showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+      var contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+      var isFullScreen = this.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
 
-      var contentStyle = {};
-      if (contentMaxHeight) {
-        contentStyle.maxHeight = contentMaxHeight.toString() + 'px';
-      }
-      if (contentMaxWidth) {
-        contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
-      }
-
-      var contentForDisplay = _react2.default.cloneElement(content, { onRequestClose: onRequestClose });
-      var fill = isResponsive && contentMaxWidth <= TINY_BREAKPOINT;
-      if (fill) {
-        contentStyle.height = contentStyle.maxHeight;
-        contentStyle.width = contentStyle.maxWidth;
-
-        if (!disableHeader) {
-          contentForDisplay = this.addPopupHeader(contentForDisplay, onRequestClose);
-        }
+      var content = children;
+      if (isFullScreen && !disableHeader) {
+        content = this.addPopupHeader(children, onRequestClose);
       }
 
-      var contentClassNames = (0, _classnames2.default)(['terra-Popup-content', { 'terra-Popup-content--fill': fill }]);
+      var arrowContent = void 0;
+      if (showArrow) {
+        arrowContent = arrow;
+      }
+
+      var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': showArrow }, _defineProperty({}, '' + POPUP_CLASSES[arrowPosition], showArrow), customProps.className]);
+
+      var contentClassNames = (0, _classnames2.default)(['terra-Popup-content', { 'terra-Popup-content--isFullScreen': isFullScreen }]);
 
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { className: popupClassNames, ref: refCallback }),
-        arrow,
+        arrowContent,
         _react2.default.createElement(
           'div',
           { className: contentClassNames, style: contentStyle },
-          contentForDisplay
+          content
         )
       );
     }

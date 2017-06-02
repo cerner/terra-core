@@ -40,10 +40,7 @@ const ARROW_POSITIONS = [
   'right'
 ];
 
-/**
- * The tiny breakpoint value, at which to flex responsiveness.
- */
-const TINY_BREAKPOINT = 544;
+const POPUP_MARGIN = 9;
 
 const propTypes = {
   /**
@@ -54,6 +51,10 @@ const propTypes = {
    * The initial arrow position.
    */
   arrowPosition: PropTypes.oneOf(ARROW_POSITIONS),
+  /**
+   * The children to be presented as the popup's content.
+   */
+  children: PropTypes.node,
   /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
@@ -67,25 +68,25 @@ const propTypes = {
    */
   closeOnResize: PropTypes.bool,
   /**
-   * The content to be presented within the popup.
+   * A the px value of height to be applied to the content container.
    */
-  content: PropTypes.element.isRequired,
+  contentHeight: PropTypes.number,
   /**
    * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
    */
-  contentMaxHeight: PropTypes.number,
+  contentHeightMax: PropTypes.number,
+  /**
+   * A the px value of width to be applied to the content container.
+   */
+  contentWidth: PropTypes.number,
   /**
    * The maximum width of the popup content in px, also used with responsive behavior for actual width.
    */
-  contentMaxWidth: PropTypes.number,
+  contentWidthMax: PropTypes.number,
   /**
    * Should the default header be disabled at small form factor.
    */
   disableHeader: PropTypes.bool,
-  /**
-   * Should the popup expand to fill at the defined breakpoint.
-   */
-  isResponsive: PropTypes.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -98,6 +99,7 @@ const propTypes = {
 
 const defaultProps = {
   arrowPosition: 'top',
+  children: [],
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
@@ -161,22 +163,50 @@ class Popup extends React.Component {
     }
   }
 
-  addPopupHeader(content, onRequestClose) {
+  addPopupHeader(children, onRequestClose) {
     const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
     const header = <div className="terra-Popup-header">{icon}</div>;
-    return <ContentContainer header={header} fill>{content}</ContentContainer>;
+    return <ContentContainer header={header} fill>{children}</ContentContainer>;
+  }
+
+  isFullScreen(height, maxHeight, width, maxWidth, disableHeader) {
+    return height >= maxHeight && width >= maxWidth;
+  }
+
+  getContentStyle(height, maxHeight, width, maxWidth) {
+    const validHeight = height <= maxHeight ? height : maxHeight;
+    const validWidth = width <= maxWidth ? width : maxWidth;
+    return { height: validHeight.toString() + 'px', width: validWidth.toString() + 'px' };
+  }
+
+  isMarginValid(dimension, dimensionMax) {
+    return dimensionMax >= dimension + POPUP_MARGIN;
+  }
+
+  shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax) {
+    let showArrow = !!arrow;
+    if (showArrow) {
+      if (['top', 'bottom'].indexOf(arrowPosition) >= 0) {
+        showArrow = this.isMarginValid(contentHeight, contentHeightMax);
+      } else {
+        showArrow = this.isMarginValid(contentWidth, contentWidthMax);
+      }
+    }
+    return showArrow;
   }
 
   render() {
     const { 
       arrow,
       arrowPosition,
+      children,
       closeOnEsc,
       closeOnOutsideClick,
       closeOnResize,
-      content,
-      contentMaxHeight,
-      contentMaxWidth,
+      contentHeight,
+      contentHeightMax,
+      contentWidth,
+      contentWidthMax,
       disableHeader,
       isResponsive,
       onRequestClose,
@@ -185,43 +215,38 @@ class Popup extends React.Component {
       refCallback,
       ...customProps,
     } = this.props;
+    
+    const showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+    const contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+    const isFullScreen = this.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+
+    let content = children;
+    if (isFullScreen && !disableHeader) {
+      content = this.addPopupHeader(children, onRequestClose);
+    }
+
+    let arrowContent;
+    if (showArrow) {
+      arrowContent = arrow;
+    }
 
     const popupClassNames = classNames([
       'terra-Popup',
-      { 'terra-Popup-showArrow': arrow },
-      { [`${POPUP_CLASSES[arrowPosition]}`]: arrow },
+      { 'terra-Popup-showArrow': showArrow },
+      { [`${POPUP_CLASSES[arrowPosition]}`]: showArrow },
       customProps.className,
     ]);
 
-    const contentStyle = {};
-    if (contentMaxHeight) {
-      contentStyle.maxHeight = contentMaxHeight.toString() + 'px';
-    }
-    if (contentMaxWidth) {
-      contentStyle.maxWidth = contentMaxWidth.toString() + 'px';
-    }
-
-    let contentForDisplay = React.cloneElement(content, {onRequestClose});
-    const fill = isResponsive && contentMaxWidth <= TINY_BREAKPOINT;
-    if (fill) {
-      contentStyle.height = contentStyle.maxHeight;
-      contentStyle.width = contentStyle.maxWidth;
-
-      if (!disableHeader) {
-        contentForDisplay = this.addPopupHeader(contentForDisplay, onRequestClose);
-      }
-    }
-
     const contentClassNames = classNames([
       'terra-Popup-content',
-      { 'terra-Popup-content--fill': fill },
+      { 'terra-Popup-content--isFullScreen': isFullScreen },
     ]);
 
     return (
       <div {...customProps} className={popupClassNames} ref={refCallback}>
-        {arrow}
+        {arrowContent}
         <div className={contentClassNames} style={contentStyle}>
-          {contentForDisplay}
+          {content}
         </div>
       </div>
     );

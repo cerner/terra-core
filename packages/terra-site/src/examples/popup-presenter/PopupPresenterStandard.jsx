@@ -38,13 +38,15 @@ class PopupPresenterStandard extends React.Component {
           <div style={{top: '300px', left: '400px', position: 'relative', height: '300px', width: '400px', overflow: 'auto', backgroundColor: '#1c1f21'}}>
             <div style={{position: 'relative', height: '1200px', width: '1600px', overflow: 'auto', backgroundColor: '#1a93e4'}}>
               <PopupPresenter 
-                content={contentSection}
                 contentAttachment="top center"
+                contentDimensions="tiny tiny"
                 isOpen={this.state.open}
                 showArrow
                 targetRef={this.getButtonNode}
                 onRequestClose={this.handleRequestClose}
-              />
+              >
+                {contentSection}
+              </PopupPresenter>
               <div style={{display: 'inline-block', position: 'absolute', top: '500px', left: '700px'}} ref={this.setButtonNode}>
                 <Button text="popup button launcher" onClick={this.handleButtonClick} />
               </div>
