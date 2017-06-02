@@ -1,6 +1,6 @@
 # Terra Demographics Banner
 
-The demographics component is used to display demographic information about a person in a condensed, easy to read format.
+The demographics component is used to display demographic information about a person in a condensed, easy to read format. Demographics Banner must be inside the Base component with locale. All related translations are required to be loaded before Demographics Banner renders.
 
 ## Getting Started
 
@@ -14,6 +14,7 @@ The demographics component is used to display demographic information about a pe
 import React from 'react';
 import DemographicsBanner from 'terra-demographics-banner';
 
+// DemographicsBanner must be inside the Base component with locale
 <DemographicsBanner
   applicationContent={<span className="risk-score">5%</span>}
   age="25 Years"
