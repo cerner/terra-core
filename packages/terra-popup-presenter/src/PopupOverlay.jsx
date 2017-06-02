@@ -32,6 +32,7 @@ class PopupOverlay extends React.Component {
 
     const overlayClassNames = classNames([
       'terra-PopupOverlay',
+      customProps.className,
     ]);
 
     return (

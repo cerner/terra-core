@@ -66,6 +66,14 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * CSS classnames that are append to the arrow.
+   */
+  classNameArrow: PropTypes.string,
+  /**
+   * CSS classnames that are append to the popup content body.
+   */
+  classNameContent: PropTypes.string,
+  /**
    * CSS classnames that are append to the overlay.
    */
   classNameOverlay: PropTypes.string,
@@ -101,6 +109,8 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
+  classNameArrow: null,
+  classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
   contentDimensions: 'medium medium',
@@ -251,7 +261,7 @@ class PopupPresenter extends React.Component {
     this._popupNode = node;
   }
 
-  createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, disableHeader) {
+  createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, disableHeader, classNameContent) {
     let boundsProps;
     if (boundingFrame) {
       boundsProps = {
@@ -276,6 +286,7 @@ class PopupPresenter extends React.Component {
         {...boundsProps}
         arrow={arrow}
         arrowPosition={PopupPresenter.primaryArrowPosition(attachment)}
+        classNameContent={classNameContent}
         closeOnEsc
         closeOnOutsideClick
         closeOnResize
@@ -305,6 +316,8 @@ class PopupPresenter extends React.Component {
     const {
       boundingRef,
       children,
+      classNameArrow,
+      classNameContent,
       classNameOverlay,
       contentAttachment,
       contentDimensions,
@@ -323,9 +336,9 @@ class PopupPresenter extends React.Component {
     if (isOpen && children) {
       let arrow;
       if (showArrow) {
-        arrow = <PopupArrow refCallback={this.setArrowNode} />;
+        arrow = <PopupArrow className={classNameArrow} refCallback={this.setArrowNode} />;
       }
-      popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
+      popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, classNameContent);
     }
   
     const allowScrolling = false;

@@ -109,6 +109,14 @@ var propTypes = {
    */
   children: _propTypes2.default.node,
   /**
+   * CSS classnames that are append to the arrow.
+   */
+  classNameArrow: _propTypes2.default.string,
+  /**
+   * CSS classnames that are append to the popup content body.
+   */
+  classNameContent: _propTypes2.default.string,
+  /**
    * CSS classnames that are append to the overlay.
    */
   classNameOverlay: _propTypes2.default.string,
@@ -144,6 +152,8 @@ var propTypes = {
 
 var defaultProps = {
   children: [],
+  classNameArrow: null,
+  classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
   contentDimensions: 'medium medium',
@@ -318,7 +328,7 @@ var PopupPresenter = function (_React$Component) {
     }
   }, {
     key: 'createPopup',
-    value: function createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, disableHeader) {
+    value: function createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, disableHeader, classNameContent) {
       var boundsProps = void 0;
       if (boundingFrame) {
         boundsProps = {
@@ -343,6 +353,7 @@ var PopupPresenter = function (_React$Component) {
         _extends({}, boundsProps, {
           arrow: arrow,
           arrowPosition: PopupPresenter.primaryArrowPosition(attachment),
+          classNameContent: classNameContent,
           closeOnEsc: true,
           closeOnOutsideClick: true,
           closeOnResize: true,
@@ -373,6 +384,8 @@ var PopupPresenter = function (_React$Component) {
       var _props = this.props,
           boundingRef = _props.boundingRef,
           children = _props.children,
+          classNameArrow = _props.classNameArrow,
+          classNameContent = _props.classNameContent,
           classNameOverlay = _props.classNameOverlay,
           contentAttachment = _props.contentAttachment,
           contentDimensions = _props.contentDimensions,
@@ -382,7 +395,7 @@ var PopupPresenter = function (_React$Component) {
           showArrow = _props.showArrow,
           targetRef = _props.targetRef,
           zIndex = _props.zIndex,
-          customProps = _objectWithoutProperties(_props, ['boundingRef', 'children', 'classNameOverlay', 'contentAttachment', 'contentDimensions', 'disableHeader', 'isOpen', 'onRequestClose', 'showArrow', 'targetRef', 'zIndex']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['boundingRef', 'children', 'classNameArrow', 'classNameContent', 'classNameOverlay', 'contentAttachment', 'contentDimensions', 'disableHeader', 'isOpen', 'onRequestClose', 'showArrow', 'targetRef', 'zIndex']); // eslint-disable-line no-unused-vars
 
       var boundingFrame = boundingRef ? boundingRef() : undefined;
 
@@ -390,9 +403,9 @@ var PopupPresenter = function (_React$Component) {
       if (isOpen && children) {
         var arrow = void 0;
         if (showArrow) {
-          arrow = _react2.default.createElement(_PopupArrow2.default, { refCallback: this.setArrowNode });
+          arrow = _react2.default.createElement(_PopupArrow2.default, { className: classNameArrow, refCallback: this.setArrowNode });
         }
-        popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, customProps);
+        popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, classNameContent);
       }
 
       var allowScrolling = false;

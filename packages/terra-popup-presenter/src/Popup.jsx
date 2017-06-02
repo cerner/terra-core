@@ -56,6 +56,10 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * CSS classnames that are append to the popup content body.
+   */
+  classNameContent: PropTypes.string,
+  /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
   closeOnEsc: PropTypes.bool,
@@ -100,6 +104,7 @@ const propTypes = {
 const defaultProps = {
   arrowPosition: 'top',
   children: [],
+  classNameContent: null,
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
@@ -200,6 +205,7 @@ class Popup extends React.Component {
       arrow,
       arrowPosition,
       children,
+      classNameContent,
       closeOnEsc,
       closeOnOutsideClick,
       closeOnResize,
@@ -240,6 +246,7 @@ class Popup extends React.Component {
     const contentClassNames = classNames([
       'terra-Popup-content',
       { 'terra-Popup-content--isFullScreen': isFullScreen },
+      classNameContent,
     ]);
 
     return (

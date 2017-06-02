@@ -91,6 +91,10 @@ var propTypes = {
    */
   children: _propTypes2.default.node,
   /**
+   * CSS classnames that are append to the popup content body.
+   */
+  classNameContent: _propTypes2.default.string,
+  /**
    * Whether or not the using the escape key should trigger the onRequestClose callback.
    */
   closeOnEsc: _propTypes2.default.bool,
@@ -135,6 +139,7 @@ var propTypes = {
 var defaultProps = {
   arrowPosition: 'top',
   children: [],
+  classNameContent: null,
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
@@ -265,6 +270,7 @@ var Popup = function (_React$Component) {
           arrow = _props.arrow,
           arrowPosition = _props.arrowPosition,
           children = _props.children,
+          classNameContent = _props.classNameContent,
           closeOnEsc = _props.closeOnEsc,
           closeOnOutsideClick = _props.closeOnOutsideClick,
           closeOnResize = _props.closeOnResize,
@@ -278,7 +284,7 @@ var Popup = function (_React$Component) {
           enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableHeader', 'isResponsive', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
 
       var showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
       var contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
@@ -296,7 +302,7 @@ var Popup = function (_React$Component) {
 
       var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': showArrow }, _defineProperty({}, '' + POPUP_CLASSES[arrowPosition], showArrow), customProps.className]);
 
-      var contentClassNames = (0, _classnames2.default)(['terra-Popup-content', { 'terra-Popup-content--isFullScreen': isFullScreen }]);
+      var contentClassNames = (0, _classnames2.default)(['terra-Popup-content', { 'terra-Popup-content--isFullScreen': isFullScreen }, classNameContent]);
 
       return _react2.default.createElement(
         'div',
