@@ -70,13 +70,6 @@ module.exports = {
       .assert.elementPresent('tr.terra-Table--isSelectable');
   },
 
-  'Displays a table with only one row': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/single-row-table`);
-    browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
-    browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
-  },
-
   'Display a selectable table and highlights the selected row upon clicking': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
     browser.click('.terra-Table-row:nth-child(1)');
@@ -150,6 +143,7 @@ module.exports = {
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
   },
+
   'Display a selectable table with a subheader': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`)
@@ -188,5 +182,31 @@ module.exports = {
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
     browser.assert.containsText('#selected-index', '2');
+  },
+
+  'Displays a table with only one row': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/single-row-table`);
+    browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
+  },
+
+  'Displays a table with no rows': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-no-rows`);
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(1)');
+  },
+
+  'Displays a selectable table with only one row': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table-single-row`);
+    browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
+  },
+
+  'Displays a selectable table with no rows': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table-no-rows`);
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(1)');
   },
 };

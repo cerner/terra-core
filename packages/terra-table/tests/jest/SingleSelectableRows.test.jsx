@@ -17,6 +17,18 @@ it('should render SingleSelectableRows tag', () => {
   expect(tableRows).toMatchSnapshot();
 });
 
+it('should render SingleSelectableRows with no rows', () => {
+  const defaultTableRows = <Table.SingleSelectableRows />;
+  const tableRows = shallow(defaultTableRows);
+  expect(tableRows).toMatchSnapshot();
+});
+
+it('should render SingleSelectableRows with one row', () => {
+  const defaultTableRows = <Table.SingleSelectableRows>{[row1]}</Table.SingleSelectableRows>;
+  const tableRows = shallow(defaultTableRows);
+  expect(tableRows).toMatchSnapshot();
+});
+
 it('should render SingleSelectableRows with maximum height set', () => {
   const defaultTableRows = <Table.SingleSelectableRows>{rows}</Table.SingleSelectableRows>;
   const tableRows = shallow(defaultTableRows);

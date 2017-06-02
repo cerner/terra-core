@@ -26,6 +26,9 @@ const defaultProps = {
 
 class SingleSelectableRows extends React.Component {
   static selectedRowIndex(rows) {
+    if (!rows || !rows.length) {
+      return null;
+    }
     // Find the first row which is selected and is selectable
     for (let i = 0; i < rows.length; i += 1) {
       if (rows[i].props.isSelected && rows[i].props.isSelectable) {

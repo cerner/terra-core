@@ -23,7 +23,7 @@ exports[`test should render TableRows tag 1`] = `
 </tbody>
 `;
 
-exports[`test should render with multiple rows 1`] = `
+exports[`test should render TableRows with multiple rows 1`] = `
 <tbody>
   <TableRow
     isSelectable={false}
@@ -48,7 +48,9 @@ exports[`test should render with multiple rows 1`] = `
 </tbody>
 `;
 
-exports[`test should render with one row 1`] = `
+exports[`test should render TableRows with no rows 1`] = `<tbody />`;
+
+exports[`test should render TableRows with one row 1`] = `
 <tbody>
   <TableRow
     isSelectable={false}
