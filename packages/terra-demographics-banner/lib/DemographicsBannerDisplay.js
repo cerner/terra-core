@@ -6,8 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -30,13 +28,7 @@ require('./DemographicsBanner.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable global-require, import/no-dynamic-require, react/no-unused-prop-types, react/no-danger */
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; } /* eslint-disable global-require, import/no-dynamic-require, react/no-unused-prop-types, react/no-danger */
 
 
 var propTypes = {
@@ -140,207 +132,189 @@ var DemographicsBannerValue = function DemographicsBannerValue(_ref) {
   );
 };
 
-var DemographicsBannerDisplay = function (_React$Component) {
-  _inherits(DemographicsBannerDisplay, _React$Component);
+var personDetails = function personDetails(props) {
+  var elements = [_react2.default.createElement(DemographicsBannerValue, { key: 'age', value: props.age }), _react2.default.createElement(DemographicsBannerValue, { key: 'gender', value: props.gender }), _react2.default.createElement(DemographicsBannerValue, {
+    key: 'dob',
+    label: props.dateOfBirthLabel,
+    value: props.dateOfBirth
+  })];
 
-  function DemographicsBannerDisplay() {
-    _classCallCheck(this, DemographicsBannerDisplay);
-
-    return _possibleConstructorReturn(this, (DemographicsBannerDisplay.__proto__ || Object.getPrototypeOf(DemographicsBannerDisplay)).apply(this, arguments));
+  if (props.gestationalAge) {
+    elements.push(_react2.default.createElement(DemographicsBannerValue, {
+      key: 'ga',
+      label: props.gestationalAgeLabel,
+      value: props.gestationalAge
+    }));
   }
 
-  _createClass(DemographicsBannerDisplay, [{
-    key: 'personDetails',
-    value: function personDetails() {
-      var elements = [_react2.default.createElement(DemographicsBannerValue, { key: 'age', value: this.props.age }), _react2.default.createElement(DemographicsBannerValue, { key: 'gender', value: this.props.gender }), _react2.default.createElement(DemographicsBannerValue, {
-        key: 'dob',
-        label: this.props.dateOfBirthLabel,
-        value: this.props.dateOfBirth
-      })];
+  if (props.postMenstrualAge) {
+    elements.push(_react2.default.createElement(DemographicsBannerValue, {
+      key: 'pma',
+      label: props.postMenstrualAgeLabel,
+      value: props.postMenstrualAge
+    }));
+  }
 
-      if (this.props.gestationalAge) {
-        elements.push(_react2.default.createElement(DemographicsBannerValue, {
-          key: 'ga',
-          label: this.props.gestationalAgeLabel,
-          value: this.props.gestationalAge
-        }));
-      }
+  if (props.deceasedDate) {
+    elements.push(_react2.default.createElement(DemographicsBannerValue, {
+      key: 'deceased',
+      label: props.deceasedDateLabel,
+      value: props.deceasedDate
+    }));
+  }
 
-      if (this.props.postMenstrualAge) {
-        elements.push(_react2.default.createElement(DemographicsBannerValue, {
-          key: 'pma',
-          label: this.props.postMenstrualAgeLabel,
-          value: this.props.postMenstrualAge
-        }));
-      }
+  return elements;
+};
 
-      if (this.props.deceasedDate) {
-        elements.push(_react2.default.createElement(DemographicsBannerValue, {
-          key: 'deceased',
-          label: this.props.deceasedDateLabel,
-          value: this.props.deceasedDate
-        }));
-      }
+var applicationIdentifiers = function applicationIdentifiers(props) {
+  var identifiers = props.identifiers;
 
-      return elements;
-    }
-  }, {
-    key: 'applicationIdentifiers',
-    value: function applicationIdentifiers() {
-      var identifiers = this.props.identifiers;
+  if (identifiers) {
+    return Object.keys(identifiers).map(function (key) {
+      return _react2.default.createElement(DemographicsBannerValue, {
+        key: 'identifier-' + key,
+        label: key,
+        value: identifiers[key]
+      });
+    });
+  }
 
-      if (identifiers) {
-        return Object.keys(identifiers).map(function (key) {
-          return _react2.default.createElement(DemographicsBannerValue, {
-            key: 'identifier-' + key,
-            label: key,
-            value: identifiers[key]
-          });
-        });
-      }
+  return null;
+};
 
-      return null;
-    }
-  }, {
-    key: 'renderLargeDemographicsBannerDisplay',
-    value: function renderLargeDemographicsBannerDisplay() {
-      var _props = this.props,
-          age = _props.age,
-          applicationContent = _props.applicationContent,
-          dateOfBirth = _props.dateOfBirth,
-          dateOfBirthLabel = _props.dateOfBirthLabel,
-          deceasedDate = _props.deceasedDate,
-          deceasedDateLabel = _props.deceasedDateLabel,
-          gender = _props.gender,
-          gestationalAge = _props.gestationalAge,
-          gestationalAgeLabel = _props.gestationalAgeLabel,
-          identifiers = _props.identifiers,
-          personName = _props.personName,
-          photo = _props.photo,
-          postMenstrualAge = _props.postMenstrualAge,
-          postMenstrualAgeLabel = _props.postMenstrualAgeLabel,
-          preferredFirstName = _props.preferredFirstName,
-          customProps = _objectWithoutProperties(_props, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+var SmallDemographicsBannerDisplay = function SmallDemographicsBannerDisplay(props) {
+  var age = props.age,
+      applicationContent = props.applicationContent,
+      dateOfBirth = props.dateOfBirth,
+      dateOfBirthLabel = props.dateOfBirthLabel,
+      deceasedDate = props.deceasedDate,
+      deceasedDateLabel = props.deceasedDateLabel,
+      gender = props.gender,
+      gestationalAge = props.gestationalAge,
+      gestationalAgeLabel = props.gestationalAgeLabel,
+      identifiers = props.identifiers,
+      personName = props.personName,
+      photo = props.photo,
+      postMenstrualAge = props.postMenstrualAge,
+      postMenstrualAgeLabel = props.postMenstrualAgeLabel,
+      preferredFirstName = props.preferredFirstName,
+      customProps = _objectWithoutProperties(props, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
-      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
+  var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
-      delete customProps.className;
+  delete customProps.className;
 
-      return _react2.default.createElement(
-        'section',
-        _extends({ className: mainClasses }, customProps),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-profile-photo' },
-          this.props.photo
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-content' },
-          _react2.default.createElement(
-            'div',
-            { className: 'terra-DemographicsBanner-row' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'terra-DemographicsBanner-person-name' },
-              personName,
-              preferredFirstName && _react2.default.createElement(
-                'span',
-                { className: 'terra-DemographicsBanner-preferred-first-name' },
-                preferredFirstName
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'terra-DemographicsBanner-application-content' },
-              applicationContent
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'terra-DemographicsBanner-row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'terra-DemographicsBanner-person-details' },
-              this.personDetails()
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'terra-DemographicsBanner-identifiers' },
-              this.applicationIdentifiers()
-            )
-          )
+  return _react2.default.createElement(
+    'section',
+    _extends({ className: mainClasses }, customProps),
+    _react2.default.createElement(
+      'h1',
+      { className: 'terra-DemographicsBanner-person-name' },
+      _react2.default.createElement(
+        'span',
+        null,
+        personName,
+        preferredFirstName && _react2.default.createElement(
+          'span',
+          { className: 'terra-DemographicsBanner-preferred-first-name' },
+          preferredFirstName
         )
-      );
-    }
-  }, {
-    key: 'renderSmallDemographicsBannerDisplay',
-    value: function renderSmallDemographicsBannerDisplay() {
-      var _props2 = this.props,
-          age = _props2.age,
-          applicationContent = _props2.applicationContent,
-          dateOfBirth = _props2.dateOfBirth,
-          dateOfBirthLabel = _props2.dateOfBirthLabel,
-          deceasedDate = _props2.deceasedDate,
-          deceasedDateLabel = _props2.deceasedDateLabel,
-          gender = _props2.gender,
-          gestationalAge = _props2.gestationalAge,
-          gestationalAgeLabel = _props2.gestationalAgeLabel,
-          identifiers = _props2.identifiers,
-          personName = _props2.personName,
-          photo = _props2.photo,
-          postMenstrualAge = _props2.postMenstrualAge,
-          postMenstrualAgeLabel = _props2.postMenstrualAgeLabel,
-          preferredFirstName = _props2.preferredFirstName,
-          customProps = _objectWithoutProperties(_props2, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'terra-DemographicsBanner-person-details' },
+      personDetails(props),
+      applicationIdentifiers(props)
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'terra-DemographicsBanner-application-content' },
+      applicationContent
+    )
+  );
+};
 
-      var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
+var LargeDemographicsBannerDisplay = function LargeDemographicsBannerDisplay(props) {
+  var age = props.age,
+      applicationContent = props.applicationContent,
+      dateOfBirth = props.dateOfBirth,
+      dateOfBirthLabel = props.dateOfBirthLabel,
+      deceasedDate = props.deceasedDate,
+      deceasedDateLabel = props.deceasedDateLabel,
+      gender = props.gender,
+      gestationalAge = props.gestationalAge,
+      gestationalAgeLabel = props.gestationalAgeLabel,
+      identifiers = props.identifiers,
+      personName = props.personName,
+      photo = props.photo,
+      postMenstrualAge = props.postMenstrualAge,
+      postMenstrualAgeLabel = props.postMenstrualAgeLabel,
+      preferredFirstName = props.preferredFirstName,
+      customProps = _objectWithoutProperties(props, ['age', 'applicationContent', 'dateOfBirth', 'dateOfBirthLabel', 'deceasedDate', 'deceasedDateLabel', 'gender', 'gestationalAge', 'gestationalAgeLabel', 'identifiers', 'personName', 'photo', 'postMenstrualAge', 'postMenstrualAgeLabel', 'preferredFirstName']);
 
-      delete customProps.className;
+  var mainClasses = (0, _classnames2.default)('terra-DemographicsBanner', { 'terra-DemographicsBanner--deceased': deceasedDate }, customProps.className);
 
-      return _react2.default.createElement(
-        'section',
-        _extends({ className: mainClasses }, customProps),
+  delete customProps.className;
+
+  return _react2.default.createElement(
+    'section',
+    _extends({ className: mainClasses }, customProps),
+    _react2.default.createElement(
+      'div',
+      { className: 'terra-DemographicsBanner-profile-photo' },
+      props.photo
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'terra-DemographicsBanner-content' },
+      _react2.default.createElement(
+        'div',
+        { className: 'terra-DemographicsBanner-row' },
         _react2.default.createElement(
           'h1',
           { className: 'terra-DemographicsBanner-person-name' },
-          _react2.default.createElement(
+          personName,
+          preferredFirstName && _react2.default.createElement(
             'span',
-            null,
-            personName,
-            preferredFirstName && _react2.default.createElement(
-              'span',
-              { className: 'terra-DemographicsBanner-preferred-first-name' },
-              preferredFirstName
-            )
+            { className: 'terra-DemographicsBanner-preferred-first-name' },
+            preferredFirstName
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'terra-DemographicsBanner-person-details' },
-          this.personDetails(),
-          this.applicationIdentifiers()
         ),
         _react2.default.createElement(
           'div',
           { className: 'terra-DemographicsBanner-application-content' },
           applicationContent
         )
-      );
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(_terraResponsiveElement2.default, {
-        responsiveTo: 'window',
-        defaultElement: this.renderSmallDemographicsBannerDisplay(),
-        small: this.renderLargeDemographicsBannerDisplay()
-      });
-    }
-  }]);
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'terra-DemographicsBanner-row' },
+        _react2.default.createElement(
+          'div',
+          { className: 'terra-DemographicsBanner-person-details' },
+          personDetails(props)
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'terra-DemographicsBanner-identifiers' },
+          applicationIdentifiers(props)
+        )
+      )
+    )
+  );
+};
 
-  return DemographicsBannerDisplay;
-}(_react2.default.Component);
+var DemographicsBannerDisplay = function DemographicsBannerDisplay(props) {
+  return _react2.default.createElement(_terraResponsiveElement2.default, {
+    responsiveTo: 'window',
+    defaultElement: _react2.default.createElement(SmallDemographicsBannerDisplay, props),
+    small: _react2.default.createElement(LargeDemographicsBannerDisplay, props)
+  });
+};
+
+SmallDemographicsBannerDisplay.propTypes = propTypes;
+LargeDemographicsBannerDisplay.propTypes = propTypes;
 
 DemographicsBannerDisplay.propTypes = propTypes;
 DemographicsBannerDisplay.defaultProps = defaultProps;
