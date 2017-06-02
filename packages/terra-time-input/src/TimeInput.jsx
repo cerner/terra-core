@@ -262,6 +262,7 @@ class TimeInput extends React.Component {
           onKeyDown={this.handleHourInputKeyDown}
           onFocus={this.handleFocus}
           onBlur={this.handleHourBlur}
+          pattern="\d*"
         />
         <span>:</span>
         <Input
@@ -276,6 +277,7 @@ class TimeInput extends React.Component {
           onKeyDown={this.handleMinuteInputKeyDown}
           onFocus={this.handleFocus}
           onBlur={this.handleMinuteBlur}
+          pattern="\d*"
         />
       </div>
     );
