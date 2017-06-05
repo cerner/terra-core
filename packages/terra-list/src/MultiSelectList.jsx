@@ -5,6 +5,7 @@ import List from './List';
 
 const KEYCODES = {
   ENTER: 13,
+  SPACE: 32,
 };
 
 const propTypes = {
@@ -136,7 +137,7 @@ class MultiSelectList extends React.Component {
     const initialOnKeyDown = item.props.onKeyDown;
 
     return (event) => {
-      if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
         // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
         if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
