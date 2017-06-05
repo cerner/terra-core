@@ -159,7 +159,6 @@ class TimeInput extends React.Component {
 
   handleInputKeyDown(event, type) {
     if (Object.values(acceptableKeyCodes).indexOf(event.keyCode) < 0) {
-      event.preventDefault();
       return;
     }
 
