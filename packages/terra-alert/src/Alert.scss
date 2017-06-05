@@ -3,5 +3,130 @@
 @import './mixins';
 
 .terra-Alert {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
 
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.terra-Alert-icon {
+  flex-shrink: 0;
+  @include terra-margin-end(0.5rem);
+}
+
+.terra-Alert-body {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  margin: 1rem 0.6667rem;
+  overflow: hidden;
+  
+  @media screen and (min-width: 768px) {
+    @include terra-margin-end(0);
+  }
+}
+
+.terra-Alert-section {
+  flex: 1;
+}
+
+.terra-Alert-title {
+  float: left;
+  @include terra-margin-end(0.5833rem);
+}
+
+.terra-Alert-content {
+  p {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.terra-Alert-actions {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin: 0.5833rem 0.5833rem 0.5833rem 0.8333rem;
+}
+
+.terra-Alert-actions > :first-child {
+  @include terra-margin-end(0.8333rem);
+}
+
+.terra-Alert-actions > :last-child {
+  @include terra-margin-end(0);
+}
+
+
+/* default skin */
+.terra-Alert--default {
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 0 #007cc3 inset;
+}
+
+.terra-Alert--alert {
+  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-background-color($terra-alert-alert-color-scheme);
+}
+
+.terra-Alert--error {
+  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-background-color($terra-alert-error-color-scheme);
+}
+
+.terra-Alert--warning {
+  box-shadow: 2px 0 0 $terra-yellow-60 inset;
+  @include terra-alert-background-color($terra-alert-warning-color-scheme);
+}
+
+.terra-Alert--required {
+  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-background-color($terra-alert-required-color-scheme);
+}
+
+.terra-Alert--advisory {
+  box-shadow: 2px 0 0 $terra-purple-80 inset;
+  @include terra-alert-background-color($terra-alert-advisory-color-scheme);
+}
+
+.terra-Alert--information {
+  box-shadow: 2px 0 0 $terra-blue-70 inset;
+  @include terra-alert-background-color($terra-alert-information-color-scheme);
+}
+
+.terra-Alert--confirmation {
+  box-shadow: 2px 0 0 $terra-green-60 inset;
+  @include terra-alert-background-color($terra-alert-confirmation-color-scheme);
+}
+
+.terra-Alert--custom {
+  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-background-color($terra-alert-custom-color-scheme);
+}
+
+.terra-Alert--alert .terra-Alert-title {
+  @include terra-alert-color($terra-alert-alert-title-color-scheme);
+}
+
+.terra-Alert--error .terra-Alert-title {
+  @include terra-alert-color($terra-alert-error-title-color-scheme);
+}
+
+.terra-Alert--required .terra-Alert-icon {
+  @include terra-alert-color($terra-alert-required-icon-color-scheme);
 }

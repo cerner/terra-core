@@ -1,0 +1,7 @@
+@mixin terra-alert-background-color($color-map) {
+  background-color: map-get($color-map, background-color);
+}
+
+@mixin terra-alert-color($color-map) {
+  color: map-get($color-map, color);
+}
