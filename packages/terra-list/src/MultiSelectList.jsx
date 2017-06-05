@@ -41,12 +41,10 @@ class MultiSelectList extends React.Component {
       if (selectedIndexes.length >= maxSelectionCount) {
         break;
       }
-
       if (items[i].props.isSelected) {
         selectedIndexes.push(i);
       }
     }
-
     return selectedIndexes;
   }
 
@@ -123,7 +121,8 @@ class MultiSelectList extends React.Component {
   wrappedOnClickForItem(item, index) {
     const initialOnClick = item.props.onClick;
     return (event) => {
-      if (item.props.isSelectable && this.shouldHandleSelection(index)) {
+      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+      if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
         this.handleSelection(event, index);
       }
 
@@ -138,7 +137,8 @@ class MultiSelectList extends React.Component {
 
     return (event) => {
       if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
-        if (item.props.isSelectable && this.shouldHandleSelection(index)) {
+        // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+        if (item.props.isSelectable !== false && this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
       }
@@ -158,7 +158,11 @@ class MultiSelectList extends React.Component {
       newProps.isSelected = isSelected;
     }
 
-    newProps.isSelectable = item.props.isSelectable;
+    // Set the default isSelectable attribute to true, unless the consumer specifies the item isSelectable attribute as false.
+    newProps.isSelectable = true;
+    if (item.props.isSelectable === false) {
+      newProps.isSelectable = item.props.isSelectable;
+    }
 
     // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
     // onClick and onKeyDown functions.
@@ -168,7 +172,7 @@ class MultiSelectList extends React.Component {
       newProps.onKeyDown = onKeyDown;
     }
 
-    if (disableUnselectedItems && isSelected !== true) {
+    if (disableUnselectedItems && !isSelected) {
       newProps.isSelectable = false;
     }
 
