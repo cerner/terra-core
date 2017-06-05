@@ -1,30 +1,13 @@
 @import '~terra-mixins';
 @import './variables';
 
-.terra-ListItem-hasChevron {
-  display: block;
-  position: relative; // relative position so the chevron can use absolute position to vertically center itself
 
-  [dir='ltr'] & {
-    @include terra-padding-end(20px);
-  }
+.terra-ListItem-chevron {
+  @include terra-padding-horizontal(10px, 10px);
+  display: flex;
 
-  [dir='rtl'] & {
-    @include terra-padding-start(20px);
-  }
-
-  .terra-ListItem-chevron {
-    @include terra-position-end(10px);
+  > svg {
     color: $terra-list-chevron-color;
-    display: inline-block;
-    -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    height: 20px;
-    position: absolute;
-    speak: none;
-    text-decoration: inherit;
-    top: 50%;
-    transform: translate(0, -50%);
   }
 }
 
@@ -38,7 +21,7 @@
   }
 
   + .terra-ListItem {
-    border-top-color: $terra-list-item-selected-divider-color; 
+    border-top-color: $terra-list-item-selected-divider-color;
   }
 }
 

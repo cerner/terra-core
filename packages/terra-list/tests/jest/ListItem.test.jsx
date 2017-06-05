@@ -18,12 +18,12 @@ it('should render with selected', () => {
   expect(item).toMatchSnapshot();
 });
 
-it('should render with isSelectable', () => {
-  const item = shallow(<ListItem isSelectable />);
+it('should mount with isSelectable', () => {
+  const item = mount(<ListItem isSelectable />);
   expect(item).toMatchSnapshot();
 });
 
-it('should render with isSelectable and hasChevron', () => {
-  const item = shallow(<ListItem isSelectable hasChevron />);
+it('should mount with isSelectable and hasChevron', () => {
+  const item = shallow(<ListItem isSelectable hasChevron content={<p>test</p>} />);
   expect(item).toMatchSnapshot();
 });

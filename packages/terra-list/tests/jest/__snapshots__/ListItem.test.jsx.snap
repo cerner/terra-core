@@ -1,3 +1,39 @@
+exports[`test should mount with isSelectable 1`] = `
+<ListItem
+  hasChevron={false}
+  isSelectable={true}
+  isSelected={false}>
+  <li
+    className="terra-ListItem terra-ListItem-isSelectable" />
+</ListItem>
+`;
+
+exports[`test should mount with isSelectable and hasChevron 1`] = `
+<li
+  className="terra-ListItem terra-ListItem-isSelectable terra-ListItem-hasChevron">
+  <Arrange
+    align="center"
+    fill={
+      <p>
+        test
+      </p>
+    }
+    fitEnd={
+      <span
+        className="terra-ListItem-chevron">
+        <IconChevronRight
+          className=""
+          data-name="Layer 1"
+          height="0.8em"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          width="0.8em"
+          xmlns="http://www.w3.org/2000/svg" />
+      </span>
+    } />
+</li>
+`;
+
 exports[`test should render with className 1`] = `
 <li
   className="terra-ListItem textClass" />
@@ -9,28 +45,6 @@ exports[`test should render with content 1`] = `
   <p>
     text
   </p>
-</li>
-`;
-
-exports[`test should render with isSelectable 1`] = `
-<li
-  className="terra-ListItem terra-ListItem-isSelectable" />
-`;
-
-exports[`test should render with isSelectable and hasChevron 1`] = `
-<li
-  className="terra-ListItem terra-ListItem-isSelectable terra-ListItem-hasChevron">
-  <span
-    className="terra-ListItem-chevron">
-    <IconChevronRight
-      className=""
-      data-name="Layer 1"
-      height="10"
-      isBidi={true}
-      viewBox="0 0 48 48"
-      width="10"
-      xmlns="http://www.w3.org/2000/svg" />
-  </span>
 </li>
 `;
 

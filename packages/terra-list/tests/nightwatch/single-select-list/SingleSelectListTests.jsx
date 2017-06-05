@@ -12,6 +12,8 @@ const SingleSelectListTests = () => (
       <li><Link to="/tests/single-select-list-tests/on-change">SingleSelectList - OnChange Provided</Link></li>
       <li><Link to="/tests/single-select-list-tests/preselected">SingleSelectList - Preselected Item</Link></li>
       <li><Link to="/tests/single-select-list-tests/non-selectable">SingleSelectList - Non-Selectable Item</Link></li>
+      <li><Link to="/tests/single-select-list-tests/one-item">SingleSelectList - One Item</Link></li>
+      <li><Link to="/tests/single-select-list-tests/no-items">SingleSelectList - No items</Link></li>
     </ul>
   </div>
 );
