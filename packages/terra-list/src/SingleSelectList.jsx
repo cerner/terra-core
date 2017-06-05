@@ -138,7 +138,7 @@ class SingleSelectList extends React.Component {
 
     // Uses the props.hasChevron value, unless the consumer specifies the item hasChevron attribute as false.
     newProps.hasChevron = this.props.hasChevrons;
-    if (item.props.hasChevron) {
+    if (item.props.hasChevron === false) {
       newProps.hasChevron = item.props.hasChevron;
     }
 

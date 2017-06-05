@@ -9,7 +9,7 @@ exports[`test should mount with no items 1`] = `
 </MultiSelectList>
 `;
 
-exports[`test should mount with one items 1`] = `
+exports[`test should mount with one item 1`] = `
 <MultiSelectList
   isDivided={false}>
   <List

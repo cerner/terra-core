@@ -35,6 +35,13 @@ module.exports = {
       .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem-hasChevron')
       .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem-hasChevron');
   },
+  'Displays chevron single select list with one non-chevron item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/single-non-chevron`)
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem-hasChevron')
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem-hasChevron')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem-hasChevron');
+  },
   'Display a single select list  list and highlights the selected item upon clicking': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/default`);
 
