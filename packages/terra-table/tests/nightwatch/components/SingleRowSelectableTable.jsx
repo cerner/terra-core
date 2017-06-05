@@ -9,7 +9,7 @@ const SingleRowSelectableTable = () => (
       <Table.HeaderCell content={'Phone Number'} key={'PHONE_NUMBER'} minWidth={'large'} />
     </Table.Header>
     <Table.SingleSelectableRows>
-      <Table.Row isSelectable key={'PERSON_0'}>
+      <Table.Row key={'PERSON_0'}>
         <Table.Cell content="John Smith" key="NAME" />
         <Table.Cell content="123 Adams Drive" key="ADDRESS" />
         <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
