@@ -6,8 +6,7 @@
 // ========================================================
 
 .terra-Grid {
-  @include terra-margin-start(- $terra-grid-gutter-width * 0.5);
-  @include terra-margin-end(- $terra-grid-gutter-width * 0.5);
+  @include terra-margin-start(- $terra-grid-gutter-width * 1);
 
   box-sizing: border-box;
   display: flex;
@@ -19,8 +18,7 @@
 }
 
 .terra-Grid-col {
-  @include terra-padding-start($terra-grid-gutter-width * 0.5);
-  @include terra-padding-end($terra-grid-gutter-width * 0.5);
+  @include terra-padding-start($terra-grid-gutter-width * 1);
 
   box-sizing: border-box;
   flex-basis: 100%;
