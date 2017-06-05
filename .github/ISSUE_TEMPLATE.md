@@ -1,20 +1,35 @@
-Please fill out the below template as best you can.
---------------------------------------------------------
+# Issue Description
+<!-- Describe the issue as best you can. We love screenshots! -->
 
-### Description of Issue
-Describe the issue as best you can. We love screenshots!
+## Issue Type
+<!-- Is this a new feature request, enhancement, bug report, other? -->
+- [ ] New Feature
+- [ ] Enhancement
+- [ ] Bug
+- [ ] Other
 
-###System Configuration
-#### Component Version
+## Expected Behavior
+<!-- Tell us how it should work -->
 
-#### Browser and Version
+## Current Behavior
+<!-- Tell us what happens instead of the expected behavior -->
+<!-- Leave a comment "N/A" if there is no current behavior -->
 
-#### Additional Details (optional)
+<!----------------------------------------------------------------------------------->
+<!-- If you are reporting a bug, please fill out the sections below. -->
+<!-- Otherwise, the sections below can be deleted. -->
+<!----------------------------------------------------------------------------------->
 
-### Steps to Reproduce the Issue
-1. Step 1
-1. Step 2
+## Steps to Reproduce
+<!-- Provide a link to a live example, or an unambiguous set of steps to -->
+<!-- reproduce this bug. Include code to reproduce, if relevant -->
+1.
+2.
+3.
+4.
 
-### Expected Outcomes
-- Links can be styled as buttons
-- Disabled links behave the same as disabled buttons
+## Environment
+<!-- Include as many relevant details about the environment you experienced the bug in -->
+* Component Version:
+* Browser Name and Version:
+* Operating System and version (desktop or mobile):

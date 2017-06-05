@@ -7,9 +7,9 @@
     "publish": {
       "ignore": [
         "terra-content",
-        "terra-site",
         "terra-standout",
-        "terra-title"
+        "terra-title",
+        "terra-form"
       ]
     }
   },

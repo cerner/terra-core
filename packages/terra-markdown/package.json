@@ -1,7 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "terra-markdown",
   "repository": {
     "type": "git",
@@ -23,13 +23,13 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.4.1"
+    "terra-base": "^0.5.0"
   },
   "dependencies": {
     "github-markdown-css": "^2.4.1",
     "marked": "^0.3.6",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.4.1"
+    "terra-base": "^0.5.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

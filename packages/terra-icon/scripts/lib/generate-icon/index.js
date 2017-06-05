@@ -34,13 +34,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // get filepath for every svg
 /* eslint-disable import/no-extraneous-dependencies */
-var svgs = _fs2.default.readdirSync(_config.TerraIcon.svgDir)
+var svgs = _fs2.default.readdirSync(_config.TerraIcon.svgDir
 // Only load svg files
-.filter(function (f) {
+).filter(function (f) {
     return _path2.default.extname(f) === '.svg';
-})
+}
 // // Resolve to absolute path
-.map(function (f) {
+).map(function (f) {
     return _path2.default.join(_config.TerraIcon.svgDir, f);
 });
 

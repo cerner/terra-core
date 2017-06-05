@@ -6,9 +6,10 @@ import { Link } from 'react-router';
 const ListTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/list-tests/default">Default List</Link></li>
-      <li><Link to="/tests/list-tests/items">Items List</Link></li>
-      <li><Link to="/tests/list-tests/items-divided">Items Divided List</Link></li>
+      <li><Link to="/tests/list-tests/default">List - Default</Link></li>
+      <li><Link to="/tests/list-tests/items-divided">List - Divided</Link></li>
+      <li><Link to="/tests/list-tests/one-item">List - One Item</Link></li>
+      <li><Link to="/tests/list-tests/no-items">List - No Items</Link></li>
     </ul>
   </div>
 );

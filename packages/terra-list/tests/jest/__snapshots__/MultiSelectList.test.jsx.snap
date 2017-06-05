@@ -1,0 +1,389 @@
+exports[`test should mount with no items 1`] = `
+<MultiSelectList
+  isDivided={false}>
+  <List
+    isDivided={false}>
+    <ul
+      className="terra-List" />
+  </List>
+</MultiSelectList>
+`;
+
+exports[`test should mount with one items 1`] = `
+<MultiSelectList
+  isDivided={false}>
+  <List
+    isDivided={false}>
+    <ul
+      className="terra-List">
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}>
+        <li
+          className="terra-ListItem" />
+      </ListItem>
+    </ul>
+  </List>
+</MultiSelectList>
+`;
+
+exports[`test should render a default component 1`] = `
+<List
+  isDivided={false} />
+`;
+
+exports[`test should render with a selectable and non-selectable item 1`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false} />
+</List>
+`;
+
+exports[`test should render with isDivided 1`] = `
+<List
+  isDivided={true}>
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+</List>
+`;
+
+exports[`test should render with items 1`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+</List>
+`;
+
+exports[`test should select an item when maxSelectionCount is 2 1`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+</List>
+`;
+
+exports[`test should select an item when maxSelectionCount is 2 2`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+</List>
+`;
+
+exports[`test should select an item when maxSelectionCount is 2 3`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+</List>
+`;
+
+exports[`test should select an item when maxSelectionCount is 2 4`] = `
+<List
+  isDivided={false}>
+  <ListItem
+    className="stuff1"
+    content={
+      <p>
+        text1
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff2"
+    content={
+      <p>
+        text2
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff3"
+    content={
+      <p>
+        text3
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff4"
+    content={
+      <p>
+        text4
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+  <ListItem
+    className="stuff5"
+    content={
+      <p>
+        text5
+      </p>
+    }
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0" />
+</List>
+`;

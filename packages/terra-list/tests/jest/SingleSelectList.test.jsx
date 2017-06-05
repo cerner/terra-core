@@ -67,3 +67,16 @@ it('should select an item', () => {
   singleSelect.find('.stuff1').simulate('click');
   expect(singleSelect).toMatchSnapshot();
 });
+
+
+it('should mount with no items', () => {
+  const singleSelect = mount(<SingleSelectList />);
+  expect(singleSelect).toMatchSnapshot();
+});
+
+it('should mount with one items', () => {
+  const item1 = <SingleSelectList.Item key="123" />;
+  const singleSelect = mount(<SingleSelectList>{item1}</SingleSelectList>);
+  expect(singleSelect).toMatchSnapshot();
+});
+

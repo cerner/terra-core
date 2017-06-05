@@ -1,3 +1,5 @@
+// remove eslint-disable once terra-standout has been published
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-standout/docs/README.md';
@@ -5,6 +7,7 @@ import { version } from 'terra-standout/package.json';
 
 // eslint-disable-next-line import/extensions
 import 'terra-standout';
+/* eslint-enable import/no-extraneous-dependencies */
 
 const StandoutExamples = () => (
   <div>

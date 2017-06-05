@@ -1,0 +1,20 @@
+*.log
+node_modules
+src
+reports
+tests
+build
+aggregated-translations
+stats.json
+lib/App.js
+lib/Home.js
+lib/index.html
+lib/Index.js
+lib/site.scss
+lib/TestLinks.js
+
+# remove when these packages get published
+lib/examples/content
+lib/examples/form
+lib/examples/standout
+lib/examples/title

@@ -11,19 +11,38 @@ module.exports = {
     screenshot(browser, 'terra-list', done);
   },
 
-  'Displays a default list with the provided text': (browser) => {
+  'Displays a default list': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/default`)
       .assert.elementPresent('.terra-List');
   },
-  'Displays a items list with the provided text': (browser) => {
+  'Displays items in the list': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/items`)
-      .assert.elementPresent('.terra-List');
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/default`)
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(1)', 'test 1')
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(2)', 'test 2')
+      .assert.containsText('.terra-List .terra-ListItem:nth-child(3)', 'test 3');
   },
-  'Displays a items divided list with the provided text': (browser) => {
+  'Displays a divided list': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/items-divided`)
       .assert.cssClassPresent('.terra-List', 'terra-List-divided');
+  },
+  'Displays a list with one item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/one-item`)
+      .assert.elementPresent('.terra-List');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/one-item`)
+      .assert.elementPresent('.terra-ListItem');
+  },
+  'Displays a list with no items': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/no-items`)
+      .assert.elementPresent('.terra-List');
+
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-tests/no-items`)
+      .assert.elementNotPresent('.terra-ListItem');
   },
 };

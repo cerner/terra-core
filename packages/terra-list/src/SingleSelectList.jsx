@@ -29,7 +29,7 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isDivided: false,
-  hasChevrons: true,
+  hasChevrons: false,
   onChange: undefined,
 };
 
@@ -71,12 +71,12 @@ class SingleSelectList extends React.Component {
   }
 
   cloneChildItems(items) {
-    return items.map((item, index) => {
-      const wrappedOnClick = this.wrappedOnClickForItem(item, index);
-      const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(item, index);
-      const newProps = this.newPropsForItem(item, index, wrappedOnClick, wrappedOnKeyDown);
+    return React.Children.map(items, (child, index) => {
+      const wrappedOnClick = this.wrappedOnClickForItem(child, index);
+      const wrappedOnKeyDown = this.wrappedOnKeyDownForItem(child, index);
+      const newProps = this.newPropsForItem(child, index, wrappedOnClick, wrappedOnKeyDown);
 
-      return React.cloneElement(item, newProps);
+      return React.cloneElement(child, newProps);
     });
   }
 

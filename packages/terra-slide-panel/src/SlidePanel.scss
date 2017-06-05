@@ -100,11 +100,11 @@
     }
 
     &[data-slide-panel-panel-position='start'] > .terra-SlidePanel-panel {
-      @include terra-border-end(1px, solid, $terra-slide-panel-panel-border-color);
+      @include terra-border-end(1px solid $terra-slide-panel-panel-border-color);
     }
 
     &[data-slide-panel-panel-position='end'] > .terra-SlidePanel-panel {
-      @include terra-border-start(1px, solid, $terra-slide-panel-panel-border-color);
+      @include terra-border-start(1px solid $terra-slide-panel-panel-border-color);
     }
   }
 }
