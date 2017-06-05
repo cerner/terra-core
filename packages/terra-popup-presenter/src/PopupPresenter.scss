@@ -1,0 +1,5 @@
+@import '~terra-mixins';
+
+.terra-PopupPresenter-element {
+  z-index: $terra-z-index-7 + 1;
+}

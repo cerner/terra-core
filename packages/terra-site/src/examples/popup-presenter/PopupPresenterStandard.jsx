@@ -39,9 +39,9 @@ class PopupPresenterStandard extends React.Component {
             <div style={{position: 'relative', height: '1200px', width: '1600px', overflow: 'auto', backgroundColor: '#1a93e4'}}>
               <PopupPresenter
                 contentAttachment="top center"
-                contentDimensions="tiny tiny"
+                contentDimensions="50x 25x"
                 isOpen={this.state.open}
-                showArrow
+                isArrowDisplayed
                 targetRef={this.getButtonNode}
                 onRequestClose={this.handleRequestClose}
               >

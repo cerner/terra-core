@@ -16,10 +16,6 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -278,11 +274,9 @@ var TetherComponent = function (_React$Component) {
           onRepositioned = _props2.onRepositioned,
           customProps = _objectWithoutProperties(_props2, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'isEnabled', 'optimizations', 'targetRef', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
-      var wrapperClassNames = (0, _classnames2.default)(['terra-TetherComponent-element', customProps.className]);
-
       return _react2.default.createElement(
         'div',
-        _extends({}, customProps, { className: wrapperClassNames, ref: this.setElementNode }),
+        _extends({}, customProps, { ref: this.setElementNode }),
         content
       );
     }

@@ -7,6 +7,7 @@ import PopupArrow from './PopupArrow';// consider dot notation
 import PopupOverlay from './PopupOverlay';
 import TetherComponent from './TetherComponent';
 import Portal from 'react-portal';
+import './PopupPresenter.scss';
 
 const MIRROR_LR = {
   center: 'center',
@@ -20,28 +21,23 @@ const MIRROR_TB = {
   bottom: 'top'
 };
 
+const BASE_WIDTH = 16;
+const BASE_HEIGHT = 9;
+
 const DIMENSIONS = [
-  'tiny',
-  'small',
-  'medium',
-  'large',
-  'huge',
+  '10x',
+  '25x',
+  '50x',
+  '75x',
+  '100x',
 ];
 
-const HEIGHT_VALUES = {
-  tiny: 306,
-  small: 432,
-  medium: 558,
-  large: 684,
-  huge: 810,
-};
-
-const WIDTH_VALUES = {
-  tiny: 544,
-  small: 768,
-  medium: 992,
-  large: 1216,
-  huge: 1440,
+const DIMENSIONS_MAP = {
+  '10x': 10,
+  '25x': 25,
+  '50x': 50,
+  '75x': 75,
+  '100x': 100,
 };
 
 const COMBINE = () => {
@@ -86,9 +82,13 @@ const propTypes = {
    */
   contentDimensions: PropTypes.oneOf(DIMENSION_COMBINATIONS),
   /**
-   * Should the default header be disabled at small form factor.
+   * Should an arrow be placed at the attachment point.
    */
-  disableHeader: PropTypes.bool,
+  isArrowDisplayed: PropTypes.bool,
+  /**
+   * Should the default behavior, that inserts a header when constraints are breached, be disabled.
+   */
+  isHeaderDisabled: PropTypes.bool,
   /**
    * Should the popup be presented as open.
    */
@@ -97,10 +97,6 @@ const propTypes = {
    * Callback function indicating a close condition was met, should be combined with isOpen for state management.
    */
   onRequestClose: PropTypes.func,
-  /**
-   * Should an arrow be placed at the attachment point.
-   */
-  showArrow: PropTypes.bool,
   /**
    * Presenting element for the popup to anchor to.
    */
@@ -113,10 +109,10 @@ const defaultProps = {
   classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
-  contentDimensions: 'medium medium',
-  disableHeader: false,
+  contentDimensions: '25x 25x',
+  isArrowDisplayed: false,
+  isHeaderDisabled: false,
   isOpen: false,
-  showArrow: false,
 };
 
 class PopupPresenter extends React.Component {
@@ -261,24 +257,19 @@ class PopupPresenter extends React.Component {
     this._popupNode = node;
   }
 
-  createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, disableHeader, classNameContent) {
-    let boundsProps;
-    if (boundingFrame) {
-      boundsProps = {
-        contentHeightMax: boundingFrame.clientHeight,
-        contentWidthMax: boundingFrame.clientWidth,
-      };
-    } else {
-      boundsProps = {
-        contentHeightMax: window.innerHeight,
-        contentWidthMax: window.innerWidth,
-      };
-    }
+  createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, isHeaderDisabled, classNameContent) {
+    const parsedDimenions = PopupPresenter.parseStringPair(contentDimensions);
+    const boundsProps = {
+      contentWidth: BASE_WIDTH * DIMENSIONS_MAP[parsedDimenions.horizontal],
+      contentHeight: BASE_HEIGHT * DIMENSIONS_MAP[parsedDimenions.vertical],
+    };    
 
-    if (contentDimensions) {
-      const parsedDimenions = PopupPresenter.parseStringPair(contentDimensions);
-      boundsProps.contentWidth = WIDTH_VALUES[parsedDimenions.horizontal];
-      boundsProps.contentHeight = HEIGHT_VALUES[parsedDimenions.vertical];
+    if (boundingFrame) {
+      boundsProps.contentHeightMax = boundingFrame.clientHeight;
+      boundsProps.contentWidthMax = boundingFrame.clientWidth;
+    } else {
+      boundsProps.contentHeightMax = window.innerHeight;
+      boundsProps.contentWidthMax = window.innerWidth;
     }
 
     return (
@@ -290,8 +281,7 @@ class PopupPresenter extends React.Component {
         closeOnEsc
         closeOnOutsideClick
         closeOnResize
-        disableHeader={disableHeader}
-        isResponsive
+        isHeaderDisabled={isHeaderDisabled}
         onRequestClose={onRequestClose}
         refCallback={this.setPopupNode}
       >
@@ -321,10 +311,10 @@ class PopupPresenter extends React.Component {
       classNameOverlay,
       contentAttachment,
       contentDimensions,
-      disableHeader,
+      isArrowDisplayed,
+      isHeaderDisabled,
       isOpen,
       onRequestClose,
-      showArrow,
       targetRef,
       zIndex,
       ...customProps,
@@ -335,10 +325,10 @@ class PopupPresenter extends React.Component {
     let popup;
     if (isOpen && children) {
       let arrow;
-      if (showArrow) {
+      if (isArrowDisplayed) {
         arrow = <PopupArrow className={classNameArrow} refCallback={this.setArrowNode} />;
       }
-      popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, classNameContent);
+      popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, isHeaderDisabled, classNameContent);
     }
   
     const allowScrolling = false;
@@ -359,7 +349,6 @@ class PopupPresenter extends React.Component {
         disableOnPosition={!allowScrolling}
         isEnabled
         onRepositioned={this.handleTetherRepositioned}
-        style={{zIndex: '7001'}}
         targetRef={targetRef}
         targetAttachment={PopupPresenter.mirrorAttachment(contentAttachment)}
       />

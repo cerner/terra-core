@@ -123,9 +123,9 @@ var propTypes = {
    */
   contentWidthMax: _propTypes2.default.number,
   /**
-   * Should the default header be disabled at small form factor.
+   * Should the default behavior, that inserts a header when constraints are breached, be disabled.
    */
-  disableHeader: _propTypes2.default.bool,
+  isHeaderDisabled: _propTypes2.default.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -143,7 +143,7 @@ var defaultProps = {
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
-  disableHeader: false
+  isHeaderDisabled: false
 };
 
 var Popup = function (_React$Component) {
@@ -234,7 +234,7 @@ var Popup = function (_React$Component) {
     }
   }, {
     key: 'isFullScreen',
-    value: function isFullScreen(height, maxHeight, width, maxWidth, disableHeader) {
+    value: function isFullScreen(height, maxHeight, width, maxWidth) {
       return height >= maxHeight && width >= maxWidth;
     }
   }, {
@@ -277,19 +277,19 @@ var Popup = function (_React$Component) {
           contentHeightMax = _props.contentHeightMax,
           contentWidth = _props.contentWidth,
           contentWidthMax = _props.contentWidthMax,
-          disableHeader = _props.disableHeader,
-          onRequestClose = _props.onRequestClose,
-          enableOnClickOutside = _props.enableOnClickOutside,
           disableOnClickOutside = _props.disableOnClickOutside,
+          enableOnClickOutside = _props.enableOnClickOutside,
+          isHeaderDisabled = _props.isHeaderDisabled,
+          onRequestClose = _props.onRequestClose,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableHeader', 'onRequestClose', 'enableOnClickOutside', 'disableOnClickOutside', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableOnClickOutside', 'enableOnClickOutside', 'isHeaderDisabled', 'onRequestClose', 'refCallback']);
 
       var showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
       var contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
       var isFullScreen = this.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
 
       var content = children;
-      if (isFullScreen && !disableHeader) {
+      if (isFullScreen && !isHeaderDisabled) {
         content = this.addPopupHeader(children, onRequestClose);
       }
 

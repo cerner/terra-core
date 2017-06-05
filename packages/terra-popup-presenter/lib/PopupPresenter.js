@@ -46,6 +46,8 @@ var _reactPortal = require('react-portal');
 
 var _reactPortal2 = _interopRequireDefault(_reactPortal);
 
+require('./PopupPresenter.scss');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -69,22 +71,17 @@ var MIRROR_TB = {
   bottom: 'top'
 };
 
-var DIMENSIONS = ['tiny', 'small', 'medium', 'large', 'huge'];
+var BASE_WIDTH = 16;
+var BASE_HEIGHT = 9;
 
-var HEIGHT_VALUES = {
-  tiny: 306,
-  small: 432,
-  medium: 558,
-  large: 684,
-  huge: 810
-};
+var DIMENSIONS = ['10x', '25x', '50x', '75x', '100x'];
 
-var WIDTH_VALUES = {
-  tiny: 544,
-  small: 768,
-  medium: 992,
-  large: 1216,
-  huge: 1440
+var DIMENSIONS_MAP = {
+  '10x': 10,
+  '25x': 25,
+  '50x': 50,
+  '75x': 75,
+  '100x': 100
 };
 
 var COMBINE = function COMBINE() {
@@ -129,9 +126,13 @@ var propTypes = {
    */
   contentDimensions: _propTypes2.default.oneOf(DIMENSION_COMBINATIONS),
   /**
-   * Should the default header be disabled at small form factor.
+   * Should an arrow be placed at the attachment point.
    */
-  disableHeader: _propTypes2.default.bool,
+  isArrowDisplayed: _propTypes2.default.bool,
+  /**
+   * Should the default behavior, that inserts a header when constraints are breached, be disabled.
+   */
+  isHeaderDisabled: _propTypes2.default.bool,
   /**
    * Should the popup be presented as open.
    */
@@ -140,10 +141,6 @@ var propTypes = {
    * Callback function indicating a close condition was met, should be combined with isOpen for state management.
    */
   onRequestClose: _propTypes2.default.func,
-  /**
-   * Should an arrow be placed at the attachment point.
-   */
-  showArrow: _propTypes2.default.bool,
   /**
    * Presenting element for the popup to anchor to.
    */
@@ -156,10 +153,10 @@ var defaultProps = {
   classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
-  contentDimensions: 'medium medium',
-  disableHeader: false,
-  isOpen: false,
-  showArrow: false
+  contentDimensions: '25x 25x',
+  isArrowDisplayed: false,
+  isHeaderDisabled: false,
+  isOpen: false
 };
 
 var PopupPresenter = function (_React$Component) {
@@ -328,24 +325,19 @@ var PopupPresenter = function (_React$Component) {
     }
   }, {
     key: 'createPopup',
-    value: function createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, disableHeader, classNameContent) {
-      var boundsProps = void 0;
-      if (boundingFrame) {
-        boundsProps = {
-          contentHeightMax: boundingFrame.clientHeight,
-          contentWidthMax: boundingFrame.clientWidth
-        };
-      } else {
-        boundsProps = {
-          contentHeightMax: window.innerHeight,
-          contentWidthMax: window.innerWidth
-        };
-      }
+    value: function createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, isHeaderDisabled, classNameContent) {
+      var parsedDimenions = PopupPresenter.parseStringPair(contentDimensions);
+      var boundsProps = {
+        contentWidth: BASE_WIDTH * DIMENSIONS_MAP[parsedDimenions.horizontal],
+        contentHeight: BASE_HEIGHT * DIMENSIONS_MAP[parsedDimenions.vertical]
+      };
 
-      if (contentDimensions) {
-        var parsedDimenions = PopupPresenter.parseStringPair(contentDimensions);
-        boundsProps.contentWidth = WIDTH_VALUES[parsedDimenions.horizontal];
-        boundsProps.contentHeight = HEIGHT_VALUES[parsedDimenions.vertical];
+      if (boundingFrame) {
+        boundsProps.contentHeightMax = boundingFrame.clientHeight;
+        boundsProps.contentWidthMax = boundingFrame.clientWidth;
+      } else {
+        boundsProps.contentHeightMax = window.innerHeight;
+        boundsProps.contentWidthMax = window.innerWidth;
       }
 
       return _react2.default.createElement(
@@ -357,8 +349,7 @@ var PopupPresenter = function (_React$Component) {
           closeOnEsc: true,
           closeOnOutsideClick: true,
           closeOnResize: true,
-          disableHeader: disableHeader,
-          isResponsive: true,
+          isHeaderDisabled: isHeaderDisabled,
           onRequestClose: onRequestClose,
           refCallback: this.setPopupNode
         }),
@@ -389,23 +380,23 @@ var PopupPresenter = function (_React$Component) {
           classNameOverlay = _props.classNameOverlay,
           contentAttachment = _props.contentAttachment,
           contentDimensions = _props.contentDimensions,
-          disableHeader = _props.disableHeader,
+          isArrowDisplayed = _props.isArrowDisplayed,
+          isHeaderDisabled = _props.isHeaderDisabled,
           isOpen = _props.isOpen,
           onRequestClose = _props.onRequestClose,
-          showArrow = _props.showArrow,
           targetRef = _props.targetRef,
           zIndex = _props.zIndex,
-          customProps = _objectWithoutProperties(_props, ['boundingRef', 'children', 'classNameArrow', 'classNameContent', 'classNameOverlay', 'contentAttachment', 'contentDimensions', 'disableHeader', 'isOpen', 'onRequestClose', 'showArrow', 'targetRef', 'zIndex']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['boundingRef', 'children', 'classNameArrow', 'classNameContent', 'classNameOverlay', 'contentAttachment', 'contentDimensions', 'isArrowDisplayed', 'isHeaderDisabled', 'isOpen', 'onRequestClose', 'targetRef', 'zIndex']); // eslint-disable-line no-unused-vars
 
       var boundingFrame = boundingRef ? boundingRef() : undefined;
 
       var popup = void 0;
       if (isOpen && children) {
         var arrow = void 0;
-        if (showArrow) {
+        if (isArrowDisplayed) {
           arrow = _react2.default.createElement(_PopupArrow2.default, { className: classNameArrow, refCallback: this.setArrowNode });
         }
-        popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, disableHeader, classNameContent);
+        popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, isHeaderDisabled, classNameContent);
       }
 
       var allowScrolling = false;
@@ -423,7 +414,6 @@ var PopupPresenter = function (_React$Component) {
         disableOnPosition: !allowScrolling,
         isEnabled: true,
         onRepositioned: this.handleTetherRepositioned,
-        style: { zIndex: '7001' },
         targetRef: targetRef,
         targetAttachment: PopupPresenter.mirrorAttachment(contentAttachment)
       });

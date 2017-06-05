@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import ReactDOM from 'react-dom'
 import Tether from 'tether'
 
@@ -236,13 +235,8 @@ class TetherComponent extends React.Component {
       ...customProps 
     } = this.props;
 
-    const wrapperClassNames = classNames([
-      'terra-TetherComponent-element',
-      customProps.className,
-    ]);
-
     return (
-      <div {...customProps} className={wrapperClassNames} ref={this.setElementNode}>
+      <div {...customProps} ref={this.setElementNode}>
         {content}
       </div>
     );

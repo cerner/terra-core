@@ -88,9 +88,9 @@ const propTypes = {
    */
   contentWidthMax: PropTypes.number,
   /**
-   * Should the default header be disabled at small form factor.
+   * Should the default behavior, that inserts a header when constraints are breached, be disabled.
    */
-  disableHeader: PropTypes.bool,
+  isHeaderDisabled: PropTypes.bool,
   /**
    * The function that should be triggered when a close is indicated.
    */
@@ -108,7 +108,7 @@ const defaultProps = {
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
-  disableHeader: false,
+  isHeaderDisabled: false,
 };
 
 class Popup extends React.Component {
@@ -173,7 +173,7 @@ class Popup extends React.Component {
     return <ContentContainer header={header} fill>{children}</ContentContainer>;
   }
 
-  isFullScreen(height, maxHeight, width, maxWidth, disableHeader) {
+  isFullScreen(height, maxHeight, width, maxWidth) {
     return height >= maxHeight && width >= maxWidth;
   }
 
@@ -212,10 +212,10 @@ class Popup extends React.Component {
       contentHeightMax,
       contentWidth,
       contentWidthMax,
-      disableHeader,
-      onRequestClose,
-      enableOnClickOutside,
       disableOnClickOutside,
+      enableOnClickOutside,
+      isHeaderDisabled,
+      onRequestClose,
       refCallback,
       ...customProps,
     } = this.props;
@@ -225,7 +225,7 @@ class Popup extends React.Component {
     const isFullScreen = this.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
 
     let content = children;
-    if (isFullScreen && !disableHeader) {
+    if (isFullScreen && !isHeaderDisabled) {
       content = this.addPopupHeader(children, onRequestClose);
     }
 
