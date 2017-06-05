@@ -90,13 +90,17 @@ class SingleSelectableRows extends React.Component {
     const isSelected = this.state.selectedIndex === index;
     const newProps = { };
 
-    // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
+    // Set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex.
     // This will ensure that only one row will be selected at a moment of time.
     if (isSelected !== row.props.isSelected) {
       newProps.isSelected = isSelected;
     }
 
-    newProps.isSelectable = row.props.isSelectable;
+    // Set the default isSelectable attribute to true, unless the consumer specifies the row isSelectable as false.
+    newProps.isSelectable = true;
+    if (row.props.isSelectable === false) {
+      newProps.isSelectable = row.props.isSelectable;
+    }
 
     // If selectable, add tabIndex on rows to navigate through keyboard tab key for selectable row and add
     // onClick and onKeyDown functions.
