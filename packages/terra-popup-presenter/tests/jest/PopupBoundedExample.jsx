@@ -7,6 +7,8 @@ class PopupPresenterStandard extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setParentNode = this.setParentNode.bind(this);
+    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: true };
   }
 
