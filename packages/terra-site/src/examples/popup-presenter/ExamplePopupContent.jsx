@@ -13,10 +13,10 @@ class ExamplePopupContent extends React.Component {
     this.durp = false;
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <p style={{height: '600px', width: '400px'}}>i'm popup content, hear me roar!</p>
+        <p style={{ height: '600px', width: '400px' }}>im popup content, hear me roar!</p>
       </div>
     );
   }

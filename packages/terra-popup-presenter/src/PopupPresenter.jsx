@@ -144,14 +144,14 @@ class PopupPresenter extends React.Component {
 
   static arrowPositionFromBounds(targetBounds, popUpBounds, attachment, offset) {
     if (['top', 'bottom'].indexOf(attachment.vertical) >= 0) {
-      if (popUpBounds.left + popUpBounds.width - offset >= targetBounds.left && popUpBounds.left + offset <= targetBounds.left + targetBounds.width) {
+      if ((popUpBounds.left + popUpBounds.width) - offset >= targetBounds.left && popUpBounds.left + offset <= targetBounds.left + targetBounds.width) {
         if (targetBounds.top < popUpBounds.top) {
           return 'top';
         } else if (targetBounds.bottom < popUpBounds.bottom) {
           return 'bottom';
         }
       }
-    } else if (popUpBounds.top + popUpBounds.height - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
+    } else if ((popUpBounds.top + popUpBounds.height) - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
       if (targetBounds.left < popUpBounds.left) {
         return 'left';
       } else if (targetBounds.right < popUpBounds.right) {
@@ -185,8 +185,8 @@ class PopupPresenter extends React.Component {
   }
 
   static topOffset(targetBounds, popUpBounds, offset) {
-    const targetAttachPosition = targetBounds.top + targetBounds.height / 2;
-    const popupAttachPosition = popUpBounds.top + popUpBounds.height / 2;
+    const targetAttachPosition = targetBounds.top + (targetBounds.height / 2);
+    const popupAttachPosition = popUpBounds.top + (popUpBounds.height / 2);
 
     const topOffset = targetAttachPosition - popupAttachPosition;
     const topPosition = popUpBounds.height / 2;

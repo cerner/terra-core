@@ -10,33 +10,33 @@ class PopupPresenterStandard extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = {open: false};
-  }
-
-  handleButtonClick(event) {
-    this.setState({open: true});
-  }
-
-  handleRequestClose(event) {
-    this.setState({open: false});
+    this.state = { open: false };
   }
 
   setButtonNode(node) {
-    this._buttonNode = node;
+    this.buttonNode = node;
   }
 
   getButtonNode() {
-    return this._buttonNode;
+    return this.buttonNode;
+  }
+
+  handleButtonClick() {
+    this.setState({ open: true });
+  }
+
+  handleRequestClose() {
+    this.setState({ open: false });
   }
 
   render() {
     const contentSection = <ExamplePopupContent />;
 
     return (
-      <div id="durpplustwo" className="terra-Modal" style={{position: 'relative', height: '500px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto'}}>
-        <div style={{position: 'relative', height: '1200px', width: '1600px', overflow: 'auto'}}>
-          <div style={{top: '300px', left: '400px', position: 'relative', height: '300px', width: '400px', overflow: 'auto', backgroundColor: '#1c1f21'}}>
-            <div style={{position: 'relative', height: '1200px', width: '1600px', overflow: 'auto', backgroundColor: '#1a93e4'}}>
+      <div id="durpplustwo" className="terra-Modal" style={{ position: 'relative', height: '500px', width: '100%', backgroundColor: '#27de1c', overflow: 'auto' }}>
+        <div style={{ position: 'relative', height: '1200px', width: '1600px', overflow: 'auto' }}>
+          <div style={{ top: '300px', left: '400px', position: 'relative', height: '300px', width: '400px', overflow: 'auto', backgroundColor: '#1c1f21' }}>
+            <div style={{ position: 'relative', height: '1200px', width: '1600px', overflow: 'auto', backgroundColor: '#1a93e4' }}>
               <PopupPresenter
                 contentAttachment="top center"
                 contentDimensions="50x 25x"
@@ -47,7 +47,7 @@ class PopupPresenterStandard extends React.Component {
               >
                 {contentSection}
               </PopupPresenter>
-              <div style={{display: 'inline-block', position: 'absolute', top: '500px', left: '700px'}} ref={this.setButtonNode}>
+              <div style={{ display: 'inline-block', position: 'absolute', top: '500px', left: '700px' }} ref={this.setButtonNode}>
                 <Button text="popup button launcher" onClick={this.handleButtonClick} />
               </div>
             </div>
