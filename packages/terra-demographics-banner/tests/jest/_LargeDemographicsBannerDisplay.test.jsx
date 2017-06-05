@@ -15,10 +15,10 @@ it('renders small banner that contains all valid information', () => {
       photo={<Image alt="My Cat" src="" />}
       personName="Johnathon Doe"
       preferredFirstName="John"
-      dateOfBirthLabel='DOB'
-      deceasedDateLabel='Deceased'
-      gestationalAgeLabel='GA'
-      postMenstrualAgeLabel='PMA'
+      dateOfBirthLabel="DOB"
+      deceasedDateLabel="Deceased"
+      gestationalAgeLabel="GA"
+      postMenstrualAgeLabel="PMA"
     />,
   );
 
