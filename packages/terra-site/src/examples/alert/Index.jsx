@@ -8,9 +8,7 @@ import { version } from 'terra-alert/package.json';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import AlertSrc from '!raw-loader!terra-alert/src/Alert';
-import Alert, { AlertTypes } from 'terra-alert';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
-import Button from 'terra-button';
 
 // Example Files
 import AlertExample from './AlertExample';
@@ -21,11 +19,10 @@ import AdvisoryExample from './AdvisoryExample';
 import InformationExample from './InformationExample';
 import ConfirmationExample from './ConfirmationExample';
 import CustomExample from './CustomExample';
-
-const actionFunc = () => {
-  // eslint-disable-next-line no-alert
-  alert('Action performed');
-};
+import LongTextExample from './LongTextExample';
+import ActionExample from './ActionExample';
+import DismissibleExample from './DismissibleExample';
+import ActionAndDismissibleExample from './ActionAndDismissibleExample';
 
 const AlertExamples = () => (
   <div>
@@ -50,19 +47,15 @@ const AlertExamples = () => (
     <hr />
     <CustomExample />
     <hr />
-    <Alert type={AlertTypes.WARNING} title="Warning!" alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
-      This is a warning. It is configured with a custom Action button.
-    </Alert>
+    <LongTextExample />
     <hr />
-    <Alert type={AlertTypes.REQUIRED} isDismissible >This is a rerquired warning. It is configured to be dismissible.</Alert>
+    <ActionExample />
     <hr />
-    <Alert type={AlertTypes.ADVISORY} isDismissible alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
-      This is an advisory. It is configured to be dismissible and with a custom action button.
-    </Alert>
+    <DismissibleExample />
     <hr />
-    <Alert type={AlertTypes.INFORMATION} isDismissible >This is information. It is configured to be dismissible.</Alert>
+    <ActionAndDismissibleExample />
     <hr />
-    <Alert type={AlertTypes.CONFIRMATION} isDismissible >This is a confirmation. It is configured to be dismissible.</Alert>
+    <IconHelp height="1.3333rem" width="1.3333rem" />
   </div>
 );
 

@@ -23,9 +23,35 @@ const AlertTypes = {
 };
 
 const propTypes = {
- /*
- * The type of alert to be rendered.
- */
+  /**
+   * An action element to be added to the action section of the alert.
+   */
+  alertAction: PropTypes.element,
+  /**
+   * Child Nodes providing the message content for the alert. Can contain text and HTML.
+   */
+  children: PropTypes.PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  /**
+   * The icon to be used for an alert of type custom.
+   */
+  customIcon: PropTypes.element,
+  /**
+   * The status bar color to be used for an alert of type custom.
+   */
+  customStatusColor: PropTypes.string,
+  /**
+   * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.
+   */
+  onDismiss: PropTypes.func,
+  /**
+   * The title for the alert which will be bolded.
+   */
+  title: PropTypes.string,
+  /**
+   * The type of alert to be rendered. One of AlertTypes.ALERT, AlertTypes.ERROR, AlertTypes.WARNING, AlertTypes.REQUIRED, AlertTypes.ADVISORY,
+   * AlertTypes.INFORMATION, AlertTypes.CONFIRMATION, AlertTypes.CUSTOM.
+   * Import AlertTypes for access to these type strings.
+   */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,
     AlertTypes.ERROR,
@@ -35,40 +61,17 @@ const propTypes = {
     AlertTypes.CUSTOM,
     AlertTypes.INFORMATION,
     AlertTypes.CONFIRMATION,
-  ]).isRequired,
- /*
- * Child Nodes providing the message content for the alert.
- */
-  children: PropTypes.PropTypes.oneOfType([PropTypes.node.isRequired, PropTypes.string.isRequired]),
- /*
- * The title for the alert which will be bolded.
- */
-  title: PropTypes.string,
- /*
- * The icon to be used for an alert of type custom.
- */
-  customIcon: PropTypes.element,
- /*
- * The status bar color to be used for an alert of type custom.
- */
-  customStatusColor: PropTypes.string,
- /*
- * Indicates whether the Alert is dismissible.  If so, a dismiss button is added to the action area of the alert.
- */
-  isDismissible: PropTypes.bool,
- /*
- * An action element to be added to the action section of the alert.
- */
-  alertAction: PropTypes.element,
+  ]),
 };
 
 const defaultProps = {
+  alertAction: null,
   children: '',
-  title: '',
   customIcon: null,
   customStatusColor: '',
-  isDismissible: false,
-  alertAction: null,
+  onDismiss: null,
+  title: '',
+  type: AlertTypes.ALERT,
 };
 
 const getAlertClassName = (type) => {
@@ -138,7 +141,7 @@ const getDefaultTitle = (type) => {
   }
 };
 
-const Alert = ({ type, children, title, customIcon, customStatusColor, isDismissible, alertAction, ...customProps }) => {
+const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss, alertAction, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
   const alertTypeClassName = getAlertClassName(type);
   const AlertClassNames = classNames([
@@ -147,20 +150,21 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, isDismiss
     attributes.className,
   ]);
 
+  let actionsSection = '';
+  let dismissButton = '';
   const outerDivStyle = {};
+  let customBoxShadowStyle = '2px 0 0 ';
+
   if (type === AlertTypes.CUSTOM) {
-    let customBoxShadowStyle = '2px 0 0 ';
     customBoxShadowStyle += customStatusColor;
     customBoxShadowStyle += ' inset';
     outerDivStyle.boxShadow = customBoxShadowStyle;
   }
 
-  let actionsSection = '';
-  let dismissButton = '';
-  if (isDismissible) {
-    dismissButton = (<Button text="Dismiss" size="medium" variant="secondary" />);
+  if (onDismiss) {
+    dismissButton = (<Button text="Dismiss" size="medium" variant="secondary" onClick={onDismiss} />);
   }
-  if (isDismissible || alertAction) {
+  if (onDismiss || alertAction) {
     actionsSection = (
       <div className="terra-Alert-actions">
         {alertAction || ''}

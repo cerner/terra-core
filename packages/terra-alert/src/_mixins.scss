@@ -5,3 +5,17 @@
 @mixin terra-alert-color($color-map) {
   color: map-get($color-map, color);
 }
+
+@mixin terra-alert-shadow($shadow-color-map) {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      box-shadow: 2px 0 0 map-get($shadow-color-map) inset;
+    }
+
+    [dir='rtl'] & {
+      box-shadow: -2px 0 0 map-get($shadow-color-map) inset;
+    }
+  } @else {
+    box-shadow: 2px 0 0 map-get($shadow-color-map) inset;
+  }
+}

@@ -39,7 +39,7 @@
 }
 
 .terra-Alert-title {
-  float: left;
+  @include terra-float-start();
   @include terra-margin-end(0.5833rem);
 }
 
@@ -52,8 +52,6 @@
     margin-bottom: 0;
   }
 }
-
-
 
 .terra-Alert-actions {
   align-items: flex-start;
@@ -79,8 +77,8 @@
   box-shadow: 2px 0 0 #007cc3 inset;
 }
 
-.terra-Alert--alert {
-  box-shadow: 2px 0 0 $terra-red-70 inset;
+terra-Alert--alert {
+  @include terra-alert-shadow{$terra-alert-alert-shadow-color);
   @include terra-alert-background-color($terra-alert-alert-color-scheme);
 }
 
