@@ -5,7 +5,6 @@ import Markdown from 'terra-markdown';
 import ReadMe from 'terra-demographics-banner/docs/README.md';
 import DemographicsBanner from 'terra-demographics-banner';
 
-
 import DemographicsBannerAdditionalAges from './DemographicsBannerAdditionalAges';
 import DemographicsBannerAdditionalDetails from './DemographicsBannerAdditionalDetails';
 import DemographicsBannerBasic from './DemographicsBannerBasic';

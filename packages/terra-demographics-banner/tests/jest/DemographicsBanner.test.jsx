@@ -1,6 +1,8 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies */
 import { IntlProvider } from 'react-intl';
+
+import Image from '../../../terra-image/lib/Image';
 import DemographicsBanner from '../../src/DemographicsBanner';
 import messages from '../../translations/en-US.json';
 
@@ -22,7 +24,7 @@ it('renders the banner wrapper with all props', () => {
         gender="Male"
         gestationalAge="April 5, 2016"
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
-        photo={<img alt="My Cat" src="" />}
+        photo={<Image alt="My Cat" src="" />}
         personName="Johnathon Doe"
         postMenstrualAge="April 7, 2016"
         preferredFirstName="John"

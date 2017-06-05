@@ -41,9 +41,11 @@ exports[`test renders the banner wrapper with all props 1`] = `
   }
   personName="Johnathon Doe"
   photo={
-    <img
+    <Image
       alt="My Cat"
-      src="" />
+      isFluid={false}
+      src=""
+      variant="default" />
   }
   postMenstrualAge="April 7, 2016"
   preferredFirstName="John" />

@@ -1,5 +1,7 @@
 import React from 'react';
 import Base from 'terra-base';
+
+import Image from '../../../terra-image/lib/Image';
 import DemographicsBanner from '../../lib/DemographicsBanner';
 import demographicsCat from '../assets/demographicsCat.jpg';
 
@@ -16,7 +18,7 @@ export default () =>
       gender="Male"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       personName="Johnathon Doe"
-      photo={<img alt="My Cat" src={demographicsCat} />}
+      photo={<Image alt="My Cat" src={demographicsCat} />}
       preferredFirstName="John"
     />
   </Base>;

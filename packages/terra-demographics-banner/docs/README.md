@@ -12,6 +12,7 @@ The demographics component is used to display demographic information about a pe
 
 ```jsx
 import React from 'react';
+import Image from 'terra-image';
 import DemographicsBanner from 'terra-demographics-banner';
 
 // DemographicsBanner must be inside the Base component with locale
@@ -24,7 +25,7 @@ import DemographicsBanner from 'terra-demographics-banner';
   gestationalAge="April 5, 2016"
   gestationalAgeLabel="GA"
   identifiers={{ MRN: 12343, REA: '3JSDA' }}
-  photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
+  photo={<Image alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
   personName="Johnathon Doe"
   postMenstrualAge="April 7, 2016"
   postMenstrualAgeLabel="PMA"

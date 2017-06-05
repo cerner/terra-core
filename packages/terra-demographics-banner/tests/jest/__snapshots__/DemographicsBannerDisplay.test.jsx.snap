@@ -240,9 +240,11 @@ exports[`test renders the banner appropriately for a person with gestational and
       }
       personName="Johnathon Doe"
       photo={
-        <img
+        <Image
           alt="My Cat"
-          src="" />
+          isFluid={false}
+          src=""
+          variant="default" />
       }
       postMenstrualAge="April 7, 2016"
       postMenstrualAgeLabel="PMA"
@@ -284,9 +286,11 @@ exports[`test renders the banner appropriately for a person with gestational and
       }
       personName="Johnathon Doe"
       photo={
-        <img
+        <Image
           alt="My Cat"
-          src="" />
+          isFluid={false}
+          src=""
+          variant="default" />
       }
       postMenstrualAge="April 7, 2016"
       postMenstrualAgeLabel="PMA"
@@ -331,9 +335,11 @@ exports[`test renders the banner properly for a deceased person with additional 
       }
       personName="Johnathon Doe"
       photo={
-        <img
+        <Image
           alt="My Cat"
-          src="" />
+          isFluid={false}
+          src=""
+          variant="default" />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
@@ -375,9 +381,11 @@ exports[`test renders the banner properly for a deceased person with additional 
       }
       personName="Johnathon Doe"
       photo={
-        <img
+        <Image
           alt="My Cat"
-          src="" />
+          isFluid={false}
+          src=""
+          variant="default" />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
@@ -422,9 +430,11 @@ exports[`test renders the banner that contains additional information 1`] = `
       }
       personName="Johnathon Doe"
       photo={
-        <img
+        <Image
           alt="My Cat"
-          src="" />
+          isFluid={false}
+          src=""
+          variant="default" />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
@@ -466,9 +476,11 @@ exports[`test renders the banner that contains additional information 1`] = `
       }
       personName="Johnathon Doe"
       photo={
-        <img
+        <Image
           alt="My Cat"
-          src="" />
+          isFluid={false}
+          src=""
+          variant="default" />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
