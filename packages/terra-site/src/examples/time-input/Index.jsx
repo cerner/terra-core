@@ -11,7 +11,7 @@ import TimeInput from 'terra-time-input/src/TimeInput';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import TimeInputSrc from '!raw-loader!terra-time-input/src/TimeInput';
 
-const handleOnChange = (time, event) => {
+const handleOnChange = (event, time) => {
   window.console.log('**handleOnChange** Input value:', event.target.value, ' Updated time:', time);
 };
 
