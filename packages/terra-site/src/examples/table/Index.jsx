@@ -62,7 +62,7 @@ const TableExamples = () => (
     <h2>Table with some rows selected. Table will not select or deselect any row</h2>
     <TableWithHighlightedRows />
     <br />
-    <h2>Selectable table. Only one row can be selected</h2>
+    <h2>Selectable table</h2>
     <SingleRowSelectableTable />
     <br />
     <h2>Selectable table with second row as non selectable</h2>
