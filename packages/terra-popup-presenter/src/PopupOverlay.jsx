@@ -28,12 +28,15 @@ class PopupOverlay extends React.Component {
   }
 
   render() {
-    const { children, closePortal, ...customProps } = this.props;
+    const { children, ...customProps } = this.props;
 
     const overlayClassNames = classNames([
       'terra-PopupOverlay',
       customProps.className,
     ]);
+
+    // Delete the closePortal prop that comes from react-portal.
+    delete customProps.closePortal;
 
     return (
       <div {...customProps} className={overlayClassNames}>

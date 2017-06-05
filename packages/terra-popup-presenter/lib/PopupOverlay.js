@@ -71,10 +71,12 @@ var PopupOverlay = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           children = _props.children,
-          closePortal = _props.closePortal,
-          customProps = _objectWithoutProperties(_props, ['children', 'closePortal']);
+          customProps = _objectWithoutProperties(_props, ['children']);
 
       var overlayClassNames = (0, _classnames2.default)(['terra-PopupOverlay', customProps.className]);
+
+      // Delete the closePortal prop that comes from react-portal.
+      delete customProps.closePortal;
 
       return _react2.default.createElement(
         'div',

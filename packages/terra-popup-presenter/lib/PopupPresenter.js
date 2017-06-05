@@ -18,13 +18,9 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _reactPortal = require('react-portal');
 
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
+var _reactPortal2 = _interopRequireDefault(_reactPortal);
 
 var _Popup = require('./Popup');
 
@@ -41,10 +37,6 @@ var _PopupOverlay2 = _interopRequireDefault(_PopupOverlay);
 var _TetherComponent = require('./TetherComponent');
 
 var _TetherComponent2 = _interopRequireDefault(_TetherComponent);
-
-var _reactPortal = require('react-portal');
-
-var _reactPortal2 = _interopRequireDefault(_reactPortal);
 
 require('./PopupPresenter.scss');
 
@@ -104,7 +96,7 @@ var propTypes = {
   /**
    * The children to be displayed as content within the popup.
    */
-  children: _propTypes2.default.node,
+  children: _propTypes2.default.node.isRequired,
   /**
    * CSS classnames that are append to the arrow.
    */
@@ -140,15 +132,14 @@ var propTypes = {
   /**
    * Callback function indicating a close condition was met, should be combined with isOpen for state management.
    */
-  onRequestClose: _propTypes2.default.func,
+  onRequestClose: _propTypes2.default.func.isRequired,
   /**
    * Presenting element for the popup to anchor to.
    */
-  targetRef: _propTypes2.default.func
+  targetRef: _propTypes2.default.func.isRequired
 };
 
 var defaultProps = {
-  children: [],
   classNameArrow: null,
   classNameContent: null,
   classNameOverlay: null,
@@ -208,15 +199,14 @@ var PopupPresenter = function (_React$Component) {
             return 'bottom';
           }
         }
-      } else {
-        if (popUpBounds.top + popUpBounds.height - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
-          if (targetBounds.left < popUpBounds.left) {
-            return 'left';
-          } else if (targetBounds.right < popUpBounds.right) {
-            return 'right';
-          }
+      } else if (popUpBounds.top + popUpBounds.height - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
+        if (targetBounds.left < popUpBounds.left) {
+          return 'left';
+        } else if (targetBounds.right < popUpBounds.right) {
+          return 'right';
         }
       }
+      return undefined;
     }
   }, {
     key: 'leftOffset',
@@ -261,37 +251,24 @@ var PopupPresenter = function (_React$Component) {
       return (offset + newTopPosition).toString() + 'px';
     }
   }, {
-    key: 'setArrowPosition',
-    value: function setArrowPosition(targetBounds, popUpBounds, attachment, arrowNode, popupNode) {
-      var parsedAttachment = PopupPresenter.parseStringPair(attachment);
-      var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, _PopupArrow2.default.arrowSize);
-
-      if (!position) {
-        arrowNode.classList.remove(_PopupArrow2.default.positionClasses['top']);
-        arrowNode.classList.remove(_PopupArrow2.default.positionClasses['bottom']);
-        arrowNode.classList.remove(_PopupArrow2.default.positionClasses['left']);
-        arrowNode.classList.remove(_PopupArrow2.default.positionClasses['right']);
-        return;
-      }
-
-      arrowNode.classList.remove(_PopupArrow2.default.oppositePositionClasses[position]);
-      popupNode.classList.remove(_Popup2.default.oppositePositionClasses[position]);
-
-      arrowNode.classList.add(_PopupArrow2.default.positionClasses[position]);
-      popupNode.classList.add(_Popup2.default.positionClasses[position]);
-
-      if (['top', 'bottom'].indexOf(position) >= 0) {
-        arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, _PopupArrow2.default.arrowSize);
-      } else {
-        arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, _PopupArrow2.default.arrowSize);
-      }
-    }
-  }, {
     key: 'primaryArrowPosition',
     value: function primaryArrowPosition(attachment) {
       var parsedAttachment = PopupPresenter.parseStringPair(attachment);
       var isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
       return isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
+    }
+  }, {
+    key: 'createPortalContent',
+    value: function createPortalContent(tetherContent, useOverlay, classNameOverlay) {
+      if (!useOverlay) {
+        return tetherContent;
+      }
+
+      return _react2.default.createElement(
+        _PopupOverlay2.default,
+        { className: classNameOverlay },
+        tetherContent
+      );
     }
   }]);
 
@@ -307,21 +284,47 @@ var PopupPresenter = function (_React$Component) {
   }
 
   _createClass(PopupPresenter, [{
-    key: 'handleTetherRepositioned',
-    value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
-      if (this._arrowNode && this._popupNode) {
-        PopupPresenter.setArrowPosition(targetBounds, presenterBounds, this.props.contentAttachment, this._arrowNode, this._popupNode);
+    key: 'setArrowPosition',
+    value: function setArrowPosition(targetBounds, popUpBounds) {
+      var parsedAttachment = PopupPresenter.parseStringPair(this.props.contentAttachment);
+      var position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, _PopupArrow2.default.arrowSize);
+
+      if (!position) {
+        this.arrowNode.classList.remove(_PopupArrow2.default.positionClasses.top);
+        this.arrowNode.classList.remove(_PopupArrow2.default.positionClasses.bottom);
+        this.arrowNode.classList.remove(_PopupArrow2.default.positionClasses.left);
+        this.arrowNode.classList.remove(_PopupArrow2.default.positionClasses.right);
+        return;
+      }
+
+      this.arrowNode.classList.remove(_PopupArrow2.default.oppositePositionClasses[position]);
+      this.popupNode.classList.remove(_Popup2.default.oppositePositionClasses[position]);
+
+      this.arrowNode.classList.add(_PopupArrow2.default.positionClasses[position]);
+      this.popupNode.classList.add(_Popup2.default.positionClasses[position]);
+
+      if (['top', 'bottom'].indexOf(position) >= 0) {
+        this.arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, _PopupArrow2.default.arrowSize);
+      } else {
+        this.arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, _PopupArrow2.default.arrowSize);
       }
     }
   }, {
     key: 'setArrowNode',
     value: function setArrowNode(node) {
-      this._arrowNode = node;
+      this.arrowNode = node;
     }
   }, {
     key: 'setPopupNode',
     value: function setPopupNode(node) {
-      this._popupNode = node;
+      this.popupNode = node;
+    }
+  }, {
+    key: 'handleTetherRepositioned',
+    value: function handleTetherRepositioned(event, targetBounds, presenterBounds) {
+      if (this.arrowNode && this.popupNode) {
+        this.setArrowPosition(targetBounds, presenterBounds);
+      }
     }
   }, {
     key: 'createPopup',
@@ -357,19 +360,6 @@ var PopupPresenter = function (_React$Component) {
       );
     }
   }, {
-    key: 'createPortalContent',
-    value: function createPortalContent(tetherContent, useOverlay, classNameOverlay) {
-      if (!useOverlay) {
-        return tetherContent;
-      }
-
-      return _react2.default.createElement(
-        _PopupOverlay2.default,
-        { className: classNameOverlay },
-        tetherContent
-      );
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -385,8 +375,7 @@ var PopupPresenter = function (_React$Component) {
           isOpen = _props.isOpen,
           onRequestClose = _props.onRequestClose,
           targetRef = _props.targetRef,
-          zIndex = _props.zIndex,
-          customProps = _objectWithoutProperties(_props, ['boundingRef', 'children', 'classNameArrow', 'classNameContent', 'classNameOverlay', 'contentAttachment', 'contentDimensions', 'isArrowDisplayed', 'isHeaderDisabled', 'isOpen', 'onRequestClose', 'targetRef', 'zIndex']); // eslint-disable-line no-unused-vars
+          customProps = _objectWithoutProperties(_props, ['boundingRef', 'children', 'classNameArrow', 'classNameContent', 'classNameOverlay', 'contentAttachment', 'contentDimensions', 'isArrowDisplayed', 'isHeaderDisabled', 'isOpen', 'onRequestClose', 'targetRef']); // eslint-disable-line no-unused-vars
 
       var boundingFrame = boundingRef ? boundingRef() : undefined;
 
@@ -421,7 +410,7 @@ var PopupPresenter = function (_React$Component) {
       return _react2.default.createElement(
         _reactPortal2.default,
         _extends({}, customProps, { isOpened: isOpen }),
-        this.createPortalContent(tetherCotent, !allowScrolling, classNameOverlay)
+        PopupPresenter.createPortalContent(tetherCotent, !allowScrolling, classNameOverlay)
       );
     }
   }]);

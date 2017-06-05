@@ -54,7 +54,6 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
-import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import PopupPresenterTestRoutes from 'terra-popup-presenter/tests/nightwatch/PopupPresenterTestRoutes';
 import TestLinks from './TestLinks';
 // Remove eslint-disable as these pacakges are published

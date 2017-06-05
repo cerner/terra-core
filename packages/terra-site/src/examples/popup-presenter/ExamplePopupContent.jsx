@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 class ExamplePopupContent extends React.Component {
   componentDidMount() {
@@ -15,10 +14,8 @@ class ExamplePopupContent extends React.Component {
   }
 
   render () {
-    const { onRequestClose } = this.props;
-
     return (
-      <div onClick={onRequestClose}>
+      <div>
         <p style={{height: '600px', width: '400px'}}>i'm popup content, hear me roar!</p>
       </div>
     );

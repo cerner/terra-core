@@ -1,24 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import ReactDOM from 'react-dom';
+import Portal from 'react-portal';
 import Popup from './Popup';
 import PopupArrow from './PopupArrow';// consider dot notation
 import PopupOverlay from './PopupOverlay';
 import TetherComponent from './TetherComponent';
-import Portal from 'react-portal';
 import './PopupPresenter.scss';
 
 const MIRROR_LR = {
   center: 'center',
   left: 'right',
-  right: 'left'
+  right: 'left',
 };
 
 const MIRROR_TB = {
   middle: 'middle',
   top: 'bottom',
-  bottom: 'top'
+  bottom: 'top',
 };
 
 const BASE_WIDTH = 16;
@@ -44,7 +42,7 @@ const COMBINE = () => {
   const combinations = [];
   for (let i = 0; i < DIMENSIONS.length; i += 1) {
     for (let j = 0; j < DIMENSIONS.length; j += 1) {
-      combinations.push(DIMENSIONS[i] + ' ' + DIMENSIONS[j]);
+      combinations.push(`${DIMENSIONS[i]} ${DIMENSIONS[j]}`);
     }
   }
   return combinations;
@@ -60,7 +58,7 @@ const propTypes = {
   /**
    * The children to be displayed as content within the popup.
    */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * CSS classnames that are append to the arrow.
    */
@@ -96,15 +94,14 @@ const propTypes = {
   /**
    * Callback function indicating a close condition was met, should be combined with isOpen for state management.
    */
-  onRequestClose: PropTypes.func,
+  onRequestClose: PropTypes.func.isRequired,
   /**
    * Presenting element for the popup to anchor to.
    */
-  targetRef: PropTypes.func,
+  targetRef: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
-  children: [],
   classNameArrow: null,
   classNameContent: null,
   classNameOverlay: null,
@@ -128,18 +125,18 @@ class PopupPresenter extends React.Component {
       vertical = MIRROR_TB[parsedValue.vertical];
     }
 
-    return vertical + ' ' + horizontal;
+    return `${vertical} ${horizontal}`;
   }
 
   static parseStringPair(value) {
     const [vertical, horizontal] = value.split(' ');
-    return {vertical, horizontal};
+    return { vertical, horizontal };
   }
 
   static attachPositionFromAlignment(alignment, start, length) {
     if (alignment === 'center') {
-      return start + length / 2;
-    }else if (alignment === 'right'){
+      return start + (length / 2);
+    } else if (alignment === 'right') {
       return start + length;
     }
     return start;
@@ -149,20 +146,19 @@ class PopupPresenter extends React.Component {
     if (['top', 'bottom'].indexOf(attachment.vertical) >= 0) {
       if (popUpBounds.left + popUpBounds.width - offset >= targetBounds.left && popUpBounds.left + offset <= targetBounds.left + targetBounds.width) {
         if (targetBounds.top < popUpBounds.top) {
-          return 'top'
+          return 'top';
         } else if (targetBounds.bottom < popUpBounds.bottom) {
-          return 'bottom'
+          return 'bottom';
         }
       }
-    } else {
-      if (popUpBounds.top + popUpBounds.height - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
-        if (targetBounds.left < popUpBounds.left) {
-          return 'left'
-        } else if (targetBounds.right < popUpBounds.right) {
-          return 'right'
-        }
+    } else if (popUpBounds.top + popUpBounds.height - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
+      if (targetBounds.left < popUpBounds.left) {
+        return 'left';
+      } else if (targetBounds.right < popUpBounds.right) {
+        return 'right';
       }
     }
+    return undefined;
   }
 
   static leftOffset(targetBounds, popUpBounds, arrowAlignment, offset) {
@@ -185,7 +181,7 @@ class PopupPresenter extends React.Component {
       newLeftPosition = offset;
     }
 
-    return (offset + newLeftPosition).toString() + 'px';
+    return `${(offset + newLeftPosition).toString()}px`;
   }
 
   static topOffset(targetBounds, popUpBounds, offset) {
@@ -202,38 +198,25 @@ class PopupPresenter extends React.Component {
       newTopPosition = offset;
     }
 
-    return (offset + newTopPosition).toString() + 'px';
-  }
-
-  static setArrowPosition(targetBounds, popUpBounds, attachment, arrowNode, popupNode) {
-    const parsedAttachment = PopupPresenter.parseStringPair(attachment);
-    const position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, PopupArrow.arrowSize);
-
-    if (!position) {
-      arrowNode.classList.remove(PopupArrow.positionClasses['top']);
-      arrowNode.classList.remove(PopupArrow.positionClasses['bottom']);
-      arrowNode.classList.remove(PopupArrow.positionClasses['left']);
-      arrowNode.classList.remove(PopupArrow.positionClasses['right']);
-      return;
-    }
-
-    arrowNode.classList.remove(PopupArrow.oppositePositionClasses[position])
-    popupNode.classList.remove(Popup.oppositePositionClasses[position])
-
-    arrowNode.classList.add(PopupArrow.positionClasses[position]);
-    popupNode.classList.add(Popup.positionClasses[position]);
-
-    if (['top', 'bottom'].indexOf(position) >= 0) {
-      arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, PopupArrow.arrowSize); 
-    } else {
-      arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, PopupArrow.arrowSize);
-    }
+    return `${(offset + newTopPosition).toString()}px`;
   }
 
   static primaryArrowPosition(attachment) {
     const parsedAttachment = PopupPresenter.parseStringPair(attachment);
     const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
     return isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
+  }
+
+  static createPortalContent(tetherContent, useOverlay, classNameOverlay) {
+    if (!useOverlay) {
+      return tetherContent;
+    }
+
+    return (
+      <PopupOverlay className={classNameOverlay}>
+        {tetherContent}
+      </PopupOverlay>
+    );
   }
 
   constructor(props) {
@@ -243,18 +226,43 @@ class PopupPresenter extends React.Component {
     this.setPopupNode = this.setPopupNode.bind(this);
   }
 
-  handleTetherRepositioned(event, targetBounds, presenterBounds) {
-    if (this._arrowNode && this._popupNode) {
-      PopupPresenter.setArrowPosition(targetBounds, presenterBounds, this.props.contentAttachment, this._arrowNode, this._popupNode);
+  setArrowPosition(targetBounds, popUpBounds) {
+    const parsedAttachment = PopupPresenter.parseStringPair(this.props.contentAttachment);
+    const position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, PopupArrow.arrowSize);
+
+    if (!position) {
+      this.arrowNode.classList.remove(PopupArrow.positionClasses.top);
+      this.arrowNode.classList.remove(PopupArrow.positionClasses.bottom);
+      this.arrowNode.classList.remove(PopupArrow.positionClasses.left);
+      this.arrowNode.classList.remove(PopupArrow.positionClasses.right);
+      return;
+    }
+
+    this.arrowNode.classList.remove(PopupArrow.oppositePositionClasses[position]);
+    this.popupNode.classList.remove(Popup.oppositePositionClasses[position]);
+
+    this.arrowNode.classList.add(PopupArrow.positionClasses[position]);
+    this.popupNode.classList.add(Popup.positionClasses[position]);
+
+    if (['top', 'bottom'].indexOf(position) >= 0) {
+      this.arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, PopupArrow.arrowSize);
+    } else {
+      this.arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, PopupArrow.arrowSize);
     }
   }
 
   setArrowNode(node) {
-    this._arrowNode = node;
+    this.arrowNode = node;
   }
 
   setPopupNode(node) {
-    this._popupNode = node;
+    this.popupNode = node;
+  }
+
+  handleTetherRepositioned(event, targetBounds, presenterBounds) {
+    if (this.arrowNode && this.popupNode) {
+      this.setArrowPosition(targetBounds, presenterBounds);
+    }
   }
 
   createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, isHeaderDisabled, classNameContent) {
@@ -262,7 +270,7 @@ class PopupPresenter extends React.Component {
     const boundsProps = {
       contentWidth: BASE_WIDTH * DIMENSIONS_MAP[parsedDimenions.horizontal],
       contentHeight: BASE_HEIGHT * DIMENSIONS_MAP[parsedDimenions.vertical],
-    };    
+    };
 
     if (boundingFrame) {
       boundsProps.contentHeightMax = boundingFrame.clientHeight;
@@ -290,19 +298,7 @@ class PopupPresenter extends React.Component {
     );
   }
 
-  createPortalContent(tetherContent, useOverlay, classNameOverlay) {
-    if (!useOverlay) {
-      return tetherContent;
-    }
-
-    return (
-      <PopupOverlay className={classNameOverlay}>
-        {tetherContent}
-      </PopupOverlay>
-    );
-  }
-
-  render () {
+  render() {
     const {
       boundingRef,
       children,
@@ -316,8 +312,7 @@ class PopupPresenter extends React.Component {
       isOpen,
       onRequestClose,
       targetRef,
-      zIndex,
-      ...customProps,
+      ...customProps
     } = this.props; // eslint-disable-line no-unused-vars
 
     const boundingFrame = boundingRef ? boundingRef() : undefined;
@@ -330,7 +325,7 @@ class PopupPresenter extends React.Component {
       }
       popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, isHeaderDisabled, classNameContent);
     }
-  
+
     const allowScrolling = false;
     const constraints = [
       {
@@ -338,7 +333,7 @@ class PopupPresenter extends React.Component {
         attachment: 'together',
         pin: true,
       },
-    ];  
+    ];
 
     const tetherCotent = (
       <TetherComponent
@@ -356,7 +351,7 @@ class PopupPresenter extends React.Component {
 
     return (
       <Portal {...customProps} isOpened={isOpen}>
-        {this.createPortalContent(tetherCotent, !allowScrolling, classNameOverlay)}
+        {PopupPresenter.createPortalContent(tetherCotent, !allowScrolling, classNameOverlay)}
       </Portal>
     );
   }

@@ -37,7 +37,7 @@ const ARROW_POSITIONS = [
   'top',
   'bottom',
   'left',
-  'right'
+  'right',
 ];
 
 const POPUP_MARGIN = 9;
@@ -54,7 +54,7 @@ const propTypes = {
   /**
    * The children to be presented as the popup's content.
    */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * CSS classnames that are append to the popup content body.
    */
@@ -74,7 +74,7 @@ const propTypes = {
   /**
    * A the px value of height to be applied to the content container.
    */
-  contentHeight: PropTypes.number,
+  contentHeight: PropTypes.number.isRequired,
   /**
    * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
    */
@@ -82,7 +82,7 @@ const propTypes = {
   /**
    * A the px value of width to be applied to the content container.
    */
-  contentWidth: PropTypes.number,
+  contentWidth: PropTypes.number.isRequired,
   /**
    * The maximum width of the popup content in px, also used with responsive behavior for actual width.
    */
@@ -94,7 +94,7 @@ const propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  onRequestClose: PropTypes.func,
+  onRequestClose: PropTypes.func.isRequired,
   /**
    * The function returning the frame html reference.
    */
@@ -103,24 +103,50 @@ const propTypes = {
 
 const defaultProps = {
   arrowPosition: 'top',
-  children: [],
   classNameContent: null,
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
+  contentHeightMax: -1,
+  contentWidthMax: -1,
   isHeaderDisabled: false,
 };
 
 class Popup extends React.Component {
-  debounce(fn, delay) {
-    let timer = null;
-    return function () {
-      const context = this, args = arguments;
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        fn.apply(context, args);
-      }, delay);
-    };
+  static getContentStyle(height, maxHeight, width, maxWidth) {
+    const validHeight = maxHeight <= 0 || height <= maxHeight ? height : maxHeight;
+    const validWidth = maxWidth <= 0 || width <= maxWidth ? width : maxWidth;
+    return { height: `${validHeight.toString()}px`, width: `${validWidth.toString()}px` };
+  }
+
+  static addPopupHeader(children, onRequestClose) {
+    const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{ float: 'right' }} />;
+    const header = <div className="terra-Popup-header">{icon}</div>;
+    return <ContentContainer header={header} fill>{children}</ContentContainer>;
+  }
+
+  static isFullScreen(height, maxHeight, width, maxWidth) {
+    if (maxHeight <= 0 || maxWidth <= 0) {
+      return false;
+    }
+    return height >= maxHeight && width >= maxWidth;
+  }
+
+  static isMarginValid(dimension, dimensionMax) {
+    if (dimensionMax <= 0) {
+      return true;
+    }
+    return dimensionMax >= dimension + POPUP_MARGIN;
+  }
+
+  static shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax) {
+    if (arrow) {
+      if (['top', 'bottom'].indexOf(arrowPosition) >= 0) {
+        return Popup.isMarginValid(contentHeight, contentHeightMax);
+      }
+      return Popup.isMarginValid(contentWidth, contentWidthMax);
+    }
+    return false;
   }
 
   constructor(props) {
@@ -167,40 +193,19 @@ class Popup extends React.Component {
     }
   }
 
-  addPopupHeader(children, onRequestClose) {
-    const icon = <IconClose className="terra-Popup-closeButton" onClick={onRequestClose} height="30" width="30" style={{float: 'right'}} />;
-    const header = <div className="terra-Popup-header">{icon}</div>;
-    return <ContentContainer header={header} fill>{children}</ContentContainer>;
-  }
-
-  isFullScreen(height, maxHeight, width, maxWidth) {
-    return height >= maxHeight && width >= maxWidth;
-  }
-
-  getContentStyle(height, maxHeight, width, maxWidth) {
-    const validHeight = height <= maxHeight ? height : maxHeight;
-    const validWidth = width <= maxWidth ? width : maxWidth;
-    return { height: validHeight.toString() + 'px', width: validWidth.toString() + 'px' };
-  }
-
-  isMarginValid(dimension, dimensionMax) {
-    return dimensionMax >= dimension + POPUP_MARGIN;
-  }
-
-  shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax) {
-    let showArrow = !!arrow;
-    if (showArrow) {
-      if (['top', 'bottom'].indexOf(arrowPosition) >= 0) {
-        showArrow = this.isMarginValid(contentHeight, contentHeightMax);
-      } else {
-        showArrow = this.isMarginValid(contentWidth, contentWidthMax);
-      }
-    }
-    return showArrow;
+  debounce(fn, delay) {
+    let timer = null;
+    return (...args) => {
+      const context = this;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(context, args);
+      }, delay);
+    };
   }
 
   render() {
-    const { 
+    const {
       arrow,
       arrowPosition,
       children,
@@ -212,21 +217,19 @@ class Popup extends React.Component {
       contentHeightMax,
       contentWidth,
       contentWidthMax,
-      disableOnClickOutside,
-      enableOnClickOutside,
       isHeaderDisabled,
       onRequestClose,
       refCallback,
-      ...customProps,
+      ...customProps
     } = this.props;
-    
-    const showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
-    const contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
-    const isFullScreen = this.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+
+    const showArrow = Popup.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+    const contentStyle = Popup.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+    const isFullScreen = Popup.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
 
     let content = children;
     if (isFullScreen && !isHeaderDisabled) {
-      content = this.addPopupHeader(children, onRequestClose);
+      content = Popup.addPopupHeader(children, onRequestClose);
     }
 
     let arrowContent;
@@ -247,6 +250,10 @@ class Popup extends React.Component {
       classNameContent,
     ]);
 
+    // Delete the disableOnClickOutside and disableOnClickOutside prop that comes from react-onclickoutside.
+    delete customProps.disableOnClickOutside;
+    delete customProps.enableOnClickOutside;
+
     return (
       <div {...customProps} className={popupClassNames} ref={refCallback}>
         {arrowContent}
@@ -258,9 +265,10 @@ class Popup extends React.Component {
   }
 }
 
+Popup.propTypes = propTypes;
+Popup.defaultProps = defaultProps;
+
 const onClickOutsidePopup = onClickOutside(Popup);
-onClickOutsidePopup.propTypes = propTypes;
-onClickOutsidePopup.defaultProps = defaultProps;
 onClickOutsidePopup.positionClasses = POPUP_CLASSES;
 onClickOutsidePopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 

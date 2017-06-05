@@ -16,10 +16,6 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _tether = require('tether');
 
 var _tether2 = _interopRequireDefault(_tether);
@@ -59,7 +55,7 @@ var propTypes = {
    */
   contentAttachment: _propTypes2.default.oneOf(ATTACHMENT_POSITIONS).isRequired,
   /**
-   * String pair of top and left offset, ie "10px -4px".  
+   * String pair of top and left offset, ie "10px -4px".
    */
   contentOffset: _propTypes2.default.string,
   /**
@@ -122,110 +118,28 @@ var TetherComponent = function (_React$Component) {
   _createClass(TetherComponent, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this._update();
+      this.update();
     }
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
-      this._update();
+      this.update();
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      this._destroy();
+      this.destroy();
     }
   }, {
-    key: 'disable',
-    value: function disable() {
-      if (this._tether) {
-        this._tether.disable();
-      }
-    }
-  }, {
-    key: 'enable',
-    value: function enable() {
-      if (this._tether) {
-        this._tether.enable();
-      }
-    }
-  }, {
-    key: 'position',
-    value: function position() {
-      if (this._tether) {
-        this._tether.position();
-      }
-    }
-  }, {
-    key: '_destroy',
-    value: function _destroy() {
-      if (this._elementNode) {
-        this._elementNode.parentNode.removeChild(this._elementNode);
-      }
-
-      if (this._tether) {
-        this._tether.off('update');
-        this._tether.off('repositioned');
-        this._tether.destroy();
-      }
-
-      this._elementNode = null;
-      this._tether = null;
-    }
-  }, {
-    key: '_update',
-    value: function _update() {
-      var content = this.props.content;
-
-
-      if (!content) {
-        if (this._tether) {
-          this._destroy();
-        }
-        return;
-      }
-
-      this._updateTether();
-    }
-  }, {
-    key: '_updateTether',
-    value: function _updateTether() {
-      var _props = this.props,
-          isEnabled = _props.isEnabled,
-          targetRef = _props.targetRef,
-          content = _props.content,
-          contentAttachment = _props.contentAttachment,
-          contentOffset = _props.contentOffset,
-          customProps = _objectWithoutProperties(_props, ['isEnabled', 'targetRef', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
-
-      var tetherOptions = _extends({
-        attachment: contentAttachment,
-        element: this._elementNode,
-        target: targetRef()
-      }, customProps);
-
-      //Aliased parameters
-      if (contentOffset) {
-        tetherOptions.offset = contentOffset;
-      }
-      if (isEnabled !== undefined) {
-        tetherOptions.enabled = true;
-      }
-
-      if (!this._tether) {
-        this._tether = new _tether2.default(tetherOptions);
-        this._tether.on('update', this.handleOnUpdate);
-        this._tether.on('repositioned', this.handleOnRepositioned);
-      } else {
-        this._tether.setOptions(tetherOptions);
-      }
-
-      this._tether.position();
+    key: 'setElementNode',
+    value: function setElementNode(node) {
+      this.elementNode = node;
     }
   }, {
     key: 'getNodeBounds',
     value: function getNodeBounds() {
       var targetBounds = _tether2.default.Utils.getBounds(this.props.targetRef());
-      var presenterBounds = _tether2.default.Utils.getBounds(this._elementNode);
+      var presenterBounds = _tether2.default.Utils.getBounds(this.elementNode);
       return { targetBounds: targetBounds, presenterBounds: presenterBounds };
     }
   }, {
@@ -249,9 +163,91 @@ var TetherComponent = function (_React$Component) {
       }
     }
   }, {
-    key: 'setElementNode',
-    value: function setElementNode(node) {
-      this._elementNode = node;
+    key: 'disable',
+    value: function disable() {
+      if (this.tether) {
+        this.tether.disable();
+      }
+    }
+  }, {
+    key: 'enable',
+    value: function enable() {
+      if (this.tether) {
+        this.tether.enable();
+      }
+    }
+  }, {
+    key: 'position',
+    value: function position() {
+      if (this.tether) {
+        this.tether.position();
+      }
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      if (this.elementNode) {
+        this.elementNode.parentNode.removeChild(this.elementNode);
+      }
+
+      if (this.tether) {
+        this.tether.off('update');
+        this.tether.off('repositioned');
+        this.tether.destroy();
+      }
+
+      this.elementNode = null;
+      this.tether = null;
+    }
+  }, {
+    key: 'update',
+    value: function update() {
+      var content = this.props.content;
+
+
+      if (!content) {
+        if (this.tether) {
+          this.destroy();
+        }
+        return;
+      }
+
+      this.updateTether();
+    }
+  }, {
+    key: 'updateTether',
+    value: function updateTether() {
+      var _props = this.props,
+          isEnabled = _props.isEnabled,
+          targetRef = _props.targetRef,
+          content = _props.content,
+          contentAttachment = _props.contentAttachment,
+          contentOffset = _props.contentOffset,
+          customProps = _objectWithoutProperties(_props, ['isEnabled', 'targetRef', 'content', 'contentAttachment', 'contentOffset']); // eslint-disable-line no-unused-vars
+
+      var tetherOptions = _extends({
+        attachment: contentAttachment,
+        element: this.elementNode,
+        target: targetRef()
+      }, customProps);
+
+      // Aliased parameters
+      if (contentOffset) {
+        tetherOptions.offset = contentOffset;
+      }
+      if (isEnabled !== undefined) {
+        tetherOptions.enabled = true;
+      }
+
+      if (!this.tether) {
+        this.tether = new _tether2.default(tetherOptions);
+        this.tether.on('update', this.handleOnUpdate);
+        this.tether.on('repositioned', this.handleOnRepositioned);
+      } else {
+        this.tether.setOptions(tetherOptions);
+      }
+
+      this.tether.position();
     }
   }, {
     key: 'render',

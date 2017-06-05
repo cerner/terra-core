@@ -89,7 +89,7 @@ var propTypes = {
   /**
    * The children to be presented as the popup's content.
    */
-  children: _propTypes2.default.node,
+  children: _propTypes2.default.node.isRequired,
   /**
    * CSS classnames that are append to the popup content body.
    */
@@ -109,7 +109,7 @@ var propTypes = {
   /**
    * A the px value of height to be applied to the content container.
    */
-  contentHeight: _propTypes2.default.number,
+  contentHeight: _propTypes2.default.number.isRequired,
   /**
    * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
    */
@@ -117,7 +117,7 @@ var propTypes = {
   /**
    * A the px value of width to be applied to the content container.
    */
-  contentWidth: _propTypes2.default.number,
+  contentWidth: _propTypes2.default.number.isRequired,
   /**
    * The maximum width of the popup content in px, also used with responsive behavior for actual width.
    */
@@ -129,7 +129,7 @@ var propTypes = {
   /**
    * The function that should be triggered when a close is indicated.
    */
-  onRequestClose: _propTypes2.default.func,
+  onRequestClose: _propTypes2.default.func.isRequired,
   /**
    * The function returning the frame html reference.
    */
@@ -138,29 +138,66 @@ var propTypes = {
 
 var defaultProps = {
   arrowPosition: 'top',
-  children: [],
   classNameContent: null,
   closeOnEsc: false,
   closeOnOutsideClick: false,
   closeOnResize: false,
+  contentHeightMax: -1,
+  contentWidthMax: -1,
   isHeaderDisabled: false
 };
 
 var Popup = function (_React$Component) {
   _inherits(Popup, _React$Component);
 
-  _createClass(Popup, [{
-    key: 'debounce',
-    value: function debounce(fn, delay) {
-      var timer = null;
-      return function () {
-        var context = this,
-            args = arguments;
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-          fn.apply(context, args);
-        }, delay);
-      };
+  _createClass(Popup, null, [{
+    key: 'getContentStyle',
+    value: function getContentStyle(height, maxHeight, width, maxWidth) {
+      var validHeight = maxHeight <= 0 || height <= maxHeight ? height : maxHeight;
+      var validWidth = maxWidth <= 0 || width <= maxWidth ? width : maxWidth;
+      return { height: validHeight.toString() + 'px', width: validWidth.toString() + 'px' };
+    }
+  }, {
+    key: 'addPopupHeader',
+    value: function addPopupHeader(children, onRequestClose) {
+      var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
+      var header = _react2.default.createElement(
+        'div',
+        { className: 'terra-Popup-header' },
+        icon
+      );
+      return _react2.default.createElement(
+        _terraContentContainer2.default,
+        { header: header, fill: true },
+        children
+      );
+    }
+  }, {
+    key: 'isFullScreen',
+    value: function isFullScreen(height, maxHeight, width, maxWidth) {
+      if (maxHeight <= 0 || maxWidth <= 0) {
+        return false;
+      }
+      return height >= maxHeight && width >= maxWidth;
+    }
+  }, {
+    key: 'isMarginValid',
+    value: function isMarginValid(dimension, dimensionMax) {
+      if (dimensionMax <= 0) {
+        return true;
+      }
+      return dimensionMax >= dimension + POPUP_MARGIN;
+    }
+  }, {
+    key: 'shouldShowArrow',
+    value: function shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax) {
+      if (arrow) {
+        if (['top', 'bottom'].indexOf(arrowPosition) >= 0) {
+          return Popup.isMarginValid(contentHeight, contentHeightMax);
+        }
+        return Popup.isMarginValid(contentWidth, contentWidthMax);
+      }
+      return false;
     }
   }]);
 
@@ -218,49 +255,22 @@ var Popup = function (_React$Component) {
       }
     }
   }, {
-    key: 'addPopupHeader',
-    value: function addPopupHeader(children, onRequestClose) {
-      var icon = _react2.default.createElement(_IconClose2.default, { className: 'terra-Popup-closeButton', onClick: onRequestClose, height: '30', width: '30', style: { float: 'right' } });
-      var header = _react2.default.createElement(
-        'div',
-        { className: 'terra-Popup-header' },
-        icon
-      );
-      return _react2.default.createElement(
-        _terraContentContainer2.default,
-        { header: header, fill: true },
-        children
-      );
-    }
-  }, {
-    key: 'isFullScreen',
-    value: function isFullScreen(height, maxHeight, width, maxWidth) {
-      return height >= maxHeight && width >= maxWidth;
-    }
-  }, {
-    key: 'getContentStyle',
-    value: function getContentStyle(height, maxHeight, width, maxWidth) {
-      var validHeight = height <= maxHeight ? height : maxHeight;
-      var validWidth = width <= maxWidth ? width : maxWidth;
-      return { height: validHeight.toString() + 'px', width: validWidth.toString() + 'px' };
-    }
-  }, {
-    key: 'isMarginValid',
-    value: function isMarginValid(dimension, dimensionMax) {
-      return dimensionMax >= dimension + POPUP_MARGIN;
-    }
-  }, {
-    key: 'shouldShowArrow',
-    value: function shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax) {
-      var showArrow = !!arrow;
-      if (showArrow) {
-        if (['top', 'bottom'].indexOf(arrowPosition) >= 0) {
-          showArrow = this.isMarginValid(contentHeight, contentHeightMax);
-        } else {
-          showArrow = this.isMarginValid(contentWidth, contentWidthMax);
+    key: 'debounce',
+    value: function debounce(fn, delay) {
+      var _this2 = this;
+
+      var timer = null;
+      return function () {
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
         }
-      }
-      return showArrow;
+
+        var context = _this2;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          fn.apply(context, args);
+        }, delay);
+      };
     }
   }, {
     key: 'render',
@@ -277,20 +287,18 @@ var Popup = function (_React$Component) {
           contentHeightMax = _props.contentHeightMax,
           contentWidth = _props.contentWidth,
           contentWidthMax = _props.contentWidthMax,
-          disableOnClickOutside = _props.disableOnClickOutside,
-          enableOnClickOutside = _props.enableOnClickOutside,
           isHeaderDisabled = _props.isHeaderDisabled,
           onRequestClose = _props.onRequestClose,
           refCallback = _props.refCallback,
-          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'disableOnClickOutside', 'enableOnClickOutside', 'isHeaderDisabled', 'onRequestClose', 'refCallback']);
+          customProps = _objectWithoutProperties(_props, ['arrow', 'arrowPosition', 'children', 'classNameContent', 'closeOnEsc', 'closeOnOutsideClick', 'closeOnResize', 'contentHeight', 'contentHeightMax', 'contentWidth', 'contentWidthMax', 'isHeaderDisabled', 'onRequestClose', 'refCallback']);
 
-      var showArrow = this.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
-      var contentStyle = this.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
-      var isFullScreen = this.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+      var showArrow = Popup.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+      var contentStyle = Popup.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+      var isFullScreen = Popup.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
 
       var content = children;
       if (isFullScreen && !isHeaderDisabled) {
-        content = this.addPopupHeader(children, onRequestClose);
+        content = Popup.addPopupHeader(children, onRequestClose);
       }
 
       var arrowContent = void 0;
@@ -301,6 +309,10 @@ var Popup = function (_React$Component) {
       var popupClassNames = (0, _classnames2.default)(['terra-Popup', { 'terra-Popup-showArrow': showArrow }, _defineProperty({}, '' + POPUP_CLASSES[arrowPosition], showArrow), customProps.className]);
 
       var contentClassNames = (0, _classnames2.default)(['terra-Popup-content', { 'terra-Popup-content--isFullScreen': isFullScreen }, classNameContent]);
+
+      // Delete the disableOnClickOutside and disableOnClickOutside prop that comes from react-onclickoutside.
+      delete customProps.disableOnClickOutside;
+      delete customProps.enableOnClickOutside;
 
       return _react2.default.createElement(
         'div',
@@ -318,9 +330,10 @@ var Popup = function (_React$Component) {
   return Popup;
 }(_react2.default.Component);
 
+Popup.propTypes = propTypes;
+Popup.defaultProps = defaultProps;
+
 var onClickOutsidePopup = (0, _reactOnclickoutside2.default)(Popup);
-onClickOutsidePopup.propTypes = propTypes;
-onClickOutsidePopup.defaultProps = defaultProps;
 onClickOutsidePopup.positionClasses = POPUP_CLASSES;
 onClickOutsidePopup.oppositePositionClasses = POPUP_OPPOSITE_CLASSES;
 
