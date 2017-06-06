@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "focus-trap-react": "^3.0.2",
     "prop-types": "^15.5.8",
     "terra-base": "^0.x",
     "terra-icon": "^0.x",

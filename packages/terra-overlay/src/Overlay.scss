@@ -1,17 +1,19 @@
 @import '~terra-mixins';
 
 .terra-OverlayContainer {
+  outline: none;
   position: relative;
 }
 
 .terra-Overlay {
   background: #d3d3d3;
-  opacity: 0.7;
+  opacity: 0.8;
   outline: none;
   overflow: hidden;
+  z-index: 100;
 }
 
-.terra-Overlay--fullScreen {
+.terra-Overlay--fullscreen {
   bottom: 0;
   left: 0;
   position: fixed;
@@ -25,8 +27,12 @@
   width: 100%;
 }
 
+.terra-Overlay--scrollable {
+  overflow-y: scroll;
+}
+
 .terra-Overlay-content {
-  color: #f0f0f0;
+  color: #fff;
   font-size: 24px;
   left: 50%;
   position: inherit;
