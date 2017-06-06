@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SlidePanel from 'terra-slide-panel/src/SlidePanel';
+import SlidePanel from 'terra-slide-panel';
 
 const mainContentForSlidePanel = togglePanelHandler => (
   <div>
