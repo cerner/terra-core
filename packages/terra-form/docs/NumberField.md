@@ -17,7 +17,7 @@ import NumberField from 'terra-form/lib/NumberField';
   max={1}
   min={0}
   step={0.1}
-  attrs={{ className: 'healtheintent-application' }}
+  inputAttrs={{ className: 'healtheintent-application' }}
   isInline
   required
 />
