@@ -6,7 +6,7 @@ const textareaField = () =>
   <TextareaField
     label="Profile Description"
     name="profile_description"
-    defaultVault="Hello! I'm a Software engineer!"
+    defaultValue="Hello! I'm a Software engineer!"
     error="Profile Description is required"
     help="This is what will be seen on your main page"
     maxLength={15}

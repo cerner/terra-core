@@ -6,7 +6,6 @@ const textarea = () =>
   <Textarea
     name="job_experience"
     defaultValue=""
-    isInline
     required
   />;
 
