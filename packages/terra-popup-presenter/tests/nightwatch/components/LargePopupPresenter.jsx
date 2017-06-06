@@ -40,7 +40,7 @@ class MediumPopupPresenter extends React.Component {
         >
           <p>this is popup content</p>
         </PopupPresenter>
-        <button id="arrow-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="large-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Large Popup
         </button>
       </div>

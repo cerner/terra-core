@@ -37,7 +37,7 @@ class DefaultPopupPresenter extends React.Component {
         >
           <p>this is popup content</p>
         </PopupPresenter>
-        <button id="default-popup-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Popup
         </button>
       </div>

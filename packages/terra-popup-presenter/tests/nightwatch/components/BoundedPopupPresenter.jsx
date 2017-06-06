@@ -48,7 +48,7 @@ class BoundedPopupPresenter extends React.Component {
         >
           <p style={{ height: '200px', width: '200px' }}>this is popup content</p>
         </PopupPresenter>
-        <button id="bounded-popup-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Bounded Popup
         </button>
       </div>

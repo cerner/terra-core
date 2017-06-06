@@ -40,7 +40,7 @@ class SmallPopupPresenter extends React.Component {
         >
           <p>this is popup content</p>
         </PopupPresenter>
-        <button id="arrow-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="small-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Small Popup
         </button>
       </div>
