@@ -1,4 +1,6 @@
 import React from 'react';
+// remove eslint-disable once terra-form has been published
+// eslint-disable-next-line import/no-extraneous-dependencies
 import TextField from 'terra-form/lib/TextField';
 
 const TextareaFieldExamples = () => (

@@ -6,7 +6,6 @@ import Fieldset from 'terra-form/lib/Fieldset';
 import TextField from 'terra-form/lib/TextField';
 import TextareaField from 'terra-form/lib/TextareaField';
 import NumberField from 'terra-form/lib/NumberField';
-import Input from 'terra-form/lib/Input';
 /* eslint-enable import/no-extraneous-dependencies */
 
 class ControlledInput extends React.Component {
