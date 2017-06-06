@@ -167,9 +167,9 @@ class PopupPresenter extends React.Component {
 
     const leftOffset = targetAttachPosition - popupAttachPosition;
 
-    let leftPosition = 0;
+    let leftPosition = offset;
     if (arrowAlignment === 'right') {
-      leftPosition = popUpBounds.width;
+      leftPosition = popUpBounds.width - offset;
     } else if (arrowAlignment === 'center') {
       leftPosition = popUpBounds.width / 2;
     }

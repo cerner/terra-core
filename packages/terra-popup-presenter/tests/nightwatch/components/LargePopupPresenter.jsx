@@ -1,13 +1,14 @@
 import React from 'react';
-import PopupPresenter from '../../src/PopupPresenter';
+import PopupPresenter from '../../../src/PopupPresenter';
 
-class PopupPresenterStandard extends React.Component {
+class MediumPopupPresenter extends React.Component {
   constructor(props) {
     super(props);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   setButtonNode(node) {
@@ -18,6 +19,10 @@ class PopupPresenterStandard extends React.Component {
     return this.buttonNode;
   }
 
+  handleButtonClick() {
+    this.setState({ open: true });
+  }
+
   handleRequestClose() {
     this.setState({ open: false });
   }
@@ -26,23 +31,21 @@ class PopupPresenterStandard extends React.Component {
     return (
       <div>
         <PopupPresenter
-          classNameArrow="test-arrow-class"
-          classNameContent="test-content-class"
-          classNameOverlay="test-overlay-class"
-          contentAttachment="top center"
-          contentDimensions="50x 25x"
+          contentAttachment="bottom center"
+          contentDimensions="50x 50x"
           isArrowDisplayed
-          isHeaderDisabled
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
           <p>this is popup content</p>
         </PopupPresenter>
-        <div style={{ height: '20px', width: '20px' }} ref={this.setButtonNode} />
+        <button id="arrow-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Large Popup
+        </button>
       </div>
     );
   }
 }
 
-export default PopupPresenterStandard;
+export default MediumPopupPresenter;

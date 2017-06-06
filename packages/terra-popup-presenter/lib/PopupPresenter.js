@@ -216,9 +216,9 @@ var PopupPresenter = function (_React$Component) {
 
       var leftOffset = targetAttachPosition - popupAttachPosition;
 
-      var leftPosition = 0;
+      var leftPosition = offset;
       if (arrowAlignment === 'right') {
-        leftPosition = popUpBounds.width;
+        leftPosition = popUpBounds.width - offset;
       } else if (arrowAlignment === 'center') {
         leftPosition = popUpBounds.width / 2;
       }

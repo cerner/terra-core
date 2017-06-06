@@ -28,11 +28,23 @@ module.exports = {
       .waitForElementNotPresent('.terra-Popup', 1000)
       .click('#default-popup-button')
       .waitForElementPresent('.terra-Popup', 1000)
-      .setValue('body', [browser.Keys.ESCAPE])
+      .keys([browser.Keys.ESCAPE])
       .waitForElementNotPresent('.terra-Popup', 1000);
   },
 
   'isOpen prop - CLICK': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-presenter-tests/default`)
+      .waitForElementPresent('#default-popup-button', 1000)
+      .waitForElementNotPresent('.terra-Popup', 1000)
+      .click('#default-popup-button')
+      .waitForElementPresent('.terra-Popup', 1000)
+      .moveTo('#default-popup-button', 200, 0)
+      .mouseButtonClick(0)
+      .waitForElementNotPresent('.terra-Popup', 1000);
+  },
+
+  'asdf': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-presenter-tests/default`)
       .waitForElementPresent('#default-popup-button', 1000)

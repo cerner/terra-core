@@ -1,5 +1,5 @@
 import React from 'react';
-import PopupPresenter from '../../lib/PopupPresenter';
+import PopupPresenter from '../../../lib/PopupPresenter';
 
 class DefaultPopupPresenter extends React.Component {
   constructor(props) {
@@ -37,7 +37,9 @@ class DefaultPopupPresenter extends React.Component {
         >
           <p>this is popup content</p>
         </PopupPresenter>
-        <div id="default-popup-button" onClick={this.handleButtonClick} style={{ height: '20px', width: '20px' }} ref={this.setButtonNode} />
+        <button id="default-popup-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Default Popup
+        </button>
       </div>
     );
   }
