@@ -11,6 +11,7 @@ import OnChangeSingleSelectList from './OnChangeSingleSelectList';
 import NonSelectableSingleSelectList from './NonSelectableItemSingleSelectList';
 import SingleSelectListOneItem from './SingleSelectListOneItem';
 import SingleSelectListNoItems from './SingleSelectListNoItems';
+import SingleChevronSingleSelectList from './SingleChevronSingleSelectList';
 import SingleNonChevronSingleSelectList from './SingleNonChevronSingleSelectList';
 
 const routes = (
@@ -24,6 +25,7 @@ const routes = (
     <Route path="/tests/single-select-list-tests/non-selectable" component={NonSelectableSingleSelectList} />
     <Route path="/tests/single-select-list-tests/one-item" component={SingleSelectListOneItem} />
     <Route path="/tests/single-select-list-tests/no-items" component={SingleSelectListNoItems} />
+    <Route path="/tests/single-select-list-tests/single-chevron" component={SingleChevronSingleSelectList} />
     <Route path="/tests/single-select-list-tests/single-non-chevron" component={SingleNonChevronSingleSelectList} />
   </div>
 );
