@@ -7,7 +7,7 @@ function createListItems(items, selectedIndex) {
     const selected = itemIndex === selectedIndex;
     const contentKey = itemIndex;
     return (
-      <SingleSelectList.Item key={contentKey} content={item.content} isSelectable isSelected={selected} />
+      <SingleSelectList.Item key={contentKey} content={item.content} isSelected={selected} />
     );
   });
 

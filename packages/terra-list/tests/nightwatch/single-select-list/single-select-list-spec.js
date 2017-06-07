@@ -28,15 +28,29 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/items-divided`)
       .assert.cssClassPresent('.terra-List', 'terra-List-divided');
   },
-  'Displays items in the single select list with a chevron': (browser) => {
+  'Displays items in the single select list with a chevron from hasChevrons prop': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/chevron`)
       .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem-hasChevron')
       .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem-hasChevron')
       .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem-hasChevron');
   },
-  'Displays items in the single select list with a function set for on change with click': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/on-change`);
+  'Displays chevron single select list with one non-chevron item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/single-non-chevron`)
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem-hasChevron')
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem-hasChevron')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem-hasChevron');
+  },
+  'Displays single select list with one chevron item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/single-chevron`)
+      .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem-hasChevron')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem-hasChevron')
+      .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem-hasChevron');
+  },
+  'Display a single select list  list and highlights the selected item upon clicking': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/default`);
 
     browser.click('.terra-List .terra-ListItem:nth-child(1)');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
@@ -48,8 +62,8 @@ module.exports = {
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
   },
-  'Displays items in the single select list with a function set for on change with enter': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/on-change`);
+  'Display a single select list  list and highlights the selected item upon enter': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/default`);
 
     browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.ENTER);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
@@ -61,6 +75,40 @@ module.exports = {
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+  },
+  'Display a single select list  list and highlights the selected item upon space keydown': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/default`);
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.SPACE);
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+  },
+  'Triggers onChange for a single select list': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/on-change`);
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '1');
+
+    browser.click('.terra-List .terra-ListItem:nth-child(1)');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0');
   },
   'Displays only one selected item in the single select list': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/single-select-list-tests/preselected`)

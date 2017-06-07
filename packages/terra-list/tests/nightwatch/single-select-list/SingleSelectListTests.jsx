@@ -9,6 +9,8 @@ const SingleSelectListTests = () => (
       <li><Link to="/tests/single-select-list-tests/default">SingleSelectList - Default</Link></li>
       <li><Link to="/tests/single-select-list-tests/items-divided">SingleSelectList - Divided</Link></li>
       <li><Link to="/tests/single-select-list-tests/chevron">SingleSelectList - Items with Chevron</Link></li>
+      <li><Link to="/tests/single-select-list-tests/single-chevron">SingleSelectList - One Items with Chevron</Link></li>
+      <li><Link to="/tests/single-select-list-tests/single-non-chevron">SingleSelectList - Items with Chevron, One Non-Chevron Item</Link></li>
       <li><Link to="/tests/single-select-list-tests/on-change">SingleSelectList - OnChange Provided</Link></li>
       <li><Link to="/tests/single-select-list-tests/preselected">SingleSelectList - Preselected Item</Link></li>
       <li><Link to="/tests/single-select-list-tests/non-selectable">SingleSelectList - Non-Selectable Item</Link></li>
