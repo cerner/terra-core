@@ -97,6 +97,7 @@ class TimeInput extends React.Component {
   }
 
   handleChange(event, type) {
+    // Ignore the input and don't update the state if the entered value is a non numeric character.
     if (event.target.value.length > 0) {
       const isNumeric = /^\d+$/.test(event.target.value);
 
@@ -110,7 +111,8 @@ class TimeInput extends React.Component {
     const maxValue = type === inputType.HOUR ? 23 : 59;
 
     // Ignore the entry if the value did not change or it is invalid.
-    if (inputValue === stateValue || Number(inputValue) > maxValue) {
+    // When 'Predictive text' is enabled on Android the maxLength attribute on the input is ignored so we have to the length of inputValue to make sure that it is less then 2.
+    if (inputValue === stateValue || inputValue.length > 2 || Number(inputValue) > maxValue) {
       return;
     }
 
