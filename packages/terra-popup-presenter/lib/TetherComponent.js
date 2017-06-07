@@ -270,6 +270,11 @@ var TetherComponent = function (_React$Component) {
           onRepositioned = _props2.onRepositioned,
           customProps = _objectWithoutProperties(_props2, ['classes', 'classPrefix', 'constraints', 'content', 'contentAttachment', 'contentOffset', 'disableOnPosition', 'isEnabled', 'optimizations', 'targetRef', 'targetAttachment', 'targetModifier', 'targetOffset', 'onUpdate', 'onRepositioned']);
 
+      // Delete the closePortal prop that comes from react-portal.
+
+
+      delete customProps.closePortal;
+
       return _react2.default.createElement(
         'div',
         _extends({}, customProps, { ref: this.setElementNode }),

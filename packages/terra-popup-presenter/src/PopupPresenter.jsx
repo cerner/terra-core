@@ -128,6 +128,20 @@ class PopupPresenter extends React.Component {
     return `${vertical} ${horizontal}`;
   }
 
+  static getContentOffset(attachment, targetNode, arrowOffset) {
+    const offset = { vertical: 0, horizontal: 0 };
+    if (targetNode) {
+      if (PopupPresenter.isVerticalAttachment(attachment) && targetNode.clientWidth <= arrowOffset * 2) {
+        if (attachment.horizontal === 'left') { 
+          offset.horizontal = arrowOffset - (targetNode.clientWidth / 2);
+        } else if (attachment.horizontal === 'right') { 
+          offset.horizontal = -(arrowOffset - (targetNode.clientWidth / 2));
+        }
+      }
+    }
+    return offset;
+  }
+
   static parseStringPair(value) {
     const [vertical, horizontal] = value.split(' ');
     return { vertical, horizontal };
@@ -142,16 +156,20 @@ class PopupPresenter extends React.Component {
     return start;
   }
 
-  static arrowPositionFromBounds(targetBounds, popUpBounds, attachment, offset) {
-    if (['top', 'bottom'].indexOf(attachment.vertical) >= 0) {
-      if ((popUpBounds.left + popUpBounds.width) - offset >= targetBounds.left && popUpBounds.left + offset <= targetBounds.left + targetBounds.width) {
+  static isVerticalAttachment(attachment) {
+    return attachment.vertical !== 'middle';
+  }
+
+  static arrowPositionFromBounds(targetBounds, popUpBounds, isVerticalAttachment, arrowOffset) {
+    if (isVerticalAttachment) {
+      if ((popUpBounds.left + popUpBounds.width) - arrowOffset >= targetBounds.left && popUpBounds.left + arrowOffset <= targetBounds.left + targetBounds.width) {
         if (targetBounds.top < popUpBounds.top) {
           return 'top';
         } else if (targetBounds.bottom < popUpBounds.bottom) {
           return 'bottom';
         }
       }
-    } else if ((popUpBounds.top + popUpBounds.height) - offset >= targetBounds.top && popUpBounds.top + offset <= targetBounds.top + targetBounds.height) {
+    } else if ((popUpBounds.top + popUpBounds.height) - arrowOffset >= targetBounds.top && popUpBounds.top + arrowOffset <= targetBounds.top + targetBounds.height) {
       if (targetBounds.left < popUpBounds.left) {
         return 'left';
       } else if (targetBounds.right < popUpBounds.right) {
@@ -161,50 +179,45 @@ class PopupPresenter extends React.Component {
     return undefined;
   }
 
-  static leftOffset(targetBounds, popUpBounds, arrowAlignment, offset) {
-    const targetAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, targetBounds.left, targetBounds.width);
-    const popupAttachPosition = PopupPresenter.attachPositionFromAlignment(arrowAlignment, popUpBounds.left, popUpBounds.width);
+  static leftOffset(targetBounds, popUpBounds, arrowOffset, contentOffset, attachment) {
+    const targetAttachPosition = PopupPresenter.attachPositionFromAlignment(attachment.horizontal, targetBounds.left, targetBounds.width);
+    const popupAttachPosition = PopupPresenter.attachPositionFromAlignment(attachment.horizontal, popUpBounds.left, popUpBounds.width);
+    const leftOffset = targetAttachPosition - popupAttachPosition - contentOffset.horizontal;
 
-    const leftOffset = targetAttachPosition - popupAttachPosition;
-
-    let leftPosition = offset;
-    if (arrowAlignment === 'right') {
-      leftPosition = popUpBounds.width - offset;
-    } else if (arrowAlignment === 'center') {
+    let leftPosition = arrowOffset;
+    if (attachment.horizontal === 'right') {
+      leftPosition = popUpBounds.width - arrowOffset;
+    } else if (attachment.horizontal === 'center') {
       leftPosition = popUpBounds.width / 2;
     }
 
     let newLeftPosition = leftPosition + leftOffset;
-    if (newLeftPosition > popUpBounds.width - offset) {
-      newLeftPosition = popUpBounds.width - offset;
-    } else if (newLeftPosition < offset) {
-      newLeftPosition = offset;
+    if (newLeftPosition > popUpBounds.width - arrowOffset) {
+      newLeftPosition = popUpBounds.width - arrowOffset;
+    } else if (newLeftPosition < arrowOffset) {
+      newLeftPosition = arrowOffset;
     }
 
-    return `${(offset + newLeftPosition).toString()}px`;
+    return `${(arrowOffset + newLeftPosition).toString()}px`;
   }
 
-  static topOffset(targetBounds, popUpBounds, offset) {
+  static topOffset(targetBounds, popUpBounds, arrowOffset, contentOffset) {
     const targetAttachPosition = targetBounds.top + (targetBounds.height / 2);
     const popupAttachPosition = popUpBounds.top + (popUpBounds.height / 2);
+    const topOffset = targetAttachPosition - popupAttachPosition - contentOffset.vertical;
 
-    const topOffset = targetAttachPosition - popupAttachPosition;
-    const topPosition = popUpBounds.height / 2;
-
-    let newTopPosition = topPosition + topOffset;
-    if (newTopPosition > popUpBounds.height - offset) {
-      newTopPosition = popUpBounds.height - offset;
-    } else if (newTopPosition < offset) {
-      newTopPosition = offset;
+    let newTopPosition = (popUpBounds.height / 2) + topOffset;
+    if (newTopPosition > popUpBounds.height - arrowOffset) {
+      newTopPosition = popUpBounds.height - arrowOffset;
+    } else if (newTopPosition < arrowOffset) {
+      newTopPosition = arrowOffset;
     }
 
-    return `${(offset + newTopPosition).toString()}px`;
+    return `${(arrowOffset + newTopPosition).toString()}px`;
   }
 
   static primaryArrowPosition(attachment) {
-    const parsedAttachment = PopupPresenter.parseStringPair(attachment);
-    const isVerticalPosition = ['top', 'bottom'].indexOf(parsedAttachment.vertical) >= 0;
-    return isVerticalPosition ? parsedAttachment.vertical : parsedAttachment.horizontal;
+    return PopupPresenter.isVerticalAttachment(attachment) ? attachment.vertical : attachment.horizontal;
   }
 
   static createPortalContent(tetherContent, useOverlay, classNameOverlay) {
@@ -227,8 +240,8 @@ class PopupPresenter extends React.Component {
   }
 
   setArrowPosition(targetBounds, popUpBounds) {
-    const parsedAttachment = PopupPresenter.parseStringPair(this.props.contentAttachment);
-    const position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, parsedAttachment, PopupArrow.arrowSize);
+    const isVerticalAttachment = PopupPresenter.isVerticalAttachment(this.attachment);
+    const position = PopupPresenter.arrowPositionFromBounds(targetBounds, popUpBounds, isVerticalAttachment, PopupArrow.arrowSize);
 
     if (!position) {
       this.arrowNode.classList.remove(PopupArrow.positionClasses.top);
@@ -244,10 +257,10 @@ class PopupPresenter extends React.Component {
     this.arrowNode.classList.add(PopupArrow.positionClasses[position]);
     this.popupNode.classList.add(Popup.positionClasses[position]);
 
-    if (['top', 'bottom'].indexOf(position) >= 0) {
-      this.arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, parsedAttachment.horizontal, PopupArrow.arrowSize);
+    if (isVerticalAttachment) {
+      this.arrowNode.style.left = PopupPresenter.leftOffset(targetBounds, popUpBounds, PopupArrow.arrowSize, this.offset, this.attachment);
     } else {
-      this.arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, PopupArrow.arrowSize);
+      this.arrowNode.style.top = PopupPresenter.topOffset(targetBounds, popUpBounds, PopupArrow.arrowSize, this.offset);
     }
   }
 
@@ -265,8 +278,8 @@ class PopupPresenter extends React.Component {
     }
   }
 
-  createPopup(children, contentDimensions, boundingFrame, attachment, arrow, onRequestClose, isHeaderDisabled, classNameContent) {
-    const parsedDimenions = PopupPresenter.parseStringPair(contentDimensions);
+  createPopup(arrow, boundingFrame) {
+    const parsedDimenions = PopupPresenter.parseStringPair(this.props.contentDimensions);
     const boundsProps = {
       contentWidth: BASE_WIDTH * DIMENSIONS_MAP[parsedDimenions.horizontal],
       contentHeight: BASE_HEIGHT * DIMENSIONS_MAP[parsedDimenions.vertical],
@@ -284,16 +297,16 @@ class PopupPresenter extends React.Component {
       <Popup
         {...boundsProps}
         arrow={arrow}
-        arrowPosition={PopupPresenter.primaryArrowPosition(attachment)}
-        classNameContent={classNameContent}
+        arrowPosition={PopupPresenter.primaryArrowPosition(this.attachment)}
+        classNameContent={this.props.classNameContent}
         closeOnEsc
         closeOnOutsideClick
         closeOnResize
-        isHeaderDisabled={isHeaderDisabled}
-        onRequestClose={onRequestClose}
+        isHeaderDisabled={this.props.isHeaderDisabled}
+        onRequestClose={this.props.onRequestClose}
         refCallback={this.setPopupNode}
       >
-        {children}
+        {this.props.children}
       </Popup>
     );
   }
@@ -323,7 +336,7 @@ class PopupPresenter extends React.Component {
       if (isArrowDisplayed) {
         arrow = <PopupArrow className={classNameArrow} refCallback={this.setArrowNode} />;
       }
-      popup = this.createPopup(children, contentDimensions, boundingFrame, contentAttachment, arrow, onRequestClose, isHeaderDisabled, classNameContent);
+      popup = this.createPopup(arrow, boundingFrame);
     }
 
     const allowScrolling = false;
@@ -335,12 +348,16 @@ class PopupPresenter extends React.Component {
       },
     ];
 
+    this.attachment = PopupPresenter.parseStringPair(contentAttachment);
+    this.offset = PopupPresenter.getContentOffset(this.attachment, targetRef(), PopupArrow.arrowSize);
+
     const tetherCotent = (
       <TetherComponent
         classPrefix="terra-PopupPresenter"
         constraints={constraints}
         content={popup}
         contentAttachment={contentAttachment}
+        contentOffset={`${this.offset.vertical} ${this.offset.horizontal}`}
         disableOnPosition={!allowScrolling}
         isEnabled
         onRepositioned={this.handleTetherRepositioned}

@@ -233,6 +233,9 @@ class TetherComponent extends React.Component {
       ...customProps
     } = this.props;
 
+    // Delete the closePortal prop that comes from react-portal.
+    delete customProps.closePortal;
+
     return (
       <div {...customProps} ref={this.setElementNode}>
         {content}
