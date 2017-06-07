@@ -22,19 +22,19 @@ var _reactPortal = require('react-portal');
 
 var _reactPortal2 = _interopRequireDefault(_reactPortal);
 
-var _Popup = require('./Popup');
+var _Popup = require('./_Popup');
 
 var _Popup2 = _interopRequireDefault(_Popup);
 
-var _PopupArrow = require('./PopupArrow');
+var _PopupArrow = require('./_PopupArrow');
 
 var _PopupArrow2 = _interopRequireDefault(_PopupArrow);
 
-var _PopupOverlay = require('./PopupOverlay');
+var _PopupOverlay = require('./_PopupOverlay');
 
 var _PopupOverlay2 = _interopRequireDefault(_PopupOverlay);
 
-var _TetherComponent = require('./TetherComponent');
+var _TetherComponent = require('./_TetherComponent');
 
 var _TetherComponent2 = _interopRequireDefault(_TetherComponent);
 
@@ -48,8 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // consider dot notation
-
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var MIRROR_LR = {
   center: 'center',

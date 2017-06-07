@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Portal from 'react-portal';
-import Popup from './Popup';
-import PopupArrow from './PopupArrow';// consider dot notation
-import PopupOverlay from './PopupOverlay';
-import TetherComponent from './TetherComponent';
+import Popup from './_Popup';
+import PopupArrow from './_PopupArrow';
+import PopupOverlay from './_PopupOverlay';
+import TetherComponent from './_TetherComponent';
 import './PopupPresenter.scss';
 
 const MIRROR_LR = {
