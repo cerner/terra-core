@@ -1,0 +1,45 @@
+@import '~terra-mixins';
+
+.terra-SearchField {
+  display: inline-flex;
+
+  .terra-SearchField-input {
+    @include terra-border-radius-start(0.286em);
+    @include terra-border-radius-end(0);
+    @include terra-border-end(0);
+
+    appearance: textfield;
+    border: 0.071em solid $terra-grey-15;
+    flex: 1 1 auto;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.143;
+    margin: 0;
+    min-width: 0;
+    padding: 0.286rem;
+
+    &:focus {
+      border-color: $terra-blue-60;
+      outline: none;
+    }
+  }
+
+  .terra-SearchField-button {
+    @include terra-border-radius-start(0);
+    @include terra-border-radius-end(0.286em);
+
+    border: 0.071em solid $terra-grey-15;
+    display: inline-block;
+    flex: 0 0 auto;
+    margin: 0;
+  }
+}
+
+.terra-SearchField-input::-webkit-search-cancel-button {
+  appearance: searchfield-cancel-button;
+}
+
+.terra-SearchField-input::-webkit-search-decoration {
+  // Get rid of extra left-padding getting added in Safari for search fields
+  appearance: none;
+}
