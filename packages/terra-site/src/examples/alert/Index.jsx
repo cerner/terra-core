@@ -23,6 +23,7 @@ import LongTextExample from './LongTextExample';
 import ActionExample from './ActionExample';
 import DismissibleExample from './DismissibleExample';
 import ActionAndDismissibleExample from './ActionAndDismissibleExample';
+import BuildYourOwnAlertExample from './BuildYourOwnAlertExample';
 
 const AlertExamples = () => (
   <div>
@@ -30,32 +31,33 @@ const AlertExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={AlertSrc} />
     <h2>Alert Examples</h2>
-    <br />
+    <br /><hr /><br />
     <AlertExample />
-    <hr />
+    <br /><hr /><br />
     <ErrorExample />
-    <hr />
+    <br /><hr /><br />
     <WarningExample />
-    <hr />
+    <br /><hr /><br />
     <RequiredExample />
-    <hr />
+    <br /><hr /><br />
     <AdvisoryExample />
-    <hr />
+    <br /><hr /><br />
     <InformationExample />
-    <hr />
+    <br /><hr /><br />
     <ConfirmationExample />
-    <hr />
+    <br /><hr /><br />
     <CustomExample />
-    <hr />
+    <br /><hr /><br />
     <LongTextExample />
-    <hr />
+    <br /><hr /><br />
     <ActionExample />
-    <hr />
+    <br /><hr /><br />
     <DismissibleExample />
-    <hr />
+    <br /><hr /><br />
     <ActionAndDismissibleExample />
-    <hr />
-    <IconHelp height="1.3333rem" width="1.3333rem" />
+    <br /><hr /><br />
+    <BuildYourOwnAlertExample />
+    <br /><hr /><br />
   </div>
 );
 

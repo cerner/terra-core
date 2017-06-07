@@ -1,14 +1,19 @@
 import React from 'react';
 import Alert, { AlertTypes } from 'terra-alert';
 
+const alertStartTagStr = '<Alert type={AlertTypes.ERROR} >';
+const alertEndTagStr = '</Alert>';
+
 const ErrorExample = () => (
   <div>
-    <h3>Basic Alert of type error with default title</h3>
+    <div dir="ltr">
+      <h3>Basic Alert of type error with default title</h3>
+      <br />
+      <code>
+        {alertStartTagStr}This is an error{alertEndTagStr}
+      </code>
+    </div>
     <br />
-    <code>
-      &lt;Alert type=&#x007B;AlertTypes.ERROR&#x007D; &gt;This is an error&lt;/Alert&gt;
-    </code>
-    <br /><br />
     <Alert type={AlertTypes.ERROR} >This is an error</Alert>
   </div>
 );

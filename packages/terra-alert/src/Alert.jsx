@@ -153,12 +153,16 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
   let actionsSection = '';
   let dismissButton = '';
   const outerDivStyle = {};
-  let customBoxShadowStyle = '2px 0 0 ';
+  let alertBodyClassName = 'terra-Alert-body';
 
   if (type === AlertTypes.CUSTOM) {
-    customBoxShadowStyle += customStatusColor;
-    customBoxShadowStyle += ' inset';
-    outerDivStyle.boxShadow = customBoxShadowStyle;
+    // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
+    // in the customStatusColor prop.  The box-shadow style is defined in CSS in order to get the
+    // bidirectionality via the mixin.  As per the W3C spec if the box-shadow does not have the color
+    // defined, it will use the prevailing color style, so setting that here. But then we need to set
+    // the color style for the alert content so that it doesn't pick up the custom status color.
+    outerDivStyle.color = customStatusColor;
+    alertBodyClassName += ' terra-Alert-body--custom';
   }
 
   if (onDismiss) {
@@ -175,9 +179,10 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
 
   return (
     <div {...attributes} className={AlertClassNames} style={outerDivStyle} >
-      <div className="terra-Alert-body">
+      <div className={alertBodyClassName}>
         <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
-        <div className="terra-Alert-section"><strong className="terra-Alert-title">{title || getDefaultTitle(type)}</strong>
+        <div className="terra-Alert-section">
+          <strong className="terra-Alert-title">{title || getDefaultTitle(type)}</strong>
           <div className="terra-Alert-content">
             {children}
           </div>

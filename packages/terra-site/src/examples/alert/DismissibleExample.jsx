@@ -17,18 +17,26 @@ class DismissibleExample extends React.Component {
   }
 
   render() {
+    const alertStartTagStr = '<Alert type={AlertTypes.CONFIRMATION} onDismiss={this.handleDismiss} >';
+    const alertEndTagStr = '</Alert>';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = <Alert type={AlertTypes.CONFIRMATION} onDismiss={this.handleDismiss} >This is a confirmation. It is configured to be dismissible.</Alert>;
+      alertElem = <Alert type={AlertTypes.CONFIRMATION} onDismiss={this.handleDismiss} >This is a confirmation. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.</Alert>;
     }
     return (
       <div>
-        <h3>Alert of type confirmation that is dismissible. Click on the Dismiss button to dismiss the alert.</h3>
+        <div dir="ltr">
+          <h3>Alert of type confirmation that is dismissible</h3>
+          <br />
+          <code>
+            {alertStartTagStr}
+            <br />
+              &nbsp;&nbsp;This is a confirmation. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.
+            <br />
+            {alertEndTagStr}
+          </code>
+        </div>
         <br />
-        <code>
-          &lt;Alert type=&#x007B;AlertTypes.CONFIRMATION&#x007D; onDismiss=&#x007B;this.handleDismiss&#x007D;  &gt;This is a confirmation. It is configured to be dismissible.&lt;/Alert&gt;
-        </code>
-        <br /><br />
         {alertElem}
       </div>
     );

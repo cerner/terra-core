@@ -6,16 +6,30 @@
   color: map-get($color-map, color);
 }
 
-@mixin terra-alert-shadow($shadow-color-map) {
+@mixin terra-alert-box-shadow($shadow-color-map) {
   @if $terra-bidi {
     [dir='ltr'] & {
-      box-shadow: 2px 0 0 map-get($shadow-color-map) inset;
+      box-shadow: 2px 0 0 $shadow-color-map inset;
     }
 
     [dir='rtl'] & {
-      box-shadow: -2px 0 0 map-get($shadow-color-map) inset;
+      box-shadow: -2px 0 0 $shadow-color-map inset;
     }
   } @else {
-    box-shadow: 2px 0 0 map-get($shadow-color-map) inset;
+    box-shadow: 2px 0 0 $shadow-color-map inset;
+  }
+}
+
+@mixin terra-alert-custom-box-shadow() {
+  @if $terra-bidi {
+    [dir='ltr'] & {
+      box-shadow: 2px 0 0 inset;
+    }
+
+    [dir='rtl'] & {
+      box-shadow: -2px 0 0 inset;
+    }
+  } @else {
+    box-shadow: 2px 0 0 inset;
   }
 }

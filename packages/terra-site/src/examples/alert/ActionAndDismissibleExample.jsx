@@ -9,6 +9,7 @@ class ActionAndDismissibleExample extends React.Component {
       isDismissed: false,
     };
     this.handleDismiss = this.handleDismiss.bind(this);
+    this.actionFunc = this.actionFunc.bind(this);
   }
 
   handleDismiss() {
@@ -20,24 +21,36 @@ class ActionAndDismissibleExample extends React.Component {
   actionFunc() {
     // eslint-disable-next-line no-alert
     alert('Action performed');
+    this.state = {
+      isDismissed: false,
+    };
   }
 
   render() {
+    const alertStartTagStr = '<Alert type={AlertTypes.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >';
+    const alertEndTagStr = '</Alert>';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = 
-        <Alert type={AlertTypes.ADVISORY} onDismiss={this.handleDismiss} alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
-          This is an advisory. It is configured to be dismissible and with a custom action button.
-        </Alert>;
+      alertElem = (
+        <Alert type={AlertTypes.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+          This is a a custom alert with no icon. It is configured to be dismissible and with a custom action button. Click on the Dismiss button to dismiss the alert.
+        </Alert>
+      );
     }
     return (
       <div>
-        <h3>Alert of type advisory that is dismissible and has an action button. Click on the Dismiss button to dismiss the alert.</h3>
+        <div dir="ltr">
+          <h3>Alert of type custom with no icon that is dismissible and has an action button</h3>
+          <br />
+          <code>
+            {alertStartTagStr}
+            <br />
+                &nbsp;&nbsp;This is an advisory. It is configured to be dismissible and with a custom action button. Click on the Dismiss button to dismiss the alert.
+              <br />
+            {alertEndTagStr}
+          </code>
+        </div>
         <br />
-        <code>
-          &lt;Alert type=&#x007B;AlertTypes.ADVISORY&#x007D; onDismiss=&#x007B;this.handleDismiss&#x007D; alertAction=&#x007B;&lt;Button text=&quot;Action&quot; size=&quot;medium&quot; variant=&quot;primary&quot; onClick=&#x007B;actionFunc&#x007D; /&gt;&#x007D; &gt;This is an advisory. It is configured to be dismissible and with a custom action button.&lt;/Alert&gt;
-        </code>
-        <br /><br />
         {alertElem}
       </div>
     );

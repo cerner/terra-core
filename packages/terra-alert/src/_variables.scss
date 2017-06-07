@@ -43,3 +43,23 @@ $terra-alert-required-icon-color-scheme: (
 ) !default;
 
 $terra-alert-alert-shadow-color: $terra-red-70 !default;
+
+$terra-alert-error-shadow-color: $terra-red-70 !default;
+
+$terra-alert-warning-shadow-color: $terra-yellow-60 !default;
+
+$terra-alert-required-shadow-color: $terra-red-70 !default;
+
+$terra-alert-advisory-shadow-color: $terra-purple-80 !default;
+
+$terra-alert-information-shadow-color: $terra-blue-70 !default;
+
+$terra-alert-confirmation-shadow-color: $terra-green-60 !default;
+
+$terra-alert-custom-shadow-color: (
+  color: $terra-red-70
+) !default;
+
+$terra-alert-custom-text-color: (
+  color: $terra-dark
+) !default;

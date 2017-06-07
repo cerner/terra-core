@@ -28,14 +28,20 @@
   flex-direction: row;
   margin: 1rem 0.6667rem;
   overflow: hidden;
+  padding-top: 0.1rem;
   
   @media screen and (min-width: 768px) {
     @include terra-margin-end(0);
   }
 }
 
+.terra-Alert-body--custom {
+  @include terra-alert-color($terra-alert-custom-text-color);
+}
+
 .terra-Alert-section {
   flex: 1;
+  padding-top: 0.2rem;
 }
 
 .terra-Alert-title {
@@ -77,43 +83,44 @@
   box-shadow: 2px 0 0 #007cc3 inset;
 }
 
-terra-Alert--alert {
-  @include terra-alert-shadow{$terra-alert-alert-shadow-color);
+.terra-Alert--alert {
+  @include terra-alert-box-shadow($terra-alert-alert-shadow-color);
   @include terra-alert-background-color($terra-alert-alert-color-scheme);
 }
 
 .terra-Alert--error {
-  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-box-shadow($terra-alert-error-shadow-color);
   @include terra-alert-background-color($terra-alert-error-color-scheme);
 }
 
 .terra-Alert--warning {
-  box-shadow: 2px 0 0 $terra-yellow-60 inset;
+  @include terra-alert-box-shadow($terra-alert-warning-shadow-color);
   @include terra-alert-background-color($terra-alert-warning-color-scheme);
 }
 
 .terra-Alert--required {
-  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-box-shadow($terra-alert-required-shadow-color);
   @include terra-alert-background-color($terra-alert-required-color-scheme);
 }
 
 .terra-Alert--advisory {
-  box-shadow: 2px 0 0 $terra-purple-80 inset;
+  @include terra-alert-box-shadow($terra-alert-advisory-shadow-color);
   @include terra-alert-background-color($terra-alert-advisory-color-scheme);
 }
 
 .terra-Alert--information {
-  box-shadow: 2px 0 0 $terra-blue-70 inset;
+  @include terra-alert-box-shadow($terra-alert-information-shadow-color);
   @include terra-alert-background-color($terra-alert-information-color-scheme);
 }
 
 .terra-Alert--confirmation {
-  box-shadow: 2px 0 0 $terra-green-60 inset;
+  @include terra-alert-box-shadow($terra-alert-confirmation-shadow-color);
   @include terra-alert-background-color($terra-alert-confirmation-color-scheme);
 }
 
 .terra-Alert--custom {
-  box-shadow: 2px 0 0 $terra-red-70 inset;
+  @include terra-alert-color($terra-alert-custom-shadow-color);
+  @include terra-alert-custom-box-shadow();
   @include terra-alert-background-color($terra-alert-custom-color-scheme);
 }
 

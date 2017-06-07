@@ -1,14 +1,19 @@
 import React from 'react';
 import Alert, { AlertTypes } from 'terra-alert';
 
+const alertStartTagStr = '<Alert type={AlertTypes.ADVISORY} >';
+const alertEndTagStr = '</Alert>';
+
 const AdvisoryExample = () => (
   <div>
-    <h3>Basic Alert of type advisory with default title</h3>
+    <div dir="ltr">
+      <h3>Basic Alert of type advisory with default title</h3>
+      <br />
+      <code>
+        {alertStartTagStr}This is an advisory alert{alertEndTagStr}
+      </code>
+    </div>
     <br />
-    <code>
-      &lt;Alert type=&#x007B;AlertTypes.ADVISORY&#x007D; &gt;This is an advisory alert&lt;/Alert&gt;
-    </code>
-    <br /><br />
     <Alert type={AlertTypes.ADVISORY} >This is an advisory alert</Alert>
   </div>
 );
