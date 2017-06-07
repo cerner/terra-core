@@ -3,7 +3,7 @@ import React from 'react';
 import Image from '../../../terra-image/lib/Image';
 import LargeDemographicsBannerDisplay from '../../src/_LargeDemographicsBannerDisplay';
 
-it('renders small banner that contains all valid information', () => {
+it('renders large banner that contains all valid information', () => {
   const banner = shallow(
     <LargeDemographicsBannerDisplay
       applicationContent={<span className="risk-score">5%</span>}
