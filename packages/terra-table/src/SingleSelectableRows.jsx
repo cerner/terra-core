@@ -6,6 +6,7 @@ import TableRow from './TableRow';
 
 const KEYCODES = {
   ENTER: 13,
+  SPACE: 32,
 };
 
 const propTypes = {
@@ -25,6 +26,9 @@ const defaultProps = {
 
 class SingleSelectableRows extends React.Component {
   static selectedRowIndex(rows) {
+    if (!rows || !rows.length) {
+      return null;
+    }
     // Find the first row which is selected and is selectable
     for (let i = 0; i < rows.length; i += 1) {
       if (rows[i].props.isSelected && rows[i].props.isSelectable) {
@@ -44,7 +48,7 @@ class SingleSelectableRows extends React.Component {
   handleSelection(event, index) {
     this.setState({ selectedIndex: index });
     if (this.props.onChange) {
-      this.props.onChange(event);
+      this.props.onChange(event, index);
     }
   }
 
@@ -70,7 +74,7 @@ class SingleSelectableRows extends React.Component {
     const initialOnKeyDown = row.props.onKeyDown;
 
     return (event) => {
-      if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
         if (this.shouldHandleSelection(index)) {
           this.handleSelection(event, index);
         }
@@ -86,13 +90,17 @@ class SingleSelectableRows extends React.Component {
     const isSelected = this.state.selectedIndex === index;
     const newProps = { };
 
-    // set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex
+    // Set the isSelected attribute to false for all the rows except the row whose index is set to state selectedIndex.
     // This will ensure that only one row will be selected at a moment of time.
     if (isSelected !== row.props.isSelected) {
       newProps.isSelected = isSelected;
     }
 
-    newProps.isSelectable = row.props.isSelectable;
+    // Set the default isSelectable attribute to true, unless the consumer specifies the row isSelectable as false.
+    newProps.isSelectable = true;
+    if (row.props.isSelectable === false) {
+      newProps.isSelectable = row.props.isSelectable;
+    }
 
     // If selectable, add tabIndex on rows to navigate through keyboard tab key for selectable row and add
     // onClick and onKeyDown functions.
@@ -106,7 +114,7 @@ class SingleSelectableRows extends React.Component {
   }
 
   clonedChildItems(rows) {
-    return rows.map((row, index) => {
+    return React.Children.map(rows, (row, index) => {
       if (row.type === TableRow) {
         const wrappedOnClick = this.wrappedOnClickForRow(row, index);
         const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
@@ -129,7 +137,6 @@ class SingleSelectableRows extends React.Component {
       </TableRows>
     );
   }
-
 }
 
 SingleSelectableRows.propTypes = propTypes;

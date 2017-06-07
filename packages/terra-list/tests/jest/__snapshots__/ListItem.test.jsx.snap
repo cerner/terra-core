@@ -1,6 +1,5 @@
 exports[`test should mount with isSelectable 1`] = `
 <ListItem
-  hasChevron={false}
   isSelectable={true}
   isSelected={false}>
   <li

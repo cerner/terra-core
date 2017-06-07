@@ -10,7 +10,6 @@ import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
-import ContentExamples from './examples/content/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
@@ -23,11 +22,10 @@ import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
+import SearchFieldExamples from './examples/search-field/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
-import StandoutExamples from './examples/standout/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
-import TitleExamples from './examples/title/Index';
 
 // Test Routes
 /* eslint-disable import/first */
@@ -53,7 +51,9 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
 import TestLinks from './TestLinks';
+
 // Remove eslint-disable as these pacakges are published
 /* eslint-disable import/no-extraneous-dependencies */
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
@@ -70,7 +70,6 @@ ReactDOM.render((
       <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
-      <Route path="content" component={ContentExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
@@ -83,10 +82,9 @@ ReactDOM.render((
       <Route path="modal" component={ModalExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
+      <Route path="search-field" component={SearchFieldExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
-      <Route path="standout" component={StandoutExamples} />
       <Route path="status" component={StatusExamples} />
-      <Route path="title" component={TitleExamples} />
       <Route path="table" component={TableExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
@@ -113,6 +111,7 @@ ReactDOM.render((
     {ProgressBarTestRoutes}
     {GridTestRoutes}
     {IconTestRoutes}
+    {SearchFieldTestRoutes}
     {FormTestRoutes}
   </Router>
 ), document.getElementById('root'));

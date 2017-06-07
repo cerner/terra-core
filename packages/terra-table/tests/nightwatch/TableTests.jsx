@@ -6,15 +6,19 @@ import { Link } from 'react-router';
 const TableTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/table-tests/default">Default Table</Link></li>
-      <li><Link to="/tests/table-tests/no-striped">No Striped Table</Link></li>
-      <li><Link to="/tests/table-tests/no-padding">No Padding Table</Link></li>
-      <li><Link to="/tests/table-tests/single-row-table">Single Row Table</Link></li>
-      <li><Link to="/tests/table-tests/selectable-table">Selectable Table</Link></li>
-      <li><Link to="/tests/table-tests/table-highlighted-rows">Highlighted Rows Table</Link></li>
-      <li><Link to="/tests/table-tests/table-sort-indicator">Sort Indicator Table Header</Link></li>
-      <li><Link to="/tests/table-tests/table-subheaders">Subheaders</Link></li>
-      <li><Link to="/tests/table-tests/table-selectable-subheaders">Selectable Table With Subheaders</Link></li>
+      <li><Link to="/tests/table-tests/default">Table - Default</Link></li>
+      <li><Link to="/tests/table-tests/no-striped">Table - No Stripes</Link></li>
+      <li><Link to="/tests/table-tests/no-padding">Table - No Padding</Link></li>
+      <li><Link to="/tests/table-tests/single-row-table">Table - Single Row</Link></li>
+      <li><Link to="/tests/table-tests/table-no-rows">Table - No Rows</Link></li>
+      <li><Link to="/tests/table-tests/table-highlighted-rows">Table - Highlighted Rows</Link></li>
+      <li><Link to="/tests/table-tests/table-sort-indicator">Table - Sort Indicator on Header</Link></li>
+      <li><Link to="/tests/table-tests/selectable-table">Selectable Table - Default</Link></li>
+      <li><Link to="/tests/table-tests/selectable-table-single-row">Selectable Table - Single Row</Link></li>
+      <li><Link to="/tests/table-tests/selectable-table-no-rows">Selectable Table - No Rows</Link></li>
+      <li><Link to="/tests/table-tests/selectable-table-onchange">Selectable Table - OnChange</Link></li>
+      <li><Link to="/tests/table-tests/table-subheaders">Table - Subheaders</Link></li>
+      <li><Link to="/tests/table-tests/table-selectable-subheaders">Selectable Table - Subheaders</Link></li>
     </ul>
   </div>
 );
