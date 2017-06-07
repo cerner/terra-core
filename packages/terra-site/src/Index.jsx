@@ -90,7 +90,6 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="time-input" component={TimeInputExamples} />
-      <Route path="title" component={TitleExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
