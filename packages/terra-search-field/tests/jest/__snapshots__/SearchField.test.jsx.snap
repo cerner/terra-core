@@ -1,0 +1,74 @@
+exports[`Snapshots renders a basic search field 1`] = `
+<div
+  className="terra-SearchField">
+  <input
+    className="terra-SearchField-input"
+    onChange={[Function]}
+    placeholder=""
+    type="search"
+    value="" />
+  <Button
+    className="terra-SearchField-button"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    variant="default">
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg" />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field with a placeholder 1`] = `
+<div
+  className="terra-SearchField">
+  <input
+    className="terra-SearchField-input"
+    onChange={[Function]}
+    placeholder="Test"
+    type="search"
+    value="" />
+  <Button
+    className="terra-SearchField-button"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    variant="default">
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg" />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field with a value 1`] = `
+<div
+  className="terra-SearchField">
+  <input
+    className="terra-SearchField-input"
+    onChange={[Function]}
+    placeholder=""
+    type="search"
+    value="Test" />
+  <Button
+    className="terra-SearchField-button"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    variant="default">
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg" />
+  </Button>
+</div>
+`;

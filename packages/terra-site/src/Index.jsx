@@ -22,6 +22,7 @@ import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
+import SearchFieldExamples from './examples/search-field/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
@@ -50,7 +51,9 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
 import TestLinks from './TestLinks';
+
 // Remove eslint-disable as these pacakges are published
 /* eslint-disable import/no-extraneous-dependencies */
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
@@ -79,6 +82,7 @@ ReactDOM.render((
       <Route path="modal" component={ModalExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
+      <Route path="search-field" component={SearchFieldExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
@@ -107,6 +111,7 @@ ReactDOM.render((
     {ProgressBarTestRoutes}
     {GridTestRoutes}
     {IconTestRoutes}
+    {SearchFieldTestRoutes}
     {FormTestRoutes}
   </Router>
 ), document.getElementById('root'));
