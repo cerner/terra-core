@@ -1,0 +1,20 @@
+exports[`OverlayContainer should render a default component 1`] = `
+<div
+  className="terra-OverlayContainer"
+  tabIndex="-1" />
+`;
+
+exports[`OverlayContainer should render when children are provided 1`] = `
+<div
+  className="terra-OverlayContainer"
+  tabIndex="-1">
+  <Overlay
+    backgroundStyle="light"
+    isFixed={false}
+    isNotTrappedFocus={false}
+    isOpen={false}
+    isRelativeToContainer={false}
+    isScrollable={false} />
+  Some Text Content
+</div>
+`;

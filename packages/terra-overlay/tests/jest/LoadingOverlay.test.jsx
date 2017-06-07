@@ -2,23 +2,44 @@ import React from 'react';
 import LoadingOverlay from '../../src/LoadingOverlay';
 
 describe('LoadingOverlay', () => {
-  const defaultRender = <LoadingOverlay />;
-
-  // Snapshot Tests
-  it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
+  it('should render a null component when isOpen is not provided', () => {
+    const wrapper = shallow(<LoadingOverlay />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  // Prop Tests
-  it('should use the default value when no value is given', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.terra-Overlay').text()).toEqual('defualt');
-  });
+  describe('when isOpen is provided', () => {
+    describe('the default LoadingOverlay', () => {
+      const defaultRender = <LoadingOverlay isOpen />;
 
-  // Structure Tests
-  it('should have the class terra-LoadingOverlay', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('terra-LoadingOverlay');
+      it('should render a default component', () => {
+        const wrapper = shallow(defaultRender);
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('should have the class terra-LoadingOverlay', () => {
+        const wrapper = shallow(defaultRender);
+        expect(wrapper.prop('className')).toContain('terra-LoadingOverlay');
+      });
+
+      it('should have the default message of Loading...', () => {
+        const wrapper = shallow(defaultRender);
+        expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading...');
+      });
+    });
+
+    describe('when props specific to LoadingOverlay are provided', () => {
+      it('should render with message prop', () => {
+        const overlayRender = <LoadingOverlay isOpen message="Loading!" />;
+        const wrapper = shallow(overlayRender);
+        expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading!');
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('should render with isSpin', () => {
+        const overlayRender = <LoadingOverlay isOpen isSpin />;
+        const wrapper = shallow(overlayRender);
+        expect(wrapper).toMatchSnapshot();
+      });
+    });
   });
 });

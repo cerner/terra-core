@@ -1,0 +1,91 @@
+exports[`LoadingOverlay should render a null component when isOpen is not provided 1`] = `
+<Overlay
+  background="light"
+  backgroundStyle="light"
+  className="terra-LoadingOverlay"
+  isFixed={false}
+  isNotTrappedFocus={false}
+  isOpen={false}
+  isRelativeToContainer={false}
+  isScrollable={false}>
+  <IconSpinner
+    className="terra-LoadingOverlay-icon"
+    data-name="Layer 1"
+    isSpin={false}
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg" />
+  <span
+    className="terra-LoadingOverlay-message">
+    Loading...
+  </span>
+</Overlay>
+`;
+
+exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay should render a default component 1`] = `
+<Overlay
+  background="light"
+  backgroundStyle="light"
+  className="terra-LoadingOverlay"
+  isFixed={false}
+  isNotTrappedFocus={false}
+  isOpen={true}
+  isRelativeToContainer={false}
+  isScrollable={false}>
+  <IconSpinner
+    className="terra-LoadingOverlay-icon"
+    data-name="Layer 1"
+    isSpin={false}
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg" />
+  <span
+    className="terra-LoadingOverlay-message">
+    Loading...
+  </span>
+</Overlay>
+`;
+
+exports[`LoadingOverlay when isOpen is provided when props specific to LoadingOverlay are provided should render with isSpin 1`] = `
+<Overlay
+  background="light"
+  backgroundStyle="light"
+  className="terra-LoadingOverlay"
+  isFixed={false}
+  isNotTrappedFocus={false}
+  isOpen={true}
+  isRelativeToContainer={false}
+  isScrollable={false}>
+  <IconSpinner
+    className="terra-LoadingOverlay-icon"
+    data-name="Layer 1"
+    isSpin={true}
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg" />
+  <span
+    className="terra-LoadingOverlay-message">
+    Loading...
+  </span>
+</Overlay>
+`;
+
+exports[`LoadingOverlay when isOpen is provided when props specific to LoadingOverlay are provided should render with message prop 1`] = `
+<Overlay
+  background="light"
+  backgroundStyle="light"
+  className="terra-LoadingOverlay"
+  isFixed={false}
+  isNotTrappedFocus={false}
+  isOpen={true}
+  isRelativeToContainer={false}
+  isScrollable={false}>
+  <IconSpinner
+    className="terra-LoadingOverlay-icon"
+    data-name="Layer 1"
+    isSpin={false}
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg" />
+  <span
+    className="terra-LoadingOverlay-message">
+    Loading!
+  </span>
+</Overlay>
+`;

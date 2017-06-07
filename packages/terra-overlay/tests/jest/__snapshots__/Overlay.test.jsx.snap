@@ -1,0 +1,186 @@
+exports[`Overlay should render a null component when isOpen is not provided 1`] = `null`;
+
+exports[`Overlay when isOpen is provided -backgroundStyle- should render with the clear backgroundStyle 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--clear"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -backgroundStyle- should render with the dark backgroundStyle 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--dark"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -backgroundStyle- should render with the light backgroundStyle 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -default Overlay when isOpen- should render a default component 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -isRelativeToContainer specific props- should render with isFixed 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--container terra-Overlay--light"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -isRelativeToContainer specific props- should render with isNotTrappedFocus 1`] = `
+<div
+  className="terra-Overlay terra-Overlay--container terra-Overlay--light"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  role="presentation"
+  tabIndex="0">
+  <div
+    className="terra-Overlay-content" />
+</div>
+`;
+
+exports[`Overlay when isOpen is provided -isRelativeToContainer specific props- should render with isRelativeToContainer 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--container terra-Overlay--light"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with content 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content">
+      Overlay message
+    </div>
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light terra-Overlay--scrollable"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with onRequestClose 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="presentation"
+    tabIndex="0">
+    <div
+      className="terra-Overlay-content" />
+  </div>
+</FocusTrap>
+`;
