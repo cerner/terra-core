@@ -35,8 +35,8 @@ module.exports = {
       .assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected')
       .assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
   },
-  'Displays items in the multi select list for on change with click': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/on-change`);
+  'Display a multi select list and highlights the selected item(s) upon clicking': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/default`);
 
     browser.click('.terra-List .terra-ListItem:nth-child(1)');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
@@ -63,89 +63,145 @@ module.exports = {
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
   },
-  'Displays items in the multi select list for on change with enter': (browser) => {
+  'Display a multi select list and highlights the selected item(s) upon enter': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/default`);
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+  },
+  'Display a multi select list and highlights the selected item(s) upon space keydown': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/default`);
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+  },
+  'Display a multi select list  with max selection of 2 and highlights the selected item(s)': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/max-count`);
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.click('.terra-List .terra-ListItem:nth-child(2)');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+  },
+  'Triggers onChange for multi select list': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/on-change`);
 
     browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.ENTER);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
-
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
-
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
-
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
-
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
-  },
-  'Displays items in the multi select list with max selection of 2 for on change with click': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/max-count-on-change`);
-
-    browser.click('.terra-List .terra-ListItem:nth-child(1)');
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0');
 
     browser.click('.terra-List .terra-ListItem:nth-child(2)');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0, 1');
 
-    browser.click('.terra-List .terra-ListItem:nth-child(3)');
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0, 1, 2');
 
-    browser.click('.terra-List .terra-ListItem:nth-child(2)');
-    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
-    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
-
-    browser.click('.terra-List .terra-ListItem:nth-child(3)');
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.SPACE);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0, 2');
+
+    browser.click('.terra-List .terra-ListItem:nth-child(3)');
+    browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
+    browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0');
   },
-  'Displays items in the multi select list with max selection of 2 for on change with enter': (browser) => {
+  'Triggers onChange for multi select list with max selection of 2': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/max-count-on-change`);
 
     browser.sendKeys('.terra-List .terra-ListItem:nth-child(1)', browser.Keys.ENTER);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0');
 
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
+    browser.click('.terra-List .terra-ListItem:nth-child(2)');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0, 1');
 
     browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0, 1');
 
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.ENTER);
+    browser.sendKeys('.terra-List .terra-ListItem:nth-child(2)', browser.Keys.SPACE);
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0');
 
-    browser.sendKeys('.terra-List .terra-ListItem:nth-child(3)', browser.Keys.ENTER);
+    browser.click('.terra-List .terra-ListItem:nth-child(3)');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(1)', 'terra-ListItem--selected');
     browser.assert.cssClassNotPresent('.terra-List .terra-ListItem:nth-child(2)', 'terra-ListItem--selected');
     browser.assert.cssClassPresent('.terra-List .terra-ListItem:nth-child(3)', 'terra-ListItem--selected');
+    browser.assert.containsText('#selected-index', '0, 2');
   },
   'Displays a selected item in the multi select list that cannot be deselected': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/multi-select-list-tests/no-deselect`)

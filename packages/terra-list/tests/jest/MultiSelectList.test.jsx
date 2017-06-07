@@ -1,6 +1,12 @@
 import React from 'react';
 import MultiSelectList from '../../src/MultiSelectList';
 
+const item1 = <MultiSelectList.Item content={<p>text1</p>} className="stuff1" key="123" />;
+const item2 = <MultiSelectList.Item content={<p>text2</p>} className="stuff2" key="124" />;
+const item3 = <MultiSelectList.Item content={<p>text3</p>} className="stuff3" key="125" />;
+const item4 = <MultiSelectList.Item content={<p>text4</p>} className="stuff4" key="126" />;
+const item5 = <MultiSelectList.Item content={<p>text5</p>} className="stuff5" key="127" />;
+
 // Snapshot Tests
 it('should render a default component', () => {
   const compactTile = shallow(<MultiSelectList />);
@@ -8,26 +14,19 @@ it('should render a default component', () => {
 });
 
 it('should render with items', () => {
-  const item1 = <MultiSelectList.Item key="123" isSelectable />;
-  const item2 = <MultiSelectList.Item key="124" isSelectable />;
-  const item3 = <MultiSelectList.Item key="125" isSelectable />;
-  const item4 = <MultiSelectList.Item key="126" isSelectable />;
-  const item5 = <MultiSelectList.Item key="127" isSelectable />;
   const items = [item1, item2, item3, item4, item5];
   const multiSelect = shallow(<MultiSelectList>{items}</MultiSelectList>);
   expect(multiSelect).toMatchSnapshot();
 });
 
 it('should render with a selectable and non-selectable item', () => {
-  const item1 = <MultiSelectList.Item key="123" isSelectable />;
-  const item2 = <MultiSelectList.Item key="124" />;
-  const items = [item1, item2];
+  const item6 = <MultiSelectList.Item key="124" isSelectable={false} />;
+  const items = [item1, item6];
   const multiSelect = shallow(<MultiSelectList>{items}</MultiSelectList>);
   expect(multiSelect).toMatchSnapshot();
 });
 
 it('should render with isDivided', () => {
-  const item1 = <MultiSelectList.Item key="123" isSelectable />;
   const items = [item1];
   const multiSelect = shallow(<MultiSelectList isDivided>{items}</MultiSelectList>);
   expect(multiSelect).toMatchSnapshot();
@@ -35,16 +34,6 @@ it('should render with isDivided', () => {
 
 // Event Tests
 it('should select an item when maxSelectionCount is 2', () => {
-  const textContent1 = <p>text1</p>;
-  const textContent2 = <p>text2</p>;
-  const textContent3 = <p>text3</p>;
-  const textContent4 = <p>text4</p>;
-  const textContent5 = <p>text5</p>;
-  const item1 = <MultiSelectList.Item content={textContent1} className="stuff1" key="123" isSelectable />;
-  const item2 = <MultiSelectList.Item content={textContent2} className="stuff2" key="124" isSelectable />;
-  const item3 = <MultiSelectList.Item content={textContent3} className="stuff3" key="125" isSelectable />;
-  const item4 = <MultiSelectList.Item content={textContent4} className="stuff4" key="126" isSelectable />;
-  const item5 = <MultiSelectList.Item content={textContent5} className="stuff5" key="127" isSelectable />;
   const items = [item1, item2, item3, item4, item5];
   const multiSelect = shallow(<MultiSelectList maxSelectionCount={2}>{items}</MultiSelectList>);
 
@@ -66,8 +55,7 @@ it('should mount with no items', () => {
   expect(multiSelect).toMatchSnapshot();
 });
 
-it('should mount with one items', () => {
-  const item1 = <MultiSelectList.Item key="123" />;
-  const multiSelect = mount(<MultiSelectList>{item1}</MultiSelectList>);
+it('should mount with one item', () => {
+  const multiSelect = mount(<MultiSelectList>{[item1]}</MultiSelectList>);
   expect(multiSelect).toMatchSnapshot();
 });
