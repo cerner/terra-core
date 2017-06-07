@@ -3,6 +3,7 @@ import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-demographics-banner/docs/README.md';
+import { version } from 'terra-demographics-banner/package.json';
 import DemographicsBanner from 'terra-demographics-banner';
 
 import DemographicsBannerAdditionalAges from './DemographicsBannerAdditionalAges';
@@ -16,6 +17,7 @@ import DemographicsBannerSrc from '!raw-loader!terra-demographics-banner/src/Dem
 
 const DemographicsBannerExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={DemographicsBannerSrc} />
     <h1>Basic Demographics Banner</h1>
