@@ -32,24 +32,13 @@ const inputType = {
   MINUTE: 1,
 };
 
-const acceptableKeyCodes = {
+const keyCodes = {
   BACKSPACE: 8,
-  TAB: 9,
   ARROWLEFT: 37,
   ARROWUP: 38,
   ARROWRIGHT: 39,
   ARROWDOWN: 40,
   DELETE: 46,
-  DIGIT0: 48,
-  DIGIT1: 49,
-  DIGIT2: 50,
-  DIGIT3: 51,
-  DIGIT4: 52,
-  DIGIT5: 53,
-  DIGIT6: 54,
-  DIGIT7: 55,
-  DIGIT8: 56,
-  DIGIT9: 57,
 };
 
 class TimeInput extends React.Component {
@@ -77,14 +66,14 @@ class TimeInput extends React.Component {
   }
 
   handleHourBlur(event) {
-    this.handleBlur(inputType.HOUR, event);
+    this.handleBlur(event, inputType.HOUR);
   }
 
   handleMinuteBlur(event) {
-    this.handleBlur(inputType.MINUTE, event);
+    this.handleBlur(event, inputType.MINUTE);
   }
 
-  handleBlur(type, event) {
+  handleBlur(event, type) {
     let stateValue = event.target.value;
 
     // Prepend a 0 to the value when losing focus and the value is single digit.
@@ -108,6 +97,14 @@ class TimeInput extends React.Component {
   }
 
   handleChange(event, type) {
+    if (event.target.value.length > 0) {
+      const isNumeric = /^\d+$/.test(event.target.value);
+
+      if (!isNumeric) {
+        return;
+      }
+    }
+
     let inputValue = event.target.value;
     const stateValue = type === inputType.HOUR ? this.state.hour : this.state.minute;
     const maxValue = type === inputType.HOUR ? 23 : 59;
@@ -158,15 +155,11 @@ class TimeInput extends React.Component {
   }
 
   handleInputKeyDown(event, type) {
-    if (Object.values(acceptableKeyCodes).indexOf(event.keyCode) < 0) {
-      return;
-    }
-
     let stateValue = type === inputType.HOUR ? this.state.hour : this.state.minute;
     const maxValue = type === inputType.HOUR ? 23 : 59;
     let updateStateValue = false;
 
-    if (event.keyCode === acceptableKeyCodes.ARROWUP) {
+    if (event.keyCode === keyCodes.ARROWUP) {
       // Increment the value by 1 when arrow up is pressed.
       if (stateValue) {
         let numericMinute = Number(stateValue);
@@ -184,7 +177,7 @@ class TimeInput extends React.Component {
         stateValue = '00';
         updateStateValue = true;
       }
-    } else if (event.keyCode === acceptableKeyCodes.ARROWDOWN) {
+    } else if (event.keyCode === keyCodes.ARROWDOWN) {
       // Decrement the value by 1 when arrow down is pressed.
       if (stateValue) {
         let numericMinute = Number(stateValue);
@@ -202,7 +195,7 @@ class TimeInput extends React.Component {
         stateValue = '00';
         updateStateValue = true;
       }
-    } else if (event.keyCode === acceptableKeyCodes.ARROWRIGHT) {
+    } else if (event.keyCode === keyCodes.ARROWRIGHT) {
       if (type === inputType.HOUR) {
         // If the hour is empty or the cursor is after the value, move focus to the minute input when the right arrow is pressed.
         if (stateValue.length === 0 || stateValue.length === this.hourInput.textInput.selectionEnd) {
@@ -211,7 +204,7 @@ class TimeInput extends React.Component {
           event.preventDefault();
         }
       }
-    } else if (event.keyCode === acceptableKeyCodes.ARROWLEFT || event.keyCode === acceptableKeyCodes.DELETE || event.keyCode === acceptableKeyCodes.BACKSPACE) {
+    } else if (event.keyCode === keyCodes.ARROWLEFT || event.keyCode === keyCodes.DELETE || event.keyCode === keyCodes.BACKSPACE) {
       if (type === inputType.MINUTE) {
         // When the DELETE, BACK, or LEFT ARROW key is pressed and tf the cusor is at the left most position in the minute input, is empty or the cursor is before the value, move focus to the hour input when the left arrow is pressed.
         if (this.minuteInput.textInput.selectionEnd === 0) {
