@@ -1,7 +1,7 @@
 {
   "name": "terra-table",
   "main": "lib/Table.js",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "The terra-table component provides user a way to render data in a tabular format",
   "repository": {
     "type": "git",
