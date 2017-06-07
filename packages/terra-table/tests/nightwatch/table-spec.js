@@ -70,14 +70,7 @@ module.exports = {
       .assert.elementPresent('tr.terra-Table--isSelectable');
   },
 
-  'Displays a table with only one row': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/single-row-table`);
-    browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
-    browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
-  },
-
-  'Display a table highlighting rows upon clicking': (browser) => {
+  'Display a selectable table and highlights the selected row upon clicking': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
     browser.click('.terra-Table-row:nth-child(1)');
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
@@ -113,7 +106,7 @@ module.exports = {
     browser.expect.element('.terra-Table-row:nth-child(3)').to.have.attribute('aria-selected').which.contains('true');
   },
 
-  'Display a table highlighting rows upon enter': (browser) => {
+  'Display a selectable table and highlights the selected row upon enter': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
 
     browser.sendKeys('.terra-Table-row:nth-child(1)', browser.Keys.ENTER);
@@ -127,6 +120,25 @@ module.exports = {
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
 
     browser.sendKeys('.terra-Table-row:nth-child(3)', browser.Keys.ENTER);
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+  },
+
+  'Display a selectable table and highlights the selected row upon space keydown': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table`);
+
+    browser.sendKeys('.terra-Table-row:nth-child(1)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+
+    browser.sendKeys('.terra-Table-row:nth-child(2)', browser.Keys.SPACE);
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+
+    browser.sendKeys('.terra-Table-row:nth-child(3)', browser.Keys.SPACE);
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
     browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
     browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
@@ -148,5 +160,53 @@ module.exports = {
       .assert.containsText('tbody tr:nth-child(1) td:nth-child(1)', 'Single')
       .assert.cssClassPresent('tbody tr:nth-child(4)', 'terra-Table-subheaderRow')
       .assert.containsText('tbody tr:nth-child(4) td:nth-child(1)', 'Married');
+  },
+
+  'Triggers onChange for selectable table upon clicking a row': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table-onchange`);
+
+    browser.click('.terra-Table-row:nth-child(1)');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+    browser.assert.containsText('#selected-index', '0');
+
+    browser.sendKeys('.terra-Table-row:nth-child(2)', browser.Keys.ENTER);
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+    browser.assert.containsText('#selected-index', '1');
+
+    browser.sendKeys('.terra-Table-row:nth-child(3)', browser.Keys.SPACE);
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(1)', 'terra-Table--isSelected');
+    browser.assert.cssClassNotPresent('.terra-Table-row:nth-child(2)', 'terra-Table--isSelected');
+    browser.assert.cssClassPresent('.terra-Table-row:nth-child(3)', 'terra-Table--isSelected');
+    browser.assert.containsText('#selected-index', '2');
+  },
+
+  'Displays a table with only one row': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/single-row-table`);
+    browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
+  },
+
+  'Displays a table with no rows': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-no-rows`);
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(1)');
+  },
+
+  'Displays a selectable table with only one row': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table-single-row`);
+    browser.assert.elementPresent('.terra-Table-row:nth-child(1)');
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(2)');
+  },
+
+  'Displays a selectable table with no rows': (browser) => {
+    browser
+    .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table-no-rows`);
+    browser.assert.elementNotPresent('.terra-Table-row:nth-child(1)');
   },
 };
