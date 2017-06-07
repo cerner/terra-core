@@ -13,6 +13,7 @@ import NumberFieldDocs from 'terra-form/docs/NumberField.md';
 import TextareaDocs from 'terra-form/docs/Textarea.md';
 import TextareaFieldDocs from 'terra-form/docs/TextareaField.md';
 import TextFieldDocs from 'terra-form/docs/TextField.md';
+import SelectFieldDocs from 'terra-form/docs/SelectField.md';
 
 import { version } from 'terra-form/package.json';
 
@@ -25,6 +26,7 @@ import NumberFieldSrc from '!raw-loader!terra-form/src/NumberField';
 import TextareaSrc from '!raw-loader!terra-form/src/Textarea';
 import TextareaFieldSrc from '!raw-loader!terra-form/src/TextareaField';
 import TextFieldSrc from '!raw-loader!terra-form/src/TextField';
+import SelectFieldSrc from '!raw-loader!terra-form/src/SelectField';
 
 // Example Files
 import ControlledInputDocs from './docs/ControlledInput.md';
@@ -37,6 +39,7 @@ import NumberFieldExamples from './examples/NumberField';
 import TextareaExamples from './examples/Textarea';
 import TextareaFieldExamples from './examples/TextareaField';
 import TextFieldExamples from './examples/TextField';
+import SelectFieldExamples from './examples/SelectField';
 
 const scrollToComponent = (id) => {
   document.querySelector(id).scrollIntoView();
@@ -75,6 +78,9 @@ const FormsExamples = () => (
     <div>
       <Button text="Controlled Input Example" variant="link" onClick={() => { scrollToComponent('#controlled-input-example'); }} />
     </div>
+    <div>
+      <Button text="Select Field" variant="link" onClick={() => { scrollToComponent('#select-field'); }} />
+    </div>
     <Markdown id="field-docs" src={FieldDocs} />
     <PropsTable id="field-props" src={FieldSrc} />
     <FieldExamples />
@@ -100,6 +106,10 @@ const FormsExamples = () => (
     <PropsTable id="text-field-props" src={TextFieldSrc} />
     <TextFieldExamples />
     <Markdown id="controlled-input-example" src={ControlledInputDocs} />
+    <Markdown id="select-docs" src={SelectFieldDocs} />
+    <PropsTable id="select-field-props" src={SelectFieldSrc} />
+    <SelectFieldExamples />
+    <Markdown id="controlled-example" src={ControlledInputDocs} />
     <ControlledInput />
   </div>
 );
