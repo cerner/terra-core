@@ -17,13 +17,19 @@ it('should render TableRows tag', () => {
   expect(tableRows).toMatchSnapshot();
 });
 
-it('should render with one row', () => {
+it('should render TableRows with no rows', () => {
+  const defaultTableRows = <Table.Rows />;
+  const tableRows = shallow(defaultTableRows);
+  expect(tableRows).toMatchSnapshot();
+});
+
+it('should render TableRows with one row', () => {
   const defaultTableRows = <Table.Rows>{[row1]}</Table.Rows>;
   const tableRows = shallow(defaultTableRows);
   expect(tableRows).toMatchSnapshot();
 });
 
-it('should render with multiple rows', () => {
+it('should render TableRows with multiple rows', () => {
   const defaultTableRows = <Table.Rows>{rows}</Table.Rows>;
   const tableRows = shallow(defaultTableRows);
   expect(tableRows).toMatchSnapshot();
