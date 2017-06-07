@@ -87,3 +87,23 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
   </TableRow>
 </TableRows>
 `;
+
+exports[`test should render SingleSelectableRows with no rows 1`] = `<TableRows />`;
+
+exports[`test should render SingleSelectableRows with one row 1`] = `
+<TableRows>
+  <TableRow
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;

@@ -14,7 +14,6 @@ exports[`test should render a default table 1`] = `
   </TableHeader>
   <TableRows>
     <TableRow
-      isSelectable={false}
       isSelected={false}>
       <TableCell
         content="John Smith" />
@@ -24,7 +23,6 @@ exports[`test should render a default table 1`] = `
         content="111-222-3333" />
     </TableRow>
     <TableRow
-      isSelectable={false}
       isSelected={false}>
       <TableCell
         content="John Smith" />
@@ -53,7 +51,6 @@ exports[`test should render a table without padding 1`] = `
   </TableHeader>
   <TableRows>
     <TableRow
-      isSelectable={false}
       isSelected={false}>
       <TableCell
         content="John Smith" />
@@ -63,7 +60,6 @@ exports[`test should render a table without padding 1`] = `
         content="111-222-3333" />
     </TableRow>
     <TableRow
-      isSelectable={false}
       isSelected={false}>
       <TableCell
         content="John Smith" />
@@ -92,7 +88,6 @@ exports[`test should render a table without zebra stripes 1`] = `
   </TableHeader>
   <TableRows>
     <TableRow
-      isSelectable={false}
       isSelected={false}>
       <TableCell
         content="John Smith" />
@@ -102,7 +97,6 @@ exports[`test should render a table without zebra stripes 1`] = `
         content="111-222-3333" />
     </TableRow>
     <TableRow
-      isSelectable={false}
       isSelected={false}>
       <TableCell
         content="John Smith" />
