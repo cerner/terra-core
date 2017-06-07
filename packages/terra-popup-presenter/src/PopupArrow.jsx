@@ -46,9 +46,7 @@ const PopupArrow = ({
   ]);
 
   return (
-    <div {...customProps} className={arrowClassNames} ref={refCallback}>
-      <div className="terra-PopupArrow-inner" />
-    </div>
+    <div {...customProps} className={arrowClassNames} ref={refCallback} />
   );
 };
 

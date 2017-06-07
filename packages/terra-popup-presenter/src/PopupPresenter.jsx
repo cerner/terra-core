@@ -132,9 +132,9 @@ class PopupPresenter extends React.Component {
     const offset = { vertical: 0, horizontal: 0 };
     if (targetNode) {
       if (PopupPresenter.isVerticalAttachment(attachment) && targetNode.clientWidth <= arrowOffset * 2) {
-        if (attachment.horizontal === 'left') { 
+        if (attachment.horizontal === 'left') {
           offset.horizontal = arrowOffset - (targetNode.clientWidth / 2);
-        } else if (attachment.horizontal === 'right') { 
+        } else if (attachment.horizontal === 'right') {
           offset.horizontal = -(arrowOffset - (targetNode.clientWidth / 2));
         }
       }

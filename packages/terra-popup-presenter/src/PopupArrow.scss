@@ -3,7 +3,7 @@
 $terra-popup-arrow-size: 10px;
 $terra-popup-arrow-color: rgba(178, 181, 182, 0.9);
 $terra-popup-arrow-inner-size: 9px;
-$terra-popup-arrow-inner-inset-size: 2px;
+$terra-popup-arrow-inner-inset-size: 1px;
 $terra-popup-arrow-inner-color: $terra-white;
 
 // These are relative to screen coordinates, so no bi-di concerns
@@ -16,13 +16,14 @@ $terra-popup-arrow-inner-color: $terra-white;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   width: 0;
-}
 
-.terra-PopupArrow-inner {
-  border: $terra-popup-arrow-inner-size solid transparent;
-  height: 0;
-  position: absolute;
-  width: 0;  
+  &::after {
+    border: $terra-popup-arrow-inner-size solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;  
+  }
 }
 
 .terra-PopupArrow--alignTop {
@@ -32,7 +33,7 @@ $terra-popup-arrow-inner-color: $terra-white;
   top: 0;
   transform: translate3d(-100%, 0, 0);
 
-  .terra-PopupArrow-inner {
+  &::after {
     border-bottom-color: $terra-popup-arrow-inner-color;
     border-top-width: 0;
     left: -$terra-popup-arrow-inner-size;
@@ -47,7 +48,7 @@ $terra-popup-arrow-inner-color: $terra-white;
   top: 100%;
   transform: translate3d(-100%, -100%, 0);
 
-  .terra-PopupArrow-inner {
+  &::after {
     border-bottom-width: 0;
     border-top-color: $terra-popup-arrow-inner-color;
     bottom: $terra-popup-arrow-inner-inset-size;
@@ -62,7 +63,7 @@ $terra-popup-arrow-inner-color: $terra-white;
   left: 0;
   transform: translate3d(0, -100%, 0);
 
-  .terra-PopupArrow-inner {
+  &::after {
     border-left-width: 0;
     border-right-color: $terra-popup-arrow-inner-color;
     left: $terra-popup-arrow-inner-inset-size;
@@ -77,7 +78,7 @@ $terra-popup-arrow-inner-color: $terra-white;
   left: 100%;
   transform: translate3d(-100%, -100%, 0);
 
-  .terra-PopupArrow-inner {
+  &::after {
     border-left-color: $terra-popup-arrow-inner-color;
     border-right-width: 0;
     right: $terra-popup-arrow-inner-inset-size;
