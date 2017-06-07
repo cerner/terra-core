@@ -1,4 +1,4 @@
-exports[`test renders small banner that contains all valid information 1`] = `
+exports[`test renders large banner that contains all valid information 1`] = `
 <section
   applicationRows={
     Array [
