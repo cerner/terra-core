@@ -86,7 +86,7 @@ class App extends React.Component {
       </Base>
     );
   }
-)
+}
 
 App.propTypes = propTypes;
 
