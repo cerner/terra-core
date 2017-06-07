@@ -2,7 +2,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { personDetails, applicationIdentifiers } from './_utils';
+import { personDetails, applicationIdentifiers } from './_sharedObjects';
 
 export default (props) => {
   const {
