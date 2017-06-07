@@ -15,6 +15,10 @@ const propTypes = {
   * Incidates if the icon spinner should spin
   */
   isSpin: PropTypes.bool,
+  /**
+  * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
+  */
+  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /*
   * Incidates if the overlay is open
   */
@@ -33,22 +37,17 @@ const defaultProps = {
   message: 'Loading...',
   isSpin: false,
   isOpen: false,
+  background: 'light',
   isRelativeToContainer: false,
   isFixed: false,
 };
 
-const LoadingOverlay = ({ message, isSpin, ...customProps }) => {
-  const attributes = Object.assign({}, customProps);
-
-  // if not fullscreen, to not trap focus to overlay.??
-
-  return (
-    <Overlay className="'terra-LoadingOverlay'" {...attributes} >
-      <IconSpinner className=".terra-LoadingOverlay-icon" isSpin={isSpin} />
-      <span className=".terra-LoadingOverlay-message">{message}</span>
-    </Overlay>
-  );
-};
+const LoadingOverlay = ({ message, isSpin, ...customProps }) => (
+  <Overlay className="terra-LoadingOverlay" {...customProps} >
+    <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isSpin} />
+    <span className="terra-LoadingOverlay-message">{message}</span>
+  </Overlay>
+);
 
 LoadingOverlay.propTypes = propTypes;
 LoadingOverlay.defaultProps = defaultProps;

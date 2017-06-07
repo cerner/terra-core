@@ -6,11 +6,22 @@
 }
 
 .terra-Overlay {
-  background: #d3d3d3;
   opacity: 0.8;
   outline: none;
   overflow: hidden;
   z-index: 100;
+}
+
+.terra-Overlay--clear {
+  background: none;
+}
+
+.terra-Overlay--dark {
+  background: #4e5558;
+}
+
+.terra-Overlay--light {
+  background: #d3d4d5;
 }
 
 .terra-Overlay--fullscreen {

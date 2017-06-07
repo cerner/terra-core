@@ -15,23 +15,27 @@ const propTypes = {
   */
   isOpen: PropTypes.bool,
   /**
+  * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
+  */
+  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
+  /**
   * Incidates if the overlay content is scrollable
   */
   isScrollable: PropTypes.bool,
-  /**
-  * Indicates if the overlay is relative to the triggering container
-  */
-  isRelativeToContainer: PropTypes.bool,
-  /**
-  * Indicates if the background scrolling is enables
-  */
-  isFixed: PropTypes.bool,
   /**
   * Callback triggered on overlay click or ESC key
   */
   onRequestClose: PropTypes.func,
   /**
-  * Indicates f the focus is not trapped to overlay content when overlay is relative to container
+  * Indicates if the overlay is relative to the triggering container
+  */
+  isRelativeToContainer: PropTypes.bool,
+  /**
+  * Indicates if the background scrolling is enables when overlay relative to container is open
+  */
+  isFixed: PropTypes.bool,
+  /**
+  * Indicates if the focus is not trapped to overlay content when overlay is relative to container
   */
   isNotTrappedFocus: PropTypes.bool,
 };
@@ -43,6 +47,7 @@ const KEYCODES = {
 const defaultProps = {
   children: null,
   isOpen: false,
+  backgroundStyle: 'light',
   isScrollable: false,
   isRelativeToContainer: false,
   isFixed: false,
@@ -99,7 +104,7 @@ class Overlay extends React.Component {
   }
 
   render() {
-    const { children, isOpen, isScrollable, isRelativeToContainer, isFixed, isNotTrappedFocus, ...customProps } = this.props;
+    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, isFixed, isNotTrappedFocus, ...customProps } = this.props;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
     if (!isOpen) {
       this.resetBackground();
@@ -110,6 +115,7 @@ class Overlay extends React.Component {
     const OverlayClassNames = classNames([
       'terra-Overlay',
       { [`terra-Overlay--${type}`]: type },
+      { [`terra-Overlay--${backgroundStyle}`]: backgroundStyle },
       { 'terra-Overlay--scrollable': isScrollable },
       attributes.className,
     ]);
