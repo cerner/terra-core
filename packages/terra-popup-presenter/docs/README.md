@@ -1,4 +1,4 @@
-# Terra Popup Presenter Documentation
+# Terra Popup Presenter
 
 The Terra Popup Presenter is a wrapping high order component, that launches a tether displayed content.
 
@@ -64,4 +64,6 @@ class PopupExampleComponent extends React.Component {
     );
   }
 }
+
+export default PopupExampleComponent;
 ```

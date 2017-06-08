@@ -1,8 +1,7 @@
 import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
-import ExamplePopupContent from './ExamplePopupContent';
 
-class PopupPresenterStandard extends React.Component {
+class PopupPresenterLeft extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -29,23 +28,21 @@ class PopupPresenterStandard extends React.Component {
   }
 
   render() {
-    const contentSection = <ExamplePopupContent />;
-
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <PopupPresenter
           isOpen={this.state.open}
-          targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
+          targetRef={this.getButtonNode}
         >
-          {contentSection}
+          <p>this is popup content</p>
         </PopupPresenter>
-        <button onClick={this.handleButtonClick}>
-          Standard Popup
+        <button id="left-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Left Popup
         </button>
       </div>
     );
   }
 }
 
-export default PopupPresenterStandard;
+export default PopupPresenterLeft;

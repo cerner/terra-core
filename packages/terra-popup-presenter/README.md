@@ -1,4 +1,4 @@
-# Terra Modal
+# Terra Popup Presenter
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-popup-presenter.svg)](https://www.npmjs.org/package/terra-popup-presenter)

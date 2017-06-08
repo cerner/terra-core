@@ -2,7 +2,7 @@ import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
 import ExamplePopupContent from './ExamplePopupContent';
 
-class PopupPresenterStandard extends React.Component {
+class PopupPresenterRight extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -41,11 +41,11 @@ class PopupPresenterStandard extends React.Component {
           {contentSection}
         </PopupPresenter>
         <button onClick={this.handleButtonClick}>
-          Standard Popup
+          Right Popup
         </button>
       </div>
     );
   }
 }
 
-export default PopupPresenterStandard;
+export default PopupPresenterRight;
