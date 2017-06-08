@@ -29,7 +29,7 @@ const TestLinks = () => (
       <li><Link to="/tests/progress-bar-tests">ProgressBar Tests</Link></li>
       <li><Link to="/tests/grid-tests">Grid Tests</Link></li>
       <li><Link to="/tests/search-field-tests">Search Field</Link></li>
-      <li><Link to="/tests/popup-presenter-tests">Popup Tests</Link></li>
+      <li><Link to="/tests/popup-tests">Popup Tests</Link></li>
     </ul>
   </div>
 );

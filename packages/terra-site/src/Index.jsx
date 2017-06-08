@@ -20,7 +20,7 @@ import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
-import PopupPresenterExamples from './examples/popup-presenter/Index';
+import PopupExamples from './examples/popup/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SearchFieldExamples from './examples/search-field/Index';
@@ -53,7 +53,7 @@ import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
-import PopupPresenterTestRoutes from 'terra-popup-presenter/tests/nightwatch/PopupPresenterTestRoutes';
+import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
 import TestLinks from './TestLinks';
 // Remove eslint-disable as these pacakges are published
 /* eslint-disable import/no-extraneous-dependencies */
@@ -81,7 +81,7 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
       <Route path="modal" component={ModalExamples} />
-      <Route path="popup-presenter" component={PopupPresenterExamples} />
+      <Route path="popup" component={PopupExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
@@ -113,7 +113,7 @@ ReactDOM.render((
     {ProgressBarTestRoutes}
     {GridTestRoutes}
     {SearchFieldTestRoutes}
-    {PopupPresenterTestRoutes}
+    {PopupTestRoutes}
     {FormTestRoutes}
   </Router>
 ), document.getElementById('root'));
