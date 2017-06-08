@@ -1,13 +1,15 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class MediumPopup extends React.Component {
+class BoundedPopup extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setParentNode = this.setParentNode.bind(this);
+    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: false };
   }
 
@@ -17,6 +19,14 @@ class MediumPopup extends React.Component {
 
   getButtonNode() {
     return this.buttonNode;
+  }
+
+  setParentNode(node) {
+    this.parentNode = node;
+  }
+
+  getParentNode() {
+    return this.parentNode;
   }
 
   handleButtonClick() {
@@ -29,23 +39,21 @@ class MediumPopup extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ height: '175px', width: '450px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
-          contentAttachment="top right"
-          contentDimensions="25x 25x"
-          isArrowDisplayed
+          boundingRef={this.getParentNode}
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p>this is popup content</p>
+          <p style={{ padding: '5px' }}>This popup is bounded by height.</p>
         </Popup>
-        <button id="medium-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Medium Popup
+        <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Bounded Height
         </button>
       </div>
     );
   }
 }
 
-export default MediumPopup;
+export default BoundedPopup;

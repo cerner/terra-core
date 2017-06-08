@@ -1,13 +1,15 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class MediumPopup extends React.Component {
+class OffsetPopup extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setParentNode = this.setParentNode.bind(this);
+    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: false };
   }
 
@@ -17,6 +19,14 @@ class MediumPopup extends React.Component {
 
   getButtonNode() {
     return this.buttonNode;
+  }
+
+  setParentNode(node) {
+    this.parentNode = node;
+  }
+
+  getParentNode() {
+    return this.parentNode;
   }
 
   handleButtonClick() {
@@ -29,23 +39,22 @@ class MediumPopup extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
-          contentAttachment="bottom center"
-          contentDimensions="50x 50x"
+          boundingRef={this.getParentNode}
+          contentAttachment="top right"
+          contentDimensions="10x 10x"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p>this is popup content</p>
+          <p style={{padding: '5px'}}>This popup arrow was repositioned.</p>
         </Popup>
-        <button id="large-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Large Popup
-        </button>
+        <div id="offset-button" style={{position: 'absolute', left: '10px', height: '10px', width: '10px', backgroundColor: '#c00'}} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>
     );
   }
 }
 
-export default MediumPopup;
+export default OffsetPopup;

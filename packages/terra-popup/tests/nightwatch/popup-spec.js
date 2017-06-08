@@ -77,7 +77,27 @@ module.exports = {
       .expect.element('.terra-PopupContent-header').to.be.present;
   },
 
-  'disableHeader prop': (browser) => {
+  'boundingRef prop - BOUNDED HEIGHT': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bounded-height`)
+      .waitForElementPresent('#bounded-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#bounded-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 175px; width: 400px;');
+  },
+
+  'boundingRef prop - BOUNDED WIDTH': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bounded-width`)
+      .waitForElementPresent('#bounded-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#bounded-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 225px; width: 350px;');
+  },
+
+  'boundingRef prop && disableHeader prop': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/no-header`)
       .waitForElementPresent('#no-header-button', 1000)
@@ -99,38 +119,134 @@ module.exports = {
       .waitForElementPresent('.terra-PopupArrow.terra-TestClass-arrow', 1000);
   },
 
-  'contentDimension prop - SMALL': (browser) => {
+  'contentAttachment prop - HORIZONTAL CENTER': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/small`)
-      .waitForElementPresent('#small-button', 1000)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/horizontal-center`)
+      .waitForElementPresent('#alignment-button', 1000)
       .waitForElementNotPresent('.terra-PopupContent', 1000)
-      .click('#small-button')
+      .click('#alignment-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('top: 55px;');
+  },
+
+  'contentAttachment prop - VERTICAL LEFT': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/vertical-left`)
+      .waitForElementPresent('#alignment-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#alignment-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 20px;');
+  },
+
+  'contentAttachment prop - VERTICAL CENTER': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/vertical-center`)
+      .waitForElementPresent('#alignment-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#alignment-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 90px;');
+  },
+
+  'contentAttachment prop - VERTICAL RIGHT': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/vertical-right`)
+      .waitForElementPresent('#alignment-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#alignment-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 160px;');
+  },
+
+  'contentAttachment prop - MIDDLE LEFT RESPOSITION': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/left-arrow-offset`)
+      .waitForElementPresent('#offset-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#offset-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('top: 25px;');
+  },
+
+  'contentAttachment prop - MIDDLE RIGHT RESPOSITION': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/right-arrow-offset`)
+      .waitForElementPresent('#offset-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#offset-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('top: 85px;');
+  },
+
+  'contentAttachment prop - TOP RIGHT RESPOSITION': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/top-arrow-offset`)
+      .waitForElementPresent('#offset-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#offset-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 25px;');
+  },
+
+  'contentAttachment prop - BOTTOM LEFT RESPOSITION': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bottom-arrow-offset`)
+      .waitForElementPresent('#offset-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#offset-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 155px;');
+  },
+
+  'contentDimension prop - 10X': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/dimension-10x`)
+      .waitForElementPresent('#dimension-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#dimension-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
       .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 90px; width: 160px;');
   },
 
-  // 'contentDimension prop - MEDIUM': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/medium`)
-  //     .waitForElementPresent('#default-popup-button', 1000)
-  //     .waitForElementNotPresent('.terra-Popup', 1000)
-  //     .click('#default-popup-button')
-  //     .waitForElementPresent('.terra-Popup', 1000)
-  //     .moveTo('#default-popup-button', 100, 0)
-  //     .mouseButtonClick(0)
-  //     .waitForElementNotPresent('.terra-Popup', 1000);
-  // },
+  'contentDimension prop - 25X': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/dimension-25x`)
+      .waitForElementPresent('#dimension-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#dimension-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 225px; width: 400px;');
+  },
 
-  // 'contentDimension prop - LARGE': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/large`)
-  //     .waitForElementPresent('#default-popup-button', 1000)
-  //     .waitForElementNotPresent('.terra-Popup', 1000)
-  //     .click('#default-popup-button')
-  //     .waitForElementPresent('.terra-Popup', 1000)
-  //     .moveTo('#default-popup-button', 100, 0)
-  //     .mouseButtonClick(0)
-  //     .waitForElementNotPresent('.terra-Popup', 1000);
-  // },
+  'contentDimension prop - 50X': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/dimension-50x`)
+      .waitForElementPresent('#dimension-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#dimension-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 450px; width: 800px;');
+  },
+
+  'contentDimension prop - 75X': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/dimension-75x`)
+      .waitForElementPresent('#dimension-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#dimension-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 675px; width: 1200px;');
+  },
+
+  'contentDimension prop - 100X': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/dimension-100x`)
+      .waitForElementPresent('#dimension-button', 1000)
+      .waitForElementNotPresent('.terra-PopupContent', 1000)
+      .click('#dimension-button')
+      .waitForElementPresent('.terra-PopupContent', 1000)
+      .expect.element('.terra-PopupContent-inner').to.have.attribute('style').which.equals('height: 900px; width: 1600px;');
+  },
 
 };

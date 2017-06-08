@@ -42,7 +42,7 @@ class ClassNamePopup extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p>this is popup content</p>
+          <p style={{ padding: '5px' }}>The arrow, content, and overlay have classes.</p>
         </Popup>
         <button id="class-name-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Class Name Popup

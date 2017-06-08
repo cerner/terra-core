@@ -47,7 +47,7 @@ class NoHeaderPopup extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ height: '200px', width: '200px' }}>this is popup content</p>
+          <p style={{ padding: '5px' }}>This popup is bounded with header disabled.</p>
         </Popup>
         <button id="no-header-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           No Header Popup

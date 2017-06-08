@@ -39,17 +39,17 @@ class BoundedPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ height: '275px', width: '350px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
           boundingRef={this.getParentNode}
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ padding: '5px' }}>This popup is bounded and presents a header.</p>
+          <p style={{ height: '200px', width: '200px' }}>This popup is bounded by width.</p>
         </Popup>
         <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Bounded Popup
+          Bounded Width
         </button>
       </div>
     );

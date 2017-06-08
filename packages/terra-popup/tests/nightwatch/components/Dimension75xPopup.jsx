@@ -1,7 +1,7 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class BoundedPopup extends React.Component {
+class DimensionPopup extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -39,21 +39,24 @@ class BoundedPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
-        <Popup
-          boundingRef={this.getParentNode}
-          isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
-          targetRef={this.getButtonNode}
-        >
-          <p style={{ padding: '5px' }}>This popup is bounded and presents a header.</p>
-        </Popup>
-        <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Bounded Popup
-        </button>
-      </div>
+      <div style={{ position: 'relative', height: '100%', width: '100%', overflow: 'auto' }}>
+        <div style={{ height: '675px', width: '1250px', background: 'aliceblue' }} ref={this.setParentNode}>
+          <Popup
+            boundingRef={this.getParentNode}
+            contentDimensions="75x 75x"
+            isOpen={this.state.open}
+            onRequestClose={this.handleRequestClose}
+            targetRef={this.getButtonNode}
+          >
+            <p>This popup is 75x by 75x.</p>
+          </Popup>
+          <button id="dimension-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+            75x Popup
+          </button>
+        </div>
+      </div>  
     );
   }
 }
 
-export default BoundedPopup;
+export default DimensionPopup;

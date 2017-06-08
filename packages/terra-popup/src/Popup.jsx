@@ -50,8 +50,6 @@ const COMBINE = () => {
 
 const DIMENSION_COMBINATIONS = COMBINE();
 
-const DEFAULT_OFFSET = { vertical: 0, horizontal: 0 };
-
 const propTypes = {
   /**
    * Bounding container for the popup, will use window if no value provided.
@@ -132,7 +130,7 @@ class Popup extends React.Component {
   }
 
   static getContentOffset(attachment, targetNode, arrowOffset) {
-    const offset = DEFAULT_OFFSET;
+    const offset = { vertical: 0, horizontal: 0 };
     if (targetNode) {
       if (Popup.isVerticalAttachment(attachment) && targetNode.clientWidth <= arrowOffset * 2) {
         if (attachment.horizontal === 'left') {
@@ -240,11 +238,11 @@ class Popup extends React.Component {
     this.handleTetherRepositioned = this.handleTetherRepositioned.bind(this);
     this.setArrowNode = this.setArrowNode.bind(this);
     this.setContentNode = this.setContentNode.bind(this);
-    this.offset = DEFAULT_OFFSET;
+    this.offset = { vertical: 0, horizontal: 0 };
   }
 
   componentDidUpdate() {
-    this.offset = DEFAULT_OFFSET;
+    this.offset = { vertical: 0, horizontal: 0 };
   }
 
   setArrowPosition(targetBounds, contentBounds) {

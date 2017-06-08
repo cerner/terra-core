@@ -1,7 +1,7 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class BoundedPopup extends React.Component {
+class OffsetPopup extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -39,21 +39,22 @@ class BoundedPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
           boundingRef={this.getParentNode}
+          contentAttachment="middle left"
+          contentDimensions="10x 10x"
+          isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ padding: '5px' }}>This popup is bounded and presents a header.</p>
+          <p style={{padding: '5px'}}>This popup arrow was repositioned.</p>
         </Popup>
-        <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Bounded Popup
-        </button>
+        <div id="offset-button" style={{position: 'absolute', top: '10px', height: '10px', width: '10px', backgroundColor: '#c00'}} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>
     );
   }
 }
 
-export default BoundedPopup;
+export default OffsetPopup;
