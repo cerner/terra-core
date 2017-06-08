@@ -1,6 +1,6 @@
 {
   "name": "terra-site",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Documentation Site for Functional Verification",
   "repository": {
     "type": "git",
@@ -44,7 +44,7 @@
     "terra-icon": "^0.x",
     "terra-image": "^0.x",
     "terra-legacy-theme": "^0.x",
-    "terra-list": "^0.4.0",
+    "terra-list": "^0.5.0",
     "terra-markdown": "^0.x",
     "terra-mixins": "^1.0.1",
     "terra-modal": "^0.x",
@@ -55,7 +55,7 @@
     "terra-search-field": "^0.1.0",
     "terra-slide-panel": "^0.x",
     "terra-status": "^0.x",
-    "terra-table": "^0.x"
+    "terra-table": "^0.6.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
