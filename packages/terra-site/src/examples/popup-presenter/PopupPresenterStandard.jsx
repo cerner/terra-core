@@ -7,6 +7,7 @@ class PopupPresenterStandard extends React.Component {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
@@ -28,9 +29,11 @@ class PopupPresenterStandard extends React.Component {
     this.setState({ open: false });
   }
 
+  handleOnChange() {
+    this.setState({ open: false });
+  }
+  
   render() {
-    const contentSection = <ExamplePopupContent />;
-
     return (
       <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
         <PopupPresenter
@@ -38,10 +41,10 @@ class PopupPresenterStandard extends React.Component {
           targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
         >
-          {contentSection}
+          <ExamplePopupContent onChange={this.handleOnChange} />
         </PopupPresenter>
         <button onClick={this.handleButtonClick}>
-          Standard Popup
+          Default Popup
         </button>
       </div>
     );

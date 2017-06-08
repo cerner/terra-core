@@ -2,11 +2,12 @@ import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
 import ExamplePopupContent from './ExamplePopupContent';
 
-class PopupPresenterRight extends React.Component {
+class PopupPresenterTopLeft extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
@@ -28,24 +29,28 @@ class PopupPresenterRight extends React.Component {
     this.setState({ open: false });
   }
 
+  handleOnChange() {
+    this.setState({ open: false });
+  }
+  
   render() {
-    const contentSection = <ExamplePopupContent />;
-
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <PopupPresenter
+          contentAttachment="top left"
+          isArrowDisplayed
           isOpen={this.state.open}
-          targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
+          targetRef={this.getButtonNode}
         >
-          {contentSection}
+          <ExamplePopupContent onChange={this.handleOnChange} />
         </PopupPresenter>
-        <button onClick={this.handleButtonClick}>
-          Right Popup
+        <button onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Top Left Popup
         </button>
       </div>
     );
   }
 }
 
-export default PopupPresenterRight;
+export default PopupPresenterTopLeft;

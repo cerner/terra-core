@@ -1,5 +1,6 @@
 import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
+import ExamplePopupContent from './ExamplePopupContent';
 import './PopupPresenterClassName.scss';
 
 class PopupPresenterClassName extends React.Component {
@@ -7,6 +8,7 @@ class PopupPresenterClassName extends React.Component {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
@@ -28,6 +30,10 @@ class PopupPresenterClassName extends React.Component {
     this.setState({ open: false });
   }
 
+  handleOnChange() {
+    this.setState({ open: false });
+  }
+  
   render() {
     return (
       <div>
@@ -40,7 +46,7 @@ class PopupPresenterClassName extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p>this is popup content</p>
+          <ExamplePopupContent onChange={this.handleOnChange} />
         </PopupPresenter>
         <button id="class-name-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Class Name Popup

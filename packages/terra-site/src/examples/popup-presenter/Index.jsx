@@ -2,6 +2,7 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
+import Grid from 'terra-grid';
 import ReadMe from 'terra-popup-presenter/docs/README.md';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -17,32 +18,86 @@ import PopupPresenterSmall from './PopupPresenterSmall';
 import PopupPresenterMedium from './PopupPresenterMedium';
 import PopupPresenterLarge from './PopupPresenterLarge';
 import PopupPresenterHuge from './PopupPresenterHuge';
-
+import PopupPresenterBottomCenter from './PopupPresenterBottomCenter';
+import PopupPresenterBottomLeft from './PopupPresenterBottomLeft';
+import PopupPresenterBottomRight from './PopupPresenterBottomRight';
+import PopupPresenterMiddleCenter from './PopupPresenterMiddleCenter';
+import PopupPresenterMiddleLeft from './PopupPresenterMiddleLeft';
+import PopupPresenterMiddleRight from './PopupPresenterMiddleRight';
+import PopupPresenterTopCenter from './PopupPresenterTopCenter';
+import PopupPresenterTopLeft from './PopupPresenterTopLeft';
+import PopupPresenterTopRight from './PopupPresenterTopRight';
 
 const PopupPresenterExamples = () => (
   <div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={PopupPresenterSrc} />
-    <h2 id="standard-popup" style={{paddingTop: '20px'}}>Standard PopupPresenter</h2>
+    <h2 id="standard-popup" style={{paddingTop: '20px'}}>PopupPresenter Default Props</h2>
     <PopupPresenterStandard />
-    <h2 id="arrow-popup" style={{paddingTop: '20px'}}>Arrow PopupPresenter</h2>
+    <h2 id="arrow-popup" style={{paddingTop: '20px'}}>PopupPresenter Display With Arrow</h2>
     <PopupPresenterArrow />
-    <h2 id="bounded-popup" style={{paddingTop: '20px'}}>Bounded PopupPresenter</h2>
+    <h2 id="alignment-popups" style={{paddingTop: '20px'}}>PopupPresenter Attachments</h2>
+    <Grid>
+      <Grid.Row>
+        <Grid.Column col={2}>
+          <PopupPresenterBottomCenter/>
+        </Grid.Column>
+        <Grid.Column col={2}>
+          <PopupPresenterBottomLeft />
+        </Grid.Column>
+        <Grid.Column col={2}>
+          <PopupPresenterBottomRight />
+        </Grid.Column>
+      </Grid.Row>  
+      <Grid.Row>
+        <Grid.Column col={2}>
+          <PopupPresenterMiddleCenter />
+        </Grid.Column>
+        <Grid.Column col={2}>
+          <PopupPresenterMiddleLeft />
+        </Grid.Column>
+        <Grid.Column col={2}>
+          <PopupPresenterMiddleRight />
+        </Grid.Column>
+      </Grid.Row>  
+      <Grid.Row>  
+        <Grid.Column col={2}>
+          <PopupPresenterTopCenter />
+        </Grid.Column>
+        <Grid.Column col={2}>
+          <PopupPresenterTopLeft />
+        </Grid.Column>
+        <Grid.Column col={2}>
+          <PopupPresenterTopRight />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    <h2 id="bounded-popup" style={{paddingTop: '20px'}}>PopupPresenter Bounded</h2>
     <PopupPresenterBounded />
-    <h2 id="no-header-popup" style={{paddingTop: '20px'}}>No Header PopupPresenter</h2>
+    <h2 id="no-header-popup" style={{paddingTop: '20px'}}>PopupPresenter Bounded With No Header</h2>
     <PopupPresenterNoHeader />
-    <h2 id="class-name-popup" style={{paddingTop: '20px'}}>Class Names PopupPresenter</h2>
+    <h2 id="class-name-popup" style={{paddingTop: '20px'}}>PopupPresenter Adding Class Styles</h2>
     <PopupPresenterClassName />
-    <h2 id="10x-popup" style={{paddingTop: '20px'}}>10x PopupPresenter</h2>
-    <PopupPresenterTiny/>
-    <h2 id="25x-popup" style={{paddingTop: '20px'}}>25x PopupPresenter</h2>
-    <PopupPresenterSmall />
-    <h2 id="50x-popup" style={{paddingTop: '20px'}}>50x PopupPresenter</h2>
-    <PopupPresenterMedium />
-    <h2 id="75x-popup" style={{paddingTop: '20px'}}>75x PopupPresenter</h2>
-    <PopupPresenterLarge />
-    <h2 id="100x-popup" style={{paddingTop: '20px'}}>100x PopupPresenter</h2>
-    <PopupPresenterHuge />
+    <h2 id="size-popups" style={{paddingTop: '20px'}}>PopupPresenter Dimensions</h2>
+    <Grid>
+      <Grid.Row>
+        <Grid.Column col={1}>
+          <PopupPresenterTiny/>
+        </Grid.Column>
+        <Grid.Column col={1}>
+          <PopupPresenterSmall />
+        </Grid.Column>
+        <Grid.Column col={1}>
+          <PopupPresenterMedium />
+        </Grid.Column>
+        <Grid.Column col={1}>
+          <PopupPresenterLarge />
+        </Grid.Column>
+        <Grid.Column col={1}>
+          <PopupPresenterHuge />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   </div>
 );
 

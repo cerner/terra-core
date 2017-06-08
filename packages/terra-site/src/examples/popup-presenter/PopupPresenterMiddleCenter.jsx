@@ -2,7 +2,7 @@ import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
 import ExamplePopupContent from './ExamplePopupContent';
 
-class PopupPresenterNoHeader extends React.Component {
+class PopupPresenterMiddleCenter extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -10,8 +10,6 @@ class PopupPresenterNoHeader extends React.Component {
     this.handleOnChange = this.handleOnChange.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.setParentNode = this.setParentNode.bind(this);
-    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: false };
   }
 
@@ -21,14 +19,6 @@ class PopupPresenterNoHeader extends React.Component {
 
   getButtonNode() {
     return this.buttonNode;
-  }
-
-  setParentNode(node) {
-    this.parentNode = node;
-  }
-
-  getParentNode() {
-    return this.parentNode;
   }
 
   handleButtonClick() {
@@ -45,22 +35,22 @@ class PopupPresenterNoHeader extends React.Component {
   
   render() {
     return (
-      <div style={{ height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
         <PopupPresenter
-          boundingRef={this.getParentNode}
-          isHeaderDisabled
+          contentAttachment="middle center"
+          isArrowDisplayed
           isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
+          onRequestClose={this.handleRequestClose}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </PopupPresenter>
-        <button onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          No Header Popup
+        <button onClick={this.handleButtonClick}>
+          Middle Center Popup
         </button>
       </div>
     );
   }
 }
 
-export default PopupPresenterNoHeader;
+export default PopupPresenterMiddleCenter;

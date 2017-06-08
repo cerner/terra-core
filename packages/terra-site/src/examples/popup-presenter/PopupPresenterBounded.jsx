@@ -1,11 +1,13 @@
 import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
+import ExamplePopupContent from './ExamplePopupContent';
 
 class PopupPresenterBounded extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setParentNode = this.setParentNode.bind(this);
@@ -37,6 +39,10 @@ class PopupPresenterBounded extends React.Component {
     this.setState({ open: false });
   }
 
+  handleOnChange() {
+    this.setState({ open: false });
+  }
+  
   render() {
     return (
       <div style={{ height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
@@ -46,7 +52,7 @@ class PopupPresenterBounded extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ height: '200px', width: '200px' }}>this is popup content</p>
+          <ExamplePopupContent onChange={this.handleOnChange} />
         </PopupPresenter>
         <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Bounded Popup
