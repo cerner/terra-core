@@ -55,10 +55,10 @@ class PopupExampleComponent extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p>this is popup content</p>
+          <p>this is example popup content</p>
         </PopupPresenter>
         <button onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Example Content
+          Example Button Text
         </button>
       </div>
     );
