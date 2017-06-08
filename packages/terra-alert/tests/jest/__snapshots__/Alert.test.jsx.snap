@@ -1,0 +1,84 @@
+exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
+<div
+  className="terra-Alert terra-Alert--alert"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconAlert
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Alert!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is an alert.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
+<div
+  className="terra-Alert terra-Alert--error"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconError
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Error!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is an error.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Alert with no props should render a default component 1`] = `
+<div
+  className="terra-Alert terra-Alert--alert"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconAlert
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Alert!
+      </strong>
+      <div
+        className="terra-Alert-content" />
+    </div>
+  </div>
+</div>
+`;
