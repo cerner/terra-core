@@ -76,7 +76,7 @@ const propTypes = {
    */
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
   /**
-   * A string pair of breakpoint sizes, ('tiny', 'small', 'medium', 'large', 'huge'), i.e. 'vertical horizontal'
+   * A string pair of breakpoint sizes, ('10x', '25x', '50x', '75x', '10x'), i.e. 'vertical horizontal'
    */
   contentDimensions: PropTypes.oneOf(DIMENSION_COMBINATIONS),
   /**
@@ -102,6 +102,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  boundingRef: null,
   classNameArrow: null,
   classNameContent: null,
   classNameOverlay: null,

@@ -1,26 +1,15 @@
-# Terra Popup Presenter Documentation
-
-The Terra Popup Presenter is a wrapping high order component, that launches a tether displayed content.
-
-## Getting Started
-
-- Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-popup-presenter`
-  - `yarn add terra-popup-presenter`
-
-## Usage
-
-```jsx
 import React from 'react';
 import PopupPresenter from 'terra-popup-presenter';
 
-class PopupExampleComponent extends React.Component {
+class PopupPresenterNoHeader extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setParentNode = this.setParentNode.bind(this);
+    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: false };
   }
 
@@ -30,6 +19,14 @@ class PopupExampleComponent extends React.Component {
 
   getButtonNode() {
     return this.buttonNode;
+  }
+
+  setParentNode(node) {
+    this.parentNode = node;
+  }
+
+  getParentNode() {
+    return this.parentNode;
   }
 
   handleButtonClick() {
@@ -42,26 +39,22 @@ class PopupExampleComponent extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
         <PopupPresenter
-          classNameArrow="example-arrow-class"
-          classNameContent="example-content-class"
-          classNameOverlay="example-overlay-class"
-          contentAttachment="top center"
-          contentDimensions="50x 25x"
-          isArrowDisplayed
-          disableHeader
+          boundingRef={this.getParentNode}
+          isHeaderDisabled
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p>this is popup content</p>
+          <p style={{ height: '200px', width: '200px' }}>this is popup content</p>
         </PopupPresenter>
-        <button onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Example Content
+        <button id="no-header-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          No Header Popup
         </button>
       </div>
     );
   }
 }
-```
+
+export default PopupPresenterNoHeader;

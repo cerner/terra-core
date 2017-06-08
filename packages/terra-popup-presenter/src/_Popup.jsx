@@ -33,6 +33,9 @@ const KEYCODES = {
   ESCAPE: 27,
 };
 
+/**
+ * Valid positions for the arrow, applies a margin to the corresponding side.
+ */
 const ARROW_POSITIONS = [
   'top',
   'bottom',
@@ -40,6 +43,9 @@ const ARROW_POSITIONS = [
   'right',
 ];
 
+/**
+ * Margin value used for calculations.
+ */
 const POPUP_MARGIN = 9;
 
 const propTypes = {
