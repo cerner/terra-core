@@ -196,7 +196,7 @@ class Popup extends React.Component {
     } else if (offset > contentBounds.height) {
       offset = contentBounds.height;
     }
-    return (`${offset}px`)
+    return (`${offset}px`);
   }
 
   static primaryArrowPosition(attachment) {
