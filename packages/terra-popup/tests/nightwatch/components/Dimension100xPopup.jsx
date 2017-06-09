@@ -54,7 +54,7 @@ class DimensionPopup extends React.Component {
             100x Popup
           </button>
         </div>
-      </div>  
+      </div>
     );
   }
 }

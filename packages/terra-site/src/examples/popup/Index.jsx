@@ -32,15 +32,15 @@ const PopupExamples = () => (
   <div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={PopupSrc} />
-    <h2 id="standard-popup" style={{paddingTop: '20px'}}>Popup Default Props</h2>
+    <h2 id="standard-popup" style={{ paddingTop: '20px' }}>Popup Default Props</h2>
     <PopupStandard />
-    <h2 id="arrow-popup" style={{paddingTop: '20px'}}>Popup Display With Arrow</h2>
+    <h2 id="arrow-popup" style={{ paddingTop: '20px' }}>Popup Display With Arrow</h2>
     <PopupWithArrow />
-    <h2 id="alignment-popups" style={{paddingTop: '20px'}}>Popup Attachments</h2>
+    <h2 id="alignment-popups" style={{ paddingTop: '20px' }}>Popup Attachments</h2>
     <Grid>
       <Grid.Row>
         <Grid.Column col={3}>
-          <PopupBottomLeft/>
+          <PopupBottomLeft />
         </Grid.Column>
         <Grid.Column col={3}>
           <PopupBottomCenter />
@@ -48,7 +48,7 @@ const PopupExamples = () => (
         <Grid.Column col={3}>
           <PopupBottomRight />
         </Grid.Column>
-      </Grid.Row>  
+      </Grid.Row>
       <Grid.Row>
         <Grid.Column col={3}>
           <PopupMiddleLeft />
@@ -59,8 +59,8 @@ const PopupExamples = () => (
         <Grid.Column col={3}>
           <PopupMiddleRight />
         </Grid.Column>
-      </Grid.Row>  
-      <Grid.Row>  
+      </Grid.Row>
+      <Grid.Row>
         <Grid.Column col={3}>
           <PopupTopLeft />
         </Grid.Column>
@@ -72,17 +72,17 @@ const PopupExamples = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
-    <h2 id="bounded-popup" style={{paddingTop: '20px'}}>Popup Bounded</h2>
+    <h2 id="bounded-popup" style={{ paddingTop: '20px' }}>Popup Bounded</h2>
     <PopupBounded />
-    <h2 id="no-header-popup" style={{paddingTop: '20px'}}>Popup Bounded With No Header</h2>
+    <h2 id="no-header-popup" style={{ paddingTop: '20px' }}>Popup Bounded With No Header</h2>
     <PopupNoHeader />
-    <h2 id="class-name-popup" style={{paddingTop: '20px'}}>Popup Adding Class Styles</h2>
+    <h2 id="class-name-popup" style={{ paddingTop: '20px' }}>Popup Adding Class Styles</h2>
     <PopupClassName />
-    <h2 id="size-popups" style={{paddingTop: '20px'}}>Popup Dimensions</h2>
+    <h2 id="size-popups" style={{ paddingTop: '20px' }}>Popup Dimensions</h2>
     <Grid>
       <Grid.Row>
         <Grid.Column col={2}>
-          <PopupTiny/>
+          <PopupTiny />
         </Grid.Column>
         <Grid.Column col={2}>
           <PopupSmall />

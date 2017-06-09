@@ -53,7 +53,7 @@ module.exports = {
       .click('#default-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
       .waitForElementNotPresent('.terra-PopupContent-showArrow', 1000)
-      .expect.element('.terra-PopupArrow').to.not.be.present;
+      .waitForElementNotPresent('.terra-PopupArrow', 1000);
   },
 
   'isArrowDisplayed prop - SHOWN': (browser) => {
@@ -64,7 +64,7 @@ module.exports = {
       .click('#arrow-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
       .waitForElementPresent('.terra-PopupContent-showArrow', 1000)
-      .expect.element('.terra-PopupArrow').to.be.present;
+      .waitForElementPresent('.terra-PopupArrow', 1000);
   },
 
   'boundingRef prop': (browser) => {
@@ -74,7 +74,7 @@ module.exports = {
       .waitForElementNotPresent('.terra-PopupContent', 1000)
       .click('#bounded-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
-      .expect.element('.terra-PopupContent-header').to.be.present;
+      .waitForElementPresent('.terra-PopupContent-header', 1000);
   },
 
   'boundingRef prop - BOUNDED HEIGHT': (browser) => {
@@ -104,7 +104,7 @@ module.exports = {
       .waitForElementNotPresent('.terra-PopupContent', 1000)
       .click('#no-header-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
-      .expect.element('.terra-PopupContent-header').to.not.be.present;
+      .waitForElementNotPresent('.terra-PopupArrow', 1000);
   },
 
   'className props': (browser) => {
@@ -156,7 +156,7 @@ module.exports = {
       .waitForElementNotPresent('.terra-PopupContent', 1000)
       .click('#alignment-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
-      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 160px;');
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 158px;');
   },
 
   'contentAttachment prop - MIDDLE LEFT RESPOSITION': (browser) => {
@@ -186,7 +186,7 @@ module.exports = {
       .waitForElementNotPresent('.terra-PopupContent', 1000)
       .click('#offset-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
-      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 25px;');
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 30px;');
   },
 
   'contentAttachment prop - BOTTOM LEFT RESPOSITION': (browser) => {
@@ -196,7 +196,7 @@ module.exports = {
       .waitForElementNotPresent('.terra-PopupContent', 1000)
       .click('#offset-button')
       .waitForElementPresent('.terra-PopupContent', 1000)
-      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 155px;');
+      .expect.element('.terra-PopupArrow').to.have.attribute('style').which.equals('left: 150px;');
   },
 
   'contentDimension prop - 10X': (browser) => {

@@ -49,9 +49,9 @@ class AlignmentPopup extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{padding: '5px'}}>This popup arrow was aligned to the left.</p>
+          <p style={{ padding: '5px' }}>This popup arrow was aligned to the left.</p>
         </Popup>
-        <div id="alignment-button" style={{position: 'absolute', top: '0px', height: '20px', width: '20px', backgroundColor: '#c00'}} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="alignment-button" style={{ position: 'absolute', top: '0px', height: '20px', width: '20px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>
     );
   }

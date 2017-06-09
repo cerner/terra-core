@@ -49,9 +49,9 @@ class OffsetPopup extends React.Component {
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{padding: '5px'}}>This popup arrow was repositioned.</p>
+          <p style={{ padding: '5px' }}>This popup arrow was repositioned.</p>
         </Popup>
-        <div id="offset-button" style={{position: 'absolute', top: '10px', height: '10px', width: '10px', backgroundColor: '#c00'}} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="offset-button" style={{ position: 'absolute', top: '10px', height: '10px', width: '10px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>
     );
   }

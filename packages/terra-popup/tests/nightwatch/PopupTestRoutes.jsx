@@ -35,10 +35,10 @@ const routes = (
     <Route path="/tests/popup-tests/bounded-width" component={BoundedWidthPopup} />
     <Route path="/tests/popup-tests/no-header" component={NoHeaderPopup} />
     <Route path="/tests/popup-tests/dimension-10x" component={Dimension10xPopup} />
-	<Route path="/tests/popup-tests/dimension-25x" component={Dimension25xPopup} />
-	<Route path="/tests/popup-tests/dimension-50x" component={Dimension50xPopup} />
-	<Route path="/tests/popup-tests/dimension-75x" component={Dimension75xPopup} />
-	<Route path="/tests/popup-tests/dimension-100x" component={Dimension100xPopup} />
+    <Route path="/tests/popup-tests/dimension-25x" component={Dimension25xPopup} />
+    <Route path="/tests/popup-tests/dimension-50x" component={Dimension50xPopup} />
+    <Route path="/tests/popup-tests/dimension-75x" component={Dimension75xPopup} />
+    <Route path="/tests/popup-tests/dimension-100x" component={Dimension100xPopup} />
     <Route path="/tests/popup-tests/top-arrow-offset" component={ArrowTopOffsetPopup} />
     <Route path="/tests/popup-tests/bottom-arrow-offset" component={ArrowBottomOffsetPopup} />
     <Route path="/tests/popup-tests/left-arrow-offset" component={ArrowLeftOffsetPopup} />
