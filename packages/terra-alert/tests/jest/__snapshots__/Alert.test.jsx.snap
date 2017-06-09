@@ -1,4 +1,72 @@
-exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
+exports[`1. Alert with no props should render a default component 1`] = `
+<div
+  className="terra-Alert terra-Alert--alert"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconAlert
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Alert!
+      </strong>
+      <div
+        className="terra-Alert-content" />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`2. Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
+<div
+  className="terra-Alert terra-Alert--alert"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconAlert
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Alert!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is a test
+      </div>
+    </div>
+  </div>
+  <div
+    className="terra-Alert-actions">
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      size="medium"
+      text="Dismiss"
+      variant="secondary" />
+  </div>
+</div>
+`;
+
+exports[`3. Alert of type alert with text content should render an Alert component of type alert 1`] = `
 <div
   className="terra-Alert terra-Alert--alert"
   style={Object {}}>
@@ -27,7 +95,7 @@ exports[`Alert of type alert with text content should render an Alert component 
 </div>
 `;
 
-exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
+exports[`4. Alert of type error with text content should render an Alert component of type error 1`] = `
 <div
   className="terra-Alert terra-Alert--error"
   style={Object {}}>
@@ -56,15 +124,15 @@ exports[`Alert of type error with text content should render an Alert component 
 </div>
 `;
 
-exports[`Alert with no props should render a default component 1`] = `
+exports[`5. Alert of type warning with text content should render an Alert component of type warning 1`] = `
 <div
-  className="terra-Alert terra-Alert--alert"
+  className="terra-Alert terra-Alert--warning"
   style={Object {}}>
   <div
     className="terra-Alert-body">
     <div
       className="terra-Alert-icon">
-      <IconAlert
+      <IconWarning
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
@@ -74,11 +142,288 @@ exports[`Alert with no props should render a default component 1`] = `
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Alert!
+        Warning!
       </strong>
       <div
-        className="terra-Alert-content" />
+        className="terra-Alert-content">
+        This is an warning.
+      </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`6. Alert of type required with text content should render an Alert component of type required 1`] = `
+<div
+  className="terra-Alert terra-Alert--required"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconRequired
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Required!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is a required warning.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`7. Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
+<div
+  className="terra-Alert terra-Alert--advisory"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconDiamond
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Advisory!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is an advisory alert.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`8. Alert of type information with text content should render an Alert component of type information 1`] = `
+<div
+  className="terra-Alert terra-Alert--information"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconInformation
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Information!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is an information alert.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`9. Alert of type confirmation with text content should render an Alert component of type confirmation 1`] = `
+<div
+  className="terra-Alert terra-Alert--confirmation"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconSuccess
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Confirmed!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is a confirmation alert.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`10. Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
+<div
+  className="terra-Alert terra-Alert--custom"
+  style={
+    Object {
+      "color": "orange",
+    }
+  }>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconHelp
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section terra-Alert-section--custom">
+      <strong
+        className="terra-Alert-title">
+        Help!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is a custom alert.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`11. Alert of type information with custom title and HTML content should render an Alert component of type information with custom title and HTML content 1`] = `
+<div
+  className="terra-Alert terra-Alert--information"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconInformation
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Gettysburg Address
+      </strong>
+      <div
+        className="terra-Alert-content">
+        <span>
+          Four score and seven years ago . . .
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`12. Alert of type confirmation with an action button text content should render an Alert component of type confirmation with an action button 1`] = `
+<div
+  className="terra-Alert terra-Alert--confirmation"
+  style={Object {}}>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconSuccess
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section">
+      <strong
+        className="terra-Alert-title">
+        Confirmed!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is a confirmation alert.
+      </div>
+    </div>
+  </div>
+  <div
+    className="terra-Alert-actions">
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      size="medium"
+      text="Action"
+      variant="primary" />
+  </div>
+</div>
+`;
+
+exports[`13. Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
+<div
+  className="terra-Alert terra-Alert--custom"
+  style={
+    Object {
+      "color": "orange",
+    }
+  }>
+  <div
+    className="terra-Alert-body">
+    <div
+      className="terra-Alert-icon">
+      <IconHelp
+        height="1.3333rem"
+        viewBox="0 0 48 48"
+        width="1.3333rem"
+        xmlns="http://www.w3.org/2000/svg" />
+    </div>
+    <div
+      className="terra-Alert-section terra-Alert-section--custom">
+      <strong
+        className="terra-Alert-title">
+        Help!
+      </strong>
+      <div
+        className="terra-Alert-content">
+        This is a custom alert.
+      </div>
+    </div>
+  </div>
+  <div
+    className="terra-Alert-actions terra-Alert-actions--custom">
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      size="medium"
+      text="Action"
+      variant="primary" />
+    <Button
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      size="medium"
+      text="Dismiss"
+      variant="secondary" />
   </div>
 </div>
 `;

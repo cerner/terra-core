@@ -153,7 +153,8 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
   let actionsSection = '';
   let dismissButton = '';
   const outerDivStyle = {};
-  let alertBodyClassName = 'terra-Alert-body';
+  let alertSectionClassName = 'terra-Alert-section';
+  let alertActionsClassName = 'terra-Alert-actions';
 
   if (type === AlertTypes.CUSTOM) {
     // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
@@ -162,7 +163,8 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
     // defined, it will use the prevailing color style, so setting that here. But then we need to set
     // the color style for the alert content so that it doesn't pick up the custom status color.
     outerDivStyle.color = customStatusColor;
-    alertBodyClassName += ' terra-Alert-body--custom';
+    alertSectionClassName += ' terra-Alert-section--custom';
+    alertActionsClassName += ' terra-Alert-actions--custom';
   }
 
   if (onDismiss) {
@@ -170,7 +172,7 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
   }
   if (onDismiss || alertAction) {
     actionsSection = (
-      <div className="terra-Alert-actions">
+      <div className={alertActionsClassName}>
         {alertAction || ''}
         {dismissButton}
       </div>
@@ -179,9 +181,9 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
 
   return (
     <div {...attributes} className={AlertClassNames} style={outerDivStyle} >
-      <div className={alertBodyClassName}>
+      <div className="terra-Alert-body">
         <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
-        <div className="terra-Alert-section">
+        <div className={alertSectionClassName}>
           <strong className="terra-Alert-title">{title || getDefaultTitle(type)}</strong>
           <div className="terra-Alert-content">
             {children}

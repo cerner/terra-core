@@ -4,6 +4,7 @@ import Button from 'terra-button';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import IconCritical from 'terra-icon/lib/icon/IconCritical';
 import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
+import IconClock from 'terra-icon/lib/icon/IconClock';
 
 class BuildYourOwnAlertExample extends React.Component {
   constructor(props) {
@@ -50,8 +51,8 @@ class BuildYourOwnAlertExample extends React.Component {
     } else {
       this.setState({ type: undefined });
     }
-    if (e.target.value != AlertTypes.CUSTOM) {
-      this.setState({ customIcon: '', customStatusColor: '' })
+    if (e.target.value !== AlertTypes.CUSTOM) {
+      this.setState({ customIcon: '', customStatusColor: '' });
     }
   }
 
@@ -120,7 +121,6 @@ class BuildYourOwnAlertExample extends React.Component {
   }
 
   render() {
-
     const moreTextDisplayStyle = { display: this.state.allTextShown ? 'inline' : 'none' };
     const showMoreButtonDisplayStyle = { display: this.state.allTextShown ? 'none' : 'inline' };
     const gettysburgAddress = (
@@ -152,7 +152,7 @@ class BuildYourOwnAlertExample extends React.Component {
     let customIconPropStr = '';
 
     if (this.state.contentType === 'enterText') {
-      textContentEntryField = (<input type="text" style={{width: '300px'}} placeholder="Enter Alert content" value={this.state.content} onChange={this.handleTextContentChange} />);
+      textContentEntryField = (<input type="text" style={{ width: '300px' }} placeholder="Enter Alert content" value={this.state.content} onChange={this.handleTextContentChange} />);
       contentValue = this.state.content;
       alertContentPropStr = contentValue;
     } else {
@@ -173,9 +173,13 @@ class BuildYourOwnAlertExample extends React.Component {
         customIcon = (<IconOverDue height="1.3333rem" width="1.3333rem" />);
         customIconPropStr = 'customIcon={<IconOverDue height="1.3333rem" width="1.3333rem" />}';
         break;
+      case 'clock':
+        customIcon = (<IconClock height="1.3333rem" width="1.3333rem" />);
+        customIconPropStr = 'customIcon={<IconClock height="1.3333rem" width="1.3333rem" />}';
+        break;
       default:
         break;
-    };
+    }
 
     if (!this.state.isDismissed) {
       alertElem = (
@@ -193,9 +197,9 @@ class BuildYourOwnAlertExample extends React.Component {
             <br />
             <code>
               &lt;Alert {alertTypePropStr} {alertTitlePropStr} {alertOnDismissPropStr} {alertActionPropStr} {customIconPropStr} {customStatusColorPropStr} &gt;
-                <br />
-                  &nbsp;&nbsp;{alertContentPropStr}
-                <br />
+              <br />
+              &nbsp;&nbsp;{alertContentPropStr}
+              <br />
               &lt;/Alert&gt;
             </code>
           </div>
@@ -203,7 +207,7 @@ class BuildYourOwnAlertExample extends React.Component {
           {alertElem}
         </div>
         <br />
-        <div style={{marginTop: '10px'}}>
+        <div style={{ marginTop: '10px' }}>
           <h4>Configure the above Alert by making selections in this form</h4>
           <form>
             <table>
@@ -231,7 +235,7 @@ class BuildYourOwnAlertExample extends React.Component {
                     <label htmlFor="titleSelector">Alert Title</label>
                   </td>
                   <td>
-                    <input id="titleSelector" type="text" style={{width: '250px'}} placeholder="Enter title or leave blank for default title" value={this.state.title} onChange={this.handleTitleChange} />
+                    <input id="titleSelector" type="text" style={{ width: '250px' }} placeholder="Enter title or leave blank for default title" value={this.state.title} onChange={this.handleTitleChange} />
                   </td>
                 </tr>
                 <tr>
@@ -239,7 +243,7 @@ class BuildYourOwnAlertExample extends React.Component {
                     <label htmlFor="contentTypeSelector">Alert Content</label>
                   </td>
                   <td>
-                    <select id="contentTypeSelector" name="contentType" style={{width: '200px', marginRight: '5px'}} value={this.state.contentType} onChange={this.handleContentTypeSelectChange}>
+                    <select id="contentTypeSelector" name="contentType" style={{ width: '200px', marginRight: '5px' }} value={this.state.contentType} onChange={this.handleContentTypeSelectChange}>
                       <option value="enterText">Enter Text Manually</option>
                       <option value="useHTML">Gettysburg Address HTML</option>
                     </select>
@@ -251,7 +255,7 @@ class BuildYourOwnAlertExample extends React.Component {
                     <label htmlFor="dimissibleSelector">Alert Dismissible</label>
                   </td>
                   <td>
-                    <select id="dimissibleSelector" name="isDismissible" style={{width: '100px'}} value={this.state.isDismissible + ''} onChange={this.handleDismissibleSelectChange}>
+                    <select id="dimissibleSelector" name="isDismissible" style={{ width: '100px' }} value={this.state.isDismissible.toString()} onChange={this.handleDismissibleSelectChange}>
                       <option value="true">True</option>
                       <option value="false">False</option>
                     </select>
@@ -262,7 +266,7 @@ class BuildYourOwnAlertExample extends React.Component {
                     <label htmlFor="actionButtonSelector">Alert Action Button</label>
                   </td>
                   <td>
-                    <select id="actionButtonSelector" name="showActionButton" style={{width: '100px'}} value={this.state.showActionButton + ''} onChange={this.handleActionButtonSelectChange}>
+                    <select id="actionButtonSelector" name="showActionButton" style={{ width: '100px' }} value={this.state.showActionButton.toString()} onChange={this.handleActionButtonSelectChange}>
                       <option value="true">True</option>
                       <option value="false">False</option>
                     </select>
@@ -273,11 +277,12 @@ class BuildYourOwnAlertExample extends React.Component {
                     <label htmlFor="customIconSelector">Alert Custom Icon</label>
                   </td>
                   <td>
-                    <select id="customIconSelector" name="showActionButton" style={{width: '150px'}} value={this.state.customIcon} onChange={this.handleCustomIconSelectChange}>
+                    <select id="customIconSelector" name="showActionButton" style={{ width: '150px' }} value={this.state.customIcon} onChange={this.handleCustomIconSelectChange}>
                       <option value="">default</option>
                       <option value="help">Help Icon</option>
                       <option value="critical">Critical Icon</option>
                       <option value="overdue">Overdue Icon</option>
+                      <option value="clock">Clock Icon</option>
                     </select>
                   </td>
                 </tr>
@@ -286,7 +291,7 @@ class BuildYourOwnAlertExample extends React.Component {
                     <label htmlFor="customStatusColorSelector">Alert Custom Status Color</label>
                   </td>
                   <td>
-                    <input id="customStatusColorSelector" type="text" style={{width: '250px'}} placeholder="Enter status bar color" value={this.state.customStatusColor} onChange={this.handleCustomStatusColorChange} />
+                    <input id="customStatusColorSelector" type="text" style={{ width: '250px' }} placeholder="Enter status bar color" value={this.state.customStatusColor} onChange={this.handleCustomStatusColorChange} />
                   </td>
                 </tr>
               </tbody>
