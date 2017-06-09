@@ -172,16 +172,31 @@ class Popup extends React.Component {
   }
 
   static leftOffset(targetBounds, contentBounds, arrowOffset, contentOffset, attachment) {
+    let offset;
     if (contentOffset.horizontal !== 0 || attachment.horizontal === 'center') {
-      return `${((targetBounds.left - contentBounds.left) + arrowOffset + (targetBounds.width / 2)).toString()}px`;
+      offset = (targetBounds.left - contentBounds.left) + arrowOffset + (targetBounds.width / 2);
     } else if (attachment.horizontal === 'right') {
-      return `${((targetBounds.left - contentBounds.left) + targetBounds.width).toString()}px`;
+      offset = (targetBounds.left - contentBounds.left) + targetBounds.width;
+    } else {
+      offset = (targetBounds.left - contentBounds.left) + (2 * arrowOffset);
     }
-    return `${((targetBounds.left - contentBounds.left) + (2 * arrowOffset)).toString()}px`;
+
+    if (offset < 2 * arrowOffset) {
+      offset = 2 * arrowOffset;
+    } else if (offset > contentBounds.width) {
+      offset = contentBounds.width;
+    }
+    return `${offset}px`;
   }
 
   static topOffset(targetBounds, contentBounds, arrowOffset) {
-    return `${((targetBounds.top - contentBounds.top) + arrowOffset + (targetBounds.height / 2)).toString()}px`;
+    let offset = (targetBounds.top - contentBounds.top) + arrowOffset + (targetBounds.height / 2);
+    if (offset < 2 * arrowOffset) {
+      offset = 2 * arrowOffset;
+    } else if (offset > contentBounds.height) {
+      offset = contentBounds.height;
+    }
+    return (`${offset}px`)
   }
 
   static primaryArrowPosition(attachment) {
