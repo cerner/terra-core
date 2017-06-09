@@ -12,7 +12,7 @@ An Alert consists of the following elements:
 -- Action element: you can configure the Alert component to include additional actionable element(s) in the action area.  typically you would include a button element.  To be consistent with the Dismiss button if it is used, you should use the Terra Button component.
 
 This image shows the layout of the elements of the Alert component.
-![Image](images/alertLayout.jpg?raw=true)
+![Image](images/alertLayout.png?raw=true)
 
 
 ## Getting Started
