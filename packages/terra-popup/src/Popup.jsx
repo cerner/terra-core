@@ -148,15 +148,6 @@ class Popup extends React.Component {
     return { vertical, horizontal };
   }
 
-  static attachPositionFromAlignment(alignment, start, length) {
-    if (alignment === 'center') {
-      return start + (length / 2);
-    } else if (alignment === 'right') {
-      return start + length;
-    }
-    return start;
-  }
-
   static isVerticalAttachment(attachment) {
     return attachment.vertical !== 'middle';
   }
@@ -181,40 +172,16 @@ class Popup extends React.Component {
   }
 
   static leftOffset(targetBounds, contentBounds, arrowOffset, contentOffset, attachment) {
-    const targetAttachPosition = Popup.attachPositionFromAlignment(attachment.horizontal, targetBounds.left, targetBounds.width);
-    const contentAttachPosition = Popup.attachPositionFromAlignment(attachment.horizontal, contentBounds.left, contentBounds.width);
-    const leftOffset = targetAttachPosition - contentAttachPosition - contentOffset.horizontal;
-
-    let leftPosition = arrowOffset;
-    if (attachment.horizontal === 'right') {
-      leftPosition = contentBounds.width - arrowOffset;
-    } else if (attachment.horizontal === 'center') {
-      leftPosition = contentBounds.width / 2;
+    if (contentOffset.horizontal !== 0 || attachment.horizontal === 'center') {
+      return `${((targetBounds.left - contentBounds.left) + arrowOffset + (targetBounds.width / 2)).toString()}px`;
+    } else if (attachment.horizontal === 'right') {
+      return `${((targetBounds.left - contentBounds.left) + targetBounds.width).toString()}px`;
     }
-
-    let newLeftPosition = leftPosition + leftOffset;
-    if (newLeftPosition > contentBounds.width - arrowOffset) {
-      newLeftPosition = contentBounds.width - arrowOffset;
-    } else if (newLeftPosition < arrowOffset) {
-      newLeftPosition = arrowOffset;
-    }
-
-    return `${(arrowOffset + newLeftPosition).toString()}px`;
+    return `${((targetBounds.left - contentBounds.left) + (2 * arrowOffset)).toString()}px`;
   }
 
-  static topOffset(targetBounds, contentBounds, arrowOffset, contentOffset) {
-    const targetAttachPosition = targetBounds.top + (targetBounds.height / 2);
-    const contentAttachPosition = contentBounds.top + (contentBounds.height / 2);
-    const topOffset = targetAttachPosition - contentAttachPosition - contentOffset.vertical;
-
-    let newTopPosition = (contentBounds.height / 2) + topOffset;
-    if (newTopPosition > contentBounds.height - arrowOffset) {
-      newTopPosition = contentBounds.height - arrowOffset;
-    } else if (newTopPosition < arrowOffset) {
-      newTopPosition = arrowOffset;
-    }
-
-    return `${(arrowOffset + newTopPosition).toString()}px`;
+  static topOffset(targetBounds, contentBounds, arrowOffset) {
+    return `${((targetBounds.top - contentBounds.top) + arrowOffset + (targetBounds.height / 2)).toString()}px`;
   }
 
   static primaryArrowPosition(attachment) {
@@ -266,7 +233,7 @@ class Popup extends React.Component {
     if (isVerticalAttachment) {
       this.arrowNode.style.left = Popup.leftOffset(targetBounds, contentBounds, PopupArrow.arrowSize, this.offset, this.attachment);
     } else {
-      this.arrowNode.style.top = Popup.topOffset(targetBounds, contentBounds, PopupArrow.arrowSize, this.offset);
+      this.arrowNode.style.top = Popup.topOffset(targetBounds, contentBounds, PopupArrow.arrowSize);
     }
   }
 
