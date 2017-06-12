@@ -1,0 +1,127 @@
+exports[`test should render a TextAreaField with the rest of the props 1`] = `
+<Field
+  error="Name is required"
+  help="The name given to you at birth."
+  isInline={true}
+  label="Profile Description"
+  required={true}>
+  <Textarea
+    autoFocus={false}
+    cols={null}
+    maxLength={15}
+    minLength={5}
+    name="profile_description"
+    required={true}
+    rows={null} />
+</Field>
+`;
+
+exports[`test should render a default TextAreaField component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false}>
+  <Textarea
+    cols={null}
+    maxLength={null}
+    minLength={null}
+    name={null}
+    required={false}
+    rows={null} />
+</Field>
+`;
+
+exports[`test should render as controlled when just a default value is passed into the TextareaField 1`] = `
+<TextareaField
+  cols={null}
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  maxLength={null}
+  minLength={null}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  rows={null}
+  value="foo">
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Textarea
+        cols={null}
+        maxLength={null}
+        minLength={null}
+        name={null}
+        onChange={[Function]}
+        required={false}
+        rows={null}
+        value="foo">
+        <textarea
+          className="terra-Form-textarea"
+          cols={null}
+          maxLength={null}
+          minLength={null}
+          name={null}
+          onChange={[Function]}
+          required={false}
+          rows={null}
+          value="foo" />
+      </Textarea>
+    </div>
+  </Field>
+</TextareaField>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the TextareaField 1`] = `
+<TextareaField
+  cols={null}
+  defaultValue="foo"
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  maxLength={null}
+  minLength={null}
+  name={null}
+  required={false}
+  rows={null}>
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Textarea
+        cols={null}
+        defaultValue="foo"
+        maxLength={null}
+        minLength={null}
+        name={null}
+        required={false}
+        rows={null}>
+        <textarea
+          className="terra-Form-textarea"
+          cols={null}
+          defaultValue="foo"
+          maxLength={null}
+          minLength={null}
+          name={null}
+          required={false}
+          rows={null} />
+      </Textarea>
+    </div>
+  </Field>
+</TextareaField>
+`;

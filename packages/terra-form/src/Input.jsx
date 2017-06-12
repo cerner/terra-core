@@ -14,6 +14,10 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+   * Function to trigger when user changes the input value. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+  /**
    * Name of the input
    */
   name: PropTypes.string,
@@ -33,6 +37,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   name: null,
+  onChange: undefined,
   required: false,
   value: undefined,
 };
@@ -42,6 +47,7 @@ class Input extends React.Component {
     const {
       defaultValue,
       name,
+      onChange,
       required,
       value,
       ...customProps
@@ -61,6 +67,7 @@ class Input extends React.Component {
     return (
       <input
         name={name}
+        onChange={onChange}
         ref={(input) => { this.textInput = input; }}
         required={required}
         {...additionalInputProps}

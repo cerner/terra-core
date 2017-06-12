@@ -1,0 +1,126 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import Field from './Field';
+import Textarea from './Textarea';
+
+const propTypes = {
+  /**
+   * How many columns the textarea should have
+   */
+  cols: PropTypes.number,
+  /**
+   * The defaultValue of the textarea element. Use this to create an uncontrolled input.
+   */
+  defaultValue: PropTypes.string,
+  /**
+   * Error message for when the input is invalid
+   */
+  error: PropTypes.node,
+  /**
+   *  Help element to display with the input
+   */
+  help: PropTypes.node,
+  /**
+   * Custom attributes to apply to the input
+   */
+  inputAttrs: PropTypes.object,
+  /**
+   * Whether the field is inline
+   */
+  isInline: PropTypes.bool,
+  /**
+   * Label of the input
+   */
+  label: PropTypes.node,
+  /**
+   * Maximum number of characters user can input in this field
+   */
+  maxLength: PropTypes.number,
+  /**
+   * Minimum number of characters user must input in this field
+   */
+  minLength: PropTypes.number,
+  /**
+   * Name of the input attribute
+   */
+  name: PropTypes.string,
+  /**
+   * Function to trigger when the user changes the input value. Provide one to create a controlled input.
+   */
+  onChange: PropTypes.func,
+  /**
+   * Whether the input is required
+   */
+  required: PropTypes.bool,
+  /**
+   * How many rows the textarea should have
+   */
+  rows: PropTypes.number,
+  /**
+   * The value of the textarea element. Use this to create a controlled input.
+   */
+  value: PropTypes.string,
+};
+
+const defaultProps = {
+  cols: null,
+  defaultValue: undefined,
+  error: null,
+  help: null,
+  inputAttrs: {},
+  isInline: false,
+  label: null,
+  maxLength: null,
+  minLength: null,
+  name: null,
+  onChange: undefined,
+  required: false,
+  rows: null,
+  value: undefined,
+};
+
+const TextareaField = ({
+  cols,
+  defaultValue,
+  error,
+  help,
+  inputAttrs,
+  isInline,
+  label,
+  name,
+  onChange,
+  required,
+  rows,
+  maxLength,
+  minLength,
+  value,
+  ...customProps
+}) => (
+  <Field
+    label={label}
+    error={error}
+    help={help}
+    isInline={isInline}
+    required={required}
+    {...customProps}
+  >
+    <Textarea
+      cols={cols}
+      maxLength={maxLength}
+      minLength={minLength}
+      name={name}
+      required={required}
+      rows={rows}
+      value={value}
+      defaultValue={defaultValue}
+      onChange={onChange}
+      {...inputAttrs}
+    />
+  </Field>
+);
+
+TextareaField.propTypes = propTypes;
+TextareaField.defaultProps = defaultProps;
+
+export default TextareaField;

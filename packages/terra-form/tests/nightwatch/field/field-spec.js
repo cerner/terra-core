@@ -17,7 +17,7 @@ module.exports = {
       .assert.elementPresent('.terra-Form-field');
   },
 
-  'Displays a populated Field with correct label, help message, and choices': (browser) => {
+  'Displays a populated inline Field with correct label, help message, and error message': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/field/populated`)
       .assert.elementPresent('.terra-Form-field')
