@@ -6,7 +6,6 @@ import ReadMe from 'terra-demographics-banner/docs/README.md';
 import { version } from 'terra-demographics-banner/package.json';
 import DemographicsBanner from 'terra-demographics-banner';
 
-
 import DemographicsBannerAdditionalAges from './DemographicsBannerAdditionalAges';
 import DemographicsBannerAdditionalDetails from './DemographicsBannerAdditionalDetails';
 import DemographicsBannerBasic from './DemographicsBannerBasic';
