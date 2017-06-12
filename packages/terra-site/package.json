@@ -54,7 +54,8 @@
     "terra-search-field": "^0.1.0",
     "terra-slide-panel": "^0.x",
     "terra-status": "^0.x",
-    "terra-table": "^0.6.0"
+    "terra-table": "^0.6.0",
+    "terra-time-input": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
