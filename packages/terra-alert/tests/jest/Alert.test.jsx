@@ -8,7 +8,7 @@ import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Button from 'terra-button';
-import Alert, { AlertTypes } from '../../src/Alert';
+import Alert from '../../src/Alert';
 
 describe('1. Alert with no props', () => {
   const defaultRender = <Alert />;
@@ -110,7 +110,7 @@ describe('2. Dismissible Alert that includes actions section', () => {
 
 describe('3. Alert of type alert with text content', () => {
   const alertText = 'This is an alert.';
-  const basicAlertRender = <Alert type={AlertTypes.ALERT} >{alertText}</Alert>;
+  const basicAlertRender = <Alert type={Alert.Types.ALERT} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type alert', () => {
@@ -136,7 +136,7 @@ describe('3. Alert of type alert with text content', () => {
 
 describe('4. Alert of type error with text content', () => {
   const alertText = 'This is an error.';
-  const basicErrorRender = <Alert type={AlertTypes.ERROR} >{alertText}</Alert>;
+  const basicErrorRender = <Alert type={Alert.Types.ERROR} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type error', () => {
@@ -162,7 +162,7 @@ describe('4. Alert of type error with text content', () => {
 
 describe('5. Alert of type warning with text content', () => {
   const alertText = 'This is an warning.';
-  const basicWarningRender = <Alert type={AlertTypes.WARNING} >{alertText}</Alert>;
+  const basicWarningRender = <Alert type={Alert.Types.WARNING} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type warning', () => {
@@ -188,7 +188,7 @@ describe('5. Alert of type warning with text content', () => {
 
 describe('6. Alert of type required with text content', () => {
   const alertText = 'This is a required warning.';
-  const basicRequiredRender = <Alert type={AlertTypes.REQUIRED} >{alertText}</Alert>;
+  const basicRequiredRender = <Alert type={Alert.Types.REQUIRED} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type required', () => {
@@ -214,7 +214,7 @@ describe('6. Alert of type required with text content', () => {
 
 describe('7. Alert of type advisory with text content', () => {
   const alertText = 'This is an advisory alert.';
-  const basicAdvisoryRender = <Alert type={AlertTypes.ADVISORY} >{alertText}</Alert>;
+  const basicAdvisoryRender = <Alert type={Alert.Types.ADVISORY} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type advisory', () => {
@@ -240,7 +240,7 @@ describe('7. Alert of type advisory with text content', () => {
 
 describe('8. Alert of type information with text content', () => {
   const alertText = 'This is an information alert.';
-  const basicInformationRender = <Alert type={AlertTypes.INFORMATION} >{alertText}</Alert>;
+  const basicInformationRender = <Alert type={Alert.Types.INFORMATION} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type information', () => {
@@ -266,7 +266,7 @@ describe('8. Alert of type information with text content', () => {
 
 describe('9. Alert of type confirmation with text content', () => {
   const alertText = 'This is a confirmation alert.';
-  const basicConfirmationRender = <Alert type={AlertTypes.CONFIRMATION} >{alertText}</Alert>;
+  const basicConfirmationRender = <Alert type={Alert.Types.CONFIRMATION} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type confirmation', () => {
@@ -293,7 +293,7 @@ describe('9. Alert of type confirmation with text content', () => {
 describe('10. Alert of type custom with custom title and text content', () => {
   const alertText = 'This is a custom alert.';
   const alertCustomTitle = 'Help!';
-  const basicCustomRender = <Alert type={AlertTypes.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" >{alertText}</Alert>;
+  const basicCustomRender = <Alert type={Alert.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type custom', () => {
@@ -323,7 +323,7 @@ describe('11. Alert of type information with custom title and HTML content', () 
   const alertText = 'Four score and seven years ago . . .';
   const alertHTML = <span>{alertText}</span>;
   const alertCustomTitle = 'Gettysburg Address';
-  const basicHTMLContentRender = <Alert type={AlertTypes.INFORMATION} title={alertCustomTitle} >{alertHTML}</Alert>;
+  const basicHTMLContentRender = <Alert type={Alert.Types.INFORMATION} title={alertCustomTitle} >{alertHTML}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type information with custom title and HTML content', () => {
@@ -351,7 +351,7 @@ describe('11. Alert of type information with custom title and HTML content', () 
 
 describe('12. Alert of type confirmation with an action button text content', () => {
   const alertText = 'This is a confirmation alert.';
-  const actionButtonRender = <Alert type={AlertTypes.CONFIRMATION} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
+  const actionButtonRender = <Alert type={Alert.Types.CONFIRMATION} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type confirmation with an action button', () => {
@@ -380,7 +380,7 @@ describe('12. Alert of type confirmation with an action button text content', ()
 describe('13. Dismissable Alert of type custom with action button, custom title and text content', () => {
   const alertText = 'This is a custom alert.';
   const alertCustomTitle = 'Help!';
-  const customActionDismissRender = <Alert type={AlertTypes.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
+  const customActionDismissRender = <Alert type={Alert.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
 
   // Snapshot Tests
   it('should render an Alert component of type custom with an action button', () => {

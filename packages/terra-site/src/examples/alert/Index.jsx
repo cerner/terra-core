@@ -8,7 +8,6 @@ import { version } from 'terra-alert/package.json';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import AlertSrc from '!raw-loader!terra-alert/src/Alert';
-import IconHelp from 'terra-icon/lib/icon/IconHelp';
 
 // Example Files
 import AlertExample from './AlertExample';

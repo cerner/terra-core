@@ -48,9 +48,9 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
-   * The type of alert to be rendered. One of AlertTypes.ALERT, AlertTypes.ERROR, AlertTypes.WARNING, AlertTypes.REQUIRED, AlertTypes.ADVISORY,
-   * AlertTypes.INFORMATION, AlertTypes.CONFIRMATION, AlertTypes.CUSTOM.
-   * Import AlertTypes for access to these type strings.
+   * The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.REQUIRED, Alert.Types.ADVISORY,
+   * Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.CUSTOM.
+   * Use the Types attribute of the Alert component for access to these type strings.
    */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,
@@ -197,6 +197,6 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
 
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;
+Alert.Types = AlertTypes;
 
-export { AlertTypes };
 export default Alert;

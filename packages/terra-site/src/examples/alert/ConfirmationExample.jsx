@@ -1,7 +1,7 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 
-const alertStartTagStr = '<Alert type={AlertTypes.CONFIRMATION} >';
+const alertStartTagStr = '<Alert type={Alert.Types.CONFIRMATION} >';
 const alertEndTagStr = '</Alert>';
 
 const ConfirmationExample = () => (
@@ -14,7 +14,7 @@ const ConfirmationExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={AlertTypes.CONFIRMATION} >This is a confirmation alert</Alert>
+    <Alert type={Alert.Types.CONFIRMATION} >This is a confirmation alert</Alert>
   </div>
 );
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 import Button from 'terra-button';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import IconCritical from 'terra-icon/lib/icon/IconCritical';
@@ -51,7 +51,7 @@ class BuildYourOwnAlertExample extends React.Component {
     } else {
       this.setState({ type: undefined });
     }
-    if (e.target.value !== AlertTypes.CUSTOM) {
+    if (e.target.value !== Alert.Types.CUSTOM) {
       this.setState({ customIcon: '', customStatusColor: '' });
     }
   }
@@ -136,13 +136,16 @@ class BuildYourOwnAlertExample extends React.Component {
         </span>
       </span>
     );
-    const alertTypePropStr = this.state.type ? 'type={AlertTypes.' + this.state.type.toUpperCase() + '}' : '';
+    // eslint-disable-next-line prefer-template
+    const alertTypePropStr = this.state.type ? 'type={Alert.Types.' + this.state.type.toUpperCase() + '}' : '';
+    // eslint-disable-next-line prefer-template
     const alertTitlePropStr = this.state.title ? 'title="' + this.state.title + '"' : '';
     const alertOnDismissPropStr = this.state.isDismissible ? 'onDismiss={this.handleDismiss}' : '';
     const onDismissHandler = this.state.isDismissible ? this.handleDismiss : undefined;
     const actionButton = this.state.showActionButton ? (<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />) : undefined;
     const alertActionPropStr = this.state.showActionButton ? 'alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />}' : '';
-    const customPropsDisplayStyle = { display: this.state.type === AlertTypes.CUSTOM ? 'table-row' : 'none' };
+    const customPropsDisplayStyle = { display: this.state.type === Alert.Types.CUSTOM ? 'table-row' : 'none' };
+    // eslint-disable-next-line prefer-template
     const customStatusColorPropStr = this.state.customStatusColor ? 'customStatusColor="' + this.state.customStatusColor + '"' : '';
     let alertElem = '';
     let alertContentPropStr = '';
@@ -219,14 +222,14 @@ class BuildYourOwnAlertExample extends React.Component {
                   <td>
                     <select id="typeSelector" name="type" value={this.state.type} onChange={this.handleTypeSelectChange}>
                       <option value="">default</option>
-                      <option value={AlertTypes.ALERT}>{AlertTypes.ALERT}</option>
-                      <option value={AlertTypes.ERROR}>{AlertTypes.ERROR}</option>
-                      <option value={AlertTypes.WARNING}>{AlertTypes.WARNING}</option>
-                      <option value={AlertTypes.REQUIRED}>{AlertTypes.REQUIRED}</option>
-                      <option value={AlertTypes.ADVISORY}>{AlertTypes.ADVISORY}</option>
-                      <option value={AlertTypes.INFORMATION}>{AlertTypes.INFORMATION}</option>
-                      <option value={AlertTypes.CONFIRMATION}>{AlertTypes.CONFIRMATION}</option>
-                      <option value={AlertTypes.CUSTOM}>{AlertTypes.CUSTOM}</option>
+                      <option value={Alert.Types.ALERT}>{Alert.Types.ALERT}</option>
+                      <option value={Alert.Types.ERROR}>{Alert.Types.ERROR}</option>
+                      <option value={Alert.Types.WARNING}>{Alert.Types.WARNING}</option>
+                      <option value={Alert.Types.REQUIRED}>{Alert.Types.REQUIRED}</option>
+                      <option value={Alert.Types.ADVISORY}>{Alert.Types.ADVISORY}</option>
+                      <option value={Alert.Types.INFORMATION}>{Alert.Types.INFORMATION}</option>
+                      <option value={Alert.Types.CONFIRMATION}>{Alert.Types.CONFIRMATION}</option>
+                      <option value={Alert.Types.CUSTOM}>{Alert.Types.CUSTOM}</option>
                     </select>
                   </td>
                 </tr>

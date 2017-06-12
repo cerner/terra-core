@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 import Button from 'terra-button';
 
 class ActionAndDismissibleExample extends React.Component {
@@ -27,12 +27,12 @@ class ActionAndDismissibleExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={AlertTypes.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >';
+    const alertStartTagStr = '<Alert type={Alert.Types.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >';
     const alertEndTagStr = '</Alert>';
     let alertElem = '';
     if (!this.state.isDismissed) {
       alertElem = (
-        <Alert type={AlertTypes.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+        <Alert type={Alert.Types.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
           This is a a custom alert with no icon. It is configured to be dismissible and with a custom action button. Click on the Dismiss button to dismiss the alert.
         </Alert>
       );

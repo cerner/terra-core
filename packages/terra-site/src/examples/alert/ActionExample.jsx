@@ -1,12 +1,12 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 import Button from 'terra-button';
 
 const actionFunc = () => {
   // eslint-disable-next-line no-alert
   alert('Action performed');
 };
-const alertStartTagStr = '<Alert type={AlertTypes.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >';
+const alertStartTagStr = '<Alert type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >';
 const alertEndTagStr = '</Alert>';
 
 const ActionExample = () => (
@@ -23,7 +23,7 @@ const ActionExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={AlertTypes.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
+    <Alert type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
       This is a warning. It is configured with a custom Action button.
     </Alert>
   </div>

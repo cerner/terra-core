@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 
 class DismissibleExample extends React.Component {
   constructor(props) {
@@ -17,11 +17,11 @@ class DismissibleExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={AlertTypes.CONFIRMATION} onDismiss={this.handleDismiss} >';
+    const alertStartTagStr = '<Alert type={Alert.Types.CONFIRMATION} onDismiss={this.handleDismiss} >';
     const alertEndTagStr = '</Alert>';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = <Alert type={AlertTypes.CONFIRMATION} onDismiss={this.handleDismiss} >This is a confirmation. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.</Alert>;
+      alertElem = <Alert type={Alert.Types.CONFIRMATION} onDismiss={this.handleDismiss} >This is a confirmation. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.</Alert>;
     }
     return (
       <div>

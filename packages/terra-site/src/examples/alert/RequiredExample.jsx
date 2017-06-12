@@ -1,7 +1,7 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 
-const alertStartTagStr = '<Alert type={AlertTypes.REQUIRED} >';
+const alertStartTagStr = '<Alert type={Alert.Types.REQUIRED} >';
 const alertEndTagStr = '</Alert>';
 
 const RequiredExample = () => (
@@ -14,7 +14,7 @@ const RequiredExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={AlertTypes.REQUIRED} >This is a required warning</Alert>
+    <Alert type={Alert.Types.REQUIRED} >This is a required warning</Alert>
   </div>
 );
 

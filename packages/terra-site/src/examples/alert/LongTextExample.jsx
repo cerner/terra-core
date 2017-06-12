@@ -1,5 +1,5 @@
 import React from 'react';
-import Alert, { AlertTypes } from 'terra-alert';
+import Alert from 'terra-alert';
 import Button from 'terra-button';
 
 class LongTextExample extends React.Component {
@@ -21,7 +21,7 @@ class LongTextExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={AlertTypes.INFORMATION} title="Gettysburg Address:" >';
+    const alertStartTagStr = '<Alert type={Alert.Types.INFORMATION} title="Gettysburg Address:" >';
     const alertContentStr = '<span>Four score and seven years ago our fathers brought forth on this continent, a new nation, . . .</span>';
     const alertEndTagStr = '</Alert>';
     const moreTextDisplayStyle = {};
@@ -50,7 +50,7 @@ class LongTextExample extends React.Component {
           </code>
         </div>
         <br />
-        <Alert type={AlertTypes.INFORMATION} title="Gettysburg Address:" >
+        <Alert type={Alert.Types.INFORMATION} title="Gettysburg Address:" >
           <span>
             Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
             <span style={showMoreButtonDisplayStyle} ><Button onClick={this.handleShowMore} text="Show More" variant="link" size="tiny" /></span>
