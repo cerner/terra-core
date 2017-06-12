@@ -14,6 +14,10 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+   * Function to trigger when user changes the input value. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+  /**
    * Name of the input
    */
   name: PropTypes.string,
@@ -33,38 +37,45 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   name: null,
+  onChange: undefined,
   required: false,
   value: undefined,
 };
 
-const Input = ({
-  defaultValue,
-  name,
-  required,
-  value,
-  ...customProps
-}) => {
-  const additionalInputProps = Object.assign({}, customProps);
+class Input extends React.Component {
+  render() {
+    const {
+      defaultValue,
+      name,
+      onChange,
+      required,
+      value,
+      ...customProps
+    } = this.props;
+    const additionalInputProps = Object.assign({}, customProps);
 
-  if (required) {
-    additionalInputProps['aria-required'] = 'true';
+    if (required) {
+      additionalInputProps['aria-required'] = 'true';
+    }
+
+    if (value !== undefined) {
+      additionalInputProps.value = value;
+    } else {
+      additionalInputProps.defaultValue = defaultValue;
+    }
+
+    return (
+      <input
+        name={name}
+        onChange={onChange}
+        ref={(input) => { this.textInput = input; }}
+        required={required}
+        {...additionalInputProps}
+        className={classNames('terra-Form-input', additionalInputProps.className)}
+      />
+    );
   }
-
-  if (value !== undefined) {
-    additionalInputProps.value = value;
-  } else {
-    additionalInputProps.defaultValue = defaultValue;
-  }
-
-  return (
-    <input
-      name={name}
-      required={required}
-      {...additionalInputProps}
-      className={classNames('terra-Form-input', additionalInputProps.className)}
-    />
-  );
-};
+}
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;

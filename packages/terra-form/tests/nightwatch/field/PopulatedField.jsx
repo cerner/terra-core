@@ -2,7 +2,7 @@ import React from 'react';
 
 import Field from '../../../lib/Field';
 
-const field = () => (
+const field = () =>
   <Field
     type="checkbox"
     label="Do you have any Children?"
@@ -12,7 +12,6 @@ const field = () => (
     help="Families are eligible for family package plans"
     required
     isInline
-  />
-);
+  />;
 
 export default field;

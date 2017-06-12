@@ -1,0 +1,67 @@
+exports[`test renders large banner that contains all valid information 1`] = `
+<section
+  applicationRows={
+    Array [
+      Object {
+        "Address": "1501 Walnut St. Apt #123",
+        "City": "Kansas City MO",
+      },
+      Object {
+        "ZIP": 64108,
+      },
+    ]
+  }
+  className="terra-DemographicsBanner">
+  <div
+    className="terra-DemographicsBanner-profile-photo">
+    <Image
+      alt="My Cat"
+      isFluid={false}
+      src=""
+      variant="default" />
+  </div>
+  <div
+    className="terra-DemographicsBanner-content">
+    <div
+      className="terra-DemographicsBanner-row">
+      <h1
+        className="terra-DemographicsBanner-person-name">
+        Johnathon Doe
+        <span
+          className="terra-DemographicsBanner-preferred-first-name">
+          John
+        </span>
+      </h1>
+      <div
+        className="terra-DemographicsBanner-application-content">
+        <span
+          className="risk-score">
+          5%
+        </span>
+      </div>
+    </div>
+    <div
+      className="terra-DemographicsBanner-row">
+      <div
+        className="terra-DemographicsBanner-person-details">
+        <DemographicsBannerValue
+          value="25 Years" />
+        <DemographicsBannerValue
+          value="Male" />
+        <DemographicsBannerValue
+          label="DOB"
+          value="May 9, 1993" />
+      </div>
+      <div
+        className="terra-DemographicsBanner-identifiers">
+        <DemographicsBannerValue
+          label="MRN"
+          value={12343} />
+        <DemographicsBannerValue
+          label="REA"
+          value="3JSDA" />
+      </div>
+    </div>
+  </div>
+</section>
+`;

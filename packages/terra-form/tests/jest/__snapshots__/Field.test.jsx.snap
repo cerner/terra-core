@@ -1,20 +1,26 @@
-exports[`test should render a Field that has children in it 1`] = `
+exports[`test should render a Field when all the possible props are passed into it 1`] = `
 <div
-  className="terra-Form-field"
-  name="foo"
-  value="bar">
+  className="terra-Form-field terra-Form-field--inline terra-Form-field--required">
+  <label
+    className="terra-Form-label"
+    htmlFor="test">
+    Text
+  </label>
   <input
     id="test"
     type="text"
     value="Test" />
+  <small
+    className="terra-Form-helpText"
+    tabIndex="-1">
+    This is a test input
+  </small>
+  <small
+    className="terra-Form-error"
+    tabIndex="-1">
+    This field is required
+  </small>
 </div>
-`;
-
-exports[`test should render a Field that has the error, label, and help props set 1`] = `
-<div
-  className="terra-Form-field"
-  name="foo"
-  value="bar" />
 `;
 
 exports[`test should render a default component 1`] = `

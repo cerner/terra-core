@@ -1,17 +1,19 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import DemographicsBanner from '../../lib/DemographicsBanner';
 
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
 export default () =>
-  <DemographicsBanner
-    additionalDetails={<span className="risk-score">5%</span>}
-    age="25 Years"
-    dateOfBirth="May 9, 1992"
-    dateOfBirthLabel="DOB"
-    deceasedDate="March 12, 2017"
-    deceasedDateLabel="Deceased"
-    gender="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
-    personName="Johnathon Doe"
-    preferredFirstName="John"
-  />;
+  <Base locale={locale}>
+    <DemographicsBanner
+      applicationContent={<span className="risk-score">5%</span>}
+      age="25 Years"
+      dateOfBirth="May 9, 1992"
+      deceasedDate="March 12, 2017"
+      gender="Male"
+      identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      personName="Johnathon Doe"
+      preferredFirstName="John"
+    />
+  </Base>;

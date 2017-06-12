@@ -1,12 +1,13 @@
-# Controlled Example
+# Controlled Input Example
 
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
-import Field from 'terra-form/lib/Field';
 import Fieldset from 'terra-form/lib/Fieldset';
-import Input from 'terra-form/lib/Input';
 import Control from 'terra-form/lib/Control';
+import TextField from 'terra-form/lib/TextField';
+import TextareaField from 'terra-form/lib/TextareaField';
+import NumberField from 'terra-form/lib/NumberField';
 
 class ControlledInput extends React.Component {
   constructor(props) {
@@ -18,14 +19,15 @@ class ControlledInput extends React.Component {
         first: '',
         middle: '',
         last: '',
-        preferredLocation: '',
-        interestedDivisions: []
+        travelPercentage: 0,
       },
     };
 
     this.handleEmploymentUpdate = this.handleEmploymentUpdate.bind(this);
     this.handleNameUpdate = this.handleNameUpdate.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleTravelPercentageChange = this.handleTravelPercentageChange.bind(this);
+    this.handleExperienceUpdate = this.handleExperienceUpdate.bind(this);
     this.handlePreferredLocation = this.handlePreferredLocation.bind(this);
     this.handleInterestedDivisions = this.handleInterestedDivisions.bind(this);
   }
@@ -42,23 +44,15 @@ class ControlledInput extends React.Component {
     this.setState({ formData });
   }
 
-  handlePreferredLocation(e) {
+  handleTravelPercentageChange(e) {
     const formData = Object.assign({}, this.state.formData);
-    formData.preferredLocation = e.target.value;
+    formData.travelPercentage = e.target.value;
     this.setState({ formData });
   }
 
-  handleInterestedDivisions(e) {
+  handleExperienceUpdate(e) {
     const formData = Object.assign({}, this.state.formData);
-    formData.interestedDivisions = this.state.formData.interestedDivisions.slice(0);
-
-    if (e.target.checked) {
-      formData.interestedDivisions.push(e.target.value);
-    } else {
-      const targetIndex = formData.interestedDivisions.indexOf(e.target.value);
-      formData.interestedDivisions.splice(targetIndex, 1);
-    }
-
+    formData.experience = e.target.value;
     this.setState({ formData });
   }
 
@@ -73,39 +67,43 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleFormSubmit}>
-        <Field
+        <TextField
           label="Current or Most Recent Employment Title"
-          help="This is your most recent employment position"
+          helpText="This is your most recent employment position"
           required
-        >
-          <Input type="text" name="employment" value={this.state.formData.jobTitle} onChange={this.handleEmploymentUpdate} />
-        </Field>
+        />
         <Fieldset
           legend="Name"
           required
         >
-          <Field
+          <TextField
             label="First"
+            value={this.state.formData.first}
+            onChange={this.handleNameUpdate}
+            name="first"
+            type="text"
             isInline
             required
-          >
-            <Input type="text" name="first" value={this.state.formDatafirst} onChange={this.handleNameUpdate} />
-          </Field>
-          <Field
+          />
+          <TextField
             label="Middle"
+            value={this.state.formData.middle}
+            onChange={this.handleNameUpdate}
+            name="middle"
+            type="text"
             isInline
-          >
-            <Input type="text" name="middle" value={this.state.formData.middle} onChange={this.handleNameUpdate} />
-          </Field>
-          <Field
+          />
+          <TextField
             label="Last"
+            value={this.state.formData.last}
+            onChange={this.handleNameUpdate}
+            name="last"
+            type="text"
             isInline
             required
-          >
-            <Input type="text" name="last" value={this.state.formData.last} onChange={this.handleNameUpdate} />
-          </Field>
+          />
         </Fieldset>
-        <Fieldset
+         <Fieldset
           legend="Preferred Location"
         >
           <Control
@@ -165,12 +163,11 @@ class ControlledInput extends React.Component {
           />
         </Fieldset>
         <Button text="Submit" type="submit" />
-        {this.state.submittedData && [<hr />, <p>Form was submitted with {JSON.stringify(this.state.submittedData)}</p>]}
+        {this.state.submittedData && <div><hr /><p>Form was submitted with {JSON.stringify(this.state.submittedData)}</p></div>}
       </form>
     );
   }
 }
 
 export default ControlledInput;
-
 ```

@@ -1,0 +1,119 @@
+exports[`test should render a TextField with the rest of the props 1`] = `
+<Field
+  error="This field is required"
+  help="This will not be shared with outside sources"
+  isInline={true}
+  label="Email Address"
+  required={true}>
+  <Input
+    className="healtheintent-application"
+    maxLength={75}
+    minLength={8}
+    name="email"
+    required={true}
+    type="email" />
+</Field>
+`;
+
+exports[`test should render a default TextField component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false}>
+  <Input
+    maxLength={null}
+    minLength={null}
+    name={null}
+    required={false}
+    type="text" />
+</Field>
+`;
+
+exports[`test should render as controlled when just a default value is passed into the TextField 1`] = `
+<TextField
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  maxLength={null}
+  minLength={null}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  type="text"
+  value="foo">
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Input
+        maxLength={null}
+        minLength={null}
+        name={null}
+        onChange={[Function]}
+        required={false}
+        type="text"
+        value="foo">
+        <input
+          className="terra-Form-input"
+          maxLength={null}
+          minLength={null}
+          name={null}
+          onChange={[Function]}
+          required={false}
+          type="text"
+          value="foo" />
+      </Input>
+    </div>
+  </Field>
+</TextField>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the TextField 1`] = `
+<TextField
+  defaultValue="foo"
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  maxLength={null}
+  minLength={null}
+  name={null}
+  required={false}
+  type="text">
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Input
+        defaultValue="foo"
+        maxLength={null}
+        minLength={null}
+        name={null}
+        required={false}
+        type="text">
+        <input
+          className="terra-Form-input"
+          defaultValue="foo"
+          maxLength={null}
+          minLength={null}
+          name={null}
+          required={false}
+          type="text" />
+      </Input>
+    </div>
+  </Field>
+</TextField>
+`;
