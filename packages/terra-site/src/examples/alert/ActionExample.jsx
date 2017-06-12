@@ -8,6 +8,7 @@ const actionFunc = () => {
 };
 const alertStartTagStr = '<Alert type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >';
 const alertEndTagStr = '</Alert>';
+const alertText = 'This is a warning. It is configured with a custom Action button.';
 
 const ActionExample = () => (
   <div>
@@ -17,14 +18,14 @@ const ActionExample = () => (
       <code>
         {alertStartTagStr}
         <br />
-          &nbsp;&nbsp;This is a warning
+        &nbsp;&nbsp;{alertText}.
         <br />
         {alertEndTagStr}
       </code>
     </div>
     <br />
     <Alert type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
-      This is a warning. It is configured with a custom Action button.
+      {alertText}
     </Alert>
   </div>
 );

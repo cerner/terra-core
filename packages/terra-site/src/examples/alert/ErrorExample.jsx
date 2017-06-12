@@ -3,6 +3,7 @@ import Alert from 'terra-alert';
 
 const alertStartTagStr = '<Alert type={Alert.Types.ERROR} >';
 const alertEndTagStr = '</Alert>';
+const alertText = 'This is an error';
 
 const ErrorExample = () => (
   <div>
@@ -10,11 +11,11 @@ const ErrorExample = () => (
       <h3>Basic Alert of type error with default title</h3>
       <br />
       <code>
-        {alertStartTagStr}This is an error{alertEndTagStr}
+        {alertStartTagStr}{alertText}{alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type={Alert.Types.ERROR} >This is an error</Alert>
+    <Alert type={Alert.Types.ERROR} >{alertText}</Alert>
   </div>
 );
 

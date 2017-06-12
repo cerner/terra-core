@@ -3,6 +3,7 @@ import Alert from 'terra-alert';
 
 const alertStartTagStr = '<Alert type={Alert.Types.CONFIRMATION} >';
 const alertEndTagStr = '</Alert>';
+const alertText = 'This is a confirmation alert';
 
 const ConfirmationExample = () => (
   <div>
@@ -10,11 +11,11 @@ const ConfirmationExample = () => (
       <h3>Basic Alert of type confirmation with default title</h3>
       <br />
       <code>
-        {alertStartTagStr}This is a confirmation alert{alertEndTagStr}
+        {alertStartTagStr}{alertText}{alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type={Alert.Types.CONFIRMATION} >This is a confirmation alert</Alert>
+    <Alert type={Alert.Types.CONFIRMATION} >{alertText}</Alert>
   </div>
 );
 
