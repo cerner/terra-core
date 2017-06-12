@@ -4,6 +4,11 @@ exports[`test should render a TextField with the rest of the props 1`] = `
   help="This will not be shared with outside sources"
   isInline={true}
   label="Email Address"
+  labelAttrs={
+    Object {
+      "className": "healtheintent-legend",
+    }
+  }
   required={true}>
   <Input
     className="healtheintent-application"
@@ -21,6 +26,7 @@ exports[`test should render a default TextField component 1`] = `
   help={null}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   required={false}>
   <Input
     maxLength={null}
@@ -38,6 +44,7 @@ exports[`test should render as controlled when just a default value is passed in
   inputAttrs={Object {}}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   maxLength={null}
   minLength={null}
   name={null}
@@ -50,6 +57,7 @@ exports[`test should render as controlled when just a default value is passed in
     help={null}
     isInline={false}
     label={null}
+    labelAttrs={Object {}}
     required={false}>
     <div
       className="terra-Form-field">
@@ -84,6 +92,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
   inputAttrs={Object {}}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   maxLength={null}
   minLength={null}
   name={null}
@@ -94,6 +103,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
     help={null}
     isInline={false}
     label={null}
+    labelAttrs={Object {}}
     required={false}>
     <div
       className="terra-Form-field">

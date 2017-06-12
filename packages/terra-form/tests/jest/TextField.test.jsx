@@ -12,6 +12,7 @@ it('should render a TextField with the rest of the props', () => {
     <TextField
       type="email"
       label="Email Address"
+      labelAttrs={{ className: 'healtheintent-legend' }}
       name="email"
       error="This field is required"
       help="This will not be shared with outside sources"
