@@ -9,9 +9,6 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--clear"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content" />
@@ -28,9 +25,6 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--dark"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content" />
@@ -47,9 +41,6 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content" />
@@ -66,59 +57,6 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
-    tabIndex="0">
-    <div
-      className="terra-Overlay-content" />
-  </div>
-</FocusTrap>
-`;
-
-exports[`Overlay when isOpen is provided -isRelativeToContainer specific props- should render with isFixed 1`] = `
-<FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
-  paused={false}
-  tag="div">
-  <div
-    className="terra-Overlay terra-Overlay--container terra-Overlay--light"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
-    tabIndex="0">
-    <div
-      className="terra-Overlay-content" />
-  </div>
-</FocusTrap>
-`;
-
-exports[`Overlay when isOpen is provided -isRelativeToContainer specific props- should render with isNotTrappedFocus 1`] = `
-<div
-  className="terra-Overlay terra-Overlay--container terra-Overlay--light"
-  onClick={[Function]}
-  onKeyDown={[Function]}
-  role="presentation"
-  tabIndex="0">
-  <div
-    className="terra-Overlay-content" />
-</div>
-`;
-
-exports[`Overlay when isOpen is provided -isRelativeToContainer specific props- should render with isRelativeToContainer 1`] = `
-<FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
-  paused={false}
-  tag="div">
-  <div
-    className="terra-Overlay terra-Overlay--container terra-Overlay--light"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content" />
@@ -135,9 +73,6 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content">
@@ -145,6 +80,15 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
     </div>
   </div>
 </FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with isRelativeToContainer 1`] = `
+<div
+  className="terra-Overlay terra-Overlay--container terra-Overlay--light"
+  tabIndex="0">
+  <div
+    className="terra-Overlay-content" />
+</div>
 `;
 
 exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
@@ -156,9 +100,6 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light terra-Overlay--scrollable"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content" />
@@ -175,9 +116,6 @@ exports[`Overlay when isOpen is provided should render with onRequestClose 1`] =
   tag="div">
   <div
     className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    role="presentation"
     tabIndex="0">
     <div
       className="terra-Overlay-content" />

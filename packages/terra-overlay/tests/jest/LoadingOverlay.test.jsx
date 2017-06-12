@@ -27,19 +27,11 @@ describe('LoadingOverlay', () => {
       });
     });
 
-    describe('when props specific to LoadingOverlay are provided', () => {
-      it('should render with message prop', () => {
-        const overlayRender = <LoadingOverlay isOpen message="Loading!" />;
-        const wrapper = shallow(overlayRender);
-        expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading!');
-        expect(wrapper).toMatchSnapshot();
-      });
-
-      it('should render with isSpin', () => {
-        const overlayRender = <LoadingOverlay isOpen isSpin />;
-        const wrapper = shallow(overlayRender);
-        expect(wrapper).toMatchSnapshot();
-      });
+    it('should render with message prop', () => {
+      const overlayRender = <LoadingOverlay isOpen message="Loading!" />;
+      const wrapper = shallow(overlayRender);
+      expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading!');
+      expect(wrapper).toMatchSnapshot();
     });
   });
 });

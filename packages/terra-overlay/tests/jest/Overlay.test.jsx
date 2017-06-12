@@ -50,6 +50,13 @@ describe('Overlay', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
+    it('should render with isRelativeToContainer', () => {
+      const overlayRender = <Overlay isOpen isRelativeToContainer />;
+      const wrapper = shallow(overlayRender);
+      expect(wrapper.prop('className')).toContain('terra-Overlay--container');
+      expect(wrapper).toMatchSnapshot();
+    });
+
     describe('-backgroundStyle-', () => {
       it('should use the default backgroundStyle when no value is given', () => {
         const overlayRender = <Overlay isOpen />;
@@ -75,27 +82,6 @@ describe('Overlay', () => {
         const overlayRender = <Overlay isOpen backgroundStyle="clear" />;
         const wrapper = shallow(overlayRender);
         expect(wrapper.childAt(0).prop('className')).toContain('terra-Overlay--clear');
-        expect(wrapper).toMatchSnapshot();
-      });
-    });
-
-    describe('-isRelativeToContainer specific props-', () => {
-      it('should render with isRelativeToContainer', () => {
-        const overlayRender = <Overlay isOpen isRelativeToContainer />;
-        const wrapper = shallow(overlayRender);
-        expect(wrapper.childAt(0).prop('className')).toContain('terra-Overlay--container');
-        expect(wrapper).toMatchSnapshot();
-      });
-
-      it('should render with isFixed', () => {
-        const overlayRender = <Overlay isOpen isRelativeToContainer isFixed />;
-        const wrapper = shallow(overlayRender);
-        expect(wrapper).toMatchSnapshot();
-      });
-
-      it('should render with isNotTrappedFocus', () => {
-        const overlayRender = <Overlay isOpen isRelativeToContainer isNotTrappedFocus />;
-        const wrapper = shallow(overlayRender);
         expect(wrapper).toMatchSnapshot();
       });
     });

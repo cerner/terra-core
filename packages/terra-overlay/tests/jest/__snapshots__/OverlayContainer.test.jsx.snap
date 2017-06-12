@@ -10,8 +10,6 @@ exports[`OverlayContainer should render when children are provided 1`] = `
   tabIndex="-1">
   <Overlay
     backgroundStyle="light"
-    isFixed={false}
-    isNotTrappedFocus={false}
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false} />
