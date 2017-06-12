@@ -15,8 +15,8 @@ This image shows the layout of the elements of the Alert component.
 ![Image](images/alertLayout.png?raw=true)
 
 ## Props
-|Prop Name |Type  |Is Required |Default |Value Description|
-|----------|------|------------|--------|-----------------|
+|Prop Name |Type  |Is Required |Default Value |Description |
+|----------|------|------------|--------------|------------|
 |alertAction |element  |optional  |null  |An action element to be added to the action section of the alert.|
 |children  |node or string  |optional  |''  |Child Nodes providing the message content for the alert. Can contain text and HTML.|
 |customIcon  |element  |optional  |null  |The icon to be used for an alert of type custom.|
