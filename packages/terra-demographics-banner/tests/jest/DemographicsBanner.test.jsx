@@ -1,103 +1,44 @@
 import React from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
+import { IntlProvider } from 'react-intl';
+
+import Image from '../../../terra-image/lib/Image';
 import DemographicsBanner from '../../src/DemographicsBanner';
+import messages from '../../translations/en-US.json';
 
-it('renders a blank banner properly', () => {
-  const banner = shallow(<DemographicsBanner />);
+const locale = 'en-US';
+
+it('renders a blank banner wrapper', () => {
+  const banner = shallow(<IntlProvider locale={locale} messages={messages}><DemographicsBanner /></IntlProvider>);
   expect(banner).toMatchSnapshot();
 });
 
-it('renders a banner that has basic information', () => {
+it('renders the banner wrapper with all props', () => {
   const banner = shallow(
-    <DemographicsBanner
-      age="24"
-      dateOfBirth="March 30, 2017"
-      gender="F"
-      personName="Terra Demographics Banner"
-    />,
+    <IntlProvider locale={locale} messages={messages}>
+      <DemographicsBanner
+        applicationContent={<span className="risk-score">5%</span>}
+        age="25 Years"
+        applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
+        dateOfBirth="May 9, 1993"
+        gender="Male"
+        gestationalAge="April 5, 2016"
+        identifiers={{ MRN: 12343, REA: '3JSDA' }}
+        photo={<Image alt="My Cat" src="" />}
+        personName="Johnathon Doe"
+        postMenstrualAge="April 7, 2016"
+        preferredFirstName="John"
+      />
+    </IntlProvider>,
   );
 
   expect(banner).toMatchSnapshot();
 });
 
-it('renders the banner that contains additional information', () => {
-  const banner = shallow(
-    <DemographicsBanner
-      additionalDetails={<span className="risk-score">5%</span>}
-      age="25 Years"
-      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
-      dateOfBirth="May 9, 1993"
-      gender="Male"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="" />}
-      personName="Johnathon Doe"
-      preferredFirstName="John"
-    />,
-  );
-
-  expect(banner).toMatchSnapshot();
-});
-
-it('renders the banner appropriately for a deceased person', () => {
-  const banner = shallow(
-    <DemographicsBanner
-      age="24"
-      gender="F"
-      dateOfBirth="June 15, 2014"
-      deceasedDate="March 30, 2017"
-      personName="Old Terra Demographics Banner"
-    />,
-  );
-
-  expect(banner).toMatchSnapshot();
-});
-
-it('renders the banner appropriately for a person with gestational and post menstrual dates', () => {
-  const banner = shallow(
-    <DemographicsBanner
-      additionalDetails={<span className="risk-score">5%</span>}
-      age="25 Years"
-      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
-      dateOfBirth="May 9, 1993"
-      gender="Male"
-      gestationalAge="April 5, 2016"
-      gestationalAgeLabel="GA"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<img alt="My Cat" src="" />}
-      personName="Johnathon Doe"
-      postMenstrualAge="April 7, 2016"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />,
-  );
-
-  expect(banner).toMatchSnapshot();
-});
-
-it('renders gestational date with a default label when the label is not provided', () => {
-  const banner = shallow(<DemographicsBanner gestationalAge="April 5, 2016" />);
-  expect(banner).toMatchSnapshot();
-});
-
-it('renders post menstrural date with a default label when the label is not provided', () => {
-  const banner = shallow(<DemographicsBanner postMenstrualAge="April 5, 2016" />);
-  expect(banner).toMatchSnapshot();
-});
-
-it('renders the banner properly for a deceased person with additional application content', () => {
-  const banner = shallow(
-    <DemographicsBanner
-      additionalDetails={<span className="risk-score">5%</span>}
-      age="25 Years"
-      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
-      dateOfBirth="May 9, 1993"
-      deceasedDate="March 5, 2016"
-      gender="Male"
-      identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      personName="Johnathon Doe"
-      photo={<img alt="My Cat" src="" />}
-      preferredFirstName="John"
-    />,
-  );
-
-  expect(banner).toMatchSnapshot();
+it('throws error on missing locale prop in Base', () => {
+  try {
+    shallow(<DemographicsBanner />);
+  } catch (e) {
+    expect(e.message).toContain('add locale prop to Base component');
+  }
 });

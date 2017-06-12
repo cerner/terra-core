@@ -1,6 +1,6 @@
 # Terra Demographics Banner
 
-The demographics component is used to display demographic information about a person in a condensed, easy to read format.
+The demographics component is used to display demographic information about a person in a condensed, easy to read format. Demographics Banner must be inside the Base component with locale. All related translations are required to be loaded before Demographics Banner renders.
 
 ## Getting Started
 
@@ -12,21 +12,20 @@ The demographics component is used to display demographic information about a pe
 
 ```jsx
 import React from 'react';
+import Image from 'terra-image';
 import DemographicsBanner from 'terra-demographics-banner';
 
+// DemographicsBanner must be inside the Base component with locale
 <DemographicsBanner
   applicationContent={<span className="risk-score">5%</span>}
   age="25 Years"
   dateOfBirth="May 9, 1993"
-  dateOfBirthLabel="DOB"
   gender="Male"
   gestationalAge="April 5, 2016"
-  gestationalAgeLabel="GA"
   identifiers={{ MRN: 12343, REA: '3JSDA' }}
-  photo={<img alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
+  photo={<Image alt="My Cat" src="http://lorempixel.com/50/50/animals/7/" />}
   personName="Johnathon Doe"
   postMenstrualAge="April 7, 2016"
-  postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
 />
 ```
