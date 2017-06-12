@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 const OverlayTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/loading-overlay-tests/default">Overlay - Default</Link></li>
+      <li><Link to="/tests/loading-overlay-tests/default">LoadingOverlay - Default</Link></li>
     </ul>
   </div>
 );

@@ -28,6 +28,9 @@ const TestLinks = () => (
       <li><Link to="/tests/modal-tests">Modal Tests</Link></li>
       <li><Link to="/tests/progress-bar-tests">ProgressBar Tests</Link></li>
       <li><Link to="/tests/grid-tests">Grid Tests</Link></li>
+      <li><Link to="/tests/overlay-tests">Overlay Tests</Link></li>
+      <li><Link to="/tests/loading-overlay-tests">LoadingOverlay Tests</Link></li>
+      <li><Link to="/tests/overlay-container-tests">OverlayContainer Tests</Link></li>
     </ul>
   </div>
 );
