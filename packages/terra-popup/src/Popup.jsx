@@ -282,16 +282,18 @@ class Popup extends React.Component {
     }
 
     let arrow;
-    if (this.props.isArrowDisplayed) {
+    let arrowPosition;
+    if (this.props.isArrowDisplayed && this.props.contentAttachment !== 'middle center') {
       this.offset = Popup.getContentOffset(this.attachment, this.props.targetRef(), PopupArrow.arrowSize);
       arrow = <PopupArrow className={this.props.classNameArrow} refCallback={this.setArrowNode} />;
+      arrowPosition = Popup.primaryArrowPosition(this.attachment);
     }
 
     return (
       <PopupContent
         {...boundsProps}
         arrow={arrow}
-        arrowPosition={Popup.primaryArrowPosition(this.attachment)}
+        arrowPosition={arrowPosition}
         classNameInner={this.props.classNameContent}
         closeOnEsc
         closeOnOutsideClick
