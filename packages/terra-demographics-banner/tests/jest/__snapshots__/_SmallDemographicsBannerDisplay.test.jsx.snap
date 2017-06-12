@@ -1,0 +1,49 @@
+exports[`test renders small banner that contains all valid information 1`] = `
+<section
+  applicationRows={
+    Array [
+      Object {
+        "Address": "1501 Walnut St. Apt #123",
+        "City": "Kansas City MO",
+      },
+      Object {
+        "ZIP": 64108,
+      },
+    ]
+  }
+  className="terra-DemographicsBanner">
+  <h1
+    className="terra-DemographicsBanner-person-name">
+    <span>
+      Johnathon Doe
+      <span
+        className="terra-DemographicsBanner-preferred-first-name">
+        John
+      </span>
+    </span>
+  </h1>
+  <div
+    className="terra-DemographicsBanner-person-details">
+    <DemographicsBannerValue
+      value="25 Years" />
+    <DemographicsBannerValue
+      value="Male" />
+    <DemographicsBannerValue
+      label="DOB"
+      value="May 9, 1993" />
+    <DemographicsBannerValue
+      label="MRN"
+      value={12343} />
+    <DemographicsBannerValue
+      label="REA"
+      value="3JSDA" />
+  </div>
+  <div
+    className="terra-DemographicsBanner-application-content">
+    <span
+      className="risk-score">
+      5%
+    </span>
+  </div>
+</section>
+`;
