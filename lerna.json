@@ -3,12 +3,5 @@
   "packages": [
     "packages/*"
   ],
-  "command": {
-    "publish": {
-      "ignore": [
-        "terra-form"
-      ]
-    }
-  },
   "version": "independent"
 }
