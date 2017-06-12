@@ -39,6 +39,7 @@
     "terra-content-container": "^0.x",
     "terra-date-picker": "^0.x",
     "terra-demographics-banner": "^0.x",
+    "terra-form": "^0.x",
     "terra-grid": "^2.4.1",
     "terra-i18n": "^0.x",
     "terra-icon": "^0.x",
@@ -79,7 +80,6 @@
     "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "terra-form": "^0.x",
     "terra-i18n-plugin": "^0.x",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"

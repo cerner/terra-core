@@ -4,6 +4,8 @@ import React from 'react';
 import { Route } from 'react-router';
 import FormTests from './FormTests';
 
+import DefaultControl from './control/DefaultControl';
+import PopulatedControl from './control/PopulatedControl';
 import DefaultField from './field/DefaultField';
 import PopulatedField from './field/PopulatedField';
 import DefaultFieldset from './fieldset/DefaultFieldset';
@@ -15,6 +17,8 @@ import PopulatedInputControlled from './input/PopulatedInputControlled';
 const routes = (
   <div>
     <Route path="/tests/form-tests" component={FormTests} />
+    <Route path="/tests/form-tests/control/default" component={DefaultControl} />
+    <Route path="/tests/form-tests/control/populated" component={PopulatedControl} />
     <Route path="/tests/form-tests/field/default" component={DefaultField} />
     <Route path="/tests/form-tests/field/populated" component={PopulatedField} />
     <Route path="/tests/form-tests/fieldset/default" component={DefaultFieldset} />

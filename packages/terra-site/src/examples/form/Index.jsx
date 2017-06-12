@@ -5,6 +5,7 @@ import Button from 'terra-button';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form/docs/README.md';
+import ControlDocs from 'terra-form/docs/Control.md';
 import FieldDocs from 'terra-form/docs/Field.md';
 import FieldsetDocs from 'terra-form/docs/Fieldset.md';
 import InputDocs from 'terra-form/docs/Input.md';
@@ -12,6 +13,7 @@ import InputDocs from 'terra-form/docs/Input.md';
 import { version } from 'terra-form/package.json';
 
 // Component Source
+import ControlSrc from '!raw-loader!terra-form/src/Control';
 import FieldSrc from '!raw-loader!terra-form/src/Field';
 import FieldsetSrc from '!raw-loader!terra-form/src/Fieldset';
 import InputSrc from '!raw-loader!terra-form/src/Input';
@@ -19,6 +21,7 @@ import InputSrc from '!raw-loader!terra-form/src/Input';
 // Example Files
 import ControlledInputDocs from './docs/ControlledInput.md';
 import ControlledInput from './examples/ControlledInput';
+import ControlExamples from './examples/Control';
 import FieldExamples from './examples/Field';
 import FieldsetExamples from './examples/Fieldset';
 import InputExamples from './examples/Input';
@@ -42,6 +45,9 @@ const FormsExamples = () => (
     <div>
       <Button text="Input" variant="link" onClick={() => { scrollToComponent('#input'); }} />
     </div>
+    <div>
+      <Button text="Control" variant="link" onClick={() => { scrollToComponent('#control'); }} />
+    </div>
     <Markdown id="field-docs" src={FieldDocs} />
     <PropsTable id="field-props" src={FieldSrc} />
     <FieldExamples />
@@ -51,6 +57,9 @@ const FormsExamples = () => (
     <Markdown id="input-docs" src={InputDocs} />
     <PropsTable id="input-props" src={InputSrc} />
     <InputExamples />
+    <Markdown id="control-docs" src={ControlDocs} />
+    <PropsTable id="control-props" src={ControlSrc} />
+    <ControlExamples />
     <Markdown id="controlled-example" src={ControlledInputDocs} />
     <ControlledInput />
   </div>
