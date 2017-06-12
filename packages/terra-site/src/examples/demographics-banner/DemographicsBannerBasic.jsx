@@ -5,7 +5,6 @@ const BasicDemographicsBanner = () => (
   <DemographicsBanner
     age="25 Years"
     dateOfBirth="May 9, 1993"
-    dateOfBirthLabel="DOB"
     gender="Male"
     personName="Johnathon Doe"
     preferredFirstName="John"
