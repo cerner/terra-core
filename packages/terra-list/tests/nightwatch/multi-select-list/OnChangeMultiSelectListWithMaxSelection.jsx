@@ -7,7 +7,7 @@ function createListItems(items, selectedIndexes) {
     const selected = selectedIndexes.indexOf(itemIndex) >= 0;
     const contentKey = itemIndex;
     return (
-      <MultiSelectList.Item key={contentKey} content={item.content} isSelectable isSelected={selected} />
+      <MultiSelectList.Item key={contentKey} content={item.content} isSelected={selected} />
     );
   });
 

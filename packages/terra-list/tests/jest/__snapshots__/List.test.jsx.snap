@@ -12,8 +12,6 @@ exports[`test should mount with one items 1`] = `
   <ul
     className="terra-List">
     <ListItem
-      hasChevron={false}
-      isSelectable={false}
       isSelected={false}>
       <li
         className="terra-ListItem" />
@@ -26,24 +24,14 @@ exports[`test should render isDivided 1`] = `
 <ul
   className="terra-List terra-List-divided">
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
 </ul>
 `;
@@ -52,24 +40,14 @@ exports[`test should render with items 1`] = `
 <ul
   className="terra-List">
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
   <ListItem
-    hasChevron={false}
-    isSelectable={false}
     isSelected={false} />
 </ul>
 `;
