@@ -1,6 +1,6 @@
 {
   "name": "terra-site",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Documentation Site for Functional Verification",
   "repository": {
     "type": "git",
@@ -55,7 +55,7 @@
     "terra-slide-panel": "^0.x",
     "terra-status": "^0.x",
     "terra-table": "^0.6.0",
-    "terra-time-input": "^0.1.0"
+    "terra-time-input": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -80,7 +80,7 @@
     "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "terra-form": "^0.x",
+    "terra-form": "^0.1.0",
     "terra-i18n-plugin": "^0.x",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
