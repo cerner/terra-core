@@ -1,6 +1,11 @@
 exports[`test should render a default time input 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="terra-time"
+    type="hidden"
+    value="" />
   <Input
     className="terra-TimeInput-hour"
     maxLength="2"
@@ -36,6 +41,11 @@ exports[`test should render a default time input 1`] = `
 exports[`test should render a time input with a default time 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="terra-time"
+    type="hidden"
+    value="T15:45Z" />
   <Input
     className="terra-TimeInput-hour"
     maxLength="2"
@@ -71,6 +81,11 @@ exports[`test should render a time input with a default time 1`] = `
 exports[`test should render a time input with custom attributes 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="time-input"
+    type="hidden"
+    value="" />
   <Input
     className="terra-TimeInput-hour"
     id="terra-time-input"
@@ -108,6 +123,11 @@ exports[`test should render a time input with custom attributes 1`] = `
 exports[`test should render a time input with onChange 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="terra-time"
+    type="hidden"
+    value="" />
   <Input
     className="terra-TimeInput-hour"
     maxLength="2"

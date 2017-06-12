@@ -3,8 +3,8 @@ import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerMinMax = () => (
   <DatePicker
-    minDate={'04-01-2017T00:00:00.000Z'}
-    maxDate={'04-10-2017T00:00:00.000Z'}
+    minDate={'2017-04-01T00:00Z'}
+    maxDate={'2017-04-10T00:00Z'}
   />
 );
 

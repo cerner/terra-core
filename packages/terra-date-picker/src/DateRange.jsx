@@ -14,7 +14,7 @@ const propTypes = {
    */
   startDate: PropTypes.string,
   /**
-   * A callback function to execute when a valid date is selected or entered.
+   * A callback function to execute when a valid date is selected or entered. The parameters in the function are event, start date, end date.
    */
   onChange: PropTypes.func,
 };
@@ -31,7 +31,7 @@ class DateRange extends React.Component {
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
 
-  handleChange({ startDate = this.state.startDate, endDate = this.state.endDate }) {
+  handleChange(event, { startDate = this.state.startDate, endDate = this.state.endDate }) {
     let startDateForRange = startDate;
     let endDateForRange = endDate;
 
@@ -42,16 +42,16 @@ class DateRange extends React.Component {
     this.setState({ startDate: startDateForRange, endDate: endDateForRange });
 
     if (this.props.onChange) {
-      this.props.onChange(startDateForRange, endDateForRange);
+      this.props.onChange(event, startDateForRange, endDateForRange);
     }
   }
 
-  handleChangeStart(startDate) {
-    this.handleChange({ startDate });
+  handleChangeStart(event, startDate) {
+    this.handleChange(event, { startDate });
   }
 
-  handleChangeEnd(endDate) {
-    this.handleChange({ endDate });
+  handleChangeEnd(event, endDate) {
+    this.handleChange(event, { endDate });
   }
 
   render() {

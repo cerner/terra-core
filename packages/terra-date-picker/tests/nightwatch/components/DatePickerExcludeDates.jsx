@@ -3,8 +3,8 @@ import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerExcludeDates = () => (
   <DatePicker
-    excludeDates={['04-01-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
-    selectedDate={'04-02-2017T00:00:00.000Z'}
+    excludeDates={['2017-04-01T00:00Z', '2017-04-03T00:00Z']}
+    selectedDate={'2017-04-02T00:00Z'}
   />
 );
 

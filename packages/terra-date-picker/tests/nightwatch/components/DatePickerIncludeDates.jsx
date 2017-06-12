@@ -3,7 +3,7 @@ import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerIncludeDates = () => (
   <DatePicker
-    includeDates={['04-01-2017T00:00:00.000Z', '04-02-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
+    includeDates={['2017-04-01T00:00Z', '2017-04-02T00:00Z', '2017-04-03T00:00Z']}
   />
 );
 

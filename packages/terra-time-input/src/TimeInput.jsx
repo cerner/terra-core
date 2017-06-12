@@ -242,8 +242,29 @@ class TimeInput extends React.Component {
       customProps.className,
     ]);
 
+    // If a name attribute is provided in inputAttributes, it will be used as the name attribute in the hidden input.
+    // If no name attribute is provided, a default name of 'terra-time' will be used.
+    let nameAttr = 'terra-time';
+    if (this.props.inputAttributes && this.props.inputAttributes.name) {
+      nameAttr = this.props.inputAttributes.name;
+    }
+
+    // Using the state of hour and minute create a time in UTC represented in ISO 8601 format.
+    let timeValue = '';
+    if (this.state.hour.length > 0 || this.state.minute.length > 0) {
+      timeValue = 'T'.concat(TimeUtil.createUTCTimeFromLocalTime(this.state.hour.concat(':', this.state.minute)));
+    }
+
     return (
       <div {...customProps} className={timeInputClassNames}>
+        <input
+          // Create a hidden input for storing the name and value attributes to use when submitting the form.
+          // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
+          className="terra-hidden-time-input"
+          type="hidden"
+          name={nameAttr}
+          value={timeValue}
+        />
         <Input
           {...inputAttributes}
           ref={(inputRef) => { this.hourInput = inputRef; }}

@@ -205,5 +205,19 @@ module.exports = {
     browser.keys(browser.Keys.DELETE);
     browser.expect.element('.terra-TimeInput-minute').to.have.attribute('value').equals('00');
   },
+
+  'Creates a hidden input with a name atribute of "test-name-attr" and an empty value attribute when no time is entered': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default`);
+
+    browser.expect.element('.terra-hidden-time-input').to.have.attribute('name').which.equals('test-name-attr');
+    browser.expect.element('.terra-hidden-time-input').to.have.attribute('value').which.equals('');
+  },
+
+  'Creates a hidden input with a default name atribute of "terr-time" and sets the time in ISO8601 format in the value attribute.': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/default-time`);
+
+    browser.expect.element('.terra-hidden-time-input').to.have.attribute('name').which.equals('terra-time');
+    browser.expect.element('.terra-hidden-time-input').to.have.attribute('value').which.contains(':00Z');
+  },
 };
 
