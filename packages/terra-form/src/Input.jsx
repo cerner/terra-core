@@ -42,36 +42,40 @@ const defaultProps = {
   value: undefined,
 };
 
-const Input = ({
-  defaultValue,
-  name,
-  onChange,
-  required,
-  value,
-  ...customProps
-}) => {
-  const additionalInputProps = Object.assign({}, customProps);
+class Input extends React.Component {
+  render() {
+    const {
+      defaultValue,
+      name,
+      onChange,
+      required,
+      value,
+      ...customProps
+    } = this.props;
+    const additionalInputProps = Object.assign({}, customProps);
 
-  if (required) {
-    additionalInputProps['aria-required'] = 'true';
+    if (required) {
+      additionalInputProps['aria-required'] = 'true';
+    }
+
+    if (value !== undefined) {
+      additionalInputProps.value = value;
+    } else {
+      additionalInputProps.defaultValue = defaultValue;
+    }
+
+    return (
+      <input
+        name={name}
+        onChange={onChange}
+        ref={(input) => { this.textInput = input; }}
+        required={required}
+        {...additionalInputProps}
+        className={classNames('terra-Form-input', additionalInputProps.className)}
+      />
+    );
   }
-
-  if (value !== undefined) {
-    additionalInputProps.value = value;
-  } else {
-    additionalInputProps.defaultValue = defaultValue;
-  }
-
-  return (
-    <input
-      name={name}
-      onChange={onChange}
-      required={required}
-      {...additionalInputProps}
-      className={classNames('terra-Form-input', additionalInputProps.className)}
-    />
-  );
-};
+}
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;

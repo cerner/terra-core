@@ -52,6 +52,7 @@
 | [terra-slide-panel](https://github.com/cerner/terra-core/tree/master/packages/terra-slide-panel) | [![NPM version](http://img.shields.io/npm/v/terra-slide-panel.svg)](https://www.npmjs.org/package/terra-slide-panel) | :large_orange_diamond: |
 | [terra-status](https://github.com/cerner/terra-core/tree/master/packages/terra-status) | [![NPM version](http://img.shields.io/npm/v/terra-status.svg)](https://www.npmjs.org/package/terra-status) | :large_orange_diamond: |
 | [terra-table](https://github.com/cerner/terra-core/tree/master/packages/terra-table) | [![NPM version](http://img.shields.io/npm/v/terra-table.svg)](https://www.npmjs.org/package/terra-table) | :large_orange_diamond: |
+| [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input) | [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input) | :large_orange_diamond: |
 | [terra-toolkit](https://github.com/cerner/terra-core/tree/master/packages/terra-toolkit) | [![NPM version](http://img.shields.io/npm/v/terra-toolkit.svg)](https://www.npmjs.org/package/terra-toolkit) | :large_orange_diamond: |
 
 ## Supported Browsers
