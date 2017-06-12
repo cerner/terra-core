@@ -35,49 +35,49 @@ import Alert from 'terra-alert';
 ```
 
 ### Examples
-------------------
+__________
 Basic Alert component of type 'alert' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.ALERT} >This is an alert</Alert>
 ```
 ![Image](images/basicAlert.png?raw=true)
-------------------
+__________
 Basic Alert component of type 'error' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.ERROR} >This is an error</Alert>
 ```
 ![Image](images/basicError.png?raw=true)
-------------------
+__________
 Basic Alert component of type 'warning' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.WARNING} >This is a warning</Alert>
 ```
 ![Image](images/basicWarning.png?raw=true)
-------------------
+__________
 Basic Alert component of type 'required' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.REQUIRED} >This is a required warning</Alert>
 ```
 ![Image](images/basicRequired.png?raw=true)
-------------------
+__________
 Basic Alert component of type 'advisory' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.ADVISORY} >This is an advisory alert</Alert>
 ```
 ![Image](images/basicAdvisory.png?raw=true)
-------------------
+__________
 Basic Alert component of type 'information' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.INFORMATION} >This is an information alert</Alert>
 ```
 ![Image](images/basicInformation.png?raw=true)
-------------------
+__________
 Basic Alert component of type 'confirmation' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.CONFIRMATION} >This is a confirmation alert</Alert>
 ```
 ![Image](images/basicConfirmation.png?raw=true)
-------------------
+__________
 Alert of type custom with custom title, status color, and icon, and includes HTML in message content.
 ```jsx
 <Alert type={Alert.Types.CUSTOM} 
@@ -88,7 +88,7 @@ Alert of type custom with custom title, status color, and icon, and includes HTM
 </Alert>
 ```
 ![Image](images/customAlert.png?raw=true)
-------------------
+__________
 Alert of type information with custom title and long HTML content with show more/less links.
 ```jsx
 <Alert type={Alert.Types.INFORMATION} title="Gettysburg Address:" >
@@ -128,7 +128,7 @@ Alert of type information with custom title and long HTML content with show more
 ```
 ![Image](images/longText1.png?raw=true)
 ![Image](images/longText2.png?raw=true)
-------------------
+__________
 Alert component of type 'warning' with an Action button.
 ```jsx
 <Alert type={Alert.Types.WARNING} 
@@ -137,7 +137,7 @@ Alert component of type 'warning' with an Action button.
 </Alert>
 ```
 ![Image](images/actionButton.png?raw=true)
-------------------
+__________
 Alert component of type 'confirmation' that is dismissible.
 ```jsx
 <Alert type={Alert.Types.CONFIRMATION} onDismiss={this.handleDismiss} >
@@ -145,7 +145,7 @@ Alert component of type 'confirmation' that is dismissible.
 </Alert>
 ```
 ![Image](images/dismissible.png?raw=true)
-------------------
+__________
 Alert of type 'custom' with no icon or title that is dismissible and has an action button
 ```jsx
 <Alert type={Alert.Types.CUSTOM} 
@@ -157,4 +157,4 @@ Alert of type 'custom' with no icon or title that is dismissible and has an acti
 </Alert>
 ```
 ![Image](images/actionAndDismissible.png?raw=true)
-------------------
+__________
