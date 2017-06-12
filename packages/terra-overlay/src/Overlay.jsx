@@ -30,14 +30,6 @@ const propTypes = {
   * Indicates if the overlay is relative to the triggering container
   */
   isRelativeToContainer: PropTypes.bool,
-  /**
-  * Indicates if the background scrolling is enables when overlay relative to container is open
-  */
-  isFixed: PropTypes.bool,
-  /**
-  * Indicates if the focus is not trapped to overlay content when overlay is relative to container
-  */
-  isNotTrappedFocus: PropTypes.bool,
 };
 
 const KEYCODES = {
@@ -50,46 +42,74 @@ const defaultProps = {
   backgroundStyle: 'light',
   isScrollable: false,
   isRelativeToContainer: false,
-  isFixed: false,
   onRequestClose: undefined,
-  isNotTrappedFocus: false,
 };
 
 class Overlay extends React.Component {
   constructor(props) {
     super(props);
     this.setContainer = this.setContainer.bind(this);
-    this.handleESCKeydown = this.handleESCKeydown.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.resetBackground = this.resetBackground.bind(this);
+    this.disableContainerChildrenFocus = this.disableContainerChildrenFocus.bind(this);
+    this.enableContainerChildrenFocus = this.enableContainerChildrenFocus.bind(this);
+    this.shouldHandleESCKeydown = this.shouldHandleESCKeydown.bind(this);
+    this.shouldHandleClick = this.shouldHandleClick.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.shouldHandleClick);
+    document.addEventListener('keydown', this.shouldHandleESCKeydown);
   }
 
   componentWillUnmount() {
+    document.removeEventListener('click', this.shouldHandleClick);
+    document.removeEventListener('keydown', this.shouldHandleESCKeydown);
+    this.children = null;
     this.container = null;
   }
 
   setContainer(node) {
     if (node === null) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
-    if (this.props.isFixed || !this.props.isRelativeToContainer) {
+
+    if (this.props.isRelativeToContainer) {
+      this.container = node.parentNode;
+      this.containerChildren = this.container.children;
+      this.disableContainerChildrenFocus();
+    } else {
       document.documentElement.style.overflow = 'hidden';
+      this.container = null;
     }
-    this.container = this.props.isRelativeToContainer ? node.parentNode : null;
   }
 
-  handleESCKeydown(event) {
+  disableContainerChildrenFocus() {
+    if (this.containerChildren) {
+      const prevTabIndex = [];
+      for (let i = 0; i < this.containerChildren.length; i += 1) {
+        prevTabIndex.push(this.containerChildren[i].tabIndex);
+        this.containerChildren[i].tabIndex = -1;
+      }
+      this.containerChildrenPrevTabIndex = prevTabIndex;
+    }
+  }
+
+  enableContainerChildrenFocus() {
+    if (this.containerChildren) {
+      for (let i = 0; i < this.containerChildren.length; i += 1) {
+        this.containerChildren[i].tabIndex = this.containerChildrenPrevTabIndex[i];
+      }
+    }
+  }
+
+  shouldHandleESCKeydown(event) {
     if (this.props.isOpen && event.keyCode === KEYCODES.ESCAPE) {
       this.handleCloseEvent(event);
     }
   }
 
-  handleClick(event) {
-    if (this.props.isOpen) {
-      if (this.props.isRelativeToContainer && this.container.contains(event.target)) {
-        this.handleCloseEvent(event);
-      } else if (!this.props.isRelativeToContainer) {
-        this.handleCloseEvent(event);
-      }
+  shouldHandleClick(event) {
+    if (this.props.isOpen && event.target.classList.contains('terra-Overlay')) {
+      this.handleCloseEvent(event);
     }
   }
 
@@ -99,15 +119,19 @@ class Overlay extends React.Component {
     }
   }
 
-  resetBackground() {
+  reset() {
     document.documentElement.style.overflow = this.overflow;
+    if (this.props.isRelativeToContainer) {
+      this.enableContainerChildrenFocus();
+    }
   }
 
   render() {
-    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, isFixed, isNotTrappedFocus, ...customProps } = this.props;
+    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, ...customProps } = this.props;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
+
     if (!isOpen) {
-      this.resetBackground();
+      this.reset();
       return null;
     }
 
@@ -120,23 +144,25 @@ class Overlay extends React.Component {
       attributes.className,
     ]);
 
-    const overlayComponent = (
-      <div ref={this.setContainer} onKeyDown={this.handleESCKeydown} onClick={this.handleClick} role="presentation" className={OverlayClassNames} tabIndex="0">
-        <div className="terra-Overlay-content">
-          {children}
-        </div>
+    const overlayContent = (
+      <div className="terra-Overlay-content">
+        {children}
       </div>
     );
 
-    if (isNotTrappedFocus) {
+    if (isRelativeToContainer) {
       return (
-        overlayComponent
+        <div ref={this.setContainer} className={OverlayClassNames} tabIndex="0">
+          {overlayContent}
+        </div>
       );
     }
 
     return (
       <FocusTrap>
-        {overlayComponent}
+        <div ref={this.setContainer} className={OverlayClassNames} tabIndex="0">
+          {overlayContent}
+        </div>
       </FocusTrap>
     );
   }

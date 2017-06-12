@@ -14,7 +14,7 @@ const propTypes = {
   /*
   * Incidates if the icon spinner should spin
   */
-  isSpin: PropTypes.bool,
+  isAnimated: PropTypes.bool,
   /**
   * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
   */
@@ -27,24 +27,19 @@ const propTypes = {
   * Indicates if the overlay is relative to the triggering container
   */
   isRelativeToContainer: PropTypes.bool,
-  /*
-  * Indicates if the background scrolling is enabled
-  */
-  isFixed: PropTypes.bool,
 };
 
 const defaultProps = {
   message: 'Loading...',
-  isSpin: false,
+  isAnimated: false,
   isOpen: false,
-  background: 'light',
+  backgroundStyle: 'light',
   isRelativeToContainer: false,
-  isFixed: false,
 };
 
-const LoadingOverlay = ({ message, isSpin, ...customProps }) => (
+const LoadingOverlay = ({ message, isAnimated, ...customProps }) => (
   <Overlay className="terra-LoadingOverlay" {...customProps} >
-    <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isSpin} />
+    <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} />
     <span className="terra-LoadingOverlay-message">{message}</span>
   </Overlay>
 );
