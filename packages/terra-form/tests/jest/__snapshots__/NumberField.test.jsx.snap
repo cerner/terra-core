@@ -1,0 +1,99 @@
+exports[`test should render a NumberField when all the possible props are passed into it 1`] = `
+<Field
+  error="This field is required"
+  help="Your county\'s office may have this information"
+  isInline={true}
+  label="Sales Tax Rate"
+  required={true}>
+  <Input
+    className="cernerConsumer-application"
+    max={1}
+    min={0}
+    name="sales_tax_rate"
+    required={true}
+    step={0.1}
+    type="number" />
+</Field>
+`;
+
+exports[`test should render a default component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false}>
+  <Input
+    max={null}
+    min={null}
+    name={null}
+    required={false}
+    step={null}
+    type="number" />
+</Field>
+`;
+
+exports[`test should render as controlled when just a default value is passed into the NumberField 1`] = `
+<NumberField
+  error={null}
+  help={null}
+  inputAttrs={Object {}}
+  isInline={false}
+  label={null}
+  max={null}
+  min={null}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  step={null}
+  value={2}>
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Input
+        max={null}
+        min={null}
+        name={null}
+        onChange={[Function]}
+        required={false}
+        step={null}
+        type="number"
+        value={2}>
+        <input
+          className="terra-Form-input"
+          max={null}
+          min={null}
+          name={null}
+          onChange={[Function]}
+          required={false}
+          step={null}
+          type="number"
+          value={2} />
+      </Input>
+    </div>
+  </Field>
+</NumberField>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the NumberField 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false}>
+  <Input
+    defaultValue={2}
+    max={null}
+    min={null}
+    name={null}
+    required={false}
+    step={null}
+    type="number" />
+</Field>
+`;

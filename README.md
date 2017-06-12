@@ -35,6 +35,7 @@
 | [terra-content-container](https://github.com/cerner/terra-core/tree/master/packages/terra-content-container) | [![NPM version](http://img.shields.io/npm/v/terra-content-container.svg)](https://www.npmjs.org/package/terra-content-container) | :large_orange_diamond: |
 | [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker) | [![NPM version](http://img.shields.io/npm/v/terra-date-picker.svg)](https://www.npmjs.org/package/terra-date-picker) | :large_orange_diamond: |
 | [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner) | [![NPM version](http://img.shields.io/npm/v/terra-demographics-banner.svg)](https://www.npmjs.org/package/terra-demographics-banner) | :large_orange_diamond: |
+| [terra-form](https://github.com/cerner/terra-core/tree/master/packages/terra-form) | [![NPM version](http://img.shields.io/npm/v/terra-form.svg)](https://www.npmjs.org/package/terra-form) | :large_orange_diamond: |
 | [terra-grid](https://github.com/cerner/terra-core/tree/master/packages/terra-grid) | [![NPM version](http://img.shields.io/npm/v/terra-grid.svg)](https://www.npmjs.org/package/terra-grid) | :white_check_mark: |
 | [terra-i18n](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n) | [![NPM version](http://img.shields.io/npm/v/terra-i18n.svg)](https://www.npmjs.org/package/terra-i18n) | :large_orange_diamond: |
 | [terra-i18n-plugin](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n-plugin) | [![NPM version](http://img.shields.io/npm/v/terra-i18n-plugin.svg)](https://www.npmjs.org/package/terra-i18n-plugin) | :large_orange_diamond: |
@@ -52,6 +53,7 @@
 | [terra-slide-panel](https://github.com/cerner/terra-core/tree/master/packages/terra-slide-panel) | [![NPM version](http://img.shields.io/npm/v/terra-slide-panel.svg)](https://www.npmjs.org/package/terra-slide-panel) | :large_orange_diamond: |
 | [terra-status](https://github.com/cerner/terra-core/tree/master/packages/terra-status) | [![NPM version](http://img.shields.io/npm/v/terra-status.svg)](https://www.npmjs.org/package/terra-status) | :large_orange_diamond: |
 | [terra-table](https://github.com/cerner/terra-core/tree/master/packages/terra-table) | [![NPM version](http://img.shields.io/npm/v/terra-table.svg)](https://www.npmjs.org/package/terra-table) | :large_orange_diamond: |
+| [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input) | [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input) | :large_orange_diamond: |
 | [terra-toolkit](https://github.com/cerner/terra-core/tree/master/packages/terra-toolkit) | [![NPM version](http://img.shields.io/npm/v/terra-toolkit.svg)](https://www.npmjs.org/package/terra-toolkit) | :large_orange_diamond: |
 
 ## Supported Browsers

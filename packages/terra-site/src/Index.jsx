@@ -27,6 +27,7 @@ import SearchFieldExamples from './examples/search-field/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
+import TimeInputExamples from './examples/time-input/Index';
 
 // Test Routes
 /* eslint-disable import/first */
@@ -55,6 +56,8 @@ import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
 import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
 import TestLinks from './TestLinks';
+import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
+
 
 // Remove eslint-disable as these pacakges are published
 /* eslint-disable import/no-extraneous-dependencies */
@@ -89,6 +92,7 @@ ReactDOM.render((
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
+      <Route path="time-input" component={TimeInputExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
@@ -110,6 +114,7 @@ ReactDOM.render((
     {MultiSelectListTestRoutes}
     {StatusTestRoutes}
     {TableTestRoutes}
+    {TimeInputTestRoutes}
     {ModalTestRoutes}
     {ProgressBarTestRoutes}
     {GridTestRoutes}
