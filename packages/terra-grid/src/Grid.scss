@@ -35,7 +35,7 @@
 }
 
 // Create responsive styles
-@each $size-name, $size-width in $terra-breakpoints {
+@each $size-name, $size-width in $terra-grid-breakpoints {
   @media screen and (min-width: $size-width) {
     // Responsive column classes
     @for $i from 1 through 12 {
