@@ -346,7 +346,6 @@ class Popup extends React.Component {
           content={popupContent}
           contentAttachment={contentAttachment}
           contentOffset={`${this.offset.vertical} ${this.offset.horizontal}`}
-          disableOnPosition={!allowScrolling}
           isEnabled
           onRepositioned={this.handleTetherRepositioned}
           targetRef={targetRef}
