@@ -17,7 +17,7 @@ const defaultProps = {
 
 class PopupOverlay extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     // Disable scrolling on the page when Overlay is displayed
     document.documentElement.style.overflow = 'hidden';
   }
