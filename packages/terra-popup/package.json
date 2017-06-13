@@ -26,9 +26,9 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.4.1",
-    "terra-icon": "^0.4.1",
-    "terra-mixins": "^1.1.1"
+    "terra-base": "^0.6.0",
+    "terra-icon": "^0.6.0",
+    "terra-mixins": "^1.3.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -37,10 +37,10 @@
     "react-onclickoutside": "^5.11.1",
     "react-portal": "^3.0.0",
     "tether": "^1.4.0",
-    "terra-base": "^0.4.1",
-    "terra-content-container": "^0.2.0",
-    "terra-icon": "^0.4.1",
-    "terra-mixins": "^1.1.1"
+    "terra-base": "^0.6.0",
+    "terra-content-container": "^0.4.0",
+    "terra-icon": "^0.6.0",
+    "terra-mixins": "^1.3.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
