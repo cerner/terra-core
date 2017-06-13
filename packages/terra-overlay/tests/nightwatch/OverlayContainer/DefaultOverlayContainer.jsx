@@ -2,4 +2,10 @@ import React from 'react';
 
 import OverlayContainer from '../../../lib/OverlayContainer';
 
-export default () => <OverlayContainer />;
+const ContainerExample = () => (
+  <OverlayContainer>
+    OverlayContainer is a wrapper component that applies the css style `position: relative;` so the overlay relative to container displays correctly.
+  </OverlayContainer>
+);
+
+export default ContainerExample;

@@ -11,9 +11,9 @@ module.exports = {
     screenshot(browser, 'terra-overlay', done);
   },
 
-  'Displays a default LoadingOverlay': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/overlay-container-tests/default`)
-      .assert.elementPresent('.terra-OverlayContainer');
+  'Displays a default OverlayContainer': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/overlay-container-tests/default`);
+    browser.assert.elementPresent('.terra-OverlayContainer');
+    browser.assert.attributeEquals('.terra-OverlayContainer', 'tabIndex', '-1');
   },
 };
