@@ -3,25 +3,25 @@
   box-sizing: content-box;
   margin-top: 10px;
   padding: 10px;
-  width: $terra-tiny-breakpoint / 2;
+  width: 544px / 2;
 }
 
 .terra-ResponsiveExample-container--tiny {
-  width: $terra-tiny-breakpoint;
+  width: 544px;
 }
 
 .terra-ResponsiveExample-container--small {
-  width: $terra-small-breakpoint;
+  width: 768px;
 }
 
 .terra-ResponsiveExample-container--medium {
-  width: $terra-medium-breakpoint;
+  width: 992px;
 }
 
 .terra-ResponsiveExample-container--large {
-  width: $terra-large-breakpoint;
+  width: 1216px;
 }
 
 .terra-ResponsiveExample-container--huge {
-  width: $terra-huge-breakpoint;
+  width: 1440px;
 }
