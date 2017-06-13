@@ -2,11 +2,11 @@
 // ==========================
 
 // Basic List Element Colors
-$terra-list-chevron-color: $terra-grey-30 !default;
-$terra-list-divider-color: $terra-grey-15 !default;
+$terra-list-chevron-color: #bcbfc0;
+$terra-list-divider-color: #dedfe0;
 
 // Selection Styles
-$terra-list-item-hover-background-color: $terra-blue-10 !default;
-$terra-list-item-selected-background-color: $terra-blue-10 !default;
-$terra-list-item-selected-divider-color: $terra-blue-70 !default;
-$terra-list-item-selected-hover-background-color: darken($terra-blue-10, 5%) !default;
+$terra-list-item-hover-background-color: #ebf6fd;
+$terra-list-item-selected-background-color: #ebf6fd;
+$terra-list-item-selected-divider-color: #0092e0;
+$terra-list-item-selected-hover-background-color: darken(#ebf6fd, 5%);

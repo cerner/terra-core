@@ -35,7 +35,7 @@ input[type='submit'].terra-Button {
   border-width: $terra-button-border-width;
   cursor: pointer;
   display: inline-block;
-  font-family: $terra-font-family;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: map-get($terra-button-font-sizes, medium);
   font-weight: $terra-button-font-weight;
   line-height: 1.429; // 20px when html font size is computed to 14px
@@ -56,7 +56,7 @@ input[type='submit'].terra-Button {
 
   // Restore the focus styles unset by the previous rule.
   &:-moz-focusring {
-    outline: 1px dotted $terra-dark;
+    outline: 1px dotted #1c1f21;
     -moz-outline-radius: 0.25em;
   }
 

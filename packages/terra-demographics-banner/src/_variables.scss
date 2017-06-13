@@ -1,4 +1,8 @@
-$demographics-background: $terra-blue-100;
-$demographics-foreground: $terra-white;
-$demographics-background-deceased: $terra-dark;
-$demographics-foreground-deceased: $terra-white;
+// Variables
+// ==========================
+
+$terra-bidi: true;
+$demographics-background: #004c76;
+$demographics-foreground: #fff;
+$demographics-background-deceased: #1c1f21;
+$demographics-foreground-deceased: #fff;
