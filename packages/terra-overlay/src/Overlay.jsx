@@ -57,12 +57,10 @@ class Overlay extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('click', this.shouldHandleClick);
     document.addEventListener('keydown', this.shouldHandleESCKeydown);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.shouldHandleClick);
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
     this.children = null;
     this.container = null;
@@ -104,11 +102,12 @@ class Overlay extends React.Component {
   shouldHandleESCKeydown(event) {
     if (this.props.isOpen && event.keyCode === KEYCODES.ESCAPE) {
       this.handleCloseEvent(event);
+      event.preventDefault();
     }
   }
 
   shouldHandleClick(event) {
-    if (this.props.isOpen && event.target.classList.contains('terra-Overlay')) {
+    if (this.props.isOpen) {
       this.handleCloseEvent(event);
     }
   }
@@ -127,7 +126,7 @@ class Overlay extends React.Component {
   }
 
   render() {
-    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, ...customProps } = this.props;
+    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps } = this.props;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
@@ -144,25 +143,24 @@ class Overlay extends React.Component {
       attributes.className,
     ]);
 
-    const overlayContent = (
-      <div className="terra-Overlay-content">
-        {children}
+    // Disable linter to pass onClick to div element.
+    /* eslint-disable jsx-a11y/no-static-element-interactions */
+    const overlayComponent = (
+      <div ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" {...customProps}>
+        <div className="terra-Overlay-content">
+          {children}
+        </div>
       </div>
     );
+    /* eslint-enable jsx-a11y/no-static-element-interactions */
 
     if (isRelativeToContainer) {
-      return (
-        <div ref={this.setContainer} className={OverlayClassNames} tabIndex="0">
-          {overlayContent}
-        </div>
-      );
+      return overlayComponent;
     }
 
     return (
       <FocusTrap>
-        <div ref={this.setContainer} className={OverlayClassNames} tabIndex="0">
-          {overlayContent}
-        </div>
+        {overlayComponent}
       </FocusTrap>
     );
   }
