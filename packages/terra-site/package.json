@@ -39,7 +39,7 @@
     "terra-content-container": "^0.4.0",
     "terra-date-picker": "^0.5.0",
     "terra-demographics-banner": "^0.5.0",
-    "terra-form": "^0.1.0",
+    "terra-form": "^0.2.0",
     "terra-grid": "^3.0.0",
     "terra-i18n": "^0.x",
     "terra-i18n-plugin": "^0.x",
