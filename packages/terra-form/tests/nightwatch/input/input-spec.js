@@ -31,7 +31,7 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/input/populated_controlled`)
       .assert.elementPresent('input[name="foo"][value="Jack"][required]')
       .clearValue('input[name="foo"]')
-      .setValue('input[name="foo"][value="Jack"]', 'New Value')
+      .setValue('input[name="foo"]', 'New Value')
       .assert.value('input[name="foo"]', 'New Value');
   },
 };
