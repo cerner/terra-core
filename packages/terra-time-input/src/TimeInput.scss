@@ -5,12 +5,12 @@
   @include terra-border-radius-start(0.25em);
   @include terra-border-radius-end(0.25em);
   background-color: transparent;
-  border: $terra-grey-15 solid 1px;
+  border: #dedfe0 solid 1px;
   display: inline-block;
   margin: 0;
 
   &.is-focused {
-    border-color: $terra-blue-60;
+    border-color: #26a2e5;
     outline: none;
   }
 }

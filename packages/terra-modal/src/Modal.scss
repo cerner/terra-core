@@ -3,7 +3,7 @@
 .terra-Modal {
   @include terra-position-start(10px);
   @include terra-position-end(10px);
-  background-color: $terra-white;
+  background-color: #fff;
   border-radius: 5px;
   bottom: 10px;
   display: block;
@@ -12,7 +12,7 @@
   overflow: hidden;
   position: fixed;
   top: 10px;
-  z-index: $terra-z-index-6 + 1;
+  z-index: 6000 + 1;
 
   @media screen and (min-width: 48em) {
     &:not(.terra-Modal--fullscreen) {

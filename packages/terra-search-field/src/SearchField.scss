@@ -9,7 +9,7 @@
     @include terra-border-end(0);
 
     appearance: textfield;
-    border: 0.071em solid $terra-grey-15;
+    border: 0.071em solid #dedfe0;
     flex: 1 1 auto;
     font-family: inherit;
     font-size: 1em;
@@ -19,7 +19,7 @@
     padding: 0.286rem;
 
     &:focus {
-      border-color: $terra-blue-60;
+      border-color: #26a2e5;
       outline: none;
     }
   }
@@ -28,7 +28,7 @@
     @include terra-border-radius-start(0);
     @include terra-border-radius-end(0.286em);
 
-    border: 0.071em solid $terra-grey-15;
+    border: 0.071em solid #dedfe0;
     display: inline-block;
     flex: 0 0 auto;
     margin: 0;
