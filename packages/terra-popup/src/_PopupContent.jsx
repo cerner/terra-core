@@ -127,8 +127,9 @@ class PopupContent extends React.Component {
   }
 
   static addPopupHeader(children, onRequestClose) {
-    const icon = <IconClose tabIndex="0" className="terra-PopupContent-closeButton" onClick={onRequestClose} height="30" width="30" style={{ float: 'right' }} />;
-    const header = <div className="terra-PopupContent-header">{icon}</div>;
+    const icon = <IconClose tabIndex="0" height="30" width="30" />;
+    const button = <button className="terra-PopupContent-close" onClick={onRequestClose} style={{ float: 'right' }}>{icon}</button>;
+    const header = <div className="terra-PopupContent-header">{button}</div>;
     return <ContentContainer header={header} fill>{children}</ContentContainer>;
   }
 
@@ -197,6 +198,7 @@ class PopupContent extends React.Component {
   handleKeydown(event) {
     if (event.keyCode === KEYCODES.ESCAPE && this.props.onRequestClose) {
       this.props.onRequestClose(event);
+      event.preventDefault();
     }
   }
 
