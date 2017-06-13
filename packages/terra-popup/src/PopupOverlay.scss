@@ -1,7 +1,7 @@
 @import '~terra-mixins';
 
 .terra-PopupOverlay {
-  background-color: $terra-white;
+  background-color: #fff;
   height: 100%;
   opacity: 0.01;
   overflow: -moz-scrollbars-none;
@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: $terra-z-index-7;
+  z-index: 7000;
   @include terra-position-start(0);
 
   &::-webkit-scrollbar {
