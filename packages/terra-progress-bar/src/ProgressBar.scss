@@ -3,7 +3,7 @@
 @import './mixins';
 
 .terra-ProgressBar {
-  background: $terra-grey-20;
+  background: #d3d4d5;
   border-radius: 0.5em;
   display: inline-block;
   height: map-get($terra-progress-bar-sizes, 'small');
@@ -20,7 +20,7 @@
 
     // To fix background color to the proper shade of Grey in Safari
     &::-webkit-progress-bar {
-      background: $terra-grey-20;
+      background: #d3d4d5;
       border-radius: 0;
     }
 
@@ -60,7 +60,7 @@
     }
 
     &[value] {
-      background-color: $terra-grey-20;
+      background-color: #d3d4d5;
     }
 
     &[value]::-moz-progress-bar {

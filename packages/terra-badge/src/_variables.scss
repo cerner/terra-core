@@ -4,54 +4,54 @@ $terra-badge-font-sizes: (
   medium: 1rem,
   large: 1.4rem,
   huge: 1.7rem
-) !default;
+);
 
-$terra-badge-child-margin: 0.357em !default;
+$terra-badge-child-margin: 0.357em;
 
-$terra-badge-border-radius: 0.25em !default;
-$terra-badge-display: inline-block !default;
+$terra-badge-border-radius: 0.25em;
+$terra-badge-display: inline-block;
 
-$terra-badge-font-weight: 700 !default;
-$terra-badge-line-height: 1 !default;
+$terra-badge-font-weight: 700;
+$terra-badge-line-height: 1;
 
-$terra-badge-padding-bottom: 0.5rem !default;
-$terra-badge-padding-left: 0.36rem !default;
-$terra-badge-padding-right: 0.36rem !default;
-$terra-badge-padding-top: 0.5rem !default;
+$terra-badge-padding-bottom: 0.5rem;
+$terra-badge-padding-left: 0.36rem;
+$terra-badge-padding-right: 0.36rem;
+$terra-badge-padding-top: 0.5rem;
 
-$terra-badge-text-transform: none !default;
+$terra-badge-text-transform: none;
 
 $terra-badge-default-color-scheme: (
-  background-color: $terra-grey-30,
-  color: $terra-grey-90
-) !default;
+  background-color: #bcbfc0,
+  color: #383f42
+);
 
 $terra-badge-primary-color-scheme: (
-  background-color: $terra-blue-100,
-  color: $terra-white
-) !default;
+  background-color: #004c76,
+  color: #fff
+);
 
 $terra-badge-secondary-color-scheme: (
-  background-color: $terra-green-90,
-  color: $terra-white
-) !default;
+  background-color: #4e832b,
+  color: #fff
+);
 
 $terra-badge-positive-color-scheme: (
-  background-color: $terra-green-90,
-  color: $terra-white
-) !default;
+  background-color: #4e832b,
+  color: #fff
+);
 
 $terra-badge-negative-color-scheme: (
-  background-color: $terra-red-90,
-  color: $terra-white
-) !default;
+  background-color: #bc0203,
+  color: #fff
+);
 
 $terra-badge-warning-color-scheme: (
-  background-color: $terra-orange-100,
-  color: $terra-white
-) !default;
+  background-color: #da3b03,
+  color: #fff
+);
 
 $terra-badge-info-color-scheme: (
-  background-color: $terra-blue-100,
-  color: $terra-white
-) !default;
+  background-color: #004c76,
+  color: #fff
+);
