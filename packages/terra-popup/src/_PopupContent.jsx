@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import onClickOutside from 'react-onclickoutside';
 import ContentContainer from 'terra-content-container';
 import IconClose from 'terra-icon/lib/icon/IconClose';
+import FocusTrap from 'focus-trap-react';
 import './PopupContent.scss';
 
 /**
@@ -126,7 +127,7 @@ class PopupContent extends React.Component {
   }
 
   static addPopupHeader(children, onRequestClose) {
-    const icon = <IconClose className="terra-PopupContent-closeButton" onClick={onRequestClose} height="30" width="30" style={{ float: 'right' }} />;
+    const icon = <IconClose tabIndex="0" className="terra-PopupContent-closeButton" onClick={onRequestClose} height="30" width="30" style={{ float: 'right' }} />;
     const header = <div className="terra-PopupContent-header">{icon}</div>;
     return <ContentContainer header={header} fill>{children}</ContentContainer>;
   }
@@ -261,12 +262,14 @@ class PopupContent extends React.Component {
     delete customProps.enableOnClickOutside;
 
     return (
-      <div {...customProps} className={popupContentClassNames} ref={refCallback}>
-        {arrowContent}
-        <div className={innerClassNames} style={contentStyle}>
-          {content}
+      <FocusTrap>
+        <div {...customProps} tabIndex="0" className={popupContentClassNames} ref={refCallback}>
+          {arrowContent}
+          <div className={innerClassNames} style={contentStyle}>
+            {content}
+          </div>
         </div>
-      </div>
+      </FocusTrap>
     );
   }
 }
