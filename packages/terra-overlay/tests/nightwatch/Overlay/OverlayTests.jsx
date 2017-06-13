@@ -6,7 +6,14 @@ import { Link } from 'react-router';
 const OverlayTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/overlay-tests/default">Default Overlay</Link></li>
+      <li><Link to="/tests/overlay-tests/default">Overlay- Default</Link></li>
+      <li><Link to="/tests/overlay-tests/container">Overlay - Relative to Container</Link></li>
+      <li><Link to="/tests/overlay-tests/custom-content">Overlay - Custom Content</Link></li>
+      <li><Link to="/tests/overlay-tests/scrollable">Overlay - Scrollable</Link></li>
+      <li><Link to="/tests/overlay-tests/on-request-close">Overlay - On Request Close</Link></li>
+      <li><Link to="/tests/overlay-tests/light-themed">Overlay - Light Themed</Link></li>
+      <li><Link to="/tests/overlay-tests/dark-themed">Overlay - Dark Themed</Link></li>
+      <li><Link to="/tests/overlay-tests/clear-themed">Overlay - Clear Themed</Link></li>
     </ul>
   </div>
 );
