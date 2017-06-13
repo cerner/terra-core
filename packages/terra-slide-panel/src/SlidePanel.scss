@@ -9,7 +9,7 @@
 
 .terra-SlidePanel-main,
 .terra-SlidePanel-panel {
-  background-color: $terra-white;
+  background-color: #fff;
   box-sizing: border-box;
 
   height: 100%;
@@ -64,7 +64,7 @@
   @include terra-translate3d(0, 0, 0);
 }
 
-@media all and (min-width: $terra-small-breakpoint) {
+@media all and (min-width: 768px) {
   // Set explicit width on larger screens
   [data-slide-panel-panel-size='small'] > .terra-SlidePanel-panel {
     width: $terra-slide-panel-panel-width-small;
@@ -77,7 +77,7 @@
 
 // Overlay
 .terra-SlidePanel--is-open[data-slide-panel-panel-behavior='overlay'] {
-  @media (min-width: $terra-small-breakpoint), print {
+  @media (min-width: 768px), print {
     &[data-slide-panel-panel-position='start'] > .terra-SlidePanel-panel {
       @include terra-slide-panel-shadow-end();
     }
@@ -90,7 +90,7 @@
 
 // Squish
 .terra-SlidePanel--is-open[data-slide-panel-panel-behavior='squish'] {
-  @media (min-width: $terra-small-breakpoint), print {
+  @media (min-width: 768px), print {
     &[data-slide-panel-panel-size='small'] > .terra-SlidePanel-main {
       width: calc(100% - #{$terra-slide-panel-panel-width-small});
     }
