@@ -61,8 +61,8 @@ const Field = ({ children, error, help, htmlFor, isInline, label, labelAttrs, re
 
   const labelClassNames = classNames(
     'terra-Form-label',
-    labelAttrs.className
-  )
+    labelAttrs.className,
+  );
 
   return (
     <div {...customProps} className={fieldClasses}>

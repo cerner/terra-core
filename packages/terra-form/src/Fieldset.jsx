@@ -29,7 +29,7 @@ const propTypes = {
   legend: PropTypes.string,
   /**
    * Attributes to attach to the legend
-   */ 
+   */
   legendAttrs: PropTypes.object,
   /**
    * Determines whether the fieldset is required
@@ -57,8 +57,8 @@ const Fieldset = ({ children, error, help, isInline, legend, legendAttrs, requir
 
   const legendClasses = classNames(
     'terra-Form-legend',
-    legendAttrs.className
-  )
+    legendAttrs.className,
+  );
 
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
