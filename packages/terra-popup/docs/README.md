@@ -1,6 +1,6 @@
 # Terra Popup
 
-The Terra Popup is higher order component, that launches tether positioned content, with the ability to display a dynamic arrow.
+The Terra Popup is higher order component that launches tether positioned content with the ability to display a dynamic arrow.
 
 ## Getting Started
 

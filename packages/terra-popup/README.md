@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-popup.svg)](https://www.npmjs.org/package/terra-popup)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Terra Popup is higher order component, that launches tether positioned content, with the ability to display a dynamic arrow.
+The Terra Popup is higher order component that launches tether positioned content with the ability to display a dynamic arrow.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)

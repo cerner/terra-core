@@ -38,7 +38,7 @@ const DIMENSIONS_MAP = {
   '100x': 100,
 };
 
-const COMBINE = () => {
+const DIMENSION_COMBINATIONS = (() => {
   const combinations = [];
   for (let i = 0; i < DIMENSIONS.length; i += 1) {
     for (let j = 0; j < DIMENSIONS.length; j += 1) {
@@ -46,9 +46,7 @@ const COMBINE = () => {
     }
   }
   return combinations;
-};
-
-const DIMENSION_COMBINATIONS = COMBINE();
+})();
 
 const propTypes = {
   /**
