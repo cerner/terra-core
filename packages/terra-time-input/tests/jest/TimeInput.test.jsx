@@ -1,5 +1,11 @@
 import React from 'react';
 import TimeInput from '../../src/TimeInput';
+import TimeUtil from '../../src/TimeUtil';
+
+// The converted time returned in TimeUtil.createUTCTimeFromLocalTime could be different depending on the timezone where these tests are executed.
+// Therefore, mock TimeUtil.createUTCTimeFromLocalTime to always return a consistent string so that the jest snapshot is consistent.
+TimeUtil.createUTCTimeFromLocalTime = jest.genMockFn();
+TimeUtil.createUTCTimeFromLocalTime.mockImplementation(() => '15:45Z');
 
 const handleOnChange = () => {
 };
