@@ -8,11 +8,11 @@ import './Overlay.scss';
 
 const propTypes = {
  /*
- * The message to be displayed
+ * The message to be displayed within the overlay.
  */
   message: PropTypes.string,
   /*
-  * Incidates if the icon spinner should spin
+  * Incidates if the icon spinner should be animated.
   */
   isAnimated: PropTypes.bool,
   /**
@@ -20,11 +20,11 @@ const propTypes = {
   */
   backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /*
-  * Incidates if the overlay is open
+  * Incidates if the overlay is open.
   */
   isOpen: PropTypes.bool,
   /*
-  * Indicates if the overlay is relative to the triggering container
+  * Indicates if the overlay is relative to the triggering container.
   */
   isRelativeToContainer: PropTypes.bool,
 };
@@ -37,12 +37,20 @@ const defaultProps = {
   isRelativeToContainer: false,
 };
 
-const LoadingOverlay = ({ message, isAnimated, ...customProps }) => (
-  <Overlay className="terra-LoadingOverlay" {...customProps} >
-    <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} />
-    <span className="terra-LoadingOverlay-message">{message}</span>
-  </Overlay>
-);
+const LoadingOverlay = (props) => {
+  const { message, isAnimated, ...customProps } = props;
+
+  if ('onRequestClose' in customProps) {
+    delete customProps.onRequestClose;
+  }
+
+  return (
+    <Overlay className="terra-LoadingOverlay" contentClassName="terra-LoadingOverlay-content" {...customProps} >
+      <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} />
+      <span className="terra-LoadingOverlay-message">{message}</span>
+    </Overlay>
+  );
+};
 
 LoadingOverlay.propTypes = propTypes;
 LoadingOverlay.defaultProps = defaultProps;

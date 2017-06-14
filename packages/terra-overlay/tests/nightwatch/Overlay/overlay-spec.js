@@ -104,10 +104,6 @@ module.exports = {
     browser.assert.containsText('#random_state', 'false');
   },
 
-  // FUNCATIONALITY THAT NEEDS TESTED....
-  // >> Test close on click inside...
-  // >> >> >>inside of content as well...
-
   'Displays a Overlay with a light theme': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/overlay-tests/light-themed`);
     browser.assert.cssClassPresent('.terra-Overlay', 'terra-Overlay--light');

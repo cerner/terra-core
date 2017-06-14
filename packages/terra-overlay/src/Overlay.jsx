@@ -7,11 +7,11 @@ import './Overlay.scss';
 
 const propTypes = {
   /**
-  * The content to be displayed.
+  * The content to be displayed within the overlay.
   */
   children: PropTypes.node,
   /**
-  * Incidates if the overlay is open
+  * Incidates if the overlay is open.
   */
   isOpen: PropTypes.bool,
   /**
@@ -19,15 +19,15 @@ const propTypes = {
   */
   backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /**
-  * Incidates if the overlay content is scrollable
+  * Incidates if the overlay content is scrollable.
   */
   isScrollable: PropTypes.bool,
   /**
-  * Callback triggered on overlay click or ESC key
+  * Callback triggered on overlay click or ESC key. Setting this enables close behavior.
   */
   onRequestClose: PropTypes.func,
   /**
-  * Indicates if the overlay is relative to the triggering container
+  * Indicates if the overlay is relative to the triggering container.
   */
   isRelativeToContainer: PropTypes.bool,
 };
@@ -53,7 +53,7 @@ class Overlay extends React.Component {
     this.enableContainerChildrenFocus = this.enableContainerChildrenFocus.bind(this);
     this.shouldHandleESCKeydown = this.shouldHandleESCKeydown.bind(this);
     this.shouldHandleClick = this.shouldHandleClick.bind(this);
-    this.reset = this.reset.bind(this);
+    this.resetBeforeOverlay = this.resetBeforeOverlay.bind(this);
   }
 
   componentDidMount() {
@@ -118,7 +118,7 @@ class Overlay extends React.Component {
     }
   }
 
-  reset() {
+  resetBeforeOverlay() {
     document.documentElement.style.overflow = this.overflow;
     if (this.props.isRelativeToContainer) {
       this.enableContainerChildrenFocus();
@@ -127,14 +127,14 @@ class Overlay extends React.Component {
 
   render() {
     const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps } = this.props;
+    const { contentClassName, ...attributes } = customProps;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
-      this.reset();
+      this.resetBeforeOverlay();
       return null;
     }
 
-    const attributes = Object.assign({}, customProps);
     const OverlayClassNames = classNames([
       'terra-Overlay',
       { [`terra-Overlay--${type}`]: type },
@@ -143,11 +143,16 @@ class Overlay extends React.Component {
       attributes.className,
     ]);
 
+    const OverlayContentClassNames = classNames([
+      'terra-Overlay-content',
+      contentClassName,
+    ]);
+
     // Disable linter to pass onClick to div element.
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     const overlayComponent = (
-      <div ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" {...customProps}>
-        <div className="terra-Overlay-content">
+      <div {...attributes} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" >
+        <div className={OverlayContentClassNames}>
           {children}
         </div>
       </div>

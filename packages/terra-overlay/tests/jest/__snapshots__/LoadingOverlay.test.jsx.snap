@@ -2,6 +2,7 @@ exports[`LoadingOverlay should render a null component when isOpen is not provid
 <Overlay
   backgroundStyle="light"
   className="terra-LoadingOverlay"
+  contentClassName="terra-LoadingOverlay-content"
   isOpen={false}
   isRelativeToContainer={false}
   isScrollable={false}>
@@ -22,6 +23,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
 <Overlay
   backgroundStyle="light"
   className="terra-LoadingOverlay"
+  contentClassName="terra-LoadingOverlay-content"
   isOpen={true}
   isRelativeToContainer={false}
   isScrollable={false}>
@@ -42,6 +44,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
 <Overlay
   backgroundStyle="light"
   className="terra-LoadingOverlay"
+  contentClassName="terra-LoadingOverlay-content"
   isOpen={true}
   isRelativeToContainer={false}
   isScrollable={false}>

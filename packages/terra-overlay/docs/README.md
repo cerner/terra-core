@@ -14,22 +14,70 @@ A Loading Overlay is a subcomponent that displays an overlay with a spinner icon
 # Overlay
 ```jsx
 import React from 'react';
+import Button from 'terra-button';
 import Overlay from 'terra-clinical-overlay';
-<OverlayContainer>
-  <Overlay>
-    <Icon />
-    <a href="www.terra-clinical.com/home-page" > Home Page </a>
-    <a href="www.terra-clinical.com/documentation" > Documentation </a>
-  </Overlay>
-</OverlayContainer>
+
+class OverlayExample extends React.Component {
+  constructor() {
+    super();
+    this.state = { show: false };
+    this.handleTriggerOverlay = this.handleTriggerOverlay.bind(this);
+    this.handleOnRequestESC = this.handleOnRequestESC.bind(this);
+  }
+
+  handleTriggerOverlay() {
+    this.setState({ show: true });
+  }
+
+  handleOnRequestESC() {
+    this.setState({ show: false });
+  }
+
+  render() {
+    return (
+      <Overlay.OverlayContainer style={{ height: '100px', width: '100%' }} >
+        <Overlay isOpen={this.state.show} isRelativeToContainer onRequestClose={this.handleOnRequestESC}>
+          <p>Close by clicking the overlay or pressing the ESC key.</p>
+        </Overlay>
+        <Button onClick={this.handleTriggerOverlay}>Trigger Overlay</Button>
+      </Overlay.OverlayContainer>
+    );
+  }
+}
+
+export default OverlayExample;
 ```
 
 # LoadingOverlay
 ```jsx
 import React from 'react';
+import Button from 'terra-button';
 import Overlay.LoadingOverlay from 'terra-clinical-overlay';
 
-<LoadingOverlay
-  message="Loading..."
-/>
+class LoadingOverlayExample extends React.Component {
+  constructor() {
+    super();
+    this.state = { show: false };
+    this.handleTriggerOverlay = this.handleTriggerOverlay.bind(this);
+  }
+
+  handleTriggerOverlay() {
+    this.setState({ show: true });
+
+    setTimeout(() => {
+      this.setState({ show: false });
+    }, 5000);
+  }
+
+  render() {
+    return (
+      <div>
+        <LoadingOverlay isOpen={this.state.show} isAnimated />
+        <Button onClick={this.handleTriggerOverlay}>Trigger Loading Overlay</Button>
+      </div>
+    );
+  }
+}
+
+export default LoadingOverlayExample;
 ```
