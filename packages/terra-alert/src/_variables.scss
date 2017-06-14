@@ -26,6 +26,10 @@ $terra-alert-confirmation-color-scheme: (
   background-color: $terra-grey-5
 ) !default;
 
+$terra-alert-outside-records-color-scheme: (
+  background-color: $terra-grey-5
+) !default;
+
 $terra-alert-custom-color-scheme: (
   background-color: $terra-grey-5
 ) !default;
@@ -50,14 +54,16 @@ $terra-alert-warning-shadow-color: $terra-yellow-60 !default;
 
 $terra-alert-required-shadow-color: $terra-red-70 !default;
 
-$terra-alert-advisory-shadow-color: $terra-purple-80 !default;
+$terra-alert-advisory-shadow-color: $terra-grey-45 !default;
 
 $terra-alert-information-shadow-color: $terra-blue-70 !default;
 
 $terra-alert-confirmation-shadow-color: $terra-green-60 !default;
 
+$terra-alert-outside-records-shadow-color: $terra-purple-80 !default;
+
 $terra-alert-custom-shadow-color: (
-  color: $terra-red-70
+  color: $terra-grey-45
 ) !default;
 
 $terra-alert-custom-text-color: (

@@ -223,9 +223,9 @@ describe('7. Alert of type advisory with text content', () => {
   });
 
   // Prop Tests
-  it('should render an Alert of type advisory including IconDiamond icon and default advisory title', () => {
+  it('should render an Alert of type advisory including no icon and default advisory title', () => {
     const wrapper = shallow(basicAdvisoryRender);
-    expect(wrapper.childAt(0).childAt(0).find(IconDiamond)).toHaveLength(1);
+    expect(wrapper.childAt(0).childAt(0).children()).toHaveLength(0);
     expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Advisory!');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
@@ -290,7 +290,33 @@ describe('9. Alert of type confirmation with text content', () => {
   });
 });
 
-describe('10. Alert of type custom with custom title and text content', () => {
+describe('10. Alert of type outside records with text content', () => {
+  const alertText = 'This is an outside records alert.';
+  const basicOutsideRecordsRender = <Alert type={Alert.Types.OUTSIDE_RECORDS} >{alertText}</Alert>;
+
+  // Snapshot Tests
+  it('should render an Alert component of type confirmation', () => {
+    const wrapper = shallow(basicOutsideRecordsRender);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  // Prop Tests
+  it('should render an Alert of type outside records including IconDiamond icon and default outside records title', () => {
+    const wrapper = shallow(basicOutsideRecordsRender);
+    expect(wrapper.childAt(0).childAt(0).find(IconDiamond)).toHaveLength(1);
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Outside Records!');
+    expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
+  });
+
+  // Structure Tests
+  it('should have the class terra-Alert and terra-Alert--outside-records', () => {
+    const wrapper = shallow(basicOutsideRecordsRender);
+    expect(wrapper.prop('className')).toContain('terra-Alert');
+    expect(wrapper.prop('className')).toContain('terra-Alert--outside-records');
+  });
+});
+
+describe('11. Alert of type custom with custom title and text content', () => {
   const alertText = 'This is a custom alert.';
   const alertCustomTitle = 'Help!';
   const basicCustomRender = <Alert type={Alert.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" >{alertText}</Alert>;
@@ -319,7 +345,7 @@ describe('10. Alert of type custom with custom title and text content', () => {
   });
 });
 
-describe('11. Alert of type information with custom title and HTML content', () => {
+describe('12. Alert of type information with custom title and HTML content', () => {
   const alertText = 'Four score and seven years ago . . .';
   const alertHTML = <span>{alertText}</span>;
   const alertCustomTitle = 'Gettysburg Address';
@@ -349,7 +375,7 @@ describe('11. Alert of type information with custom title and HTML content', () 
   });
 });
 
-describe('12. Alert of type confirmation with an action button text content', () => {
+describe('13. Alert of type confirmation with an action button text content', () => {
   const alertText = 'This is a confirmation alert.';
   const actionButtonRender = <Alert type={Alert.Types.CONFIRMATION} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
 
@@ -377,7 +403,7 @@ describe('12. Alert of type confirmation with an action button text content', ()
   });
 });
 
-describe('13. Dismissable Alert of type custom with action button, custom title and text content', () => {
+describe('14. Dismissable Alert of type custom with action button, custom title and text content', () => {
   const alertText = 'This is a custom alert.';
   const alertCustomTitle = 'Help!';
   const customActionDismissRender = <Alert type={Alert.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;

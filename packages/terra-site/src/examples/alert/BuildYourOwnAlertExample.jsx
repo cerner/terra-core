@@ -222,14 +222,15 @@ class BuildYourOwnAlertExample extends React.Component {
                   <td>
                     <select id="typeSelector" name="type" value={this.state.type} onChange={this.handleTypeSelectChange}>
                       <option value="">default</option>
-                      <option value={Alert.Types.ALERT}>{Alert.Types.ALERT}</option>
-                      <option value={Alert.Types.ERROR}>{Alert.Types.ERROR}</option>
-                      <option value={Alert.Types.WARNING}>{Alert.Types.WARNING}</option>
-                      <option value={Alert.Types.REQUIRED}>{Alert.Types.REQUIRED}</option>
-                      <option value={Alert.Types.ADVISORY}>{Alert.Types.ADVISORY}</option>
-                      <option value={Alert.Types.INFORMATION}>{Alert.Types.INFORMATION}</option>
-                      <option value={Alert.Types.CONFIRMATION}>{Alert.Types.CONFIRMATION}</option>
-                      <option value={Alert.Types.CUSTOM}>{Alert.Types.CUSTOM}</option>
+                      <option value={Alert.Types.ALERT}>Alert.Types.ALERT</option>
+                      <option value={Alert.Types.ERROR}>Alert.Types.ERROR</option>
+                      <option value={Alert.Types.WARNING}>Alert.Types.WARNING</option>
+                      <option value={Alert.Types.REQUIRED}>Alert.Types.REQUIRED</option>
+                      <option value={Alert.Types.ADVISORY}>Alert.Types.ADVISORY</option>
+                      <option value={Alert.Types.INFORMATION}>Alert.Types.INFORMATION</option>
+                      <option value={Alert.Types.CONFIRMATION}>Alert.Types.CONFIRMATION</option>
+                      <option value={Alert.Types.OUTSIDE_RECORDS}>Alert.Types.OUTSIDE_RECORDS</option>
+                      <option value={Alert.Types.CUSTOM}>Alert.Types.CUSTOM</option>
                     </select>
                   </td>
                 </tr>

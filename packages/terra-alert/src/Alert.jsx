@@ -20,6 +20,7 @@ const AlertTypes = {
   CUSTOM: 'custom',
   INFORMATION: 'information',
   CONFIRMATION: 'confirmation',
+  OUTSIDE_RECORDS: 'outside_records',
 };
 
 const propTypes = {
@@ -30,7 +31,7 @@ const propTypes = {
   /**
    * Child Nodes providing the message content for the alert. Can contain text and HTML.
    */
-  children: PropTypes.PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   /**
    * The icon to be used for an alert of type custom.
    */
@@ -49,7 +50,7 @@ const propTypes = {
   title: PropTypes.string,
   /**
    * The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.REQUIRED, Alert.Types.ADVISORY,
-   * Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.CUSTOM.
+   * Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.OUTSIDE_RECORDS, Alert.Types.CUSTOM.
    * Use the Types attribute of the Alert component for access to these type strings.
    */
   type: PropTypes.oneOf([
@@ -61,6 +62,7 @@ const propTypes = {
     AlertTypes.CUSTOM,
     AlertTypes.INFORMATION,
     AlertTypes.CONFIRMATION,
+    AlertTypes.OUTSIDE_RECORDS,
   ]),
 };
 
@@ -92,6 +94,8 @@ const getAlertClassName = (type) => {
       return 'terra-Alert--confirmation';
     case AlertTypes.CUSTOM:
       return 'terra-Alert--custom';
+    case AlertTypes.OUTSIDE_RECORDS:
+      return 'terra-Alert--outside-records';
     default:
       return '';
   }
@@ -108,11 +112,13 @@ const getAlertIcon = (type, customIcon) => {
     case AlertTypes.REQUIRED:
       return (<IconRequired height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.ADVISORY:
-      return (<IconDiamond height="1.3333rem" width="1.3333rem" />);
+      return null;
     case AlertTypes.INFORMATION:
       return (<IconInformation height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.CONFIRMATION:
       return (<IconSuccess height="1.3333rem" width="1.3333rem" />);
+    case AlertTypes.OUTSIDE_RECORDS:
+      return (<IconDiamond height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.CUSTOM:
       return customIcon;
     default:
@@ -123,19 +129,21 @@ const getAlertIcon = (type, customIcon) => {
 const getDefaultTitle = (type) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return 'Alert!';
+      return 'Alert.';
     case AlertTypes.ERROR:
-      return 'Error!';
+      return 'Error.';
     case AlertTypes.WARNING:
-      return 'Warning!';
+      return 'Warning.';
     case AlertTypes.REQUIRED:
-      return 'Required!';
+      return 'Required Action.';
     case AlertTypes.ADVISORY:
-      return 'Advisory!';
+      return 'Advisory.';
     case AlertTypes.INFORMATION:
-      return 'Information!';
+      return 'Information.';
     case AlertTypes.CONFIRMATION:
-      return 'Confirmed!';
+      return 'Success.';
+    case AlertTypes.OUTSIDE_RECORDS:
+      return 'Outside Records.';
     default:
       return '';
   }

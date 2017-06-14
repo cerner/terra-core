@@ -23,7 +23,7 @@ This image shows the layout of the elements of the Alert component.
 |customStatusColor |string  |optional  |''  |The status bar color to be used for an alert of type custom.|
 |onDismiss |function  |optional  |null  |Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.|
 |title |string  |optional  |''  |The title for the alert which will be bolded.|
-|type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.REQUIRED, Alert.Types.ADVISORY, Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.CUSTOM. Use the Types attribute of the Alert component for access to these type strings.|
+|type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.REQUIRED, Alert.Types.ADVISORY, Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.OUTSIDE_RECORDS, Alert.Types.CUSTOM. Use the Types attribute of the Alert component for access to these type strings.|
 
 ## Examples
 
@@ -78,13 +78,19 @@ Basic Alert component of type 'confirmation' using the default title and plain t
 ```
 ![Image](images/basicConfirmation.png?raw=true)
 __________
+Basic Alert component of type 'outside records' using the default title and plain text for the message content.
+```jsx
+<Alert type={Alert.Types.OUTSIDE_RECORDS} >This is an outside records alert</Alert>
+```
+![Image](images/basicOutsideRecords.png?raw=true)
+__________
 Alert of type custom with custom title, status color, and icon, and includes HTML in message content.
 ```jsx
 <Alert type={Alert.Types.CUSTOM} 
        title="Help!" 
        customStatusColor="orange" 
        customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} >
-  This is a <u>custom</u> alert
+  <span>This is a <u>custom</u> alert</span>
 </Alert>
 ```
 ![Image](images/customAlert.png?raw=true)
@@ -129,7 +135,7 @@ Alert of type information with custom title and long HTML content with show more
 ![Image](images/longText1.png?raw=true)
 ![Image](images/longText2.png?raw=true)
 __________
-Alert component of type 'warning' with an Action button.
+Alert component of type 'warning' with a custom Action button.
 ```jsx
 <Alert type={Alert.Types.WARNING} 
        alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >

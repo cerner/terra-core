@@ -122,6 +122,11 @@
   @include terra-alert-background-color($terra-alert-confirmation-color-scheme);
 }
 
+.terra-Alert--outside-records {
+  @include terra-alert-box-shadow($terra-alert-outside-records-shadow-color);
+  @include terra-alert-background-color($terra-alert-outside-records-color-scheme);
+}
+
 .terra-Alert--custom {
   @include terra-alert-color($terra-alert-custom-shadow-color);
   @include terra-alert-custom-box-shadow();

@@ -17,6 +17,7 @@ import RequiredExample from './RequiredExample';
 import AdvisoryExample from './AdvisoryExample';
 import InformationExample from './InformationExample';
 import ConfirmationExample from './ConfirmationExample';
+import OutsideRecordsExample from './OutsideRecordsExample';
 import CustomExample from './CustomExample';
 import LongTextExample from './LongTextExample';
 import ActionExample from './ActionExample';
@@ -44,6 +45,8 @@ const AlertExamples = () => (
     <InformationExample />
     <br /><hr /><br />
     <ConfirmationExample />
+    <br /><hr /><br />
+    <OutsideRecordsExample />
     <br /><hr /><br />
     <CustomExample />
     <br /><hr /><br />
