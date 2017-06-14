@@ -16,7 +16,7 @@ exports[`1. Alert with no props should render a default component 1`] = `
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Alert!
+        Alert.
       </strong>
       <div
         className="terra-Alert-content" />
@@ -43,7 +43,7 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Alert!
+        Alert.
       </strong>
       <div
         className="terra-Alert-content">
@@ -84,7 +84,7 @@ exports[`3. Alert of type alert with text content should render an Alert compone
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Alert!
+        Alert.
       </strong>
       <div
         className="terra-Alert-content">
@@ -113,7 +113,7 @@ exports[`4. Alert of type error with text content should render an Alert compone
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Error!
+        Error.
       </strong>
       <div
         className="terra-Alert-content">
@@ -142,7 +142,7 @@ exports[`5. Alert of type warning with text content should render an Alert compo
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Warning!
+        Warning.
       </strong>
       <div
         className="terra-Alert-content">
@@ -153,9 +153,9 @@ exports[`5. Alert of type warning with text content should render an Alert compo
 </div>
 `;
 
-exports[`6. Alert of type required with text content should render an Alert component of type required 1`] = `
+exports[`6. Alert of type gap-checking with text content should render an Alert component of type gap-checking 1`] = `
 <div
-  className="terra-Alert terra-Alert--required"
+  className="terra-Alert terra-Alert--gap-checking"
   style={Object {}}>
   <div
     className="terra-Alert-body">
@@ -171,11 +171,11 @@ exports[`6. Alert of type required with text content should render an Alert comp
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Required!
+        Required Action.
       </strong>
       <div
         className="terra-Alert-content">
-        This is a required warning.
+        This is a gap-checking alert.
       </div>
     </div>
   </div>
@@ -194,7 +194,7 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Advisory!
+        Advisory.
       </strong>
       <div
         className="terra-Alert-content">
@@ -205,9 +205,9 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
 </div>
 `;
 
-exports[`8. Alert of type information with text content should render an Alert component of type information 1`] = `
+exports[`8. Alert of type info with text content should render an Alert component of type info 1`] = `
 <div
-  className="terra-Alert terra-Alert--information"
+  className="terra-Alert terra-Alert--info"
   style={Object {}}>
   <div
     className="terra-Alert-body">
@@ -223,7 +223,7 @@ exports[`8. Alert of type information with text content should render an Alert c
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Information!
+        Information.
       </strong>
       <div
         className="terra-Alert-content">
@@ -234,9 +234,9 @@ exports[`8. Alert of type information with text content should render an Alert c
 </div>
 `;
 
-exports[`9. Alert of type confirmation with text content should render an Alert component of type confirmation 1`] = `
+exports[`9. Alert of type success with text content should render an Alert component of type success 1`] = `
 <div
-  className="terra-Alert terra-Alert--confirmation"
+  className="terra-Alert terra-Alert--success"
   style={Object {}}>
   <div
     className="terra-Alert-body">
@@ -252,11 +252,11 @@ exports[`9. Alert of type confirmation with text content should render an Alert 
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Confirmed!
+        Success.
       </strong>
       <div
         className="terra-Alert-content">
-        This is a confirmation alert.
+        This is a success alert.
       </div>
     </div>
   </div>
@@ -281,7 +281,7 @@ exports[`10. Alert of type outside records with text content should render an Al
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Outside Records!
+        Outside Records.
       </strong>
       <div
         className="terra-Alert-content">
@@ -325,9 +325,9 @@ exports[`11. Alert of type custom with custom title and text content should rend
 </div>
 `;
 
-exports[`12. Alert of type information with custom title and HTML content should render an Alert component of type information with custom title and HTML content 1`] = `
+exports[`12. Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <div
-  className="terra-Alert terra-Alert--information"
+  className="terra-Alert terra-Alert--info"
   style={Object {}}>
   <div
     className="terra-Alert-body">
@@ -356,9 +356,9 @@ exports[`12. Alert of type information with custom title and HTML content should
 </div>
 `;
 
-exports[`13. Alert of type confirmation with an action button text content should render an Alert component of type confirmation with an action button 1`] = `
+exports[`13. Alert of type success with an action button text content should render an Alert component of type success with an action button 1`] = `
 <div
-  className="terra-Alert terra-Alert--confirmation"
+  className="terra-Alert terra-Alert--success"
   style={Object {}}>
   <div
     className="terra-Alert-body">
@@ -374,11 +374,11 @@ exports[`13. Alert of type confirmation with an action button text content shoul
       className="terra-Alert-section">
       <strong
         className="terra-Alert-title">
-        Confirmed!
+        Success.
       </strong>
       <div
         className="terra-Alert-content">
-        This is a confirmation alert.
+        This is a success alert.
       </div>
     </div>
   </div>

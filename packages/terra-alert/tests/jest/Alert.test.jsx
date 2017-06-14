@@ -23,7 +23,7 @@ describe('1. Alert with no props', () => {
   it('should render an Alert of type alert when no props given including IconAlert icon and default alert title', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper.childAt(0).childAt(0).find(IconAlert)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Alert!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Alert.');
   });
 
   // Structure Tests
@@ -69,7 +69,7 @@ describe('2. Dismissible Alert that includes actions section', () => {
   it('should render an Alert of type alert when no props given including IconAlert icon and default alert title', () => {
     const wrapper = shallow(dismissibleRender);
     expect(wrapper.childAt(0).childAt(0).find(IconAlert)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Alert!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Alert.');
   });
 
   // Structure Tests
@@ -122,7 +122,7 @@ describe('3. Alert of type alert with text content', () => {
   it('should render an Alert of type alert including IconAlert icon and default alert title', () => {
     const wrapper = shallow(basicAlertRender);
     expect(wrapper.childAt(0).childAt(0).find(IconAlert)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Alert!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Alert.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
@@ -148,7 +148,7 @@ describe('4. Alert of type error with text content', () => {
   it('should render an Alert of type error including IconError icon and default error title', () => {
     const wrapper = shallow(basicErrorRender);
     expect(wrapper.childAt(0).childAt(0).find(IconError)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Error!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Error.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
@@ -174,7 +174,7 @@ describe('5. Alert of type warning with text content', () => {
   it('should render an Alert of type warning including IconWarning icon and default warning title', () => {
     const wrapper = shallow(basicWarningRender);
     expect(wrapper.childAt(0).childAt(0).find(IconWarning)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Warning!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Warning.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
@@ -186,29 +186,29 @@ describe('5. Alert of type warning with text content', () => {
   });
 });
 
-describe('6. Alert of type required with text content', () => {
-  const alertText = 'This is a required warning.';
-  const basicRequiredRender = <Alert type={Alert.Types.REQUIRED} >{alertText}</Alert>;
+describe('6. Alert of type gap-checking with text content', () => {
+  const alertText = 'This is a gap-checking alert.';
+  const basicGapCheckingRender = <Alert type={Alert.Types.GAP_CHECKING} >{alertText}</Alert>;
 
   // Snapshot Tests
-  it('should render an Alert component of type required', () => {
-    const wrapper = shallow(basicRequiredRender);
+  it('should render an Alert component of type gap-checking', () => {
+    const wrapper = shallow(basicGapCheckingRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Prop Tests
-  it('should render an Alert of type required including IconRequired icon and default required title', () => {
-    const wrapper = shallow(basicRequiredRender);
+  it('should render an Alert of type gap-checking including IconRequired icon and default gap-checking title', () => {
+    const wrapper = shallow(basicGapCheckingRender);
     expect(wrapper.childAt(0).childAt(0).find(IconRequired)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Required!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Required Action.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
   // Structure Tests
-  it('should have the class terra-Alert and terra-Alert--required', () => {
-    const wrapper = shallow(basicRequiredRender);
+  it('should have the class terra-Alert and terra-Alert--gap-checking', () => {
+    const wrapper = shallow(basicGapCheckingRender);
     expect(wrapper.prop('className')).toContain('terra-Alert');
-    expect(wrapper.prop('className')).toContain('terra-Alert--required');
+    expect(wrapper.prop('className')).toContain('terra-Alert--gap-checking');
   });
 });
 
@@ -226,7 +226,7 @@ describe('7. Alert of type advisory with text content', () => {
   it('should render an Alert of type advisory including no icon and default advisory title', () => {
     const wrapper = shallow(basicAdvisoryRender);
     expect(wrapper.childAt(0).childAt(0).children()).toHaveLength(0);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Advisory!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Advisory.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
@@ -238,55 +238,55 @@ describe('7. Alert of type advisory with text content', () => {
   });
 });
 
-describe('8. Alert of type information with text content', () => {
+describe('8. Alert of type info with text content', () => {
   const alertText = 'This is an information alert.';
-  const basicInformationRender = <Alert type={Alert.Types.INFORMATION} >{alertText}</Alert>;
+  const basicInfoRender = <Alert type={Alert.Types.INFO} >{alertText}</Alert>;
 
   // Snapshot Tests
-  it('should render an Alert component of type information', () => {
-    const wrapper = shallow(basicInformationRender);
+  it('should render an Alert component of type info', () => {
+    const wrapper = shallow(basicInfoRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Prop Tests
-  it('should render an Alert of type information including IconInformation icon and default information title', () => {
-    const wrapper = shallow(basicInformationRender);
+  it('should render an Alert of type info including IconInformation icon and default information title', () => {
+    const wrapper = shallow(basicInfoRender);
     expect(wrapper.childAt(0).childAt(0).find(IconInformation)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Information!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Information.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
   // Structure Tests
-  it('should have the class terra-Alert and terra-Alert--information', () => {
-    const wrapper = shallow(basicInformationRender);
+  it('should have the class terra-Alert and terra-Alert--info', () => {
+    const wrapper = shallow(basicInfoRender);
     expect(wrapper.prop('className')).toContain('terra-Alert');
-    expect(wrapper.prop('className')).toContain('terra-Alert--information');
+    expect(wrapper.prop('className')).toContain('terra-Alert--info');
   });
 });
 
-describe('9. Alert of type confirmation with text content', () => {
-  const alertText = 'This is a confirmation alert.';
-  const basicConfirmationRender = <Alert type={Alert.Types.CONFIRMATION} >{alertText}</Alert>;
+describe('9. Alert of type success with text content', () => {
+  const alertText = 'This is a success alert.';
+  const basicSuccessRender = <Alert type={Alert.Types.SUCCESS} >{alertText}</Alert>;
 
   // Snapshot Tests
-  it('should render an Alert component of type confirmation', () => {
-    const wrapper = shallow(basicConfirmationRender);
+  it('should render an Alert component of type success', () => {
+    const wrapper = shallow(basicSuccessRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Prop Tests
-  it('should render an Alert of type confirmation including IconSuccess icon and default confirmation title', () => {
-    const wrapper = shallow(basicConfirmationRender);
+  it('should render an Alert of type success including IconSuccess icon and default success title', () => {
+    const wrapper = shallow(basicSuccessRender);
     expect(wrapper.childAt(0).childAt(0).find(IconSuccess)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Confirmed!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Success.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
   // Structure Tests
-  it('should have the class terra-Alert and terra-Alert--confirmation', () => {
-    const wrapper = shallow(basicConfirmationRender);
+  it('should have the class terra-Alert and terra-Alert--success', () => {
+    const wrapper = shallow(basicSuccessRender);
     expect(wrapper.prop('className')).toContain('terra-Alert');
-    expect(wrapper.prop('className')).toContain('terra-Alert--confirmation');
+    expect(wrapper.prop('className')).toContain('terra-Alert--success');
   });
 });
 
@@ -304,7 +304,7 @@ describe('10. Alert of type outside records with text content', () => {
   it('should render an Alert of type outside records including IconDiamond icon and default outside records title', () => {
     const wrapper = shallow(basicOutsideRecordsRender);
     expect(wrapper.childAt(0).childAt(0).find(IconDiamond)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Outside Records!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Outside Records.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
   });
 
@@ -345,20 +345,20 @@ describe('11. Alert of type custom with custom title and text content', () => {
   });
 });
 
-describe('12. Alert of type information with custom title and HTML content', () => {
+describe('12. Alert of type info with custom title and HTML content', () => {
   const alertText = 'Four score and seven years ago . . .';
   const alertHTML = <span>{alertText}</span>;
   const alertCustomTitle = 'Gettysburg Address';
-  const basicHTMLContentRender = <Alert type={Alert.Types.INFORMATION} title={alertCustomTitle} >{alertHTML}</Alert>;
+  const basicHTMLContentRender = <Alert type={Alert.Types.INFO} title={alertCustomTitle} >{alertHTML}</Alert>;
 
   // Snapshot Tests
-  it('should render an Alert component of type information with custom title and HTML content', () => {
+  it('should render an Alert component of type info with custom title and HTML content', () => {
     const wrapper = shallow(basicHTMLContentRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Prop Tests
-  it('should render an Alert of type information including configured custom title with HTML content', () => {
+  it('should render an Alert of type info including configured custom title with HTML content', () => {
     const wrapper = shallow(basicHTMLContentRender);
     expect(wrapper.childAt(0).childAt(0).find(IconInformation)).toHaveLength(1);
     expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual(alertCustomTitle);
@@ -368,37 +368,37 @@ describe('12. Alert of type information with custom title and HTML content', () 
   });
 
   // Structure Tests
-  it('should have the class terra-Alert and terra-Alert--information', () => {
+  it('should have the class terra-Alert and terra-Alert--info', () => {
     const wrapper = shallow(basicHTMLContentRender);
     expect(wrapper.prop('className')).toContain('terra-Alert');
-    expect(wrapper.prop('className')).toContain('terra-Alert--information');
+    expect(wrapper.prop('className')).toContain('terra-Alert--info');
   });
 });
 
-describe('13. Alert of type confirmation with an action button text content', () => {
-  const alertText = 'This is a confirmation alert.';
-  const actionButtonRender = <Alert type={Alert.Types.CONFIRMATION} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
+describe('13. Alert of type success with an action button text content', () => {
+  const alertText = 'This is a success alert.';
+  const actionButtonRender = <Alert type={Alert.Types.SUCCESS} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>;
 
   // Snapshot Tests
-  it('should render an Alert component of type confirmation with an action button', () => {
+  it('should render an Alert component of type success with an action button', () => {
     const wrapper = shallow(actionButtonRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Prop Tests
-  it('should render an Alert of type confirmation including IconSuccess icon, default confirmation title and an action button', () => {
+  it('should render an Alert of type success including IconSuccess icon, default success title and an action button', () => {
     const wrapper = shallow(actionButtonRender);
     expect(wrapper.childAt(0).childAt(0).find(IconSuccess)).toHaveLength(1);
-    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Confirmed!');
+    expect(wrapper.childAt(0).childAt(1).childAt(0).text()).toEqual('Success.');
     expect(wrapper.childAt(0).childAt(1).childAt(1).text()).toEqual(alertText);
     expect(wrapper.childAt(1).find(Button)).toHaveLength(1);
   });
 
   // Structure Tests
-  it('should have the class terra-Alert and terra-Alert--confirmation and actions section with class terra-Alert-actions', () => {
+  it('should have the class terra-Alert and terra-Alert--success and actions section with class terra-Alert-actions', () => {
     const wrapper = shallow(actionButtonRender);
     expect(wrapper.prop('className')).toContain('terra-Alert');
-    expect(wrapper.prop('className')).toContain('terra-Alert--confirmation');
+    expect(wrapper.prop('className')).toContain('terra-Alert--success');
     expect(wrapper.childAt(1).prop('className')).toContain('terra-Alert-actions');
   });
 });
