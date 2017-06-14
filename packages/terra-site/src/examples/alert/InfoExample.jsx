@@ -5,7 +5,7 @@ const alertStartTagStr = '<Alert type={Alert.Types.INFO} >';
 const alertEndTagStr = '</Alert>';
 const alertText = 'This is an information alert';
 
-const InformationExample = () => (
+const InfoExample = () => (
   <div>
     <div dir="ltr">
       <h3>Basic Alert of type info with default title</h3>
@@ -19,4 +19,4 @@ const InformationExample = () => (
   </div>
 );
 
-export default InformationExample;
+export default InfoExample;

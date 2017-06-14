@@ -84,7 +84,7 @@ Basic Alert component of type 'outside records' using the default title and plai
 ```
 ![Image](images/basicOutsideRecords.png?raw=true)
 __________
-Alert of type custom with custom title, status color, and icon, and includes HTML in message content.
+Alert of type 'custom' with custom title, status color, and icon, and includes HTML in message content.
 ```jsx
 <Alert type={Alert.Types.CUSTOM} 
        title="Help!" 
@@ -95,7 +95,7 @@ Alert of type custom with custom title, status color, and icon, and includes HTM
 ```
 ![Image](images/customAlert.png?raw=true)
 __________
-Alert of type info with custom title and long HTML content with show more/less links.
+Alert of type 'info' with custom title and long HTML content with show more/less links.
 ```jsx
 <Alert type={Alert.Types.INFO} title="Gettysburg Address:" >
   <span>
