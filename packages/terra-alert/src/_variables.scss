@@ -10,7 +10,7 @@ $terra-alert-warning-color-scheme: (
   background-color: $terra-yellow-20
 ) !default;
 
-$terra-alert-required-color-scheme: (
+$terra-alert-gap-checking-color-scheme: (
   background-color: $terra-grey-5
 ) !default;
 
@@ -18,11 +18,11 @@ $terra-alert-advisory-color-scheme: (
   background-color: $terra-grey-5
 ) !default;
 
-$terra-alert-information-color-scheme: (
+$terra-alert-info-color-scheme: (
   background-color: $terra-grey-5
 ) !default;
 
-$terra-alert-confirmation-color-scheme: (
+$terra-alert-success-color-scheme: (
   background-color: $terra-grey-5
 ) !default;
 
@@ -42,7 +42,7 @@ $terra-alert-error-title-color-scheme: (
   color: $terra-red-70
 ) !default;
 
-$terra-alert-required-icon-color-scheme: (
+$terra-alert-gap-checking-icon-color-scheme: (
   color: $terra-red-70
 ) !default;
 
@@ -52,13 +52,13 @@ $terra-alert-error-shadow-color: $terra-red-70 !default;
 
 $terra-alert-warning-shadow-color: $terra-yellow-60 !default;
 
-$terra-alert-required-shadow-color: $terra-red-70 !default;
+$terra-alert-gap-checking-shadow-color: $terra-red-70 !default;
 
 $terra-alert-advisory-shadow-color: $terra-grey-45 !default;
 
-$terra-alert-information-shadow-color: $terra-blue-70 !default;
+$terra-alert-info-shadow-color: $terra-blue-70 !default;
 
-$terra-alert-confirmation-shadow-color: $terra-green-60 !default;
+$terra-alert-success-shadow-color: $terra-green-60 !default;
 
 $terra-alert-outside-records-shadow-color: $terra-purple-80 !default;
 

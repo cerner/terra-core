@@ -102,9 +102,9 @@
   @include terra-alert-background-color($terra-alert-warning-color-scheme);
 }
 
-.terra-Alert--required {
-  @include terra-alert-box-shadow($terra-alert-required-shadow-color);
-  @include terra-alert-background-color($terra-alert-required-color-scheme);
+.terra-Alert--gap-checking {
+  @include terra-alert-box-shadow($terra-alert-gap-checking-shadow-color);
+  @include terra-alert-background-color($terra-alert-gap-checking-color-scheme);
 }
 
 .terra-Alert--advisory {
@@ -112,14 +112,14 @@
   @include terra-alert-background-color($terra-alert-advisory-color-scheme);
 }
 
-.terra-Alert--information {
-  @include terra-alert-box-shadow($terra-alert-information-shadow-color);
-  @include terra-alert-background-color($terra-alert-information-color-scheme);
+.terra-Alert--info {
+  @include terra-alert-box-shadow($terra-alert-info-shadow-color);
+  @include terra-alert-background-color($terra-alert-info-color-scheme);
 }
 
-.terra-Alert--confirmation {
-  @include terra-alert-box-shadow($terra-alert-confirmation-shadow-color);
-  @include terra-alert-background-color($terra-alert-confirmation-color-scheme);
+.terra-Alert--success {
+  @include terra-alert-box-shadow($terra-alert-success-shadow-color);
+  @include terra-alert-background-color($terra-alert-success-color-scheme);
 }
 
 .terra-Alert--outside-records {
@@ -141,6 +141,6 @@
   @include terra-alert-color($terra-alert-error-title-color-scheme);
 }
 
-.terra-Alert--required .terra-Alert-icon {
-  @include terra-alert-color($terra-alert-required-icon-color-scheme);
+.terra-Alert--gap-checking .terra-Alert-icon {
+  @include terra-alert-color($terra-alert-gap-checking-icon-color-scheme);
 }

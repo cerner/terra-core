@@ -1,21 +1,21 @@
 import React from 'react';
 import Alert from 'terra-alert';
 
-const alertStartTagStr = '<Alert type={Alert.Types.INFORMATION} >';
+const alertStartTagStr = '<Alert type={Alert.Types.INFO} >';
 const alertEndTagStr = '</Alert>';
 const alertText = 'This is an information alert';
 
 const InformationExample = () => (
   <div>
     <div dir="ltr">
-      <h3>Basic Alert of type information with default title</h3>
+      <h3>Basic Alert of type info with default title</h3>
       <br />
       <code>
         {alertStartTagStr}{alertText}{alertEndTagStr}
       </code>
     </div>
     <br />
-    <Alert type={Alert.Types.INFORMATION} >{alertText}</Alert>
+    <Alert type={Alert.Types.INFO} >{alertText}</Alert>
   </div>
 );
 

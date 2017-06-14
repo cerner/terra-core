@@ -21,10 +21,10 @@ import Alert from 'terra-alert';
   This is an alert with the default title.
 </Alert>
 
-<Alert type={Alert.Types.CONFIRMATION} 
+<Alert type={Alert.Types.SUCCESS} 
        title="Success!" 
        onDismiss={this.handleDismiss} >
-  This is a confirmation with a custom title. It is configured to be dismissible. 
+  This is a success alert with a custom title. It is configured to be dismissible. 
 </Alert>
 
 <Alert type={Alert.Types.WARNING} 

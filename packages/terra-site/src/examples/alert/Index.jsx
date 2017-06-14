@@ -13,10 +13,10 @@ import AlertSrc from '!raw-loader!terra-alert/src/Alert';
 import AlertExample from './AlertExample';
 import ErrorExample from './ErrorExample';
 import WarningExample from './WarningExample';
-import RequiredExample from './RequiredExample';
+import GapCheckingExample from './GapCheckingExample';
 import AdvisoryExample from './AdvisoryExample';
-import InformationExample from './InformationExample';
-import ConfirmationExample from './ConfirmationExample';
+import InfoExample from './InfoExample';
+import SuccessExample from './SuccessExample';
 import OutsideRecordsExample from './OutsideRecordsExample';
 import CustomExample from './CustomExample';
 import LongTextExample from './LongTextExample';
@@ -38,13 +38,13 @@ const AlertExamples = () => (
     <br /><hr /><br />
     <WarningExample />
     <br /><hr /><br />
-    <RequiredExample />
-    <br /><hr /><br />
     <AdvisoryExample />
     <br /><hr /><br />
-    <InformationExample />
+    <InfoExample />
     <br /><hr /><br />
-    <ConfirmationExample />
+    <SuccessExample />
+    <br /><hr /><br />
+    <GapCheckingExample />
     <br /><hr /><br />
     <OutsideRecordsExample />
     <br /><hr /><br />

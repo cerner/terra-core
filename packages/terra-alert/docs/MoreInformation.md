@@ -23,7 +23,7 @@ This image shows the layout of the elements of the Alert component.
 |customStatusColor |string  |optional  |''  |The status bar color to be used for an alert of type custom.|
 |onDismiss |function  |optional  |null  |Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.|
 |title |string  |optional  |''  |The title for the alert which will be bolded.|
-|type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.REQUIRED, Alert.Types.ADVISORY, Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.OUTSIDE_RECORDS, Alert.Types.CUSTOM. Use the Types attribute of the Alert component for access to these type strings.|
+|type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.ADVISORY, Alert.Types.INFO, Alert.Types.SUCCESS, Alert.Types.GAP_CHECKING, Alert.Types.OUTSIDE_RECORDS, Alert.Types.CUSTOM. Use the Types attribute of the Alert component for access to these type strings.|
 
 ## Examples
 
@@ -54,29 +54,29 @@ Basic Alert component of type 'warning' using the default title and plain text f
 ```
 ![Image](images/basicWarning.png?raw=true)
 __________
-Basic Alert component of type 'required' using the default title and plain text for the message content.
-```jsx
-<Alert type={Alert.Types.REQUIRED} >This is a required warning</Alert>
-```
-![Image](images/basicRequired.png?raw=true)
-__________
 Basic Alert component of type 'advisory' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Types.ADVISORY} >This is an advisory alert</Alert>
 ```
 ![Image](images/basicAdvisory.png?raw=true)
 __________
-Basic Alert component of type 'information' using the default title and plain text for the message content.
+Basic Alert component of type 'info' using the default title and plain text for the message content.
 ```jsx
-<Alert type={Alert.Types.INFORMATION} >This is an information alert</Alert>
+<Alert type={Alert.Types.INFO} >This is an information alert</Alert>
 ```
 ![Image](images/basicInformation.png?raw=true)
 __________
-Basic Alert component of type 'confirmation' using the default title and plain text for the message content.
+Basic Alert component of type 'success' using the default title and plain text for the message content.
 ```jsx
-<Alert type={Alert.Types.CONFIRMATION} >This is a confirmation alert</Alert>
+<Alert type={Alert.Types.SUCCESS} >This is a success alert</Alert>
 ```
-![Image](images/basicConfirmation.png?raw=true)
+![Image](images/basicSuccess.png?raw=true)
+__________
+Basic Alert component of type 'gap-checking' using the default title and plain text for the message content.
+```jsx
+<Alert type={Alert.Types.GAP_CHECKING} >This is a gap-checking alert</Alert>
+```
+![Image](images/basicGapChecking.png?raw=true)
 __________
 Basic Alert component of type 'outside records' using the default title and plain text for the message content.
 ```jsx
@@ -95,9 +95,9 @@ Alert of type custom with custom title, status color, and icon, and includes HTM
 ```
 ![Image](images/customAlert.png?raw=true)
 __________
-Alert of type information with custom title and long HTML content with show more/less links.
+Alert of type info with custom title and long HTML content with show more/less links.
 ```jsx
-<Alert type={Alert.Types.INFORMATION} title="Gettysburg Address:" >
+<Alert type={Alert.Types.INFO} title="Gettysburg Address:" >
   <span>
     Four score and seven years ago our fathers brought forth on this continent, 
     a new nation, conceived in Liberty, and dedicated to the proposition that 
@@ -144,10 +144,10 @@ Alert component of type 'warning' with a custom Action button.
 ```
 ![Image](images/actionButton.png?raw=true)
 __________
-Alert component of type 'confirmation' that is dismissible.
+Alert component of type 'success' that is dismissible.
 ```jsx
-<Alert type={Alert.Types.CONFIRMATION} onDismiss={this.handleDismiss} >
-  This is a confirmation. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.
+<Alert type={Alert.Types.SUCCESS} onDismiss={this.handleDismiss} >
+  This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.
 </Alert>
 ```
 ![Image](images/dismissible.png?raw=true)

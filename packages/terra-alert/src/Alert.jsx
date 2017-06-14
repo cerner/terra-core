@@ -15,12 +15,12 @@ const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
   WARNING: 'warning',
-  REQUIRED: 'required',
   ADVISORY: 'advisory',
-  CUSTOM: 'custom',
-  INFORMATION: 'information',
-  CONFIRMATION: 'confirmation',
+  INFO: 'info',
+  SUCCESS: 'success',
+  GAP_CHECKING: 'gap_checking',
   OUTSIDE_RECORDS: 'outside_records',
+  CUSTOM: 'custom',
 };
 
 const propTypes = {
@@ -49,20 +49,20 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
-   * The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.REQUIRED, Alert.Types.ADVISORY,
-   * Alert.Types.INFORMATION, Alert.Types.CONFIRMATION, Alert.Types.OUTSIDE_RECORDS, Alert.Types.CUSTOM.
+   * The type of alert to be rendered. One of Alert.Types.ALERT, Alert.Types.ERROR, Alert.Types.WARNING, Alert.Types.ADVISORY,
+   * Alert.Types.INFO, Alert.Types.SUCCESS, Alert.Types.GAP_CHECKING, Alert.Types.OUTSIDE_RECORDS, Alert.Types.CUSTOM.
    * Use the Types attribute of the Alert component for access to these type strings.
    */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,
     AlertTypes.ERROR,
     AlertTypes.WARNING,
-    AlertTypes.REQUIRED,
     AlertTypes.ADVISORY,
-    AlertTypes.CUSTOM,
-    AlertTypes.INFORMATION,
-    AlertTypes.CONFIRMATION,
+    AlertTypes.INFO,
+    AlertTypes.SUCCESS,
+    AlertTypes.GAP_CHECKING,
     AlertTypes.OUTSIDE_RECORDS,
+    AlertTypes.CUSTOM,
   ]),
 };
 
@@ -84,18 +84,18 @@ const getAlertClassName = (type) => {
       return 'terra-Alert--error';
     case AlertTypes.WARNING:
       return 'terra-Alert--warning';
-    case AlertTypes.REQUIRED:
-      return 'terra-Alert--required';
     case AlertTypes.ADVISORY:
       return 'terra-Alert--advisory';
-    case AlertTypes.INFORMATION:
-      return 'terra-Alert--information';
-    case AlertTypes.CONFIRMATION:
-      return 'terra-Alert--confirmation';
-    case AlertTypes.CUSTOM:
-      return 'terra-Alert--custom';
+    case AlertTypes.INFO:
+      return 'terra-Alert--info';
+    case AlertTypes.SUCCESS:
+      return 'terra-Alert--success';
+    case AlertTypes.GAP_CHECKING:
+      return 'terra-Alert--gap-checking';
     case AlertTypes.OUTSIDE_RECORDS:
       return 'terra-Alert--outside-records';
+    case AlertTypes.CUSTOM:
+      return 'terra-Alert--custom';
     default:
       return '';
   }
@@ -109,14 +109,14 @@ const getAlertIcon = (type, customIcon) => {
       return (<IconError height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.WARNING:
       return (<IconWarning height="1.3333rem" width="1.3333rem" />);
-    case AlertTypes.REQUIRED:
-      return (<IconRequired height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.ADVISORY:
       return null;
-    case AlertTypes.INFORMATION:
+    case AlertTypes.INFO:
       return (<IconInformation height="1.3333rem" width="1.3333rem" />);
-    case AlertTypes.CONFIRMATION:
+    case AlertTypes.SUCCESS:
       return (<IconSuccess height="1.3333rem" width="1.3333rem" />);
+    case AlertTypes.GAP_CHECKING:
+      return (<IconRequired height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.OUTSIDE_RECORDS:
       return (<IconDiamond height="1.3333rem" width="1.3333rem" />);
     case AlertTypes.CUSTOM:
@@ -134,14 +134,14 @@ const getDefaultTitle = (type) => {
       return 'Error.';
     case AlertTypes.WARNING:
       return 'Warning.';
-    case AlertTypes.REQUIRED:
-      return 'Required Action.';
     case AlertTypes.ADVISORY:
       return 'Advisory.';
-    case AlertTypes.INFORMATION:
+    case AlertTypes.INFO:
       return 'Information.';
-    case AlertTypes.CONFIRMATION:
+    case AlertTypes.SUCCESS:
       return 'Success.';
+    case AlertTypes.GAP_CHECKING:
+      return 'Required Action.';
     case AlertTypes.OUTSIDE_RECORDS:
       return 'Outside Records.';
     default:
