@@ -259,7 +259,7 @@ class PopupContent extends React.Component {
       classNameInner,
     ]);
 
-    // Delete the disableOnClickOutside and disableOnClickOutside prop that comes from react-onclickoutside.
+    // Delete the disableOnClickOutside and enableOnClickOutside prop that comes from react-onclickoutside.
     delete customProps.disableOnClickOutside;
     delete customProps.enableOnClickOutside;
 
