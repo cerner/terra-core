@@ -2,7 +2,7 @@ exports[`test should render a Fieldset when all the possible props are passed in
 <fieldset
   className="terra-Form-fieldset terra-Form-fieldset--inline terra-Form-fieldset--required">
   <legend
-    className="terra-Form-legend">
+    className="terra-Form-legend healtheintent-legend">
     Text
   </legend>
   <input
