@@ -1,15 +1,13 @@
 // remove eslint-disable once terra-form has been published
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import SelectField from 'terra-form/lib/SelectField';
+import Select from 'terra-form/lib/Select';
 /* eslint-enable import/no-extraneous-dependencies */
 
-const SelectFieldExamples = () => (
+const SelectExamples = () => (
   <form>
-    <SelectField
+    <Select
       choices={['Puppies', 'Kittens', 'Snappers', 'Bumblers', 'Joeys']}
-      help="TO DETERMINE IF YOU ARE NOT A ROBOT, PLEASE PICK YOUR FAVORITE SMALL ANIMAL"
-      label="Animals"
       name="foo"
       defaultValue="Snappers"
       required
@@ -17,4 +15,4 @@ const SelectFieldExamples = () => (
   </form>
 );
 
-export default SelectFieldExamples;
+export default SelectExamples;

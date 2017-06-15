@@ -1,16 +1,19 @@
 # Select Field
 
-Generic select field component for choosing an option from a list.
+Select Field component for rendering selects with standard structured style. Uses the select component. Also exposes attributes specific to the select.
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import NumberField from 'terra-form/lib/SelectField';
+import SelectField from 'terra-form/lib/SelectField';
 
 <SelectField
   choices={[]}
-  name="foo"
+  error="This field is required"
+  name="description"
+  label="Description"
+  selectAttrs={{ className: 'healtheintent-application' }}
   value="bar"
   required
 />

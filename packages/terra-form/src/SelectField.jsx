@@ -1,15 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import 'terra-base/lib/baseStyles';
 
-import './SelectField.scss';
+import Field from './Field';
+import Select from './Select';
 
 const propTypes = {
   /**
    * List of choices to be selected.
    */
   choices: PropTypes.array.isRequired,
+
+  /**
+   * Error message for when the input is invalid
+   */
+  error: PropTypes.node,
+
+  /**
+   *  Help element to display with the input
+   */
+  help: PropTypes.node,
+
+  /**
+   * Whether the field is inline
+   */
+  isInline: PropTypes.bool,
+
+  /**
+   * Label of the input
+   */
+  label: PropTypes.node,
 
   /**
    * Function to trigger when the user changes the select value. Provide a function to create a controlled input.
@@ -22,6 +41,11 @@ const propTypes = {
   name: PropTypes.string,
 
   /**
+   * Custom attributes to apply to the select
+   */
+  selectAttrs: PropTypes.object,
+
+  /**
    * Whether the select is required or not.
    */
   required: PropTypes.bool,
@@ -29,39 +53,53 @@ const propTypes = {
   /**
    * The value to start the select on.
    */
-  value: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 const defaultProps = {
+  error: null,
+  help: null,
+  isInline: false,
+  label: null,
+  onChange: undefined,
   name: null,
   required: false,
-  value: null,
+  selectAttrs: {},
+  defaultValue: undefined,
 };
 
 const SelectField = ({
   choices,
+  error,
+  help,
+  isInline,
+  label,
+  onChange,
   name,
   required,
-  value,
+  selectAttrs,
+  defaultValue,
   ...customProps
-}) => {
-  const additionalSelectFieldProps = Object.assign({}, customProps);
-
-  if (required) {
-    additionalSelectFieldProps['aria-required'] = 'true';
-  }
-
-  return (
-    <select
+}) => (
+  <Field
+    error={error}
+    help={help}
+    isInline={isInline}
+    label={label}
+    required={required}
+    {...customProps}
+  >
+    <Select
+      choices={choices}
+      onChange={onChange}
       name={name}
       required={required}
-      {...additionalSelectFieldProps}
-      className={classNames('terra-Form-select', additionalSelectFieldProps.className)}
-    >
-      {choices.map(val => <option selected={value === val} key={val.toString()} value={val}>{val}</option>)}
-    </select>
-  );
-};
+      defaultValue={defaultValue}
+      {...selectAttrs}
+    />
+  </Field>
+);
+
 
 SelectField.propTypes = propTypes;
 SelectField.defaultProps = defaultProps;
