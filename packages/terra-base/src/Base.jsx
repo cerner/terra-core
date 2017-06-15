@@ -78,7 +78,7 @@ class Base extends React.Component {
     const messages = Object.assign({}, this.state.messages, customMessages);
 
     if (locale === undefined) return childComponent;
-    if (!this.state.areTranslationsLoaded) return <div {...customProps}>{this.props.translationsLoadingPlaceholder}</div>;
+    if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider locale={this.state.locale} messages={messages}>
         {childComponent}
