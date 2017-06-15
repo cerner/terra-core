@@ -1,5 +1,5 @@
 | Prop Name | Type | Is Required | Default Value | Description | 
- |-|-|-|-|-|
+|-|-|-|-|-|
 | children | `node`  | optional |  | Child Nodes |
 | href | `string`  | optional |  | Sets the href. When set will render the component as an anchor tag |
 | icon | `element`  | optional |  | An optional icon. Nested inline with the text when provided |

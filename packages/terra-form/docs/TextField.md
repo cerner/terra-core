@@ -1,24 +1,16 @@
-# Text Field
-
-Text Field component for rendering text inputs with standard structured style. Uses the Input component. Also exposes attributes specific to the input.
-
-## Usage
-
-```jsx
-import React from 'react';
-import TextField from 'terra-form/lib/TextField';
-
-<TextField
-  type="email"
-  label="Email Address"
-  labelAttrs={{ className: 'healtheintent-application' }}
-  name="email"
-  value=""
-  error="This field is required"
-  help="This will not be shared with outside sources"
-  inputAttrs={{ className: 'healtheintent-application' }}
-  minLength={8}
-  maxLength={75}
-  required
- />
-```
+| Prop Name | Type | Is Required | Default Value | Description | 
+|-|-|-|-|-|
+| defaultValue | `string`  | optional | `undefined` | The defaultValue of the input element. Use this to create an uncontrolled input. |
+| error | `node`  | optional | `null` | Error message for when the input is invalid |
+| help | `node`  | optional | `null` | Help element to display with the input |
+| inputAttrs | `object`  | optional | `{}` | Custom attributes to apply to the input |
+| isInline | `bool`  | optional | `false` | Whether the field is inline |
+| label | `node`  | optional | `null` | Label of the input |
+| labelAttrs | `object`  | optional | `{}` | Attributes to attach to the label |
+| maxLength | `number`  | optional | `null` | Maximum number of characters user can input in this field |
+| minLength | `number`  | optional | `null` | Minimum number of characters user must input in this field |
+| name | `string`  | optional | `null` | Name of the input attribute |
+| onChange | `func`  | optional | `undefined` | Function to trigger when the user changes the input value. Provide one to create a controlled input. |
+| required | `bool`  | optional | `false` | Whether the input is required |
+| type | `string`  | optional | `'text'` | Type the input will be |
+| value | `string`  | optional | `undefined` | The value of the input element. Use this to create a controlled input. |

@@ -1,12 +1,9 @@
 #!/usr/bin/env node
-
-// Remove the first 2 arguments
-// First argument is alays node
-// Second arugment is the file being executed. (This file)
+/* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
-const commander = require('commander');
 const pkg = require('../package.json');
+const commander = require('commander');
 const parse = require('react-docgen').parse;
 const glob = require('glob');
 const uniq = require('lodash/uniq');
@@ -14,14 +11,14 @@ const generateMarkdown = require('./generateMarkdown');
 
 commander
   .version(pkg.version)
-  .option("-f, --filename [filename]", "filename to use when reading from stdin")
+  .option('-f, --filename [filename]', 'filename to use when reading from stdin')
   .option('-d, --out-dir [out]', 'directory to output props-table')
   .parse(process.argv);
 
 const errors = [];
 
 // get all filenames
-let filenames = commander.args.reduce(function (globbed, input) {
+let filenames = commander.args.reduce((globbed, input) => {
   let files = glob.sync(input);
   if (!files.length) {
     files = [input];
@@ -33,33 +30,38 @@ let filenames = commander.args.reduce(function (globbed, input) {
 filenames = uniq(filenames);
 
 // check if filenames exist
-filenames.forEach(function (filename) {
+filenames.forEach((filename) => {
   if (!fs.existsSync(filename)) {
-    errors.push(filename + " doesn't exist");
+    errors.push(`${filename} does not exist`);
   }
 });
 
 // verify output directory and filesnames exist
 if (commander.outDir && !filenames.length) {
-  errors.push("filenames required for --out-dir");
+  errors.push('filenames required for --out-dir');
 }
 
-if (errors.length) {
-  console.error(errors.join(". "));
-  process.exit(2);
-}
+// Iterate through files
+filenames.forEach((filename) => {
+  fs.readFile(filename, 'utf8', (err, data) => {
+    if (err) {
+      errors.push(`Reading file ${filename} ${err}`);
+    } else {
+      const currentComponent = path.basename(filename, path.extname(filename));
+      const fullPath = `${path.join(commander.outDir, currentComponent)}.md`;
 
-const fullPath = path.join(__dirname, '../', commander.outDir, path.basename(filenames[0], path.extname(filenames[0])) + '.md');
-console.log(fullPath);
-
-fs.readFile(filenames[0], 'utf8', (err, data) => {
-  if (err) throw err;
-
-  fs.writeFile(fullPath, generateMarkdown(parse(data)), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved! ' + fullPath);
+      fs.writeFile(fullPath, generateMarkdown(parse(data)), (error) => {
+        if (error) {
+          errors.push(`Writing file ${fullPath} ${err}`);
+        }
+        console.log(`${filename} -> ${fullPath}`);
+      });
+    }
   });
 });
 
-
-// output src/PropsTable.jsx -> lib/PropsTable.js
+// Throw errors to console
+if (errors.length) {
+  console.error(errors.join('. '));
+  process.exit(2);
+}

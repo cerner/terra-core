@@ -28,15 +28,14 @@
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "terra-base": "^0.6.0"
+    "react-dom": "^15.4.2"
   },
   "dependencies": {
     "commander": "^2.9.0",
+    "glob": "^7.1.2",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react-docgen": "^2.15.0",
-    "terra-base": "^0.6.0",
     "terra-markdown": "^0.6.0"
   },
   "scripts": {
@@ -46,7 +45,6 @@
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:spec",
-    "test:spec": "echo \"Warning: no test written\" && exit 0",
-    "props-table": "node ./bin/props-table ./src/PropsTable.jsx --out-dir /docs"
+    "test:spec": "echo \"Warning: no test written\" && exit 0"
   }
 }

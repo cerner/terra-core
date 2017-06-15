@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
+    "terra-props-table": "^0.7.0",
     "terra-toolkit": "^0.x"
   },
   "peerDependencies": {
@@ -42,6 +43,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "props-table": "props-table ./src/Field.jsx ./src/Fieldset.jsx ./src/Input.jsx ./src/NumberField.jsx ./src/Textarea.jsx ./src/TextareaField.jsx ./src/TextField.jsx --out-dir ./docs",
     "release:major": "npm test && node ../../scripts/release/release.js major",
     "release:minor": "npm test && node ../../scripts/release/release.js minor",
     "release:patch": "npm test && node ../../scripts/release/release.js patch",
