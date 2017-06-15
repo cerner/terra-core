@@ -80,6 +80,8 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "terra-form": "^0.2.0",
+    "terra-text": "^0.x",
+    "terra-heading": "^0.x",
     "terra-i18n-plugin": "^0.x",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
