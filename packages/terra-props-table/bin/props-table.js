@@ -10,7 +10,7 @@ const pkg = require('../package.json');
 const parse = require('react-docgen').parse;
 const glob = require('glob');
 const uniq = require('lodash/uniq');
-const generateMarkdown = require('react-docgen/example/generateMarkdown');
+const generateMarkdown = require('./generateMarkdown');
 
 commander
   .version(pkg.version)
@@ -55,7 +55,7 @@ console.log(fullPath);
 fs.readFile(filenames[0], 'utf8', (err, data) => {
   if (err) throw err;
 
-  fs.writeFile(fullPath, generateMarkdown(path.basename(filenames[0], path.extname(filenames[0])) ,parse(data)), (err) => {
+  fs.writeFile(fullPath, generateMarkdown(parse(data)), (err) => {
     if (err) throw err;
     console.log('The file has been saved! ' + fullPath);
   });
