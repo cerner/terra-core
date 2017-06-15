@@ -146,15 +146,9 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, ...customProps } = this.props;
+    const { children, isDivided, onChange, hasChevrons, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
-    if ('onChange' in customProps) {
-      delete customProps.onChange;
-    }
-    if ('hasChevrons' in customProps) {
-      delete customProps.hasChevrons;
-    }
     return (
       <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}

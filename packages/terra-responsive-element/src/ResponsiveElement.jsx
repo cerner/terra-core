@@ -99,7 +99,6 @@ class ResponsiveElement extends React.Component {
   }
 
   render() {
-    /* eslint-disable no-unused-vars */
     const { defaultElement, tiny, small, medium, large, huge, responsiveTo, ...customProps } = this.props;
 
     return (
