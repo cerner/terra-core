@@ -31,6 +31,11 @@ const AlertExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={AlertSrc} />
     <h2>Alert Examples</h2>
+    <br />
+    <p>
+    PLEASE NOTE: The strings that are internationalized in the following examples are the default titles for each of
+    the alert types (except the custom alert type), and the text for the Dismiss button.
+    </p>
     <br /><hr /><br />
     <AlertExample />
     <br /><hr /><br />

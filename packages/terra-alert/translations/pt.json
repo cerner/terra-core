@@ -1,0 +1,11 @@
+{
+  "Terra.alert.dismiss": "Ignorar",
+  "Terra.alert.info": "Informações.",
+  "Terra.alert.error": "Erro.",
+  "Terra.alert.warning": "Advertência.",
+  "Terra.alert.alert": "Alerta.",
+  "Terra.alert.advisory": "Recomendação.",
+  "Terra.alert.gapChecking": "Ação obrigatória.",
+  "Terra.alert.outsideRecords": "Registros externos.",
+  "Terra.alert.success": "Êxito."
+}

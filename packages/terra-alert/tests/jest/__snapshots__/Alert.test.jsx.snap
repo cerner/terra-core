@@ -1,28 +1,78 @@
 exports[`1. Alert with no props should render a default component 1`] = `
-<div
-  className="terra-Alert terra-Alert--alert"
-  style={Object {}}>
-  <div
-    className="terra-Alert-body">
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={null}
+    title=""
+    type="alert">
     <div
-      className="terra-Alert-icon">
-      <IconAlert
-        height="1.3333rem"
-        viewBox="0 0 48 48"
-        width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
-    </div>
-    <div
-      className="terra-Alert-section">
-      <strong
-        className="terra-Alert-title">
-        Alert.
-      </strong>
+      className="terra-Alert terra-Alert--alert"
+      style={Object {}}>
       <div
-        className="terra-Alert-content" />
+        className="terra-Alert-body">
+        <div
+          className="terra-Alert-icon">
+          <IconAlert
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <IconBase
+              ariaLabel={null}
+              focusable={false}
+              height="1.3333rem"
+              isBidi={false}
+              isSpin={false}
+              viewBox="0 0 48 48"
+              width="1.3333rem"
+              xmlns="http://www.w3.org/2000/svg">
+              <svg
+                aria-hidden="true"
+                className="terra-Icon"
+                focusable={false}
+                height="1.3333rem"
+                viewBox="0 0 48 48"
+                width="1.3333rem"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                  fill="#E50000" />
+                <path
+                  d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                  fill="#FFF" />
+              </svg>
+            </IconBase>
+          </IconAlert>
+        </div>
+        <div
+          className="terra-Alert-section">
+          <strong
+            className="terra-Alert-title">
+            Alert.
+          </strong>
+          <div
+            className="terra-Alert-content" />
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </Alert>
+</IntlProvider>
 `;
 
 exports[`2. Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
@@ -37,7 +87,33 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+              fill="#E50000" />
+            <path
+              d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconAlert>
     </div>
     <div
       className="terra-Alert-section">
@@ -61,7 +137,18 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
       onClick={[Function]}
       size="medium"
       text="Dismiss"
-      variant="secondary" />
+      variant="secondary">
+      <button
+        aria-disabled={false}
+        className="terra-Button terra-Button--secondary terra-Button--medium"
+        disabled={false}
+        onClick={[Function]}>
+        <span
+          className="terra-Button-text">
+          Dismiss
+        </span>
+      </button>
+    </Button>
   </div>
 </div>
 `;
@@ -78,7 +165,33 @@ exports[`3. Alert of type alert with text content should render an Alert compone
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+              fill="#E50000" />
+            <path
+              d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconAlert>
     </div>
     <div
       className="terra-Alert-section">
@@ -107,7 +220,33 @@ exports[`4. Alert of type error with text content should render an Alert compone
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+              fill="#E50000" />
+            <path
+              d="M7 21.5h34v5H7v-5z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconError>
     </div>
     <div
       className="terra-Alert-section">
@@ -136,7 +275,33 @@ exports[`5. Alert of type warning with text content should render an Alert compo
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+              fill="#FFC20A" />
+            <path
+              d="M47.7 43.3L25 3.7c-.3-.5-.6-.7-1-.7s-.7.2-1 .7L.2 43.3c-.5 1-.1 1.7 1 1.7h45.5c1.1 0 1.6-.8 1-1.7zm-45.9.2L24 5l22.2 38.5H1.8zm19.7-6.8h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+              fill="#1C1F21" />
+          </svg>
+        </IconBase>
+      </IconWarning>
     </div>
     <div
       className="terra-Alert-section">
@@ -165,7 +330,29 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z" />
+          </svg>
+        </IconBase>
+      </IconRequired>
     </div>
     <div
       className="terra-Alert-section">
@@ -217,7 +404,33 @@ exports[`8. Alert of type info with text content should render an Alert componen
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+              fill="#007CC3" />
+            <path
+              d="M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconInformation>
     </div>
     <div
       className="terra-Alert-section">
@@ -246,7 +459,33 @@ exports[`9. Alert of type success with text content should render an Alert compo
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+              fill="#78C346" />
+            <path
+              d="M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconSuccess>
     </div>
     <div
       className="terra-Alert-section">
@@ -275,7 +514,30 @@ exports[`10. Alert of type outside records with text content should render an Al
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24.8 47.7l22.9-22.9c.4-.4.4-1.1 0-1.6L24.8.3c-.4-.4-1.1-.4-1.6 0L.3 23.2c-.4.4-.4 1.1 0 1.6l22.9 22.9c.4.4 1.2.4 1.6 0z"
+              fill="#78288C" />
+          </svg>
+        </IconBase>
+      </IconDiamond>
     </div>
     <div
       className="terra-Alert-section">
@@ -308,7 +570,33 @@ exports[`11. Alert of type custom with custom title and text content should rend
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
+              fill="#007CC3" />
+            <path
+              d="M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconHelp>
     </div>
     <div
       className="terra-Alert-section terra-Alert-section--custom">
@@ -337,7 +625,33 @@ exports[`12. Alert of type info with custom title and HTML content should render
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+              fill="#007CC3" />
+            <path
+              d="M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconInformation>
     </div>
     <div
       className="terra-Alert-section">
@@ -368,7 +682,33 @@ exports[`13. Alert of type success with an action button text content should ren
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+              fill="#78C346" />
+            <path
+              d="M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconSuccess>
     </div>
     <div
       className="terra-Alert-section">
@@ -392,7 +732,18 @@ exports[`13. Alert of type success with an action button text content should ren
       onClick={[Function]}
       size="medium"
       text="Action"
-      variant="primary" />
+      variant="primary">
+      <button
+        aria-disabled={false}
+        className="terra-Button terra-Button--primary terra-Button--medium"
+        disabled={false}
+        onClick={[Function]}>
+        <span
+          className="terra-Button-text">
+          Action
+        </span>
+      </button>
+    </Button>
   </div>
 </div>
 `;
@@ -413,7 +764,33 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
         height="1.3333rem"
         viewBox="0 0 48 48"
         width="1.3333rem"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg">
+        <IconBase
+          ariaLabel={null}
+          focusable={false}
+          height="1.3333rem"
+          isBidi={false}
+          isSpin={false}
+          viewBox="0 0 48 48"
+          width="1.3333rem"
+          xmlns="http://www.w3.org/2000/svg">
+          <svg
+            aria-hidden="true"
+            className="terra-Icon"
+            focusable={false}
+            height="1.3333rem"
+            viewBox="0 0 48 48"
+            width="1.3333rem"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
+              fill="#007CC3" />
+            <path
+              d="M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z"
+              fill="#FFF" />
+          </svg>
+        </IconBase>
+      </IconHelp>
     </div>
     <div
       className="terra-Alert-section terra-Alert-section--custom">
@@ -437,7 +814,18 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
       onClick={[Function]}
       size="medium"
       text="Action"
-      variant="primary" />
+      variant="primary">
+      <button
+        aria-disabled={false}
+        className="terra-Button terra-Button--primary terra-Button--medium"
+        disabled={false}
+        onClick={[Function]}>
+        <span
+          className="terra-Button-text">
+          Action
+        </span>
+      </button>
+    </Button>
     <Button
       isBlock={false}
       isCompact={false}
@@ -446,7 +834,18 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
       onClick={[Function]}
       size="medium"
       text="Dismiss"
-      variant="secondary" />
+      variant="secondary">
+      <button
+        aria-disabled={false}
+        className="terra-Button terra-Button--secondary terra-Button--medium"
+        disabled={false}
+        onClick={[Function]}>
+        <span
+          className="terra-Button-text">
+          Dismiss
+        </span>
+      </button>
+    </Button>
   </div>
 </div>
 `;

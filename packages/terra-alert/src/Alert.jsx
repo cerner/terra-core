@@ -126,30 +126,58 @@ const getAlertIcon = (type, customIcon) => {
   }
 };
 
-const getDefaultTitle = (type) => {
-  switch (type) {
-    case AlertTypes.ALERT:
-      return 'Alert.';
-    case AlertTypes.ERROR:
-      return 'Error.';
-    case AlertTypes.WARNING:
-      return 'Warning.';
-    case AlertTypes.ADVISORY:
-      return 'Advisory.';
-    case AlertTypes.INFO:
-      return 'Information.';
-    case AlertTypes.SUCCESS:
-      return 'Success.';
-    case AlertTypes.GAP_CHECKING:
-      return 'Required Action.';
-    case AlertTypes.OUTSIDE_RECORDS:
-      return 'Outside Records.';
-    default:
-      return '';
-  }
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
 };
 
-const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss, alertAction, ...customProps }) => {
+const Alert = (
+  {
+    type,
+    children,
+    title,
+    customIcon,
+    customStatusColor,
+    onDismiss,
+    alertAction,
+    ...customProps
+  }, {
+    intl,
+  },
+) => {
+  let defaultTitle = '';
+  switch (type) {
+    case AlertTypes.ALERT:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.alert' });
+      break;
+    case AlertTypes.ERROR:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.error' });
+      break;
+    case AlertTypes.WARNING:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.warning' });
+      break;
+    case AlertTypes.ADVISORY:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.advisory' });
+      break;
+    case AlertTypes.INFO:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.info' });
+      break;
+    case AlertTypes.SUCCESS:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.success' });
+      break;
+    case AlertTypes.GAP_CHECKING:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.gapChecking' });
+      break;
+    case AlertTypes.OUTSIDE_RECORDS:
+      defaultTitle = intl.formatMessage({ id: 'Terra.alert.outsideRecords' });
+      break;
+    default:
+      break;
+  }
   const attributes = Object.assign({}, customProps);
   const alertTypeClassName = getAlertClassName(type);
   const AlertClassNames = classNames([
@@ -169,14 +197,16 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
     // in the customStatusColor prop.  The box-shadow style is defined in CSS in order to get the
     // bidirectionality via the mixin.  As per the W3C spec if the box-shadow does not have the color
     // defined, it will use the prevailing color style, so setting that here. But then we need to set
-    // the color style for the alert content so that it doesn't pick up the custom status color.
+    // the color style for the alert content so that it doesn't pick up the custom status color. We
+    // will allow the icon to pick up the color style so that Terra icons will match the color of the
+    // status bar.
     outerDivStyle.color = customStatusColor;
     alertSectionClassName += ' terra-Alert-section--custom';
     alertActionsClassName += ' terra-Alert-actions--custom';
   }
 
   if (onDismiss) {
-    dismissButton = (<Button text="Dismiss" size="medium" variant="secondary" onClick={onDismiss} />);
+    dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} size="medium" variant="secondary" onClick={onDismiss} />);
   }
   if (onDismiss || alertAction) {
     actionsSection = (
@@ -192,7 +222,7 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
       <div className="terra-Alert-body">
         <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
         <div className={alertSectionClassName}>
-          <strong className="terra-Alert-title">{title || getDefaultTitle(type)}</strong>
+          <strong className="terra-Alert-title">{title || defaultTitle}</strong>
           <div className="terra-Alert-content">
             {children}
           </div>
@@ -205,6 +235,7 @@ const Alert = ({ type, children, title, customIcon, customStatusColor, onDismiss
 
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;
+Alert.contextTypes = contextTypes;
 Alert.Types = AlertTypes;
 
 export default Alert;

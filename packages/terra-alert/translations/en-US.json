@@ -1,0 +1,11 @@
+{
+  "Terra.alert.dismiss": "Dismiss",
+  "Terra.alert.info": "Information.",
+  "Terra.alert.error": "Error.",
+  "Terra.alert.warning": "Warning.",
+  "Terra.alert.alert": "Alert.",
+  "Terra.alert.advisory": "Advisory.",
+  "Terra.alert.gapChecking": "Required Action.",
+  "Terra.alert.outsideRecords": "Outside Records.",
+  "Terra.alert.success": "Success."
+}
