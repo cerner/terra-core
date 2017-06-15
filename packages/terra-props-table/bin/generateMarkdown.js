@@ -24,30 +24,30 @@ function generatePropType(type) {
     values = '(' +
       type.value.map(function(typeValue) {
         return typeValue.name || typeValue.value;
-      }).join('|') +
+      }).join(',') +
       ')';
   } else {
     values = type.value;
   }
 
-  return 'type: `' + type.name + (values ? values: '') + '`';
+  return '`' + type.name + (values ? values: '') + '`';
 }
 
 function generatePropDefaultValue(value) {
-  return 'defaultValue: `' + value.value + '`\n';
+  return '`' + value.value + '`';
 }
 
 function generateProp(propName, prop) {
   return (
-    ` ${propName} | ${prop.type ? generatePropType(prop.type) : ''}  | ${prop.required? 'required': ''} | ${prop.defaultValue ? generatePropDefaultValue(prop.defaultValue) : ''} | ${prop.description ? prop.description + '\n\n' : ''}`
+    `| ${propName} | ${prop.type ? generatePropType(prop.type) : ''}  | ${prop.required? '`required`': 'optional'} | ${prop.defaultValue ? generatePropDefaultValue(prop.defaultValue) : ''} | ${prop.description ? prop.description : ''} |`
   );
 }
 
 function generateProps(props) {
-  var title = 'Prop Name        | Type           | Is Required  | Default Value  | Description \n -|-|-|-|-';
+  var title = '| Prop Name | Type | Is Required | Default Value | Description | \n |-|-|-|-|-|';
 
 
-  return (
+ return (
     title + '\n' +
     Object.keys(props).sort().map(function(propName) {
       return generateProp(propName, props[propName]);
