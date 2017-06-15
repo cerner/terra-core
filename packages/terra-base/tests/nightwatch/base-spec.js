@@ -36,4 +36,11 @@ module.exports = {
 
     browser.expect.element('div').text.to.contain('en-US').before(waitInms);
   },
+
+  'Displays a placeholder when translations are not loaded': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/base-tests/no-translations-loaded`);
+
+    browser.expect.element('div').text.to.contain('No Translations');
+  },
 };
