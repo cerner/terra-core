@@ -10,6 +10,7 @@ import NumberField from 'terra-form/lib/NumberField';
 
 <NumberField
   label="Sales Tax Rate"
+  labelAttrs={{ className: 'healtheintent-application' }}
   name="sales_tax_rate"
   value={0.075}
   error="This field is required"

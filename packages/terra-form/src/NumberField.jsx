@@ -30,6 +30,10 @@ const propTypes = {
    */
   label: PropTypes.node,
   /**
+   * Attributes to attach to the label
+   */
+  labelAttrs: PropTypes.object,
+  /**
    * Maximum value allowed for the input
    */
   max: PropTypes.number,
@@ -69,6 +73,7 @@ const defaultProps = {
   inputAttrs: {},
   isInline: false,
   label: null,
+  labelAttrs: {},
   max: null,
   min: null,
   name: null,
@@ -85,6 +90,7 @@ const NumberField = (
     inputAttrs,
     isInline,
     label,
+    labelAttrs,
     max,
     min,
     name,
@@ -99,6 +105,7 @@ const NumberField = (
   <Field
     error={error}
     label={label}
+    labelAttrs={labelAttrs}
     help={help}
     isInline={isInline}
     required={required}

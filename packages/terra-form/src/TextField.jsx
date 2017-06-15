@@ -30,6 +30,10 @@ const propTypes = {
    */
   label: PropTypes.node,
   /**
+   * Attributes to attach to the label
+   */
+  labelAttrs: PropTypes.object,
+  /**
    * Maximum number of characters user can input in this field
    */
   maxLength: PropTypes.number,
@@ -66,6 +70,7 @@ const defaultProps = {
   inputAttrs: {},
   isInline: false,
   label: null,
+  labelAttrs: {},
   maxLength: null,
   minLength: null,
   name: null,
