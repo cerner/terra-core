@@ -6,6 +6,9 @@
 }
 
 .terra-Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   opacity: 0.8;
   outline: none;
   overflow: hidden;
@@ -44,20 +47,20 @@
 
 .terra-Overlay--scrollable {
   overflow-y: scroll;
+
+  // .terra-Overlay-content {
+  //   height: inherit;
+  //   max-height: 100%;
+  // }
 }
 
 .terra-Overlay-content {
   color: #fff;
   font-size: 24px;
-}
-
-.terra-LoadingOverlay-content {
-  color: #fff;
-  font-size: 24px;
-  position: inherit;
-  text-align: center;
-  top: 50%;
-  width: 100%;
+  // height: initial
+  height: inherit;
+  max-height: 100%;
+  padding: 1rem;
 }
 
 .terra-LoadingOverlay-message {

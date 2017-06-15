@@ -8,7 +8,8 @@ import OverlayTests from './OverlayTests';
 import DefaultOverlay from './DefaultOverlay';
 import ContainerOverlay from './ContainerOverlay';
 import CustomContentOverlay from './CustomContentOverlay';
-import ScrollableOverlay from './ScrollableOverlay';
+import ContainerScrollableOverlay from './ContainerScrollableOverlay';
+import FullscreenScrollableOverlay from './FullscreenScrollableOverlay';
 import OnRequestCloseOverlay from './OnRequestCloseOverlay';
 import LightOverlay from './LightOverlay';
 import DarkOverlay from './DarkOverlay';
@@ -20,7 +21,8 @@ const routes = (
     <Route path="/tests/overlay-tests/default" component={DefaultOverlay} />
     <Route path="/tests/overlay-tests/container" component={ContainerOverlay} />
     <Route path="/tests/overlay-tests/custom-content" component={CustomContentOverlay} />
-    <Route path="/tests/overlay-tests/scrollable" component={ScrollableOverlay} />
+    <Route path="/tests/overlay-tests/container-scrollable" component={ContainerScrollableOverlay} />
+    <Route path="/tests/overlay-tests/fullscreen-scrollable" component={FullscreenScrollableOverlay} />
     <Route path="/tests/overlay-tests/on-request-close" component={OnRequestCloseOverlay} />
     <Route path="/tests/overlay-tests/light-themed" component={LightOverlay} />
     <Route path="/tests/overlay-tests/dark-themed" component={DarkOverlay} />

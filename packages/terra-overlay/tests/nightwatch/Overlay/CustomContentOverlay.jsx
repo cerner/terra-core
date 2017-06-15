@@ -47,7 +47,7 @@ class OverlayExample extends React.Component {
           <button id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
         </OverlayContainer>
         <br />
-        <p> Outside of overlay container to prove functionality. </p>
+        <p> Outside of overlay container to prove functionality. Click the random button below after clicking the Trigger Container Overlay button to confirm an Overlay relative to container does not block outside interactions. </p>
         <button id="random_button" onClick={this.handleRandomClick}>A Random Button To Change Toggle State </button>
         <p> Random Button toggle State is <span id="random_state">{this.state.toggle}</span>. </p>
       </div>

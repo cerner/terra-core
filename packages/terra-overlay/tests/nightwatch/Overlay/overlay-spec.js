@@ -27,8 +27,13 @@ module.exports = {
     browser.assert.cssClassPresent('.terra-Overlay', 'terra-Overlay--container');
   },
 
-  'Displays a Overlay with isScrollable prop': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/overlay-tests/scrollable`);
+  'Displays a fullscreen Overlay with isScrollable prop': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/overlay-tests/fullscreen-scrollable`);
+    browser.assert.cssClassPresent('.terra-Overlay', 'terra-Overlay--scrollable');
+  },
+
+  'Displays an Overlay relative to container with isScrollable prop': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/overlay-tests/container-scrollable`);
     browser.assert.cssClassPresent('.terra-Overlay', 'terra-Overlay--scrollable');
   },
 

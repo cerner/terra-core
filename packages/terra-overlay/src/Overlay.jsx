@@ -127,7 +127,6 @@ class Overlay extends React.Component {
 
   render() {
     const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps } = this.props;
-    const { contentClassName, ...attributes } = customProps;
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
@@ -140,19 +139,14 @@ class Overlay extends React.Component {
       { [`terra-Overlay--${type}`]: type },
       { [`terra-Overlay--${backgroundStyle}`]: backgroundStyle },
       { 'terra-Overlay--scrollable': isScrollable },
-      attributes.className,
-    ]);
-
-    const OverlayContentClassNames = classNames([
-      'terra-Overlay-content',
-      contentClassName,
+      customProps.className,
     ]);
 
     // Disable linter to pass onClick to div element.
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     const overlayComponent = (
-      <div {...attributes} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" >
-        <div className={OverlayContentClassNames}>
+      <div {...customProps} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" >
+        <div className="terra-Overlay-content">
           {children}
         </div>
       </div>

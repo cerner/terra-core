@@ -45,7 +45,7 @@ const LoadingOverlay = (props) => {
   }
 
   return (
-    <Overlay className="terra-LoadingOverlay" contentClassName="terra-LoadingOverlay-content" {...customProps} >
+    <Overlay className="terra-LoadingOverlay" {...customProps} >
       <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} />
       <span className="terra-LoadingOverlay-message">{message}</span>
     </Overlay>
