@@ -42,6 +42,7 @@
     "terra-form": "^0.2.0",
     "terra-grid": "^3.0.0",
     "terra-i18n": "^0.x",
+    "terra-i18n-plugin": "^0.x",
     "terra-icon": "^0.6.0",
     "terra-image": "^0.4.0",
     "terra-list": "^0.6.0",
@@ -80,7 +81,6 @@
     "react-dom": "^15.4.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "terra-i18n-plugin": "^0.x",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
