@@ -1,0 +1,32 @@
+@import '~terra-mixins';
+
+// stylelint-disable declaration-property-value-blacklist
+.terra-TimeInput {
+  @include terra-border-radius-start(0.25em);
+  @include terra-border-radius-end(0.25em);
+  background-color: transparent;
+  border: #dedfe0 solid 1px;
+  display: inline-block;
+  margin: 0;
+
+  &.is-focused {
+    border-color: #26a2e5;
+    outline: none;
+  }
+}
+
+.terra-TimeInput-hour,
+.terra-TimeInput-minute {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  min-width: 2.1em;
+  padding: 0.179em 0;
+  text-align: center;
+  width: 2.1em;
+
+  &:focus {
+    border-color: none;
+    outline: none;
+  }
+}

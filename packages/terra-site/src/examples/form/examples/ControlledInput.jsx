@@ -2,9 +2,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Button from 'terra-button';
-import Field from 'terra-form/lib/Field';
 import Fieldset from 'terra-form/lib/Fieldset';
-import Input from 'terra-form/lib/Input';
+import TextField from 'terra-form/lib/TextField';
+import TextareaField from 'terra-form/lib/TextareaField';
+import NumberField from 'terra-form/lib/NumberField';
 /* eslint-enable import/no-extraneous-dependencies */
 
 class ControlledInput extends React.Component {
@@ -17,12 +18,15 @@ class ControlledInput extends React.Component {
         first: '',
         middle: '',
         last: '',
+        travelPercentage: 0,
       },
     };
 
     this.handleEmploymentUpdate = this.handleEmploymentUpdate.bind(this);
     this.handleNameUpdate = this.handleNameUpdate.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleTravelPercentageChange = this.handleTravelPercentageChange.bind(this);
+    this.handleExperienceUpdate = this.handleExperienceUpdate.bind(this);
   }
 
   handleEmploymentUpdate(e) {
@@ -37,6 +41,18 @@ class ControlledInput extends React.Component {
     this.setState({ formData });
   }
 
+  handleTravelPercentageChange(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData.travelPercentage = e.target.value;
+    this.setState({ formData });
+  }
+
+  handleExperienceUpdate(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData.experience = e.target.value;
+    this.setState({ formData });
+  }
+
   handleFormSubmit(e) {
     e.preventDefault();
 
@@ -48,40 +64,66 @@ class ControlledInput extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleFormSubmit}>
-        <Field
+        <TextField
           label="Current or Most Recent Employment Title"
           help="This is your most recent employment position"
+          value={this.state.formData.jobTitle}
+          onChange={this.handleEmploymentUpdate}
+          name="employment"
+          type="text"
           required
-        >
-          <Input type="text" name="employment" value={this.state.formData.jobTitle} onChange={this.handleEmploymentUpdate} />
-        </Field>
+        />
         <Fieldset
           legend="Name"
           required
         >
-          <Field
+          <TextField
             label="First"
+            value={this.state.formData.first}
+            onChange={this.handleNameUpdate}
+            name="first"
+            type="text"
             isInline
             required
-          >
-            <Input type="text" name="first" value={this.state.formDatafirst} onChange={this.handleNameUpdate} />
-          </Field>
-          <Field
+          />
+          <TextField
             label="Middle"
+            value={this.state.formData.middle}
+            onChange={this.handleNameUpdate}
+            name="middle"
+            type="text"
             isInline
-          >
-            <Input type="text" name="middle" value={this.state.formData.middle} onChange={this.handleNameUpdate} />
-          </Field>
-          <Field
+          />
+          <TextField
             label="Last"
+            value={this.state.formData.last}
+            onChange={this.handleNameUpdate}
+            name="last"
+            type="text"
             isInline
             required
-          >
-            <Input type="text" name="last" value={this.state.formData.last} onChange={this.handleNameUpdate} />
-          </Field>
+          />
         </Fieldset>
+        <NumberField
+          label="What percentage of work are you willing to travel?"
+          help="This will help determine your placement in positions requiring travel"
+          value={this.state.formData.travelPercentage}
+          onChange={this.handleTravelPercentageChange}
+          name="travel_percentage"
+          min={0}
+          max={100}
+          step={5}
+          required
+        />
+        <TextareaField
+          label="Experience"
+          name="experience"
+          help="List all the different languages and build tools you have 3+ months experience with"
+          value={this.state.formData.experience}
+          onChange={this.handleExperienceUpdate}
+        />
         <Button text="Submit" type="submit" />
-        {this.state.submittedData && [<hr />, <p>Form was submitted with {JSON.stringify(this.state.submittedData)}</p>]}
+        {this.state.submittedData && <div><hr /><p>Form was submitted with {JSON.stringify(this.state.submittedData)}</p></div>}
       </form>
     );
   }

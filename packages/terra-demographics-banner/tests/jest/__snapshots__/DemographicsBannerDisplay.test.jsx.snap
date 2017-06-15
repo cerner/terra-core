@@ -1,0 +1,489 @@
+exports[`test renders a banner that has basic information 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="24"
+      applicationContent={null}
+      dateOfBirth="March 30, 2017"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="F"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="Terra Demographics Banner"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="24"
+      applicationContent={null}
+      dateOfBirth="March 30, 2017"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="F"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="Terra Demographics Banner"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  } />
+`;
+
+exports[`test renders a blank banner properly 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="--"
+      applicationContent={null}
+      dateOfBirth="--"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="--"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="--"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="--"
+      applicationContent={null}
+      dateOfBirth="--"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="--"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="--"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  } />
+`;
+
+exports[`test renders gestational date with a default label when the label is not provided 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="--"
+      applicationContent={null}
+      dateOfBirth="--"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="--"
+      gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="--"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="--"
+      applicationContent={null}
+      dateOfBirth="--"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="--"
+      gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="--"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  } />
+`;
+
+exports[`test renders post menstrural date with a default label when the label is not provided 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="--"
+      applicationContent={null}
+      dateOfBirth="--"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="--"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="--"
+      photo={null}
+      postMenstrualAge="April 5, 2016"
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="--"
+      applicationContent={null}
+      dateOfBirth="--"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="--"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="--"
+      photo={null}
+      postMenstrualAge="April 5, 2016"
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  } />
+`;
+
+exports[`test renders the banner appropriately for a deceased person 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="24"
+      applicationContent={null}
+      dateOfBirth="June 15, 2014"
+      dateOfBirthLabel="DOB"
+      deceasedDate="March 30, 2017"
+      deceasedDateLabel="Deceased"
+      gender="F"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="Old Terra Demographics Banner"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="24"
+      applicationContent={null}
+      dateOfBirth="June 15, 2014"
+      dateOfBirthLabel="DOB"
+      deceasedDate="March 30, 2017"
+      deceasedDateLabel="Deceased"
+      gender="F"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={Object {}}
+      personName="Old Terra Demographics Banner"
+      photo={null}
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName={null} />
+  } />
+`;
+
+exports[`test renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="25 Years"
+      applicationContent={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="Male"
+      gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
+      personName="Johnathon Doe"
+      photo={
+        <Image
+          alt="My Cat"
+          isFluid={false}
+          src=""
+          variant="default" />
+      }
+      postMenstrualAge="April 7, 2016"
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John" />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="25 Years"
+      applicationContent={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="Male"
+      gestationalAge="April 5, 2016"
+      gestationalAgeLabel="GA"
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
+      personName="Johnathon Doe"
+      photo={
+        <Image
+          alt="My Cat"
+          isFluid={false}
+          src=""
+          variant="default" />
+      }
+      postMenstrualAge="April 7, 2016"
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John" />
+  } />
+`;
+
+exports[`test renders the banner properly for a deceased person with additional application content 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="25 Years"
+      applicationContent={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      deceasedDate="March 5, 2016"
+      deceasedDateLabel="Deceased"
+      gender="Male"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
+      personName="Johnathon Doe"
+      photo={
+        <Image
+          alt="My Cat"
+          isFluid={false}
+          src=""
+          variant="default" />
+      }
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John" />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="25 Years"
+      applicationContent={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      deceasedDate="March 5, 2016"
+      deceasedDateLabel="Deceased"
+      gender="Male"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
+      personName="Johnathon Doe"
+      photo={
+        <Image
+          alt="My Cat"
+          isFluid={false}
+          src=""
+          variant="default" />
+      }
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John" />
+  } />
+`;
+
+exports[`test renders the banner that contains additional information 1`] = `
+<ResponsiveElement
+  defaultElement={
+    <Component
+      age="25 Years"
+      applicationContent={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="Male"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
+      personName="Johnathon Doe"
+      photo={
+        <Image
+          alt="My Cat"
+          isFluid={false}
+          src=""
+          variant="default" />
+      }
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John" />
+  }
+  responsiveTo="window"
+  small={
+    <Component
+      age="25 Years"
+      applicationContent={
+        <span
+          className="risk-score">
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
+      dateOfBirth="May 9, 1993"
+      dateOfBirthLabel="DOB"
+      deceasedDate={null}
+      deceasedDateLabel="Deceased"
+      gender="Male"
+      gestationalAge={null}
+      gestationalAgeLabel="GA"
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
+      personName="Johnathon Doe"
+      photo={
+        <Image
+          alt="My Cat"
+          isFluid={false}
+          src=""
+          variant="default" />
+      }
+      postMenstrualAge={null}
+      postMenstrualAgeLabel="PMA"
+      preferredFirstName="John" />
+  } />
+`;

@@ -17,7 +17,7 @@ module.exports = {
       .assert.elementPresent('input');
   },
 
-  'Properly initializes input as uncontrolled when passed defaultValue': (browser) => {
+  'Properly initializes Input as uncontrolled when passed defaultValue': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/input/populated_uncontrolled`)
       .assert.elementPresent('input[name="foo"][value="bar"][required]')
@@ -26,12 +26,12 @@ module.exports = {
       .assert.value('input[name="foo"]', 'New Value');
   },
 
-  'Properly initializes input as controlled when passed value and onChange': (browser) => {
+  'Properly initializes Input as controlled when passed value and onChange': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/input/populated_controlled`)
       .assert.elementPresent('input[name="foo"][value="Jack"][required]')
       .clearValue('input[name="foo"]')
-      .setValue('input[name="foo"][value="Jack"]', 'New Value')
+      .setValue('input[name="foo"]', 'New Value')
       .assert.value('input[name="foo"]', 'New Value');
   },
 };

@@ -1,0 +1,56 @@
+{
+  "name": "terra-time-input",
+  "main": "lib/TimeInput.js",
+  "version": "0.2.0",
+  "description": "A controlled input component for entering time.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-time-input",
+    "TimeInput",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "terra-toolkit": "^0.x"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "terra-base": "^0.6.0",
+    "terra-form": "^0.2.0",
+    "terra-mixins": "^1.3.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "moment": "^2.17.1",
+    "prop-types": "^15.5.8",
+    "terra-base": "^0.6.0",
+    "terra-form": "^0.2.0",
+    "terra-mixins": "^1.3.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rm -rf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "test": "npm run test:spec && npm run test:nightwatch-default",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-time-input node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-time-input node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-time-input node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-time-input node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
+  }
+}

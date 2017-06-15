@@ -1,0 +1,44 @@
+exports[`test should render a TextArea when all the possible props are passed into it 1`] = `
+<textarea
+  aria-required="true"
+  className="terra-Form-textarea"
+  cols={15}
+  name="description"
+  required={true}
+  rows={5} />
+`;
+
+exports[`test should render a default TextArea component 1`] = `
+<textarea
+  className="terra-Form-textarea"
+  name={null}
+  required={false} />
+`;
+
+exports[`test should render as controlled when just a default value is passed into the Textarea 1`] = `
+<Textarea
+  name={null}
+  onChange={[Function]}
+  required={false}
+  value="foo">
+  <textarea
+    className="terra-Form-textarea"
+    name={null}
+    onChange={[Function]}
+    required={false}
+    value="foo" />
+</Textarea>
+`;
+
+exports[`test should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
+<Textarea
+  defaultValue="foo"
+  name={null}
+  required={false}>
+  <textarea
+    className="terra-Form-textarea"
+    defaultValue="foo"
+    name={null}
+    required={false} />
+</Textarea>
+`;

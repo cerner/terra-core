@@ -13,6 +13,14 @@ const FormTests = () => (
       <li><Link to="/tests/form-tests/input/default">Default Input</Link></li>
       <li><Link to="/tests/form-tests/input/populated_controlled">Populated Input Controlled</Link></li>
       <li><Link to="/tests/form-tests/input/populated_uncontrolled">Populated Input Uncontrolled</Link></li>
+      <li><Link to="/tests/form-tests/number-field/default">Default NumberField</Link></li>
+      <li><Link to="/tests/form-tests/number-field/populated">Populated NumberField</Link></li>
+      <li><Link to="/tests/form-tests/text-field/default">Default TextField</Link></li>
+      <li><Link to="/tests/form-tests/text-field/populated">Populated TextField</Link></li>
+      <li><Link to="/tests/form-tests/textarea/default">Default Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/populated">Populated Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea-field/default">Default TextareaField</Link></li>
+      <li><Link to="/tests/form-tests/textarea-field/populated">Populated TextareaField</Link></li>
     </ul>
   </div>
 );
