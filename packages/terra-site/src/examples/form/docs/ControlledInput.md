@@ -4,6 +4,7 @@
 import React from 'react';
 import Button from 'terra-button';
 import Fieldset from 'terra-form/lib/Fieldset';
+import Control from 'terra-form/lib/Control';
 import TextField from 'terra-form/lib/TextField';
 import TextareaField from 'terra-form/lib/TextareaField';
 import NumberField from 'terra-form/lib/NumberField';
@@ -27,6 +28,8 @@ class ControlledInput extends React.Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleTravelPercentageChange = this.handleTravelPercentageChange.bind(this);
     this.handleExperienceUpdate = this.handleExperienceUpdate.bind(this);
+    this.handlePreferredLocation = this.handlePreferredLocation.bind(this);
+    this.handleInterestedDivisions = this.handleInterestedDivisions.bind(this);
   }
 
   handleEmploymentUpdate(e) {
@@ -66,11 +69,7 @@ class ControlledInput extends React.Component {
       <form onSubmit={this.handleFormSubmit}>
         <TextField
           label="Current or Most Recent Employment Title"
-          help="This is your most recent employment position"
-          value={this.state.formData.jobTitle}
-          onChange={this.handleEmploymentUpdate}
-          name="employment"
-          type="text"
+          helpText="This is your most recent employment position"
           required
         />
         <Fieldset
@@ -104,24 +103,65 @@ class ControlledInput extends React.Component {
             required
           />
         </Fieldset>
-        <NumberField
-          label="What percentage of work are you willing to travel?"
-          help="This will help determine your placement in positions requiring travel"
-          value={this.state.formData.travelPercentage}
-          onChange={this.handleTravelPercentageChange}
-          name="travel_percentage"
-          min={0}
-          max={100}
-          step={10}
-          required
-        />
-        <TextareaField
-          label="Experience"
-          name="experience"
-          help="List all the different languages and build tools you have 3+ months experience with"
-          value={this.state.formData.experience}
-          onChange={this.handleExperienceUpdate}
-        />
+         <Fieldset
+          legend="Preferred Location"
+        >
+          <Control
+            type="radio"
+            value="north"
+            labelText="North Campus"
+            checked={this.state.formData.preferredLocation === "north"}
+            onChange={this.handlePreferredLocation}
+            name="preferred_location"
+            isInline
+          />
+          <Control
+            type="radio"
+            value="south"
+            labelText="South Campus"
+            checked={this.state.formData.preferredLocation === "south"}
+            onChange={this.handlePreferredLocation}
+            name="preferred_location"
+            isInline
+          />
+          <Control
+            type="radio"
+            value="east"
+            labelText="East Campus"
+            checked={this.state.formData.preferredLocation === "east"}
+            onChange={this.handlePreferredLocation}
+            name="preferred_location"
+            isInline
+          />
+        </Fieldset>
+        <Fieldset
+          legend="What divisions are you most interested in?"
+        >
+          <Control
+            type="checkbox"
+            value="ux"
+            labelText="User Experience Development"
+            checked={this.state.formData.interestedDivisions.includes("ux")}
+            onChange={this.handleInterestedDivisions}
+            name="interested_division[]"
+          />
+          <Control
+            type="checkbox"
+            value="system_engineer"
+            labelText="System Engineer"
+            checked={this.state.formData.interestedDivisions.includes("system_engineer")}
+            onChange={this.handleInterestedDivisions}
+            name="interested_division[]"
+          />
+          <Control
+            type="checkbox"
+            value="software_engineer"
+            labelText="Software Engineer"
+            checked={this.state.formData.interestedDivisions.includes("software_engineer")}
+            onChange={this.handleInterestedDivisions}
+            name="interested_division[]"
+          />
+        </Fieldset>
         <Button text="Submit" type="submit" />
         {this.state.submittedData && <div><hr /><p>Form was submitted with {JSON.stringify(this.state.submittedData)}</p></div>}
       </form>
