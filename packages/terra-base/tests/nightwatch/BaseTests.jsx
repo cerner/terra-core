@@ -8,6 +8,7 @@ const BaseTests = () => (
     <ul>
       <li><Link to="/tests/base-tests/default">Default Base</Link></li>
       <li><Link to="/tests/base-tests/switch">Switch Locale Base</Link></li>
+      <li><Link to="/tests/base-tests/no-translations-loaded">No Translations Loaded Base</Link></li>
     </ul>
   </div>
 );
