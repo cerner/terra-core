@@ -8,6 +8,7 @@ import HeadingSizeDocs from 'terra-heading/docs/heading-sizes.md';
 import HeadingColorDocs from 'terra-heading/docs/heading-colors.md';
 import HeadingWeightDocs from 'terra-heading/docs/heading-weights.md';
 import HeadingVisuallyHiddenDocs from 'terra-heading/docs/heading-visually-hidden.md';
+import HeadingVariationDocs from 'terra-heading/docs/heading-variations.md';
 import { version } from 'terra-heading/package.json';
 
 // Component Source
@@ -20,6 +21,7 @@ import HeadingLevels from './HeadingLevels';
 import HeadingSizes from './HeadingSizes';
 import HeadingVisuallyHidden from './HeadingVisuallyHidden';
 import HeadingWeights from './HeadingWeights';
+import HeadingVariations from './HeadingVariations';
 
 const HeadingExamples = () => (
   <div>
@@ -30,20 +32,24 @@ const HeadingExamples = () => (
     <HeadingLevels />
     <br />
     <br />
-    <Markdown id="heading-level-docs" src={HeadingSizeDocs} />
+    <Markdown id="heading-size-docs" src={HeadingSizeDocs} />
     <HeadingSizes />
     <br />
     <br />
-    <Markdown id="heading-level-docs" src={HeadingColorDocs} />
+    <Markdown id="heading-color-docs" src={HeadingColorDocs} />
     <HeadingColors />
     <br />
     <br />
-    <Markdown id="heading-level-docs" src={HeadingWeightDocs} />
+    <Markdown id="heading-weight-docs" src={HeadingWeightDocs} />
     <HeadingWeights />
     <br />
     <br />
-    <Markdown id="heading-level-docs" src={HeadingVisuallyHiddenDocs} />
+    <Markdown id="heading-visually-hidden-docs" src={HeadingVisuallyHiddenDocs} />
     <HeadingVisuallyHidden />
+    <br />
+    <br />
+    <Markdown id="heading-variation-docs" src={HeadingVariationDocs} />
+    <HeadingVariations />
   </div>
 );
 

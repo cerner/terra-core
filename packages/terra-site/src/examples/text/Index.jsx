@@ -6,6 +6,7 @@ import ReadMe from 'terra-text/docs/README.md';
 import TextFontSizeDocs from 'terra-text/docs/text-font-sizes.md';
 import TextColorDocs from 'terra-text/docs/text-colors.md';
 import TextWeightDocs from 'terra-text/docs/text-weights.md';
+import TextVariationsDocs from 'terra-text/docs/text-variations.md';
 import TextVisuallyHiddenDocs from 'terra-text/docs/text-visually-hidden.md';
 import { version } from 'terra-text/package.json';
 
@@ -17,6 +18,7 @@ import TextSrc from '!raw-loader!terra-text/src/Text';
 import TextColors from './TextColors';
 import TextDisplays from './TextDisplays';
 import TextFontSizes from './TextFontSizes';
+import TextVariations from './TextVariations';
 import TextVisuallyHidden from './TextVisuallyHidden';
 import TextWeights from './TextWeights';
 
@@ -42,6 +44,10 @@ const TextExamples = () => (
     <br />
     <Markdown id="text-visually-hidden-docs" src={TextVisuallyHiddenDocs} />
     <TextVisuallyHidden />
+    <br />
+    <br />
+    <Markdown id="text-variations-docs" src={TextVariationsDocs} />
+    <TextVariations />
   </div>
 );
 
