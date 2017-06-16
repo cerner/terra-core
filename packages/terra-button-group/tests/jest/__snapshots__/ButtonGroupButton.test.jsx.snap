@@ -6,6 +6,7 @@ exports[`test should render a default component 1`] = `
   isCompact={false}
   isDisabled={false}
   isReversed={false}
+  type="button"
   variant="default" />
 `;
 
@@ -17,6 +18,7 @@ exports[`test should render as selected 1`] = `
   isCompact={false}
   isDisabled={false}
   isReversed={false}
+  type="button"
   variant="default" />
 `;
 
@@ -33,6 +35,7 @@ exports[`test should render with icon and text 1`] = `
   isDisabled={false}
   isReversed={false}
   text="text"
+  type="button"
   variant="default" />
 `;
 
@@ -49,6 +52,7 @@ exports[`test should render with icon and text reversed 1`] = `
   isDisabled={false}
   isReversed={true}
   text="text"
+  type="button"
   variant="default" />
 `;
 
@@ -64,6 +68,7 @@ exports[`test should render with icon only 1`] = `
   isCompact={false}
   isDisabled={false}
   isReversed={false}
+  type="button"
   variant="default" />
 `;
 
@@ -76,5 +81,6 @@ exports[`test should render with text 1`] = `
   isDisabled={false}
   isReversed={false}
   text="text"
+  type="button"
   variant="default" />
 `;

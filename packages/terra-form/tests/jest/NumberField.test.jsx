@@ -11,6 +11,7 @@ it('should render a NumberField when all the possible props are passed into it',
   const input = (
     <NumberField
       label="Sales Tax Rate"
+      labelAttrs={{ className: 'healtheintent-legend' }}
       name="sales_tax_rate"
       error="This field is required"
       help="Your county's office may have this information"

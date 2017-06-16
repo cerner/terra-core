@@ -188,15 +188,9 @@ class MultiSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, ...customProps } = this.props;
+    const { children, isDivided, onChange, maxSelectionCount, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
-    if ('onChange' in customProps) {
-      delete customProps.onChange;
-    }
-    if ('maxSelectionCount' in customProps) {
-      delete customProps.maxSelectionCount;
-    }
     return (
       <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}

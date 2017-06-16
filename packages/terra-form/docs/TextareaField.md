@@ -12,6 +12,7 @@ import TextareaField from 'terra-form/lib/TextareaField';
 <TextareaField
   name="description"
   label="Description"
+  labelAttrs={{ className: 'healtheintent-application' }}
   error="This field is required"
   cols={20}
   rows={10}

@@ -10,6 +10,7 @@ import Field from 'terra-form/lib/Fieldset';
 
 <Field
   label="Do you have any Children?"
+  labelAttrs={{ className: 'healtheintent-application' }}
   error="This field is required"
   help="Families are eligible for family package plans"
   required

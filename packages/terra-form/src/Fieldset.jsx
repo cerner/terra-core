@@ -28,6 +28,10 @@ const propTypes = {
    */
   legend: PropTypes.string,
   /**
+   * Attributes to attach to the legend
+   */
+  legendAttrs: PropTypes.object,
+  /**
    * Determines whether the fieldset is required
    */
   required: PropTypes.bool,
@@ -39,10 +43,11 @@ const defaultProps = {
   help: null,
   isInline: false,
   legend: null,
+  legendAttrs: {},
   required: false,
 };
 
-const Fieldset = ({ children, error, help, isInline, legend, required, ...customProps }) => {
+const Fieldset = ({ children, error, help, isInline, legend, legendAttrs, required, ...customProps }) => {
   const fieldsetClasses = classNames(
     'terra-Form-fieldset',
     { 'terra-Form-fieldset--inline': isInline },
@@ -50,9 +55,14 @@ const Fieldset = ({ children, error, help, isInline, legend, required, ...custom
     customProps.className,
   );
 
+  const legendClasses = classNames(
+    'terra-Form-legend',
+    legendAttrs.className,
+  );
+
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
-      {legend && <legend className="terra-Form-legend">{legend}</legend>}
+      {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
       {children}
       {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
       {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}

@@ -10,6 +10,7 @@ import Fieldset from 'terra-form/lib/Fieldset';
 
 <Fieldset
   legend="Do you have any Children?"
+  legendAttrs={{ className: 'healtheintent-application' }}
   error="This field is required"
   help="Families are eligible for family package plans"
   required

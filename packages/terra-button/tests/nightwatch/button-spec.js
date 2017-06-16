@@ -83,6 +83,24 @@ module.exports = {
       .assert.containsText('.terra-Button.terra-Button--huge', 'Huge');
   },
 
+  'Displays as a button with the type set to button and with the provided text': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/with-type-button`)
+      .assert.containsText('.terra-Button[type="button"]', 'Button Type is Default');
+  },
+
+  'Displays as a button with the type set to reset and with the provided text': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/with-type-reset`)
+      .assert.containsText('.terra-Button[type="reset"]', 'Button Type is Reset');
+  },
+
+  'Displays as a button with the type set to submit and with the provided text': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/with-type-submit`)
+      .assert.containsText('.terra-Button[type="submit"]', 'Button Type is Submit');
+  },
+
   'Displays an icon inline with the provided text': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-tests/icon-default`)
