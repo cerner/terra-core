@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-text.svg)](https://www.npmjs.org/package/terra-text)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-{insert description}
+Component for displaying customizable text in UI.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-text/docs)
