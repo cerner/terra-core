@@ -4,6 +4,11 @@ exports[`test should render a NumberField when all the possible props are passed
   help="Your county\'s office may have this information"
   isInline={true}
   label="Sales Tax Rate"
+  labelAttrs={
+    Object {
+      "className": "healtheintent-legend",
+    }
+  }
   required={true}>
   <Input
     className="cernerConsumer-application"
@@ -22,6 +27,7 @@ exports[`test should render a default component 1`] = `
   help={null}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   required={false}>
   <Input
     max={null}
@@ -40,6 +46,7 @@ exports[`test should render as controlled when just a default value is passed in
   inputAttrs={Object {}}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   max={null}
   min={null}
   name={null}
@@ -52,6 +59,7 @@ exports[`test should render as controlled when just a default value is passed in
     help={null}
     isInline={false}
     label={null}
+    labelAttrs={Object {}}
     required={false}>
     <div
       className="terra-Form-field">
@@ -86,6 +94,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
   help={null}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   required={false}>
   <Input
     defaultValue={2}

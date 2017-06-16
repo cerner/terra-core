@@ -40,32 +40,32 @@ import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGro
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
+import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
+import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
-import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
-import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
-import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
-import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
-import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
-import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
-import TestLinks from './TestLinks';
+import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
-import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
-import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
-
 
 // Remove eslint-disable as these pacakges are published
 /* eslint-disable import/no-extraneous-dependencies */
-import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
+import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
+import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 /* eslint-enable import/no-extraneous-dependencies */
 /* eslint-enable import/first */
+
+import TestLinks from './TestLinks';
 
 ReactDOM.render((
   <Router history={hashHistory}>

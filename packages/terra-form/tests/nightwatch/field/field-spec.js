@@ -22,6 +22,7 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/field/populated`)
       .assert.elementPresent('.terra-Form-field')
       .assert.elementPresent('.terra-Form-field--inline')
+      .assert.elementPresent('.terra-Form-label.healtheintent-application')
       .assert.containsText('label', 'Do you have any Children?')
       .assert.containsText('.terra-Form-helpText', 'Families are eligible for family package plans')
       .assert.containsText('.terra-Form-error', 'This field is required');

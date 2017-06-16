@@ -14,6 +14,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     isDisabled={false}
     isReversed={false}
     onClick={[Function]}
+    type="button"
     variant="default">
     <IconSearch
       data-name="Layer 1"
@@ -39,6 +40,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isDisabled={false}
     isReversed={false}
     onClick={[Function]}
+    type="button"
     variant="default">
     <IconSearch
       data-name="Layer 1"
@@ -64,6 +66,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isDisabled={false}
     isReversed={false}
     onClick={[Function]}
+    type="button"
     variant="default">
     <IconSearch
       data-name="Layer 1"

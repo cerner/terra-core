@@ -2,7 +2,7 @@ exports[`test should render a Field when all the possible props are passed into 
 <div
   className="terra-Form-field terra-Form-field--inline terra-Form-field--required">
   <label
-    className="terra-Form-label"
+    className="terra-Form-label healtheintent-legend"
     htmlFor="test">
     Text
   </label>

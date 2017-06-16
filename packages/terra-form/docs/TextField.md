@@ -11,6 +11,7 @@ import TextField from 'terra-form/lib/TextField';
 <TextField
   type="email"
   label="Email Address"
+  labelAttrs={{ className: 'healtheintent-application' }}
   name="email"
   value=""
   error="This field is required"

@@ -31,6 +31,10 @@ const propTypes = {
    */
   label: PropTypes.node,
   /**
+   * Attributes to attach to the label
+   */
+  labelAttrs: PropTypes.object,
+  /**
    * Determines whether the field is required
    */
   required: PropTypes.bool,
@@ -43,10 +47,11 @@ const defaultProps = {
   htmlFor: undefined,
   isInline: false,
   label: null,
+  labelAttrs: {},
   required: false,
 };
 
-const Field = ({ children, error, help, htmlFor, isInline, label, required, ...customProps }) => {
+const Field = ({ children, error, help, htmlFor, isInline, label, labelAttrs, required, ...customProps }) => {
   const fieldClasses = classNames(
     'terra-Form-field',
     { 'terra-Form-field--inline': isInline },
@@ -54,9 +59,14 @@ const Field = ({ children, error, help, htmlFor, isInline, label, required, ...c
     customProps.className,
   );
 
+  const labelClassNames = classNames(
+    'terra-Form-label',
+    labelAttrs.className,
+  );
+
   return (
     <div {...customProps} className={fieldClasses}>
-      {label && <label className="terra-Form-label" htmlFor={htmlFor}>{label}</label>}
+      {label && <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>{label}</label>}
       {children}
       {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
       {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}
