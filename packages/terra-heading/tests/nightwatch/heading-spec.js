@@ -23,7 +23,12 @@ module.exports = {
 
   'Displays a heading component with a set size': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/heading-tests/size`);
-    browser.expect.element('.terra-Heading').text.to.equal('Size');
+    browser.expect.element('.terra-Heading--size-huge').text.to.equal('Huge');
+    browser.expect.element('.terra-Heading--size-large').text.to.equal('Large');
+    browser.expect.element('.terra-Heading--size-medium').text.to.equal('Medium');
+    browser.expect.element('.terra-Heading--size-small').text.to.equal('Small');
+    browser.expect.element('.terra-Heading--size-tiny').text.to.equal('Tiny');
+    browser.expect.element('.terra-Heading--size-mini').text.to.equal('Mini');
   },
 
   'Displays a heading component with set italics': (browser) => {
@@ -43,7 +48,9 @@ module.exports = {
 
   'Displays a heading component with a set weight': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/heading-tests/weight`);
-    browser.expect.element('.terra-Heading').text.to.equal('Weight');
+    browser.expect.element('.terra-Heading--weight-700').text.to.equal('700 Weight');
+    browser.expect.element('.terra-Heading--weight-400').text.to.equal('400 Weight');
+    browser.expect.element('.terra-Heading--weight-200').text.to.equal('200 Weight');
   },
 
   'Displays a heading component with set hidden visibility': (browser) => {
@@ -53,6 +60,6 @@ module.exports = {
 
   'Displays a heading component with all visual props set': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/heading-tests/visual-props`);
-    browser.expect.element('.terra-Heading').text.to.equal('Visual Props');
+    browser.expect.element('.terra-Heading').text.to.equal('All Visual Props Set');
   },
 };

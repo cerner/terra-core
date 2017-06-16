@@ -6,7 +6,7 @@ import './Heading.scss';
 
 const propTypes = {
   /**
-   * Needs descriptions
+   * Child nodes
    */
   children: PropTypes.node.isRequired,
   /**

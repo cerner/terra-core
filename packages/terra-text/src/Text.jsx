@@ -6,7 +6,7 @@ import './Text.scss';
 
 const propTypes = {
   /**
-   * Needs descriptions
+   * Child nodes
    */
   children: PropTypes.node.isRequired,
   /**
@@ -28,7 +28,7 @@ const propTypes = {
   /**
    * Sets the text size. One of 200, 400, 700, inherit.
    */
-  weight: PropTypes.oneOf([200, 400, 700, 'inherit']),
+  weight: PropTypes.oneOf([200, 400, 700]),
 };
 
 const defaultProps = {
@@ -45,7 +45,6 @@ const Text = ({ color, children, isVisuallyHidden, isItalic, fontSize, weight, .
     { 'terra-Text--italic': isItalic },
     { 'terra-Text--visually-hidden': isVisuallyHidden },
     { [`terra-Text--fontSize-${fontSize}`]: fontSize },
-    { [`terra-Text--weight-${weight}`]: weight },
     attributes.className,
   ]);
 
