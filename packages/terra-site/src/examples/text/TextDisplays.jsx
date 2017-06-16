@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Heading from 'terra-heading';
 import Text from 'terra-text';
