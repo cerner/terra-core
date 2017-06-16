@@ -8,7 +8,7 @@ const HeadingTests = () => (
     <ul>
       <li><Link to="/tests/heading-tests/default">Heading - Default</Link></li>
       <li><Link to="/tests/heading-tests/color">Heading - Color</Link></li>
-      <li><Link to="/tests/heading-tests/font-size">Heading - Font Size</Link></li>
+      <li><Link to="/tests/heading-tests/size">Heading - Size</Link></li>
       <li><Link to="/tests/heading-tests/italics">Heading - Italics</Link></li>
       <li><Link to="/tests/heading-tests/levels">Heading - Levels</Link></li>
       <li><Link to="/tests/heading-tests/visually-hidden">Heading - Visually Hidden</Link></li>
