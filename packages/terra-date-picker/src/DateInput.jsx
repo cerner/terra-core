@@ -13,6 +13,10 @@ const propTypes = {
    */
   inputAttributes: PropTypes.object,
   /**
+   * Name of the date input.
+   */
+  name: PropTypes.string,
+  /**
    * A callback function to execute when a valid date is selected or entered.
    */
   onChange: PropTypes.func,
@@ -34,16 +38,19 @@ const propTypes = {
   value: PropTypes.string,
 };
 
+const defaultProps = {
+  inputAttributes: undefined,
+  name: undefined,
+  onChange: undefined,
+  onClick: undefined,
+  onKeyDown: undefined,
+  placeholder: undefined,
+  value: undefined,
+};
+
 // eslint-disable-next-line react/prefer-stateless-function
 class DatePickerInput extends React.Component {
   render() {
-    // If a name attribute is provided in inputAttributes, it will be used as the name attribute in the hidden input.
-    // If no name attribute is provided, a default name of 'terra-date' will be used.
-    let nameAttr = 'terra-date';
-    if (this.props.inputAttributes && this.props.inputAttributes.name) {
-      nameAttr = this.props.inputAttributes.name;
-    }
-
     const dateValue = DateUtil.convertToISO8601(this.props.value, 'MM/DD/YYYY');
 
     return (
@@ -53,14 +60,14 @@ class DatePickerInput extends React.Component {
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
           className="terra-hidden-date-input"
           type="hidden"
-          name={nameAttr}
+          name={this.props.name}
           value={dateValue}
         />
         <input
           {...this.props.inputAttributes} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className="terra-DatePicker-input"
           type="text"
-          name="terra-date-input" // Give the name attribute a hard coded name to override the name attribute provided in inputAttributes to avoid duplicate names.
+          name={'terra-date-'.concat(this.props.name)}
           value={this.props.value}
           onChange={this.props.onChange}
           placeholder={this.props.placeholder}
@@ -78,5 +85,6 @@ class DatePickerInput extends React.Component {
 }
 
 DatePickerInput.propTypes = propTypes;
+DatePickerInput.defaultProps = defaultProps;
 
 export default DatePickerInput;

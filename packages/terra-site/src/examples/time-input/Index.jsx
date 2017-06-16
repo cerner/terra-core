@@ -21,9 +21,12 @@ const TimeInputExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TimeInputSrc} />
     <h2 id="default">Without Default Time</h2>
-    <TimeInput />
+    <TimeInput
+      name="time-input-default"
+    />
     <h2 id="default">With Default Time</h2>
     <TimeInput
+      name="time-input-value"
       value={moment().format('HH:mm')}
       onChange={handleOnChange}
     />

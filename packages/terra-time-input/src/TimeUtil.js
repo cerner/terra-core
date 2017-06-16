@@ -41,16 +41,6 @@ class TimeUtil {
 
     return '';
   }
-
-  // Given a time (expected to be in local time) and converts it to a UTC time.
-  static createUTCTimeFromLocalTime(time) {
-    const momentTime = moment(time, 'HH:mm', true);
-    if (momentTime.isValid()) {
-      return momentTime.utc().format('HH:mm').concat('Z');
-    }
-
-    return time;
-  }
 }
 
 export default TimeUtil;

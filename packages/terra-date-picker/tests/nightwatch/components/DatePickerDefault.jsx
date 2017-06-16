@@ -3,7 +3,7 @@ import DatePicker from '../../../lib/DatePicker';
 
 const DatePickerDefault = () => (
   <DatePicker
-    inputAttributes={{ name: 'test-name-attr' }}
+    name="date-input"
   />
 );
 

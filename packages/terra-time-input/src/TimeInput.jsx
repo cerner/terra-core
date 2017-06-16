@@ -11,7 +11,11 @@ const propTypes = {
    * Custom input attributes to apply to the time input.
    */
   inputAttributes: PropTypes.object,
-    /**
+  /**
+   * Name of the time input. The name should be unique and is required.
+   */
+  name: PropTypes.string.isRequired,
+  /**
    * A callback function to execute when either the hour or minute has been changed. The first parameter is the event. The second parameter is the changed time value.
    */
   onChange: PropTypes.func,
@@ -23,6 +27,7 @@ const propTypes = {
 
 const defaultProps = {
   inputAttributes: undefined,
+  name: null,
   onChange: null,
   value: undefined,
 };
@@ -232,6 +237,7 @@ class TimeInput extends React.Component {
     const {
       inputAttributes,
       onChange,
+      name,
       value,
       ...customProps
     } = this.props;
@@ -242,17 +248,10 @@ class TimeInput extends React.Component {
       customProps.className,
     ]);
 
-    // If a name attribute is provided in inputAttributes, it will be used as the name attribute in the hidden input.
-    // If no name attribute is provided, a default name of 'terra-time' will be used.
-    let nameAttr = 'terra-time';
-    if (this.props.inputAttributes && this.props.inputAttributes.name) {
-      nameAttr = this.props.inputAttributes.name;
-    }
-
     // Using the state of hour and minute create a time in UTC represented in ISO 8601 format.
     let timeValue = '';
     if (this.state.hour.length > 0 || this.state.minute.length > 0) {
-      timeValue = 'T'.concat(TimeUtil.createUTCTimeFromLocalTime(this.state.hour.concat(':', this.state.minute)));
+      timeValue = 'T'.concat(this.state.hour, ':', this.state.minute);
     }
 
     return (
@@ -262,7 +261,7 @@ class TimeInput extends React.Component {
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
           className="terra-hidden-time-input"
           type="hidden"
-          name={nameAttr}
+          name={name}
           value={timeValue}
         />
         <Input
@@ -271,6 +270,7 @@ class TimeInput extends React.Component {
           className="terra-TimeInput-hour"
           type="text"
           value={this.state.hour}
+          name={'terra-time-hour-'.concat(name)}
           placeholder={TimeUtil.splitHour(this.state.timeFormat)}
           maxLength="2"
           onChange={this.handleHourChange}
@@ -286,6 +286,7 @@ class TimeInput extends React.Component {
           className="terra-TimeInput-minute"
           type="text"
           value={this.state.minute}
+          name={'terra-time-minute-'.concat(name)}
           placeholder={TimeUtil.splitMinute(this.state.timeFormat)}
           maxLength="2"
           onChange={this.handleMinuteChange}

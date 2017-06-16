@@ -3,8 +3,10 @@ import DateRange from '../../../lib/DateRange';
 
 const DateRangeExample = () => (
   <DateRange
-    startDate={'2017-04-01T00:00Z'}
-    endDate={'2017-04-10T00:00Z'}
+    startName="date-input-start"
+    endName="date-input-end"
+    startDate={'2017-04-01'}
+    endDate={'2017-04-10'}
   />
 );
 
