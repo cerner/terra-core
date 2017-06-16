@@ -39,6 +39,7 @@ const defaultProps = {
   color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
+  weight: 700,
 };
 
 const Heading = ({ level, color, children, isVisuallyHidden, isItalic, size, weight, ...customProps }) => {
