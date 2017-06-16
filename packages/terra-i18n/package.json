@@ -40,7 +40,7 @@
     "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "props-table": "props-table ./src/I18nProvider.jsx --out-dir ./docs",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",

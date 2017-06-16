@@ -13,7 +13,7 @@ const generatePropType = (type) => {
 
 const generatePropDefaultValue = value => `\`${value.value}\``;
 
-const generateProp = (propName, prop) => `| ${propName} | ${prop.type ? generatePropType(prop.type) : ''}  | ${prop.required ? '`required`' : 'optional'} | ${prop.defaultValue ? generatePropDefaultValue(prop.defaultValue) : ''} | ${prop.description ? prop.description : ''} |`;
+const generateProp = (propName, prop) => `| ${propName} | ${prop.type ? generatePropType(prop.type) : ''}  | ${prop.required ? '`required`' : 'optional'} | ${prop.defaultValue ? generatePropDefaultValue(prop.defaultValue) : ''} | ${prop.description ? prop.description.replace(/\n|\r/g, ' ') : ''} |`;
 
 
 const generateProps = (props) => {

@@ -8,8 +8,6 @@
 | closeOnOutsideClick | `bool`  | optional | `true` | If set to true, the modal will close when a mouseclick is triggered outside the modal |
 | isFullscreen | `bool`  | optional | `false` | If set to true, the modal will be fullscreen on all breakpoint sizes |
 | isOpen | `bool`  | `required` | `false` | If set to true, the modal will rendered as opened |
-| isScrollable | `bool`  | optional | `false` | If set to true, the modal dialog with have overflow-y set to scroll.
-It is recommended not to use this prop and instead create a HOC
-with the modal dialog body set to scroll. |
+| isScrollable | `bool`  | optional | `false` | If set to true, the modal dialog with have overflow-y set to scroll. It is recommended not to use this prop and instead create a HOC with the modal dialog body set to scroll. |
 | onRequestClose | `func`  | `required` |  | Function to set isOpen={false} and close the modal. |
 | role | `string`  | optional | `'document'` | Role attribute on the modal dialog |

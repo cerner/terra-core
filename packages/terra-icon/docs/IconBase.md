@@ -1,7 +1,6 @@
 | Prop Name | Type | Is Required | Default Value | Description | 
 |-|-|-|-|-|
-| ariaLabel | `string`  | optional | `null` | String that labels the current element. If 'aria-label' is present,
-role is set to 'img' and aria-hidden is removed. |
+| ariaLabel | `string`  | optional | `null` | String that labels the current element. If 'aria-label' is present, role is set to 'img' and aria-hidden is removed. |
 | children | `node`  | optional | `null` | Child nodes. |
 | focusable | `bool`  | optional | `false` | Focusable attribute. IE 10/11 are focusable without this attribute. |
 | height | `string`  | optional | `'1em'` | Height of SVG. |
