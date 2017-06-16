@@ -10,7 +10,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The color of the text. Accepts a CSS color value.
+   * The color of the text. Accepts any color value parseable by CSS.
    */
   color: PropTypes.string,
   /**

@@ -14,7 +14,7 @@ const propTypes = {
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   /**
-   * The color of the text. Accepts a CSS color value.
+   * The color of the text. Accepts any color value parseable by CSS.
    */
   color: PropTypes.string,
   /**
