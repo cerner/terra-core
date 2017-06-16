@@ -53,14 +53,14 @@ const Heading = ({ level, color, children, isVisuallyHidden, isItalic, size, wei
     attributes.className,
   ]);
 
-  const styles = {
+  const headingStyles = {
     color,
   };
 
   const Element = `h${level}`;
 
   return (
-    <Element {...attributes} style={styles} className={TextClassNames} >
+    <Element {...attributes} style={{ ...headingStyles, ...customProps.style }} className={TextClassNames} >
       {children}
     </Element>
   );
