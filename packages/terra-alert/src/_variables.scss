@@ -1,71 +1,71 @@
 $terra-alert-alert-color-scheme: (
-  background-color: $terra-red-20
+  background-color: #fed1d1
 ) !default;
 
 $terra-alert-error-color-scheme: (
-  background-color: $terra-red-20
+  background-color: #fed1d1
 ) !default;
 
 $terra-alert-warning-color-scheme: (
-  background-color: $terra-yellow-20
+  background-color: #fff3ce
 ) !default;
 
 $terra-alert-gap-checking-color-scheme: (
-  background-color: $terra-grey-5
+  background-color: #f4f4f4
 ) !default;
 
 $terra-alert-advisory-color-scheme: (
-  background-color: $terra-grey-5
+  background-color: #f4f4f4
 ) !default;
 
 $terra-alert-info-color-scheme: (
-  background-color: $terra-grey-5
+  background-color: #f4f4f4
 ) !default;
 
 $terra-alert-success-color-scheme: (
-  background-color: $terra-grey-5
+  background-color: #f4f4f4
 ) !default;
 
 $terra-alert-outside-records-color-scheme: (
-  background-color: $terra-grey-5
+  background-color: #f4f4f4
 ) !default;
 
 $terra-alert-custom-color-scheme: (
-  background-color: $terra-grey-5
+  background-color: #f4f4f4
 ) !default;
 
 $terra-alert-alert-title-color-scheme: (
-  color: $terra-red-70
+  color: #e50000
 ) !default;
 
 $terra-alert-error-title-color-scheme: (
-  color: $terra-red-70
+  color: #e50000
 ) !default;
 
 $terra-alert-gap-checking-icon-color-scheme: (
-  color: $terra-red-70
+  color: #e50000
 ) !default;
 
-$terra-alert-alert-shadow-color: $terra-red-70 !default;
+$terra-alert-alert-shadow-color: #e50000 !default;
 
-$terra-alert-error-shadow-color: $terra-red-70 !default;
+$terra-alert-error-shadow-color: #e50000 !default;
 
-$terra-alert-warning-shadow-color: $terra-yellow-60 !default;
+$terra-alert-warning-shadow-color: #ffc20a !default;
 
-$terra-alert-gap-checking-shadow-color: $terra-red-70 !default;
+$terra-alert-gap-checking-shadow-color: #e50000 !default;
 
-$terra-alert-advisory-shadow-color: $terra-grey-45 !default;
+$terra-alert-advisory-shadow-color: #9b9fa1 !default;
 
-$terra-alert-info-shadow-color: $terra-blue-70 !default;
+$terra-alert-info-shadow-color: #0092e0 !default;
 
-$terra-alert-success-shadow-color: $terra-green-60 !default;
+$terra-alert-success-shadow-color: #78c346 !default;
 
-$terra-alert-outside-records-shadow-color: $terra-purple-80 !default;
+$terra-alert-outside-records-shadow-color: #78288c !default;
 
 $terra-alert-custom-shadow-color: (
-  color: $terra-grey-45
+  color: #9b9fa1
 ) !default;
 
 $terra-alert-custom-text-color: (
-  color: $terra-dark
+  color: #1c1f21
 ) !default;
