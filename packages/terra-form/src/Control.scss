@@ -1,8 +1,6 @@
 @import '~terra-mixins';
 
 .terra-Form-control {
-  @include terra-margin-end(0.714em);
-
   display: block;
   margin-bottom: 0.714em;
   width: auto;
@@ -15,6 +13,7 @@
 @media screen and (min-width: 768px) {
   .terra-Form-control--inline {
     display: inline-block;
+    @include terra-margin-end(0.714em);
   }
 }
 
