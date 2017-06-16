@@ -16,6 +16,7 @@ it('should render a Field when all the possible props are passed into it', () =>
       help="This is a test input"
       htmlFor="test"
       label="Text"
+      labelAttrs={{ className: 'healtheintent-legend' }}
       isInline
       required
     >

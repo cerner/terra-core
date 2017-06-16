@@ -46,6 +46,10 @@ const propTypes = {
    */
   text: PropTypes.string,
   /**
+   * Sets the button type. One of button, submit, or reset
+   */
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  /**
    * Sets the button variant. One of primary, secondary, or link
    */
   variant: PropTypes.oneOf(['default', 'link', 'primary', 'secondary']),
@@ -56,6 +60,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   isReversed: false,
+  type: 'button',
   variant: 'default',
 };
 
@@ -68,6 +73,7 @@ const Button = ({
   isReversed,
   size,
   text,
+  type,
   variant,
   ...customProps
   }) => {
@@ -84,6 +90,7 @@ const Button = ({
     attributes.className,
   ]);
 
+  attributes.type = type;
   attributes.disabled = isDisabled;
   attributes.tabIndex = isDisabled ? '-1' : undefined;
   attributes['aria-disabled'] = isDisabled;

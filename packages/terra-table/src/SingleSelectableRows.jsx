@@ -126,11 +126,9 @@ class SingleSelectableRows extends React.Component {
   }
 
   render() {
-    const { children, ...customProps } = this.props;
+    const { children, onChange, ...customProps } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
-    if ('onChange' in customProps) {
-      delete customProps.onChange;
-    }
+
     return (
       <TableRows {...customProps}>
         {clonedChildItems}
