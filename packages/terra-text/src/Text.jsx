@@ -26,7 +26,7 @@ const propTypes = {
    */
   fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 100]),
   /**
-   * Sets the text size. One of 200, 400, 700, inherit.
+   * Sets the text size. One of 200, 400, 700.
    */
   weight: PropTypes.oneOf([200, 400, 700]),
 };
@@ -35,7 +35,6 @@ const defaultProps = {
   color: 'inherit',
   isItalic: false,
   isVisuallyHidden: false,
-  weight: 'inherit',
 };
 
 const Text = ({ color, children, isVisuallyHidden, isItalic, fontSize, weight, ...customProps }) => {
@@ -45,6 +44,7 @@ const Text = ({ color, children, isVisuallyHidden, isItalic, fontSize, weight, .
     { 'terra-Text--italic': isItalic },
     { 'terra-Text--visually-hidden': isVisuallyHidden },
     { [`terra-Text--fontSize-${fontSize}`]: fontSize },
+    { [`terra-Text--weight-${weight}`]: weight },
     attributes.className,
   ]);
 

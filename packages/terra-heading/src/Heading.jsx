@@ -10,6 +10,10 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * Sets the heading level. One of 1, 2, 3, 4, 5, 6.
+   */
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  /**
    * The color of the text. Accepts a CSS color value.
    */
   color: PropTypes.string,
@@ -21,10 +25,6 @@ const propTypes = {
    * Sets the text to appear visually hidden. The text will still be available to screen readers.
    */
   isVisuallyHidden: PropTypes.bool,
-  /**
-   * Sets the heading level. One of 1, 2, 3, 4, 5, 6.
-   */
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   /**
    * Sets the text size. One of mini, tiny, small, medium, large, huge.
    */
