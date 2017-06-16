@@ -18,6 +18,8 @@ Terra has several different form components for building forms.
 
 [Input](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Input.md)
 
+[Control](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Control.md)
+
 [NumberField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/NumberField.md)
 
 [Textarea](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Textarea.md)

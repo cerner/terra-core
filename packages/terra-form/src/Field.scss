@@ -10,6 +10,7 @@
 @media screen and (min-width: 768px) {
   .terra-Form-field--inline,
   .terra-Form-fieldset--inline {
+    @include terra-margin-end(0.7143em);
     display: inline-block;
     vertical-align: top;
   }
@@ -23,11 +24,6 @@
     content: '*';
     display: inline-block;
   }
-}
-
-.terra-Form-field--inline,
-.terra-Form-fieldset--inline {
-  @include terra-margin-end(0.7143em);
 }
 
 .terra-Form-label {
