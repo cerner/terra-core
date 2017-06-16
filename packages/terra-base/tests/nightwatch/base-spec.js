@@ -37,6 +37,9 @@ module.exports = {
     browser.expect.element('div').text.to.contain('en-US').before(waitInms);
   },
 
+  // NOTE: This test is designed to assume that tests won't fail on an error.  If it starts failing,
+  // we can remove it and either deem that this scenario is not needed in night watch or find a
+  // better solution.
   'Displays a placeholder when translations are not loaded': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/base-tests/no-translations-loaded`);
