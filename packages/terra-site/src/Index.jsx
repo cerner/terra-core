@@ -10,6 +10,7 @@ import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
+import CollapseExamples from './examples/collapse/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
@@ -27,6 +28,7 @@ import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TimeInputExamples from './examples/time-input/Index';
+import TogglerExamples from './examples/toggler/Index';
 
 // Test Routes
 /* eslint-disable import/first */
@@ -35,6 +37,7 @@ import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
 import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
+import CollapseTestRoutes from 'terra-collapse/tests/nightwatch/CollapseTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
@@ -55,6 +58,7 @@ import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelT
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
+import TogglerTestRoutes from 'terra-toggler/tests/nightwatch/TogglerTestRoutes';
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
@@ -67,6 +71,7 @@ ReactDOM.render((
       <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
+      <Route path="collapse" component={CollapseExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
@@ -84,6 +89,7 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="time-input" component={TimeInputExamples} />
+      <Route path="toggler" component={TogglerExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
@@ -91,6 +97,7 @@ ReactDOM.render((
     {BaseTestRoutes}
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
+    {CollapseTestRoutes}
     {DatePickerTestRoutes}
     {DemographicsBannerTestRoutes}
     {SlidePanelTestRoutes}
@@ -112,5 +119,6 @@ ReactDOM.render((
     {IconTestRoutes}
     {SearchFieldTestRoutes}
     {FormTestRoutes}
+    {TogglerTestRoutes}
   </Router>
 ), document.getElementById('root'));

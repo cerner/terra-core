@@ -56,6 +56,7 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/badge">Badge</Link>} />
                 <List.Item content={<Link to="/site/button">Button</Link>} />
                 <List.Item content={<Link to="/site/button-group">Button Group</Link>} />
+                <List.Item content={<Link to="/site/collapse">Collapse</Link>} />
                 <List.Item content={<Link to="/site/content-container">Content Container</Link>} />
                 <List.Item content={<Link to="/site/datepicker">Date Picker</Link>} />
                 <List.Item content={<Link to="/site/demographics-banner">Demographics Banner</Link>} />
@@ -73,6 +74,7 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/status">Status</Link>} />
                 <List.Item content={<Link to="/site/table">Table</Link>} />
                 <List.Item content={<Link to="/site/time-input">Time Input</Link>} />
+                <List.Item content={<Link to="/site/toggler">Toggler</Link>} />
                 <List.Item content={<Link to="/tests">Tests</Link>} />
               </List>
             </Grid.Column>
