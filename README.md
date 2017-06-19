@@ -12,6 +12,7 @@
 
 - [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
+- [Internationalization](#internationalizationi18n)
 - [Contributing](#contributing)
 - [LICENSE](#license)
 
