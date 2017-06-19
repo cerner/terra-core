@@ -1,0 +1,148 @@
+exports[`test should render a SelectField when all the possible props are passed into it 1`] = `
+<Field
+  error="jinkies!"
+  help="solve the mystery"
+  isInline={true}
+  label="Meddling Kids"
+  required={true}>
+  <Select
+    choices={
+      Array [
+        "moo",
+        "boo",
+      ]
+    }
+    className="scooby-snacks"
+    defaultValue={null}
+    name="zounds"
+    required={true} />
+</Field>
+`;
+
+exports[`test should render a default SelectField component 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  required={false}>
+  <Select
+    choices={
+      Array [
+        "moo",
+      ]
+    }
+    defaultValue={null}
+    name={null}
+    required={false} />
+</Field>
+`;
+
+exports[`test should render as controlled when just the required fields and a onChange function is passed into the SelectField 1`] = `
+<SelectField
+  choices={
+    Array [
+      "moo",
+      "boo",
+    ]
+  }
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  selectAttrs={Object {}}>
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Select
+        choices={
+          Array [
+            "moo",
+            "boo",
+          ]
+        }
+        defaultValue={null}
+        name={null}
+        onChange={[Function]}
+        required={false}>
+        <select
+          className="terra-Form-select"
+          defaultValue={null}
+          name={null}
+          required={false}>
+          <option
+            value="moo">
+            moo
+          </option>
+          <option
+            value="boo">
+            boo
+          </option>
+        </select>
+      </Select>
+    </div>
+  </Field>
+</SelectField>
+`;
+
+exports[`test should render as uncontrolled when just the required fields and a default value is passed into the SelectField 1`] = `
+<SelectField
+  choices={
+    Array [
+      "moo",
+      "boo",
+    ]
+  }
+  defaultValue="boo"
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  name={null}
+  required={false}
+  selectAttrs={Object {}}>
+  <Field
+    error={null}
+    help={null}
+    isInline={false}
+    label={null}
+    required={false}>
+    <div
+      className="terra-Form-field">
+      <Select
+        choices={
+          Array [
+            "moo",
+            "boo",
+          ]
+        }
+        defaultValue="boo"
+        name={null}
+        required={false}>
+        <select
+          className="terra-Form-select"
+          defaultValue="boo"
+          name={null}
+          required={false}>
+          <option
+            value="moo">
+            moo
+          </option>
+          <option
+            value="boo">
+            boo
+          </option>
+        </select>
+      </Select>
+    </div>
+  </Field>
+</SelectField>
+`;
