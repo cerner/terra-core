@@ -1,6 +1,6 @@
 # Terra Toggler
 
-{insert description}
+Toggler component that transitions content in and out.
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ class MyCustomToggler extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.handleOnClick}>{'Click Me!'}</Button>
+        <Button onClick={this.handleOnClick}>Click Me!</Button>
         <Toggler isOpen={this.state.isOpen} isAnimated>
           Hello World
         </Toggler>

@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-toggler.svg)](https://www.npmjs.org/package/terra-toggler)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-{insert description}
+Toggler component that transitions content in and out.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-toggler/docs)

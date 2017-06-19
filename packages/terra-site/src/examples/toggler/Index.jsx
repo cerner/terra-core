@@ -11,18 +11,17 @@ import TogglerSrc from '!raw-loader!terra-toggler/src/Toggler';
 
 // Example Files
 import DefaultToggler from './DefaultToggler';
-import ButtonToggler from './ButtonToggler';
+import AnimatedToggler from './AnimatedToggler';
 
 const TogglerExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TogglerSrc} />
+    <h2 id="default">Default Toggler</h2>
     <DefaultToggler />
-    <ButtonToggler>Another test</ButtonToggler>
-    <ButtonToggler isAnimated>Another test</ButtonToggler>
-    <ButtonToggler isInitiallyOpen>Another test</ButtonToggler>
-    <ButtonToggler openedButtonText="View More" closedButtonText="View Less" buttonAttrs={{ variant: 'link' }}>Another test</ButtonToggler>
+    <h2 id="animated">Animated Toggler</h2>
+    <AnimatedToggler />
   </div>
 );
 

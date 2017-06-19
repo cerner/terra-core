@@ -10,36 +10,39 @@ import './Collapse.scss';
 
 const propTypes = {
   /**
-   * Additional attributes for the Button component
+   * Content in the body of the collapse component that will be expanded or collapsed
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * Sets the text inside of the button when the collapse component is closed
+   */
+  closedButtonText: PropTypes.node.isRequired,
+  /**
+   * Icon displayed next to text content within the collapse button
+   */
+  icon: PropTypes.element.isRequired,
+  /**
+   * Used to set props and HTML attributes on the collapse button
    */
   buttonAttrs: PropTypes.object,
   /**
-   * Content in the body of the toggler component that will be expanded or collapsed
-   */
-  children: PropTypes.node,
-  /**
-   * Sets the toggler initial state
-   */
-  closedButtonText: PropTypes.node,
-  icon: PropTypes.element,
-  /**
-   * Sets the toggler initial state
+   * Sets the collapse to be animated when it is opened or closed
    */
   isAnimated: PropTypes.bool,
   /**
-   * Sets the toggler initial state
+   * Sets the collapse initial state to open
    */
   isInitiallyOpen: PropTypes.bool,
   /**
-   * Sets the toggler initial state
+   * Callback function triggered when collapse is opened
    */
   onOpen: PropTypes.func,
   /**
-   * Sets the toggler initial state
+   * Callback function triggered when collapse is closed
    */
   onClose: PropTypes.func,
   /**
-   * Sets the toggler initial state
+   * Sets the text inside of the button when the collapse component is open
    */
   openedButtonText: PropTypes.node,
 };

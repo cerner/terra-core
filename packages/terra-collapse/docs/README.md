@@ -1,6 +1,6 @@
 # Terra Collapse
 
-{insert description}
+Collapse component that transitions content in and out with the click on a button.
 
 ## Getting Started
 
@@ -13,5 +13,7 @@
 import React from 'react';
 import Collapse from 'terra-collapse';
 
-<Collapse {props...} />
+<Collapse isAnimated closedButtonText="View More">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</Collapse>
 ```
