@@ -6,6 +6,8 @@ import { Link } from 'react-router';
 const FormTests = () => (
   <div>
     <ul>
+      <li><Link to="/tests/form-tests/control/default">Default Control</Link></li>
+      <li><Link to="/tests/form-tests/control/populated">Populated Control</Link></li>
       <li><Link to="/tests/form-tests/field/default">Default Field</Link></li>
       <li><Link to="/tests/form-tests/field/populated">Populated Field</Link></li>
       <li><Link to="/tests/form-tests/fieldset/default">Default Fieldset</Link></li>

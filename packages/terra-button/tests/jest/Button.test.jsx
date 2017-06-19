@@ -22,6 +22,21 @@ it('should render a secondary button', () => {
   expect(button).toMatchSnapshot();
 });
 
+it('should render a button with type equal to button', () => {
+  const button = shallow(<Button type="button" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a button with type equal to reset', () => {
+  const button = shallow(<Button type="reset" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a button with type equal to submit', () => {
+  const button = shallow(<Button type="submit" />);
+  expect(button).toMatchSnapshot();
+});
+
 it('should render an icon', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} size="tiny" />);
