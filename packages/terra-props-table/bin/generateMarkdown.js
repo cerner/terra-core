@@ -11,25 +11,36 @@ const generatePropType = (type) => {
   return `\`${type.name}${values || ''}\``;
 };
 
-const generatePropDefaultValue = value => `\`${value.value}\``;
-
-const generateProp = (propName, prop) => `| ${propName} | ${prop.type ? generatePropType(prop.type) : ''}  | ${prop.required ? '`required`' : 'optional'} | ${prop.defaultValue ? generatePropDefaultValue(prop.defaultValue) : ''} | ${prop.description ? prop.description.replace(/\n|\r/g, ' ') : ''} |`;
-
+const generatePropRow = (propName, prop) => {
+  return (
+    `| ${propName}` +
+    `| ${prop.type ? generatePropType(prop.type) : ''}` +
+    `| ${prop.required ? '`required`' : 'optional'}` +
+    `| ${prop.defaultValue ? `\`${prop.defaultValue.value}\`` : ''}` +
+    `| ${prop.description ? prop.description.replace(/\n|\r/g, ' ') : ''}` +
+    `|`
+  );
+}
 
 const generateProps = (props) => {
-  const tableHeader = '| Prop Name | Type | Is Required | Default Value | Description | \n|-|-|-|-|-|';
+  const tableHeader = '| Prop Name | Type | Is Required | Default Value | Description |\n';
+  const tableHeaderBottom = '|-|-|-|-|-|\n';
 
   return (
-    `${tableHeader}\n${
-    Object.keys(props).sort().map(propName => generateProp(propName, props[propName])).join('\n')}`
+    `${tableHeader}${tableHeaderBottom}${
+    Object.keys(props).sort().map(propName => generatePropRow(propName, props[propName])).join('\n')}`
   );
 };
 
 
 const generateMarkdown = (componentMetadata) => {
-  const markdownString = generateProps(componentMetadata.props);
+  if(componentMetadata.props) {
+    const markdownString = generateProps(componentMetadata.props);
+    return markdownString;
+  } else {
+    throw 'componentMetadata does not contain props';
+  }
 
-  return markdownString;
 };
 
 module.exports = generateMarkdown;

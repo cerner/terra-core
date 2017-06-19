@@ -45,14 +45,14 @@ if (commander.outDir && !filenames.length) {
 filenames.forEach((filename) => {
   fs.readFile(filename, 'utf8', (err, data) => {
     if (err) {
-      errors.push(`Reading file ${filename} ${err}`);
+      errors.push(`Error reading file ${filename} ${err}`);
     } else {
       const currentComponent = path.basename(filename, path.extname(filename));
       const fullPath = `${path.join(commander.outDir, currentComponent)}.md`;
 
       fs.writeFile(fullPath, generateMarkdown(parse(data)), (error) => {
         if (error) {
-          errors.push(`Writing file ${fullPath} ${err}`);
+          errors.push(`Error writing file ${fullPath} ${err}`);
         }
         console.log(`${filename} -> ${fullPath}`);
       });
