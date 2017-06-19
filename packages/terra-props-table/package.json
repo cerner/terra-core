@@ -45,6 +45,6 @@
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:spec",
-    "test:spec": "echo \"Warning: no test written\" && exit 0"
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   }
 }

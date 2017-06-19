@@ -8,6 +8,6 @@
 | isDisabled| `bool`| optional| `false`| Whether or not the button should be disabled|
 | isReversed| `bool`| optional| `false`| Reverses the position of the icon and text|
 | onClick| `func`| optional| | Callback function triggered when clicked|
-| size| `enum('tiny','small','medium','large','huge')`| optional| | Sets the button size. One of tiny, small, medium, large, huge|
+| size| `string`| optional| | Sets the button size. One of tiny, small, medium, large, huge|
 | text| `string`| optional| | Sets the button text|
-| variant| `enum('default','link','primary','secondary')`| optional| `'default'`| Sets the button variant. One of primary, secondary, or link|
+| variant| `string`| optional| `'default'`| Sets the button variant. One of primary, secondary, or link|

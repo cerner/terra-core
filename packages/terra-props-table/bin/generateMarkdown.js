@@ -1,14 +1,9 @@
 const generatePropType = (type) => {
-  let values;
-  if (Array.isArray(type.value)) {
-    values = `(${
-      type.value.map(typeValue => typeValue.name || typeValue.value).join(',')
-      })`;
-  } else {
-    values = type.value;
+  if (type.name === 'enum') {
+    type.name = typeof type.value[0].value;
   }
 
-  return `\`${type.name}${values || ''}\``;
+  return `\`${type.name}\``;
 };
 
 const generatePropRow = (propName, prop) => {
@@ -40,7 +35,6 @@ const generateMarkdown = (componentMetadata) => {
   } else {
     throw 'componentMetadata does not contain props';
   }
-
 };
 
 module.exports = generateMarkdown;

@@ -13,4 +13,4 @@
 | onChange| `func`| optional| `undefined`| Function to trigger when user changes the input value. Provide a function to create a controlled input.|
 | required| `bool`| optional| `false`| Whether the input is required|
 | step| `number`| optional| `null`| Incremental steps for increasing and descreasing the value|
-| value| `union(string,number)`| optional| `undefined`| The defaultValue of the input element. Use this to create an uncontrolled input.|
+| value| `union`| optional| `undefined`| The defaultValue of the input element. Use this to create an uncontrolled input.|
