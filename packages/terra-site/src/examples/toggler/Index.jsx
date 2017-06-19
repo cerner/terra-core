@@ -20,7 +20,7 @@ const TogglerExamples = () => (
     <PropsTable id="props" src={TogglerSrc} />
     <h2 id="default">Default Toggler</h2>
     <DefaultToggler />
-    <h2 id="animated">Animated Toggler</h2>
+    <h2 id="animated">isAnimated Toggler</h2>
     <AnimatedToggler />
   </div>
 );

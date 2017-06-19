@@ -1,0 +1,52 @@
+exports[`Toggler should mount a toggler 1`] = `
+<Toggler
+  isAnimated={false}
+  isOpen={false}>
+  <div
+    className="terra-Toggler" />
+</Toggler>
+`;
+
+exports[`Toggler should render a default toggler 1`] = `
+<div
+  className="terra-Toggler" />
+`;
+
+exports[`Toggler should render a toggler 1`] = `
+<div
+  class="terra-Toggler" />
+`;
+
+exports[`Toggler should render an animated toggler 1`] = `
+<div
+  className="terra-Toggler">
+  <AnimateHeight
+    animationStateClasses={
+      Object {
+        "animating": "rah-animating",
+        "animatingDown": "rah-animating--down",
+        "animatingToHeightAuto": "rah-animating--to-height-auto",
+        "animatingToHeightSpecific": "rah-animating--to-height-specific",
+        "animatingToHeightZero": "rah-animating--to-height-zero",
+        "animatingUp": "rah-animating--up",
+        "static": "rah-static",
+        "staticHeightAuto": "rah-static--height-auto",
+        "staticHeightSpecific": "rah-static--height-specific",
+        "staticHeightZero": "rah-static--height-zero",
+      }
+    }
+    duration={250}
+    easing="ease"
+    height="0"
+    style={Object {}}>
+    Test
+  </AnimateHeight>
+</div>
+`;
+
+exports[`Toggler should render an open toggler 1`] = `
+<div
+  className="terra-Toggler">
+  Test
+</div>
+`;

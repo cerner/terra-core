@@ -1,24 +1,134 @@
 import React from 'react';
+import IconCaretRight from 'terra-icon/lib/icon/IconCaretRight';
 import Collapse from '../../src/Collapse';
 
-describe('Collapse', () => {
-  const defaultRender = <Collapse />;
 
+describe('Collapse', () => {
   // Snapshot Tests
-  it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper).toMatchSnapshot();
+  it('should render a default collapse', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  it('should render an animated collapse', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" isAnimated>Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  it('should render an initially open collapse', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" isInitiallyOpen>Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  it('should mount a collapse', () => {
+    const collapse = mount(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  it('should render a collapse', () => {
+    const collapse = render(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  // Event Tests
+  it('should render an open collapse when clicked', () => {
+    const collapse = mount(<Collapse closedButtonText="Show">Test</Collapse>);
+    collapse.find('button').simulate('click');
+    expect(collapse).toMatchSnapshot();
   });
 
   // Prop Tests
-  it('should use the default value when no value is given', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.terra-Collapse').text()).toEqual('defualt');
+  it('should set buttonAttrs prop correctly', () => {
+    const collapse = shallow(<Collapse buttonAttrs={{ variant: 'link' }} closedButtonText="Show">Test</Collapse>);
+    expect(collapse.unrendered.props.buttonAttrs).toEqual({ variant: 'link' });
+  });
+
+  it('should set children prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse.unrendered.props.children).toEqual('Test');
+  });
+
+  it('should set closedButtonText prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse.unrendered.props.closedButtonText).toEqual('Show');
+  });
+
+  it('should set icon prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  it('should set icon prop correctly with custom icon', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" icon={<IconCaretRight />}>Test</Collapse>);
+    expect(collapse).toMatchSnapshot();
+  });
+
+  it('should set isAnimated prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" isAnimated>Test</Collapse>);
+    expect(collapse.unrendered.props.isAnimated).toEqual(true);
+  });
+
+  it('should set isInitiallyOpen prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" isInitiallyOpen>Test</Collapse>);
+    expect(collapse.unrendered.props.isInitiallyOpen).toEqual(true);
+  });
+
+  it('should set onOpen prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" onOpen={() => alert('Opened')}>Test</Collapse>);
+    expect(collapse.unrendered.props.onOpen.toString()).toEqual('function onOpen() {return alert(\'Opened\');}');
+  });
+
+  it('should set onClose prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" onClose={() => alert('Closed')}>Test</Collapse>);
+    expect(collapse.unrendered.props.onClose.toString()).toEqual('function onClose() {return alert(\'Closed\');}');
+  });
+
+  it('should set openedButtonText prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" openedButtonText="Hide">Test</Collapse>);
+    expect(collapse.unrendered.props.openedButtonText).toEqual('Hide');
   });
 
   // Structure Tests
   it('should have the class terra-Collapse', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('terra-Collapse');
+    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    expect(collapse.prop('className')).toContain('terra-Collapse');
+  });
+
+ // Attributes
+  it('should merge classes passed in with attributes', () => {
+    const collapse = shallow(<Collapse className="TestClass" closedButtonText="Show">Test</Collapse>);
+    expect(collapse.prop('className')).toContain('TestClass');
+  });
+
+  it('should merge ids passed in with attributes', () => {
+    const collapse = shallow(<Collapse id="TestId" closedButtonText="Show">Test</Collapse>);
+    expect(collapse.prop('id')).toContain('TestId');
+  });
+
+  it('should append data passed in with attributes', () => {
+    const collapse = shallow(<Collapse data-terra-text-mock="MockData" closedButtonText="Show">Test</Collapse>);
+    expect(collapse.prop('data-terra-text-mock')).toContain('MockData');
+  });
+
+  it('should append styles passed in with attributes', () => {
+    const collapse = shallow(<Collapse style={{ height: '100px' }} closedButtonText="Show">Test</Collapse>);
+    expect(collapse.prop('style')).toEqual({ height: '100px' });
+  });
+
+  // Error Handling Test
+  it('should throw error for required children', () => {
+    try {
+      shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    } catch (e) {
+      expect(e.message).toContain('The prop `children` is marked as required');
+    }
+  });
+
+  it('should throw error for required closedButtonText', () => {
+    try {
+      shallow(<Collapse>Test</Collapse>);
+    } catch (e) {
+      expect(e.message).toContain('The prop `closedButtonText` is marked as required');
+    }
   });
 });
