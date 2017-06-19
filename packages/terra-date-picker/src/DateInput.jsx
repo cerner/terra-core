@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
+import Input from 'terra-form/lib/Input';
 
 const Icon = <IconCalendar />;
 
@@ -38,7 +39,7 @@ class DatePickerInput extends React.Component {
   render() {
     return (
       (<div className="terra-DatePicker-customInput">
-        <input
+        <Input
           {...this.props.inputAttributes} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className="terra-DatePicker-input"
           type="text"
@@ -51,6 +52,7 @@ class DatePickerInput extends React.Component {
           onClick={this.props.onClick}
           onKeyDown={this.props.onKeyDown}
           icon={Icon}
+          isCompact
           type="button"
         />
       </div>)

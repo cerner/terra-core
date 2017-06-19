@@ -6,11 +6,9 @@ const handleOnChange = (selectedDate) => {
 };
 
 const DatePickerOnChange = () => (
-  <div>
-    <DatePicker
-      onChange={handleOnChange}
-    />
-  </div>
+  <DatePicker
+    onChange={handleOnChange}
+  />
 );
 
 export default DatePickerOnChange;
