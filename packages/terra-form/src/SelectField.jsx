@@ -31,6 +31,11 @@ const propTypes = {
   label: PropTypes.node,
 
   /**
+   * Attributes to attach to the label
+   */
+  labelAttrs: PropTypes.object,
+
+  /**
    * Function to trigger when the user changes the select value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
@@ -61,6 +66,7 @@ const defaultProps = {
   help: null,
   isInline: false,
   label: null,
+  labelAttrs: {},
   onChange: undefined,
   name: null,
   required: false,
@@ -74,6 +80,7 @@ const SelectField = ({
   help,
   isInline,
   label,
+  labelAttrs,
   onChange,
   name,
   required,
@@ -86,6 +93,7 @@ const SelectField = ({
     help={help}
     isInline={isInline}
     label={label}
+    labelAttrs={labelAttrs}
     required={required}
     {...customProps}
   >

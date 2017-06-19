@@ -9,6 +9,7 @@ const selectfield = () => (
     error="jinkies!"
     isInline
     label="Meddling Kids"
+    labelAttrs={{ className: 'mystery-van' }}
     help="solve the mystery"
     name="zounds"
     required

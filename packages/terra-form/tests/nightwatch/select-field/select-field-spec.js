@@ -26,6 +26,7 @@ module.exports = {
       .assert.elementPresent('.terra-Form-field')
       .assert.elementPresent('.terra-Form-field--inline')
       .assert.containsText('label', 'Meddling Kids')
+      .assert.elementPresent('.mystery-van')
       .assert.containsText('.terra-Form-helpText', 'solve the mystery')
       .assert.containsText('.terra-Form-error', 'jinkies!')
       .assert.elementPresent('select')

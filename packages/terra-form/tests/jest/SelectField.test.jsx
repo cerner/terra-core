@@ -14,6 +14,7 @@ it('should render a SelectField when all the possible props are passed into it',
       error="jinkies!"
       isInline
       label="Meddling Kids"
+      labelAttrs={{ className: 'mystery-van' }}
       help="solve the mystery"
       name="zounds"
       required

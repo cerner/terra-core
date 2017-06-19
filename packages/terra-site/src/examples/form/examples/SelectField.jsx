@@ -7,10 +7,10 @@ import SelectField from 'terra-form/lib/SelectField';
 const SelectFieldExamples = () => (
   <form>
     <SelectField
-      choices={['Puppies', 'Kittens', 'Snappers', 'Bumblers', 'Joeys']}
-      help="TO DETERMINE IF YOU ARE NOT A ROBOT, PLEASE PICK YOUR FAVORITE SMALL ANIMAL"
-      label="Animals"
-      name="foo"
+      choices={['Puppies', 'Kittens', 'Snappers', 'Bumblers', 'Joeys', 'Microprocessors']}
+      help="TO DETERMINE IF YOU ARE A HUMAN, PLEASE PICK YOUR FAVORITE SMALL ANIMAL"
+      label="Human Test"
+      name="zibby"
       defaultValue="Snappers"
       required
     />
