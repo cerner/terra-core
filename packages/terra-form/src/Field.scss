@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 544px) {
   .terra-Form-field--inline,
   .terra-Form-fieldset--inline {
     @include terra-margin-end(0.7143em);
@@ -53,4 +53,8 @@
   display: block;
   margin-top: 0.357em;
   outline: 0;
+}
+
+.terra-Form-fieldset .terra-Form-error {
+  margin-bottom: 0.714em;
 }
