@@ -7,7 +7,7 @@ const commander = require('commander');
 const parse = require('react-docgen').parse;
 const glob = require('glob');
 const uniq = require('lodash/uniq');
-const generateMarkdown = require('./generateMarkdown');
+const generateMarkdown = require('./generateMarkdown/generateMarkdown');
 
 commander
   .version(pkg.version)
@@ -48,13 +48,13 @@ filenames.forEach((filename) => {
       errors.push(`Error reading file ${filename} ${err}`);
     } else {
       const currentComponent = path.basename(filename, path.extname(filename));
-      const fullPath = `${path.join(commander.outDir, currentComponent)}.md`;
+      const outpath = `${path.join(commander.outDir, currentComponent)}.md`;
 
-      fs.writeFile(fullPath, generateMarkdown(parse(data)), (error) => {
+      fs.writeFile(outpath, generateMarkdown(parse(data)), (error) => {
         if (error) {
-          errors.push(`Error writing file ${fullPath} ${err}`);
+          errors.push(`Error writing file ${outpath} ${err}`);
         }
-        console.log(`${filename} -> ${fullPath}`);
+        console.log(`${filename} -> ${outpath}`);
       });
     }
   });

@@ -43,7 +43,7 @@
     "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore --fix",
     "test": "npm run test:spec",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   }
