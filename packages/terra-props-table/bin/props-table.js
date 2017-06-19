@@ -48,7 +48,7 @@ filenames.forEach((filename) => {
       errors.push(`Error reading file ${filename} ${err}`);
     } else {
       const currentComponent = path.basename(filename, path.extname(filename));
-      const outpath = `${path.join(commander.outDir, currentComponent)}.md`;
+      const outpath = `${path.join(commander.outDir, currentComponent)}PropsTable.md`;
 
       fs.writeFile(outpath, generateMarkdown(parse(data)), (error) => {
         if (error) {
