@@ -104,6 +104,7 @@ exports[`Collapse should mount a collapse 1`] = `
       isAnimated={false}
       isOpen={false}>
       <div
+        aria-hidden={true}
         className="terra-Toggler" />
     </Toggler>
   </div>
@@ -150,6 +151,7 @@ exports[`Collapse should render a collapse 1`] = `
     </div>
   </button>
   <div
+    aria-hidden="true"
     class="terra-Toggler" />
 </div>
 `;
@@ -380,6 +382,7 @@ exports[`Collapse should render an open collapse when clicked 1`] = `
       isAnimated={false}
       isOpen={true}>
       <div
+        aria-hidden={false}
         className="terra-Toggler">
         Test
       </div>

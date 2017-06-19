@@ -51,7 +51,7 @@ const Toggler = ({ isAnimated, isOpen, children, ...customProps }) => {
   }
 
   return (
-    <div {...attributes} className={TogglerClassNames}>
+    <div {...attributes} className={TogglerClassNames} aria-hidden={!isOpen}>
       {body}
     </div>
   );

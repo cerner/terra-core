@@ -3,22 +3,26 @@ exports[`Toggler should mount a toggler 1`] = `
   isAnimated={false}
   isOpen={false}>
   <div
+    aria-hidden={true}
     className="terra-Toggler" />
 </Toggler>
 `;
 
 exports[`Toggler should render a default toggler 1`] = `
 <div
+  aria-hidden={true}
   className="terra-Toggler" />
 `;
 
 exports[`Toggler should render a toggler 1`] = `
 <div
+  aria-hidden="true"
   class="terra-Toggler" />
 `;
 
 exports[`Toggler should render an animated toggler 1`] = `
 <div
+  aria-hidden={true}
   className="terra-Toggler">
   <AnimateHeight
     animationStateClasses={
@@ -46,6 +50,7 @@ exports[`Toggler should render an animated toggler 1`] = `
 
 exports[`Toggler should render an open toggler 1`] = `
 <div
+  aria-hidden={false}
   className="terra-Toggler">
   Test
 </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import Toggler from '../../lib/Toggler';
 
-class TogglerDefault extends React.Component {
+class OpenToggler extends React.Component {
   constructor() {
     super();
-    this.state = ({ isOpen: false });
+    this.state = ({ isOpen: true });
 
     this.handleOnClick = this.handleOnClick.bind(this);
   }
@@ -26,4 +26,4 @@ class TogglerDefault extends React.Component {
 }
 
 
-export default TogglerDefault;
+export default OpenToggler;
