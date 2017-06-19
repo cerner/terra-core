@@ -13,6 +13,7 @@
 - [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
 - [Internationalization](#internationalizationi18n)
+  - [Packages Required I18n](#packages-required-i18n)
 - [Contributing](#contributing)
 - [LICENSE](#license)
 
@@ -86,6 +87,11 @@
         ```
 4. Based on your strategy to set locale by backend function and provide `customMessages` prop to `Base` by backend translations.
 5. Follow [react-intl wiki](https://github.com/yahoo/react-intl/wiki/API) to use `injectIntl`([pass translations to props](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#pass-translated-message-as-props)) or `FormattedMessage`([render translations](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#display-transalated-message-without-default-message-fallback)) to consume translations.
+
+### Packages Required I18n
+
+- [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker)
+- [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
 
 ## Contributing
 
