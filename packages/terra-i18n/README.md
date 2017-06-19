@@ -12,7 +12,7 @@ The terra-i18n component provides the internationalization to the React componen
 
 ## Getting Started
 
-- At most time, you don't need to install this package directly. Please follow [this internationalization section](../../README.md#Internationalization(I18n)) to set up. `Base` will install this package for you.
+- At most time, you don't need to install this package directly. Please follow [this internationalization section](../../README.md#internationalizationi18n) to set up. `Base` will install this package for you.
 
 ## Documentation
 

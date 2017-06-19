@@ -68,7 +68,7 @@
 
 ## Internationalization(I18n)
 
-1. Please follow [Base Getting Started](packages/terra-base/README.md#getting-stated) to install `Base`, and consume it with `locale` props.
+1. Please follow [Base Getting Started](packages/terra-base/README.md#getting-started) to install `Base`, and consume it with `locale` props.
 2. Install and config `terra-i18n-plugin`:
     - Follow [terra-i18n-plugin Getting Started](packages/terra-i18n-plugin#getting-started) to install `terra-i18n-plugin` to aggregate translations in `node_modules`.
     - Follow [terra-i18n-plugin Wiki Guide](https://github.com/cerner/terra-core/wiki/Terra-i18n-plugin-Guide) to config i18n plugin.
