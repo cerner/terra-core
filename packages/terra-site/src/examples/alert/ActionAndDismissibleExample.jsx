@@ -7,6 +7,7 @@ class ActionAndDismissibleExample extends React.Component {
     super(props);
     this.state = {
       isDismissed: false,
+      actionButtonClickCount: 0,
     };
     this.handleDismiss = this.handleDismiss.bind(this);
     this.actionFunc = this.actionFunc.bind(this);
@@ -19,11 +20,9 @@ class ActionAndDismissibleExample extends React.Component {
   }
 
   actionFunc() {
-    // eslint-disable-next-line no-alert
-    alert('Action performed');
-    this.state = {
-      isDismissed: false,
-    };
+    const newState = this.state;
+    newState.actionButtonClickCount += 1;
+    this.setState(newState);
   }
 
   render() {
@@ -53,6 +52,8 @@ class ActionAndDismissibleExample extends React.Component {
         </div>
         <br />
         {alertElem}
+        <br />
+        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
       </div>
     );
   }

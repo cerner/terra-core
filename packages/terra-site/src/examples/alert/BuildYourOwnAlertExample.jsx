@@ -11,6 +11,7 @@ class BuildYourOwnAlertExample extends React.Component {
     super(props);
     this.state = {
       isDismissed: false,
+      actionButtonClickCount: 0,
       type: undefined,
       title: '',
       content: '',
@@ -40,9 +41,9 @@ class BuildYourOwnAlertExample extends React.Component {
   }
 
   actionFunc() {
-    // eslint-disable-next-line no-alert
-    alert('Action performed');
-    this.setState({ isDismissed: false });
+    const newState = this.state;
+    newState.actionButtonClickCount += 1;
+    this.setState(newState);
   }
 
   handleTypeSelectChange(e) {
@@ -136,17 +137,15 @@ class BuildYourOwnAlertExample extends React.Component {
         </span>
       </span>
     );
-    // eslint-disable-next-line prefer-template
-    const alertTypePropStr = this.state.type ? 'type={Alert.Types.' + this.state.type.toUpperCase() + '}' : '';
-    // eslint-disable-next-line prefer-template
-    const alertTitlePropStr = this.state.title ? 'title="' + this.state.title + '"' : '';
+    const alertTypePropStr = this.state.type ? `type={Alert.Types.${this.state.type.toUpperCase()}}` : '';
+    const alertTitlePropStr = this.state.title ? `title="${this.state.title}"` : '';
     const alertOnDismissPropStr = this.state.isDismissible ? 'onDismiss={this.handleDismiss}' : '';
     const onDismissHandler = this.state.isDismissible ? this.handleDismiss : undefined;
     const actionButton = this.state.showActionButton ? (<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />) : undefined;
     const alertActionPropStr = this.state.showActionButton ? 'alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />}' : '';
     const customPropsDisplayStyle = { display: this.state.type === Alert.Types.CUSTOM ? 'table-row' : 'none' };
-    // eslint-disable-next-line prefer-template
-    const customStatusColorPropStr = this.state.customStatusColor ? 'customStatusColor="' + this.state.customStatusColor + '"' : '';
+    const customStatusColorPropStr = this.state.customStatusColor ? `customStatusColor="${this.state.customStatusColor}"` : '';
+    const actionCounterText = this.state.showActionButton ? `Action button has been clicked ${this.state.actionButtonClickCount} times.` : '';
     let alertElem = '';
     let alertContentPropStr = '';
     let textContentEntryField = '';
@@ -208,6 +207,8 @@ class BuildYourOwnAlertExample extends React.Component {
           </div>
           <br />
           {alertElem}
+          <br />
+          <p>{actionCounterText}</p>
         </div>
         <br />
         <div style={{ marginTop: '10px' }}>
