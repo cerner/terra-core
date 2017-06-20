@@ -1,0 +1,117 @@
+exports[`Heading should render a heading component 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</h1>
+`;
+
+exports[`Heading should render a heading component with color prop set 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "#f00",
+    }
+  }>
+  Test
+</h1>
+`;
+
+exports[`Heading should render a heading component with isItalic prop set 1`] = `
+<h1
+  className="terra-Heading terra-Heading--italic terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</h1>
+`;
+
+exports[`Heading should render a heading component with isVisuallyHidden prop set 1`] = `
+<h1
+  className="terra-Heading terra-Heading--visually-hidden terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</h1>
+`;
+
+exports[`Heading should render a heading component with size prop set 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--size-large terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</h1>
+`;
+
+exports[`Heading should render a heading component with weight prop set 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--weight-200"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</h1>
+`;
+
+exports[`Heading should support rendering a string as children 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  String
+</h1>
+`;
+
+exports[`Heading should support rendering an array of elements as a children 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  <span>
+    Element 1
+  </span>
+  <span>
+    Element 2
+  </span>
+  <span>
+    Element 3
+  </span>
+</h1>
+`;
+
+exports[`Heading should support rendering an element as children 1`] = `
+<h1
+  className="terra-Heading terra-Heading--level-1 terra-Heading--weight-700"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  <span>
+    Element
+  </span>
+</h1>
+`;
