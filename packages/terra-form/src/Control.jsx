@@ -45,6 +45,10 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Function to trigger when user clicks on the input. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+  /**
    * The Value of the input element
    */
   value: PropTypes.string,
@@ -60,10 +64,24 @@ const defaultProps = {
   labelText: null,
   labelTextAttrs: {},
   name: null,
+  onChange: undefined,
   value: undefined,
 };
 
-const Control = ({ type, checked, defaultChecked, inputAttrs, id, isInline, labelText, labelTextAttrs, name, value, ...customProps }) => {
+const Control = ({
+  type,
+  checked,
+  defaultChecked,
+  inputAttrs,
+  id,
+  isInline,
+  labelText,
+  labelTextAttrs,
+  name,
+  onChange,
+  value,
+  ...customProps
+}) => {
   const labelClassNames = classNames(
     'terra-Form-control',
     { 'terra-Form-control--inline': isInline },
@@ -90,6 +108,7 @@ const Control = ({ type, checked, defaultChecked, inputAttrs, id, isInline, labe
         name={name}
         value={value}
         type={type}
+        onChange={onChange}
         {...controlInputAttrs}
       />
       <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>
