@@ -44,17 +44,17 @@
 
 .terra-Form-helpText {
   display: block;
-  margin-top: 0.357em;
+  margin-bottom: 0.357em;
   outline: 0;
 }
 
 .terra-Form-error {
   color: #e50000;
   display: block;
-  margin-top: 0.357em;
+  margin-bottom: 0.357em;
   outline: 0;
 }
 
-.terra-Form-fieldset .terra-Form-error {
-  margin-bottom: 0.714em;
+.terra-Form-fieldset-children {
+  margin-top: 0.714em;
 }
