@@ -1,4 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint-disable prefer-arrow-callback */
 
 const screenshot = require('terra-toolkit').screenshot;
 
@@ -65,4 +66,23 @@ module.exports = {
       .click('.terra-SearchField-button')
       .expect.element('#search-callback-text').text.to.equal('Search Text: Tests');
   },
+
+  'Displays the search button with a height that matches the input ': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/default`)
+      .assert.elementPresent('.terra-SearchField')
+      .assert.elementPresent('.terra-SearchField-button')
+      .assert.attributeEquals('.terra-SearchField-input', 'placeholder', '');
+
+    let inputHeight;
+
+    browser.getElementSize('.terra-SearchField-input', function getHeight(result) {
+      inputHeight = result.value.height;
+    });
+
+    browser.getElementSize('.terra-SearchField-button', function getHeight(result) {
+      this.assert.equal(result.value.height, inputHeight);
+    });
+  },
+
 };
