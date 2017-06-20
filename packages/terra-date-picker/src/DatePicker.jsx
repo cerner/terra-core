@@ -9,10 +9,6 @@ import './DatePicker.scss';
 
 const propTypes = {
   /**
-   * An ISO 8601 string representation of the end date for a date range.
-   */
-  endDate: PropTypes.string,
-  /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
   excludeDates: PropTypes.arrayOf(PropTypes.string),
@@ -29,14 +25,6 @@ const propTypes = {
    */
   inputAttributes: PropTypes.object,
   /**
-   * Indicates the end date picker of a date range.
-   */
-  isEndDateRange: PropTypes.bool,
-  /**
-   * Indicates the start date picker of a date range.
-   */
-  isStartDateRange: PropTypes.bool,
-  /**
    * An ISO 8601 string representation of the maximum date that can be selected.
    */
   maxDate: PropTypes.string,
@@ -52,15 +40,9 @@ const propTypes = {
    * An ISO 8601 string representation of the initial default date to show in the date input. This prop name is derived from react-datepicker but is analogous to defaultValue for a form input field.
    */
   selectedDate: PropTypes.string,
-  /**
-   * An ISO 8601 string representation of the start date for a date range.
-   */
-  startDate: PropTypes.string,
 };
 
 const defaultProps = {
-  isEndDateRange: false,
-  isStartDateRange: false,
 };
 
 class DatePicker extends React.Component {
@@ -90,16 +72,12 @@ class DatePicker extends React.Component {
   render() {
     const {
       inputAttributes,
-      endDate,
       excludeDates,
       filterDate,
       includeDates,
       maxDate,
       minDate,
-      isEndDateRange,
-      isStartDateRange,
       selectedDate,
-      startDate,
       ...customProps
     } = this.props;
 
@@ -108,31 +86,20 @@ class DatePicker extends React.Component {
 
     const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates, this.state.dateFormat);
     const includeMomentDates = DateUtil.filterInvalidDates(includeDates, this.state.dateFormat);
-    const endMomentDate = DateUtil.createSafeDate(endDate, this.state.dateFormat);
     const maxMomentDate = DateUtil.createSafeDate(maxDate, this.state.dateFormat);
     const minMomentDate = DateUtil.createSafeDate(minDate, this.state.dateFormat);
-    const startMomentDate = DateUtil.createSafeDate(startDate, this.state.dateFormat);
-
-    let selectedMomentDate = this.state.selectedDate;
-    if (isStartDateRange || isEndDateRange) {
-      selectedMomentDate = DateUtil.createSafeDate(selectedDate, this.state.dateFormat);
-    }
 
     const portalPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={selectedMomentDate}
+        selected={this.state.selectedDate}
         onChange={this.handleChange}
         customInput={<DateInput inputAttributes={inputAttributes} />}
-        endDate={endMomentDate}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
         maxDate={maxMomentDate}
         minDate={minMomentDate}
-        selectsEnd={isEndDateRange}
-        selectsStart={isStartDateRange}
-        startDate={startMomentDate}
         todayButton={todayString}
         withPortal
         dateFormatCalendar=" "
@@ -148,18 +115,14 @@ class DatePicker extends React.Component {
     const popupPicker =
       (<ReactDatePicker
         {...customProps}
-        selected={selectedMomentDate}
+        selected={this.state.selectedDate}
         onChange={this.handleChange}
         customInput={<DateInput inputAttributes={inputAttributes} />}
-        endDate={endMomentDate}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
         maxDate={maxMomentDate}
         minDate={minMomentDate}
-        selectsEnd={isEndDateRange}
-        selectsStart={isStartDateRange}
-        startDate={startMomentDate}
         todayButton={todayString}
         dateFormatCalendar=" "
         dateFormat={this.state.dateFormat}

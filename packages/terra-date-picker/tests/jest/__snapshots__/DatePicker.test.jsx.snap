@@ -23,8 +23,6 @@ exports[`test should render a date picker with filtered dates 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -62,8 +60,6 @@ exports[`test should render a date picker with filtered dates 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -78,22 +74,6 @@ exports[`test should render a date picker with filtered dates 1`] = `
       utcOffset={0}
       withPortal={false} />
   } />
-`;
-
-exports[`test should render a date range 1`] = `
-<div
-  className="terra-DatePicker-range">
-  <DatePicker
-    isEndDateRange={false}
-    isStartDateRange={true}
-    onChange={[Function]}
-    utcOffset={0} />
-  <DatePicker
-    isEndDateRange={true}
-    isStartDateRange={false}
-    onChange={[Function]}
-    utcOffset={0} />
-</div>
 `;
 
 exports[`test should render a default date input and date picker 1`] = `
@@ -120,8 +100,6 @@ exports[`test should render a default date input and date picker 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -158,8 +136,6 @@ exports[`test should render a default date input and date picker 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -208,8 +184,6 @@ exports[`test should render a default date input with custom input attributes 1`
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -254,8 +228,6 @@ exports[`test should render a default date input with custom input attributes 1`
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
