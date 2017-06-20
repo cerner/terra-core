@@ -58,11 +58,11 @@ exports[`test should render a default checkbox when type is "radio" 1`] = `
 
 exports[`test should render as an controlled checkbox when a checked value and onChange function are passed into the Control 1`] = `
 <label
-  className="terra-Form-control"
-  onChange={[Function]}>
+  className="terra-Form-control">
   <Input
     checked={true}
     name={null}
+    onChange={[Function]}
     required={false}
     type="checkbox" />
   <span
@@ -72,11 +72,11 @@ exports[`test should render as an controlled checkbox when a checked value and o
 
 exports[`test should render as an controlled radio when a checked value and onChange function are passed into the Control 1`] = `
 <label
-  className="terra-Form-control"
-  onChange={[Function]}>
+  className="terra-Form-control">
   <Input
     checked={true}
     name={null}
+    onChange={[Function]}
     required={false}
     type="radio" />
   <span
