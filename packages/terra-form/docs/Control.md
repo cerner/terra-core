@@ -10,13 +10,14 @@ import Control from 'terra-form/lib/Control';
 
 <Control
   type="checkbox"
+  defaultChecked={false}
+  id="form-checkbox"
+  inputAttrs={{ className: 'healtheintent-checkbox' }}
   labelText="Do you have any Children?"
-  labelAttrs={{ className: 'healtheintent-application' }}
+  labelTextAttrs={{ className: 'healtheintent-control-label-text' }}
   name="children_present"
-  value="children_present"
   onChange={() => {}}
-  required={true}
-  textAttrs={{ className: 'healtheintent-control-label' }}
-  isInline={false}
+  value="children_present"
+  isInline
  />
 ```
