@@ -24,7 +24,7 @@ When a component reaches v1.0.0., it is considered to be stable and will follow 
 2. MINOR versions represent added functionality in a backwards-compatible manner
 3. PATCH versions represent backwards-compatible bug fixes
 
-Consult the component CHANGELOGs and related issues/PRs for more information
+Consult the component CHANGELOGs, related issues, and PRs for more information.
 
 We view the React.js props API of our components as our main public API. We use this to guide us when versioning components.
 
