@@ -57,13 +57,17 @@ class Collapse extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: this.props.isInitiallyOpen,
+      isOpen: props.isInitiallyOpen,
     };
 
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.isInitiallyOpen === this.props.isInitiallyOpen) {
+      return;
+    }
+
     this.setState({ isOpen: nextProps.isInitiallyOpen });
   }
 
