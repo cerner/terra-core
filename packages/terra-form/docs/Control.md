@@ -14,8 +14,7 @@ import Control from 'terra-form/lib/Control';
   labelAttrs={{ className: 'healtheintent-application' }}
   name="children_present"
   value="children_present"
-  error="This field is required"
-  help="Families are eligible for family package"
+  onChange={() => {}}
   required={true}
   textAttrs={{ className: 'healtheintent-control-label' }}
   isInline={false}
