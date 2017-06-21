@@ -1,5 +1,0 @@
-| Prop Name | Type | Is Required | Default Value | Description |
-|-|-|-|-|-|
-| children| `node`| `required`| | The component that will be wrapped by i18n provider.|
-| locale| `string`| `required`| | The locale name.|
-| messages| `object`| `required`| | Translations messages object.|
