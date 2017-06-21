@@ -89,7 +89,7 @@ class Collapse extends React.Component {
   render() {
     const { closedButtonText, icon, children, openedButtonText, buttonAttrs, isInitiallyOpen, isAnimated, onOpen, onClose, ...customProps } = this.props;
     // Set openHeaderText to the same value as closedHeaderText if its not already set
-    const normalizedOpenButtonText = this.props.openedButtonText || closedButtonText;
+    const normalizedOpenButtonText = openedButtonText || closedButtonText;
     const buttonText = !this.state.isOpen ? closedButtonText : normalizedOpenButtonText;
     const collapseClass = classNames([
       'terra-Collapse',
