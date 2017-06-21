@@ -37,20 +37,32 @@ const propTypes = {
 // eslint-disable-next-line react/prefer-stateless-function
 class DatePickerInput extends React.Component {
   render() {
+    const {
+      inputAttributes,
+      onChange,
+      onClick,
+      onKeyDown,
+      placeholder,
+      value,
+      ...customProps
+    } = this.props;
+
+    const additionalInputProps = Object.assign({}, inputAttributes, customProps);
+
     return (
       (<div className="terra-DatePicker-customInput">
         <Input
-          {...this.props.inputAttributes} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
+          {...additionalInputProps} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className="terra-DatePicker-input"
           type="text"
-          value={this.props.value}
-          onChange={this.props.onChange}
-          placeholder={this.props.placeholder}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
         />
         <Button
           className="terra-DatePicker-button"
-          onClick={this.props.onClick}
-          onKeyDown={this.props.onKeyDown}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
           icon={Icon}
           isCompact
           type="button"
