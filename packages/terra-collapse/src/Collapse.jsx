@@ -20,7 +20,7 @@ const propTypes = {
   /**
    * Icon displayed next to text content within the collapse button
    */
-  icon: PropTypes.element.isRequired,
+  icon: PropTypes.element,
   /**
    * Used to set props and HTML attributes on the collapse button
    */
