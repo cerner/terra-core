@@ -12,10 +12,26 @@
 
 - [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
+- [Internationalization](#internationalizationi18n)
+  - [Packages Required I18n](#packages-required-i18n)
 - [Contributing](#contributing)
 - [LICENSE](#license)
 
 ## Packages
+
+### Versioning
+
+When a component reaches v1.0.0., it is considered to be stable and will follow [SemVer](http://semver.org/) for versioning.
+1. MAJOR versions represent breaking changes
+2. MINOR versions represent added functionality in a backwards-compatible manner
+3. PATCH versions represent backwards-compatible bug fixes
+
+Consult the component CHANGELOGs, related issues, and PRs for more information.
+
+We view the React.js props API of our components as our main public API. We use this to guide us when versioning components.
+
+Prior to components reaching v1.0.0, a component is considered to be in a beta stage.
+Components in beta stage may include breaking changes, new features, and bug fixes all within v0.x.x releases.
 
 ### Status
 :white_check_mark: Stable
@@ -65,6 +81,31 @@
 | Firefox                     | Current |
 | Internet Explorer           | 10 & 11 |
 | Safari & Mobile Safari      | Current |
+
+## Internationalization (I18n)
+
+1. Please follow [Base Getting Started](packages/terra-base/README.md#getting-started) to install `Base`, and consume it with `locale` props.
+2. Install and config `terra-i18n-plugin`:
+    - Follow [terra-i18n-plugin Getting Started](packages/terra-i18n-plugin#getting-started) to install `terra-i18n-plugin` to aggregate translations in `node_modules`.
+    - Follow [terra-i18n-plugin Wiki Guide](https://github.com/cerner/terra-core/wiki/Terra-i18n-plugin-Guide) to config i18n plugin.
+3. Install and config `react-intl`
+    - Install it `npm install --save react-intl`.
+    - Add alias webpack config to avoid importing duplicate `react-intl`.
+        ```
+        resolve: {
+          extensions: ['.js', '.jsx'],
+          alias: {
+            'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
+          },
+        },
+        ```
+4. Provide values for `locale` and `customMessages` prop of `Base`.
+5. Follow [react-intl wiki](https://github.com/yahoo/react-intl/wiki/API) to use `injectIntl`([pass translations to props](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#pass-translated-message-as-props)) or `FormattedMessage`([render translations](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#display-transalated-message-without-default-message-fallback)) to consume translations.
+
+### Packages Requiring I18n
+
+- [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker)
+- [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
 
 ## Contributing
 
