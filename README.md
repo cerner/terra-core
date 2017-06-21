@@ -88,7 +88,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 2. Install and config `terra-i18n-plugin`:
     - Follow [terra-i18n-plugin Getting Started](packages/terra-i18n-plugin#getting-started) to install `terra-i18n-plugin` to aggregate translations in `node_modules`.
     - Follow [terra-i18n-plugin Wiki Guide](https://github.com/cerner/terra-core/wiki/Terra-i18n-plugin-Guide) to config i18n plugin.
-3. Insatll and config `react-intl` 
+3. Install and config `react-intl`
     - Install it `npm install --save react-intl`.
     - Add alias webpack config to avoid importing duplicate `react-intl`.
         ```
