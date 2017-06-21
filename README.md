@@ -68,7 +68,7 @@
 | Internet Explorer           | 10 & 11 |
 | Safari & Mobile Safari      | Current |
 
-## Internationalization(I18n)
+## Internationalization (I18n)
 
 1. Please follow [Base Getting Started](packages/terra-base/README.md#getting-started) to install `Base`, and consume it with `locale` props.
 2. Install and config `terra-i18n-plugin`:
