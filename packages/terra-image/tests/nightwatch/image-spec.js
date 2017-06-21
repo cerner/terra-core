@@ -27,12 +27,9 @@ module.exports = {
   'Displays an image that successfully loaded': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/image-tests/loading`)
-      .waitForElementPresent('#loadedImage', 1000)
-      .expect.element('#loadedImage').to.be.present;
+      .waitForElementPresent('#loadedImage', 1000);
   },
   'Displays an image that failed to load': (browser) => {
-    browser
-      .waitForElementPresent('#errorImage', 1000)
-      .expect.element('#errorImage').to.be.present;
+    browser.waitForElementPresent('#errorImage', 1000);
   },
 };

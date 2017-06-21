@@ -16,11 +16,21 @@ class ImageLoading extends React.Component {
         <h2>Loading Image Examples</h2>
         <p>Image is successfully loaded.</p>
         <div>
-          <Image id={this.state.loadedImageId} src={placeholder150x150} onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }} />
+          <Image
+            id={this.state.loadedImageId}
+            src={placeholder150x150}
+            onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }}
+            onError={() => { this.setState({ errorImageId: 'errorImage' }); }}
+          />
         </div>
         <p>Image fails to load.</p>
         <div>
-          <Image id={this.state.errorImageId} src="invalid.jpg" onError={() => { this.setState({ errorImageId: 'errorImage' }); }} />
+          <Image
+            id={this.state.errorImageId}
+            src="invalid.jpg"
+            onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }}
+            onError={() => { this.setState({ errorImageId: 'errorImage' }); }}
+          />
         </div>
       </div>
     );
