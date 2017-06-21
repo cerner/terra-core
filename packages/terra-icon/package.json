@@ -24,7 +24,7 @@
     "jsdom": "^9.11.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
-    "terra-props-table": "^0.7.0",
+    "terra-props-table": "^0.8.0",
     "terra-toolkit": "^0.4.0"
   },
   "peerDependencies": {

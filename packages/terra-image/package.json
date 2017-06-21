@@ -37,7 +37,7 @@
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-image node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
-    "terra-props-table": "^0.7.0",
+    "terra-props-table": "^0.8.0",
     "terra-toolkit": "^0.4.0"
   },
   "peerDependencies": {

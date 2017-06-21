@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "terra-arrange": "^0.6.0",
-    "terra-props-table": "^0.7.0",
+    "terra-props-table": "^0.8.0",
     "terra-toolkit": "^0.4.0"
   },
   "peerDependencies": {
