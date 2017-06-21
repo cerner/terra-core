@@ -1,0 +1,117 @@
+exports[`Text should render a text component 1`] = `
+<span
+  className="terra-Text"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</span>
+`;
+
+exports[`Text should render a text component with color prop set 1`] = `
+<span
+  className="terra-Text"
+  style={
+    Object {
+      "color": "#f00",
+    }
+  }>
+  Test
+</span>
+`;
+
+exports[`Text should render a text component with fontSize prop set 1`] = `
+<span
+  className="terra-Text terra-Text--fontSize-24"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</span>
+`;
+
+exports[`Text should render a text component with isItalic prop set 1`] = `
+<span
+  className="terra-Text terra-Text--italic"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</span>
+`;
+
+exports[`Text should render a text component with isVisuallyHidden prop set 1`] = `
+<span
+  className="terra-Text terra-Text--visually-hidden"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</span>
+`;
+
+exports[`Text should render a text component with weight prop set 1`] = `
+<span
+  className="terra-Text terra-Text--weight-200"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  Test
+</span>
+`;
+
+exports[`Text should support rendering a string as children 1`] = `
+<span
+  className="terra-Text"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  String
+</span>
+`;
+
+exports[`Text should support rendering an array of elements as a children 1`] = `
+<span
+  className="terra-Text"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  <span>
+    Element 1
+  </span>
+  <span>
+    Element 2
+  </span>
+  <span>
+    Element 3
+  </span>
+</span>
+`;
+
+exports[`Text should support rendering an element as children 1`] = `
+<span
+  className="terra-Text"
+  style={
+    Object {
+      "color": "inherit",
+    }
+  }>
+  <span>
+    Element
+  </span>
+</span>
+`;
