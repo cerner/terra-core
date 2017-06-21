@@ -30,7 +30,8 @@ const CollapseExamples = () => (
     <OpenCloseTextCollapse />
     <h2 id="is-initially-open">isInitiallyOpen Collapse</h2>
     <IsInitiallyOpenCollapse />
-    <h2 id="button-attrs">ButtonAttrs Collapse</h2>
+    <h2 id="button-attrs">
+      Custom Collapse Button</h2>
     <ButtonAttrsCollapse />
     <h2 id="open-close-callbacks">OnOpen / OnClose Callback Collapse</h2>
     <OpenCloseEventCollapse />
