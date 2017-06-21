@@ -36,7 +36,7 @@ module.exports = {
       .assert.elementPresent('.terra-Collapse');
   },
 
-  'Displays a animated collapse': (browser) => {
+  'Displays an animated collapse': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/animated`)
       .assert.elementPresent('.terra-Collapse');
