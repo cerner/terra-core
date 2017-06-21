@@ -8,7 +8,7 @@ const TogglerTests = () => (
     <ul>
       <li><Link to="/tests/toggler-tests/default">Toggler - Default</Link></li>
       <li><Link to="/tests/toggler-tests/animated">Toggler - Animated</Link></li>
-      <li><Link to="/tests/toggler-tests/animated">Toggler - Open</Link></li>
+      <li><Link to="/tests/toggler-tests/open">Toggler - Open</Link></li>
     </ul>
   </div>
 );
