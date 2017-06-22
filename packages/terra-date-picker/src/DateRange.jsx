@@ -63,13 +63,11 @@ class DateRange extends React.Component {
   }
 
   handleChangeStart(event, startDate) {
-    const formattedDate = moment(startDate, this.state.format).format();
-    this.handleChange(event, { startDate: formattedDate });
+    this.handleChange(event, { startDate });
   }
 
   handleChangeEnd(event, endDate) {
-    const formattedDate = moment(endDate, this.state.format).format();
-    this.handleChange(event, { endDate: formattedDate });
+    this.handleChange(event, { endDate });
   }
 
   render() {
