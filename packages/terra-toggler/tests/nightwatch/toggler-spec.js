@@ -40,4 +40,27 @@ module.exports = {
      .waitForElementPresent('.terra-Toggler', 1000)
      .expect.element('.terra-Toggler').to.have.attribute('aria-hidden').to.equal('false');
   },
+
+  'Disables focusable elements within animated toggler when closed': (browser) => {
+    browser
+     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggler-tests/animated`)
+     .click('button') // Opens toggler
+     .click('button') // Closes toggler
+     .assert.attributeContains('#link', 'tabindex', '-1')
+     .assert.attributeContains('#text-input', 'disabled', 'true')
+     .assert.attributeContains('#select-field', 'disabled', 'true')
+     .assert.attributeContains('#textarea', 'disabled', 'true')
+     .assert.attributeContains('#button', 'disabled', 'true');
+  },
+
+  'Enables focusable elements within animated toggler when opened': (browser) => {
+    browser
+     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggler-tests/animated`)
+     .click('button')
+     .expect.element('#link').to.not.have.attribute('tabindex');
+    browser.expect.element('#text-input').to.not.have.attribute('disabled');
+    browser.expect.element('#select-field').to.not.have.attribute('disabled');
+    browser.expect.element('#textarea').to.not.have.attribute('disabled');
+    browser.expect.element('#button').to.not.have.attribute('disabled');
+  },
 };

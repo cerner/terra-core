@@ -17,41 +17,54 @@ module.exports = {
       .assert.elementPresent('.terra-Collapse');
   },
 
-  // New
   'Displays a collapse with customized button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/customized-button`)
-      .assert.elementPresent('.terra-Collapse');
+      .assert.cssClassPresent('.terra-Button', 'terra-Button--link');
   },
 
   'Displays a collapse with customized closedButtonText': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/closed-button-text`)
-      .assert.elementPresent('.terra-Collapse');
+      .assert.containsText('.terra-Collapse-buttonText', 'Custom Text');
   },
 
   'Displays a collapse with customized icon': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/customized-icon`)
-      .assert.elementPresent('.terra-Collapse');
+      .assert.elementPresent('#custom-icon');
   },
 
   'Displays an animated collapse': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/animated`)
-      .assert.elementPresent('.terra-Collapse');
+      .assert.elementPresent('.terra-Toggler.is-animated');
+  },
+
+  'Displays a collapse with animated icon': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/icon-animated`)
+      .assert.elementPresent('.terra-Collapse.is-icon-animated');
+  },
+
+  'Displays an icon only collapse': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/icon-only`)
+      .assert.attributeContains('.terra-Button', 'aria-label', 'Custom Text')
+      .assert.containsText('.terra-Button', '');
   },
 
   'Displays an initially open collapse': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/initially-open`)
-      .assert.elementPresent('.terra-Collapse');
+      .assert.attributeContains('.terra-Toggler', 'aria-hidden', 'false');
   },
 
   'Displays a collapse with customized openedButtonText': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/open-button-text`)
-      .assert.elementPresent('.terra-Collapse');
+      .click('.terra-Button')
+      .assert.containsText('.terra-Collapse-buttonText', 'Custom Text');
   },
 
   'Triggers onOpen callback for Collapse when button is selected': (browser) => {

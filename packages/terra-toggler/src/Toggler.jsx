@@ -103,6 +103,7 @@ class Toggler extends React.Component {
     const attributes = Object.assign({}, customProps);
     const TogglerClassNames = classNames([
       'terra-Toggler',
+      { 'is-animated': isAnimated },
       attributes.className,
     ]);
     const height = isOpen ? 'auto' : '0';

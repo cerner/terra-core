@@ -11,16 +11,16 @@ const AnimatedCollapse = () => (
     </div>
     <br />
     <div>
-      <label htmlFor="select-field">Select field</label>
+      <label htmlFor="select-field" defaultValue="Option 01">Select field</label>
       <select id="select-field">
-        <option selected="selected">Option 01</option>
+        <option>Option 01</option>
         <option>Option 02</option>
       </select>
     </div>
     <br />
     <div>
       <label htmlFor="textarea">Textarea</label>
-      <textarea id="textarea" cols="30" rows="5">Textarea text</textarea>
+      <textarea id="textarea" cols="30" rows="5" defaultValue="Textarea text" />
     </div>
     <br />
     <div>

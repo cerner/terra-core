@@ -7,7 +7,7 @@ exports[`Toggler should render a default toggler 1`] = `
 exports[`Toggler should render an animated toggler 1`] = `
 <div
   aria-hidden="true"
-  class="terra-Toggler">
+  class="terra-Toggler is-animated">
   <div>
     <div
       aria-hidden="false"

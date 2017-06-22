@@ -84,7 +84,7 @@ exports[`Collapse should render an animated collapse 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggler">
+    class="terra-Toggler is-animated">
     <div>
       <div
         aria-hidden="false"

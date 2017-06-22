@@ -63,6 +63,16 @@ describe('Collapse', () => {
     expect(collapse.unrendered.props.isAnimated).toEqual(true);
   });
 
+  it('should set isIconAnimated prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" isIconAnimated>Test</Collapse>);
+    expect(collapse.unrendered.props.isIconAnimated).toEqual(true);
+  });
+
+  it('should set isIconOnly prop correctly', () => {
+    const collapse = shallow(<Collapse closedButtonText="Show" isIconOnly>Test</Collapse>);
+    expect(collapse.unrendered.props.isIconOnly).toEqual(true);
+  });
+
   it('should set isInitiallyOpen prop correctly', () => {
     const collapse = shallow(<Collapse closedButtonText="Show" isInitiallyOpen>Test</Collapse>);
     expect(collapse.unrendered.props.isInitiallyOpen).toEqual(true);

@@ -27,11 +27,6 @@ describe('Toggler', () => {
   });
 
   // Structure Tests
-  it('should have the class terra-Toggler', () => {
-    const toggler = shallow(<Toggler>Test</Toggler>);
-    expect(toggler.prop('className')).toContain('terra-Toggler');
-  });
-
   it('should include the <AnimateHeight> component when isAnimated is set', () => {
     const toggler = shallow(<Toggler isAnimated>Test</Toggler>);
     expect(toggler.find('.terra-Toggler').text()).toEqual('<AnimateHeight />');
