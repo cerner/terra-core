@@ -10,6 +10,7 @@ import ClosedButtonText from './ClosedButtonText';
 import CustomIcon from './CustomIcon';
 import CustomizedButtonCollapse from './CustomizedButtonCollapse';
 import DefaultCollapse from './DefaultCollapse';
+import IconAnimated from './IconAnimated';
 import IconOnly from './IconOnly';
 import InitiallyOpen from './InitiallyOpen';
 import OpenedButtonText from './OpenedButtonText';
@@ -24,6 +25,7 @@ const routes = (
     <Route path="/tests/collapse-tests/closed-button-text" component={ClosedButtonText} />
     <Route path="/tests/collapse-tests/customized-icon" component={CustomIcon} />
     <Route path="/tests/collapse-tests/animated" component={Animated} />
+    <Route path="/tests/collapse-tests/icon-animated" component={IconAnimated} />
     <Route path="/tests/collapse-tests/icon-only" component={IconOnly} />
     <Route path="/tests/collapse-tests/initially-open" component={InitiallyOpen} />
     <Route path="/tests/collapse-tests/open-button-text" component={OpenedButtonText} />

@@ -30,6 +30,10 @@ const propTypes = {
    */
   isAnimated: PropTypes.bool,
   /**
+   * Used to turn on animation on collapse button icon
+   */
+  isIconAnimated: PropTypes.bool,
+  /**
    * Sets the collapse to only display and icon. Uses closedButtonText prop as an aria-label on the button.
    */
   isIconOnly: PropTypes.bool,
@@ -53,6 +57,7 @@ const propTypes = {
 
 const defaultProps = {
   isAnimated: false,
+  isIconAnimated: false,
   isIconOnly: false,
   isInitiallyOpen: false,
   icon: <IconChevronRight />,
@@ -98,6 +103,7 @@ class Collapse extends React.Component {
       closedButtonText,
       icon,
       isAnimated,
+      isIconAnimated,
       isIconOnly,
       isInitiallyOpen,
       onClose,
@@ -111,6 +117,7 @@ class Collapse extends React.Component {
     const collapseClass = classNames([
       'terra-Collapse',
       { 'is-open': this.state.isOpen },
+      { 'is-icon-animated': isIconAnimated },
       customProps.className,
     ]);
 

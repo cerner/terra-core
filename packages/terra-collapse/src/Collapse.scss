@@ -8,11 +8,17 @@
   display: inline-block;
   font-size: 0.8em;
   transform: rotate(0deg);
-  transition: transform 0.15s ease-in;
 }
 
 .terra-Collapse.is-open .terra-Collapse-icon {
   transform: rotate(90deg);
+}
+
+.terra-Collapse.is-icon-animated .terra-Collapse-icon {
+  transition: transform 0.15s ease-in;
+}
+
+.terra-Collapse.is-open.is-icon-animated .terra-Collapse-icon {
   transition: transform 0.15s ease-in;
 }
 
