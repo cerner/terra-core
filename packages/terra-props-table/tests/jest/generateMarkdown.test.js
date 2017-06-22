@@ -5,7 +5,7 @@ const invalidInput = {};
 describe('generateMarkdown with invalid input', () => {
   it('should throw an error', () => {
     expect(() => {
-      generateMarkdown(invalidInput);
+      generateMarkdown('ComponentName', invalidInput);
     }).toThrow();
   });
 });
@@ -30,6 +30,6 @@ describe('generateMarkdown with valid input', () => {
           description: 'Translations messages object.' } },
     };
 
-    expect(generateMarkdown(validInput)).toMatchSnapshot();
+    expect(generateMarkdown('ComponentName', validInput)).toMatchSnapshot();
   });
 });

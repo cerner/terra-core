@@ -1,5 +1,6 @@
 exports[`generateMarkdown with valid input should generate a markdown table 1`] = `
-"| Prop Name | Type | Is Required | Default Value | Description |
+"## ComponentName Props Table
+| Prop Name | Type | Is Required | Default Value | Description |
 |-|-|-|-|-|
 | children| \`string\`| \`required\`| | The component that will be wrapped by i18n provider.|
 | locale| \`string\`| \`required\`| | The locale name.|
