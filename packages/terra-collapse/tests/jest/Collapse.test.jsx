@@ -79,11 +79,13 @@ describe('Collapse', () => {
   });
 
   it('should set onOpen prop correctly', () => {
+    // eslint-disable-next-line no-alert
     const collapse = shallow(<Collapse closedButtonText="Show" onOpen={() => alert('Opened')}>Test</Collapse>);
     expect(collapse.unrendered.props.onOpen.toString()).toEqual('function onOpen() {return alert(\'Opened\');}');
   });
 
   it('should set onClose prop correctly', () => {
+    // eslint-disable-next-line no-alert
     const collapse = shallow(<Collapse closedButtonText="Show" onClose={() => alert('Closed')}>Test</Collapse>);
     expect(collapse.unrendered.props.onClose.toString()).toEqual('function onClose() {return alert(\'Closed\');}');
   });

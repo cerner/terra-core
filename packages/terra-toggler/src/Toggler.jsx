@@ -34,6 +34,28 @@ class Toggler extends React.Component {
     this.collectFocusElements = this.collectFocusElements.bind(this);
   }
 
+  componentDidMount() {
+    // If toggler is closed when the component mounts, set props on all the focusable elements
+    // within the toggler to disable users from focusing to them
+    if (!this.props.isOpen && this.collectFocusElements() !== null) {
+      if (this.contentContainer) {
+        // Make links inert
+        let l = 0;
+        while (l < this.collectFocusElements().links.length) {
+          this.collectFocusElements().links[l].setAttribute('tabindex', '-1');
+          l += 1;
+        }
+
+        // Make form elements inert
+        let f = 0;
+        while (f < this.collectFocusElements().formElements.length) {
+          this.collectFocusElements().formElements[f].setAttribute('disabled', '');
+          f += 1;
+        }
+      }
+    }
+  }
+
   // Gathers all the focusable elements which need attributes set on them to disable/enable focus
   collectFocusElements() {
     if (this.contentContainer) {

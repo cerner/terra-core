@@ -44,6 +44,11 @@ module.exports = {
   'Disables focusable elements within animated toggler when closed': (browser) => {
     browser
      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggler-tests/animated`)
+     .assert.attributeContains('#link', 'tabindex', '-1')
+     .assert.attributeContains('#text-input', 'disabled', 'true')
+     .assert.attributeContains('#select-field', 'disabled', 'true')
+     .assert.attributeContains('#textarea', 'disabled', 'true')
+     .assert.attributeContains('#button', 'disabled', 'true')
      .click('button') // Opens toggler
      .click('button') // Closes toggler
      .assert.attributeContains('#link', 'tabindex', '-1')

@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggler from '../../lib/Toggler';
+import Toggler from '../../src/Toggler';
 
 class AnimatedToggler extends React.Component {
   constructor() {
