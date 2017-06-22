@@ -12,7 +12,7 @@ const propTypes = {
    */
   inputAttributes: PropTypes.object,
   /**
-   * Name of the time input. The name should be unique and is required.
+   * Name of the time input. The name should be unique.
    */
   name: PropTypes.string.isRequired,
   /**

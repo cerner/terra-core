@@ -10,7 +10,7 @@ const propTypes = {
    */
   endDate: PropTypes.string,
   /**
-   * Name of the endDate input. The name should be unique and is required.
+   * Name of the endDate input. The name should be unique.
    */
   endName: PropTypes.string.isRequired,
   /**
@@ -18,7 +18,7 @@ const propTypes = {
    */
   startDate: PropTypes.string,
   /**
-   * Name of the startDate input. The name should be unique and is required.
+   * Name of the startDate input. The name should be unique.
    */
   startName: PropTypes.string.isRequired,
   /**

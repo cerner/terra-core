@@ -45,7 +45,7 @@ const propTypes = {
    */
   minDate: PropTypes.string,
   /**
-   * Name of the date input. The name should be unique and is required.
+   * Name of the date input. The name should be unique.
    */
   name: PropTypes.string.isRequired,
   /**
