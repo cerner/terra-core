@@ -2,7 +2,7 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-modal.svg)](https://www.npmjs.org/package/terra-modal)
-[![Build Status](https://travis-ci.org/cerner/terra-ui.svg?branch=master)](https://travis-ci.org/cerner/terra-ui)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button.
 

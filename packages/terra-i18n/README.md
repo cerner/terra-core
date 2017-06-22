@@ -12,7 +12,9 @@ The terra-i18n component provides the internationalization to the React componen
 
 ## Getting Started
 
+You don't need to install this package directly. Please follow [this internationalization section](../../README.md#internationalizationi18n) to set up. `Base` will install this package for you.
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-i18n`
+You can check [terra-i18n wiki page](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide) for more information and [FAQ](https://github.com/cerner/terra-core/wiki/terra-i18n-Guide#faq).
 
 ## Documentation
 

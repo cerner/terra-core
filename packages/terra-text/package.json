@@ -1,8 +1,7 @@
 {
   "name": "terra-text",
   "main": "lib/Text.js",
-  "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Component for displaying customizable text in UI.",
   "repository": {
     "type": "git",
@@ -13,6 +12,7 @@
     "Terra",
     "terra-text",
     "Text",
+    "Type",
     "UI"
   ],
   "author": "Cerner Corporation",
