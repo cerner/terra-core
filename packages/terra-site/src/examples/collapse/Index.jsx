@@ -14,6 +14,7 @@ import DefaultCollapse from './DefaultCollapse';
 import AnimatedCollapse from './AnimatedCollapse';
 import ButtonAttrsCollapse from './ButtonAttrsCollapse';
 import IsInitiallyOpenCollapse from './IsInitiallyOpenCollapse';
+import IsIconOnlyCollapse from './IsIconOnlyCollapse';
 import OpenCloseEventCollapse from './OpenCloseEventCollapse';
 import OpenCloseTextCollapse from './OpenCloseTextCollapse';
 
@@ -28,10 +29,11 @@ const CollapseExamples = () => (
     <AnimatedCollapse />
     <h2 id="open-close-text">Open / Close Button Text Collapse</h2>
     <OpenCloseTextCollapse />
+    <h2 id="is-icon-only">isIconOnly Collapse</h2>
+    <IsIconOnlyCollapse />
     <h2 id="is-initially-open">isInitiallyOpen Collapse</h2>
     <IsInitiallyOpenCollapse />
-    <h2 id="button-attrs">
-      Custom Collapse Button</h2>
+    <h2 id="button-attrs">Custom Collapse Button</h2>
     <ButtonAttrsCollapse />
     <h2 id="open-close-callbacks">OnOpen / OnClose Callback Collapse</h2>
     <OpenCloseEventCollapse />

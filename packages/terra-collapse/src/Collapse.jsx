@@ -16,39 +16,44 @@ const propTypes = {
   /**
    * Sets the text inside of the button when the collapse component is closed
    */
-  closedButtonText: PropTypes.node.isRequired,
-  /**
-   * Icon displayed next to text content within the collapse button
-   */
-  icon: PropTypes.element,
+  closedButtonText: PropTypes.string.isRequired,
   /**
    * Used to set props and HTML attributes on the collapse button
    */
   buttonAttrs: PropTypes.object,
   /**
+   * Icon displayed next to text content within the collapse button
+   */
+  icon: PropTypes.element,
+  /**
    * Sets the collapse to be animated when it is opened or closed
    */
   isAnimated: PropTypes.bool,
+  /**
+   * Sets the collapse to only display and icon. Uses closedButtonText prop as an aria-label on the button.
+   */
+  isIconOnly: PropTypes.bool,
   /**
    * Sets the collapse initial state to open
    */
   isInitiallyOpen: PropTypes.bool,
   /**
-   * Callback function triggered when collapse is opened
-   */
-  onOpen: PropTypes.func,
-  /**
    * Callback function triggered when collapse is closed
    */
   onClose: PropTypes.func,
   /**
+   * Callback function triggered when collapse is opened
+   */
+  onOpen: PropTypes.func,
+  /**
    * Sets the text inside of the button when the collapse component is open
    */
-  openedButtonText: PropTypes.node,
+  openedButtonText: PropTypes.string,
 };
 
 const defaultProps = {
   isAnimated: false,
+  isIconOnly: false,
   isInitiallyOpen: false,
   icon: <IconChevronRight />,
 };
@@ -87,7 +92,19 @@ class Collapse extends React.Component {
   }
 
   render() {
-    const { closedButtonText, icon, children, openedButtonText, buttonAttrs, isInitiallyOpen, isAnimated, onOpen, onClose, ...customProps } = this.props;
+    const {
+      buttonAttrs,
+      children,
+      closedButtonText,
+      icon,
+      isAnimated,
+      isIconOnly,
+      isInitiallyOpen,
+      onClose,
+      onOpen,
+      openedButtonText,
+      ...customProps
+     } = this.props;
     // Set openHeaderText to the same value as closedHeaderText if its not already set
     const normalizedOpenButtonText = openedButtonText || closedButtonText;
     const buttonText = !this.state.isOpen ? closedButtonText : normalizedOpenButtonText;
@@ -97,8 +114,20 @@ class Collapse extends React.Component {
       customProps.className,
     ]);
 
-    return (
-      <div {...customProps} className={collapseClass}>
+    let collapseButton;
+    if (isIconOnly) {
+      collapseButton = (
+        <Button
+          {...buttonAttrs}
+          aria-expanded={this.state.isOpen}
+          aria-label={closedButtonText}
+          onClick={this.handleOnClick}
+        >
+          <span className="terra-Collapse-icon">{icon}</span>
+        </Button>
+      );
+    } else {
+      collapseButton = (
         <Button
           {...buttonAttrs}
           aria-expanded={this.state.isOpen}
@@ -110,6 +139,12 @@ class Collapse extends React.Component {
             fill={<span className="terra-Collapse-buttonText">{buttonText}</span>}
           />
         </Button>
+      );
+    }
+
+    return (
+      <div {...customProps} className={collapseClass}>
+        {collapseButton}
         <Toggler isOpen={this.state.isOpen} isAnimated={this.props.isAnimated}>
           {this.props.children}
         </Toggler>
