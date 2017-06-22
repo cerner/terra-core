@@ -33,7 +33,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  choices: [],
   onChange: undefined,
   name: null,
   required: false,
@@ -58,11 +57,12 @@ const Select = ({
     <select
       name={name}
       required={required}
+      onChange={onChange}
       defaultValue={defaultValue}
       {...additionalSelectFieldProps}
       className={classNames('terra-Form-select', additionalSelectFieldProps.className)}
     >
-      {choices.map(val => <option key={val.toString()} value={val}>{val}</option>)}
+      {choices.map(choice => <option key={choice.toString()} value={choice}>{choice}</option>)}
     </select>
   );
 };

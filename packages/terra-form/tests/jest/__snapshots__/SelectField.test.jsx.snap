@@ -85,6 +85,7 @@ exports[`test should render as controlled when just the required fields and a on
           className="terra-Form-select"
           defaultValue={null}
           name={null}
+          onChange={[Function]}
           required={false}>
           <option
             value="moo">

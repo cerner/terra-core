@@ -2,6 +2,12 @@ import React from 'react';
 import Select from '../../src/Select';
 
 it('should render a default Select component', () => {
+  const select = <Select choices={[]} />;
+  const wrapper = shallow(select);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a Select component with one option', () => {
   const select = <Select choices={['moo']} />;
   const wrapper = shallow(select);
   expect(wrapper).toMatchSnapshot();
@@ -25,7 +31,7 @@ it('should render as uncontrolled when just the required fields and a default va
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render as controlled when just the required fields and a onChange function is passed into the Textarea', () => {
+it('should render as controlled when just the required fields and a onChange function is passed into the Select', () => {
   const select = <Select choices={['moo', 'boo']} onChange={() => {}} />;
   const wrapper = mount(select);
   expect(wrapper).toMatchSnapshot();

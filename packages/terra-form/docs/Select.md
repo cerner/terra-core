@@ -9,9 +9,9 @@ import React from 'react';
 import Select from 'terra-form/lib/Select';
 
 <Select
-  choices={[]}
+  choices={['moo', 'boo', 'bar']}
   name="foo"
-  value="bar"
+  defaultValue="bar"
   required
 />
 ```

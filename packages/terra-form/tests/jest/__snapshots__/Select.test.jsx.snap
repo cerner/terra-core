@@ -1,3 +1,16 @@
+exports[`test should render a Select component with one option 1`] = `
+<select
+  className="terra-Form-select"
+  defaultValue={null}
+  name={null}
+  required={false}>
+  <option
+    value="moo">
+    moo
+  </option>
+</select>
+`;
+
 exports[`test should render a Select when all the possible props are passed into it 1`] = `
 <select
   aria-required="true"
@@ -17,15 +30,10 @@ exports[`test should render a default Select component 1`] = `
   className="terra-Form-select"
   defaultValue={null}
   name={null}
-  required={false}>
-  <option
-    value="moo">
-    moo
-  </option>
-</select>
+  required={false} />
 `;
 
-exports[`test should render as controlled when just the required fields and a onChange function is passed into the Textarea 1`] = `
+exports[`test should render as controlled when just the required fields and a onChange function is passed into the Select 1`] = `
 <Select
   choices={
     Array [
@@ -41,6 +49,7 @@ exports[`test should render as controlled when just the required fields and a on
     className="terra-Form-select"
     defaultValue={null}
     name={null}
+    onChange={[Function]}
     required={false}>
     <option
       value="moo">
