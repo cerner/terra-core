@@ -12,6 +12,8 @@ import CustomizedButtonCollapse from './CustomizedButtonCollapse';
 import DefaultCollapse from './DefaultCollapse';
 import InitiallyOpen from './InitiallyOpen';
 import OpenedButtonText from './OpenedButtonText';
+import OnOpenCollapse from './OnOpenCollapse';
+import OnCloseCollapse from './OnCloseCollapse';
 
 const routes = (
   <div>
@@ -23,6 +25,8 @@ const routes = (
     <Route path="/tests/collapse-tests/animated" component={Animated} />
     <Route path="/tests/collapse-tests/initially-open" component={InitiallyOpen} />
     <Route path="/tests/collapse-tests/open-button-text" component={OpenedButtonText} />
+    <Route path="/tests/collapse-tests/on-open-event" component={OnOpenCollapse} />
+    <Route path="/tests/collapse-tests/on-close-event" component={OnCloseCollapse} />
   </div>
 );
 

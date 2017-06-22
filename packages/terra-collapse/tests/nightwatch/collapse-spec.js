@@ -54,10 +54,38 @@ module.exports = {
       .assert.elementPresent('.terra-Collapse');
   },
 
+  'Triggers onOpen callback for Collapse when button is selected': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/on-open-event`)
+      .click('.terra-Button')
+      .assert.containsText('#on-open-event', 'Times Opened: 1')
+      .click('.terra-Button') // Close Collapse
+      .sendKeys('.terra-Button', browser.Keys.SPACE)
+      .assert.containsText('#on-open-event', 'Times Opened: 2')
+      .sendKeys('.terra-Button', browser.Keys.SPACE)  // Close Collapse
+      .sendKeys('.terra-Button', browser.Keys.ENTER)
+      .assert.containsText('#on-open-event', 'Times Opened: 3');
+  },
+
+  'Triggers onClose callback for Collapse when button is selected': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/on-close-event`)
+      .click('.terra-Button') // Open Collapse
+      .click('.terra-Button')
+      .assert.containsText('#on-close-event', 'Times Closed: 1')
+      .click('.terra-Button') // Open Collapse
+      .sendKeys('.terra-Button', browser.Keys.SPACE)
+      .assert.containsText('#on-close-event', 'Times Closed: 2')
+      .sendKeys('.terra-Button', browser.Keys.SPACE) // Open Collapse
+      .sendKeys('.terra-Button', browser.Keys.ENTER)
+      .assert.containsText('#on-close-event', 'Times Closed: 3');
+  },
+
+
   'Display collapse content when button is clicked': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/collapse-tests/default`)
-      .click('button')
+      .click('.terra-Button')
       .waitForElementPresent('.terra-Toggler', 1000)
       .expect.element('.terra-Toggler').to.have.attribute('aria-hidden').to.equal('false');
   },
