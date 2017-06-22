@@ -4,10 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const pkg = require('../package.json');
 const commander = require('commander');
-const parse = require('react-docgen').parse;
 const glob = require('glob');
 const uniq = require('lodash/uniq');
 const generateMarkdown = require('./generateMarkdown/generateMarkdown');
+const parse = require('react-docgen').parse;
+
 
 commander
   .version(pkg.version)
@@ -47,8 +48,15 @@ filenames.forEach((filename) => {
     if (err) {
       errors.push(`Error reading file ${filename} ${err}`);
     } else {
+      // remove ext from filename
       const currentComponent = path.basename(filename, path.extname(filename));
-      const outpath = `${path.join(commander.outDir, currentComponent)}PropsTable.md`;
+
+      // create directory if it does not exist
+      if (!fs.existsSync(commander.outDir)) {
+        fs.mkdirSync(commander.outDir);
+      }
+
+      const outpath = `${path.join(commander.outDir, currentComponent)}.md`;
 
       fs.writeFile(outpath, generateMarkdown(parse(data)), (error) => {
         if (error) {
