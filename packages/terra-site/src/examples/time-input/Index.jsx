@@ -24,6 +24,8 @@ const TimeInputExamples = () => (
     <TimeInput
       name="time-input-default"
     />
+    <br />
+    <br />
     <h2 id="default">With Default Time</h2>
     <TimeInput
       name="time-input-value"

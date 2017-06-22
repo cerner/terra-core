@@ -18,19 +18,11 @@ import DatePicker from 'terra-date-picker';
 
 //Renders a date picker
 <DatePicker
-  minDate={moment()}
-  maxDate={moment().add(30, 'days')}
-  excludeDates={moment().add(1, 'days')}
+  minDate={'2017-04-01'}
+  maxDate={'2017-04-30'}
+  excludeDates={['2017-04-10', '2017-04-20']}
   filterDate={isWeekday}
   name="admission-date"
-/>
-
-//Renders a date range
-<DateRange
-  startDate={moment().add(1, 'days')}
-  endDate={moment().add(7, 'days')}
-  startName="illness-start"
-  endName="illness-end"
 />
 
 const isWeekday = (date) => {

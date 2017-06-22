@@ -59,15 +59,6 @@ module.exports = {
     browser.expect.element('.react-datepicker__day--today').to.not.be.present;
   },
 
-  'Displays the DatePicker with a date range': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/date-range`);
-
-    browser.click('.terra-DatePicker-button');
-
-    browser.expect.element('.terra-DatePicker-range').to.be.present;
-    browser.expect.element('.terra-DatePicker-range > .terra-DatePicker').to.be.present;
-  },
-
   'Creates a hidden input with a name atribute of "date-input" and an empty value attribute when no date is entered': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
 

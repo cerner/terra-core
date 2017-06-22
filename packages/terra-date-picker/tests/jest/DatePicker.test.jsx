@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import DatePicker from '../../lib/DatePicker';
-import DateRange from '../../lib/DateRange';
 import DateUtil from '../../lib/DateUtil';
 
 // Mock the following functions so that they always return a consistent date.
@@ -25,12 +24,6 @@ it('should render a default date input and date picker', () => {
 it('should render a default date input with custom input attributes', () => {
   const datePicker = <DatePicker name="date-input" utcOffset={0} inputAttributes={{ id: 'terra-date-input' }} />;
   const wrapper = shallow(datePicker);
-  expect(wrapper).toMatchSnapshot();
-});
-
-it('should render a date range', () => {
-  const dateRange = <DateRange startName="start-date-input" endName="end-date-input" utcOffset={0} />;
-  const wrapper = shallow(dateRange);
   expect(wrapper).toMatchSnapshot();
 });
 
