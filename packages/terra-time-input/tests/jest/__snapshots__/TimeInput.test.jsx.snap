@@ -1,10 +1,15 @@
 exports[`test should render a default time input 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="time-input"
+    type="hidden"
+    value="" />
   <Input
     className="terra-TimeInput-hour"
     maxLength="2"
-    name={null}
+    name="terra-time-hour-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -20,7 +25,7 @@ exports[`test should render a default time input 1`] = `
   <Input
     className="terra-TimeInput-minute"
     maxLength="2"
-    name={null}
+    name="terra-time-minute-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -36,10 +41,15 @@ exports[`test should render a default time input 1`] = `
 exports[`test should render a time input with a default time 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="time-input"
+    type="hidden"
+    value="T10:45" />
   <Input
     className="terra-TimeInput-hour"
     maxLength="2"
-    name={null}
+    name="terra-time-hour-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -55,7 +65,7 @@ exports[`test should render a time input with a default time 1`] = `
   <Input
     className="terra-TimeInput-minute"
     maxLength="2"
-    name={null}
+    name="terra-time-minute-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -71,11 +81,16 @@ exports[`test should render a time input with a default time 1`] = `
 exports[`test should render a time input with custom attributes 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="time-input"
+    type="hidden"
+    value="" />
   <Input
     className="terra-TimeInput-hour"
     id="terra-time-input"
     maxLength="2"
-    name="time-input"
+    name="terra-time-hour-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -92,7 +107,7 @@ exports[`test should render a time input with custom attributes 1`] = `
     className="terra-TimeInput-minute"
     id="terra-time-input"
     maxLength="2"
-    name="time-input"
+    name="terra-time-minute-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -108,10 +123,15 @@ exports[`test should render a time input with custom attributes 1`] = `
 exports[`test should render a time input with onChange 1`] = `
 <div
   className="terra-TimeInput">
+  <input
+    className="terra-hidden-time-input"
+    name="time-input"
+    type="hidden"
+    value="" />
   <Input
     className="terra-TimeInput-hour"
     maxLength="2"
-    name={null}
+    name="terra-time-hour-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -127,7 +147,7 @@ exports[`test should render a time input with onChange 1`] = `
   <Input
     className="terra-TimeInput-minute"
     maxLength="2"
-    name={null}
+    name="terra-time-minute-time-input"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
