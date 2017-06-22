@@ -1,8 +1,8 @@
 const generateProps = require('./generateProps');
 
-const generateMarkdown = (componentMetadata) => {
+const generateMarkdown = (name, componentMetadata) => {
   if (componentMetadata.props) {
-    const markdownString = generateProps(componentMetadata.props);
+    const markdownString = `## ${name} Props Table\n${generateProps(componentMetadata.props)}`;
     return markdownString;
   }
   throw new Error('componentMetadata does not contain props');

@@ -58,7 +58,7 @@ filenames.forEach((filename) => {
 
       const outpath = `${path.join(commander.outDir, currentComponent)}.md`;
 
-      fs.writeFile(outpath, generateMarkdown(parse(data)), (error) => {
+      fs.writeFile(outpath, generateMarkdown(currentComponent, parse(data)), (error) => {
         if (error) {
           errors.push(`Error writing file ${outpath} ${err}`);
         }
