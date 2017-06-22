@@ -83,12 +83,6 @@ describe('Collapse', () => {
     expect(collapse.unrendered.props.openedButtonText).toEqual('Hide');
   });
 
-  // Structure Tests
-  it('should have the class terra-Collapse', () => {
-    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
-    expect(collapse.prop('className')).toContain('terra-Collapse');
-  });
-
  // Attributes
   it('should merge classes passed in with attributes', () => {
     const collapse = shallow(<Collapse className="TestClass" closedButtonText="Show">Test</Collapse>);
