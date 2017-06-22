@@ -6,27 +6,22 @@ import Collapse from '../../src/Collapse';
 describe('Collapse', () => {
   // Snapshot Tests
   it('should render a default collapse', () => {
-    const collapse = shallow(<Collapse closedButtonText="Show">Test</Collapse>);
+    const collapse = render(<Collapse closedButtonText="Show">Test</Collapse>);
     expect(collapse).toMatchSnapshot();
   });
 
   it('should render an animated collapse', () => {
-    const collapse = shallow(<Collapse closedButtonText="Show" isAnimated>Test</Collapse>);
+    const collapse = render(<Collapse closedButtonText="Show" isAnimated>Test</Collapse>);
     expect(collapse).toMatchSnapshot();
   });
 
   it('should render an initially open collapse', () => {
-    const collapse = shallow(<Collapse closedButtonText="Show" isInitiallyOpen>Test</Collapse>);
+    const collapse = render(<Collapse closedButtonText="Show" isInitiallyOpen>Test</Collapse>);
     expect(collapse).toMatchSnapshot();
   });
 
-  it('should mount a collapse', () => {
-    const collapse = mount(<Collapse closedButtonText="Show">Test</Collapse>);
-    expect(collapse).toMatchSnapshot();
-  });
-
-  it('should render a collapse', () => {
-    const collapse = render(<Collapse closedButtonText="Show">Test</Collapse>);
+  it('should render an icon only collapse', () => {
+    const collapse = render(<Collapse closedButtonText="Show" isIconOnly>Test</Collapse>);
     expect(collapse).toMatchSnapshot();
   });
 

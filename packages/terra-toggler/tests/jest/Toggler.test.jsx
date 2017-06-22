@@ -4,27 +4,17 @@ import Toggler from '../../src/Toggler';
 describe('Toggler', () => {
   // Snapshot Tests
   it('should render a default toggler', () => {
-    const toggler = shallow(<Toggler>Test</Toggler>);
+    const toggler = render(<Toggler>Test</Toggler>);
     expect(toggler).toMatchSnapshot();
   });
 
   it('should render an animated toggler', () => {
-    const toggler = shallow(<Toggler isAnimated>Test</Toggler>);
+    const toggler = render(<Toggler isAnimated>Test</Toggler>);
     expect(toggler).toMatchSnapshot();
   });
 
   it('should render an open toggler', () => {
-    const toggler = shallow(<Toggler isOpen>Test</Toggler>);
-    expect(toggler).toMatchSnapshot();
-  });
-
-  it('should mount a toggler', () => {
-    const toggler = mount(<Toggler>Test</Toggler>);
-    expect(toggler).toMatchSnapshot();
-  });
-
-  it('should render a toggler', () => {
-    const toggler = render(<Toggler>Test</Toggler>);
+    const toggler = render(<Toggler isOpen>Test</Toggler>);
     expect(toggler).toMatchSnapshot();
   });
 

@@ -1,20 +1,4 @@
-exports[`Toggler should mount a toggler 1`] = `
-<Toggler
-  isAnimated={false}
-  isOpen={false}>
-  <div
-    aria-hidden={true}
-    className="terra-Toggler" />
-</Toggler>
-`;
-
 exports[`Toggler should render a default toggler 1`] = `
-<div
-  aria-hidden={true}
-  className="terra-Toggler" />
-`;
-
-exports[`Toggler should render a toggler 1`] = `
 <div
   aria-hidden="true"
   class="terra-Toggler" />
@@ -22,38 +6,25 @@ exports[`Toggler should render a toggler 1`] = `
 
 exports[`Toggler should render an animated toggler 1`] = `
 <div
-  aria-hidden={true}
-  className="terra-Toggler">
+  aria-hidden="true"
+  class="terra-Toggler">
   <div>
-    <AnimateHeight
-      animationStateClasses={
-        Object {
-          "animating": "rah-animating",
-          "animatingDown": "rah-animating--down",
-          "animatingToHeightAuto": "rah-animating--to-height-auto",
-          "animatingToHeightSpecific": "rah-animating--to-height-specific",
-          "animatingToHeightZero": "rah-animating--to-height-zero",
-          "animatingUp": "rah-animating--up",
-          "static": "rah-static",
-          "staticHeightAuto": "rah-static--height-auto",
-          "staticHeightSpecific": "rah-static--height-specific",
-          "staticHeightZero": "rah-static--height-zero",
-        }
-      }
-      duration={250}
-      easing="ease"
-      height="0"
-      style={Object {}}>
-      Test
-    </AnimateHeight>
+    <div
+      aria-hidden="false"
+      class="rah-static"
+      style="height:0px;overflow:hidden;">
+      <div>
+        Test
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Toggler should render an open toggler 1`] = `
 <div
-  aria-hidden={false}
-  className="terra-Toggler">
+  aria-hidden="false"
+  class="terra-Toggler">
   Test
 </div>
 `;
