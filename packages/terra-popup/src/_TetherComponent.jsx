@@ -165,9 +165,9 @@ class TetherComponent extends React.Component {
   }
 
   update() {
-    const { content } = this.props;
+    const { targetRef } = this.props;
 
-    if (!content) {
+    if (!targetRef() || !this.contentNode) {
       if (this.tether) {
         this.destroy();
       }
