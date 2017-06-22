@@ -5,9 +5,6 @@ exports[`test should render a Fieldset when all the possible props are passed in
     className="terra-Form-legend healtheintent-legend">
     Text
   </legend>
-  <input
-    type="radio"
-    value="Test" />
   <small
     className="terra-Form-helpText"
     tabIndex="-1">
@@ -18,10 +15,19 @@ exports[`test should render a Fieldset when all the possible props are passed in
     tabIndex="-1">
     This field is required
   </small>
+  <div
+    className="terra-Form-fieldset-children">
+    <input
+      type="radio"
+      value="Test" />
+  </div>
 </fieldset>
 `;
 
 exports[`test should render a default component 1`] = `
 <fieldset
-  className="terra-Form-fieldset" />
+  className="terra-Form-fieldset">
+  <div
+    className="terra-Form-fieldset-children" />
+</fieldset>
 `;
