@@ -5,6 +5,9 @@ import { parse } from 'react-docgen';
 import Markdown from 'terra-markdown';
 
 const propTypes = {
+  /**
+   * markdown file
+   */
   src: PropTypes.string.isRequired,
 };
 
