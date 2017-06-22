@@ -13,8 +13,7 @@ const propTypes = {
    */
   locale: PropTypes.string,
   /**
-   * Customized translations provided by consuming application
-   * only for current locale.
+   * Customized translations provided by consuming application only for current locale.
    */
    /* eslint-disable consistent-return */
   customMessages: (props, propName, componentName) => {

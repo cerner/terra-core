@@ -14,6 +14,46 @@ React component to render a table view for the props metadata of another react c
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-props-table`
 
+## CLI
+Props table is also a command utility used to generate markdown tables. The CLI accepts multiple files as input and has a single output directory.
+
+### Usage
+```
+props-table src/Status.jsx --out-dir ./docs
+```
+
+
+
+```js
+const propTypes = {
+  /**
+   * Child node. Component to display next to the status indicator.
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * The color of the status indicator. Accepts a CSS color value.
+   */
+  color: PropTypes.string,
+};
+
+const Status = ({ color, children }) => {
+  return (
+    <div style={{ borderColor: color }} >
+      {children}
+    </div>
+  );
+};
+
+Status.propTypes = propTypes;
+```
+
+The status react component (above) will generate the markdown table (below).
+
+| Prop Name | Type | Is Required | Default Value | Description |
+|-|-|-|-|-|
+| children| `node`| `required`| | Child node. Component to display next to the status indicator.|
+| color| `string`| optional| | The color of the status indicator. Accepts a CSS color value.|
+
 ## LICENSE
 
 Copyright 2017 Cerner Innovation, Inc.
