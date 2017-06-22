@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
-import 'terra-base/lib/baseStyles';
 // eslint-disable-next-line import/extensions
 import 'github-markdown-css';
 
