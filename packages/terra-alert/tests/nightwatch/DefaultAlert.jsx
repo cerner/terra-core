@@ -1,5 +1,10 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Alert from '../../lib/Alert';
 
-export default () => <Alert type="alert" ><span>This is an alertxxx</span></Alert>;
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
+export default () =>
+  <Base locale={locale}>
+    <Alert >Default Alert</Alert>
+  </Base>;

@@ -80,13 +80,6 @@
   @include terra-margin-end(0);
 }
 
-
-/* default skin */
-.terra-Alert--default {
-  background-color: #f4f4f4;
-  box-shadow: 2px 0 0 #007cc3 inset;
-}
-
 .terra-Alert--alert {
   @include terra-alert-box-shadow($terra-alert-alert-shadow-color);
   @include terra-alert-background-color($terra-alert-alert-color-scheme);
