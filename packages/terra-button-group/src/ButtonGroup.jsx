@@ -85,7 +85,7 @@ class ButtonGroup extends React.Component {
       this.setState({ selectedIndex: index });
 
       if (this.props.onChange) {
-        this.props.onChange(this.state.selectedIndex);
+        this.props.onChange(index);
       }
     }
   }
