@@ -20,7 +20,7 @@ module.exports = {
       .assert.elementNotPresent('option:nth-of-type(2)');
   },
 
-  'Displays a populated SelectField with a defaultValue selected': (browser) => {
+  'Displays a populated SelectField correctly': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/populated`)
       .assert.elementPresent('.terra-Form-field')
@@ -32,7 +32,12 @@ module.exports = {
       .assert.elementPresent('select')
       .assert.elementPresent('.scooby-snacks')
       .assert.elementPresent('option:nth-of-type(2)') // 2 options present
-      .assert.elementNotPresent('option:nth-of-type(3)')
+      .assert.elementNotPresent('option:nth-of-type(3)');
+  },
+
+  'Displays a populated SelectField with a defaultValue selected and can change selection': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/populated`)
       .assert.value('select[name="zounds"]', 'boo')
       .setValue('select[name="zounds"]', 'moo')
       .assert.value('select[name="zounds"]', 'moo');
