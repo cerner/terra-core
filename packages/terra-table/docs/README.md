@@ -70,3 +70,7 @@ import Table from 'terra-table';
   </Table.SingleSelectableRows>
 </Table>
 ```
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)

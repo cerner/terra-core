@@ -3,27 +3,23 @@
 
 .terra-DatePicker {
   display: inline-block;
-  min-width: 14.643em;
-}
+  min-width: 10.714em;
 
-.terra-DatePicker-input {
-  @include terra-border-radius-start(0.286em);
-  @include terra-margin-end(-0.071em);
-  border: 0.071em solid #a7aaab;
-  box-shadow: inset 0 0.143em 0.143em #d3d4d5;
-  font-size: 1em;
-  line-height: 1.143;
-  margin: 0.357em 0;
-  padding: 0.429em 0.714em;
-  vertical-align: middle;
+  .terra-DatePicker-customInput {
+    display: inline-flex;
 
-  &:focus {
-    border-color: #26a2e5;
-    outline: none;
+    .terra-DatePicker-input {
+      @include terra-border-radius-end(0);
+      @include terra-margin-end(-0.071em);
+      vertical-align: middle;
+      width: 8em;
+    }
+
+    .terra-DatePicker-button {
+      @include terra-border-radius-start(0);
+      @include terra-margin-start(-0.071em);
+      margin-bottom: 0;
+      margin-top: 0;
+    }
   }
-}
-
-.terra-DatePicker-button {
-  @include terra-border-radius-start(0);
-  @include terra-margin-start(-0.071em);
 }

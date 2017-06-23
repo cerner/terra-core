@@ -1,6 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-/* eslint-disable no-unused-expressions */
-
+/* eslint-disable no-unused-expressions*/
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -81,6 +80,14 @@ module.exports = {
 
     browser.expect.element('.terra-hidden-date-input').to.have.attribute('name').which.equals('date-input');
     browser.expect.element('.terra-hidden-date-input').to.have.attribute('value').which.equals('2017');
+  },
+
+  'Displays the calendar button with a height that matches the input ': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+
+    browser.getCssProperty('.terra-DatePicker-input', 'height', (result) => {
+      browser.assert.cssProperty('.terra-DatePicker-button', 'height', result.value);
+    });
   },
 };
 
