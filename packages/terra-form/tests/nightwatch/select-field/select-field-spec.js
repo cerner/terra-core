@@ -20,15 +20,17 @@ module.exports = {
       .assert.elementNotPresent('option:nth-of-type(2)');
   },
 
-  'Displays a populated SelectField correctly': (browser) => {
-    browser
+  'Displays a populated SelectField with multiple options': (browser) => {
+    browser // Field attributes
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/populated`)
       .assert.elementPresent('.terra-Form-field')
       .assert.elementPresent('.terra-Form-field--inline')
       .assert.containsText('label', 'Meddling Kids')
       .assert.elementPresent('.mystery-van')
       .assert.containsText('.terra-Form-helpText', 'solve the mystery')
-      .assert.containsText('.terra-Form-error', 'jinkies!')
+      .assert.containsText('.terra-Form-error', 'jinkies!');
+
+    browser // Select attributes
       .assert.elementPresent('select')
       .assert.elementPresent('.scooby-snacks')
       .assert.elementPresent('option:nth-of-type(2)') // 2 options present
