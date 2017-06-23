@@ -64,3 +64,15 @@ it('should render a button group with children', () => {
   ));
   expect(buttonGroup).toMatchSnapshot();
 });
+
+it('should send correct index when onChange is triggered', () => {
+  const onChange = jest.fn();
+  const isSelectable = true;
+  const buttonGroup = shallow(<ButtonGroup onChange={onChange} isSelectable={isSelectable} buttons={[<ButtonGroup.Button key="1" />, <ButtonGroup.Button key="2" />]} />);
+
+  buttonGroup.childAt(1).simulate('click');
+  expect(onChange).toBeCalledWith(1);
+
+  buttonGroup.childAt(0).simulate('click');
+  expect(onChange).toBeCalledWith(0);
+});

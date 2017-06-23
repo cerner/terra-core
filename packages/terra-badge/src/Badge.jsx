@@ -23,7 +23,6 @@ const propTypes = {
   isReversed: PropTypes.bool,
   /**
    * Sets the badge size. One of tiny, small, medium, large, huge.
-   * @type String
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**

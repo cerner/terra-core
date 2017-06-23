@@ -7,6 +7,7 @@ const handleOnChange = (selectedDate) => {
 
 const DatePickerOnChange = () => (
   <DatePicker
+    name="date-input"
     onChange={handleOnChange}
   />
 );
