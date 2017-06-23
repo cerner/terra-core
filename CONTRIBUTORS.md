@@ -23,6 +23,7 @@ Cerner Corporation
 - David Schoonover [@dkschoonover]
 - Christian Alten [@cwalten]
 - Viren Sawant [@viren140290]
+- Matt Schile [@mschile]
 - Madeline Gilbert [@madelineisabelle]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -49,4 +50,5 @@ Cerner Corporation
 [@dkschoonover]: https://github.com/dkschoonover
 [@cwalten]: https://github.com/cwalten
 [@viren140290]: https://github.com/viren140290
+[@mschile]: https://github.com/mschile
 [@madelineisabelle]: https://github.com/madelineisabelle
