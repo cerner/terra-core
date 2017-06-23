@@ -6,8 +6,9 @@ const ImageTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/image-tests/default">Default Image</Link></li>
+      <li><Link to="/tests/image-tests/non-fluid">Non-fluid Image</Link></li>
       <li><Link to="/tests/image-tests/fluid">Fluid Image</Link></li>
-      <li><Link to="/tests/image-tests/non-fluid">Non-fluid Image Image</Link></li>
+      <li><Link to="/tests/image-tests/loading">Loading Image</Link></li>
     </ul>
   </div>
 );

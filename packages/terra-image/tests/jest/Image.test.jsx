@@ -64,3 +64,17 @@ it('should render a circle image component with fluid behavior', () => {
   expect(wrapper.node.props.style).toEqual(imagecontainerStyle1);
   expect(wrapper.unrendered.props.children).toEqual(image);
 });
+
+/* Image with onLoad function */
+it('should render an image with the supplied onLoad function', () => {
+  const onLoadFunc = () => {};
+  const wrapper = shallow(<Image src="" onLoad={onLoadFunc} />);
+  expect(wrapper.prop('onLoad')).toBe(onLoadFunc);
+});
+
+/* Image with onError function */
+it('should render an image with the supplied onError function', () => {
+  const onErrorFunc = () => {};
+  const wrapper = shallow(<Image src="" onError={onErrorFunc} />);
+  expect(wrapper.prop('onError')).toBe(onErrorFunc);
+});
