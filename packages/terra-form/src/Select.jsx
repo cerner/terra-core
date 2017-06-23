@@ -55,11 +55,11 @@ const Select = ({
 
   return (
     <select
+      {...additionalSelectFieldProps}
       name={name}
       required={required}
       onChange={onChange}
       defaultValue={defaultValue}
-      {...additionalSelectFieldProps}
       className={classNames('terra-Form-select', additionalSelectFieldProps.className)}
     >
       {choices.map(choice => <option key={choice.toString()} value={choice}>{choice}</option>)}

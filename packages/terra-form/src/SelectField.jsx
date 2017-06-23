@@ -89,21 +89,21 @@ const SelectField = ({
   ...customProps
 }) => (
   <Field
+    {...customProps}
     error={error}
     help={help}
     isInline={isInline}
     label={label}
     labelAttrs={labelAttrs}
     required={required}
-    {...customProps}
   >
     <Select
+      {...selectAttrs}
       choices={choices}
       onChange={onChange}
       name={name}
       required={required}
       defaultValue={defaultValue}
-      {...selectAttrs}
     />
   </Field>
 );
