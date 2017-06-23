@@ -29,6 +29,14 @@ const propTypes = {
    * Sets the width of the image.
    */
   width: PropTypes.string,
+  /**
+   * Function to be executed when the image load is successful.
+   */
+  onLoad: PropTypes.func,
+  /**
+   * Function to be executed when the image load errors.
+   */
+  onError: PropTypes.func,
 };
 
 const defaultProps = {
@@ -44,6 +52,8 @@ const Image = ({
   alt,
   height,
   width,
+  onLoad,
+  onError,
   ...customProps
 }) => {
   const classes = classNames([
@@ -59,11 +69,12 @@ const Image = ({
       alt={alt}
       height={height}
       width={width}
+      onLoad={onLoad}
+      onError={onError}
       {...customProps}
       className={classes}
     />);
 };
-
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;
