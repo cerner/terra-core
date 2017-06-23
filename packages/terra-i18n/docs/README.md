@@ -27,3 +27,8 @@ Note that the state of the object needs to contain keys as follows for the i18nL
   messages: {},
 }
 ```
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
+* [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
