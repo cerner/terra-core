@@ -10,13 +10,29 @@ const propTypes = {
    */
   endDate: PropTypes.string,
   /**
+   * Name of the endDate input. The name should be unique.
+   */
+  endName: PropTypes.string.isRequired,
+  /**
    * An ISO 8601 string representation of the selected start date.
    */
   startDate: PropTypes.string,
   /**
-   * A callback function to execute when a valid date is selected or entered.
+   * Name of the startDate input. The name should be unique.
+   */
+  startName: PropTypes.string.isRequired,
+  /**
+   * A callback function to execute when a valid date is selected or entered. The parameters in the function are event, start date, end date.
    */
   onChange: PropTypes.func,
+};
+
+const defaultProps = {
+  endDate: undefined,
+  endName: undefined,
+  startDate: undefined,
+  startName: undefined,
+  onChange: undefined,
 };
 
 class DateRange extends React.Component {
@@ -31,45 +47,56 @@ class DateRange extends React.Component {
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
   }
 
-  handleChange({ startDate = this.state.startDate, endDate = this.state.endDate }) {
+  handleChange(event, { startDate = this.state.startDate, endDate = this.state.endDate }) {
     let startDateForRange = startDate;
     let endDateForRange = endDate;
 
-    if (moment(startDateForRange, this.state.format).isAfter(moment(endDateForRange, this.state.format))) {
+    if (moment(startDateForRange).isAfter(moment(endDateForRange))) {
       [startDateForRange, endDateForRange] = [endDateForRange, startDateForRange];
     }
 
     this.setState({ startDate: startDateForRange, endDate: endDateForRange });
 
     if (this.props.onChange) {
-      this.props.onChange(startDateForRange, endDateForRange);
+      this.props.onChange(event, startDateForRange, endDateForRange);
     }
   }
 
-  handleChangeStart(startDate) {
-    this.handleChange({ startDate });
+  handleChangeStart(event, startDate) {
+    this.handleChange(event, { startDate });
   }
 
-  handleChangeEnd(endDate) {
-    this.handleChange({ endDate });
+  handleChangeEnd(event, endDate) {
+    this.handleChange(event, { endDate });
   }
 
   render() {
+    const {
+      endDate,
+      endName,
+      startDate,
+      startName,
+      onChange,
+      ...customProps
+    } = this.props;
+
     return (<div className="terra-DatePicker-range">
       <DatePicker
-        {...this.props}
+        {...customProps}
         selectedDate={this.state.startDate}
         isStartDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
+        name={startName}
         onChange={this.handleChangeStart}
       />
       <DatePicker
-        {...this.props}
+        {...customProps}
         selectedDate={this.state.endDate}
         isEndDateRange
         startDate={this.state.startDate}
         endDate={this.state.endDate}
+        name={endName}
         onChange={this.handleChangeEnd}
       />
     </div>);
@@ -77,5 +104,6 @@ class DateRange extends React.Component {
 }
 
 DateRange.propTypes = propTypes;
+DateRange.defaultProps = defaultProps;
 
 export default DateRange;

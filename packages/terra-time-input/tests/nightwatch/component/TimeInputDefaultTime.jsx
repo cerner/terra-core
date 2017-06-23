@@ -7,6 +7,7 @@ const handleOnChange = (event, time) => {
 
 const TimeInputDefault = () => (
   <TimeInput
+    name="time-input"
     value={'12:00'}
     onChange={handleOnChange}
   />

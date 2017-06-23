@@ -1,4 +1,4 @@
-exports[`test should render a date picker with filtered dates 1`] = `
+exports[`test should render a date picker with disabled dates 1`] = `
 <ResponsiveElement
   className="terra-DatePicker"
   defaultElement={
@@ -9,10 +9,22 @@ exports[`test should render a date picker with filtered dates 1`] = `
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
-      filterDate={[Function]}
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
       monthsShown={1}
+      name="date-input"
       onBlur={[Function]}
       onChange={[Function]}
       onClickOutside={[Function]}
@@ -23,8 +35,7 @@ exports[`test should render a date picker with filtered dates 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
+      selected={"2017-01-01T00:00:00.000Z"}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -48,10 +59,22 @@ exports[`test should render a date picker with filtered dates 1`] = `
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
-      filterDate={[Function]}
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
       monthsShown={1}
+      name="date-input"
       onBlur={[Function]}
       onChange={[Function]}
       onClickOutside={[Function]}
@@ -62,8 +85,7 @@ exports[`test should render a date picker with filtered dates 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
+      selected={"2017-01-01T00:00:00.000Z"}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -80,23 +102,7 @@ exports[`test should render a date picker with filtered dates 1`] = `
   } />
 `;
 
-exports[`test should render a date range 1`] = `
-<div
-  className="terra-DatePicker-range">
-  <DatePicker
-    isEndDateRange={false}
-    isStartDateRange={true}
-    onChange={[Function]}
-    utcOffset={0} />
-  <DatePicker
-    isEndDateRange={true}
-    isStartDateRange={false}
-    onChange={[Function]}
-    utcOffset={0} />
-</div>
-`;
-
-exports[`test should render a default date input and date picker 1`] = `
+exports[`test should render a date picker with filtered dates 1`] = `
 <ResponsiveElement
   className="terra-DatePicker"
   defaultElement={
@@ -107,9 +113,23 @@ exports[`test should render a default date input and date picker 1`] = `
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      filterDate={[Function]}
       fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
       monthsShown={1}
+      name="date-input"
       onBlur={[Function]}
       onChange={[Function]}
       onClickOutside={[Function]}
@@ -120,8 +140,7 @@ exports[`test should render a default date input and date picker 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
+      selected={"2017-01-01T00:00:00.000Z"}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -145,9 +164,23 @@ exports[`test should render a default date input and date picker 1`] = `
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      filterDate={[Function]}
       fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
       monthsShown={1}
+      name="date-input"
       onBlur={[Function]}
       onChange={[Function]}
       onClickOutside={[Function]}
@@ -158,8 +191,319 @@ exports[`test should render a default date input and date picker 1`] = `
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
+      selected={"2017-01-01T00:00:00.000Z"}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={false} />
+  } />
+`;
+
+exports[`test should render a date picker with included dates 1`] = `
+<ResponsiveElement
+  className="terra-DatePicker"
+  defaultElement={
+    <t
+      customInput={<DatePickerInput />}
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
+      monthsShown={1}
+      name="date-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selected={"2017-01-01T00:00:00.000Z"}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={true} />
+  }
+  responsiveTo="window"
+  small={
+    <t
+      customInput={<DatePickerInput />}
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
+      monthsShown={1}
+      name="date-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selected={"2017-01-01T00:00:00.000Z"}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={false} />
+  } />
+`;
+
+exports[`test should render a date picker with min and max dates 1`] = `
+<ResponsiveElement
+  className="terra-DatePicker"
+  defaultElement={
+    <t
+      customInput={<DatePickerInput />}
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
+      monthsShown={1}
+      name="date-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selected={"2017-01-01T00:00:00.000Z"}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={true} />
+  }
+  responsiveTo="window"
+  small={
+    <t
+      customInput={<DatePickerInput />}
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
+      monthsShown={1}
+      name="date-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selected={"2017-01-01T00:00:00.000Z"}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={false} />
+  } />
+`;
+
+exports[`test should render a default date input and date picker 1`] = `
+<ResponsiveElement
+  className="terra-DatePicker"
+  defaultElement={
+    <t
+      customInput={<DatePickerInput />}
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
+      monthsShown={1}
+      name="date-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selected={"2017-01-01T00:00:00.000Z"}
+      showMonthDropdown={true}
+      showYearDropdown={true}
+      tetherConstraints={
+        Array [
+          Object {
+            "attachment": "together",
+            "to": "window",
+          },
+        ]
+      }
+      todayButton="Today"
+      utcOffset={0}
+      withPortal={true} />
+  }
+  responsiveTo="window"
+  small={
+    <t
+      customInput={<DatePickerInput />}
+      dateFormat="MM/DD/YYYY"
+      dateFormatCalendar=" "
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
+      locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
+      monthsShown={1}
+      name="date-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      placeholderText="MM/DD/YYYY"
+      popoverAttachment="top left"
+      popoverTargetAttachment="bottom left"
+      popoverTargetOffset="10px 0"
+      selected={"2017-01-01T00:00:00.000Z"}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -186,7 +530,6 @@ exports[`test should render a default date input with custom input attributes 1`
           inputAttributes={
             Object {
               "id": "terra-date-input",
-              "name": "date-input",
             }
           } />
       }
@@ -195,9 +538,22 @@ exports[`test should render a default date input with custom input attributes 1`
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
       monthsShown={1}
+      name="date-input"
       onBlur={[Function]}
       onChange={[Function]}
       onClickOutside={[Function]}
@@ -208,8 +564,7 @@ exports[`test should render a default date input with custom input attributes 1`
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
+      selected={"2017-01-01T00:00:00.000Z"}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={
@@ -232,7 +587,6 @@ exports[`test should render a default date input with custom input attributes 1`
           inputAttributes={
             Object {
               "id": "terra-date-input",
-              "name": "date-input",
             }
           } />
       }
@@ -241,9 +595,22 @@ exports[`test should render a default date input with custom input attributes 1`
       disabled={false}
       disabledKeyboardNavigation={false}
       dropdownMode="select"
+      excludeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       fixedHeight={true}
+      includeDates={
+        Array [
+          "2017-01-01T00:00:00.000Z",
+        ]
+      }
       locale="en-US"
+      maxDate={"2017-01-01T00:00:00.000Z"}
+      minDate={"2017-01-01T00:00:00.000Z"}
       monthsShown={1}
+      name="date-input"
       onBlur={[Function]}
       onChange={[Function]}
       onClickOutside={[Function]}
@@ -254,8 +621,7 @@ exports[`test should render a default date input with custom input attributes 1`
       popoverAttachment="top left"
       popoverTargetAttachment="bottom left"
       popoverTargetOffset="10px 0"
-      selectsEnd={false}
-      selectsStart={false}
+      selected={"2017-01-01T00:00:00.000Z"}
       showMonthDropdown={true}
       showYearDropdown={true}
       tetherConstraints={

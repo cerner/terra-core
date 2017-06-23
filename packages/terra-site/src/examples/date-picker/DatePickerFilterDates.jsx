@@ -9,6 +9,7 @@ const isWeekday = (date) => {
 const DatePickerFilterDates = () => (
   <div>
     <DatePicker
+      name="date-input-filter"
       filterDate={isWeekday}
     />
   </div>
