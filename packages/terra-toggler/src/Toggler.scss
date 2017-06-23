@@ -1,3 +1,8 @@
+
 .terra-Toggler {
   padding-top: 0.5rem;
+}
+
+.terra-Toggler.is-closed {
+  visibility: hidden; // disables focus on focusable children
 }

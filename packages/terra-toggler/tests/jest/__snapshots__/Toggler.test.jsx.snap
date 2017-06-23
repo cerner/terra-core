@@ -8,14 +8,12 @@ exports[`Toggler should render an animated toggler 1`] = `
 <div
   aria-hidden="true"
   class="terra-Toggler is-animated">
-  <div>
-    <div
-      aria-hidden="false"
-      class="rah-static"
-      style="height:0px;overflow:hidden;">
-      <div>
-        Test
-      </div>
+  <div
+    aria-hidden="false"
+    class="rah-static"
+    style="height:0px;overflow:hidden;">
+    <div>
+      Test
     </div>
   </div>
 </div>
