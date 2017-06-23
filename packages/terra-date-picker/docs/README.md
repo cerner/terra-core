@@ -7,8 +7,8 @@ This is a controlled component because it manages the state of the value in the 
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-date-picker` 
-  - `yarn add terra-date-picker` 
+  - `npm install terra-date-picker`
+  - `yarn add terra-date-picker`
 
 ## Usage
 
@@ -34,3 +34,9 @@ const isWeekday = (date) => {
 
 [1]: https://github.com/Hacker0x01/react-datepicker
 [2]: http://momentjs.com/docs/
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
+* [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
