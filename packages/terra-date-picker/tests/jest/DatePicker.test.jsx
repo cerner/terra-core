@@ -1,6 +1,14 @@
 import React from 'react';
+import moment from 'moment';
 import DatePicker from '../../lib/DatePicker';
-import DateRange from '../../lib/DateRange';
+import DateUtil from '../../lib/DateUtil';
+
+// Mock the following functions so that they always return a consistent date.
+// Otherwise, a date with a different offset would be created based on the the timezone where the tests are executed.
+DateUtil.createSafeDate = jest.genMockFn();
+DateUtil.filterInvalidDates = jest.genMockFn();
+DateUtil.createSafeDate.mockImplementation(() => moment.utc('2017-01-01'));
+DateUtil.filterInvalidDates.mockImplementation(() => [moment.utc('2017-01-01')]);
 
 const isWeekday = (date) => {
   const day = date.day();
@@ -8,59 +16,37 @@ const isWeekday = (date) => {
 };
 
 it('should render a default date input and date picker', () => {
-  const datePicker = <DatePicker utcOffset={0} />;
+  const datePicker = <DatePicker name="date-input" utcOffset={0} />;
   const wrapper = shallow(datePicker);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a default date input with custom input attributes', () => {
-  const datePicker = <DatePicker utcOffset={0} inputAttributes={{ name: 'date-input', id: 'terra-date-input' }} />;
+  const datePicker = <DatePicker name="date-input" utcOffset={0} inputAttributes={{ id: 'terra-date-input' }} />;
   const wrapper = shallow(datePicker);
-  expect(wrapper).toMatchSnapshot();
-});
-
-it('should render a date range', () => {
-  const dateRange = <DateRange utcOffset={0} />;
-  const wrapper = shallow(dateRange);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a date picker with filtered dates', () => {
-  const datePicker = <DatePicker filterDate={isWeekday} utcOffset={0} />;
+  const datePicker = <DatePicker filterDate={isWeekday} name="date-input" utcOffset={0} />;
   const wrapper = shallow(datePicker);
   expect(wrapper).toMatchSnapshot();
 });
 
-// The tests below are commented out for now. The reason being that the timezone on Travis CI is different from the local timezone and causes time offset differences in the snapshot.
-// There are a few ways to address this.
-//   - Configure moment to use a global timezone. This option would require a dependency on moment-timezone.
-//   - Run these test only in a specific timezone so that the snapshot is predictable. This would require moment-timezone to detect the current time-zone.
-//   - Mock the moment object. Because the moment object is really large, mocking it would be tricky.
+it('should render a date picker with disabled dates', () => {
+  const datePicker = (<DatePicker name="date-input" excludeDates={['2017-04-01']} utcOffset={0} />);
+  const wrapper = shallow(datePicker);
+  expect(wrapper).toMatchSnapshot();
+});
 
-// it('should render a date picker with disabled dates', () => {
-//   const datePicker = (<DatePicker
-//     excludeDates={['04-01-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
-//     utcOffset={0}
-//   />);
-//   const wrapper = shallow(datePicker);
-//   expect(wrapper).toMatchSnapshot();
-// });
+it('should render a date picker with included dates', () => {
+  const datePicker = (<DatePicker name="date-input" includeDates={['2017-04-01']} utcOffset={0} />);
+  const wrapper = shallow(datePicker);
+  expect(wrapper).toMatchSnapshot();
+});
 
-// it('should render a date picker with included dates', () => {
-//   const datePicker = (<DatePicker
-//     includeDates={['04-01-2017T00:00:00.000Z', '04-02-2017T00:00:00.000Z', '04-03-2017T00:00:00.000Z']}
-//     utcOffset={0}
-//   />);
-//   const wrapper = shallow(datePicker);
-//   expect(wrapper).toMatchSnapshot();
-// });
-
-// it('should render a date picker with min and max dates', () => {
-//   const datePicker = (<DatePicker
-//     minDate={'04-01-20171T00:00:00.000Z'}
-//     maxDate={'04-10-2017T00:00:00.000Z'}
-//     utcOffset={0}
-//   />);
-//   const wrapper = shallow(datePicker);
-//   expect(wrapper).toMatchSnapshot();
-// });
+it('should render a date picker with min and max dates', () => {
+  const datePicker = (<DatePicker name="date-input" minDate={'2017-04-01'} maxDate={'2017-04-10'} utcOffset={0} />);
+  const wrapper = shallow(datePicker);
+  expect(wrapper).toMatchSnapshot();
+});
