@@ -12,20 +12,21 @@ import DatePickerSrc from '!raw-loader!terra-date-picker/src/DatePicker';
 import DatePickerFilterDates from './DatePickerFilterDates';
 import DatePickerOnChange from './DatePickerOnChange';
 
-const dateFormat = 'MM/DD/YYYY';
-
 const DatePickerExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={DatePickerSrc} />
     <h2 id="default">Default</h2>
-    <DatePicker />
+    <DatePicker
+      name="date-input-default"
+    />
     <br />
     <br />
     <h2 id="exclude-dates">ExcludeDates</h2>
     <DatePicker
-      excludeDates={[moment().subtract(1, 'days').format(dateFormat), moment().add(1, 'days').format(dateFormat)]}
+      name="date-input-exclude"
+      excludeDates={[moment().subtract(1, 'days').format(), moment().add(1, 'days').format()]}
     />
     <br />
     <br />
@@ -34,14 +35,16 @@ const DatePickerExamples = () => (
     <br />
     <h2 id="include-dates">Include Dates</h2>
     <DatePicker
-      includeDates={[moment().format(dateFormat), moment().subtract(1, 'days').format(dateFormat), moment().add(1, 'days').format(dateFormat)]}
+      name="date-input-include"
+      includeDates={[moment().format(), moment().subtract(1, 'days').format(), moment().add(1, 'days').format()]}
     />
     <br />
     <br />
     <h2 id="min-max">Min Max</h2>
     <DatePicker
-      minDate={moment().format(dateFormat)}
-      maxDate={moment().add(6, 'days').format(dateFormat)}
+      name="date-input-min-max"
+      minDate={moment().format()}
+      maxDate={moment().add(6, 'days').format()}
     />
     <br />
     <br />
@@ -50,7 +53,8 @@ const DatePickerExamples = () => (
     <br />
     <h2 id="start-date">Default Date</h2>
     <DatePicker
-      selectedDate={moment().format(dateFormat)}
+      name="date-input-default-date"
+      selectedDate={moment().format()}
     />
   </div>
 );

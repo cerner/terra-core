@@ -21,7 +21,7 @@ const propTypes = {
    */
   includeDates: PropTypes.arrayOf(PropTypes.string),
   /**
-   * Custom input attributes to apply to the date input.
+   * Custom input attributes to apply to the date input. Use the name prop to set the name for the input. Do not set the name in inputAttribute as it will be ignored.
    */
   inputAttributes: PropTypes.object,
   /**
@@ -33,16 +33,29 @@ const propTypes = {
    */
   minDate: PropTypes.string,
   /**
-   * A callback function to execute when a valid date is selected or entered.
+   * Name of the date input. The name should be unique.
+   */
+  name: PropTypes.string.isRequired,
+  /**
+   * A callback function to execute when a valid date is selected or entered. The first parameter is the event. The second parameter is the changed date value.
    */
   onChange: PropTypes.func,
   /**
-   * An ISO 8601 string representation of the initial default date to show in the date input. This prop name is derived from react-datepicker but is analogous to defaultValue for a form input field.
+   * An ISO 8601 string representation of the initial value to show in the date input. This prop name is derived from react-datepicker but is analogous to value in a form input field.
    */
   selectedDate: PropTypes.string,
 };
 
 const defaultProps = {
+  excludeDates: undefined,
+  filterDate: undefined,
+  includeDates: undefined,
+  inputAttributes: undefined,
+  maxDate: undefined,
+  minDate: undefined,
+  name: undefined,
+  onChange: undefined,
+  selectedDate: undefined,
 };
 
 class DatePicker extends React.Component {
@@ -52,20 +65,19 @@ class DatePicker extends React.Component {
     this.state = {
       locale: 'en-US', // TODO: Get the locale from i18n
       dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
-      selectedDate: DateUtil.createSafeDate(props.selectedDate, 'MM/DD/YYYY'),
+      selectedDate: DateUtil.createSafeDate(props.selectedDate),
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(date) {
+  handleChange(date, event) {
     this.setState({
       selectedDate: date,
     });
 
     if (this.props.onChange) {
-      const dateString = date && date.isValid() ? date.format(this.state.dateFormat) : '';
-      this.props.onChange(dateString);
+      this.props.onChange(event, date.format());
     }
   }
 
@@ -77,6 +89,7 @@ class DatePicker extends React.Component {
       includeDates,
       maxDate,
       minDate,
+      name,
       selectedDate,
       ...customProps
     } = this.props;
@@ -84,10 +97,10 @@ class DatePicker extends React.Component {
     // TODO: Need translation from date_util
     const todayString = 'Today';
 
-    const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates, this.state.dateFormat);
-    const includeMomentDates = DateUtil.filterInvalidDates(includeDates, this.state.dateFormat);
-    const maxMomentDate = DateUtil.createSafeDate(maxDate, this.state.dateFormat);
-    const minMomentDate = DateUtil.createSafeDate(minDate, this.state.dateFormat);
+    const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates);
+    const includeMomentDates = DateUtil.filterInvalidDates(includeDates);
+    const maxMomentDate = DateUtil.createSafeDate(maxDate);
+    const minMomentDate = DateUtil.createSafeDate(minDate);
 
     const portalPicker =
       (<ReactDatePicker
@@ -110,6 +123,7 @@ class DatePicker extends React.Component {
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
+        name={name}
       />);
 
     const popupPicker =
@@ -132,6 +146,7 @@ class DatePicker extends React.Component {
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
+        name={name}
       />);
 
     return (
