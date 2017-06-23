@@ -24,6 +24,7 @@ Cerner Corporation
 - Christian Alten [@cwalten]
 - Viren Sawant [@viren140290]
 - Douglas Williams [@doogthemushroom]
+- Matt Schile [@mschile]
 - Madeline Gilbert [@madelineisabelle]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -51,4 +52,5 @@ Cerner Corporation
 [@cwalten]: https://github.com/cwalten
 [@viren140290]: https://github.com/viren140290
 [@doogthemushroom]: https://github.com/doogthemushroom
+[@mschile]: https://github.com/mschile
 [@madelineisabelle]: https://github.com/madelineisabelle
