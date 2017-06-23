@@ -13,13 +13,6 @@ module.exports = {
     screenshot(browser, 'terra-base', done);
   },
 
-  'Displays html with terra-Base class': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/base-tests/default`)
-      .waitForElementVisible('body', waitInms);
-
-    browser.assert.cssClassPresent('html', 'terra-Base');
-  },
 
   'Displays a customized en locale message': (browser) => {
     browser
