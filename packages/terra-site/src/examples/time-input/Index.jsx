@@ -22,6 +22,8 @@ const TimeInputExamples = () => (
     <PropsTable id="props" src={TimeInputSrc} />
     <h2 id="default">Without Default Time</h2>
     <TimeInput />
+    <br />
+    <br />
     <h2 id="default">With Default Time</h2>
     <TimeInput
       value={moment().format('HH:mm')}
