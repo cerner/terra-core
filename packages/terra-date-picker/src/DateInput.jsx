@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
+import Input from 'terra-form/lib/Input';
 import DateUtil from './DateUtil';
 
 const Icon = <IconCalendar />;
@@ -51,7 +52,24 @@ const defaultProps = {
 // eslint-disable-next-line react/prefer-stateless-function
 class DatePickerInput extends React.Component {
   render() {
-    const dateValue = DateUtil.convertToISO8601(this.props.value, 'MM/DD/YYYY');
+    const {
+      inputAttributes,
+      name,
+      onChange,
+      onClick,
+      onKeyDown,
+      placeholder,
+      value,
+      ...customProps
+    } = this.props;
+
+    const additionalInputProps = Object.assign({}, inputAttributes, customProps);
+
+    // react-datepicker by default will show the picker when the input has focus.
+    // Since we want to show the picker only when the calendar button is clicked, we need to delete the onFocus handle that is passed in by react-datepicker.
+    delete additionalInputProps.onFocus;
+
+    const dateValue = DateUtil.convertToISO8601(value, 'MM/DD/YYYY');
 
     return (
       (<div className="terra-DatePicker-customInput">
@@ -60,23 +78,24 @@ class DatePickerInput extends React.Component {
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
           className="terra-hidden-date-input"
           type="hidden"
-          name={this.props.name}
+          name={name}
           value={dateValue}
         />
-        <input
-          {...this.props.inputAttributes} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
+        <Input
+          {...additionalInputProps} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
           className="terra-DatePicker-input"
           type="text"
-          name={'terra-date-'.concat(this.props.name)}
-          value={this.props.value}
-          onChange={this.props.onChange}
-          placeholder={this.props.placeholder}
+          name={'terra-date-'.concat(name)}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
         />
         <Button
           className="terra-DatePicker-button"
-          onClick={this.props.onClick}
-          onKeyDown={this.props.onKeyDown}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
           icon={Icon}
+          isCompact
           type="button"
         />
       </div>)
