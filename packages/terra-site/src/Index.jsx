@@ -29,7 +29,7 @@ import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TextExamples from './examples/text/Index';
 import TimeInputExamples from './examples/time-input/Index';
-import TogglerExamples from './examples/toggler/Index';
+import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
 
 // Test Routes
@@ -61,7 +61,7 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
-import TogglerTestRoutes from 'terra-toggler/tests/nightwatch/TogglerTestRoutes';
+import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
 
 import TestLinks from './TestLinks';
@@ -95,7 +95,7 @@ ReactDOM.render((
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="time-input" component={TimeInputExamples} />
-      <Route path="toggler" component={TogglerExamples} />
+      <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
@@ -125,7 +125,7 @@ ReactDOM.render((
     {IconTestRoutes}
     {SearchFieldTestRoutes}
     {FormTestRoutes}
-    {TogglerTestRoutes}
+    {ToggleTestRoutes}
     {ToggleButtonTestRoutes}
     {HeadingTestRoutes}
     {TextTestRoutes}

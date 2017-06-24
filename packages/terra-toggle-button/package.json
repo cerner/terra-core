@@ -32,7 +32,7 @@
     "terra-button": "^0.x",
     "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0",
-    "terra-toggler": "^0.x"
+    "terra-toggle": "^0.x"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -42,7 +42,7 @@
     "terra-button": "^0.x",
     "terra-icon": "^0.x",
     "terra-mixins": "^1.0.0",
-    "terra-toggler": "^0.x"
+    "terra-toggle": "^0.x"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

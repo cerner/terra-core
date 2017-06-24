@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import IconChevronRight from 'terra-icon/lib/icon/IconChevronRight';
-import Toggler from 'terra-toggler';
+import Toggle from 'terra-toggle';
 import 'terra-base/lib/baseStyles';
 import './ToggleButton.scss';
 
@@ -84,7 +84,7 @@ class ToggleButton extends React.Component {
   handleOnClick(e) {
     e.preventDefault();
 
-    // Fire event from toggler handlers
+    // Fire event from toggle handlers
     if (!this.state.isOpen && this.props.onOpen) {
       this.props.onOpen();
     } else if (this.state.isOpen && this.props.onClose) {
@@ -152,9 +152,9 @@ class ToggleButton extends React.Component {
     return (
       <div {...customProps} className={toggleButtonClass}>
         {button}
-        <Toggler isOpen={this.state.isOpen} isAnimated={this.props.isAnimated}>
+        <Toggle isOpen={this.state.isOpen} isAnimated={this.props.isAnimated}>
           {this.props.children}
-        </Toggler>
+        </Toggle>
       </div>
     );
   }

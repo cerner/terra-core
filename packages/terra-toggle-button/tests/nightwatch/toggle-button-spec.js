@@ -38,7 +38,7 @@ module.exports = {
   'Displays an animated toggle-button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/animated`)
-      .assert.elementPresent('.terra-Toggler.is-animated');
+      .assert.elementPresent('.terra-Toggle.is-animated');
   },
 
   'Displays a toggle-button with animated icon': (browser) => {
@@ -57,7 +57,7 @@ module.exports = {
   'Displays an initially open toggle-button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/initially-open`)
-      .assert.attributeContains('.terra-Toggler', 'aria-hidden', 'false');
+      .assert.attributeContains('.terra-Toggle', 'aria-hidden', 'false');
   },
 
   'Displays a toggle-button with customized openedButtonText': (browser) => {
@@ -99,7 +99,7 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/default`)
       .click('.terra-Button')
-      .waitForElementPresent('.terra-Toggler', 1000)
-      .expect.element('.terra-Toggler').to.have.attribute('aria-hidden').to.equal('false');
+      .waitForElementPresent('.terra-Toggle', 1000)
+      .expect.element('.terra-Toggle').to.have.attribute('aria-hidden').to.equal('false');
   },
 };

@@ -75,7 +75,7 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/table">Table</Link>} />
                 <List.Item content={<Link to="/site/text">Text</Link>} />
                 <List.Item content={<Link to="/site/time-input">Time Input</Link>} />
-                <List.Item content={<Link to="/site/toggler">Toggler</Link>} />
+                <List.Item content={<Link to="/site/toggle">Toggle</Link>} />
                 <List.Item content={<Link to="/site/toggle-button">Toggle Button</Link>} />
                 <List.Item content={<Link to="/tests">Tests</Link>} />
               </List>

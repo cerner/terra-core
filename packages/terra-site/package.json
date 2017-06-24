@@ -59,7 +59,7 @@
     "terra-table": "^0.9.0",
     "terra-text": "^0.2.0",
     "terra-time-input": "^0.4.0",
-    "terra-toggler": "^0.x",
+    "terra-toggle": "^0.x",
     "terra-toggle-button": "^0.x"
   },
   "peerDependencies": {

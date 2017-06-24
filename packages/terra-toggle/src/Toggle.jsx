@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 import 'terra-base/lib/baseStyles';
-import './Toggler.scss';
+import './Toggle.scss';
 
 const propTypes = {
   /**
-   * Content in the body of the toggler component that will be expanded or collapsed
+   * Content in the body of the toggle component that will be expanded or collapsed
    */
   children: PropTypes.node.isRequired,
   /**
-   * When set, will animate the toggler component as it is expanded or collapsed
+   * When set, will animate the toggle component as it is expanded or collapsed
    */
   isAnimated: PropTypes.bool,
   /**
-   * Used to expand or collapse toggler content
+   * Used to expand or collapse toggle content
    */
   isOpen: PropTypes.bool,
 };
@@ -26,7 +26,7 @@ const defaultProps = {
   isOpen: false,
 };
 
-class Toggler extends React.Component {
+class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnAnimationEnd = this.handleOnAnimationEnd.bind(this);
@@ -35,8 +35,8 @@ class Toggler extends React.Component {
   }
 
   componentDidMount() {
-    // If toggler is closed when the component mounts, set props on all the focusable elements
-    // within the toggler to disable users from focusing to them
+    // If toggle is closed when the component mounts, set props on all the focusable elements
+    // within the toggle to disable users from focusing to them
     if (!this.props.isOpen) {
       if (this.contentContainer) {
         this.contentContainer.classList.add('is-closed');
@@ -45,8 +45,8 @@ class Toggler extends React.Component {
   }
 
   handleOnAnimationEnd(open) {
-    // If toggler is closed and the close animation has ended, set props on all the focusable elements
-    // within the toggler to disable users from focusing to them
+    // If toggle is closed and the close animation has ended, set props on all the focusable elements
+    // within the toggle to disable users from focusing to them
     if (!open) {
       if (this.contentContainer) {
         setTimeout(() => this.contentContainer.classList.add('is-closed'), this.animationDuration);
@@ -55,8 +55,8 @@ class Toggler extends React.Component {
   }
 
   handleOnAnimationStart(open) {
-    // If toggler is opened and the open animation has started, remove props on all the focusable elements
-    // within the toggler that disable users from focusing to them
+    // If toggle is opened and the open animation has started, remove props on all the focusable elements
+    // within the toggle that disable users from focusing to them
     if (open) {
       if (this.contentContainer) {
         this.contentContainer.classList.remove('is-closed');
@@ -67,8 +67,8 @@ class Toggler extends React.Component {
   render() {
     const { isAnimated, isOpen, children, ...customProps } = this.props;
     const attributes = Object.assign({}, customProps);
-    const TogglerClassNames = classNames([
-      'terra-Toggler',
+    const ToggleClassNames = classNames([
+      'terra-Toggle',
       { 'is-animated': isAnimated },
       attributes.className,
     ]);
@@ -77,7 +77,7 @@ class Toggler extends React.Component {
 
     if (isAnimated) {
       body = (
-        <div className="terra-Toggler-content" ref={(div) => { this.contentContainer = div; }}>
+        <div className="terra-Toggle-content" ref={(div) => { this.contentContainer = div; }}>
           <AnimateHeight
             duration={this.animationDuration}
             height={height}
@@ -97,7 +97,7 @@ class Toggler extends React.Component {
     return (
       <div
         {...attributes}
-        className={TogglerClassNames}
+        className={ToggleClassNames}
         aria-hidden={!isOpen}
       >
         {body}
@@ -106,7 +106,7 @@ class Toggler extends React.Component {
   }
 }
 
-Toggler.propTypes = propTypes;
-Toggler.defaultProps = defaultProps;
+Toggle.propTypes = propTypes;
+Toggle.defaultProps = defaultProps;
 
-export default Toggler;
+export default Toggle;

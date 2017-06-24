@@ -32,7 +32,7 @@ const TestLinks = () => (
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
       <li><Link to="/tests/text-tests">Text Tests</Link></li>
       <li><Link to="/tests/time-input-tests">Time Input Tests</Link></li>
-      <li><Link to="/tests/toggler-tests">Toggler Tests</Link></li>
+      <li><Link to="/tests/toggle-tests">Toggle Tests</Link></li>
       <li><Link to="/tests/toggle-button-tests">Toggle Button Tests</Link></li>
     </ul>
   </div>

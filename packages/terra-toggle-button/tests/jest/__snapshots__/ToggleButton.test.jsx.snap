@@ -39,7 +39,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggler" />
+    class="terra-Toggle" />
 </div>
 `;
 
@@ -84,9 +84,9 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggler is-animated">
+    class="terra-Toggle is-animated">
     <div
-      class="terra-Toggler-content">
+      class="terra-Toggle-content">
       <div
         aria-hidden="false"
         class="rah-static"
@@ -127,7 +127,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggler" />
+    class="terra-Toggle" />
 </div>
 `;
 
@@ -172,7 +172,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
   </button>
   <div
     aria-hidden="false"
-    class="terra-Toggler">
+    class="terra-Toggle">
     Test
   </div>
 </div>
@@ -282,15 +282,15 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
         </Arrange>
       </button>
     </Button>
-    <Toggler
+    <Toggle
       isAnimated={false}
       isOpen={true}>
       <div
         aria-hidden={false}
-        className="terra-Toggler">
+        className="terra-Toggle">
         Test
       </div>
-    </Toggler>
+    </Toggle>
   </div>
 </ToggleButton>
 `;
@@ -327,11 +327,11 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
         </span>
       } />
   </Button>
-  <Toggler
+  <Toggle
     isAnimated={false}
     isOpen={false}>
     Test
-  </Toggler>
+  </Toggle>
 </div>
 `;
 
@@ -366,10 +366,10 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
         </span>
       } />
   </Button>
-  <Toggler
+  <Toggle
     isAnimated={false}
     isOpen={false}>
     Test
-  </Toggler>
+  </Toggle>
 </div>
 `;
