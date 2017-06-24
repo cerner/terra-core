@@ -77,14 +77,16 @@ class Toggler extends React.Component {
 
     if (isAnimated) {
       body = (
-        <AnimateHeight
-          duration={this.animationDuration}
-          height={height}
-          onAnimationEnd={this.handleOnAnimationEnd(isOpen)}
-          onAnimationStart={this.handleOnAnimationStart(isOpen)}
-        >
-          {children}
-        </AnimateHeight>
+        <div className="terra-Toggler-content" ref={(div) => { this.contentContainer = div; }}>
+          <AnimateHeight
+            duration={this.animationDuration}
+            height={height}
+            onAnimationEnd={this.handleOnAnimationEnd(isOpen)}
+            onAnimationStart={this.handleOnAnimationStart(isOpen)}
+          >
+            {children}
+          </AnimateHeight>
+        </div>
       );
     } else {
       body = (
@@ -97,7 +99,6 @@ class Toggler extends React.Component {
         {...attributes}
         className={TogglerClassNames}
         aria-hidden={!isOpen}
-        ref={(div) => { this.contentContainer = div; }}
       >
         {body}
       </div>

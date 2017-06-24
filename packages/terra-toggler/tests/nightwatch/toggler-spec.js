@@ -44,20 +44,20 @@ module.exports = {
   'Disables focusable elements within animated toggler when closed': (browser) => {
     browser
      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggler-tests/animated`)
-     .assert.cssClassPresent('.terra-Toggler', 'is-closed')
-     .assert.cssProperty('.terra-Toggler.is-closed', 'visibility', 'hidden')
+     .assert.cssClassPresent('.terra-Toggler-content', 'is-closed')
+     .assert.cssProperty('.terra-Toggler-content.is-closed', 'visibility', 'hidden')
      .click('button') // Opens toggler
      .click('button') // Closes toggler
-     .waitForElementPresent('.terra-Toggler.is-closed', 1000)
-     .assert.cssClassPresent('.terra-Toggler', 'is-closed')
-     .assert.cssProperty('.terra-Toggler.is-closed', 'visibility', 'hidden');
+     .waitForElementPresent('.terra-Toggler-content.is-closed', 1000)
+     .assert.cssClassPresent('.terra-Toggler-content', 'is-closed')
+     .assert.cssProperty('.terra-Toggler-content.is-closed', 'visibility', 'hidden');
   },
 
   'Enables focusable elements within animated toggler when opened': (browser) => {
     browser
      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggler-tests/animated`)
      .click('button')
-     .assert.cssClassNotPresent('.terra-Toggler', 'is-closed')
-     .assert.cssProperty('.terra-Toggler', 'visibility', 'visible');
+     .assert.cssClassNotPresent('.terra-Toggler-content', 'is-closed')
+     .assert.cssProperty('.terra-Toggler-content', 'visibility', 'visible');
   },
 };

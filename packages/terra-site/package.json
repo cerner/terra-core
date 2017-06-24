@@ -36,7 +36,6 @@
     "terra-base": "^0.8.0",
     "terra-button": "^0.8.0",
     "terra-button-group": "^0.6.0",
-    "terra-collapse": "^0.x",
     "terra-content-container": "^0.6.0",
     "terra-date-picker": "^0.7.0",
     "terra-demographics-banner": "^0.7.0",
@@ -59,8 +58,9 @@
     "terra-status": "^0.7.0",
     "terra-table": "^0.9.0",
     "terra-text": "^0.2.0",
-    "terra-time-input": "^0.4.0"
-    "terra-toggler": "^0.x"
+    "terra-time-input": "^0.4.0",
+    "terra-toggler": "^0.x",
+    "terra-toggle-button": "^0.x"
   },
   "peerDependencies": {
     "react": "^15.4.2",
