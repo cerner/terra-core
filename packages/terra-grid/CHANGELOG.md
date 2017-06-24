@@ -1,6 +1,14 @@
 Terra Grid Changelog
 ====================
 
+3.2.0 (June 23, 2017)
+------------------
+### Dependency Updates
+* Bump dependency on terra-props-table to `^0.9.0`
+* Bump dependency on terra-toolkit to `^0.5.0`
+* Bump dependency on terra-base to `^0.8.0`
+* Bump dependency on terra-mixins `^1.4.0`
+
 3.1.0 (June 20, 2017)
 ------------------
 ### Dependency Updates
