@@ -10,6 +10,9 @@ import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
+import AppDelegateExamples from './examples/app-delegate/Index';
+import ModalManagerExamples from './examples/modal-manager/Index';
+import SlideGroupExamples from './examples/slide-group/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
@@ -72,6 +75,9 @@ ReactDOM.render((
       <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
+      <Route path="app-delegate" component={AppDelegateExamples} />
+      <Route path="modal-manager" component={ModalManagerExamples} />
+      <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />

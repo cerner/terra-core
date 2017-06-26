@@ -56,6 +56,9 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/badge">Badge</Link>} />
                 <List.Item content={<Link to="/site/button">Button</Link>} />
                 <List.Item content={<Link to="/site/button-group">Button Group</Link>} />
+                <List.Item content={<Link to="/site/app-delegate">App Delegate</Link>} />
+                <List.Item content={<Link to="/site/modal-manager">Modal Manager</Link>} />
+                <List.Item content={<Link to="/site/slide-group">Slide Group</Link>} />
                 <List.Item content={<Link to="/site/content-container">Content Container</Link>} />
                 <List.Item content={<Link to="/site/datepicker">Date Picker</Link>} />
                 <List.Item content={<Link to="/site/demographics-banner">Demographics Banner</Link>} />
