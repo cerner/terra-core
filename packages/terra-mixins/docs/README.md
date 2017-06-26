@@ -22,7 +22,7 @@ import 'terra-mixins';
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
-* [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
+
 
 ### Bidirectionality (bidi) Mixins
 
