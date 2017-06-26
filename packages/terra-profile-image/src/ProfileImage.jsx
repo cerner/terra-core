@@ -12,6 +12,8 @@ const propTypes = {
   image: PropTypes.element.isRequired,
 };
 
+const avatarOverrideProps = { src: avatarImage, onLoad: undefined, onError: undefined };
+
 class ProfileImage extends React.Component {
   constructor(props) {
     super(props);
@@ -22,11 +24,14 @@ class ProfileImage extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
+    if (newProps === this.props) {
+      return;
+    }
+
     this.updateImage(newProps.image.props);
   }
 
   updateImage(imageProps) {
-    const avatarOverrideProps = { src: avatarImage, onLoad: undefined, onError: undefined };
     this.avatarImage = new TerraImage(Object.assign({}, imageProps, avatarOverrideProps));
 
     const profileOverrideProps = {
