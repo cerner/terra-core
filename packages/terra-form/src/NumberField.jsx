@@ -113,7 +113,7 @@ const NumberField = (
     label={label}
     labelAttrs={labelAttrs}
     help={help}
-    htmlFor
+    htmlFor={inputId}
     isInline={isInline}
     required={required}
     {...customProps}
