@@ -37,16 +37,16 @@ it('should select an item when maxSelectionCount is 2', () => {
   const items = [item1, item2, item3, item4, item5];
   const multiSelect = shallow(<MultiSelectList maxSelectionCount={2}>{items}</MultiSelectList>);
 
-  multiSelect.find('.stuff1').simulate('click');
+  multiSelect.find('.stuff1').simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 
-  multiSelect.find('.stuff2').simulate('click');
+  multiSelect.find('.stuff2').simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 
-  multiSelect.find('.stuff3').simulate('click');
+  multiSelect.find('.stuff3').simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 
-  multiSelect.find('.stuff1').simulate('click');
+  multiSelect.find('.stuff1').simulate('click', { preventDefault() {} });
   expect(multiSelect).toMatchSnapshot();
 });
 
