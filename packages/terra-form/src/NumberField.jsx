@@ -22,6 +22,10 @@ const propTypes = {
    */
   inputAttrs: PropTypes.object,
   /**
+   * Id of the input. Also populates the 'htmlFor' prop of the field.
+   */
+  inputId: PropTypes.string,
+  /**
    * Whether the field is inline
    */
   isInline: PropTypes.bool,
@@ -71,6 +75,7 @@ const defaultProps = {
   error: null,
   help: null,
   inputAttrs: {},
+  inputId: undefined,
   isInline: false,
   label: null,
   labelAttrs: {},
@@ -88,6 +93,7 @@ const NumberField = (
     error,
     help,
     inputAttrs,
+    inputId,
     isInline,
     label,
     labelAttrs,
@@ -107,6 +113,7 @@ const NumberField = (
     label={label}
     labelAttrs={labelAttrs}
     help={help}
+    htmlFor
     isInline={isInline}
     required={required}
     {...customProps}

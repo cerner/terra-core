@@ -13,6 +13,7 @@ const textField = () =>
     maxLength={15}
     required
     inputAttrs={{ className: 'healtheintent-application' }}
+    inputId="associate-id"
     isInline
   />;
 

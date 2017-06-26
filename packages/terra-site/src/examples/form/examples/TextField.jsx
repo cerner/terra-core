@@ -8,6 +8,7 @@ const TextareaFieldExamples = () => (
     <TextField
       label="Name"
       name="name"
+      inputId="name"
       defaultValue="Mike"
       error="Name is required"
       help="The name given to you at birth."
@@ -15,6 +16,7 @@ const TextareaFieldExamples = () => (
     <TextField
       label="Name with Maxlength"
       name="name"
+      inputId="user-maxlength"
       defaultValue="Mike"
       error="Name is required"
       help="The name given to you at birth."
@@ -25,6 +27,7 @@ const TextareaFieldExamples = () => (
       <TextField
         label="Favorite Food"
         name="favorite_food"
+        inputId="favorite-food"
         isInline
         defaultValue="Chicken McNuggets"
         error="Name is required"
@@ -34,6 +37,7 @@ const TextareaFieldExamples = () => (
         label="Favorite Movie"
         name="favorite_movie"
         isInline
+        inputId="favorite-movie"
         defaultValue="Tron"
         help="We like to do movie outings!"
         maxLength={50}
