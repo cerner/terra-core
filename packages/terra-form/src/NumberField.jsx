@@ -125,6 +125,7 @@ const NumberField = (
       min={min}
       required={required}
       name={name}
+      id={inputId}
       value={value}
       defaultValue={defaultValue}
       onChange={onChange}

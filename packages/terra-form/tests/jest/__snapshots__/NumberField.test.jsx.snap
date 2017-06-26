@@ -13,6 +13,7 @@ exports[`test should render a NumberField when all the possible props are passed
   required={true}>
   <Input
     className="cernerConsumer-application"
+    id="tax-rate"
     max={1}
     min={0}
     name="sales_tax_rate"
