@@ -2,15 +2,15 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import ReadMe from 'terra-clinical-slide-group/docs/README.md';
-import { version } from 'terra-clinical-slide-group/package.json';
+import ReadMe from 'terra-slide-group/docs/README.md';
+import { version } from 'terra-slide-group/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import SlideGroupSrc from '!raw-loader!terra-clinical-slide-group/src/SlideGroup.jsx';
+import SlideGroupSrc from '!raw-loader!terra-slide-group/src/SlideGroup.jsx';
 
 // Example Files
-import SlideGroupDemo from './SlideGroudpDemo';
+import SlideGroupDemo from './SlideGroupDemo';
 
 const SlideGroupExamples = () => (
   <div>

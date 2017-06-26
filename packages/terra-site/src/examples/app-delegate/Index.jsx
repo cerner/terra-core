@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Markdown from 'terra-markdown';
-import ReadMe from 'terra-clinical-app-delegate/docs/README.md';
-import { version } from 'terra-clinical-app-delegate/package.json';
+import ReadMe from 'terra-app-delegate/docs/README.md';
+import { version } from 'terra-app-delegate/package.json';
 
 // Example Files
 

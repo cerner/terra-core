@@ -5,14 +5,12 @@ import App from './App';
 import Home from './Home';
 
 // Examples
+import AppDelegateExamples from './examples/app-delegate/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
-import AppDelegateExamples from './examples/app-delegate/Index';
-import ModalManagerExamples from './examples/modal-manager/Index';
-import SlideGroupExamples from './examples/slide-group/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
@@ -24,9 +22,11 @@ import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
+import ModalManagerExamples from './examples/modal-manager/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
@@ -54,9 +54,11 @@ import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTe
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
+import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
@@ -70,14 +72,12 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
+      <Route path="app-delegate" component={AppDelegateExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="base" component={BaseExamples} />
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
-      <Route path="app-delegate" component={AppDelegateExamples} />
-      <Route path="modal-manager" component={ModalManagerExamples} />
-      <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
@@ -89,9 +89,11 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
       <Route path="modal" component={ModalExamples} />
+      <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
@@ -120,6 +122,7 @@ ReactDOM.render((
     {TableTestRoutes}
     {TimeInputTestRoutes}
     {ModalTestRoutes}
+    {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
     {GridTestRoutes}
     {IconTestRoutes}
@@ -127,5 +130,6 @@ ReactDOM.render((
     {FormTestRoutes}
     {HeadingTestRoutes}
     {TextTestRoutes}
+    {SlideGroupTestRoutes}
   </Router>
 ), document.getElementById('root'));

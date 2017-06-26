@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppDelegate from 'terra-app-delegate';
 
-class ContentContainer extends React.Component {
+let nestedComponentIndex = 0;
+
+class DemoContainer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -14,22 +16,18 @@ class ContentContainer extends React.Component {
     this.minimize = this.minimize.bind(this);
   }
 
-  disclose(size) {
-    return () => {
-      const identifier = Date.now();
-
-      this.props.app.disclose({
-        preferredType: 'modal',
-        size,
-        content: {
-          key: `ContentContainer-${identifier}`,
-          name: 'ContentContainer',
-          props: {
-            identifier: `ContentContainer-${identifier}`,
-          },
+  disclose() {
+    this.props.app.disclose({
+      preferredType: 'modal',
+      size: 'small',
+      content: {
+        key: `DemoContainer-${nestedComponentIndex += 1}`,
+        name: 'DemoContainer',
+        props: {
+          identifier: `DemoContainer-${nestedComponentIndex}`,
         },
-      });
-    };
+      },
+    });
   }
 
   dismiss() {
@@ -56,17 +54,12 @@ class ContentContainer extends React.Component {
     const { app, identifier } = this.props;
 
     return (
-      <div className="content-container" style={{ height: '100%', padding: '10px' }}>
+      <div id={identifier} className="nested-component" style={{ height: '100%', padding: '10px' }}>
         <h2>Content Component</h2>
         <br />
         <h4>id: {identifier}</h4>
         <br />
-        <button className="disclose" onClick={this.disclose()}>Disclose</button>
-        {identifier === 'root-component' && <button className="disclose-tiny" onClick={this.disclose('tiny')}>Disclose - Tiny</button>}
-        {identifier === 'root-component' && <button className="disclose-small" onClick={this.disclose('small')}>Disclose - Small</button>}
-        {identifier === 'root-component' && <button className="disclose-medium" onClick={this.disclose('medium')}>Disclose - Medium</button>}
-        {identifier === 'root-component' && <button className="disclose-large" onClick={this.disclose('large')}>Disclose - Large</button>}
-        {identifier === 'root-component' && <button className="disclose-huge" onClick={this.disclose('huge')}>Disclose - Huge</button>}
+        <button className="disclose" onClick={this.disclose}>Disclose</button>
         {app && app.dismiss ? <button className="dismiss" onClick={this.dismiss}>Dismiss</button> : null }
         {app && app.closeDisclosure ? <button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</button> : null }
         {app && app.goBack ? <button className="go-back" onClick={this.goBack}>Go Back</button> : null }
@@ -77,11 +70,11 @@ class ContentContainer extends React.Component {
   }
 }
 
-ContentContainer.propTypes = {
+DemoContainer.propTypes = {
   app: AppDelegate.propType,
   identifier: PropTypes.string,
 };
 
-AppDelegate.registerComponentForDisclosure('ContentContainer', ContentContainer);
+AppDelegate.registerComponentForDisclosure('DemoContainer', DemoContainer);
 
-export default ContentContainer;
+export default DemoContainer;
