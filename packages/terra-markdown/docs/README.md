@@ -17,3 +17,6 @@ import ReadMe from '{component}/docs/README.md';
 
 <Markdown id="readme" src={ReadMe} />
 ```
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

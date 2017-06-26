@@ -1,0 +1,15 @@
+exports[`test should return a markdown row 1`] = `"| children| \`node\`| \`required\`| \`center\`| The component(s) that will be wrapped by \`<Base />\`.|"`;
+
+exports[`when defaultValue is not present should return a markdown row without defaultValue 1`] = `"| children| \`node\`| \`required\`| | The component(s) that will be wrapped by \`<Base />\`.|"`;
+
+exports[`when description is not present should return a markdown row without description 1`] = `"| children| \`node\`| \`required\`| \`center\`| |"`;
+
+exports[`when propName is an empty string should return a markdown row with an empty propName 1`] = `"| | \`node\`| \`required\`| \`center\`| The component(s) that will be wrapped by \`<Base />\`.|"`;
+
+exports[`when propName is null should return a markdown row with an empty propName 1`] = `"| | \`node\`| \`required\`| \`center\`| The component(s) that will be wrapped by \`<Base />\`.|"`;
+
+exports[`when propName is undefined should return a markdown row with an empty propName 1`] = `"| | \`node\`| \`required\`| \`center\`| The component(s) that will be wrapped by \`<Base />\`.|"`;
+
+exports[`when required is not present should return a markdown row without required 1`] = `"| children| \`node\`| optional| \`center\`| The component(s) that will be wrapped by \`<Base />\`.|"`;
+
+exports[`when type is not present should return a markdown row without type 1`] = `"| children| | \`required\`| \`center\`| The component(s) that will be wrapped by \`<Base />\`.|"`;
