@@ -1,8 +1,9 @@
 # Terra Overlay
+The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.
 
-The Terra Overlay component is a component that displays an overlay relative to the container that triggered the overlay. This component blocks interactions and fades out all elements of the triggering container.
+When creating as an overlay relative to its container, place the overlay component and the element(s) which should be blocked within the Overlay Container wrapper subcomponent.
 
-A Loading Overlay is a subcomponent that displays an overlay with a spinner icon and loading message.
+A Loading Overlay is a specialized Overlay subcomponent that displays an overlay with a spinner icon and loading message.
 
 ## Getting Started
 
