@@ -1,16 +1,18 @@
 exports[`Snapshots renders a basic search field 1`] = `
 <div
   className="terra-SearchField">
-  <input
+  <Input
     className="terra-SearchField-input"
+    name={null}
     onChange={[Function]}
     placeholder=""
+    required={false}
     type="search"
     value="" />
   <Button
     className="terra-SearchField-button"
     isBlock={false}
-    isCompact={false}
+    isCompact={true}
     isDisabled={false}
     isReversed={false}
     onClick={[Function]}
@@ -27,16 +29,18 @@ exports[`Snapshots renders a basic search field 1`] = `
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
   className="terra-SearchField">
-  <input
+  <Input
     className="terra-SearchField-input"
+    name={null}
     onChange={[Function]}
     placeholder="Test"
+    required={false}
     type="search"
     value="" />
   <Button
     className="terra-SearchField-button"
     isBlock={false}
-    isCompact={false}
+    isCompact={true}
     isDisabled={false}
     isReversed={false}
     onClick={[Function]}
@@ -53,16 +57,18 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
   className="terra-SearchField">
-  <input
+  <Input
     className="terra-SearchField-input"
+    name={null}
     onChange={[Function]}
     placeholder=""
+    required={false}
     type="search"
     value="Test" />
   <Button
     className="terra-SearchField-button"
     isBlock={false}
-    isCompact={false}
+    isCompact={true}
     isDisabled={false}
     isReversed={false}
     onClick={[Function]}

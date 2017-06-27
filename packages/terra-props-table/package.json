@@ -1,7 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -24,12 +24,11 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.4.0"
+    "terra-toolkit": "^0.5.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "terra-base": "^0.7.0"
+    "react-dom": "^15.4.2"
   },
   "dependencies": {
     "commander": "^2.9.0",
@@ -37,8 +36,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react-docgen": "^2.15.0",
-    "terra-base": "^0.7.0",
-    "terra-markdown": "^0.7.0"
+    "terra-markdown": "^0.8.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
