@@ -26,11 +26,11 @@ const propTypes = {
   /**
    * Sets the height of the image.
    */
-  height: PropTypes.string.isRequired,
+  height: PropTypes.string,
   /**
    * Sets the width of the image.
    */
-  width: PropTypes.string.isRequired,
+  width: PropTypes.string,
   /**
    * Function to be executed when the profile image load is successful.
    */
