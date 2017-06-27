@@ -15,6 +15,7 @@ const NumberFieldExamples = () => (
       min={0}
       step={0.025}
       inputAttrs={{ className: 'healtheintent-application' }}
+      inputId="tax-rate"
       isInline
     />
   </form>

@@ -2,6 +2,7 @@ exports[`test should render a TextField with the rest of the props 1`] = `
 <Field
   error="This field is required"
   help="This will not be shared with outside sources"
+  htmlFor="email"
   isInline={true}
   label="Email Address"
   labelAttrs={
@@ -12,6 +13,7 @@ exports[`test should render a TextField with the rest of the props 1`] = `
   required={true}>
   <Input
     className="healtheintent-application"
+    id="email"
     maxLength={75}
     minLength={8}
     name="email"
