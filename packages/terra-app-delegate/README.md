@@ -2,22 +2,18 @@
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-app-delegate.svg)](https://www.npmjs.org/package/terra-app-delegate)
-[![Build Status](https://travis-ci.org/cerner/terra.svg?branch=master)](https://travis-ci.org/cerner/terra)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The AppDelegate is an object that provides a set of functions used to facilitate communcation between Containers and
 their consuming Containers/Applications.
 
 - [Getting Started](#getting-started)
-- [Documentation](#documentation)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-app-delegate`
-
-## Documentation
-
-See the [documentation](docs/).
 
 ## LICENSE
 
