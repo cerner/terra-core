@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import 'terra-base/lib/baseStyles';
-import './Badge.scss';
+import styles from './Badge.scss';
 
 const propTypes = {
   /**
@@ -46,20 +45,16 @@ const Badge = ({
   isReversed,
   text,
   icon,
-  ...additionalProps
+  ...customProps
 }) => {
-  const classes = classNames([
-    'terra-Badge',
-    { [`terra-Badge--${size}`]: size },
-    { [`terra-Badge--${intent}`]: intent },
-    additionalProps.className,
-  ]);
+  const badgeClassNames = classNames(styles.badge,
+      { [styles[size]]: size },
+      { [styles[intent]]: intent },
+      customProps.className);
 
-  const textContent = text ? <span className="terra-Badge-text">{text}</span> : null;
-
-  const content = isReversed ? [textContent, icon, additionalProps.children] : [icon, textContent, additionalProps.children];
-
-  return React.createElement('span', { ...additionalProps, className: classes }, ...content);
+  const textContent = text ? <span className={styles.text}>{text}</span> : null;
+  const content = isReversed ? [textContent, icon, customProps.children] : [icon, textContent, customProps.children];
+  return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
 };
 
 Badge.propTypes = propTypes;

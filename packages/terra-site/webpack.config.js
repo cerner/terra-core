@@ -9,6 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
+const CustomProperties = require('postcss-custom-properties');
 
 module.exports = {
   entry: {
@@ -31,6 +32,11 @@ module.exports = {
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
+          options: {
+            sourceMap: true,
+            importLoaders: 2,
+            localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+          },
         }, {
           loader: 'postcss-loader',
           options: {
@@ -45,6 +51,7 @@ module.exports = {
                     'iOS >= 8',
                   ],
                 }),
+                CustomProperties(),
               ];
             },
           },
