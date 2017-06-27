@@ -5,70 +5,88 @@ import TerraImage from 'terra-image';
 import avatarImage from './avatar.svg';
 import './ProfileImage.scss';
 
+/* eslint react/no-unused-prop-types: [0] */
 const propTypes = {
   /**
-   * The profile image to load.
+   * The source for the image which will be displayed.
    */
-  image: PropTypes.element.isRequired,
+  src: PropTypes.string.isRequired,
+  /**
+   * The text content that specifies an alternative text for an image.
+   */
+  alt: PropTypes.string.isRequired,
+  /**
+   * Sets the height of the image.
+   */
+  height: PropTypes.string.isRequired,
+  /**
+   * Sets the width of the image.
+   */
+  width: PropTypes.string.isRequired,
+  /**
+   * Function to be executed when the profile image load is successful.
+   */
+  onLoad: PropTypes.func,
+  /**
+   * Function to be executed when the profile image load errors.
+   */
+  onError: PropTypes.func,
+};
+
+const defaultProps = {
+  alt: ' ',
 };
 
 const avatarOverrideProps = { src: avatarImage, onLoad: undefined, onError: undefined };
 
 class ProfileImage extends React.Component {
+  static createAvatarImage(props) {
+    return new TerraImage(Object.assign({}, props, avatarOverrideProps));
+  }
+
   constructor(props) {
     super(props);
 
     this.state = { isLoading: true, isError: false };
-
-    this.updateImage(props.image.props);
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps === this.props) {
-      return;
-    }
-
-    this.updateImage(newProps.image.props);
-  }
-
-  updateImage(imageProps) {
-    this.avatarImage = new TerraImage(Object.assign({}, imageProps, avatarOverrideProps));
-
-    const profileOverrideProps = {
-      onLoad: () => { this.handleOnLoad(imageProps.onLoad); },
-      onError: () => { this.handleOnError(imageProps.onError); },
-    };
-    this.image = new TerraImage(Object.assign({}, imageProps, profileOverrideProps));
-  }
-
-  handleOnLoad(originalOnLoad) {
+  handleOnLoad(onLoad) {
     this.setState({ isLoading: false });
-    if (originalOnLoad !== undefined) originalOnLoad();
+    if (onLoad !== undefined) onLoad();
   }
 
-  handleOnError(originalOnError) {
+  handleOnError(onError) {
     this.setState({ isLoading: false, isError: true });
-    if (originalOnError !== undefined) originalOnError();
+    if (onError !== undefined) onError();
+  }
+
+  createProfileImage(props) {
+    const profileOverrideProps = {
+      onLoad: () => { this.handleOnLoad(props.onLoad); },
+      onError: () => { this.handleOnError(props.onError); },
+    };
+    return new TerraImage(Object.assign({}, props, profileOverrideProps));
   }
 
   render() {
     if (this.state.isLoading) {
       return (
         <div>
-          <div className="terra-ProfileImage--hidden">{this.image}</div>
-          <div>{this.avatarImage}</div>
+          <div className="terra-ProfileImage--hidden">{this.createProfileImage(this.props)}</div>
+          <div>{ProfileImage.createAvatarImage(this.props)}</div>
         </div>
       );
     }
 
     return (
       <div>
-        <div>{this.state.isError ? this.avatarImage : this.image}</div>
+        <div>{this.state.isError ? ProfileImage.createAvatarImage(this.props) : this.createProfileImage(this.props)}</div>
       </div>
     );
   }
 }
 
 ProfileImage.propTypes = propTypes;
+ProfileImage.defaultProps = defaultProps;
 
 export default ProfileImage;

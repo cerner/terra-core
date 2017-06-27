@@ -5,15 +5,19 @@ exports[`test should render a hidden profile image and a visible avatar image 1`
     <img
       alt=" "
       className="terra-Image terra-Image--thumbnail terra-Image--fluid"
+      height="75"
       onError={[Function]}
       onLoad={[Function]}
-      src="profile.jpg" />
+      src="profile.jpg"
+      width="75" />
   </div>
   <div>
     <img
       alt=" "
       className="terra-Image terra-Image--thumbnail terra-Image--fluid"
-      src={Object {}} />
+      height="75"
+      src={Object {}}
+      width="75" />
   </div>
 </div>
 `;
@@ -24,7 +28,9 @@ exports[`test should render the avatar image 1`] = `
     <img
       alt=" "
       className="terra-Image terra-Image--thumbnail terra-Image--fluid"
-      src={Object {}} />
+      height="75"
+      src={Object {}}
+      width="75" />
   </div>
 </div>
 `;
@@ -35,9 +41,11 @@ exports[`test should render the profile image 1`] = `
     <img
       alt=" "
       className="terra-Image terra-Image--thumbnail terra-Image--fluid"
+      height="75"
       onError={[Function]}
       onLoad={[Function]}
-      src="profile.jpg" />
+      src="profile.jpg"
+      width="75" />
   </div>
 </div>
 `;

@@ -13,9 +13,8 @@ The terra-profile-image component displays an avatar image while the profile ima
 ```jsx
 import React from 'react';
 import ProfileImage from 'terra-profile-image';
-import Image from 'terra-image';
 
 <ProfileImage 
-  image={<Image src='https://path/to/image.jpg' variant="rounded" width="75" height="75" />} 
+  src='https://path/to/image.jpg' width="75" height="75" />} 
 />
 ```
