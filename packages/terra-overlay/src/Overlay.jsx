@@ -67,7 +67,7 @@ class Overlay extends React.Component {
   }
 
   setContainer(node) {
-    if (node === null) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
+    if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
 
     if (this.props.isRelativeToContainer) {

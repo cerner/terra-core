@@ -37,12 +37,8 @@ const defaultProps = {
   isRelativeToContainer: false,
 };
 
-const LoadingOverlay = (props) => {
-  const { message, isAnimated, ...customProps } = props;
-
-  if ('onRequestClose' in customProps) {
-    delete customProps.onRequestClose;
-  }
+const LoadingOverlay = ({message, isAnimated, ...customProps }) => {
+  delete customProps.onRequestClose;
 
   return (
     <Overlay className="terra-LoadingOverlay" {...customProps} >

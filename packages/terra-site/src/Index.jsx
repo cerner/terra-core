@@ -97,11 +97,8 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
       <Route path="modal" component={ModalExamples} />
-<<<<<<< HEAD
-      <Route path="overlay" component={OverlayExamples} />
-=======
       <Route path="modal-manager" component={ModalManagerExamples} />
->>>>>>> master
+      <Route path="overlay" component={OverlayExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
