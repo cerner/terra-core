@@ -54,7 +54,7 @@
     "terra-mixins": "^1.5.0",
     "terra-modal": "^0.6.0",
     "terra-modal-manager": "^0.1.0",
-    "terra-modal-manager": "^0.x",
+    "terra-profile-image": "^0.0.0",
     "terra-progress-bar": "^0.8.0",
     "terra-props-table": "^0.10.0",
     "terra-responsive-element": "^0.8.0",
