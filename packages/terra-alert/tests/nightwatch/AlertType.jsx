@@ -6,6 +6,8 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
+    <h2>Alerts of each of the standard types with default titles</h2>
+    <br />
     <Alert type={Alert.Types.ALERT} >Alert of type Alert</Alert>
     <br />
     <Alert type={Alert.Types.ERROR} >Alert of type Error</Alert>

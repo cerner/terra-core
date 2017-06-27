@@ -6,14 +6,17 @@
   align-items: stretch;
   display: flex;
   flex: 1;
-  flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
+}
 
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
+.terra-Alert--narrow {
+  flex-direction: column;
+}
+
+.terra-Alert--wide {
+  flex-direction: row;
 }
 
 .terra-Alert-icon {
@@ -26,13 +29,20 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: row;
-  margin: 1rem 0.6667rem;
+  margin-top: 1rem;
   overflow: hidden;
   padding-top: 0.1rem;
-  
-  @media screen and (min-width: 768px) {
-    @include terra-margin-end(0);
-  }
+  @include terra-margin-start(0.6667rem);
+}
+
+.terra-Alert-body-narrow {
+  margin-bottom: 0;
+  @include terra-margin-end(0.6667rem);
+}
+
+.terra-Alert-body-wide {
+  margin-bottom: 1rem;
+  @include terra-margin-end(0);
 }
 
 .terra-Alert-section {

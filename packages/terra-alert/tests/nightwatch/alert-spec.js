@@ -409,19 +409,27 @@ module.exports = {
         '.terra-Alert .terra-Alert-actions .terra-Button',
         'Check Alert actions structure contains Button');
 
-    browser.getLocation('.terra-Alert-body', (result) => {
-      const alertBodyYPosition = result.value.y;
-
-      browser.getLocation('.terra-Alert-actions', (result2) => {
-        const alertActionYPosition = result2.value.y;
-
-        if (width < windowSizes.small[0]) {
-          assert(alertActionYPosition > alertBodyYPosition, 'Check Alert actions section below Alert body section');
-        } else {
-          assert(alertActionYPosition <= alertBodyYPosition, 'Check Alert actions section beside Alert body section');
-        }
-      });
-    });
+    if (width < windowSizes.tiny[0]) {
+      browser
+        .assert.cssClassPresent(
+          '.terra-Alert',
+          'terra-Alert--narrow',
+          'Check that the narrow alert className is used when width less than tiny breakpoint')
+        .assert.cssClassPresent(
+          '.terra-Alert .terra-Alert-body',
+          'terra-Alert-body-narrow',
+          'Check that the narrow body className is used when width less than tiny breakpoint');
+    } else {
+      browser
+        .assert.cssClassPresent(
+          '.terra-Alert',
+          'terra-Alert--wide',
+          'Check that the wide alert className is used when width greater than or equal to tiny breakpoint')
+        .assert.cssClassPresent(
+          '.terra-Alert .terra-Alert-body',
+          'terra-Alert-body-wide',
+          'Check that the wide body className is used when width greater than or equal to tiny breakpoint');
+    }
   },
 
   'Dismiss Tests - Displays an Alert of type success with a dismiss button set via the onDismiss prop': (browser) => {
@@ -432,24 +440,59 @@ module.exports = {
         '.terra-Alert .terra-Alert-actions .terra-Button',
         'Check Alert actions structure contains Button');
 
-    browser.getLocation('.terra-Alert-body', (result) => {
-      const alertBodyYPosition = result.value.y;
-
-      browser.getLocation('.terra-Alert-actions', (result2) => {
-        const alertActionYPosition = result2.value.y;
-
-        if (width < windowSizes.small[0]) {
-          assert(alertActionYPosition > alertBodyYPosition, 'Check Alert actions section below Alert body section');
-        } else {
-          assert(alertActionYPosition <= alertBodyYPosition, 'Check Alert actions section beside Alert body section');
-        }
-      });
-    });
+    if (width < windowSizes.tiny[0]) {
+      browser
+        .assert.cssClassPresent(
+          '.terra-Alert',
+          'terra-Alert--narrow',
+          'Check that the narrow alert className is used when width less than tiny breakpoint')
+        .assert.cssClassPresent(
+          '.terra-Alert .terra-Alert-body',
+          'terra-Alert-body-narrow',
+          'Check that the narrow body className is used when width less than tiny breakpoint');
+    } else {
+      browser
+        .assert.cssClassPresent(
+          '.terra-Alert',
+          'terra-Alert--wide',
+          'Check that the wide alert className is used when width greater than or equal to tiny breakpoint')
+        .assert.cssClassPresent(
+          '.terra-Alert .terra-Alert-body',
+          'terra-Alert-body-wide',
+          'Check that the wide body className is used when width greater than or equal to tiny breakpoint');
+    }
 
     browser
       .waitForElementVisible('.terra-Alert', 1000)
       .click('.terra-Alert .terra-Alert-actions .terra-Button')
       .pause(1000)
       .assert.elementNotPresent('.terra-Alert', 'Check that the test page dismissed the Alert when re-rendered');
+  },
+
+  'Responsive to Parent Tests - Displays alerts with actions in small container': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/responsive`)
+      .assert.elementPresent(
+        '.terra-Alert--warning .terra-Alert-actions .terra-Button',
+        'Check Alert action button rendered on warning alert')
+      .assert.elementPresent(
+        '.terra-Alert--success .terra-Alert-actions .terra-Button',
+        'Check Alert dismiss button rendered on success alert')
+      .assert.cssClassPresent(
+        '.terra-Alert--warning',
+        'terra-Alert--narrow',
+        'Check that the narrow alert className is used for Alert with action regardless of window size')
+      .assert.cssClassPresent(
+        '.terra-Alert--warning .terra-Alert-body',
+        'terra-Alert-body-narrow',
+        'Check that the narrow body className is used for Alert with action regardless of window size')
+      .assert.cssClassPresent(
+        '.terra-Alert--success',
+        'terra-Alert--narrow',
+        'Check that the narrow alert className is used for dismissible alert regardless of window size')
+      .assert.cssClassPresent(
+        '.terra-Alert--success .terra-Alert-body',
+        'terra-Alert-body-narrow',
+        'Check that the narrow body className is used for dismissible alert regardless of window size');
   },
 };

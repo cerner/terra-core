@@ -28,6 +28,8 @@ class AlertDismissible extends React.Component {
     return (
       <div>
         <Base locale={locale}>
+          <h2>Alert with onDismiss prop triggering Dismiss button to be rendered. Custom onDismiss callback rerenders page without the Alert.</h2>
+          <br />
           {alertElem}
         </Base>
       </div>

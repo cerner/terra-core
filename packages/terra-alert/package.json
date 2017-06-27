@@ -28,7 +28,7 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-arrange": "^0.x",
+    "terra-responsive-element": "^0.x",
     "terra-base": "^0.x",
     "terra-button": "^0.x",
     "terra-icon": "^0.x",
@@ -37,7 +37,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^0.x",
+    "terra-responsive-element": "^0.x",
     "terra-base": "^0.x",
     "terra-button": "^0.x",
     "terra-icon": "^0.x",

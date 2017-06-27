@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from 'terra-base';
+import Button from 'terra-button';
 import Alert from '../../lib/Alert';
-import Button from '../../../terra-button/lib/Button';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
@@ -24,6 +24,8 @@ class AlertActionButton extends React.Component {
     return (
       <div>
         <Base locale={locale}>
+          <h2>Alert where alertAction prop provided containing an action button</h2>
+          <br />
           <Alert type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
             This is a warning. It is configured with a custom Action button.
           </Alert>

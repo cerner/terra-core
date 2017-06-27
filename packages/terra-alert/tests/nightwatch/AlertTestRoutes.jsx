@@ -11,6 +11,7 @@ import AlertTitle from './AlertTitle';
 import CustomAlert from './CustomAlert';
 import AlertActionButton from './AlertActionButton';
 import AlertDismissible from './AlertDismissible';
+import AlertResponsiveToParent from './AlertResponsiveToParent';
 
 const routes = (
   <div>
@@ -21,6 +22,7 @@ const routes = (
     <Route path="/tests/alert-tests/custom" component={CustomAlert} />
     <Route path="/tests/alert-tests/actionButton" component={AlertActionButton} />
     <Route path="/tests/alert-tests/dismissible" component={AlertDismissible} />
+    <Route path="/tests/alert-tests/responsive" component={AlertResponsiveToParent} />
   </div>
 );
 

@@ -7,6 +7,8 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
+    <h2>Custom Alerts with all permutations of title, custom color and custom icon</h2>
+    <br />
     <div id="custom1">
       <Alert type={Alert.Types.CUSTOM} >Custom Alert with no icon, title or custom color</Alert>
     </div>

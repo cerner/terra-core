@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
@@ -180,8 +181,15 @@ const Alert = (
   }
   const attributes = Object.assign({}, customProps);
   const alertTypeClassName = getAlertClassName(type);
-  const AlertClassNames = classNames([
+  const narrowAlertClassNames = classNames([
     'terra-Alert',
+    'terra-Alert--narrow',
+    alertTypeClassName,
+    attributes.className,
+  ]);
+  const wideAlertClassNames = classNames([
+    'terra-Alert',
+    'terra-Alert--wide',
     alertTypeClassName,
     attributes.className,
   ]);
@@ -217,19 +225,38 @@ const Alert = (
     );
   }
 
-  return (
-    <div {...attributes} className={AlertClassNames} style={outerDivStyle} >
-      <div className="terra-Alert-body">
-        <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
-        <div className={alertSectionClassName}>
-          <strong className="terra-Alert-title">{title || defaultTitle}</strong>
-          <div className="terra-Alert-content">
-            {children}
-          </div>
-        </div>
+  const alertMessageContent = (
+    <div className={alertSectionClassName}>
+      <strong className="terra-Alert-title">{title || defaultTitle}</strong>
+      <div className="terra-Alert-content">
+        {children}
       </div>
-      {actionsSection}
     </div>
+  );
+
+  return (
+    <ResponsiveElement
+      responsiveTo="parent"
+      defaultElement={
+        <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
+          <div className="terra-Alert-body terra-Alert-body-narrow">
+            <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
+            {alertMessageContent}
+          </div>
+          {actionsSection}
+        </div>
+      }
+      tiny={
+        <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
+          <div className="terra-Alert-body terra-Alert-body-wide">
+            <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
+            {alertMessageContent}
+          </div>
+          {actionsSection}
+        </div>
+      }
+    />
+
   );
 };
 

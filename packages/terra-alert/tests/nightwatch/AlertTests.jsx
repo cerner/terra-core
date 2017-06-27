@@ -12,6 +12,7 @@ const AlertTests = () => (
       <li><Link to="/tests/alert-tests/custom">Alert Custom</Link></li>
       <li><Link to="/tests/alert-tests/actionButton">Alert Action Button</Link></li>
       <li><Link to="/tests/alert-tests/dismissible">Alert Dismissible</Link></li>
+      <li><Link to="/tests/alert-tests/responsive">Alert Responsive To Parent</Link></li>
     </ul>
   </div>
 );
