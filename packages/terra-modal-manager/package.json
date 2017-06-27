@@ -1,7 +1,7 @@
 {
   "name": "terra-modal-manager",
   "main": "lib/index.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Redux-backed Container component that dynamically presents components in a Terra Modal",
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
   "devDependencies": {
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "terra-app-delegate": "^0.x",
-    "terra-props-table": "^0.9.0",
+    "terra-app-delegate": "^0.1.0",
+    "terra-props-table": "^0.10.0",
     "terra-toolkit": "^0.5.0"
   },
   "peerDependencies": {
@@ -32,18 +32,18 @@
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "terra-base": "^0.x",
-    "terra-app-delegate": "^0.x",
-    "terra-mixins": "^1.0.0"
+    "terra-app-delegate": "^0.1.0",
+    "terra-base": "^0.9.0",
+    "terra-mixins": "^1.5.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.x",
-    "terra-slide-group": "^0.x",
-    "terra-mixins": "^1.0.0",
-    "terra-modal": "^0.x",
-    "terra-responsive-element": "^0.x"
+    "terra-base": "^0.9.0",
+    "terra-mixins": "^1.5.0",
+    "terra-modal": "^0.6.0",
+    "terra-responsive-element": "^0.8.0",
+    "terra-slide-group": "^0.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
