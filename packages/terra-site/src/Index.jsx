@@ -5,6 +5,7 @@ import App from './App';
 import Home from './Home';
 
 // Examples
+import AppDelegateExamples from './examples/app-delegate/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
@@ -21,15 +22,19 @@ import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
+import ModalManagerExamples from './examples/modal-manager/Index';
 import ProfileImageExamples from './examples/profile-image/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
-import TimeInputExamples from './examples/time-input/Index';
 import TextExamples from './examples/text/Index';
+import TimeInputExamples from './examples/time-input/Index';
+import ToggleExamples from './examples/toggle/Index';
+import ToggleButtonExamples from './examples/toggle-button/Index';
 
 // Test Routes
 /* eslint-disable import/first */
@@ -53,14 +58,18 @@ import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTe
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
+import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
+import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
+import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
 
 import TestLinks from './TestLinks';
 
@@ -69,6 +78,7 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
+      <Route path="app-delegate" component={AppDelegateExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="base" component={BaseExamples} />
@@ -85,15 +95,19 @@ ReactDOM.render((
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
       <Route path="modal" component={ModalExamples} />
+      <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="profile-image" component={ProfileImageExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="time-input" component={TimeInputExamples} />
+      <Route path="toggle" component={ToggleExamples} />
+      <Route path="toggle-button" component={ToggleButtonExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
@@ -117,13 +131,17 @@ ReactDOM.render((
     {TableTestRoutes}
     {TimeInputTestRoutes}
     {ModalTestRoutes}
+    {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
     {GridTestRoutes}
     {IconTestRoutes}
     {SearchFieldTestRoutes}
     {FormTestRoutes}
+    {ToggleTestRoutes}
+    {ToggleButtonTestRoutes}
     {HeadingTestRoutes}
     {TextTestRoutes}
+    {SlideGroupTestRoutes}
     {ProfileImageTestRoutes}
   </Router>
 ), document.getElementById('root'));

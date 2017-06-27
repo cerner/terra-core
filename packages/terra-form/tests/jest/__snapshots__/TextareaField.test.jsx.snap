@@ -2,6 +2,7 @@ exports[`test should render a TextAreaField with the rest of the props 1`] = `
 <Field
   error="Name is required"
   help="The name given to you at birth."
+  htmlFor="description"
   isInline={true}
   label="Profile Description"
   labelAttrs={Object {}}
@@ -9,6 +10,7 @@ exports[`test should render a TextAreaField with the rest of the props 1`] = `
   <Textarea
     autoFocus={false}
     cols={null}
+    id="description"
     maxLength={15}
     minLength={5}
     name="profile_description"
