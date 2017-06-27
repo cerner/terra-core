@@ -17,6 +17,7 @@ it('should render a TextField with the rest of the props', () => {
       error="This field is required"
       help="This will not be shared with outside sources"
       inputAttrs={{ className: 'healtheintent-application' }}
+      inputId="email"
       minLength={8}
       maxLength={75}
       isInline
