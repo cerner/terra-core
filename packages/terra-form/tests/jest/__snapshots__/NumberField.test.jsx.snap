@@ -2,6 +2,7 @@ exports[`test should render a NumberField when all the possible props are passed
 <Field
   error="This field is required"
   help="Your county\'s office may have this information"
+  htmlFor="tax-rate"
   isInline={true}
   label="Sales Tax Rate"
   labelAttrs={
@@ -12,6 +13,7 @@ exports[`test should render a NumberField when all the possible props are passed
   required={true}>
   <Input
     className="cernerConsumer-application"
+    id="tax-rate"
     max={1}
     min={0}
     name="sales_tax_rate"
