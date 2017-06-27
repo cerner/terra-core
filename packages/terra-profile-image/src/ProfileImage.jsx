@@ -12,6 +12,14 @@ const propTypes = {
    */
   src: PropTypes.string.isRequired,
   /**
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
+   */
+  variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
+  /**
+   * Sets the fluid behavior of the image, which is `nonfluid` by default.
+   */
+  isFluid: PropTypes.bool,
+  /**
    * The text content that specifies an alternative text for an image.
    */
   alt: PropTypes.string.isRequired,
@@ -34,6 +42,8 @@ const propTypes = {
 };
 
 const defaultProps = {
+  variant: 'default',
+  isFluid: false,
   alt: ' ',
 };
 

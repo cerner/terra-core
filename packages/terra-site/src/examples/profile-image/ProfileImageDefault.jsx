@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'terra-image';
 import ProfileImage from 'terra-profile-image';
 import exampleProfileImage from '../../assets/150x150.jpg';
 
