@@ -37,11 +37,12 @@ const defaultProps = {
   isRelativeToContainer: false,
 };
 
-const LoadingOverlay = ({message, isAnimated, ...customProps }) => {
-  delete customProps.onRequestClose;
+const LoadingOverlay = ({ message, isAnimated, ...customProps }) => {
+  const attributes = Object.assign({}, customProps);
+  delete attributes.onRequestClose;
 
   return (
-    <Overlay className="terra-LoadingOverlay" {...customProps} >
+    <Overlay className="terra-LoadingOverlay" {...attributes} >
       <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} />
       <span className="terra-LoadingOverlay-message">{message}</span>
     </Overlay>
