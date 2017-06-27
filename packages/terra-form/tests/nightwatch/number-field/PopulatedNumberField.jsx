@@ -14,6 +14,7 @@ const numberField = () =>
     min={0}
     step={0.1}
     inputAttrs={{ className: 'healtheintent-application' }}
+    id="tax-rate"
     isInline
   />;
 
