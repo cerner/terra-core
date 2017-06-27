@@ -19,6 +19,7 @@ it('should render a NumberField when all the possible props are passed into it',
       min={0}
       step={0.1}
       inputAttrs={{ className: 'cernerConsumer-application' }}
+      inputId="tax-rate"
       isInline
       required
     />);

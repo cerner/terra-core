@@ -28,11 +28,15 @@ Terra has several different form components for building forms.
 
 [TextField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/TextField.md)
 
+[Select](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Select.md)
+
+[SelectField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/SelectField.md)
+
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
-* [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
+
 
 To use these components, create a React component that contains a form element, and then insert the Terra form components into that form.
 
