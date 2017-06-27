@@ -22,6 +22,10 @@ const propTypes = {
    */
   inputAttrs: PropTypes.object,
   /**
+   * Id of the input. Also populates the 'htmlFor' prop of the field.
+   */
+  inputId: PropTypes.string,
+  /**
    * Whether the field is inline
    */
   isInline: PropTypes.bool,
@@ -68,6 +72,7 @@ const defaultProps = {
   error: null,
   help: null,
   inputAttrs: {},
+  inputId: undefined,
   isInline: false,
   label: null,
   labelAttrs: {},
@@ -85,6 +90,7 @@ const TextField = ({
   error,
   help,
   inputAttrs,
+  inputId,
   isInline,
   label,
   maxLength,
@@ -101,6 +107,7 @@ const TextField = ({
     error={error}
     help={help}
     isInline={isInline}
+    htmlFor={inputId}
     required={required}
     {...customProps}
   >
@@ -108,6 +115,7 @@ const TextField = ({
       maxLength={maxLength}
       minLength={minLength}
       name={name}
+      id={inputId}
       required={required}
       value={value}
       defaultValue={defaultValue}

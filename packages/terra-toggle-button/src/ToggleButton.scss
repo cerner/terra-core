@@ -1,0 +1,27 @@
+@import '~terra-mixins';
+
+.terra-ToggleButton {
+  display: block;
+}
+
+.terra-ToggleButton-icon {
+  display: inline-block;
+  font-size: 0.8em;
+  transform: rotate(0deg);
+}
+
+.terra-ToggleButton.is-open .terra-ToggleButton-icon {
+  transform: rotate(90deg);
+}
+
+.terra-ToggleButton.is-icon-animated .terra-ToggleButton-icon {
+  transition: transform 0.15s ease-in;
+}
+
+.terra-ToggleButton.is-open.is-icon-animated .terra-ToggleButton-icon {
+  transition: transform 0.15s ease-in;
+}
+
+.terra-ToggleButton-buttonText {
+  @include terra-padding-start(0.3rem);
+}

@@ -1,0 +1,375 @@
+exports[`ToggleButton should render a default toggle-button 1`] = `
+<div
+  class="terra-ToggleButton">
+  <button
+    aria-disabled="false"
+    aria-expanded="false"
+    class="terra-Button terra-Button--default"
+    type="button">
+    <div
+      class="terra-Arrange">
+      <div
+        class="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+        <span
+          class="terra-ToggleButton-icon">
+          <svg
+            aria-hidden="true"
+            class="terra-Icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewbox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z" />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="terra-Arrange-fill terra-Arrange-fill--center">
+        <span
+          class="terra-ToggleButton-buttonText">
+          Show
+        </span>
+      </div>
+      <div
+        class="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+    </div>
+  </button>
+  <div
+    aria-hidden="true"
+    class="terra-Toggle" />
+</div>
+`;
+
+exports[`ToggleButton should render an animated toggle-button 1`] = `
+<div
+  class="terra-ToggleButton">
+  <button
+    aria-disabled="false"
+    aria-expanded="false"
+    class="terra-Button terra-Button--default"
+    type="button">
+    <div
+      class="terra-Arrange">
+      <div
+        class="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+        <span
+          class="terra-ToggleButton-icon">
+          <svg
+            aria-hidden="true"
+            class="terra-Icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewbox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z" />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="terra-Arrange-fill terra-Arrange-fill--center">
+        <span
+          class="terra-ToggleButton-buttonText">
+          Show
+        </span>
+      </div>
+      <div
+        class="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+    </div>
+  </button>
+  <div
+    aria-hidden="true"
+    class="terra-Toggle is-animated">
+    <div
+      class="terra-Toggle-content">
+      <div
+        aria-hidden="false"
+        class="rah-static"
+        style="height:0px;overflow:hidden;">
+        <div>
+          Test
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ToggleButton should render an icon only toggle-button 1`] = `
+<div
+  class="terra-ToggleButton">
+  <button
+    aria-disabled="false"
+    aria-expanded="false"
+    aria-label="Show"
+    class="terra-Button terra-Button--default"
+    type="button">
+    <span
+      class="terra-ToggleButton-icon">
+      <svg
+        aria-hidden="true"
+        class="terra-Icon is-bidi"
+        data-name="Layer 1"
+        focusable="false"
+        height="1em"
+        viewbox="0 0 48 48"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z" />
+      </svg>
+    </span>
+  </button>
+  <div
+    aria-hidden="true"
+    class="terra-Toggle" />
+</div>
+`;
+
+exports[`ToggleButton should render an initially open toggle-button 1`] = `
+<div
+  class="terra-ToggleButton is-open">
+  <button
+    aria-disabled="false"
+    aria-expanded="true"
+    class="terra-Button terra-Button--default"
+    type="button">
+    <div
+      class="terra-Arrange">
+      <div
+        class="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+        <span
+          class="terra-ToggleButton-icon">
+          <svg
+            aria-hidden="true"
+            class="terra-Icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewbox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z" />
+          </svg>
+        </span>
+      </div>
+      <div
+        class="terra-Arrange-fill terra-Arrange-fill--center">
+        <span
+          class="terra-ToggleButton-buttonText">
+          Show
+        </span>
+      </div>
+      <div
+        class="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+    </div>
+  </button>
+  <div
+    aria-hidden="false"
+    class="terra-Toggle">
+    Test
+  </div>
+</div>
+`;
+
+exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
+<ToggleButton
+  closedButtonText="Show"
+  icon={
+    <IconChevronRight
+      className=""
+      data-name="Layer 1"
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg" />
+  }
+  isAnimated={false}
+  isIconAnimated={false}
+  isIconOnly={false}
+  isInitiallyOpen={false}>
+  <div
+    className="terra-ToggleButton is-open">
+    <Button
+      aria-expanded={true}
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      type="button"
+      variant="default">
+      <button
+        aria-disabled={false}
+        aria-expanded={true}
+        className="terra-Button terra-Button--default"
+        disabled={false}
+        onClick={[Function]}
+        type="button">
+        <Arrange
+          align="center"
+          fill={
+            <span
+              className="terra-ToggleButton-buttonText">
+              Show
+            </span>
+          }
+          fitStart={
+            <span
+              className="terra-ToggleButton-icon">
+              <IconChevronRight
+                className=""
+                data-name="Layer 1"
+                isBidi={true}
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </span>
+          }>
+          <div
+            className="terra-Arrange">
+            <div
+              className="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+              <span
+                className="terra-ToggleButton-icon">
+                <IconChevronRight
+                  className=""
+                  data-name="Layer 1"
+                  isBidi={true}
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <IconBase
+                    ariaLabel={null}
+                    className=""
+                    data-name="Layer 1"
+                    focusable={false}
+                    height="1em"
+                    isBidi={true}
+                    isSpin={false}
+                    viewBox="0 0 48 48"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      aria-hidden="true"
+                      className="terra-Icon is-bidi"
+                      data-name="Layer 1"
+                      focusable={false}
+                      height="1em"
+                      viewBox="0 0 48 48"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z" />
+                    </svg>
+                  </IconBase>
+                </IconChevronRight>
+              </span>
+            </div>
+            <div
+              className="terra-Arrange-fill terra-Arrange-fill--center">
+              <span
+                className="terra-ToggleButton-buttonText">
+                Show
+              </span>
+            </div>
+            <div
+              className="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+          </div>
+        </Arrange>
+      </button>
+    </Button>
+    <Toggle
+      isAnimated={false}
+      isOpen={true}>
+      <div
+        aria-hidden={false}
+        className="terra-Toggle">
+        Test
+      </div>
+    </Toggle>
+  </div>
+</ToggleButton>
+`;
+
+exports[`ToggleButton should set icon prop correctly 1`] = `
+<div
+  className="terra-ToggleButton">
+  <Button
+    aria-expanded={false}
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default">
+    <Arrange
+      align="center"
+      fill={
+        <span
+          className="terra-ToggleButton-buttonText">
+          Show
+        </span>
+      }
+      fitStart={
+        <span
+          className="terra-ToggleButton-icon">
+          <IconChevronRight
+            className=""
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg" />
+        </span>
+      } />
+  </Button>
+  <Toggle
+    isAnimated={false}
+    isOpen={false}>
+    Test
+  </Toggle>
+</div>
+`;
+
+exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
+<div
+  className="terra-ToggleButton">
+  <Button
+    aria-expanded={false}
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default">
+    <Arrange
+      align="center"
+      fill={
+        <span
+          className="terra-ToggleButton-buttonText">
+          Show
+        </span>
+      }
+      fitStart={
+        <span
+          className="terra-ToggleButton-icon">
+          <IconCaretRight
+            className=""
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg" />
+        </span>
+      } />
+  </Button>
+  <Toggle
+    isAnimated={false}
+    isOpen={false}>
+    Test
+  </Toggle>
+</div>
+`;
