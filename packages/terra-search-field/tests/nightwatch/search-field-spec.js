@@ -65,4 +65,16 @@ module.exports = {
       .click('.terra-SearchField-button')
       .expect.element('#search-callback-text').text.to.equal('Search Text: Tests');
   },
+
+  'Displays the search button with a height that matches the input ': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/default`)
+      .assert.elementPresent('.terra-SearchField')
+      .assert.elementPresent('.terra-SearchField-button')
+      .assert.attributeEquals('.terra-SearchField-input', 'placeholder', '');
+
+    browser.getCssProperty('.terra-SearchField-input', 'height', (result) => {
+      browser.assert.cssProperty('.terra-SearchField-button', 'height', result.value);
+    });
+  },
 };
