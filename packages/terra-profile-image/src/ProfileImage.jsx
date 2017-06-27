@@ -60,6 +60,13 @@ class ProfileImage extends React.Component {
     this.state = { isLoading: true, isError: false };
   }
 
+  componentWillReceiveProps(newProps) {
+    // If a new image is being loaded, reset the state to loading
+    if (newProps.src !== this.props.src) {
+      this.setState({ isLoading: true, isError: false });
+    }
+  }
+
   handleOnLoad(onLoad) {
     this.setState({ isLoading: false });
     if (onLoad !== undefined) onLoad();
