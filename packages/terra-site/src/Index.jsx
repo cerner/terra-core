@@ -27,8 +27,10 @@ import SearchFieldExamples from './examples/search-field/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
-import TimeInputExamples from './examples/time-input/Index';
 import TextExamples from './examples/text/Index';
+import TimeInputExamples from './examples/time-input/Index';
+import ToggleExamples from './examples/toggle/Index';
+import ToggleButtonExamples from './examples/toggle-button/Index';
 
 // Test Routes
 /* eslint-disable import/first */
@@ -59,6 +61,8 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
+import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
+import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
 
 import TestLinks from './TestLinks';
 
@@ -91,6 +95,8 @@ ReactDOM.render((
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="time-input" component={TimeInputExamples} />
+      <Route path="toggle" component={ToggleExamples} />
+      <Route path="toggle-button" component={ToggleButtonExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     {ArrangeTestRoutes}
@@ -119,6 +125,8 @@ ReactDOM.render((
     {IconTestRoutes}
     {SearchFieldTestRoutes}
     {FormTestRoutes}
+    {ToggleTestRoutes}
+    {ToggleButtonTestRoutes}
     {HeadingTestRoutes}
     {TextTestRoutes}
   </Router>
