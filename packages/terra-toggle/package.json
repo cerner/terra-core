@@ -1,7 +1,6 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "private": true,
   "version": "0.0.0",
   "description": "Toggle component that transitions content in and out.",
   "repository": {

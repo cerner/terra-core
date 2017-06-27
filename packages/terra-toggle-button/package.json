@@ -1,7 +1,6 @@
 {
   "name": "terra-toggle-button",
   "main": "lib/ToggleButton.js",
-  "private": true,
   "version": "0.0.0",
   "description": "Toggle button component that transitions content in and out with the click on a button.",
   "repository": {
