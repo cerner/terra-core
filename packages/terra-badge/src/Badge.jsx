@@ -48,7 +48,8 @@ const Badge = ({
   icon,
   ...customProps
 }) => {
-  const badgeClassNames = classNames(styles.badge,
+  const badgeClassNames = classNames(
+      styles.badge,
       { [styles[size]]: size },
       { [styles[intent]]: intent },
       customProps.className);
