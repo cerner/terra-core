@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import styles from './Badge.scss';
 
 const propTypes = {

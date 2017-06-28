@@ -25,6 +25,7 @@ Cerner Corporation
 - Viren Sawant [@viren140290]
 - Matt Schile [@mschile]
 - Madeline Gilbert [@madelineisabelle]
+- Michael Hemesath [@mhemesath]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -52,3 +53,4 @@ Cerner Corporation
 [@viren140290]: https://github.com/viren140290
 [@mschile]: https://github.com/mschile
 [@madelineisabelle]: https://github.com/madelineisabelle
+[@mhemesath]: https://github.com/mhemesath
