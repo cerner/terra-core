@@ -1,0 +1,58 @@
+{
+  "name": "terra-slide-group",
+  "main": "lib/SlideGroup.js",
+  "version": "0.1.0",
+  "description": "A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-slide-group",
+    "SlideGroup",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "terra-props-table": "^0.10.0",
+    "terra-toolkit": "^0.5.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "terra-base": "^0.9.0",
+    "terra-mixins": "^1.5.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "react-transition-group": "^1.1.3",
+    "terra-base": "^0.9.0",
+    "terra-mixins": "^1.5.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "props-table": "props-table ./src/SlideGroup.jsx --out-dir ./docs/props-table",
+    "test": "npm run test:spec && npm run test:nightwatch-default",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "WEBPACK_CONFIG_PATH=../../../../terra-site/webpack.config SPECTRE_TEST_SUITE=terra-detail-view node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "WEBPACK_CONFIG_PATH=../../../../terra-site/webpack.config SPECTRE_TEST_SUITE=terra-detail-view node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "WEBPACK_CONFIG_PATH=../../../../terra-site/webpack.config SPECTRE_TEST_SUITE=terra-detail-view node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "WEBPACK_CONFIG_PATH=../../../../terra-site/webpack.config SPECTRE_TEST_SUITE=terra-detail-view node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari",
+    "test:remote": "WEBPACK_CONFIG_PATH=../../../../terra-site/webpack.config REMOTE=true SPECTRE_TEST_SUITE=terra-detail-view node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js",
+    "test:remote:all": "WEBPACK_CONFIG_PATH=../../../../terra-site/webpack.config REMOTE=true SPECTRE_TEST_SUITE=terra-detail-view node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js --env chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous,firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous,ie10-tiny,ie10-small,ie10-medium,ie10-large,ie10-huge,ie10-enormous,ie11-tiny,ie11-small,ie11-medium,ie11-large,ie11-huge,ie11-enormous,edge-tiny,edge-small,edge-medium,edge-large,edge-huge,edge-enormous,safari-tiny,safari-small,safari-medium,safari-large,safari-huge,safari-enormous"
+  }
+}

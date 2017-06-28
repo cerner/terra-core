@@ -12,6 +12,7 @@ const textareaField = () =>
     maxLength={15}
     minLength={5}
     inputAttrs={{ className: 'cerner-textarea' }}
+    inputId="description"
     isInline
     required
   />;

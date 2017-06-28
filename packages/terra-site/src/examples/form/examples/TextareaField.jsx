@@ -5,6 +5,7 @@ import TextareaField from 'terra-form/lib/TextareaField';
 const TextareaFieldExamples = () => (
   <form>
     <TextareaField
+      inputId="name"
       label="Name"
       name="name"
       defaultValue="Mike"
@@ -12,6 +13,7 @@ const TextareaFieldExamples = () => (
       help="The name given to you at birth."
     />
     <TextareaField
+      inputId="profile-description"
       label="Profile Description"
       name="profile_description"
       error="Name is required"
@@ -24,6 +26,7 @@ const TextareaFieldExamples = () => (
     />
     <div>
       <TextareaField
+        inputId="difficult-problems"
         label="Tell us about your most difficult programming problem"
         name="difficult_problem"
         isInline
@@ -32,6 +35,7 @@ const TextareaFieldExamples = () => (
       <TextareaField
         label="How well do you work in a team?"
         name="teamwork"
+        inputId="teamwork"
         isInline
         error="This field is required"
         help="The name given to you at birth."
