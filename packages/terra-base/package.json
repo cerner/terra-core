@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^0.10.0",
-    "terra-toolkit": "^0.5.0"
+    "terra-props-table": "^1.0.0",
+    "terra-toolkit": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -31,7 +31,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-i18n": "^0.5.0"
+    "terra-i18n": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
