@@ -20,6 +20,9 @@ const ButtonTests = () => (
       <li><Link to="/tests/button-tests/medium">Medium Button</Link></li>
       <li><Link to="/tests/button-tests/small">Small Button</Link></li>
       <li><Link to="/tests/button-tests/tiny">Tiny Button</Link></li>
+      <li><Link to="/tests/button-tests/with-type-button">Button with Type Button</Link></li>
+      <li><Link to="/tests/button-tests/with-type-reset">Button with Type Reset</Link></li>
+      <li><Link to="/tests/button-tests/with-type-submit">Button with Type Submit</Link></li>
       <li><Link to="/tests/button-tests/link">Link</Link></li>
       <li><Link to="/tests/button-tests/compact">Compact</Link></li>
     </ul>

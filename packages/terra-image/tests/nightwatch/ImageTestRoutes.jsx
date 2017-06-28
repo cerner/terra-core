@@ -7,6 +7,7 @@ import ImageTests from './ImageTests';
 import ImageDefault from './ImageDefault';
 import ImageNonFluid from './ImageNonFluid';
 import ImageFluid from './ImageFluid';
+import ImageLoading from './ImageLoading';
 
 const routes = (
   <div>
@@ -14,6 +15,7 @@ const routes = (
     <Route path="/tests/image-tests/default" component={ImageDefault} />
     <Route path="/tests/image-tests/non-fluid" component={ImageNonFluid} />
     <Route path="/tests/image-tests/fluid" component={ImageFluid} />
+    <Route path="/tests/image-tests/loading" component={ImageLoading} />
   </div>
 );
 

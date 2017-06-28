@@ -4,6 +4,24 @@
 // More info: https://css-tricks.com/box-sizing/#article-header-id-6
 html {
   box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: $terra-base-font-size;
+  height: 100%;
+  margin: 0;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: $terra-base-background-color;
+  color: $terra-base-color;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+
+  @media print {
+    background-color: transparent !important;
+    color: #000 !important;
+  }
 }
 
 *,
@@ -36,25 +54,4 @@ li {
 ol,
 ul {
   list-style: none;
-}
-
-.terra-Base {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: $terra-base-font-size;
-  height: 100%;
-  margin: 0;
-  text-size-adjust: 100%;
-
-  > body {
-    background-color: $terra-base-background-color;
-    color: $terra-base-color;
-    font-size: 1rem;
-    line-height: 1;
-    margin: 0;
-  }
-
-  @media print {
-    background-color: transparent !important;
-    color: #000 !important;
-  }
 }

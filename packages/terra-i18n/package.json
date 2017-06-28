@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand.",
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
     "babel-jest": "^19.0.0",
-    "terra-toolkit": "^0.4.0"
+    "terra-props-table": "^0.10.0",
+    "terra-toolkit": "^0.5.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -40,6 +41,7 @@
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "props-table": "props-table ./src/I18nProvider.jsx --out-dir ./docs/props-table",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",

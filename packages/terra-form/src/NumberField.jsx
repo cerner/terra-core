@@ -22,6 +22,10 @@ const propTypes = {
    */
   inputAttrs: PropTypes.object,
   /**
+   * Id of the input. Also populates the 'htmlFor' prop of the field.
+   */
+  inputId: PropTypes.string,
+  /**
    * Whether the field is inline
    */
   isInline: PropTypes.bool,
@@ -29,6 +33,10 @@ const propTypes = {
    * Label of the input
    */
   label: PropTypes.node,
+  /**
+   * Attributes to attach to the label
+   */
+  labelAttrs: PropTypes.object,
   /**
    * Maximum value allowed for the input
    */
@@ -67,8 +75,10 @@ const defaultProps = {
   error: null,
   help: null,
   inputAttrs: {},
+  inputId: undefined,
   isInline: false,
   label: null,
+  labelAttrs: {},
   max: null,
   min: null,
   name: null,
@@ -83,8 +93,10 @@ const NumberField = (
     error,
     help,
     inputAttrs,
+    inputId,
     isInline,
     label,
+    labelAttrs,
     max,
     min,
     name,
@@ -99,7 +111,9 @@ const NumberField = (
   <Field
     error={error}
     label={label}
+    labelAttrs={labelAttrs}
     help={help}
+    htmlFor={inputId}
     isInline={isInline}
     required={required}
     {...customProps}
@@ -111,6 +125,7 @@ const NumberField = (
       min={min}
       required={required}
       name={name}
+      id={inputId}
       value={value}
       defaultValue={defaultValue}
       onChange={onChange}

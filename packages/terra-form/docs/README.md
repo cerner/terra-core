@@ -18,6 +18,8 @@ Terra has several different form components for building forms.
 
 [Input](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Input.md)
 
+[Control](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Control.md)
+
 [NumberField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/NumberField.md)
 
 [Textarea](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Textarea.md)
@@ -25,6 +27,16 @@ Terra has several different form components for building forms.
 [TextareaField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/TextareaField.md)
 
 [TextField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/TextField.md)
+
+[Select](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/Select.md)
+
+[SelectField](https://github.com/cerner/terra-core/tree/master/packages/terra-form/docs/SelectField.md)
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
+
 
 To use these components, create a React component that contains a form element, and then insert the Terra form components into that form.
 

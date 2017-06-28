@@ -8,42 +8,72 @@ exports[`test should render a Button with merged attributes 1`] = `
     Object {
       "height": "100px",
     }
-  } />
+  }
+  type="button" />
+`;
+
+exports[`test should render a button with type equal to button 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  type="button" />
+`;
+
+exports[`test should render a button with type equal to reset 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  type="reset" />
+`;
+
+exports[`test should render a button with type equal to submit 1`] = `
+<button
+  aria-disabled={false}
+  className="terra-Button terra-Button--default"
+  disabled={false}
+  type="submit" />
 `;
 
 exports[`test should render a default button 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--default"
-  disabled={false} />
+  disabled={false}
+  type="button" />
 `;
 
 exports[`test should render a link button 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--link"
-  disabled={false} />
+  disabled={false}
+  type="button" />
 `;
 
 exports[`test should render a primary button 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--primary"
-  disabled={false} />
+  disabled={false}
+  type="button" />
 `;
 
 exports[`test should render a secondary button 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--secondary"
-  disabled={false} />
+  disabled={false}
+  type="button" />
 `;
 
 exports[`test should render an icon 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--tiny"
-  disabled={false}>
+  disabled={false}
+  type="button">
   <img
     alt="icon" />
 </button>
@@ -53,7 +83,8 @@ exports[`test should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
   className="terra-Button terra-Button--default terra-Button--tiny"
-  disabled={false}>
+  disabled={false}
+  type="button">
   <img
     alt="icon" />
   <span
@@ -68,7 +99,8 @@ exports[`test should render as an anchor when provided an href 1`] = `
   aria-disabled={false}
   className="terra-Button terra-Button--default"
   disabled={false}
-  href="MockHref">
+  href="MockHref"
+  type="button">
   <span
     className="terra-Button-text">
     href
@@ -81,7 +113,8 @@ exports[`test should render as disabled when set 1`] = `
   aria-disabled={true}
   className="terra-Button terra-Button--default is-disabled"
   disabled={true}
-  tabIndex="-1">
+  tabIndex="-1"
+  type="button">
   <span
     className="terra-Button-text">
     Disabled

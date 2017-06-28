@@ -4,24 +4,14 @@
   display: inline-flex;
 
   .terra-SearchField-input {
-    @include terra-border-radius-start(0.286em);
     @include terra-border-radius-end(0);
     @include terra-border-end(0);
 
     appearance: textfield;
-    border: 0.071em solid #dedfe0;
     flex: 1 1 auto;
-    font-family: inherit;
-    font-size: 1em;
-    line-height: 1.143;
     margin: 0;
     min-width: 0;
-    padding: 0.286rem;
-
-    &:focus {
-      border-color: #26a2e5;
-      outline: none;
-    }
+    outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
   }
 
   .terra-SearchField-button {

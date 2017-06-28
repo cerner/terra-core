@@ -6,6 +6,8 @@ import { Link } from 'react-router';
 const FormTests = () => (
   <div>
     <ul>
+      <li><Link to="/tests/form-tests/control/default">Default Control</Link></li>
+      <li><Link to="/tests/form-tests/control/populated">Populated Control</Link></li>
       <li><Link to="/tests/form-tests/field/default">Default Field</Link></li>
       <li><Link to="/tests/form-tests/field/populated">Populated Field</Link></li>
       <li><Link to="/tests/form-tests/fieldset/default">Default Fieldset</Link></li>
@@ -21,6 +23,10 @@ const FormTests = () => (
       <li><Link to="/tests/form-tests/textarea/populated">Populated Textarea</Link></li>
       <li><Link to="/tests/form-tests/textarea-field/default">Default TextareaField</Link></li>
       <li><Link to="/tests/form-tests/textarea-field/populated">Populated TextareaField</Link></li>
+      <li><Link to="/tests/form-tests/select/default">Default Select</Link></li>
+      <li><Link to="/tests/form-tests/select/populated">Populated Select</Link></li>
+      <li><Link to="/tests/form-tests/select-field/default">Default Select Field</Link></li>
+      <li><Link to="/tests/form-tests/select-field/populated">Populated Select Field</Link></li>
     </ul>
   </div>
 );
