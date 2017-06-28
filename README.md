@@ -43,7 +43,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | Terra Package      | Version | Status |
 |--------------------|---------|--------|
 | [terra-arrange](https://github.com/cerner/terra-core/tree/master/packages/terra-arrange) | [![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange) | :white_check_mark: |
-| terra-app-delegate  | [![NPM version](http://img.shields.io/npm/v/terra-app-delegate.svg)](https://www.npmjs.org/package/terra-app-delegate) | :x: |
+| [terra-app-delegate](https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate)  | [![NPM version](http://img.shields.io/npm/v/terra-app-delegate.svg)](https://www.npmjs.org/package/terra-app-delegate) | :x: |
 | terra-application  | [![NPM version](http://img.shields.io/npm/v/terra-application.svg)](https://www.npmjs.org/package/terra-application) | :x: |
 | [terra-badge](https://github.com/cerner/terra-core/tree/master/packages/terra-badge) | [![NPM version](http://img.shields.io/npm/v/terra-badge.svg)](https://www.npmjs.org/package/terra-badge) | :white_check_mark: |
 | [terra-base](https://github.com/cerner/terra-core/tree/master/packages/terra-base) | [![NPM version](http://img.shields.io/npm/v/terra-base.svg)](https://www.npmjs.org/package/terra-base) | :white_check_mark: |
