@@ -20,14 +20,4 @@ module.exports = {
     browser
       .waitForElementPresent('#errorImage', 1000);
   },
-  'Displays a profile image with the props carryforward': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/profile-image-tests/carryforward`)
-      .waitForElementPresent('#loadedImage', 1000);
-    browser.expect.element('#loadedImage').to.have.css('terra-Image terra-Image--rounded terra-Image--fluid');
-  },
-  'Displays the avatar image if the profile image was not found and carries forward the props': (browser) => {
-    browser.waitForElementPresent('#errorImage', 1000);
-    browser.expect.element('#errorImage').to.have.css('terra-Image terra-Image--rounded terra-Image--fluid');
-  },
 };

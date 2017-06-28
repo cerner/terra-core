@@ -6,7 +6,6 @@ const ProfileImageTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/profile-image-tests/default">Default Profile Image</Link></li>
-      <li><Link to="/tests/profile-image-tests/carryforward">Carryforward Profile Image</Link></li>
     </ul>
   </div>
 );
