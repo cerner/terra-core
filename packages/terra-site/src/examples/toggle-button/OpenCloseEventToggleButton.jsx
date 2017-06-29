@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from 'terra-toggle-button/src/ToggleButton';
+import ToggleButton from 'terra-toggle-button/lib/ToggleButton';
 
 class OpenCloseEventToggleButton extends React.Component {
   constructor(props) {

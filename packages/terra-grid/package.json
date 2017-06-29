@@ -1,7 +1,7 @@
 {
   "name": "terra-grid",
   "main": "lib/Grid.js",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "The grid component provides a flexbox based grid system.",
   "repository": {
     "type": "git",
@@ -37,19 +37,19 @@
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-grid node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
-    "terra-props-table": "^0.10.0",
-    "terra-toolkit": "^0.5.0"
+    "terra-props-table": "^1.0.0",
+    "terra-toolkit": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.9.0",
-    "terra-mixins": "^1.5.0"
+    "terra-base": "^1.0.0",
+    "terra-mixins": "^1.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.9.0",
-    "terra-mixins": "^1.5.0"
+    "terra-base": "^1.0.0",
+    "terra-mixins": "^1.6.0"
   }
 }
