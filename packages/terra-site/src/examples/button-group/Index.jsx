@@ -15,8 +15,6 @@ import ButtonGroupSize from './ButtonGroupSize';
 import ButtonGroupCompact from './ButtonGroupCompact';
 import ButtonGroupSelectable from './ButtonGroupSelectable';
 import ButtonGroupWithIcons from './ButtonGroupWithIcons';
-import ButtonGroupOnClick from './ButtonGroupOnClick';
-import ButtonGroupOnChange from './ButtonGroupOnChange';
 
 const ButtonGroupExamples = () => (
   <div>
@@ -26,20 +24,20 @@ const ButtonGroupExamples = () => (
     <PropsTable id="props" src={ButtonGroupSrc} />
     <h2>Button Group Button</h2>
     <PropsTable id="button-props" src={ButtonGroupButtonSrc} />
-    <h2>Variant</h2>
+    <h2>Variants</h2>
     <ButtonGroupVariant />
-    <h2>Size</h2>
+    <br />
+    <h2>Sizes</h2>
     <ButtonGroupSize />
+    <br />
     <h2>Compact</h2>
     <ButtonGroupCompact />
+    <br />
     <h2>Icons</h2>
     <ButtonGroupWithIcons />
-    <h2>Unselectable With On Click Set</h2>
-    <ButtonGroupOnClick />
+    <br />
     <h2>Selectable</h2>
     <ButtonGroupSelectable />
-    <h2>On Change</h2>
-    <ButtonGroupOnChange />
   </div>
 );
 
