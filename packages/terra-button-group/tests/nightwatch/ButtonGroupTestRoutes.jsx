@@ -9,6 +9,7 @@ import CompactButtonGroup from './CompactButtonGroup';
 import { IconDefaultButtonGroup, IconReversedButtonGroup, IconOnlyButtonGroup } from './IconButtonGroupButton';
 import { DefaultButtonGroup, SecondaryButtonGroup } from './VariantButtonGroup';
 import SelectableButtonGroup from './SelectableButtonGroup';
+import OnChangeButtonGroup from './OnChangeButtonGroup';
 
 const routes = (
   <div>
@@ -26,6 +27,7 @@ const routes = (
     <Route path="/tests/button-group-tests/default-variant-button-group" component={DefaultButtonGroup} />
     <Route path="/tests/button-group-tests/secondary-variant-button-group" component={SecondaryButtonGroup} />
     <Route path="/tests/button-group-tests/selectable-button-group" component={SelectableButtonGroup} />
+    <Route path="/tests/button-group-tests/on-change-button-group" component={OnChangeButtonGroup} />
   </div>
 );
 

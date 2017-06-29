@@ -1,20 +1,6 @@
 import React from 'react';
 
-import SingleSelectList from '../../../lib/SingleSelectList';
-
-function createListItems(items, selectedIndex) {
-  const listContent = items.map((item, itemIndex) => {
-    const selected = itemIndex === selectedIndex;
-    const contentKey = itemIndex;
-    return (
-      <SingleSelectList.Item key={contentKey} content={item.content} isSelected={selected} />
-    );
-  });
-
-  return (
-    listContent
-  );
-}
+import SingleSelectList from '../../../src/SingleSelectList';
 
 class listExample extends React.Component {
   constructor(props) {
@@ -28,16 +14,15 @@ class listExample extends React.Component {
   }
 
   render() {
-    const items = [{ content: <p>test1</p> }, { content: <p>test1</p> }, { content: <p>test1</p> }];
-    const listItems = createListItems(items, this.state.selectedIndex);
-
     return (
       <div>
         <div id="selected-index">
           <h3>Selected Item: {this.state.selectedIndex}</h3>
         </div>
         <SingleSelectList onChange={this.handleSelection}>
-          {listItems}
+          <SingleSelectList.Item content={<p>test 1</p>} key="123" />
+          <SingleSelectList.Item content={<p>test 2</p>} key="124" isSelected />
+          <SingleSelectList.Item content={<p>test 3</p>} key="125" />
         </SingleSelectList>
       </div>
     );

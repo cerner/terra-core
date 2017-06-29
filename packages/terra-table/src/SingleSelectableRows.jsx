@@ -46,6 +46,7 @@ class SingleSelectableRows extends React.Component {
   }
 
   handleSelection(event, index) {
+    event.preventDefault();
     this.setState({ selectedIndex: index });
     if (this.props.onChange) {
       this.props.onChange(event, index);
