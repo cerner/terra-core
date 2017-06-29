@@ -4,7 +4,6 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-time-input/docs/README.md';
 import { version } from 'terra-time-input/package.json';
-import TimeInput from 'terra-time-input/src/TimeInput';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions

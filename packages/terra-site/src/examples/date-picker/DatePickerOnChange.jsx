@@ -4,7 +4,7 @@ import DatePicker from 'terra-date-picker';
 class DatePickerOnChange extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { date: ''};
+    this.state = { date: '' };
     this.handleDateChange = this.handleDateChange.bind(this);
   }
 
