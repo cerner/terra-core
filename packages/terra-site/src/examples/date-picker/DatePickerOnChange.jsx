@@ -1,15 +1,30 @@
 import React from 'react';
 import DatePicker from 'terra-date-picker';
 
-const handleOnChange = (event, selectedDate) => {
-  window.console.log('**handleOnChange** The selected date is: ', selectedDate);
-};
+class DatePickerOnChange extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: ''};
+    this.handleDateChange = this.handleDateChange.bind(this);
+  }
 
-const DatePickerOnChange = () => (
-  <DatePicker
-    name="date-input-onchange"
-    onChange={handleOnChange}
-  />
-);
+  handleDateChange(event, date) {
+    this.setState({ date });
+  }
+
+  render() {
+    return (
+      <div>
+        <div id="selected-index">
+          <h3>Selected Date: {this.state.date}</h3>
+        </div>
+        <DatePicker
+          name="date-input-onchange"
+          onChange={this.handleDateChange}
+        />
+      </div>
+    );
+  }
+}
 
 export default DatePickerOnChange;
