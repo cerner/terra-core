@@ -43,19 +43,18 @@ it('should select an item', () => {
   const items = [item1, item2, item3, item4, item5];
   const singleSelect = shallow(<SingleSelectList>{items}</SingleSelectList>);
 
-  singleSelect.find('.stuff1').simulate('click');
+  singleSelect.find('.stuff1').simulate('click', { preventDefault() {} });
   expect(singleSelect).toMatchSnapshot();
 
-  singleSelect.find('.stuff2').simulate('click');
+  singleSelect.find('.stuff2').simulate('click', { preventDefault() {} });
   expect(singleSelect).toMatchSnapshot();
 
-  singleSelect.find('.stuff3').simulate('click');
+  singleSelect.find('.stuff3').simulate('click', { preventDefault() {} });
   expect(singleSelect).toMatchSnapshot();
 
-  singleSelect.find('.stuff1').simulate('click');
+  singleSelect.find('.stuff1').simulate('click', { preventDefault() {} });
   expect(singleSelect).toMatchSnapshot();
 });
-
 
 it('should mount with no items', () => {
   const singleSelect = mount(<SingleSelectList />);

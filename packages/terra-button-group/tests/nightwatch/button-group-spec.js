@@ -63,5 +63,28 @@ module.exports = {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-group-tests/selectable-button-group`);
     browser.expect.element('.terra-ButtonGroupButton.is-active').to.be.present;
   },
-};
+  'Triggers onChange for a Button Group': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/button-group-tests/on-change-button-group`);
 
+    browser.sendKeys('.terra-ButtonGroupButton:nth-child(1)', browser.Keys.SPACE);
+    browser.assert.cssClassPresent('.terra-ButtonGroupButton:nth-child(1)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(2)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(3)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(4)', 'is-active');
+    browser.assert.containsText('#selected-index', '0');
+
+    browser.sendKeys('.terra-ButtonGroupButton:nth-child(2)', browser.Keys.ENTER);
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(1)', 'is-active');
+    browser.assert.cssClassPresent('.terra-ButtonGroupButton:nth-child(2)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(3)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(4)', 'is-active');
+    browser.assert.containsText('#selected-index', '1');
+
+    browser.click('.terra-ButtonGroupButton:nth-child(4)');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(1)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(2)', 'is-active');
+    browser.assert.cssClassNotPresent('.terra-ButtonGroupButton:nth-child(3)', 'is-active');
+    browser.assert.cssClassPresent('.terra-ButtonGroupButton:nth-child(4)', 'is-active');
+    browser.assert.containsText('#selected-index', '3');
+  },
+};
