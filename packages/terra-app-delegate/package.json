@@ -1,7 +1,7 @@
 {
   "name": "terra-app-delegate",
   "main": "lib/app-delegate/AppDelegate.js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.5.0"
+    "terra-toolkit": "^1.0.0"
   },
   "dependencies": {
     "prop-types": "^15.5.8"
