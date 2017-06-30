@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import IconSpinner from 'terra-icon/lib/icon/IconSpinner';
 import 'terra-base/lib/baseStyles';
 
@@ -12,7 +13,7 @@ const propTypes = {
  */
   message: PropTypes.string,
   /*
-  * Incidates if the icon spinner should be animated.
+  * Indicates if the icon spinner should be animated.
   */
   isAnimated: PropTypes.bool,
   /**
@@ -42,7 +43,7 @@ const LoadingOverlay = ({ message, isAnimated, ...customProps }) => {
   delete attributes.onRequestClose;
 
   return (
-    <Overlay className="terra-LoadingOverlay" {...attributes} >
+    <Overlay {...attributes} className={classNames('terra-LoadingOverlay', attributes.className)} >
       <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} height="36" width="36" />
       <div className="terra-LoadingOverlay-message">{message}</div>
     </Overlay>

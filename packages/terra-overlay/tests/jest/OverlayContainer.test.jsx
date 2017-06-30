@@ -4,7 +4,7 @@ import Overlay from '../../src/Overlay';
 
 describe('OverlayContainer', () => {
   const defaultRender = <OverlayContainer />;
-  const stardardRender = (
+  const standardRender = (
     <OverlayContainer>
       <Overlay />
       Some Text Content
@@ -22,7 +22,7 @@ describe('OverlayContainer', () => {
   });
 
   it('should render when children are provided', () => {
-    const wrapper = shallow(stardardRender);
+    const wrapper = shallow(standardRender);
     expect(wrapper).toMatchSnapshot();
   });
 });
