@@ -8,13 +8,15 @@ exports[`LoadingOverlay should render a null component when isOpen is not provid
   <IconSpinner
     className="terra-LoadingOverlay-icon"
     data-name="Layer 1"
+    height="36"
     isSpin={false}
     viewBox="0 0 48 48"
+    width="36"
     xmlns="http://www.w3.org/2000/svg" />
-  <span
+  <div
     className="terra-LoadingOverlay-message">
     Loading...
-  </span>
+  </div>
 </Overlay>
 `;
 
@@ -28,13 +30,15 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
   <IconSpinner
     className="terra-LoadingOverlay-icon"
     data-name="Layer 1"
+    height="36"
     isSpin={false}
     viewBox="0 0 48 48"
+    width="36"
     xmlns="http://www.w3.org/2000/svg" />
-  <span
+  <div
     className="terra-LoadingOverlay-message">
     Loading!
-  </span>
+  </div>
 </Overlay>
 `;
 
@@ -48,12 +52,14 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
   <IconSpinner
     className="terra-LoadingOverlay-icon"
     data-name="Layer 1"
+    height="36"
     isSpin={false}
     viewBox="0 0 48 48"
+    width="36"
     xmlns="http://www.w3.org/2000/svg" />
-  <span
+  <div
     className="terra-LoadingOverlay-message">
     Loading...
-  </span>
+  </div>
 </Overlay>
 `;
