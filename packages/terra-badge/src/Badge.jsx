@@ -22,7 +22,7 @@ const propTypes = {
    */
   isReversed: PropTypes.bool,
   /**
-   * Sets the badge size. One of tiny, small, medium, large, huge.
+   * Sets the badge size. One of `tiny`, `small`, `medium`, `large`, `huge`.
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
