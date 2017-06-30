@@ -21,7 +21,7 @@ const propTypes = {
   */
   backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /*
-  * Incidates if the overlay is open.
+  * Indicates if the overlay is open.
   */
   isOpen: PropTypes.bool,
   /*
