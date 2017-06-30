@@ -16,19 +16,19 @@
 }
 
 .terra-Overlay--clear {
-  background: none;
-
-  .terra-Overlay-content {
-    color: #000;
-  }
+  background: rgba(255, 255, 255, 0.001);
 }
 
 .terra-Overlay--dark {
-  background: #4e5558;
+  background: rgba(28, 31, 33, 0.85);
+
+  .terra-Overlay-content {
+    color: #fff;
+  }
 }
 
 .terra-Overlay--light {
-  background: #d3d4d5;
+  background: rgba(244, 244, 244, 0.7);
 }
 
 .terra-Overlay--fullscreen {
@@ -50,13 +50,17 @@
 }
 
 .terra-Overlay-content {
-  color: #fff;
-  font-size: 24px;
-  height: inherit;
+  color: rgba(28, 31, 33, 1);
+  font-size: 1rem;
   max-height: 100%;
   padding: 1rem;
 }
 
+.terra-LoadingOverlay-icon {
+  display: block;
+  margin: auto;
+}
+
 .terra-LoadingOverlay-message {
-  padding-left: 10px;
+  padding: 5px;
 }

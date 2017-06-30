@@ -43,8 +43,8 @@ const LoadingOverlay = ({ message, isAnimated, ...customProps }) => {
 
   return (
     <Overlay className="terra-LoadingOverlay" {...attributes} >
-      <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} />
-      <span className="terra-LoadingOverlay-message">{message}</span>
+      <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} height="36" width="36" />
+      <div className="terra-LoadingOverlay-message">{message}</div>
     </Overlay>
   );
 };
