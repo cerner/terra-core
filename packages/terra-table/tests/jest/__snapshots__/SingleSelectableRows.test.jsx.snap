@@ -1,6 +1,7 @@
 exports[`test should render SingleSelectableRows one selectable row and one non-selectable row 1`] = `
 <TableRows>
   <TableRow
+    className="PERSON_0"
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -29,6 +30,7 @@ exports[`test should render SingleSelectableRows one selectable row and one non-
 exports[`test should render SingleSelectableRows tag 1`] = `
 <TableRows>
   <TableRow
+    className="PERSON_0"
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -42,6 +44,7 @@ exports[`test should render SingleSelectableRows tag 1`] = `
       content="111-222-3333" />
   </TableRow>
   <TableRow
+    className="PERSON_1"
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -60,6 +63,7 @@ exports[`test should render SingleSelectableRows tag 1`] = `
 exports[`test should render SingleSelectableRows with maximum height set 1`] = `
 <TableRows>
   <TableRow
+    className="PERSON_0"
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -73,6 +77,7 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
       content="111-222-3333" />
   </TableRow>
   <TableRow
+    className="PERSON_1"
     isSelectable={true}
     isSelected={false}
     onClick={[Function]}
@@ -93,8 +98,75 @@ exports[`test should render SingleSelectableRows with no rows 1`] = `<TableRows 
 exports[`test should render SingleSelectableRows with one row 1`] = `
 <TableRows>
   <TableRow
+    className="PERSON_0"
     isSelectable={true}
     isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should select an row 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should select an row 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0">

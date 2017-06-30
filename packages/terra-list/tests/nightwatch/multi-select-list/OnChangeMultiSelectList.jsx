@@ -2,20 +2,6 @@ import React from 'react';
 
 import MultiSelectList from '../../../lib/MultiSelectList';
 
-function createListItems(items, selectedIndexes) {
-  const listContent = items.map((item, itemIndex) => {
-    const selected = selectedIndexes.indexOf(itemIndex) >= 0;
-    const contentKey = itemIndex;
-    return (
-      <MultiSelectList.Item key={contentKey} content={item.content} isSelected={selected} />
-    );
-  });
-
-  return (
-    listContent
-  );
-}
-
 class listExample extends React.Component {
   constructor(props) {
     super(props);
@@ -28,16 +14,15 @@ class listExample extends React.Component {
   }
 
   render() {
-    const items = [{ content: <p>test 1</p> }, { content: <p>test 2</p> }, { content: <p>test 3</p> }];
-    const listItems = createListItems(items, this.state.selectedIndexes);
-
     return (
       <div>
         <div id="selected-index">
           <h3>Selected Item(s): {this.state.selectedIndexes.join(', ')}</h3>
         </div>
         <MultiSelectList onChange={this.handleSelection}>
-          {listItems}
+          <MultiSelectList.Item content={<p>test 1</p>} key="123" />
+          <MultiSelectList.Item content={<p>test 2</p>} key="124" />
+          <MultiSelectList.Item content={<p>test 3</p>} key="125" />
         </MultiSelectList>
       </div>
     );
