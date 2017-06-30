@@ -32,7 +32,7 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * Sets the button size. One of tiny, small, medium, large, huge
+   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`
    **/
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 
