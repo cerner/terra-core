@@ -14,7 +14,7 @@ const propTypes = {
    */
   icon: PropTypes.element,
   /**
-   * Sets the badge color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
+   * Sets the badge color scheme. One of `default`, `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
   intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
@@ -22,7 +22,7 @@ const propTypes = {
    */
   isReversed: PropTypes.bool,
   /**
-   * Sets the badge size. One of tiny, small, medium, large, huge.
+   * Sets the badge size. One of `tiny`, `small`, `medium`, `large`, `huge`.
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**

@@ -10,7 +10,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Sets the heading level. One of 1, 2, 3, 4, 5, 6.
+   * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   /**
@@ -26,11 +26,11 @@ const propTypes = {
    */
   isVisuallyHidden: PropTypes.bool,
   /**
-   * Sets the text size. One of mini, tiny, small, medium, large, huge.
+   * Sets the text size. One of `mini`, `tiny`, `small`, `medium`, `large`, `huge`.
    */
   size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'huge']),
   /**
-   * Sets the text size. One of 200, 400, 700.
+   * Sets the text size. One of `200`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 400, 700]),
 };
