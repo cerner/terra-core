@@ -22,11 +22,11 @@ const propTypes = {
    */
   isVisuallyHidden: PropTypes.bool,
   /**
-   * Sets the text size. One of 10, 12, 14, 16, 18, 20, 24, 32, 100.
+   * Sets the text size. One of `10`, `12`, `14`, `16`, `18`, `20`, `24`, `32`, `100`.
    */
   fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 100]),
   /**
-   * Sets the text size. One of 200, 400, 700.
+   * Sets the text size. One of `200`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 400, 700]),
 };
