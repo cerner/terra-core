@@ -38,7 +38,7 @@ const propTypes = {
    */
   onClick: PropTypes.func,
   /**
-   * Sets the button size. One of tiny, small, medium, large, huge
+   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
@@ -46,11 +46,11 @@ const propTypes = {
    */
   text: PropTypes.string,
   /**
-   * Sets the button type. One of button, submit, or reset
+   * Sets the button type. One of `button`, `submit`, or `reset`
    */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /**
-   * Sets the button variant. One of primary, secondary, or link
+   * Sets the button variant. One of `primary`, `secondary`, or `link`
    */
   variant: PropTypes.oneOf(['default', 'link', 'primary', 'secondary']),
 };
