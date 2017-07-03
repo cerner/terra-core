@@ -15,9 +15,7 @@ class DatePickerOnChange extends React.Component {
   render() {
     return (
       <div>
-        <div id="selected-index">
-          <h3>Selected Date: {this.state.date}</h3>
-        </div>
+        <h3>Selected Date: {this.state.date}</h3>
         <DatePicker
           name="date-input-onchange"
           onChange={this.handleDateChange}
