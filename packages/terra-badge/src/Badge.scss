@@ -1,78 +1,80 @@
-@import '~terra-mixins';
 @import './variables';
 @import './mixins';
 
-.terra-Badge {
-  @include terra-padding-start($terra-badge-padding-left);
-  @include terra-padding-end($terra-badge-padding-right);
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .badge {
+    border-radius: var(--terra-Badge-borderRadius);
+    display: var(--terra-Badge-display);
+    font-size: var(--terra-Badge-fontSize--small);
+    font-weight: var(--terra-Badge-fontWeight);
+    line-height: var(--terra-Badge-lineHeight);
+    min-width: var(--terra-Badge-minWidth);
+    padding-bottom: var(--terra-Badge-paddingBottom);
+    padding-left: var(--terra-Badge-paddingLeft);
+    padding-right: var(--terra-Badge-paddingRight);
+    padding-top: var(--terra-Badge-paddingTop);
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: var(--terra-Badge-textTransform);
+    white-space: nowrap;
+  }
 
-  border-radius: $terra-badge-border-radius;
-  display: $terra-badge-display;
-  font-size: map-get($terra-badge-font-sizes, small);
-  font-weight: $terra-badge-font-weight;
-  line-height: $terra-badge-line-height;
-  min-width: 1.65em;
-  padding-bottom: $terra-badge-padding-bottom;
-  padding-top: $terra-badge-padding-top;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: $terra-badge-text-transform;
-  white-space: nowrap;
-}
+  .text:first-child:not(:last-child) {
+    margin-right: var(--terra-Badge-child--margin);
+  }
 
-.terra-Badge-text:first-child:not(:last-child) {
-  @include terra-margin-end($terra-badge-child-margin);
-}
+  .text:nth-child(2) {
+    margin-left: var(--terra-Badge-child--margin);
+  }
 
-.terra-Badge-text:nth-child(2) {
-  @include terra-margin-start($terra-badge-child-margin);
-}
+  .tiny {
+    font-size: var(--terra-Badge-fontSize--tiny);
+  }
 
-.terra-Badge--tiny {
-  font-size: map-get($terra-badge-font-sizes, tiny);
-}
+  .small {
+    font-size: var(--terra-Badge-fontSize--small);
+  }
 
-.terra-Badge--small {
-  font-size: map-get($terra-badge-font-sizes, small);
-}
+  .medium {
+    font-size: var(--terra-Badge-fontSize--medium);
+  }
 
-.terra-Badge--medium {
-  font-size: map-get($terra-badge-font-sizes, medium);
-}
+  .large {
+    font-size: var(--terra-Badge-fontSize--large);
+  }
 
-.terra-Badge--large {
-  font-size: map-get($terra-badge-font-sizes, large);
-}
+  .huge {
+    font-size: var(--terra-Badge-fontSize--huge);
+  }
 
-.terra-Badge--huge {
-  font-size: map-get($terra-badge-font-sizes, huge);
-}
+  .default {
+    @include terra-badge-color($terra-badge-default-color-scheme);
+  }
 
-.terra-Badge--default {
-  @include terra-badge-color($terra-badge-default-color-scheme);
-}
+  .primary {
+    @include terra-badge-color($terra-badge-primary-color-scheme);
+  }
 
-.terra-Badge--primary {
-  @include terra-badge-color($terra-badge-primary-color-scheme);
-}
+  .secondary {
+    @include terra-badge-color($terra-badge-secondary-color-scheme);
+  }
 
-.terra-Badge--secondary {
-  @include terra-badge-color($terra-badge-secondary-color-scheme);
-}
+  .positive {
+    @include terra-badge-color($terra-badge-positive-color-scheme);
+  }
 
-.terra-Badge--positive {
-  @include terra-badge-color($terra-badge-positive-color-scheme);
-}
+  .negative {
+    @include terra-badge-color($terra-badge-negative-color-scheme);
+  }
 
-.terra-Badge--negative {
-  @include terra-badge-color($terra-badge-negative-color-scheme);
-}
+  .warning {
+    @include terra-badge-color($terra-badge-warning-color-scheme);
+  }
 
-.terra-Badge--warning {
-  @include terra-badge-color($terra-badge-warning-color-scheme);
-}
-
-.terra-Badge--info {
-  @include terra-badge-color($terra-badge-info-color-scheme);
+  .info {
+    @include terra-badge-color($terra-badge-info-color-scheme);
+  }
+  /* stylelint-enable */
 }
