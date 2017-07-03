@@ -17,7 +17,9 @@ class ControlledInput extends React.Component {
         first: '',
         middle: '',
         last: '',
-        travelPercentage: 0,
+        experience: '',
+        travelPercentage: '',
+        homePercentage: '',
         preferredLocation: '',
         interestedDivisions: [],
       },
@@ -27,9 +29,27 @@ class ControlledInput extends React.Component {
     this.handleNameUpdate = this.handleNameUpdate.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleTravelPercentageChange = this.handleTravelPercentageChange.bind(this);
+    this.handleHomePercentageChange = this.handleHomePercentageChange.bind(this);
     this.handleExperienceUpdate = this.handleExperienceUpdate.bind(this);
     this.handlePreferredLocation = this.handlePreferredLocation.bind(this);
     this.handleInterestedDivisions = this.handleInterestedDivisions.bind(this);
+    this.resetValues = this.resetValues.bind(this);
+  }
+
+  resetValues(e) {
+    this.setState({
+      formData: {
+        jobTitle: '',
+        first: '',
+        middle: '',
+        last: '',
+        experience: '',
+        travelPercentage: '',
+        homePercentage: '',
+        preferredLocation: '',
+        interestedDivisions: [],
+      },
+    });
   }
 
   handleEmploymentUpdate(e) {
@@ -47,6 +67,12 @@ class ControlledInput extends React.Component {
   handleTravelPercentageChange(e) {
     const formData = Object.assign({}, this.state.formData);
     formData.travelPercentage = e.target.value;
+    this.setState({ formData });
+  }
+
+   handleHomePercentageChange(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData.homePercentage = e.target.value;
     this.setState({ formData });
   }
 
@@ -138,6 +164,17 @@ class ControlledInput extends React.Component {
           step={5}
           required
         />
+        <NumberField
+          label="What percentage of work are you willing to travel?"
+          help="This will help determine your placement in positions requiring travel"
+          value={this.state.formData.homePercentage}
+          onChange={this.handleHomePercentageChange}
+          name="home_percentage"
+          min={0}
+          max={100}
+          step={5}
+          required
+        />
         <TextareaField
           label="Experience"
           name="experience"
@@ -205,6 +242,7 @@ class ControlledInput extends React.Component {
           />
         </Fieldset>
         <Button text="Submit" type="submit" />
+        <Button text="Reset" type="reset" onClick={this.resetValues} />
         {this.state.submittedData && <div><hr /><p>Form was submitted with {JSON.stringify(this.state.submittedData)}</p></div>}
       </form>
     );
