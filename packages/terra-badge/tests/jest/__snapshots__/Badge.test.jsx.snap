@@ -1,10 +1,10 @@
 exports[`test should render a badge component in the order, icon and text with medium size 1`] = `
 <span
-  className="terra-Badge terra-Badge--medium terra-Badge--default">
+  className="badge medium default">
   <img
     alt="Test icon" />
   <span
-    className="terra-Badge-text">
+    className="text">
     Test value
   </span>
 </span>
@@ -12,9 +12,9 @@ exports[`test should render a badge component in the order, icon and text with m
 
 exports[`test should render a badge component in the order, text and icon with info intent 1`] = `
 <span
-  className="terra-Badge terra-Badge--small terra-Badge--info">
+  className="badge small info">
   <span
-    className="terra-Badge-text">
+    className="text">
     Test value
   </span>
   <img
@@ -24,7 +24,7 @@ exports[`test should render a badge component in the order, text and icon with i
 
 exports[`test should render a badge component with icon and medium size 1`] = `
 <span
-  className="terra-Badge terra-Badge--medium terra-Badge--default">
+  className="badge medium default">
   <img
     alt="Test icon" />
 </span>
@@ -32,7 +32,7 @@ exports[`test should render a badge component with icon and medium size 1`] = `
 
 exports[`test should render a badge component with icon and warning intent 1`] = `
 <span
-  className="terra-Badge terra-Badge--small terra-Badge--warning">
+  className="badge small warning">
   <img
     alt="Test icon" />
 </span>
@@ -40,9 +40,9 @@ exports[`test should render a badge component with icon and warning intent 1`] =
 
 exports[`test should render a badge component with text and large size 1`] = `
 <span
-  className="terra-Badge terra-Badge--large terra-Badge--default">
+  className="badge large default">
   <span
-    className="terra-Badge-text">
+    className="text">
     Large
   </span>
 </span>
@@ -50,9 +50,9 @@ exports[`test should render a badge component with text and large size 1`] = `
 
 exports[`test should render a badge component with text and secondary intent 1`] = `
 <span
-  className="terra-Badge terra-Badge--small terra-Badge--secondary">
+  className="badge small secondary">
   <span
-    className="terra-Badge-text">
+    className="text">
     Secondary
   </span>
 </span>
@@ -60,5 +60,5 @@ exports[`test should render a badge component with text and secondary intent 1`]
 
 exports[`test should render a default component with nothing 1`] = `
 <span
-  className="terra-Badge terra-Badge--small terra-Badge--default" />
+  className="badge small default" />
 `;
