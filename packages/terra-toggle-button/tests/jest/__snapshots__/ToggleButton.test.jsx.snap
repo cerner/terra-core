@@ -4,7 +4,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="button default"
+    class="terra-Button terra-Button--default"
     type="button">
     <div
       class="terra-Arrange">
@@ -49,7 +49,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="button default"
+    class="terra-Button terra-Button--default"
     type="button">
     <div
       class="terra-Arrange">
@@ -107,7 +107,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     aria-disabled="false"
     aria-expanded="false"
     aria-label="Show"
-    class="button default"
+    class="terra-Button terra-Button--default"
     type="button">
     <span
       class="terra-ToggleButton-icon">
@@ -137,7 +137,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="true"
-    class="button default"
+    class="terra-Button terra-Button--default"
     type="button">
     <div
       class="terra-Arrange">
@@ -207,7 +207,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       <button
         aria-disabled={false}
         aria-expanded={true}
-        className="button default"
+        className="terra-Button terra-Button--default"
         disabled={false}
         onClick={[Function]}
         type="button">
