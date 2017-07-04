@@ -61,6 +61,7 @@
 
   // link
   --terra-Button-color--link: #0065a3;
+  --terra-Button-activeColor--link: darken(#0065a3, 10%);
   --terra-Button-disabledColor--link: #909496;
 }
 
@@ -106,6 +107,7 @@ $terra-button-secondary-color-scheme: (
 
 $terra-button-link-color-scheme: (
   color: var(--terra-Button-color--link),
+  active-color: var(--terra-Button-activeColor--link),
   disabled-color: var(--terra-Button-disabledColor--link),
 );
 
