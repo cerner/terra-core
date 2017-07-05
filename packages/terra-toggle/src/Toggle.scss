@@ -1,0 +1,8 @@
+
+.terra-Toggle {
+  padding-top: 0.5rem;
+}
+
+.terra-Toggle-content.is-closed {
+  visibility: hidden; // disables focus on focusable children
+}

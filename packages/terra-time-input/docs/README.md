@@ -16,8 +16,15 @@ The currently supported time format is the 24-hour format (hh:mm). The time inpu
 import React from 'react';
 import TimeInput from 'terra-time-input';
 
-<TimeInput 
+<TimeInput
+  name="admission-time"
   value={'12:30'}
   onChange={this.handleChange}
 />
 ```
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
+

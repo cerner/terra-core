@@ -46,6 +46,7 @@ class SingleSelectableRows extends React.Component {
   }
 
   handleSelection(event, index) {
+    event.preventDefault();
     this.setState({ selectedIndex: index });
     if (this.props.onChange) {
       this.props.onChange(event, index);
@@ -126,11 +127,9 @@ class SingleSelectableRows extends React.Component {
   }
 
   render() {
-    const { children, ...customProps } = this.props;
+    const { children, onChange, ...customProps } = this.props;
     const clonedChildItems = this.clonedChildItems(children);
-    if ('onChange' in customProps) {
-      delete customProps.onChange;
-    }
+
     return (
       <TableRows {...customProps}>
         {clonedChildItems}

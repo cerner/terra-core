@@ -10,7 +10,6 @@ import DatePickerIncludeDates from './components/DatePickerIncludeDates';
 import DatePickerMinMax from './components/DatePickerMinMax';
 import DatePickerOnChange from './components/DatePickerOnChange';
 import DatePickerStartDate from './components/DatePickerStartDate';
-import DateRange from './components/DateRange';
 
 const routes = (
   <div>
@@ -22,7 +21,6 @@ const routes = (
     <Route path="/tests/date-picker-tests/min-max" component={DatePickerMinMax} />
     <Route path="/tests/date-picker-tests/on-change" component={DatePickerOnChange} />
     <Route path="/tests/date-picker-tests/start-date" component={DatePickerStartDate} />
-    <Route path="/tests/date-picker-tests/date-range" component={DateRange} />
   </div>
 );
 

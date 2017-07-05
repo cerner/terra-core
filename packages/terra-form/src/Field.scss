@@ -7,9 +7,10 @@
   padding: 0;
 }
 
-@media screen and (min-width: $terra-small-breakpoint) {
+@media screen and (min-width: 544px) {
   .terra-Form-field--inline,
   .terra-Form-fieldset--inline {
+    @include terra-margin-end(0.7143em);
     display: inline-block;
     vertical-align: top;
   }
@@ -19,15 +20,10 @@
 .terra-Form-fieldset--required > .terra-Form-legend:first-child {
   &::before {
     @include terra-padding-end(0.357em);
-    color: $terra-red-70;
+    color: #e50000;
     content: '*';
     display: inline-block;
   }
-}
-
-.terra-Form-field--inline,
-.terra-Form-fieldset--inline {
-  @include terra-margin-end(0.7143em);
 }
 
 .terra-Form-label {
@@ -48,14 +44,17 @@
 
 .terra-Form-helpText {
   display: block;
-  margin-top: 0.357em;
+  margin-bottom: 0.357em;
   outline: 0;
 }
 
 .terra-Form-error {
-  color: $terra-red-70;
+  color: #e50000;
   display: block;
-  margin-top: 0.357em;
+  margin-bottom: 0.357em;
   outline: 0;
 }
 
+.terra-Form-fieldset-children {
+  margin-top: 0.714em;
+}

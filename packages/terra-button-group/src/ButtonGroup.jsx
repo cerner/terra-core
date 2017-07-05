@@ -32,7 +32,7 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * Sets the button size. One of tiny, small, medium, large, huge
+   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`
    **/
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 
@@ -71,21 +71,14 @@ class ButtonGroup extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    const newSelectedIndex = ButtonGroup.getInitialState(nextProps.buttons.concat(nextProps.children), nextProps.isSelectable);
-
-    if (newSelectedIndex !== this.state.selectedIndex) {
-      this.setState({ selectedIndex: newSelectedIndex });
-    }
-  }
-
   handleOnClick(event, index) {
     // No need to re-render if the button clicked is already selected
     if (this.state.selectedIndex !== index) {
+      event.preventDefault();
       this.setState({ selectedIndex: index });
 
       if (this.props.onChange) {
-        this.props.onChange(this.state.selectedIndex);
+        this.props.onChange(event, index);
       }
     }
   }

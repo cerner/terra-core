@@ -13,8 +13,7 @@ const propTypes = {
    */
   locale: PropTypes.string,
   /**
-   * Customized translations provided by consuming application
-   * only for current locale.
+   * Customized translations provided by consuming application only for current locale.
    */
    /* eslint-disable consistent-return */
   customMessages: (props, propName, componentName) => {
@@ -24,6 +23,13 @@ const propTypes = {
       );
     }
   },
+  /**
+   * The component(s) that will be wrapped by `<Base />` ONLY
+   * in the event that translations have not been loaded yet.
+   * NOTE: Absolutely no locale-dependent logic should be
+   * utilized in this placeholder.
+   */
+  translationsLoadingPlaceholder: PropTypes.node,
 };
 
 const defaultProps = {
@@ -58,6 +64,7 @@ class Base extends React.Component {
       children,
       locale,
       customMessages,
+      translationsLoadingPlaceholder,
       ...customProps
     } = this.props;
 
@@ -70,7 +77,7 @@ class Base extends React.Component {
     const messages = Object.assign({}, this.state.messages, customMessages);
 
     if (locale === undefined) return childComponent;
-    if (!this.state.areTranslationsLoaded) return null;
+    if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider locale={this.state.locale} messages={messages}>
         {childComponent}

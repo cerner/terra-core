@@ -52,15 +52,8 @@ class SingleSelectList extends React.Component {
     this.state = { selectedIndex: SingleSelectList.selectedIndexFromItems(this.props.children) };
   }
 
-  componentWillReceiveProps(nextProps) {
-    const index = SingleSelectList.selectedIndexFromItems(nextProps.children);
-
-    if (index !== this.state.selectedIndex) {
-      this.setState({ selectedIndex: index });
-    }
-  }
-
   handleSelection(event, index) {
+    event.preventDefault();
     this.setState({ selectedIndex: index });
     if (this.props.onChange) {
       this.props.onChange(event, index);
@@ -146,15 +139,9 @@ class SingleSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, ...customProps } = this.props;
+    const { children, isDivided, onChange, hasChevrons, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
-    if ('onChange' in customProps) {
-      delete customProps.onChange;
-    }
-    if ('hasChevrons' in customProps) {
-      delete customProps.hasChevrons;
-    }
     return (
       <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}

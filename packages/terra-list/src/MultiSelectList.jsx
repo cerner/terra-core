@@ -56,29 +56,9 @@ class MultiSelectList extends React.Component {
     this.state = { selectedIndexes: MultiSelectList.selectedIndexesFromItems(this.props.children, this.validatedMaxCount()) };
   }
 
-  componentWillReceiveProps(nextProps) {
-    const nextIndexes = MultiSelectList.selectedIndexesFromItems(nextProps.children, this.validatedMaxCount());
-
-    if (this.shouldUpdateIndexes(nextIndexes)) {
-      this.setState({ selectedIndexes: nextIndexes });
-    }
-  }
-
-  shouldUpdateIndexes(indexes) {
-    if (indexes.length !== this.state.selectedIndexes.length) {
-      return true;
-    }
-
-    for (let i = indexes.length - 1; i >= 0; i -= 1) {
-      if (this.state.selectedIndexes.indexOf(indexes[i]) >= 0) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
   handleSelection(event, index) {
+    event.preventDefault();
+
     let newIndexes = [];
     if (this.state.selectedIndexes.length) {
       if (this.state.selectedIndexes.indexOf(index) >= 0) {
@@ -188,15 +168,9 @@ class MultiSelectList extends React.Component {
   }
 
   render() {
-    const { children, isDivided, ...customProps } = this.props;
+    const { children, isDivided, onChange, maxSelectionCount, ...customProps } = this.props;
     const clonedChildItems = this.cloneChildItems(children);
 
-    if ('onChange' in customProps) {
-      delete customProps.onChange;
-    }
-    if ('maxSelectionCount' in customProps) {
-      delete customProps.maxSelectionCount;
-    }
     return (
       <List isDivided={isDivided} {...customProps}>
         {clonedChildItems}

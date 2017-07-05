@@ -11,12 +11,14 @@ it('should render a TextAreaField with the rest of the props', () => {
   const textarea = (
     <TextareaField
       label="Profile Description"
+      labelAttrs={{ className: 'healtheintent-legend' }}
       name="profile_description"
       error="Name is required"
       help="The name given to you at birth."
       maxLength={15}
       minLength={5}
       inputAttrs={{ autoFocus: false }}
+      inputId="description"
       isInline
       required
     />);

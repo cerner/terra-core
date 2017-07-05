@@ -1,11 +1,14 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "bin": {
+    "props-table": "./bin/props-table.js"
   },
   "keywords": [
     "Cerner",
@@ -21,18 +24,19 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.4.0"
+    "terra-toolkit": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "terra-base": "^0.5.0"
+    "react-dom": "^15.4.2"
   },
   "dependencies": {
+    "commander": "^2.9.0",
+    "glob": "^7.1.2",
+    "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react-docgen": "^2.15.0",
-    "terra-base": "^0.5.0",
-    "terra-markdown": "^0.5.0"
+    "terra-markdown": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -41,6 +45,6 @@
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:spec",
-    "test:spec": "echo \"Warning: no test written\" && exit 0"
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   }
 }

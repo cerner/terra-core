@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
-import './Badge.scss';
+import styles from './Badge.scss';
 
 const propTypes = {
   /**
@@ -14,7 +14,7 @@ const propTypes = {
    */
   icon: PropTypes.element,
   /**
-   * Sets the badge color scheme. One of `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
+   * Sets the badge color scheme. One of `default`, `primary`, `secondary`, `positive`, `negative`, `warning`, `info`.
    */
   intent: PropTypes.oneOf(['default', 'primary', 'secondary', 'info', 'warning', 'positive', 'negative']),
   /**
@@ -22,8 +22,7 @@ const propTypes = {
    */
   isReversed: PropTypes.bool,
   /**
-   * Sets the badge size. One of tiny, small, medium, large, huge.
-   * @type String
+   * Sets the badge size. One of `tiny`, `small`, `medium`, `large`, `huge`.
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
@@ -47,20 +46,17 @@ const Badge = ({
   isReversed,
   text,
   icon,
-  ...additionalProps
+  ...customProps
 }) => {
-  const classes = classNames([
-    'terra-Badge',
-    { [`terra-Badge--${size}`]: size },
-    { [`terra-Badge--${intent}`]: intent },
-    additionalProps.className,
-  ]);
+  const badgeClassNames = classNames(
+      styles.badge,
+      { [styles[size]]: size },
+      { [styles[intent]]: intent },
+      customProps.className);
 
-  const textContent = text ? <span className="terra-Badge-text">{text}</span> : null;
-
-  const content = isReversed ? [textContent, icon, additionalProps.children] : [icon, textContent, additionalProps.children];
-
-  return React.createElement('span', { ...additionalProps, className: classes }, ...content);
+  const textContent = text ? <span className={styles.text}>{text}</span> : null;
+  const content = isReversed ? [textContent, icon, customProps.children] : [icon, textContent, customProps.children];
+  return React.createElement('span', { ...customProps, className: badgeClassNames }, ...content);
 };
 
 Badge.propTypes = propTypes;

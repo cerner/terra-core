@@ -22,6 +22,11 @@ Cerner Corporation
 - Neil Pfeiffer [@neilpfeiffer]
 - David Schoonover [@dkschoonover]
 - Christian Alten [@cwalten]
+- Viren Sawant [@viren140290]
+- Douglas Williams [@doogthemushroom]
+- Matt Schile [@mschile]
+- Madeline Gilbert [@madelineisabelle]
+- Michael Hemesath [@mhemesath]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -46,3 +51,8 @@ Cerner Corporation
 [@neilpfeiffer]: https://github.com/neilpfeiffer
 [@dkschoonover]: https://github.com/dkschoonover
 [@cwalten]: https://github.com/cwalten
+[@viren140290]: https://github.com/viren140290
+[@doogthemushroom]: https://github.com/doogthemushroom
+[@mschile]: https://github.com/mschile
+[@madelineisabelle]: https://github.com/madelineisabelle
+[@mhemesath]: https://github.com/mhemesath

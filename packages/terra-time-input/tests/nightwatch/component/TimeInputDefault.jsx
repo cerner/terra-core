@@ -2,7 +2,9 @@ import React from 'react';
 import TimeInput from '../../../lib/TimeInput';
 
 const TimeInputDefault = () => (
-  <TimeInput />
+  <TimeInput
+    name="time-input"
+  />
 );
 
 export default TimeInputDefault;

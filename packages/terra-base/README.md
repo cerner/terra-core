@@ -16,6 +16,21 @@ This includes CSS to help normalize box-sizing, reset margins/paddings, and defi
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-base`
+- Consume `Base` with translations:
+```
+import Base from 'terra-base';
+<Base locale={localeByBackend} customMessages={translationsByBackend}>
+  ...
+</Base>
+```
+
+- Consume `Base` without translations:
+```
+import Base from 'terra-base';
+<Base>
+  ...
+</Base>
+```
 
 ## LICENSE
 

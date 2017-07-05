@@ -1,6 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-/* eslint-disable no-unused-expressions */
-
+/* eslint-disable no-unused-expressions*/
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -59,14 +58,36 @@ module.exports = {
     browser.expect.element('.react-datepicker__day--today').to.not.be.present;
   },
 
-  'Displays the DatePicker with a date range': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/date-range`);
+  'Creates a hidden input with a name atribute of "date-input" and an empty value attribute when no date is entered': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
 
-    browser.click('.terra-DatePicker-button');
-
-    browser.expect.element('.terra-DatePicker-range').to.be.present;
-    browser.expect.element('.terra-DatePicker-range > .terra-DatePicker').to.be.present;
+    browser.expect.element('.terra-hidden-date-input').to.have.attribute('name').which.equals('date-input');
+    browser.expect.element('.terra-hidden-date-input').to.have.attribute('value').which.equals('');
   },
 
+  'Creates a hidden input with a default name atribute of "date-input" and sets the value in ISO8601 format when a valid date is entered': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/start-date`);
+
+    browser.expect.element('.terra-hidden-date-input').to.have.attribute('name').which.equals('date-input');
+    browser.expect.element('.terra-hidden-date-input').to.have.attribute('value').which.equals('2017-04-01');
+  },
+
+  'Creates a hidden input and sets the value attribute as is when an invalid date is entered': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+
+    browser.click('.terra-DatePicker-input');
+    browser.keys('2017');
+
+    browser.expect.element('.terra-hidden-date-input').to.have.attribute('name').which.equals('date-input');
+    browser.expect.element('.terra-hidden-date-input').to.have.attribute('value').which.equals('2017');
+  },
+
+  'Displays the calendar button with a height that matches the input ': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+
+    browser.getCssProperty('.terra-DatePicker-input', 'height', (result) => {
+      browser.assert.cssProperty('.terra-DatePicker-button', 'height', result.value);
+    });
+  },
 };
 

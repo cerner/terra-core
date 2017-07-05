@@ -20,6 +20,10 @@ JS (webpack)
 import 'terra-mixins';
 ```
 
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+
+
 ### Bidirectionality (bidi) Mixins
 
 Terra leverages the `dir` attribute set on the opening HTML tag for styles to render correctly.

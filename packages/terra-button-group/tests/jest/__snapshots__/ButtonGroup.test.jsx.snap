@@ -135,3 +135,39 @@ exports[`test should render a selectable button group 1`] = `
     variant="default" />
 </div>
 `;
+
+exports[`test should select a button 1`] = `
+<div
+  className="terra-ButtonGroup">
+  <ButtonGroupButton
+    isCompact={false}
+    isReversed={false}
+    isSelected={true}
+    onClick={[Function]}
+    variant="default" />
+  <ButtonGroupButton
+    isCompact={false}
+    isReversed={false}
+    isSelected={false}
+    onClick={[Function]}
+    variant="default" />
+</div>
+`;
+
+exports[`test should select a button 2`] = `
+<div
+  className="terra-ButtonGroup">
+  <ButtonGroupButton
+    isCompact={false}
+    isReversed={false}
+    isSelected={false}
+    onClick={[Function]}
+    variant="default" />
+  <ButtonGroupButton
+    isCompact={false}
+    isReversed={false}
+    isSelected={true}
+    onClick={[Function]}
+    variant="default" />
+</div>
+`;

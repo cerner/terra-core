@@ -1,57 +1,80 @@
-$terra-badge-font-sizes: (
-  tiny: 0.5rem,
-  small: 0.8rem,
-  medium: 1rem,
-  large: 1.4rem,
-  huge: 1.7rem
-) !default;
+:root {
+  --terra-Badge-fontSize--tiny: 0.5rem;
+  --terra-Badge-fontSize--small: 0.8rem;
+  --terra-Badge-fontSize--medium: 1rem;
+  --terra-Badge-fontSize--large: 1.4rem;
+  --terra-Badge-fontSize--huge: 1.7rem;
+  --terra-Badge-minWidth: 1.65em;
 
-$terra-badge-child-margin: 0.357em !default;
+  --terra-Badge-child--margin: 0.357em;
 
-$terra-badge-border-radius: 0.25em !default;
-$terra-badge-display: inline-block !default;
+  --terra-Badge-borderRadius: 0.25em;
+  --terra-Badge-display: inline-block;
 
-$terra-badge-font-weight: 700 !default;
-$terra-badge-line-height: 1 !default;
+  --terra-Badge-fontWeight: 700;
+  --terra-Badge-lineHeight: 1;
 
-$terra-badge-padding-bottom: 0.5rem !default;
-$terra-badge-padding-left: 0.36rem !default;
-$terra-badge-padding-right: 0.36rem !default;
-$terra-badge-padding-top: 0.5rem !default;
+  --terra-Badge-paddingBottom: 0.5rem;
+  --terra-Badge-paddingLeft: 0.36rem;
+  --terra-Badge-paddingRight: 0.36rem;
+  --terra-Badge-paddingTop: 0.5rem;
 
-$terra-badge-text-transform: none !default;
+  --terra-Badge-textTransform: none;
+
+  // Color variants
+  --terra-Badge-backgroundColor--default: #bcbfc0;
+  --terra-Badge-color--default: #383f42;
+
+  --terra-Badge-backgroundColor--primary: #004c76;
+  --terra-Badge-color--primary: #fff;
+
+  --terra-Badge-backgroundColor--secondary: #4e832b;
+  --terra-Badge-color--secondary: #fff;
+
+  --terra-Badge-backgroundColor--positive: #4e832b;
+  --terra-Badge-color--positive: #fff;
+
+  --terra-Badge-backgroundColor--negative: #bc0203;
+  --terra-Badge-color--negative: #fff;
+
+  --terra-Badge-backgroundColor--warning: #da3b03;
+  --terra-Badge-color--warning: #fff;
+
+  --terra-Badge-backgroundColor--info: #004c76;
+  --terra-Badge-color--info: #fff;
+}
 
 $terra-badge-default-color-scheme: (
-  background-color: $terra-grey-30,
-  color: $terra-grey-90
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--default),
+  color: var(--terra-Badge-color--default)
+);
 
 $terra-badge-primary-color-scheme: (
-  background-color: $terra-blue-100,
-  color: $terra-white
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--primary),
+  color: var(--terra-Badge-color--primary)
+);
 
 $terra-badge-secondary-color-scheme: (
-  background-color: $terra-green-90,
-  color: $terra-white
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--secondary),
+  color: var(--terra-Badge-color--secondary)
+);
 
 $terra-badge-positive-color-scheme: (
-  background-color: $terra-green-90,
-  color: $terra-white
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--positive),
+  color: var(--terra-Badge-color--positive)
+);
 
 $terra-badge-negative-color-scheme: (
-  background-color: $terra-red-90,
-  color: $terra-white
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--negative),
+  color: var(--terra-Badge-color--negative)
+);
 
 $terra-badge-warning-color-scheme: (
-  background-color: $terra-orange-100,
-  color: $terra-white
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--warning),
+  color: var(--terra-Badge-color--warning)
+);
 
 $terra-badge-info-color-scheme: (
-  background-color: $terra-blue-100,
-  color: $terra-white
-) !default;
+  background-color: var(--terra-Badge-backgroundColor--info),
+  color: var(--terra-Badge-color--info)
+);

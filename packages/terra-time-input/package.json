@@ -1,7 +1,7 @@
 {
   "name": "terra-time-input",
   "main": "lib/TimeInput.js",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A controlled input component for entering time.",
   "repository": {
     "type": "git",
@@ -21,22 +21,23 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-toolkit": "^0.x"
+    "terra-props-table": "^1.0.0",
+    "terra-toolkit": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^0.4.1",
-    "terra-form": "^0.1.0",
-    "terra-mixins": "^1.1.1"
+    "terra-base": "^1.0.0",
+    "terra-form": "^1.0.0",
+    "terra-mixins": "^1.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "moment": "^2.17.1",
     "prop-types": "^15.5.8",
-    "terra-base": "^0.4.1",
-    "terra-form": "^0.1.0",
-    "terra-mixins": "^1.1.1"
+    "terra-base": "^1.0.0",
+    "terra-form": "^1.0.0",
+    "terra-mixins": "^1.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -45,6 +46,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "props-table": "props-table ./src/TimeInput.jsx --out-dir ./docs/props-table",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
