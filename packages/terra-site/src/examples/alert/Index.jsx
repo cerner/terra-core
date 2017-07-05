@@ -21,6 +21,7 @@ import OutsideRecordsExample from './OutsideRecordsExample';
 import CustomExample from './CustomExample';
 import LongTextExample from './LongTextExample';
 import ActionExample from './ActionExample';
+import SmallContainerExample from './SmallContainerExample';
 import DismissibleExample from './DismissibleExample';
 import ActionAndDismissibleExample from './ActionAndDismissibleExample';
 import BuildYourOwnAlertExample from './BuildYourOwnAlertExample';
@@ -58,6 +59,8 @@ const AlertExamples = () => (
     <LongTextExample />
     <br /><hr /><br />
     <ActionExample />
+    <br /><hr /><br />
+    <SmallContainerExample />
     <br /><hr /><br />
     <DismissibleExample />
     <br /><hr /><br />

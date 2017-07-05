@@ -127,6 +127,39 @@ const getAlertIcon = (type, customIcon) => {
   }
 };
 
+const getAlertDefaultTitle = (intl, type) => {
+  let intlDefaultTitle = '';
+  switch (type) {
+    case AlertTypes.ALERT:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.alert' });
+      break;
+    case AlertTypes.ERROR:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.error' });
+      break;
+    case AlertTypes.WARNING:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.warning' });
+      break;
+    case AlertTypes.ADVISORY:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.advisory' });
+      break;
+    case AlertTypes.INFO:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.info' });
+      break;
+    case AlertTypes.SUCCESS:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.success' });
+      break;
+    case AlertTypes.GAP_CHECKING:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.gapChecking' });
+      break;
+    case AlertTypes.OUTSIDE_RECORDS:
+      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.outsideRecords' });
+      break;
+    default:
+      break;
+  }
+  return intlDefaultTitle;
+};
+
 const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
@@ -150,35 +183,7 @@ const Alert = (
     intl,
   },
 ) => {
-  let defaultTitle = '';
-  switch (type) {
-    case AlertTypes.ALERT:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.alert' });
-      break;
-    case AlertTypes.ERROR:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.error' });
-      break;
-    case AlertTypes.WARNING:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.warning' });
-      break;
-    case AlertTypes.ADVISORY:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.advisory' });
-      break;
-    case AlertTypes.INFO:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.info' });
-      break;
-    case AlertTypes.SUCCESS:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.success' });
-      break;
-    case AlertTypes.GAP_CHECKING:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.gapChecking' });
-      break;
-    case AlertTypes.OUTSIDE_RECORDS:
-      defaultTitle = intl.formatMessage({ id: 'Terra.alert.outsideRecords' });
-      break;
-    default:
-      break;
-  }
+  const defaultTitle = getAlertDefaultTitle(intl, type);
   const attributes = Object.assign({}, customProps);
   const alertTypeClassName = getAlertClassName(type);
   const narrowAlertClassNames = classNames([
