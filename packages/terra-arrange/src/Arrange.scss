@@ -17,8 +17,8 @@
 // Display set to ensure correct appreance if applied to inline elements like span
 .terra-Arrange-fill {
   display: block;
+  flex-basis: auto;
   flex: 1;
-  flex-basis: auto;  
   min-width: 0;
 }
 
