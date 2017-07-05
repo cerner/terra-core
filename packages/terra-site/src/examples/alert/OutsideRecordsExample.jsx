@@ -8,7 +8,7 @@ const alertText = 'This is an outside records alert';
 const OutsideRecordsExample = () => (
   <div>
     <div dir="ltr">
-      <h3>Basic Alert of type "outside records" with default title</h3>
+      <h3>Basic Alert of type Outside Records with default title</h3>
       <br />
       <code>
         {alertStartTagStr}{alertText}{alertEndTagStr}

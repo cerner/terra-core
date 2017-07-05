@@ -1,6 +1,4 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-const assert = require('assert');
-
 const screenshot = require('terra-toolkit').screenshot;
 
 const windowSizes = {
