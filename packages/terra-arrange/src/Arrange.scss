@@ -18,8 +18,8 @@
 .terra-Arrange-fill {
   display: block;
   flex: 1;
+  flex-basis: auto;  
   min-width: 0;
-  flex-basis: auto;
 }
 
 // Styles specific to align items independently of each other
