@@ -3,7 +3,7 @@ import React from 'react';
 import Overlay from '../../../lib/Overlay';
 
 const OverlayExample = () => (
-  <Overlay isOpen backgroundStyle="clear" >
+  <Overlay isOpen backgroundStyle={Overlay.BackgroundStyles.CLEAR} >
     <h1>Clear Overlay</h1>
   </Overlay>
 );

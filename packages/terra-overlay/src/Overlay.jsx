@@ -5,6 +5,12 @@ import FocusTrap from 'focus-trap-react';
 import 'terra-base/lib/baseStyles';
 import './Overlay.scss';
 
+const BackgroundStyles = {
+  LIGHT: 'light',
+  DARK: 'dark',
+  CLEAR: 'clear',
+};
+
 const propTypes = {
   /**
   * The content to be displayed within the overlay.
@@ -15,9 +21,9 @@ const propTypes = {
   */
   isOpen: PropTypes.bool,
   /**
-  * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
+  * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear' or BackgroundStyles.LIGHT, BackgroundStyles.DARK, and BackgroundStyles.CLEAR.
   */
-  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
+  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear', BackgroundStyles]),
   /**
   * Indicates if the overlay content is scrollable.
   */
@@ -39,7 +45,7 @@ const KEYCODES = {
 const defaultProps = {
   children: null,
   isOpen: false,
-  backgroundStyle: 'light',
+  backgroundStyle: BackgroundStyles.LIGHT,
   isScrollable: false,
   isRelativeToContainer: false,
   onRequestClose: undefined,
@@ -62,8 +68,6 @@ class Overlay extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.shouldHandleESCKeydown);
-    this.children = null;
-    this.container = null;
   }
 
   setContainer(node) {
@@ -167,5 +171,6 @@ class Overlay extends React.Component {
 
 Overlay.propTypes = propTypes;
 Overlay.defaultProps = defaultProps;
+Overlay.BackgroundStyles = BackgroundStyles;
 
 export default Overlay;

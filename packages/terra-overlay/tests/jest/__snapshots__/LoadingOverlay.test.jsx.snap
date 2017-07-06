@@ -1,65 +1,24 @@
 exports[`LoadingOverlay should render a null component when isOpen is not provided 1`] = `
-<Overlay
+<LoadingOverlay
   backgroundStyle="light"
-  className="terra-LoadingOverlay"
+  isAnimated={false}
   isOpen={false}
-  isRelativeToContainer={false}
-  isScrollable={false}>
-  <IconSpinner
-    className="terra-LoadingOverlay-icon"
-    data-name="Layer 1"
-    height="36"
-    isSpin={false}
-    viewBox="0 0 48 48"
-    width="36"
-    xmlns="http://www.w3.org/2000/svg" />
-  <div
-    className="terra-LoadingOverlay-message">
-    Loading...
-  </div>
-</Overlay>
+  isRelativeToContainer={false} />
 `;
 
 exports[`LoadingOverlay when isOpen is provided should render with message prop 1`] = `
-<Overlay
+<LoadingOverlay
   backgroundStyle="light"
-  className="terra-LoadingOverlay"
+  isAnimated={false}
   isOpen={true}
   isRelativeToContainer={false}
-  isScrollable={false}>
-  <IconSpinner
-    className="terra-LoadingOverlay-icon"
-    data-name="Layer 1"
-    height="36"
-    isSpin={false}
-    viewBox="0 0 48 48"
-    width="36"
-    xmlns="http://www.w3.org/2000/svg" />
-  <div
-    className="terra-LoadingOverlay-message">
-    Loading!
-  </div>
-</Overlay>
+  message="Loading!" />
 `;
 
-exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay should render a default component 1`] = `
-<Overlay
+exports[`undefined 1`] = `
+<LoadingOverlay
   backgroundStyle="light"
-  className="terra-LoadingOverlay"
+  isAnimated={false}
   isOpen={true}
-  isRelativeToContainer={false}
-  isScrollable={false}>
-  <IconSpinner
-    className="terra-LoadingOverlay-icon"
-    data-name="Layer 1"
-    height="36"
-    isSpin={false}
-    viewBox="0 0 48 48"
-    width="36"
-    xmlns="http://www.w3.org/2000/svg" />
-  <div
-    className="terra-LoadingOverlay-message">
-    Loading...
-  </div>
-</Overlay>
+  isRelativeToContainer={false} />
 `;
