@@ -7,7 +7,7 @@ An Alert consists of the following elements:
 - Icon: for each standard notification type, a specific icon is rendered to the left of the banner. The icon is another element that helps the user understand the severity and meaning of the notification.  For a custom alert, you can provide your own icon to be rendered in the banner.
 - Title: a brief word or phrase that summarizes the notification.  It is rendered in a bold font to gain the attention of the user.  For the standard notification types, if you don't provide a title, then pre-defined text is used.  For a custom alert, the title is optional.
 - Message content: the notification message which can consist of text or HTML.
-- Action area: an optional area to the right of the banner that contains actionable elements (typically buttons) allowing the user to respond to the alert notiifcation.  This area can consist of the following:
+- Action area: an optional area to the right of the banner that contains actionable elements (typically buttons) allowing the user to respond to the alert notification.  This area can consist of the following:
   - Dismiss button: the Alert component can be configured to be dismissible.  If it is to be dismissible, a Dismiss button is rendered in the action area.
   - Action element: you can configure the Alert component to include additional actionable element(s) in the action area.  typically you would include a button element.  To be consistent with the Dismiss button if it is used, you should use the Terra Button component.
 
