@@ -3,7 +3,7 @@ import ProfileImage from '../../src/ProfileImage';
 
 /* Avatar image is displayed while the profile image is loading */
 it('should render a hidden profile image and a visible avatar image', () => {
-  const wrapper = shallow(<ProfileImage src="profile.jpg" alt="avatar" height="75" width="75" />);
+  const wrapper = shallow(<ProfileImage src="profile.jpg" height="75" width="75" />);
   expect(wrapper).toMatchSnapshot();
 });
 

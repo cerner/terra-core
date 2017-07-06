@@ -14,7 +14,7 @@ const propTypes = {
   /**
    * The text content that specifies an alternative text for an image.
    */
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   /**
    * Sets the height of the image.
    */
@@ -31,10 +31,6 @@ const propTypes = {
    * Function to be executed when the profile image load errors.
    */
   onError: PropTypes.func,
-};
-
-const defaultProps = {
-  alt: ' ',
 };
 
 const avatarOverrideProps = { src: avatarImage, onLoad: undefined, onError: undefined };
@@ -98,6 +94,5 @@ class ProfileImage extends React.Component {
 }
 
 ProfileImage.propTypes = propTypes;
-ProfileImage.defaultProps = defaultProps;
 
 export default ProfileImage;
