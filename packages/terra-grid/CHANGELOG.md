@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Dependency Updates
+* Updated nightwatch test scripts
+* Removed nightwatch.config file
 
 3.3.0 (June 27, 2017)
 ------------------
