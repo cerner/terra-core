@@ -1,6 +1,6 @@
 Changelog
 =========
 
-0.1.0 - (July 5, 2017)
-------------------
+Unreleased
+----------
 Initial pull request
