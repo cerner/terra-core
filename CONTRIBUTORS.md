@@ -26,6 +26,8 @@ Cerner Corporation
 - Douglas Williams [@doogthemushroom]
 - Matt Schile [@mschile]
 - Madeline Gilbert [@madelineisabelle]
+- Michael Hemesath [@mhemesath]
+- Umesh Shimpi [@us044466]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -54,3 +56,5 @@ Cerner Corporation
 [@doogthemushroom]: https://github.com/doogthemushroom
 [@mschile]: https://github.com/mschile
 [@madelineisabelle]: https://github.com/madelineisabelle
+[@mhemesath]: https://github.com/mhemesath
+[@us044466]: https://github.com/us044466
