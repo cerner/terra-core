@@ -6,7 +6,7 @@ const hasAppChanges = jsModifiedFiles.length > 0;
 
 
 // Warn when there is a big PR
-const bigPRThreshold = 3;
+const bigPRThreshold = 100;
 if (danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
   warn(':exclamation: Big PR');
 }
