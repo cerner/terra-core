@@ -144,6 +144,7 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
               onClick={[Function]}
               size="medium"
               text="Dismiss"
+              type="button"
               variant="secondary" />
           </div>
         </div>
@@ -186,6 +187,7 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
               onClick={[Function]}
               size="medium"
               text="Dismiss"
+              type="button"
               variant="secondary" />
           </div>
         </div>
@@ -1118,6 +1120,7 @@ exports[`13. Alert of type success with an action button text content should ren
         onClick={[Function]}
         size="medium"
         text="Action"
+        type="button"
         variant="primary" />
     }
     customIcon={null}
@@ -1162,6 +1165,7 @@ exports[`13. Alert of type success with an action button text content should ren
               onClick={[Function]}
               size="medium"
               text="Action"
+              type="button"
               variant="primary" />
             
           </div>
@@ -1204,6 +1208,7 @@ exports[`13. Alert of type success with an action button text content should ren
               onClick={[Function]}
               size="medium"
               text="Action"
+              type="button"
               variant="primary" />
             
           </div>
@@ -1241,6 +1246,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
         onClick={[Function]}
         size="medium"
         text="Action"
+        type="button"
         variant="primary" />
     }
     customIcon={
@@ -1295,6 +1301,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
               onClick={[Function]}
               size="medium"
               text="Action"
+              type="button"
               variant="primary" />
             <Button
               isBlock={false}
@@ -1304,6 +1311,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
               onClick={[Function]}
               size="medium"
               text="Dismiss"
+              type="button"
               variant="secondary" />
           </div>
         </div>
@@ -1349,6 +1357,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
               onClick={[Function]}
               size="medium"
               text="Action"
+              type="button"
               variant="primary" />
             <Button
               isBlock={false}
@@ -1358,6 +1367,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
               onClick={[Function]}
               size="medium"
               text="Dismiss"
+              type="button"
               variant="secondary" />
           </div>
         </div>
