@@ -86,7 +86,7 @@ module.exports = {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
 
     browser.getElementSize('.terra-DatePicker-input', (datePickerResult) => {
-      browser.assert.getElementSize('.terra-DatePicker-button', (buttonResult) => {
+      browser.getElementSize('.terra-DatePicker-button', (buttonResult) => {
         browser.assert.equal(datePickerResult.value.height, buttonResult.value.height);
       });
     });
