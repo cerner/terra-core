@@ -6,8 +6,6 @@ import GridColumn from './GridColumn';
 
 import './Grid.scss';
 
-console.log('test modifying src files');
-
 const propTypes = {
   /**
    * The component that will be displayed at row level.
