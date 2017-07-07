@@ -8,20 +8,34 @@ const locale = 'en-US';
 
 describe('LoadingOverlay', () => {
   it('should render a null component when isOpen is not provided', () => {
-    const wrapper = shallow(<IntlProvider locale={locale} messages={messages}><LoadingOverlay /></IntlProvider>);
+    const wrapper = render(<IntlProvider locale={locale} messages={messages}><LoadingOverlay /></IntlProvider>);
     expect(wrapper).toMatchSnapshot();
   });
 
   describe('when isOpen is provided', () => {
     describe('the default LoadingOverlay', () => {
       const defaultRender = (<IntlProvider locale={locale} messages={messages}><LoadingOverlay isOpen /></IntlProvider>);
-      const wrapper = shallow(defaultRender);
-      expect(wrapper).toMatchSnapshot();
+
+      it('should render a default component', () => {
+        const wrapper = render(defaultRender);
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('should have the class terra-LoadingOverlay', () => {
+        const wrapper = render(defaultRender);
+        expect(wrapper.find('terra-LoadingOverlay'));
+      });
+
+      it('should have the default message of Loading...', () => {
+        const wrapper = render(defaultRender);
+        expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading...');
+      });
     });
 
     it('should render with message prop', () => {
       const overlayRender = (<IntlProvider locale={locale} messages={messages}><LoadingOverlay isOpen message="Loading!" /></IntlProvider>);
-      const wrapper = shallow(overlayRender);
+      const wrapper = render(overlayRender);
+      expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading!');
       expect(wrapper).toMatchSnapshot();
     });
   });
