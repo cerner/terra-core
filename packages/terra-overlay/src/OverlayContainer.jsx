@@ -16,10 +16,9 @@ const defaultProps = {
 };
 
 const OverlayContainer = ({ children, ...customProps }) => {
-  const attributes = Object.assign({}, customProps);
   const OverlayContainerClassNames = classNames([
     'terra-OverlayContainer',
-    attributes.className,
+    customProps.className,
   ]);
 
   return (
