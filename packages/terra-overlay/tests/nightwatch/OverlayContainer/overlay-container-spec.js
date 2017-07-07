@@ -8,7 +8,7 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    screenshot(browser, 'terra-overlay', done);
+    screenshot(browser, 'terra-overlaycontainer', done);
   },
 
   'Displays a default OverlayContainer': (browser) => {

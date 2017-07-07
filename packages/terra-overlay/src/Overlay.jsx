@@ -169,8 +169,10 @@ class Overlay extends React.Component {
   }
 }
 
+const Opts = { BackgroundStyles };
+
 Overlay.propTypes = propTypes;
 Overlay.defaultProps = defaultProps;
-Overlay.BackgroundStyles = BackgroundStyles;
+Overlay.Opts = Opts;
 
 export default Overlay;

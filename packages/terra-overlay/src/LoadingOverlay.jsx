@@ -7,7 +7,7 @@ import 'terra-base/lib/baseStyles';
 import Overlay from './Overlay';
 import './Overlay.scss';
 
-const BackgroundStyles = Overlay.BackgroundStyles;
+const BackgroundStyles = Overlay.Opts.BackgroundStyles;
 
 const propTypes = {
  /**
@@ -68,9 +68,11 @@ const LoadingOverlay = ({
   );
 };
 
+const Opts = { BackgroundStyles };
+
 LoadingOverlay.propTypes = propTypes;
 LoadingOverlay.defaultProps = defaultProps;
 LoadingOverlay.contextTypes = contextTypes;
-LoadingOverlay.BackgroundStyles = BackgroundStyles;
+LoadingOverlay.Opts = Opts;
 
 export default LoadingOverlay;

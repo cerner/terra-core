@@ -8,7 +8,6 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    // screenshot(browser, 'terra-overlay', done);
     screenshot(browser, 'terra-loadingoverlay', done);
   },
 
