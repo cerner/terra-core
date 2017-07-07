@@ -51,7 +51,6 @@
     "terra-mixins": "^1.6.0"
   },
   "devDependencies": {
-    "terra-props-table": "^1.0.0",
-    "terra-toolkit": "^1.0.0"
+    "terra-props-table": "^1.0.0"
   }
 }
