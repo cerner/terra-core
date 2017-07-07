@@ -8,5 +8,5 @@ export default () =>
   <Base locale={locale}>
     <h2>Alert with no props defaults to type alert - text content provided</h2>
     <br />
-    <Alert >Default Alert</Alert>
+    <Alert id="defaultAlert" >Default Alert</Alert>
   </Base>;

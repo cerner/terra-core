@@ -10,7 +10,8 @@ import IconRequired from 'terra-icon/lib/icon/IconRequired';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
-import './Alert.scss';
+import 'terra-base/lib/baseStyles';
+import styles from './Alert.scss';
 
 const AlertTypes = {
   ALERT: 'alert',
@@ -80,23 +81,23 @@ const defaultProps = {
 const getAlertClassName = (type) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return 'terra-Alert--alert';
+      return styles.alertType;
     case AlertTypes.ERROR:
-      return 'terra-Alert--error';
+      return styles.errorType;
     case AlertTypes.WARNING:
-      return 'terra-Alert--warning';
+      return styles.warningType;
     case AlertTypes.ADVISORY:
-      return 'terra-Alert--advisory';
+      return styles.advisoryType;
     case AlertTypes.INFO:
-      return 'terra-Alert--info';
+      return styles.infoType;
     case AlertTypes.SUCCESS:
-      return 'terra-Alert--success';
+      return styles.successType;
     case AlertTypes.GAP_CHECKING:
-      return 'terra-Alert--gap-checking';
+      return styles.gapCheckingType;
     case AlertTypes.OUTSIDE_RECORDS:
-      return 'terra-Alert--outside-records';
+      return styles.outsideRecordsType;
     case AlertTypes.CUSTOM:
-      return 'terra-Alert--custom';
+      return styles.customType;
     default:
       return '';
   }
@@ -187,14 +188,14 @@ const Alert = (
   const attributes = Object.assign({}, customProps);
   const alertTypeClassName = getAlertClassName(type);
   const narrowAlertClassNames = classNames([
-    'terra-Alert',
-    'terra-Alert--narrow',
+    styles.alert,
+    styles.narrow,
     alertTypeClassName,
     attributes.className,
   ]);
   const wideAlertClassNames = classNames([
-    'terra-Alert',
-    'terra-Alert--wide',
+    styles.alert,
+    styles.wide,
     alertTypeClassName,
     attributes.className,
   ]);
@@ -202,8 +203,8 @@ const Alert = (
   let actionsSection = '';
   let dismissButton = '';
   const outerDivStyle = {};
-  let alertSectionClassName = 'terra-Alert-section';
-  let alertActionsClassName = 'terra-Alert-actions';
+  let alertSectionClassName = styles.section;
+  let alertActionsClassName = styles.actions;
 
   if (type === AlertTypes.CUSTOM) {
     // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
@@ -214,8 +215,14 @@ const Alert = (
     // will allow the icon to pick up the color style so that Terra icons will match the color of the
     // status bar.
     outerDivStyle.color = customStatusColor;
-    alertSectionClassName += ' terra-Alert-section--custom';
-    alertActionsClassName += ' terra-Alert-actions--custom';
+    alertSectionClassName = classNames([
+      alertSectionClassName,
+      styles.sectionCustom,
+    ]);
+    alertActionsClassName = classNames([
+      alertActionsClassName,
+      styles.actionsCustom,
+    ]);
   }
 
   if (onDismiss) {
@@ -232,8 +239,8 @@ const Alert = (
 
   const alertMessageContent = (
     <div className={alertSectionClassName}>
-      <strong className="terra-Alert-title">{title || defaultTitle}</strong>
-      <div className="terra-Alert-content">
+      <strong className={styles.title}>{title || defaultTitle}</strong>
+      <div className={styles.content}>
         {children}
       </div>
     </div>
@@ -244,8 +251,8 @@ const Alert = (
       responsiveTo="parent"
       defaultElement={
         <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
-          <div className="terra-Alert-body terra-Alert-body-narrow">
-            <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
+          <div className={classNames([styles.body, styles.bodyNarrow])}>
+            <div className={styles.icon}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
@@ -253,8 +260,8 @@ const Alert = (
       }
       tiny={
         <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
-          <div className="terra-Alert-body terra-Alert-body-wide">
-            <div className="terra-Alert-icon">{getAlertIcon(type, customIcon)}</div>
+          <div className={classNames([styles.body, styles.bodyWide])}>
+            <div className={styles.icon}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}

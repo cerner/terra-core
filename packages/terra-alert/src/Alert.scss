@@ -1,149 +1,152 @@
-@import '~terra-mixins';
 @import './variables';
 @import './mixins';
 
-.terra-Alert {
-  align-items: stretch;
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-  overflow: hidden;
-  width: 100%;
-}
-
-.terra-Alert--narrow {
-  flex-direction: column;
-}
-
-.terra-Alert--wide {
-  flex-direction: row;
-}
-
-.terra-Alert-icon {
-  flex-shrink: 0;
-  @include terra-margin-end(0.5rem);
-}
-
-.terra-Alert-body {
-  align-items: flex-start;
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: row;
-  margin-top: 1rem;
-  overflow: hidden;
-  padding-top: 0.1rem;
-  @include terra-margin-start(0.6667rem);
-}
-
-.terra-Alert-body-narrow {
-  margin-bottom: 0;
-  @include terra-margin-end(0.6667rem);
-}
-
-.terra-Alert-body-wide {
-  margin-bottom: 1rem;
-  @include terra-margin-end(0);
-}
-
-.terra-Alert-section {
-  flex: 1;
-  padding-top: 0.2rem;
-}
-
-.terra-Alert-section--custom {
-  @include terra-alert-color($terra-alert-custom-text-color);
-}
-
-.terra-Alert-title {
-  @include terra-float-start();
-  @include terra-margin-end(0.5833rem);
-}
-
-.terra-Alert-content {
-  p {
-    margin-top: 0;
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .alert {
+    align-items: stretch;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
   }
 
-  p:last-child {
+  .narrow {
+    flex-direction: column;
+  }
+
+  .wide {
+    flex-direction: row;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+
+  .body {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin-left: 0.6667rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    padding-top: 0.1rem;
+  }
+
+  .bodyNarrow {
     margin-bottom: 0;
+    margin-right: 0.6667rem;
   }
-}
 
-.terra-Alert-actions {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  justify-content: flex-end;
-  margin: 0.5833rem 0.5833rem 0.5833rem 0.8333rem;
-}
+  .bodyWide {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
 
-.terra-Alert-actions--custom {
-  @include terra-alert-color($terra-alert-custom-text-color);
-}
+  .section {
+    flex: 1;
+    padding-top: 0.2rem;
+  }
 
-.terra-Alert-actions > :first-child {
-  @include terra-margin-end(0.8333rem);
-}
+  .sectionCustom {
+    @include terra-alert-color($terra-alert-custom-text-color);
+  }
 
-.terra-Alert-actions > :last-child {
-  @include terra-margin-end(0);
-}
+  .title {
+    float: left;
+    margin-right: 0.5833rem;
+  }
 
-.terra-Alert--alert {
-  @include terra-alert-box-shadow($terra-alert-alert-shadow-color);
-  @include terra-alert-background-color($terra-alert-alert-color-scheme);
-}
+  .content {
+    p {
+      margin-top: 0;
+    }
 
-.terra-Alert--error {
-  @include terra-alert-box-shadow($terra-alert-error-shadow-color);
-  @include terra-alert-background-color($terra-alert-error-color-scheme);
-}
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-.terra-Alert--warning {
-  @include terra-alert-box-shadow($terra-alert-warning-shadow-color);
-  @include terra-alert-background-color($terra-alert-warning-color-scheme);
-}
+  .actions {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    margin: 0.5833rem 0.5833rem 0.5833rem 0.8333rem;
+  }
 
-.terra-Alert--gap-checking {
-  @include terra-alert-box-shadow($terra-alert-gap-checking-shadow-color);
-  @include terra-alert-background-color($terra-alert-gap-checking-color-scheme);
-}
+  .actionsCustom {
+    @include terra-alert-color($terra-alert-custom-text-color);
+  }
 
-.terra-Alert--advisory {
-  @include terra-alert-box-shadow($terra-alert-advisory-shadow-color);
-  @include terra-alert-background-color($terra-alert-advisory-color-scheme);
-}
+  .actions > :first-child {
+    margin-right: 0.8333rem;
+  }
 
-.terra-Alert--info {
-  @include terra-alert-box-shadow($terra-alert-info-shadow-color);
-  @include terra-alert-background-color($terra-alert-info-color-scheme);
-}
+  .actions > :last-child {
+    margin-right: 0;
+  }
 
-.terra-Alert--success {
-  @include terra-alert-box-shadow($terra-alert-success-shadow-color);
-  @include terra-alert-background-color($terra-alert-success-color-scheme);
-}
+  .alertType {
+    @include terra-alert-box-shadow(var(--terra-Alert-alert-shadow-color));
+    @include terra-alert-background-color($terra-alert-alert-color-scheme);
+  }
 
-.terra-Alert--outside-records {
-  @include terra-alert-box-shadow($terra-alert-outside-records-shadow-color);
-  @include terra-alert-background-color($terra-alert-outside-records-color-scheme);
-}
+  .errorType {
+    @include terra-alert-box-shadow(var(--terra-Alert-error-shadow-color));
+    @include terra-alert-background-color($terra-alert-error-color-scheme);
+  }
 
-.terra-Alert--custom {
-  @include terra-alert-color($terra-alert-custom-shadow-color);
-  @include terra-alert-custom-box-shadow();
-  @include terra-alert-background-color($terra-alert-custom-color-scheme);
-}
+  .warningType {
+    @include terra-alert-box-shadow(var(--terra-Alert-warning-shadow-color));
+    @include terra-alert-background-color($terra-alert-warning-color-scheme);
+  }
 
-.terra-Alert--alert .terra-Alert-title {
-  @include terra-alert-color($terra-alert-alert-title-color-scheme);
-}
+  .gapCheckingType {
+    @include terra-alert-box-shadow(var(--terra-Alert-gap-checking-shadow-color));
+    @include terra-alert-background-color($terra-alert-gap-checking-color-scheme);
+  }
 
-.terra-Alert--error .terra-Alert-title {
-  @include terra-alert-color($terra-alert-error-title-color-scheme);
-}
+  .advisoryType {
+    @include terra-alert-box-shadow(var(--terra-Alert-advisory-shadow-color));
+    @include terra-alert-background-color($terra-alert-advisory-color-scheme);
+  }
 
-.terra-Alert--gap-checking .terra-Alert-icon {
-  @include terra-alert-color($terra-alert-gap-checking-icon-color-scheme);
+  .infoType {
+    @include terra-alert-box-shadow(var(--terra-Alert-info-shadow-color));
+    @include terra-alert-background-color($terra-alert-info-color-scheme);
+  }
+
+  .successType {
+    @include terra-alert-box-shadow(var(--terra-Alert-success-shadow-color));
+    @include terra-alert-background-color($terra-alert-success-color-scheme);
+  }
+
+  .outsideRecordsType {
+    @include terra-alert-box-shadow(var(--terra-Alert-outside-records-shadow-color));
+    @include terra-alert-background-color($terra-alert-outside-records-color-scheme);
+  }
+
+  .customType {
+    box-shadow: 2px 0 0 inset;
+    @include terra-alert-color($terra-alert-custom-shadow-color);
+    @include terra-alert-background-color($terra-alert-custom-color-scheme);
+  }
+
+  .alertType .title {
+    @include terra-alert-color($terra-alert-alert-title-color-scheme);
+  }
+
+  .errorType .title {
+    @include terra-alert-color($terra-alert-error-title-color-scheme);
+  }
+
+  .gapCheckingType .icon {
+    @include terra-alert-color($terra-alert-gap-checking-icon-color-scheme);
+  }
+  /* stylelint-enable */
 }

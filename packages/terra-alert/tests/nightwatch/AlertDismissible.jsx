@@ -23,7 +23,7 @@ class AlertDismissible extends React.Component {
     const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = <Alert type={Alert.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>;
+      alertElem = <Alert id="dismissibleAlert" type={Alert.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>;
     }
     return (
       <div>

@@ -24,12 +24,12 @@ exports[`1. Alert with no props should render a default component 1`] = `
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--alert"
+          className="alert narrow alertType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconAlert
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -37,13 +37,13 @@ exports[`1. Alert with no props should render a default component 1`] = `
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Alert.
               </strong>
               <div
-                className="terra-Alert-content" />
+                className="content" />
             </div>
           </div>
           
@@ -52,12 +52,12 @@ exports[`1. Alert with no props should render a default component 1`] = `
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--alert"
+          className="alert wide alertType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconAlert
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -65,13 +65,13 @@ exports[`1. Alert with no props should render a default component 1`] = `
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Alert.
               </strong>
               <div
-                className="terra-Alert-content" />
+                className="content" />
             </div>
           </div>
           
@@ -109,12 +109,12 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--alert"
+          className="alert narrow alertType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconAlert
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -122,19 +122,19 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Alert.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a test
               </div>
             </div>
           </div>
           <div
-            className="terra-Alert-actions">
+            className="actions">
             
             <Button
               isBlock={false}
@@ -152,12 +152,12 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--alert"
+          className="alert wide alertType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconAlert
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -165,19 +165,19 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Alert.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a test
               </div>
             </div>
           </div>
           <div
-            className="terra-Alert-actions">
+            className="actions">
             
             <Button
               isBlock={false}
@@ -224,12 +224,12 @@ exports[`3. Alert of type alert with text content should render an Alert compone
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--alert"
+          className="alert narrow alertType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconAlert
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -237,13 +237,13 @@ exports[`3. Alert of type alert with text content should render an Alert compone
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Alert.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an alert.
               </div>
             </div>
@@ -254,12 +254,12 @@ exports[`3. Alert of type alert with text content should render an Alert compone
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--alert"
+          className="alert wide alertType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconAlert
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -267,13 +267,13 @@ exports[`3. Alert of type alert with text content should render an Alert compone
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Alert.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an alert.
               </div>
             </div>
@@ -313,12 +313,12 @@ exports[`4. Alert of type error with text content should render an Alert compone
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--error"
+          className="alert narrow errorType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconError
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -326,13 +326,13 @@ exports[`4. Alert of type error with text content should render an Alert compone
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Error.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an error.
               </div>
             </div>
@@ -343,12 +343,12 @@ exports[`4. Alert of type error with text content should render an Alert compone
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--error"
+          className="alert wide errorType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconError
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -356,13 +356,13 @@ exports[`4. Alert of type error with text content should render an Alert compone
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Error.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an error.
               </div>
             </div>
@@ -402,12 +402,12 @@ exports[`5. Alert of type warning with text content should render an Alert compo
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--warning"
+          className="alert narrow warningType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconWarning
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -415,13 +415,13 @@ exports[`5. Alert of type warning with text content should render an Alert compo
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Warning.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an warning.
               </div>
             </div>
@@ -432,12 +432,12 @@ exports[`5. Alert of type warning with text content should render an Alert compo
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--warning"
+          className="alert wide warningType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconWarning
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -445,13 +445,13 @@ exports[`5. Alert of type warning with text content should render an Alert compo
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Warning.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an warning.
               </div>
             </div>
@@ -491,12 +491,12 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--gap-checking"
+          className="alert narrow gapCheckingType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconRequired
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -504,13 +504,13 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Required Action.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a gap-checking alert.
               </div>
             </div>
@@ -521,12 +521,12 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--gap-checking"
+          className="alert wide gapCheckingType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconRequired
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -534,13 +534,13 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Required Action.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a gap-checking alert.
               </div>
             </div>
@@ -580,20 +580,20 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--advisory"
+          className="alert narrow advisoryType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon" />
+              className="icon" />
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Advisory.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an advisory alert.
               </div>
             </div>
@@ -604,20 +604,20 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--advisory"
+          className="alert wide advisoryType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon" />
+              className="icon" />
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Advisory.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an advisory alert.
               </div>
             </div>
@@ -657,12 +657,12 @@ exports[`8. Alert of type info with text content should render an Alert componen
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--info"
+          className="alert narrow infoType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconInformation
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -670,13 +670,13 @@ exports[`8. Alert of type info with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Information.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an information alert.
               </div>
             </div>
@@ -687,12 +687,12 @@ exports[`8. Alert of type info with text content should render an Alert componen
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--info"
+          className="alert wide infoType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconInformation
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -700,13 +700,13 @@ exports[`8. Alert of type info with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Information.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an information alert.
               </div>
             </div>
@@ -746,12 +746,12 @@ exports[`9. Alert of type success with text content should render an Alert compo
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--success"
+          className="alert narrow successType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconSuccess
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -759,13 +759,13 @@ exports[`9. Alert of type success with text content should render an Alert compo
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Success.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a success alert.
               </div>
             </div>
@@ -776,12 +776,12 @@ exports[`9. Alert of type success with text content should render an Alert compo
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--success"
+          className="alert wide successType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconSuccess
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -789,13 +789,13 @@ exports[`9. Alert of type success with text content should render an Alert compo
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Success.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a success alert.
               </div>
             </div>
@@ -835,12 +835,12 @@ exports[`10. Alert of type outside records with text content should render an Al
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--outside-records"
+          className="alert narrow outsideRecordsType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconDiamond
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -848,13 +848,13 @@ exports[`10. Alert of type outside records with text content should render an Al
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Outside Records.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an outside records alert.
               </div>
             </div>
@@ -865,12 +865,12 @@ exports[`10. Alert of type outside records with text content should render an Al
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--outside-records"
+          className="alert wide outsideRecordsType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconDiamond
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -878,13 +878,13 @@ exports[`10. Alert of type outside records with text content should render an Al
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Outside Records.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is an outside records alert.
               </div>
             </div>
@@ -930,16 +930,16 @@ exports[`11. Alert of type custom with custom title and text content should rend
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--custom"
+          className="alert narrow customType"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconHelp
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -947,13 +947,13 @@ exports[`11. Alert of type custom with custom title and text content should rend
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section terra-Alert-section--custom">
+              className="section sectionCustom">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Help!
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a custom alert.
               </div>
             </div>
@@ -964,16 +964,16 @@ exports[`11. Alert of type custom with custom title and text content should rend
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--custom"
+          className="alert wide customType"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconHelp
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -981,13 +981,13 @@ exports[`11. Alert of type custom with custom title and text content should rend
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section terra-Alert-section--custom">
+              className="section sectionCustom">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Help!
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a custom alert.
               </div>
             </div>
@@ -1027,12 +1027,12 @@ exports[`12. Alert of type info with custom title and HTML content should render
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--info"
+          className="alert narrow infoType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconInformation
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -1040,13 +1040,13 @@ exports[`12. Alert of type info with custom title and HTML content should render
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Gettysburg Address
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 <span>
                   Four score and seven years ago . . .
                 </span>
@@ -1059,12 +1059,12 @@ exports[`12. Alert of type info with custom title and HTML content should render
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--info"
+          className="alert wide infoType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconInformation
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -1072,13 +1072,13 @@ exports[`12. Alert of type info with custom title and HTML content should render
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Gettysburg Address
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 <span>
                   Four score and seven years ago . . .
                 </span>
@@ -1131,12 +1131,12 @@ exports[`13. Alert of type success with an action button text content should ren
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--success"
+          className="alert narrow successType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconSuccess
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -1144,19 +1144,19 @@ exports[`13. Alert of type success with an action button text content should ren
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Success.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a success alert.
               </div>
             </div>
           </div>
           <div
-            className="terra-Alert-actions">
+            className="actions">
             <Button
               isBlock={false}
               isCompact={false}
@@ -1174,12 +1174,12 @@ exports[`13. Alert of type success with an action button text content should ren
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--success"
+          className="alert wide successType"
           style={Object {}}>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconSuccess
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -1187,19 +1187,19 @@ exports[`13. Alert of type success with an action button text content should ren
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section">
+              className="section">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Success.
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a success alert.
               </div>
             </div>
           </div>
           <div
-            className="terra-Alert-actions">
+            className="actions">
             <Button
               isBlock={false}
               isCompact={false}
@@ -1263,16 +1263,16 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
     <ResponsiveElement
       defaultElement={
         <div
-          className="terra-Alert terra-Alert--narrow terra-Alert--custom"
+          className="alert narrow customType"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="terra-Alert-body terra-Alert-body-narrow">
+            className="body bodyNarrow">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconHelp
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -1280,19 +1280,19 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section terra-Alert-section--custom">
+              className="section sectionCustom">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Help!
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a custom alert.
               </div>
             </div>
           </div>
           <div
-            className="terra-Alert-actions terra-Alert-actions--custom">
+            className="actions actionsCustom">
             <Button
               isBlock={false}
               isCompact={false}
@@ -1319,16 +1319,16 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
       responsiveTo="parent"
       tiny={
         <div
-          className="terra-Alert terra-Alert--wide terra-Alert--custom"
+          className="alert wide customType"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="terra-Alert-body terra-Alert-body-wide">
+            className="body bodyWide">
             <div
-              className="terra-Alert-icon">
+              className="icon">
               <IconHelp
                 height="1.3333rem"
                 viewBox="0 0 48 48"
@@ -1336,19 +1336,19 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="terra-Alert-section terra-Alert-section--custom">
+              className="section sectionCustom">
               <strong
-                className="terra-Alert-title">
+                className="title">
                 Help!
               </strong>
               <div
-                className="terra-Alert-content">
+                className="content">
                 This is a custom alert.
               </div>
             </div>
           </div>
           <div
-            className="terra-Alert-actions terra-Alert-actions--custom">
+            className="actions actionsCustom">
             <Button
               isBlock={false}
               isCompact={false}

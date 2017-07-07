@@ -1,71 +1,89 @@
+:root {
+  // Color variants
+  --terra-Alert-alert-background-color: #fed1d1;
+  --terra-Alert-alert-shadow-color: #e50000;
+  --terra-Alert-alert-title-color: #e50000;
+ 
+  --terra-Alert-error-background-color: #fed1d1;
+  --terra-Alert-error-shadow-color: #e50000;
+  --terra-Alert-error-title-color: #e50000;
+
+  --terra-Alert-warning-background-color: #fff3ce;
+  --terra-Alert-warning-shadow-color: #ffc20a;
+
+  --terra-Alert-gap-checking-background-color: #f4f4f4;
+  --terra-Alert-gap-checking-shadow-color: #e50000;
+  --terra-Alert-gap-checking-title-color: #e50000;
+
+  --terra-Alert-advisory-background-color: #f4f4f4;
+  --terra-Alert-advisory-shadow-color: #9b9fa1;
+
+  --terra-Alert-info-background-color: #f4f4f4;
+  --terra-Alert-info-shadow-color: #0092e0;
+
+  --terra-Alert-success-background-color: #f4f4f4;
+  --terra-Alert-success-shadow-color: #78c346;
+
+  --terra-Alert-outside-records-background-color: #f4f4f4;
+  --terra-Alert-outside-records-shadow-color: #78288c;
+
+  --terra-Alert-custom-background-color: #f4f4f4;
+  --terra-Alert-custom-shadow-color: #9b9fa1;
+  --terra-Alert-custom-text-color: #1c1f21;
+}
+
 $terra-alert-alert-color-scheme: (
-  background-color: #fed1d1
+  background-color: var(--terra-Alert-alert-background-color)
 );
 
 $terra-alert-error-color-scheme: (
-  background-color: #fed1d1
+  background-color: var(--terra-Alert-error-background-color)
 );
 
 $terra-alert-warning-color-scheme: (
-  background-color: #fff3ce
+  background-color: var(--terra-Alert-warning-background-color)
 );
 
 $terra-alert-gap-checking-color-scheme: (
-  background-color: #f4f4f4
+  background-color: var(--terra-Alert-gap-checking-background-color)
 );
 
 $terra-alert-advisory-color-scheme: (
-  background-color: #f4f4f4
+  background-color: var(--terra-Alert-advisory-background-color)
 );
 
 $terra-alert-info-color-scheme: (
-  background-color: #f4f4f4
+  background-color: var(--terra-Alert-info-background-color)
 );
 
 $terra-alert-success-color-scheme: (
-  background-color: #f4f4f4
+  background-color: var(--terra-Alert-success-background-color)
 );
 
 $terra-alert-outside-records-color-scheme: (
-  background-color: #f4f4f4
+  background-color: var(--terra-Alert-outside-records-background-color)
 );
 
 $terra-alert-custom-color-scheme: (
-  background-color: #f4f4f4
+  background-color: var(--terra-Alert-custom-background-color)
 );
 
 $terra-alert-alert-title-color-scheme: (
-  color: #e50000
+  color: var(--terra-Alert-alert-title-color)
 );
 
 $terra-alert-error-title-color-scheme: (
-  color: #e50000
+  color: var(--terra-Alert-error-title-color)
 );
 
 $terra-alert-gap-checking-icon-color-scheme: (
-  color: #e50000
+  color: var(--terra-Alert-gap-checking-title-color)
 );
 
-$terra-alert-alert-shadow-color: #e50000;
-
-$terra-alert-error-shadow-color: #e50000;
-
-$terra-alert-warning-shadow-color: #ffc20a;
-
-$terra-alert-gap-checking-shadow-color: #e50000;
-
-$terra-alert-advisory-shadow-color: #9b9fa1;
-
-$terra-alert-info-shadow-color: #0092e0;
-
-$terra-alert-success-shadow-color: #78c346;
-
-$terra-alert-outside-records-shadow-color: #78288c;
-
 $terra-alert-custom-shadow-color: (
-  color: #9b9fa1
+  color: var(--terra-Alert-custom-shadow-color)
 );
 
 $terra-alert-custom-text-color: (
-  color: #1c1f21
+  color: var(--terra-Alert-custom-text-color)
 );

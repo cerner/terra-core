@@ -8,19 +8,19 @@ export default () =>
   <Base locale={locale}>
     <h2>Alerts of each of the standard types with default titles</h2>
     <br />
-    <Alert type={Alert.Types.ALERT} >Alert of type Alert</Alert>
+    <Alert id="alertAlert" type={Alert.Types.ALERT} >Alert of type Alert</Alert>
     <br />
-    <Alert type={Alert.Types.ERROR} >Alert of type Error</Alert>
+    <Alert id="errorAlert" type={Alert.Types.ERROR} >Alert of type Error</Alert>
     <br />
-    <Alert type={Alert.Types.WARNING} >Alert of type Warning</Alert>
+    <Alert id="warningAlert" type={Alert.Types.WARNING} >Alert of type Warning</Alert>
     <br />
-    <Alert type={Alert.Types.ADVISORY} >Alert of type Advisory</Alert>
+    <Alert id="advisoryAlert" type={Alert.Types.ADVISORY} >Alert of type Advisory</Alert>
     <br />
-    <Alert type={Alert.Types.INFO} >Alert of type Info</Alert>
+    <Alert id="infoAlert" type={Alert.Types.INFO} >Alert of type Info</Alert>
     <br />
-    <Alert type={Alert.Types.SUCCESS} >Alert of type Success</Alert>
+    <Alert id="successAlert" type={Alert.Types.SUCCESS} >Alert of type Success</Alert>
     <br />
-    <Alert type={Alert.Types.GAP_CHECKING} >Alert of type Gap Checking</Alert>
+    <Alert id="gapCheckingAlert" type={Alert.Types.GAP_CHECKING} >Alert of type Gap Checking</Alert>
     <br />
-    <Alert type={Alert.Types.OUTSIDE_RECORDS} >Alert of type Outside Records</Alert>
+    <Alert id="outsideRecordsAlert" type={Alert.Types.OUTSIDE_RECORDS} >Alert of type Outside Records</Alert>
   </Base>;
