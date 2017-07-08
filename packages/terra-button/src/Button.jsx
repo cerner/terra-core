@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Button.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -80,13 +82,13 @@ const Button = ({
   const attributes = Object.assign({}, customProps);
   const buttonText = text ? <span className={styles.text}>{text}</span> : null;
 
-  attributes.className = classNames([
-    styles.button,
-    styles[variant],
-    { [styles['is-disabled']]: isDisabled },
-    { [styles[size]]: size },
-    { [styles.block]: isBlock },
-    { [styles.compact]: isCompact },
+  attributes.className = cx([
+    'button',
+    variant,
+    { 'is-disabled': isDisabled },
+    size,
+    { block: isBlock },
+    { compact: isCompact },
     attributes.className,
   ]);
 
