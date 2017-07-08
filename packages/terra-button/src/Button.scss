@@ -32,7 +32,7 @@
   .button {
     @include terra-text-align-center;
 
-    border-radius: 0.25em;
+    border-radius: var(--terra-Button-borderRadius);
     border-style: solid;
     border-width: var(--terra-Button-borderWidth);
     cursor: pointer;
