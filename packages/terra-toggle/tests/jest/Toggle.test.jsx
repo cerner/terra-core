@@ -26,12 +26,6 @@ describe('Toggle', () => {
     expect(toggle.unrendered.props.children).toEqual('All props');
   });
 
-  // Structure Tests
-  it('should include the <AnimateHeight> component when isAnimated is set', () => {
-    const toggle = shallow(<Toggle isAnimated>Test</Toggle>);
-    expect(toggle.find('.terra-Toggle').text()).toEqual('<AnimateHeight />');
-  });
-
   // Attributes
   it('should merge classes passed in with attributes', () => {
     const toggle = shallow(<Toggle className="TestClass">Test</Toggle>);

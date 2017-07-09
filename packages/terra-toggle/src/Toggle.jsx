@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import AnimateHeight from 'react-animate-height';
 import 'terra-base/lib/baseStyles';
-import './Toggle.scss';
+import styles from './Toggle.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -39,7 +41,7 @@ class Toggle extends React.Component {
     // within the toggle to disable users from focusing to them
     if (!this.props.isOpen) {
       if (this.contentContainer) {
-        this.contentContainer.classList.add('is-closed');
+        this.contentContainer.setAttribute('data-closed', 'true');
       }
     }
   }
@@ -49,7 +51,7 @@ class Toggle extends React.Component {
     // within the toggle to disable users from focusing to them
     if (!open) {
       if (this.contentContainer) {
-        setTimeout(() => this.contentContainer.classList.add('is-closed'), this.animationDuration);
+        setTimeout(() => this.contentContainer.setAttribute('data-closed', 'true'), this.animationDuration);
       }
     }
   }
@@ -59,7 +61,7 @@ class Toggle extends React.Component {
     // within the toggle that disable users from focusing to them
     if (open) {
       if (this.contentContainer) {
-        this.contentContainer.classList.remove('is-closed');
+        this.contentContainer.setAttribute('data-closed', 'false');
       }
     }
   }
@@ -67,8 +69,8 @@ class Toggle extends React.Component {
   render() {
     const { isAnimated, isOpen, children, ...customProps } = this.props;
     const attributes = Object.assign({}, customProps);
-    const ToggleClassNames = classNames([
-      'terra-Toggle',
+    const ToggleClassNames = cx([
+      'toggle',
       { 'is-animated': isAnimated },
       attributes.className,
     ]);
@@ -77,7 +79,7 @@ class Toggle extends React.Component {
 
     if (isAnimated) {
       body = (
-        <div className="terra-Toggle-content" ref={(div) => { this.contentContainer = div; }}>
+        <div className={styles['toggle-content']} ref={(div) => { this.contentContainer = div; }}>
           <AnimateHeight
             duration={this.animationDuration}
             height={height}

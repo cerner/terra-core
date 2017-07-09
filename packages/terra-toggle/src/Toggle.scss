@@ -1,8 +1,11 @@
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .toggle {
+    padding-top: 0.5rem;
+  }
 
-.terra-Toggle {
-  padding-top: 0.5rem;
+  .toggle-content[data-closed='true'] {
+    visibility: hidden; // disables focus on focusable children
+  }
 }
-
-.terra-Toggle-content.is-closed {
-  visibility: hidden; // disables focus on focusable children
-}
+/* stylelint-enable */
