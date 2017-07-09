@@ -39,7 +39,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="toggle" />
+    class="terra-Toggle" />
 </div>
 `;
 
@@ -84,9 +84,9 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="toggle is-animated">
+    class="terra-Toggle is-animated">
     <div
-      class="toggle-content">
+      class="terra-Toggle-content">
       <div
         aria-hidden="false"
         class="rah-static"
@@ -127,7 +127,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="toggle" />
+    class="terra-Toggle" />
 </div>
 `;
 
@@ -172,7 +172,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
   </button>
   <div
     aria-hidden="false"
-    class="toggle">
+    class="terra-Toggle">
     Test
   </div>
 </div>
@@ -287,7 +287,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       isOpen={true}>
       <div
         aria-hidden={false}
-        className="toggle">
+        className="terra-Toggle">
         Test
       </div>
     </Toggle>
