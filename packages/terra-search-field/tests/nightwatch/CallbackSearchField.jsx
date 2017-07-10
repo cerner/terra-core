@@ -17,7 +17,7 @@ class CallbackSearchField extends React.Component {
         <div id="search-callback-text">
           Search Text: {this.state.searchText}
         </div>
-        <SearchField onSearch={(searchText) => { this.setState({ searchText }); }} />
+        <SearchField id="searchfield" onSearch={(searchText) => { this.setState({ searchText }); }} />
       </div>
     );
   }
