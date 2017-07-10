@@ -132,7 +132,7 @@ class ToggleButton extends React.Component {
           aria-label={closedButtonText}
           onClick={this.handleOnClick}
         >
-          <span className={styles['button-text']}>{icon}</span>
+          <span className={cx('button-text')}>{icon}</span>
         </Button>
       );
     } else {
@@ -144,8 +144,8 @@ class ToggleButton extends React.Component {
         >
           <Arrange
             align="center"
-            fitStart={<span className={styles.icon}>{icon}</span>}
-            fill={<span className={styles['button-text']}>{buttonText}</span>}
+            fitStart={<span className={cx('icon')}>{icon}</span>}
+            fill={<span className={cx('button-text')}>{buttonText}</span>}
           />
         </Button>
       );
