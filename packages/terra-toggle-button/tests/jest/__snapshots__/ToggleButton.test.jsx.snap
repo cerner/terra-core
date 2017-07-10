@@ -110,7 +110,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     class="terra-Button terra-Button--default"
     type="button">
     <span
-      class="button-text">
+      class="icon">
       <svg
         aria-hidden="true"
         class="terra-Icon is-bidi"
