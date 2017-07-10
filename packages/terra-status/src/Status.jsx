@@ -17,17 +17,11 @@ const propTypes = {
   color: PropTypes.string,
 };
 
-const Status = ({ color, children, ...customProps }) => {
-  const statusClassNames = cx(
-    'status',
-    { [`${customProps.className}`]: customProps.className },
-  );
-  return (
-    <div {...customProps} style={{ borderColor: color }} className={statusClassNames} >
-      {children}
-    </div>
-  );
-};
+const Status = ({ color, children, ...customProps }) => (
+  <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)} >
+    {children}
+  </div>
+);
 
 Status.propTypes = propTypes;
 
