@@ -1,39 +1,43 @@
-.terra-Text {
-  color: inherit;
-  font-weight: inherit;
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .text {
+    color: inherit;
+    font-weight: inherit;
+  }
+
+  // Text Italics
+  .italic { font-style: italic; }
+
+  // Text Sizes
+  .fontSize-100 { font-size: 7.143rem; }
+  .fontSize-32 { font-size: 2.286rem; }
+  .fontSize-24 { font-size: 1.714rem;}
+  .fontSize-20 { font-size: 1.429rem; }
+  .fontSize-18 { font-size: 1.286rem; }
+  .fontSize-16 { font-size: 1.143rem; }
+  .fontSize-14 { font-size: 1rem; }
+  .fontSize-12 { font-size: 0.8571rem; }
+  .fontSize-10 { font-size: 0.7143rem; }
+
+  // Text Weights
+  .fontWeight-200 { font-weight: 200; }
+  .fontWeight-400 { font-weight: 400; }
+  .fontWeight-700 { font-weight: 700; }
+
+
+  /**
+   * Used to hide the content visually, yet provide the content to screen readers,
+   * More info: http://a11yproject.com/posts/how-to-hide-content/
+   */
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 }
-
-// Text Italics
-.terra-Text--italic { font-style: italic; }
-
-// Text Sizes
-.terra-Text--fontSize-100 { font-size: 7.143rem; }
-.terra-Text--fontSize-32 { font-size: 2.286rem; }
-.terra-Text--fontSize-24 { font-size: 1.714rem;}
-.terra-Text--fontSize-20 { font-size: 1.429rem; }
-.terra-Text--fontSize-18 { font-size: 1.286rem; }
-.terra-Text--fontSize-16 { font-size: 1.143rem; }
-.terra-Text--fontSize-14 { font-size: 1rem; }
-.terra-Text--fontSize-12 { font-size: 0.8571rem; }
-.terra-Text--fontSize-10 { font-size: 0.7143rem; }
-
-// Text Weights
-.terra-Text--weight-200 { font-weight: 200; }
-.terra-Text--weight-400 { font-weight: 400; }
-.terra-Text--weight-700 { font-weight: 700; }
-
-
-/**
- * Used to hide the content visually, yet provide the content to screen readers,
- * More info: http://a11yproject.com/posts/how-to-hide-content/
- */
-.terra-Text--visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
+/* stylelint-enable */
