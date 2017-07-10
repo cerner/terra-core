@@ -1,5 +1,15 @@
 const generatePropType = (type) => {
-  const typeName = type.name === 'enum' ? typeof type.value[0].value : type.name;
+  let typeName;
+
+  if (type.name === 'enum') {
+    if (isNaN(type.value[0].value)) {
+      typeName = typeof type.value[0].value;
+    } else {
+      typeName = 'number';
+    }
+  } else {
+    typeName = type.name;
+  }
 
   return `\`${typeName}\``;
 };
