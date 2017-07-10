@@ -57,7 +57,7 @@ describe('Text', () => {
     expect(text.unrendered.props.weight).toEqual(200);
     expect(text.unrendered.props.isItalic).toEqual(true);
     expect(text.unrendered.props.isVisuallyHidden).toEqual(true);
-    expect(text.find('.terra-Text').text()).toEqual('All props and custom attrs');
+    expect(text.find('.text').text()).toEqual('All props and custom attrs');
   });
 
   // Attributes
