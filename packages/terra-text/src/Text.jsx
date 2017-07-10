@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './Text.scss';
+import styles from './Text.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -39,12 +41,12 @@ const defaultProps = {
 
 const Text = ({ color, children, isVisuallyHidden, isItalic, fontSize, weight, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
-  const TextClassNames = classNames([
-    'terra-Text',
-    { 'terra-Text--italic': isItalic },
-    { 'terra-Text--visually-hidden': isVisuallyHidden },
-    { [`terra-Text--fontSize-${fontSize}`]: fontSize },
-    { [`terra-Text--weight-${weight}`]: weight },
+  const TextClassNames = cx([
+    'text',
+    { italic: isItalic },
+    { 'visually-hidden': isVisuallyHidden },
+    { [`fontSize-${fontSize}`]: fontSize },
+    { [`fontWeight-${weight}`]: weight },
     attributes.className,
   ]);
 
