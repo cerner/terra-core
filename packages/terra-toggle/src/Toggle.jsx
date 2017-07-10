@@ -79,7 +79,7 @@ class Toggle extends React.Component {
 
     if (isAnimated) {
       body = (
-        <div className={styles['toggle-content']} ref={(div) => { this.contentContainer = div; }}>
+        <div className={cx('toggle-content')} ref={(div) => { this.contentContainer = div; }}>
           <AnimateHeight
             duration={this.animationDuration}
             height={height}
