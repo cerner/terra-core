@@ -1,6 +1,6 @@
 exports[`Snapshots renders a basic search field 1`] = `
 <div
-  className="searchfield">
+  className="searhcfield">
   <Input
     className="input"
     name={null}
@@ -28,7 +28,7 @@ exports[`Snapshots renders a basic search field 1`] = `
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
-  className="searchfield">
+  className="searhcfield">
   <Input
     className="input"
     name={null}
@@ -56,7 +56,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
-  className="searchfield">
+  className="searhcfield">
   <Input
     className="input"
     name={null}
