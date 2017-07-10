@@ -4,23 +4,23 @@ import Text from '../../lib/Text';
 
 const TextFontSize = () => (
   <div>
-    <Text fontSize={100}>Font Size 100</Text>
+    <Text id="textFontSize100" fontSize={100}>Font Size 100</Text>
     <br />
-    <Text fontSize={32}>Font Size 32</Text>
+    <Text id="textFontSize32" fontSize={32}>Font Size 32</Text>
     <br />
-    <Text fontSize={24}>Font Size 24</Text>
+    <Text id="textFontSize24" fontSize={24}>Font Size 24</Text>
     <br />
-    <Text fontSize={20}>Font Size 20</Text>
+    <Text id="textFontSize20" fontSize={20}>Font Size 20</Text>
     <br />
-    <Text fontSize={18}>Font Size 18</Text>
+    <Text id="textFontSize18" fontSize={18}>Font Size 18</Text>
     <br />
-    <Text fontSize={16}>Font Size 16</Text>
+    <Text id="textFontSize16" fontSize={16}>Font Size 16</Text>
     <br />
-    <Text fontSize={14}>Font Size 14</Text>
+    <Text id="textFontSize14" fontSize={14}>Font Size 14</Text>
     <br />
-    <Text fontSize={12}>Font Size 12</Text>
+    <Text id="textFontSize12" fontSize={12}>Font Size 12</Text>
     <br />
-    <Text fontSize={10}>Font Size 10</Text>
+    <Text id="textFontSize10" fontSize={10}>Font Size 10</Text>
   </div>
 );
 
