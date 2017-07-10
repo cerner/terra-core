@@ -44,17 +44,17 @@ module.exports = {
   'Disables focusable elements within animated toggle when closed': (browser) => {
     browser
      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-tests/animated`)
-     .assert.cssProperty('#toggle > div[data-closed="true"]', 'visibility', 'hidden')
+     .assert.cssProperty('#toggle[aria-hidden="true"]', 'visibility', 'hidden')
      .click('button') // Opens toggle
+     .waitForElementPresent('#toggle[aria-hidden="false"]', 1000)
      .click('button') // Closes toggle
-     .waitForElementPresent('#toggle > div[data-closed="true"]', 1000)
-     .assert.cssProperty('#toggle > div[data-closed="true"]', 'visibility', 'hidden');
+     .waitForElementPresent('#toggle[aria-hidden="true"]', 1000);
   },
 
   'Enables focusable elements within animated toggle when opened': (browser) => {
     browser
      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-tests/animated`)
      .click('button')
-     .assert.cssProperty('#toggle > div', 'visibility', 'visible');
+     .assert.cssProperty('#toggle[aria-hidden="false"]', 'visibility', 'visible');
   },
 };

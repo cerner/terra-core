@@ -28,85 +28,30 @@ const defaultProps = {
   isOpen: false,
 };
 
-class Toggle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleOnAnimationEnd = this.handleOnAnimationEnd.bind(this);
-    this.handleOnAnimationStart = this.handleOnAnimationStart.bind(this);
-    this.animationDuration = 250;
-  }
+const Toggle = ({ isAnimated, isOpen, children, ...customProps }) => {
+  const height = isOpen ? 'auto' : '0';
+  let body;
 
-  componentDidMount() {
-    // If toggle is closed when the component mounts, set props on all the focusable elements
-    // within the toggle to disable users from focusing to them
-    if (!this.props.isOpen) {
-      if (this.contentContainer) {
-        this.contentContainer.setAttribute('data-closed', 'true');
-      }
-    }
-  }
-
-  handleOnAnimationEnd(open) {
-    // If toggle is closed and the close animation has ended, set props on all the focusable elements
-    // within the toggle to disable users from focusing to them
-    if (!open) {
-      if (this.contentContainer) {
-        setTimeout(() => this.contentContainer.setAttribute('data-closed', 'true'), this.animationDuration);
-      }
-    }
-  }
-
-  handleOnAnimationStart(open) {
-    // If toggle is opened and the open animation has started, remove props on all the focusable elements
-    // within the toggle that disable users from focusing to them
-    if (open) {
-      if (this.contentContainer) {
-        this.contentContainer.setAttribute('data-closed', 'false');
-      }
-    }
-  }
-
-  render() {
-    const { isAnimated, isOpen, children, ...customProps } = this.props;
-    const attributes = Object.assign({}, customProps);
-    const ToggleClassNames = cx([
-      'toggle',
-      { 'is-animated': isAnimated },
-      attributes.className,
-    ]);
-    const height = isOpen ? 'auto' : '0';
-    let body;
-
-    if (isAnimated) {
-      body = (
-        <div className={cx('toggle-content')} ref={(div) => { this.contentContainer = div; }}>
-          <AnimateHeight
-            duration={this.animationDuration}
-            height={height}
-            onAnimationEnd={this.handleOnAnimationEnd(isOpen)}
-            onAnimationStart={this.handleOnAnimationStart(isOpen)}
-          >
-            {children}
-          </AnimateHeight>
-        </div>
-      );
-    } else {
-      body = (
-        isOpen && children
-      );
-    }
-
-    return (
-      <div
-        {...attributes}
-        className={ToggleClassNames}
-        aria-hidden={!isOpen}
-      >
-        {body}
-      </div>
+  if (isAnimated) {
+    body = (
+      <AnimateHeight duration={250} height={height}>
+        {children}
+      </AnimateHeight>
     );
+  } else {
+    body = (isOpen && children);
   }
-}
+
+  return (
+    <div
+      {...customProps}
+      className={cx('toggle', customProps.className)}
+      aria-hidden={!isOpen}
+    >
+      {body}
+    </div>
+  );
+};
 
 Toggle.propTypes = propTypes;
 Toggle.defaultProps = defaultProps;

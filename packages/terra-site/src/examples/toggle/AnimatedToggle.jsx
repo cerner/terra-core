@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggle from 'terra-toggle/lib/Toggle';
+import Toggle from 'terra-toggle/src/Toggle';
 import Button from 'terra-button';
 
 class ToggleDefault extends React.Component {

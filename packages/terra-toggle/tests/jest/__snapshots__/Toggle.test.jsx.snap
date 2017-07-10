@@ -9,14 +9,11 @@ exports[`Toggle should render an animated toggle 1`] = `
   aria-hidden="true"
   class="toggle is-animated">
   <div
-    class="toggle-content">
-    <div
-      aria-hidden="false"
-      class="rah-static"
-      style="height:0px;overflow:hidden;">
-      <div>
-        Test
-      </div>
+    aria-hidden="false"
+    class="rah-static"
+    style="height:0px;overflow:hidden;">
+    <div>
+      Test
     </div>
   </div>
 </div>
