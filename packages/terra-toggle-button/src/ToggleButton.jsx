@@ -132,7 +132,7 @@ class ToggleButton extends React.Component {
           aria-label={closedButtonText}
           onClick={this.handleOnClick}
         >
-          <span className={cx('button-text')}>{icon}</span>
+          <span className={cx('icon')}>{icon}</span>
         </Button>
       );
     } else {
