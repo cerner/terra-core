@@ -1,6 +1,6 @@
 exports[`Text should render a text component 1`] = `
 <span
-  className="terra-Text"
+  className="text"
   style={
     Object {
       "color": "inherit",
@@ -12,7 +12,7 @@ exports[`Text should render a text component 1`] = `
 
 exports[`Text should render a text component with color prop set 1`] = `
 <span
-  className="terra-Text"
+  className="text"
   style={
     Object {
       "color": "#f00",
@@ -24,7 +24,7 @@ exports[`Text should render a text component with color prop set 1`] = `
 
 exports[`Text should render a text component with fontSize prop set 1`] = `
 <span
-  className="terra-Text terra-Text--fontSize-24"
+  className="text fontSize-24"
   style={
     Object {
       "color": "inherit",
@@ -36,7 +36,7 @@ exports[`Text should render a text component with fontSize prop set 1`] = `
 
 exports[`Text should render a text component with isItalic prop set 1`] = `
 <span
-  className="terra-Text terra-Text--italic"
+  className="text italic"
   style={
     Object {
       "color": "inherit",
@@ -48,7 +48,7 @@ exports[`Text should render a text component with isItalic prop set 1`] = `
 
 exports[`Text should render a text component with isVisuallyHidden prop set 1`] = `
 <span
-  className="terra-Text terra-Text--visually-hidden"
+  className="text visually-hidden"
   style={
     Object {
       "color": "inherit",
@@ -60,7 +60,7 @@ exports[`Text should render a text component with isVisuallyHidden prop set 1`] 
 
 exports[`Text should render a text component with weight prop set 1`] = `
 <span
-  className="terra-Text terra-Text--weight-200"
+  className="text fontWeight-200"
   style={
     Object {
       "color": "inherit",
@@ -72,7 +72,7 @@ exports[`Text should render a text component with weight prop set 1`] = `
 
 exports[`Text should support rendering a string as children 1`] = `
 <span
-  className="terra-Text"
+  className="text"
   style={
     Object {
       "color": "inherit",
@@ -84,7 +84,7 @@ exports[`Text should support rendering a string as children 1`] = `
 
 exports[`Text should support rendering an array of elements as a children 1`] = `
 <span
-  className="terra-Text"
+  className="text"
   style={
     Object {
       "color": "inherit",
@@ -104,7 +104,7 @@ exports[`Text should support rendering an array of elements as a children 1`] = 
 
 exports[`Text should support rendering an element as children 1`] = `
 <span
-  className="terra-Text"
+  className="text"
   style={
     Object {
       "color": "inherit",
