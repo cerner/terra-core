@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './Overlay.scss';
+import styles from './Overlay.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
  /**
@@ -16,8 +18,8 @@ const defaultProps = {
 };
 
 const OverlayContainer = ({ children, ...customProps }) => {
-  const OverlayContainerClassNames = classNames([
-    'terra-OverlayContainer',
+  const OverlayContainerClassNames = cx([
+    'overlay-container',
     customProps.className,
   ]);
 

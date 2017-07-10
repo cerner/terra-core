@@ -13,7 +13,7 @@ class OverlayExample extends React.Component {
   }
 
   handleTriggerOverlay() {
-    this.setState({ show: true, relative: true });
+    this.setState({ show: true, relative: true, id: 'terra-Overlay--container' });
 
     setTimeout(() => {
       this.setState({ show: false });
@@ -21,7 +21,7 @@ class OverlayExample extends React.Component {
   }
 
   handleTriggerFullScreenOverlay() {
-    this.setState({ show: true, relative: false });
+    this.setState({ show: true, relative: false, id: 'terra-Overlay--fullscreen' });
 
     setTimeout(() => {
       this.setState({ show: false });
@@ -40,7 +40,7 @@ class OverlayExample extends React.Component {
     return (
       <div>
         <OverlayContainer style={{ height: '100px', width: '100%' }} >
-          <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative}>
+          <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} id={this.state.id} >
             <h3>Overlay will timeout in 5 seconds.</h3>
           </Overlay>
           <button id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>

@@ -8,11 +8,11 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--clear"
+    className="overlay fullscreen clear"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content" />
+      className="content" />
   </div>
 </FocusTrap>
 `;
@@ -25,11 +25,11 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--dark"
+    className="overlay fullscreen dark"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content" />
+      className="content" />
   </div>
 </FocusTrap>
 `;
@@ -42,11 +42,11 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    className="overlay fullscreen light"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content" />
+      className="content" />
   </div>
 </FocusTrap>
 `;
@@ -59,11 +59,11 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    className="overlay fullscreen light"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content" />
+      className="content" />
   </div>
 </FocusTrap>
 `;
@@ -76,11 +76,11 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    className="overlay fullscreen light"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content">
+      className="content">
       Overlay message
     </div>
   </div>
@@ -89,11 +89,11 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
 
 exports[`Overlay when isOpen is provided should render with isRelativeToContainer 1`] = `
 <div
-  className="terra-Overlay terra-Overlay--container terra-Overlay--light"
+  className="overlay container light"
   onClick={[Function]}
   tabIndex="0">
   <div
-    className="terra-Overlay-content" />
+    className="content" />
 </div>
 `;
 
@@ -105,11 +105,11 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light terra-Overlay--scrollable"
+    className="overlay fullscreen light scrollable"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content" />
+      className="content" />
   </div>
 </FocusTrap>
 `;
@@ -122,11 +122,11 @@ exports[`Overlay when isOpen is provided should render with onRequestClose 1`] =
   paused={false}
   tag="div">
   <div
-    className="terra-Overlay terra-Overlay--fullscreen terra-Overlay--light"
+    className="overlay fullscreen light"
     onClick={[Function]}
     tabIndex="0">
     <div
-      className="terra-Overlay-content" />
+      className="content" />
   </div>
 </FocusTrap>
 `;

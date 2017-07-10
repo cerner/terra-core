@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import 'terra-base/lib/baseStyles';
-import './Overlay.scss';
+import styles from './Overlay.scss';
+
+const cx = classNames.bind(styles);
 
 const BackgroundStyles = {
   LIGHT: 'light',
@@ -138,11 +140,11 @@ class Overlay extends React.Component {
       return null;
     }
 
-    const OverlayClassNames = classNames([
-      'terra-Overlay',
-      { [`terra-Overlay--${type}`]: type },
-      { [`terra-Overlay--${backgroundStyle}`]: backgroundStyle },
-      { 'terra-Overlay--scrollable': isScrollable },
+    const OverlayClassNames = cx([
+      'overlay',
+      type,
+      backgroundStyle,
+      { scrollable: isScrollable },
       customProps.className,
     ]);
 
@@ -150,7 +152,7 @@ class Overlay extends React.Component {
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     const overlayComponent = (
       <div {...customProps} ref={this.setContainer} onClick={this.shouldHandleClick} className={OverlayClassNames} tabIndex="0" >
-        <div className="terra-Overlay-content">
+        <div className={cx('content')}>
           {children}
         </div>
       </div>

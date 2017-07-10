@@ -23,19 +23,19 @@ describe('LoadingOverlay', () => {
 
       it('should have the class terra-LoadingOverlay', () => {
         const wrapper = render(defaultRender);
-        expect(wrapper.find('terra-LoadingOverlay'));
+        expect(wrapper.find('loading-overlay'));
       });
 
       it('should have the default message of Loading...', () => {
         const wrapper = render(defaultRender);
-        expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading...');
+        expect(wrapper.find('.message').text()).toEqual('Loading...');
       });
     });
 
     it('should render with message prop', () => {
       const overlayRender = (<IntlProvider locale={locale} messages={messages}><LoadingOverlay isOpen message="Loading!" /></IntlProvider>);
       const wrapper = render(overlayRender);
-      expect(wrapper.find('.terra-LoadingOverlay-message').text()).toEqual('Loading!');
+      expect(wrapper.find('.message').text()).toEqual('Loading!');
       expect(wrapper).toMatchSnapshot();
     });
   });

@@ -13,11 +13,11 @@ class OverlayExample extends React.Component {
   }
 
   handleTriggerOverlay() {
-    this.setState({ show: true, relative: true });
+    this.setState({ show: true, relative: true, id: 'terra-Overlay--container' });
   }
 
   handleTriggerFullScreenOverlay() {
-    this.setState({ show: true, relative: false });
+    this.setState({ show: true, relative: false, id: 'terra-Overlay--fullscreen' });
   }
 
   handleOnRequestESC() {
@@ -27,7 +27,7 @@ class OverlayExample extends React.Component {
   render() {
     return (
       <OverlayContainer style={{ height: '100px', width: '100%' }} >
-        <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC}>
+        <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} onRequestClose={this.handleOnRequestESC} id={this.state.id}>
           <h3>The onRequestClose prop gives the overlay close behaviors.</h3>
           <br />
           <p>Close by clicking inside the overlay or pressing the ESC key.</p>

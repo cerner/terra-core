@@ -18,7 +18,7 @@ describe('OverlayContainer', () => {
 
   it('should have the class terra-OverlayContainer', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('terra-OverlayContainer');
+    expect(wrapper.prop('className')).toContain('overlay-container');
   });
 
   it('should render when children are provided', () => {

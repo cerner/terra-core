@@ -6,5 +6,5 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <LoadingOverlay isOpen message="Custom Loading Message" />
+    <LoadingOverlay isOpen message="Custom Loading Message" id="terra-LoadingOverlay" />
   </Base>;

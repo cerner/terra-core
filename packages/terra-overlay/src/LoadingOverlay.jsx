@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import IconSpinner from 'terra-icon/lib/icon/IconSpinner';
 import 'terra-base/lib/baseStyles';
 
 import Overlay from './Overlay';
-import './Overlay.scss';
+import styles from './Overlay.scss';
+
+const cx = classNames.bind(styles);
 
 const BackgroundStyles = Overlay.Opts.BackgroundStyles;
 
@@ -61,9 +63,9 @@ const LoadingOverlay = ({
   const loadingMessage = message !== undefined ? message : intl.formatMessage({ id: 'Terra.Overlay.loading' });
 
   return (
-    <Overlay {...customProps} className={classNames('terra-LoadingOverlay', customProps.className)} >
-      <IconSpinner className="terra-LoadingOverlay-icon" isSpin={isAnimated} height="36" width="36" />
-      <div className="terra-LoadingOverlay-message">{loadingMessage}</div>
+    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} >
+      <IconSpinner className={cx('icon')} isSpin={isAnimated} height="36" width="36" />
+      <div className={cx('message')}>{loadingMessage}</div>
     </Overlay>
   );
 };
