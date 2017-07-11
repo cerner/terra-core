@@ -3,6 +3,7 @@ import TimeInput from '../../../lib/TimeInput';
 
 const TimeInputDefault = () => (
   <TimeInput
+    id="timeInput"
     name="time-input"
   />
 );
