@@ -1,8 +1,23 @@
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .toggle {
+    padding-top: 0.5rem;
+  }
 
-.terra-Toggle {
-  padding-top: 0.5rem;
-}
+  // opacity and transition styles used to ensure when visibility is transitioned,
+  // it appears smoothly
+  .toggle[aria-hidden='true'] {
+    opacity: 0;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    visibility: hidden;
 
-.terra-Toggle-content.is-closed {
-  visibility: hidden; // disables focus on focusable children
+  }
+
+  // disables focus on focusable children
+  .toggle[aria-hidden='false'] {
+    opacity: 1;
+    transition-delay: 0s;
+    visibility: visible;
+  }
 }
+/* stylelint-enable */

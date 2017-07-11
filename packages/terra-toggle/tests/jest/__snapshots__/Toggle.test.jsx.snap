@@ -1,22 +1,19 @@
 exports[`Toggle should render a default toggle 1`] = `
 <div
   aria-hidden="true"
-  class="terra-Toggle" />
+  class="toggle" />
 `;
 
 exports[`Toggle should render an animated toggle 1`] = `
 <div
   aria-hidden="true"
-  class="terra-Toggle is-animated">
+  class="toggle">
   <div
-    class="terra-Toggle-content">
-    <div
-      aria-hidden="false"
-      class="rah-static"
-      style="height:0px;overflow:hidden;">
-      <div>
-        Test
-      </div>
+    aria-hidden="false"
+    class="rah-static"
+    style="height:0px;overflow:hidden;">
+    <div>
+      Test
     </div>
   </div>
 </div>
@@ -25,7 +22,7 @@ exports[`Toggle should render an animated toggle 1`] = `
 exports[`Toggle should render an open toggle 1`] = `
 <div
   aria-hidden="false"
-  class="terra-Toggle">
+  class="toggle">
   Test
 </div>
 `;
