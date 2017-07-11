@@ -9,7 +9,16 @@ const propTypes = {
   /**
    * List of object key/value pairs for choices to be selected.
    */
-  choices: PropTypes.array.isRequired,
+  choices: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]).isRequired,
+    display: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]).isRequired,
+  }).isRequired),
 
   /**
    * Function to trigger when the user changes the select value. Provide a function to create a controlled input.
@@ -29,7 +38,10 @@ const propTypes = {
   /**
    * The value to start the select on.
    */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 };
 
 const defaultProps = {

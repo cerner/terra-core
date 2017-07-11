@@ -8,7 +8,16 @@ const propTypes = {
   /**
    * List of object key/value pairs for choices to be selected.
    */
-  choices: PropTypes.array.isRequired,
+  choices: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]).isRequired,
+    display: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]).isRequired,
+  })).isRequired,
 
   /**
    * Error message for when the input is invalid
@@ -58,7 +67,10 @@ const propTypes = {
   /**
    * The value to start the select on.
    */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 };
 
 const defaultProps = {
