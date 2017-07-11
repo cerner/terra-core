@@ -73,8 +73,10 @@ module.exports = {
       .assert.elementPresent('#searchfield button')
       .assert.attributeEquals('#searchfield input', 'placeholder', '');
 
-    browser.getCssProperty('#searchfield input', 'height', (result) => {
-      browser.assert.cssProperty('#searchfield button', 'height', result.value);
+    browser.getCssProperty('#searchfield input', 'height', (inputResult) => {
+      browser.getCssProperty('#searchfield button', 'height', (buttonResult) => {
+        browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
+      });
     });
   },
 };
