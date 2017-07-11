@@ -26,7 +26,7 @@ class AlertActionButton extends React.Component {
         <Base locale={locale}>
           <h2>Alert where alertAction prop provided containing an action button</h2>
           <br />
-          <Alert id="actionAlert" type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+          <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
             This is a warning. It is configured with a custom Action button.
           </Alert>
         </Base>

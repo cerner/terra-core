@@ -32,7 +32,7 @@ class AlertResponsiveToParent extends React.Component {
     const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
     let alertElem = '';
     if (!this.state.isDismissed) {
-      alertElem = <Alert id="dismissibleAlert" type={Alert.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>;
+      alertElem = <Alert id="dismissibleAlert" type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>;
     }
     return (
       <div style={{ width: '500px', border: '1px solid black', padding: '5px' }}>
@@ -40,7 +40,7 @@ class AlertResponsiveToParent extends React.Component {
             to render below the message instead of beside it.</h3>
         <br />
         <Base locale={locale}>
-          <Alert id="actionAlert" type={Alert.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+          <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
             This is a warning. It is configured with a custom Action button.
           </Alert>
           <br />

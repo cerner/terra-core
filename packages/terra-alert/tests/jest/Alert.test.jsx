@@ -50,7 +50,7 @@ describe('3. Alert of type alert with text content', () => {
   const alertText = 'This is an alert.';
   const basicAlertRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.ALERT} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.ALERT} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -65,7 +65,7 @@ describe('4. Alert of type error with text content', () => {
   const alertText = 'This is an error.';
   const basicErrorRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.ERROR} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.ERROR} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -80,7 +80,7 @@ describe('5. Alert of type warning with text content', () => {
   const alertText = 'This is an warning.';
   const basicWarningRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.WARNING} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.WARNING} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -95,7 +95,7 @@ describe('6. Alert of type gap-checking with text content', () => {
   const alertText = 'This is a gap-checking alert.';
   const basicGapCheckingRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.GAP_CHECKING} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.GAP_CHECKING} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -110,7 +110,7 @@ describe('7. Alert of type advisory with text content', () => {
   const alertText = 'This is an advisory alert.';
   const basicAdvisoryRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.ADVISORY} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.ADVISORY} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -125,7 +125,7 @@ describe('8. Alert of type info with text content', () => {
   const alertText = 'This is an information alert.';
   const basicInfoRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.INFO} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.INFO} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -140,7 +140,7 @@ describe('9. Alert of type success with text content', () => {
   const alertText = 'This is a success alert.';
   const basicSuccessRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.SUCCESS} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.SUCCESS} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -155,7 +155,7 @@ describe('10. Alert of type outside records with text content', () => {
   const alertText = 'This is an outside records alert.';
   const basicOutsideRecordsRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.OUTSIDE_RECORDS} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.OUTSIDE_RECORDS} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -171,7 +171,7 @@ describe('11. Alert of type custom with custom title and text content', () => {
   const alertCustomTitle = 'Help!';
   const basicCustomRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -188,7 +188,7 @@ describe('12. Alert of type info with custom title and HTML content', () => {
   const alertCustomTitle = 'Gettysburg Address';
   const basicHTMLContentRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.INFO} title={alertCustomTitle} >{alertHTML}</Alert>
+      <Alert type={Alert.Opts.Types.INFO} title={alertCustomTitle} >{alertHTML}</Alert>
     </IntlProvider>
   );
 
@@ -203,7 +203,7 @@ describe('13. Alert of type success with an action button text content', () => {
   const alertText = 'This is a success alert.';
   const actionButtonRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.SUCCESS} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.SUCCESS} alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -219,7 +219,7 @@ describe('14. Dismissable Alert of type custom with action button, custom title 
   const alertCustomTitle = 'Help!';
   const customActionDismissRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
     </IntlProvider>
   );
 

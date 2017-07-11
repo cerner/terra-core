@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from 'terra-alert';
 
-const alertStartTagStr = '<Alert type={Alert.Types.OUTSIDE_RECORDS} >';
+const alertStartTagStr = '<Alert type={Alert.Opts.Types.OUTSIDE_RECORDS} >';
 const alertEndTagStr = '</Alert>';
 const alertText = 'This is an outside records alert';
 
@@ -15,7 +15,7 @@ const OutsideRecordsExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={Alert.Types.OUTSIDE_RECORDS} >{alertText}</Alert>
+    <Alert type={Alert.Opts.Types.OUTSIDE_RECORDS} >{alertText}</Alert>
   </div>
 );
 

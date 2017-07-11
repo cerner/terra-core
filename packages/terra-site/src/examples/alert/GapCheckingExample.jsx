@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from 'terra-alert';
 
-const alertStartTagStr = '<Alert type={Alert.Types.GAP_CHECKING} >';
+const alertStartTagStr = '<Alert type={Alert.Opts.Types.GAP_CHECKING} >';
 const alertEndTagStr = '</Alert>';
 const alertText = 'This is a gap-checking alert';
 
@@ -15,7 +15,7 @@ const GapCheckingExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={Alert.Types.GAP_CHECKING} >{alertText}</Alert>
+    <Alert type={Alert.Opts.Types.GAP_CHECKING} >{alertText}</Alert>
   </div>
 );
 
