@@ -35,10 +35,10 @@ describe('generatePropType', () => {
     const enumProp =
       { name: 'enum',
         value:
-        [{ value: 2 },
-       { value: 4 },
-       { value: 6 },
-       { value: 3 }],
+        [{ value: '2' },
+       { value: '4' },
+       { value: '6' },
+       { value: '3' }],
       };
 
     expect(generatePropType(enumProp)).toEqual('`number`');

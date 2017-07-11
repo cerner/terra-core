@@ -4,7 +4,7 @@ import Text from '../../lib/Text';
 
 const TextItalics = () => (
   <div>
-    <Text isItalic>Italics</Text>
+    <Text id="textItalic" isItalic>Italics</Text>
   </div>
 );
 

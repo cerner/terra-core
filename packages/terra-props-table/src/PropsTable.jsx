@@ -48,7 +48,11 @@ const PropsTable = ({ src, ...customProps }) => {
             // Pull the first value off and use that as type.
             // This assumes all enumerable values are the same type.
             if (type === 'enum') {
-              type = typeof prop.type.value[0].value;
+              if (isNaN(prop.type.value[0].value)) {
+                type = typeof prop.type.value[0].value;
+              } else {
+                type = 'number';
+              }
             }
 
             return (
