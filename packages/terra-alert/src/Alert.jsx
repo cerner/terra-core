@@ -231,7 +231,7 @@ const Alert = (
   if (onDismiss || alertAction) {
     actionsSection = (
       <div className={alertActionsClassName}>
-        {alertAction || ''}
+        {alertAction}
         {dismissButton}
       </div>
     );
