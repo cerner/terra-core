@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import Input from 'terra-form/lib/Input';
 import TimeUtil from './TimeUtil';
-import './TimeInput.scss';
+import styles from './TimeInput.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -242,8 +244,8 @@ class TimeInput extends React.Component {
       ...customProps
     } = this.props;
 
-    const timeInputClassNames = classNames([
-      'terra-TimeInput',
+    const timeInputClassNames = cx([
+      'time-input',
       { 'is-focused': this.state.isFocused },
       customProps.className,
     ]);
@@ -259,7 +261,6 @@ class TimeInput extends React.Component {
         <input
           // Create a hidden input for storing the name and value attributes to use when submitting the form.
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
-          className="terra-hidden-time-input"
           type="hidden"
           name={name}
           value={timeValue}
@@ -267,7 +268,7 @@ class TimeInput extends React.Component {
         <Input
           {...inputAttributes}
           ref={(inputRef) => { this.hourInput = inputRef; }}
-          className="terra-TimeInput-hour"
+          className={cx('time-input-hour')}
           type="text"
           value={this.state.hour}
           name={'terra-time-hour-'.concat(name)}
@@ -283,7 +284,7 @@ class TimeInput extends React.Component {
         <Input
           {...inputAttributes}
           ref={(inputRef) => { this.minuteInput = inputRef; }}
-          className="terra-TimeInput-minute"
+          className={cx('time-input-minute')}
           type="text"
           value={this.state.minute}
           name={'terra-time-minute-'.concat(name)}

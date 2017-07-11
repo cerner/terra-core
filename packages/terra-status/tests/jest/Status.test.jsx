@@ -48,7 +48,7 @@ it('should have indicator section of component with correct class, style and typ
   const arrangeWithStatus = <Status color="green" className="testClass" >{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);
   expect(wrapper.node.props.style.borderColor).toEqual('green');
-  expect(wrapper.node.props.className).toContain('terra-Status');
+  expect(wrapper.node.props.className).toContain('status');
   expect(wrapper.node.props.className).toContain('testClass');
 });
 

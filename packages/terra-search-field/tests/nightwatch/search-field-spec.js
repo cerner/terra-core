@@ -73,8 +73,10 @@ module.exports = {
       .assert.elementPresent('.terra-SearchField-button')
       .assert.attributeEquals('.terra-SearchField-input', 'placeholder', '');
 
-    browser.getCssProperty('.terra-SearchField-input', 'height', (result) => {
-      browser.assert.cssProperty('.terra-SearchField-button', 'height', result.value);
+    browser.getCssProperty('.terra-SearchField-input', 'height', (inputResult) => {
+      browser.getCssProperty('.terra-SearchField-button', 'height', (buttonResult) => {
+        browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
+      });
     });
   },
 };
