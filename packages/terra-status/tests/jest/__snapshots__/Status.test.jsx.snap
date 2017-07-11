@@ -1,6 +1,6 @@
 exports[`test should render a arrange with status and customProps 1`] = `
 <div
-  className="terra-Status"
+  className="status"
   id="id"
   style={
     Object {
@@ -30,7 +30,7 @@ exports[`test should render a arrange with status and customProps 1`] = `
 
 exports[`test should render a icon with status 1`] = `
 <div
-  className="terra-Status"
+  className="status"
   style={
     Object {
       "borderColor": "grey",
@@ -55,7 +55,7 @@ exports[`test should render a icon with status 1`] = `
 
 exports[`test should render a image with status 1`] = `
 <div
-  className="terra-Status"
+  className="status"
   style={
     Object {
       "borderColor": "red",
@@ -76,7 +76,7 @@ exports[`test should render a image with status 1`] = `
 
 exports[`test should render a simpleText with status 1`] = `
 <div
-  className="terra-Status"
+  className="status"
   style={
     Object {
       "borderColor": "blue",
@@ -90,7 +90,7 @@ exports[`test should render a simpleText with status 1`] = `
 
 exports[`test should render status with no style 1`] = `
 <div
-  class="terra-Status">
+  class="status">
   <div>
     Lorem labore et dolore magna aliqua.
   </div>
