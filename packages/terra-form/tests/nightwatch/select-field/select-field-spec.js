@@ -40,8 +40,10 @@ module.exports = {
   'Displays a populated SelectField with a defaultValue selected and can change selection': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/populated`)
-      .assert.value('select[name="zounds"]', 'boo')
-      .setValue('select[name="zounds"]', 'moo')
-      .assert.value('select[name="zounds"]', 'moo');
+      .assert.value('select[name="zounds"]', 'b')
+      .assert.containsText('select[name="zounds"]', 'boo')
+      .setValue('select[name="zounds"]', 'm')
+      .assert.value('select[name="zounds"]', 'm')
+      .assert.containsText('select[name="zounds"]', 'moo');
   },
 };

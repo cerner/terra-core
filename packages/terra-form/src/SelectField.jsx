@@ -6,7 +6,7 @@ import Select from './Select';
 
 const propTypes = {
   /**
-   * List of choices to be selected.
+   * List of object key/value pairs for choices to be selected.
    */
   choices: PropTypes.array.isRequired,
 

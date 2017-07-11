@@ -13,8 +13,14 @@ exports[`test should render a SelectField when all the possible props are passed
   <Select
     choices={
       Array [
-        "moo",
-        "boo",
+        Object {
+          "display": "moo",
+          "value": "m",
+        },
+        Object {
+          "display": "boo",
+          "value": "b",
+        },
       ]
     }
     className="scooby-snacks"
@@ -35,7 +41,10 @@ exports[`test should render a default SelectField component 1`] = `
   <Select
     choices={
       Array [
-        "moo",
+        Object {
+          "display": "moo",
+          "value": "m",
+        },
       ]
     }
     defaultValue={null}
@@ -48,8 +57,14 @@ exports[`test should render as controlled when just the required fields and a on
 <SelectField
   choices={
     Array [
-      "moo",
-      "boo",
+      Object {
+        "display": "moo",
+        "value": "m",
+      },
+      Object {
+        "display": "boo",
+        "value": "b",
+      },
     ]
   }
   error={null}
@@ -73,8 +88,14 @@ exports[`test should render as controlled when just the required fields and a on
       <Select
         choices={
           Array [
-            "moo",
-            "boo",
+            Object {
+              "display": "moo",
+              "value": "m",
+            },
+            Object {
+              "display": "boo",
+              "value": "b",
+            },
           ]
         }
         defaultValue={null}
@@ -88,11 +109,11 @@ exports[`test should render as controlled when just the required fields and a on
           onChange={[Function]}
           required={false}>
           <option
-            value="moo">
+            value="m">
             moo
           </option>
           <option
-            value="boo">
+            value="b">
             boo
           </option>
         </select>
@@ -106,8 +127,14 @@ exports[`test should render as uncontrolled when just the required fields and a 
 <SelectField
   choices={
     Array [
-      "moo",
-      "boo",
+      Object {
+        "display": "moo",
+        "value": "m",
+      },
+      Object {
+        "display": "boo",
+        "value": "b",
+      },
     ]
   }
   defaultValue="boo"
@@ -131,8 +158,14 @@ exports[`test should render as uncontrolled when just the required fields and a 
       <Select
         choices={
           Array [
-            "moo",
-            "boo",
+            Object {
+              "display": "moo",
+              "value": "m",
+            },
+            Object {
+              "display": "boo",
+              "value": "b",
+            },
           ]
         }
         defaultValue="boo"
@@ -144,11 +177,11 @@ exports[`test should render as uncontrolled when just the required fields and a 
           name={null}
           required={false}>
           <option
-            value="moo">
+            value="m">
             moo
           </option>
           <option
-            value="boo">
+            value="b">
             boo
           </option>
         </select>

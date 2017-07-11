@@ -4,8 +4,8 @@ import SelectField from '../../../lib/SelectField';
 
 const selectfield = () => (
   <SelectField
-    choices={['moo', 'boo']}
-    defaultValue="boo"
+    choices={[{ value: 'm', display: 'moo' }, { value: 'b', display: 'boo' }]}
+    defaultValue="b"
     error="jinkies!"
     isInline
     label="Meddling Kids"

@@ -5,7 +5,7 @@ exports[`test should render a Select component with one option 1`] = `
   name={null}
   required={false}>
   <option
-    value="moo">
+    value="m">
     moo
   </option>
 </select>
@@ -19,7 +19,7 @@ exports[`test should render a Select when all the possible props are passed into
   name="description"
   required={true}>
   <option
-    value="moo">
+    value="m">
     moo
   </option>
 </select>
@@ -37,8 +37,14 @@ exports[`test should render as controlled when just the required fields and a on
 <Select
   choices={
     Array [
-      "moo",
-      "boo",
+      Object {
+        "display": "moo",
+        "value": "m",
+      },
+      Object {
+        "display": "boo",
+        "value": "b",
+      },
     ]
   }
   defaultValue={null}
@@ -52,11 +58,11 @@ exports[`test should render as controlled when just the required fields and a on
     onChange={[Function]}
     required={false}>
     <option
-      value="moo">
+      value="m">
       moo
     </option>
     <option
-      value="boo">
+      value="b">
       boo
     </option>
   </select>
@@ -67,8 +73,14 @@ exports[`test should render as uncontrolled when just the required fields and a 
 <Select
   choices={
     Array [
-      "moo",
-      "boo",
+      Object {
+        "display": "moo",
+        "value": "m",
+      },
+      Object {
+        "display": "boo",
+        "value": "b",
+      },
     ]
   }
   defaultValue="boo"
@@ -80,11 +92,11 @@ exports[`test should render as uncontrolled when just the required fields and a 
     name={null}
     required={false}>
     <option
-      value="moo">
+      value="m">
       moo
     </option>
     <option
-      value="boo">
+      value="b">
       boo
     </option>
   </select>

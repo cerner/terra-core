@@ -7,7 +7,7 @@ import './Select.scss';
 
 const propTypes = {
   /**
-   * List of choices to be selected.
+   * List of object key/value pairs for choices to be selected.
    */
   choices: PropTypes.array.isRequired,
 
@@ -62,7 +62,7 @@ const Select = ({
       defaultValue={defaultValue}
       className={classNames('terra-Form-select', additionalSelectFieldProps.className)}
     >
-      {choices.map(choice => <option key={choice.toString()} value={choice}>{choice}</option>)}
+      {choices.map(choice => <option key={choice.value} value={choice.value}>{choice.display}</option>)}
     </select>
   );
 };
