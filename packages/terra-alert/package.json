@@ -28,19 +28,19 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-responsive-element": "^0.x",
-    "terra-base": "^0.x",
-    "terra-button": "^0.x",
-    "terra-icon": "^0.x",
+    "terra-responsive-element": "^1.0.0",
+    "terra-base": "^1.0.0",
+    "terra-button": "^1.0.0",
+    "terra-icon": "^1.0.0",
     "terra-mixins": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-responsive-element": "^0.x",
-    "terra-base": "^0.x",
-    "terra-button": "^0.x",
-    "terra-icon": "^0.x",
+    "terra-responsive-element": "^1.0.0",
+    "terra-base": "^1.0.0",
+    "terra-button": "^1.0.0",
+    "terra-icon": "^1.0.0",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {

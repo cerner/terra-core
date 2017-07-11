@@ -3,4 +3,4 @@ Changelog
 
 Unreleased
 ----------
-Initial pull request
+Initial stable release
