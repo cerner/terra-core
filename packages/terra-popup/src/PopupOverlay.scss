@@ -3,6 +3,7 @@
 .terra-PopupOverlay {
   background-color: #fff;
   height: 100%;
+  left: 0;
   opacity: 0.01;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -12,7 +13,6 @@
   top: 0;
   width: 100%;
   z-index: 7000;
-  @include terra-position-start(0);
 
   &::-webkit-scrollbar {
     display: none;
@@ -21,8 +21,8 @@
 
 .terra-PopupOverlay-inner {
   height: 200%;
+  left: 0;
   position: absolute;
   top: 0;
   width: 200%;
-  @include terra-position-start(0);
 }
