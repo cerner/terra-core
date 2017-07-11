@@ -20,7 +20,7 @@ module.exports = {
   'Displays a toggle-button with customized button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/customized-button`)
-      .assert.cssClassPresent('.terra-Button', 'terra-Button--link');
+      .assert.containsText('#buttonAttrsToggleButton', 'ToggleButton');
   },
 
   'Displays a toggle-button with customized closedButtonText': (browser) => {
@@ -38,7 +38,7 @@ module.exports = {
   'Displays an animated toggle-button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/animated`)
-      .assert.elementPresent('.terra-Toggle.is-animated');
+      .assert.elementPresent('#animatedToggle');
   },
 
   'Displays a toggle-button with animated icon': (browser) => {
@@ -50,47 +50,47 @@ module.exports = {
   'Displays an icon only toggle-button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/icon-only`)
-      .assert.attributeContains('.terra-Button', 'aria-label', 'Custom Text')
-      .assert.containsText('.terra-Button', '');
+      .assert.attributeContains('#iconOnlyToggleButton button', 'aria-label', 'Custom Text')
+      .assert.containsText('#iconOnlyToggleButton', '');
   },
 
   'Displays an initially open toggle-button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/initially-open`)
-      .assert.attributeContains('.terra-Toggle', 'aria-hidden', 'false');
+      .assert.attributeContains('div[aria-hidden]', 'aria-hidden', 'false');
   },
 
   'Displays a toggle-button with customized openedButtonText': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/open-button-text`)
-      .click('.terra-Button')
+      .click('#openedButtonTextToggleButton button')
       .assert.containsText('.terra-ToggleButton-buttonText', 'Custom Text');
   },
 
   'Triggers onOpen callback for ToggleButton when button is selected': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/on-open-event`)
-      .click('.terra-Button')
+      .click('#onOpenToggleButton button')
       .assert.containsText('#on-open-event', 'Times Opened: 1')
-      .click('.terra-Button') // Close ToggleButton
-      .sendKeys('.terra-Button', browser.Keys.SPACE)
+      .click('#onOpenToggleButton button') // Close ToggleButton
+      .sendKeys('#onOpenToggleButton button', browser.Keys.SPACE)
       .assert.containsText('#on-open-event', 'Times Opened: 2')
-      .sendKeys('.terra-Button', browser.Keys.SPACE)  // Close ToggleButton
-      .sendKeys('.terra-Button', browser.Keys.ENTER)
+      .sendKeys('#onOpenToggleButton button', browser.Keys.SPACE)  // Close ToggleButton
+      .sendKeys('#onOpenToggleButton button', browser.Keys.ENTER)
       .assert.containsText('#on-open-event', 'Times Opened: 3');
   },
 
   'Triggers onClose callback for ToggleButton when button is selected': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/on-close-event`)
-      .click('.terra-Button') // Open ToggleButton
-      .click('.terra-Button')
+      .click('#onCloseToggleButton button') // Open ToggleButton
+      .click('#onCloseToggleButton button')
       .assert.containsText('#on-close-event', 'Times Closed: 1')
-      .click('.terra-Button') // Open ToggleButton
-      .sendKeys('.terra-Button', browser.Keys.SPACE)
+      .click('#onCloseToggleButton button') // Open ToggleButton
+      .sendKeys('#onCloseToggleButton button', browser.Keys.SPACE)
       .assert.containsText('#on-close-event', 'Times Closed: 2')
-      .sendKeys('.terra-Button', browser.Keys.SPACE) // Open ToggleButton
-      .sendKeys('.terra-Button', browser.Keys.ENTER)
+      .sendKeys('#onCloseToggleButton button', browser.Keys.SPACE) // Open ToggleButton
+      .sendKeys('#onCloseToggleButton button', browser.Keys.ENTER)
       .assert.containsText('#on-close-event', 'Times Closed: 3');
   },
 
@@ -98,8 +98,8 @@ module.exports = {
   'Display toggle-button content when button is clicked': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/toggle-button-tests/default`)
-      .click('.terra-Button')
-      .waitForElementPresent('.terra-Toggle', 1000)
-      .expect.element('.terra-Toggle').to.have.attribute('aria-hidden').to.equal('false');
+      .click('#defaultToggleButton button')
+      .waitForElementPresent('button + div[aria-hidden]', 1000)
+      .expect.element('button + div[aria-hidden]').to.have.attribute('aria-hidden').to.equal('false');
   },
 };

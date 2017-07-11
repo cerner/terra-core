@@ -9,7 +9,7 @@ const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
 const StatusArrange = () => (
   <div>
     <Status color="#ff0000">
-      <Arrange fitStart={image} fill={simpleText} alignFill="center" />
+      <Arrange id="statusArrange" fitStart={image} fill={simpleText} alignFill="center" />
     </Status>
   </div>
 );
