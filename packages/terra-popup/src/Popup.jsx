@@ -5,7 +5,7 @@ import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
 import TetherComponent from './_TetherComponent';
-import { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset } from './_PopupUtils';
+import { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, switchAttachmentToRTL, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset } from './_PopupUtils';
 import './Popup.scss';
 
 const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
@@ -112,7 +112,7 @@ class Popup extends React.Component {
   setArrowPosition(targetBounds, contentBounds) {
     const isVertical = isVerticalAttachment(this.attachment);
     const position = arrowPositionFromBounds(targetBounds, contentBounds, isVertical, PopupArrow.arrowSize);
-    
+
     this.contentNode.style.margin = '';
     if (!position) {
       this.arrowNode.removeAttribute(PopupArrow.positionAttrs.top);
@@ -224,7 +224,13 @@ class Popup extends React.Component {
 
     let portalContent = children;
     if (isOpen) {
-      this.attachment = parseStringPair(contentAttachment);
+      let bidiContentAttachment = contentAttachment;
+      this.isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
+      if (this.isRTL) {
+        bidiContentAttachment = switchAttachmentToRTL(bidiContentAttachment);
+      }
+
+      this.attachment = parseStringPair(bidiContentAttachment);
 
       const boundingFrame = boundingRef ? boundingRef() : undefined;
       const popupContent = this.createPopupContent(boundingFrame);
@@ -242,12 +248,12 @@ class Popup extends React.Component {
           classPrefix="terra-Popup"
           constraints={constraints}
           content={popupContent}
-          contentAttachment={contentAttachment}
+          contentAttachment={bidiContentAttachment}
           contentOffset={`${this.offset.vertical} ${this.offset.horizontal}`}
           isEnabled
           onRepositioned={this.handleTetherRepositioned}
           targetRef={targetRef}
-          targetAttachment={mirrorAttachment(contentAttachment)}
+          targetAttachment={mirrorAttachment(bidiContentAttachment)}
         />
       );
 

@@ -24,7 +24,12 @@ const primaryMarginStyle = (attachment, margin) => {
     return attachment.vertical === 'top' ? { margin: `${margin}px 0 0 0` } : { margin: `0 0 ${margin}px 0` };
   }
   return attachment.horizontal === 'left' ? { margin: `0 0 0 ${margin}px` } : { margin: `0 ${margin}px 0 0` };
-}
+};
+
+const switchAttachmentToRTL = (attachment) => {
+  const parsedValue = parseStringPair(attachment);
+  return `${parsedValue.vertical} ${MIRROR_LR[parsedValue.horizontal]}`;
+};
 
 const mirrorAttachment = (attachment) => {
   const parsedValue = parseStringPair(attachment);
@@ -101,4 +106,4 @@ const topOffset = (targetBounds, contentBounds, arrowOffset) => {
   return (`${offset}px`);
 };
 
-export { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset };
+export { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, switchAttachmentToRTL, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset };
