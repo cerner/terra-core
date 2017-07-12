@@ -38,7 +38,7 @@ const ProgressBar = ({
   ...customProps
 }) => {
   const classes = cx([
-    'progressbar',
+    'progress-bar',
     heightSize,
     customProps.className,
   ]);

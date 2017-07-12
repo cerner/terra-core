@@ -4,7 +4,7 @@
 
 /* stylelint-disable selector-class-pattern  */
 :local {
-  .progressbar {
+  .progress-bar {
     background: #d3d4d5;
     border-radius: 0.5em;
     display: inline-block;
@@ -53,7 +53,7 @@
 
   // Firefox styles must be entirely separate as it doesn't work well with WebKit styles
   @-moz-document url-prefix('') {
-    .progressbar {
+    .progress-bar {
       border-radius: 0.5em;
       overflow: hidden;
 

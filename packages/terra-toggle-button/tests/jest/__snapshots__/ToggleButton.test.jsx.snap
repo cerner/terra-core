@@ -14,7 +14,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
           class="icon">
           <svg
             aria-hidden="true"
-            class="terra-Icon is-bidi"
+            class="icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -59,7 +59,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
           class="icon">
           <svg
             aria-hidden="true"
-            class="terra-Icon is-bidi"
+            class="icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -110,7 +110,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
       class="icon">
       <svg
         aria-hidden="true"
-        class="terra-Icon is-bidi"
+        class="icon is-bidi"
         data-name="Layer 1"
         focusable="false"
         height="1em"
@@ -144,7 +144,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
           class="icon">
           <svg
             aria-hidden="true"
-            class="terra-Icon is-bidi"
+            class="icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
@@ -252,7 +252,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                     xmlns="http://www.w3.org/2000/svg">
                     <svg
                       aria-hidden="true"
-                      className="terra-Icon is-bidi"
+                      className="icon is-bidi"
                       data-name="Layer 1"
                       focusable={false}
                       height="1em"
