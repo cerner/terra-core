@@ -1,8 +1,8 @@
 exports[`Snapshots renders a basic search field 1`] = `
 <div
-  className="terra-SearchField">
+  className="searchfield">
   <Input
-    className="terra-SearchField-input"
+    className="input"
     name={null}
     onChange={[Function]}
     placeholder=""
@@ -10,7 +10,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     type="search"
     value="" />
   <Button
-    className="terra-SearchField-button"
+    className="button"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -28,9 +28,9 @@ exports[`Snapshots renders a basic search field 1`] = `
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
-  className="terra-SearchField">
+  className="searchfield">
   <Input
-    className="terra-SearchField-input"
+    className="input"
     name={null}
     onChange={[Function]}
     placeholder="Test"
@@ -38,7 +38,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     type="search"
     value="" />
   <Button
-    className="terra-SearchField-button"
+    className="button"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -56,9 +56,9 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
-  className="terra-SearchField">
+  className="searchfield">
   <Input
-    className="terra-SearchField-input"
+    className="input"
     name={null}
     onChange={[Function]}
     placeholder=""
@@ -66,7 +66,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     type="search"
     value="Test" />
   <Button
-    className="terra-SearchField-button"
+    className="button"
     isBlock={false}
     isCompact={true}
     isDisabled={false}

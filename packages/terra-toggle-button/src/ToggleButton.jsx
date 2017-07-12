@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import IconChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import Toggle from 'terra-toggle';
 import 'terra-base/lib/baseStyles';
-import './ToggleButton.scss';
+import styles from './ToggleButton.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -114,8 +116,8 @@ class ToggleButton extends React.Component {
     // Set openHeaderText to the same value as closedHeaderText if its not already set
     const normalizedOpenButtonText = openedButtonText || closedButtonText;
     const buttonText = !this.state.isOpen ? closedButtonText : normalizedOpenButtonText;
-    const toggleButtonClass = classNames([
-      'terra-ToggleButton',
+    const toggleButtonClass = cx([
+      'button',
       { 'is-open': this.state.isOpen },
       { 'is-icon-animated': isIconAnimated },
       customProps.className,
@@ -130,7 +132,7 @@ class ToggleButton extends React.Component {
           aria-label={closedButtonText}
           onClick={this.handleOnClick}
         >
-          <span className="terra-ToggleButton-icon">{icon}</span>
+          <span className={cx('icon')}>{icon}</span>
         </Button>
       );
     } else {
@@ -142,8 +144,8 @@ class ToggleButton extends React.Component {
         >
           <Arrange
             align="center"
-            fitStart={<span className="terra-ToggleButton-icon">{icon}</span>}
-            fill={<span className="terra-ToggleButton-buttonText">{buttonText}</span>}
+            fitStart={<span className={cx('icon')}>{icon}</span>}
+            fill={<span className={cx('button-text')}>{buttonText}</span>}
           />
         </Button>
       );
