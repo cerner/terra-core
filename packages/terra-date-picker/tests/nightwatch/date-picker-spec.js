@@ -85,9 +85,10 @@ module.exports = {
   'Displays the calendar button with a height that matches the input ': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
 
-    browser.getCssProperty('.terra-DatePicker-input', 'height', (result) => {
-      browser.assert.cssProperty('.terra-DatePicker-button', 'height', result.value);
+    browser.getCssProperty('.terra-DatePicker-input', 'height', (inputResult) => {
+      browser.getCssProperty('.terra-DatePicker-button', 'height', (buttonResult) => {
+        browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
+      });
     });
   },
 };
-
