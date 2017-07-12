@@ -1,3 +1,5 @@
+@import './variables';
+
 .terra-Popup-element {
-  z-index: 7000 + 1;
+  z-index: var(--terra-PopupElement-zIndex);
 }

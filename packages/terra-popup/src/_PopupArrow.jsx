@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 /**
  * Half the diameter of the arrow, to use for arrow positioning offset.
  */
-const ARROW_OFFSET = 10;
+const ARROW_OFFSET = 11;
 
 /**
  * Directional classes to be applied by a presenting component.

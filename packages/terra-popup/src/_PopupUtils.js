@@ -10,19 +10,28 @@ const MIRROR_TB = {
   bottom: 'top',
 };
 
+const parseStringPair = (value) => {
+  const [vertical, horizontal] = value.split(' ');
+  return { vertical, horizontal };
+};
+
+const isVerticalAttachment = attachment => (attachment.vertical !== 'middle');
+
+const primaryArrowPosition = attachment => (isVerticalAttachment(attachment) ? attachment.vertical : attachment.horizontal);
+
 const mirrorAttachment = (attachment) => {
   const parsedValue = parseStringPair(attachment);
   let horizontal = parsedValue.horizontal;
   let vertical = parsedValue.vertical;
 
-  if (parsedValue.vertical === 'middle') {
-    horizontal = MIRROR_LR[parsedValue.horizontal];
-  } else {
+  if (isVerticalAttachment(parsedValue.vertical)) {
     vertical = MIRROR_TB[parsedValue.vertical];
+  } else {
+    horizontal = MIRROR_LR[parsedValue.horizontal];
   }
 
   return `${vertical} ${horizontal}`;
-}
+};
 
 const getContentOffset = (attachment, targetNode, arrowOffset) => {
   const offset = { vertical: 0, horizontal: 0 };
@@ -36,19 +45,10 @@ const getContentOffset = (attachment, targetNode, arrowOffset) => {
     }
   }
   return offset;
-}
+};
 
-const parseStringPair = (value) => {
-  const [vertical, horizontal] = value.split(' ');
-  return { vertical, horizontal };
-}
-
-const isVerticalAttachment = (attachment) => {
-  return attachment.vertical !== 'middle';
-}
-
-const arrowPositionFromBounds = (targetBounds, contentBounds, isVerticalAttachment, arrowOffset) => {
-  if (isVerticalAttachment) {
+const arrowPositionFromBounds = (targetBounds, contentBounds, isVertical, arrowOffset) => {
+  if (isVertical) {
     if ((contentBounds.left + contentBounds.width) - arrowOffset >= targetBounds.left && contentBounds.left + arrowOffset <= targetBounds.left + targetBounds.width) {
       if (targetBounds.top < contentBounds.top) {
         return 'top';
@@ -64,7 +64,7 @@ const arrowPositionFromBounds = (targetBounds, contentBounds, isVerticalAttachme
     }
   }
   return undefined;
-}
+};
 
 const leftOffset = (targetBounds, contentBounds, arrowOffset, contentOffset, attachment) => {
   let offset;
@@ -82,7 +82,7 @@ const leftOffset = (targetBounds, contentBounds, arrowOffset, contentOffset, att
     offset = contentBounds.width;
   }
   return `${offset}px`;
-}
+};
 
 const topOffset = (targetBounds, contentBounds, arrowOffset) => {
   let offset = (targetBounds.top - contentBounds.top) + arrowOffset + (targetBounds.height / 2);
@@ -92,10 +92,6 @@ const topOffset = (targetBounds, contentBounds, arrowOffset) => {
     offset = contentBounds.height;
   }
   return (`${offset}px`);
-}
+};
 
-const primaryArrowPosition = (attachment) => {
-  return isVerticalAttachment(attachment) ? attachment.vertical : attachment.horizontal;
-}
-
-export { mirrorAttachment, getContentOffset, parseStringPair, arrowPositionFromBounds, leftOffset, topOffset, primaryArrowPosition };
+export { parseStringPair, isVerticalAttachment, primaryArrowPosition, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset };

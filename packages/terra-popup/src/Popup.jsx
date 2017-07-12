@@ -5,7 +5,7 @@ import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
 import TetherComponent from './_TetherComponent';
-import { mirrorAttachment, getContentOffset, parseStringPair, arrowPositionFromBounds, leftOffset, topOffset, primaryArrowPosition } from './PopupUtils';
+import { parseStringPair, isVerticalAttachment, primaryArrowPosition, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset } from './_PopupUtils';
 import './Popup.scss';
 
 const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
@@ -56,12 +56,12 @@ const propTypes = {
    * A string representation of the height in px, limited to:
    * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880
    */
-  contentHeight: PropTypes.oneOf(HEIGHT_KEYS).isRequired,
+  contentHeight: PropTypes.oneOf(HEIGHT_KEYS),
   /**
    * A string representation of the width in px, limited to:
    * 160, 240, 320, 640, 960, 1280, 1760
    */
-  contentWidth: PropTypes.oneOf(WIDTH_KEYS).isRequired,
+  contentWidth: PropTypes.oneOf(WIDTH_KEYS),
   /**
    * Should an arrow be placed at the attachment point.
    */
@@ -90,6 +90,8 @@ const defaultProps = {
   classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
+  contentHeight: '40',
+  contentWidth: '160',
   isArrowDisplayed: false,
   isHeaderDisabled: false,
   isOpen: false,
@@ -110,8 +112,8 @@ class Popup extends React.Component {
   }
 
   setArrowPosition(targetBounds, contentBounds) {
-    const isVerticalAttachment = isVerticalAttachment(this.attachment);
-    const position = arrowPositionFromBounds(targetBounds, contentBounds, isVerticalAttachment, PopupArrow.arrowSize);
+    const isVertical = isVerticalAttachment(this.attachment);
+    const position = arrowPositionFromBounds(targetBounds, contentBounds, isVertical, PopupArrow.arrowSize);
 
     if (!position) {
       this.arrowNode.removeAttribute(PopupArrow.positionAttrs.top);
@@ -127,7 +129,7 @@ class Popup extends React.Component {
     this.arrowNode.setAttribute(PopupArrow.positionAttrs[position], 'true');
     this.contentNode.setAttribute(PopupContent.positionAttrs[position], 'true');
 
-    if (isVerticalAttachment) {
+    if (isVertical) {
       this.arrowNode.style.left = leftOffset(targetBounds, contentBounds, PopupArrow.arrowSize, this.offset, this.attachment);
     } else {
       this.arrowNode.style.top = topOffset(targetBounds, contentBounds, PopupArrow.arrowSize);
@@ -247,7 +249,7 @@ class Popup extends React.Component {
         />
       );
 
-      portalContent = createPortalContent(tetherCotent, !allowScrolling);
+      portalContent = this.createPortalContent(tetherCotent, !allowScrolling);
     }
 
     return (

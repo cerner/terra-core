@@ -72,32 +72,6 @@ const PopupExamples = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
-    <h2 id="bounded-popup" style={{ paddingTop: '20px' }}>Popup Bounded</h2>
-    <PopupBounded />
-    <h2 id="no-header-popup" style={{ paddingTop: '20px' }}>Popup Bounded With No Header</h2>
-    <PopupNoHeader />
-    <h2 id="class-name-popup" style={{ paddingTop: '20px' }}>Popup Adding Class Styles</h2>
-    <PopupClassName />
-    <h2 id="size-popups" style={{ paddingTop: '20px' }}>Popup Dimensions</h2>
-    <Grid>
-      <Grid.Row>
-        <Grid.Column col={2}>
-          <PopupTiny />
-        </Grid.Column>
-        <Grid.Column col={2}>
-          <PopupSmall />
-        </Grid.Column>
-        <Grid.Column col={2}>
-          <PopupMedium />
-        </Grid.Column>
-        <Grid.Column col={2}>
-          <PopupLarge />
-        </Grid.Column>
-        <Grid.Column col={2}>
-          <PopupHuge />
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
   </div>
 );
 
