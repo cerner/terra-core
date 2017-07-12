@@ -27,13 +27,21 @@ const HEIGHT_MAPPING = CREATE_MAPPING(HEIGHT_KEYS, HEIGHT_VALUES);
 
 const propTypes = {
   /**
-   * Bounding container for the popup, will use window if no value provided.
-   */
-  boundingRef: PropTypes.func,
-  /**
    * The children to be displayed as content within the popup.
    */
   children: PropTypes.node.isRequired,
+  /**
+   * Callback function indicating a close condition was met, should be combined with isOpen for state management.
+   */
+  onRequestClose: PropTypes.func.isRequired,
+  /**
+   * Target element for the popup to anchor to.
+   */
+  targetRef: PropTypes.func.isRequired,
+  /**
+   * Bounding container for the popup, will use window if no value provided.
+   */
+  boundingRef: PropTypes.func,
   /**
    * CSS classnames that are append to the arrow.
    */
@@ -72,14 +80,6 @@ const propTypes = {
    * Should the popup be presented as open.
    */
   isOpen: PropTypes.bool,
-  /**
-   * Callback function indicating a close condition was met, should be combined with isOpen for state management.
-   */
-  onRequestClose: PropTypes.func.isRequired,
-  /**
-   * Target element for the popup to anchor to.
-   */
-  targetRef: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
