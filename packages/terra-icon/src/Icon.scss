@@ -20,13 +20,17 @@
     fill: currentColor; // Allows icon color to be inherited from text color
   }
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(359deg); }
+  :global {
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(359deg); }
+    }
   }
 
   .icon.is-spin {
-    animation: spin 2s infinite linear;
+    :global {
+      animation: spin 2s infinite linear;
+    }
   }
 
   [dir='rtl'] .icon.is-bidi {
