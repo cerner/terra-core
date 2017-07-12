@@ -9,20 +9,8 @@ import IconComment from '../../src/icon/IconComment';
 
 describe('Icon', () => {
   describe('IconAdd', () => {
-    it('should mount IconAdd', () => {
-      const wrapper = mount(<IconAdd />);
-      expect(wrapper).toMatchSnapshot();
-    });
-    it('should render an svg', () => {
-      const wrapper = render(<IconAdd />);
-      expect(wrapper).toMatchSnapshot();
-    });
     it('should shallow IconBase', () => {
       const wrapper = shallow(<IconAdd />);
-      expect(wrapper).toMatchSnapshot();
-    });
-    it('should render IconBase with custom-class', () => {
-      const wrapper = render(<IconAdd className="custom-class" />);
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -102,20 +90,8 @@ describe('Icon', () => {
   });
 
   describe('IconSpinner', () => {
-    it('should mount IconSpinner', () => {
-      const wrapper = mount(<IconSpinner />);
-      expect(wrapper).toMatchSnapshot();
-    });
-    it('should render an svg', () => {
-      const wrapper = render(<IconSpinner />);
-      expect(wrapper).toMatchSnapshot();
-    });
     it('should shallow IconBase', () => {
       const wrapper = shallow(<IconSpinner />);
-      expect(wrapper).toMatchSnapshot();
-    });
-    it('should render IconBase with custom-class', () => {
-      const wrapper = render(<IconSpinner className="custom-class" />);
       expect(wrapper).toMatchSnapshot();
     });
 
@@ -196,14 +172,6 @@ describe('Icon', () => {
 
 
   describe('IconComment', () => {
-    it('should mount IconComment', () => {
-      const wrapper = mount(<IconComment />);
-      expect(wrapper).toMatchSnapshot();
-    });
-    it('should render an svg', () => {
-      const wrapper = render(<IconComment />);
-      expect(wrapper).toMatchSnapshot();
-    });
     it('should shallow IconBase', () => {
       const wrapper = shallow(<IconComment />);
       expect(wrapper).toMatchSnapshot();
