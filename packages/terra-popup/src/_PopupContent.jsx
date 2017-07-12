@@ -12,20 +12,20 @@ const cx = classNames.bind(styles);
  * Directional classes to be applied by a presenting component.
  */
 const CONTENT_ATTRS = {
-  top: 'arrow-top',
-  bottom: 'arrow-bottom',
-  left: 'arrow-left',
-  right: 'arrow-right',
+  top: 'data-arrow-top',
+  bottom: 'data-arrow-bottom',
+  left: 'data-arrow-left',
+  right: 'data-arrow-right',
 };
 
 /**
  * Mirrored directional classes, used to flip the arrow on repositioning.
  */
 const MIRRORED_CONTENT_ATTRS = {
-  top: 'arrow-bottom',
-  bottom: 'arrow-top',
-  left: 'arrow-right',
-  right: 'arrow-left',
+  top: 'data-arrow-bottom',
+  bottom: 'data-arrow-top',
+  left: 'data-arrow-right',
+  right: 'data-arrow-left',
 };
 
 /**
@@ -48,7 +48,7 @@ const ARROW_POSITIONS = [
 /**
  * Margin value used for calculations.
  */
-const POPUP_MARGIN = 9;
+const POPUP_MARGIN = 10;
 
 const propTypes = {
   /**
@@ -121,7 +121,7 @@ const defaultProps = {
 };
 
 class PopupContent extends React.Component {
-  static getContentStyle(height, maxHeight, width, maxWidth) {
+  static getContentStyle(arrow, arrowPosition, height, maxHeight, width, maxWidth) {
     const validHeight = maxHeight <= 0 || height <= maxHeight ? height : maxHeight;
     const validWidth = maxWidth <= 0 || width <= maxWidth ? width : maxWidth;
     return { height: `${validHeight.toString()}px`, width: `${validWidth.toString()}px` };
@@ -234,7 +234,7 @@ class PopupContent extends React.Component {
     } = this.props;
 
     const showArrow = PopupContent.shouldShowArrow(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
-    const contentStyle = PopupContent.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
+    const contentStyle = PopupContent.getContentStyle(arrow, arrowPosition, contentHeight, contentHeightMax, contentWidth, contentWidthMax);
     const isFullScreen = PopupContent.isFullScreen(contentHeight, contentHeightMax, contentWidth, contentWidthMax);
 
     let content = children;
@@ -257,16 +257,11 @@ class PopupContent extends React.Component {
     delete customProps.disableOnClickOutside;
     delete customProps.enableOnClickOutside;
 
-    const positionAttr = {};
-    if (showArrow) {
-      positionAttr[CONTENT_ATTRS[arrowPosition]] = 'true';
-    }
-
     return (
       <FocusTrap>
         <div {...customProps} tabIndex="0" className={cx('popupContent')} ref={refCallback}>
           {arrowContent}
-          <div className={innerClassNames} {...positionAttr} style={contentStyle}>
+          <div className={innerClassNames} style={contentStyle}>
             {content}
           </div>
         </div>
@@ -281,5 +276,6 @@ PopupContent.defaultProps = defaultProps;
 const onClickOutsideContent = onClickOutside(PopupContent);
 onClickOutsideContent.positionAttrs = CONTENT_ATTRS;
 onClickOutsideContent.mirroredPositionAttrs = MIRRORED_CONTENT_ATTRS;
+onClickOutsideContent.popupMargin = POPUP_MARGIN;
 
 export default onClickOutsideContent;

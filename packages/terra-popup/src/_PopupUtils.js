@@ -19,12 +19,19 @@ const isVerticalAttachment = attachment => (attachment.vertical !== 'middle');
 
 const primaryArrowPosition = attachment => (isVerticalAttachment(attachment) ? attachment.vertical : attachment.horizontal);
 
+const primaryMarginStyle = (attachment, margin) => {
+  if (isVerticalAttachment(attachment)) {
+    return attachment.vertical === 'top' ? { margin: `${margin}px 0 0 0` } : { margin: `0 0 ${margin}px 0` };
+  }
+  return attachment.horizontal === 'left' ? { margin: `0 0 0 ${margin}px` } : { margin: `0 ${margin}px 0 0` };
+}
+
 const mirrorAttachment = (attachment) => {
   const parsedValue = parseStringPair(attachment);
   let horizontal = parsedValue.horizontal;
   let vertical = parsedValue.vertical;
 
-  if (isVerticalAttachment(parsedValue.vertical)) {
+  if (isVerticalAttachment(parsedValue)) {
     vertical = MIRROR_TB[parsedValue.vertical];
   } else {
     horizontal = MIRROR_LR[parsedValue.horizontal];
@@ -94,4 +101,4 @@ const topOffset = (targetBounds, contentBounds, arrowOffset) => {
   return (`${offset}px`);
 };
 
-export { parseStringPair, isVerticalAttachment, primaryArrowPosition, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset };
+export { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset };

@@ -14,20 +14,20 @@ const ARROW_OFFSET = 11;
  * Directional classes to be applied by a presenting component.
  */
 const ARROW_ATTRS = {
-  top: 'align-top',
-  bottom: 'align-bottom',
-  left: 'align-left',
-  right: 'align-right',
+  top: 'data-align-top',
+  bottom: 'data-align-bottom',
+  left: 'data-align-left',
+  right: 'data-align-right',
 };
 
 /**
  * Mirrored directional classes, used to flip the arrow on repositioning.
  */
 const MIRRORED_ARROW_ATTRS = {
-  top: 'align-bottom',
-  bottom: 'align-top',
-  left: 'align-right',
-  right: 'align-left',
+  top: 'data-align-bottom',
+  bottom: 'data-align-top',
+  left: 'data-align-right',
+  right: 'data-align-left',
 };
 
 const propTypes = {
@@ -40,7 +40,7 @@ const propTypes = {
 const PopupArrow = ({
     refCallback,
     ...customProps
-  }) => <div {...customProps} className={cx('popupArrow', customProps.className)} ref={refCallback} />;
+  }) => <div {...customProps} className={cx(['popupArrow', customProps.className])} ref={refCallback} />;
 
 PopupArrow.propTypes = propTypes;
 PopupArrow.positionAttrs = ARROW_ATTRS;

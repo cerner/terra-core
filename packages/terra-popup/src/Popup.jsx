@@ -5,7 +5,7 @@ import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
 import TetherComponent from './_TetherComponent';
-import { parseStringPair, isVerticalAttachment, primaryArrowPosition, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset } from './_PopupUtils';
+import { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset } from './_PopupUtils';
 import './Popup.scss';
 
 const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
@@ -112,7 +112,8 @@ class Popup extends React.Component {
   setArrowPosition(targetBounds, contentBounds) {
     const isVertical = isVerticalAttachment(this.attachment);
     const position = arrowPositionFromBounds(targetBounds, contentBounds, isVertical, PopupArrow.arrowSize);
-
+    
+    this.contentNode.style.margin = '';
     if (!position) {
       this.arrowNode.removeAttribute(PopupArrow.positionAttrs.top);
       this.arrowNode.removeAttribute(PopupArrow.positionAttrs.bottom);
@@ -164,10 +165,12 @@ class Popup extends React.Component {
 
     let arrow;
     let arrowPosition;
+    let contentStyle;
     if (this.props.isArrowDisplayed && this.props.contentAttachment !== 'middle center') {
       this.offset = getContentOffset(this.attachment, this.props.targetRef(), PopupArrow.arrowSize);
       arrow = <PopupArrow className={this.props.classNameArrow} refCallback={this.setArrowNode} />;
       arrowPosition = primaryArrowPosition(this.attachment);
+      contentStyle = primaryMarginStyle(this.attachment, PopupContent.popupMargin);
     }
 
     return (
@@ -182,6 +185,7 @@ class Popup extends React.Component {
         isHeaderDisabled={this.props.isHeaderDisabled}
         onRequestClose={this.props.onRequestClose}
         refCallback={this.setContentNode}
+        style={contentStyle}
       >
         {this.props.children}
       </PopupContent>
