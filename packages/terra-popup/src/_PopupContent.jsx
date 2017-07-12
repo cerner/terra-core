@@ -52,6 +52,22 @@ const POPUP_MARGIN = 9;
 
 const propTypes = {
   /**
+   * The children to be presented as the popup's content.
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * The height value in px, to be applied to the content container.
+   */
+  contentHeight: PropTypes.number.isRequired,
+  /**
+   * The width value in px, to be applied to the content container.
+   */
+  contentWidth: PropTypes.number.isRequired,
+  /**
+   * The function that should be triggered when a close is indicated.
+   */
+  onRequestClose: PropTypes.func.isRequired,
+  /**
    * The arrow to be placed within the popup frame.
    */
   arrow: PropTypes.element,
@@ -60,11 +76,7 @@ const propTypes = {
    */
   arrowPosition: PropTypes.oneOf(ARROW_POSITIONS),
   /**
-   * The children to be presented as the popup's content.
-   */
-  children: PropTypes.node.isRequired,
-  /**
-   * CSS classnames that are append to the popup content body.
+   * CSS classnames that are appended to the popup content body.
    */
   classNameInner: PropTypes.string,
   /**
@@ -80,29 +92,17 @@ const propTypes = {
    */
   closeOnResize: PropTypes.bool,
   /**
-   * A the px value of height to be applied to the content container.
-   */
-  contentHeight: PropTypes.number.isRequired,
-  /**
-   * The maximum height to set for popup content in px, also used with responsive behavior for actual height.
+   * The maximum height value in px, to be applied to the content container. Used with responsive behavior for actual height.
    */
   contentHeightMax: PropTypes.number,
   /**
-   * A the px value of width to be applied to the content container.
-   */
-  contentWidth: PropTypes.number.isRequired,
-  /**
-   * The maximum width of the popup content in px, also used with responsive behavior for actual width.
+   * The maximum width value in px, to be applied to the content container. Used with responsive behavior for actual width.
    */
   contentWidthMax: PropTypes.number,
   /**
    * Should the default behavior, that inserts a header when constraints are breached, be disabled.
    */
   isHeaderDisabled: PropTypes.bool,
-  /**
-   * The function that should be triggered when a close is indicated.
-   */
-  onRequestClose: PropTypes.func.isRequired,
   /**
    * The function returning the frame html reference.
    */
