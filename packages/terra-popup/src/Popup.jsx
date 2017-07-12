@@ -17,9 +17,7 @@ const WIDTH_VALUES = [160, 240, 320, 640, 960, 1280, 1760];
 const CREATE_MAPPING = ((keys, values) => {
   const combinations = {};
   for (let i = 0; i < keys.length; i += 1) {
-    for (let j = 0; j < values.length; j += 1) {
-      combinations[keys[i]] = values[j];
-    }
+    combinations[keys[i]] = values[i];
   }
   return combinations;
 });
@@ -90,8 +88,8 @@ const defaultProps = {
   classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
-  contentHeight: '40',
-  contentWidth: '160',
+  contentHeight: '80',
+  contentWidth: '240',
   isArrowDisplayed: false,
   isHeaderDisabled: false,
   isOpen: false,

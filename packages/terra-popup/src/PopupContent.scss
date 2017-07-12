@@ -6,6 +6,10 @@ $terra-popup-margin: var(--terra-PopupContent-margin);
   /* stylelint-disable selector-class-pattern  */
   [dir='ltr'] &,
   [dir='rtl'] & {
+    .popupContent {
+      display: block;
+    }
+
     .header {
       box-shadow: var(--terra-PopupContent-header-boxShadow);
       height: var(--terra-PopupContent-header-height);
