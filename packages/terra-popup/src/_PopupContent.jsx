@@ -1,30 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import onClickOutside from 'react-onclickoutside';
 import ContentContainer from 'terra-content-container';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import FocusTrap from 'focus-trap-react';
-import './PopupContent.scss';
+import styles from './PopupContent.scss';
 
+const cx = classNames.bind(styles);
 /**
  * Directional classes to be applied by a presenting component.
  */
-const CONTENT_CLASSES = {
-  top: 'terra-PopupContent--arrowTop',
-  bottom: 'terra-PopupContent--arrowBottom',
-  left: 'terra-PopupContent--arrowLeft',
-  right: 'terra-PopupContent--arrowRight',
+const CONTENT_ATTRS = {
+  top: 'arrow-top',
+  bottom: 'arrow-bottom',
+  left: 'arrow-left',
+  right: 'arrow-right',
 };
 
 /**
  * Mirrored directional classes, used to flip the arrow on repositioning.
  */
-const CONTENT_OPPOSITE_CLASSES = {
-  top: 'terra-PopupContent--arrowBottom',
-  bottom: 'terra-PopupContent--arrowTop',
-  left: 'terra-PopupContent--arrowRight',
-  right: 'terra-PopupContent--arrowLeft',
+const MIRRORED_CONTENT_ATTRS = {
+  top: 'arrow-bottom',
+  bottom: 'arrow-top',
+  left: 'arrow-right',
+  right: 'arrow-left',
 };
 
 /**
@@ -128,8 +129,8 @@ class PopupContent extends React.Component {
 
   static addPopupHeader(children, onRequestClose) {
     const icon = <IconClose tabIndex="0" height="30" width="30" />;
-    const button = <button className="terra-PopupContent-close" onClick={onRequestClose} style={{ float: 'right' }}>{icon}</button>;
-    const header = <div className="terra-PopupContent-header">{button}</div>;
+    const button = <button className={cx('close')} onClick={onRequestClose} style={{ float: 'right' }}>{icon}</button>;
+    const header = <div className={cx('header')}>{button}</div>;
     return <ContentContainer header={header} fill>{children}</ContentContainer>;
   }
 
@@ -246,16 +247,9 @@ class PopupContent extends React.Component {
       arrowContent = arrow;
     }
 
-    const popupContentClassNames = classNames([
-      'terra-PopupContent',
-      { 'terra-PopupContent-showArrow': showArrow },
-      { [`${CONTENT_CLASSES[arrowPosition]}`]: showArrow },
-      customProps.className,
-    ]);
-
-    const innerClassNames = classNames([
-      'terra-PopupContent-inner',
-      { 'terra-PopupContent-inner--isFullScreen': isFullScreen },
+    const innerClassNames = cx([
+      'inner',
+      { isFullScreen },
       classNameInner,
     ]);
 
@@ -263,11 +257,16 @@ class PopupContent extends React.Component {
     delete customProps.disableOnClickOutside;
     delete customProps.enableOnClickOutside;
 
+    const positionAttr = {};
+    if (showArrow) {
+      positionAttr[CONTENT_ATTRS[arrowPosition]] = 'true';
+    }
+
     return (
       <FocusTrap>
-        <div {...customProps} tabIndex="0" className={popupContentClassNames} ref={refCallback}>
+        <div {...customProps} tabIndex="0" className={cx('popupContent')} ref={refCallback}>
           {arrowContent}
-          <div className={innerClassNames} style={contentStyle}>
+          <div className={innerClassNames} {...positionAttr} style={contentStyle}>
             {content}
           </div>
         </div>
@@ -280,7 +279,7 @@ PopupContent.propTypes = propTypes;
 PopupContent.defaultProps = defaultProps;
 
 const onClickOutsideContent = onClickOutside(PopupContent);
-onClickOutsideContent.positionClasses = CONTENT_CLASSES;
-onClickOutsideContent.oppositePositionClasses = CONTENT_OPPOSITE_CLASSES;
+onClickOutsideContent.positionAttrs = CONTENT_ATTRS;
+onClickOutsideContent.mirroredPositionAttrs = MIRRORED_CONTENT_ATTRS;
 
 export default onClickOutsideContent;

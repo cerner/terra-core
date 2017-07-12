@@ -1,54 +1,61 @@
-@import '~terra-mixins';
+@import './variables';
 
-$terra-popup-margin: 9px;
+$terra-popup-margin: var(--terra-PopupContent-margin);
 
-.terra-PopupContent-header {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
-  height: 30px;
-  width: 100%;
-}
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  [dir='ltr'] &,
+  [dir='rtl'] & {
+    .header {
+      box-shadow: var(--terra-PopupContent-header-boxShadow);
+      height: var(--terra-PopupContent-header-height);
+      width: 100%;
+    }
 
-.terra-PopupContent-close {
-  background: 0 0;
-  border: 0;
-  color: #999;
-  cursor: pointer;
-  font-size: 1.45rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 0;
+    .close {
+      background: var(--terra-PopupContent-close-background);
+      border: var(--terra-PopupContent-close-border);
+      color: var(--terra-PopupContent-close-color);
+      cursor: pointer;
+      font-size: var(--terra-PopupContent-close-fontSize);
+      font-weight: var(--terra-PopupContent-close-fontWeight);
+      line-height: var(--terra-PopupContent-close-lineHeight);
+      padding: var(--terra-PopupContent-close-padding);
 
-  &:hover {
-    color: #111;
+      &:hover {
+        color: var(--terra-PopupContent-close-hoverColor);
+      }
+    }
+
+    .inner {
+      background-color: var(--terra-PopupContent-inner-backgroundColor);
+      border: var(--terra-PopupContent-inner-border);
+      box-shadow: var(--terra-PopupContent-inner-boxShadow);
+      max-height: 100vh;
+      max-width: 100vw;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .isFullScreen {
+      box-shadow: none;
+    }
+
+    .popupContent[arrow-top='true'] {
+      margin-top: $terra-popup-margin;
+    }
+
+    .popupContent[arrow-bottom='true'] {
+      margin-bottom: $terra-popup-margin;
+    }
+
+    .popupContent[arrow-left='true'] {
+      margin-left: $terra-popup-margin;
+    }
+
+    .popupContent[arrow-right='true'] {
+      margin-right: $terra-popup-margin;
+    }
   }
-}
-
-.terra-PopupContent-inner {
-  background-color: #fff;
-  border: 1px solid #b2b5b6;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.35);
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.terra-PopupContent-inner--isFullScreen {
-  box-shadow: none;
-}
-
-.terra-PopupContent--arrowTop {
-  margin-top: $terra-popup-margin;
-}
-
-.terra-PopupContent--arrowBottom {
-  margin-bottom: $terra-popup-margin;
-}
-
-.terra-PopupContent--arrowLeft {
-  margin-left: $terra-popup-margin;
-}
-
-.terra-PopupContent--arrowRight {
-  margin-right: $terra-popup-margin;
+  /* stylelint-enable */
 }

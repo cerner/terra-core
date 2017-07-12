@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './PopupOverlay.scss';
+import styles from './PopupOverlay.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -30,17 +32,12 @@ class PopupOverlay extends React.Component {
   render() {
     const { children, ...customProps } = this.props;
 
-    const overlayClassNames = classNames([
-      'terra-PopupOverlay',
-      customProps.className,
-    ]);
-
     // Delete the closePortal prop that comes from react-portal.
     delete customProps.closePortal;
 
     return (
-      <div {...customProps} className={overlayClassNames}>
-        <div className="terra-PopupOverlay-inner" />
+      <div {...customProps} className={cx('popupOverlay', customProps.className)}>
+        <div className={cx('inner')} />
         {children}
       </div>
     );

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './PopupArrow.scss';
+import styles from './PopupArrow.scss';
 
+const cx = classNames.bind(styles);
 /**
  * Half the diameter of the arrow, to use for arrow positioning offset.
  */
@@ -12,21 +13,21 @@ const ARROW_OFFSET = 10;
 /**
  * Directional classes to be applied by a presenting component.
  */
-const ARROW_CLASSES = {
-  top: 'terra-PopupArrow--alignTop',
-  bottom: 'terra-PopupArrow--alignBottom',
-  left: 'terra-PopupArrow--alignLeft',
-  right: 'terra-PopupArrow--alignRight',
+const ARROW_ATTRS = {
+  top: 'align-top',
+  bottom: 'align-bottom',
+  left: 'align-left',
+  right: 'align-right',
 };
 
 /**
  * Mirrored directional classes, used to flip the arrow on repositioning.
  */
-const ARROW_OPPOSITE_CLASSES = {
-  top: 'terra-PopupArrow--alignBottom',
-  bottom: 'terra-PopupArrow--alignTop',
-  left: 'terra-PopupArrow--alignRight',
-  right: 'terra-PopupArrow--alignLeft',
+const MIRRORED_ARROW_ATTRS = {
+  top: 'align-bottom',
+  bottom: 'align-top',
+  left: 'align-right',
+  right: 'align-left',
 };
 
 const propTypes = {
@@ -39,20 +40,11 @@ const propTypes = {
 const PopupArrow = ({
     refCallback,
     ...customProps
-  }) => {
-  const arrowClassNames = classNames([
-    'terra-PopupArrow',
-    customProps.className,
-  ]);
-
-  return (
-    <div {...customProps} className={arrowClassNames} ref={refCallback} />
-  );
-};
+  }) => <div {...customProps} className={cx('popupArrow', customProps.className)} ref={refCallback} />;
 
 PopupArrow.propTypes = propTypes;
-PopupArrow.positionClasses = ARROW_CLASSES;
-PopupArrow.oppositePositionClasses = ARROW_OPPOSITE_CLASSES;
+PopupArrow.positionAttrs = ARROW_ATTRS;
+PopupArrow.mirroredPositionAttrs = MIRRORED_ARROW_ATTRS;
 PopupArrow.arrowSize = ARROW_OFFSET;
 
 export default PopupArrow;

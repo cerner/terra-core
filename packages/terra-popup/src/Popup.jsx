@@ -19,34 +19,24 @@ const MIRROR_TB = {
   bottom: 'top',
 };
 
-const BASE_WIDTH = 16;
-const BASE_HEIGHT = 9;
+const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
+const HEIGHT_VALUES = [40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880];
 
-const DIMENSIONS = [
-  '10x',
-  '25x',
-  '50x',
-  '75x',
-  '100x',
-];
+const WIDTH_KEYS = ['160', '240', '320', '640', '960', '1280', '1760'];
+const WIDTH_VALUES = [160, 240, 320, 640, 960, 1280, 1760];
 
-const DIMENSIONS_MAP = {
-  '10x': 10,
-  '25x': 25,
-  '50x': 50,
-  '75x': 75,
-  '100x': 100,
-};
-
-const DIMENSION_COMBINATIONS = (() => {
-  const combinations = [];
-  for (let i = 0; i < DIMENSIONS.length; i += 1) {
-    for (let j = 0; j < DIMENSIONS.length; j += 1) {
-      combinations.push(`${DIMENSIONS[i]} ${DIMENSIONS[j]}`);
+const CREATE_MAPPING = ((keys, values) => {
+  const combinations = {};
+  for (let i = 0; i < keys.length; i += 1) {
+    for (let j = 0; j < values.length; j += 1) {
+      combinations[keys[i]] = values[j];
     }
   }
   return combinations;
-})();
+});
+
+const WIDTH_MAPPING = CREATE_MAPPING(WIDTH_KEYS, WIDTH_VALUES);
+const HEIGHT_MAPPING = CREATE_MAPPING(HEIGHT_KEYS, HEIGHT_VALUES);
 
 const propTypes = {
   /**
@@ -74,9 +64,15 @@ const propTypes = {
    */
   contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
   /**
-   * A string pair of breakpoint sizes, ('10x', '25x', '50x', '75x', '10x'), i.e. 'vertical horizontal'
+   * A string representation of the height in px, limited to:
+   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880
    */
-  contentDimensions: PropTypes.oneOf(DIMENSION_COMBINATIONS),
+  contentHeight: PropTypes.oneOf(HEIGHT_KEYS).isRequired,
+  /**
+   * A string representation of the width in px, limited to:
+   * 160, 240, 320, 640, 960, 1280, 1760
+   */
+  contentWidth: PropTypes.oneOf(WIDTH_KEYS).isRequired,
   /**
    * Should an arrow be placed at the attachment point.
    */
@@ -105,7 +101,6 @@ const defaultProps = {
   classNameContent: null,
   classNameOverlay: null,
   contentAttachment: 'top center',
-  contentDimensions: '25x 25x',
   isArrowDisplayed: false,
   isHeaderDisabled: false,
   isOpen: false,
@@ -230,18 +225,18 @@ class Popup extends React.Component {
     const position = Popup.arrowPositionFromBounds(targetBounds, contentBounds, isVerticalAttachment, PopupArrow.arrowSize);
 
     if (!position) {
-      this.arrowNode.classList.remove(PopupArrow.positionClasses.top);
-      this.arrowNode.classList.remove(PopupArrow.positionClasses.bottom);
-      this.arrowNode.classList.remove(PopupArrow.positionClasses.left);
-      this.arrowNode.classList.remove(PopupArrow.positionClasses.right);
+      this.arrowNode.removeAttribute(PopupArrow.positionAttrs.top);
+      this.arrowNode.removeAttribute(PopupArrow.positionAttrs.bottom);
+      this.arrowNode.removeAttribute(PopupArrow.positionAttrs.left);
+      this.arrowNode.removeAttribute(PopupArrow.positionAttrs.right);
       return;
     }
 
-    this.arrowNode.classList.remove(PopupArrow.oppositePositionClasses[position]);
-    this.contentNode.classList.remove(PopupContent.oppositePositionClasses[position]);
+    this.arrowNode.removeAttribute(PopupArrow.mirroredPositionAttrs[position]);
+    this.contentNode.removeAttribute(PopupContent.mirroredPositionAttrs[position]);
 
-    this.arrowNode.classList.add(PopupArrow.positionClasses[position]);
-    this.contentNode.classList.add(PopupContent.positionClasses[position]);
+    this.arrowNode.setAttribute(PopupArrow.positionAttrs[position], 'true');
+    this.contentNode.setAttribute(PopupContent.positionAttrs[position], 'true');
 
     if (isVerticalAttachment) {
       this.arrowNode.style.left = Popup.leftOffset(targetBounds, contentBounds, PopupArrow.arrowSize, this.offset, this.attachment);
@@ -265,10 +260,9 @@ class Popup extends React.Component {
   }
 
   createPopupContent(boundingFrame) {
-    const parsedDimenions = Popup.parseStringPair(this.props.contentDimensions);
     const boundsProps = {
-      contentWidth: BASE_WIDTH * DIMENSIONS_MAP[parsedDimenions.horizontal],
-      contentHeight: BASE_HEIGHT * DIMENSIONS_MAP[parsedDimenions.vertical],
+      contentWidth: WIDTH_MAPPING[this.props.contentWidth],
+      contentHeight: HEIGHT_MAPPING[this.props.contentHeight],
     };
 
     if (boundingFrame) {
@@ -313,7 +307,8 @@ class Popup extends React.Component {
       classNameContent,
       classNameOverlay,
       contentAttachment,
-      contentDimensions,
+      contentHeight,
+      contentWidth,
       isArrowDisplayed,
       isHeaderDisabled,
       isOpen,
