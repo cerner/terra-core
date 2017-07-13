@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+ * Removed unnecessary layout styles (Issue #610)
 
 1.1.0 - (July 13, 2017)
 ------------------
