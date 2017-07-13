@@ -1,0 +1,34 @@
+:root {
+  // PopupArrow Variables
+  --terra-PopupArrow-size: 11px;
+  --terra-PopupArrow-color: #b2b5b6;
+  --terra-PopupArrow-inner-size: 10px;
+  --terra-PopupArrow-inner-inset-size: 2px;
+  --terra-PopupArrow-inner-color: #fff;
+
+  // PopupContent Variables
+  --terra-PopupContent-margin: 10px;
+  --terra-PopupContent-header-border-bottom: 1px solid #dedfe0;
+  --terra-PopupContent-header-height: 29px;
+  --terra-PopupContent-close-background: 0 0;
+  --terra-PopupContent-close-border: 0;
+  --terra-PopupContent-close-color: #111;
+  --terra-PopupContent-close-fontSize: 1.45rem;
+  --terra-PopupContent-close-fontWeight: bold;
+  --terra-PopupContent-close-hoverColor: #999;
+  --terra-PopupContent-close-lineHeight: 0;
+  --terra-PopupContent-close-marginLeft: 0.3571rem;
+  --terra-PopupContent-close-marginRight: 0.7143rem;
+  --terra-PopupContent-close-padding: 7px;
+  --terra-PopupContent-inner-backgroundColor: #fff;
+  --terra-PopupContent-inner-border: 1px solid #b2b5b6;
+  --terra-PopupContent-inner-boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+
+  // PopupOverlay Variables
+  --terra-PopupOverlay-zIndex: 7000;
+  --terra-PopupOverlay-backgroundColor: #fff;
+  --terra-PopupOverlay-opacity: 0.01;
+
+  // PopupElement Variables
+  --terra-PopupElement-zIndex: 7001;
+}

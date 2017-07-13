@@ -24,6 +24,7 @@ import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
 import ModalManagerExamples from './examples/modal-manager/Index';
 import OverlayExamples from './examples/overlay/Index';
+import PopupExamples from './examples/popup/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SearchFieldExamples from './examples/search-field/Index';
@@ -61,6 +62,7 @@ import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
 import OverlayContainerTestRoutes from 'terra-overlay/tests/nightwatch/OverlayContainer/OverlayContainerTestRoutes';
+import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
@@ -99,6 +101,7 @@ ReactDOM.render((
       <Route path="modal" component={ModalExamples} />
       <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="overlay" component={OverlayExamples} />
+      <Route path="popup" component={PopupExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
@@ -136,8 +139,8 @@ ReactDOM.render((
     {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
     {GridTestRoutes}
-    {IconTestRoutes}
     {SearchFieldTestRoutes}
+    {PopupTestRoutes}
     {FormTestRoutes}
     {OverlayTestRoutes}
     {LoadingOverlayTestRoutes}
