@@ -67,15 +67,15 @@ module.exports = {
   //     .waitForElementPresent('.test-arrow"', 1000);
   // },
 
-  'boundingRef prop': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bounded`)
-      .waitForElementPresent('#bounded-button', 1000)
-      .waitForElementNotPresent('.test-content', 1000)
-      .click('#bounded-button')
-      .waitForElementPresent('.test-content', 1000)
-      .waitForElementPresent('.header', 1000);
-  },
+  // 'boundingRef prop': (browser) => {
+  //   browser
+  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bounded`)
+  //     .waitForElementPresent('#bounded-button', 1000)
+  //     .waitForElementNotPresent('.test-content', 1000)
+  //     .click('#bounded-button')
+  //     .waitForElementPresent('.test-content', 1000)
+  //     .waitForElementPresent('.header', 1000);
+  // },
 
   'boundingRef prop - BOUNDED HEIGHT': (browser) => {
     browser
@@ -84,7 +84,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#bounded-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 175px; width: 400px;');
+      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 175px; width: 240px;');
   },
 
   'boundingRef prop - BOUNDED WIDTH': (browser) => {
@@ -94,18 +94,18 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#bounded-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 225px; width: 350px;');
+      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 350px;');
   },
 
-  'boundingRef prop && disableHeader prop': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/no-header`)
-      .waitForElementPresent('#no-header-button', 1000)
-      .waitForElementNotPresent('.test-content', 1000)
-      .click('#no-header-button')
-      .waitForElementPresent('.test-content', 1000)
-      .waitForElementNotPresent('.test-arrow', 1000);
-  },
+  // 'boundingRef prop && disableHeader prop': (browser) => {
+  //   browser
+  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/no-header`)
+  //     .waitForElementPresent('#no-header-button', 1000)
+  //     .waitForElementNotPresent('.test-content', 1000)
+  //     .click('#no-header-button')
+  //     .waitForElementPresent('.test-content', 1000)
+  //     .waitForElementNotPresent('.test-arrow', 1000);
+  // },
 
   'className props': (browser) => {
     browser
@@ -209,7 +209,7 @@ module.exports = {
       .expect.element('.test-content').to.have.attribute('style').which.equals('height: 90px; width: 160px;');
   },
 
-    'contentDimension meduim ': (browser) => {
+  'contentDimension meduim ': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/medium`)
       .waitForElementPresent('#dimension-button', 1000)
@@ -219,7 +219,7 @@ module.exports = {
       .expect.element('.test-content').to.have.attribute('style').which.equals('height: 90px; width: 160px;');
   },
 
-    'contentDimension large': (browser) => {
+  'contentDimension large': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/large`)
       .waitForElementPresent('#dimension-button', 1000)
