@@ -42,7 +42,7 @@ function aggregateTranslations(options) {
 
     // Aggregate messages for language in one file
     if (currentLanguageMessages !== {}) {
-      mkdirp(path.resolve(options.baseDirectory, 'aggregated-translations'));
+      mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
       fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
         generateTranslationFile(language, currentLanguageMessages));
     } else {
