@@ -51,7 +51,7 @@ const mirrorAttachment = (attachment) => {
 const getContentOffset = (attachment, targetNode, arrowOffset, cornerOffset) => {
   const offset = { vertical: 0, horizontal: 0 };
   if (targetNode) {
-    if (isVerticalAttachment(attachment) && targetNode.clientWidth <= arrowOffset * 2) {
+    if (isVerticalAttachment(attachment) && targetNode.clientWidth <= (arrowOffset * 2) + cornerOffset) {
       if (attachment.horizontal === 'left') {
         offset.horizontal = (arrowOffset + cornerOffset) - (targetNode.clientWidth / 2);
       } else if (attachment.horizontal === 'right') {

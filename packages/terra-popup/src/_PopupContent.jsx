@@ -133,7 +133,7 @@ class PopupContent extends React.Component {
   }
 
   static addPopupHeader(children, onRequestClose) {
-    const icon = <IconClose height="14" width="14" />;
+    const icon = <IconClose height="20" width="20" />;
     const button = <button className={cx('close')} onClick={onRequestClose}>{icon}</button>;
     const header = <div className={cx('header')}>{button}</div>;
     return <ContentContainer header={header} fill>{children}</ContentContainer>;

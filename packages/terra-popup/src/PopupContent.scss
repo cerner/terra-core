@@ -15,7 +15,8 @@
 
     .header {
       border-bottom: var(--terra-PopupContent-header-border-bottom);
-      height: var(--terra-PopupContent-header-height);
+      display: flex;
+      justify-content: flex-end;
       width: 100%;
     }
 
@@ -24,14 +25,12 @@
       border: var(--terra-PopupContent-close-border);
       color: var(--terra-PopupContent-close-color);
       cursor: pointer;
-      float: right;
       font-size: var(--terra-PopupContent-close-fontSize);
       font-weight: var(--terra-PopupContent-close-fontWeight);
       line-height: var(--terra-PopupContent-close-lineHeight);
       margin-left: var(--terra-PopupContent-close-marginLeft);
       margin-right: var(--terra-PopupContent-close-marginRight);
       padding: var(--terra-PopupContent-close-padding);
-      padding: 7px;
 
       &:hover {
         color: var(--terra-PopupContent-close-hoverColor);
