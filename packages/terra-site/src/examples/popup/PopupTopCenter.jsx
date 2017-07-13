@@ -9,17 +9,7 @@ class PopupTopCenter extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
   }
 
   handleButtonClick() {
@@ -36,17 +26,17 @@ class PopupTopCenter extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <Popup
           contentAttachment="top center"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
-          targetRef={this.getButtonNode}
+          targetRef={() => document.getElementById('popup-top-center')}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </Popup>
-        <Button text="Top-Center" onClick={this.handleButtonClick} />
+        <Button id="popup-top-center" text="Top-Center" onClick={this.handleButtonClick} />
       </div>
     );
   }

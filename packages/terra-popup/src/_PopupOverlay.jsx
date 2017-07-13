@@ -36,7 +36,7 @@ class PopupOverlay extends React.Component {
     delete customProps.closePortal;
 
     return (
-      <div {...customProps} className={cx(['popupOverlay', this.props.className])}>
+      <div {...customProps} className={cx(['popupOverlay', customProps.className])}>
         <div className={cx('inner')} />
         {children}
       </div>

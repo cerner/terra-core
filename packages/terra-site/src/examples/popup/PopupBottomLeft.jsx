@@ -9,17 +9,7 @@ class PopupBottomLeft extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
   }
 
   handleButtonClick() {
@@ -36,19 +26,19 @@ class PopupBottomLeft extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <Popup
           contentAttachment="bottom left"
           classNameArrow="test-arrow"
           classNameContent="test-content"
           isArrowDisplayed
           isOpen={this.state.open}
-          targetRef={this.getButtonNode}
+          targetRef={() => document.getElementById('popup-bottom-left')}
           onRequestClose={this.handleRequestClose}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </Popup>
-        <Button text="Bottom-Left" onClick={this.handleButtonClick} />
+        <Button id="popup-bottom-left" text="Bottom-Left" onClick={this.handleButtonClick} />
       </div>
     );
   }

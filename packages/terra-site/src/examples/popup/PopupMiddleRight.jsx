@@ -9,17 +9,7 @@ class PopupMiddleRight extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
   }
 
   handleButtonClick() {
@@ -36,17 +26,17 @@ class PopupMiddleRight extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <Popup
           contentAttachment="middle right"
           isArrowDisplayed
           isOpen={this.state.open}
-          targetRef={this.getButtonNode}
+          targetRef={() => document.getElementById('popup-middle-right')}
           onRequestClose={this.handleRequestClose}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </Popup>
-        <Button text="Middle-Right" onClick={this.handleButtonClick} />
+        <Button id="popup-middle-right" text="Middle-Right" onClick={this.handleButtonClick} />
       </div>
     );
   }

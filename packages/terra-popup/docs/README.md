@@ -73,10 +73,10 @@ export default PopupExampleComponent;
 
 As stateless react elements do not return a ref, but may be desired targets for a popup to atttch to, ,additional code is required to retreive the elements ref. If a ref callback has not been plumbed through in the elements implementation there are a few options:
 
-Use a selector to retrieve your ref. The weakness of this option is that you need to ensure your selector is unique.
+#### Use a selector to retrieve your ref. The weakness of this option is that you need to ensure your selector is unique, so it's not advisiable in components that are reused on the same page.
 
 ```jsx
-  getButtonNode() {
+  static getButtonNode() {
     return document.getElementById('my-popup-button');
   }
 
@@ -87,7 +87,7 @@ Use a selector to retrieve your ref. The weakness of this option is that you nee
         <Popup
           targetRef={this.getButtonNode}
 ```
- Wrap the element in span or div. The weakness of this option is that you need to ensure the wrapping div fits the content, while still styled correct on the page.
+#### Wrap the element in span or div. The weakness of this option is that you need to ensure the wrapping div fits the content, while still styled correct on the page.
  
 ```jsx
   getButtonNode() {

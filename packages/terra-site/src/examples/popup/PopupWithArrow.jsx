@@ -9,17 +9,7 @@ class PopupArrow extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
   }
 
   handleButtonClick() {
@@ -36,16 +26,16 @@ class PopupArrow extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <Popup
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
-          targetRef={this.getButtonNode}
+          targetRef={() => document.getElementById('popup-with-arrow')}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </Popup>
-        <Button text="Arrow Popup" onClick={this.handleButtonClick} />
+        <Button id="popup-with-arrow" text="Arrow Popup" onClick={this.handleButtonClick} />
       </div>
     );
   }

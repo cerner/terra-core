@@ -10,17 +10,7 @@ class PopupClassName extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
   }
 
   handleButtonClick() {
@@ -37,7 +27,7 @@ class PopupClassName extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <Popup
           classNameArrow="terra-ExampleClass-arrow"
           classNameContent="terra-ExampleClass-content"
@@ -45,11 +35,11 @@ class PopupClassName extends React.Component {
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
-          targetRef={this.getButtonNode}
+          targetRef={() => document.getElementById('popup-class-name')}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </Popup>
-        <Button text="Class Name Popup" onClick={this.handleButtonClick} />
+        <Button id="popup-class-name" text="Class Name Popup" onClick={this.handleButtonClick} />
       </div>
     );
   }

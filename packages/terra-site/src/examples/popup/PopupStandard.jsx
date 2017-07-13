@@ -9,17 +9,7 @@ class PopupStandard extends React.Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { open: false };
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
   }
 
   handleButtonClick() {
@@ -36,15 +26,15 @@ class PopupStandard extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div>
         <Popup
           isOpen={this.state.open}
-          targetRef={this.getButtonNode}
+          targetRef={() => document.getElementById('popup-standard-button')}
           onRequestClose={this.handleRequestClose}
         >
           <ExamplePopupContent onChange={this.handleOnChange} />
         </Popup>
-        <Button text="Default Popup" onClick={this.handleButtonClick} />
+        <Button id="popup-standard-button" text="Default Popup" onClick={this.handleButtonClick} />
       </div>
     );
   }
