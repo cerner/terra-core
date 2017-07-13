@@ -2,12 +2,6 @@
   height: 100%;
 }
 
-.terra-ModalManager-modal {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  position: absolute;
-}
-
 // When not fullscreen, set a minimum width so that smaller percentages are still usable in smaller viewports.
 .terra-ModalManager-modal:not(.terra-Modal--fullscreen) { /* stylelint-disable-line selector-class-pattern */
   min-width: 560px;
