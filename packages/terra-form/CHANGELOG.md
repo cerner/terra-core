@@ -3,7 +3,8 @@ Changelog
 
 Unreleased
 ----------
-### Dependency Updates
+### Added
+* Add missing props-table
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
 

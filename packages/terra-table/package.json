@@ -45,7 +45,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Table.jsx --out-dir ./docs/props-table",
+    "props-table": "props-table ./src/Table.jsx ./src/TableCell.jsx ./src/TableHeader.jsx ./src/TableRow.jsx ./src/TableRows.jsx ./src/TableSubheader.jsx --out-dir ./docs/props-table",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",

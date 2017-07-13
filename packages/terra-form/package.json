@@ -43,7 +43,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Field.jsx ./src/Fieldset.jsx ./src/Input.jsx ./src/NumberField.jsx ./src/Textarea.jsx ./src/TextareaField.jsx ./src/TextField.jsx ./src/Select.jsx ./src/SelectField.jsx --out-dir ./docs/props-table",
+    "props-table": "props-table ./src/Control.jsx ./src/Field.jsx ./src/Fieldset.jsx ./src/Input.jsx ./src/NumberField.jsx ./src/Textarea.jsx ./src/TextareaField.jsx ./src/TextField.jsx ./src/Select.jsx ./src/SelectField.jsx --out-dir ./docs/props-table",
     "release:major": "npm test && node ../../scripts/release/release.js major",
     "release:minor": "npm test && node ../../scripts/release/release.js minor",
     "release:patch": "npm test && node ../../scripts/release/release.js patch",

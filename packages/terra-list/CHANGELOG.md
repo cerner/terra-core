@@ -5,7 +5,6 @@ Unreleased
 ----------
 ### Added
 * Add preventDefault to Single Select List and MultiSelect List
-### Dependency Updates
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
 

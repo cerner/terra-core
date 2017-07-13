@@ -3,7 +3,8 @@ Changelog
 
 Unreleased
 ----------
-### Dependency Updates
+### Changed
+* Converted component to use CSS modules
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
 

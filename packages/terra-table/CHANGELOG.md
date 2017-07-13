@@ -5,7 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added preventDefault to SingleSelect table row
-### Dependency Updates
+* Add missing props-tables
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
 

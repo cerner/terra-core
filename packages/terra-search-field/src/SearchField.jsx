@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Input from 'terra-form/lib/Input';
-import './SearchField.scss';
+import styles from './SearchField.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -78,8 +80,8 @@ class SearchField extends React.Component {
 
   render() {
     const { placeholder, ...customProps } = this.props;
-    const searchFieldClassNames = classNames([
-      'terra-SearchField',
+    const searchFieldClassNames = cx([
+      'searchfield',
       customProps.className,
     ]);
 
@@ -90,14 +92,14 @@ class SearchField extends React.Component {
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
-          className="terra-SearchField-input"
+          className={cx('input')}
           type="search"
           placeholder={placeholder}
           value={this.state.searchText}
           onChange={this.handleTextChange}
         />
         <Button
-          className="terra-SearchField-button"
+          className={cx('button')}
           onClick={this.handleSearch}
           isCompact
         >

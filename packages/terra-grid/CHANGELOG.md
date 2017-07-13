@@ -3,7 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Dependency Updates
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
 

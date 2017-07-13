@@ -3,7 +3,7 @@ exports[`test should render a ProgressBar component with default heightSize 50% 
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={50}
-  className="terra-ProgressBar terra-ProgressBar--small"
+  className="progress-bar small"
   dir="rtl"
   max={100}
   style={
@@ -20,7 +20,7 @@ exports[`test should render a ProgressBar component with large heightSize and 60
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={60}
-  className="terra-ProgressBar terra-ProgressBar--large"
+  className="progress-bar large"
   color="#8ccc62"
   max={100}
   style={
@@ -37,7 +37,7 @@ exports[`test should render a ProgressBar component with tiny heightSize and 15%
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={15}
-  className="terra-ProgressBar terra-ProgressBar--tiny"
+  className="progress-bar tiny"
   max={100}
   style={
     Object {
@@ -53,7 +53,7 @@ exports[`test should render a default component 1`] = `
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={0}
-  className="terra-ProgressBar terra-ProgressBar--small"
+  className="progress-bar small"
   max={100}
   style={
     Object {

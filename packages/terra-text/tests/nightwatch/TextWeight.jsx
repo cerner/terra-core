@@ -4,11 +4,11 @@ import Text from '../../lib/Text';
 
 const TextWeight = () => (
   <div>
-    <Text weight={700}>700 Weight</Text>
+    <Text id="textFontWeight700" weight={700}>700 Weight</Text>
     <br />
-    <Text weight={400}>400 Weight</Text>
+    <Text id="textFontWeight400" weight={400}>400 Weight</Text>
     <br />
-    <Text weight={200}>200 Weight</Text>
+    <Text id="textFontWeight200" weight={200}>200 Weight</Text>
   </div>
 );
 
