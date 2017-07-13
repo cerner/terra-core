@@ -24,8 +24,7 @@
     "jsdom": "^9.11.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
-    "terra-props-table": "^1.0.0",
-    "terra-toolkit": "^1.0.0"
+    "terra-props-table": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -62,7 +61,7 @@
     "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-icon node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
     "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-icon node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-icon node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari",
-    "test:remote": "SPECTRE_TEST_SUITE=terra-icon REMOTE=true node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config ../../node_modules/terra-toolkit/lib/nightwatch.conf.js",
+    "test:remote": "SPECTRE_TEST_SUITE=terra-icon REMOTE=true node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config ../../node_modules/terra-toolkit/lib/nightwatch.conf.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
     "test:remote:all": "SPECTRE_TEST_SUITE=terra-icon REMOTE=true node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config ../../node_modules/terra-toolkit/lib/nightwatch.conf.js --env chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous,firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous,ie10-tiny,ie10-small,ie10-medium,ie10-large,ie10-huge,ie10-enormous,ie11-tiny,ie11-small,ie11-medium,ie11-large,ie11-huge,ie11-enormous,edge-tiny,edge-small,edge-medium,edge-large,edge-huge,edge-enormous,safari-tiny,safari-small,safari-medium,safari-large,safari-huge,safari-enormous"
   }
 }

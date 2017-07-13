@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.0.0",
-    "terra-toolkit": "^1.0.0"
+    "terra-props-table": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -54,7 +53,7 @@
     "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-list node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
     "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-list node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-list node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari",
-    "test:remote": "REMOTE=true node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config ../../node_modules/terra-toolkit/lib/nightwatch.conf.js",
+    "test:remote": "REMOTE=true node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config ../../node_modules/terra-toolkit/lib/nightwatch.conf.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous",
     "test:remote:all": "REMOTE=true node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config ../../node_modules/terra-toolkit/lib/nightwatch.conf.js --env chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous,firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous,ie10-tiny,ie10-small,ie10-medium,ie10-large,ie10-huge,ie10-enormous,ie11-tiny,ie11-small,ie11-medium,ie11-large,ie11-huge,ie11-enormous,edge-tiny,edge-small,edge-medium,edge-large,edge-huge,edge-enormous,safari-tiny,safari-small,safari-medium,safari-large,safari-huge,safari-enormous"
   }
 }
