@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ButtonGroupButton from './ButtonGroupButton';
-import './ButtonGroup.scss';
+import styles from './ButtonGroup.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -96,7 +98,7 @@ class ButtonGroup extends React.Component {
 
   render() {
     const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...customProps } = this.props;
-    const buttonGroupClassNames = classNames(['terra-ButtonGroup',
+    const buttonGroupClassNames = classNames(['buttonGroup',
       customProps.className,
     ]);
 

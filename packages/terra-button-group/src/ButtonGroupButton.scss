@@ -1,30 +1,28 @@
-@import '~terra-mixins';
+:local {
+  .buttonGroup .buttonGroupButton {
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+    position: relative;
 
-.terra-ButtonGroup .terra-ButtonGroupButton {
-  @include terra-border-radius-start(0);
-  @include terra-border-radius-end(0);
-  @include terra-margin-horizontal(0, 0);
-
-  border-style: solid;
-  border-width: 1px;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-
-  &:focus {
-    // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
-    z-index: 1000;
+    &:focus {
+      // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
+      z-index: 1000;
+    }
   }
-}
 
-.terra-ButtonGroupButton + .terra-ButtonGroupButton {
-  @include terra-margin-start(-1px);
-}
+  .buttonGroupButton + .buttonGroupButton {
+    margin-left: -1px;
+  }
 
-.terra-ButtonGroupButton:first-child {
-  @include terra-border-radius-start(0.25em);
-}
+  .buttonGroupButton:first-child {
+    border-bottom-left-radius: 0.25em;
+    border-top-left-radius: 0.25em;
+  }
 
-.terra-ButtonGroupButton:last-child {
-  @include terra-border-radius-end(0.25em);
+  .buttonGroupButton:last-child {
+    border-bottom-right-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+  }
 }

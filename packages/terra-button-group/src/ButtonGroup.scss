@@ -1,7 +1,7 @@
-@import '~terra-mixins';
-
-.terra-ButtonGroup {
-  display: inline-block;
-  position: relative;
-  white-space: nowrap;
+:local {
+  .buttonGroup {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+  }
 }
