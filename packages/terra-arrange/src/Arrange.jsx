@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './Arrange.scss';
+import styles from './Arrange.scss';
 
 const alignmentTypes = ['center', 'bottom', 'stretch'];
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -37,6 +38,7 @@ const propTypes = {
   alignFill: PropTypes.oneOf(alignmentTypes),
 };
 
+
 const Arrange = ({
   fitStart,
   fill,
@@ -47,44 +49,19 @@ const Arrange = ({
   alignFitEnd,
   ...customProps
   }) => {
-  let alignmentFitStart = alignFitStart;
-  let alignmentFill = alignFill;
-  let alignmentFitEnd = alignFitEnd;
-
-  if (align !== undefined) {
-    alignmentFitStart = alignmentFitEnd = alignmentFill = align;
-  }
-
-  const arrangeClassNames = classNames('terra-Arrange', { [`${customProps.className}`]: customProps.className });
-
-  const fitStartClass = classNames([
-    'terra-Arrange-fitStart',
-    { [`terra-Arrange-fitStart--${alignmentFitStart}`]: alignmentFitStart },
-  ]);
-
-  const fitEndClass = classNames([
-    'terra-Arrange-fitEnd',
-    { [`terra-Arrange-fitEnd--${alignmentFitEnd}`]: alignmentFitEnd },
-  ]);
-
-  const fillClass = classNames([
-    'terra-Arrange-fill',
-    { [`terra-Arrange-fill--${alignmentFill}`]: alignmentFill },
-  ]);
-
   if (fitStart === undefined && fitEnd === undefined) {
     throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
 
   return (
-    <div {...customProps} className={arrangeClassNames} >
-      <div className={fitStartClass}>
+    <div {...customProps} className={cx('arrange', customProps.className)} >
+      <div className={cx('fit', align || alignFitStart)}>
         {fitStart}
       </div>
-      <div className={fillClass}>
+      <div className={cx('fill', align || alignFill)}>
         {fill}
       </div>
-      <div className={fitEndClass}>
+      <div className={cx('fit', align || alignFitEnd)}>
         {fitEnd}
       </div>
     </div>

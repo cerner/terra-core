@@ -23,6 +23,7 @@ import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import ModalExamples from './examples/modal/Index';
 import ModalManagerExamples from './examples/modal-manager/Index';
+import OverlayExamples from './examples/overlay/Index';
 import PopupExamples from './examples/popup/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
@@ -54,10 +55,13 @@ import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
+import LoadingOverlayTestRoutes from 'terra-overlay/tests/nightwatch/LoadingOverlay/LoadingOverlayTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
+import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
+import OverlayContainerTestRoutes from 'terra-overlay/tests/nightwatch/OverlayContainer/OverlayContainerTestRoutes';
 import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
 import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressBarTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
@@ -96,6 +100,7 @@ ReactDOM.render((
       <Route path="list" component={ListExamples} />
       <Route path="modal" component={ModalExamples} />
       <Route path="modal-manager" component={ModalManagerExamples} />
+      <Route path="overlay" component={OverlayExamples} />
       <Route path="popup" component={PopupExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
@@ -137,6 +142,9 @@ ReactDOM.render((
     {SearchFieldTestRoutes}
     {PopupTestRoutes}
     {FormTestRoutes}
+    {OverlayTestRoutes}
+    {LoadingOverlayTestRoutes}
+    {OverlayContainerTestRoutes}
     {ToggleTestRoutes}
     {ToggleButtonTestRoutes}
     {HeadingTestRoutes}
