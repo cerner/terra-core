@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+
+3.4.0 - (July 13, 2017)
+------------------
+Minor version bump
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
 

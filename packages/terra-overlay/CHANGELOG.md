@@ -3,9 +3,7 @@ Changelog
 
 Unreleased
 ----------
-* Updated nightwatch test scripts
-* Removed nightwatch.config file
 
-1.0.0 - (MM DD, YYYY)
+1.0.0 - (July 13, 2017)
 ------------------
 Initial stable release

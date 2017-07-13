@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 
+1.1.0 - (July 13, 2017)
 ### Changed
 * Converted component to use CSS modules
 * Updated nightwatch test scripts
