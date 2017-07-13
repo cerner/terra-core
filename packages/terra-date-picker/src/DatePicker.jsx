@@ -77,7 +77,7 @@ class DatePicker extends React.Component {
     });
 
     if (this.props.onChange) {
-      this.props.onChange(event, date.format());
+      this.props.onChange(event, date ? date.format() : '');
     }
   }
 

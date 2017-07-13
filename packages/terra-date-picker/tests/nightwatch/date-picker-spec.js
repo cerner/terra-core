@@ -91,4 +91,14 @@ module.exports = {
       });
     });
   },
+
+  'Triggers onChange when a date value is cleared': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-change`);
+
+    browser.setValue('input[name="terra-date-date-input-onchange"]', '07/12/2017');
+    browser.expect.element('h3').text.to.contain('2017-07-12');
+
+    browser.clearValue('input[name="terra-date-date-input-onchange"]');
+    browser.expect.element('h3').text.to.not.contain('2017-07-12');
+  },
 };

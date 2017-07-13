@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Check null date when date entry is cleared
 
 1.1.0 - (July 13, 2017)
 ------------------
