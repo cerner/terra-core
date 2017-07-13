@@ -3,7 +3,6 @@ Changelog
 
 Unreleased
 ----------
-
 ### Changed
 * Converted component to use CSS modules
 * Updated nightwatch test scripts
