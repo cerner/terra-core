@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed a race condition with creating the aggregation-translations directory by using mkdirp.sync instead of mkdirp.
 
 1.1.0 - (July 13, 2017)
 ------------------
