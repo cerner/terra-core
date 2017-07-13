@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Updated to synchronous mkdirp
 
 1.1.0 - (July 13, 2017)
 ------------------
