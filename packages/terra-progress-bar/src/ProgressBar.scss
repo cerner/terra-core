@@ -2,102 +2,106 @@
 @import './variables';
 @import './mixins';
 
-.terra-ProgressBar {
-  background: #d3d4d5;
-  border-radius: 0.5em;
-  display: inline-block;
-  height: map-get($terra-progress-bar-sizes, 'small');
-  overflow: hidden;
-  width: 100%;
-
-  &:focus {
-    outline: none;
-  }
-
-  &[value] {
-    appearance: none;
-    border: 0; // Remove Firefox and Opera border
-
-    // To fix background color to the proper shade of Grey in Safari
-    &::-webkit-progress-bar {
-      background: #d3d4d5;
-      border-radius: 0;
-    }
-
-    &::-webkit-progress-value {
-      background-color: currentColor;
-      @include terra-border-end(1px solid #FFF);
-      @include terra-border-radius-start(0);
-    }
-
-    &::-ms-fill {
-      background-color: currentColor;
-      @include terra-border-end(1px solid #FFF);
-    }
-  }
-
-  &[value='100'],
-  &[value='0'] {
-    &::-webkit-progress-value {
-      @include terra-border-radius-end(0);
-      @include terra-border-end(0 solid #FFF);
-    }
-
-    &::-ms-fill {
-      @include terra-border-end(0 solid #FFF);
-    }
-  }
-}
-
-// Firefox styles must be entirely separate as it doesn't work well with WebKit styles
-@-moz-document url-prefix('') {
-  .terra-ProgressBar {
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .progress-bar {
+    background: #d3d4d5;
     border-radius: 0.5em;
+    display: inline-block;
+    height: map-get($terra-progress-bar-sizes, 'small');
     overflow: hidden;
+    width: 100%;
 
     &:focus {
       outline: none;
     }
 
     &[value] {
-      background-color: #d3d4d5;
+      appearance: none;
+      border: 0; // Remove Firefox and Opera border
+
+      // To fix background color to the proper shade of Grey in Safari
+      &::-webkit-progress-bar {
+        background: #d3d4d5;
+        border-radius: 0;
+      }
+
+      &::-webkit-progress-value {
+        background-color: currentColor;
+        @include terra-border-end(1px solid #FFF);
+        @include terra-border-radius-start(0);
+      }
+
+      &::-ms-fill {
+        background-color: currentColor;
+        @include terra-border-end(1px solid #FFF);
+      }
     }
 
-    &[value]::-moz-progress-bar {
-      @include terra-border-radius-start(0);
-      background-color: currentColor;
-      @include terra-border-end(1px solid #FFF);
-    }
+    &[value='100'],
+    &[value='0'] {
+      &::-webkit-progress-value {
+        @include terra-border-radius-end(0);
+        @include terra-border-end(0 solid #FFF);
+      }
 
-    &[value='100'] {
-      @include terra-border-end(0 solid #FFF);
-    }
-
-    &[value='0']::-moz-progress-bar,
-    &[value='100']::-moz-progress-bar {
-      @include terra-border-radius-end(0);
-      @include terra-border-end(0 solid #FFF);
+      &::-ms-fill {
+        @include terra-border-end(0 solid #FFF);
+      }
     }
   }
-}
 
-//Height specific styles
-.terra-ProgressBar--tiny {
-  @include terra-progress-bar-height(tiny);
-}
+  // Firefox styles must be entirely separate as it doesn't work well with WebKit styles
+  @-moz-document url-prefix('') {
+    .progress-bar {
+      border-radius: 0.5em;
+      overflow: hidden;
 
-.terra-ProgressBar--small {
-  @include terra-progress-bar-height(small);
-}
+      &:focus {
+        outline: none;
+      }
 
-.terra-ProgressBar--medium {
-  @include terra-progress-bar-height(medium);
-}
+      &[value] {
+        background-color: #d3d4d5;
+      }
 
-.terra-ProgressBar--large {
-  @include terra-progress-bar-height(large);
-}
+      &[value]::-moz-progress-bar {
+        @include terra-border-radius-start(0);
+        background-color: currentColor;
+        @include terra-border-end(1px solid #FFF);
+      }
 
-.terra-ProgressBar--huge {
-  @include terra-progress-bar-height(huge);
+      &[value='100'] {
+        @include terra-border-end(0 solid #FFF);
+      }
+
+      &[value='0']::-moz-progress-bar,
+      &[value='100']::-moz-progress-bar {
+        @include terra-border-radius-end(0);
+        @include terra-border-end(0 solid #FFF);
+      }
+    }
+  }
+
+  //Height specific styles
+  .tiny {
+    @include terra-progress-bar-height(tiny);
+  }
+
+  .small {
+    @include terra-progress-bar-height(small);
+  }
+
+  .medium {
+    @include terra-progress-bar-height(medium);
+  }
+
+  .large {
+    @include terra-progress-bar-height(large);
+  }
+
+  .huge {
+    @include terra-progress-bar-height(huge);
+  }
 }
+/* stylelint-enable */

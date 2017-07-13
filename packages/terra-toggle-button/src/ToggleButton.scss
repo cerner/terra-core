@@ -1,27 +1,29 @@
-@import '~terra-mixins';
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .toggle-button {
+    display: block;
+  }
 
-.terra-ToggleButton {
-  display: block;
-}
+  .icon {
+    display: inline-block;
+    font-size: 0.8em;
+    transform: rotate(0deg);
+  }
 
-.terra-ToggleButton-icon {
-  display: inline-block;
-  font-size: 0.8em;
-  transform: rotate(0deg);
-}
+  .is-open .icon {
+    transform: rotate(90deg);
+  }
 
-.terra-ToggleButton.is-open .terra-ToggleButton-icon {
-  transform: rotate(90deg);
-}
+  .is-icon-animated .icon {
+    transition: transform 0.15s ease-in;
+  }
 
-.terra-ToggleButton.is-icon-animated .terra-ToggleButton-icon {
-  transition: transform 0.15s ease-in;
-}
+  .is-open.is-icon-animated .icon {
+    transition: transform 0.15s ease-in;
+  }
 
-.terra-ToggleButton.is-open.is-icon-animated .terra-ToggleButton-icon {
-  transition: transform 0.15s ease-in;
+  .button-text {
+    padding-left: 0.3rem;
+  }
 }
-
-.terra-ToggleButton-buttonText {
-  @include terra-padding-start(0.3rem);
-}
+/* stylelint-enable */

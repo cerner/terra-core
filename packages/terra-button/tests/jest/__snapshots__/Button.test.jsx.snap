@@ -1,7 +1,7 @@
 exports[`test should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default TestClass"
+  className="button default TestClass"
   data-mock="data"
   disabled={false}
   style={
@@ -15,7 +15,7 @@ exports[`test should render a Button with merged attributes 1`] = `
 exports[`test should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default"
+  className="button default"
   disabled={false}
   type="button" />
 `;
@@ -23,7 +23,7 @@ exports[`test should render a button with type equal to button 1`] = `
 exports[`test should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default"
+  className="button default"
   disabled={false}
   type="reset" />
 `;
@@ -31,7 +31,7 @@ exports[`test should render a button with type equal to reset 1`] = `
 exports[`test should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default"
+  className="button default"
   disabled={false}
   type="submit" />
 `;
@@ -39,7 +39,7 @@ exports[`test should render a button with type equal to submit 1`] = `
 exports[`test should render a default button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default"
+  className="button default"
   disabled={false}
   type="button" />
 `;
@@ -47,7 +47,7 @@ exports[`test should render a default button 1`] = `
 exports[`test should render a link button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--link"
+  className="button link"
   disabled={false}
   type="button" />
 `;
@@ -55,7 +55,7 @@ exports[`test should render a link button 1`] = `
 exports[`test should render a primary button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--primary"
+  className="button primary"
   disabled={false}
   type="button" />
 `;
@@ -63,7 +63,7 @@ exports[`test should render a primary button 1`] = `
 exports[`test should render a secondary button 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--secondary"
+  className="button secondary"
   disabled={false}
   type="button" />
 `;
@@ -71,7 +71,7 @@ exports[`test should render a secondary button 1`] = `
 exports[`test should render an icon 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default terra-Button--tiny"
+  className="button default tiny"
   disabled={false}
   type="button">
   <img
@@ -82,13 +82,13 @@ exports[`test should render an icon 1`] = `
 exports[`test should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
-  className="terra-Button terra-Button--default terra-Button--tiny"
+  className="button default tiny"
   disabled={false}
   type="button">
   <img
     alt="icon" />
   <span
-    className="terra-Button-text">
+    className="text">
     text
   </span>
 </button>
@@ -97,12 +97,12 @@ exports[`test should render an icon and a text 1`] = `
 exports[`test should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
-  className="terra-Button terra-Button--default"
+  className="button default"
   disabled={false}
   href="MockHref"
   type="button">
   <span
-    className="terra-Button-text">
+    className="text">
     href
   </span>
 </a>
@@ -111,12 +111,12 @@ exports[`test should render as an anchor when provided an href 1`] = `
 exports[`test should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
-  className="terra-Button terra-Button--default is-disabled"
+  className="button default is-disabled"
   disabled={true}
   tabIndex="-1"
   type="button">
   <span
-    className="terra-Button-text">
+    className="text">
     Disabled
   </span>
 </button>

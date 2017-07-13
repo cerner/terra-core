@@ -67,42 +67,42 @@ it('should render as disabled when set', () => {
 // Prop Tests
 it('should have the class terra-Button--default', () => {
   const button = shallow(<Button />);
-  expect(button.prop('className')).toContain('terra-Button terra-Button--default');
+  expect(button.prop('className')).toContain('button default');
 });
 
 it('should have the class terra-Button--primary when variant is set to primary', () => {
   const button = shallow(<Button variant="primary" />);
-  expect(button.prop('className')).toContain('terra-Button--primary');
+  expect(button.prop('className')).toContain('primary');
 });
 
 it('should have the class terra-Button--tiny when size is set to tiny', () => {
   const button = shallow(<Button size="tiny" />);
-  expect(button.prop('className')).toContain('terra-Button--tiny');
+  expect(button.prop('className')).toContain('tiny');
 });
 
 it('should have the class terra-Button--huge when size is set to huge', () => {
   const button = shallow(<Button size="huge" />);
-  expect(button.prop('className')).toContain('terra-Button--huge');
+  expect(button.prop('className')).toContain('huge');
 });
 
 it('should have the class terra-Button--block when block is enabled', () => {
   const button = shallow(<Button isBlock />);
-  expect(button.prop('className')).toContain('terra-Button--block');
+  expect(button.prop('className')).toContain('block');
 });
 
 it('should have the class terra-Button--compact when compact is enabled', () => {
   const button = shallow(<Button isCompact />);
-  expect(button.prop('className')).toContain('terra-Button--compact');
+  expect(button.prop('className')).toContain('compact');
 });
 
 it('should have the class terra-Button--secondary when an secondary variant', () => {
   const button = shallow(<Button variant="secondary" />);
-  expect(button.prop('className')).toContain('terra-Button--secondary');
+  expect(button.prop('className')).toContain('secondary');
 });
 
 it('should have the class terra-Button--link when a link variant', () => {
   const button = shallow(<Button variant="link" />);
-  expect(button.prop('className')).toContain('terra-Button--link');
+  expect(button.prop('className')).toContain('link');
 });
 
 it('should be disabled when set', () => {
@@ -113,17 +113,17 @@ it('should be disabled when set', () => {
 // Structure
 it('should have the class terra-Button-text when a text is provided', () => {
   const button = shallow(<Button text="text" />);
-  expect(button.childAt(0).hasClass('terra-Button-text')).toEqual(true);
+  expect(button.childAt(0).hasClass('text')).toEqual(true);
 });
 
 it('should set the text text', () => {
   const button = shallow(<Button text="text" />);
-  expect(button.find('.terra-Button-text').text()).toEqual('text');
+  expect(button.find('.text').text()).toEqual('text');
 });
 
 it('should not append a text span without a text', () => {
   const button = shallow(<Button />);
-  expect(button.find('.terra-Button-text').length).toEqual(0);
+  expect(button.find('.text').length).toEqual(0);
 });
 
 it('should render the icon as the first child', () => {
@@ -135,7 +135,7 @@ it('should render the icon as the first child', () => {
 it('should render in order of text / icon when reverse', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} isReversed text="text" />);
-  expect(button.childAt(0).hasClass('terra-Button-text')).toEqual(true);
+  expect(button.childAt(0).hasClass('text')).toEqual(true);
 });
 
 it('should render as an anchor tag when provided an href', () => {

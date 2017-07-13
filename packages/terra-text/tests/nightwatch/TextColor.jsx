@@ -4,7 +4,7 @@ import Text from '../../lib/Text';
 
 const TextColor = () => (
   <div>
-    <Text color="#304FFE">Color</Text>
+    <Text id="textColor" color="#304FFE">Color</Text>
   </div>
 );
 
