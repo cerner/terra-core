@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.1.0 - (July 13, 2017)
+------------------
 ### Fixed
 * Numeric prop-types no longer display as string
 
