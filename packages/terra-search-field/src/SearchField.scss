@@ -1,35 +1,38 @@
-@import '~terra-mixins';
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .searchfield {
+    display: inline-flex;
 
-.terra-SearchField {
-  display: inline-flex;
+    .input {
+      appearance: textfield;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+      border-top-right-radius: 0;
+      flex: 1 1 auto;
+      margin: 0;
+      min-width: 0;
+      outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
+    }
 
-  .terra-SearchField-input {
-    @include terra-border-radius-end(0);
-    @include terra-border-end(0);
-
-    appearance: textfield;
-    flex: 1 1 auto;
-    margin: 0;
-    min-width: 0;
-    outline-offset: -0.143em;  //Adjust the outline offset for search input in Safari.
+    .button {
+      border: 0.071em solid #dedfe0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0.286em;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0.286em;
+      display: inline-block;
+      flex: 0 0 auto;
+      margin: 0;
+    }
   }
 
-  .terra-SearchField-button {
-    @include terra-border-radius-start(0);
-    @include terra-border-radius-end(0.286em);
+  .input::-webkit-search-cancel-button {
+    appearance: searchfield-cancel-button;
+  }
 
-    border: 0.071em solid #dedfe0;
-    display: inline-block;
-    flex: 0 0 auto;
-    margin: 0;
+  .input::-webkit-search-decoration {
+    // Get rid of extra left-padding getting added in Safari for search fields
+    appearance: none;
   }
 }
-
-.terra-SearchField-input::-webkit-search-cancel-button {
-  appearance: searchfield-cancel-button;
-}
-
-.terra-SearchField-input::-webkit-search-decoration {
-  // Get rid of extra left-padding getting added in Safari for search fields
-  appearance: none;
-}
+/* stylelint-enable */

@@ -1,20 +1,20 @@
 exports[`Arrange default should render a arrange component with given fit and fill 1`] = `
 <div
-  className="terra-Arrange">
+  className="arrange">
   <div
-    className="terra-Arrange-fitStart">
+    className="fit">
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg" />
   </div>
   <div
-    className="terra-Arrange-fill">
+    className="fill">
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="terra-Arrange-fitEnd">
+    className="fit">
     <a
       href="http://www.example.com" />
   </div>
@@ -23,58 +23,58 @@ exports[`Arrange default should render a arrange component with given fit and fi
 
 exports[`Arrange should render a arrange component with given className and id 1`] = `
 <div
-  className="terra-Arrange testA testB testC"
+  className="arrange testA testB testC"
   id="testkey">
   <div
-    className="terra-Arrange-fitStart">
+    className="fit">
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg" />
   </div>
   <div
-    className="terra-Arrange-fill">
+    className="fill">
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="terra-Arrange-fitEnd" />
+    className="fit" />
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to bottom 1`] = `
 <div
-  className="terra-Arrange">
+  className="arrange">
   <div
-    className="terra-Arrange-fitStart terra-Arrange-fitStart--bottom">
+    className="fit bottom">
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg" />
   </div>
   <div
-    className="terra-Arrange-fill terra-Arrange-fill--bottom">
+    className="fill bottom">
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="terra-Arrange-fitEnd terra-Arrange-fitEnd--bottom" />
+    className="fit bottom" />
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to center 1`] = `
 <div
-  className="terra-Arrange">
+  className="arrange">
   <div
-    className="terra-Arrange-fitStart terra-Arrange-fitStart--center" />
+    className="fit center" />
   <div
-    className="terra-Arrange-fill terra-Arrange-fill--center">
+    className="fill center">
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="terra-Arrange-fitEnd terra-Arrange-fitEnd--center">
+    className="fit center">
     <a
       href="http://www.example.com" />
   </div>
@@ -83,37 +83,37 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to stretch 1`] = `
 <div
-  className="terra-Arrange">
+  className="arrange">
   <div
-    className="terra-Arrange-fitStart terra-Arrange-fitStart--stretch">
+    className="fit stretch">
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg" />
   </div>
   <div
-    className="terra-Arrange-fill terra-Arrange-fill--stretch">
+    className="fill stretch">
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="terra-Arrange-fitEnd terra-Arrange-fitEnd--stretch" />
+    className="fit stretch" />
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to top 1`] = `
 <div
-  className="terra-Arrange">
+  className="arrange">
   <div
-    className="terra-Arrange-fitStart" />
+    className="fit" />
   <div
-    className="terra-Arrange-fill">
+    className="fill">
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="terra-Arrange-fitEnd">
+    className="fit">
     <a
       href="http://www.example.com" />
   </div>

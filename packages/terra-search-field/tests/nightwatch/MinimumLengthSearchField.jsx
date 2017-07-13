@@ -17,7 +17,7 @@ class MinimumLengthSearchField extends React.Component {
         <div id="search-callback-text">
           Search Text: {this.state.searchText}
         </div>
-        <SearchField minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
+        <SearchField id="searchfieldWithMinimumLength" minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
       </div>
     );
   }
