@@ -24,16 +24,15 @@ exports[`1. Alert with no props should render a default component 1`] = `
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow alertType"
+          className="alert narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconAlert
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -52,16 +51,15 @@ exports[`1. Alert with no props should render a default component 1`] = `
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide alertType"
+          className="alert wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconAlert
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -109,16 +107,15 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow alertType"
+          className="alert narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconAlert
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -151,16 +148,15 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide alertType"
+          className="alert wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconAlert
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -222,16 +218,15 @@ exports[`3. Alert of type alert with text content should render an Alert compone
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow alertType"
+          className="alert narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconAlert
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -252,16 +247,15 @@ exports[`3. Alert of type alert with text content should render an Alert compone
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide alertType"
+          className="alert wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconAlert
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -311,16 +305,15 @@ exports[`4. Alert of type error with text content should render an Alert compone
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow errorType"
+          className="error narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconError
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -341,16 +334,15 @@ exports[`4. Alert of type error with text content should render an Alert compone
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide errorType"
+          className="error wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconError
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -400,16 +392,15 @@ exports[`5. Alert of type warning with text content should render an Alert compo
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow warningType"
+          className="warning narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconWarning
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -430,16 +421,15 @@ exports[`5. Alert of type warning with text content should render an Alert compo
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide warningType"
+          className="warning wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconWarning
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -485,20 +475,19 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
     customStatusColor=""
     onDismiss={null}
     title=""
-    type="gap_checking">
+    type="gapChecking">
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow gapCheckingType"
+          className="gapChecking narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconRequired
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -519,16 +508,15 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide gapCheckingType"
+          className="gapChecking wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconRequired
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -578,10 +566,10 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow advisoryType"
+          className="advisory narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon" />
             <div
@@ -602,10 +590,10 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide advisoryType"
+          className="advisory wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon" />
             <div
@@ -655,16 +643,15 @@ exports[`8. Alert of type info with text content should render an Alert componen
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow infoType"
+          className="info narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconInformation
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -685,16 +672,15 @@ exports[`8. Alert of type info with text content should render an Alert componen
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide infoType"
+          className="info wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconInformation
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -744,16 +730,15 @@ exports[`9. Alert of type success with text content should render an Alert compo
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow successType"
+          className="success narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconSuccess
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -774,16 +759,15 @@ exports[`9. Alert of type success with text content should render an Alert compo
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide successType"
+          className="success wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconSuccess
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -829,20 +813,19 @@ exports[`10. Alert of type outside records with text content should render an Al
     customStatusColor=""
     onDismiss={null}
     title=""
-    type="outside_records">
+    type="outsideRecords">
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow outsideRecordsType"
+          className="outsideRecords narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconDiamond
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -863,16 +846,15 @@ exports[`10. Alert of type outside records with text content should render an Al
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide outsideRecordsType"
+          className="outsideRecords wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconDiamond
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -928,14 +910,14 @@ exports[`11. Alert of type custom with custom title and text content should rend
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow customType"
+          className="custom narrow"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconHelp
@@ -945,7 +927,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="section sectionCustom">
+              className="sectionCustom">
               <strong
                 className="title">
                 Help!
@@ -962,14 +944,14 @@ exports[`11. Alert of type custom with custom title and text content should rend
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide customType"
+          className="custom wide"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconHelp
@@ -979,7 +961,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="section sectionCustom">
+              className="sectionCustom">
               <strong
                 className="title">
                 Help!
@@ -1025,16 +1007,15 @@ exports[`12. Alert of type info with custom title and HTML content should render
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow infoType"
+          className="info narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconInformation
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -1057,16 +1038,15 @@ exports[`12. Alert of type info with custom title and HTML content should render
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide infoType"
+          className="info wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconInformation
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -1129,16 +1109,15 @@ exports[`13. Alert of type success with an action button text content should ren
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow successType"
+          className="success narrow"
           style={Object {}}>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconSuccess
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -1172,16 +1151,15 @@ exports[`13. Alert of type success with an action button text content should ren
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide successType"
+          className="success wide"
           style={Object {}}>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconSuccess
-                height="1.3333rem"
+                className="alertIcon"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -1261,14 +1239,14 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
     <ResponsiveElement
       defaultElement={
         <div
-          className="alert narrow customType"
+          className="custom narrow"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="body bodyNarrow">
+            className="bodyNarrow">
             <div
               className="icon">
               <IconHelp
@@ -1278,7 +1256,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="section sectionCustom">
+              className="sectionCustom">
               <strong
                 className="title">
                 Help!
@@ -1290,7 +1268,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
             </div>
           </div>
           <div
-            className="actions actionsCustom">
+            className="actionsCustom">
             <Button
               isBlock={false}
               isCompact={false}
@@ -1317,14 +1295,14 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
       responsiveTo="parent"
       tiny={
         <div
-          className="alert wide customType"
+          className="custom wide"
           style={
             Object {
               "color": "orange",
             }
           }>
           <div
-            className="body bodyWide">
+            className="bodyWide">
             <div
               className="icon">
               <IconHelp
@@ -1334,7 +1312,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="section sectionCustom">
+              className="sectionCustom">
               <strong
                 className="title">
                 Help!
@@ -1346,7 +1324,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
             </div>
           </div>
           <div
-            className="actions actionsCustom">
+            className="actionsCustom">
             <Button
               isBlock={false}
               isCompact={false}

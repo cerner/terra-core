@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
@@ -10,8 +9,11 @@ import IconRequired from 'terra-icon/lib/icon/IconRequired';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Alert.scss';
+
+const cx = classNames.bind(styles);
 
 const AlertTypes = {
   ALERT: 'alert',
@@ -20,8 +22,8 @@ const AlertTypes = {
   ADVISORY: 'advisory',
   INFO: 'info',
   SUCCESS: 'success',
-  GAP_CHECKING: 'gap_checking',
-  OUTSIDE_RECORDS: 'outside_records',
+  GAP_CHECKING: 'gapChecking',
+  OUTSIDE_RECORDS: 'outsideRecords',
   CUSTOM: 'custom',
 };
 
@@ -33,7 +35,7 @@ const propTypes = {
   /**
    * Child Nodes providing the message content for the alert. Can contain text and HTML.
    */
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  children: PropTypes.node,
   /**
    * The icon to be used for an alert of type custom.
    */
@@ -78,87 +80,29 @@ const defaultProps = {
   type: AlertTypes.ALERT,
 };
 
-const getAlertClassName = (type) => {
-  switch (type) {
-    case AlertTypes.ALERT:
-      return styles.alertType;
-    case AlertTypes.ERROR:
-      return styles.errorType;
-    case AlertTypes.WARNING:
-      return styles.warningType;
-    case AlertTypes.ADVISORY:
-      return styles.advisoryType;
-    case AlertTypes.INFO:
-      return styles.infoType;
-    case AlertTypes.SUCCESS:
-      return styles.successType;
-    case AlertTypes.GAP_CHECKING:
-      return styles.gapCheckingType;
-    case AlertTypes.OUTSIDE_RECORDS:
-      return styles.outsideRecordsType;
-    case AlertTypes.CUSTOM:
-      return styles.customType;
-    default:
-      return '';
-  }
-};
-
 const getAlertIcon = (type, customIcon) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return (<IconAlert height="1.3333rem" width="1.3333rem" />);
+      return (<IconAlert className={cx('alertIcon')} />);
     case AlertTypes.ERROR:
-      return (<IconError height="1.3333rem" width="1.3333rem" />);
+      return (<IconError className={cx('alertIcon')} />);
     case AlertTypes.WARNING:
-      return (<IconWarning height="1.3333rem" width="1.3333rem" />);
+      return (<IconWarning className={cx('alertIcon')} />);
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
-      return (<IconInformation height="1.3333rem" width="1.3333rem" />);
+      return (<IconInformation className={cx('alertIcon')} />);
     case AlertTypes.SUCCESS:
-      return (<IconSuccess height="1.3333rem" width="1.3333rem" />);
+      return (<IconSuccess className={cx('alertIcon')} />);
     case AlertTypes.GAP_CHECKING:
-      return (<IconRequired height="1.3333rem" width="1.3333rem" />);
+      return (<IconRequired className={cx('alertIcon')} />);
     case AlertTypes.OUTSIDE_RECORDS:
-      return (<IconDiamond height="1.3333rem" width="1.3333rem" />);
+      return (<IconDiamond className={cx('alertIcon')} />);
     case AlertTypes.CUSTOM:
       return customIcon;
     default:
       return null;
   }
-};
-
-const getAlertDefaultTitle = (intl, type) => {
-  let intlDefaultTitle = '';
-  switch (type) {
-    case AlertTypes.ALERT:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.alert' });
-      break;
-    case AlertTypes.ERROR:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.error' });
-      break;
-    case AlertTypes.WARNING:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.warning' });
-      break;
-    case AlertTypes.ADVISORY:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.advisory' });
-      break;
-    case AlertTypes.INFO:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.info' });
-      break;
-    case AlertTypes.SUCCESS:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.success' });
-      break;
-    case AlertTypes.GAP_CHECKING:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.gapChecking' });
-      break;
-    case AlertTypes.OUTSIDE_RECORDS:
-      intlDefaultTitle = intl.formatMessage({ id: 'Terra.alert.outsideRecords' });
-      break;
-    default:
-      break;
-  }
-  return intlDefaultTitle;
 };
 
 const contextTypes = {
@@ -184,27 +128,24 @@ const Alert = (
     intl,
   },
 ) => {
-  const defaultTitle = getAlertDefaultTitle(intl, type);
+  const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const attributes = Object.assign({}, customProps);
-  const alertTypeClassName = getAlertClassName(type);
-  const narrowAlertClassNames = classNames([
-    styles.alert,
-    styles.narrow,
-    alertTypeClassName,
+  const narrowAlertClassNames = cx([
+    type,
+    'narrow',
     attributes.className,
   ]);
-  const wideAlertClassNames = classNames([
-    styles.alert,
-    styles.wide,
-    alertTypeClassName,
+  const wideAlertClassNames = cx([
+    type,
+    'wide',
     attributes.className,
   ]);
 
   let actionsSection = '';
   let dismissButton = '';
   const outerDivStyle = {};
-  let alertSectionClassName = styles.section;
-  let alertActionsClassName = styles.actions;
+  let alertSectionClassName = cx('section');
+  let alertActionsClassName = cx('actions');
 
   if (type === AlertTypes.CUSTOM) {
     // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
@@ -215,14 +156,8 @@ const Alert = (
     // will allow the icon to pick up the color style so that Terra icons will match the color of the
     // status bar.
     outerDivStyle.color = customStatusColor;
-    alertSectionClassName = classNames([
-      alertSectionClassName,
-      styles.sectionCustom,
-    ]);
-    alertActionsClassName = classNames([
-      alertActionsClassName,
-      styles.actionsCustom,
-    ]);
+    alertSectionClassName = cx(['sectionCustom']);
+    alertActionsClassName = cx(['actionsCustom']);
   }
 
   if (onDismiss) {
@@ -239,8 +174,8 @@ const Alert = (
 
   const alertMessageContent = (
     <div className={alertSectionClassName}>
-      <strong className={styles.title}>{title || defaultTitle}</strong>
-      <div className={styles.content}>
+      <strong className={cx('title')}>{title || defaultTitle}</strong>
+      <div className={cx('content')}>
         {children}
       </div>
     </div>
@@ -251,8 +186,8 @@ const Alert = (
       responsiveTo="parent"
       defaultElement={
         <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
-          <div className={classNames([styles.body, styles.bodyNarrow])}>
-            <div className={styles.icon}>{getAlertIcon(type, customIcon)}</div>
+          <div className={cx('bodyNarrow')}>
+            <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
@@ -260,8 +195,8 @@ const Alert = (
       }
       tiny={
         <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
-          <div className={classNames([styles.body, styles.bodyWide])}>
-            <div className={styles.icon}>{getAlertIcon(type, customIcon)}</div>
+          <div className={cx('bodyWide')}>
+            <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
           {actionsSection}
