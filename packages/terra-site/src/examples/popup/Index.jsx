@@ -9,15 +9,11 @@ import ReadMe from 'terra-popup/docs/README.md';
 import PopupSrc from '!raw-loader!terra-popup/src/Popup.jsx';
 // Example Files
 import PopupStandard from './PopupStandard';
-// import PopupBounded from './PopupBounded';
-// import PopupNoHeader from './PopupNoHeader';
+import PopupBounded from './PopupBounded';
+import PopupNoHeader from './PopupNoHeader';
 import PopupWithArrow from './PopupWithArrow';
-// import PopupClassName from './PopupClassName';
-// import PopupTiny from './PopupTiny';
-// import PopupSmall from './PopupSmall';
-// import PopupMedium from './PopupMedium';
-// import PopupLarge from './PopupLarge';
-// import PopupHuge from './PopupHuge';
+import PopupClassName from './PopupClassName';
+import PopupDimensions from './PopupDimensions';
 import PopupBottomCenter from './PopupBottomCenter';
 import PopupBottomLeft from './PopupBottomLeft';
 import PopupBottomRight from './PopupBottomRight';
@@ -72,6 +68,14 @@ const PopupExamples = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
+    <h2 id="dimension-popup" style={{ paddingTop: '20px' }}>Popup Size Variants</h2>
+    <PopupDimensions />
+    <h2 id="bounded-popup" style={{ paddingTop: '20px' }}>Popup Bounded</h2>
+    <PopupBounded />
+    <h2 id="no-header-popup" style={{ paddingTop: '20px' }}>Popup Bounded With No Header</h2>
+    <PopupNoHeader />
+    <h2 id="class-name-popup" style={{ paddingTop: '20px' }}>Popup Adding Class Styles</h2>
+    <PopupClassName />
   </div>
 );
 
