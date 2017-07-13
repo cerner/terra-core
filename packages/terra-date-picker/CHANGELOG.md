@@ -9,6 +9,8 @@ Unreleased
 Minor version bump
 * Updated nightwatch test scripts
 * Removed nightwatch.config file
+### Fixed
+* Check null date when date entry is cleared
 
 1.0.0 - (June 28, 2017)
 ------------------
