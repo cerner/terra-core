@@ -43,6 +43,8 @@ class DimensionPopup extends React.Component {
         <div style={{ height: '140px', width: '210px', background: 'aliceblue' }} ref={this.setParentNode}>
           <Popup
             boundingRef={this.getParentNode}
+            classNameArrow="test-arrow"
+            classNameContent="test-content"
             contentHeight="40"
             contentWidth="160"
             isOpen={this.state.open}

@@ -42,6 +42,8 @@ class AlignmentPopup extends React.Component {
       <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
           boundingRef={this.getParentNode}
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           contentAttachment="top left"
           contentHeight="40"
           contentWidth="160"

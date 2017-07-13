@@ -39,6 +39,8 @@ class PopupLarge extends React.Component {
       <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
         <Popup
           contentDimensions="75x 75x"
+          classNameArrow="terra-ExampleClass-arrow"
+          classNameContent="terra-ExampleClass-content"
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}

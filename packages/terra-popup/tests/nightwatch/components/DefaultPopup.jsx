@@ -31,6 +31,8 @@ class DefaultPopup extends React.Component {
     return (
       <div>
         <Popup
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           isOpen={this.state.open}
           targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}

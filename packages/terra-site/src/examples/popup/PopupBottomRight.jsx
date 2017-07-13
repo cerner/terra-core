@@ -39,6 +39,8 @@ class PopupBottomRight extends React.Component {
       <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
         <Popup
           contentAttachment="bottom right"
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           isArrowDisplayed
           isOpen={this.state.open}
           targetRef={this.getButtonNode}

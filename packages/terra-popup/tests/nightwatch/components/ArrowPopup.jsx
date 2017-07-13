@@ -31,6 +31,8 @@ class ArrowPopup extends React.Component {
     return (
       <div>
         <Popup
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           contentAttachment="middle right"
           isArrowDisplayed
           isOpen={this.state.open}

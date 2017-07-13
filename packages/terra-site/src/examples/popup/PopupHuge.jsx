@@ -39,6 +39,8 @@ class PopupHuge extends React.Component {
       <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
         <Popup
           contentDimensions="100x 100x"
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}

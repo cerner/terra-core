@@ -49,6 +49,8 @@ class PopupBounded extends React.Component {
       <div style={{ height: '200px', width: '200px', background: 'aliceblue', overflow: 'hidden' }} ref={this.setParentNode}>
         <Popup
           boundingRef={this.getParentNode}
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
