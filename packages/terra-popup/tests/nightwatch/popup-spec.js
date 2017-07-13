@@ -52,30 +52,29 @@ module.exports = {
       .waitForElementNotPresent('.terra-Popup.terra-Popup-showArrow', 1000)
       .click('#default-button')
       .waitForElementPresent('.test-content', 1000)
-      .waitForElementNotPresent('.terra-PopupContent-showArrow', 1000)
       .waitForElementNotPresent('.test-arrow', 1000);
   },
 
-  // 'isArrowDisplayed prop - SHOWN': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/arrow`)
-  //     .waitForElementPresent('#arrow-button', 1000)
-  //     .waitForElementNotPresent('.test-content', 1000)
-  //     .click('#arrow-button')
-  //     .waitForElementPresent('.test-content', 1000)
-  //     .waitForElementPresent('.terra-PopupContent-showArrow', 1000)
-  //     .waitForElementPresent('.test-arrow"', 1000);
-  // },
+  'isArrowDisplayed prop - SHOWN': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/arrow`)
+      .waitForElementPresent('#arrow-button', 1000)
+      .waitForElementNotPresent('.test-content', 1000)
+      .click('#arrow-button')
+      .waitForElementPresent('.test-content', 1000)
+      .waitForElementPresent('.test-arrow', 1000);
+  },
 
-  // 'boundingRef prop': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bounded`)
-  //     .waitForElementPresent('#bounded-button', 1000)
-  //     .waitForElementNotPresent('.test-content', 1000)
-  //     .click('#bounded-button')
-  //     .waitForElementPresent('.test-content', 1000)
-  //     .waitForElementPresent('.header', 1000);
-  // },
+  'boundingRef prop': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/bounded`)
+      .waitForElementPresent('#bounded-button', 1000)
+      .waitForElementNotPresent('.test-content', 1000)
+      .click('#bounded-button')
+      .waitForElementPresent('.test-content', 1000)
+      .waitForElementNotPresent('.test-arrow', 1000)
+      .waitForElementPresent('svg', 1000);
+  },
 
   'boundingRef prop - BOUNDED HEIGHT': (browser) => {
     browser
@@ -97,24 +96,26 @@ module.exports = {
       .expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 350px;');
   },
 
-  // 'boundingRef prop && disableHeader prop': (browser) => {
-  //   browser
-  //     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/no-header`)
-  //     .waitForElementPresent('#no-header-button', 1000)
-  //     .waitForElementNotPresent('.test-content', 1000)
-  //     .click('#no-header-button')
-  //     .waitForElementPresent('.test-content', 1000)
-  //     .waitForElementNotPresent('.test-arrow', 1000);
-  // },
+  'boundingRef prop && disableHeader prop': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/no-header`)
+      .waitForElementPresent('#no-header-button', 1000)
+      .waitForElementNotPresent('.test-content', 1000)
+      .click('#no-header-button')
+      .waitForElementPresent('.test-content', 1000)
+      .waitForElementNotPresent('.test-arrow', 1000)
+      .waitForElementNotPresent('svg', 1000);
+  },
 
   'className props': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/class-name`)
       .waitForElementPresent('#class-name-button', 1000)
-      .waitForElementNotPresent('.test-content', 1000)
+      .waitForElementNotPresent('.terra-TestClass-overlay', 1000)
+      .waitForElementNotPresent('.terra-TestClass-content', 1000)
+      .waitForElementNotPresent('.terra-TestClass-arrow', 1000)
       .click('#class-name-button')
-      .waitForElementPresent('test-content', 1000)
-      .waitForElementPresent('.terra-PopupOverlay.terra-TestClass-overlay', 1000)
+      .waitForElementPresent('.terra-TestClass-overlay', 1000)
       .waitForElementPresent('.terra-TestClass-content', 1000)
       .waitForElementPresent('.terra-TestClass-arrow', 1000);
   },
@@ -126,7 +127,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#alignment-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 55px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 31px;');
   },
 
   'contentAttachment prop - VERTICAL LEFT': (browser) => {
@@ -136,7 +137,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#alignment-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow"').to.have.attribute('style').which.equals('left: 20px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 25px;');
   },
 
   'contentAttachment prop - VERTICAL CENTER': (browser) => {
@@ -146,7 +147,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#alignment-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow"').to.have.attribute('style').which.equals('left: 90px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 91px;');
   },
 
   'contentAttachment prop - VERTICAL RIGHT': (browser) => {
@@ -156,7 +157,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#alignment-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow"').to.have.attribute('style').which.equals('left: 160px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 157px;');
   },
 
   'contentAttachment prop - MIDDLE LEFT RESPOSITION': (browser) => {
@@ -166,7 +167,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#offset-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 25px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 26px;');
   },
 
   'contentAttachment prop - MIDDLE RIGHT RESPOSITION': (browser) => {
@@ -176,7 +177,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#offset-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 85px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 36px;');
   },
 
   'contentAttachment prop - TOP RIGHT RESPOSITION': (browser) => {
@@ -186,7 +187,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#offset-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 28px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 29px;');
   },
 
   'contentAttachment prop - BOTTOM LEFT RESPOSITION': (browser) => {
@@ -196,7 +197,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#offset-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 152px;');
+      .expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 153px;');
   },
 
   'contentDimension small': (browser) => {
@@ -206,7 +207,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#dimension-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 90px; width: 160px;');
+      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 40px; width: 160px;');
   },
 
   'contentDimension meduim ': (browser) => {
@@ -216,7 +217,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#dimension-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 90px; width: 160px;');
+      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 120px; width: 320px;');
   },
 
   'contentDimension large': (browser) => {
@@ -226,6 +227,6 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#dimension-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 90px; width: 160px;');
+      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 960px;');
   },
 };

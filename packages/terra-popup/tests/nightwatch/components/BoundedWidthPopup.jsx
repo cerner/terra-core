@@ -45,7 +45,7 @@ class BoundedPopup extends React.Component {
           classNameArrow="test-arrow"
           classNameContent="test-content"
           contentHeight="240"
-          contentWidth="400"
+          contentWidth="640"
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
