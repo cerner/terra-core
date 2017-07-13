@@ -1,0 +1,132 @@
+exports[`Overlay should render a null component when isOpen is not provided 1`] = `null`;
+
+exports[`Overlay when isOpen is provided -backgroundStyle- should render with the clear backgroundStyle 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen clear"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -backgroundStyle- should render with the dark backgroundStyle 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen dark"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -backgroundStyle- should render with the light backgroundStyle 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen light"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided -default Overlay when isOpen- should render a default component 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen light"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with content 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen light"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content">
+      Overlay message
+    </div>
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with isRelativeToContainer 1`] = `
+<div
+  className="overlay container light"
+  onClick={[Function]}
+  tabIndex="0">
+  <div
+    className="content" />
+</div>
+`;
+
+exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen light scrollable"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content" />
+  </div>
+</FocusTrap>
+`;
+
+exports[`Overlay when isOpen is provided should render with onRequestClose 1`] = `
+<FocusTrap
+  _createFocusTrap={[Function]}
+  active={true}
+  focusTrapOptions={Object {}}
+  paused={false}
+  tag="div">
+  <div
+    className="overlay fullscreen light"
+    onClick={[Function]}
+    tabIndex="0">
+    <div
+      className="content" />
+  </div>
+</FocusTrap>
+`;
