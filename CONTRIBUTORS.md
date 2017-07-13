@@ -58,3 +58,4 @@ Cerner Corporation
 [@madelineisabelle]: https://github.com/madelineisabelle
 [@mhemesath]: https://github.com/mhemesath
 [@us044466]: https://github.com/us044466
+[@brhoades]: https://github.com/brhoades
