@@ -32,7 +32,6 @@ class ArrowPopup extends React.Component {
       <div>
         <Popup
           contentAttachment="middle right"
-          contentDimensions="50x 25x"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}

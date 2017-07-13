@@ -40,18 +40,19 @@ class DimensionPopup extends React.Component {
   render() {
     return (
       <div style={{ position: 'relative', height: '100%', width: '100%', overflow: 'auto' }}>
-        <div style={{ height: '675px', width: '1250px', background: 'aliceblue' }} ref={this.setParentNode}>
+        <div style={{ height: '140px', width: '210px', background: 'aliceblue' }} ref={this.setParentNode}>
           <Popup
             boundingRef={this.getParentNode}
-            contentDimensions="75x 75x"
+            contentHeight="40"
+            contentWidth="160"
             isOpen={this.state.open}
             onRequestClose={this.handleRequestClose}
             targetRef={this.getButtonNode}
           >
-            <p>This popup is 75x by 75x.</p>
+            <p>This popup is 10x by 10x.</p>
           </Popup>
           <button id="dimension-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-            75x Popup
+            10x Popup
           </button>
         </div>
       </div>

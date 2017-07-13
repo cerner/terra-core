@@ -36,7 +36,6 @@ class ClassNamePopup extends React.Component {
           classNameContent="terra-TestClass-content"
           classNameOverlay="terra-TestClass-overlay"
           contentAttachment="top center"
-          contentDimensions="50x 25x"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}

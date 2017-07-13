@@ -10,11 +10,9 @@ import BoundedPopup from './components/BoundedPopup';
 import BoundedHeightPopup from './components/BoundedHeightPopup';
 import BoundedWidthPopup from './components/BoundedWidthPopup';
 import NoHeaderPopup from './components/NoHeaderPopup';
-import Dimension10xPopup from './components/Dimension10xPopup';
-import Dimension25xPopup from './components/Dimension25xPopup';
-import Dimension50xPopup from './components/Dimension50xPopup';
-import Dimension75xPopup from './components/Dimension75xPopup';
-import Dimension100xPopup from './components/Dimension100xPopup';
+import SizeSmallPopup from './components/SizeSmallPopup';
+import SizeMediumPopup from './components/SizeMediumPopup';
+import SizeLargePopup from './components/SizeLargePopup';
 import ArrowTopOffsetPopup from './components/ArrowTopOffsetPopup';
 import ArrowBottomOffsetPopup from './components/ArrowBottomOffsetPopup';
 import ArrowLeftOffsetPopup from './components/ArrowLeftOffsetPopup';
@@ -34,11 +32,9 @@ const routes = (
     <Route path="/tests/popup-tests/bounded-height" component={BoundedHeightPopup} />
     <Route path="/tests/popup-tests/bounded-width" component={BoundedWidthPopup} />
     <Route path="/tests/popup-tests/no-header" component={NoHeaderPopup} />
-    <Route path="/tests/popup-tests/dimension-10x" component={Dimension10xPopup} />
-    <Route path="/tests/popup-tests/dimension-25x" component={Dimension25xPopup} />
-    <Route path="/tests/popup-tests/dimension-50x" component={Dimension50xPopup} />
-    <Route path="/tests/popup-tests/dimension-75x" component={Dimension75xPopup} />
-    <Route path="/tests/popup-tests/dimension-100x" component={Dimension100xPopup} />
+    <Route path="/tests/popup-tests/small" component={SizeSmallPopup} />
+    <Route path="/tests/popup-tests/medium" component={SizeMediumPopup} />
+    <Route path="/tests/popup-tests/large" component={SizeLargePopup} />
     <Route path="/tests/popup-tests/top-arrow-offset" component={ArrowTopOffsetPopup} />
     <Route path="/tests/popup-tests/bottom-arrow-offset" component={ArrowBottomOffsetPopup} />
     <Route path="/tests/popup-tests/left-arrow-offset" component={ArrowLeftOffsetPopup} />

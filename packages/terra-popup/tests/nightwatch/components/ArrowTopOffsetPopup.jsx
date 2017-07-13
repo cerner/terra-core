@@ -43,7 +43,8 @@ class OffsetPopup extends React.Component {
         <Popup
           boundingRef={this.getParentNode}
           contentAttachment="top right"
-          contentDimensions="10x 10x"
+          contentHeight="40"
+          contentWidth="160"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}

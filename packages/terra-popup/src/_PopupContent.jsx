@@ -50,6 +50,11 @@ const ARROW_POSITIONS = [
  */
 const POPUP_MARGIN = 10;
 
+/**
+ * Rounded corner size to be used when calculating the arrow offset.
+ */
+const CORNER_SIZE = 3;
+
 const propTypes = {
   /**
    * The children to be presented as the popup's content.
@@ -247,9 +252,11 @@ class PopupContent extends React.Component {
       arrowContent = arrow;
     }
 
+    const roundedCorners = arrow && !isFullScreen;
     const innerClassNames = cx([
       'inner',
       { isFullScreen },
+      { roundedCorners },
       classNameInner,
     ]);
 
@@ -277,5 +284,6 @@ const onClickOutsideContent = onClickOutside(PopupContent);
 onClickOutsideContent.positionAttrs = CONTENT_ATTRS;
 onClickOutsideContent.mirroredPositionAttrs = MIRRORED_CONTENT_ATTRS;
 onClickOutsideContent.popupMargin = POPUP_MARGIN;
+onClickOutsideContent.cornerSize = CORNER_SIZE;
 
 export default onClickOutsideContent;

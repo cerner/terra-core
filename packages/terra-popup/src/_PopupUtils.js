@@ -45,30 +45,36 @@ const mirrorAttachment = (attachment) => {
   return `${vertical} ${horizontal}`;
 };
 
-const getContentOffset = (attachment, targetNode, arrowOffset) => {
+/**
+ * This method calculates a positional offset to be applied if the target is smaller than the arrow.
+ */
+const getContentOffset = (attachment, targetNode, arrowOffset, cornerOffset) => {
   const offset = { vertical: 0, horizontal: 0 };
   if (targetNode) {
     if (isVerticalAttachment(attachment) && targetNode.clientWidth <= arrowOffset * 2) {
       if (attachment.horizontal === 'left') {
-        offset.horizontal = arrowOffset - (targetNode.clientWidth / 2);
+        offset.horizontal = (arrowOffset + cornerOffset) - (targetNode.clientWidth / 2);
       } else if (attachment.horizontal === 'right') {
-        offset.horizontal = -(arrowOffset - (targetNode.clientWidth / 2));
+        offset.horizontal = -((arrowOffset + cornerOffset) - (targetNode.clientWidth / 2));
       }
     }
   }
   return offset;
 };
 
-const arrowPositionFromBounds = (targetBounds, contentBounds, isVertical, arrowOffset) => {
+/**
+ * This method calculates the arrow position based on the content and targets relative position.
+ */
+const arrowPositionFromBounds = (targetBounds, contentBounds, isVertical, arrowOffset, cornerOffset) => {
   if (isVertical) {
-    if ((contentBounds.left + contentBounds.width) - arrowOffset >= targetBounds.left && contentBounds.left + arrowOffset <= targetBounds.left + targetBounds.width) {
+    if ((contentBounds.left + contentBounds.width) - arrowOffset - cornerOffset >= targetBounds.left && contentBounds.left + arrowOffset + cornerOffset <= targetBounds.left + targetBounds.width) {
       if (targetBounds.top < contentBounds.top) {
         return 'top';
       } else if (targetBounds.bottom < contentBounds.bottom) {
         return 'bottom';
       }
     }
-  } else if ((contentBounds.top + contentBounds.height) - arrowOffset >= targetBounds.top && contentBounds.top + arrowOffset <= targetBounds.top + targetBounds.height) {
+  } else if ((contentBounds.top + contentBounds.height) - arrowOffset - cornerOffset >= targetBounds.top && contentBounds.top + arrowOffset + cornerOffset <= targetBounds.top + targetBounds.height) {
     if (targetBounds.left < contentBounds.left) {
       return 'left';
     } else if (targetBounds.right < contentBounds.right) {
@@ -78,30 +84,36 @@ const arrowPositionFromBounds = (targetBounds, contentBounds, isVertical, arrowO
   return undefined;
 };
 
-const leftOffset = (targetBounds, contentBounds, arrowOffset, contentOffset, attachment) => {
+/**
+ * This method caculates the value to be applied to the left position of the popup arrow.
+ */
+const leftOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset, contentOffset, attachment) => {
   let offset;
   if (contentOffset.horizontal !== 0 || attachment.horizontal === 'center') {
     offset = (targetBounds.left - contentBounds.left) + arrowOffset + (targetBounds.width / 2);
   } else if (attachment.horizontal === 'right') {
-    offset = (targetBounds.left - contentBounds.left) + targetBounds.width;
+    offset = (targetBounds.left - contentBounds.left) + (targetBounds.width - cornerOffset);
   } else {
-    offset = (targetBounds.left - contentBounds.left) + (2 * arrowOffset);
+    offset = (targetBounds.left - contentBounds.left) + (2 * arrowOffset) + cornerOffset;
   }
 
   if (offset < 2 * arrowOffset) {
-    offset = 2 * arrowOffset;
+    offset = (2 * arrowOffset) + cornerOffset;
   } else if (offset > contentBounds.width) {
-    offset = contentBounds.width;
+    offset = contentBounds.width - cornerOffset;
   }
   return `${offset}px`;
 };
 
-const topOffset = (targetBounds, contentBounds, arrowOffset) => {
+/**
+ * This method caculates the value to be applied to the top position of the popup arrow.
+ */
+const topOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset) => {
   let offset = (targetBounds.top - contentBounds.top) + arrowOffset + (targetBounds.height / 2);
-  if (offset < 2 * arrowOffset) {
-    offset = 2 * arrowOffset;
-  } else if (offset > contentBounds.height) {
-    offset = contentBounds.height;
+  if (offset < (2 * arrowOffset) + cornerOffset) {
+    offset = (2 * arrowOffset) + cornerOffset;
+  } else if (offset > contentBounds.height - cornerOffset) {
+    offset = contentBounds.height - cornerOffset;
   }
   return (`${offset}px`);
 };

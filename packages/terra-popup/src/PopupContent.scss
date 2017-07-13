@@ -9,6 +9,10 @@
       display: block;
     }
 
+    .roundedCorners {
+      border-radius: 5px;
+    }
+
     .header {
       border-bottom: var(--terra-PopupContent-header-border-bottom);
       height: var(--terra-PopupContent-header-height);
