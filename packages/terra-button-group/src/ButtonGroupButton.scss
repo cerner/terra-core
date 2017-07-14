@@ -1,6 +1,6 @@
 :local {
   /* stylelint-disable selector-class-pattern  */
-  .buttonGroupButton {
+  .button-group-button {
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
@@ -13,21 +13,21 @@
     }
   }
 
-  .buttonGroupButton + .buttonGroupButton {
+  .button-group-button + .button-group-button {
     margin-left: -1px;
   }
 
-  .buttonGroupButton:first-child {
+  .button-group-button:first-child {
     border-bottom-left-radius: 0.25em;
     border-top-left-radius: 0.25em;
   }
 
-  .buttonGroupButton:last-child {
+  .button-group-button:last-child {
     border-bottom-right-radius: 0.25em;
     border-top-right-radius: 0.25em;
   }
 
-  .buttonGroupButton.is-active {
+  .button-group-button.is-active {
     background-color: #4e5558;
     border-color: #4e5558;
     color: #fff;

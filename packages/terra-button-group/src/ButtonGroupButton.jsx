@@ -44,7 +44,7 @@ const ButtonGroupButton = ({ isSelected, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
 
   const buttonClassName = cx([
-    'buttonGroupButton',
+    'button-group-button',
     { 'is-active': isSelected },
     attributes.className,
   ]);
