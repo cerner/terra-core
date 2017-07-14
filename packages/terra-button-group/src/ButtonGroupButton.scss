@@ -1,5 +1,6 @@
 :local {
-  .buttonGroup .buttonGroupButton {
+  /* stylelint-disable selector-class-pattern  */
+  .buttonGroupButton {
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
@@ -25,4 +26,11 @@
     border-bottom-right-radius: 0.25em;
     border-top-right-radius: 0.25em;
   }
+
+  .buttonGroupButton.is-active {
+    background-color: #4e5558;
+    border-color: #4e5558;
+    color: #fff;
+  }
+  /* stylelint-enable */
 }

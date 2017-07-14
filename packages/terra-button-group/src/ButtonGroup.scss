@@ -1,7 +1,10 @@
 :local {
+  /* stylelint-disable selector-class-pattern  */
   .buttonGroup {
     display: inline-block;
     position: relative;
     white-space: nowrap;
   }
+  /* stylelint-enable */
 }
+
