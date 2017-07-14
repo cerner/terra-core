@@ -7,9 +7,12 @@ Unreleased
 * Converted component to use CSS modules
 * Converted SCSS variables to CSS custom properties for theming
 
+
 3.4.0 - (July 13, 2017)
 ------------------
 Minor version bump
+* Updated nightwatch test scripts
+* Removed nightwatch.config file
 
 3.3.0 (June 27, 2017)
 ------------------
