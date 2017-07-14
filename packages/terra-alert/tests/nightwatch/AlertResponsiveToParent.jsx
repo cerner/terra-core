@@ -48,6 +48,9 @@ class AlertResponsiveToParent extends React.Component {
           <br />
           <br />
           {alertElem}
+          <br />
+          <br />
+          <Alert id="noActionsAlert" type={Alert.Opts.Types.INFO} >This is an info alert</Alert>
         </Base>
       </div>
     );

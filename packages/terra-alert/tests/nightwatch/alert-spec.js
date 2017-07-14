@@ -462,8 +462,8 @@ module.exports = {
        .assert.attributeContains(
           '#actionAlert > div[class*="_body_"]',
           'class',
-          '_bodyWide_',
-          'Check that the wide body className is used when width greater than or equal to tiny breakpoint');
+          '_bodyStd_',
+          'Check that the standard body className is used when width greater than or equal to tiny breakpoint');
     }
   },
 
@@ -497,8 +497,8 @@ module.exports = {
        .assert.attributeContains(
           '#dismissibleAlert > div[class*="_body_"]',
           'class',
-          '_bodyWide_',
-          'Check that the wide body className is used when width greater than or equal to tiny breakpoint');
+          '_bodyStd_',
+          'Check that the standard body className is used when width greater than or equal to tiny breakpoint');
     }
 
     browser
@@ -536,6 +536,16 @@ module.exports = {
         '#dismissibleAlert > div[class*="_body_"]',
         'class',
         '_bodyNarrow_',
-        'Check that the narrow body className is used for dismissible alert regardless of window size');
+        'Check that the narrow body className is used for dismissible alert regardless of window size')
+      .assert.attributeContains(
+        '#noActionsAlert',
+        'class',
+        '_narrow_',
+        'Check that the narrow alert className is used for no actions alert regardless of window size')
+      .assert.attributeContains(
+        '#noActionsAlert > div[class*="_body_"]',
+        'class',
+        '_bodyStd_',
+        'Check that the standard body className is used for no actions alert regardless of window size');
   },
 };

@@ -27,7 +27,7 @@ exports[`1. Alert with no props should render a default component 1`] = `
           className="alert narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconAlert
@@ -54,7 +54,7 @@ exports[`1. Alert with no props should render a default component 1`] = `
           className="alert wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconAlert
@@ -151,7 +151,7 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
           className="alert wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconAlert
@@ -221,7 +221,7 @@ exports[`3. Alert of type alert with text content should render an Alert compone
           className="alert narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconAlert
@@ -250,7 +250,7 @@ exports[`3. Alert of type alert with text content should render an Alert compone
           className="alert wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconAlert
@@ -308,7 +308,7 @@ exports[`4. Alert of type error with text content should render an Alert compone
           className="error narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconError
@@ -337,7 +337,7 @@ exports[`4. Alert of type error with text content should render an Alert compone
           className="error wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconError
@@ -395,7 +395,7 @@ exports[`5. Alert of type warning with text content should render an Alert compo
           className="warning narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconWarning
@@ -424,7 +424,7 @@ exports[`5. Alert of type warning with text content should render an Alert compo
           className="warning wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconWarning
@@ -482,7 +482,7 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
           className="gapChecking narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconRequired
@@ -511,7 +511,7 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
           className="gapChecking wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconRequired
@@ -569,7 +569,7 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
           className="advisory narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon" />
             <div
@@ -593,7 +593,7 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
           className="advisory wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon" />
             <div
@@ -646,7 +646,7 @@ exports[`8. Alert of type info with text content should render an Alert componen
           className="info narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconInformation
@@ -675,7 +675,7 @@ exports[`8. Alert of type info with text content should render an Alert componen
           className="info wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconInformation
@@ -733,7 +733,7 @@ exports[`9. Alert of type success with text content should render an Alert compo
           className="success narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconSuccess
@@ -762,7 +762,7 @@ exports[`9. Alert of type success with text content should render an Alert compo
           className="success wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconSuccess
@@ -820,7 +820,7 @@ exports[`10. Alert of type outside records with text content should render an Al
           className="outsideRecords narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconDiamond
@@ -849,7 +849,7 @@ exports[`10. Alert of type outside records with text content should render an Al
           className="outsideRecords wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconDiamond
@@ -917,7 +917,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
             }
           }>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconHelp
@@ -951,7 +951,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
             }
           }>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconHelp
@@ -1010,7 +1010,7 @@ exports[`12. Alert of type info with custom title and HTML content should render
           className="info narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="bodyStd">
             <div
               className="icon">
               <IconInformation
@@ -1041,7 +1041,7 @@ exports[`12. Alert of type info with custom title and HTML content should render
           className="info wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconInformation
@@ -1154,7 +1154,7 @@ exports[`13. Alert of type success with an action button text content should ren
           className="success wide"
           style={Object {}}>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconSuccess
@@ -1302,7 +1302,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
             }
           }>
           <div
-            className="bodyWide">
+            className="bodyStd">
             <div
               className="icon">
               <IconHelp

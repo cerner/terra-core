@@ -146,6 +146,7 @@ const Alert = (
   const outerDivStyle = {};
   let alertSectionClassName = cx('section');
   let alertActionsClassName = cx('actions');
+  let bodyClassNameForNarrowParent = 'bodyStd';
 
   if (type === AlertTypes.CUSTOM) {
     // For custom alert, there is no color assigned to the box-shadow style since it is to be specified
@@ -164,6 +165,7 @@ const Alert = (
     dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} size="medium" variant="secondary" onClick={onDismiss} />);
   }
   if (onDismiss || alertAction) {
+    bodyClassNameForNarrowParent = 'bodyNarrow';
     actionsSection = (
       <div className={alertActionsClassName}>
         {alertAction}
@@ -186,7 +188,7 @@ const Alert = (
       responsiveTo="parent"
       defaultElement={
         <div {...attributes} className={narrowAlertClassNames} style={outerDivStyle} >
-          <div className={cx('bodyNarrow')}>
+          <div className={cx(bodyClassNameForNarrowParent)}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
@@ -195,7 +197,7 @@ const Alert = (
       }
       tiny={
         <div {...attributes} className={wideAlertClassNames} style={outerDivStyle} >
-          <div className={cx('bodyWide')}>
+          <div className={cx('bodyStd')}>
             <div className={cx('icon')}>{getAlertIcon(type, customIcon)}</div>
             {alertMessageContent}
           </div>
