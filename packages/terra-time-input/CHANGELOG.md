@@ -9,6 +9,9 @@ Unreleased
 ### Changed
 * Converted component to use CSS modules
 
+### Fixed
+* Updated package.json to use rimraf
+
 1.0.0 - (June 28, 2017)
 ------------------
 Initial stable release
