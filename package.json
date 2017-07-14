@@ -93,6 +93,6 @@
     "stylelint": "^7.12.0",
     "stylelint-config-sass-guidelines": "^2.2.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-toolkit": "^1.2.1"
+    "terra-toolkit": "^1.2.2"
   }
 }
