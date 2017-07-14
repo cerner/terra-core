@@ -31,7 +31,6 @@ exports[`1. Alert with no props should render a default component 1`] = `
             <div
               className="icon">
               <IconAlert
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -58,7 +57,6 @@ exports[`1. Alert with no props should render a default component 1`] = `
             <div
               className="icon">
               <IconAlert
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -114,7 +112,6 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
             <div
               className="icon">
               <IconAlert
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -155,7 +152,6 @@ exports[`2. Dismissible Alert that includes actions section should render an ale
             <div
               className="icon">
               <IconAlert
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -225,7 +221,6 @@ exports[`3. Alert of type alert with text content should render an Alert compone
             <div
               className="icon">
               <IconAlert
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -254,7 +249,6 @@ exports[`3. Alert of type alert with text content should render an Alert compone
             <div
               className="icon">
               <IconAlert
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -312,7 +306,6 @@ exports[`4. Alert of type error with text content should render an Alert compone
             <div
               className="icon">
               <IconError
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -341,7 +334,6 @@ exports[`4. Alert of type error with text content should render an Alert compone
             <div
               className="icon">
               <IconError
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -399,7 +391,6 @@ exports[`5. Alert of type warning with text content should render an Alert compo
             <div
               className="icon">
               <IconWarning
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -428,7 +419,6 @@ exports[`5. Alert of type warning with text content should render an Alert compo
             <div
               className="icon">
               <IconWarning
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -486,7 +476,6 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
             <div
               className="icon">
               <IconRequired
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -515,7 +504,6 @@ exports[`6. Alert of type gap-checking with text content should render an Alert 
             <div
               className="icon">
               <IconRequired
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -650,7 +638,6 @@ exports[`8. Alert of type info with text content should render an Alert componen
             <div
               className="icon">
               <IconInformation
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -679,7 +666,6 @@ exports[`8. Alert of type info with text content should render an Alert componen
             <div
               className="icon">
               <IconInformation
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -737,7 +723,6 @@ exports[`9. Alert of type success with text content should render an Alert compo
             <div
               className="icon">
               <IconSuccess
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -766,7 +751,6 @@ exports[`9. Alert of type success with text content should render an Alert compo
             <div
               className="icon">
               <IconSuccess
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -824,7 +808,6 @@ exports[`10. Alert of type outside records with text content should render an Al
             <div
               className="icon">
               <IconDiamond
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -853,7 +836,6 @@ exports[`10. Alert of type outside records with text content should render an Al
             <div
               className="icon">
               <IconDiamond
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -898,9 +880,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
     alertAction={null}
     customIcon={
       <IconHelp
-        height="1.3333rem"
         viewBox="0 0 48 48"
-        width="1.3333rem"
         xmlns="http://www.w3.org/2000/svg" />
     }
     customStatusColor="orange"
@@ -921,9 +901,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
             <div
               className="icon">
               <IconHelp
-                height="1.3333rem"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -955,9 +933,7 @@ exports[`11. Alert of type custom with custom title and text content should rend
             <div
               className="icon">
               <IconHelp
-                height="1.3333rem"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -1014,7 +990,6 @@ exports[`12. Alert of type info with custom title and HTML content should render
             <div
               className="icon">
               <IconInformation
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -1045,7 +1020,6 @@ exports[`12. Alert of type info with custom title and HTML content should render
             <div
               className="icon">
               <IconInformation
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -1116,7 +1090,6 @@ exports[`13. Alert of type success with an action button text content should ren
             <div
               className="icon">
               <IconSuccess
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -1158,7 +1131,6 @@ exports[`13. Alert of type success with an action button text content should ren
             <div
               className="icon">
               <IconSuccess
-                className="alertIcon"
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -1227,9 +1199,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
     }
     customIcon={
       <IconHelp
-        height="1.3333rem"
         viewBox="0 0 48 48"
-        width="1.3333rem"
         xmlns="http://www.w3.org/2000/svg" />
     }
     customStatusColor="orange"
@@ -1250,9 +1220,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
             <div
               className="icon">
               <IconHelp
-                height="1.3333rem"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
@@ -1306,9 +1274,7 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
             <div
               className="icon">
               <IconHelp
-                height="1.3333rem"
                 viewBox="0 0 48 48"
-                width="1.3333rem"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div

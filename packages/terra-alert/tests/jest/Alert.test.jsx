@@ -171,7 +171,7 @@ describe('11. Alert of type custom with custom title and text content', () => {
   const alertCustomTitle = 'Help!';
   const basicCustomRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -219,7 +219,7 @@ describe('14. Dismissable Alert of type custom with action button, custom title 
   const alertCustomTitle = 'Help!';
   const customActionDismissRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp height="1.3333rem" width="1.3333rem" />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" alertAction={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
     </IntlProvider>
   );
 

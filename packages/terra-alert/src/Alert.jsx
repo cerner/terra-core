@@ -83,21 +83,21 @@ const defaultProps = {
 const getAlertIcon = (type, customIcon) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return (<IconAlert className={cx('alertIcon')} />);
+      return (<IconAlert />);
     case AlertTypes.ERROR:
-      return (<IconError className={cx('alertIcon')} />);
+      return (<IconError />);
     case AlertTypes.WARNING:
-      return (<IconWarning className={cx('alertIcon')} />);
+      return (<IconWarning />);
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
-      return (<IconInformation className={cx('alertIcon')} />);
+      return (<IconInformation />);
     case AlertTypes.SUCCESS:
-      return (<IconSuccess className={cx('alertIcon')} />);
+      return (<IconSuccess />);
     case AlertTypes.GAP_CHECKING:
-      return (<IconRequired className={cx('alertIcon')} />);
+      return (<IconRequired />);
     case AlertTypes.OUTSIDE_RECORDS:
-      return (<IconDiamond className={cx('alertIcon')} />);
+      return (<IconDiamond />);
     case AlertTypes.CUSTOM:
       return customIcon;
     default:

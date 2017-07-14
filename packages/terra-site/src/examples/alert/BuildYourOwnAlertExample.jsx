@@ -165,20 +165,20 @@ class BuildYourOwnAlertExample extends React.Component {
 
     switch (this.state.customIcon) {
       case 'help':
-        customIcon = (<IconHelp style={{ height: '1.3333rem', width: '1.3333rem' }} />);
-        customIconPropStr = 'customIcon={<IconHelp style={{ height: \'1.3333rem\', width: \'1.3333rem\' }} />}';
+        customIcon = (<IconHelp />);
+        customIconPropStr = 'customIcon={<IconHelp />}';
         break;
       case 'critical':
-        customIcon = (<IconCritical style={{ height: '1.3333rem', width: '1.3333rem' }} />);
-        customIconPropStr = 'customIcon={<IconCritical style={{ height: \'1.3333rem\', width: \'1.3333rem\' }} />}';
+        customIcon = (<IconCritical />);
+        customIconPropStr = 'customIcon={<IconCritical />}';
         break;
       case 'overdue':
-        customIcon = (<IconOverDue style={{ height: '1.3333rem', width: '1.3333rem' }} />);
-        customIconPropStr = 'customIcon={<IconOverDue style={{ height: \'1.3333rem\', width: \'1.3333rem\' }} />}';
+        customIcon = (<IconOverDue />);
+        customIconPropStr = 'customIcon={<IconOverDue />}';
         break;
       case 'clock':
-        customIcon = (<IconClock style={{ height: '1.3333rem', width: '1.3333rem' }} />);
-        customIconPropStr = 'customIcon={<IconClock style={{ height: \'1.3333rem\', width: \'1.3333rem\' }} />}';
+        customIcon = (<IconClock />);
+        customIconPropStr = 'customIcon={<IconClock />}';
         break;
       default:
         break;

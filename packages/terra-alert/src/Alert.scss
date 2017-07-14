@@ -23,6 +23,7 @@
 
   .icon {
     flex-shrink: 0;
+    font-size: 1.3333em;
     margin-right: 0.5rem;
   }
 
@@ -161,11 +162,6 @@
 
   .gapChecking .icon {
     color: var(--terra-Alert-gap-checking-title-color);
-  }
-
-  .alertIcon {
-    height: var(--terra-Alert-icon-height);
-    width: var(--terra-Alert-icon-width);
   }
   /* stylelint-enable */
 }

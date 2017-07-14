@@ -2,7 +2,7 @@ import React from 'react';
 import Alert from 'terra-alert';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 
-const alertStartTagStr = '<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customStatusColor="orange" customIcon={<IconHelp style={{ height: \'1.3333rem\', width: \'1.3333rem\' }} />} >';
+const alertStartTagStr = '<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customStatusColor="orange" customIcon={<IconHelp />} >';
 const alertEndTagStr = '</Alert>';
 const alertContentStr = 'This is a <u>custom</u> alert';
 
@@ -20,7 +20,7 @@ const CustomExample = () => (
       </code>
     </div>
     <br />
-    <Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customStatusColor="orange" customIcon={<IconHelp style={{ height: '1.3333rem', width: '1.3333rem' }} />} >
+    <Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customStatusColor="orange" customIcon={<IconHelp />} >
       This is a <u>custom</u> alert
     </Alert>
   </div>
