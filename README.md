@@ -78,7 +78,6 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input) | [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input) | :white_check_mark: |
 | [terra-toggle](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle) | [![NPM version](http://img.shields.io/npm/v/terra-toggle.svg)](https://www.npmjs.org/package/terra-toggle) | :white_check_mark: |
 | [terra-toggle-button](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-button) | [![NPM version](http://img.shields.io/npm/v/terra-toggle-button.svg)](https://www.npmjs.org/package/terra-toggle-button) | :white_check_mark: |
-| [terra-toolkit](https://github.com/cerner/terra-core/tree/master/packages/terra-toolkit) | [![NPM version](http://img.shields.io/npm/v/terra-toolkit.svg)](https://www.npmjs.org/package/terra-toolkit) | :white_check_mark: |
 
 ## Supported Browsers
 

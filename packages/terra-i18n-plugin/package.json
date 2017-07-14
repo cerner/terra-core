@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "babel-jest": "^19.0.0",
-    "terra-toolkit": "^1.0.0"
+    "babel-jest": "^19.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",

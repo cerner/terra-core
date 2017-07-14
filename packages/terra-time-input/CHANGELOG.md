@@ -8,6 +8,8 @@ Unreleased
 ------------------
 ### Changed
 * Converted component to use CSS modules
+* Updated nightwatch test scripts
+* Removed nightwatch.config file
 
 ### Fixed
 * Updated package.json to use rimraf
