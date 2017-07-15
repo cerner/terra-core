@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Change
+* added missing compact css variable
 
 1.1.0 - (July 13, 2017)
 ### Changed
