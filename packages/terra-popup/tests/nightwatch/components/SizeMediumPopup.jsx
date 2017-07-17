@@ -51,7 +51,7 @@ class DimensionPopup extends React.Component {
             onRequestClose={this.handleRequestClose}
             targetRef={this.getButtonNode}
           >
-            <p>This popup is 50x by 50x.</p>
+            <p>This popup is 120h by 320w.</p>
           </Popup>
           <button id="dimension-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
             50x Popup
