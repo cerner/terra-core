@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tether from 'tether';
 
+/**
+ * This is a wrapper element around a Tether implementation.
+ * Additional Tether can be found at http://tether.io/.
+ */
+
 const ATTACHMENT_POSITIONS = [
   'top left',
   'top center',
