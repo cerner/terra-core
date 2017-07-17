@@ -34,7 +34,7 @@
   }
 
   // We need dir='rtl'
-  // https://github.com/cerner/terra-core/pull/598/files#r127254005
+  // https://github.com/vkalinichev/postcss-rtl/issues/15
   [dir='rtl'] .icon.is-bidi {
     transform: scaleX(-1);
   }
