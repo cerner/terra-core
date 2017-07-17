@@ -33,6 +33,8 @@
     }
   }
 
+  // We need dir='rtl'
+  // https://github.com/cerner/terra-core/pull/598/files#r127254005
   [dir='rtl'] .icon.is-bidi {
     transform: scaleX(-1);
   }
