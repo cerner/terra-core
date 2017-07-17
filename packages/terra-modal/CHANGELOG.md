@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Converted component to use CSS modules
+* Custom Props are now added to the modal, not the portal
 
 1.1.0 - (July 13, 2017)
 ------------------

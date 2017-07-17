@@ -135,4 +135,10 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-true`)
       .assert.elementPresent('#modal-scroll-true');
   },
+
+  'custom props': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/custom-props`)
+      .assert.attributeEquals('div[role="document"]', 'id', 'custom-props');
+  },
 };
