@@ -146,4 +146,10 @@ module.exports = {
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal terra-Modal--scrollable');
   },
+
+  'custom props': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/custom-props`)
+      .assert.attributeEquals('div[role="document"]', 'id', 'custom-props');
+  },
 };
