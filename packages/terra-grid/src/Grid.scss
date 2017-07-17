@@ -14,7 +14,7 @@
     flex-grow: 0;
     flex-shrink: 1;
     flex-wrap: wrap;
-    margin-left: calc(-1*var(--terra-Grid-gutter-width));
+    margin-left: calc(-1*var(--terra-grid-gutter-width));
   }
 
   .column {
@@ -23,7 +23,7 @@
     flex-grow: 1;
     flex-shrink: 0;
     max-width: 100%;
-    padding-left: var(--terra-Grid-gutter-width);
+    padding-left: var(--terra-grid-gutter-width);
   }
 
   // Create column classes
