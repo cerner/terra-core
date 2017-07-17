@@ -1,7 +1,6 @@
 {
   "name": "terra-overlay",
   "main": "lib/Overlay.js",
-  "private": true,
   "version": "0.0.0",
   "description": "The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.",
   "repository": {
@@ -23,8 +22,7 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
     "react-intl": "^2.3.0",
-    "terra-props-table": "^0.8.0",
-    "terra-toolkit": "^1.0.0"
+    "terra-props-table": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.5.4",
@@ -52,11 +50,9 @@
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
     "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-overlay node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js",
-    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-overlay node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
-    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-overlay node ./node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
-    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-overlay node ./node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari",
-    "test:remote": "SPECTRE_TEST_SUITE=terra-overlay REMOTE=true node ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js",
-    "test:remote:all": "SPECTRE_TEST_SUITE=terra-overlay REMOTE=true node ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --config tests/nightwatch.conf.js --env chrome-tiny,chrome-small,chrome-medium,chrome-large,chrome-huge,chrome-enormous,firefox-tiny,firefox-small,firefox-medium,firefox-large,firefox-huge,firefox-enormous,ie10-tiny,ie10-small,ie10-medium,ie10-large,ie10-huge,ie10-enormous,ie11-tiny,ie11-small,ie11-medium,ie11-large,ie11-huge,ie11-enormous,edge-tiny,edge-small,edge-medium,edge-large,edge-huge,edge-enormous,safari-tiny,safari-small,safari-medium,safari-large,safari-huge,safari-enormous"
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-overlay node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-overlay node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-overlay node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-overlay node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   }
 }
