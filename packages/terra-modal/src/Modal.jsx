@@ -114,9 +114,9 @@ class Modal extends React.Component {
     return (
       <Portal
         isOpened={isOpen}
-        {...customProps}
       >
         <ModalContent
+          {...customProps}
           closeOnOutsideClick={closeOnOutsideClick}
           ariaLabel={ariaLabel}
           classNameModal={classNameModal}
