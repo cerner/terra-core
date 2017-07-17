@@ -98,7 +98,7 @@ class ButtonGroup extends React.Component {
 
   render() {
     const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...customProps } = this.props;
-    const buttonGroupClassNames = cx(['button-group-button',
+    const buttonGroupClassNames = cx(['button-group',
       customProps.className,
     ]);
 
