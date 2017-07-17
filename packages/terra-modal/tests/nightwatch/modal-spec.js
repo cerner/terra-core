@@ -98,7 +98,8 @@ module.exports = {
 
   'content overflow example': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
+      .assert.elementPresent('#modal-overflow');
   },
 
   'modal is focusable': (browser) => {
@@ -119,16 +120,19 @@ module.exports = {
 
   'isScrollable default value': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/content-overflow`)
+      .assert.elementPresent('#modal-overflow');
   },
 
   'isScrollable={false}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-false`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-false`)
+      .assert.elementPresent('#modal-scroll-false');
   },
 
   'isScrollable={true}': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-true`);
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-true`)
+      .assert.elementPresent('#modal-scroll-true');
   },
 };
