@@ -5,7 +5,7 @@ import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
 import TetherComponent from './_TetherComponent';
-import { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, switchAttachmentToRTL, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset } from './_PopupUtils';
+import PopupUtils from './_PopupUtils';
 import './Popup.scss';
 
 const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
@@ -110,8 +110,8 @@ class Popup extends React.Component {
   }
 
   setArrowPosition(targetBounds, contentBounds) {
-    const isVertical = isVerticalAttachment(this.attachment);
-    const position = arrowPositionFromBounds(targetBounds, contentBounds, isVertical, PopupArrow.arrowSize, PopupContent.cornerSize);
+    const isVertical = PopupUtils.isVerticalAttachment(this.attachment);
+    const position = PopupUtils.arrowPositionFromBounds(targetBounds, contentBounds, isVertical, PopupArrow.arrowSize, PopupContent.cornerSize);
 
     this.contentNode.style.margin = '';
     if (!position) {
@@ -129,9 +129,9 @@ class Popup extends React.Component {
     this.contentNode.setAttribute(PopupContent.positionAttrs[position], 'true');
 
     if (isVertical) {
-      this.arrowNode.style.left = leftOffset(targetBounds, contentBounds, PopupArrow.arrowSize, PopupContent.cornerSize, this.offset, this.attachment);
+      this.arrowNode.style.left = PopupUtils.leftOffset(targetBounds, contentBounds, PopupArrow.arrowSize, PopupContent.cornerSize, this.offset, this.attachment);
     } else {
-      this.arrowNode.style.top = topOffset(targetBounds, contentBounds, PopupArrow.arrowSize, PopupContent.cornerSize);
+      this.arrowNode.style.top = PopupUtils.topOffset(targetBounds, contentBounds, PopupArrow.arrowSize, PopupContent.cornerSize);
     }
   }
 
@@ -167,10 +167,10 @@ class Popup extends React.Component {
     let arrowPosition;
     let contentStyle;
     if (this.props.isArrowDisplayed && this.props.contentAttachment !== 'middle center') {
-      this.offset = getContentOffset(this.attachment, this.props.targetRef(), PopupArrow.arrowSize, PopupContent.cornerSize);
+      this.offset = PopupUtils.getContentOffset(this.attachment, this.props.targetRef(), PopupArrow.arrowSize, PopupContent.cornerSize);
       arrow = <PopupArrow className={this.props.classNameArrow} refCallback={this.setArrowNode} />;
-      arrowPosition = primaryArrowPosition(this.attachment);
-      contentStyle = primaryMarginStyle(this.attachment, PopupContent.popupMargin);
+      arrowPosition = PopupUtils.primaryArrowPosition(this.attachment);
+      contentStyle = PopupUtils.primaryMarginStyle(this.attachment, PopupContent.popupMargin);
     }
 
     return (
@@ -227,10 +227,10 @@ class Popup extends React.Component {
       let bidiContentAttachment = contentAttachment;
       this.isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
       if (this.isRTL) {
-        bidiContentAttachment = switchAttachmentToRTL(bidiContentAttachment);
+        bidiContentAttachment = PopupUtils.switchAttachmentToRTL(bidiContentAttachment);
       }
 
-      this.attachment = parseStringPair(bidiContentAttachment);
+      this.attachment = PopupUtils.parseStringPair(bidiContentAttachment);
 
       const boundingFrame = boundingRef ? boundingRef() : undefined;
       const popupContent = this.createPopupContent(boundingFrame);
@@ -253,7 +253,7 @@ class Popup extends React.Component {
           isEnabled
           onRepositioned={this.handleTetherRepositioned}
           targetRef={targetRef}
-          targetAttachment={mirrorAttachment(bidiContentAttachment)}
+          targetAttachment={PopupUtils.mirrorAttachment(bidiContentAttachment)}
         />
       );
 

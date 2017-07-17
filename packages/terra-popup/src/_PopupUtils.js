@@ -118,4 +118,17 @@ const topOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset) => {
   return (`${offset}px`);
 };
 
-export { parseStringPair, isVerticalAttachment, primaryArrowPosition, primaryMarginStyle, switchAttachmentToRTL, mirrorAttachment, getContentOffset, arrowPositionFromBounds, leftOffset, topOffset };
+const PopupUtils = {
+  parseStringPair,
+  isVerticalAttachment,
+  primaryArrowPosition,
+  primaryMarginStyle,
+  switchAttachmentToRTL,
+  mirrorAttachment,
+  getContentOffset,
+  arrowPositionFromBounds,
+  leftOffset,
+  topOffset
+};
+
+export default PopupUtils;
