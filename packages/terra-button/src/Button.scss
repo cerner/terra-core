@@ -32,21 +32,21 @@
   .button {
     @include terra-text-align-center;
 
-    border-radius: var(--terra-Button-borderRadius);
+    border-radius: var(--terra-button-border-radius);
     border-style: solid;
-    border-width: var(--terra-Button-borderWidth);
+    border-width: var(--terra-button-border-width);
     cursor: pointer;
     display: inline-block;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: map-get($terra-button-font-sizes, medium);
-    font-weight: var(--terra-Button-fontWeight);
+    font-weight: var(--terra-button-font-weight);
     line-height: 1.429; // 20px when html font size is computed to 14px
-    padding-bottom: var(--terra-Button-paddingBottom);
-    padding-left: var(--terra-Button-paddingLeft);
-    padding-right: var(--terra-Button-paddingRight);
-    padding-top: var(--terra-Button-paddingTop);
+    padding-bottom: var(--terra-button-padding-bottom);
+    padding-left: var(--terra-button-padding-left);
+    padding-right: var(--terra-button-padding-right);
+    padding-top: var(--terra-button-padding-top);
     text-decoration: none;
-    text-transform: var(--terra-Button-textTransform);
+    text-transform: var(--terra-button-text-transform);
     touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
     vertical-align: middle;
@@ -117,7 +117,7 @@
   }
 
   .compact {
-    padding-bottom: var(--terra-Button-paddingTop--compact);
-    padding-top: var(--terra-Button-paddingTop--bottom);
+    padding-bottom: var(--terra-button-padding-bottom-compact);
+    padding-top: var(--terra-button-padding-top-compact);
   }
 }
