@@ -25,6 +25,7 @@ import ModalExamples from './examples/modal/Index';
 import ModalManagerExamples from './examples/modal-manager/Index';
 import OverlayExamples from './examples/overlay/Index';
 import PopupExamples from './examples/popup/Index';
+import ProfileImageExamples from './examples/profile-image/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SearchFieldExamples from './examples/search-field/Index';
@@ -53,6 +54,7 @@ import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes'
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
+import ProfileImageTestRoutes from 'terra-profile-image/tests/nightwatch/ProfileImageTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import LoadingOverlayTestRoutes from 'terra-overlay/tests/nightwatch/LoadingOverlay/LoadingOverlayTestRoutes';
@@ -102,6 +104,7 @@ ReactDOM.render((
       <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="overlay" component={OverlayExamples} />
       <Route path="popup" component={PopupExamples} />
+      <Route path="profile-image" component={ProfileImageExamples} />
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
@@ -150,5 +153,6 @@ ReactDOM.render((
     {HeadingTestRoutes}
     {TextTestRoutes}
     {SlideGroupTestRoutes}
+    {ProfileImageTestRoutes}
   </Router>
 ), document.getElementById('root'));
