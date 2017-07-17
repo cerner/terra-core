@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added margin to body
 
 1.1.0 - (July 13, 2017)
 ------------------
