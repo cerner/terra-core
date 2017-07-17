@@ -14,18 +14,18 @@ module.exports = {
   'Displays a default grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/grid-tests/default`)
-      .waitForElementPresent('#grid', 1000);
+      .assert.elementPresent('#grid');
   },
 
   'Displays a responsive grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/grid-tests/responsive`)
-      .waitForElementPresent('#grid', 1000);
+      .assert.elementPresent('#grid');
   },
 
   'Displays a nested grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/grid-tests/nested`)
-      .waitForElementPresent('#grid', 1000);
+      .assert.elementPresent('#grid');
   },
 };
