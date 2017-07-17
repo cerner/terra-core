@@ -94,7 +94,7 @@ module.exports = {
       .waitForElementNotPresent('.test-content', 1000)
       .click('#bounded-button')
       .waitForElementPresent('.test-content', 1000)
-      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 350px;');
+      .expect.element('.test-content').to.have.attribute('style').which.equals('height: 120px; width: 350px;');
   },
 
   'boundingRef prop && disableHeader prop': (browser) => {
