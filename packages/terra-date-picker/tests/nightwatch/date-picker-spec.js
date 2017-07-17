@@ -1,5 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-disable no-unused-expressions*/
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -85,9 +86,20 @@ module.exports = {
   'Displays the calendar button with a height that matches the input ': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
 
-    browser.getCssProperty('.terra-DatePicker-input', 'height', (result) => {
-      browser.assert.cssProperty('.terra-DatePicker-button', 'height', result.value);
+    browser.getCssProperty('.terra-DatePicker-input', 'height', (inputResult) => {
+      browser.getCssProperty('.terra-DatePicker-button', 'height', (buttonResult) => {
+        browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
+      });
     });
   },
-};
 
+  'Triggers onChange when a date value is cleared': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-change`);
+
+    browser.setValue('input[name="terra-date-date-input-onchange"]', '07/12/2017');
+    browser.expect.element('h3').text.to.contain('2017-07-12');
+
+    browser.clearValue('input[name="terra-date-date-input-onchange"]');
+    browser.expect.element('h3').text.to.not.contain('2017-07-12');
+  },
+};

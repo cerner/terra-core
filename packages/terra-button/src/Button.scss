@@ -2,117 +2,122 @@
 @import './variables';
 @import './mixins';
 
-// Button Component
-// ====================================================
+:local {
+  /* stylelint-disable selector-class-pattern  */
 
-// html input[type='button'].terra-Button selector used to
-// prevent a WebKit bug destroys native `audio` and `video` controls
-// in Android 4. More info:
-// https://github.com/necolas/normalize.css/issues/20
-// https://code.google.com/p/android/issues/detail?id=34301
-// appearance: button; set to correct the inability to style
-// clickable types in iOS and Safari.
-// Appearance needs to be applied only to button/input elements, as
-// applying to anchor element will cause render issue.
-// More info:
-// https://github.com/necolas/normalize.css/issues/566
-// https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
-// stylelint-disable selector-no-qualifying-type
-button.terra-Button,
-html input[type='button'].terra-Button,
-input[type='reset'].terra-Button,
-input[type='submit'].terra-Button {
-  appearance: button;  // autoprefix fix into -webkit-appearance
-}
-// stylelint-enable selector-no-qualifying-type
+  // Button Component
+  // ====================================================
 
-.terra-Button {
-  @include terra-padding-horizontal($terra-button-padding-left, $terra-button-padding-right);
-  @include terra-text-align-center;
+  // html input[type='button'].terra-Button selector used to
+  // prevent a WebKit bug destroys native `audio` and `video` controls
+  // in Android 4. More info:
+  // https://github.com/necolas/normalize.css/issues/20
+  // https://code.google.com/p/android/issues/detail?id=34301
+  // appearance: button; set to correct the inability to style
+  // clickable types in iOS and Safari.
+  // Appearance needs to be applied only to button/input elements, as
+  // applying to anchor element will cause render issue.
+  // More info:
+  // https://github.com/necolas/normalize.css/issues/566
+  // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
+  // stylelint-disable selector-no-qualifying-type
+  button.button,
+  html input[type='button'].button,
+  input[type='reset'].button,
+  input[type='submit'].button {
+    appearance: button;  // autoprefix fix into -webkit-appearance
+  }
+  // stylelint-enable selector-no-qualifying-type
 
-  border-radius: 0.25em;
-  border-style: solid;
-  border-width: $terra-button-border-width;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: map-get($terra-button-font-sizes, medium);
-  font-weight: $terra-button-font-weight;
-  line-height: 1.429; // 20px when html font size is computed to 14px
-  padding-bottom: $terra-button-padding-bottom;
-  padding-top: $terra-button-padding-top;
-  text-decoration: none;
-  text-transform: $terra-button-text-transform;
-  touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
-  user-select: none; // Prevent text selection on buttons on mobile devices
-  vertical-align: middle;
-  white-space: normal;
+  .button {
+    @include terra-text-align-center;
 
-  // Remove the inner border and padding in Firefox.
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+    border-radius: var(--terra-button-border-radius);
+    border-style: solid;
+    border-width: var(--terra-button-border-width);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: map-get($terra-button-font-sizes, medium);
+    font-weight: var(--terra-button-font-weight);
+    line-height: 1.429; // 20px when html font size is computed to 14px
+    padding-bottom: var(--terra-button-padding-bottom);
+    padding-left: var(--terra-button-padding-left);
+    padding-right: var(--terra-button-padding-right);
+    padding-top: var(--terra-button-padding-top);
+    text-decoration: none;
+    text-transform: var(--terra-button-text-transform);
+    touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+    user-select: none; // Prevent text selection on buttons on mobile devices
+    vertical-align: middle;
+    white-space: normal;
+
+    // Remove the inner border and padding in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    // Restore the focus styles unset by the previous rule.
+    &:-moz-focusring {
+      outline: 1px dotted #1c1f21;
+      -moz-outline-radius: 0.25em;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      cursor: default;
+      opacity: 0.7;
+      pointer-events: none; // prevent pointer interaction for anchor elements
+    }
   }
 
-  // Restore the focus styles unset by the previous rule.
-  &:-moz-focusring {
-    outline: 1px dotted #1c1f21;
-    -moz-outline-radius: 0.25em;
+  // Button modifiers
+  .default {
+    @include terra-button-color($terra-button-default-color-scheme);
   }
 
-  &:disabled,
-  &.is-disabled {
-    cursor: default;
-    opacity: 0.7;
-    pointer-events: none; // prevent pointer interaction for anchor elements
+  .primary {
+    @include terra-button-color($terra-button-primary-color-scheme);
   }
-}
 
-// Button modifiers
-.terra-Button--default {
-  @include terra-button-color($terra-button-default-color-scheme);
-}
+  .secondary {
+    @include terra-button-secondary($terra-button-secondary-color-scheme);
+  }
 
-.terra-Button--primary {
-  @include terra-button-color($terra-button-primary-color-scheme);
-}
+  .link {
+    @include terra-button-link($terra-button-link-color-scheme);
+  }
 
-.terra-Button--secondary {
-  @include terra-button-secondary($terra-button-secondary-color-scheme);
-}
+  // Button size modifiers
+  .tiny {
+    font-size: map-get($terra-button-font-sizes, tiny);
+  }
 
-.terra-Button--link {
-  @include terra-button-link($terra-button-link-color-scheme);
-}
+  .small {
+    font-size: map-get($terra-button-font-sizes, small);
+  }
 
-// Button size modifiers
-.terra-Button--tiny {
-  font-size: map-get($terra-button-font-sizes, tiny);
-}
+  .medium {
+    font-size: map-get($terra-button-font-sizes, medium);
+  }
 
-.terra-Button--small {
-  font-size: map-get($terra-button-font-sizes, small);
-}
+  .large {
+    font-size: map-get($terra-button-font-sizes, large);
+  }
 
-.terra-Button--medium {
-  font-size: map-get($terra-button-font-sizes, medium);
-}
+  .huge {
+    font-size: map-get($terra-button-font-sizes, huge);
+  }
 
-.terra-Button--large {
-  font-size: map-get($terra-button-font-sizes, large);
-}
+  // Button style modifiers
+  .block {
+    display: block;
+    width: 100%;
+  }
 
-.terra-Button--huge {
-  font-size: map-get($terra-button-font-sizes, huge);
-}
-
-// Button style modifiers
-.terra-Button--block {
-  display: block;
-  width: 100%;
-}
-
-.terra-Button--compact {
-  padding-bottom: $terra-button-compact-padding-top;
-  padding-top: $terra-button-compact-padding-bottom;
+  .compact {
+    padding-bottom: var(--terra-button-padding-bottom-compact);
+    padding-top: var(--terra-button-padding-top-compact);
+  }
 }

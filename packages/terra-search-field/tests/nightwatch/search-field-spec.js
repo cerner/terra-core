@@ -1,5 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -14,17 +14,17 @@ module.exports = {
   'Displays a search field with search button': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/default`)
-      .assert.elementPresent('.terra-SearchField')
-      .assert.elementPresent('.terra-SearchField-button')
-      .assert.attributeEquals('.terra-SearchField-input', 'placeholder', '');
+      .assert.elementPresent('#searchfield')
+      .assert.elementPresent('#searchfield button')
+      .assert.attributeEquals('#searchfield input', 'placeholder', '');
   },
 
   'Displays a search field with a placeholder value of "Search Text"': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/placeholder`)
-      .assert.elementPresent('.terra-SearchField')
-      .assert.elementPresent('.terra-SearchField-button')
-      .assert.attributeEquals('.terra-SearchField-input', 'placeholder', 'Search Text');
+      .assert.elementPresent('#searchfield')
+      .assert.elementPresent('#searchfield button')
+      .assert.attributeEquals('#searchfield input', 'placeholder', 'Search Text');
   },
 
   'Displays a search field that handles search callbacks': (browser) => {
@@ -39,7 +39,7 @@ module.exports = {
 
     browser
       .setValue('input[type=search]', 'a')
-      .click('.terra-SearchField-button')
+      .click('#searchfield button')
       .expect.element('#search-callback-text').text.to.equal('Search Text: Sea').before(250);
   },
 
@@ -57,24 +57,26 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/minimum-length`)
       .setValue('input[type=search]', 'Test')
-      .click('.terra-SearchField-button')
+      .click('#searchfieldWithMinimumLength button')
       .expect.element('#search-callback-text').text.to.equal('Search Text:');
 
     browser
       .setValue('input[type=search]', 's')
-      .click('.terra-SearchField-button')
+      .click('#searchfieldWithMinimumLength button')
       .expect.element('#search-callback-text').text.to.equal('Search Text: Tests');
   },
 
   'Displays the search button with a height that matches the input ': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/default`)
-      .assert.elementPresent('.terra-SearchField')
-      .assert.elementPresent('.terra-SearchField-button')
-      .assert.attributeEquals('.terra-SearchField-input', 'placeholder', '');
+      .assert.elementPresent('#searchfield')
+      .assert.elementPresent('#searchfield button')
+      .assert.attributeEquals('#searchfield input', 'placeholder', '');
 
-    browser.getCssProperty('.terra-SearchField-input', 'height', (result) => {
-      browser.assert.cssProperty('.terra-SearchField-button', 'height', result.value);
+    browser.getCssProperty('#searchfield input', 'height', (inputResult) => {
+      browser.getCssProperty('#searchfield button', 'height', (buttonResult) => {
+        browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
+      });
     });
   },
 };

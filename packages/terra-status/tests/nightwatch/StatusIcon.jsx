@@ -6,7 +6,7 @@ const icon = (<svg className="terra-Icon" height="4em" width="4em" viewBox="0 0 
 </svg>);
 
 const StatusIcon = () => (
-  <Status color="#ff0000">{icon}</Status>
+  <Status id="statusIcon" color="#ff0000">{icon}</Status>
 );
 
 export default StatusIcon;

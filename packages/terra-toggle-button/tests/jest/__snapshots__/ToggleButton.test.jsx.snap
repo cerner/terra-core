@@ -1,17 +1,17 @@
 exports[`ToggleButton should render a default toggle-button 1`] = `
 <div
-  class="terra-ToggleButton">
+  class="button">
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="terra-Button terra-Button--default"
+    class="button default"
     type="button">
     <div
-      class="terra-Arrange">
+      class="arrange">
       <div
-        class="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+        class="fit center">
         <span
-          class="terra-ToggleButton-icon">
+          class="icon">
           <svg
             aria-hidden="true"
             class="terra-Icon is-bidi"
@@ -27,36 +27,36 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
         </span>
       </div>
       <div
-        class="terra-Arrange-fill terra-Arrange-fill--center">
+        class="fill center">
         <span
-          class="terra-ToggleButton-buttonText">
+          class="button-text">
           Show
         </span>
       </div>
       <div
-        class="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+        class="fit center" />
     </div>
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggle" />
+    class="toggle" />
 </div>
 `;
 
 exports[`ToggleButton should render an animated toggle-button 1`] = `
 <div
-  class="terra-ToggleButton">
+  class="button">
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="terra-Button terra-Button--default"
+    class="button default"
     type="button">
     <div
-      class="terra-Arrange">
+      class="arrange">
       <div
-        class="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+        class="fit center">
         <span
-          class="terra-ToggleButton-icon">
+          class="icon">
           <svg
             aria-hidden="true"
             class="terra-Icon is-bidi"
@@ -72,28 +72,25 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
         </span>
       </div>
       <div
-        class="terra-Arrange-fill terra-Arrange-fill--center">
+        class="fill center">
         <span
-          class="terra-ToggleButton-buttonText">
+          class="button-text">
           Show
         </span>
       </div>
       <div
-        class="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+        class="fit center" />
     </div>
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggle is-animated">
+    class="toggle">
     <div
-      class="terra-Toggle-content">
-      <div
-        aria-hidden="false"
-        class="rah-static"
-        style="height:0px;overflow:hidden;">
-        <div>
-          Test
-        </div>
+      aria-hidden="false"
+      class="rah-static"
+      style="height:0px;overflow:hidden;">
+      <div>
+        Test
       </div>
     </div>
   </div>
@@ -102,15 +99,15 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
 
 exports[`ToggleButton should render an icon only toggle-button 1`] = `
 <div
-  class="terra-ToggleButton">
+  class="button">
   <button
     aria-disabled="false"
     aria-expanded="false"
     aria-label="Show"
-    class="terra-Button terra-Button--default"
+    class="button default"
     type="button">
     <span
-      class="terra-ToggleButton-icon">
+      class="icon">
       <svg
         aria-hidden="true"
         class="terra-Icon is-bidi"
@@ -127,24 +124,24 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
   </button>
   <div
     aria-hidden="true"
-    class="terra-Toggle" />
+    class="toggle" />
 </div>
 `;
 
 exports[`ToggleButton should render an initially open toggle-button 1`] = `
 <div
-  class="terra-ToggleButton is-open">
+  class="button is-open">
   <button
     aria-disabled="false"
     aria-expanded="true"
-    class="terra-Button terra-Button--default"
+    class="button default"
     type="button">
     <div
-      class="terra-Arrange">
+      class="arrange">
       <div
-        class="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+        class="fit center">
         <span
-          class="terra-ToggleButton-icon">
+          class="icon">
           <svg
             aria-hidden="true"
             class="terra-Icon is-bidi"
@@ -160,19 +157,19 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
         </span>
       </div>
       <div
-        class="terra-Arrange-fill terra-Arrange-fill--center">
+        class="fill center">
         <span
-          class="terra-ToggleButton-buttonText">
+          class="button-text">
           Show
         </span>
       </div>
       <div
-        class="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+        class="fit center" />
     </div>
   </button>
   <div
     aria-hidden="false"
-    class="terra-Toggle">
+    class="toggle">
     Test
   </div>
 </div>
@@ -194,7 +191,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
   isIconOnly={false}
   isInitiallyOpen={false}>
   <div
-    className="terra-ToggleButton is-open">
+    className="button is-open">
     <Button
       aria-expanded={true}
       isBlock={false}
@@ -207,7 +204,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       <button
         aria-disabled={false}
         aria-expanded={true}
-        className="terra-Button terra-Button--default"
+        className="button default"
         disabled={false}
         onClick={[Function]}
         type="button">
@@ -215,13 +212,13 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           align="center"
           fill={
             <span
-              className="terra-ToggleButton-buttonText">
+              className="button-text">
               Show
             </span>
           }
           fitStart={
             <span
-              className="terra-ToggleButton-icon">
+              className="icon">
               <IconChevronRight
                 className=""
                 data-name="Layer 1"
@@ -231,11 +228,11 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
             </span>
           }>
           <div
-            className="terra-Arrange">
+            className="arrange">
             <div
-              className="terra-Arrange-fitStart terra-Arrange-fitStart--center">
+              className="fit center">
               <span
-                className="terra-ToggleButton-icon">
+                className="icon">
                 <IconChevronRight
                   className=""
                   data-name="Layer 1"
@@ -270,14 +267,14 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
               </span>
             </div>
             <div
-              className="terra-Arrange-fill terra-Arrange-fill--center">
+              className="fill center">
               <span
-                className="terra-ToggleButton-buttonText">
+                className="button-text">
                 Show
               </span>
             </div>
             <div
-              className="terra-Arrange-fitEnd terra-Arrange-fitEnd--center" />
+              className="fit center" />
           </div>
         </Arrange>
       </button>
@@ -287,7 +284,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       isOpen={true}>
       <div
         aria-hidden={false}
-        className="terra-Toggle">
+        className="toggle">
         Test
       </div>
     </Toggle>
@@ -297,7 +294,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
 
 exports[`ToggleButton should set icon prop correctly 1`] = `
 <div
-  className="terra-ToggleButton">
+  className="button">
   <Button
     aria-expanded={false}
     isBlock={false}
@@ -311,13 +308,13 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
       align="center"
       fill={
         <span
-          className="terra-ToggleButton-buttonText">
+          className="button-text">
           Show
         </span>
       }
       fitStart={
         <span
-          className="terra-ToggleButton-icon">
+          className="icon">
           <IconChevronRight
             className=""
             data-name="Layer 1"
@@ -337,7 +334,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
 
 exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
 <div
-  className="terra-ToggleButton">
+  className="button">
   <Button
     aria-expanded={false}
     isBlock={false}
@@ -351,13 +348,13 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
       align="center"
       fill={
         <span
-          className="terra-ToggleButton-buttonText">
+          className="button-text">
           Show
         </span>
       }
       fitStart={
         <span
-          className="terra-ToggleButton-icon">
+          className="icon">
           <IconCaretRight
             className=""
             isBidi={true}

@@ -1,6 +1,8 @@
-@import '~terra-mixins';
-
-.terra-Status {
-  @include terra-border-style-start(solid);
-  @include terra-border-width-start(5px);
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .status {
+    border-left: solid;
+    border-width: 5px;
+  }
 }
+/* stylelint-enable */

@@ -5,7 +5,7 @@ const simpleText = <div style={{ padding: '5px' }}>Sample text</div>;
 
 const StatusDefault = () => (
   <div>
-    <Status color="#ff0000">{simpleText}</Status>
+    <Status id="status" color="#ff0000">{simpleText}</Status>
   </div>
 );
 

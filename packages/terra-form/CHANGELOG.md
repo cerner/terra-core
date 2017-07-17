@@ -3,8 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+1.1.0 - (July 13, 2017)
+------------------
 ### Added
 * Add missing props-table
+* Updated nightwatch test scripts
+* Removed nightwatch.config file
 
 ### Breaking Changes
 

@@ -1,4 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -144,5 +145,11 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/scrollable-true`)
       .waitForElementPresent('.terra-Modal', 1000)
       .expect.element('.terra-Modal').to.have.attribute('class').which.equals('terra-Modal terra-Modal--scrollable');
+  },
+
+  'custom props': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-tests/custom-props`)
+      .assert.attributeEquals('div[role="document"]', 'id', 'custom-props');
   },
 };

@@ -1,70 +1,121 @@
 // Variables
 // ==========================
+:root {
+  --terra-button-child-margin: 0.357em;
 
-$terra-button-child-margin: 0.357em;
+  --terra-button-border-radius: 0.25em;
+  --terra-button-border-width: 1px;
+  --terra-button-font-weight: 400;
+  --terra-button-padding-top: 0.286em;
+  --terra-button-padding-right: 0.714em;
+  --terra-button-padding-bottom: 0.286em;
+  --terra-button-padding-left: 0.714em;
 
-$terra-button-border-width: 1px;
-$terra-button-font-weight: 400;
+  --terra-button-padding-top-compact: 0;
+  --terra-button-padding-bottom-compact: 0;
 
-$terra-button-padding-top: 0.286em;
-$terra-button-padding-right: 0.714em;
-$terra-button-padding-bottom: 0.286em;
-$terra-button-padding-left: 0.714em;
+  --terra-button-text-transform: none;
 
-$terra-button-compact-padding-top: 0;
-$terra-button-compact-padding-bottom: 0;
+  // Font Sizes
+  --terra-button-font-size-tiny: 0.5rem;
+  --terra-button-font-size-small: 0.8rem;
+  --terra-button-font-size-medium: 1rem;
+  --terra-button-font-size-large: 1.4rem;
+  --terra-button-font-size-huge: 1.7rem;
 
-$terra-button-text-transform: none;
+  // Default Color Scheme
+  --terra-button-active-background-color-default: #4e5558;
+  --terra-button-active-border-color-default: #4e5558;
+  --terra-button-active-color-default: #fff;
+  --terra-button-background-color-default: #d3d4d5;
+  --terra-button-border-color-default: #bcbfc0;
+  --terra-button-color-default: #383f42;
+  --terra-button-disabled-background-color-default: #e8e9ea;
+  --terra-button-disabled-border-color-default: #d3d4d5;
+  --terra-button-disabled-color-default: #909496;
+  --terra-button-hover-background-color-default: #bcbfc0;
+  --terra-button-hover-color-default: #222a2e;
+
+  // Primary Color Scheme
+  --terra-button-active-background-color-primary: #004c76;
+  --terra-button-active-border-color-primary: #383f42;
+  --terra-button-active-color-primary: #fff;
+  --terra-button-background-color-primary: #007cc3;
+  --terra-button-border-color-primary: #0065a3;
+  --terra-button-color-primary: #fff;
+  --terra-button-disabled-background-color-primary: #cce9f9;
+  --terra-button-disabled-border-color-primary: #a6d9f4;
+  --terra-button-disabled-color-primary: #909496;
+  --terra-button-hover-background-color-primary: #0065a3;
+  --terra-button-hover-color-primary: #fff;
+
+  // Secondary Color Scheme
+  --terra-button-active-background-color-secondary: #4e5558;
+  --terra-button-active-border-color-secondary: #4e5558;
+  --terra-button-active-color-secondary: #fff;
+  --terra-button-border-color-secondary: #bcbfc0;
+  --terra-button-color-secondary: #4e5558;
+  --terra-button-disabled-border-color-secondary: #d3d4d5;
+  --terra-button-disabled-color-secondary: #909496;
+  --terra-button-hover-background-color-secondary: #bcbfc0;
+  --terra-button-hover-color-secondary: #222a2e;
+
+  // link
+  --terra-button-color-link: #0065a3;
+  --terra-button-active-color-link: darken(#0065a3, 10%);
+  --terra-button-disabled-color-link: #909496;
+}
 
 $terra-button-default-color-scheme: (
-  active-background-color: #4e5558,
-  active-border-color: #4e5558,
-  active-color: #fff,
-  background-color: #d3d4d5,
-  border-color: #bcbfc0,
-  color: #383f42,
-  disabled-background-color: #e8e9ea,
-  disabled-border-color: #d3d4d5,
-  disabled-color: #909496,
-  hover-background-color: #bcbfc0,
-  hover-color: #222a2e
+  active-background-color: var(--terra-button-active-background-color-default),
+  active-border-color: var(--terra-button-active-border-color-default),
+  active-color: var(--terra-button-active-color-default),
+  background-color: var(--terra-button-background-color-default),
+  border-color: var(--terra-button-border-color-default),
+  color: var(--terra-button-color-default),
+  disabled-background-color: var(--terra-button-disabled-background-color-default),
+  disabled-border-color: var(--terra-button-disabled-border-color-default),
+  disabled-color: var(--terra-button-disabled-color-default),
+  hover-background-color: var(--terra-button-hover-background-color-default),
+  hover-color: var(--terra-button-hover-color-default)
 );
 
 $terra-button-primary-color-scheme: (
-  active-background-color: #004c76,
-  active-border-color: #383f42,
-  active-color: #fff,
-  background-color: #007cc3,
-  border-color: #0065a3,
-  color: #fff,
-  disabled-background-color: #cce9f9,
-  disabled-border-color: #a6d9f4,
-  disabled-color: #909496,
-  hover-background-color: #0065a3,
-  hover-color: #fff
+  active-background-color: var(--terra-button-active-background-color-primary),
+  active-border-color: var(--terra-button-active-border-color-primary),
+  active-color: var(--terra-button-active-color-primary),
+  background-color: var(--terra-button-background-color-primary),
+  border-color: var(--terra-button-border-color-primary),
+  color: var(--terra-button-color-primary),
+  disabled-background-color: var(--terra-button-disabled-background-color-primary),
+  disabled-border-color: var(--terra-button-disabled-border-color-primary),
+  disabled-color: var(--terra-button-disabled-color-primary),
+  hover-background-color: var(--terra-button-hover-background-color-primary),
+  hover-color: var(--terra-button-hover-color-primary)
 );
 
 $terra-button-secondary-color-scheme: (
-  active-background-color: #4e5558,
-  active-border-color: #4e5558,
-  active-color: #fff,
-  border-color: #bcbfc0,
-  color: #4e5558,
-  disabled-border-color: #d3d4d5,
-  disabled-color: #909496,
-  hover-background-color: #bcbfc0,
-  hover-color: #222a2e
+  active-background-color: var(--terra-button-active-background-color-secondary),
+  active-border-color: var(--terra-button-active-border-color-secondary),
+  active-color: var(--terra-button-active-color-secondary),
+  border-color: var(--terra-button-border-color-secondary),
+  color: var(--terra-button-color-secondary),
+  disabled-border-color: var(--terra-button-disabled-border-color-secondary),
+  disabled-color: var(--terra-button-disabled-color-secondary),
+  hover-background-color: var(--terra-button-hover-background-color-secondary),
+  hover-color: var(--terra-button-hover-color-secondary)
 );
 
 $terra-button-link-color-scheme: (
-  color: #0065a3,
-  disabled-color: #909496,
+  color: var(--terra-button-color-link),
+  active-color: var(--terra-button-active-color-link),
+  disabled-color: var(--terra-button-disabled-color-link),
 );
 
 $terra-button-font-sizes: (
-  tiny: 0.5rem,
-  small: 0.8rem,
-  medium: 1rem,
-  large: 1.4rem,
-  huge: 1.7rem
+  tiny: var(--terra-button-font-size-tiny),
+  small: var(--terra-button-font-size-small),
+  medium: var(--terra-button-font-size-medium),
+  large: var(--terra-button-font-size-large),
+  huge: var(--terra-button-font-size-huge)
 );

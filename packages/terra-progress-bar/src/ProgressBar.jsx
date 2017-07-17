@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './ProgressBar.scss';
+import styles from './ProgressBar.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -35,9 +37,9 @@ const ProgressBar = ({
   max,
   ...customProps
 }) => {
-  const classes = classNames([
-    'terra-ProgressBar',
-    { [`terra-ProgressBar--${heightSize}`]: heightSize },
+  const classes = cx([
+    'progress-bar',
+    heightSize,
     customProps.className,
   ]);
 

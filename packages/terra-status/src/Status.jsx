@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './Status.scss';
+import styles from './Status.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -15,17 +17,11 @@ const propTypes = {
   color: PropTypes.string,
 };
 
-const Status = ({ color, children, ...customProps }) => {
-  const statusClassNames = classNames(
-    'terra-Status',
-    { [`${customProps.className}`]: customProps.className },
-  );
-  return (
-    <div {...customProps} style={{ borderColor: color }} className={statusClassNames} >
-      {children}
-    </div>
-  );
-};
+const Status = ({ color, children, ...customProps }) => (
+  <div {...customProps} style={{ borderColor: color }} className={cx('status', customProps.className)} >
+    {children}
+  </div>
+);
 
 Status.propTypes = propTypes;
 

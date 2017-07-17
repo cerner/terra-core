@@ -1,5 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -13,65 +13,65 @@ module.exports = {
 
   'Displays a default progress bar': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/default`)
-      .waitForElementPresent('.terra-ProgressBar', 1000)
-      .expect.element('.terra-ProgressBar').to.have.attribute('class').which.contains('terra-ProgressBar');
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/default`); // Browser computes #304FFE to rgba(48, 79, 254, 1);
   },
 
   'Displays tiny progress bar example': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`)
-      .waitForElementPresent('.terra-ProgressBar--tiny', 1000)
-      .expect.element('.terra-ProgressBar--tiny').to.have.attribute('class').which.contains('terra-ProgressBar terra-ProgressBar--tiny');
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`);
+    browser.getCssProperty('#progressbarTiny', 'height', (result) => {
+      browser.assert.equal(Math.round(parseFloat(result.value)), 7);
+    });
   },
 
   'Displays small progress bar example': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`)
-      .waitForElementPresent('.terra-ProgressBar--small', 1000)
-      .expect.element('.terra-ProgressBar--small').to.have.attribute('class').which.contains('terra-ProgressBar terra-ProgressBar--small');
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`);
+    browser.getCssProperty('#progressbarSmall', 'height', (result) => {
+      browser.assert.equal(Math.round(parseFloat(result.value)), 11);
+    });
   },
 
   'Displays medium progress bar example': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`)
-      .waitForElementPresent('.terra-ProgressBar--medium', 1000)
-      .expect.element('.terra-ProgressBar--medium').to.have.attribute('class').which.contains('terra-ProgressBar terra-ProgressBar--medium');
+      .getCssProperty('#progressbarMedium', 'height', (result3) => {
+        browser.assert.equal(Math.round(parseFloat(result3.value)), 14);
+      });
   },
 
   'Displays large progress bar example': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`)
-      .waitForElementPresent('.terra-ProgressBar--large', 1000)
-      .expect.element('.terra-ProgressBar--large').to.have.attribute('class').which.contains('terra-ProgressBar terra-ProgressBar--large');
+      .getCssProperty('#progressbarLarge', 'height', (result3) => {
+        browser.assert.equal(Math.round(parseFloat(result3.value)), 20);
+      });
   },
 
   'Displays huge progress bar example': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/size`)
-      .waitForElementPresent('.terra-ProgressBar--huge', 1000)
-      .expect.element('.terra-ProgressBar--huge').to.have.attribute('class').which.contains('terra-ProgressBar terra-ProgressBar--huge');
+      .getCssProperty('#progressbarHuge', 'height', (result3) => {
+        browser.assert.equal(Math.round(parseFloat(result3.value)), 24);
+      });
   },
 
   'Displays orange progress bar example': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/color`)
-      .waitForElementPresent('.terra-ProgressBar[color="Orange"]', 1000)
-      .expect.element('.terra-ProgressBar[color="Orange"]').to.have.attribute('color').which.contains('Orange');
+      .expect.element('#progressbarWithNamedColor').to.have.attribute('color').which.contains('Orange');
   },
 
   'Displays #8ccc62 progress bar example': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/color`)
-      .waitForElementPresent('.terra-ProgressBar[color="#8ccc62"]', 1000)
-      .expect.element('.terra-ProgressBar[color="#8ccc62"]').to.have.attribute('color').which.contains('#8ccc62');
+      .expect.element('#progressbarWithHexColor').to.have.attribute('color').which.contains('#8ccc62');
   },
 
   'Displays rgb(255, 0, 0) progress bar example': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/progress-bar-tests/color`)
-      .waitForElementPresent('.terra-ProgressBar[color="rgb(255, 0, 0)"]', 1000)
-      .expect.element('.terra-ProgressBar[color="rgb(255, 0, 0)"]').to.have.attribute('color').which.contains('rgb(255, 0, 0)');
+      .expect.element('#progressbarWithRGBColor').to.have.attribute('color').which.contains('rgb(255, 0, 0)');
   },
 
 };
