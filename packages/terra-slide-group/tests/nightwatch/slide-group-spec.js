@@ -1,4 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -20,4 +21,3 @@ module.exports = {
     browser.expect.element('.terra-Slide:nth-child(2)').text.to.equal('Slide 2');
   },
 };
-

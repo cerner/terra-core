@@ -1,5 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -31,4 +31,3 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/icon`);
   },
 };
-
