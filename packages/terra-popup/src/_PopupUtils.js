@@ -128,7 +128,7 @@ const PopupUtils = {
   getContentOffset,
   arrowPositionFromBounds,
   leftOffset,
-  topOffset
+  topOffset,
 };
 
 export default PopupUtils;
