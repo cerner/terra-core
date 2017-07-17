@@ -23,7 +23,7 @@
 
   .icon {
     flex-shrink: 0;
-    font-size: var(--terra-Alert-icon-font-size);
+    font-size: var(--terra-alert-icon-font-size);
     margin-right: 0.5rem;
   }
 
@@ -56,7 +56,7 @@
   }
 
   .sectionCustom {
-    color: var(--terra-Alert-custom-text-color);
+    color: var(--terra-alert-custom-text-color);
     composes: section;
   }
 
@@ -85,7 +85,7 @@
   }
 
   .actionsCustom {
-    color: var(--terra-Alert-custom-text-color);
+    color: var(--terra-alert-custom-text-color);
     composes: actions;
   }
 
@@ -98,70 +98,70 @@
   }
 
   .alert {
-    background-color: var(--terra-Alert-alert-background-color);
+    background-color: var(--terra-alert-alert-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-alert-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-alert-shadow-color));
   }
 
   .error {
-    background-color: var(--terra-Alert-error-background-color);
+    background-color: var(--terra-alert-error-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-error-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-error-shadow-color));
   }
 
   .warning {
-    background-color: var(--terra-Alert-warning-background-color);
+    background-color: var(--terra-alert-warning-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-warning-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-warning-shadow-color));
   }
 
   .gapChecking {
-    background-color: var(--terra-Alert-gap-checking-background-color);
+    background-color: var(--terra-alert-gap-checking-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-gap-checking-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-gap-checking-shadow-color));
   }
 
   .advisory {
-    background-color: var(--terra-Alert-advisory-background-color);
+    background-color: var(--terra-alert-advisory-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-advisory-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-advisory-shadow-color));
   }
 
   .info {
-    background-color: var(--terra-Alert-info-background-color);
+    background-color: var(--terra-alert-info-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-info-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-info-shadow-color));
   }
 
   .success {
-    background-color: var(--terra-Alert-success-background-color);
+    background-color: var(--terra-alert-success-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-success-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-success-shadow-color));
   }
 
   .outsideRecords {
-    background-color: var(--terra-Alert-outside-records-background-color);
+    background-color: var(--terra-alert-outside-records-background-color);
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-Alert-outside-records-shadow-color));
+    @include terra-alert-box-shadow(var(--terra-alert-outside-records-shadow-color));
   }
 
   .custom {
-    background-color: var(--terra-Alert-custom-background-color);
+    background-color: var(--terra-alert-custom-background-color);
     box-shadow: 2px 0 0 inset;
-    color: var(--terra-Alert-custom-shadow-color);
+    color: var(--terra-alert-custom-shadow-color);
     composes: alertBase;
   }
 
   .alert .title {
-    color: var(--terra-Alert-alert-title-color);
+    color: var(--terra-alert-alert-title-color);
   }
 
   .error .title {
-    color: var(--terra-Alert-error-title-color);
+    color: var(--terra-alert-error-title-color);
   }
 
   .gapChecking .icon {
-    color: var(--terra-Alert-gap-checking-title-color);
+    color: var(--terra-alert-gap-checking-title-color);
   }
   /* stylelint-enable */
 }
