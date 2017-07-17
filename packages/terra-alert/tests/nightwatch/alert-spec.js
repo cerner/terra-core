@@ -1,4 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 const windowSizes = {
@@ -28,23 +30,23 @@ module.exports = {
       .assert.attributeContains(
         '#defaultAlert',
         'class',
-        '_alert_',
+        '_alert',
         'Check that the default Alert is of type alert')
       .assert.elementPresent(
-        '#defaultAlert > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#defaultAlert > div[class*="_body"] > div[class*="_icon"] > svg',
         'Check that the default Alert has an icon')
       .assert.elementPresent(
-        '#defaultAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#defaultAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Check default Alert title structure')
       .assert.containsText(
-        '#defaultAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#defaultAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Alert.',
         'Check default Alert has default title for Alert of type alert')
       .assert.elementPresent(
-        '#defaultAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#defaultAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Check default Alert content structure')
       .assert.containsText(
-        '#defaultAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#defaultAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Default Alert',
         'Check text content provided to default Alert');
   },
@@ -59,14 +61,14 @@ module.exports = {
        .assert.attributeContains(
         '#alertAlert',
         'class',
-        '_alert_',
+        '_alert',
         'Check that the Alert of type alert exists')
       .assert.containsText(
-        '#alertAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#alertAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Alert.',
         'Check default title for Alert of type alert')
       .assert.containsText(
-        '#alertAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#alertAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Alert',
         'Check text content provided to Alert of type alert');
   },
@@ -76,14 +78,14 @@ module.exports = {
         .assert.attributeContains(
         '#errorAlert',
         'class',
-        '_error_',
+        '_error',
         'Check that Alert of type error exists')
       .assert.containsText(
-        '#errorAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#errorAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Error.',
         'Check default title for Alert of type error')
       .assert.containsText(
-        '#errorAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#errorAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Error',
         'Check text content provided to Alert of type error');
   },
@@ -93,14 +95,14 @@ module.exports = {
       .assert.attributeContains(
         '#warningAlert',
         'class',
-        '_warning_',
+        '_warning',
         'Check that Alert of type warning exists')
       .assert.containsText(
-        '#warningAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#warningAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Warning.',
         'Check default title for Alert of type warning')
       .assert.containsText(
-        '#warningAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#warningAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Warning',
         'Check text content provided to Alert of type warning');
   },
@@ -110,14 +112,14 @@ module.exports = {
       .assert.attributeContains(
         '#advisoryAlert',
         'class',
-        '_advisory_',
+        '_advisory',
         'Check that Alert of type advisory exists')
       .assert.containsText(
-        '#advisoryAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#advisoryAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Advisory.',
         'Check default title for Alert of type advisory')
       .assert.containsText(
-        '#advisoryAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#advisoryAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Advisory',
         'Check text content provided to Alert of type advisory');
   },
@@ -127,14 +129,14 @@ module.exports = {
       .assert.attributeContains(
         '#infoAlert',
         'class',
-        '_info_',
+        '_info',
         'Check that Alert of type info exists')
       .assert.containsText(
-        '#infoAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#infoAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Information.',
         'Check default title for Alert of type info')
       .assert.containsText(
-        '#infoAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#infoAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Info',
         'Check text content provided to Alert of type info');
   },
@@ -144,14 +146,14 @@ module.exports = {
       .assert.attributeContains(
         '#successAlert',
         'class',
-        '_success_',
+        '_success',
         'Check that Alert of type success exists')
       .assert.containsText(
-        '#successAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#successAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Success.',
         'Check default title for Alert of type success')
       .assert.containsText(
-        '#successAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#successAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Success',
         'Check text content provided to Alert of type success');
   },
@@ -161,14 +163,14 @@ module.exports = {
       .assert.attributeContains(
         '#gapCheckingAlert',
         'class',
-        '_gapChecking_',
+        '_gapChecking',
         'Check that Alert of type gap-checking exists')
       .assert.containsText(
-        '#gapCheckingAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#gapCheckingAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Required Action.',
         'Check default title for Alert of type gap-checking')
       .assert.containsText(
-        '#gapCheckingAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#gapCheckingAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Gap Checking',
         'Check text content provided to Alert of type gap-checking');
   },
@@ -178,14 +180,14 @@ module.exports = {
       .assert.attributeContains(
         '#outsideRecordsAlert',
         'class',
-        '_outsideRecords_',
+        '_outsideRecords',
         'Check that Alert of type outside-records exists')
       .assert.containsText(
-        '#outsideRecordsAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#outsideRecordsAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Outside Records.',
         'Check default title for Alert of type outside-records')
       .assert.containsText(
-        '#outsideRecordsAlert > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#outsideRecordsAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Alert of type Outside Records',
         'Check text content provided to Alert of type outside-records');
   },
@@ -194,35 +196,35 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/title`)
       .assert.containsText(
-        '#alertAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#alertAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Alert_Alert:',
         'Check custom title for Alert of type alert')
       .assert.containsText(
-        '#errorAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#errorAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Error_Alert:',
         'Check custom title for Alert of type error')
       .assert.containsText(
-        '#warningAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#warningAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Warning_Alert:',
         'Check custom title for Alert of type warning')
       .assert.containsText(
-        '#advisoryAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#advisoryAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Advisory_Alert:',
         'Check custom title for Alert of type advisory')
       .assert.containsText(
-        '#infoAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#infoAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Info_Alert:',
         'Check custom title for Alert of type info')
       .assert.containsText(
-        '#successAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#successAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Success_Alert:',
         'Check custom title for Alert of type success')
       .assert.containsText(
-        '#gapCheckingAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#gapCheckingAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Gap_Checking_Alert:',
         'Check custom title for Alert of type gap checking')
       .assert.containsText(
-        '#outsideRecordsAlert > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#outsideRecordsAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Outside_Records_Alert:',
         'Check custom title for Alert of type outside records');
   },
@@ -237,7 +239,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom1',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the first custom Alert exists')
       .assert.cssProperty(
         '#custom1',
@@ -245,14 +247,14 @@ module.exports = {
         'rgba(155, 159, 161, 1)',
         'Checking that the first custom Alert has default status bar color')
       .assert.elementNotPresent(
-        '#custom1 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom1 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the first custom Alert does not have an icon')
       .assert.containsText(
-        '#custom1 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom1 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         '',
         'Checking that the first custom Alert does not have a title')
       .assert.containsText(
-        '#custom1 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom1 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with no icon, title or custom color',
         'Checking the text content for the first custom Alert');
   },
@@ -262,7 +264,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom2',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the second custom Alert exists')
       .assert.cssProperty(
         '#custom2',
@@ -270,14 +272,14 @@ module.exports = {
         'rgba(155, 159, 161, 1)',
         'Checking that the second custom Alert has default status bar color')
       .assert.elementNotPresent(
-        '#custom2 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom2 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the second custom Alert does not have an icon')
       .assert.containsText(
-        '#custom2 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom2 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Custom_Alert:',
         'Checking that the second custom Alert has a title')
       .assert.containsText(
-        '#custom2 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom2 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with title but no icon or custom color',
         'Checking the text content for the second custom Alert');
   },
@@ -287,7 +289,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom3',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the third custom Alert exists')
       .assert.cssProperty(
         '#custom3',
@@ -295,14 +297,14 @@ module.exports = {
         'rgba(155, 159, 161, 1)',
         'Checking that the third custom Alert has default status bar color')
       .assert.elementPresent(
-        '#custom3 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom3 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the third custom Alert has an icon')
       .assert.containsText(
-        '#custom3 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom3 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         '',
         'Checking that the third custom Alert does not have a title')
       .assert.containsText(
-        '#custom3 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom3 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with icon but no title or custom color',
         'Checking the text content for the third custom Alert');
   },
@@ -312,7 +314,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom4',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the fourth custom Alert exists')
       .assert.cssProperty(
         '#custom4',
@@ -320,14 +322,14 @@ module.exports = {
         'rgba(255, 165, 0, 1)',
         'Checking that the fourth custom Alert has custom orange status bar color')
       .assert.elementNotPresent(
-        '#custom4 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom4 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the fourth custom Alert does not have an icon')
       .assert.containsText(
-        '#custom4 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom4 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         '',
         'Checking that the fourth custom Alert does not have a title')
       .assert.containsText(
-        '#custom4 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom4 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with custom color but no title or icon',
         'Checking the text content for the fourth custom Alert');
   },
@@ -337,7 +339,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom5',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the fifth custom Alert exists')
       .assert.cssProperty(
         '#custom5',
@@ -345,14 +347,14 @@ module.exports = {
         'rgba(255, 165, 0, 1)',
         'Checking that the fifth custom Alert has custom orange status bar color')
       .assert.elementNotPresent(
-        '#custom5 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom5 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the fifth custom Alert does not have an icon')
       .assert.containsText(
-        '#custom5 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom5 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Custom_Alert:',
         'Checking that the fifth custom Alert has a title')
       .assert.containsText(
-        '#custom5 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom5 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with custom color and title but no icon',
         'Checking the text content for the fifth custom Alert');
   },
@@ -362,7 +364,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom6',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the sixth custom Alert exists')
       .assert.cssProperty(
         '#custom6',
@@ -370,14 +372,14 @@ module.exports = {
         'rgba(155, 159, 161, 1)',
         'Checking that the sixth custom Alert has default status bar color')
       .assert.elementPresent(
-        '#custom6 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom6 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the sixth custom Alert has an icon')
       .assert.containsText(
-        '#custom6 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom6 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Custom_Alert:',
         'Checking that the sixth custom Alert has a title')
       .assert.containsText(
-        '#custom6 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom6 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with title and icon but no custom color',
         'Checking the text content for the sixth custom Alert');
   },
@@ -387,7 +389,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom7',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the seventh custom Alert exists')
       .assert.cssProperty(
         '#custom7',
@@ -395,14 +397,14 @@ module.exports = {
         'rgba(255, 165, 0, 1)',
         'Checking that the seventh custom Alert has custom orange status bar color')
       .assert.elementPresent(
-        '#custom7 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom7 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the seventh custom Alert has an icon')
       .assert.containsText(
-        '#custom7 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom7 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         '',
         'Checking that the seventh custom Alert does not have a title')
       .assert.containsText(
-        '#custom7 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom7 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with custom color and icon but no title',
         'Checking the text content for the seventh custom Alert');
   },
@@ -412,7 +414,7 @@ module.exports = {
       .assert.attributeContains(
         '#custom8',
         'class',
-        '_custom_',
+        '_custom',
         'Checking that the eighth custom Alert exists')
       .assert.cssProperty(
         '#custom8',
@@ -420,14 +422,14 @@ module.exports = {
         'rgba(255, 165, 0, 1)',
         'Checking that the eighth custom Alert has custom orange status bar color')
       .assert.elementPresent(
-        '#custom8 > div[class*="_body_"] > div[class*="_icon_"] > svg',
+        '#custom8 > div[class*="_body"] > div[class*="_icon"] > svg',
         'Checking that the eighth custom Alert has an icon')
       .assert.containsText(
-        '#custom8 > div[class*="_body_"] > div[class*="_section_"] > strong[class*="_title_"]',
+        '#custom8 > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Custom_Alert:',
         'Checking that the eighth custom Alert has a title')
       .assert.containsText(
-        '#custom8 > div[class*="_body_"] > div[class*="_section_"]  div[class*="_content_"]',
+        '#custom8 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
         'Custom Alert with title, custom color and icon',
         'Checking the text content for the eighth custom Alert');
   },
@@ -437,7 +439,7 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/actionButton`)
       .assert.elementPresent(
-        '#actionAlert > div[class*="_actions_"] > button',
+        '#actionAlert > div[class*="_actions"] > button',
         'Check Alert actions structure contains Button');
 
     if (width < windowSizes.tiny[0]) {
@@ -445,24 +447,24 @@ module.exports = {
         .assert.attributeContains(
           '#actionAlert',
           'class',
-          '_narrow_',
+          '_narrow',
           'Check that the narrow alert className is used when width less than tiny breakpoint')
        .assert.attributeContains(
-          '#actionAlert > div[class*="_body_"]',
+          '#actionAlert > div[class*="_body"]',
           'class',
-          '_bodyNarrow_',
+          '_bodyNarrow',
           'Check that the narrow body className is used when width less than tiny breakpoint');
     } else {
       browser
         .assert.attributeContains(
           '#actionAlert',
           'class',
-          '_wide_',
+          '_wide',
           'Check that the wide alert className is used when width greater than or equal to tiny breakpoint')
        .assert.attributeContains(
-          '#actionAlert > div[class*="_body_"]',
+          '#actionAlert > div[class*="_body"]',
           'class',
-          '_bodyStd_',
+          '_bodyStd',
           'Check that the standard body className is used when width greater than or equal to tiny breakpoint');
     }
   },
@@ -472,7 +474,7 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/dismissible`)
       .assert.elementPresent(
-        '#dismissibleAlert > div[class*="_actions_"] > button',
+        '#dismissibleAlert > div[class*="_actions"] > button',
         'Check Alert actions structure contains Button');
 
     if (width < windowSizes.tiny[0]) {
@@ -480,30 +482,30 @@ module.exports = {
         .assert.attributeContains(
           '#dismissibleAlert',
           'class',
-          '_narrow_',
+          '_narrow',
           'Check that the narrow alert className is used when width less than tiny breakpoint')
        .assert.attributeContains(
-          '#dismissibleAlert > div[class*="_body_"]',
+          '#dismissibleAlert > div[class*="_body"]',
           'class',
-          '_bodyNarrow_',
+          '_bodyNarrow',
           'Check that the narrow body className is used when width less than tiny breakpoint');
     } else {
       browser
         .assert.attributeContains(
           '#dismissibleAlert',
           'class',
-          '_wide_',
+          '_wide',
           'Check that the wide alert className is used when width greater than or equal to tiny breakpoint')
        .assert.attributeContains(
-          '#dismissibleAlert > div[class*="_body_"]',
+          '#dismissibleAlert > div[class*="_body"]',
           'class',
-          '_bodyStd_',
+          '_bodyStd',
           'Check that the standard body className is used when width greater than or equal to tiny breakpoint');
     }
 
     browser
       .waitForElementVisible('#dismissibleAlert', 1000)
-      .click('#dismissibleAlert > div[class*="_actions_"] > button')
+      .click('#dismissibleAlert > div[class*="_actions"] > button')
       .pause(1000)
       .assert.elementNotPresent('#dismissibleAlert', 'Check that the test page dismissed the Alert when re-rendered');
   },
@@ -512,40 +514,40 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/responsive`)
       .assert.elementPresent(
-        '#actionAlert > div[class*="_actions_"] > button',
+        '#actionAlert > div[class*="_actions"] > button',
         'Check Alert action button rendered on warning alert')
       .assert.elementPresent(
-        '#dismissibleAlert > div[class*="_actions_"] > button',
+        '#dismissibleAlert > div[class*="_actions"] > button',
         'Check Alert dismiss button rendered on success alert')
       .assert.attributeContains(
         '#actionAlert',
         'class',
-        '_narrow_',
+        '_narrow',
         'Check that the narrow alert className is used for Alert with action regardless of window size')
       .assert.attributeContains(
-        '#actionAlert > div[class*="_body_"]',
+        '#actionAlert > div[class*="_body"]',
         'class',
-        '_bodyNarrow_',
+        '_bodyNarrow',
         'Check that the narrow body className is used for Alert with action regardless of window size')
       .assert.attributeContains(
         '#dismissibleAlert',
         'class',
-        '_narrow_',
+        '_narrow',
         'Check that the narrow alert className is used for dismissible alert regardless of window size')
       .assert.attributeContains(
-        '#dismissibleAlert > div[class*="_body_"]',
+        '#dismissibleAlert > div[class*="_body"]',
         'class',
-        '_bodyNarrow_',
+        '_bodyNarrow',
         'Check that the narrow body className is used for dismissible alert regardless of window size')
       .assert.attributeContains(
         '#noActionsAlert',
         'class',
-        '_narrow_',
+        '_narrow',
         'Check that the narrow alert className is used for no actions alert regardless of window size')
       .assert.attributeContains(
-        '#noActionsAlert > div[class*="_body_"]',
+        '#noActionsAlert > div[class*="_body"]',
         'class',
-        '_bodyStd_',
+        '_bodyStd',
         'Check that the standard body className is used for no actions alert regardless of window size');
   },
 };
