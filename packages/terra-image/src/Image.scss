@@ -13,23 +13,23 @@
   }
 
   .rounded {
-    border-radius: var(--terra-Image-rounded-border-radius);
+    border-radius: var(--terra-image-rounded-border-radius);
   }
 
   .circle {
-    border-radius: var(--terra-Image-circle-border-radius);
+    border-radius: var(--terra-image-circle-border-radius);
   }
 
   .thumbnail {
-    background-color: var(--terra-Image-thumbnail-background-color);
-    border-color: var(--terra-Image-thumbnail-border-color);
-    border-radius: var(--terra-Image-thumbnail-border-radius);
-    border-style: var(--terra-Image-thumbnail-border-style);
-    border-width: var(--terra-Image-thumbnail-border-width);
-    padding-bottom: var(--terra-Image-thumbnail-padding-bottom);
-    padding-left: var(--terra-Image-thumbnail-padding-left);
-    padding-right: var(--terra-Image-thumbnail-padding-right);
-    padding-top: var(--terra-Image-thumbnail-padding-top);
+    background-color: var(--terra-image-thumbnail-background-color);
+    border-color: var(--terra-image-thumbnail-border-color);
+    border-radius: var(--terra-image-thumbnail-border-radius);
+    border-style: var(--terra-image-thumbnail-border-style);
+    border-width: var(--terra-image-thumbnail-border-width);
+    padding-bottom: var(--terra-image-thumbnail-padding-bottom);
+    padding-left: var(--terra-image-thumbnail-padding-left);
+    padding-right: var(--terra-image-thumbnail-padding-right);
+    padding-top: var(--terra-image-thumbnail-padding-top);
   }
 
   .fluid {
