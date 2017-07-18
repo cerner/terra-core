@@ -10,7 +10,11 @@ class NoHeaderPopup extends React.Component {
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setParentNode = this.setParentNode.bind(this);
     this.getParentNode = this.getParentNode.bind(this);
-    this.state = { open: false };
+    this.state = { open: true };
+  }
+
+  componentDidMount() {
+    this.forceUpdate();
   }
 
   setButtonNode(node) {
@@ -44,6 +48,8 @@ class NoHeaderPopup extends React.Component {
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
+          contentHeight="240"
+          contentWidth="320"
           isHeaderDisabled
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}

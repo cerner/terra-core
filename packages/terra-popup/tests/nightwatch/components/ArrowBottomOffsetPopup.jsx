@@ -10,7 +10,11 @@ class OffsetPopup extends React.Component {
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setParentNode = this.setParentNode.bind(this);
     this.getParentNode = this.getParentNode.bind(this);
-    this.state = { open: false };
+    this.state = { open: true };
+  }
+
+  componentDidMount() {
+    this.forceUpdate();
   }
 
   setButtonNode(node) {

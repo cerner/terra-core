@@ -87,11 +87,6 @@ class Popup extends React.Component {
     this.handleTetherRepositioned = this.handleTetherRepositioned.bind(this);
     this.setArrowNode = this.setArrowNode.bind(this);
     this.setContentNode = this.setContentNode.bind(this);
-    this.offset = { vertical: 0, horizontal: 0 };
-  }
-
-  componentDidUpdate() {
-    this.offset = { vertical: 0, horizontal: 0 };
   }
 
   setArrowPosition(targetBounds, contentBounds) {
@@ -215,6 +210,7 @@ class Popup extends React.Component {
         bidiContentAttachment = PopupUtils.switchAttachmentToRTL(bidiContentAttachment);
       }
 
+      this.offset = { vertical: 0, horizontal: 0 };
       this.attachment = PopupUtils.parseStringPair(bidiContentAttachment);
 
       const boundingFrame = boundingRef ? boundingRef() : undefined;
