@@ -4,12 +4,23 @@ Changelog
 Unreleased
 ----------
 
-
-3.4.0 - (July 13, 2017)
+3.5.1 - (July 18, 2017)
 ------------------
-Minor version bump
+### Changed
+* Corrected changelog entries for v3.4.0 and v3.5.0
+
+3.5.0 - (July 18, 2017)
+------------------
+### Changed
 * Updated nightwatch test scripts
+
+### Removed
 * Removed nightwatch.config file
+
+3.4.0 - (July 18, 2017)
+------------------
+### Changed
+* Minor version bump
 
 3.3.0 (June 27, 2017)
 ------------------
