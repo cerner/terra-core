@@ -5,10 +5,12 @@ Unreleased
 ----------
 
 
-3.4.0 - (July 13, 2017)
+3.4.0 - (July 18, 2017)
 ------------------
-Minor version bump
+### Changed
 * Updated nightwatch test scripts
+
+### Removed
 * Removed nightwatch.config file
 
 3.3.0 (June 27, 2017)
