@@ -26,7 +26,7 @@
   }
 
   .value-label {
-    @include terra-margin-end(0.357em);
+    margin-right: 0.357em;
   }
 
   .person-name {
@@ -35,12 +35,11 @@
   }
 
   .identifiers {
-    @include terra-margin-start(auto);
-
     flex: 1;
+    margin-right: auto;
 
     @media screen and (min-width: 768px) {
-      @include terra-text-align-end();
+      text-align: right;
     }
   }
 
@@ -76,12 +75,11 @@
   }
 
   .application-content {
-    @include terra-margin-start(auto);
-
     flex: 1;
+    margin-right: auto;
 
     @media screen and (min-width: 768px) {
-      @include terra-text-align-end();
+      text-align: right;
     }
   }
 }
