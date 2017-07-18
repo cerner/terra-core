@@ -1,12 +1,11 @@
-@import '~terra-mixins';
 @import './variables';
 
 /* stylelint-disable selector-class-pattern  */
 
 :local {
   .demographics-banner {
-    background: $demographics-background;
-    color: $demographics-foreground;
+    background: var(--terra-demographicsBanner-background);
+    color: var(--terra-demographicsBanner-foreground);
     margin-bottom: 0.714em;
     padding: 0.714em;
 
@@ -57,8 +56,8 @@
   }
 
   .deceased {
-    background: $demographics-background-deceased;
-    color: $demographics-foreground-deceased;
+    background: var(--terra-demographicsBanner-background-deceased);
+    color: var(--terra-demographicsBanner-foreground-deceased);
 
     .profile-photo {
       opacity: 0.7;

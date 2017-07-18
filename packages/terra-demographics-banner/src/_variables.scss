@@ -1,8 +1,9 @@
 // Variables
 // ==========================
 
-$terra-bidi: false;
-$demographics-background: #004c76;
-$demographics-foreground: #fff;
-$demographics-background-deceased: #1c1f21;
-$demographics-foreground-deceased: #fff;
+:root {
+  --terra-demographicsBanner-background: #004c76;
+  --terra-demographicsBanner-foreground: #fff;
+  --terra-demographicsBanner-background-deceased: #1c1f21;
+  --terra-demographicsBanner-foreground-deceased: #fff;
+}
