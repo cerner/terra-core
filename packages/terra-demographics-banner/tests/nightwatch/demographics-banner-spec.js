@@ -22,9 +22,13 @@ module.exports = {
   },
 
   'Displays a blank demographics banner with the empty text identifier': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`);
-    browser.expect.element('#blank-demographics-banner').to.be.present;
-    browser.expect.element('#blank-demographics-banner').text.to.contain('--\n--\nDOB:\n--');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`)
+      .expect
+      .element('#blank-demographics-banner')
+      .text
+      .to
+      .contain('--\n--\nDOB:\n--');
   },
 
   'Displays all the content when it is provided to the banner': (browser) => {
@@ -59,22 +63,30 @@ module.exports = {
   },
 
   'Displays a deceased demographics banner': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased`);
-    browser.expect.element('#deceased-demographics').text.to.contain('Deceased:\nMarch 12, 2017');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased`)
+      .expect
+      .element('#deceased-demographics').text.to.contain('Deceased:\nMarch 12, 2017');
   },
 
   'Displays a deceased demographics banner with a default label when one is not provided': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased_no_label`);
-    browser.expect.element('#deceased-demographics-no-label').text.to.contain('Deceased:\nMarch 12, 2017');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased_no_label`)
+      .expect
+      .element('#deceased-demographics-no-label').text.to.contain('Deceased:\nMarch 12, 2017');
   },
 
   'Displays post menstrural age with a default label when one is not provided': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/post_menstrual_age_no_label`);
-    browser.expect.element('#post-menstrual-no-label').text.to.contain('PMA:\nApril 5, 2016');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/post_menstrual_age_no_label`)
+      .expect
+      .element('#post-menstrual-no-label').text.to.contain('PMA:\nApril 5, 2016');
   },
 
   'Displays gestational age with a default label when one is not provided': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/gestational_age_no_label`);
-    browser.expect.element('#gestational-age-no-label').text.to.contain('GA:\nApril 5, 2016');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/gestational_age_no_label`)
+      .expect
+      .element('#gestational-age-no-label').text.to.contain('GA:\nApril 5, 2016');
   },
 };
