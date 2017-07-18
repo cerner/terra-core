@@ -4,49 +4,49 @@
 :local {
   /* stylelint-disable selector-class-pattern  */
   .badge {
-    border-radius: var(--terra-Badge-borderRadius);
-    display: var(--terra-Badge-display);
-    font-size: var(--terra-Badge-fontSize--small);
-    font-weight: var(--terra-Badge-fontWeight);
-    line-height: var(--terra-Badge-lineHeight);
-    min-width: var(--terra-Badge-minWidth);
-    padding-bottom: var(--terra-Badge-paddingBottom);
-    padding-left: var(--terra-Badge-paddingLeft);
-    padding-right: var(--terra-Badge-paddingRight);
-    padding-top: var(--terra-Badge-paddingTop);
+    border-radius: var(--terra-badge-border-radius);
+    display: var(--terra-badge-display);
+    font-size: var(--terra-badge-font-size-small);
+    font-weight: var(--terra-badge-font-weight);
+    line-height: var(--terra-badge-line-height);
+    min-width: var(--terra-badge-min-width);
+    padding-bottom: var(--terra-badge-padding-bottom);
+    padding-left: var(--terra-badge-padding-left);
+    padding-right: var(--terra-badge-padding-right);
+    padding-top: var(--terra-badge-padding-top);
     position: relative;
     text-align: center;
     text-decoration: none;
-    text-transform: var(--terra-Badge-textTransform);
+    text-transform: var(--terra-badge-text-transform);
     white-space: nowrap;
   }
 
   .text:first-child:not(:last-child) {
-    margin-right: var(--terra-Badge-child--margin);
+    margin-right: var(--terra-badge-child-margin);
   }
 
   .text:nth-child(2) {
-    margin-left: var(--terra-Badge-child--margin);
+    margin-left: var(--terra-badge-child-margin);
   }
 
   .tiny {
-    font-size: var(--terra-Badge-fontSize--tiny);
+    font-size: var(--terra-badge-font-size-tiny);
   }
 
   .small {
-    font-size: var(--terra-Badge-fontSize--small);
+    font-size: var(--terra-badge-font-size-small);
   }
 
   .medium {
-    font-size: var(--terra-Badge-fontSize--medium);
+    font-size: var(--terra-badge-font-size-medium);
   }
 
   .large {
-    font-size: var(--terra-Badge-fontSize--large);
+    font-size: var(--terra-badge-font-size-large);
   }
 
   .huge {
-    font-size: var(--terra-Badge-fontSize--huge);
+    font-size: var(--terra-badge-font-size-huge);
   }
 
   .default {

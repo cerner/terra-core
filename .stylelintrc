@@ -8,9 +8,9 @@
     "scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
     "suitcss/custom-property-no-outside-root": true,
     "custom-property-pattern": [
-      "^terra-(?:[A-Z][a-zA-Z0-9]+)*(?:-[a-z0-9][a-zA-Z0-9]+)*?(?:--[a-z0-9][a-zA-Z0-9-]+)*?$",
+      "terra-[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
       {
-        "message": "Custom property names should match the SUIT CSS naming convention"
+        "message": "Custom property names should be written in lowercase with hyphens"
       }
     ],
     "selector-class-pattern": [
