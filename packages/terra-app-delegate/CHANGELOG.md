@@ -12,6 +12,9 @@ Unreleased
 ### Removed
 * Removed nightwatch.config file
 
+### Added
+* Added requestFocus and releaseFocus attributes to support trapping and releasing focus.
+
 1.0.0 - (June 28, 2017)
 ------------------
 Initial stable release
