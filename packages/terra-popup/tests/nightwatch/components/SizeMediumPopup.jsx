@@ -54,7 +54,7 @@ class DimensionPopup extends React.Component {
             <p>This popup is 120h by 320w.</p>
           </Popup>
           <button id="dimension-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-            50x Popup
+            Medium Popup
           </button>
         </div>
       </div>

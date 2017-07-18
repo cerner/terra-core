@@ -6,24 +6,9 @@ import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
 import TetherComponent from './_TetherComponent';
 import PopupUtils from './_PopupUtils';
+import PopupHeights from './_PopupHeights';
+import PopupWidths from './_PopupWidths';
 import './Popup.scss';
-
-const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
-const HEIGHT_VALUES = [40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880];
-
-const WIDTH_KEYS = ['160', '240', '320', '640', '960', '1280', '1760'];
-const WIDTH_VALUES = [160, 240, 320, 640, 960, 1280, 1760];
-
-const CREATE_MAPPING = ((keys, values) => {
-  const combinations = {};
-  for (let i = 0; i < keys.length; i += 1) {
-    combinations[keys[i]] = values[i];
-  }
-  return combinations;
-});
-
-const WIDTH_MAPPING = CREATE_MAPPING(WIDTH_KEYS, WIDTH_VALUES);
-const HEIGHT_MAPPING = CREATE_MAPPING(HEIGHT_KEYS, HEIGHT_VALUES);
 
 const propTypes = {
   /**
@@ -62,12 +47,12 @@ const propTypes = {
    * A string representation of the height in px, limited to:
    * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880
    */
-  contentHeight: PropTypes.oneOf(HEIGHT_KEYS),
+  contentHeight: PropTypes.oneOf(Object.keys(PopupHeights)),
   /**
    * A string representation of the width in px, limited to:
    * 160, 240, 320, 640, 960, 1280, 1760
    */
-  contentWidth: PropTypes.oneOf(WIDTH_KEYS),
+  contentWidth: PropTypes.oneOf(Object.keys(PopupWidths)),
   /**
    * Should an arrow be placed at the attachment point.
    */
@@ -151,8 +136,8 @@ class Popup extends React.Component {
 
   createPopupContent(boundingFrame) {
     const boundsProps = {
-      contentWidth: WIDTH_MAPPING[this.props.contentWidth],
-      contentHeight: HEIGHT_MAPPING[this.props.contentHeight],
+      contentWidth: PopupWidths[this.props.contentWidth],
+      contentHeight: PopupHeights[this.props.contentHeight],
     };
 
     if (boundingFrame) {
