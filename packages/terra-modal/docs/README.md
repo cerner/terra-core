@@ -19,7 +19,7 @@ class MyApp extends React.Component {
     super();
 
     this.state = {
-      isOpened: false,
+      isOpen: false,
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -28,11 +28,11 @@ class MyApp extends React.Component {
 
 
   handleOpenModal() {
-    this.setState({ isOpened: true });
+    this.setState({ isOpen: true });
   }
 
   handleCloseModal() {
-    this.setState({ isOpened: false });
+    this.setState({ isOpen: false });
   }
 
   render() {
@@ -40,7 +40,7 @@ class MyApp extends React.Component {
       <div>
         <Modal
           ariaLabel="My Modal"
-          isOpened={this.state.isOpened}
+          isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
         >
           <div>
