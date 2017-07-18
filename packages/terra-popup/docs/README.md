@@ -45,13 +45,6 @@ class PopupExampleComponent extends React.Component {
     return (
       <div>
         <Popup
-          classNameArrow="example-arrow-class"
-          classNameContent="example-content-class"
-          classNameOverlay="example-overlay-class"
-          contentAttachment="top center"
-          contentDimensions="50x 25x"
-          isArrowDisplayed
-          disableHeader
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
