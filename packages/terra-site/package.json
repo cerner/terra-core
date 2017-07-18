@@ -1,6 +1,6 @@
 {
   "name": "terra-site",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Documentation Site for Functional Verification",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "terra-date-picker": "^1.1.0",
     "terra-demographics-banner": "^1.1.0",
     "terra-form": "^1.1.0",
-    "terra-grid": "^3.5.0",
+    "terra-grid": "^3.5.1",
     "terra-heading": "^1.1.0",
     "terra-i18n": "^1.1.0",
     "terra-i18n-plugin": "^1.1.0",
