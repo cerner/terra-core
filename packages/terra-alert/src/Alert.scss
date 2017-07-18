@@ -1,5 +1,4 @@
 @import './variables';
-@import './mixins';
 
 :local {
   /* stylelint-disable selector-class-pattern  */
@@ -99,50 +98,50 @@
 
   .alert {
     background-color: var(--terra-alert-alert-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-alert-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-alert-shadow-color));
   }
 
   .error {
     background-color: var(--terra-alert-error-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-error-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-error-shadow-color));
   }
 
   .warning {
     background-color: var(--terra-alert-warning-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-warning-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-warning-shadow-color));
   }
 
   .gapChecking {
     background-color: var(--terra-alert-gap-checking-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-gap-checking-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-gap-checking-shadow-color));
   }
 
   .advisory {
     background-color: var(--terra-alert-advisory-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-advisory-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-advisory-shadow-color));
   }
 
   .info {
     background-color: var(--terra-alert-info-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-info-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-info-shadow-color));
   }
 
   .success {
     background-color: var(--terra-alert-success-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-success-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-success-shadow-color));
   }
 
   .outsideRecords {
     background-color: var(--terra-alert-outside-records-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-outside-records-shadow-color) inset;
     composes: alertBase;
-    @include terra-alert-box-shadow(var(--terra-alert-outside-records-shadow-color));
   }
 
   .custom {
