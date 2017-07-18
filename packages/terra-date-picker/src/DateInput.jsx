@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
+import AppDelegate from 'terra-app-delegate';
 import Input from 'terra-form/lib/Input';
 import DateUtil from './DateUtil';
 
 const Icon = <IconCalendar />;
 
 const propTypes = {
+  /**
+   * The AppDelegate instance provided by the containing component. If present, its properties will propagate to the children components.
+   **/
+  app: AppDelegate.propType,
   /**
    * Custom input attributes to apply to the date input.
    */
@@ -40,6 +45,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  app: undefined,
   inputAttributes: undefined,
   name: undefined,
   onChange: undefined,
@@ -51,8 +57,36 @@ const defaultProps = {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class DatePickerInput extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleOnButtonClick = this.handleOnButtonClick.bind(this);
+    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+  }
+
+  handleOnButtonClick() {
+    if (this.props.app && this.props.app.releaseFocus) {
+      this.props.app.releaseFocus();
+    }
+
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
+  }
+
+  handleOnKeyDown(event) {
+    if (this.props.app && this.props.app.requestFocus && (event.key === 'Enter' || event.key === 'Escape' || event.key === 'Tab')) {
+      this.props.app.requestFocus();
+    }
+
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+  }
+
   render() {
     const {
+      app,
       inputAttributes,
       name,
       onChange,
@@ -92,8 +126,8 @@ class DatePickerInput extends React.Component {
         />
         <Button
           className="terra-DatePicker-button"
-          onClick={onClick}
-          onKeyDown={onKeyDown}
+          onClick={this.handleOnButtonClick}
+          onKeyDown={this.handleOnKeyDown}
           icon={Icon}
           isCompact
           type="button"

@@ -14,10 +14,12 @@ describe('create', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
     const notSupported = () => {};
 
     const appDelegateInstance = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, notSupported,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus, notSupported,
     });
 
     expect(appDelegateInstance.disclose).toBe(disclose);
@@ -26,6 +28,8 @@ describe('create', () => {
     expect(appDelegateInstance.goBack).toBe(goBack);
     expect(appDelegateInstance.maximize).toBe(maximize);
     expect(appDelegateInstance.minimize).toBe(minimize);
+    expect(appDelegateInstance.requestFocus).toBe(requestFocus);
+    expect(appDelegateInstance.releaseFocus).toBe(releaseFocus);
     expect(appDelegateInstance.thisIsATestWhatAmIDoing).toBe(undefined);
   });
 });
@@ -38,9 +42,11 @@ describe('clone', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const cloneDisclose = () => {};
@@ -49,6 +55,8 @@ describe('clone', () => {
     const cloneGoBack = () => {};
     const cloneMaximize = () => {};
     const cloneMinimize = () => {};
+    const cloneRequestFocus = () => {};
+    const cloneReleaseFocus = () => {};
 
     const clonedDelegate = AppDelegate.clone(appDelegateInstance, {
       disclose: cloneDisclose,
@@ -57,6 +65,8 @@ describe('clone', () => {
       goBack: cloneGoBack,
       maximize: cloneMaximize,
       minimize: cloneMinimize,
+      requestFocus: cloneRequestFocus,
+      releaseFocus: cloneReleaseFocus,
     });
 
     expect(clonedDelegate.disclose).toBe(cloneDisclose);
@@ -65,6 +75,8 @@ describe('clone', () => {
     expect(clonedDelegate.goBack).toBe(cloneGoBack);
     expect(clonedDelegate.maximize).toBe(cloneMaximize);
     expect(clonedDelegate.minimize).toBe(cloneMinimize);
+    expect(clonedDelegate.requestFocus).toBe(cloneRequestFocus);
+    expect(clonedDelegate.releaseFocus).toBe(cloneReleaseFocus);
   });
 
   it('should keep functions from original instance if not provided', () => {
@@ -74,9 +86,11 @@ describe('clone', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const cloneDisclose = () => {};
@@ -92,6 +106,8 @@ describe('clone', () => {
     expect(clonedDelegate.goBack).toBe(goBack);
     expect(clonedDelegate.maximize).toBe(maximize);
     expect(clonedDelegate.minimize).toBe(minimize);
+    expect(clonedDelegate.requestFocus).toBe(requestFocus);
+    expect(clonedDelegate.releaseFocus).toBe(releaseFocus);
   });
 });
 
@@ -103,13 +119,15 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(true);
@@ -122,9 +140,11 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance1)).toBe(true);
@@ -137,13 +157,15 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose: () => {}, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose: () => {}, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
@@ -156,13 +178,15 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss: () => {}, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss: () => {}, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
@@ -175,13 +199,15 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure: () => {}, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure: () => {}, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
@@ -194,13 +220,15 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack: () => {}, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack: () => {}, maximize, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
@@ -213,13 +241,15 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize: () => {}, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize: () => {}, minimize, requestFocus, releaseFocus,
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
@@ -232,13 +262,57 @@ describe('isEqual', () => {
     const goBack = () => {};
     const maximize = () => {};
     const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
 
     const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize,
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
     const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize: () => {},
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize: () => {}, requestFocus, releaseFocus,
+    });
+
+    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+  });
+
+  it('should return false when requestFocus does not match', () => {
+    const disclose = () => {};
+    const dismiss = () => {};
+    const closeDisclosure = () => {};
+    const goBack = () => {};
+    const maximize = () => {};
+    const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
+
+    const appDelegateInstance1 = AppDelegate.create({
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
+    });
+
+    const appDelegateInstance2 = AppDelegate.create({
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus: () => {}, releaseFocus,
+    });
+
+    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+  });
+
+  it('should return false when releaseFocus does not match', () => {
+    const disclose = () => {};
+    const dismiss = () => {};
+    const closeDisclosure = () => {};
+    const goBack = () => {};
+    const maximize = () => {};
+    const minimize = () => {};
+    const requestFocus = () => {};
+    const releaseFocus = () => {};
+
+    const appDelegateInstance1 = AppDelegate.create({
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
+    });
+
+    const appDelegateInstance2 = AppDelegate.create({
+      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus: () => {},
     });
 
     expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);

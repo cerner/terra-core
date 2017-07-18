@@ -14,6 +14,8 @@ class DemoContainer extends React.Component {
     this.goBack = this.goBack.bind(this);
     this.maximize = this.maximize.bind(this);
     this.minimize = this.minimize.bind(this);
+    this.requestFocus = this.requestFocus.bind(this);
+    this.releaseFocus = this.releaseFocus.bind(this);
   }
 
   disclose() {
@@ -50,6 +52,14 @@ class DemoContainer extends React.Component {
     this.props.app.minimize();
   }
 
+  requestFocus() {
+    this.props.app.requestFocus();
+  }
+
+  releaseFocus() {
+    this.props.app.releaseFocus();
+  }
+
   render() {
     const { app, identifier } = this.props;
 
@@ -65,6 +75,8 @@ class DemoContainer extends React.Component {
         {app && app.goBack ? <button className="go-back" onClick={this.goBack}>Go Back</button> : null }
         {app && app.maximize ? <button className="maximize" onClick={this.maximize}>Maximize</button> : null }
         {app && app.minimize ? <button className="minimize" onClick={this.minimize}>Minimize</button> : null }
+        {app && app.requestFocus ? <button className="requestFocus" onClick={this.requestFocus}>Trap Focus</button> : null }
+        {app && app.releaseFocus ? <button className="releaseFocus" onClick={this.releaseFocus}>Release Focus</button> : null }
       </div>
     );
   }

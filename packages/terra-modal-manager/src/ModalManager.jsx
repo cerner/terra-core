@@ -36,6 +36,11 @@ const propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 
   /**
+   * From `connect`. The focus state of the modal.
+   **/
+  isFocused: PropTypes.bool,
+
+  /**
    * From `connect`. The presentation state of the modal.
    **/
   isOpen: PropTypes.bool,
@@ -74,9 +79,20 @@ const propTypes = {
    * From `connect`. A function that dispatches a `minimize` action.
    **/
   minimizeModal: PropTypes.func.isRequired,
+
+  /**
+   * From `connect`. A function that dispatches a `requestFocus` action.
+   **/
+  requestFocus: PropTypes.func.isRequired,
+
+  /**
+   * From `connect`. A function that dispatches a `releaseFocus` action.
+   **/
+  releaseFocus: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isFocused: true,
   isOpen: false,
   isMaximized: false,
   size: 'small',
@@ -116,7 +132,7 @@ class ModalManager extends React.Component {
   }
 
   buildModalComponents() {
-    const { modalComponentData, isMaximized, pushModal, popModal, closeModal, maximizeModal, minimizeModal } = this.props;
+    const { modalComponentData, isFocused, isMaximized, pushModal, popModal, closeModal, maximizeModal, minimizeModal, requestFocus, releaseFocus } = this.props;
 
     return modalComponentData.map((componentData, index) => {
       const ComponentClass = AppDelegate.getComponentForDisclosure(componentData.name);
@@ -141,6 +157,8 @@ class ModalManager extends React.Component {
         goBack: index > 0 ? (data) => { popModal(data); } : null,
         maximize: !isMaximized ? (data) => { maximizeModal(data); } : null,
         minimize: isMaximized ? (data) => { minimizeModal(data); } : null,
+        requestFocus: !isFocused ? (data) => { requestFocus(data); } : null,
+        releaseFocus: isFocused ? (data) => { releaseFocus(data); } : null,
       });
 
       return <ComponentClass key={componentData.key} {...componentData.props} app={appDelegate} />;
@@ -171,7 +189,7 @@ class ModalManager extends React.Component {
   }
 
   render() {
-    const { closeModal, size, isOpen, isMaximized } = this.props;
+    const { closeModal, size, isFocused, isOpen, isMaximized } = this.props;
 
     const modalClassNames = classNames([
       'terra-ModalManager-modal',
@@ -182,6 +200,7 @@ class ModalManager extends React.Component {
       <div className="terra-ModalManager">
         {this.buildChildren()}
         <Modal
+          isFocused={isFocused}
           isOpen={isOpen}
           isFullscreen={isMaximized || this.forceFullscreenModal}
           classNameModal={modalClassNames}

@@ -1,4 +1,4 @@
-import { open, push, pop, maximize, minimize, defaultState } from './shared/disclosureReducerUtils';
+import { open, push, pop, maximize, minimize, defaultState, requestFocus, releaseFocus } from './shared/disclosureReducerUtils';
 
 import {
   OPEN,
@@ -7,6 +7,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
+  REQUEST_FOCUS,
+  RELEASE_FOCUS,
 } from './actionTypes';
 
 const supportedSizes = {
@@ -35,6 +37,10 @@ const modalManager = (state = defaultModalState, action) => {
       return maximize(state, action);
     case MINIMIZE:
       return minimize(state, action);
+    case REQUEST_FOCUS:
+      return requestFocus(state, action);
+    case RELEASE_FOCUS:
+      return releaseFocus(state, action);
     default:
       return state;
   }

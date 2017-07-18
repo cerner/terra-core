@@ -14,6 +14,7 @@ import DatePickerFilterDates from './DatePickerFilterDates';
 import DatePickerMinMax from './DatePickerMinMax';
 import DatePickerOnChange from './DatePickerOnChange';
 import DatePickerDefaultDate from './DatePickerDefaultDate';
+import DatePickerInsideModal from './DatePickerInsideModal';
 
 const DatePickerExamples = () => (
   <div>
@@ -23,6 +24,9 @@ const DatePickerExamples = () => (
     <h2 id="default">Default</h2>
     <DatePickerDefault />
     <br />
+    <br />
+    <h2 id="modal">Presented Inside Modal</h2>
+    <DatePickerInsideModal />
     <br />
     <h2 id="exclude-dates">ExcludeDates</h2>
     <DatePickerExcludeDates />

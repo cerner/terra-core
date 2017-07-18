@@ -5,6 +5,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
+  REQUEST_FOCUS,
+  RELEASE_FOCUS,
 } from './actionTypes';
 
 export function open(data) {
@@ -29,4 +31,12 @@ export function maximize(data) {
 
 export function minimize(data) {
   return { type: MINIMIZE, data };
+}
+
+export function requestFocus(data) {
+  return { type: REQUEST_FOCUS, data };
+}
+
+export function releaseFocus(data) {
+  return { type: RELEASE_FOCUS, data };
 }

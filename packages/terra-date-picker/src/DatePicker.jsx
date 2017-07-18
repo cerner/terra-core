@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
 import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
+import AppDelegate from 'terra-app-delegate';
 import DateInput from './DateInput';
 import DateUtil from './DateUtil';
 import './DatePicker.scss';
 
 const propTypes = {
+  /**
+   * The AppDelegate instance provided by the containing component. If present, its properties will propagate to the children components.
+   **/
+  app: AppDelegate.propType,
   /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
@@ -47,6 +52,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  app: undefined,
   excludeDates: undefined,
   filterDate: undefined,
   includeDates: undefined,
@@ -69,6 +75,22 @@ class DatePicker extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleOnSelect = this.handleOnSelect.bind(this);
+    this.handleOnClickOutside = this.handleOnClickOutside.bind(this);
+  }
+
+  handleOnSelect() {
+    this.requestFocus();
+  }
+
+  handleOnClickOutside() {
+    this.requestFocus();
+  }
+
+  requestFocus() {
+    if (this.props.app && this.props.app.requestFocus) {
+      this.props.app.requestFocus();
+    }
   }
 
   handleChange(date, event) {
@@ -83,6 +105,7 @@ class DatePicker extends React.Component {
 
   render() {
     const {
+      app,
       inputAttributes,
       excludeDates,
       filterDate,
@@ -107,7 +130,9 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={this.state.selectedDate}
         onChange={this.handleChange}
-        customInput={<DateInput inputAttributes={inputAttributes} />}
+        onClickOutside={this.handleOnClickOutside}
+        onSelect={this.handleOnSelect}
+        customInput={<DateInput app={app} inputAttributes={inputAttributes} />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -131,7 +156,9 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={this.state.selectedDate}
         onChange={this.handleChange}
-        customInput={<DateInput inputAttributes={inputAttributes} />}
+        onClickOutside={this.handleOnClickOutside}
+        onSelect={this.handleOnSelect}
+        customInput={<DateInput app={app} inputAttributes={inputAttributes} />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}

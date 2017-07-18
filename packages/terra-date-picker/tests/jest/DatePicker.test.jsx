@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import AppDelegate from 'terra-app-delegate';
 import DatePicker from '../../lib/DatePicker';
 import DateUtil from '../../lib/DateUtil';
 
@@ -47,6 +48,13 @@ it('should render a date picker with included dates', () => {
 
 it('should render a date picker with min and max dates', () => {
   const datePicker = (<DatePicker name="date-input" minDate={'2017-04-01'} maxDate={'2017-04-10'} utcOffset={0} />);
+  const wrapper = shallow(datePicker);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a date picker with a given AppDelgate as source', () => {
+  const app = AppDelegate.create({ disclose: () => {}, dismiss: () => {} });
+  const datePicker = (<DatePicker name="date-input" app={app} utcOffset={0} />);
   const wrapper = shallow(datePicker);
   expect(wrapper).toMatchSnapshot();
 });
