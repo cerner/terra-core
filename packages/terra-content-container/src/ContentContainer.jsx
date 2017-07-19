@@ -35,17 +35,17 @@ const ContentContainer = ({
   }) => {
   const contentLayoutClassNames = cx([
     'content-container',
-    { 'content-container-fill': fill },
+    { fill },
     customProps.className,
   ]);
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      <div className={cx('content-container-header')}>
+      <div className={cx('header')}>
         {header}
       </div>
-      <div className={cx('content-container-main')}>
-        <div className={cx('content-container-main-normalizer')}>
+      <div className={cx('main')}>
+        <div className={cx('normalizer')}>
           {children}
         </div>
       </div>

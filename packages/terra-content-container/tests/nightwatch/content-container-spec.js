@@ -15,7 +15,7 @@ module.exports = {
   'Displays a content container with default props': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/content-container-tests/default`);
     browser.expect.element('#content-container').to.be.present;
-    browser.expect.element('#content-container').to.have.attribute('class').which.not.contains('content-container-fill');
+    browser.expect.element('#content-container').to.have.attribute('class').which.not.contains('fill');
     browser.expect.element('#content-container div:nth-child(1)').text.to.contain('header');
     browser.expect.element('#content-container div:nth-child(2)').text.to.contain('content');
   },
@@ -23,6 +23,6 @@ module.exports = {
   'Displays a content container with fill': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/content-container-tests/fill`)
-      .expect.element('#content-container').to.have.attribute('class').which.contains('content-container-fill');
+      .expect.element('#content-container').to.have.attribute('class').which.contains('fill');
   },
 };

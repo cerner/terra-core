@@ -4,32 +4,32 @@
     display: flex;
     flex-direction: column;
 
-    > .content-container-header {
+    > .header {
       flex: 0 0 auto;
     }
 
-    > .content-container-main {
+    > .main {
       flex: 1 1 auto;
 
-      > .content-container-main-normalizer {
+      > .normalizer {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
       }
     }
   }
 
-  .content-container-fill {
+  .fill {
     height: 100%;
     width: 100%;
 
-    > .content-container-main {
+    > .main {
       height: 100%;
       min-height: 50px;
       overflow: hidden;
       position: relative;
       width: 100%;
 
-      > .content-container-main-normalizer {
+      > .normalizer {
         height: 100%;
         overflow: auto;
         position: absolute;

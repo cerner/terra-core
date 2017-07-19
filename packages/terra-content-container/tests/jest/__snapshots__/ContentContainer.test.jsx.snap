@@ -2,11 +2,11 @@ exports[`test should render a default component 1`] = `
 <div
   className="content-container">
   <div
-    className="content-container-header" />
+    className="header" />
   <div
-    className="content-container-main">
+    className="main">
     <div
-      className="content-container-main-normalizer" />
+      className="normalizer" />
   </div>
 </div>
 `;
@@ -15,28 +15,28 @@ exports[`test should render a header 1`] = `
 <div
   className="content-container">
   <div
-    className="content-container-header">
+    className="header">
     <p>
       Header
     </p>
   </div>
   <div
-    className="content-container-main">
+    className="main">
     <div
-      className="content-container-main-normalizer" />
+      className="normalizer" />
   </div>
 </div>
 `;
 
 exports[`test should render as fill 1`] = `
 <div
-  className="content-container content-container-fill">
+  className="content-container fill">
   <div
-    className="content-container-header" />
+    className="header" />
   <div
-    className="content-container-main">
+    className="main">
     <div
-      className="content-container-main-normalizer" />
+      className="normalizer" />
   </div>
 </div>
 `;
@@ -45,11 +45,11 @@ exports[`test should render content 1`] = `
 <div
   className="content-container">
   <div
-    className="content-container-header" />
+    className="header" />
   <div
-    className="content-container-main">
+    className="main">
     <div
-      className="content-container-main-normalizer">
+      className="normalizer">
       <p>
         test content
       </p>
