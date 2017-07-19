@@ -199,7 +199,6 @@ class Popup extends React.Component {
       isOpen,
       onRequestClose,
       targetRef,
-      ...customProps
     } = this.props; // eslint-disable-line no-unused-vars
 
     let portalContent = children;
@@ -242,7 +241,7 @@ class Popup extends React.Component {
     }
 
     return (
-      <Portal {...customProps} isOpened={isOpen}>
+      <Portal isOpened={isOpen}>
         {portalContent}
       </Portal>
     );
