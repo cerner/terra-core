@@ -14,6 +14,7 @@
       top: 50%;
       transform: translate3d(-50%, -50%, 0);
       width: 0;
+      z-index: var(--terra-popup-arrow-z-index);
 
       &::after {
         border: var(--terra-popup-arrow-inner-size) solid transparent;
@@ -21,6 +22,7 @@
         height: 0;
         position: absolute;
         width: 0;
+        z-index: var(--terra-popup-arrow-inner-z-index);
       }
     }
 
