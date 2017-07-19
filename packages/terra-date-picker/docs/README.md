@@ -4,6 +4,8 @@ Terra-date-picker is a controlled input component that provides users a way to e
 
 This is a controlled component because it manages the state of the value in the input. Because this is a controlled input component, it cannot accept the defaultValue prop as it always uses the value prop. React does not allow having both the defaultValue and value props.
 
+The Modal component by default will trap focus. In order to interact with the date picker when rendered inside a modal, the focus on the modal must be released so that the picker can then request focus. The Modal Manager component supports releasing focus on the modal. Therefore, to render the date picker in a modal, it must be composed via the Modal Manager, which will internally handle releasing and request focus when the picker opens and closes.
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):

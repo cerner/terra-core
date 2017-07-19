@@ -3,7 +3,7 @@ import AppDelegate from 'terra-app-delegate';
 import DatePicker from 'terra-date-picker/src/DatePicker';
 import Button from 'terra-button';
 
-class ContentContainer extends React.Component {
+class ModalContainer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -58,10 +58,10 @@ class ContentContainer extends React.Component {
   }
 }
 
-ContentContainer.propTypes = {
+ModalContainer.propTypes = {
   app: AppDelegate.propType,
 };
 
-AppDelegate.registerComponentForDisclosure('PickerInModalExample', ContentContainer);
+AppDelegate.registerComponentForDisclosure('PickerInModalExample', ModalContainer);
 
-export default ContentContainer;
+export default ModalContainer;

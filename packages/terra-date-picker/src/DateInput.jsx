@@ -65,6 +65,7 @@ class DatePickerInput extends React.Component {
   }
 
   handleOnButtonClick() {
+    // If the containing component (e.g. modal) has the focus trapped, the focus needs to be released so that the picker can get focus.
     if (this.props.app && this.props.app.releaseFocus) {
       this.props.app.releaseFocus();
     }
@@ -75,8 +76,13 @@ class DatePickerInput extends React.Component {
   }
 
   handleOnKeyDown(event) {
+    // Let the containing component (e.g. modal) regain focus if the picker is about to dismiss by pressing one of these keys.
     if (this.props.app && this.props.app.requestFocus && (event.key === 'Enter' || event.key === 'Escape' || event.key === 'Tab')) {
       this.props.app.requestFocus();
+
+      if (event.key === 'Tab') {
+        event.preventDefault();
+      }
     }
 
     if (this.props.onKeyDown) {

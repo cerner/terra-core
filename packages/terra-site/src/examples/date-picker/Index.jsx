@@ -25,9 +25,6 @@ const DatePickerExamples = () => (
     <DatePickerDefault />
     <br />
     <br />
-    <h2 id="modal">Presented Inside Modal</h2>
-    <DatePickerInsideModal />
-    <br />
     <h2 id="exclude-dates">ExcludeDates</h2>
     <DatePickerExcludeDates />
     <br />
@@ -49,6 +46,11 @@ const DatePickerExamples = () => (
     <br />
     <h2 id="start-date">Default Date Provided</h2>
     <DatePickerDefaultDate />
+    <br />
+    <br />
+    <h2 id="modal">Presented Inside Modal</h2>
+    <DatePickerInsideModal />
+    <br />
   </div>
 );
 

@@ -88,6 +88,7 @@ class DatePicker extends React.Component {
   }
 
   requestFocus() {
+    // Let the containing component (e.g. modal) regain focus since the picker will be dismissed.
     if (this.props.app && this.props.app.requestFocus) {
       this.props.app.requestFocus();
     }

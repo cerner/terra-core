@@ -7,6 +7,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
+  REQUEST_FOCUS,
+  RELEASE_FOCUS,
 } from '../../src/actionTypes';
 
 describe('mapStateToProps', () => {
@@ -35,6 +37,7 @@ describe('mapStateToProps', () => {
           2: componentData[1],
           3: componentData[2],
         },
+        isFocused: 'IS_FOCUSED_VALUE',
         isOpen: 'IS_OPEN_VALUE',
         isMaximized: 'IS_MAXIMIZED_VALUE',
         size: 'SIZE_VALUE',
@@ -43,6 +46,7 @@ describe('mapStateToProps', () => {
 
     const expectedResult = {
       modalComponentData: componentData,
+      isFocused: 'IS_FOCUSED_VALUE',
       isOpen: 'IS_OPEN_VALUE',
       isMaximized: 'IS_MAXIMIZED_VALUE',
       size: 'SIZE_VALUE',
@@ -58,6 +62,7 @@ describe('mapStateToProps', () => {
       modalManager: {
         componentKeys: [],
         components: {},
+        isFocused: 'IS_FOCUSED_VALUE',
         isOpen: 'IS_OPEN_VALUE',
         isMaximized: 'IS_MAXIMIZED_VALUE',
         size: 'SIZE_VALUE',
@@ -66,6 +71,7 @@ describe('mapStateToProps', () => {
 
     const expectedResult = {
       modalComponentData: componentData,
+      isFocused: 'IS_FOCUSED_VALUE',
       isOpen: 'IS_OPEN_VALUE',
       isMaximized: 'IS_MAXIMIZED_VALUE',
       size: 'SIZE_VALUE',
@@ -87,6 +93,8 @@ describe('mapDispatchToProps', () => {
     expect(result.popModal).toBeDefined();
     expect(result.maximizeModal).toBeDefined();
     expect(result.minimizeModal).toBeDefined();
+    expect(result.requestFocus).toBeDefined();
+    expect(result.releaseFocus).toBeDefined();
   });
 
   it('should properly setup openModal function', () => {
@@ -159,5 +167,29 @@ describe('mapDispatchToProps', () => {
     result.minimizeModal({ test: 'data' });
 
     expect(testDispatch).toHaveBeenCalledWith({ type: MINIMIZE, data: { test: 'data' } });
+  });
+
+  it('should properly setup requestFocus function', () => {
+    const testDispatch = jest.fn();
+
+    const result = mapDispatchToProps(testDispatch);
+
+    expect(result.requestFocus).toBeDefined();
+
+    result.requestFocus({ test: 'data' });
+
+    expect(testDispatch).toHaveBeenCalledWith({ type: REQUEST_FOCUS, data: { test: 'data' } });
+  });
+
+  it('should properly setup releaseFocus function', () => {
+    const testDispatch = jest.fn();
+
+    const result = mapDispatchToProps(testDispatch);
+
+    expect(result.releaseFocus).toBeDefined();
+
+    result.releaseFocus({ test: 'data' });
+
+    expect(testDispatch).toHaveBeenCalledWith({ type: RELEASE_FOCUS, data: { test: 'data' } });
   });
 });
