@@ -113,7 +113,7 @@ As stateless react elements do not return a ref, but may be desired targets for 
   render() {
     <div>
       return (
-        <span ref={this.setTargetNode}>
+        <span ref={this.setButtonNode}>
           <Button />
         </span>
         <Popup
