@@ -1,6 +1,8 @@
 @import '~terra-mixins';
 
 :local {
+  /* stylelint-disable selector-class-pattern */
+
   .input {
     border: #dedfe0 solid 1px;
     border-radius: 0.25em;
