@@ -6,7 +6,7 @@ Unreleased
 ### Changed
 * Converted component to use CSS modules
 
-1.1.0 - (July 13, 2017)
+1.1.0 - (July 18, 2017)
 ------------------
 ### Added
 * Added new feature terra-overlay to site page
