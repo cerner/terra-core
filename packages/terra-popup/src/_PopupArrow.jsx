@@ -43,8 +43,10 @@ const PopupArrow = ({
   }) => <div {...customProps} className={cx(['popupArrow', customProps.className])} ref={refCallback} />;
 
 PopupArrow.propTypes = propTypes;
-PopupArrow.positionAttrs = ARROW_ATTRS;
-PopupArrow.mirroredPositionAttrs = MIRRORED_ARROW_ATTRS;
-PopupArrow.arrowSize = ARROW_OFFSET;
+PopupArrow.Opts = {
+  positionAttrs: ARROW_ATTRS,
+  mirroredPositionAttrs: MIRRORED_ARROW_ATTRS,
+  arrowSize: ARROW_OFFSET,
+};
 
 export default PopupArrow;

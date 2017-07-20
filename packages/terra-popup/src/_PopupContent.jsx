@@ -281,9 +281,11 @@ PopupContent.propTypes = propTypes;
 PopupContent.defaultProps = defaultProps;
 
 const onClickOutsideContent = onClickOutside(PopupContent);
-onClickOutsideContent.positionAttrs = CONTENT_ATTRS;
-onClickOutsideContent.mirroredPositionAttrs = MIRRORED_CONTENT_ATTRS;
-onClickOutsideContent.popupMargin = POPUP_MARGIN;
-onClickOutsideContent.cornerSize = CORNER_SIZE;
+onClickOutsideContent.Opts = {
+  positionAttrs: CONTENT_ATTRS,
+  mirroredPositionAttrs: MIRRORED_CONTENT_ATTRS,
+  popupMargin: POPUP_MARGIN,
+  cornerSize: CORNER_SIZE,
+};
 
 export default onClickOutsideContent;
