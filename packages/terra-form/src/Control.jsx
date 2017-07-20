@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
+
 import 'terra-base/lib/baseStyles';
+import styles from './Control.scss';
 
 import Input from './Input';
 
-import './Control.scss';
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -82,16 +84,16 @@ const Control = ({
   value,
   ...customProps
 }) => {
-  const labelClassNames = classNames(
-    'terra-Form-control',
-    { 'terra-Form-control--inline': isInline },
+  const labelClassNames = cx([
+    'control',
+    { 'control-inline': isInline },
     customProps.className,
-  );
+  ]);
 
-  const labelTextClasses = classNames(
-    'terra-Form-control-label-text',
+  const labelTextClasses = cx([
+    'control-label-text',
     labelTextAttrs.className,
-  );
+  ]);
 
   const controlInputAttrs = Object.assign({}, inputAttrs);
 
