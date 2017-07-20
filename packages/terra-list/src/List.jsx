@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './List.scss';
+import styles from './List.scss';
 import ListItem from './ListItem';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -26,9 +28,9 @@ const List = ({
     isDivided,
     ...customProps
   }) => {
-  const listClassNames = classNames([
-    'terra-List',
-    { 'terra-List-divided': isDivided },
+  const listClassNames = cx([
+    'list',
+    { divided: isDivided },
     customProps.className,
   ]);
 

@@ -14,27 +14,23 @@ module.exports = {
   'Displays a default list item': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/default`)
-      .assert.elementPresent('.terra-ListItem');
+      .assert.elementPresent('li');
   },
   'Displays a selected list item': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/selected`)
-      .assert.cssClassPresent('.terra-ListItem', 'terra-ListItem--selected');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/selected`);
+    browser.expect.element('li').to.have.attribute('class').which.contains('selected');
   },
   'Displays a selectable list item': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/selectable`)
-      .assert.cssClassPresent('.terra-ListItem', 'terra-ListItem-isSelectable');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/selectable`);
+    browser.expect.element('li').to.have.attribute('class').which.contains('is-selectable');
   },
   'Displays a chevron list item': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/chevron`)
-      .assert.cssClassPresent('.terra-ListItem', 'terra-ListItem-hasChevron');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/chevron`);
+    browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
   },
   'Displays a content for list item with the provided content': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/list-item-tests/default`)
-      .assert.elementPresent('.terra-ListItem p:nth-child(1)')
-      .assert.containsText('.terra-ListItem p:nth-child(1)', 'test content');
+      .assert.containsText('li p:nth-child(1)', 'test content');
   },
 };
