@@ -48,7 +48,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  app: undefined,
   inputAttributes: undefined,
   name: undefined,
   onChange: undefined,
