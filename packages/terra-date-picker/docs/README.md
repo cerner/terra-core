@@ -4,7 +4,7 @@ Terra-date-picker is a controlled input component that provides users a way to e
 
 This is a controlled component because it manages the state of the value in the input. Because this is a controlled input component, it cannot accept the defaultValue prop as it always uses the value prop. React does not allow having both the defaultValue and value props.
 
-The Modal component by default will trap focus. In order to interact with the date picker when rendered inside a modal, the focus on the modal must be released so that the picker can then request focus. The Modal Manager component supports releasing focus on the modal. Therefore, to render the date picker in a modal, it must be composed via the Modal Manager, which will internally handle releasing and request focus when the picker opens and closes.
+The [Modal][4] component by default will trap focus. In order to interact with the date picker when rendered inside a modal, the focus on the modal must be released so that the picker can then request focus. The [Modal Manager][3] component supports releasing focus on the modal. Therefore, to render the date picker in a modal, it must be composed via the [Modal Manager][3], which will internally handle releasing and requesting focus when the picker opens and closes.
 
 ## Getting Started
 
@@ -36,6 +36,8 @@ const isWeekday = (date) => {
 
 [1]: https://github.com/Hacker0x01/react-datepicker
 [2]: http://momentjs.com/docs/
+[3]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager/docs
+[4]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal/docs
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

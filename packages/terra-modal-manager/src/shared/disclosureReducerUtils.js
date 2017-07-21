@@ -70,7 +70,7 @@ const minimize = (state) => {
 const requestFocus = (state) => {
   const newState = cloneDisclosureState(state);
 
-  newState.isFocused = true;
+  newState.isFocused = false;
 
   return newState;
 };
@@ -78,7 +78,7 @@ const requestFocus = (state) => {
 const releaseFocus = (state) => {
   const newState = cloneDisclosureState(state);
 
-  newState.isFocused = false;
+  newState.isFocused = true;
 
   return newState;
 };

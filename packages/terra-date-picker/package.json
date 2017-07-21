@@ -30,7 +30,6 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-app-delegate": "^1.1.0",
     "terra-base": "^1.1.0",
     "terra-button": "^1.1.0",
     "terra-form": "^1.1.0",

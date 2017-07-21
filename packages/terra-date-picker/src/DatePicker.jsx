@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
 import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
-import AppDelegate from 'terra-app-delegate';
 import DateInput from './DateInput';
 import DateUtil from './DateUtil';
 import './DatePicker.scss';
 
 const propTypes = {
-  /**
-   * The AppDelegate instance provided by the containing component. If present, its properties will propagate to the children components.
-   **/
-  app: AppDelegate.propType,
   /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
@@ -46,13 +41,20 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
+  /**
    * An ISO 8601 string representation of the initial value to show in the date input. This prop name is derived from react-datepicker but is analogous to value in a form input field.
    */
   selectedDate: PropTypes.string,
 };
 
 const defaultProps = {
-  app: undefined,
   excludeDates: undefined,
   filterDate: undefined,
   includeDates: undefined,
@@ -61,6 +63,8 @@ const defaultProps = {
   minDate: undefined,
   name: undefined,
   onChange: undefined,
+  releaseFocus: undefined,
+  requestFocus: undefined,
   selectedDate: undefined,
 };
 
@@ -88,9 +92,9 @@ class DatePicker extends React.Component {
   }
 
   requestFocus() {
-    // Let the containing component (e.g. modal) regain focus since the picker will be dismissed.
-    if (this.props.app && this.props.app.requestFocus) {
-      this.props.app.requestFocus();
+    // The picker will be dismissed and the focus will be released so that the containing component (e.g. modal) can regain focus.
+    if (this.props.releaseFocus) {
+      this.props.releaseFocus();
     }
   }
 
@@ -106,7 +110,6 @@ class DatePicker extends React.Component {
 
   render() {
     const {
-      app,
       inputAttributes,
       excludeDates,
       filterDate,
@@ -114,6 +117,8 @@ class DatePicker extends React.Component {
       maxDate,
       minDate,
       name,
+      requestFocus,
+      releaseFocus,
       selectedDate,
       ...customProps
     } = this.props;
@@ -133,7 +138,7 @@ class DatePicker extends React.Component {
         onChange={this.handleChange}
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
-        customInput={<DateInput app={app} inputAttributes={inputAttributes} />}
+        customInput={<DateInput inputAttributes={inputAttributes} releaseFocus={releaseFocus} requestFocus={requestFocus} />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -159,7 +164,7 @@ class DatePicker extends React.Component {
         onChange={this.handleChange}
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
-        customInput={<DateInput app={app} inputAttributes={inputAttributes} />}
+        customInput={<DateInput inputAttributes={inputAttributes} releaseFocus={releaseFocus} requestFocus={requestFocus} />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}

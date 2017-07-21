@@ -1,7 +1,7 @@
 import React from 'react';
-import AppDelegate from 'terra-app-delegate';
 import DatePicker from 'terra-date-picker/src/DatePicker';
 import Button from 'terra-button';
+import AppDelegate from 'terra-app-delegate';
 
 class ModalContainer extends React.Component {
   constructor(props) {
@@ -36,10 +36,10 @@ class ModalContainer extends React.Component {
   modalContent(props) {
     return (
       <div className="content-container" style={{ height: '100%', padding: '10px' }}>
-        {props.app && props.app.requestFocus ? <h4>Modal focus is released!</h4> : null }
-        {props.app && props.app.releaseFocus ? <h4>Modal focus is trapped!</h4> : null }
+        {props.app && props.app.releaseFocus ? <h4>Modal focus is released!</h4> : null }
+        {props.app && props.app.requestFocus ? <h4>Modal focus is trapped!</h4> : null }
         <br />
-        <DatePicker name="date-picker-in-modal" app={props.app} />
+        <DatePicker name="date-picker-in-modal" releaseFocus={props.app.releaseFocus} requestFocus={props.app.requestFocus} />
         <br />
         <br />
         <Button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</Button>

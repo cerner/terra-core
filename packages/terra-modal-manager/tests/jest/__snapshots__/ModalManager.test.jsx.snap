@@ -171,7 +171,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "disclose": [Function],
                     "dismiss": [Function],
                     "maximize": [Function],
-                    "releaseFocus": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 1" />,
@@ -183,7 +183,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "dismiss": [Function],
                     "goBack": [Function],
                     "maximize": [Function],
-                    "releaseFocus": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 2" />,
@@ -258,7 +258,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "disclose": [Function],
                     "dismiss": [Function],
                     "minimize": [Function],
-                    "releaseFocus": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 1" />,
@@ -270,7 +270,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "dismiss": [Function],
                     "goBack": [Function],
                     "minimize": [Function],
-                    "releaseFocus": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 2" />,

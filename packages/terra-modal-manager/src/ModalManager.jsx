@@ -81,12 +81,12 @@ const propTypes = {
   minimizeModal: PropTypes.func.isRequired,
 
   /**
-   * From `connect`. A function that dispatches a `requestFocus` action.
+   * From `connect`. A function that dispatches a `requestFocus` action to request the Modal to untrap focus.
    **/
   requestFocus: PropTypes.func.isRequired,
 
   /**
-   * From `connect`. A function that dispatches a `releaseFocus` action.
+   * From `connect`. A function that dispatches a `releaseFocus` action that the Modal can regain focus.
    **/
   releaseFocus: PropTypes.func.isRequired,
 };
@@ -157,8 +157,8 @@ class ModalManager extends React.Component {
         goBack: index > 0 ? (data) => { popModal(data); } : null,
         maximize: !isMaximized ? (data) => { maximizeModal(data); } : null,
         minimize: isMaximized ? (data) => { minimizeModal(data); } : null,
-        requestFocus: !isFocused ? (data) => { requestFocus(data); } : null,
-        releaseFocus: isFocused ? (data) => { releaseFocus(data); } : null,
+        releaseFocus: !isFocused ? (data) => { releaseFocus(data); } : null,
+        requestFocus: isFocused ? (data) => { requestFocus(data); } : null,
       });
 
       return <ComponentClass key={componentData.key} {...componentData.props} app={appDelegate} />;

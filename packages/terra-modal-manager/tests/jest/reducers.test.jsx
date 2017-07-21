@@ -294,7 +294,7 @@ describe('modalManager reducer', () => {
       data: {},
     });
 
-    const expected = Object.assign({}, initialState, { isFocused: true });
+    const expected = Object.assign({}, initialState, { isFocused: false });
 
     expect(result).toEqual(expected);
   });
@@ -325,7 +325,7 @@ describe('modalManager reducer', () => {
       data: {},
     });
 
-    const expected = Object.assign({}, initialState, { isFocused: false });
+    const expected = Object.assign({}, initialState, { isFocused: true });
 
     expect(result).toEqual(expected);
   });

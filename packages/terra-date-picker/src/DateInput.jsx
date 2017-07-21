@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
-import AppDelegate from 'terra-app-delegate';
 import Input from 'terra-form/lib/Input';
 import DateUtil from './DateUtil';
 
 const Icon = <IconCalendar />;
 
 const propTypes = {
-  /**
-   * The AppDelegate instance provided by the containing component. If present, its properties will propagate to the children components.
-   **/
-  app: AppDelegate.propType,
   /**
    * Custom input attributes to apply to the date input.
    */
@@ -39,6 +34,14 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
+  /**
    * The selected or entered date value to display in the date input.
    */
   value: PropTypes.string,
@@ -52,6 +55,8 @@ const defaultProps = {
   onClick: undefined,
   onKeyDown: undefined,
   placeholder: undefined,
+  releaseFocus: undefined,
+  requestFocus: undefined,
   value: undefined,
 };
 
@@ -65,9 +70,9 @@ class DatePickerInput extends React.Component {
   }
 
   handleOnButtonClick() {
-    // If the containing component (e.g. modal) has the focus trapped, the focus needs to be released so that the picker can get focus.
-    if (this.props.app && this.props.app.releaseFocus) {
-      this.props.app.releaseFocus();
+    // The picker is about to display so request focus from the containing component (e.g. modal) if it has the focus trapped.
+    if (this.props.requestFocus) {
+      this.props.requestFocus();
     }
 
     if (this.props.onClick) {
@@ -76,9 +81,9 @@ class DatePickerInput extends React.Component {
   }
 
   handleOnKeyDown(event) {
-    // Let the containing component (e.g. modal) regain focus if the picker is about to dismiss by pressing one of these keys.
-    if (this.props.app && this.props.app.requestFocus && (event.key === 'Enter' || event.key === 'Escape' || event.key === 'Tab')) {
-      this.props.app.requestFocus();
+    // The picker will be dismissed if one of these keys is pressed and the focus will be released so release the focus to the containing component.
+    if (this.props.releaseFocus && (event.key === 'Enter' || event.key === 'Escape' || event.key === 'Tab')) {
+      this.props.releaseFocus();
 
       if (event.key === 'Tab') {
         event.preventDefault();
@@ -92,13 +97,14 @@ class DatePickerInput extends React.Component {
 
   render() {
     const {
-      app,
       inputAttributes,
       name,
       onChange,
       onClick,
       onKeyDown,
       placeholder,
+      releaseFocus,
+      requestFocus,
       value,
       ...customProps
     } = this.props;
