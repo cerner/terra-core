@@ -10,6 +10,7 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 export default () =>
   <Base locale={locale}>
     <DemographicsBanner
+      id="populated-demographics"
       applicationContent={<p>St. Johns West Wing Room Cardiac Unit 253</p>}
       age="25 Years"
       dateOfBirth="May 9, 1993"
