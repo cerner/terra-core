@@ -6,8 +6,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
-  REQUEST_FOCUS,
-  RELEASE_FOCUS,
+  GAIN_FOCUS,
+  LOSE_FOCUS,
 } from '../../src/actionTypes';
 
 describe('modalManager reducer', () => {
@@ -268,7 +268,7 @@ describe('modalManager reducer', () => {
     expect(result).toEqual(expected);
   });
 
-  it('should return state after request focus action', () => {
+  it('should return state after gain focus action', () => {
     const initialState = {
       componentKeys: ['COMPONENT_1', 'COMPONENT_2'],
       components: {
@@ -290,42 +290,42 @@ describe('modalManager reducer', () => {
     };
 
     const result = modalManager(initialState, {
-      type: REQUEST_FOCUS,
-      data: {},
-    });
-
-    const expected = Object.assign({}, initialState, { isFocused: false });
-
-    expect(result).toEqual(expected);
-  });
-
-  it('should return state after release focus action', () => {
-    const initialState = {
-      componentKeys: ['COMPONENT_1', 'COMPONENT_2'],
-      components: {
-        COMPONENT_1: {
-          name: 'Component1',
-          props: {},
-          key: 'COMPONENT_1',
-        },
-        COMPONENT_2: {
-          name: 'Component2',
-          props: {},
-          key: 'COMPONENT_2',
-        },
-      },
-      isFocused: true,
-      isOpen: true,
-      isMaximized: true,
-      size: 'large',
-    };
-
-    const result = modalManager(initialState, {
-      type: RELEASE_FOCUS,
+      type: GAIN_FOCUS,
       data: {},
     });
 
     const expected = Object.assign({}, initialState, { isFocused: true });
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return state after lose focus action', () => {
+    const initialState = {
+      componentKeys: ['COMPONENT_1', 'COMPONENT_2'],
+      components: {
+        COMPONENT_1: {
+          name: 'Component1',
+          props: {},
+          key: 'COMPONENT_1',
+        },
+        COMPONENT_2: {
+          name: 'Component2',
+          props: {},
+          key: 'COMPONENT_2',
+        },
+      },
+      isFocused: true,
+      isOpen: true,
+      isMaximized: true,
+      size: 'large',
+    };
+
+    const result = modalManager(initialState, {
+      type: LOSE_FOCUS,
+      data: {},
+    });
+
+    const expected = Object.assign({}, initialState, { isFocused: false });
 
     expect(result).toEqual(expected);
   });

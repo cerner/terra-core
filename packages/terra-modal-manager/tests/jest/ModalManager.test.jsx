@@ -12,10 +12,10 @@ const pushModal = () => {};
 const popModal = () => {};
 const maximizeModal = () => {};
 const minimizeModal = () => {};
-const requestFocus = () => {};
-const releaseFocus = () => {};
+const gainFocus = () => {};
+const loseFocus = () => {};
 
-const requiredProps = { openModal, closeModal, pushModal, popModal, maximizeModal, minimizeModal, requestFocus, releaseFocus };
+const requiredProps = { openModal, closeModal, pushModal, popModal, maximizeModal, minimizeModal, gainFocus, loseFocus };
 
 describe('ModalManger', () => {
   it('should render the ModalManager with defaults', () => {
@@ -152,8 +152,8 @@ describe('ModalManger', () => {
     });
   });
 
-  describe('- focus released -', () => {
-    it('should render the ModalManager with focus released', () => {
+  describe('- focus lost -', () => {
+    it('should render the ModalManager with focus lost', () => {
       const modalManager = (
         <ModalManager
           isMaximized

@@ -27,7 +27,7 @@ exports[`ModalManger - app - should render the ModalManager with given AppDelega
 </div>
 `;
 
-exports[`ModalManger - focus released - should render the ModalManager with focus released 1`] = `
+exports[`ModalManger - focus lost - should render the ModalManager with focus lost 1`] = `
 <div
   className="terra-ModalManager">
   <TestContainer

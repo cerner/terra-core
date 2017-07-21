@@ -71,8 +71,8 @@ class ContentContainer extends React.Component {
         <br />
         <h4>id: {identifier}</h4>
         <br />
-        {app && app.releaseFocus ? <h4>Modal has released focus trap!</h4> : null }
-        {app && app.requestFocus ? <h4>Modal has trapped focus!</h4> : null }
+        {app && app.releaseFocus ? <h4>Modal has lost focus!</h4> : null }
+        {app && app.requestFocus ? <h4>Modal has gained focus!</h4> : null }
         <br />
         <button className="disclose" onClick={this.disclose()}>Disclose</button>
         {identifier === 'root-component' && <button className="disclose-tiny" onClick={this.disclose('tiny')}>Disclose - Tiny</button>}

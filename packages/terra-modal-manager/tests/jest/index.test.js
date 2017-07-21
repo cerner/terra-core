@@ -7,8 +7,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
-  REQUEST_FOCUS,
-  RELEASE_FOCUS,
+  GAIN_FOCUS,
+  LOSE_FOCUS,
 } from '../../src/actionTypes';
 
 describe('mapStateToProps', () => {
@@ -93,8 +93,8 @@ describe('mapDispatchToProps', () => {
     expect(result.popModal).toBeDefined();
     expect(result.maximizeModal).toBeDefined();
     expect(result.minimizeModal).toBeDefined();
-    expect(result.requestFocus).toBeDefined();
-    expect(result.releaseFocus).toBeDefined();
+    expect(result.gainFocus).toBeDefined();
+    expect(result.loseFocus).toBeDefined();
   });
 
   it('should properly setup openModal function', () => {
@@ -169,27 +169,27 @@ describe('mapDispatchToProps', () => {
     expect(testDispatch).toHaveBeenCalledWith({ type: MINIMIZE, data: { test: 'data' } });
   });
 
-  it('should properly setup requestFocus function', () => {
+  it('should properly setup gainFocus function', () => {
     const testDispatch = jest.fn();
 
     const result = mapDispatchToProps(testDispatch);
 
-    expect(result.requestFocus).toBeDefined();
+    expect(result.gainFocus).toBeDefined();
 
-    result.requestFocus({ test: 'data' });
+    result.gainFocus({ test: 'data' });
 
-    expect(testDispatch).toHaveBeenCalledWith({ type: REQUEST_FOCUS, data: { test: 'data' } });
+    expect(testDispatch).toHaveBeenCalledWith({ type: GAIN_FOCUS, data: { test: 'data' } });
   });
 
-  it('should properly setup releaseFocus function', () => {
+  it('should properly setup loseFocus function', () => {
     const testDispatch = jest.fn();
 
     const result = mapDispatchToProps(testDispatch);
 
-    expect(result.releaseFocus).toBeDefined();
+    expect(result.loseFocus).toBeDefined();
 
-    result.releaseFocus({ test: 'data' });
+    result.loseFocus({ test: 'data' });
 
-    expect(testDispatch).toHaveBeenCalledWith({ type: RELEASE_FOCUS, data: { test: 'data' } });
+    expect(testDispatch).toHaveBeenCalledWith({ type: LOSE_FOCUS, data: { test: 'data' } });
   });
 });

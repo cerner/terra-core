@@ -67,15 +67,7 @@ const minimize = (state) => {
   return newState;
 };
 
-const requestFocus = (state) => {
-  const newState = cloneDisclosureState(state);
-
-  newState.isFocused = false;
-
-  return newState;
-};
-
-const releaseFocus = (state) => {
+const gainFocus = (state) => {
   const newState = cloneDisclosureState(state);
 
   newState.isFocused = true;
@@ -83,4 +75,12 @@ const releaseFocus = (state) => {
   return newState;
 };
 
-export { defaultState, open, close, push, pop, maximize, minimize, requestFocus, releaseFocus };
+const loseFocus = (state) => {
+  const newState = cloneDisclosureState(state);
+
+  newState.isFocused = false;
+
+  return newState;
+};
+
+export { defaultState, open, close, push, pop, maximize, minimize, gainFocus, loseFocus };

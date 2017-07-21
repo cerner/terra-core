@@ -16,7 +16,7 @@ Unreleased
 * Removed unnecessary layout styles (Issue #610)
 
 ### Added
-* Added requestFocus and releaseFocus actions to support trapping and releasing focus in the modal manager.
+* Added gainFocus and loseFocus actions to support trapping and releasing focus in the modal manager.
 
 1.0.0 - (June 28, 2017)
 ------------------
