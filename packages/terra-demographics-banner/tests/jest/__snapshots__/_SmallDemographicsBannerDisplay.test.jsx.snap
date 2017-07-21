@@ -11,19 +11,19 @@ exports[`test renders small banner that contains all valid information 1`] = `
       },
     ]
   }
-  className="terra-DemographicsBanner">
+  className="demographics-banner">
   <h1
-    className="terra-DemographicsBanner-person-name">
+    className="person-name">
     <span>
       Johnathon Doe
       <span
-        className="terra-DemographicsBanner-preferred-first-name">
+        className="preferred-first-name">
         John
       </span>
     </span>
   </h1>
   <div
-    className="terra-DemographicsBanner-person-details">
+    className="person-details">
     <DemographicsBannerValue
       value="25 Years" />
     <DemographicsBannerValue
@@ -39,7 +39,7 @@ exports[`test renders small banner that contains all valid information 1`] = `
       value="3JSDA" />
   </div>
   <div
-    className="terra-DemographicsBanner-application-content">
+    className="application-content">
     <span
       className="risk-score">
       5%
