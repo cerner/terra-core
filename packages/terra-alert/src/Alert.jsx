@@ -5,8 +5,6 @@ import Button from 'terra-button';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
-import IconRequired from 'terra-icon/lib/icon/IconRequired';
-import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import classNames from 'classnames/bind';
@@ -22,8 +20,6 @@ const AlertTypes = {
   ADVISORY: 'advisory',
   INFO: 'info',
   SUCCESS: 'success',
-  GAP_CHECKING: 'gapChecking',
-  OUTSIDE_RECORDS: 'outsideRecords',
   CUSTOM: 'custom',
 };
 
@@ -54,7 +50,7 @@ const propTypes = {
   title: PropTypes.string,
   /**
    * The type of alert to be rendered. One of Alert.Opts.Types.ALERT, Alert.Opts.Types.ERROR, Alert.Opts.Types.WARNING, Alert.Opts.Types.ADVISORY,
-   * Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.GAP_CHECKING, Alert.Opts.Types.OUTSIDE_RECORDS, Alert.Opts.Types.CUSTOM.
+   * Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.CUSTOM.
    * Use the Alert.Opts.Types attribute of the Alert component for access to these type strings.
    */
   type: PropTypes.oneOf([
@@ -64,8 +60,6 @@ const propTypes = {
     AlertTypes.ADVISORY,
     AlertTypes.INFO,
     AlertTypes.SUCCESS,
-    AlertTypes.GAP_CHECKING,
-    AlertTypes.OUTSIDE_RECORDS,
     AlertTypes.CUSTOM,
   ]),
 };
@@ -94,10 +88,6 @@ const getAlertIcon = (type, customIcon) => {
       return (<IconInformation />);
     case AlertTypes.SUCCESS:
       return (<IconSuccess />);
-    case AlertTypes.GAP_CHECKING:
-      return (<IconRequired />);
-    case AlertTypes.OUTSIDE_RECORDS:
-      return (<IconDiamond />);
     case AlertTypes.CUSTOM:
       return customIcon;
     default:

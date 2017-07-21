@@ -158,40 +158,6 @@ module.exports = {
         'Check text content provided to Alert of type success');
   },
 
-  'Type attribute tests - Check Alert of type gap checking': (browser) => {
-    browser
-      .assert.attributeContains(
-        '#gapCheckingAlert',
-        'class',
-        '_gapChecking',
-        'Check that Alert of type gap-checking exists')
-      .assert.containsText(
-        '#gapCheckingAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
-        'Required Action.',
-        'Check default title for Alert of type gap-checking')
-      .assert.containsText(
-        '#gapCheckingAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
-        'Alert of type Gap Checking',
-        'Check text content provided to Alert of type gap-checking');
-  },
-
-  'Type attribute tests - Check Alert of type outside records': (browser) => {
-    browser
-      .assert.attributeContains(
-        '#outsideRecordsAlert',
-        'class',
-        '_outsideRecords',
-        'Check that Alert of type outside-records exists')
-      .assert.containsText(
-        '#outsideRecordsAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
-        'Outside Records.',
-        'Check default title for Alert of type outside-records')
-      .assert.containsText(
-        '#outsideRecordsAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
-        'Alert of type Outside Records',
-        'Check text content provided to Alert of type outside-records');
-  },
-
   'Title attribute tests - Displays an alert of each type with a custom title': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/title`)
@@ -218,15 +184,7 @@ module.exports = {
       .assert.containsText(
         '#successAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Success_Alert:',
-        'Check custom title for Alert of type success')
-      .assert.containsText(
-        '#gapCheckingAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
-        'Gap_Checking_Alert:',
-        'Check custom title for Alert of type gap checking')
-      .assert.containsText(
-        '#outsideRecordsAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
-        'Outside_Records_Alert:',
-        'Check custom title for Alert of type outside records');
+        'Check custom title for Alert of type success');
   },
 
   'Custom Alert Tests - Displays custom alerts with varying permutations of title, custom icon and custom status color parameters': (browser) => {

@@ -1,534 +1,4 @@
-exports[`1. Alert with no props should render a default component 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="alert">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Alert.
-              </strong>
-              <div
-                className="content" />
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Alert.
-              </strong>
-              <div
-                className="content" />
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`2. Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={[Function]}
-    title=""
-    type="alert">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert narrow"
-          style={Object {}}>
-          <div
-            className="bodyNarrow">
-            <div
-              className="icon">
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Alert.
-              </strong>
-              <div
-                className="content">
-                This is a test
-              </div>
-            </div>
-          </div>
-          <div
-            className="actions">
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isReversed={false}
-              onClick={[Function]}
-              size="medium"
-              text="Dismiss"
-              type="button"
-              variant="secondary" />
-          </div>
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Alert.
-              </strong>
-              <div
-                className="content">
-                This is a test
-              </div>
-            </div>
-          </div>
-          <div
-            className="actions">
-            <Button
-              isBlock={false}
-              isCompact={false}
-              isDisabled={false}
-              isReversed={false}
-              onClick={[Function]}
-              size="medium"
-              text="Dismiss"
-              type="button"
-              variant="secondary" />
-          </div>
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`3. Alert of type alert with text content should render an Alert component of type alert 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="alert">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="alert narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Alert.
-              </strong>
-              <div
-                className="content">
-                This is an alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="alert wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconAlert
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Alert.
-              </strong>
-              <div
-                className="content">
-                This is an alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`4. Alert of type error with text content should render an Alert component of type error 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="error">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="error narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconError
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Error.
-              </strong>
-              <div
-                className="content">
-                This is an error.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="error wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconError
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Error.
-              </strong>
-              <div
-                className="content">
-                This is an error.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`5. Alert of type warning with text content should render an Alert component of type warning 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="warning">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="warning narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconWarning
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Warning.
-              </strong>
-              <div
-                className="content">
-                This is an warning.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="warning wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconWarning
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Warning.
-              </strong>
-              <div
-                className="content">
-                This is an warning.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`6. Alert of type gap-checking with text content should render an Alert component of type gap-checking 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="gapChecking">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="gapChecking narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconRequired
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Required Action.
-              </strong>
-              <div
-                className="content">
-                This is a gap-checking alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="gapChecking wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconRequired
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Required Action.
-              </strong>
-              <div
-                className="content">
-                This is a gap-checking alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`7. Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
+exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
 <IntlProvider
   locale="en-US"
   messages={
@@ -605,7 +75,7 @@ exports[`7. Alert of type advisory with text content should render an Alert comp
 </IntlProvider>
 `;
 
-exports[`8. Alert of type info with text content should render an Alert component of type info 1`] = `
+exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
 <IntlProvider
   locale="en-US"
   messages={
@@ -627,17 +97,17 @@ exports[`8. Alert of type info with text content should render an Alert componen
     customStatusColor=""
     onDismiss={null}
     title=""
-    type="info">
+    type="alert">
     <ResponsiveElement
       defaultElement={
         <div
-          className="info narrow"
+          className="alert narrow"
           style={Object {}}>
           <div
             className="bodyStd">
             <div
               className="icon">
-              <IconInformation
+              <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -645,11 +115,11 @@ exports[`8. Alert of type info with text content should render an Alert componen
               className="section">
               <strong
                 className="title">
-                Information.
+                Alert.
               </strong>
               <div
                 className="content">
-                This is an information alert.
+                This is an alert.
               </div>
             </div>
           </div>
@@ -659,13 +129,13 @@ exports[`8. Alert of type info with text content should render an Alert componen
       responsiveTo="parent"
       tiny={
         <div
-          className="info wide"
+          className="alert wide"
           style={Object {}}>
           <div
             className="bodyStd">
             <div
               className="icon">
-              <IconInformation
+              <IconAlert
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
@@ -673,11 +143,11 @@ exports[`8. Alert of type info with text content should render an Alert componen
               className="section">
               <strong
                 className="title">
-                Information.
+                Alert.
               </strong>
               <div
                 className="content">
-                This is an information alert.
+                This is an alert.
               </div>
             </div>
           </div>
@@ -690,177 +160,7 @@ exports[`8. Alert of type info with text content should render an Alert componen
 </IntlProvider>
 `;
 
-exports[`9. Alert of type success with text content should render an Alert component of type success 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="success">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="success narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconSuccess
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Success.
-              </strong>
-              <div
-                className="content">
-                This is a success alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="success wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconSuccess
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Success.
-              </strong>
-              <div
-                className="content">
-                This is a success alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`10. Alert of type outside records with text content should render an Alert component of type confirmation 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.alert.advisory": "Advisory.",
-      "Terra.alert.alert": "Alert.",
-      "Terra.alert.dismiss": "Dismiss",
-      "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
-      "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
-      "Terra.alert.success": "Success.",
-      "Terra.alert.warning": "Warning.",
-    }
-  }>
-  <Alert
-    alertAction={null}
-    customIcon={null}
-    customStatusColor=""
-    onDismiss={null}
-    title=""
-    type="outsideRecords">
-    <ResponsiveElement
-      defaultElement={
-        <div
-          className="outsideRecords narrow"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconDiamond
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Outside Records.
-              </strong>
-              <div
-                className="content">
-                This is an outside records alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }
-      responsiveTo="parent"
-      tiny={
-        <div
-          className="outsideRecords wide"
-          style={Object {}}>
-          <div
-            className="bodyStd">
-            <div
-              className="icon">
-              <IconDiamond
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg" />
-            </div>
-            <div
-              className="section">
-              <strong
-                className="title">
-                Outside Records.
-              </strong>
-              <div
-                className="content">
-                This is an outside records alert.
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      }>
-      <div />
-    </ResponsiveElement>
-  </Alert>
-</IntlProvider>
-`;
-
-exports[`11. Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
+exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
 <IntlProvider
   locale="en-US"
   messages={
@@ -957,7 +257,92 @@ exports[`11. Alert of type custom with custom title and text content should rend
 </IntlProvider>
 `;
 
-exports[`12. Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
+exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={null}
+    title=""
+    type="error">
+    <ResponsiveElement
+      defaultElement={
+        <div
+          className="error narrow"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconError
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Error.
+              </strong>
+              <div
+                className="content">
+                This is an error.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }
+      responsiveTo="parent"
+      tiny={
+        <div
+          className="error wide"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconError
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Error.
+              </strong>
+              <div
+                className="content">
+                This is an error.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }>
+      <div />
+    </ResponsiveElement>
+  </Alert>
+</IntlProvider>
+`;
+
+exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <IntlProvider
   locale="en-US"
   messages={
@@ -1046,7 +431,92 @@ exports[`12. Alert of type info with custom title and HTML content should render
 </IntlProvider>
 `;
 
-exports[`13. Alert of type success with an action button text content should render an Alert component of type success with an action button 1`] = `
+exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={null}
+    title=""
+    type="info">
+    <ResponsiveElement
+      defaultElement={
+        <div
+          className="info narrow"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconInformation
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Information.
+              </strong>
+              <div
+                className="content">
+                This is an information alert.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }
+      responsiveTo="parent"
+      tiny={
+        <div
+          className="info wide"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconInformation
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Information.
+              </strong>
+              <div
+                className="content">
+                This is an information alert.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }>
+      <div />
+    </ResponsiveElement>
+  </Alert>
+</IntlProvider>
+`;
+
+exports[`Alert of type success with an action button text content should render an Alert component of type success with an action button 1`] = `
 <IntlProvider
   locale="en-US"
   messages={
@@ -1168,7 +638,258 @@ exports[`13. Alert of type success with an action button text content should ren
 </IntlProvider>
 `;
 
-exports[`14. Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
+exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={null}
+    title=""
+    type="success">
+    <ResponsiveElement
+      defaultElement={
+        <div
+          className="success narrow"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconSuccess
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Success.
+              </strong>
+              <div
+                className="content">
+                This is a success alert.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }
+      responsiveTo="parent"
+      tiny={
+        <div
+          className="success wide"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconSuccess
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Success.
+              </strong>
+              <div
+                className="content">
+                This is a success alert.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }>
+      <div />
+    </ResponsiveElement>
+  </Alert>
+</IntlProvider>
+`;
+
+exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={null}
+    title=""
+    type="warning">
+    <ResponsiveElement
+      defaultElement={
+        <div
+          className="warning narrow"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconWarning
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Warning.
+              </strong>
+              <div
+                className="content">
+                This is an warning.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }
+      responsiveTo="parent"
+      tiny={
+        <div
+          className="warning wide"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconWarning
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Warning.
+              </strong>
+              <div
+                className="content">
+                This is an warning.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      }>
+      <div />
+    </ResponsiveElement>
+  </Alert>
+</IntlProvider>
+`;
+
+exports[`Alert with no props should render a default component 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={null}
+    title=""
+    type="alert">
+    <ResponsiveElement
+      defaultElement={
+        <div
+          className="alert narrow"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconAlert
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Alert.
+              </strong>
+              <div
+                className="content" />
+            </div>
+          </div>
+          
+        </div>
+      }
+      responsiveTo="parent"
+      tiny={
+        <div
+          className="alert wide"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconAlert
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Alert.
+              </strong>
+              <div
+                className="content" />
+            </div>
+          </div>
+          
+        </div>
+      }>
+      <div />
+    </ResponsiveElement>
+  </Alert>
+</IntlProvider>
+`;
+
+exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
 <IntlProvider
   locale="en-US"
   messages={
@@ -1301,6 +1022,115 @@ exports[`14. Dismissable Alert of type custom with action button, custom title a
               text="Action"
               type="button"
               variant="primary" />
+            <Button
+              isBlock={false}
+              isCompact={false}
+              isDisabled={false}
+              isReversed={false}
+              onClick={[Function]}
+              size="medium"
+              text="Dismiss"
+              type="button"
+              variant="secondary" />
+          </div>
+        </div>
+      }>
+      <div />
+    </ResponsiveElement>
+  </Alert>
+</IntlProvider>
+`;
+
+exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.alert.advisory": "Advisory.",
+      "Terra.alert.alert": "Alert.",
+      "Terra.alert.dismiss": "Dismiss",
+      "Terra.alert.error": "Error.",
+      "Terra.alert.gapChecking": "Required Action.",
+      "Terra.alert.info": "Information.",
+      "Terra.alert.outsideRecords": "Outside Records.",
+      "Terra.alert.success": "Success.",
+      "Terra.alert.warning": "Warning.",
+    }
+  }>
+  <Alert
+    alertAction={null}
+    customIcon={null}
+    customStatusColor=""
+    onDismiss={[Function]}
+    title=""
+    type="alert">
+    <ResponsiveElement
+      defaultElement={
+        <div
+          className="alert narrow"
+          style={Object {}}>
+          <div
+            className="bodyNarrow">
+            <div
+              className="icon">
+              <IconAlert
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Alert.
+              </strong>
+              <div
+                className="content">
+                This is a test
+              </div>
+            </div>
+          </div>
+          <div
+            className="actions">
+            <Button
+              isBlock={false}
+              isCompact={false}
+              isDisabled={false}
+              isReversed={false}
+              onClick={[Function]}
+              size="medium"
+              text="Dismiss"
+              type="button"
+              variant="secondary" />
+          </div>
+        </div>
+      }
+      responsiveTo="parent"
+      tiny={
+        <div
+          className="alert wide"
+          style={Object {}}>
+          <div
+            className="bodyStd">
+            <div
+              className="icon">
+              <IconAlert
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg" />
+            </div>
+            <div
+              className="section">
+              <strong
+                className="title">
+                Alert.
+              </strong>
+              <div
+                className="content">
+                This is a test
+              </div>
+            </div>
+          </div>
+          <div
+            className="actions">
             <Button
               isBlock={false}
               isCompact={false}

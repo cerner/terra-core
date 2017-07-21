@@ -19,8 +19,4 @@ export default () =>
     <Alert id="infoAlert" type={Alert.Opts.Types.INFO} >Alert of type Info</Alert>
     <br />
     <Alert id="successAlert" type={Alert.Opts.Types.SUCCESS} >Alert of type Success</Alert>
-    <br />
-    <Alert id="gapCheckingAlert" type={Alert.Opts.Types.GAP_CHECKING} >Alert of type Gap Checking</Alert>
-    <br />
-    <Alert id="outsideRecordsAlert" type={Alert.Opts.Types.OUTSIDE_RECORDS} >Alert of type Outside Records</Alert>
   </Base>;

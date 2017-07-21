@@ -230,8 +230,6 @@ class BuildYourOwnAlertExample extends React.Component {
                       <option value={Alert.Opts.Types.ADVISORY}>Alert.Opts.Types.ADVISORY</option>
                       <option value={Alert.Opts.Types.INFO}>Alert.Opts.Types.INFO</option>
                       <option value={Alert.Opts.Types.SUCCESS}>Alert.Opts.Types.SUCCESS</option>
-                      <option value={Alert.Opts.Types.GAP_CHECKING}>Alert.Opts.Types.GAP_CHECKING</option>
-                      <option value={Alert.Opts.Types.OUTSIDE_RECORDS}>Alert.Opts.Types.OUTSIDE_RECORDS</option>
                       <option value={Alert.Opts.Types.CUSTOM}>Alert.Opts.Types.CUSTOM</option>
                     </select>
                   </td>

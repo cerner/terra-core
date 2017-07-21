@@ -5,7 +5,5 @@
   "Terra.alert.warning": "Advertencia.",
   "Terra.alert.alert": "Alerta.",
   "Terra.alert.advisory": "Recomendación.",
-  "Terra.alert.gapChecking": "Acción obligatoria.",
-  "Terra.alert.outsideRecords": "Registros externos.",
   "Terra.alert.success": "Éxito."
 }

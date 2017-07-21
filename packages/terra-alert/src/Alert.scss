@@ -114,12 +114,6 @@
     composes: alertBase;
   }
 
-  .gapChecking {
-    background-color: var(--terra-alert-gap-checking-background-color);
-    box-shadow: 2px 0 0 var(--terra-alert-gap-checking-shadow-color) inset;
-    composes: alertBase;
-  }
-
   .advisory {
     background-color: var(--terra-alert-advisory-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-advisory-shadow-color) inset;
@@ -138,12 +132,6 @@
     composes: alertBase;
   }
 
-  .outsideRecords {
-    background-color: var(--terra-alert-outside-records-background-color);
-    box-shadow: 2px 0 0 var(--terra-alert-outside-records-shadow-color) inset;
-    composes: alertBase;
-  }
-
   .custom {
     background-color: var(--terra-alert-custom-background-color);
     box-shadow: 2px 0 0 inset;
@@ -157,10 +145,6 @@
 
   .error .title {
     color: var(--terra-alert-error-title-color);
-  }
-
-  .gapChecking .icon {
-    color: var(--terra-alert-gap-checking-title-color);
   }
   /* stylelint-enable */
 }
