@@ -5,7 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Converted component to use CSS modules
-* Custom Props are now added to the modal, not the portal
+* Updated spacing around react-docgen comments
 
 1.1.0 - (July 18, 2017)
 ------------------
