@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import React from 'react';
+import styles from './DemographicsBanner.scss';
 
 import { personDetails, applicationIdentifiers } from './_sharedObjects';
+
+const cx = classNames.bind(styles);
 
 export default (props) => {
   const {
@@ -24,36 +27,36 @@ export default (props) => {
     ...customProps
   } = props;
 
-  const mainClasses = classNames(
-    'terra-DemographicsBanner',
-    { 'terra-DemographicsBanner--deceased': deceasedDate },
+  const mainClasses = cx([
+    'demographics-banner',
+    { deceased: deceasedDate },
     customProps.className,
-  );
+  ]);
 
   delete customProps.className;
 
   return (
     <section className={mainClasses} {...customProps}>
-      <div className="terra-DemographicsBanner-profile-photo">
+      <div className={cx('profile-photo')}>
         {props.photo}
       </div>
-      <div className="terra-DemographicsBanner-content">
-        <div className="terra-DemographicsBanner-row">
-          <h1 className="terra-DemographicsBanner-person-name">
+      <div className={cx('content')}>
+        <div className={cx('row')}>
+          <h1 className={cx('person-name')}>
             { personName }
-            { preferredFirstName && <span className="terra-DemographicsBanner-preferred-first-name">
+            { preferredFirstName && <span className={cx('preferred-first-name')}>
               { preferredFirstName }
             </span> }
           </h1>
-          <div className="terra-DemographicsBanner-application-content">
+          <div className={cx('application-content')}>
             {applicationContent}
           </div>
         </div>
-        <div className="terra-DemographicsBanner-row">
-          <div className="terra-DemographicsBanner-person-details">
+        <div className={cx('row')}>
+          <div className={cx('person-details')}>
             {personDetails(props)}
           </div>
-          <div className="terra-DemographicsBanner-identifiers">
+          <div className={cx('identifiers')}>
             {applicationIdentifiers(props)}
           </div>
         </div>
