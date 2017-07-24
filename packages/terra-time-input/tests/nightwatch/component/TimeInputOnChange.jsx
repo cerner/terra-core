@@ -1,5 +1,5 @@
 import React from 'react';
-import TimeInput from '../../../src/TimeInput';
+import TimeInput from '../../../lib/TimeInput';
 
 class TimeInputDefault extends React.Component {
   constructor(props) {
