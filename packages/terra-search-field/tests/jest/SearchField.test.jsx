@@ -107,6 +107,19 @@ describe('Auto Search', () => {
     expect(onSearch).not.toBeCalled();
   });
 
+  it('triggers onInvalidSearch if minimum text length is not met', () => {
+    jest.useFakeTimers();
+    const onSearch = jest.fn();
+    const onInvalidSearch = jest.fn();
+    const searchField = shallow(<SearchField onSearch={onSearch} onInvalidSearch={onInvalidSearch} minimumSearchTextLength={5} />);
+
+    searchField.childAt(0).simulate('change', { target: { value: 'Sear' } });
+
+    jest.runAllTimers();
+    expect(onSearch).not.toBeCalled();
+    expect(onInvalidSearch).toBeCalledWith('Sear');
+  });
+
   it('uses standard timeout for search delay when not provided', () => {
     const searchField = shallow(<SearchField />);
 
