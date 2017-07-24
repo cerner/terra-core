@@ -11,9 +11,9 @@ exports[`test renders large banner that contains all valid information 1`] = `
       },
     ]
   }
-  className="terra-DemographicsBanner">
+  className="demographics-banner">
   <div
-    className="terra-DemographicsBanner-profile-photo">
+    className="profile-photo">
     <Image
       alt="My Cat"
       isFluid={false}
@@ -21,19 +21,19 @@ exports[`test renders large banner that contains all valid information 1`] = `
       variant="default" />
   </div>
   <div
-    className="terra-DemographicsBanner-content">
+    className="content">
     <div
-      className="terra-DemographicsBanner-row">
+      className="row">
       <h1
-        className="terra-DemographicsBanner-person-name">
+        className="person-name">
         Johnathon Doe
         <span
-          className="terra-DemographicsBanner-preferred-first-name">
+          className="preferred-first-name">
           John
         </span>
       </h1>
       <div
-        className="terra-DemographicsBanner-application-content">
+        className="application-content">
         <span
           className="risk-score">
           5%
@@ -41,9 +41,9 @@ exports[`test renders large banner that contains all valid information 1`] = `
       </div>
     </div>
     <div
-      className="terra-DemographicsBanner-row">
+      className="row">
       <div
-        className="terra-DemographicsBanner-person-details">
+        className="person-details">
         <DemographicsBannerValue
           value="25 Years" />
         <DemographicsBannerValue
@@ -53,7 +53,7 @@ exports[`test renders large banner that contains all valid information 1`] = `
           value="May 9, 1993" />
       </div>
       <div
-        className="terra-DemographicsBanner-identifiers">
+        className="identifiers">
         <DemographicsBannerValue
           label="MRN"
           value={12343} />

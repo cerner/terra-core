@@ -1,103 +1,83 @@
-@import '~terra-mixins';
 @import './variables';
 
-.terra-DemographicsBanner {
-  background: $demographics-background;
-  color: $demographics-foreground;
-  margin-bottom: 0.714em;
-  padding: 0.714em;
+/* stylelint-disable selector-class-pattern  */
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-  }
-}
+:local {
+  .demographics-banner {
+    background: var(--terra-demographics-banner-background);
+    color: var(--terra-demographics-banner-foreground);
+    padding: 0.714em;
 
-.terra-DemographicsBanner-value {
-  display: inline-flex;
-
-  @if $terra-bidi {
-    [dir='ltr'] & {
-      margin-right: 0.357em;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    [dir='rtl'] & {
-      margin-left: 0.357em;
-
-      &:last-child {
-        margin-left: 0;
-      }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
     }
   }
-  @else {
+
+  .value {
+    display: inline-flex;
     margin-right: 0.357em;
 
     &:last-child {
       margin-right: 0;
     }
   }
-}
 
-.terra-DemographicsBanner-value-label {
-  @include terra-margin-end(0.357em);
-}
-
-.terra-DemographicsBanner-person-name {
-  flex: 2;
-  margin: 0;
-}
-
-.terra-DemographicsBanner-identifiers {
-  @include terra-margin-start(auto);
-
-  flex: 1;
-
-  @media screen and (min-width: 768px) {
-    @include terra-text-align-end();
+  .value-label {
+    margin-right: 0.357em;
   }
-}
 
-.terra-DemographicsBanner-person-details {
-  flex: 1;
-}
-
-.terra-DemographicsBanner-preferred-first-name {
-  margin: 0 0.357em;
-
-  &::before,
-  &::after {
-    content: '"';
+  .person-name {
+    flex: 2;
+    margin: 0;
   }
-}
 
-.terra-DemographicsBanner--deceased {
-  background: $demographics-background-deceased;
-  color: $demographics-foreground-deceased;
+  .identifiers {
+    flex: 1;
+    margin-right: auto;
 
-  .terra-DemographicsBanner-profile-photo {
-    opacity: 0.7;
+    @media screen and (min-width: 768px) {
+      text-align: right;
+    }
   }
-}
 
-.terra-DemographicsBanner-row {
-  display: flex;
-}
+  .person-details {
+    flex: 1;
+  }
 
-.terra-DemographicsBanner-content {
-  flex-grow: 1;
-  margin: auto 0.714em;
-}
+  .preferred-first-name {
+    margin: 0 0.357em;
 
-.terra-DemographicsBanner-application-content {
-  @include terra-margin-start(auto);
+    &::before,
+    &::after {
+      content: '"';
+    }
+  }
 
-  flex: 1;
+  .deceased {
+    background: var(--terra-demographics-banner-background-deceased);
+    color: var(--terra-demographics-banner-foreground-deceased);
 
-  @media screen and (min-width: 768px) {
-    @include terra-text-align-end();
+    .profile-photo {
+      opacity: 0.7;
+    }
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .content {
+    flex-grow: 1;
+    margin: auto 0.714em;
+  }
+
+  .application-content {
+    flex: 1;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+      text-align: right;
+    }
   }
 }

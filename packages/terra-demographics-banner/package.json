@@ -33,7 +33,6 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-base": "^1.1.0",
-    "terra-mixins": "^1.7.0",
     "terra-responsive-element": "^1.1.0"
   },
   "scripts": {
