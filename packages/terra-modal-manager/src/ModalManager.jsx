@@ -37,7 +37,7 @@ const propTypes = {
 
   /**
    * From `connect`. The focus state of the modal.
-   **/
+   */
   isFocused: PropTypes.bool,
 
   /**
@@ -82,12 +82,12 @@ const propTypes = {
 
   /**
    * From `connect`. A function that dispatches a `loseFocus` action for the Modal to lose the focus.
-   **/
+   */
   loseFocus: PropTypes.func.isRequired,
 
   /**
    * From `connect`. A function that dispatches a `gainFocus` action for the Modal to gain focus.
-   **/
+   */
   gainFocus: PropTypes.func.isRequired,
 };
 

@@ -33,7 +33,7 @@ const propTypes = {
   closeOnOutsideClick: PropTypes.bool,
   /**
    * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.
-   **/
+   */
   isFocused: PropTypes.bool,
   /**
    * If set to true, the modal will be fullscreen on all breakpoint sizes

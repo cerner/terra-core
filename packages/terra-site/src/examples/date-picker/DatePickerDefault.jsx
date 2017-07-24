@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from 'terra-date-picker/src/DatePicker';
+import DatePicker from 'terra-date-picker';
 
 const DatePickerExample = () => (
   <DatePicker
