@@ -4,28 +4,39 @@
 /**
  * IE/Edge need both width and height defined to properly size SVG icons
  */
-.terra-Icon {
-  display: inline-block;
-  vertical-align: -0.15em; // Adjusts visual alignment for icons to better align next to text
-}
 
-/**
- * The following selectors match all SVG elements, (path, cirlec, line, rect, etc), within inline SVG
- * which do not have a predefined fill color.
- */
-.terra-Icon *:not([fill]) {
-  fill: currentColor; // Allows icon color to be inherited from text color
-}
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .icon {
+    display: inline-block;
+    vertical-align: -0.15em; // Adjusts visual alignment for icons to better align next to text
+  }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
-}
+  /**
+   * The following selectors match all SVG elements, (path, cirlec, line, rect, etc), within inline SVG
+   * which do not have a predefined fill color.
+   */
+  .icon *:not([fill]) {
+    fill: currentColor; // Allows icon color to be inherited from text color
+  }
 
-.terra-Icon.is-spin {
-  animation: spin 2s infinite linear;
-}
+  :global {
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(359deg); }
+    }
+  }
 
-[dir='rtl'] .terra-Icon.is-bidi {
-  transform: scaleX(-1);
+  .icon.is-spin {
+    :global {
+      animation: spin 2s infinite linear;
+    }
+  }
+
+  // We need dir='rtl'
+  // https://github.com/vkalinichev/postcss-rtl/issues/15
+  [dir='rtl'] .icon.is-bidi {
+    transform: scaleX(-1);
+  }
+  /* stylelint-enable */
 }

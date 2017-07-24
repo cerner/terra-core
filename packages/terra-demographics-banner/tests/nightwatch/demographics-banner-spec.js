@@ -22,92 +22,71 @@ module.exports = {
   },
 
   'Displays a blank demographics banner with the empty text identifier': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`);
-    browser.expect.element('.terra-DemographicsBanner').to.be.present;
-    browser.expect.element('.terra-DemographicsBanner-preferred-first-name').to.not.be.present;
-    browser.expect.element('.terra-DemographicsBanner-person-name').text.to.contain('--');
-    browser.expect.element('.terra-DemographicsBanner-person-details').text.to.contain('DOB:\n--');
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/blank`)
+      .expect
+      .element('#blank-demographics-banner')
+      .text
+      .to
+      .contain('--\n--\nDOB:\n--');
   },
 
   'Displays all the content when it is provided to the banner': (browser) => {
     const width = browser.globals.width;
 
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/populated`);
-
-    browser.expect.element('.terra-DemographicsBanner').to.be.present;
-    browser.expect.element('.terra-DemographicsBanner-preferred-first-name').to.be.present;
-    browser.expect.element('.terra-DemographicsBanner-preferred-first-name').text.to.contain('John');
-
-    browser
-      .expect
-      .element('.terra-DemographicsBanner-person-name')
-      .text
-      .to
-      .contain('Johnathon Doe');
-
-    browser
-      .expect
-      .element('.terra-DemographicsBanner-application-content')
-      .text
-      .to
-      .contain('St. Johns West Wing Room Cardiac Unit 253');
+    browser.expect.element('#populated-demographics h1').text.to.contain('John');
+    browser.expect.element('#populated-demographics h1').text.to.contain('Johnathon Doe');
 
     if (width < windowSizes.small[0]) {
       browser
         .expect
-        .element('.terra-DemographicsBanner-person-details')
+        .element('#populated-demographics div:nth-child(2)')
         .text
         .to
         .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993\nPMA:\nMay 13, 1993\nMRN:\n12343\nREA:\n3JSDA');
     } else {
       browser
         .expect
-        .element('.terra-DemographicsBanner-identifiers')
+        .element('#populated-demographics div:nth-child(2) > div:nth-child(2) > div:nth-child(1)')
         .text
         .to
-        .contain('MRN:\n12343\nREA:\n3JSDA');
+        .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993\nPMA:\nMay 13, 1993');
 
       browser
         .expect
-        .element('.terra-DemographicsBanner .terra-DemographicsBanner-person-details')
+        .element('#populated-demographics div:nth-child(2) > div:nth-child(2) > div:nth-child(2)')
         .text
         .to
-        .contain('25 Years\nMale\nDOB:\nMay 9, 1993\nGA:\nMay 11, 1993');
+        .contain('MRN:\n12343\nREA:\n3JSDA');
     }
   },
 
   'Displays a deceased demographics banner': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased`);
-    browser.expect.element('.terra-DemographicsBanner--deceased').to.be.present;
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased`)
+      .expect
+      .element('#deceased-demographics').text.to.contain('Deceased:\nMarch 12, 2017');
   },
 
   'Displays a deceased demographics banner with a default label when one is not provided': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased_no_label`);
     browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/deceased_no_label`)
       .expect
-      .element('.terra-DemographicsBanner-person-details')
-      .text
-      .to
-      .contain('Deceased:\nMarch 12, 2017');
+      .element('#deceased-demographics-no-label').text.to.contain('Deceased:\nMarch 12, 2017');
   },
 
   'Displays post menstrural age with a default label when one is not provided': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/post_menstrual_age_no_label`);
     browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/post_menstrual_age_no_label`)
       .expect
-      .element('.terra-DemographicsBanner-person-details')
-      .text
-      .to
-      .contain('PMA:\nApril 5, 2016');
+      .element('#post-menstrual-no-label').text.to.contain('PMA:\nApril 5, 2016');
   },
 
   'Displays gestational age with a default label when one is not provided': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/gestational_age_no_label`);
     browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/demographics-banner-tests/gestational_age_no_label`)
       .expect
-      .element('.terra-DemographicsBanner-person-details')
-      .text
-      .to
-      .contain('GA:\nApril 5, 2016');
+      .element('#gestational-age-no-label').text.to.contain('GA:\nApril 5, 2016');
   },
 };

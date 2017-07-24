@@ -4,7 +4,7 @@ import IconAdd from '../../../lib/icon/IconAdd';
 const IconDefault = () => (
   <div>
     <h3>Default Icon</h3>
-    <IconAdd />
+    <IconAdd id="icon-default" />
   </div>
 );
 
