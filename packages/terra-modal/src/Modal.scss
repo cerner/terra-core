@@ -1,21 +1,22 @@
-@import '~terra-mixins';
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .modal {
+    background-color: #fff;
+    border-radius: 5px;
+    bottom: 10px;
+    display: block;
+    left: 10px;
+    max-height: 100%;
+    outline: none;
+    overflow: hidden;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 6000 + 1;
+  }
 
-.terra-Modal {
-  @include terra-position-start(10px);
-  @include terra-position-end(10px);
-  background-color: #fff;
-  border-radius: 5px;
-  bottom: 10px;
-  display: block;
-  max-height: 100%;
-  outline: none;
-  overflow: hidden;
-  position: fixed;
-  top: 10px;
-  z-index: 6000 + 1;
-
-  @media screen and (min-width: 48em) {
-    &:not(.terra-Modal--fullscreen) {
+  .fixed-size {
+    @media screen and (min-width: 48em) {
       bottom: auto;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
       left: 50%;
@@ -27,8 +28,9 @@
       transform: translate(-50%, -50%);
     }
   }
-}
 
-.terra-Modal--scrollable {
-  overflow-y: scroll;
+  .scrollable {
+    overflow-y: scroll;
+  }
 }
+/* stylelint-enable */
