@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added onInvalidSearch callback for invalid search text entry.
 
 1.1.0 - (July 18, 2017)
 ------------------

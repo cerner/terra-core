@@ -29,6 +29,11 @@ const propTypes = {
    * A callback to perform search. Sends parameter {String} searchText.
    */
   onSearch: PropTypes.func,
+
+  /**
+   * A callback to indicate an invalid search. Sends parameter {String} searchText.
+   */
+  onInvalidSearch: PropTypes.func,
 };
 
 const defaultProps = {
@@ -68,6 +73,8 @@ class SearchField extends React.Component {
 
     if (this.state.searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(this.state.searchText);
+    } else if (this.props.onInvalidSearch) {
+      this.props.onInvalidSearch(this.state.searchText);
     }
   }
 
@@ -79,15 +86,11 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, ...customProps } = this.props;
+    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, ...customProps } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
       customProps.className,
     ]);
-
-    delete customProps.onSearch;
-    delete customProps.minimumSearchTextLength;
-    delete customProps.searchDelay;
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
