@@ -51,9 +51,9 @@ const Badge = ({
   ...customProps
 }) => {
   const badgeClassNames = cx(
-      styles.badge,
-      { [styles[size]]: size },
-      { [styles[intent]]: intent },
+      'badge',
+      size,
+      intent,
       customProps.className);
 
   const textContent = text ? <span className={styles.text}>{text}</span> : null;
