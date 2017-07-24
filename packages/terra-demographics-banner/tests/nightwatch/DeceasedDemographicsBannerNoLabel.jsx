@@ -6,5 +6,5 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <DemographicsBanner deceasedDate="March 12, 2017" />
+    <DemographicsBanner id="deceased-demographics-no-label" deceasedDate="March 12, 2017" />
   </Base>;

@@ -5,18 +5,31 @@ class SearchFieldMinimumLength extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       searchText: '',
+      message: 'INVALID Search Text: ',
     };
+
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
+  }
+
+  handleSearch(searchText) {
+    this.setState({ searchText, message: 'Search Text: ' });
+  }
+
+  handleInvalidSearch(searchText) {
+    this.setState({ searchText, message: 'INVALID Search Text: ' });
   }
 
   render() {
     return (
       <div>
         <div>
-          Search Text: {this.state.searchText}
+          {this.state.message}{this.state.searchText}
         </div>
-        <SearchField minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
+        <SearchField minimumSearchTextLength={5}onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch} />
       </div>
     );
   }
