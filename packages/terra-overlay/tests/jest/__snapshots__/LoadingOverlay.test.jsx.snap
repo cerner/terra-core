@@ -9,7 +9,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
       class="content">
       <svg
         aria-hidden="true"
-        class="terra-Icon icon"
+        class="icon icon"
         data-name="Layer 1"
         focusable="false"
         height="36"
@@ -37,7 +37,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
       class="content">
       <svg
         aria-hidden="true"
-        class="terra-Icon icon"
+        class="icon icon"
         data-name="Layer 1"
         focusable="false"
         height="36"
