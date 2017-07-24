@@ -3,7 +3,7 @@
 :local {
   /* stylelint-disable selector-class-pattern  */
   /* stylelint-disable  property-no-unknown */
-  .alertBase {
+  .alert-base {
     align-items: stretch;
     display: flex;
     flex: 1;
@@ -37,13 +37,13 @@
     padding-top: 0.1rem;
   }
 
-  .bodyNarrow {
+  .body-narrow {
     composes: body;
     margin-bottom: 0;
     margin-right: 0.6667rem;
   }
 
-  .bodyStd {
+  .body-std {
     composes: body;
     margin-bottom: 1rem;
     margin-right: 0;
@@ -54,7 +54,7 @@
     padding-top: 0.2rem;
   }
 
-  .sectionCustom {
+  .section-custom {
     color: var(--terra-alert-custom-text-color);
     composes: section;
   }
@@ -62,16 +62,6 @@
   .title {
     float: left;
     margin-right: 0.5833rem;
-  }
-
-  .content {
-    p {
-      margin-top: 0;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .actions {
@@ -83,7 +73,7 @@
     margin: 0.5833rem 0.5833rem 0.5833rem 0.8333rem;
   }
 
-  .actionsCustom {
+  .actions-custom {
     color: var(--terra-alert-custom-text-color);
     composes: actions;
   }
@@ -99,44 +89,44 @@
   .alert {
     background-color: var(--terra-alert-alert-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-alert-shadow-color) inset;
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .error {
     background-color: var(--terra-alert-error-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-error-shadow-color) inset;
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .warning {
     background-color: var(--terra-alert-warning-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-warning-shadow-color) inset;
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .advisory {
     background-color: var(--terra-alert-advisory-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-advisory-shadow-color) inset;
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .info {
     background-color: var(--terra-alert-info-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-info-shadow-color) inset;
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .success {
     background-color: var(--terra-alert-success-background-color);
     box-shadow: 2px 0 0 var(--terra-alert-success-shadow-color) inset;
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .custom {
     background-color: var(--terra-alert-custom-background-color);
     box-shadow: 2px 0 0 inset;
     color: var(--terra-alert-custom-shadow-color);
-    composes: alertBase;
+    composes: alert-base;
   }
 
   .alert .title {

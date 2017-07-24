@@ -7,15 +7,13 @@ exports[`Alert of type advisory with text content should render an Alert compone
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -27,7 +25,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           className="advisory narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon" />
             <div
@@ -36,8 +34,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
                 className="title">
                 Advisory.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an advisory alert.
               </div>
             </div>
@@ -51,7 +48,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           className="advisory wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon" />
             <div
@@ -60,8 +57,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
                 className="title">
                 Advisory.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an advisory alert.
               </div>
             </div>
@@ -84,15 +80,13 @@ exports[`Alert of type alert with text content should render an Alert component 
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -104,7 +98,7 @@ exports[`Alert of type alert with text content should render an Alert component 
           className="alert narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconAlert
@@ -117,8 +111,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                 className="title">
                 Alert.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an alert.
               </div>
             </div>
@@ -132,7 +125,7 @@ exports[`Alert of type alert with text content should render an Alert component 
           className="alert wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconAlert
@@ -145,8 +138,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                 className="title">
                 Alert.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an alert.
               </div>
             </div>
@@ -169,15 +161,13 @@ exports[`Alert of type custom with custom title and text content should render a
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={
       <IconHelp
         viewBox="0 0 48 48"
@@ -197,7 +187,7 @@ exports[`Alert of type custom with custom title and text content should render a
             }
           }>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconHelp
@@ -205,13 +195,12 @@ exports[`Alert of type custom with custom title and text content should render a
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="sectionCustom">
+              className="section-custom">
               <strong
                 className="title">
                 Help!
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a custom alert.
               </div>
             </div>
@@ -229,7 +218,7 @@ exports[`Alert of type custom with custom title and text content should render a
             }
           }>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconHelp
@@ -237,13 +226,12 @@ exports[`Alert of type custom with custom title and text content should render a
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="sectionCustom">
+              className="section-custom">
               <strong
                 className="title">
                 Help!
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a custom alert.
               </div>
             </div>
@@ -266,15 +254,13 @@ exports[`Alert of type error with text content should render an Alert component 
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -286,7 +272,7 @@ exports[`Alert of type error with text content should render an Alert component 
           className="error narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconError
@@ -299,8 +285,7 @@ exports[`Alert of type error with text content should render an Alert component 
                 className="title">
                 Error.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an error.
               </div>
             </div>
@@ -314,7 +299,7 @@ exports[`Alert of type error with text content should render an Alert component 
           className="error wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconError
@@ -327,8 +312,7 @@ exports[`Alert of type error with text content should render an Alert component 
                 className="title">
                 Error.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an error.
               </div>
             </div>
@@ -351,15 +335,13 @@ exports[`Alert of type info with custom title and HTML content should render an 
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -371,7 +353,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
           className="info narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconInformation
@@ -384,8 +366,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
                 className="title">
                 Gettysburg Address
               </strong>
-              <div
-                className="content">
+              <div>
                 <span>
                   Four score and seven years ago . . .
                 </span>
@@ -401,7 +382,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
           className="info wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconInformation
@@ -414,8 +395,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
                 className="title">
                 Gettysburg Address
               </strong>
-              <div
-                className="content">
+              <div>
                 <span>
                   Four score and seven years ago . . .
                 </span>
@@ -440,15 +420,13 @@ exports[`Alert of type info with text content should render an Alert component o
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -460,7 +438,7 @@ exports[`Alert of type info with text content should render an Alert component o
           className="info narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconInformation
@@ -473,8 +451,7 @@ exports[`Alert of type info with text content should render an Alert component o
                 className="title">
                 Information.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an information alert.
               </div>
             </div>
@@ -488,7 +465,7 @@ exports[`Alert of type info with text content should render an Alert component o
           className="info wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconInformation
@@ -501,8 +478,7 @@ exports[`Alert of type info with text content should render an Alert component o
                 className="title">
                 Information.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an information alert.
               </div>
             </div>
@@ -525,15 +501,13 @@ exports[`Alert of type success with an action button text content should render 
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={
+    action={
       <Button
         isBlock={false}
         isCompact={false}
@@ -556,7 +530,7 @@ exports[`Alert of type success with an action button text content should render 
           className="success narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="body-narrow">
             <div
               className="icon">
               <IconSuccess
@@ -569,8 +543,7 @@ exports[`Alert of type success with an action button text content should render 
                 className="title">
                 Success.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a success alert.
               </div>
             </div>
@@ -597,7 +570,7 @@ exports[`Alert of type success with an action button text content should render 
           className="success wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconSuccess
@@ -610,8 +583,7 @@ exports[`Alert of type success with an action button text content should render 
                 className="title">
                 Success.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a success alert.
               </div>
             </div>
@@ -647,15 +619,13 @@ exports[`Alert of type success with text content should render an Alert componen
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -667,7 +637,7 @@ exports[`Alert of type success with text content should render an Alert componen
           className="success narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconSuccess
@@ -680,8 +650,7 @@ exports[`Alert of type success with text content should render an Alert componen
                 className="title">
                 Success.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a success alert.
               </div>
             </div>
@@ -695,7 +664,7 @@ exports[`Alert of type success with text content should render an Alert componen
           className="success wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconSuccess
@@ -708,8 +677,7 @@ exports[`Alert of type success with text content should render an Alert componen
                 className="title">
                 Success.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a success alert.
               </div>
             </div>
@@ -732,15 +700,13 @@ exports[`Alert of type warning with text content should render an Alert componen
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -752,7 +718,7 @@ exports[`Alert of type warning with text content should render an Alert componen
           className="warning narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconWarning
@@ -765,8 +731,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                 className="title">
                 Warning.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an warning.
               </div>
             </div>
@@ -780,7 +745,7 @@ exports[`Alert of type warning with text content should render an Alert componen
           className="warning wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconWarning
@@ -793,8 +758,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                 className="title">
                 Warning.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is an warning.
               </div>
             </div>
@@ -817,15 +781,13 @@ exports[`Alert with no props should render a default component 1`] = `
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={null}
@@ -837,7 +799,7 @@ exports[`Alert with no props should render a default component 1`] = `
           className="alert narrow"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconAlert
@@ -850,8 +812,7 @@ exports[`Alert with no props should render a default component 1`] = `
                 className="title">
                 Alert.
               </strong>
-              <div
-                className="content" />
+              <div />
             </div>
           </div>
           
@@ -863,7 +824,7 @@ exports[`Alert with no props should render a default component 1`] = `
           className="alert wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconAlert
@@ -876,8 +837,7 @@ exports[`Alert with no props should render a default component 1`] = `
                 className="title">
                 Alert.
               </strong>
-              <div
-                className="content" />
+              <div />
             </div>
           </div>
           
@@ -898,15 +858,13 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={
+    action={
       <Button
         isBlock={false}
         isCompact={false}
@@ -937,7 +895,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             }
           }>
           <div
-            className="bodyNarrow">
+            className="body-narrow">
             <div
               className="icon">
               <IconHelp
@@ -945,19 +903,18 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="sectionCustom">
+              className="section-custom">
               <strong
                 className="title">
                 Help!
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a custom alert.
               </div>
             </div>
           </div>
           <div
-            className="actionsCustom">
+            className="actions-custom">
             <Button
               isBlock={false}
               isCompact={false}
@@ -991,7 +948,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             }
           }>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconHelp
@@ -999,19 +956,18 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 xmlns="http://www.w3.org/2000/svg" />
             </div>
             <div
-              className="sectionCustom">
+              className="section-custom">
               <strong
                 className="title">
                 Help!
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a custom alert.
               </div>
             </div>
           </div>
           <div
-            className="actionsCustom">
+            className="actions-custom">
             <Button
               isBlock={false}
               isCompact={false}
@@ -1050,15 +1006,13 @@ exports[`Dismissible Alert that includes actions section should render an alert 
       "Terra.alert.alert": "Alert.",
       "Terra.alert.dismiss": "Dismiss",
       "Terra.alert.error": "Error.",
-      "Terra.alert.gapChecking": "Required Action.",
       "Terra.alert.info": "Information.",
-      "Terra.alert.outsideRecords": "Outside Records.",
       "Terra.alert.success": "Success.",
       "Terra.alert.warning": "Warning.",
     }
   }>
   <Alert
-    alertAction={null}
+    action={null}
     customIcon={null}
     customStatusColor=""
     onDismiss={[Function]}
@@ -1070,7 +1024,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           className="alert narrow"
           style={Object {}}>
           <div
-            className="bodyNarrow">
+            className="body-narrow">
             <div
               className="icon">
               <IconAlert
@@ -1083,8 +1037,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 className="title">
                 Alert.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a test
               </div>
             </div>
@@ -1110,7 +1063,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           className="alert wide"
           style={Object {}}>
           <div
-            className="bodyStd">
+            className="body-std">
             <div
               className="icon">
               <IconAlert
@@ -1123,8 +1076,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 className="title">
                 Alert.
               </strong>
-              <div
-                className="content">
+              <div>
                 This is a test
               </div>
             </div>

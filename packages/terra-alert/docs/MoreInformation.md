@@ -17,13 +17,13 @@ This image shows the layout of the elements of the Alert component.
 ## Props
 |Prop Name |Type  |Is Required |Default Value |Description |
 |----------|------|------------|--------------|------------|
-|alertAction |element  |optional  |null  |An action element to be added to the action section of the alert.|
+|action |element  |optional  |null  |An action element to be added to the action section of the alert.|
 |children  |node or string  |optional  |''  |Child Nodes providing the message content for the alert. Can contain text and HTML.|
-|customIcon  |element  |optional  |null  |The icon to be used for an alert of type custom.|
+|customIcon  |element  |optional  |null  |The icon to be used for an alert of type custom. This will not be used for any other alert types.|
 |customStatusColor |string  |optional  |''  |The status bar color to be used for an alert of type custom.|
 |onDismiss |function  |optional  |null  |Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.|
 |title |string  |optional  |''  |The title for the alert which will be bolded.|
-|type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Opts.Types.ALERT, Alert.Opts.Types.ERROR, Alert.Opts.Types.WARNING, Alert.Opts.Types.ADVISORY, Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.GAP_CHECKING, Alert.Opts.Types.OUTSIDE_RECORDS, Alert.Opts.Types.CUSTOM. Use the Alert.Opts.Types attribute of the Alert component for access to these type strings.|
+|type  |string  |optional  |'alert' |The type of alert to be rendered. One of Alert.Opts.Types.ALERT, Alert.Opts.Types.ERROR, Alert.Opts.Types.WARNING, Alert.Opts.Types.ADVISORY, Alert.Opts.Types.INFO, Alert.Opts.Types.SUCCESS, Alert.Opts.Types.CUSTOM. Use the Alert.Opts.Types attribute of the Alert component for access to these type strings.|
 
 ## Examples
 
@@ -39,6 +39,10 @@ __________
 Basic Alert component of type 'alert' using the default title and plain text for the message content.
 ```jsx
 <Alert type={Alert.Opts.Types.ALERT} >This is an alert</Alert>
+```
+or
+```jsx
+<Alert>This is an alert</Alert>
 ```
 ![Image](images/basicAlert.png?raw=true)
 __________
@@ -71,18 +75,6 @@ Basic Alert component of type 'success' using the default title and plain text f
 <Alert type={Alert.Opts.Types.SUCCESS} >This is a success alert</Alert>
 ```
 ![Image](images/basicSuccess.png?raw=true)
-__________
-Basic Alert component of type 'gap-checking' using the default title and plain text for the message content.
-```jsx
-<Alert type={Alert.Opts.Types.GAP_CHECKING} >This is a gap-checking alert</Alert>
-```
-![Image](images/basicGapChecking.png?raw=true)
-__________
-Basic Alert component of type 'outside records' using the default title and plain text for the message content.
-```jsx
-<Alert type={Alert.Opts.Types.OUTSIDE_RECORDS} >This is an outside records alert</Alert>
-```
-![Image](images/basicOutsideRecords.png?raw=true)
 __________
 Alert of type 'custom' with custom title, status color, and icon, and includes HTML in message content.
 ```jsx
@@ -122,7 +114,7 @@ __________
 Alert component of type 'warning' with a custom Action button.
 ```jsx
 <Alert type={Alert.Opts.Types.WARNING} 
-       alertAction={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
+       action={<Button text="Action" size="medium" variant="primary" onClick={actionFunc} />} >
   This is a warning. It is configured with a custom Action button.
 </Alert>
 ```
@@ -141,8 +133,8 @@ Alert of type 'custom' with no icon or title that is dismissible and has an acti
 <Alert type={Alert.Opts.Types.CUSTOM} 
        onDismiss={this.handleDismiss} 
        customStatusColor="orange" 
-       alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
-  This is a a custom alert with no icon or title. It is configured to be dismissible 
+       action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+  This is a custom alert with no icon or title. It is configured to be dismissible 
   and with a custom action button. Click on the Dismiss button to dismiss the alert.
 </Alert>
 ```

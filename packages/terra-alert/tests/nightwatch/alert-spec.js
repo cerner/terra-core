@@ -43,10 +43,10 @@ module.exports = {
         'Alert.',
         'Check default Alert has default title for Alert of type alert')
       .assert.elementPresent(
-        '#defaultAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#defaultAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Check default Alert content structure')
       .assert.containsText(
-        '#defaultAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#defaultAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Default Alert',
         'Check text content provided to default Alert');
   },
@@ -68,7 +68,7 @@ module.exports = {
         'Alert.',
         'Check default title for Alert of type alert')
       .assert.containsText(
-        '#alertAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#alertAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Alert of type Alert',
         'Check text content provided to Alert of type alert');
   },
@@ -85,7 +85,7 @@ module.exports = {
         'Error.',
         'Check default title for Alert of type error')
       .assert.containsText(
-        '#errorAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#errorAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Alert of type Error',
         'Check text content provided to Alert of type error');
   },
@@ -102,7 +102,7 @@ module.exports = {
         'Warning.',
         'Check default title for Alert of type warning')
       .assert.containsText(
-        '#warningAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#warningAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Alert of type Warning',
         'Check text content provided to Alert of type warning');
   },
@@ -119,7 +119,7 @@ module.exports = {
         'Advisory.',
         'Check default title for Alert of type advisory')
       .assert.containsText(
-        '#advisoryAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#advisoryAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Alert of type Advisory',
         'Check text content provided to Alert of type advisory');
   },
@@ -136,7 +136,7 @@ module.exports = {
         'Information.',
         'Check default title for Alert of type info')
       .assert.containsText(
-        '#infoAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#infoAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Alert of type Info',
         'Check text content provided to Alert of type info');
   },
@@ -153,7 +153,7 @@ module.exports = {
         'Success.',
         'Check default title for Alert of type success')
       .assert.containsText(
-        '#successAlert > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#successAlert > div[class*="_body"] > div[class*="_section"]  div',
         'Alert of type Success',
         'Check text content provided to Alert of type success');
   },
@@ -212,7 +212,7 @@ module.exports = {
         '',
         'Checking that the first custom Alert does not have a title')
       .assert.containsText(
-        '#custom1 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom1 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with no icon, title or custom color',
         'Checking the text content for the first custom Alert');
   },
@@ -237,7 +237,7 @@ module.exports = {
         'Custom_Alert:',
         'Checking that the second custom Alert has a title')
       .assert.containsText(
-        '#custom2 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom2 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with title but no icon or custom color',
         'Checking the text content for the second custom Alert');
   },
@@ -262,7 +262,7 @@ module.exports = {
         '',
         'Checking that the third custom Alert does not have a title')
       .assert.containsText(
-        '#custom3 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom3 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with icon but no title or custom color',
         'Checking the text content for the third custom Alert');
   },
@@ -287,7 +287,7 @@ module.exports = {
         '',
         'Checking that the fourth custom Alert does not have a title')
       .assert.containsText(
-        '#custom4 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom4 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with custom color but no title or icon',
         'Checking the text content for the fourth custom Alert');
   },
@@ -312,7 +312,7 @@ module.exports = {
         'Custom_Alert:',
         'Checking that the fifth custom Alert has a title')
       .assert.containsText(
-        '#custom5 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom5 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with custom color and title but no icon',
         'Checking the text content for the fifth custom Alert');
   },
@@ -337,7 +337,7 @@ module.exports = {
         'Custom_Alert:',
         'Checking that the sixth custom Alert has a title')
       .assert.containsText(
-        '#custom6 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom6 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with title and icon but no custom color',
         'Checking the text content for the sixth custom Alert');
   },
@@ -362,7 +362,7 @@ module.exports = {
         '',
         'Checking that the seventh custom Alert does not have a title')
       .assert.containsText(
-        '#custom7 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom7 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with custom color and icon but no title',
         'Checking the text content for the seventh custom Alert');
   },
@@ -387,7 +387,7 @@ module.exports = {
         'Custom_Alert:',
         'Checking that the eighth custom Alert has a title')
       .assert.containsText(
-        '#custom8 > div[class*="_body"] > div[class*="_section"]  div[class*="_content"]',
+        '#custom8 > div[class*="_body"] > div[class*="_section"]  div',
         'Custom Alert with title, custom color and icon',
         'Checking the text content for the eighth custom Alert');
   },
@@ -410,7 +410,7 @@ module.exports = {
        .assert.attributeContains(
           '#actionAlert > div[class*="_body"]',
           'class',
-          '_bodyNarrow',
+          '_body-narrow',
           'Check that the narrow body className is used when width less than tiny breakpoint');
     } else {
       browser
@@ -422,7 +422,7 @@ module.exports = {
        .assert.attributeContains(
           '#actionAlert > div[class*="_body"]',
           'class',
-          '_bodyStd',
+          '_body-std',
           'Check that the standard body className is used when width greater than or equal to tiny breakpoint');
     }
   },
@@ -445,7 +445,7 @@ module.exports = {
        .assert.attributeContains(
           '#dismissibleAlert > div[class*="_body"]',
           'class',
-          '_bodyNarrow',
+          '_body-narrow',
           'Check that the narrow body className is used when width less than tiny breakpoint');
     } else {
       browser
@@ -457,7 +457,7 @@ module.exports = {
        .assert.attributeContains(
           '#dismissibleAlert > div[class*="_body"]',
           'class',
-          '_bodyStd',
+          '_body-std',
           'Check that the standard body className is used when width greater than or equal to tiny breakpoint');
     }
 
@@ -485,7 +485,7 @@ module.exports = {
       .assert.attributeContains(
         '#actionAlert > div[class*="_body"]',
         'class',
-        '_bodyNarrow',
+        '_body-narrow',
         'Check that the narrow body className is used for Alert with action regardless of window size')
       .assert.attributeContains(
         '#dismissibleAlert',
@@ -495,7 +495,7 @@ module.exports = {
       .assert.attributeContains(
         '#dismissibleAlert > div[class*="_body"]',
         'class',
-        '_bodyNarrow',
+        '_body-narrow',
         'Check that the narrow body className is used for dismissible alert regardless of window size')
       .assert.attributeContains(
         '#noActionsAlert',
@@ -505,7 +505,7 @@ module.exports = {
       .assert.attributeContains(
         '#noActionsAlert > div[class*="_body"]',
         'class',
-        '_bodyStd',
+        '_body-std',
         'Check that the standard body className is used for no actions alert regardless of window size');
   },
 };
