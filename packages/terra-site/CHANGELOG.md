@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated Search Field example to demonstrate onInvalidSearch.
 
 1.1.0 - (July 18, 2017)
 ------------------
