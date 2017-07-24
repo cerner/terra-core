@@ -13,17 +13,17 @@ import './ModalManager.scss';
 const propTypes = {
   /**
    * The AppDelegate instance provided by the containing component. If present, its properties will propagate to the children components.
-   **/
+   */
   app: AppDelegate.propType,
 
   /**
    * Components that will receive the ModalManager's AppDelegate configuration. Components given as children must appropriately handle an `app` prop.
-   **/
+   */
   children: PropTypes.node,
 
   /**
    * From `connect`. The Array of component data (key, name, and props) that will be used to instantiate the Modal's inner components.
-   **/
+   */
   modalComponentData: PropTypes.arrayOf(PropTypes.shape({
     key: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -32,47 +32,47 @@ const propTypes = {
 
   /**
    * From `connect`. The desired size of the modal.
-   **/
+   */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
 
   /**
    * From `connect`. The presentation state of the modal.
-   **/
+   */
   isOpen: PropTypes.bool,
 
   /**
    * From `connect`. The maximization state of the modal.
-   **/
+   */
   isMaximized: PropTypes.bool,
 
   /**
    * From `connect`. A function that dispatches an `open` action.
-   **/
+   */
   openModal: PropTypes.func.isRequired,
 
   /**
    * From `connect`. A function that dispatches a `close` action.
-   **/
+   */
   closeModal: PropTypes.func.isRequired,
 
   /**
    * From `connect`. A function that dispatches a `push` action.
-   **/
+   */
   pushModal: PropTypes.func.isRequired,
 
   /**
    * From `connect`. A function that dispatches a `pop` action.
-   **/
+   */
   popModal: PropTypes.func.isRequired,
 
   /**
    * From `connect`. A function that dispatches a `maximize` action.
-   **/
+   */
   maximizeModal: PropTypes.func.isRequired,
 
   /**
    * From `connect`. A function that dispatches a `minimize` action.
-   **/
+   */
   minimizeModal: PropTypes.func.isRequired,
 };
 
