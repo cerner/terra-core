@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import React from 'react';
+import styles from './DemographicsBanner.scss';
 
 import { personDetails, applicationIdentifiers } from './_sharedObjects';
+
+const cx = classNames.bind(styles);
 
 export default (props) => {
   const {
@@ -24,29 +27,29 @@ export default (props) => {
     ...customProps
   } = props;
 
-  const mainClasses = classNames(
-    'terra-DemographicsBanner',
-    { 'terra-DemographicsBanner--deceased': deceasedDate },
+  const mainClasses = cx([
+    'demographics-banner',
+    { deceased: deceasedDate },
     customProps.className,
-  );
+  ]);
 
   delete customProps.className;
 
   return (
     <section className={mainClasses} {...customProps}>
-      <h1 className="terra-DemographicsBanner-person-name">
+      <h1 className={cx('person-name')}>
         <span>
           { personName }
-          { preferredFirstName && <span className="terra-DemographicsBanner-preferred-first-name">
+          { preferredFirstName && <span className={cx('preferred-first-name')}>
             { preferredFirstName }
           </span> }
         </span>
       </h1>
-      <div className="terra-DemographicsBanner-person-details">
+      <div className={cx('person-details')}>
         {personDetails(props)}
         {applicationIdentifiers(props)}
       </div>
-      <div className="terra-DemographicsBanner-application-content">
+      <div className={cx('application-content')}>
         {applicationContent}
       </div>
     </section>

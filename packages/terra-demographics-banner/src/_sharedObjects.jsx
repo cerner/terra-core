@@ -1,9 +1,13 @@
+import classNames from 'classnames/bind';
 import React from 'react';
+import styles from './DemographicsBanner.scss';
+
+const cx = classNames.bind(styles);
 
 // eslint-disable-next-line react/prop-types
 const DemographicsBannerValue = ({ label, value }) => (
-  <span className="terra-DemographicsBanner-value">
-    { label && <span className="terra-DemographicsBanner-value-label">{`${label}:`}</span> }
+  <span className={cx('value')}>
+    { label && <span className={cx('value-label')}>{`${label}:`}</span> }
     <b>{value}</b>
   </span>
 );
