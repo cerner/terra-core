@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 
 // eslint-disable-next-line import/no-unresolved, import/no-webpack-loader-syntax
-import './Icon.scss';
+import styles from './Icon.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -61,8 +63,8 @@ const IconBase = ({
   const attributes = Object.assign({}, customProps);
 
   // append to existing classNames
-  attributes.className = classNames(
-    'terra-Icon',
+  const classes = cx(
+    'icon',
     { 'is-bidi': isBidi },
     { 'is-spin': isSpin },
     attributes.className,
@@ -81,7 +83,7 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
 
-  return <svg {...attributes}>{children}</svg>;
+  return <svg {...attributes} className={classes}>{children}</svg>;
 };
 
 IconBase.propTypes = propTypes;
