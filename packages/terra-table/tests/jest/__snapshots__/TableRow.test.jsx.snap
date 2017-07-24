@@ -1,7 +1,7 @@
 exports[`test should render a default table row 1`] = `
 <tr
   aria-selected={false}
-  className="terra-Table-row">
+  className="row">
   <TableCell
     content="John Smith" />
   <TableCell
@@ -14,7 +14,7 @@ exports[`test should render a default table row 1`] = `
 exports[`test should render a selectable table row 1`] = `
 <tr
   aria-selected={false}
-  className="terra-Table--isSelectable terra-Table-row">
+  className="is-selectable row">
   <TableCell
     content="John Smith" />
   <TableCell
@@ -27,7 +27,7 @@ exports[`test should render a selectable table row 1`] = `
 exports[`test should render a selected table row 1`] = `
 <tr
   aria-selected={true}
-  className="terra-Table--isSelected terra-Table-row">
+  className="is-selected row">
   <TableCell
     content="John Smith" />
   <TableCell

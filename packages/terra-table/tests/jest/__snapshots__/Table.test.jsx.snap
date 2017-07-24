@@ -1,6 +1,6 @@
 exports[`test should render a default table 1`] = `
 <table
-  className="terra-Table terra-Table--striped terra-Table--padded">
+  className="table striped padded">
   <TableHeader>
     <TableHeaderCell
       content="Name"
@@ -37,7 +37,7 @@ exports[`test should render a default table 1`] = `
 
 exports[`test should render a table without padding 1`] = `
 <table
-  className="terra-Table terra-Table--striped">
+  className="table striped">
   <TableHeader>
     <TableHeaderCell
       content="Name"
@@ -74,7 +74,7 @@ exports[`test should render a table without padding 1`] = `
 
 exports[`test should render a table without zebra stripes 1`] = `
 <table
-  className="terra-Table terra-Table--padded">
+  className="table padded">
   <TableHeader>
     <TableHeaderCell
       content="Name"
