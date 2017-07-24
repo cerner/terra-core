@@ -31,11 +31,11 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/callback`)
       .setValue('input[type=search]', 'S')
-      .expect.element('#search-callback-text').text.to.equal('Search Text:').after(250);
+      .expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
 
     browser
       .setValue('input[type=search]', 'e')
-      .expect.element('#search-callback-text').text.to.equal('Search Text: Se').after(250);
+      .expect.element('#search-callback-text').text.to.equal('INVALID Search Text: Se').after(250);
 
     browser
       .setValue('input[type=search]', 'a')

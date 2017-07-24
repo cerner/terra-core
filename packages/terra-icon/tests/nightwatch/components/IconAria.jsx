@@ -9,14 +9,14 @@ const IconAria = () => (
     <ul>
       <li>{'aria-hidden="true"'}</li>
     </ul>
-    <IconHospital />
+    <IconHospital id="icon-no-aria-label" />
     <h4>Set aria-label to Hospital</h4>
     <p>If ariaLabel is not null: </p>
     <ul>
       <li>{'aria-hidden="false"'}</li>
       <li>{'role="img"'}</li>
     </ul>
-    <IconHospital ariaLabel="Hospital" />
+    <IconHospital id="icon-aria-label" ariaLabel="Hospital" />
   </div>
 );
 
