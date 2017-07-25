@@ -185,7 +185,7 @@ class Popup extends React.Component {
   }
 
   render() {
-    /* eslint-disable no-unused-vars*/
+    /* eslint-disable no-unused-vars */
     const {
       boundingRef,
       children,
@@ -201,7 +201,7 @@ class Popup extends React.Component {
       onRequestClose,
       targetRef,
     } = this.props;
-    /* eslint-enable no-unused-vars*/
+    /* eslint-enable no-unused-vars */
 
     let portalContent = children;
     if (isOpen) {

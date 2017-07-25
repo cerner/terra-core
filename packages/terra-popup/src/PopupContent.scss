@@ -25,7 +25,7 @@
       border: var(--terra-popup-content-close-border);
       color: var(--terra-popup-content-close-color);
       cursor: pointer;
-      font-size: var(--terra-popup-content-close-fontSize);
+      font-size: var(--terra-popup-content-close-font-size);
       font-weight: var(--terra-popup-content-close-font-weight);
       line-height: var(--terra-popup-content-close-line-height);
       margin-left: var(--terra-popup-content-close-margin-left);
@@ -33,7 +33,7 @@
       padding: var(--terra-popup-content-close-padding);
 
       &:hover {
-        color: var(--terra-popup-content-close-hoverColor);
+        color: var(--terra-popup-content-close-hover-color);
       }
     }
 
