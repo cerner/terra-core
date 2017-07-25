@@ -1,0 +1,16 @@
+exports[`test should render a default date input 1`] = `<DatePickerInput />`;
+
+exports[`test should render a default date input with all props 1`] = `
+<DatePickerInput
+  inputAttributes={
+    Object {
+      "id": "terra-date-input",
+    }
+  }
+  name="date-input"
+  onChange={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  placeholder="MM/DD/YYYY"
+  value="01/01/2017" />
+`;

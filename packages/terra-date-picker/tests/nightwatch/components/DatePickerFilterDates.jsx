@@ -1,5 +1,8 @@
 import React from 'react';
+import Base from 'terra-base';
 import DatePicker from '../../../lib/DatePicker';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 const isWeekday = (date) => {
   const day = date.day();
@@ -7,10 +10,12 @@ const isWeekday = (date) => {
 };
 
 const DatePickerFilterDates = () => (
-  <DatePicker
-    name="date-input"
-    filterDate={isWeekday}
-  />
+  <Base locale={locale}>
+    <DatePicker
+      name="date-input"
+      filterDate={isWeekday}
+    />
+  </Base>
 );
 
 export default DatePickerFilterDates;
