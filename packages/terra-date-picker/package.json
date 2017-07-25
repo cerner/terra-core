@@ -30,7 +30,6 @@
     "terra-button": "^1.1.0",
     "terra-form": "^1.1.0",
     "terra-icon": "^1.1.0",
-    "terra-mixins": "^1.7.0",
     "terra-responsive-element": "^1.1.0"
   },
   "dependencies": {
@@ -41,7 +40,6 @@
     "terra-button": "^1.1.0",
     "terra-form": "^1.1.0",
     "terra-icon": "^1.1.0",
-    "terra-mixins": "^1.7.0",
     "terra-responsive-element": "^1.1.0"
   },
   "scripts": {
