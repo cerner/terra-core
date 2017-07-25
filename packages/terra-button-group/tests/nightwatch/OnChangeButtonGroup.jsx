@@ -20,6 +20,7 @@ class buttonGroupExample extends React.Component {
           <h3>Selected Button: {this.state.selectedIndex}</h3>
         </div>
         <ButtonGroup
+          id="button-group-onchange"
           isSelectable
           onChange={this.handleSelection}
           buttons={[<ButtonGroup.Button text="Compact" key="compact1" />,

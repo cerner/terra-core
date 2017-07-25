@@ -4,7 +4,7 @@ import Heading from '../../lib/Heading';
 
 const HeadingColor = () => (
   <div>
-    <Heading level={1} color="#304FFE">Color</Heading>
+    <Heading id="heading-color" level={1} color="#304FFE">Color</Heading>
   </div>
 );
 
