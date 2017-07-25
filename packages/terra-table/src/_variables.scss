@@ -7,18 +7,14 @@
   --terra-table-subheader-background-color: #c8cacb;
   --terra-table-thead-background-color: #dedfe0;
 
-  // Base Border Styles
-  --terra-table-base-border-color: #c8cacb;
-  --terra-table-base-border-width: 1px;
-
   // Borders
   --terra-table-border: 0;
-  --terra-table-thead-tr-border-top: var(--terra-table-base-border-width) solid var(--terra-table-base-border-color);
+  --terra-table-thead-tr-border-top: 1px solid #c8cacb;
   --terra-table-thead-tr-border-bottom: 0;
   --terra-table-tfoot-tr-border-top: 0;
-  --terra-table-tfoot-tr-border-bottom: var(--terra-table-base-border-width) solid var(--terra-table-base-border-color);
-  --terra-table-row-border-vertical: var(--terra-table-base-border-width) solid var(--terra-table-base-border-color);
-  --terra-table-row-border-horizontal: var(--terra-table-base-border-width) solid var(--terra-table-base-border-color);
+  --terra-table-tfoot-tr-border-bottom: 1px solid #c8cacb;
+  --terra-table-row-border-vertical: 1px solid #c8cacb;
+  --terra-table-row-border-horizontal: 1px solid #c8cacb;
   --terra-table-cell-border: 0;
 
   // Table Header Font Styles
