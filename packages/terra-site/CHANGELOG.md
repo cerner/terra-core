@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated Search Field example to demonstrate onInvalidSearch.
+* Add Model Manager Test Link
 
 1.1.0 - (July 18, 2017)
 ------------------
