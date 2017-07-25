@@ -95,6 +95,11 @@ const Control = ({
     labelTextAttrs.className,
   ]);
 
+  const controlInputClasses = cx([
+    'input',
+    inputAttrs.className,
+  ]);
+
   const controlInputAttrs = Object.assign({}, inputAttrs);
 
   if (checked !== undefined) {
@@ -112,6 +117,7 @@ const Control = ({
         type={type}
         onChange={onChange}
         {...controlInputAttrs}
+        className={controlInputClasses}
       />
       <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>
     </label>
