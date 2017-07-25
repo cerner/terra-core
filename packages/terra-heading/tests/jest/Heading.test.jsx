@@ -57,7 +57,7 @@ describe('Heading', () => {
     expect(heading.unrendered.props.weight).toEqual(200);
     expect(heading.unrendered.props.isItalic).toEqual(true);
     expect(heading.unrendered.props.isVisuallyHidden).toEqual(true);
-    expect(heading.find('.terra-Heading').text()).toEqual('All props and custom attrs');
+    expect(heading.find('#id').text()).toEqual('All props and custom attrs');
   });
 
   // Attributes
