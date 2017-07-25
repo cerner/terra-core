@@ -1,3 +1,6 @@
-.terra-ProfileImage--hidden { 
-  display: none;
+/* stylelint-disable selector-class-pattern */
+:local {
+  .hidden {
+    display: none;
+  }
 }
