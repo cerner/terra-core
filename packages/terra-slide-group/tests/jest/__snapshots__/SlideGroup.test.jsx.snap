@@ -1,13 +1,20 @@
 exports[`test should render a SlideGroup with animation enabled 1`] = `
 <div
-  className="terra-SlideGroup">
+  className="slide-group">
   <CSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
     transitionEnterTimeout={300}
     transitionLeave={true}
     transitionLeaveTimeout={300}
-    transitionName="terra-Slide">
+    transitionName={
+      Object {
+        "enter": "enter",
+        "enterActive": "enter-active",
+        "leave": "leave",
+        "leaveActive": "leave-active",
+      }
+    }>
     <Slide
       isHidden={true}>
       <div>
@@ -32,14 +39,21 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
 
 exports[`test should render a default SlideGroup 1`] = `
 <div
-  className="terra-SlideGroup">
+  className="slide-group">
   <CSSTransitionGroup
     transitionAppear={false}
     transitionEnter={false}
     transitionEnterTimeout={300}
     transitionLeave={false}
     transitionLeaveTimeout={300}
-    transitionName="terra-Slide">
+    transitionName={
+      Object {
+        "enter": "enter",
+        "enterActive": "enter-active",
+        "leave": "leave",
+        "leaveActive": "leave-active",
+      }
+    }>
     <Slide
       isHidden={true}>
       <div>

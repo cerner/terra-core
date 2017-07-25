@@ -1,9 +1,9 @@
 exports[`test should render a default Slide 1`] = `
 <div
   aria-hidden={null}
-  className="terra-Slide">
+  className="slide">
   <div
-    className="terra-Slide-shadow" />
+    className="slide-shadow" />
   <div>
     Slide Content
   </div>
@@ -13,9 +13,9 @@ exports[`test should render a default Slide 1`] = `
 exports[`test should render a hidden Slide 1`] = `
 <div
   aria-hidden={true}
-  className="terra-Slide">
+  className="slide">
   <div
-    className="terra-Slide-shadow" />
+    className="slide-shadow" />
   <div>
     Slide Content
   </div>
