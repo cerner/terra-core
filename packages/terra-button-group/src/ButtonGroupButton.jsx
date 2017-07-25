@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'terra-button';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './ButtonGroupButton.scss';
+import styles from './ButtonGroupButton.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -41,8 +43,8 @@ const defaultProps = {
 const ButtonGroupButton = ({ isSelected, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
 
-  const buttonClassName = classNames([
-    'terra-ButtonGroupButton',
+  const buttonClassName = cx([
+    'button-group-button',
     { 'is-active': isSelected },
     attributes.className,
   ]);
