@@ -1,7 +1,10 @@
-@import '~terra-mixins';
-
-.terra-ButtonGroup {
-  display: inline-block;
-  position: relative;
-  white-space: nowrap;
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .button-group {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+  }
+  /* stylelint-enable */
 }
+
