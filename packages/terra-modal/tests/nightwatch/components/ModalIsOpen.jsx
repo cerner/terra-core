@@ -24,7 +24,7 @@ class ModalIsOpen extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="modal">
         <Modal
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}
