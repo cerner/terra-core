@@ -8,7 +8,10 @@ const propTypes = {
   /**
    * The defaultValue of the input element. Use this to create an uncontrolled input
    */
-  defaultValue: PropTypes.number,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   /**
    * Error message for when the input is invalid
    */

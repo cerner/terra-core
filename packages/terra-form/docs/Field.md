@@ -6,7 +6,7 @@ Generic form field component which handles the layout of a standard form field i
 
 ```jsx
 import React from 'react';
-import Field from 'terra-form/lib/Fieldset';
+import Field from 'terra-form/lib/Field';
 
 <Field
   label="Do you have any Children?"
