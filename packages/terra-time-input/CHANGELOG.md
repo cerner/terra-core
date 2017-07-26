@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Fixed onChange callback to occur for onBlur or onKeyDown
 
 1.1.0 - (July 18, 2017)
 ------------------
