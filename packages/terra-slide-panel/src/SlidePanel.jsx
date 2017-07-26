@@ -84,7 +84,7 @@ const SlidePanel = ({
       <div className={cx('panel')} aria-hidden={!isOpen ? 'true' : null}>
         {panelContent}
       </div>
-      <div className={cx('main-panel')}>
+      <div className={cx('main')}>
         {mainContent}
       </div>
     </div>
