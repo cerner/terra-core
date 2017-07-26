@@ -1,0 +1,90 @@
+@import './variables';
+
+:local {
+  [dir=ltr],
+  [dir=rtl] {
+    /* stylelint-disable selector-class-pattern  */
+    // These are relative to screen coordinates, so no bi-di concerns
+    .popupArrow {
+      border: var(--terra-popup-arrow-size) solid transparent;
+      display: none;
+      height: 0;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      width: 0;
+      z-index: var(--terra-popup-arrow-z-index);
+
+      &::after {
+        border: var(--terra-popup-arrow-inner-size) solid transparent;
+        content: '';
+        height: 0;
+        position: absolute;
+        width: 0;
+        z-index: var(--terra-popup-arrow-inner-z-index);
+      }
+    }
+
+    .popupArrow[data-align-top='true'] {
+      border-bottom-color: var(--terra-popup-arrow-color);
+      border-top-width: 0;
+      display: block;
+      top: 0;
+      transform: translate3d(-100%, 0, 0);
+
+      &::after {
+        border-bottom-color: #fff;
+        border-top-width: 0;
+        left: -var(--terra-popup-arrow-inner-size);
+        top: var(--terra-popup-arrow-inner-inset-size);
+      }
+    }
+
+    .popupArrow[data-align-bottom='true'] {
+      border-bottom-width: 0;
+      border-top-color: var(--terra-popup-arrow-color);
+      display: block;
+      top: 100%;
+      transform: translate3d(-100%, -100%, 0);
+
+      &::after {
+        border-bottom-width: 0;
+        border-top-color: var(--terra-popup-arrow-inner-color);
+        bottom: var(--terra-popup-arrow-inner-inset-size);
+        left: -var(--terra-popup-arrow-inner-size);
+      }
+    }
+
+    .popupArrow[data-align-left='true'] {
+      border-left-width: 0;
+      border-right-color: var(--terra-popup-arrow-color);
+      display: block;
+      left: 0;
+      transform: translate3d(0, -100%, 0);
+
+      &::after {
+        border-left-width: 0;
+        border-right-color: var(--terra-popup-arrow-inner-color);
+        left: var(--terra-popup-arrow-inner-inset-size);
+        top: -var(--terra-popup-arrow-inner-size);
+      }
+    }
+
+    .popupArrow[data-align-right='true'] {
+      border-left-color: var(--terra-popup-arrow-color);
+      border-right-width: 0;
+      display: block;
+      left: 100%;
+      transform: translate3d(-100%, -100%, 0);
+
+      &::after {
+        border-left-color: var(--terra-popup-arrow-inner-color);
+        border-right-width: 0;
+        right: var(--terra-popup-arrow-inner-inset-size);
+        top: -var(--terra-popup-arrow-inner-size);
+      }
+    }
+  }
+  /* stylelint-enable */
+}
