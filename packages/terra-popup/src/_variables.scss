@@ -1,0 +1,35 @@
+:root {
+  // PopupArrow Variables
+  --terra-popup-arrow-size: 11px;
+  --terra-popup-arrow-color: #b2b5b6;
+  --terra-popup-arrow-z-index: 7002;
+  --terra-popup-arrow-inner-size: 10px;
+  --terra-popup-arrow-inner-inset-size: 2px;
+  --terra-popup-arrow-inner-color: #fff;
+  --terra-popup-arrow-inner-z-index: 7003;
+
+  // PopupContent Variables
+  --terra-popup-content-margin: 10px;
+  --terra-popup-content-header-border-bottom: 1px solid #dedfe0;
+  --terra-popup-content-close-background: 0 0;
+  --terra-popup-content-close-border: 0;
+  --terra-popup-content-close-color: #111;
+  --terra-popup-content-close-font-size: 1.45rem;
+  --terra-popup-content-close-font-weight: bold;
+  --terra-popup-content-close-hover-color: #999;
+  --terra-popup-content-close-line-height: 0;
+  --terra-popup-content-close-margin-left: 0.3571rem;
+  --terra-popup-content-close-margin-right: 0;
+  --terra-popup-content-close-padding: 4px;
+  --terra-popup-content-inner-background-color: #fff;
+  --terra-popup-content-inner-border: 1px solid #b2b5b6;
+  --terra-popup-content-inner-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+
+  // PopupOverlay Variables
+  --terra-popup-overlay-z-index: 7000;
+  --terra-popup-overlay-background-color: #fff;
+  --terra-popup-overlay-opacity: 0.01;
+
+  // PopupElement Variables
+  --terra-popup-element-z-index: 7001;
+}
