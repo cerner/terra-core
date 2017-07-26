@@ -4,8 +4,6 @@ Terra-date-picker is a controlled input component that provides users a way to e
 
 This is a controlled component because it manages the state of the value in the input. Because this is a controlled input component, it cannot accept the defaultValue prop as it always uses the value prop. React does not allow having both the defaultValue and value props.
 
-The [Modal][4] component by default will trap focus. In order to interact with the date picker when rendered inside a modal, the focus on the modal must be released so that the picker can then request focus. The [Modal Manager][3] component supports releasing focus on the modal. Therefore, to render the date picker in a modal, it must be composed via the [Modal Manager][3], which will internally handle releasing and requesting focus when the picker opens and closes.
-
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
@@ -34,10 +32,14 @@ const isWeekday = (date) => {
 
 ```
 
+## Implementation Notes:
+The [Modal][4] component by default will trap focus. In order to interact with the date picker when rendered inside a modal, the date picker must request focus from the modal. The [App Delegate][5] in the [Modal Manager][3] component provides support for requesting and releasing focus from the modal. Therefore, the [Modal Manager][3] component must be used when rendering the date picker in a modal. When composing the date picker in the [Modal Manager][3], pass in the requestFocus and releaseFocus functions in the [App Delegate][5] to the requestFocus and releaseFocus props in the date picker. The [Modal Manager][3] will facilitate requesting and releasing focus when the picker opens and closes.
+
 [1]: https://github.com/Hacker0x01/react-datepicker
 [2]: http://momentjs.com/docs/
 [3]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager/docs
 [4]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal/docs
+[5]: https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate/docs
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

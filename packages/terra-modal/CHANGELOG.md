@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added isFocused prop to support trapping and releasing focus in the modal.
 
 1.2.0 - (July 26, 2017)
 ------------------
@@ -18,9 +20,6 @@ Unreleased
 
 ### Removed
 * Removed nightwatch.config file
-
-### Added
-* Added isFocused prop to support trapping and releasing focus in the modal.
 
 1.0.0 - (June 28, 2017)
 ------------------

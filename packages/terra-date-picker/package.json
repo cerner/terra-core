@@ -24,7 +24,7 @@
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "terra-app-delegate": "^1.1.0",
-    "terra-modal-manager": "^1.1.0",
+    "terra-modal-manager": "^1.2.0",
     "terra-props-table": "^1.1.0"
   },
   "peerDependencies": {
