@@ -219,4 +219,33 @@ module.exports = {
     browser.expect.element('#timeInput input[type="hidden"]').to.have.attribute('name').which.equals('time-input');
     browser.expect.element('#timeInput input[type="hidden"]').to.have.attribute('value').which.equals('T12:00');
   },
+
+  'Triggers onChange for time-input for key entry': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/on-change`);
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys('1023');
+    browser.assert.containsText('#time-input-value', '10:23');
+  },
+
+  'Triggers onChange for time-input for arrow entry': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/on-change`);
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys('1023');
+
+    browser.keys(browser.Keys.UP_ARROW);
+    browser.assert.containsText('#time-input-value', '10:24');
+
+    browser.keys(browser.Keys.DOWN_ARROW);
+    browser.assert.containsText('#time-input-value', '10:23');
+  },
+
+  'Triggers onChange for time-input for onBlur focus change': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/time-input-tests/on-change`);
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys('7');
+    browser.assert.containsText('#time-input-value', '07:');
+
+    browser.keys('47');
+    browser.assert.containsText('#time-input-value', '07:47');
+  },
 };
