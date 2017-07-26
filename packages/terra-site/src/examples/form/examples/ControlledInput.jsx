@@ -1,4 +1,3 @@
-// remove eslint-disable once terra-form has been published
 import React from 'react';
 import Button from 'terra-button';
 import Fieldset from 'terra-form/lib/Fieldset';
