@@ -141,11 +141,11 @@ module.exports = {
 
     browser.expect.element('.react-datepicker').to.not.be.present;
 
-    browser.expect.element('.terra-Modal').to.be.present;
+    browser.assert.elementPresent('div[role="document"]');
 
     browser.keys(browser.Keys.ESCAPE);
 
-    browser.expect.element('.terra-Modal').to.not.be.present;
+    browser.assert.elementNotPresent('div[role="document"]');
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Tab': (browser) => {
