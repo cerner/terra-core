@@ -1,0 +1,36 @@
+@import './variables';
+
+:local {
+  // These are relative to screen coordinates, so no bidi changes needed
+  [dir=ltr],
+  [dir=rtl] {
+    /* stylelint-disable selector-class-pattern  */
+    .popupOverlay {
+      background-color: var(--terra-popup-overlay-background-color);
+      height: 100%;
+      left: 0;
+      opacity: var(--terra-popup-overlay-opacity);
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+      overflow-x: scroll;
+      overflow-y: scroll;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: var(--terra-popup-overlay-z-index);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .inner {
+      height: 200%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 200%;
+    }
+  }
+  /* stylelint-enable */
+}
