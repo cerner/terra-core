@@ -1,5 +1,18 @@
 import AppDelegate from '../../src/app-delegate/AppDelegate';
 
+const disclose = () => {};
+const dismiss = () => {};
+const closeDisclosure = () => {};
+const goBack = () => {};
+const maximize = () => {};
+const minimize = () => {};
+const requestFocus = () => {};
+const releaseFocus = () => {};
+const notSupported = () => {};
+const appDelegateInstance = AppDelegate.create({
+  disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
+});
+
 describe('propType', () => {
   it('should provide a defined PropType', () => {
     expect(AppDelegate.propType).not.toBe(undefined);
@@ -8,47 +21,24 @@ describe('propType', () => {
 
 describe('create', () => {
   it('should expose a create function that creates an AppDelegate instance', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-    const notSupported = () => {};
-
-    const appDelegateInstance = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus, notSupported,
     });
 
-    expect(appDelegateInstance.disclose).toBe(disclose);
-    expect(appDelegateInstance.dismiss).toBe(dismiss);
-    expect(appDelegateInstance.closeDisclosure).toBe(closeDisclosure);
-    expect(appDelegateInstance.goBack).toBe(goBack);
-    expect(appDelegateInstance.maximize).toBe(maximize);
-    expect(appDelegateInstance.minimize).toBe(minimize);
-    expect(appDelegateInstance.requestFocus).toBe(requestFocus);
-    expect(appDelegateInstance.releaseFocus).toBe(releaseFocus);
-    expect(appDelegateInstance.thisIsATestWhatAmIDoing).toBe(undefined);
+    expect(appDelegateLocalInstance.disclose).toBe(disclose);
+    expect(appDelegateLocalInstance.dismiss).toBe(dismiss);
+    expect(appDelegateLocalInstance.closeDisclosure).toBe(closeDisclosure);
+    expect(appDelegateLocalInstance.goBack).toBe(goBack);
+    expect(appDelegateLocalInstance.maximize).toBe(maximize);
+    expect(appDelegateLocalInstance.minimize).toBe(minimize);
+    expect(appDelegateLocalInstance.requestFocus).toBe(requestFocus);
+    expect(appDelegateLocalInstance.releaseFocus).toBe(releaseFocus);
+    expect(appDelegateLocalInstance.thisIsATestWhatAmIDoing).toBe(undefined);
   });
 });
 
 describe('clone', () => {
   it('should override all possible functions if given', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
     const cloneDisclose = () => {};
     const cloneDismiss = () => {};
     const cloneCloseDisclosure = () => {};
@@ -80,19 +70,6 @@ describe('clone', () => {
   });
 
   it('should keep functions from original instance if not provided', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
     const cloneDisclose = () => {};
     const cloneDismiss = () => {};
     const clonedDelegate = AppDelegate.clone(appDelegateInstance, {
@@ -113,209 +90,79 @@ describe('clone', () => {
 
 describe('isEqual', () => {
   it('should return true when all attributes are equal', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
-    const appDelegateInstance2 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(true);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(true);
   });
 
   it('should return true when refs are equal', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance1)).toBe(true);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateInstance)).toBe(true);
   });
 
   it('should return false when disclose does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose: () => {}, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when dismiss does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss: () => {}, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when closeDisclosure does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure: () => {}, goBack, maximize, minimize, requestFocus, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when goBack does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack: () => {}, maximize, minimize, requestFocus, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when maximize does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack, maximize: () => {}, minimize, requestFocus, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when minimize does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack, maximize, minimize: () => {}, requestFocus, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when requestFocus does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus: () => {}, releaseFocus,
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when releaseFocus does not match', () => {
-    const disclose = () => {};
-    const dismiss = () => {};
-    const closeDisclosure = () => {};
-    const goBack = () => {};
-    const maximize = () => {};
-    const minimize = () => {};
-    const requestFocus = () => {};
-    const releaseFocus = () => {};
-
-    const appDelegateInstance1 = AppDelegate.create({
-      disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus,
-    });
-
-    const appDelegateInstance2 = AppDelegate.create({
+    const appDelegateLocalInstance = AppDelegate.create({
       disclose, dismiss, closeDisclosure, goBack, maximize, minimize, requestFocus, releaseFocus: () => {},
     });
 
-    expect(AppDelegate.isEqual(appDelegateInstance1, appDelegateInstance2)).toBe(false);
+    expect(AppDelegate.isEqual(appDelegateInstance, appDelegateLocalInstance)).toBe(false);
   });
 
   it('should return false when either parameter is undefined', () => {
