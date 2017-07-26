@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import AppDelegate from 'terra-app-delegate';
 import Popup from '../../../lib/Popup';
 
