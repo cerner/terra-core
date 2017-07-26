@@ -1,7 +1,7 @@
 {
   "name": "terra-button-group",
   "main": "lib/ButtonGroup.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "terra-button-group",
   "repository": {
     "type": "git",
