@@ -23,7 +23,7 @@ class ModalScrollableTrue extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="modal-scroll-true">
         <Modal
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}

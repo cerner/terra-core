@@ -1,43 +1,47 @@
-.terra-Heading {
-  margin: 0;
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .heading {
+    margin: 0;
+  }
+
+  // Heading Italics
+  .italic { font-style: italic; }
+
+  // Default Heading Sizes Per Heading Level
+  .level-1 { font-size: 2.286rem; }
+  .level-2 { font-size: 1.714rem;}
+  .level-3 { font-size: 1.429rem; }
+  .level-4 { font-size: 1.286rem; }
+  .level-5 { font-size: 1.143rem; }
+  .level-6 { font-size: 1rem; }
+
+  // Heading Size Overrides
+  .size-huge { font-size: 2.286rem; }
+  .size-large { font-size: 1.714rem;}
+  .size-medium { font-size: 1.429rem; }
+  .size-small { font-size: 1.286rem; }
+  .size-tiny { font-size: 1.143rem; }
+  .size-mini { font-size: 1rem; }
+
+  // Heading Weights
+  .weight-200 { font-weight: 200; }
+  .weight-400 { font-weight: 400; }
+  .weight-700 { font-weight: 700; }
+
+
+  /**
+   * Used to hide the content visually, yet provide the content to screen readers,
+   * More info: http://a11yproject.com/posts/how-to-hide-content/
+   */
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 }
-
-// Heading Italics
-.terra-Heading--italic { font-style: italic; }
-
-// Default Heading Sizes Per Heading Level
-.terra-Heading--level-1 { font-size: 2.286rem; }
-.terra-Heading--level-2 { font-size: 1.714rem;}
-.terra-Heading--level-3 { font-size: 1.429rem; }
-.terra-Heading--level-4 { font-size: 1.286rem; }
-.terra-Heading--level-5 { font-size: 1.143rem; }
-.terra-Heading--level-6 { font-size: 1rem; }
-
-// Heading Size Overrides
-.terra-Heading--size-huge { font-size: 2.286rem; }
-.terra-Heading--size-large { font-size: 1.714rem;}
-.terra-Heading--size-medium { font-size: 1.429rem; }
-.terra-Heading--size-small { font-size: 1.286rem; }
-.terra-Heading--size-tiny { font-size: 1.143rem; }
-.terra-Heading--size-mini { font-size: 1rem; }
-
-// Heading Weights
-.terra-Heading--weight-200 { font-weight: 200; }
-.terra-Heading--weight-400 { font-weight: 400; }
-.terra-Heading--weight-700 { font-weight: 700; }
-
-
-/**
- * Used to hide the content visually, yet provide the content to screen readers,
- * More info: http://a11yproject.com/posts/how-to-hide-content/
- */
-.terra-Heading--visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
+/* stylelint-enable selector-class-pattern  */

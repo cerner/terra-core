@@ -4,7 +4,7 @@ import Heading from '../../lib/Heading';
 
 const HeadingItalics = () => (
   <div>
-    <Heading level={1} isItalic>Italics</Heading>
+    <Heading id="heading-italic" level={1} isItalic>Italics</Heading>
   </div>
 );
 
