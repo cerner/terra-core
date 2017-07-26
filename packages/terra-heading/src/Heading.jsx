@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './Heading.scss';
+import styles from './Heading.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -44,13 +46,13 @@ const defaultProps = {
 
 const Heading = ({ level, color, children, isVisuallyHidden, isItalic, size, weight, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
-  const TextClassNames = classNames([
-    'terra-Heading',
-    { 'terra-Heading--italic': isItalic },
-    { 'terra-Heading--visually-hidden': isVisuallyHidden },
-    { [`terra-Heading--level-${level}`]: level },
-    { [`terra-Heading--size-${size}`]: size },
-    { [`terra-Heading--weight-${weight}`]: weight },
+  const TextClassNames = cx([
+    'heading',
+    { italic: isItalic },
+    { 'visually-hidden': isVisuallyHidden },
+    { [`level-${level}`]: level },
+    { [`size-${size}`]: size },
+    { [`weight-${weight}`]: weight },
     attributes.className,
   ]);
 
