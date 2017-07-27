@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.2.0 - (July 26, 2017)
+------------------
 ### Changed
 * Updated spacing around react-docgen comments
 
