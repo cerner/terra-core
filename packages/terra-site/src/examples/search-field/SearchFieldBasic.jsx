@@ -1,10 +1,21 @@
 import React from 'react';
 import SearchField from 'terra-search-field';
 
-const view = () => (
-  <div>
-    <SearchField />
-  </div>
-);
+class SearchFieldView extends React.Component {
 
-export default view;
+  constructor(props) {
+    super(props);
+    this.state = { searchText: '' };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Search Text: {this.state.searchText}</p>
+        <SearchField onSearch={(searchText) => { this.setState({ searchText }); }} />
+      </div>
+    );
+  }
+}
+
+export default SearchFieldView;

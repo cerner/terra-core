@@ -5,10 +5,7 @@ class SearchFieldDelayed extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      searchText: '',
-    };
+    this.state = { searchText: '' };
   }
 
   render() {
@@ -21,7 +18,6 @@ class SearchFieldDelayed extends React.Component {
       </div>
     );
   }
-
 }
 
 export default SearchFieldDelayed;
