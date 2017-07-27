@@ -11,27 +11,27 @@ const propTypes = {
   choices: PropTypes.array.isRequired,
 
   /**
-   * Error message for when the input is invalid
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
 
   /**
-   *  Help element to display with the input
+   *  Help element to display with the input.
    */
   help: PropTypes.node,
 
   /**
-   * Whether the field is inline
+   * Whether the field is inline.
    */
   isInline: PropTypes.bool,
 
   /**
-   * Label of the input
+   * Label of the input.
    */
   label: PropTypes.node,
 
   /**
-   * Attributes to attach to the label
+   * Attributes to attach to the label.
    */
   labelAttrs: PropTypes.object,
 
@@ -46,7 +46,7 @@ const propTypes = {
   name: PropTypes.string,
 
   /**
-   * Custom attributes to apply to the select
+   * Custom attributes to apply to the select.
    */
   selectAttrs: PropTypes.object,
 
