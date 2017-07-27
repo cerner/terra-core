@@ -16,7 +16,7 @@ class timeInput extends React.Component {
   render() {
     return (
       <div>
-        <h3>Updated time: {this.state.time}</h3>
+        <p>Inputed time: {this.state.time}</p>
         <TimeInput
           name="time-input-value"
           value={moment().format('HH:mm')}
