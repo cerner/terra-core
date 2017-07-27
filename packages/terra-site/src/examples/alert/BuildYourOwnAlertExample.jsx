@@ -143,7 +143,7 @@ class BuildYourOwnAlertExample extends React.Component {
     const alertOnDismissPropStr = this.state.isDismissible ? 'onDismiss={this.handleDismiss}' : '';
     const onDismissHandler = this.state.isDismissible ? this.handleDismiss : undefined;
     const actionButton = this.state.showActionButton ? (<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />) : undefined;
-    const alertActionPropStr = this.state.showActionButton ? 'alertAction={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />}' : '';
+    const alertActionPropStr = this.state.showActionButton ? 'action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />}' : '';
     const customPropsDisplayStyle = { display: this.state.type === Alert.Opts.Types.CUSTOM ? 'table-row' : 'none' };
     const customStatusColorPropStr = this.state.customStatusColor ? `customStatusColor="${this.state.customStatusColor}"` : '';
     const actionCounterText = this.state.showActionButton ? `Action button has been clicked ${this.state.actionButtonClickCount} times.` : '';
@@ -186,7 +186,7 @@ class BuildYourOwnAlertExample extends React.Component {
 
     if (!this.state.isDismissed) {
       alertElem = (
-        <Alert type={this.state.type} title={this.state.title} onDismiss={onDismissHandler} alertAction={actionButton} customIcon={customIcon} customStatusColor={this.state.customStatusColor} >
+        <Alert type={this.state.type} title={this.state.title} onDismiss={onDismissHandler} action={actionButton} customIcon={customIcon} customStatusColor={this.state.customStatusColor} >
           {contentValue}
         </Alert>
       );
