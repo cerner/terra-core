@@ -28,6 +28,10 @@ Cerner Corporation
 - Madeline Gilbert [@madelineisabelle]
 - Michael Hemesath [@mhemesath]
 - Umesh Shimpi [@us044466]
+- Viren Sawant [@viren]
+- Christian Alten [@cwalten]
+- Tatiana Alexenko [@bunnyLord]
+- Aaron McRuer [@Nerdenator]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -59,3 +63,7 @@ Cerner Corporation
 [@mhemesath]: https://github.com/mhemesath
 [@us044466]: https://github.com/us044466
 [@brhoades]: https://github.com/brhoades
+[@viren]: https://github.com/viren
+[@cwalten]: https://github.com/cwalten
+[@bunnyLord]: https://github.com/bunnyLord
+[@Nerdenator]: https://github.com/Nerdenator
