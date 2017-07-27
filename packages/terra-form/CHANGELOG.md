@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Converted package to use CSS Modules
 
+### Changed
+* Removed red ring for required fields.
+
 1.1.0 - (July 18, 2017)
 ------------------
 ### Added

@@ -51,6 +51,7 @@ class App extends React.Component {
               </div>
               <List className="site-nav">
                 <List.Item content={<Link to="/">Home</Link>} />
+                <List.Item content={<Link to="/site/alert">Alert</Link>} />
                 <List.Item content={<Link to="/site/app-delegate">App Delegate</Link>} />
                 <List.Item content={<Link to="/site/arrange">Arrange</Link>} />
                 <List.Item content={<Link to="/site/base">Base</Link>} />
@@ -70,6 +71,7 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/modal">Modal</Link>} />
                 <List.Item content={<Link to="/site/modal-manager">Modal Manager</Link>} />
                 <List.Item content={<Link to="/site/overlay">Overlay</Link>} />
+                <List.Item content={<Link to="/site/popup">Popup</Link>} />
                 <List.Item content={<Link to="/site/profile-image">Profile Image</Link>} />
                 <List.Item content={<Link to="/site/progress-bar">Progress Bar</Link>} />
                 <List.Item content={<Link to="/site/responsive-element">Responsive Element</Link>} />

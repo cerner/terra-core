@@ -16,5 +16,9 @@
       height: auto;
       width: auto;
     }
+
+    &[required] {
+      box-shadow: unset;
+    }
   }
 }
