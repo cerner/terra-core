@@ -12,7 +12,6 @@ import DatePickerExcludeDates from './DatePickerExcludeDates';
 import DatePickerIncludeDates from './DatePickerIncludeDates';
 import DatePickerFilterDates from './DatePickerFilterDates';
 import DatePickerMinMax from './DatePickerMinMax';
-import DatePickerOnChange from './DatePickerOnChange';
 import DatePickerDefaultDate from './DatePickerDefaultDate';
 
 const DatePickerExamples = () => (
@@ -39,9 +38,6 @@ const DatePickerExamples = () => (
     <h2 id="min-max">Min Max Selection Options</h2>
     <DatePickerMinMax />
     <br />
-    <br />
-    <h2 id="on-change">On Change</h2>
-    <DatePickerOnChange />
     <br />
     <h2 id="start-date">Default Date Provided</h2>
     <DatePickerDefaultDate />
