@@ -90,7 +90,7 @@ exports[`test should render as controlled when just a default value is passed in
 </NumberField>
 `;
 
-exports[`test should render as uncontrolled when just a numberic default value is passed into the NumberField 1`] = `
+exports[`test should render as uncontrolled when just a numeric default value is passed into the NumberField 1`] = `
 <Field
   error={null}
   help={null}
