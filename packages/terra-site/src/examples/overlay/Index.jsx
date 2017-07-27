@@ -27,7 +27,9 @@ const OverlayExamples = () => (
     <PropsTable id="props-overlay" src={OverlaySrc} />
     <h2>LoadingOverlay</h2>
     <PropsTable id="props-loadingoverlay" src={LoadingOverlaySrc} />
+    <h2>Overlay </h2>
     <OverlayExample />
+    <h2>Loading Overlay</h2>
     <LoadingOverlayExample />
   </div>
 );

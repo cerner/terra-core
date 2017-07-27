@@ -16,7 +16,7 @@ class SearchFieldMinimumLength extends React.Component {
   }
 
   handleSearch(searchText) {
-    this.setState({ searchText, message: 'Search Text: ' });
+    this.setState({ searchText, message: 'Valid Search Text: ' });
   }
 
   handleInvalidSearch(searchText) {

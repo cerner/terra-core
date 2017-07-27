@@ -92,9 +92,9 @@ class ControlExamples extends React.Component {
         </form>
         <hr />
         <ul>Input Provided:
-          <li style={{ margin: '10px' }}>Relocate? {this.state.relocate}</li>
-          <li style={{ margin: '10px' }}>Children? {this.state.children}</li>
-          <li style={{ margin: '10px' }}>Programming language? {this.state.language}</li>
+          <li style={{ margin: '10px' }}>Relocate - {this.state.relocate}</li>
+          <li style={{ margin: '10px' }}>Children - {this.state.children}</li>
+          <li style={{ margin: '10px' }}>Programming language - {this.state.language}</li>
         </ul>
         <br />
       </div>

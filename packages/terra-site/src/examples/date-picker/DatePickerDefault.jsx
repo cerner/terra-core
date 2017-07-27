@@ -15,7 +15,7 @@ class DatePickerExample extends React.Component {
   render() {
     return (
       <div>
-        <p>Selected ISO formatted Date: {this.state.date}</p>
+        <p>Selected ISO Date: {this.state.date}</p>
         <DatePicker
           name="date-input-default"
           onChange={this.handleDateChange}
