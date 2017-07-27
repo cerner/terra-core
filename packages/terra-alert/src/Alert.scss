@@ -6,7 +6,6 @@
   .alert-base {
     align-items: stretch;
     display: flex;
-    flex: 1;
     justify-content: space-between;
     overflow: hidden;
     width: 100%;
@@ -72,7 +71,7 @@
     flex-direction: row;
     flex-shrink: 0;
     justify-content: flex-end;
-    margin: 0.5833rem 0.5833rem 0.5833rem 0.8333rem;
+    margin: 0.4286rem 0.5833rem 0.4286rem 0.8333rem;
   }
 
   .actions-custom {
