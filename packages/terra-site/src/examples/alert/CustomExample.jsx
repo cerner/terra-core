@@ -21,7 +21,7 @@ const CustomExample = () => (
     </div>
     <br />
     <Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customStatusColor="orange" customIcon={<IconHelp />} >
-      This is a <u>custom</u> alert
+      <span>This is a <i>custom</i> alert</span>
     </Alert>
   </div>
 );

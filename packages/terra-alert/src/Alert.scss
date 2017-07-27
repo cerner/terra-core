@@ -31,10 +31,11 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: row;
+    line-height: 1.2;
     margin-left: 0.6667rem;
-    margin-top: 1rem;
+    margin-top: 0.7143rem;
     overflow: hidden;
-    padding-top: 0.1rem;
+    padding-top: 0;
   }
 
   .body-narrow {
@@ -45,13 +46,14 @@
 
   .body-std {
     composes: body;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7143rem;
     margin-right: 0;
   }
 
   .section {
     flex: 1;
-    padding-top: 0.2rem;
+    padding-bottom: 0.2143rem;
+    padding-top: 0.2143rem;
   }
 
   .section-custom {
