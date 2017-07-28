@@ -15,6 +15,7 @@ const propTypes = {
   classNameOverlay: PropTypes.string,
   closeOnOutsideClick: PropTypes.bool,
   onRequestClose: PropTypes.func.isRequired,
+  isFocused: PropTypes.bool,
   isFullscreen: PropTypes.bool,
   isScrollable: PropTypes.bool,
   role: PropTypes.string,
@@ -26,6 +27,7 @@ const defaultProps = {
   classNameModal: null,
   classNameOverlay: null,
   closeOnOutsideClick: true,
+  isFocused: true,
   isFullscreen: false,
   isScrollable: false,
   role: 'dialog',
@@ -42,6 +44,7 @@ class ModalContent extends React.Component {
         closeOnOutsideClick,
         onRequestClose,
         role,
+        isFocused,
         isFullscreen,
         isScrollable,
         ...customProps } = this.props;
@@ -57,7 +60,9 @@ class ModalContent extends React.Component {
     delete customProps.closePortal;
 
     return (
-      <FocusTrap>
+      <FocusTrap
+        paused={!isFocused}
+      >
         <ModalOverlay
           onClick={closeOnOutsideClick ? onRequestClose : null}
           className={classNameOverlay}
