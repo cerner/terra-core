@@ -1,7 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './ModalOverlay.scss';
+import styles from './ModalOverlay.scss';
+
+const cx = classNames.bind(styles);
 
 class ModalOverlay extends React.Component {
 
@@ -18,14 +20,7 @@ class ModalOverlay extends React.Component {
 
   render() {
     const { ...customProps } = this.props;
-    const attributes = Object.assign({}, customProps);
-
-    attributes.className = classNames([
-      'terra-Modal-overlay',
-      attributes.className,
-    ]);
-
-    return <div {...attributes} />;
+    return <div {...customProps} className={cx('overlay', customProps.className)} />;
   }
 }
 

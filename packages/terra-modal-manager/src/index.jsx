@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ModalManager from './ModalManager';
 
 import modalManagerReducers from './reducers';
-import { open, close, push, pop, maximize, minimize } from './actions';
+import { open, close, push, pop, maximize, minimize, gainFocus, loseFocus } from './actions';
 
 const mapStateToProps = state => (
   (disclosureState => ({
@@ -11,6 +11,7 @@ const mapStateToProps = state => (
     size: disclosureState.size,
     isOpen: disclosureState.isOpen,
     isMaximized: disclosureState.isMaximized,
+    isFocused: disclosureState.isFocused,
   }))(state.modalManager)
 );
 
@@ -23,6 +24,8 @@ const mapDispatchToProps = dispatch => ({
   popModal: (data) => { dispatch(pop(data)); },
   maximizeModal: (data) => { dispatch(maximize(data)); },
   minimizeModal: (data) => { dispatch(minimize(data)); },
+  gainFocus: (data) => { dispatch(gainFocus(data)); },
+  loseFocus: (data) => { dispatch(loseFocus(data)); },
 });
 
 export { mapDispatchToProps };

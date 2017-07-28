@@ -81,6 +81,7 @@ class TimeInput extends React.Component {
   }
 
   handleBlur(event, type) {
+    this.setState({ isFocused: false });
     let stateValue = event.target.value;
 
     // Prepend a 0 to the value when losing focus and the value is single digit.
@@ -88,11 +89,7 @@ class TimeInput extends React.Component {
       stateValue = '0'.concat(stateValue);
     }
 
-    if (type === inputType.HOUR) {
-      this.setState({ hour: stateValue, isFocused: false });
-    } else {
-      this.setState({ minute: stateValue, isFocused: false });
-    }
+    this.handleValueChange(type, stateValue);
   }
 
   handleHourChange(event) {
@@ -132,22 +129,7 @@ class TimeInput extends React.Component {
       }
     }
 
-    if (type === inputType.HOUR) {
-      this.setState({ hour: inputValue });
-    } else {
-      this.setState({ minute: inputValue });
-    }
-
-    if (this.props.onChange) {
-      let enteredTime;
-      if (type === inputType.HOUR) {
-        enteredTime = inputValue.concat(':', this.state.minute);
-      } else {
-        enteredTime = this.state.hour.concat(':', inputValue);
-      }
-
-      this.props.onChange(event, enteredTime);
-    }
+    this.handleValueChange(type, inputValue);
 
     // // Move focus to the minute input if the hour input has a valid and complete entry.
     if (type === inputType.HOUR && inputValue.length === 2) {
@@ -227,11 +209,26 @@ class TimeInput extends React.Component {
     }
 
     if (updateStateValue) {
+      this.handleValueChange(type, stateValue);
+    }
+  }
+
+  handleValueChange(type, timeValue) {
+    if (type === inputType.HOUR) {
+      this.setState({ hour: timeValue });
+    } else {
+      this.setState({ minute: timeValue });
+    }
+
+    if (this.props.onChange) {
+      let changedValue;
       if (type === inputType.HOUR) {
-        this.setState({ hour: stateValue });
+        changedValue = timeValue.concat(':', this.state.minute);
       } else {
-        this.setState({ minute: stateValue });
+        changedValue = this.state.hour.concat(':', timeValue);
       }
+
+      this.props.onChange(event, changedValue);
     }
   }
 

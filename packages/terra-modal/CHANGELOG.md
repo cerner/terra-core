@@ -3,7 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added isFocused prop to support trapping and releasing focus in the modal.
+
+1.2.0 - (July 26, 2017)
+------------------
 ### Changed
+* Converted component to use CSS modules
 * Updated spacing around react-docgen comments
 
 1.1.0 - (July 18, 2017)

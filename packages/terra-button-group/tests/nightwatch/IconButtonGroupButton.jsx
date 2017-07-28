@@ -6,18 +6,21 @@ const icon = <span style={iconStyle} className="test"><svg width="1em" height="1
 
 const IconDefaultButtonGroup = () => (
   <ButtonGroup
+    id="button-group-icon-default"
     buttons={[<ButtonGroup.Button text="Icon" icon={icon} key="iconDefault1" />,
       <ButtonGroup.Button text="Icon" icon={icon} key="iconDefault2" />]}
   />
 );
 const IconReversedButtonGroup = () => (
   <ButtonGroup
+    id="button-group-icon-reversed"
     buttons={[<ButtonGroup.Button text="Icon Reversed" icon={icon} isReversed key="iconReversed1" />,
       <ButtonGroup.Button text="Icon Reversed" icon={icon} isReversed key="iconReversed2" />]}
   />
 );
 const IconOnlyButtonGroup = () => (
   <ButtonGroup
+    id="button-group-icon-only"
     buttons={[<ButtonGroup.Button icon={icon} key="iconOnly1" />,
       <ButtonGroup.Button icon={icon} key="iconOnly2" />]}
   />

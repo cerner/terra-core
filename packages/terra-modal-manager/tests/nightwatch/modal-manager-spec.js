@@ -104,4 +104,25 @@ module.exports = {
     browser.expect.element('.terra-ModalManager-modal .terra-SlideGroup #DemoContainer-1').to.be.present;
     browser.expect.element('.terra-ModalManager-modal .terra-SlideGroup #DemoContainer-2').to.not.be.present;
   },
+
+  'Releases/Requests focus when selected within modal': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose');
+
+    browser.expect.element('.terra-SlideGroup #DemoContainer-1').to.be.present;
+    browser.expect.element('#DemoContainer-1 .requestFocus').to.be.present;
+
+    browser.click('#DemoContainer-1 .requestFocus');
+
+    browser.expect.element('.terra-SlideGroup #DemoContainer-1').to.be.present;
+    browser.expect.element('#DemoContainer-1 .requestFocus').to.not.be.present;
+    browser.expect.element('#DemoContainer-1 .releaseFocus').to.be.present;
+
+    browser.click('#DemoContainer-1 .releaseFocus');
+
+    browser.expect.element('.terra-SlideGroup #DemoContainer-1').to.be.present;
+    browser.expect.element('#DemoContainer-1 .requestFocus').to.be.present;
+    browser.expect.element('#DemoContainer-1 .releaseFocus').to.not.be.present;
+  },
 };

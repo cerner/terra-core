@@ -6,7 +6,7 @@ import Textarea from './Textarea';
 
 const propTypes = {
   /**
-   * How many columns the textarea should have
+   * How many columns the textarea should have.
    */
   cols: PropTypes.number,
   /**
@@ -14,15 +14,15 @@ const propTypes = {
    */
   defaultValue: PropTypes.string,
   /**
-   * Error message for when the input is invalid
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
   /**
-   *  Help element to display with the input
+   *  Help element to display with the input.
    */
   help: PropTypes.node,
   /**
-   * Custom attributes to apply to the input
+   * Custom attributes to apply to the input.
    */
   inputAttrs: PropTypes.object,
   /**
@@ -30,27 +30,27 @@ const propTypes = {
    */
   inputId: PropTypes.string,
   /**
-   * Whether the field is inline
+   * Whether the field is inline.
    */
   isInline: PropTypes.bool,
   /**
-   * Label of the input
+   * Label of the input.
    */
   label: PropTypes.node,
   /**
-   * Attributes to attach to the label
+   * Attributes to attach to the label.
    */
   labelAttrs: PropTypes.object,
   /**
-   * Maximum number of characters user can input in this field
+   * Maximum number of characters user can input in this field.
    */
   maxLength: PropTypes.number,
   /**
-   * Minimum number of characters user must input in this field
+   * Minimum number of characters user must input in this field.
    */
   minLength: PropTypes.number,
   /**
-   * Name of the input attribute
+   * Name of the input attribute.
    */
   name: PropTypes.string,
   /**
@@ -58,11 +58,11 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Whether the input is required
+   * Whether the input is required.
    */
   required: PropTypes.bool,
   /**
-   * How many rows the textarea should have
+   * How many rows the textarea should have.
    */
   rows: PropTypes.number,
   /**

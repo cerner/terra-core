@@ -23,9 +23,9 @@ class ModalContentOverflow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="modal-overflow">
         <Modal
-          ariaLabel="Terra Modal"
+          ariaLabel="Terra Modal Brett"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
         >
@@ -38,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </div>
         </Modal>
-        <button onClick={this.handleOpenModal}>Open Modal</button>
+        <button id="modal-button" onClick={this.handleOpenModal}>Open Modal</button>
       </div>
     );
   }
@@ -46,4 +46,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 export default ModalContentOverflow;
-

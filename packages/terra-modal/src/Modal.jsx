@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Portal from 'react-portal';
 import 'terra-base/lib/baseStyles';
 import ModalContent from './ModalContent';
-import './Modal.scss';
-
 
 const propTypes = {
   /**
@@ -31,6 +29,10 @@ const propTypes = {
    * If set to true, the modal will close when a mouseclick is triggered outside the modal
    */
   closeOnOutsideClick: PropTypes.bool,
+  /**
+   * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.
+   */
+  isFocused: PropTypes.bool,
   /**
    * If set to true, the modal will be fullscreen on all breakpoint sizes
    */
@@ -62,6 +64,7 @@ const defaultProps = {
   classNameOverlay: null,
   closeOnEsc: true,
   closeOnOutsideClick: true,
+  isFocused: true,
   isFullscreen: false,
   isOpen: false,
   isScrollable: false,
@@ -82,12 +85,22 @@ class Modal extends React.Component {
     document.addEventListener('keydown', this.handleKeydown);
   }
 
+  componentWillReceiveProps(nextProps) {
+    // When the Modal no longer in focus, it should no longer listen to the keydown event to handle the Escape key.
+    // Otherwise, the Modal would also get closed when the intention for pressing the Escape key is to close a popup inside the modal.
+    if (!nextProps.isFocused && this.props.isFocused) {
+      document.removeEventListener('keydown', this.handleKeydown);
+    } else if (nextProps.isFocused && !this.props.isFocused) {
+      document.addEventListener('keydown', this.handleKeydown);
+    }
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeydown);
   }
 
   handleKeydown(e) {
-    if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpen && this.props.closeOnEsc) {
+    if (e.keyCode === KEYCODES.ESCAPE && this.props.isOpen && this.props.closeOnEsc && this.props.isFocused) {
       this.props.onRequestClose();
     }
   }
@@ -100,6 +113,7 @@ class Modal extends React.Component {
           classNameOverlay,
           closeOnEsc,
           closeOnOutsideClick,
+          isFocused,
           isFullscreen,
           isOpen,
           isScrollable,
@@ -122,6 +136,7 @@ class Modal extends React.Component {
           classNameModal={classNameModal}
           classNameOverlay={classNameOverlay}
           role={role}
+          isFocused={isFocused}
           isFullscreen={isFullscreen}
           isScrollable={isScrollable}
           onRequestClose={onRequestClose}

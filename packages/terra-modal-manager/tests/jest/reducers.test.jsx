@@ -6,6 +6,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
+  GAIN_FOCUS,
+  LOSE_FOCUS,
 } from '../../src/actionTypes';
 
 describe('modalManager reducer', () => {
@@ -22,6 +24,7 @@ describe('modalManager reducer', () => {
 
     expect(result.componentKeys).toEqual([]);
     expect(result.components).toEqual({});
+    expect(result.isFocused).toEqual(true);
     expect(result.isMaximized).toEqual(false);
     expect(result.isOpen).toEqual(false);
     expect(result.size).toEqual('small');
@@ -53,6 +56,7 @@ describe('modalManager reducer', () => {
           key: `${content.key}`,
         },
       },
+      isFocused: true,
       isMaximized: false,
       isOpen: true,
       size: 'tiny',
@@ -86,6 +90,7 @@ describe('modalManager reducer', () => {
           key: `${content.key}`,
         },
       },
+      isFocused: true,
       isMaximized: false,
       isOpen: true,
       size: 'small',
@@ -125,6 +130,7 @@ describe('modalManager reducer', () => {
           key: 'COMPONENT_2',
         },
       },
+      isFocused: true,
       isOpen: true,
       isMaximized: false,
       size: 'large',
@@ -147,6 +153,7 @@ describe('modalManager reducer', () => {
           key: `${content.key}`,
         },
       }),
+      isFocused: true,
       isMaximized: false,
       isOpen: true,
       size: 'large',
@@ -170,6 +177,7 @@ describe('modalManager reducer', () => {
           key: 'COMPONENT_2',
         },
       },
+      isFocused: true,
       isOpen: true,
       isMaximized: false,
       size: 'large',
@@ -189,6 +197,7 @@ describe('modalManager reducer', () => {
           key: 'COMPONENT_1',
         },
       },
+      isFocused: true,
       isMaximized: false,
       isOpen: true,
       size: 'large',
@@ -212,6 +221,7 @@ describe('modalManager reducer', () => {
           key: 'COMPONENT_2',
         },
       },
+      isFocused: true,
       isOpen: true,
       isMaximized: false,
       size: 'large',
@@ -242,6 +252,7 @@ describe('modalManager reducer', () => {
           key: 'COMPONENT_2',
         },
       },
+      isFocused: true,
       isOpen: true,
       isMaximized: true,
       size: 'large',
@@ -253,6 +264,68 @@ describe('modalManager reducer', () => {
     });
 
     const expected = Object.assign({}, initialState, { isMaximized: false });
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return state after gain focus action', () => {
+    const initialState = {
+      componentKeys: ['COMPONENT_1', 'COMPONENT_2'],
+      components: {
+        COMPONENT_1: {
+          name: 'Component1',
+          props: {},
+          key: 'COMPONENT_1',
+        },
+        COMPONENT_2: {
+          name: 'Component2',
+          props: {},
+          key: 'COMPONENT_2',
+        },
+      },
+      isFocused: true,
+      isOpen: true,
+      isMaximized: true,
+      size: 'large',
+    };
+
+    const result = modalManager(initialState, {
+      type: GAIN_FOCUS,
+      data: {},
+    });
+
+    const expected = Object.assign({}, initialState, { isFocused: true });
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return state after lose focus action', () => {
+    const initialState = {
+      componentKeys: ['COMPONENT_1', 'COMPONENT_2'],
+      components: {
+        COMPONENT_1: {
+          name: 'Component1',
+          props: {},
+          key: 'COMPONENT_1',
+        },
+        COMPONENT_2: {
+          name: 'Component2',
+          props: {},
+          key: 'COMPONENT_2',
+        },
+      },
+      isFocused: true,
+      isOpen: true,
+      isMaximized: true,
+      size: 'large',
+    };
+
+    const result = modalManager(initialState, {
+      type: LOSE_FOCUS,
+      data: {},
+    });
+
+    const expected = Object.assign({}, initialState, { isFocused: false });
 
     expect(result).toEqual(expected);
   });
