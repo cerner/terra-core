@@ -1,121 +1,124 @@
-@import '~terra-mixins';
 @import './variables';
-@import './mixins';
 
-.terra-SlidePanel {
-  overflow: hidden;
-  position: relative;
-}
-
-.terra-SlidePanel-main,
-.terra-SlidePanel-panel {
-  background-color: #fff;
-  box-sizing: border-box;
-
-  height: 100%;
-
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: auto;
-
-  transition: transform 0.15s ease;
-
-  width: 100%;
-}
-
-.terra-SlidePanel-main {
-  position: relative;
-  z-index: 0;
-}
-
-.terra-SlidePanel-panel {
-  position: absolute;
-  z-index: 500; // z-index used to set master above detail in visual stacking context.
-}
-
-// Prevent z-index issues with nesting
-.terra-SlidePanel .terra-SlidePanel > .terra-SlidePanel-panel {
-  z-index: 499;
-}
-
-[data-slide-panel-panel-position='start'] {
-  > .terra-SlidePanel-main {
-    @include terra-float-end();
+/* stylelint-disable selector-class-pattern */
+:local {
+  .slide-panel {
+    overflow: hidden;
+    position: relative;
   }
 
-  > .terra-SlidePanel-panel {
-    @include terra-translate3d(-100%, 0, 0);
-  }
-}
+  .main,
+  .panel {
+    background-color: #fff;
+    box-sizing: border-box;
 
-[data-slide-panel-panel-position='end'] {
-  > .terra-SlidePanel-main {
-    @include terra-float-start();
-  }
+    height: 100%;
 
-  > .terra-SlidePanel-panel {
-    @include terra-translate3d(100%, 0, 0);
-    @include terra-position-end(0);
-  }
-}
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: auto;
 
-// Move the slider back to its origin when its on-screen.
-.terra-SlidePanel--is-open > .terra-SlidePanel-panel {
-  @include terra-translate3d(0, 0, 0);
-}
+    transition: transform 0.15s ease;
 
-@media all and (min-width: 768px) {
-  // Set explicit width on larger screens
-  [data-slide-panel-panel-size='small'] > .terra-SlidePanel-panel {
-    width: $terra-slide-panel-panel-width-small;
+    width: 100%;
   }
 
-  [data-slide-panel-panel-size='large'] > .terra-SlidePanel-panel {
-    width: $terra-slide-panel-panel-width-large;
+  .main {
+    position: relative;
+    z-index: 0;
   }
-}
 
-// Overlay
-.terra-SlidePanel--is-open[data-slide-panel-panel-behavior='overlay'] {
-  @media (min-width: 768px), print {
-    &[data-slide-panel-panel-position='start'] > .terra-SlidePanel-panel {
-      @include terra-slide-panel-shadow-end();
+  .panel {
+    position: absolute;
+    z-index: 500; // z-index used to set master above detail in visual stacking context.
+  }
+
+  // Prevent z-index issues with nesting
+  /* stylelint-disable selector-max-compound-selectors */
+  .slide-panel .slide-panel > .panel {
+    z-index: 499;
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+
+  [data-slide-panel-panel-position='start'] {
+    > .main {
+      float: right;
     }
 
-    &[data-slide-panel-panel-position='end'] > .terra-SlidePanel-panel {
-      @include terra-slide-panel-shadow-start();
+    > .panel {
+      transform: translate3d(-100%, 0, 0);
     }
   }
-}
 
-// Squish
-.terra-SlidePanel--is-open[data-slide-panel-panel-behavior='squish'] {
-  @media (min-width: 768px), print {
-    &[data-slide-panel-panel-size='small'] > .terra-SlidePanel-main {
-      width: calc(100% - #{$terra-slide-panel-panel-width-small});
+  [data-slide-panel-panel-position='end'] {
+    > .main {
+      float: left;
     }
 
-    &[data-slide-panel-panel-size='large'] > .terra-SlidePanel-main {
-      width: calc(100% - #{$terra-slide-panel-panel-width-large});
-    }
-
-    &[data-slide-panel-panel-position='start'] > .terra-SlidePanel-panel {
-      @include terra-border-end(1px solid $terra-slide-panel-panel-border-color);
-    }
-
-    &[data-slide-panel-panel-position='end'] > .terra-SlidePanel-panel {
-      @include terra-border-start(1px solid $terra-slide-panel-panel-border-color);
+    > .panel {
+      right: 0;
+      transform: translate3d(100%, 0, 0);
     }
   }
-}
 
-// Fullscreen
-.terra-SlidePanel--is-fullscreen[data-slide-panel-panel-size] > .terra-SlidePanel-panel {
-  width: 100%;
-}
+  // Move the slider back to its origin when its on-screen.
+  .is-open > .panel {
+    transform: translate3d(0, 0, 0);
+  }
 
-// Fill
-.terra-SlidePanel--fill {
-  height: 100%;
-  width: 100%;
+  @media all and (min-width: 768px) {
+    // Set explicit width on larger screens
+    [data-slide-panel-panel-size='small'] > .panel {
+      width: var(--terra-slide-panel-panel-width-small);
+    }
+
+    [data-slide-panel-panel-size='large'] > .panel {
+      width: var(--terra-slide-panel-panel-width-large);
+    }
+  }
+
+  // Overlay
+  .is-open[data-slide-panel-panel-behavior='overlay'] {
+    @media (min-width: 768px), print {
+      &[data-slide-panel-panel-position='start'] > .panel {
+        box-shadow: 1px 0 5px var(--terra-slide-panel-shadow-color);
+      }
+
+      &[data-slide-panel-panel-position='end'] > .panel {
+        box-shadow: -1px 0 5px var(--terra-slide-panel-shadow-color);
+      }
+    }
+  }
+
+  // Squish
+  .is-open[data-slide-panel-panel-behavior='squish'] {
+    @media (min-width: 768px), print {
+      &[data-slide-panel-panel-size='small'] > .main {
+        width: calc(100% - #{var(--terra-slide-panel-panel-width-small)});
+      }
+
+      &[data-slide-panel-panel-size='large'] > .main {
+        width: calc(100% - #{var(--terra-slide-panel-panel-width-large)});
+      }
+
+      &[data-slide-panel-panel-position='start'] > .panel {
+        border-right: 1px solid var(--terra-slide-panel-panel-border-color);
+      }
+
+      &[data-slide-panel-panel-position='end'] > .panel {
+        border-left: 1px solid var(--terra-slide-panel-panel-border-color);
+      }
+    }
+  }
+
+  // Fullscreen
+  .is-fullscreen[data-slide-panel-panel-size] > .panel {
+    width: 100%;
+  }
+
+  // Fill
+  .fill {
+    height: 100%;
+    width: 100%;
+  }
 }
