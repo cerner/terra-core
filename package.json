@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "terra-core",
   "engines": {
-    "node": "6.9.4"
+    "node": "6.11.1"
   },
   "repository": {
     "type": "git",
