@@ -103,8 +103,8 @@ module.exports = {
   'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
 
-    browser.click('.disclose');
-    browser.click('.terra-DatePicker-button');
+    browser.click('[class*="disclose"]');
+    browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
 
@@ -116,8 +116,8 @@ module.exports = {
   'Displays the DatePicker inside the modal manager and dismisses when hitting Enter': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
 
-    browser.click('.disclose');
-    browser.click('.terra-DatePicker-button');
+    browser.click('[class*="disclose"]');
+    browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
 
@@ -129,8 +129,8 @@ module.exports = {
   'Displays the DatePicker inside the modal manager and dismisses when hitting Escape': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
 
-    browser.click('.disclose');
-    browser.click('.terra-DatePicker-button');
+    browser.click('[class*="disclose"]');
+    browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
 
@@ -148,8 +148,8 @@ module.exports = {
   'Displays the DatePicker inside the modal manager and dismisses when hitting Tab': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
 
-    browser.click('.disclose');
-    browser.click('.terra-DatePicker-button');
+    browser.click('[class*="disclose"]');
+    browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
 
