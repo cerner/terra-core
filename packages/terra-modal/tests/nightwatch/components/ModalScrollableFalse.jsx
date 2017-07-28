@@ -23,7 +23,7 @@ class ModalScrollableFalse extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="modal-scroll-false">
         <Modal
           ariaLabel="Terra Modal"
           isOpen={this.state.isOpen}

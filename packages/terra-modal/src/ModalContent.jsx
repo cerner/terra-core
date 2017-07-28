@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import 'terra-base/lib/baseStyles';
 import ModalOverlay from './ModalOverlay';
+import styles from './Modal.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   ariaLabel: PropTypes.string.isRequired,
@@ -12,6 +15,7 @@ const propTypes = {
   classNameOverlay: PropTypes.string,
   closeOnOutsideClick: PropTypes.bool,
   onRequestClose: PropTypes.func.isRequired,
+  isFocused: PropTypes.bool,
   isFullscreen: PropTypes.bool,
   isScrollable: PropTypes.bool,
   role: PropTypes.string,
@@ -23,6 +27,7 @@ const defaultProps = {
   classNameModal: null,
   classNameOverlay: null,
   closeOnOutsideClick: true,
+  isFocused: true,
   isFullscreen: false,
   isScrollable: false,
   role: 'dialog',
@@ -39,13 +44,15 @@ class ModalContent extends React.Component {
         closeOnOutsideClick,
         onRequestClose,
         role,
+        isFocused,
         isFullscreen,
         isScrollable,
         ...customProps } = this.props;
 
-    const modalClassName = classNames(['terra-Modal',
-      { 'terra-Modal--fullscreen': isFullscreen },
-      { 'terra-Modal--scrollable': isScrollable },
+    const modalClassName = cx([
+      'modal',
+      { 'fixed-size': !isFullscreen },
+      { scrollable: isScrollable },
       classNameModal,
     ]);
 
@@ -53,7 +60,9 @@ class ModalContent extends React.Component {
     delete customProps.closePortal;
 
     return (
-      <FocusTrap>
+      <FocusTrap
+        paused={!isFocused}
+      >
         <ModalOverlay
           onClick={closeOnOutsideClick ? onRequestClose : null}
           className={classNameOverlay}

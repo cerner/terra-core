@@ -1,0 +1,60 @@
+{
+  "name": "terra-alert",
+  "main": "lib/Alert.js",
+  "private": true,
+  "version": "0.0.0",
+  "description": "The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention. The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-alert",
+    "Alert",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "react-intl": "^2.3.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "terra-responsive-element": "^1.0.0",
+    "terra-base": "^1.0.0",
+    "terra-button": "^1.0.0",
+    "terra-icon": "^1.0.0",
+    "terra-mixins": "^1.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-responsive-element": "^1.0.0",
+    "terra-base": "^1.0.0",
+    "terra-button": "^1.0.0",
+    "terra-icon": "^1.0.0",
+    "terra-mixins": "^1.0.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "test": "npm run test:spec && npm run test:nightwatch-default",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-alert node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-alert node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-alert node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-alert node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
+  }
+}
