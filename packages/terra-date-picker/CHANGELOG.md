@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added requestFocus and releaseFocus props to support requesting and releasing focus.
+
 ### Changed
 * Converted component to use CSS modules
 

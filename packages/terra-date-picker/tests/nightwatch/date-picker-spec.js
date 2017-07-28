@@ -99,4 +99,62 @@ module.exports = {
     browser.clearValue('input[name="terra-date-date-input-onchange"]');
     browser.expect.element('h3').text.to.not.contain('2017-07-12');
   },
+
+  'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+
+    browser.click('.disclose');
+    browser.click('.terra-DatePicker-button');
+
+    browser.expect.element('.react-datepicker').to.be.present;
+
+    browser.click('.react-datepicker__today-button');
+
+    browser.expect.element('.react-datepicker').to.not.be.present;
+  },
+
+  'Displays the DatePicker inside the modal manager and dismisses when hitting Enter': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+
+    browser.click('.disclose');
+    browser.click('.terra-DatePicker-button');
+
+    browser.expect.element('.react-datepicker').to.be.present;
+
+    browser.keys(browser.Keys.ENTER);
+
+    browser.expect.element('.react-datepicker').to.not.be.present;
+  },
+
+  'Displays the DatePicker inside the modal manager and dismisses when hitting Escape': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+
+    browser.click('.disclose');
+    browser.click('.terra-DatePicker-button');
+
+    browser.expect.element('.react-datepicker').to.be.present;
+
+    browser.keys(browser.Keys.ESCAPE);
+
+    browser.expect.element('.react-datepicker').to.not.be.present;
+
+    browser.assert.elementPresent('div[role="document"]');
+
+    browser.keys(browser.Keys.ESCAPE);
+
+    browser.assert.elementNotPresent('div[role="document"]');
+  },
+
+  'Displays the DatePicker inside the modal manager and dismisses when hitting Tab': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+
+    browser.click('.disclose');
+    browser.click('.terra-DatePicker-button');
+
+    browser.expect.element('.react-datepicker').to.be.present;
+
+    browser.keys(browser.Keys.TAB);
+
+    browser.expect.element('.react-datepicker').to.not.be.present;
+  },
 };

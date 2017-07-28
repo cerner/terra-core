@@ -4,7 +4,10 @@ Changelog
 Unreleased
 ----------
 ### Changed
-Removed red ring for required fields.
+* Update Field documentation
+* Change NumberField defaultValue propType to accept string or numeric values
+* Removed red ring for required fields.
+
 
 1.1.0 - (July 18, 2017)
 ------------------
