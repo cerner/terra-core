@@ -28,8 +28,14 @@ it('should render a NumberField when all the possible props are passed into it',
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render as uncontrolled when just a default value is passed into the NumberField', () => {
+it('should render as uncontrolled when just a numeric default value is passed into the NumberField', () => {
   const input = <NumberField defaultValue={2} />;
+  const wrapper = shallow(input);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render as uncontrolled when just a string default value is passed into the NumberField', () => {
+  const input = <NumberField defaultValue={'2'} />;
   const wrapper = shallow(input);
   expect(wrapper).toMatchSnapshot();
 });

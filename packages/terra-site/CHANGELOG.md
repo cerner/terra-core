@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Display input and submission values for DatePicker, Form, SearchField and TimeInput examples.
 
+### Added
+* Added new example to display date picker and popup inside modal.
+
 1.2.0 - (July 26, 2017)
 ------------------
 ### Changed

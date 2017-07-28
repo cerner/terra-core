@@ -1,37 +1,41 @@
-.terra-ContentContainer {
-  display: flex;
-  flex-direction: column;
+/* stylelint-disable selector-class-pattern, selector-max-compound-selectors */
+:local {
+  .content-container {
+    display: flex;
+    flex-direction: column;
 
-  > .terra-ContentContainer-header {
-    flex: 0 0 auto;
-  }
+    > .header {
+      flex: 0 0 auto;
+    }
 
-  > .terra-ContentContainer-main {
-    flex: 1 1 auto;
+    > .main {
+      flex: 1 1 auto;
 
-    > .terra-ContentContainer-main-normalizer {
-      -webkit-overflow-scrolling: touch;
-      -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
+      > .normalizer {
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar; // Ensures scrollbars do not affect width in IE10
+      }
     }
   }
-}
 
-.terra-ContentContainer--fill {
-  height: 100%;
-  width: 100%;
-
-  > .terra-ContentContainer-main {
+  .fill {
     height: 100%;
-    min-height: 50px;
-    overflow: hidden;
-    position: relative;
     width: 100%;
 
-    > .terra-ContentContainer-main-normalizer {
+    > .main {
       height: 100%;
-      overflow: auto;
-      position: absolute;
+      min-height: 50px;
+      overflow: hidden;
+      position: relative;
       width: 100%;
+
+      > .normalizer {
+        height: 100%;
+        overflow: auto;
+        position: absolute;
+        width: 100%;
+      }
     }
   }
 }
+/* stylelint-enable */

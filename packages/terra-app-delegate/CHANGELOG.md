@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added requestFocus and releaseFocus attributes to support trapping and releasing focus.
 
 1.1.0 - (July 18, 2017)
 ------------------

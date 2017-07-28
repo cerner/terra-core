@@ -23,6 +23,7 @@ import PopupMiddleRight from './PopupMiddleRight';
 import PopupTopCenter from './PopupTopCenter';
 import PopupTopLeft from './PopupTopLeft';
 import PopupTopRight from './PopupTopRight';
+import PopupInsideModal from './PopupInsideModal';
 
 const PopupExamples = () => (
   <div>
@@ -76,6 +77,8 @@ const PopupExamples = () => (
     <PopupNoHeader />
     <h2 id="class-name-popup" style={{ paddingTop: '20px' }}>Popup Adding Class Styles</h2>
     <PopupClassName />
+    <h2 id="modal-popup" style={{ paddingTop: '20px' }}>Popup Inside Modal</h2>
+    <PopupInsideModal />
   </div>
 );
 
