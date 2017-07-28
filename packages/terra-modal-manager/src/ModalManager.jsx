@@ -10,6 +10,8 @@ import getBreakpoints from 'terra-responsive-element/lib/breakpoints';
 import 'terra-base/lib/baseStyles';
 import styles from './ModalManager.scss';
 
+const cx = classNames.bind(styles);
+
 const propTypes = {
   /**
    * The AppDelegate instance provided by the containing component. If present, its properties will propagate to the children components.
@@ -191,7 +193,7 @@ class ModalManager extends React.Component {
   render() {
     const { closeModal, size, isFocused, isOpen, isMaximized } = this.props;
     const isFullscreen = isMaximized || this.forceFullscreenModal;
-    const modalClasses = classNames([
+    const modalClasses = cx([
       { [`${styles[size]}`]: !isFullscreen },
     ]);
 
