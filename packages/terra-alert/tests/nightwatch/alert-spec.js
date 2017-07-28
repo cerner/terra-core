@@ -24,9 +24,7 @@ module.exports = {
   'Default alert test - Displays a default alert with the provided text': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/default`)
-      .assert.elementPresent(
-        '#defaultAlert',
-        'Check the default Alert exists')
+      .waitForElementVisible('#defaultAlert', 1000)
       .assert.attributeContains(
         '#defaultAlert',
         'class',
