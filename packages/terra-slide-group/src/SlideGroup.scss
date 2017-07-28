@@ -1,5 +1,8 @@
-.terra-SlideGroup {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .slide-group {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
 }
