@@ -6,19 +6,22 @@ import Input from './Input';
 
 const propTypes = {
   /**
-   * The defaultValue of the input element. Use this to create an uncontrolled input
+   * The defaultValue of the input element. Use this to create an uncontrolled input.
    */
-  defaultValue: PropTypes.number,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   /**
-   * Error message for when the input is invalid
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
   /**
-   *  Help element to display with the input
+   *  Help element to display with the input.
    */
   help: PropTypes.node,
   /**
-   * Additional attributes to attach to the number input
+   * Additional attributes to attach to the number input.
    */
   inputAttrs: PropTypes.object,
   /**
@@ -26,27 +29,27 @@ const propTypes = {
    */
   inputId: PropTypes.string,
   /**
-   * Whether the field is inline
+   * Whether the field is inline.
    */
   isInline: PropTypes.bool,
   /**
-   * Label of the input
+   * Label of the input.
    */
   label: PropTypes.node,
   /**
-   * Attributes to attach to the label
+   * Attributes to attach to the label.
    */
   labelAttrs: PropTypes.object,
   /**
-   * Maximum value allowed for the input
+   * Maximum value allowed for the input.
    */
   max: PropTypes.number,
   /**
-   * Minimum value allowed for the input
+   * Minimum value allowed for the input.
    */
   min: PropTypes.number,
   /**
-   * Name of the input attribute
+   * Name of the input attribute.
    */
   name: PropTypes.string,
   /**
@@ -54,11 +57,11 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Whether the input is required
+   * Whether the input is required.
    */
   required: PropTypes.bool,
   /**
-   * Incremental steps for increasing and descreasing the value
+   * Incremental steps for increasing and descreasing the value.
    */
   step: PropTypes.number,
   /**

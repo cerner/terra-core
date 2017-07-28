@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added gainFocus and loseFocus actions to support trapping and releasing focus in the modal manager.
+
 ### Changed
 * Converted component to use CSS modules
 

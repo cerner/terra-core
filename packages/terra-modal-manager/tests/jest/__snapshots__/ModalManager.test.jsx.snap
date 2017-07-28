@@ -14,7 +14,64 @@ exports[`ModalManger - app - should render the ModalManager with given AppDelega
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
+    isOpen={false}
+    isScrollable={false}
+    onRequestClose={[Function]}
+    role="document">
+    <SlideGroup
+      isAnimated={true}
+      items={Array []} />
+  </Modal>
+</div>
+`;
+
+exports[`ModalManger - focus lost - should render the ModalManager with focus lost 1`] = `
+<div
+  className="terra-ModalManager">
+  <TestContainer
+    app={
+      AppDelegateInstance {
+        "disclose": [Function],
+      }
+    } />
+  <Modal
+    ariaLabel="Modal"
+    classNameModal="terra-ModalManager-modal"
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={false}
+    isFocused={false}
+    isFullscreen={true}
+    isOpen={false}
+    isScrollable={false}
+    onRequestClose={[Function]}
+    role="document">
+    <SlideGroup
+      isAnimated={true}
+      items={Array []} />
+  </Modal>
+</div>
+`;
+
+exports[`ModalManger - isFocused - should render the ModalManager with focus trapped 1`] = `
+<div
+  className="terra-ModalManager">
+  <TestContainer
+    app={
+      AppDelegateInstance {
+        "disclose": [Function],
+      }
+    } />
+  <Modal
+    ariaLabel="Modal"
+    classNameModal="terra-ModalManager-modal"
+    classNameOverlay={null}
+    closeOnEsc={true}
+    closeOnOutsideClick={false}
+    isFocused={true}
+    isFullscreen={true}
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
@@ -41,6 +98,7 @@ exports[`ModalManger - isMaximized - should render the ModalManager as maximized
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={true}
     isOpen={false}
     isScrollable={false}
@@ -68,6 +126,7 @@ exports[`ModalManger - isOpen - should render the ModalManager as open 1`] = `
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={true}
     isScrollable={false}
@@ -95,6 +154,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={true}
     isScrollable={false}
@@ -111,6 +171,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "disclose": [Function],
                     "dismiss": [Function],
                     "maximize": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 1" />,
@@ -122,6 +183,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "dismiss": [Function],
                     "goBack": [Function],
                     "maximize": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 2" />,
@@ -146,6 +208,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={true}
     isOpen={true}
     isScrollable={false}
@@ -178,6 +241,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={true}
     isOpen={true}
     isScrollable={false}
@@ -194,6 +258,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "disclose": [Function],
                     "dismiss": [Function],
                     "minimize": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 1" />,
@@ -205,6 +270,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "dismiss": [Function],
                     "goBack": [Function],
                     "minimize": [Function],
+                    "requestFocus": [Function],
                   }
             }
             display="NUMBER 2" />,
@@ -229,6 +295,7 @@ exports[`ModalManger - sizes - should render the ModalManager with huge size 1`]
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={false}
     isScrollable={false}
@@ -256,6 +323,7 @@ exports[`ModalManger - sizes - should render the ModalManager with large size 1`
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={false}
     isScrollable={false}
@@ -283,6 +351,7 @@ exports[`ModalManger - sizes - should render the ModalManager with medium size 1
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={false}
     isScrollable={false}
@@ -310,6 +379,7 @@ exports[`ModalManger - sizes - should render the ModalManager with small size 1`
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={false}
     isScrollable={false}
@@ -337,6 +407,7 @@ exports[`ModalManger - sizes - should render the ModalManager with tiny size 1`]
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={false}
     isScrollable={false}
@@ -364,6 +435,7 @@ exports[`ModalManger should render the ModalManager with defaults 1`] = `
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
+    isFocused={true}
     isFullscreen={false}
     isOpen={false}
     isScrollable={false}
