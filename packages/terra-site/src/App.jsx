@@ -51,6 +51,7 @@ class App extends React.Component {
               </div>
               <List className="site-nav">
                 <List.Item content={<Link to="/">Home</Link>} />
+                <List.Item content={<Link to="/site/alert">Alert</Link>} />
                 <List.Item content={<Link to="/site/app-delegate">App Delegate</Link>} />
                 <List.Item content={<Link to="/site/arrange">Arrange</Link>} />
                 <List.Item content={<Link to="/site/base">Base</Link>} />
