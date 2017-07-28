@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added new example to display date picker and popup inside modal.
+
+1.2.0 - (July 26, 2017)
+------------------
 ### Changed
 * Updated Search Field example to demonstrate onInvalidSearch.
 

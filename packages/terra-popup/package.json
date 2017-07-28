@@ -1,7 +1,7 @@
 {
   "name": "terra-popup",
   "main": "lib/Popup.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The Terra Popup is higher order component, that launches tether positioned content, with the ability to display a dynamic arrow.",
   "repository": {
     "type": "git",
@@ -21,24 +21,28 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "terra-app-delegate": "^1.1.0",
+    "terra-modal-manager": "^1.2.0",
     "terra-props-table": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^1.1.0",
-    "terra-icon": "^1.1.0"
+    "terra-icon": "^1.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
     "focus-trap-react": "^3.0.2",
+    "prop-types": "^15.5.8",
     "react-onclickoutside": "^5.11.1",
     "react-portal": "^3.0.0",
-    "tether": "^1.4.0",
     "terra-base": "^1.1.0",
     "terra-content-container": "^1.1.0",
-    "terra-icon": "^1.1.0"
+    "terra-icon": "^1.2.0",
+    "tether": "^1.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
