@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileImage from '../../src/ProfileImage';
+import ProfileImage from '../../lib/ProfileImage';
 
 /* Avatar image is displayed while the profile image is loading */
 it('should render a hidden profile image and a visible avatar image', () => {

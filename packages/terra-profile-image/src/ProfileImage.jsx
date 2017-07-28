@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
 import avatarImage from './avatar.svg';
-import './ProfileImage.scss';
+import styles from './ProfileImage.scss';
 
 /* eslint react/no-unused-prop-types: [0] */
 const propTypes = {
@@ -79,7 +79,7 @@ class ProfileImage extends React.Component {
     if (this.state.isLoading) {
       return (
         <div>
-          <div className="terra-ProfileImage--hidden">{this.createProfileImage(this.props)}</div>
+          <div className={styles.hidden}>{this.createProfileImage(this.props)}</div>
           <div>{ProfileImage.createAvatarImage(this.props)}</div>
         </div>
       );
