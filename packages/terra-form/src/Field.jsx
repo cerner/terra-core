@@ -9,15 +9,15 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Children the Field contains
+   * Children the Field contains.
    */
   children: PropTypes.node,
   /**
-   * Error message for when the input is invalid
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
   /**
-   * Help element to display with the input
+   * Help element to display with the input.
    */
   help: PropTypes.node,
   /**
@@ -25,19 +25,19 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Determines whether the field is an inline field
+   * Determines whether the field is an inline field.
    */
   isInline: PropTypes.bool,
   /**
-   * Label of the input
+   * Label of the input.
    */
   label: PropTypes.node,
   /**
-   * Attributes to attach to the label
+   * Attributes to attach to the label.
    */
   labelAttrs: PropTypes.object,
   /**
-   * Determines whether the field is required
+   * Determines whether the field is required.
    */
   required: PropTypes.bool,
 };

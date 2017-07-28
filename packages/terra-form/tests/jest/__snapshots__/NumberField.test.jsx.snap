@@ -90,7 +90,7 @@ exports[`test should render as controlled when just a default value is passed in
 </NumberField>
 `;
 
-exports[`test should render as uncontrolled when just a default value is passed into the NumberField 1`] = `
+exports[`test should render as uncontrolled when just a numeric default value is passed into the NumberField 1`] = `
 <Field
   error={null}
   help={null}
@@ -100,6 +100,25 @@ exports[`test should render as uncontrolled when just a default value is passed 
   required={false}>
   <Input
     defaultValue={2}
+    max={null}
+    min={null}
+    name={null}
+    required={false}
+    step={null}
+    type="number" />
+</Field>
+`;
+
+exports[`test should render as uncontrolled when just a string default value is passed into the NumberField 1`] = `
+<Field
+  error={null}
+  help={null}
+  isInline={false}
+  label={null}
+  labelAttrs={Object {}}
+  required={false}>
+  <Input
+    defaultValue="2"
     max={null}
     min={null}
     name={null}

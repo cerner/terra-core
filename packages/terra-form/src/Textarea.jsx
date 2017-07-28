@@ -13,7 +13,7 @@ const propTypes = {
    */
   defaultValue: PropTypes.string,
   /**
-   * Name of the input
+   * Name of the input.
    */
   name: PropTypes.string,
   /**
@@ -21,7 +21,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Whether the input is required or not
+   * Whether the input is required or not.
    */
   required: PropTypes.bool,
   /**

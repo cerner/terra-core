@@ -12,8 +12,10 @@ const pushModal = () => {};
 const popModal = () => {};
 const maximizeModal = () => {};
 const minimizeModal = () => {};
+const gainFocus = () => {};
+const loseFocus = () => {};
 
-const requiredProps = { openModal, closeModal, pushModal, popModal, maximizeModal, minimizeModal };
+const requiredProps = { openModal, closeModal, pushModal, popModal, maximizeModal, minimizeModal, gainFocus, loseFocus };
 
 describe('ModalManger', () => {
   it('should render the ModalManager with defaults', () => {
@@ -122,6 +124,40 @@ describe('ModalManger', () => {
       const modalManager = (
         <ModalManager
           isMaximized
+          {...requiredProps}
+        >
+          <TestContainer />
+        </ModalManager>
+      );
+
+      const result = shallow(modalManager);
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('- isFocused -', () => {
+    it('should render the ModalManager with focus trapped', () => {
+      const modalManager = (
+        <ModalManager
+          isMaximized
+          isFocused
+          {...requiredProps}
+        >
+          <TestContainer />
+        </ModalManager>
+      );
+
+      const result = shallow(modalManager);
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  describe('- focus lost -', () => {
+    it('should render the ModalManager with focus lost', () => {
+      const modalManager = (
+        <ModalManager
+          isMaximized
+          isFocused={false}
           {...requiredProps}
         >
           <TestContainer />

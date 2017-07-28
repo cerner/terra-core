@@ -34,6 +34,14 @@ const propTypes = {
    */
   placeholder: PropTypes.string,
   /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
+  /**
    * The selected or entered date value to display in the date input.
    */
   value: PropTypes.string,
@@ -46,11 +54,46 @@ const defaultProps = {
   onClick: undefined,
   onKeyDown: undefined,
   placeholder: undefined,
+  releaseFocus: undefined,
+  requestFocus: undefined,
   value: undefined,
 };
 
 // eslint-disable-next-line react/prefer-stateless-function
 class DatePickerInput extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleOnButtonClick = this.handleOnButtonClick.bind(this);
+    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+  }
+
+  handleOnButtonClick() {
+    // The picker is about to display so request focus from the containing component (e.g. modal) if it has the focus trapped.
+    if (this.props.requestFocus) {
+      this.props.requestFocus();
+    }
+
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
+  }
+
+  handleOnKeyDown(event) {
+    // The picker will be dismissed if one of these keys is pressed and the focus will be released so release the focus to the containing component.
+    if (this.props.releaseFocus && (event.key === 'Enter' || event.key === 'Escape' || event.key === 'Tab')) {
+      this.props.releaseFocus();
+
+      if (event.key === 'Tab') {
+        event.preventDefault();
+      }
+    }
+
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+  }
+
   render() {
     const {
       inputAttributes,
@@ -59,6 +102,8 @@ class DatePickerInput extends React.Component {
       onClick,
       onKeyDown,
       placeholder,
+      releaseFocus,
+      requestFocus,
       value,
       ...customProps
     } = this.props;
@@ -92,8 +137,8 @@ class DatePickerInput extends React.Component {
         />
         <Button
           className="terra-DatePicker-button"
-          onClick={onClick}
-          onKeyDown={onKeyDown}
+          onClick={this.handleOnButtonClick}
+          onKeyDown={this.handleOnKeyDown}
           icon={Icon}
           isCompact
           type="button"
