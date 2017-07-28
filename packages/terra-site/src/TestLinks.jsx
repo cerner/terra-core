@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 const TestLinks = () => (
   <div>
     <ul className="site-nav">
+      <li><Link to="/tests/alert-tests">Alert Tests</Link></li>
       <li><Link to="/tests/arrange-tests">Arrange Tests</Link></li>
       <li><Link to="/tests/badge-tests">Badge Tests</Link></li>
       <li><Link to="/tests/base-tests">Base Tests</Link></li>
