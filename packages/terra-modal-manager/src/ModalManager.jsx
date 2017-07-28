@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Modal from 'terra-modal';
-import 'terra-base/lib/baseStyles';
 
 import AppDelegate from 'terra-app-delegate';
 import SlideGroup from 'terra-slide-group';
 import getBreakpoints from 'terra-responsive-element/lib/breakpoints';
 
-import './ModalManager.scss';
+import 'terra-base/lib/baseStyles';
+import styles from './ModalManager.scss';
 
 const propTypes = {
   /**
@@ -172,19 +172,18 @@ class ModalManager extends React.Component {
 
   render() {
     const { closeModal, size, isOpen, isMaximized } = this.props;
-
-    const modalClassNames = classNames([
-      'terra-ModalManager-modal',
-      { [`terra-ModalManager-modal--${size}`]: !(isMaximized || this.forceFullscreenModal) },
+    const isFullscreen = isMaximized || this.forceFullscreenModal;
+    const modalClasses = classNames([
+      { [`${styles[size]}`]: !isFullscreen },
     ]);
 
     return (
-      <div className="terra-ModalManager">
+      <div className={styles.container}>
         {this.buildChildren()}
         <Modal
           isOpen={isOpen}
-          isFullscreen={isMaximized || this.forceFullscreenModal}
-          classNameModal={modalClassNames}
+          isFullscreen={isFullscreen}
+          classNameModal={modalClasses}
           onRequestClose={closeModal}
           closeOnEsc
           closeOnOutsideClick={false}
