@@ -4,7 +4,7 @@ exports[`test should mount with no items 1`] = `
   <List
     isDivided={false}>
     <ul
-      className="terra-List" />
+      className="list" />
   </List>
 </MultiSelectList>
 `;
@@ -15,7 +15,7 @@ exports[`test should mount with one item 1`] = `
   <List
     isDivided={false}>
     <ul
-      className="terra-List">
+      className="list">
       <ListItem
         className="stuff1"
         content={
@@ -29,7 +29,7 @@ exports[`test should mount with one item 1`] = `
         onKeyDown={[Function]}
         tabIndex="0">
         <li
-          className="terra-ListItem terra-ListItem-isSelectable stuff1"
+          className="list-item is-selectable stuff1"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0">

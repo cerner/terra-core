@@ -8,31 +8,31 @@ import './Field.scss';
 
 const propTypes = {
   /**
-   * Children the Field contains
+   * Children the Field contains.
    */
   children: PropTypes.node,
   /**
-   * Error message for when the input is invalid
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
   /**
-   * Help element to display with the input
+   * Help element to display with the input.
    */
   help: PropTypes.node,
   /**
-   * Determines whether the fieldset is an inline fieldset
+   * Determines whether the fieldset is an inline fieldset.
    */
   isInline: PropTypes.bool,
   /**
-   * Legend for the input group
+   * Legend for the input group.
    */
   legend: PropTypes.string,
   /**
-   * Attributes to attach to the legend
+   * Attributes to attach to the legend.
    */
   legendAttrs: PropTypes.object,
   /**
-   * Determines whether the fieldset is required
+   * Determines whether the fieldset is required.
    */
   required: PropTypes.bool,
 };

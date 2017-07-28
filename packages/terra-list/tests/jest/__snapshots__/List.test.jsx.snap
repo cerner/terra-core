@@ -2,7 +2,7 @@ exports[`test should mount with no items 1`] = `
 <List
   isDivided={false}>
   <ul
-    className="terra-List" />
+    className="list" />
 </List>
 `;
 
@@ -10,11 +10,11 @@ exports[`test should mount with one items 1`] = `
 <List
   isDivided={false}>
   <ul
-    className="terra-List">
+    className="list">
     <ListItem
       isSelected={false}>
       <li
-        className="terra-ListItem" />
+        className="list-item" />
     </ListItem>
   </ul>
 </List>
@@ -22,7 +22,7 @@ exports[`test should mount with one items 1`] = `
 
 exports[`test should render isDivided 1`] = `
 <ul
-  className="terra-List terra-List-divided">
+  className="list divided">
   <ListItem
     isSelected={false} />
   <ListItem
@@ -38,7 +38,7 @@ exports[`test should render isDivided 1`] = `
 
 exports[`test should render with items 1`] = `
 <ul
-  className="terra-List">
+  className="list">
   <ListItem
     isSelected={false} />
   <ListItem
