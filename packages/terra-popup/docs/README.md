@@ -119,3 +119,11 @@ As stateless react elements do not return a ref, but may be desired targets for 
         <Popup
           targetRef={this.getButtonNode}
 ```
+
+##### Rendering a popup inside a modal
+The [Modal][1] component by default will trap focus. In order to interact with a popup when rendered inside a modal, the popup must request focus from the modal. The [App Delegate][2] in the [Modal Manager][3] component provides support for requesting and releasing focus from the modal. Therefore, the [Modal Manager][3] component must be used when rendering a popup in a modal. When composing a popup in the [Modal Manager][3], pass in the requestFocus and releaseFocus functions in the [App Delegate][2] to the requestFocus and releaseFocus props in the popup. The [Modal Manager][3] will facilitate requesting and releasing focus when the popup opens and closes.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal/docs
+[2]: https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate/docs
+[3]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager/docs
+

@@ -7,7 +7,7 @@ import './Input.scss';
 
 const propTypes = {
   /**
-   * The defaultValue of the input field. Use this to create an uncontrolled input
+   * The defaultValue of the input field. Use this to create an uncontrolled input.
    */
   defaultValue: PropTypes.oneOfType([
     PropTypes.string,
@@ -18,15 +18,15 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Name of the input
+   * Name of the input.
    */
   name: PropTypes.string,
   /**
-   * Whether the input is required or not
+   * Whether the input is required or not.
    */
   required: PropTypes.bool,
   /**
-   * The value of the input field. Use this to create a controlled input
+   * The value of the input field. Use this to create a controlled input.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

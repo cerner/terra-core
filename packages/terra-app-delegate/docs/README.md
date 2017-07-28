@@ -32,6 +32,12 @@ const newAppDelegateInstance = AppDelegate.create({
   },
   minimize: (data) => {
     // Minimize the disclosure method
+  },
+  releaseFocus: (data) => {
+    // The calling component is releasing focus.
+  },
+  requestFocus: (data) => {
+    // The calling component is requesting to gain focus.
   }
 });
 
@@ -55,6 +61,8 @@ the suggested use of each function is as follows:
 |`goBack`|Optional|Used to dismiss the calling component. Should only be present if the ability to go back is available (for example, due to a navigation structure present in the disclosure mechanism).|
 |`maximize`|Optional|Used to maximize the calling component. Should only be present if the disclosure method is maximizable and not currently maximized.|
 |`minimize`|Optional|Used to minimize the calling component. Should only be present if the disclosure method is minimizable and not currently minimized.|
+|`releaseFocus`|Optional| The calling component, typically a popup or date picker component that can display over the container, is ready to release focus so that other components can gain focus.|
+|`requestFocus`|Optional| The calling component, typically a popup or date picker component that can display over the container, is requesting to gain focus.|
 
 
 ### Disclose Argument API
