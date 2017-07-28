@@ -29,7 +29,7 @@ exports[`ModalManger - app - should render the ModalManager with given AppDelega
 
 exports[`ModalManger - focus lost - should render the ModalManager with focus lost 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -38,7 +38,7 @@ exports[`ModalManger - focus lost - should render the ModalManager with focus lo
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -57,7 +57,7 @@ exports[`ModalManger - focus lost - should render the ModalManager with focus lo
 
 exports[`ModalManger - isFocused - should render the ModalManager with focus trapped 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -66,7 +66,7 @@ exports[`ModalManger - isFocused - should render the ModalManager with focus tra
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
