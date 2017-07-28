@@ -21,6 +21,7 @@ import ArrowHorizontalCenterPopup from './components/ArrowHorizontalCenterPopup'
 import ArrowVerticalLeftPopup from './components/ArrowVerticalLeftPopup';
 import ArrowVerticalCenterPopup from './components/ArrowVerticalCenterPopup';
 import ArrowVerticalRightPopup from './components/ArrowVerticalRightPopup';
+import PopupInsideModal from './components/PopupInsideModal';
 
 const routes = (
   <div>
@@ -43,6 +44,7 @@ const routes = (
     <Route path="/tests/popup-tests/vertical-left" component={ArrowVerticalLeftPopup} />
     <Route path="/tests/popup-tests/vertical-center" component={ArrowVerticalCenterPopup} />
     <Route path="/tests/popup-tests/vertical-right" component={ArrowVerticalRightPopup} />
+    <Route path="/tests/popup-tests/popup-inside-modal" component={PopupInsideModal} />
   </div>
 );
 

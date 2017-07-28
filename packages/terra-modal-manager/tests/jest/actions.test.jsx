@@ -5,6 +5,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
+  GAIN_FOCUS,
+  LOSE_FOCUS,
 } from '../../src/actionTypes';
 
 import {
@@ -14,6 +16,8 @@ import {
   pop,
   maximize,
   minimize,
+  gainFocus,
+  loseFocus,
 } from '../../src/actions';
 
 const actionData = { data: 'wooo' };
@@ -40,7 +44,7 @@ describe('modalManager actions', () => {
     });
   });
 
-  it('should create an action to PUSH content off the modal manager', () => {
+  it('should create an action to POP content off the modal manager', () => {
     expect(pop(actionData)).toEqual({
       type: POP,
       data: actionData,
@@ -57,6 +61,20 @@ describe('modalManager actions', () => {
   it('should create an action to MINIMIZE the modal manager', () => {
     expect(minimize(actionData)).toEqual({
       type: MINIMIZE,
+      data: actionData,
+    });
+  });
+
+  it('should create an action to GAIN FOCUS in the modal manager', () => {
+    expect(gainFocus(actionData)).toEqual({
+      type: GAIN_FOCUS,
+      data: actionData,
+    });
+  });
+
+  it('should create an action to LOSE FOCUS from the modal manager', () => {
+    expect(loseFocus(actionData)).toEqual({
+      type: LOSE_FOCUS,
       data: actionData,
     });
   });
