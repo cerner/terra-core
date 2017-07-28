@@ -7,12 +7,12 @@ import messages from '../../translations/en-US.json';
 const locale = 'en-US';
 
 it('should render a default date input', () => {
-  const dateInput = shallow(<IntlProvider locale={locale} messages={messages}><DateInput /></IntlProvider>);
+  const dateInput = render(<IntlProvider locale={locale} messages={messages}><DateInput /></IntlProvider>);
   expect(dateInput).toMatchSnapshot();
 });
 
 it('should render a default date input with all props', () => {
-  const dateInput = shallow(
+  const dateInput = render(
     <IntlProvider locale={locale} messages={messages}>
       <DateInput
         inputAttributes={{ id: 'terra-date-input' }}

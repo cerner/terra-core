@@ -1,15 +1,67 @@
-exports[`test should render a date picker with disabled dates 1`] = `<datePicker />`;
+exports[`test should render a date picker with disabled dates 1`] = `
+<DatePicker
+  excludeDates={
+    Array [
+      "2017-04-01",
+    ]
+  }
+  name="date-input"
+  utcOffset={0} />
+`;
 
-exports[`test should render a date picker with filtered dates 1`] = `<datePicker />`;
+exports[`test should render a date picker with filtered dates 1`] = `
+<DatePicker
+  filterDate={[Function]}
+  name="date-input"
+  utcOffset={0} />
+`;
 
-exports[`test should render a date picker with included dates 1`] = `<datePicker />`;
+exports[`test should render a date picker with included dates 1`] = `
+<DatePicker
+  includeDates={
+    Array [
+      "2017-04-01",
+    ]
+  }
+  name="date-input"
+  utcOffset={0} />
+`;
 
-exports[`test should render a date picker with min and max dates 1`] = `<datePicker />`;
+exports[`test should render a date picker with min and max dates 1`] = `
+<DatePicker
+  maxDate="2017-04-10"
+  minDate="2017-04-01"
+  name="date-input"
+  utcOffset={0} />
+`;
 
-exports[`test should render a date picker with releaseFocus 1`] = `<datePicker />`;
+exports[`test should render a date picker with releaseFocus 1`] = `
+<DatePicker
+  name="date-input"
+  releaseFocus={[Function]}
+  utcOffset={0} />
+`;
 
-exports[`test should render a date picker with requestFocus 1`] = `<datePicker />`;
+exports[`test should render a date picker with requestFocus 1`] = `
+<DatePicker
+  name="date-input"
+  requestFocus={[Function]}
+  utcOffset={0} />
+`;
 
-exports[`test should render a default date input and date picker 1`] = `<datePicker />`;
+exports[`test should render a default date input and date picker 1`] = `
+<DatePicker
+  name="date-input"
+  utcOffset={0} />
+`;
 
-exports[`test should render a default date input with custom input attributes 1`] = `<datePicker />`;
+exports[`test should render a default date input with custom input attributes 1`] = `
+<DatePicker
+  inputAttributes={
+    Object {
+      "id": "terra-date-input",
+    }
+  }
+  name="date-input"
+  utcOffset={0} />
+`;
