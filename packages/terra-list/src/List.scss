@@ -1,16 +1,62 @@
-@import '~terra-mixins';
 @import './variables';
 
-.terra-List {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+// List Component
+// ========================================================
+/* stylelint-disable selector-class-pattern, selector-max-compound-selectors */
+:local {
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.terra-List-divided > .terra-ListItem {
-  border-top: solid 1px $terra-list-divider-color;
+  .divided > .list-item {
+    border-top: var(--terra-list-divider-border);
 
-  &:last-of-type {
-    border-bottom: solid 1px $terra-list-divider-color;
+    &:last-of-type {
+      border-bottom: var(--terra-list-divider-border);
+    }
+  }
+
+  // List Item Component
+  // ========================================================
+
+  .chevron {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    > svg {
+      color: var(--terra-list-chevron-color);
+    }
+  }
+
+  .selected {
+    background-color: var(--terra-list-item-selected-background-color);
+  }
+
+  .divided .selected {
+    &.list-item {
+      border-color: var(--terra-list-item-selected-divider-color) !important;
+    }
+
+    + .list-item {
+      border-top-color: var(--terra-list-item-selected-divider-color);
+    }
+  }
+
+  .is-selectable {
+    cursor: pointer;
+
+    &.list-item:hover,
+    &.list-item:focus {
+      background-color: var(--terra-list-item-hover-background-color) !important;
+    }
+
+    &.selected:hover,
+    &.selected:focus {
+      background-color: var(--terra-list-item-selected-hover-background-color) !important;
+    }
   }
 }
+/* stylelint-enable */
