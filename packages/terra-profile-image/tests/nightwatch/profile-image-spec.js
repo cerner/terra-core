@@ -18,6 +18,7 @@ module.exports = {
   },
   'Displays the avatar image if the profile image was not found': (browser) => {
     browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/profile-image-tests/default`)
       .waitForElementPresent('#errorImage', 1000);
   },
 };
