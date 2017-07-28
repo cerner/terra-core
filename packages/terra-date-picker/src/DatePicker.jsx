@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
 import DateInput from './DateInput';
 import DateUtil from './DateUtil';
-import './DatePicker.scss';
+import styles from './DatePicker.scss';
 
 const propTypes = {
   /**
@@ -184,7 +184,7 @@ class DatePicker extends React.Component {
 
     return (
       <ResponsiveElement
-        className="terra-DatePicker"
+        className={styles['date-picker']}
         responsiveTo="window"
         defaultElement={portalPicker}
         small={popupPicker}

@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './ContentContainer.scss';
+import styles from './ContentContainer.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -31,19 +33,19 @@ const ContentContainer = ({
   fill,
   ...customProps
   }) => {
-  const contentLayoutClassNames = classNames([
-    'terra-ContentContainer',
-    { 'terra-ContentContainer--fill': fill },
+  const contentLayoutClassNames = cx([
+    'content-container',
+    { fill },
     customProps.className,
   ]);
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      <div className="terra-ContentContainer-header">
+      <div className={cx('header')}>
         {header}
       </div>
-      <div className="terra-ContentContainer-main">
-        <div className="terra-ContentContainer-main-normalizer">
+      <div className={cx('main')}>
+        <div className={cx('normalizer')}>
           {children}
         </div>
       </div>
