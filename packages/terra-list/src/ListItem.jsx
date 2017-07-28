@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import Arrange from 'terra-arrange';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
-import './ListItem.scss';
+import styles from './List.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -39,17 +41,15 @@ const ListItem = ({
     hasChevron,
     ...customProps
   }) => {
-  const listItemClassNames = classNames([
-    'terra-ListItem',
-    { 'terra-ListItem--selected': isSelected },
-    { 'terra-ListItem-isSelectable': isSelectable },
-    { 'terra-ListItem-hasChevron': hasChevron },
+  const listItemClassNames = cx([
+    'list-item',
+    { selected: isSelected },
+    { 'is-selectable': isSelectable },
     customProps.className,
   ]);
 
-
   if (hasChevron) {
-    const chevron = <span className="terra-ListItem-chevron"><ChevronRight height="0.8em" width="0.8em" /></span>;
+    const chevron = <span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>;
 
     return (
       <li {...customProps} className={listItemClassNames}>
