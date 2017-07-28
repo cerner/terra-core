@@ -198,7 +198,7 @@ class ModalManager extends React.Component {
     ]);
 
     return (
-      <div className={styles.container}>
+      <div className={cx('container')}>
         {this.buildChildren()}
         <Modal
           isFocused={isFocused}
