@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './SlidePanel.scss';
+import styles from './SlidePanel.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -63,11 +65,11 @@ const SlidePanel = ({
   fill,
   ...customProps
   }) => {
-  const slidePanelClassNames = classNames([
-    'terra-SlidePanel',
-    { 'terra-SlidePanel--is-open': isOpen },
-    { 'terra-SlidePanel--is-fullscreen': isFullscreen },
-    { 'terra-SlidePanel--fill': fill },
+  const slidePanelClassNames = cx([
+    'slide-panel',
+    { 'is-open': isOpen },
+    { 'is-fullscreen': isFullscreen },
+    { fill },
     customProps.className,
   ]);
 
@@ -79,10 +81,10 @@ const SlidePanel = ({
       data-slide-panel-panel-position={panelPosition}
       data-slide-panel-panel-size={panelSize}
     >
-      <div className="terra-SlidePanel-panel" aria-hidden={!isOpen ? 'true' : null}>
+      <div className={cx('panel')} aria-hidden={!isOpen ? 'true' : null}>
         {panelContent}
       </div>
-      <div className="terra-SlidePanel-main">
+      <div className={cx('main')}>
         {mainContent}
       </div>
     </div>
