@@ -112,6 +112,14 @@ const propTypes = {
    * The function returning the frame html reference.
    */
   refCallback: PropTypes.func,
+  /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
 };
 
 const defaultProps = {
@@ -174,8 +182,13 @@ class PopupContent extends React.Component {
     if (this.props.closeOnEsc) {
       document.addEventListener('keydown', this.handleKeydown);
     }
+
     if (this.props.closeOnResize) {
       window.addEventListener('resize', this.handleResize);
+    }
+
+    if (this.props.requestFocus) {
+      this.props.requestFocus();
     }
   }
 
@@ -186,6 +199,10 @@ class PopupContent extends React.Component {
 
     if (this.props.closeOnResize) {
       window.removeEventListener('resize', this.handleResize);
+    }
+
+    if (this.props.releaseFocus) {
+      this.props.releaseFocus();
     }
   }
 
@@ -235,6 +252,8 @@ class PopupContent extends React.Component {
       isHeaderDisabled,
       onRequestClose,
       refCallback,
+      releaseFocus,
+      requestFocus,
       ...customProps
     } = this.props;
 

@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added gainFocus and loseFocus actions to support trapping and releasing focus in the modal manager.
 
 1.2.0 - (July 26, 2017)
 ------------------

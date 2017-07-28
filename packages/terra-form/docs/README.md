@@ -40,7 +40,9 @@ Terra has several different form components for building forms.
 
 To use these components, create a React component that contains a form element, and then insert the Terra form components into that form.
 
-When using input fields, React has two ways of using inputs: [controlled](https://facebook.github.io/react/docs/forms.html#controlled-components) or [uncontrolled](https://facebook.github.io/react/docs/uncontrolled-components.html). Controlled input are designed to attach the value of the input to the state of the component, while uncontrolled inputs are left to operate as normal html inputs would. If you would like to use a controlled input (ideal for forms that need to do validations with JavaScript and send ajax requests), provide a value and an onChange function. If you would like to use an uncontrolled input (ideal for forms that do straight backend requests), provide a defaultValue into the input. **Note: If you provide both a value and defaultValue to the input, React will be confused as to whether you are working with an uncontrolled input or a controlled one. Provide either a value or a defaultValue to the input, but not both.**
+When using input fields, React has two ways of using inputs: [controlled](https://facebook.github.io/react/docs/forms.html#controlled-components) or [uncontrolled](https://facebook.github.io/react/docs/uncontrolled-components.html). Controlled input are designed to attach the value of the input to the state of the component, while uncontrolled inputs are left to operate as normal html inputs would. If you would like to use a controlled input (ideal for forms that need to do validations with JavaScript and send ajax requests), provide a value and an onChange function. If you would like to use an uncontrolled input (ideal for forms that do straight backend requests), provide a defaultValue into the input.
+
+**Note: If you provide both a value and defaultValue to the input, React will be confused as to whether you are working with an uncontrolled input or a controlled one. Provide either a value or a defaultValue to the input, but not both.**
 
 ## Examples
 
