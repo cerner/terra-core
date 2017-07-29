@@ -10,6 +10,7 @@ Unreleased
 ------------------
 ### Changed
 * Updated spacing around react-docgen comments
+* Update nightwatch tests for Slide Group conversion to CSS modules
 
 1.1.0 - (July 18, 2017)
 ------------------

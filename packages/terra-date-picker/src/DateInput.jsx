@@ -5,6 +5,7 @@ import Button from 'terra-button';
 import IconCalendar from 'terra-icon/lib/icon/IconCalendar';
 import Input from 'terra-form/lib/Input';
 import DateUtil from './DateUtil';
+import styles from './DatePicker.scss';
 
 const Icon = <IconCalendar />;
 
@@ -117,18 +118,18 @@ class DatePickerInput extends React.Component {
     const dateValue = DateUtil.convertToISO8601(value, 'MM/DD/YYYY');
 
     return (
-      (<div className="terra-DatePicker-customInput">
+      (<div className={styles['custom-input']}>
         <input
           // Create a hidden input for storing the name and value attributes to use when submitting the form.
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
-          className="terra-hidden-date-input"
+          data-class="hidden-date-input"
           type="hidden"
           name={name}
           value={dateValue}
         />
         <Input
           {...additionalInputProps} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
-          className="terra-DatePicker-input"
+          className={styles.input}
           type="text"
           name={'terra-date-'.concat(name)}
           value={value}
@@ -136,7 +137,7 @@ class DatePickerInput extends React.Component {
           placeholder={placeholder}
         />
         <Button
-          className="terra-DatePicker-button"
+          className={styles.button}
           onClick={this.handleOnButtonClick}
           onKeyDown={this.handleOnKeyDown}
           icon={Icon}
