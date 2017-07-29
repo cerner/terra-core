@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
-// eslint-disable-next-line import/extensions
 import 'github-markdown-css';
+import './Markdown.scss';
 
 const propTypes = {
   /**
@@ -19,7 +19,7 @@ const defaultProps = {
 const Markdown = props => (
   <div
     dir="ltr"
-    className="markdown-body"
+    className={'markdown-body'}
     style={{ listStyle: 'initial' }}
     dangerouslySetInnerHTML={{ __html: marked(props.src) }}
   />
