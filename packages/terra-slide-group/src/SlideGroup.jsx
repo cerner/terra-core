@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import 'terra-base/lib/baseStyles';
-
 import Slide from './Slide';
+import styles from './SlideGroup.scss';
+import transitions from './Slide.scss';
 
-import './SlideGroup.scss';
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -30,24 +31,26 @@ const SlideGroup = ({ items, isAnimated, ...customProps }) => {
     return null;
   }
 
-  const slideGroupClassNames = classNames([
-    'terra-SlideGroup',
-    customProps.className,
-  ]);
-
   // We use the key from the first child as the key for the transition group. This will cause the transition group to
   // rerender when the root child changes and subsequently prevent that child from animating into position.
   const transitionGroupKey = items[0].key;
 
   const itemCount = items.length;
 
+  const transitionNames = {
+    enter: transitions.enter,
+    enterActive: transitions['enter-active'],
+    leave: transitions.leave,
+    leaveActive: transitions['leave-active'],
+  };
+
   return (
-    <div {...customProps} className={slideGroupClassNames}>
+    <div {...customProps} className={cx(['slide-group', customProps.className])}>
       <CSSTransitionGroup
         key={transitionGroupKey}
         transitionEnter={isAnimated}
         transitionLeave={isAnimated}
-        transitionName="terra-Slide"
+        transitionName={transitionNames}
         transitionEnterTimeout={300}
         transitionLeaveTimeout={300}
       >
