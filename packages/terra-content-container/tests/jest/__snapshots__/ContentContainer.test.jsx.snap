@@ -1,55 +1,55 @@
 exports[`test should render a default component 1`] = `
 <div
-  className="terra-ContentContainer">
+  className="content-container">
   <div
-    className="terra-ContentContainer-header" />
+    className="header" />
   <div
-    className="terra-ContentContainer-main">
+    className="main">
     <div
-      className="terra-ContentContainer-main-normalizer" />
+      className="normalizer" />
   </div>
 </div>
 `;
 
 exports[`test should render a header 1`] = `
 <div
-  className="terra-ContentContainer">
+  className="content-container">
   <div
-    className="terra-ContentContainer-header">
+    className="header">
     <p>
       Header
     </p>
   </div>
   <div
-    className="terra-ContentContainer-main">
+    className="main">
     <div
-      className="terra-ContentContainer-main-normalizer" />
+      className="normalizer" />
   </div>
 </div>
 `;
 
 exports[`test should render as fill 1`] = `
 <div
-  className="terra-ContentContainer terra-ContentContainer--fill">
+  className="content-container fill">
   <div
-    className="terra-ContentContainer-header" />
+    className="header" />
   <div
-    className="terra-ContentContainer-main">
+    className="main">
     <div
-      className="terra-ContentContainer-main-normalizer" />
+      className="normalizer" />
   </div>
 </div>
 `;
 
 exports[`test should render content 1`] = `
 <div
-  className="terra-ContentContainer">
+  className="content-container">
   <div
-    className="terra-ContentContainer-header" />
+    className="header" />
   <div
-    className="terra-ContentContainer-main">
+    className="main">
     <div
-      className="terra-ContentContainer-main-normalizer">
+      className="normalizer">
       <p>
         test content
       </p>

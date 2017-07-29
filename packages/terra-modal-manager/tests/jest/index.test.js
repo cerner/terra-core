@@ -7,6 +7,8 @@ import {
   POP,
   MAXIMIZE,
   MINIMIZE,
+  GAIN_FOCUS,
+  LOSE_FOCUS,
 } from '../../src/actionTypes';
 
 describe('mapStateToProps', () => {
@@ -35,6 +37,7 @@ describe('mapStateToProps', () => {
           2: componentData[1],
           3: componentData[2],
         },
+        isFocused: 'IS_FOCUSED_VALUE',
         isOpen: 'IS_OPEN_VALUE',
         isMaximized: 'IS_MAXIMIZED_VALUE',
         size: 'SIZE_VALUE',
@@ -43,6 +46,7 @@ describe('mapStateToProps', () => {
 
     const expectedResult = {
       modalComponentData: componentData,
+      isFocused: 'IS_FOCUSED_VALUE',
       isOpen: 'IS_OPEN_VALUE',
       isMaximized: 'IS_MAXIMIZED_VALUE',
       size: 'SIZE_VALUE',
@@ -58,6 +62,7 @@ describe('mapStateToProps', () => {
       modalManager: {
         componentKeys: [],
         components: {},
+        isFocused: 'IS_FOCUSED_VALUE',
         isOpen: 'IS_OPEN_VALUE',
         isMaximized: 'IS_MAXIMIZED_VALUE',
         size: 'SIZE_VALUE',
@@ -66,6 +71,7 @@ describe('mapStateToProps', () => {
 
     const expectedResult = {
       modalComponentData: componentData,
+      isFocused: 'IS_FOCUSED_VALUE',
       isOpen: 'IS_OPEN_VALUE',
       isMaximized: 'IS_MAXIMIZED_VALUE',
       size: 'SIZE_VALUE',
@@ -87,6 +93,8 @@ describe('mapDispatchToProps', () => {
     expect(result.popModal).toBeDefined();
     expect(result.maximizeModal).toBeDefined();
     expect(result.minimizeModal).toBeDefined();
+    expect(result.gainFocus).toBeDefined();
+    expect(result.loseFocus).toBeDefined();
   });
 
   it('should properly setup openModal function', () => {
@@ -159,5 +167,29 @@ describe('mapDispatchToProps', () => {
     result.minimizeModal({ test: 'data' });
 
     expect(testDispatch).toHaveBeenCalledWith({ type: MINIMIZE, data: { test: 'data' } });
+  });
+
+  it('should properly setup gainFocus function', () => {
+    const testDispatch = jest.fn();
+
+    const result = mapDispatchToProps(testDispatch);
+
+    expect(result.gainFocus).toBeDefined();
+
+    result.gainFocus({ test: 'data' });
+
+    expect(testDispatch).toHaveBeenCalledWith({ type: GAIN_FOCUS, data: { test: 'data' } });
+  });
+
+  it('should properly setup loseFocus function', () => {
+    const testDispatch = jest.fn();
+
+    const result = mapDispatchToProps(testDispatch);
+
+    expect(result.loseFocus).toBeDefined();
+
+    result.loseFocus({ test: 'data' });
+
+    expect(testDispatch).toHaveBeenCalledWith({ type: LOSE_FOCUS, data: { test: 'data' } });
   });
 });

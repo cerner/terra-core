@@ -7,6 +7,7 @@ const cloneDisclosureState = (state) => {
 };
 
 const defaultState = Object.freeze({
+  isFocused: true,
   isOpen: false,
   isMaximized: false,
   componentKeys: [],
@@ -66,4 +67,20 @@ const minimize = (state) => {
   return newState;
 };
 
-export { defaultState, open, close, push, pop, maximize, minimize };
+const gainFocus = (state) => {
+  const newState = cloneDisclosureState(state);
+
+  newState.isFocused = true;
+
+  return newState;
+};
+
+const loseFocus = (state) => {
+  const newState = cloneDisclosureState(state);
+
+  newState.isFocused = false;
+
+  return newState;
+};
+
+export { defaultState, open, close, push, pop, maximize, minimize, gainFocus, loseFocus };

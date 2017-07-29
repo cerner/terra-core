@@ -13,7 +13,7 @@ it('should render a default component', () => {
 // Prop Tests
 it('should have the class terra-ContentContainer', () => {
   const wrapper = shallow(defaultVariety);
-  expect(wrapper.prop('className')).toContain('terra-ContentContainer');
+  expect(wrapper.prop('className')).toContain('content-container');
 });
 
 it('should render a header', () => {

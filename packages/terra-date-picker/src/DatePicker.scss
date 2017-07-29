@@ -1,25 +1,30 @@
-@import '~terra-mixins';
 @import '~react-datepicker/dist/react-datepicker.min';
+/* stylelint-disable selector-class-pattern */
+:local {
+  .date-picker {
+    display: inline-block;
+    min-width: 10.714em;
 
-.terra-DatePicker {
-  display: inline-block;
-  min-width: 10.714em;
+    .custom-input {
+      display: inline-flex;
 
-  .terra-DatePicker-customInput {
-    display: inline-flex;
+      /* stylelint-disable selector-max-compound-selectors */
+      .input {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        margin-right: -0.071em;
+        vertical-align: middle;
+        width: 8em;
+      }
 
-    .terra-DatePicker-input {
-      @include terra-border-radius-end(0);
-      @include terra-margin-end(-0.071em);
-      vertical-align: middle;
-      width: 8em;
-    }
-
-    .terra-DatePicker-button {
-      @include terra-border-radius-start(0);
-      @include terra-margin-start(-0.071em);
-      margin-bottom: 0;
-      margin-top: 0;
+      .button {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        margin-bottom: 0;
+        margin-left: -0.071em;
+        margin-top: 0;
+      }
+      /* stylelint-enable selector-max-compound-selectors */
     }
   }
 }

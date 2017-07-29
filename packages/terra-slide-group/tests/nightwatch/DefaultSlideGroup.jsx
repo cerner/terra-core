@@ -10,5 +10,6 @@ export default () => (
       <div className="slide2" key="2">Slide 2</div>,
     ]}
     isAnimated
+    id="SlideGroup"
   />
 );
