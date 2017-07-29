@@ -33,8 +33,9 @@
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
-    "lint": "npm run lint:js",
+    "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "test": "npm run test:spec",
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   }
