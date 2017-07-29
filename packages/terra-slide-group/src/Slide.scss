@@ -1,61 +1,62 @@
-@import '~terra-mixins';
-
-.terra-Slide {
-  background-color: #fff;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-
-  .terra-Slide-shadow {
-    background-color: #000;
-    display: none;
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .slide {
+    background-color: #fff;
     height: 100%;
-    opacity: 0.5;
     position: absolute;
-    transform: translate3d(-100%, 0, 0);
     width: 100%;
+
+    .slide-shadow {
+      background-color: #000;
+      display: none;
+      height: 100%;
+      opacity: 0.5;
+      position: absolute;
+      transform: translate3d(-100%, 0, 0);
+      width: 100%;
+    }
   }
-}
 
-.terra-Slide-enter {
-  // The - 1px is to ensure that iOS Safari actually renders the content before the transition begins.
-  transform: translate3d(calc(100% - 1px), 0, 0);
+  .enter {
+    // The - 1px is to ensure that iOS Safari actually renders the content before the transition begins.
+    transform: translate3d(calc(100% - 1px), 0, 0);
 
-  .terra-Slide-shadow {
-    display: block;
-    opacity: 0;
+    .slide-shadow {
+      display: block;
+      opacity: 0;
+    }
   }
-}
 
-.terra-Slide-enter.terra-Slide-enter-active {
-  transform: translate3d(0, 0, 0);
+  .enter.enter-active {
+    transform: translate3d(0, 0, 0);
 
-  transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 
-  .terra-Slide-shadow {
-    display: block;
-    opacity: 0.5;
-    transition: opacity 300ms ease-in-out;
+    .slide-shadow {
+      display: block;
+      opacity: 0.5;
+      transition: opacity 300ms ease-in-out;
+    }
   }
-}
 
-.terra-Slide-leave {
-  transform: translate3d(0, 0, 0);
+  .leave {
+    transform: translate3d(0, 0, 0);
 
-  .terra-Slide-shadow {
-    display: block;
-    opacity: 0.5;
+    .slide-shadow {
+      display: block;
+      opacity: 0.5;
+    }
   }
-}
 
-.terra-Slide-leave.terra-Slide-leave-active {
-  transform: translate3d(100%, 0, 0);
+  .leave.leave-active {
+    transform: translate3d(100%, 0, 0);
 
-  transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 
-  .terra-Slide-shadow {
-    display: block;
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
+    .slide-shadow {
+      display: block;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
   }
 }
