@@ -9,39 +9,39 @@ import './Control.scss';
 
 const propTypes = {
   /**
-   * The input type
+   * The input type.
    */
   type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
   /**
-   * The checked property of the Input element. Use this to generate a controlled Control Element
+   * The checked property of the Input element. Use this to generate a controlled Control Element.
    */
   checked: PropTypes.bool,
   /**
-   * The checked property of the Input element. Use this to generate an uncontrolled Control Element
+   * The checked property of the Input element. Use this to generate an uncontrolled Control Element.
    */
   defaultChecked: PropTypes.bool,
   /**
-   * id of the input field
+   * The id of the input field.
    */
   id: PropTypes.string,
   /**
-   * Additional attributes for the input object
+   * Additional attributes for the input object.
    */
   inputAttrs: PropTypes.object,
   /**
-   * Whether the form element is inline or not
+   * Whether the form element is inline or not.
    */
   isInline: PropTypes.bool,
   /**
-   * Text of the label
+   * Text of the label.
    */
   labelText: PropTypes.node,
   /**
-   * Additional objects for the text object
+   * Additional objects for the text object.
    */
   labelTextAttrs: PropTypes.object,
   /**
-   * Name of the input attribute
+   * Name of the input attribute.
    */
   name: PropTypes.string,
   /**
@@ -49,7 +49,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * The Value of the input element
+   * The value of the input element.
    */
   value: PropTypes.string,
 };

@@ -1,10 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Link } from 'react-router';
+import styles from './site.scss';
 
 const TestLinks = () => (
-  <div>
-    <ul className="site-nav">
+  <div className={styles.app} >
+    <ul className={styles['site-nav']}>
+      <li><Link to="/tests/alert-tests">Alert Tests</Link></li>
       <li><Link to="/tests/arrange-tests">Arrange Tests</Link></li>
       <li><Link to="/tests/badge-tests">Badge Tests</Link></li>
       <li><Link to="/tests/base-tests">Base Tests</Link></li>
@@ -23,6 +25,7 @@ const TestLinks = () => (
       <li><Link to="/tests/list-tests">List Tests</Link></li>
       <li><Link to="/tests/loading-overlay-tests">LoadingOverlay Tests</Link></li>
       <li><Link to="/tests/modal-tests">Modal Tests</Link></li>
+      <li><Link to="/tests/modal-manager-tests">Modal Manager Tests</Link></li>
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
       <li><Link to="/tests/overlay-tests">Overlay Tests</Link></li>
       <li><Link to="/tests/overlay-container-tests">OverlayContainer Tests</Link></li>

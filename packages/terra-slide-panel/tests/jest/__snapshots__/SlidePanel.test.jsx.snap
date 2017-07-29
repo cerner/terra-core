@@ -1,71 +1,71 @@
 exports[`test should override user provided attributes that aren't className 1`] = `
 <div
-  className="terra-SlidePanel pad-this-slide-panel"
+  className="slide-panel pad-this-slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small"
   data-test-attr="ahoy thar">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with a fullscreen state 1`] = `
 <div
-  className="terra-SlidePanel terra-SlidePanel--is-fullscreen"
+  className="slide-panel is-fullscreen"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with an open state 1`] = `
 <div
-  className="terra-SlidePanel terra-SlidePanel--is-open"
+  className="slide-panel is-open"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden={null}
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with fill 1`] = `
 <div
-  className="terra-SlidePanel terra-SlidePanel--fill"
+  className="slide-panel fill"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with main content 1`] = `
 <div
-  class="terra-SlidePanel"
+  class="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    class="terra-SlidePanel-panel" />
+    class="panel" />
   <div
-    class="terra-SlidePanel-main">
+    class="main">
     <p>
       Main Content
     </p>
@@ -75,109 +75,109 @@ exports[`test should render a SlidePanel with main content 1`] = `
 
 exports[`test should render a SlidePanel with panel content 1`] = `
 <div
-  class="terra-SlidePanel"
+  class="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    class="terra-SlidePanel-panel">
+    class="panel">
     <p>
       Panel Content
     </p>
   </div>
   <div
-    class="terra-SlidePanel-main" />
+    class="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with panelBehavior = overlay 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with panelBehavior = squish 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="squish"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with panelPosition = end 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with panelPosition = start 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="start"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with panelSize = large 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="large">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with panelSize = small 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a SlidePanel with the given extra attributes 1`] = `
 <div
-  className="terra-SlidePanel pad-this-slide-panel"
+  className="slide-panel pad-this-slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small"
@@ -185,22 +185,22 @@ exports[`test should render a SlidePanel with the given extra attributes 1`] = `
   id="my-slide-panel">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;
 
 exports[`test should render a default SlidePanel with no props 1`] = `
 <div
-  className="terra-SlidePanel"
+  className="slide-panel"
   data-slide-panel-panel-behavior="overlay"
   data-slide-panel-panel-position="end"
   data-slide-panel-panel-size="small">
   <div
     aria-hidden="true"
-    className="terra-SlidePanel-panel" />
+    className="panel" />
   <div
-    className="terra-SlidePanel-main" />
+    className="main" />
 </div>
 `;

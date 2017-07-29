@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-
-import './Slide.scss';
+import styles from './Slide.scss';
 
 const propTypes = {
   /**
@@ -21,8 +20,8 @@ const defaultProps = {
 };
 
 const Slide = props => (
-  <div className="terra-Slide" aria-hidden={props.isHidden || null}>
-    <div className="terra-Slide-shadow" />
+  <div className={styles.slide} aria-hidden={props.isHidden || null}>
+    <div className={styles['slide-shadow']} />
     {props.children}
   </div>
 );

@@ -1,0 +1,141 @@
+@import './variables';
+
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  /* stylelint-disable  property-no-unknown */
+  .alert-base {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .narrow {
+    flex-direction: column;
+  }
+
+  .wide {
+    flex-direction: row;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    font-size: var(--terra-alert-icon-font-size);
+    margin-right: 0.5rem;
+  }
+
+  .body {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    line-height: 1.2;
+    margin-left: 0.6667rem;
+    margin-top: 0.7143rem;
+    overflow: hidden;
+    padding-top: 0;
+  }
+
+  .body-narrow {
+    composes: body;
+    margin-bottom: 0;
+    margin-right: 0.6667rem;
+  }
+
+  .body-std {
+    composes: body;
+    margin-bottom: 0.7143rem;
+    margin-right: 0;
+  }
+
+  .section {
+    flex: 1;
+    padding-bottom: 0.2143rem;
+    padding-top: 0.2143rem;
+  }
+
+  .section-custom {
+    color: var(--terra-alert-custom-text-color);
+    composes: section;
+  }
+
+  .title {
+    float: left;
+    margin-right: 0.5833rem;
+  }
+
+  .actions {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    margin: 0.4286rem 0.5833rem 0.4286rem 0.8333rem;
+  }
+
+  .actions-custom {
+    color: var(--terra-alert-custom-text-color);
+    composes: actions;
+  }
+
+  .actions > :first-child {
+    margin-right: 0.5714rem;
+  }
+
+  .actions > :last-child {
+    margin-right: 0;
+  }
+
+  .alert {
+    background-color: var(--terra-alert-alert-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-alert-shadow-color) inset;
+    composes: alert-base;
+  }
+
+  .error {
+    background-color: var(--terra-alert-error-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-error-shadow-color) inset;
+    composes: alert-base;
+  }
+
+  .warning {
+    background-color: var(--terra-alert-warning-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-warning-shadow-color) inset;
+    composes: alert-base;
+  }
+
+  .advisory {
+    background-color: var(--terra-alert-advisory-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-advisory-shadow-color) inset;
+    composes: alert-base;
+  }
+
+  .info {
+    background-color: var(--terra-alert-info-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-info-shadow-color) inset;
+    composes: alert-base;
+  }
+
+  .success {
+    background-color: var(--terra-alert-success-background-color);
+    box-shadow: 2px 0 0 var(--terra-alert-success-shadow-color) inset;
+    composes: alert-base;
+  }
+
+  .custom {
+    background-color: var(--terra-alert-custom-background-color);
+    box-shadow: 2px 0 0 inset;
+    color: var(--terra-alert-custom-shadow-color);
+    composes: alert-base;
+  }
+
+  .alert .title {
+    color: var(--terra-alert-alert-title-color);
+  }
+
+  .error .title {
+    color: var(--terra-alert-error-title-color);
+  }
+  /* stylelint-enable */
+}

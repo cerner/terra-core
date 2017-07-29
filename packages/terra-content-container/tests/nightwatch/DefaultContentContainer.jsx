@@ -7,7 +7,7 @@ const content = <p>content</p>;
 
 const container = () => (
   <div style={{ height: '200px', overflow: 'auto' }}>
-    <ContentContainer header={header}>
+    <ContentContainer id="content-container" header={header}>
       {content}
     </ContentContainer>
   </div>);
