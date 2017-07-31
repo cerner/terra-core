@@ -1,20 +1,20 @@
 exports[`test should render a default Column 1`] = `
 <div
-  className="terra-Grid-col">
+  className="column">
   Test
 </div>
 `;
 
 exports[`test should render column with all size breakpoints 1`] = `
 <div
-  className="terra-Grid-col terra-Grid-col--tiny-12 terra-Grid-col--small-3 terra-Grid-col--medium-2 terra-Grid-col--large-1 terra-Grid-col--huge-2">
+  className="column column-tiny-12 column-small-3 column-medium-2 column-large-1 column-huge-2">
   Test
 </div>
 `;
 
 exports[`test should render specified width column 1`] = `
 <div
-  className="terra-Grid-col terra-Grid-col--3">
+  className="column column-3">
   Test
 </div>
 `;
