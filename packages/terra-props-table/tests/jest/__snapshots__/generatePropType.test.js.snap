@@ -1,0 +1,27 @@
+exports[`generatePropType should return "node" for node 1`] = `"\`node\`"`;
+
+exports[`generatePropType should return "number" for enum 1`] = `"\`number\`"`;
+
+exports[`generatePropType should return "object" for object 1`] = `"\`object\`"`;
+
+exports[`generatePropType should return "string" for enum 1`] = `"\`string\`"`;
+
+exports[`generatePropType should return "string" for string 1`] = `"\`string\`"`;
+
+exports[`generatePropType should return list of types for oneOfType 1`] = `"\`string or number\`"`;
+
+exports[`generatePropType should return object format for arrayOf shapes 1`] = `
+"\`array of objects structured like: {
+ \"row\": \"string\",
+ \"icon\": \"element\"
+}\`"
+`;
+
+exports[`generatePropType should return object format for shape 1`] = `
+"\`an object structured like: {
+ \"row\": \"string\",
+ \"icon\": \"element\"
+}\`"
+`;
+
+exports[`generatePropType should return type for arrayOf 1`] = `"\`array of strings\`"`;
