@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import 'terra-base/lib/baseStyles';
+import classNames from 'classnames/bind';
 
-import './Select.scss';
+import 'terra-base/lib/baseStyles';
+import styles from './Select.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -47,20 +49,21 @@ const Select = ({
   defaultValue,
   ...customProps
 }) => {
-  const additionalSelectFieldProps = Object.assign({}, customProps);
+  const additionalSelectProps = Object.assign({}, customProps);
+  const selectClasses = cx(['select', additionalSelectProps.className]);
 
   if (required) {
-    additionalSelectFieldProps['aria-required'] = 'true';
+    additionalSelectProps['aria-required'] = 'true';
   }
 
   return (
     <select
-      {...additionalSelectFieldProps}
+      {...additionalSelectProps}
       name={name}
       required={required}
       onChange={onChange}
       defaultValue={defaultValue}
-      className={classNames('terra-Form-select', additionalSelectFieldProps.className)}
+      className={selectClasses}
     >
       {choices.map(choice => <option key={choice.toString()} value={choice}>{choice}</option>)}
     </select>

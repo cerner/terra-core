@@ -14,7 +14,7 @@ module.exports = {
   'Displays a default SelectField with a single option': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/default`)
-      .assert.elementPresent('.terra-Form-field')
+      .assert.elementPresent('#default-select-field')
       .assert.elementPresent('select')
       .assert.elementPresent('option:nth-of-type(1)') // 1 option present
       .assert.elementNotPresent('option:nth-of-type(2)');
@@ -23,16 +23,13 @@ module.exports = {
   'Displays a populated SelectField with multiple options': (browser) => {
     browser // Field attributes
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/populated`)
-      .assert.elementPresent('.terra-Form-field')
-      .assert.elementPresent('.terra-Form-field--inline')
+      .assert.elementPresent('#populated-select-field')
       .assert.containsText('label', 'Meddling Kids')
-      .assert.elementPresent('.mystery-van')
-      .assert.containsText('.terra-Form-helpText', 'solve the mystery')
-      .assert.containsText('.terra-Form-error', 'jinkies!');
+      .assert.containsText('small', 'solve the mystery')
+      .assert.containsText('small:nth-child(4)', 'jinkies!');
 
     browser // Select attributes
       .assert.elementPresent('select')
-      .assert.elementPresent('.scooby-snacks')
       .assert.elementPresent('option:nth-of-type(2)') // 2 options present
       .assert.elementNotPresent('option:nth-of-type(3)');
   },

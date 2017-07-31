@@ -1,14 +1,14 @@
 exports[`test should render a Input with the rest of the props 1`] = `
 <input
   aria-required="true"
-  className="terra-Form-input"
+  className="input"
   name="foo"
   required={true} />
 `;
 
 exports[`test should render a default component 1`] = `
 <input
-  className="terra-Form-input"
+  className="input"
   name={null}
   required={false} />
 `;
@@ -20,7 +20,7 @@ exports[`test should render as controlled when just a default value is passed in
   required={false}
   value="foo">
   <input
-    className="terra-Form-input"
+    className="input"
     name={null}
     onChange={[Function]}
     required={false}
@@ -34,7 +34,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
   name={null}
   required={false}>
   <input
-    className="terra-Form-input"
+    className="input"
     defaultValue="foo"
     name={null}
     required={false} />
