@@ -13,7 +13,7 @@ it('should render a default component', () => {
 it('should have customized class name', () => {
   const row = <Row className={'test'}><Col>Test</Col></Row>;
   const wrapper = shallow(row);
-  expect(wrapper.prop('className')).toContain('terra-Grid test');
+  expect(wrapper.prop('className')).toContain('grid test');
 });
 
 // Error Handling Test

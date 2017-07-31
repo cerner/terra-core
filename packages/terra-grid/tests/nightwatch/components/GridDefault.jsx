@@ -3,7 +3,7 @@ import Grid from '../../../lib/Grid';
 import './GridExample.scss';
 
 const GridDefault = () => (
-  <Grid>
+  <Grid id="grid">
     <Grid.Row>
       <Grid.Column col={6}>
         <div className="terra-Grid-example">First Column content</div>

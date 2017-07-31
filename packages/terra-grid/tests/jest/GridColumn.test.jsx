@@ -22,7 +22,7 @@ it('should render specified width column', () => {
 // Prop Tests
 it('should have customized class name', () => {
   const wrapper = shallow(<Col className="test">Test</Col>);
-  expect(wrapper.prop('className')).toContain('terra-Grid-col test');
+  expect(wrapper.prop('className')).toContain('column test');
 });
 
 // Error Handling Test
