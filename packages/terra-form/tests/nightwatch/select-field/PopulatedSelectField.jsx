@@ -4,6 +4,7 @@ import SelectField from '../../../lib/SelectField';
 
 const selectfield = () => (
   <SelectField
+    id="populated-select-field"
     choices={['moo', 'boo']}
     defaultValue="boo"
     error="jinkies!"

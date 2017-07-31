@@ -1,11 +1,13 @@
-@import '~terra-mixins';
-
-.terra-Form-select {
-  background-color: #fff;
-  border: #dedfe0 solid 1px;
-  border-radius: 0.25em;
-  font-size: 1em;
-  height: 1.857em;
-  padding: 0.178em;
-  width: 100%;
+:local {
+  /* stylelint-disable selector-class-pattern */
+  
+  .select {
+    background-color: #fff;
+    border: #dedfe0 solid 1px;
+    border-radius: 0.25em;
+    font-size: 1em;
+    height: 1.857em;
+    padding: 0.178em;
+    width: 100%;
+  }
 }
