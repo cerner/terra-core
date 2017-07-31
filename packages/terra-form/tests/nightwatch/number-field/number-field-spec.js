@@ -14,17 +14,16 @@ module.exports = {
   'Displays a default NumberField with a number input': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/number-field/default`)
-      .assert.elementPresent('.terra-Form-field')
+      .assert.elementPresent('#default-number-field')
       .assert.elementPresent('input[type="number"]');
   },
 
   'Displays a populated inline NumberField with correct label, help message, and error message': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/number-field/populated`)
-      .assert.elementPresent('.terra-Form-field')
-      .assert.elementPresent('.terra-Form-field--inline')
+      .assert.elementPresent('#populated-number-field')
       .assert.containsText('label', 'Sales Tax Rate')
-      .assert.containsText('.terra-Form-helpText', "Your county's office may have this information")
-      .assert.containsText('.terra-Form-error', 'This field is required');
+      .assert.containsText('small', "Your county's office may have this information")
+      .assert.containsText('small:nth-child(4)', 'This field is required');
   },
 };

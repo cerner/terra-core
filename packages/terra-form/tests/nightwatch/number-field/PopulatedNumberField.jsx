@@ -4,6 +4,7 @@ import NumberField from '../../../lib/NumberField';
 
 const numberField = () =>
   <NumberField
+    id="populated-number-field"
     label="Sales Tax Rate"
     name="sales_tax_rate"
     defaultValue={0.075}
@@ -14,7 +15,6 @@ const numberField = () =>
     min={0}
     step={0.1}
     inputAttrs={{ className: 'healtheintent-application' }}
-    id="tax-rate"
     isInline
   />;
 
