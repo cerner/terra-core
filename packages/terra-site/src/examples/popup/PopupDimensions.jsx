@@ -72,9 +72,6 @@ class PopupDimensions extends React.Component {
           <br />
           <br />
         </form>
-
-
-
         <div>
           <Popup
             {...contentDimensions}
