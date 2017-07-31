@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Input propType checked to output the specifics of arrayOf, shape and union types.
 
 1.1.0 - (July 18, 2017)
 ------------------
