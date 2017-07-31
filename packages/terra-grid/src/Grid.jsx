@@ -4,8 +4,6 @@ import 'terra-base/lib/baseStyles';
 import GridRow from './GridRow';
 import GridColumn from './GridColumn';
 
-import './Grid.scss';
-
 const propTypes = {
   /**
    * The component that will be displayed at row level.

@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import styles from './Grid.scss';
+
+const cx = classNames.bind(styles);
 
 const columnRange = (props, propName) => {
   if (props[propName]) {
@@ -59,23 +62,20 @@ const GridColumn = ({
     huge,
     ...customProps
   }) => {
-  const colClassNames = classNames([
-    'terra-Grid-col', {
-      [`terra-Grid-col--${col}`]: col,
-      [`terra-Grid-col--tiny-${tiny}`]: tiny,
-      [`terra-Grid-col--small-${small}`]: small,
-      [`terra-Grid-col--medium-${medium}`]: medium,
-      [`terra-Grid-col--large-${large}`]: large,
-      [`terra-Grid-col--huge-${huge}`]: huge,
+  const colClassNames = cx([
+    'column', {
+      [`column-${col}`]: col,
+      [`column-tiny-${tiny}`]: tiny,
+      [`column-small-${small}`]: small,
+      [`column-medium-${medium}`]: medium,
+      [`column-large-${large}`]: large,
+      [`column-huge-${huge}`]: huge,
     },
     className,
   ]);
 
   return (
-    <div
-      {...customProps}
-      className={colClassNames}
-    >
+    <div {...customProps} className={colClassNames}>
       {children}
     </div>
   );
