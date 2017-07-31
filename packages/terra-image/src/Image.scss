@@ -1,38 +1,41 @@
-@import '~terra-mixins';
 @import './variables';
 
-.terra-Image {
-  display: block;
-  vertical-align: middle;
-}
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .image {
+    display: block;
+    vertical-align: middle;
+  }
 
-.terra-Image--default {
-  display: block;
-  vertical-align: middle;
-}
+  .default {
+    display: block;
+    vertical-align: middle;
+  }
 
-.terra-Image--rounded {
-  border-radius: $terra-image-rounded-border-radius;
-}
+  .rounded {
+    border-radius: var(--terra-image-rounded-border-radius);
+  }
 
-.terra-Image--circle {
-  border-radius: $terra-image-circle-border-radius;
-}
+  .circle {
+    border-radius: var(--terra-image-circle-border-radius);
+  }
 
-.terra-Image--thumbnail {
-  @include terra-padding-horizontal($terra-image-thumbnail-padding-left, $terra-image-thumbnail-padding-right);
+  .thumbnail {
+    background-color: var(--terra-image-thumbnail-background-color);
+    border-color: var(--terra-image-thumbnail-border-color);
+    border-radius: var(--terra-image-thumbnail-border-radius);
+    border-style: var(--terra-image-thumbnail-border-style);
+    border-width: var(--terra-image-thumbnail-border-width);
+    padding-bottom: var(--terra-image-thumbnail-padding-bottom);
+    padding-left: var(--terra-image-thumbnail-padding-left);
+    padding-right: var(--terra-image-thumbnail-padding-right);
+    padding-top: var(--terra-image-thumbnail-padding-top);
+  }
 
-  background-color: $terra-image-thumbnail-background-color;
-  border-color: $terra-image-thumbnail-border-color;
-  border-radius: $terra-image-thumbnail-border-radius;
-  border-style: $terra-image-thumbnail-border-style;
-  border-width: $terra-image-thumbnail-border-width;
-  padding-bottom: $terra-image-thumbnail-padding-bottom;
-  padding-top: $terra-image-thumbnail-padding-top;
+  .fluid {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
-
-.terra-Image--fluid {
-  height: auto;
-  max-height: 100%;
-  max-width: 100%;
-}
+/* stylelint-enable */

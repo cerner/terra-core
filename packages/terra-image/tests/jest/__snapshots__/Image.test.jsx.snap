@@ -1,0 +1,13 @@
+exports[`test should render a thumbail image component with fluid behavior 1`] = `
+<img
+  alt="thumbnail image"
+  class="image thumbnail fluid"
+  src="" />
+`;
+
+exports[`test should render a thumbail image component with non-fluid behavior 1`] = `
+<img
+  alt="thumbnail image"
+  class="image thumbnail"
+  src="" />
+`;
