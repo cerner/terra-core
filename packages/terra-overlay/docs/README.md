@@ -16,7 +16,7 @@ A Loading Overlay is a specialized Overlay subcomponent that displays an overlay
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
-import Overlay from 'terra-clinical-overlay';
+import Overlay from 'terra-overlay';
 
 class OverlayExample extends React.Component {
   constructor() {
@@ -53,7 +53,7 @@ export default OverlayExample;
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
-import Overlay.LoadingOverlay from 'terra-clinical-overlay';
+import Overlay.LoadingOverlay from 'terra-overlay';
 
 class LoadingOverlayExample extends React.Component {
   constructor() {
