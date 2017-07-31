@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated PropsTable rendering to include component title for packages that contain multiple components.
 
 1.2.0 - (July 26, 2017)
 ------------------

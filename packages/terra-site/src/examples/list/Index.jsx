@@ -22,14 +22,10 @@ const ListExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <h2>List Item</h2>
-    <PropsTable id="props-listItem" src={ListItemSrc} />
-    <h2>List</h2>
-    <PropsTable id="props-list" src={ListSrc} />
-    <h2>Single Select List</h2>
-    <PropsTable id="props-singleList" src={SingleSelectListSrc} />
-    <h2>Multiple Select List</h2>
-    <PropsTable id="props-multiList" src={MultiSelectListSrc} />
+    <PropsTable id="props-listItem" src={ListItemSrc} component="List Item" />
+    <PropsTable id="props-list" src={ListSrc} component="List" />
+    <PropsTable id="props-singleList" src={SingleSelectListSrc} component="Single Select List" />
+    <PropsTable id="props-multiList" src={MultiSelectListSrc} component="Multiple Select List" />
     <br />
     <h1>Examples</h1>
     <h2 id="list">List</h2>

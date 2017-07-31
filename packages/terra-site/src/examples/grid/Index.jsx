@@ -20,12 +20,9 @@ const GridExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <h2>Grid</h2>
-    <PropsTable id="props" src={GridSrc} />
-    <h2>Grid Row</h2>
-    <PropsTable id="props" src={GridRowSrc} />
-    <h2>Grid Column</h2>
-    <PropsTable id="props" src={GridColumnSrc} />
+    <PropsTable id="props" src={GridSrc} component="Grid" />
+    <PropsTable id="props" src={GridRowSrc} component="Grid Row" />
+    <PropsTable id="props" src={GridColumnSrc} component="Grid Column" />
     <h2 id="default">Default Grid</h2>
     <GridDefault />
     <h2 id="responsive">Responsive Grid</h2>
