@@ -1,22 +1,24 @@
-@import '~terra-mixins';
+:local {
+  /* stylelint-disable selector-class-pattern */
 
-.terra-Form-input {
-  border: #dedfe0 solid 1px;
-  border-radius: 0.25em;
-  font-size: 1em;
-  height: 1.857em;
-  padding: 0.178em;
-  width: 100%;
+  .input {
+    border: #dedfe0 solid 1px;
+    border-radius: 0.25em;
+    font-size: 1em;
+    height: 1.857em;
+    padding: 0.178em;
+    width: 100%;
 
-  &[type='checkbox'],
-  &[type='radio'] {
-    border: 0;
-    display: inline-block;
-    height: auto;
-    width: auto;
-  }
+    &[type='checkbox'],
+    &[type='radio'] {
+      border: 0;
+      display: inline-block;
+      height: auto;
+      width: auto;
+    }
 
-  &[required] {
-    box-shadow: unset;
+    &[required] {
+      box-shadow: unset;
+    }
   }
 }

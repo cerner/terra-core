@@ -1,22 +1,22 @@
 exports[`test should render a Fieldset when all the possible props are passed into it 1`] = `
 <fieldset
-  className="terra-Form-fieldset terra-Form-fieldset--inline terra-Form-fieldset--required">
+  className="fieldset fieldset-inline fieldset-required">
   <legend
-    className="terra-Form-legend healtheintent-legend">
+    className="legend healtheintent-legend">
     Text
   </legend>
   <small
-    className="terra-Form-helpText"
+    className="help-text"
     tabIndex="-1">
     This is a test input
   </small>
   <small
-    className="terra-Form-error"
+    className="error"
     tabIndex="-1">
     This field is required
   </small>
   <div
-    className="terra-Form-fieldset-children">
+    className="fieldset-children">
     <input
       type="radio"
       value="Test" />
@@ -26,8 +26,8 @@ exports[`test should render a Fieldset when all the possible props are passed in
 
 exports[`test should render a default component 1`] = `
 <fieldset
-  className="terra-Form-fieldset">
+  className="fieldset">
   <div
-    className="terra-Form-fieldset-children" />
+    className="fieldset-children" />
 </fieldset>
 `;

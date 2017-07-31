@@ -4,6 +4,7 @@ import TextareaField from '../../../lib/TextareaField';
 
 const textareaField = () =>
   <TextareaField
+    id="populated-textarea-field"
     label="Profile Description"
     name="profile_description"
     defaultValue="Hello! I'm a Software engineer!"

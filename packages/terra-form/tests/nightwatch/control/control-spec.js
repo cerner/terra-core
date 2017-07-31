@@ -14,16 +14,14 @@ module.exports = {
   'Displays a default Control': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/control/default`)
-      .assert.elementPresent('.terra-Form-control');
+      .assert.elementPresent('#default-control');
   },
 
   'Displays a populated Control with correct label, help message, and choices': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/control/populated`)
-      .assert.elementPresent('.terra-Form-control')
-      .assert.elementPresent('.terra-Form-control--inline')
+      .assert.elementPresent('#populated-control')
       .assert.elementPresent('input[type="checkbox"][name="children_present"][value="children_present"]')
-      .assert.elementPresent('span.terra-Form-control-label-text.healtheintent-control-label-text')
       .assert.containsText('label', 'Do you have any Children?');
   },
 };
