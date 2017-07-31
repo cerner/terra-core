@@ -1,5 +1,3 @@
-@import './variables';
-
 // List Component
 // ========================================================
 /* stylelint-disable selector-class-pattern, selector-max-compound-selectors */
@@ -11,10 +9,10 @@
   }
 
   .divided > .list-item {
-    border-top: var(--terra-list-divider-border);
+    border-top: var(--terra-list-divider-border, 1px solid #dedfe0);
 
     &:last-of-type {
-      border-bottom: var(--terra-list-divider-border);
+      border-bottom: var(--terra-list-divider-border, 1px solid #dedfe0);
     }
   }
 
@@ -27,21 +25,21 @@
     padding-right: 10px;
 
     > svg {
-      color: var(--terra-list-chevron-color);
+      color: var(--terra-list-chevron-color, #bcbfc0);
     }
   }
 
   .selected {
-    background-color: var(--terra-list-item-selected-background-color);
+    background-color: var(--terra-list-item-selected-background-color, #ebf6fd);
   }
 
   .divided .selected {
     &.list-item {
-      border-color: var(--terra-list-item-selected-divider-color) !important;
+      border-color: var(--terra-list-item-selected-divider-color, #0092e0) !important;
     }
 
     + .list-item {
-      border-top-color: var(--terra-list-item-selected-divider-color);
+      border-top-color: var(--terra-list-item-selected-divider-color, #0092e0);
     }
   }
 
@@ -50,12 +48,12 @@
 
     &.list-item:hover,
     &.list-item:focus {
-      background-color: var(--terra-list-item-hover-background-color) !important;
+      background-color: var(--terra-list-item-hover-background-color, #ebf6fd) !important;
     }
 
     &.selected:hover,
     &.selected:focus {
-      background-color: var(--terra-list-item-selected-hover-background-color) !important;
+      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 5%)) !important;
     }
   }
 }
