@@ -61,7 +61,7 @@ exports[`test should render as controlled when just a default value is passed in
     labelAttrs={Object {}}
     required={false}>
     <div
-      className="terra-Form-field">
+      className="field">
       <Textarea
         cols={null}
         maxLength={null}
@@ -72,7 +72,7 @@ exports[`test should render as controlled when just a default value is passed in
         rows={null}
         value="foo">
         <textarea
-          className="terra-Form-textarea"
+          className="textarea"
           cols={null}
           maxLength={null}
           minLength={null}
@@ -110,7 +110,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
     labelAttrs={Object {}}
     required={false}>
     <div
-      className="terra-Form-field">
+      className="field">
       <Textarea
         cols={null}
         defaultValue="foo"
@@ -120,7 +120,7 @@ exports[`test should render as uncontrolled when just a default value is passed 
         required={false}
         rows={null}>
         <textarea
-          className="terra-Form-textarea"
+          className="textarea"
           cols={null}
           defaultValue="foo"
           maxLength={null}

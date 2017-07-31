@@ -5,7 +5,7 @@ import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
 import DateInput from './DateInput';
 import DateUtil from './DateUtil';
-import './DatePicker.scss';
+import styles from './DatePicker.scss';
 
 const propTypes = {
   /**
@@ -41,6 +41,14 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
+  /**
    * An ISO 8601 string representation of the initial value to show in the date input. This prop name is derived from react-datepicker but is analogous to value in a form input field.
    */
   selectedDate: PropTypes.string,
@@ -55,6 +63,8 @@ const defaultProps = {
   minDate: undefined,
   name: undefined,
   onChange: undefined,
+  releaseFocus: undefined,
+  requestFocus: undefined,
   selectedDate: undefined,
 };
 
@@ -69,6 +79,23 @@ class DatePicker extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleOnSelect = this.handleOnSelect.bind(this);
+    this.handleOnClickOutside = this.handleOnClickOutside.bind(this);
+  }
+
+  handleOnSelect() {
+    this.requestFocus();
+  }
+
+  handleOnClickOutside() {
+    this.requestFocus();
+  }
+
+  requestFocus() {
+    // The picker will be dismissed and the focus will be released so that the containing component (e.g. modal) can regain focus.
+    if (this.props.releaseFocus) {
+      this.props.releaseFocus();
+    }
   }
 
   handleChange(date, event) {
@@ -90,6 +117,8 @@ class DatePicker extends React.Component {
       maxDate,
       minDate,
       name,
+      requestFocus,
+      releaseFocus,
       selectedDate,
       ...customProps
     } = this.props;
@@ -107,7 +136,9 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={this.state.selectedDate}
         onChange={this.handleChange}
-        customInput={<DateInput inputAttributes={inputAttributes} />}
+        onClickOutside={this.handleOnClickOutside}
+        onSelect={this.handleOnSelect}
+        customInput={<DateInput inputAttributes={inputAttributes} releaseFocus={releaseFocus} requestFocus={requestFocus} />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -131,7 +162,9 @@ class DatePicker extends React.Component {
         {...customProps}
         selected={this.state.selectedDate}
         onChange={this.handleChange}
-        customInput={<DateInput inputAttributes={inputAttributes} />}
+        onClickOutside={this.handleOnClickOutside}
+        onSelect={this.handleOnSelect}
+        customInput={<DateInput inputAttributes={inputAttributes} releaseFocus={releaseFocus} requestFocus={requestFocus} />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -151,7 +184,7 @@ class DatePicker extends React.Component {
 
     return (
       <ResponsiveElement
-        className="terra-DatePicker"
+        className={styles['date-picker']}
         responsiveTo="window"
         defaultElement={portalPicker}
         small={popupPicker}

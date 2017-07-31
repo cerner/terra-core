@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import 'terra-base/lib/baseStyles';
+import classNames from 'classnames/bind';
 
-import './Input.scss';
+import 'terra-base/lib/baseStyles';
+import styles from './Input.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The defaultValue of the input field. Use this to create an uncontrolled input
+   * The defaultValue of the input field. Use this to create an uncontrolled input.
    */
   defaultValue: PropTypes.oneOfType([
     PropTypes.string,
@@ -18,15 +20,15 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Name of the input
+   * Name of the input.
    */
   name: PropTypes.string,
   /**
-   * Whether the input is required or not
+   * Whether the input is required or not.
    */
   required: PropTypes.bool,
   /**
-   * The value of the input field. Use this to create a controlled input
+   * The value of the input field. Use this to create a controlled input.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -53,6 +55,7 @@ class Input extends React.Component {
       ...customProps
     } = this.props;
     const additionalInputProps = Object.assign({}, customProps);
+    const inputClasses = cx(['input', additionalInputProps.className]);
 
     if (required) {
       additionalInputProps['aria-required'] = 'true';
@@ -71,7 +74,7 @@ class Input extends React.Component {
         ref={(input) => { this.textInput = input; }}
         required={required}
         {...additionalInputProps}
-        className={classNames('terra-Form-input', additionalInputProps.className)}
+        className={inputClasses}
       />
     );
   }

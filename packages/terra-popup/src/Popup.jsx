@@ -65,6 +65,14 @@ const propTypes = {
    * Should the popup be presented as open.
    */
   isOpen: PropTypes.bool,
+  /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
 };
 
 const defaultProps = {
@@ -131,8 +139,8 @@ class Popup extends React.Component {
 
   createPopupContent(boundingFrame) {
     const boundsProps = {
-      contentWidth: PopupWidths[this.props.contentWidth],
-      contentHeight: PopupHeights[this.props.contentHeight],
+      contentHeight: PopupHeights[this.props.contentHeight] || PopupHeights['80'],
+      contentWidth: PopupWidths[this.props.contentWidth] || PopupWidths['240'],
     };
 
     if (boundingFrame) {
@@ -165,6 +173,8 @@ class Popup extends React.Component {
         isHeaderDisabled={this.props.isHeaderDisabled}
         onRequestClose={this.props.onRequestClose}
         refCallback={this.setContentNode}
+        releaseFocus={this.props.releaseFocus}
+        requestFocus={this.props.requestFocus}
         style={contentStyle}
       >
         {this.props.children}
@@ -199,6 +209,8 @@ class Popup extends React.Component {
       isHeaderDisabled,
       isOpen,
       onRequestClose,
+      releaseFocus,
+      requestFocus,
       targetRef,
     } = this.props;
     /* eslint-enable no-unused-vars */

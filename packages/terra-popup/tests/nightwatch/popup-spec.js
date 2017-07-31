@@ -78,6 +78,28 @@ module.exports = {
     browser.expect.element('.terra-TestClass-arrow').to.be.present;
   },
 
+  'popup inside modal - close on ESC': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/popup-inside-modal`);
+    browser.click('.disclose');
+    browser.click('#popup-in-modal');
+    browser.expect.element('.test-content').to.be.present;
+    browser.keys([browser.Keys.ESCAPE]);
+    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.assert.elementPresent('div[role="document"]');
+    browser.keys([browser.Keys.ESCAPE]);
+    browser.assert.elementNotPresent('div[role="document"]');
+  },
+
+  'popup inside modal - close on CLICK': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/popup-inside-modal`);
+    browser.click('.disclose');
+    browser.click('#popup-in-modal');
+    browser.expect.element('.test-content').to.be.present;
+    browser.moveTo('#default-button', 200, 0);
+    browser.mouseButtonClick(0);
+    browser.waitForElementNotPresent('.test-content', 1000);
+  },
+
   'contentAttachment prop - HORIZONTAL CENTER': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/horizontal-center`);
     browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 31px;');
@@ -131,5 +153,10 @@ module.exports = {
   'contentDimension large': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/large`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 960px;');
+  },
+
+  'contentDimension invalid': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/invalid`);
+    browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 80px; width: 240px;');
   },
 };

@@ -15,68 +15,60 @@ module.exports = {
   'Displays a the SlidePanel with defaulted props': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/default`);
 
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-behavior').equals('overlay');
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-position').equals('end');
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-size').equals('small');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-behavior').equals('overlay');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-position').equals('end');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-size').equals('small');
 
-    browser.expect.element('.terra-SlidePanel.terra-SlidePanel--is-open').to.not.be.present;
-    browser.expect.element('.terra-SlidePanel.terra-SlidePanel--is-fullscreen').to.not.be.present;
-    browser.expect.element('.terra-SlidePanel.terra-SlidePanel--fill').to.not.be.present;
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('class').which.not.contains('is-open');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('class').which.not.contains('is-fullscreen');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('class').which.not.contains('fill');
 
-    browser.expect.element('.terra-SlidePanel > .terra-SlidePanel-panel').to.have.attribute('aria-hidden').equals('true');
+    browser.expect.element('[class*="slide-panel"] > div[class*="panel"]:first-child').to.have.attribute('aria-hidden').equals('true');
   },
 
   'Displays a the SlidePanel with behavior of "overlay"': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/behavior-overlay`);
-
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-behavior').equals('overlay');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-behavior').equals('overlay');
   },
 
   'Displays a the SlidePanel with behavior of "squish"': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/behavior-squish`);
-
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-behavior').equals('squish');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-behavior').equals('squish');
   },
 
   'Displays a the SlidePanel with position of "start"': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/position-start`);
-
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-position').equals('start');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-position').equals('start');
   },
 
   'Displays a the SlidePanel with position of "end"': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/position-end`);
-
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-position').equals('end');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-position').equals('end');
   },
 
   'Displays a the SlidePanel with size of "small"': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/size-small`);
-
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-size').equals('small');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-size').equals('small');
   },
 
   'Displays a the SlidePanel with size of "large"': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/size-large`);
-
-    browser.expect.element('.terra-SlidePanel').to.have.attribute('data-slide-panel-panel-size').equals('large');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('data-slide-panel-panel-size').equals('large');
   },
 
   'Displays a the SlidePanel with isOpen prop set': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/open`);
-
-    browser.expect.element('.terra-SlidePanel.terra-SlidePanel--is-open').to.be.present;
-    browser.expect.element('.terra-SlidePanel > .terra-SlidePanel-panel').to.not.have.attribute('aria-hidden');
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('class').which.contains('is-open');
+    browser.expect.element('[class*="slide-panel"] > div[class*="panel"]:first-child').to.not.have.attribute('aria-hidden');
   },
 
   'Displays a the SlidePanel with isFullscreen prop set': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/fullscreen`);
-
-    browser.expect.element('.terra-SlidePanel.terra-SlidePanel--is-fullscreen').to.be.present;
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('class').which.contains('is-fullscreen');
   },
 
   'Displays a the SlidePanel with fill prop set': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-panel-tests/fill`);
-    browser.expect.element('.terra-SlidePanel.terra-SlidePanel--fill').to.be.present;
+    browser.expect.element('[class*="slide-panel"]').to.have.attribute('class').which.contains('fill');
   },
 };

@@ -1,9 +1,9 @@
 exports[`test should render a hidden profile image and a visible avatar image 1`] = `
 <div>
   <div
-    className="terra-ProfileImage--hidden">
+    className="hidden">
     <img
-      className="terra-Image"
+      className="image"
       height="75"
       onError={[Function]}
       onLoad={[Function]}
@@ -12,7 +12,7 @@ exports[`test should render a hidden profile image and a visible avatar image 1`
   </div>
   <div>
     <img
-      className="terra-Image"
+      className="image"
       height="75"
       src={Object {}}
       width="75" />
@@ -25,7 +25,7 @@ exports[`test should render the avatar image 1`] = `
   <div>
     <img
       alt="avatar"
-      className="terra-Image"
+      className="image"
       height="75"
       src={Object {}}
       width="75" />
@@ -38,7 +38,7 @@ exports[`test should render the profile image 1`] = `
   <div>
     <img
       alt="profile"
-      className="terra-Image"
+      className="image"
       height="75"
       onError={[Function]}
       onLoad={[Function]}

@@ -10,6 +10,7 @@ import BoundedPopup from './components/BoundedPopup';
 import BoundedHeightPopup from './components/BoundedHeightPopup';
 import BoundedWidthPopup from './components/BoundedWidthPopup';
 import NoHeaderPopup from './components/NoHeaderPopup';
+import SizeInvalidPopup from './components/SizeInvalidPopup';
 import SizeSmallPopup from './components/SizeSmallPopup';
 import SizeMediumPopup from './components/SizeMediumPopup';
 import SizeLargePopup from './components/SizeLargePopup';
@@ -21,6 +22,7 @@ import ArrowHorizontalCenterPopup from './components/ArrowHorizontalCenterPopup'
 import ArrowVerticalLeftPopup from './components/ArrowVerticalLeftPopup';
 import ArrowVerticalCenterPopup from './components/ArrowVerticalCenterPopup';
 import ArrowVerticalRightPopup from './components/ArrowVerticalRightPopup';
+import PopupInsideModal from './components/PopupInsideModal';
 
 const routes = (
   <div>
@@ -32,6 +34,7 @@ const routes = (
     <Route path="/tests/popup-tests/bounded-height" component={BoundedHeightPopup} />
     <Route path="/tests/popup-tests/bounded-width" component={BoundedWidthPopup} />
     <Route path="/tests/popup-tests/no-header" component={NoHeaderPopup} />
+    <Route path="/tests/popup-tests/invalid" component={SizeInvalidPopup} />
     <Route path="/tests/popup-tests/small" component={SizeSmallPopup} />
     <Route path="/tests/popup-tests/medium" component={SizeMediumPopup} />
     <Route path="/tests/popup-tests/large" component={SizeLargePopup} />
@@ -43,6 +46,7 @@ const routes = (
     <Route path="/tests/popup-tests/vertical-left" component={ArrowVerticalLeftPopup} />
     <Route path="/tests/popup-tests/vertical-center" component={ArrowVerticalCenterPopup} />
     <Route path="/tests/popup-tests/vertical-right" component={ArrowVerticalRightPopup} />
+    <Route path="/tests/popup-tests/popup-inside-modal" component={PopupInsideModal} />
   </div>
 );
 

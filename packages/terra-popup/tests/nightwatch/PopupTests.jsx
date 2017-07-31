@@ -13,6 +13,7 @@ const PopupTests = () => (
       <li><Link to="/tests/popup-tests/bounded-height">Bounded Height Popup</Link></li>
       <li><Link to="/tests/popup-tests/bounded-width">Bounded Width Popup</Link></li>
       <li><Link to="/tests/popup-tests/no-header">No Header Popup</Link></li>
+      <li><Link to="/tests/popup-tests/invalid">Invalid Popup</Link></li>
       <li><Link to="/tests/popup-tests/small">Small Popup</Link></li>
       <li><Link to="/tests/popup-tests/medium">Medium Popup</Link></li>
       <li><Link to="/tests/popup-tests/large">Large Popup</Link></li>
@@ -24,6 +25,7 @@ const PopupTests = () => (
       <li><Link to="/tests/popup-tests/vertical-left">Vertical Left Popup</Link></li>
       <li><Link to="/tests/popup-tests/vertical-center">Vertical Center Popup</Link></li>
       <li><Link to="/tests/popup-tests/vertical-right">Vertical Right Popup</Link></li>
+      <li><Link to="/tests/popup-tests/popup-inside-modal">Popup Inside Modal</Link></li>
     </ul>
   </div>
 );

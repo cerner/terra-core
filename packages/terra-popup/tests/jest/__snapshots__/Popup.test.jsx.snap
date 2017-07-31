@@ -19,6 +19,8 @@ exports[`test should shallow a default component 1`] = `
     isHeaderDisabled={false}
     isOpen={true}
     onRequestClose={[Function]}
+    releaseFocus={[Function]}
+    requestFocus={[Function]}
     targetRef={[Function]}>
     <p>
       this is popup content

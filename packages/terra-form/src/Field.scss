@@ -1,60 +1,62 @@
-@import '~terra-mixins';
+:local {
+  /* stylelint-disable selector-class-pattern */
 
-.terra-Form-field,
-.terra-Form-fieldset {
-  border: 0;
-  margin-bottom: 1.428em;
-  padding: 0;
-}
-
-@media screen and (min-width: 544px) {
-  .terra-Form-field--inline,
-  .terra-Form-fieldset--inline {
-    @include terra-margin-end(0.7143em);
-    display: inline-block;
-    vertical-align: top;
+  .field,
+  .fieldset {
+    border: 0;
+    margin-bottom: 1.428em;
+    padding: 0;
   }
-}
 
-.terra-Form-field--required > .terra-Form-label:first-child,
-.terra-Form-fieldset--required > .terra-Form-legend:first-child {
-  &::before {
-    @include terra-padding-end(0.357em);
+  @media screen and (min-width: 544px) {
+    .field-inline,
+    .fieldset-inline {
+      display: inline-block;
+      margin-right: 0.7143em;
+      vertical-align: top;
+    }
+  }
+
+  .field-required > .label:first-child,
+  .fieldset-required > .legend:first-child {
+    &::before {
+      color: #e50000;
+      content: '*';
+      display: inline-block;
+      padding-right: 0.357em;
+    }
+  }
+
+  .label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.357em;
+  }
+
+  .legend {
+    border: 0;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.357em;
+    max-width: 100%; // IE11 fix to ensure legends wrap
+    padding: 0;
+    width: auto;
+  }
+
+  .help-text {
+    display: block;
+    margin-bottom: 0.357em;
+    outline: 0;
+  }
+
+  .error {
     color: #e50000;
-    content: '*';
-    display: inline-block;
+    display: block;
+    margin-bottom: 0.357em;
+    outline: 0;
   }
-}
 
-.terra-Form-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.357em;
-}
-
-.terra-Form-legend {
-  border: 0;
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.357em;
-  max-width: 100%; // IE11 fix to ensure legends wrap
-  padding: 0;
-  width: auto;
-}
-
-.terra-Form-helpText {
-  display: block;
-  margin-bottom: 0.357em;
-  outline: 0;
-}
-
-.terra-Form-error {
-  color: #e50000;
-  display: block;
-  margin-bottom: 0.357em;
-  outline: 0;
-}
-
-.terra-Form-fieldset-children {
-  margin-top: 0.714em;
+  .fieldset-children {
+    margin-top: 0.714em;
+  }
 }
