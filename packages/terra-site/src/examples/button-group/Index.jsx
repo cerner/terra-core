@@ -20,8 +20,8 @@ const ButtonGroupExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={ButtonGroupSrc} component="Button Group" />
-    <PropsTable id="button-props" src={ButtonGroupButtonSrc} component="Button Group Button" />
+    <PropsTable id="props" src={ButtonGroupSrc} componentName="Button Group" />
+    <PropsTable id="button-props" src={ButtonGroupButtonSrc} componentName="Button Group Button" />
     <h2>Variants</h2>
     <ButtonGroupVariant />
     <br />

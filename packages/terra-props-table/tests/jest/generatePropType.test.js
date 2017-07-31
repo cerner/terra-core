@@ -2,21 +2,15 @@ const generatePropType = require('../../bin/generateMarkdown/generatePropType');
 
 describe('generatePropType', () => {
   it('should return "node" for node', () => {
-    const generatedPropType = generatePropType({ name: 'node' });
-    expect(generatedPropType).toEqual('`node`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType({ name: 'node' })).toEqual('`node`');
   });
 
   it('should return "object" for object', () => {
-    const generatedPropType = generatePropType({ name: 'object' });
-    expect(generatedPropType).toEqual('`object`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType({ name: 'object' })).toEqual('`object`');
   });
 
   it('should return "string" for string', () => {
-    const generatedPropType = generatePropType({ name: 'string' });
-    expect(generatedPropType).toEqual('`string`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType({ name: 'string' })).toEqual('`string`');
   });
 
   it('should return "string" for enum', () => {
@@ -28,9 +22,7 @@ describe('generatePropType', () => {
        { value: '\'primary\'' },
        { value: '\'secondary\'' }],
       };
-    const generatedPropType = generatePropType(enumProp);
-    expect(generatedPropType).toEqual('`string`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType(enumProp)).toEqual('`string`');
   });
 
   it('should return "number" for enum', () => {
@@ -42,9 +34,7 @@ describe('generatePropType', () => {
        { value: '6' },
        { value: '3' }],
       };
-    const generatedPropType = generatePropType(enumProp);
-    expect(generatedPropType).toEqual('`number`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType(enumProp)).toEqual('`number`');
   });
 
   it('should return list of types for oneOfType', () => {
@@ -53,9 +43,7 @@ describe('generatePropType', () => {
         value:
         [{ name: 'string' }, { name: 'number' }],
       };
-    const generatedPropType = generatePropType(propType);
-    expect(generatedPropType).toEqual('`string or number`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType(propType)).toEqual('`string or number`');
   });
 
   it('should return type for arrayOf', () => {
@@ -64,9 +52,7 @@ describe('generatePropType', () => {
         value:
         { name: 'string' },
       };
-    const generatedPropType = generatePropType(propType);
-    expect(generatedPropType).toEqual('`array of strings`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType(propType)).toEqual('`array of strings`');
   });
 
   it('should return object format for arrayOf shapes', () => {
@@ -77,9 +63,7 @@ describe('generatePropType', () => {
           value: { row: 'string', icon: 'element' },
         },
       };
-    const generatedPropType = generatePropType(propType);
-    expect(generatedPropType).toEqual('`array of objects structured like: {\n "row": "string",\n "icon": "element"\n}`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType(propType)).toEqual('`array of objects structured like: {\n "row": "string",\n "icon": "element"\n}`');
   });
 
   it('should return object format for shape', () => {
@@ -87,8 +71,6 @@ describe('generatePropType', () => {
       { name: 'shape',
         value: { row: 'string', icon: 'element' },
       };
-    const generatedPropType = generatePropType(propType);
-    expect(generatedPropType).toEqual('`an object structured like: {\n "row": "string",\n "icon": "element"\n}`');
-    expect(generatedPropType).toMatchSnapshot();
+    expect(generatePropType(propType)).toEqual('`an object structured like: {\n "row": "string",\n "icon": "element"\n}`');
   });
 });

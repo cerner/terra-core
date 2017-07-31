@@ -21,9 +21,9 @@ const OverlayExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props-overlay" src={OverlaySrc} component="Overlay" />
-    <PropsTable id="props-overlaycontainer" src={OverlayContainerSrc} component="Overlay Container" />
-    <PropsTable id="props-loadingoverlay" src={LoadingOverlaySrc} component="Loading Overlay" />
+    <PropsTable id="props-overlay" src={OverlaySrc} componentName="Overlay" />
+    <PropsTable id="props-overlaycontainer" src={OverlayContainerSrc} componentName="Overlay Container" />
+    <PropsTable id="props-loadingoverlay" src={LoadingOverlaySrc} componentName="Loading Overlay" />
     <OverlayExample />
     <LoadingOverlayExample />
   </div>
