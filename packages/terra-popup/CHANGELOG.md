@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.1.0 - (August 1, 2017)
+------------------
 ### Added
 * Added requestFocus and releaseFocus props to support requesting and releasing focus.
 
