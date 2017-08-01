@@ -1,33 +1,32 @@
-.terra-ModalManager {
-  height: 100%;
-}
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .container {
+    height: 100%;
+  }
 
-// When not fullscreen, set a minimum width so that smaller percentages are still usable in smaller viewports.
-.terra-ModalManager-modal:not(.terra-Modal--fullscreen) { /* stylelint-disable-line selector-class-pattern */
-  min-width: 560px;
-}
+  .huge {
+    height: 85%;
+    width: 75%;
+  }
 
-.terra-ModalManager-modal--huge {
-  height: 85%;
-  width: 75%;
-}
+  .large {
+    height: 75%;
+    width: 55%;
+  }
 
-.terra-ModalManager-modal--large {
-  height: 75%;
-  width: 55%;
-}
+  .medium {
+    height: 65%;
+    width: 55%;
+  }
 
-.terra-ModalManager-modal--medium {
-  height: 65%;
-  width: 55%;
-}
+  .small {
+    height: 50%;
+    width: 50%;
+  }
 
-.terra-ModalManager-modal--small {
-  height: 50%;
-  width: 50%;
+  .tiny {
+    height: 40%;
+    width: 50%;
+  }
 }
-
-.terra-ModalManager-modal--tiny {
-  height: 40%;
-  width: 50%;
-}
+/* stylelint-enable */
