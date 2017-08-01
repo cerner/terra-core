@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
 
 const propTypes = {
@@ -13,18 +12,12 @@ const propTypes = {
 const TableCell = ({
   content,
   ...customProps
-}) => {
-  const contentClassName = classNames([
-    'terra-Table-cell',
-    customProps.className,
-  ]);
+}) => (
+  <td {...customProps} data-class="cell" className={customProps.classNames}>
+    {content}
+  </td>
+);
 
-  return (
-    <td {...customProps} className={contentClassName}>
-      {content}
-    </td>
-  );
-};
 
 TableCell.propTypes = propTypes;
 
