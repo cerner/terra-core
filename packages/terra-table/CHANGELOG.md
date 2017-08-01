@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed typo which dropped custom class names on TableCell component
 
 1.3.0 - (August 1, 2017)
 ------------------

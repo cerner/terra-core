@@ -13,7 +13,7 @@ const TableCell = ({
   content,
   ...customProps
 }) => (
-  <td {...customProps} data-class="cell" className={customProps.classNames}>
+  <td {...customProps} data-class="cell">
     {content}
   </td>
 );
