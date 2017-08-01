@@ -5,19 +5,21 @@ import Field from './Field';
 import Select from './Select';
 
 const propTypes = {
+
   /**
-   * List of object key/value pairs for choices to be selected.
+   * List of choices to be selected.
+   * If choices and options array are supplied, options array will be used over choices.
    */
-  choices: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]).isRequired,
-    display: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]).isRequired,
-  })).isRequired,
+  choices: PropTypes.array,
+
+  /**
+   * List of object key and value pairs for choices to be selected.
+   * If choices and options array are supplied, options array will be used over choices.
+   */
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string.isRequired,
+    display: PropTypes.string.isRequired,
+  })),
 
   /**
    * Error message for when the input is invalid.
@@ -67,13 +69,12 @@ const propTypes = {
   /**
    * The value to start the select on.
    */
-  defaultValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  defaultValue: PropTypes.string,
 };
 
 const defaultProps = {
+  choices: undefined,
+  options: undefined,
   error: null,
   help: null,
   isInline: false,
@@ -88,6 +89,7 @@ const defaultProps = {
 
 const SelectField = ({
   choices,
+  options,
   error,
   help,
   isInline,
@@ -112,6 +114,7 @@ const SelectField = ({
     <Select
       {...selectAttrs}
       choices={choices}
+      options={options}
       onChange={onChange}
       name={name}
       required={required}

@@ -7,12 +7,7 @@ import Select from 'terra-form/lib/Select';
 const SelectExamples = () => (
   <form>
     <Select
-      choices={[{ value: 'puppies', display: 'Puppies' },
-                { value: 'kittens', display: 'Kittens' },
-                { value: 'snappers', display: 'Snappers' },
-                { value: 'bumblers', display: 'Bumblers' },
-                { value: 'joeys', display: 'Joeys' },
-                { value: 'micros', display: 'Microprocessors' }]}
+      choices={['wow', 'this', 'that']}
       name="zibby"
       defaultValue="snappers"
       required

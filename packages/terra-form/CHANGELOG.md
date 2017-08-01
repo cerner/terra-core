@@ -6,7 +6,8 @@ Unreleased
 ### Changed
 * Update Field documentation
 * Change NumberField defaultValue propType to accept string or numeric values
-* Removed red ring for required fields.
+* Removed red ring for required fields.### Breaking Changes
+* Select and SelectField also accept prop 'options', a list of objects to set their value and display
 
 
 1.1.0 - (July 18, 2017)
@@ -19,10 +20,6 @@ Unreleased
 
 ### Removed
 * Removed nightwatch.config file
-
-### Breaking Changes
-
-* Select and SelectField no longer accepts a list of strings, but a list of objects to set their value/display
 
 1.0.0 - (June 28, 2017)
 ------------------

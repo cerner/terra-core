@@ -7,7 +7,7 @@ import SelectField from 'terra-form/lib/SelectField';
 const SelectFieldExamples = () => (
   <form>
     <SelectField
-      choices={[{ value: 'puppies', display: 'Puppies' },
+      options={[{ value: 'puppies', display: 'Puppies' },
                 { value: 'kittens', display: 'Kittens' },
                 { value: 'snappers', display: 'Snappers' },
                 { value: 'bumblers', display: 'Bumblers' },

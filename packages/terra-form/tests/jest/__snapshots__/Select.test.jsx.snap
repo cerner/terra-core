@@ -35,7 +35,10 @@ exports[`test should render a default Select component 1`] = `
 
 exports[`test should render as controlled when just the required fields and a onChange function is passed into the Select 1`] = `
 <Select
-  choices={
+  defaultValue={null}
+  name={null}
+  onChange={[Function]}
+  options={
     Array [
       Object {
         "display": "moo",
@@ -47,9 +50,6 @@ exports[`test should render as controlled when just the required fields and a on
       },
     ]
   }
-  defaultValue={null}
-  name={null}
-  onChange={[Function]}
   required={false}>
   <select
     className="terra-Form-select"
@@ -71,7 +71,9 @@ exports[`test should render as controlled when just the required fields and a on
 
 exports[`test should render as uncontrolled when just the required fields and a default value is passed into the Select 1`] = `
 <Select
-  choices={
+  defaultValue="boo"
+  name={null}
+  options={
     Array [
       Object {
         "display": "moo",
@@ -83,8 +85,6 @@ exports[`test should render as uncontrolled when just the required fields and a 
       },
     ]
   }
-  defaultValue="boo"
-  name={null}
   required={false}>
   <select
     className="terra-Form-select"
