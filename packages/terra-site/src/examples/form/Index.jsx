@@ -88,36 +88,36 @@ const FormsExamples = () => (
       <Button text="Controlled Input Example" variant="link" onClick={() => { scrollToComponent('#controlled-input-example'); }} />
     </div>
     <Markdown id="field-docs" src={FieldDocs} />
-    <PropsTable id="field-props" src={FieldSrc} />
+    <PropsTable id="field-props" src={FieldSrc} componentName="Field" />
     <FieldExamples />
     <Markdown id="fieldset-docs" src={FieldsetDocs} />
-    <PropsTable id="fieldset-props" src={FieldsetSrc} />
+    <PropsTable id="fieldset-props" src={FieldsetSrc} componentName="FieldSet" />
     <FieldsetExamples />
     <Markdown id="input-docs" src={InputDocs} />
-    <PropsTable id="input-props" src={InputSrc} />
+    <PropsTable id="input-props" src={InputSrc} componentName="Input" />
     <InputExamples />
     <Markdown id="control-docs" src={ControlDocs} />
-    <PropsTable id="control-props" src={ControlSrc} />
+    <PropsTable id="control-props" src={ControlSrc} componentName="Control" />
     <ControlExamples />
     <Markdown id="number-field-docs" src={NumberFieldDocs} />
-    <PropsTable id="number-field-props" src={NumberFieldSrc} />
+    <PropsTable id="number-field-props" src={NumberFieldSrc} componentName="Number Field" />
     <NumberFieldExamples />
     <Markdown id="text-area-docs" src={TextareaDocs} />
-    <PropsTable id="text-area-props" src={TextareaSrc} />
+    <PropsTable id="text-area-props" src={TextareaSrc} componentName="Textarea" />
     <TextareaExamples />
     <Markdown id="text-area-field-docs" src={TextareaFieldDocs} />
-    <PropsTable id="text-area-field-props" src={TextareaFieldSrc} />
+    <PropsTable id="text-area-field-props" src={TextareaFieldSrc} componentName="Textarea Field" />
     <TextareaFieldExamples />
     <Markdown id="text-field-docs" src={TextFieldDocs} />
-    <PropsTable id="text-field-props" src={TextFieldSrc} />
+    <PropsTable id="text-field-props" src={TextFieldSrc} componentName="Text Field" />
     <TextFieldExamples />
     <Markdown id="select-docs" src={SelectDocs} />
-    <PropsTable id="select-props" src={SelectSrc} />
+    <PropsTable id="select-props" src={SelectSrc} componentName="Select" />
     <SelectExamples />
     <Markdown id="select-field-docs" src={SelectFieldDocs} />
-    <PropsTable id="select-field-props" src={SelectFieldSrc} />
+    <PropsTable id="select-field-props" src={SelectFieldSrc} componentName="Select Field" />
     <SelectFieldExamples />
-    <Markdown id="controlled-input-example" src={ControlledInputDocs} />
+    <Markdown id="controlled-input-example" src={ControlledInputDocs} componentName="ControlledInput" />
     <ControlledInput />
   </div>
 );

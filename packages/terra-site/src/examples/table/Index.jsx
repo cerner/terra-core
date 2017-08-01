@@ -32,22 +32,14 @@ const TableExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <h2>Table</h2>
-    <PropsTable id="props-table" src={TableSrc} />
-    <h2>Table Header</h2>
-    <PropsTable id="props-tableHeader" src={TableHeaderSrc} />
-    <h2>Table Header Cell</h2>
-    <PropsTable id="props-tableHeaderCell" src={TableHeaderCellSrc} />
-    <h2>Table Subheader</h2>
-    <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} />
-    <h2>Table Rows</h2>
-    <PropsTable id="props-tableRows" src={TableRowsSrc} />
-    <h2>Single Selectable Table Row</h2>
-    <PropsTable id="props-singleSelectableRows" src={SingleSelectableRowsSrc} />
-    <h2>Table Row</h2>
-    <PropsTable id="props-tableRow" src={TableRowSrc} />
-    <h2>Table Cell</h2>
-    <PropsTable id="props-tablecell" src={TableCellSrc} />
+    <PropsTable id="props-table" src={TableSrc} componentName="Table" />
+    <PropsTable id="props-tableHeader" src={TableHeaderSrc} componentName="Table Header" />
+    <PropsTable id="props-tableHeaderCell" src={TableHeaderCellSrc} componentName="Table Header Cell" />
+    <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} componentName="Table Subheader" />
+    <PropsTable id="props-tableRows" src={TableRowsSrc} componentName="Table Rows" />
+    <PropsTable id="props-singleSelectableRows" src={SingleSelectableRowsSrc} componentName="Single Selectable Rows" />
+    <PropsTable id="props-tableRow" src={TableRowSrc} componentName="Table Row" />
+    <PropsTable id="props-tablecell" src={TableCellSrc} componentName="Table Cell" />
     <br />
     <h1>Examples </h1>
     <h2>Table without zebra stripes</h2>
