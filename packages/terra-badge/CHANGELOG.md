@@ -4,7 +4,12 @@ Changelog
 Unreleased
 ----------
 
-1.3.0 - (August 1, 2017)
+1.2.1 - (August 1, 2017)
+------------------
+### Fixed
+* Fixed versioning issue in changelog
+
+1.2.0 - (August 1, 2017)
 ------------------
 ### Changed
 * Minor version bump
