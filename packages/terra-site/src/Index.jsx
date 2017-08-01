@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
 import App from './App';
 import Home from './Home';
-import styles from './site.scss';
 
 // Examples
 import AlertExamples from './examples/alert/Index';
