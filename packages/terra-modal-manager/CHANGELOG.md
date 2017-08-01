@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added fullscreen size option
 
 1.3.0 - (August 1, 2017)
 ------------------
