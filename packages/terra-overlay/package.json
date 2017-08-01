@@ -28,16 +28,14 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "terra-base": "^1.1.0",
-    "terra-icon": "^1.2.0",
-    "terra-mixins": "^1.7.0"
+    "terra-icon": "^1.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "focus-trap-react": "^3.0.2",
     "prop-types": "^15.5.8",
     "terra-base": "^1.1.0",
-    "terra-icon": "^1.2.0",
-    "terra-mixins": "^1.7.0"
+    "terra-icon": "^1.2.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
