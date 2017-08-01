@@ -30,8 +30,7 @@
     "terra-responsive-element": "^1.0.0",
     "terra-base": "^1.0.0",
     "terra-button": "^1.0.0",
-    "terra-icon": "^1.0.0",
-    "terra-mixins": "^1.0.0"
+    "terra-icon": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -39,8 +38,7 @@
     "terra-responsive-element": "^1.0.0",
     "terra-base": "^1.0.0",
     "terra-button": "^1.0.0",
-    "terra-icon": "^1.0.0",
-    "terra-mixins": "^1.0.0"
+    "terra-icon": "^1.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
