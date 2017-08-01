@@ -213,4 +213,13 @@ module.exports = {
     .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/selectable-table-no-rows`);
     browser.assert.elementNotPresent('[class*="row"]:nth-child(1)');
   },
+
+  'Maintains custom classNames when provided': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`);
+    browser.assert.elementPresent('.Table-Custom');
+    browser.assert.elementPresent('.Header-Custom');
+    browser.assert.elementPresent('.Cell-Custom');
+    browser.assert.elementPresent('.SingleSelectableRows-Custom');
+    browser.assert.elementPresent('.Subheader-Custom');
+  },
 };
