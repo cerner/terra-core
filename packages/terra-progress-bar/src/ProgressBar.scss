@@ -28,25 +28,27 @@
 
       &::-webkit-progress-value {
         background-color: currentColor;
-        @include terra-border-end(1px solid #FFF);
-        @include terra-border-radius-start(0);
+        border-bottom-left-radius: 0;
+        border-right: 1px solid #fff;
+        border-top-left-radius: 0;
       }
 
       &::-ms-fill {
         background-color: currentColor;
-        @include terra-border-end(1px solid #FFF);
+        border-right: 1px solid #fff;
       }
     }
 
     &[value='100'],
     &[value='0'] {
       &::-webkit-progress-value {
-        @include terra-border-radius-end(0);
-        @include terra-border-end(0 solid #FFF);
+        border-bottom-right-radius: 0;
+        border-right: 0 solid #fff;
+        border-top-right-radius: 0;
       }
 
       &::-ms-fill {
-        @include terra-border-end(0 solid #FFF);
+        border-right: 0 solid #fff;
       }
     }
   }
@@ -66,19 +68,21 @@
       }
 
       &[value]::-moz-progress-bar {
-        @include terra-border-radius-start(0);
         background-color: currentColor;
-        @include terra-border-end(1px solid #FFF);
+        border-bottom-left-radius: 0;
+        border-right: 1px solid #fff;
+        border-top-left-radius: 0;
       }
 
       &[value='100'] {
-        @include terra-border-end(0 solid #FFF);
+        border-right: 0 solid #fff;
       }
 
       &[value='0']::-moz-progress-bar,
       &[value='100']::-moz-progress-bar {
-        @include terra-border-radius-end(0);
-        @include terra-border-end(0 solid #FFF);
+        border-bottom-right-radius: 0;
+        border-right: 0 solid #fff;
+        border-top-right-radius: 0;
       }
     }
   }
