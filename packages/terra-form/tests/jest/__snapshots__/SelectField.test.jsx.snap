@@ -11,8 +11,8 @@ exports[`test should render a SelectField when all the possible props are passed
   }
   required={true}>
   <Select
+    choices={null}
     className="scooby-snacks"
-    defaultValue={null}
     name="zounds"
     options={
       Array [
@@ -39,7 +39,7 @@ exports[`test should render a default SelectField component 1`] = `
   labelAttrs={Object {}}
   required={false}>
   <Select
-    defaultValue={null}
+    choices={null}
     name={null}
     options={
       Array [
@@ -55,6 +55,7 @@ exports[`test should render a default SelectField component 1`] = `
 
 exports[`test should render as controlled when just the required fields and a onChange function is passed into the SelectField 1`] = `
 <SelectField
+  choices={null}
   error={null}
   help={null}
   isInline={false}
@@ -86,7 +87,7 @@ exports[`test should render as controlled when just the required fields and a on
     <div
       className="terra-Form-field">
       <Select
-        defaultValue={null}
+        choices={null}
         name={null}
         onChange={[Function]}
         options={
@@ -104,7 +105,6 @@ exports[`test should render as controlled when just the required fields and a on
         required={false}>
         <select
           className="terra-Form-select"
-          defaultValue={null}
           name={null}
           onChange={[Function]}
           required={false}>
@@ -125,6 +125,7 @@ exports[`test should render as controlled when just the required fields and a on
 
 exports[`test should render as uncontrolled when just the required fields and a default value is passed into the SelectField 1`] = `
 <SelectField
+  choices={null}
   defaultValue="boo"
   error={null}
   help={null}
@@ -156,6 +157,7 @@ exports[`test should render as uncontrolled when just the required fields and a 
     <div
       className="terra-Form-field">
       <Select
+        choices={null}
         defaultValue="boo"
         name={null}
         options={

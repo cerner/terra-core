@@ -25,6 +25,7 @@ const FormTests = () => (
       <li><Link to="/tests/form-tests/textarea-field/populated">Populated TextareaField</Link></li>
       <li><Link to="/tests/form-tests/select/default">Default Select</Link></li>
       <li><Link to="/tests/form-tests/select/populated">Populated Select</Link></li>
+      <li><Link to="/tests/form-tests/select/populated_controlled">Populated Select Controlled</Link></li>
       <li><Link to="/tests/form-tests/select-field/default">Default Select Field</Link></li>
       <li><Link to="/tests/form-tests/select-field/populated">Populated Select Field</Link></li>
     </ul>

@@ -70,11 +70,16 @@ const propTypes = {
    * The value to start the select on.
    */
   defaultValue: PropTypes.string,
+
+  /**
+   * The value of the select element. Use this to create a controlled input.
+   */
+  value: PropTypes.string,
 };
 
 const defaultProps = {
-  choices: undefined,
-  options: undefined,
+  choices: null,
+  options: null,
   error: null,
   help: null,
   isInline: false,
@@ -85,6 +90,7 @@ const defaultProps = {
   required: false,
   selectAttrs: {},
   defaultValue: undefined,
+  value: undefined,
 };
 
 const SelectField = ({
@@ -100,6 +106,7 @@ const SelectField = ({
   required,
   selectAttrs,
   defaultValue,
+  value,
   ...customProps
 }) => (
   <Field
@@ -119,6 +126,7 @@ const SelectField = ({
       name={name}
       required={required}
       defaultValue={defaultValue}
+      value={value}
     />
   </Field>
 );
