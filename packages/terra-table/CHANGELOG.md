@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.4.0 - (August 1, 2017)
+------------------
 ### Fixed
 * Fixed typo which dropped custom class names on TableCell component
 
