@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
 import App from './App';
 import Home from './Home';
+import styles from './site.scss';
 
 // Examples
 import AlertExamples from './examples/alert/Index';
@@ -60,9 +61,10 @@ import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import LoadingOverlayTestRoutes from 'terra-overlay/tests/nightwatch/LoadingOverlay/LoadingOverlayTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
-import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
+import MarkdownTestRoutes from 'terra-markdown/tests/nightwatch/MarkdownTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
+import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
 import OverlayContainerTestRoutes from 'terra-overlay/tests/nightwatch/OverlayContainer/OverlayContainerTestRoutes';
 import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
@@ -143,6 +145,7 @@ ReactDOM.render((
     {StatusTestRoutes}
     {TableTestRoutes}
     {TimeInputTestRoutes}
+    {MarkdownTestRoutes}
     {ModalTestRoutes}
     {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
