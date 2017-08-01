@@ -41,7 +41,7 @@ app.disclose({
 |---|---|---|
 |preferredType|String|A String describing the component's desired disclosure method. Should be 'modal' if ModalManager usage is desired.|
 |content|Object|An Object containing data describing the component that is to be disclosed. See AppDelegate documentation for more.|
-|size|String|The desired modal size. One of: `tiny`, `small`, `medium`, `large`, `huge`.|
+|size|String|The desired modal size. One of: `tiny`, `small`, `medium`, `large`, `huge`, `fullscreen`.|
 
 A more thorough example would look something like this:
 
