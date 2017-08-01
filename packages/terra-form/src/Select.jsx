@@ -85,7 +85,7 @@ const Select = ({
       defaultValue={defaultValue}
       className={classNames('terra-Form-select', additionalSelectFieldProps.className)}
     >
-      {options.map(option => <option key={option.value} value={option.value}>{option.display}</option>)}
+      {options.map(option => <option key={`${option.value}-${option.display}`} value={option.value}>{option.display}</option>)}
     </select>
   );
 };
