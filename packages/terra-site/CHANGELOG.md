@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added new example to display date picker and popup inside modal.
+* Updated PropsTable rendering to include component title for packages that contain multiple components.
 
 1.2.0 - (July 26, 2017)
 ------------------
