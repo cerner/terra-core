@@ -1,7 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react-docgen": "^2.15.0",
-    "terra-markdown": "^1.1.0"
+    "terra-markdown": "^1.2.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -47,5 +47,6 @@
     "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js",
     "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
     "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
-    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"}
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
+  }
 }

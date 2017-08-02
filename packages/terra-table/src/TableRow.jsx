@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import styles from './Table.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -29,10 +32,10 @@ const TableRow = ({
   isSelectable,
   ...customProps
   }) => {
-  const rowClassNames = classNames([
-    { 'terra-Table--isSelected': isSelected },
-    { 'terra-Table--isSelectable': isSelectable },
-    'terra-Table-row',
+  const rowClassNames = cx([
+    { 'is-selected': isSelected },
+    { 'is-selectable': isSelectable },
+    'row',
     customProps.className,
   ]);
 
