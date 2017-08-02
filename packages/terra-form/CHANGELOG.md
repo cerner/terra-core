@@ -6,7 +6,7 @@ Unreleased
 ### Changed
 * Update Field documentation
 * Change NumberField defaultValue propType to accept string or numeric values
-* Removed red ring for required fields.### Breaking Changes
+* Removed red ring for required fields.
 * Select and SelectField also accept prop 'options', a list of objects to set their value and display
 
 
