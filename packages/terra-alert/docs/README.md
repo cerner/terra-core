@@ -39,3 +39,15 @@ import Alert from 'terra-alert';
   <span>This is a <u>custom</u> alert with a custom title and icon and the content is HTML instead of text.</span>
 </Alert>
 ```
+
+## Implementation Notes:
+The Alert component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings. These translation strings are used for the default alert title when the application does not specify a title for the alert.
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
+* [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
+* [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
