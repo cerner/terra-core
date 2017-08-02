@@ -12,11 +12,14 @@ const propTypes = {
 const TableCell = ({
   content,
   ...customProps
-}) => (
-  <td {...customProps} data-class="cell">
-    {content}
-  </td>
-);
+}) => {
+  const dataClassNames = customProps['data-class'] ? `cell ${customProps['data-class']}` : 'cell';
+  return (
+    <td {...customProps} data-class={dataClassNames}>
+      {content}
+    </td>
+  );
+};
 
 
 TableCell.propTypes = propTypes;

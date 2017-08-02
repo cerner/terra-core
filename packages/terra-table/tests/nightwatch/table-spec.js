@@ -218,8 +218,16 @@ module.exports = {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`);
     browser.assert.elementPresent('.Table-Custom');
     browser.assert.elementPresent('.Header-Custom');
+    browser.assert.elementPresent('.HeaderCell-Custom');
     browser.assert.elementPresent('.Cell-Custom');
     browser.assert.elementPresent('.SingleSelectableRows-Custom');
     browser.assert.elementPresent('.Subheader-Custom');
+  },
+
+  'Spreads custom data-classes when provided': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`);
+    browser.expect.element('.HeaderCell-Custom').to.have.attribute('data-class').which.contains('HeaderCell-Custom');
+    browser.expect.element('.Cell-Custom').to.have.attribute('data-class').which.contains('Cell-Custom');
+    browser.expect.element('.Subheader-Custom').to.have.attribute('data-class').which.contains('Subheader-Custom');
   },
 };
