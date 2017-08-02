@@ -154,9 +154,4 @@ module.exports = {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/large`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 960px;');
   },
-
-  'contentDimension invalid': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/popup-tests/invalid`);
-    browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 80px; width: 240px;');
-  },
 };

@@ -64,7 +64,7 @@ exports[`test should render as controlled when just a default value is passed in
     labelAttrs={Object {}}
     required={false}>
     <div
-      className="field">
+      className="terra-Form-field">
       <Input
         max={null}
         min={null}
@@ -75,7 +75,7 @@ exports[`test should render as controlled when just a default value is passed in
         type="number"
         value={2}>
         <input
-          className="input"
+          className="terra-Form-input"
           max={null}
           min={null}
           name={null}

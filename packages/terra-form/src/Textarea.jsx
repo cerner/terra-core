@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-
+import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
-import styles from './Textarea.scss';
 
-const cx = classNames.bind(styles);
+import './Textarea.scss';
 
 const propTypes = {
   /**
@@ -47,7 +45,7 @@ const Textarea = ({
   ...customProps
 }) => {
   const additionalTextareaProps = Object.assign({}, customProps);
-  const textareaClasses = cx(['textarea', additionalTextareaProps.className]);
+  const textareaClasses = classNames('terra-Form-textarea', additionalTextareaProps.className);
 
   if (required) {
     additionalTextareaProps['aria-required'] = 'true';

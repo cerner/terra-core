@@ -139,8 +139,8 @@ class Popup extends React.Component {
 
   createPopupContent(boundingFrame) {
     const boundsProps = {
-      contentHeight: PopupHeights[this.props.contentHeight] || PopupHeights['80'],
-      contentWidth: PopupWidths[this.props.contentWidth] || PopupWidths['240'],
+      contentWidth: PopupWidths[this.props.contentWidth],
+      contentHeight: PopupHeights[this.props.contentHeight],
     };
 
     if (boundingFrame) {

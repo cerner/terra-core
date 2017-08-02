@@ -1,12 +1,10 @@
 /* eslint-disable react/jsx-boolean-value, jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-
+import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
-import styles from './Field.scss';
 
-const cx = classNames.bind(styles);
+import './Field.scss';
 
 const propTypes = {
   /**
@@ -50,24 +48,24 @@ const defaultProps = {
 };
 
 const Fieldset = ({ children, error, help, isInline, legend, legendAttrs, required, ...customProps }) => {
-  const fieldsetClasses = cx([
-    'fieldset',
-    { 'fieldset-inline': isInline },
-    { 'fieldset-required': required },
+  const fieldsetClasses = classNames(
+    'terra-Form-fieldset',
+    { 'terra-Form-fieldset--inline': isInline },
+    { 'terra-Form-fieldset--required': required },
     customProps.className,
-  ]);
+  );
 
-  const legendClasses = cx([
-    'legend',
+  const legendClasses = classNames(
+    'terra-Form-legend',
     legendAttrs.className,
-  ]);
+  );
 
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
       {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
-      {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
-      {error && <small className={cx('error')} tabIndex="-1">{error}</small>}
-      <div className={cx('fieldset-children')}>
+      {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
+      {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}
+      <div className="terra-Form-fieldset-children">
         {children}
       </div>
     </fieldset>

@@ -1,6 +1,6 @@
 exports[`test should render a Select component with one option 1`] = `
 <select
-  className="select"
+  className="terra-Form-select"
   name={null}
   required={false}>
   <option
@@ -13,7 +13,7 @@ exports[`test should render a Select component with one option 1`] = `
 exports[`test should render a Select when all the possible props are passed into it 1`] = `
 <select
   aria-required="true"
-  className="select"
+  className="terra-Form-select"
   name="description"
   required={true}>
   <option
@@ -25,7 +25,7 @@ exports[`test should render a Select when all the possible props are passed into
 
 exports[`test should render a default Select component 1`] = `
 <select
-  className="select"
+  className="terra-Form-select"
   name={null}
   required={false} />
 `;
@@ -49,7 +49,7 @@ exports[`test should render as controlled when just the required fields and a on
   }
   required={false}>
   <select
-    className="select"
+    className="terra-Form-select"
     name={null}
     onChange={[Function]}
     required={false}>
@@ -84,7 +84,7 @@ exports[`test should render as uncontrolled when just the required fields and a 
   }
   required={false}>
   <select
-    className="select"
+    className="terra-Form-select"
     defaultValue="boo"
     name={null}
     required={false}>

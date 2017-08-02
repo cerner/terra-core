@@ -1,6 +1,6 @@
 exports[`test should render a default component 1`] = `
 <div
-  className="grid">
+  className="terra-Grid">
   <GridColumn>
     Test
   </GridColumn>

@@ -1,24 +1,22 @@
-:local {
-  /* stylelint-disable selector-class-pattern */
+@import '~terra-mixins';
 
-  .control {
-    display: block;
-    margin-bottom: 0.714em;
-    width: auto;
+.terra-Form-control {
+  display: block;
+  margin-bottom: 0.714em;
+  width: auto;
 
-    .input {
-      vertical-align: middle;
-    }
-  }
-
-  @media screen and (min-width: 544px) {
-    .control-inline {
-      display: inline-block;
-      margin-right: 0.714em;
-    }
-  }
-
-  .control-label-text {
+  .terra-Form-input {
     vertical-align: middle;
   }
+}
+
+@media screen and (min-width: 544px) {
+  .terra-Form-control--inline {
+    display: inline-block;
+    @include terra-margin-end(0.714em);
+  }
+}
+
+.terra-Form-control-label-text {
+  vertical-align: middle;
 }

@@ -4,7 +4,6 @@ import TextField from '../../../lib/TextField';
 
 const textField = () =>
   <TextField
-    id="populated-text-field"
     label="Associate ID"
     name="associate_id"
     type="text"

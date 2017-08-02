@@ -11,7 +11,8 @@ import PopulatedField from './field/PopulatedField';
 import DefaultFieldset from './fieldset/DefaultFieldset';
 import PopulatedFieldset from './fieldset/PopulatedFieldset';
 import DefaultInput from './input/DefaultInput';
-import PopulatedInput from './input/PopulatedInput';
+import PopulatedInputUncontrolled from './input/PopulatedInputUncontrolled';
+import PopulatedInputControlled from './input/PopulatedInputControlled';
 import DefaultNumberField from './number-field/DefaultNumberField';
 import PopulatedNumberField from './number-field/PopulatedNumberField';
 import DefaultTextField from './text-field/DefaultTextField';
@@ -36,7 +37,8 @@ const routes = (
     <Route path="/tests/form-tests/fieldset/default" component={DefaultFieldset} />
     <Route path="/tests/form-tests/fieldset/populated" component={PopulatedFieldset} />
     <Route path="/tests/form-tests/input/default" component={DefaultInput} />
-    <Route path="/tests/form-tests/input/populated" component={PopulatedInput} />
+    <Route path="/tests/form-tests/input/populated_controlled" component={PopulatedInputControlled} />
+    <Route path="/tests/form-tests/input/populated_uncontrolled" component={PopulatedInputUncontrolled} />
     <Route path="/tests/form-tests/number-field/default" component={DefaultNumberField} />
     <Route path="/tests/form-tests/number-field/populated" component={PopulatedNumberField} />
     <Route path="/tests/form-tests/text-field/default" component={DefaultTextField} />

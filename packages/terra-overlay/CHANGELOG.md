@@ -3,8 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Updated example code in overlay documentation
 
 1.1.0 - (July 26, 2017)
 ------------------

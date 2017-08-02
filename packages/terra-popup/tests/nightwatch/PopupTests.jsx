@@ -13,7 +13,6 @@ const PopupTests = () => (
       <li><Link to="/tests/popup-tests/bounded-height">Bounded Height Popup</Link></li>
       <li><Link to="/tests/popup-tests/bounded-width">Bounded Width Popup</Link></li>
       <li><Link to="/tests/popup-tests/no-header">No Header Popup</Link></li>
-      <li><Link to="/tests/popup-tests/invalid">Invalid Popup</Link></li>
       <li><Link to="/tests/popup-tests/small">Small Popup</Link></li>
       <li><Link to="/tests/popup-tests/medium">Medium Popup</Link></li>
       <li><Link to="/tests/popup-tests/large">Large Popup</Link></li>

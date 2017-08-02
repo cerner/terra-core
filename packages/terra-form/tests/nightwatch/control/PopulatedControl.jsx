@@ -4,7 +4,6 @@ import Control from '../../../lib/Control';
 
 const control = () => (
   <Control
-    id="populated-control"
     type="checkbox"
     labelText="Do you have any Children?"
     labelTextAttrs={{ className: 'healtheintent-control-label-text' }}

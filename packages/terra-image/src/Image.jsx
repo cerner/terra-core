@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
-import styles from './Image.scss';
-
-const cx = classNames.bind(styles);
+import './Image.scss';
 
 const propTypes = {
   /**
@@ -58,10 +56,10 @@ const Image = ({
   onError,
   ...customProps
 }) => {
-  const classes = cx([
-    'image',
-    variant,
-    { fluid: isFluid },
+  const classes = classNames([
+    'terra-Image',
+    { [`terra-Image--${variant}`]: variant },
+    { 'terra-Image--fluid': isFluid },
     customProps.className,
   ]);
 

@@ -14,18 +14,21 @@ module.exports = {
   'Displays a default grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/grid-tests/default`)
-      .assert.elementPresent('#grid');
+      .waitForElementPresent('.terra-Grid', 1000)
+      .expect.element('.terra-Grid').to.have.attribute('class').which.contains('terra-Grid');
   },
 
   'Displays a responsive grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/grid-tests/responsive`)
-      .assert.elementPresent('#grid');
+      .waitForElementPresent('.terra-Grid', 1000)
+      .expect.element('.terra-Grid').to.have.attribute('class').which.contains('terra-Grid');
   },
 
   'Displays a nested grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/grid-tests/nested`)
-      .assert.elementPresent('#grid');
+      .waitForElementPresent('.terra-Grid', 1000)
+      .expect.element('.terra-Grid').to.have.attribute('class').which.contains('terra-Grid');
   },
 };

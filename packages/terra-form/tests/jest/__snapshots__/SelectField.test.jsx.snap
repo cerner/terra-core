@@ -85,7 +85,7 @@ exports[`test should render as controlled when just the required fields and a on
     labelAttrs={Object {}}
     required={false}>
     <div
-      className="field">
+      className="terra-Form-field">
       <Select
         choices={null}
         name={null}
@@ -104,7 +104,7 @@ exports[`test should render as controlled when just the required fields and a on
         }
         required={false}>
         <select
-          className="select"
+          className="terra-Form-select"
           name={null}
           onChange={[Function]}
           required={false}>
@@ -155,7 +155,7 @@ exports[`test should render as uncontrolled when just the required fields and a 
     labelAttrs={Object {}}
     required={false}>
     <div
-      className="field">
+      className="terra-Form-field">
       <Select
         choices={null}
         defaultValue="boo"
@@ -174,7 +174,7 @@ exports[`test should render as uncontrolled when just the required fields and a 
         }
         required={false}>
         <select
-          className="select"
+          className="terra-Form-select"
           defaultValue="boo"
           name={null}
           required={false}>

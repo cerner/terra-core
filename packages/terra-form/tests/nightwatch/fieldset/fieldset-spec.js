@@ -14,15 +14,17 @@ module.exports = {
   'Displays a default Fieldset': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/fieldset/default`)
-      .assert.elementPresent('#default-fieldset');
+      .assert.elementPresent('.terra-Form-fieldset');
   },
 
   'Displays a populated inline Fieldset with correct legend, help message, and error message': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/fieldset/populated`)
-      .assert.elementPresent('#populated-fieldset')
-      .assert.containsText('legend', 'Do you have any Children?')
-      .assert.containsText('small', 'Families are eligible for family package plans')
-      .assert.containsText('small:nth-child(3)', 'This field is required');
+      .assert.elementPresent('.terra-Form-fieldset')
+      .assert.elementPresent('.terra-Form-fieldset--inline')
+      .assert.elementPresent('.terra-Form-legend.healtheintent-application')
+      .assert.containsText('.terra-Form-legend.healtheintent-application', 'Do you have any Children?')
+      .assert.containsText('.terra-Form-helpText', 'Families are eligible for family package plans')
+      .assert.containsText('.terra-Form-error', 'This field is required');
   },
 };

@@ -4,7 +4,6 @@ import Fieldset from '../../../lib/Fieldset';
 
 const fieldset = () =>
   <Fieldset
-    id="populated-fieldset"
     legend="Do you have any Children?"
     legendAttrs={{ className: 'healtheintent-application' }}
     name="children_present"

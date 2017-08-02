@@ -14,15 +14,17 @@ module.exports = {
   'Displays a default Field': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/field/default`)
-      .assert.elementPresent('#default-field');
+      .assert.elementPresent('.terra-Form-field');
   },
 
   'Displays a populated inline Field with correct label, help message, and error message': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/field/populated`)
-      .assert.elementPresent('#populated-field')
+      .assert.elementPresent('.terra-Form-field')
+      .assert.elementPresent('.terra-Form-field--inline')
+      .assert.elementPresent('.terra-Form-label.healtheintent-application')
       .assert.containsText('label', 'Do you have any Children?')
-      .assert.containsText('small', 'Families are eligible for family package plans')
-      .assert.containsText('small:nth-child(3)', 'This field is required');
+      .assert.containsText('.terra-Form-helpText', 'Families are eligible for family package plans')
+      .assert.containsText('.terra-Form-error', 'This field is required');
   },
 };

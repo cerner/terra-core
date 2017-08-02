@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-
+import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
-import styles from './Field.scss';
 
-const cx = classNames.bind(styles);
+import './Field.scss';
 
 const propTypes = {
   /**
@@ -54,24 +52,24 @@ const defaultProps = {
 };
 
 const Field = ({ children, error, help, htmlFor, isInline, label, labelAttrs, required, ...customProps }) => {
-  const fieldClasses = cx([
-    'field',
-    { 'field-inline': isInline },
-    { 'field-required': required },
+  const fieldClasses = classNames(
+    'terra-Form-field',
+    { 'terra-Form-field--inline': isInline },
+    { 'terra-Form-field--required': required },
     customProps.className,
-  ]);
+  );
 
-  const labelClassNames = cx([
-    'label',
+  const labelClassNames = classNames(
+    'terra-Form-label',
     labelAttrs.className,
-  ]);
+  );
 
   return (
     <div {...customProps} className={fieldClasses}>
       {label && <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>{label}</label>}
       {children}
-      {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
-      {error && <small className={cx('error')} tabIndex="-1">{error}</small>}
+      {help && <small className="terra-Form-helpText" tabIndex="-1">{help}</small>}
+      {error && <small className="terra-Form-error" tabIndex="-1">{error}</small>}
     </div>
   );
 };
