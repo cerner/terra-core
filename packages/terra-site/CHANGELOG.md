@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Break out form component examples into their own packages
+* Update styling lost in CSS Module conversion
 
 1.4.0 - (August 1, 2017)
 ------------------
