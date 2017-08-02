@@ -1,7 +1,6 @@
 exports[`test should render a Select component with one option 1`] = `
 <select
   className="select"
-  defaultValue={null}
   name={null}
   required={false}>
   <option
@@ -15,7 +14,6 @@ exports[`test should render a Select when all the possible props are passed into
 <select
   aria-required="true"
   className="select"
-  defaultValue={null}
   name="description"
   required={true}>
   <option
@@ -28,7 +26,6 @@ exports[`test should render a Select when all the possible props are passed into
 exports[`test should render a default Select component 1`] = `
 <select
   className="select"
-  defaultValue={null}
   name={null}
   required={false} />
 `;
@@ -53,7 +50,6 @@ exports[`test should render as controlled when just the required fields and a on
   required={false}>
   <select
     className="select"
-    defaultValue={null}
     name={null}
     onChange={[Function]}
     required={false}>

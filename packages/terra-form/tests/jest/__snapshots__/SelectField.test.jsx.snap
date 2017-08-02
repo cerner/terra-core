@@ -105,7 +105,6 @@ exports[`test should render as controlled when just the required fields and a on
         required={false}>
         <select
           className="select"
-          defaultValue={null}
           name={null}
           onChange={[Function]}
           required={false}>
