@@ -1,17 +1,14 @@
 // Styles specific to development only
 // stylelint-disable
+:local {
+  .app {
+    padding: 1.25rem;
+  }
 
-#root {
-  padding: 20px;
-}
-
-.markdown-body {
-  margin-bottom: 20px;
-}
-
-.site-nav {
-  & > li {
-    font-size: 1.25rem;
-    padding: 0.5rem 0;
+  .site-nav {
+    & > li {
+      font-size: 1.25rem;
+      padding: 0.5rem 0;
+    }
   }
 }

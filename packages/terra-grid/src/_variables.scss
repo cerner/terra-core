@@ -1,18 +1,7 @@
-// Grid Component Variables
-// ========================================================
-
-$terra-grid-gutter-width: 1rem;
-
-$terra-grid-tiny-breakpoint: 544px;
-$terra-grid-small-breakpoint: 768px;
-$terra-grid-medium-breakpoint: 992px;
-$terra-grid-large-breakpoint: 1216px;
-$terra-grid-huge-breakpoint: 1440px;
-
 $terra-grid-breakpoints: (
-  tiny: $terra-grid-tiny-breakpoint,
-  small: $terra-grid-small-breakpoint,
-  medium: $terra-grid-medium-breakpoint,
-  large: $terra-grid-large-breakpoint,
-  huge: $terra-grid-huge-breakpoint
+  tiny: 544px,
+  small: 768px,
+  medium: 992px,
+  large: 1216px,
+  huge: 1440px
 );

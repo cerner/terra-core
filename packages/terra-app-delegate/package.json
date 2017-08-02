@@ -1,7 +1,7 @@
 {
   "name": "terra-app-delegate",
   "main": "lib/app-delegate/AppDelegate.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications",
   "repository": {
     "type": "git",

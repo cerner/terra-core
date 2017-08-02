@@ -1,5 +1,4 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -15,9 +14,9 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/slide-group-tests/default`);
 
-    browser.expect.element('.terra-Slide:nth-child(1)').to.have.attribute('aria-hidden');
-    browser.expect.element('.terra-Slide:nth-child(1)').text.to.equal('Slide 1');
-    browser.expect.element('.terra-Slide:nth-child(2)').to.not.have.attribute('aria-hidden');
-    browser.expect.element('.terra-Slide:nth-child(2)').text.to.equal('Slide 2');
+    browser.expect.element('#SlideGroup > span > div[class*="slide"]:nth-child(1)').to.have.attribute('aria-hidden');
+    browser.expect.element('#SlideGroup > span > div[class*="slide"]:nth-child(1)').text.to.equal('Slide 1');
+    browser.expect.element('#SlideGroup > span > div[class*="slide"]:nth-child(2)').to.not.have.attribute('aria-hidden');
+    browser.expect.element('#SlideGroup > span > div[class*="slide"]:nth-child(2)').text.to.equal('Slide 2');
   },
 };

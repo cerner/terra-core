@@ -1,16 +1,16 @@
 exports[`test should render a default date input 1`] = `
 <div
-  class="terra-DatePicker-customInput">
+  class="custom-input">
   <input
-    class="terra-hidden-date-input"
+    data-class="hidden-date-input"
     type="hidden" />
   <input
-    class="terra-Form-input terra-DatePicker-input"
+    class="input input"
     name="terra-date-undefined"
     type="text" />
   <button
     aria-disabled="false"
-    class="button default compact terra-DatePicker-button"
+    class="button default compact button"
     type="button">
     <svg
       aria-hidden="true"
@@ -29,14 +29,14 @@ exports[`test should render a default date input 1`] = `
 
 exports[`test should render a default date input with all props 1`] = `
 <div
-  class="terra-DatePicker-customInput">
+  class="custom-input">
   <input
-    class="terra-hidden-date-input"
+    data-class="hidden-date-input"
     name="date-input"
     type="hidden"
     value="2017-01-01" />
   <input
-    class="terra-Form-input terra-DatePicker-input"
+    class="input input"
     id="terra-date-input"
     name="terra-date-date-input"
     placeholder="MM/DD/YYYY"
@@ -44,7 +44,7 @@ exports[`test should render a default date input with all props 1`] = `
     value="01/01/2017" />
   <button
     aria-disabled="false"
-    class="button default compact terra-DatePicker-button"
+    class="button default compact button"
     type="button">
     <svg
       aria-hidden="true"

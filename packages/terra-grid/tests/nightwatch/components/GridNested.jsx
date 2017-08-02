@@ -3,7 +3,7 @@ import Grid from '../../../lib/Grid';
 import './GridExample.scss';
 
 const GridNested = () => (
-  <Grid>
+  <Grid id="grid">
     <Grid.Row>
       <Grid.Column col={4}>
         <div className="terra-Grid-example">4 Columns</div>

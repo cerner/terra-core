@@ -1,47 +1,49 @@
-@import '~terra-mixins';
 @import './variables';
 @import './mixins';
 
 // Grid Component
 // ========================================================
-
-.terra-Grid {
-  @include terra-margin-start(- $terra-grid-gutter-width * 1);
-
-  box-sizing: border-box;
-  display: flex;
-  flex-basis: auto;
-  flex-direction: row;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-wrap: wrap;
-}
-
-.terra-Grid-col {
-  @include terra-padding-start($terra-grid-gutter-width * 1);
-
-  box-sizing: border-box;
-  flex-basis: 100%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  max-width: 100%;
-}
-
-// Create column classes
-@for $i from 1 through 12 {
-  .terra-Grid-col--#{$i} {
-    @include terra-grid-column-size($i);
+/* stylelint-disable selector-class-pattern */
+:local {
+  .grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    margin-left: -var(--terra-grid-gutter-width, 1rem);
   }
-}
 
-// Create responsive styles
-@each $size-name, $size-width in $terra-grid-breakpoints {
-  @media screen and (min-width: $size-width) {
-    // Responsive column classes
-    @for $i from 1 through 12 {
-      .terra-Grid-col--#{$size-name}-#{$i} {
-        @include terra-grid-column-size($i);
+  .column {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 100%;
+    padding-left: var(--terra-grid-gutter-width, 1rem);
+  }
+
+  // Create column classes
+  @for $i from 1 through 12 {
+    .column-#{$i} {
+      @include terra-grid-column-size($i);
+    }
+  }
+
+  // Create responsive styles
+  @each $size-name, $size-width in $terra-grid-breakpoints {
+    @media screen and (min-width: $size-width) {
+      // Responsive column classes
+      /* stylelint-disable max-nesting-depth */
+      @for $i from 1 through 12 {
+        .column-#{$size-name}-#{$i} {
+          @include terra-grid-column-size($i);
+        }
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }
+/* stylelint-enable */

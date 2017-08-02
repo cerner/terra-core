@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import TableHeader from './TableHeader';
 import TableHeaderCell from './TableHeaderCell';
@@ -9,7 +9,9 @@ import TableRow from './TableRow';
 import TableCell from './TableCell';
 import TableSingleSelectableRows from './SingleSelectableRows';
 import TableSubheader from './TableSubheader';
-import './Table.scss';
+import styles from './Table.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -37,10 +39,10 @@ const Table = ({
   isPadded,
   ...customProps
   }) => {
-  const tableClassNames = classNames([
-    'terra-Table',
-    { 'terra-Table--striped': isStriped },
-    { 'terra-Table--padded': isPadded },
+  const tableClassNames = cx([
+    'table',
+    { striped: isStriped },
+    { padded: isPadded },
     customProps.className,
   ]);
   return (
