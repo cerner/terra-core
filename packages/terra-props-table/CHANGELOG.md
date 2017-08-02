@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+1.2.0 - (August 1, 2017)
+------------------
+### Added
+* Input propType checked to output the specifics of arrayOf, shape and oneOfType types.
+* Add component string prop to render component name in header
+
 1.1.0 - (July 18, 2017)
 ------------------
 ### Fixed

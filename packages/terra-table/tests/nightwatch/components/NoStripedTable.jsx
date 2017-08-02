@@ -2,7 +2,7 @@ import React from 'react';
 import Table from '../../../lib/Table';
 
 const NoStripedTable = () => (
-  <Table isStriped={false}>
+  <Table isStriped={false} id="Table">
     <Table.Header>
       <Table.HeaderCell content={'Name'} key={'NAME'} minWidth={'small'} />
       <Table.HeaderCell content={'Address'} key={'ADDRESS'} minWidth={'medium'} />

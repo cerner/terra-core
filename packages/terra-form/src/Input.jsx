@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import 'terra-base/lib/baseStyles';
+import classNames from 'classnames/bind';
 
-import './Input.scss';
+import 'terra-base/lib/baseStyles';
+import styles from './Input.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -53,6 +55,7 @@ class Input extends React.Component {
       ...customProps
     } = this.props;
     const additionalInputProps = Object.assign({}, customProps);
+    const inputClasses = cx(['input', additionalInputProps.className]);
 
     if (required) {
       additionalInputProps['aria-required'] = 'true';
@@ -71,7 +74,7 @@ class Input extends React.Component {
         ref={(input) => { this.textInput = input; }}
         required={required}
         {...additionalInputProps}
-        className={classNames('terra-Form-input', additionalInputProps.className)}
+        className={inputClasses}
       />
     );
   }
