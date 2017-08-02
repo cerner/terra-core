@@ -1,7 +1,7 @@
 exports[`test should render default table header content tag 1`] = `
 <th
   className="min-width-small"
-  data-class="header">
+  data-class="header-cell">
   Column Heading
 </th>
 `;
@@ -9,7 +9,7 @@ exports[`test should render default table header content tag 1`] = `
 exports[`test should render table header content tag with ascending sort indicator 1`] = `
 <th
   className="min-width-small"
-  data-class="header"
+  data-class="header-cell"
   data-sort="asc">
   Column Heading
   <span
@@ -26,7 +26,7 @@ exports[`test should render table header content tag with ascending sort indicat
 exports[`test should render table header content tag with descending sort indicator 1`] = `
 <th
   className="min-width-small"
-  data-class="header"
+  data-class="header-cell"
   data-sort="desc">
   Column Heading
   <span
@@ -43,7 +43,7 @@ exports[`test should render table header content tag with descending sort indica
 exports[`test should render table header content tag with maximum height fixed 1`] = `
 <th
   className="min-width-small"
-  data-class="header">
+  data-class="header-cell">
   Column Heading
 </th>
 `;

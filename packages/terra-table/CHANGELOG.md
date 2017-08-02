@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Merge data-class attributes to allow for custom data-classes
 
 1.4.0 - (August 1, 2017)
 ------------------

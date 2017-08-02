@@ -40,6 +40,7 @@ const TableHeaderCell = ({
     { [`min-width-${minWidth}`]: minWidth },
     customProps.className,
   ]);
+  const dataClassNames = customProps['data-class'] ? `header-cell ${customProps['data-class']}` : 'header-cell';
 
   const dataSort = {
     'data-sort': sort,
@@ -52,8 +53,9 @@ const TableHeaderCell = ({
     sortIndicator = <span className={cx('sort-indicator')}>{iconDown}</span>;
   }
 
+
   return (
-    <th {...customProps} data-class="header" className={contentClassName} {...dataSort}>
+    <th {...customProps} data-class={dataClassNames} className={contentClassName} {...dataSort}>
       {content}
       {sortIndicator}
     </th>
