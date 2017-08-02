@@ -1,15 +1,15 @@
 exports[`test should render a ChoiceField with a checkbox 1`] = `
 <label
-  className="terra-Form-control"
+  className="control"
   required={true}>
   <Input
-    className="healtheintent-application"
+    className="input healtheintent-application"
     name="children_present"
     required={false}
     type="checkbox"
     value="children_present" />
   <span
-    className="terra-Form-control-label-text healtheintent-label-text">
+    className="control-label-text healtheintent-label-text">
     Do you have any Children?
   </span>
 </label>
@@ -17,16 +17,16 @@ exports[`test should render a ChoiceField with a checkbox 1`] = `
 
 exports[`test should render a ChoiceField with a radio 1`] = `
 <label
-  className="terra-Form-control"
+  className="control"
   required={true}>
   <Input
-    className="healtheintent-application"
+    className="input healtheintent-application"
     name="children_present"
     required={false}
     type="radio"
     value="children_present" />
   <span
-    className="terra-Form-control-label-text healtheintent-label-text">
+    className="control-label-text healtheintent-label-text">
     Do you have any Children?
   </span>
 </label>
@@ -34,78 +34,84 @@ exports[`test should render a ChoiceField with a radio 1`] = `
 
 exports[`test should render a default checkbox when type is "checkbox" 1`] = `
 <label
-  className="terra-Form-control">
+  className="control">
   <Input
+    className="input"
     name={null}
     required={false}
     type="checkbox" />
   <span
-    className="terra-Form-control-label-text" />
+    className="control-label-text" />
 </label>
 `;
 
 exports[`test should render a default checkbox when type is "radio" 1`] = `
 <label
-  className="terra-Form-control">
+  className="control">
   <Input
+    className="input"
     name={null}
     required={false}
     type="radio" />
   <span
-    className="terra-Form-control-label-text" />
+    className="control-label-text" />
 </label>
 `;
 
 exports[`test should render as an controlled checkbox when a checked value and onChange function are passed into the Control 1`] = `
 <label
-  className="terra-Form-control">
+  className="control">
   <Input
     checked={true}
+    className="input"
     name={null}
     onChange={[Function]}
     required={false}
     type="checkbox" />
   <span
-    className="terra-Form-control-label-text" />
+    className="control-label-text" />
 </label>
 `;
 
 exports[`test should render as an controlled radio when a checked value and onChange function are passed into the Control 1`] = `
 <label
-  className="terra-Form-control">
+  className="control">
   <Input
     checked={true}
+    className="input"
     name={null}
     onChange={[Function]}
     required={false}
     type="radio" />
   <span
-    className="terra-Form-control-label-text" />
+    className="control-label-text" />
 </label>
 `;
 
 exports[`test should render as an uncontrolled checkbox when just a defaultChecked value is passed into the Control 1`] = `
 <label
-  className="terra-Form-control">
+  className="control">
   <Input
+    className="input"
     defaultChecked={true}
     name={null}
     required={false}
     type="checkbox" />
   <span
-    className="terra-Form-control-label-text" />
+    className="control-label-text" />
 </label>
 `;
 
 exports[`test should render as an uncontrolled radio when just a defaultChecked value is passed into the Control 1`] = `
 <label
-  className="terra-Form-control">
+  className="control">
   <Input
+    className="input"
     defaultChecked={true}
     name={null}
     required={false}
     type="radio" />
   <span
-    className="terra-Form-control-label-text" />
+    className="control-label-text" />
 </label>
 `;
