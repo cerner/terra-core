@@ -1,176 +1,176 @@
-@import '~terra-mixins';
-@import './variables';
+/* stylelint-disable selector-class-pattern, selector-max-compound-selectors, max-nesting-depth */
+:local {
+  .table {
+    background-color: var(--terra-table-background-color, #fff);
+    border: var(--terra-table-border, 0);
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+    width: 100%;
 
-.terra-Table {
-  background-color: $terra-table-background-color;
-  border: $terra-table-border;
-  border-collapse: collapse;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%;
-
-  caption {
-    padding-bottom: 0.5em;
-  }
-
-  tr {
-    display: table-row;
-    margin-bottom: 0;
-  }
-
-  th,
-  td {
-    @include terra-text-align-start;
-    border: 0;
-    @include terra-border-start($terra-table-cell-border);
-    display: table-cell;
-    vertical-align: top;
-
-    &:first-of-type {
-      @include terra-border-start($terra-table-row-border-vertical);
+    caption {
+      padding-bottom: 0.5em;
     }
-
-    &:last-of-type {
-      @include terra-border-end($terra-table-cell-border);
-      @include terra-border-end($terra-table-row-border-vertical);
-    }
-  }
-
-  thead {
-    background-color: $terra-table-thead-background-color;
-    display: table-header-group;
 
     tr {
-      border-bottom: $terra-table-thead-tr-border-bottom;
-      border-top: $terra-table-thead-tr-border-top;
+      display: table-row;
+      margin-bottom: 0;
     }
 
-    th {
-      color: $terra-table-thead-th-color;
-      font-size: $terra-table-thead-th-font-size;
-      font-weight: $terra-table-thead-th-font-weight;
-      vertical-align: bottom;
-    }
-  }
+    th,
+    td {
+      border: 0;
+      border-left: var(--terra-table-cell-border, 0);
+      display: table-cell;
+      text-align: left;
+      vertical-align: top;
 
-  tbody {
-    tr {
-      border-top: $terra-table-row-border-horizontal;
+      &:first-of-type {
+        border-left: var(--terra-table-row-border-vertical, 1px solid #c8cacb);
+      }
 
       &:last-of-type {
-        border-bottom: $terra-table-row-border-horizontal;
+        border-right: var(--terra-table-row-border-vertical, 1px solid #c8cacb);
+      }
+    }
+
+    thead {
+      background-color: var(--terra-table-thead-background-color, #dedfe0);
+      display: table-header-group;
+
+      tr {
+        border-bottom: var(--terra-table-thead-tr-border-bottom, 0);
+        border-top: var(--terra-table-thead-tr-border-top, 1px solid #c8cacb);
+      }
+
+      th {
+        color: var(--terra-table-thead-th-color, #1c1f21);
+        font-size: var(--terra-table-thead-th-font-size, 1rem);
+        font-weight: var(--terra-table-thead-th-font-weight, bold);
+        vertical-align: bottom;
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+
+        &:last-of-type {
+          border-bottom: var(--terra-table-row-border-horizontal, 1px solid #c8cacb);
+        }
+      }
+    }
+
+    tfoot {
+      tr {
+        border-bottom: var(--terra-table-tfoot-tr-border-bottom, 1px solid #c8cacb);
+        border-top: var(--terra-table-tfoot-tr-border-top, 0);
+        text-align: left;
       }
     }
   }
 
-  tfoot {
-    tr {
-      @include terra-text-align-start;
-      border-bottom: $terra-table-tfoot-tr-border-bottom;
-      border-top: $terra-table-tfoot-tr-border-top;
+  .subheader {
+    background-color: var(--terra-table-subheader-background-color, #c8cacb);
+    color: var(--terra-table-subheader-color, #1c1f21);
+    font-size: var(--terra-table-subheader-font-size, 1rem);
+    font-weight: var(--terra-table-subheader-font-weight, bold);
+    text-align: left;
+  }
+
+  .sort-indicator {
+    color: var(--terra-table-sort-indicator-color, #1c1f21);
+    float: right;
+  }
+
+  .min-width-tiny {
+    min-width: var(--terra-table-cell-min-width-tiny, 3rem);
+  }
+
+  .min-width-small {
+    min-width: var(--terra-table-cell-min-width-small, 4.25rem);
+  }
+
+  .min-width-medium {
+    min-width: var(--terra-table-cell-min-width-medium, 5.75rem);
+  }
+
+  .min-width-large {
+    min-width: var(--terra-table-cell-min-width-large, 8.5rem);
+  }
+
+  .min-width-huge {
+    min-width: var(--terra-table-cell-min-width-huge, 10.5rem);
+  }
+
+  .padded {
+    th,
+    td {
+      padding-bottom: var(--terra-table-cell-padding-bottom, 0.5em);
+      padding-left: var(--terra-table-cell-padding-left, 0.75em);
+      padding-right: var(--terra-table-cell-padding-right, 0.75em);
+      padding-top: var(--terra-table-cell-padding-top, 0.5em);
     }
   }
-}
 
-.terra-Table-subheader {
-  @include terra-text-align-start;
-  background-color: $terra-table-subheader-background-color;
-  color: $terra-table-subheader-color;
-  font-size: $terra-table-subheader-font-size;
-  font-weight: $terra-table-subheader-font-weight;
-}
-
-.terra-Table-sort-indicator {
-  @include terra-float-end();
-  color: $terra-table-sort-indicator-color;
-}
-
-.terra-Table-min-width--tiny {
-  min-width: $terra-table-cell-min-width-tiny;
-}
-
-.terra-Table-min-width--small {
-  min-width: $terra-table-cell-min-width-small;
-}
-
-.terra-Table-min-width--medium {
-  min-width: $terra-table-cell-min-width-medium;
-}
-
-.terra-Table-min-width--large {
-  min-width: $terra-table-cell-min-width-large;
-}
-
-.terra-Table-min-width--huge {
-  min-width: $terra-table-cell-min-width-huge;
-}
-
-.terra-Table--padded {
-  th,
-  td {
-    @include terra-padding-horizontal($terra-table-cell-padding-left, $terra-table-cell-padding-right);
-    padding-bottom: $terra-table-cell-padding-bottom;
-    padding-top: $terra-table-cell-padding-top;
-  }
-}
-
-.terra-Table--striped {
-  tbody tr {
-    &:nth-of-type(even) {
-      background-color: $terra-table-row-striped-background-color;
-    }
-
-    /* Qualifying type required for specificity */
-    /* stylelint-disable selector-no-qualifying-type */
-    &.terra-Table--isSelected {
-      background-color: $terra-table-row-striped-selected-background-color !important;
-    }
-
-    &.terra-Table--isSelectable:hover,
-    &.terra-Table--isSelectable:focus {
-      background-color: $terra-table-row-striped-hover-background-color !important;
-
-      &.terra-Table--isSelected {
-        background-color: $terra-table-row-striped-selected-hover-background-color !important;
+  .striped {
+    tbody tr {
+      &:nth-of-type(even) {
+        background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
       }
+
+      /* Qualifying type required for specificity */
+      /* stylelint-disable selector-no-qualifying-type */
+      &.is-selected {
+        background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 5%)) !important;
+      }
+
+      &.is-selectable:hover,
+      &.is-selectable:focus {
+        background-color: var(--terra-table-row-striped-hover-background-color, darken(#ebf6fd, 2%)) !important;
+
+        &.is-selected {
+          background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 10%)) !important;
+        }
+      }
+      /* stylelint-enable selector-no-qualifying-type */
     }
-    /* stylelint-enable selector-no-qualifying-type */
-  }
-}
-
-.terra-Table--isSelected {
-  background-color: $terra-table-row-selected-background-color;
-
-  &.terra-Table-row {
-    border-color: $terra-table-row-selected-border-color !important;
   }
 
-  + .terra-Table-row {
-    border-top-color: $terra-table-row-selected-border-color;
-  }
-}
+  .is-selected {
+    background-color: var(--terra-table-row-selected-background-color, #ebf6fd);
 
-.terra-Table--isSelectable {
-  cursor: pointer;
+    &.row {
+      border-color: var(--terra-table-row-selected-border-color, #0092e0) !important;
+    }
 
-  &.terra-Table-row:focus,
-  &.terra-Table-row:hover {
-    background-color: $terra-table-row-hover-background-color !important;
-  }
-
-  &.terra-Table--isSelected:focus,
-  &.terra-Table--isSelected:hover {
-    background-color: $terra-table-row-selected-hover-background-color !important;
-  }
-}
-
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
-@media print {
-  .terra-Table thead {
-    display: table-header-group;
+    + .row {
+      border-top-color: var(--terra-table-row-selected-border-color, #0092e0);
+    }
   }
 
-  .terra-Table tr {
-    page-break-inside: avoid;
+  .is-selectable {
+    cursor: pointer;
+
+    &.row:focus,
+    &.row:hover {
+      background-color: var(--terra-table-row-hover-background-color, #ebf6fd) !important;
+    }
+
+    &.is-selected:focus,
+    &.is-selected:hover {
+      background-color: var(--terra-table-row-selected-hover-background-color, darken(#ebf6fd, 5%)) !important;
+    }
+  }
+
+  // Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+  @media print {
+    .table thead {
+      display: table-header-group;
+    }
+
+    .table tr {
+      page-break-inside: avoid;
+    }
   }
 }
