@@ -7,32 +7,50 @@ class ControlledSelect extends React.Component {
     super(props);
 
     this.state = {
-      animal: 'micros',
+      formData: {
+        animal: 'micros',
+      },
     };
 
     this.updateAnimal = this.updateAnimal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateAnimal(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData[e.target.name] = e.target.value;
+    this.setState({ formData });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
     this.setState({
-      animal: e.target.value,
+      submittedData: Object.assign({}, this.state.formData),
     });
   }
 
   render() {
     return (
-      <form>
-        <Select
-          name="foo"
-          options={[{ value: 'puppies', display: 'Puppies' },
-                    { value: 'kittens', display: 'Kittens' },
-                    { value: 'micros', display: 'Microprocessors' },
-                    { value: 'snaps', display: 'Snappers' }]}
-          onChange={this.updateName}
-          value={this.state.animal}
-        />
-        <button type="submit" />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <Select
+            name="animal"
+            options={[{ value: 'puppies', display: 'Puppies' },
+                      { value: 'kittens', display: 'Kittens' },
+                      { value: 'micros', display: 'Microprocessors' },
+                      { value: 'snaps', display: 'Snappers' }]}
+            onChange={this.updateAnimal}
+            value={this.state.formData.animal}
+          />
+          <button label="Submit" type="submit">Submit</button>
+        </form>
+        { this.state.submittedData &&
+          <div>
+            <p id="select-submision">Submitted with data {JSON.stringify(this.state.submittedData)}</p>
+          </div>
+        }
+      </div>
     );
   }
 }

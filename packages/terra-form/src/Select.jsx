@@ -78,12 +78,15 @@ const Select = ({
     additionalSelectProps['aria-required'] = 'true';
   }
 
-  if (choices && options === undefined) {
+  let finalOptions;
+  if (choices && options === null) {
     // Build out key & value array for deprecated choices prop
-    options = choices.map(choice => ({ value: choice, display: choice }));
+    finalOptions = choices.map(choice => ({ value: choice, display: choice }));
     /* eslint-disable no-console */
     console.warn('The choices prop for the Terra Form Select component is deprecated and will be removed in a later release. Please use the options prop instead https://terra-ui.herokuapp.com/components/core/form#select.');
     /* eslint-disable no-console */
+  } else {
+    finalOptions = options;
   }
 
   return (
@@ -96,7 +99,7 @@ const Select = ({
       value={value}
       className={selectClasses}
     >
-      {options.map(option => <option key={`${option.value}-${option.display}`} value={option.value}>{option.display}</option>)}
+      {finalOptions.map(option => <option key={`${option.value}-${option.display}`} value={option.value}>{option.display}</option>)}
     </select>
   );
 };
