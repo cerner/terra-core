@@ -9,14 +9,14 @@ import React from 'react';
 import SelectField from 'terra-form/lib/SelectField';
 
 <SelectField
-  choices={[{ value: 'm', display: 'moo' },
+  options={[{ value: 'm', display: 'moo' },
             { value: 'b', display: 'boo' },
             { value: 'z', display: 'zar' }]}
   error="This field is required"
   name="description"
   label="Description"
   selectAttrs={{ className: 'healtheintent-application' }}
-  defaultValue="bar"
+  defaultValue="b"
   required
 />
 ```

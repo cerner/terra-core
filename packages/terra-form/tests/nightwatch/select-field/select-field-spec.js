@@ -20,6 +20,15 @@ module.exports = {
       .assert.elementNotPresent('option:nth-of-type(2)');
   },
 
+  'Displays a SelectField with a single option, using deprecated choices prop': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/choices_prop`)
+      .assert.elementPresent('#prop-select-field')
+      .assert.elementPresent('select')
+      .assert.elementPresent('option:nth-of-type(1)') // 1 option present
+      .assert.elementNotPresent('option:nth-of-type(2)');
+  },
+
   'Displays a populated SelectField with multiple options': (browser) => {
     browser // Field attributes
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select-field/populated`)

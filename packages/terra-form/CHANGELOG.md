@@ -11,7 +11,8 @@ Unreleased
 * Update Field documentation
 * Change NumberField defaultValue propType to accept string or numeric values
 * Removed red ring for required fields.
-* Select and SelectField also accept prop 'options', a list of objects to set their value and display
+* Select and SelectField now accepts prop 'options', an Array of objects to set their value and display
+* Select and SelectField 'choices' prop has been deprecated
 
 1.1.0 - (July 18, 2017)
 ------------------
