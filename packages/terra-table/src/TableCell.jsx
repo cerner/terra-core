@@ -13,11 +13,10 @@ const TableCell = ({
   content,
   ...customProps
 }) => (
-  <td {...customProps} data-class="cell">
+  <td {...customProps} data-terra-table-cell>
     {content}
   </td>
 );
-
 
 TableCell.propTypes = propTypes;
 
