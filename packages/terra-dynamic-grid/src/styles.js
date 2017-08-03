@@ -1,9 +1,11 @@
 // IE < 11 doesn't honor window.CSS.Supports. Edge has supports, but will fail on grid.
-const cssGridsEnabled = window.CSS && window.CSS.supports && window.CSS.supports('display', 'grid');
+const isCSSGridsEnabled = window.CSS && window.CSS.supports && window.CSS.supports('display', 'grid');
 
 const gridTemplateColumns = (layout) => {
   const columns = layout['grid-template-columns'];
-  const msColumns = columns.split(/\s+/).join(` ${layout['grid-gap'] || 0} `);
+  // If 2 values are specified, column is the 2nd value, else its the first
+  const gap = (layout['grid-gap'] || '0').split(' ').slice(-1)[0];
+  const msColumns = columns.split(/\s+/).join(` ${gap} `);
 
   return {
     'grid-template-columns': columns,
@@ -13,7 +15,9 @@ const gridTemplateColumns = (layout) => {
 
 const gridTemplateRows = (layout) => {
   const rows = layout['grid-template-rows'];
-  const msRows = rows.split(/\s+/).join(` ${layout['grid-gap'] || 0} `);
+  // If 2 values are specified, row is the 1st value
+  const gap = (layout['grid-gap'] || '0').split(' ')[0];
+  const msRows = rows.split(/\s+/).join(` ${gap} `);
 
   return {
     'grid-template-rows': rows,
@@ -22,7 +26,7 @@ const gridTemplateRows = (layout) => {
 };
 
 
-const gridColumnStart = (layout, region) => {
+const gridColumnStart = (region) => {
   const start = region['grid-column-start'];
   const msStart = (start * 2) - 1;
 
@@ -32,7 +36,7 @@ const gridColumnStart = (layout, region) => {
   };
 };
 
-const gridColumnEnd = (layout, region) => {
+const gridColumnEnd = (region) => {
   const start = region['grid-column-start'];
   const end = region['grid-column-end'] || start + 1;
   const span = end - start < 2
@@ -46,7 +50,7 @@ const gridColumnEnd = (layout, region) => {
 };
 
 
-const gridRowStart = (layout, region) => {
+const gridRowStart = (region) => {
   const start = region['grid-row-start'];
   const msStart = (start * 2) - 1;
 
@@ -56,7 +60,7 @@ const gridRowStart = (layout, region) => {
   };
 };
 
-const gridRowEnd = (layout, region) => {
+const gridRowEnd = (region) => {
   const start = region['grid-row-start'];
   const end = region['grid-row-end'] || start + 1;
   const span = end - start < 2
@@ -72,8 +76,8 @@ const gridRowEnd = (layout, region) => {
 
 const generateGridStyles = (layout) => {
   const styles = {
-    display: cssGridsEnabled ? 'grid' : '-ms-grid',
-    'grid-gap': layout['grid-gap'],
+    display: isCSSGridsEnabled ? 'grid' : '-ms-grid',
+    'grid-gap': layout['grid-gap'] || '0',
     ...gridTemplateColumns(layout),
     ...gridTemplateRows(layout),
   };
@@ -86,10 +90,10 @@ const generateGridStyles = (layout) => {
 const generateRegionStyles = layout => (
   (region) => {
     const styles = {
-      ...gridColumnStart(layout, region),
-      ...gridColumnEnd(layout, region),
-      ...gridRowStart(layout, region),
-      ...gridRowEnd(layout, region),
+      ...gridColumnStart(region),
+      ...gridColumnEnd(region),
+      ...gridRowStart(region),
+      ...gridRowEnd(region),
       ...region.style,
     };
 
@@ -102,9 +106,10 @@ const generateRegionStyles = layout => (
 
 const generateStyles = (layout) => {
   const grid = generateGridStyles(layout);
+  const regionStyles = generateRegionStyles(layout);
   return layout.regions
-    .map(generateRegionStyles(layout))
-    .reduce((regions, region) => Object.assign(regions, region), grid);
+    .map(regionStyles)
+    .reduce((regions, region) => ({ ...regions, ...region }), grid);
 };
 
 export default generateStyles;

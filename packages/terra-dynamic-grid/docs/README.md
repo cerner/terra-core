@@ -1,6 +1,7 @@
 # Terra Dynamic Grid
 
-{insert description}
+The DynamicGrid component provides users a way to dynamically configure a CSS Grid using
+configuration. The component supports defining custom regions across multiple responsive breakpoints.
 
 ## Getting Started
 
@@ -12,8 +13,31 @@
 ```jsx
 import React from 'react';
 import DynamicGrid from 'terra-dynamic-grid';
+import Region from 'terra-dynamic-grid/Region';
 
-<DynamicGrid {props...} />
+const layouts = [{
+  'grid-template-columns': '100px 100px',
+  'grid-template-rows': 'auto',
+  'grid-gap': '10px',
+  regions: [
+    {
+      name: 'r1',
+      'grid-column-start': 1,
+      'grid-row-start': 1,
+    },
+    {
+      name: 'r2',
+      'grid-column-start': 2,
+      'grid-row-start': 1,
+    },
+  ],
+}];
+
+
+<DynamicGrid layouts={layouts} >
+  <Region name="r1">Region 1</Region>
+  <Region name="r2">Region 2</Region>
+</DynamicGrid>
 ```
 
 ## Component Features

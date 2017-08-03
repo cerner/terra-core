@@ -22,7 +22,7 @@ const layouts = [{
   ],
 }];
 
-const OneColumn = () => (
+const TwoColumn = () => (
   (<DynamicGrid layouts={layouts}>
     <Region name="r1">
       <Card>Region 1</Card>
@@ -33,4 +33,4 @@ const OneColumn = () => (
   </DynamicGrid>)
 );
 
-export default OneColumn;
+export default TwoColumn;
