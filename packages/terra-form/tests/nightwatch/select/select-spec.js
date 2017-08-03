@@ -44,4 +44,21 @@ module.exports = {
       .assert.value('select[name="zounds"]', 'm')
       .assert.containsText('select[name="zounds"]', 'moo');
   },
+
+  'Displays a populated Select with a onChange and value for controlled form submission': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select/populated_controlled`)
+      .assert.value('select[name="animal"]', 'micros')
+      .assert.elementPresent('option:nth-of-type(4)') // 4 options present
+      .assert.elementNotPresent('option:nth-of-type(5)');
+  },
+
+  'Controlled Select correctly submits form data': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/select/populated_controlled`)
+      .assert.value('select[name="animal"]', 'micros')
+      .setValue('select[name="animal"]', 'kittens')
+      .click('#select-submit')
+      .assert.containsText('#select-submission', 'Submitted with data {"animal":"kittens"}');
+  },
 };

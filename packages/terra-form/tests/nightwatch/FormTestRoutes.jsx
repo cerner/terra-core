@@ -27,6 +27,7 @@ import PopulatedSelectControlled from './select/PopulatedSelectControlled';
 import DefaultSelectField from './select-field/DefaultSelectField';
 import ChoicesPropSelectField from './select-field/ChoicesPropSelectField';
 import PopulatedSelectField from './select-field/PopulatedSelectField';
+import PopulatedSelectFieldControlled from './select-field/PopulatedSelectFieldControlled';
 
 const routes = (
   <div>
@@ -54,6 +55,7 @@ const routes = (
     <Route path="/tests/form-tests/select-field/default" component={DefaultSelectField} />
     <Route path="/tests/form-tests/select-field/choices_prop" component={ChoicesPropSelectField} />
     <Route path="/tests/form-tests/select-field/populated" component={PopulatedSelectField} />
+    <Route path="/tests/form-tests/select-field/populated_controlled" component={PopulatedSelectFieldControlled} />
   </div>
 );
 

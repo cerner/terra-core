@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Select from '../../../lib/Select';
+import SelectField from '../../../lib/SelectField';
 
-class ControlledSelect extends React.Component {
+class ControlledSelectField extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,7 +34,8 @@ class ControlledSelect extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <Select
+          <SelectField
+            id="controlled-populated-select-field"
             name="animal"
             options={[{ value: 'puppies', display: 'Puppies' },
                       { value: 'kittens', display: 'Kittens' },
@@ -55,4 +56,4 @@ class ControlledSelect extends React.Component {
   }
 }
 
-export default ControlledSelect;
+export default ControlledSelectField;
