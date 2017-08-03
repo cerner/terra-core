@@ -1,28 +1,8 @@
 import React from 'react';
-import DatePicker from 'terra-date-picker';
+import DatePickerExampleTemplate from './DatePickerExampleTemplate';
 
-class DatePickerExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: '' };
-    this.handleDateChange = this.handleDateChange.bind(this);
-  }
-
-  handleDateChange(event, date) {
-    this.setState({ date });
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Selected ISO Date: {this.state.date}</p>
-        <DatePicker
-          name="date-input-default"
-          onChange={this.handleDateChange}
-        />
-      </div>
-    );
-  }
-}
+const DatePickerExample = () => (
+  <DatePickerExampleTemplate />
+);
 
 export default DatePickerExample;

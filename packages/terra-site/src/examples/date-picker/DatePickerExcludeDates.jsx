@@ -1,30 +1,12 @@
 import React from 'react';
 import moment from 'moment';
-import DatePicker from 'terra-date-picker';
+import DatePickerExampleTemplate from './DatePickerExampleTemplate';
 
-class DatePickerExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: '' };
-    this.handleDateChange = this.handleDateChange.bind(this);
-  }
+const DatePickerExample = () => (
+  <DatePickerExampleTemplate
+    excludeDates={[moment().subtract(1, 'days').format(), moment().add(1, 'days').format()]}
+  />
+);
 
-  handleDateChange(event, date) {
-    this.setState({ date });
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Selected ISO Date: {this.state.date}</p>
-        <DatePicker
-          name="date-input-exclude"
-          excludeDates={[moment().subtract(1, 'days').format(), moment().add(1, 'days').format()]}
-          onChange={this.handleDateChange}
-        />
-      </div>
-    );
-  }
-}
 
 export default DatePickerExample;
