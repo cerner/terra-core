@@ -52,7 +52,6 @@ class TextareaFieldExamples extends React.Component {
             error="Profile Descirption is required"
             help="How would you describe your current position?"
             cols={10}
-            maxLength={15}
             minLength={5}
             rows={10}
             required
@@ -74,7 +73,6 @@ class TextareaFieldExamples extends React.Component {
               isInline
               error="This field is required"
               help="Think on a scale of 1 to 10."
-              maxLength={15}
               minLength={5}
               required
               onChange={this.handleTeamworkChange}

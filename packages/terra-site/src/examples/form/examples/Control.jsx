@@ -46,6 +46,7 @@ class ControlExamples extends React.Component {
             labelText="I have Children"
             name="children_present"
             value="has_children"
+            checked={this.state.children === 'has_children'}
             onChange={this.handleChildrenChange}
           />
           <Control
@@ -53,6 +54,7 @@ class ControlExamples extends React.Component {
             labelText="I do not have Children"
             name="children_present"
             value="has_no_children"
+            checked={this.state.children === 'has_no_children'}
             onChange={this.handleChildrenChange}
           />
           <div>
@@ -62,6 +64,7 @@ class ControlExamples extends React.Component {
               value="c++"
               labelText="C++"
               isInline
+              checked={this.state.language === 'c++'}
               onChange={this.handleLanguageChange}
             />
             <Control
@@ -70,6 +73,7 @@ class ControlExamples extends React.Component {
               value="java"
               labelText="Java"
               isInline
+              checked={this.state.language === 'java'}
               onChange={this.handleLanguageChange}
             />
             <Control
@@ -78,6 +82,7 @@ class ControlExamples extends React.Component {
               value="ruby"
               labelText="Ruby"
               isInline
+              checked={this.state.language === 'ruby'}
               onChange={this.handleLanguageChange}
             />
             <Control
@@ -86,6 +91,7 @@ class ControlExamples extends React.Component {
               value="javascript"
               labelText="JavaScript"
               isInline
+              checked={this.state.language === 'javascript'}
               onChange={this.handleLanguageChange}
             />
           </div>

@@ -17,7 +17,7 @@ class TextareaExamples extends React.Component {
   }
 
   handleArea2Change(event) {
-    this.setState({ area1: event.target.value });
+    this.setState({ area2: event.target.value });
   }
 
   render() {

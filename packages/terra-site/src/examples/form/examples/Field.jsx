@@ -21,7 +21,6 @@ class FieldExamples extends React.Component {
             type="checkbox"
             label="Where do you work"
             name="work_location"
-            value=""
             error="This field is required"
             help="We need to to verify if you work for a big or small company"
             required
