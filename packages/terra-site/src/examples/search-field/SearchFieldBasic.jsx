@@ -1,21 +1,8 @@
 import React from 'react';
-import SearchField from 'terra-search-field';
+import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
-class SearchFieldView extends React.Component {
+const SearchFieldExample = () => (
+  <SearchFieldExampleTemplate />
+);
 
-  constructor(props) {
-    super(props);
-    this.state = { searchText: '' };
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Search Text: {this.state.searchText}</p>
-        <SearchField onSearch={(searchText) => { this.setState({ searchText }); }} />
-      </div>
-    );
-  }
-}
-
-export default SearchFieldView;
+export default SearchFieldExample;
