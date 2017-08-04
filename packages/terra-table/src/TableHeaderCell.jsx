@@ -53,7 +53,7 @@ const TableHeaderCell = ({
   }
 
   return (
-    <th {...customProps} data-class="header" className={contentClassName} {...dataSort}>
+    <th {...customProps} data-terra-table-header-cell className={contentClassName} {...dataSort}>
       {content}
       {sortIndicator}
     </th>
