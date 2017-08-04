@@ -126,7 +126,7 @@ exports[`test should render as controlled when just the required fields and a on
 exports[`test should render as uncontrolled when just the required fields and a default value is passed into the SelectField 1`] = `
 <SelectField
   choices={null}
-  defaultValue="boo"
+  defaultValue="b"
   error={null}
   help={null}
   isInline={false}
@@ -158,7 +158,7 @@ exports[`test should render as uncontrolled when just the required fields and a 
       className="field">
       <Select
         choices={null}
-        defaultValue="boo"
+        defaultValue="b"
         name={null}
         options={
           Array [
@@ -175,7 +175,7 @@ exports[`test should render as uncontrolled when just the required fields and a 
         required={false}>
         <select
           className="select"
-          defaultValue="boo"
+          defaultValue="b"
           name={null}
           required={false}>
           <option

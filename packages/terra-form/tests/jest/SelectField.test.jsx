@@ -27,7 +27,7 @@ it('should render a SelectField when all the possible props are passed into it',
 });
 
 it('should render as uncontrolled when just the required fields and a default value is passed into the SelectField', () => {
-  const selectField = <SelectField options={[{ value: 'm', display: 'moo' }, { value: 'b', display: 'boo' }]} defaultValue="boo" />;
+  const selectField = <SelectField options={[{ value: 'm', display: 'moo' }, { value: 'b', display: 'boo' }]} defaultValue="b" />;
   const wrapper = mount(selectField);
   expect(wrapper).toMatchSnapshot();
 });
