@@ -35,7 +35,7 @@ const propTypes = {
   /**
    * From `connect`. The desired size of the modal.
    */
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge', 'fullscreen']),
 
   /**
    * From `connect`. The focus state of the modal.
@@ -134,7 +134,9 @@ class ModalManager extends React.Component {
   }
 
   buildModalComponents() {
-    const { modalComponentData, isFocused, isMaximized, pushModal, popModal, closeModal, maximizeModal, minimizeModal, loseFocus, gainFocus } = this.props;
+    const { size, modalComponentData, isFocused, isMaximized, pushModal, popModal, closeModal, maximizeModal, minimizeModal, loseFocus, gainFocus } = this.props;
+
+    const isFullscreen = size === 'fullscreen';
 
     return modalComponentData.map((componentData, index) => {
       const ComponentClass = AppDelegate.getComponentForDisclosure(componentData.name);
@@ -157,8 +159,8 @@ class ModalManager extends React.Component {
         ),
         closeDisclosure: (data) => { closeModal(data); },
         goBack: index > 0 ? (data) => { popModal(data); } : null,
-        maximize: !isMaximized ? (data) => { maximizeModal(data); } : null,
-        minimize: isMaximized ? (data) => { minimizeModal(data); } : null,
+        maximize: !isFullscreen && !isMaximized ? (data) => { maximizeModal(data); } : null,
+        minimize: !isFullscreen && isMaximized ? (data) => { minimizeModal(data); } : null,
         releaseFocus: !isFocused ? (data) => { gainFocus(data); } : null,
         requestFocus: isFocused ? (data) => { loseFocus(data); } : null,
       });
@@ -192,7 +194,7 @@ class ModalManager extends React.Component {
 
   render() {
     const { closeModal, size, isFocused, isOpen, isMaximized } = this.props;
-    const isFullscreen = isMaximized || this.forceFullscreenModal;
+    const isFullscreen = isMaximized || this.forceFullscreenModal || size === 'fullscreen';
     const modalClasses = cx([
       { [`${styles[size]}`]: !isFullscreen },
     ]);
@@ -210,7 +212,7 @@ class ModalManager extends React.Component {
           closeOnOutsideClick={false}
           ariaLabel="Modal"
         >
-          <SlideGroup items={this.buildModalComponents()} isAnimated />
+          <SlideGroup items={this.buildModalComponents()} isAnimated={!isFullscreen} />
         </Modal>
       </div>
     );
