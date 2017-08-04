@@ -60,6 +60,15 @@ const defaultProps = {
   value: undefined,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
 // eslint-disable-next-line react/prefer-stateless-function
 class DatePickerInput extends React.Component {
   constructor(props) {
@@ -115,7 +124,7 @@ class DatePickerInput extends React.Component {
     // Since we want to show the picker only when the calendar button is clicked, we need to delete the onFocus handle that is passed in by react-datepicker.
     delete additionalInputProps.onFocus;
 
-    const dateValue = DateUtil.convertToISO8601(value, 'MM/DD/YYYY');
+    const dateValue = DateUtil.convertToISO8601(value, DateUtil.getFormatByLocale(this.context.intl.locale));
 
     return (
       (<div className={styles['custom-input']}>
@@ -128,7 +137,7 @@ class DatePickerInput extends React.Component {
           value={dateValue}
         />
         <Input
-          {...additionalInputProps} // TODO: When forms is available, this.props.inputAttributes should be passed to the attrs props in the TextField component (attrs={this.props.inputAttributes}) instead of destructuring the inputAttributes prop here.
+          {...additionalInputProps}
           className={styles.input}
           type="text"
           name={'terra-date-'.concat(name)}
@@ -151,5 +160,6 @@ class DatePickerInput extends React.Component {
 
 DatePickerInput.propTypes = propTypes;
 DatePickerInput.defaultProps = defaultProps;
+DatePickerInput.contextTypes = contextTypes;
 
 export default DatePickerInput;
