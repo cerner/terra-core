@@ -9,6 +9,9 @@ Unreleased
 ### Changed
 * Added margin to body
 
+### Added
+* Added nightwatch tests
+
 1.1.0 - (July 18, 2017)
 ------------------
 ### Changed
