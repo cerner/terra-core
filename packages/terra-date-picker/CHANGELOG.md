@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Change data-class to be name spaced
 
 1.4.0 - (August 1, 2017)
 ------------------

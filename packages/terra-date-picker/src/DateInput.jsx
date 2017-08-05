@@ -131,7 +131,7 @@ class DatePickerInput extends React.Component {
         <input
           // Create a hidden input for storing the name and value attributes to use when submitting the form.
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
-          data-class="hidden-date-input"
+          data-terra-date-input-hidden
           type="hidden"
           name={name}
           value={dateValue}
