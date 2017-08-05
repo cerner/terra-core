@@ -149,21 +149,19 @@ module.exports = {
   },
 
   'Display a selectable table with a subheader': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`)
-      .assert.attributeContains('tbody tr:nth-child(1)', 'data-class', 'subheader-row')
-      .assert.containsText('tbody tr:nth-child(1) td:nth-child(1)', 'Single')
-      .assert.attributeContains('tbody tr:nth-child(4)', 'data-class', 'subheader-row')
-      .assert.containsText('tbody tr:nth-child(4) td:nth-child(1)', 'Married');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`);
+    browser.expect.element('tbody tr:nth-child(1)').to.have.attribute('data-terra-table-subheader-row');
+    browser.assert.containsText('tbody tr:nth-child(1) td:nth-child(1)', 'Single');
+    browser.expect.element('tbody tr:nth-child(4)').to.have.attribute('data-terra-table-subheader-row');
+    browser.assert.containsText('tbody tr:nth-child(4) td:nth-child(1)', 'Married');
   },
 
   'Display a non-selectable table with a subheader': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-subheaders`)
-      .assert.attributeContains('tbody tr:nth-child(1)', 'data-class', 'subheader-row')
-      .assert.containsText('tbody tr:nth-child(1) td:nth-child(1)', 'Single')
-      .assert.attributeContains('tbody tr:nth-child(4)', 'data-class', 'subheader-row')
-      .assert.containsText('tbody tr:nth-child(4) td:nth-child(1)', 'Married');
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-subheaders`);
+    browser.expect.element('tbody tr:nth-child(1)').to.have.attribute('data-terra-table-subheader-row');
+    browser.assert.containsText('tbody tr:nth-child(1) td:nth-child(1)', 'Single');
+    browser.expect.element('tbody tr:nth-child(4)').to.have.attribute('data-terra-table-subheader-row');
+    browser.assert.containsText('tbody tr:nth-child(4) td:nth-child(1)', 'Married');
   },
 
   'Triggers onChange for selectable table upon clicking a row': (browser) => {
@@ -218,6 +216,7 @@ module.exports = {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/table-tests/table-selectable-subheaders`);
     browser.assert.elementPresent('.Table-Custom');
     browser.assert.elementPresent('.Header-Custom');
+    browser.assert.elementPresent('.HeaderCell-Custom');
     browser.assert.elementPresent('.Cell-Custom');
     browser.assert.elementPresent('.SingleSelectableRows-Custom');
     browser.assert.elementPresent('.Subheader-Custom');
