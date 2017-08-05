@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import moment from 'moment';
 
 class DateUtil {
@@ -38,6 +39,18 @@ class DateUtil {
 
     return date;
   }
+
+  // Gets the long date format based on the locale.
+  static getFormatByLocale(locale) {
+    if (locale) {
+      const localMoment = moment();
+      localMoment.locale(locale);
+      return localMoment.localeData()._longDateFormat.L;
+    }
+
+    return undefined;
+  }
+
 }
 
 export default DateUtil;

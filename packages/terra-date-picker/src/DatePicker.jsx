@@ -68,13 +68,20 @@ const defaultProps = {
   selectedDate: undefined,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
 class DatePicker extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      locale: 'en-US', // TODO: Get the locale from i18n
-      dateFormat: 'MM/DD/YYYY', // TODO: Get the locale from i18n
       selectedDate: DateUtil.createSafeDate(props.selectedDate),
     };
 
@@ -123,9 +130,9 @@ class DatePicker extends React.Component {
       ...customProps
     } = this.props;
 
-    // TODO: Need translation from date_util
-    const todayString = 'Today';
-
+    const intl = this.context.intl;
+    const todayString = intl.formatMessage({ id: 'Terra.datePicker.today' });
+    const dateFormat = DateUtil.getFormatByLocale(intl.locale);
     const exludeMomentDates = DateUtil.filterInvalidDates(excludeDates);
     const includeMomentDates = DateUtil.filterInvalidDates(includeDates);
     const maxMomentDate = DateUtil.createSafeDate(maxDate);
@@ -147,10 +154,10 @@ class DatePicker extends React.Component {
         todayButton={todayString}
         withPortal
         dateFormatCalendar=" "
-        dateFormat={this.state.dateFormat}
+        dateFormat={dateFormat}
         fixedHeight
-        locale={this.state.locale}
-        placeholderText={this.state.dateFormat}
+        locale={intl.locale}
+        placeholderText={dateFormat}
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
@@ -172,10 +179,10 @@ class DatePicker extends React.Component {
         minDate={minMomentDate}
         todayButton={todayString}
         dateFormatCalendar=" "
-        dateFormat={this.state.dateFormat}
+        dateFormat={dateFormat}
         fixedHeight
-        locale={this.state.locale}
-        placeholderText={this.state.dateFormat}
+        locale={intl.locale}
+        placeholderText={dateFormat}
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
@@ -195,5 +202,6 @@ class DatePicker extends React.Component {
 
 DatePicker.propTypes = propTypes;
 DatePicker.defaultProps = defaultProps;
+DatePicker.contextTypes = contextTypes;
 
 export default DatePicker;

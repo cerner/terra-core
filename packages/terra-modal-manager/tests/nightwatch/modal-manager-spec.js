@@ -26,6 +26,56 @@ module.exports = {
     browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
   },
 
+  'Opens the modal when disclose tiny is selected': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose-tiny');
+
+    browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
+  },
+
+  'Opens the modal when disclose small is selected': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose-small');
+
+    browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
+  },
+
+  'Opens the modal when disclose medium is selected': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose-medium');
+
+    browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
+  },
+
+  'Opens the modal when disclose large is selected': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose-large');
+
+    browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
+  },
+
+  'Opens the modal when disclose huge is selected': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose-huge');
+
+    browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
+  },
+
+  'Opens the modal when disclose fullscreen is selected': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
+
+    browser.click('#root-component .disclose-fullscreen');
+
+    browser.expect.element('[class*="slide-group"] #DemoContainer-1').to.be.present;
+    browser.expect.element('#DemoContainer-1 .maximize').to.not.be.present;
+    browser.expect.element('#DemoContainer-1 .minimize').to.not.be.present;
+  },
+
   'Ensures goBack is not provided to a single modal component': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/modal-manager-tests/demo`);
 

@@ -18,18 +18,20 @@ class DemoContainer extends React.Component {
     this.releaseFocus = this.releaseFocus.bind(this);
   }
 
-  disclose() {
-    this.props.app.disclose({
-      preferredType: 'modal',
-      size: 'small',
-      content: {
-        key: `DemoContainer-${nestedComponentIndex += 1}`,
-        name: 'DemoContainer',
-        props: {
-          identifier: `DemoContainer-${nestedComponentIndex}`,
+  disclose(size) {
+    return () => {
+      this.props.app.disclose({
+        preferredType: 'modal',
+        size,
+        content: {
+          key: `DemoContainer-${nestedComponentIndex += 1}`,
+          name: 'DemoContainer',
+          props: {
+            identifier: `DemoContainer-${nestedComponentIndex}`,
+          },
         },
-      },
-    });
+      });
+    };
   }
 
   dismiss() {
@@ -72,7 +74,13 @@ class DemoContainer extends React.Component {
         {app && app.releaseFocus ? <h4>Modal has lost focus!</h4> : null }
         {app && app.requestFocus ? <h4>Modal has gained focus!</h4> : null }
         <br />
-        <button className="disclose" onClick={this.disclose}>Disclose</button>
+        <button className="disclose" onClick={this.disclose()}>Disclose</button>
+        <button className="disclose-tiny" onClick={this.disclose('tiny')}>Disclose Tiny</button>
+        <button className="disclose-small" onClick={this.disclose('small')}>Disclose Small</button>
+        <button className="disclose-medium" onClick={this.disclose('medium')}>Disclose Medium</button>
+        <button className="disclose-large" onClick={this.disclose('large')}>Disclose Large</button>
+        <button className="disclose-huge" onClick={this.disclose('huge')}>Disclose Huge</button>
+        <button className="disclose-fullscreen" onClick={this.disclose('fullscreen')}>Disclose Fullscreen</button>
         {app && app.dismiss ? <button className="dismiss" onClick={this.dismiss}>Dismiss</button> : null }
         {app && app.closeDisclosure ? <button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</button> : null }
         {app && app.goBack ? <button className="go-back" onClick={this.goBack}>Go Back</button> : null }
