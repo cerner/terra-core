@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Change data-class to be name spaced
 
 1.4.0 - (August 1, 2017)
 ------------------
@@ -32,6 +34,9 @@ Unreleased
 
 ### Fixed
 * Check null date when date entry is cleared
+
+### Added
+* Internationalized this component
 
 1.0.0 - (June 28, 2017)
 ------------------

@@ -61,14 +61,14 @@ module.exports = {
 
   'Creates a hidden input with a name atribute of "date-input" and an empty value attribute when no date is entered': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
-    browser.expect.element('[data-class="hidden-date-input"]').to.have.attribute('name').which.equals('date-input');
-    browser.expect.element('[data-class="hidden-date-input"]').to.have.attribute('value').which.equals('');
+    browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('name').which.equals('date-input');
+    browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('value').which.equals('');
   },
 
   'Creates a hidden input with a default name atribute of "date-input" and sets the value in ISO8601 format when a valid date is entered': (browser) => {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/start-date`);
-    browser.expect.element('[data-class="hidden-date-input"]').to.have.attribute('name').which.equals('date-input');
-    browser.expect.element('[data-class="hidden-date-input"]').to.have.attribute('value').which.equals('2017-04-01');
+    browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('name').which.equals('date-input');
+    browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('value').which.equals('2017-04-01');
   },
 
   'Creates a hidden input and sets the value attribute as is when an invalid date is entered': (browser) => {
@@ -76,8 +76,8 @@ module.exports = {
     browser.click('[name="terra-date-date-input"]');
     browser.keys('2017');
 
-    browser.expect.element('[data-class="hidden-date-input"]').to.have.attribute('name').which.equals('date-input');
-    browser.expect.element('[data-class="hidden-date-input"]').to.have.attribute('value').which.equals('2017');
+    browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('name').which.equals('date-input');
+    browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('value').which.equals('2017');
   },
 
   'Displays the calendar button with a height that matches the input ': (browser) => {
