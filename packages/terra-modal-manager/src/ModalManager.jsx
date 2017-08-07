@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import Modal from 'terra-modal';
 
 import AppDelegate from 'terra-app-delegate';
