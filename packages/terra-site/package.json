@@ -52,6 +52,7 @@
     "terra-image": "^1.2.0",
     "terra-list": "^1.3.0",
     "terra-markdown": "^1.2.0",
+    "terra-menu": "^0.x",
     "terra-modal": "^1.3.0",
     "terra-modal-manager": "^1.4.0",
     "terra-overlay": "^1.2.0",

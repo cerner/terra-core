@@ -1,0 +1,40 @@
+/* stylelint-disable selector-class-pattern  */
+
+:local {
+  .item {
+    cursor: pointer;
+    padding: 0.286rem 0;
+
+    &:hover,
+    &:focus {
+      background-color: #ebf6fd;
+    }
+  }
+
+  .title {
+    color: var(--terra-menu-item-text-color, #1c1f21);
+    font-size: var(--terra-menu-item-text-font-size, 13px);
+    line-height: 1.2;
+    margin-left: 10px;
+  }
+
+  .checkmark {
+    color: var(--terra-menu-item-checkmark-icon-color, #1c1f21);
+    font-size: var(--terra-menu-item-checkmark-icon-font-size, 12px);
+    margin-left: 10px;
+    visibility: hidden;
+  }
+
+  .selected {
+    .checkmark {
+      visibility: visible;
+    }
+  }
+
+  .chevron {
+    color: var(--terra-menu-item-chevron-icon-color, #9b9fa1);
+    font-size: var(--terra-menu-item-chevron-icon-font-size, 10px);
+    margin: 0 10px;
+  }
+
+}

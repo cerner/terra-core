@@ -286,10 +286,10 @@ class PopupContent extends React.Component {
     return (
       <FocusTrap>
         <div {...customProps} tabIndex="0" className={cx('popupContent')} ref={refCallback}>
-          {arrowContent}
           <div className={innerClassNames} style={contentStyle}>
             {content}
           </div>
+          {arrowContent}
         </div>
       </FocusTrap>
     );

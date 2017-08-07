@@ -1,0 +1,22 @@
+exports[`Menu should render a default component 1`] = `
+<div>
+  <Menu
+    contentWidth="240"
+    isArrowDisplayed={false}
+    isOpen={true}
+    onRequestClose={[Function]}
+    targetRef={[Function]}>
+    <MenuItem
+      isSelected={false}
+      subMenuItems={Array []}
+      text="testing" />
+  </Menu>
+  <div
+    style={
+      Object {
+        "height": "20px",
+        "width": "20px",
+      }
+    } />
+</div>
+`;

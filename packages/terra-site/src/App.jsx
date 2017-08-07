@@ -68,6 +68,7 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/icon">Icon</Link>} />
                 <List.Item content={<Link to="/site/image">Image</Link>} />
                 <List.Item content={<Link to="/site/list">List</Link>} />
+                <List.Item content={<Link to="/site/menu">Menu</Link>} />
                 <List.Item content={<Link to="/site/modal">Modal</Link>} />
                 <List.Item content={<Link to="/site/modal-manager">Modal Manager</Link>} />
                 <List.Item content={<Link to="/site/overlay">Overlay</Link>} />
