@@ -1,0 +1,62 @@
+exports[`test should render a default date input 1`] = `
+<div
+  class="custom-input">
+  <input
+    data-terra-date-input-hidden="true"
+    type="hidden" />
+  <input
+    class="input input"
+    name="terra-date-undefined"
+    type="text" />
+  <button
+    aria-disabled="false"
+    class="button default compact button"
+    type="button">
+    <svg
+      aria-hidden="true"
+      class="icon"
+      focusable="false"
+      height="1em"
+      viewbox="0 0 48 48"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M43 6h-4V2.2C39 1 38 0 36.8 0h-1.7C33.9.1 33 1 33 2.2V6H15V2.2C15 1 14 0 12.8 0h-1.7C9.9.1 9 1 9 2.2V6H5c-1.1 0-2 .9-2 2v38c0 1.1.9 2 2 2h24c1.3-.1 2.5-.6 3.4-1.4l11.2-11.1c.8-.9 1.3-2.1 1.4-3.4V8c0-1.1-.9-2-2-2zM6 21h36v10H30c-1.1 0-2 .9-2 2v12H6V21zm25 22.8V34h9.8L31 43.8z" />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`test should render a default date input with all props 1`] = `
+<div
+  class="custom-input">
+  <input
+    data-terra-date-input-hidden="true"
+    name="date-input"
+    type="hidden"
+    value="2017-01-01" />
+  <input
+    class="input input"
+    id="terra-date-input"
+    name="terra-date-date-input"
+    placeholder="MM/DD/YYYY"
+    type="text"
+    value="01/01/2017" />
+  <button
+    aria-disabled="false"
+    class="button default compact button"
+    type="button">
+    <svg
+      aria-hidden="true"
+      class="icon"
+      focusable="false"
+      height="1em"
+      viewbox="0 0 48 48"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M43 6h-4V2.2C39 1 38 0 36.8 0h-1.7C33.9.1 33 1 33 2.2V6H15V2.2C15 1 14 0 12.8 0h-1.7C9.9.1 9 1 9 2.2V6H5c-1.1 0-2 .9-2 2v38c0 1.1.9 2 2 2h24c1.3-.1 2.5-.6 3.4-1.4l11.2-11.1c.8-.9 1.3-2.1 1.4-3.4V8c0-1.1-.9-2-2-2zM6 21h36v10H30c-1.1 0-2 .9-2 2v12H6V21zm25 22.8V34h9.8L31 43.8z" />
+    </svg>
+  </button>
+</div>
+`;
