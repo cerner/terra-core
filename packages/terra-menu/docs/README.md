@@ -22,8 +22,8 @@ class BasicMenu extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.handleToggle1OnClick = this.handleToggle1OnClick.bind(this);
-    this.handleToggle2OnClick = this.handleToggle2OnClick.bind(this);
+    this.handleOnClickFirstMenu = this.handleOnClickFirstMenu.bind(this);
+    this.handleOnClickSecondMenu = this.handleOnClickSecondMenu.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
     this.state = {
       open: false,
@@ -49,11 +49,11 @@ class BasicMenu extends React.Component {
     this.setState({ open: false });
   }
 
-  handleToggle1OnClick() {
+  handleOnClickFirstMenu() {
     this.setState(prevState => ({ toggle1Selected: !prevState.toggle1Selected }));
   }
 
-  handleToggle2OnClick() {
+  handleOnClickSecondMenu() {
     this.setState(prevState => ({ toggle2Selected: !prevState.toggle2Selected }));
   }
 
@@ -63,7 +63,7 @@ class BasicMenu extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
+      <div ref={this.setButtonNode}>
         <Menu
           isOpen={this.state.open}
           targetRef={this.getButtonNode}
@@ -75,14 +75,14 @@ class BasicMenu extends React.Component {
             text="Toggle Item 1"
             key="Toggle1"
             isSelected={this.state.toggle1Selected}
-            onClick={this.handleToggle1OnClick}
+            onClick={this.handleOnClickFirstMenu}
             isSelectable
           />
           <Menu.Item
             text="Toggle Item 2"
             key="Toggle2"
             isSelected={this.state.toggle2Selected}
-            onClick={this.handleToggle2OnClick}
+            onClick={this.handleOnClickSecondMenu}
             isSelectable
           />
           <Menu.Divider key="Divider1" />

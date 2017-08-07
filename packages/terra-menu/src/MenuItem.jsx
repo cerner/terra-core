@@ -31,7 +31,7 @@ const propTypes = {
   isSelected: PropTypes.bool,
 
   /**
-   * Indicates if the item should be toggle-able
+   * Indicates if the item should be selectable
   */
   isSelectable: PropTypes.bool,
 

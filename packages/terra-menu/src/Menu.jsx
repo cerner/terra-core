@@ -109,8 +109,7 @@ class Menu extends React.Component {
     let itemCount = 0;
     let dividerCount = 0;
 
-    for (let i = 0; i < this.props.children.length; i += 1) {
-      const child = this.props.children[i];
+    React.Chilren.forEach(this.props.children, (child) => {
       if (child.props.children && child.props.children.length > 0) {
         itemCount += child.props.children.length;
       } else if (child.type === <MenuDivider />.type) {
@@ -118,7 +117,7 @@ class Menu extends React.Component {
       } else {
         itemCount += 1;
       }
-    }
+    });
 
     return (itemCount * MENU_ITEM_HEIGHT) + (dividerCount * MENU_DIVIDER_HEIGHT) + MENU_PADDING_TOP + MENU_PADDING_BOTTOM;
   }
@@ -180,9 +179,9 @@ class Menu extends React.Component {
     ]);
 
     const arrowClass = cx([
-      'arrow', 
+      'arrow',
       { submenu: isSubMenu },
-      classNameArrow
+      classNameArrow,
     ]);
 
     return (

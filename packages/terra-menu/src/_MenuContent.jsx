@@ -18,7 +18,7 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
-   * Callback function for when close button is clicked
+   * Callback function for when back button is clicked
    */
   onRequestBack: PropTypes.func,
   /**
@@ -61,14 +61,9 @@ class MenuContent extends React.Component {
   }
 
   isSelectable() {
-    for (let i = 0; i < this.props.children.length; i += 1) {
-      const child = this.props.children[i];
-      if (child.type === <MenuItemGroup />.type || child.props.isSelectable) {
-        return true;
-      }
-    }
-
-    return false;
+    return this.props.children.some(child => (
+      child.type === <MenuItemGroup />.type || child.props.isSelectable
+    ));
   }
 
   wrapOnClick(item) {
