@@ -179,6 +179,12 @@ class Menu extends React.Component {
       classNameContent,
     ]);
 
+    const arrowClass = cx([
+      'arrow', 
+      { submenu: isSubMenu },
+      classNameArrow
+    ]);
+
     return (
       <Popup
         {...attributes}
@@ -187,7 +193,7 @@ class Menu extends React.Component {
         contentAttachment={isArrowDisplayed ? 'top center' : 'top right'}
         contentHeight={popupHeight.toString()}
         contentWidth={this.props.contentWidth}
-        classNameArrow={cx(['arrow', classNameArrow])}
+        classNameArrow={arrowClass}
         classNameContent={contentClass}
         classNameOverlay={classNameOverlay}
         isOpen={isOpen}
