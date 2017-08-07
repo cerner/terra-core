@@ -114,6 +114,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 
 ### Packages Requiring I18n
 
+- [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
 - [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker)
 - [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
 - [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)

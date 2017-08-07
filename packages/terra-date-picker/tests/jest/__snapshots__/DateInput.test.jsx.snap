@@ -2,7 +2,7 @@ exports[`test should render a default date input 1`] = `
 <div
   class="custom-input">
   <input
-    data-class="hidden-date-input"
+    data-terra-date-input-hidden="true"
     type="hidden" />
   <input
     class="input input"
@@ -31,7 +31,7 @@ exports[`test should render a default date input with all props 1`] = `
 <div
   class="custom-input">
   <input
-    data-class="hidden-date-input"
+    data-terra-date-input-hidden="true"
     name="date-input"
     type="hidden"
     value="2017-01-01" />

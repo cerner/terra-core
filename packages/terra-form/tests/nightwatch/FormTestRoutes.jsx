@@ -21,9 +21,13 @@ import PopulatedTextarea from './textarea/PopulatedTextarea';
 import DefaultTextareaField from './textarea-field/DefaultTextareaField';
 import PopulatedTextareaField from './textarea-field/PopulatedTextareaField';
 import DefaultSelect from './select/DefaultSelect';
+import ChoicesPropSelect from './select/ChoicesPropSelect';
 import PopulatedSelect from './select/PopulatedSelect';
+import PopulatedSelectControlled from './select/PopulatedSelectControlled';
 import DefaultSelectField from './select-field/DefaultSelectField';
+import ChoicesPropSelectField from './select-field/ChoicesPropSelectField';
 import PopulatedSelectField from './select-field/PopulatedSelectField';
+import PopulatedSelectFieldControlled from './select-field/PopulatedSelectFieldControlled';
 
 const routes = (
   <div>
@@ -45,9 +49,13 @@ const routes = (
     <Route path="/tests/form-tests/textarea-field/default" component={DefaultTextareaField} />
     <Route path="/tests/form-tests/textarea-field/populated" component={PopulatedTextareaField} />
     <Route path="/tests/form-tests/select/default" component={DefaultSelect} />
+    <Route path="/tests/form-tests/select/choices_prop" component={ChoicesPropSelect} />
     <Route path="/tests/form-tests/select/populated" component={PopulatedSelect} />
+    <Route path="/tests/form-tests/select/populated_controlled" component={PopulatedSelectControlled} />
     <Route path="/tests/form-tests/select-field/default" component={DefaultSelectField} />
+    <Route path="/tests/form-tests/select-field/choices_prop" component={ChoicesPropSelectField} />
     <Route path="/tests/form-tests/select-field/populated" component={PopulatedSelectField} />
+    <Route path="/tests/form-tests/select-field/populated_controlled" component={PopulatedSelectFieldControlled} />
   </div>
 );
 

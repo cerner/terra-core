@@ -11,15 +11,21 @@ exports[`test should render a SelectField when all the possible props are passed
   }
   required={true}>
   <Select
-    choices={
+    choices={null}
+    className="scooby-snacks"
+    name="zounds"
+    options={
       Array [
-        "moo",
-        "boo",
+        Object {
+          "display": "moo",
+          "value": "m",
+        },
+        Object {
+          "display": "boo",
+          "value": "b",
+        },
       ]
     }
-    className="scooby-snacks"
-    defaultValue={null}
-    name="zounds"
     required={true} />
 </Field>
 `;
@@ -33,25 +39,23 @@ exports[`test should render a default SelectField component 1`] = `
   labelAttrs={Object {}}
   required={false}>
   <Select
-    choices={
+    choices={null}
+    name={null}
+    options={
       Array [
-        "moo",
+        Object {
+          "display": "moo",
+          "value": "m",
+        },
       ]
     }
-    defaultValue={null}
-    name={null}
     required={false} />
 </Field>
 `;
 
 exports[`test should render as controlled when just the required fields and a onChange function is passed into the SelectField 1`] = `
 <SelectField
-  choices={
-    Array [
-      "moo",
-      "boo",
-    ]
-  }
+  choices={null}
   error={null}
   help={null}
   isInline={false}
@@ -59,6 +63,18 @@ exports[`test should render as controlled when just the required fields and a on
   labelAttrs={Object {}}
   name={null}
   onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "display": "moo",
+        "value": "m",
+      },
+      Object {
+        "display": "boo",
+        "value": "b",
+      },
+    ]
+  }
   required={false}
   selectAttrs={Object {}}>
   <Field
@@ -71,28 +87,33 @@ exports[`test should render as controlled when just the required fields and a on
     <div
       className="field">
       <Select
-        choices={
-          Array [
-            "moo",
-            "boo",
-          ]
-        }
-        defaultValue={null}
+        choices={null}
         name={null}
         onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "display": "moo",
+              "value": "m",
+            },
+            Object {
+              "display": "boo",
+              "value": "b",
+            },
+          ]
+        }
         required={false}>
         <select
           className="select"
-          defaultValue={null}
           name={null}
           onChange={[Function]}
           required={false}>
           <option
-            value="moo">
+            value="m">
             moo
           </option>
           <option
-            value="boo">
+            value="b">
             boo
           </option>
         </select>
@@ -104,19 +125,26 @@ exports[`test should render as controlled when just the required fields and a on
 
 exports[`test should render as uncontrolled when just the required fields and a default value is passed into the SelectField 1`] = `
 <SelectField
-  choices={
-    Array [
-      "moo",
-      "boo",
-    ]
-  }
-  defaultValue="boo"
+  choices={null}
+  defaultValue="b"
   error={null}
   help={null}
   isInline={false}
   label={null}
   labelAttrs={Object {}}
   name={null}
+  options={
+    Array [
+      Object {
+        "display": "moo",
+        "value": "m",
+      },
+      Object {
+        "display": "boo",
+        "value": "b",
+      },
+    ]
+  }
   required={false}
   selectAttrs={Object {}}>
   <Field
@@ -129,26 +157,33 @@ exports[`test should render as uncontrolled when just the required fields and a 
     <div
       className="field">
       <Select
-        choices={
+        choices={null}
+        defaultValue="b"
+        name={null}
+        options={
           Array [
-            "moo",
-            "boo",
+            Object {
+              "display": "moo",
+              "value": "m",
+            },
+            Object {
+              "display": "boo",
+              "value": "b",
+            },
           ]
         }
-        defaultValue="boo"
-        name={null}
         required={false}>
         <select
           className="select"
-          defaultValue="boo"
+          defaultValue="b"
           name={null}
           required={false}>
           <option
-            value="moo">
+            value="m">
             moo
           </option>
           <option
-            value="boo">
+            value="b">
             boo
           </option>
         </select>
