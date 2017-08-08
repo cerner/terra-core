@@ -4,9 +4,10 @@ import Select from '../../../lib/Select';
 
 const select = () => (
   <Select
-    choices={['moo', 'boo']}
+    options={[{ value: 'm', display: 'moo' },
+              { value: 'b', display: 'boo' }]}
     name="zounds"
-    defaultValue="boo"
+    defaultValue="b"
     required
   />
 );
