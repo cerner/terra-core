@@ -1,10 +1,8 @@
 import React from 'react';
-import DatePicker from 'terra-date-picker';
+import DatePickerExampleTemplate from './DatePickerExampleTemplate';
 
 const DatePickerExample = () => (
-  <DatePicker
-    name="date-input-default"
-  />
+  <DatePickerExampleTemplate />
 );
 
 export default DatePickerExample;

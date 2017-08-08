@@ -17,11 +17,11 @@ const SlideGroupExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props-slideGroup" src={SlideGroupSrc} />
-    <h2 id="slideGroup">SlideGroup Demo</h2>
+    <h2 id="slideGroup">Non-Animated SlideGroup</h2>
     <br />
     <SlideGroupDemo />
     <br />
-    <h2 id="slideGroup-animated">isAnimated</h2>
+    <h2 id="slideGroup-animated">Animated SlideGroup</h2>
     <br />
     <SlideGroupDemo isAnimated />
   </div>

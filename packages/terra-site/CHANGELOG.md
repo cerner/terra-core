@@ -7,6 +7,11 @@ Unreleased
 * Break out form component examples into their own packages
 * Update styling lost in CSS Module conversion
 
+1.5.0 - (August 8, 2017)
+------------------
+### Changed
+* Display input and submission values for DatePicker, Form, SearchField and TimeInput examples.
+
 1.4.0 - (August 1, 2017)
 ------------------
 ### Changed
@@ -16,6 +21,9 @@ Unreleased
 ------------------
 ### Added
 * Added new example to display date picker and popup inside modal.
+* Add test links for the Markdown component
+
+### Changed
 * Updated PropsTable rendering to include component title for packages that contain multiple components.
 
 1.2.0 - (July 26, 2017)

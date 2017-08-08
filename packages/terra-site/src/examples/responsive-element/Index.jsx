@@ -36,6 +36,7 @@ const ResponsiveElementExamples = () => (
     <h3>Only Medium</h3>
     <p>Note: Does not render elements when smaller than medium.</p>
     <ResponsiveExample medium={<div>Medium</div>} />
+    <br />
     <h2>Responsive to Window</h2>
     <p>Note: Changing the container size has no effect when responsive to window. Resize the window to examine changes.</p>
     <ResponsiveExample

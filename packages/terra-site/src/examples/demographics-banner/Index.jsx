@@ -22,12 +22,16 @@ const DemographicsBannerExamples = () => (
     <PropsTable id="props" src={DemographicsBannerSrc} />
     <h1>Basic Demographics Banner</h1>
     <DemographicsBannerBasic />
+    <br />
     <h1>Demographics Banner with Missing Data</h1>
     <DemographicsBanner />
+    <br />
     <h1>Deceased Demographics Banners</h1>
     <DemographicsBannerDeceased />
+    <br />
     <h1>Demographics Banner with Gestational and Post Menstrural ages</h1>
     <DemographicsBannerAdditionalAges />
+    <br />
     <h1>Demographics Banner with Additional Details</h1>
     <DemographicsBannerAdditionalDetails />
   </div>

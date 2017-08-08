@@ -1,18 +1,38 @@
-// remove eslint-disable once terra-form has been published
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Select from 'terra-form/lib/Select';
-/* eslint-enable import/no-extraneous-dependencies */
 
-const SelectExamples = () => (
-  <form>
-    <Select
-      choices={['Puppies', 'Kittens', 'Snappers', 'Bumblers', 'Joeys', 'Microprocessors']}
-      name="zibby"
-      defaultValue="Snappers"
-      required
-    />
-  </form>
-);
+class SelectExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { selected: 'snappers' };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
+  handleChange(event) {
+    this.setState({ selected: event.target.value });
+  }
+
+  render() {
+    return (
+      <div>
+        <form>
+          <Select
+            options={[{ value: 'puppies', display: 'Puppies' },
+                      { value: 'kittens', display: 'Kittens' },
+                      { value: 'snappers', display: 'Snappers' },
+                      { value: 'bumblers', display: 'Bumblers' },
+                      { value: 'joeys', display: 'Joeys' },
+                      { value: 'micros', display: 'Microprocessors' }]}
+            name="zibby"
+            defaultValue="snappers"
+            required
+            onChange={this.handleChange}
+          />
+        </form>
+        <br /><p>Option Selected: {this.state.selected}</p>
+        <br />
+      </div>
+    );
+  }
+}
 export default SelectExamples;
