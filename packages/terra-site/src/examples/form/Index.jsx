@@ -19,16 +19,16 @@ const FormsExamples = () => (
       <h1>Component Information</h1>
       <p> Below are links to further documentation and implementaiton of each form component.</p>
       <List className={styles['site-nav']}>
-        <List.Item content={<Link to="/form/field">Field</Link>} />
-        <List.Item content={<Link to="/form/fieldset">Feildset</Link>} />
-        <List.Item content={<Link to="/form/input">Input</Link>} />
-        <List.Item content={<Link to="/form/control">Control</Link>} />
-        <List.Item content={<Link to="/form/number-field">Number Field</Link>} />
-        <List.Item content={<Link to="/form/textarea">Textarea</Link>} />
-        <List.Item content={<Link to="/form/textarea-field">Textarea Field</Link>} />
-        <List.Item content={<Link to="/form/text-field">Text Field</Link>} />
-        <List.Item content={<Link to="/form/select">Select</Link>} />
-        <List.Item content={<Link to="/form/select-field">Select Field</Link>} />
+        <List.Item content={<Link to="site/form/field">Field</Link>} />
+        <List.Item content={<Link to="site/form/fieldset">Feildset</Link>} />
+        <List.Item content={<Link to="site/form/input">Input</Link>} />
+        <List.Item content={<Link to="site/form/control">Control</Link>} />
+        <List.Item content={<Link to="site/form/number-field">Number Field</Link>} />
+        <List.Item content={<Link to="site/form/textarea">Textarea</Link>} />
+        <List.Item content={<Link to="site/form/textarea-field">Textarea Field</Link>} />
+        <List.Item content={<Link to="site/form/text-field">Text Field</Link>} />
+        <List.Item content={<Link to="site/form/select">Select</Link>} />
+        <List.Item content={<Link to="site/form/select-field">Select Field</Link>} />
       </List>
     </div>
     <Markdown id="controlled-input-example" src={ControlledInputDocs} componentName="ControlledInput" />
