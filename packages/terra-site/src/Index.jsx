@@ -51,6 +51,7 @@ import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGro
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
@@ -133,6 +134,7 @@ ReactDOM.render((
     {ButtonGroupTestRoutes}
     {DatePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {DynamicGridTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}

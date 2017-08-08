@@ -8,7 +8,7 @@ const propTypes = {
   /**
   * The child Region components that make up the grid.
   */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
   * The layout configuration that defines the grid. Multiple layouts can be passed per mediaquery to make the grid responsive.
   */
@@ -67,6 +67,10 @@ const propTypes = {
   })),
 };
 
+const defaultProps = {
+  layouts: [],
+};
+
 const DynamicGrid = ({
   layouts,
   children,
@@ -81,14 +85,15 @@ const DynamicGrid = ({
 
   // Clone the child regions and inject their generated styles
   return (<div className={gridClasses} {...customProps}>
-    {React.Children.map(children,
+    {(React.Children || []).map(children,
      region => React.cloneElement(region, {
-       styles: layoutStyles(region.props.name),
+       className: classNames(region.props.className, css(layoutStyles(region.props.name))),
      }),
     )}
   </div>);
 };
 
 DynamicGrid.propTypes = propTypes;
+DynamicGrid.defaultProps = defaultProps;
 
 export default DynamicGrid;

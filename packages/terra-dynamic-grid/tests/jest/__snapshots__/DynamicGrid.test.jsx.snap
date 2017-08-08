@@ -1,0 +1,4 @@
+exports[`DynamicGrid should render a default component 1`] = `
+<div
+  className="" />
+`;

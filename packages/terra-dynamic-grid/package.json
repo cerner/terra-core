@@ -36,6 +36,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "props-table": "props-table ./src/DynamicGrid.jsx --out-dir ./docs/props-table"
+    "props-table": "props-table ./src/DynamicGrid.jsx --out-dir ./docs/props-table",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   }
 }

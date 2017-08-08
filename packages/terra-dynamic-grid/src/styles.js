@@ -1,8 +1,11 @@
 // IE < 11 doesn't honor window.CSS.Supports. Edge has supports, but will fail on grid.
-const isCSSGridsEnabled = window.CSS && window.CSS.supports && window.CSS.supports('display', 'grid');
 
 const gridTemplateColumns = (layout) => {
   const columns = layout['grid-template-columns'];
+  if (columns === undefined) {
+    return {};
+  }
+
   // If 2 values are specified, column is the 2nd value, else its the first
   const gap = (layout['grid-gap'] || '0').split(' ').slice(-1)[0];
   const msColumns = columns.split(/\s+/).join(` ${gap} `);
@@ -13,8 +16,13 @@ const gridTemplateColumns = (layout) => {
   };
 };
 
+
 const gridTemplateRows = (layout) => {
   const rows = layout['grid-template-rows'];
+  if (rows === undefined) {
+    return {};
+  }
+
   // If 2 values are specified, row is the 1st value
   const gap = (layout['grid-gap'] || '0').split(' ')[0];
   const msRows = rows.split(/\s+/).join(` ${gap} `);
@@ -28,6 +36,10 @@ const gridTemplateRows = (layout) => {
 
 const gridColumnStart = (region) => {
   const start = region['grid-column-start'];
+  if (start === undefined) {
+    return {};
+  }
+
   const msStart = (start * 2) - 1;
 
   return {
@@ -37,7 +49,12 @@ const gridColumnStart = (region) => {
 };
 
 const gridColumnEnd = (region) => {
-  const start = region['grid-column-start'];
+  if (region['grid-column-end'] === undefined
+    && region['grid-column-end'] === undefined) {
+    return {};
+  }
+
+  const start = region['grid-column-start'] || 0;
   const end = region['grid-column-end'] || start + 1;
   const span = end - start < 2
     ? 1 // No gaps traversed
@@ -52,6 +69,10 @@ const gridColumnEnd = (region) => {
 
 const gridRowStart = (region) => {
   const start = region['grid-row-start'];
+  if (start === undefined) {
+    return {};
+  }
+
   const msStart = (start * 2) - 1;
 
   return {
@@ -61,7 +82,12 @@ const gridRowStart = (region) => {
 };
 
 const gridRowEnd = (region) => {
-  const start = region['grid-row-start'];
+  if (region['grid-row-end'] === undefined
+    && region['grid-row-end'] === undefined) {
+    return {};
+  }
+
+  const start = region['grid-row-start'] || 0;
   const end = region['grid-row-end'] || start + 1;
   const span = end - start < 2
     ? 1 // No gaps traversed
@@ -73,11 +99,26 @@ const gridRowEnd = (region) => {
   };
 };
 
+const gridGap = layout => (
+  layout['grid-gap']
+    ? { 'grid-gap': layout['grid-gap'] }
+    : {}
+);
+
+const gridDisplay = () => {
+  const isCSSGridsEnabled = window.CSS
+    && window.CSS.supports
+    && window.CSS.supports('display', 'grid');
+  return {
+    display: isCSSGridsEnabled ? 'grid' : '-ms-grid',
+  };
+};
+
 
 const generateGridStyles = (layout) => {
   const styles = {
-    display: isCSSGridsEnabled ? 'grid' : '-ms-grid',
-    'grid-gap': layout['grid-gap'] || '0',
+    ...gridDisplay(),
+    ...gridGap(layout),
     ...gridTemplateColumns(layout),
     ...gridTemplateRows(layout),
   };
@@ -107,7 +148,7 @@ const generateRegionStyles = layout => (
 const generateStyles = (layout) => {
   const grid = generateGridStyles(layout);
   const regionStyles = generateRegionStyles(layout);
-  return layout.regions
+  return (layout.regions || [])
     .map(regionStyles)
     .reduce((regions, region) => ({ ...regions, ...region }), grid);
 };

@@ -1,8 +1,6 @@
 
 import React from 'react';
-import { css } from 'aphrodite';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 const propTypes = {
   /**
@@ -13,18 +11,13 @@ const propTypes = {
    * The children of the region.
    */
   children: PropTypes.node.isRequired,
-  /**
-   * The dynamically generated styles to apply to the region. The are set by the grid.
-   */
-  styles: PropTypes.arrayOf(PropTypes.object),
 };
 
 const Region = ({
   name,
-  styles,
   children,
   ...customProps
-}) => <div data-region-name={name} className={classNames(customProps.className, css(styles))} {...customProps}>
+}) => <div data-region-name={name} {...customProps}>
   {children}
 </div>;
 

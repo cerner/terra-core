@@ -1,5 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
@@ -14,6 +14,6 @@ module.exports = {
   'Displays a default dynamic-grid': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/dynamic-grid-tests/default`)
-      .assert.elementPresent('.dynamicGrid');
+      .assert.elementPresent('#defaultDynamicGrid');
   },
 };
