@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.5.0 - (August 8, 2017)
+------------------
 ### Changed
 * Display input and submission values for DatePicker, Form, SearchField and TimeInput examples.
 
