@@ -21,10 +21,13 @@ const StatusExamples = () => (
     <PropsTable id="props" src={StatusSrc} />
     <h2 id="default">Status with text</h2>
     <StatusDefault />
+    <br />
     <h2 id="image">Status with Image</h2>
     <StatusImage />
+    <br />
     <h2 id="icon">Status with Icon</h2>
     <StatusIcon />
+    <br />
     <h2 id="arrange">Status with Arrange</h2>
     <StatusArrange />
   </div>

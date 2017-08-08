@@ -25,8 +25,10 @@ const GridExamples = () => (
     <PropsTable id="props" src={GridColumnSrc} componentName="Grid Column" />
     <h2 id="default">Default Grid</h2>
     <GridDefault />
+    <br />
     <h2 id="responsive">Responsive Grid</h2>
     <GridResponsive />
+    <br />
     <h2 id="nested">Nested Grid</h2>
     <GridNested />
   </div>
