@@ -20,7 +20,7 @@ const ModalManagerExamples = () => (
     <PropsTable id="props" src={ModalManagerSrc} />
     <br />
     <h2>Demo</h2>
-    <div style={{ height: '300px' }}>
+    <div style={{ height: '150px' }}>
       <ModalManagerDemo />
     </div>
   </div>

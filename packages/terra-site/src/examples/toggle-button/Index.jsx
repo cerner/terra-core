@@ -25,16 +25,22 @@ const ToggleButtonExamples = () => (
     <PropsTable id="props" src={ToggleButtonSrc} />
     <h2 id="default">Default ToggleButton</h2>
     <DefaultToggleButton />
+    <br />
     <h2 id="animated">isAnimated ToggleButton</h2>
     <AnimatedToggleButton />
+    <br />
     <h2 id="open-close-text">Open / Close Button Text ToggleButton</h2>
     <OpenCloseTextToggleButton />
+    <br />
     <h2 id="is-icon-only">isIconOnly ToggleButton</h2>
     <IsIconOnlyToggleButton />
+    <br />
     <h2 id="is-initially-open">isInitiallyOpen ToggleButton</h2>
     <IsInitiallyOpenToggleButton />
+    <br />
     <h2 id="button-attrs">Custom ToggleButton Button</h2>
     <ButtonAttrsToggleButton />
+    <br />
     <h2 id="open-close-callbacks">OnOpen / OnClose Callback ToggleButton</h2>
     <OpenCloseEventToggleButton />
   </div>
