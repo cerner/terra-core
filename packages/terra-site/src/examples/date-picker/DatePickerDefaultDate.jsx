@@ -1,12 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import DatePicker from 'terra-date-picker';
+import DatePickerExampleTemplate from './DatePickerExampleTemplate';
 
 const DatePickerExample = () => (
-  <DatePicker
-    name="date-input-default-date"
-    selectedDate={moment().format()}
-  />
+  <DatePickerExampleTemplate selectedDate={moment().format()} />
 );
 
 export default DatePickerExample;

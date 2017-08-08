@@ -1,27 +1,10 @@
 import React from 'react';
-import SearchField from 'terra-search-field';
+import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
-class SearchFieldDelayed extends React.Component {
+const SearchFieldExample = () => (
+  <SearchFieldExampleTemplate
+    searchDelay={2000}
+  />
+);
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      searchText: '',
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <div>
-          Search Text: {this.state.searchText}
-        </div>
-        <SearchField searchDelay={2000} onSearch={(searchText) => { this.setState({ searchText }); }} />
-      </div>
-    );
-  }
-
-}
-
-export default SearchFieldDelayed;
+export default SearchFieldExample;

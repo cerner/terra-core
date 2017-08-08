@@ -12,7 +12,6 @@ import DatePickerExcludeDates from './DatePickerExcludeDates';
 import DatePickerIncludeDates from './DatePickerIncludeDates';
 import DatePickerFilterDates from './DatePickerFilterDates';
 import DatePickerMinMax from './DatePickerMinMax';
-import DatePickerOnChange from './DatePickerOnChange';
 import DatePickerDefaultDate from './DatePickerDefaultDate';
 import DatePickerInsideModal from './DatePickerInsideModal';
 
@@ -25,11 +24,11 @@ const DatePickerExamples = () => (
     <DatePickerDefault />
     <br />
     <br />
-    <h2 id="exclude-dates">ExcludeDates</h2>
+    <h2 id="exclude-dates">Exclude Dates</h2>
     <DatePickerExcludeDates />
     <br />
     <br />
-    <h2 id="filter-dates">FilterDates</h2>
+    <h2 id="filter-dates">Filter Dates</h2>
     <DatePickerFilterDates />
     <br />
     <br />
@@ -41,10 +40,7 @@ const DatePickerExamples = () => (
     <DatePickerMinMax />
     <br />
     <br />
-    <h2 id="on-change">On Change</h2>
-    <DatePickerOnChange />
-    <br />
-    <h2 id="start-date">Default Date Provided</h2>
+    <h2 id="start-date">Default Date</h2>
     <DatePickerDefaultDate />
     <br />
     <br />
