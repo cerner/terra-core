@@ -20,8 +20,12 @@ const ProgressBarExamples = () => (
     <PropsTable id="props" src={ProgressBarSrc} />
     <h2 id="default">Default</h2>
     <ProgressBarDefault />
+    <br />
+    <br />
     <h2 id="size">Size</h2>
     <ProgressBarSize />
+    <br />
+    <br />
     <h2 id="color">Color</h2>
     <ProgressBarColor />
   </div>
