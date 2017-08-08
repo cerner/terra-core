@@ -5,10 +5,21 @@ import Field from './Field';
 import Select from './Select';
 
 const propTypes = {
+
   /**
    * List of choices to be selected.
+   * If choices and options array are supplied, options array will be used over choices.
    */
-  choices: PropTypes.array.isRequired,
+  choices: PropTypes.array,
+
+  /**
+   * List of object key and value pairs for choices to be selected.
+   * If choices and options array are supplied, options array will be used over choices.
+   */
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string.isRequired,
+    display: PropTypes.string.isRequired,
+  })),
 
   /**
    * Error message for when the input is invalid.
@@ -59,9 +70,16 @@ const propTypes = {
    * The value to start the select on.
    */
   defaultValue: PropTypes.string,
+
+  /**
+   * The value of the select element. Use this to create a controlled input.
+   */
+  value: PropTypes.string,
 };
 
 const defaultProps = {
+  choices: null,
+  options: null,
   error: null,
   help: null,
   isInline: false,
@@ -72,10 +90,12 @@ const defaultProps = {
   required: false,
   selectAttrs: {},
   defaultValue: undefined,
+  value: undefined,
 };
 
 const SelectField = ({
   choices,
+  options,
   error,
   help,
   isInline,
@@ -86,6 +106,7 @@ const SelectField = ({
   required,
   selectAttrs,
   defaultValue,
+  value,
   ...customProps
 }) => (
   <Field
@@ -100,10 +121,12 @@ const SelectField = ({
     <Select
       {...selectAttrs}
       choices={choices}
+      options={options}
       onChange={onChange}
       name={name}
       required={required}
       defaultValue={defaultValue}
+      value={value}
     />
   </Field>
 );

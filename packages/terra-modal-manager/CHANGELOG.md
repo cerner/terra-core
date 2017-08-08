@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added fullscreen size option
 
+### Fixed
+* Correcting container class name
+
 1.4.0 - (August 1, 2017)
 ------------------
 ### Changed
