@@ -1,15 +1,13 @@
-@import './variables';
-
 :local {
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
   [dir=rtl] {
     /* stylelint-disable selector-class-pattern  */
     .popupOverlay {
-      background-color: var(--terra-popup-overlay-background-color);
+      background-color: var(--terra-popup-overlay-background-color, #fff);
       height: 100%;
       left: 0;
-      opacity: var(--terra-popup-overlay-opacity);
+      opacity: var(--terra-popup-overlay-opacity, 0.01);
       overflow: -moz-scrollbars-none;
       -ms-overflow-style: none;
       overflow-x: scroll;
@@ -17,7 +15,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: var(--terra-popup-overlay-z-index);
+      z-index: var(--terra-popup-overlay-z-index, 7000);
 
       &::-webkit-scrollbar {
         display: none;

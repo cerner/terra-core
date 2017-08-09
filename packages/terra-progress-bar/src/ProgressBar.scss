@@ -1,13 +1,10 @@
-@import './variables';
-@import './mixins';
-
 /* stylelint-disable selector-class-pattern  */
 :local {
   .progress-bar {
     background: #d3d4d5;
     border-radius: 0.5em;
     display: inline-block;
-    height: map-get($terra-progress-bar-sizes, 'small');
+    height: var(--terra-progress-bar-height-small, 0.8rem);
     overflow: hidden;
     width: 100%;
 
@@ -88,23 +85,23 @@
 
   //Height specific styles
   .tiny {
-    @include terra-progress-bar-height(tiny);
+    height: var(--terra-progress-bar-height-tiny, 0.5rem);
   }
 
   .small {
-    @include terra-progress-bar-height(small);
+    height: var(--terra-progress-bar-height-small, 0.8rem);
   }
 
   .medium {
-    @include terra-progress-bar-height(medium);
+    height: var(--terra-progress-bar-height-medium, 1rem);
   }
 
   .large {
-    @include terra-progress-bar-height(large);
+    height: var(--terra-progress-bar-height-large, 1.4rem);
   }
 
   .huge {
-    @include terra-progress-bar-height(huge);
+    height: var(--terra-progress-bar-height-huge, 1.7rem);
   }
 }
 /* stylelint-enable */
