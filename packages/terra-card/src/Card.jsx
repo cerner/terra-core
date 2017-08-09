@@ -4,6 +4,8 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Card.scss';
 
+
+
 const propTypes = {
   /**
    * option to pass in a single boolean to turn on/off, or an array to specify each side using css short hand https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
@@ -21,7 +23,7 @@ const propTypes = {
   /**
    * event to trigger when card is clicked
    */
-  handleClicked: PropTypes.func,
+  handleClick: PropTypes.func,
   /**
    * Child Nodes
    */
@@ -31,13 +33,13 @@ const propTypes = {
 const defaultProps = {
   padding: true,
   isStacked: false,
-  handleClicked: undefined,
+  handleClick: undefined,
 };
 
 const Card = ({
   padding,
   isStacked,
-  handleClicked,
+  handleClick,
   children,
   ...customProps
 }) => {
@@ -80,10 +82,13 @@ const Card = ({
     containerClass += ' well-Card--stacked';
   }
   // eslint-disable-next-line jsx-a11y/href-no-hash
-  const content = handleClicked === undefined ? <div className={containerClass}> {children}</div> : <a href="#" onClick={handleClicked} className={containerClass}>{children}</a>;
+  if(handleClick != undefined){
+  containerClass += ' well-Card-cursor';
+  }
+  const content = handleClick === undefined ? <div className={containerClass}> {children}</div> : <a onClick={handleClick} className={containerClass}>{children}</a>;
 
   return (
-    <div {...customProps} className={cardClass}>
+    <div  {...customProps} className={cardClass}>
       { content}
     </div>
   );

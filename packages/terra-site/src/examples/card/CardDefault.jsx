@@ -3,8 +3,8 @@ import Card from 'terra-card';
 
 const CardDefault = () => (
   <div>
-    <Card className="well-font--large;"> {"Here is some text"}<br/>{"showing off the card"}</Card>
-  </div>
+    <Card children={"Some Example Text"}/>
+</div>
 );
 
 export default CardDefault;

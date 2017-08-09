@@ -1,8 +1,8 @@
 .well-Card {
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(#000 , 0.3);
-  overflow: hidden;
+  box-shadow: 0 1px 1px 0 #1C1F21;
+  margin: 10px;
 }
 
 .well-Card-container {
@@ -19,16 +19,35 @@
   }
 }
 
-.well-Card--stacked {
-  border-radius: 3px;
-  box-shadow:
-    inset -4px 0 0 0 #fff,
-    inset -5px 0 0 0 #ccc,
-    inset -9px 0 0 0 #fff,
-    inset -10px 0 0 0 #ccc,
-    inset -14px 0 0 0 #fff,
-    inset -15px 0 0 0 #ccc,
-    2px 0 8px -2px rgba(0, 0, 0, 0.1);
-  // A bit more padding to compensate for the box-shadow inset
-  padding-right: 5px;
+.well-Card-cursor {
+  cursor: pointer;
+}
+.u-pa--sm {
+  padding: 10px;
+}
+
+.u-pv--sm{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.u-ph--sm{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.u-pt--sm{
+  padding-top:10px;
+}
+
+.u-pb--sm{
+  padding-bottom:10px;
+}
+
+.u-pl--sm{
+  padding-left:10px;
+}
+
+.u-pr--sm{
+  padding-right:10px;
 }
