@@ -20,6 +20,8 @@ class ControlledInput extends React.Component {
         middle: '',
         last: '',
         travelPercentage: 0,
+        preferredLocation: '',
+        interestedDivisions: [],
       },
     };
 
@@ -56,6 +58,26 @@ class ControlledInput extends React.Component {
     this.setState({ formData });
   }
 
+  handlePreferredLocation(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData.preferredLocation = e.target.value;
+    this.setState({ formData });
+  }
+
+  handleInterestedDivisions(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData.interestedDivisions = this.state.formData.interestedDivisions.slice(0);
+
+    if (e.target.checked) {
+      formData.interestedDivisions.push(e.target.value);
+    } else {
+      const targetIndex = formData.interestedDivisions.indexOf(e.target.value);
+      formData.interestedDivisions.splice(targetIndex, 1);
+    }
+
+    this.setState({ formData });
+  }
+
   handleFormSubmit(e) {
     e.preventDefault();
 
@@ -69,7 +91,11 @@ class ControlledInput extends React.Component {
       <form onSubmit={this.handleFormSubmit}>
         <TextField
           label="Current or Most Recent Employment Title"
-          helpText="This is your most recent employment position"
+          help="This is your most recent employment position"
+          value={this.state.formData.jobTitle}
+          onChange={this.handleEmploymentUpdate}
+          name="employment"
+          type="text"
           required
         />
         <Fieldset
@@ -103,14 +129,32 @@ class ControlledInput extends React.Component {
             required
           />
         </Fieldset>
-         <Fieldset
+        <NumberField
+          label="What percentage of work are you willing to travel?"
+          help="This will help determine your placement in positions requiring travel"
+          value={this.state.formData.travelPercentage}
+          onChange={this.handleTravelPercentageChange}
+          name="travel_percentage"
+          min={0}
+          max={100}
+          step={5}
+          required
+        />
+        <TextareaField
+          label="Experience"
+          name="experience"
+          help="List all the different languages and build tools you have 3+ months experience with"
+          value={this.state.formData.experience}
+          onChange={this.handleExperienceUpdate}
+        />
+        <Fieldset
           legend="Preferred Location"
         >
           <Control
             type="radio"
             value="north"
             labelText="North Campus"
-            checked={this.state.formData.preferredLocation === "north"}
+            checked={this.state.formData.preferredLocation === 'north'}
             onChange={this.handlePreferredLocation}
             name="preferred_location"
             isInline
@@ -119,7 +163,7 @@ class ControlledInput extends React.Component {
             type="radio"
             value="south"
             labelText="South Campus"
-            checked={this.state.formData.preferredLocation === "south"}
+            checked={this.state.formData.preferredLocation === 'south'}
             onChange={this.handlePreferredLocation}
             name="preferred_location"
             isInline
@@ -128,7 +172,7 @@ class ControlledInput extends React.Component {
             type="radio"
             value="east"
             labelText="East Campus"
-            checked={this.state.formData.preferredLocation === "east"}
+            checked={this.state.formData.preferredLocation === 'east'}
             onChange={this.handlePreferredLocation}
             name="preferred_location"
             isInline
@@ -141,7 +185,7 @@ class ControlledInput extends React.Component {
             type="checkbox"
             value="ux"
             labelText="User Experience Development"
-            checked={this.state.formData.interestedDivisions.includes("ux")}
+            checked={this.state.formData.interestedDivisions.includes('ux')}
             onChange={this.handleInterestedDivisions}
             name="interested_division[]"
           />
@@ -149,7 +193,7 @@ class ControlledInput extends React.Component {
             type="checkbox"
             value="system_engineer"
             labelText="System Engineer"
-            checked={this.state.formData.interestedDivisions.includes("system_engineer")}
+            checked={this.state.formData.interestedDivisions.includes('system_engineer')}
             onChange={this.handleInterestedDivisions}
             name="interested_division[]"
           />
@@ -157,7 +201,7 @@ class ControlledInput extends React.Component {
             type="checkbox"
             value="software_engineer"
             labelText="Software Engineer"
-            checked={this.state.formData.interestedDivisions.includes("software_engineer")}
+            checked={this.state.formData.interestedDivisions.includes('software_engineer')}
             onChange={this.handleInterestedDivisions}
             name="interested_division[]"
           />

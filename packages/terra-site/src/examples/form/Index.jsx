@@ -3,6 +3,7 @@ import React from 'react';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-form/docs/README.md';
 import { version } from 'terra-form/package.json';
+import ToggleButton from 'terra-toggle-button';
 
 // Example Files
 import ControlledInputDocs from './docs/ControlledInput.md';
@@ -12,8 +13,11 @@ const FormsExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <Markdown id="controlled-input-example" src={ControlledInputDocs} componentName="ControlledInput" />
     <ControlledInput />
+    <br />
+    <ToggleButton closedButtonText="Show Example Code" openedButtonText="Hide Example Code" isAnimated buttonAttrs={{ variant: 'link' }}>
+      <Markdown id="controlled-input-example" src={ControlledInputDocs} componentName="ControlledInput" />
+    </ToggleButton>
   </div>
 );
 
