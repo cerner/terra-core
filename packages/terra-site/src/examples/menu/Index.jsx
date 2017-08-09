@@ -10,7 +10,6 @@ import { version } from 'terra-menu/package.json';
 import MenuSrc from '!raw-loader!terra-menu/src/Menu';
 import MenuItemSrc from '!raw-loader!terra-menu/src/MenuItem';
 import MenuItemGroupSrc from '!raw-loader!terra-menu/src/MenuItemGroup';
-import MenuDividerSrc from '!raw-loader!terra-menu/src/MenuDivider';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example Files
@@ -29,7 +28,9 @@ const MenuExamples = () => (
     <h2>Menu.ItemGroup</h2>
     <PropsTable id="menu-item-group-props" src={MenuItemGroupSrc} />
     <h2>Menu.Divider</h2>
-    <PropsTable id="menu-divider-props" src={MenuDividerSrc} />
+    No Props
+    <br />
+    <br />
     <h2>Menu</h2>
     <BasicMenu />
     <br />
