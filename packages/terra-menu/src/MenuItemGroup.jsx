@@ -30,11 +30,9 @@ class MenuItemGroup extends React.Component {
   render() {
     const { children, onChange, ...customProps } = this.props;
 
-    const attributes = Object.assign({}, customProps);
-
     return (
       <SingleSelectList.Item
-        {...attributes}
+        {...customProps}
         content={(
           <SingleSelectList onChange={onChange} >
             {children}

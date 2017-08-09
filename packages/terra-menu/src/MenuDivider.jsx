@@ -5,7 +5,6 @@ import styles from './Menu.scss';
 
 const cx = classNames.bind(styles);
 
-
 const MenuDivider = () => (
   <hr className={cx(['divider'])} />
 );
