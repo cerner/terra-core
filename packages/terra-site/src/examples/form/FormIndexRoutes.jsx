@@ -16,16 +16,16 @@ import SelectFieldIndex from './components/SelectFieldIndex';
 
 const routes = (
   <div>
-    <Route path="site/form/field" onEnter={() => window.scrollTo(0, 0)} component={FieldIndex} />
-    <Route path="site/form/fieldset" onEnter={() => window.scrollTo(0, 0)} component={FieldsetIndex} />
-    <Route path="site/form/input" onEnter={() => window.scrollTo(0, 0)} component={InputIndex} />
-    <Route path="site/form/control" onEnter={() => window.scrollTo(0, 0)} component={ControlIndex} />
-    <Route path="site/form/number-field" onEnter={() => window.scrollTo(0, 0)} component={NumberFieldIndex} />
-    <Route path="site/form/textarea" onEnter={() => window.scrollTo(0, 0)} component={TextareaIndex} />
-    <Route path="site/form/textarea-field" onEnter={() => window.scrollTo(0, 0)} component={TextareaFieldIndex} />
-    <Route path="site/form/text-field" onEnter={() => window.scrollTo(0, 0)} component={TextFieldIndex} />
-    <Route path="site/form/select" onEnter={() => window.scrollTo(0, 0)} component={SelectIndex} />
-    <Route path="site/form/select-field" onEnter={() => window.scrollTo(0, 0)} component={SelectFieldIndex} />
+    <Route path="/site/form/field" component={FieldIndex} />
+    <Route path="/site/form/fieldset" component={FieldsetIndex} />
+    <Route path="/site/form/input" component={InputIndex} />
+    <Route path="/site/form/control" component={ControlIndex} />
+    <Route path="/site/form/number-field" component={NumberFieldIndex} />
+    <Route path="/site/form/textarea" component={TextareaIndex} />
+    <Route path="/site/form/textarea-field" component={TextareaFieldIndex} />
+    <Route path="/site/form/text-field" component={TextFieldIndex} />
+    <Route path="/site/form/select" component={SelectIndex} />
+    <Route path="/site/form/select-field" component={SelectFieldIndex} />
   </div>
 );
 

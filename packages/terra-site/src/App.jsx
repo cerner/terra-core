@@ -7,6 +7,8 @@ import Grid from 'terra-grid';
 import List from 'terra-list';
 import styles from './site.scss';
 
+import FormComponentNavigation from './examples/form/FormComponentNavigation';
+
 const propTypes = {
   children: PropTypes.node,
 };
@@ -62,6 +64,7 @@ class App extends React.Component {
                 <List.Item content={<Link to="/site/datepicker">Date Picker</Link>} />
                 <List.Item content={<Link to="/site/demographics-banner">Demographics Banner</Link>} />
                 <List.Item content={<Link to="/site/form">Form</Link>} />
+                <List.Item content={<FormComponentNavigation />} />
                 <List.Item content={<Link to="/site/grid">Grid</Link>} />
                 <List.Item content={<Link to="/site/heading">Heading</Link>} />
                 <List.Item content={<Link to="/site/i18n">I18n</Link>} />

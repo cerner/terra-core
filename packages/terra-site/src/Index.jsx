@@ -124,6 +124,7 @@ ReactDOM.render((
         <Route path="time-input" component={TimeInputExamples} />
         <Route path="toggle" component={ToggleExamples} />
         <Route path="toggle-button" component={ToggleButtonExamples} />
+        {FormIndexRoutes}
       </Route>
       <Route path="/tests" component={TestLinks} />
       {AlertTestRoutes}
@@ -156,7 +157,6 @@ ReactDOM.render((
       {SearchFieldTestRoutes}
       {PopupTestRoutes}
       {FormTestRoutes}
-      {FormIndexRoutes}
       {OverlayTestRoutes}
       {LoadingOverlayTestRoutes}
       {OverlayContainerTestRoutes}
