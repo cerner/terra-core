@@ -61,9 +61,14 @@ class MenuContent extends React.Component {
   }
 
   isSelectable() {
-    return this.props.children.some(child => (
-      child.type === <MenuItemGroup />.type || child.props.isSelectable
-    ));
+    for (let i = 0; i < this.props.children.length; i += 1) {
+      const child = this.props.children[i];
+      if (child.type === <MenuItemGroup />.type || child.props.isSelectable) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   wrapOnClick(item) {
