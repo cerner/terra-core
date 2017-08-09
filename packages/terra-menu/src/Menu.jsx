@@ -109,7 +109,7 @@ class Menu extends React.Component {
     let itemCount = 0;
     let dividerCount = 0;
 
-    React.Chilren.forEach(this.props.children, (child) => {
+    React.Children.forEach(this.props.children, (child) => {
       if (child.props.children && child.props.children.length > 0) {
         itemCount += child.props.children.length;
       } else if (child.type === <MenuDivider />.type) {

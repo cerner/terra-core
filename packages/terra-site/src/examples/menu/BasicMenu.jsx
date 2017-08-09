@@ -19,11 +19,13 @@ class BasicMenu extends React.Component {
     this.handleToggle1OnClick = this.handleToggle1OnClick.bind(this);
     this.handleToggle2OnClick = this.handleToggle2OnClick.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleActionClick = this.handleActionClick.bind(this);
     this.state = {
       open: false,
       toggle1Selected: false,
       toggle2Selected: false,
       groupSelectedIndex: undefined,
+      actionClickCount: 0,
     };
   }
 
@@ -53,6 +55,12 @@ class BasicMenu extends React.Component {
 
   handleOnChange(event, index) {
     this.setState({ groupSelectedIndex: index });
+  }
+
+  handleActionClick() {
+    const newState = this.state;
+    newState.actionClickCount += 1;
+    this.setState(newState);
   }
 
   render() {
@@ -85,9 +93,9 @@ class BasicMenu extends React.Component {
             text="Nested Menu 1"
             key="Nested1"
             subMenuItems={[
-              <Menu.Item text="Alert Action 1.1" key="1.1" onClick={() => alert('Action 1.1')} />,
-              <Menu.Item text="Alert Action 1.2" key="1.2" onClick={() => alert('Action 1.2')} />,
-              <Menu.Item text="Alert Action 1.3" key="1.3" onClick={() => alert('Action 1.3')} />,
+              <Menu.Item text="Action 1.1" key="1.1" onClick={this.handleActionClick} />,
+              <Menu.Item text="Action 1.2" key="1.2" onClick={this.handleActionClick} />,
+              <Menu.Item text="Action 1.3" key="1.3" onClick={this.handleActionClick} />,
               <Menu.Divider key="Divider1.1" />,
               <Menu.Item text="Close Action 1.1" key="1.4" onClick={this.handleRequestClose} />,
               <Menu.Item text="Close Action 1.2" key="1.5" onClick={this.handleRequestClose} />,
@@ -104,7 +112,7 @@ class BasicMenu extends React.Component {
             ]}
           />
           <Menu.Divider key="Divider2" />
-          <Menu.Item text="Alert Action" key="Action1" onClick={() => alert('Action 1')} />
+          <Menu.Item text="Action" key="Action1" onClick={this.handleActionClick} />
           <Menu.Item text="Close Action" key="Action2" onClick={this.handleRequestClose} />
           <Menu.Divider key="Divider3" />
           <Menu.ItemGroup key="Group" onChange={this.handleOnChange}>
@@ -113,6 +121,8 @@ class BasicMenu extends React.Component {
           </Menu.ItemGroup>
         </Menu>
         <Button onClick={this.handleButtonClick} text="Click Me" />
+        <br />
+        <p>Action button has been clicked {this.state.actionClickCount} times.</p>
       </div>
     );
   }
