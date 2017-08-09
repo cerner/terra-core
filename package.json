@@ -55,7 +55,7 @@
     "pretest": "npm run lint",
     "props-table": "lerna run props-table",
     "postinstall": "npm run compile && npm run bootstrap",
-    "publish": "check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
+    "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
     "start": "cd packages/terra-site && npm run start",
     "start:express": "node scripts/express/app.js",
     "test": "npm run jest && npm run test:nightwatch-default",
