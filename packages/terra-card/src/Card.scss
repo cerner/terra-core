@@ -1,10 +1,34 @@
-@import './variables';
-@import './mixins';
+.well-Card {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(#000 , 0.3);
+  overflow: hidden;
+}
 
-:local {
-  /* stylelint-disable selector-class-pattern  */
-  .card {
+.well-Card-container {
+  color: inherit;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  width: 100%;
 
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
   }
-  /* stylelint-enable */
+}
+
+.well-Card--stacked {
+  border-radius: 3px;
+  box-shadow:
+    inset -4px 0 0 0 #fff,
+    inset -5px 0 0 0 #ccc,
+    inset -9px 0 0 0 #fff,
+    inset -10px 0 0 0 #ccc,
+    inset -14px 0 0 0 #fff,
+    inset -15px 0 0 0 #ccc,
+    2px 0 8px -2px rgba(0, 0, 0, 0.1);
+  // A bit more padding to compensate for the box-shadow inset
+  padding-right: 5px;
 }
