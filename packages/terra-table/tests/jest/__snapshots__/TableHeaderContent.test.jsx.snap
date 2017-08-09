@@ -1,17 +1,19 @@
 exports[`test should render default table header content tag 1`] = `
 <th
-  className="terra-Table-min-width--small terra-Table-header">
+  className="min-width-small"
+  data-terra-table-header-cell={true}>
   Column Heading
 </th>
 `;
 
 exports[`test should render table header content tag with ascending sort indicator 1`] = `
 <th
-  className="terra-Table-min-width--small terra-Table-header"
-  data-sort="asc">
+  className="min-width-small"
+  data-sort="asc"
+  data-terra-table-header-cell={true}>
   Column Heading
   <span
-    className="terra-Table-sort-indicator">
+    className="sort-indicator">
     <IconCaretUp
       className=""
       isBidi={true}
@@ -23,11 +25,12 @@ exports[`test should render table header content tag with ascending sort indicat
 
 exports[`test should render table header content tag with descending sort indicator 1`] = `
 <th
-  className="terra-Table-min-width--small terra-Table-header"
-  data-sort="desc">
+  className="min-width-small"
+  data-sort="desc"
+  data-terra-table-header-cell={true}>
   Column Heading
   <span
-    className="terra-Table-sort-indicator">
+    className="sort-indicator">
     <IconCaretDown
       className=""
       isBidi={true}
@@ -39,7 +42,8 @@ exports[`test should render table header content tag with descending sort indica
 
 exports[`test should render table header content tag with maximum height fixed 1`] = `
 <th
-  className="terra-Table-min-width--small terra-Table-header">
+  className="min-width-small"
+  data-terra-table-header-cell={true}>
   Column Heading
 </th>
 `;

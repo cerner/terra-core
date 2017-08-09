@@ -1,8 +1,8 @@
 exports[`test should render table subheader row 1`] = `
 <tr
-  className="terra-Table-subheaderRow">
+  data-terra-table-subheader-row={true}>
   <td
-    className="terra-Table-subheader"
+    className="subheader"
     colSpan={4}>
     Subheader
   </td>

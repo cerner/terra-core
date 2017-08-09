@@ -80,6 +80,7 @@ class ContentContainer extends React.Component {
         {identifier === 'root-component' && <button className="disclose-medium" onClick={this.disclose('medium')}>Disclose - Medium</button>}
         {identifier === 'root-component' && <button className="disclose-large" onClick={this.disclose('large')}>Disclose - Large</button>}
         {identifier === 'root-component' && <button className="disclose-huge" onClick={this.disclose('huge')}>Disclose - Huge</button>}
+        {identifier === 'root-component' && <button className="disclose-fullscreen" onClick={this.disclose('fullscreen')}>Disclose - Fullscreen</button>}
         {app && app.dismiss ? <button className="dismiss" onClick={this.dismiss}>Dismiss</button> : null }
         {app && app.closeDisclosure ? <button className="close-disclosure" onClick={this.closeDisclosure}>Close Disclosure</button> : null }
         {app && app.goBack ? <button className="go-back" onClick={this.goBack}>Go Back</button> : null }

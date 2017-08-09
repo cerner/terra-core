@@ -1,8 +1,8 @@
 exports[`test should render a Field when all the possible props are passed into it 1`] = `
 <div
-  className="terra-Form-field terra-Form-field--inline terra-Form-field--required">
+  className="field field-inline field-required">
   <label
-    className="terra-Form-label healtheintent-legend"
+    className="label healtheintent-legend"
     htmlFor="test">
     Text
   </label>
@@ -11,12 +11,12 @@ exports[`test should render a Field when all the possible props are passed into 
     type="text"
     value="Test" />
   <small
-    className="terra-Form-helpText"
+    className="help-text"
     tabIndex="-1">
     This is a test input
   </small>
   <small
-    className="terra-Form-error"
+    className="error"
     tabIndex="-1">
     This field is required
   </small>
@@ -25,5 +25,5 @@ exports[`test should render a Field when all the possible props are passed into 
 
 exports[`test should render a default component 1`] = `
 <div
-  className="terra-Form-field" />
+  className="field" />
 `;

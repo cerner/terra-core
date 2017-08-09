@@ -30,6 +30,7 @@ class ImageLoading extends React.Component {
             src="invalid.jpg"
             onLoad={() => { this.setState({ loadedImageId: 'loadedImage' }); }}
             onError={() => { this.setState({ errorImageId: 'errorImage' }); }}
+            alt="Alt text for image with invalid source"
           />
         </div>
       </div>

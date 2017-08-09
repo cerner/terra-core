@@ -1,7 +1,7 @@
 {
   "name": "terra-progress-bar",
   "main": "lib/ProgressBar.js",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "description": "terra-progress-bar",
   "repository": {
     "type": "git",
@@ -37,18 +37,16 @@
     "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-progress-bar node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   },
   "devDependencies": {
-    "terra-props-table": "^1.1.0"
+    "terra-props-table": "^1.3.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^1.1.0",
-    "terra-mixins": "^1.7.0"
+    "terra-base": "^1.3.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^1.1.0",
-    "terra-mixins": "^1.7.0"
+    "terra-base": "^1.3.0"
   }
 }

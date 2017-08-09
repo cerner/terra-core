@@ -1,7 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react-docgen": "^2.15.0",
-    "terra-markdown": "^1.1.0"
+    "terra-markdown": "^1.3.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -41,7 +41,12 @@
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "test": "npm run test:spec",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+    "test": "npm run test:spec && npm run test:nightwatch-default",
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
+    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js",
+    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
+    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
+    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-props-table node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
   }
 }

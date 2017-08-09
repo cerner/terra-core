@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import styles from './Table.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -19,21 +22,14 @@ const TableSubheader = ({
   content,
   colSpan,
   ...customProps
-}) => {
-  const contentClassName = classNames([
-    'terra-Table-subheader',
-    customProps.className,
-  ]);
-
+}) => (
   // count is based on the number of columns and assigned in the table component which contains this subheader
-  return (
-    <tr className="terra-Table-subheaderRow">
-      <td {...customProps} className={contentClassName} colSpan={colSpan}>
-        {content}
-      </td>
-    </tr>
-  );
-};
+  <tr data-terra-table-subheader-row>
+    <td {...customProps} className={cx('subheader', customProps.className)} colSpan={colSpan}>
+      {content}
+    </td>
+  </tr>
+);
 
 TableSubheader.propTypes = propTypes;
 

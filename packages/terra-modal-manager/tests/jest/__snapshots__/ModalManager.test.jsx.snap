@@ -1,6 +1,6 @@
 exports[`ModalManger - app - should render the ModalManager with given AppDelegate as source 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -10,7 +10,7 @@ exports[`ModalManger - app - should render the ModalManager with given AppDelega
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--small"
+    classNameModal="small"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -29,7 +29,7 @@ exports[`ModalManger - app - should render the ModalManager with given AppDelega
 
 exports[`ModalManger - focus lost - should render the ModalManager with focus lost 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -38,7 +38,7 @@ exports[`ModalManger - focus lost - should render the ModalManager with focus lo
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -49,7 +49,7 @@ exports[`ModalManger - focus lost - should render the ModalManager with focus lo
     onRequestClose={[Function]}
     role="document">
     <SlideGroup
-      isAnimated={true}
+      isAnimated={false}
       items={Array []} />
   </Modal>
 </div>
@@ -57,7 +57,7 @@ exports[`ModalManger - focus lost - should render the ModalManager with focus lo
 
 exports[`ModalManger - isFocused - should render the ModalManager with focus trapped 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -66,7 +66,7 @@ exports[`ModalManger - isFocused - should render the ModalManager with focus tra
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -77,7 +77,7 @@ exports[`ModalManger - isFocused - should render the ModalManager with focus tra
     onRequestClose={[Function]}
     role="document">
     <SlideGroup
-      isAnimated={true}
+      isAnimated={false}
       items={Array []} />
   </Modal>
 </div>
@@ -85,7 +85,7 @@ exports[`ModalManger - isFocused - should render the ModalManager with focus tra
 
 exports[`ModalManger - isMaximized - should render the ModalManager as maximized 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -94,7 +94,7 @@ exports[`ModalManger - isMaximized - should render the ModalManager as maximized
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -105,7 +105,7 @@ exports[`ModalManger - isMaximized - should render the ModalManager as maximized
     onRequestClose={[Function]}
     role="document">
     <SlideGroup
-      isAnimated={true}
+      isAnimated={false}
       items={Array []} />
   </Modal>
 </div>
@@ -113,7 +113,7 @@ exports[`ModalManger - isMaximized - should render the ModalManager as maximized
 
 exports[`ModalManger - isOpen - should render the ModalManager as open 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -122,7 +122,7 @@ exports[`ModalManger - isOpen - should render the ModalManager as open 1`] = `
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--small"
+    classNameModal="small"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -141,7 +141,7 @@ exports[`ModalManger - isOpen - should render the ModalManager as open 1`] = `
 
 exports[`ModalManger - modal components - should render the ModalManager with given modal contents 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -150,7 +150,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--small"
+    classNameModal="small"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -195,7 +195,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
 
 exports[`ModalManger - modal components - should render the ModalManager with given modal contents when components cannot be retrieved 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -204,7 +204,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -215,7 +215,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     onRequestClose={[Function]}
     role="document">
     <SlideGroup
-      isAnimated={true}
+      isAnimated={false}
       items={
         Array [
           undefined,
@@ -228,7 +228,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
 
 exports[`ModalManger - modal components - should render the ModalManager with given modal contents when maximized 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -237,7 +237,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal"
+    classNameModal=""
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -248,7 +248,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     onRequestClose={[Function]}
     role="document">
     <SlideGroup
-      isAnimated={true}
+      isAnimated={false}
       items={
         Array [
           <TestContainer
@@ -282,7 +282,7 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
 
 exports[`ModalManger - sizes - should render the ModalManager with huge size 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -291,7 +291,7 @@ exports[`ModalManger - sizes - should render the ModalManager with huge size 1`]
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--huge"
+    classNameModal="huge"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -310,7 +310,7 @@ exports[`ModalManger - sizes - should render the ModalManager with huge size 1`]
 
 exports[`ModalManger - sizes - should render the ModalManager with large size 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -319,7 +319,7 @@ exports[`ModalManger - sizes - should render the ModalManager with large size 1`
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--large"
+    classNameModal="large"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -338,7 +338,7 @@ exports[`ModalManger - sizes - should render the ModalManager with large size 1`
 
 exports[`ModalManger - sizes - should render the ModalManager with medium size 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -347,7 +347,7 @@ exports[`ModalManger - sizes - should render the ModalManager with medium size 1
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--medium"
+    classNameModal="medium"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -366,7 +366,7 @@ exports[`ModalManger - sizes - should render the ModalManager with medium size 1
 
 exports[`ModalManger - sizes - should render the ModalManager with small size 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -375,7 +375,7 @@ exports[`ModalManger - sizes - should render the ModalManager with small size 1`
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--small"
+    classNameModal="small"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -394,7 +394,7 @@ exports[`ModalManger - sizes - should render the ModalManager with small size 1`
 
 exports[`ModalManger - sizes - should render the ModalManager with tiny size 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -403,7 +403,7 @@ exports[`ModalManger - sizes - should render the ModalManager with tiny size 1`]
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--tiny"
+    classNameModal="tiny"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}
@@ -422,7 +422,7 @@ exports[`ModalManger - sizes - should render the ModalManager with tiny size 1`]
 
 exports[`ModalManger should render the ModalManager with defaults 1`] = `
 <div
-  className="terra-ModalManager">
+  className="container">
   <TestContainer
     app={
       AppDelegateInstance {
@@ -431,7 +431,7 @@ exports[`ModalManger should render the ModalManager with defaults 1`] = `
     } />
   <Modal
     ariaLabel="Modal"
-    classNameModal="terra-ModalManager-modal terra-ModalManager-modal--small"
+    classNameModal="small"
     classNameOverlay={null}
     closeOnEsc={true}
     closeOnOutsideClick={false}

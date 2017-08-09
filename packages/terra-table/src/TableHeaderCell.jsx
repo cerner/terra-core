@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IconDown from 'terra-icon/lib/icon/IconCaretDown';
 import IconUp from 'terra-icon/lib/icon/IconCaretUp';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import styles from './Table.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -33,9 +36,8 @@ const TableHeaderCell = ({
   sort,
   ...customProps
   }) => {
-  const contentClassName = classNames([
-    { [`terra-Table-min-width--${minWidth}`]: minWidth },
-    'terra-Table-header',
+  const contentClassName = cx([
+    { [`min-width-${minWidth}`]: minWidth },
     customProps.className,
   ]);
 
@@ -45,13 +47,13 @@ const TableHeaderCell = ({
 
   let sortIndicator = null;
   if (sort === 'asc') {
-    sortIndicator = <span className={'terra-Table-sort-indicator'}>{iconUp}</span>;
+    sortIndicator = <span className={cx('sort-indicator')}>{iconUp}</span>;
   } else if (sort === 'desc') {
-    sortIndicator = <span className={'terra-Table-sort-indicator'}>{iconDown}</span>;
+    sortIndicator = <span className={cx('sort-indicator')}>{iconDown}</span>;
   }
 
   return (
-    <th {...customProps} className={contentClassName} {...dataSort}>
+    <th {...customProps} data-terra-table-header-cell className={contentClassName} {...dataSort}>
       {content}
       {sortIndicator}
     </th>

@@ -14,17 +14,16 @@ module.exports = {
   'Displays a default TextareaField with a number input': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea-field/default`)
-      .assert.elementPresent('.terra-Form-field')
+      .assert.elementPresent('#default-textarea-field')
       .assert.elementPresent('textarea');
   },
 
   'Displays a populated inline TextareaField with correct label, help message, and error message': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/form-tests/textarea-field/populated`)
-      .assert.elementPresent('.terra-Form-field')
-      .assert.elementPresent('.terra-Form-field--inline')
+      .assert.elementPresent('#populated-textarea-field')
       .assert.containsText('label', 'Profile Description')
-      .assert.containsText('.terra-Form-helpText', 'This is what will be seen on your main page')
-      .assert.containsText('.terra-Form-error', 'Profile Description is required');
+      .assert.containsText('small', 'This is what will be seen on your main page')
+      .assert.containsText('small:nth-child(4)', 'Profile Description is required');
   },
 };

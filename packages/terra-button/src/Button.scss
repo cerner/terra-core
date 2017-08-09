@@ -1,4 +1,3 @@
-@import '~terra-mixins';
 @import './variables';
 @import './mixins';
 
@@ -30,8 +29,6 @@
   // stylelint-enable selector-no-qualifying-type
 
   .button {
-    @include terra-text-align-center;
-
     border-radius: var(--terra-button-border-radius, 0.25em);
     border-style: solid;
     border-width: var(--terra-button-border-width, 1px);
@@ -45,6 +42,7 @@
     padding-left: var(--terra-button-padding-left, 0.714em);
     padding-right: var(--terra-button-padding-right, 0.714em);
     padding-top: var(--terra-button-padding-top, 0.286em);
+    text-align: center;
     text-decoration: none;
     text-transform: var(--terra-button-text-transform, none);
     touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
