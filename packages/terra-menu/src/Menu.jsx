@@ -16,7 +16,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * List of Menu.Items/Menu.ItemGroups to be displayed as content within the Menu.
+   * List of Menu.Item(s)/Menu.ItemGroup(s)/Menu.Divider(s) to be displayed as content within the Menu.
    */
   children: PropTypes.node.isRequired,
   /**
