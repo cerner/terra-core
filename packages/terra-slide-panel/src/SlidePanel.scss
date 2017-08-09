@@ -1,5 +1,3 @@
-@import './variables';
-
 /* stylelint-disable selector-class-pattern */
 :local {
   .slide-panel {
@@ -69,11 +67,11 @@
   @media all and (min-width: 768px) {
     // Set explicit width on larger screens
     [data-slide-panel-panel-size='small'] > .panel {
-      width: var(--terra-slide-panel-panel-width-small);
+      width: var(--terra-slide-panel-panel-width-small, 320px);
     }
 
     [data-slide-panel-panel-size='large'] > .panel {
-      width: var(--terra-slide-panel-panel-width-large);
+      width: var(--terra-slide-panel-panel-width-large, 60%);
     }
   }
 
@@ -81,11 +79,11 @@
   .is-open[data-slide-panel-panel-behavior='overlay'] {
     @media (min-width: 768px), print {
       &[data-slide-panel-panel-position='start'] > .panel {
-        box-shadow: 1px 0 5px var(--terra-slide-panel-shadow-color);
+        box-shadow: 1px 0 5px var(--terra-slide-panel-shadow-color, #bcbfc0);
       }
 
       &[data-slide-panel-panel-position='end'] > .panel {
-        box-shadow: -1px 0 5px var(--terra-slide-panel-shadow-color);
+        box-shadow: -1px 0 5px var(--terra-slide-panel-shadow-color, #bcbfc0);
       }
     }
   }
@@ -94,19 +92,19 @@
   .is-open[data-slide-panel-panel-behavior='squish'] {
     @media (min-width: 768px), print {
       &[data-slide-panel-panel-size='small'] > .main {
-        width: calc(100% - #{var(--terra-slide-panel-panel-width-small)});
+        width: calc(100% - #{var(--terra-slide-panel-panel-width-small, 320px)});
       }
 
       &[data-slide-panel-panel-size='large'] > .main {
-        width: calc(100% - #{var(--terra-slide-panel-panel-width-large)});
+        width: calc(100% - #{var(--terra-slide-panel-panel-width-large, 60%)});
       }
 
       &[data-slide-panel-panel-position='start'] > .panel {
-        border-right: 1px solid var(--terra-slide-panel-panel-border-color);
+        border-right: 1px solid var(--terra-slide-panel-panel-border-color, #d3d4d5);
       }
 
       &[data-slide-panel-panel-position='end'] > .panel {
-        border-left: 1px solid var(--terra-slide-panel-panel-border-color);
+        border-left: 1px solid var(--terra-slide-panel-panel-border-color, #d3d4d5);
       }
     }
   }

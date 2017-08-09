@@ -1,5 +1,3 @@
-@import './variables';
-
 /* stylelint-disable selector-class-pattern  */
 :local {
   .image {
@@ -13,23 +11,23 @@
   }
 
   .rounded {
-    border-radius: var(--terra-image-rounded-border-radius);
+    border-radius: var(--terra-image-rounded-border-radius, 0.3rem);
   }
 
   .circle {
-    border-radius: var(--terra-image-circle-border-radius);
+    border-radius: var(--terra-image-circle-border-radius, 50%);
   }
 
   .thumbnail {
-    background-color: var(--terra-image-thumbnail-background-color);
-    border-color: var(--terra-image-thumbnail-border-color);
-    border-radius: var(--terra-image-thumbnail-border-radius);
-    border-style: var(--terra-image-thumbnail-border-style);
-    border-width: var(--terra-image-thumbnail-border-width);
-    padding-bottom: var(--terra-image-thumbnail-padding-bottom);
-    padding-left: var(--terra-image-thumbnail-padding-left);
-    padding-right: var(--terra-image-thumbnail-padding-right);
-    padding-top: var(--terra-image-thumbnail-padding-top);
+    background-color: var(--terra-image-thumbnail-background-color, #fff);
+    border-color: var(--terra-image-thumbnail-border-color, #ddd);
+    border-radius: var(--terra-image-thumbnail-border-radius, 0.25em);
+    border-style: var(--terra-image-thumbnail-border-style, solid);
+    border-width: var(--terra-image-thumbnail-border-width, 1px);
+    padding-bottom: var(--terra-image-thumbnail-padding-bottom, 0.25rem);
+    padding-left: var(--terra-image-thumbnail-padding-left, 0.25rem);
+    padding-right: var(--terra-image-thumbnail-padding-right, 0.25rem);
+    padding-top: var(--terra-image-thumbnail-padding-top, 0.25rem);
   }
 
   .fluid {
