@@ -7,7 +7,7 @@
 
     &:hover,
     &:focus {
-      background-color: #ebf6fd;
+      background-color: var(--terra-menu-item-hover-color, #ebf6fd);
     }
   }
 

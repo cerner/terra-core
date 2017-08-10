@@ -8,6 +8,7 @@ import Arrange from 'terra-arrange';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import MenuItemGroup from './MenuItemGroup';
+import MenuUtils from './_MenuUtils';
 import styles from './Menu.scss';
 
 const cx = classNames.bind(styles);
@@ -52,6 +53,7 @@ class MenuContent extends React.Component {
   constructor(props) {
     super(props);
     this.wrapOnClick = this.wrapOnClick.bind(this);
+    this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.buildHeader = this.buildHeader.bind(this);
     this.isSelectable = this.isSelectable.bind(this);
   }
@@ -82,15 +84,28 @@ class MenuContent extends React.Component {
     };
   }
 
+  wrapOnKeyDown(item) {
+    const onKeyDown = item.props.onKeyDown;
+    return ((event) => {
+      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+        this.props.onRequestNext(item);
+      }
+
+      if (onKeyDown) {
+        onKeyDown(event);
+      }
+    });
+  }
+
   buildHeader() {
-    const closeIcon = <IconClose tabIndex="0" />;
+    const closeIcon = <IconClose />;
     const closeButton = this.props.onRequestClose ? (
       <button className={cx(['header-button', 'close-button'])} onClick={this.props.onRequestClose}>
         {closeIcon}
       </button>
     ) : null;
 
-    const backIcon = <IconLeft tabIndex="0" />;
+    const backIcon = <IconLeft />;
     const backButton = this.props.index > 0 ? (
       <button className={cx(['header-button'])} onClick={this.props.onRequestBack}>
         {backIcon}
@@ -113,7 +128,7 @@ class MenuContent extends React.Component {
   render() {
     const items = React.Children.map(this.props.children, (item) => {
       if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
-        return React.cloneElement(item, { onClick: this.wrapOnClick(item) });
+        return React.cloneElement(item, { onClick: this.wrapOnClick(item), onKeyDown: this.wrapOnKeyDown(item) });
       }
 
       return item;

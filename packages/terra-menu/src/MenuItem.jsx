@@ -5,14 +5,10 @@ import CheckIcon from 'terra-icon/lib/icon/IconCheckmark';
 import ChevronIcon from 'terra-icon/lib/icon/IconChevronRight';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import MenuUtils from './_MenuUtils';
 import styles from './MenuItem.scss';
 
 const cx = classNames.bind(styles);
-
-const KEYCODES = {
-  ENTER: 13,
-  SPACE: 32,
-};
 
 const contextTypes = {
   isGroupItem: PropTypes.bool,
@@ -64,7 +60,15 @@ class MenuItem extends React.Component {
 
   handleSelection(event) {
     event.preventDefault();
-    this.setState(prevState => ({ isSelected: !prevState.isSelected }));
+    this.setState((prevState) => {
+      const newState = prevState;
+      newState.isSelected = !prevState.isSelected;
+      if (this.onChange) {
+        this.onChange(event, newState.isSelected);
+      }
+
+      return newState;
+    });
   }
 
   wrapOnClick(event) {
@@ -77,7 +81,7 @@ class MenuItem extends React.Component {
 
   wrapOnKeyDown(onKeyDown) {
     return ((event) => {
-      if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         this.handleSelection();
       }
 

@@ -49,9 +49,16 @@ const isFullScreen = (boundingFrame, popupHeight, popupWidth) => {
   return height >= maxHeight && width >= maxWidth;
 };
 
+const KEYCODES = {
+  ENTER: 13,
+  SPACE: 32,
+};
+
+
 const MenuUtils = {
   getPopupHeight,
   isFullScreen,
+  KEYCODES,
 };
 
 export default MenuUtils;

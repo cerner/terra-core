@@ -164,7 +164,6 @@ class Menu extends React.Component {
       contentWidth,
       ...customProps
     } = this.props;
-    const attributes = Object.assign({}, customProps);
     const contentHeight = this.getContentHeight();
     const popupHeight = MenuUtils.getPopupHeight(contentHeight);
     const boundingFrame = this.props.boundingRef ? this.props.boundingRef() : undefined;
@@ -186,7 +185,7 @@ class Menu extends React.Component {
 
     return (
       <Popup
-        {...attributes}
+        {...customProps}
         boundingRef={boundingRef}
         isArrowDisplayed={isArrowDisplayed}
         contentAttachment={isArrowDisplayed ? 'top center' : 'top right'}
