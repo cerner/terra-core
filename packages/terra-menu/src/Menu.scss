@@ -32,7 +32,7 @@
     .header-title {
       color: var(--terra-menu-submenu-header-title-color, #1c1f21);
       font-size: var(--terra-menu-submenu-header-title-font-size, 12px);
-      font-weight: normal;
+      font-weight: var(--terra-menu-submenu-header-title-font-weight, normal);
       line-height: var(--terra-menu-submenu-header-title-line-height, 1.1667);
       margin: var(--terra-menu-submenu-header-title-margin, 7px 0 7px 0);
       overflow: hidden;
@@ -95,10 +95,12 @@
   }
 
   .main-menu .content {
-    background-color: var(--terra-menu-background-color, #fff);   
+    background-color: var(--terra-menu-background-color, #fff);
+    color: var(--terra-menu-foreground-color, #1c1f21);
   }
   
   .submenu .content {
     background-color: var(--terra-menu-submenu-background-color, #f9f9f9);
+    color: var(--terra-menu-submenu-foreground-color, #1c1f21);
   }
 }
