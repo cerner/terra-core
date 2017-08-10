@@ -75,8 +75,7 @@ describe('Styles', () => {
       expect(gridStyles['grid-template-rows']).toEqual('300px 400px');
     });
 
-    it('should have a -ms template', () => {
-      // Verify the grid gap is set into the -ms grid lines
+    it('should have a -ms template with grip gap included', () => {
       expect(gridStyles['-ms-grid-columns']).toEqual('100px 20px 200px');
       expect(gridStyles['-ms-grid-rows']).toEqual('300px 10px 400px');
     });

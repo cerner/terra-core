@@ -1,103 +1,54 @@
-// IE < 11 doesn't honor window.CSS.Supports. Edge has supports, but will fail on grid.
-
-const gridTemplateColumns = (layout) => {
-  const columns = layout['grid-template-columns'];
-  if (columns === undefined) {
+const gridTemplate = (prop, layout) => {
+  const grid = layout[`grid-template-${prop}`];
+  if (grid === undefined) {
     return {};
   }
 
-  // If 2 values are specified, column is the 2nd value, else its the first
-  const gap = (layout['grid-gap'] || '0').split(' ').slice(-1)[0];
-  const msColumns = columns.split(/\s+/).join(` ${gap} `);
+  let gap = (layout['grid-gap'] || '0').split(/\s+/);
+  gap = prop === 'rows'
+    ? gap[0] // If 2 values are specified row is the 1st value else its the first
+    : gap.slice(-1)[0]; // If 2 values then column is the 2nd, else its the first
 
   return {
-    'grid-template-columns': columns,
-    '-ms-grid-columns': msColumns,
+    [`grid-template-${prop}`]: grid,
+    // IE doesn't have gap support, simulate it by creating columns
+    [`-ms-grid-${prop}`]: grid.split(/\s+/).join(` ${gap} `),
   };
 };
 
 
-const gridTemplateRows = (layout) => {
-  const rows = layout['grid-template-rows'];
-  if (rows === undefined) {
-    return {};
-  }
-
-  // If 2 values are specified, row is the 1st value
-  const gap = (layout['grid-gap'] || '0').split(' ')[0];
-  const msRows = rows.split(/\s+/).join(` ${gap} `);
-
-  return {
-    'grid-template-rows': rows,
-    '-ms-grid-rows': msRows,
-  };
-};
-
-
-const gridColumnStart = (region) => {
-  const start = region['grid-column-start'];
+const gridLineStart = (prop, region) => {
+  const start = region[`grid-${prop}-start`];
   if (start === undefined) {
     return {};
   }
 
-  const msStart = (start * 2) - 1;
-
   return {
-    'grid-column-start': `${start}`,
-    '-ms-grid-column': `${msStart}`,
+    [`grid-${prop}-start`]: `${start}`,
+    // IE has gaps as columns.. so start point is double
+    [`-ms-grid-${prop}`]: `${(start * 2) - 1}`,
   };
 };
 
-const gridColumnEnd = (region) => {
-  if (region['grid-column-end'] === undefined
-    && region['grid-column-end'] === undefined) {
+
+const gridLineEnd = (prop, region) => {
+  if (region[`grid-${prop}-end`] === undefined) {
     return {};
   }
 
-  const start = region['grid-column-start'] || 0;
-  const end = region['grid-column-end'] || start + 1;
-  const span = end - start < 2
+  const start = region[`grid-${prop}-start`] || region[`grid-${prop}-end`];
+  const end = region[`grid-${prop}-end`];
+  // IE has gaps as columns.. so columns spanned is double
+  const span = start === end
     ? 1 // No gaps traversed
     : (end - start) * 2;
 
   return {
-    'grid-column-end': `${end}`,
-    '-ms-grid-column-span': `${span}`,
+    [`grid-${prop}-end`]: `${end}`,
+    [`-ms-grid-${prop}-span`]: `${span}`,
   };
 };
 
-
-const gridRowStart = (region) => {
-  const start = region['grid-row-start'];
-  if (start === undefined) {
-    return {};
-  }
-
-  const msStart = (start * 2) - 1;
-
-  return {
-    'grid-row-start': `${start}`,
-    '-ms-grid-row': `${msStart}`,
-  };
-};
-
-const gridRowEnd = (region) => {
-  if (region['grid-row-end'] === undefined
-    && region['grid-row-end'] === undefined) {
-    return {};
-  }
-
-  const start = region['grid-row-start'] || 0;
-  const end = region['grid-row-end'] || start + 1;
-  const span = end - start < 2
-    ? 1 // No gaps traversed
-    : (end - start) * 2;
-
-  return {
-    'grid-row-end': `${end}`,
-    '-ms-grid-row-span': `${span}`,
-  };
-};
 
 const gridGap = layout => (
   layout['grid-gap']
@@ -119,8 +70,8 @@ const generateGridStyles = (layout) => {
   const styles = {
     ...gridDisplay(),
     ...gridGap(layout),
-    ...gridTemplateColumns(layout),
-    ...gridTemplateRows(layout),
+    ...gridTemplate('columns', layout),
+    ...gridTemplate('rows', layout),
   };
 
   return { grid: layout.media
@@ -131,10 +82,10 @@ const generateGridStyles = (layout) => {
 const generateRegionStyles = layout => (
   (region) => {
     const styles = {
-      ...gridColumnStart(region),
-      ...gridColumnEnd(region),
-      ...gridRowStart(region),
-      ...gridRowEnd(region),
+      ...gridLineStart('column', region),
+      ...gridLineEnd('column', region),
+      ...gridLineStart('row', region),
+      ...gridLineEnd('row', region),
       ...region.style,
     };
 
