@@ -2,10 +2,12 @@ import React from 'react';
 
 export default props => (<div
   style={{
-    backgroundColor: '#A6DEF4',
-    border: '1px solid rgba(0,0,255,.5)',
+    backgroundColor: 'rgba(0,0,100,.2)',
+    border: '1px solid rgba(0,0,100,.5)',
+    textAlign: 'center',
     padding: '20px',
     borderRadius: '5px',
     height: '100%',
+    verticalAlign: 'middle',
   }} {...props}
 />);

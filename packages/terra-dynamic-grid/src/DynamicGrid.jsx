@@ -17,12 +17,12 @@ const propTypes = {
     * The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.
     * For IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.
     */
-    'grid-template-columns': PropTypes.string.isRequired,
+    'grid-template-columns': PropTypes.string,
     /**
     * The row definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows.
     * For IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772258(v=vs.85).aspx.
     */
-    'grid-template-rows': PropTypes.string.isRequired,
+    'grid-template-rows': PropTypes.string,
     /**
     * The gap to place between the columns and rows. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
     */
@@ -80,14 +80,14 @@ const DynamicGrid = ({
     .map(generateStyles)
     .map(StyleSheet.create);
 
-  const layoutStyles = name => stylesheets.map(x => x[name]);
-  const gridClasses = classNames(customProps.className, css(layoutStyles('grid')));
+  const layoutStyles = name => stylesheets.map(x => css(x[name]));
+  const gridClasses = classNames(customProps.className, layoutStyles('grid'));
 
   // Clone the child regions and inject their generated styles
   return (<div className={gridClasses} {...customProps}>
     {(React.Children || []).map(children,
      region => React.cloneElement(region, {
-       className: classNames(region.props.className, css(layoutStyles(region.props.name))),
+       className: classNames(region.props.className, layoutStyles(region.props.name)),
      }),
     )}
   </div>);

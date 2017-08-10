@@ -9,6 +9,7 @@ import OneColumn from './OneColumn';
 import TwoColumn from './TwoColumn';
 import ULayout from './ULayout';
 import Dashboard from './Dashboard';
+import ResponsiveGrid from './ResponsiveGrid';
 
 
 // Component Source
@@ -30,6 +31,9 @@ const DynamicGridExamples = () => (
     <ULayout />
     <h2>Dashboard</h2>
     <Dashboard />
+    <h2>Responsive Grid</h2>
+    <p>Resize the browser window to see the grid layout dynamically change.</p>
+    <ResponsiveGrid />
   </div>
 );
 
