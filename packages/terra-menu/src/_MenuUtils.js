@@ -1,31 +1,11 @@
 const getPopupHeight = (contentHeight) => {
-  if (contentHeight <= 40) {
-    return 40;
-  } else if (contentHeight <= 80) {
-    return 80;
-  } else if (contentHeight <= 120) {
-    return 120;
-  } else if (contentHeight <= 160) {
-    return 160;
-  } else if (contentHeight <= 240) {
-    return 240;
-  } else if (contentHeight <= 320) {
-    return 320;
-  } else if (contentHeight <= 400) {
-    return 400;
-  } else if (contentHeight <= 480) {
-    return 480;
-  } else if (contentHeight <= 560) {
-    return 560;
-  } else if (contentHeight <= 640) {
-    return 640;
-  } else if (contentHeight <= 720) {
-    return 720;
-  } else if (contentHeight <= 800) {
-    return 800;
+  if (contentHeight <= 160) {
+    // This will round the content height up to the nearest multiple of 40 for smaller content heights
+    return Math.ceil(contentHeight / 40) * 40;
   }
 
-  return 880;
+  // This will round the content height up to the nearest mulitple of 80 and take the min of that and 880
+  return Math.min(Math.ceil(contentHeight / 80) * 80, 880);
 };
 
 const isFullScreen = (boundingFrame, popupHeight, popupWidth) => {

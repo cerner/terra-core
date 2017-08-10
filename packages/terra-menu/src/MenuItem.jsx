@@ -40,6 +40,11 @@ const propTypes = {
    * Callback function for when item is clicked
    */
   onClick: PropTypes.func,
+
+  /**
+   * Callback function for when selection state changes on a selectable item
+   */
+  onChange: PropTypes.func,
 };
 
 const defaultProps = {

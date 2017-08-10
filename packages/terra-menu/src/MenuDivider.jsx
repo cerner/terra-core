@@ -6,7 +6,7 @@ import styles from './Menu.scss';
 const cx = classNames.bind(styles);
 
 const MenuDivider = () => (
-  <hr className={cx(['divider'])} />
+  <hr className={cx('divider')} />
 );
 
 export default MenuDivider;
