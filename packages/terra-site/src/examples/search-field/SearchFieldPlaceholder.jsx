@@ -1,10 +1,10 @@
 import React from 'react';
-import SearchField from 'terra-search-field';
+import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
-const view = () => (
-  <div>
-    <SearchField placeholder="Search Here" />
-  </div>
+const SearchFieldExample = () => (
+  <SearchFieldExampleTemplate
+    placeholder="Search Here"
+  />
 );
 
-export default view;
+export default SearchFieldExample;

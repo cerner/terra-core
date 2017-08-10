@@ -5,7 +5,7 @@ import TimeInput from 'terra-time-input';
 class timeInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { time: '' };
+    this.state = { time: moment().format('HH:mm') };
     this.handleTimeChange = this.handleTimeChange.bind(this);
   }
 
@@ -16,10 +16,10 @@ class timeInput extends React.Component {
   render() {
     return (
       <div>
-        <h3>Updated time: {this.state.time}</h3>
+        <p>Time Provided: {this.state.time}</p>
         <TimeInput
           name="time-input-value"
-          value={moment().format('HH:mm')}
+          value={this.state.time}
           onChange={this.handleTimeChange}
         />
       </div>

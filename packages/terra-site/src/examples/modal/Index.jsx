@@ -20,8 +20,10 @@ const ModalExamples = () => (
     <PropsTable id="props-table" src={ModalSrc} />
     <h2 id="isOpened">Default Modal</h2>
     <ModalIsOpened />
+    <br />
     <h2 id="closeOnOutsideClick">Disable closing the modal when clicking on the overlay</h2>
     <ModalCloseOnOutsideClick />
+    <br />
     <h2 id="isFullscreen">Fullscreen Modal</h2>
     <ModalIsFullscreen />
   </div>
