@@ -1,5 +1,3 @@
-# Controlled Input Example
-
 ```jsx
 import React from 'react';
 import Button from 'terra-button';

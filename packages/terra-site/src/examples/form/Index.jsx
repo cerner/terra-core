@@ -13,6 +13,8 @@ const FormsExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
+    <h2>Controlled Form Example</h2>
+    <br />
     <ControlledInput />
     <br />
     <ToggleButton closedButtonText="Show Example Code" openedButtonText="Hide Example Code" isAnimated buttonAttrs={{ variant: 'link' }}>
