@@ -3,7 +3,7 @@ import Card from 'terra-card';
 
 const CardDefault = () => (
   <div>
-    <Card children={"Some Example Text"}/>
+    <Card children={"Hello World!!"}/>
 </div>
 );
 

@@ -10,7 +10,9 @@ import Card from 'terra-card';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import CardSrc from '!raw-loader!terra-card/src/Card';
 import CardDefault from './CardDefault';
-import CardClick from './CardClick';
+import CardWithHorizontal from './CardWithHorizontal';
+import CardHorizontalNoPadding from './CardHorizontalNoPadding';
+import CardDefaultNoPadding from './CardDefaultNoPadding'
 
 // Example Files
 
@@ -19,15 +21,14 @@ const CardExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={CardSrc} />
-    <h2 id="CardDefault">Default Card Example</h2>
-    <hr/>
+    <h2 id="CardDefault">Basic Hello World with defaults</h2>
     <CardDefault />
-    <hr/>
-    <h2 id="CardClick">Card Click Example</h2>
-    <hr/>
-    <CardClick />
-    <hr/>
-
+    <h2 style={{padding:'10px'}} id="CardWithHorizontal">Look, Horizontal rules can be set to obey the padding</h2>
+    <CardWithHorizontal />
+    <h2 style={{padding:'10px'}} id="CardWithHorizontal">Or they can go all the way to the edge</h2>
+    <CardHorizontalNoPadding />
+    <h2 style={{padding:'10px'}} id="CardDefaultNoPadding">You want no padding? We gotcha</h2>
+    <CardDefaultNoPadding />
   </div>
 );
 

@@ -6,6 +6,7 @@
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-card`
+  - `yarn add terra-card`
 
 ## Usage
 

@@ -6,11 +6,13 @@ import CardTests from './CardTests';
 
 // Test Cases
 import DefaultCard from './DefaultCard';
+import CardNoPadding from './CardNoPadding';
 
 const routes = (
   <div>
     <Route path="/tests/card-tests" component={CardTests} />
     <Route path="/tests/card-tests/default" component={DefaultCard} />
+    <Route path="/tests/card-tests/noPadding" component={CardNoPadding} />
   </div>
 );
 
