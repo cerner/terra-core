@@ -3,6 +3,7 @@ import React from 'react';
 import { Route } from 'react-router';
 
 // Form Component Indexes
+import FormExample from './Index';
 import FieldIndex from './components/FieldIndex';
 import FieldsetIndex from './components/FieldsetIndex';
 import InputIndex from './components/InputIndex';
@@ -16,6 +17,7 @@ import SelectFieldIndex from './components/SelectFieldIndex';
 
 const routes = (
   <div>
+    <Route path="/site/form" component={FormExample} />
     <Route path="/site/form/field" component={FieldIndex} />
     <Route path="/site/form/fieldset" component={FieldsetIndex} />
     <Route path="/site/form/input" component={InputIndex} />

@@ -16,7 +16,6 @@ import ButtonGroupExamples from './examples/button-group/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
-import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
 import I18nExamples from './examples/i18n/Index';
@@ -101,7 +100,7 @@ ReactDOM.render((
         <Route path="content-container" component={ContentContainerExamples} />
         <Route path="datepicker" component={DatePickerExamples} />
         <Route path="demographics-banner" component={DemographicsBannerExamples} />
-        <Route path="form" component={FormExamples} />
+        {FormIndexRoutes}
         <Route path="grid" component={GridExamples} />
         <Route path="heading" component={HeadingExamples} />
         <Route path="i18n" component={I18nExamples} />
@@ -124,7 +123,6 @@ ReactDOM.render((
         <Route path="time-input" component={TimeInputExamples} />
         <Route path="toggle" component={ToggleExamples} />
         <Route path="toggle-button" component={ToggleButtonExamples} />
-        {FormIndexRoutes}
       </Route>
       <Route path="/tests" component={TestLinks} />
       {AlertTestRoutes}
