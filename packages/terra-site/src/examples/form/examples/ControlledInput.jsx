@@ -154,17 +154,17 @@ class ControlledInput extends React.Component {
           onChange={this.handleExperienceUpdate}
         />
         <SelectField
-            options={[{ value: '', display: 'Select an Operating System' },
-                        { value: 'mac', display: 'Mac OSX' },
-                        { value: 'windows', display: 'Microsoft Windows' },
-                        { value: 'linux', display: 'Linux' }]}
-            help="We try not to restrict dev environment"
-            label="Preferred Operating System"
-            name="os"
-            value={this.state.formData.operatingSystem}
-            required
-            onChange={this.handleOperatingSystemChanged}
-          />
+          options={[{ value: '', display: 'Select an Operating System' },
+                      { value: 'mac', display: 'Mac OSX' },
+                      { value: 'windows', display: 'Microsoft Windows' },
+                      { value: 'linux', display: 'Linux' }]}
+          help="We try not to restrict dev environment"
+          label="Preferred Operating System"
+          name="os"
+          value={this.state.formData.operatingSystem}
+          required
+          onChange={this.handleOperatingSystemChanged}
+        />
         <Fieldset
           legend="Preferred Location"
         >
