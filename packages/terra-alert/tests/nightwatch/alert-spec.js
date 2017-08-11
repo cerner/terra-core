@@ -56,8 +56,7 @@ module.exports = {
 
   'Type attribute tests - Check Alert of type alert': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`)
-      .assert.attributeContains(
+       .assert.attributeContains(
         '#alertAlert',
         'class',
         '_alert',
@@ -74,8 +73,7 @@ module.exports = {
 
   'Type attribute tests - Check Alert of type error': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`)
-      .assert.attributeContains(
+        .assert.attributeContains(
         '#errorAlert',
         'class',
         '_error',
@@ -92,7 +90,6 @@ module.exports = {
 
   'Type attribute tests - Check Alert of type warning': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`)
       .assert.attributeContains(
         '#warningAlert',
         'class',
@@ -110,7 +107,6 @@ module.exports = {
 
   'Type attribute tests - Check Alert of type advisory': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`)
       .assert.attributeContains(
         '#advisoryAlert',
         'class',
@@ -128,7 +124,6 @@ module.exports = {
 
   'Type attribute tests - Check Alert of type info': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`)
       .assert.attributeContains(
         '#infoAlert',
         'class',
@@ -146,7 +141,6 @@ module.exports = {
 
   'Type attribute tests - Check Alert of type success': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`)
       .assert.attributeContains(
         '#successAlert',
         'class',
@@ -198,7 +192,6 @@ module.exports = {
 
   'Custom Alert Tests - Check first custom Alert with no icon, title or custom color': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom1',
         'class',
@@ -224,7 +217,6 @@ module.exports = {
 
   'Custom Alert Tests - Check second custom Alert with title but no icon or custom color': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom2',
         'class',
@@ -250,7 +242,6 @@ module.exports = {
 
   'Custom Alert Tests - Check third custom Alert with icon but no title or custom color': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom3',
         'class',
@@ -276,7 +267,6 @@ module.exports = {
 
   'Custom Alert Tests - Check fourth custom Alert with custom color but no title or icon': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom4',
         'class',
@@ -302,7 +292,6 @@ module.exports = {
 
   'Custom Alert Tests - Check fifth custom Alert with custom color and title but no icon': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom5',
         'class',
@@ -328,7 +317,6 @@ module.exports = {
 
   'Custom Alert Tests - Check sixth custom Alert with title and icon but no custom color': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom6',
         'class',
@@ -354,7 +342,6 @@ module.exports = {
 
   'Custom Alert Tests - Check seventh custom Alert with custom color and icon but no title': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom7',
         'class',
@@ -380,7 +367,6 @@ module.exports = {
 
   'Custom Alert Tests - Check eighth custom Alert with title, custom color and icon': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`)
       .assert.attributeContains(
         '#custom8',
         'class',
