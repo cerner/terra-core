@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
 import App from './App';
 import Home from './Home';
+import styles from './site.scss';
 
 // Examples
 import AlertExamples from './examples/alert/Index';
@@ -85,84 +86,86 @@ import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleB
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
-  <Router history={hashHistory}>
-    <Redirect from="/" to="/site" />
-    <Route path="/site" component={App}>
-      <IndexRoute component={Home} />
-      <Route path="alert" component={AlertExamples} />
-      <Route path="app-delegate" component={AppDelegateExamples} />
-      <Route path="arrange" component={ArrangeExamples} />
-      <Route path="badge" component={BadgeExamples} />
-      <Route path="base" component={BaseExamples} />
-      <Route path="button" component={ButtonExamples} />
-      <Route path="button-group" component={ButtonGroupExamples} />
-      <Route path="content-container" component={ContentContainerExamples} />
-      <Route path="datepicker" component={DatePickerExamples} />
-      <Route path="demographics-banner" component={DemographicsBannerExamples} />
-      <Route path="form" component={FormExamples} />
-      <Route path="grid" component={GridExamples} />
-      <Route path="heading" component={HeadingExamples} />
-      <Route path="i18n" component={I18nExamples} />
-      <Route path="icon" component={IconExamples} />
-      <Route path="image" component={ImageExamples} />
-      <Route path="list" component={ListExamples} />
-      <Route path="modal" component={ModalExamples} />
-      <Route path="modal-manager" component={ModalManagerExamples} />
-      <Route path="overlay" component={OverlayExamples} />
-      <Route path="popup" component={PopupExamples} />
-      <Route path="profile-image" component={ProfileImageExamples} />
-      <Route path="progress-bar" component={ProgressBarExamples} />
-      <Route path="responsive-element" component={ResponsiveElementExamples} />
-      <Route path="search-field" component={SearchFieldExamples} />
-      <Route path="slide-group" component={SlideGroupExamples} />
-      <Route path="slide-panel" component={SlidePanelExamples} />
-      <Route path="status" component={StatusExamples} />
-      <Route path="table" component={TableExamples} />
-      <Route path="text" component={TextExamples} />
-      <Route path="time-input" component={TimeInputExamples} />
-      <Route path="toggle" component={ToggleExamples} />
-      <Route path="toggle-button" component={ToggleButtonExamples} />
-      {FormIndexRoutes}
-    </Route>
-    <Route path="/tests" component={TestLinks} />
-    {AlertTestRoutes}
-    {ArrangeTestRoutes}
-    {BadgeTestRoutes}
-    {BaseTestRoutes}
-    {ButtonTestRoutes}
-    {ButtonGroupTestRoutes}
-    {DatePickerTestRoutes}
-    {DemographicsBannerTestRoutes}
-    {SlidePanelTestRoutes}
-    {I18nTestRoutes}
-    {IconTestRoutes}
-    {ImageTestRoutes}
-    {ResponsiveElementTestRoutes}
-    {ContentContainerTestRoutes}
-    {ListTestRoutes}
-    {ListItemTestRoutes}
-    {SingleSelectListTestRoutes}
-    {MultiSelectListTestRoutes}
-    {StatusTestRoutes}
-    {TableTestRoutes}
-    {TimeInputTestRoutes}
-    {MarkdownTestRoutes}
-    {ModalTestRoutes}
-    {ModalManagerTestRoutes}
-    {ProgressBarTestRoutes}
-    {PropsTableTestRoutes}
-    {GridTestRoutes}
-    {SearchFieldTestRoutes}
-    {PopupTestRoutes}
-    {FormTestRoutes}
-    {OverlayTestRoutes}
-    {LoadingOverlayTestRoutes}
-    {OverlayContainerTestRoutes}
-    {ToggleTestRoutes}
-    {ToggleButtonTestRoutes}
-    {HeadingTestRoutes}
-    {TextTestRoutes}
-    {SlideGroupTestRoutes}
-    {ProfileImageTestRoutes}
-  </Router>
+  <div className={styles.app} >
+    <Router history={hashHistory}>
+      <Redirect from="/" to="/site" />
+      <Route path="/site" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="alert" component={AlertExamples} />
+        <Route path="app-delegate" component={AppDelegateExamples} />
+        <Route path="arrange" component={ArrangeExamples} />
+        <Route path="badge" component={BadgeExamples} />
+        <Route path="base" component={BaseExamples} />
+        <Route path="button" component={ButtonExamples} />
+        <Route path="button-group" component={ButtonGroupExamples} />
+        <Route path="content-container" component={ContentContainerExamples} />
+        <Route path="datepicker" component={DatePickerExamples} />
+        <Route path="demographics-banner" component={DemographicsBannerExamples} />
+        <Route path="form" component={FormExamples} />
+        <Route path="grid" component={GridExamples} />
+        <Route path="heading" component={HeadingExamples} />
+        <Route path="i18n" component={I18nExamples} />
+        <Route path="icon" component={IconExamples} />
+        <Route path="image" component={ImageExamples} />
+        <Route path="list" component={ListExamples} />
+        <Route path="modal" component={ModalExamples} />
+        <Route path="modal-manager" component={ModalManagerExamples} />
+        <Route path="overlay" component={OverlayExamples} />
+        <Route path="popup" component={PopupExamples} />
+        <Route path="profile-image" component={ProfileImageExamples} />
+        <Route path="progress-bar" component={ProgressBarExamples} />
+        <Route path="responsive-element" component={ResponsiveElementExamples} />
+        <Route path="search-field" component={SearchFieldExamples} />
+        <Route path="slide-group" component={SlideGroupExamples} />
+        <Route path="slide-panel" component={SlidePanelExamples} />
+        <Route path="status" component={StatusExamples} />
+        <Route path="table" component={TableExamples} />
+        <Route path="text" component={TextExamples} />
+        <Route path="time-input" component={TimeInputExamples} />
+        <Route path="toggle" component={ToggleExamples} />
+        <Route path="toggle-button" component={ToggleButtonExamples} />
+        {FormIndexRoutes}
+      </Route>
+      <Route path="/tests" component={TestLinks} />
+      {AlertTestRoutes}
+      {ArrangeTestRoutes}
+      {BadgeTestRoutes}
+      {BaseTestRoutes}
+      {ButtonTestRoutes}
+      {ButtonGroupTestRoutes}
+      {DatePickerTestRoutes}
+      {DemographicsBannerTestRoutes}
+      {SlidePanelTestRoutes}
+      {I18nTestRoutes}
+      {IconTestRoutes}
+      {ImageTestRoutes}
+      {ResponsiveElementTestRoutes}
+      {ContentContainerTestRoutes}
+      {ListTestRoutes}
+      {ListItemTestRoutes}
+      {SingleSelectListTestRoutes}
+      {MultiSelectListTestRoutes}
+      {StatusTestRoutes}
+      {TableTestRoutes}
+      {TimeInputTestRoutes}
+      {MarkdownTestRoutes}
+      {ModalTestRoutes}
+      {ModalManagerTestRoutes}
+      {ProgressBarTestRoutes}
+      {PropsTableTestRoutes}
+      {GridTestRoutes}
+      {SearchFieldTestRoutes}
+      {PopupTestRoutes}
+      {FormTestRoutes}
+      {OverlayTestRoutes}
+      {LoadingOverlayTestRoutes}
+      {OverlayContainerTestRoutes}
+      {ToggleTestRoutes}
+      {ToggleButtonTestRoutes}
+      {HeadingTestRoutes}
+      {TextTestRoutes}
+      {SlideGroupTestRoutes}
+      {ProfileImageTestRoutes}
+    </Router>
+  </div>
 ), document.getElementById('root'));
