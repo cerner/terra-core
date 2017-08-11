@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Base locale={this.state.locale}>
+      <Base className={styles.app} locale={this.state.locale}>
         <Grid>
           <Grid.Row>
             <Grid.Column small={2}>

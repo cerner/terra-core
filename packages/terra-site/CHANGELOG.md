@@ -5,7 +5,6 @@ Unreleased
 ----------
 ### Changed
 * Break out form component examples into their own packages
-* Update styling lost in CSS Module conversion
 
 1.5.0 - (August 8, 2017)
 ------------------
