@@ -1,44 +1,27 @@
-.well-Card {
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px 0 #1C1F21;
-  margin: 10px;
-}
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .card {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 #1c1f21;
+    margin: 10px;
+  }
 
-.well-Card-container {
-  color: inherit;
-  display: block;
-  height: 100%;
-  text-decoration: none;
-  width: 100%;
-}
+  .cardContainer {
+    color: inherit;
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+  }
 
-.u-pa--sm {
-  padding: 10px;
-}
+  .veritcalPadding {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
 
-.u-pv--sm{
-  padding-top:10px;
-  padding-bottom:10px;
-}
-
-.u-ph--sm{
-  padding-left:10px;
-  padding-right:10px;
-}
-
-.u-pt--sm{
-  padding-top:10px;
-}
-
-.u-pb--sm{
-  padding-bottom:10px;
-}
-
-.u-pl--sm{
-  padding-left:10px;
-}
-
-.u-pr--sm{
-  padding-right:10px;
+  .horizontalPadding {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

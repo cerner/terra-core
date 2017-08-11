@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Card.scss';
+import './Card.scss';
 
 const propTypes = {
   /**
-   * option to pass in a single boolean to turn on/off, or an array to specify each side using css short hand https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+   * Provides 10px on top and bottom
    */
-  padding: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.bool,
-  ]),
+  padVertical: PropTypes.bool,
+  /**
+   * Provides 10px on left and right
+   */
+  padHorizontal: PropTypes.bool,
   /**
    * Child Nodes
    */
@@ -19,55 +20,36 @@ const propTypes = {
 };
 
 const defaultProps = {
-  padding: true,
+  padVertical: true,
+  padHorizontal: true,
 };
 
 const Card = ({
-  padding,
+  padVertical,
+  padHorizontal,
   children,
   ...customProps
 }) => {
   // Follows these conventions https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
-  let containerClass = 'well-Card-container';
+  let containerClass = 'card-container';
   const cardClass = classNames([
-    'well-Card',
+    'card',
     customProps.className,
   ]);
 
-  if (padding === true) {
-    containerClass += ' u-pa--sm';
-  } else if (Array.isArray(padding)) {
-    switch (padding.length) {
-      case 2: {
-        if (padding[0]) { containerClass += ' u-pv--sm'; }
-        if (padding[1]) { containerClass += ' u-ph--sm'; }
-        break;
-      }
-      case 3: {
-        if (padding[0]) { containerClass += ' u-pt--sm'; }
-        if (padding[1]) { containerClass += ' u-ph--sm'; }
-        if (padding[2]) { containerClass += ' u-pb--sm'; }
-        break;
-      }
-      case 4: {
-        if (padding[0]) { containerClass += ' u-pt--sm'; }
-        if (padding[1]) { containerClass += ' u-pr--sm'; }
-        if (padding[2]) { containerClass += ' u-pb--sm'; }
-        if (padding[3]) { containerClass += ' u-pl--sm'; }
-        break;
-      }
-      default: {
-        throw new Error('If you pass an array to padding, it must be either 2, 3, or 4 entries');
-      }
-    }
+  if (padVertical) {
+    containerClass += ' veritcalPadding';
+  }
+  if (padHorizontal) {
+    containerClass += ' horizontalPadding';
   }
 
 
-  const content =  <div className={containerClass}> {children}</div>
+  const content = <div className={containerClass}> {children}</div>;
 
   return (
-    <div  {...customProps} className={cardClass}>
-      { content}
+    <div {...customProps} className={cardClass}>
+      {content}
     </div>
   );
 };

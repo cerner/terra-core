@@ -3,8 +3,8 @@ import Card from 'terra-card';
 
 const CardDefault = () => (
   <div>
-    <Card children={"Hello World!!"}/>
-</div>
+    <Card>Hello World!!</Card>
+  </div>
 );
 
 export default CardDefault;
