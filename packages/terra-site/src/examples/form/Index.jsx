@@ -6,8 +6,10 @@ import { version } from 'terra-form/package.json';
 import ToggleButton from 'terra-toggle-button';
 
 // Example Files
-import ControlledInputDocs from './docs/ControlledInput.md';
 import ControlledInput from './examples/ControlledInput';
+import ControlSrc from '!raw-loader!./examples/ControlledInput';
+
+const codeIndicator = '```';
 
 const FormsExamples = () => (
   <div>
@@ -18,7 +20,7 @@ const FormsExamples = () => (
     <ControlledInput />
     <br />
     <ToggleButton closedButtonText="Show Example Code" openedButtonText="Hide Example Code" isAnimated buttonAttrs={{ variant: 'link' }}>
-      <Markdown id="controlled-input-example" src={ControlledInputDocs} componentName="ControlledInput" />
+      <Markdown id="controlled-input-example" src={`${codeIndicator}jsx\n${ControlSrc}${codeIndicator}`} componentName="ControlledInput" />
     </ToggleButton>
   </div>
 );
