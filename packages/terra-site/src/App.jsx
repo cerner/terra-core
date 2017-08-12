@@ -28,6 +28,7 @@ class App extends React.Component {
     };
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
     this.handleToggleClick = this.handleToggleClick.bind(this);
+    this.handleResetScroll = this.handleResetScroll.bind(this);
   }
 
   handleLocaleChange(e) {
@@ -36,6 +37,10 @@ class App extends React.Component {
 
   handleToggleClick() {
     this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  handleResetScroll() {
+    document.getElementById('site-content-section').scrollTop = 0;
   }
 
   render() {
@@ -54,7 +59,6 @@ class App extends React.Component {
           <ButtonGroup.Button isSelected text="ltr" key="ltr" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} />,
           <ButtonGroup.Button text="rtl" key="rtl" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} />,
         ]}
-        style={{ float: 'right' }}
       />
     );
 
@@ -77,48 +81,48 @@ class App extends React.Component {
     const panelContent = (
       <div className={styles['site-panel']}>
         <List className={styles['site-nav']}>
-          <List.Item content={<Link to="/">Home</Link>} />
-          <List.Item content={<Link to="/site/alert">Alert</Link>} />
-          <List.Item content={<Link to="/site/app-delegate">App Delegate</Link>} />
-          <List.Item content={<Link to="/site/arrange">Arrange</Link>} />
-          <List.Item content={<Link to="/site/base">Base</Link>} />
-          <List.Item content={<Link to="/site/badge">Badge</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/">Home</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/app-delegate">App Delegate</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/arrange">Arrange</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/base">Base</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/badge">Badge</Link>} />
           <List.Item content={<Link to="/site/button">Button</Link>} />
-          <List.Item content={<Link to="/site/button-group">Button Group</Link>} />
-          <List.Item content={<Link to="/site/content-container">Content Container</Link>} />
-          <List.Item content={<Link to="/site/datepicker">Date Picker</Link>} />
-          <List.Item content={<Link to="/site/demographics-banner">Demographics Banner</Link>} />
-          <List.Item content={<Link to="/site/form">Form</Link>} />
-          <List.Item content={<FormComponentNavigation />} />
-          <List.Item content={<Link to="/site/grid">Grid</Link>} />
-          <List.Item content={<Link to="/site/heading">Heading</Link>} />
-          <List.Item content={<Link to="/site/i18n">I18n</Link>} />
-          <List.Item content={<Link to="/site/icon">Icon</Link>} />
-          <List.Item content={<Link to="/site/image">Image</Link>} />
-          <List.Item content={<Link to="/site/list">List</Link>} />
-          <List.Item content={<Link to="/site/modal">Modal</Link>} />
-          <List.Item content={<Link to="/site/modal-manager">Modal Manager</Link>} />
-          <List.Item content={<Link to="/site/overlay">Overlay</Link>} />
-          <List.Item content={<Link to="/site/popup">Popup</Link>} />
-          <List.Item content={<Link to="/site/profile-image">Profile Image</Link>} />
-          <List.Item content={<Link to="/site/progress-bar">Progress Bar</Link>} />
-          <List.Item content={<Link to="/site/responsive-element">Responsive Element</Link>} />
-          <List.Item content={<Link to="/site/search-field">Search Field</Link>} />
-          <List.Item content={<Link to="/site/slide-group">Slide Group</Link>} />
-          <List.Item content={<Link to="/site/slide-panel">Slide Panel</Link>} />
-          <List.Item content={<Link to="/site/status">Status</Link>} />
-          <List.Item content={<Link to="/site/table">Table</Link>} />
-          <List.Item content={<Link to="/site/text">Text</Link>} />
-          <List.Item content={<Link to="/site/time-input">Time Input</Link>} />
-          <List.Item content={<Link to="/site/toggle">Toggle</Link>} />
-          <List.Item content={<Link to="/site/toggle-button">Toggle Button</Link>} />
-          <List.Item content={<Link to="/tests">Tests</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button-group">Button Group</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/content-container">Content Container</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/datepicker">Date Picker</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/demographics-banner">Demographics Banner</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form">Form</Link>} />
+          <List.Item content={<FormComponentNavigation onClick={this.handleResetScroll} />} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/grid">Grid</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/heading">Heading</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/i18n">I18n</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/icon">Icon</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/image">Image</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/list">List</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal">Modal</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal-manager">Modal Manager</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/overlay">Overlay</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/popup">Popup</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/profile-image">Profile Image</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/progress-bar">Progress Bar</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/responsive-element">Responsive Element</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/search-field">Search Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-group">Slide Group</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/table">Table</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/text">Text</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/time-input">Time Input</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle">Toggle</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle-button">Toggle Button</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/tests">Tests</Link>} />
         </List>
       </div>
     );
 
     const mainContent = (
-      <div className={styles['site-content']}>
+      <div id="site-content-section" className={styles['site-content']}>
         {this.props.children}
       </div>
     );

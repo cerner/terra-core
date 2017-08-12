@@ -38,7 +38,10 @@
   }
 
   .site-content {
+    height: 100%;
+    overflow: auto;
     padding: 1.42rem;
+    width: 100%;
   }
 
   .site-nav-header {
