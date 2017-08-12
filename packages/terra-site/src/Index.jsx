@@ -85,9 +85,9 @@ import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleB
 import TestLinks from './TestLinks';
 
 ReactDOM.render((
-  <Router history={hashHistory}>
+  <Router history={hashHistory} className="durp">
     <Redirect from="/" to="/site" />
-    <Route path="/site" component={App}>
+    <Route path="/site" component={App} className="durp">
       <IndexRoute component={Home} />
       <Route path="alert" component={AlertExamples} />
       <Route path="app-delegate" component={AppDelegateExamples} />

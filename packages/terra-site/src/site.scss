@@ -2,10 +2,13 @@
 // stylelint-disable
 :local {
   .app {
-    padding: 1.25rem;
+    height: 100%;
+    width: 100%;
   }
 
   .site-nav {
+    padding: 1.25rem;
+
     & > li {
       font-size: 1.25rem;
       padding: 0.5rem 0;
@@ -16,7 +19,81 @@
     }
   }
 
-  .sub-nav {
-    padding-left: 1.42rem;
+  .site-form-nav {
+    padding-left: 1.25rem;
+
+    & > li {
+      font-size: 1.25rem;
+      padding: 0.5rem 0;
+
+      & > a {
+        text-decoration: none;
+      }
+    }
   }
+
+  .site-panel {
+    background-color: #f1f1f2;
+    border-right: px solid #047cc0;
+  }
+
+  .site-content {
+    padding: 1.42rem;
+  }
+
+  .site-nav-header {
+    border-bottom: 1px solid #eaecef;
+    padding: 1.25rem;
+  }
+
+  .site-header {
+    background-color: #80c7ee;
+    border-bottom: 3px solid #047cc0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.5rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .site-utility {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+  }
+
+  .site-locale {
+    align-self: center;
+    flex: 0 0 auto;
+    padding-right: 0.5rem;
+    position: relative;
+  }
+
+  .site-bidi {
+    align-self: center;
+    flex: 0 0 auto;
+    position: relative;
+  }
+}
+
+#site-body {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#root > [data-reactroot] {
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
