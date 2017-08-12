@@ -1,13 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import List from 'terra-list';
 import styles from '../../site.scss';
 
+const propTypes = {
+  onClick: PropTypes.func,
+};
 
 const FormComponentNavigation = ({
     onClick,
-  }) => {
-  return (
+  }) =>
     <List className={[styles['site-form-nav'], styles['sub-nav']]}>
       <List.Item content={<Link onClick={onClick} to="/site/form/field">Field</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/fieldset">Feildset</Link>} />
@@ -19,8 +22,8 @@ const FormComponentNavigation = ({
       <List.Item content={<Link onClick={onClick} to="/site/form/text-field">Text Field</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/select">Select</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/select-field">Select Field</Link>} />
-    </List>
-  );
-};
+    </List>;
+
+FormComponentNavigation.propTypes = propTypes;
 
 export default FormComponentNavigation;
