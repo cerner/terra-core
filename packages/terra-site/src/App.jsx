@@ -123,8 +123,8 @@ class App extends React.Component {
       </div>
     );
 
-    // Moved Base to wrap the main content, as i18n inserts and an styled div and ruins layout if placed higher.
-    // Might consider enablling styling for base, or evaluate if multipe Base's are viable.
+    // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
+    // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
     const mainContent = (
       <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
         {this.props.children}
