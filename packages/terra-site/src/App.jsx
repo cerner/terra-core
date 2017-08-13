@@ -123,10 +123,12 @@ class App extends React.Component {
       </div>
     );
 
+    // Moved Base to wrap the main content, as i18n inserts and an styled div and ruins layout if placed higher.
+    // Might consider enablling styling for base, or evaluate if multipe Base's are viable.
     const mainContent = (
-      <div id="site-content-section" className={styles['site-content']}>
+      <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
         {this.props.children}
-      </div>
+      </Base>
     );
 
     const utilityContent = (
@@ -144,21 +146,17 @@ class App extends React.Component {
     );
 
     return (
-      <div className={styles.app}>
-        <Base className={styles.app} locale={this.state.locale}>
-          <ContentContainer header={applicationHeader} fill>
-            <SlidePanel
-              mainContent={mainContent}
-              panelContent={panelContent}
-              panelBehavior="squish"
-              panelPosition="start"
-              panelSize="small"
-              isOpen={this.state.isOpen}
-              fill
-            />
-          </ContentContainer>
-        </Base>
-      </div>
+      <ContentContainer className={styles.app} header={applicationHeader} fill>
+        <SlidePanel
+          mainContent={mainContent}
+          panelContent={panelContent}
+          panelBehavior="squish"
+          panelPosition="start"
+          panelSize="small"
+          isOpen={this.state.isOpen}
+          fill
+        />
+      </ContentContainer>
     );
   }
 }
