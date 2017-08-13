@@ -1,6 +1,5 @@
 import React from 'react';
-import DynamicGrid from 'terra-dynamic-grid/src/DynamicGrid';
-import Region from 'terra-dynamic-grid/src/Region';
+import DynamicGrid from 'terra-dynamic-grid';
 
 import Card from './Card';
 
@@ -56,24 +55,24 @@ const layouts = [{
 
 const DashboardLayout = () => (
   (<DynamicGrid layouts={layouts}>
-    <Region name="leftGutter">
+    <DynamicGrid.Region name="leftGutter">
       <Card>left gutter</Card>
-    </Region>
-    <Region name="notification">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="notification">
       <Card>notification</Card>
-    </Region>
-    <Region name="rightGutter">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="rightGutter">
       <Card>right gutter</Card>
-    </Region>
-    <Region name="r1">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r1">
       <Card>r1</Card>
-    </Region>
-    <Region name="r2">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r2">
       <Card>r2</Card>
-    </Region>
-    <Region name="r3">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r3">
       <Card>r3</Card>
-    </Region>
+    </DynamicGrid.Region>
   </DynamicGrid>)
 );
 

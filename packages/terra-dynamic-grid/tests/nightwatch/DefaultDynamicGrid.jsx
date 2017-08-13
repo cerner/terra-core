@@ -1,9 +1,8 @@
 import React from 'react';
 
 import DynamicGrid from '../../lib/DynamicGrid';
-import Region from '../../lib/Region';
 
-const layout = {
+const layouts = [{
   'grid-template-columns': '100px 100px',
   'grid-template-rows': '100px',
   'grid-gap': '10px',
@@ -19,9 +18,9 @@ const layout = {
       'grid-row-start': 1,
     },
   ],
-};
+}];
 
-export default () => <DynamicGrid id="defaultDynamicGrid" layout={layout}>
-  <Region name="r1">R1</Region>
-  <Region name="r2">R2</Region>
+export default () => <DynamicGrid id="defaultDynamicGrid" layouts={layouts}>
+  <DynamicGrid.Region id="region1" name="r1">R1</DynamicGrid.Region>
+  <DynamicGrid.Region id="region2" name="r2">R2</DynamicGrid.Region>
 </DynamicGrid>;

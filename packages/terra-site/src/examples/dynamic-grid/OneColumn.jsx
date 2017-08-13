@@ -1,6 +1,5 @@
 import React from 'react';
-import DynamicGrid from 'terra-dynamic-grid/src/DynamicGrid';
-import Region from 'terra-dynamic-grid/src/Region';
+import DynamicGrid from 'terra-dynamic-grid';
 
 import Card from './Card';
 
@@ -20,9 +19,9 @@ const layouts = [{
 
 const OneColumn = () => (
   (<DynamicGrid layouts={layouts}>
-    <Region name="r1">
+    <DynamicGrid.Region name="r1">
       <Card>Region 1</Card>
-    </Region>
+    </DynamicGrid.Region>
   </DynamicGrid>)
 );
 

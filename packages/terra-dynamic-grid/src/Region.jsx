@@ -10,7 +10,7 @@ const propTypes = {
   /**
    * The children of the region.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 const Region = ({

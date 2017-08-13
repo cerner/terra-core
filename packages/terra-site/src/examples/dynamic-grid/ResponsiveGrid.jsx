@@ -1,6 +1,5 @@
 import React from 'react';
-import DynamicGrid from 'terra-dynamic-grid/src/DynamicGrid';
-import Region from 'terra-dynamic-grid/src/Region';
+import DynamicGrid from 'terra-dynamic-grid';
 
 import Card from './Card';
 
@@ -137,36 +136,36 @@ const layouts = [{
 
 const ResponsiveGrid = () => (
   (<DynamicGrid layouts={layouts}>
-    <Region name="r11">
+    <DynamicGrid.Region name="r11">
       <Card />
-    </Region>
-    <Region name="r12">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r12">
       <Card />
-    </Region>
-    <Region name="r13">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r13">
       <Card />
-    </Region>
-    <Region name="r21">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r21">
       <Card />
-    </Region>
-    <Region name="r22">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r22">
       <Card />
-    </Region>
-    <Region name="r23">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r23">
       <Card />
-    </Region>
-    <Region name="r31">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r31">
       <Card />
-    </Region>
-    <Region name="r32">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r32">
       <Card />
-    </Region>
-    <Region name="r33">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="r33">
       <Card />
-    </Region>
-    <Region name="cell">
+    </DynamicGrid.Region>
+    <DynamicGrid.Region name="cell">
       <Card>Hello</Card>
-    </Region>
+    </DynamicGrid.Region>
   </DynamicGrid>)
 );
 
