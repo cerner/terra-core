@@ -144,19 +144,21 @@ class App extends React.Component {
     );
 
     return (
-      <Base className={styles.app} locale={this.state.locale}>
-        <ContentContainer header={applicationHeader} fill>
-          <SlidePanel
-            mainContent={mainContent}
-            panelContent={panelContent}
-            panelBehavior="squish"
-            panelPosition="start"
-            panelSize="small"
-            isOpen={this.state.isOpen}
-            fill
-          />
-        </ContentContainer>
-      </Base>
+      <div className={styles.app}>
+        <Base className={styles.app} locale={this.state.locale}>
+          <ContentContainer header={applicationHeader} fill>
+            <SlidePanel
+              mainContent={mainContent}
+              panelContent={panelContent}
+              panelBehavior="squish"
+              panelPosition="start"
+              panelSize="small"
+              isOpen={this.state.isOpen}
+              fill
+            />
+          </ContentContainer>
+        </Base>
+      </div>
     );
   }
 }
