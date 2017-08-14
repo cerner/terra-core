@@ -7,12 +7,16 @@ const ImageDefault = () => (
   <div>
     <h2>Default</h2>
     <Image src={placeholderPic150x150} alt="default image" />
+    <br />
     <h2>Circle</h2>
     <Image src={placeholderPic150x150} alt="circle image" variant="circle" />
+    <br />
     <h2>Rounded</h2>
     <Image src={placeholderPic150x150} alt="rounded image" variant="rounded" />
+    <br />
     <h2>Thumbnail</h2>
     <Image src={placeholderPic150x150} alt="thumbnail image" variant="thumbnail" />
+    <br />
     <h2>Fluid</h2>
     <Image src={placeholderPic1000x200} alt="fluid image" isFluid />
   </div>

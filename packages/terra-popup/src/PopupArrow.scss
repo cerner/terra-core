@@ -1,12 +1,10 @@
-@import './variables';
-
 :local {
   [dir=ltr],
   [dir=rtl] {
     /* stylelint-disable selector-class-pattern  */
     // These are relative to screen coordinates, so no bi-di concerns
     .popupArrow {
-      border: var(--terra-popup-arrow-size) solid transparent;
+      border: var(--terra-popup-arrow-size, 11px) solid transparent;
       display: none;
       height: 0;
       left: 50%;
@@ -14,20 +12,20 @@
       top: 50%;
       transform: translate3d(-50%, -50%, 0);
       width: 0;
-      z-index: var(--terra-popup-arrow-z-index);
+      z-index: var(--terra-popup-arrow-z-index, 7002);
 
       &::after {
-        border: var(--terra-popup-arrow-inner-size) solid transparent;
+        border: var(--terra-popup-arrow-inner-size, 10px) solid transparent;
         content: '';
         height: 0;
         position: absolute;
         width: 0;
-        z-index: var(--terra-popup-arrow-inner-z-index);
+        z-index: var(--terra-popup-arrow-inner-z-index, 7003);
       }
     }
 
     .popupArrow[data-align-top='true'] {
-      border-bottom-color: var(--terra-popup-arrow-color);
+      border-bottom-color: var(--terra-popup-arrow-color, #b2b5b6);
       border-top-width: 0;
       display: block;
       top: 0;
@@ -36,53 +34,53 @@
       &::after {
         border-bottom-color: #fff;
         border-top-width: 0;
-        left: -var(--terra-popup-arrow-inner-size);
-        top: var(--terra-popup-arrow-inner-inset-size);
+        left: -var(--terra-popup-arrow-inner-size, 10px);
+        top: var(--terra-popup-arrow-inner-inset-size, 2px);
       }
     }
 
     .popupArrow[data-align-bottom='true'] {
       border-bottom-width: 0;
-      border-top-color: var(--terra-popup-arrow-color);
+      border-top-color: var(--terra-popup-arrow-color, #b2b5b6);
       display: block;
       top: 100%;
       transform: translate3d(-100%, -100%, 0);
 
       &::after {
         border-bottom-width: 0;
-        border-top-color: var(--terra-popup-arrow-inner-color);
-        bottom: var(--terra-popup-arrow-inner-inset-size);
-        left: -var(--terra-popup-arrow-inner-size);
+        border-top-color: var(--terra-popup-arrow-inner-color, #fff);
+        bottom: var(--terra-popup-arrow-inner-inset-size, 2px);
+        left: -var(--terra-popup-arrow-inner-size, 10px);
       }
     }
 
     .popupArrow[data-align-left='true'] {
       border-left-width: 0;
-      border-right-color: var(--terra-popup-arrow-color);
+      border-right-color: var(--terra-popup-arrow-color, #b2b5b6);
       display: block;
       left: 0;
       transform: translate3d(0, -100%, 0);
 
       &::after {
         border-left-width: 0;
-        border-right-color: var(--terra-popup-arrow-inner-color);
-        left: var(--terra-popup-arrow-inner-inset-size);
-        top: -var(--terra-popup-arrow-inner-size);
+        border-right-color: var(--terra-popup-arrow-inner-color, #fff);
+        left: var(--terra-popup-arrow-inner-inset-size, 2px);
+        top: -var(--terra-popup-arrow-inner-size, 10px);
       }
     }
 
     .popupArrow[data-align-right='true'] {
-      border-left-color: var(--terra-popup-arrow-color);
+      border-left-color: var(--terra-popup-arrow-color, #b2b5b6);
       border-right-width: 0;
       display: block;
       left: 100%;
       transform: translate3d(-100%, -100%, 0);
 
       &::after {
-        border-left-color: var(--terra-popup-arrow-inner-color);
+        border-left-color: var(--terra-popup-arrow-inner-color, #fff);
         border-right-width: 0;
-        right: var(--terra-popup-arrow-inner-inset-size);
-        top: -var(--terra-popup-arrow-inner-size);
+        right: var(--terra-popup-arrow-inner-inset-size, 2px);
+        top: -var(--terra-popup-arrow-inner-size, 10px);
       }
     }
   }
