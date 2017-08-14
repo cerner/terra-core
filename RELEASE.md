@@ -4,6 +4,7 @@ This project is hosted on NPM.  You can find the terra packages [here][project-u
 
 Below is a guide for releasing packages:
 - Checkout the master branch and run `git pull` to ensure you have the latest changes in master.
+- Run `npm run clean:install` to ensure you have npm packages updated for the master branch.
 - Run `lerna updated` to view all packages that have updates to be released.
 - Be sure to check the changelogs of all packages that have updates and ensure the changelogs are updated accordingly.
 - If a package has not been released before, remove the private attribute from the package.json. The private attribute has been set to true in order to prevent accidental publication.
@@ -26,15 +27,15 @@ When run, this command does the following:
 
 More specifically, this command will:
 
-1 Check if the currently installed packages match the versions in the package.json
-2 Run each package's `compile` command to generate the distributed code
-3 Run tests for each package
-4 Run each package's `props-table` command to generate the props-table documentation as a markdown file
-5 Run the equivalent of `lerna updated` to determine which packages need to be published
-6 Prompt for a new version for each updated package
-7 Update the package.json of all updated packages to their new versions
-8 Update all dependencies of the updated packages with the new versions, specified with a caret (^)
-9 Create a new git commit and tag for the new version
-10 Publish updated packages to npm
+- Check if the currently installed packages match the versions in the package.json
+- Run each package's `compile` command to generate the distributed code
+- Run tests for each package
+- Run each package's `props-table` command to generate the props-table documentation as a markdown file
+- Run the equivalent of `lerna updated` to determine which packages need to be published
+- Prompt for a new version for each updated package
+- Update the package.json of all updated packages to their new versions
+- Update all dependencies of the updated packages with the new versions, specified with a caret (^)
+- Create a new git commit and tag for the new version
+- Publish updated packages to npm
 
 [project-url]: https://www.npmjs.com/org/cerner/team/terra-ui
