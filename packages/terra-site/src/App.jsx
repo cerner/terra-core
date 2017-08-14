@@ -40,7 +40,7 @@ class App extends React.Component {
   }
 
   handleResetScroll() {
-    let scrollParent = document.getElementById('site-content-section').parentNode;
+    const scrollParent = document.getElementById('site-content-section').parentNode;
     if (scrollParent && scrollParent.parentNode) {
       scrollParent.parentNode.scrollTop = 0;
     }
