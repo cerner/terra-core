@@ -3,7 +3,7 @@ import Card from 'terra-card';
 
 const CardPaddingVertical = () => (
   <div>
-    <Card padVertical={false}>Hello World!!</Card>
+    <Card padVertical>Hello World!!</Card>
   </div>
 );
 

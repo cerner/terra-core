@@ -6,17 +6,17 @@ import CardTests from './CardTests';
 
 // Test Cases
 import DefaultCard from './DefaultCard';
-import CardNoPadding from './CardNoPadding';
-import CardNoVerticalPadding from './CardNoVerticalPadding';
-import CardNoHorizontalPadding from './CardNoHorizontalPadding';
+import CardPadding from './CardPadding';
+import CardVerticalPadding from './CardVerticalPadding';
+import CardHorizontalPadding from './CardHorizontalPadding';
 
 const routes = (
   <div>
     <Route path="/tests/card-tests" component={CardTests} />
     <Route path="/tests/card-tests/default" component={DefaultCard} />
-    <Route path="/tests/card-tests/noPadding" component={CardNoPadding} />
-    <Route path="/tests/card-tests/noVerticalPadding" component={CardNoVerticalPadding} />
-    <Route path="/tests/card-tests/noHorizontalPadding" component={CardNoHorizontalPadding} />
+    <Route path="/tests/card-tests/padding" component={CardPadding} />
+    <Route path="/tests/card-tests/verticalPadding" component={CardVerticalPadding} />
+    <Route path="/tests/card-tests/horizontalPadding" component={CardHorizontalPadding} />
   </div>
 );
 

@@ -13,7 +13,7 @@ describe('Card', () => {
   // Prop Tests
   it('should use the default value when no value is given', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.card').text()).toEqual(' ');
+    expect(wrapper.find('.card'));
   });
 
   // Structure Tests

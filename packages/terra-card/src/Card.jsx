@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import './Card.scss';
+import styles from './Card.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Provides 10px on top and bottom
+   * Provides themeable 10px on top and bottom
    */
   padVertical: PropTypes.bool,
   /**
-   * Provides 10px on left and right
+   * Provides themeable 10px on left and right
    */
   padHorizontal: PropTypes.bool,
   /**
@@ -20,8 +22,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  padVertical: true,
-  padHorizontal: true,
+
 };
 
 const Card = ({
@@ -30,28 +31,14 @@ const Card = ({
   children,
   ...customProps
 }) => {
-  // Follows these conventions https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
-  let containerClass = 'cardContainer';
-  const cardClass = classNames([
-    'card',
+  const containerClass = cx([
+    'card-container',
+    { 'veritcal-padding': padVertical },
+    { 'horizontal-padding': padHorizontal },
     customProps.className,
   ]);
 
-  if (padVertical) {
-    containerClass += ' veritcalPadding';
-  }
-  if (padHorizontal) {
-    containerClass += ' horizontalPadding';
-  }
-
-
-  const content = <div className={containerClass}> {children}</div>;
-
-  return (
-    <div {...customProps} className={cardClass}>
-      {content}
-    </div>
-  );
+  return (<div {...customProps} className={containerClass}> {children}</div>);
 };
 
 Card.propTypes = propTypes;
