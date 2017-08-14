@@ -31,7 +31,7 @@ const Card = ({
   ...customProps
 }) => {
   // Follows these conventions https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
-  let containerClass = 'card-container';
+  let containerClass = 'cardContainer';
   const cardClass = classNames([
     'card',
     customProps.className,
