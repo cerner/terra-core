@@ -13,7 +13,7 @@ const FormComponentNavigation = ({
   }) =>
     <List className={[styles['site-form-nav'], styles['sub-nav']]}>
       <List.Item content={<Link onClick={onClick} to="/site/form/field">Field</Link>} />
-      <List.Item content={<Link onClick={onClick} to="/site/form/fieldset">Feildset</Link>} />
+      <List.Item content={<Link onClick={onClick} to="/site/form/fieldset">Fieldset</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/input">Input</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/control">Control</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/number-field">Number Field</Link>} />
