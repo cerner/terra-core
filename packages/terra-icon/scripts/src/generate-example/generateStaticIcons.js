@@ -1,12 +1,12 @@
 /* eslint-disable */
 import fs from 'fs';
 
-const outputfile = fs.createWriteStream('../../packages/terra-site/src/examples/icon/IconThemeable.jsx', { flags: 'w' });
+const outputfile = fs.createWriteStream('../../packages/terra-site/src/examples/icon/IconStatic.jsx', { flags: 'w' });
 
 const generateIconAll = iconObjs => new Promise((resolve) => {
 
   const staticIcons = iconObjs.filter(function(iconObj){
-    if (iconObj.themeable) {
+    if (!iconObj.themeable) {
       return iconObj;
     }
   });
