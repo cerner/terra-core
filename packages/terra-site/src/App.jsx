@@ -40,7 +40,10 @@ class App extends React.Component {
   }
 
   handleResetScroll() {
-    document.getElementById('site-content-section').scrollTop = 0;
+    let scrollParent = document.getElementById('site-content-section').parentNode;
+    if (scrollParent && scrollParent.parentNode) {
+      scrollParent.parentNode.scrollTop = 0;
+    }
     if (window.innerWidth < 768) {
       this.setState({ isOpen: false });
     }
@@ -80,10 +83,15 @@ class App extends React.Component {
       </div>
     );
 
+    const navHeader = (
+      <div className={styles['site-nav-header']}>
+        <Link onClick={this.handleResetScroll} to="/">Home</Link>
+      </div>
+    );
+
     const panelContent = (
-      <div className={styles['site-panel']}>
+      <ContentContainer header={navHeader} className={styles['site-panel']} fill>
         <List className={styles['site-nav']}>
-          <List.Item content={<Link onClick={this.handleResetScroll} to="/">Home</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/app-delegate">App Delegate</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/arrange">Arrange</Link>} />
@@ -120,7 +128,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle-button">Toggle Button</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/tests">Tests</Link>} />
         </List>
-      </div>
+      </ContentContainer>
     );
 
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
