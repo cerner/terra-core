@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Card.scss';
+import CardPadding from './CardPadding';
 
 const cx = classNames.bind(styles);
 
@@ -26,5 +27,5 @@ const Card = ({
 };
 
 Card.propTypes = propTypes;
-
+Card.Padding = CardPadding;
 export default Card;

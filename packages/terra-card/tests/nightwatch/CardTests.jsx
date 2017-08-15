@@ -7,6 +7,9 @@ const CardTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/card-tests/default">Card - Default</Link></li>
+      <li><Link to="/tests/card-tests/padding">Card - Padding</Link></li>
+      <li><Link to="/tests/card-tests/paddingvertical">Card - Padding Vertical</Link></li>
+      <li><Link to="/tests/card-tests/paddinghorizontal">Card - Padding Horizontal</Link></li>
     </ul>
   </div>
 );

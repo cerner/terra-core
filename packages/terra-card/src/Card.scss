@@ -6,4 +6,14 @@
     box-shadow: var(--terra-card-box-shadow, 0 1px 1px 0 #1c1f21);
     overflow: hidden;
   }
+
+  .veritcal-padding {
+    padding-bottom: var(--terra-card-padding-bottom, 10px);
+    padding-top: var(--terra-card-padding-top, 10px);
+  }
+
+  .horizontal-padding {
+    padding-left: var(--terra-card-padding-left, 10px);
+    padding-right: var(--terra-card-padding-right, 10px);
+  }
 }
