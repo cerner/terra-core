@@ -1,6 +1,4 @@
-@import './variables';
-
 // This style cannot be converted to css modules, as it's the class prefix appended by tether.
 .terra-Popup-element {
-  z-index: var(--terra-popup-element-z-index);
+  z-index: var(--terra-popup-element-z-index, 7001);
 }

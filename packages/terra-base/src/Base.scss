@@ -1,19 +1,17 @@
-@import './variables';
-
 // Normalize box-sizing.
 // More info: https://css-tricks.com/box-sizing/#article-header-id-6
 html {
   box-sizing: border-box;
-  font-family: var(--terra-base-font-family);
-  font-size: var(--terra-base-font-size);
+  font-family: var(--terra-base-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+  font-size: var(--terra-base-font-size, 87.5%);
   height: 100%;
   margin: 0;
   text-size-adjust: 100%;
 }
 
 body {
-  background-color: var(--terra-base-background-color);
-  color: var(--terra-base-color);
+  background-color: var(--terra-base-background-color, #fff);
+  color: var(--terra-base-color, #1c1f21);
   font-size: 1rem;
   line-height: 1;
   margin: 0;

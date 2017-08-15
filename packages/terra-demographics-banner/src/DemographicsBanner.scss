@@ -1,11 +1,8 @@
-@import './variables';
-
 /* stylelint-disable selector-class-pattern  */
-
 :local {
   .demographics-banner {
-    background: var(--terra-demographics-banner-background);
-    color: var(--terra-demographics-banner-foreground);
+    background: var(--terra-demographics-banner-background, #004c76);
+    color: var(--terra-demographics-banner-foreground, #fff);
     padding: 0.714em;
 
     @media screen and (min-width: 768px) {
@@ -55,8 +52,8 @@
   }
 
   .deceased {
-    background: var(--terra-demographics-banner-background-deceased);
-    color: var(--terra-demographics-banner-foreground-deceased);
+    background: var(--terra-demographics-banner-background-deceased, #1c1f21);
+    color: var(--terra-demographics-banner-foreground-deceased, #fff);
 
     .profile-photo {
       opacity: 0.7;
