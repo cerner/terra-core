@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Update site to use slide panel
+
+### Changed
 * Break out form component examples into their own packages
 
 1.5.0 - (August 8, 2017)

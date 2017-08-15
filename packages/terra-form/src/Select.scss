@@ -9,5 +9,10 @@
     height: 1.857em;
     padding: 0.178em;
     width: 100%;
+
+    &[required] {
+      box-shadow: unset;
+      outline: none;
+    }
   }
 }
