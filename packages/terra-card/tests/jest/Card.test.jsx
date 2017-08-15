@@ -21,4 +21,10 @@ describe('Card', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper.prop('className')).toContain('card');
   });
+
+  // Custom Prop Test
+  it('it should pass in a custom prop', () => {
+    const wrapper = shallow(<Card id="testCard" />);
+    expect(wrapper.unrendered.props.id).toEqual('testCard');
+  });
 });

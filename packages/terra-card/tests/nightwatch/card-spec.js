@@ -11,39 +11,10 @@ module.exports = {
     screenshot(browser, 'terra-card', done);
   },
 
-  'Displays a default card': (browser) => {
+  'Displays a default card has card class': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/default`)
-      .expect.element('#defaultcard').to.be.present;
+      .expect.element('#defaultcard').to.have.attribute('class').which.contains('card');
   },
 
-  'Displays a card with padding': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/padding`)
-      .expect.element('#paddingcard').to.be.present;
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/padding`)
-      .expect.element('#paddingcard').to.have.attribute('class').which.contains('veritcal-padding');
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/padding`)
-      .expect.element('#paddingcard').to.have.attribute('class').which.contains('horizontal-padding');
-  },
-
-  'Displays a card with vertical padding': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/verticalPadding`)
-      .expect.element('#vertical').to.be.present;
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/verticalPadding`)
-      .expect.element('#vertical').to.have.attribute('class').which.contains('veritcal-padding');
-  },
-
-  'Displays a card with horizontal padding': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/horizontalPadding`)
-      .expect.element('#horizontal').to.be.present;
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/horizontalPadding`)
-      .expect.element('#horizontal').to.have.attribute('class').which.contains('horizontal-padding');
-  },
 };

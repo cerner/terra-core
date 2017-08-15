@@ -13,7 +13,9 @@ Card is a basic container with some base styling to help seperate elements with 
 import React from 'react';
 import Card from 'terra-card';
 
-<Card {props...} />
+<Card>
+...
+</Card>
 ```
 
 ## Expected Use
@@ -27,7 +29,4 @@ The expected use for a card would be to keep elements seperated from each other 
  * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
  * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
  * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
- * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
- * [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
- * [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
 

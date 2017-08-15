@@ -1,9 +1,10 @@
 :local {
   /* stylelint-disable selector-class-pattern  */
-  .card-container {
+  .card {
     background-color: var(--terra-card-background-color, #fff);
     border-radius: var(--terra-card-border-radius, 3px);
-    box-shadow: var(--tera-card-box-shadow, 0 1px 1px 0 #1c1f21);
+    box-shadow: var(--terra-card-box-shadow, 0 1px 1px 0 #1c1f21);
+    overflow: hidden;
   }
 
   .veritcal-padding {
