@@ -10,8 +10,8 @@ import { version } from 'terra-card/package.json';
 import CardSrc from '!raw-loader!terra-card/src/Card';
 import CardDefault from './CardDefault';
 import CardPadding from './CardPadding';
-import CardPaddingVertical from './CardPaddingHorizontal';
-import CardPaddingHorizontal from './CardPaddingVertical';
+import CardPaddingVertical from './CardPaddingVertical';
+import CardPaddingHorizontal from './CardPaddingHorizontal';
 
 // Example Files
 
