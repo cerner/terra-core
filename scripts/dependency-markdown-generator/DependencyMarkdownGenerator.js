@@ -19,18 +19,13 @@ loadJsonFile.sync(path.resolve('lerna.json')).packages.forEach((globPath) => {
   });
 });
 
-// Throw error message to console when error occurs
-const throwErrorMessage = (error) => {
-  console.error(error);
-};
-
 // Generate the markdown to display the dependencies, devDependencies, and peerDependencies information for each package
 packagePaths.forEach((packagePath) => {
   const packageFile = path.resolve(packagePath, 'package.json');
 
   fs.readFile(packageFile, 'utf8', (err, packageJson) => {
     if (err) {
-      throwErrorMessage(`Error reading file ${packageFile} ${err}\n`);
+      console.error(`Error reading file ${packageFile} ${err}\n`);
     } else {
       // Aggregate the dependencies, devDependencies, and peerDependencies lists
       const packageDependencies = aggregateDependencies(JSON.parse(packageJson));
@@ -44,7 +39,7 @@ packagePaths.forEach((packagePath) => {
         // Throw the error(s) that occured while generating markdown table
         if (dependencyErrors.length) {
           const error = dependencyErrors.length > 1 ? 'Errors' : 'Error';
-          throwErrorMessage(`${error} occurred when generating the ${depencencyListType} markdown:\n${dependencyErrors.join('\n\n')}\n`);
+          console.error(`${error} occurred when generating the ${depencencyListType} markdown:\n${dependencyErrors.join('\n\n')}\n`);
         }
 
         markdown += dependencyTableMarkdown;
@@ -62,7 +57,7 @@ packagePaths.forEach((packagePath) => {
       // Write dependency markdown to DEPENDENCIES.md
       fs.writeFile(outpath, markdown, (error) => {
         if (error) {
-          throwErrorMessage(`Error writing DEPENDENCIES to ${outpath} ${error}\n`);
+          console.error(`Error writing DEPENDENCIES to ${outpath} ${error}\n`);
         }
       });
     }
