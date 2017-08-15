@@ -85,7 +85,7 @@ const DynamicGrid = ({
   const gridClasses = classNames(customProps.className, layoutStyles('grid'));
 
   // Clone the child regions and inject their generated styles
-  return (<div className={gridClasses} {...customProps}>
+  return (<div {...customProps} className={gridClasses}>
     {(React.Children || []).map(children,
      region => React.cloneElement(region, {
        className: classNames(region.props.className, layoutStyles(region.props.name)),
