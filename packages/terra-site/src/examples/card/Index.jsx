@@ -12,6 +12,7 @@ import CardDefault from './CardDefault';
 import CardPadding from './CardPadding';
 import CardPaddingVertical from './CardPaddingVertical';
 import CardPaddingHorizontal from './CardPaddingHorizontal';
+import CardPaddingHR from './CardPaddingHR';
 
 // Example Files
 
@@ -26,8 +27,10 @@ const CardExamples = () => (
     <CardPadding />
     <h2 id="CardPaddingVertical">Or just vertical</h2>
     <CardPaddingVertical />
-    <h2 id="CardPaddingHorizontal">or just horizontal</h2>
+    <h2 id="CardPaddingHorizontal">Or just horizontal</h2>
     <CardPaddingHorizontal />
+    <h2 id="CardPaddingHR">We can have a Horizontal line ignore the padding</h2>
+    <CardPaddingHR />
   </div>
 );
 

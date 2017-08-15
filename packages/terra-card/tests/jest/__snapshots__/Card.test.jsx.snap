@@ -1,4 +1,8 @@
 exports[`Card should render a default component 1`] = `
 <div
-  className="card" />
+  className="card">
+  <CardPadding
+    hasPaddingHorizontal={false}
+    hasPaddingVertical={false} />
+</div>
 `;
