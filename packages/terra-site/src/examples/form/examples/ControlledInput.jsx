@@ -5,6 +5,7 @@ import Control from 'terra-form/lib/Control';
 import TextField from 'terra-form/lib/TextField';
 import TextareaField from 'terra-form/lib/TextareaField';
 import NumberField from 'terra-form/lib/NumberField';
+import SelectField from 'terra-form/lib/SelectField';
 
 class ControlledInput extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class ControlledInput extends React.Component {
         first: '',
         middle: '',
         last: '',
+        operatingSystem: '',
         travelPercentage: 0,
         preferredLocation: '',
         interestedDivisions: [],
@@ -29,6 +31,13 @@ class ControlledInput extends React.Component {
     this.handleExperienceUpdate = this.handleExperienceUpdate.bind(this);
     this.handlePreferredLocation = this.handlePreferredLocation.bind(this);
     this.handleInterestedDivisions = this.handleInterestedDivisions.bind(this);
+    this.handleOperatingSystemChanged = this.handleOperatingSystemChanged.bind(this);
+  }
+
+  handleOperatingSystemChanged(e) {
+    const formData = Object.assign({}, this.state.formData);
+    formData.operatingSystem = e.target.value;
+    this.setState({ formData });
   }
 
   handleEmploymentUpdate(e) {
@@ -143,6 +152,18 @@ class ControlledInput extends React.Component {
           help="List all the different languages and build tools you have 3+ months experience with"
           value={this.state.formData.experience}
           onChange={this.handleExperienceUpdate}
+        />
+        <SelectField
+          options={[{ value: '', display: 'Select an Operating System' },
+                      { value: 'mac', display: 'Mac OSX' },
+                      { value: 'windows', display: 'Microsoft Windows' },
+                      { value: 'linux', display: 'Linux' }]}
+          help="We try not to restrict dev environment"
+          label="Preferred Operating System"
+          name="os"
+          value={this.state.formData.operatingSystem}
+          required
+          onChange={this.handleOperatingSystemChanged}
         />
         <Fieldset
           legend="Preferred Location"
