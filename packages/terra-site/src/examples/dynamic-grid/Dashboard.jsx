@@ -4,7 +4,7 @@ import DynamicGrid from 'terra-dynamic-grid';
 import Card from './Card';
 
 const layouts = [{
-  'grid-template-columns': '300px 1fr 300px',
+  'grid-template-columns': '3fr 1fr 3fr',
   'grid-template-rows': 'auto auto auto auto',
   regions: [
     {

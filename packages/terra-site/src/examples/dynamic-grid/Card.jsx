@@ -8,6 +8,7 @@ export default props => (<div
     padding: '20px',
     borderRadius: '5px',
     height: '100%',
+    wordWrap: 'break-word',
     verticalAlign: 'middle',
   }} {...props}
 />);
