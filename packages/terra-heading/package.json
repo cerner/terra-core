@@ -1,7 +1,7 @@
 {
   "name": "terra-heading",
   "main": "lib/Heading.js",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.",
   "repository": {
     "type": "git",
@@ -27,12 +27,12 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^1.3.0"
+    "terra-base": "^1.4.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^1.3.0"
+    "terra-base": "^1.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

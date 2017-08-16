@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.2.0 - (August 15, 2017)
+------------------
 ### Changed
 * Switched CSS custom properties usage to inline fallback syntax
 
