@@ -15,6 +15,7 @@ import ButtonGroupExamples from './examples/button-group/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
+import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
 import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
@@ -50,6 +51,7 @@ import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGro
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
@@ -99,6 +101,7 @@ ReactDOM.render((
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
+      <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />      
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
@@ -133,6 +136,7 @@ ReactDOM.render((
     {ButtonGroupTestRoutes}
     {DatePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {EmbeddedContentConsumerTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}

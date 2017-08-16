@@ -1,0 +1,14 @@
+exports[`test should render the embedded content consumer container 1`] = `
+<div
+  className="" />
+`;
+
+exports[`test should render the embedded content consumer to fill its parent 1`] = `
+<div
+  className="fill" />
+`;
+
+exports[`test should render the embedded content consumer with custom class names 1`] = `
+<div
+  className="fill container" />
+`;
