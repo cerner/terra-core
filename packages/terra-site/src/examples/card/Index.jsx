@@ -29,7 +29,7 @@ const CardExamples = () => (
     <CardPaddingVertical />
     <h2 id="CardPaddingHorizontal">Or just horizontal</h2>
     <CardPaddingHorizontal />
-    <h2 id="CardPaddingHR">We can have a Horizontal line ignore the padding</h2>
+    <h2 id="CardPaddingHR">We can selectively apply padding to the child elements</h2>
     <CardPaddingHR />
   </div>
 );

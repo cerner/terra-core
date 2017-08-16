@@ -13,9 +13,29 @@ Card is a basic container with some base styling to help seperate elements with 
 import React from 'react';
 import Card from 'terra-card';
 
+Just a Default Card
 <Card>
-...
+	...
 </Card>
+
+Or we can add some padding to the card
+<Card hasPaddingVertical hasPaddingHorizontal>
+	...
+</Card>
+
+Or we can selectively add padding to child elements
+<Card>
+	<Card.Padding hasPaddingVertical>
+		...
+	</Card.Padding>
+	...
+	<Card.Padding hasPaddingVertical>
+		...
+	</Card.Padding>
+</Card>
+
+
+
 ```
 
 ## Expected Use

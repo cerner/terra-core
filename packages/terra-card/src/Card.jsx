@@ -35,9 +35,11 @@ const Card = ({
   const cardClassNames = cx([
     'card',
     customProps.className,
+    { 'veritcal-padding': hasPaddingVertical },
+    { 'horizontal-padding': hasPaddingHorizontal },
   ]);
 
-  return <div {...customProps} className={cardClassNames}><CardPadding hasPaddingVertical={hasPaddingVertical} hasPaddingHorizontal={hasPaddingHorizontal}>{children}</CardPadding></div>;
+  return <div {...customProps} className={cardClassNames}>{children}</div>;
 };
 
 Card.propTypes = propTypes;
