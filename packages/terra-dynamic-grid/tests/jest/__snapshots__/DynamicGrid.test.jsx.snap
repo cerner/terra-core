@@ -1,6 +1,6 @@
 exports[`DynamicGrid should render a Grid with merged attributes 1`] = `
 <div
-  className="TestClass"
+  className="TestClass "
   data-mock="data"
   style={
     Object {
