@@ -52,7 +52,7 @@ module.exports = {
                     'iOS >= 8',
                   ],
                 }),
-                CustomProperties(),
+                CustomProperties({ preserve: true }),
                 rtl(),
               ];
             },
