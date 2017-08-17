@@ -4,7 +4,7 @@ import Card from 'terra-card';
 const CardPadding = () => (
   <div>
     <Card>
-      <Card.Padding hasPaddingHorizontal hasPaddingVertical>Hello World!!</Card.Padding>
+      <Card.Body hasPaddingHorizontal hasPaddingVertical>Hello World!!</Card.Body>
     </Card>
   </div>
 );

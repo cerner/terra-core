@@ -18,20 +18,15 @@ Just a Default Card
 	...
 </Card>
 
-Or we can add some padding to the card
-<Card hasPaddingVertical hasPaddingHorizontal>
-	...
-</Card>
-
 Or we can selectively add padding to child elements
 <Card>
-	<Card.Padding hasPaddingVertical>
+	<Card.Body hasPaddingVertical>
 		...
-	</Card.Padding>
+	</Card.Body>
 	...
-	<Card.Padding hasPaddingVertical>
+	<Card.Body hasPaddingVertical>
 		...
-	</Card.Padding>
+	</Card.Body>
 </Card>
 
 

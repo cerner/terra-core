@@ -6,8 +6,10 @@ import ReadMe from 'terra-card/docs/README.md';
 import { version } from 'terra-card/package.json';
 
 // Component Source
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
+/* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import CardSrc from '!raw-loader!terra-card/src/Card';
+import CardBodySrc from '!raw-loader!terra-card/src/CardBody';
+/* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import CardDefault from './CardDefault';
 import CardPadding from './CardPadding';
 import CardPaddingVertical from './CardPaddingVertical';
@@ -20,7 +22,8 @@ const CardExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={CardSrc} />
+    <PropsTable componentName="Card" id="props" src={CardSrc} />
+    <PropsTable componentName="Card Body"src={CardBodySrc} />
     <h2 id="CardDefault">Basic Hello World with defaults</h2>
     <CardDefault />
     <h2 id="CardPadding">We can add padding</h2>

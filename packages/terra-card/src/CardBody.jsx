@@ -28,20 +28,20 @@ const defaultProps = {
 };
 
 
-const CardPadding = ({
+const CardBody = ({
   children,
   hasPaddingVertical,
   hasPaddingHorizontal,
   ...customProps
 }) => {
-  const cardPaddingClasses = cx([
+  const cardBodyClasses = cx([
     { 'veritcal-padding': hasPaddingVertical },
     { 'horizontal-padding': hasPaddingHorizontal },
     customProps.className,
   ]);
-  return <div {...customProps} className={cardPaddingClasses}>{children}</div>;
+  return <div {...customProps} className={cardBodyClasses}>{children}</div>;
 };
 
-CardPadding.propTypes = propTypes;
-CardPadding.defaultProps = defaultProps;
-export default CardPadding;
+CardBody.propTypes = propTypes;
+CardBody.defaultProps = defaultProps;
+export default CardBody;
