@@ -101,7 +101,7 @@ ReactDOM.render((
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
-      <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />      
+      <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
