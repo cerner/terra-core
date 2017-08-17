@@ -22,8 +22,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  hasPaddingHorizontal: false,
-  hasPaddingVertical: false,
+  hasPaddingHorizontal: true,
+  hasPaddingVertical: true,
 };
 
 const CardBody = ({
