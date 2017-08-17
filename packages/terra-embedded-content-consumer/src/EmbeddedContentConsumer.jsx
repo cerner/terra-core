@@ -56,7 +56,7 @@ class EmbeddedContentConsumer extends React.Component {
     this.addEventListener('xfc.authorized', this.props.onAuthorize);
     this.addEventListener('xfc.fullscreen', this.props.onFullScreen);
 
-    // Attach the custom event handlers to the xfc frame.
+    // Attach custom event handlers to the xfc frame.
     this.addEventListeners(this.props.eventHandlers);
   }
 
@@ -93,6 +93,7 @@ class EmbeddedContentConsumer extends React.Component {
 
     return (
       <div
+        {...customProps}
         className={contentLayoutClassNames}
         ref={(element) => { this.embeddedContentWrapper = element; }}
       />
