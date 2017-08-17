@@ -10,7 +10,7 @@ const FullScreenConsumer = () => (
   <div id="FullScreenWrapper">
     <EmbeddedContentConsumer
       src="#/tests/embedded-content-consumer-tests/full-screen-provider"
-      onFullscreen={onFullScreen}
+      onFullScreen={onFullScreen}
       fill
     />
   </div>
