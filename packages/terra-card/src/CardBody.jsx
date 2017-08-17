@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Card.scss';
-
+import styles from './CardBody.scss';
 
 const cx = classNames.bind(styles);
 
@@ -13,11 +12,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Provides 10px of themeable padding vertical
+   * Provides themeable padding vertical
    */
   hasPaddingVertical: PropTypes.bool,
   /**
-   * Provides 10px of themeable padding horizontal
+   * Provides themeable padding horizontal
    */
   hasPaddingHorizontal: PropTypes.bool,
 };
@@ -27,7 +26,6 @@ const defaultProps = {
   hasPaddingVertical: false,
 };
 
-
 const CardBody = ({
   children,
   hasPaddingVertical,
@@ -35,7 +33,7 @@ const CardBody = ({
   ...customProps
 }) => {
   const cardBodyClasses = cx([
-    { 'veritcal-padding': hasPaddingVertical },
+    { 'vertical-padding': hasPaddingVertical },
     { 'horizontal-padding': hasPaddingHorizontal },
     customProps.className,
   ]);
