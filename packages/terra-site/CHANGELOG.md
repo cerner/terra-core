@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added ThemeProvider component examples
 
 1.6.0 - (August 15, 2017)
 ------------------

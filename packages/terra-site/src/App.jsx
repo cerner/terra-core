@@ -9,7 +9,7 @@ import SlidePanel from 'terra-slide-panel';
 import ContentContainer from 'terra-content-container';
 import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
-import ThemeProvider from './ThemeProvider';
+import ThemeProvider from 'terra-theme-provider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
@@ -98,17 +98,17 @@ class App extends React.Component {
 
     if (supportsCSSVars()) {
       themeSwitcher = (
-        <div className={styles['site-locale']}>
+        <div className={styles['site-theme']}>
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
-            <option value="terra-OCS-theme">OCS Theme</option>
+            <option value="cerner-mock-theme">Mock Theme</option>
           </select>
         </div>
       );
     } else {
       themeSwitcher = (
-        <div></div>
+        <div />
       );
     }
 
@@ -152,6 +152,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/table">Table</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/text">Text</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/theme-provider">Theme Provider</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/time-input">Time Input</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle">Toggle</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle-button">Toggle Button</Link>} />

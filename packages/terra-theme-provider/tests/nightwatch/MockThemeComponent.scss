@@ -1,0 +1,17 @@
+@import '~terra-mixins';
+
+@include cerner-mock-theme {
+  --terra-mock-background-color: #f00;
+  --terra-mock-color: #00f;
+  --terra-mock-display: inline-block;
+}
+
+/* stylelint-disable selector-class-pattern  */
+:local {
+  .mock-theme-component {
+    background-color: var(--terra-mock-background-color, #000);
+    color: var(--terra-mock-color, #fff);
+    display: var(--terra-mock-display, inline);
+  }
+}
+/* stylelint-enable */

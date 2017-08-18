@@ -2,34 +2,3 @@
   background-color: map-get($color-map, background-color);
   color: map-get($color-map, color);
 }
-
-$default-theme: 'consumer' !default;
-$bundled-themes: 'consumer' 'ocs' !default;
-
-@mixin terra-consumer-theme {
-  @if index($bundled-themes, 'consumer') {
-    @if $default-theme == 'consumer' {
-      :root {
-        @content;
-      }
-    } @else {
-      .terra-Consumer-theme {
-        @content;
-      }
-    }
-  }
-}
-
-@mixin terra-ocs-theme {
-  @if index($bundled-themes, 'ocs') {
-    @if $default-theme == 'ocs' {
-      :root {
-        @content;
-      }
-    } @else {
-      .terra-OCS-theme {
-        @content;
-      }
-    }
-  }
-}

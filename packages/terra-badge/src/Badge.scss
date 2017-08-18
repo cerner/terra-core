@@ -1,7 +1,8 @@
+@import '~terra-mixins';
 @import './variables';
 @import './mixins';
 
-@include terra-consumer-theme {
+@include cerner-mock-theme {
   --terra-badge-background-color-default: #2c3e50;
   --terra-badge-color-default: #fff;
   --terra-badge-background-color-primary: #3498db;
@@ -16,23 +17,6 @@
   --terra-badge-color-warning: #fff;
   --terra-badge-background-color-info: #bdc3c7;
   --terra-badge-color-info: #333;
-}
-
-@include terra-ocs-theme {
-  --terra-badge-background-color-default: #000;
-  --terra-badge-color-default: #fff;
-  --terra-badge-background-color-primary: #333;
-  --terra-badge-color-primary: #fff;
-  --terra-badge-background-color-secondary: #666;
-  --terra-badge-color-secondary: #fff;
-  --terra-badge-background-color-positive: #999;
-  --terra-badge-color-positive: #fff;
-  --terra-badge-background-color-negative: #bbb;
-  --terra-badge-color-negative: #000;
-  --terra-badge-background-color-warning: #ddd;
-  --terra-badge-color-warning: #000;
-  --terra-badge-background-color-info: #fff;
-  --terra-badge-color-info: #000;
 }
 
 :local {
