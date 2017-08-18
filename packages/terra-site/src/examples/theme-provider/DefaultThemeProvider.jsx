@@ -25,7 +25,7 @@ class DefaultThemeProvider extends React.Component {
 
     if (supportsCSSVars()) {
       themeSwitcher = (
-        <div style={{ 'margin-bottom': '1rem' }}>
+        <div style={{ marginBottom: '1rem' }}>
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
