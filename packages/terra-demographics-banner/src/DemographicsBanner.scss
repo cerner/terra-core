@@ -3,6 +3,7 @@
   .demographics-banner {
     background: var(--terra-demographics-banner-background, #004c76);
     color: var(--terra-demographics-banner-foreground, #fff);
+    line-height: 1;
     padding: 0.714em;
 
     @media screen and (min-width: 768px) {
