@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from 'terra-button';
+import PropTypes from 'prop-types';
 import ThemeProvider from 'terra-theme-provider';
 
-class ButtonExamples extends React.Component {
+class ButtonTheme extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,23 +51,15 @@ class ButtonExamples extends React.Component {
         It will set the default consumer theme. Then select any nested theme below.</p>
         <div style={{ margin: '1rem 0' }}>{themeSwitcher}</div>
         <ThemeProvider themeName={this.state.theme}>
-          <div style={{ marginBottom: '1rem' }}>
-            <Button variant="primary" text="primary" />
-            {' '}
-            <Button variant="primary" text="disabled" isDisabled />
-            {' '}
-            <Button variant="secondary" text="secondary" />
-            {' '}
-            <Button variant="secondary" text="disabled" isDisabled />
-            {' '}
-            <Button variant="link" text="link" />
-            {' '}
-            <Button variant="link" text="disabled" isDisabled />
-            {' '}
-          </div>
+          {this.props.children}
         </ThemeProvider>
       </div>
     );
   }
 }
-export default ButtonExamples;
+
+ButtonTheme.propTypes = {
+  children: PropTypes.node,
+};
+
+export default ButtonTheme;

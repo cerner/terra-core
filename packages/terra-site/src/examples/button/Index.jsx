@@ -24,24 +24,24 @@ const ButtonExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonSrc} />
-    <h2 id="variant">Variant</h2>
-    <ButtonVariant />
-    <h2 id="compact">Compact</h2>
-    <ButtonCompact />
-    <h2 id="size">Size</h2>
-    <ButtonSize />
-    <h2 id="block">Block</h2>
-    <ButtonBlock />
-    <h2 id="anchor">Anchor</h2>
-    <ButtonAnchor />
-    <h2 id="disabled">Disabled</h2>
-    <ButtonDisabled />
-    <h2 id="on-click">OnClick</h2>
-    <ButtonOnClick />
-    <h2 id="icon">Icon</h2>
-    <ButtonIcon />
-    <hr />
-    <ButtonTheme />
+    <ButtonTheme>
+      <h2 id="variant">Variant</h2>
+      <ButtonVariant />
+      <h2 id="compact">Compact</h2>
+      <ButtonCompact />
+      <h2 id="size">Size</h2>
+      <ButtonSize />
+      <h2 id="block">Block</h2>
+      <ButtonBlock />
+      <h2 id="anchor">Anchor</h2>
+      <ButtonAnchor />
+      <h2 id="disabled">Disabled</h2>
+      <ButtonDisabled />
+      <h2 id="on-click">OnClick</h2>
+      <ButtonOnClick />
+      <h2 id="icon">Icon</h2>
+      <ButtonIcon />
+    </ButtonTheme>
   </div>
 );
 
