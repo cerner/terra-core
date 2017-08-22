@@ -28,9 +28,6 @@ const propTypes = {
    * secret - The authorization secret to be used if the embedded application does not know which domain to trust.
    */
   options: PropTypes.shape({
-    /**
-     * The authorization secret to be used if the embedded app does not know which domain to trust.
-     */
     secret: PropTypes.string,
   }),
   /**
