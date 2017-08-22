@@ -1,7 +1,7 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 const windowSizes = {
   default: [470, 768],
@@ -12,19 +12,10 @@ const windowSizes = {
   huge: [1500, 768],
 };
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-alert', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Default alert test - Displays a default alert with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/default`)
-      .waitForElementVisible('#defaultAlert', 1000)
+      .url(`${browser.launchUrl}/#/tests/alert-tests/default`)
       .assert.attributeContains(
         '#defaultAlert',
         'class',
@@ -51,7 +42,7 @@ module.exports = {
 
   'Type attribute tests - Displays a basic alert of each type with the provided text': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/type`);
+      .url(`${browser.launchUrl}/#/tests/alert-tests/type`);
   },
 
   'Type attribute tests - Check Alert of type alert': (browser) => {
@@ -158,7 +149,7 @@ module.exports = {
 
   'Title attribute tests - Displays an alert of each type with a custom title': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/title`)
+      .url(`${browser.launchUrl}/#/tests/alert-tests/title`)
       .assert.containsText(
         '#alertAlert > div[class*="_body"] > div[class*="_section"] > strong[class*="_title"]',
         'Alert_Alert:',
@@ -187,7 +178,7 @@ module.exports = {
 
   'Custom Alert Tests - Displays custom alerts with varying permutations of title, custom icon and custom status color parameters': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/custom`);
+      .url(`${browser.launchUrl}/#/tests/alert-tests/custom`);
   },
 
   'Custom Alert Tests - Check first custom Alert with no icon, title or custom color': (browser) => {
@@ -393,7 +384,7 @@ module.exports = {
   'Action Tests - Displays an Alert of type warning with an action button set via the alertAction prop': (browser) => {
     const width = browser.globals.width;
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/actionButton`)
+      .url(`${browser.launchUrl}/#/tests/alert-tests/actionButton`)
       .assert.elementPresent(
         '#actionAlert > div[class*="_actions"] > button',
         'Check Alert actions structure contains Button');
@@ -428,7 +419,7 @@ module.exports = {
   'Dismiss Tests - Displays an Alert of type success with a dismiss button set via the onDismiss prop': (browser) => {
     const width = browser.globals.width;
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/dismissible`)
+      .url(`${browser.launchUrl}/#/tests/alert-tests/dismissible`)
       .assert.elementPresent(
         '#dismissibleAlert > div[class*="_actions"] > button',
         'Check Alert actions structure contains Button');
@@ -468,7 +459,7 @@ module.exports = {
 
   'Responsive to Parent Tests - Displays alerts with actions in small container': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/alert-tests/responsive`)
+      .url(`${browser.launchUrl}/#/tests/alert-tests/responsive`)
       .assert.elementPresent(
         '#actionAlert > div[class*="_actions"] > button',
         'Check Alert action button rendered on warning alert')
@@ -506,4 +497,4 @@ module.exports = {
         '_body-std',
         'Check that the standard body className is used for no actions alert regardless of window size');
   },
-};
+});
