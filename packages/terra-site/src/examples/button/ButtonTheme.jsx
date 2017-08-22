@@ -1,18 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ThemeProvider from 'terra-theme-provider';
+import Button from 'terra-button';
 
 class ButtonTheme extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       theme: '',
+      rainbowButton: "Don't click me!",
+      isAnimated: false,
     };
     this.handleThemeChange = this.handleThemeChange.bind(this);
+    this.handleRandomThemeChange = this.handleRandomThemeChange.bind(this);
+    this.handleAutoThemeChange = this.handleAutoThemeChange.bind(this);
   }
 
   handleThemeChange(e) {
     this.setState({ theme: e.target.value });
+  }
+
+  handleRandomThemeChange() {
+    const concept = Math.ceil(Math.random() * 6);
+    this.setState({ theme: `terra-consumer-theme-concept${concept}` });
+  }
+
+  handleAutoThemeChange() {
+    if (this.state.isAnimated) {
+      clearInterval(this.state.animateID);
+      this.setState({ rainbowButton: "Don't click me!", isAnimated: false });
+    } else {
+      this.setState({
+        animateID: setInterval(this.handleRandomThemeChange, 800),
+        rainbowButton: 'Well, click me to stop',
+        isAnimated: true,
+      });
+    }
   }
 
   render() {
@@ -47,10 +70,13 @@ class ButtonTheme extends React.Component {
     return (
       <div>
         <h2 style={{ margin: '1rem 0' }}>Button Theming</h2>
-        <p>For app level theming, select a theme on the top menu bar, e.g. terra-consumer-theme.
-        It will set the default consumer theme. Then select any nested theme below.</p>
+        <p><b>!!! Select a theme on the top menu bar, e.g. terra-consumer-theme to enable consumer theming. </b>
+        It will set the default consumer theme. Then select any nested theme below or pick a random theme or ...</p>
         <div style={{ margin: '1rem 0' }}>{themeSwitcher}</div>
         <ThemeProvider themeName={this.state.theme}>
+          <Button text="Pick A Random Theme" onClick={this.handleRandomThemeChange} variant="primary" />
+          {' '}
+          <Button text={this.state.rainbowButton} onClick={this.handleAutoThemeChange} variant="secondary" />
           {this.props.children}
         </ThemeProvider>
       </div>
