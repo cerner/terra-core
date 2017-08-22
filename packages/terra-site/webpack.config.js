@@ -52,7 +52,11 @@ module.exports = {
                     'iOS >= 8',
                   ],
                 }),
-                CustomProperties({ preserve: true }),
+                // Disable warnings for custom property not scoped to the top-level :root
+                // https://github.com/MoOx/postcss-cssnext/issues/186.
+                // Also setting preserve to true would duplicate all the custom property in the compiled output
+                // It doesn't break the code but will potentially increase the size of output
+                CustomProperties({ preserve: true, warnings: false }),
                 rtl(),
               ];
             },
@@ -61,7 +65,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            data: '$bundled-themes: "mock";',
+            data: '$bundled-themes: mock, consumer;',
           },
         }],
       }),

@@ -1,0 +1,84 @@
+@import './mixins';
+
+@include cerner-consumer-theme {
+  --terra-consumer-color: #64696c;
+  --terra-consumer-color-dark-30: #383f42;
+  --terra-consumer-color-dark-50: #1c1f21;
+  --terra-consumer-color-light-30: rgba(#383f42, 0.3);
+  --terra-consumer-color-light-50: rgba(#64696c, 0.5);
+  --terra-consumer-color-light-65: rgba(#383f42, 0.65);
+  @include terra-consumer-theme-button();
+
+  /* stylelint-disable selector-class-pattern */
+  /* stylelint-disable suitcss/custom-property-no-outside-root */
+
+  .terra-consumer-theme-concept1 {
+    --terra-consumer-color: #c24726;
+    --terra-consumer-color-dark-30: #97371e;
+    --terra-consumer-color-dark-50: #6c2715;
+    --terra-consumer-color-light-30: rgba(#c24726, 0.3);
+    --terra-consumer-color-light-50: rgba(#c24726, 0.5);
+    --terra-consumer-color-light-65: rgba(#c24726, 0.65);
+    @include terra-consumer-theme-button();
+  }
+
+  .terra-consumer-theme-concept2 {
+    --terra-consumer-color: #b23dbd;
+    --terra-consumer-color-dark-30: #8a2f93;
+    --terra-consumer-color-dark-50: #632269;
+    --terra-consumer-color-light-30: rgba(#b23dbd, 0.3);
+    --terra-consumer-color-light-50: rgba(#b23dbd, 0.5);
+    --terra-consumer-color-light-65: rgba(#b23dbd, 0.65);
+    @include terra-consumer-theme-button();
+  }
+
+  .terra-consumer-theme-concept3 {
+    --terra-consumer-color: #6b65d6;
+    --terra-consumer-color-dark-30: #534fa6;
+    --terra-consumer-color-dark-50: #3b3877;
+    --terra-consumer-color-light-30: rgba(#6b65d6, 0.3);
+    --terra-consumer-color-light-50: rgba(#6b65d6, 0.5);
+    --terra-consumer-color-light-65: rgba(#6b65d6, 0.65);
+    @include terra-consumer-theme-button();
+  }
+
+  .terra-consumer-theme-concept4 {
+    --terra-consumer-color: #047fad;
+    --terra-consumer-color-dark-30: #036387;
+    --terra-consumer-color-dark-50: #024760;
+    --terra-consumer-color-light-30: rgba(#047fad, 0.3);
+    --terra-consumer-color-light-50: rgba(#047fad, 0.5);
+    --terra-consumer-color-light-65: rgba(#047fad, 0.65);
+    @include terra-consumer-theme-button();
+  }
+
+  .terra-consumer-theme-concept5 {
+    --terra-consumer-color: #058578;
+    --terra-consumer-color-dark-30: #04675d;
+    --terra-consumer-color-dark-50: #034a43;
+    --terra-consumer-color-light-30: rgba(#058578, 0.3);
+    --terra-consumer-color-light-50: rgba(#058578, 0.5);
+    --terra-consumer-color-light-65: rgba(#058578, 0.65);
+    @include terra-consumer-theme-button();
+  }
+
+  .terra-consumer-theme-concept6 {
+    --terra-consumer-color: #2d8554;
+    --terra-consumer-color-dark-30: #236741;
+    --terra-consumer-color-dark-50: #194a2f;
+    --terra-consumer-color-light-30: rgba(#2d8554, 0.3);
+    --terra-consumer-color-light-50: rgba(#2d8554, 0.5);
+    --terra-consumer-color-light-65: rgba(#2d8554, 0.65);
+    @include terra-consumer-theme-button();
+  }
+
+  .terra-consumer-theme-neutral {
+    --terra-consumer-color: #303054;
+    --terra-consumer-color-dark-30: #252541;
+    --terra-consumer-color-dark-50: #1b1b2f;
+    --terra-consumer-color-light-30: rgba(#303054, 0.3);
+    --terra-consumer-color-light-50: rgba(#303054, 0.5);
+    --terra-consumer-color-light-65: rgba(#303054, 0.65);
+    @include terra-consumer-theme-button();
+  }
+}
