@@ -16,10 +16,19 @@ import React from 'react';
 import Button from 'terra-button';
 
 <Button text="Default" />
+
+
+Button Theming:
+<ThemeProvider themeName="terra-consumer-theme">
+  <ThemeProvider themeName="terra-consumer-theme-concept1">
+     ...
+     <Button .../>
+     ...
+  </ThemeProvider>
+</ThemeProvider>
 ```
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
-

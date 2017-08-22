@@ -17,9 +17,10 @@ import ButtonOnClick from './ButtonOnClick';
 import ButtonIcon from './ButtonIcon';
 import ButtonVariant from './ButtonVariant';
 import ButtonCompact from './ButtonCompact';
+import ButtonTheme from './ButtonTheme';
 
 const ButtonExamples = () => (
-  <div>
+  <div style={{ marginBottom: '5rem' }}>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonSrc} />
@@ -39,6 +40,8 @@ const ButtonExamples = () => (
     <ButtonOnClick />
     <h2 id="icon">Icon</h2>
     <ButtonIcon />
+    <hr />
+    <ButtonTheme />
   </div>
 );
 

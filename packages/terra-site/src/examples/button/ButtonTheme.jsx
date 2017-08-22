@@ -1,9 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import Button from 'terra-button';
 import ThemeProvider from 'terra-theme-provider';
-import Badge from 'terra-badge';
 
-class DefaultThemeProvider extends React.Component {
+class ButtonExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +28,6 @@ class DefaultThemeProvider extends React.Component {
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
-            <option value="cerner-mock-theme">Mock Theme</option>
             <option value="terra-consumer-theme-concept1">terra-consumer-theme-concept1</option>
             <option value="terra-consumer-theme-concept2">terra-consumer-theme-concept2</option>
             <option value="terra-consumer-theme-concept3">terra-consumer-theme-concept3</option>
@@ -48,28 +46,28 @@ class DefaultThemeProvider extends React.Component {
 
     return (
       <div>
-        <div>{themeSwitcher}</div>
+        <h2 style={{ margin: '1rem 0' }}>Button Theming</h2>
+        <p>For app level theming, select a theme on the top menu bar, e.g. terra-consumer-theme.
+        It will set the default consumer theme. Then select any nested theme below.</p>
+        <div style={{ margin: '1rem 0' }}>{themeSwitcher}</div>
         <ThemeProvider themeName={this.state.theme}>
-          <h3 style={{ margin: '1rem 0' }}>Mock Badge</h3>
-          <div>
-            <Badge text="Default" />
+          <div style={{ marginBottom: '1rem' }}>
+            <Button variant="primary" text="primary" />
             {' '}
-            <Badge intent="primary" text="Primary" />
+            <Button variant="primary" text="disabled" isDisabled />
             {' '}
-            <Badge intent="secondary" text="Secondary" />
+            <Button variant="secondary" text="secondary" />
             {' '}
-            <Badge intent="positive" text="Positive" />
+            <Button variant="secondary" text="disabled" isDisabled />
             {' '}
-            <Badge intent="negative" text="Negative" />
+            <Button variant="link" text="link" />
             {' '}
-            <Badge intent="warning" text="Warning" />
+            <Button variant="link" text="disabled" isDisabled />
             {' '}
-            <Badge intent="info" text="Info" />
           </div>
         </ThemeProvider>
       </div>
     );
   }
 }
-
-export default DefaultThemeProvider;
+export default ButtonExamples;
