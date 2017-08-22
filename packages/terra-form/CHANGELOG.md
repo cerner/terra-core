@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.4.0 - (August 15, 2017)
+------------------
 ### Changed
 * Removed red rings for required select fields.
 
