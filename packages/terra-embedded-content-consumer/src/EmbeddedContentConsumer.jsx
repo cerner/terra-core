@@ -41,7 +41,7 @@ const propTypes = {
     handler: PropTypes.func,
   })),
   /**
-   * Whether or not the container should expanded to fill its parent.
+   * Whether or not the container should be expanded to fill its parent.
    */
   fill: PropTypes.bool,
 };
