@@ -71,12 +71,8 @@ module.exports = {
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
-    // Validate the provider before the custom event handler is invoked.
-    .expect.element('div#CustomEvent').to.have.css('border').which.equals('0px none rgb(28, 31, 33)');
-    // Pause the test briefly till the custom handler is invoked.
-    browser.pause(1000);
     // Validate the provider after the custom event handler is invoked.
-    browser.expect.element('div#CustomEvent').to.have.css('border').which.equals('5px dashed rgb(0, 0, 255)');
+    .expect.element('div#CustomEvent').to.have.css('border').which.equals('5px dashed rgb(0, 0, 255)');
   },
 
   'Displays a provider embedded in the consumer that triggers multiple custom event.': (browser) => {
@@ -87,9 +83,6 @@ module.exports = {
     // Wait for the consumer to load the provider application.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     // Validate the provider before the custom event handler is invoked.
-    .expect.element('div#CustomEvents').to.have.css('border').which.equals('0px none rgb(28, 31, 33)');
-    // Pause the test briefly till the custom handler is invoked.
-    browser.pause(1000)
     // Validate the provider after the custom event handler is invoked.
     .expect.element('div#CustomEvents').to.have.css('border').which.equals('5px dashed rgb(0, 0, 255)');
     // Pause the test briefly till the second custom handler is invoked.

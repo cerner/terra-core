@@ -1,0 +1,11 @@
+.embedded-content-body {
+    height: auto !important;
+}
+:local {
+    .embedded-content {
+        padding: 1.25rem;
+    }
+    iframe {
+        border: 0
+    }
+}

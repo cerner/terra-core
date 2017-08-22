@@ -1,26 +1,36 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Provider } from 'xfc';
+import styles from './Provider.scss';
 
-function DataStatusProvider() {
-  Provider.init({
-    acls: ['*'],
-    secret: 'OAuth Secret',
-  });
+class DataStatusProvider extends React.Component {
+  constructor(props) {
+    super(props);
+    Provider.init({
+      acls: ['*'],
+      secret: 'OAuth Secret',
+    });
+  }
 
-  return (
-    <div>
-      <title>Embedded Application Lifecycle</title>
-      <meta charSet="utf-8" />
-      <div>
-        <h1>Embedded Application Lifecycle</h1>
-        <p>The embedded container can have the following statuses:</p>
-        <ul id="LifeCycleStatuses">
-          <li id="Mounted">Mounted</li>
-        </ul>
+  componentDidMount() {
+    document.body.classList.toggle('embedded-content-body');
+  }
+
+  render() {
+    return (
+      <div className={[styles['embedded-content']]}>
+        <title>Embedded Application Lifecycle</title>
+        <meta charSet="utf-8" />
+        <div>
+          <h1>Embedded Application Lifecycle</h1>
+          <p>The embedded container can have the following statuses:</p>
+          <ul id="LifeCycleStatuses">
+            <li id="Mounted">Mounted</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default DataStatusProvider;
