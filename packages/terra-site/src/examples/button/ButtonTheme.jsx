@@ -8,7 +8,6 @@ class ButtonTheme extends React.Component {
     super(props);
     this.state = {
       theme: '',
-      rainbowButton: "Don't click me!",
       isAnimated: false,
     };
     this.handleThemeChange = this.handleThemeChange.bind(this);
@@ -28,11 +27,10 @@ class ButtonTheme extends React.Component {
   handleAutoThemeChange() {
     if (this.state.isAnimated) {
       clearInterval(this.state.animateID);
-      this.setState({ rainbowButton: "Don't click me!", isAnimated: false });
+      this.setState({ isAnimated: false });
     } else {
       this.setState({
-        animateID: setInterval(this.handleRandomThemeChange, 800),
-        rainbowButton: 'Well, click me to stop',
+        animateID: setInterval(this.handleRandomThemeChange, 500),
         isAnimated: true,
       });
     }
@@ -67,6 +65,7 @@ class ButtonTheme extends React.Component {
       );
     }
 
+    const rainbowButton = this.state.isAnimated ? 'Click me to stop' : "Don't click me!";
     return (
       <div>
         <h2 style={{ margin: '1rem 0' }}>Button Theming</h2>
@@ -76,7 +75,7 @@ class ButtonTheme extends React.Component {
         <ThemeProvider themeName={this.state.theme}>
           <Button text="Pick A Random Theme" onClick={this.handleRandomThemeChange} variant="primary" />
           {' '}
-          <Button text={this.state.rainbowButton} onClick={this.handleAutoThemeChange} variant="secondary" />
+          <Button text={rainbowButton} onClick={this.handleAutoThemeChange} variant="secondary" />
           {this.props.children}
         </ThemeProvider>
       </div>
