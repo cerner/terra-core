@@ -1,0 +1,10 @@
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .card {
+    background-color: var(--terra-card-background-color, #fff);
+    border: var(--terra-card-border, 1px solid #c8cacb);
+    border-radius: var(--terra-card-border-radius, 3px);
+    box-shadow: var(--terra-card-box-shadow, none);
+    overflow: hidden;
+  }
+}

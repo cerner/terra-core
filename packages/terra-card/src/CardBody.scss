@@ -1,0 +1,12 @@
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .vertical-padding {
+    padding-bottom: var(--terra-card-padding-bottom, 10px);
+    padding-top: var(--terra-card-padding-top, 10px);
+  }
+
+  .horizontal-padding {
+    padding-left: var(--terra-card-padding-left, 10px);
+    padding-right: var(--terra-card-padding-right, 10px);
+  }
+}
