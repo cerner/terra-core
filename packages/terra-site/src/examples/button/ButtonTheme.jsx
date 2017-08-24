@@ -76,7 +76,7 @@ class ButtonTheme extends React.Component {
         <ThemeProvider themeName={this.state.theme}>
           <Button text="Pick A Random Theme" onClick={this.handleRandomThemeChange} variant="primary" />
           {' '}
-          <Button text={rainbowButton} onClick={this.handleAutoThemeChange} variant="secondary" />
+          <Button text={rainbowButton} onClick={this.handleAutoThemeChange} />
           {this.props.children}
         </ThemeProvider>
       </div>
