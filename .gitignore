@@ -47,6 +47,7 @@ logs
 node_modules
 npm-debug.log*
 pids
+package-lock.json
 reports
 screenshots
 target
