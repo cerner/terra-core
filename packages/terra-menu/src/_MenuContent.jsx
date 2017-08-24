@@ -7,7 +7,6 @@ import IconClose from 'terra-icon/lib/icon/IconClose';
 import Arrange from 'terra-arrange';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import MenuItemGroup from './MenuItemGroup';
 import MenuUtils from './_MenuUtils';
 import styles from './Menu.scss';
 
@@ -72,7 +71,7 @@ class MenuContent extends React.Component {
   isSelectable() {
     for (let i = 0; i < this.props.children.length; i += 1) {
       const child = this.props.children[i];
-      if (child.type === <MenuItemGroup />.type || child.props.isSelectable) {
+      if (child.props.children || child.props.isSelectable) {
         return true;
       }
     }

@@ -100,7 +100,7 @@ class Menu extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.isOpen && !nextProps.isOpen) {
+    if ((this.props.isOpen && !nextProps.isOpen) || this.props.children.length !== nextProps.children.length) {
       this.setState(this.getInitialState());
     }
   }
