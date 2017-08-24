@@ -1,0 +1,7 @@
+@import './mixins';
+
+@include cerner-consumer-theme {
+	@include terra-consumer-theme-card();
+
+	/* stylelint-disable selector-class-pattern */
+}

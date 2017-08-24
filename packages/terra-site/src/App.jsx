@@ -93,7 +93,7 @@ class App extends React.Component {
     let themeSwitcher;
 
     function supportsCSSVars() {
-      return window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0);
+      return window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)')
     }
 
     if (supportsCSSVars()) {
@@ -103,6 +103,7 @@ class App extends React.Component {
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
             <option value="cerner-mock-theme">Mock Theme</option>
+            <option value="cerner-consumer-theme">Consumer Theme</option>
           </select>
         </div>
       );
