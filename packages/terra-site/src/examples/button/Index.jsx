@@ -20,7 +20,7 @@ import ButtonCompact from './ButtonCompact';
 import ButtonTheme from './ButtonTheme';
 
 const ButtonExamples = () => (
-  <div style={{ marginBottom: '5rem' }}>
+  <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonSrc} />

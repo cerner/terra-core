@@ -30,13 +30,6 @@ class DefaultThemeProvider extends React.Component {
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
             <option value="cerner-mock-theme">Mock Theme</option>
-            <option value="terra-consumer-theme-concept1">terra-consumer-theme-concept1</option>
-            <option value="terra-consumer-theme-concept2">terra-consumer-theme-concept2</option>
-            <option value="terra-consumer-theme-concept3">terra-consumer-theme-concept3</option>
-            <option value="terra-consumer-theme-concept4">terra-consumer-theme-concept4</option>
-            <option value="terra-consumer-theme-concept5">terra-consumer-theme-concept5</option>
-            <option value="terra-consumer-theme-concept6">terra-consumer-theme-concept6</option>
-            <option value="terra-consumer-theme-neutral">terra-consumer-theme-neutral</option>
           </select>
         </div>
       );
@@ -50,7 +43,6 @@ class DefaultThemeProvider extends React.Component {
       <div>
         <div>{themeSwitcher}</div>
         <ThemeProvider themeName={this.state.theme}>
-          <h3 style={{ margin: '1rem 0' }}>Mock Badge</h3>
           <div>
             <Badge text="Default" />
             {' '}

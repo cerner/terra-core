@@ -17,13 +17,10 @@ import Button from 'terra-button';
 
 <Button text="Default" />
 
-
-Button Theming:
+// Button Theming
 <ThemeProvider themeName="terra-consumer-theme">
   <ThemeProvider themeName="terra-consumer-theme-concept1">
-     ...
-     <Button .../>
-     ...
+     <Button text='themed button'/>
   </ThemeProvider>
 </ThemeProvider>
 ```
