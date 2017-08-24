@@ -6,8 +6,8 @@ class OnReadyProvider extends React.Component {
   componentDidMount() {
     document.body.classList.toggle('embedded-content-body');
     if (!window.location.origin) {
-      const port = (window.location.port ? ':' + window.location.port : '');
-      window.location.origin = window.location.protocol + "//" + window.location.hostname + port;
+      const port = (window.location.port ? `:${window.location.port}` : '');
+      window.location.origin = `${window.location.protocol}//${window.location.hostname}${port}`;
     }
     Provider.init({
       acls: [window.location.origin],
