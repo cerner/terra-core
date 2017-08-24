@@ -5,7 +5,11 @@ import styles from './Provider.scss';
 class CustomEventProvider extends React.Component {
   componentDidMount() {
     document.body.classList.toggle('embedded-content-body');
-    Provider.init({ acls: ['http://localhost:8080'] });
+    if (!window.location.origin) {
+      const port = (window.location.port ? ':' + window.location.port: '');
+      window.location.origin = window.location.protocol + "//" + window.location.hostname + port;
+    }
+    Provider.init({ acls: [window.location.origin] });
     Provider.trigger('EventA');
   }
 

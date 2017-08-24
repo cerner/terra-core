@@ -5,8 +5,12 @@ import styles from './Provider.scss';
 class OnReadyProvider extends React.Component {
   componentDidMount() {
     document.body.classList.toggle('embedded-content-body');
+    if (!window.location.origin) {
+      const port = (window.location.port ? ':' + window.location.port : '');
+      window.location.origin = window.location.protocol + "//" + window.location.hostname + port;
+    }
     Provider.init({
-      acls: ['http://localhost:8080'],
+      acls: [window.location.origin],
       onReady: () => {
         document.getElementById('ready').innerHTML = 'onReady function being executed after the consumer has been authorized.';
       },
