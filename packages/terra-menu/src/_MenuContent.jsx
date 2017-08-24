@@ -56,10 +56,17 @@ class MenuContent extends React.Component {
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.buildHeader = this.buildHeader.bind(this);
     this.isSelectable = this.isSelectable.bind(this);
+    this.onKeyDownBackButton = this.onKeyDownBackButton.bind(this);
   }
 
   getChildContext() {
     return { isSelectableMenu: this.isSelectable() };
+  }
+
+  onKeyDownBackButton() {
+    if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+      this.props.onRequestBack();
+    }
   }
 
   isSelectable() {
@@ -103,23 +110,34 @@ class MenuContent extends React.Component {
       <button className={cx(['header-button', 'close-button'])} onClick={this.props.onRequestClose}>
         {closeIcon}
       </button>
-    ) : null;
+    ) : <div />;
 
     const backIcon = <IconLeft />;
     const backButton = this.props.index > 0 ? (
-      <button className={cx(['header-button'])} onClick={this.props.onRequestBack}>
-        {backIcon}
-      </button>
-    ) : null;
-
-    const titleElement = <h1 className={cx(['header-title'])}>{this.props.title}</h1>;
+      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+      <div
+        role="button"
+        onClick={this.props.onRequestBack}
+        onKeyDown={this.onKeyDownBackButton}
+        tabIndex="0"
+      >
+        <Arrange
+          align="center"
+          fitStart={(
+            <div className={cx(['header-button'])}>
+              {backIcon}
+            </div>
+          )}
+          fill={<h1 className={cx(['header-title'])}>{this.props.title}</h1>}
+        />
+      </div>
+    ) : <div />;
 
     return (
       <Arrange
         className={cx(['header'])}
-        fitStart={backButton}
         fitEnd={closeButton}
-        fill={titleElement}
+        fill={backButton}
         align="center"
       />
     );

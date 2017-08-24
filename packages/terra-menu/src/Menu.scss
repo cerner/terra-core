@@ -35,6 +35,7 @@
       font-weight: var(--terra-menu-submenu-header-title-font-weight, normal);
       line-height: var(--terra-menu-submenu-header-title-line-height, 1.1667);
       margin: var(--terra-menu-submenu-header-title-margin, 7px 0 7px 0);
+      min-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

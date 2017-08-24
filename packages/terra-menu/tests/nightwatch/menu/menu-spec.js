@@ -24,7 +24,7 @@ module.exports = {
   'Dipslay a back and a close button in header when submenu in a bounded menu': (browser) => {
     browser
       .click('.TestNestedMenu')
-      .assert.visible('.TestBoundedContent div[class*="_header"] > div:first-child > button[class*="_header-button"]')
+      .assert.visible('.TestBoundedContent div[class*="_header"] > div:first-child div[class*="_header-button"]')
       .assert.visible('.TestBoundedContent div[class*="_header"] > div:last-child > button[class*="_header-button"]')
       .keys([browser.Keys.ESCAPE]);
   },
@@ -63,7 +63,7 @@ module.exports = {
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/menu-tests/submenu`)
       .click('.TestNestedMenu')
       .assert.elementPresent('.TestNestedMenuContent')
-      .assert.visible('div[class*="_header"] > div:first-child > button[class*="_header-button"]')
+      .assert.visible('div[class*="_header"] > div:first-child div[class*="_header-button"]')
       .assert.hidden('div[class*="_header"] > div:last-child > button[class*="_header-button"]')
       .keys([browser.Keys.ESCAPE]);
   },
