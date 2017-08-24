@@ -26,16 +26,16 @@ const CardExamples = () => (
     <PropsTable componentName="Card" id="props" src={CardSrc} />
     <PropsTable componentName="Card Body"src={CardBodySrc} />
     <CardTheme>
-    <h2 id="CardDefault">Card basic example</h2>
-    <CardDefault />
-    <h2 id="CardPadding">Card plus Card Body with default padding</h2>
-    <CardPadding />
-    <h2 id="CardPaddingVertical">Card plus Card Body with only vertical padding</h2>
-    <CardPaddingVertical />
-    <h2 id="CardPaddingHorizontal">Card plus Card Body with only horizontal padding</h2>
-    <CardPaddingHorizontal />
-    <h2 id="CardPaddingHR">Card plus padded and non-padded children</h2>
-    <CardPaddingHR />
+      <h2 id="CardDefault">Card basic example</h2>
+      <CardDefault />
+      <h2 id="CardPadding">Card plus Card Body with default padding</h2>
+      <CardPadding />
+      <h2 id="CardPaddingVertical">Card plus Card Body with only vertical padding</h2>
+      <CardPaddingVertical />
+      <h2 id="CardPaddingHorizontal">Card plus Card Body with only horizontal padding</h2>
+      <CardPaddingHorizontal />
+      <h2 id="CardPaddingHR">Card plus padded and non-padded children</h2>
+      <CardPaddingHR />
     </CardTheme>
 
   </div>
