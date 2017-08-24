@@ -29,7 +29,12 @@ Or we can selectively add padding to child elements
 	</Card.Body>
 </Card>
 
-
+Card Theming
+<ThemeProvider themeName="terra-consumer-theme">
+  <ThemeProvider themeName="terra-consumer-theme-margin">
+     <Card />
+  </ThemeProvider>
+</ThemeProvider>
 
 ```
 

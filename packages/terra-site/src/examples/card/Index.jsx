@@ -4,7 +4,6 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-card/docs/README.md';
 import { version } from 'terra-card/package.json';
-import ThemeProvider from 'terra-theme-provider';
 
 // Component Source
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
@@ -16,6 +15,7 @@ import CardPadding from './CardPadding';
 import CardPaddingVertical from './CardPaddingVertical';
 import CardPaddingHorizontal from './CardPaddingHorizontal';
 import CardPaddingHR from './CardPaddingHR';
+import CardTheme from './CardTheme';
 
 // Example Files
 
@@ -25,8 +25,8 @@ const CardExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable componentName="Card" id="props" src={CardSrc} />
     <PropsTable componentName="Card Body"src={CardBodySrc} />
+    <CardTheme>
     <h2 id="CardDefault">Card basic example</h2>
-    <ThemeProvider>
     <CardDefault />
     <h2 id="CardPadding">Card plus Card Body with default padding</h2>
     <CardPadding />
@@ -36,7 +36,7 @@ const CardExamples = () => (
     <CardPaddingHorizontal />
     <h2 id="CardPaddingHR">Card plus padded and non-padded children</h2>
     <CardPaddingHR />
-    <ThemeProvider>
+    </CardTheme>
 
   </div>
 );

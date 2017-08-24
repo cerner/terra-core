@@ -1,4 +1,7 @@
 @mixin terra-consumer-theme-card() {
-	//I know this isn't correct, want to see if I can get the theme to change first...
-	background-color: #000000
+	--terra-card-box-shadow: 0 1px 1px 0 #1C1F21;
+	--terra-card-border: '';
+}
+@mixin terra-consumer-theme-margin() {
+	--terra-card-margin: 10px;
 }
