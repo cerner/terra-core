@@ -53,7 +53,10 @@ class ButtonTheme extends React.Component {
         <ThemeProvider themeName={this.state.theme}>
           <ThemeProvider themeName={this.state.subTheme}>
             {window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)') &&
-              <Button text={rainbowButton} onClick={this.handleAutoThemeChange} />
+              <div style={{ marginBottom: '1rem' }}>
+                <h2 style={{ margin: '1rem 0' }}>Button Theming</h2>
+                <Button text={rainbowButton} onClick={this.handleAutoThemeChange} />
+              </div>
             }
             {this.props.children}
           </ThemeProvider>
