@@ -20,7 +20,7 @@ class DefaultThemeProvider extends React.Component {
     let themeSwitcher;
 
     function supportsCSSVars() {
-      return window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0);
+      return window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)');
     }
 
     if (supportsCSSVars()) {
