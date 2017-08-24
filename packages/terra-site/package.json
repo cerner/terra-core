@@ -40,6 +40,7 @@
     "terra-base": "^1.4.0",
     "terra-button": "^1.4.0",
     "terra-button-group": "^1.5.0",
+    "terra-card": "^0.x",
     "terra-content-container": "^1.4.0",
     "terra-date-picker": "^1.6.0",
     "terra-demographics-banner": "^1.5.0",
