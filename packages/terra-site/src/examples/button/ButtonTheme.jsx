@@ -66,7 +66,7 @@ class ButtonTheme extends React.Component {
       );
     }
 
-    const rainbowButton = this.state.isAnimated ? 'Click me to stop' : "Don't click me!";
+    const rainbowButton = this.state.isAnimated ? 'Click to stop' : 'Click to animate all themes';
     return (
       <div>
         <h2 style={{ margin: '1rem 0' }}>Button Theming</h2>
