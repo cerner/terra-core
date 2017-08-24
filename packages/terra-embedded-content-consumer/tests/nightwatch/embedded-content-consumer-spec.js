@@ -109,23 +109,4 @@ module.exports = {
     // Reset the frame back to the parent frame.
     }).frame(null);
   },
-
-  'Displays another provider application in full screen.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/full-screen-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/full-screen-provider';
-
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
-    // Wait for the consumer to load the provider application.
-    .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
-    .assert.elementPresent('div#FullScreenWrapper')
-    .element('css selector', `iframe[src*="${providerSrc}"]`, (frame) => {
-      browser.frame({ ELEMENT: frame.value.ELEMENT }, () => {
-        // Click the full screen button to invoke the full screen event.
-        browser.click('button[type=fullscreen]');
-      });
-      // Reset the frame back to the parent frame.
-    }).frame(null);
-    // Validate that the button click inkoved the full screen handler.
-    browser.expect.element('div#FullScreenWrapper').to.have.css('border').which.equals('5px dashed rgb(0, 0, 255)');
-  },
 };

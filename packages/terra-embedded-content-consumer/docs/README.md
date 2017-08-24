@@ -18,7 +18,6 @@ import EmbeddedContentConsumer from 'terra-embedded-content-consumer';
   src="https://google.com"
   onLaunch={() => { console.log('launched'); }}
   onAuthorize={() => { console.log('Authorized'); }}
-  onFullScreen={() => { window.open('https://yahoo.com'); }}
   options={{ secret: 'SecretKey' }}
   eventHandlers=[{ key: 'customEvent', handler: () => { console.log('Custom event invoked.'); } }]
   fill
