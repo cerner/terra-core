@@ -1,5 +1,4 @@
-@import './mixins';
-
 @include cerner-consumer-theme {
-  @include terra-consumer-theme-card();
+  --terra-card-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --terra-card-border: none;
 }

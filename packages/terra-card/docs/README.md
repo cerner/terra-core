@@ -13,12 +13,12 @@ Card is a basic container with some base styling to help seperate elements with 
 import React from 'react';
 import Card from 'terra-card';
 
-Just a Default Card
+// Just a Default Card
 <Card>
 	...
 </Card>
 
-Or we can selectively add padding to child elements
+// Or we can selectively add padding to child elements
 <Card>
 	<Card.Body hasPaddingVertical>
 		...
@@ -29,11 +29,10 @@ Or we can selectively add padding to child elements
 	</Card.Body>
 </Card>
 
-Card Theming
-<ThemeProvider themeName="terra-consumer-theme">
-  <ThemeProvider themeName="terra-consumer-theme-margin">
+// Card Theming
+import ThemeProvider from 'terra-theme-provider';
+<ThemeProvider>
      <Card />
-  </ThemeProvider>
 </ThemeProvider>
 
 ```
