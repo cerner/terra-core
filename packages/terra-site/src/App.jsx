@@ -9,6 +9,7 @@ import SlidePanel from 'terra-slide-panel';
 import ContentContainer from 'terra-content-container';
 import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
+import ThemeProvider from 'terra-theme-provider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
@@ -25,7 +26,9 @@ class App extends React.Component {
     this.state = {
       isOpen: window.innerWidth >= 768,
       locale,
+      theme: '',
     };
+    this.handleThemeChange = this.handleThemeChange.bind(this);
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
     this.handleToggleClick = this.handleToggleClick.bind(this);
     this.handleResetScroll = this.handleResetScroll.bind(this);
@@ -33,6 +36,10 @@ class App extends React.Component {
 
   handleLocaleChange(e) {
     this.setState({ locale: e.target.value });
+  }
+
+  handleThemeChange(e) {
+    this.setState({ theme: e.target.value });
   }
 
   handleToggleClick() {
@@ -83,6 +90,28 @@ class App extends React.Component {
       </div>
     );
 
+    let themeSwitcher;
+
+    function supportsCSSVars() {
+      return window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)');
+    }
+
+    if (supportsCSSVars()) {
+      themeSwitcher = (
+        <div className={styles['site-theme']}>
+          <label htmlFor="theme"> Theme: </label>
+          <select value={this.state.theme} onChange={this.handleThemeChange}>
+            <option value="">Default</option>
+            <option value="cerner-mock-theme">Mock Theme</option>
+          </select>
+        </div>
+      );
+    } else {
+      themeSwitcher = (
+        <div />
+      );
+    }
+
     const navHeader = (
       <div className={styles['site-nav-header']}>
         <Link onClick={this.handleResetScroll} to="/">Home</Link>
@@ -99,6 +128,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/badge">Badge</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button">Button</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button-group">Button Group</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/card">Card</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/content-container">Content Container</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/datepicker">Date Picker</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/demographics-banner">Demographics Banner</Link>} />
@@ -123,6 +153,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/table">Table</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/text">Text</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/theme-provider">Theme Provider</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/time-input">Time Input</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle">Toggle</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle-button">Toggle Button</Link>} />
@@ -134,13 +165,16 @@ class App extends React.Component {
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
     // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
     const mainContent = (
-      <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
-        {this.props.children}
-      </Base>
+      <ThemeProvider themeName={this.state.theme}>
+        <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
+          {this.props.children}
+        </Base>
+      </ThemeProvider>
     );
 
     const utilityContent = (
       <div className={styles['site-utility']}>
+        {themeSwitcher}
         {localeContent}
         {bidiContent}
       </div>

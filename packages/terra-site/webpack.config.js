@@ -52,7 +52,7 @@ module.exports = {
                     'iOS >= 8',
                   ],
                 }),
-                CustomProperties(),
+                CustomProperties({ preserve: true }),
                 rtl(),
               ];
             },
@@ -60,6 +60,9 @@ module.exports = {
         },
         {
           loader: 'sass-loader',
+          options: {
+            data: '$bundled-themes: "mock";',
+          },
         }],
       }),
     },
