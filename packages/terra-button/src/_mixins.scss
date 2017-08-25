@@ -83,15 +83,6 @@
   $color-light-50: rgba($color, 0.5);
   $color-light-65: rgba($color2, 0.65);
 
-  --terra-button-background-color-primary: $color;
-  --terra-button-border-color-primary: $color;
-  --terra-button-hover-background-color-primary: $color-dark-30;
-  --terra-button-active-background-color-primary: $color-dark-50;
-  --terra-button-active-border-color-primary: $color-dark-50;
-  --terra-button-disabled-background-color-primary: $color-light-50;
-  --terra-button-disabled-border-color-primary: $color-light-50;
-  --terra-button-disabled-color-primary: #fff;
-
   --terra-button-background-color-default: transparent;
   --terra-button-border-color-default: $color2;
   --terra-button-color-default: $color2;
@@ -103,6 +94,25 @@
   --terra-button-disabled-background-color-default: transparent;
   --terra-button-disabled-border-color-default: $color-light-50;
   --terra-button-disabled-color-default: $color-light-50;
+
+  --terra-button-background-color-primary: $color;
+  --terra-button-border-color-primary: $color;
+  --terra-button-hover-background-color-primary: $color-dark-30;
+  --terra-button-active-background-color-primary: $color-dark-50;
+  --terra-button-active-border-color-primary: $color-dark-50;
+  --terra-button-disabled-background-color-primary: $color-light-50;
+  --terra-button-disabled-border-color-primary: $color-light-50;
+  --terra-button-disabled-color-primary: #fff;
+
+  --terra-button-border-color-secondary: $color2;
+  --terra-button-color-secondary: $color2;
+  --terra-button-hover-background-color-secondary: $color-light-30;
+  --terra-button-hover-color-secondary: $color;
+  --terra-button-active-background-color-secondary: $color-light-65;
+  --terra-button-active-border-color-secondary: $color;
+  --terra-button-active-color-secondary: $color;
+  --terra-button-disabled-border-color-secondary: $color-light-50;
+  --terra-button-disabled-color-secondary: $color-light-50;
 
   --terra-button-color-link: $color2;
   --terra-button-active-color-link: $color2;
