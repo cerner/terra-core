@@ -8,6 +8,8 @@ Unreleased
 
 ### Changed
 * Updated various examples to use `span` instead of `p` elements in sample content
+* Added ThemeProvider component examples
+* Added new relic script
 
 1.6.0 - (August 15, 2017)
 ------------------
