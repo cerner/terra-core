@@ -1,6 +1,6 @@
 # Terra Embedded Content Consumer
 
-The Embedded Content Consumer is the application component which is embedding content within it.
+The Embedded Content Consumer is the application component which is embedding web content within it.
 
 ## Getting Started
 
