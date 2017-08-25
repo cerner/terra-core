@@ -191,8 +191,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Pressing the DELETE key in the minute input when there is no value will move focus to the hour input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default-time`);
-
-    browser.click('#timeInput input[name="terra-time-minute-time-input"]');
+    // Click puts the cursor at the end of hour input feild, then key to the beginning of the minute input field.
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys(browser.keys.RIGHT_ARROW);
 
     browser.keys(browser.Keys.DELETE);
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('value').equals('00');

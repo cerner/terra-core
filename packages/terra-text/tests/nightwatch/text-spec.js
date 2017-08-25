@@ -15,16 +15,16 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays a text component with a set font size': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/text-tests/font-size`);
-    // Browser computes rem units as pixels when retrieved
-    browser.assert.cssProperty('#textFontSize100', 'font-size', '100px');
-    browser.assert.cssProperty('#textFontSize32', 'font-size', '32px');
-    browser.assert.cssProperty('#textFontSize24', 'font-size', '24px');
-    browser.assert.cssProperty('#textFontSize20', 'font-size', '20px');
-    browser.assert.cssProperty('#textFontSize18', 'font-size', '18px');
-    browser.assert.cssProperty('#textFontSize16', 'font-size', '16px');
+    // Chrome browser computes to the hundredths, rem units to pixels, when retrieved
+    browser.assert.cssProperty('#textFontSize100', 'font-size', '100.002px');
+    browser.assert.cssProperty('#textFontSize32', 'font-size', '32.004px');
+    browser.assert.cssProperty('#textFontSize24', 'font-size', '23.996px');
+    browser.assert.cssProperty('#textFontSize20', 'font-size', '20.006px');
+    browser.assert.cssProperty('#textFontSize18', 'font-size', '18.004px');
+    browser.assert.cssProperty('#textFontSize16', 'font-size', '16.002px');
     browser.assert.cssProperty('#textFontSize14', 'font-size', '14px');
-    browser.assert.cssProperty('#textFontSize12', 'font-size', '12px');
-    browser.assert.cssProperty('#textFontSize10', 'font-size', '10px');
+    browser.assert.cssProperty('#textFontSize12', 'font-size', '11.9994px');
+    browser.assert.cssProperty('#textFontSize10', 'font-size', '10.0002px');
   },
 
   'Displays a text component with set italics': (browser) => {

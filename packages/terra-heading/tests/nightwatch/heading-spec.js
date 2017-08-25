@@ -15,12 +15,12 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays a heading component with a set size': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/heading-tests/size`);
-    // Browser computes rem units as pixels when retrieved
-    browser.assert.cssProperty('#heading-size-huge', 'font-size', '32px');
-    browser.assert.cssProperty('#heading-size-large', 'font-size', '24px');
-    browser.assert.cssProperty('#heading-size-medium', 'font-size', '20px');
-    browser.assert.cssProperty('#heading-size-small', 'font-size', '18px');
-    browser.assert.cssProperty('#heading-size-tiny', 'font-size', '16px');
+    // Chrome browser computes to the hundredths, rem units to pixels, when retrieved
+    browser.assert.cssProperty('#heading-size-huge', 'font-size', '32.004px');
+    browser.assert.cssProperty('#heading-size-large', 'font-size', '23.996px');
+    browser.assert.cssProperty('#heading-size-medium', 'font-size', '20.006px');
+    browser.assert.cssProperty('#heading-size-small', 'font-size', '18.004px');
+    browser.assert.cssProperty('#heading-size-tiny', 'font-size', '16.002px');
     browser.assert.cssProperty('#heading-size-mini', 'font-size', '14px');
   },
 
@@ -31,12 +31,12 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays a heading component with set levels': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/heading-tests/levels`);
-    // Browser computes rem units as pixels when retrieved
-    browser.assert.cssProperty('#heading-level-1', 'font-size', '32px');
-    browser.assert.cssProperty('#heading-level-2', 'font-size', '24px');
-    browser.assert.cssProperty('#heading-level-3', 'font-size', '20px');
-    browser.assert.cssProperty('#heading-level-4', 'font-size', '18px');
-    browser.assert.cssProperty('#heading-level-5', 'font-size', '16px');
+    // Chrome browser computes to the hundredths, rem units to pixels, when retrieved
+    browser.assert.cssProperty('#heading-level-1', 'font-size', '32.004px');
+    browser.assert.cssProperty('#heading-level-2', 'font-size', '23.996px');
+    browser.assert.cssProperty('#heading-level-3', 'font-size', '20.006px');
+    browser.assert.cssProperty('#heading-level-4', 'font-size', '18.004px');
+    browser.assert.cssProperty('#heading-level-5', 'font-size', '16.002px');
     browser.assert.cssProperty('#heading-level-6', 'font-size', '14px');
   },
 

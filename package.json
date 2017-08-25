@@ -93,6 +93,6 @@
     "stylelint": "~8.0.0",
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-toolkit": "/Users/er047227/terra-toolkit"
+    "terra-toolkit": "git://github.com/cerner/terra-toolkit.git#nightwatch_refactor"
   }
 }

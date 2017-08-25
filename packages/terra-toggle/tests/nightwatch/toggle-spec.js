@@ -11,8 +11,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Expanding the toggle: aria-hidden attribute': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/toggle-tests/default`);
 
-    browser
-     .expect.element('#toggle').to.have.attribute('aria-hidden').to.equal('true');
+    browser.expect.element('#toggle').to.have.attribute('aria-hidden').to.equal('true');
 
     browser
      .click('button')
