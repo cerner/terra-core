@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added consumer theming styles
 
 1.4.0 - (August 15, 2017)
 ------------------
