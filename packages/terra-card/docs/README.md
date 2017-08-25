@@ -32,7 +32,9 @@ import Card from 'terra-card';
 // Card Theming
 import ThemeProvider from 'terra-theme-provider';
 <ThemeProvider>
-     <Card />
+     <Card>
+     	...
+     </Card>
 </ThemeProvider>
 
 ```
