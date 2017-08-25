@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppDelegate from 'terra-app-delegate';
-import Header from 'terra-header';
+import Heading from 'terra-heading';
 
 class ContentContainer extends React.Component {
   constructor(props) {
@@ -68,12 +68,12 @@ class ContentContainer extends React.Component {
 
     return (
       <div className="content-container" style={{ height: '100%', padding: '10px' }}>
-        <Header level={2}>Content Component</Header>
+        <Heading level={2}>Content Component</Heading>
         <br />
-        <Header level={3}>id: {identifier}</Header>
+        <Heading level={3}>id: {identifier}</Heading>
         <br />
-        {app && app.releaseFocus ? <Header level={4}>Modal has lost focus!</Header> : null }
-        {app && app.requestFocus ? <Header level={4}>Modal has gained focus!</Header> : null }
+        {app && app.releaseFocus ? <Heading level={4}>Modal has lost focus!</Heading> : null }
+        {app && app.requestFocus ? <Heading level={4}>Modal has gained focus!</Heading> : null }
         <br />
         <button className="disclose" onClick={this.disclose()}>Disclose</button>
         {identifier === 'root-component' && <button className="disclose-tiny" onClick={this.disclose('tiny')}>Disclose - Tiny</button>}
