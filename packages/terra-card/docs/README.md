@@ -28,15 +28,6 @@ import Card from 'terra-card';
 		...
 	</Card.Body>
 </Card>
-
-// Card Theming
-import ThemeProvider from 'terra-theme-provider';
-<ThemeProvider>
-     <Card>
-     	...
-     </Card>
-</ThemeProvider>
-
 ```
 
 ## Expected Use
