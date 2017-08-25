@@ -28,6 +28,7 @@ const propTypes = {
   }),
   /**
   * A set of event handlers keyed by the event name.
+  * Note: Binding the event handler is necessary to make `this` work in the callback.
   */
   eventHandlers: PropTypes.arrayOf(PropTypes.shape({
     key: PropTypes.string,
