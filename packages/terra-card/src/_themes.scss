@@ -2,8 +2,4 @@
 
 @include cerner-consumer-theme {
   @include terra-consumer-theme-card();
-  /* stylelint-disable selector-class-pattern */
-  .terra-consumer-theme-margin {
-    @include terra-consumer-theme-margin();
-  }
 }
