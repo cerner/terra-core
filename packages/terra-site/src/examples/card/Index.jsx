@@ -36,7 +36,6 @@ const CardExamples = () => (
       <h2 id="CardPaddingHR">Card plus padded and non-padded children</h2>
       <CardPaddingHR />
     </ThemeProvider>
-
   </div>
 );
 
