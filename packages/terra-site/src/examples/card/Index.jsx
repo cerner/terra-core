@@ -4,7 +4,7 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-card/docs/README.md';
 import { version } from 'terra-card/package.json';
-
+import ThemeProvider from 'terra-theme-provider';
 // Component Source
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import CardSrc from '!raw-loader!terra-card/src/Card';
@@ -15,7 +15,6 @@ import CardPadding from './CardPadding';
 import CardPaddingVertical from './CardPaddingVertical';
 import CardPaddingHorizontal from './CardPaddingHorizontal';
 import CardPaddingHR from './CardPaddingHR';
-import ThemeProvider from 'terra-theme-provider';
 
 // Example Files
 
