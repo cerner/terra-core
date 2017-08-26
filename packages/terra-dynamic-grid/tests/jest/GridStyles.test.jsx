@@ -1,27 +1,27 @@
-import generateStyles from '../../src/styles';
+import { grid } from '../../src/styles';
 
 describe('Styles', () => {
   describe('Default Grid', () => {
     window.CSS = { supports: () => true };
-    const gridStyles = generateStyles({}).grid;
+    const gridStyles = grid({});
 
-    it('should have display grid', () => {
+    it('should be an empty object', () => {
+      expect(gridStyles).toEqual({});
+    });
+  });
+
+  describe('Modern Browser Grid', () => {
+    window.CSS = { supports: () => true };
+    const gridStyles = grid({ 'grid-template-rows': '1px' });
+
+    it('should be an empty object', () => {
       expect(gridStyles.display).toEqual('grid');
-    });
-
-    it('should not have a grid template', () => {
-      expect(gridStyles['grid-template-columns']).toEqual(undefined);
-      expect(gridStyles['grid-template-rows']).toEqual(undefined);
-    });
-
-    it('should not have a grid gap', () => {
-      expect(gridStyles['grid-gap']).toEqual(undefined);
     });
   });
 
   describe('Legacy IE Grid', () => {
     window.CSS = undefined;
-    const gridStyles = generateStyles({}).grid;
+    const gridStyles = grid({ 'grid-template-rows': '1px' });
 
     it('should have display -ms-grid', () => {
       expect(gridStyles.display).toEqual('-ms-grid');
@@ -30,7 +30,7 @@ describe('Styles', () => {
 
   describe('Legacy Edge Grid', () => {
     window.CSS = { supports: () => false };
-    const gridStyles = generateStyles({}).grid;
+    const gridStyles = grid({ 'grid-template-rows': '1px' });
 
     it('should have display -ms-grid', () => {
       expect(gridStyles.display).toEqual('-ms-grid');
@@ -38,10 +38,10 @@ describe('Styles', () => {
   });
 
   describe('Ungapped grid with 2 columns and rows', () => {
-    const gridStyles = generateStyles({
+    const gridStyles = grid({
       'grid-template-columns': '100px 200px',
       'grid-template-rows': '300px 400px',
-    }).grid;
+    });
 
     it('should not have a grid gap', () => {
       expect(gridStyles['grid-gap']).toEqual(undefined);
@@ -60,11 +60,11 @@ describe('Styles', () => {
   });
 
   describe('Gapped Grid with 2 columns and rows', () => {
-    const gridStyles = generateStyles({
+    const gridStyles = grid({
       'grid-template-columns': '100px 200px',
       'grid-template-rows': '300px 400px',
       'grid-gap': '10px 20px',
-    }).grid;
+    });
 
     it('should not have a grid gap', () => {
       expect(gridStyles['grid-gap']).toEqual('10px 20px');
@@ -78,21 +78,6 @@ describe('Styles', () => {
     it('should have a -ms template with grip gap included', () => {
       expect(gridStyles['-ms-grid-columns']).toEqual('100px 20px 200px');
       expect(gridStyles['-ms-grid-rows']).toEqual('300px 10px 400px');
-    });
-  });
-
-  describe('Grid scoped to media query', () => {
-    window.CSS = { supports: () => true };
-    const gridStyles = generateStyles({
-      media: '@media (max-width: 600px)',
-    }).grid;
-
-    it('should scope grid styles to media query ', () => {
-      expect(gridStyles).toEqual({
-        '@media (max-width: 600px)': {
-          display: 'grid',
-        },
-      });
     });
   });
 });

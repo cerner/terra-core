@@ -1,6 +1,5 @@
 import React from 'react';
 import DynamicGrid from '../../src/DynamicGrid';
-import Region from '../../src/Region';
 
 describe('DynamicGrid', () => {
   // Snapshot Tests
@@ -11,7 +10,7 @@ describe('DynamicGrid', () => {
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const grid = shallow(<DynamicGrid><Region name="foo">Hello</Region></DynamicGrid>);
+    const grid = shallow(<DynamicGrid><DynamicGrid.Region>Hello</DynamicGrid.Region></DynamicGrid>);
     expect(grid).toMatchSnapshot();
   });
 

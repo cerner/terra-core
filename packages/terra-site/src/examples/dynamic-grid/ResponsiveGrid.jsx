@@ -3,169 +3,112 @@ import DynamicGrid from 'terra-dynamic-grid';
 
 import Card from './Card';
 
-const layouts = [{
-  'grid-template-columns': '100px 100px 100px',
-  'grid-template-rows': '100px 100px 100px',
+const template = {
+  'grid-template-columns': '1fr 1fr 1fr 1fr 1fr',
+  'grid-template-rows': '100px',
   'grid-gap': '10px',
-  regions: [
-    {
-      name: 'r11',
-      'grid-column-start': 1,
-      'grid-row-start': 1,
-    },
-    {
-      name: 'r12',
-      'grid-column-start': 2,
-      'grid-row-start': 1,
-    },
-    {
-      name: 'r13',
-      'grid-column-start': 3,
-      'grid-row-start': 1,
-    },
-    {
-      name: 'r21',
-      'grid-column-start': 1,
-      'grid-row-start': 2,
-    },
-    {
-      name: 'r22',
-      'grid-column-start': 2,
-      'grid-row-start': 2,
-    },
-    {
-      name: 'r23',
-      'grid-column-start': 3,
-      'grid-row-start': 2,
-    },
-    {
-      name: 'r31',
-      'grid-column-start': 1,
-      'grid-row-start': 3,
-    },
-    {
-      name: 'r32',
-      'grid-column-start': 2,
-      'grid-row-start': 3,
-    },
-    {
-      name: 'r33',
-      'grid-column-start': 3,
-      'grid-row-start': 3,
-    },
-    {
-      name: 'cell',
-      'grid-column-start': 1,
-      'grid-row-start': 1,
-    },
-  ],
-}, {
-  media: '@media (max-width: 1500px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 2,
-      'grid-row-start': 1,
-    },
-  ],
-}, {
-  media: '@media (max-width: 1400px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 3,
-      'grid-row-start': 1,
-    },
-  ],
-}, {
-  media: '@media (max-width: 1300px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 1,
-      'grid-row-start': 2,
-    },
-  ],
-}, {
-  media: '@media (max-width: 1200px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 2,
-      'grid-row-start': 2,
-    },
-  ],
-}, {
-  media: '@media (max-width: 1100px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 3,
-      'grid-row-start': 2,
-    },
-  ],
-}, {
-  media: '@media (max-width: 1000px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 1,
-      'grid-row-start': 3,
-    },
-  ],
-}, {
-  media: '@media (max-width: 900px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 2,
-      'grid-row-start': 3,
-    },
-  ],
-}, {
-  media: '@media (max-width: 800px)',
-  regions: [
-    {
-      name: 'cell',
-      'grid-column-start': 3,
-      'grid-row-start': 3,
-    },
-  ],
-}];
+};
+
+const region1 = {
+  defaultPosition: {
+    'grid-column-start': 1,
+    'grid-row-start': 1,
+  },
+  small: {
+    'grid-column-start': 2,
+  },
+  medium: {
+    'grid-column-start': 3,
+  },
+  large: {
+    'grid-column-start': 4,
+  },
+};
+
+const region2 = {
+  defaultPosition: {
+    'grid-column-start': 2,
+    'grid-row-start': 1,
+  },
+  small: {
+    'grid-column-start': 3,
+  },
+  medium: {
+    'grid-column-start': 4,
+  },
+  large: {
+    'grid-column-start': 5,
+  },
+};
+
+
+const region3 = {
+  defaultPosition: {
+    'grid-column-start': 3,
+    'grid-row-start': 1,
+  },
+  small: {
+    'grid-column-start': 4,
+  },
+  medium: {
+    'grid-column-start': 5,
+  },
+  large: {
+    'grid-column-start': 1,
+  },
+};
+
+const region4 = {
+  defaultPosition: {
+    'grid-column-start': 4,
+    'grid-row-start': 1,
+  },
+  small: {
+    'grid-column-start': 5,
+  },
+  medium: {
+    'grid-column-start': 1,
+  },
+  large: {
+    'grid-column-start': 2,
+  },
+};
+
+const region5 = {
+  defaultPosition: {
+    'grid-column-start': 5,
+    'grid-row-start': 1,
+  },
+  small: {
+    'grid-column-start': 1,
+  },
+  medium: {
+    'grid-column-start': 2,
+  },
+  large: {
+    'grid-column-start': 3,
+  },
+};
 
 
 const ResponsiveGrid = () => (
-  (<DynamicGrid layouts={layouts}>
-    <DynamicGrid.Region name="r11">
-      <Card />
+  (<DynamicGrid defaultTemplate={template}>
+    <DynamicGrid.Region {...region1}>
+      <Card>1</Card>
     </DynamicGrid.Region>
-    <DynamicGrid.Region name="r12">
-      <Card />
+    <DynamicGrid.Region {...region2}>
+      <Card>2</Card>
     </DynamicGrid.Region>
-    <DynamicGrid.Region name="r13">
-      <Card />
+    <DynamicGrid.Region {...region3}>
+      <Card>3</Card>
     </DynamicGrid.Region>
-    <DynamicGrid.Region name="r21">
-      <Card />
+    <DynamicGrid.Region {...region4}>
+      <Card>4</Card>
     </DynamicGrid.Region>
-    <DynamicGrid.Region name="r22">
-      <Card />
+    <DynamicGrid.Region {...region5}>
+      <Card>5</Card>
     </DynamicGrid.Region>
-    <DynamicGrid.Region name="r23">
-      <Card />
-    </DynamicGrid.Region>
-    <DynamicGrid.Region name="r31">
-      <Card />
-    </DynamicGrid.Region>
-    <DynamicGrid.Region name="r32">
-      <Card />
-    </DynamicGrid.Region>
-    <DynamicGrid.Region name="r33">
-      <Card />
-    </DynamicGrid.Region>
-    <DynamicGrid.Region name="cell">
-      <Card>Hello</Card>
-    </DynamicGrid.Region>
+
   </DynamicGrid>)
 );
 

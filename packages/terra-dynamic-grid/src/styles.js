@@ -56,7 +56,11 @@ const gridGap = layout => (
     : {}
 );
 
-const gridDisplay = () => {
+const gridDisplay = (layout) => {
+  if (Object.keys(layout).length === 0) {
+    return {};
+  }
+
   const isCSSGridsEnabled = window.CSS
     && window.CSS.supports
     && window.CSS.supports('display', 'grid');
@@ -65,43 +69,21 @@ const gridDisplay = () => {
   };
 };
 
+const grid = template => ({
+  ...gridDisplay(template),
+  ...gridGap(template),
+  ...gridTemplate('columns', template),
+  ...gridTemplate('rows', template),
+  ...(template.style || {}),
+});
 
-const generateGridStyles = (layout) => {
-  const styles = {
-    ...gridDisplay(),
-    ...gridGap(layout),
-    ...gridTemplate('columns', layout),
-    ...gridTemplate('rows', layout),
-  };
-
-  return { grid: layout.media
-    ? { [layout.media]: styles }
-    : styles };
-};
-
-const generateRegionStyles = layout => (
-  (region) => {
-    const styles = {
-      ...gridLineStart('column', region),
-      ...gridLineEnd('column', region),
-      ...gridLineStart('row', region),
-      ...gridLineEnd('row', region),
-      ...region.style,
-    };
-
-    return { [region.name]: layout.media
-      ? { [layout.media]: styles }
-      : styles };
-  }
-);
+const region = position => ({
+  ...gridLineStart('column', position),
+  ...gridLineEnd('column', position),
+  ...gridLineStart('row', position),
+  ...gridLineEnd('row', position),
+  ...(position.style || {}),
+});
 
 
-const generateStyles = (layout) => {
-  const grid = generateGridStyles(layout);
-  const regionStyles = generateRegionStyles(layout);
-  return (layout.regions || [])
-    .map(regionStyles)
-    .reduce((regions, region) => ({ ...regions, ...region }), grid);
-};
-
-export default generateStyles;
+export { grid, region };

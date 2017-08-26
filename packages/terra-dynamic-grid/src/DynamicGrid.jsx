@@ -2,96 +2,115 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import generateStyles from './styles';
+import { grid } from './styles';
 import Region from './Region';
+import styles from './DynamicGrid.scss';
+
+const templateShape = {
+  /**
+  * The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.
+  * For IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.
+  */
+  'grid-template-columns': PropTypes.string,
+  /**
+  * The row definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows.
+  * For IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772258(v=vs.85).aspx.
+  */
+  'grid-template-rows': PropTypes.string,
+  /**
+  * The gap to place between the columns and rows. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
+  */
+  'grid-gap': PropTypes.string,
+  /**
+  * The gap to place between the rows. Overrides rows in grid-gap if present. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
+  */
+  'grid-row-gap': PropTypes.string,
+  /**
+  * The gap to place between the columns. Overrides columns in grid-gap if present. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
+  */
+  'grid-column-gap': PropTypes.string,
+
+  /**
+  * Additional CSS properties to apply to the grid.
+  */
+  style: PropTypes.object,
+};
+
 
 const propTypes = {
   /**
   * The child Region components that make up the grid.
   */
   children: PropTypes.node,
-  /**
-  * The layout configuration that defines the grid. Multiple layouts can be passed per mediaquery to make the grid responsive.
+
+  /*
+  * The default grid layout template to use.
   */
-  layouts: PropTypes.arrayOf(PropTypes.shape({
-    /**
-    * The column definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns.
-    * For IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772246(v=vs.85).aspx.
-    */
-    'grid-template-columns': PropTypes.string,
-    /**
-    * The row definitions of the grid. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows.
-    * For IE support, verify syntax is supported here https://msdn.microsoft.com/en-us/library/hh772258(v=vs.85).aspx.
-    */
-    'grid-template-rows': PropTypes.string,
-    /**
-    * The gap to place between the columns and rows. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
-    */
-    'grid-gap': PropTypes.string,
-    /**
-    * The gap to place between the rows. Overrides rows in grid-gap if present. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
-    */
-    'grid-row-gap': PropTypes.string,
-    /**
-    * The gap to place between the columns. Overrides columns in grid-gap if present. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
-    */
-    'grid-column-gap': PropTypes.string,
-    /**
-    * The CSS media query to scope the layout to.
-    */
-    media: PropTypes.string,
-    /**
-    * The region definitions for the grid.
-    */
-    regions: PropTypes.arrayOf(PropTypes.shape({
-      /**
-      * The name of the region.
-      */
-      name: PropTypes.string.isRequired,
-      /**
-      * The starting column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start.
-      */
-      'grid-column-start': PropTypes.number.isRequired,
-      /**
-      * The ending column line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end.
-      */
-      'grid-column-end': PropTypes.number,
-      /**
-      * The starting row line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start.
-      */
-      'grid-row-start': PropTypes.number.isRequired,
-      /**
-      * The ending row line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end.
-      */
-      'grid-row-end': PropTypes.number,
-    })),
-  })),
+  defaultTemplate: PropTypes.shape(templateShape),
+
+  /*
+  *  The template to be used at tiny breakpoints
+  */
+  tiny: PropTypes.shape(templateShape),
+
+  /*
+  *  The template to be used at small breakpoints
+  */
+  small: PropTypes.shape(templateShape),
+
+  /*
+  *  The template to be used at medium breakpoints
+  */
+  medium: PropTypes.shape(templateShape),
+
+  /*
+  *  The template to be used at large breakpoints
+  */
+  large: PropTypes.shape(templateShape),
+
+  /*
+  *  The template to be used at huge breakpoints
+  */
+  huge: PropTypes.shape(templateShape),
 };
 
+
 const defaultProps = {
-  layouts: [],
+  defaultTemplate: {},
+  tiny: {},
+  small: {},
+  medium: {},
+  large: {},
+  huge: {},
 };
 
 const DynamicGrid = ({
-  layouts,
+  defaultTemplate,
+  tiny,
+  small,
+  medium,
+  large,
+  huge,
   children,
   ...customProps
 }) => {
-  const stylesheets = layouts
-    .map(generateStyles)
-    .map(StyleSheet.create);
+  const media = (breakpoint, props) => (Object.keys(props).length
+    ? { [`@media screen and (min-width: ${breakpoint})`]: grid(props) }
+    : {});
 
-  const layoutStyles = name => stylesheets.map(x => css(x[name]));
-  const gridClasses = classNames(customProps.className, layoutStyles('grid'));
+  const stylesheet = StyleSheet.create({
+    grid: {
+      ...grid(defaultTemplate),
+      ...media(styles.tiny, tiny),
+      ...media(styles.small, small),
+      ...media(styles.medium, medium),
+      ...media(styles.large, large),
+      ...media(styles.huge, huge),
+    },
+  });
 
-  // Clone the child regions and inject their generated styles
-  return (<div {...customProps} className={gridClasses}>
-    {(React.Children || []).map(children,
-     region => React.cloneElement(region, {
-       className: classNames(region.props.className, layoutStyles(region.props.name)),
-     }),
-    )}
-  </div>);
+  const gridClasses = classNames(customProps.className, css(stylesheet.grid));
+  return (<div {...customProps} className={gridClasses}>{children}</div>);
 };
 
 DynamicGrid.propTypes = propTypes;

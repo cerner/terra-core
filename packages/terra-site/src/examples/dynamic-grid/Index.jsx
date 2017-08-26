@@ -32,7 +32,7 @@ const DynamicGridExamples = () => (
     <h2>Dashboard</h2>
     <Dashboard />
     <h2>Responsive Grid</h2>
-    <p>Resize the browser window to see the grid layout dynamically change.</p>
+    <p>Resize the browser window to see the regions reorder themselves.</p>
     <ResponsiveGrid />
   </div>
 );

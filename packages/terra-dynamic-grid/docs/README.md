@@ -15,28 +15,25 @@ import React from 'react';
 import DynamicGrid from 'terra-dynamic-grid';
 import Region from 'terra-dynamic-grid/Region';
 
-const layouts = [{
-  'grid-template-columns': '100px 100px',
+const template = {
+  'grid-template-columns': '1fr 1fr',
   'grid-template-rows': 'auto',
   'grid-gap': '10px',
-  regions: [
-    {
-      name: 'r1',
-      'grid-column-start': 1,
-      'grid-row-start': 1,
-    },
-    {
-      name: 'r2',
-      'grid-column-start': 2,
-      'grid-row-start': 1,
-    },
-  ],
-}];
+};
 
+const region1 = {
+  'grid-column-start': 1,
+  'grid-row-start': 1,
+};
 
-<DynamicGrid layouts={layouts} >
-  <Region name="r1">Region 1</Region>
-  <Region name="r2">Region 2</Region>
+const region2 = {
+  'grid-column-start': 2,
+  'grid-row-start': 1,
+};
+
+<DynamicGrid defaultTemplate={template} >
+  <Region defaultPosition={region1}>Region 1</Region>
+  <Region defaultPosition={region2}>Region 2</Region>
 </DynamicGrid>
 ```
 

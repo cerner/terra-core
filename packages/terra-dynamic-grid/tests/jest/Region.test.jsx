@@ -11,13 +11,13 @@ describe('DynamicGrid', () => {
   });
 
   it('should render a Grid with merged attributes', () => {
-    const region = shallow(<DynamicGrid.Region name="foo" className="TestClass" data-mock="data" style={{ height: '100px' }} />);
+    const region = shallow(<DynamicGrid.Region className="TestClass" data-mock="data" style={{ height: '100px' }} />);
     expect(region).toMatchSnapshot();
   });
 
   // Attributes
   it('should merge classes passed in with attributes', () => {
-    const region = shallow(<DynamicGrid.Region name="foo" className="TestClass" />);
+    const region = shallow(<DynamicGrid.Region className="TestClass" />);
     expect(region.prop('className')).toContain('TestClass');
   });
 });
