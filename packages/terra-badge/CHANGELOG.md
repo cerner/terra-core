@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added cerner-mock-theme styles
 
 1.4.0 - (August 15, 2017)
 ------------------

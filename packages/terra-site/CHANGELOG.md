@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added ThemeProvider component examples
+* Added new relic script
 
 1.6.0 - (August 15, 2017)
 ------------------
