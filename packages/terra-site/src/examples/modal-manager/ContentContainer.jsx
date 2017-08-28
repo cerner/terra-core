@@ -68,10 +68,7 @@ class ContentContainer extends React.Component {
 
     return (
       <div className="content-container" style={{ height: '100%', padding: '10px' }}>
-        <Heading level={2}>Content Component</Heading>
-        <br />
-        
-        <br />
+        <Heading level={2}>Demo Content Component</Heading>
         {app && app.releaseFocus ? <Heading level={4}>Modal has lost focus!</Heading> : null }
         {app && app.requestFocus ? <Heading level={4}>Modal has gained focus!</Heading> : null }
         <br />
