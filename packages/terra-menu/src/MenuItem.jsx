@@ -68,8 +68,8 @@ class MenuItem extends React.Component {
     this.setState((prevState) => {
       const newState = prevState;
       newState.isSelected = !prevState.isSelected;
-      if (this.onChange) {
-        this.onChange(event, newState.isSelected);
+      if (this.props.onChange) {
+        this.props.onChange(event, newState.isSelected);
       }
 
       return newState;
@@ -87,7 +87,7 @@ class MenuItem extends React.Component {
   wrapOnKeyDown(onKeyDown) {
     return ((event) => {
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
-        this.handleSelection();
+        this.handleSelection(event);
       }
 
       if (onKeyDown) {

@@ -21,10 +21,18 @@ module.exports = {
   },
   'Items in the item group are selectable': (browser) => {
     browser
-      .click('.TestGroupItem1')
-      .assert.visible('.TestGroupItem1 svg[class*="_checkmark"]')
       .click('.TestGroupItem3')
       .assert.visible('.TestGroupItem3 svg[class*="_checkmark"]')
-      .assert.hidden('.TestGroupItem1 svg[class*="_checkmark"]');
+      .assert.containsText('#selected-index', '2')
+      .click('.TestGroupItem1')
+      .assert.visible('.TestGroupItem1 svg[class*="_checkmark"]')
+      .assert.hidden('.TestGroupItem3 svg[class*="_checkmark"]')
+      .assert.containsText('#selected-index', '0')
+      .keys([browser.Keys.TAB])
+      .keys([browser.Keys.ENTER])
+      .assert.containsText('#selected-index', '1')
+      .keys([browser.Keys.TAB])
+      .keys([browser.Keys.SPACE])
+      .assert.containsText('#selected-index', '2');
   },
 };

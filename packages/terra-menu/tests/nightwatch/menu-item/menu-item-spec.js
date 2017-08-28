@@ -31,13 +31,26 @@ module.exports = {
       .assert.elementPresent('.TestSelectableItem')
       .click('.TestSelectableItem')
       .assert.visible('.TestSelectableItem svg[class*="_checkmark"]')
+      .assert.containsText('#isSelected', 'yes')
       .click('.TestSelectableItem')
-      .assert.hidden('.TestSelectableItem svg[class*="_checkmark"]');
+      .assert.hidden('.TestSelectableItem svg[class*="_checkmark"]')
+      .assert.containsText('#isSelected', 'no')
+      .keys([browser.Keys.ENTER])
+      .assert.containsText('#isSelected', 'yes')
+      .keys([browser.Keys.SPACE])
+      .assert.containsText('#isSelected', 'no');
   },
   'Displays a Menu.Item with a submenu indicator': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/menu-item-tests/submenu`)
       .assert.elementPresent('.TestSubMenuItem')
       .assert.elementPresent('.TestSubMenuItem svg[class*="_chevron"]');
+  },
+  'Triggers onClick for Menu.Item': (browser) => {
+    browser
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/menu-item-tests/on-click`)
+      .assert.containsText('#clickNumber', '0')
+      .click('.TestOnClickItem')
+      .assert.containsText('#clickNumber', '1');
   },
 };
