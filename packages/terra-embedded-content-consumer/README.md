@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-embedded-content-consumer.svg)](https://www.npmjs.org/package/terra-embedded-content-consumer)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Embedded Content Consumer is the application component which is embedding content within it.
+The Embedded Content Consumer is the application component which is embedding web content within it.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-embedded-content-consumer/docs)
