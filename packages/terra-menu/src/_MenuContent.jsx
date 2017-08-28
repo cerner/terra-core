@@ -62,7 +62,7 @@ class MenuContent extends React.Component {
     return { isSelectableMenu: this.isSelectable() };
   }
 
-  onKeyDownBackButton() {
+  onKeyDownBackButton(event) {
     if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
       this.props.onRequestBack();
     }
