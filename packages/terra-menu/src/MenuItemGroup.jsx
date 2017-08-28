@@ -5,12 +5,12 @@ import 'terra-base/lib/baseStyles';
 
 const propTypes = {
   /**
-   * Menu.Items to be grouped together
+   * Menu.Items to be grouped together.
    */
   children: PropTypes.node.isRequired,
 
   /**
-   * Callback function called when selected index changes
+   * Callback function called when selected index changes.
    */
   onChange: PropTypes.func,
 };

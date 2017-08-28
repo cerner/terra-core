@@ -17,7 +17,7 @@ const contextTypes = {
 
 const propTypes = {
   /**
-   * Sets the item's text
+   * Sets the item's text.
    */
   text: PropTypes.string,
 
@@ -27,7 +27,7 @@ const propTypes = {
   isSelected: PropTypes.bool,
 
   /**
-   * Indicates if the item should be selectable
+   * Indicates if the item should be selectable.
   */
   isSelectable: PropTypes.bool,
 
@@ -42,7 +42,7 @@ const propTypes = {
   onClick: PropTypes.func,
 
   /**
-   * Callback function for when selection state changes on a selectable item
+   * Callback function for when selection state changes on a selectable item.
    */
   onChange: PropTypes.func,
 };

@@ -14,27 +14,27 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Title the should be displayed in header
+   * Title the should be displayed in header.
    */
   title: PropTypes.string,
   /**
-   * Callback function for when back button is clicked
+   * Callback function for when back button is clicked.
    */
   onRequestBack: PropTypes.func,
   /**
-   * Callback function for when close button is clicked
+   * Callback function for when close button is clicked.
    */
   onRequestClose: PropTypes.func,
   /**
-   * Callback function that takes the content to be displayed next and is called when an item with nested content is clicked
+   * Callback function that takes the content to be displayed next and is called when an item with nested content is clicked.
    */
   onRequestNext: PropTypes.func.isRequired,
   /**
-   * Menu Items/Menu Groups/Menu Dividers to be displayed
+   * Menu Items/Menu Groups/Menu Dividers to be displayed.
    */
   children: PropTypes.node.isRequired,
   /**
-   * Index within the Menu Stack
+   * Index within the Menu Stack.
    */
   index: PropTypes.number.isRequired,
 };
