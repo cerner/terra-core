@@ -5,10 +5,13 @@ import EmbeddedContentConsumer from '../../../lib/EmbeddedContentConsumer';
 
 Consumer.init();
 
+const options = { resizeConfig: { fixedHeight: '100%', fixedWidth: '100%' } };
+
 const fillConsumer = () => (
   <EmbeddedContentConsumer
-    src="#/tests/embedded-content-consumer-tests/basic-provider"
-    fill
+    src="#/tests/embedded-content-consumer-tests/fill-provider"
+    options={options}
+    className="embedded-content-fill"
   />
 );
 

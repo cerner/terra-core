@@ -18,9 +18,8 @@ import EmbeddedContentConsumer from 'terra-embedded-content-consumer';
   src="https://google.com"
   onLaunch={() => { console.log('launched'); }}
   onAuthorize={() => { console.log('Authorized'); }}
-  options={{ secret: 'SecretKey' }}
+  options={{ secret: 'SecretKey', resizeConfig: { scrolling: true }}}
   eventHandlers=[{ key: 'customEvent', handler: () => { console.log('Custom event invoked.'); } }]
-  fill
 />
 ```
 

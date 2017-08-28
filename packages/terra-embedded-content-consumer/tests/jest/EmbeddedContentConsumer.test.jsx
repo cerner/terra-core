@@ -12,20 +12,9 @@ it('should render the embedded content consumer container', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render the embedded content consumer to fill its parent', () => {
-  const embeddedContentConsumer = (<EmbeddedContentConsumer
-    src="https://www.google.com/"
-    fill
-  />);
-
-  const wrapper = shallow(embeddedContentConsumer);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('should render the embedded content consumer with custom class names', () => {
   const embeddedContentConsumer = (<EmbeddedContentConsumer
     src="https://www.google.com/"
-    fill
     className="container"
   />);
 
@@ -35,9 +24,10 @@ it('should render the embedded content consumer with custom class names', () => 
 
 it('should validate the inputs', () => {
   const src = 'https://www.google.com/';
-  const onLaunch = () => { console.log('launched'); };
-  const onAuthorize = () => { console.log('authorized'); };
-  const options = { secret: 'SecretKey' };
+  const onLaunch = () => {};
+  const onAuthorize = () => {};
+  const resizeConfig = { scrolling: false, fixedHeight: '100%', fixedWidth: '100%' };
+  const options = { secret: 'SecretKey', resizeConfig };
   const customEvents = [{ key: 'eventKey', handler: () => {} }];
 
   const embeddedContentConsumer = (<EmbeddedContentConsumer
@@ -46,7 +36,6 @@ it('should validate the inputs', () => {
     onAuthorize={onAuthorize}
     options={options}
     eventHandlers={customEvents}
-    fill
   />);
 
   Consumer.init();
@@ -56,5 +45,6 @@ it('should validate the inputs', () => {
   expect(wrapper.props().onLaunch).toBe(onLaunch);
   expect(wrapper.props().onAuthorize).toBe(onAuthorize);
   expect(wrapper.props().options).toBe(options);
+  expect(wrapper.props().options.resizeConfig).toBe(resizeConfig);
   expect(wrapper.props().eventHandlers).toBe(customEvents);
 });

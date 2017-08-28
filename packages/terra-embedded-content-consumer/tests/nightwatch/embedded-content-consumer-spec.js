@@ -31,7 +31,7 @@ module.exports = {
 
   'Displays a provider embedded in the consumer expanded to fill the parent.': (browser) => {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/fill-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/basic-provider';
+    const providerSrc = '#/tests/embedded-content-consumer-tests/fill-provider';
 
     browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
     // Wait for the consumer to load the provider.

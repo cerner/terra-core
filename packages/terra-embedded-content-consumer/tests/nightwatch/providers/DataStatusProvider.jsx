@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Provider } from 'xfc';
-import styles from './Provider.scss';
+import './Provider.scss';
 
 class DataStatusProvider extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class DataStatusProvider extends React.Component {
 
   render() {
     return (
-      <div className={[styles['embedded-content']]}>
+      <div>
         <title>Embedded Application Lifecycle</title>
         <meta charSet="utf-8" />
         <div>

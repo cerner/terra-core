@@ -1,31 +1,30 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Provider } from 'xfc';
 import './Provider.scss';
 
-class CustomEventProvider extends React.Component {
+class FillProvider extends React.Component {
   componentDidMount() {
-    document.body.classList.toggle('embedded-content-body');
+    document.body.classList.toggle('embedded-content-body-fill');
     if (!window.location.origin) {
       const port = (window.location.port ? `:${window.location.port}` : '');
       window.location.origin = `${window.location.protocol}//${window.location.hostname}${port}`;
     }
     Provider.init({ acls: [window.location.origin] });
-    Provider.trigger('EventA');
   }
 
   render() {
     return (
       <div>
-        <title>Custom Event Provider</title>
+        <title>Fill Content</title>
         <meta charSet="utf-8" />
         <div>
-          <h1>Custom Event</h1>
-          <p>A custom event can be registered with the consumer and intiated by the provider.</p>
-          <p>After a one second delay the provider sends the message and consumer handles the message by adding a border.</p>
+          <h1>Fill Content</h1>
+          <p>This page simulates the situation where the embedded content consumer expands into the parent.</p>
         </div>
       </div>
     );
   }
 }
 
-export default CustomEventProvider;
+export default FillProvider;

@@ -17,6 +17,7 @@ import BasicProvider from './providers/BasicProvider';
 import CustomEventProvider from './providers/CustomEventProvider';
 import CustomEventsProvider from './providers/CustomEventsProvider';
 import DataStatusProvider from './providers/DataStatusProvider';
+import FillProvider from './providers/FillProvider';
 import OnReadyProvider from './providers/OnReadyProvider';
 
 const routes = (
@@ -31,6 +32,7 @@ const routes = (
     <Route path="/tests/embedded-content-consumer-tests/data-status-consumer" component={DataStatusConsumer} />
     <Route path="/tests/embedded-content-consumer-tests/data-status-provider" component={DataStatusProvider} />
     <Route path="/tests/embedded-content-consumer-tests/fill-consumer" component={FillConsumer} />
+    <Route path="/tests/embedded-content-consumer-tests/fill-provider" component={FillProvider} />
     <Route path="/tests/embedded-content-consumer-tests/on-ready-consumer" component={OnReadyConsumer} />
     <Route path="/tests/embedded-content-consumer-tests/on-ready-provider" component={OnReadyProvider} />
   </div>
