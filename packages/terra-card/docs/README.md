@@ -20,11 +20,11 @@ import Card from 'terra-card';
 
 // Or we can selectively add padding to child elements
 <Card>
-	<Card.Body hasPaddingVertical>
+	<Card.Body>
 		...
 	</Card.Body>
 	...
-	<Card.Body hasPaddingVertical>
+	<Card.Body>
 		...
 	</Card.Body>
 </Card>
