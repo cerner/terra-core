@@ -18,8 +18,6 @@ const ModalManagerExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ModalManagerSrc} />
-    <br />
-    <h2>Demo</h2>
     <div style={{ height: '150px' }}>
       <ModalManagerDemo />
     </div>
