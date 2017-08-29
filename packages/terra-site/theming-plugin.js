@@ -25,7 +25,7 @@ module.exports = postcss.plugin('theming-plugin', () => {
 
     root.walkDecls((decl) => {
       // All of Terra's themed variables are in the syntax of var(<variable>, <value>);
-      const matches = decl.value.match(/^var\(\s*(.*),\s*(.*)\)/);
+      const matches = decl.value.match(/^var\(\s*(--terra.*),\s*(.*)\)/);
 
       if (matches) {
         variables[component] = variables[component] || {};

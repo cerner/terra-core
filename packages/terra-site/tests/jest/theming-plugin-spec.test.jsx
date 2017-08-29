@@ -77,4 +77,35 @@ describe('theming-plugin', () => {
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
+
+  describe('when the SCSS contains non-Terra themeable variables', () => {
+    it('should only include terra variables on the final output', () => {
+      mockStyles = `
+        :local {
+          .testing-component {
+            font-size: var(--terra-font-size, 1.5em);
+            color: var(--terra-color, #000);
+            background-color: var(--terra-background-color, #000);
+            font-weight: var(--cerner-custom-font-weight, 'bold');
+            border: var(--cerner-custom-border, '#000 solid 1px');
+            margin: 0.357em;
+          }
+        }
+      `;
+
+      const rootNode = postcss.parse(mockStyles);
+      const expectedHash = {
+        TestingComponent: {
+          '--terra-font-size': '1.5em',
+          '--terra-color': '#000',
+          '--terra-background-color': '#000',
+        },
+      };
+      rootNode.source = { input: { file: 'TestingComponent.scss' } };
+
+      expect(testingFunction(rootNode)).toEqual(JSON.stringify(expectedHash));
+      expect(outputtedFileName).toEqual('themeable-variables.json');
+      expect(outputtedEncoding).toEqual('utf8');
+    });
+  });
 });
