@@ -61,7 +61,7 @@ describe('theming-plugin', () => {
     });
   });
 
-  describe('when the SCSS comes from a file', () => {
+  describe('when the SCSS does not come from a file', () => {
     it('should find all of the appropriate css', () => {
       const rootNode = postcss.parse(mockStyles);
       const expectedHash = {
