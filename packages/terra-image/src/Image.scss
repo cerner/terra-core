@@ -1,7 +1,10 @@
 /* stylelint-disable selector-class-pattern  */
 :local {
   .image {
+    border: 0;
     display: block;
+    margin: 0;
+    padding: 0;
     vertical-align: middle;
   }
 
