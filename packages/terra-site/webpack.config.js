@@ -53,7 +53,7 @@ module.exports = {
                     'iOS >= 8',
                   ],
                 }),
-                CustomProperties({ preserve: true }),
+                CustomProperties({ preserve: true, warnings: false }),
                 ThemingPlugin,
                 rtl(),
               ];
