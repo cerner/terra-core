@@ -5,7 +5,7 @@ import Card from './Card';
 
 const template = {
   'grid-template-columns': '1fr 1fr 1fr',
-  'grid-template-rows': 'auto',
+  'grid-template-rows': 'auto auto',
   'grid-gap': '10px',
 };
 
