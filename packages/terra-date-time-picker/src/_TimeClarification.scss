@@ -1,0 +1,53 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .time-clarification-header {
+    background-color: #f4f4f4;
+    border-bottom-color: #dedfe0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 3.587rem;
+    padding: 0.714rem;
+    width: 100%;
+  }
+
+  .time-clarification-title {
+    font-size: 1.285rem;
+    font-weight: normal;
+    line-height: 1.75;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+  }
+
+  .offset-button {
+    background-color: #fff;
+    height: 1.857em;
+    margin-left: 0.429em;
+
+    &:focus {
+      border-color: #26a2e5;
+      outline: none;
+    }
+  }
+
+  .offset-button-hidden {
+    display: none;
+  }
+
+  .time-clarification-body {
+    color: #64696c;
+    padding: 0.25rem 1rem;
+  }
+
+  .time-clarification-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .time-clarification-button {
+      margin: 0.5rem;
+    }
+  }
+}

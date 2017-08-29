@@ -15,6 +15,7 @@ import ButtonGroupExamples from './examples/button-group/Index';
 import CardExamples from './examples/card/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
+import DateTimePickerExamples from './examples/date-time-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
 import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
@@ -52,6 +53,7 @@ import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGro
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
+import DateTimePickerTestRoutes from 'terra-date-time-picker/tests/nightwatch/DateTimePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
@@ -103,6 +105,7 @@ ReactDOM.render((
       <Route path="card" component={CardExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
+      <Route path="date-time-picker" component={DateTimePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
@@ -139,6 +142,7 @@ ReactDOM.render((
     {ButtonGroupTestRoutes}
     {CardTestRoutes}
     {DatePickerTestRoutes}
+    {DateTimePickerTestRoutes}
     {DemographicsBannerTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}

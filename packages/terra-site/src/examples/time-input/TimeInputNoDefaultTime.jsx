@@ -1,5 +1,5 @@
 import React from 'react';
-import TimeInput from 'terra-time-input';
+import TimeInput from 'terra-time-input/src/TimeInput';
 
 class timeInput extends React.Component {
   constructor(props) {

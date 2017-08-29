@@ -18,6 +18,10 @@ const propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
+   * A callback function to execute when either the hour or minute loses focus.
+   */
+  onBlur: PropTypes.func,
+  /**
    * A callback function to execute when either the hour or minute has been changed. The first parameter is the event. The second parameter is the changed time value.
    */
   onChange: PropTypes.func,
@@ -30,6 +34,7 @@ const propTypes = {
 const defaultProps = {
   inputAttributes: undefined,
   name: null,
+  onBlur: null,
   onChange: null,
   value: undefined,
 };
@@ -53,9 +58,8 @@ class TimeInput extends React.Component {
     super(props);
 
     this.state = {
-      timeFormat: 'hh:mm',
-      hour: TimeUtil.parseHourFromTime(props.value),
-      minute: TimeUtil.parseMinuteFromTime(props.value),
+      hour: TimeUtil.splitHour(props.value),
+      minute: TimeUtil.splitMinute(props.value),
       isFocused: false,
     };
 
@@ -66,6 +70,19 @@ class TimeInput extends React.Component {
     this.handleFocus = this.handleFocus.bind(this);
     this.handleHourBlur = this.handleHourBlur.bind(this);
     this.handleMinuteBlur = this.handleMinuteBlur.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // const time = this.state.hour.concat(':', this.state.time);
+
+    if (nextProps.value === this.props.value) {
+      return;
+    }
+
+    this.setState({
+      hour: TimeUtil.splitHour(nextProps.value),
+      minute: TimeUtil.splitMinute(nextProps.value),
+    });
   }
 
   handleFocus() {
@@ -87,9 +104,12 @@ class TimeInput extends React.Component {
     // Prepend a 0 to the value when losing focus and the value is single digit.
     if (stateValue.length === 1) {
       stateValue = '0'.concat(stateValue);
+      this.handleValueChange(event, type, stateValue);
     }
 
-    this.handleValueChange(type, stateValue);
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
+    }
   }
 
   handleHourChange(event) {
@@ -102,6 +122,7 @@ class TimeInput extends React.Component {
 
   handleChange(event, type) {
     // Ignore the input and don't update the state if the entered value is a non numeric character.
+
     if (event.target.value.length > 0) {
       const isNumeric = /^\d+$/.test(event.target.value);
 
@@ -129,7 +150,7 @@ class TimeInput extends React.Component {
       }
     }
 
-    this.handleValueChange(type, inputValue);
+    this.handleValueChange(event, type, inputValue);
 
     // // Move focus to the minute input if the hour input has a valid and complete entry.
     if (type === inputType.HOUR && inputValue.length === 2) {
@@ -209,17 +230,19 @@ class TimeInput extends React.Component {
     }
 
     if (updateStateValue) {
-      this.handleValueChange(type, stateValue);
+      this.handleValueChange(event, type, stateValue);
     }
   }
 
-  handleValueChange(type, timeValue) {
+  handleValueChange(event, type, timeValue) {
     if (type === inputType.HOUR) {
       this.setState({ hour: timeValue });
     } else {
       this.setState({ minute: timeValue });
     }
 
+    // DatePicker triggers onChange only when a valid date is entered/selected.
+    // To be consistent, should TimeInput only trigger onChange when it has a valid hour and minute (i.e.; changedValue.length === 5)?
     if (this.props.onChange) {
       let changedValue;
       if (type === inputType.HOUR) {
@@ -235,6 +258,7 @@ class TimeInput extends React.Component {
   render() {
     const {
       inputAttributes,
+      onBlur,
       onChange,
       name,
       value,
@@ -269,7 +293,7 @@ class TimeInput extends React.Component {
           type="text"
           value={this.state.hour}
           name={'terra-time-hour-'.concat(name)}
-          placeholder={TimeUtil.splitHour(this.state.timeFormat)}
+          placeholder="hh"
           maxLength="2"
           onChange={this.handleHourChange}
           onKeyDown={this.handleHourInputKeyDown}
@@ -285,7 +309,7 @@ class TimeInput extends React.Component {
           type="text"
           value={this.state.minute}
           name={'terra-time-minute-'.concat(name)}
-          placeholder={TimeUtil.splitMinute(this.state.timeFormat)}
+          placeholder="mm"
           maxLength="2"
           onChange={this.handleMinuteChange}
           onKeyDown={this.handleMinuteInputKeyDown}

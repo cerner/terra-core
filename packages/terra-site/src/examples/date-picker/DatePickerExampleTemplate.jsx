@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from 'terra-date-picker';
+import DatePicker from 'terra-date-picker/src/DatePicker';
 
 
 const propTypes = {

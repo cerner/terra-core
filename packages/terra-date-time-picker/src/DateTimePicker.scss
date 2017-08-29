@@ -1,0 +1,11 @@
+/* stylelint-disable selector-class-pattern */
+:local {
+  .date-time-picker {
+    display: inline-flex;
+
+    .time-facade {
+      display: inline-flex;
+      margin-left: 0.429em;
+    }
+  }
+}

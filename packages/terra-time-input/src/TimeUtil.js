@@ -1,32 +1,16 @@
-import moment from 'moment';
-
 class TimeUtil {
-  static formattedTime(time, format) {
-    if (time && format) {
-      const momentTime = moment(time, format, true);
-      if (momentTime.isValid()) {
-        return momentTime.format(format);
-      }
-    }
-
-    return '';
-  }
-
-  static parseHourFromTime(time) {
-    const formattedTime = TimeUtil.formattedTime(time, 'HH:mm');
-    return TimeUtil.splitHour(formattedTime);
-  }
-
-  static parseMinuteFromTime(time) {
-    const formattedTime = TimeUtil.formattedTime(time, 'HH:mm');
-    return TimeUtil.splitMinute(formattedTime);
-  }
-
   static splitHour(time) {
     if (typeof (time) === 'string') {
       const hourAndMinute = time.split(':');
 
-      return hourAndMinute.length > 0 ? hourAndMinute[0] : '';
+      if (hourAndMinute.length) {
+        const hour = Number(hourAndMinute[0]);
+        if (hour >= 0 && hour < 24) {
+          return hourAndMinute[0];
+        }
+      }
+
+      return '';
     }
 
     return '';
@@ -36,7 +20,14 @@ class TimeUtil {
     if (typeof (time) === 'string') {
       const hourAndMinute = time.split(':');
 
-      return hourAndMinute.length > 1 ? hourAndMinute[1] : '';
+      if (hourAndMinute.length > 1) {
+        const minute = Number(hourAndMinute[1]);
+        if (minute >= 0 && minute < 60) {
+          return hourAndMinute[1];
+        }
+      }
+
+      return '';
     }
 
     return '';

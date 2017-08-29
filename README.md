@@ -116,6 +116,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 
 - [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
 - [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker)
+- [terra-date-time-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-time-picker)
 - [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
 - [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)
 

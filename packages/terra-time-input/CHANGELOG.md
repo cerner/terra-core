@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added onBlur prop.
 
 1.5.0 - (August 15, 2017)
 ------------------

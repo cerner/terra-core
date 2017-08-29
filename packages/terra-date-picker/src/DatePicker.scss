@@ -1,20 +1,23 @@
 @import '~react-datepicker/dist/react-datepicker.min';
-/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern, selector-max-compound-selectors, max-nesting-depth */
 :local {
   .date-picker {
     display: inline-block;
-    min-width: 10.714em;
 
     .custom-input {
       display: inline-flex;
 
-      /* stylelint-disable selector-max-compound-selectors */
       .input {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
         margin-right: -0.071em;
         vertical-align: middle;
         width: 8em;
+
+        &:focus {
+          border-color: #26a2e5;
+          outline: none;
+        }
       }
 
       .button {
@@ -23,8 +26,13 @@
         margin-bottom: 0;
         margin-left: -0.071em;
         margin-top: 0;
+
+        &:focus {
+          border-color: #26a2e5;
+          outline: none;
+        }
       }
-      /* stylelint-enable selector-max-compound-selectors */
     }
   }
 }
+/* stylelint-enable */

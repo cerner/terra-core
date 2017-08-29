@@ -43,6 +43,7 @@
     "terra-card": "^0.x",
     "terra-content-container": "^1.4.0",
     "terra-date-picker": "^1.6.0",
+    "terra-date-time-picker": "^0.x",
     "terra-demographics-banner": "^1.5.0",
     "terra-form": "^1.4.0",
     "terra-grid": "^3.8.0",
