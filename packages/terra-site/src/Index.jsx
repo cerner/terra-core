@@ -37,6 +37,7 @@ import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TextExamples from './examples/text/Index';
+import ThemeProviderExamples from './examples/theme-provider/Index';
 import TimeInputExamples from './examples/time-input/Index';
 import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
@@ -82,6 +83,7 @@ import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelT
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
+import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
 import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
@@ -125,6 +127,7 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
+      <Route path="theme-provider" component={ThemeProviderExamples} />
       <Route path="time-input" component={TimeInputExamples} />
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
@@ -170,6 +173,7 @@ ReactDOM.render((
     {ToggleButtonTestRoutes}
     {HeadingTestRoutes}
     {TextTestRoutes}
+    {ThemeProviderTestRoutes}
     {SlideGroupTestRoutes}
     {ProfileImageTestRoutes}
   </Router>
