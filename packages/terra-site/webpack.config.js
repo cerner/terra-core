@@ -11,6 +11,7 @@ const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 const CustomProperties = require('postcss-custom-properties');
 const rtl = require('postcss-rtl');
+const ThemingPlugin = require('./theming-plugin');
 
 module.exports = {
   entry: {
@@ -53,6 +54,7 @@ module.exports = {
                   ],
                 }),
                 CustomProperties({ preserve: true }),
+                ThemingPlugin,
                 rtl(),
               ];
             },
