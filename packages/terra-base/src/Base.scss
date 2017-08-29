@@ -4,8 +4,8 @@ html {
   box-sizing: border-box;
   font-family: var(--terra-base-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
   font-size: var(--terra-base-font-size, 87.5%);
-  height: 100%;
-  margin: 0;
+  height: var(--terra-base-html-height, 100%);
+  margin: var(--terra-base-html-margin, 0);
   text-size-adjust: 100%;
 }
 
@@ -13,8 +13,9 @@ body {
   background-color: var(--terra-base-background-color, #fff);
   color: var(--terra-base-color, #1c1f21);
   font-size: 1rem;
-  line-height: 1;
-  margin: 0;
+  height: var(--terra-base-body-height, auto);
+  line-height: var(--terra-base-line-height, 1.4285714285714286);
+  margin: var(--terra-base-body-margin, 0);
 
   @media print {
     background-color: transparent !important;
@@ -26,30 +27,4 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-// Reset margins, paddings, borders.
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-img,
-dl,
-dt,
-dd,
-ol,
-ul,
-li {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-// Reset default list style.
-ol,
-ul {
-  list-style: none;
 }
