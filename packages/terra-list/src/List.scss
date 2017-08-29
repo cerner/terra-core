@@ -8,6 +8,11 @@
     padding: 0;
   }
 
+  .list-item {
+    margin: 0;
+    padding: 0;
+  }
+
   .divided > .list-item {
     border-top: var(--terra-list-divider-border, 1px solid #dedfe0);
 

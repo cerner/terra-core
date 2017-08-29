@@ -8,7 +8,12 @@
   }
 
   .site-nav {
+    line-height: 1;
     padding: 0.75rem 1.25rem;
+
+    li {
+      list-style: none;
+    }
 
     & > li {
       font-size: 1.25rem;
@@ -24,6 +29,7 @@
     background-color: #dce0e2;
     border-bottom: 1px solid #bcbfc0;
     font-size: 1.25rem;
+    line-height: 1;
     padding: 0.75rem 1.25rem;
 
     & > a {
@@ -53,6 +59,7 @@
     height: 100%;
     overflow: auto;
     padding: 1.25rem;
+    margin-bottom: 1.25rem;
     width: 100%;
   }
 
