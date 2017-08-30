@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated to OCS icons 1.3.1
 
 1.5.0 - (August 15, 2017)
 ------------------
