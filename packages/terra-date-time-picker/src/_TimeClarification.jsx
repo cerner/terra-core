@@ -102,8 +102,8 @@ class TimeClarification extends React.Component {
     }
 
     const offsetButtonClassNames = cx([
-      'offset-button',
-      { 'offset-button-hidden': this.props.isOffsetButtonHidden || !this.state.offsetDisplay },
+      'button-offset',
+      { 'button-offset-hidden': this.props.isOffsetButtonHidden || !this.state.offsetDisplay },
     ]);
 
     const intl = this.context.intl;
@@ -123,27 +123,27 @@ class TimeClarification extends React.Component {
           closeOnOutsideClick={false}
         >
           <div>
-            <header className={cx('time-clarification-header')}>
-              {<h1 className={cx(['time-clarification-title'])}>{title}</h1>}
+            <header className={cx('header')}>
+              {<h1 className={cx(['title'])}>{title}</h1>}
             </header>
             <br />
-            <div className={cx(['time-clarification-body'])}>
+            <div className={cx(['body'])}>
               <p>{message}</p>
             </div>
             <br />
             <br />
-            <div className={cx(['time-clarification-buttons'])}>
+            <div className={cx(['buttons'])}>
               <Button
                 onClick={this.handleDaylightSavingButtonClick}
                 variant="primary"
-                className={cx(['time-clarification-button-daylight'])}
+                className={cx(['button-daylight'])}
               >
                 {daylightSavingButtonLabel}
               </Button>
               <Button
                 onClick={this.handleStandardTimeButtonClick}
                 variant="primary"
-                className={cx(['time-clarification-button-standard'])}
+                className={cx(['button-standard'])}
               >
                 {standardTimeButtonLabel}
               </Button>

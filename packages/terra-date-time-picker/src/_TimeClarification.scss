@@ -1,6 +1,6 @@
-/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern, selector-max-compound-selectors, max-nesting-depth */
 :local {
-  .time-clarification-header {
+  .header {
     background-color: #f4f4f4;
     border-bottom-color: #dedfe0;
     border-bottom-style: solid;
@@ -10,7 +10,7 @@
     width: 100%;
   }
 
-  .time-clarification-title {
+  .title {
     font-size: 1.285rem;
     font-weight: normal;
     line-height: 1.75;
@@ -21,7 +21,23 @@
     word-wrap: normal;
   }
 
-  .offset-button {
+  .body {
+    color: #64696c;
+    padding: 0.25rem 0.714rem;
+  }
+
+  .buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .button-daylight,
+    .button-standard {
+      margin: 0.25rem;
+    }
+  }
+
+  .button-offset {
     background-color: #fff;
     height: 1.857em;
     margin-left: 0.429em;
@@ -32,23 +48,7 @@
     }
   }
 
-  .offset-button-hidden {
+  .button-offset-hidden {
     display: none;
-  }
-
-  .time-clarification-body {
-    color: #64696c;
-    padding: 0.25rem 1rem;
-  }
-
-  .time-clarification-buttons {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    .time-clarification-button-daylight,
-    .time-clarification-button-standard {
-      margin: 0.5rem;
-    }
-  }
+  }    
 }

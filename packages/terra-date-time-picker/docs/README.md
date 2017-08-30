@@ -22,11 +22,8 @@ import DateTimePicker from 'terra-date-time-picker';
 //Renders a date picker
 <Base locale='en'>
   <DateTimePicker
-    minDateTime={'2017-04-01T00:00:00'}
-    maxDateTime={'2017-04-30T00:00:00'}
-    excludeDates={['2017-04-10', '2017-04-20']}
     name="admission-date"
-    value={'2017-04-15T10:30:00'}
+    value={'2017-08-15T10:30'}
   />
 </Base>
 ```
