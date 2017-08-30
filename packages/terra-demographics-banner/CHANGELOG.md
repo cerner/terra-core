@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added default line-height style to demographics banner
+
 ### Changed
 * Update nightwatch tests and test scripts.
 

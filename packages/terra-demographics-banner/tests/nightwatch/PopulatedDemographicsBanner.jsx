@@ -11,7 +11,7 @@ export default () =>
   <Base locale={locale}>
     <DemographicsBanner
       id="populated-demographics"
-      applicationContent={<p>St. Johns West Wing Room Cardiac Unit 253</p>}
+      applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
       age="25 Years"
       dateOfBirth="May 9, 1993"
       gestationalAge="May 11, 1993"

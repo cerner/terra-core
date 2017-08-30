@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added styles to remove margin and padding from default list-item
+
 ### Changed
 * Update nightwatch tests and test scripts.
 

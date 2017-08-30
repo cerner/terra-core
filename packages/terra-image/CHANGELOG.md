@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added default border, margin, and padding reset to img
+
 ### Changed
 * Update nightwatch tests and test scripts.
 
