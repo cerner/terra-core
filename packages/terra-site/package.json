@@ -24,10 +24,11 @@
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:spec",
-    "test:spec": "echo \"Warning: no test written\" && exit 0"
+    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   },
   "dependencies": {
     "moment": "^2.17.1",
+    "postcss": "^6.0.9",
     "prop-types": "^15.5.8",
     "react-intl": "^2.3.0",
     "react-redux": "^5.0.4",
