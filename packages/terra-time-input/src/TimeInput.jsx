@@ -129,12 +129,12 @@ class TimeInput extends React.Component {
       }
     }
 
-    this.handleValueChange(type, inputValue);
-
     // // Move focus to the minute input if the hour input has a valid and complete entry.
     if (type === inputType.HOUR && inputValue.length === 2) {
       this.minuteInput.textInput.focus();
     }
+
+    this.handleValueChange(type, inputValue);
   }
 
   handleHourInputKeyDown(event) {
