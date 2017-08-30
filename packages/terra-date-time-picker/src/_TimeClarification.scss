@@ -46,7 +46,8 @@
     display: flex;
     justify-content: center;
 
-    .time-clarification-button {
+    .time-clarification-button-daylight,
+    .time-clarification-button-standard {
       margin: 0.5rem;
     }
   }

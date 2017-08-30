@@ -1,10 +1,9 @@
 import React from 'react';
-import moment from 'moment';
 import DateTimePickerExampleTemplate from './DateTimePickerExampleTemplate';
 
 const DateTimePickerExample = () => (
   <DateTimePickerExampleTemplate
-    value={moment().format()}
+    value={'2017-08-08T10:30:00'}
   />
 );
 

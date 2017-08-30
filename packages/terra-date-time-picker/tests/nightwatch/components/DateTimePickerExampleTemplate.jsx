@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Base from 'terra-base';
 import DateTimePicker from '../../../lib/DateTimePicker';
-
 
 const propTypes = {
   /**
@@ -29,11 +29,13 @@ class DatePickerExample extends React.Component {
     return (
       <div>
         <p>Selected ISO Date Time: {this.state.dateTime}</p>
-        <DateTimePicker
-          name="date-time-picker-example"
-          onChange={this.handleDateTimeChange}
-          {...this.props}
-        />
+        <Base locale={'en-US'}>
+          <DateTimePicker
+            name="date-time-picker-example"
+            onChange={this.handleDateTimeChange}
+            {...this.props}
+          />
+        </Base>
       </div>
     );
   }

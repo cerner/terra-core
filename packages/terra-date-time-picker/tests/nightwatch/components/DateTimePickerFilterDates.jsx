@@ -7,7 +7,10 @@ const isWeekday = (date) => {
 };
 
 const DateTimePickerExample = () => (
-  <DateTimePickerExampleTemplate filterDate={isWeekday} />
+  <DateTimePickerExampleTemplate
+    filterDate={isWeekday}
+    value={'2017-08-15'}
+  />
 );
 
 export default DateTimePickerExample;

@@ -1,10 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 import DateTimePickerExampleTemplate from './DateTimePickerExampleTemplate';
 
 const DateTimePickerExample = () => (
   <DateTimePickerExampleTemplate
-    excludeDates={[moment().subtract(1, 'days').format(), moment().add(1, 'days').format()]}
+    excludeDates={['2017-08-14']}
+    value={'2017-08-15'}
   />
 );
 

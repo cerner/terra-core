@@ -1,6 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import Base from 'terra-base';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import ModalManager, { reducers as modalManagerReducers } from 'terra-modal-manager';
 import ModalContainer from './DateTimePickerModalContainer';
@@ -12,11 +14,13 @@ const store = createStore(
 );
 
 const ModalManagerDemo = () => (
-  <Provider store={store}>
-    <ModalManager>
-      <ModalContainer />
-    </ModalManager>
-  </Provider>
+  <Base locale={'en-US'}>
+    <Provider store={store}>
+      <ModalManager>
+        <ModalContainer />
+      </ModalManager>
+    </Provider>
+  </Base>
 );
 
 export default ModalManagerDemo;

@@ -1,0 +1,88 @@
+exports[`test should render a date time picker with a default date and time 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  utcOffset={0}
+  value="2017-04-01T10:30" />
+`;
+
+exports[`test should render a date time picker with disabled dates 1`] = `
+<DateTimePicker
+  excludeDates={
+    Array [
+      "2017-04-01",
+    ]
+  }
+  name="date-time-input"
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with filtered dates 1`] = `
+<DateTimePicker
+  filterDate={[Function]}
+  name="date-time-input"
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with included dates 1`] = `
+<DateTimePicker
+  includeDates={
+    Array [
+      "2017-04-01",
+    ]
+  }
+  name="date-time-input"
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with min and max dates 1`] = `
+<DateTimePicker
+  maxDateTime="2017-04-01"
+  minDateTime="2017-04-10"
+  name="date-time-input"
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with onChange 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  onChange={[Function]}
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with onChangeRaw 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  onChangeRaw={[Function]}
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with releaseFocus 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  releaseFocus={[Function]}
+  utcOffset={0} />
+`;
+
+exports[`test should render a date time picker with requestFocus 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  requestFocus={[Function]}
+  utcOffset={0} />
+`;
+
+exports[`test should render a default date time picker 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  utcOffset={0} />
+`;
+
+exports[`test should render a default date time picker with custom input attributes 1`] = `
+<DateTimePicker
+  inputAttributes={
+    Object {
+      "id": "terra-date-time-input",
+    }
+  }
+  name="date-time-input"
+  utcOffset={0} />
+`;

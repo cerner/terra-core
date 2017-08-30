@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import DatePicker from 'terra-date-picker/src/DatePicker';
-import TimeInput from 'terra-time-input/src/TimeInput';
+import DatePicker from 'terra-date-picker';
+import TimeInput from 'terra-time-input';
 import DateUtil from 'terra-date-picker/lib/DateUtil';
 import styles from './DateTimePicker.scss';
 import DateTimeUtil from './DateTimeUtil';
@@ -312,7 +312,7 @@ class DateTimePicker extends React.Component {
         <input
           // Create a hidden input for storing the name and value attributes to use when submitting the form.
           // The data stored in the value attribute will be the visible date in the date input but in ISO 8601 format.
-          data-class="hidden-date-time-input"
+          data-terra-date-time-input-hidden
           type="hidden"
           name={name}
           value={dateTime && dateTime.isValid() ? dateTime.format() : ''}
@@ -331,7 +331,7 @@ class DateTimePicker extends React.Component {
           maxDate={maxDateTime}
           minDate={minDateTime}
           selectedDate={dateValue}
-          name="hidden-date-input"
+          name="input"
           releaseFocus={releaseFocus}
           requestFocus={requestFocus}
         />
@@ -341,7 +341,7 @@ class DateTimePicker extends React.Component {
             onBlur={this.handleOnTimeBlur}
             onChange={this.handleTimeChange}
             inputAttributes={inputAttributes}
-            name="hidden-time-input"
+            name="input"
             value={this.timeValue}
           />
 
@@ -351,13 +351,6 @@ class DateTimePicker extends React.Component {
     );
   }
 }
-
-// <TimeClarification
-//  isOpen={this.state.isTimeClarificationOpen}
-//  isOffsetButtonHidden={!this.state.isAmbiguousTime}
-//  onDaylightSavingButtonClick={this.handleDaylightSavingButtonClick}
-//  onStandardTimeButtonClick={this.handleStandardTimeButtonClick}
-// />
 
 DateTimePicker.propTypes = propTypes;
 DateTimePicker.defaultProps = defaultProps;

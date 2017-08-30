@@ -103,12 +103,7 @@ class TimeClarification extends React.Component {
 
     const offsetButtonClassNames = cx([
       'offset-button',
-      // { 'offset-button-hidden': this.props.isOffsetButtonHidden },
       { 'offset-button-hidden': this.props.isOffsetButtonHidden || !this.state.offsetDisplay },
-    ]);
-
-    const timeClarificationButtons = cx([
-      'time-clarification-buttons',
     ]);
 
     const intl = this.context.intl;
@@ -120,6 +115,7 @@ class TimeClarification extends React.Component {
     return (
       <div>
         <Modal
+          classNameModal="time-clarification"
           ariaLabel="Time Clarification"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
@@ -136,18 +132,18 @@ class TimeClarification extends React.Component {
             </div>
             <br />
             <br />
-            <div className={timeClarificationButtons}>
+            <div className={cx(['time-clarification-buttons'])}>
               <Button
                 onClick={this.handleDaylightSavingButtonClick}
                 variant="primary"
-                className={cx(['time-clarification-button'])}
+                className={cx(['time-clarification-button-daylight'])}
               >
                 {daylightSavingButtonLabel}
               </Button>
               <Button
                 onClick={this.handleStandardTimeButtonClick}
                 variant="primary"
-                className={cx(['time-clarification-button'])}
+                className={cx(['time-clarification-button-standard'])}
               >
                 {standardTimeButtonLabel}
               </Button>
