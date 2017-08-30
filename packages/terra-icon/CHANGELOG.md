@@ -3,8 +3,20 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added compose icon.
+* Added microphone icon.
+* Added microphoneDisabled icon.
+* Added phoneDown icon.
+* Added question icon.
+* Added swap icon.
+* Added unexpected icon.
+* Added unread icon.
+* Added unspecified icon.
+* Added videoCameraDisabled icon.
+
 ### Changed
-* Updated to OCS icons 1.3.1
+* Changed path data for unavailable icon.
 
 1.5.0 - (August 15, 2017)
 ------------------
