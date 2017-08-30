@@ -97,6 +97,7 @@ const Control = ({
 
   const controlInputClasses = cx([
     'input',
+    (customProps.required ? 'required' : ''),
     inputAttrs.className,
   ]);
 

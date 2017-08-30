@@ -5,21 +5,21 @@
   /* stylelint-disable selector-class-pattern */
 
   .input {
-    border: var(--terra-input-border, #dedfe0 solid);
-    border-width: var(--terra-input-border-width, 1px);
-    border-radius: 3px;
-    font-size: var(--terra-input-font-size,1em);
-    font-family: var(--terra-input-font-family,initial);
-    font-weight: var(--terra-input-font-weight,initial);
-    height: var(--terra-input-height, 1.857em);
-    opacity: var(--terra-input-opacity, 1);
-    color: var(--terra-input-color-text, initial);
-    width: 100%;
-    padding: var(--terra-input-padding, 0.178em);
-    line-height: var(--terra-input-line-height, initial);
     background-color: var(--terra-input-background-color, initial);
-
-
+    border: var(--terra-input-border, #dedfe0 solid);
+    border-radius: 3px;
+    border-width: var(--terra-input-border-width, 1px);
+    color: var(--terra-input-color-text, initial);
+    font-family: var(--terra-input-font-family, initial);
+    font-size: var(--terra-input-font-size, 1em);
+    font-weight: var(--terra-input-font-weight, initial);
+    height: var(--terra-input-height, 1.857em);
+    line-height: var(--terra-input-line-height, initial);
+    opacity: var(--terra-input-opacity, 1);
+    outline: var(--terra-input-outline, initial);
+    padding: var(--terra-input-padding, 0.178em);
+    width: 100%;
+    
     &[required] {
       box-shadow: unset;
       outline: none;

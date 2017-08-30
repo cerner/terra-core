@@ -91,6 +91,7 @@ class ControlExamples extends React.Component {
               value="javascript"
               labelText="JavaScript"
               isInline
+              required
               checked={this.state.language === 'javascript'}
               onChange={this.handleLanguageChange}
             />

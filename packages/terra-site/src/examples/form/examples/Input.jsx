@@ -16,7 +16,13 @@ class InputExamples extends React.Component {
     return (
       <div>
         <form>
+          <h2> Active Input</h2>
           <Input name="foo" defaultValue="bar" onChange={this.handleChange} />
+        </form>
+        <br />
+        <form>
+          <h2> Disabled Input</h2>
+          <Input name="disabledfoo" defaultValue="disabled bar" disabled />
         </form>
         <br />
         <p>Input Provided: {this.state.input}</p>
