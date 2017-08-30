@@ -11,6 +11,7 @@ const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 const CustomProperties = require('postcss-custom-properties');
 const rtl = require('postcss-rtl');
+const ThemingPlugin = require('./theming-plugin');
 
 module.exports = {
   entry: {
@@ -55,6 +56,7 @@ module.exports = {
                 // Disable warnings for custom property not scoped to the top-level :root
                 // https://github.com/MoOx/postcss-cssnext/issues/186.
                 CustomProperties({ preserve: true, warnings: false }),
+                ThemingPlugin,
                 rtl(),
               ];
             },

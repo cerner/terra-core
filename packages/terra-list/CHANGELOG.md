@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added styles to remove margin and padding from default list-item
 
 1.5.0 - (August 15, 2017)
 ------------------
