@@ -5,12 +5,12 @@ import { Route } from 'react-router';
 import SignatureTests from './SignatureTests';
 
 // Test Cases
-import DefaultSignature from './DefaultSignature';
+import SignatureExample from './SignatureExample';
 
 const routes = (
   <div>
     <Route path="/tests/signature-tests" component={SignatureTests} />
-    <Route path="/tests/signature-tests/default" component={DefaultSignature} />
+    <Route path="/tests/signature-tests/default" component={SignatureExample} />
   </div>
 );
 

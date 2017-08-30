@@ -14,6 +14,7 @@ module.exports = {
   'Displays a default signature': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/signature-tests/default`)
+      .waitForElementPresent('.terra-Signature', 1000)
       .assert.elementPresent('.terra-Signature');
   },
 };

@@ -1,7 +1,8 @@
-@import '~terra-mixins';
-@import './variables';
-@import './mixins';
-
 .terra-Signature {
-
+  background-color: var(--terra-signature-background-color, #fff);
+  color: var(--terra-signature-line-color, #000);
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
+

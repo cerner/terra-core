@@ -1,6 +1,8 @@
 # Terra Signature
 
-{insert description}
+The terra-signature component provides users a way to define a signature with a series of line segments.
+The component can be define the line width, line color and optionally display a signature if the line segments have 
+already been recorded.
 
 ## Getting Started
 

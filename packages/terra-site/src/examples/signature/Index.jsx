@@ -10,12 +10,14 @@ import { version } from 'terra-signature/package.json';
 import SignatureSrc from '!raw-loader!terra-signature/src/Signature';
 
 // Example Files
+import SignatureExample from './SignatureExample';
 
 const SignatureExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={SignatureSrc} />
+    <PropsTable id="props-signature" src={SignatureSrc} componentName="Signature" />
+    <SignatureExample />
   </div>
 );
 
