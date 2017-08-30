@@ -83,11 +83,7 @@ class EmbeddedContentConsumer extends React.Component {
   }
 
   addEventListeners(customEvents) {
-    if (customEvents) {
-      customEvents.forEach((event) => {
-        this.addEventListener(event.key, event.handler);
-      });
-    }
+    (customEvents || []).forEach(e => this.addEventListener(e.key, e.handler));    
   }
 
   render() {
