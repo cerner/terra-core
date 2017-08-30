@@ -4,7 +4,6 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
-| moment | ^2.17.1 | -- | Parse, validate, manipulate, and display dates |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-base | ^1.4.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-form | ^1.4.0 | ^15.4.2 | Components for building forms |

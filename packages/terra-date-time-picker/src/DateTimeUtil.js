@@ -96,7 +96,6 @@ class DateTimeUtil {
   static getStandardTZDisplay() {
     return moment('2017-01-01').tz(moment.tz.guess()).format('z');
   }
-
 }
 
 export default DateTimeUtil;

@@ -45,7 +45,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
     /**
-   * A callback function to execute when a change is made in the date input. The first parameter is the event. The second parameter is the changed date value.
+   * A callback function to execute when a change is made in the date or time input. The first parameter is the event. The second parameter is the changed date value.
    */
   onChangeRaw: PropTypes.func,
   /**
@@ -224,16 +224,16 @@ class DateTimePicker extends React.Component {
       }
 
       this.timeValue = DateTimeUtil.formatISODateTime(updatedDateTime.format(), 'HH:mm');
+      this.handleChangeRaw(event, this.timeValue);
       this.handleChange(event, updatedDateTime);
     } else {
+      // If the date is valid but the time is not, the time part in the dateTime state needs to be cleared to reflect the change.
       if (validDate && !validTime) {
         const updatedDateTime = DateTimeUtil.updateTime(previousDateTime, '00:00');
 
         this.setState({
           dateTime: updatedDateTime,
         });
-
-        this.handleChangeRaw(event, time);
       }
 
       this.handleChangeRaw(event, time);

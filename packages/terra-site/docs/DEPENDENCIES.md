@@ -20,6 +20,7 @@
 | terra-card | ^0.x | ^15.4.2 | Card is a basic container with some base styling to help seperate elements with different content |
 | terra-content-container | ^1.4.0 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-date-picker | ^1.6.0 | ^15.4.2 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
+| terra-date-time-picker | ^0.x | ^15.4.2 | The DateTimePicker component has a date picker for selecting date and a time input for entering time |
 | terra-demographics-banner | ^1.5.0 | ^15.4.2 | The demographics component is used to display demographic information about a person in a condensed, easy to read format. |
 | terra-form | ^1.4.0 | ^15.4.2 | Components for building forms |
 | terra-grid | ^3.8.0 | ^15.4.2 | The grid component provides a flexbox based grid system. |
