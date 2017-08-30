@@ -18,39 +18,6 @@ import DateTimePickerMinMax from './DateTimePickerMinMax';
 import DateTimePickerDST from './DateTimePickerDST';
 import DateTimePickerInsideModal from './DateTimePickerInsideModal';
 
-// const DateTimePickerExamples = () => (
-//   <div>
-//     <div id="version">Version: {version}</div>
-//     <Markdown id="readme" src={ReadMe} />
-//     <PropsTable id="props" src={DateTimePickerSrc} />
-//     <h2 id="dst">Daylight Saving</h2>
-//     <p>
-//       The missing hour occurs when DST begins at these recent past and near future dates between 2:00 and 3:00.
-//       <br />   - March 13th, 2016
-//       <br />   - March 12th, 2017
-//       <br />   - March 11th, 2018
-//       <br />   - March 10th, 2019
-//       <br />   - March 08th, 2020
-//     </p>
-//     <br />
-//     <p>
-//       The ambiguous hour occurs when DST ends at these recent past and near future dates between 1:00 and 2:00:
-//       <br />   - November 6th, 2016
-//       <br />   - November 5th, 2017
-//       <br />   - November 4th, 2018
-//       <br />   - November 3rd, 2019
-//       <br />   - November 1st, 2020
-//     </p>
-//     <br />
-//     <p>
-//       Click <a href="https://en.wikipedia.org/wiki/Daylight_saving_time_in_the_United_States">here</a> to see more recent past and near future starting and ending dates of daylight saving time.
-//     </p>
-//     <br />
-//     <DateTimePickerDST />
-//     <br />
-//   </div>
-// );
-
 const DateTimePickerExamples = () => (
   <div>
     <div id="version">Version: {version}</div>

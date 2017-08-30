@@ -1,5 +1,5 @@
 import React from 'react';
-import DateTimePicker from 'terra-date-time-picker/src/DateTimePicker';
+import DateTimePicker from 'terra-date-time-picker';
 import Button from 'terra-button';
 import AppDelegate from 'terra-app-delegate';
 

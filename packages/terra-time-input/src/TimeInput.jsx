@@ -73,8 +73,6 @@ class TimeInput extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // const time = this.state.hour.concat(':', this.state.time);
-
     if (nextProps.value === this.props.value) {
       return;
     }
@@ -241,8 +239,6 @@ class TimeInput extends React.Component {
       this.setState({ minute: timeValue });
     }
 
-    // DatePicker triggers onChange only when a valid date is entered/selected.
-    // To be consistent, should TimeInput only trigger onChange when it has a valid hour and minute (i.e.; changedValue.length === 5)?
     if (this.props.onChange) {
       let changedValue;
       if (type === inputType.HOUR) {
