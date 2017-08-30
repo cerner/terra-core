@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+1.5.0 - (August 30, 2017)
+------------------
+### In Development
+* Added Consumer Theme
+* Moved Radio and Checkmark css to Control.scss
+
 1.4.0 - (August 15, 2017)
 ------------------
 ### Changed
