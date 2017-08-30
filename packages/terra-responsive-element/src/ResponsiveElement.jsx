@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 import 'terra-base/lib/baseStyles';
-import getBreakpoints from './breakpoints';
+import breakpoints from './breakpoints.scss';
 
 const propTypes = {
   /**
@@ -74,7 +74,7 @@ class ResponsiveElement extends React.Component {
 
   handleResize(width) {
     let element;
-    const { tiny, small, medium, large, huge } = getBreakpoints();
+    const { tiny, small, medium, large, huge } = breakpoints;
     if (width >= huge && this.props.huge) {
       element = 'huge';
     } else if (width >= large && this.props.large) {

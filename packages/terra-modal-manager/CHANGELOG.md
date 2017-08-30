@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Import breakpoints from CSS modules
 
 1.6.0 - (August 15, 2017)
 ------------------

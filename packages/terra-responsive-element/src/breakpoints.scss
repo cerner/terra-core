@@ -1,6 +1,14 @@
-@import './mixins';
+$terra-breakpoints: (
+  tiny: 544,
+  small: 768,
+  medium: 992,
+  large: 1216,
+  huge: 1440
+);
 
-.terra-Breakpoints::before {
-  content: '{"tiny":#{strip(544px)},"small":#{strip(768px)},"medium":#{strip(992px)},"large":#{strip(1216px)},"huge":#{strip(1440px)}}';
-  display: none;
+:export {
+  // Create responsive styles
+  @each $property, $value in $terra-breakpoints {
+    #{$property}: $value;
+  }
 }
