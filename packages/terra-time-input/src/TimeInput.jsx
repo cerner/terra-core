@@ -89,7 +89,7 @@ class TimeInput extends React.Component {
       stateValue = '0'.concat(stateValue);
     }
 
-    this.handleValueChange(type, stateValue);
+    this.handleValueChange(event, type, stateValue);
   }
 
   handleHourChange(event) {
@@ -134,7 +134,7 @@ class TimeInput extends React.Component {
       this.minuteInput.textInput.focus();
     }
 
-    this.handleValueChange(type, inputValue);
+    this.handleValueChange(event, type, inputValue);
   }
 
   handleHourInputKeyDown(event) {
@@ -209,11 +209,11 @@ class TimeInput extends React.Component {
     }
 
     if (updateStateValue) {
-      this.handleValueChange(type, stateValue);
+      this.handleValueChange(event, type, stateValue);
     }
   }
 
-  handleValueChange(type, timeValue) {
+  handleValueChange(event, type, timeValue) {
     if (type === inputType.HOUR) {
       this.setState({ hour: timeValue });
     } else {
