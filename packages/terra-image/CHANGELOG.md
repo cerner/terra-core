@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added default border, margin, and padding reset to img
 
 1.4.0 - (August 15, 2017)
 ------------------
