@@ -11,11 +11,38 @@ The terra-i18n component provides the internationalization to the React componen
 ## Usage
 
 ```jsx
+import React from 'react';
 import { I18nProvider, i18nLoader } from 'terra-i18n';
 
-i18nLoader('en', this.setState, this)
+export default class ExampleLoader extends React.Component {
+  constructor(props) {
+    super(props);
 
-<I18nProvider locale={this.state.locale} messages={this.state.messages} />
+    this.state = {
+      areTranslationsLoaded: false,
+      locale: props.locale,
+      messages: {},
+    };
+  }
+
+  componentDidMount() {
+    i18nLoader(this.state.locale, this.setState, this);
+  }
+
+  render() {
+    // Do not render components or the provider until translations and other
+    // dependencies are loaded.
+    if (!this.state.areTranslationsLoaded) {
+      return null;
+    }
+
+    return (
+      <I18nProvider locale={this.state.locale} messages={this.state.messages}>
+        {this.props.children}
+      </I18nProvider>
+    );
+  }
+}
 ```
 
 Note that the state of the object needs to contain keys as follows for the i18nLoader callback to work properly:

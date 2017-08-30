@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Improved terra-i18n example in README.md
 
 1.3.0 - (August 8, 2017)
 ------------------

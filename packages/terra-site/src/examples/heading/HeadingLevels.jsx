@@ -12,7 +12,6 @@ const HeadingLevels = () => (
         <Heading level={1}>Level 1 Heading <Text color="#767676">32px (2.286rem)</Text></Heading>
       </div>}
     />
-    <br />
     <Arrange
       align="center"
       fitStart={<Text color="#333" fontSize={20}>h2</Text>}
@@ -20,7 +19,6 @@ const HeadingLevels = () => (
         <Heading level={2}>Level 2 Heading <Text color="#767676">24px (1.714rem)</Text></Heading>
       </div>}
     />
-    <br />
     <Arrange
       align="center"
       fitStart={<Text color="#333" fontSize={20}>h3</Text>}
@@ -28,7 +26,6 @@ const HeadingLevels = () => (
         <Heading level={3}>Level 3 Heading <Text color="#767676">20px (1.429rem)</Text></Heading>
       </div>}
     />
-    <br />
     <Arrange
       align="center"
       fitStart={<Text color="#333" fontSize={20}>h4</Text>}
@@ -36,7 +33,6 @@ const HeadingLevels = () => (
         <Heading level={4}>Level 4 Heading <Text color="#767676">18px (1.286rem)</Text></Heading>
       </div>}
     />
-    <br />
     <Arrange
       align="center"
       fitStart={<Text color="#333" fontSize={20}>h5</Text>}
@@ -44,7 +40,6 @@ const HeadingLevels = () => (
         <Heading level={5}>Level 5 Heading <Text color="#767676">16px (1.143rem)</Text></Heading>
       </div>}
     />
-    <br />
     <Arrange
       align="center"
       fitStart={<Text color="#333" fontSize={20}>h6</Text>}
