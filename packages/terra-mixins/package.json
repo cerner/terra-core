@@ -1,7 +1,7 @@
 {
   "name": "terra-mixins",
   "main": "lib/Mixins.scss",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "terra-mixins",
   "repository": {
     "type": "git",

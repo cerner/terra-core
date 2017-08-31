@@ -22,6 +22,8 @@
 | terra-date-picker | ^1.6.0 | ^15.4.2 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
 | terra-date-time-picker | ^0.x | ^15.4.2 | The DateTimePicker component has a date picker for selecting date and a time input for entering time |
 | terra-demographics-banner | ^1.5.0 | ^15.4.2 | The demographics component is used to display demographic information about a person in a condensed, easy to read format. |
+| terra-dynamic-grid | 0.0.0 | ^15.4.2 | The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids. |
+| terra-embedded-content-consumer | ^0.x | ^15.4.2 | The Embedded Content Consumer is the application component which is embedding web content within it. |
 | terra-form | ^1.4.0 | ^15.4.2 | Components for building forms |
 | terra-grid | ^3.8.0 | ^15.4.2 | The grid component provides a flexbox based grid system. |
 | terra-heading | ^1.5.0 | ^15.4.2 | Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading. |
@@ -50,6 +52,7 @@
 | terra-time-input | ^1.5.0 | ^15.4.2 | A controlled input component for entering time. |
 | terra-toggle | ^1.4.0 | ^15.4.2 | Toggle component that transitions content in and out. |
 | terra-toggle-button | ^1.5.0 | ^15.4.2 | Toggle button component that transitions content in and out with the click on a button. |
+| xfc | ^1.0.0 | -- | A Cross Frame Container that handles securely embedding web content into a 3rd party domain |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |

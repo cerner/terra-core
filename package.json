@@ -53,14 +53,14 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
+    "nightwatch": "nightwatch",
     "pretest": "npm run lint",
     "props-table": "lerna run props-table",
     "postinstall": "npm run compile && npm run bootstrap && npm run dependency-markdown",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
     "start": "cd packages/terra-site && npm run start",
     "start:express": "node scripts/express/app.js",
-    "test": "npm run jest && npm run test:nightwatch-default",
-    "test:nightwatch-default": "node ./node_modules/terra-toolkit/lib/scripts/nightwatch-process.js --env default-tiny,default-small,default-medium,default-large,default-huge,default-enormous"
+    "test": "jest && nightwatch"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -94,6 +94,6 @@
     "stylelint": "~8.0.0",
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-toolkit": "^1.2.2"
+    "terra-toolkit": "^2.0.0"
   }
 }

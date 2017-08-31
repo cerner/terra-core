@@ -17,6 +17,8 @@ import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DateTimePickerExamples from './examples/date-time-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
+import DynamicGridExamples from './examples/dynamic-grid/Index';
+import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
 import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
@@ -55,6 +57,8 @@ import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DateTimePickerTestRoutes from 'terra-date-time-picker/tests/nightwatch/DateTimePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
+import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
@@ -107,6 +111,8 @@ ReactDOM.render((
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="date-time-picker" component={DateTimePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
+      <Route path="dynamic-grid" component={DynamicGridExamples} />
+      <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
@@ -144,6 +150,8 @@ ReactDOM.render((
     {DatePickerTestRoutes}
     {DateTimePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {DynamicGridTestRoutes}
+    {EmbeddedContentConsumerTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}
