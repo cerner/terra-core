@@ -22,7 +22,8 @@ const propTypes = {
    */
   onBlur: PropTypes.func,
   /**
-   * A callback function to execute when either the hour or minute has been changed. The first parameter is the event. The second parameter is the changed time value.
+   * A callback function to execute when either the hour or minute has been changed.
+   * The first parameter is the event. The second parameter is the changed time value.
    */
   onChange: PropTypes.func,
   /**

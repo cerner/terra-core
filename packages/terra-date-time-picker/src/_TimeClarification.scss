@@ -14,6 +14,7 @@
     font-size: 1.285rem;
     font-weight: normal;
     line-height: 1.75;
+    margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -24,6 +25,10 @@
   .body {
     color: #64696c;
     padding: 0.25rem 0.714rem;
+    
+    p {
+      margin: 0;
+    }
   }
 
   .buttons {

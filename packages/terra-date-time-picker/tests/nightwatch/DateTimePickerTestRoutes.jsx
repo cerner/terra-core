@@ -7,12 +7,13 @@ import DateTimePickerDefault from './components/DateTimePickerDefault';
 import DateTimePickerDefaultDateOnly from './components/DateTimePickerDefaultDateOnly';
 import DateTimePickerDefaultDateTime from './components/DateTimePickerDefaultDateTime';
 import DateTimePickerDST from './components/DateTimePickerDST';
-
 import DateTimePickerExcludeDates from './components/DateTimePickerExcludeDates';
 import DateTimePickerFilterDates from './components/DateTimePickerFilterDates';
 import DateTimePickerIncludeDates from './components/DateTimePickerIncludeDates';
 import DateTimePickerMinMax from './components/DateTimePickerMinMax';
 import DateTimePickerInsideModal from './components/DateTimePickerInsideModal';
+import DateTimePickerOnChange from './components/DateTimePickerOnChange';
+import DateTimePickerOnChangeRaw from './components/DateTimePickerOnChangeRaw';
 
 const routes = (
   <div>
@@ -26,6 +27,8 @@ const routes = (
     <Route path="/tests/date-time-picker-tests/include-dates" component={DateTimePickerIncludeDates} />
     <Route path="/tests/date-time-picker-tests/min-max" component={DateTimePickerMinMax} />
     <Route path="/tests/date-time-picker-tests/inside-modal" component={DateTimePickerInsideModal} />
+    <Route path="/tests/date-time-picker-tests/on-change" component={DateTimePickerOnChange} />
+    <Route path="/tests/date-time-picker-tests/on-change-raw" component={DateTimePickerOnChangeRaw} />
   </div>
 );
 

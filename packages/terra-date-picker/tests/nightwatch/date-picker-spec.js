@@ -93,6 +93,39 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('h3').text.to.not.contain('2017-07-12');
   },
 
+  'Triggers onChangeRaw when a date input value is changed': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-change-raw`);
+
+    browser.setValue('input[name="terra-date-date-input-onchangeraw"]', '07/12');
+    browser.expect.element('h3').text.to.contain('07/12');
+
+    browser.setValue('input[name="terra-date-date-input-onchangeraw"]', '/2017');
+    browser.expect.element('h3').text.to.contain('07/12/2017');
+  },
+
+  'Triggers onSelect when a date is selected from the picker': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-select`);
+
+    browser.setValue('input[name="terra-date-date-input-onselect"]', '07/12/2017');
+    browser.expect.element('h3').text.to.not.contain('2017-07-12');
+
+    browser.click('[class*="button"]');
+    browser.waitForElementVisible('.react-datepicker', 1000);
+    browser.click('.react-datepicker__day--selected');
+
+    browser.expect.element('h3').text.to.contain('2017-07-12');
+  },
+
+  'Triggers onClickOutside when clicking outside of the picker to dismiss it': (browser) => {
+    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-click-outside`);
+
+    browser.click('[class*="button"]');
+    browser.waitForElementVisible('.react-datepicker', 1000);
+    browser.click('input[name="terra-date-date-input-onclickoutside"]');
+
+    browser.expect.element('h3').text.to.contain('Picker is dismissed after clicking outside');
+  },
+
   'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 

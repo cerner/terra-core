@@ -17,15 +17,18 @@ const propTypes = {
    */
   excludeDates: PropTypes.arrayOf(PropTypes.string),
   /**
-   * A function that gets called for each date in the picker to evaluate which date should be disabled. A return value of true will be enabled and false will be disabled.
+   * A function that gets called for each date in the picker to evaluate which date should be disabled.
+   * A return value of true will be enabled and false will be disabled.
    */
   filterDate: PropTypes.func,
   /**
-   * An array of ISO 8601 string representation of the dates to enable in the picker. All Other dates will be disabled.
+   * An array of ISO 8601 string representation of the dates to enable in the picker.
+   * All Other dates will be disabled.
    */
   includeDates: PropTypes.arrayOf(PropTypes.string),
   /**
-   * Custom input attributes to apply to the date and time inputs. Use the name prop to set the name for the input. Do not set the name in inputAttribute as it will be ignored.
+   * Custom input attributes to apply to the date and time inputs. Use the name prop to set the name for the input.
+   * Do not set the name in inputAttribute as it will be ignored.
    */
   inputAttributes: PropTypes.object,
   /**
@@ -41,11 +44,13 @@ const propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
-   * A callback function to execute when a valid date is selected or entered. The first parameter is the event. The second parameter is the changed date time value.
+   * A callback function to execute when a valid date is selected or entered.
+   * The first parameter is the event. The second parameter is the changed input value.
    */
   onChange: PropTypes.func,
     /**
-   * A callback function to execute when a change is made in the date or time input. The first parameter is the event. The second parameter is the changed date value.
+   * A callback function to execute when a change is made in the date or time input.
+   * The first parameter is the event. The second parameter is the changed input value.
    */
   onChangeRaw: PropTypes.func,
   /**
@@ -124,19 +129,13 @@ class DateTimePicker extends React.Component {
   }
 
   handleOnSelect(event, selectedDate) {
-    // Our requirement is that ambiguous time should be checked when a date is selected from the picker.
-    // If the date was entered manually, it should wait until losing focus to check for ambiguous time.
-    // Due to react-datepicker invoking onSelect both when selecting a date from the picker as well as manually entering a valid date,
-    // we need to check that the event type is not 'change' to indicate that onSelect was not invoked from a manual change.
-    // See https://github.com/Hacker0x01/react-datepicker/issues/990
-    if (event.type !== 'change') {
-      const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
-      this.dateValue = DateTimeUtil.formatISODateTime(selectedDate, dateFormat);
-      const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
-      const updatedDateTime = DateTimeUtil.syncDateTime(previousDateTime, selectedDate, this.timeValue);
-      if (!previousDateTime || previousDateTime.format() !== updatedDateTime.format()) {
-        this.checkAmbiguousTime(updatedDateTime);
-      }
+    const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
+    this.dateValue = DateTimeUtil.formatISODateTime(selectedDate, dateFormat);
+    const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
+    const updatedDateTime = DateTimeUtil.syncDateTime(previousDateTime, selectedDate, this.timeValue);
+
+    if (!previousDateTime || previousDateTime.format() !== updatedDateTime.format()) {
+      this.checkAmbiguousTime(updatedDateTime);
     }
   }
 
@@ -161,9 +160,9 @@ class DateTimePicker extends React.Component {
   }
 
   checkAmbiguousTime(dateTime) {
-    // To prevent multiple time clarification dialogs from rendered, ensure that it is not open before checking for the ambiguous hour.
-    // ONe situation is when using the right arrow key to move focus from the hour input to the minute input will invoke onBlur and check for ambiguous hour.
-    // If the hour is ambiguous, the dialog would display and steals focus from the minute input, which again will invoke onBlur and check for ambiguous hour.
+    // To prevent multiple time clarification dialogs from rendering, ensure that it is not open before checking for the ambiguous hour.
+    // One situation is when using the right arrow key to move focus from the hour input to the minute input, it will invoke onBlur and check for ambiguous hour.
+    // If the hour is ambiguous, the dialog would display and steal focus from the minute input, which again will invoke onBlur and check for ambiguous hour.
     if (this.state.isTimeClarificationOpen) {
       return;
     }
@@ -187,8 +186,9 @@ class DateTimePicker extends React.Component {
     }
 
     let updatedDateTime;
+    const formattedDate = DateTimeUtil.formatISODateTime(date, 'YYYY-MM-DD');
 
-    if (DateTimeUtil.isValidDate(date, 'YYYY-MM-DD')) {
+    if (DateTimeUtil.isValidDate(formattedDate, 'YYYY-MM-DD')) {
       const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
       updatedDateTime = DateTimeUtil.syncDateTime(previousDateTime, date, this.timeValue);
 
@@ -202,7 +202,6 @@ class DateTimePicker extends React.Component {
 
   handleDateChangeRaw(event, date) {
     this.dateValue = event.target.value;
-
     this.handleChangeRaw(event, date);
   }
 
@@ -220,7 +219,7 @@ class DateTimePicker extends React.Component {
 
       if (event.keyCode === keyCodes.ARROWDOWN &&
         previousDateTime && updatedDateTime && previousDateTime.format() === updatedDateTime.format()) {
-        updatedDateTime.add(-1, 'hours');
+        updatedDateTime.subtract(1, 'hours');
       }
 
       this.timeValue = DateTimeUtil.formatISODateTime(updatedDateTime.format(), 'HH:mm');

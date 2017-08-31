@@ -13,7 +13,8 @@ const propTypes = {
    */
   excludeDates: PropTypes.arrayOf(PropTypes.string),
   /**
-   * A function that gets called for each date in the picker to evaluate which date should be disabled. A return value of true will be enabled and false will be disabled.
+   * A function that gets called for each date in the picker to evaluate which date should be disabled.
+   * A return value of true will be enabled and false will be disabled.
    */
   filterDate: PropTypes.func,
   /**
@@ -21,7 +22,8 @@ const propTypes = {
    */
   includeDates: PropTypes.arrayOf(PropTypes.string),
   /**
-   * Custom input attributes to apply to the date input. Use the name prop to set the name for the input. Do not set the name in inputAttribute as it will be ignored.
+   * Custom input attributes to apply to the date input. Use the name prop to set the name for the input.
+   * Do not set the name in inputAttribute as it will be ignored.
    */
   inputAttributes: PropTypes.object,
   /**
@@ -37,11 +39,13 @@ const propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
-   * A callback function to execute when a valid date is selected or entered. The first parameter is the event. The second parameter is the changed date value.
+   * A callback function to execute when a valid date is selected or entered.
+   * The first parameter is the event. The second parameter is the changed date value.
    */
   onChange: PropTypes.func,
   /**
-   * A callback function to execute when a change is made in the date input. The first parameter is the event. The second parameter is the changed date value.
+   * A callback function to execute when a change is made in the date input.
+   * The first parameter is the event. The second parameter is the changed date value.
    */
   onChangeRaw: PropTypes.func,
   /**
@@ -61,7 +65,8 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
-   * An ISO 8601 string representation of the initial value to show in the date input. This prop name is derived from react-datepicker but is analogous to value in a form input field.
+   * An ISO 8601 string representation of the initial value to show in the date input.
+   * This prop name is derived from react-datepicker but is analogous to value in a form input field.
    */
   selectedDate: PropTypes.string,
 };
@@ -107,10 +112,18 @@ class DatePicker extends React.Component {
   }
 
   handleOnSelect(selectedDate, event) {
+    // onSelect should only be invoked when selecting a datr from the picker.
+    // react-datepicker has an issue where onSelect is invoked both when selecting a date from the picker as well as manually entering a valid date or clearing the date,
+    // Until a fix is made, we need to return if the event type is 'change' indicating that onSelect was invoked from a manual change.
+    // See https://github.com/Hacker0x01/react-datepicker/issues/990
+    if (event.type === 'change' || !selectedDate || !selectedDate.isValid()) {
+      return;
+    }
+
     this.releaseFocus();
 
     if (this.props.onSelect) {
-      this.props.onSelect(event, selectedDate ? selectedDate.format() : '');
+      this.props.onSelect(event, selectedDate.format());
     }
   }
 

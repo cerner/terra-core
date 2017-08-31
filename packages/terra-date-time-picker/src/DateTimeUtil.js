@@ -56,6 +56,10 @@ class DateTimeUtil {
   }
 
   static updateTime(momentDate, time) {
+    if (!momentDate || !momentDate.isValid()) {
+      return null;
+    }
+
     const newDate = momentDate.clone();
     const date = moment(time, 'HH:mm', true);
 
@@ -67,7 +71,7 @@ class DateTimeUtil {
   }
 
   static isValidDate(date, format) {
-    const dateMoment = moment(date, format);
+    const dateMoment = moment(date, format, true);
     return dateMoment.isValid();
   }
 
