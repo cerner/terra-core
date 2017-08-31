@@ -1,41 +1,28 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-theme-provider', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default theme-provider': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/theme-provider-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/theme-provider-tests/default`);
     browser.assert.elementPresent('#themeProvider');
     browser.assert.elementPresent('#themedComponent');
   },
 
-  // The following tests wont work with PhantomJS as it does not have support for CSS custom properties.
-  // Once we switch to headless chrome we can uncomment these tests
-  /*
   'Displays a themed component': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/theme-provider-tests/default`)
+    browser.url(`${browser.launchUrl}/#/tests/theme-provider-tests/default`)
     .assert.cssProperty('#themedComponent', 'background-color', 'rgba(0, 0, 0, 1)')
     .assert.cssProperty('#themedComponent', 'color', 'rgba(255, 255, 255, 1)')
     .assert.cssProperty('#themedComponent', 'display', 'inline');
   },
 
   'Displays an updated themed component': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/theme-provider-tests/default`)
+    browser.url(`${browser.launchUrl}/#/tests/theme-provider-tests/theme-switching`)
     .assert.cssProperty('#themedComponent', 'background-color', 'rgba(0, 0, 0, 1)')
     .assert.cssProperty('#themedComponent', 'color', 'rgba(255, 255, 255, 1)')
     .assert.cssProperty('#themedComponent', 'display', 'inline')
-    .click('select[id="themeName"] option[value="cerner-mock-theme"]')
+    .click('select[id="theme"] option[value="cerner-mock-theme"]')
     .assert.cssProperty('#themedComponent', 'background-color', 'rgba(255, 0, 0, 1)')
     .assert.cssProperty('#themedComponent', 'color', 'rgba(0, 0, 255, 1)')
     .assert.cssProperty('#themedComponent', 'display', 'inline-block');
   },
-  */
-};
+});

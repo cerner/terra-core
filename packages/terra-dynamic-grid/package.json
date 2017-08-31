@@ -42,6 +42,8 @@
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "props-table": "props-table ./src/DynamicGrid.jsx --out-dir ./docs/props-table",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
   }
 }

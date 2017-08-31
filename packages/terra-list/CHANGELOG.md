@@ -9,6 +9,9 @@ Unreleased
 ### Added
 * Added styles to remove margin and padding from default list-item
 
+### Changed
+* Update nightwatch tests and test scripts.
+
 1.5.0 - (August 15, 2017)
 ------------------
 ### Changed

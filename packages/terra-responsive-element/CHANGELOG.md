@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Converted component to use CSS modules
+* Update nightwatch tests and test scripts.
 
 1.5.0 - (August 31, 2017)
 ------------------

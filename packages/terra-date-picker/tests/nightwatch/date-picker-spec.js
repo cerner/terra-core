@@ -1,20 +1,10 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-date-picker', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays the DatePicker with defaulted props': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
-
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default`);
     browser.click('[class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -24,8 +14,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with excluded dates being disabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/exclude-dates`);
-
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/exclude-dates`);
     browser.click('[class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -33,8 +22,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with filtered dates being disabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/filter-dates`);
-
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/filter-dates`);
     browser.click('[class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -42,8 +30,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with include dates being enabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/include-dates`);
-
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/include-dates`);
     browser.click('[class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -51,8 +38,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with min and max dates': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/min-max`);
-
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/min-max`);
     browser.click('[class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -60,19 +46,19 @@ module.exports = {
   },
 
   'Creates a hidden input with a name atribute of "date-input" and an empty value attribute when no date is entered': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default`);
     browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('name').which.equals('date-input');
     browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('value').which.equals('');
   },
 
   'Creates a hidden input with a default name atribute of "date-input" and sets the value in ISO8601 format when a valid date is entered': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/start-date`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/start-date`);
     browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('name').which.equals('date-input');
     browser.expect.element('[data-terra-date-input-hidden]').to.have.attribute('value').which.equals('2017-04-01');
   },
 
   'Creates a hidden input and sets the value attribute as is when an invalid date is entered': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default`);
     browser.click('[name="terra-date-date-input"]');
     browser.keys('2017');
 
@@ -81,7 +67,7 @@ module.exports = {
   },
 
   'Displays the calendar button with a height that matches the input ': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default`);
 
     browser.getCssProperty('[name="terra-date-date-input"]', 'height', (inputResult) => {
       browser.getCssProperty('[class*="button"]', 'height', (buttonResult) => {
@@ -91,17 +77,24 @@ module.exports = {
   },
 
   'Triggers onChange when a date value is cleared': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/on-change`);
 
     browser.setValue('input[name="terra-date-date-input-onchange"]', '07/12/2017');
     browser.expect.element('h3').text.to.contain('2017-07-12');
 
-    browser.clearValue('input[name="terra-date-date-input-onchange"]');
+    // Manually clear the date input -- clearValue command successfully clears the input value,
+    // however chromedriver does not trigger the change event.
+    for (let i = 0; i < 10; i += 1) {
+      browser.keys(browser.Keys.BACK_SPACE);
+    }
+
+    browser.expect.element('input[name="terra-date-date-input-onchange"]').to.have.value.that.equals('');
+    browser.expect.element('input[name="terra-date-date-input-onchange"]').to.have.text.to.equals('');
     browser.expect.element('h3').text.to.not.contain('2017-07-12');
   },
 
   'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -114,7 +107,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Enter': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -127,7 +120,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Escape': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -146,7 +139,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Tab': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -157,4 +150,4 @@ module.exports = {
 
     browser.expect.element('.react-datepicker').to.not.be.present;
   },
-};
+});
