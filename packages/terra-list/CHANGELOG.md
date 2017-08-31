@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.6.0 - (August 31, 2017)
+------------------
 ### Added
 * Added styles to remove margin and padding from default list-item
 

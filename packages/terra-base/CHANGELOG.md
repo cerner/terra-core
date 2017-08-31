@@ -4,7 +4,10 @@ Changelog
 Unreleased
 ----------
 ### Changed
-=======
+* Update nightwatch tests and test scripts.
+
+2.0.0 - (August 31, 2017)
+------------------
 ### Added
 * Added `--terra-base-line-height` CSS custom property
 * Added `--terra-base-html-height` CSS custom property
@@ -14,11 +17,10 @@ Unreleased
 
 ### Changed
 * Changed default `body` global line-height from `1` to `1.4285714285714286` to better align with legacy codebases
-* Update nightwatch tests and test scripts.
 
 ### Removed
 * Removed global border, margin, and padding resets from base styles
-* Removed global list-style reset from ol and ul elements
+* Removed global list-style reset from `ol` and `ul` elements
 
 1.4.0 - (August 15, 2017)
 ------------------

@@ -1,0 +1,16 @@
+exports[`DynamicGrid should render a Grid with merged attributes 1`] = `
+<div
+  className="TestClass region_3hmsj"
+  data-mock="data"
+  style={
+    Object {
+      "height": "100px",
+    }
+  } />
+`;
+
+exports[`DynamicGrid should render a default component 1`] = `
+<div
+  className="region_3hmsj"
+  name="foo" />
+`;
