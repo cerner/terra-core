@@ -10,7 +10,7 @@ class SignatureExample extends React.Component {
   }
 
   handleChange(event, lineSegments, lastSegment){
-  	alert(JSON.stringify(lastSegment));
+  	// alert(JSON.stringify(lastSegment));
   }
 
   handleSingleLine() {
@@ -27,7 +27,7 @@ class SignatureExample extends React.Component {
   render() {
     return (      
       <div style={{ height: '100px', width: '100%', border: '1px solid black'}} >
-        <Signature ref={instance => { this.signature = instance; }} lineWidth={Signature.Width.FINE} lineSegments={this.state.lineSegments} onChange={this.handleChange.bind(this)}/>
+        <Signature lineWidth={Signature.Width.FINE} lineSegments={this.state.lineSegments} onChange={this.handleChange.bind(this)}/>
 		<button onClick={() => this.handleClear()}>Clear</button>
 		<button onClick={() => this.handleSingleLine()}>Sign w/Line</button>
       </div>

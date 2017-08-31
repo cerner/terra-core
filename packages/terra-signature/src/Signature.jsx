@@ -93,7 +93,9 @@ class Signature extends React.Component {
     const canvas = this.node;
 
     this.setState({ painting: true });
-    this.addLine(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, false);
+
+    const rect = canvas.getBoundingClientRect();
+    this.addLine(event.pageX - rect.left, event.pageY - rect.top, false);
 
     this.draw();
   }
@@ -110,7 +112,9 @@ class Signature extends React.Component {
     const canvas = this.node;
 
     if (this.state.painting) {
-      this.addLine(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, true);
+      const rect = canvas.getBoundingClientRect();
+      this.addLine(event.pageX - rect.left, event.pageY - rect.top, true);
+
       this.draw();
     }
   }
