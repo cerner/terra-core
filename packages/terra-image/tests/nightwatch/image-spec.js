@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
+
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays an image with default options': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/image-tests/default`);

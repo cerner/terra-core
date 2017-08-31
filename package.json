@@ -54,7 +54,7 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
     "nightwatch": "nightwatch",
-    "pretest-disable": "npm run lint",
+    "pretest": "npm run lint",
     "props-table": "lerna run props-table",
     "postinstall": "npm run compile && npm run bootstrap && npm run dependency-markdown",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
