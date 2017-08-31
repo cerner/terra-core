@@ -1,7 +1,7 @@
 {
   "name": "terra-dynamic-grid",
   "main": "lib/DynamicGrid.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.",
   "repository": {
     "type": "git",
@@ -20,14 +20,19 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "terra-props-table": "^1.4.0"
+  },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "terra-base": "^2.0.0"
   },
   "dependencies": {
     "aphrodite": "^1.2.3",
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "terra-base": "^2.0.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -37,6 +42,8 @@
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "props-table": "props-table ./src/DynamicGrid.jsx --out-dir ./docs/props-table",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
   }
 }

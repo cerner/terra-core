@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import 'terra-base/lib/baseStyles';
 import { grid } from './styles';
 import Region from './Region';
 import styles from './DynamicGrid.scss';
