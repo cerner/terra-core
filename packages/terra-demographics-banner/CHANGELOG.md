@@ -9,6 +9,9 @@ Unreleased
 ### Added
 * Added default line-height style to demographics banner
 
+### Changed
+* Update nightwatch tests and test scripts.
+
 1.5.0 - (August 15, 2017)
 ------------------
 ### Changed
