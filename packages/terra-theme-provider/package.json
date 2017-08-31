@@ -1,7 +1,7 @@
 {
   "name": "terra-theme-provider",
   "main": "lib/ThemeProvider.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The theme provider component provides a theme to Terra UI components rendered within it via CSS custom properties a.k.a CSS variables.",
   "repository": {
     "type": "git",
@@ -20,17 +20,20 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "terra-props-table": "^1.4.0"
+  },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^1.0.0",
-    "terra-mixins": "^1.7.0"
+    "terra-base": "^2.0.0",
+    "terra-mixins": "^1.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^1.0.0",
-    "terra-mixins": "^1.7.0"
+    "terra-base": "^2.0.0",
+    "terra-mixins": "^1.8.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

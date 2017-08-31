@@ -18,6 +18,11 @@ Unreleased
 ### Changed
 * Changed path data for unavailable icon.
 
+1.6.0 - (August 31, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.5.0 - (August 15, 2017)
 ------------------
 ### Changed
