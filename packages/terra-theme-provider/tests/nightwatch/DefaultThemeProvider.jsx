@@ -1,9 +1,9 @@
 import React from 'react';
-import ThemeProvider from '../../src/ThemeProvider';
+import ThemeProvider from '../../lib/ThemeProvider';
 import MockThemeComponent from './MockThemeComponent';
 
 const DefaultThemeProvider = () => (
-  <ThemeProvider id="themeProvider" themeName={ThemeProvider.Opts.Themes.MOCK}>
+  <ThemeProvider id="themeProvider">
     <MockThemeComponent id="themedComponent">
       Theme Provider Test
     </MockThemeComponent>

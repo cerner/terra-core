@@ -8,6 +8,11 @@
 | terra-base | ^1.0.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-mixins | ^1.7.0 | -- | terra-mixins |
 
+## devDependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| terra-props-table | ^1.3.0 | ^15.4.2 | terra-props-table |
+
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
