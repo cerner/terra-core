@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update nightwatch tests and test scripts.
 
 1.8.0 - (September 12, 2017)
 ------------------
@@ -26,6 +28,7 @@ Unreleased
 ------------------
 ### Added
 * Added cerner-mock-theme styles
+
 
 1.4.0 - (August 15, 2017)
 ------------------
