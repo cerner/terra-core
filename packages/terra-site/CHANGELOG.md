@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.7.0 - (August 31, 2017)
+------------------
 ### Added
 * Added line-height styles to site-nav
 
