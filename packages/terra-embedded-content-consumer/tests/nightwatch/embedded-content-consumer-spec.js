@@ -1,22 +1,13 @@
 /* eslint-disable no-unused-expressions */
-
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-embedded-content-consumer', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a provider embedded in the consumer that contains title text.': (browser) => {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/basic-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/basic-provider';
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     // Identify the embedded iframe.
@@ -33,7 +24,7 @@ module.exports = {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/fill-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/fill-provider';
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     .getElementSize('div[class="xfc"]', (parentContainer) => {
@@ -49,7 +40,7 @@ module.exports = {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/on-ready-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/on-ready-provider';
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     // Identify the embedded iframe.
@@ -68,7 +59,7 @@ module.exports = {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/custom-event-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/custom-event-provider';
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     // Validate the provider after the custom event handler is invoked.
@@ -79,7 +70,7 @@ module.exports = {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/custom-events-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/custom-events-provider';
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     // Validate the provider before the custom event handler is invoked.
@@ -95,7 +86,7 @@ module.exports = {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/data-status-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/data-status-provider';
 
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/${consumerSrc}`)
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
     .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
     // Identify the embedded iframe.
@@ -109,4 +100,4 @@ module.exports = {
     // Reset the frame back to the parent frame.
     }).frame(null);
   },
-};
+});
