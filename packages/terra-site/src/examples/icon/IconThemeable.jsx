@@ -138,6 +138,9 @@ import IconUnread from 'terra-icon/lib/icon/IconUnread';
 import IconSwap from 'terra-icon/lib/icon/IconSwap';
 import IconMicrophone from 'terra-icon/lib/icon/IconMicrophone';
 import IconMicrophoneDisabled from 'terra-icon/lib/icon/IconMicrophoneDisabled';
+import IconOutgoingCall from 'terra-icon/lib/icon/IconOutgoingCall';
+import IconIncomingCall from 'terra-icon/lib/icon/IconIncomingCall';
+import IconMissedCall from 'terra-icon/lib/icon/IconMissedCall';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -1096,6 +1099,27 @@ const IconAll = () => (
         <td>microphoneDisabled</td>
         <td>
           import IconMicrophoneDisabled from 'terra-icon/lib/icon/IconMicrophoneDisabled';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutgoingCall height='2em' width='2em' /></td>
+        <td>outgoingCall</td>
+        <td>
+          import IconOutgoingCall from 'terra-icon/lib/icon/IconOutgoingCall';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconIncomingCall height='2em' width='2em' /></td>
+        <td>incomingCall</td>
+        <td>
+          import IconIncomingCall from 'terra-icon/lib/icon/IconIncomingCall';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconMissedCall height='2em' width='2em' /></td>
+        <td>missedCall</td>
+        <td>
+          import IconMissedCall from 'terra-icon/lib/icon/IconMissedCall';
         </td>
       </tr>
     </Table.Rows>
