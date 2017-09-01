@@ -94,7 +94,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Triggers onChangeRaw when a date input value is changed': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-change-raw`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/on-change-raw`);
 
     browser.setValue('input[name="terra-date-date-input-onchangeraw"]', '07/12');
     browser.expect.element('h3').text.to.contain('07/12');
@@ -104,7 +104,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Triggers onSelect when a date is selected from the picker': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-select`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/on-select`);
 
     browser.setValue('input[name="terra-date-date-input-onselect"]', '07/12/2017');
     browser.expect.element('h3').text.to.not.contain('2017-07-12');
@@ -117,13 +117,17 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Triggers onClickOutside when clicking outside of the picker to dismiss it': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-picker-tests/on-click-outside`);
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/on-click-outside`);
 
-    browser.click('[class*="button"]');
-    browser.waitForElementVisible('.react-datepicker', 1000);
-    browser.click('input[name="terra-date-date-input-onclickoutside"]');
+    browser.windowSize('width', (result) => {
+      if (result.value.width > browser.globals.breakpoints.small[0]) {
+        browser.click('[class*="button"]');
+        browser.waitForElementVisible('.react-datepicker', 1000);
+        browser.click('input[name="terra-date-date-input-onclickoutside"]');
 
-    browser.expect.element('h3').text.to.contain('Picker is dismissed after clicking outside');
+        browser.expect.element('h3').text.to.contain('Picker is dismissed after clicking outside');
+      }
+    });
   },
 
   'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {

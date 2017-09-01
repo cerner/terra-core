@@ -1,20 +1,10 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
-// const DateTimeUtil = require('../../lib/DateTimeUtil').DateTimeUtil;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-date-time-picker', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays the DateTimePicker with default props': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default`);
 
     browser.expect.element('[data-terra-date-time-input-hidden]').to.be.present;
     browser.expect.element('[data-terra-date-time-input-hidden]').to.have.attribute('value').which.equals('');
@@ -30,7 +20,7 @@ module.exports = {
   },
 
   'Displays the DateTimePicker with a default date only': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/date-only`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/date-only`);
 
     browser.expect.element('[data-terra-date-time-input-hidden]').to.be.present;
     browser.expect.element('[data-terra-date-time-input-hidden]').to.have.attribute('value').which.contains('2017-08-08');
@@ -45,7 +35,7 @@ module.exports = {
   },
 
   'Displays the DateTimePicker with a default date and time': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/date-time`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/date-time`);
 
     browser.expect.element('[data-terra-date-time-input-hidden]').to.be.present;
     browser.expect.element('[data-terra-date-time-input-hidden]').to.have.attribute('value').which.contains('2017-08-08T10:30:00');
@@ -60,7 +50,7 @@ module.exports = {
   },
 
   'Displays the Time Clarification dialog': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/dst`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
 
     browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -78,7 +68,7 @@ module.exports = {
   },
 
   'Dismisses the Time Clarification dialog': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/dst`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
 
     browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -94,7 +84,7 @@ module.exports = {
   },
 
   'Displays the offset button after clicking the daylight button': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/dst`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
 
     browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -112,7 +102,7 @@ module.exports = {
   },
 
   'Displays the offset button after clicking the standard time button': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/dst`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
 
     browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -130,7 +120,7 @@ module.exports = {
   },
 
   'Hides the offset button when the date/time is no longer ambiguous': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/dst`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
 
     browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -154,7 +144,7 @@ module.exports = {
   },
 
   'Triggers onChange when a valid date and time value is entered': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/on-change`);
 
     browser.setValue('input[name="terra-date-input"]', '07/12/2017');
     browser.expect.element('h3').text.to.contain('2017-07-12T00:00');
@@ -167,7 +157,7 @@ module.exports = {
   },
 
   'Triggers onChangeRaw when a date or time value is changed': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/on-change-raw`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/on-change-raw`);
 
     browser.setValue('input[name="terra-date-input"]', '07/12');
     browser.expect.element('h3').text.to.contain('07/12');
@@ -183,7 +173,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with excluded dates being disabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/exclude-dates`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/exclude-dates`);
 
     browser.click('[class*="button"]');
 
@@ -193,7 +183,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with filtered dates being disabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/filter-dates`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/filter-dates`);
 
     browser.click('[class*="button"]');
 
@@ -203,7 +193,7 @@ module.exports = {
   },
 
   'Displays the DatePicker with include dates being enabled': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/include-dates`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/include-dates`);
 
     browser.click('[class*="button"]');
 
@@ -212,7 +202,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -225,7 +215,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Enter': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -238,7 +228,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Escape': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -257,7 +247,7 @@ module.exports = {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Tab': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -268,4 +258,4 @@ module.exports = {
 
     browser.expect.element('.react-datepicker').to.not.be.present;
   },
-};
+});
