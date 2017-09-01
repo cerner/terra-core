@@ -125,10 +125,9 @@ class DateTimePicker extends React.Component {
   }
 
   componentWillMount() {
-    const dateTime = DateTimeUtil.createSafeDate(this.props.value);
     const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
 
-    this.dateValue = DateTimeUtil.formatMomentDateTime(dateTime, dateFormat);
+    this.dateValue = DateTimeUtil.formatMomentDateTime(this.state.dateTime, dateFormat);
     this.timeValue = DateTimeUtil.hasTime(this.props.value) ? DateTimeUtil.formatISODateTime(this.props.value, 'HH:mm') : '';
   }
 
