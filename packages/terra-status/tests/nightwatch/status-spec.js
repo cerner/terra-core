@@ -1,41 +1,28 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-status', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default status': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/default`)
-      .waitForElementVisible('#status', 1000)
+      .url(`${browser.launchUrl}/#/tests/status-tests/default`)
       .expect.element('#status').text.to.contain('Sample text');
   },
+
   'Displays arrange status example': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/arrange`)
-      .waitForElementVisible('#statusArrange', 1000)
+      .url(`${browser.launchUrl}/#/tests/status-tests/arrange`)
       .expect.element('#statusArrange').text.to.contain('Sample text');
   },
+
   'Displays icon status example': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/icon`)
-      .waitForElementVisible('#statusIcon', 1000);
+    browser.url(`${browser.launchUrl}/#/tests/status-tests/icon`);
   },
+
   'Displays image status example': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/image`)
-      .waitForElementVisible('#statusImage', 1000);
+    browser.url(`${browser.launchUrl}/#/tests/status-tests/image`);
   },
+
   'Displays status with no style': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/status-tests/no-color`)
-      .waitForElementVisible('#statusNoColor', 1000);
+    browser.url(`${browser.launchUrl}/#/tests/status-tests/no-color`);
   },
-};
+});

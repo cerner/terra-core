@@ -1,33 +1,20 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-badge', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default badge with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/badge-tests/default`);
   },
 
   'Displays intent badges with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/intent`);
+    browser.url(`${browser.launchUrl}/#/tests/badge-tests/intent`);
   },
 
   'Displays size badges with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/size`);
+    browser.url(`${browser.launchUrl}/#/tests/badge-tests/size`);
   },
 
   'Displays icon badges with the provided text': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/badge-tests/icon`);
+    browser.url(`${browser.launchUrl}/#/tests/badge-tests/icon`);
   },
-};
+});
