@@ -63,7 +63,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            data: '$bundled-themes: "mock";',
+            data: '$bundled-themes: mock, consumer;',
           },
         }],
       }),
