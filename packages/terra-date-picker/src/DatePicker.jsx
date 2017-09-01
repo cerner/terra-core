@@ -112,10 +112,11 @@ class DatePicker extends React.Component {
   }
 
   handleOnSelect(selectedDate, event) {
-    // onSelect should only be invoked when selecting a datr from the picker.
-    // react-datepicker has an issue where onSelect is invoked both when selecting a date from the picker as well as manually entering a valid date or clearing the date,
-    // Until a fix is made, we need to return if the event type is 'change' indicating that onSelect was invoked from a manual change.
-    // See https://github.com/Hacker0x01/react-datepicker/issues/990
+    // onSelect should only be invoked when selecting a date from the picker.
+    // react-datepicker has an issue where onSelect is invoked both when selecting a date from the picker
+    // as well as manually entering a valid date or clearing the date,
+    // Until a fix is made, we need to return if the event type is 'change' indicating that onSelect was
+    // invoked from a manual change. See https://github.com/Hacker0x01/react-datepicker/issues/990
     if (event.type === 'change' || !selectedDate || !selectedDate.isValid()) {
       return;
     }

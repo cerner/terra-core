@@ -124,26 +124,26 @@ class TimeClarification extends React.Component {
         >
           <div>
             <header className={cx('header')}>
-              {<h1 className={cx(['title'])}>{title}</h1>}
+              {<h1 className={cx('title')}>{title}</h1>}
             </header>
             <br />
-            <div className={cx(['body'])}>
+            <div className={cx('body')}>
               <p>{message}</p>
             </div>
             <br />
             <br />
-            <div className={cx(['buttons'])}>
+            <div className={cx('buttons')}>
               <Button
                 onClick={this.handleDaylightSavingButtonClick}
                 variant="primary"
-                className={cx(['button-daylight'])}
+                className={cx('button-daylight')}
               >
                 {daylightSavingButtonLabel}
               </Button>
               <Button
                 onClick={this.handleStandardTimeButtonClick}
                 variant="primary"
-                className={cx(['button-standard'])}
+                className={cx('button-standard')}
               >
                 {standardTimeButtonLabel}
               </Button>
