@@ -115,7 +115,7 @@ class TimeClarification extends React.Component {
     return (
       <div>
         <Modal
-          classNameModal="time-clarification"
+          classNameModal={cx('time-clarification')}
           ariaLabel="Time Clarification"
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
