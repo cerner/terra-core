@@ -1,24 +1,14 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-profile-image', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a profile image': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/profile-image-tests/default`)
-      .waitForElementPresent('#loadedImage', 1000);
+      .url(`${browser.launchUrl}/#/tests/profile-image-tests/default`);
   },
+
   'Displays the avatar image if the profile image was not found': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/profile-image-tests/default`)
-      .waitForElementPresent('#errorImage', 1000);
+      .url(`${browser.launchUrl}/#/tests/profile-image-tests/default`);
   },
-};
+});

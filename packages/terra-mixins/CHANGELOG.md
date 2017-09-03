@@ -7,6 +7,12 @@ Unreleased
 * Added cerner-mock-theme mixin
 * Added cerner-consumer-theme mixin
 
+1.2.0 - (August 31, 2017)
+------------------
+### Added
+* Added cerner-mock-theme mixin
+* Added cerner-consumer-theme mixin
+
 1.1.0 - (July 18, 2017)
 ------------------
 ### Changed

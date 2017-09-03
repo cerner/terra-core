@@ -1,5 +1,5 @@
 import React from 'react';
-import ThemeProvider from '../../src/ThemeProvider';
+import ThemeProvider from '../../lib/ThemeProvider';
 import MockThemeComponent from './MockThemeComponent';
 
 

@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update nightwatch tests and test scripts.
+
+1.5.0 - (August 31, 2017)
+------------------
 ### Added
 * Added default line-height style to field help text
 * Added default line-height style to field error text

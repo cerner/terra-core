@@ -1,38 +1,31 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-card', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default card': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/default`)
-      .assert.cssProperty('#defaultcard', 'padding', '0px');
+    browser.url(`${browser.launchUrl}/#/tests/card-tests/default`);
+    browser.expect.element('#defaultcard').to.be.present;
+    browser.assert.cssProperty('#defaultcard', 'padding', '0px');
   },
 
   'Displays a default card with vertical padding': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/paddingvertical`);
+    browser.url(`${browser.launchUrl}/#/tests/card-tests/paddingvertical`);
+    browser.expect.element('#verticalcard').to.be.present;
     browser.assert.cssProperty('#verticalcard', 'padding-bottom', '10px');
     browser.assert.cssProperty('#verticalcard', 'padding-top', '10px');
   },
 
   'Displays a default card with horizontal padding': (browser) => {
-    browser.url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/paddinghorizontal`);
+    browser.url(`${browser.launchUrl}/#/tests/card-tests/paddinghorizontal`);
+    browser.expect.element('#horizontalcard').to.be.present;
     browser.assert.cssProperty('#horizontalcard', 'padding-left', '10px');
     browser.assert.cssProperty('#horizontalcard', 'padding-right', '10px');
   },
 
   'Displays a default card with padding': (browser) => {
-    browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/card-tests/padding`)
-      .assert.cssProperty('#paddingcard', 'padding', '10px');
+    browser.url(`${browser.launchUrl}/#/tests/card-tests/padding`);
+    browser.expect.element('#paddingcard').to.be.present;
+    browser.assert.cssProperty('#paddingcard', 'padding', '10px');
   },
-
-};
+});

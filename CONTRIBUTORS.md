@@ -28,6 +28,8 @@ Cerner Corporation
 - Madeline Gilbert [@madelineisabelle]
 - Michael Hemesath [@mhemesath]
 - Umesh Shimpi [@us044466]
+- Rishi Asthana [@rasthana]
+
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -59,3 +61,4 @@ Cerner Corporation
 [@mhemesath]: https://github.com/mhemesath
 [@us044466]: https://github.com/us044466
 [@brhoades]: https://github.com/brhoades
+[@rasthana]: https://github.com/rasthana

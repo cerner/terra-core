@@ -13,24 +13,21 @@ Card is a basic container with some base styling to help seperate elements with 
 import React from 'react';
 import Card from 'terra-card';
 
-Just a Default Card
+// Just a Default Card
 <Card>
 	...
 </Card>
 
-Or we can selectively add padding to child elements
+// Or we can selectively add padding to child elements
 <Card>
-	<Card.Body hasPaddingVertical>
+	<Card.Body>
 		...
 	</Card.Body>
 	...
-	<Card.Body hasPaddingVertical>
+	<Card.Body>
 		...
 	</Card.Body>
 </Card>
-
-
-
 ```
 
 ## Expected Use
