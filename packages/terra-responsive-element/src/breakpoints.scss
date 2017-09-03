@@ -4,7 +4,7 @@ $terra-breakpoints: (
   medium: 992,
   large: 1216,
   huge: 1440
-);
+) !default;
 
 :export {
   // Create responsive styles
