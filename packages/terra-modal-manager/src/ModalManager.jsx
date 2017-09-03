@@ -5,7 +5,7 @@ import Modal from 'terra-modal';
 
 import AppDelegate from 'terra-app-delegate';
 import SlideGroup from 'terra-slide-group';
-import getBreakpoints from 'terra-responsive-element/lib/breakpoints';
+import breakpoints from 'terra-responsive-element/lib/breakpoints.scss';
 
 import 'terra-base/lib/baseStyles';
 import styles from './ModalManager.scss';
@@ -125,7 +125,7 @@ class ModalManager extends React.Component {
   updateFullscreenState() {
     const previousFullscreenState = this.forceFullscreenModal;
 
-    this.forceFullscreenModal = window.innerWidth < getBreakpoints().small;
+    this.forceFullscreenModal = window.innerWidth < breakpoints.small;
 
     // Only update the modal if it's minimized, open, and changing states.
     if (!this.props.isMaximized && this.props.isOpen && previousFullscreenState !== this.forceFullscreenModal) {

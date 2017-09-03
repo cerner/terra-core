@@ -1,19 +1,10 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-search-field', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a search field with search button': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/default`)
+      .url(`${browser.launchUrl}/#/tests/search-field-tests/default`)
       .assert.elementPresent('#searchfield')
       .assert.elementPresent('#searchfield button')
       .assert.attributeEquals('#searchfield input', 'placeholder', '');
@@ -21,15 +12,16 @@ module.exports = {
 
   'Displays a search field with a placeholder value of "Search Text"': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/placeholder`)
+      .url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`)
       .assert.elementPresent('#searchfield')
       .assert.elementPresent('#searchfield button')
       .assert.attributeEquals('#searchfield input', 'placeholder', 'Search Text');
   },
 
   'Displays a search field that handles search callbacks': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/callback`);
+
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/callback`)
       .setValue('input[type=search]', 'S')
       .expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
 
@@ -44,8 +36,9 @@ module.exports = {
   },
 
   'Displays a search field with a search delay of 1000': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/delayed`);
+
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/delayed`)
       .setValue('input[type=search]', 'Test')
       .expect.element('#search-callback-text').text.to.equal('Search Text:').after(250).before(1000);
 
@@ -54,8 +47,9 @@ module.exports = {
   },
 
   'Displays a search field with a minimum search text length of 5 characters': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/minimum-length`);
+
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/minimum-length`)
       .setValue('input[type=search]', 'Test')
       .click('#searchfieldWithMinimumLength button')
       .expect.element('#search-callback-text').text.to.equal('Search Text:');
@@ -67,8 +61,9 @@ module.exports = {
   },
 
   'Displays the search button with a height that matches the input ': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
+
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/search-field-tests/default`)
       .assert.elementPresent('#searchfield')
       .assert.elementPresent('#searchfield button')
       .assert.attributeEquals('#searchfield input', 'placeholder', '');
@@ -79,4 +74,4 @@ module.exports = {
       });
     });
   },
-};
+});

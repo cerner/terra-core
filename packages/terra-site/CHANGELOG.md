@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Added
+* Added ThemeProvider component examples
+
+1.7.0 - (August 31, 2017)
+------------------
+### Added
 * Added line-height styles to site-nav
 * Fixed prop-types error for invalid data type in search field examples
 
