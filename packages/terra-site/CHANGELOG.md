@@ -5,6 +5,15 @@ Unreleased
 ----------
 ### Added
 * Added ThemeProvider component examples
+
+1.7.0 - (August 31, 2017)
+------------------
+### Added
+* Added line-height styles to site-nav
+
+### Changed
+* Updated various examples to use `span` instead of `p` elements in sample content
+* Added ThemeProvider component examples
 * Added new relic script
 
 1.6.0 - (August 15, 2017)
