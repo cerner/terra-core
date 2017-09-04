@@ -50,6 +50,7 @@
     "terra-form": "^1.5.0",
     "terra-grid": "^3.9.0",
     "terra-heading": "^1.6.0",
+    "terra-hookshot": "^0.x",
     "terra-i18n": "^1.4.0",
     "terra-i18n-plugin": "^1.2.0",
     "terra-icon": "^1.6.0",

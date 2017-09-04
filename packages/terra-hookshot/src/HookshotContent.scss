@@ -1,0 +1,15 @@
+:local {
+  [dir=ltr],
+  [dir=rtl] {
+    /* stylelint-disable selector-class-pattern  */
+    .content {
+      display: block;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      z-index: var(--terra-hookshot-content-z-index, 7001);
+    }
+    /* stylelint-enable */
+  }
+}

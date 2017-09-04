@@ -21,6 +21,7 @@ import EmbeddedContentConsumerExamples from './examples/embedded-content-consume
 import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
+import HookshotExamples from './examples/hookshot/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
@@ -61,6 +62,7 @@ import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
+import HookshotTestRoutes from 'terra-hookshot/tests/nightwatch/HookshotTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
@@ -113,6 +115,7 @@ ReactDOM.render((
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
+      <Route path="hookshot" component={HookshotExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
       <Route path="image" component={ImageExamples} />
@@ -180,5 +183,6 @@ ReactDOM.render((
     {ThemeProviderTestRoutes}
     {SlideGroupTestRoutes}
     {ProfileImageTestRoutes}
+    {HookshotTestRoutes}
   </Router>
 ), document.getElementById('root'));
