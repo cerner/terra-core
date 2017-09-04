@@ -7,27 +7,26 @@ class HookshotStandard extends React.Component {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
-    this.state = { open: false };
+    this.state = { isOpen: false };
   }
 
   handleButtonClick() {
-    this.setState({ open: true });
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   handleRequestClose() {
-    this.setState({ open: false });
+    this.setState({ isOpen: false });
   }
 
   render() {
     const hookshotContent = (
       <Hookshot.Content
-        {...customProps}
         closeOnEsc
         closeOnOutsideClick
         closeOnResize
         onRequestClose={this.handleRequestClose}
       >
-        <div style={{ height: '40px', width: '200px' }}>Hookshot</div>
+        <div style={{ height: '40px', width: '200px', backgroundColor: 'red' }}>Hookshot</div>
       </Hookshot.Content>
     );
 

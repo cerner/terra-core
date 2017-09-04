@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Portal from 'react-portal';
+import classNames from 'classnames/bind';
 import HookshotContent from './_HookshotContent';
 import HookshotUtils from './_HookshotUtils';
 
