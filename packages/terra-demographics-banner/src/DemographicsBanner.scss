@@ -27,7 +27,13 @@
 
   .person-name {
     flex: 2;
+    font-size: 1.143rem;
+    line-height: 1;
     margin: 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.286rem;
+    }
   }
 
   .identifiers {
