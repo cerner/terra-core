@@ -3,7 +3,7 @@ exports[`test should render a ChoiceField with a checkbox 1`] = `
   className="control"
   required={true}>
   <Input
-    className="input healtheintent-application"
+    className="input required healtheintent-application"
     name="children_present"
     required={false}
     type="checkbox"
@@ -20,7 +20,7 @@ exports[`test should render a ChoiceField with a radio 1`] = `
   className="control"
   required={true}>
   <Input
-    className="input healtheintent-application"
+    className="input required healtheintent-application"
     name="children_present"
     required={false}
     type="radio"

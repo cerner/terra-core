@@ -55,7 +55,9 @@ class Input extends React.Component {
       ...customProps
     } = this.props;
     const additionalInputProps = Object.assign({}, customProps);
-    const inputClasses = cx(['input', additionalInputProps.className]);
+    const inputClasses = cx([
+      { input: (customProps.type !== 'radio' && customProps.type !== 'checkbox') },
+      additionalInputProps.className]);
 
     if (required) {
       additionalInputProps['aria-required'] = 'true';

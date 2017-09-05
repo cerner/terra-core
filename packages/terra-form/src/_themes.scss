@@ -1,0 +1,23 @@
+@include cerner-consumer-theme {
+  --terra-input-border: solid rgba(134, 138, 140, 0.4);
+  --terra-input-height: 32px;
+  --terra-input-font-size: 18px;
+  --terra-input-font-family: 'Roboto';
+  --terra-input-font-weight: 400;
+  --terra-input-color-text: #383f42;
+  --terra-input-padding: 3px 9px 4px 5px;
+  --terra-input-line-height: 23px;
+  --terra-input-outline: none;
+  /* stylelint-disable suitcss/custom-property-no-outside-root */
+
+  :focus {
+    --terra-input-border: solid #551a8b;
+    --terra-input-border-width: 1px 1px 3px 1px;
+    --terra-input-padding: 3px 9px 2px 5px;
+  }
+
+  :disabled {
+    --terra-input-background-color: rgba(134, 138, 140, 0.1);
+    --terra-input-color-text: rgb(134, 138, 140);
+  }
+}

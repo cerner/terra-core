@@ -7,8 +7,17 @@
     width: auto;
 
     .input {
+      display: inline-block;
+      font-size: 1em;
+      height: auto;
+      padding: 0.178em;
       vertical-align: middle;
     }
+  }
+
+  .required {
+    box-shadow: unset;
+    outline: none;
   }
 
   @media screen and (min-width: 544px) {
