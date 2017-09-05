@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.6.0 - (September 5, 2017)
+------------------
 ### Changed
 * Converted component to use CSS modules
 * Update nightwatch tests and test scripts.
