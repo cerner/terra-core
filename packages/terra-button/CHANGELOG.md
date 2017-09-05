@@ -3,9 +3,11 @@ Changelog
 
 Unreleased
 ----------
-### Added
 * Added consumer theming styles
 
+
+1.6.0 - (September 5, 2017)
+------------------
 ### Changed
 * Update nightwatch tests and test scripts.
 

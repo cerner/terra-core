@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.10.0 - (September 5, 2017)
+------------------
 ### Changed
 * Update nightwatch tests and test scripts.
 
