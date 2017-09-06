@@ -26,14 +26,14 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^1.1.0"
+    "terra-base": "^2.1.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-onclickoutside": "^5.11.1",
     "react-portal": "^3.0.0",
-    "terra-base": "^1.1.0"
+    "terra-base": "^2.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
