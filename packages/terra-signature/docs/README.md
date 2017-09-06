@@ -15,16 +15,20 @@ already been recorded.
 import React from 'react';
 import Signature from 'terra-signature';
 
-<Signature {props...} />
-```
+// Signature with line width 
+<Signature lineWidth={Signature.Opts.Width.FINE} />
+
+// Signature with line width and simple intial signature line
+<Signature 
+	lineWidth={Signature.Opts.Width.EXTRA_FINE} 
+	lineSegments={ [{ x1: 70, y1: 8, x2: 70, y2: 9 }, { x1: 70, y1: 9, x2: 70, y2: 10 }] } 
+/>
+
+// Signature with with line width and cleared signature
+<Signature lineWidth={Signature.Opts.Width.MEDIUM} lineSegments={ [] } />
+
+// Signature with with line width and callback function
+<Signature lineWidth={Signature.Opts.Width.HEAVY} onChange={this.handleChange.bind(this)} />
 
 ## Component Features
-
-<!-- Uncomment supported features.
- * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
- * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
- * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
- * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
- * [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
- * [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
- -->
+* [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

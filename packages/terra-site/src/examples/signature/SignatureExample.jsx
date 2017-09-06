@@ -6,7 +6,7 @@ class SignatureExample extends React.Component {
   constructor() {
     super();
 
-    this.state = { show: false, lineSegments: [] };
+    this.state = { lineSegments: [] };
   }
 
   handleSingleLine() {
@@ -23,7 +23,7 @@ class SignatureExample extends React.Component {
   render() {
     return (
       <div style={{ height: '100px', width: '100%', border: '1px solid black' }} >
-        <Signature lineWidth={Signature.Width.FINE} lineSegments={this.state.lineSegments} />
+        <Signature lineWidth={Signature.Opts.Width.FINE} lineSegments={this.state.lineSegments} />
         <button onClick={() => this.handleClear()}>Clear</button>
         <button onClick={() => this.handleSingleLine()}>Sign w/Line</button>
       </div>

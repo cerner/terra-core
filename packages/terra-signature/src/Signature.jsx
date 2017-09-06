@@ -4,31 +4,27 @@ import 'terra-base/lib/baseStyles';
 import './Signature.scss';
 
 const LineWidths = {
-  EXTRAFINE: 1,
+  EXTRA_FINE: 1,
   FINE: 2,
   MEDIUM: 4,
   HEAVY: 6,
 };
 
-
 const propTypes = {
   /**
    * The line width to use when drawing the signature on the canvas.
-   * One of LineWidths.EXTRAFINE, LineWidths.FINE, LineWidths.MEDIUM, LineWidths.HEAVY.
+   * One of LineWidths.EXTRA_FINE, LineWidths.FINE, LineWidths.MEDIUM, LineWidths.HEAVY.
    */
-  lineWidth: PropTypes.oneOf([LineWidths.EXTRAFINE, LineWidths.FINE, LineWidths.MEDIUM, LineWidths.HEAVY]),
-
+  lineWidth: PropTypes.oneOf([LineWidths.EXTRA_FINE, LineWidths.FINE, LineWidths.MEDIUM, LineWidths.HEAVY]),
   /**
   * Line segments that define signature.
   */
   lineSegments: PropTypes.array,
-
   /**
    * A callback function to execute when a line segment is drawn. The first parameter is the event, the
    * second parameter is all the line segments, and the last parameter is the most recent line segment drawn.
    */
   onChange: PropTypes.func,
-
 };
 
 const defaultProps = {
@@ -39,10 +35,19 @@ const defaultProps = {
 
 class Signature extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = { lineSegments: [] };
+    this.state = { lineSegments: props.lineSegments };
+
+    this.mouseDown = this.mouseDown.bind(this);
+    this.mouseUp = this.mouseUp.bind(this);
+    this.mouseXY = this.mouseXY.bind(this);
+    this.addLine = this.addLine.bind(this);
+    this.draw = this.draw.bind(this);
+    this.drawSignature = this.drawSignature.bind(this);
+    this.clearSignature = this.clearSignature.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
   }
 
   componentDidMount() {
@@ -56,7 +61,7 @@ class Signature extends React.Component {
     this.node.addEventListener('touchstart', e => this.mouseDown(e), false);
     this.node.addEventListener('touchmove', e => this.mouseXY(e), true);
     this.node.addEventListener('touchend', e => this.mouseUp(e), false);
-    document.body.addEventListener('touchcancel', e => this.mouseUp(e).bind(this), false);
+    document.body.addEventListener('touchcancel', this.mouseUp, false);
 
     this.node.width = canvas.getBoundingClientRect().width;
     this.node.height = canvas.getBoundingClientRect().height;
@@ -79,14 +84,15 @@ class Signature extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.lineSegments !== nextProps.lineSegments) {
-      const newState = Object.assign({}, this.state, { lineSegments: nextProps.lineSegments });
       this.drawSignature(nextProps.lineSegments);
-      this.setState(newState);
+      this.setState({ lineSegments: nextProps.lineSegments });
     }
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', () => this.updateDimensions());
+    window.removeEventListener('touchcancel', this.mouseUp);
+    window.removeEventListener('mouseup', this.mouseUp);
   }
 
   mouseDown(event) {
@@ -199,6 +205,7 @@ class Signature extends React.Component {
 
 Signature.propTypes = propTypes;
 Signature.defaultProps = defaultProps;
-Signature.Width = LineWidths;
+Signature.Opts = {};
+Signature.Opts.Width = LineWidths;
 
 export default Signature;
