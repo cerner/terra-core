@@ -38,22 +38,22 @@
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
-    "compilescripts:clean": "$(cd ..; npm bin)/rimraf scripts/lib",
-    "compilescripts:build": "$(cd ..; npm bin)/babel scripts/src --out-dir scripts/lib --copy-files",
+    "compilescripts:clean": "lerna exec --scope terra-icon -- rimraf scripts/lib",
+    "compilescripts:build": "lerna exec --scope terra-icon -- babel scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
     "generate-icon": "node scripts/lib/generate-icon/index.js",
     "generate-example": "node scripts/lib/generate-example/index.js",
     "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-icon && npm run generate-example",
     "compile": "npm run compile:clean && npm run compile:build && npm run compilescripts",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "lerna exec --scope terra-icon -- rimraf lib",
+    "compile:build": "lerna exec --scope terra-icon -- babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "lint:js": "lerna exec --scope terra-icon -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "lerna exec --scope terra-icon -- stylelint src/**/*.scss",
     "props-table": "props-table ./src/IconBase.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
-    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "lerna exec --scope terra-icon -- jest --config ../../jestconfig.json",
+    "test:nightwatch": "lerna exec --scope terra-icon -- nightwatch -c ../../nightwatch.conf.js"
   }
 }
