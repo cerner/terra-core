@@ -3,10 +3,26 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added compose icon.
+* Added incomingCall icon.
+* Added microphone icon.
+* Added microphoneDisabled icon.
+* Added missedCall icon.
+* Added outgoingCall icon.
+* Added phoneDown icon.
+* Added question icon.
+* Added swap icon.
+* Added unexpected icon.
+* Added unread icon.
+* Added unspecified icon.
+* Added videoCameraDisabled icon.
+
+### Changed
+* Changed path data for unavailable icon.
 
 1.7.0 - (September 5, 2017)
 ------------------
-### Changed
 * Update nightwatch tests and test scripts.
 
 1.6.0 - (August 31, 2017)
