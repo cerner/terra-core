@@ -4,7 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Fixed
-* Fixed border styling 
+* Fixed border styling
+* Fix input bidirectionality
 
 1.7.0 - (September 5, 2017)
 ------------------
