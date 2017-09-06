@@ -6,6 +6,8 @@ Unreleased
 ### Fixed
 * Fixed focus management issue between hour and time input in Firefox.
 
+1.7.0 - (September 5, 2017)
+------------------
 ### Changed
 * Update nightwatch tests and test scripts.
 
