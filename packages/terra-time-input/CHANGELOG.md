@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed border styling 
 
 1.7.0 - (September 5, 2017)
 ------------------

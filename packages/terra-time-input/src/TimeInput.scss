@@ -9,7 +9,9 @@
     border-top-left-radius: 0.25em;
     border-top-right-radius: 0.25em;
     display: inline-block;
+    font-size: 1em;
     margin: 0;
+    padding: 0.1em 0;
 
     &.is-focused {
       border-color: #26a2e5;
