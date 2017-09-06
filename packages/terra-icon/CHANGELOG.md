@@ -20,6 +20,9 @@ Unreleased
 
 ### Changed
 * Changed path data for unavailable icon.
+
+1.7.0 - (September 5, 2017)
+------------------
 * Update nightwatch tests and test scripts.
 
 1.6.0 - (August 31, 2017)

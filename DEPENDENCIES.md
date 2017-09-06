@@ -34,4 +34,4 @@
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
 | stylelint-config-sass-guidelines | ^3.0.0 | -- | Sharable stylelint config based on https://sass-guidelin.es/ |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
-| terra-toolkit | ^1.2.2 | ^15.4.2 | Utilities to help when developing terra modules. |
+| terra-toolkit | ^2.0.0 | ^15.4.2 | Utilities to help when developing terra modules. |
