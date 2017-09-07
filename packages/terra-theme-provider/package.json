@@ -36,7 +36,6 @@
     "terra-mixins": "^1.9.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-theme-provider -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-theme-provider -- rimraf lib",
     "compile:build": "lerna exec --scope terra-theme-provider -- babel src --out-dir lib --copy-files",

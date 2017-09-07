@@ -36,7 +36,6 @@
     "terra-base": "^2.1.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-embedded-content-consumer -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-embedded-content-consumer -- rimraf lib",
     "compile:build": "lerna exec --scope terra-embedded-content-consumer -- babel src --out-dir lib --copy-files",

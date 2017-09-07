@@ -13,7 +13,6 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
-    "clean": "lerna exec --scope terra-site -- rimraf node_modules",
     "start": "webpack-dev-server --progress",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-site -- rimraf lib",

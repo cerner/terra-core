@@ -35,7 +35,6 @@
     "terra-base": "^2.1.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-toggle -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-toggle -- rimraf lib",
     "compile:build": "lerna exec --scope terra-toggle -- babel src --out-dir lib --copy-files",

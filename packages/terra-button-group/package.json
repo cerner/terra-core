@@ -36,7 +36,6 @@
     "terra-button": "^1.6.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-button-group -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-button-group -- rimraf lib",
     "compile:build": "lerna exec --scope terra-button-group -- babel src --out-dir lib --copy-files",

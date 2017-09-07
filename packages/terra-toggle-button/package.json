@@ -42,7 +42,6 @@
     "terra-toggle": "^1.6.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-toggle-button -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-toggle-button -- rimraf lib",
     "compile:build": "lerna exec --scope terra-toggle-button -- babel src --out-dir lib --copy-files",

@@ -36,7 +36,6 @@
     "terra-markdown": "^1.5.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-props-table -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-props-table -- rimraf lib",
     "compile:build": "lerna exec --scope terra-props-table -- babel src --out-dir lib --copy-files",

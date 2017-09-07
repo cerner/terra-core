@@ -35,7 +35,6 @@
     "react-intl": "^2.3.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-i18n -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-i18n -- rimraf lib",
     "compile:build": "lerna exec --scope terra-i18n -- babel src --out-dir lib --copy-files",

@@ -31,7 +31,6 @@
     "mkdirp": "^0.5.1"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-i18n-plugin -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-i18n-plugin -- rimraf lib",
     "compile:build": "lerna exec --scope terra-i18n-plugin -- babel src --out-dir lib --copy-files",

@@ -45,7 +45,6 @@
     "tether": "^1.4.0"
   },
   "scripts": {
-    "clean": "lerna exec --scope terra-popup -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-popup -- rimraf lib",
     "compile:build": "lerna exec --scope terra-popup -- babel src --out-dir lib --copy-files",
