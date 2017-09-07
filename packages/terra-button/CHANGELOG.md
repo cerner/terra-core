@@ -6,6 +6,11 @@ Unreleased
 * Added consumer theming styles
 
 
+1.7.0 - (September 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.6.0 - (September 5, 2017)
 ------------------
 ### Changed

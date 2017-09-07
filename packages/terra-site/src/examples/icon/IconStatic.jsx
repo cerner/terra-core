@@ -6,17 +6,19 @@ import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import IconSuccessInverse from 'terra-icon/lib/icon/IconSuccessInverse';
 import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
 import IconComplete from 'terra-icon/lib/icon/IconComplete';
-import IconCritical from 'terra-icon/lib/icon/IconCritical';
 import IconScheduled from 'terra-icon/lib/icon/IconScheduled';
 import IconHighPriority from 'terra-icon/lib/icon/IconHighPriority';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
+import IconUnspecified from 'terra-icon/lib/icon/IconUnspecified';
+import IconCritical from 'terra-icon/lib/icon/IconCritical';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
+import IconUnexpected from 'terra-icon/lib/icon/IconUnexpected';
 import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
 import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
 import IconHigh from 'terra-icon/lib/icon/IconHigh';
@@ -65,13 +67,6 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconCritical height='2em' width='2em' /></td>
-        <td>critical</td>
-        <td>
-          import IconCritical from 'terra-icon/lib/icon/IconCritical';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconScheduled height='2em' width='2em' /></td>
         <td>scheduled</td>
         <td>
@@ -97,6 +92,20 @@ const IconAll = () => (
         <td>warning</td>
         <td>
           import IconWarning from 'terra-icon/lib/icon/IconWarning';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconUnspecified height='2em' width='2em' /></td>
+        <td>unspecified</td>
+        <td>
+          import IconUnspecified from 'terra-icon/lib/icon/IconUnspecified';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconCritical height='2em' width='2em' /></td>
+        <td>critical</td>
+        <td>
+          import IconCritical from 'terra-icon/lib/icon/IconCritical';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -139,6 +148,13 @@ const IconAll = () => (
         <td>help_inverse</td>
         <td>
           import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconUnexpected height='2em' width='2em' /></td>
+        <td>unexpected</td>
+        <td>
+          import IconUnexpected from 'terra-icon/lib/icon/IconUnexpected';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
