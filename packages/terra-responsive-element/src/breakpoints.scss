@@ -1,4 +1,4 @@
-$terra-breakpoints: (
+$terra-responsive-breakpoints: (
   tiny: 544,
   small: 768,
   medium: 992,
@@ -8,7 +8,7 @@ $terra-breakpoints: (
 
 :export {
   // Create responsive styles
-  @each $property, $value in $terra-breakpoints {
+  @each $property, $value in $terra-responsive-breakpoints {
     #{$property}: $value;
   }
 }

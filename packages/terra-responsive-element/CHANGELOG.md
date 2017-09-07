@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update SCSS variable name for breakpoints to avoid conflicts with legacy code
 
 1.6.0 - (September 5, 2017)
 ------------------
