@@ -52,8 +52,8 @@ import IconItalicI from 'terra-icon/lib/icon/IconItalicI';
 import IconMinus from 'terra-icon/lib/icon/IconMinus';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import IconClear from 'terra-icon/lib/icon/IconClear';
-import IconNotMet from 'terra-icon/lib/icon/IconNotMet';
 import IconIncomplete from 'terra-icon/lib/icon/IconIncomplete';
+import IconNotMet from 'terra-icon/lib/icon/IconNotMet';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconLeft from 'terra-icon/lib/icon/IconLeft';
 import IconRight from 'terra-icon/lib/icon/IconRight';
@@ -71,6 +71,7 @@ import IconFeaturedOutline from 'terra-icon/lib/icon/IconFeaturedOutline';
 import IconArchive from 'terra-icon/lib/icon/IconArchive';
 import IconFunnel from 'terra-icon/lib/icon/IconFunnel';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
+import IconQuestion from 'terra-icon/lib/icon/IconQuestion';
 import IconUnknown from 'terra-icon/lib/icon/IconUnknown';
 import IconHouse from 'terra-icon/lib/icon/IconHouse';
 import IconSave from 'terra-icon/lib/icon/IconSave';
@@ -81,8 +82,8 @@ import IconAnnouncement from 'terra-icon/lib/icon/IconAnnouncement';
 import IconCamera from 'terra-icon/lib/icon/IconCamera';
 import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import IconLink from 'terra-icon/lib/icon/IconLink';
-import IconList from 'terra-icon/lib/icon/IconList';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
+import IconList from 'terra-icon/lib/icon/IconList';
 import IconChecklist from 'terra-icon/lib/icon/IconChecklist';
 import IconUnlock from 'terra-icon/lib/icon/IconUnlock';
 import IconDue from 'terra-icon/lib/icon/IconDue';
@@ -113,6 +114,7 @@ import IconZoomOut from 'terra-icon/lib/icon/IconZoomOut';
 import IconZoomIn from 'terra-icon/lib/icon/IconZoomIn';
 import IconEnvelope from 'terra-icon/lib/icon/IconEnvelope';
 import IconAllergy from 'terra-icon/lib/icon/IconAllergy';
+import IconPhoneDown from 'terra-icon/lib/icon/IconPhoneDown';
 import IconPhone from 'terra-icon/lib/icon/IconPhone';
 import IconPanelLeft from 'terra-icon/lib/icon/IconPanelLeft';
 import IconPanelRight from 'terra-icon/lib/icon/IconPanelRight';
@@ -125,11 +127,20 @@ import IconUnavailable from 'terra-icon/lib/icon/IconUnavailable';
 import IconImplant from 'terra-icon/lib/icon/IconImplant';
 import IconProtocol from 'terra-icon/lib/icon/IconProtocol';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
+import IconVideoCameraDisabled from 'terra-icon/lib/icon/IconVideoCameraDisabled';
 import IconNoSignal from 'terra-icon/lib/icon/IconNoSignal';
 import IconReload from 'terra-icon/lib/icon/IconReload';
 import IconRecurringEvent from 'terra-icon/lib/icon/IconRecurringEvent';
 import IconSeparate from 'terra-icon/lib/icon/IconSeparate';
 import IconMerge from 'terra-icon/lib/icon/IconMerge';
+import IconCompose from 'terra-icon/lib/icon/IconCompose';
+import IconUnread from 'terra-icon/lib/icon/IconUnread';
+import IconSwap from 'terra-icon/lib/icon/IconSwap';
+import IconMicrophone from 'terra-icon/lib/icon/IconMicrophone';
+import IconMicrophoneDisabled from 'terra-icon/lib/icon/IconMicrophoneDisabled';
+import IconOutgoingCall from 'terra-icon/lib/icon/IconOutgoingCall';
+import IconIncomingCall from 'terra-icon/lib/icon/IconIncomingCall';
+import IconMissedCall from 'terra-icon/lib/icon/IconMissedCall';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -489,17 +500,17 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconNotMet height='2em' width='2em' /></td>
-        <td>notMet</td>
-        <td>
-          import IconNotMet from 'terra-icon/lib/icon/IconNotMet';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconIncomplete height='2em' width='2em' /></td>
         <td>incomplete</td>
         <td>
           import IconIncomplete from 'terra-icon/lib/icon/IconIncomplete';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconNotMet height='2em' width='2em' /></td>
+        <td>notMet</td>
+        <td>
+          import IconNotMet from 'terra-icon/lib/icon/IconNotMet';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -622,6 +633,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconQuestion height='2em' width='2em' /></td>
+        <td>question</td>
+        <td>
+          import IconQuestion from 'terra-icon/lib/icon/IconQuestion';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconUnknown height='2em' width='2em' /></td>
         <td>unknown</td>
         <td>
@@ -692,17 +710,17 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconList height='2em' width='2em' /></td>
-        <td>list</td>
-        <td>
-          import IconList from 'terra-icon/lib/icon/IconList';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconMenu height='2em' width='2em' /></td>
         <td>menu</td>
         <td>
           import IconMenu from 'terra-icon/lib/icon/IconMenu';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconList height='2em' width='2em' /></td>
+        <td>list</td>
+        <td>
+          import IconList from 'terra-icon/lib/icon/IconList';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -916,6 +934,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconPhoneDown height='2em' width='2em' /></td>
+        <td>phoneDown</td>
+        <td>
+          import IconPhoneDown from 'terra-icon/lib/icon/IconPhoneDown';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconPhone height='2em' width='2em' /></td>
         <td>phone</td>
         <td>
@@ -1000,6 +1025,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconVideoCameraDisabled height='2em' width='2em' /></td>
+        <td>videoCameraDisabled</td>
+        <td>
+          import IconVideoCameraDisabled from 'terra-icon/lib/icon/IconVideoCameraDisabled';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconNoSignal height='2em' width='2em' /></td>
         <td>noSignal</td>
         <td>
@@ -1032,6 +1064,62 @@ const IconAll = () => (
         <td>merge</td>
         <td>
           import IconMerge from 'terra-icon/lib/icon/IconMerge';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconCompose height='2em' width='2em' /></td>
+        <td>compose</td>
+        <td>
+          import IconCompose from 'terra-icon/lib/icon/IconCompose';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconUnread height='2em' width='2em' /></td>
+        <td>unread</td>
+        <td>
+          import IconUnread from 'terra-icon/lib/icon/IconUnread';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconSwap height='2em' width='2em' /></td>
+        <td>swap</td>
+        <td>
+          import IconSwap from 'terra-icon/lib/icon/IconSwap';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconMicrophone height='2em' width='2em' /></td>
+        <td>microphone</td>
+        <td>
+          import IconMicrophone from 'terra-icon/lib/icon/IconMicrophone';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconMicrophoneDisabled height='2em' width='2em' /></td>
+        <td>microphoneDisabled</td>
+        <td>
+          import IconMicrophoneDisabled from 'terra-icon/lib/icon/IconMicrophoneDisabled';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutgoingCall height='2em' width='2em' /></td>
+        <td>outgoingCall</td>
+        <td>
+          import IconOutgoingCall from 'terra-icon/lib/icon/IconOutgoingCall';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconIncomingCall height='2em' width='2em' /></td>
+        <td>incomingCall</td>
+        <td>
+          import IconIncomingCall from 'terra-icon/lib/icon/IconIncomingCall';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconMissedCall height='2em' width='2em' /></td>
+        <td>missedCall</td>
+        <td>
+          import IconMissedCall from 'terra-icon/lib/icon/IconMissedCall';
         </td>
       </tr>
     </Table.Rows>

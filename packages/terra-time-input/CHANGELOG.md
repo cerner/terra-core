@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.8.0 - (September 7, 2017)
+------------------
+### Fixed
+* Fixed focus management issue between hour and time input in Firefox.
+
 1.7.0 - (September 5, 2017)
 ------------------
 ### Changed
@@ -13,6 +18,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor version bump
+
 
 1.5.0 - (August 15, 2017)
 ------------------
