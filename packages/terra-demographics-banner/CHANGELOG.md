@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Explicitly set font-size / line-height for person name
 
 1.7.0 - (September 5, 2017)
 ------------------
