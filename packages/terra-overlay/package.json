@@ -38,6 +38,7 @@
     "terra-icon": "^1.7.0"
   },
   "scripts": {
+    "clean": "lerna exec --scope terra-overlay -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-overlay -- rimraf lib",
     "compile:build": "lerna exec --scope terra-overlay -- babel src --out-dir lib --copy-files",

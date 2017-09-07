@@ -37,6 +37,7 @@
     "terra-base": "^2.1.0"
   },
   "scripts": {
+    "clean": "lerna exec --scope terra-icon -- rimraf node_modules",
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
     "compilescripts:clean": "lerna exec --scope terra-icon -- rimraf scripts/lib",
     "compilescripts:build": "lerna exec --scope terra-icon -- babel scripts/src --out-dir scripts/lib --copy-files",

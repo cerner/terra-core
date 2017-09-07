@@ -48,6 +48,7 @@
     "terra-responsive-element": "^1.6.0"
   },
   "scripts": {
+    "clean": "lerna exec --scope terra-date-picker -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-date-picker -- rimraf lib",
     "compile:build": "lerna exec --scope terra-date-picker -- babel src --out-dir lib --copy-files",

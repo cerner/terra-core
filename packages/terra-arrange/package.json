@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
+    "clean": "lerna exec --scope terra-arrange -- rimraf node_modules",
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "lerna exec --scope terra-arrange -- rimraf lib",
     "compile:build": "lerna exec --scope terra-arrange -- babel src --out-dir lib --copy-files",
