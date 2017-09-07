@@ -5,12 +5,12 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-i18n | ^1.3.0 | ^15.4.2 | The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand. |
+| terra-i18n | ^1.5.0 | ^15.4.2 | The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-props-table | ^1.3.0 | ^15.4.2 | terra-props-table |
+| terra-props-table | ^1.5.0 | ^15.4.2 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

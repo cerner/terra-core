@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+1.8.0 - (September 7, 2017)
+------------------
+### Changed
+* Explicitly set font-size / line-height for person name
+
+1.7.0 - (September 5, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.6.0 - (August 31, 2017)
 ------------------
 ### Added

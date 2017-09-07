@@ -3,7 +3,18 @@ Changelog
 
 Unreleased
 ----------
+
+1.7.0 - (September 7, 2017)
+------------------
 ### Changed
+* Minor version bump
+### Changed
+* Update SCSS variable name for breakpoints to avoid conflicts with legacy code
+
+1.6.0 - (September 5, 2017)
+------------------
+### Changed
+* Converted component to use CSS modules
 * Update nightwatch tests and test scripts.
 
 1.5.0 - (August 31, 2017)
