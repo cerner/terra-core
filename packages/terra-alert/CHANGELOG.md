@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+
 1.5.0 - (September 7, 2017)
 ------------------
 ### Changed
