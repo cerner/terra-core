@@ -19,6 +19,12 @@ const TableTests = () => (
       <li><Link to="/tests/table-tests/selectable-table-onchange">Selectable Table - OnChange</Link></li>
       <li><Link to="/tests/table-tests/table-subheaders">Table - Subheaders</Link></li>
       <li><Link to="/tests/table-tests/table-selectable-subheaders">Selectable Table - Subheaders</Link></li>
+      <li><Link to="/tests/table-tests/multiple-selectable-table-single-row">Multiple Selectable Table - Single Row</Link></li>
+      <li><Link to="/tests/table-tests/multiple-selectable-table-no-rows">Multiple Selectable Table - No Rows</Link></li>
+      <li><Link to="/tests/table-tests/multiple-selectable-table-multiple-rows">Multiple Selectable Table - Multiple Rows</Link></li>
+      <li><Link to="/tests/table-tests/multiple-selectable-table-onchange">Multiple Selectable Table - On Change</Link></li>
+      <li><Link to="/tests/table-tests/multiple-selectable-table-subheaders">Multiple Selectable Table - Subheaders</Link></li>
+      <li><Link to="/tests/table-tests/multiple-selectable-table-preselected-row">Multiple Selectable Table - Preselected Row</Link></li>
     </ul>
   </div>
 );

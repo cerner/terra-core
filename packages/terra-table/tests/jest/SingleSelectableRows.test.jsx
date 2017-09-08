@@ -42,7 +42,7 @@ it('should render SingleSelectableRows one selectable row and one non-selectable
   expect(tableRows).toMatchSnapshot();
 });
 
-it('should select an row', () => {
+it('should select a row', () => {
   const defaultTableRows = shallow(<Table.SingleSelectableRows>{rows}</Table.SingleSelectableRows>);
 
   defaultTableRows.find('.PERSON_0').simulate('click', { preventDefault() {} });

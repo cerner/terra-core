@@ -9,6 +9,7 @@ import { version } from 'terra-list/package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import TableSrc from '!raw-loader!terra-table/src/Table';
 import SingleSelectableRowsSrc from '!raw-loader!terra-table/src/SingleSelectableRows';
+import MultipleSelectableRowsSrc from '!raw-loader!terra-table/src/MultipleSelectableRows';
 import TableHeaderSrc from '!raw-loader!terra-table/src/TableHeader';
 import TableHeaderCellSrc from '!raw-loader!terra-table/src/TableHeaderCell';
 import TableRowSrc from '!raw-loader!terra-table/src/TableRow';
@@ -22,7 +23,8 @@ import NoPaddingTable from './NoPaddingTable';
 import StripedTable from './StripedTable';
 import TableWithHighlightedRows from './TableWithHighlightedRows';
 import SingleRowSelectableTable from './SingleRowSelectableTable';
-import TableWithNonSelectableRow from './TableWithNonSelectableRow';
+import SingleRowSelectableTableWithNonSelectableRow from './SingleRowSelectableTableWithNonSelectableRow';
+import MultipleRowsSelectableTable from './MultipleRowsSelectableTable';
 import TableWithSortingIndicator from './TableWithSortingIndicator';
 import TableWithLongContent from './TableWithLongContent';
 import TableWithCustomCells from './TableWithCustomCells';
@@ -38,6 +40,7 @@ const TableExamples = () => (
     <PropsTable id="props-tableSubheader" src={TableSubheaderSrc} componentName="Table Subheader" />
     <PropsTable id="props-tableRows" src={TableRowsSrc} componentName="Table Rows" />
     <PropsTable id="props-singleSelectableRows" src={SingleSelectableRowsSrc} componentName="Single Selectable Rows" />
+    <PropsTable id="props-multipleSelectableRows" src={MultipleSelectableRowsSrc} componentName="Multiple Selectable Rows" />
     <PropsTable id="props-tableRow" src={TableRowSrc} componentName="Table Row" />
     <PropsTable id="props-tablecell" src={TableCellSrc} componentName="Table Cell" />
     <br />
@@ -54,12 +57,14 @@ const TableExamples = () => (
     <h2>Table with some rows selected. Table will not select or deselect any row</h2>
     <TableWithHighlightedRows />
     <br />
-    <h2>Selectable table</h2>
+    <h2>Single Row Selectable table</h2>
     <SingleRowSelectableTable />
     <br />
-    <h2>Selectable table with second row as non selectable</h2>
-    <TableWithNonSelectableRow />
+    <h2>Single Row Selectable table with second row as non selectable</h2>
+    <SingleRowSelectableTableWithNonSelectableRow />
     <br />
+    <h2>Multiple Row Selectable table</h2>
+    <MultipleRowsSelectableTable />
     <h2>Table with sorting indicator</h2>
     <TableWithSortingIndicator />
     <br />
