@@ -7,7 +7,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/slide-group-tests/default`);
 
     browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(1)').to.have.attribute('aria-hidden');
-    browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(1)').to.have.css('display').which.equals('none');
+    browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(1)').to.have.css('visibility').which.equals('hidden');
     browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(2)').to.not.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(2)').text.to.equal('Slide 2');
   },
@@ -73,7 +73,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.sendKeys('#increment-1', browser.Keys.ENTER);
     browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(1)').to.have.attribute('aria-hidden');
-    browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(1)').to.have.css('display').which.equals('none');
+    browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(1)').to.have.css('visibility').which.equals('hidden');
     browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(2)').to.have.not.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div > div[class*="slide"]:nth-child(2)').text.to.contain('Slide 2');
 
