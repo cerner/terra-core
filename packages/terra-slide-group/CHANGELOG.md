@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Bump react-transition-group dependency to v2.2.0
+
+### Fixed
+* Disable content on hidden slides to prevent keyboard access 
 
 1.6.0 - (September 5, 2017)
 ------------------
