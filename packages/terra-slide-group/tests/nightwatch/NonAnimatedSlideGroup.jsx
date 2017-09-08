@@ -1,6 +1,5 @@
 import React from 'react';
-
-import SlideGroup from '../../lib/SlideGroup';
+import SlideGroup from '../../src/SlideGroup';
 
 const containerStyles = {
   height: '200px',
@@ -33,8 +32,8 @@ class SlideGroupExample extends React.Component {
         <div key={i}>
           <h2>Slide {i}</h2>
           <br />
-          {i !== 4 ? <button id="increment" style={{ backgroundColor: 'lightgrey' }} onClick={this.increment}>Increment</button> : null}
-          {i !== 1 ? <button id="decrement" style={{ backgroundColor: 'lightgrey' }} onClick={this.decrement}>Decrement</button> : null}
+          {i !== 4 ? <button id={`increment-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.increment}>Increment</button> : null}
+          {i !== 1 ? <button id={`decrement-${i}`} style={{ backgroundColor: 'lightgrey' }} onClick={this.decrement}>Decrement</button> : null}
         </div>
       ));
     }

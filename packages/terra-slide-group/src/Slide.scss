@@ -17,6 +17,10 @@
     }
   }
 
+  .slide[aria-hidden] {
+    display: none;
+  }
+
   .enter {
     // The - 1px is to ensure that iOS Safari actually renders the content before the transition begins.
     transform: translate3d(calc(100% - 1px), 0, 0);
