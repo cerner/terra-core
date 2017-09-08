@@ -35,7 +35,7 @@
   }
 
   .selected {
-    background-color: var(--terra-list-item-selected-background-color, #ebf6fd);
+    background-color: var(--terra-list-item-selected-background-color, darken(#ebf6fd, 2%));
   }
 
   .divided .selected {
@@ -53,7 +53,7 @@
 
     &.list-item:hover,
     &.list-item:focus {
-      background-color: var(--terra-list-item-hover-background-color, #ebf6fd) !important;
+      background-color: var(--terra-list-item-hover-background-color, lighten(#ebf6fd, 2%)) !important;
     }
 
     &.selected:hover,

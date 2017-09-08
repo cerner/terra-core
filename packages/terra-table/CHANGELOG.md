@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update selection styles
 
 1.9.0 - (September 7, 2017)
 ------------------
