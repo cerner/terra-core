@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Fixed
-* Implementation of the overlay sytling.
+* Implementation of the overlay styling.
 
 1.7.0 - (September 7, 2017)
 ------------------
