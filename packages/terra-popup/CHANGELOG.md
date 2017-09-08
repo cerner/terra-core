@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fix `-var()` syntax.
 
 1.7.0 - (September 7, 2017)
 ------------------
