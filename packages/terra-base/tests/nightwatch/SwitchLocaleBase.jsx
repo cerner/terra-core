@@ -1,4 +1,5 @@
 import React from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
 import { FormattedMessage } from 'react-intl';
 
 import Base from '../../lib/Base';
