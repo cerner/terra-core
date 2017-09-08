@@ -12,6 +12,7 @@ Unreleased
 1.8.0 - (September 5, 2017)
 ------------------
 ### Changed
+* Import breakpoints from CSS modules
 * Update nightwatch tests and test scripts.
 
 1.7.0 - (August 31, 2017)
