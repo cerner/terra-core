@@ -37,7 +37,7 @@
     }
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap --hoist --nohoist=react --nohoist=react-*",
     "clean:all": "lerna clean && node scripts/remove-node-modules/index.js",
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
