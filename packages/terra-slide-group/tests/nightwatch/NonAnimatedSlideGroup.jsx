@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideGroup from '../../src/SlideGroup';
+import SlideGroup from '../../lib/SlideGroup';
 
 const containerStyles = {
   height: '200px',
