@@ -95,14 +95,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
-
-    // See https://github.com/facebook/react/issues/8026
-    alias: {
-      react: path.resolve(__dirname, 'node_modules', 'react'),
-      'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
-      moment: path.resolve(__dirname, 'node_modules/moment'),
-      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
-    },
   },
   output: {
     filename: '[name].js',
@@ -127,8 +119,5 @@ module.exports = {
       warnings: true,
       errors: true,
     },
-  },
-  resolveLoader: {
-    modules: [path.resolve(path.join(__dirname, 'node_modules'))],
   },
 };
