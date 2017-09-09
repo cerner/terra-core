@@ -37,9 +37,8 @@
     }
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist --nohoist=react --nohoist=react-*",
     "clean:all": "lerna clean && node scripts/remove-node-modules/index.js",
-    "clean:install": "npm run clean:all && npm install",
+    "clean:install": "npm run clean:all && yarn",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "compile:heroku": "cd packages/terra-site && npm run compile:heroku",
@@ -56,7 +55,7 @@
     "nightwatch": "nightwatch",
     "pretest": "npm run lint",
     "props-table": "lerna run props-table",
-    "postinstall": "npm run compile && npm run bootstrap && npm run dependency-markdown",
+    "postinstall": "npm run compile && npm run dependency-markdown",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
     "start": "cd packages/terra-site && npm run start",
     "start:express": "node scripts/express/app.js",
@@ -95,5 +94,8 @@
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-suitcss": "^1.0.0",
     "terra-toolkit": "^2.0.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
