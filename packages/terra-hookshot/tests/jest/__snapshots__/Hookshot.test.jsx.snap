@@ -1,0 +1,38 @@
+exports[`test should render a default component 1`] = `
+<div>
+  <div
+    id="hookshot-standard-button" />
+</div>
+`;
+
+exports[`test should shallow a default component 1`] = `
+<div>
+  <Hookshot
+    attachmentBehavior="auto"
+    attachmentMargin={0}
+    content={
+      <OnClickOutside(HookshotContent)
+        onRequestClose={[Function]}>
+        <div
+          style={
+            Object {
+              "backgroundColor": "red",
+              "height": "40px",
+              "width": "200px",
+            }
+          }>
+          Hookshot
+        </div>
+      </OnClickOutside(HookshotContent)>
+    }
+    contentAttachment="top center"
+    contentOffset="0 0"
+    isEnabled={true}
+    isOpen={false}
+    targetOffset="0 0"
+    targetRef={[Function]} />
+  <div
+    id="hookshot-standard-button"
+    onClick={[Function]} />
+</div>
+`;
