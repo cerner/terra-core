@@ -25,6 +25,7 @@ import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
+import MenuExamples from './examples/menu/Index';
 import ModalExamples from './examples/modal/Index';
 import ModalManagerExamples from './examples/modal-manager/Index';
 import OverlayExamples from './examples/overlay/Index';
@@ -70,6 +71,9 @@ import LoadingOverlayTestRoutes from 'terra-overlay/tests/nightwatch/LoadingOver
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import MarkdownTestRoutes from 'terra-markdown/tests/nightwatch/MarkdownTestRoutes';
+import MenuTestRoutes from 'terra-menu/tests/nightwatch/menu/MenuTestRoutes';
+import MenuItemTestRoutes from 'terra-menu/tests/nightwatch/menu-item/MenuItemTestRoutes';
+import MenuItemGroupTestRoutes from 'terra-menu/tests/nightwatch/menu-item-group/MenuItemGroupTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
@@ -117,6 +121,7 @@ ReactDOM.render((
       <Route path="icon" component={IconExamples} />
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
+      <Route path="menu" component={MenuExamples} />
       <Route path="modal" component={ModalExamples} />
       <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="overlay" component={OverlayExamples} />
@@ -162,6 +167,9 @@ ReactDOM.render((
     {TableTestRoutes}
     {TimeInputTestRoutes}
     {MarkdownTestRoutes}
+    {MenuTestRoutes}
+    {MenuItemTestRoutes}
+    {MenuItemGroupTestRoutes}
     {ModalTestRoutes}
     {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}

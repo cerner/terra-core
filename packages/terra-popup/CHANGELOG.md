@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fix `-var()` syntax.
+
 ### Fixed
 * Implementation of the overlay styling.
 
