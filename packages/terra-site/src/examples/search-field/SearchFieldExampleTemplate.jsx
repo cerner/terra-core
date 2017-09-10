@@ -6,17 +6,17 @@ const propTypes = {
   /**
    * The mimimum search text length if provided. Used for the invalid search length message.
    */
-  minimumSearchTextLength: PropTypes.string,
+  minimumSearchTextLength: PropTypes.number,
 };
 
 const defaultProps = {
-  minimumSearchTextLength: '2',
+  minimumSearchTextLength: 2,
 };
 
 class SearchFieldExampleTemplate extends React.Component {
   constructor(props) {
     super(props);
-    this.defaultLength = this.props.minimumSearchTextLength === '2' ? 'default' : '';
+    this.defaultLength = this.props.minimumSearchTextLength === 2 ? 'default' : '';
     this.invalidSearchMessage = `The ${this.defaultLength} minimum search length is ${this.props.minimumSearchTextLength}.`;
     this.state = { searchText: '', message: this.invalidSearchMessage };
     this.handleSearch = this.handleSearch.bind(this);

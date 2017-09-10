@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.9.0 - (September 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.8.0 - (September 5, 2017)
 ------------------
 ### Added
@@ -13,6 +18,7 @@ Unreleased
 ------------------
 ### Added
 * Added line-height styles to site-nav
+* Fixed prop-types error for invalid data type in search field examples
 
 ### Changed
 * Updated various examples to use `span` instead of `p` elements in sample content
