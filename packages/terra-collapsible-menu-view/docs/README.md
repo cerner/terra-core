@@ -1,12 +1,12 @@
 # Terra Collapsible Menu View
 
-The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into a "..." menu.
+The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu.
 
-CollapsibleMenuView.Item will flex between a button when displayed face-up and a Menu.Item when in a menu. An item can have an onClick action and/or contain menuItems that will be displayed in a menu when clicked (they will be displayed in a submenu if the item is rolled into the "..." menu)
+CollapsibleMenuView.Item will flex between a button when displayed face-up and a Menu.Item when in a menu. An item can have an onClick action and/or contain menuItems that will be displayed in a menu when clicked (they will be displayed in a submenu if the item is rolled into the ellipsis menu)
 
-CollapsibleMenuView.ToggleItem will flex between a checkbox with a label when displayed face-up and a selectable Menu.Item when in a menu.
+CollapsibleMenuView.Toggle will flex between a checkbox with a label when displayed face-up and a selectable Menu.Item when in a menu.
 
-CollapsibleMenuView.ItemGroup will flex between a button group when displayed face-up and a Menu.ItemGroup when rolled into the "..." menu. A selectable ItemGroup will have toggle style selection. An Item group that is not slectable will have it's children roll into the "..." menu as non selectable Menu.Items.
+CollapsibleMenuView.ItemGroup will flex between a button group when displayed face-up and a Menu.ItemGroup when rolled into the ellipsis menu. A selectable ItemGroup will have toggle style selection. An Item group that is not slectable will have it's children roll into the ellipsis menu as non selectable Menu.Items.
 
 CollapsibleMenuView.Divider will flex between a vertical divider when displayed face-up and a Menu.Divider when in a menu.
 

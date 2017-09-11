@@ -36,8 +36,7 @@ class CollapsibleMenuView extends React.Component {
     this.setContainer = this.setContainer.bind(this);
     this.setMenuButton = this.setMenuButton.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    this.visibleChildComponents = this.visibleChildComponents.bind(this);
-    this.hiddenChildComponents = this.hiddenChildComponents.bind(this);
+    this.sortChildComponents = this.sortChildComponents.bind(this);
     this.state = {
       hiddenIndexes: [],
       menuHidden: false,
@@ -98,29 +97,22 @@ class CollapsibleMenuView extends React.Component {
     this.setState({ menuHidden, hiddenIndexes });
   }
 
-  visibleChildComponents(children) {
+  sortChildComponents(children) {
     const visibleChildren = [];
+    const hiddenChildren = [];
     for (let i = 0; i < children.length; i += 1) {
       if (this.state.hiddenIndexes.indexOf(i) < 0) {
         visibleChildren.push(children[i]);
+      } else {
+        hiddenChildren.push(children[i]);
       }
     }
-    return visibleChildren;
-  }
-
-  hiddenChildComponents(children) {
-    const indexes = this.state.hiddenIndexes;
-    const hiddenChildren = [];
-    for (let i = 0; i < indexes.length; i += 1) {
-      hiddenChildren.push(children[indexes[i]]);
-    }
-    return hiddenChildren;
+    return { visibleChildren, hiddenChildren };
   }
 
   render() {
     const { children, boundingRef, ...customProps } = this.props;
-    const visibleChildren = this.visibleChildComponents(children);
-    const hiddenChildren = this.hiddenChildComponents(children);
+    const { visibleChildren, hiddenChildren } = this.sortChildComponents(children);
     const collapsibleMenuViewClassName = cx([
       'collapsible-menu-view',
       customProps.className,

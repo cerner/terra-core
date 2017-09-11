@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-collapsible-menu-view.svg)](https://www.npmjs.org/package/terra-collapsible-menu-view)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into a "..." menu.
+The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-collapsible-menu-view/docs)

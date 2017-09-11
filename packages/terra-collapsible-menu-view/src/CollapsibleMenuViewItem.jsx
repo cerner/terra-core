@@ -118,18 +118,37 @@ class CollapsibleMenuViewItem extends React.Component {
         />
       );
     } else if (isCollapsibleGroupItem) {
-      item = <ButtonGroup.Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} isSelected={isSelected} />;
+      item = (
+        <ButtonGroup.Button
+          {...attributes}
+          icon={icon}
+          text={faceUpText}
+          isReversed={isReversed}
+          isSelected={isSelected}
+        />
+      );
     } else if (subMenuItems && subMenuItems.length > 0) {
       item = (
         <Menu
           boundingRef={boundingRef}
-          button={<Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} onClick={this.handleButtonClick} />}
+          button={(
+            <Button
+              {...attributes}
+              icon={icon}
+              text={faceUpText}
+              isReversed={isReversed}
+              onClick={this.handleButtonClick}
+            />)}
         >
           {subMenuItems}
         </Menu>
       );
     } else {
-      item = <div className={cx('face-up-item')}><Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} /></div>;
+      item = (
+        <div className={cx('face-up-item')}>
+          <Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} />
+        </div>
+      );
     }
 
     return item;
