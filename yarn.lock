@@ -5690,9 +5690,9 @@ once@^1.3.0, once@^1.3.3, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-"one-cerner-style-icons@https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz":
-  version "1.0.0"
-  resolved "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz#2762acbcdcabc21b3dadf7ac7eb9a9e5de835a0e"
+"one-cerner-style-icons@https://github.com/cerner/one-cerner-style-icons/archive/1.4.3.tar.gz":
+  version "1.4.3"
+  resolved "https://github.com/cerner/one-cerner-style-icons/archive/1.4.3.tar.gz#133662b91d046c81f3c9630969887401103012bc"
 
 onecolor@^3.0.4:
   version "3.0.4"

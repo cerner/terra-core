@@ -87,14 +87,14 @@ module.exports = {
       chunks: ['babel-polyfill', 'terra-core'],
     }),
     new I18nAggregatorPlugin({
-      baseDirectory: __dirname,
+      baseDirectory: path.resolve('../../'),
       supportedLocales: i18nSupportedLocales,
     }),
     new webpack.NamedChunksPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
-    modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
+    modules: [path.resolve(__dirname, '../../aggregated-translations'), 'node_modules'],
   },
   output: {
     filename: '[name].js',
