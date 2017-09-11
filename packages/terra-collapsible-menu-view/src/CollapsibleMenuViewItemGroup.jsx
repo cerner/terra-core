@@ -64,8 +64,13 @@ class CollapsibleMenuViewItemGroup extends React.Component {
       );
     }
 
+    const buttonGroupClassNames = cx([
+      'face-up-item',
+      customProps.className,
+    ]);
+
     return (
-      <ButtonGroup {...customProps} className={cx('face-up-item')} isSelectable={isSelectable}>
+      <ButtonGroup {...customProps} className={buttonGroupClassNames} isSelectable={isSelectable}>
         {children}
       </ButtonGroup>
     );

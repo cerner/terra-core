@@ -73,7 +73,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render menu i
 exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
 <ButtonGroup
   buttons={Array []}
-  className="Testing"
+  className="face-up-item Testing"
   isCompact={false}
   isSelectable={false}
   variant="default">

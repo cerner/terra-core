@@ -89,7 +89,6 @@ class CollapsibleMenuViewItem extends React.Component {
     return this.buttonNode;
   }
 
-
   render() {
     const {
       icon,
