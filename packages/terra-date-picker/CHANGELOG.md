@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Set react-datepicker popup attachment to fix bidi display
 
 1.8.0 - (September 5, 2017)
 ------------------
