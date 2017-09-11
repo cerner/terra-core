@@ -4,6 +4,13 @@ Changelog
 Unreleased
 ----------
 
+1.7.0 - (September 7, 2017)
+------------------
+### Changed
+* Minor version bump
+### Changed
+* Update SCSS variable name for breakpoints to avoid conflicts with legacy code
+
 1.6.0 - (September 5, 2017)
 ------------------
 ### Changed
