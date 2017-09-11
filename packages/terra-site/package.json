@@ -42,6 +42,7 @@
     "terra-button": "^1.7.0",
     "terra-button-group": "^1.8.0",
     "terra-card": "^1.2.0",
+    "terra-collapsible-menu-view": "^0.x",
     "terra-content-container": "^1.7.0",
     "terra-date-picker": "^1.9.0",
     "terra-demographics-banner": "^1.8.0",

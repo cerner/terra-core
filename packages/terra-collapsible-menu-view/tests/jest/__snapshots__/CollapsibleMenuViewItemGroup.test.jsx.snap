@@ -1,0 +1,137 @@
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should merge custom props 1`] = `
+<List
+  className="Testing"
+  isDivided={false}>
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</List>
+`;
+
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should merge custom props when selectable 1`] = `
+<MenuItemGroup
+  className="Testing">
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</MenuItemGroup>
+`;
+
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a menu item group when selectable 1`] = `
+<MenuItemGroup>
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</MenuItemGroup>
+`;
+
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render menu items when isSelectable is not set 1`] = `
+<List
+  isDivided={false}>
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</List>
+`;
+
+exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
+<ButtonGroup
+  buttons={Array []}
+  className="Testing"
+  isCompact={false}
+  isSelectable={false}
+  variant="default">
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</ButtonGroup>
+`;
+
+exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
+<ButtonGroup
+  buttons={Array []}
+  className="face-up-item"
+  isCompact={false}
+  isSelectable={false}
+  variant="default">
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</ButtonGroup>
+`;
+
+exports[`CollapsibleMenuViewToggle should render a selectable button group 1`] = `
+<ButtonGroup
+  buttons={Array []}
+  className="face-up-item"
+  isCompact={false}
+  isSelectable={true}
+  variant="default">
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+  <CollapsibleMenuViewItem
+    isIconOnly={false}
+    isReversed={false}
+    isSelected={false}
+    shouldCloseOnClick={true}
+    text="Testing" />
+</ButtonGroup>
+`;

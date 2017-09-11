@@ -1,0 +1,91 @@
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a selectable menu item 1`] = `
+<MenuItem
+  isSelectable={true}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing" />
+`;
+
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set defaultChecked to false 1`] = `
+<MenuItem
+  isSelectable={false}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing" />
+`;
+
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected prop on menu item 1`] = `
+<MenuItem
+  isSelectable={true}
+  isSelected={true}
+  subMenuItems={Array []}
+  text="Testing" />
+`;
+
+exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
+<div
+  className="face-up-item">
+  <Control
+    className="control Testing"
+    defaultChecked={false}
+    disabled={false}
+    inputAttrs={Object {}}
+    isInline={false}
+    labelText="Testing"
+    labelTextAttrs={Object {}}
+    name={null}
+    onChange={[Function]}
+    type="checkbox" />
+</div>
+`;
+
+exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
+<div
+  className="face-up-item">
+  <Control
+    className="control"
+    defaultChecked={false}
+    disabled={false}
+    inputAttrs={Object {}}
+    isInline={false}
+    labelText="Testing"
+    labelTextAttrs={Object {}}
+    name={null}
+    onChange={[Function]}
+    type="checkbox" />
+</div>
+`;
+
+exports[`CollapsibleMenuViewToggle should set isSelectable prop to false 1`] = `
+<div
+  className="face-up-item">
+  <Control
+    className="control"
+    defaultChecked={false}
+    disabled={true}
+    inputAttrs={Object {}}
+    isInline={false}
+    labelText="Testing"
+    labelTextAttrs={Object {}}
+    name={null}
+    onChange={[Function]}
+    type="checkbox" />
+</div>
+`;
+
+exports[`CollapsibleMenuViewToggle should set isSelected prop 1`] = `
+<div
+  className="face-up-item">
+  <Control
+    className="control"
+    defaultChecked={true}
+    disabled={false}
+    inputAttrs={Object {}}
+    isInline={false}
+    labelText="Testing"
+    labelTextAttrs={Object {}}
+    name={null}
+    onChange={[Function]}
+    type="checkbox" />
+</div>
+`;
