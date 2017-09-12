@@ -109,6 +109,12 @@ const getBounds = (element) => {
   box.right = doc.body.clientWidth - box.width - box.left;
   box.bottom = doc.body.clientHeight - box.height - box.top;
 
+
+  // round origin
+  box.top = Math.round(box.top);
+  box.right = Math.round(box.right);
+  box.bottom = Math.round(box.bottom);
+  box.left = Math.round(box.left);
   return box;
 };
 
@@ -149,6 +155,11 @@ const getBoundingRect = (boundingElement) => {
     }
   });
 
+  // round origin
+  rect.top = Math.round(rect.top);
+  rect.right = Math.round(rect.right);
+  rect.bottom = Math.round(rect.bottom);
+  rect.left = Math.round(rect.left);
   return rect;
 };
 

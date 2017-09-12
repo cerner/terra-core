@@ -89,8 +89,13 @@ class Hookshot extends React.Component {
     this.setContentNode = this.setContentNode.bind(this);
     this.getNodeRects = this.getNodeRects.bind(this);
     this.update = this.update.bind(this);
+    this.tick = this.tick.bind(this);
+    this.now = this.now.bind(this);
     this.state = { isEnabled: props.isEnabled };
     this.listenersAdded = false;
+    this.lastCall = null;
+    this.lastDuration = null;
+    this.pendingTimeout = null;
   }
 
   componentDidMount() {
@@ -134,6 +139,22 @@ class Hookshot extends React.Component {
     return { targetRect, contentRect, boundingRect };
   }
 
+  now() {
+    return performance.now();
+  }
+
+  tick() {
+    if (typeof this.lastDuration !== 'undefined' && this.lastDuration > 100) {
+      // Throttle to 10fps, in order to handle sarafi and mobile performance
+      this.lastDuration = Math.min(this.lastDuration - 100, 250);
+      return;
+    }
+
+    this.lastCall = this.now();
+    this.update();
+    this.lastDuration = this.now() - this.lastCall;
+  }
+
   enableListeners() {
     const target = this.props.targetRef();
     if (target) {
@@ -164,12 +185,17 @@ class Hookshot extends React.Component {
     this.listenersAdded = false;
   }
 
-  position(event) {
-    const rects = this.getNodeRects();
+  position(event, resetCache) {
+    if (resetCache) {
+      this.cachedRects = this.getNodeRects();
+    } else {
+      this.cachedRects.targetRect = HookshotUtils.getBounds(this.props.targetRef());
+    }
+
     const result = HookshotUtils.positionStyleFromBounds(
-      rects.boundingRect,
-      rects.targetRect,
-      rects.contentRect,
+      this.cachedRects.boundingRect,
+      this.cachedRects.targetRect,
+      this.cachedRects.contentRect,
       this.cOffset,
       this.tOffset,
       this.cAttachment,
@@ -177,22 +203,30 @@ class Hookshot extends React.Component {
       this.props.attachmentMargin,
       this.props.attachmentBehavior,
     );
+
+    let styleUpdated = false;
     if (this.contentNode.style.position !== result.style.position) {
       this.contentNode.style.position = result.style.position;
+      styleUpdated = true;
     }
-    const newTransform = `translate3d(${result.style.left}, ${result.style.top}, 0px)`
+    const newTransform = `translate3d(${result.style.left}, ${result.style.top}, 0px)`; //this comparison is never valid, based on browser rounding
     if (this.contentNode.style.transform !== newTransform) {
       this.contentNode.style.transform = newTransform;
+      styleUpdated = true;
     }
-    if (this.contentNode.style.opacity !== '1.0') {
-      this.contentNode.style.opacity = '1.0';
+    if (this.contentNode.style.opacity !== '1') {
+      this.contentNode.style.opacity = '1';
+      styleUpdated = true;
     }
-
+    if (styleUpdated) {
+      this.cachedRects.contentRect = HookshotUtils.getBounds(this.contentNode);
+    }
+    
     if (this.props.onPosition) {
       this.props.onPosition(
         event,
-        rects.targetRect,
-        HookshotUtils.getBounds(this.contentNode),
+        this.cachedRects.targetRect,
+        this.cachedRects.contentRect,
         result.positions.cCoords.attachment,
         result.positions.tCoords.attachment,
         result.positions.tCoords.offset,
@@ -209,12 +243,12 @@ class Hookshot extends React.Component {
     if (!this.props.targetRef() || !this.contentNode) {
       return;
     }
-
     this.updateHookshot(event);
   }
 
   updateHookshot(event) {
-    this.position(event);
+    const resetCache = !event || (event.type !== 'scroll' && event.type !== 'touchmove');
+    this.position(event, resetCache);
   }
 
   cloneContent(content) {
