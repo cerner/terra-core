@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.8.0 - (September 7, 2017)
+------------------
 ### Added
 * Added compose icon.
 * Added incomingCall icon.

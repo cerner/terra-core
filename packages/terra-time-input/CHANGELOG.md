@@ -3,8 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+1.8.0 - (September 7, 2017)
+------------------
 ### Fixed
-* Fixed focus management issue between hour and time input in Firefox.
+* Focus management issue between hour and time input in Firefox.
+* Border styling
+* Input bidirectionality
 
 1.7.0 - (September 5, 2017)
 ------------------
