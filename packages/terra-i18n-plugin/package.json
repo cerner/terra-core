@@ -35,6 +35,8 @@
     "compile:clean": "$(cd ..; npm bin)/rimraf lib",
     "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore"
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "test": "npm run test:jest",
+    "test:jest": "cd ../../ && npm run jest -t i18n-plugin-spec && cd packages/terra-i18n-plugin"
   }
 }
