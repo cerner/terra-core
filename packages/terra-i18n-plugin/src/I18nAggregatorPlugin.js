@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import mkdirp from 'mkdirp';
 
+let supportedLocales;
+
 function generateTranslationFile(language, messages) {
   return `import { addLocaleData } from 'react-intl';
 import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
@@ -21,30 +23,40 @@ function getDirectories(srcPath) {
   return fs.readdirSync(srcPath).filter(file => fs.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-function aggregateTranslations(options) {
-  const supportedLocales = options.supportedLocales;
+function aggregateDirectory(languageMessages, currentDirectory) {
+  // Check the directory for each translation file
   supportedLocales.forEach((language) => {
-    const currentLanguageMessages = {};
-
-    // Check base directory for translation file
-    const baseTranslationFile = path.resolve(options.baseDirectory, 'translations', `${language}.json`);
-    if (fs.existsSync(baseTranslationFile)) {
-      Object.assign(currentLanguageMessages, JSON.parse(fs.readFileSync(baseTranslationFile, 'utf8')));
+    const translationFile = path.resolve(currentDirectory, 'translations', `${language}.json`);
+    if (fs.existsSync(translationFile)) {
+      Object.assign(languageMessages[language], JSON.parse(fs.readFileSync(translationFile, 'utf8')));
     }
+  });
 
-    // Check module directory for translation file
-    getDirectories(path.resolve(options.baseDirectory, 'node_modules')).forEach((module) => {
-      const translationFile = path.resolve(options.baseDirectory, 'node_modules', module, 'translations', `${language}.json`);
-      if (fs.existsSync(translationFile)) {
-        Object.assign(currentLanguageMessages, JSON.parse(fs.readFileSync(translationFile, 'utf8')));
-      }
+  // Check the directory's node_modules for translation files
+  const nodeMoudlesPath = path.resolve(currentDirectory, 'node_modules');
+  if (fs.existsSync(nodeMoudlesPath)) {
+    getDirectories(nodeMoudlesPath).forEach((module) => {
+      aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module));
     });
+  }
 
-    // Aggregate messages for language in one file
-    if (currentLanguageMessages !== {}) {
+  return languageMessages;
+}
+
+function aggregateTranslations(options) {
+  supportedLocales = options.supportedLocales;
+
+  let languageMessages = {};
+  supportedLocales.forEach((language) => { languageMessages[language] = {}; });
+
+  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory);
+
+  // Create a file for each language for the aggregated messages
+  supportedLocales.forEach((language) => {
+    if (language in languageMessages) {
       mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
       fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
-        generateTranslationFile(language, currentLanguageMessages));
+        generateTranslationFile(language, languageMessages[language]));
     } else {
       throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
     }
