@@ -1,0 +1,714 @@
+exports[`test should have multiple rows that are not selected and can be clicked if isSelectable is true and isSelected is false 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelectable is true and isSelected is false 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelectable is true and isSelected is undefined 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelectable is true and isSelected is undefined 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelectable is undefined and isSelected is false 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelectable is undefined and isSelected is false 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelected and isSelectable are undefined 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and can be clicked if isSelected and isSelectable are undefined 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and cannot be clicked if isSelectable is false and isSelected is undefined 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are not selected and cannot be clicked if isSelectable is false and isSelected is undefined 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are selected and can be clicked if isSelectable is true and isSelected is true 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are selected and can be clicked if isSelectable is true and isSelected is true 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are selected and can be clicked if isSelectable is undefined and isSelected is true 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are selected and can be clicked if isSelectable is undefined and isSelected is true 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are selected and cannot be clicked if isSelectable is false and isSelected is true 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={false}
+    isSelected={true}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={false}
+    isSelected={true}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have multiple rows that are selected and cannot be clicked if isSelectable is false and isSelected is true 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={false}
+    isSelected={true}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelectable={false}
+    isSelected={true}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should have one row preselected if it was declared as selectable and selected 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should not select row on click if row is not selectable 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should render MultipleSelectableRows one selectable row and one non-selectable row 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    isSelectable={false}
+    isSelected={false}>
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should render MultipleSelectableRows tag 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should render MultipleSelectableRows with no rows 1`] = `<TableRows />`;
+
+exports[`test should render MultipleSelectableRows with one row 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should select multiple rows 1`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={false}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;
+
+exports[`test should select multiple rows 2`] = `
+<TableRows>
+  <TableRow
+    className="PERSON_0"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelectable={true}
+    isSelected={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0">
+    <TableCell
+      content="John Smith" />
+    <TableCell
+      content="123 Adams Drive" />
+    <TableCell
+      content="111-222-3333" />
+  </TableRow>
+</TableRows>
+`;

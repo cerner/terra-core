@@ -16,6 +16,12 @@ import TableWithHighlightedRows from './components/TableWithHighlightedRows';
 import TableWithSortIndicator from './components/TableWithSortIndicator';
 import TableWithSubheaders from './components/TableWithSubheaders';
 import TableWithSelectableRowsAndSubheaders from './components/TableWithSelectableRowsAndSubheaders';
+import MultipleRowSelectableTableMultipleRows from './components/MultipleRowSelectableTableMultipleRows';
+import MultipleRowSelectableTableSingleRow from './components/MultipleRowSelectableTableSingleRow';
+import MultipleRowSelectableTableNoRows from './components/MultipleRowSelectableTableNoRows';
+import MultipleRowSelectableTableOnChange from './components/MultipleRowSelectableTableOnChange';
+import MultipleRowSelectableTableSubheaders from './components/MultipleRowSelectableTableSubheaders';
+import MultipleRowSelectableTablePreselectedRow from './components/MultipleRowSelectableTablePreselectedRow';
 
 const routes = (
   <div>
@@ -33,6 +39,12 @@ const routes = (
     <Route path="/tests/table-tests/table-sort-indicator" component={TableWithSortIndicator} />
     <Route path="/tests/table-tests/table-subheaders" component={TableWithSubheaders} />
     <Route path="/tests/table-tests/table-selectable-subheaders" component={TableWithSelectableRowsAndSubheaders} />
+    <Route path="/tests/table-tests/multiple-selectable-table-single-row" component={MultipleRowSelectableTableSingleRow} />
+    <Route path="/tests/table-tests/multiple-selectable-table-no-rows" component={MultipleRowSelectableTableNoRows} />
+    <Route path="/tests/table-tests/multiple-selectable-table-multiple-rows" component={MultipleRowSelectableTableMultipleRows} />
+    <Route path="/tests/table-tests/multiple-selectable-table-onchange" component={MultipleRowSelectableTableOnChange} />
+    <Route path="/tests/table-tests/multiple-selectable-table-subheaders" component={MultipleRowSelectableTableSubheaders} />
+    <Route path="/tests/table-tests/multiple-selectable-table-preselected-row" component={MultipleRowSelectableTablePreselectedRow} />
   </div>
 );
 

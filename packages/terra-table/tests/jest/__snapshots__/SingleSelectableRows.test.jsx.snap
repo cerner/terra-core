@@ -114,7 +114,7 @@ exports[`test should render SingleSelectableRows with one row 1`] = `
 </TableRows>
 `;
 
-exports[`test should select an row 1`] = `
+exports[`test should select a row 1`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -147,7 +147,7 @@ exports[`test should select an row 1`] = `
 </TableRows>
 `;
 
-exports[`test should select an row 2`] = `
+exports[`test should select a row 2`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"

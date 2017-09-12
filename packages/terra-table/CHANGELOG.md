@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added MultipleSelectableRows component
 
 1.10.0 - (September 12, 2017)
 ------------------
