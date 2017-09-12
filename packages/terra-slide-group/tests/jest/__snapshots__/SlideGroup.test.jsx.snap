@@ -1,6 +1,9 @@
-exports[`test should render a SlideGroup with animation enabled 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a SlideGroup with animation enabled 1`] = `
 <div
-  className="slide-group">
+  className="slide-group"
+>
   <CSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
@@ -14,21 +17,25 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
         "leave": "leave",
         "leaveActive": "leave-active",
       }
-    }>
+    }
+  >
     <Slide
-      isHidden={true}>
+      isHidden={true}
+    >
       <div>
         First
       </div>
     </Slide>
     <Slide
-      isHidden={true}>
+      isHidden={true}
+    >
       <div>
         Second
       </div>
     </Slide>
     <Slide
-      isHidden={false}>
+      isHidden={false}
+    >
       <div>
         Third
       </div>
@@ -37,9 +44,10 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
 </div>
 `;
 
-exports[`test should render a default SlideGroup 1`] = `
+exports[`should render a default SlideGroup 1`] = `
 <div
-  className="slide-group">
+  className="slide-group"
+>
   <CSSTransitionGroup
     transitionAppear={false}
     transitionEnter={false}
@@ -53,21 +61,25 @@ exports[`test should render a default SlideGroup 1`] = `
         "leave": "leave",
         "leaveActive": "leave-active",
       }
-    }>
+    }
+  >
     <Slide
-      isHidden={true}>
+      isHidden={true}
+    >
       <div>
         First
       </div>
     </Slide>
     <Slide
-      isHidden={true}>
+      isHidden={true}
+    >
       <div>
         Second
       </div>
     </Slide>
     <Slide
-      isHidden={false}>
+      isHidden={false}
+    >
       <div>
         Third
       </div>

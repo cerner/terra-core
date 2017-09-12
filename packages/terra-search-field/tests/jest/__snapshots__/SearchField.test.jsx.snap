@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Snapshots renders a basic search field 1`] = `
 <div
-  className="searchfield">
+  className="searchfield"
+>
   <Input
     className="input"
     name={null}
@@ -8,7 +11,8 @@ exports[`Snapshots renders a basic search field 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value="" />
+    value=""
+  />
   <Button
     className="button"
     isBlock={false}
@@ -17,18 +21,21 @@ exports[`Snapshots renders a basic search field 1`] = `
     isReversed={false}
     onClick={[Function]}
     type="button"
-    variant="default">
+    variant="default"
+  >
     <IconSearch
       data-name="Layer 1"
       viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg" />
+      xmlns="http://www.w3.org/2000/svg"
+    />
   </Button>
 </div>
 `;
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
-  className="searchfield">
+  className="searchfield"
+>
   <Input
     className="input"
     name={null}
@@ -36,7 +43,8 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     placeholder="Test"
     required={false}
     type="search"
-    value="" />
+    value=""
+  />
   <Button
     className="button"
     isBlock={false}
@@ -45,18 +53,21 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isReversed={false}
     onClick={[Function]}
     type="button"
-    variant="default">
+    variant="default"
+  >
     <IconSearch
       data-name="Layer 1"
       viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg" />
+      xmlns="http://www.w3.org/2000/svg"
+    />
   </Button>
 </div>
 `;
 
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
-  className="searchfield">
+  className="searchfield"
+>
   <Input
     className="input"
     name={null}
@@ -64,7 +75,8 @@ exports[`Snapshots renders a search field with a value 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value="Test" />
+    value="Test"
+  />
   <Button
     className="button"
     isBlock={false}
@@ -73,11 +85,13 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isReversed={false}
     onClick={[Function]}
     type="button"
-    variant="default">
+    variant="default"
+  >
     <IconSearch
       data-name="Layer 1"
       viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg" />
+      xmlns="http://www.w3.org/2000/svg"
+    />
   </Button>
 </div>
 `;

@@ -1,22 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Arrange default should render a arrange component with given fit and fill 1`] = `
 <div
-  className="arrange">
+  className="arrange"
+>
   <div
-    className="fit">
+    className="fit"
+  >
     <img
       alt="panda"
-      src="http:///uploads/2016/09/telegraph-1.jpg" />
+      src="http:///uploads/2016/09/telegraph-1.jpg"
+    />
   </div>
   <div
-    className="fill">
+    className="fill"
+  >
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="fit">
+    className="fit"
+  >
     <a
-      href="http://www.example.com" />
+      href="http://www.example.com"
+    />
   </div>
 </div>
 `;
@@ -24,98 +32,123 @@ exports[`Arrange default should render a arrange component with given fit and fi
 exports[`Arrange should render a arrange component with given className and id 1`] = `
 <div
   className="arrange testA testB testC"
-  id="testkey">
+  id="testkey"
+>
   <div
-    className="fit">
+    className="fit"
+  >
     <img
       alt="panda"
-      src="http:///uploads/2016/09/telegraph-1.jpg" />
+      src="http:///uploads/2016/09/telegraph-1.jpg"
+    />
   </div>
   <div
-    className="fill">
+    className="fill"
+  >
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="fit" />
+    className="fit"
+  />
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to bottom 1`] = `
 <div
-  className="arrange">
+  className="arrange"
+>
   <div
-    className="fit bottom">
+    className="fit bottom"
+  >
     <img
       alt="panda"
-      src="http:///uploads/2016/09/telegraph-1.jpg" />
+      src="http:///uploads/2016/09/telegraph-1.jpg"
+    />
   </div>
   <div
-    className="fill bottom">
+    className="fill bottom"
+  >
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="fit bottom" />
+    className="fit bottom"
+  />
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to center 1`] = `
 <div
-  className="arrange">
+  className="arrange"
+>
   <div
-    className="fit center" />
+    className="fit center"
+  />
   <div
-    className="fill center">
+    className="fill center"
+  >
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="fit center">
+    className="fit center"
+  >
     <a
-      href="http://www.example.com" />
+      href="http://www.example.com"
+    />
   </div>
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to stretch 1`] = `
 <div
-  className="arrange">
+  className="arrange"
+>
   <div
-    className="fit stretch">
+    className="fit stretch"
+  >
     <img
       alt="panda"
-      src="http:///uploads/2016/09/telegraph-1.jpg" />
+      src="http:///uploads/2016/09/telegraph-1.jpg"
+    />
   </div>
   <div
-    className="fill stretch">
+    className="fill stretch"
+  >
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="fit stretch" />
+    className="fit stretch"
+  />
 </div>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to top 1`] = `
 <div
-  className="arrange">
+  className="arrange"
+>
   <div
-    className="fit" />
+    className="fit"
+  />
   <div
-    className="fill">
+    className="fill"
+  >
     <div>
       FIll text
     </div>
   </div>
   <div
-    className="fit">
+    className="fit"
+  >
     <a
-      href="http://www.example.com" />
+      href="http://www.example.com"
+    />
   </div>
 </div>
 `;
