@@ -12,7 +12,7 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | babel-jest | ^19.0.0 | -- | [Babel](https://github.com/babel/babel) [jest](https://github.com/facebook/jest) plugin |
-| terra-props-table | ^1.5.0 | ^15.4.2 | terra-props-table |
+| terra-props-table | ^1.6.0 | ^15.4.2 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
