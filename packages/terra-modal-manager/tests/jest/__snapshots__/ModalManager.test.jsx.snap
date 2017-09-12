@@ -191,29 +191,29 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
         Array [
           <TestContainer
             app={
-                AppDelegateInstance {
-                    "closeDisclosure": [Function],
-                    "disclose": [Function],
-                    "dismiss": [Function],
-                    "maximize": [Function],
-                    "requestFocus": [Function],
-                  }
+              AppDelegateInstance {
+                "closeDisclosure": [Function],
+                "disclose": [Function],
+                "dismiss": [Function],
+                "maximize": [Function],
+                "requestFocus": [Function],
+              }
             }
             display="NUMBER 1"
-        />,
+          />,
           <TestContainer
             app={
-                AppDelegateInstance {
-                    "closeDisclosure": [Function],
-                    "disclose": [Function],
-                    "dismiss": [Function],
-                    "goBack": [Function],
-                    "maximize": [Function],
-                    "requestFocus": [Function],
-                  }
+              AppDelegateInstance {
+                "closeDisclosure": [Function],
+                "disclose": [Function],
+                "dismiss": [Function],
+                "goBack": [Function],
+                "maximize": [Function],
+                "requestFocus": [Function],
+              }
             }
             display="NUMBER 2"
-        />,
+          />,
         ]
       }
     />
@@ -288,29 +288,29 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
         Array [
           <TestContainer
             app={
-                AppDelegateInstance {
-                    "closeDisclosure": [Function],
-                    "disclose": [Function],
-                    "dismiss": [Function],
-                    "minimize": [Function],
-                    "requestFocus": [Function],
-                  }
+              AppDelegateInstance {
+                "closeDisclosure": [Function],
+                "disclose": [Function],
+                "dismiss": [Function],
+                "minimize": [Function],
+                "requestFocus": [Function],
+              }
             }
             display="NUMBER 1"
-        />,
+          />,
           <TestContainer
             app={
-                AppDelegateInstance {
-                    "closeDisclosure": [Function],
-                    "disclose": [Function],
-                    "dismiss": [Function],
-                    "goBack": [Function],
-                    "minimize": [Function],
-                    "requestFocus": [Function],
-                  }
+              AppDelegateInstance {
+                "closeDisclosure": [Function],
+                "disclose": [Function],
+                "dismiss": [Function],
+                "goBack": [Function],
+                "minimize": [Function],
+                "requestFocus": [Function],
+              }
             }
             display="NUMBER 2"
-        />,
+          />,
         ]
       }
     />

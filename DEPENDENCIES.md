@@ -22,7 +22,7 @@
 | express | ^4.15.2 | -- | Fast, unopinionated, minimalist web framework |
 | glob | ^7.1.1 | -- | a little globber |
 | identity-obj-proxy | ^3.0.0 | -- | an identity object using ES6 proxies |
-| jest | ^20.0.0 | -- | Delightful JavaScript Testing. |
+| jest | ^21.0.0 | -- | Delightful JavaScript Testing. |
 | lerna | 2.1.2 | -- | Tool for managing JavaScript projects with multiple packages |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
