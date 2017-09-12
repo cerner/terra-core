@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.9.0 - (September 12, 2017)
+------------------
 ### Fixed
 * Fixed search input rendering on Mobile Safari.
 
