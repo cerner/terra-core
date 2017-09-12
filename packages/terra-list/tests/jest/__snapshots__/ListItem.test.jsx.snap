@@ -1,15 +1,20 @@
-exports[`test should mount with isSelectable 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should mount with isSelectable 1`] = `
 <ListItem
   isSelectable={true}
-  isSelected={false}>
+  isSelected={false}
+>
   <li
-    className="list-item is-selectable" />
+    className="list-item is-selectable"
+  />
 </ListItem>
 `;
 
-exports[`test should mount with isSelectable and hasChevron 1`] = `
+exports[`should mount with isSelectable and hasChevron 1`] = `
 <li
-  className="list-item is-selectable">
+  className="list-item is-selectable"
+>
   <Arrange
     align="center"
     fill={
@@ -19,7 +24,8 @@ exports[`test should mount with isSelectable and hasChevron 1`] = `
     }
     fitEnd={
       <span
-        className="chevron">
+        className="chevron"
+      >
         <IconChevronRight
           className=""
           data-name="Layer 1"
@@ -27,27 +33,32 @@ exports[`test should mount with isSelectable and hasChevron 1`] = `
           isBidi={true}
           viewBox="0 0 48 48"
           width="0.8em"
-          xmlns="http://www.w3.org/2000/svg" />
+          xmlns="http://www.w3.org/2000/svg"
+        />
       </span>
-    } />
+    }
+  />
 </li>
 `;
 
-exports[`test should render with className 1`] = `
+exports[`should render with className 1`] = `
 <li
-  className="list-item textClass" />
+  className="list-item textClass"
+/>
 `;
 
-exports[`test should render with content 1`] = `
+exports[`should render with content 1`] = `
 <li
-  className="list-item">
+  className="list-item"
+>
   <p>
     text
   </p>
 </li>
 `;
 
-exports[`test should render with selected 1`] = `
+exports[`should render with selected 1`] = `
 <li
-  className="list-item selected" />
+  className="list-item selected"
+/>
 `;

@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`generateMarkdown with valid input should generate a markdown table 1`] = `
 "## ComponentName Props Table
 | Prop Name | Type | Is Required | Default Value | Description |
