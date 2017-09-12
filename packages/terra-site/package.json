@@ -23,8 +23,8 @@
     "deploy": "npm run compile:prod && gh-pages -d build",
     "lint": "npm run lint:js",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "test": "npm run test:spec",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+    "test": "npm run test:jest",
+    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
   },
   "dependencies": {
     "moment": "^2.17.1",

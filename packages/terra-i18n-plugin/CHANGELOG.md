@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Aggregate all node_module directories for translations
+
+### Added
+* Jest Tests
 
 1.2.0 - (August 31, 2017)
 ------------------
