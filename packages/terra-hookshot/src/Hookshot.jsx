@@ -91,7 +91,7 @@ class Hookshot extends React.Component {
     this.update = this.update.bind(this);
     this.tick = this.tick.bind(this);
     this.now = this.now.bind(this);
-    this.state = { isEnabled: props.isEnabled };
+    this.state = { isEnabled: props.isEnabled && props.isOpen };
     this.listenersAdded = false;
     this.lastCall = null;
     this.lastDuration = null;
@@ -108,8 +108,8 @@ class Hookshot extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.isEnabled !== this.props.isEnabled) {
-      this.setState({ isEnabled: newProps.isEnabled });
+    if (newProps.isEnabled !== this.props.isEnabled || newProps.isOpen !== this.props.isOpen) {
+      this.setState({ isEnabled: newProps.isEnabled && newProps.isOpen});
     }
   }
 
@@ -144,10 +144,23 @@ class Hookshot extends React.Component {
   }
 
   tick() {
-    if (typeof this.lastDuration !== 'undefined' && this.lastDuration > 100) {
-      // Throttle to 10fps, in order to handle sarafi and mobile performance
-      this.lastDuration = Math.min(this.lastDuration - 100, 250);
+    if (this.lastDuration && this.lastDuration > 16) {
+      // Throttle to 60fps, in order to handle sarafi and mobile performance
+      this.lastDuration = Math.min(this.lastDuration - 16, 100);
+
+      // // Just in case this is the last event, remember to position just once more
+      this.pendingTimeout = setTimeout(this.tick, 100);
       return;
+    }
+
+    if (this.lastCall && (this.now() - this.lastCall) < 10) {
+      // Some browsers call events a little too frequently, refuse to run more than is reasonable
+      return;
+    }
+
+    if (this.pendingTimeout != null) {
+      clearTimeout(this.pendingTimeout);
+      this.pendingTimeout = null;
     }
 
     this.lastCall = this.now();
@@ -158,12 +171,12 @@ class Hookshot extends React.Component {
   enableListeners() {
     const target = this.props.targetRef();
     if (target) {
-      ['resize', 'scroll', 'touchmove'].forEach(event => window.addEventListener(event, this.update));
+      ['resize', 'scroll', 'touchmove'].forEach(event => window.addEventListener(event, this.tick));
 
       this.scrollParents = HookshotUtils.getScrollParents(target);
       this.scrollParents.forEach((parent) => {
         if (parent !== target.ownerDocument) {
-          parent.addEventListener('scroll', this.update);
+          parent.addEventListener('scroll', this.tick);
         }
       });
 
@@ -172,13 +185,13 @@ class Hookshot extends React.Component {
   }
 
   disableListeners() {
-    ['resize', 'scroll', 'touchmove'].forEach(event => window.removeEventListener(event, this.update));
+    ['resize', 'scroll', 'touchmove'].forEach(event => window.removeEventListener(event, this.tick));
 
     const target = this.props.targetRef();
     if (this.scrollParents) {
       this.scrollParents.forEach((parent) => {
         if (parent !== target.ownerDocument) {
-          parent.removeEventListener('scroll', this.update);
+          parent.removeEventListener('scroll', this.tick);
         }
       });
     }
