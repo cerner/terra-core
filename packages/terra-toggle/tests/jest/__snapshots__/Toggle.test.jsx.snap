@@ -1,17 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Toggle should render a default toggle 1`] = `
 <div
   aria-hidden="true"
-  class="toggle" />
+  class="toggle"
+/>
 `;
 
 exports[`Toggle should render an animated toggle 1`] = `
 <div
   aria-hidden="true"
-  class="toggle">
+  class="toggle"
+>
   <div
     aria-hidden="false"
     class="rah-static"
-    style="height:0px;overflow:hidden;">
+    style="height:0px;overflow:hidden;"
+  >
     <div>
       Test
     </div>
@@ -22,7 +27,8 @@ exports[`Toggle should render an animated toggle 1`] = `
 exports[`Toggle should render an open toggle 1`] = `
 <div
   aria-hidden="false"
-  class="toggle">
+  class="toggle"
+>
   Test
 </div>
 `;

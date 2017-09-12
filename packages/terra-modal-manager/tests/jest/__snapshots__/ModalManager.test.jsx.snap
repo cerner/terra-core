@@ -1,13 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ModalManger - app - should render the ModalManager with given AppDelegate as source 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
         "dismiss": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="small"
@@ -19,23 +23,27 @@ exports[`ModalManger - app - should render the ModalManager with given AppDelega
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - focus lost - should render the ModalManager with focus lost 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal=""
@@ -47,23 +55,27 @@ exports[`ModalManger - focus lost - should render the ModalManager with focus lo
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={false}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - isFocused - should render the ModalManager with focus trapped 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal=""
@@ -75,23 +87,27 @@ exports[`ModalManger - isFocused - should render the ModalManager with focus tra
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={false}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - isMaximized - should render the ModalManager as maximized 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal=""
@@ -103,23 +119,27 @@ exports[`ModalManger - isMaximized - should render the ModalManager as maximized
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={false}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - isOpen - should render the ModalManager as open 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="small"
@@ -131,23 +151,27 @@ exports[`ModalManger - isOpen - should render the ModalManager as open 1`] = `
     isOpen={true}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - modal components - should render the ModalManager with given modal contents 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="small"
@@ -159,7 +183,8 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     isOpen={true}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
       items={
@@ -174,7 +199,8 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "requestFocus": [Function],
                   }
             }
-            display="NUMBER 1" />,
+            display="NUMBER 1"
+        />,
           <TestContainer
             app={
                 AppDelegateInstance {
@@ -186,22 +212,26 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "requestFocus": [Function],
                   }
             }
-            display="NUMBER 2" />,
+            display="NUMBER 2"
+        />,
         ]
-      } />
+      }
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - modal components - should render the ModalManager with given modal contents when components cannot be retrieved 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal=""
@@ -213,7 +243,8 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     isOpen={true}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={false}
       items={
@@ -221,20 +252,23 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
           undefined,
           undefined,
         ]
-      } />
+      }
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - modal components - should render the ModalManager with given modal contents when maximized 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal=""
@@ -246,7 +280,8 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
     isOpen={true}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={false}
       items={
@@ -261,7 +296,8 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "requestFocus": [Function],
                   }
             }
-            display="NUMBER 1" />,
+            display="NUMBER 1"
+        />,
           <TestContainer
             app={
                 AppDelegateInstance {
@@ -273,22 +309,26 @@ exports[`ModalManger - modal components - should render the ModalManager with gi
                     "requestFocus": [Function],
                   }
             }
-            display="NUMBER 2" />,
+            display="NUMBER 2"
+        />,
         ]
-      } />
+      }
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - sizes - should render the ModalManager with huge size 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="huge"
@@ -300,23 +340,27 @@ exports[`ModalManger - sizes - should render the ModalManager with huge size 1`]
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - sizes - should render the ModalManager with large size 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="large"
@@ -328,23 +372,27 @@ exports[`ModalManger - sizes - should render the ModalManager with large size 1`
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - sizes - should render the ModalManager with medium size 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="medium"
@@ -356,23 +404,27 @@ exports[`ModalManger - sizes - should render the ModalManager with medium size 1
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - sizes - should render the ModalManager with small size 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="small"
@@ -384,23 +436,27 @@ exports[`ModalManger - sizes - should render the ModalManager with small size 1`
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger - sizes - should render the ModalManager with tiny size 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="tiny"
@@ -412,23 +468,27 @@ exports[`ModalManger - sizes - should render the ModalManager with tiny size 1`]
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
 
 exports[`ModalManger should render the ModalManager with defaults 1`] = `
 <div
-  className="container">
+  className="container"
+>
   <TestContainer
     app={
       AppDelegateInstance {
         "disclose": [Function],
       }
-    } />
+    }
+  />
   <Modal
     ariaLabel="Modal"
     classNameModal="small"
@@ -440,10 +500,12 @@ exports[`ModalManger should render the ModalManager with defaults 1`] = `
     isOpen={false}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document">
+    role="document"
+  >
     <SlideGroup
       isAnimated={true}
-      items={Array []} />
+      items={Array []}
+    />
   </Modal>
 </div>
 `;
