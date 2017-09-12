@@ -9,6 +9,11 @@ Unreleased
 ### Added
 * Jest Tests
 
+1.3.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.2.0 - (August 31, 2017)
 ------------------
 ### Changed

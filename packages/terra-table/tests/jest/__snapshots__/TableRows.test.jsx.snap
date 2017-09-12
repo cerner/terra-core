@@ -1,61 +1,83 @@
-exports[`test should render TableRows tag 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render TableRows tag 1`] = `
 <tbody>
   <TableRow
-    isSelected={false}>
+    isSelected={false}
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
-    isSelected={false}>
+    isSelected={false}
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </tbody>
 `;
 
-exports[`test should render TableRows with multiple rows 1`] = `
+exports[`should render TableRows with multiple rows 1`] = `
 <tbody>
   <TableRow
-    isSelected={false}>
+    isSelected={false}
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
-    isSelected={false}>
+    isSelected={false}
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </tbody>
 `;
 
-exports[`test should render TableRows with no rows 1`] = `<tbody />`;
+exports[`should render TableRows with no rows 1`] = `<tbody />`;
 
-exports[`test should render TableRows with one row 1`] = `
+exports[`should render TableRows with one row 1`] = `
 <tbody>
   <TableRow
-    isSelected={false}>
+    isSelected={false}
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </tbody>
 `;

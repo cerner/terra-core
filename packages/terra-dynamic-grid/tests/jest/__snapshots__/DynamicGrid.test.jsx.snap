@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`DynamicGrid should render a Grid with merged attributes 1`] = `
 <div
   className="TestClass grid_3hmsj"
@@ -6,24 +8,28 @@ exports[`DynamicGrid should render a Grid with merged attributes 1`] = `
     Object {
       "height": "100px",
     }
-  } />
+  }
+/>
 `;
 
 exports[`DynamicGrid should render a default component 1`] = `
 <div
-  className="grid_3hmsj" />
+  className="grid_3hmsj"
+/>
 `;
 
 exports[`DynamicGrid should render a default component 2`] = `
 <div
-  className="grid_3hmsj">
+  className="grid_3hmsj"
+>
   <Region
     defaultPosition={Object {}}
     huge={Object {}}
     large={Object {}}
     medium={Object {}}
     small={Object {}}
-    tiny={Object {}}>
+    tiny={Object {}}
+  >
     Hello
   </Region>
 </div>

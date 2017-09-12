@@ -1,4 +1,6 @@
-exports[`test should render a arrange with status and customProps 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a arrange with status and customProps 1`] = `
 <div
   className="status"
   id="id"
@@ -6,7 +8,8 @@ exports[`test should render a arrange with status and customProps 1`] = `
     Object {
       "borderColor": "green",
     }
-  }>
+  }
+>
   <Arrange
     fill={
       <div>
@@ -23,19 +26,22 @@ exports[`test should render a arrange with status and customProps 1`] = `
             "display": "block",
           }
         }
-        width="300" />
-    } />
+        width="300"
+      />
+    }
+  />
 </div>
 `;
 
-exports[`test should render a icon with status 1`] = `
+exports[`should render a icon with status 1`] = `
 <div
   className="status"
   style={
     Object {
       "borderColor": "grey",
     }
-  }>
+  }
+>
   <svg
     fill="#8bc34a"
     height="100"
@@ -46,21 +52,24 @@ exports[`test should render a icon with status 1`] = `
     }
     viewBox="0 0 1000 1000"
     width="75"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
-      d="M525 841.3c-7.5 " />
+      d="M525 841.3c-7.5 "
+    />
   </svg>
 </div>
 `;
 
-exports[`test should render a image with status 1`] = `
+exports[`should render a image with status 1`] = `
 <div
   className="status"
   style={
     Object {
       "borderColor": "red",
     }
-  }>
+  }
+>
   <img
     alt="placeholder"
     height="150"
@@ -70,27 +79,30 @@ exports[`test should render a image with status 1`] = `
         "display": "block",
       }
     }
-    width="300" />
+    width="300"
+  />
 </div>
 `;
 
-exports[`test should render a simpleText with status 1`] = `
+exports[`should render a simpleText with status 1`] = `
 <div
   className="status"
   style={
     Object {
       "borderColor": "blue",
     }
-  }>
+  }
+>
   <div>
     Lorem labore et dolore magna aliqua.
   </div>
 </div>
 `;
 
-exports[`test should render status with no style 1`] = `
+exports[`should render status with no style 1`] = `
 <div
-  class="status">
+  class="status"
+>
   <div>
     Lorem labore et dolore magna aliqua.
   </div>

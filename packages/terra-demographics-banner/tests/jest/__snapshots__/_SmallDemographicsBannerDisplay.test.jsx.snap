@@ -1,4 +1,6 @@
-exports[`test renders small banner that contains all valid information 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders small banner that contains all valid information 1`] = `
 <section
   applicationRows={
     Array [
@@ -11,37 +13,48 @@ exports[`test renders small banner that contains all valid information 1`] = `
       },
     ]
   }
-  className="demographics-banner">
+  className="demographics-banner"
+>
   <h1
-    className="person-name">
+    className="person-name"
+  >
     <span>
       Johnathon Doe
       <span
-        className="preferred-first-name">
+        className="preferred-first-name"
+      >
         John
       </span>
     </span>
   </h1>
   <div
-    className="person-details">
+    className="person-details"
+  >
     <DemographicsBannerValue
-      value="25 Years" />
+      value="25 Years"
+    />
     <DemographicsBannerValue
-      value="Male" />
+      value="Male"
+    />
     <DemographicsBannerValue
       label="DOB"
-      value="May 9, 1993" />
+      value="May 9, 1993"
+    />
     <DemographicsBannerValue
       label="MRN"
-      value={12343} />
+      value={12343}
+    />
     <DemographicsBannerValue
       label="REA"
-      value="3JSDA" />
+      value="3JSDA"
+    />
   </div>
   <div
-    className="application-content">
+    className="application-content"
+  >
     <span
-      className="risk-score">
+      className="risk-score"
+    >
       5%
     </span>
   </div>
