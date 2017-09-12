@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ThemeProvider should render a theme provider component 1`] = `
 <div
-  class="cerner-mock-theme">
+  class="cerner-mock-theme"
+>
   <p>
     Child content
   </p>
@@ -9,7 +12,8 @@ exports[`ThemeProvider should render a theme provider component 1`] = `
 
 exports[`ThemeProvider should shallow render a theme provider component 1`] = `
 <div
-  className="cerner-mock-theme">
+  className="cerner-mock-theme"
+>
   <p>
     Child content
   </p>

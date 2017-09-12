@@ -1,4 +1,6 @@
-exports[`test renders a blank banner wrapper 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a blank banner wrapper 1`] = `
 <DemographicsBanner
   applicationContent={null}
   deceasedDate={null}
@@ -6,15 +8,17 @@ exports[`test renders a blank banner wrapper 1`] = `
   identifiers={Object {}}
   photo={null}
   postMenstrualAge={null}
-  preferredFirstName={null} />
+  preferredFirstName={null}
+/>
 `;
 
-exports[`test renders the banner wrapper with all props 1`] = `
+exports[`renders the banner wrapper with all props 1`] = `
 <DemographicsBanner
   age="25 Years"
   applicationContent={
     <span
-      className="risk-score">
+      className="risk-score"
+    >
       5%
     </span>
   }
@@ -45,8 +49,10 @@ exports[`test renders the banner wrapper with all props 1`] = `
       alt="My Cat"
       isFluid={false}
       src=""
-      variant="default" />
+      variant="default"
+    />
   }
   postMenstrualAge="April 7, 2016"
-  preferredFirstName="John" />
+  preferredFirstName="John"
+/>
 `;

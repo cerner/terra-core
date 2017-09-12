@@ -6,10 +6,6 @@
   "engines": {
     "node": "8.4.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
-  },
   "keywords": [
     "Cerner",
     "Terra",
@@ -37,16 +33,15 @@
     }
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "clean:all": "rimraf ./packages/*/node_modules && rimraf ./node_modules",
-    "clean:install": "npm run clean:all && npm install",
+    "clean:all": "lerna clean && node scripts/remove-node-modules/index.js",
+    "clean:install": "npm run clean:all && yarn",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "compile:heroku": "cd packages/terra-site && npm run compile:heroku",
     "danger": "danger",
     "deploy": "lerna run --scope terra-site deploy",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
-    "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.0.0-rc.4 && lerna init",
+    "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:heroku",
     "jest": "jest",
     "jest:coverage": "jest --coverage",
@@ -56,7 +51,7 @@
     "nightwatch": "nightwatch",
     "pretest": "npm run lint",
     "props-table": "lerna run props-table",
-    "postinstall": "npm run compile && npm run bootstrap && npm run dependency-markdown",
+    "postinstall": "npm run compile && npm run dependency-markdown",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
     "start": "cd packages/terra-site && npm run start",
     "start:express": "node scripts/express/app.js",
@@ -82,8 +77,8 @@
     "express": "^4.15.2",
     "glob": "^7.1.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^18.0.0",
-    "lerna": "2.0.0-rc.4",
+    "jest": "^21.0.0",
+    "lerna": "2.1.2",
     "load-json-file": "^2.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -95,5 +90,8 @@
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-suitcss": "^1.0.0",
     "terra-toolkit": "^2.0.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

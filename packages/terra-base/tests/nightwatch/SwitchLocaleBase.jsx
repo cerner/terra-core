@@ -1,5 +1,6 @@
 import React from 'react';
-import { FormattedMessage } from '../../../terra-i18n/node_modules/react-intl';
+/* eslint-disable import/no-extraneous-dependencies */
+import { FormattedMessage } from 'react-intl';
 
 import Base from '../../lib/Base';
 

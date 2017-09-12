@@ -1,53 +1,73 @@
-exports[`test should mount with no items 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should mount with no items 1`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ul
-    className="list" />
+    className="list"
+  />
 </List>
 `;
 
-exports[`test should mount with one items 1`] = `
+exports[`should mount with one items 1`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ul
-    className="list">
+    className="list"
+  >
     <ListItem
-      isSelected={false}>
+      isSelected={false}
+    >
       <li
-        className="list-item" />
+        className="list-item"
+      />
     </ListItem>
   </ul>
 </List>
 `;
 
-exports[`test should render isDivided 1`] = `
+exports[`should render isDivided 1`] = `
 <ul
-  className="list divided">
+  className="list divided"
+>
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
 </ul>
 `;
 
-exports[`test should render with items 1`] = `
+exports[`should render with items 1`] = `
 <ul
-  className="list">
+  className="list"
+>
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
   <ListItem
-    isSelected={false} />
+    isSelected={false}
+  />
 </ul>
 `;
