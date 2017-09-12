@@ -4,6 +4,20 @@ const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsi
 // const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+  'isOpen prop - OVERLAY': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/overlay`);
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
+
+    browser.click('#overlay-button');
+    browser.assert.elementPresent('.test-content');
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: hidden;');
+
+    browser.keys([browser.Keys.ESCAPE]);
+    browser.waitForElementNotPresent('.test-content', 1000);
+
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
+  },
+
   'isOpen prop - RESIZE': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
     browser.expect.element('.test-content').to.be.present;
