@@ -105,6 +105,7 @@ class CollapsibleMenu extends React.Component {
     const {
       children,
       button,
+      contentWidth,
       ...customProps
     } = this.props;
 
@@ -118,6 +119,7 @@ class CollapsibleMenu extends React.Component {
           isArrowDisplayed
           isOpen={this.state.isOpen}
           targetRef={this.getButtonNode}
+          contentWidth={contentWidth}
         >
           {this.wrapChildrenOnClick(children)}
         </Menu>

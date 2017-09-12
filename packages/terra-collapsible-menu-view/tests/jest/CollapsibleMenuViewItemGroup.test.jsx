@@ -2,7 +2,7 @@ import React from 'react';
 import CollapsibleMenuViewItemGroup from '../../src/CollapsibleMenuViewItemGroup';
 import CollapsibleMenuViewItem from '../../src/CollapsibleMenuViewItem';
 
-describe('CollapsibleMenuViewToggle', () => {
+describe('CollapsibleMenuViewItemGroup', () => {
   // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = shallow((

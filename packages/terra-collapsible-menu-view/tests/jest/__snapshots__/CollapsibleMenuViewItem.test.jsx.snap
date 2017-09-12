@@ -1,39 +1,39 @@
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should not set icon on menu item when isIconOnly is set, but should set the text 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon on menu item when isIconOnly is set, but should set the text 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should not set icon prop menu item, but should render text 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon prop menu item, but should render text 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should not set isReversed prop on menu item 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set isReversed prop on menu item 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should not set selected prop on menu item outside of item group 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set selected prop on menu item outside of item group 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a menu item 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a menu item when subMenuItems are given 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item when subMenuItems are given 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={
@@ -49,14 +49,14 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a menu
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected prop on menu item when inside item group 1`] = `
+exports[`CollapsibleMenuViewItem Collapsible Menu Context should set selected prop on menu item when inside item group 1`] = `
 <MenuItem
   isSelected={true}
   subMenuItems={Array []}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
+exports[`CollapsibleMenuViewItem should merge custom props 1`] = `
 <div
   className="face-up-item">
   <Button
@@ -71,7 +71,7 @@ exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should not set isSelected on button outside of an item group 1`] = `
+exports[`CollapsibleMenuViewItem should not set isSelected on button outside of an item group 1`] = `
 <div
   className="face-up-item">
   <Button
@@ -85,14 +85,14 @@ exports[`CollapsibleMenuViewToggle should not set isSelected on button outside o
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should render a button group button when in an item group 1`] = `
+exports[`CollapsibleMenuViewItem should render a button group button when in an item group 1`] = `
 <ButtonGroupButton
   isReversed={false}
   isSelected={false}
   text="Testing" />
 `;
 
-exports[`CollapsibleMenuViewToggle should render a button with icon and no text when isIconOnly is set 1`] = `
+exports[`CollapsibleMenuViewItem should render a button with icon and no text when isIconOnly is set 1`] = `
 <div
   className="face-up-item">
   <Button
@@ -112,7 +112,7 @@ exports[`CollapsibleMenuViewToggle should render a button with icon and no text 
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
+exports[`CollapsibleMenuViewItem should render a default component 1`] = `
 <div
   className="face-up-item">
   <Button
@@ -126,7 +126,7 @@ exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should render a menu when subMenuItems are given 1`] = `
+exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are given 1`] = `
 <CollapsibleMenu
   button={
     <Button
@@ -149,7 +149,7 @@ exports[`CollapsibleMenuViewToggle should render a menu when subMenuItems are gi
 </CollapsibleMenu>
 `;
 
-exports[`CollapsibleMenuViewToggle should set icon prop on button 1`] = `
+exports[`CollapsibleMenuViewItem should set icon prop on button 1`] = `
 <div
   className="face-up-item">
   <Button
@@ -169,7 +169,7 @@ exports[`CollapsibleMenuViewToggle should set icon prop on button 1`] = `
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should set isReversed prop on button 1`] = `
+exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
 <div
   className="face-up-item">
   <Button
@@ -189,7 +189,7 @@ exports[`CollapsibleMenuViewToggle should set isReversed prop on button 1`] = `
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should set isSelected on button that is inside item group 1`] = `
+exports[`CollapsibleMenuViewItem should set isSelected on button that is inside item group 1`] = `
 <ButtonGroupButton
   isReversed={false}
   isSelected={true}

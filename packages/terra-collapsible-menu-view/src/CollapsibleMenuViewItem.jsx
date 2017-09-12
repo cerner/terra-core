@@ -99,6 +99,7 @@ class CollapsibleMenuViewItem extends React.Component {
       subMenuItems,
       shouldCloseOnClick,
       boundingRef,
+      menuWidth,
       ...customProps
     } = this.props;
 
@@ -129,6 +130,7 @@ class CollapsibleMenuViewItem extends React.Component {
     } else if (subMenuItems && subMenuItems.length > 0) {
       item = (
         <Menu
+          contentWidth={menuWidth}
           boundingRef={boundingRef}
           button={(
             <Button

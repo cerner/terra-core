@@ -36,9 +36,8 @@ class CollapsibleMenuView extends React.Component {
     this.setContainer = this.setContainer.bind(this);
     this.setMenuButton = this.setMenuButton.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    this.sortChildComponents = this.sortChildComponents.bind(this);
     this.state = {
-      hiddenIndexes: [],
+      hiddenStartIndex: -1,
       menuHidden: false,
     };
   }
@@ -47,7 +46,7 @@ class CollapsibleMenuView extends React.Component {
     if (this.container) {
       this.resizeObserver = new ResizeObserver((entries) => {
         // Resetting the state so that all elements will be rendered face-up for width calculations
-        this.setState({ hiddenIndexes: [], menuHidden: false });
+        this.setState({ hiddenStartIndex: -1, menuHidden: false });
         this.handleResize(entries[0].contentRect.width);
       });
       this.resizeObserver.observe(this.container);
@@ -74,45 +73,31 @@ class CollapsibleMenuView extends React.Component {
   handleResize(width) {
     const menuButtonWidth = this.menuButton.getBoundingClientRect().width;
     const availableWidth = width - menuButtonWidth;
-    const hiddenIndexes = [];
+    let hiddenStartIndex = -1;
     let calcWidth = 0;
     let menuHidden = true;
 
     for (let i = 0; i < this.props.children.length; i += 1) {
       const child = this.container.children[i];
-      if (menuHidden) {
-        calcWidth += child.getBoundingClientRect().width;
-        if (i === this.props.children.length - 1 && calcWidth <= width) {
-          menuHidden = true;
-        } else if (calcWidth > availableWidth) {
-          hiddenIndexes.push(i);
-          menuHidden = false;
-        }
-      // Once it has been determined that the menu button is needed there is no need to continue calculations, the rest of the items should be hidden
-      } else {
-        hiddenIndexes.push(i);
+      calcWidth += child.getBoundingClientRect().width;
+      if (calcWidth > availableWidth) {
+        hiddenStartIndex = i;
+        menuHidden = false;
+        break;
       }
     }
 
-    this.setState({ menuHidden, hiddenIndexes });
-  }
-
-  sortChildComponents(children) {
-    const visibleChildren = [];
-    const hiddenChildren = [];
-    for (let i = 0; i < children.length; i += 1) {
-      if (this.state.hiddenIndexes.indexOf(i) < 0) {
-        visibleChildren.push(children[i]);
-      } else {
-        hiddenChildren.push(children[i]);
-      }
-    }
-    return { visibleChildren, hiddenChildren };
+    this.setState({ menuHidden, hiddenStartIndex });
   }
 
   render() {
-    const { children, boundingRef, ...customProps } = this.props;
-    const { visibleChildren, hiddenChildren } = this.sortChildComponents(children);
+    const { children, boundingRef, menuWidth, ...customProps } = this.props;
+    const visibleChildren = React.Children.toArray(children);
+    let hiddenChildren = null;
+    if (this.state.hiddenStartIndex >= 0) {
+      hiddenChildren = visibleChildren.splice(this.state.hiddenStartIndex);
+    }
+
     const collapsibleMenuViewClassName = cx([
       'collapsible-menu-view',
       customProps.className,
@@ -130,6 +115,7 @@ class CollapsibleMenuView extends React.Component {
             icon={<IconEllipses />}
             subMenuItems={hiddenChildren}
             boundingRef={boundingRef}
+            menuWidth={menuWidth}
           />
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import IconTrash from 'terra-icon/lib/icon/IconTrash';
 import CollapsibleMenuViewItem from '../../src/CollapsibleMenuViewItem';
 
-describe('CollapsibleMenuViewToggle', () => {
+describe('CollapsibleMenuViewItem', () => {
   // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" />);

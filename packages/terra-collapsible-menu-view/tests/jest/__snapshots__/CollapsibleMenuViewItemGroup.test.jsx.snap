@@ -1,4 +1,4 @@
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should merge custom props 1`] = `
+exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge custom props 1`] = `
 <List
   className="Testing"
   isDivided={false}>
@@ -17,7 +17,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should merge custom 
 </List>
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should merge custom props when selectable 1`] = `
+exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge custom props when selectable 1`] = `
 <MenuItemGroup
   className="Testing">
   <CollapsibleMenuViewItem
@@ -35,7 +35,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should merge custom 
 </MenuItemGroup>
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a menu item group when selectable 1`] = `
+exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a menu item group when selectable 1`] = `
 <MenuItemGroup>
   <CollapsibleMenuViewItem
     isIconOnly={false}
@@ -52,7 +52,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a menu
 </MenuItemGroup>
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render menu items when isSelectable is not set 1`] = `
+exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render menu items when isSelectable is not set 1`] = `
 <List
   isDivided={false}>
   <CollapsibleMenuViewItem
@@ -70,7 +70,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render menu i
 </List>
 `;
 
-exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
+exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
 <ButtonGroup
   buttons={Array []}
   className="face-up-item Testing"
@@ -92,7 +92,7 @@ exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
 </ButtonGroup>
 `;
 
-exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
+exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
 <ButtonGroup
   buttons={Array []}
   className="face-up-item"
@@ -114,7 +114,7 @@ exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
 </ButtonGroup>
 `;
 
-exports[`CollapsibleMenuViewToggle should render a selectable button group 1`] = `
+exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`] = `
 <ButtonGroup
   buttons={Array []}
   className="face-up-item"
