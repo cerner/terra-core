@@ -1,173 +1,205 @@
-exports[`test should render a button group with buttons 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a button group with buttons 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with children 1`] = `
+exports[`should render a button group with children 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with size = huge 1`] = `
+exports[`should render a button group with size = huge 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     size="huge"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with size = large 1`] = `
+exports[`should render a button group with size = large 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     size="large"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with size = medium 1`] = `
+exports[`should render a button group with size = medium 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     size="medium"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with size = small 1`] = `
+exports[`should render a button group with size = small 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     size="small"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with size = tiny 1`] = `
+exports[`should render a button group with size = tiny 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     size="tiny"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with variant = default 1`] = `
+exports[`should render a button group with variant = default 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a button group with variant = secondary 1`] = `
+exports[`should render a button group with variant = secondary 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
-    variant="secondary" />
+    variant="secondary"
+  />
 </div>
 `;
 
-exports[`test should render a compact button group 1`] = `
+exports[`should render a compact button group 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={true}
     isReversed={false}
     isSelected={false}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a default component 1`] = `
+exports[`should render a default component 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should render a selectable button group 1`] = `
+exports[`should render a selectable button group 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     onClick={[Function]}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should select a button 1`] = `
+exports[`should select a button 1`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={true}
     onClick={[Function]}
-    variant="default" />
+    variant="default"
+  />
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     onClick={[Function]}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
-exports[`test should select a button 2`] = `
+exports[`should select a button 2`] = `
 <div
-  className="button-group">
+  className="button-group"
+>
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={false}
     onClick={[Function]}
-    variant="default" />
+    variant="default"
+  />
   <ButtonGroupButton
     isCompact={false}
     isReversed={false}
     isSelected={true}
     onClick={[Function]}
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;

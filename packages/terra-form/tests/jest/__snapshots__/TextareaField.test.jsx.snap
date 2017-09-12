@@ -1,4 +1,6 @@
-exports[`test should render a TextAreaField with the rest of the props 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a TextAreaField with the rest of the props 1`] = `
 <Field
   error="Name is required"
   help="The name given to you at birth."
@@ -6,7 +8,8 @@ exports[`test should render a TextAreaField with the rest of the props 1`] = `
   isInline={true}
   label="Profile Description"
   labelAttrs={Object {}}
-  required={true}>
+  required={true}
+>
   <Textarea
     autoFocus={false}
     cols={null}
@@ -15,29 +18,32 @@ exports[`test should render a TextAreaField with the rest of the props 1`] = `
     minLength={5}
     name="profile_description"
     required={true}
-    rows={null} />
+    rows={null}
+  />
 </Field>
 `;
 
-exports[`test should render a default TextAreaField component 1`] = `
+exports[`should render a default TextAreaField component 1`] = `
 <Field
   error={null}
   help={null}
   isInline={false}
   label={null}
   labelAttrs={Object {}}
-  required={false}>
+  required={false}
+>
   <Textarea
     cols={null}
     maxLength={null}
     minLength={null}
     name={null}
     required={false}
-    rows={null} />
+    rows={null}
+  />
 </Field>
 `;
 
-exports[`test should render as controlled when just a default value is passed into the TextareaField 1`] = `
+exports[`should render as controlled when just a default value is passed into the TextareaField 1`] = `
 <TextareaField
   cols={null}
   error={null}
@@ -52,16 +58,19 @@ exports[`test should render as controlled when just a default value is passed in
   onChange={[Function]}
   required={false}
   rows={null}
-  value="foo">
+  value="foo"
+>
   <Field
     error={null}
     help={null}
     isInline={false}
     label={null}
     labelAttrs={Object {}}
-    required={false}>
+    required={false}
+  >
     <div
-      className="field">
+      className="field"
+    >
       <Textarea
         cols={null}
         maxLength={null}
@@ -70,7 +79,8 @@ exports[`test should render as controlled when just a default value is passed in
         onChange={[Function]}
         required={false}
         rows={null}
-        value="foo">
+        value="foo"
+      >
         <textarea
           className="textarea"
           cols={null}
@@ -80,14 +90,15 @@ exports[`test should render as controlled when just a default value is passed in
           onChange={[Function]}
           required={false}
           rows={null}
-          value="foo" />
+          value="foo"
+        />
       </Textarea>
     </div>
   </Field>
 </TextareaField>
 `;
 
-exports[`test should render as uncontrolled when just a default value is passed into the TextareaField 1`] = `
+exports[`should render as uncontrolled when just a default value is passed into the TextareaField 1`] = `
 <TextareaField
   cols={null}
   defaultValue="foo"
@@ -101,16 +112,19 @@ exports[`test should render as uncontrolled when just a default value is passed 
   minLength={null}
   name={null}
   required={false}
-  rows={null}>
+  rows={null}
+>
   <Field
     error={null}
     help={null}
     isInline={false}
     label={null}
     labelAttrs={Object {}}
-    required={false}>
+    required={false}
+  >
     <div
-      className="field">
+      className="field"
+    >
       <Textarea
         cols={null}
         defaultValue="foo"
@@ -118,7 +132,8 @@ exports[`test should render as uncontrolled when just a default value is passed 
         minLength={null}
         name={null}
         required={false}
-        rows={null}>
+        rows={null}
+      >
         <textarea
           className="textarea"
           cols={null}
@@ -127,7 +142,8 @@ exports[`test should render as uncontrolled when just a default value is passed 
           minLength={null}
           name={null}
           required={false}
-          rows={null} />
+          rows={null}
+        />
       </Textarea>
     </div>
   </Field>
