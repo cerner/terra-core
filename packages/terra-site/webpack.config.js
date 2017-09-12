@@ -53,6 +53,8 @@ module.exports = {
                     'iOS >= 8',
                   ],
                 }),
+                // Disable warnings for custom property not scoped to the top-level :root
+                // https://github.com/MoOx/postcss-cssnext/issues/186.
                 CustomProperties({ preserve: true, warnings: false }),
                 ThemingPlugin,
                 rtl(),

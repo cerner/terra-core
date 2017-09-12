@@ -1,0 +1,34 @@
+@import './mixins';
+
+@include cerner-consumer-theme {
+  @include terra-consumer-theme-button(#64696c, #1c1f21, #383f42);
+
+  /* stylelint-disable selector-class-pattern */
+  .terra-consumer-theme-concept1 {
+    @include terra-consumer-theme-button(#c24746, #000, #c24746);
+  }
+
+  .terra-consumer-theme-concept2 {
+    @include terra-consumer-theme-button(#b23dbd, #000, #b23dbd);
+  }
+
+  .terra-consumer-theme-concept3 {
+    @include terra-consumer-theme-button(#6b65d6, #000, #6b65d6);
+  }
+
+  .terra-consumer-theme-concept4 {
+    @include terra-consumer-theme-button(#047fad, #000, #047fad);
+  }
+
+  .terra-consumer-theme-concept5 {
+    @include terra-consumer-theme-button(#058578, #000, #058578);
+  }
+
+  .terra-consumer-theme-concept6 {
+    @include terra-consumer-theme-button(#2d8554, #000, #2d8554);
+  }
+
+  .terra-consumer-theme-neutral {
+    @include terra-consumer-theme-button(#303054, #000, #303054);
+  }
+}

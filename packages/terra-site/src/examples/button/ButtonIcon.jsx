@@ -7,7 +7,7 @@ const buttonStyle = { margin: '5px' };
 
 const ButtonIcon = () => (
   <div>
-    <Button icon={Icon} text="icon" style={buttonStyle} />
+    <Button icon={Icon} text="icon" style={buttonStyle} variant="primary" />
     <Button icon={Icon} text="icon" isReversed style={buttonStyle} />
     <Button icon={Icon} style={buttonStyle} />
   </div>

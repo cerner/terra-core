@@ -103,7 +103,16 @@ class App extends React.Component {
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default</option>
             <option value="cerner-mock-theme">Mock Theme</option>
-            <option value="cerner-consumer-theme">Consumer Theme</option>
+            <optgroup label="Consumer">
+              <option value="cerner-consumer-theme">Default</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-concept1">Concept1</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-concept2">Concept2</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-concept3">Concept3</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-concept4">Concept4</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-concept5">Concept5</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-concept6">Concept6</option>
+              <option value="cerner-consumer-theme terra-consumer-theme-neutral">Neutral</option>
+            </optgroup>
           </select>
         </div>
       );
@@ -168,11 +177,14 @@ class App extends React.Component {
 
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
     // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
+    const theme = this.state.theme.split(' ');
     const mainContent = (
-      <ThemeProvider themeName={this.state.theme}>
-        <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
-          {this.props.children}
-        </Base>
+      <ThemeProvider themeName={theme[0]}>
+        <ThemeProvider themeName={theme[1]}>
+          <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
+            {this.props.children}
+          </Base>
+        </ThemeProvider>
       </ThemeProvider>
     );
 

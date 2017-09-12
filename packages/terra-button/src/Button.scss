@@ -1,5 +1,7 @@
+@import '~terra-mixins';
 @import './variables';
 @import './mixins';
+@import './themes';
 
 :local {
   /* stylelint-disable selector-class-pattern  */
