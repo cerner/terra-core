@@ -32,9 +32,9 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "lerna exec --scope terra-i18n-plugin -- rimraf lib",
+    "compile:build": "lerna exec --scope terra-i18n-plugin -- babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore"
+    "lint:js": "lerna exec --scope terra-i18n-plugin -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore"
   }
 }
