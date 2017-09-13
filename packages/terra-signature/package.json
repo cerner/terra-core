@@ -34,7 +34,7 @@
     "classnames": "^2.2.5",
     "jquery": "^3.2.1",
     "prop-types": "^15.5.8",
-    "terra-base": "^1.4.0",
+    "terra-base": "^2.0.0",
     "terra-mixins": "^1.0.0"
   },
   "scripts": {

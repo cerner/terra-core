@@ -10,16 +10,19 @@ describe('Signature', () => {
     expect(signature).toMatchSnapshot();
   });
 
-  // Structure Tests
-  it('should have the class terra-Signature', () => {
-    const signature = shallow(defaultRender);
-    expect(signature.prop('className')).toContain('terra-Signature');
-  });
-
-  it('should have custom props', () => {
-    const singleLine = <Signature id='singleline' />;
-    const signature = shallow(singleLine);
+  it('should receive line width prop', () => {
+    const signature = shallow(<Signature lineWidth={Signature.Opts.Width.EXTRA_FINE} />);
     expect(signature).toMatchSnapshot();
   });
 
+  it('should receive line segments prop', () => {
+    const signature = shallow(<Signature lineSegments={[]} />);
+    expect(signature).toMatchSnapshot();
+  });
+
+  it('should have custom props', () => {
+    const singleLine = <Signature id="foo" />;
+    const signature = shallow(singleLine);
+    expect(signature).toMatchSnapshot();
+  });
 });

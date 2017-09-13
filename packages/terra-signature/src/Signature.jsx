@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
-import './Signature.scss';
+import styles from './Signature.scss';
 
 const LineWidths = {
   EXTRA_FINE: 1,
@@ -53,15 +53,16 @@ class Signature extends React.Component {
   componentDidMount() {
     const canvas = this.node;
 
-    this.node.addEventListener('mousedown', e => this.mouseDown(e));
-    this.node.addEventListener('mousemove', e => this.mouseXY(e));
-    document.body.addEventListener('mouseup', e => this.mouseUp(e));
-
-    // For mobile
-    this.node.addEventListener('touchstart', e => this.mouseDown(e), false);
-    this.node.addEventListener('touchmove', e => this.mouseXY(e), true);
-    this.node.addEventListener('touchend', e => this.mouseUp(e), false);
-    document.body.addEventListener('touchcancel', this.mouseUp, false);
+    if ('ontouchstart' in document.documentElement) {
+      this.node.addEventListener('touchstart', this.mouseDown, false);
+      this.node.addEventListener('touchmove', this.mouseXY, true);
+      this.node.addEventListener('touchend', this.mouseUp, false);
+      document.body.addEventListener('touchcancel', this.mouseUp, false);
+    } else {
+      this.node.addEventListener('mousedown', this.mouseDown);
+      this.node.addEventListener('mousemove', this.mouseXY);
+      document.body.addEventListener('mouseup', this.mouseUp);
+    }
 
     this.node.width = canvas.getBoundingClientRect().width;
     this.node.height = canvas.getBoundingClientRect().height;
@@ -96,7 +97,7 @@ class Signature extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', () => this.updateDimensions());
+    window.removeEventListener('resize', this.updateDimensions);
     window.removeEventListener('touchcancel', this.mouseUp);
     window.removeEventListener('mouseup', this.mouseUp);
   }
@@ -210,7 +211,7 @@ class Signature extends React.Component {
     delete custProps.onChange;
 
     return (
-      <canvas {...custProps} className="terra-Signature" ref={(node) => { this.node = node; }} />
+      <canvas {...custProps} className={styles.signature} ref={(node) => { this.node = node; }} />
     );
   }
 }

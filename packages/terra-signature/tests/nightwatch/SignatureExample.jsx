@@ -20,16 +20,6 @@ class SignatureExample extends React.Component {
     return (
       <div style={{ height: '100px', width: '100px', border: '1px solid black' }}>
         <Signature id="drawline" ref={(instance) => { this.signature = instance; }} />
-        <select
-          options={[{ value: '1', display: 'EXTRA_FINE' },
-                  { value: '2', display: 'FINE' },
-                  { value: '4', display: 'MEDIUM' },
-                  { value: '6', display: 'HEAVY' }]}
-          name="linewidth"
-          defaultValue="2"
-          required
-          onChange={this.handleLineWidth}
-        />
       </div>
     );
   }
