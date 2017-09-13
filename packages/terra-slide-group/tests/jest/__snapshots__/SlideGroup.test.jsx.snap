@@ -1,9 +1,13 @@
-exports[`test should render a SlideGroup with animation enabled 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a SlideGroup with animation enabled 1`] = `
 <div
-  className="slide-group">
+  className="slide-group"
+>
   <TransitionGroup
     childFactory={[Function]}
-    component="div">
+    component="div"
+  >
     <CSSTransition
       classNames={
         Object {
@@ -17,9 +21,11 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
       exit={true}
       onEntered={[Function]}
       onExit={[Function]}
-      timeout={300}>
+      timeout={300}
+    >
       <Slide
-        isHidden={false}>
+        isHidden={false}
+      >
         <div>
           First
         </div>
@@ -38,9 +44,11 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
       exit={true}
       onEntered={[Function]}
       onExit={[Function]}
-      timeout={300}>
+      timeout={300}
+    >
       <Slide
-        isHidden={false}>
+        isHidden={false}
+      >
         <div>
           Second
         </div>
@@ -59,9 +67,11 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
       exit={true}
       onEntered={[Function]}
       onExit={[Function]}
-      timeout={300}>
+      timeout={300}
+    >
       <Slide
-        isHidden={false}>
+        isHidden={false}
+      >
         <div>
           Third
         </div>
@@ -71,12 +81,14 @@ exports[`test should render a SlideGroup with animation enabled 1`] = `
 </div>
 `;
 
-exports[`test should render a default SlideGroup 1`] = `
+exports[`should render a default SlideGroup 1`] = `
 <div
-  className="slide-group">
+  className="slide-group"
+>
   <TransitionGroup
     childFactory={[Function]}
-    component="div">
+    component="div"
+  >
     <CSSTransition
       classNames={
         Object {
@@ -90,9 +102,11 @@ exports[`test should render a default SlideGroup 1`] = `
       exit={false}
       onEntered={[Function]}
       onExit={[Function]}
-      timeout={300}>
+      timeout={300}
+    >
       <Slide
-        isHidden={true}>
+        isHidden={true}
+      >
         <div>
           First
         </div>
@@ -111,9 +125,11 @@ exports[`test should render a default SlideGroup 1`] = `
       exit={false}
       onEntered={[Function]}
       onExit={[Function]}
-      timeout={300}>
+      timeout={300}
+    >
       <Slide
-        isHidden={true}>
+        isHidden={true}
+      >
         <div>
           Second
         </div>
@@ -132,9 +148,11 @@ exports[`test should render a default SlideGroup 1`] = `
       exit={false}
       onEntered={[Function]}
       onExit={[Function]}
-      timeout={300}>
+      timeout={300}
+    >
       <Slide
-        isHidden={false}>
+        isHidden={false}
+      >
         <div>
           Third
         </div>

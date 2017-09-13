@@ -1,109 +1,147 @@
-exports[`test should render a default table 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table 1`] = `
 <table
-  className="table striped padded">
+  className="table striped padded"
+>
   <TableHeader>
     <TableHeaderCell
       content="Name"
-      minWidth="small" />
+      minWidth="small"
+    />
     <TableHeaderCell
       content="Address"
-      minWidth="small" />
+      minWidth="small"
+    />
     <TableHeaderCell
       content="Phone Number"
-      minWidth="small" />
+      minWidth="small"
+    />
   </TableHeader>
   <TableRows>
     <TableRow
-      isSelected={false}>
+      isSelected={false}
+    >
       <TableCell
-        content="John Smith" />
+        content="John Smith"
+      />
       <TableCell
-        content="123 Adams Drive" />
+        content="123 Adams Drive"
+      />
       <TableCell
-        content="111-222-3333" />
+        content="111-222-3333"
+      />
     </TableRow>
     <TableRow
-      isSelected={false}>
+      isSelected={false}
+    >
       <TableCell
-        content="John Smith" />
+        content="John Smith"
+      />
       <TableCell
-        content="123 Adams Drive" />
+        content="123 Adams Drive"
+      />
       <TableCell
-        content="111-222-3333" />
+        content="111-222-3333"
+      />
     </TableRow>
   </TableRows>
 </table>
 `;
 
-exports[`test should render a table without padding 1`] = `
+exports[`should render a table without padding 1`] = `
 <table
-  className="table striped">
+  className="table striped"
+>
   <TableHeader>
     <TableHeaderCell
       content="Name"
-      minWidth="small" />
+      minWidth="small"
+    />
     <TableHeaderCell
       content="Address"
-      minWidth="small" />
+      minWidth="small"
+    />
     <TableHeaderCell
       content="Phone Number"
-      minWidth="small" />
+      minWidth="small"
+    />
   </TableHeader>
   <TableRows>
     <TableRow
-      isSelected={false}>
+      isSelected={false}
+    >
       <TableCell
-        content="John Smith" />
+        content="John Smith"
+      />
       <TableCell
-        content="123 Adams Drive" />
+        content="123 Adams Drive"
+      />
       <TableCell
-        content="111-222-3333" />
+        content="111-222-3333"
+      />
     </TableRow>
     <TableRow
-      isSelected={false}>
+      isSelected={false}
+    >
       <TableCell
-        content="John Smith" />
+        content="John Smith"
+      />
       <TableCell
-        content="123 Adams Drive" />
+        content="123 Adams Drive"
+      />
       <TableCell
-        content="111-222-3333" />
+        content="111-222-3333"
+      />
     </TableRow>
   </TableRows>
 </table>
 `;
 
-exports[`test should render a table without zebra stripes 1`] = `
+exports[`should render a table without zebra stripes 1`] = `
 <table
-  className="table padded">
+  className="table padded"
+>
   <TableHeader>
     <TableHeaderCell
       content="Name"
-      minWidth="small" />
+      minWidth="small"
+    />
     <TableHeaderCell
       content="Address"
-      minWidth="small" />
+      minWidth="small"
+    />
     <TableHeaderCell
       content="Phone Number"
-      minWidth="small" />
+      minWidth="small"
+    />
   </TableHeader>
   <TableRows>
     <TableRow
-      isSelected={false}>
+      isSelected={false}
+    >
       <TableCell
-        content="John Smith" />
+        content="John Smith"
+      />
       <TableCell
-        content="123 Adams Drive" />
+        content="123 Adams Drive"
+      />
       <TableCell
-        content="111-222-3333" />
+        content="111-222-3333"
+      />
     </TableRow>
     <TableRow
-      isSelected={false}>
+      isSelected={false}
+    >
       <TableCell
-        content="John Smith" />
+        content="John Smith"
+      />
       <TableCell
-        content="123 Adams Drive" />
+        content="123 Adams Drive"
+      />
       <TableCell
-        content="111-222-3333" />
+        content="111-222-3333"
+      />
     </TableRow>
   </TableRows>
 </table>

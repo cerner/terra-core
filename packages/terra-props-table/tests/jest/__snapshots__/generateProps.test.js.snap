@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`generateProps should return a props markdown table 1`] = `
 "| Prop Name | Type | Is Required | Default Value | Description |
 |-|-|-|-|-|

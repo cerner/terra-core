@@ -1,4 +1,6 @@
-exports[`test should render SingleSelectableRows one selectable row and one non-selectable row 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SingleSelectableRows one selectable row and one non-selectable row 1`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -6,28 +8,36 @@ exports[`test should render SingleSelectableRows one selectable row and one non-
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
     isSelectable={false}
-    isSelected={false}>
+    isSelected={false}
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </TableRows>
 `;
 
-exports[`test should render SingleSelectableRows tag 1`] = `
+exports[`should render SingleSelectableRows tag 1`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -35,13 +45,17 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
     className="PERSON_1"
@@ -49,18 +63,22 @@ exports[`test should render SingleSelectableRows tag 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </TableRows>
 `;
 
-exports[`test should render SingleSelectableRows with maximum height set 1`] = `
+exports[`should render SingleSelectableRows with maximum height set 1`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -68,13 +86,17 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
     className="PERSON_1"
@@ -82,20 +104,24 @@ exports[`test should render SingleSelectableRows with maximum height set 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </TableRows>
 `;
 
-exports[`test should render SingleSelectableRows with no rows 1`] = `<TableRows />`;
+exports[`should render SingleSelectableRows with no rows 1`] = `<TableRows />`;
 
-exports[`test should render SingleSelectableRows with one row 1`] = `
+exports[`should render SingleSelectableRows with one row 1`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -103,18 +129,22 @@ exports[`test should render SingleSelectableRows with one row 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </TableRows>
 `;
 
-exports[`test should select an row 1`] = `
+exports[`should select an row 1`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -122,13 +152,17 @@ exports[`test should select an row 1`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
     className="PERSON_1"
@@ -136,18 +170,22 @@ exports[`test should select an row 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </TableRows>
 `;
 
-exports[`test should select an row 2`] = `
+exports[`should select an row 2`] = `
 <TableRows>
   <TableRow
     className="PERSON_0"
@@ -155,13 +193,17 @@ exports[`test should select an row 2`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
   <TableRow
     className="PERSON_1"
@@ -169,13 +211,17 @@ exports[`test should select an row 2`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <TableCell
-      content="John Smith" />
+      content="John Smith"
+    />
     <TableCell
-      content="123 Adams Drive" />
+      content="123 Adams Drive"
+    />
     <TableCell
-      content="111-222-3333" />
+      content="111-222-3333"
+    />
   </TableRow>
 </TableRows>
 `;
