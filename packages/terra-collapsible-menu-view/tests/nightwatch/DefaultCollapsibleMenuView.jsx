@@ -64,7 +64,7 @@ class CollapsibleMenuViewDemo extends React.Component {
           ]}
         />
         <CollapsibleMenuView.Item
-          text="Menu Button 2"
+          text="MenuButton2"
           key="MenuButton2"
           className="MenuButton2"
           shouldCloseOnClick={false}

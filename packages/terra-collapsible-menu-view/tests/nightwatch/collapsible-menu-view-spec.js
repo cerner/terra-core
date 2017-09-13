@@ -31,11 +31,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.expect.element('.ViewTypeGroup').to.be.present;
       browser.expect.element('.MessageActionGroup').to.be.present;
       browser.expect.element('.Button1').to.be.present;
-      browser.expect.element('.Button2').to.not.be.present;
+      browser.expect.element('.Button2').to.be.present;
       browser.expect.element('.Button3').to.not.be.present;
       browser.expect.element('.Button4').to.not.be.present;
       browser.click('div[class*="menu-button"]');
-      browser.expect.element('.Button2').to.be.present;
       browser.expect.element('.Button3').to.be.present;
       browser.expect.element('.Button4').to.be.present;
     } else if (width > browser.globals.breakpoints.small[0]) {
