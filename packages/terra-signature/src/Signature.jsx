@@ -9,7 +9,6 @@ const LineWidths = {
   MEDIUM: 4,
   HEAVY: 6,
 };
-
 const propTypes = {
   /**
    * The line width to use when drawing the signature on the canvas.
