@@ -8,11 +8,11 @@ const Icon = (<svg className="terra-Icon" height="4em" width="4em" viewBox="0 0 
 
 const BadgeIcon = () => (
   <div>
-    <Badge icon={Icon} text="icon" />
+    <Badge icon={Icon} text="icon" id="text-right" />
     {' '}
-    <Badge icon={Icon} text="icon" isReversed />
+    <Badge icon={Icon} text="icon" isReversed id="text-left" />
     {' '}
-    <Badge icon={Icon} />
+    <Badge icon={Icon} id="no-text" />
   </div>
 );
 
