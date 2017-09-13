@@ -74,15 +74,7 @@ class Signature extends React.Component {
     const color = style.getPropertyValue('color');
     context.strokeStyle = color;
 
-    if (this.props.lineSegments) {
-      this.state.lineSegments = this.props.lineSegments;
-      this.drawSignature(this.state.lineSegments);
-    }
-
-    if (this.props.lineSegments && this.props.lineWidth) {
-      this.drawSignature(this.props.lineSegments, this.props.lineWidth);
-      this.setState({ lineSegments: this.props.lineSegments, lineWidth: this.props.lineWidth });
-    }
+    this.drawSignature(this.props.lineSegments, this.props.lineWidth);
 
     window.addEventListener('resize', () => this.updateDimensions());
   }
