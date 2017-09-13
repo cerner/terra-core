@@ -18,6 +18,7 @@
 | terra-button | ^1.8.0 | ^15.4.2 | The terra-button component provides users a way to trigger actions in the UI. |
 | terra-button-group | ^1.9.0 | ^15.4.2 | terra-button-group |
 | terra-card | ^1.3.0 | ^15.4.2 | Card is a basic container with some base styling to help seperate elements with different content |
+| terra-collapsible-menu-view | ^0.x | ^15.4.2 | The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu. |
 | terra-content-container | ^1.8.0 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-date-picker | ^1.10.0 | ^15.4.2 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
 | terra-demographics-banner | ^1.9.0 | ^15.4.2 | The demographics component is used to display demographic information about a person in a condensed, easy to read format. |

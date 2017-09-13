@@ -1,36 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon on menu item when isIconOnly is set, but should set the text 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon prop menu item, but should render text 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set isReversed prop on menu item 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set selected prop on menu item outside of item group 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item 1`] = `
 <MenuItem
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item when subMenuItems are given 1`] = `
@@ -43,22 +50,26 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu i
         isReversed={false}
         isSelected={false}
         shouldCloseOnClick={true}
-        text="Menu Item" />,
+        text="Menu Item"
+      />,
     ]
   }
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should set selected prop on menu item when inside item group 1`] = `
 <MenuItem
   isSelected={true}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem should merge custom props 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Button
     className="Testing"
     isBlock={false}
@@ -67,13 +78,15 @@ exports[`CollapsibleMenuViewItem should merge custom props 1`] = `
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
 exports[`CollapsibleMenuViewItem should not set isSelected on button outside of an item group 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Button
     isBlock={false}
     isCompact={false}
@@ -81,7 +94,8 @@ exports[`CollapsibleMenuViewItem should not set isSelected on button outside of 
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
@@ -89,18 +103,21 @@ exports[`CollapsibleMenuViewItem should render a button group button when in an 
 <ButtonGroupButton
   isReversed={false}
   isSelected={false}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewItem should render a button with icon and no text when isIconOnly is set 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Button
     icon={
       <IconTrash
         data-name="Layer 1"
         viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg"
+      />
     }
     isBlock={false}
     isCompact={false}
@@ -108,13 +125,15 @@ exports[`CollapsibleMenuViewItem should render a button with icon and no text wh
     isReversed={false}
     text=""
     type="button"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
 exports[`CollapsibleMenuViewItem should render a default component 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Button
     isBlock={false}
     isCompact={false}
@@ -122,7 +141,8 @@ exports[`CollapsibleMenuViewItem should render a default component 1`] = `
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
@@ -136,28 +156,33 @@ exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are give
       isReversed={false}
       text="Testing"
       type="button"
-      variant="default" />
+      variant="default"
+    />
   }
   isArrowDisplayed={false}
-  isOpen={false}>
+  isOpen={false}
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Menu Item" />
+    text="Menu Item"
+  />
 </CollapsibleMenu>
 `;
 
 exports[`CollapsibleMenuViewItem should set icon prop on button 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Button
     icon={
       <IconTrash
         data-name="Layer 1"
         viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg"
+      />
     }
     isBlock={false}
     isCompact={false}
@@ -165,19 +190,22 @@ exports[`CollapsibleMenuViewItem should set icon prop on button 1`] = `
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
 exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Button
     icon={
       <IconTrash
         data-name="Layer 1"
         viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg" />
+        xmlns="http://www.w3.org/2000/svg"
+      />
     }
     isBlock={false}
     isCompact={false}
@@ -185,7 +213,8 @@ exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
     isReversed={true}
     text="Testing"
     type="button"
-    variant="default" />
+    variant="default"
+  />
 </div>
 `;
 
@@ -193,5 +222,6 @@ exports[`CollapsibleMenuViewItem should set isSelected on button that is inside 
 <ButtonGroupButton
   isReversed={false}
   isSelected={true}
-  text="Testing" />
+  text="Testing"
+/>
 `;

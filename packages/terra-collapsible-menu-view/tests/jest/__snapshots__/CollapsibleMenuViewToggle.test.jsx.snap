@@ -1,9 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a selectable menu item 1`] = `
 <MenuItem
   isSelectable={true}
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set defaultChecked to false 1`] = `
@@ -11,7 +14,8 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set defaultCh
   isSelectable={false}
   isSelected={false}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected prop on menu item 1`] = `
@@ -19,12 +23,14 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected 
   isSelectable={true}
   isSelected={true}
   subMenuItems={Array []}
-  text="Testing" />
+  text="Testing"
+/>
 `;
 
 exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Control
     className="control Testing"
     defaultChecked={false}
@@ -35,13 +41,15 @@ exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
     labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
-    type="checkbox" />
+    type="checkbox"
+  />
 </div>
 `;
 
 exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Control
     className="control"
     defaultChecked={false}
@@ -52,13 +60,15 @@ exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
     labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
-    type="checkbox" />
+    type="checkbox"
+  />
 </div>
 `;
 
 exports[`CollapsibleMenuViewToggle should set isSelectable prop to false 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Control
     className="control"
     defaultChecked={false}
@@ -69,13 +79,15 @@ exports[`CollapsibleMenuViewToggle should set isSelectable prop to false 1`] = `
     labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
-    type="checkbox" />
+    type="checkbox"
+  />
 </div>
 `;
 
 exports[`CollapsibleMenuViewToggle should set isSelected prop 1`] = `
 <div
-  className="face-up-item">
+  className="face-up-item"
+>
   <Control
     className="control"
     defaultChecked={true}
@@ -86,6 +98,7 @@ exports[`CollapsibleMenuViewToggle should set isSelected prop 1`] = `
     labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
-    type="checkbox" />
+    type="checkbox"
+  />
 </div>
 `;

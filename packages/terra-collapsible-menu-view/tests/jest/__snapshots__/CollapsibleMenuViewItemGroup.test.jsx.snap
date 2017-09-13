@@ -1,37 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge custom props 1`] = `
 <List
   className="Testing"
-  isDivided={false}>
+  isDivided={false}
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </List>
 `;
 
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge custom props when selectable 1`] = `
 <MenuItemGroup
-  className="Testing">
+  className="Testing"
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </MenuItemGroup>
 `;
 
@@ -42,31 +50,36 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </MenuItemGroup>
 `;
 
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render menu items when isSelectable is not set 1`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </List>
 `;
 
@@ -76,19 +89,22 @@ exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
   className="face-up-item Testing"
   isCompact={false}
   isSelectable={false}
-  variant="default">
+  variant="default"
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </ButtonGroup>
 `;
 
@@ -98,19 +114,22 @@ exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
   className="face-up-item"
   isCompact={false}
   isSelectable={false}
-  variant="default">
+  variant="default"
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </ButtonGroup>
 `;
 
@@ -120,18 +139,21 @@ exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`
   className="face-up-item"
   isCompact={false}
   isSelectable={true}
-  variant="default">
+  variant="default"
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
     shouldCloseOnClick={true}
-    text="Testing" />
+    text="Testing"
+  />
 </ButtonGroup>
 `;
