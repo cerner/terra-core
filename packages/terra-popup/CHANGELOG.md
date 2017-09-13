@@ -3,8 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+1.8.0 - (September 12, 2017)
+------------------
 ### Changed
 * Fix `-var()` syntax.
+
+### Fixed
+* Implementation of the overlay styling.
 
 1.7.0 - (September 7, 2017)
 ------------------

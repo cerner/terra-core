@@ -1,21 +1,29 @@
-exports[`test should mount with no items 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should mount with no items 1`] = `
 <MultiSelectList
-  isDivided={false}>
+  isDivided={false}
+>
   <List
-    isDivided={false}>
+    isDivided={false}
+  >
     <ul
-      className="list" />
+      className="list"
+    />
   </List>
 </MultiSelectList>
 `;
 
-exports[`test should mount with one item 1`] = `
+exports[`should mount with one item 1`] = `
 <MultiSelectList
-  isDivided={false}>
+  isDivided={false}
+>
   <List
-    isDivided={false}>
+    isDivided={false}
+  >
     <ul
-      className="list">
+      className="list"
+    >
       <ListItem
         className="stuff1"
         content={
@@ -27,12 +35,14 @@ exports[`test should mount with one item 1`] = `
         isSelected={false}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0">
+        tabIndex="0"
+      >
         <li
           className="list-item is-selectable stuff1"
           onClick={[Function]}
           onKeyDown={[Function]}
-          tabIndex="0">
+          tabIndex="0"
+        >
           <p>
             text1
           </p>
@@ -43,14 +53,16 @@ exports[`test should mount with one item 1`] = `
 </MultiSelectList>
 `;
 
-exports[`test should render a default component 1`] = `
+exports[`should render a default component 1`] = `
 <List
-  isDivided={false} />
+  isDivided={false}
+/>
 `;
 
-exports[`test should render with a selectable and non-selectable item 1`] = `
+exports[`should render with a selectable and non-selectable item 1`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ListItem
     className="stuff1"
     content={
@@ -62,16 +74,19 @@ exports[`test should render with a selectable and non-selectable item 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     isSelectable={false}
-    isSelected={false} />
+    isSelected={false}
+  />
 </List>
 `;
 
-exports[`test should render with isDivided 1`] = `
+exports[`should render with isDivided 1`] = `
 <List
-  isDivided={true}>
+  isDivided={true}
+>
   <ListItem
     className="stuff1"
     content={
@@ -83,13 +98,15 @@ exports[`test should render with isDivided 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
 </List>
 `;
 
-exports[`test should render with items 1`] = `
+exports[`should render with items 1`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ListItem
     className="stuff1"
     content={
@@ -101,7 +118,8 @@ exports[`test should render with items 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff2"
     content={
@@ -113,7 +131,8 @@ exports[`test should render with items 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff3"
     content={
@@ -125,7 +144,8 @@ exports[`test should render with items 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff4"
     content={
@@ -137,7 +157,8 @@ exports[`test should render with items 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff5"
     content={
@@ -149,13 +170,15 @@ exports[`test should render with items 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
 </List>
 `;
 
-exports[`test should select an item when maxSelectionCount is 2 1`] = `
+exports[`should select an item when maxSelectionCount is 2 1`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ListItem
     className="stuff1"
     content={
@@ -167,7 +190,8 @@ exports[`test should select an item when maxSelectionCount is 2 1`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff2"
     content={
@@ -179,7 +203,8 @@ exports[`test should select an item when maxSelectionCount is 2 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff3"
     content={
@@ -191,7 +216,8 @@ exports[`test should select an item when maxSelectionCount is 2 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff4"
     content={
@@ -203,7 +229,8 @@ exports[`test should select an item when maxSelectionCount is 2 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff5"
     content={
@@ -215,13 +242,15 @@ exports[`test should select an item when maxSelectionCount is 2 1`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
 </List>
 `;
 
-exports[`test should select an item when maxSelectionCount is 2 2`] = `
+exports[`should select an item when maxSelectionCount is 2 2`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ListItem
     className="stuff1"
     content={
@@ -233,7 +262,8 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff2"
     content={
@@ -245,7 +275,8 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff3"
     content={
@@ -257,7 +288,8 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff4"
     content={
@@ -269,7 +301,8 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff5"
     content={
@@ -281,13 +314,15 @@ exports[`test should select an item when maxSelectionCount is 2 2`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
 </List>
 `;
 
-exports[`test should select an item when maxSelectionCount is 2 3`] = `
+exports[`should select an item when maxSelectionCount is 2 3`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ListItem
     className="stuff1"
     content={
@@ -299,7 +334,8 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff2"
     content={
@@ -311,7 +347,8 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff3"
     content={
@@ -323,7 +360,8 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff4"
     content={
@@ -335,7 +373,8 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff5"
     content={
@@ -347,13 +386,15 @@ exports[`test should select an item when maxSelectionCount is 2 3`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
 </List>
 `;
 
-exports[`test should select an item when maxSelectionCount is 2 4`] = `
+exports[`should select an item when maxSelectionCount is 2 4`] = `
 <List
-  isDivided={false}>
+  isDivided={false}
+>
   <ListItem
     className="stuff1"
     content={
@@ -365,7 +406,8 @@ exports[`test should select an item when maxSelectionCount is 2 4`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff2"
     content={
@@ -377,7 +419,8 @@ exports[`test should select an item when maxSelectionCount is 2 4`] = `
     isSelected={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff3"
     content={
@@ -389,7 +432,8 @@ exports[`test should select an item when maxSelectionCount is 2 4`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff4"
     content={
@@ -401,7 +445,8 @@ exports[`test should select an item when maxSelectionCount is 2 4`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
   <ListItem
     className="stuff5"
     content={
@@ -413,6 +458,7 @@ exports[`test should select an item when maxSelectionCount is 2 4`] = `
     isSelected={false}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex="0" />
+    tabIndex="0"
+  />
 </List>
 `;

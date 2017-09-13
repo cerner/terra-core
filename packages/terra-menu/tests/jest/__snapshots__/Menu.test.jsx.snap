@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Menu should render a default component 1`] = `
 <div>
   <Menu
@@ -5,11 +7,13 @@ exports[`Menu should render a default component 1`] = `
     isArrowDisplayed={false}
     isOpen={true}
     onRequestClose={[Function]}
-    targetRef={[Function]}>
+    targetRef={[Function]}
+  >
     <MenuItem
       isSelected={false}
       subMenuItems={Array []}
-      text="testing" />
+      text="testing"
+    />
   </Menu>
   <div
     style={
@@ -17,6 +21,7 @@ exports[`Menu should render a default component 1`] = `
         "height": "20px",
         "width": "20px",
       }
-    } />
+    }
+  />
 </div>
 `;
