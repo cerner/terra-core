@@ -1,21 +1,14 @@
-/* eslint-disable no-unused-expressions */
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+// eslint-disable-next-line import/no-extraneous-dependencies
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-const screenshot = require('terra-toolkit').screenshot;
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-signature', done);
-  },
-
-  'Displays a default signature': (browser) => {
+  'Draw a line signature and verify canvas': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/signature-tests/default`)
-      .waitForElementPresent('.terra-Signature', 1000)
-      .assert.elementPresent('.terra-Signature');
-  },
-};
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/signature-tests/singleline`)
+      .waitForElementPresent('body', 1000)
+      .waitForElementPresent('canvas', 1000)
+      .expect.element('.terra-Signature').to.be.present;
+  }
+
+});

@@ -15,4 +15,11 @@ describe('Signature', () => {
     const signature = shallow(defaultRender);
     expect(signature.prop('className')).toContain('terra-Signature');
   });
+
+  it('should have custom props', () => {
+    const singleLine = <Signature id='singleline' />;
+    const signature = shallow(singleLine);
+    expect(signature).toMatchSnapshot();
+  });
+
 });

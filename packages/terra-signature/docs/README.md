@@ -29,6 +29,7 @@ import Signature from 'terra-signature';
 
 // Signature with with line width and callback function
 <Signature lineWidth={Signature.Opts.Width.HEAVY} onChange={this.handleChange.bind(this)} />
+```
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

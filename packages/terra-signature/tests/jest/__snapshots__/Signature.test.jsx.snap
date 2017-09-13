@@ -1,3 +1,9 @@
+exports[`Signature should have custom props 1`] = `
+<canvas
+  className="terra-Signature"
+  id="singleline" />
+`;
+
 exports[`Signature should render a default component 1`] = `
 <canvas
   className="terra-Signature" />

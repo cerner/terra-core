@@ -38,7 +38,7 @@ class Signature extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { lineSegments: props.lineSegments };
+    this.state = { lineSegments: props.lineSegments, lineWidth: props.lineWidth };
 
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
@@ -79,13 +79,19 @@ class Signature extends React.Component {
       this.drawSignature(this.state.lineSegments);
     }
 
+    if (this.props.lineSegments && this.props.lineWidth) {
+      this.drawSignature(this.props.lineSegments, this.props.lineWidth);
+      this.setState({ lineSegments: this.props.lineSegments, lineWidth: this.props.lineWidth });
+    }
+
     window.addEventListener('resize', () => this.updateDimensions());
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.lineSegments !== nextProps.lineSegments) {
-      this.drawSignature(nextProps.lineSegments);
-      this.setState({ lineSegments: nextProps.lineSegments });
+    if ((this.props.lineSegments !== nextProps.lineSegments) ||
+      (this.props.lineWidth !== nextProps.lineWidth)) {
+      this.setState({ lineSegments: nextProps.lineSegments, lineWidth: nextProps.lineWidth });
+      this.drawSignature(nextProps.lineSegments, nextProps.lineWidth);
     }
   }
 
@@ -157,12 +163,12 @@ class Signature extends React.Component {
     }
   }
 
-  drawSignature(lineSegments) {
+  drawSignature(lineSegments, lineWidth) {
     const canvas = this.node;
     const context = canvas.getContext('2d');
 
     context.lineJoin = 'round';
-    context.lineWidth = this.props.lineWidth;
+    context.lineWidth = lineWidth;
 
     // clear canvas
     context.clearRect(0, 0, canvas.getBoundingClientRect().width, canvas.getBoundingClientRect().height);
@@ -197,8 +203,14 @@ class Signature extends React.Component {
   }
 
   render() {
+    const { ...custProps } = this.props;
+
+    delete custProps.lineSegments;
+    delete custProps.lineWidth;
+    delete custProps.onChange;
+
     return (
-      <canvas className="terra-Signature" ref={(node) => { this.node = node; }} />
+      <canvas {...custProps} className="terra-Signature" ref={(node) => { this.node = node; }} />
     );
   }
 }
