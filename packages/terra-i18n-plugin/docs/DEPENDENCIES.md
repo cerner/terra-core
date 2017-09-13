@@ -8,7 +8,7 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| babel-jest | ^19.0.0 | -- | [Babel](https://github.com/babel/babel) [jest](https://github.com/facebook/jest) plugin |
+| babel-jest | ^19.0.0 | -- |  |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
