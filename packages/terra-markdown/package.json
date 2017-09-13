@@ -38,7 +38,7 @@
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "props-table": "echo \"props-table is not used here to avoid cyclical package dependencies\"",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:jest": "$(cd ..; npm bin)/jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
   }
 }
