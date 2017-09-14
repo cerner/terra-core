@@ -1,0 +1,10 @@
+# This will treat all files as text files and convert to OS's line ending on checkout
+# and back to LF on commit automatically.
+# It also leaves all files detected as binary untouched.
+* text=auto
+
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+.gitignore text
+*.md text
