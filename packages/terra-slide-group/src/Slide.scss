@@ -17,6 +17,10 @@
     }
   }
 
+  .slide[aria-hidden] {
+    visibility: hidden;
+  }
+
   .enter {
     // The - 1px is to ensure that iOS Safari actually renders the content before the transition begins.
     transform: translate3d(calc(100% - 1px), 0, 0);
@@ -39,7 +43,7 @@
     }
   }
 
-  .leave {
+  .exit {
     transform: translate3d(0, 0, 0);
 
     .slide-shadow {
@@ -48,7 +52,7 @@
     }
   }
 
-  .leave.leave-active {
+  .exit.exit-active {
     transform: translate3d(100%, 0, 0);
 
     transition: transform 300ms ease-in-out;
