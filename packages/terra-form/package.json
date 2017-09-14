@@ -35,14 +35,14 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "lerna exec --scope terra-form -- rimraf lib",
+    "compile:build": "lerna exec --scope terra-form -- babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "lint:js": "lerna exec --scope terra-form -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "lerna exec --scope terra-form -- stylelint src/**/*.scss",
     "props-table": "props-table ./src/Control.jsx ./src/Field.jsx ./src/Fieldset.jsx ./src/Input.jsx ./src/NumberField.jsx ./src/Textarea.jsx ./src/TextareaField.jsx ./src/TextField.jsx ./src/Select.jsx ./src/SelectField.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "$(cd ..; npm bin)/jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "lerna exec --scope terra-form -- jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "lerna exec --scope terra-form -- nightwatch -c ../../nightwatch.conf.js"
   }
 }
