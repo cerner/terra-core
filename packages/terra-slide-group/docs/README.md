@@ -6,7 +6,7 @@ animated fashion.
 The last component in the group is visible, and all others are hidden. While the hidden components are not visible and
 marked with the `aria-hidden` attribute, they are not actually unmounted.
 
-As a utility component, any component utilizing the SlideGroup will need to be handled accessibly of the content on each slide. 
+As a utility component, any component utilizing the SlideGroup will need to handle the accessibly of the content on each slide. 
 
 ## Getting Started
 
