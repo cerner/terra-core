@@ -43,21 +43,17 @@ class CollapsibleMenuView extends React.Component {
   }
 
   componentDidMount() {
-    if (this.container) {
-      this.resizeObserver = new ResizeObserver((entries) => {
-        // Resetting the state so that all elements will be rendered face-up for width calculations
-        this.setState({ hiddenStartIndex: -1, menuHidden: false });
-        this.handleResize(entries[0].contentRect.width);
-      });
-      this.resizeObserver.observe(this.container);
-    }
+    this.resizeObserver = new ResizeObserver((entries) => {
+      // Resetting the state so that all elements will be rendered face-up for width calculations
+      this.setState({ hiddenStartIndex: -1, menuHidden: false });
+      this.handleResize(entries[0].contentRect.width);
+    });
+    this.resizeObserver.observe(this.container);
   }
 
   componentWillUnmount() {
-    if (this.container) {
-      this.resizeObserver.disconnect(this.container);
-      this.container = null;
-    }
+    this.resizeObserver.disconnect(this.container);
+    this.container = null;
   }
 
   setContainer(node) {
