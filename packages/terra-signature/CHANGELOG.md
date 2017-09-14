@@ -3,5 +3,5 @@ Changelog
 
 Unreleased
 ----------
-
-Initial stable release
+### Changed
+* Update nightwatch tests and test scripts.

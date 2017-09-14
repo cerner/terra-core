@@ -82,9 +82,18 @@ class Signature extends React.Component {
   }
 
   componentWillUnmount() {
+    if ('ontouchstart' in document.documentElement) {
+      this.canvas.removeEventListener('touchstart', this.mouseDown);
+      this.canvas.removeEventListener('touchmove', this.mouseXY);
+      this.canvas.removeEventListener('touchend', this.mouseUp);
+      window.removeEventListener('touchcancel', this.mouseUp);
+    } else {
+      this.canvas.removeEventListener('mousedown', this.mouseDown);
+      this.canvas.removeEventListener('mousemove', this.mouseXY);
+      window.removeEventListener('mouseup', this.mouseUp);
+    }
+
     window.removeEventListener('resize', this.updateDimensions);
-    window.removeEventListener('touchcancel', this.mouseUp);
-    window.removeEventListener('mouseup', this.mouseUp);
   }
 
   mouseDown(event) {
