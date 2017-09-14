@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Overlay should render a null component when isOpen is not provided 1`] = `null`;
 
 exports[`Overlay when isOpen is provided -backgroundStyle- should render with the clear backgroundStyle 1`] = `
@@ -6,13 +8,16 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen clear"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content" />
+      className="content"
+    />
   </div>
 </FocusTrap>
 `;
@@ -23,13 +28,16 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen dark"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content" />
+      className="content"
+    />
   </div>
 </FocusTrap>
 `;
@@ -40,13 +48,16 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen light"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content" />
+      className="content"
+    />
   </div>
 </FocusTrap>
 `;
@@ -57,13 +68,16 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen light"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content" />
+      className="content"
+    />
   </div>
 </FocusTrap>
 `;
@@ -74,13 +88,16 @@ exports[`Overlay when isOpen is provided should render with content 1`] = `
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen light"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content">
+      className="content"
+    >
       Overlay message
     </div>
   </div>
@@ -91,9 +108,11 @@ exports[`Overlay when isOpen is provided should render with isRelativeToContaine
 <div
   className="overlay container light"
   onClick={[Function]}
-  tabIndex="0">
+  tabIndex="0"
+>
   <div
-    className="content" />
+    className="content"
+  />
 </div>
 `;
 
@@ -103,13 +122,16 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen light scrollable"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content" />
+      className="content"
+    />
   </div>
 </FocusTrap>
 `;
@@ -120,13 +142,16 @@ exports[`Overlay when isOpen is provided should render with onRequestClose 1`] =
   active={true}
   focusTrapOptions={Object {}}
   paused={false}
-  tag="div">
+  tag="div"
+>
   <div
     className="overlay fullscreen light"
     onClick={[Function]}
-    tabIndex="0">
+    tabIndex="0"
+  >
     <div
-      className="content" />
+      className="content"
+    />
   </div>
 </FocusTrap>
 `;

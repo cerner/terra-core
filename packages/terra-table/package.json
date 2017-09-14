@@ -1,7 +1,7 @@
 {
   "name": "terra-table",
   "main": "lib/Table.js",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "The terra-table component provides user a way to render data in a tabular format",
   "repository": {
     "type": "git",
@@ -21,19 +21,19 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.6.0"
+    "terra-props-table": "^1.7.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.2.0",
-    "terra-icon": "^1.8.0"
+    "terra-base": "^2.3.0",
+    "terra-icon": "^1.9.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.2.0",
-    "terra-icon": "^1.8.0"
+    "terra-base": "^2.3.0",
+    "terra-icon": "^1.9.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -44,7 +44,7 @@
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "props-table": "props-table ./src/Table.jsx ./src/TableCell.jsx ./src/TableHeader.jsx ./src/TableRow.jsx ./src/TableRows.jsx ./src/TableSubheader.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:jest": "$(cd ..; npm bin)/jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
   }
 }

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.10.0 - (September 12, 2017)
+------------------
 ### Changed
 * Update selection styles
 

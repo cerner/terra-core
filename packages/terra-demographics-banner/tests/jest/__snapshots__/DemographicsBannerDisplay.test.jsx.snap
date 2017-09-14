@@ -1,4 +1,6 @@
-exports[`test renders a banner that has basic information 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a banner that has basic information 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
@@ -16,7 +18,8 @@ exports[`test renders a banner that has basic information 1`] = `
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
+      preferredFirstName={null}
+    />
   }
   responsiveTo="window"
   small={
@@ -35,11 +38,13 @@ exports[`test renders a banner that has basic information 1`] = `
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
-  } />
+      preferredFirstName={null}
+    />
+  }
+/>
 `;
 
-exports[`test renders a blank banner properly 1`] = `
+exports[`renders a blank banner properly 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
@@ -57,7 +62,8 @@ exports[`test renders a blank banner properly 1`] = `
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
+      preferredFirstName={null}
+    />
   }
   responsiveTo="window"
   small={
@@ -76,11 +82,13 @@ exports[`test renders a blank banner properly 1`] = `
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
-  } />
+      preferredFirstName={null}
+    />
+  }
+/>
 `;
 
-exports[`test renders gestational date with a default label when the label is not provided 1`] = `
+exports[`renders gestational date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
@@ -98,7 +106,8 @@ exports[`test renders gestational date with a default label when the label is no
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
+      preferredFirstName={null}
+    />
   }
   responsiveTo="window"
   small={
@@ -117,11 +126,13 @@ exports[`test renders gestational date with a default label when the label is no
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
-  } />
+      preferredFirstName={null}
+    />
+  }
+/>
 `;
 
-exports[`test renders post menstrural date with a default label when the label is not provided 1`] = `
+exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
@@ -139,7 +150,8 @@ exports[`test renders post menstrural date with a default label when the label i
       photo={null}
       postMenstrualAge="April 5, 2016"
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
+      preferredFirstName={null}
+    />
   }
   responsiveTo="window"
   small={
@@ -158,11 +170,13 @@ exports[`test renders post menstrural date with a default label when the label i
       photo={null}
       postMenstrualAge="April 5, 2016"
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
-  } />
+      preferredFirstName={null}
+    />
+  }
+/>
 `;
 
-exports[`test renders the banner appropriately for a deceased person 1`] = `
+exports[`renders the banner appropriately for a deceased person 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
@@ -180,7 +194,8 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
+      preferredFirstName={null}
+    />
   }
   responsiveTo="window"
   small={
@@ -199,18 +214,21 @@ exports[`test renders the banner appropriately for a deceased person 1`] = `
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName={null} />
-  } />
+      preferredFirstName={null}
+    />
+  }
+/>
 `;
 
-exports[`test renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
+exports[`renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
       age="25 Years"
       applicationContent={
         <span
-          className="risk-score">
+          className="risk-score"
+        >
           5%
         </span>
       }
@@ -244,11 +262,13 @@ exports[`test renders the banner appropriately for a person with gestational and
           alt="My Cat"
           isFluid={false}
           src=""
-          variant="default" />
+          variant="default"
+        />
       }
       postMenstrualAge="April 7, 2016"
       postMenstrualAgeLabel="PMA"
-      preferredFirstName="John" />
+      preferredFirstName="John"
+    />
   }
   responsiveTo="window"
   small={
@@ -256,7 +276,8 @@ exports[`test renders the banner appropriately for a person with gestational and
       age="25 Years"
       applicationContent={
         <span
-          className="risk-score">
+          className="risk-score"
+        >
           5%
         </span>
       }
@@ -290,22 +311,26 @@ exports[`test renders the banner appropriately for a person with gestational and
           alt="My Cat"
           isFluid={false}
           src=""
-          variant="default" />
+          variant="default"
+        />
       }
       postMenstrualAge="April 7, 2016"
       postMenstrualAgeLabel="PMA"
-      preferredFirstName="John" />
-  } />
+      preferredFirstName="John"
+    />
+  }
+/>
 `;
 
-exports[`test renders the banner properly for a deceased person with additional application content 1`] = `
+exports[`renders the banner properly for a deceased person with additional application content 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
       age="25 Years"
       applicationContent={
         <span
-          className="risk-score">
+          className="risk-score"
+        >
           5%
         </span>
       }
@@ -339,11 +364,13 @@ exports[`test renders the banner properly for a deceased person with additional 
           alt="My Cat"
           isFluid={false}
           src=""
-          variant="default" />
+          variant="default"
+        />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName="John" />
+      preferredFirstName="John"
+    />
   }
   responsiveTo="window"
   small={
@@ -351,7 +378,8 @@ exports[`test renders the banner properly for a deceased person with additional 
       age="25 Years"
       applicationContent={
         <span
-          className="risk-score">
+          className="risk-score"
+        >
           5%
         </span>
       }
@@ -385,22 +413,26 @@ exports[`test renders the banner properly for a deceased person with additional 
           alt="My Cat"
           isFluid={false}
           src=""
-          variant="default" />
+          variant="default"
+        />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName="John" />
-  } />
+      preferredFirstName="John"
+    />
+  }
+/>
 `;
 
-exports[`test renders the banner that contains additional information 1`] = `
+exports[`renders the banner that contains additional information 1`] = `
 <ResponsiveElement
   defaultElement={
     <Component
       age="25 Years"
       applicationContent={
         <span
-          className="risk-score">
+          className="risk-score"
+        >
           5%
         </span>
       }
@@ -434,11 +466,13 @@ exports[`test renders the banner that contains additional information 1`] = `
           alt="My Cat"
           isFluid={false}
           src=""
-          variant="default" />
+          variant="default"
+        />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName="John" />
+      preferredFirstName="John"
+    />
   }
   responsiveTo="window"
   small={
@@ -446,7 +480,8 @@ exports[`test renders the banner that contains additional information 1`] = `
       age="25 Years"
       applicationContent={
         <span
-          className="risk-score">
+          className="risk-score"
+        >
           5%
         </span>
       }
@@ -480,10 +515,13 @@ exports[`test renders the banner that contains additional information 1`] = `
           alt="My Cat"
           isFluid={false}
           src=""
-          variant="default" />
+          variant="default"
+        />
       }
       postMenstrualAge={null}
       postMenstrualAgeLabel="PMA"
-      preferredFirstName="John" />
-  } />
+      preferredFirstName="John"
+    />
+  }
+/>
 `;
