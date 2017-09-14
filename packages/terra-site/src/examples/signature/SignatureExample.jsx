@@ -33,7 +33,7 @@ class SignatureExample extends React.Component {
   render() {
     return (
       <div style={{ height: '100px', width: '100%', border: '1px solid black' }} >
-        <Signature id='foo' lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
+        <Signature id="foo" lineWidth={this.state.lineWidth} lineSegments={this.state.lineSegments} />
         <button onClick={this.handleClear}>Clear </button>
         <button onClick={this.handleSingleLine}>Sign w/Line </button>
         <Select
