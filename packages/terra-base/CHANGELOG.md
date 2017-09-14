@@ -21,19 +21,18 @@ Unreleased
 
 2.0.0 - (August 31, 2017)
 ------------------
+### Breaking Changes
+* Changed default `body` global line-height from `1` to `1.4285714285714286` to better align with legacy codebases
+* Set `height` to `auto` on body element by default
+* Removed global border, margin, and padding resets from base styles
+* Removed global list-style reset from `ol` and `ul` elements
+
 ### Added
 * Added `--terra-base-line-height` CSS custom property
 * Added `--terra-base-html-height` CSS custom property
 * Added `--terra-base-html-margin` CSS custom property
 * Added `--terra-base-body-height` CSS custom property
 * Added `--terra-base-body-margin` CSS custom property
-
-### Changed
-* Changed default `body` global line-height from `1` to `1.4285714285714286` to better align with legacy codebases
-
-### Removed
-* Removed global border, margin, and padding resets from base styles
-* Removed global list-style reset from `ol` and `ul` elements
 
 1.4.0 - (August 15, 2017)
 ------------------

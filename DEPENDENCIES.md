@@ -23,7 +23,7 @@
 | glob | ^7.1.1 | -- | a little globber |
 | identity-obj-proxy | ^3.0.0 | -- | an identity object using ES6 proxies |
 | jest | ^21.0.2 | -- | Delightful JavaScript Testing. |
-| lerna | 2.0.0-rc.4 | -- | Tool for managing JavaScript projects with multiple packages |
+| lerna | ^2.1.2 | -- | Tool for managing JavaScript projects with multiple packages |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
