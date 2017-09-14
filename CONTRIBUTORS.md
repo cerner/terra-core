@@ -30,6 +30,7 @@ Cerner Corporation
 - Umesh Shimpi [@us044466]
 - Rishi Asthana [@rasthana]
 - Wei Hou [@kafkahw]
+- Ryan Perrin [@saedar]
 
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -64,3 +65,4 @@ Cerner Corporation
 [@brhoades]: https://github.com/brhoades
 [@rasthana]: https://github.com/rasthana
 [@kafkahw]: https://github.com/kafkahw
+[@saedar]: https://github.com/saedar
