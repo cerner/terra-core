@@ -3,15 +3,15 @@ import Badge from '../../lib/Badge';
 
 const BadgeSize = () => (
   <div>
-    <Badge size="tiny" text="Tiny" />
+    <Badge size="tiny" text="Tiny" id="tiny-badge" />
     {' '}
-    <Badge size="small" text="Small" />
+    <Badge size="small" text="Small" id="small-badge" />
     {' '}
-    <Badge size="medium" text="Medium" />
+    <Badge size="medium" text="Medium" id="medium-badge" />
     {' '}
-    <Badge size="large" text="Large" />
+    <Badge size="large" text="Large" id="large-badge" />
     {' '}
-    <Badge size="huge" text="Huge" />
+    <Badge size="huge" text="Huge" id="huge-badge" />
   </div>
 );
 
