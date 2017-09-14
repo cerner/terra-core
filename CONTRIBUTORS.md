@@ -30,7 +30,7 @@ Cerner Corporation
 - Umesh Shimpi [@us044466]
 - Rishi Asthana [@rasthana]
 - Ryan Perrin [@saedar]
-
+- Sameeksha Vaity [@samvaity]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -64,3 +64,4 @@ Cerner Corporation
 [@brhoades]: https://github.com/brhoades
 [@rasthana]: https://github.com/rasthana
 [@saedar]: https://github.com/saedar
+[@samvaity]: https://github.com/samvaity
