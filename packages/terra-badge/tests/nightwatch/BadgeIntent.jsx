@@ -3,19 +3,19 @@ import Badge from '../../lib/Badge';
 
 const BadgeIntent = () => (
   <div>
-    <Badge text="Default" />
+    <Badge text="Default" id="default-badge" />
     {' '}
-    <Badge intent="primary" text="Primary" />
+    <Badge intent="primary" text="Primary" id="primary-badge" />
     {' '}
-    <Badge intent="secondary" text="Secondary" />
+    <Badge intent="secondary" text="Secondary" id="secondary-badge" />
     {' '}
-    <Badge intent="positive" text="Positive" />
+    <Badge intent="positive" text="Positive" id="positive-badge" />
     {' '}
-    <Badge intent="negative" text="Negative" />
+    <Badge intent="negative" text="Negative" id="negative-badge" />
     {' '}
-    <Badge intent="warning" text="Warning" />
+    <Badge intent="warning" text="Warning" id="warning-badge" />
     {' '}
-    <Badge intent="info" text="Info" />
+    <Badge intent="info" text="Info" id="info-badge" />
   </div>
 );
 
