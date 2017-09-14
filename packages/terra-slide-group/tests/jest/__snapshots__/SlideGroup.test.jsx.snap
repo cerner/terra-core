@@ -4,43 +4,80 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
 <div
   className="slide-group"
 >
-  <CSSTransitionGroup
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={300}
-    transitionLeave={true}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "enter": "enter",
-        "enterActive": "enter-active",
-        "leave": "leave",
-        "leaveActive": "leave-active",
-      }
-    }
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <Slide
-      isHidden={true}
+    <CSSTransition
+      classNames={
+        Object {
+          "enter": "enter",
+          "enterActive": "enter-active",
+          "exit": "exit",
+          "exitActive": "exit-active",
+        }
+      }
+      enter={true}
+      exit={true}
+      onEntered={[Function]}
+      onExit={[Function]}
+      timeout={300}
     >
-      <div>
-        First
-      </div>
-    </Slide>
-    <Slide
-      isHidden={true}
+      <Slide
+        isHidden={false}
+      >
+        <div>
+          First
+        </div>
+      </Slide>
+    </CSSTransition>
+    <CSSTransition
+      classNames={
+        Object {
+          "enter": "enter",
+          "enterActive": "enter-active",
+          "exit": "exit",
+          "exitActive": "exit-active",
+        }
+      }
+      enter={true}
+      exit={true}
+      onEntered={[Function]}
+      onExit={[Function]}
+      timeout={300}
     >
-      <div>
-        Second
-      </div>
-    </Slide>
-    <Slide
-      isHidden={false}
+      <Slide
+        isHidden={false}
+      >
+        <div>
+          Second
+        </div>
+      </Slide>
+    </CSSTransition>
+    <CSSTransition
+      classNames={
+        Object {
+          "enter": "enter",
+          "enterActive": "enter-active",
+          "exit": "exit",
+          "exitActive": "exit-active",
+        }
+      }
+      enter={true}
+      exit={true}
+      onEntered={[Function]}
+      onExit={[Function]}
+      timeout={300}
     >
-      <div>
-        Third
-      </div>
-    </Slide>
-  </CSSTransitionGroup>
+      <Slide
+        isHidden={false}
+      >
+        <div>
+          Third
+        </div>
+      </Slide>
+    </CSSTransition>
+  </TransitionGroup>
 </div>
 `;
 
@@ -48,42 +85,79 @@ exports[`should render a default SlideGroup 1`] = `
 <div
   className="slide-group"
 >
-  <CSSTransitionGroup
-    transitionAppear={false}
-    transitionEnter={false}
-    transitionEnterTimeout={300}
-    transitionLeave={false}
-    transitionLeaveTimeout={300}
-    transitionName={
-      Object {
-        "enter": "enter",
-        "enterActive": "enter-active",
-        "leave": "leave",
-        "leaveActive": "leave-active",
-      }
-    }
+  <TransitionGroup
+    childFactory={[Function]}
+    component="div"
   >
-    <Slide
-      isHidden={true}
+    <CSSTransition
+      classNames={
+        Object {
+          "enter": "enter",
+          "enterActive": "enter-active",
+          "exit": "exit",
+          "exitActive": "exit-active",
+        }
+      }
+      enter={false}
+      exit={false}
+      onEntered={[Function]}
+      onExit={[Function]}
+      timeout={300}
     >
-      <div>
-        First
-      </div>
-    </Slide>
-    <Slide
-      isHidden={true}
+      <Slide
+        isHidden={true}
+      >
+        <div>
+          First
+        </div>
+      </Slide>
+    </CSSTransition>
+    <CSSTransition
+      classNames={
+        Object {
+          "enter": "enter",
+          "enterActive": "enter-active",
+          "exit": "exit",
+          "exitActive": "exit-active",
+        }
+      }
+      enter={false}
+      exit={false}
+      onEntered={[Function]}
+      onExit={[Function]}
+      timeout={300}
     >
-      <div>
-        Second
-      </div>
-    </Slide>
-    <Slide
-      isHidden={false}
+      <Slide
+        isHidden={true}
+      >
+        <div>
+          Second
+        </div>
+      </Slide>
+    </CSSTransition>
+    <CSSTransition
+      classNames={
+        Object {
+          "enter": "enter",
+          "enterActive": "enter-active",
+          "exit": "exit",
+          "exitActive": "exit-active",
+        }
+      }
+      enter={false}
+      exit={false}
+      onEntered={[Function]}
+      onExit={[Function]}
+      timeout={300}
     >
-      <div>
-        Third
-      </div>
-    </Slide>
-  </CSSTransitionGroup>
+      <Slide
+        isHidden={false}
+      >
+        <div>
+          Third
+        </div>
+      </Slide>
+    </CSSTransition>
+  </TransitionGroup>
 </div>
 `;

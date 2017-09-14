@@ -15,9 +15,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Dipslay a back and a close button in header when submenu in a bounded menu': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/menu-tests/bounded`)
-      .click('.TestNestedMenu')
-      .assert.visible('.TestBoundedContent div[class*="_header"] > div:first-child div[class*="_header-button"]')
-      .assert.visible('.TestBoundedContent div[class*="_header"] > div:last-child > button[class*="_header-button"]')
+      .click('.TestNestedMenu');
+    browser.waitForElementPresent('[class*="slide-group"] > div > div[class*="slide"]:not([class*="enter-active"]):nth-child(2)', 2000);
+
+    browser.assert.elementPresent('div[class*="slide"]:nth-child(2) div[class*="header"] > div[class*="fill"] div[class*="_header-button"]')
+      .assert.elementPresent('div[class*="slide"]:nth-child(2) div[class*="_header"] > div:last-child > button[class*="_header-button"]')
       .keys([browser.Keys.ESCAPE]);
   },
   'Displays a menu with a small calculated height': (browser) => {
