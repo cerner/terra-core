@@ -41,7 +41,7 @@ const gridLineEnd = (prop, region) => {
   // IE has gaps as columns.. so columns spanned is double
   const span = start === end
     ? 1 // No gaps traversed
-    : (end - start) * 2 - 1;
+    : ((end - start) * 2) - 1;
 
   return {
     [`grid-${prop}-end`]: `${end}`,
