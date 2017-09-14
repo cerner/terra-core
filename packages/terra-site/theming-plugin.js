@@ -1,5 +1,6 @@
 const postcss = require('postcss');
 const fs = require('fs');
+const path = require('path');
 
 const sortHash = data =>
   Object.keys(data).sort().reduce((a, b) => {
@@ -33,6 +34,6 @@ module.exports = postcss.plugin('theming-plugin', () => {
       }
     });
 
-    return fs.writeFileSync('themeable-variables.json', JSON.stringify(sortHash(variables)), 'utf8');
+    return fs.writeFileSync(path.resolve(__dirname, 'themeable-variables.json'), JSON.stringify(sortHash(variables)), 'utf8');
   };
 });
