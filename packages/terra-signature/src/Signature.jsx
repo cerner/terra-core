@@ -50,38 +50,32 @@ class Signature extends React.Component {
   }
 
   componentDidMount() {
-    const canvas = this.node;
-
     if ('ontouchstart' in document.documentElement) {
-      this.node.addEventListener('touchstart', this.mouseDown, false);
-      this.node.addEventListener('touchmove', this.mouseXY, true);
-      this.node.addEventListener('touchend', this.mouseUp, false);
+      this.canvas.addEventListener('touchstart', this.mouseDown, false);
+      this.canvas.addEventListener('touchmove', this.mouseXY, true);
+      this.canvas.addEventListener('touchend', this.mouseUp, false);
       document.body.addEventListener('touchcancel', this.mouseUp, false);
     } else {
-      this.node.addEventListener('mousedown', this.mouseDown);
-      this.node.addEventListener('mousemove', this.mouseXY);
+      this.canvas.addEventListener('mousedown', this.mouseDown);
+      this.canvas.addEventListener('mousemove', this.mouseXY);
       document.body.addEventListener('mouseup', this.mouseUp);
     }
 
-    this.node.width = canvas.getBoundingClientRect().width;
-    this.node.height = canvas.getBoundingClientRect().height;
-
-    const context = this.node.getContext('2d');
+    const context = this.canvas.getContext('2d');
 
     context.lineWidth = this.props.lineWidth;
 
-    const style = window.getComputedStyle(this.node);
+    const style = window.getComputedStyle(this.canvas);
     const color = style.getPropertyValue('color');
     context.strokeStyle = color;
 
-    this.drawSignature(this.props.lineSegments, this.props.lineWidth);
+    this.updateDimensions();
 
-    window.addEventListener('resize', () => this.updateDimensions());
+    window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillReceiveProps(nextProps) {
-    if ((this.props.lineSegments !== nextProps.lineSegments) ||
-      (this.props.lineWidth !== nextProps.lineWidth)) {
+    if ((this.props.lineSegments !== nextProps.lineSegments) || (this.props.lineWidth !== nextProps.lineWidth)) {
       this.setState({ lineSegments: nextProps.lineSegments, lineWidth: nextProps.lineWidth });
       this.drawSignature(nextProps.lineSegments, nextProps.lineWidth);
     }
@@ -94,12 +88,11 @@ class Signature extends React.Component {
   }
 
   mouseDown(event) {
-    const canvas = this.node;
-
     this.setState({ painting: true });
 
-    const rect = canvas.getBoundingClientRect();
-    this.addLine(event.pageX - rect.left, event.pageY - rect.top, false);
+    this.canvasRect = this.canvas.getBoundingClientRect();
+
+    this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, false);
 
     this.draw();
   }
@@ -113,11 +106,8 @@ class Signature extends React.Component {
   }
 
   mouseXY(event) {
-    const canvas = this.node;
-
     if (this.state.painting) {
-      const rect = canvas.getBoundingClientRect();
-      this.addLine(event.pageX - rect.left, event.pageY - rect.top, true);
+      this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, true);
 
       this.draw();
     }
@@ -139,8 +129,7 @@ class Signature extends React.Component {
 
 
   draw() {
-    const canvas = this.node;
-    const context = canvas.getContext('2d');
+    const context = this.canvas.getContext('2d');
 
     if (this.state.lineSegments.length > 0) {
       const lastLineSegment = this.state.lineSegments[this.state.lineSegments.length - 1];
@@ -156,14 +145,13 @@ class Signature extends React.Component {
   }
 
   drawSignature(lineSegments, lineWidth) {
-    const canvas = this.node;
-    const context = canvas.getContext('2d');
+    const context = this.canvas.getContext('2d');
 
     context.lineJoin = 'round';
     context.lineWidth = lineWidth;
 
     // clear canvas
-    context.clearRect(0, 0, canvas.getBoundingClientRect().width, canvas.getBoundingClientRect().height);
+    context.clearRect(0, 0, this.canvasRect.width, this.canvasRect.height);
 
     // iterate and draw all recorded line segments
     const segmentCount = lineSegments.length;
@@ -179,30 +167,25 @@ class Signature extends React.Component {
   clearSignature() {
     this.setState({ lineSegments: [] });
 
-    const canvas = this.node;
-    const context = canvas.getContext('2d');
+    const context = this.canvas.getContext('2d');
 
-    context.clearRect(0, 0, canvas.getBoundingClientRect().width, canvas.getBoundingClientRect().height);
+    context.clearRect(0, 0, this.canvasRect.width, this.canvasRect.height);
   }
 
   updateDimensions() {
-    const canvas = this.node;
+    this.canvasRect = this.canvas.getBoundingClientRect();
 
-    this.node.width = canvas.getBoundingClientRect().width;
-    this.node.height = canvas.getBoundingClientRect().height;
+    this.canvas.width = this.canvasRect.width;
+    this.canvas.height = this.canvasRect.height;
 
     this.drawSignature(this.state.lineSegments);
   }
 
   render() {
-    const { ...custProps } = this.props;
-
-    delete custProps.lineSegments;
-    delete custProps.lineWidth;
-    delete custProps.onChange;
+    const { lineSegments, lineWidth, onChange, ...custProps } = this.props;
 
     return (
-      <canvas {...custProps} className={styles.signature} ref={(node) => { this.node = node; }} />
+      <canvas {...custProps} className={styles.signature} ref={(node) => { this.canvas = node; }} />
     );
   }
 }

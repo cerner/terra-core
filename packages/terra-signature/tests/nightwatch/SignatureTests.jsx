@@ -6,8 +6,7 @@ import { Link } from 'react-router';
 const SignatureTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/signature-tests/default">Default Signature</Link></li>
-      <li><Link to="/tests/signature-tests/singleline">Single Line</Link></li>
+      <li><Link to="/tests/signature-tests/default">Signature Default</Link></li>
     </ul>
   </div>
 );
