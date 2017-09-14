@@ -28,7 +28,7 @@ const propTypes = {
 
 const defaultProps = {
   lineWidth: LineWidths.FINE,
-  lineSegments: undefined,
+  lineSegments: [],
   onChange: undefined,
 };
 
