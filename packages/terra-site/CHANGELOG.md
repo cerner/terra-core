@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed title mispelling.
 
 1.10.0 - (September 12, 2017)
 ------------------
