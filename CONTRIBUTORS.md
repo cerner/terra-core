@@ -29,8 +29,9 @@ Cerner Corporation
 - Michael Hemesath [@mhemesath]
 - Umesh Shimpi [@us044466]
 - Rishi Asthana [@rasthana]
+- Wei Hou [@kafkahw]
 - Ryan Perrin [@saedar]
-
+- Sameeksha Vaity [@samvaity]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -63,4 +64,6 @@ Cerner Corporation
 [@us044466]: https://github.com/us044466
 [@brhoades]: https://github.com/brhoades
 [@rasthana]: https://github.com/rasthana
+[@kafkahw]: https://github.com/kafkahw
 [@saedar]: https://github.com/saedar
+[@samvaity]: https://github.com/samvaity
