@@ -4,7 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Fixed title mispelling.
+* Fixed title misspelling.
+* Updated ArrangeAlignment to generate Ids with `_.uniqueId()`.
 
 1.10.0 - (September 12, 2017)
 ------------------
