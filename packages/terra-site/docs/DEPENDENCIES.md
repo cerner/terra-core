@@ -3,6 +3,7 @@
 ## dependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
+| lodash | ^4.17.4 | -- | Lodash modular utilities. |
 | moment | ^2.17.1 | -- | Parse, validate, manipulate, and display dates |
 | postcss | ^6.0.9 | -- | Tool for transforming styles with JS plugins |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
