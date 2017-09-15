@@ -26,7 +26,10 @@ const CollapsibleMenuViewExamples = () => (
     <PropsTable id="item-group-props" src={CollapsibleMenuViewItemGroupSrc} componentName="CollapsibleMenuView.ItemGroup" />
     <PropsTable id="toggle-props" src={CollapsibleMenuViewToggleSrc} componentName="CollapsibleMenuView.Toggle" />
     <Heading level={2} size="large">CollapsibleMenuView.Divider Props</Heading>
-    <p>N/A</p>
+    <p>
+    The divider is a purely visual element with no props available.
+    This component should be used to indicate where a divider should be placed between items.
+    </p>
     <br />
     <br />
     <Heading level={3} size="medium">CollapsibleMenuView Example</Heading>

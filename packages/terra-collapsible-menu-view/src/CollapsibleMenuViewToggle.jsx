@@ -68,16 +68,15 @@ class CollapsibleMenuViewToggle extends React.Component {
 
     const { isCollapsibleMenuItem } = this.context;
 
-    const attributes = Object.assign({}, customProps);
     const controllClassName = cx([
       'control',
-      attributes.className,
+      customProps.className,
     ]);
 
     if (isCollapsibleMenuItem) {
       return (
         <Menu.Item
-          {...attributes}
+          {...customProps}
           text={text}
           isSelected={isSelected}
           isSelectable={isSelectable}
@@ -89,7 +88,7 @@ class CollapsibleMenuViewToggle extends React.Component {
     return (
       <div className={cx(['face-up-item'])}>
         <Control
-          {...attributes}
+          {...customProps}
           className={controllClassName}
           type="checkbox"
           labelText={text}
