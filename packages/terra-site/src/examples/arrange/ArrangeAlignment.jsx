@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import _ from 'lodash';
 import { ArrangeWrapper, alignLabels, alignOptions } from './examplesetup';
 
 const alignmentTypes = ['all', 'individual'];
@@ -32,10 +34,14 @@ class ArrangeAlignment extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: Math.floor(Math.random() * 0xFFFF),
+      id: undefined,
     };
-    this.getId = this.getId.bind(this);
+
     this.handleSelectChange = this.handleSelectChange.bind(this);
+  }
+
+  componentWillMount() {
+    this.state.id = _.uniqueId();
   }
 
   getId(name) {
