@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import _ from 'lodash';
 import { ArrangeWrapper, alignLabels, alignOptions } from './examplesetup';
 
