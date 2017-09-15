@@ -22,15 +22,15 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "lerna exec --scope terra-image -- rimraf lib",
+    "compile:build": "lerna exec --scope terra-image -- babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "lint:js": "lerna exec --scope terra-image -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "lerna exec --scope terra-image -- stylelint src/**/*.scss",
     "props-table": "props-table ./src/Image.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "$(cd ..; npm bin)/jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "lerna exec --scope terra-image -- jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "lerna exec --scope terra-image -- nightwatch -c ../../nightwatch.conf.js"
   },
   "devDependencies": {
     "terra-props-table": "^1.7.0"
