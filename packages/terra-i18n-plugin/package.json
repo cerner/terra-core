@@ -35,6 +35,8 @@
     "compile:clean": "lerna exec --scope terra-i18n-plugin -- rimraf lib",
     "compile:build": "lerna exec --scope terra-i18n-plugin -- babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "lerna exec --scope terra-i18n-plugin -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore"
+    "lint:js": "lerna exec --scope terra-i18n-plugin -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "test": "npm run test:jest",
+    "test:jest": "cd ../../ && npm run jest -t i18n-plugin-spec && cd packages/terra-i18n-plugin"
   }
 }
