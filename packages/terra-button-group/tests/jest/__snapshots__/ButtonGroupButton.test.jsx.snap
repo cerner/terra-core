@@ -1,4 +1,6 @@
-exports[`test should render a default component 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component 1`] = `
 <Button
   aria-selected={false}
   className="button-group-button"
@@ -7,10 +9,11 @@ exports[`test should render a default component 1`] = `
   isDisabled={false}
   isReversed={false}
   type="button"
-  variant="default" />
+  variant="default"
+/>
 `;
 
-exports[`test should render as selected 1`] = `
+exports[`should render as selected 1`] = `
 <Button
   aria-selected={true}
   className="button-group-button is-active"
@@ -19,16 +22,18 @@ exports[`test should render as selected 1`] = `
   isDisabled={false}
   isReversed={false}
   type="button"
-  variant="default" />
+  variant="default"
+/>
 `;
 
-exports[`test should render with icon and text 1`] = `
+exports[`should render with icon and text 1`] = `
 <Button
   aria-selected={false}
   className="button-group-button"
   icon={
     <img
-      alt="icon" />
+      alt="icon"
+    />
   }
   isBlock={false}
   isCompact={false}
@@ -36,16 +41,18 @@ exports[`test should render with icon and text 1`] = `
   isReversed={false}
   text="text"
   type="button"
-  variant="default" />
+  variant="default"
+/>
 `;
 
-exports[`test should render with icon and text reversed 1`] = `
+exports[`should render with icon and text reversed 1`] = `
 <Button
   aria-selected={false}
   className="button-group-button"
   icon={
     <img
-      alt="icon" />
+      alt="icon"
+    />
   }
   isBlock={false}
   isCompact={false}
@@ -53,26 +60,29 @@ exports[`test should render with icon and text reversed 1`] = `
   isReversed={true}
   text="text"
   type="button"
-  variant="default" />
+  variant="default"
+/>
 `;
 
-exports[`test should render with icon only 1`] = `
+exports[`should render with icon only 1`] = `
 <Button
   aria-selected={false}
   className="button-group-button"
   icon={
     <img
-      alt="icon" />
+      alt="icon"
+    />
   }
   isBlock={false}
   isCompact={false}
   isDisabled={false}
   isReversed={false}
   type="button"
-  variant="default" />
+  variant="default"
+/>
 `;
 
-exports[`test should render with text 1`] = `
+exports[`should render with text 1`] = `
 <Button
   aria-selected={false}
   className="button-group-button"
@@ -82,5 +92,6 @@ exports[`test should render with text 1`] = `
   isReversed={false}
   text="text"
   type="button"
-  variant="default" />
+  variant="default"
+/>
 `;

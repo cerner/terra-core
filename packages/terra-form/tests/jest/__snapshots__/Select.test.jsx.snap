@@ -1,36 +1,43 @@
-exports[`test should render a Select component with one option 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a Select component with one option 1`] = `
 <select
   className="select"
   name={null}
-  required={false}>
+  required={false}
+>
   <option
-    value="m">
+    value="m"
+  >
     moo
   </option>
 </select>
 `;
 
-exports[`test should render a Select when all the possible props are passed into it 1`] = `
+exports[`should render a Select when all the possible props are passed into it 1`] = `
 <select
   aria-required="true"
   className="select"
   name="description"
-  required={true}>
+  required={true}
+>
   <option
-    value="m">
+    value="m"
+  >
     moo
   </option>
 </select>
 `;
 
-exports[`test should render a default Select component 1`] = `
+exports[`should render a default Select component 1`] = `
 <select
   className="select"
   name={null}
-  required={false} />
+  required={false}
+/>
 `;
 
-exports[`test should render as controlled when just the required fields and a onChange function is passed into the Select 1`] = `
+exports[`should render as controlled when just the required fields and a onChange function is passed into the Select 1`] = `
 <Select
   choices={null}
   name={null}
@@ -47,25 +54,29 @@ exports[`test should render as controlled when just the required fields and a on
       },
     ]
   }
-  required={false}>
+  required={false}
+>
   <select
     className="select"
     name={null}
     onChange={[Function]}
-    required={false}>
+    required={false}
+  >
     <option
-      value="m">
+      value="m"
+    >
       moo
     </option>
     <option
-      value="b">
+      value="b"
+    >
       boo
     </option>
   </select>
 </Select>
 `;
 
-exports[`test should render as uncontrolled when just the required fields and a default value is passed into the Select 1`] = `
+exports[`should render as uncontrolled when just the required fields and a default value is passed into the Select 1`] = `
 <Select
   choices={null}
   defaultValue="b"
@@ -82,18 +93,22 @@ exports[`test should render as uncontrolled when just the required fields and a 
       },
     ]
   }
-  required={false}>
+  required={false}
+>
   <select
     className="select"
     defaultValue="b"
     name={null}
-    required={false}>
+    required={false}
+  >
     <option
-      value="m">
+      value="m"
+    >
       moo
     </option>
     <option
-      value="b">
+      value="b"
+    >
       boo
     </option>
   </select>

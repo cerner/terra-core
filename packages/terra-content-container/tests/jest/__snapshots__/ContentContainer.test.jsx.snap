@@ -1,55 +1,73 @@
-exports[`test should render a default component 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component 1`] = `
 <div
-  className="content-container">
+  className="content-container"
+>
   <div
-    className="header" />
+    className="header"
+  />
   <div
-    className="main">
+    className="main"
+  >
     <div
-      className="normalizer" />
+      className="normalizer"
+    />
   </div>
 </div>
 `;
 
-exports[`test should render a header 1`] = `
+exports[`should render a header 1`] = `
 <div
-  className="content-container">
+  className="content-container"
+>
   <div
-    className="header">
+    className="header"
+  >
     <p>
       Header
     </p>
   </div>
   <div
-    className="main">
+    className="main"
+  >
     <div
-      className="normalizer" />
+      className="normalizer"
+    />
   </div>
 </div>
 `;
 
-exports[`test should render as fill 1`] = `
+exports[`should render as fill 1`] = `
 <div
-  className="content-container fill">
+  className="content-container fill"
+>
   <div
-    className="header" />
+    className="header"
+  />
   <div
-    className="main">
+    className="main"
+  >
     <div
-      className="normalizer" />
+      className="normalizer"
+    />
   </div>
 </div>
 `;
 
-exports[`test should render content 1`] = `
+exports[`should render content 1`] = `
 <div
-  className="content-container">
+  className="content-container"
+>
   <div
-    className="header" />
+    className="header"
+  />
   <div
-    className="main">
+    className="main"
+  >
     <div
-      className="normalizer">
+      className="normalizer"
+    >
       <p>
         test content
       </p>

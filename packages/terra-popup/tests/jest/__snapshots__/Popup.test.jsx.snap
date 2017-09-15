@@ -1,11 +1,14 @@
-exports[`test should render a default component 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component 1`] = `
 <div>
   <div
-    style="height:20px;width:20px;" />
+    style="height:20px;width:20px;"
+  />
 </div>
 `;
 
-exports[`test should shallow a default component 1`] = `
+exports[`should shallow a default component 1`] = `
 <div>
   <Popup
     boundingRef={null}
@@ -21,7 +24,8 @@ exports[`test should shallow a default component 1`] = `
     onRequestClose={[Function]}
     releaseFocus={[Function]}
     requestFocus={[Function]}
-    targetRef={[Function]}>
+    targetRef={[Function]}
+  >
     <p>
       this is popup content
     </p>
@@ -32,6 +36,7 @@ exports[`test should shallow a default component 1`] = `
         "height": "20px",
         "width": "20px",
       }
-    } />
+    }
+  />
 </div>
 `;

@@ -1,6 +1,9 @@
-exports[`test should render the embedded content consumer container 1`] = `<div />`;
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test should render the embedded content consumer with custom class names 1`] = `
+exports[`should render the embedded content consumer container 1`] = `<div />`;
+
+exports[`should render the embedded content consumer with custom class names 1`] = `
 <div
-  className="container" />
+  className="container"
+/>
 `;
