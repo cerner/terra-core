@@ -15,16 +15,16 @@
   "scripts": {
     "start": "webpack-dev-server --progress",
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "lerna exec --scope terra-site -- rimraf lib",
+    "compile:build": "lerna exec --scope terra-site -- babel src --out-dir lib --copy-files",
     "compile:heroku": "webpack --config webpack.prod.config --progress",
     "compile:prod": "webpack --config webpack.prod.config -p",
     "compile:prod-stats": "webpack --config webpack.prod.config -p --json > stats.json",
     "deploy": "npm run compile:prod && gh-pages -d build",
     "lint": "npm run lint:js",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "test": "npm run test:jest",
-    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json"
+    "lint:js": "lerna exec --scope terra-site -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "test": "npm run test:spec",
+    "test:spec": "lerna exec --scope terra-site -- jest ./tests/jest/* --config ../../jestconfig.json"
   },
   "dependencies": {
     "moment": "^2.17.1",

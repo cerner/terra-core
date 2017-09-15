@@ -20,7 +20,7 @@ describe('Styles', () => {
       expect(regionStyles['grid-row-start']).toEqual('2');
       expect(regionStyles['grid-row-end']).toEqual('3');
       expect(regionStyles['-ms-grid-row']).toEqual('3');
-      expect(regionStyles['-ms-grid-row-span']).toEqual('2');
+      expect(regionStyles['-ms-grid-row-span']).toEqual('1');
     });
 
     it('should have grid column styles', () => {

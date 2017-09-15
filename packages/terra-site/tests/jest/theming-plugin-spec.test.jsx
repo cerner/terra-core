@@ -46,17 +46,16 @@ describe('theming-plugin', () => {
   describe('when the SCSS comes from a file', () => {
     it('should find all of the appropriate css', () => {
       const rootNode = postcss.parse(mockStyles);
-      const expectedHash = {
-        TestingComponent: {
-          '--terra-font-size': '1.5em',
-          '--terra-color': '#000',
-          '--terra-background-color': '#000',
-        },
-      };
+      const expectedHash = `{
+        "TestingComponent": {
+          "--terra-font-size": "1.5em",
+          "--terra-color": "#000",
+          "--terra-background-color": "#000"
+        }
+      }`;
       rootNode.source = { input: { file: 'TestingComponent.scss' } };
-
-      expect(testingFunction(rootNode)).toEqual(JSON.stringify(expectedHash));
-      expect(outputtedFileName).toEqual('themeable-variables.json');
+      expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
+      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
@@ -64,16 +63,16 @@ describe('theming-plugin', () => {
   describe('when the SCSS does not come from a file', () => {
     it('should find all of the appropriate css', () => {
       const rootNode = postcss.parse(mockStyles);
-      const expectedHash = {
-        miscellaneous: {
-          '--terra-font-size': '1.5em',
-          '--terra-color': '#000',
-          '--terra-background-color': '#000',
-        },
-      };
+      const expectedHash = `{
+        "miscellaneous": {
+          "--terra-font-size": "1.5em",
+          "--terra-color": "#000",
+          "--terra-background-color": "#000"
+        }
+      }`;
 
-      expect(testingFunction(rootNode)).toEqual(JSON.stringify(expectedHash));
-      expect(outputtedFileName).toEqual('themeable-variables.json');
+      expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
+      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
@@ -94,17 +93,17 @@ describe('theming-plugin', () => {
       `;
 
       const rootNode = postcss.parse(mockStyles);
-      const expectedHash = {
-        TestingComponent: {
-          '--terra-font-size': '1.5em',
-          '--terra-color': '#000',
-          '--terra-background-color': '#000',
-        },
-      };
+      const expectedHash = `{
+        "TestingComponent": {
+          "--terra-font-size": "1.5em",
+          "--terra-color": "#000",
+          "--terra-background-color": "#000"
+        }
+      }`;
       rootNode.source = { input: { file: 'TestingComponent.scss' } };
 
-      expect(testingFunction(rootNode)).toEqual(JSON.stringify(expectedHash));
-      expect(outputtedFileName).toEqual('themeable-variables.json');
+      expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
+      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
