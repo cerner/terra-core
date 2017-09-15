@@ -2,7 +2,7 @@
 /* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
+const { resizeTo } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default signature': (browser) => {
