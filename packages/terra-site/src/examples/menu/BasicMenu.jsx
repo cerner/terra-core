@@ -104,7 +104,7 @@ class BasicMenu extends React.Component {
               ]}
             />
             <Menu.Item
-              text="Nested Menu 2 has a long tittle that will wrap and a truncated title when clicked"
+              text="Nested Menu 2 has a long title that will wrap and a truncated title when clicked"
               key="Nested2"
               subMenuItems={[
                 <Menu.Item text="Default 2.1" key="2.1" />,
