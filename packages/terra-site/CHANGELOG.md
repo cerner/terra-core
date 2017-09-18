@@ -4,8 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Fixed title misspelling.
 * Updated ArrangeAlignment to generate Ids with `_.uniqueId()`.
+
+### Fixed
+* Fixed title misspelling.
+* Bidi display of label-value pairs of input examples
 
 1.10.0 - (September 12, 2017)
 ------------------
