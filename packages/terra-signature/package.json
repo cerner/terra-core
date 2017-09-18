@@ -2,7 +2,7 @@
   "name": "terra-signature",
   "main": "lib/Signature.js",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A signature defined by an array of line segments.",
   "repository": {
     "type": "git",
