@@ -6,6 +6,7 @@ const IndividuallyAlignedFitEnd = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
+        id="default"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -14,6 +15,7 @@ const IndividuallyAlignedFitEnd = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="center"
         alignFitEnd="center"
         fitStart={image}
         fill={simpleText}
@@ -23,6 +25,7 @@ const IndividuallyAlignedFitEnd = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="bottom"
         alignFitEnd="bottom"
         fitStart={image}
         fill={simpleText}
@@ -32,6 +35,7 @@ const IndividuallyAlignedFitEnd = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="stretch"
         alignFitEnd="stretch"
         fitStart={image}
         fill={simpleText}
