@@ -44,6 +44,7 @@
 | terra-props-table | ^1.7.0 | ^15.4.2 | terra-props-table |
 | terra-responsive-element | ^1.8.0 | ^15.4.2 | The terra-responsive-element conditionally renders components based on viewport size |
 | terra-search-field | ^1.9.0 | ^15.4.2 | A search component with a field that automatically performs a search callback after user input. |
+| terra-signature | ^0.x | ^15.4.2 | A signature defined by an array of line segments. |
 | terra-slide-group | ^1.8.0 | ^15.4.2 | A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion |
 | terra-slide-panel | ^1.8.0 | ^15.4.2 | terra-slide-panel |
 | terra-status | ^1.9.0 | ^15.4.2 | The status component provides a customizable color indictor to signify a specific condition. |
