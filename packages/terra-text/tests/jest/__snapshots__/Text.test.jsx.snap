@@ -28,7 +28,7 @@ exports[`Text should render a text component with color prop set 1`] = `
 
 exports[`Text should render a text component with fontSize prop set 1`] = `
 <span
-  className="text fontSize-24"
+  className="text font-size-24"
   style={
     Object {
       "color": "inherit",
@@ -67,7 +67,7 @@ exports[`Text should render a text component with isVisuallyHidden prop set 1`] 
 
 exports[`Text should render a text component with weight prop set 1`] = `
 <span
-  className="text fontWeight-200"
+  className="text font-weight-200"
   style={
     Object {
       "color": "inherit",

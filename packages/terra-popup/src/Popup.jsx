@@ -239,7 +239,7 @@ class Popup extends React.Component {
 
       const tetherCotent = (
         <TetherComponent
-          classPrefix="terra-Popup"
+          classPrefix="terra-popup"
           constraints={constraints}
           content={popupContent}
           contentAttachment={bidiContentAttachment}

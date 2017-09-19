@@ -1,5 +1,4 @@
 :local {
-  /* stylelint-disable selector-class-pattern */
   .submenu.arrow[data-align-bottom='true']::after {
     border-top-color: var(--terra-menu-submenu-background-color, #f9f9f9);
   }
@@ -99,7 +98,7 @@
     background-color: var(--terra-menu-background-color, #fff);
     color: var(--terra-menu-foreground-color, #1c1f21);
   }
-  
+
   .submenu .content {
     background-color: var(--terra-menu-submenu-background-color, #f9f9f9);
     color: var(--terra-menu-submenu-foreground-color, #1c1f21);

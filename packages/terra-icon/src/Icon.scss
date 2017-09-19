@@ -6,7 +6,6 @@
  */
 
 :local {
-  /* stylelint-disable selector-class-pattern  */
   .icon {
     display: inline-block;
     vertical-align: -0.15em; // Adjusts visual alignment for icons to better align next to text
@@ -38,5 +37,4 @@
   [dir='rtl'] .icon.is-bidi {
     transform: scaleX(-1);
   }
-  /* stylelint-enable */
 }
