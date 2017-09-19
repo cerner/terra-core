@@ -36,14 +36,14 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-slide-group -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-slide-group -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "lerna exec --scope terra-slide-group -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "lerna exec --scope terra-slide-group -- stylelint src/**/*.scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/SlideGroup.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-slide-group -- jest --config ../../jestconfig.json",
-    "test:nightwatch": "lerna exec --scope terra-slide-group -- nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }

@@ -37,12 +37,12 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-props-table -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-props-table -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "lerna exec --scope terra-props-table -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-props-table -- jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "lerna exec --scope terra-props-table -- nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }
