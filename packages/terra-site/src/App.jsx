@@ -9,7 +9,7 @@ import SlidePanel from 'terra-slide-panel';
 import ContentContainer from 'terra-content-container';
 import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
-import ThemeProvider from 'terra-theme-provider/lib/ThemeProvider';
+import ThemeProvider from 'terra-theme-provider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
