@@ -132,4 +132,17 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.SingleSelectableRows-Custom').to.be.present;
     browser.expect.element('.Subheader-Custom').to.be.present;
   },
+
+  'Displays a selectable table with a preselected row': (browser) => {
+      browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/preselected`);
+      browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
+      browser.expect.element('[class*="row"]:nth-child(2)').to.have.attribute('class').which.not.contains('is-selected');
+      browser.expect.element('[class*="row"]:nth-child(3)').to.have.attribute('class').which.not.contains('is-selected');
+
+  },
+
+  'Displays a selectable table with a non-selectable row': (browser) => {
+      browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/non-selectable`);
+      browser.expect.element('[class*="row"]:nth-child(1)').to.have.not.attribute('class').which.contains('is-selectable');
+  },
 });
