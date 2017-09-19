@@ -2,7 +2,7 @@
 
 The theme provider component provides a theme to Terra UI components rendered within it via CSS custom properties a.k.a CSS variables. This is accomplished by setting a CSS class which contains defined CSS custom properties for the specified theme on the DOM element that wraps the children rendered by the theme provider.
 
-If you need to theme provider to apply the theme class on the HTML element, you can set the `isGlobalTheme` prop. This will set the class passed in the `themeName` prop to the HTML element, applying the CSS custom properties on the root of the DOM. This is useful if your theme targets styles in terra-base.
+If you need to theme styles on to the `html` or `body` elements applied in terra-base, you can set the `isGlobalTheme` prop on the theme provider component. This will set the CSS class generated from the `themeName` prop on the `html` element.
 
 *Note:*
 * Apps should only use the `isGlobalTheme` prop on one theme provider component.
