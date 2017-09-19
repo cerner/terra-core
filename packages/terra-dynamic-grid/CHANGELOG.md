@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 -----------------
+
+1.4.0 - (September 19, 2017)
+------------------
 ### Changed
 * Fixed the logic of calculating span in IE for dynamic grid
 

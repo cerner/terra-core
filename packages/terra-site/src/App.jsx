@@ -47,9 +47,9 @@ class App extends React.Component {
   }
 
   handleResetScroll() {
-    const scrollParent = document.getElementById('site-content-section').parentNode;
-    if (scrollParent && scrollParent.parentNode) {
-      scrollParent.parentNode.scrollTop = 0;
+    const element = document.getElementById('site-content-section');
+    if (element && element.parentNode) {
+      element.parentNode.scrollTop = 0;
     }
     if (window.innerWidth < 768) {
       this.setState({ isOpen: false });
@@ -152,6 +152,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/progress-bar">Progress Bar</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/responsive-element">Responsive Element</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/search-field">Search Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/signature">Signature</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-group">Slide Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
@@ -169,8 +170,8 @@ class App extends React.Component {
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
     // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
     const mainContent = (
-      <ThemeProvider themeName={this.state.theme}>
-        <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
+      <ThemeProvider id="site-content-section" themeName={this.state.theme}>
+        <Base className={styles['site-content']} locale={this.state.locale}>
           {this.props.children}
         </Base>
       </ThemeProvider>
