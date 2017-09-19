@@ -102,7 +102,6 @@ class App extends React.Component {
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
             <option value="">Default Theme</option>
-            <option value="cerner-clinical-theme">Clinical Theme</option>
             <option value="cerner-consumer-theme">Consumer Theme</option>
             <option value="cerner-mock-theme">Mock Theme</option>
           </select>

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ThemeProviderThemes = {
-  CLINICAL: 'cerner-clinical-theme',
   CONSUMER: 'cerner-consumer-theme',
   MOCK: 'cerner-mock-theme',
 };

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import ThemeProvider from 'terra-theme-provider/lib/ThemeProvider';
+import ThemeProvider from 'terra-theme-provider';
 import Badge from 'terra-badge';
 
 class DefaultThemeProvider extends React.Component {
