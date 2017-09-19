@@ -18,11 +18,11 @@ const routes = (
     <Route path="/tests/table-tests/default" component={DefaultTable} />
     <Route path="/tests/table-tests/no-striped" component={NoStripedTable} />
     <Route path="/tests/table-tests/no-padding" component={NoPaddingTable} />
-    <Route path="/tests/table-tests/table-no-rows" component={TableNoRows} />
-    <Route path="/tests/table-tests/single-row-table" component={SingleRowTable} />
-    <Route path="/tests/table-tests/table-highlighted-rows" component={TableWithHighlightedRows} />
-    <Route path="/tests/table-tests/table-sort-indicator" component={TableWithSortIndicator} />
-    <Route path="/tests/table-tests/table-subheaders" component={TableWithSubheaders} />
+    <Route path="/tests/table-tests/no-rows" component={TableNoRows} />
+    <Route path="/tests/table-tests/single-row" component={SingleRowTable} />
+    <Route path="/tests/table-tests/highlighted-rows" component={TableWithHighlightedRows} />
+    <Route path="/tests/table-tests/sort-indicator" component={TableWithSortIndicator} />
+    <Route path="/tests/table-tests/subheaders" component={TableWithSubheaders} />
   </div>
 );
 
