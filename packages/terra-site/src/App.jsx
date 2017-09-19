@@ -9,7 +9,7 @@ import SlidePanel from 'terra-slide-panel';
 import ContentContainer from 'terra-content-container';
 import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
-import ThemeProvider from 'terra-theme-provider';
+import ThemeProvider from 'terra-theme-provider/src/ThemeProvider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
@@ -101,9 +101,10 @@ class App extends React.Component {
         <div className={styles['site-theme']}>
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
-            <option value="">Default</option>
-            <option value="cerner-mock-theme">Mock Theme</option>
+            <option value="">Default Theme</option>
+            <option value="cerner-clinical-theme">Clinical Theme</option>
             <option value="cerner-consumer-theme">Consumer Theme</option>
+            <option value="cerner-mock-theme">Mock Theme</option>
           </select>
         </div>
       );
