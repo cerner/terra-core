@@ -235,6 +235,10 @@
     "--terra-progress-bar-height-large": "1.4rem",
     "--terra-progress-bar-height-huge": "1.7rem"
   },
+  "Signature": {
+    "--terra-signature-background-color": "#fff",
+    "--terra-signature-line-color": "#000"
+  },
   "SlidePanel": {
     "--terra-slide-panel-panel-width-small": "320px",
     "--terra-slide-panel-panel-width-large": "60%"

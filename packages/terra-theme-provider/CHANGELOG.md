@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added isGlobalTheme prop to apply theme to root DOM node
 
+1.4.0 - (September 19, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.3.0 - (September 12, 2017)
 ------------------
 ### Changed
