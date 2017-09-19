@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
+
+1.11.0 - (September 19, 2017)
+------------------
 ### Changed
 * Fixed title misspelling.
 * Updated ArrangeAlignment to generate Ids with `_.uniqueId()`.
+* Fixed scroll reset to account for theme provider
 
 1.10.0 - (September 12, 2017)
 ------------------
