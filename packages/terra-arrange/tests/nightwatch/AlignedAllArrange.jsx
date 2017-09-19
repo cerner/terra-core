@@ -4,16 +4,18 @@ import { ArrangeWrapper, IconWrapper, image, simpleText, longText } from './exam
 
 const AlignedAllArrange = () => (
   <div>
-    <ArrangeWrapper>
+    <ArrangeWrapper >
       <Arrange
+        id="default"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper>
+    <ArrangeWrapper >
       <Arrange
+        id="center"
         align="center"
         fitStart={image}
         fill={simpleText}
@@ -21,8 +23,9 @@ const AlignedAllArrange = () => (
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper>
+    <ArrangeWrapper >
       <Arrange
+        id="bottom"
         align="bottom"
         fitStart={image}
         fill={simpleText}
@@ -30,8 +33,9 @@ const AlignedAllArrange = () => (
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper>
+    <ArrangeWrapper >
       <Arrange
+        id="stretch"
         align="stretch"
         fitStart={image}
         fill={simpleText}
@@ -39,8 +43,9 @@ const AlignedAllArrange = () => (
       />
     </ArrangeWrapper>
 
-    <ArrangeWrapper>
+    <ArrangeWrapper >
       <Arrange
+        id="icon-stretch"
         align="stretch"
         fitStart={<IconWrapper />}
         fill={longText}
