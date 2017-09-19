@@ -19,39 +19,42 @@ const propTypes = {
   /**
    * When set to true, applies theme class to HTML element
    */
-  isRootTheme: PropTypes.bool,
+  isGlobalTheme: PropTypes.bool,
 };
 
 const defaultProps = {
-  isRootTheme: true,
+  isGlobalTheme: false,
 };
 
 
 class ThemeProvider extends React.Component {
   componentDidMount() {
-    if (this.props.isRootTheme === true && this.props.themeName) {
+    if (this.props.isGlobalTheme === true && this.props.themeName) {
       document.documentElement.classList.add(this.props.themeName);
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props === nextProps) return;
-    if (nextProps.isRootTheme === true) {
-      // Check if not an empty string
+    if (nextProps.isGlobalTheme === true) {
       if (this.props.themeName) {
         document.documentElement.classList.remove(this.props.themeName);
       }
 
-      // Check if not an empty string
       if (nextProps.themeName) {
-        // Add new theme class
         document.documentElement.classList.add(nextProps.themeName);
       }
     }
   }
 
+  componentWillUnmount() {
+    if (this.props.isGlobalTheme === true && this.props.themeName) {
+      document.documentElement.classList.remove(this.props.themeName);
+    }
+  }
+
   render() {
-    const { themeName, isRootTheme, children, ...customProps } = this.props;
+    const { themeName, isGlobalTheme, children, ...customProps } = this.props;
     return (<div {...customProps} className={themeName}>{children}</div>);
   }
 }

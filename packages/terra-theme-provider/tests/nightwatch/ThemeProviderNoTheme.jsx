@@ -3,7 +3,7 @@ import ThemeProvider from '../../lib/ThemeProvider';
 import MockThemeComponent from './MockThemeComponent';
 
 const DefaultThemeProvider = () => (
-  <ThemeProvider id="themeProvider" themeName="cerner-mock-theme">
+  <ThemeProvider id="themeProvider">
     <MockThemeComponent id="themedComponent">
       Theme Provider Test
     </MockThemeComponent>

@@ -9,7 +9,7 @@ import SlidePanel from 'terra-slide-panel';
 import ContentContainer from 'terra-content-container';
 import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
-import ThemeProvider from 'terra-theme-provider/src/ThemeProvider';
+import ThemeProvider from 'terra-theme-provider/lib/ThemeProvider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
@@ -170,7 +170,7 @@ class App extends React.Component {
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
     // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
     const mainContent = (
-      <ThemeProvider themeName={this.state.theme}>
+      <ThemeProvider themeName={this.state.theme} isGlobalTheme>
         <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
           {this.props.children}
         </Base>
