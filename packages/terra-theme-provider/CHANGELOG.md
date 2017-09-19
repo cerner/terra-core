@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Added
+* Added isGlobalTheme prop to apply theme to root DOM node
 
 1.3.0 - (September 12, 2017)
 ------------------
