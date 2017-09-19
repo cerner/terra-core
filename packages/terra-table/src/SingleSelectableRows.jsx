@@ -31,7 +31,7 @@ class SingleSelectableRows extends React.Component {
     }
     // Find the first row which is selected and is selectable
     for (let i = 0; i < rows.length; i += 1) {
-      if (rows[i].props.isSelected && rows[i].props.isSelectable) {
+      if (rows[i].props.isSelected) {
         return i;
       }
     }
