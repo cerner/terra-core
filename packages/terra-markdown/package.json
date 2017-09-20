@@ -1,7 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "terra-markdown",
   "repository": {
     "type": "git",
@@ -31,14 +31,14 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-markdown -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-markdown -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "lerna exec --scope terra-markdown -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "lerna exec --scope terra-markdown -- stylelint src/**/*.scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
     "props-table": "echo \"props-table is not used here to avoid cyclical package dependencies\"",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-markdown -- jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "lerna exec --scope terra-markdown -- nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }

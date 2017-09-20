@@ -1,7 +1,7 @@
 {
   "name": "terra-app-delegate",
   "main": "lib/app-delegate/AppDelegate.js",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications",
   "repository": {
     "type": "git",
@@ -25,12 +25,12 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-app-delegate -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-app-delegate -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "lerna exec --scope terra-app-delegate -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-app-delegate -- jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "echo \"No Nightwath tests written.\" && exit 0"
   }
 }

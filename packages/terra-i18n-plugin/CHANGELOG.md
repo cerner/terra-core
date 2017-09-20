@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.4.0 - (September 19, 2017)
+------------------
 ### Fixed
 * Aggregate all node_module directories for translations
 
