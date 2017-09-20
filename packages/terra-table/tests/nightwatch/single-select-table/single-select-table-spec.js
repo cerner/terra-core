@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
@@ -134,15 +135,14 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Displays a selectable table with a preselected row': (browser) => {
-      browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/preselected`);
-      browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
-      browser.expect.element('[class*="row"]:nth-child(2)').to.have.attribute('class').which.not.contains('is-selected');
-      browser.expect.element('[class*="row"]:nth-child(3)').to.have.attribute('class').which.not.contains('is-selected');
-
+    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/preselected`);
+    browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
+    browser.expect.element('[class*="row"]:nth-child(2)').to.have.attribute('class').which.not.contains('is-selected');
+    browser.expect.element('[class*="row"]:nth-child(3)').to.have.attribute('class').which.not.contains('is-selected');
   },
 
   'Displays a selectable table with a non-selectable row': (browser) => {
-      browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/non-selectable`);
-      browser.expect.element('[class*="row"]:nth-child(1)').to.have.not.attribute('class').which.contains('is-selectable');
+    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/non-selectable`);
+    browser.expect.element('[class*="row"]:nth-child(1)').to.have.not.attribute('class').which.contains('is-selectable');
   },
 });

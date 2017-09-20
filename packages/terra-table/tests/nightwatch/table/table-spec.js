@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default table with the provided text': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/default`)
+    browser.url(`${browser.launchUrl}/#/tests/table-tests/default`);
     browser.expect.element('#Table').to.be.present;
     browser.expect.element('[class*="striped"]').to.be.present;
   },
@@ -33,13 +34,13 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Displays a table without the stripes': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/no-striped`)
+    browser.url(`${browser.launchUrl}/#/tests/table-tests/no-striped`);
     browser.expect.element('#Table').to.be.present;
     browser.expect.element('[class*="striped"]').to.not.be.present;
   },
 
   'Displays a table without padding': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/no-padding`)
+    browser.url(`${browser.launchUrl}/#/tests/table-tests/no-padding`);
     browser.expect.element('#Table').to.be.present;
     browser.expect.element('[class*="padded"]').to.not.be.present;
   },
