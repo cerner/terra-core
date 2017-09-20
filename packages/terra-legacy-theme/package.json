@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/LegacyTheme.scss",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",
@@ -22,11 +22,11 @@
   "homepage": "https://github.com/cerner/terra-core#readme",
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-legacy-theme -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-legacy-theme -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "lerna exec --scope terra-legacy-theme -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "lerna exec --scope terra-legacy-theme -- stylelint src/**/*.scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:spec",
     "test:spec": "echo \"Warning: no test written\" && exit 0"
   }

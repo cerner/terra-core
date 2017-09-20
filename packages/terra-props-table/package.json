@@ -1,7 +1,7 @@
 {
   "name": "terra-props-table",
   "main": "lib/PropsTable.js",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "terra-props-table",
   "repository": {
     "type": "git",
@@ -33,16 +33,16 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react-docgen": "^2.15.0",
-    "terra-markdown": "^1.6.0"
+    "terra-markdown": "^1.7.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-props-table -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-props-table -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "lerna exec --scope terra-props-table -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-props-table -- jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "lerna exec --scope terra-props-table -- nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }

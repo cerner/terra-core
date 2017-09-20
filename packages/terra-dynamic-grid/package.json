@@ -1,7 +1,7 @@
 {
   "name": "terra-dynamic-grid",
   "main": "lib/DynamicGrid.js",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.",
   "repository": {
     "type": "git",
@@ -21,29 +21,29 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.7.0"
+    "terra-props-table": "^1.8.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.3.0"
+    "terra-base": "^2.4.0"
   },
   "dependencies": {
     "aphrodite": "^1.2.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.3.0"
+    "terra-base": "^2.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-dynamic-grid -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-dynamic-grid -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "lerna exec --scope terra-dynamic-grid -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "lerna exec --scope terra-dynamic-grid -- stylelint src/**/*.scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/DynamicGrid.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-dynamic-grid -- jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "lerna exec --scope terra-dynamic-grid -- nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }
