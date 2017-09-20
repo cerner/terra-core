@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Added
+* Added OCS clinical theme
 
 1.4.0 - (September 19, 2017)
 ------------------

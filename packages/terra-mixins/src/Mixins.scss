@@ -43,6 +43,24 @@ $bundled-themes: false !default;
   }
 }
 
+@mixin cerner-clinical-theme {
+  @if index($bundled-themes, 'clinical') {
+    @if $default-theme == 'clinical' {
+      :global {
+        :root {
+          @content;
+        }
+      }
+    } @else {
+      :global {
+        .cerner-clinical-theme {
+          @content;
+        }
+      }
+    }
+  }
+}
+
 /* stylelint-enable selector-class-pattern, scss/at-mixin-pattern  */
 
 
