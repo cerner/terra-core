@@ -36,13 +36,13 @@
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "lerna exec --scope terra-i18n -- rimraf lib",
-    "compile:build": "lerna exec --scope terra-i18n -- babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
-    "lint:js": "lerna exec --scope terra-i18n -- eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "props-table": "props-table ./src/I18nProvider.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "lerna exec --scope terra-i18n -- jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "lerna exec --scope terra-i18n -- nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }
