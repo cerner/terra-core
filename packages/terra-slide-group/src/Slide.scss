@@ -22,7 +22,7 @@
   }
 
   .enter {
-    // iOS Safari renders the transtion before displaying content if the content is off-screen.
+    // iOS Safari renders the transition before displaying content if the content is off-screen.
     // 99.99% allows the content to be onscreen enough to correctly render the transtion with the content.
     transform: translate3d(99.99%, 0, 0);
 
