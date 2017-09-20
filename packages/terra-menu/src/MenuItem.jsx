@@ -160,7 +160,7 @@ class MenuItem extends React.Component {
     }
 
     return (
-      <li {...attributes} className={itemClassNames}>
+      <li {...attributes} className={itemClassNames} ref={this.setItemNode} >
         {content}
       </li>
     );
