@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* IE9 enter animation caused by IE bug when using calc() within transition or transform (https://connect.microsoft.com/IE/feedback/details/762719/css3-calc-bug-inside-transition-or-transform)
 
 1.9.0 - (September 19, 2017)
 ------------------

@@ -22,8 +22,9 @@
   }
 
   .enter {
-    // The - 1px is to ensure that iOS Safari actually renders the content before the transition begins.
-    transform: translate3d(calc(100% - 1px), 0, 0);
+    // iOS Safari renders the transtion before displaying content if the content is off-screen.
+    // 99.99% allows the content to be onscreen enough to correctly render the transtion with the content.
+    transform: translate3d(99.99%, 0, 0);
 
     .slide-shadow {
       display: block;
