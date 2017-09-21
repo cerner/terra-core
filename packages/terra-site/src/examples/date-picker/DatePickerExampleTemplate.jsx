@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'terra-date-picker';
-
+import styles from '../../site.scss';
 
 const propTypes = {
   /**
@@ -28,7 +28,7 @@ class DatePickerExample extends React.Component {
   render() {
     return (
       <div>
-        <p>Selected ISO Date: {this.state.date}</p>
+        <p>Selected ISO Date: <span className={styles['site-input-display']}>{this.state.date}</span></p>
         <DatePicker
           name="date-input"
           onChange={this.handleDateChange}
