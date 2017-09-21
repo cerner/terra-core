@@ -46,7 +46,7 @@
     "--terra-badge-color-info": "#fff"
   },
   "Base": {
-    "--terra-base-font-family, \"Helvetica Neue\", Helvetica, Arial": "sans-serif",
+    "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "--terra-base-font-size": "87.5%",
     "--terra-base-html-height": "100%",
     "--terra-base-html-margin": "0",
@@ -220,7 +220,7 @@
     "--terra-popup-content-close-hover-color": "#999",
     "--terra-popup-content-inner-background-color": "#fff",
     "--terra-popup-content-inner-border": "1px solid #b2b5b6",
-    "--terra-popup-content-inner-box-shadow, 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0": "0.5)",
+    "--terra-popup-content-inner-box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5)",
     "--terra-popup-content-margin": "10px"
   },
   "PopupOverlay": {
