@@ -25,7 +25,6 @@ const defaultProps = {
   isGlobalTheme: false,
 };
 
-
 class ThemeProvider extends React.Component {
   componentDidMount() {
     if (this.props.isGlobalTheme === true && this.props.themeName) {

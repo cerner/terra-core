@@ -6,7 +6,7 @@ If you need to theme styles on to the `html` or `body` elements applied in terra
 
 *Note:*
 * Apps should only use the `isGlobalTheme` prop on one theme provider component.
-* The CSS custom properties applied via the theme provider only work in browsers which have native support for CSS custom properties.
+* The CSS custom properties applied via the theme provided only works in browsers which have native support for CSS custom properties.
 
 ## Getting Started
 
