@@ -123,14 +123,10 @@ class Menu extends React.Component {
   }
 
   pop() {
-    if (this.state.stack.length > 1) {
-      this.setState((prevState) => {
-        prevState.stack.pop();
-        return { stack: prevState.stack };
-      });
-    } else {
-      this.props.onRequestClose();
-    }
+    this.setState((prevState) => {
+      prevState.stack.pop();
+      return { stack: prevState.stack };
+    });
   }
 
   push(item) {

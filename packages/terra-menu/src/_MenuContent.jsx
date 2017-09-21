@@ -107,8 +107,6 @@ class MenuContent extends React.Component {
       } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.RIGHT_ARROW) {
         if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
           this.props.onRequestNext(item);
-        } else {
-          this.props.onRequestClose();
         }
       } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.LEFT_ARROW) {
         this.props.onRequestBack();

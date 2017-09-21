@@ -69,7 +69,5 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.TestNestedMenuContent').to.be.present;
     browser.sendKeys('.TestNestedMenuContent', [browser.Keys.ARROW_LEFT]);
     browser.expect.element('.TestInitialMenuContent').to.be.visible;
-    browser.sendKeys('.TestInitialMenuContent', [browser.Keys.ARROW_LEFT]);
-    browser.expect.element('.TestInitialMenuContent').to.not.be.present;
   },
 });
