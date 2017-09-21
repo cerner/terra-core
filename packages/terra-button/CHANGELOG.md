@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+Keyboard navigation with arrow keys
 
 1.9.0 - (September 19, 2017)
 ------------------
