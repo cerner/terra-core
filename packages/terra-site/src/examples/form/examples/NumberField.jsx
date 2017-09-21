@@ -1,5 +1,6 @@
 import React from 'react';
 import NumberField from 'terra-form/lib/NumberField';
+import styles from '../../../site.scss';
 
 class NumberFieldExamples extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class NumberFieldExamples extends React.Component {
             onChange={this.handleChange}
           />
         </form>
-        <hr /><p>Input Provided: {this.state.input}</p>
+        <hr /><p>Input Provided: <span className={styles['site-input-display']}>{this.state.input}</span></p>
         <br />
       </div>
     );
