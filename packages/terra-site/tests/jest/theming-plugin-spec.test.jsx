@@ -5,6 +5,7 @@ import postcss from 'postcss';
 import fs from 'fs';
 
 describe('theming-plugin', () => {
+  let expectedHash;
   let mockStyles;
   let pluginKey;
   let outputtedFileName;
@@ -30,13 +31,25 @@ describe('theming-plugin', () => {
     mockStyles = `
         :local {
           .testing-component {
+            font-family: var(--terra-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
             font-size: var(--terra-font-size, 1.5em);
             color: var(--terra-color, #000);
             background-color: var(--terra-background-color, #000);
             margin: 0.357em;
+            box-shadow: var(--terra-box-shadow, 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5));
           }
         }
     `;
+
+    expectedHash = `{
+      "TestingComponent": {
+        "--terra-font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "--terra-font-size": "1.5em",
+        "--terra-color": "#000",
+        "--terra-background-color": "#000",
+        "--terra-box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5)"
+      }
+    }`;
   });
 
   it('should have the correct key for the plugin', () => {
@@ -46,13 +59,6 @@ describe('theming-plugin', () => {
   describe('when the SCSS comes from a file', () => {
     it('should find all of the appropriate css', () => {
       const rootNode = postcss.parse(mockStyles);
-      const expectedHash = `{
-        "TestingComponent": {
-          "--terra-font-size": "1.5em",
-          "--terra-color": "#000",
-          "--terra-background-color": "#000"
-        }
-      }`;
       rootNode.source = { input: { file: 'TestingComponent.scss' } };
       expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
       expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
@@ -63,11 +69,13 @@ describe('theming-plugin', () => {
   describe('when the SCSS does not come from a file', () => {
     it('should find all of the appropriate css', () => {
       const rootNode = postcss.parse(mockStyles);
-      const expectedHash = `{
+      expectedHash = `{
         "miscellaneous": {
+          "--terra-font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
           "--terra-font-size": "1.5em",
           "--terra-color": "#000",
-          "--terra-background-color": "#000"
+          "--terra-background-color": "#000",
+          "--terra-box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5)"
         }
       }`;
 
@@ -82,24 +90,19 @@ describe('theming-plugin', () => {
       mockStyles = `
         :local {
           .testing-component {
+            font-family: var(--terra-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
             font-size: var(--terra-font-size, 1.5em);
             color: var(--terra-color, #000);
             background-color: var(--terra-background-color, #000);
             font-weight: var(--cerner-custom-font-weight, 'bold');
             border: var(--cerner-custom-border, '#000 solid 1px');
             margin: 0.357em;
+            box-shadow: var(--terra-box-shadow, 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5));
           }
         }
       `;
 
       const rootNode = postcss.parse(mockStyles);
-      const expectedHash = `{
-        "TestingComponent": {
-          "--terra-font-size": "1.5em",
-          "--terra-color": "#000",
-          "--terra-background-color": "#000"
-        }
-      }`;
       rootNode.source = { input: { file: 'TestingComponent.scss' } };
 
       expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
