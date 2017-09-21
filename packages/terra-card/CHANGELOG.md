@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Added
+* Added import for terra-mixins to themes.scss file
 
 1.4.0 - (September 19, 2017)
 ------------------

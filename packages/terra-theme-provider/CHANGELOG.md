@@ -5,6 +5,7 @@ Unreleased
 -----------------
 ### Added
 * Added isGlobalTheme prop to apply theme to root DOM node
+* Added CLINICAL key to ThemeProvider.opts.ThemeProviderThemes
 
 1.4.0 - (September 19, 2017)
 ------------------

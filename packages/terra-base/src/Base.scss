@@ -1,3 +1,6 @@
+@import '~terra-mixins';
+@import './themes';
+
 // Normalize box-sizing.
 // More info: https://css-tricks.com/box-sizing/#article-header-id-6
 html {
@@ -10,7 +13,10 @@ html {
 }
 
 body {
+  // stylelint-disable order/properties-alphabetical-order
+  background-image: var(--terra-base-background-image, none);
   background-color: var(--terra-base-background-color, #fff);
+  // stylelint-enable order/properties-alphabetical-order
   color: var(--terra-base-color, #1c1f21);
   font-size: 1rem;
   height: var(--terra-base-body-height, auto);

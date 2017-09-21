@@ -50,6 +50,7 @@
     "--terra-base-font-size": "87.5%",
     "--terra-base-html-height": "100%",
     "--terra-base-html-margin": "0",
+    "--terra-base-background-image": "none",
     "--terra-base-background-color": "#fff",
     "--terra-base-color": "#1c1f21",
     "--terra-base-body-height": "auto",

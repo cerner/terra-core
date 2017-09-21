@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added cerner-clinical-theme mixin
 
 1.4.0 - (September 19, 2017)
 ------------------
