@@ -1,4 +1,5 @@
- // eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable no-unused-expressions */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
@@ -60,5 +61,15 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.visible('div[class*="_header"] > div:first-child div[class*="_header-button"]')
       .assert.hidden('div[class*="_header"] > div:last-child > button[class*="_header-button"]')
       .keys([browser.Keys.ESCAPE]);
+  },
+  'Menu can be navigated using arrow keys': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/menu-tests/submenu`);
+    browser.expect.element('.TestInitialMenuContent').to.be.present;
+    browser.sendKeys('.TestNestedMenu', [browser.Keys.ARROW_RIGHT]);
+    browser.expect.element('.TestNestedMenuContent').to.be.present;
+    browser.sendKeys('.TestNestedMenuContent', [browser.Keys.ARROW_LEFT]);
+    browser.expect.element('.TestInitialMenuContent').to.be.visible;
+    browser.sendKeys('.TestInitialMenuContent', [browser.Keys.ARROW_LEFT]);
+    browser.expect.element('.TestInitialMenuContent').to.not.be.present;
   },
 });

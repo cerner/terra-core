@@ -3,6 +3,11 @@ import Button from 'terra-button';
 import Menu from 'terra-menu';
 import PropTypes from 'prop-types';
 
+const KEYCODES = {
+  ENTER: 13,
+  SPACE: 32,
+};
+
 const propTypes = {
   isArrowDisplayed: PropTypes.bool,
   contentWidth: PropTypes.string,
@@ -19,7 +24,9 @@ class BasicMenu extends React.Component {
     this.handleToggle1OnClick = this.handleToggle1OnClick.bind(this);
     this.handleToggle2OnClick = this.handleToggle2OnClick.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.handleActionClick = this.handleActionClick.bind(this);
+    this.handleAction = this.handleAction.bind(this);
+    this.handleCloseOnKeyDown = this.handleCloseOnKeyDown.bind(this);
+    this.handleActionOnKeyDown = this.handleActionOnKeyDown.bind(this);
     this.state = {
       open: false,
       toggle1Selected: false,
@@ -45,6 +52,18 @@ class BasicMenu extends React.Component {
     this.setState({ open: false });
   }
 
+  handleCloseOnKeyDown(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      this.handleRequestClose();
+    }
+  }
+
+  handleActionOnKeyDown(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      this.handleAction();
+    }
+  }
+
   handleToggle1OnClick() {
     this.setState(prevState => ({ toggle1Selected: !prevState.toggle1Selected }));
   }
@@ -57,7 +76,7 @@ class BasicMenu extends React.Component {
     this.setState({ groupSelectedIndex: index });
   }
 
-  handleActionClick() {
+  handleAction() {
     const newState = this.state;
     newState.actionClickCount += 1;
     this.setState(newState);
@@ -94,13 +113,13 @@ class BasicMenu extends React.Component {
               text="Nested Menu 1"
               key="Nested1"
               subMenuItems={[
-                <Menu.Item text="Action 1.1" key="1.1" onClick={this.handleActionClick} />,
-                <Menu.Item text="Action 1.2" key="1.2" onClick={this.handleActionClick} />,
-                <Menu.Item text="Action 1.3" key="1.3" onClick={this.handleActionClick} />,
+                <Menu.Item text="Action 1.1" key="1.1" onClick={this.handleAction} onKeyDown={this.handleActionOnKeyDown} />,
+                <Menu.Item text="Action 1.2" key="1.2" onClick={this.handleAction} onKeyDown={this.handleActionOnKeyDown} />,
+                <Menu.Item text="Action 1.3" key="1.3" onClick={this.handleAction} onKeyDown={this.handleActionOnKeyDown} />,
                 <Menu.Divider key="Divider1.1" />,
-                <Menu.Item text="Close Action 1.1" key="1.4" onClick={this.handleRequestClose} />,
-                <Menu.Item text="Close Action 1.2" key="1.5" onClick={this.handleRequestClose} />,
-                <Menu.Item text="Close Action 1.3" key="1.6" onClick={this.handleRequestClose} />,
+                <Menu.Item text="Close Action 1.1" key="1.4" onClick={this.handleRequestClose} onKeyDown={this.handleCloseOnKeyDown} />,
+                <Menu.Item text="Close Action 1.2" key="1.5" onClick={this.handleRequestClose} onKeyDown={this.handleCloseOnKeyDown} />,
+                <Menu.Item text="Close Action 1.3" key="1.6" onClick={this.handleRequestClose} onKeyDown={this.handleCloseOnKeyDown} />,
               ]}
             />
             <Menu.Item
@@ -113,8 +132,8 @@ class BasicMenu extends React.Component {
               ]}
             />
             <Menu.Divider key="Divider2" />
-            <Menu.Item text="Action" key="Action1" onClick={this.handleActionClick} />
-            <Menu.Item text="Close Action" key="Action2" onClick={this.handleRequestClose} />
+            <Menu.Item text="Close Action" key="Action2" onClick={this.handleRequestClose} onKeyDown={this.handleCloseOnKeyDown} />
+            <Menu.Item text="Action" key="Action1" onClick={this.handleAction} onKeyDown={this.handleActionOnKeyDown} />
             <Menu.Divider key="Divider3" />
             <Menu.ItemGroup key="Group" onChange={this.handleOnChange}>
               <Menu.Item text="Group Item 1" key="GroupItem1" isSelected={this.state.groupSelectedIndex === 0} />

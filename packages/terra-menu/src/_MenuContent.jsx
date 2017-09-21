@@ -100,8 +100,7 @@ class MenuContent extends React.Component {
   wrapOnKeyDown(item, index) {
     const onKeyDown = item.props.onKeyDown;
     return ((event) => {
-      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER
-        || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+      if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
           this.props.onRequestNext(item);
         }
