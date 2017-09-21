@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added OCS clinical background image theme
 
 2.4.0 - (September 19, 2017)
 ------------------

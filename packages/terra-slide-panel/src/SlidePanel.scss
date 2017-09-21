@@ -7,7 +7,6 @@
 
   .main,
   .panel {
-    background-color: #fff;
     box-sizing: border-box;
 
     height: 100%;
@@ -27,6 +26,7 @@
   }
 
   .panel {
+    background-color: #fff;
     position: absolute;
     z-index: 500; // z-index used to set master above detail in visual stacking context.
   }

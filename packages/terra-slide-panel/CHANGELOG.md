@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed background color from main container in slide-panel
 
 1.9.0 - (September 19, 2017)
 ------------------
