@@ -6,5 +6,5 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <LoadingOverlay isOpen backgroundStyle={LoadingOverlay.Opts.BackgroundStyles.CLEAR} />
+    <LoadingOverlay isOpen backgroundStyle={LoadingOverlay.Opts.BackgroundStyles.CLEAR} id='terra-LoadingOverlay' />
   </Base>;

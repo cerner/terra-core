@@ -4,14 +4,20 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default overlay': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/overlay-tests/default`);
+
+    browser.expect.element('#default').to.be.present;
   },
 
   'Displays a fullscreen Overlay as the default': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/overlay-tests/default`);
+
+    browser.expect.element('#default').to.have.attribute('class').which.contains('fullscreen');
   },
 
   'Displays a default Overlay relative to the triggering container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/overlay-tests/container`);
+
+    browser.expect.element('#overlay-container div').to.have.attribute('class').which.contains('container');
   },
 
   'Displays a fullscreen Overlay with isScrollable prop': (browser) => {
