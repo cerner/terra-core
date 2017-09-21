@@ -2,6 +2,7 @@ import React from 'react';
 import Field from 'terra-form/lib/Field';
 import Fieldset from 'terra-form/lib/Fieldset';
 import Input from 'terra-form/lib/Input';
+import styles from '../../../site.scss';
 
 class FieldsetExamples extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class FieldsetExamples extends React.Component {
           </Fieldset>
         </form>
         <hr />
-        <p>Full Name Provided: {this.state.first} {this.state.middle} {this.state.last}</p>
+        <p>Full Name Provided: <span className={styles['site-input-display']}>{this.state.first} {this.state.middle} {this.state.last}</span></p>
         <br />
       </div>
     );
