@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'terra-form/lib/Select';
+import styles from '../../../site.scss';
 
 class SelectExamples extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class SelectExamples extends React.Component {
             onChange={this.handleChange}
           />
         </form>
-        <br /><p>Option Selected: {this.state.selected}</p>
+        <br /><p>Option Selected: <span className={styles['site-input-display']}>{this.state.selected}</span></p>
         <br />
       </div>
     );
