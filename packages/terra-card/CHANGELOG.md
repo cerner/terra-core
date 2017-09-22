@@ -3,7 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
-
+### Added
+* Added a variable variable for color of card
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 
