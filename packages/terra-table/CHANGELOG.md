@@ -9,6 +9,9 @@ Unreleased
 ### Fixed
 * Initial Single Select Table render to accept an isSelected Row
 
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
 1.11.0 - (September 19, 2017)
 ------------------
 ### Changed
