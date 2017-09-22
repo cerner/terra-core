@@ -10,7 +10,17 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a sele
 />
 `;
 
-exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set defaultChecked to false 1`] = `
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isDisabled prop on menu item 1`] = `
+<MenuItem
+  isDisabled={true}
+  isSelectable={true}
+  isSelected={false}
+  subMenuItems={Array []}
+  text="Testing"
+/>
+`;
+
+exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isSelectable prop on menu item to false 1`] = `
 <MenuItem
   isDisabled={false}
   isSelectable={false}
@@ -28,6 +38,28 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected 
   subMenuItems={Array []}
   text="Testing"
 />
+`;
+
+exports[`CollapsibleMenuViewToggle should disable checkbox when isSelectable is false 1`] = `
+<div
+  className="face-up-item"
+>
+  <Control
+    className="control is-disabled"
+    defaultChecked={false}
+    inputAttrs={
+      Object {
+        "disabled": true,
+      }
+    }
+    isInline={false}
+    labelText="Testing"
+    labelTextAttrs={Object {}}
+    name={null}
+    onChange={[Function]}
+    type="checkbox"
+  />
+</div>
 `;
 
 exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
@@ -74,16 +106,16 @@ exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should set isSelectable prop to false 1`] = `
+exports[`CollapsibleMenuViewToggle should set defaultChecked prop 1`] = `
 <div
   className="face-up-item"
 >
   <Control
-    className="control is-disabled"
-    defaultChecked={false}
+    className="control"
+    defaultChecked={true}
     inputAttrs={
       Object {
-        "disabled": true,
+        "disabled": false,
       }
     }
     isInline={false}
@@ -96,16 +128,16 @@ exports[`CollapsibleMenuViewToggle should set isSelectable prop to false 1`] = `
 </div>
 `;
 
-exports[`CollapsibleMenuViewToggle should set isSelected prop 1`] = `
+exports[`CollapsibleMenuViewToggle should set isDisabled prop 1`] = `
 <div
   className="face-up-item"
 >
   <Control
-    className="control"
-    defaultChecked={true}
+    className="control is-disabled"
+    defaultChecked={false}
     inputAttrs={
       Object {
-        "disabled": false,
+        "disabled": true,
       }
     }
     isInline={false}
