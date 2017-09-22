@@ -274,8 +274,8 @@ class PopupContent extends React.Component {
     const roundedCorners = arrow && !isFullScreen;
     const innerClassNames = cx([
       'inner',
-      { isFullScreen },
-      { roundedCorners },
+      { 'is-full-screen': isFullScreen },
+      { 'rounded-corners': roundedCorners },
       classNameInner,
     ]);
 
@@ -285,7 +285,7 @@ class PopupContent extends React.Component {
 
     return (
       <FocusTrap>
-        <div {...customProps} tabIndex="0" className={cx('popupContent')} ref={refCallback}>
+        <div {...customProps} tabIndex="0" className={cx('popup-content')} ref={refCallback}>
           {arrowContent}
           <div className={innerClassNames} style={contentStyle}>
             {content}

@@ -20,7 +20,6 @@
 }
 
 :local {
-  /* stylelint-disable selector-class-pattern  */
   .badge {
     border-radius: var(--terra-badge-border-radius, 0.25em);
     display: var(--terra-badge-display, inline-block);
@@ -94,5 +93,4 @@
   .info {
     @include terra-badge-color($terra-badge-info-color-scheme);
   }
-  /* stylelint-enable */
 }
