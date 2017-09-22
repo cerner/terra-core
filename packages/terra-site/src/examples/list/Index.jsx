@@ -12,12 +12,6 @@ import SingleSelectListSrc from '!raw-loader!terra-list/src/SingleSelectList.jsx
 import MultiSelectListSrc from '!raw-loader!terra-list/src/MultiSelectList.jsx';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
-// Example Files
-import ListDemo from './components/List';
-import SingleSelect from './components/SingleSelect';
-import MultiSelect from './components/MultiSelect';
-import MultiSelectMaxSelection from './components/MultiSelectMaxSelection';
-
 const ListExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
