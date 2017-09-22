@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render SingleSelectableRows one selectable row and one non-selectable row 1`] = `
-<TableRows>
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
+>
   <TableRow
     className="PERSON_0"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -34,18 +38,22 @@ exports[`should render SingleSelectableRows one selectable row and one non-selec
       content="111-222-3333"
     />
   </TableRow>
-</TableRows>
+</SelectableTableRows>
 `;
 
 exports[`should render SingleSelectableRows tag 1`] = `
-<TableRows>
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
+>
   <TableRow
     className="PERSON_0"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -59,11 +67,7 @@ exports[`should render SingleSelectableRows tag 1`] = `
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -75,18 +79,22 @@ exports[`should render SingleSelectableRows tag 1`] = `
       content="111-222-3333"
     />
   </TableRow>
-</TableRows>
+</SelectableTableRows>
 `;
 
 exports[`should render SingleSelectableRows with maximum height set 1`] = `
-<TableRows>
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
+>
   <TableRow
     className="PERSON_0"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -100,11 +108,7 @@ exports[`should render SingleSelectableRows with maximum height set 1`] = `
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -116,20 +120,34 @@ exports[`should render SingleSelectableRows with maximum height set 1`] = `
       content="111-222-3333"
     />
   </TableRow>
-</TableRows>
+</SelectableTableRows>
 `;
 
-exports[`should render SingleSelectableRows with no rows 1`] = `<TableRows />`;
+exports[`should render SingleSelectableRows with no rows 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      null,
+    ]
+  }
+/>
+`;
 
 exports[`should render SingleSelectableRows with one row 1`] = `
-<TableRows>
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
+>
   <TableRow
     className="PERSON_0"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -141,18 +159,22 @@ exports[`should render SingleSelectableRows with one row 1`] = `
       content="111-222-3333"
     />
   </TableRow>
-</TableRows>
+</SelectableTableRows>
 `;
 
 exports[`should select an row 1`] = `
-<TableRows>
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
+>
   <TableRow
     className="PERSON_0"
-    isSelectable={true}
-    isSelected={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
+    isSelected={false}
   >
     <TableCell
       content="John Smith"
@@ -166,11 +188,7 @@ exports[`should select an row 1`] = `
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -182,18 +200,22 @@ exports[`should select an row 1`] = `
       content="111-222-3333"
     />
   </TableRow>
-</TableRows>
+</SelectableTableRows>
 `;
 
 exports[`should select an row 2`] = `
-<TableRows>
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
+>
   <TableRow
     className="PERSON_0"
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   >
     <TableCell
       content="John Smith"
@@ -207,11 +229,7 @@ exports[`should select an row 2`] = `
   </TableRow>
   <TableRow
     className="PERSON_1"
-    isSelectable={true}
-    isSelected={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
+    isSelected={false}
   >
     <TableCell
       content="John Smith"
@@ -223,5 +241,5 @@ exports[`should select an row 2`] = `
       content="111-222-3333"
     />
   </TableRow>
-</TableRows>
+</SelectableTableRows>
 `;
