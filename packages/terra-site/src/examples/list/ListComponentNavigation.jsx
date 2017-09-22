@@ -14,7 +14,6 @@ const ListComponentNavigation = ({
     <List className={[styles['site-form-nav'], styles['sub-nav']]}>
       <List.Item content={<Link onClick={onClick} to="/site/list/list">List</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/list/multi-select">Multi Select</Link>} />
-      <List.Item content={<Link onClick={onClick} to="/site/list/multi-select-max-selection">Multi Select - Max Selection</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/list/single-select">Single Select</Link>} />
     </List>;
 
