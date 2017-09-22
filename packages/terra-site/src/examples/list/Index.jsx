@@ -8,12 +8,14 @@ import { version } from 'terra-list/package.json';
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import ListItemSrc from '!raw-loader!terra-list/src/ListItem.jsx';
 import ListSrc from '!raw-loader!terra-list/src/List.jsx';
+import SelectableListSrc from '!raw-loader!terra-list/src/SelectableList.jsx';
 import SingleSelectListSrc from '!raw-loader!terra-list/src/SingleSelectList.jsx';
 import MultiSelectListSrc from '!raw-loader!terra-list/src/MultiSelectList.jsx';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example Files
 import ListDemo from './ListDemo';
+import Selectable from './Selectable';
 import SingleSelect from './SingleSelect';
 import MultiSelect from './MultiSelect';
 import MultiSelectMaxSelection from './MultiSelectMaxSelection';
@@ -24,12 +26,16 @@ const ListExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props-listItem" src={ListItemSrc} componentName="List Item" />
     <PropsTable id="props-list" src={ListSrc} componentName="List" />
+    <PropsTable id="props-selectableLIst" src={SelectableListSrc} componentName="Selectable List" />
     <PropsTable id="props-singleList" src={SingleSelectListSrc} componentName="Single Select List" />
     <PropsTable id="props-multiList" src={MultiSelectListSrc} componentName="Multiple Select List" />
     <br />
     <h1>Examples</h1>
     <h2 id="list">List</h2>
     <ListDemo />
+    <h1>Examples</h1>
+    <h2 id="selectable">Selectable List</h2>
+    <Selectable />
     <br />
     <h2 id="single">Single Select List</h2>
     <SingleSelect />

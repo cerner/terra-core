@@ -19,7 +19,7 @@ const propTypes = {
    */
   isDivided: PropTypes.bool,
   /**
-   * Whether or not the child list items should have a border color applied.
+   * Whether or not unselected items should be disabled.
    */
   disableUnselectedItems: PropTypes.bool,
   /**
@@ -31,7 +31,7 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * A callback event that will be triggered when selection state changes.
+   * An array of the currectly selected indexes
    */
   selectedIndexes: PropTypes.array,
 };
