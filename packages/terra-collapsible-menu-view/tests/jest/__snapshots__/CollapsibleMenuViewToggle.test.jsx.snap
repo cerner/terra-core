@@ -2,6 +2,7 @@
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a selectable menu item 1`] = `
 <MenuItem
+  isDisabled={false}
   isSelectable={true}
   isSelected={false}
   subMenuItems={Array []}
@@ -11,6 +12,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a sele
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set defaultChecked to false 1`] = `
 <MenuItem
+  isDisabled={false}
   isSelectable={false}
   isSelected={false}
   subMenuItems={Array []}
@@ -20,6 +22,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set defaultCh
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected prop on menu item 1`] = `
 <MenuItem
+  isDisabled={false}
   isSelectable={true}
   isSelected={true}
   subMenuItems={Array []}
@@ -34,8 +37,11 @@ exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
   <Control
     className="control Testing"
     defaultChecked={false}
-    disabled={false}
-    inputAttrs={Object {}}
+    inputAttrs={
+      Object {
+        "disabled": false,
+      }
+    }
     isInline={false}
     labelText="Testing"
     labelTextAttrs={Object {}}
@@ -53,8 +59,11 @@ exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
   <Control
     className="control"
     defaultChecked={false}
-    disabled={false}
-    inputAttrs={Object {}}
+    inputAttrs={
+      Object {
+        "disabled": false,
+      }
+    }
     isInline={false}
     labelText="Testing"
     labelTextAttrs={Object {}}
@@ -70,10 +79,13 @@ exports[`CollapsibleMenuViewToggle should set isSelectable prop to false 1`] = `
   className="face-up-item"
 >
   <Control
-    className="control"
+    className="control is-disabled"
     defaultChecked={false}
-    disabled={true}
-    inputAttrs={Object {}}
+    inputAttrs={
+      Object {
+        "disabled": true,
+      }
+    }
     isInline={false}
     labelText="Testing"
     labelTextAttrs={Object {}}
@@ -91,8 +103,11 @@ exports[`CollapsibleMenuViewToggle should set isSelected prop 1`] = `
   <Control
     className="control"
     defaultChecked={true}
-    disabled={false}
-    inputAttrs={Object {}}
+    inputAttrs={
+      Object {
+        "disabled": false,
+      }
+    }
     isInline={false}
     labelText="Testing"
     labelTextAttrs={Object {}}

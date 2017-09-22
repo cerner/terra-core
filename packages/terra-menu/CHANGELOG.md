@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+#Added
+* Added ability to disable menu items
 
 ### Removed
 * Remove stylelint-disable selector-class-pattern

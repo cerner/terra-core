@@ -1,13 +1,26 @@
 :local {
   .item {
-    cursor: pointer;
     padding: 0.286rem 0;
 
-    &:hover,
-    &:focus {
-      background-color: var(--terra-menu-item-hover-color, #ebf6fd);
+    &:not(.is-disabled) {
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: var(--terra-menu-item-hover-color, #ebf6fd);
+      }
+    } 
+  }
+
+  .is-disabled {
+    outline: 0;
+    
+    .title {
+      opacity: 0.3;
     }
   }
+    
+
 
   .title {
     color: var(--terra-menu-item-text-color, #1c1f21);
