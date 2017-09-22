@@ -102,8 +102,40 @@ class SelectableList extends React.Component {
 
   newPropsForItem(item, index, onClick, onKeyDown) {
     const isSelected = this.props.selectedIndexes.indexOf(index) >= 0;
+    const newProps = { };
 
-    return SelectableUtils.newPropsForItem(item, index, onClick, onKeyDown, isSelected, this.props.hasChevrons, this.props.disableUnselectedItems);
+    // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
+    if (isSelected !== item.isSelected) {
+      newProps.isSelected = isSelected;
+    }
+
+    // Set the default isSelectable attribute to true, unless the consumer specifies the item isSelectable attribute as false.
+    newProps.isSelectable = true;
+    if (item.props.isSelectable === false) {
+      newProps.isSelectable = item.props.isSelectable;
+    }
+
+    // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+    // onClick and onKeyDown functions.
+    if (newProps.isSelectable) {
+      newProps.tabIndex = '0';
+      newProps.onClick = onClick;
+      newProps.onKeyDown = onKeyDown;
+    }
+
+    // Uses the props.hasChevron value, unless the consumer specifies the item hasChevron attribute as false.
+    if (this.props.hasChevrons) {
+      newProps.hasChevron = this.props.hasChevrons;
+    }
+    if (item.props.hasChevron !== undefined) {
+      newProps.hasChevron = item.props.hasChevron;
+    }
+
+    if (this.props.disableUnselectedItems && !isSelected) {
+      newProps.isSelectable = false;
+    }
+
+    return newProps;
   }
 
   render() {

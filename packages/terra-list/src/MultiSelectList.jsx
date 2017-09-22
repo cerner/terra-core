@@ -34,48 +34,20 @@ class MultiSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.shouldHandleSelection = this.shouldHandleSelection.bind(this);
-    this.state = { selectedIndexes: SelectableList.Utils.selectedIndexesFromItems(this.props.children, this.validatedMaxCount()) };
+    this.state = { selectedIndexes: SelectableList.Utils.initialMultiSelectedIndexes(props.children, props.maxSelectionCount) };
   }
 
   handleOnChange(event, index) {
-    if (this.shouldHandleSelection(index)) {
+    const { children, maxSelectionCount } = this.props;
+    if (SelectableList.Utils.shouldHandleMultiSelect(children, maxSelectionCount, this.state.selectedIndexes, index)) {
       event.preventDefault();
-
-      let newIndexes = [];
-      if (this.state.selectedIndexes.length) {
-        if (this.state.selectedIndexes.indexOf(index) >= 0) {
-          newIndexes = this.state.selectedIndexes.slice();
-          newIndexes.splice(newIndexes.indexOf(index), 1);
-        } else {
-          newIndexes = this.state.selectedIndexes.concat([index]);
-        }
-      } else {
-        newIndexes.push(index);
-      }
+      const newIndexes = SelectableList.Utils.updatedMultiSelectedIndexes(this.state.selectedIndexes, index);
 
       this.setState({ selectedIndexes: newIndexes });
       if (this.props.onChange) {
         this.props.onChange(event, newIndexes);
       }
     }
-  }
-
-  shouldHandleSelection(index) {
-    if (this.state.selectedIndexes.length < this.validatedMaxCount()) {
-      return true;
-    }
-    if (this.state.selectedIndexes.indexOf(index) >= 0) {
-      return true;
-    }
-    return false;
-  }
-
-  validatedMaxCount() {
-    if (this.props.maxSelectionCount !== undefined) {
-      return this.props.maxSelectionCount;
-    }
-    return this.props.children.length;
   }
 
   render() {
@@ -86,7 +58,7 @@ class MultiSelectList extends React.Component {
         isDivided={isDivided}
         onChange={this.handleOnChange}
         selectedIndexes={this.state.selectedIndexes}
-        disableUnselectedItems={this.state.selectedIndexes.length >= this.validatedMaxCount()}
+        disableUnselectedItems={this.state.selectedIndexes.length >= SelectableList.Utils.validatedMaxCount(children, maxSelectionCount)}
       >
         {children}
       </SelectableList>

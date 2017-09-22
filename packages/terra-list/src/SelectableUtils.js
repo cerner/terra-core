@@ -1,66 +1,67 @@
-const selectedIndexFromItems = (items) => {
-  for (let i = 0; i < items.length; i += 1) {
-    if (items[i].props.isSelected) {
+const validatedMaxCount = (children, maxSelectionCount) => {
+  if (maxSelectionCount !== undefined) {
+    return maxSelectionCount;
+  }
+  return children.length;
+};
+
+const initialSingleSelectedIndex = (children) => {
+  for (let i = 0; i < children.length; i += 1) {
+    if (children[i].props.isSelected) {
       return i;
     }
   }
   return -1;
 };
 
-const selectedIndexesFromItems = (items, maxSelectionCount) => {
+const initialMultiSelectedIndexes = (children, maxSelectionCount) => {
   const selectedIndexes = [];
-  for (let i = 0; i < items.length; i += 1) {
-    if (selectedIndexes.length >= maxSelectionCount) {
+  const validMaxCount = validatedMaxCount(children, maxSelectionCount);
+  for (let i = 0; i < children.length; i += 1) {
+    if (selectedIndexes.length >= validMaxCount) {
       break;
     }
-    if (items[i].props.isSelected) {
+    if (children[i].props.isSelected) {
       selectedIndexes.push(i);
     }
   }
   return selectedIndexes;
 };
 
-const newPropsForItem = (item, index, onClick, onKeyDown, isSelected, hasChevrons, disableUnselectedItems) => {
-  const newProps = { };
-
-  // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
-  if (isSelected !== item.isSelected) {
-    newProps.isSelected = isSelected;
+const updatedMultiSelectedIndexes = (currentIndexes, newIndex) => {
+  let newIndexes = [];
+  if (currentIndexes.length) {
+    if (currentIndexes.indexOf(newIndex) >= 0) {
+      newIndexes = currentIndexes.slice();
+      newIndexes.splice(newIndexes.indexOf(newIndex), 1);
+    } else {
+      newIndexes = currentIndexes.concat([newIndex]);
+    }
+  } else {
+    newIndexes.push(newIndex);
   }
-
-  // Set the default isSelectable attribute to true, unless the consumer specifies the item isSelectable attribute as false.
-  newProps.isSelectable = true;
-  if (item.props.isSelectable === false) {
-    newProps.isSelectable = item.props.isSelectable;
-  }
-
-  // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
-  // onClick and onKeyDown functions.
-  if (newProps.isSelectable) {
-    newProps.tabIndex = '0';
-    newProps.onClick = onClick;
-    newProps.onKeyDown = onKeyDown;
-  }
-
-  // Uses the props.hasChevron value, unless the consumer specifies the item hasChevron attribute as false.
-  if (hasChevrons)  {
-    newProps.hasChevron = hasChevrons;
-  }
-  if (item.props.hasChevron !== undefined) {
-    newProps.hasChevron = item.props.hasChevron;
-  }
-
-  if (disableUnselectedItems && !isSelected) {
-    newProps.isSelectable = false;
-  }
-
-  return newProps;
+  return newIndexes;
 };
 
+const shouldHandleMultiSelect = (children, maxSelectionCount, currentIndexes, newIndex) => {
+  if (currentIndexes.length < validatedMaxCount(children, maxSelectionCount)) {
+    return true;
+  }
+  if (currentIndexes.indexOf(newIndex) >= 0) {
+    return true;
+  }
+  return false;
+};
+
+const shouldHandleSingleSelect = (currentIndex, newIndex) => newIndex !== currentIndex;
+
 const SelectableUtils = {
-  selectedIndexFromItems,
-  selectedIndexesFromItems,
-  newPropsForItem,
+  initialSingleSelectedIndex,
+  initialMultiSelectedIndexes,
+  updatedMultiSelectedIndexes,
+  validatedMaxCount,
+  shouldHandleMultiSelect,
+  shouldHandleSingleSelect,
 };
 
 export default SelectableUtils;

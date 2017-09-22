@@ -34,22 +34,17 @@ class SingleSelectList extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.shouldHandleSelection = this.shouldHandleSelection.bind(this);
-    this.state = { selectedIndex: SelectableList.Utils.selectedIndexFromItems(this.props.children) };
+    this.state = { selectedIndex: SelectableList.Utils.initialSingleSelectedIndex(this.props.children) };
   }
 
   handleOnChange(event, index) {
-    if (this.shouldHandleSelection(index)) {
+    if (SelectableList.Utils.shouldHandleSingleSelect(this.state.selectedIndex, index)) {
       event.preventDefault();
       this.setState({ selectedIndex: index });
       if (this.props.onChange) {
         this.props.onChange(event, index);
       }
     }
-  }
-
-  shouldHandleSelection(index) {
-    return index !== this.state.selectedIndex;
   }
 
   render() {
