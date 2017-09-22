@@ -11,7 +11,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#default div:nth-child(3) svg').to.have.attribute('class').equals('terra-Icon');
 
     browser.expect.element('#default div:nth-child(1)').to.have.css('align-self').which.equals('flex-start');
-    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#default div:nth-child(3)').to.have.css('align-self').which.equals('flex-start');
   },
 
@@ -101,7 +104,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/arrange-tests/aligned-individually-fit-start`);
 
     browser.expect.element('#center div:nth-child(1)').to.have.css('align-self').which.equals('center');
-    browser.expect.element('#center div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#center div:nth-child(3)').to.have.css('align-self').which.equals('flex-start');
   },
 
@@ -110,7 +116,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/arrange-tests/aligned-individually-fit-start`);
 
     browser.expect.element('#bottom div:nth-child(1)').to.have.css('align-self').which.equals('flex-end');
-    browser.expect.element('#bottom div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#bottom div:nth-child(3)').to.have.css('align-self').which.equals('flex-start');
   },
 
@@ -119,7 +128,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/arrange-tests/aligned-individually-fit-start`);
 
     browser.expect.element('#stretch div:nth-child(1)').to.have.css('align-self').which.equals('stretch');
-    browser.expect.element('#stretch div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#stretch div:nth-child(3)').to.have.css('align-self').which.equals('flex-start');
   },
 
@@ -155,7 +167,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/arrange-tests/aligned-individually-fit-end`);
 
     browser.expect.element('#center div:nth-child(1)').to.have.css('align-self').which.equals('flex-start');
-    browser.expect.element('#center div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#center div:nth-child(3)').to.have.css('align-self').which.equals('center');
   },
 
@@ -164,7 +179,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/arrange-tests/aligned-individually-fit-end`);
 
     browser.expect.element('#bottom div:nth-child(1)').to.have.css('align-self').which.equals('flex-start');
-    browser.expect.element('#bottom div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#bottom div:nth-child(3)').to.have.css('align-self').which.equals('flex-end');
   },
 
@@ -173,7 +191,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/arrange-tests/aligned-individually-fit-end`);
 
     browser.expect.element('#stretch div:nth-child(1)').to.have.css('align-self').which.equals('flex-start');
-    browser.expect.element('#stretch div:nth-child(2)').to.have.css('align-self').which.equals('auto');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-start');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('center');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('flex-end');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('align-self').to.not.equal('stretch');
     browser.expect.element('#stretch div:nth-child(3)').to.have.css('align-self').which.equals('stretch');
   },
 });
