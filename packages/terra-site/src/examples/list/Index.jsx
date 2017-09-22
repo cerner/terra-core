@@ -13,10 +13,10 @@ import MultiSelectListSrc from '!raw-loader!terra-list/src/MultiSelectList.jsx';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 // Example Files
-import ListDemo from './ListDemo';
-import SingleSelect from './SingleSelect';
-import MultiSelect from './MultiSelect';
-import MultiSelectMaxSelection from './MultiSelectMaxSelection';
+import ListDemo from './components/List';
+import SingleSelect from './components/SingleSelect';
+import MultiSelect from './components/MultiSelect';
+import MultiSelectMaxSelection from './components/MultiSelectMaxSelection';
 
 const ListExamples = () => (
   <div>
@@ -26,19 +26,6 @@ const ListExamples = () => (
     <PropsTable id="props-list" src={ListSrc} componentName="List" />
     <PropsTable id="props-singleList" src={SingleSelectListSrc} componentName="Single Select List" />
     <PropsTable id="props-multiList" src={MultiSelectListSrc} componentName="Multiple Select List" />
-    <br />
-    <h1>Examples</h1>
-    <h2 id="list">List</h2>
-    <ListDemo />
-    <br />
-    <h2 id="single">Single Select List</h2>
-    <SingleSelect />
-    <br />
-    <h2 id="multi">Multi Select List</h2>
-    <MultiSelect />
-    <br />
-    <h2 id="multi-max-selection">Multi Select List - Maximum Selection of 2 Items</h2>
-    <MultiSelectMaxSelection />
   </div>
 );
 
