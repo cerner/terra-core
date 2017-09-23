@@ -7,6 +7,9 @@ Unreleased
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 
+### Changed
+* Break out SelectableList Subcomponent
+
 1.10.0 - (September 19, 2017)
 ------------------
 ### Changed
