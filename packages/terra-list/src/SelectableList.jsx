@@ -115,6 +115,10 @@ class SelectableList extends React.Component {
       newProps.isSelectable = item.props.isSelectable;
     }
 
+    if (this.props.disableUnselectedItems && !isSelected) {
+      newProps.isSelectable = false;
+    }
+
     // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
     // onClick and onKeyDown functions.
     if (newProps.isSelectable) {
@@ -129,10 +133,6 @@ class SelectableList extends React.Component {
     }
     if (item.props.hasChevron !== undefined) {
       newProps.hasChevron = item.props.hasChevron;
-    }
-
-    if (this.props.disableUnselectedItems && !isSelected) {
-      newProps.isSelectable = false;
     }
 
     return newProps;
