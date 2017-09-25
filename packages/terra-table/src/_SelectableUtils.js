@@ -1,5 +1,6 @@
 /**
 * Returns the index of the first selected row for SingleSelectableRows.
+* To be used in the contructor, to set initial state.
 */
 const initialSingleSelectRowIndex = (rows) => {
   if (!rows || !rows.length) {
@@ -15,7 +16,7 @@ const initialSingleSelectRowIndex = (rows) => {
 };
 
 /**
-* Returns if the selected row index should update for SingleSelectableRows.
+* Returns if the selected row index is already selected for SingleSelectableRows.
 */
 const shouldHandleSingleSelectRowSelection = (currentIndex, newIndex) => currentIndex !== newIndex;
 
