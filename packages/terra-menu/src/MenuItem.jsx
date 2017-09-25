@@ -28,7 +28,7 @@ const propTypes = {
 
   /**
    * Indicates if the item should be selectable.
-    */
+   */
   isSelectable: PropTypes.bool,
 
   /**
