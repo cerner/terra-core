@@ -35,6 +35,7 @@ const IconAll = () => (
   <div>
     <div id="version">Version: {version}</div>
     <h1 id="static_icons">Static Icons</h1>
+    <p>The static icons are designed to convey a specific meaning. As such they are to be used without modification.</p>
     <Table isStriped={false}>
       <Table.Header>
         <Table.HeaderCell content={'SVG'} key={'svg'} />
