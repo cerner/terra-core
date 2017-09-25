@@ -1,6 +1,6 @@
 # Terra Table
 
-The Terra Table is a structural component to arrange content within a table. The components available within this package allow for creating of s
+The Terra Table is a structural component to arrange content within a table.
 
 ## Getting Started
 
