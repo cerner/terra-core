@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* SelectableTableRows component
+
+### Changed
+* Updated SingleSelectableRows to utilize the SelectableTableRows component
 
 ### Removed
 * Remove stylelint-disable selector-class-pattern

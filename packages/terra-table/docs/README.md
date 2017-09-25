@@ -1,6 +1,6 @@
 # Terra Table
 
-The Terra Table is a structural component to arrange content within table.
+The Terra Table is a structural component to arrange content within a table. The components available within this package allow for creating of s
 
 ## Getting Started
 
@@ -10,6 +10,18 @@ The Terra Table is a structural component to arrange content within table.
 
 ## Usage
 
+Terra-table provides several different components for building tables accessible through the Table component:
+- Header: Indicates a primary level of hierarchy.
+- SubHeader: Indicates a secondary level of hierarchy.
+- HeaderCell: Renders a table header cell.
+- TableRows: Wrapper to apply onClick and onKeyDown function on each child row.
+- SelectableTableRows: Wrapper that allows for selection state management of each child row. Use in place of TableRows.
+- SingleSelectableRows: Wrapper that handles single selection state mange of each child row. Use in place of TableRows.
+- Row: Renders a table row.
+- Cell: Renders a table cell.
+
+More information regarding managed selectable tables can be found [here](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs/MangedSelectableTable.md).
+
 ### Table
 ```jsx
 import React from 'react';
@@ -17,25 +29,25 @@ import Table from 'terra-table';
 
 <Table isStriped={false}>
   <Table.Header>
-    <Table.HeaderCell content={'Column Heading 1'} key={'COLUMN_0'} minWidth={'small'} />
-    <Table.HeaderCell content={'Column Heading 2'} key={'COLUMN_1'} minWidth={'medium'} />
-    <Table.HeaderCell content={'Column Heading 3'} key={'COLUMN_2'} minWidth={'large'} />
+    <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
+    <Table.HeaderCell content="Address" key="ADDRESS" minWidth="medium" />
+    <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" minWidth="large" />
   </Table.Header>
   <Table.Rows>
-    <Table.Row key={'ROW_0'}>
-      <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_2'} />
+    <Table.Row key="PERSON_0">
+      <Table.Cell content="John Smith" key="NAME" />
+      <Table.Cell content="123 Adams Drive" key="ADDRESS" />
+      <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
-    <Table.Row key={1}>
-      <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_2'} />
+    <Table.Row key="PERSON_1">
+      <Table.Cell content="Jane Smith" key="NAME" />
+      <Table.Cell content="321 Drive Street" key="ADDRESS" />
+      <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
-    <Table.Row key={2}>
-      <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_2'} />
+    <Table.Row key="PERSON_2">
+      <Table.Cell content="Dave Smith" key="NAME" />
+      <Table.Cell content="213 Raymond Road" key="ADDRESS" />
+      <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
   </Table.Rows>
 </Table>
@@ -47,25 +59,25 @@ import Table from 'terra-table';
 
 <Table isStriped={false}>
   <Table.Header>
-    <Table.HeaderCell content={'Column Heading 1'} key={'COLUMN_0'} minWidth={'small'} />
-    <Table.HeaderCell content={'Column Heading 2'} key={'COLUMN_1'} minWidth={'medium'} />
-    <Table.HeaderCell content={'Column Heading 3'} key={'COLUMN_2'} minWidth={'large'} />
+    <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
+    <Table.HeaderCell content="Address" key="ADDRESS" minWidth="medium" />
+    <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" minWidth="large" />
   </Table.Header>
   <Table.SingleSelectableRows>
-    <Table.Row isSelected={true} key={'ROW_0'}>
-      <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_2'} />
+    <Table.Row key="PERSON_0">
+      <Table.Cell content="John Smith" key="NAME" />
+      <Table.Cell content="123 Adams Drive" key="ADDRESS" />
+      <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
-    <Table.Row key={'ROW_1'}>
-      <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_2'} />
+    <Table.Row key="PERSON_1">
+      <Table.Cell content="Jane Smith" key="NAME" />
+      <Table.Cell content="321 Drive Street" key="ADDRESS" />
+      <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
-    <Table.Row key={'ROW_2'}>
-      <Table.Cell content={'Table Data'} key={'COLUMN_0'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_1'} />
-      <Table.Cell content={'Table Data'} key={'COLUMN_2'} />
+    <Table.Row key="PERSON_2">
+      <Table.Cell content="Dave Smith" key="NAME" />
+      <Table.Cell content="213 Raymond Road" key="ADDRESS" />
+      <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
   </Table.SingleSelectableRows>
 </Table>
