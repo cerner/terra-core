@@ -98,5 +98,11 @@
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-suitcss": "^1.0.0",
     "terra-toolkit": "^2.0.0"
+  },
+  "dependencies": {
+    "terra-mixins": "^1.10.0"
+  },
+  "peerDependencies": {
+    "terra-mixins": "^1.10.0"
   }
 }
