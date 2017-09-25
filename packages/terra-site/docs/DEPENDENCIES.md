@@ -22,7 +22,7 @@
 | terra-collapsible-menu-view | ^0.x | ^15.4.2 | The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu. |
 | terra-content-container | ^1.9.0 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-date-picker | ^1.11.0 | ^15.4.2 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
-| terra-date-time-picker | ^0.x | ^15.4.2 | The DateTimePicker component has a date picker for selecting date and a time input for entering time || 
+| terra-date-time-picker | ^0.x | ^15.4.2 | The DateTimePicker component has a date picker for selecting date and a time input for entering time |
 | terra-demographics-banner | ^1.10.0 | ^15.4.2 | The demographics component is used to display demographic information about a person in a condensed, easy to read format. |
 | terra-dynamic-grid | ^1.4.0 | ^15.4.2 | The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids. |
 | terra-embedded-content-consumer | ^1.4.0 | ^15.4.2 | The Embedded Content Consumer is the application component which is embedding web content within it. |

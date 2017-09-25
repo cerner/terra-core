@@ -56,7 +56,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.click('input[name="terra-time-minute-input"]');
-    browser.waitForElementVisible('[class*="time-clarification"]', 1000);
 
     browser.expect.element('[class*="time-clarification"]').to.be.present;
     browser.expect.element('[class*="header"]').to.be.present;
@@ -74,7 +73,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.click('input[name="terra-time-minute-input"]');
-    browser.waitForElementVisible('[class*="time-clarification"]', 1000);
 
     browser.expect.element('[class*="time-clarification"]').to.be.present;
 
@@ -90,7 +88,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.click('input[name="terra-time-minute-input"]');
-    browser.waitForElementVisible('[class*="time-clarification"]', 1000);
 
     browser.expect.element('[class*="time-clarification"]').to.be.present;
 
@@ -108,7 +105,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.click('input[name="terra-time-minute-input"]');
-    browser.waitForElementVisible('[class*="time-clarification"]', 1000);
 
     browser.expect.element('[class*="time-clarification"]').to.be.present;
 
@@ -126,7 +122,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.click('input[name="terra-time-minute-input"]');
-    browser.waitForElementVisible('[class*="time-clarification"]', 1000);
 
     browser.expect.element('[class*="time-clarification"]').to.be.present;
 
