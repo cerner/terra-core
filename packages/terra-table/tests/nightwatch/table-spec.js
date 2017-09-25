@@ -139,14 +139,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('[class*="row"]:nth-child(3)').to.have.attribute('class').which.contains('is-selected');
   },
 
-  'Display a selectable table with a subheader': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/table-selectable-subheaders`);
-    browser.expect.element('tbody tr:nth-child(1)').to.have.attribute('data-terra-table-subheader-row');
-    browser.assert.containsText('tbody tr:nth-child(1) td:nth-child(1)', 'Single');
-    browser.expect.element('tbody tr:nth-child(4)').to.have.attribute('data-terra-table-subheader-row');
-    browser.assert.containsText('tbody tr:nth-child(4) td:nth-child(1)', 'Married');
-  },
-
   'Display a non-selectable table with a subheader': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/table-tests/table-subheaders`);
     browser.expect.element('tbody tr:nth-child(1)').to.have.attribute('data-terra-table-subheader-row');
@@ -186,26 +178,5 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a table with no rows': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/table-tests/table-no-rows`);
     browser.assert.elementNotPresent('[class*="row"]:nth-child(1)');
-  },
-
-  'Displays a selectable table with only one row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/selectable-table-single-row`);
-    browser.assert.elementPresent('[class*="row"]:nth-child(1)');
-    browser.assert.elementNotPresent('[class*="row"]:nth-child(2)');
-  },
-
-  'Displays a selectable table with no rows': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/selectable-table-no-rows`);
-    browser.assert.elementNotPresent('[class*="row"]:nth-child(1)');
-  },
-
-  'Maintains custom classNames when provided': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/table-tests/table-selectable-subheaders`);
-    browser.assert.elementPresent('.Table-Custom');
-    browser.assert.elementPresent('.Header-Custom');
-    browser.assert.elementPresent('.HeaderCell-Custom');
-    browser.assert.elementPresent('.Cell-Custom');
-    browser.assert.elementPresent('.SingleSelectableRows-Custom');
-    browser.assert.elementPresent('.Subheader-Custom');
   },
 });

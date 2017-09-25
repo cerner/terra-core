@@ -6,6 +6,9 @@ Unreleased
 ### Fixed
 * Updating theming-plugin match regex to allow for multiple fallback values.
 
+### Added
+* Selectable Table Test Routes
+
 1.11.0 - (September 19, 2017)
 ------------------
 ### Changed

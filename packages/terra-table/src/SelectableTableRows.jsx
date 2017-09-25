@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
-import SelectableUtils from './SelectableUtils';
+import SelectableUtils from './_SelectableUtils';
 
 const propTypes = {
   /**
@@ -89,16 +89,16 @@ class SelectableTableRows extends React.Component {
       newProps.isSelectable = row.props.isSelectable;
     }
 
+    if (this.props.disableUnselectedRows && !isSelected) {
+      newProps.isSelectable = false;
+    }
+
     // If selectable, add tabIndex on rows to navigate through keyboard tab key for selectable row and add
     // onClick and onKeyDown functions.
     if (newProps.isSelectable) {
       newProps.tabIndex = '0';
       newProps.onClick = onClick;
       newProps.onKeyDown = onKeyDown;
-    }
-
-    if (this.props.disableUnselectedRows && !isSelected) {
-      newProps.isSelectable = false;
     }
 
     return newProps;

@@ -26,6 +26,7 @@ class SingleSelectableRows extends React.Component {
   }
 
   handleOnChange(event, index) {
+    // Check if the selectedIndex state should update before updating
     if (SelectableTableRows.Utils.shouldHandleSingleSelectRowSelection(this.state.selectedIndex, index)) {
       event.preventDefault();
       this.setState({ selectedIndex: index });
