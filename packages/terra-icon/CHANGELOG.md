@@ -3,7 +3,42 @@ Changelog
 
 Unreleased
 ----------
+
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
+1.10.0 - (September 19, 2017)
+------------------
 ### Changed
+* Minor version bump
+
+1.9.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.8.0 - (September 7, 2017)
+------------------
+### Added
+* Added compose icon.
+* Added incomingCall icon.
+* Added microphone icon.
+* Added microphoneDisabled icon.
+* Added missedCall icon.
+* Added outgoingCall icon.
+* Added phoneDown icon.
+* Added question icon.
+* Added swap icon.
+* Added unexpected icon.
+* Added unread icon.
+* Added unspecified icon.
+* Added videoCameraDisabled icon.
+
+### Changed
+* Changed path data for unavailable icon.
+
+1.7.0 - (September 5, 2017)
+------------------
 * Update nightwatch tests and test scripts.
 
 1.6.0 - (August 31, 2017)

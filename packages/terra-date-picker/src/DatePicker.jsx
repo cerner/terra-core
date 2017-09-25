@@ -233,9 +233,12 @@ class DatePicker extends React.Component {
         fixedHeight
         locale={intl.locale}
         placeholderText={dateFormat}
+        popoverAttachment="top center"
+        popoverTargetAttachment="bottom center"
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
+        tetherConstraints={[{ to: 'window', attachment: 'together', pin: true }]}
         name={name}
       />);
 

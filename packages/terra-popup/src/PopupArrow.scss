@@ -1,9 +1,8 @@
 :local {
   [dir=ltr],
   [dir=rtl] {
-    /* stylelint-disable selector-class-pattern  */
     // These are relative to screen coordinates, so no bi-di concerns
-    .popupArrow {
+    .popup-arrow {
       border: var(--terra-popup-arrow-size, 11px) solid transparent;
       display: none;
       height: 0;
@@ -24,7 +23,7 @@
       }
     }
 
-    .popupArrow[data-align-top='true'] {
+    .popup-arrow[data-align-top='true'] {
       border-bottom-color: var(--terra-popup-arrow-color, #b2b5b6);
       border-top-width: 0;
       display: block;
@@ -34,12 +33,12 @@
       &::after {
         border-bottom-color: #fff;
         border-top-width: 0;
-        left: -var(--terra-popup-arrow-inner-size, 10px);
+        left: calc(var(--terra-popup-arrow-inner-size, 10px) * -1);
         top: var(--terra-popup-arrow-inner-inset-size, 2px);
       }
     }
 
-    .popupArrow[data-align-bottom='true'] {
+    .popup-arrow[data-align-bottom='true'] {
       border-bottom-width: 0;
       border-top-color: var(--terra-popup-arrow-color, #b2b5b6);
       display: block;
@@ -50,11 +49,11 @@
         border-bottom-width: 0;
         border-top-color: var(--terra-popup-arrow-inner-color, #fff);
         bottom: var(--terra-popup-arrow-inner-inset-size, 2px);
-        left: -var(--terra-popup-arrow-inner-size, 10px);
+        left: calc(var(--terra-popup-arrow-inner-size, 10px) * -1);
       }
     }
 
-    .popupArrow[data-align-left='true'] {
+    .popup-arrow[data-align-left='true'] {
       border-left-width: 0;
       border-right-color: var(--terra-popup-arrow-color, #b2b5b6);
       display: block;
@@ -65,11 +64,11 @@
         border-left-width: 0;
         border-right-color: var(--terra-popup-arrow-inner-color, #fff);
         left: var(--terra-popup-arrow-inner-inset-size, 2px);
-        top: -var(--terra-popup-arrow-inner-size, 10px);
+        top: calc(var(--terra-popup-arrow-inner-size, 10px) * -1);
       }
     }
 
-    .popupArrow[data-align-right='true'] {
+    .popup-arrow[data-align-right='true'] {
       border-left-color: var(--terra-popup-arrow-color, #b2b5b6);
       border-right-width: 0;
       display: block;
@@ -80,9 +79,8 @@
         border-left-color: var(--terra-popup-arrow-inner-color, #fff);
         border-right-width: 0;
         right: var(--terra-popup-arrow-inner-inset-size, 2px);
-        top: -var(--terra-popup-arrow-inner-size, 10px);
+        top: calc(var(--terra-popup-arrow-inner-size, 10px) * -1);
       }
     }
   }
-  /* stylelint-enable */
 }

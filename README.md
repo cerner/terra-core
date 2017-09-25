@@ -8,7 +8,9 @@
   Terra Core
 </h1>
 
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
+[![Cerener OSS](https://img.shields.io/badge/Cerner-OSS-blue.svg?style=flat)](http://engineering.cerner.com/2014/01/cerner-and-open-source/)
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core) 
+[![lerna](https://img.shields.io/badge/Maintained%20With-Lerna-cc00ff.svg)](https://lernajs.io/)
 
 - [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
@@ -66,7 +68,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-legacy-theme](https://github.com/cerner/terra-core/tree/master/packages/terra-legacy-theme) | [![NPM version](http://img.shields.io/npm/v/terra-legacy-theme.svg)](https://www.npmjs.org/package/terra-legacy-theme) | :white_check_mark: |
 | [terra-list](https://github.com/cerner/terra-core/tree/master/packages/terra-list) | [![NPM version](http://img.shields.io/npm/v/terra-list.svg)](https://www.npmjs.org/package/terra-list) | :white_check_mark: |
 | [terra-markdown](https://github.com/cerner/terra-core/tree/master/packages/terra-markdown) | [![NPM version](http://img.shields.io/npm/v/terra-markdown.svg)](https://www.npmjs.org/package/terra-markdown) | :white_check_mark: |
-| terra-menu | [![NPM version](http://img.shields.io/npm/v/terra-menu.svg)](https://www.npmjs.org/package/terra-menu) | :x: |
+| [terra-menu](https://github.com/cerner/terra-core/tree/master/packages/terra-menu) | [![NPM version](http://img.shields.io/npm/v/terra-menu.svg)](https://www.npmjs.org/package/terra-menu) | :white_check_mark: |
 | [terra-mixins](https://github.com/cerner/terra-core/tree/master/packages/terra-mixins) | [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins) | :white_check_mark: |
 | [terra-modal](https://github.com/cerner/terra-core/tree/master/packages/terra-modal) | [![NPM version](http://img.shields.io/npm/v/terra-modal.svg)](https://www.npmjs.org/package/terra-modal) | :white_check_mark: |
 | [terra-modal-manager](https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager) | [![NPM version](http://img.shields.io/npm/v/terra-modal-manager.svg)](https://www.npmjs.org/package/terra-modal-manager) | :white_check_mark: |

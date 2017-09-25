@@ -2,12 +2,11 @@
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
   [dir=rtl] {
-    /* stylelint-disable selector-class-pattern  */
-    .popupContent {
+    .popup-content {
       display: block;
     }
 
-    .roundedCorners {
+    .rounded-corners {
       border-radius: 5px;
     }
 
@@ -45,25 +44,24 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    .isFullScreen {
+    .is-full-screen {
       box-shadow: none;
     }
 
-    .popupContent[data-arrow-top='true'] {
+    .popup-content[data-arrow-top='true'] {
       margin-top: var(--terra-popup-content-margin, 10px);
     }
 
-    .popupContent[data-arrow-bottom='true'] {
+    .popup-content[data-arrow-bottom='true'] {
       margin-bottom: var(--terra-popup-content-margin, 10px);
     }
 
-    .popupContent[data-arrow-left='true'] {
+    .popup-content[data-arrow-left='true'] {
       margin-left: var(--terra-popup-content-margin, 10px);
     }
 
-    .popupContent[data-arrow-right='true'] {
+    .popup-content[data-arrow-right='true'] {
       margin-right: var(--terra-popup-content-margin, 10px);
     }
   }
-  /* stylelint-enable */
 }

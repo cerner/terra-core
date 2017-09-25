@@ -1,0 +1,55 @@
+{
+  "name": "terra-collapsible-menu-view",
+  "main": "lib/CollapsibleMenuView.js",
+  "version": "0.0.0",
+  "description": "The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-collapsible-menu-view",
+    "CollapsibleMenuView",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "terra-props-table": "^1.7.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "terra-base": "^2.3.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "resize-observer-polyfill": "^1.4.1",
+    "terra-base": "^2.1.0",
+    "terra-button": "^1.8.0",
+    "terra-button-group": "^1.9.0",
+    "terra-list": "^1.9.0",
+    "terra-menu": "^1.0.0",
+    "terra-form": "^1.8.0",
+    "terra-icon": "^1.9.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
+    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "props-table": "props-table ./src/CollapsibleMenuView.jsx --out-dir ./docs/props-table",
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "$(cd ..; npm bin)/jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
+  }
+}

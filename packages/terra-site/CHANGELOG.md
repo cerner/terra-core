@@ -3,6 +3,31 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Updating theming-plugin match regex to allow for multiple fallback values.
+
+1.11.0 - (September 19, 2017)
+------------------
+### Changed
+* Updated ArrangeAlignment to generate Ids with `_.uniqueId()`.
+* Fixed scroll reset to account for theme provider
+
+### Fixed
+* Fixed title misspelling.
+* Bidi display of label-value pairs of input examples
+
+1.10.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.9.0 - (September 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.8.0 - (September 5, 2017)
+------------------
 ### Added
 * Added ThemeProvider component examples
 
@@ -10,6 +35,7 @@ Unreleased
 ------------------
 ### Added
 * Added line-height styles to site-nav
+* Fixed prop-types error for invalid data type in search field examples
 
 ### Changed
 * Updated various examples to use `span` instead of `p` elements in sample content

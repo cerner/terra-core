@@ -16,7 +16,7 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| react-intl | ^2.3.0 | ^0.14.9 \|\| ^15.0.0 | Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations. |
+| react-intl | ^2.3.0 | ^0.14.9 \|\| ^15.0.0 \|\| ^16.0.0 | Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations. |
 | react-redux | ^5.0.4 | ^0.14.0 \|\| ^15.0.0-0 \|\| ^16.0.0-0 | Official React bindings for Redux |
 | redux | ^3.6.0 | -- | Predictable state container for JavaScript apps |
 | terra-app-delegate | ^1.2.0 | -- | An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications |

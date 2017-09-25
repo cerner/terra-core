@@ -134,6 +134,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
+    browser.expect.element('[class*="custom-input"] > [class*="button"]').to.be.present;
     browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -147,6 +148,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
+    browser.expect.element('[class*="custom-input"] > [class*="button"]').to.be.present;
     browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -160,6 +162,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
+    browser.expect.element('[class*="custom-input"] > [class*="button"]').to.be.present;
     browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;
@@ -179,6 +182,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/inside-modal`);
 
     browser.click('[class*="disclose"]');
+    browser.expect.element('[class*="custom-input"] > [class*="button"]').to.be.present;
     browser.click('[class*="custom-input"] > [class*="button"]');
 
     browser.expect.element('.react-datepicker').to.be.present;

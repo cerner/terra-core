@@ -3,6 +3,30 @@ Changelog
 
 Unreleased
 ----------
+
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
+1.9.0 - (September 19, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.8.0 - (September 12, 2017)
+------------------
+### Changed
+* Fix `-var()` syntax.
+
+### Fixed
+* Implementation of the overlay styling.
+
+1.7.0 - (September 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.6.0 - (September 5, 2017)
+------------------
 ### Changed
 * Update nightwatch tests and test scripts.
 

@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+1.5.0 - (September 19, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.4.0 - (September 5, 2017)
+------------------
 ### Changed
 * Update nightwatch tests and test scripts.
 

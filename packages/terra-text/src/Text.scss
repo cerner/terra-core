@@ -1,4 +1,3 @@
-/* stylelint-disable selector-class-pattern  */
 :local {
   .text {
     color: inherit;
@@ -9,20 +8,20 @@
   .italic { font-style: italic; }
 
   // Text Sizes
-  .fontSize-100 { font-size: 7.143rem; }
-  .fontSize-32 { font-size: 2.286rem; }
-  .fontSize-24 { font-size: 1.714rem;}
-  .fontSize-20 { font-size: 1.429rem; }
-  .fontSize-18 { font-size: 1.286rem; }
-  .fontSize-16 { font-size: 1.143rem; }
-  .fontSize-14 { font-size: 1rem; }
-  .fontSize-12 { font-size: 0.8571rem; }
-  .fontSize-10 { font-size: 0.7143rem; }
+  .font-size-100 { font-size: 7.143rem; }
+  .font-size-32 { font-size: 2.286rem; }
+  .font-size-24 { font-size: 1.714rem;}
+  .font-size-20 { font-size: 1.429rem; }
+  .font-size-18 { font-size: 1.286rem; }
+  .font-size-16 { font-size: 1.143rem; }
+  .font-size-14 { font-size: 1rem; }
+  .font-size-12 { font-size: 0.8571rem; }
+  .font-size-10 { font-size: 0.7143rem; }
 
   // Text Weights
-  .fontWeight-200 { font-weight: 200; }
-  .fontWeight-400 { font-weight: 400; }
-  .fontWeight-700 { font-weight: 700; }
+  .font-weight-200 { font-weight: 200; }
+  .font-weight-400 { font-weight: 400; }
+  .font-weight-700 { font-weight: 700; }
 
 
   /**
@@ -40,4 +39,3 @@
     width: 1px;
   }
 }
-/* stylelint-enable */

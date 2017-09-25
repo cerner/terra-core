@@ -1,5 +1,6 @@
 const postcss = require('postcss');
 const fs = require('fs');
+const path = require('path');
 
 const sortHash = data =>
   Object.keys(data).sort().reduce((a, b) => {
@@ -25,14 +26,13 @@ module.exports = postcss.plugin('theming-plugin', () => {
 
     root.walkDecls((decl) => {
       // All of Terra's themed variables are in the syntax of var(<variable>, <value>);
-      const matches = decl.value.match(/^var\(\s*(--terra.*),\s*(.*)\)/);
+      const matches = decl.value.match(/^var\(\s*(--terra[\w-]*),\s*(.*)\)/);
 
       if (matches) {
         variables[component] = variables[component] || {};
         variables[component][matches[1]] = matches[2];
       }
     });
-
-    return fs.writeFileSync('themeable-variables.json', JSON.stringify(sortHash(variables)), 'utf8');
+    return fs.writeFileSync(path.resolve(__dirname, 'themeable-variables.json'), JSON.stringify(sortHash(variables), null, 2), 'utf8');
   };
 });

@@ -22,9 +22,11 @@
 | express | ^4.15.2 | -- | Fast, unopinionated, minimalist web framework |
 | glob | ^7.1.1 | -- | a little globber |
 | identity-obj-proxy | ^3.0.0 | -- | an identity object using ES6 proxies |
-| jest | ^18.0.0 | -- | Painless JavaScript Testing. |
-| lerna | 2.0.0-rc.4 | -- | Tool for managing JavaScript projects with multiple packages |
+| jest | ^21.0.2 | -- | Delightful JavaScript Testing. |
+| lerna | ^2.1.2 | -- | Tool for managing JavaScript projects with multiple packages |
+| link-parent-bin | ^0.1.3 | -- | [![Build Status](https://travis-ci.org/nicojs/node-link-parent-bin.svg?branch=master)](https://travis-ci.org/nicojs/node-link-parent-bin) |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
+| nightwatch | ^0.9.12 | -- | A node.js bindings implementation for selenium 2.0/webdriver |
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
 | react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 | A complete routing library for React |
@@ -34,4 +36,4 @@
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
 | stylelint-config-sass-guidelines | ^3.0.0 | -- | Sharable stylelint config based on https://sass-guidelin.es/ |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
-| terra-toolkit | ^1.2.2 | ^15.4.2 | Utilities to help when developing terra modules. |
+| terra-toolkit | ^2.0.0 | ^15.4.2 | Utilities to help when developing terra modules. |

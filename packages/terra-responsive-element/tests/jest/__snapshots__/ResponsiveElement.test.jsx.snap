@@ -1,6 +1,9 @@
-exports[`test should apply classes passed in through props 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should apply classes passed in through props 1`] = `
 <div
-  className="TestClass" />
+  className="TestClass"
+/>
 `;
 
-exports[`test should render a default component 1`] = `<div />`;
+exports[`should render a default component 1`] = `<div />`;

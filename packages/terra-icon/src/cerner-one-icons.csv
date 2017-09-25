@@ -17,7 +17,6 @@ folder,src/icons/0011_folder_a.svg,themeable ,bi-directional
 attachment,src/icons/0012_paperClip_a.svg,themeable ,bi-directional
 send,src/icons/0013_sendRight_a.svg,themeable ,bi-directional
 pill,src/icons/0014_pill_a.svg,themeable ,bi-directional
-critical,src/icons/0015_critical_i.svg,,
 visualization,src/icons/0016_angledArrow_a.svg,themeable ,bi-directional
 lightbulb,src/icons/0017_lightbulb_a.svg,themeable ,
 forward,src/icons/0018_curvedArrowRight_a.svg,themeable ,bi-directional
@@ -53,6 +52,8 @@ exclamation,src/icons/0037_exclamation_a.svg,themeable ,
 highPriority,src/icons/0037_exclamation_a.svg,,
 alert,src/icons/0037_exclamation_i_heavyTriangleRed.svg,,
 warning,src/icons/0037_exclamation_i_heavyTriangleYellow.svg,,
+unspecified,src/icons/0037_exclamation_i_lightCircleGray.svg,,
+critical,src/icons/0037_exclamation_i_heavyDiamondRed.svg,,
 italic-i,src/icons/0038_italic-i_a.svg,themeable ,
 information,src/icons/0038_italic-i_i_heavyCircleBlue.svg,,
 information_inverse,src/icons/0038_italic-i_i_heavyCircleWhite.svg,,
@@ -61,8 +62,8 @@ error,src/icons/0039_minus_i_heavyCircleRed.svg,,
 doNotDisturb,src/icons/0039_minus_i_heavyCircleRed.svg,,
 close,src/icons/0041_x_a.svg,themeable ,
 clear,src/icons/0041_x_a.svg,themeable ,
-notMet,src/icons/0041_x_i_heavyCircle.svg,themeable ,
 incomplete,src/icons/0041_x_i_heavyCircle.svg,themeable ,
+notMet,src/icons/0041_x_i_heavyCircle.svg,themeable ,
 person,src/icons/0043_person_a.svg,themeable ,
 left,src/icons/0044_arrowLeft_a.svg,themeable ,bi-directional
 right,src/icons/0044_arrowRight_a.svg,themeable ,bi-directional
@@ -80,9 +81,11 @@ featuredOutline,src/icons/0056_star_a_outline.svg,themeable ,
 archive,src/icons/0058_box_a.svg,themeable ,
 funnel,src/icons/0059_funnel_a.svg,themeable ,
 documents,src/icons/0060_papers_a.svg,themeable ,
+question,src/icons/0061_questionMark_a.svg,themeable ,
 help,src/icons/0061_questionMark_i_heavyCircleBlue.svg,,
 help_inverse,src/icons/0061_questionMark_i_heavyCircleWhite.svg,,
 unknown,src/icons/0061_questionMark_i_heavyCircle.svg,themeable ,
+unexpected,src/icons/0061_questionMark_i_diamond_light.svg,,
 house,src/icons/0062_house_a.svg,themeable ,
 save,src/icons/0065_floppyDisk_a.svg,themeable ,
 hospital,src/icons/0068_hospital_a.svg,themeable ,
@@ -92,8 +95,8 @@ announcement,src/icons/0071_megaphone_a.svg,themeable ,
 camera,src/icons/0072_camera_a.svg,themeable ,
 briefcase,src/icons/0073_briefcase_a.svg,themeable ,
 link,src/icons/0074_chain_a.svg,themeable ,bi-directional
-list,src/icons/0075_list_a.svg,themeable ,
 menu,src/icons/0075_list_a.svg,themeable ,
+list,src/icons/0075_list_a.svg,themeable ,
 checklist,src/icons/0079_checkList_a.svg,themeable ,
 unlock,src/icons/0080_padlock_open_a.svg,themeable ,bi-directional
 due,src/icons/0081_stopwatch_a.svg,themeable ,
@@ -134,6 +137,7 @@ zoomIn,src/icons/0135_magnifyingGlassPlus_a.svg,themeable ,
 diamond,src/icons/0136_diamond_i_purple.svg,,
 envelope,src/icons/0137_envelope_a.svg,themeable ,
 allergy,src/icons/0138_circleLines_a.svg,themeable ,
+phoneDown,src/icons/0139_phoneDown_a.svg,themeable ,
 phone,src/icons/0139_phone_a.svg,themeable ,
 panelLeft,src/icons/0140_rectangleLeftArrow_a.svg,themeable ,bi-directional
 panelRight,src/icons/0141_rectangleRightArrow_a.svg,themeable ,bi-directional
@@ -147,8 +151,17 @@ unavailable,src/icons/0147_circle_i_light.svg,themeable ,
 implant,src/icons/0148_pointedLine_a.svg,themeable ,
 protocol,src/icons/0149_linesThreeSquares_a.svg,themeable ,
 videoCamera,src/icons/0150_videoCamera_a.svg,themeable ,bi-directional
+videoCameraDisabled,src/icons/0150_videoCamera_i_slash.svg,themeable ,bi-directional
 noSignal,src/icons/0151_wifiCircleLine_i.svg,themeable ,bi-directional
 reload,src/icons/0152_circleArrow_a.svg,themeable ,
 recurringEvent,src/icons/0153_calendarCircleArrow_a.svg,themeable ,
 separate,src/icons/0154_lineTwoArrows_a.svg,themeable ,bi-directional
 merge,src/icons/0155_connectedLinesArrow_a.svg,themeable ,bi-directional
+compose,src/icons/0158_pencilSquare_a.svg,themeable ,
+unread,src/icons/0159_eye_i_slash.svg,themeable ,
+swap,src/icons/0160_arrowLeftarrowRight_i.svg,themeable ,
+microphone,src/icons/0161_microphone_a.svg,themeable ,
+microphoneDisabled,src/icons/0161_microphone_i_slash.svg,themeable ,
+outgoingCall,src/icons/0162_phoneArrowRight_i.svg,themeable ,
+incomingCall,src/icons/0163_phoneArrowLeft_i.svg,themeable ,
+missedCall,src/icons/0164_phoneDownCurvedArrow_i.svg,themeable ,

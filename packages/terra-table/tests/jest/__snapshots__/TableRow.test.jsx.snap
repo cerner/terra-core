@@ -1,38 +1,52 @@
-exports[`test should render a default table row 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table row 1`] = `
 <tr
   aria-selected={false}
-  className="row">
+  className="row"
+>
   <TableCell
-    content="John Smith" />
+    content="John Smith"
+  />
   <TableCell
-    content="123 Adams Drive" />
+    content="123 Adams Drive"
+  />
   <TableCell
-    content="111-222-3333" />
+    content="111-222-3333"
+  />
 </tr>
 `;
 
-exports[`test should render a selectable table row 1`] = `
+exports[`should render a selectable table row 1`] = `
 <tr
   aria-selected={false}
-  className="is-selectable row">
+  className="is-selectable row"
+>
   <TableCell
-    content="John Smith" />
+    content="John Smith"
+  />
   <TableCell
-    content="123 Adams Drive" />
+    content="123 Adams Drive"
+  />
   <TableCell
-    content="111-222-3333" />
+    content="111-222-3333"
+  />
 </tr>
 `;
 
-exports[`test should render a selected table row 1`] = `
+exports[`should render a selected table row 1`] = `
 <tr
   aria-selected={true}
-  className="is-selected row">
+  className="is-selected row"
+>
   <TableCell
-    content="John Smith" />
+    content="John Smith"
+  />
   <TableCell
-    content="123 Adams Drive" />
+    content="123 Adams Drive"
+  />
   <TableCell
-    content="111-222-3333" />
+    content="111-222-3333"
+  />
 </tr>
 `;
