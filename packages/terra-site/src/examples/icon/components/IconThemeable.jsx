@@ -146,6 +146,7 @@ const IconAll = () => (
   <div>
     <div id="version">Version: {version}</div>
     <h2 id="themeable_icons">Themeable Icons</h2>
+    <p>The themeable icons may be modified to match specific application styles.</p>
     <Table isStriped={false}>
       <Table.Header>
         <Table.HeaderCell content={'SVG'} key={'svg'} />
