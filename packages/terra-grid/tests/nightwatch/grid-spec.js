@@ -40,6 +40,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser
       .assert.containsText('#nested-column-1-text', '5 Nested Columns')
-      .assert.containsText('div#grid #nested-column-2', '7 Nested Columns');
+      .assert.containsText('#nested-column-2-text', '7 Nested Columns');
   },
 });
