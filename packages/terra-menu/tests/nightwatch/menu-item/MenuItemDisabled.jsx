@@ -8,10 +8,6 @@ const childContextTypes = {
 };
 
 class MenuItemDisabled extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   getChildContext() {
     return { isSelectableMenu: true };
   }
@@ -23,12 +19,12 @@ class MenuItemDisabled extends React.Component {
           <p>The item is disabled. The selection state should not change with any user interaction.</p>
         </div>
         <List>
-          <Menu.Item 
-            text="Disabled Menu Item" 
-            key="1" 
-            className="TestDisabledItem" 
+          <Menu.Item
+            text="Disabled Menu Item"
+            key="1"
+            className="TestDisabledItem"
             isSelectable
-            isDisabled 
+            isDisabled
           />
         </List>
       </div>
