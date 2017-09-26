@@ -1,6 +1,6 @@
 # Multi Select List
 
-The Terra List is a structural component to arrange content within list/listitems with a configurable number of selectable items.
+The Terra Multi Select List is a structural component to arrange content within list/listitems with a configurable number of selectable items.
 
 ## Usage
 
