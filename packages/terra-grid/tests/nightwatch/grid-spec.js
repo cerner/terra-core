@@ -5,17 +5,41 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a default grid': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/grid-tests/default`)
-      .assert.elementPresent('#grid');
+      .expect.element('#grid').to.be.present;
+
+    browser.expect.element('#row').to.be.present;
+
+    browser.expect.element('#column-1').to.have.attribute('class').which.contain('column-6');
+    browser.expect.element('#column-2').to.have.attribute('class').which.contain('column-6');
+
+    browser
+      .assert.containsText('div#grid div#row div#column-1 div.terra-grid-example', 'First Column content')
+      .assert.containsText('div#grid div#row div#column-2 div.terra-grid-example', 'Second Column content');
   },
+
   'Displays a responsive grid': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/grid-tests/responsive`)
-      .assert.elementPresent('#grid');
+      .expect.element('#grid').to.be.present;
+
+    browser.expect.element('#column-1').to.have.attribute('class').which.contain('tiny-12');
+    browser.expect.element('#column-1').to.have.attribute('class').which.contain('small-8');
+    browser.expect.element('#column-1').to.have.attribute('class').which.contain('medium-4');
+    browser.expect.element('#column-1').to.have.attribute('class').which.contain('large-6');
   },
 
   'Displays a nested grid': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/grid-tests/nested`)
-      .assert.elementPresent('#grid');
+      .expect.element('#grid').to.be.present;
+
+    browser.expect.element('#nested-row').to.be.present;
+
+    browser.expect.element('#nested-column-1').to.have.attribute('class').which.contain('column-5');
+    browser.expect.element('#nested-column-2').to.have.attribute('class').which.contain('column-7');
+
+    browser
+      .assert.containsText('#nested-column-1-text', '5 Nested Columns')
+      .assert.containsText('div#grid #nested-column-2', '7 Nested Columns');
   },
 });
