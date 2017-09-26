@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
+/* eslint-disable no-unused-expressions */
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default grid': (browser) => {
     browser
@@ -18,9 +19,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Displays a responsive grid': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/grid-tests/responsive`)
-      .expect.element('#grid').to.be.present;
+    browser.url(`${browser.launchUrl}/#/tests/grid-tests/responsive`);
+    browser.expect.element('#grid').to.be.present;
 
     browser.expect.element('#column-1').to.have.attribute('class').which.contain('tiny-12');
     browser.expect.element('#column-1').to.have.attribute('class').which.contain('small-8');
