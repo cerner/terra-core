@@ -3,15 +3,13 @@ import React from 'react';
 import { Route } from 'react-router';
 
 // Form Component Indexes
-import List from './components/List';
-import MultiSelect from './components/MultiSelect';
-import SingleSelect from './components/SingleSelect';
+import MultiSelectIndex from './components/MultiSelectIndex';
+import SingleSelectIndex from './components/SingleSelectIndex';
 
 const routes = (
   <div>
-    <Route path="/site/list/list" component={List} />
-    <Route path="/site/list/multi-select" component={MultiSelect} />
-    <Route path="/site/list/single-select" component={SingleSelect} />
+    <Route path="/site/list/multi-select" component={MultiSelectIndex} />
+    <Route path="/site/list/single-select" component={SingleSelectIndex} />
   </div>
 );
 

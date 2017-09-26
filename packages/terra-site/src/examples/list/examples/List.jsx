@@ -2,9 +2,8 @@ import React from 'react';
 
 import List from 'terra-list';
 
-const list = () => (
+const ListExample = () => (
   <div>
-    <h1>List</h1>
     <List isDivided>
       <List.Item content={<span>test</span>} key="123" />
       <List.Item content={<span>test</span>} key="124" />
@@ -12,4 +11,4 @@ const list = () => (
     </List>
   </div>);
 
-export default list;
+export default ListExample;

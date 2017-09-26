@@ -2,9 +2,9 @@ import React from 'react';
 
 import SingleSelectList from 'terra-list/lib/SingleSelectList';
 
-const list = () => (
+const SingleSelectExamples = () => (
   <div>
-    <h1>Single Select List</h1>
+    <h2>Example</h2>
     <SingleSelectList hasChevrons isDivided>
       <SingleSelectList.Item content={<span>test</span>} key="123" />
       <SingleSelectList.Item content={<span>test</span>} key="124" />
@@ -12,4 +12,4 @@ const list = () => (
     </SingleSelectList>
   </div>);
 
-export default list;
+export default SingleSelectExamples;
