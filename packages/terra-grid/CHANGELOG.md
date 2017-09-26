@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Updated nightwatch test scripts
+
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 
