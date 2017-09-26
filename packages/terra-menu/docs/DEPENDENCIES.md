@@ -22,7 +22,7 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
+| react-dom | ^15.5.4 | ^15.6.2 | React package for working with the DOM. |
 | terra-arrange | ^1.10.0 | ^15.4.2 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-base | ^2.4.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-content-container | ^1.9.0 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
