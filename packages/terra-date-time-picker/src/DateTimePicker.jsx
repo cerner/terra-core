@@ -48,7 +48,7 @@ const propTypes = {
    * The first parameter is the event. The second parameter is the changed input value.
    */
   onChange: PropTypes.func,
-    /**
+  /**
    * A callback function to execute when a change is made in the date or time input.
    * The first parameter is the event. The second parameter is the changed input value.
    */
