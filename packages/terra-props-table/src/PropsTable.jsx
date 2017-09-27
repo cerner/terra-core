@@ -39,8 +39,7 @@ function determineType(type) {
   } else if (typeName === 'union') {
     const options = type.value.map((option) => {
       const name = option.name === 'shape' ? (<span key={option.value}> an object structured like:
-      <pre> {formatShape(option.value)} </pre></span>) :
-      (<span key={option.name}> {option.name}</span>);
+        <pre> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
       return name;
     });
     typeName = options.reduce((curr, next) => [curr, <span> or </span>, next]);
