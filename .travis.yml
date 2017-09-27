@@ -8,6 +8,9 @@ addons:
     packages:
       - google-chrome-stable
 before_script:
+  - date
+  - export TZ=America/Chicago
+  - date
   - sudo apt-get update && sudo apt-get install oracle-java8-installer
 script:
   - npm test
