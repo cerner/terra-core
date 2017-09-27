@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.12.0 - (September 26, 2017)
+------------------
 ### Fixed
 * Updating theming-plugin match regex to allow for multiple fallback values.
 
