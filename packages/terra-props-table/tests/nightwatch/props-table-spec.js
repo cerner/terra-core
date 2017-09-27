@@ -62,18 +62,18 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a arrayOf(shapes) prop correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/props-table-tests/default`)
       .assert.containsText('#PropsTable > tbody > tr:nth-child(8) > td:nth-child(1)', 'arrayOfShapes')
-      .assert.containsText('#PropsTable > tbody > tr:nth-child(8) > td:nth-child(2)', 'array of objects structured like: { "stringProp": { "name": "string", "required": false } }');
+      .assert.containsText('#PropsTable > tbody > tr:nth-child(8) > td:nth-child(2)', 'array of objects structured like:\n {\n "stringProp": {\n  "name": "string",\n  "required": false\n }\n} ');
   },
 
   'Displays a oneOfType prop correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/props-table-tests/default`)
       .assert.containsText('#PropsTable > tbody > tr:nth-child(9) > td:nth-child(1)', 'oneOfType')
-      .assert.containsText('#PropsTable > tbody > tr:nth-child(9) > td:nth-child(2)', 'string or number or an object structured like: { "stringProp": { "name": "string", "required": false } }');
+      .assert.containsText('#PropsTable > tbody > tr:nth-child(9) > td:nth-child(2)', 'string or number or an object structured like:\n {\n "stringProp": {\n  "name": "string",\n  "required": false\n }\n} ');
   },
 
   'Displays a shape prop correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/props-table-tests/default`)
       .assert.containsText('#PropsTable > tbody > tr:nth-child(10) > td:nth-child(1)', 'shape')
-      .assert.containsText('#PropsTable > tbody > tr:nth-child(10) > td:nth-child(2)', 'an object structured like: { "stringProp": { "name": "string", "required": false }, "numberProp": { "name": "number", "required": false } }');
+      .assert.containsText('#PropsTable > tbody > tr:nth-child(10) > td:nth-child(2)', 'an object structured like:\n {\n "stringProp": {\n  "name": "string",\n  "required": false\n },\n "numberProp": {\n  "name": "number",\n  "required": false\n }\n} ');
   },
 });
