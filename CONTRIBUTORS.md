@@ -32,6 +32,8 @@ Cerner Corporation
 - Wei Hou [@kafkahw]
 - Ryan Perrin [@saedar]
 - Sameeksha Vaity [@samvaity]
+- Sai Kaushik Malella [@msaikaushik1992]
+- Kevin Schuster [@kschuste]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -67,3 +69,5 @@ Cerner Corporation
 [@kafkahw]: https://github.com/kafkahw
 [@saedar]: https://github.com/saedar
 [@samvaity]: https://github.com/samvaity
+[@msaikaushik1992]: https://github.com/msaikaushik1992
+[@kschuste]: https://github.com/kschuste

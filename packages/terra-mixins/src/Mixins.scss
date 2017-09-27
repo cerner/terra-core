@@ -2,7 +2,7 @@
 
 // Mixins
 // ====================================================
-/* stylelint-disable selector-class-pattern, scss/at-mixin-pattern  */
+/* stylelint-disable scss/at-mixin-pattern  */
 
 $default-theme: false !default;
 $bundled-themes: false !default;
@@ -43,7 +43,7 @@ $bundled-themes: false !default;
   }
 }
 
-/* stylelint-enable selector-class-pattern, scss/at-mixin-pattern  */
+/* stylelint-enable scss/at-mixin-pattern  */
 
 
 // Clearfix mixin

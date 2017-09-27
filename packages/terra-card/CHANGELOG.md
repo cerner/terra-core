@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 -----------------
 
+1.5.0 - (September 26, 2017)
+------------------
+### Added
+* Added a variable for color of card
+
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
 1.4.0 - (September 19, 2017)
 ------------------
 ### Changed

@@ -2,8 +2,7 @@
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
   [dir=rtl] {
-    /* stylelint-disable selector-class-pattern  */
-    .popupOverlay {
+    .popup-overlay {
       background-color: var(--terra-popup-overlay-background-color, #fff);
       height: 100%;
       left: 0;
@@ -30,5 +29,4 @@
       width: 200%;
     }
   }
-  /* stylelint-enable */
 }

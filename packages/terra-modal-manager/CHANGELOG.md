@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.12.0 - (September 26, 2017)
+------------------
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
 1.11.0 - (September 19, 2017)
 ------------------
 ### Changed

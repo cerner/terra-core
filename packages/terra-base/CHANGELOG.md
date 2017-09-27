@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.5.0 - (September 26, 2017)
+------------------
+### Changed
+* Updated body height to default to 100% instead of auto while updating the terra-consumer theme to be auto.
+
 2.4.0 - (September 19, 2017)
 ------------------
 ### Changed

@@ -52,7 +52,7 @@
     "--terra-base-html-margin": "0",
     "--terra-base-background-color": "#fff",
     "--terra-base-color": "#1c1f21",
-    "--terra-base-body-height": "auto",
+    "--terra-base-body-height": "100%",
     "--terra-base-line-height": "1.42857",
     "--terra-base-body-margin": "0"
   },
@@ -111,7 +111,8 @@
     "--terra-card-background-color": "#fff",
     "--terra-card-border": "1px solid #c8cacb",
     "--terra-card-border-radius": "3px",
-    "--terra-card-box-shadow": "none"
+    "--terra-card-box-shadow": "none",
+    "--terra-card-color": "inherit"
   },
   "CardBody": {
     "--terra-card-padding-bottom": "10px",
