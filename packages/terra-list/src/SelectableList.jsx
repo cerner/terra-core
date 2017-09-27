@@ -19,6 +19,7 @@ const propTypes = {
   disableUnselectedItems: PropTypes.bool,
   /**
    * Whether or not the child list items has a disclosure indicator presented.
+   * The behavior is intended to be used with a single selection style list, as multi selection style list should not perform disclosures.
    */
   hasChevrons: PropTypes.bool,
   /**
