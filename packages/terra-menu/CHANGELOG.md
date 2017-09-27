@@ -6,6 +6,8 @@ Unreleased
 #Added
 * Added ability to disable menu items
 
+1.2.0 - (September 26, 2017)
+------------------
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 
