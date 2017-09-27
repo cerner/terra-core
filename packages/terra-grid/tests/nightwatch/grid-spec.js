@@ -13,9 +13,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#column-1').to.have.attribute('class').which.contain('column-6');
     browser.expect.element('#column-2').to.have.attribute('class').which.contain('column-6');
 
-    browser
-      .assert.containsText('div#grid div#row div#column-1 div.terra-grid-example', 'First Column content')
-      .assert.containsText('div#grid div#row div#column-2 div.terra-grid-example', 'Second Column content');
+    browser.expect.element('div#grid div#row div#column-1 div.terra-grid-example').text.to.equal('First Column content');
+    browser.expect.element('div#grid div#row div#column-2 div.terra-grid-example').text.to.equal('Second Column content');
   },
 
   'Displays a responsive grid': (browser) => {
@@ -38,8 +37,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#nested-column-1').to.have.attribute('class').which.contain('column-5');
     browser.expect.element('#nested-column-2').to.have.attribute('class').which.contain('column-7');
 
-    browser
-      .assert.containsText('#nested-column-1-text', '5 Nested Columns')
-      .assert.containsText('#nested-column-2-text', '7 Nested Columns');
+    browser.expect.element('#nested-column-1-text').text.to.equal('5 Nested Columns');
+    browser.expect.element('#nested-column-2-text').text.to.equal('7 Nested Columns');
   },
 });
