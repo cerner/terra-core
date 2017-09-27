@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.6.0 - (September 26, 2017)
+------------------
+### Changed
+* Update dependencies documentation
+
 1.5.0 - (September 19, 2017)
 ------------------
 ### Changed
