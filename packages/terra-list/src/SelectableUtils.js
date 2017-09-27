@@ -1,3 +1,8 @@
+const KEYCODES = {
+  ENTER: 13,
+  SPACE: 32,
+};
+
 /**
  * The validates the max count prop, and if undefined returns a max of the count of children.
  */
@@ -83,6 +88,7 @@ const SelectableUtils = {
   validatedMaxCount,
   shouldHandleMultiSelect,
   shouldHandleSingleSelect,
+  keyCodes: KEYCODES,
 };
 
 export default SelectableUtils;
