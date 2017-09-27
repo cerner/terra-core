@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.10.0 - (September 26, 2017)
+------------------
+### Fixed
+* IE10+ enter animation caused by IE bug when using calc() within transition or transform (https://connect.microsoft.com/IE/feedback/details/762719/css3-calc-bug-inside-transition-or-transform)
+
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 

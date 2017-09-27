@@ -28,9 +28,9 @@
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
 | nightwatch | ^0.9.12 | -- | A node.js bindings implementation for selenium 2.0/webdriver |
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
-| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 | A complete routing library for React |
-| react-test-renderer | ^15.5.4 | ^15.6.1 | React package for snapshot testing. |
+| react-dom | ^15.5.4 | ^15.6.2 | React package for working with the DOM. |
+| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 \|\| ^16.0.0-rc | A complete routing library for React |
+| react-test-renderer | ^15.5.4 | ^15.6.2 | React package for snapshot testing. |
 | rimraf | ^2.6.1 | -- | A deep deletion module for node (like `rm -rf`) |
 | shelljs | ^0.7.7 | -- | Portable Unix shell commands for Node.js |
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
