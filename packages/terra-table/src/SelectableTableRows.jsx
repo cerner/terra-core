@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
-import SelectableUtils from './_SelectableUtils';
+import SelectableUtils from './SelectableUtils';
 
 const propTypes = {
   /**
