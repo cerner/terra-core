@@ -53,12 +53,14 @@ class BasicMenu extends React.Component {
   }
 
   handleCloseOnKeyDown(event) {
+    event.preventDefault();
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
       this.handleRequestClose();
     }
   }
 
   handleActionOnKeyDown(event) {
+    event.preventDefault();
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
       this.handleAction();
     }
