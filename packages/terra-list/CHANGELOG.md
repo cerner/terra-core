@@ -6,6 +6,8 @@ Unreleased
 ### Changed
 * Update table test links to be 'Table Tests' and 'Single Select Table Links'
 
+1.11.0 - (September 26, 2017)
+------------------
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 
