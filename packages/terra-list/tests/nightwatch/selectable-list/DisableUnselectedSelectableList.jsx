@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SelectableList from '../../../src/SelectableList';
+import SelectableList from '../../../lib/SelectableList';
 
 class listExample extends React.Component {
   constructor(props) {
