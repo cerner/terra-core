@@ -13,7 +13,7 @@ import TableHeaderSrc from '!raw-loader!terra-table/src/TableHeader';
 import TableHeaderCellSrc from '!raw-loader!terra-table/src/TableHeaderCell';
 import TableRowSrc from '!raw-loader!terra-table/src/TableRow';
 import TableRowsSrc from '!raw-loader!terra-table/src/TableRows';
-import SelectableTableRowsSrc from '!raw-loader!terra-table/src/SelectableTableRowsSrc';
+import SelectableTableRowsSrc from '!raw-loader!terra-table/src/SelectableTableRows';
 import TableCellSrc from '!raw-loader!terra-table/src/TableCell';
 import TableSubheaderSrc from '!raw-loader!terra-table/src/TableSubheader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
