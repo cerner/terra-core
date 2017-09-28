@@ -21,12 +21,13 @@ class PopupOverlay extends React.Component {
 
   componentWillMount() {
     // Disable scrolling on the page when Overlay is displayed
+    this.overlayStyle = document.documentElement.style.overflow;
     document.documentElement.style.overflow = 'hidden';
   }
 
   componentWillUnmount() {
     // Enable scrolling on the page since Overlay has gone away
-    document.documentElement.style.overflow = null;
+    document.documentElement.style.overflow = this.overlayStyle;
   }
 
   render() {
@@ -36,7 +37,7 @@ class PopupOverlay extends React.Component {
     delete customProps.closePortal;
 
     return (
-      <div {...customProps} className={cx(['popupOverlay', customProps.className])}>
+      <div {...customProps} className={cx(['popup-overlay', customProps.className])}>
         <div className={cx('inner')} />
         {children}
       </div>

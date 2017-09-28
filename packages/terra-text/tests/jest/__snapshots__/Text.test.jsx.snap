@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Text should render a text component 1`] = `
 <span
   className="text"
@@ -5,7 +7,8 @@ exports[`Text should render a text component 1`] = `
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   Test
 </span>
 `;
@@ -17,19 +20,21 @@ exports[`Text should render a text component with color prop set 1`] = `
     Object {
       "color": "#f00",
     }
-  }>
+  }
+>
   Test
 </span>
 `;
 
 exports[`Text should render a text component with fontSize prop set 1`] = `
 <span
-  className="text fontSize-24"
+  className="text font-size-24"
   style={
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   Test
 </span>
 `;
@@ -41,7 +46,8 @@ exports[`Text should render a text component with isItalic prop set 1`] = `
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   Test
 </span>
 `;
@@ -53,19 +59,21 @@ exports[`Text should render a text component with isVisuallyHidden prop set 1`] 
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   Test
 </span>
 `;
 
 exports[`Text should render a text component with weight prop set 1`] = `
 <span
-  className="text fontWeight-200"
+  className="text font-weight-200"
   style={
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   Test
 </span>
 `;
@@ -77,7 +85,8 @@ exports[`Text should support rendering a string as children 1`] = `
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   String
 </span>
 `;
@@ -89,7 +98,8 @@ exports[`Text should support rendering an array of elements as a children 1`] = 
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   <span>
     Element 1
   </span>
@@ -109,7 +119,8 @@ exports[`Text should support rendering an element as children 1`] = `
     Object {
       "color": "inherit",
     }
-  }>
+  }
+>
   <span>
     Element
   </span>

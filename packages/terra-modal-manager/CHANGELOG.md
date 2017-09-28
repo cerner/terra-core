@@ -4,6 +4,21 @@ Changelog
 Unreleased
 ----------
 
+1.12.0 - (September 26, 2017)
+------------------
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
+1.11.0 - (September 19, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.10.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.9.0 - (September 7, 2017)
 ------------------
 ### Changed
@@ -12,6 +27,7 @@ Unreleased
 1.8.0 - (September 5, 2017)
 ------------------
 ### Changed
+* Import breakpoints from CSS modules
 * Update nightwatch tests and test scripts.
 
 1.7.0 - (August 31, 2017)

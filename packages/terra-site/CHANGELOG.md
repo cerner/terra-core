@@ -4,6 +4,29 @@ Changelog
 Unreleased
 ----------
 
+1.12.0 - (September 26, 2017)
+------------------
+### Fixed
+* Updating theming-plugin match regex to allow for multiple fallback values.
+
+### Changed
+* Break out static and themeable icon examples into their own pages
+
+1.11.0 - (September 19, 2017)
+------------------
+### Changed
+* Updated ArrangeAlignment to generate Ids with `_.uniqueId()`.
+* Fixed scroll reset to account for theme provider
+
+### Fixed
+* Fixed title misspelling.
+* Bidi display of label-value pairs of input examples
+
+1.10.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.9.0 - (September 7, 2017)
 ------------------
 ### Changed

@@ -4,6 +4,27 @@ Changelog
 Unreleased
 ----------
 
+1.10.0 - (September 26, 2017)
+------------------
+### Fixed
+* IE10+ enter animation caused by IE bug when using calc() within transition or transform (https://connect.microsoft.com/IE/feedback/details/762719/css3-calc-bug-inside-transition-or-transform)
+
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
+1.9.0 - (September 19, 2017)
+------------------
+### Changed
+* Bump react-transition-group dependency to v2.2.0
+
+### Fixed
+* Disable content on hidden slides to prevent keyboard access
+
+1.8.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.7.0 - (September 7, 2017)
 ------------------
 ### Changed

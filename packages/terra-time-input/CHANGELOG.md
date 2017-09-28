@@ -4,10 +4,27 @@ Changelog
 Unreleased
 ----------
 
+1.11.0 - (September 26, 2017)
+------------------
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
+1.10.0 - (September 19, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.9.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.8.0 - (September 7, 2017)
 ------------------
 ### Fixed
-* Fixed focus management issue between hour and time input in Firefox.
+* Focus management issue between hour and time input in Firefox.
+* Border styling
+* Input bidirectionality
 
 1.7.0 - (September 5, 2017)
 ------------------

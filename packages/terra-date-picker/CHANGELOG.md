@@ -3,6 +3,22 @@ Changelog
 
 Unreleased
 ----------
+
+1.11.0 - (September 26, 2017)
+------------------
+### Removed
+* Remove stylelint-disable selector-class-pattern
+
+1.10.0 - (September 19, 2017)
+------------------
+### Fixed
+* Set react-datepicker popup attachment to fix bidi display
+
+1.10.0 - (September 12, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.9.0 - (September 7, 2017)
 ------------------
 ### Changed

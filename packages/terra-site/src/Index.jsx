@@ -13,6 +13,7 @@ import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import CardExamples from './examples/card/Index';
+import CollapsibleMenuViewExamples from './examples/collapsible-menu-view/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
@@ -26,6 +27,7 @@ import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
+import MenuExamples from './examples/menu/Index';
 import ModalExamples from './examples/modal/Index';
 import ModalManagerExamples from './examples/modal-manager/Index';
 import OverlayExamples from './examples/overlay/Index';
@@ -33,6 +35,7 @@ import PopupExamples from './examples/popup/Index';
 import ProfileImageExamples from './examples/profile-image/Index';
 import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
+import SignatureExamples from './examples/signature/Index';
 import SearchFieldExamples from './examples/search-field/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
@@ -53,6 +56,7 @@ import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
+import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
@@ -65,6 +69,7 @@ import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes'
 import HookshotTestRoutes from 'terra-hookshot/tests/nightwatch/HookshotTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import IconIndexRoutes from './examples/icon/IconIndexRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
@@ -72,6 +77,9 @@ import LoadingOverlayTestRoutes from 'terra-overlay/tests/nightwatch/LoadingOver
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import ModalTestRoutes from 'terra-modal/tests/nightwatch/ModalTestRoutes';
 import MarkdownTestRoutes from 'terra-markdown/tests/nightwatch/MarkdownTestRoutes';
+import MenuTestRoutes from 'terra-menu/tests/nightwatch/menu/MenuTestRoutes';
+import MenuItemTestRoutes from 'terra-menu/tests/nightwatch/menu-item/MenuItemTestRoutes';
+import MenuItemGroupTestRoutes from 'terra-menu/tests/nightwatch/menu-item-group/MenuItemGroupTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
@@ -82,6 +90,7 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
@@ -107,6 +116,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="card" component={CardExamples} />
+      <Route path="collapsible-menu-view" component={CollapsibleMenuViewExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
@@ -120,6 +130,7 @@ ReactDOM.render((
       <Route path="icon" component={IconExamples} />
       <Route path="image" component={ImageExamples} />
       <Route path="list" component={ListExamples} />
+      <Route path="menu" component={MenuExamples} />
       <Route path="modal" component={ModalExamples} />
       <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="overlay" component={OverlayExamples} />
@@ -128,6 +139,7 @@ ReactDOM.render((
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
@@ -138,6 +150,7 @@ ReactDOM.render((
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
       {FormIndexRoutes}
+      {IconIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
     {AlertTestRoutes}
@@ -147,6 +160,7 @@ ReactDOM.render((
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
     {CardTestRoutes}
+    {CollapsibleMenuViewTestRoutes}
     {DatePickerTestRoutes}
     {DemographicsBannerTestRoutes}
     {DynamicGridTestRoutes}
@@ -165,6 +179,9 @@ ReactDOM.render((
     {TableTestRoutes}
     {TimeInputTestRoutes}
     {MarkdownTestRoutes}
+    {MenuTestRoutes}
+    {MenuItemTestRoutes}
+    {MenuItemGroupTestRoutes}
     {ModalTestRoutes}
     {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
@@ -183,6 +200,7 @@ ReactDOM.render((
     {ThemeProviderTestRoutes}
     {SlideGroupTestRoutes}
     {ProfileImageTestRoutes}
+    {SignatureTestRoutes}
     {HookshotTestRoutes}
   </Router>
 ), document.getElementById('root'));

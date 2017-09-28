@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "1.8.0",
+  "version": "1.11.0",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -24,36 +24,36 @@
     "jsdom": "^9.11.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/1.4.3.tar.gz",
     "svgo": "^0.7.2",
-    "terra-props-table": "^1.6.0"
+    "terra-props-table": "^1.9.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.2.0"
+    "terra-base": "^2.5.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.2.0"
+    "terra-base": "^2.5.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
-    "compilescripts:clean": "$(cd ..; npm bin)/rimraf scripts/lib",
-    "compilescripts:build": "$(cd ..; npm bin)/babel scripts/src --out-dir scripts/lib --copy-files",
+    "compilescripts:clean": "rimraf scripts/lib",
+    "compilescripts:build": "babel scripts/src --out-dir scripts/lib --copy-files",
     "migrate-csv": "node scripts/lib/migrate-csv/index.js",
     "migrate-svg": "node scripts/lib/migrate-svg/index.js",
     "generate-icon": "node scripts/lib/generate-icon/index.js",
     "generate-example": "node scripts/lib/generate-example/index.js",
     "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-icon && npm run generate-example",
     "compile": "npm run compile:clean && npm run compile:build && npm run compilescripts",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/IconBase.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
-    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
-    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }

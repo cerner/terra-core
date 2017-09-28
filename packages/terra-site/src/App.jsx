@@ -13,6 +13,7 @@ import ThemeProvider from 'terra-theme-provider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
+import IconComponentNavigation from './examples/icon/IconComponentNavigation';
 
 const propTypes = {
   children: PropTypes.node,
@@ -47,9 +48,9 @@ class App extends React.Component {
   }
 
   handleResetScroll() {
-    const scrollParent = document.getElementById('site-content-section').parentNode;
-    if (scrollParent && scrollParent.parentNode) {
-      scrollParent.parentNode.scrollTop = 0;
+    const element = document.getElementById('site-content-section');
+    if (element && element.parentNode) {
+      element.parentNode.scrollTop = 0;
     }
     if (window.innerWidth < 768) {
       this.setState({ isOpen: false });
@@ -101,9 +102,9 @@ class App extends React.Component {
         <div className={styles['site-theme']}>
           <label htmlFor="theme"> Theme: </label>
           <select value={this.state.theme} onChange={this.handleThemeChange}>
-            <option value="">Default</option>
-            <option value="cerner-mock-theme">Mock Theme</option>
+            <option value="">Default Theme</option>
             <option value="cerner-consumer-theme">Consumer Theme</option>
+            <option value="cerner-mock-theme">Mock Theme</option>
           </select>
         </div>
       );
@@ -130,6 +131,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button">Button</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button-group">Button Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/card">Card</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/collapsible-menu-view">Collapsilbe Menu View</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/content-container">Content Container</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/datepicker">Date Picker</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/demographics-banner">Demographics Banner</Link>} />
@@ -142,8 +144,10 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/hookshot">Hookshot</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/i18n">I18n</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/icon">Icon</Link>} />
+          <List.Item content={<IconComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/image">Image</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/list">List</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/menu">Menu</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal">Modal</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal-manager">Modal Manager</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/overlay">Overlay</Link>} />
@@ -152,6 +156,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/progress-bar">Progress Bar</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/responsive-element">Responsive Element</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/search-field">Search Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/signature">Signature</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-group">Slide Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
@@ -169,8 +174,8 @@ class App extends React.Component {
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
     // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
     const mainContent = (
-      <ThemeProvider themeName={this.state.theme}>
-        <Base id="site-content-section" className={styles['site-content']} locale={this.state.locale}>
+      <ThemeProvider id="site-content-section" themeName={this.state.theme} isGlobalTheme>
+        <Base className={styles['site-content']} locale={this.state.locale}>
           {this.props.children}
         </Base>
       </ThemeProvider>

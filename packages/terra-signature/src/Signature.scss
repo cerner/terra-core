@@ -1,0 +1,10 @@
+/* stylelint-disable property-no-unknown */
+:local {
+  .signature {
+    background-color: var(--terra-signature-background-color, #fff);
+    color: var(--terra-signature-line-color, #000);
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+}

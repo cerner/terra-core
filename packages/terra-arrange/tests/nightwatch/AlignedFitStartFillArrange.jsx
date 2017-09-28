@@ -6,6 +6,7 @@ const AlignedFitStartFillArrange = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
+        id="default"
         fitStart={image}
         fill={simpleText}
       />
@@ -13,6 +14,7 @@ const AlignedFitStartFillArrange = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="center"
         align="center"
         fitStart={image}
         fill={simpleText}
@@ -21,6 +23,7 @@ const AlignedFitStartFillArrange = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="bottom"
         align="bottom"
         fitStart={image}
         fill={simpleText}
@@ -29,6 +32,7 @@ const AlignedFitStartFillArrange = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="stretch"
         align="stretch"
         fitStart={image}
         fill={simpleText}

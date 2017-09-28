@@ -45,8 +45,8 @@ const Text = ({ color, children, isVisuallyHidden, isItalic, fontSize, weight, .
     'text',
     { italic: isItalic },
     { 'visually-hidden': isVisuallyHidden },
-    { [`fontSize-${fontSize}`]: fontSize },
-    { [`fontWeight-${weight}`]: weight },
+    { [`font-size-${fontSize}`]: fontSize },
+    { [`font-weight-${weight}`]: weight },
     attributes.className,
   ]);
 

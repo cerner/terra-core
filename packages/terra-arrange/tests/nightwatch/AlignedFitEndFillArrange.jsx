@@ -6,6 +6,7 @@ const AlignedFitEndFillArrange = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
+        id="default"
         fill={simpleText}
         fitEnd={<IconWrapper />}
       />
@@ -13,6 +14,7 @@ const AlignedFitEndFillArrange = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="center"
         align="center"
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -21,6 +23,7 @@ const AlignedFitEndFillArrange = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="bottom"
         align="bottom"
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -29,6 +32,7 @@ const AlignedFitEndFillArrange = () => (
 
     <ArrangeWrapper>
       <Arrange
+        id="stretch"
         align="stretch"
         fill={simpleText}
         fitEnd={<IconWrapper />}

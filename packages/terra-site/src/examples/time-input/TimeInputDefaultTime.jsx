@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import TimeInput from 'terra-time-input';
+import styles from '../../site.scss';
 
 class timeInput extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class timeInput extends React.Component {
   render() {
     return (
       <div>
-        <p>Time Provided: {this.state.time}</p>
+        <p>Time Provided: <span className={styles['site-input-display']}>{this.state.time}</span></p>
         <TimeInput
           name="time-input-value"
           value={this.state.time}

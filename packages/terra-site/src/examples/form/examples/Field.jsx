@@ -1,6 +1,7 @@
 import React from 'react';
 import Field from 'terra-form/lib/Field';
 import Input from 'terra-form/lib/Input';
+import styles from '../../../site.scss';
 
 class FieldExamples extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class FieldExamples extends React.Component {
             <Input type="text" defaultValue="Element" onChange={this.handleChange} />
           </Field>
         </form>
-        <hr /><p>Input Provided: {this.state.input}</p>
+        <hr /><p>Input Provided: <span className={styles['site-input-display']}>{this.state.input}</span></p>
         <br />
       </div>
     );
