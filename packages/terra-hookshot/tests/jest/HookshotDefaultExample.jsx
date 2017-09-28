@@ -1,5 +1,5 @@
 import React from 'react';
-import Hookshot from 'terra-hookshot';
+import Hookshot from '../../src/Hookshot';
 
 class HookshotDefaultExample extends React.Component {
   constructor(props) {
@@ -28,12 +28,12 @@ class HookshotDefaultExample extends React.Component {
       <div>
         <Hookshot
           content={hookshotContent}
-          contentAttachment='top center'
+          contentAttachment="top center"
           isEnabled
           isOpen={this.state.isOpen}
           targetRef={() => document.getElementById('hookshot-standard-button')}
         />
-        <div id="hookshot-standard-button" onClick={this.handleButtonClick} />
+        <button id="hookshot-standard-button" onClick={this.handleButtonClick} />
       </div>
     );
   }

@@ -20,7 +20,6 @@ class HookshotStandard extends React.Component {
   render() {
     const hookshotContent = (
       <Hookshot.Content
-        {...customProps}
         closeOnEsc
         closeOnOutsideClick
         closeOnResize

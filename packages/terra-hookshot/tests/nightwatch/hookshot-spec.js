@@ -6,7 +6,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   // minimum props
 
   // attachementBehavior: validate 'none', 'auto', and 'mirror' behaviors.
-    // fallback patterns:    
+    // fallback patterns:
     // none: valid primary position, pushed by bounds
     // mirror: valid primary position, valid 180 degree, pushed by bounds
     // auto: valid primary position, valid 180 degree, valid 90 degree, valid -90 degree, pushed by bounds
@@ -27,5 +27,5 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     // esc
     // click outside
     // resize
-    
+
 });
