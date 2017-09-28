@@ -83,7 +83,7 @@ class SelectableList extends React.Component {
     const initialOnKeyDown = item.props.onKeyDown;
 
     return (event) => {
-      if (event.nativeEvent.keyCode === SelectableList.Utils.keyCodes.ENTER || event.nativeEvent.keyCode === SelectableList.Utils.keyCodes.SPACE) {
+      if (event.nativeEvent.keyCode === SelectableList.Utils.KEYCODES.ENTER || event.nativeEvent.keyCode === SelectableList.Utils.KEYCODES.SPACE) {
         // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
         if (item.props.isSelectable !== false) {
           this.handleOnChange(event, index);

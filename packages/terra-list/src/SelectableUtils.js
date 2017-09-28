@@ -88,7 +88,7 @@ const SelectableUtils = {
   validatedMaxCount,
   shouldHandleMultiSelect,
   shouldHandleSingleSelect,
-  keyCodes: KEYCODES,
+  KEYCODES,
 };
 
 export default SelectableUtils;
