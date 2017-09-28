@@ -22,4 +22,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   // isEnabled, verify positioning does and doesn't not occur.
 
   // isOpen, verify content is present on the dom.
+
+  // verify close behaviors
+    // esc
+    // click outside
+    // resize
+    
 });
