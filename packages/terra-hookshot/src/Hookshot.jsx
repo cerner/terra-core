@@ -26,6 +26,7 @@ const ATTACHMENT_BEHAVIORS = [
 const propTypes = {
   /**
    * If the primary attachment in not available, how should the content be positioned.
+   * Valid values: 'auto', 'flip', and 'none'.
    */
   attachmentBehavior: PropTypes.oneOf(ATTACHMENT_BEHAVIORS),
   /**
@@ -33,7 +34,7 @@ const propTypes = {
    */
   attachmentMargin: PropTypes.number,
   /**
-   * Reference to the bonding container, wil use window if nothing is provided.
+   * Reference to the bounding container, wil use window if nothing is provided.
    */
   boundingRef: PropTypes.func,
   /**
@@ -53,7 +54,7 @@ const propTypes = {
    */
   isEnabled: PropTypes.bool,
   /**
-   * Should element be presented.
+   * Should the content be presented.
    */
   isOpen: PropTypes.bool,
   /**
