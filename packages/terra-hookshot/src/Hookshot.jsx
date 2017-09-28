@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Portal from 'react-portal';
-import classNames from 'classnames/bind';
 import HookshotContent from './_HookshotContent';
 import HookshotUtils from './_HookshotUtils';
 
@@ -85,13 +84,16 @@ const defaultProps = {
 };
 
 class Hookshot extends React.Component {
+  static now() {
+    return performance.now();
+  }
+
   constructor(props) {
     super(props);
     this.setContentNode = this.setContentNode.bind(this);
     this.getNodeRects = this.getNodeRects.bind(this);
     this.update = this.update.bind(this);
     this.tick = this.tick.bind(this);
-    this.now = this.now.bind(this);
     this.state = { isEnabled: props.isEnabled && props.isOpen };
     this.listenersAdded = false;
     this.lastCall = null;
@@ -110,7 +112,7 @@ class Hookshot extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.isEnabled !== this.props.isEnabled || newProps.isOpen !== this.props.isOpen) {
-      this.setState({ isEnabled: newProps.isEnabled && newProps.isOpen});
+      this.setState({ isEnabled: newProps.isEnabled && newProps.isOpen });
     }
   }
 
@@ -140,10 +142,6 @@ class Hookshot extends React.Component {
     return { targetRect, contentRect, boundingRect };
   }
 
-  now() {
-    return performance.now();
-  }
-
   tick() {
     if (this.lastDuration && this.lastDuration > 16) {
       // Throttle to 60fps, in order to handle sarafi and mobile performance
@@ -154,7 +152,7 @@ class Hookshot extends React.Component {
       return;
     }
 
-    if (this.lastCall && (this.now() - this.lastCall) < 10) {
+    if (this.lastCall && (Hookshot.now() - this.lastCall) < 10) {
       // Some browsers call events a little too frequently, refuse to run more than is reasonable
       return;
     }
@@ -164,9 +162,9 @@ class Hookshot extends React.Component {
       this.pendingTimeout = null;
     }
 
-    this.lastCall = this.now();
+    this.lastCall = Hookshot.now();
     this.update();
-    this.lastDuration = this.now() - this.lastCall;
+    this.lastDuration = Hookshot.now() - this.lastCall;
   }
 
   enableListeners() {
@@ -223,7 +221,7 @@ class Hookshot extends React.Component {
       this.contentNode.style.position = result.style.position;
       styleUpdated = true;
     }
-    const newTransform = `translate3d(${result.style.left}, ${result.style.top}, 0px)`; //this comparison is never valid, based on browser rounding
+    const newTransform = `translate3d(${result.style.left}, ${result.style.top}, 0px)`;
     if (this.contentNode.style.transform !== newTransform) {
       this.contentNode.style.transform = newTransform;
       styleUpdated = true;
@@ -235,7 +233,7 @@ class Hookshot extends React.Component {
     if (styleUpdated) {
       this.cachedRects.contentRect = HookshotUtils.getBounds(this.contentNode);
     }
-    
+
     if (this.props.onPosition) {
       this.props.onPosition(
         event,

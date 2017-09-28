@@ -163,13 +163,9 @@ const getBoundingRect = (boundingElement) => {
   return rect;
 };
 
-const switchAttachmentToRTL = (attachment) => {
-  return { vertical: attachment.vertical, horizontal: MIRROR_LR[attachment.horizontal] };
-};
+const switchAttachmentToRTL = attachment => ({ vertical: attachment.vertical, horizontal: MIRROR_LR[attachment.horizontal] });
 
-const switchOffsetToRTL = (offset) => {
-  return { vertical: offset.vertical, horizontal: -offset.horizontal };
-};
+const switchOffsetToRTL = offset => ({ vertical: offset.vertical, horizontal: -offset.horizontal });
 
 const parseStringPair = (value) => {
   if (!value) {
@@ -266,7 +262,7 @@ const getTargetCoords = (rect, attachment, offset) => {
 const mirrorTargetCoords = (tRect, tAttachment, tOffset, cAttachment) => {
   const mOffset = mirrorOffset(tOffset, tAttachment);
   let mAttachment = tAttachment;
-  if (cAttachment.vertical === tAttachment.vertical || (cAttachment.vertical !== 'middle' &&  tAttachment.vertical !== 'middle')) {
+  if (cAttachment.vertical === tAttachment.vertical || (cAttachment.vertical !== 'middle' && tAttachment.vertical !== 'middle')) {
     mAttachment = mirrorAttachment(tAttachment);
   }
   return getTargetCoords(tRect, mAttachment, mOffset);
