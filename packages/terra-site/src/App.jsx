@@ -13,6 +13,7 @@ import ThemeProvider from 'terra-theme-provider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
+import IconComponentNavigation from './examples/icon/IconComponentNavigation';
 
 const propTypes = {
   children: PropTypes.node,
@@ -142,6 +143,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/heading">Heading</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/i18n">I18n</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/icon">Icon</Link>} />
+          <List.Item content={<IconComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/image">Image</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/list">List</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/menu">Menu</Link>} />
