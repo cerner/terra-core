@@ -1,3 +1,5 @@
+import React from 'react';
+
 const KEYCODES = {
   ENTER: 13,
   SPACE: 32,
@@ -10,7 +12,7 @@ const validatedMaxCount = (children, maxSelectionCount) => {
   if (maxSelectionCount !== undefined) {
     return maxSelectionCount;
   }
-  return children.length;
+  return React.Children.count(children);
 };
 
 /**
@@ -18,8 +20,9 @@ const validatedMaxCount = (children, maxSelectionCount) => {
  * To be used in the contructor, to set initial state.
  */
 const initialSingleSelectedIndex = (children) => {
-  for (let i = 0; i < children.length; i += 1) {
-    if (children[i].props.isSelected) {
+  const childArray = React.Children.toArray(children);
+  for (let i = 0; i < childArray.length; i += 1) {
+    if (childArray[i].props.isSelected) {
       return i;
     }
   }
@@ -32,12 +35,14 @@ const initialSingleSelectedIndex = (children) => {
  */
 const initialMultiSelectedIndexes = (children, maxSelectionCount) => {
   const selectedIndexes = [];
+  const childArray = React.Children.toArray(children);
   const validMaxCount = validatedMaxCount(children, maxSelectionCount);
-  for (let i = 0; i < children.length; i += 1) {
+
+  for (let i = 0; i < childArray.length; i += 1) {
     if (selectedIndexes.length >= validMaxCount) {
       break;
     }
-    if (children[i].props.isSelected) {
+    if (childArray[i].props.isSelected) {
       selectedIndexes.push(i);
     }
   }
