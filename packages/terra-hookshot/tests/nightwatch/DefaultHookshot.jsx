@@ -35,7 +35,7 @@ class HookshotStandard extends React.Component {
           content={hookshotContent}
           contentAttachment="bottom center"
           isEnabled
-          isOpen={this.state.isOpen}
+          isOpen={this.state.open}
           targetRef={() => document.getElementById('hookshot-standard-button')}
         />
         <button id="hookshot-standard-button" onClick={this.handleButtonClick}>Default Hookshot</button>

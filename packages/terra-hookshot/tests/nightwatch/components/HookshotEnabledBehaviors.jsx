@@ -1,0 +1,31 @@
+import React from 'react';
+import HookshotTemplate from '../HookshotTemplate';
+
+const Enabled = () => (
+  <HookshotTemplate
+    id="Enabled"
+    isOpen
+    isEnabled
+    disableButton
+  />
+);
+
+const NotEnabled = () => (
+  <HookshotTemplate
+    id="NotEnabled"
+    isOpen
+    isEnabled={false}
+    disableButton
+  />
+);
+
+const HookshotExample = () => (
+  <div>
+    <p>Content Positioning is enabled. Content is visible.</p>
+    <Enabled />
+    <p>Content Positioning is not enabled. Content is not visible.</p>
+    <NotEnabled />
+  </div>
+);
+
+export default HookshotExample;
