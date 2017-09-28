@@ -184,9 +184,9 @@ class MenuContent extends React.Component {
       } else if (item.props.children) {
         const children = React.Children.map(item.props.children, (child) => {
           index += 1;
-          return React.cloneElement(child, { 
-            onKeyDown: this.wrapOnKeyDown(child, index), 
-            isActive: index === this.state.focusIndex 
+          return React.cloneElement(child, {
+            onKeyDown: this.wrapOnKeyDown(child, index),
+            isActive: index === this.state.focusIndex,
           });
         });
         newItem = React.cloneElement(item, {}, children);
