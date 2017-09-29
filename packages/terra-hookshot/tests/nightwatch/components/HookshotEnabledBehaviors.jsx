@@ -6,7 +6,6 @@ const Enabled = () => (
     id="Enabled"
     isOpen
     isEnabled
-    disableButton
   />
 );
 
@@ -15,7 +14,6 @@ const NotEnabled = () => (
     id="NotEnabled"
     isOpen
     isEnabled={false}
-    disableButton
   />
 );
 

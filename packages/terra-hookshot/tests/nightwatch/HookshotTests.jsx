@@ -9,6 +9,8 @@ const HookshotTests = () => (
       <li><Link to="/tests/hookshot-tests/default">Hookshot - Default</Link></li>
       <li><Link to="/tests/hookshot-tests/close-behaviors">Hookshot - Close Behaviors</Link></li>
       <li><Link to="/tests/hookshot-tests/enabled-behaviors">Hookshot - Enabled Behaviors</Link></li>
+      <li><Link to="/tests/hookshot-tests/content-offset">Hookshot - Content Offset</Link></li>
+      <li><Link to="/tests/hookshot-tests/target-offset">Hookshot - Target Offset</Link></li>
     </ul>
   </div>
 );
