@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Badge Default 1`] = `
+<span
+  className="badge small default"
+>
+  <span
+    className="text"
+  >
+    Default
+  </span>
+</span>
+`;
+
+exports[`Badge Badge Icon 1`] = `
+<div>
+  <span
+    className="badge small default"
+    id="text-right"
+  >
+    <svg
+      className="terra-Icon"
+      height="12px"
+      viewBox="0 0 48 48"
+      width="12px"
+    >
+      <path
+        d="M24 0h-.1C10.7 0 0 10.8 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24S37.3 0 24 0zm-4 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+        fill="#FFF"
+      />
+    </svg>
+    <span
+      className="text"
+    >
+      icon
+    </span>
+  </span>
+   
+  <span
+    className="badge small default"
+    id="text-left"
+  >
+    <span
+      className="text"
+    >
+      icon
+    </span>
+    <svg
+      className="terra-Icon"
+      height="12px"
+      viewBox="0 0 48 48"
+      width="12px"
+    >
+      <path
+        d="M24 0h-.1C10.7 0 0 10.8 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24S37.3 0 24 0zm-4 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+        fill="#FFF"
+      />
+    </svg>
+  </span>
+   
+  <span
+    className="badge small default"
+    id="no-text"
+  >
+    <svg
+      className="terra-Icon"
+      height="12px"
+      viewBox="0 0 48 48"
+      width="12px"
+    >
+      <path
+        d="M24 0h-.1C10.7 0 0 10.8 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24S37.3 0 24 0zm-4 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+        fill="#FFF"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Badge Badge Intent 1`] = `
+<div>
+  <span
+    className="badge small default"
+    id="default-badge"
+  >
+    <span
+      className="text"
+    >
+      Default
+    </span>
+  </span>
+   
+  <span
+    className="badge small primary"
+    id="primary-badge"
+  >
+    <span
+      className="text"
+    >
+      Primary
+    </span>
+  </span>
+   
+  <span
+    className="badge small secondary"
+    id="secondary-badge"
+  >
+    <span
+      className="text"
+    >
+      Secondary
+    </span>
+  </span>
+   
+  <span
+    className="badge small positive"
+    id="positive-badge"
+  >
+    <span
+      className="text"
+    >
+      Positive
+    </span>
+  </span>
+   
+  <span
+    className="badge small negative"
+    id="negative-badge"
+  >
+    <span
+      className="text"
+    >
+      Negative
+    </span>
+  </span>
+   
+  <span
+    className="badge small warning"
+    id="warning-badge"
+  >
+    <span
+      className="text"
+    >
+      Warning
+    </span>
+  </span>
+   
+  <span
+    className="badge small info"
+    id="info-badge"
+  >
+    <span
+      className="text"
+    >
+      Info
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Badge Badge Size 1`] = `
+<div>
+  <span
+    className="badge tiny default"
+    id="tiny-badge"
+  >
+    <span
+      className="text"
+    >
+      Tiny
+    </span>
+  </span>
+   
+  <span
+    className="badge small default"
+    id="small-badge"
+  >
+    <span
+      className="text"
+    >
+      Small
+    </span>
+  </span>
+   
+  <span
+    className="badge medium default"
+    id="medium-badge"
+  >
+    <span
+      className="text"
+    >
+      Medium
+    </span>
+  </span>
+   
+  <span
+    className="badge large default"
+    id="large-badge"
+  >
+    <span
+      className="text"
+    >
+      Large
+    </span>
+  </span>
+   
+  <span
+    className="badge huge default"
+    id="huge-badge"
+  >
+    <span
+      className="text"
+    >
+      Huge
+    </span>
+  </span>
+</div>
+`;

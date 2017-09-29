@@ -3,6 +3,9 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
+| @storybook/addon-storyshots | ^3.2.11 | * | StoryShots is a Jest Snapshot Testing Addon for Storybook. |
+| @storybook/react | ^3.2.11 | >=15.0.0 \|\| ^16.0.0-alpha | Storybook for React: Develop React Component in isolation with Hot Reloading. |
+| autoprefixer | ^6.7.7 | -- | Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website |
 | babel-cli | ^6.24.1 | -- | Babel command line. |
 | babel-core | ^6.24.1 | -- | Babel compiler core. |
 | babel-jest | ^20.0.0 | -- | Jest plugin to use babel for transformation. |
@@ -27,10 +30,11 @@
 | link-parent-bin | ^0.1.3 | -- | [![Build Status](https://travis-ci.org/nicojs/node-link-parent-bin.svg?branch=master)](https://travis-ci.org/nicojs/node-link-parent-bin) |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
 | nightwatch | ^0.9.12 | -- | A node.js bindings implementation for selenium 2.0/webdriver |
+| postcss-custom-properties | ^6.0.1 | -- | PostCSS plugin to polyfill W3C CSS Custom Properties for cascading variables |
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.5.4 | ^15.6.2 | React package for working with the DOM. |
-| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 \|\| ^16.0.0-rc | A complete routing library for React |
-| react-test-renderer | ^15.5.4 | ^15.6.2 | React package for snapshot testing. |
+| react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
+| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 | A complete routing library for React |
+| react-test-renderer | ^15.5.4 | ^15.6.1 | React package for snapshot testing. |
 | rimraf | ^2.6.1 | -- | A deep deletion module for node (like `rm -rf`) |
 | shelljs | ^0.7.7 | -- | Portable Unix shell commands for Node.js |
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
