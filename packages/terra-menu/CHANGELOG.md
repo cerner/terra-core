@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Bug around selectable menus with only 1 child element.
 
 1.2.0 - (September 26, 2017)
 ------------------
