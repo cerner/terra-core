@@ -67,6 +67,7 @@ import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
+import IconIndexRoutes from './examples/icon/IconIndexRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
 import ListIndexRoutes from './examples/list/ListIndexRoutes';
@@ -148,6 +149,7 @@ ReactDOM.render((
       <Route path="toggle-button" component={ToggleButtonExamples} />
       {FormIndexRoutes}
       {ListIndexRoutes}
+      {IconIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
     {AlertTestRoutes}
