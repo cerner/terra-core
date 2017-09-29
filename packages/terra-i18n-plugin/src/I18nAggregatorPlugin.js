@@ -33,11 +33,11 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
       const translationFile = path.resolve(translationsDirectory, `${language}.json`);
       try {
         Object.assign(languageMessages[language], JSON.parse(compiler.inputFileSystem.readFileSync(translationFile, 'utf8')));
-      } catch (err) {
+      } catch (e) {
         console.warn(`Translation file ${language}.json not found for ${translationsDirectory}`);
       }
     });
-  } catch (err) {}
+  } catch (e) {}
 
   // Check the directory's node_modules for translation files
   const nodeMoudlesPath = path.resolve(currentDirectory, 'node_modules');
@@ -45,7 +45,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
     getDirectories(nodeMoudlesPath, compiler).forEach((module) => {
       aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), compiler);
     });
-  } catch (err) {}
+  } catch (e) {}
 
   return languageMessages;
 }
