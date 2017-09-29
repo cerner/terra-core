@@ -16,7 +16,7 @@ class HookshotExample extends React.Component {
     return (
       <div>
         <HookshotTemplate
-          id="TL"
+          id="attachment"
           hookshotContentProps={{ closeOnEsc: false, closeOnOutsideClick: false, closeOnResize: false }}
           contentAttachment="top left"
           targetAttachment={this.state.attachment}
