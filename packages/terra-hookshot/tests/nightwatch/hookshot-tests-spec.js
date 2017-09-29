@@ -16,9 +16,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   // boundingRef: test - top bottom left right bounding container adjustments as well as window.
 
-  // contentAttachment and targetAttachment combinations, 81 combinations...
-
-
   // Verify Content Offset Positioning
   'Display the content offset correctly for dir=ltr': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-offset`);
