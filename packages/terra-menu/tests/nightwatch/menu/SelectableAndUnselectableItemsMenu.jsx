@@ -31,18 +31,15 @@ class SelectableMenu extends React.Component {
     return (
       <div>
         <div>
-          This menu contains one selectable child (an Item Group). The menu should allow space for the checkmark and the items in the item group should be selectable.
+          This menu contains a selectable item and an unselectable item. All items in the menu should have the same spacing on the left to allow for a checkmark.
         </div>
         <Menu
           isOpen={this.state.open}
           targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
         >
-          <Menu.ItemGroup className="TestGroup" onChange={this.handleSelection}>
-            <Menu.Item text="Group Item 1" key="1" className="TestGroupItem1" />
-            <Menu.Item text="Group Item 2" key="2" className="TestGroupItem2" />
-            <Menu.Item text="Group Item 3" key="3" className="TestGroupItem3" />
-          </Menu.ItemGroup>
+          <Menu.Item text="unselectable" key="1" className="TestNonSelectableItem" />
+          <Menu.Item text="Selectable" key="2" isSelectable className="TestSelectableItem" />
         </Menu>
         <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu

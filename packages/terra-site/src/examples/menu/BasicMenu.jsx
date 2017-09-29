@@ -1,135 +1,98 @@
+
 import React from 'react';
-import Button from 'terra-button';
-import Menu from 'terra-menu';
 import PropTypes from 'prop-types';
+import Button from 'terra-button';
+import IconFunnel from 'terra-icon/lib/icon/IconFunnel';
+import Menu from 'terra-menu';
 
 const propTypes = {
-  isArrowDisplayed: PropTypes.bool,
-  contentWidth: PropTypes.string,
-  boundingRef: PropTypes.func,
+  /**
+   * A callback function to be trigger when header is clicked
+   */
+  onSortChange: PropTypes.func,
+
 };
 
-class BasicMenu extends React.Component {
+const defaultProps = {
+  headers: [],
+};
+
+// Constant for the width of the popup
+const MENU_WIDTH = '240';
+
+class SortOptionPopupWrapper extends React.Component {
+  /**
+   * Retrieves the sort button instance with id radSortingButton
+   * @return the button node
+   */
+  static getButtonNode() {
+    return document.getElementById('radSortingButton');
+  }
+
+
   constructor(props) {
     super(props);
+    this.state = { toggleOpen: false };
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
-    this.getButtonNode = this.getButtonNode.bind(this);
-    this.handleToggle1OnClick = this.handleToggle1OnClick.bind(this);
-    this.handleToggle2OnClick = this.handleToggle2OnClick.bind(this);
-    this.handleOnChange = this.handleOnChange.bind(this);
-    this.handleActionClick = this.handleActionClick.bind(this);
-    this.state = {
-      open: false,
-      toggle1Selected: false,
-      toggle2Selected: false,
-      groupSelectedIndex: undefined,
-      actionClickCount: 0,
-    };
+    this.handleSortChange = this.handleSortChange.bind(this);
   }
 
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
-  }
-
+  /**
+   * Callback function for when the popup anchor is clicked
+   */
   handleButtonClick() {
-    this.setState({ open: true });
+    this.setState({ toggleOpen: !this.state.toggleOpen });
   }
 
+  /**
+   * Callback function for when the popup anchor is requesting to be closed
+   */
   handleRequestClose() {
-    this.setState({ open: false });
+    this.setState({ toggleOpen: false });
   }
 
-  handleToggle1OnClick() {
-    this.setState(prevState => ({ toggle1Selected: !prevState.toggle1Selected }));
-  }
+  /**
+   * Callback function to trigger the onSortChange action and close the popup
+   * @param headerMeaning {String} representing the headerMeaning of column by which data will be sorted
+   * @param isAscending {bool} representing whether data is sorted ascending or descending
+   */
+  handleSortChange(event, index) {
 
-  handleToggle2OnClick() {
-    this.setState(prevState => ({ toggle2Selected: !prevState.toggle2Selected }));
-  }
-
-  handleOnChange(event, index) {
-    this.setState({ groupSelectedIndex: index });
-  }
-
-  handleActionClick() {
-    const newState = this.state;
-    newState.actionClickCount += 1;
-    this.setState(newState);
+    // close the popup
+    this.handleRequestClose();
   }
 
   render() {
     return (
-      <div>
-        <div style={{ display: 'inline-block' }} ref={this.setButtonNode}>
-          <Menu
-            isOpen={this.state.open}
-            targetRef={this.getButtonNode}
-            onRequestClose={this.handleRequestClose}
-            contentWidth={this.props.contentWidth}
-            isArrowDisplayed={this.props.isArrowDisplayed}
-            boundingRef={this.props.boundingRef}
-          >
-            <Menu.Item
-              text="Toggle Item 1"
-              key="Toggle1"
-              isSelected={this.state.toggle1Selected}
-              onClick={this.handleToggle1OnClick}
-              isSelectable
-            />
-            <Menu.Item
-              text="Toggle Item 2"
-              key="Toggle2"
-              isSelected={this.state.toggle2Selected}
-              onClick={this.handleToggle2OnClick}
-              isSelectable
-            />
-            <Menu.Divider key="Divider1" />
-            <Menu.Item
-              text="Nested Menu 1"
-              key="Nested1"
-              subMenuItems={[
-                <Menu.Item text="Action 1.1" key="1.1" onClick={this.handleActionClick} />,
-                <Menu.Item text="Action 1.2" key="1.2" onClick={this.handleActionClick} />,
-                <Menu.Item text="Action 1.3" key="1.3" onClick={this.handleActionClick} />,
-                <Menu.Divider key="Divider1.1" />,
-                <Menu.Item text="Close Action 1.1" key="1.4" onClick={this.handleRequestClose} />,
-                <Menu.Item text="Close Action 1.2" key="1.5" onClick={this.handleRequestClose} />,
-                <Menu.Item text="Close Action 1.3" key="1.6" onClick={this.handleRequestClose} />,
-              ]}
-            />
-            <Menu.Item
-              text="Nested Menu 2 has a long title that will wrap and a truncated title when clicked"
-              key="Nested2"
-              subMenuItems={[
-                <Menu.Item text="Default 2.1" key="2.1" />,
-                <Menu.Item text="Default 2.2" key="2.2" />,
-                <Menu.Item text="Default 2.3" key="2.3" />,
-              ]}
-            />
-            <Menu.Divider key="Divider2" />
-            <Menu.Item text="Action" key="Action1" onClick={this.handleActionClick} />
-            <Menu.Item text="Close Action" key="Action2" onClick={this.handleRequestClose} />
-            <Menu.Divider key="Divider3" />
-            <Menu.ItemGroup key="Group" onChange={this.handleOnChange}>
-              <Menu.Item text="Group Item 1" key="GroupItem1" isSelected={this.state.groupSelectedIndex === 0} />
-              <Menu.Item text="Group Item 2" key="GroupItem2" isSelected={this.state.groupSelectedIndex === 1} />
-            </Menu.ItemGroup>
-          </Menu>
-          <Button onClick={this.handleButtonClick} text="Click Me" />
-        </div>
-        <br />
-        <p>Action button has been clicked {this.state.actionClickCount} times.</p>
+      <div className={'rad-CompressedWorklist-sortOption-wrapper'}>
+        <Menu
+          contentWidth={MENU_WIDTH}
+          isOpen={this.state.toggleOpen}
+          targetRef={SortOptionPopupWrapper.getButtonNode}
+          onRequestClose={this.handleRequestClose}
+          isArrowDisplayed
+        >
+          <Menu.ItemGroup key="Group" onChange={this.handleSortChange} isSelectable>
+            <Menu.Item text={`Group Item 0`} key={`GroupItem2_0`} isSelected={false} />
+            <Menu.Item text={`Group Item 1`} key={`GroupItem2_1`} isSelected />
+            <Menu.Item text={`Group Item 2`} key={`GroupItem2_2`} isSelected={false} />
+            <Menu.Item text={`Group Item 3`} key={`GroupItem2_3`} isSelected={false} />
+          </Menu.ItemGroup>
+        </Menu>
+        <Button
+          id={'radSortingButton'}
+          onClick={this.handleButtonClick}
+          size={'medium'}
+          icon={<IconFunnel />}
+          className={'rad-CompressedWorklist-sortOption'}
+        />
       </div>
     );
   }
 }
 
-BasicMenu.propTypes = propTypes;
+SortOptionPopupWrapper.propTypes = propTypes;
+SortOptionPopupWrapper.defaultProps = defaultProps;
 
-export default BasicMenu;
+export default SortOptionPopupWrapper;
