@@ -21,10 +21,9 @@ class HookshotStandard extends React.Component {
   render() {
     const hookshotContent = (
       <Hookshot.Content
-        closeOnEsc
-        closeOnOutsideClick
-        closeOnResize
-        onRequestClose={this.handleRequestClose}
+        onEsc={this.handleRequestClose}
+        onOutsideClick={this.handleRequestClose}
+        onResize={this.handleRequestClose}
       >
         <div style={{ height: '40px', width: '200px', backgroundColor: 'red' }}>Hookshot</div>
       </Hookshot.Content>

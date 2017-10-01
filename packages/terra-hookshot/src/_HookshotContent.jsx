@@ -18,21 +18,17 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The function that should be triggered when a close is indicated.
+   * The function callback when am escape keydown event occurs..
    */
-  onRequestClose: PropTypes.func.isRequired,
+  onEsc: PropTypes.func,
   /**
-   * Whether or not the using the escape key should trigger the onRequestClose callback.
+   * The function callback when a click outside event occurs.
    */
-  closeOnEsc: PropTypes.bool,
+  onOutsideClick: PropTypes.func,
   /**
-   * Whether or not clicking outside the popup should trigger the onRequestClose callback.
+   * The function callback when a resize event occurs.
    */
-  closeOnOutsideClick: PropTypes.bool,
-  /**
-   * Whether or not resizing the screen should trigger the onRequestClose callback.
-   */
-  closeOnResize: PropTypes.bool,
+  onResize: PropTypes.func,
   /**
    * The function returning the frame html reference.
    */
@@ -40,9 +36,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  closeOnEsc: false,
-  closeOnOutsideClick: false,
-  closeOnResize: false,
+  onEsc: null,
+  onOutsideClick: null,
+  onResize: null,
 };
 
 class HookshotContent extends React.Component {
@@ -54,41 +50,41 @@ class HookshotContent extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.closeOnEsc) {
+    if (this.props.onEsc) {
       document.addEventListener('keydown', this.handleKeydown);
     }
 
-    if (this.props.closeOnResize) {
+    if (this.props.onResize) {
       window.addEventListener('resize', this.handleResize);
     }
   }
 
   componentWillUnmount() {
-    if (this.props.closeOnEsc) {
+    if (this.props.onEsc) {
       document.removeEventListener('keydown', this.handleKeydown);
     }
 
-    if (this.props.closeOnResize) {
+    if (this.props.onResize) {
       window.removeEventListener('resize', this.handleResize);
     }
   }
 
   handleResize(event) {
-    if (this.props.closeOnResize && this.props.onRequestClose) {
-      this.props.onRequestClose(event);
+    if (this.props.onResize) {
+      this.props.onResize(event);
     }
   }
 
   handleClickOutside(event) {
-    if (this.props.closeOnOutsideClick && this.props.onRequestClose) {
-      this.props.onRequestClose(event);
+    if (this.props.onOutsideClick) {
+      this.props.onOutsideClick(event);
     }
   }
 
   handleKeydown(event) {
-    if (event.keyCode === KEYCODES.ESCAPE && this.props.onRequestClose) {
-      this.props.onRequestClose(event);
+    if (event.keyCode === KEYCODES.ESCAPE) {
       event.preventDefault();
+      this.props.onEsc(event);
     }
   }
 
@@ -106,10 +102,9 @@ class HookshotContent extends React.Component {
   render() {
     const {
       children,
-      closeOnEsc,
-      closeOnOutsideClick,
-      closeOnResize,
-      onRequestClose,
+      onEsc,
+      onOutsideClick,
+      onResize,
       refCallback,
       ...customProps
     } = this.props;
