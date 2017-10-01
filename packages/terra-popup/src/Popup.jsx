@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Hookshot from 'terra-hookshot';
 import Portal from 'react-portal';
 import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
-import TetherComponent from './_TetherComponent';
 import PopupUtils from './_PopupUtils';
 import PopupHeights from './_PopupHeights';
 import PopupWidths from './_PopupWidths';
-import './Popup.scss';
 
 const propTypes = {
+  /**
+   * If the primary attachment in not available, how should the content be positioned.
+   */
+  attachmentBehavior: PropTypes.oneOf(Hookshot.attachmentBehaviors),
   /**
    * The children to be displayed as content within the popup.
    */
@@ -42,7 +45,7 @@ const propTypes = {
   /**
    * Attachment point for the popup, this will be mirrored to the target.
    */
-  contentAttachment: PropTypes.oneOf(TetherComponent.attachmentPositions),
+  contentAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
   /**
    * A string representation of the height in px, limited to:
    * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880
@@ -73,9 +76,14 @@ const propTypes = {
    * A callback function to request focus from the containing component (e.g. modal).
    */
   requestFocus: PropTypes.func,
+  /**
+   * Attachment point for the target.
+   */
+  targetAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
 };
 
 const defaultProps = {
+  attachmentBehavior: 'auto',
   boundingRef: null,
   classNameArrow: null,
   classNameContent: null,
@@ -92,34 +100,34 @@ class Popup extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleTetherRepositioned = this.handleTetherRepositioned.bind(this);
+    this.handleOnPosition = this.handleOnPosition.bind(this);
     this.setArrowNode = this.setArrowNode.bind(this);
-    this.setContentNode = this.setContentNode.bind(this);
+    this.validateContentNode = this.validateContentNode.bind(this);
+    this.isContentSized = props.contentHeight !== 'dynamic' && props.contentWidth !== 'dynamic';
+    this.contentHeight = PopupHeights[props.contentHeight];
+    this.contentWidth = PopupWidths[props.contentWidth];
   }
 
-  setArrowPosition(targetBounds, contentBounds) {
-    const isVertical = PopupUtils.isVerticalAttachment(this.attachment);
-    const position = PopupUtils.arrowPositionFromBounds(targetBounds, contentBounds, isVertical, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
+  componentWillReceiveProps(newProps) {
+    this.isContentSized = newProps.contentHeight !== 'dynamic' && newProps.contentWidth !== 'dynamic';
+    this.contentHeight = PopupHeights[newProps.contentHeight];
+    this.contentWidth = PopupWidths[newProps.contentWidth];
+  }
 
-    this.contentNode.style.margin = '';
+  setArrowPosition(tBounds, cBounds, cAttachment, tAttachment, tOffset) {
+    const position = PopupUtils.arrowPositionFromBounds(tBounds, cBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, cAttachment);
     if (!position) {
-      this.arrowNode.removeAttribute(PopupArrow.Opts.positionAttrs.top);
-      this.arrowNode.removeAttribute(PopupArrow.Opts.positionAttrs.bottom);
-      this.arrowNode.removeAttribute(PopupArrow.Opts.positionAttrs.left);
-      this.arrowNode.removeAttribute(PopupArrow.Opts.positionAttrs.right);
+      this.arrowNode.removeAttribute(PopupArrow.Opts.positionAttr);
       return;
     }
+    this.arrowNode.setAttribute(PopupArrow.Opts.positionAttr, position);
 
-    this.arrowNode.removeAttribute(PopupArrow.Opts.mirroredPositionAttrs[position]);
-    this.contentNode.removeAttribute(PopupContent.Opts.mirroredPositionAttrs[position]);
-
-    this.arrowNode.setAttribute(PopupArrow.Opts.positionAttrs[position], 'true');
-    this.contentNode.setAttribute(PopupContent.Opts.positionAttrs[position], 'true');
-
-    if (isVertical) {
-      this.arrowNode.style.left = PopupUtils.leftOffset(targetBounds, contentBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, this.offset, this.attachment);
+    if (position === 'top' || position === 'bottom') {
+      this.arrowNode.style.left = PopupUtils.leftOffset(tBounds, cBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, tAttachment, tOffset);
+      this.arrowNode.style.top = '';
     } else {
-      this.arrowNode.style.top = PopupUtils.topOffset(targetBounds, contentBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
+      this.arrowNode.style.left = '';
+      this.arrowNode.style.top = PopupUtils.topOffset(tBounds, cBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, tAttachment, tOffset);
     }
   }
 
@@ -127,21 +135,35 @@ class Popup extends React.Component {
     this.arrowNode = node;
   }
 
-  setContentNode(node) {
-    this.contentNode = node;
-  }
-
-  handleTetherRepositioned(event, targetBounds, contentBounds) {
-    if (this.arrowNode && this.contentNode) {
-      this.setArrowPosition(targetBounds, contentBounds);
+  handleOnPosition(event, targetBounds, contentBounds, cAttachment, tAttachement, tOffset) {
+    if (this.arrowNode) {
+      this.setArrowPosition(targetBounds, contentBounds, cAttachment, tAttachement, tOffset);
     }
   }
 
-  createPopupContent(boundingFrame) {
+  validateContentNode(node) {
+    if (node) {
+      const contentRect = Hookshot.Utils.getBounds(node);
+      if (this.contentHeight !== contentRect.height || this.contentWidth !== contentRect.width) {
+        this.contentHeight = contentRect.height;
+        this.contentWidth = contentRect.width;
+        this.forceUpdate();
+      }
+      this.isContentSized = true;
+    }
+  }
+
+  createPopupContent(boundingFrame, showArrow) {
     const boundsProps = {
       contentHeight: PopupHeights[this.props.contentHeight] || PopupHeights['80'],
       contentWidth: PopupWidths[this.props.contentWidth] || PopupWidths['240'],
     };
+    if (boundsProps.contentHeight <= 0 && this.contentHeight) {
+      boundsProps.contentHeight = this.contentHeight;
+    }
+    if (boundsProps.contentWidth <= 0 && this.contentWidth) {
+      boundsProps.contentWidth = this.contentWidth;
+    }
 
     if (boundingFrame) {
       boundsProps.contentHeightMax = boundingFrame.clientHeight;
@@ -152,51 +174,32 @@ class Popup extends React.Component {
     }
 
     let arrow;
-    let arrowPosition;
-    let contentStyle;
-    if (this.props.isArrowDisplayed && this.props.contentAttachment !== 'middle center') {
-      this.offset = PopupUtils.getContentOffset(this.attachment, this.props.targetRef(), PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
+    if (showArrow) {
       arrow = <PopupArrow className={this.props.classNameArrow} refCallback={this.setArrowNode} />;
-      arrowPosition = PopupUtils.primaryArrowPosition(this.attachment);
-      contentStyle = PopupUtils.primaryMarginStyle(this.attachment, PopupContent.Opts.popupMargin);
     }
 
     return (
       <PopupContent
         {...boundsProps}
         arrow={arrow}
-        arrowPosition={arrowPosition}
         classNameInner={this.props.classNameContent}
-        closeOnEsc
-        closeOnOutsideClick
-        closeOnResize
         isHeaderDisabled={this.props.isHeaderDisabled}
         onRequestClose={this.props.onRequestClose}
-        refCallback={this.setContentNode}
+        refCallback={this.validateContentNode}
         releaseFocus={this.props.releaseFocus}
         requestFocus={this.props.requestFocus}
-        style={contentStyle}
+        isHeightDynamic={this.props.contentHeight === 'dynamic'}
+        isWidthDynamic={this.props.contentWidth === 'dynamic'}
       >
         {this.props.children}
       </PopupContent>
     );
   }
 
-  createPortalContent(content, useOverlay) {
-    if (!useOverlay) {
-      return content;
-    }
-
-    return (
-      <PopupOverlay className={this.props.classNameOverlay}>
-        {content}
-      </PopupOverlay>
-    );
-  }
-
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      attachmentBehavior,
       boundingRef,
       children,
       classNameArrow,
@@ -212,52 +215,47 @@ class Popup extends React.Component {
       releaseFocus,
       requestFocus,
       targetRef,
+      targetAttachment,
     } = this.props;
     /* eslint-enable no-unused-vars */
-
-    let portalContent = children;
-    if (isOpen) {
-      let bidiContentAttachment = contentAttachment;
-      this.isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
-      if (this.isRTL) {
-        bidiContentAttachment = PopupUtils.switchAttachmentToRTL(bidiContentAttachment);
-      }
-
-      this.offset = { vertical: 0, horizontal: 0 };
-      this.attachment = PopupUtils.parseStringPair(bidiContentAttachment);
-
-      const boundingFrame = boundingRef ? boundingRef() : undefined;
-      const popupContent = this.createPopupContent(boundingFrame);
-      const allowScrolling = false;
-      const constraints = [
-        {
-          to: (boundingFrame || 'window'),
-          attachment: 'together',
-          pin: true,
-        },
-      ];
-
-      const tetherCotent = (
-        <TetherComponent
-          classPrefix="terra-popup"
-          constraints={constraints}
-          content={popupContent}
-          contentAttachment={bidiContentAttachment}
-          contentOffset={`${this.offset.vertical} ${this.offset.horizontal}`}
-          isEnabled
-          onRepositioned={this.handleTetherRepositioned}
-          targetRef={targetRef}
-          targetAttachment={PopupUtils.mirrorAttachment(bidiContentAttachment)}
-        />
-      );
-
-      portalContent = this.createPortalContent(tetherCotent, !allowScrolling);
+    if (!isOpen) {
+      return null;
     }
 
+    let tAttachment;
+    const cAttachment = Hookshot.Utils.parseStringPair(contentAttachment);
+    if (targetAttachment) {
+      tAttachment = Hookshot.Utils.parseStringPair(targetAttachment);
+    } else {
+      tAttachment = Hookshot.Utils.mirrorAttachment(cAttachment);
+    }
+
+    let cOffset;
+    const showArrow = isArrowDisplayed && contentAttachment !== 'middle center';
+    if (showArrow) {
+      cOffset = PopupUtils.getContentOffset(cAttachment, tAttachment, this.props.targetRef(), PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
+    }
+    const hookshotContent = this.createPopupContent(boundingRef ? boundingRef() : undefined, showArrow);
+
     return (
-      <Portal isOpened={isOpen}>
-        {portalContent}
-      </Portal>
+      <div>
+        <Portal isOpened={isOpen}>
+          <PopupOverlay className={this.props.classNameOverlay} />
+        </Portal>
+        <Hookshot
+          attachmentBehavior={attachmentBehavior}
+          attachmentMargin={showArrow ? PopupArrow.Opts.arrowSize : 0}
+          boundingRef={boundingRef}
+          content={hookshotContent}
+          contentAttachment={contentAttachment}
+          contentOffset={cOffset}
+          isEnabled={this.isContentSized}
+          isOpen={isOpen}
+          onPosition={this.handleOnPosition}
+          targetRef={targetRef}
+          targetAttachment={`${tAttachment.vertical} ${tAttachment.horizontal}`}
+        />
+      </div>
     );
   }
 }

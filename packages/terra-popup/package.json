@@ -31,18 +31,19 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.5.0",
+    "terra-content-container": "^1.10.0",
+    "terra-hookshot": "^0.x",
     "terra-icon": "^1.11.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "focus-trap-react": "^3.0.2",
     "prop-types": "^15.5.8",
-    "react-onclickoutside": "^5.11.1",
     "react-portal": "^3.0.0",
     "terra-base": "^2.5.0",
     "terra-content-container": "^1.10.0",
-    "terra-icon": "^1.11.0",
-    "tether": "^1.4.0"
+    "terra-hookshot": "^0.x",
+    "terra-icon": "^1.11.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

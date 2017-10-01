@@ -1,4 +1,5 @@
 const PopupWidths = {
+  dynamic: -1,
   160: 160,
   240: 240,
   320: 320,

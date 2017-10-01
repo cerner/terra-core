@@ -173,4 +173,13 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/invalid`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 80px; width: 240px;');
   },
+
+  // TODO - TESTS
+    // dynamic height
+      // unbounded
+      // bounded
+
+    // dynamic width
+      // unbounded
+      // bounded
 });

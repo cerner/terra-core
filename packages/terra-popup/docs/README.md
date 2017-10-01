@@ -1,7 +1,6 @@
 # Terra Popup
 
-The Terra Popup is higher order component that launches tether positioned content with the ability to display a dynamic arrow.
-- Additional tether documentation can be found on their site [TetherJS](http://tether.io/)
+The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow.
 
 ## Getting Started
 
