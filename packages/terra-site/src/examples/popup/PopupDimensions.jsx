@@ -3,8 +3,8 @@ import Popup from 'terra-popup';
 import Button from 'terra-button';
 import ExamplePopupContent from './ExamplePopupContent';
 
-const HEIGHT_KEYS = ['40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
-const WIDTH_KEYS = ['160', '240', '320', '640', '960', '1280', '1760'];
+const HEIGHT_KEYS = ['dynamic', '40', '80', '120', '160', '240', '320', '400', '480', '560', '640', '720', '800', '880'];
+const WIDTH_KEYS = ['dynamic', '160', '240', '320', '640', '960', '1280', '1760'];
 
 class PopupDimensions extends React.Component {
   static generateOptions(values) {

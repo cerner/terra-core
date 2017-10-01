@@ -31,6 +31,10 @@ const propTypes = {
    */
   onRequestClose: PropTypes.func.isRequired,
   /**
+   * The function that should be triggered when a resize is indicated.
+   */
+  onResize: PropTypes.func.isRequired,
+  /**
    * The arrow to be placed within the popup frame.
    */
   arrow: PropTypes.element,
@@ -156,6 +160,7 @@ class PopupContent extends React.Component {
       isHeightDynamic,
       isWidthDynamic,
       onRequestClose,
+      onResize,
       refCallback,
       releaseFocus,
       requestFocus,
@@ -167,7 +172,7 @@ class PopupContent extends React.Component {
     const isWidthBounded = PopupContent.isBounded(contentWidth, contentWidthMax);
     const isFullScreen = isHeightBounded && isWidthBounded;
 
-    let content = this.cloneChildren(children, isHeightDynamic, isWidthDynamic, isHeightBounded, isWidthBounded);
+    let content = PopupContent.cloneChildren(children, isHeightDynamic, isWidthDynamic, isHeightBounded, isWidthBounded);
     if (isFullScreen && !isHeaderDisabled) {
       content = PopupContent.addPopupHeader(content, onRequestClose);
     }
@@ -187,10 +192,9 @@ class PopupContent extends React.Component {
           {...customProps}
           tabIndex="0"
           className={cx('popupContent')}
-          closeOnEsc
-          closeOnOutsideClick
-          closeOnResize
-          onRequestClose={onRequestClose}
+          onEsc={onRequestClose}
+          onOutsideClick={onRequestClose}
+          onResize={onResize}
           refCallback={refCallback}
         >
           {arrowContent}

@@ -28,6 +28,7 @@
 | terra-form | ^1.10.0 | ^15.4.2 | Components for building forms |
 | terra-grid | ^3.14.0 | ^15.4.2 | The grid component provides a flexbox based grid system. |
 | terra-heading | ^1.11.0 | ^15.4.2 | Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading. |
+| terra-hookshot | ^0.x | ^15.4.2 | The Terra Hookshot componenet positions content according to a targeted attachment, ensuring they stay connected. |
 | terra-i18n | ^1.9.0 | ^15.4.2 | The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand. |
 | terra-i18n-plugin | ^1.5.0 | ^15.4.2 | The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n. |
 | terra-icon | ^1.11.0 | ^15.4.2 | terra-icon |

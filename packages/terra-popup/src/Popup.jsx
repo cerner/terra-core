@@ -103,6 +103,7 @@ class Popup extends React.Component {
     this.handleOnPosition = this.handleOnPosition.bind(this);
     this.setArrowNode = this.setArrowNode.bind(this);
     this.validateContentNode = this.validateContentNode.bind(this);
+    this.handleOnResize = this.handleOnResize.bind(this);
     this.isContentSized = props.contentHeight !== 'dynamic' && props.contentWidth !== 'dynamic';
     this.contentHeight = PopupHeights[props.contentHeight];
     this.contentWidth = PopupWidths[props.contentWidth];
@@ -139,6 +140,13 @@ class Popup extends React.Component {
     if (this.arrowNode) {
       this.setArrowPosition(targetBounds, contentBounds, cAttachment, tAttachement, tOffset);
     }
+  }
+
+  handleOnResize() {
+    this.isContentSized = this.props.contentHeight !== 'dynamic' && this.props.contentWidth !== 'dynamic';
+    this.contentHeight = PopupHeights[this.props.contentHeight];
+    this.contentWidth = PopupWidths[this.props.contentWidth];
+    this.forceUpdate();
   }
 
   validateContentNode(node) {
@@ -185,6 +193,7 @@ class Popup extends React.Component {
         classNameInner={this.props.classNameContent}
         isHeaderDisabled={this.props.isHeaderDisabled}
         onRequestClose={this.props.onRequestClose}
+        onResize={this.handleOnResize}
         refCallback={this.validateContentNode}
         releaseFocus={this.props.releaseFocus}
         requestFocus={this.props.requestFocus}
