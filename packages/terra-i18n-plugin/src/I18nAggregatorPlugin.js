@@ -51,11 +51,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
 }
 
 function aggregateTranslations(options, compiler) {
-
   compiler.plugin("compile", function(params) {
-    console.log('compiler');
-    console.log(compiler);
-    
     if (!options.baseDirectory) {
       throw new Error('Please included the base directory path in the plugin options.');
     }
@@ -73,12 +69,12 @@ function aggregateTranslations(options, compiler) {
     languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, compiler);
 
     // Create the aggregated-translations directory
-    compiler.outputFileSystem.mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
+    compiler.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
 
     // Create a file for each language for the aggregated messages
     supportedLocales.forEach((language) => {
       if (language in languageMessages) {
-        compiler.outputFileSystem.writeFile(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
+        compiler.outputFileSystem.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
           generateTranslationFile(language, languageMessages[language]));
       } else {
         throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
