@@ -32,18 +32,19 @@ function determineType(type) {
     }
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
-      typeName = `array of objects structured like: ${formatShape(type.value.value)}`;
+      typeName = <span> array of objects structured like: <pre> {formatShape(type.value.value)} </pre></span>;
     } else {
       typeName = `array of ${type.value.name}s`;
     }
   } else if (typeName === 'union') {
     const options = type.value.map((option) => {
-      const name = option.name === 'shape' ? `an object structured like: ${formatShape(option.value)}` : option.name;
+      const name = option.name === 'shape' ? (<span key={option.value}> an object structured like:
+        <pre> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
       return name;
     });
-    typeName = options.join(' or ');
+    typeName = options.reduce((curr, next) => [curr, <span> or </span>, next]);
   } else if (typeName === 'shape') {
-    typeName = `an object structured like: ${formatShape(type.value)}`;
+    typeName = <span> an object structured like: <pre> {formatShape(type.value)} </pre></span>;
   }
 
   return typeName;
