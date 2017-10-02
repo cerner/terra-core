@@ -8,7 +8,7 @@ const HookshotContent = props => (
     onResize
     {...props}
   >
-    <div style={{ backgroundColor: 'powderblue', height: '35px', width: '200px' }}>Hookshot</div>
+    <div style={{ backgroundColor: 'powderblue', height: '36px', width: '200px' }}>Hookshot</div>
   </Hookshot.Content>
 );
 

@@ -84,7 +84,7 @@ class HookshotTemplate extends React.Component {
         />
         <button
           id={`trigger-${id}`}
-          style={{ width: '100px', backgroundColor: 'lightGrey', marginLeft: buttonMarginLeft, marginRight: buttonMarginRight, marginTop: buttonMarginTop }}
+          style={{ width: '100px', height: '36px', backgroundColor: 'lightGrey', marginLeft: buttonMarginLeft, marginRight: buttonMarginRight, marginTop: buttonMarginTop }}
           onClick={this.triggerHookshot}
         >
           Trigger Hookshot

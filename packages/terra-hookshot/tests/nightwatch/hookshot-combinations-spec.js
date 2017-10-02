@@ -42,10 +42,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -53,10 +53,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -64,10 +64,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -75,10 +75,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -86,10 +86,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -97,10 +97,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -143,10 +143,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -154,10 +154,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -165,10 +165,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -176,10 +176,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -187,10 +187,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -198,10 +198,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -244,10 +244,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -255,10 +255,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -266,10 +266,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -277,10 +277,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -288,10 +288,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -299,10 +299,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
 
@@ -312,10 +312,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -323,10 +323,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -334,10 +334,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -345,7 +345,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
       browser.assert.equal(coordinates.value.y, 56);
@@ -356,7 +356,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
       browser.assert.equal(coordinates.value.y, 56);
@@ -367,7 +367,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
       browser.assert.equal(coordinates.value.y, 56);
@@ -378,10 +378,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -389,10 +389,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -400,10 +400,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -413,10 +413,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -424,10 +424,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -435,10 +435,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -446,7 +446,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
       browser.assert.equal(coordinates.value.y, 56);
@@ -457,7 +457,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
       browser.assert.equal(coordinates.value.y, 56);
@@ -468,7 +468,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
       browser.assert.equal(coordinates.value.y, 56);
@@ -479,10 +479,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -490,10 +490,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -501,10 +501,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -514,10 +514,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -525,10 +525,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -536,10 +536,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -547,7 +547,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
       browser.assert.equal(coordinates.value.y, 56);
@@ -558,7 +558,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
       browser.assert.equal(coordinates.value.y, 56);
@@ -569,7 +569,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
       browser.assert.equal(coordinates.value.y, 56);
@@ -580,10 +580,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -591,10 +591,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -602,10 +602,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35/2 (half content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 73.5);
+      browser.assert.equal(coordinates.value.y, 74);
     });
   },
 
@@ -615,10 +615,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -626,10 +626,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -637,10 +637,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -648,10 +648,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -659,10 +659,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -670,10 +670,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -681,7 +681,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
       browser.assert.equal(coordinates.value.y, 56);
@@ -692,7 +692,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 271);
       browser.assert.equal(coordinates.value.y, 56);
@@ -703,7 +703,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
       browser.assert.equal(coordinates.value.y, 56);
@@ -716,10 +716,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -727,10 +727,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -738,10 +738,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -749,10 +749,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -760,10 +760,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -771,10 +771,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -782,7 +782,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
       browser.assert.equal(coordinates.value.y, 56);
@@ -793,7 +793,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
       browser.assert.equal(coordinates.value.y, 56);
@@ -804,7 +804,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 221);
       browser.assert.equal(coordinates.value.y, 56);
@@ -817,10 +817,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -828,10 +828,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -839,10 +839,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-TR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 21);
+      browser.assert.equal(coordinates.value.y, 20);
     });
   },
 
@@ -850,10 +850,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-ML');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -861,10 +861,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -872,10 +872,10 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-MR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35/2 (half target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
-      browser.assert.equal(coordinates.value.y, 38.5);
+      browser.assert.equal(coordinates.value.y, 38);
     });
   },
 
@@ -883,7 +883,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BL');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
       browser.assert.equal(coordinates.value.y, 56);
@@ -894,7 +894,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 71);
       browser.assert.equal(coordinates.value.y, 56);
@@ -905,7 +905,7 @@ module.exports = resizeTo(['small'], {
     browser.click('#attach-BR');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
-    // y value calculation: value =  55 (margin) - 35 (content height) + 35 (target height) + 1
+    // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
     browser.getLocation('#attachment-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 121);
       browser.assert.equal(coordinates.value.y, 56);

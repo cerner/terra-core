@@ -25,6 +25,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with position pushed when there is not enough room in primary position with no attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-none`);
     browser.click('#position-pushed');
@@ -35,6 +36,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays in primary position when there is enough room with flip attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-flip`);
     browser.click('#position-primary');
@@ -45,6 +47,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with position flipped when there is not enough room in primary position with flip attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-flip`);
     browser.click('#position-flipped');
@@ -55,6 +58,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with position pushed when there is not enough room in primary or flipped position with flip attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-flip`);
     browser.click('#position-pushed');
@@ -65,6 +69,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays in primary position when there is enough room with auto attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
     browser.click('#position-primary');
@@ -75,6 +80,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with position flipped when there is not enough room in primary position with auto attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
     browser.click('#position-flipped');
@@ -85,6 +91,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with position rotated 90 degrees when there is not enough room in primary or flipped positions with auto attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
     browser.click('#position-90-deg');
@@ -92,9 +99,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
     browser.getLocation('#attachment-behavior-auto-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 11);
-      browser.assert.equal(coordinates.value.y, 91);
+      browser.assert.equal(coordinates.value.y, 92);
     });
   },
+
   'Displays with position rotated -90 degrees when there is not enough room in primary, flipped, or 90 degree positions with auto attachment behavior': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
     browser.click('#position-neg-90-deg');
@@ -102,9 +110,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
     browser.getLocation('#attachment-behavior-auto-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 11);
-      browser.assert.equal(coordinates.value.y, 66);
+      browser.assert.equal(coordinates.value.y, 65);
     });
   },
+
   'Displays with position pushed when there is not enough room in primary, flipped, 90 degree, or -90 degree positions with auto attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
     browser.click('#position-pushed');
@@ -112,7 +121,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
     browser.getLocation('#attachment-behavior-auto-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 19);
-      browser.assert.equal(coordinates.value.y, 66);
+      browser.assert.equal(coordinates.value.y, 65);
     });
   },
 
@@ -127,6 +136,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with given margin between the attachment points - Middle Right Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-MR');
@@ -137,6 +147,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays without margin between the attachment points - Middle Center Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-MC');
@@ -147,6 +158,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays with given margin between the attachment points - Bottom Left Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-BL');
@@ -154,9 +166,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 11);
+      browser.assert.equal(coordinates.value.y, 10);
     });
   },
+
   'Displays with given margin between the attachment points - Bottom Right Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-BR');
@@ -164,9 +177,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 11);
+      browser.assert.equal(coordinates.value.y, 10);
     });
   },
+
   'Displays with given margin between the attachment points - Bottom Center Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-BC');
@@ -174,9 +188,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 11);
+      browser.assert.equal(coordinates.value.y, 10);
     });
   },
+
   'Displays with given margin between the attachment points - Top Left Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-TL');
@@ -184,9 +199,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 321);
-      browser.assert.equal(coordinates.value.y, 101);
+      browser.assert.equal(coordinates.value.y, 102);
     });
   },
+
   'Displays with given margin between the attachment points - Top Right Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-TR');
@@ -194,9 +210,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 21);
-      browser.assert.equal(coordinates.value.y, 101);
+      browser.assert.equal(coordinates.value.y, 102);
     });
   },
+
   'Displays with given margin between the attachment points - Top Center Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
     browser.click('#attach-TC');
@@ -204,7 +221,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 171);
-      browser.assert.equal(coordinates.value.y, 101);
+      browser.assert.equal(coordinates.value.y, 102);
     });
   },
 
@@ -219,6 +236,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays content pushed right by bounding container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
     browser.click('#push-right');
@@ -229,6 +247,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 56);
     });
   },
+
   'Displays content pushed down by bounding container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
     browser.click('#push-down');
@@ -239,6 +258,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(coordinates.value.y, 21);
     });
   },
+
   'Displays content pushed up by bounding container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
     browser.click('#push-up');
@@ -257,10 +277,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     // Offset Applied (20px, -10px).
     // For the defined content attchement: "bottom right" & target attchement: "bottom left"
     // LTR x value calculation: value = 220 (margin) - 200 (content width) + (-10) (offset) + 1
-    // LTR y value calculation: value =  55 (margin) - 35 (content height) + 20 (offset) + 1
+    // LTR y value calculation: value =  55 (margin) - 36 (content height) + 20 (offset) + 1
     browser.getLocation('#ContentOffset-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 11);
-      browser.assert.equal(coordinates.value.y, 41);
+      browser.assert.equal(coordinates.value.y, 40);
     });
   },
 
@@ -276,7 +296,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       // RTL x value calculation: value = 622 (width) - 220 (margin) - (-10) (offset) - 1
       browser.getLocation('#ContentOffset-content', (coordinates) => {
         browser.assert.equal(coordinates.value.x, 411);
-        browser.assert.equal(coordinates.value.y, 41);
+        browser.assert.equal(coordinates.value.y, 40);
       });
       browser.execute("document.getElementsByTagName('html')[0].dir='ltr';");
     }
@@ -289,10 +309,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     // Offset Applied (-10px, -20px).
     // For the defined content attchement: "bottom left" & target attchement: "top left"
     // LTR x value calculation: value = 220 (margin) + (-20) (offset) + 1
-    // LTR y value calculation: value =  55 (margin) - 35 (content height) + (-10) (offset) + 1
+    // LTR y value calculation: value =  55 (margin) - 36 (content height) + (-10) (offset) + 1
     browser.getLocation('#TargetOffset-content', (coordinates) => {
       browser.assert.equal(coordinates.value.x, 201);
-      browser.assert.equal(coordinates.value.y, 11);
+      browser.assert.equal(coordinates.value.y, 10);
     });
   },
 
@@ -308,7 +328,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       // RTL x value calculation: value = 622 (width) - 220 (margin) - 200 (content size) - (-20) (offset) - 1
       browser.getLocation('#TargetOffset-content', (coordinates) => {
         browser.assert.equal(coordinates.value.x, 221);
-        browser.assert.equal(coordinates.value.y, 11);
+        browser.assert.equal(coordinates.value.y, 10);
       });
       browser.execute("document.getElementsByTagName('html')[0].dir='ltr';");
     }
