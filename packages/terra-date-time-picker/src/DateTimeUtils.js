@@ -1,6 +1,6 @@
 import moment from 'moment-timezone';
 
-class DateTimeUtil {
+class DateTimeUtils {
   static createSafeDate(date) {
     if (!date || (date && date.length === 0)) {
       return null;
@@ -13,7 +13,7 @@ class DateTimeUtil {
   // Check if the iSODate contains the time part.
   // The time part in a valid ISO 8601 string is separated from the date part either by a space or 'T'.
   static hasTime(iSODate) {
-    if (!DateTimeUtil.createSafeDate(iSODate)) {
+    if (!DateTimeUtils.createSafeDate(iSODate)) {
       return false;
     }
 
@@ -36,7 +36,7 @@ class DateTimeUtil {
     }
 
     const momentDate = moment(iSODate);
-    return DateTimeUtil.formatMomentDateTime(momentDate, format);
+    return DateTimeUtils.formatMomentDateTime(momentDate, format);
   }
 
   static formatMomentDateTime(momentDate, format) {
@@ -49,7 +49,7 @@ class DateTimeUtil {
 
     // If momentDate was null, a new moment date needs to be created and sync'd with the entered time.
     if (momentDate === null && time && time.length === 5) {
-      newDate = DateTimeUtil.updateTime(newDate, time);
+      newDate = DateTimeUtils.updateTime(newDate, time);
     }
 
     return newDate.year(date.get('year')).month(date.get('month')).date(date.get('date'));
@@ -67,7 +67,7 @@ class DateTimeUtil {
   }
 
   static isValidDateTime(date, time, format) {
-    return DateTimeUtil.isValidDate(date, format) && DateTimeUtil.isValidTime(time);
+    return DateTimeUtils.isValidDate(date, format) && DateTimeUtils.isValidTime(time);
   }
 
   static isValidDate(date, format) {
@@ -102,4 +102,4 @@ class DateTimeUtil {
   }
 }
 
-export default DateTimeUtil;
+export default DateTimeUtils;

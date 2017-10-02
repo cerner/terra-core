@@ -6,7 +6,7 @@ import DatePicker from 'terra-date-picker';
 import TimeInput from 'terra-time-input';
 import DateUtil from 'terra-date-picker/lib/DateUtil';
 import styles from './DateTimePicker.scss';
-import DateTimeUtil from './DateTimeUtil';
+import DateTimeUtils from './DateTimeUtils';
 import TimeClarification from './_TimeClarification';
 
 const cx = classNames.bind(styles);
@@ -100,7 +100,7 @@ class DateTimePicker extends React.Component {
     super(props);
 
     this.state = {
-      dateTime: DateTimeUtil.createSafeDate(props.value),
+      dateTime: DateTimeUtils.createSafeDate(props.value),
       isAmbiguousTime: false,
       isTimeClarificationOpen: false,
     };
@@ -127,15 +127,15 @@ class DateTimePicker extends React.Component {
   componentWillMount() {
     const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
 
-    this.dateValue = DateTimeUtil.formatMomentDateTime(this.state.dateTime, dateFormat);
-    this.timeValue = DateTimeUtil.hasTime(this.props.value) ? DateTimeUtil.formatISODateTime(this.props.value, 'HH:mm') : '';
+    this.dateValue = DateTimeUtils.formatMomentDateTime(this.state.dateTime, dateFormat);
+    this.timeValue = DateTimeUtils.hasTime(this.props.value) ? DateTimeUtils.formatISODateTime(this.props.value, 'HH:mm') : '';
   }
 
   handleOnSelect(event, selectedDate) {
     const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
-    this.dateValue = DateTimeUtil.formatISODateTime(selectedDate, dateFormat);
+    this.dateValue = DateTimeUtils.formatISODateTime(selectedDate, dateFormat);
     const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
-    const updatedDateTime = DateTimeUtil.syncDateTime(previousDateTime, selectedDate, this.timeValue);
+    const updatedDateTime = DateTimeUtils.syncDateTime(previousDateTime, selectedDate, this.timeValue);
 
     if (!previousDateTime || previousDateTime.format() !== updatedDateTime.format()) {
       this.checkAmbiguousTime(updatedDateTime);
@@ -144,7 +144,7 @@ class DateTimePicker extends React.Component {
 
   handleOnDateBlur(event) {
     const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
-    const isDateTimeValid = DateTimeUtil.isValidDateTime(event.target.value, this.timeValue, dateFormat);
+    const isDateTimeValid = DateTimeUtils.isValidDateTime(event.target.value, this.timeValue, dateFormat);
     const enteredDateTime = isDateTimeValid ? this.state.dateTime : null;
 
     this.checkAmbiguousTime(enteredDateTime);
@@ -152,11 +152,11 @@ class DateTimePicker extends React.Component {
 
   handleOnTimeBlur() {
     const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
-    const isDateTimeValid = DateTimeUtil.isValidDateTime(this.dateValue, this.timeValue, dateFormat);
+    const isDateTimeValid = DateTimeUtils.isValidDateTime(this.dateValue, this.timeValue, dateFormat);
     let updatedDateTime;
 
     if (isDateTimeValid) {
-      updatedDateTime = DateTimeUtil.updateTime(this.state.dateTime, this.timeValue);
+      updatedDateTime = DateTimeUtils.updateTime(this.state.dateTime, this.timeValue);
     }
 
     this.checkAmbiguousTime(updatedDateTime);
@@ -174,7 +174,7 @@ class DateTimePicker extends React.Component {
     const isOldTimeAmbiguous = this.state.isAmbiguousTime;
     if (dateTime && dateTime.isValid()) {
       const tempDateTime = dateTime.clone();
-      isDateTimeAmbiguous = DateTimeUtil.checkAmbiguousTime(tempDateTime);
+      isDateTimeAmbiguous = DateTimeUtils.checkAmbiguousTime(tempDateTime);
     }
 
     this.setState({
@@ -189,14 +189,14 @@ class DateTimePicker extends React.Component {
     }
 
     let updatedDateTime;
-    const formattedDate = DateTimeUtil.formatISODateTime(date, 'YYYY-MM-DD');
+    const formattedDate = DateTimeUtils.formatISODateTime(date, 'YYYY-MM-DD');
 
-    if (DateTimeUtil.isValidDate(formattedDate, 'YYYY-MM-DD')) {
+    if (DateTimeUtils.isValidDate(formattedDate, 'YYYY-MM-DD')) {
       const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
-      updatedDateTime = DateTimeUtil.syncDateTime(previousDateTime, date, this.timeValue);
+      updatedDateTime = DateTimeUtils.syncDateTime(previousDateTime, date, this.timeValue);
 
-      if (DateTimeUtil.isValidTime(this.timeValue)) {
-        this.timeValue = DateTimeUtil.formatISODateTime(updatedDateTime.format(), 'HH:mm');
+      if (DateTimeUtils.isValidTime(this.timeValue)) {
+        this.timeValue = DateTimeUtils.formatISODateTime(updatedDateTime.format(), 'HH:mm');
       }
     }
 
@@ -211,27 +211,27 @@ class DateTimePicker extends React.Component {
   handleTimeChange(event, time) {
     this.timeValue = time;
     const dateFormat = DateUtil.getFormatByLocale(this.context.intl.locale);
-    const validDate = DateTimeUtil.isValidDate(this.dateValue, dateFormat);
-    const validTime = DateTimeUtil.isValidTime(this.timeValue);
+    const validDate = DateTimeUtils.isValidDate(this.dateValue, dateFormat);
+    const validTime = DateTimeUtils.isValidTime(this.timeValue);
     const previousDateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
 
     // If both date and time are valid, check if the time is the missing hour and invoke onChange.
     // If the date is valid but time is invalid, the time in the dateTime state needs to be cleared and render.
     if (validDate && validTime) {
-      const updatedDateTime = DateTimeUtil.updateTime(previousDateTime, time);
+      const updatedDateTime = DateTimeUtils.updateTime(previousDateTime, time);
 
       if (event.keyCode === keyCodes.ARROWDOWN &&
         previousDateTime && updatedDateTime && previousDateTime.format() === updatedDateTime.format()) {
         updatedDateTime.subtract(1, 'hours');
       }
 
-      this.timeValue = DateTimeUtil.formatISODateTime(updatedDateTime.format(), 'HH:mm');
+      this.timeValue = DateTimeUtils.formatISODateTime(updatedDateTime.format(), 'HH:mm');
       this.handleChangeRaw(event, this.timeValue);
       this.handleChange(event, updatedDateTime);
     } else {
       // If the date is valid but the time is not, the time part in the dateTime state needs to be cleared to reflect the change.
       if (validDate && !validTime) {
-        const updatedDateTime = DateTimeUtil.updateTime(previousDateTime, '00:00');
+        const updatedDateTime = DateTimeUtils.updateTime(previousDateTime, '00:00');
 
         this.setState({
           dateTime: updatedDateTime,
@@ -307,7 +307,7 @@ class DateTimePicker extends React.Component {
     } = this.props;
 
     const dateTime = this.state.dateTime ? this.state.dateTime.clone() : null;
-    const dateValue = DateTimeUtil.formatMomentDateTime(dateTime, 'YYYY-MM-DD');
+    const dateValue = DateTimeUtils.formatMomentDateTime(dateTime, 'YYYY-MM-DD');
 
     return (
       <div {...customProps} className={cx('date-time-picker')}>

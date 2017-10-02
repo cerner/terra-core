@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Modal from 'terra-modal';
 import Button from 'terra-button';
-import DateTimeUtil from './DateTimeUtil';
+import DateTimeUtils from './DateTimeUtils';
 import styles from './_TimeClarification.scss';
 
 const cx = classNames.bind(styles);
@@ -79,7 +79,7 @@ class TimeClarification extends React.Component {
   handleDaylightSavingButtonClick(event) {
     this.handleCloseModal();
 
-    this.setState({ offsetDisplay: DateTimeUtil.getDaylightSavingTZDisplay() });
+    this.setState({ offsetDisplay: DateTimeUtils.getDaylightSavingTZDisplay() });
 
     if (this.props.onDaylightSavingButtonClick) {
       this.props.onDaylightSavingButtonClick(event);
@@ -89,7 +89,7 @@ class TimeClarification extends React.Component {
   handleStandardTimeButtonClick(event) {
     this.handleCloseModal();
 
-    this.setState({ offsetDisplay: DateTimeUtil.getStandardTZDisplay() });
+    this.setState({ offsetDisplay: DateTimeUtils.getStandardTZDisplay() });
 
     if (this.props.onStandardTimeButtonClick) {
       this.props.onStandardTimeButtonClick(event);
@@ -126,12 +126,9 @@ class TimeClarification extends React.Component {
             <header className={cx('header')}>
               {<h1 className={cx('title')}>{title}</h1>}
             </header>
-            <br />
             <div className={cx('body')}>
               <p>{message}</p>
             </div>
-            <br />
-            <br />
             <div className={cx('buttons')}>
               <Button
                 onClick={this.handleDaylightSavingButtonClick}
@@ -148,8 +145,6 @@ class TimeClarification extends React.Component {
                 {standardTimeButtonLabel}
               </Button>
             </div>
-            <br />
-            <br />
           </div>
         </Modal>
         <Button
