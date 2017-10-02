@@ -1,18 +1,22 @@
-exports[`test should render a default component 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component 1`] = `
 <div>
-  <div
-    id="hookshot-standard-button" />
+  <button
+    id="hookshot-standard-button"
+  />
 </div>
 `;
 
-exports[`test should shallow a default component 1`] = `
+exports[`should shallow a default component 1`] = `
 <div>
   <Hookshot
     attachmentBehavior="auto"
     attachmentMargin={0}
     content={
       <OnClickOutside(HookshotContent)
-        onRequestClose={[Function]}>
+        onRequestClose={[Function]}
+      >
         <div
           style={
             Object {
@@ -20,7 +24,8 @@ exports[`test should shallow a default component 1`] = `
               "height": "40px",
               "width": "200px",
             }
-          }>
+          }
+        >
           Hookshot
         </div>
       </OnClickOutside(HookshotContent)>
@@ -30,9 +35,11 @@ exports[`test should shallow a default component 1`] = `
     isEnabled={true}
     isOpen={false}
     targetOffset="0 0"
-    targetRef={[Function]} />
-  <div
+    targetRef={[Function]}
+  />
+  <button
     id="hookshot-standard-button"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
 </div>
 `;

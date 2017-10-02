@@ -3,9 +3,9 @@ import Hookshot from '../../lib/Hookshot';
 
 const HookshotContent = props => (
   <Hookshot.Content
-    closeOnEsc
-    closeOnOutsideClick
-    closeOnResize
+    onEsc
+    onOutsideClick
+    onResize
     {...props}
   >
     <div style={{ backgroundColor: 'powderblue', height: '35px', width: '200px' }}>Hookshot</div>

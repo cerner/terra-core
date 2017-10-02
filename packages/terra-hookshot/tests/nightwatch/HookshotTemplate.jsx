@@ -41,7 +41,13 @@ class HookshotTemplate extends React.Component {
       <div style={{ border: '1px dashed grey', height: '145px', width: '540px' }}>
         <Hookshot
           id={id}
-          content={<HookshotContent id={`${id}-content`} {...hookshotContentProps} onRequestClose={this.handleRequestClose} />}
+          content={
+            <HookshotContent
+              id={`${id}-content`}
+              onEsc={hookshotContentProps.closeOnEsc ? this.handleRequestClose : undefined}
+              onOutsideClick={hookshotContentProps.closeOnOutsideClick ? this.handleRequestClose : undefined}
+              onResize={hookshotContentProps.closeOnResize ? this.handleRequestClose : undefined}
+            />}
           contentAttachment="middle right"
           targetAttachment="middle left"
           isEnabled
