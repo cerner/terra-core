@@ -78,9 +78,6 @@ const propTypes = {
 
 const defaultProps = {
   classNameInner: null,
-  closeOnEsc: false,
-  closeOnOutsideClick: false,
-  closeOnResize: false,
   contentHeightMax: -1,
   contentWidthMax: -1,
   isHeaderDisabled: false,
