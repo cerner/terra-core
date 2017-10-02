@@ -1,79 +1,62 @@
 import React from 'react';
 import HookshotTemplate from '../HookshotTemplate';
 
-const HookshotAttachmentMargin = () => (
-  <div>
-    <p>Attachment Margin - target attachment middle left</p>
-    <HookshotTemplate
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-middle-left"
-    />
-    <p>Attachment Margin - target attachment middle right</p>
-    <HookshotTemplate
-      contentAttachment="middle left"
-      targetAttachment="middle right"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-middle-right"
-    />
-    <p>Attachment Margin - target attachment middle center</p>
-    <HookshotTemplate
-      contentAttachment="middle center"
-      targetAttachment="middle center"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-middle-center"
-    />
-    <p>Attachment Margin - target attachment bottom left</p>
-    <HookshotTemplate
-      contentAttachment="top right"
-      targetAttachment="bottom left"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-bottom-left"
-    />
-    <p>Attachment Margin - target attachment bottom right</p>
-    <HookshotTemplate
-      contentAttachment="top left"
-      targetAttachment="bottom right"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-bottom-right"
-    />
-    <p>Attachment Margin - target attachment bottom center</p>
-    <HookshotTemplate
-      contentAttachment="top center"
-      targetAttachment="bottom center"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-bottom-center"
-    />
-    <p>Attachment Margin - target attachment top left</p>
-    <HookshotTemplate
-      contentAttachment="bottom right"
-      targetAttachment="top left"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-top-left"
-    />
-    <p>Attachment Margin - target attachment top right</p>
-    <HookshotTemplate
-      contentAttachment="bottom left"
-      targetAttachment="top right"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-top-right"
-    />
-    <p>Attachment Margin - target attachment top center</p>
-    <HookshotTemplate
-      contentAttachment="bottom center"
-      targetAttachment="top center"
-      isOpen={false}
-      attachmentMargin={10}
-      id="attachment-margin-top-center"
-    />
-  </div>
-);
+class HookshotAttachmentMargin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleTargetAttachment = this.handleTargetAttachment.bind(this);
+    this.state = { attachment: 'middle left' };
+  }
+
+  handleTargetAttachment(event) {
+    this.setState({ attachment: event.target.value });
+  }
+
+  render() {
+    let targetAttachment;
+
+    if (this.state.attachment === 'middle left') {
+      targetAttachment = 'middle right';
+    } else if (this.state.attachment === 'middle right') {
+      targetAttachment = 'middle left';
+    } else if (this.state.attachment === 'middle center') {
+      targetAttachment = 'middle center';
+    } else if (this.state.attachment === 'top left') {
+      targetAttachment = 'bottom right';
+    } else if (this.state.attachment === 'top right') {
+      targetAttachment = 'bottom left';
+    } else if (this.state.attachment === 'top center') {
+      targetAttachment = 'bottom center';
+    } else if (this.state.attachment === 'bottom left') {
+      targetAttachment = 'top right';
+    } else if (this.state.attachment === 'bottom right') {
+      targetAttachment = 'top left';
+    } else if (this.state.attachment === 'bottom center') {
+      targetAttachment = 'top center';
+    }
+    return (
+      <div>
+        <HookshotTemplate
+          id="attachment-margin"
+          attachmentMargin={10}
+          targetAttachment={targetAttachment}
+          contentAttachment={this.state.attachment}
+          isOpen
+        />
+        <p> Shoulp apply attachment margin appropriately for all attachment points </p>
+        <p> Choose the content attachement: </p>
+        <button id="attach-TL" value="top left" onClick={this.handleTargetAttachment}>TOP LEFT</button>
+        <button id="attach-TC" value="top center" onClick={this.handleTargetAttachment}>TOP CENTER</button>
+        <button id="attach-TR" value="top right" onClick={this.handleTargetAttachment}>TOP RIGHT</button>
+        <button id="attach-ML" value="middle left" onClick={this.handleTargetAttachment}>MIDDLE LEFT</button>
+        <button id="attach-MC" value="middle center" onClick={this.handleTargetAttachment}>MIDDLE CENTER</button>
+        <button id="attach-MR" value="middle right" onClick={this.handleTargetAttachment}>MIDDLE RIGHT</button>
+        <button id="attach-BL" value="bottom left" onClick={this.handleTargetAttachment}>BOTTOM LEFT</button>
+        <button id="attach-BC" value="bottom center" onClick={this.handleTargetAttachment}>BOTTOM CENTER</button>
+        <button id="attach-BR" value="bottom right" onClick={this.handleTargetAttachment}>BOTTOM RIGHT</button>
+      </div>
+    );
+  }
+}
 
 export default HookshotAttachmentMargin;

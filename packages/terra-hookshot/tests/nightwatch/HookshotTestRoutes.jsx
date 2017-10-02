@@ -19,7 +19,9 @@ import HookshotContentAttachmentBR from './components/HookshotContentAttachmentB
 import HookshotContentOffset from './components/HookshotContentOffset';
 import HookshotEnabledBehaviors from './components/HookshotEnabledBehaviors';
 import HookshotTargetOffset from './components/HookshotTargetOffset';
-import AttachmentBehavior from './components/HookshotAttachmentBehavior';
+import HookshotAttachmentBehaviorNone from './components/HookshotAttachmentBehaviorNone';
+import HookshotAttachmentBehaviorFlip from './components/HookshotAttachmentBehaviorFlip';
+import HookshotAttachmentBehaviorAuto from './components/HookshotAttachmentBehaviorAuto';
 import AttachemntMargin from './components/HookshotAttachmentMargin';
 import BoundingContainer from './components/HookshotBoundingContainer';
 
@@ -40,7 +42,9 @@ const routes = (
     <Route path="/tests/hookshot-tests/content-offset" component={HookshotContentOffset} />
     <Route path="/tests/hookshot-tests/target-offset" component={HookshotTargetOffset} />
     <Route path="/tests/hookshot-tests/enabled-behaviors" component={HookshotEnabledBehaviors} />
-    <Route path="/tests/hookshot-tests/attachment-behaviors" component={AttachmentBehavior} />
+    <Route path="/tests/hookshot-tests/attachment-behavior-none" component={HookshotAttachmentBehaviorNone} />
+    <Route path="/tests/hookshot-tests/attachment-behavior-flip" component={HookshotAttachmentBehaviorFlip} />
+    <Route path="/tests/hookshot-tests/attachment-behavior-auto" component={HookshotAttachmentBehaviorAuto} />
     <Route path="/tests/hookshot-tests/attachment-margin" component={AttachemntMargin} />
     <Route path="/tests/hookshot-tests/bounding-container" component={BoundingContainer} />
   </div>
