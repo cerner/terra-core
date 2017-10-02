@@ -2,7 +2,6 @@
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
   [dir=rtl] {
-    /* stylelint-disable selector-class-pattern  */
     .rounded-corners {
       border-radius: 5px;
     }
@@ -45,5 +44,4 @@
       box-shadow: none;
     }
   }
-  /* stylelint-enable */
 }

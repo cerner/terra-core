@@ -1,7 +1,6 @@
 :local {
   [dir=ltr],
   [dir=rtl] {
-    /* stylelint-disable selector-class-pattern  */
     // These are relative to screen coordinates, so no bi-di concerns
     .popup-arrow {
       border: var(--terra-popup-arrow-size, 11px) solid transparent;
@@ -83,5 +82,4 @@
       }
     }
   }
-  /* stylelint-enable */
 }

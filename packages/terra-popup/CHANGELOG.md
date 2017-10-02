@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Replaced tether implementation with terra-hookshot components
+
+### Removed
+* Popup Overlay subcomponent
+* classNameOverlay prop on Popup
 
 1.10.0 - (September 26, 2017)
 ------------------

@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Hookshot from 'terra-hookshot';
-import Portal from 'react-portal';
 import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
-import PopupOverlay from './_PopupOverlay';
 import PopupUtils from './_PopupUtils';
 import PopupHeights from './_PopupHeights';
 import PopupWidths from './_PopupWidths';
 
 const propTypes = {
   /**
-   * If the primary attachment in not available, how should the content be positioned.
+   * If the primary attachment in not available, how should the content be positioned. Options
+   * include 'auto', 'flip', or 'none'.
    */
   attachmentBehavior: PropTypes.oneOf(Hookshot.attachmentBehaviors),
   /**
@@ -39,21 +38,19 @@ const propTypes = {
    */
   classNameContent: PropTypes.string,
   /**
-   * CSS classnames that are append to the overlay.
-   */
-  classNameOverlay: PropTypes.string,
-  /**
-   * Attachment point for the popup, this will be mirrored to the target.
+   * Attachment point for the popup, this will be mirrored to the target. Options include: 'top left',
+   * 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left',
+   * 'bottom center', or 'bottom right'.
    */
   contentAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
   /**
    * A string representation of the height in px, limited to:
-   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880
+   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880 or dynamic
    */
   contentHeight: PropTypes.oneOf(Object.keys(PopupHeights)),
   /**
    * A string representation of the width in px, limited to:
-   * 160, 240, 320, 640, 960, 1280, 1760
+   * 160, 240, 320, 640, 960, 1280, 1760 or dynamic
    */
   contentWidth: PropTypes.oneOf(Object.keys(PopupWidths)),
   /**
@@ -77,7 +74,8 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
-   * Attachment point for the target.
+   * Attachment point for the target. Options include: 'top left', 'top center', 'top right', 'middle left', 'middle center',
+   * 'middle right', 'bottom left', 'bottom center', or 'bottom right'.
    */
   targetAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
 };
@@ -87,7 +85,6 @@ const defaultProps = {
   boundingRef: null,
   classNameArrow: null,
   classNameContent: null,
-  classNameOverlay: null,
   contentAttachment: 'top center',
   contentHeight: '80',
   contentWidth: '240',
@@ -97,7 +94,6 @@ const defaultProps = {
 };
 
 class Popup extends React.Component {
-
   constructor(props) {
     super(props);
     this.handleOnPosition = this.handleOnPosition.bind(this);
@@ -107,6 +103,10 @@ class Popup extends React.Component {
     this.isContentSized = props.contentHeight !== 'dynamic' && props.contentWidth !== 'dynamic';
     this.contentHeight = PopupHeights[props.contentHeight];
     this.contentWidth = PopupWidths[props.contentWidth];
+  }
+
+  componentDidMount() {
+    this.windowWidth = window.innerWidth;
   }
 
   componentWillReceiveProps(newProps) {
@@ -143,10 +143,16 @@ class Popup extends React.Component {
   }
 
   handleOnResize() {
-    this.isContentSized = this.props.contentHeight !== 'dynamic' && this.props.contentWidth !== 'dynamic';
-    this.contentHeight = PopupHeights[this.props.contentHeight];
-    this.contentWidth = PopupWidths[this.props.contentWidth];
-    this.forceUpdate();
+    // Close the popup if the window width is resized.
+    if (window.innerWidth !== this.windowWidth) {
+      this.windowWidth = window.innerWidth;
+      this.props.onRequestClose();
+    } else {
+      this.isContentSized = this.props.contentHeight !== 'dynamic' && this.props.contentWidth !== 'dynamic';
+      this.contentHeight = PopupHeights[this.props.contentHeight];
+      this.contentWidth = PopupWidths[this.props.contentWidth];
+      this.forceUpdate();
+    }
   }
 
   validateContentNode(node) {
@@ -213,7 +219,6 @@ class Popup extends React.Component {
       children,
       classNameArrow,
       classNameContent,
-      classNameOverlay,
       contentAttachment,
       contentHeight,
       contentWidth,
@@ -227,6 +232,7 @@ class Popup extends React.Component {
       targetAttachment,
     } = this.props;
     /* eslint-enable no-unused-vars */
+
     if (!isOpen) {
       return null;
     }
@@ -248,9 +254,6 @@ class Popup extends React.Component {
 
     return (
       <div>
-        <Portal isOpened={isOpen}>
-          <PopupOverlay className={this.props.classNameOverlay} />
-        </Portal>
         <Hookshot
           attachmentBehavior={attachmentBehavior}
           attachmentMargin={showArrow ? PopupArrow.Opts.arrowSize : 0}

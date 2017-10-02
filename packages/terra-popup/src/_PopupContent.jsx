@@ -188,7 +188,7 @@ class PopupContent extends React.Component {
         <Hookshot.Content
           {...customProps}
           tabIndex="0"
-          className={cx('popupContent')}
+          data-terra-popup-content
           onEsc={onRequestClose}
           onOutsideClick={onRequestClose}
           onResize={onResize}
