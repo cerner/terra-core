@@ -182,4 +182,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     // dynamic width
       // unbounded
       // bounded
+
+    // resize with dynamic
 });
