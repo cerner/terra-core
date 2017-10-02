@@ -52,46 +52,61 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
   return languageMessages;
 }
 
+function aggregateTranslationMessages(compiler) {
+  if (!options.baseDirectory) {
+    throw new Error('Please included the base directory path in the plugin options.');
+  }
+
+  if (!options.supportedLocales) {
+    throw new Error('Please included the supported locales in the plugin options.');
+  }
+
+  supportedLocales = options.supportedLocales;
+
+  let languageMessages = {};
+  supportedLocales.forEach((language) => { languageMessages[language] = {}; });
+
+  // Aggregate translation messages for the directory
+  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, compiler);
+  return languageMessages;
+}
+
 function aggregateTranslations(options, compiler) {
-  compiler.plugin("compile", function(params) {
-    if (!options.baseDirectory) {
-      throw new Error('Please included the base directory path in the plugin options.');
-    }
+  if (options.outputFileSystem) {
+    compiler.plugin("compile", function(params) {
+      // Aggregate translation messages for the directory
+      var languageMessages = aggregateTranslationMessages(compiler);
 
-    if (!options.supportedLocales) {
-      throw new Error('Please included the supported locales in the plugin options.');
-    }
+      // Create the aggregated-translations directory
+      options.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
 
-    supportedLocales = options.supportedLocales;
-
-    let languageMessages = {};
-    supportedLocales.forEach((language) => { languageMessages[language] = {}; });
-
+      // Create a file for each language for the aggregated messages
+      supportedLocales.forEach((language) => {
+        if (language in languageMessages) {
+          options.outputFileSystem.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
+            generateTranslationFile(language, languageMessages[language]));
+        } else {
+          throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
+        }
+      });
+    });
+  } else {
     // Aggregate translation messages for the directory
-    languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, compiler);
+    var languageMessages = aggregateTranslationMessages(compiler);
 
     // Create the aggregated-translations directory
-    if (options.outputFileSystem) {
-      options.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
-    } else {
-      mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
-    }
+    mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
 
     // Create a file for each language for the aggregated messages
     supportedLocales.forEach((language) => {
       if (language in languageMessages) {
-        if (options.outputFileSystem) {
-          options.outputFileSystem.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
-            generateTranslationFile(language, languageMessages[language]));
-        } else {
-          fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
-            generateTranslationFile(language, languageMessages[language]));
-        }
+        fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
+          generateTranslationFile(language, languageMessages[language]));
       } else {
         throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
       }
     });
-  });
+  }
 }
 
 module.exports = (options) => {
