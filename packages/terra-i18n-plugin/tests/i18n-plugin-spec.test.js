@@ -2,6 +2,7 @@
 /* eslint-disable global-require */
 import fs from 'fs';
 import I18nAggregatorPlugin from '../src/I18nAggregatorPlugin';
+var MemoryFileSystem = require("memory-fs");
 
 // Mock 'fs' module's writeFileSync function to prevent file creation
 fs.writeFileSync = jest.fn(() => {});
@@ -49,6 +50,12 @@ describe('i18n-aggregator-plugin', () => {
     };
     const outputtedFileName = [];
     const outputtedFileContent = [];
+    const compiler = {
+      inputFileSystem: {
+        readdirSync => function(directory) {},
+        readFileSync => function(file, encoding) {}
+      }
+    };
     let consoleMessage;
     let SpyOnConsoleWarn;
     let SpyOnWriteFileSync;

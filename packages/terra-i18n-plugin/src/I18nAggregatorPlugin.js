@@ -6,17 +6,17 @@ let supportedLocales;
 
 function generateTranslationFile(language, messages) {
   return `import { addLocaleData } from 'react-intl';
-import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
+  import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
 
-addLocaleData(localeData);
+  addLocaleData(localeData);
 
-const messages = ${JSON.stringify(messages, null, 2)};
+  const messages = ${JSON.stringify(messages, null, 2)};
 
-module.exports = {
-  areTranslationsLoaded: true,
-  locale: '${language}',
-  messages,
-};`;
+  module.exports = {
+    areTranslationsLoaded: true,
+    locale: '${language}',
+    messages,
+  };`;
 }
 
 function getDirectories(srcPath, compiler) {
@@ -52,7 +52,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
   return languageMessages;
 }
 
-function aggregateTranslationMessages(compiler) {
+function aggregateTranslationMessages(options, compiler) {
   if (!options.baseDirectory) {
     throw new Error('Please included the base directory path in the plugin options.');
   }
@@ -73,9 +73,9 @@ function aggregateTranslationMessages(compiler) {
 
 function aggregateTranslations(options, compiler) {
   if (options.outputFileSystem) {
-    compiler.plugin("compile", function(params) {
+    compiler.plugin('compile', function(params) {
       // Aggregate translation messages for the directory
-      var languageMessages = aggregateTranslationMessages(compiler);
+      var languageMessages = aggregateTranslationMessages(options, compiler);
 
       // Create the aggregated-translations directory
       options.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
@@ -91,20 +91,32 @@ function aggregateTranslations(options, compiler) {
       });
     });
   } else {
-    // Aggregate translation messages for the directory
-    var languageMessages = aggregateTranslationMessages(compiler);
-
-    // Create the aggregated-translations directory
-    mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
-
-    // Create a file for each language for the aggregated messages
-    supportedLocales.forEach((language) => {
-      if (language in languageMessages) {
-        fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
-          generateTranslationFile(language, languageMessages[language]));
-      } else {
-        throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
+    compiler.plugin('compile', function(params) {
+      // Aggregate translation messages for the directory
+      var languageMessages = aggregateTranslationMessages(options, compiler);
+      var directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
+      // Create the aggregated-translations directory
+      if (!fs.existsSync(directoryPath)) {
+        fs.mkdirSync(directoryPath);
       }
+
+      // Create a file for each language for the aggregated messages
+      supportedLocales.forEach((language) => {
+        if (language in languageMessages) {
+          fs.writeFileSync(path.resolve(directoryPath, `${language}.js`),
+            generateTranslationFile(language, languageMessages[language]));
+        } else {
+          throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
+        }
+      });
+    });
+    const timefix = 11000;
+    compiler.plugin('watch-run', (watching, callback) => {
+      watching.startTime += timefix;
+      callback()
+    });
+    compiler.plugin('done', (stats) => {
+      stats.startTime -= timefix;
     });
   }
 }
