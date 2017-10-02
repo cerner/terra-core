@@ -129,9 +129,6 @@
   "Grid": {
     "--terra-grid-gutter-width": "1rem"
   },
-  "HookshotContent": {
-    "--terra-hookshot-content-z-index": "7001"
-  },
   "Image": {
     "--terra-image-rounded-border-radius": "0.3rem",
     "--terra-image-circle-border-radius": "50%",
