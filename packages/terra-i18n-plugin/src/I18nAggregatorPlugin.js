@@ -1,4 +1,6 @@
+import fs from 'fs';
 import path from 'path';
+import mkdirp from 'mkdirp';
 
 let supportedLocales;
 
@@ -69,13 +71,22 @@ function aggregateTranslations(options, compiler) {
     languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, compiler);
 
     // Create the aggregated-translations directory
-    compiler.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
+    if (options.outputFileSystem) {
+      options.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
+    } else {
+      mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
+    }
 
     // Create a file for each language for the aggregated messages
     supportedLocales.forEach((language) => {
       if (language in languageMessages) {
-        compiler.outputFileSystem.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
-          generateTranslationFile(language, languageMessages[language]));
+        if (options.outputFileSystem) {
+          options.outputFileSystem.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
+            generateTranslationFile(language, languageMessages[language]));
+        } else {
+          fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
+            generateTranslationFile(language, languageMessages[language]));
+        }
       } else {
         throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
       }
