@@ -113,7 +113,7 @@ function aggregateTranslations(options, compiler) {
     const timefix = 11000;
     compiler.plugin('watch-run', (watching, callback) => {
       watching.startTime += timefix;
-      callback()
+      callback();
     });
     compiler.plugin('done', (stats) => {
       stats.startTime -= timefix;
