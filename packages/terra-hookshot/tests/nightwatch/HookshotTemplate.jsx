@@ -11,12 +11,25 @@ const propTypes = {
   hookshotContentProps: PropTypes.any,
   id: PropTypes.string,
   isOpen: PropTypes.bool,
+  contentAttachment: PropTypes.string,
+  targetAttachment: PropTypes.string,
+  buttonMarginLeft: PropTypes.string,
+  buttonMarginRight: PropTypes.string,
+  buttonMarginTop: PropTypes.string,
+  boundingWidth: PropTypes.string,
+  attachmentMargin: PropTypes.number,
 };
 
 const defaultProps = {
   hookshotContentProps: { },
   id: 'hookshot',
   isOpen: false,
+  contentAttachment: 'middle right',
+  targetAttachment: 'middle left',
+  buttonMarginTop: '55px',
+  buttonMarginLeft: '220px',
+  buttonMarginRight: '220px',
+  boundingWidth: '540px',
 };
 
 class HookshotTemplate extends React.Component {
@@ -36,9 +49,21 @@ class HookshotTemplate extends React.Component {
   }
 
   render() {
-    const { hookshotContentProps, id, isOpen, ...hookshotProps } = this.props;
+    const {
+      hookshotContentProps,
+      id,
+      isOpen,
+      contentAttachment,
+      targetAttachment,
+      buttonMarginLeft,
+      buttonMarginRight,
+      buttonMarginTop,
+      boundingWidth,
+      attachmentMargin,
+      ...hookshotProps
+    } = this.props;
     return (
-      <div style={{ border: '1px dashed grey', height: '145px', width: '540px' }}>
+      <div id={`${id}-bounds`} style={{ border: '1px dashed grey', height: '145px', width: boundingWidth }}>
         <Hookshot
           id={id}
           content={
@@ -48,16 +73,18 @@ class HookshotTemplate extends React.Component {
               onOutsideClick={hookshotContentProps.closeOnOutsideClick ? this.handleRequestClose : undefined}
               onResize={hookshotContentProps.closeOnResize ? this.handleRequestClose : undefined}
             />}
-          contentAttachment="middle right"
-          targetAttachment="middle left"
+          contentAttachment={contentAttachment}
+          targetAttachment={targetAttachment}
+          attachmentMargin={attachmentMargin}
           isEnabled
           isOpen={this.state.open}
           targetRef={() => document.getElementById(`trigger-${id}`)}
+          boundingRef={() => document.getElementById(`${id}-bounds`)}
           {...hookshotProps}
         />
         <button
           id={`trigger-${id}`}
-          style={{ width: '100px', backgroundColor: 'lightGrey', marginLeft: '220px', marginRight: '220px', marginTop: '55px' }}
+          style={{ width: '100px', backgroundColor: 'lightGrey', marginLeft: buttonMarginLeft, marginRight: buttonMarginRight, marginTop: buttonMarginTop }}
           onClick={this.triggerHookshot}
         >
           Trigger Hookshot

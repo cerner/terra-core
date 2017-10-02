@@ -1,5 +1,5 @@
 import React from 'react';
-import Hookshot from '../../lib/Hookshot';
+import Hookshot from '../../../lib/Hookshot';
 
 class HookshotStandard extends React.Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class HookshotStandard extends React.Component {
         closeOnOutsideClick
         closeOnResize
         onRequestClose={this.handleRequestClose}
+        id="testDefaultContent"
       >
         <div style={{ height: '40px', width: '200px' }}>Hookshot</div>
       </Hookshot.Content>

@@ -5,7 +5,7 @@ import { Route } from 'react-router';
 import HookshotTests from './HookshotTests';
 
 // Test Cases
-import DefaultHookshot from './DefaultHookshot';
+import DefaultHookshot from './components/DefaultHookshot';
 import HookshotCloseBehaviors from './components/HookshotCloseBehaviors';
 import HookshotContentAttachmentTL from './components/HookshotContentAttachmentTL';
 import HookshotContentAttachmentTC from './components/HookshotContentAttachmentTC';
@@ -19,6 +19,9 @@ import HookshotContentAttachmentBR from './components/HookshotContentAttachmentB
 import HookshotContentOffset from './components/HookshotContentOffset';
 import HookshotEnabledBehaviors from './components/HookshotEnabledBehaviors';
 import HookshotTargetOffset from './components/HookshotTargetOffset';
+import AttachmentBehavior from './components/HookshotAttachmentBehavior';
+import AttachemntMargin from './components/HookshotAttachmentMargin';
+import BoundingContainer from './components/HookshotBoundingContainer';
 
 const routes = (
   <div>
@@ -37,6 +40,9 @@ const routes = (
     <Route path="/tests/hookshot-tests/content-offset" component={HookshotContentOffset} />
     <Route path="/tests/hookshot-tests/target-offset" component={HookshotTargetOffset} />
     <Route path="/tests/hookshot-tests/enabled-behaviors" component={HookshotEnabledBehaviors} />
+    <Route path="/tests/hookshot-tests/attachment-behaviors" component={AttachmentBehavior} />
+    <Route path="/tests/hookshot-tests/attachment-margin" component={AttachemntMargin} />
+    <Route path="/tests/hookshot-tests/bounding-container" component={BoundingContainer} />
   </div>
 );
 

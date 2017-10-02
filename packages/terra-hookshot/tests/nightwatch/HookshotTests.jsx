@@ -20,6 +20,9 @@ const HookshotTests = () => (
       <li><Link to="/tests/hookshot-tests/content-offset">Hookshot - Content Offset</Link></li>
       <li><Link to="/tests/hookshot-tests/enabled-behaviors">Hookshot - Enabled Behaviors</Link></li>
       <li><Link to="/tests/hookshot-tests/target-offset">Hookshot - Target Offset</Link></li>
+      <li><Link to="/tests/hookshot-tests/attachment-behaviors">Hookshot - All Attachment Behaviors</Link></li>
+      <li><Link to="/tests/hookshot-tests/attachment-margin">Hookshot - Attachment Margent</Link></li>
+      <li><Link to="/tests/hookshot-tests/bounding-container">Hookshot - Content constrained by bounding container</Link></li>
     </ul>
   </div>
 );
