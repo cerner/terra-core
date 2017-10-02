@@ -22,6 +22,11 @@ const propTypes = {
   text: PropTypes.string,
 
   /**
+   * Indicates if item should be disabled
+   */
+  isDisabled: PropTypes.bool,
+
+  /**
    * Indicates if the item is selected.
    */
   isSelected: PropTypes.bool,
@@ -51,6 +56,7 @@ const defaultProps = {
   text: '',
   isSelected: false,
   isSelectable: undefined,
+  isDisabled: false,
   subMenuItems: [],
 };
 
@@ -99,6 +105,7 @@ class MenuItem extends React.Component {
   render() {
     const {
       text,
+      isDisabled,
       isSelected,
       isSelectable,
       subMenuItems,
@@ -108,11 +115,16 @@ class MenuItem extends React.Component {
     const { isGroupItem, isSelectableMenu } = this.context;
 
     const attributes = Object.assign({}, customProps);
-    attributes.tabIndex = '0';
+    attributes.tabIndex = isDisabled ? '-1' : '0';
+    attributes['aria-disabled'] = isDisabled;
+
     // This is passed down by the single select list in group item and not needed
     delete attributes.hasChevron;
 
-    if (isSelectable && !isGroupItem) {
+    if (isDisabled) {
+      delete attributes.onClick;
+      delete attributes.onKeyDown;
+    } else if (isSelectable && !isGroupItem && !isDisabled) {
       attributes.onClick = this.wrapOnClick;
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
     }
@@ -120,6 +132,7 @@ class MenuItem extends React.Component {
     const itemClassNames = cx([
       'item',
       { selected: this.state.isSelected || (isGroupItem && isSelected) },
+      { 'is-disabled': isDisabled },
       attributes.className,
     ]);
 
