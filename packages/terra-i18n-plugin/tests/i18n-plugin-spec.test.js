@@ -7,13 +7,6 @@ var MemoryFileSystem = require("memory-fs");
 // Mock 'fs' module's writeFileSync function to prevent file creation
 fs.writeFileSync = jest.fn(() => {});
 
-// Mock 'mkdirp' module's sync function to prevent directory creation
-jest.mock('mkdirp', () => ({
-  sync: jest.fn((directoryName) => {
-    expect(directoryName).toContain('aggregated-translations');
-  }),
-}));
-
 describe('i18n-aggregator-plugin', () => {
   const supportedLocales = ['en', 'es', 'pt'];
   const baseDirectory = 'packages/terra-i18n-plugin/tests/fixtures';
@@ -52,8 +45,8 @@ describe('i18n-aggregator-plugin', () => {
     const outputtedFileContent = [];
     const compiler = {
       inputFileSystem: {
-        readdirSync => function(directory) {},
-        readFileSync => function(file, encoding) {}
+        readdirSync: function(directory) {},
+        readFileSync: function(file, encoding) {}
       }
     };
     let consoleMessage;

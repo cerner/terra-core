@@ -15,7 +15,7 @@ function generateTranslationFile(language, messages) {
   module.exports = {
     areTranslationsLoaded: true,
     locale: '${language}',
-    messages,
+    messages: messages
   };`;
 }
 
@@ -73,17 +73,18 @@ function aggregateTranslationMessages(options, compiler) {
 
 function aggregateTranslations(options, compiler) {
   if (options.outputFileSystem) {
-    compiler.plugin('compile', function(params) {
+    compiler.plugin('after-environment', function(params) {
       // Aggregate translation messages for the directory
       var languageMessages = aggregateTranslationMessages(options, compiler);
+      var directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
 
       // Create the aggregated-translations directory
-      options.outputFileSystem.mkdirpSync(path.resolve(options.baseDirectory, 'aggregated-translations'));
+      options.outputFileSystem.mkdirpSync(directoryPath);
 
       // Create a file for each language for the aggregated messages
       supportedLocales.forEach((language) => {
         if (language in languageMessages) {
-          options.outputFileSystem.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
+          options.outputFileSystem.writeFileSync(path.resolve(directoryPath, `${language}.js`),
             generateTranslationFile(language, languageMessages[language]));
         } else {
           throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
@@ -91,10 +92,11 @@ function aggregateTranslations(options, compiler) {
       });
     });
   } else {
-    compiler.plugin('compile', function(params) {
+    compiler.plugin('after-environment', function(params) {
       // Aggregate translation messages for the directory
       var languageMessages = aggregateTranslationMessages(options, compiler);
       var directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
+
       // Create the aggregated-translations directory
       if (!fs.existsSync(directoryPath)) {
         fs.mkdirSync(directoryPath);
@@ -109,14 +111,6 @@ function aggregateTranslations(options, compiler) {
           throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
         }
       });
-    });
-    const timefix = 11000;
-    compiler.plugin('watch-run', (watching, callback) => {
-      watching.startTime += timefix;
-      callback();
-    });
-    compiler.plugin('done', (stats) => {
-      stats.startTime -= timefix;
     });
   }
 }
