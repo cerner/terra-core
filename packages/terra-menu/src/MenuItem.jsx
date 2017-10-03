@@ -90,15 +90,14 @@ class MenuItem extends React.Component {
 
   handleSelection(event) {
     event.preventDefault();
-    this.setState((prevState) => {
-      const newState = prevState;
-      newState.isSelected = !prevState.isSelected;
-      if (this.props.onChange) {
-        this.props.onChange(event, newState.isSelected);
-      }
+    if (this.props.isSelectable && !this.context.isGroupItem && !this.props.isDisabled) {
+      const newIsSelected = !this.state.isSelected;
+      this.setState({ isSelected: newIsSelected });
 
-      return newState;
-    });
+      if (this.props.onChange) {
+        this.props.onChange(event, newIsSelected);
+      }
+    }
   }
 
   wrapOnClick(event) {
@@ -113,6 +112,10 @@ class MenuItem extends React.Component {
     return ((event) => {
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         this.handleSelection(event);
+
+        if (this.props.onClick) {
+          this.props.onClick(event);
+        }
       }
 
       if (onKeyDown) {
@@ -144,10 +147,10 @@ class MenuItem extends React.Component {
     if (isDisabled) {
       delete attributes.onClick;
       delete attributes.onKeyDown;
-    } else if (isSelectable && !isGroupItem && !isDisabled) {
-      attributes.onClick = this.wrapOnClick;
-      attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
     }
+
+    attributes.onClick = this.wrapOnClick;
+    attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
 
     const itemClassNames = cx([
       'item',
