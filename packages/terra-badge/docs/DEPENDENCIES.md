@@ -16,7 +16,8 @@
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
+| @storybook/react | ^3.2.11 | >=15.0.0 \|\| ^16.0.0-alpha | Storybook for React: Develop React Component in isolation with Hot Reloading. |
 | react | ^15.4.2 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.4.2 | ^15.6.2 | React package for working with the DOM. |
+| react-dom | ^15.4.2 | ^15.6.1 | React package for working with the DOM. |
 | terra-base | ^2.5.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-mixins | ^1.11.0 | -- | terra-mixins |

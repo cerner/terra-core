@@ -12,6 +12,5 @@ module.exports = {
     'postcss-custom-properties': {
       preserve: true, warnings: false,
     },
-    'postcss-rtl': {},
   },
 };
