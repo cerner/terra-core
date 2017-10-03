@@ -44,9 +44,9 @@ const getContentOffset = (cAttachment, tAttachment, targetNode, arrowOffset, cor
         }
       } else if (targetNode.clientWidth < segment) {
         if (cAttachment.horizontal === 'left') {
-          offset.horizontal = segment;
-        } else if (cAttachment.horizontal === 'right') {
           offset.horizontal = -segment;
+        } else if (cAttachment.horizontal === 'right') {
+          offset.horizontal = segment;
         }
       }
     }
