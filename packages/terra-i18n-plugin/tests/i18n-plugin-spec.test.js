@@ -1,24 +1,33 @@
 /* globals spyOn */
 /* eslint-disable global-require */
-import fs from 'fs';
 import I18nAggregatorPlugin from '../src/I18nAggregatorPlugin';
-var MemoryFileSystem = require("memory-fs");
 
-// Mock 'fs' module's writeFileSync function to prevent file creation
-fs.writeFileSync = jest.fn(() => {});
+const Compiler = require('webpack/lib/Compiler');
+const NodeJsInputFileSystem = require('enhanced-resolve/lib/NodeJsInputFileSystem');
+const CachedInputFileSystem = require('enhanced-resolve/lib/CachedInputFileSystem');
+const NodeOutputFileSystem = require('webpack/lib/node/NodeOutputFileSystem');
+
+function createCompiler() {
+  const compiler = new Compiler();
+  compiler.inputFileSystem = new CachedInputFileSystem(new NodeJsInputFileSystem(), 60000);
+  compiler.outputFileSystem = new NodeOutputFileSystem();
+  return compiler;
+}
 
 describe('i18n-aggregator-plugin', () => {
   const supportedLocales = ['en', 'es', 'pt'];
   const baseDirectory = 'packages/terra-i18n-plugin/tests/fixtures';
 
   describe('when throwing errors when plugin options are not provided', () => {
+    const compiler = createCompiler();
+
     it('should gracefully exit if the baseDirectory is not provided', () => {
       try {
         new I18nAggregatorPlugin({
           supportedLocales,
-        }).apply();
+        }).apply(compiler);
       } catch (e) {
-        expect(e.message).toEqual('Please included the base directory path in the plugin options.');
+        expect(e.message).toEqual('Please include the base directory path in the plugin options.');
       }
     });
 
@@ -26,9 +35,9 @@ describe('i18n-aggregator-plugin', () => {
       try {
         new I18nAggregatorPlugin({
           baseDirectory,
-        }).apply();
+        }).apply(compiler);
       } catch (e) {
-        expect(e.message).toEqual('Please included the supported locales in the plugin options.');
+        expect(e.message).toEqual('Please include the supported locales in the plugin options.');
       }
     });
   });
@@ -43,18 +52,13 @@ describe('i18n-aggregator-plugin', () => {
     };
     const outputtedFileName = [];
     const outputtedFileContent = [];
-    const compiler = {
-      inputFileSystem: {
-        readdirSync: function(directory) {},
-        readFileSync: function(file, encoding) {}
-      }
-    };
+    const compiler = createCompiler();
     let consoleMessage;
     let SpyOnConsoleWarn;
-    let SpyOnWriteFileSync;
+    let SpyOnWriteFile;
 
     beforeAll(() => {
-      SpyOnWriteFileSync = spyOn(fs, 'writeFileSync').and.callFake((fileName, content) => {
+      SpyOnWriteFile = spyOn(compiler.outputFileSystem, 'writeFile').and.callFake((fileName, content) => {
         outputtedFileName.push(fileName);
         outputtedFileContent.push(content);
       });
@@ -66,12 +70,13 @@ describe('i18n-aggregator-plugin', () => {
       new I18nAggregatorPlugin({
         baseDirectory,
         supportedLocales,
-      }).apply();
+      }).apply(compiler);
+      compiler._plugins['after-environment'][0]();
     });
 
     it('should create tranlsation files for all supported locales', () => {
       expect(supportedLocales.length).toEqual(outputtedFileName.length);
-      expect(SpyOnWriteFileSync).toHaveBeenCalledTimes(supportedLocales.length);
+      expect(SpyOnWriteFile).toHaveBeenCalledTimes(supportedLocales.length);
     });
 
     it('should log console warning for missing tranlsation files', () => {

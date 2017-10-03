@@ -28,7 +28,9 @@
     "react-dom": "^15.4.2"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1"
+    "enhanced-resolve": "^3.4.1",
+    "mkdirp": "^0.5.1",
+    "webpack": "^3.6.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

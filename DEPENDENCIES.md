@@ -23,7 +23,7 @@
 | glob | ^7.1.1 | -- | a little globber |
 | identity-obj-proxy | ^3.0.0 | -- | an identity object using ES6 proxies |
 | jest | ^21.0.2 | -- | Delightful JavaScript Testing. |
-| lerna | ^2.1.2 | -- | Tool for managing JavaScript projects with multiple packages |
+| lerna | ^2.3.1 | -- | Tool for managing JavaScript projects with multiple packages |
 | link-parent-bin | ^0.1.3 | -- | [![Build Status](https://travis-ci.org/nicojs/node-link-parent-bin.svg?branch=master)](https://travis-ci.org/nicojs/node-link-parent-bin) |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
 | nightwatch | ^0.9.12 | -- | A node.js bindings implementation for selenium 2.0/webdriver |
