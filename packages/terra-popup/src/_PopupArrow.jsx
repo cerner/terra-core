@@ -6,7 +6,7 @@ import styles from './PopupArrow.scss';
 
 const cx = classNames.bind(styles);
 /**
- * Half the diameter of the arrow, to use for arrow positioning offset.
+ * Half the base of the arrow, to use for arrow positioning offset.
  */
 const ARROW_OFFSET = 11;
 /**
