@@ -33,6 +33,10 @@
       margin: 0;
     }
 
+    .is-disabled {
+      opacity: 0.3;
+    }
+
     &:first-child {
       padding-left: 0;
     }
