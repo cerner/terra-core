@@ -42,6 +42,7 @@ class CollapsibleMenuViewDemo extends React.Component {
           shouldCloseOnClick={false}
           onChange={this.handleToggleOneOnChange}
           isSelected={this.state.toggle1Selection}
+          isSelectable={false}
         />
         <CollapsibleMenuView.Toggle
           text="Toggle Item 2"
@@ -49,6 +50,7 @@ class CollapsibleMenuViewDemo extends React.Component {
           shouldCloseOnClick={false}
           onChange={this.handleToggleTwoOnChange}
           isSelected={this.state.toggle2Selection}
+          isDisabled
         />
         <CollapsibleMenuView.Divider key="Divider1" />
         <CollapsibleMenuView.Item
@@ -63,10 +65,11 @@ class CollapsibleMenuViewDemo extends React.Component {
         <CollapsibleMenuView.Item
           text="Menu Button 2"
           key="MenuButton 2"
+          isDisabled
           shouldCloseOnClick={false}
           subMenuItems={[
             <CollapsibleMenuView.Item text="Default Item 1" key="defaultItem1" />,
-            <CollapsibleMenuView.Item text="Default Item 2" key="defaultItem2" />,
+            <CollapsibleMenuView.Item text="Default Item 2" key="defaultItem2" isDisabled />,
           ]}
         />
         <CollapsibleMenuView.Divider key="Divider2" />
@@ -94,18 +97,19 @@ class CollapsibleMenuViewDemo extends React.Component {
             isIconOnly
             shouldCloseOnClick={false}
             isSelected={this.state.displayType === 2}
+            isDisabled
           />
         </CollapsibleMenuView.ItemGroup>
         <CollapsibleMenuView.Divider key="Divider3" />
         <CollapsibleMenuView.Item icon={<IconSend />} text="Send Message" key="send" isIconOnly />
         <CollapsibleMenuView.ItemGroup key="messageActionGroup">
           <CollapsibleMenuView.Item icon={<IconPrinter />} text="Print Message" key="print" isIconOnly />
-          <CollapsibleMenuView.Item icon={<IconFolder />} text="Move Message to Folder..." key="move" isIconOnly />
+          <CollapsibleMenuView.Item icon={<IconFolder />} text="Move Message to Folder..." key="move" isIconOnly isDisabled />
           <CollapsibleMenuView.Item icon={<IconTrash />} text="Trash Message" key="trash" isIconOnly />
         </CollapsibleMenuView.ItemGroup>
         <CollapsibleMenuView.Divider key="Divider4" />
         <CollapsibleMenuView.Item text="Button 1" key="button1" />
-        <CollapsibleMenuView.Item text="Button 2" key="button2" />
+        <CollapsibleMenuView.Item text="Button 2" key="button2" isDisabled />
         <CollapsibleMenuView.Item text="Button 3" key="button3" />
         <CollapsibleMenuView.Item text="Button 4" key="button4" />
       </CollapsibleMenuView>

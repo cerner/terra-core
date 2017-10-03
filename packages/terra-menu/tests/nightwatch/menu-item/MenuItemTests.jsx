@@ -11,6 +11,7 @@ const MenuTests = () => (
       <li><Link to="/tests/menu-item-tests/submenu">Menu.Item - SubMenu Indicator</Link></li>
       <li><Link to="/tests/menu-item-tests/selectable">Menu.Item - Selectable</Link></li>
       <li><Link to="/tests/menu-item-tests/on-click">Menu.Item - OnClick Defined</Link></li>
+      <li><Link to="/tests/menu-item-tests/disabled">Menu.Item - Disabled</Link></li>
     </ul>
   </div>
 );

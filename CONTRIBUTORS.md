@@ -34,6 +34,7 @@ Cerner Corporation
 - Sameeksha Vaity [@samvaity]
 - Sai Kaushik Malella [@msaikaushik1992]
 - Kevin Schuster [@kschuste]
+- Sai Gorantla [@saigorantla]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -71,3 +72,4 @@ Cerner Corporation
 [@samvaity]: https://github.com/samvaity
 [@msaikaushik1992]: https://github.com/msaikaushik1992
 [@kschuste]: https://github.com/kschuste
+[@saigorantla]: https://github.com/saigorantla
