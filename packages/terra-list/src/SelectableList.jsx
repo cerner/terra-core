@@ -15,6 +15,7 @@ const propTypes = {
   isDivided: PropTypes.bool,
   /**
    * Whether or not unselected items should be disabled.
+   * Helpful for enabling max row selection.
    */
   disableUnselectedItems: PropTypes.bool,
   /**
