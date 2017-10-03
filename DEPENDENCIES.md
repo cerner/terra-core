@@ -51,4 +51,5 @@
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
 | stylelint-config-sass-guidelines | ^3.0.0 | -- | Sharable stylelint config based on https://sass-guidelin.es/ |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
+| terra-i18n-plugin | ^1.5.0 | ^15.4.2 | The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n. |
 | terra-toolkit | ^2.0.0 | ^15.4.2 | Utilities to help when developing terra modules. |
