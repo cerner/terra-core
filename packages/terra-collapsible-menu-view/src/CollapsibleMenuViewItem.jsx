@@ -41,7 +41,12 @@ const propTypes = {
   isSelected: PropTypes.bool,
 
   /**
-   * Indicates that clicking on this item while displayed inside a menu should close the menu
+   * Indicates if the item should be disabled.
+   */
+  isDisabled: PropTypes.bool,
+
+  /**
+   * Indicates that clicking on this item while displayed inside a menu should close the menu.
    */
   shouldCloseOnClick: PropTypes.bool,
 
@@ -97,6 +102,7 @@ class CollapsibleMenuViewItem extends React.Component {
       isReversed,
       text,
       isSelected,
+      isDisabled,
       subMenuItems,
       shouldCloseOnClick,
       boundingRef,
@@ -115,6 +121,7 @@ class CollapsibleMenuViewItem extends React.Component {
           {...attributes}
           text={text}
           isSelected={isSelected && isCollapsibleGroupItem}
+          isDisabled={isDisabled}
           subMenuItems={subMenuItems}
         />
       );
@@ -126,6 +133,7 @@ class CollapsibleMenuViewItem extends React.Component {
           text={faceUpText}
           isReversed={isReversed}
           isSelected={isSelected}
+          isDisabled={isDisabled}
         />
       );
     } else if (subMenuItems && subMenuItems.length > 0) {
@@ -139,6 +147,7 @@ class CollapsibleMenuViewItem extends React.Component {
               icon={icon}
               text={faceUpText}
               isReversed={isReversed}
+              isDisabled={isDisabled}
               onClick={this.handleButtonClick}
             />)}
         >
@@ -148,7 +157,7 @@ class CollapsibleMenuViewItem extends React.Component {
     } else {
       item = (
         <div className={cx('face-up-item')}>
-          <Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} />
+          <Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} isDisabled={isDisabled} />
         </div>
       );
     }

@@ -11,6 +11,7 @@ exports[`Menu should render a default component 1`] = `
   >
     <MenuItem
       isActive={false}
+      isDisabled={false}
       isSelected={false}
       subMenuItems={Array []}
       text="testing"
