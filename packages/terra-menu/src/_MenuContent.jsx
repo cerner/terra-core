@@ -171,7 +171,8 @@ class MenuContent extends React.Component {
         onClick = this.wrapOnClick(item);
       }
 
-      if (item.props.text) {
+      // Check if child is an enabled Menu.Item
+      if (item.props.text && !item.props.isDisabled) {
         index += 1;
         const onKeyDown = this.wrapOnKeyDown(item, index);
         const isActive = this.state.focusIndex === index;
@@ -181,13 +182,17 @@ class MenuContent extends React.Component {
           onKeyDown,
           isActive,
         });
+      // If the child has children then it is an item group, so iterate through it's children
       } else if (item.props.children) {
         const children = React.Children.map(item.props.children, (child) => {
-          index += 1;
-          return React.cloneElement(child, {
-            onKeyDown: this.wrapOnKeyDown(child, index),
-            isActive: index === this.state.focusIndex,
-          });
+          if (!child.props.isDisabled) {
+            index += 1;
+            return React.cloneElement(child, {
+              onKeyDown: this.wrapOnKeyDown(child, index),
+              isActive: index === this.state.focusIndex,
+            });
+          }
+          return child;
         });
         newItem = React.cloneElement(item, {}, children);
       }
