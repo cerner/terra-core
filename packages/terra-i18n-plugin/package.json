@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "enhanced-resolve": "^3.4.1",
-    "mkdirp": "^0.5.1",
     "webpack": "^3.6.0"
   },
   "scripts": {
