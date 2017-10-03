@@ -1,6 +1,6 @@
 # Terra Hookshot
 
-The Terra Hookshot componenet positions content according to a targeted attachment, ensuring they stay connected.
+The Terra Hookshot component positions content according to a targeted attachment, ensuring they stay connected.
 
 ## Getting Started
 

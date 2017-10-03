@@ -2,7 +2,7 @@
   "name": "terra-hookshot",
   "main": "lib/Hookshot.js",
   "version": "0.0.0",
-  "description": "The Terra Hookshot componenet positions content according to a targeted attachment, ensuring they stay connected.",
+  "description": "The Terra Hookshot component positions content according to a targeted attachment, ensuring they stay connected.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

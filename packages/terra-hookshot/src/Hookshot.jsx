@@ -24,7 +24,7 @@ const ATTACHMENT_BEHAVIORS = [
 
 const propTypes = {
   /**
-   * If the primary attachment in not available, how should the content be positioned.
+   * How the content should be positioned when the primary attachment is not available.
    * Valid values: 'auto', 'flip', and 'none'.
    */
   attachmentBehavior: PropTypes.oneOf(ATTACHMENT_BEHAVIORS),
@@ -33,7 +33,7 @@ const propTypes = {
    */
   attachmentMargin: PropTypes.number,
   /**
-   * Reference to the bounding container, wil use window if nothing is provided.
+   * Reference to the bounding container, will use window if nothing is provided.
    */
   boundingRef: PropTypes.func,
   /**
@@ -41,7 +41,7 @@ const propTypes = {
    */
   content: PropTypes.element.isRequired,
   /**
-   * String pair seperated by a space using values of top, middle, bottom, and left, center, right.
+   * String pair separated by a space using values of top, middle, bottom, and left, center, right. (ex: 'top middle')
    */
   contentAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS).isRequired,
   /**
@@ -49,7 +49,7 @@ const propTypes = {
    */
   contentOffset: PropTypes.string,
   /**
-   * Should content be actively positioned via hookshot.
+   * Determines whether the content should be actively positioned via hookshot.
    */
   isEnabled: PropTypes.bool,
   /**
@@ -57,7 +57,7 @@ const propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
-   * Callback function when the content have been positioned.
+   * Callback function when the content has been positioned.
    */
   onPosition: PropTypes.func,
   /**
@@ -65,7 +65,7 @@ const propTypes = {
    */
   targetRef: PropTypes.func.isRequired,
   /**
-   * String pair of top, middle, bottom, and left, center, right. Will mirror content is none provided.
+   * String pair of top, middle, bottom, and left, center, right. Will mirror content is none provided. (ex: 'bottom middle')
    */
   targetAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
   /**
@@ -144,10 +144,10 @@ class Hookshot extends React.Component {
 
   tick() {
     if (this.lastDuration && this.lastDuration > 16) {
-      // Throttle to 60fps, in order to handle sarafi and mobile performance
+      // Throttle to 60fps, in order to handle safari and mobile performance
       this.lastDuration = Math.min(this.lastDuration - 16, 100);
 
-      // // Just in case this is the last event, remember to position just once more
+      // Just in case this is the last event, remember to position just once more
       this.pendingTimeout = setTimeout(this.tick, 100);
       return;
     }
