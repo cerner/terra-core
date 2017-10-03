@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-hookshot.svg)](https://www.npmjs.org/package/terra-hookshot)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Terra Hookshot componenet positions content according to a targeted attachment, ensuring they stay connected.
+The Terra Hookshot component positions content according to a targeted attachment, ensuring they stay connected.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-hookshot/docs)
