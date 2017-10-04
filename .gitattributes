@@ -2,9 +2,8 @@
 # and back to LF on commit automatically.
 # It also leaves all files detected as binary untouched.
 * text=auto
-
-
 # These files are text and should be normalized (Convert crlf => lf)
 *.gitattributes text
 .gitignore text
 *.md text
+__snapshots__/*.png filter=lfs diff=lfs merge=lfs -text
