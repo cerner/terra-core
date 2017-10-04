@@ -14,15 +14,18 @@ import SizeInvalidPopup from './components/SizeInvalidPopup';
 import SizeSmallPopup from './components/SizeSmallPopup';
 import SizeMediumPopup from './components/SizeMediumPopup';
 import SizeLargePopup from './components/SizeLargePopup';
-import ArrowTopOffsetPopup from './components/ArrowTopOffsetPopup';
-import ArrowBottomOffsetPopup from './components/ArrowBottomOffsetPopup';
-import ArrowLeftOffsetPopup from './components/ArrowLeftOffsetPopup';
-import ArrowRightOffsetPopup from './components/ArrowRightOffsetPopup';
-import ArrowHorizontalCenterPopup from './components/ArrowHorizontalCenterPopup';
-import ArrowVerticalLeftPopup from './components/ArrowVerticalLeftPopup';
-import ArrowVerticalCenterPopup from './components/ArrowVerticalCenterPopup';
-import ArrowVerticalRightPopup from './components/ArrowVerticalRightPopup';
+import ArrowSmallTargetLeftPopup from './components/ArrowSmallTargetLeftPopup';
+import ArrowSmallTargetRightPopup from './components/ArrowSmallTargetRightPopup';
+import ArrowHorizontalAttachmentsPopup from './components/ArrowHorizontalAttachmentsPopup';
+import ArrowVerticalLeftAdjustmentPopup from './components/ArrowVerticalLeftAdjustmentPopup';
+import ArrowVerticalAttachmentsPopup from './components/ArrowVerticalAttachmentsPopup';
+import ArrowVerticalRightAdjustmentPopup from './components/ArrowVerticalRightAdjustmentPopup';
 import PopupInsideModal from './components/PopupInsideModal';
+import DynamicHeightPopup from './components/DynamicHeightPopup';
+import DynamicWidthPopup from './components/DynamicWidthPopup';
+import DynamicHeightBoundedPopup from './components/DynamicHeightBoundedPopup';
+import DynamicWidthBoundedPopup from './components/DynamicWidthBoundedPopup';
+import DifferentAttachmentsPopup from './components/DifferentAttachmentsPopup';
 
 const routes = (
   <div>
@@ -38,15 +41,18 @@ const routes = (
     <Route path="/tests/popup-tests/small" component={SizeSmallPopup} />
     <Route path="/tests/popup-tests/medium" component={SizeMediumPopup} />
     <Route path="/tests/popup-tests/large" component={SizeLargePopup} />
-    <Route path="/tests/popup-tests/top-arrow-offset" component={ArrowTopOffsetPopup} />
-    <Route path="/tests/popup-tests/bottom-arrow-offset" component={ArrowBottomOffsetPopup} />
-    <Route path="/tests/popup-tests/left-arrow-offset" component={ArrowLeftOffsetPopup} />
-    <Route path="/tests/popup-tests/right-arrow-offset" component={ArrowRightOffsetPopup} />
-    <Route path="/tests/popup-tests/horizontal-center" component={ArrowHorizontalCenterPopup} />
-    <Route path="/tests/popup-tests/vertical-left" component={ArrowVerticalLeftPopup} />
-    <Route path="/tests/popup-tests/vertical-center" component={ArrowVerticalCenterPopup} />
-    <Route path="/tests/popup-tests/vertical-right" component={ArrowVerticalRightPopup} />
+    <Route path="/tests/popup-tests/vertical-left-target-offset" component={ArrowSmallTargetLeftPopup} />
+    <Route path="/tests/popup-tests/vertical-right-target-offset" component={ArrowSmallTargetRightPopup} />
+    <Route path="/tests/popup-tests/different-attachment" component={DifferentAttachmentsPopup} />
+    <Route path="/tests/popup-tests/horizontal-attachment" component={ArrowHorizontalAttachmentsPopup} />
+    <Route path="/tests/popup-tests/vertical-left-offset" component={ArrowVerticalLeftAdjustmentPopup} />
+    <Route path="/tests/popup-tests/vertical-attachment" component={ArrowVerticalAttachmentsPopup} />
+    <Route path="/tests/popup-tests/vertical-right-offset" component={ArrowVerticalRightAdjustmentPopup} />
     <Route path="/tests/popup-tests/popup-inside-modal" component={PopupInsideModal} />
+    <Route path="/tests/popup-tests/dynamic-height" component={DynamicHeightPopup} />
+    <Route path="/tests/popup-tests/dynamic-width" component={DynamicWidthPopup} />
+    <Route path="/tests/popup-tests/bounded-dynamic-height" component={DynamicHeightBoundedPopup} />
+    <Route path="/tests/popup-tests/bounded-dynamic-width" component={DynamicWidthBoundedPopup} />
   </div>
 );
 

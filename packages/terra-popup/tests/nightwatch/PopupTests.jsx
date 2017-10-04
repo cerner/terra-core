@@ -6,26 +6,29 @@ import { Link } from 'react-router';
 const PopupTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/popup-tests/default">Default Popup</Link></li>
-      <li><Link to="/tests/popup-tests/arrow">Arrow Popup</Link></li>
-      <li><Link to="/tests/popup-tests/class-name">ClassName Popup</Link></li>
-      <li><Link to="/tests/popup-tests/bounded">Bounded Popup</Link></li>
-      <li><Link to="/tests/popup-tests/bounded-height">Bounded Height Popup</Link></li>
-      <li><Link to="/tests/popup-tests/bounded-width">Bounded Width Popup</Link></li>
-      <li><Link to="/tests/popup-tests/no-header">No Header Popup</Link></li>
-      <li><Link to="/tests/popup-tests/invalid">Invalid Popup</Link></li>
-      <li><Link to="/tests/popup-tests/small">Small Popup</Link></li>
-      <li><Link to="/tests/popup-tests/medium">Medium Popup</Link></li>
-      <li><Link to="/tests/popup-tests/large">Large Popup</Link></li>
-      <li><Link to="/tests/popup-tests/top-arrow-offset">Top Arrow Offset Popup</Link></li>
-      <li><Link to="/tests/popup-tests/bottom-arrow-offset">Bottom Arrow Offset Popup</Link></li>
-      <li><Link to="/tests/popup-tests/left-arrow-offset">Left Arrow Offset Popup</Link></li>
-      <li><Link to="/tests/popup-tests/right-arrow-offset">Right Arrow Offset Popup</Link></li>
-      <li><Link to="/tests/popup-tests/horizontal-center">Horizontal Center Popup</Link></li>
-      <li><Link to="/tests/popup-tests/vertical-left">Vertical Left Popup</Link></li>
-      <li><Link to="/tests/popup-tests/vertical-center">Vertical Center Popup</Link></li>
-      <li><Link to="/tests/popup-tests/vertical-right">Vertical Right Popup</Link></li>
-      <li><Link to="/tests/popup-tests/popup-inside-modal">Popup Inside Modal</Link></li>
+      <li><Link to="/tests/popup-tests/default">Popup - Default</Link></li>
+      <li><Link to="/tests/popup-tests/arrow">Popup - With Arrow</Link></li>
+      <li><Link to="/tests/popup-tests/class-name">Popup - ClassName</Link></li>
+      <li><Link to="/tests/popup-tests/invalid">Popup - Invalid Dimensions</Link></li>
+      <li><Link to="/tests/popup-tests/small">Popup - Small</Link></li>
+      <li><Link to="/tests/popup-tests/medium">Popup - Medium</Link></li>
+      <li><Link to="/tests/popup-tests/large">Popup - Large</Link></li>
+      <li><Link to="/tests/popup-tests/dynamic-height">Popup - Dynamic Height</Link></li>
+      <li><Link to="/tests/popup-tests/dynamic-width">Popup - Dynamic Width</Link></li>
+      <li><Link to="/tests/popup-tests/no-header">Popup - No Header</Link></li>
+      <li><Link to="/tests/popup-tests/bounded">Popup - Bounded</Link></li>
+      <li><Link to="/tests/popup-tests/bounded-height">Popup - Bounded Height</Link></li>
+      <li><Link to="/tests/popup-tests/bounded-dynamic-height">Popup - Bounded Dynamic Height </Link></li>
+      <li><Link to="/tests/popup-tests/bounded-width">Popup - Bounded Width</Link></li>
+      <li><Link to="/tests/popup-tests/bounded-dynamic-width">Popup - Bounded Dynamic Width</Link></li>
+      <li><Link to="/tests/popup-tests/different-attachment">Popup - Different Content vs Target Attachments for Arrow</Link></li>
+      <li><Link to="/tests/popup-tests/horizontal-attachment">Popup - Horizontal Attachments for Arrow</Link></li>
+      <li><Link to="/tests/popup-tests/vertical-attachment">Popup - Vertical Attachments for Arrow</Link></li>
+      <li><Link to="/tests/popup-tests/vertical-left-offset">Popup - Vertical Left Attachment -- Arrow Adjustment</Link></li>
+      <li><Link to="/tests/popup-tests/vertical-left-target-offset">Popup - Vertical Left Attachment -- Target Smaller than Arrow Offset</Link></li>
+      <li><Link to="/tests/popup-tests/vertical-right-offset">Popup - Vertical Right Attachment -- Arrow Adjustment</Link></li>
+      <li><Link to="/tests/popup-tests/vertical-right-target-offset">Popup - Vertical Right Attachment -- Target Smaller than Arrow Offset</Link></li>
+      <li><Link to="/tests/popup-tests/popup-inside-modal">Popup - Popup Inside Modal</Link></li>
     </ul>
   </div>
 );

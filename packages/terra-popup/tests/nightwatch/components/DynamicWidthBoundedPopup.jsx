@@ -1,7 +1,7 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class OffsetPopup extends React.Component {
+class PopupExample extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -43,25 +43,24 @@ class OffsetPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ height: '175px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="top left"
-          contentHeight="40"
-          contentWidth="160"
-          isArrowDisplayed
+          contentWidth="dynamic"
           isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
+          onRequestClose={this.handleRequestClose}
         >
-          <p style={{ padding: '5px' }}>This popup was flipped and the arrow was repositioned.</p>
+          <p style={{ width: '400px' }}>This is popup content with a dynamic width of 400px, but is bounded by the parent width of 200px.</p>
         </Popup>
-        <button id="offset-button" style={{ position: 'absolute', right: '10px', bottom: '0px', height: '10px', width: '10px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Default Popup
+        </button>
       </div>
     );
   }
 }
 
-export default OffsetPopup;
+export default PopupExample;

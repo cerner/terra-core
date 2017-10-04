@@ -183,6 +183,9 @@ class PopupContent extends React.Component {
       classNameInner,
     ]);
 
+    const dynamicHeight = isHeightDynamic ? { 'data-terra-popup-dynamic-height': true } : {};
+    const dynamicWidth = isWidthDynamic ? { 'data-terra-popup-dynamic-width': true } : {};
+
     return (
       <FocusTrap>
         <Hookshot.Content
@@ -195,7 +198,7 @@ class PopupContent extends React.Component {
           refCallback={refCallback}
         >
           {arrowContent}
-          <div className={innerClassNames} style={contentStyle}>
+          <div {...dynamicHeight} {...dynamicWidth} className={innerClassNames} style={contentStyle}>
             {content}
           </div>
         </Hookshot.Content>

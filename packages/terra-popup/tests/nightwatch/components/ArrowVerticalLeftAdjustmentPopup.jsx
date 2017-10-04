@@ -1,7 +1,8 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class OffsetPopup extends React.Component {
+// This tests verifies the PopupUtils.leftOffset methed when (offset < (2 * arrowOffset) + cornerOffset)
+class AlignmentPopup extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -48,20 +49,20 @@ class OffsetPopup extends React.Component {
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="top right"
-          contentHeight="40"
+          contentAttachment="top left"
+          contentHeight="120"
           contentWidth="160"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ padding: '5px' }}>This popup arrow was repositioned.</p>
+          <p style={{ padding: '5px' }}>This popup arrow has verital-left attachment, but was adjusted to be on the screen.</p>
         </Popup>
-        <button id="offset-button" style={{ position: 'absolute', left: '10px', height: '10px', width: '10px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="alignment-button" style={{ position: 'absolute', top: '0px', height: '20px', width: '20px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>
     );
   }
 }
 
-export default OffsetPopup;
+export default AlignmentPopup;

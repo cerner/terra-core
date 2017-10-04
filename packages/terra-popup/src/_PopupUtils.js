@@ -20,8 +20,9 @@ const calculateBottomPosition = bounds => (bounds.top + bounds.height);
 const calculateRightPosition = bounds => (bounds.left + bounds.width);
 
 /**
- * This method calculates the horizontal offset to be applied to the arrow, if the target is smaller than the arrow
- * and the attachment is 'top' or 'bottom'.
+ * This method calculates the horizontal offset to be applied to the content. Considers if the target's
+ * horizontal attachment is different than the contents attachment or the target's width is smaller than
+ * the arrow's position.
  *
  * @ param {Object} cAttachment - The vertical and horizonal hookshot attachments of the content.
  * @ param {Object} tAttachment - The vertical and horizonal hookshot attachments of the target.
@@ -43,6 +44,7 @@ const getContentOffset = (cAttachment, tAttachment, targetNode, arrowOffset, cor
           offset.horizontal = segment;
         }
       } else if (targetNode.clientWidth < segment) {
+        // If the target size is smaller than the arrow position
         if (cAttachment.horizontal === 'left') {
           offset.horizontal = -segment;
         } else if (cAttachment.horizontal === 'right') {

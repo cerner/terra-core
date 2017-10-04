@@ -45,12 +45,12 @@ const propTypes = {
   contentAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
   /**
    * A string representation of the height in px, limited to:
-   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880 or dynamic
+   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880 or dynamic.
    */
   contentHeight: PropTypes.oneOf(Object.keys(PopupHeights)),
   /**
    * A string representation of the width in px, limited to:
-   * 160, 240, 320, 640, 960, 1280, 1760 or dynamic
+   * 160, 240, 320, 640, 960, 1280, 1760 or dynamic.
    */
   contentWidth: PropTypes.oneOf(Object.keys(PopupWidths)),
   /**

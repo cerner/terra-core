@@ -1,7 +1,7 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class AlignmentPopup extends React.Component {
+class PopupExample extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -43,25 +43,24 @@ class AlignmentPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ height: '175px', width: '500px', background: 'aliceblue' }} ref={this.setParentNode}>
         <Popup
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="top center"
-          contentHeight="40"
-          contentWidth="160"
-          isArrowDisplayed
+          contentHeight="dynamic"
           isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
+          onRequestClose={this.handleRequestClose}
         >
-          <p style={{ padding: '5px' }}>This popup arrow was aligned to the center.</p>
+          <p style={{ height: '400px' }}>This is popup content with a dynamic height of 400px.</p>
         </Popup>
-        <button id="alignment-button" style={{ position: 'absolute', left: 'calc(50% - 10px)', height: '20px', width: '20px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Default Popup
+        </button>
       </div>
     );
   }
 }
 
-export default AlignmentPopup;
+export default PopupExample;
