@@ -46,5 +46,9 @@
     border-right: 1px solid #dedfe0;
     height: 2.143rem;
   }
+
+  .is-calculating {
+    visibility: hidden;
+  }
   /* stylelint-enable */
 }
