@@ -68,19 +68,16 @@ class Base extends React.Component {
       ...customProps
     } = this.props;
 
-    const childComponent = (
-      <div {...customProps}>
-        {children}
-      </div>
-    );
-
     const messages = Object.assign({}, this.state.messages, customMessages);
 
-    if (locale === undefined) return childComponent;
+    if (locale === undefined) {
+      return (<div {...customProps}>{children}</div>);
+    }
+
     if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
     return (
       <I18nProvider locale={this.state.locale} messages={messages} {...customProps}>
-        {childComponent}
+        {children}
       </I18nProvider>
     );
   }
