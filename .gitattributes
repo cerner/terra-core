@@ -6,4 +6,4 @@
 *.gitattributes text
 .gitignore text
 *.md text
-__snapshots__/*.png filter=lfs diff=lfs merge=lfs -text
+**/__snapshots__/*.png filter=lfs diff=lfs merge=lfs -text
