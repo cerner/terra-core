@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "enhanced-resolve": "^3.4.1",
+    "memory-fs": "^0.4.1",
     "webpack": "^3.6.0"
   },
   "scripts": {
