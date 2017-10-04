@@ -39,7 +39,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
       }
     });
   } catch (e) {
-    console.log(e.message);
+    // eslint-disable-line no-use-before-defin
   }
 
   // Check the directory's node_modules for translation files
@@ -49,7 +49,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
       aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), compiler);
     });
   } catch (e) {
-    console.log(e.message);
+    // eslint-disable-line no-use-before-defin
   }
 
   return languageMessages;
