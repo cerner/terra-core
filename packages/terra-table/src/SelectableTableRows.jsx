@@ -11,7 +11,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Indicates if the unselected rows are disabled.
+   * Indicates if the unselected rows are disabled. This is helpful for enabling max row selection.
    */
   disableUnselectedRows: PropTypes.bool,
   /**
