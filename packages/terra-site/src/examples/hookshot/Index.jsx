@@ -8,7 +8,7 @@ import { version } from 'terra-hookshot/package.json';
 // Component Source
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 import HookshotSrc from '!raw-loader!terra-hookshot/src/Hookshot';
-import HookshotContentSrc from '!raw-loader!terra-hookshot/src/_HookshotContent';
+import HookshotContentSrc from '!raw-loader!terra-hookshot/src/HookshotContent';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
 
