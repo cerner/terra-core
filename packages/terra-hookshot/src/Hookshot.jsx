@@ -142,7 +142,7 @@ class Hookshot extends React.Component {
     return { targetRect, contentRect, boundingRect };
   }
 
-  tick() {
+  tick(event) {
     if (this.lastDuration && this.lastDuration > 16) {
       // Throttle to 60fps, in order to handle safari and mobile performance
       this.lastDuration = Math.min(this.lastDuration - 16, 100);
@@ -163,7 +163,7 @@ class Hookshot extends React.Component {
     }
 
     this.lastCall = Hookshot.now();
-    this.update();
+    this.update(event);
     this.lastDuration = Hookshot.now() - this.lastCall;
   }
 
