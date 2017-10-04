@@ -26,6 +26,10 @@ const propTypes = {
    */
   isSelectable: PropTypes.bool,
   /**
+   * Indicates if the toggle should be disabled.
+   */
+  isDisabled: PropTypes.bool,
+  /**
    * Indicates that clicking on this item while displayed inside a menu should close the menu
    */
   shouldCloseOnClick: PropTypes.bool,
@@ -61,6 +65,7 @@ class CollapsibleMenuViewToggle extends React.Component {
       text,
       isSelected,
       isSelectable,
+      isDisabled,
       onChange,
       shouldCloseOnClick,
       ...customProps
@@ -70,6 +75,7 @@ class CollapsibleMenuViewToggle extends React.Component {
 
     const controllClassName = cx([
       'control',
+      { 'is-disabled': isDisabled || !isSelectable },
       customProps.className,
     ]);
 
@@ -80,6 +86,7 @@ class CollapsibleMenuViewToggle extends React.Component {
           text={text}
           isSelected={isSelected}
           isSelectable={isSelectable}
+          isDisabled={isDisabled}
           onChange={onChange}
         />
       );
@@ -94,7 +101,7 @@ class CollapsibleMenuViewToggle extends React.Component {
           labelText={text}
           defaultChecked={isSelected}
           onChange={this.wrappedOnChange}
-          disabled={!isSelectable}
+          inputAttrs={{ disabled: isDisabled || !isSelectable }}
         />
       </div>
     );

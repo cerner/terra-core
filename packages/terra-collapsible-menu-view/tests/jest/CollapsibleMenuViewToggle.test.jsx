@@ -14,13 +14,18 @@ describe('CollapsibleMenuViewToggle', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should set isSelected prop', () => {
+  it('should set defaultChecked prop', () => {
     const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelected />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should set isSelectable prop to false', () => {
+  it('should disable checkbox when isSelectable is false', () => {
     const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelectable={false} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should set isDisabled prop', () => {
+    const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isDisabled />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -35,9 +40,14 @@ describe('CollapsibleMenuViewToggle', () => {
       const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelected />, { context });
       expect(wrapper).toMatchSnapshot();
     });
-    it('should set defaultChecked to false', () => {
+    it('should set isSelectable prop on menu item to false', () => {
       const context = { isCollapsibleMenuItem: true };
       const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isSelectable={false} />, { context });
+      expect(wrapper).toMatchSnapshot();
+    });
+    it('should set isDisabled prop on menu item', () => {
+      const context = { isCollapsibleMenuItem: true };
+      const wrapper = shallow(<CollapsibleMenuViewToggle text="Testing" isDisabled />, { context });
       expect(wrapper).toMatchSnapshot();
     });
   });

@@ -52,6 +52,17 @@ describe('CollapsibleMenuViewItem', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render a disabled button when isDisabled is set', () => {
+    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a disabled button group button that is inside a button group when isDisabled is set', () => {
+    const context = { isCollapsibleGroupItem: true };
+    const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />, { context });
+    expect(wrapper).toMatchSnapshot();
+  });
+
   describe('Collapsible Menu Context', () => {
     it('should render a menu item', () => {
       const context = { isCollapsibleMenuItem: true };
@@ -97,6 +108,12 @@ describe('CollapsibleMenuViewItem', () => {
           subMenuItems={[<CollapsibleMenuViewItem text="Menu Item" key="1" />]}
         />
       ), { context });
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render a disabled menu item when isDisabled is set', () => {
+      const context = { isCollapsibleMenuItem: true };
+      const wrapper = shallow(<CollapsibleMenuViewItem text="Testing" isDisabled />, { context });
       expect(wrapper).toMatchSnapshot();
     });
   });

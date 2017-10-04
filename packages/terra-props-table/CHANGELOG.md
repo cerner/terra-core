@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+Added pre tag to display objects in proper code syntax.
 
 1.8.0 - (September 26, 2017)
 ------------------
