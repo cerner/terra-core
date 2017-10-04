@@ -20,7 +20,7 @@ const propTypes = {
 };
 
 const I18nProvider = (props, ...customProps) => (
-  <IntlProvider locale={props.locale} key={props.locale} messages={props.messages} {...customProps}>
+  <IntlProvider {...customProps} locale={props.locale} key={props.locale} messages={props.messages}>
     <div>
       {props.children}
     </div>
