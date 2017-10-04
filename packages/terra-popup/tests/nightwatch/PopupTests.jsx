@@ -7,6 +7,7 @@ const PopupTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/popup-tests/default">Popup - Default</Link></li>
+      <li><Link to="/tests/popup-tests/overlay">Popup - Overlay</Link></li>
       <li><Link to="/tests/popup-tests/arrow">Popup - With Arrow</Link></li>
       <li><Link to="/tests/popup-tests/class-name">Popup - ClassName</Link></li>
       <li><Link to="/tests/popup-tests/invalid">Popup - Invalid Dimensions</Link></li>

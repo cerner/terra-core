@@ -4,6 +4,7 @@ import React from 'react';
 import { Route } from 'react-router';
 import PopupTests from './PopupTests';
 import DefaultPopup from './components/DefaultPopup';
+import OverlayPopup from './components/OverlayPopup';
 import ArrowPopup from './components/ArrowPopup';
 import ClassNamePopup from './components/ClassNamePopup';
 import BoundedPopup from './components/BoundedPopup';
@@ -31,6 +32,7 @@ const routes = (
   <div>
     <Route path="/tests/popup-tests" component={PopupTests} />
     <Route path="/tests/popup-tests/default" component={DefaultPopup} />
+    <Route path="/tests/popup-tests/overlay" component={OverlayPopup} />
     <Route path="/tests/popup-tests/arrow" component={ArrowPopup} />
     <Route path="/tests/popup-tests/class-name" component={ClassNamePopup} />
     <Route path="/tests/popup-tests/bounded" component={BoundedPopup} />

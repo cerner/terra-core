@@ -46,6 +46,20 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.test-arrow').to.not.be.present;
   },
 
+  'Displays a popup with an overlay': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/overlay`);
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
+
+    browser.click('#overlay-button');
+    browser.assert.elementPresent('.test-content');
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: hidden;');
+
+    browser.keys([browser.Keys.ESCAPE]);
+    browser.expect.element('.test-content').to.not.be.present;
+
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
+  },
+
   'Displays a popup with an arrow': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/arrow`);
     browser.expect.element('.test-content').to.be.present;

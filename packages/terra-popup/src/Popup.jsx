@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Hookshot from 'terra-hookshot';
+import Portal from 'react-portal';
 import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
+import PopupOverlay from './_PopupOverlay';
 import PopupUtils from './_PopupUtils';
 import PopupHeights from './_PopupHeights';
 import PopupWidths from './_PopupWidths';
@@ -37,6 +39,10 @@ const propTypes = {
    * CSS classnames that are append to the popup content inner.
    */
   classNameContent: PropTypes.string,
+  /**
+   * CSS classnames that are append to the overlay.
+   */
+  classNameOverlay: PropTypes.string,
   /**
    * Attachment point for the popup, this will be mirrored to the target. Options include: 'top left',
    * 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left',
@@ -85,6 +91,7 @@ const defaultProps = {
   boundingRef: null,
   classNameArrow: null,
   classNameContent: null,
+  classNameOverlay: null,
   contentAttachment: 'top center',
   contentHeight: '80',
   contentWidth: '240',
@@ -219,6 +226,7 @@ class Popup extends React.Component {
       children,
       classNameArrow,
       classNameContent,
+      classNameOverlay,
       contentAttachment,
       contentHeight,
       contentWidth,
@@ -254,6 +262,9 @@ class Popup extends React.Component {
 
     return (
       <div>
+        <Portal isOpened={isOpen}>
+          <PopupOverlay className={this.props.classNameOverlay} />
+        </Portal>
         <Hookshot
           attachmentBehavior={attachmentBehavior}
           attachmentMargin={showArrow ? PopupArrow.Opts.arrowSize : 0}

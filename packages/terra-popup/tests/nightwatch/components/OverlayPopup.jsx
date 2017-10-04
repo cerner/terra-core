@@ -1,19 +1,26 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
-import './ClassNamePopup.scss';
 
-class ClassNamePopup extends React.Component {
+class DefaultPopup extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
-  componentDidMount() {
-    this.forceUpdate();
+  componentWillMount() {
+    this.overlayStyle = document.documentElement.style.overflow;
+    this.overlayId = document.documentElement.id;
+    document.documentElement.id = 'popup-overlay-test';
+    document.documentElement.style.overflow = 'auto';
+  }
+
+  componentWillUnmount() {
+    document.documentElement.id = this.overlayId;
+    document.documentElement.style.overflow = this.overlayStyle;
   }
 
   setButtonNode(node) {
@@ -36,23 +43,20 @@ class ClassNamePopup extends React.Component {
     return (
       <div>
         <Popup
-          classNameArrow="terra-test-class-arrow"
-          classNameContent="terra-test-class-content"
-          classNameOverlay="terra-test-class-overlay"
-          contentAttachment="top center"
-          isArrowDisplayed
+          classNameArrow="test-arrow"
+          classNameContent="test-content"
           isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
+          onRequestClose={this.handleRequestClose}
         >
-          <p style={{ padding: '5px' }}>The arrow and content have classes.</p>
+          <p>this is popup content</p>
         </Popup>
-        <button id="class-name-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
-          Class Name Popup
+        <button id="overlay-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Default Popup
         </button>
       </div>
     );
   }
 }
 
-export default ClassNamePopup;
+export default DefaultPopup;

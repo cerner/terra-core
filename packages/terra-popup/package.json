@@ -39,6 +39,7 @@
     "classnames": "^2.2.5",
     "focus-trap-react": "^3.0.2",
     "prop-types": "^15.5.8",
+    "react-portal": "^3.0.0",
     "terra-base": "^2.5.0",
     "terra-content-container": "^1.10.0",
     "terra-hookshot": "^0.x",
