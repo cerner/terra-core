@@ -1,8 +1,8 @@
 import React from 'react';
-import Table from '../../../lib/Table';
+import Table from '../../../../lib/Table';
 
-const NoStripedTable = () => (
-  <Table isStriped={false} id="Table">
+const StripedTable = () => (
+  <Table id="Table">
     <Table.Header>
       <Table.HeaderCell content={'Name'} key={'NAME'} minWidth={'small'} />
       <Table.HeaderCell content={'Address'} key={'ADDRESS'} minWidth={'medium'} />
@@ -28,4 +28,4 @@ const NoStripedTable = () => (
   </Table>
 );
 
-export default NoStripedTable;
+export default StripedTable;

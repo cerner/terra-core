@@ -90,10 +90,11 @@ import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwat
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
 import SelectableTableTestRoutes from 'terra-table/tests/nightwatch/selectable-table/SelectableTableTestRoutes';
 import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
+import SingleSelectTableTestRoutes from 'terra-table/tests/nightwatch/single-select-table/SingleSelectTableTestRoutes';
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
-import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
+import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
@@ -176,6 +177,7 @@ ReactDOM.render((
     {StatusTestRoutes}
     {TableTestRoutes}
     {SelectableTableTestRoutes}
+    {SingleSelectTableTestRoutes}
     {TimeInputTestRoutes}
     {MarkdownTestRoutes}
     {MenuTestRoutes}
