@@ -17,6 +17,9 @@ exports[`should render the component with customMessages 1`] = `
 
 exports[`should render the component with merged attributes 1`] = `
 <I18nProvider
+  className="TestClass"
+  data-mock="data"
+  id="TestId"
   locale="en-US"
   messages={Object {}}
 >
