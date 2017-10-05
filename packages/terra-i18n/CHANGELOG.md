@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Spread customProps onto div.
+
 1.9.0 - (September 26, 2017)
 ------------------
 ### Changed
