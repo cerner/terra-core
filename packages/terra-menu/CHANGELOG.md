@@ -3,9 +3,9 @@ Changelog
 
 Unreleased
 ----------
-
 ### Fixed
 * Bug around selectable menus with only 1 child element.
+* Issue where Menu.Item prop updates were not getting rendered immediately.
 
 ### Added
 * Added ability to disable menu items
