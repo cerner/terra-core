@@ -40,6 +40,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
     });
   } catch (e) {
     // eslint-disable-line no-use-before-defin
+    // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
 
   // Check the directory's node_modules for translation files
@@ -50,6 +51,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
     });
   } catch (e) {
     // eslint-disable-line no-use-before-defin
+    // not outputting anything here as the catching of the directories not existing is not an error in this case
   }
 
   return languageMessages;
