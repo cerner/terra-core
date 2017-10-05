@@ -2,19 +2,6 @@
 
 exports[`I18nProvider for snapshot tests renders a default I18nProvider 1`] = `
 <IntlProvider
-  0={Object {}}
-  1={
-    Object {
-      "enqueueCallback": [Function],
-      "enqueueCallbackInternal": [Function],
-      "enqueueElementInternal": [Function],
-      "enqueueForceUpdate": [Function],
-      "enqueueReplaceState": [Function],
-      "enqueueSetState": [Function],
-      "isMounted": [Function],
-      "validateCallback": [Function],
-    }
-  }
   locale="en"
   messages={
     Object {
