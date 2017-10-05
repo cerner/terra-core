@@ -71,7 +71,7 @@ class HookshotStandard extends React.Component {
     return (
       <div>
         <form>
-          <label htmlFor={this.getId('hookshotAttachmentBehavior')}>Target Attachment</label>
+          <label htmlFor={this.getId('hookshotAttachmentBehavior')}>Attachment Behavior</label>
           <select id={this.getId('hookshotAttachmentBehavior')} name="hookshotAttachmentBehavior" value={this.state.hookshotAttachmentBehavior} onChange={this.handleSelectChange}>
             {HookshotStandard.generateOptions(Hookshot.attachmentBehaviors)}
           </select>
