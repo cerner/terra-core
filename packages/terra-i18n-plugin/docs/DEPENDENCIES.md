@@ -1,14 +1,12 @@
 # Dependency Information
 
-## dependencies
-| Dependency | Version | React Version | Description |
-|-|-|-|-|
-| mkdirp | ^0.5.1 | -- | Recursively mkdir, like `mkdir -p` |
-
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | babel-jest | ^19.0.0 | -- | [Babel](https://github.com/babel/babel) [jest](https://github.com/facebook/jest) plugin |
+| enhanced-resolve | ^3.4.1 | -- | Offers a async require.resolve function. It's highly configurable. |
+| memory-fs | ^0.4.1 | -- | A simple in-memory filesystem. Holds data in a javascript object. |
+| webpack | ^2.6.1 | -- | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

@@ -32,7 +32,7 @@ Cerner Corporation
 - Wei Hou [@kafkahw]
 - Ryan Perrin [@saedar]
 - Sameeksha Vaity [@samvaity]
-- Sai Kaushik Malella [@msaikaushik1992]
+- Sai Kaushik Mallela [@msaikaushik1992]
 - Kevin Schuster [@kschuste]
 - Sai Gorantla [@saigorantla]
 
