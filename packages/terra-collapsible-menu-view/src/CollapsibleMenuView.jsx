@@ -40,13 +40,14 @@ class CollapsibleMenuView extends React.Component {
     this.state = {
       hiddenStartIndex: -1,
       menuHidden: false,
+      isCalculating: true,
     };
   }
 
   componentDidMount() {
     this.resizeObserver = new ResizeObserver((entries) => {
       // Resetting the state so that all elements will be rendered face-up for width calculations
-      this.setState({ hiddenStartIndex: -1, menuHidden: false });
+      this.setState({ hiddenStartIndex: -1, menuHidden: false, isCalculating: true });
       this.handleResize(entries[0].contentRect.width);
     });
     this.resizeObserver.observe(this.container);
@@ -84,7 +85,7 @@ class CollapsibleMenuView extends React.Component {
       }
     }
 
-    this.setState({ menuHidden, hiddenStartIndex });
+    this.setState({ menuHidden, hiddenStartIndex, isCalculating: false });
   }
 
   render() {
@@ -97,6 +98,7 @@ class CollapsibleMenuView extends React.Component {
 
     const collapsibleMenuViewClassName = cx([
       'collapsible-menu-view',
+      { 'is-calculating': this.state.isCalculating },
       customProps.className,
     ]);
     const menuButtonClassName = cx([

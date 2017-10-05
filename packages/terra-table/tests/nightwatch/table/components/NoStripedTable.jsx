@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../../../lib/Table';
+import Table from '../../../../lib/Table';
 
 const NoStripedTable = () => (
   <Table isStriped={false} id="Table">
