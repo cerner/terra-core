@@ -41,9 +41,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.visible('.TestFirstItem')
       .assert.visible('.TestLastItem');
   },
-  'Displays a selectable menu with apropriate spacing': (browser) => {
+  'Displays a selectable menu when there are selectable and unselectable items': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/menu-tests/selectable`)
+      .url(`${browser.launchUrl}/#/tests/menu-tests/selectable-and-unselectable`)
       .assert.hidden('.TestNonSelectableItem svg[class*="_checkmark"]')
       .assert.hidden('.TestSelectableItem svg[class*="_checkmark"]');
   },
@@ -69,5 +69,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.TestNestedMenuContent').to.be.present;
     browser.sendKeys('.TestNestedMenuContent', [browser.Keys.ARROW_LEFT]);
     browser.expect.element('.TestInitialMenuContent').to.be.visible;
+  },
+  'Displays a selectable menu when there is one child': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/menu-tests/selectable`)
+      .click('.TestGroupItem3');
+    browser.expect.element('.TestGroupItem3 svg[class*="_checkmark"]').to.be.visible;
   },
 });

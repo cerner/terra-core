@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Bug around selectable menus with only 1 child element.
+
 ### Added
 * Keyboard navigation with arrow keys
 * Added ability to disable menu items
