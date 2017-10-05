@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const Autoprefixer = require('autoprefixer');
 const CustomProperties = require('postcss-custom-properties');
 const rtl = require('postcss-rtl');
