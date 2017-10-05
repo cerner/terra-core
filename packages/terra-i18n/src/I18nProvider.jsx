@@ -19,10 +19,10 @@ const propTypes = {
   messages: PropTypes.object.isRequired,
 };
 
-const I18nProvider = props => (
-  <IntlProvider locale={props.locale} key={props.locale} messages={props.messages}>
-    <div>
-      {props.children}
+const I18nProvider = ({ children, locale, messages, ...customProps }) => (
+  <IntlProvider locale={locale} key={locale} messages={messages}>
+    <div {...customProps}>
+      {children}
     </div>
   </IntlProvider>
 );

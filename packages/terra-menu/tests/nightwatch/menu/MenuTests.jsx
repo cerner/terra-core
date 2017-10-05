@@ -12,6 +12,7 @@ const MenuTests = () => (
       <li><Link to="/tests/menu-tests/medium">Menu - Medium Height</Link></li>
       <li><Link to="/tests/menu-tests/large">Menu - Large Height</Link></li>
       <li><Link to="/tests/menu-tests/selectable">Menu - Selectable</Link></li>
+      <li><Link to="/tests/menu-tests/selectable-and-unselectable">Menu - Selectable and Unselectable Items</Link></li>
       <li><Link to="/tests/menu-tests/non-selectable">Menu - Not Selectable</Link></li>
       <li><Link to="/tests/menu-tests/submenu">Menu - Submenu</Link></li>
     </ul>
