@@ -11,6 +11,7 @@ import LargeMenu from './LargeMenu';
 import MediumMenu from './MediumMenu';
 import SmallMenu from './SmallMenu';
 import SelectableMenu from './SelectableMenu';
+import SelectableAndUnselectableMenu from './SelectableAndUnselectableItemsMenu';
 import NonSelectableMenu from './NonSelectableMenu';
 import SubMenu from './SubMenu';
 
@@ -23,6 +24,7 @@ const routes = (
     <Route path="/tests/menu-tests/medium" component={MediumMenu} />
     <Route path="/tests/menu-tests/small" component={SmallMenu} />
     <Route path="/tests/menu-tests/selectable" component={SelectableMenu} />
+    <Route path="/tests/menu-tests/selectable-and-unselectable" component={SelectableAndUnselectableMenu} />
     <Route path="/tests/menu-tests/non-selectable" component={NonSelectableMenu} />
     <Route path="/tests/menu-tests/submenu" component={SubMenu} />
   </div>

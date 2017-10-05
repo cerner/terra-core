@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+### Fixed
+* Bug around selectable menus with only 1 child element.
+
+### Added
+* Added ability to disable menu items
+
 1.2.0 - (September 26, 2017)
 ------------------
 ### Removed

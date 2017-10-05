@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
@@ -43,5 +44,12 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#clickNumber', '0')
       .click('.TestOnClickItem')
       .assert.containsText('#clickNumber', '1');
+  },
+  'Disables a Menu.Item when indicated': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/menu-item-tests/disabled`);
+    browser.expect.element('.TestDisabledItem').to.be.present;
+    browser.expect.element('.TestDisabledItem svg[class*="_checkmark"]').to.not.be.visible;
+    browser.click('.TestDisabledItem');
+    browser.expect.element('.TestDisabledItem svg[class*="_checkmark"]').to.not.be.visible;
   },
 });

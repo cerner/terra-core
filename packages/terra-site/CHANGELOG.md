@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Typos
 
 1.12.0 - (September 26, 2017)
 ------------------
@@ -10,6 +12,7 @@ Unreleased
 * Updating theming-plugin match regex to allow for multiple fallback values.
 
 ### Changed
+* Break out list examples into their own pages.
 * Break out static and themeable icon examples into their own pages
 
 1.11.0 - (September 19, 2017)

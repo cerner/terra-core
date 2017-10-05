@@ -9,24 +9,19 @@ exports[`should render the component with customMessages 1`] = `
     }
   }
 >
-  <div>
-    customMessages
-  </div>
+  customMessages
 </I18nProvider>
 `;
 
 exports[`should render the component with merged attributes 1`] = `
 <I18nProvider
+  className="TestClass"
+  data-mock="data"
+  id="TestId"
   locale="en-US"
   messages={Object {}}
 >
-  <div
-    className="TestClass"
-    data-mock="data"
-    id="TestId"
-  >
-    String
-  </div>
+  String
 </I18nProvider>
 `;
 
@@ -35,9 +30,7 @@ exports[`should support rendering a string as children 1`] = `
   locale="en-US"
   messages={Object {}}
 >
-  <div>
-    String
-  </div>
+  String
 </I18nProvider>
 `;
 
@@ -58,17 +51,15 @@ exports[`should support rendering an array of elements as a children 1`] = `
   locale="en-US"
   messages={Object {}}
 >
-  <div>
-    <h1>
-      Heading
-    </h1>
-    <p>
-      Element 1
-    </p>
-    <p>
-      Element 2
-    </p>
-  </div>
+  <h1>
+    Heading
+  </h1>
+  <p>
+    Element 1
+  </p>
+  <p>
+    Element 2
+  </p>
 </I18nProvider>
 `;
 
@@ -77,11 +68,9 @@ exports[`should support rendering an element as children 1`] = `
   locale="en-US"
   messages={Object {}}
 >
-  <div>
-    <p>
-      Element
-    </p>
-  </div>
+  <p>
+    Element
+  </p>
 </I18nProvider>
 `;
 

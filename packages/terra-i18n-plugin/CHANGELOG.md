@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Updated to allow an outputFileSystem to be passed in through the options and using the webpack compiler's inputFileSystem for reading the translation files
 
 1.5.0 - (September 26, 2017)
 ------------------

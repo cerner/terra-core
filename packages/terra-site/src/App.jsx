@@ -13,6 +13,7 @@ import ThemeProvider from 'terra-theme-provider';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
+import ListComponentNavigation from './examples/list/ListComponentNavigation';
 import IconComponentNavigation from './examples/icon/IconComponentNavigation';
 
 const propTypes = {
@@ -131,7 +132,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button">Button</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button-group">Button Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/card">Card</Link>} />
-          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/collapsible-menu-view">Collapsilbe Menu View</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/collapsible-menu-view">Collapsible Menu View</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/content-container">Content Container</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/datepicker">Date Picker</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/demographics-banner">Demographics Banner</Link>} />
@@ -146,6 +147,7 @@ class App extends React.Component {
           <List.Item content={<IconComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/image">Image</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/list">List</Link>} />
+          <List.Item content={<ListComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/menu">Menu</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal">Modal</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal-manager">Modal Manager</Link>} />

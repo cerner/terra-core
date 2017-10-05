@@ -70,6 +70,7 @@ import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import IconIndexRoutes from './examples/icon/IconIndexRoutes';
 import ImageTestRoutes from 'terra-image/tests/nightwatch/ImageTestRoutes';
 import ListTestRoutes from 'terra-list/tests/nightwatch/list/ListTestRoutes';
+import ListIndexRoutes from './examples/list/ListIndexRoutes';
 import ListItemTestRoutes from 'terra-list/tests/nightwatch/list-item/ListItemTestRoutes';
 import LoadingOverlayTestRoutes from 'terra-overlay/tests/nightwatch/LoadingOverlay/LoadingOverlayTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
@@ -89,10 +90,11 @@ import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableT
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
 import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
+import SingleSelectTableTestRoutes from 'terra-table/tests/nightwatch/single-select-table/SingleSelectTableTestRoutes';
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
-import TableTestRoutes from 'terra-table/tests/nightwatch/TableTestRoutes';
+import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
@@ -147,6 +149,7 @@ ReactDOM.render((
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
       {FormIndexRoutes}
+      {ListIndexRoutes}
       {IconIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
@@ -174,6 +177,7 @@ ReactDOM.render((
     {MultiSelectListTestRoutes}
     {StatusTestRoutes}
     {TableTestRoutes}
+    {SingleSelectTableTestRoutes}
     {TimeInputTestRoutes}
     {MarkdownTestRoutes}
     {MenuTestRoutes}
