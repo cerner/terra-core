@@ -2,6 +2,10 @@
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
   [dir=rtl] {
+    .content:focus {
+      outline: none;
+    }
+
     .rounded-corners {
       border-radius: 5px;
     }

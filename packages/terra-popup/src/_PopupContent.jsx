@@ -173,6 +173,11 @@ class PopupContent extends React.Component {
     if (isFullScreen && !isHeaderDisabled) {
       content = PopupContent.addPopupHeader(content, onRequestClose);
     }
+    
+    const contentClassNames = cx([
+      'content',
+      customProps.className,
+    ]);
 
     const roundedCorners = arrow && !isFullScreen;
     const arrowContent = roundedCorners ? arrow : undefined;
@@ -190,6 +195,7 @@ class PopupContent extends React.Component {
       <FocusTrap>
         <Hookshot.Content
           {...customProps}
+          className={contentClassNames}
           tabIndex="0"
           data-terra-popup-content
           onEsc={onRequestClose}
