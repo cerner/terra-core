@@ -13,8 +13,6 @@ The Terra List is a structural component to arrange content within list/listitem
 ```jsx
 import React from 'react';
 import List from 'terra-list';
-import SingleSelectList from 'terra-list/lib/SingleSelectList';
-import MultiSelectList from 'terra-list/lib/MultiSelectList';
 
 <List.Item
   content={<h1 blurb />}
@@ -27,21 +25,15 @@ import MultiSelectList from 'terra-list/lib/MultiSelectList';
   <List.Item content={<h1 blurb />} />
   <List.Item content={<h1 blurb />} />
 </List>
-
-<SingleSelectList isDivided={true} hasChevrons={false}>
-  <SingleSelectList.Item content={<h1 blurb />} />
-  <SingleSelectList.Item content={<h1 blurb />} />
-</SingleSelectList>
-
-<MultiSelectList isDivided={true} maxSelectionCount={3}>
-  <MultiSelectList.Item content={<h1 blurb />} />
-  <MultiSelectList.Item content={<h1 blurb />} />
-</MultiSelectList>
-
 ```
+
+Terra also provides two variations for the list component.
+
+* [Single Select List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/SingleSelect.md)
+
+* [Multi Select List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/MultiSelect.md)
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
-
