@@ -330,7 +330,7 @@ const getTargetCoords = (rect, attachment, offset) => {
     x: tCoords.x + offset.horizontal,
     y: tCoords.y + offset.vertical,
     attachment,
-    offset
+    offset,
   };
 };
 
