@@ -404,7 +404,7 @@ const getBasicPositions = (rect, attachment, offset, tCoords, margin) => {
  * @ param {number} margin - The px value of the attachmentMargin.
  * @ param {string} behavior - The fallback pattern for available rotations.
  */
-const getRotatedPositions = (positions, csRect, bRect, tRect, margin, behavior) => {
+const getRotatedPositions = (positions, cRect, bRect, tRect, margin, behavior) => {
   if (isValidPositions(positions, cRect, bRect)) {
     return positions; // default valid
   }
