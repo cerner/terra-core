@@ -29,6 +29,11 @@ class HookshotStandard extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.parentNode.scrollTop = 225;
+    this.parentNode.scrollLeft = 475;
+  }
+
   getId(name) {
     return name + this.state.id;
   }
@@ -111,8 +116,8 @@ class HookshotStandard extends React.Component {
           targetRef={() => document.getElementById('hookshot-bounded-button')}
         />
         <div style={{ height: '200px', width: '400px', background: 'aliceblue', overflow: 'auto', position: 'relative' }} ref={this.setParentNode}>
-          <div style={{ position: 'relative', height: '600px', width: '700px' }}>
-            <Button id="hookshot-bounded-button" text="Hookshot Example" onClick={this.handleButtonClick} style={{ position: 'absolute', left: '100px', top: '170px' }} />
+          <div style={{ position: 'relative', height: '600px', width: '1200px' }}>
+            <Button id="hookshot-bounded-button" text="Hookshot Example" onClick={this.handleButtonClick} style={{ position: 'absolute', left: '600px', top: '300px' }} />
           </div>
         </div>
         <br />
