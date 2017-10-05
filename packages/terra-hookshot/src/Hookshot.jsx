@@ -305,9 +305,9 @@ class Hookshot extends React.Component {
 
     this.cOffset = HookshotUtils.parseOffset(contentOffset);
     this.tOffset = HookshotUtils.parseOffset(targetOffset);
-    this.cAttachment = HookshotUtils.parseStringPair(contentAttachment);
+    this.cAttachment = HookshotUtils.parseAttachment(contentAttachment);
     if (targetAttachment) {
-      this.tAttachment = HookshotUtils.parseStringPair(targetAttachment);
+      this.tAttachment = HookshotUtils.parseAttachment(targetAttachment);
     } else {
       this.tAttachment = HookshotUtils.mirrorAttachment(this.cAttachment);
     }

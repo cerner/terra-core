@@ -1,4 +1,5 @@
 const BOUNDS_FORMAT = ['left', 'top', 'right', 'bottom'];
+
 const MIRROR_LR = {
   center: 'center',
   left: 'right',
@@ -12,7 +13,7 @@ const MIRROR_TB = {
 };
 
 /**
- * Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
+ * This function returns the size of an element and its position relative to the viewport. It takes into account parent <frame> offsets
  * if the element lies within a nested document (<frame> or <iframe>-like).
  *
  * @ param {htmlELement} node - The html reference to use to retrieve it's bounding rect values.
@@ -43,7 +44,7 @@ const getActualBoundingClientRect = (node) => {
 };
 
 /**
- * This function returns parent elements capable of scrolling until a fixed element or document is found.
+ * This function returns the list of parent elements capable of scrolling until a fixed element or document is found.
  *
  * @ param {htmlELement} element - The html reference to use to retrieve the parent nodes.
  */
@@ -90,30 +91,26 @@ const getScrollParents = (element) => {
 };
 
 /**
- * This function returns the bounds of a given html element.
+ * This function returns the bounds of an element.
  *
- * @ param {htmlELement} element - The html reference to use to retreieve it's bounds..
+ * @ param {htmlELement} element - The html reference to use to retrieve it's bounds.
  */
 const getBounds = (element) => {
-  let doc;
-  let currentElement = element;
-  if (element === document) {
-    doc = document;
-    currentElement = document.documentElement;
-  } else {
+  let doc = document;
+  let currentElement = document.documentElement;
+
+  if (element !== document) {
     doc = element.ownerDocument;
+    currentElement = element;
   }
 
   const docEl = doc.documentElement;
   const box = getActualBoundingClientRect(currentElement);
-  const origin = { top: 0, left: 0 };
-
-  box.top -= origin.top;
-  box.left -= origin.left;
 
   if (typeof box.width === 'undefined') {
     box.width = document.body.scrollWidth - box.left - box.right;
   }
+
   if (typeof box.height === 'undefined') {
     box.height = document.body.scrollHeight - box.top - box.bottom;
   }
@@ -123,19 +120,19 @@ const getBounds = (element) => {
   box.right = doc.body.clientWidth - box.width - box.left;
   box.bottom = doc.body.clientHeight - box.height - box.top;
 
-
   // round origin
   box.top = Math.round(box.top);
   box.right = Math.round(box.right);
   box.bottom = Math.round(box.bottom);
   box.left = Math.round(box.left);
+
   return box;
 };
 
 /**
- * This function returns the bounding rect for either window or a given element.
+ * This function returns the size of an element. It takes into account scroll offsets and border widths applied.
  *
- * @ param {htmlELement/string} boundingElement - THe value used to determine the size of bounding element..
+ * @ param {htmlELement/string} boundingElement - The value used to determine the size of bounding element.
  */
 const getBoundingRect = (boundingElement) => {
   if (boundingElement === 'window') {
@@ -158,11 +155,12 @@ const getBoundingRect = (boundingElement) => {
 
   // Account any parent Frames scroll offset
   if (boundingElement.ownerDocument !== document) {
-    const win = boundingElement.ownerDocument.defaultView;
-    rect.left += win.pageXOffset;
-    rect.top += win.pageYOffset;
-    rect.right += win.pageXOffset;
-    rect.bottom += win.pageYOffset;
+    const window = boundingElement.ownerDocument.defaultView;
+
+    rect.left += window.pageXOffset;
+    rect.top += window.pageYOffset;
+    rect.right += window.pageXOffset;
+    rect.bottom += window.pageYOffset;
   }
 
   BOUNDS_FORMAT.forEach((side) => {
@@ -179,6 +177,7 @@ const getBoundingRect = (boundingElement) => {
   rect.right = Math.round(rect.right);
   rect.bottom = Math.round(rect.bottom);
   rect.left = Math.round(rect.left);
+
   return rect;
 };
 
@@ -192,58 +191,53 @@ const switchAttachmentToRTL = attachment => ({ vertical: attachment.vertical, ho
 /**
  * This function returns the offset object, adjusted for RTL conversion.
  *
- * @ param {Object} tAttacoffsethment - The vertical and horizonal offset values..
+ * @ param {Object} offset - The vertical and horizonal offset values.
  */
 const switchOffsetToRTL = offset => ({ vertical: offset.vertical, horizontal: -offset.horizontal });
 
 /**
- * This function splits a given string into a vertical and horizontal object containing those values.
+ * This function splits a given attachment into an object representing the corresponding vertical and horizontal values.
  *
- * @ param {string} value - The value to split.
+ * @ param {string} attachment - The vertical-horizontal attachment value to split.
  */
-const parseStringPair = (value) => {
-  if (!value) {
+const parseAttachment = (attachment) => {
+  if (!attachment) {
     return { vertical: '', horizontal: '' };
   }
-  const [vertical, horizontal] = value.split(' ');
+  const [vertical, horizontal] = attachment.split(' ');
   return { vertical, horizontal };
 };
 
 /**
- * This function splits a given string into a vertical and horizontal object containing numeric values.
+ * This function splits a given offset string into an object representing the corresponding vertical and horizontal offset values.
  *
-* @ param {string} value - The value to split.
+ * @ param {string} value - The vertical-horizontal offset value to split.
  */
 const parseOffset = (value) => {
   if (!value) {
     return { vertical: 0, horizontal: 0 };
   }
 
-  const pair = parseStringPair(value);
+  const pair = parseAttachment(value);
   return { vertical: Number.parseFloat(pair.vertical), horizontal: Number.parseFloat(pair.horizontal) };
 };
 
 /**
- * This method returns an attachment object mirrored accross a determined axis.
+ * This function returns an attachment object containing the mirrored attachment values.
  *
  * @ param {Object} attachment - The vertical and horizonal hookshot attachments.
  */
 const mirrorAttachment = (attachment) => {
-  const mAttachment = {};
   if (attachment.vertical !== 'middle') {
-    mAttachment.horizontal = attachment.horizontal;
-    mAttachment.vertical = MIRROR_TB[attachment.vertical];
-  } else {
-    mAttachment.horizontal = MIRROR_LR[attachment.horizontal];
-    mAttachment.vertical = attachment.vertical;
+    return { vertical: MIRROR_TB[attachment.vertical], horizontal: attachment.horizontal };
   }
-  return mAttachment;
+  return { vertical: attachment.vertical, horizontal: MIRROR_LR[attachment.horizontal] };
 };
 
 /**
- * This function returns a mirrored offset value across an axis determined from the attachment.
+ * This function returns an offset object containing the mirrored offset values.
  *
- * @ param {Object} offset - The vertical and horizonal offset in px.
+ * @ param {Object} offset - The vertical and horizonal offset values.
  * @ param {Object} attachment - The vertical and horizonal hookshot attachments.
  */
 const mirrorOffset = (offset, attachment) => {
@@ -254,13 +248,14 @@ const mirrorOffset = (offset, attachment) => {
 };
 
 /**
- * This function returns the attachment value given an angle value.
+ * This function returns an attachment object containing the rotated attachment values given an angle value.
  *
  * @ param {Object} attachment - The vertical and horizonal hookshot attachments.
- * @ param {string} angle - Representation of the angle to rorte the attachment to.
+ * @ param {string} angle - Representation of the angle to rotate the attachment to.
  */
 const rotateContentAttachment = (attachment, angle) => {
   const rAttachment = {};
+
   if (attachment.vertical === 'middle') {
     if (angle === '90') {
       rAttachment.vertical = attachment.horizontal === 'left' ? 'bottom' : 'top';
@@ -276,19 +271,22 @@ const rotateContentAttachment = (attachment, angle) => {
     }
     rAttachment.vertical = 'middle';
   }
+
   return rAttachment;
 };
 
 /**
- * This function returns whether or not there is available space for the provided bounds and positions.
+ * This function returns whether or not there is available space to place the content given the provided bounds and positions of
+ * the content and bounding elements.
  *
- * @ param {Object} positions - The positional data to evaluate.
+ * @ param {Object} positions - The positional data of the content and target to evaluate.
  * @ param {Object} cRect - The content rectangle.
  * @ param {Object} bRect - The bounding rectangle.
  */
 const isValidPositions = (positions, cRect, bRect) => {
   const cCoords = positions.cCoords;
   const attachment = cCoords.attachment;
+
   if (attachment.vertical === 'middle') {
     if (attachment.horizontal === 'right') {
       return cCoords.x >= bRect.left;
@@ -299,15 +297,16 @@ const isValidPositions = (positions, cRect, bRect) => {
   } else if (attachment.vertical === 'top') {
     return cCoords.y + cRect.height <= bRect.bottom;
   }
+
   return cCoords.y >= bRect.top;
 };
 
 /**
- * Returns the screen coordinates for the target.
+ * This function returns the screen coordinates, attchment values and offset values for the target.
  *
  * @ param {Object} rect - The target rectangle.
- * @ param {Object} attachment - The target hookshot attachment.
- * @ param {Object} offset - The target offset.
+ * @ param {Object} attachment - The vertical and horizonal hookshot attachments of the target.
+ * @ param {Object} offset - The vertical and horizonal offset values of the target.
  */
 const getTargetCoords = (rect, attachment, offset) => {
   const tCoords = {};
@@ -326,13 +325,19 @@ const getTargetCoords = (rect, attachment, offset) => {
   } else {
     tCoords.x = rect.left;
   }
-  return { x: tCoords.x + offset.horizontal, y: tCoords.y + offset.vertical, attachment, offset };
+
+  return {
+    x: tCoords.x + offset.horizontal,
+    y: tCoords.y + offset.vertical,
+    attachment,
+    offset
+  };
 };
 
 /**
- * This function returns the screen coordinate value of the target attachment if mirrored.
+ * This function returns screen coordinates, attchment values and offset values of the target if mirrored.
  *
- * @ param {Object} tRect - The target rectangle..
+ * @ param {Object} tRect - The target rectangle.
  * @ param {Object} tAttachment - The vertical and horizonal hookshot attachments of the target.
  * @ param {Object} tOffset - The vertical and horizonal offset values of the target.
  * @ param {Object} cAttachment - The vertical and horizonal hookshot attachments of the content.
@@ -340,23 +345,27 @@ const getTargetCoords = (rect, attachment, offset) => {
 const mirrorTargetCoords = (tRect, tAttachment, tOffset, cAttachment) => {
   const mOffset = mirrorOffset(tOffset, tAttachment);
   let mAttachment = tAttachment;
+
   if (cAttachment.vertical === tAttachment.vertical || (cAttachment.vertical !== 'middle' && tAttachment.vertical !== 'middle')) {
     mAttachment = mirrorAttachment(tAttachment);
   }
+
   return getTargetCoords(tRect, mAttachment, mOffset);
 };
 
 /**
- * The function returns the unadjusted content positional value.
+ * This function returns the relative positional data of the content and target. Positional data includes
+ * the screen coordinates, attchment values and offset values.
  *
  * @ param {Object} rect - The content rectangle.
  * @ param {Object} attachment - The vertical and horizonal hookshot attachments of the content.
- * @ param {Object} offset - The content offset value.
- * @ param {Object} tCoords - The screen coordinates of the target.
+ * @ param {Object} offset - The vertical and horizonal offset values of the content.
+ * @ param {Object} tCoords - The positional data of the target.
  * @ param {number} margin - The px value of the attachmentMargin.
  */
-const getBasicPositions = (rect, attachment, offset, tCoords, margin) => {
+const getRelativePositions = (rect, attachment, offset, tCoords, margin) => {
   const cCoords = {};
+
   if (attachment.vertical === 'middle') {
     if (attachment.horizontal === 'center') {
       cCoords.x = tCoords.x - (rect.width / 2);
@@ -395,46 +404,47 @@ const getBasicPositions = (rect, attachment, offset, tCoords, margin) => {
 };
 
 /**
- * This method returns parent elements capable of scrolling until a fixed element or document is found.
+ * This function attempts to rotate the content element given the attachmnt behavior and returns the corresponding positional data.
+ * Positional data includes the screen coordinates, attchment values and offset values.
  *
- * @ param {Object} positions - The basic positional values to be evaluated.
+ * @ param {Object} positions - The relative positional data of the content and target to evaluate.
  * @ param {Object} cRect - The content rectangle.
  * @ param {Object} bRect - The bounding rectangle.
  * @ param {Object} tRect - The target rectangle.
  * @ param {number} margin - The px value of the attachmentMargin.
- * @ param {string} behavior - The fallback pattern for available rotations.
+ * @ param {string} behavior - The attachemnt behavior which indicates the available content rotations.
  */
 const getRotatedPositions = (positions, cRect, bRect, tRect, margin, behavior) => {
-  if (isValidPositions(positions, cRect, bRect)) {
-    return positions; // default valid
-  }
-
   if (behavior !== 'none') {
+    // Attempt to flip content 180 degrees
     let newOffset = mirrorOffset(positions.cCoords.offset, positions.cCoords.attachment);
     let newAttachment = mirrorAttachment(positions.cCoords.attachment);
     let newTCoords = mirrorTargetCoords(tRect, positions.tCoords.attachment, positions.tCoords.offset, positions.cCoords.attachment);
-    let newPositions = getBasicPositions(cRect, newAttachment, newOffset, newTCoords, margin);
+    let newPositions = getRelativePositions(cRect, newAttachment, newOffset, newTCoords, margin);
 
     if (isValidPositions(newPositions, cRect, bRect)) {
-      return newPositions; // 180 degree valid
+      return newPositions; // 180 degree rotation is valid
     }
 
     if (behavior === 'auto') {
       newOffset = { vertical: 0, horizontal: 0 };
+
+      // Attempt to flip content 90 degrees
       newAttachment = rotateContentAttachment(positions.cCoords.attachment, '90');
       newTCoords = getTargetCoords(tRect, mirrorAttachment(newAttachment), newOffset);
-      newPositions = getBasicPositions(cRect, newAttachment, newOffset, newTCoords, margin);
+      newPositions = getRelativePositions(cRect, newAttachment, newOffset, newTCoords, margin);
 
       if (isValidPositions(newPositions, cRect, bRect)) {
-        return newPositions; // 90degree valid
+        return newPositions; // 90 degree rotation is valid
       }
 
+      // Attempt to flip content -90 degrees
       newAttachment = rotateContentAttachment(positions.cCoords.attachment, '-90');
       newTCoords = getTargetCoords(tRect, mirrorAttachment(newAttachment), newOffset);
-      newPositions = getBasicPositions(cRect, newAttachment, newOffset, newTCoords, margin);
+      newPositions = getRelativePositions(cRect, newAttachment, newOffset, newTCoords, margin);
 
       if (isValidPositions(newPositions, cRect, bRect)) {
-        return newPositions; // -90degree valid
+        return newPositions; // -90 degree rotation is valid
       }
     }
   }
@@ -443,17 +453,19 @@ const getRotatedPositions = (positions, cRect, bRect, tRect, margin, behavior) =
 };
 
 /**
- * The function returns positional data adjusted for bounding rectangle. Ensuring its within the bounding rect.
+ * This function adjusts the contents positional data to ensure it fits for bounding rectangle. Returns weather or
+ * not the content was bounded and the positional data of the content and target to evaluate. Positional data includes
+ * the screen coordinates, attchment values and offset values.
  *
- * @ param {Object} positions - The positional data to be adjusted.
+ * @ param {Object} positions - The positional data of the content and target to evaluate.
  * @ param {Object} cRect - The content rectangle.
- * @ param {Object} bRect - The bounding rectangle
+ * @ param {Object} bRect - The bounding rectangle.
  */
 const getBoundedPositions = (positions, cRect, bRect) => {
   const cCoords = {};
   let bounded = false;
 
-  // Bounds Checks Horizontal
+  // Checks Horizontal Bounds
   if (bRect.left >= positions.cCoords.x) {
     cCoords.x = bRect.left;
   } else if (bRect.right <= positions.cCoords.x + cRect.width) {
@@ -462,7 +474,7 @@ const getBoundedPositions = (positions, cRect, bRect) => {
     cCoords.x = positions.cCoords.x;
   }
 
-  // Bounds Checks Vertical
+  // Checks Vertical Bounds
   if (bRect.top >= positions.cCoords.y) {
     cCoords.y = bRect.top;
     bounded = true;
@@ -486,22 +498,31 @@ const getBoundedPositions = (positions, cRect, bRect) => {
 };
 
 /**
- * The function returns the positional data to be used to position the hookshot content.
+ * The function returns the style and positional data the hookshot content and target. Positional data includes
+ * the screen coordinates, attchment values and offset values.
  *
  * @ param {Object} boundingRect - The bounding rectangle.
  * @ param {Object} targetRect - The target rectangle.
  * @ param {Object} contentRect - The content rectangle.
- * @ param {Object} cOffset - The vertical and horizonal offset of the content in px.
- * @ param {Object} tOffset - The vertical and horizonal offset of the target  in px.
+ * @ param {Object} cOffset - The vertical and horizonal offset values of the content.
+ * @ param {Object} tOffset - The vertical and horizonal offset values of the target.
  * @ param {Object} cAttachment - The vertical and horizonal hookshot attachments of the content.
  * @ param {Object} tAttachment - The vertical and horizonal hookshot attachments of the target.
  * @ param {number} margin - The px value of the attachmentMargin.
- * @ param {string} behavior - The fallback pattern for available rotations.
+ * @ param {string} behavior - The attachemnt behavior which indicates the available content rotations.
  */
 const positionStyleFromBounds = (boundingRect, targetRect, contentRect, cOffset, tOffset, cAttachment, tAttachment, margin, behavior) => {
   const tCoords = getTargetCoords(targetRect, tAttachment, tOffset);
-  let positions = getBasicPositions(contentRect, cAttachment, cOffset, tCoords, margin);
-  positions = getRotatedPositions(positions, contentRect, boundingRect, targetRect, margin, behavior);
+
+  // Get relative content and target positions
+  let positions = getRelativePositions(contentRect, cAttachment, cOffset, tCoords, margin);
+
+  if (!isValidPositions(positions, contentRect, boundingRect)) {
+    // Try to rotated the content to fit
+    positions = getRotatedPositions(positions, contentRect, boundingRect, targetRect, margin, behavior);
+  }
+
+  // Get bounded content and target positions
   positions = getBoundedPositions(positions, contentRect, boundingRect);
 
   const result = {
@@ -531,7 +552,7 @@ export default {
   mirrorAttachment,
   switchAttachmentToRTL,
   switchOffsetToRTL,
-  parseStringPair,
+  parseAttachment,
   parseOffset,
   positionStyleFromBounds,
 };
