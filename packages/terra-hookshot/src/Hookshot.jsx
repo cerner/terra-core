@@ -201,6 +201,9 @@ class Hookshot extends React.Component {
     if (resetCache) {
       this.cachedRects = this.getNodeRects();
     } else {
+      if (this.props.boundingRef) {
+        this.cachedRects.boundingRect = HookshotUtils.getBoundingRect(this.props.boundingRef());
+      }
       this.cachedRects.targetRect = HookshotUtils.getBounds(this.props.targetRef());
     }
 

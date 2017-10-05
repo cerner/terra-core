@@ -72,7 +72,7 @@ const getScrollParents = (element) => {
 
     const { overflow, overflowX, overflowY } = style;
     if (/(auto|scroll|overlay)/.test(overflow + overflowY + overflowX)) {
-      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
+      if (position !== 'absolute' || ['relative', 'absolute', 'fixed', 'static'].indexOf(style.position) >= 0) {
         parents.push(parent);
       }
     }

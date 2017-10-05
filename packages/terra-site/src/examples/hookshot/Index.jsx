@@ -14,6 +14,7 @@ import HookshotContentSrc from '!raw-loader!terra-hookshot/src/HookshotContent';
 
 // Example Files
 import HookshotExample from './HookshotExample';
+import BoundedHookshotExample from './BoundedHookshotExample';
 
 const HookshotExamples = () => (
   <div>
@@ -21,8 +22,10 @@ const HookshotExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props-hookshot" src={HookshotSrc} componentName="Hookshot" />
     <PropsTable id="props-hookshot-content" src={HookshotContentSrc} componentName="Hookshot Content" />
-    <h2>Hookshot</h2>
+    <h2>Window Bound Hookshot</h2>
     <HookshotExample />
+    <h2>Container Bound Hookshot</h2>
+    <BoundedHookshotExample />
   </div>
 );
 

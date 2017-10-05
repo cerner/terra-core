@@ -17,6 +17,8 @@ class HookshotStandard extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.handleSelectChange = this.handleSelectChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.setParentNode = this.setParentNode.bind(this);
+    this.getParentNode = this.getParentNode.bind(this);
     this.getId = this.getId.bind(this);
     this.state = {
       isOpen: false,
@@ -29,6 +31,14 @@ class HookshotStandard extends React.Component {
 
   getId(name) {
     return name + this.state.id;
+  }
+
+  setParentNode(node) {
+    this.parentNode = node;
+  }
+
+  getParentNode() {
+    return this.parentNode;
   }
 
   handleButtonClick() {
@@ -92,14 +102,19 @@ class HookshotStandard extends React.Component {
         <Hookshot
           attachmentBehavior={this.state.hookshotAttachmentBehavior}
           attachmentMargin={this.state.hookshotAttachmentMargin}
+          boundingRef={this.getParentNode}
           content={hookshotContent}
           contentAttachment={this.state.hookshotContentAttachment}
           isEnabled
           isOpen={this.state.isOpen}
           targetAttachment={this.state.hookshotTargetAttachment}
-          targetRef={() => document.getElementById('hookshot-standard-button')}
+          targetRef={() => document.getElementById('hookshot-bounded-button')}
         />
-        <Button id="hookshot-standard-button" text="Hookshot Example" onClick={this.handleButtonClick} />
+        <div style={{ height: '200px', width: '400px', background: 'aliceblue', overflow: 'auto', position: 'relative' }} ref={this.setParentNode}>
+          <div style={{ position: 'relative', height: '600px', width: '100%' }}>
+            <Button id="hookshot-bounded-button" text="Hookshot Example" onClick={this.handleButtonClick} style={{ position: 'absolute', left: '20px', top: '170px' }} />
+          </div>
+        </div>
         <br />
         <br />
         <br />
