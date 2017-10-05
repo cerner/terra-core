@@ -41,24 +41,6 @@ module.exports = {
           },
         }, {
           loader: 'postcss-loader',
-          options: {
-            plugins() {
-              return [
-                Autoprefixer({
-                  browsers: [
-                    'ie >= 10',
-                    'last 2 versions',
-                    'last 2 android versions',
-                    'last 2 and_chr versions',
-                    'iOS >= 8',
-                  ],
-                }),
-                CustomProperties({ preserve: true, warnings: false }),
-                ThemingPlugin,
-                rtl(),
-              ];
-            },
-          },
         },
         {
           loader: 'sass-loader',

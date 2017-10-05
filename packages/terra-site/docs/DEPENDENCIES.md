@@ -62,26 +62,26 @@
 |-|-|-|-|
 | autoprefixer | ^6.7.7 | -- | Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website |
 | babel-cli | ^6.24.1 | -- | Babel command line. |
-| babel-loader | ^7.0.0 | -- | babel module loader for webpack |
+| babel-loader | ^7.1.2 | -- | babel module loader for webpack |
 | babel-polyfill | ^6.23.0 | -- | Provides polyfills necessary for a full ES2015+ environment |
-| clean-webpack-plugin | ^0.1.16 | -- | A webpack plugin to remove your build folder(s) before building |
-| css-loader | ^0.28.0 | -- | css loader module for webpack |
-| extract-text-webpack-plugin | ^2.1.0 | -- | Extract text from bundle into a file. |
-| file-loader | ^0.11.1 | -- | file loader module for webpack |
+| clean-webpack-plugin | ^0.1.17 | -- | A webpack plugin to remove your build folder(s) before building |
+| css-loader | ^0.28.7 | -- | css loader module for webpack |
+| extract-text-webpack-plugin | ^3.0.1 | -- | Extract text from bundle into a file. |
+| file-loader | ^1.1.5 | -- | file loader module for webpack |
 | gh-pages | ^0.12.0 | -- | Publish to a gh-pages branch on GitHub (or any other branch on any other remote) |
-| html-webpack-plugin | ^2.28.0 | -- | Simplifies creation of HTML files to serve your webpack bundles |
-| json-loader | ^0.5.4 | -- | json loader module for webpack |
+| html-webpack-plugin | ^2.30.1 | -- | Simplifies creation of HTML files to serve your webpack bundles |
+| json-loader | ^0.5.7 | -- | json loader module for webpack |
 | node-sass | ^4.5.2 | -- | Wrapper around libsass |
-| postcss-custom-properties | ^6.0.1 | -- | PostCSS plugin to polyfill W3C CSS Custom Properties for cascading variables |
-| postcss-loader | ^1.3.3 | -- | PostCSS loader for webpack |
-| postcss-rtl | ^0.5.10 | -- | PostCSS plugin for RTL-optimizations |
+| postcss-custom-properties | ^6.1.0 | -- | PostCSS plugin to polyfill W3C CSS Custom Properties for cascading variables |
+| postcss-loader | ^2.0.6 | -- | PostCSS loader for webpack |
+| postcss-rtl | 1.1.2 | -- | PostCSS plugin for RTL-optimizations |
 | raw-loader | ^0.5.1 | -- | raw loader module for webpack |
 | react | ^15.4.2 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^15.4.2 | ^15.6.1 | React package for working with the DOM. |
-| sass-loader | ^6.0.3 | -- | Sass loader for webpack |
-| style-loader | ^0.16.1 | -- | style loader module for webpack |
-| webpack | ^2.6.1 | -- | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. |
-| webpack-dev-server | ^2.4.5 | -- | Serves a webpack app. Updates the browser on changes. |
+| sass-loader | ^6.0.6 | -- | Sass loader for webpack |
+| style-loader | ^0.19.0 | -- | style loader module for webpack |
+| webpack | ^3.6.0 | -- | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. |
+| webpack-dev-server | ^2.9.1 | -- | Serves a webpack app. Updates the browser on changes. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
