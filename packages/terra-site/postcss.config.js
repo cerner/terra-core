@@ -12,7 +12,7 @@ module.exports = {
           'last 2 versions',
           'last 2 android versions',
           'last 2 and_chr versions',
-          'iOS >= 8',
+          'iOS >= 10',
         ],
       }),
       CustomProperties({ preserve: true, warnings: false }),
