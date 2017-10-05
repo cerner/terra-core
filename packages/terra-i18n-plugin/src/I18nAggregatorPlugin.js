@@ -39,7 +39,6 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
       }
     });
   } catch (e) {
-    // eslint-disable-line no-use-before-defin
     // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
 
@@ -50,7 +49,6 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
       aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), compiler);
     });
   } catch (e) {
-    // eslint-disable-line no-use-before-defin
     // not outputting anything here as the catching of the directories not existing is not an error in this case
   }
 
