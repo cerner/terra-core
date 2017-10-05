@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import mkdirp from 'mkdirp';
 
 let supportedLocales;
 
@@ -15,42 +14,48 @@ const messages = ${JSON.stringify(messages, null, 2)};
 module.exports = {
   areTranslationsLoaded: true,
   locale: '${language}',
-  messages,
+  messages: messages
 };`;
 }
 
-function getDirectories(srcPath) {
-  return fs.readdirSync(srcPath).filter(file => fs.statSync(path.join(srcPath, file)).isDirectory());
+function getDirectories(srcPath, compiler) {
+  return compiler.inputFileSystem.readdirSync(srcPath).filter(file => compiler.inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-function aggregateDirectory(languageMessages, currentDirectory) {
+function aggregateDirectory(languageMessages, currentDirectory, compiler) {
   // Check the directory for translations
   const translationsDirectory = path.resolve(currentDirectory, 'translations');
-  if (fs.existsSync(translationsDirectory)) {
+  try {
+    // Check if the directory exists by attempting to read from it
+    compiler.inputFileSystem.readdirSync(translationsDirectory);
+
     // Check the directory for each translation file
     supportedLocales.forEach((language) => {
       const translationFile = path.resolve(translationsDirectory, `${language}.json`);
-      if (fs.existsSync(translationFile)) {
-        Object.assign(languageMessages[language], JSON.parse(fs.readFileSync(translationFile, 'utf8')));
-      } else {
-        // eslint-disable-next-line no-console
+      try {
+        Object.assign(languageMessages[language], JSON.parse(compiler.inputFileSystem.readFileSync(translationFile, 'utf8')));
+      } catch (e) {
         console.warn(`Translation file ${language}.json not found for ${translationsDirectory}`);
       }
     });
+  } catch (e) {
+    // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
 
   // Check the directory's node_modules for translation files
   const nodeMoudlesPath = path.resolve(currentDirectory, 'node_modules');
-  if (fs.existsSync(nodeMoudlesPath)) {
-    getDirectories(nodeMoudlesPath).forEach((module) => {
-      aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module));
+  try {
+    getDirectories(nodeMoudlesPath, compiler).forEach((module) => {
+      aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), compiler);
     });
+  } catch (e) {
+    // not outputting anything here as the catching of the directories not existing is not an error in this case
   }
 
   return languageMessages;
 }
 
-function aggregateTranslations(options) {
+function aggregateTranslationMessages(options, compiler) {
   if (!options.baseDirectory) {
     throw new Error('Please included the base directory path in the plugin options.');
   }
@@ -65,19 +70,36 @@ function aggregateTranslations(options) {
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
   // Aggregate translation messages for the directory
-  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory);
+  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, compiler);
+  return languageMessages;
+}
 
-  // Create the aggregated-translations directory
-  mkdirp.sync(path.resolve(options.baseDirectory, 'aggregated-translations'));
+function aggregateTranslations(options, compiler) {
+  compiler.plugin('after-environment', () => {
+    // Aggregate translation messages for the directory
+    const languageMessages = aggregateTranslationMessages(options, compiler);
+    const directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
+    let outputFileSystem = options.outputFileSystem;
 
-  // Create a file for each language for the aggregated messages
-  supportedLocales.forEach((language) => {
-    if (language in languageMessages) {
-      fs.writeFileSync(path.resolve(options.baseDirectory, 'aggregated-translations', `${language}.js`),
-        generateTranslationFile(language, languageMessages[language]));
+    // Create the aggregated-translations directory
+    if (outputFileSystem) {
+      outputFileSystem.mkdirpSync(directoryPath);
     } else {
-      throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
+      outputFileSystem = fs;
+      if (!outputFileSystem.existsSync(directoryPath)) {
+        outputFileSystem.mkdirSync(directoryPath);
+      }
     }
+
+    // Create a file for each language for the aggregated messages
+    supportedLocales.forEach((language) => {
+      if (language in languageMessages) {
+        outputFileSystem.writeFileSync(path.resolve(directoryPath, `${language}.js`),
+          generateTranslationFile(language, languageMessages[language]));
+      } else {
+        throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
+      }
+    });
   });
 }
 
