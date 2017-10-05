@@ -8,8 +8,8 @@ import SingleSelectIndex from './components/SingleSelectIndex';
 
 const routes = (
   <div>
-    <Route path="/site/list/multi-select" component={MultiSelectIndex} />
     <Route path="/site/list/single-select" component={SingleSelectIndex} />
+    <Route path="/site/list/multi-select" component={MultiSelectIndex} />
   </div>
 );
 
