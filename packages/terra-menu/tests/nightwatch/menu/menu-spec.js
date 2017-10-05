@@ -1,4 +1,5 @@
- // eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable no-unused-expressions */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
@@ -40,9 +41,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.visible('.TestFirstItem')
       .assert.visible('.TestLastItem');
   },
-  'Displays a selectable menu with apropriate spacing': (browser) => {
+  'Displays a selectable menu when there are selectable and unselectable items': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/menu-tests/selectable`)
+      .url(`${browser.launchUrl}/#/tests/menu-tests/selectable-and-unselectable`)
       .assert.hidden('.TestNonSelectableItem svg[class*="_checkmark"]')
       .assert.hidden('.TestSelectableItem svg[class*="_checkmark"]');
   },
@@ -60,5 +61,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.visible('div[class*="_header"] > div:first-child div[class*="_header-button"]')
       .assert.hidden('div[class*="_header"] > div:last-child > button[class*="_header-button"]')
       .keys([browser.Keys.ESCAPE]);
+  },
+  'Displays a selectable menu when there is one child': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/menu-tests/selectable`)
+      .click('.TestGroupItem3');
+    browser.expect.element('.TestGroupItem3 svg[class*="_checkmark"]').to.be.visible;
   },
 });
