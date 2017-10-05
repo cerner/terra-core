@@ -19,6 +19,6 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.5.4 | ^15.6.2 | React package for working with the DOM. |
+| react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
 | terra-base | ^2.5.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-icon | ^1.11.0 | ^15.4.2 | terra-icon |

@@ -1,8 +1,17 @@
 # Dependency Information
 
+## dependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| canvas | ^1.6.7 | -- | Canvas graphics API backed by Cairo |
+| chromedriver | ^2.32.3 | -- | ChromeDriver for Selenium |
+
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
+| @storybook/addon-storyshots | ^3.2.11 | * | StoryShots is a Jest Snapshot Testing Addon for Storybook. |
+| @storybook/react | ^3.2.11 | >=15.0.0 \|\| ^16.0.0-alpha | Storybook for React: Develop React Component in isolation with Hot Reloading. |
+| autoprefixer | ^6.7.7 | -- | Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website |
 | babel-cli | ^6.24.1 | -- | Babel command line. |
 | babel-core | ^6.24.1 | -- | Babel compiler core. |
 | babel-jest | ^20.0.0 | -- | Jest plugin to use babel for transformation. |
@@ -27,13 +36,20 @@
 | link-parent-bin | ^0.1.3 | -- | [![Build Status](https://travis-ci.org/nicojs/node-link-parent-bin.svg?branch=master)](https://travis-ci.org/nicojs/node-link-parent-bin) |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
 | nightwatch | ^0.9.12 | -- | A node.js bindings implementation for selenium 2.0/webdriver |
+| node-sass | ^4.5.2 | -- | Wrapper around libsass |
+| postcss-custom-properties | ^6.0.1 | -- | PostCSS plugin to polyfill W3C CSS Custom Properties for cascading variables |
+| postcss-loader | ^1.3.3 | -- | PostCSS loader for webpack |
+| postcss-rtl | ^0.5.10 | -- | PostCSS plugin for RTL-optimizations |
 | react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.5.4 | ^15.6.2 | React package for working with the DOM. |
-| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 \|\| ^16.0.0-rc | A complete routing library for React |
-| react-test-renderer | ^15.5.4 | ^15.6.2 | React package for snapshot testing. |
+| react-dom | ^15.5.4 | ^15.6.1 | React package for working with the DOM. |
+| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 | A complete routing library for React |
+| react-test-renderer | ^15.5.4 | ^15.6.1 | React package for snapshot testing. |
 | rimraf | ^2.6.1 | -- | A deep deletion module for node (like `rm -rf`) |
+| sass-loader | ^6.0.3 | -- | Sass loader for webpack |
 | shelljs | ^0.7.7 | -- | Portable Unix shell commands for Node.js |
+| style-loader | ^0.16.1 | -- | style loader module for webpack |
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
 | stylelint-config-sass-guidelines | ^3.0.0 | -- | Sharable stylelint config based on https://sass-guidelin.es/ |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
+| terra-i18n-plugin | ^1.5.0 | ^15.4.2 | The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n. |
 | terra-toolkit | ^2.0.0 | ^15.4.2 | Utilities to help when developing terra modules. |
