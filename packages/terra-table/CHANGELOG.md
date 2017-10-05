@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Refactor nightwatch tests
+
+### Fixed
+* Initial Single Select Table render to accept an isSelected Row
 
 1.12.0 - (September 26, 2017)
 ------------------
