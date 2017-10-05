@@ -1,5 +1,6 @@
 /* globals spyOn */
 /* eslint-disable global-require */
+/* eslint no-underscore-dangle: ["error", { "allow": ["_plugins"] }] */
 import fs from 'fs';
 import I18nAggregatorPlugin from '../src/I18nAggregatorPlugin';
 

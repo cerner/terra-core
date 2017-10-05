@@ -75,47 +75,32 @@ function aggregateTranslationMessages(options, compiler) {
 }
 
 function aggregateTranslations(options, compiler) {
-  if (options.outputFileSystem) {
-    compiler.plugin('after-environment', () => {
-      // Aggregate translation messages for the directory
-      const languageMessages = aggregateTranslationMessages(options, compiler);
-      const directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
+  compiler.plugin('after-environment', () => {
+    // Aggregate translation messages for the directory
+    const languageMessages = aggregateTranslationMessages(options, compiler);
+    const directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
+    let outputFileSystem = options.outputFileSystem;
 
-      // Create the aggregated-translations directory
-      options.outputFileSystem.mkdirpSync(directoryPath);
-
-      // Create a file for each language for the aggregated messages
-      supportedLocales.forEach((language) => {
-        if (language in languageMessages) {
-          options.outputFileSystem.writeFileSync(path.resolve(directoryPath, `${language}.js`),
-            generateTranslationFile(language, languageMessages[language]));
-        } else {
-          throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
-        }
-      });
-    });
-  } else {
-    compiler.plugin('after-environment', () => {
-      // Aggregate translation messages for the directory
-      const languageMessages = aggregateTranslationMessages(options, compiler);
-      const directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
-
-      // Create the aggregated-translations directory
-      if (!fs.existsSync(directoryPath)) {
-        fs.mkdirSync(directoryPath);
+    // Create the aggregated-translations directory
+    if (outputFileSystem) {
+      outputFileSystem.mkdirpSync(directoryPath);
+    } else {
+      outputFileSystem = fs;
+      if (!outputFileSystem.existsSync(directoryPath)) {
+        outputFileSystem.mkdirSync(directoryPath);
       }
+    }
 
-      // Create a file for each language for the aggregated messages
-      supportedLocales.forEach((language) => {
-        if (language in languageMessages) {
-          fs.writeFileSync(path.resolve(directoryPath, `${language}.js`),
-            generateTranslationFile(language, languageMessages[language]));
-        } else {
-          throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
-        }
-      });
+    // Create a file for each language for the aggregated messages
+    supportedLocales.forEach((language) => {
+      if (language in languageMessages) {
+        outputFileSystem.writeFileSync(path.resolve(directoryPath, `${language}.js`),
+          generateTranslationFile(language, languageMessages[language]));
+      } else {
+        throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
+      }
     });
-  }
+  });
 }
 
 module.exports = (options) => {
