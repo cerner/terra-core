@@ -155,12 +155,12 @@ const getBoundingRect = (boundingElement) => {
 
   // Account any parent Frames scroll offset
   if (boundingElement.ownerDocument !== document) {
-    const window = boundingElement.ownerDocument.defaultView;
+    const parentView = boundingElement.ownerDocument.defaultView;
 
-    rect.left += window.pageXOffset;
-    rect.top += window.pageYOffset;
-    rect.right += window.pageXOffset;
-    rect.bottom += window.pageYOffset;
+    rect.left += parentView.pageXOffset;
+    rect.top += parentView.pageYOffset;
+    rect.right += parentView.pageXOffset;
+    rect.bottom += parentView.pageYOffset;
   }
 
   BOUNDS_FORMAT.forEach((side) => {
