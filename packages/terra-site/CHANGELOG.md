@@ -15,6 +15,7 @@ Unreleased
 * Selectable Table Test Routes
 
 ### Changed
+* Break out list examples into their own pages.
 * Break out static and themeable icon examples into their own pages
 
 1.11.0 - (September 19, 2017)
