@@ -283,7 +283,7 @@ const rotateContentAttachment = (attachment, angle) => {
  * This function returns whether or not there is available space for the provided bounds and positions.
  *
  * @ param {Object} positions - The positional data to evaluate.
- * @ param {Object} cRect - The content rectance.
+ * @ param {Object} cRect - The content rectangle.
  * @ param {Object} bRect - The bounding rectangle.
  */
 const isValidPositions = (positions, cRect, bRect) => {
@@ -349,7 +349,7 @@ const mirrorTargetCoords = (tRect, tAttachment, tOffset, cAttachment) => {
 /**
  * The function returns the unadjusted content positional value.
  *
- * @ param {Object} rect - The content rectable.
+ * @ param {Object} rect - The content rectangle.
  * @ param {Object} attachment - The vertical and horizonal hookshot attachments of the content.
  * @ param {Object} offset - The content offset value.
  * @ param {Object} tCoords - The screen coordinates of the target.
@@ -398,7 +398,7 @@ const getBasicPositions = (rect, attachment, offset, tCoords, margin) => {
  * This method returns parent elements capable of scrolling until a fixed element or document is found.
  *
  * @ param {Object} positions - The basic positional values to be evaluated.
- * @ param {Object} cRect - The content rectangl.e
+ * @ param {Object} cRect - The content rectangle.
  * @ param {Object} bRect - The bounding rectangle.
  * @ param {Object} tRect - The target rectangle.
  * @ param {number} margin - The px value of the attachmentMargin.
