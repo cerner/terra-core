@@ -69,14 +69,14 @@ class MenuContent extends React.Component {
   }
 
   isSelectable() {
-    for (let i = 0; i < this.props.children.length; i += 1) {
-      const child = this.props.children[i];
+    let isSelectable = false;
+    React.Children.forEach(this.props.children, (child) => {
       if (child.props.children || child.props.isSelectable) {
-        return true;
+        isSelectable = true;
       }
-    }
+    });
 
-    return false;
+    return isSelectable;
   }
 
   wrapOnClick(item) {
