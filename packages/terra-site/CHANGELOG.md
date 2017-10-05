@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Typos
 
 1.12.0 - (September 26, 2017)
 ------------------

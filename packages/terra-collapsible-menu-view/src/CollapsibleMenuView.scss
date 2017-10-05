@@ -33,6 +33,10 @@
       margin: 0;
     }
 
+    .is-disabled {
+      opacity: 0.3;
+    }
+
     &:first-child {
       padding-left: 0;
     }
@@ -41,6 +45,10 @@
   .divider {
     border-right: 1px solid #dedfe0;
     height: 2.143rem;
+  }
+
+  .is-calculating {
+    visibility: hidden;
   }
   /* stylelint-enable */
 }
