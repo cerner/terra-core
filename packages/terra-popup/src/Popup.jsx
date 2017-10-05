@@ -112,10 +112,6 @@ class Popup extends React.Component {
     this.contentWidth = PopupWidths[props.contentWidth];
   }
 
-  componentDidMount() {
-    this.windowWidth = window.innerWidth;
-  }
-
   componentWillReceiveProps(newProps) {
     this.isContentSized = newProps.contentHeight !== 'dynamic' && newProps.contentWidth !== 'dynamic';
     this.contentHeight = PopupHeights[newProps.contentHeight];
@@ -244,6 +240,8 @@ class Popup extends React.Component {
     if (!isOpen) {
       return null;
     }
+    // Value used to verify vertical resize.
+    this.windowWidth = window.innerWidth;
 
     let tAttachment;
     const cAttachment = Hookshot.Utils.parseStringPair(contentAttachment);
