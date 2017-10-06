@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.12.0 - (October 6, 2017)
+------------------
 ### Changed
 * Update table test links to be 'Table Tests' and 'Single Select Table Links'
 
