@@ -68,6 +68,7 @@ class MenuContent extends React.Component {
 
   onKeyDownBackButton(event) {
     if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+      event.preventDefault();
       this.props.onRequestBack();
     }
   }
@@ -86,6 +87,7 @@ class MenuContent extends React.Component {
   wrapOnClick(item) {
     const onClick = item.props.onClick;
     return (event) => {
+      event.preventDefault();
       if (this.state.focusIndex !== -1) {
         this.setState({ focusIndex: -1 });
       }
@@ -100,6 +102,7 @@ class MenuContent extends React.Component {
   wrapOnKeyDown(item, index) {
     const onKeyDown = item.props.onKeyDown;
     return ((event) => {
+      event.preventDefault();
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
           this.props.onRequestNext(item);
