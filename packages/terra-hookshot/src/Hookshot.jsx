@@ -207,14 +207,13 @@ class Hookshot extends React.Component {
       this.cachedRects.targetRect = HookshotUtils.getBounds(this.props.targetRef());
     }
 
+    this.content.rect = this.cachedRects.contentRect;
+    this.target.rect = this.cachedRects.targetRect;
+
     const result = HookshotUtils.positionStyleFromBounds(
       this.cachedRects.boundingRect,
-      this.cachedRects.targetRect,
-      this.cachedRects.contentRect,
-      this.cOffset,
-      this.tOffset,
-      this.cAttachment,
-      this.tAttachment,
+      this.content,
+      this.target,
       this.props.attachmentMargin,
       this.props.attachmentBehavior,
     );
@@ -235,16 +234,13 @@ class Hookshot extends React.Component {
     }
     if (styleUpdated) {
       this.cachedRects.contentRect = HookshotUtils.getBounds(this.contentNode);
+      result.positions.content.rect = this.cachedRects.contentRect;
     }
 
     if (this.props.onPosition) {
       this.props.onPosition(
         event,
-        this.cachedRects.targetRect,
-        this.cachedRects.contentRect,
-        result.positions.cCoords.attachment,
-        result.positions.tCoords.attachment,
-        result.positions.tCoords.offset,
+        result.positions,
       );
     }
   }
@@ -303,20 +299,20 @@ class Hookshot extends React.Component {
       return null;
     }
 
-    this.cOffset = HookshotUtils.parseOffset(contentOffset);
-    this.tOffset = HookshotUtils.parseOffset(targetOffset);
-    this.cAttachment = HookshotUtils.parseAttachment(contentAttachment);
-    if (targetAttachment) {
-      this.tAttachment = HookshotUtils.parseAttachment(targetAttachment);
-    } else {
-      this.tAttachment = HookshotUtils.mirrorAttachment(this.cAttachment);
-    }
+    this.content = {
+      offset: HookshotUtils.parseOffset(contentOffset),
+      attachment: HookshotUtils.parseAttachment(contentAttachment),
+    };
+    this.target = {
+      offset: HookshotUtils.parseOffset(targetOffset),
+      attachment: targetAttachment ? HookshotUtils.parseAttachment(targetAttachment) : HookshotUtils.mirrorAttachment(this.content.attachment),
+    };
 
     if (document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl') {
-      this.cOffset = HookshotUtils.switchOffsetToRTL(this.cOffset);
-      this.tOffset = HookshotUtils.switchOffsetToRTL(this.tOffset);
-      this.cAttachment = HookshotUtils.switchAttachmentToRTL(this.cAttachment);
-      this.tAttachment = HookshotUtils.switchAttachmentToRTL(this.tAttachment);
+      this.content.offset = HookshotUtils.switchOffsetToRTL(this.content.offset);
+      this.target.offset = HookshotUtils.switchOffsetToRTL(this.target.offset);
+      this.content.attachment = HookshotUtils.switchAttachmentToRTL(this.content.attachment);
+      this.target.attachment = HookshotUtils.switchAttachmentToRTL(this.target.attachment);
     }
 
     const clonedContent = this.cloneContent(content);
