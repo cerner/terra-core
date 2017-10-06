@@ -118,20 +118,20 @@ class Popup extends React.Component {
     this.contentWidth = PopupWidths[newProps.contentWidth];
   }
 
-  setArrowPosition(tBounds, cBounds, cAttachment, tAttachment, tOffset) {
-    const position = PopupUtils.arrowPositionFromBounds(tBounds, cBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, cAttachment);
-    if (!position) {
+  setArrowPosition(contentPosition, targetPosition) {
+    const arrowPosition = PopupUtils.getArrowPosition(contentPosition, targetPosition, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
+    if (!arrowPosition) {
       this.arrowNode.removeAttribute(PopupArrow.Opts.positionAttr);
       return;
     }
-    this.arrowNode.setAttribute(PopupArrow.Opts.positionAttr, position);
+    this.arrowNode.setAttribute(PopupArrow.Opts.positionAttr, arrowPosition);
 
-    if (position === 'top' || position === 'bottom') {
-      this.arrowNode.style.left = PopupUtils.leftOffset(tBounds, cBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, tAttachment, tOffset);
+    if (arrowPosition === 'top' || arrowPosition === 'bottom') {
+      this.arrowNode.style.left = PopupUtils.leftOffset(contentPosition, targetPosition, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
       this.arrowNode.style.top = '';
     } else {
       this.arrowNode.style.left = '';
-      this.arrowNode.style.top = PopupUtils.topOffset(tBounds, cBounds, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize, tAttachment, tOffset);
+      this.arrowNode.style.top = PopupUtils.topOffset(contentPosition, targetPosition, PopupArrow.Opts.arrowSize, PopupContent.Opts.cornerSize);
     }
   }
 
@@ -139,15 +139,15 @@ class Popup extends React.Component {
     this.arrowNode = node;
   }
 
-  handleOnPosition(event, targetBounds, contentBounds, cAttachment, tAttachement, tOffset) {
+  handleOnPosition(event, positions) {
     if (this.arrowNode) {
-      this.setArrowPosition(targetBounds, contentBounds, cAttachment, tAttachement, tOffset);
+      this.setArrowPosition(positions.content, positions.target);
     }
   }
 
-  handleOnResize() {
+  handleOnResize(event, width) {
     // Close the popup if the window width is resized.
-    if (window.innerWidth !== this.windowWidth) {
+    if (window.innerWidth !== width) {
       this.windowWidth = window.innerWidth;
       this.props.onRequestClose();
     } else {
@@ -240,13 +240,11 @@ class Popup extends React.Component {
     if (!isOpen) {
       return null;
     }
-    // Value used to verify vertical resize.
-    this.windowWidth = window.innerWidth;
 
     let tAttachment;
-    const cAttachment = Hookshot.Utils.parseStringPair(contentAttachment);
+    const cAttachment = Hookshot.Utils.parseAttachment(contentAttachment);
     if (targetAttachment) {
-      tAttachment = Hookshot.Utils.parseStringPair(targetAttachment);
+      tAttachment = Hookshot.Utils.parseAttachment(targetAttachment);
     } else {
       tAttachment = Hookshot.Utils.mirrorAttachment(cAttachment);
     }

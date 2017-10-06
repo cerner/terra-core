@@ -7,9 +7,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
     browser.expect.element('.test-content').to.be.present;
 
+    const width = screenWidth(browser);
     browser.resizeWindow(960, 600);
     browser.waitForElementNotPresent('.test-content', 1000);
-    const width = screenWidth(browser);
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
@@ -255,9 +255,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-height`);
     browser.expect.element('.test-content').to.be.present;
 
+    const width = screenWidth(browser);
     browser.resizeWindow(960, 600);
     browser.waitForElementNotPresent('.test-content', 1000);
-    const width = screenWidth(browser);
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
@@ -286,9 +286,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-width`);
     browser.expect.element('.test-content').to.be.present;
 
+    const width = screenWidth(browser);
     browser.resizeWindow(960, 600);
     browser.waitForElementNotPresent('.test-content', 1000);
-    const width = screenWidth(browser);
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 

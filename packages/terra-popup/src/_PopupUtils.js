@@ -8,16 +8,16 @@ const isVerticalAttachment = attachment => (attachment.vertical !== 'middle');
 /**
  * Calculates the bottom position of the element.
  *
- * @ param {Object} bounds - The element's size and position relative to the viewport.
+ * @ param {Object} rect - The element's size and position relative to the viewport.
  */
-const calculateBottomPosition = bounds => (bounds.top + bounds.height);
+const calculateBottomPosition = rect => (rect.top + rect.height);
 
 /**
  * Calculates the right position of the element.
  *
- * @ param {Object} bounds - The element's size and position relative to the viewport.
+ * @ param {Object} rect - The element's size and position relative to the viewport.
  */
-const calculateRightPosition = bounds => (bounds.left + bounds.width);
+const calculateRightPosition = rect => (rect.left + rect.width);
 
 /**
  * This method calculates the horizontal offset to be applied to the content. Considers if the target's
@@ -59,14 +59,14 @@ const getContentOffset = (cAttachment, tAttachment, targetNode, arrowOffset, cor
 /**
  * Checks if the arrow offset fits within both the left and right bounds of the target.
  *
- * @ param {Object} targetBounds -  The target element's size and position relative to the viewport.
- * @ param {Object} contentBounds - The content element's size and position relative to the viewport.
+ * @ param {Object} contentRect - The content element's size and position relative to the viewport.
+ * @ param {Object} targetRect -  The target element's size and position relative to the viewport.
  * @ param {number} arrowOffset - Half the base of the arrow.
  * @ param {number} cornerOffset - The rounded corner size of the content.
  */
-const doesArrowFitHorizontal = (targetBounds, contentBounds, arrowOffset, cornerOffset) => {
-  const fitsLeftBound = calculateRightPosition(contentBounds) - arrowOffset - cornerOffset >= targetBounds.left;
-  const fitsRightBound = contentBounds.left + arrowOffset + cornerOffset <= calculateRightPosition(targetBounds);
+const doesArrowFitHorizontal = (contentRect, targetRect, arrowOffset, cornerOffset) => {
+  const fitsLeftBound = calculateRightPosition(contentRect) - arrowOffset - cornerOffset >= targetRect.left;
+  const fitsRightBound = contentRect.left + arrowOffset + cornerOffset <= calculateRightPosition(targetRect);
 
   return fitsLeftBound && fitsRightBound;
 };
@@ -74,54 +74,57 @@ const doesArrowFitHorizontal = (targetBounds, contentBounds, arrowOffset, corner
 /**
  * Checks if the arrow offset fits within both the top and bottom bounds of the target.
  *
- * @ param {Object} targetBounds -  The target element's size and position relative to the viewport.
- * @ param {Object} contentBounds - The content element's size and position relative to the viewport.
+ * @ param {Object} contentRect - The content element's size and position relative to the viewport.
+ * @ param {Object} targetRect -  The target element's size and position relative to the viewport.
  * @ param {number} arrowOffset - Half the base of the arrow.
  * @ param {number} cornerOffset - The rounded corner size of the content.
  */
-const doesArrowFitVertical = (targetBounds, contentBounds, arrowOffset, cornerOffset) => {
-  const fitsTopBound = calculateBottomPosition(contentBounds) - arrowOffset - cornerOffset >= targetBounds.top;
-  const fitsBottomBound = contentBounds.top + arrowOffset + cornerOffset <= calculateBottomPosition(targetBounds);
+const doesArrowFitVertical = (contentRect, targetRect, arrowOffset, cornerOffset) => {
+  const fitsTopBound = calculateBottomPosition(contentRect) - arrowOffset - cornerOffset >= targetRect.top;
+  const fitsBottomBound = contentRect.top + arrowOffset + cornerOffset <= calculateBottomPosition(targetRect);
 
   return fitsTopBound && fitsBottomBound;
 };
 
 /**
-*
-*
-* @ param {Object} targetBounds -  The target element's size and position relative to the viewport.
-* @ param {Object} contentBounds - The content element's size and position relative to the viewport.
-* @ param {number} arrowOffset - Half the base of the arrow.
-* @ param {number} cornerOffset - The rounded corner size of the content.
-* @ param {Object} attachement - The vertical and horizonal hookshot attachments of the content.
-*/
-const getSecondaryArrowPosition = (targetBounds, contentBounds, arrowOffset, cornerOffset, attachment) => {
+ *
+ *
+ * @ param {Object} contentPosition - The content x/y coords, rectangle, offset, and attachment.
+ * @ param {Object} targetPosition - The target x/y coords, rectangle, offset, and attachment.
+ * @ param {number} arrowOffset - Half the base of the arrow.
+ * @ param {number} cornerOffset - The rounded corner size of the content.
+ */
+const getSecondaryArrowPosition = (contentPosition, targetPosition, arrowOffset, cornerOffset) => {
+  const contentRect = contentPosition.rect;
+  const targetRect = targetPosition.rect;
+  const contentAttachment = contentPosition.attachment;
+
   const overlaps = {};
-  overlaps.right = calculateRightPosition(contentBounds) >= targetBounds.left && calculateRightPosition(contentBounds) <= calculateRightPosition(targetBounds) - arrowOffset;
-  overlaps.bottom = calculateBottomPosition(contentBounds) >= targetBounds.top && calculateBottomPosition(contentBounds) <= calculateBottomPosition(targetBounds) - arrowOffset;
-  overlaps.left = contentBounds.left >= targetBounds.left + arrowOffset && contentBounds.left <= calculateRightPosition(targetBounds);
-  overlaps.top = contentBounds.top >= targetBounds.top + arrowOffset && contentBounds.top <= calculateBottomPosition(targetBounds);
+  overlaps.right = calculateRightPosition(contentRect) >= targetRect.left && calculateRightPosition(contentRect) <= calculateRightPosition(targetRect) - arrowOffset;
+  overlaps.bottom = calculateBottomPosition(contentRect) >= targetRect.top && calculateBottomPosition(contentRect) <= calculateBottomPosition(targetRect) - arrowOffset;
+  overlaps.left = contentRect.left >= targetRect.left + arrowOffset && contentRect.left <= calculateRightPosition(targetRect);
+  overlaps.top = contentRect.top >= targetRect.top + arrowOffset && contentRect.top <= calculateBottomPosition(targetRect);
 
   const positions = [];
   if (overlaps.right || overlaps.left) {
-    if (doesArrowFitVertical(targetBounds, contentBounds, arrowOffset, cornerOffset)) {
+    if (doesArrowFitVertical(contentRect, targetRect, arrowOffset, cornerOffset)) {
       if (overlaps.left) { positions.push('left'); }
       if (overlaps.right) { positions.push('right'); }
     }
   }
 
   if (overlaps.bottom || overlaps.top) {
-    if (doesArrowFitHorizontal(targetBounds, contentBounds, arrowOffset, cornerOffset)) {
+    if (doesArrowFitHorizontal(contentRect, targetRect, arrowOffset, cornerOffset)) {
       if (overlaps.top) { positions.push('top'); }
       if (overlaps.bottom) { positions.push('bottom'); }
     }
   }
 
   if (positions.length > 1) {
-    if (attachment.vertical === 'middle' && positions.indexOf(attachment.horizontal) >= 0) {
-      return attachment.horizontal;
-    } else if (positions.indexOf(attachment.vertical) >= 0) {
-      return attachment.vertical;
+    if (contentAttachment.vertical === 'middle' && positions.indexOf(contentAttachment.horizontal) >= 0) {
+      return contentAttachment.horizontal;
+    } else if (positions.indexOf(contentAttachment.vertical) >= 0) {
+      return contentAttachment.vertical;
     }
   }
   return positions[0];
@@ -130,64 +133,68 @@ const getSecondaryArrowPosition = (targetBounds, contentBounds, arrowOffset, cor
 /**
  * This method calculates the arrow position based on the content and target's relative positions.
  *
- * @ param {Object} targetBounds -  The target element's size and position relative to the viewport.
- * @ param {Object} contentBounds - The content element's size and position relative to the viewport.
+ * @ param {Object} contentPosition - The content x/y coords, rectangle, offset, and attachment.
+ * @ param {Object} targetPosition - The target x/y coords, rectangle, offset, and attachment.
  * @ param {number} arrowOffset - Half the base of the arrow.
  * @ param {number} cornerOffset - The rounded corner size of the content.
- * @ param {Object} attachement - The vertical and horizonal hookshot attachments of the content.
  */
-const arrowPositionFromBounds = (targetBounds, contentBounds, arrowOffset, cornerOffset, attachment) => {
+const getArrowPosition = (contentPosition, targetPosition, arrowOffset, cornerOffset) => {
+  const contentRect = contentPosition.rect;
+  const targetRect = targetPosition.rect;
+
   // If content is fully above the target, try to attach arrow on the bottom
-  if (calculateBottomPosition(contentBounds) <= targetBounds.top) {
-    if (doesArrowFitHorizontal(targetBounds, contentBounds, arrowOffset, cornerOffset)) {
+  if (calculateBottomPosition(contentRect) <= targetRect.top) {
+    if (doesArrowFitHorizontal(contentRect, targetRect, arrowOffset, cornerOffset)) {
       return 'bottom';
     }
-  } else if (calculateRightPosition(contentBounds) <= targetBounds.left) {
+  } else if (calculateRightPosition(contentRect) <= targetRect.left) {
     // If content is fully to the left of the target, try to attach arrow on the right
-    if (doesArrowFitVertical(targetBounds, contentBounds, arrowOffset, cornerOffset)) {
+    if (doesArrowFitVertical(contentRect, targetRect, arrowOffset, cornerOffset)) {
       return 'right';
     }
-  } else if (contentBounds.top >= calculateBottomPosition(targetBounds)) {
+  } else if (contentRect.top >= calculateBottomPosition(targetRect)) {
     // If content is fully below the target, try to attach arrow on the top
-    if (doesArrowFitHorizontal(targetBounds, contentBounds, arrowOffset, cornerOffset)) {
+    if (doesArrowFitHorizontal(contentRect, targetRect, arrowOffset, cornerOffset)) {
       return 'top';
     }
-  } else if (contentBounds.left >= calculateRightPosition(targetBounds)) {
+  } else if (contentRect.left >= calculateRightPosition(targetRect)) {
     // If content is fully to the right of the target, try to attach arrow on the left
-    if (doesArrowFitVertical(targetBounds, contentBounds, arrowOffset, cornerOffset)) {
+    if (doesArrowFitVertical(contentRect, targetRect, arrowOffset, cornerOffset)) {
       return 'left';
     }
   }
 
   // If arrow attachement did not fit, try the secondary position
-  return getSecondaryArrowPosition(targetBounds, contentBounds, arrowOffset, cornerOffset, attachment);
+  return getSecondaryArrowPosition(contentPosition, targetPosition, arrowOffset, cornerOffset);
 };
 
 /**
  * This method caculates the horizonal offset value to be applied to the left position of the popup arrow.
  *
- * @ param {Object} targetBounds -  The target element's size and position relative to the viewport.
- * @ param {Object} contentBounds - The content element's size and position relative to the viewport.
+ * @ param {Object} contentPosition - The content x/y coords, rectangle, offset, and attachment.
+ * @ param {Object} targetPosition - The target x/y coords, rectangle, offset, and attachment.
  * @ param {number} arrowOffset - Half the base of the arrow.
  * @ param {number} cornerOffset - The rounded corner size of the content.
- * @ param {Object} tAttachement - The vertical and horizonal hookshot attachments of the target.
- * @ param {Object} tOffset - The vertical and horizonal offsets of the target.
  */
-const leftOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset, tAttachment, tOffset) => {
-  let offset = (targetBounds.left - contentBounds.left) + arrowOffset + tOffset.horizontal;
-  if (tAttachment.horizontal === 'center') {
-    offset += (targetBounds.width / 2);
-  } else if (tAttachment.horizontal === 'right') {
-    offset += targetBounds.width;
+const leftOffset = (contentPosition, targetPosition, arrowOffset, cornerOffset) => {
+  const contentRect = contentPosition.rect;
+  const targetRect = targetPosition.rect;
+  const targetAttachmet = targetPosition.attachment;
+
+  let offset = (targetRect.left - contentRect.left) + arrowOffset + targetPosition.offset.horizontal;
+  if (targetAttachmet.horizontal === 'center') {
+    offset += (targetRect.width / 2);
+  } else if (targetAttachmet.horizontal === 'right') {
+    offset += targetRect.width;
   }
 
   // Check that the offset places the arrow within the contents width
   if (offset < (2 * arrowOffset) + cornerOffset) {
     // Offset is too far left
     offset = (2 * arrowOffset) + cornerOffset;
-  } else if (offset > contentBounds.width - cornerOffset) {
+  } else if (offset > contentRect.width - cornerOffset) {
     // Offset is too far right
-    offset = contentBounds.width - cornerOffset;
+    offset = contentRect.width - cornerOffset;
   }
   return `${offset}px`;
 };
@@ -195,28 +202,30 @@ const leftOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset, tAtt
 /**
  * This method caculates the vertial offset value to be applied to the top position of the popup arrow.
  *
- * @ param {Object} targetBounds -  The target element's size and position relative to the viewport.
- * @ param {Object} contentBounds - The content element's size and position relative to the viewport.
+ * @ param {Object} contentPosition - The content x/y coords, rectangle, offset, and attachment.
+ * @ param {Object} targetPosition - The target x/y coords, rectangle, offset, and attachment.
  * @ param {number} arrowOffset - Half the base of the arrow.
  * @ param {number} cornerOffset - The rounded corner size of the content.
- * @ param {Object} tAttachement - The vertical and horizonal hookshot attachments of the target.
- * @ param {Object} tOffset - The vertical and horizonal offsets of the target.
  */
-const topOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset, tAttachment, tOffset) => {
-  let offset = (targetBounds.top - contentBounds.top) + arrowOffset + tOffset.vertical;
-  if (tAttachment.vertical === 'middle') {
-    offset += (targetBounds.height / 2);
-  } else if (tAttachment.vertical === 'bottom') {
-    offset += targetBounds.height;
+const topOffset = (contentPosition, targetPosition, arrowOffset, cornerOffset) => {
+  const contentRect = contentPosition.rect;
+  const targetRect = targetPosition.rect;
+  const targetAttachmet = targetPosition.attachment;
+
+  let offset = (targetRect.top - contentRect.top) + arrowOffset + targetPosition.offset.vertical;
+  if (targetAttachmet.vertical === 'middle') {
+    offset += (targetRect.height / 2);
+  } else if (targetAttachmet.vertical === 'bottom') {
+    offset += targetRect.height;
   }
 
   // Check that the offset places the arrow within the contents height
   if (offset < (2 * arrowOffset) + cornerOffset) {
     // Offset is too far above
     offset = (2 * arrowOffset) + cornerOffset;
-  } else if (offset > contentBounds.height - cornerOffset) {
+  } else if (offset > contentRect.height - cornerOffset) {
     // Offset is too far below
-    offset = contentBounds.height - cornerOffset;
+    offset = contentRect.height - cornerOffset;
   }
   return (`${offset}px`);
 };
@@ -224,7 +233,7 @@ const topOffset = (targetBounds, contentBounds, arrowOffset, cornerOffset, tAtta
 const PopupUtils = {
   isVerticalAttachment,
   getContentOffset,
-  arrowPositionFromBounds,
+  getArrowPosition,
   leftOffset,
   topOffset,
 };

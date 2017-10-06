@@ -16,6 +16,7 @@ exports[`should shallow a default component 1`] = `
     boundingRef={null}
     classNameArrow={null}
     classNameContent={null}
+    classNameOverlay={null}
     contentAttachment="top center"
     contentHeight="80"
     contentWidth="240"

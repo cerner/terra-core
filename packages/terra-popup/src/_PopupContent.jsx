@@ -132,15 +132,28 @@ class PopupContent extends React.Component {
     return React.Children.map(children, child => React.cloneElement(child, newProps));
   }
 
+  constructor(props) {
+    super(props);
+    this.handleOnResize = this.handleOnResize.bind(this);
+  }
+
   componentDidMount() {
     if (this.props.requestFocus) {
       this.props.requestFocus();
     }
+    // Value used to verify horizontal resize.
+    this.windowWidth = window.innerWidth;
   }
 
   componentWillUnmount() {
     if (this.props.releaseFocus) {
       this.props.releaseFocus();
+    }
+  }
+
+  handleOnResize(event) {
+    if (this.props.onResize) {
+      this.props.onResize(event, this.windowWidth);
     }
   }
 
@@ -173,7 +186,7 @@ class PopupContent extends React.Component {
     if (isFullScreen && !isHeaderDisabled) {
       content = PopupContent.addPopupHeader(content, onRequestClose);
     }
-    
+
     const contentClassNames = cx([
       'content',
       customProps.className,
@@ -200,7 +213,7 @@ class PopupContent extends React.Component {
           data-terra-popup-content
           onEsc={onRequestClose}
           onOutsideClick={onRequestClose}
-          onResize={onResize}
+          onResize={this.handleOnResize}
           refCallback={refCallback}
         >
           {arrowContent}

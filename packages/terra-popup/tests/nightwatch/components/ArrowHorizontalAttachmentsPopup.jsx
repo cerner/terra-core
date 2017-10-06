@@ -11,11 +11,7 @@ class AlignmentPopup extends React.Component {
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setParentNode = this.setParentNode.bind(this);
     this.getParentNode = this.getParentNode.bind(this);
-    this.state = { open: true, attachment: 'top right' };
-  }
-
-  componentDidMount() {
-    this.forceUpdate();
+    this.state = { open: false, attachment: 'top right' };
   }
 
   setButtonNode(node) {
