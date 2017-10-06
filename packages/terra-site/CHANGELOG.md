@@ -8,6 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor version bump
+* Updated toggle docs
 
 1.12.0 - (September 26, 2017)
 ------------------
