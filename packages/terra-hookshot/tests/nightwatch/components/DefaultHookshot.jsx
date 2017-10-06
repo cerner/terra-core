@@ -34,11 +34,12 @@ class HookshotStandard extends React.Component {
       <div>
         <Hookshot
           content={hookshotContent}
-          contentAttachment="bottom center"
           isEnabled
           isOpen={this.state.open}
           targetRef={() => document.getElementById('hookshot-standard-button')}
-        />
+        >
+          {hookshotContent}
+        </Hookshot>
         <button id="hookshot-standard-button" onClick={this.handleButtonClick}>Default Hookshot</button>
       </div>
     );

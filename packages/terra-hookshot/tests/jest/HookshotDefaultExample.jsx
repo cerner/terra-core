@@ -27,12 +27,13 @@ class HookshotDefaultExample extends React.Component {
     return (
       <div>
         <Hookshot
-          content={hookshotContent}
           contentAttachment="top center"
           isEnabled
           isOpen={this.state.isOpen}
           targetRef={() => document.getElementById('hookshot-standard-button')}
-        />
+        >
+          {hookshotContent}
+        </Hookshot>
         <button id="hookshot-standard-button" onClick={this.handleButtonClick} />
       </div>
     );

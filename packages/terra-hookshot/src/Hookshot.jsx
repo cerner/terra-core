@@ -39,7 +39,7 @@ const propTypes = {
   /**
    * The HookshotContent to be attached.
    */
-  content: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired,
   /**
    * String pair separated by a space using values of top, middle, bottom, and left, center, right. (ex: 'top middle')
    */
@@ -284,7 +284,7 @@ class Hookshot extends React.Component {
       attachmentBehavior,
       attachmentMargin,
       boundingRef,
-      content,
+      children,
       contentAttachment,
       contentOffset,
       isEnabled,
@@ -315,7 +315,7 @@ class Hookshot extends React.Component {
       this.target.attachment = HookshotUtils.switchAttachmentToRTL(this.target.attachment);
     }
 
-    const clonedContent = this.cloneContent(content);
+    const clonedContent = this.cloneContent(children);
 
     return (
       <Portal isOpened={isOpen}>

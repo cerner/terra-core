@@ -66,13 +66,6 @@ class HookshotTemplate extends React.Component {
       <div id={`${id}-bounds`} style={{ border: '1px dashed grey', height: '145px', width: boundingWidth }}>
         <Hookshot
           id={id}
-          content={
-            <HookshotContent
-              id={`${id}-content`}
-              onEsc={hookshotContentProps.closeOnEsc ? this.handleRequestClose : undefined}
-              onOutsideClick={hookshotContentProps.closeOnOutsideClick ? this.handleRequestClose : undefined}
-              onResize={hookshotContentProps.closeOnResize ? this.handleRequestClose : undefined}
-            />}
           contentAttachment={contentAttachment}
           targetAttachment={targetAttachment}
           attachmentMargin={attachmentMargin}
@@ -81,7 +74,14 @@ class HookshotTemplate extends React.Component {
           targetRef={() => document.getElementById(`trigger-${id}`)}
           boundingRef={() => document.getElementById(`${id}-bounds`)}
           {...hookshotProps}
-        />
+        >
+          <HookshotContent
+            id={`${id}-content`}
+            onEsc={hookshotContentProps.closeOnEsc ? this.handleRequestClose : undefined}
+            onOutsideClick={hookshotContentProps.closeOnOutsideClick ? this.handleRequestClose : undefined}
+            onResize={hookshotContentProps.closeOnResize ? this.handleRequestClose : undefined}
+          />
+        </Hookshot>
         <button
           id={`trigger-${id}`}
           style={{ width: '100px', height: '36px', backgroundColor: 'lightGrey', marginLeft: buttonMarginLeft, marginRight: buttonMarginRight, marginTop: buttonMarginTop }}
