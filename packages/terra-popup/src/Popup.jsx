@@ -265,7 +265,6 @@ class Popup extends React.Component {
           attachmentBehavior={attachmentBehavior}
           attachmentMargin={showArrow ? PopupArrow.Opts.arrowSize : 0}
           boundingRef={boundingRef}
-          content={hookshotContent}
           contentAttachment={contentAttachment}
           contentOffset={cOffset}
           isEnabled={this.isContentSized}
@@ -273,7 +272,9 @@ class Popup extends React.Component {
           onPosition={this.handleOnPosition}
           targetRef={targetRef}
           targetAttachment={`${tAttachment.vertical} ${tAttachment.horizontal}`}
-        />
+        >
+          {hookshotContent}
+        </Hookshot>
       </div>
     );
   }
