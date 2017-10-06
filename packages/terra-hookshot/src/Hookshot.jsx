@@ -65,7 +65,7 @@ const propTypes = {
    */
   targetRef: PropTypes.func.isRequired,
   /**
-   * String pair of top, middle, bottom, and left, center, right. Will mirror content is none provided. (ex: 'bottom middle')
+   * String pair of top, middle, bottom, and left, center, right. Will mirror content if none provided. (ex: 'bottom middle')
    */
   targetAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
   /**

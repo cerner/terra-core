@@ -153,7 +153,7 @@ const getBoundingRect = (boundingElement) => {
     right: bounds.left + bounds.width,
   };
 
-  // Account any parent Frames scroll offset
+  // Account for any parent Frames scroll offset
   if (boundingElement.ownerDocument !== document) {
     const parentView = boundingElement.ownerDocument.defaultView;
 
