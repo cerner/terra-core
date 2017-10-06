@@ -3,11 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Keyboard navigation with arrow keys
+
+1.3.0 - (October 6, 2017)
+------------------
 ### Fixed
 * Bug around selectable menus with only 1 child element.
 
 ### Added
-* Keyboard navigation with arrow keys
 * Added ability to disable menu items
 
 1.2.0 - (September 26, 2017)

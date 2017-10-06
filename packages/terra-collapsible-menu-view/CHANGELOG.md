@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 -----------------
 
+1.1.0 - (October 6, 2017)
+------------------
 ### Fixed
 * Jumpy display on initial load and refresh
 

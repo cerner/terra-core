@@ -3,7 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+1.6.0 - (October 6, 2017)
+------------------
+### Changed
 * Updated to allow an outputFileSystem to be passed in through the options and using the webpack compiler's inputFileSystem for reading the translation files
+* Updated webpack devDependencies version to 3.6.0
 
 1.5.0 - (September 26, 2017)
 ------------------
