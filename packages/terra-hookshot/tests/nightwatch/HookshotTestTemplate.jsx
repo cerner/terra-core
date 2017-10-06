@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Hookshot from '../../lib/Hookshot';
-import HookshotContent from './HookshotContentTemplate';
+import HookshotContent from './HookshotContentTestTemplate';
 
 const propTypes = {
   /**

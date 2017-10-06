@@ -35,12 +35,6 @@ const propTypes = {
   refCallback: PropTypes.func,
 };
 
-const defaultProps = {
-  onEsc: null,
-  onOutsideClick: null,
-  onResize: null,
-};
-
 class HookshotContent extends React.Component {
   constructor(props) {
     super(props);
@@ -123,7 +117,6 @@ class HookshotContent extends React.Component {
 }
 
 HookshotContent.propTypes = propTypes;
-HookshotContent.defaultProps = defaultProps;
 const onClickOutsideContent = onClickOutside(HookshotContent);
 
 export default onClickOutsideContent;

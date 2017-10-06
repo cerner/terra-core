@@ -1,5 +1,5 @@
 import React from 'react';
-import HookshotTemplate from '../HookshotTemplate';
+import HookshotTemplate from '../HookshotTestTemplate';
 
 class HookshotAttachmentMargin extends React.Component {
   constructor(props) {

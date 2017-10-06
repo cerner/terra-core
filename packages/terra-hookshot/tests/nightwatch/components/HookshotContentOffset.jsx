@@ -1,5 +1,5 @@
 import React from 'react';
-import HookshotTemplate from '../HookshotTemplate';
+import HookshotTemplate from '../HookshotTestTemplate';
 
 const ContentOffset = () => (
   <HookshotTemplate

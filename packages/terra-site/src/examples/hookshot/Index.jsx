@@ -24,6 +24,7 @@ const HookshotExamples = () => (
     <PropsTable id="props-hookshot-content" src={HookshotContentSrc} componentName="Hookshot Content" />
     <h2>Window Bound Hookshot</h2>
     <HookshotExample />
+    <br />
     <h2>Container Bound Hookshot</h2>
     <BoundedHookshotExample />
   </div>

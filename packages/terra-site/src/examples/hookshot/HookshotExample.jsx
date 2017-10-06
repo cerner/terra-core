@@ -101,12 +101,6 @@ class HookshotStandard extends React.Component {
           {hookshotContent}
         </Hookshot>
         <Button id="hookshot-standard-button" text="Hookshot Example" onClick={this.handleButtonClick} />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     );
   }
