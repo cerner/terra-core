@@ -8,7 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor version bump
-
+* Updated terra-button-group examples
 1.12.0 - (September 26, 2017)
 ------------------
 ### Fixed
