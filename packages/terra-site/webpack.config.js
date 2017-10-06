@@ -2,7 +2,6 @@
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
-const postCssConfig = require('./postcss.config');
 const path = require('path');
 const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
