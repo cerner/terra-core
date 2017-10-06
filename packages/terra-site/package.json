@@ -90,7 +90,7 @@
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.23.0",
-    "clean-webpack-plugin": "^0.1.16",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
