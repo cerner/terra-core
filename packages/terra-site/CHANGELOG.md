@@ -8,7 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor version bump
-* Updated toggle docs
+* Updated terra-toggle examples
 
 1.12.0 - (September 26, 2017)
 ------------------
