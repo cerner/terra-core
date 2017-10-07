@@ -2,12 +2,15 @@
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
-const postCssConfig = require('./postcss.config');
 const path = require('path');
+const Autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
+const CustomProperties = require('postcss-custom-properties');
+const rtl = require('postcss-rtl');
+const ThemingPlugin = require('./theming-plugin');
 
 module.exports = {
   entry: {
@@ -37,7 +40,24 @@ module.exports = {
           },
         }, {
           loader: 'postcss-loader',
-          options: postCssConfig,
+          options: {
+            plugins() {
+              return [
+                Autoprefixer({
+                  browsers: [
+                    'ie >= 10',
+                    'last 2 versions',
+                    'last 2 android versions',
+                    'last 2 and_chr versions',
+                    'iOS >= 8',
+                  ],
+                }),
+                CustomProperties({ preserve: true, warnings: false }),
+                ThemingPlugin,
+                rtl(),
+              ];
+            },
+          },
         },
         {
           loader: 'sass-loader',
