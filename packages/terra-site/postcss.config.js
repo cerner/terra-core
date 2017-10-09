@@ -8,7 +8,7 @@ module.exports = {
   plugins() {
     return [
       Autoprefixer({
-        browsers: ["last 2 versions", "iOS >= 10"],
+        browsers: ['last 2 versions', 'iOS >= 10'],
       }),
       CustomProperties({ preserve: true, warnings: false }),
       ThemingPlugin,
