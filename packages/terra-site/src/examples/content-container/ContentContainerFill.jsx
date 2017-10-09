@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ContentContainer from 'terra-content-container';
-import Button from 'terra-button';
+import Heading from 'terra-heading';
 
 const display1 = <p key="1">display1display1display1display1display1display1display1display1display1display1display1display1display1display1</p>;
 const display2 = <p key="2">display2display2display2display2display2display2display2display2display2display2display2display2display2display2</p>;
@@ -14,11 +14,11 @@ const displays1 = [display1, display2, display3, display4, display5, display6];
 const displays2 = displays1;
 const displays3 = displays1;
 
-const button1 = <Button text="header button" />;
+const contentheader = <Heading level={1} size={'large'}>Display Header</Heading>;
 
 const container = () => (
   <div style={{ height: '200px', overflow: 'auto' }}>
-    <ContentContainer header={button1} fill>
+    <ContentContainer header={contentheader} fill>
       <div key="1">
         {displays1}
       </div>
