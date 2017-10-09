@@ -47,6 +47,7 @@ class BasicMenu extends React.Component {
 
   handleToggle1OnClick() {
     this.setState(prevState => ({ toggle1Selected: !prevState.toggle1Selected }));
+    this.handleRequestClose();
   }
 
   handleToggle2OnClick() {
@@ -76,7 +77,7 @@ class BasicMenu extends React.Component {
             boundingRef={this.props.boundingRef}
           >
             <Menu.Item
-              text="Toggle Item 1"
+              text="Toggle Item 1 - Closes Menu"
               key="Toggle1"
               isSelected={this.state.toggle1Selected}
               onClick={this.handleToggle1OnClick}
