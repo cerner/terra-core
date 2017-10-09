@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Lock wepback-dev-server at last version supporting IE10 (1.7.1)
+* Lock webpack-dev-server at last version supporting IE10 (1.7.1)
 
 1.13.0 - (October 6, 2017)
 ------------------
