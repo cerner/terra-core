@@ -3,13 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import Base from 'terra-base';
-import Button from 'terra-button';
-import ButtonGroup from 'terra-button-group';
 import SlidePanel from 'terra-slide-panel';
 import ContentContainer from 'terra-content-container';
 import List from 'terra-list';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
 import ThemeProvider from 'terra-theme-provider';
+import CollapsibleMenuView from 'terra-collapsible-menu-view';
 import styles from './site.scss';
 
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
@@ -22,26 +21,39 @@ const propTypes = {
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
+const themes = {
+  'Defualt Theme': '',
+  'Consumer Theme': 'cerner-consumer-theme',
+  'Mock Theme': 'cerner-mock-theme',
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: window.innerWidth >= 768,
+      isLtr: true,
       locale,
-      theme: '',
+      theme: 'Default Theme',
     };
+    this.handleBidiChange = this.handleBidiChange.bind(this);
     this.handleThemeChange = this.handleThemeChange.bind(this);
     this.handleLocaleChange = this.handleLocaleChange.bind(this);
     this.handleToggleClick = this.handleToggleClick.bind(this);
     this.handleResetScroll = this.handleResetScroll.bind(this);
   }
 
+  handleBidiChange(e) {
+    document.getElementsByTagName('html')[0].setAttribute('dir', e.currentTarget.id);
+    this.setState({ isLtr: e.currentTarget.id === 'ltr' });
+  }
+
   handleLocaleChange(e) {
-    this.setState({ locale: e.target.value });
+    this.setState({ locale: e.currentTarget.id });
   }
 
   handleThemeChange(e) {
-    this.setState({ theme: e.target.value });
+    this.setState({ theme: e.currentTarget.id });
   }
 
   handleToggleClick() {
@@ -60,36 +72,33 @@ class App extends React.Component {
 
   render() {
     const toggleContent = (
-      <Button className={styles['site-toggle']} icon={<IconMenu />} onClick={this.handleToggleClick} />
+      <CollapsibleMenuView.Item icon={<IconMenu />} isIconOnly key="toggle-content" onClick={this.handleToggleClick} />
     );
 
     const bidiContent = (
-      <ButtonGroup
-        className={styles['site-bidi']}
-        dir="ltr"
-        size="medium"
-        isSelectable
-        buttons={[
-          <ButtonGroup.Button isSelected text="ltr" key="ltr" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr')} />,
-          <ButtonGroup.Button text="rtl" key="rtl" onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} />,
-        ]}
-      />
+      <CollapsibleMenuView.ItemGroup key="site-bidi" isSelectable dir="ltr" size="medium">
+        <CollapsibleMenuView.Item id="ltr" text="ltr" key="ltr" isSelected={this.state.isLtr} onClick={this.handleBidiChange} />
+        <CollapsibleMenuView.Item id="rtl" text="rtl" key="rtl" isSelected={!this.state.isLtr} onClick={this.handleBidiChange} />
+      </CollapsibleMenuView.ItemGroup>
     );
 
     const localeContent = (
-      <div className={styles['site-locale']}>
-        <label htmlFor="locale"> Locale: </label>
-        <select value={this.state.locale} onChange={this.handleLocaleChange}>
-          <option value="en">en</option>
-          <option value="en-GB">en-GB</option>
-          <option value="en-US">en-US</option>
-          <option value="de">de</option>
-          <option value="es">es</option>
-          <option value="fr">fr</option>
-          <option value="pt">pt</option>
-          <option value="fi-FI">fi-FI</option>
-        </select>
-      </div>
+      <CollapsibleMenuView.Item
+        text={`Locale: ${this.state.locale}`}
+        key="locale"
+        menuWidth="160"
+        shouldCloseOnClick={false}
+        subMenuItems={[
+          <CollapsibleMenuView.Item id="en" text="en" key="en" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="en-GB" text="en-GB" key="en-GB" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="en-US" text="en-US" key="en-US" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="de" text="de" key="de" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="es" text="es" key="es" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="fr" text="fr" key="fr" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="pt" text="pt" key="pt"onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.Item id="fi-FI" text="fi-FI" key="fi-FI" onClick={this.handleLocaleChange} />,
+        ]}
+      />
     );
 
     let themeSwitcher;
@@ -100,18 +109,21 @@ class App extends React.Component {
 
     if (supportsCSSVars()) {
       themeSwitcher = (
-        <div className={styles['site-theme']}>
-          <label htmlFor="theme"> Theme: </label>
-          <select value={this.state.theme} onChange={this.handleThemeChange}>
-            <option value="">Default Theme</option>
-            <option value="cerner-consumer-theme">Consumer Theme</option>
-            <option value="cerner-mock-theme">Mock Theme</option>
-          </select>
-        </div>
+        <CollapsibleMenuView.Item
+          text={`Theme: ${this.state.theme}`}
+          key="theme"
+          menuWidth="160"
+          shouldCloseOnClick={false}
+          subMenuItems={[
+            <CollapsibleMenuView.Item id="Default Theme" text="Default Theme" key="default" onClick={this.handleThemeChange} />,
+            <CollapsibleMenuView.Item id="Consumer Theme" text="Consumer Theme" key="consumer" onClick={this.handleThemeChange} />,
+            <CollapsibleMenuView.Item id="Mock Theme" text="Mock Theme" key="mock" onClick={this.handleThemeChange} />,
+          ]}
+        />
       );
     } else {
       themeSwitcher = (
-        <div />
+        <CollapsibleMenuView.Item />
       );
     }
 
@@ -175,26 +187,20 @@ class App extends React.Component {
     // Moved Base to wrap the main content, as i18nProvider inserts an unstyled div that ruins layout if placed higher.
     // Might consider enablling styling for Base, or evaluate if multipe Bases are viable.
     const mainContent = (
-      <ThemeProvider id="site-content-section" themeName={this.state.theme} isGlobalTheme>
+      <ThemeProvider id="site-content-section" themeName={themes[this.state.theme]} isGlobalTheme>
         <Base className={styles['site-content']} locale={this.state.locale}>
           {this.props.children}
         </Base>
       </ThemeProvider>
     );
 
-    const utilityContent = (
-      <div className={styles['site-utility']}>
+    const applicationHeader = (
+      <CollapsibleMenuView className={styles['site-header']}>
+        {toggleContent}
         {themeSwitcher}
         {localeContent}
         {bidiContent}
-      </div>
-    );
-
-    const applicationHeader = (
-      <div className={styles['site-header']}>
-        {toggleContent}
-        {utilityContent}
-      </div>
+      </CollapsibleMenuView>
     );
 
     return (
