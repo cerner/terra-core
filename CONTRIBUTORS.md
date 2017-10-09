@@ -35,6 +35,7 @@ Cerner Corporation
 - Sai Kaushik Mallela [@msaikaushik1992]
 - Kevin Schuster [@kschuste]
 - Sai Gorantla [@saigorantla]
+- Derek Yu [@yuderekyu]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -73,3 +74,4 @@ Cerner Corporation
 [@msaikaushik1992]: https://github.com/msaikaushik1992
 [@kschuste]: https://github.com/kschuste
 [@saigorantla]: https://github.com/saigorantla
+[@yuderekyu]: https://github.com/yuderekyu

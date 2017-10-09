@@ -75,33 +75,15 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.getContentHeight = this.getContentHeight.bind(this);
-    this.getInitialState = this.getInitialState.bind(this);
     this.push = this.push.bind(this);
     this.pop = this.pop.bind(this);
-    this.state = this.getInitialState();
+    this.state = { stack: [this] };
   }
 
-  getInitialState() {
-    const initialMenu = (
-      <MenuContent
-        key="MenuPage-0"
-        onRequestNext={this.push}
-        onRequestBack={this.pop}
-        onRequestClose={this.props.onRequestClose}
-        index={0}
-      >
-        {this.props.children}
-      </MenuContent>
-    );
-
-    return {
-      stack: [initialMenu],
-    };
-  }
 
   componentWillReceiveProps(nextProps) {
     if ((this.props.isOpen && !nextProps.isOpen) || this.props.children.length !== nextProps.children.length) {
-      this.setState(this.getInitialState());
+      this.setState({ stack: [this] });
     }
   }
 
@@ -123,31 +105,15 @@ class Menu extends React.Component {
   }
 
   pop() {
-    this.setState((prevState) => {
-      prevState.stack.pop();
-      return { stack: prevState.stack };
-    });
+    const newStack = this.state.stack.slice();
+    newStack.pop();
+    this.setState({ stack: newStack });
   }
 
   push(item) {
-    const index = this.state.stack.length;
-    const content = (
-      <MenuContent
-        key={`MenuPage-${index}`}
-        title={item.props.text}
-        index={index}
-        onRequestBack={this.pop}
-        onRequestClose={this.props.onRequestClose}
-        onRequestNext={this.push}
-      >
-        {item.props.subMenuItems}
-      </MenuContent>
-    );
-
-    this.setState((prevState) => {
-      prevState.stack.push(content);
-      return { stack: prevState.stack };
-    });
+    const newStack = this.state.stack.slice();
+    newStack.push(item);
+    this.setState({ stack: newStack });
   }
 
   render() {
@@ -183,6 +149,20 @@ class Menu extends React.Component {
       classNameArrow,
     ]);
 
+    const slides = this.state.stack.map((item, index) => (
+      <MenuContent
+        // eslint-disable-next-line react/no-array-index-key
+        key={`MenuPage-${index}`}
+        title={item.props.text}
+        onRequestNext={this.push}
+        onRequestBack={this.pop}
+        onRequestClose={this.props.onRequestClose}
+        index={index}
+      >
+        {item.props.children || item.props.subMenuItems}
+      </MenuContent>
+    ));
+
     return (
       <Popup
         {...customProps}
@@ -199,7 +179,7 @@ class Menu extends React.Component {
         targetRef={targetRef}
         isHeaderDisabled
       >
-        <SlideGroup items={this.state.stack} />
+        <SlideGroup items={slides} />
       </Popup>
     );
   }
