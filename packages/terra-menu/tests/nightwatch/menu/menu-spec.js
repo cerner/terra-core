@@ -47,6 +47,12 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.hidden('.TestNonSelectableItem svg[class*="_checkmark"]')
       .assert.hidden('.TestSelectableItem svg[class*="_checkmark"]');
   },
+  'Displays a selectable menu item as selected when menu is closed after selection and then reopened': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/menu-tests/selectable-and-unselectable`);
+    browser.click('.TestSelectableItem');
+    browser.click('#default-button');
+    browser.expect.element('.TestSelectableItem svg[class*="_checkmark"]').to.be.visible;
+  },
   'Displays a non-selectable menu with apropriate spacing': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/menu-tests/non-selectable`)
