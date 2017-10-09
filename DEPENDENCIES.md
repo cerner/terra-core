@@ -36,4 +36,6 @@
 | stylelint | ~8.0.0 | -- | A mighty, modern CSS linter. |
 | stylelint-config-sass-guidelines | ^3.0.0 | -- | Sharable stylelint config based on https://sass-guidelin.es/ |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
-| terra-toolkit | ^2.0.0 | ^15.4.2 | Utilities to help when developing terra modules. |
+| terra-toolkit | ^2.1.0 | ^15.4.2 | Utilities to help when developing terra modules. |
+| webpack | ^3.6.0 | -- | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. |
+| webpack-dev-server | ^2.9.1 | -- | Serves a webpack app. Updates the browser on changes. |

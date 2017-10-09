@@ -2,7 +2,7 @@
 // not devDependencies. Disabling this rule in webpack.conig.js
 /* eslint-disable import/no-extraneous-dependencies */
 const webpack = require('webpack');
-
+const postCssConfig = require('./postcss.config');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -37,6 +37,7 @@ module.exports = {
           },
         }, {
           loader: 'postcss-loader',
+          options: postCssConfig,
         },
         {
           loader: 'sass-loader',
