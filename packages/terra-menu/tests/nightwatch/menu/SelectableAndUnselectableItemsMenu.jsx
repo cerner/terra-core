@@ -6,9 +6,10 @@ class SelectableMenu extends React.Component {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
+    this.handleItemClick = this.handleItemClick.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: true, isSelected: false };
   }
 
   setButtonNode(node) {
@@ -27,6 +28,11 @@ class SelectableMenu extends React.Component {
     this.setState({ open: false });
   }
 
+  handleItemClick() {
+    this.setState({ isSelected: !this.state.isSelected });
+    this.handleRequestClose();
+  }
+
   render() {
     return (
       <div>
@@ -38,8 +44,19 @@ class SelectableMenu extends React.Component {
           targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
         >
-          <Menu.Item text="unselectable" key="1" className="TestNonSelectableItem" />
-          <Menu.Item text="Selectable" key="2" isSelectable className="TestSelectableItem" />
+          <Menu.Item
+            text="Default 1"
+            key="1"
+            className="TestNonSelectableItem"
+          />
+          <Menu.Item
+            text="Default 2"
+            key="2"
+            isSelectable
+            className="TestSelectableItem"
+            isSelected={this.state.isSelected}
+            onClick={this.handleItemClick}
+          />
         </Menu>
         <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
