@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.6.0 - (October 6, 2017)
+------------------
 ### Changed
 * Updated parameters passed to component while rendering and also the test scripts.
 
