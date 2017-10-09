@@ -1,8 +1,8 @@
 {
   "presets": ["react", ["env", {
     "targets": {
-      "ie": "10"
+      "browsers": ["last 2 versions", "ie >= 10"]
     }
   }]],
-  "plugins": ["transform-object-assign", "transform-object-rest-spread"],
+  "plugins": ["transform-object-assign", "transform-object-rest-spread", "transform-runtime"],
 }

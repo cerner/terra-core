@@ -1,5 +1,10 @@
 # Dependency Information
 
+## dependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| babel-runtime | ^6.26.0 | -- | babel selfContained runtime |
+
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
@@ -8,6 +13,7 @@
 | babel-jest | ^20.0.0 | -- | Jest plugin to use babel for transformation. |
 | babel-plugin-transform-object-assign | ^6.22.0 | -- | Replace Object.assign with an inline helper |
 | babel-plugin-transform-object-rest-spread | ^6.23.0 | -- | Compile object rest and spread to ES5 |
+| babel-plugin-transform-runtime | ^6.23.0 | -- | Externalise references to helpers and builtins, automatically polyfilling your code without polluting globals |
 | babel-preset-env | ^1.6.0 | -- | A Babel preset for each environment. |
 | babel-preset-react | ^6.24.1 | -- | Babel preset for all React plugins. |
 | check-installed-dependencies | ^1.0.0 | -- | Check if the currently installed packages match package.json |
