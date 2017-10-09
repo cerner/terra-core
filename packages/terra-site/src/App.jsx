@@ -199,6 +199,7 @@ class App extends React.Component {
         {toggleContent}
         {themeSwitcher}
         {localeContent}
+        <CollapsibleMenuView.Divider className={styles['site-header-divider']} />
         {bidiContent}
       </CollapsibleMenuView>
     );
