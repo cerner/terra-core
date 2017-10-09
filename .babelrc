@@ -1,4 +1,8 @@
 {
-  "presets": ["es2015", "react"],
+  "presets": ["react", ["env", {
+    "targets": {
+      "ie": "10"
+    }
+  }]],
   "plugins": ["transform-object-assign", "transform-object-rest-spread"],
 }

@@ -8,7 +8,7 @@
 | babel-jest | ^20.0.0 | -- | Jest plugin to use babel for transformation. |
 | babel-plugin-transform-object-assign | ^6.22.0 | -- | Replace Object.assign with an inline helper |
 | babel-plugin-transform-object-rest-spread | ^6.23.0 | -- | Compile object rest and spread to ES5 |
-| babel-preset-es2015 | ^6.24.1 | -- | Babel preset for all es2015 plugins. |
+| babel-preset-env | ^1.6.0 | -- | A Babel preset for each environment. |
 | babel-preset-react | ^6.24.1 | -- | Babel preset for all React plugins. |
 | check-installed-dependencies | ^1.0.0 | -- | Check if the currently installed packages match package.json |
 | danger | ^1.0.0 | -- | Unit tests for Team Culture |
