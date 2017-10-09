@@ -14,7 +14,17 @@
 import React from 'react';
 import ButtonGroup from 'terra-button-group';
 
-<ButtonGroup {props.......} />
+// Default button group
+  <ButtonGroup>
+    <ButtonGroup.Button text="Button 1" key="button1" />,
+    <ButtonGroup.Button text="Button 2" key="button2" />
+  </ButtonGroup>
+
+// Selectable (toggle style) button group with second button pre-selected
+  <ButtonGroup isSelectable>
+    <ButtonGroup.Button text="Button 1" key="button1" />,
+    <ButtonGroup.Button isSelected text="Button 2" key="button2" />
+  </ButtonGroup>
 ```
 
 ## Component Features

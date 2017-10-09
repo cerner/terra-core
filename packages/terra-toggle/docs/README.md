@@ -1,6 +1,6 @@
 # Terra Toggle
 
-Toggle component that transitions content in and out.
+Toggle component that transitions content in and out. For toggle button functionality, see [terra-toggle-button](#/site/toggle-button).
 
 ## Getting Started
 
@@ -11,10 +11,10 @@ Toggle component that transitions content in and out.
 
 ```jsx
 import React from 'react';
-import Toggle from 'terra-toggle';
-import Button from 'terra-button';
+import Toggle from 'terra-toggle/lib/Toggle';
+import IconInformation from 'terra-icon/lib/icon/IconInformation';
 
-class MyCustomToggle extends React.Component {
+class ToggleDefault extends React.Component {
   constructor() {
     super();
     this.state = ({ isOpen: false });
@@ -29,7 +29,7 @@ class MyCustomToggle extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.handleOnClick}>Click Me!</Button>
+        <IconInformation onClick={this.handleOnClick} />
         <Toggle isOpen={this.state.isOpen} isAnimated>
           Hello World
         </Toggle>
@@ -38,7 +38,8 @@ class MyCustomToggle extends React.Component {
   }
 }
 
-export default MyCustomToggle;
+
+export default ToggleDefault;
 ```
 
 ## Component Features
