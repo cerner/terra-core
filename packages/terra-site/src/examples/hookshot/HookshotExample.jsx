@@ -15,35 +15,35 @@ const ATTACHMENT_POSITIONS = [
   'bottom end',
 ];
 
+const generateOptions = values => {
+  return values.map((currentValue, index) => {
+    const keyValue = index;
+    return <option key={keyValue} value={currentValue}>{currentValue}</option>;
+  });
+};
+
+const attachmentValues = attachment => {
+  if (attachment === 'middle start') {
+    return { vertical: 'middle', horizontal: 'start' };
+  } else if (attachment === 'middle end') {
+    return { vertical: 'middle', horizontal: 'end' };
+  } else if (attachment === 'middle center') {
+    return { vertical: 'middle', horizontal: 'center' };
+  } else if (attachment === 'top start') {
+    return { vertical: 'top', horizontal: 'start' };
+  } else if (attachment === 'top end') {
+    return { vertical: 'top', horizontal: 'end' };
+  } else if (attachment === 'top center') {
+    return { vertical: 'top', horizontal: 'center' };
+  } else if (attachment === 'bottom start') {
+    return { vertical: 'bottom', horizontal: 'start' };
+  } else if (attachment === 'bottom end') {
+    return { vertical: 'bottom', horizontal: 'end' };
+  }
+  return { vertical: 'bottom', horizontal: 'center' };
+};
+
 class HookshotStandard extends React.Component {
-  static generateOptions(values) {
-    return values.map((currentValue, index) => {
-      const keyValue = index;
-      return <option key={keyValue} value={currentValue}>{currentValue}</option>;
-    });
-  }
-
-  static attachmentValues(attachment) {
-    if (attachment === 'middle start') {
-      return { vertical: 'middle', horizontal: 'start' };
-    } else if (attachment === 'middle end') {
-      return { vertical: 'middle', horizontal: 'end' };
-    } else if (attachment === 'middle center') {
-      return { vertical: 'middle', horizontal: 'center' };
-    } else if (attachment === 'top start') {
-      return { vertical: 'top', horizontal: 'start' };
-    } else if (attachment === 'top end') {
-      return { vertical: 'top', horizontal: 'end' };
-    } else if (attachment === 'top center') {
-      return { vertical: 'top', horizontal: 'center' };
-    } else if (attachment === 'bottom start') {
-      return { vertical: 'bottom', horizontal: 'start' };
-    } else if (attachment === 'bottom end') {
-      return { vertical: 'bottom', horizontal: 'end' };
-    }
-    return { vertical: 'bottom', horizontal: 'center' };
-  }
-
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -96,7 +96,7 @@ class HookshotStandard extends React.Component {
         <form>
           <label htmlFor={this.getId('hookshotAttachmentBehavior')}>Attachment Behavior</label>
           <select id={this.getId('hookshotAttachmentBehavior')} name="hookshotAttachmentBehavior" value={this.state.hookshotAttachmentBehavior} onChange={this.handleSelectChange}>
-            {HookshotStandard.generateOptions(Hookshot.attachmentBehaviors)}
+            {generateOptions(Hookshot.attachmentBehaviors)}
           </select>
           <br />
           <br />
@@ -111,13 +111,13 @@ class HookshotStandard extends React.Component {
           />
           <label htmlFor={this.getId('hookshotContentAttachment')}>Content Attachment</label>
           <select id={this.getId('hookshotContentAttachment')} name="hookshotContentAttachment" value={this.state.hookshotContentAttachment} onChange={this.handleSelectChange}>
-            {HookshotStandard.generateOptions(ATTACHMENT_POSITIONS)}
+            {generateOptions(ATTACHMENT_POSITIONS)}
           </select>
           <br />
           <br />
           <label htmlFor={this.getId('hookshotTargetAttachment')}>Target Attachment</label>
           <select id={this.getId('hookshotTargetAttachment')} name="hookshotTargetAttachment" value={this.state.hookshotTargetAttachment} onChange={this.handleSelectChange}>
-            {HookshotStandard.generateOptions(ATTACHMENT_POSITIONS)}
+            {generateOptions(ATTACHMENT_POSITIONS)}
           </select>
           <br />
           <br />
@@ -125,10 +125,10 @@ class HookshotStandard extends React.Component {
         <Hookshot
           attachmentBehavior={this.state.hookshotAttachmentBehavior}
           attachmentMargin={this.state.hookshotAttachmentMargin}
-          contentAttachment={HookshotStandard.attachmentValues(this.state.hookshotContentAttachment)}
+          contentAttachment={attachmentValues(this.state.hookshotContentAttachment)}
           isEnabled
           isOpen={this.state.isOpen}
-          targetAttachment={HookshotStandard.attachmentValues(this.state.hookshotTargetAttachment)}
+          targetAttachment={attachmentValues(this.state.hookshotTargetAttachment)}
           targetRef={() => document.getElementById('hookshot-standard-button')}
         >
           {hookshotContent}

@@ -101,10 +101,6 @@ const defaultProps = {
 };
 
 class Hookshot extends React.Component {
-  static now() {
-    return performance.now();
-  }
-
   constructor(props) {
     super(props);
     this.setContentNode = this.setContentNode.bind(this);
@@ -167,7 +163,7 @@ class Hookshot extends React.Component {
       return;
     }
 
-    if (this.lastCall && (Hookshot.now() - this.lastCall) < 10) {
+    if (this.lastCall && (performance.now() - this.lastCall) < 10) {
       // Some browsers call events a little too frequently, refuse to run more than is reasonable
       return;
     }
@@ -177,9 +173,9 @@ class Hookshot extends React.Component {
       this.pendingTimeout = null;
     }
 
-    this.lastCall = Hookshot.now();
+    this.lastCall = performance.now();
     this.update(event);
-    this.lastDuration = Hookshot.now() - this.lastCall;
+    this.lastDuration = performance.now() - this.lastCall;
   }
 
   enableListeners() {
