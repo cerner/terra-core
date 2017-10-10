@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Updated
+* Updated content-container site examples to use appropriate header and content.
 
 1.13.0 - (October 6, 2017)
 ------------------
