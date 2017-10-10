@@ -146,6 +146,7 @@ class HookshotContent extends React.Component {
     // Delete the disableOnClickOutside and enableOnClickOutside prop that comes from react-onclickoutside.
     delete customProps.disableOnClickOutside;
     delete customProps.enableOnClickOutside;
+    // Delete the closePortal prop that comes from react-portal.
     delete customProps.closePortal;
 
     return (

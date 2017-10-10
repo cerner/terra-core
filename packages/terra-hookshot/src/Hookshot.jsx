@@ -25,7 +25,10 @@ const ATTACHMENT_BEHAVIORS = [
 const propTypes = {
   /**
    * How the content should be positioned when the primary attachment is not available.
-   * Valid values: 'auto', 'flip', and 'none'.
+   * Valid values:
+   *  'auto': returns 180 degrees, returns rotate 90 degree, returns rotate -90 degrees, returns primary attachment
+   *  'flip': returns 180 degrees, returns primary attachment
+   *  'none': returns primary attachment
    */
   attachmentBehavior: PropTypes.oneOf(ATTACHMENT_BEHAVIORS),
   /**
