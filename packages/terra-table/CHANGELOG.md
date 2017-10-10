@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Refactor Single Selectable Rows typecheck
 
 1.13.0 - (October 6, 2017)
 ------------------

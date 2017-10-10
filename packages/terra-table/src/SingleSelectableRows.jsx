@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
-import TableRow from './TableRow';
+import TableHeader from './TableHeader';
+import TableSubheader from './TableSubheader';
 
 const KEYCODES = {
   ENTER: 13,
@@ -116,7 +117,7 @@ class SingleSelectableRows extends React.Component {
 
   clonedChildItems(rows) {
     return React.Children.map(rows, (row, index) => {
-      if (row.type === TableRow) {
+      if (row.type !== TableHeader && row.type !== TableSubheader) {
         const wrappedOnClick = this.wrappedOnClickForRow(row, index);
         const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
         const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
