@@ -21,41 +21,19 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
 pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
                  </p>);
-const display4 = (<p key="4">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
-                 </p>);
-const display5 = (<p key="5">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
-                 </p>);
-const display6 = (<p key="6">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
-                 </p>);
-
-const displays1 = [display1, display2, display3, display4, display5, display6];
-const displays2 = displays1;
-const displays3 = displays1;
 
 const contentheader = <Heading level={1} size={'large'}>Display Header</Heading>;
 
 const container = () => (
   <ContentContainer header={contentheader}>
     <div key="1">
-      {displays1}
+      {display1}
     </div>
     <div key="2">
-      {displays2}
+      {display2}
     </div>
     <div key="3">
-      {displays3}
+      {display3}
     </div>
   </ContentContainer>);
 
