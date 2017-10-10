@@ -15,15 +15,8 @@ const permitParams = (locale, callback) => {
   }
 }
 
-module.exports = (locale, callback, scope) => {
-  permitParams(locale, callback);
-  if (!hasIntl) {
-    require.ensure([], (require) => {
-      require('intl');
-      intlLoaders[locale]();
-      translationLoaders[locale](callback, scope);
-    }, 'intl-polyfill');
-  } else {
-    translationLoaders[locale](callback, scope);
-  }
+export default (locale) => {
+  return import(/* webpackChunkName: "intl-polyfill" */'intl')
+    .then(intlLoaders[locale])
+    .then(translationLoaders[locale]);
 };

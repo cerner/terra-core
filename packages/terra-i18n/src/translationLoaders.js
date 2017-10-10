@@ -1,121 +1,15 @@
-const loadArTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('ar.js');
-    callback.call(scope, i18n);
-  }, 'ar-translations');
+export default {
+  ar: (cb, scope) => import(/* webpackChunkName: "ar-translations" */'ar.js'),
+  en: (cb, scope) => import(/* webpackChunkName: "en-translations" */'en.js'),
+  'en-GB': (cb, scope) => import(/* webpackChunkName: "en-GB-translations" */'en-GB.js'),
+  'en-US': (cb, scope) => import(/* webpackChunkName: "en-US-translations" */'en-US.js'),
+  de: (cb, scope) => import(/* webpackChunkName: "de-translations" */'de.js'),
+  pt: (cb, scope) => import(/* webpackChunkName: "pt-translations" */'pt.js'),
+  'pt-BR': (cb, scope) => import(/* webpackChunkName: "pt-BR-translations" */'pt-BR.js'),
+  fr: (cb, scope) => import(/* webpackChunkName: "fr-translations" */'fr.js'),
+  'fr-FR': (cb, scope) => import(/* webpackChunkName: "fr-FR-translations" */'fr-FR.js'),
+  es: (cb, scope) => import(/* webpackChunkName: "es-translations" */'es.js'),
+  'es-US': (cb, scope) => import(/* webpackChunkName: "es-US-translations" */'es-US.js'),
+  'es-ES': (cb, scope) => import(/* webpackChunkName: "es-ES-translations" */'es-ES.js'),
+  'fi-FI': (cb, scope) => import(/* webpackChunkName: "fi-FI-translations" */'fi-FI.js'),
 };
-
-const loadEnTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('en.js');
-    callback.call(scope, i18n);
-  }, 'en-translations');
-};
-
-const loadEnGBTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('en-GB.js');
-    callback.call(scope, i18n);
-  }, 'en-GB-translations');
-};
-
-const loadEnUSTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('en-US.js');
-    callback.call(scope, i18n);
-  }, 'en-US-translations');
-};
-
-const loadDeTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('de.js');
-    callback.call(scope, i18n);
-  }, 'de-translations');
-};
-
-const loadPtTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('pt.js');
-    callback.call(scope, i18n);
-  }, 'pt-translations');
-};
-
-const loadPtBRTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('pt-BR.js');
-    callback.call(scope, i18n);
-  }, 'pt-BR-translations');
-};
-
-const loadFrTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('fr.js');
-    callback.call(scope, i18n);
-  }, 'fr-translations');
-};
-
-const loadFrFRTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('fr-FR.js');
-    callback.call(scope, i18n);
-  }, 'fr-FR-translations');
-};
-
-const loadEsTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('es.js');
-    callback.call(scope, i18n);
-  }, 'es-translations');
-};
-
-const loadEsUSTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('es-US.js');
-    callback.call(scope, i18n);
-  }, 'es-US-translations');
-};
-
-const loadEsESTranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('es-ES.js');
-    callback.call(scope, i18n);
-  }, 'es-ES-translations');
-};
-
-const loadFiFITranslation = (callback, scope) => {
-  require.ensure([], (require) => {
-    // eslint-disable-next-line
-    const i18n = require('fi-FI.js');
-    callback.call(scope, i18n);
-  }, 'fi-FI-translations');
-};
-
-const translationLoaders = {
-  ar: loadArTranslation,
-  en: loadEnTranslation,
-  'en-GB': loadEnGBTranslation,
-  'en-US': loadEnUSTranslation,
-  de: loadDeTranslation,
-  pt: loadPtTranslation,
-  'pt-BR': loadPtBRTranslation,
-  fr: loadFrTranslation,
-  'fr-FR': loadFrFRTranslation,
-  es: loadEsTranslation,
-  'es-US': loadEsUSTranslation,
-  'es-ES': loadEsESTranslation,
-  'fi-FI': loadFiFITranslation,
-};
-
-module.exports = translationLoaders;

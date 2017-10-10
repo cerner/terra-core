@@ -2,7 +2,12 @@
   "presets": ["react", ["env", {
     "targets": {
       "browsers": ["last 2 versions", "iOS >= 10"]
-    }
+    },
+    "modules": false
   }]],
-  "plugins": ["transform-object-assign", "transform-object-rest-spread", "transform-runtime"],
+  "plugins": [
+    "transform-object-assign",
+    "transform-object-rest-spread",
+    "transform-runtime",
+    "syntax-dynamic-import"],
 }

@@ -11,6 +11,7 @@
 | babel-cli | ^6.24.1 | -- | Babel command line. |
 | babel-core | ^6.24.1 | -- | Babel compiler core. |
 | babel-jest | ^20.0.0 | -- | Jest plugin to use babel for transformation. |
+| babel-plugin-syntax-dynamic-import | ^6.18.0 | -- | Allow parsing of import() |
 | babel-plugin-transform-object-assign | ^6.22.0 | -- | Replace Object.assign with an inline helper |
 | babel-plugin-transform-object-rest-spread | ^6.23.0 | -- | Compile object rest and spread to ES5 |
 | babel-plugin-transform-runtime | ^6.23.0 | -- | Externalise references to helpers and builtins, automatically polyfilling your code without polluting globals |

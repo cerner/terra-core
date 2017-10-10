@@ -27,6 +27,7 @@
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "postcss": "^6.0.9",
@@ -89,7 +90,7 @@
     "autoprefixer": "^6.7.7",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.2",
-    "babel-polyfill": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.1",
