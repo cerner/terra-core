@@ -32,28 +32,28 @@ const defaultProps = {
   boundingWidth: '540px',
 };
 
-class HookshotTemplate extends React.Component {
-  static attachmentValues(attachment) {
-    if (attachment === 'middle start') {
-      return { vertical: 'middle', horizontal: 'start' };
-    } else if (attachment === 'middle end') {
-      return { vertical: 'middle', horizontal: 'end' };
-    } else if (attachment === 'middle center') {
-      return { vertical: 'middle', horizontal: 'center' };
-    } else if (attachment === 'top start') {
-      return { vertical: 'top', horizontal: 'start' };
-    } else if (attachment === 'top end') {
-      return { vertical: 'top', horizontal: 'end' };
-    } else if (attachment === 'top center') {
-      return { vertical: 'top', horizontal: 'center' };
-    } else if (attachment === 'bottom start') {
-      return { vertical: 'bottom', horizontal: 'start' };
-    } else if (attachment === 'bottom end') {
-      return { vertical: 'bottom', horizontal: 'end' };
-    }
-    return { vertical: 'bottom', horizontal: 'center' };
+const attachmentValues = attachment => {
+  if (attachment === 'middle start') {
+    return { vertical: 'middle', horizontal: 'start' };
+  } else if (attachment === 'middle end') {
+    return { vertical: 'middle', horizontal: 'end' };
+  } else if (attachment === 'middle center') {
+    return { vertical: 'middle', horizontal: 'center' };
+  } else if (attachment === 'top start') {
+    return { vertical: 'top', horizontal: 'start' };
+  } else if (attachment === 'top end') {
+    return { vertical: 'top', horizontal: 'end' };
+  } else if (attachment === 'top center') {
+    return { vertical: 'top', horizontal: 'center' };
+  } else if (attachment === 'bottom start') {
+    return { vertical: 'bottom', horizontal: 'start' };
+  } else if (attachment === 'bottom end') {
+    return { vertical: 'bottom', horizontal: 'end' };
   }
+  return { vertical: 'bottom', horizontal: 'center' };
+};
 
+class HookshotTemplate extends React.Component {
   constructor(props) {
     super(props);
     this.triggerHookshot = this.triggerHookshot.bind(this);
@@ -87,8 +87,8 @@ class HookshotTemplate extends React.Component {
       <div id={`${id}-bounds`} style={{ border: '1px dashed grey', height: '145px', width: boundingWidth }}>
         <Hookshot
           id={id}
-          contentAttachment={HookshotTemplate.attachmentValues(contentAttachment)}
-          targetAttachment={HookshotTemplate.attachmentValues(targetAttachment)}
+          contentAttachment={attachmentValues(contentAttachment)}
+          targetAttachment={attachmentValues(targetAttachment)}
           attachmentMargin={attachmentMargin}
           isEnabled
           isOpen={this.state.open}
