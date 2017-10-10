@@ -7,6 +7,7 @@ import TableHeaderCell from './TableHeaderCell';
 import TableRows from './TableRows';
 import TableRow from './TableRow';
 import TableCell from './TableCell';
+import SelectableTableRows from './SelectableTableRows';
 import TableSingleSelectableRows from './SingleSelectableRows';
 import TableSubheader from './TableSubheader';
 import styles from './Table.scss';
@@ -59,6 +60,7 @@ Table.Header = TableHeader;
 Table.HeaderCell = TableHeaderCell;
 Table.Row = TableRow;
 Table.Cell = TableCell;
+Table.SelectableTableRows = SelectableTableRows;
 Table.SingleSelectableRows = TableSingleSelectableRows;
 Table.Subheader = TableSubheader;
 

@@ -1,32 +1,40 @@
 import React from 'react';
 
 import ContentContainer from 'terra-content-container';
-import Button from 'terra-button';
+import Heading from 'terra-heading';
 
-const display1 = <p key="1">display1display1display1display1display1display1display1display1display1display1display1display1display1display1</p>;
-const display2 = <p key="2">display2display2display2display2display2display2display2display2display2display2display2display2display2display2</p>;
-const display3 = <p key="3">display 3</p>;
-const display4 = <p key="4">display 4</p>;
-const display5 = <p key="5">display 5</p>;
-const display6 = <p key="6">display 6</p>;
+const display1 = (<p key="1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
+Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
+pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+                  </p>);
+const display2 = (<p key="2">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
+Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
+pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+                 </p>);
+const display3 = (<p key="3">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
+Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
+pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+                 </p>);
 
-const displays1 = [display1, display2, display3, display4, display5, display6];
-const displays2 = displays1;
-const displays3 = displays1;
-
-const button1 = <Button text="header button" />;
+const contentheader = <Heading level={1} size={'large'}>Display Header</Heading>;
 
 const container = () => (
   <div style={{ height: '200px', overflow: 'auto' }}>
-    <ContentContainer header={button1} fill>
+    <ContentContainer header={contentheader} fill>
       <div key="1">
-        {displays1}
+        {display1}
       </div>
       <div key="2">
-        {displays2}
+        {display2}
       </div>
       <div key="3">
-        {displays3}
+        {display3}
       </div>
     </ContentContainer>
   </div>);

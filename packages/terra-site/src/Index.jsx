@@ -89,6 +89,7 @@ import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableT
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
 import SelectableListTestRoutes from 'terra-list/tests/nightwatch/selectable-list/SelectableListTestRoutes';
+import SelectableTableTestRoutes from 'terra-table/tests/nightwatch/selectable-table/SelectableTableTestRoutes';
 import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
 import SingleSelectTableTestRoutes from 'terra-table/tests/nightwatch/single-select-table/SingleSelectTableTestRoutes';
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
@@ -179,6 +180,7 @@ ReactDOM.render((
     {MultiSelectListTestRoutes}
     {StatusTestRoutes}
     {TableTestRoutes}
+    {SelectableTableTestRoutes}
     {SingleSelectTableTestRoutes}
     {TimeInputTestRoutes}
     {MarkdownTestRoutes}
