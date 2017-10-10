@@ -2,6 +2,7 @@
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon on menu item when isIconOnly is set, but should set the text 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={false}
   subMenuItems={Array []}
@@ -11,6 +12,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon on
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon prop menu item, but should render text 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={false}
   subMenuItems={Array []}
@@ -20,6 +22,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon pr
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set isReversed prop on menu item 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={false}
   subMenuItems={Array []}
@@ -29,6 +32,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set isRever
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set selected prop on menu item outside of item group 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={false}
   subMenuItems={Array []}
@@ -38,6 +42,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set selecte
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a disabled menu item when isDisabled is set 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={true}
   isSelected={false}
   subMenuItems={Array []}
@@ -47,6 +52,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a disabl
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={false}
   subMenuItems={Array []}
@@ -56,6 +62,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu i
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu item when subMenuItems are given 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={false}
   subMenuItems={
@@ -75,6 +82,7 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu i
 
 exports[`CollapsibleMenuViewItem Collapsible Menu Context should set selected prop on menu item when inside item group 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelected={true}
   subMenuItems={Array []}
