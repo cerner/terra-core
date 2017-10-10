@@ -20,10 +20,9 @@ class HookshotStandard extends React.Component {
   render() {
     const hookshotContent = (
       <Hookshot.Content
-        closeOnEsc
-        closeOnOutsideClick
-        closeOnResize
-        onRequestClose={this.handleRequestClose}
+        onEsc={this.handleRequestClose}
+        onOutsideClick={this.handleRequestClose}
+        onResize={this.handleRequestClose}
         id="testDefaultContent"
       >
         <div style={{ height: '40px', width: '200px' }}>Hookshot</div>
@@ -33,7 +32,7 @@ class HookshotStandard extends React.Component {
     return (
       <div>
         <Hookshot
-          content={hookshotContent}
+          contentAttachment={{ vertical: 'bottom', horizontal: 'center' }}
           isEnabled
           isOpen={this.state.open}
           targetRef={() => document.getElementById('hookshot-standard-button')}

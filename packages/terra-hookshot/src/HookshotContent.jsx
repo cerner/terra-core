@@ -18,7 +18,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The function callback when am escape keydown event occurs..
+   * The function callback when am escape keydown event occurs.
    */
   onEsc: PropTypes.func,
   /**
@@ -41,26 +41,24 @@ class HookshotContent extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleResize = this.debounce(this.handleResize.bind(this), 100);
+    this.enableEscListener = this.enableEscListener.bind(this);
+    this.disableEscListener = this.disableEscListener.bind(this);
+    this.enableResizeListener = this.enableResizeListener.bind(this);
+    this.disableResizeListener = this.disableResizeListener.bind(this);
+    this.updateListeners = this.updateListeners.bind(this);
   }
 
   componentDidMount() {
-    if (this.props.onEsc) {
-      document.addEventListener('keydown', this.handleKeydown);
-    }
+    this.updateListeners();
+  }
 
-    if (this.props.onResize) {
-      window.addEventListener('resize', this.handleResize);
-    }
+  componentDidUpdate() {
+    this.updateListeners();
   }
 
   componentWillUnmount() {
-    if (this.props.onEsc) {
-      document.removeEventListener('keydown', this.handleKeydown);
-    }
-
-    if (this.props.onResize) {
-      window.removeEventListener('resize', this.handleResize);
-    }
+    this.disableEscListener();
+    this.disableResizeListener();
   }
 
   handleResize(event) {
@@ -79,6 +77,48 @@ class HookshotContent extends React.Component {
     if (event.keyCode === KEYCODES.ESCAPE) {
       event.preventDefault();
       this.props.onEsc(event);
+    }
+  }
+
+  updateListeners() {
+    if (this.props.onEsc) {
+      this.enableEscListener();
+    } else {
+      this.disableEscListener();
+    }
+
+    if (this.props.onResize) {
+      this.enableResizeListener();
+    } else {
+      this.disableResizeListener();
+    }
+  }
+
+  enableEscListener() {
+    if (!this.escListenerAdded) {
+      document.addEventListener('keydown', this.handleKeydown);
+      this.escListenerAdded = true;
+    }
+  }
+
+  disableEscListener() {
+    if (this.escListenerAdded) {
+      document.removeEventListener('keydown', this.handleKeydown);
+      this.escListenerAdded = false;
+    }
+  }
+
+  enableResizeListener() {
+    if (!this.resizeListenerAdded) {
+      window.addEventListener('resize', this.handleResize);
+      this.resizeListenerAdded = true;
+    }
+  }
+
+  disableResizeListener() {
+    if (this.resizeListenerAdded) {
+      window.removeEventListener('resize', this.handleResize);
+      this.resizeListenerAdded = false;
     }
   }
 

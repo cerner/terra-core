@@ -4,16 +4,16 @@ import Portal from 'react-portal';
 import HookshotContent from './HookshotContent';
 import HookshotUtils from './_HookshotUtils';
 
-const ATTACHMENT_POSITIONS = [
-  'top left',
-  'top center',
-  'top right',
-  'middle left',
-  'middle center',
-  'middle right',
-  'bottom left',
-  'bottom center',
-  'bottom right',
+const VERTICAL_ATTACHMENTS = [
+  'top',
+  'middle',
+  'bottom',
+];
+
+const HORIZONTAL_ATTACHMENTS = [
+  'start',
+  'center',
+  'end',
 ];
 
 const ATTACHMENT_BEHAVIORS = [
@@ -41,13 +41,20 @@ const propTypes = {
    */
   children: PropTypes.element.isRequired,
   /**
-   * String pair separated by a space using values of top, middle, bottom, and left, center, right. (ex: 'top middle')
+   * Object containing the vertical and horizontal attachment values for the content.
+   * Valid values: { horizontal: ['start', 'center', 'end'], vertical: ['top', 'middle', 'bottom'] }.
    */
-  contentAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS).isRequired,
+  contentAttachment: PropTypes.shape({
+    horizontal: PropTypes.oneOf(HORIZONTAL_ATTACHMENTS),
+    vertical: PropTypes.oneOf(VERTICAL_ATTACHMENTS),
+  }).isRequired,
   /**
-   * String pair of top and left offset, ie "10px -4px".
+   * Object containing the vertical and horizontal offset values in px for the content.
    */
-  contentOffset: PropTypes.string,
+  contentOffset: PropTypes.shape({
+    horizontal: PropTypes.number,
+    vertical: PropTypes.number,
+  }),
   /**
    * Determines whether the content should be actively positioned via hookshot.
    */
@@ -65,22 +72,29 @@ const propTypes = {
    */
   targetRef: PropTypes.func.isRequired,
   /**
-   * String pair of top, middle, bottom, and left, center, right. Will mirror content if none provided. (ex: 'bottom middle')
+   * Object containing the vertical and horizontal attachment values for the target.
+   * Valid values: { horizontal: ['start', 'center', 'end'], vertical: ['top', 'middle', 'bottom'] }.
    */
-  targetAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
+  targetAttachment: PropTypes.shape({
+    horizontal: PropTypes.oneOf(HORIZONTAL_ATTACHMENTS),
+    vertical: PropTypes.oneOf(VERTICAL_ATTACHMENTS),
+  }),
   /**
-   * String pair of top and left offset, ie "10px -4px".
+   * Object containing the vertical and horizontal offset values in px for the target.
    */
-  targetOffset: PropTypes.string,
+  targetOffset: PropTypes.shape({
+    horizontal: PropTypes.number,
+    vertical: PropTypes.number,
+  }),
 };
 
 const defaultProps = {
   attachmentMargin: 0,
   attachmentBehavior: 'auto',
-  contentOffset: '0 0',
+  contentOffset: { horizontal: 0, vertical: 0 },
   isEnabled: false,
   isOpen: false,
-  targetOffset: '0 0',
+  targetOffset: { horizontal: 0, vertical: 0 },
 };
 
 class Hookshot extends React.Component {
@@ -111,9 +125,7 @@ class Hookshot extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.isEnabled !== this.props.isEnabled || newProps.isOpen !== this.props.isOpen) {
-      this.setState({ isEnabled: newProps.isEnabled && newProps.isOpen });
-    }
+    this.setState({ isEnabled: newProps.isEnabled && newProps.isOpen });
   }
 
   componentDidUpdate() {
@@ -128,7 +140,7 @@ class Hookshot extends React.Component {
   }
 
   componentWillUnmount() {
-    this.destroy();
+    this.disableListeners();
   }
 
   setContentNode(node) {
@@ -245,11 +257,6 @@ class Hookshot extends React.Component {
     }
   }
 
-  destroy() {
-    this.disableListeners();
-    this.contentNode = null;
-  }
-
   update(event) {
     if (!this.props.targetRef() || !this.contentNode) {
       return;
@@ -299,27 +306,19 @@ class Hookshot extends React.Component {
       return null;
     }
 
+    const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
     this.content = {
-      offset: HookshotUtils.parseOffset(contentOffset),
-      attachment: HookshotUtils.parseAttachment(contentAttachment),
+      offset: HookshotUtils.getDirectionalOffset(contentOffset, isRTL),
+      attachment: HookshotUtils.getDirectionalAttachment(contentAttachment, isRTL),
     };
     this.target = {
-      offset: HookshotUtils.parseOffset(targetOffset),
-      attachment: targetAttachment ? HookshotUtils.parseAttachment(targetAttachment) : HookshotUtils.mirrorAttachment(this.content.attachment),
+      offset: HookshotUtils.getDirectionalOffset(targetOffset, isRTL),
+      attachment: targetAttachment ? HookshotUtils.getDirectionalAttachment(targetAttachment, isRTL) : HookshotUtils.mirrorAttachment(this.content.attachment),
     };
-
-    if (document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl') {
-      this.content.offset = HookshotUtils.switchOffsetToRTL(this.content.offset);
-      this.target.offset = HookshotUtils.switchOffsetToRTL(this.target.offset);
-      this.content.attachment = HookshotUtils.switchAttachmentToRTL(this.content.attachment);
-      this.target.attachment = HookshotUtils.switchAttachmentToRTL(this.target.attachment);
-    }
-
-    const clonedContent = this.cloneContent(children);
 
     return (
       <Portal isOpened={isOpen}>
-        {clonedContent}
+        {this.cloneContent(children)}
       </Portal>
     );
   }
@@ -327,7 +326,8 @@ class Hookshot extends React.Component {
 
 Hookshot.propTypes = propTypes;
 Hookshot.defaultProps = defaultProps;
-Hookshot.attachmentPositions = ATTACHMENT_POSITIONS;
+Hookshot.horizontalAttachments = HORIZONTAL_ATTACHMENTS;
+Hookshot.verticalAttachments = VERTICAL_ATTACHMENTS;
 Hookshot.attachmentBehaviors = ATTACHMENT_BEHAVIORS;
 Hookshot.Utils = HookshotUtils;
 Hookshot.Content = HookshotContent;

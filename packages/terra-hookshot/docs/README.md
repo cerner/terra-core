@@ -23,7 +23,7 @@ render() {
       boundingRef={boundingRef}
       content=<Hookshot.Content />
       contentAttachment="bottom center"
-      contentOffset="10 10"
+      contentOffset={{ horizontal: 10, vertical: 10 }}
       isEnabled
       isOpen={this.state.isOpen}
       onPosition={this.handleOnPosition}

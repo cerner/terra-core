@@ -27,7 +27,7 @@ class HookshotDefaultExample extends React.Component {
     return (
       <div>
         <Hookshot
-          contentAttachment="top center"
+          contentAttachment={{ vertical: 'top', horizontal: 'center' }}
           isEnabled
           isOpen={this.state.isOpen}
           targetRef={() => document.getElementById('hookshot-standard-button')}

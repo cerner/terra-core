@@ -185,41 +185,28 @@ const getBoundingRect = (boundingElement) => {
  * This function returns the attachment object, adjusted for RTL conversion.
  *
  * @ param {Object} attachment - The vertical and horizonal hookshot attachments.
+ * @ param {bool} isRTL - Whether or not the page is using RTL.
  */
-const switchAttachmentToRTL = attachment => ({ vertical: attachment.vertical, horizontal: MIRROR_LR[attachment.horizontal] });
+const getDirectionalAttachment = (attachment, isRTL) => {
+  if (attachment.horizontal === 'start') {
+    return { vertical: attachment.vertical, horizontal: (isRTL ? 'right' : 'left') };
+  } else if (attachment.horizontal === 'end') {
+    return { vertical: attachment.vertical, horizontal: (isRTL ? 'left' : 'right') };
+  }
+  return attachment;
+};
 
 /**
  * This function returns the offset object, adjusted for RTL conversion.
  *
  * @ param {Object} offset - The vertical and horizonal offset values.
+ * @ param {bool} isRTL - Whether or not the page is using RTL.
  */
-const switchOffsetToRTL = offset => ({ vertical: offset.vertical, horizontal: -offset.horizontal });
-
-/**
- * This function splits a given attachment into an object representing the corresponding vertical and horizontal values.
- *
- * @ param {string} attachment - The vertical-horizontal attachment value to split.
- */
-const parseAttachment = (attachment) => {
-  if (!attachment) {
-    return { vertical: '', horizontal: '' };
+const getDirectionalOffset = (offset, isRTL) => {
+  if (isRTL) {
+    return { vertical: offset.vertical, horizontal: -offset.horizontal };
   }
-  const [vertical, horizontal] = attachment.split(' ');
-  return { vertical, horizontal };
-};
-
-/**
- * This function splits a given offset string into an object representing the corresponding vertical and horizontal offset values.
- *
- * @ param {string} value - The vertical-horizontal offset value to split.
- */
-const parseOffset = (value) => {
-  if (!value) {
-    return { vertical: 0, horizontal: 0 };
-  }
-
-  const pair = parseAttachment(value);
-  return { vertical: Number.parseFloat(pair.vertical), horizontal: Number.parseFloat(pair.horizontal) };
+  return offset;
 };
 
 /**
@@ -582,9 +569,7 @@ export default {
   getBounds,
   getBoundingRect,
   mirrorAttachment,
-  switchAttachmentToRTL,
-  switchOffsetToRTL,
-  parseAttachment,
-  parseOffset,
+  getDirectionalAttachment,
+  getDirectionalOffset,
   positionStyleFromBounds,
 };

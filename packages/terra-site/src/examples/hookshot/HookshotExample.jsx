@@ -3,12 +3,45 @@ import Button from 'terra-button';
 import Hookshot from 'terra-hookshot';
 import NumberField from 'terra-form/lib/NumberField';
 
+const ATTACHMENT_POSITIONS = [
+  'top start',
+  'top center',
+  'top end',
+  'middle start',
+  'middle center',
+  'middle end',
+  'bottom start',
+  'bottom center',
+  'bottom end',
+];
+
 class HookshotStandard extends React.Component {
   static generateOptions(values) {
     return values.map((currentValue, index) => {
       const keyValue = index;
       return <option key={keyValue} value={currentValue}>{currentValue}</option>;
     });
+  }
+
+  static attachmentValues(attachment) {
+    if (attachment === 'middle start') {
+      return { vertical: 'middle', horizontal: 'start' };
+    } else if (attachment === 'middle end') {
+      return { vertical: 'middle', horizontal: 'end' };
+    } else if (attachment === 'middle center') {
+      return { vertical: 'middle', horizontal: 'center' };
+    } else if (attachment === 'top start') {
+      return { vertical: 'top', horizontal: 'start' };
+    } else if (attachment === 'top end') {
+      return { vertical: 'top', horizontal: 'end' };
+    } else if (attachment === 'top center') {
+      return { vertical: 'top', horizontal: 'center' };
+    } else if (attachment === 'bottom start') {
+      return { vertical: 'bottom', horizontal: 'start' };
+    } else if (attachment === 'bottom end') {
+      return { vertical: 'bottom', horizontal: 'end' };
+    }
+    return { vertical: 'bottom', horizontal: 'center' };
   }
 
   constructor(props) {
@@ -20,8 +53,8 @@ class HookshotStandard extends React.Component {
     this.getId = this.getId.bind(this);
     this.state = {
       isOpen: false,
-      hookshotContentAttachment: Hookshot.attachmentPositions[1],
-      hookshotTargetAttachment: Hookshot.attachmentPositions[7],
+      hookshotContentAttachment: ATTACHMENT_POSITIONS[1],
+      hookshotTargetAttachment: ATTACHMENT_POSITIONS[7],
       hookshotAttachmentBehavior: Hookshot.attachmentBehaviors[0],
       hookshotAttachmentMargin: 0,
     };
@@ -78,13 +111,13 @@ class HookshotStandard extends React.Component {
           />
           <label htmlFor={this.getId('hookshotContentAttachment')}>Content Attachment</label>
           <select id={this.getId('hookshotContentAttachment')} name="hookshotContentAttachment" value={this.state.hookshotContentAttachment} onChange={this.handleSelectChange}>
-            {HookshotStandard.generateOptions(Hookshot.attachmentPositions)}
+            {HookshotStandard.generateOptions(ATTACHMENT_POSITIONS)}
           </select>
           <br />
           <br />
           <label htmlFor={this.getId('hookshotTargetAttachment')}>Target Attachment</label>
           <select id={this.getId('hookshotTargetAttachment')} name="hookshotTargetAttachment" value={this.state.hookshotTargetAttachment} onChange={this.handleSelectChange}>
-            {HookshotStandard.generateOptions(Hookshot.attachmentPositions)}
+            {HookshotStandard.generateOptions(ATTACHMENT_POSITIONS)}
           </select>
           <br />
           <br />
@@ -92,10 +125,10 @@ class HookshotStandard extends React.Component {
         <Hookshot
           attachmentBehavior={this.state.hookshotAttachmentBehavior}
           attachmentMargin={this.state.hookshotAttachmentMargin}
-          contentAttachment={this.state.hookshotContentAttachment}
+          contentAttachment={HookshotStandard.attachmentValues(this.state.hookshotContentAttachment)}
           isEnabled
           isOpen={this.state.isOpen}
-          targetAttachment={this.state.hookshotTargetAttachment}
+          targetAttachment={HookshotStandard.attachmentValues(this.state.hookshotTargetAttachment)}
           targetRef={() => document.getElementById('hookshot-standard-button')}
         >
           {hookshotContent}

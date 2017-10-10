@@ -26,8 +26,8 @@ class HookshotBoundingContainer extends React.Component {
     } else if (this.state.position === 'left') {
       buttonMarginLeft = '300px';
       buttonMarginRight = '140px';
-      targetAttachment = 'middle right';
-      contentAttachment = 'middle left';
+      targetAttachment = 'middle end';
+      contentAttachment = 'middle start';
     } else if (this.state.position === 'right') {
       buttonMarginLeft = '50px';
     }
@@ -35,7 +35,6 @@ class HookshotBoundingContainer extends React.Component {
       <div>
         <HookshotTemplate
           isOpen={false}
-          attchmentBehavior="none"
           buttonMarginTop={buttonMarginTop}
           buttonMarginLeft={buttonMarginLeft}
           buttonMarginRight={buttonMarginRight}
