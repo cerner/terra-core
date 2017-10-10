@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Keyboard navigation with arrow keys
+
 ### Fixed
 * Issue where Menu.Item prop updates were not getting rendered immediately.
 

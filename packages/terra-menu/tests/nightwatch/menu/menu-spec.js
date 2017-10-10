@@ -68,6 +68,14 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.hidden('div[class*="_header"] > div:last-child > button[class*="_header-button"]')
       .keys([browser.Keys.ESCAPE]);
   },
+  'Menu can be navigated using arrow keys': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/menu-tests/submenu`);
+    browser.expect.element('.TestInitialMenuContent').to.be.present;
+    browser.sendKeys('.TestNestedMenu', [browser.Keys.ARROW_RIGHT]);
+    browser.expect.element('.TestNestedMenuContent').to.be.present;
+    browser.sendKeys('.TestNestedMenuContent', [browser.Keys.ARROW_LEFT]);
+    browser.expect.element('.TestInitialMenuContent').to.be.visible;
+  },
   'Displays a selectable menu when there is one child': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/menu-tests/selectable`)
