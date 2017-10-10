@@ -20,26 +20,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('ul li:nth-child(3)', 'test 3');
   },
 
-  'Displays items in the single select list divided': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/items-divided`);
-    browser.expect.element('ul').to.have.attribute('class').which.contains('divided');
-  },
-
-  'Displays items in the single select list with a chevron from hasChevrons prop': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/chevron`);
-    browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
-  },
-
-  'Displays chevron single select list with one non-chevron item': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/single-non-chevron`);
-    browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
-  },
-
-  'Displays single select list with one chevron item': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/single-chevron`);
-    browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
-  },
-
   'Display a single select list  list and highlights the selected item upon clicking': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/default`);
 
@@ -84,41 +64,5 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.click('ul li:nth-child(1)');
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
     browser.assert.containsText('#selected-index', '0');
-  },
-
-  'Displays only one selected item in the single select list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/preselected`);
-    checkElementsClass(browser, listItemSelectors, selectedClasses, [false, true, false]);
-
-    browser.click('ul li:nth-child(1)');
-    checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
-  },
-
-  'Displays a non-selectable item in the single select list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-list-tests/non-selectable`);
-    browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('selected');
-    browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('is-selectable');
-
-    browser.click('ul li:nth-child(3)');
-    browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('selected');
-  },
-
-  'Displays a single select list with one item': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/single-select-list-tests/one-item`)
-      .assert.elementPresent('ul');
-    browser
-      .url(`${browser.launchUrl}/#/tests/single-select-list-tests/one-item`)
-      .assert.elementPresent('li');
-  },
-
-  'Displays a single select list with no items': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/single-select-list-tests/no-items`)
-      .assert.elementPresent('ul');
-
-    browser
-      .url(`${browser.launchUrl}/#/tests/single-select-list-tests/no-items`)
-      .assert.elementNotPresent('li');
   },
 });

@@ -21,11 +21,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('ul li:nth-child(3)', 'test 3');
   },
 
-  'Displays items in the multi select list divided': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-list-tests/items-divided`);
-    browser.expect.element('ul').to.have.attribute('class').which.contains('divided');
-  },
-
   'Displays items in the multi select list with a max selection count of 2': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-list-tests/max-count`);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, true, false]);
@@ -161,37 +156,4 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     checkElementsClass(browser, listItemSelectors, selectedClasses, [true, false, false]);
   },
 
-  'Displays a preselected item in the multi select list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-list-tests/preselected`);
-    browser.expect.element('ul li:nth-child(1)').to.have.attribute('class').which.contains('selected');
-  },
-
-  'Displays a non-selectable item in the multi select list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-list-tests/non-selectable`);
-
-    browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('selected');
-    browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('is-selectable');
-
-    browser.click('ul li:nth-child(3)');
-    browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('selected');
-  },
-
-  'Displays a multi select list with one item': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/multi-select-list-tests/one-item`)
-      .assert.elementPresent('ul');
-    browser
-      .url(`${browser.launchUrl}/#/tests/multi-select-list-tests/one-item`)
-      .assert.elementPresent('li');
-  },
-
-  'Displays a multi select list with no items': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/multi-select-list-tests/no-items`)
-      .assert.elementPresent('ul');
-
-    browser
-      .url(`${browser.launchUrl}/#/tests/multi-select-list-tests/no-items`)
-      .assert.elementNotPresent('li');
-  },
 });

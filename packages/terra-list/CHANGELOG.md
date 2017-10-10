@@ -14,6 +14,12 @@ Unreleased
 ### Removed
 * Remove stylelint-disable selector-class-pattern
 
+### Added
+* SelectableList component
+
+### Changed
+* Update SingleSelectList and MultiSelectList components to use SelectableList
+
 1.10.0 - (September 19, 2017)
 ------------------
 ### Changed
