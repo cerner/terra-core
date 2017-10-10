@@ -8,6 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -63,6 +64,7 @@ module.exports = {
       supportedLocales: i18nSupportedLocales,
     }),
     new webpack.NamedChunksPlugin(),
+    new UglifyJSPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
