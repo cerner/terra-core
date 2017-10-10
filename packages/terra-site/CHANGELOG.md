@@ -17,6 +17,9 @@ Unreleased
 ### Fixed
 * Updating theming-plugin match regex to allow for multiple fallback values.
 
+### Added
+* Selectable Table Test Routes
+
 ### Changed
 * Break out list examples into their own pages.
 * Break out static and themeable icon examples into their own pages
