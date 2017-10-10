@@ -88,14 +88,26 @@ exports[`should render a default date time picker 1`] = `
 />
 `;
 
-exports[`should render a default date time picker with custom input attributes 1`] = `
+exports[`should render a default date time picker with custom date input attributes 1`] = `
 <DateTimePicker
-  inputAttributes={
+  dateInputAttributes={
     Object {
-      "id": "terra-date-time-input",
+      "id": "terra-date-input",
     }
   }
   name="date-time-input"
+  utcOffset={0}
+/>
+`;
+
+exports[`should render a default date time picker with custom time input attributes 1`] = `
+<DateTimePicker
+  name="date-time-input"
+  timeInputAttributes={
+    Object {
+      "id": "terra-time-input",
+    }
+  }
   utcOffset={0}
 />
 `;

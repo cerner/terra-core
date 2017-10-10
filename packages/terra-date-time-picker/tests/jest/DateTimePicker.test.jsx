@@ -15,10 +15,19 @@ it('should render a default date time picker', () => {
   expect(datePicker).toMatchSnapshot();
 });
 
-it('should render a default date time picker with custom input attributes', () => {
+it('should render a default date time picker with custom date input attributes', () => {
   const datePicker = shallow(
     <IntlProvider locale={locale} messages={messages}>
-      <DateTimePicker name="date-time-input" utcOffset={0} inputAttributes={{ id: 'terra-date-time-input' }} />
+      <DateTimePicker name="date-time-input" utcOffset={0} dateInputAttributes={{ id: 'terra-date-input' }} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
+
+it('should render a default date time picker with custom time input attributes', () => {
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DateTimePicker name="date-time-input" utcOffset={0} timeInputAttributes={{ id: 'terra-time-input' }} />
     </IntlProvider>,
   );
   expect(datePicker).toMatchSnapshot();

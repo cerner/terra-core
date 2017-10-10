@@ -273,4 +273,24 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.expect.element('.react-datepicker').to.not.be.present;
   },
+
+  'Displays the DateTimePicker with custom date input attributes': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/date-input-attributes`);
+    browser.expect.element('input[name="terra-date-input"]').to.be.present;
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('id').equals('date-input-example');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('disabled');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.not.have.attribute('disabled');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.not.have.attribute('disabled');
+  },
+
+  'Displays the DateTimePicker with custom time input attributes': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/time-input-attributes`);
+    browser.expect.element('input[name="terra-time-hour-input"]').to.be.present;
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('id').equals('time-input-example');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('disabled');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.be.present;
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('id').equals('time-input-example');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('disabled');
+    browser.expect.element('input[name="terra-date-input"]').to.not.have.attribute('disabled');
+  },
 });

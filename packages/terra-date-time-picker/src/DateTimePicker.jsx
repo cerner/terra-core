@@ -13,6 +13,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Custom input attributes to apply to the date input. Use the name prop to set the name for the date input.
+   * Do not set the name in inputAttribute as it will be ignored.
+   */
+  dateInputAttributes: PropTypes.object,
+  /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
   excludeDates: PropTypes.arrayOf(PropTypes.string),
@@ -26,11 +31,6 @@ const propTypes = {
    * All Other dates will be disabled.
    */
   includeDates: PropTypes.arrayOf(PropTypes.string),
-  /**
-   * Custom input attributes to apply to the date and time inputs. Use the name prop to set the name for the input.
-   * Do not set the name in inputAttribute as it will be ignored.
-   */
-  inputAttributes: PropTypes.object,
   /**
    * An ISO 8601 string representation of the maximum date time.
    */
@@ -62,16 +62,21 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
+   * Custom input attributes to apply to the time input. Use the name prop to set the name for the time input.
+   * Do not set the name in inputAttribute as it will be ignored.
+   */
+  timeInputAttributes: PropTypes.object,
+  /**
    * An ISO 8601 string representation of the initial value to show in the date and time inputs.
    */
   value: PropTypes.string,
 };
 
 const defaultProps = {
+  dateInputAttributes: undefined,
   excludeDates: undefined,
   filterDate: undefined,
   includeDates: undefined,
-  inputAttributes: undefined,
   maxDateTime: undefined,
   minDateTime: undefined,
   name: undefined,
@@ -79,6 +84,7 @@ const defaultProps = {
   onChangeRaw: undefined,
   releaseFocus: undefined,
   requestFocus: undefined,
+  timeInputAttributes: undefined,
   value: undefined,
 };
 
@@ -291,7 +297,7 @@ class DateTimePicker extends React.Component {
 
   render() {
     const {
-      inputAttributes,
+      dateInputAttributes,
       excludeDates,
       filterDate,
       includeDates,
@@ -302,6 +308,7 @@ class DateTimePicker extends React.Component {
       name,
       requestFocus,
       releaseFocus,
+      timeInputAttributes,
       value,
       ...customProps
     } = this.props;
@@ -329,7 +336,7 @@ class DateTimePicker extends React.Component {
           excludeDates={excludeDates}
           filterDate={filterDate}
           includeDates={includeDates}
-          inputAttributes={inputAttributes}
+          inputAttributes={dateInputAttributes}
           maxDate={maxDateTime}
           minDate={minDateTime}
           selectedDate={dateValue}
@@ -342,7 +349,7 @@ class DateTimePicker extends React.Component {
           <TimeInput
             onBlur={this.handleOnTimeBlur}
             onChange={this.handleTimeChange}
-            inputAttributes={inputAttributes}
+            inputAttributes={timeInputAttributes}
             name="input"
             value={this.timeValue}
           />

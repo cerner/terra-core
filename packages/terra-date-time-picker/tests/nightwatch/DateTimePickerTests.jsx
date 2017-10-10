@@ -17,6 +17,8 @@ const DateTimePickerTests = () => (
       <li><Link to="/tests/date-time-picker-tests/inside-modal">DateTimePicker - Presented Inside Modal</Link></li>
       <li><Link to="/tests/date-time-picker-tests/on-change">DateTimePicker - On Change</Link></li>
       <li><Link to="/tests/date-time-picker-tests/on-change-raw">DateTimePicker - On Change Raw</Link></li>
+      <li><Link to="/tests/date-time-picker-tests/date-input-attributes">DateTimePicker - Date Input Disabled</Link></li>
+      <li><Link to="/tests/date-time-picker-tests/time-input-attributes">DateTimePicker - Time Input Disabled</Link></li>
     </ul>
   </div>
 );
