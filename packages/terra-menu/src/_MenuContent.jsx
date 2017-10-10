@@ -56,6 +56,10 @@ class MenuContent extends React.Component {
     this.buildHeader = this.buildHeader.bind(this);
     this.isSelectable = this.isSelectable.bind(this);
     this.onKeyDownBackButton = this.onKeyDownBackButton.bind(this);
+
+    this.state = {
+      focusIndex: -1,
+    };
   }
 
   getChildContext() {
@@ -64,6 +68,7 @@ class MenuContent extends React.Component {
 
   onKeyDownBackButton(event) {
     if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
+      event.preventDefault();
       this.props.onRequestBack();
     }
   }
@@ -82,6 +87,10 @@ class MenuContent extends React.Component {
   wrapOnClick(item) {
     const onClick = item.props.onClick;
     return (event) => {
+      event.preventDefault();
+      if (this.state.focusIndex !== -1) {
+        this.setState({ focusIndex: -1 });
+      }
       this.props.onRequestNext(item);
 
       if (onClick) {
@@ -90,11 +99,24 @@ class MenuContent extends React.Component {
     };
   }
 
-  wrapOnKeyDown(item) {
+  wrapOnKeyDown(item, index) {
     const onKeyDown = item.props.onKeyDown;
     return ((event) => {
+      event.preventDefault();
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
-        this.props.onRequestNext(item);
+        if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
+          this.props.onRequestNext(item);
+        }
+      } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.RIGHT_ARROW) {
+        if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
+          this.props.onRequestNext(item);
+        }
+      } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.LEFT_ARROW) {
+        this.props.onRequestBack();
+      } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.UP_ARROW) {
+        this.setState({ focusIndex: index - 1 });
+      } else if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.DOWN_ARROW) {
+        this.setState({ focusIndex: index + 1 });
       }
 
       if (onKeyDown) {
@@ -143,12 +165,42 @@ class MenuContent extends React.Component {
   }
 
   render() {
+    let index = -1;
     const items = React.Children.map(this.props.children, (item) => {
+      let onClick = item.props.onClick;
+      let newItem = item;
+
       if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
-        return React.cloneElement(item, { onClick: this.wrapOnClick(item), onKeyDown: this.wrapOnKeyDown(item) });
+        onClick = this.wrapOnClick(item);
       }
 
-      return item;
+      // Check if child is an enabled Menu.Item
+      if (item.props.text && !item.props.isDisabled) {
+        index += 1;
+        const onKeyDown = this.wrapOnKeyDown(item, index);
+        const isActive = this.state.focusIndex === index;
+
+        newItem = React.cloneElement(item, {
+          onClick,
+          onKeyDown,
+          isActive,
+        });
+      // If the child has children then it is an item group, so iterate through it's children
+      } else if (item.props.children) {
+        const children = React.Children.map(item.props.children, (child) => {
+          if (!child.props.isDisabled) {
+            index += 1;
+            return React.cloneElement(child, {
+              onKeyDown: this.wrapOnKeyDown(child, index),
+              isActive: index === this.state.focusIndex,
+            });
+          }
+          return child;
+        });
+        newItem = React.cloneElement(item, {}, children);
+      }
+
+      return newItem;
     });
 
     const header = this.buildHeader();
