@@ -2,6 +2,7 @@
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a selectable menu item 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelectable={true}
   isSelected={false}
@@ -12,6 +13,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a sele
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isDisabled prop on menu item 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={true}
   isSelectable={true}
   isSelected={false}
@@ -22,6 +24,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isDisable
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isSelectable prop on menu item to false 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelectable={false}
   isSelected={false}
@@ -32,6 +35,7 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isSelecta
 
 exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected prop on menu item 1`] = `
 <MenuItem
+  isActive={false}
   isDisabled={false}
   isSelectable={true}
   isSelected={true}
