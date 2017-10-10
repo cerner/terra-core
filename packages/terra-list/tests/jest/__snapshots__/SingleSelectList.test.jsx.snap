@@ -5,13 +5,25 @@ exports[`should mount with no items 1`] = `
   hasChevrons={false}
   isDivided={false}
 >
-  <List
+  <SelectableList
+    disableUnselectedItems={false}
+    hasChevrons={false}
     isDivided={false}
+    onChange={[Function]}
+    selectedIndexes={
+      Array [
+        -1,
+      ]
+    }
   >
-    <ul
-      className="list"
-    />
-  </List>
+    <List
+      isDivided={false}
+    >
+      <ul
+        className="list"
+      />
+    </List>
+  </SelectableList>
 </SingleSelectList>
 `;
 
@@ -20,51 +32,78 @@ exports[`should mount with one items 1`] = `
   hasChevrons={false}
   isDivided={false}
 >
-  <List
+  <SelectableList
+    disableUnselectedItems={false}
+    hasChevrons={false}
     isDivided={false}
+    onChange={[Function]}
+    selectedIndexes={
+      Array [
+        -1,
+      ]
+    }
   >
-    <ul
-      className="list"
+    <List
+      isDivided={false}
     >
-      <ListItem
-        className="stuff1"
-        content={
-          <p>
-            text1
-          </p>
-        }
-        hasChevron={false}
-        isSelectable={true}
-        isSelected={false}
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
+      <ul
+        className="list"
       >
-        <li
-          className="list-item is-selectable stuff1"
+        <ListItem
+          className="stuff1"
+          content={
+            <p>
+              text1
+            </p>
+          }
+          isSelectable={true}
+          isSelected={false}
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
         >
-          <p>
-            text1
-          </p>
-        </li>
-      </ListItem>
-    </ul>
-  </List>
+          <li
+            className="list-item is-selectable stuff1"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            tabIndex="0"
+          >
+            <p>
+              text1
+            </p>
+          </li>
+        </ListItem>
+      </ul>
+    </List>
+  </SelectableList>
 </SingleSelectList>
 `;
 
 exports[`should render a default component 1`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 />
 `;
 
 exports[`should render with a selectable and non-selectable item 1`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -73,24 +112,26 @@ exports[`should render with a selectable and non-selectable item 1`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
-    hasChevron={false}
     isSelectable={false}
     isSelected={false}
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should render with hasChevrons 1`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={true}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -99,19 +140,22 @@ exports[`should render with hasChevrons 1`] = `
         text1
       </p>
     }
-    hasChevron={true}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should render with isDivided 1`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={true}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -120,19 +164,22 @@ exports[`should render with isDivided 1`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should render with items 1`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -141,12 +188,7 @@ exports[`should render with items 1`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff2"
@@ -155,12 +197,7 @@ exports[`should render with items 1`] = `
         text2
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff3"
@@ -169,12 +206,7 @@ exports[`should render with items 1`] = `
         text3
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff4"
@@ -183,12 +215,7 @@ exports[`should render with items 1`] = `
         text4
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff5"
@@ -197,19 +224,22 @@ exports[`should render with items 1`] = `
         text5
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should select an item 1`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -218,12 +248,7 @@ exports[`should select an item 1`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
-    isSelected={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
+    isSelected={false}
   />
   <ListItem
     className="stuff2"
@@ -232,12 +257,7 @@ exports[`should select an item 1`] = `
         text2
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff3"
@@ -246,12 +266,7 @@ exports[`should select an item 1`] = `
         text3
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff4"
@@ -260,12 +275,7 @@ exports[`should select an item 1`] = `
         text4
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff5"
@@ -274,19 +284,22 @@ exports[`should select an item 1`] = `
         text5
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should select an item 2`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -295,12 +308,7 @@ exports[`should select an item 2`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff2"
@@ -309,12 +317,7 @@ exports[`should select an item 2`] = `
         text2
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
-    isSelected={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
+    isSelected={false}
   />
   <ListItem
     className="stuff3"
@@ -323,12 +326,7 @@ exports[`should select an item 2`] = `
         text3
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff4"
@@ -337,12 +335,7 @@ exports[`should select an item 2`] = `
         text4
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff5"
@@ -351,19 +344,22 @@ exports[`should select an item 2`] = `
         text5
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should select an item 3`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -372,12 +368,7 @@ exports[`should select an item 3`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff2"
@@ -386,12 +377,7 @@ exports[`should select an item 3`] = `
         text2
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff3"
@@ -400,12 +386,7 @@ exports[`should select an item 3`] = `
         text3
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
-    isSelected={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
+    isSelected={false}
   />
   <ListItem
     className="stuff4"
@@ -414,12 +395,7 @@ exports[`should select an item 3`] = `
         text4
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff5"
@@ -428,19 +404,22 @@ exports[`should select an item 3`] = `
         text5
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
 
 exports[`should select an item 4`] = `
-<List
+<SelectableList
+  disableUnselectedItems={false}
+  hasChevrons={false}
   isDivided={false}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      -1,
+    ]
+  }
 >
   <ListItem
     className="stuff1"
@@ -449,12 +428,7 @@ exports[`should select an item 4`] = `
         text1
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
-    isSelected={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
+    isSelected={false}
   />
   <ListItem
     className="stuff2"
@@ -463,12 +437,7 @@ exports[`should select an item 4`] = `
         text2
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff3"
@@ -477,12 +446,7 @@ exports[`should select an item 4`] = `
         text3
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff4"
@@ -491,12 +455,7 @@ exports[`should select an item 4`] = `
         text4
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
   <ListItem
     className="stuff5"
@@ -505,12 +464,7 @@ exports[`should select an item 4`] = `
         text5
       </p>
     }
-    hasChevron={false}
-    isSelectable={true}
     isSelected={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
   />
-</List>
+</SelectableList>
 `;
