@@ -10,6 +10,7 @@ exports[`Menu should render a default component 1`] = `
     targetRef={[Function]}
   >
     <MenuItem
+      isActive={false}
       isDisabled={false}
       isSelected={false}
       subMenuItems={Array []}
