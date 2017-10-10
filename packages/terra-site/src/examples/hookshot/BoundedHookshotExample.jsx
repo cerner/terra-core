@@ -15,14 +15,14 @@ const ATTACHMENT_POSITIONS = [
   'bottom end',
 ];
 
-const generateOptions = values => {
-  return values.map((currentValue, index) => {
+const generateOptions = values => (
+  values.map((currentValue, index) => {
     const keyValue = index;
     return <option key={keyValue} value={currentValue}>{currentValue}</option>;
-  });
-};
+  })
+);
 
-const attachmentValues = attachment => {
+const attachmentValues = (attachment) => {
   if (attachment === 'middle start') {
     return { vertical: 'middle', horizontal: 'start' };
   } else if (attachment === 'middle end') {

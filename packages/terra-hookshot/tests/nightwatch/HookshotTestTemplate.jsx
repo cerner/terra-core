@@ -32,7 +32,7 @@ const defaultProps = {
   boundingWidth: '540px',
 };
 
-const attachmentValues = attachment => {
+const attachmentValues = (attachment) => {
   if (attachment === 'middle start') {
     return { vertical: 'middle', horizontal: 'start' };
   } else if (attachment === 'middle end') {
