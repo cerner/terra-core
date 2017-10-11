@@ -89,14 +89,16 @@ class App extends React.Component {
         menuWidth="160"
         shouldCloseOnClick={false}
         subMenuItems={[
-          <CollapsibleMenuView.Item id="en" text="en" key="en" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="en-GB" text="en-GB" key="en-GB" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="en-US" text="en-US" key="en-US" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="de" text="de" key="de" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="es" text="es" key="es" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="fr" text="fr" key="fr" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="pt" text="pt" key="pt" onClick={this.handleLocaleChange} />,
-          <CollapsibleMenuView.Item id="fi-FI" text="fi-FI" key="fi-FI" onClick={this.handleLocaleChange} />,
+          <CollapsibleMenuView.ItemGroup isSelectable key="local-options">
+            <CollapsibleMenuView.Item id="en" text="en" key="en" isSelected={this.state.locale === 'en'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="en-GB" text="en-GB" key="en-GB" isSelected={this.state.locale === 'en-GB'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="en-US" text="en-US" key="en-US" isSelected={this.state.locale === 'en-US'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="de" text="de" key="de" isSelected={this.state.locale === 'de'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="es" text="es" key="es" isSelected={this.state.locale === 'es'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="fr" text="fr" key="fr" isSelected={this.state.locale === 'fr'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="pt" text="pt" key="pt" isSelected={this.state.locale === 'pt'} onClick={this.handleLocaleChange} />
+            <CollapsibleMenuView.Item id="fi-FI" text="fi-FI" key="fi-FI" isSelected={this.state.locale === 'fi-FI'} onClick={this.handleLocaleChange} />
+          </CollapsibleMenuView.ItemGroup>,
         ]}
       />
     );
@@ -115,9 +117,11 @@ class App extends React.Component {
           menuWidth="160"
           shouldCloseOnClick={false}
           subMenuItems={[
-            <CollapsibleMenuView.Item id="Default Theme" text="Default Theme" key="default" onClick={this.handleThemeChange} />,
-            <CollapsibleMenuView.Item id="Consumer Theme" text="Consumer Theme" key="consumer" onClick={this.handleThemeChange} />,
-            <CollapsibleMenuView.Item id="Mock Theme" text="Mock Theme" key="mock" onClick={this.handleThemeChange} />,
+            <CollapsibleMenuView.ItemGroup isSelectable key="theme-options">
+              <CollapsibleMenuView.Item id="Default Theme" text="Default Theme" key="default" isSelected={this.state.theme === 'Default Theme'} onClick={this.handleThemeChange} />
+              <CollapsibleMenuView.Item id="Consumer Theme" text="Consumer Theme" key="consumer" isSelected={this.state.theme === 'Consumer Theme'} onClick={this.handleThemeChange} />
+              <CollapsibleMenuView.Item id="Mock Theme" text="Mock Theme" key="mock" isSelected={this.state.theme === 'Mock Theme'} onClick={this.handleThemeChange} />
+            </CollapsibleMenuView.ItemGroup>,
           ]}
         />
       );
