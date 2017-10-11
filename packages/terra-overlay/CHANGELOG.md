@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added disableCloseOnEsc prop to support on close behaviors
 
 1.11.0 - (October 6, 2017)
 ------------------

@@ -14,6 +14,7 @@ exports[`OverlayContainer should render when children are provided 1`] = `
 >
   <Overlay
     backgroundStyle="light"
+    disableCloseOnEsc={false}
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false}

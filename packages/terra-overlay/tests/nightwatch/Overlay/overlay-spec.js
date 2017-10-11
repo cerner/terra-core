@@ -65,6 +65,23 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.assert.elementNotPresent('#terra-Overlay--container');
   },
 
+  'Does not triggers an onRequestClose on escape keydown when disableCloseOnEsc': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/disable-close-on-esc`);
+
+    browser.click('#trigger_fullscreen');
+    browser.assert.elementPresent('#terra-Overlay--fullscreen');
+
+    browser.keys(browser.Keys.ESCAPE);
+    browser.assert.elementPresent('#terra-Overlay--fullscreen');
+    browser.click('#terra-Overlay--fullscreen');
+
+    browser.click('#trigger_container');
+    browser.assert.elementPresent('#terra-Overlay--container');
+
+    browser.keys(browser.Keys.ESCAPE);
+    browser.assert.elementPresent('#terra-Overlay--container');
+  },
+
   'Background does not scroll when a fullscreen Overlay is open': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/overlay-tests/on-request-close`);
     browser.expect.element('html').to.have.attribute('style').which.equals('');
