@@ -7,11 +7,3 @@ exports[`should render a default table row content 1`] = `
   Table Data
 </td>
 `;
-
-exports[`should render a table row content with maximum height 1`] = `
-<td
-  data-terra-table-cell={true}
->
-  Table Data
-</td>
-`;

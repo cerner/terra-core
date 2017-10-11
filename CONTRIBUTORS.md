@@ -39,6 +39,7 @@ Cerner Corporation
 - Hardik Jain [@hardikjain29]
 - Dustin Singleton [@singleton06]
 - Dylan Klohr [@dylan-sftwr]
+- Daniel Vu [@dv297]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -81,3 +82,4 @@ Cerner Corporation
 [@hardikjain29]: https://github.com/hardikjain29
 [@singleton06]: https://github.com/Singleton06
 [@dylan-sftwr]: https://github.com/dylan-sftwr
+[@dv297]: https://github.com/dv297
