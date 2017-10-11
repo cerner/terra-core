@@ -126,9 +126,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   // attachmentMargin: validate number set adjusts positioning by so much.
-  'Displays with given margin between the attachment points - Middle Left Content Attachment': (browser) => {
+  'Displays with given margin between the attachment points - Middle Start Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
-    browser.click('#attach-ML');
+    browser.click('#attach-MS');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
@@ -137,9 +137,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Displays with given margin between the attachment points - Middle Right Content Attachment': (browser) => {
+  'Displays with given margin between the attachment points - Middle End Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
-    browser.click('#attach-MR');
+    browser.click('#attach-ME');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
@@ -159,9 +159,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Displays with given margin between the attachment points - Bottom Left Content Attachment': (browser) => {
+  'Displays with given margin between the attachment points - Bottom Start Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
-    browser.click('#attach-BL');
+    browser.click('#attach-BS');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
@@ -170,9 +170,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Displays with given margin between the attachment points - Bottom Right Content Attachment': (browser) => {
+  'Displays with given margin between the attachment points - Bottom End Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
-    browser.click('#attach-BR');
+    browser.click('#attach-BE');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
@@ -192,9 +192,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Displays with given margin between the attachment points - Top Left Content Attachment': (browser) => {
+  'Displays with given margin between the attachment points - Top Start Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
-    browser.click('#attach-TL');
+    browser.click('#attach-TS');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
@@ -203,9 +203,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Displays with given margin between the attachment points - Top Right Content Attachment': (browser) => {
+  'Displays with given margin between the attachment points - Top End Content Attachment': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
-    browser.click('#attach-TR');
+    browser.click('#attach-TE');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
     browser.getLocation('#attachment-margin-content', (coordinates) => {
@@ -225,8 +225,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  // boundingRef: test - top bottom left right bounding container adjustments.
-  'Displays content pushed left by bounding container': (browser) => {
+  // boundingRef: test - top bottom start end bounding container adjustments.
+  'Displays content pushed start by bounding container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
     browser.click('#push-left');
     browser.click('#trigger-bounding-container');
@@ -237,7 +237,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Displays content pushed right by bounding container': (browser) => {
+  'Displays content pushed end by bounding container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
     browser.click('#push-right');
     browser.click('#trigger-bounding-container');
@@ -275,7 +275,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-offset`);
     browser.expect.element('#ContentOffset-content').to.be.present;
     // Offset Applied (20px, -10px).
-    // For the defined content attchement: "bottom right" & target attchement: "bottom left"
+    // For the defined content attachment: "bottom end" & target attachment: "bottom start"
     // LTR x value calculation: value = 220 (margin) - 200 (content width) + (-10) (offset) + 1
     // LTR y value calculation: value =  55 (margin) - 36 (content height) + 20 (offset) + 1
     browser.getLocation('#ContentOffset-content', (coordinates) => {
@@ -292,7 +292,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.click('#trigger-ContentOffset');
       browser.expect.element('#ContentOffset-content').to.be.present;
       // Offset Applied (20px, -10px).
-      // For the defined content attchement: "bottom right" & target attchement: "bottom left"
+      // For the defined content attachment: "bottom end" & target attachment: "bottom start"
       // RTL x value calculation: value = 622 (width) - 220 (margin) - (-10) (offset) - 1
       browser.getLocation('#ContentOffset-content', (coordinates) => {
         browser.assert.equal(coordinates.value.x, 411);
@@ -307,7 +307,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/target-offset`);
     browser.expect.element('#TargetOffset-content').to.be.present;
     // Offset Applied (-10px, -20px).
-    // For the defined content attchement: "bottom left" & target attchement: "top left"
+    // For the defined content attachment: "bottom start" & target attachment: "top start"
     // LTR x value calculation: value = 220 (margin) + (-20) (offset) + 1
     // LTR y value calculation: value =  55 (margin) - 36 (content height) + (-10) (offset) + 1
     browser.getLocation('#TargetOffset-content', (coordinates) => {
@@ -324,7 +324,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.click('#trigger-TargetOffset');
       browser.expect.element('#TargetOffset-content').to.be.present;
       // Offset Applied (-10px, -20px).
-      // For the defined content attchement: "bottom left" & target attchement: "top left"
+      // For the defined content attachment: "bottom start" & target attachment: "top start"
       // RTL x value calculation: value = 622 (width) - 220 (margin) - 200 (content size) - (-20) (offset) - 1
       browser.getLocation('#TargetOffset-content', (coordinates) => {
         browser.assert.equal(coordinates.value.x, 221);

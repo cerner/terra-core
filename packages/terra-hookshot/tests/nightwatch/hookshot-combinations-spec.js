@@ -3,10 +3,10 @@
 const { resizeTo } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 
 module.exports = resizeTo(['small'], {
-  // Verifty contentAttachment = "top left"
-  '[1] Display correctly for contentAttachment="top left" & targetAttachment="top left"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-left`);
-    browser.click('#attach-TL');
+  // Verifty contentAttachment = "top start"
+  '[1] Display correctly for contentAttachment="top start" & targetAttachment="top start"': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-start`);
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) + 1
@@ -16,7 +16,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[2] Display correctly for contentAttachment="top left" & targetAttachment="top center"': (browser) => {
+  '[2] Display correctly for contentAttachment="top start" & targetAttachment="top center"': (browser) => {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -27,8 +27,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[3] Display correctly for contentAttachment="top left" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[3] Display correctly for contentAttachment="top start" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
     // y value calculation: value =  55 (margin) + 1
@@ -38,8 +38,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[4] Display correctly for contentAttachment="top left" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[4] Display correctly for contentAttachment="top start" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
@@ -49,7 +49,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[5] Display correctly for contentAttachment="top left" & targetAttachment="middle center"': (browser) => {
+  '[5] Display correctly for contentAttachment="top start" & targetAttachment="middle center"': (browser) => {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -60,8 +60,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[6] Display correctly for contentAttachment="top left" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[6] Display correctly for contentAttachment="top start" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
@@ -71,8 +71,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[7] Display correctly for contentAttachment="top left" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[7] Display correctly for contentAttachment="top start" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) + 36 (target height) + 1
@@ -82,7 +82,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[8] Display correctly for contentAttachment="top left" & targetAttachment="bottom center"': (browser) => {
+  '[8] Display correctly for contentAttachment="top start" & targetAttachment="bottom center"': (browser) => {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -93,8 +93,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[9] Display correctly for contentAttachment="top left" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[9] Display correctly for contentAttachment="top start" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) + 36 (target height) + 1
@@ -105,9 +105,9 @@ module.exports = resizeTo(['small'], {
   },
 
     // Verifty contentAttachment = "top center"
-  '[10] Display correctly for contentAttachment="top center" & targetAttachment="top left"': (browser) => {
+  '[10] Display correctly for contentAttachment="top center" & targetAttachment="top start"': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-center`);
-    browser.click('#attach-TL');
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) + 1
@@ -128,8 +128,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[12] Display correctly for contentAttachment="top center" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[12] Display correctly for contentAttachment="top center" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) + 1
@@ -139,8 +139,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[13] Display correctly for contentAttachment="top center" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[13] Display correctly for contentAttachment="top center" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
@@ -161,8 +161,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[15] Display correctly for contentAttachment="top center" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[15] Display correctly for contentAttachment="top center" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
@@ -172,8 +172,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[16] Display correctly for contentAttachment="top center" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[16] Display correctly for contentAttachment="top center" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) + 36 (target height) + 1
@@ -194,8 +194,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[18] Display correctly for contentAttachment="top center" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[18] Display correctly for contentAttachment="top center" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) + 36 (target height) + 1
@@ -205,10 +205,10 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  // Verifty contentAttachment = "top right"
-  '[19] Display correctly for contentAttachment="top right" & targetAttachment="top left"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-right`);
-    browser.click('#attach-TL');
+  // Verifty contentAttachment = "top end"
+  '[19] Display correctly for contentAttachment="top end" & targetAttachment="top start"': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-end`);
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) + 1
@@ -218,7 +218,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[20] Display correctly for contentAttachment="top right" & targetAttachment="top center"': (browser) => {
+  '[20] Display correctly for contentAttachment="top end" & targetAttachment="top center"': (browser) => {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -229,8 +229,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[21] Display correctly for contentAttachment="top right" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[21] Display correctly for contentAttachment="top end" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) + 1
@@ -240,8 +240,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[22] Display correctly for contentAttachment="top right" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[22] Display correctly for contentAttachment="top end" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
@@ -251,7 +251,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[23] Display correctly for contentAttachment="top right" & targetAttachment="middle center"': (browser) => {
+  '[23] Display correctly for contentAttachment="top end" & targetAttachment="middle center"': (browser) => {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -262,8 +262,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[24] Display correctly for contentAttachment="top right" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[24] Display correctly for contentAttachment="top end" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) + 36/2 (half target height) + 1
@@ -273,8 +273,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[25] Display correctly for contentAttachment="top right" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[25] Display correctly for contentAttachment="top end" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) + 36 (target height) + 1
@@ -284,7 +284,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[26] Display correctly for contentAttachment="top right" & targetAttachment="bottom center"': (browser) => {
+  '[26] Display correctly for contentAttachment="top end" & targetAttachment="bottom center"': (browser) => {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -295,8 +295,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[27] Display correctly for contentAttachment="top right" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[27] Display correctly for contentAttachment="top end" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) + 36 (target height) + 1
@@ -306,10 +306,10 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  // Verifty contentAttachment = "middle left"
-  '[28] Display correctly for contentAttachment="middle left" & targetAttachment="top left"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-left`);
-    browser.click('#attach-TL');
+  // Verifty contentAttachment = "middle start"
+  '[28] Display correctly for contentAttachment="middle start" & targetAttachment="top start"': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-start`);
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
@@ -319,7 +319,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[29] Display correctly for contentAttachment="middle left" & targetAttachment="top center"': (browser) => {
+  '[29] Display correctly for contentAttachment="middle start" & targetAttachment="top center"': (browser) => {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -330,8 +330,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[30] Display correctly for contentAttachment="middle left" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[30] Display correctly for contentAttachment="middle start" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
@@ -341,8 +341,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[31] Display correctly for contentAttachment="middle left" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[31] Display correctly for contentAttachment="middle start" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
@@ -352,7 +352,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[32] Display correctly for contentAttachment="middle left" & targetAttachment="middle center"': (browser) => {
+  '[32] Display correctly for contentAttachment="middle start" & targetAttachment="middle center"': (browser) => {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -363,8 +363,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[33] Display correctly for contentAttachment="middle left" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[33] Display correctly for contentAttachment="middle start" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
@@ -374,8 +374,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[34] Display correctly for contentAttachment="middle left" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[34] Display correctly for contentAttachment="middle start" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
@@ -385,7 +385,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[35] Display correctly for contentAttachment="middle left" & targetAttachment="bottom center"': (browser) => {
+  '[35] Display correctly for contentAttachment="middle start" & targetAttachment="bottom center"': (browser) => {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -396,8 +396,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[36] Display correctly for contentAttachment="middle left" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[36] Display correctly for contentAttachment="middle start" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
@@ -408,9 +408,9 @@ module.exports = resizeTo(['small'], {
   },
 
   // Verifty contentAttachment = "middle center"
-  '[37] Display correctly for contentAttachment="middle center" & targetAttachment="top left"': (browser) => {
+  '[37] Display correctly for contentAttachment="middle center" & targetAttachment="top start"': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-center`);
-    browser.click('#attach-TL');
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
@@ -431,8 +431,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[39] Display correctly for contentAttachment="middle center" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[39] Display correctly for contentAttachment="middle center" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
@@ -442,8 +442,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[40] Display correctly for contentAttachment="middle center" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[40] Display correctly for contentAttachment="middle center" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
@@ -464,8 +464,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[42] Display correctly for contentAttachment="middle center" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[42] Display correctly for contentAttachment="middle center" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
@@ -475,8 +475,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[43] Display correctly for contentAttachment="middle center" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[43] Display correctly for contentAttachment="middle center" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
@@ -497,8 +497,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[45] Display correctly for contentAttachment="middle center" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[45] Display correctly for contentAttachment="middle center" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
@@ -508,10 +508,10 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  // Verifty contentAttachment = "middle right"
-  '[46] Display correctly for contentAttachment="middle right" & targetAttachment="top left"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-right`);
-    browser.click('#attach-TL');
+  // Verifty contentAttachment = "middle end"
+  '[46] Display correctly for contentAttachment="middle end" & targetAttachment="top start"': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-end`);
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
@@ -521,7 +521,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[47] Display correctly for contentAttachment="middle right" & targetAttachment="top center"': (browser) => {
+  '[47] Display correctly for contentAttachment="middle end" & targetAttachment="top center"': (browser) => {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -532,8 +532,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[48] Display correctly for contentAttachment="middle right" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[48] Display correctly for contentAttachment="middle end" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 1
@@ -543,8 +543,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[49] Display correctly for contentAttachment="middle right" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[49] Display correctly for contentAttachment="middle end" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
@@ -554,7 +554,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[50] Display correctly for contentAttachment="middle right" & targetAttachment="middle center"': (browser) => {
+  '[50] Display correctly for contentAttachment="middle end" & targetAttachment="middle center"': (browser) => {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -565,8 +565,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[51] Display correctly for contentAttachment="middle right" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[51] Display correctly for contentAttachment="middle end" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36/2 (half target height) + 1
@@ -576,8 +576,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[52] Display correctly for contentAttachment="middle right" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[52] Display correctly for contentAttachment="middle end" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
@@ -587,7 +587,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[53] Display correctly for contentAttachment="middle right" & targetAttachment="bottom center"': (browser) => {
+  '[53] Display correctly for contentAttachment="middle end" & targetAttachment="bottom center"': (browser) => {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -598,8 +598,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[54] Display correctly for contentAttachment="middle right" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[54] Display correctly for contentAttachment="middle end" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36/2 (half content height) + 36 (target height) + 1
@@ -609,10 +609,10 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  // Verifty contentAttachment = "bottom left"
-  '[55] Display correctly for contentAttachment="bottom left" & targetAttachment="top left"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-left`);
-    browser.click('#attach-TL');
+  // Verifty contentAttachment = "bottom start"
+  '[55] Display correctly for contentAttachment="bottom start" & targetAttachment="top start"': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-start`);
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 1
@@ -622,7 +622,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[56] Display correctly for contentAttachment="bottom left" & targetAttachment="top center"': (browser) => {
+  '[56] Display correctly for contentAttachment="bottom start" & targetAttachment="top center"': (browser) => {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -633,8 +633,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[57] Display correctly for contentAttachment="bottom left" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[57] Display correctly for contentAttachment="bottom start" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 1
@@ -644,8 +644,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[58] Display correctly for contentAttachment="bottom left" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[58] Display correctly for contentAttachment="bottom start" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
@@ -655,7 +655,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[59] Display correctly for contentAttachment="bottom left" & targetAttachment="middle center"': (browser) => {
+  '[59] Display correctly for contentAttachment="bottom start" & targetAttachment="middle center"': (browser) => {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -666,8 +666,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[60] Display correctly for contentAttachment="bottom left" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[60] Display correctly for contentAttachment="bottom start" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
@@ -677,8 +677,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[61] Display correctly for contentAttachment="bottom left" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[61] Display correctly for contentAttachment="bottom start" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
@@ -688,7 +688,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[62] Display correctly for contentAttachment="bottom left" & targetAttachment="bottom center"': (browser) => {
+  '[62] Display correctly for contentAttachment="bottom start" & targetAttachment="bottom center"': (browser) => {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
@@ -699,8 +699,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[63] Display correctly for contentAttachment="bottom left" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[63] Display correctly for contentAttachment="bottom start" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 100/2 (half target width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
@@ -711,9 +711,9 @@ module.exports = resizeTo(['small'], {
   },
 
   // Verifty contentAttachment = "bottom center"
-  '[64] Display correctly for contentAttachment="bottom center" & targetAttachment="top left"': (browser) => {
+  '[64] Display correctly for contentAttachment="bottom center" & targetAttachment="top start"': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-center`);
-    browser.click('#attach-TL');
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 1
@@ -734,8 +734,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[66] Display correctly for contentAttachment="bottom center" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[66] Display correctly for contentAttachment="bottom center" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 1
@@ -745,8 +745,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[67] Display correctly for contentAttachment="bottom center" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[67] Display correctly for contentAttachment="bottom center" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
@@ -767,8 +767,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[69] Display correctly for contentAttachment="bottom center" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[69] Display correctly for contentAttachment="bottom center" & targetAttachment="middle end"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
@@ -778,8 +778,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[70] Display correctly for contentAttachment="bottom center" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[70] Display correctly for contentAttachment="bottom center" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
@@ -800,8 +800,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[72] Display correctly for contentAttachment="bottom center" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[72] Display correctly for contentAttachment="bottom center" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 100 (targt width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
@@ -811,10 +811,10 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  // Verifty contentAttachment = "bottom right"
-  '[73] Display correctly for contentAttachment="bottom right" & targetAttachment="top left"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-right`);
-    browser.click('#attach-TL');
+  // Verifty contentAttachment = "bottom end"
+  '[73] Display correctly for contentAttachment="bottom end" & targetAttachment="top start"': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-end`);
+    browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 1
@@ -824,7 +824,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[74] Display correctly for contentAttachment="bottom right" & targetAttachment="top center"': (browser) => {
+  '[74] Display correctly for contentAttachment="bottom end" & targetAttachment="top center"': (browser) => {
     browser.click('#attach-TC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -835,8 +835,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[75] Display correctly for contentAttachment="bottom right" & targetAttachment="top right"': (browser) => {
-    browser.click('#attach-TR');
+  '[75] Display correctly for contentAttachment="bottom end" & targetAttachment="top end"': (browser) => {
+    browser.click('#attach-TE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 1
@@ -846,8 +846,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[76] Display correctly for contentAttachment="bottom right" & targetAttachment="middle left"': (browser) => {
-    browser.click('#attach-ML');
+  '[76] Display correctly for contentAttachment="bottom end" & targetAttachment="middle start"': (browser) => {
+    browser.click('#attach-MS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
@@ -857,7 +857,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[77] Display correctly for contentAttachment="bottom right" & targetAttachment="middle center"': (browser) => {
+  '[77] Display correctly for contentAttachment="bottom end" & targetAttachment="middle center"': (browser) => {
     browser.click('#attach-MC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -868,8 +868,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[78] Display correctly for contentAttachment="bottom right" & targetAttachment="middle right"': (browser) => {
-    browser.click('#attach-MR');
+  '[78] Display correctly for contentAttachment="bottom end" & targetAttachment="middle right"': (browser) => {
+    browser.click('#attach-ME');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36/2 (half target height) + 1
@@ -879,8 +879,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[79] Display correctly for contentAttachment="bottom right" & targetAttachment="bottom left"': (browser) => {
-    browser.click('#attach-BL');
+  '[79] Display correctly for contentAttachment="bottom end" & targetAttachment="bottom start"': (browser) => {
+    browser.click('#attach-BS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
@@ -890,7 +890,7 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[80] Display correctly for contentAttachment="bottom right" & targetAttachment="bottom center"': (browser) => {
+  '[80] Display correctly for contentAttachment="bottom end" & targetAttachment="bottom center"': (browser) => {
     browser.click('#attach-BC');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100/2 (half target width) + 1
@@ -901,8 +901,8 @@ module.exports = resizeTo(['small'], {
     });
   },
 
-  '[81] Display correctly for contentAttachment="bottom right" & targetAttachment="bottom right"': (browser) => {
-    browser.click('#attach-BR');
+  '[81] Display correctly for contentAttachment="bottom end" & targetAttachment="bottom end"': (browser) => {
+    browser.click('#attach-BE');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 100 (target width) + 1
     // y value calculation: value =  55 (margin) - 36 (content height) + 36 (target height) + 1
