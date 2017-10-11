@@ -6,18 +6,18 @@ import { Link } from 'react-router';
 const ModalTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/modal-tests/append-class">Append CSS Class</Link></li>
-      <li><Link to="/tests/modal-tests/content-overflow">Content Overflow</Link></li>
-      <li><Link to="/tests/modal-tests/dialog">Dialog Example</Link></li>
-      <li><Link to="/tests/modal-tests/disable-close-on-esc">Disable Close On Esc</Link></li>
-      <li><Link to="/tests/modal-tests/disable-close-on-outside-click">Disable Close On Outside Click</Link></li>
-      <li><Link to="/tests/modal-tests/is-fullscreen">Fullscreen</Link></li>
-      <li><Link to="/tests/modal-tests/is-open">Using isOpen prop</Link></li>
-      <li><Link to="/tests/modal-tests/no-focusable-content">No Focusable Content</Link></li>
-      <li><Link to="/tests/modal-tests/override-role">Override Role</Link></li>
-      <li><Link to="/tests/modal-tests/scrollable-true">Scrollable True</Link></li>
-      <li><Link to="/tests/modal-tests/scrollable-false">Scrollable False</Link></li>
-      <li><Link to="/tests/modal-tests/custom-props">Custom Props</Link></li>
+      <li><Link to="/tests/modal-tests/append-class">Modal - Append CSS Class</Link></li>
+      <li><Link to="/tests/modal-tests/content-overflow">Modal - Content Overflow</Link></li>
+      <li><Link to="/tests/modal-tests/dialog">Modal - Dialog</Link></li>
+      <li><Link to="/tests/modal-tests/disable-close-on-esc">Modal - Disabled Close On Esc</Link></li>
+      <li><Link to="/tests/modal-tests/disable-close-on-outside-click">Modal - Disabled Close On Outside Click</Link></li>
+      <li><Link to="/tests/modal-tests/is-fullscreen">Modal - Fullscreen</Link></li>
+      <li><Link to="/tests/modal-tests/is-open">Modal - Default</Link></li>
+      <li><Link to="/tests/modal-tests/no-focusable-content">Modal - No Focusable Content</Link></li>
+      <li><Link to="/tests/modal-tests/override-role">Modal - Override Role</Link></li>
+      <li><Link to="/tests/modal-tests/scrollable-true">Modal - Scrollable Content</Link></li>
+      <li><Link to="/tests/modal-tests/scrollable-false">Modal - Non-Scrollable Content</Link></li>
+      <li><Link to="/tests/modal-tests/custom-props">Modal - Custom Props</Link></li>
     </ul>
   </div>
 );
