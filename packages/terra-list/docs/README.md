@@ -28,10 +28,12 @@ import List from 'terra-list';
 ```
 
 Terra also provides two variations for the list component.
+* [Selectable List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/Selectable.md)
 
 * [Single Select List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/SingleSelect.md)
 
 * [Multi Select List](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs/MultiSelect.md)
+
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
