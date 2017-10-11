@@ -295,5 +295,7 @@ class Popup extends React.Component {
 Popup.propTypes = propTypes;
 Popup.defaultProps = defaultProps;
 Popup.attachmentPositions = ATTACHMENT_POSITIONS;
+Popup.heights = PopupHeights;
+Popup.widths = PopupWidths;
 
 export default Popup;
