@@ -18,11 +18,11 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * CSS classnames that are append to the modal.
+   * CSS classnames that are appended to the modal.
    */
   classNameModal: PropTypes.string,
   /**
-   * CSS classnames that are append to the overlay.
+   * CSS classnames that are appended to the overlay.
    */
   classNameOverlay: PropTypes.string,
   /**
