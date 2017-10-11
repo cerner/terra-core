@@ -27,13 +27,13 @@ const propTypes = {
   isDisabled: PropTypes.bool,
 
   /**
-   * Indicates if the item is selected.
+   * Indicates if the item is selected. A selected item is indicated with a checkmark.
    */
   isSelected: PropTypes.bool,
 
   /**
    * Indicates if the item should be selectable.
-  */
+   */
   isSelectable: PropTypes.bool,
 
   /**
@@ -50,11 +50,17 @@ const propTypes = {
    * Callback function for when selection state changes on a selectable item.
    */
   onChange: PropTypes.func,
+
+  /**
+   * Indicates if the item has focus. This is used internally to control focus and does not set initial focus.
+   */
+  isActive: PropTypes.bool,
 };
 
 const defaultProps = {
   text: '',
   isSelected: false,
+  isActive: false,
   isSelectable: undefined,
   isDisabled: false,
   subMenuItems: [],
@@ -66,20 +72,32 @@ class MenuItem extends React.Component {
     this.wrapOnClick = this.wrapOnClick.bind(this);
     this.wrapOnKeyDown = this.wrapOnKeyDown.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
+    this.setItemNode = this.setItemNode.bind(this);
     this.state = { isSelected: props.isSelected && props.isSelectable && !context.isGroupItem };
+  }
+
+  componentDidUpdate() {
+    if (this.props.isActive && this.itemNode) {
+      this.itemNode.focus();
+    }
+  }
+
+  setItemNode(node) {
+    if (node) {
+      this.itemNode = node;
+    }
   }
 
   handleSelection(event) {
     event.preventDefault();
-    this.setState((prevState) => {
-      const newState = prevState;
-      newState.isSelected = !prevState.isSelected;
-      if (this.props.onChange) {
-        this.props.onChange(event, newState.isSelected);
-      }
+    if (this.props.isSelectable && !this.context.isGroupItem && !this.props.isDisabled) {
+      const newIsSelected = !this.state.isSelected;
+      this.setState({ isSelected: newIsSelected });
 
-      return newState;
-    });
+      if (this.props.onChange) {
+        this.props.onChange(event, newIsSelected);
+      }
+    }
   }
 
   wrapOnClick(event) {
@@ -94,6 +112,10 @@ class MenuItem extends React.Component {
     return ((event) => {
       if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
         this.handleSelection(event);
+
+        if (this.props.onClick) {
+          this.props.onClick(event);
+        }
       }
 
       if (onKeyDown) {
@@ -109,6 +131,7 @@ class MenuItem extends React.Component {
       isSelected,
       isSelectable,
       subMenuItems,
+      isActive,
       ...customProps
     } = this.props;
 
@@ -124,10 +147,10 @@ class MenuItem extends React.Component {
     if (isDisabled) {
       delete attributes.onClick;
       delete attributes.onKeyDown;
-    } else if (isSelectable && !isGroupItem && !isDisabled) {
-      attributes.onClick = this.wrapOnClick;
-      attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
     }
+
+    attributes.onClick = this.wrapOnClick;
+    attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
 
     const itemClassNames = cx([
       'item',
@@ -141,7 +164,7 @@ class MenuItem extends React.Component {
 
     if (hasChevron || isSelectableMenu) {
       return (
-        <li {...attributes} className={itemClassNames}>
+        <li {...attributes} className={itemClassNames} ref={this.setItemNode}>
           <Arrange
             fitStart={isSelectableMenu ? <CheckIcon className={cx(['checkmark'])} /> : null}
             fill={content}
@@ -153,7 +176,7 @@ class MenuItem extends React.Component {
     }
 
     return (
-      <li {...attributes} className={itemClassNames}>
+      <li {...attributes} className={itemClassNames} ref={this.setItemNode} >
         {content}
       </li>
     );

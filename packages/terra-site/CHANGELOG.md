@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Lock webpack-dev-server at last version supporting IE10 (1.7.1)
 * Uplift site header to use collapsible menu view
+* Updated content-container site examples to use appropriate header and content.
 
 1.13.0 - (October 6, 2017)
 ------------------
@@ -17,6 +18,9 @@ Unreleased
 ------------------
 ### Fixed
 * Updating theming-plugin match regex to allow for multiple fallback values.
+
+### Added
+* Selectable Table Test Routes
 
 ### Changed
 * Break out list examples into their own pages.

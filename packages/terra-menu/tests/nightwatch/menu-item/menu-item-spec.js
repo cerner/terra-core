@@ -44,6 +44,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#clickNumber', '0')
       .click('.TestOnClickItem')
       .assert.containsText('#clickNumber', '1');
+    browser.sendKeys('.TestOnClickItem', [browser.Keys.ENTER]);
+    browser.expect.element('#clickNumber').text.to.contain('2');
+    browser.sendKeys('.TestOnClickItem', [browser.Keys.SPACE]);
+    browser.expect.element('#clickNumber').text.to.contain('3');
   },
   'Disables a Menu.Item when indicated': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/menu-item-tests/disabled`);
