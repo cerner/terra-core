@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TableRows from './TableRows';
-import TableRow from './TableRow';
+import TableHeader from './TableHeader';
+import TableSubheader from './TableSubheader';
 import SelectableUtils from './SelectableUtils';
 
 const propTypes = {
@@ -106,7 +107,7 @@ class SelectableTableRows extends React.Component {
 
   clonedChildItems(rows) {
     return React.Children.map(rows, (row, index) => {
-      if (row.type === TableRow) {
+      if (row.type !== TableHeader && row.type !== TableSubheader) {
         const wrappedOnClick = this.wrappedOnClickForRow(row, index);
         const wrappedOnKeyDown = this.wrappedOnKeyDownForRow(row, index);
         const newProps = this.newPropsForRow(row, index, wrappedOnClick, wrappedOnKeyDown);
@@ -130,7 +131,6 @@ class SelectableTableRows extends React.Component {
 
 SelectableTableRows.propTypes = propTypes;
 SelectableTableRows.defaultProps = defaultProps;
-SelectableTableRows.Row = TableRow;
 SelectableTableRows.Utils = SelectableUtils;
 
 export default SelectableTableRows;
