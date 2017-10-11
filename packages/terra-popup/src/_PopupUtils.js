@@ -1,4 +1,25 @@
 /**
+ * Map of horizontalvalues from terra-popup API to terra-hooshot
+ */
+const HORIZONTAL_HOOKSHOT_MAP = {
+  center: 'center',
+  left: 'start',
+  right: 'end',
+};
+
+const MIRROR_LR = {
+  center: 'center',
+  start: 'end',
+  end: 'start',
+};
+
+const MIRROR_TB = {
+  middle: 'middle',
+  top: 'bottom',
+  bottom: 'top',
+};
+
+/**
  * Checks if attachement is 'top' or 'bottom'.
  *
  * @ param {Object} attachement - The vertical and horizonal hookshot attachments.
@@ -20,6 +41,31 @@ const calculateBottomPosition = rect => (rect.top + rect.height);
 const calculateRightPosition = rect => (rect.left + rect.width);
 
 /**
+ * This function splits a given attachment into an object representing the corresponding vertical and horizontal values.
+ *
+ * @ param {string} attachment - The vertical-horizontal attachment value to split.
+ */
+const parseAttachment = (attachment) => {
+  if (!attachment) {
+    return { vertical: '', horizontal: '' };
+  }
+  const [vertical, horizontal] = attachment.split(' ');
+  return { vertical, horizontal: HORIZONTAL_HOOKSHOT_MAP[horizontal] };
+};
+
+/**
+ * This function returns an attachment object containing the mirrored attachment values.
+ *
+ * @ param {Object} attachment - The vertical and horizonal hookshot attachments.
+ */
+const mirrorAttachment = (attachment) => {
+  if (attachment.vertical !== 'middle') {
+    return { vertical: MIRROR_TB[attachment.vertical], horizontal: attachment.horizontal };
+  }
+  return { vertical: attachment.vertical, horizontal: MIRROR_LR[attachment.horizontal] };
+};
+
+/**
  * This method calculates the horizontal offset to be applied to the content. Considers if the target's
  * horizontal attachment is different than the contents attachment or the target's width is smaller than
  * the arrow's position.
@@ -38,22 +84,22 @@ const getContentOffset = (cAttachment, tAttachment, targetNode, arrowOffset, cor
     if (isVerticalAttachment(cAttachment)) {
       if (cAttachment.horizontal !== tAttachment.horizontal) {
         // If the target and content attachement are different, apply the offset
-        if (cAttachment.horizontal === 'left') {
+        if (cAttachment.horizontal === 'start') {
           offset.horizontal = -segment;
-        } else if (cAttachment.horizontal === 'right') {
+        } else if (cAttachment.horizontal === 'end') {
           offset.horizontal = segment;
         }
       } else if (targetNode.clientWidth < segment) {
         // If the target size is smaller than the arrow position
-        if (cAttachment.horizontal === 'left') {
+        if (cAttachment.horizontal === 'start') {
           offset.horizontal = -segment;
-        } else if (cAttachment.horizontal === 'right') {
+        } else if (cAttachment.horizontal === 'end') {
           offset.horizontal = segment;
         }
       }
     }
   }
-  return `${offset.vertical} ${offset.horizontal}`;
+  return offset;
 };
 
 /**
@@ -235,6 +281,8 @@ const PopupUtils = {
   getContentOffset,
   getArrowPosition,
   leftOffset,
+  mirrorAttachment,
+  parseAttachment,
   topOffset,
 };
 

@@ -9,6 +9,18 @@ import PopupUtils from './_PopupUtils';
 import PopupHeights from './_PopupHeights';
 import PopupWidths from './_PopupWidths';
 
+const ATTACHMENT_POSITIONS = [
+  'top left',
+  'top center',
+  'top right',
+  'middle left',
+  'middle center',
+  'middle right',
+  'bottom left',
+  'bottom center',
+  'bottom right',
+];
+
 const propTypes = {
   /**
    * If the primary attachment in not available, how should the content be positioned. Options
@@ -48,7 +60,7 @@ const propTypes = {
    * 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left',
    * 'bottom center', or 'bottom right'.
    */
-  contentAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
+  contentAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
   /**
    * A string representation of the height in px, limited to:
    * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880 or dynamic.
@@ -83,7 +95,7 @@ const propTypes = {
    * Attachment point for the target. Options include: 'top left', 'top center', 'top right', 'middle left', 'middle center',
    * 'middle right', 'bottom left', 'bottom center', or 'bottom right'.
    */
-  targetAttachment: PropTypes.oneOf(Hookshot.attachmentPositions),
+  targetAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
 };
 
 const defaultProps = {
@@ -242,11 +254,11 @@ class Popup extends React.Component {
     }
 
     let tAttachment;
-    const cAttachment = Hookshot.Utils.parseAttachment(contentAttachment);
+    const cAttachment = PopupUtils.parseAttachment(contentAttachment);
     if (targetAttachment) {
-      tAttachment = Hookshot.Utils.parseAttachment(targetAttachment);
+      tAttachment = PopupUtils.parseAttachment(targetAttachment);
     } else {
-      tAttachment = Hookshot.Utils.mirrorAttachment(cAttachment);
+      tAttachment = PopupUtils.mirrorAttachment(cAttachment);
     }
 
     let cOffset;
@@ -265,13 +277,13 @@ class Popup extends React.Component {
           attachmentBehavior={attachmentBehavior}
           attachmentMargin={showArrow ? PopupArrow.Opts.arrowSize : 0}
           boundingRef={boundingRef}
-          contentAttachment={contentAttachment}
+          contentAttachment={cAttachment}
           contentOffset={cOffset}
           isEnabled={this.isContentSized}
           isOpen={isOpen}
           onPosition={this.handleOnPosition}
           targetRef={targetRef}
-          targetAttachment={`${tAttachment.vertical} ${tAttachment.horizontal}`}
+          targetAttachment={tAttachment}
         >
           {hookshotContent}
         </Hookshot>
@@ -282,5 +294,6 @@ class Popup extends React.Component {
 
 Popup.propTypes = propTypes;
 Popup.defaultProps = defaultProps;
+Popup.attachmentPositions = ATTACHMENT_POSITIONS;
 
 export default Popup;
