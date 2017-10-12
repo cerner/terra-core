@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.14.0 - (October 12, 2017)
+------------------
 ### Updated
 * Updated select component example with disabled options support
 
