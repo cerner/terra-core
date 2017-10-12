@@ -6,6 +6,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .list-item {
@@ -25,7 +27,6 @@
   // ========================================================
 
   .chevron {
-    display: flex;
     padding-left: 10px;
     padding-right: 10px;
 
