@@ -13,6 +13,12 @@ it('should render a Select component with one option', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a Select component with one disabled option', () => {
+  const select = <Select options={[{ value: 'm', display: 'moo', disabled: true }]} />;
+  const wrapper = shallow(select);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a Select when all the possible props are passed into it', () => {
   const select = (
     <Select
