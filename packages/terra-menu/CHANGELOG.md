@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.4.0 - (October 12, 2017)
+------------------
 ### Added
 * Keyboard navigation with arrow keys
 

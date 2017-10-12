@@ -5,7 +5,7 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| react-transition-group | ^2.2.0 | ^15.0.0 | A react component toolset for managing animations |
+| react-transition-group | ^2.2.0 | >=15.0.0 | A react component toolset for managing animations |
 | terra-base | ^2.6.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 
 ## devDependencies
