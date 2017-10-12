@@ -76,6 +76,10 @@ const propTypes = {
    */
   isArrowDisplayed: PropTypes.bool,
   /**
+   * Should the popup content have tab focus. Set this is your content doesn't contain any focusable elements.
+   */
+  isContentFocusDisabled: PropTypes.bool,
+  /**
    * Should the default behavior, that inserts a header when constraints are breached, be disabled.
    */
   isHeaderDisabled: PropTypes.bool,
@@ -108,6 +112,7 @@ const defaultProps = {
   contentHeight: '80',
   contentWidth: '240',
   isArrowDisplayed: false,
+  isContentFocusDisabled: false,
   isHeaderDisabled: false,
   isOpen: false,
 };
@@ -220,6 +225,7 @@ class Popup extends React.Component {
         requestFocus={this.props.requestFocus}
         isHeightDynamic={this.props.contentHeight === 'dynamic'}
         isWidthDynamic={this.props.contentWidth === 'dynamic'}
+        isFocusedDisabled={this.props.isContentFocusDisabled}
       >
         {this.props.children}
       </PopupContent>
@@ -239,6 +245,7 @@ class Popup extends React.Component {
       contentHeight,
       contentWidth,
       isArrowDisplayed,
+      isContentFocused,
       isHeaderDisabled,
       isOpen,
       onRequestClose,

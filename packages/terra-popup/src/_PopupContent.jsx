@@ -51,6 +51,10 @@ const propTypes = {
    */
   contentWidthMax: PropTypes.number,
   /**
+   * Should the popup content have tab focus. Set this is your content doesn't contain any focusable elements.
+   */
+  isFocusedDisabled: PropTypes.bool,
+  /**
    * Should the default behavior, that inserts a header when constraints are breached, be disabled.
    */
   isHeaderDisabled: PropTypes.bool,
@@ -80,6 +84,7 @@ const defaultProps = {
   classNameInner: null,
   contentHeightMax: -1,
   contentWidthMax: -1,
+  isFocusedDisabled: false,
   isHeaderDisabled: false,
   isHeightDynamic: false,
   isWidthDynamic: false,
@@ -135,6 +140,7 @@ class PopupContent extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnResize = this.handleOnResize.bind(this);
+    this.validateFocus = this.validateFocus.bind(this);
   }
 
   componentDidMount() {
@@ -148,6 +154,19 @@ class PopupContent extends React.Component {
   componentWillUnmount() {
     if (this.props.releaseFocus) {
       this.props.releaseFocus();
+    }
+  } 
+
+  validateFocus(node) {
+    if (!this.props.isFocusedDisabled && node) {
+      const compareValue = node.compareDocumentPosition(document.activeElement);
+      if (compareValue >= 16 && compareValue < 32) {
+        const computedStyle = window.getComputedStyle(document.activeElement);
+        if (computedStyle.visibility !== 'hidden') {
+          return;
+        }
+      }
+      node.focus();
     }
   }
 
@@ -166,6 +185,7 @@ class PopupContent extends React.Component {
       contentHeightMax,
       contentWidth,
       contentWidthMax,
+      isFocusedDisabled,
       isHeaderDisabled,
       isHeightDynamic,
       isWidthDynamic,
@@ -205,16 +225,16 @@ class PopupContent extends React.Component {
     const dynamicWidth = isWidthDynamic ? { 'data-terra-popup-dynamic-width': true } : {};
 
     return (
-      <FocusTrap>
+      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true }}>
         <Hookshot.Content
           {...customProps}
           className={contentClassNames}
-          tabIndex="0"
+          tabIndex={isFocusedDisabled ? null : '0'}
           data-terra-popup-content
           onEsc={onRequestClose}
           onOutsideClick={onRequestClose}
           onResize={this.handleOnResize}
-          refCallback={refCallback}
+          refCallback={(node) => { this.validateFocus(node); refCallback(node); }}
         >
           {arrowContent}
           <div {...dynamicHeight} {...dynamicWidth} className={innerClassNames} style={contentStyle}>
