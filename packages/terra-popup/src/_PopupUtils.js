@@ -133,7 +133,7 @@ const doesArrowFitVertical = (contentRect, targetRect, arrowOffset, cornerOffset
 };
 
 /**
- *
+ * Manually calculates the arrow position as a fallback when primary positioning fails.
  *
  * @ param {Object} contentPosition - The content x/y coords, rectangle, offset, and attachment.
  * @ param {Object} targetPosition - The target x/y coords, rectangle, offset, and attachment.
