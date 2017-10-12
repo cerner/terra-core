@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component 1`] = `
+<div>
+  <button
+    id="hookshot-standard-button"
+  />
+</div>
+`;
+
+exports[`should shallow a default component 1`] = `
+<div>
+  <Hookshot
+    attachmentBehavior="auto"
+    attachmentMargin={0}
+    contentAttachment={
+      Object {
+        "horizontal": "center",
+        "vertical": "top",
+      }
+    }
+    contentOffset={
+      Object {
+        "horizontal": 0,
+        "vertical": 0,
+      }
+    }
+    isEnabled={true}
+    isOpen={false}
+    targetOffset={
+      Object {
+        "horizontal": 0,
+        "vertical": 0,
+      }
+    }
+    targetRef={[Function]}
+  >
+    <OnClickOutside(HookshotContent)
+      onRequestClose={[Function]}
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "40px",
+            "width": "200px",
+          }
+        }
+      >
+        Hookshot
+      </div>
+    </OnClickOutside(HookshotContent)>
+  </Hookshot>
+  <button
+    id="hookshot-standard-button"
+    onClick={[Function]}
+  />
+</div>
+`;

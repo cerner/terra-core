@@ -1,8 +1,8 @@
 {
-  "name": "terra-modal",
-  "main": "lib/Modal.js",
-  "version": "1.12.0",
-  "description": "Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button.",
+  "name": "terra-hookshot",
+  "main": "lib/Hookshot.js",
+  "version": "0.0.0",
+  "description": "The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -10,8 +10,11 @@
   "keywords": [
     "Cerner",
     "Terra",
-    "terra-modal",
-    "Modal",
+    "terra-hookshot",
+    "Hookshot",
+    "Position",
+    "Attached",
+    "Portal",
     "UI"
   ],
   "author": "Cerner Corporation",
@@ -21,17 +24,17 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-icon": "^1.12.0",
     "terra-props-table": "^1.10.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "terra-base": "^2.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "focus-trap-react": "^3.0.2",
     "prop-types": "^15.5.8",
+    "react-onclickoutside": "^5.11.1",
     "react-portal": "^3.0.0",
     "terra-base": "^2.6.0"
   },
@@ -42,7 +45,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Modal.jsx ./src/ModalContent.jsx --out-dir ./docs/props-table",
+    "props-table": "props-table ./src/Hookshot.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
