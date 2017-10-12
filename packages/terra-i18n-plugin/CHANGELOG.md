@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.7.0 - (October 12, 2017)
+------------------
 ### Changed
 * Generated translations are now ES6 modules.
 
