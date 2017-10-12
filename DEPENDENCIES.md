@@ -1,14 +1,21 @@
 # Dependency Information
 
+## dependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| babel-runtime | ^6.26.0 | -- | babel selfContained runtime |
+
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | babel-cli | ^6.24.1 | -- | Babel command line. |
 | babel-core | ^6.24.1 | -- | Babel compiler core. |
 | babel-jest | ^20.0.0 | -- | Jest plugin to use babel for transformation. |
+| babel-plugin-syntax-dynamic-import | ^6.18.0 | -- | Allow parsing of import() |
 | babel-plugin-transform-object-assign | ^6.22.0 | -- | Replace Object.assign with an inline helper |
 | babel-plugin-transform-object-rest-spread | ^6.23.0 | -- | Compile object rest and spread to ES5 |
-| babel-preset-es2015 | ^6.24.1 | -- | Babel preset for all es2015 plugins. |
+| babel-plugin-transform-runtime | ^6.23.0 | -- | Externalise references to helpers and builtins, automatically polyfilling your code without polluting globals |
+| babel-preset-env | ^1.6.0 | -- | A Babel preset for each environment. |
 | babel-preset-react | ^6.24.1 | -- | Babel preset for all React plugins. |
 | check-installed-dependencies | ^1.0.0 | -- | Check if the currently installed packages match package.json |
 | danger | ^1.0.0 | -- | Unit tests for Team Culture |

@@ -1,4 +1,14 @@
 {
-  "presets": ["es2015", "react"],
-  "plugins": ["transform-object-assign", "transform-object-rest-spread"],
+  "presets": ["react", ["env", {
+    "targets": {
+      "browsers": ["last 2 versions", "iOS >= 10"]
+    }
+  }]],
+  "plugins": [
+    "transform-object-assign",
+    "transform-object-rest-spread",
+    "transform-runtime",
+    "syntax-dynamic-import",
+    "dynamic-import-node"
+  ]
 }

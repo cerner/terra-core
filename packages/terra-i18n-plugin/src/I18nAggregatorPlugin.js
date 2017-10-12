@@ -10,11 +10,11 @@ import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
 addLocaleData(localeData);
 
 const messages = ${JSON.stringify(messages, null, 2)};
+const locale = '${language}';
 
-module.exports = {
-  areTranslationsLoaded: true,
-  locale: '${language}',
-  messages: messages
+export  {
+  locale,
+  messages
 };`;
 }
 
@@ -35,6 +35,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
       try {
         Object.assign(languageMessages[language], JSON.parse(compiler.inputFileSystem.readFileSync(translationFile, 'utf8')));
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.warn(`Translation file ${language}.json not found for ${translationsDirectory}`);
       }
     });

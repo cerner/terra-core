@@ -3,6 +3,7 @@
 ## dependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
+| babel-runtime | ^6.26.0 | -- | babel selfContained runtime |
 | lodash | ^4.17.4 | -- | Lodash modular utilities. |
 | moment | ^2.17.1 | -- | Parse, validate, manipulate, and display dates |
 | postcss | ^6.0.9 | -- | Tool for transforming styles with JS plugins |
@@ -64,7 +65,7 @@
 | autoprefixer | ^6.7.7 | -- | Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website |
 | babel-cli | ^6.24.1 | -- | Babel command line. |
 | babel-loader | ^7.1.2 | -- | babel module loader for webpack |
-| babel-polyfill | ^6.23.0 | -- | Provides polyfills necessary for a full ES2015+ environment |
+| babel-plugin-transform-runtime | ^6.23.0 | -- | Externalise references to helpers and builtins, automatically polyfilling your code without polluting globals |
 | clean-webpack-plugin | ^0.1.17 | -- | A webpack plugin to remove your build folder(s) before building |
 | css-loader | ^0.28.7 | -- | css loader module for webpack |
 | extract-text-webpack-plugin | ^3.0.1 | -- | Extract text from bundle into a file. |

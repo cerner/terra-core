@@ -72,7 +72,7 @@ const applicationIdentifiers = (props) => {
   return null;
 };
 
-module.exports = {
+export {
   personDetails,
   applicationIdentifiers,
 };
