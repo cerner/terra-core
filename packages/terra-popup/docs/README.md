@@ -1,6 +1,6 @@
 # Terra Popup
 
-The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow.
+The Terra Popup is higher order component that launches [terra-hookshot][4] positioned content with the ability to display a dynamic arrow.
 
 ## Getting Started
 
@@ -125,4 +125,5 @@ The [Modal][1] component by default will trap focus. In order to interact with a
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal/docs
 [2]: https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate/docs
 [3]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager/docs
+[4]: https://github.com/cerner/terra-core/tree/master/packages/terra-hookshot/docs
 
