@@ -4,7 +4,7 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
-| focus-trap-react | ^3.0.2 | 0.14.x \|\| ^15.0.0 | A React component that traps focus. |
+| focus-trap-react | ^3.0.2 | 0.14.x \|\| ^15.0.0 \|\| ^16.0.0 | A React component that traps focus. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-base | ^2.6.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-icon | ^1.12.0 | ^15.4.2 | terra-icon |
