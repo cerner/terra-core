@@ -10,11 +10,12 @@ import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
 addLocaleData(localeData);
 
 const messages = ${JSON.stringify(messages, null, 2)};
-
-module.exports = {
-  areTranslationsLoaded: true,
-  locale: '${language}',
-  messages: messages
+const areTranslationsLoaded = true;
+const locale = '${language}'
+export {
+  areTranslationsLoaded,
+  locale,
+  messages
 };`;
 }
 
