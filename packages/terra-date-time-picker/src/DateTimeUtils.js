@@ -86,11 +86,18 @@ class DateTimeUtils {
     }
 
     const localizedDateTime = moment.tz(dateTime.format(), moment.tz.guess());
-    const clonedDateTime = localizedDateTime.clone();
+    const beforeDaylightSaving = localizedDateTime.clone();
+    const afterDaylightSaving = localizedDateTime.clone();
 
-    clonedDateTime.add(1, 'hour');
+    // The localizedDateTime could be before or after the time change (e.g. the offset is -500 or -600 in CST)
+    // To determine if this is the ambiguous hour, we need to add 1 hour as well as subtract 1 hour to account for both directions.
+    beforeDaylightSaving.add(1, 'hour');
+    afterDaylightSaving.subtract(1, 'hour');
 
-    return localizedDateTime.isDST() && !clonedDateTime.isDST();
+    const isAmbiguousBeforeChange = localizedDateTime.isDST() && !beforeDaylightSaving.isDST();
+    const isAmbiguousAfterChange = !localizedDateTime.isDST() && afterDaylightSaving.isDST();
+
+    return isAmbiguousBeforeChange || isAmbiguousAfterChange;
   }
 
   static getDaylightSavingTZDisplay() {
