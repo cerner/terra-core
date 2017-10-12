@@ -6,8 +6,8 @@ import PopupContent from './_PopupContent';
 import PopupArrow from './_PopupArrow';
 import PopupOverlay from './_PopupOverlay';
 import PopupUtils from './_PopupUtils';
-import PopupHeights from './_PopupHeights';
-import PopupWidths from './_PopupWidths';
+import PopupHeights from './PopupHeights';
+import PopupWidths from './PopupWidths';
 
 const ATTACHMENT_POSITIONS = [
   'top left',
