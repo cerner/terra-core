@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.14.0 - (October 12, 2017)
+------------------
 ### Updated
 * Updated content-container site examples to use appropriate header and content.
 * Updated webpack config to align with webpack 3 documentation
