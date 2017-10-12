@@ -81,7 +81,6 @@
 | react-dom | ^15.4.2 | ^15.6.2 | React package for working with the DOM. |
 | sass-loader | ^6.0.6 | -- | Sass loader for webpack |
 | style-loader | ^0.19.0 | -- | style loader module for webpack |
-| uglifyjs-webpack-plugin | ^1.0.0-beta.3 | -- | UglifyJS plugin for webpack |
 | webpack | ^3.6.0 | -- | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. |
 | webpack-dev-server | 2.7.1 | -- | Serves a webpack app. Updates the browser on changes. |
 

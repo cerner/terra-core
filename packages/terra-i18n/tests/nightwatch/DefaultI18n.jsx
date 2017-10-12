@@ -16,11 +16,11 @@ class Base extends React.Component {
   }
 
   componentDidMount() {
-    i18nLoader(this.props.locale, this.setState, this);
+    i18nLoader(this.props.locale).then(i18n => this.setState(i18n));
   }
 
   handleLocaleChange(e) {
-    i18nLoader(e.target.value, this.setState, this);
+    i18nLoader(e.target.value).then(i18n => this.setState(i18n));
   }
 
   render() {

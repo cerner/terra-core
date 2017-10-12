@@ -1,22 +1,16 @@
 /* eslint-disable */
 import intlLoaders from './intlLoaders';
 import translationLoaders from './translationLoaders';
-
 import supportedLocales from './i18nSupportedLocales';
 
 const hasIntl = typeof (Intl) !== 'undefined';
 
-const permitParams = (locale, callback) => {
-  if (supportedLocales.indexOf(locale) < 0) {
-    throw new Error(`${locale} is not supported, supported locales:${supportedLocales}`);
-  }
-  if (typeof (callback) !== 'function') {
-    throw new Error('Second argument must be function');
-  }
-}
-
 export default (locale) => {
+  if (!supportedLocales.includes(locale)) {
+    return Promise.reject(`${locale} is not supported, supported locales: ${supportedLocales}`)
+  }
+
   return import(/* webpackChunkName: "intl-polyfill" */'intl')
-    .then(intlLoaders[locale])
+    .then(hasIntl ? intlLoaders[locale] : Promise.resolve())
     .then(translationLoaders[locale]);
 };

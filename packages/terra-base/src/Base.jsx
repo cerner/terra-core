@@ -39,23 +39,22 @@ const defaultProps = {
 class Base extends React.Component {
   constructor(props) {
     super(props);
+    this.setState.bind(this);
     this.state = {
-      areTranslationsLoaded: false,
       locale: props.locale,
-      messages: {},
     };
   }
 
   componentDidMount() {
     if (this.props.locale !== undefined) {
-      i18nLoader(this.props.locale).then(i18n => this.setState(i18n.default));
+      i18nLoader(this.props.locale).then(i18n => this.setState(i18n));
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props === nextProps) return;
     if (nextProps.locale !== undefined) {
-      i18nLoader(this.props.locale).then(i18n => this.setState(i18n.default));
+      i18nLoader(this.props.locale).then(i18n => this.setState(i18n));
     }
   }
 
@@ -68,15 +67,16 @@ class Base extends React.Component {
       ...customProps
     } = this.props;
 
-    const messages = Object.assign({}, this.state.messages, customMessages);
-
     if (locale === undefined) {
       return (<div {...customProps}>{children}</div>);
     }
 
-    if (!this.state.areTranslationsLoaded) return <div>{this.props.translationsLoadingPlaceholder}</div>;
+    if (this.state.messages === undefined || this.state.messages === null) {
+      return <div>{this.props.translationsLoadingPlaceholder}</div>;
+    }
+
     return (
-      <I18nProvider {...customProps} locale={this.state.locale} messages={messages}>
+      <I18nProvider {...customProps} locale={this.state.locale} messages={{ ...this.state.messages, ...customMessages }}>
         {children}
       </I18nProvider>
     );
