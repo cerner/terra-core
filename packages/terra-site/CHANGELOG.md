@@ -6,6 +6,10 @@ Unreleased
 ### Changed
 * Lock webpack-dev-server at last version supporting IE10 (1.7.1)
 * Uplift site header to use collapsible menu view
+
+1.14.0 - (October 12, 2017)
+------------------
+### Updated
 * Updated content-container site examples to use appropriate header and content.
 
 1.13.0 - (October 6, 2017)
