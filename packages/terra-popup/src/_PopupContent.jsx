@@ -140,7 +140,6 @@ class PopupContent extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnResize = this.handleOnResize.bind(this);
-    this.validateFocus = this.validateFocus.bind(this);
   }
 
   componentDidMount() {
@@ -154,19 +153,6 @@ class PopupContent extends React.Component {
   componentWillUnmount() {
     if (this.props.releaseFocus) {
       this.props.releaseFocus();
-    }
-  }
-
-  validateFocus(node) {
-    if (!this.props.isFocusedDisabled && node) {
-      const compareValue = node.compareDocumentPosition(document.activeElement);
-      if (compareValue >= 16 && compareValue < 32) {
-        const computedStyle = window.getComputedStyle(document.activeElement);
-        if (computedStyle.visibility !== 'hidden') {
-          return;
-        }
-      }
-      node.focus();
     }
   }
 
@@ -234,7 +220,7 @@ class PopupContent extends React.Component {
           onEsc={onRequestClose}
           onOutsideClick={onRequestClose}
           onResize={this.handleOnResize}
-          refCallback={(node) => { this.validateFocus(node); refCallback(node); }}
+          refCallback={refCallback}
         >
           {arrowContent}
           <div {...dynamicHeight} {...dynamicWidth} className={innerClassNames} style={contentStyle}>
