@@ -59,13 +59,13 @@ const propTypes = {
    */
   isHeaderDisabled: PropTypes.bool,
   /**
-   * Whether or not the height provided were using predefined value.
+   * Whether or not the height provided is using a predefined value.
    */
-  isHeightDynamic: PropTypes.bool,
+  isHeightAutomatic: PropTypes.bool,
   /**
-   * Whether or not the width provided were using predefined value.
+   * Whether or not the width provided is using a predefined value.
    */
-  isWidthDynamic: PropTypes.bool,
+  isWidthAutomatic: PropTypes.bool,
   /**
    * The function returning the frame html reference.
    */
@@ -86,25 +86,25 @@ const defaultProps = {
   contentWidthMax: -1,
   isFocusedDisabled: false,
   isHeaderDisabled: false,
-  isHeightDynamic: false,
-  isWidthDynamic: false,
+  isHeightAutomatic: false,
+  isWidthAutomatic: false,
 };
 
 class PopupContent extends React.Component {
-  static getDimensionStyle(value, maxValue, isDynamic) {
+  static getDimensionStyle(value, maxValue, isAutomatic) {
     if (value > 0) {
       if (maxValue > 0 && value >= maxValue) {
         return `${maxValue.toString()}px`;
-      } else if (!isDynamic) {
+      } else if (!isAutomatic) {
         return `${value.toString()}px`;
       }
     }
     return null;
   }
 
-  static getContentStyle(height, maxHeight, width, maxWidth, isHeightDynamic, isWidthDynamic) {
-    const heightStyle = PopupContent.getDimensionStyle(height, maxHeight, isHeightDynamic);
-    const widthStyle = PopupContent.getDimensionStyle(width, maxWidth, isWidthDynamic);
+  static getContentStyle(height, maxHeight, width, maxWidth, isHeightAutomatic, isWidthAutomatic) {
+    const heightStyle = PopupContent.getDimensionStyle(height, maxHeight, isHeightAutomatic);
+    const widthStyle = PopupContent.getDimensionStyle(width, maxWidth, isWidthAutomatic);
     const contentStyle = {};
     if (heightStyle) {
       contentStyle.height = heightStyle;
@@ -126,12 +126,12 @@ class PopupContent extends React.Component {
     return value > 0 && maxValue > 0 && value >= maxValue;
   }
 
-  static cloneChildren(children, isHeightDynamic, isWidthDynamic, isHeightBounded, isWidthBounded) {
+  static cloneChildren(children, isHeightAutomatic, isWidthAutomatic, isHeightBounded, isWidthBounded) {
     const newProps = {};
-    if (isHeightDynamic) {
+    if (isHeightAutomatic) {
       newProps.isHeightBounded = isHeightBounded;
     }
-    if (isWidthDynamic) {
+    if (isWidthAutomatic) {
       newProps.isWidthBounded = isWidthBounded;
     }
     return React.Children.map(children, child => React.cloneElement(child, newProps));
@@ -173,8 +173,8 @@ class PopupContent extends React.Component {
       contentWidthMax,
       isFocusedDisabled,
       isHeaderDisabled,
-      isHeightDynamic,
-      isWidthDynamic,
+      isHeightAutomatic,
+      isWidthAutomatic,
       onRequestClose,
       onResize,
       refCallback,
@@ -183,12 +183,12 @@ class PopupContent extends React.Component {
       ...customProps
     } = this.props;
 
-    const contentStyle = PopupContent.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax, isHeightDynamic, isWidthDynamic);
+    const contentStyle = PopupContent.getContentStyle(contentHeight, contentHeightMax, contentWidth, contentWidthMax, isHeightAutomatic, isWidthAutomatic);
     const isHeightBounded = PopupContent.isBounded(contentHeight, contentHeightMax);
     const isWidthBounded = PopupContent.isBounded(contentWidth, contentWidthMax);
     const isFullScreen = isHeightBounded && isWidthBounded;
 
-    let content = PopupContent.cloneChildren(children, isHeightDynamic, isWidthDynamic, isHeightBounded, isWidthBounded);
+    let content = PopupContent.cloneChildren(children, isHeightAutomatic, isWidthAutomatic, isHeightBounded, isWidthBounded);
     if (isFullScreen && !isHeaderDisabled) {
       content = PopupContent.addPopupHeader(content, onRequestClose);
     }
@@ -207,8 +207,8 @@ class PopupContent extends React.Component {
       classNameInner,
     ]);
 
-    const dynamicHeight = isHeightDynamic ? { 'data-terra-popup-dynamic-height': true } : {};
-    const dynamicWidth = isWidthDynamic ? { 'data-terra-popup-dynamic-width': true } : {};
+    const heightData = isHeightAutomatic ? { 'data-terra-popup-automatic-height': true } : {};
+    const widthData = isWidthAutomatic ? { 'data-terra-popup-automatic-width': true } : {};
 
     return (
       <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true }}>
@@ -223,7 +223,7 @@ class PopupContent extends React.Component {
           refCallback={refCallback}
         >
           {arrowContent}
-          <div {...dynamicHeight} {...dynamicWidth} className={innerClassNames} style={contentStyle}>
+          <div {...heightData} {...widthData} className={innerClassNames} style={contentStyle}>
             {content}
           </div>
         </Hookshot.Content>

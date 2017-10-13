@@ -22,10 +22,10 @@ import ArrowVerticalLeftAdjustmentPopup from './components/ArrowVerticalLeftAdju
 import ArrowVerticalAttachmentsPopup from './components/ArrowVerticalAttachmentsPopup';
 import ArrowVerticalRightAdjustmentPopup from './components/ArrowVerticalRightAdjustmentPopup';
 import PopupInsideModal from './components/PopupInsideModal';
-import DynamicHeightPopup from './components/DynamicHeightPopup';
-import DynamicWidthPopup from './components/DynamicWidthPopup';
-import DynamicHeightBoundedPopup from './components/DynamicHeightBoundedPopup';
-import DynamicWidthBoundedPopup from './components/DynamicWidthBoundedPopup';
+import AutomaticHeightPopup from './components/AutomaticHeightPopup';
+import AutomaticWidthPopup from './components/AutomaticWidthPopup';
+import AutomaticHeightBoundedPopup from './components/AutomaticHeightBoundedPopup';
+import AutomaticWidthBoundedPopup from './components/AutomaticWidthBoundedPopup';
 import DifferentAttachmentsPopup from './components/DifferentAttachmentsPopup';
 
 const routes = (
@@ -51,10 +51,10 @@ const routes = (
     <Route path="/tests/popup-tests/vertical-attachment" component={ArrowVerticalAttachmentsPopup} />
     <Route path="/tests/popup-tests/vertical-right-offset" component={ArrowVerticalRightAdjustmentPopup} />
     <Route path="/tests/popup-tests/popup-inside-modal" component={PopupInsideModal} />
-    <Route path="/tests/popup-tests/dynamic-height" component={DynamicHeightPopup} />
-    <Route path="/tests/popup-tests/dynamic-width" component={DynamicWidthPopup} />
-    <Route path="/tests/popup-tests/bounded-dynamic-height" component={DynamicHeightBoundedPopup} />
-    <Route path="/tests/popup-tests/bounded-dynamic-width" component={DynamicWidthBoundedPopup} />
+    <Route path="/tests/popup-tests/automatic-height" component={AutomaticHeightPopup} />
+    <Route path="/tests/popup-tests/automatic-width" component={AutomaticWidthPopup} />
+    <Route path="/tests/popup-tests/bounded-automatic-height" component={AutomaticHeightBoundedPopup} />
+    <Route path="/tests/popup-tests/bounded-automatic-width" component={AutomaticWidthBoundedPopup} />
   </div>
 );
 

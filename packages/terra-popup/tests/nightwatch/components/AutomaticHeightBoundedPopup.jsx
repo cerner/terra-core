@@ -48,12 +48,12 @@ class PopupExample extends React.Component {
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentHeight="dynamic"
+          contentHeight="auto"
           isOpen={this.state.open}
           targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
         >
-          <p style={{ height: '400px' }}>This is popup content with a dynamic height of 400px.</p>
+          <p style={{ height: '400px' }}>This is popup content with a automatic height of 400px.</p>
         </Popup>
         <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Popup

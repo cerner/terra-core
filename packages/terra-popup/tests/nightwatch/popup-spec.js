@@ -246,13 +246,13 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 80px; width: 240px;');
   },
 
-  'Displays a popup with dynamic height correctly': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-height`);
-    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-dynamic-height');
+  'Displays a popup with automatic height correctly': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-height`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-height');
   },
 
-  'Displays a popup with dynamic height & closes on width resize': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-height`);
+  'Displays a popup with automatic height & closes on width resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-height`);
     browser.expect.element('.test-content').to.be.present;
 
     const width = screenWidth(browser);
@@ -261,8 +261,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
-  'Displays a popup with dynamic height & remains open on height resize': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-height`);
+  'Displays a popup with automatic height & remains open on height resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-height`);
     browser.expect.element('.test-content').to.be.present;
 
     const width = screenWidth(browser);
@@ -271,19 +271,19 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
-  'Displays a popup with dynamic height correctly when bounded by height': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-dynamic-height`);
-    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-dynamic-height');
+  'Displays a popup with automatic height correctly when bounded by height': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-automatic-height`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-height');
     browser.expect.element('.test-content').to.have.attribute('style').which.contains('height: 175px;');
   },
 
-  'Displays a popup with dynamic width correctly': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-width`);
-    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-dynamic-width');
+  'Displays a popup with automatic width correctly': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-width`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
   },
 
-  'Displays a popup with dynamic width & closes on width resize': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-width`);
+  'Displays a popup with automatic width & closes on width resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-width`);
     browser.expect.element('.test-content').to.be.present;
 
     const width = screenWidth(browser);
@@ -292,8 +292,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
-  'Displays a popup with dynamic width & remains open on height resize': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/dynamic-width`);
+  'Displays a popup with automatic width & remains open on height resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-width`);
     browser.expect.element('.test-content').to.be.present;
 
     const width = screenWidth(browser);
@@ -302,9 +302,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
-  'Displays a popup with dynamic width correctly when bounded by width': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-dynamic-width`);
-    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-dynamic-width');
+  'Displays a popup with automatic width correctly when bounded by width': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-automatic-width`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
     browser.expect.element('.test-content').to.have.attribute('style').which.contains('width: 200px;');
   },
 });

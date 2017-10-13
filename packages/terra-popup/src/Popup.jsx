@@ -63,12 +63,12 @@ const propTypes = {
   contentAttachment: PropTypes.oneOf(ATTACHMENT_POSITIONS),
   /**
    * A string representation of the height in px, limited to:
-   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880 or dynamic.
+   * 40, 80, 120, 160, 240, 320, 400, 480, 560, 640, 720, 800, 880 or auto.
    */
   contentHeight: PropTypes.oneOf(Object.keys(PopupHeights)),
   /**
    * A string representation of the width in px, limited to:
-   * 160, 240, 320, 640, 960, 1280, 1760 or dynamic.
+   * 160, 240, 320, 640, 960, 1280, 1760 or auto.
    */
   contentWidth: PropTypes.oneOf(Object.keys(PopupWidths)),
   /**
@@ -124,13 +124,13 @@ class Popup extends React.Component {
     this.setArrowNode = this.setArrowNode.bind(this);
     this.validateContentNode = this.validateContentNode.bind(this);
     this.handleOnResize = this.handleOnResize.bind(this);
-    this.isContentSized = props.contentHeight !== 'dynamic' && props.contentWidth !== 'dynamic';
+    this.isContentSized = props.contentHeight !== 'auto' && props.contentWidth !== 'auto';
     this.contentHeight = PopupHeights[props.contentHeight];
     this.contentWidth = PopupWidths[props.contentWidth];
   }
 
   componentWillReceiveProps(newProps) {
-    this.isContentSized = newProps.contentHeight !== 'dynamic' && newProps.contentWidth !== 'dynamic';
+    this.isContentSized = newProps.contentHeight !== 'auto' && newProps.contentWidth !== 'auto';
     this.contentHeight = PopupHeights[newProps.contentHeight];
     this.contentWidth = PopupWidths[newProps.contentWidth];
   }
@@ -168,7 +168,7 @@ class Popup extends React.Component {
       this.windowWidth = window.innerWidth;
       this.props.onRequestClose();
     } else {
-      this.isContentSized = this.props.contentHeight !== 'dynamic' && this.props.contentWidth !== 'dynamic';
+      this.isContentSized = this.props.contentHeight !== 'auto' && this.props.contentWidth !== 'auto';
       this.contentHeight = PopupHeights[this.props.contentHeight];
       this.contentWidth = PopupWidths[this.props.contentWidth];
       this.forceUpdate();
@@ -223,8 +223,8 @@ class Popup extends React.Component {
         refCallback={this.validateContentNode}
         releaseFocus={this.props.releaseFocus}
         requestFocus={this.props.requestFocus}
-        isHeightDynamic={this.props.contentHeight === 'dynamic'}
-        isWidthDynamic={this.props.contentWidth === 'dynamic'}
+        isHeightAutomatic={this.props.contentHeight === 'auto'}
+        isWidthAutomatic={this.props.contentWidth === 'auto'}
         isFocusedDisabled={this.props.isContentFocusDisabled}
       >
         {this.props.children}
