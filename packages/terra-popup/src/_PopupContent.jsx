@@ -155,7 +155,7 @@ class PopupContent extends React.Component {
     if (this.props.releaseFocus) {
       this.props.releaseFocus();
     }
-  } 
+  }
 
   validateFocus(node) {
     if (!this.props.isFocusedDisabled && node) {

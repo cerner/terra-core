@@ -245,7 +245,7 @@ class Popup extends React.Component {
       contentHeight,
       contentWidth,
       isArrowDisplayed,
-      isContentFocused,
+      isContentFocusDisabled,
       isHeaderDisabled,
       isOpen,
       onRequestClose,
