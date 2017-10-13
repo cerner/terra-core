@@ -11,7 +11,7 @@ addLocaleData(localeData);
 
 const messages = ${JSON.stringify(messages, null, 2)};
 const areTranslationsLoaded = true;
-const locale = '${language}'
+const locale = '${language}';
 export {
   areTranslationsLoaded,
   locale,
