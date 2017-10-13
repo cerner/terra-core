@@ -112,7 +112,6 @@ const defaultProps = {
   contentHeight: '80',
   contentWidth: '240',
   isArrowDisplayed: false,
-  isContentFocusDisabled: false,
   isHeaderDisabled: false,
   isOpen: false,
 };
