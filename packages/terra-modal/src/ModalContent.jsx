@@ -9,15 +9,45 @@ import styles from './Modal.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * String that labels the modal for screen readers.
+   */
   ariaLabel: PropTypes.string.isRequired,
+  /**
+   * Content inside the modal dialog.
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * CSS classnames that are appended to the modal.
+   */
   classNameModal: PropTypes.string,
+  /**
+   * CSS classnames that are appended to the overlay.
+   */
   classNameOverlay: PropTypes.string,
+  /**
+   * If set to true, the modal will close when a mouseclick is triggered outside the modal.
+   */
   closeOnOutsideClick: PropTypes.bool,
+  /**
+   * Callback function indicating a close condition was met, should be combined with isOpen for state management.
+   */
   onRequestClose: PropTypes.func.isRequired,
+  /**
+   * If set to true, the modal will trap the focus and prevents any popup within the modal from gaining focus.
+   */
   isFocused: PropTypes.bool,
+  /**
+   * If set to true, the modal will be fullscreen on all breakpoint sizes.
+   */
   isFullscreen: PropTypes.bool,
+  /**
+   * If set to true, the modal dialog with have overflow-y set to scroll.
+   */
   isScrollable: PropTypes.bool,
+  /**
+   * Role attribute on the modal dialog.
+   */
   role: PropTypes.string,
 };
 

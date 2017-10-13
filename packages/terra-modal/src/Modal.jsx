@@ -6,27 +6,27 @@ import ModalContent from './ModalContent';
 
 const propTypes = {
   /**
-   * String that labels the modal for screen readers
+   * String that labels the modal for screen readers.
    */
   ariaLabel: PropTypes.string.isRequired,
   /**
-   * Content inside the modal dialog
+   * Content inside the modal dialog.
    */
   children: PropTypes.node.isRequired,
   /**
-   * CSS classnames that are append to the modal
+   * CSS classnames that are appended to the modal.
    */
   classNameModal: PropTypes.string,
   /**
-   * CSS classnames that are append to the overlay
+   * CSS classnames that are appended to the overlay.
    */
   classNameOverlay: PropTypes.string,
   /**
-   * If set to true, the modal will close when the esc key is pressed
+   * If set to true, the modal will close when the esc key is pressed.
    */
   closeOnEsc: PropTypes.bool,
   /**
-   * If set to true, the modal will close when a mouseclick is triggered outside the modal
+   * If set to true, the modal will close when a mouseclick is triggered outside the modal.
    */
   closeOnOutsideClick: PropTypes.bool,
   /**
@@ -34,11 +34,11 @@ const propTypes = {
    */
   isFocused: PropTypes.bool,
   /**
-   * If set to true, the modal will be fullscreen on all breakpoint sizes
+   * If set to true, the modal will be fullscreen on all breakpoint sizes.
    */
   isFullscreen: PropTypes.bool,
   /**
-   * If set to true, the modal will rendered as opened
+   * If set to true, the modal will rendered as opened.
    */
   isOpen: PropTypes.bool.isRequired,
   /**
@@ -48,11 +48,11 @@ const propTypes = {
    */
   isScrollable: PropTypes.bool,
   /**
-   * Function to set isOpen={false} and close the modal.
+   * Callback function indicating a close condition was met, should be combined with isOpen for state management.
    */
   onRequestClose: PropTypes.func.isRequired,
   /**
-   * Role attribute on the modal dialog
+   * Role attribute on the modal dialog.
    */
   role: PropTypes.string,
 };
