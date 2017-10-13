@@ -3,8 +3,8 @@ import Popup from 'terra-popup';
 import Button from 'terra-button';
 import ExamplePopupContent from './ExamplePopupContent';
 
-const HEIGHT_KEYS = Object.keys(Popup.heights);
-const WIDTH_KEYS = Object.keys(Popup.widths);
+const HEIGHT_KEYS = Object.keys(Popup.Opts.heights);
+const WIDTH_KEYS = Object.keys(Popup.Opts.widths);
 
 class PopupDimensions extends React.Component {
   static generateOptions(values) {
