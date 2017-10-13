@@ -35,6 +35,10 @@ const propTypes = {
   */
   onRequestClose: PropTypes.func,
   /**
+  * Indictes if the overlay will close or not when the esc key is pressed.
+  */
+  disableCloseOnEsc: PropTypes.bool,
+  /**
   * Indicates if the overlay is relative to the triggering container.
   */
   isRelativeToContainer: PropTypes.bool,
@@ -50,6 +54,7 @@ const defaultProps = {
   backgroundStyle: BackgroundStyles.LIGHT,
   isScrollable: false,
   isRelativeToContainer: false,
+  disableCloseOnEsc: false,
   onRequestClose: undefined,
 };
 
@@ -106,7 +111,7 @@ class Overlay extends React.Component {
   }
 
   shouldHandleESCKeydown(event) {
-    if (this.props.isOpen && event.keyCode === KEYCODES.ESCAPE) {
+    if (this.props.isOpen && event.keyCode === KEYCODES.ESCAPE && !this.props.disableCloseOnEsc) {
       this.handleCloseEvent(event);
       event.preventDefault();
     }
@@ -132,7 +137,17 @@ class Overlay extends React.Component {
   }
 
   render() {
-    const { children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, ...customProps } = this.props;
+    const {
+      children,
+      isOpen,
+      backgroundStyle,
+      isScrollable,
+      isRelativeToContainer,
+      disableCloseOnEsc,
+      onRequestClose,
+      ...customProps
+    } = this.props;
+
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {

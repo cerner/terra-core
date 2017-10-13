@@ -11,6 +11,7 @@ import CustomContentOverlay from './CustomContentOverlay';
 import ContainerScrollableOverlay from './ContainerScrollableOverlay';
 import FullscreenScrollableOverlay from './FullscreenScrollableOverlay';
 import OnRequestCloseOverlay from './OnRequestCloseOverlay';
+import DisableCloseOnEscapeOverlay from './DisableCloseOnEscapeOverlay';
 import LightOverlay from './LightOverlay';
 import DarkOverlay from './DarkOverlay';
 import ClearOverlay from './ClearOverlay';
@@ -24,6 +25,7 @@ const routes = (
     <Route path="/tests/overlay-tests/container-scrollable" component={ContainerScrollableOverlay} />
     <Route path="/tests/overlay-tests/fullscreen-scrollable" component={FullscreenScrollableOverlay} />
     <Route path="/tests/overlay-tests/on-request-close" component={OnRequestCloseOverlay} />
+    <Route path="/tests/overlay-tests/disable-close-on-esc" component={DisableCloseOnEscapeOverlay} />
     <Route path="/tests/overlay-tests/light-themed" component={LightOverlay} />
     <Route path="/tests/overlay-tests/dark-themed" component={DarkOverlay} />
     <Route path="/tests/overlay-tests/clear-themed" component={ClearOverlay} />

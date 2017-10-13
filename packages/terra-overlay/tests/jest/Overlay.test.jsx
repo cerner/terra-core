@@ -50,6 +50,12 @@ describe('Overlay', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
+    it('should render with onRequestClose with close on escape disabled', () => {
+      const overlayRender = <Overlay isOpen onRequestClose={() => {}} disableCloseOnEsc />;
+      const wrapper = shallow(overlayRender);
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('should render with isRelativeToContainer', () => {
       const overlayRender = <Overlay isOpen isRelativeToContainer />;
       const wrapper = shallow(overlayRender);
