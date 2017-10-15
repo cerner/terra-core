@@ -1,7 +1,12 @@
 {
   "lerna": "2.1.2",
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
-}
+  "version": "independent",
+  "commands": {
+    "publish": {
+      "ignore": [
+        "DEPENDENCIES.md"
+      ]
+    }
+  },
+  "packages": ["packages/*"]
+  }
