@@ -3,13 +3,14 @@ Changelog
 
 Unreleased
 ----------
-### Added
-* SelectableTableRows component
-
 
 1.13.0 - (October 6, 2017)
 ------------------
+### Added
+* SelectableTableRows component
+
 ### Changed
+* Refactor Single Selectable Rows typecheck
 * Refactor nightwatch tests
 * Updated SingleSelectableRows to utilize the SelectableTableRows component
 
