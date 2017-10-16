@@ -20,8 +20,6 @@ const TimeInputExamples = () => (
     <PropsTable id="props" src={TimeInputSrc} />
     <h2 id="default">Without Default Time</h2>
     <TimeInputNoDefaultTime />
-    <br />
-    <br />
     <h2 id="default">With Default Time</h2>
     <TimeInputDefaultTime />
   </div>
