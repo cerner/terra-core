@@ -126,9 +126,7 @@ class App extends React.Component {
         />
       );
     } else {
-      themeSwitcher = (
-        <CollapsibleMenuView.Item />
-      );
+      themeSwitcher = null;
     }
 
     const navHeader = (
