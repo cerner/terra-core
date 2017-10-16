@@ -46,6 +46,7 @@
     "terra-collapsible-menu-view": "^1.1.1",
     "terra-content-container": "^1.11.1",
     "terra-date-picker": "^1.13.1",
+    "terra-date-time-picker": "^0.x",
     "terra-demographics-banner": "^1.12.1",
     "terra-dynamic-grid": "^1.6.1",
     "terra-embedded-content-consumer": "^1.6.1",
