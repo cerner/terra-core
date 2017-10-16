@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Add flex styling to prevent content from being pushed off screen
 
 1.12.0 - (October 6, 2017)
 ------------------
