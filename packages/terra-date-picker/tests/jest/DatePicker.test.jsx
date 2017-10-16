@@ -93,6 +93,36 @@ it('should render a date picker with requestFocus', () => {
   expect(datePicker).toMatchSnapshot();
 });
 
+it('should render a date picker with onChange', () => {
+  const onChange = () => {};
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DatePicker name="date-input" onChange={onChange} utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
+
+it('should render a date picker with onChangeRaw', () => {
+  const onChangeRaw = () => {};
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DatePicker name="date-input" onChangeRaw={onChangeRaw} utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
+
+it('should render a date picker with onSelect', () => {
+  const onSelect = () => {};
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DatePicker name="date-input" onSelect={onSelect} utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
+
 it('throws error on missing locale prop in Base', () => {
   try {
     render(<DatePicker name="date-input" />);

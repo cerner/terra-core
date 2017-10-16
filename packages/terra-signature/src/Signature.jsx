@@ -54,10 +54,12 @@ class Signature extends React.Component {
       this.canvas.addEventListener('touchstart', this.mouseDown, false);
       this.canvas.addEventListener('touchmove', this.mouseXY, true);
       this.canvas.addEventListener('touchend', this.mouseUp, false);
+      this.canvas.addEventListener('touchleave', this.mouseOut, false);
       document.body.addEventListener('touchcancel', this.mouseUp, false);
     } else {
       this.canvas.addEventListener('mousedown', this.mouseDown);
       this.canvas.addEventListener('mousemove', this.mouseXY);
+      this.canvas.addEventListener('mouseout', this.mouseOut);
       document.body.addEventListener('mouseup', this.mouseUp);
     }
 
@@ -86,10 +88,12 @@ class Signature extends React.Component {
       this.canvas.removeEventListener('touchstart', this.mouseDown);
       this.canvas.removeEventListener('touchmove', this.mouseXY);
       this.canvas.removeEventListener('touchend', this.mouseUp);
+      this.canvas.removeEventListener('touchleave', this.mouseOut);
       window.removeEventListener('touchcancel', this.mouseUp);
     } else {
       this.canvas.removeEventListener('mousedown', this.mouseDown);
       this.canvas.removeEventListener('mousemove', this.mouseXY);
+      this.canvas.removeEventListener('mouseout', this.mouseOut);
       window.removeEventListener('mouseup', this.mouseUp);
     }
 
@@ -97,6 +101,9 @@ class Signature extends React.Component {
   }
 
   mouseDown(event) {
+    if (event.button !== 0) {
+      return;
+    }
     this.setState({ painting: true });
 
     this.canvasRect = this.canvas.getBoundingClientRect();
@@ -120,6 +127,14 @@ class Signature extends React.Component {
 
       this.draw();
     }
+  }
+
+  mouseOut(event) {
+    debugger;
+    if (this.state.painting)
+      this.setState({ painting: false });
+      // stop the drawing
+  }
   }
 
   addLine(x, y, dragging) {
