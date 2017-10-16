@@ -10,7 +10,7 @@ import Select from 'terra-form/lib/Select';
 
 <Select
   options={[{ value: 'm', display: 'moo' },
-            { value: 'b', display: 'boo' },
+            { value: 'b', display: 'boo', disabled: true },
             { value: 'z', display: 'zar' }]}
   name="foo"
   defaultValue="b"
