@@ -22,31 +22,18 @@ const DatePickerExamples = () => (
     <PropsTable id="props" src={DatePickerSrc} />
     <h2 id="default">Default</h2>
     <DatePickerDefault />
-    <br />
-    <br />
     <h2 id="exclude-dates">Exclude Dates</h2>
     <DatePickerExcludeDates />
-    <br />
-    <br />
     <h2 id="filter-dates">Filter Dates</h2>
     <DatePickerFilterDates />
-    <br />
-    <br />
     <h2 id="include-dates">Include Dates</h2>
     <DatePickerIncludeDates />
-    <br />
-    <br />
     <h2 id="min-max">Min Max Selection Options</h2>
     <DatePickerMinMax />
-    <br />
-    <br />
     <h2 id="start-date">Default Date</h2>
     <DatePickerDefaultDate />
-    <br />
-    <br />
     <h2 id="modal">Presented Inside Modal</h2>
     <DatePickerInsideModal />
-    <br />
   </div>
 );
 
