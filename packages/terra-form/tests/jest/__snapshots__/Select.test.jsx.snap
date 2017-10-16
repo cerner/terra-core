@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render a Select component with one disabled option 1`] = `
+<select
+  className="select"
+  name={null}
+  required={false}
+>
+  <option
+    disabled={true}
+    value="m"
+  >
+    moo
+  </option>
+</select>
+`;
+
 exports[`should render a Select component with one option 1`] = `
 <select
   className="select"

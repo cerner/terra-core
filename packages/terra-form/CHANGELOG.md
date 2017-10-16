@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Updated
+* Added disabled support to select component
 
 1.11.0 - (October 6, 2017)
 ------------------
