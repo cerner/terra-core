@@ -16,6 +16,7 @@ import CardExamples from './examples/card/Index';
 import CollapsibleMenuViewExamples from './examples/collapsible-menu-view/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
+import DateTimePickerExamples from './examples/date-time-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
@@ -59,6 +60,7 @@ import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
 import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
+import DateTimePickerTestRoutes from 'terra-date-time-picker/tests/nightwatch/DateTimePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
@@ -123,6 +125,7 @@ ReactDOM.render((
       <Route path="collapsible-menu-view" component={CollapsibleMenuViewExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
+      <Route path="date-time-picker" component={DateTimePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
@@ -167,6 +170,7 @@ ReactDOM.render((
     {CardTestRoutes}
     {CollapsibleMenuViewTestRoutes}
     {DatePickerTestRoutes}
+    {DateTimePickerTestRoutes}
     {DemographicsBannerTestRoutes}
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}

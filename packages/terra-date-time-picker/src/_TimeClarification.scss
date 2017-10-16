@@ -1,0 +1,60 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+:local {
+  .header {
+    background-color: #f4f4f4;
+    border-bottom-color: #dedfe0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 3.587rem;
+    padding: 0.714rem;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.285rem;
+    font-weight: normal;
+    line-height: 1.75;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+  }
+
+  .body {
+    color: #64696c;
+    padding: 0.25rem 0.714rem;
+    
+    p {
+      margin-top: 0.714rem;
+    }
+  }
+
+  .buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0.714rem 0;
+
+    .button-daylight,
+    .button-standard {
+      margin: 0.25rem;
+    }
+  }
+
+  .button-offset {
+    background-color: #fff;
+    height: 1.857em;
+    margin-left: 0.429em;
+
+    &:focus {
+      border-color: #26a2e5;
+      outline: none;
+    }
+  }
+
+  .button-offset-hidden {
+    display: none;
+  }    
+}
