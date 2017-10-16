@@ -7,21 +7,22 @@
   // Vertically aligns arrange content to the top by default
   .arrange {
     display: flex;
+    justify-content: space-between;
+    word-wrap: break-word;
   }
 
   // Makes sure fill expands to fill the remaining space of its parent container
   // Display set to ensure correct appreance if applied to inline elements like span
   .fill {
-    display: block;
-    flex: 1;
-    flex-basis: auto;
+    flex: 1 1 auto;
     min-width: 0;
   }
 
   // Styles specific to align items independently of each other
   .fit {
     align-self: flex-start;
-    display: flex;
+    flex: 0 0 auto;
+    max-width: 40%;
   }
 
   .center {
