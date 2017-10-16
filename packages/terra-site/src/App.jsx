@@ -135,6 +135,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/collapsible-menu-view">Collapsible Menu View</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/content-container">Content Container</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/datepicker">Date Picker</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/date-time-picker">Date Time Picker</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/demographics-banner">Demographics Banner</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/dynamic-grid">Dynamic Grid</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/embedded-content-consumer">Embedded Content Consumer</Link>} />
