@@ -72,7 +72,7 @@ class App extends React.Component {
 
   render() {
     const toggleContent = (
-      <CollapsibleMenuView.Item icon={<IconMenu />} isIconOnly key="toggle-content" onClick={this.handleToggleClick} />
+      <CollapsibleMenuView.Item icon={<IconMenu />} text="Toggle Sidebar" isIconOnly key="toggle-content" onClick={this.handleToggleClick} />
     );
 
     const bidiContent = (
@@ -126,7 +126,7 @@ class App extends React.Component {
         />
       );
     } else {
-      themeSwitcher = null;
+      themeSwitcher = <div />;
     }
 
     const navHeader = (
