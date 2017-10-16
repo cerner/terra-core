@@ -118,7 +118,7 @@ class DatePickerInput extends React.Component {
       ...customProps
     } = this.props;
 
-    const additionalInputProps = Object.assign({}, inputAttributes, customProps);
+    const additionalInputProps = Object.assign({}, customProps, inputAttributes);
 
     // react-datepicker by default will show the picker when the input has focus.
     // Since we want to show the picker only when the calendar button is clicked, we need to delete the onFocus handle that is passed in by react-datepicker.

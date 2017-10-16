@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added onChangeRaw, onClickOutside and onSelect props.
 
 1.12.0 - (October 6, 2017)
 ------------------
