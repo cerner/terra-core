@@ -21,9 +21,9 @@ class SelectExamples extends React.Component {
             options={[{ value: 'puppies', display: 'Puppies' },
                       { value: 'kittens', display: 'Kittens' },
                       { value: 'snappers', display: 'Snappers' },
-                      { value: 'bumblers', display: 'Bumblers' },
+                      { value: 'bumblers', display: 'Bumblers', disabled: true },
                       { value: 'joeys', display: 'Joeys' },
-                      { value: 'micros', display: 'Microprocessors' }]}
+                      { value: 'micros', display: 'Microprocessors', disabled: true }]}
             name="zibby"
             defaultValue="snappers"
             required
