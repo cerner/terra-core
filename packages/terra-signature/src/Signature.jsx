@@ -17,7 +17,7 @@ const MOUSECODES = {
 const propTypes = {
   /**
    * The line width to use when drawing the signature on the canvas.
-   * One of LINEWIDTHS.EXTRA_FINE, LINEWIDTHS.FINE, LINEWIDTHS.MEDIUM, LINEWIDTHS.HEAVY.
+   * One of Signature.Opts.Width.EXTRA_FINE, Signature.Opts.Width.FINE, Signature.Opts.Width.MEDIUM, Signature.Opts.Width.HEAVY.
    */
   lineWidth: PropTypes.oneOf([LINEWIDTHS.EXTRA_FINE, LINEWIDTHS.FINE, LINEWIDTHS.MEDIUM, LINEWIDTHS.HEAVY]),
   /**
