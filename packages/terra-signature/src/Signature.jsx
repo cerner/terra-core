@@ -10,7 +10,7 @@ const LINEWIDTHS = {
   HEAVY: 6,
 };
 
-const KEYCODES = {
+const MOUSECODES = {
   LEFTCLICK: 0,
 };
 
@@ -107,8 +107,10 @@ class Signature extends React.Component {
   }
 
   mouseDown(event) {
-    if (event.button !== KEYCODES.LEFTCLICK) {
-      return;
+    if ('button' in event) {
+      if (event.button !== MOUSECODES.LEFTCLICK) {
+        return;
+      }
     }
     this.setState({ painting: true });
 
