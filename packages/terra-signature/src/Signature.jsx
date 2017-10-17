@@ -3,18 +3,23 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import styles from './Signature.scss';
 
-const LineWidths = {
+const LINEWIDTHS = {
   EXTRA_FINE: 1,
   FINE: 2,
   MEDIUM: 4,
   HEAVY: 6,
 };
+
+const KEYCODES = {
+  LEFTCLICK: 0,
+};
+
 const propTypes = {
   /**
    * The line width to use when drawing the signature on the canvas.
-   * One of LineWidths.EXTRA_FINE, LineWidths.FINE, LineWidths.MEDIUM, LineWidths.HEAVY.
+   * One of LINEWIDTHS.EXTRA_FINE, LINEWIDTHS.FINE, LINEWIDTHS.MEDIUM, LINEWIDTHS.HEAVY.
    */
-  lineWidth: PropTypes.oneOf([LineWidths.EXTRA_FINE, LineWidths.FINE, LineWidths.MEDIUM, LineWidths.HEAVY]),
+  lineWidth: PropTypes.oneOf([LINEWIDTHS.EXTRA_FINE, LINEWIDTHS.FINE, LINEWIDTHS.MEDIUM, LINEWIDTHS.HEAVY]),
   /**
   * Line segments that define signature.
   */
@@ -27,7 +32,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  lineWidth: LineWidths.FINE,
+  lineWidth: LINEWIDTHS.FINE,
   lineSegments: [],
   onChange: undefined,
 };
@@ -42,6 +47,7 @@ class Signature extends React.Component {
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.mouseXY = this.mouseXY.bind(this);
+    this.mouseOut = this.mouseOut.bind(this);
     this.addLine = this.addLine.bind(this);
     this.draw = this.draw.bind(this);
     this.drawSignature = this.drawSignature.bind(this);
@@ -101,7 +107,7 @@ class Signature extends React.Component {
   }
 
   mouseDown(event) {
-    if (event.button !== 0) {
+    if (event.button !== KEYCODES.LEFTCLICK) {
       return;
     }
     this.setState({ painting: true });
@@ -130,11 +136,12 @@ class Signature extends React.Component {
   }
 
   mouseOut(event) {
-    debugger;
-    if (this.state.painting)
+    if (this.state.painting) {
       this.setState({ painting: false });
-      // stop the drawing
-  }
+      if (this.props.onChange) {
+        this.props.onChange(event, this.state.lineSegments, this.state.lineSegments[this.state.lineSegments.length - 1]);
+      }
+    }
   }
 
   addLine(x, y, dragging) {
@@ -217,6 +224,6 @@ class Signature extends React.Component {
 Signature.propTypes = propTypes;
 Signature.defaultProps = defaultProps;
 Signature.Opts = {};
-Signature.Opts.Width = LineWidths;
+Signature.Opts.Width = LINEWIDTHS;
 
 export default Signature;

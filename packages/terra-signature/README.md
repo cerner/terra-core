@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
 The terra-signature component provides users a way to define a signature with a series of line segments.
-The component can be define the line width, line color and optionally display a signature if the line segments have 
+The component can define line width, line color and optionally display a signature if the line segments have 
 already been recorded.
 
 - [Getting Started](#getting-started)
