@@ -124,6 +124,7 @@ class ControlledInput extends React.Component {
             name="middle"
             type="text"
             isInline
+            showOptional
           />
           <TextField
             label="Last"
@@ -152,6 +153,7 @@ class ControlledInput extends React.Component {
           help="List all the different languages and build tools you have 3+ months experience with"
           value={this.state.formData.experience}
           onChange={this.handleExperienceUpdate}
+          showOptional
         />
         <SelectField
           options={[{ value: '', display: 'Select an Operating System' },
