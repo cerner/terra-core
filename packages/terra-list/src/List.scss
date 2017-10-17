@@ -3,6 +3,8 @@
 /* stylelint-disable selector-max-compound-selectors */
 :local {
   .list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,7 +27,6 @@
   // ========================================================
 
   .chevron {
-    display: flex;
     padding-left: 10px;
     padding-right: 10px;
 
