@@ -36,6 +36,14 @@ const propTypes = {
    * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
    */
   alignFill: PropTypes.oneOf(alignmentTypes),
+  /**
+   * The max-width to be set on the fitStart element
+   */
+  fitStartMaxWidth: PropTypes.string,
+  /**
+   * The max-width to be set on the fitEnd element
+   */
+  fitEndMaxWidth: PropTypes.string,
 };
 
 
@@ -47,21 +55,25 @@ const Arrange = ({
   alignFitStart,
   alignFill,
   alignFitEnd,
+  fitStartMaxWidth,
+  fitEndMaxWidth,
   ...customProps
   }) => {
   if (fitStart === undefined && fitEnd === undefined) {
     throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
+  const fitStartProps = (fitStartMaxWidth !== undefined) ? { maxWidth: fitStartMaxWidth } : { maxWidth: '40%' };
+  const fitEndProps = (fitEndMaxWidth !== undefined) ? { maxWidth: fitEndMaxWidth } : { maxWidth: '40%' };
 
   return (
     <div {...customProps} className={cx('arrange', customProps.className)} >
-      <div className={cx('fit', align || alignFitStart)}>
+      <div style={fitStartProps} className={cx('fit', align || alignFitStart)}>
         {fitStart}
       </div>
       <div className={cx('fill', align || alignFill)}>
         {fill}
       </div>
-      <div className={cx('fit', align || alignFitEnd)}>
+      <div style={fitEndProps} className={cx('fit', align || alignFitEnd)}>
         {fitEnd}
       </div>
     </div>

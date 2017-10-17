@@ -10,6 +10,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
+        fitStartMaxWidth={'20%'}
+        fitEndMaxWidth={'100px'}
       />
     </ArrangeWrapper>
 
@@ -20,6 +22,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
+        fitStartMaxWidth={'20%'}
+        fitEndMaxWidth={'100px'}
       />
     </ArrangeWrapper>
 
@@ -30,6 +34,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
+        fitStartMaxWidth={'20%'}
+        fitEndMaxWidth={'100px'}
       />
     </ArrangeWrapper>
 
@@ -40,6 +46,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
+        fitStartMaxWidth={'20%'}
+        fitEndMaxWidth={'100px'}
       />
     </ArrangeWrapper>
 
@@ -50,6 +58,8 @@ const AlignedAllArrange = () => (
         fitStart={<IconWrapper />}
         fill={longWordText}
         fitEnd={<IconWrapper />}
+        fitStartMaxWidth={'20%'}
+        fitEndMaxWidth={'100px'}
       />
     </ArrangeWrapper>
 
