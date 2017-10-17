@@ -15,14 +15,10 @@ module.exports = {
     'terra-core': path.resolve(path.join(__dirname, 'src', 'Index')),
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.(jsx|js)$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
-    },
-    {
-      test: /\.json$/,
-      loader: 'json-loader',
+      use: 'babel-loader',
     },
     {
       test: /\.(scss|css)$/,
@@ -49,13 +45,11 @@ module.exports = {
     },
     {
       test: /\.md$/,
-      loader: 'raw-loader',
+      use: 'raw-loader',
     },
     {
       test: /\.(png|svg|jpg|gif)$/,
-      use: [
-        'file-loader',
-      ],
+      use: 'file-loader',
     },
     ],
   },
