@@ -73,7 +73,16 @@ const defaultProps = {
   showOptional: false,
 };
 
-const Field = (props) => {
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
+const Field = (props, { intl }) => {
   const {
     children,
     error,
@@ -93,13 +102,7 @@ const Field = (props) => {
   const fieldClasses = cx([
     'field',
     { 'field-inline': isInline },
-    { 'field-required': required },
     customProps.className,
-  ]);
-
-  const labelGroupClassNames = cx([
-    'label-group',
-    { 'field-required': required },
   ]);
 
   const labelClassNames = cx([
@@ -107,21 +110,18 @@ const Field = (props) => {
     labelAttrs.className,
   ]);
 
-  let requiredElement;
-  if ((required && inError) || (required && !hideRequired)) {
-    requiredElement = <div className={cx('required')}>*</div>;
-  }
-
   let labelGroup;
   if (label) {
     labelGroup = (
-      <div className={labelGroupClassNames}>
+      <div className={cx('label-group')}>
         {inError && <div className={cx('error-icon')}>{errorIcon}</div>}
         {<label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
-          {requiredElement}
-          <div className={cx('label-text')}>{label}</div>
-          {showOptional && !required && <div className={cx('optional')}>(optional)</div>}
+          {required && (inError || !hideRequired) && <div className={cx('required')}>*</div>}
+          {label}
+          {required && !inError && hideRequired && <div className={cx('required-hidden')}>*</div>}
+          {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
         </label>}
+        {!inError && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
       </div>
     );
   }
@@ -138,5 +138,6 @@ const Field = (props) => {
 
 Field.propTypes = propTypes;
 Field.defaultProps = defaultProps;
+Field.contextTypes = contextTypes;
 
 export default Field;
