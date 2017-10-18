@@ -42,8 +42,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays a heading component with a set weight': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/heading-tests/weight`);
-    browser.assert.cssProperty('#heading-weight-700', 'font-weight', 'bold'); // Browser computes 700 as bold
-    browser.assert.cssProperty('#heading-weight-400', 'font-weight', 'normal'); // Browser computes 400 as normal
+    browser.assert.cssProperty('#heading-weight-700', 'font-weight', '700');
+    browser.assert.cssProperty('#heading-weight-400', 'font-weight', '400');
     browser.assert.cssProperty('#heading-weight-200', 'font-weight', '200');
   },
 
