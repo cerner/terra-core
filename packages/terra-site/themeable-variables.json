@@ -14,7 +14,7 @@
     "--terra-alert-error-title-color": "#e50000"
   },
   "Badge": {
-    "--terra-badge-border-radius": "0.25em",
+    "--terra-badge-border-radius": "1em",
     "--terra-badge-display": "inline-block",
     "--terra-badge-font-size-small": "0.8rem",
     "--terra-badge-font-weight": "700",

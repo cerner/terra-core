@@ -37,7 +37,7 @@ exports.config = {
 
   sync: true,
 
-  logLevel: 'error',
+  logLevel: 'dot',
 
   coloredLogs: true,
 
@@ -60,6 +60,12 @@ exports.config = {
   mochaOpts: {
     ui: 'bdd',
     timeout: 60000,
+    compilers: [
+      'js:babel-register',
+    ],
+  },
+  plugins: {
+    'wdio-screenshot': {},
   },
 
   beforeSession: () => {
@@ -97,7 +103,7 @@ exports.config = {
       referenceName: getScreenshotName('reference'),
       screenshotName: getScreenshotName('screen'),
       diffName: getScreenshotName('diff'),
-      misMatchTolerance: 0.01,
+      misMatchTolerance: 0,
     }),
     viewportChangePause: 300,
     widths: [],
