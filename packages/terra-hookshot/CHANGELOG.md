@@ -1,5 +1,7 @@
 Changelog
 =========
+### Fixed
+* Mobile zoom on safari
 
 Unreleased
 ----------
