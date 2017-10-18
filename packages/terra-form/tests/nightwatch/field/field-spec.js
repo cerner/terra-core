@@ -1,19 +1,145 @@
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default Field': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/field/default`)
-      .assert.elementPresent('#default-field');
+      .url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`)
+      .expect.element('#default').to.be.present;
   },
 
-  'Displays a populated inline Field with correct label, help message, and error message': (browser) => {
+  'Displays a field with a label': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#label').to.be.present;
+    browser.expect.element('#label > div[class*="label-group"] > label[class*="label"]').to.be.present;
+  },
+
+  'Displays an optional field': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#label-optional').to.be.present;
+    browser.expect.element('#label-optional > div[class*="label-group"] > label > div[class*="optional"]').to.be.present;
+    browser.expect.element('#label-optional > div[class*="label-group"] > label div[class*="optional"]').text.to.contain('(optional)');
+  },
+
+  'Displays an required field': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#label-required').to.be.present;
+    browser.expect.element('#label-required > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
+    browser.expect.element('#label-required > div[class*="label-group"] > label > div[class*="required_"]').text.to.contain('*');
+  },
+
+  'Displays a field with help text': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#help-text').to.be.present;
+    browser.expect.element('#help-text > div[class*="help-text"]').to.be.present;
+  },
+
+  'Displays a field with error text': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#error-text').to.be.present;
+    browser.expect.element('#error-text > div[class*="error-text"]').to.be.present;
+  },
+
+  'Displays an in-error optional field with a label, help text and error text': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#optional-in-error').to.be.present;
+    browser.expect.element('#optional-in-error > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
+    browser.expect.element('#optional-in-error > div[class*="label-group"] > label').to.be.present;
+    browser.expect.element('#optional-in-error > div[class*="error-text"]').to.be.present;
+    browser.expect.element('#optional-in-error > div[class*="help-text"]').to.be.present;
+  },
+
+  'Displays an in-error required field with a label, help text and error text': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
+    browser.expect.element('#required-in-error').to.be.present;
+    browser.expect.element('#required-in-error > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
+    browser.expect.element('#required-in-error > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
+    browser.expect.element('#required-in-error > div[class*="error-text"]').to.be.present;
+    browser.expect.element('#required-in-error > div[class*="help-text"]').to.be.present;
+  },
+
+  'Label maintains appropriate spacing for error-icon hidden and visible': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/in-error`);
+
+    browser.expect.element('#default > div[class*="label-group"] > label[class*="label"]').to.be.present;
+    browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
+    browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
+    browser.getElementSize('#default > div[class*="label-group"] > label', (result) => {
+      browser.assert.equal(result.status, 0);
+      const labelWidth = result.value.width;
+
+      browser.click('#toggle-in-error');
+      browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon_"]').to.be.present;
+      browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.not.be.present;
+
+      browser.getElementSize('#default > div[class*="label-group"] > label', (inErrorResult) => {
+        browser.assert.equal(inErrorResult.status, 0);
+        browser.assert.equal(inErrorResult.value.width, labelWidth);
+      });
+    });
+  },
+
+  'Hidden required label maintains appropriate spacing for error-icon hidden and visible': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/in-error`);
+
+    browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
+    browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
+    browser.expect.element('#required-hidden > div[class*="label-group"] > label > div[class*="required_"]').to.not.be.present;
+    browser.expect.element('#required-hidden > div[class*="label-group"] > label > div[class*="required-hidden"]').to.be.present;
+
+    browser.getElementSize('#required-hidden > div[class*="label-group"] > label', (result) => {
+      browser.assert.equal(result.status, 0);
+      const labelWidth = result.value.width;
+
+      browser.click('#toggle-in-error');
+      browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon_"]').to.be.present;
+      browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.not.be.present;
+      browser.expect.element('#required-hidden > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
+      browser.expect.element('#required-hidden > div[class*="label-group"] > label > div[class*="required-hidden"]').to.not.be.present;
+
+      browser.getElementSize('#required-hidden > div[class*="label-group"] > label', (inErrorResult) => {
+        browser.assert.equal(inErrorResult.status, 0);
+        browser.assert.equal(inErrorResult.value.width, labelWidth);
+      });
+    });
+  },
+
+  'Field maintains width when in-error': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/in-error`);
+
+    browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
+    browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
+    browser.expect.element('#inline-2 > div[class*="label-group"] > label > div[class*="required_"]').to.not.be.present;
+    browser.expect.element('#inline-2 > div[class*="label-group"] > label > div[class*="required-hidden"]').to.be.present;
+
+    browser.getElementSize('#inline-2', (result) => {
+      browser.assert.equal(result.status, 0);
+      const labelWidth = result.value.width;
+
+      browser.click('#toggle-in-error');
+      browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon_"]').to.be.present;
+      browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.not.be.present;
+      browser.expect.element('#inline-2 > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
+      browser.expect.element('#inline-2 > div[class*="label-group"] > label > div[class*="required-hidden"]').to.not.be.present;
+
+      browser.getElementSize('#inline-2', (inErrorResult) => {
+        browser.assert.equal(inErrorResult.status, 0);
+        browser.assert.equal(inErrorResult.value.width, labelWidth);
+      });
+    });
+  },
+
+  'Displays inline field correctly': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/inline`);
+    browser.expect.element('#inline-1"]').to.not.be.present;
+    browser.expect.element('#inline-2"]').to.not.be.present;
+    browser.expect.element('#inline-3"]').to.not.be.present;
+  },
+
+  'Displays a default Field with the correct text wrapping': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/field/populated`)
-      .assert.elementPresent('#populated-field')
-      .assert.containsText('label', 'Do you have any Children?')
-      .assert.containsText('small', 'Families are eligible for family package plans')
-      .assert.containsText('small:nth-child(3)', 'This field is required');
+      .url(`${browser.launchUrl}/#/tests/form-tests/field/text-wrap`)
+      .expect.element('#field').to.be.present;
   },
 });

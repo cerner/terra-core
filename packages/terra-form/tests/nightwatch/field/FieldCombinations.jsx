@@ -1,12 +1,14 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Field from '../../../src/Field';
 
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
 const FieldExamples = () => (
-  <div>
+  <Base locale={locale}>
     <h3>Field - Default</h3>
     <Field
-      id="label"
+      id="default"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
@@ -43,7 +45,7 @@ const FieldExamples = () => (
 
     <h3>Field - Help Text</h3>
     <Field
-      id="label-required"
+      id="help-text"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       help="Help Message"
     >
@@ -52,7 +54,7 @@ const FieldExamples = () => (
 
     <h3>Field - Error Text</h3>
     <Field
-      id="label-required"
+      id="error-text"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       error="Error Message"
       inError
@@ -62,7 +64,7 @@ const FieldExamples = () => (
 
     <h3>Field - Label + In Error + Help Text</h3>
     <Field
-      id="label-required"
+      id="optional-in-error"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       help="Help Message"
@@ -74,7 +76,7 @@ const FieldExamples = () => (
 
     <h3>Field -  Label + Required + In Error + Help Text</h3>
     <Field
-      id="label-required"
+      id="required-in-error"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       help="Help Message"
@@ -84,7 +86,7 @@ const FieldExamples = () => (
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
-  </div>
+  </Base>
  );
 
 export default FieldExamples;

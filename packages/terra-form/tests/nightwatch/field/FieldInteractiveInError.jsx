@@ -1,6 +1,8 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Field from '../../../src/Field';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class FieldExamples extends React.Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class FieldExamples extends React.Component {
   render() {
     const field = (
       <Field
-        id="label-required"
+        id="default"
         style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
         label="Field Label"
         help="Help Message"
@@ -29,7 +31,7 @@ class FieldExamples extends React.Component {
 
     const optional = (
       <Field
-        id="label-required"
+        id="optional"
         style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
         label="Field Label"
         help="Help Message"
@@ -43,7 +45,7 @@ class FieldExamples extends React.Component {
 
     const required = (
       <Field
-        id="label-required"
+        id="required"
         style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
         label="Field Label"
         help="Help Message"
@@ -57,7 +59,7 @@ class FieldExamples extends React.Component {
 
     const requiredHidden = (
       <Field
-        id="label-required"
+        id="required-hidden"
         style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
         label="Field Label"
         help="Help Message"
@@ -73,9 +75,9 @@ class FieldExamples extends React.Component {
     const inline = (
       <div>
         <Field
-          id="label"
+          id="inline-1"
           style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-          label="Field Label"
+          label="Field Label Spacing Proof"
           error="Error Message"
           isInline
           inError={this.state.inError}
@@ -85,9 +87,22 @@ class FieldExamples extends React.Component {
         </Field>
 
         <Field
-          id="label"
+          id="inline-2"
           style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-          label="Field Label"
+          label="Field Label Spacing Proof"
+          error="Error Message"
+          isInline
+          inError={this.state.inError}
+          required
+          hideRequired
+        >
+          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+        </Field>
+
+        <Field
+          id="inline-3"
+          style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+          label="Field Label Spacing Proof"
           error="Error Message"
           isInline
           inError={this.state.inError}
@@ -95,35 +110,23 @@ class FieldExamples extends React.Component {
         >
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
         </Field>
-
-        <Field
-          id="label-optional"
-          style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-          label="Field Label"
-          error="Error Message"
-          isInline
-          inError={this.state.inError}
-          required
-        >
-          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
-        </Field>
       </div>
     );
 
     return (
-      <div>
-        <button onClick={this.handleInErrorChange}>Toggle In Error </button>
+      <Base locale={locale}>
+        <button id="toggle-in-error" onClick={this.handleInErrorChange}>Toggle In Error </button>
         <h3>Field</h3>
         {field}
         <h3>Field - Optional</h3>
         {optional}
         <h3>Field - Required</h3>
         {required}
-        <h3>Field - Required but Hidden Indicator</h3>
+        <h3>Field - Required but Indicator Hidden</h3>
         {requiredHidden}
         <h3>Field - Inline</h3>
         {inline}
-      </div>
+      </Base>
     );
   }
 }
