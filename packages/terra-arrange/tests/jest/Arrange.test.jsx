@@ -60,6 +60,8 @@ describe('Arrange', () => {
     expect(wrapper.unrendered.props.fitEnd.type).toEqual('a');
     expect(wrapper.unrendered.props.fill.type).toEqual('div');
     expect(wrapper.unrendered.props.align).toEqual('center');
+    expect(wrapper.unrendered.props.fitStartMaxWidth).toEqual('40%');
+    expect(wrapper.unrendered.props.fitEndMaxWidth).toEqual('40%');
   });
 
   it('should have align prop undefined when align not pass', () => {
@@ -69,6 +71,8 @@ describe('Arrange', () => {
     expect(wrapper.unrendered.props.alignFitStart).toEqual(undefined);
     expect(wrapper.unrendered.props.alignFitEnd).toEqual(undefined);
     expect(wrapper.unrendered.props.alignFill).toEqual(undefined);
+    expect(wrapper.unrendered.props.fitStartMaxWidth).toEqual('40%');
+    expect(wrapper.unrendered.props.fitEndMaxWidth).toEqual('40%');
   });
 
   // Structure test
