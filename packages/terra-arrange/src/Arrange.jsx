@@ -46,6 +46,10 @@ const propTypes = {
   fitEndMaxWidth: PropTypes.string,
 };
 
+const defaultProps = {
+  fitStartMaxWidth: '40%',
+  fitEndMaxWidth: '40%',
+};
 
 const Arrange = ({
   fitStart,
@@ -62,8 +66,8 @@ const Arrange = ({
   if (fitStart === undefined && fitEnd === undefined) {
     throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
-  const fitStartProps = (fitStartMaxWidth !== undefined) ? { maxWidth: fitStartMaxWidth } : { maxWidth: '40%' };
-  const fitEndProps = (fitEndMaxWidth !== undefined) ? { maxWidth: fitEndMaxWidth } : { maxWidth: '40%' };
+  const fitStartProps = { maxWidth: fitStartMaxWidth };
+  const fitEndProps = { maxWidth: fitEndMaxWidth };
 
   return (
     <div {...customProps} className={cx('arrange', customProps.className)} >
@@ -81,5 +85,6 @@ const Arrange = ({
 };
 
 Arrange.propTypes = propTypes;
+Arrange.defaultProps = defaultProps;
 
 export default Arrange;
