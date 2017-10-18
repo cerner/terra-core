@@ -31,6 +31,7 @@ exports.config = {
       args: [
         'headless',
         'no-sandbox',
+        'disable-extensions',
       ],
     },
   }],
