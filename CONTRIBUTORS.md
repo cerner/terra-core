@@ -36,6 +36,7 @@ Cerner Corporation
 - Kevin Schuster [@kschuste]
 - Sai Gorantla [@saigorantla]
 - Derek Yu [@yuderekyu]
+- Dustin Singleton [@singleton06]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -75,3 +76,4 @@ Cerner Corporation
 [@kschuste]: https://github.com/kschuste
 [@saigorantla]: https://github.com/saigorantla
 [@yuderekyu]: https://github.com/yuderekyu
+[@singleton06]: https://github.com/Singleton06
