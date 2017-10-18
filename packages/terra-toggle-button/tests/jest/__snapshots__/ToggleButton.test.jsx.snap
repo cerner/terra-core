@@ -15,6 +15,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
     >
       <div
         class="fit center"
+        style="max-width:40%;"
       >
         <span
           class="icon"
@@ -46,6 +47,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
       </div>
       <div
         class="fit center"
+        style="max-width:40%;"
       />
     </div>
   </button>
@@ -71,6 +73,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
     >
       <div
         class="fit center"
+        style="max-width:40%;"
       >
         <span
           class="icon"
@@ -102,6 +105,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
       </div>
       <div
         class="fit center"
+        style="max-width:40%;"
       />
     </div>
   </button>
@@ -174,6 +178,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
     >
       <div
         class="fit center"
+        style="max-width:40%;"
       >
         <span
           class="icon"
@@ -205,6 +210,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
       </div>
       <div
         class="fit center"
+        style="max-width:40%;"
       />
     </div>
   </button>
@@ -264,6 +270,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
               Show
             </span>
           }
+          fitEndMaxWidth="40%"
           fitStart={
             <span
               className="icon"
@@ -277,12 +284,18 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
               />
             </span>
           }
+          fitStartMaxWidth="40%"
         >
           <div
             className="arrange"
           >
             <div
               className="fit center"
+              style={
+                Object {
+                  "maxWidth": "40%",
+                }
+              }
             >
               <span
                 className="icon"
@@ -335,6 +348,11 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
             </div>
             <div
               className="fit center"
+              style={
+                Object {
+                  "maxWidth": "40%",
+                }
+              }
             />
           </div>
         </Arrange>
@@ -378,6 +396,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
           Show
         </span>
       }
+      fitEndMaxWidth="40%"
       fitStart={
         <span
           className="icon"
@@ -391,6 +410,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
           />
         </span>
       }
+      fitStartMaxWidth="40%"
     />
   </Button>
   <Toggle
@@ -425,6 +445,7 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
           Show
         </span>
       }
+      fitEndMaxWidth="40%"
       fitStart={
         <span
           className="icon"
@@ -437,6 +458,7 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
           />
         </span>
       }
+      fitStartMaxWidth="40%"
     />
   </Button>
   <Toggle

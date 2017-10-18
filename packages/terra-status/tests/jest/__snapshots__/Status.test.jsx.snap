@@ -16,6 +16,7 @@ exports[`should render a arrange with status and customProps 1`] = `
         Lorem labore et dolore magna aliqua.
       </div>
     }
+    fitEndMaxWidth="40%"
     fitStart={
       <img
         alt="placeholder"
@@ -29,6 +30,7 @@ exports[`should render a arrange with status and customProps 1`] = `
         width="300"
       />
     }
+    fitStartMaxWidth="40%"
   />
 </div>
 `;

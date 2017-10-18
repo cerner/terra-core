@@ -37,6 +37,8 @@ exports[`should mount with isSelectable and hasChevron 1`] = `
         />
       </span>
     }
+    fitEndMaxWidth="40%"
+    fitStartMaxWidth="40%"
   />
 </li>
 `;
