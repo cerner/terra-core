@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Update nightwatch tests to stop checking the computed value for bold and normal font weights.
 
 1.12.0 - (October 6, 2017)
 ------------------
