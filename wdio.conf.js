@@ -32,6 +32,7 @@ exports.config = {
         'headless',
         'no-sandbox',
         'disable-extensions',
+        'disable-gpu',
       ],
     },
   }],
