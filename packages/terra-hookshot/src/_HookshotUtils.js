@@ -554,7 +554,7 @@ const positionStyleFromBounds = (boundingRect, content, target, margin, behavior
   };
 
   // Account for mobile zoom, this plays havoc with page offsets, so adjusting to fixed positioning.
-  if (positions.bounded || document.body.clientWidth / window.innerWidth > 1.0) {
+  if (positions.bounded || document.body.clientWidth / window.innerWidth !== 1.0) {
     result.style = {
       position: 'fixed',
       left: `${positions.content.x}px`,
