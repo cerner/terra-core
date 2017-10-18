@@ -26,7 +26,7 @@ const onMount = () => {
 const onLaunch = () => {
   lifeCycleStatuses.push('Launched');
 };
-const onAuthorize = () => { 
+const onAuthorize = () => {
   lifeCycleStatuses.push('Authorized');
   lifeCycleStatuses.forEach((status) => { appendLifeCycleStatus(status); });
 };

@@ -16,9 +16,9 @@ const appendLifeCycleStatuses = (statuses) => {
   const frames = document.getElementsByTagName('iframe');
   for (let frameIndex = 0; frameIndex < frames.length; frameIndex += 1) {
     const frame = frames[frameIndex];
-    const statusList = frame.contentWindow.document.getElementById('DataStatus-LifeCycleStatuses');    
+    const statusList = frame.contentWindow.document.getElementById('DataStatus-LifeCycleStatuses');
     if (statusList) {
-      statuses.forEach((status) => { statusList.appendChild(createListItem(status)); });      
+      statuses.forEach((status) => { statusList.appendChild(createListItem(status)); });
     }
   }
 };
@@ -31,13 +31,14 @@ const onMount = () => {
 const onLaunch = () => {
   lifeCycleStatuses.push('Launched');
 };
-const onAuthorize = () => { 
+const onAuthorize = () => {
   lifeCycleStatuses.push('Authorized');
   appendLifeCycleStatuses(lifeCycleStatuses);
 };
 
 const DataStatusConsumer = () => (
   <EmbeddedContentConsumer
+    ref={(element) => { this.embeddedContentWrapper = element; }}
     src="#/tests/embedded-content-consumer-tests/data-status-provider"
     onMount={onMount}
     onLaunch={onLaunch}
