@@ -20,7 +20,7 @@ Terra-table provides several different components for building tables accessible
 - Row: Renders a table row.
 - Cell: Renders a table cell.
 
-More information regarding managed selectable tables can be found [here](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs/MangedSelectableTable.md).
+More information regarding managed selectable tables can be found [here](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs/ManagedSelectableTable.md).
 
 ### Table
 ```jsx
