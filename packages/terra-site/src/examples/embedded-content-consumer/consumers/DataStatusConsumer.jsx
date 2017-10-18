@@ -4,32 +4,45 @@ import EmbeddedContentConsumer from 'terra-embedded-content-consumer';
 
 Consumer.init();
 
-const appendLifeCycleStatus = (itemName) => {
+const createListItem = (itemName) => {
   const listItem = document.createElement('li');
-  const textItem = document.createTextNode(itemName);
-  listItem.appendChild(textItem);
+  listItem.setAttribute('id', itemName);
+  listItem.appendChild(document.createTextNode(itemName));
 
+  return listItem;
+};
+
+const appendLifeCycleStatuses = (statuses) => {
   const frames = document.getElementsByTagName('iframe');
   for (let frameIndex = 0; frameIndex < frames.length; frameIndex += 1) {
     const frame = frames[frameIndex];
-    const statusList = frame.contentWindow.document.getElementById('LifeCycleStatuses');
+    const statusList = frame.contentWindow.document.getElementById('DataStatus-LifeCycleStatuses');    
     if (statusList) {
-      statusList.appendChild(listItem);
+      statuses.forEach((status) => { statusList.appendChild(createListItem(status)); });      
     }
   }
 };
 
 const options = { secret: 'OAuth Secret' };
-const onLaunch = () => { appendLifeCycleStatus('Launched'); };
-const onAuthorize = () => { appendLifeCycleStatus('Authorized'); };
+const lifeCycleStatuses = [];
+const onMount = () => {
+  lifeCycleStatuses.push('Mounted');
+};
+const onLaunch = () => {
+  lifeCycleStatuses.push('Launched');
+};
+const onAuthorize = () => { 
+  lifeCycleStatuses.push('Authorized');
+  appendLifeCycleStatuses(lifeCycleStatuses);
+};
 
 const DataStatusConsumer = () => (
   <EmbeddedContentConsumer
     src="#/tests/embedded-content-consumer-tests/data-status-provider"
+    onMount={onMount}
     onLaunch={onLaunch}
     onAuthorize={onAuthorize}
     options={options}
-    fill
   />
 );
 

@@ -16,6 +16,7 @@ import EmbeddedContentConsumer from 'terra-embedded-content-consumer';
 
 <EmbeddedContentConsumer
   src="https://google.com"
+  onMount={(container) => { this.embeddedContentConsumer = container; }}
   onLaunch={() => { console.log('launched'); }}
   onAuthorize={() => { console.log('Authorized'); }}
   options={{ secret: 'SecretKey', resizeConfig: { scrolling: true }}}

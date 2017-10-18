@@ -8,6 +8,11 @@ const propTypes = {
    */
   src: PropTypes.string.isRequired,
   /**
+   * Notifies the component that the container has been mounted. Provides a reference
+   * to this component to allow triggering messages on the embedded application.
+   */
+  onMount: PropTypes.func,
+  /**
    * Notifies the component that the container has been launched.
    */
   onLaunch: PropTypes.func,
@@ -35,6 +40,11 @@ class EmbeddedContentConsumer extends React.Component {
     // Mount the provided source as the application into the content wrapper.
     this.xfcFrame = Consumer.mount(this.embeddedContentWrapper, this.props.src, this.props.options);
 
+    // Notify that the consumer frame has mounted.
+    if (this.props.onMount) {
+      this.props.onMount(this);
+    }
+
     // Attach the event handlers to the xfc frame.
     this.addEventListener('xfc.launched', this.props.onLaunch);
     this.addEventListener('xfc.authorized', this.props.onAuthorize);
@@ -53,9 +63,21 @@ class EmbeddedContentConsumer extends React.Component {
     (customEvents || []).forEach(e => this.addEventListener(e.key, e.handler));
   }
 
+  /**
+  * Triggers an event in the application. Assumes this consumer has been mounted.
+  * @param {string} event - The event name to trigger.
+  * @param {object} detail - The data context to send with the event.
+  */
+  trigger(event, detail) {
+    if (this.xfcFrame) {
+      this.xfcFrame.trigger(event, detail);
+    }
+  }
+
   render() {
     const {
       src,
+      onMount,
       onLaunch,
       onAuthorize,
       options,

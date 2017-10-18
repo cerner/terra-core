@@ -4,22 +4,37 @@ import EmbeddedContentConsumer from '../../../lib/EmbeddedContentConsumer';
 
 Consumer.init();
 
-const appendLifeCycleStatus = (itemName) => {
-  const textItem = document.createTextNode(itemName);
+const createListItem = (itemName) => {
   const listItem = document.createElement('li');
   listItem.setAttribute('id', itemName);
-  listItem.appendChild(textItem);
+  listItem.appendChild(document.createTextNode(itemName));
+
+  return listItem;
+};
+
+const appendLifeCycleStatus = (itemName) => {
   const frame = document.getElementsByTagName('iframe')[0];
-  frame.contentWindow.document.getElementById('LifeCycleStatuses').appendChild(listItem);
+  const statusList = frame.contentWindow.document.getElementById('DataStatus-LifeCycleStatuses');
+  statusList.appendChild(createListItem(itemName));
 };
 
 const options = { secret: 'OAuth Secret' };
-const onLaunch = () => { appendLifeCycleStatus('Launched'); };
-const onAuthorize = () => { appendLifeCycleStatus('Authorized'); };
+const lifeCycleStatuses = [];
+const onMount = () => {
+  lifeCycleStatuses.push('Mounted');
+};
+const onLaunch = () => {
+  lifeCycleStatuses.push('Launched');
+};
+const onAuthorize = () => { 
+  lifeCycleStatuses.push('Authorized');
+  lifeCycleStatuses.forEach((status) => { appendLifeCycleStatus(status); });
+};
 
 const DataStatusConsumer = () => (
   <EmbeddedContentConsumer
     src="#/tests/embedded-content-consumer-tests/data-status-provider"
+    onMount={onMount}
     onLaunch={onLaunch}
     onAuthorize={onAuthorize}
     options={options}

@@ -16,6 +16,7 @@ import CustomEventConsumer from './consumers/CustomEventConsumer';
 import CustomEventsConsumer from './consumers/CustomEventsConsumer';
 import DataStatusConsumer from './consumers/DataStatusConsumer';
 import FillConsumer from './consumers/FillConsumer';
+import MessagingConsumer from './consumers/MessagingConsumer';
 import OnReadyConsumer from './consumers/OnReadyConsumer';
 
 Consumer.init();
@@ -36,6 +37,8 @@ const EmbeddedContentConsumerExamples = () => (
     <CustomEventsConsumer />
     <h2 id="Data status Embedded Content">Data Status Embedded Content</h2>
     <DataStatusConsumer />
+    <h2 id="Consumer Messaging Embedded Content">Consumer Messaging Embedded Content</h2>
+    <MessagingConsumer />
     <h2 id="On Ready Embedded Content">On Ready Embedded Content</h2>
     <OnReadyConsumer />
   </div>

@@ -100,4 +100,23 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     // Reset the frame back to the parent frame.
     }).frame(null);
   },
+
+  'Displays the consumer life cycle status after the consumer triggers an event on the provider.': (browser) => {
+    const consumerSrc = '#/tests/embedded-content-consumer-tests/messaging-consumer';
+    const providerSrc = '#/tests/embedded-content-consumer-tests/messaging-provider';
+
+    browser.url(`${browser.launchUrl}/${consumerSrc}`)
+    // Wait for the consumer to load the provider application.
+    .waitForElementPresent(`iframe[src*="${providerSrc}"]`, 1000)
+    // Identify the embedded iframe.
+    .element('css selector', `iframe[src*="${providerSrc}"]`, (frame) => {
+      browser.frame({ ELEMENT: frame.value.ELEMENT }, () => {
+        // Validate the lifecycle has completed.
+        browser.assert.elementPresent('li#Mounted');
+        browser.assert.elementPresent('li#Launched');
+        browser.assert.elementPresent('li#Authorized');
+      });
+    // Reset the frame back to the parent frame.
+    }).frame(null);
+  },
 });
