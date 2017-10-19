@@ -4,7 +4,10 @@ const webpackConfig = require('./packages/terra-site/webpack.config.js');
 const VisualRegressionCompare = require('wdio-visual-regression-service/compare');
 const chai = require('chai');
 const seleniumConfig = require('selenium-standalone/lib/default-config');
+const fs = require('fs');
 
+
+// TODO: Move into toolkit
 function getScreenshotName(ref) {
   return (context) => {
     const testName = context.test.title;
@@ -84,6 +87,8 @@ exports.config = {
   before: () => {
     global.expect = chai.expect;
     chai.Should();
+
+    // TODO: Move into toolkit
     chai.Assertion.addMethod('matchReference', function () {
       // eslint-disable-next-line no-underscore-dangle
       new chai.Assertion(this._obj).to.be.instanceof(Array);
@@ -93,6 +98,21 @@ exports.config = {
         'expected screenshots to not match reference');
     });
 
+    chai.Assertion.addMethod('accessible', function () {
+      // eslint-disable-next-line no-underscore-dangle
+      new chai.Assertion(this._obj).to.be.instanceof(Array);
+      // eslint-disable-next-line no-underscore-dangle
+      const errors = this._obj
+        .reduce((all, test) => all.concat(test.result.violations), [])
+        .filter(test => test)
+        .map(test => `${test.description}. ${test.help}`);
+
+      this.assert(errors.length === 0,
+        `expected no accessibility violations but got:\n\t${errors.join('\n\t')}`,
+        'expected accessibilty errors but received none');
+    });
+
+    // TODO: Move into toolkit
     global.viewport = (...sizes) => {
       const widths = {
         tiny: { width: 470, height: 768 },
@@ -109,6 +129,36 @@ exports.config = {
 
       return sizes.map(size => widths[size]);
     };
+
+    // TODO: move into toolkit
+
+    browser.addCommand('a11y', (options) => {
+      if (browser.execute(function () { return window.axe === undefined; })) {
+        const src = fs.readFileSync('node_modules/axe-core/axe.min.js', 'utf8');
+        browser.execute(src.replace(/^\/\*.*\*\//, ''));
+      }
+
+      const viewports = options.viewports;
+      const currentViewportSize = browser.getViewportSize();
+      if (viewports.length === 0) {
+        viewports.push(currentViewportSize);
+      }
+      const results = options.viewports.map((viewport) => {
+        browser.setViewportSize(viewport);
+        return browser.executeAsync(function (done) {
+          axe.run(function (error, result) {
+            done({
+              error: error,
+              result: result
+            });
+          });
+        }).value;
+      });
+
+      // set viewport back
+      browser.setViewportSize(currentViewportSize);
+      return results;
+    });
   },
 
   visualRegression: {
