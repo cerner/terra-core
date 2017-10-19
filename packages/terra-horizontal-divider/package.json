@@ -2,7 +2,7 @@
   "name": "terra-horizontal-divider",
   "main": "lib/HorizontalDivider.js",
   "version": "0.0.0",
-  "description": "{insert description}",
+  "description": "The terra-horizontal-divider component is a component that is used to separate content on a layout.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

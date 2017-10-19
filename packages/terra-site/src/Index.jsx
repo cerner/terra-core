@@ -24,6 +24,7 @@ import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
 import HookshotExamples from './examples/hookshot/Index';
+import HorizontalDividerExamples from './examples/horizontal-divider/Index';
 import I18nExamples from './examples/i18n/Index';
 import IconExamples from './examples/icon/Index';
 import ImageExamples from './examples/image/Index';
@@ -49,7 +50,7 @@ import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
 
 // Test Routes
-/* eslint-disable import/first */
+/* eslint-disable import/first, import/no-extraneous-dependencies */
 import AlertTestRoutes from 'terra-alert/tests/nightwatch/AlertTestRoutes';
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
@@ -69,6 +70,7 @@ import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
 import HookshotTestRoutes from 'terra-hookshot/tests/nightwatch/HookshotTestRoutes';
+import HorizontalDividerTestRoutes from 'terra-horizontal-divider/tests/nightwatch/HorizontalDividerTestRoutes';
 import I18nTestRoutes from 'terra-i18n/tests/nightwatch/I18nTestRoutes';
 import IconTestRoutes from 'terra-icon/tests/nightwatch/IconTestRoutes';
 import IconIndexRoutes from './examples/icon/IconIndexRoutes';
@@ -133,6 +135,7 @@ ReactDOM.render((
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
       <Route path="hookshot" component={HookshotExamples} />
+      <Route path="horizontal-divider" component={HorizontalDividerExamples} />
       <Route path="i18n" component={I18nExamples} />
       <Route path="icon" component={IconExamples} />
       <Route path="image" component={ImageExamples} />
@@ -214,5 +217,6 @@ ReactDOM.render((
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
+    {HorizontalDividerTestRoutes}
   </Router>
 ), document.getElementById('root'));

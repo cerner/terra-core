@@ -1,6 +1,6 @@
 # Terra Horizontal Divider
 
-{insert description}
+The terra-horizontal-divider component is a component that is used to separate content on a layout.
 
 ## Getting Started
 
