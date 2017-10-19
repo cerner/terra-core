@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Add flex styling to prevent content from being pushed off screen and add optional props to set max-width on end containers
+* Change to be flex-box component and adding new props to apply attributes to content containers
 
 1.12.0 - (October 6, 2017)
 ------------------
