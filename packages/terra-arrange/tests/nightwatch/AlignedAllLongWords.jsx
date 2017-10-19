@@ -10,8 +10,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartMaxWidth={'20%'}
-        fitEndMaxWidth={'100px'}
+        fitStartAttributes={{ style: { maxWidth: '10px' } }}
+        fitEndAttributes={{ style: { maxWidth: '20px' } }}
       />
     </ArrangeWrapper>
 
@@ -22,8 +22,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartMaxWidth={'20%'}
-        fitEndMaxWidth={'100px'}
+        fitStartAttributes={{ style: { maxWidth: '10px' } }}
+        fitEndAttributes={{ style: { maxWidth: '20px' } }}
       />
     </ArrangeWrapper>
 
@@ -34,8 +34,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartMaxWidth={'20%'}
-        fitEndMaxWidth={'100px'}
+        fitStartAttributes={{ style: { maxWidth: '10px' } }}
+        fitEndAttributes={{ style: { maxWidth: '20px' } }}
       />
     </ArrangeWrapper>
 
@@ -46,8 +46,8 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartMaxWidth={'20%'}
-        fitEndMaxWidth={'100px'}
+        fitStartAttributes={{ style: { maxWidth: '10px' } }}
+        fitEndAttributes={{ style: { maxWidth: '20px' } }}
       />
     </ArrangeWrapper>
 
@@ -58,8 +58,8 @@ const AlignedAllArrange = () => (
         fitStart={<IconWrapper />}
         fill={longWordText}
         fitEnd={<IconWrapper />}
-        fitStartMaxWidth={'20%'}
-        fitEndMaxWidth={'100px'}
+        fitStartAttributes={{ style: { maxWidth: '10px' } }}
+        fitEndAttributes={{ style: { maxWidth: '20px' } }}
       />
     </ArrangeWrapper>
 

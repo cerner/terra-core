@@ -15,7 +15,6 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
     >
       <div
         class="fit center"
-        style="max-width:40%;"
       >
         <span
           class="icon"
@@ -47,7 +46,6 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
       </div>
       <div
         class="fit center"
-        style="max-width:40%;"
       />
     </div>
   </button>
@@ -73,7 +71,6 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
     >
       <div
         class="fit center"
-        style="max-width:40%;"
       >
         <span
           class="icon"
@@ -105,7 +102,6 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
       </div>
       <div
         class="fit center"
-        style="max-width:40%;"
       />
     </div>
   </button>
@@ -178,7 +174,6 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
     >
       <div
         class="fit center"
-        style="max-width:40%;"
       >
         <span
           class="icon"
@@ -210,7 +205,6 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
       </div>
       <div
         class="fit center"
-        style="max-width:40%;"
       />
     </div>
   </button>
@@ -291,11 +285,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           >
             <div
               className="fit center"
-              style={
-                Object {
-                  "maxWidth": "40%",
-                }
-              }
             >
               <span
                 className="icon"
@@ -348,11 +337,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
             </div>
             <div
               className="fit center"
-              style={
-                Object {
-                  "maxWidth": "40%",
-                }
-              }
             />
           </div>
         </Arrange>

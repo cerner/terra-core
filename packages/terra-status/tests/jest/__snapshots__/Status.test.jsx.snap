@@ -30,7 +30,6 @@ exports[`should render a arrange with status and customProps 1`] = `
         width="300"
       />
     }
-    fitStartMaxWidth="40%"
   />
 </div>
 `;

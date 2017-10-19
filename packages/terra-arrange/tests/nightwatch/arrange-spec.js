@@ -16,9 +16,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#default div:nth-child(2)').to.have.attribute('class').to.not.contain('bottom');
     browser.expect.element('#default div:nth-child(2)').to.have.attribute('class').to.not.contain('stretch');
     browser.expect.element('#default div:nth-child(3)').to.have.attribute('class').which.contains('fit');
-
-    browser.expect.element('#default div:nth-child(1)').to.have.css('maxWidth').which.equals('40%');
-    browser.expect.element('#default div:nth-child(3)').to.have.css('maxWidth').which.equals('40%');
   },
 
   'Displays an arrange with fitStart, fill, and fitEnd content aligned center': (browser) => {
@@ -216,7 +213,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#default div:nth-child(2)').to.have.attribute('class').to.not.contain('stretch');
     browser.expect.element('#default div:nth-child(3)').to.have.attribute('class').which.contains('fit');
 
-    browser.expect.element('#default div:nth-child(1)').to.have.css('maxWidth').which.equals('20%');
-    browser.expect.element('#default div:nth-child(3)').to.have.css('maxWidth').which.equals('100px');
+    browser.expect.element('#default div:nth-child(1)').to.have.css('maxWidth').which.equals('10px');
+    browser.expect.element('#default div:nth-child(3)').to.have.css('maxWidth').which.equals('20px');
   },
 });

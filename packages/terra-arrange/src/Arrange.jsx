@@ -37,18 +37,13 @@ const propTypes = {
    */
   alignFill: PropTypes.oneOf(alignmentTypes),
   /**
-   * The max-width to be set on the fitStart element
+   * The attributes to be set on the fitStart element
    */
-  fitStartMaxWidth: PropTypes.string,
+  fitStartAttributes: PropTypes.object,
   /**
-   * The max-width to be set on the fitEnd element
+   * The attributes to be set on the fitEnd element
    */
-  fitEndMaxWidth: PropTypes.string,
-};
-
-const defaultProps = {
-  fitStartMaxWidth: '40%',
-  fitEndMaxWidth: '40%',
+  fitEndAttributes: PropTypes.object,
 };
 
 const Arrange = ({
@@ -59,25 +54,23 @@ const Arrange = ({
   alignFitStart,
   alignFill,
   alignFitEnd,
-  fitStartMaxWidth,
-  fitEndMaxWidth,
+  fitStartAttributes,
+  fitEndAttributes,
   ...customProps
   }) => {
   if (fitStart === undefined && fitEnd === undefined) {
     throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
-  const fitStartProps = { maxWidth: fitStartMaxWidth };
-  const fitEndProps = { maxWidth: fitEndMaxWidth };
 
   return (
     <div {...customProps} className={cx('arrange', customProps.className)} >
-      <div style={fitStartProps} className={cx('fit', align || alignFitStart)}>
+      <div {...fitStartAttributes} className={cx('fit', align || alignFitStart)}>
         {fitStart}
       </div>
       <div className={cx('fill', align || alignFill)}>
         {fill}
       </div>
-      <div style={fitEndProps} className={cx('fit', align || alignFitEnd)}>
+      <div {...fitEndAttributes} className={cx('fit', align || alignFitEnd)}>
         {fitEnd}
       </div>
     </div>
@@ -85,6 +78,5 @@ const Arrange = ({
 };
 
 Arrange.propTypes = propTypes;
-Arrange.defaultProps = defaultProps;
 
 export default Arrange;

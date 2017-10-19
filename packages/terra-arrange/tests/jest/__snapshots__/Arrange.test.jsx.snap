@@ -6,11 +6,6 @@ exports[`Arrange default should render a arrange component with given fit and fi
 >
   <div
     className="fit"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <img
       alt="panda"
@@ -26,11 +21,6 @@ exports[`Arrange default should render a arrange component with given fit and fi
   </div>
   <div
     className="fit"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <a
       href="http://www.example.com"
@@ -46,11 +36,6 @@ exports[`Arrange should render a arrange component with given className and id 1
 >
   <div
     className="fit"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <img
       alt="panda"
@@ -66,11 +51,6 @@ exports[`Arrange should render a arrange component with given className and id 1
   </div>
   <div
     className="fit"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   />
 </div>
 `;
@@ -81,11 +61,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
 >
   <div
     className="fit bottom"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <img
       alt="panda"
@@ -101,11 +76,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
   </div>
   <div
     className="fit bottom"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   />
 </div>
 `;
@@ -116,11 +86,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
 >
   <div
     className="fit center"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   />
   <div
     className="fill center"
@@ -131,11 +96,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
   </div>
   <div
     className="fit center"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <a
       href="http://www.example.com"
@@ -150,11 +110,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
 >
   <div
     className="fit stretch"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <img
       alt="panda"
@@ -170,11 +125,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
   </div>
   <div
     className="fit stretch"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   />
 </div>
 `;
@@ -185,11 +135,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
 >
   <div
     className="fit"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   />
   <div
     className="fill"
@@ -200,11 +145,6 @@ exports[`Arrange when two fits and one fill is passed with align set should rend
   </div>
   <div
     className="fit"
-    style={
-      Object {
-        "maxWidth": "40%",
-      }
-    }
   >
     <a
       href="http://www.example.com"
