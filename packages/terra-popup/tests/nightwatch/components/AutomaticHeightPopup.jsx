@@ -1,15 +1,13 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class OffsetPopup extends React.Component {
+class PopupExample extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.setParentNode = this.setParentNode.bind(this);
-    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: true };
   }
 
@@ -25,14 +23,6 @@ class OffsetPopup extends React.Component {
     return this.buttonNode;
   }
 
-  setParentNode(node) {
-    this.parentNode = node;
-  }
-
-  getParentNode() {
-    return this.parentNode;
-  }
-
   handleButtonClick() {
     this.setState({ open: true });
   }
@@ -43,25 +33,23 @@ class OffsetPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ height: '300px', width: '500px', background: 'aliceblue' }}>
         <Popup
-          boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="middle left"
-          contentHeight="40"
-          contentWidth="160"
-          isArrowDisplayed
+          contentHeight="auto"
           isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
+          onRequestClose={this.handleRequestClose}
         >
-          <p style={{ padding: '5px' }}>This popup arrow was repositioned.</p>
+          <p style={{ height: '400px' }}>This is popup content with a automatic height of 400px.</p>
         </Popup>
-        <button id="offset-button" style={{ position: 'absolute', top: '10px', height: '10px', width: '10px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Default Popup
+        </button>
       </div>
     );
   }
 }
 
-export default OffsetPopup;
+export default PopupExample;

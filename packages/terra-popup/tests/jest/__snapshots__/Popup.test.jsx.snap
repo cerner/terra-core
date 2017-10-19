@@ -2,6 +2,7 @@
 
 exports[`should render a default component 1`] = `
 <div>
+  <div />
   <div
     style="height:20px;width:20px;"
   />
@@ -11,6 +12,7 @@ exports[`should render a default component 1`] = `
 exports[`should shallow a default component 1`] = `
 <div>
   <Popup
+    attachmentBehavior="auto"
     boundingRef={null}
     classNameArrow={null}
     classNameContent={null}
@@ -19,6 +21,7 @@ exports[`should shallow a default component 1`] = `
     contentHeight="80"
     contentWidth="240"
     isArrowDisplayed={false}
+    isContentFocusDisabled={false}
     isHeaderDisabled={false}
     isOpen={true}
     onRequestClose={[Function]}
