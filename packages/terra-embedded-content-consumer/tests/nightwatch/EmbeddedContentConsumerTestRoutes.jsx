@@ -10,7 +10,6 @@ import CustomEventConsumer from './consumers/CustomEventConsumer';
 import CustomEventsConsumer from './consumers/CustomEventsConsumer';
 import DataStatusConsumer from './consumers/DataStatusConsumer';
 import FillConsumer from './consumers/FillConsumer';
-import MessagingConsumer from './consumers/MessagingConsumer';
 import OnReadyConsumer from './consumers/OnReadyConsumer';
 
 // Content provider components.
@@ -19,7 +18,6 @@ import CustomEventProvider from './providers/CustomEventProvider';
 import CustomEventsProvider from './providers/CustomEventsProvider';
 import DataStatusProvider from './providers/DataStatusProvider';
 import FillProvider from './providers/FillProvider';
-import MessagingProvider from './providers/MessagingProvider';
 import OnReadyProvider from './providers/OnReadyProvider';
 
 const routes = (
@@ -35,8 +33,6 @@ const routes = (
     <Route path="/tests/embedded-content-consumer-tests/data-status-provider" component={DataStatusProvider} />
     <Route path="/tests/embedded-content-consumer-tests/fill-consumer" component={FillConsumer} />
     <Route path="/tests/embedded-content-consumer-tests/fill-provider" component={FillProvider} />
-    <Route path="/tests/embedded-content-consumer-tests/messaging-consumer" component={MessagingConsumer} />
-    <Route path="/tests/embedded-content-consumer-tests/messaging-provider" component={MessagingProvider} />
     <Route path="/tests/embedded-content-consumer-tests/on-ready-consumer" component={OnReadyConsumer} />
     <Route path="/tests/embedded-content-consumer-tests/on-ready-provider" component={OnReadyProvider} />
   </div>

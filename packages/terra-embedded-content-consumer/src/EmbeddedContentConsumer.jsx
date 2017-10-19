@@ -42,7 +42,7 @@ class EmbeddedContentConsumer extends React.Component {
 
     // Notify that the consumer frame has mounted.
     if (this.props.onMount) {
-      this.props.onMount(this);
+      this.props.onMount(this.xfcFrame);
     }
 
     // Attach the event handlers to the xfc frame.
@@ -61,17 +61,6 @@ class EmbeddedContentConsumer extends React.Component {
 
   addEventListeners(customEvents) {
     (customEvents || []).forEach(e => this.addEventListener(e.key, e.handler));
-  }
-
-  /**
-  * Triggers an event in the application. Assumes this consumer has been mounted.
-  * @param {string} event - The event name to trigger.
-  * @param {object} detail - The data context to send with the event.
-  */
-  trigger(event, detail) {
-    if (this.xfcFrame) {
-      this.xfcFrame.trigger(event, detail);
-    }
   }
 
   render() {

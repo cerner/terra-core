@@ -24,6 +24,8 @@ it('should render the embedded content consumer with custom class names', () => 
 
 it('should validate the inputs', () => {
   const src = 'https://www.google.com/';
+  let frame;
+  const onMount = (xfcFrame) => { frame = xfcFrame; };
   const onLaunch = () => {};
   const onAuthorize = () => {};
   const resizeConfig = { scrolling: false, fixedHeight: '100%', fixedWidth: '100%' };
@@ -32,6 +34,7 @@ it('should validate the inputs', () => {
 
   const embeddedContentConsumer = (<EmbeddedContentConsumer
     src={src}
+    onMount={onMount}
     onLaunch={onLaunch}
     onAuthorize={onAuthorize}
     options={options}
@@ -41,7 +44,9 @@ it('should validate the inputs', () => {
   Consumer.init();
   const wrapper = mount(embeddedContentConsumer);
 
+  expect(frame).toBeTruthy();
   expect(wrapper.props().src).toBe(src);
+  expect(wrapper.props().onMount).toBe(onMount);
   expect(wrapper.props().onLaunch).toBe(onLaunch);
   expect(wrapper.props().onAuthorize).toBe(onAuthorize);
   expect(wrapper.props().options).toBe(options);
