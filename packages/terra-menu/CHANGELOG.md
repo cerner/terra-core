@@ -11,6 +11,7 @@ Unreleased
 
 ### Fixed
 * Issue where Menu.Item prop updates were not getting rendered immediately.
+* Conflict with new terra-popup implementation and tests.
 
 1.3.0 - (October 6, 2017)
 ------------------
