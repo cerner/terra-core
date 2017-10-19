@@ -37,6 +37,7 @@ Cerner Corporation
 - Sai Gorantla [@saigorantla]
 - Derek Yu [@yuderekyu]
 - Hardik Jain [@hardikjain29]
+- Dustin Singleton [@singleton06]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -77,3 +78,4 @@ Cerner Corporation
 [@saigorantla]: https://github.com/saigorantla
 [@yuderekyu]: https://github.com/yuderekyu
 [@hardikjain29]: https://github.com/hardikjain29
+[@singleton06]: https://github.com/Singleton06
