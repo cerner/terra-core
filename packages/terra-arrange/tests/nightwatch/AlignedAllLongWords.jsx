@@ -1,6 +1,6 @@
 import React from 'react';
 import Arrange from '../../lib/Arrange';
-import { ArrangeWrapper, IconWrapper, longWordText } from './examplesetup';
+import { ArrangeWrapper, longWordText } from './examplesetup';
 
 const AlignedAllArrange = () => (
   <div>
