@@ -25,8 +25,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .url(`${browser.launchUrl}/#/tests/form-tests/select-field/populated`)
       .assert.elementPresent('#populated-select-field')
       .assert.containsText('label', 'Meddling Kids')
-      .assert.containsText('small', 'solve the mystery')
-      .assert.containsText('small:nth-child(4)', 'jinkies!');
+      .assert.containsText('div[class*="help-text"]', 'solve the mystery');
 
     browser // Select attributes
       .assert.elementPresent('select')

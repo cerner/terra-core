@@ -9,12 +9,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.elementPresent('textarea');
   },
 
-  'Displays a populated inline TextareaField with correct label, help message, and error message': (browser) => {
+  'Displays a populated inline TextareaField with correct label and help message': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/form-tests/textarea-field/populated`)
       .assert.elementPresent('#populated-textarea-field')
       .assert.containsText('label', 'Profile Description')
-      .assert.containsText('small', 'This is what will be seen on your main page')
-      .assert.containsText('small:nth-child(4)', 'Profile Description is required');
+      .assert.containsText('div[class*="help-text"]', 'This is what will be seen on your main page');
   },
 });
