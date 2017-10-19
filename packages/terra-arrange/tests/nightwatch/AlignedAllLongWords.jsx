@@ -10,8 +10,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ style: { maxWidth: '10px' } }}
-        fitEndAttributes={{ style: { maxWidth: '20px' } }}
+        fitStartAttributes={{ style: { maxWidth: '10px', wordWrap: 'break-word' } }}
+        fillAttributes={{ style: { maxWidth: '20px', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ style: { maxWidth: '30px', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 
@@ -22,8 +23,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ style: { maxWidth: '10px' } }}
-        fitEndAttributes={{ style: { maxWidth: '20px' } }}
+        fitStartAttributes={{ style: { maxWidth: '10px', wordWrap: 'break-word' } }}
+        fillAttributes={{ style: { maxWidth: '20px', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ style: { maxWidth: '30px', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 
@@ -34,8 +36,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ style: { maxWidth: '10px' } }}
-        fitEndAttributes={{ style: { maxWidth: '20px' } }}
+        fitStartAttributes={{ style: { maxWidth: '10px', wordWrap: 'break-word' } }}
+        fillAttributes={{ style: { maxWidth: '20px', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ style: { maxWidth: '30px', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 
@@ -46,20 +49,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ style: { maxWidth: '10px' } }}
-        fitEndAttributes={{ style: { maxWidth: '20px' } }}
-      />
-    </ArrangeWrapper>
-
-    <ArrangeWrapper >
-      <Arrange
-        id="icon-stretch"
-        align="stretch"
-        fitStart={<IconWrapper />}
-        fill={longWordText}
-        fitEnd={<IconWrapper />}
-        fitStartAttributes={{ style: { maxWidth: '10px' } }}
-        fitEndAttributes={{ style: { maxWidth: '20px' } }}
+        fitStartAttributes={{ style: { maxWidth: '10px', wordWrap: 'break-word' } }}
+        fillAttributes={{ style: { maxWidth: '20px', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ style: { maxWidth: '30px', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 

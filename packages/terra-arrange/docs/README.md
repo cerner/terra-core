@@ -36,7 +36,8 @@ The arrange component provides content containers with a fit (start and/or end r
   alignFill="bottom"
   alignFitEnd="stretch"
   fitStartAttributes={{ style: { maxWidth: '10px' } }}
-  fitEndAttributes={{ style: { maxWidth: '20px' } }}
+  fillAttributes={{ style: { maxWidth: '20px' } }}
+  fitEndAttributes={{ style: { maxWidth: '30%' } }}
 />
 ```
 

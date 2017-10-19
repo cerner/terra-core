@@ -214,6 +214,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#default div:nth-child(3)').to.have.attribute('class').which.contains('fit');
 
     browser.expect.element('#default div:nth-child(1)').to.have.css('maxWidth').which.equals('10px');
-    browser.expect.element('#default div:nth-child(3)').to.have.css('maxWidth').which.equals('20px');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('maxWidth').which.equals('20px');
+    browser.expect.element('#default div:nth-child(3)').to.have.css('maxWidth').which.equals('30px');
+    browser.expect.element('#default div:nth-child(1)').to.have.css('wordWrap').which.equals('break-word');
+    browser.expect.element('#default div:nth-child(2)').to.have.css('wordWrap').which.equals('break-word');
+    browser.expect.element('#default div:nth-child(3)').to.have.css('wordWrap').which.equals('break-word');
   },
 });

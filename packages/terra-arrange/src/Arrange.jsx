@@ -37,11 +37,15 @@ const propTypes = {
    */
   alignFill: PropTypes.oneOf(alignmentTypes),
   /**
-   * The attributes to be set on the fitStart element
+   * The attributes to be set on the fitStart wrapper element
    */
   fitStartAttributes: PropTypes.object,
   /**
-   * The attributes to be set on the fitEnd element
+   * The attributes to be set on the fill wrapper element
+   */
+  fillAttributes: PropTypes.object,
+  /**
+   * The attributes to be set on the fitEnd wrapper element
    */
   fitEndAttributes: PropTypes.object,
 };
@@ -55,6 +59,7 @@ const Arrange = ({
   alignFill,
   alignFitEnd,
   fitStartAttributes,
+  fillAttributes,
   fitEndAttributes,
   ...customProps
   }) => {
@@ -67,7 +72,7 @@ const Arrange = ({
       <div {...fitStartAttributes} className={cx('fit', align || alignFitStart)}>
         {fitStart}
       </div>
-      <div className={cx('fill', align || alignFill)}>
+      <div {...fillAttributes} className={cx('fill', align || alignFill)}>
         {fill}
       </div>
       <div {...fitEndAttributes} className={cx('fit', align || alignFitEnd)}>
