@@ -38,7 +38,6 @@ const onAuthorize = () => {
 
 const DataStatusConsumer = () => (
   <EmbeddedContentConsumer
-    ref={(element) => { this.embeddedContentWrapper = element; }}
     src="#/tests/embedded-content-consumer-tests/data-status-provider"
     onMount={onMount}
     onLaunch={onLaunch}
