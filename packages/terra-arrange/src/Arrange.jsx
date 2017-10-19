@@ -67,15 +67,19 @@ const Arrange = ({
     throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
 
+  const fitStartProps = Object.assign({}, fitStartAttributes);
+  const fillProps = Object.assign({}, fillAttributes);
+  const fitEndProps = Object.assign({}, fitEndAttributes);
+
   return (
     <div {...customProps} className={cx('arrange', customProps.className)} >
-      <div {...fitStartAttributes} className={cx('fit', align || alignFitStart)}>
+      <div {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className)}>
         {fitStart}
       </div>
-      <div {...fillAttributes} className={cx('fill', align || alignFill)}>
+      <div {...fillProps} className={cx('fill', align || alignFill, fillProps.className)}>
         {fill}
       </div>
-      <div {...fitEndAttributes} className={cx('fit', align || alignFitEnd)}>
+      <div {...fitEndProps} className={cx('fit', align || alignFitEnd, fitEndProps.className)}>
         {fitEnd}
       </div>
     </div>
