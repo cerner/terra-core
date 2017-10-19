@@ -1,3 +1,5 @@
+/* global browser, axe */
+
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 const path = require('path');
 const webpackConfig = require('./packages/terra-site/webpack.config.js');
@@ -133,7 +135,7 @@ exports.config = {
     // TODO: move into toolkit
 
     browser.addCommand('a11y', (options) => {
-      if (browser.execute(function () { return window.axe === undefined; })) {
+      if (browser.execute('return window.axe === undefined;')) {
         const src = fs.readFileSync('node_modules/axe-core/axe.min.js', 'utf8');
         browser.execute(src.replace(/^\/\*.*\*\//, ''));
       }
@@ -145,11 +147,15 @@ exports.config = {
       }
       const results = options.viewports.map((viewport) => {
         browser.setViewportSize(viewport);
+        // eslint-disable-next-line func-names, prefer-arrow-callback
         return browser.executeAsync(function (done) {
+          // eslint-disable-next-line func-names, prefer-arrow-callback
           axe.run(function (error, result) {
             done({
+              // eslint-disable-next-line object-shorthand
               error: error,
-              result: result
+              // eslint-disable-next-line object-shorthand
+              result: result,
             });
           });
         }).value;
