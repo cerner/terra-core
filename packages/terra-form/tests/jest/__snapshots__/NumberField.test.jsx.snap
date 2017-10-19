@@ -3,8 +3,16 @@
 exports[`should render a NumberField when all the possible props are passed into it 1`] = `
 <Field
   error="This field is required"
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help="Your county's office may have this information"
+  hideRequired={false}
   htmlFor="tax-rate"
+  inError={false}
   isInline={true}
   label="Sales Tax Rate"
   labelAttrs={
@@ -13,6 +21,7 @@ exports[`should render a NumberField when all the possible props are passed into
     }
   }
   required={true}
+  showOptional={false}
 >
   <Input
     className="cernerConsumer-application"
@@ -30,11 +39,20 @@ exports[`should render a NumberField when all the possible props are passed into
 exports[`should render a default component 1`] = `
 <Field
   error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help={null}
+  hideRequired={false}
+  inError={false}
   isInline={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
+  showOptional={false}
 >
   <Input
     max={null}
@@ -65,11 +83,20 @@ exports[`should render as controlled when just a default value is passed into th
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
+    inError={false}
     isInline={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"
@@ -104,11 +131,20 @@ exports[`should render as controlled when just a default value is passed into th
 exports[`should render as uncontrolled when just a numeric default value is passed into the NumberField 1`] = `
 <Field
   error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help={null}
+  hideRequired={false}
+  inError={false}
   isInline={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
+  showOptional={false}
 >
   <Input
     defaultValue={2}
@@ -125,11 +161,20 @@ exports[`should render as uncontrolled when just a numeric default value is pass
 exports[`should render as uncontrolled when just a string default value is passed into the NumberField 1`] = `
 <Field
   error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help={null}
+  hideRequired={false}
+  inError={false}
   isInline={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
+  showOptional={false}
 >
   <Input
     defaultValue="2"

@@ -1,37 +1,282 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a Field when all the possible props are passed into it 1`] = `
-<div
-  className="field field-inline field-required"
->
-  <label
-    className="label healtheintent-legend"
-    htmlFor="test"
-  >
-    Text
-  </label>
-  <input
-    id="test"
-    type="text"
-    value="Test"
-  />
-  <small
-    className="help-text"
-    tabIndex="-1"
-  >
-    This is a test input
-  </small>
-  <small
-    className="error"
-    tabIndex="-1"
-  >
-    This field is required
-  </small>
-</div>
-`;
-
 exports[`should render a default component 1`] = `
 <div
   className="field"
 />
+`;
+
+exports[`should render a feild error message 1`] = `
+<div
+  className="field"
+/>
+`;
+
+exports[`should render a field help message 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="help-text"
+  >
+    Help Text
+  </div>
+</div>
+`;
+
+exports[`should render a field in error 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <div
+      className="error-icon"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+    <label
+      className="label"
+    >
+      Field Label
+    </label>
+  </div>
+  <div
+    className="error-text"
+  >
+    Error Text
+  </div>
+  <div
+    className="help-text"
+  >
+    Help Text
+  </div>
+</div>
+`;
+
+exports[`should render a field label 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+    >
+      Field Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render a required feild label with required hidden 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+    >
+      Field Label
+      <div
+        className="required-hidden"
+      >
+        *
+      </div>
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render a required field in error 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <div
+      className="error-icon"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+    <label
+      className="label"
+    >
+      <div
+        className="required"
+      >
+        *
+      </div>
+      Field Label
+    </label>
+  </div>
+  <div
+    className="error-text"
+  >
+    Error Text
+  </div>
+  <div
+    className="help-text"
+  >
+    Help Text
+  </div>
+</div>
+`;
+
+exports[`should render a required field label 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+    >
+      <div
+        className="required"
+      >
+        *
+      </div>
+      Field Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render an inline field with most of the possible props are passed into it 1`] = `
+<div
+  className="field field-inline"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label healtheintent-legend"
+      htmlFor="test"
+    >
+      Text
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <input
+    id="test"
+    type="text"
+  />
+  <div
+    className="help-text"
+  >
+    This is a test input
+  </div>
+</div>
+`;
+
+exports[`should render an optional field in error 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <div
+      className="error-icon"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+    <label
+      className="label"
+    >
+      Field Label
+      <div
+        className="optional"
+      >
+        (optional)
+      </div>
+    </label>
+  </div>
+  <div
+    className="error-text"
+  >
+    Error Text
+  </div>
+  <div
+    className="help-text"
+  >
+    Help Text
+  </div>
+</div>
+`;
+
+exports[`should render an optional field label 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+    >
+      Field Label
+      <div
+        className="optional"
+      >
+        (optional)
+      </div>
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+</div>
 `;

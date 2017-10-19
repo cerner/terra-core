@@ -1,8 +1,9 @@
 import React from 'react';
+import intlContexts from './intl-context-setup';
 import TextareaField from '../../src/TextareaField';
 
 it('should render a default TextAreaField component', () => {
-  const textarea = <TextareaField />;
+  const textarea = (<TextareaField />);
   const wrapper = shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -23,18 +24,18 @@ it('should render a TextAreaField with the rest of the props', () => {
       required
     />);
 
-  const wrapper = shallow(textarea);
+  const wrapper = shallow(textarea, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as uncontrolled when just a default value is passed into the TextareaField', () => {
   const textarea = <TextareaField defaultValue="foo" />;
-  const wrapper = mount(textarea);
+  const wrapper = mount(textarea, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the TextareaField', () => {
   const textarea = <TextareaField value="foo" onChange={() => {}} />;
-  const wrapper = mount(textarea);
+  const wrapper = mount(textarea, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });

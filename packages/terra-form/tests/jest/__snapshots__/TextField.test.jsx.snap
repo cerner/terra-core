@@ -3,8 +3,16 @@
 exports[`should render a TextField with the rest of the props 1`] = `
 <Field
   error="This field is required"
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help="This will not be shared with outside sources"
+  hideRequired={false}
   htmlFor="email"
+  inError={false}
   isInline={true}
   label="Email Address"
   labelAttrs={
@@ -13,6 +21,7 @@ exports[`should render a TextField with the rest of the props 1`] = `
     }
   }
   required={true}
+  showOptional={false}
 >
   <Input
     className="healtheintent-application"
@@ -29,11 +38,20 @@ exports[`should render a TextField with the rest of the props 1`] = `
 exports[`should render a default TextField component 1`] = `
 <Field
   error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help={null}
+  hideRequired={false}
+  inError={false}
   isInline={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
+  showOptional={false}
 >
   <Input
     maxLength={null}
@@ -63,11 +81,20 @@ exports[`should render as controlled when just a default value is passed into th
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
+    inError={false}
     isInline={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"
@@ -114,11 +141,20 @@ exports[`should render as uncontrolled when just a default value is passed into 
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
+    inError={false}
     isInline={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"

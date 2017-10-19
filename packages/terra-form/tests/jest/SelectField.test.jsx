@@ -1,9 +1,10 @@
 import React from 'react';
+import intlContexts from './intl-context-setup';
 import SelectField from '../../src/SelectField';
 
 it('should render a default SelectField component', () => {
   const selectField = <SelectField options={[{ value: 'm', display: 'moo' }]} />;
-  const wrapper = shallow(selectField);
+  const wrapper = shallow(selectField, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -22,18 +23,18 @@ it('should render a SelectField when all the possible props are passed into it',
       selectAttrs={{ className: 'scooby-snacks' }}
     />);
 
-  const wrapper = shallow(selectField);
+  const wrapper = shallow(selectField, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as uncontrolled when just the required fields and a default value is passed into the SelectField', () => {
   const selectField = <SelectField options={[{ value: 'm', display: 'moo' }, { value: 'b', display: 'boo' }]} defaultValue="b" />;
-  const wrapper = mount(selectField);
+  const wrapper = mount(selectField, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just the required fields and a onChange function is passed into the SelectField', () => {
   const selectField = <SelectField options={[{ value: 'm', display: 'moo' }, { value: 'b', display: 'boo' }]} onChange={() => {}} />;
-  const wrapper = mount(selectField);
+  const wrapper = mount(selectField, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
