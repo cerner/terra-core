@@ -34,8 +34,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays a text component with a set weight': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/text-tests/weight`);
-    browser.assert.cssProperty('#textFontWeight700', 'font-weight', 'bold'); // Browser computes 700 as bold
-    browser.assert.cssProperty('#textFontWeight400', 'font-weight', 'normal'); // Browser computes 400 as normal
+    browser.assert.cssProperty('#textFontWeight700', 'font-weight', '700');
+    browser.assert.cssProperty('#textFontWeight400', 'font-weight', '400');
     browser.assert.cssProperty('#textFontWeight200', 'font-weight', '200');
   },
 

@@ -8,6 +8,7 @@ Unreleased
 ------------------
 ### Changed
 * Update table test links to be 'Table Tests' and 'Single Select Table Links'
+* Update list to use flex and column directional to update selection height
 
 1.11.0 - (September 26, 2017)
 ------------------
