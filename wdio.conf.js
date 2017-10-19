@@ -15,9 +15,10 @@ function getScreenshotName(ref) {
   };
 }
 
+
 const drivers = seleniumConfig.drivers;
 drivers.chrome.version = '2.33';
-
+const seleniumVersion = '3.6.0';
 exports.config = {
 
   specs: [
@@ -59,8 +60,11 @@ exports.config = {
   connectionRetryCount: 3,
 
   services: ['selenium-standalone', 'visual-regression', 'webpack-dev-server'],
+  seleniumArgs: {
+    version: seleniumVersion,
+  },
   seleniumInstallArgs: {
-    version: '3.6.0',
+    version: seleniumVersion,
     drivers,
   },
 
@@ -80,6 +84,14 @@ exports.config = {
   before: () => {
     global.expect = chai.expect;
     chai.Should();
+    chai.Assertion.addMethod('matchReference', function () {
+      // eslint-disable-next-line no-underscore-dangle
+      new chai.Assertion(this._obj).to.be.instanceof(Array);
+      // eslint-disable-next-line no-underscore-dangle
+      this.assert(this._obj.every(scr => scr.isExactSameImage),
+        'expected screenshots to match reference',
+        'expected screenshots to not match reference');
+    });
 
     global.viewport = (...sizes) => {
       const widths = {

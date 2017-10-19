@@ -1,32 +1,27 @@
 /* global browser, it, viewport */
 describe('badge', () => {
   const viewports = viewport('tiny', 'huge');
-
   it('defaults', () => {
     browser.url('/#/tests/badge-tests/default');
-    browser
-      .checkElement('[data-reactroot]', { viewports })
-      .forEach(result => expect(result.isExactSameImage).to.be.true);
+    const screenshots = browser.checkElement('[data-reactroot]', { viewports });
+    expect(screenshots).to.matchReference();
   });
 
   it('intents', () => {
     browser.url('/#/tests/badge-tests/intent');
-    browser
-      .checkElement('[data-reactroot]', { viewports })
-      .forEach(result => expect(result.isExactSameImage).to.be.true);
+    const screenshots = browser.checkElement('[data-reactroot]', { viewports });
+    expect(screenshots).to.matchReference();
   });
 
   it('sizes', () => {
     browser.url('/#/tests/badge-tests/size');
-    browser
-      .checkElement('[data-reactroot]', { viewports })
-      .forEach(result => expect(result.isExactSameImage).to.be.true);
+    const screenshots = browser.checkElement('[data-reactroot]', { viewports });
+    expect(screenshots).to.matchReference();
   });
 
   it('icons', () => {
     browser.url('/#/tests/badge-tests/icon');
-    browser
-      .checkElement('[data-reactroot]', { viewports })
-      .forEach(result => expect(result.isExactSameImage).to.be.true);
+    const screenshots = browser.checkElement('[data-reactroot]', { viewports });
+    expect(screenshots).to.matchReference();
   });
 });
