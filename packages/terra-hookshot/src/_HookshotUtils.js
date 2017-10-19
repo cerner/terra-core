@@ -543,8 +543,8 @@ const positionStyleFromBounds = (boundingRect, content, target, margin, behavior
   return {
     style: {
       position: 'absolute',
-      left: `${positions.content.x + pageXOffset}px`,
-      top: `${positions.content.y + pageYOffset}px`,
+      left: `${Math.round(positions.content.x + pageXOffset)}px`,
+      top: `${Math.round(positions.content.y + pageYOffset)}px`,
     },
     positions,
   };
