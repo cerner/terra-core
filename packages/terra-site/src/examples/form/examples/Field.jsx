@@ -1,36 +1,64 @@
 import React from 'react';
 import Field from 'terra-form/lib/Field';
-import Input from 'terra-form/lib/Input';
-import styles from '../../../site.scss';
 
 class FieldExamples extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { input: 'Element' };
-    this.handleChange = this.handleChange.bind(this);
+    this.state = { inError: false };
+    this.toggleInError = this.toggleInError.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ input: event.target.value });
+  toggleInError() {
+    this.setState({ inError: !this.state.inError });
   }
 
   render() {
     return (
       <div>
-        <form>
-          <Field
-            type="checkbox"
-            label="Where do you work"
-            name="work_location"
-            error="This field is required"
-            help="We need to to verify if you work for a big or small company"
-            required
-          >
-            <Input type="text" defaultValue="Element" onChange={this.handleChange} />
-          </Field>
-        </form>
-        <hr /><p>Input Provided: <span className={styles['site-input-display']}>{this.state.input}</span></p>
-        <br />
+        <h2> Field Examples </h2>
+        <Field
+          label="Field Label"
+          help="This is a standard, non-required field."
+          error="Error Message"
+          inError={this.state.inError}
+        >
+          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+        </Field>
+        <Field
+          label="Field Label"
+          help="This is an optional field."
+          error="Error Message"
+          inError={this.state.inError}
+          isInline
+          showOptional
+        >
+          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+        </Field>
+
+        <Field
+          label="Field Label"
+          help="This is a required field."
+          error="Error Message"
+          inError={this.state.inError}
+          isInline
+          required
+        >
+          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+        </Field>
+
+        <Field
+          label="Field Label"
+          help="This is a required field, but the required indicator is hidden until the field is in error."
+          error="Now the required indicator is showing because the field is in error."
+          inError={this.state.inError}
+          isInline
+          required
+          hideRequired
+        >
+          <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+        </Field>
+        <hr />
+        <p>If a feild is in error, an error icon will be displayed. <button onClick={this.toggleInError}>Toggle Error State</button></p>
       </div>
     );
   }
