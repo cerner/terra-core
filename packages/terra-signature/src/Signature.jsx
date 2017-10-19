@@ -47,7 +47,7 @@ class Signature extends React.Component {
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.mouseXY = this.mouseXY.bind(this);
-    this.mouseOut = this.mouseOut.bind(this);
+    this.mouseLeave = this.mouseLeave.bind(this);
     this.addLine = this.addLine.bind(this);
     this.draw = this.draw.bind(this);
     this.drawSignature = this.drawSignature.bind(this);
@@ -60,12 +60,12 @@ class Signature extends React.Component {
       this.canvas.addEventListener('touchstart', this.mouseDown, false);
       this.canvas.addEventListener('touchmove', this.mouseXY, true);
       this.canvas.addEventListener('touchend', this.mouseUp, false);
-      this.canvas.addEventListener('touchleave', this.mouseOut, false);
+      document.body.addEventListener('touchleave', this.mouseLeave, false);
       document.body.addEventListener('touchcancel', this.mouseUp, false);
     } else {
       this.canvas.addEventListener('mousedown', this.mouseDown);
       this.canvas.addEventListener('mousemove', this.mouseXY);
-      this.canvas.addEventListener('mouseout', this.mouseOut);
+      document.body.addEventListener('mouseleave', this.mouseLeave, false);
       document.body.addEventListener('mouseup', this.mouseUp);
     }
 
@@ -94,12 +94,12 @@ class Signature extends React.Component {
       this.canvas.removeEventListener('touchstart', this.mouseDown);
       this.canvas.removeEventListener('touchmove', this.mouseXY);
       this.canvas.removeEventListener('touchend', this.mouseUp);
-      this.canvas.removeEventListener('touchleave', this.mouseOut);
+      window.removeEventListener('touchleave', this.mouseLeave);
       window.removeEventListener('touchcancel', this.mouseUp);
     } else {
       this.canvas.removeEventListener('mousedown', this.mouseDown);
       this.canvas.removeEventListener('mousemove', this.mouseXY);
-      this.canvas.removeEventListener('mouseout', this.mouseOut);
+      window.removeEventListener('mouseleave', this.mouseLeave);
       window.removeEventListener('mouseup', this.mouseUp);
     }
 
@@ -137,7 +137,7 @@ class Signature extends React.Component {
     }
   }
 
-  mouseOut(event) {
+  mouseLeave(event) {
     if (this.state.painting) {
       this.setState({ painting: false });
       if (this.props.onChange) {
