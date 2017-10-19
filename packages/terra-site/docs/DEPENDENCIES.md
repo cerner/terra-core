@@ -41,7 +41,7 @@
 | terra-modal | ^1.13.0 | ^15.4.2 | Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button. |
 | terra-modal-manager | ^1.13.1 | ^15.4.2 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
 | terra-overlay | ^1.11.1 | ^15.5.4 | The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container. |
-| terra-popup | ^1.11.1 | ^15.4.2 | The Terra Popup is higher order component, that launches tether positioned content, with the ability to display a dynamic arrow. |
+| terra-popup | ^1.11.1 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 | terra-profile-image | ^1.10.1 | ^15.4.2 | The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image. |
 | terra-progress-bar | ^1.11.1 | ^15.4.2 | terra-progress-bar |
 | terra-props-table | ^1.10.1 | ^15.4.2 | terra-props-table |
