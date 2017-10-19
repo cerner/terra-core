@@ -264,7 +264,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
               Show
             </span>
           }
-          fitEndMaxWidth="40%"
           fitStart={
             <span
               className="icon"
@@ -278,7 +277,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
               />
             </span>
           }
-          fitStartMaxWidth="40%"
         >
           <div
             className="arrange"
@@ -380,7 +378,6 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
           Show
         </span>
       }
-      fitEndMaxWidth="40%"
       fitStart={
         <span
           className="icon"
@@ -394,7 +391,6 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
           />
         </span>
       }
-      fitStartMaxWidth="40%"
     />
   </Button>
   <Toggle
@@ -429,7 +425,6 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
           Show
         </span>
       }
-      fitEndMaxWidth="40%"
       fitStart={
         <span
           className="icon"
@@ -442,7 +437,6 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
           />
         </span>
       }
-      fitStartMaxWidth="40%"
     />
   </Button>
   <Toggle
