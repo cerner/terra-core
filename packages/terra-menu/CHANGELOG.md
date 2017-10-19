@@ -10,7 +10,8 @@ Unreleased
 * Updated menu to use the auto height available through popup.
 
 ### Fixed
-* Issue where tabbing would focus on Menu container before items in menu
+* Issue where tabbing would focus on Menu container before items in menu.
+* Issue where divider was no longer visible.
 
 1.4.0 - (October 12, 2017)
 ------------------

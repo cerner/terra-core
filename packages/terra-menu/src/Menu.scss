@@ -8,6 +8,7 @@
     border-style: solid;
     border-width: 1px 0 0;
     margin-top: 2px;
+    width: 100%;
 
     &::after {
       border-color: var(--terra-menu-divider-shadow-color, #f9f9f9);
