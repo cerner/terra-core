@@ -49,6 +49,12 @@ it('should render an icon and a text', () => {
   expect(button).toMatchSnapshot();
 });
 
+it('should render text then an icon when reversed', () => {
+  const testElement = <img alt="icon" />;
+  const button = shallow(<Button icon={testElement} size="tiny" text="text" isReversed />);
+  expect(button).toMatchSnapshot();
+});
+
 it('should render a Button with merged attributes', () => {
   const button = shallow(<Button className="TestClass" data-mock="data" style={{ height: '100px' }} />);
   expect(button).toMatchSnapshot();

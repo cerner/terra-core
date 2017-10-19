@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Added space between icons and text.
+* Added space between icons and text
 * Removed un-stylized terra-Button-text class from text span
 
 1.11.0 - (October 6, 2017)
