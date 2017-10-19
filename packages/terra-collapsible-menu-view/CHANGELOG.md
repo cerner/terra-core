@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Added
+* Added option for auto width sizing.
 
 1.1.0 - (October 6, 2017)
 ------------------

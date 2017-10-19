@@ -3,6 +3,14 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added option for auto width sizing.
+
+### Changed
+* Updated menu to use the auto height available through popup.
+
+### Fixed
+* Issue where tabbing would focus on Menu container before items in menu
 
 1.4.0 - (October 12, 2017)
 ------------------
