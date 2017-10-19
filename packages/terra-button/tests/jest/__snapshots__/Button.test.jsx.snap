@@ -102,7 +102,7 @@ exports[`should render an icon and a text 1`] = `
     alt="icon"
   />
   <span
-    className="text"
+    className="text-with-icon"
   >
     text
   </span>
@@ -118,7 +118,7 @@ exports[`should render as an anchor when provided an href 1`] = `
   type="button"
 >
   <span
-    className="text"
+    className={null}
   >
     href
   </span>
@@ -134,7 +134,7 @@ exports[`should render as disabled when set 1`] = `
   type="button"
 >
   <span
-    className="text"
+    className={null}
   >
     Disabled
   </span>

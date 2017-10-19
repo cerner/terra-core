@@ -111,19 +111,19 @@ it('should be disabled when set', () => {
 });
 
 // Structure
-it('should have the class terra-Button-text when a text is provided', () => {
+it('should have a span when a text is provided', () => {
   const button = shallow(<Button text="text" />);
-  expect(button.childAt(0).hasClass('text')).toEqual(true);
+  expect(button.childAt(0).is('span')).toEqual(true);
 });
 
 it('should set the text text', () => {
   const button = shallow(<Button text="text" />);
-  expect(button.find('.text').text()).toEqual('text');
+  expect(button.find('span').text()).toEqual('text');
 });
 
 it('should not append a text span without a text', () => {
   const button = shallow(<Button />);
-  expect(button.find('.text').length).toEqual(0);
+  expect(button.find('span').length).toEqual(0);
 });
 
 it('should render the icon as the first child', () => {
@@ -135,7 +135,7 @@ it('should render the icon as the first child', () => {
 it('should render in order of text / icon when reverse', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} isReversed text="text" />);
-  expect(button.childAt(0).hasClass('text')).toEqual(true);
+  expect(button.childAt(0).is('span')).toEqual(true);
 });
 
 it('should render as an anchor tag when provided an href', () => {
