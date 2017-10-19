@@ -36,16 +36,16 @@ class ClassNamePopup extends React.Component {
     return (
       <div>
         <Popup
-          classNameArrow="terra-TestClass-arrow"
-          classNameContent="terra-TestClass-content"
-          classNameOverlay="terra-TestClass-overlay"
+          classNameArrow="terra-test-class-arrow"
+          classNameContent="terra-test-class-content"
+          classNameOverlay="terra-test-class-overlay"
           contentAttachment="top center"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ padding: '5px' }}>The arrow, content, and overlay have classes.</p>
+          <p style={{ padding: '5px' }}>The arrow and content have classes.</p>
         </Popup>
         <button id="class-name-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Class Name Popup

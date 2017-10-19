@@ -2,8 +2,8 @@
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
   [dir=rtl] {
-    .popup-content {
-      display: block;
+    .content:focus {
+      outline: none;
     }
 
     .rounded-corners {
@@ -46,22 +46,6 @@
 
     .is-full-screen {
       box-shadow: none;
-    }
-
-    .popup-content[data-arrow-top='true'] {
-      margin-top: var(--terra-popup-content-margin, 10px);
-    }
-
-    .popup-content[data-arrow-bottom='true'] {
-      margin-bottom: var(--terra-popup-content-margin, 10px);
-    }
-
-    .popup-content[data-arrow-left='true'] {
-      margin-left: var(--terra-popup-content-margin, 10px);
-    }
-
-    .popup-content[data-arrow-right='true'] {
-      margin-right: var(--terra-popup-content-margin, 10px);
     }
   }
 }

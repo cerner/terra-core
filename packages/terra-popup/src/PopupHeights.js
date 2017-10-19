@@ -1,4 +1,5 @@
 const PopupHeights = {
+  auto: -1,
   40: 40,
   80: 80,
   120: 120,
