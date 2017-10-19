@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
+// This tests verifies the PopupUtils.leftOffset methed when (offset > contentBounds.height - cornerOffset)
 class AlignmentPopup extends React.Component {
   constructor(props) {
     super(props);
@@ -48,17 +49,17 @@ class AlignmentPopup extends React.Component {
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="middle left"
-          contentHeight="40"
+          contentAttachment="top right"
+          contentHeight="120"
           contentWidth="160"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ padding: '5px' }}>This popup arrow was aligned to the center.</p>
+          <p style={{ padding: '5px' }}>This popup arrow has vertical-right attachment, but was adjusted to be on the screen.</p>
         </Popup>
-        <button id="alignment-button" style={{ position: 'absolute', top: 'calc(50% - 10px)', height: '20px', width: '20px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="alignment-button" style={{ position: 'absolute', right: '0px', height: '20px', width: '20px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>
     );
   }

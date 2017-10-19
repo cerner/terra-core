@@ -2,6 +2,9 @@
 
 The Terra Hookshot component positions content according to a targeted attachment, ensuring they stay connected.
 
+Hookshot is currently utilized in the following component(s):<br />
+[Popup][1]
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
@@ -34,3 +37,5 @@ render() {
 }
 
 ```
+
+[1]: https://github.com/cerner/terra-core/tree/master/packages/terra-popup/docs

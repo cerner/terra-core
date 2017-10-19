@@ -1,15 +1,13 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
-class AlignmentPopup extends React.Component {
+class PopupExample extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.setParentNode = this.setParentNode.bind(this);
-    this.getParentNode = this.getParentNode.bind(this);
     this.state = { open: true };
   }
 
@@ -25,14 +23,6 @@ class AlignmentPopup extends React.Component {
     return this.buttonNode;
   }
 
-  setParentNode(node) {
-    this.parentNode = node;
-  }
-
-  getParentNode() {
-    return this.parentNode;
-  }
-
   handleButtonClick() {
     this.setState({ open: true });
   }
@@ -43,25 +33,23 @@ class AlignmentPopup extends React.Component {
 
   render() {
     return (
-      <div style={{ position: 'relative', height: '200px', width: '200px', background: 'aliceblue' }} ref={this.setParentNode}>
+      <div style={{ height: '200px', width: '300px', background: 'aliceblue' }}>
         <Popup
-          boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="top left"
-          contentHeight="40"
-          contentWidth="160"
-          isArrowDisplayed
+          contentWidth="auto"
           isOpen={this.state.open}
-          onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
+          onRequestClose={this.handleRequestClose}
         >
-          <p style={{ padding: '5px' }}>This popup arrow was aligned to the left.</p>
+          <p style={{ width: '400px' }}>This is popup content with a automatic width of 400px.</p>
         </Popup>
-        <button id="alignment-button" style={{ position: 'absolute', top: '0px', height: '20px', width: '20px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
+        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+          Default Popup
+        </button>
       </div>
     );
   }
 }
 
-export default AlignmentPopup;
+export default PopupExample;

@@ -13,6 +13,10 @@ class BoundedMenu extends React.Component {
     this.state = { open: true };
   }
 
+  componentDidMount() {
+    this.forceUpdate();
+  }
+
   setButtonNode(node) {
     this.buttonNode = node;
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from '../../../lib/Popup';
 
+// This tests verifies the PopupUtils.getContentOffset methed when (targetNode.clientWidth < segment) & attachment is right
 class OffsetPopup extends React.Component {
   constructor(props) {
     super(props);
@@ -48,15 +49,15 @@ class OffsetPopup extends React.Component {
           boundingRef={this.getParentNode}
           classNameArrow="test-arrow"
           classNameContent="test-content"
-          contentAttachment="top left"
-          contentHeight="40"
+          contentAttachment="top right"
+          contentHeight="80"
           contentWidth="160"
           isArrowDisplayed
           isOpen={this.state.open}
           onRequestClose={this.handleRequestClose}
           targetRef={this.getButtonNode}
         >
-          <p style={{ padding: '5px' }}>This popup was flipped and the arrow was repositioned.</p>
+          <p style={{ padding: '5px' }}>This popup was adjusted because the target was smaller than the arrow position allowed.</p>
         </Popup>
         <button id="offset-button" style={{ position: 'absolute', right: '10px', bottom: '0px', height: '10px', width: '10px', backgroundColor: '#c00' }} onClick={this.handleButtonClick} ref={this.setButtonNode} />
       </div>

@@ -1,10 +1,52 @@
 /* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
-// const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
-  'isOpen prop - OVERLAY': (browser) => {
+  'Displays a default popup & closes on width resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+    browser.expect.element('.test-content').to.be.present;
+
+    const width = screenWidth(browser);
+    browser.resizeWindow(960, 600);
+    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
+  },
+
+  'Displays a default popup & remains open on height resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+    browser.expect.element('.test-content').to.be.present;
+
+    const width = screenWidth(browser);
+    browser.resizeWindow(width, 600);
+    browser.expect.element('.test-content').to.be.present;
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
+  },
+
+  'Displays a default popup & closes on ESC': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+    browser.expect.element('.test-content').to.be.present;
+
+    browser.keys([browser.Keys.ESCAPE]);
+    browser.expect.element('.test-content').to.not.be.present;
+  },
+
+  'Displays a default popup & closes on outside click': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+    browser.expect.element('.test-content').to.be.present;
+    browser
+       .moveToElement('#root', 300, 300)
+       .mouseButtonDown(0);
+    browser.expect.element('.test-content').to.not.be.present;
+  },
+
+  'Displays a default popup without an arrow': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+    browser.expect.element('.test-content').to.be.present;
+    browser.expect.element('.test-arrow').to.not.be.present;
+  },
+
+  'Displays a popup with an overlay': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/overlay`);
     browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
 
@@ -13,13 +55,52 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: hidden;');
 
     browser.keys([browser.Keys.ESCAPE]);
-    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.expect.element('.test-content').to.not.be.present;
 
     browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
   },
 
-  'isOpen prop - RESIZE': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+  'Displays a popup with an arrow': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/arrow`);
+    browser.expect.element('.test-content').to.be.present;
+    browser.expect.element('.test-arrow').to.be.present;
+  },
+
+  'Displays a bounded popup with a header': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded`);
+    browser.expect.element('.test-content').to.be.present;
+    browser.expect.element('.test-arrow').to.not.be.present;
+    browser.expect.element('svg').to.be.present;
+  },
+
+  'Displays a bounded popup without a header': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/no-header`);
+    browser.expect.element('.test-content').to.be.present;
+    browser.expect.element('.test-arrow').to.not.be.present;
+    browser.expect.element('svg').to.not.be.present;
+  },
+
+  'Displays a popup bounded by height': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-height`);
+    browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 175px; width: 240px;');
+  },
+
+  'Displays a popup bounded by width': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-width`);
+    browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 120px; width: 350px;');
+  },
+
+  'Verifies content and arrow classnames are applied': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/class-name`);
+    browser.expect.element('.terra-test-class-content').to.be.present;
+    browser.expect.element('.terra-test-class-arrow').to.be.present;
+  },
+
+  'Displays a popup inside a modal & closes on width resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/popup-inside-modal`);
+    browser.click('.disclose');
+    browser.expect.element('[class*="modal"]').to.be.present;
+    browser.click('#popup-in-modal');
     browser.expect.element('.test-content').to.be.present;
 
     browser.resizeWindow(960, 600);
@@ -28,67 +109,20 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
-  'isOpen prop - ESC': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+  'Displays a popup inside a modal & remains open on height resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/popup-inside-modal`);
+    browser.click('.disclose');
+    browser.expect.element('[class*="modal"]').to.be.present;
+    browser.click('#popup-in-modal');
     browser.expect.element('.test-content').to.be.present;
 
-    browser.keys([browser.Keys.ESCAPE]);
-    browser.waitForElementNotPresent('.test-content', 1000);
-  },
-
-  'isOpen prop - CLICK': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
+    const width = screenWidth(browser);
+    browser.resizeWindow(width, 600);
     browser.expect.element('.test-content').to.be.present;
-
-    browser.moveTo('#default-button', 200, 0);
-    browser.mouseButtonClick(0);
-    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
   },
 
-  'isArrowDisplayed prop - DEFAULT': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
-    browser.expect.element('.test-content').to.be.present;
-    browser.expect.element('.test-arrow').to.not.be.present;
-  },
-
-  'isArrowDisplayed prop - SHOWN': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/arrow`);
-    browser.expect.element('.test-content').to.be.present;
-    browser.expect.element('.test-arrow').to.be.present;
-  },
-
-  'boundingRef prop': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded`);
-    browser.expect.element('.test-content').to.be.present;
-    browser.expect.element('.test-arrow').to.not.be.present;
-    browser.expect.element('svg').to.be.present;
-  },
-
-  'boundingRef prop - BOUNDED HEIGHT': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-height`);
-    browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 175px; width: 240px;');
-  },
-
-  'boundingRef prop - BOUNDED WIDTH': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-width`);
-    browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 120px; width: 350px;');
-  },
-
-  'boundingRef prop && disableHeader prop': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/no-header`);
-    browser.expect.element('.test-content').to.be.present;
-    browser.expect.element('.test-arrow').to.not.be.present;
-    browser.expect.element('svg').to.not.be.present;
-  },
-
-  'className props': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/class-name`);
-    browser.expect.element('.terra-TestClass-overlay').to.be.present;
-    browser.expect.element('.terra-TestClass-content').to.be.present;
-    browser.expect.element('.terra-TestClass-arrow').to.be.present;
-  },
-
-  'popup inside modal - close on ESC': (browser) => {
+  'Displays a popup inside modal & closes on ESC': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/popup-inside-modal`);
 
     browser.click('.disclose');
@@ -96,81 +130,181 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.test-content').to.be.present;
 
     browser.keys([browser.Keys.ESCAPE]);
-    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.expect.element('.test-content').to.not.be.present;
     browser.assert.elementPresent('div[role="document"]');
 
     browser.keys([browser.Keys.ESCAPE]);
     browser.assert.elementNotPresent('div[role="document"]');
   },
 
-  'popup inside modal - close on CLICK': (browser) => {
+  'Displays a popup inside modal & closes on outside click': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/popup-inside-modal`);
     browser.click('.disclose');
     browser.click('#popup-in-modal');
     browser.expect.element('.test-content').to.be.present;
-
-    browser.moveTo('#default-button', 200, 0);
-    browser.mouseButtonClick(0);
-    browser.waitForElementNotPresent('.test-content', 1000);
+    browser
+       .moveToElement('#root', 10, 10)
+       .mouseButtonDown(0);
+    browser.expect.element('.test-content').to.not.be.present;
   },
 
-  'contentAttachment prop - HORIZONTAL CENTER': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/horizontal-center`);
-    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 31px;');
+  'Positions the arrow for vertical-left attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-attachment`);
+    browser.click('#attach-Left');
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 61px;');
   },
 
-  'contentAttachment prop - VERTICAL LEFT': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-left`);
-    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 25px;');
-  },
-
-  'contentAttachment prop - VERTICAL CENTER': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-center`);
+  'Positions the arrow for vertical-center attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-attachment`);
+    browser.click('#attach-Center');
     browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 91px;');
   },
 
-  'contentAttachment prop - VERTICAL RIGHT': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-right`);
+  'Positions the arrow for vertical-right attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-attachment`);
+    browser.click('#attach-Right');
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 121px;');
+  },
+
+  'Adjusts the arrow for vertical-left attachment when arrow would be offscreen': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-left-offset`);
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 25px;');
+  },
+
+  'Adjusts the arrow for vertical-right attachment when arrow would be offscreen': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-right-offset`);
     browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 157px;');
   },
 
-  'contentAttachment prop - MIDDLE LEFT RESPOSITION': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/left-arrow-offset`);
-    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 26px;');
+  'Applies content offset when target has vertial-right when content vertial-left attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/different-attachment`);
+    browser.click('#attach-Left');
+
+    browser.getLocation('[data-terra-popup-content]', (coordinates) => {
+      browser.assert.equal(coordinates.value.x, 196);
+      browser.assert.equal(coordinates.value.y, 99);
+    });
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 25px;');
   },
 
-  'contentAttachment prop - MIDDLE RIGHT RESPOSITION': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/right-arrow-offset`);
-    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 36px;');
+  'Applies content offset when target has vertial-left when content vertial-right attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/different-attachment`);
+    browser.click('#attach-Right');
+
+    browser.getLocation('[data-terra-popup-content]', (coordinates) => {
+      browser.assert.equal(coordinates.value.x, 44);
+      browser.assert.equal(coordinates.value.y, 99);
+    });
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 157px;');
   },
 
-  'contentAttachment prop - TOP RIGHT RESPOSITION': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/top-arrow-offset`);
-    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 29px;');
+  'Applies content offset when target is smaller than the arrow for vertial-left attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-left-target-offset`);
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 25px;');
   },
 
-  'contentAttachment prop - BOTTOM LEFT RESPOSITION': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bottom-arrow-offset`);
-    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 153px;');
+  'Applies content offset when target is smaller than the arrow for vertial-right attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/vertical-right-target-offset`);
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('left: 157px;');
   },
 
-  'contentDimension small': (browser) => {
+  'Positions the arrow for horizontal-top attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/horizontal-attachment`);
+    browser.click('#attach-Top');
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 31px;');
+  },
+
+  'Positions the arrow for horizontal-middle attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/horizontal-attachment`);
+    browser.click('#attach-Middle');
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 41px;');
+  },
+
+  'Positions the arrow for horizontal-bottom attachment': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/horizontal-attachment`);
+    browser.click('#attach-Bottom');
+    browser.expect.element('.test-arrow').to.have.attribute('style').which.equals('top: 51px;');
+  },
+
+  'Displays a small-sized popup correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/small`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 40px; width: 160px;');
   },
 
-  'contentDimension meduim ': (browser) => {
+  'Displays a medium-sized popup correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/medium`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 120px; width: 320px;');
   },
 
-  'contentDimension large': (browser) => {
+  'Displays a large-sized popup correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/large`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 240px; width: 960px;');
   },
 
-  'contentDimension invalid': (browser) => {
+  'Displays a fallback-sized popup correctly when invalid sizes are provided ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/invalid`);
     browser.expect.element('.test-content').to.have.attribute('style').which.equals('height: 80px; width: 240px;');
+  },
+
+  'Displays a popup with automatic height correctly': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-height`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-height');
+  },
+
+  'Displays a popup with automatic height & closes on width resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-height`);
+    browser.expect.element('.test-content').to.be.present;
+
+    const width = screenWidth(browser);
+    browser.resizeWindow(960, 600);
+    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
+  },
+
+  'Displays a popup with automatic height & remains open on height resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-height`);
+    browser.expect.element('.test-content').to.be.present;
+
+    const width = screenWidth(browser);
+    browser.resizeWindow(width, 600);
+    browser.expect.element('.test-content').to.be.present;
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
+  },
+
+  'Displays a popup with automatic height correctly when bounded by height': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-automatic-height`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-height');
+    browser.expect.element('.test-content').to.have.attribute('style').which.contains('height: 175px;');
+  },
+
+  'Displays a popup with automatic width correctly': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-width`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
+  },
+
+  'Displays a popup with automatic width & closes on width resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-width`);
+    browser.expect.element('.test-content').to.be.present;
+
+    const width = screenWidth(browser);
+    browser.resizeWindow(960, 600);
+    browser.waitForElementNotPresent('.test-content', 1000);
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
+  },
+
+  'Displays a popup with automatic width & remains open on height resize': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/automatic-width`);
+    browser.expect.element('.test-content').to.be.present;
+
+    const width = screenWidth(browser);
+    browser.resizeWindow(width, 600);
+    browser.expect.element('.test-content').to.be.present;
+    browser.resizeWindow(width, browser.globals.breakpoints.small[1]);
+  },
+
+  'Displays a popup with automatic width correctly when bounded by width': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded-automatic-width`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
+    browser.expect.element('.test-content').to.have.attribute('style').which.contains('width: 200px;');
   },
 });

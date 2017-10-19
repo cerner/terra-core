@@ -1,7 +1,6 @@
 # Terra Popup
 
-The Terra Popup is higher order component that launches tether positioned content with the ability to display a dynamic arrow.
-- Additional tether documentation can be found on their site [TetherJS](http://tether.io/)
+The Terra Popup is higher order component that launches [terra-hookshot][4] positioned content with the ability to display a dynamic arrow.
 
 ## Getting Started
 
@@ -123,7 +122,11 @@ As stateless react elements do not return a ref, but may be desired targets for 
 ##### Rendering a popup inside a modal
 The [Modal][1] component by default will trap focus. In order to interact with a popup when rendered inside a modal, the popup must request focus from the modal. The [App Delegate][2] in the [Modal Manager][3] component provides support for requesting and releasing focus from the modal. Therefore, the [Modal Manager][3] component must be used when rendering a popup in a modal. When composing a popup in the [Modal Manager][3], pass in the requestFocus and releaseFocus functions in the [App Delegate][2] to the requestFocus and releaseFocus props in the popup. The [Modal Manager][3] will facilitate requesting and releasing focus when the popup opens and closes.
 
+##### Rendering a popup using automatic sizing
+When setting either the contentHeight or contentWidth to 'auto' the popup will layout to the size of the content. If the content is larger than the set bounding area it will be resized to fit the bounding area, and the content will be decorated with the props isHeightBounded/isWidthBounded in order to allow the content to respond to the resized state.
+
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal/docs
 [2]: https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate/docs
 [3]: https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager/docs
+[4]: https://github.com/cerner/terra-core/tree/master/packages/terra-hookshot/docs
 
