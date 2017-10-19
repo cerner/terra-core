@@ -3,7 +3,7 @@ const path = require('path');
 const webpackConfig = require('./packages/terra-site/webpack.config.js');
 const VisualRegressionCompare = require('wdio-visual-regression-service/compare');
 const chai = require('chai');
-const chromedriver = require('chromedriver');
+const seleniumConfig = require('selenium-standalone/lib/default-config');
 
 function getScreenshotName(ref) {
   return (context) => {
@@ -14,6 +14,9 @@ function getScreenshotName(ref) {
     return path.join(testPath, '__snapshots__', ref, `${testName}_${browserName}_${browserWidth}.png`);
   };
 }
+
+const drivers = seleniumConfig.drivers;
+drivers.chrome.version = '2.33';
 
 exports.config = {
 
@@ -55,7 +58,11 @@ exports.config = {
 
   connectionRetryCount: 3,
 
-  services: ['visual-regression', 'webpack-dev-server', 'selenium-standalone'],
+  services: ['selenium-standalone', 'visual-regression', 'webpack-dev-server'],
+  seleniumInstallArgs: {
+    version: '3.6.0',
+    drivers,
+  },
 
   framework: 'mocha',
 
@@ -68,10 +75,6 @@ exports.config = {
   },
   plugins: {
     'wdio-screenshot': {},
-  },
-
-  beforeSession: () => {
-    chromedriver.start();
   },
 
   before: () => {
@@ -96,16 +99,12 @@ exports.config = {
     };
   },
 
-  afterSession: () => {
-    chromedriver.stop();
-  },
-
   visualRegression: {
     compare: new VisualRegressionCompare.LocalCompare({
       referenceName: getScreenshotName('reference'),
       screenshotName: getScreenshotName('screen'),
       diffName: getScreenshotName('diff'),
-      misMatchTolerance: 0,
+      misMatchTolerance: 0.01,
     }),
     viewportChangePause: 300,
     widths: [],
