@@ -5,7 +5,7 @@ import styles from './HorizontalDivider.scss';
 
 const cx = classNames.bind(styles);
 
-const HorizontalDivider = (...customProps) => {
+const HorizontalDivider = ({ ...customProps }) => {
   const HorizontalDividerClassNames = cx([
     'divider',
   ]);

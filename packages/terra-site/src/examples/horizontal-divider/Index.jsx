@@ -15,7 +15,7 @@ const HorizontalDividerExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <HorizontalDivider />
+    <h2 id="default">Horizontal Divider</h2><br /><HorizontalDivider className="x" />
   </div>
 );
 
