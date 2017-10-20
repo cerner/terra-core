@@ -13,7 +13,7 @@ The terra-horizontal-divider component is a component that is used to separate c
 import React from 'react';
 import HorizontalDivider from 'terra-horizontal-divider';
 
-<HorizontalDivider {props...} />
+<HorizontalDivider color=#FF0000 />
 ```
 
 ## Component Features
