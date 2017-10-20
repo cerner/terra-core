@@ -221,9 +221,6 @@
     "--terra-mock-color": "#fff",
     "--terra-mock-display": "inline"
   },
-  "Popup": {
-    "--terra-popup-element-z-index": "7001"
-  },
   "PopupArrow": {
     "--terra-popup-arrow-size": "11px",
     "--terra-popup-arrow-z-index": "7002",
@@ -247,8 +244,7 @@
     "--terra-popup-content-close-hover-color": "#999",
     "--terra-popup-content-inner-background-color": "#fff",
     "--terra-popup-content-inner-border": "1px solid #b2b5b6",
-    "--terra-popup-content-inner-box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5)",
-    "--terra-popup-content-margin": "10px"
+    "--terra-popup-content-inner-box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5)"
   },
   "PopupOverlay": {
     "--terra-popup-overlay-background-color": "#fff",

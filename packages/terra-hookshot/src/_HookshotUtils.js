@@ -485,7 +485,6 @@ const getBoundedPositions = (positions, boundingRect) => {
   const contentRect = positions.content.rect;
   const contentX = positions.content.x;
   const contentY = positions.content.y;
-  let bounded = false;
 
   // Checks Horizontal Bounds
   if (boundingRect.left >= contentX) {
@@ -499,16 +498,13 @@ const getBoundedPositions = (positions, boundingRect) => {
   // Checks Vertical Bounds
   if (boundingRect.top >= contentY) {
     contentCoords.y = boundingRect.top;
-    bounded = true;
   } else if (boundingRect.bottom <= contentY + contentRect.height) {
     contentCoords.y = boundingRect.bottom - contentRect.height;
-    bounded = true;
   } else {
     contentCoords.y = contentY;
   }
 
   return {
-    bounded,
     content: {
       x: contentCoords.x,
       y: contentCoords.y,
@@ -544,24 +540,14 @@ const positionStyleFromBounds = (boundingRect, content, target, margin, behavior
   // Get bounded content and target positions
   positions = getBoundedPositions(positions, boundingRect);
 
-  const result = {
+  return {
     style: {
       position: 'absolute',
-      left: `${positions.content.x + pageXOffset}px`,
-      top: `${positions.content.y + pageYOffset}px`,
+      left: `${Math.round(positions.content.x + pageXOffset)}px`,
+      top: `${Math.round(positions.content.y + pageYOffset)}px`,
     },
     positions,
   };
-
-  // Account for mobile zoom, this plays havoc with page offsets, so adjusting to fixed positioning.
-  if (positions.bounded || document.body.clientWidth / window.innerWidth > 1.0) {
-    result.style = {
-      position: 'fixed',
-      left: `${positions.content.x}px`,
-      top: `${positions.content.y}px`,
-    };
-  }
-  return result;
 };
 
 export default {
