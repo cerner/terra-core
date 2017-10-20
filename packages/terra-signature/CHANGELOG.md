@@ -3,7 +3,6 @@ Changelog
 
 Unreleased
 ----------
-* Add mousedown left-click check and mouseleave event handler
 
 0.3.0 - (October 6, 2017)
 ------------------
