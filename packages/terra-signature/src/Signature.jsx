@@ -107,10 +107,8 @@ class Signature extends React.Component {
   }
 
   mouseDown(event) {
-    if ('button' in event) {
-      if (event.button !== MOUSECODES.LEFTCLICK) {
-        return;
-      }
+    if ('button' in event && event.button !== MOUSECODES.LEFTCLICK) {
+      return;
     }
     this.setState({ painting: true });
 
