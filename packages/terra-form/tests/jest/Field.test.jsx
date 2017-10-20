@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-boolean-value, import/no-extraneous-dependencies */
 import React from 'react';
+import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import intlContexts from './intl-context-setup';
 import Field from '../../src/Field';
 
@@ -128,6 +129,12 @@ it('should render a required field in error', () => {
       inError
     />
   );
+  const wrapper = shallow(field, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a field with a custom error icon', () => {
+  const field = <Field errorIcon={<IconHelp />} />;
   const wrapper = shallow(field, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });

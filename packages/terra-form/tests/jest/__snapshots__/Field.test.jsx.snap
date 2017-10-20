@@ -82,6 +82,12 @@ exports[`should render a field label 1`] = `
 </div>
 `;
 
+exports[`should render a field with a custom error icon 1`] = `
+<div
+  className="field"
+/>
+`;
+
 exports[`should render a required feild label with required hidden 1`] = `
 <div
   className="field"
