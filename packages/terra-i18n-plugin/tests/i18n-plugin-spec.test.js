@@ -2,6 +2,7 @@
 /* eslint-disable global-require */
 /* eslint no-underscore-dangle: ["error", { "allow": ["_plugins"] }] */
 import fs from 'fs';
+import path from 'path';
 import I18nAggregatorPlugin from '../src/I18nAggregatorPlugin';
 
 const Compiler = require('webpack/lib/Compiler');
@@ -17,7 +18,7 @@ function createCompiler() {
 
 describe('i18n-aggregator-plugin', () => {
   const supportedLocales = ['en', 'es', 'pt'];
-  const baseDirectory = 'packages/terra-i18n-plugin/tests/fixtures';
+  const baseDirectory = path.join('packages', 'terra-i18n-plugin', 'tests', 'fixtures');
 
   describe('when throwing errors when plugin options are not provided', () => {
     const compiler = createCompiler();
@@ -81,13 +82,13 @@ describe('i18n-aggregator-plugin', () => {
 
     it('should log console warning for missing tranlsation files', () => {
       expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain('/tests/fixtures/node_modules/fixtures2/translations');
+      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
     it('should fill the tranlsation files with the expected information for each locales', () => {
       supportedLocales.forEach((locale, index) => {
-        expect(outputtedFileName[index]).toContain(`aggregated-translations/${locale}.js`);
+        expect(outputtedFileName[index]).toContain(path.join('aggregated-translations', `${locale}.js`));
         expect(outputtedFileContent[index]).toContain(`react-intl/locale-data/${locale}`);
         if (locale === 'en') {
           const missingTranslationMessages = Object.assign({}, expectedMessages);
@@ -142,13 +143,13 @@ describe('i18n-aggregator-plugin', () => {
 
     it('should log console warning for missing tranlsation files', () => {
       expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain('/tests/fixtures/node_modules/fixtures2/translations');
+      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
     it('should fill the tranlsation files with the expected information for each locales', () => {
       supportedLocales.forEach((locale, index) => {
-        expect(outputtedFileName[index]).toContain(`aggregated-translations/${locale}.js`);
+        expect(outputtedFileName[index]).toContain(path.join('aggregated-translations', `${locale}.js`));
         expect(outputtedFileContent[index]).toContain(`react-intl/locale-data/${locale}`);
         if (locale === 'en') {
           const missingTranslationMessages = Object.assign({}, expectedMessages);
