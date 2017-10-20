@@ -12,7 +12,7 @@ const BaseTests = () => (
       <li><Link to="/tests/arrange-tests/aligned-individually-fit-start">Individually Aligned FitStart</Link></li>
       <li><Link to="/tests/arrange-tests/aligned-individually-fill">Individually Aligned Fill</Link></li>
       <li><Link to="/tests/arrange-tests/aligned-individually-fit-end">Individually Aligned FitEnd</Link></li>
-      <li><Link to="/tests/arrange-tests/aligned-all-arrange-long-word">Aligned Array with LongWords</Link></li>
+      <li><Link to="/tests/arrange-tests/aligned-all-arrange-long-words">Aligned Array with LongWords</Link></li>
     </ul>
   </div>
 );

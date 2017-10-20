@@ -10,9 +10,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ className: 'test1', style: { maxWidth: '10px', wordWrap: 'break-word' } }}
-        fillAttributes={{ className: 'test2', style: { maxWidth: '20px', wordWrap: 'break-word' } }}
-        fitEndAttributes={{ className: 'test3', style: { maxWidth: '30px', wordWrap: 'break-word' } }}
+        fitStartAttributes={{ className: 'test1', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
+        fillAttributes={{ className: 'test2', style: { maxWidth: '30%', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ className: 'test3', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 
@@ -23,9 +23,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ className: 'test1', style: { maxWidth: '10px', wordWrap: 'break-word' } }}
-        fillAttributes={{ className: 'test2', style: { maxWidth: '20px', wordWrap: 'break-word' } }}
-        fitEndAttributes={{ className: 'test3', style: { maxWidth: '30px', wordWrap: 'break-word' } }}
+        fitStartAttributes={{ className: 'test1', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
+        fillAttributes={{ className: 'test2', style: { maxWidth: '30%', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ className: 'test3', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 
@@ -36,9 +36,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ className: 'test1', style: { maxWidth: '10px', wordWrap: 'break-word' } }}
-        fillAttributes={{ className: 'test2', style: { maxWidth: '20px', wordWrap: 'break-word' } }}
-        fitEndAttributes={{ className: 'test3', style: { maxWidth: '30px', wordWrap: 'break-word' } }}
+        fitStartAttributes={{ className: 'test1', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
+        fillAttributes={{ className: 'test2', style: { maxWidth: '30%', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ className: 'test3', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 
@@ -49,9 +49,9 @@ const AlignedAllArrange = () => (
         fitStart={longWordText}
         fill={longWordText}
         fitEnd={longWordText}
-        fitStartAttributes={{ className: 'test1', style: { maxWidth: '10px', wordWrap: 'break-word' } }}
-        fillAttributes={{ className: 'test2', style: { maxWidth: '20px', wordWrap: 'break-word' } }}
-        fitEndAttributes={{ className: 'test3', style: { maxWidth: '30px', wordWrap: 'break-word' } }}
+        fitStartAttributes={{ className: 'test1', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
+        fillAttributes={{ className: 'test2', style: { maxWidth: '30%', wordWrap: 'break-word' } }}
+        fitEndAttributes={{ className: 'test3', style: { maxWidth: '35%', wordWrap: 'break-word' } }}
       />
     </ArrangeWrapper>
 

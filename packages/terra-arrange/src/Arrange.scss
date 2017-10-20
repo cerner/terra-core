@@ -10,7 +10,6 @@
   }
 
   // Makes sure fill expands to fill the remaining space of its parent container
-  // Display set to ensure correct appreance if applied to inline elements like span
   .fill {
     flex: 1 1 auto;
     min-width: 0;
