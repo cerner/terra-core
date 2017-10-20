@@ -12,8 +12,8 @@ exports[`should render a TextAreaField with the rest of the props 1`] = `
   help="The name given to you at birth."
   hideRequired={false}
   htmlFor="description"
-  inError={false}
   isInline={true}
+  isInvalid={false}
   label="Profile Description"
   labelAttrs={Object {}}
   required={true}
@@ -43,8 +43,8 @@ exports[`should render a default TextAreaField component 1`] = `
   }
   help={null}
   hideRequired={false}
-  inError={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
@@ -88,8 +88,8 @@ exports[`should render as controlled when just a default value is passed into th
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
@@ -151,8 +151,8 @@ exports[`should render as uncontrolled when just a default value is passed into 
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}

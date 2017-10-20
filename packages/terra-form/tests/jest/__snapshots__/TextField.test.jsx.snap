@@ -12,8 +12,8 @@ exports[`should render a TextField with the rest of the props 1`] = `
   help="This will not be shared with outside sources"
   hideRequired={false}
   htmlFor="email"
-  inError={false}
   isInline={true}
+  isInvalid={false}
   label="Email Address"
   labelAttrs={
     Object {
@@ -46,8 +46,8 @@ exports[`should render a default TextField component 1`] = `
   }
   help={null}
   hideRequired={false}
-  inError={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
@@ -89,8 +89,8 @@ exports[`should render as controlled when just a default value is passed into th
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
@@ -149,8 +149,8 @@ exports[`should render as uncontrolled when just a default value is passed into 
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}

@@ -14,7 +14,7 @@ const FormTests = () => (
       <li>Field Tests</li>
       <ul>
         <li><Link to="/tests/form-tests/field/combinations">Field - Field Combinations</Link></li>
-        <li><Link to="/tests/form-tests/field/in-error">Field - Interactive In Error</Link></li>
+        <li><Link to="/tests/form-tests/field/is-invalid">Field - Interactive Valid State</Link></li>
         <li><Link to="/tests/form-tests/field/inline">Field - Inline</Link></li>
         <li><Link to="/tests/form-tests/field/text-wrap">Field - Text Wrap</Link></li>
       </ul>

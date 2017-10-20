@@ -41,26 +41,26 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#error-text > div[class*="error-text"]').to.be.present;
   },
 
-  'Displays an in-error optional field with a label, help text and error text': (browser) => {
+  'Displays an invalid optional field with a label, help text and error text': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
-    browser.expect.element('#optional-in-error').to.be.present;
-    browser.expect.element('#optional-in-error > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
-    browser.expect.element('#optional-in-error > div[class*="label-group"] > label').to.be.present;
-    browser.expect.element('#optional-in-error > div[class*="error-text"]').to.be.present;
-    browser.expect.element('#optional-in-error > div[class*="help-text"]').to.be.present;
+    browser.expect.element('#optional-invalid').to.be.present;
+    browser.expect.element('#optional-invalid > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
+    browser.expect.element('#optional-invalid > div[class*="label-group"] > label').to.be.present;
+    browser.expect.element('#optional-invalid > div[class*="error-text"]').to.be.present;
+    browser.expect.element('#optional-invalid > div[class*="help-text"]').to.be.present;
   },
 
-  'Displays an in-error required field with a label, help text and error text': (browser) => {
+  'Displays an invalid required field with a label, help text and error text': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`);
-    browser.expect.element('#required-in-error').to.be.present;
-    browser.expect.element('#required-in-error > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
-    browser.expect.element('#required-in-error > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
-    browser.expect.element('#required-in-error > div[class*="error-text"]').to.be.present;
-    browser.expect.element('#required-in-error > div[class*="help-text"]').to.be.present;
+    browser.expect.element('#required-invalid').to.be.present;
+    browser.expect.element('#required-invalid > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
+    browser.expect.element('#required-invalid > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
+    browser.expect.element('#required-invalid > div[class*="error-text"]').to.be.present;
+    browser.expect.element('#required-invalid > div[class*="help-text"]').to.be.present;
   },
 
   'Label maintains appropriate spacing for error-icon hidden and visible': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/in-error`);
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/is-invalid`);
 
     browser.expect.element('#default > div[class*="label-group"] > label[class*="label"]').to.be.present;
     browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
@@ -69,7 +69,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(result.status, 0);
       const labelWidth = result.value.width;
 
-      browser.click('#toggle-in-error');
+      browser.click('#toggle-is-invalid');
       browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon_"]').to.be.present;
       browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.not.be.present;
 
@@ -81,7 +81,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Hidden required label maintains appropriate spacing for error-icon hidden and visible': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/in-error`);
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/is-invalid`);
 
     browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
     browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
@@ -92,7 +92,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(result.status, 0);
       const labelWidth = result.value.width;
 
-      browser.click('#toggle-in-error');
+      browser.click('#toggle-is-invalid');
       browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon_"]').to.be.present;
       browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.not.be.present;
       browser.expect.element('#required-hidden > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
@@ -105,8 +105,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
-  'Field maintains width when in-error': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/in-error`);
+  'Field maintains width when is-invalid': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-tests/field/is-invalid`);
 
     browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
     browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
@@ -117,7 +117,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.assert.equal(result.status, 0);
       const labelWidth = result.value.width;
 
-      browser.click('#toggle-in-error');
+      browser.click('#toggle-is-invalid');
       browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon_"]').to.be.present;
       browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.not.be.present;
       browser.expect.element('#inline-2 > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;

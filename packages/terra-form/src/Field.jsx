@@ -35,7 +35,7 @@ const propTypes = {
   /**
    * Determines whether the field is in error or not.
    */
-  inError: PropTypes.bool,
+  isInvalid: PropTypes.bool,
   /**
    * Determines whether the field is an inline field.
    */
@@ -65,7 +65,7 @@ const defaultProps = {
   help: null,
   hideRequired: false,
   htmlFor: undefined,
-  inError: false,
+  isInvalid: false,
   isInline: false,
   label: null,
   labelAttrs: {},
@@ -90,7 +90,7 @@ const Field = (props, { intl }) => {
     help,
     hideRequired,
     htmlFor,
-    inError,
+    isInvalid,
     isInline,
     label,
     labelAttrs,
@@ -114,14 +114,14 @@ const Field = (props, { intl }) => {
   if (label) {
     labelGroup = (
       <div className={cx('label-group')}>
-        {inError && <div className={cx('error-icon')}>{errorIcon}</div>}
+        {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
         {<label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
-          {required && (inError || !hideRequired) && <div className={cx('required')}>*</div>}
+          {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
           {label}
-          {required && !inError && hideRequired && <div className={cx('required-hidden')}>*</div>}
+          {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
           {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
         </label>}
-        {!inError && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
+        {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
       </div>
     );
   }
@@ -130,7 +130,7 @@ const Field = (props, { intl }) => {
     <div {...customProps} className={fieldClasses}>
       {labelGroup}
       {children}
-      {inError && error && <div className={cx('error-text')}>{error}</div>}
+      {isInvalid && error && <div className={cx('error-text')}>{error}</div>}
       {help && <div className={cx('help-text')}>{help}</div>}
     </div>
   );

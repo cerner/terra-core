@@ -57,31 +57,31 @@ const FieldExamples = () => (
       id="error-text"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       error="Error Message"
-      inError
+      isInvalid
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
     <h3>Field - Label + In Error + Help Text</h3>
     <Field
-      id="optional-in-error"
+      id="optional-invalid"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       help="Help Message"
       error="Error Message"
-      inError
+      isInvalid
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
     <h3>Field -  Label + Required + In Error + Help Text</h3>
     <Field
-      id="required-in-error"
+      id="required-invalid"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
       label="Field Label"
       help="Help Message"
       error="Error Message"
-      inError
+      isInvalid
       required
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>

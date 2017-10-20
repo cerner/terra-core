@@ -98,7 +98,7 @@ it('should render a field in error', () => {
       label="Field Label"
       error="Error Text"
       help="Help Text"
-      inError
+      isInvalid
     />
   );
   const wrapper = shallow(field, intlContexts.shallowContext);
@@ -112,7 +112,7 @@ it('should render an optional field in error', () => {
       error="Error Text"
       help="Help Text"
       showOptional
-      inError
+      isInvalid
     />
   );
   const wrapper = shallow(field, intlContexts.shallowContext);
@@ -126,7 +126,7 @@ it('should render a required field in error', () => {
       error="Error Text"
       help="Help Text"
       required
-      inError
+      isInvalid
     />
   );
   const wrapper = shallow(field, intlContexts.shallowContext);

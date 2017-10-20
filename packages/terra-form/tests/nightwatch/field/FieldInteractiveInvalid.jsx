@@ -7,12 +7,12 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 class FieldExamples extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { inError: false };
-    this.handleInErrorChange = this.handleInErrorChange.bind(this);
+    this.state = { isInvalid: false };
+    this.handleIsInvalidChange = this.handleIsInvalidChange.bind(this);
   }
 
-  handleInErrorChange() {
-    this.setState({ inError: !this.state.inError });
+  handleIsInvalidChange() {
+    this.setState({ isInvalid: !this.state.isInvalid });
   }
 
   render() {
@@ -23,7 +23,7 @@ class FieldExamples extends React.Component {
         label="Field Label"
         help="Help Message"
         error="Error Message"
-        inError={this.state.inError}
+        isInvalid={this.state.isInvalid}
       >
         <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
       </Field>
@@ -36,7 +36,7 @@ class FieldExamples extends React.Component {
         label="Field Label"
         help="Help Message"
         error="Error Message"
-        inError={this.state.inError}
+        isInvalid={this.state.isInvalid}
         showOptional
       >
         <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
@@ -50,7 +50,7 @@ class FieldExamples extends React.Component {
         label="Field Label"
         help="Help Message"
         error="Error Message"
-        inError={this.state.inError}
+        isInvalid={this.state.isInvalid}
         required
       >
         <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
@@ -64,7 +64,7 @@ class FieldExamples extends React.Component {
         label="Field Label"
         help="Help Message"
         error="Error Message"
-        inError={this.state.inError}
+        isInvalid={this.state.isInvalid}
         required
         hideRequired
       >
@@ -80,7 +80,7 @@ class FieldExamples extends React.Component {
           label="Field Label Spacing Proof"
           error="Error Message"
           isInline
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
           required
         >
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
@@ -92,7 +92,7 @@ class FieldExamples extends React.Component {
           label="Field Label Spacing Proof"
           error="Error Message"
           isInline
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
           required
           hideRequired
         >
@@ -105,7 +105,7 @@ class FieldExamples extends React.Component {
           label="Field Label Spacing Proof"
           error="Error Message"
           isInline
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
           showOptional
         >
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
@@ -115,7 +115,7 @@ class FieldExamples extends React.Component {
 
     return (
       <Base locale={locale}>
-        <button id="toggle-in-error" onClick={this.handleInErrorChange}>Toggle In Error </button>
+        <button id="toggle-is-invalid" onClick={this.handleIsInvalidChange}>Toggle In Error </button>
         <h3>Field</h3>
         {field}
         <h3>Field - Optional</h3>

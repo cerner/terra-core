@@ -12,8 +12,8 @@ exports[`should render a NumberField when all the possible props are passed into
   help="Your county's office may have this information"
   hideRequired={false}
   htmlFor="tax-rate"
-  inError={false}
   isInline={true}
+  isInvalid={false}
   label="Sales Tax Rate"
   labelAttrs={
     Object {
@@ -47,8 +47,8 @@ exports[`should render a default component 1`] = `
   }
   help={null}
   hideRequired={false}
-  inError={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
@@ -91,8 +91,8 @@ exports[`should render as controlled when just a default value is passed into th
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
@@ -139,8 +139,8 @@ exports[`should render as uncontrolled when just a numeric default value is pass
   }
   help={null}
   hideRequired={false}
-  inError={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
@@ -169,8 +169,8 @@ exports[`should render as uncontrolled when just a string default value is passe
   }
   help={null}
   hideRequired={false}
-  inError={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}

@@ -11,8 +11,8 @@ exports[`should render a SelectField when all the possible props are passed into
   }
   help="solve the mystery"
   hideRequired={false}
-  inError={false}
   isInline={true}
+  isInvalid={false}
   label="Meddling Kids"
   labelAttrs={
     Object {
@@ -54,8 +54,8 @@ exports[`should render a default SelectField component 1`] = `
   }
   help={null}
   hideRequired={false}
-  inError={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
@@ -112,8 +112,8 @@ exports[`should render as controlled when just the required fields and a onChang
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
@@ -198,8 +198,8 @@ exports[`should render as uncontrolled when just the required fields and a defau
     }
     help={null}
     hideRequired={false}
-    inError={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
