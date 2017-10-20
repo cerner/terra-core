@@ -2,6 +2,7 @@ Changelog
 =========
 ### Fixed
 * Mobile zoom on safari
+* Half px value causing blurriness
 
 Unreleased
 ----------
