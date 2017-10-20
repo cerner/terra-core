@@ -6,6 +6,7 @@ The terra-horizontal-divider component is a component that is used to separate c
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-horizontal-divider`
+  - `yarn add terra-horizontal-divider`
 
 ## Usage
 
