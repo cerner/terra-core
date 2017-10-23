@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* isInvalid, showOptional, hideRequired and errorIcon props
+
+### Changed
+* Uplift Field Component for OSC
+
 ### Updated
 * Added disabled support to select component
 
