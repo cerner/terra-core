@@ -14,6 +14,8 @@ import SearchFieldBasic from './SearchFieldBasic';
 import SearchFieldPlaceholder from './SearchFieldPlaceholder';
 import SearchFieldMinimumLength from './SearchFieldMinimumLength';
 import SearchFieldDelayed from './SearchFieldDelayed';
+import SearchFieldDisabled from './SearchFieldDisabled';
+import SearchFieldStretched from './SearchFieldStretched';
 
 const SearchFieldExamples = () => (
   <div>
@@ -31,6 +33,10 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldDelayed">Search Field with delay of 2000ms</h2>
     <SearchFieldDelayed />
+    <h2 id="searchFieldDisabled">Search Field Disabled</h2>
+    <SearchFieldDisabled />
+    <h2 id="searchFieldStretched">Search Field Stretched</h2>
+    <SearchFieldStretched />
   </div>
 );
 

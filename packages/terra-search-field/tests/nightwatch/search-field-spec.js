@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
@@ -73,5 +74,16 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
         browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
       });
     });
+  },
+
+  'Displays the search button disabled': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
+
+    browser.assert.expect.element('#disabledsearchfield').to.be.present;
+    browser.assert.expect.element('#disabledsearchfield button').to.be.present;
+    browser.assert.expect.element('#disabledsearchfield input').to.be.present;
+
+    browser.expect.element('#disabledsearchfield button').to.not.be.enabled;
+    browser.expect.element('#disabledsearchfield input').to.not.be.enabled;
   },
 });

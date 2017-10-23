@@ -34,12 +34,24 @@ const propTypes = {
    * A callback to indicate an invalid search. Sends parameter {String} searchText.
    */
   onInvalidSearch: PropTypes.func,
+
+  /**
+   * Indicates whether or not the search control should be disabled.
+   */
+  isDisabled: PropTypes.bool,
+
+  /**
+   * Indicates what sizing style should be used. Should be `fixed` or `stretch`.
+   */
+  sizing: PropTypes.oneOf(['fixed', 'stretch']),
 };
 
 const defaultProps = {
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
+  isDisabled: false,
+  sizing: 'fixed',
 };
 
 class SearchField extends React.Component {
@@ -86,10 +98,21 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const {
+      placeholder,
+      searchDelay,
+      minimumSearchTextLength,
+      onSearch,
+      onInvalidSearch,
+      isDisabled,
+      sizing,
+      ...customProps
+    } = this.props;
+
     const searchFieldClassNames = cx([
       'searchfield',
       customProps.className,
+      { stretch: sizing === 'stretch' },
     ]);
 
     return (
@@ -100,18 +123,19 @@ class SearchField extends React.Component {
           placeholder={placeholder}
           value={this.state.searchText}
           onChange={this.handleTextChange}
+          disabled={isDisabled}
         />
         <Button
           className={cx('button')}
           onClick={this.handleSearch}
           isCompact
+          isDisabled={isDisabled}
         >
           <IconSearch />
         </Button>
       </div>
     );
   }
-
 }
 
 SearchField.propTypes = propTypes;
