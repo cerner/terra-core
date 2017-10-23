@@ -79,6 +79,9 @@ const defaultProps = {
   children: [],
   isFocused: false,
   title: '',
+  isWidthBounded: false,
+  isHeightBounded: false,
+  isHidden: false,
 };
 
 const childContextTypes = {

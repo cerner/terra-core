@@ -48,7 +48,7 @@ const propTypes = {
    * A string representation of the width in px, limited to:
    * 160, 240, 320, 640, 960, 1280, 1760 or auto
    */
-  contentWidth: PropTypes.oneOf(['160', '240', '320', '640', '960', '1280', '1760', 'auto']),
+  contentWidth: PropTypes.oneOf(Object.keys(Popup.Opts.widths)),
   /**
    * Indicates if the menu should have an center aligned arrow displayed on dropdown.
    * Otherwise, the menu will display without an arrow and right aligned.
@@ -81,7 +81,7 @@ class Menu extends React.Component {
   setPageDimensions(node) {
     if (node) {
       this.pageHeight = node.clientHeight;
-      if (this.props.contentWidth === 'dynamic') {
+      if (this.props.contentWidth === 'auto') {
         this.pageWidth = node.clientWidth;
       }
     } else {
@@ -173,5 +173,8 @@ Menu.defaultProps = defaultProps;
 Menu.Item = MenuItem;
 Menu.ItemGroup = MenuItemGroup;
 Menu.Divider = MenuDivider;
+Menu.Opts = {
+  widths: Popup.Opts.widths,
+};
 
 export default Menu;

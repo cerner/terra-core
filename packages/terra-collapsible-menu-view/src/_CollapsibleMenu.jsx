@@ -19,7 +19,7 @@ const propTypes = {
    * A string representation of the width in px, limited to:
    * 160, 240, 320, 640, 960, 1280, 1760, or auto
    */
-  contentWidth: PropTypes.oneOf(['160', '240', '280', '320', '640', '960', '1280', '1760', 'auto']),
+  contentWidth: PropTypes.oneOf(Object.keys(Menu.Opts.widths)),
 
   /**
    * Button to display the menu from
@@ -134,5 +134,8 @@ CollapsibleMenu.defaultProps = defaultProps;
 CollapsibleMenu.childContextTypes = childContextTypes;
 CollapsibleMenu.Item = Menu.Item;
 CollapsibleMenu.ItemGroup = Menu.ItemGroup;
+CollapsibleMenu.Opts = {
+  widths: Menu.Opts.widths,
+};
 
 export default CollapsibleMenu;
