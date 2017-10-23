@@ -4,12 +4,12 @@ import Field from 'terra-form/lib/Field';
 class FieldExamples extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { inError: false };
+    this.state = { isInvalid: false };
     this.toggleInError = this.toggleInError.bind(this);
   }
 
   toggleInError() {
-    this.setState({ inError: !this.state.inError });
+    this.setState({ isInvalid: !this.state.isInvalid });
   }
 
   render() {
@@ -20,7 +20,7 @@ class FieldExamples extends React.Component {
           label="Field Label"
           help="This is a standard, non-required field."
           error="Error Message"
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
         >
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
         </Field>
@@ -28,7 +28,7 @@ class FieldExamples extends React.Component {
           label="Field Label"
           help="This is an optional field."
           error="Error Message"
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
           isInline
           showOptional
         >
@@ -39,7 +39,7 @@ class FieldExamples extends React.Component {
           label="Field Label"
           help="This is a required field."
           error="Error Message"
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
           isInline
           required
         >
@@ -50,7 +50,7 @@ class FieldExamples extends React.Component {
           label="Field Label"
           help="This is a required field, but the required indicator is hidden until the field is in error."
           error="Now the required indicator is showing because the field is in error."
-          inError={this.state.inError}
+          isInvalid={this.state.isInvalid}
           isInline
           required
           hideRequired

@@ -119,7 +119,7 @@ class ControlledInput extends React.Component {
           label="Current or Most Recent Employment Title"
           help="This is your most recent employment position"
           error="We really do want to know your most recent job title!"
-          inError={this.state.requiredFields.employmentInError}
+          isInvalid={this.state.requiredFields.employmentInError}
           value={this.state.formData.jobTitle}
           onChange={this.handleEmploymentUpdate}
           name="employment"
@@ -133,7 +133,7 @@ class ControlledInput extends React.Component {
           <TextField
             label="First"
             error="First name required."
-            inError={this.state.requiredFields.firstInError}
+            isInvalid={this.state.requiredFields.firstInError}
             value={this.state.formData.first}
             onChange={this.handleNameUpdate}
             name="first"
@@ -154,7 +154,7 @@ class ControlledInput extends React.Component {
           <TextField
             label="Last"
             error="Last name required."
-            inError={this.state.requiredFields.lastInError}
+            isInvalid={this.state.requiredFields.lastInError}
             value={this.state.formData.last}
             onChange={this.handleNameUpdate}
             name="last"
@@ -188,7 +188,7 @@ class ControlledInput extends React.Component {
                       { value: 'mac', display: 'Mac OSX' },
                       { value: 'windows', display: 'Microsoft Windows' },
                       { value: 'linux', display: 'Linux' }]}
-          inError={this.state.requiredFields.osInError}
+          isInvalid={this.state.requiredFields.osInError}
           error="Opps. You forgot to select your all time favorite."
           help="We try not to restrict dev environment"
           label="Preferred Operating System"
