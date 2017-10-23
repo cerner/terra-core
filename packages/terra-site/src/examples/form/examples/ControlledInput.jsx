@@ -23,10 +23,10 @@ class ControlledInput extends React.Component {
         interestedDivisions: [],
       },
       requiredFields: {
-        employmentInError: false,
-        firstInError: false,
-        lastInError: false,
-        osInError: false,
+        employmentIsInvalid: false,
+        firtIsInvalid: false,
+        lastIsInvalid: false,
+        osIsInvalid: false,
       },
     };
 
@@ -96,10 +96,10 @@ class ControlledInput extends React.Component {
     const formValidation = Object.assign({}, this.state.requiredFields);
     let invalid = true;
 
-    invalid = formValidation.employmentInError = submittedData.jobTitle.length <= 0;
-    invalid = formValidation.firstInError = submittedData.first.length <= 0;
-    invalid = formValidation.lastInError = submittedData.last.length <= 0;
-    invalid = formValidation.osInError = submittedData.operatingSystem.length <= 0;
+    invalid = formValidation.employmentIsInvalid = submittedData.jobTitle.length <= 0;
+    invalid = formValidation.firtIsInvalid = submittedData.first.length <= 0;
+    invalid = formValidation.lastIsInvalid = submittedData.last.length <= 0;
+    invalid = formValidation.osIsInvalid = submittedData.operatingSystem.length <= 0;
 
     this.setState({
       requiredFields: formValidation,
@@ -119,7 +119,7 @@ class ControlledInput extends React.Component {
           label="Current or Most Recent Employment Title"
           help="This is your most recent employment position"
           error="We really do want to know your most recent job title!"
-          isInvalid={this.state.requiredFields.employmentInError}
+          isInvalid={this.state.requiredFields.employmentIsInvalid}
           value={this.state.formData.jobTitle}
           onChange={this.handleEmploymentUpdate}
           name="employment"
@@ -133,7 +133,7 @@ class ControlledInput extends React.Component {
           <TextField
             label="First"
             error="First name required."
-            isInvalid={this.state.requiredFields.firstInError}
+            isInvalid={this.state.requiredFields.firtIsInvalid}
             value={this.state.formData.first}
             onChange={this.handleNameUpdate}
             name="first"
@@ -154,7 +154,7 @@ class ControlledInput extends React.Component {
           <TextField
             label="Last"
             error="Last name required."
-            isInvalid={this.state.requiredFields.lastInError}
+            isInvalid={this.state.requiredFields.lastIsInvalid}
             value={this.state.formData.last}
             onChange={this.handleNameUpdate}
             name="last"
@@ -188,7 +188,7 @@ class ControlledInput extends React.Component {
                       { value: 'mac', display: 'Mac OSX' },
                       { value: 'windows', display: 'Microsoft Windows' },
                       { value: 'linux', display: 'Linux' }]}
-          isInvalid={this.state.requiredFields.osInError}
+          isInvalid={this.state.requiredFields.osIsInvalid}
           error="Opps. You forgot to select your all time favorite."
           help="We try not to restrict dev environment"
           label="Preferred Operating System"

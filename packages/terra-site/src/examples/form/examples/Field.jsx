@@ -5,10 +5,10 @@ class FieldExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isInvalid: false };
-    this.toggleInError = this.toggleInError.bind(this);
+    this.toggleIsInvalid = this.toggleIsInvalid.bind(this);
   }
 
-  toggleInError() {
+  toggleIsInvalid() {
     this.setState({ isInvalid: !this.state.isInvalid });
   }
 
@@ -58,7 +58,7 @@ class FieldExamples extends React.Component {
           <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
         </Field>
         <hr />
-        <p>If a feild is in error, an error icon will be displayed. <button onClick={this.toggleInError}>Toggle Error State</button></p>
+        <p>If a feild is invalid, an error icon will be displayed. <button onClick={this.toggleIsInvalid}>Toggle Invalid State</button></p>
       </div>
     );
   }

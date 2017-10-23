@@ -9,11 +9,17 @@ class TextFieldExamples extends React.Component {
       nameMaxLength: 'Michael',
       favoriteFood: 'Chicken McNuggets',
       favoriteMovie: 'Tron',
+      isInvalid: false,
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleNameMaxLengthChange = this.handleNameMaxLengthChange.bind(this);
     this.handlefavFoodChange = this.handlefavFoodChange.bind(this);
     this.handlefavMovieChange = this.handlefavMovieChange.bind(this);
+    this.toggleIsInvalid = this.toggleIsInvalid.bind(this);
+  }
+
+  toggleIsInvalid() {
+    this.setState({ isInvalid: !this.state.isInvalid });
   }
 
   handleNameChange(event) {
@@ -41,8 +47,9 @@ class TextFieldExamples extends React.Component {
             name="name"
             inputId="name"
             defaultValue="Mike"
-            error="Name is required"
+            error="This Field is Required"
             help="The name given to you at birth."
+            isInvalid={this.state.isInvalid}
             onChange={this.handleNameChange}
           />
           <TextField
@@ -50,10 +57,11 @@ class TextFieldExamples extends React.Component {
             name="name"
             inputId="user-maxlength"
             defaultValue="Michael"
-            error="Name is required"
+            error="Potential Error Message"
             help="The name given to you at birth."
             maxLength={15}
-            required
+            showOptional
+            isInvalid={this.state.isInvalid}
             onChange={this.handleNameMaxLengthChange}
           />
           <div>
@@ -63,8 +71,11 @@ class TextFieldExamples extends React.Component {
               inputId="favorite-food"
               isInline
               defaultValue="Chicken McNuggets"
-              error="Name is required"
+              error="This Field is Required"
               help="Our team loves catering birthday lunches!"
+              required
+              hideRequired
+              isInvalid={this.state.isInvalid}
               onChange={this.handlefavFoodChange}
             />
             <TextField
@@ -76,11 +87,13 @@ class TextFieldExamples extends React.Component {
               help="We like to do movie outings!"
               maxLength={50}
               required
+              isInvalid={this.state.isInvalid}
               onChange={this.handlefavMovieChange}
             />
           </div>
         </form>
         <hr />
+        <p>If a text feild is invalid, an error icon will be displayed. <button onClick={this.toggleIsInvalid}>Toggle Invalid State</button></p>
         <ul>Input Provided:
           <li style={{ margin: '10px' }}>Name - {this.state.name}</li>
           <li style={{ margin: '10px' }}>Name with Maxlength - {this.state.nameMaxLength}</li>
