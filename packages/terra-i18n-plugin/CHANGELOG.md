@@ -4,6 +4,10 @@ Changelog
 Unreleased
 ----------
 
+1.8.0 - (October 24, 2017)
+------------------
+* Updated to allow an inputFileSystem to be passed in through the options
+
 1.7.0 - (October 12, 2017)
 ------------------
 ### Changed

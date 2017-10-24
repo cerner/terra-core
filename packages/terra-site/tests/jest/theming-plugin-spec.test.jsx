@@ -3,6 +3,7 @@
 
 import postcss from 'postcss';
 import fs from 'fs';
+import path from 'path';
 
 describe('theming-plugin', () => {
   let expectedHash;
@@ -61,7 +62,7 @@ describe('theming-plugin', () => {
       const rootNode = postcss.parse(mockStyles);
       rootNode.source = { input: { file: 'TestingComponent.scss' } };
       expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
-      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
+      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual(path.join('terra-core', 'packages', 'terra-site', 'themeable-variables.json'));
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
@@ -80,7 +81,7 @@ describe('theming-plugin', () => {
       }`;
 
       expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
-      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
+      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual(path.join('terra-core', 'packages', 'terra-site', 'themeable-variables.json'));
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
@@ -106,7 +107,7 @@ describe('theming-plugin', () => {
       rootNode.source = { input: { file: 'TestingComponent.scss' } };
 
       expect(JSON.parse(testingFunction(rootNode))).toEqual(JSON.parse(expectedHash));
-      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual('terra-core/packages/terra-site/themeable-variables.json');
+      expect(outputtedFileName.slice(outputtedFileName.length - 55)).toEqual(path.join('terra-core', 'packages', 'terra-site', 'themeable-variables.json'));
       expect(outputtedEncoding).toEqual('utf8');
     });
   });
