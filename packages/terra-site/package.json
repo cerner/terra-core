@@ -19,7 +19,6 @@
     "compile:build": "babel src --out-dir lib --copy-files",
     "compile:heroku": "webpack --config webpack.prod.config --progress",
     "compile:prod": "webpack --config webpack.prod.config -p",
-    "compile:prod-stats": "webpack --config webpack.prod.config -p --json > stats.json",
     "deploy": "npm run compile:prod && gh-pages -d build",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",

@@ -4,6 +4,7 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import Grid from 'terra-grid';
 import ReadMe from 'terra-popup/docs/README.md';
+import { version } from 'terra-popup/package.json';
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import PopupSrc from '!raw-loader!terra-popup/src/Popup.jsx';
@@ -27,6 +28,7 @@ import PopupInsideModal from './PopupInsideModal';
 
 const PopupExamples = () => (
   <div>
+    <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={PopupSrc} />
     <h2 id="standard-popup" style={{ paddingTop: '20px' }}>Popup Default Props</h2>

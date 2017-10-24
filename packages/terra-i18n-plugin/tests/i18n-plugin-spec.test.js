@@ -2,6 +2,7 @@
 /* eslint-disable global-require */
 /* eslint no-underscore-dangle: ["error", { "allow": ["_plugins"] }] */
 import fs from 'fs';
+import path from 'path';
 import I18nAggregatorPlugin from '../src/I18nAggregatorPlugin';
 
 const Compiler = require('webpack/lib/Compiler');
@@ -9,15 +10,19 @@ const NodeJsInputFileSystem = require('enhanced-resolve/lib/NodeJsInputFileSyste
 const CachedInputFileSystem = require('enhanced-resolve/lib/CachedInputFileSystem');
 const MemoryFileSystem = require('memory-fs');
 
+function createInputFileSystem() {
+  return new CachedInputFileSystem(new NodeJsInputFileSystem(), 60000);
+}
+
 function createCompiler() {
   const compiler = new Compiler();
-  compiler.inputFileSystem = new CachedInputFileSystem(new NodeJsInputFileSystem(), 60000);
+  compiler.inputFileSystem = createInputFileSystem();
   return compiler;
 }
 
 describe('i18n-aggregator-plugin', () => {
   const supportedLocales = ['en', 'es', 'pt'];
-  const baseDirectory = 'packages/terra-i18n-plugin/tests/fixtures';
+  const baseDirectory = path.join('packages', 'terra-i18n-plugin', 'tests', 'fixtures');
 
   describe('when throwing errors when plugin options are not provided', () => {
     const compiler = createCompiler();
@@ -81,13 +86,13 @@ describe('i18n-aggregator-plugin', () => {
 
     it('should log console warning for missing tranlsation files', () => {
       expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain('/tests/fixtures/node_modules/fixtures2/translations');
+      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
     it('should fill the tranlsation files with the expected information for each locales', () => {
       supportedLocales.forEach((locale, index) => {
-        expect(outputtedFileName[index]).toContain(`aggregated-translations/${locale}.js`);
+        expect(outputtedFileName[index]).toContain(path.join('aggregated-translations', `${locale}.js`));
         expect(outputtedFileContent[index]).toContain(`react-intl/locale-data/${locale}`);
         if (locale === 'en') {
           const missingTranslationMessages = Object.assign({}, expectedMessages);
@@ -98,6 +103,45 @@ describe('i18n-aggregator-plugin', () => {
         }
         // eslint-disable-next-line no-useless-escape
         expect(outputtedFileContent[index]).toContain(`\'${locale}\'`);
+      });
+    });
+  });
+
+  describe('when searching directories for translation messages with options inputFileSystem given', () => {
+    const compiler = createCompiler();
+    const inputFileSystem = createInputFileSystem();
+    const inputReadSourceDirectories = [];
+    const inputReadFileSyncPaths = [];
+    const inputReadFileEncondings = [];
+    let SpyOnInputReadDirSync;
+    let SpyOnInputReadFileSync;
+    beforeAll(() => {
+      SpyOnInputReadDirSync = spyOn(inputFileSystem, 'readdirSync').and.callFake((dirName) => {
+        inputReadSourceDirectories.push(dirName);
+      });
+      SpyOnInputReadFileSync = spyOn(inputFileSystem, 'readFileSync').and.callFake((filePath, encoding) => {
+        inputReadFileSyncPaths.push(filePath);
+        inputReadFileEncondings.push(encoding);
+      });
+
+      new I18nAggregatorPlugin({
+        baseDirectory,
+        supportedLocales,
+        inputFileSystem,
+      }).apply(compiler);
+      compiler._plugins['after-environment'][0]();
+    });
+
+    it('should create tranlsation files for all supported locales', () => {
+      expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(2);
+      expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length);
+      expect(inputReadSourceDirectories[0]).toContain('translations');
+      expect(inputReadSourceDirectories[1]).toContain('node_modules');
+      supportedLocales.forEach((locale, index) => {
+        expect(inputReadFileSyncPaths[index]).toContain(`${locale}.js`);
+      });
+      inputReadFileEncondings.forEach((encoding, index) => {
+        expect(inputReadFileEncondings[index]).toContain('utf8');
       });
     });
   });
@@ -142,13 +186,13 @@ describe('i18n-aggregator-plugin', () => {
 
     it('should log console warning for missing tranlsation files', () => {
       expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain('/tests/fixtures/node_modules/fixtures2/translations');
+      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
     it('should fill the tranlsation files with the expected information for each locales', () => {
       supportedLocales.forEach((locale, index) => {
-        expect(outputtedFileName[index]).toContain(`aggregated-translations/${locale}.js`);
+        expect(outputtedFileName[index]).toContain(path.join('aggregated-translations', `${locale}.js`));
         expect(outputtedFileContent[index]).toContain(`react-intl/locale-data/${locale}`);
         if (locale === 'en') {
           const missingTranslationMessages = Object.assign({}, expectedMessages);

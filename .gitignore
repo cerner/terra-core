@@ -19,6 +19,7 @@
 .nyc_output
 .repl_history
 .rvmrc
+.idea
 .sass-cache/
 /.bundle/
 /.config

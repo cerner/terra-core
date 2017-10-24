@@ -1,5 +1,9 @@
 Changelog
 =========
+### Fixed
+* Mobile zoom on safari
+* Half px value causing blurriness
+* Disable Listener dependency on target
 
 Unreleased
 ----------
