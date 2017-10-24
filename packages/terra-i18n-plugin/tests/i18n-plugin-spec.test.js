@@ -10,9 +10,13 @@ const NodeJsInputFileSystem = require('enhanced-resolve/lib/NodeJsInputFileSyste
 const CachedInputFileSystem = require('enhanced-resolve/lib/CachedInputFileSystem');
 const MemoryFileSystem = require('memory-fs');
 
+function createInputFileSystem() {
+  return new CachedInputFileSystem(new NodeJsInputFileSystem(), 60000);
+}
+
 function createCompiler() {
   const compiler = new Compiler();
-  compiler.inputFileSystem = new CachedInputFileSystem(new NodeJsInputFileSystem(), 60000);
+  compiler.inputFileSystem = createInputFileSystem();
   return compiler;
 }
 
@@ -99,6 +103,45 @@ describe('i18n-aggregator-plugin', () => {
         }
         // eslint-disable-next-line no-useless-escape
         expect(outputtedFileContent[index]).toContain(`\'${locale}\'`);
+      });
+    });
+  });
+
+  describe('when searching directories for translation messages with options inputFileSystem given', () => {
+    const compiler = createCompiler();
+    const inputFileSystem = createInputFileSystem();
+    const inputReadSourceDirectories = [];
+    const inputReadFileSyncPaths = [];
+    const inputReadFileEncondings = [];
+    let SpyOnInputReadDirSync;
+    let SpyOnInputReadFileSync;
+    beforeAll(() => {
+      SpyOnInputReadDirSync = spyOn(inputFileSystem, 'readdirSync').and.callFake((dirName) => {
+        inputReadSourceDirectories.push(dirName);
+      });
+      SpyOnInputReadFileSync = spyOn(inputFileSystem, 'readFileSync').and.callFake((filePath, encoding) => {
+        inputReadFileSyncPaths.push(filePath);
+        inputReadFileEncondings.push(encoding);
+      });
+
+      new I18nAggregatorPlugin({
+        baseDirectory,
+        supportedLocales,
+        inputFileSystem,
+      }).apply(compiler);
+      compiler._plugins['after-environment'][0]();
+    });
+
+    it('should create tranlsation files for all supported locales', () => {
+      expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(2);
+      expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length);
+      expect(inputReadSourceDirectories[0]).toContain('translations');
+      expect(inputReadSourceDirectories[1]).toContain('node_modules');
+      supportedLocales.forEach((locale, index) => {
+        expect(inputReadFileSyncPaths[index]).toContain(`${locale}.js`);
+      });
+      inputReadFileEncondings.forEach((encoding, index) => {
+        expect(inputReadFileEncondings[index]).toContain('utf8');
       });
     });
   });
