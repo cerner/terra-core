@@ -12,6 +12,7 @@ Unreleased
 ### Fixed
 * Issue where tabbing would focus on Menu container before items in menu.
 * Issue where divider was no longer visible.
+* Issue where disabled items could still be selected.
 
 1.4.0 - (October 12, 2017)
 ------------------
