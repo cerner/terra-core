@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.15.0 - (October 24, 2017)
+------------------
 ### Changed
 * Lock webpack-dev-server at last version supporting IE10 (1.7.1)
 * Uplift site header to use collapsible menu view
