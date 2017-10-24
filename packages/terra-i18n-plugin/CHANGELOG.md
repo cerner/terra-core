@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Updated to allow an inputFileSystem to be passed in through the options
 
 1.7.0 - (October 12, 2017)
 ------------------
