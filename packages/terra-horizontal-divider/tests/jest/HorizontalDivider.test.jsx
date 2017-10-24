@@ -5,13 +5,13 @@ describe('HorizontalDivider', () => {
   const defaultRender = <HorizontalDivider />;
 
   // Snapshot Tests
-  it('should render a default component', () => {
+  it('should render a basic component', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
-  it('should have the class horizontal-divider', () => {
+  it('should have the class divider', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper.prop('className')).toContain('divider');
   });
