@@ -19,22 +19,22 @@ export {
 };`;
 }
 
-function getDirectories(srcPath, compiler) {
-  return compiler.inputFileSystem.readdirSync(srcPath).filter(file => compiler.inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
+function getDirectories(srcPath, inputFileSystem) {
+  return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-function aggregateDirectory(languageMessages, currentDirectory, compiler) {
+function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem) {
   // Check the directory for translations
   const translationsDirectory = path.resolve(currentDirectory, 'translations');
   try {
     // Check if the directory exists by attempting to read from it
-    compiler.inputFileSystem.readdirSync(translationsDirectory);
+    inputFileSystem.readdirSync(translationsDirectory);
 
     // Check the directory for each translation file
     supportedLocales.forEach((language) => {
       const translationFile = path.resolve(translationsDirectory, `${language}.json`);
       try {
-        Object.assign(languageMessages[language], JSON.parse(compiler.inputFileSystem.readFileSync(translationFile, 'utf8')));
+        Object.assign(languageMessages[language], JSON.parse(inputFileSystem.readFileSync(translationFile, 'utf8')));
       } catch (e) {
         console.warn(`Translation file ${language}.json not found for ${translationsDirectory}`);
       }
@@ -46,8 +46,8 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
   // Check the directory's node_modules for translation files
   const nodeMoudlesPath = path.resolve(currentDirectory, 'node_modules');
   try {
-    getDirectories(nodeMoudlesPath, compiler).forEach((module) => {
-      aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), compiler);
+    getDirectories(nodeMoudlesPath, inputFileSystem).forEach((module) => {
+      aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), inputFileSystem);
     });
   } catch (e) {
     // not outputting anything here as the catching of the directories not existing is not an error in this case
@@ -56,7 +56,7 @@ function aggregateDirectory(languageMessages, currentDirectory, compiler) {
   return languageMessages;
 }
 
-function aggregateTranslationMessages(options, compiler) {
+function aggregateTranslationMessages(options, inputFileSystem) {
   if (!options.baseDirectory) {
     throw new Error('Please included the base directory path in the plugin options.');
   }
@@ -71,14 +71,19 @@ function aggregateTranslationMessages(options, compiler) {
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
   // Aggregate translation messages for the directory
-  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, compiler);
+  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, inputFileSystem);
   return languageMessages;
 }
 
 function aggregateTranslations(options, compiler) {
   compiler.plugin('after-environment', () => {
+    let inputFileSystem = options.inputFileSystem;
+    if (!inputFileSystem) {
+      inputFileSystem = compiler.inputFileSystem;
+    }
+
     // Aggregate translation messages for the directory
-    const languageMessages = aggregateTranslationMessages(options, compiler);
+    const languageMessages = aggregateTranslationMessages(options, inputFileSystem);
     const directoryPath = path.resolve(options.baseDirectory, 'aggregated-translations');
     let outputFileSystem = options.outputFileSystem;
 

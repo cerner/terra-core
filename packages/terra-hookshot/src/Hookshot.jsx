@@ -180,30 +180,31 @@ class Hookshot extends React.Component {
 
   enableListeners() {
     const target = this.props.targetRef();
-    if (target) {
-      ['resize', 'scroll', 'touchmove'].forEach(event => window.addEventListener(event, this.tick));
-
-      this.scrollParents = HookshotUtils.getScrollParents(target);
-      this.scrollParents.forEach((parent) => {
-        if (parent !== target.ownerDocument) {
-          parent.addEventListener('scroll', this.tick);
-        }
-      });
-
-      this.listenersAdded = true;
+    if (!target) {
+      return;
     }
+
+    ['resize', 'scroll', 'touchmove'].forEach(event => window.addEventListener(event, this.tick));
+
+    this.parentListeners = [];
+    const scrollParents = HookshotUtils.getScrollParents(target);
+    scrollParents.forEach((parent) => {
+      if (parent !== target.ownerDocument) {
+        parent.addEventListener('scroll', this.tick);
+        this.parentListeners.push(parent);
+      }
+    });
+    this.listenersAdded = true;
   }
 
   disableListeners() {
     ['resize', 'scroll', 'touchmove'].forEach(event => window.removeEventListener(event, this.tick));
 
-    const target = this.props.targetRef();
-    if (this.scrollParents) {
-      this.scrollParents.forEach((parent) => {
-        if (parent !== target.ownerDocument) {
-          parent.removeEventListener('scroll', this.tick);
-        }
+    if (this.parentListeners) {
+      this.parentListeners.forEach((parent) => {
+        parent.removeEventListener('scroll', this.tick);
       });
+      this.parentListeners = null;
     }
     this.listenersAdded = false;
   }
