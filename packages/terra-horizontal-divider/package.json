@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
     "terra-base": "^1.0.0"
   },
   "scripts": {
@@ -37,13 +36,8 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "props-table": "props-table ./src/HorizontalDivider.jsx --out-dir ./docs/props-table",
     "test": "npm run test:spec && npm run test:nightwatch-default",
     "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
-    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch-default": "SPECTRE_TEST_SUITE=terra-horizontal-divider node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js",
-    "test:nightwatch-chrome": "SPECTRE_TEST_SUITE=terra-horizontal-divider node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js chrome",
-    "test:nightwatch-firefox": "SPECTRE_TEST_SUITE=terra-horizontal-divider node ../../node_modules/terra-toolkit/lib/scripts/nightwatch.js firefox",
-    "test:nightwatch-safari": "SPECTRE_TEST_SUITE=terra-horizontal-divider node ../../node_modules/terra-toolkit/lib/scripts/nightwatch-non-parallel.js safari"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json"
   }
 }
