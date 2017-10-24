@@ -53,6 +53,12 @@ const FlexItem = ({
     customProps.className,
   ]);
 
+  customProps.order = order;
+  customProps['flex-grow'] = grow;
+  customProps['flex-shrink'] = shrink;
+  customProps['flex-basis'] = basis;
+  customProps['align-self'] = alignSelf;
+
   return (
     <div {...customProps} className={flexItemClassNames}>
       {content}

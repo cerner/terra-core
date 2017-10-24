@@ -31,7 +31,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.6.1"
+    "terra-base": "^2.6.1",
+    "styled-components": "^2.0.0"
+  },
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
