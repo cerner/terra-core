@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HorizontalDivider should render a basic component 1`] = `
+<hr
+  className="divider"
+/>
+`;
+
 exports[`HorizontalDivider should render a default component 1`] = `
 <hr
   className="divider"

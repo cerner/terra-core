@@ -3,9 +3,8 @@
 
 :local {
   .divider {
-    border: 0 solid;
     border-color: var(--terra-horizontal-divider-border-color, #b2b5b6);
-    border-top: 1px solid #dedfe0;
+    border-style: solid;
     border-width: var(--terra-horizontal-divider-border-width, 1px);
     height: 0;
     margin: 0;

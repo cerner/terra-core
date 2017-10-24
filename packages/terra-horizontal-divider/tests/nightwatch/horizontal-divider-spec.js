@@ -1,19 +1,11 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+/* eslint-disable no-unused-expressions */
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-horizontal-divider', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default horizontal-divider': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/horizontal-divider-tests/default`)
-      .assert.elementPresent('.horizontal-divider');
+      .url(`${browser.launchUrl}/#/tests/horizontal-divider-tests/default`)
+      .expect.element('#divider').to.be.present;
   },
-};
+});

@@ -23,21 +23,23 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^1.0.0"
+    "terra-base": "^2.6.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-base": "^1.0.0"
+    "terra-base": "^1.0.0",
+    "terra-toolkit": "^2.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:clean": "$(cd ..; npm bin)/rimraf lib",
-    "compile:build": "$(cd ..; npm bin)/babel src --out-dir lib --copy-files",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
-    "test": "npm run test:spec && npm run test:nightwatch-default",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
-    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json"
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
+    "props-table": "props-table ./src/Button.jsx --out-dir ./docs/props-table",
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   }
 }
