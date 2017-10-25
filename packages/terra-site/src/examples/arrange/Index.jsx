@@ -3,6 +3,7 @@ import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
 import ReadMe from 'terra-arrange/docs/README.md';
 import { version } from 'terra-arrange/package.json';
+import Arrange from 'terra-arrange';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
@@ -11,7 +12,6 @@ import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange';
 // Example Files
 import { icon, image, simpleText } from './examplesetup';
 import ArrangeAlignment from './ArrangeAlignment';
-import Arrange from 'terra-arrange';
 
 const ArrangeExamples = () => (
   <div>
@@ -36,9 +36,9 @@ const ArrangeExamples = () => (
       fitStart={image}
       fill={simpleText}
       fitEnd={icon}
-      fitStartAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden'} }}
+      fitStartAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden' } }}
       fillAttributes={{ style: { wordWrap: 'break-word' } }}
-      fitEndAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden'} }}
+      fitEndAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden' } }}
     />
   </div>
 );
