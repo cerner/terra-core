@@ -1,6 +1,3 @@
-@import './variables';
-@import './mixins';
-
 :local {
   .divider {
     border-color: var(--terra-horizontal-divider-border-color, #b2b5b6);

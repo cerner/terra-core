@@ -5,9 +5,3 @@ exports[`HorizontalDivider should render a basic component 1`] = `
   className="divider"
 />
 `;
-
-exports[`HorizontalDivider should render a default component 1`] = `
-<hr
-  className="divider"
-/>
-`;
