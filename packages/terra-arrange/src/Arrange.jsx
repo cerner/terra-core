@@ -36,8 +36,19 @@ const propTypes = {
    * The vertical orientation of fitEnd. One of: `center`, `bottom`, `stretch`.
    */
   alignFill: PropTypes.oneOf(alignmentTypes),
+  /**
+   * The attributes to be set on the fitStart wrapper element
+   */
+  fitStartAttributes: PropTypes.object,
+  /**
+   * The attributes to be set on the fill wrapper element
+   */
+  fillAttributes: PropTypes.object,
+  /**
+   * The attributes to be set on the fitEnd wrapper element
+   */
+  fitEndAttributes: PropTypes.object,
 };
-
 
 const Arrange = ({
   fitStart,
@@ -47,21 +58,28 @@ const Arrange = ({
   alignFitStart,
   alignFill,
   alignFitEnd,
+  fitStartAttributes,
+  fillAttributes,
+  fitEndAttributes,
   ...customProps
   }) => {
   if (fitStart === undefined && fitEnd === undefined) {
     throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
   }
 
+  const fitStartProps = Object.assign({}, fitStartAttributes);
+  const fillProps = Object.assign({}, fillAttributes);
+  const fitEndProps = Object.assign({}, fitEndAttributes);
+
   return (
     <div {...customProps} className={cx('arrange', customProps.className)} >
-      <div className={cx('fit', align || alignFitStart)}>
+      <div {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className)}>
         {fitStart}
       </div>
-      <div className={cx('fill', align || alignFill)}>
+      <div {...fillProps} className={cx('fill', align || alignFill, fillProps.className)}>
         {fill}
       </div>
-      <div className={cx('fit', align || alignFitEnd)}>
+      <div {...fitEndProps} className={cx('fit', align || alignFitEnd, fitEndProps.className)}>
         {fitEnd}
       </div>
     </div>

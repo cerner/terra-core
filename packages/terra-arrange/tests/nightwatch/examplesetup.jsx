@@ -5,8 +5,10 @@ import pandaPic from '../assets/panda.jpg';
 // Block style is required since images are inline by default. This could be resolved by someones normalize.css
 const image = <img style={{ display: 'block' }} height="100" width="150" src={pandaPic} alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+const longWord = 'Thisisareallyreallylongwordthathasnospacesthatwillneedtobebrokeninordertohavethetextwrapandnotoverlowintothenextelement';
 const simpleText = <div>{ipsum}</div>;
 const longText = <div>{ipsum} {ipsum} {ipsum} {ipsum}</div>;
+const longWordText = <div>{longWord}</div>;
 
 const ArrangeWrapper = props => (
   <div style={{ width: '100%', border: '1px solid black', marginBottom: '10px', backgroundColor: '#dedede' }}>
@@ -36,4 +38,5 @@ export {
   longText,
   ArrangeWrapper,
   IconWrapper,
+  longWordText,
 };
