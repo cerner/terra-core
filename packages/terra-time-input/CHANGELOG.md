@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.13.0 - (October 24, 2017)
+------------------
 ### Added
 * Added onBlur prop.
 
