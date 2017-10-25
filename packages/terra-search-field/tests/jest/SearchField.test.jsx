@@ -19,6 +19,24 @@ describe('Snapshots', () => {
 
     expect(searchField).toMatchSnapshot();
   });
+
+  it('renders a disabled search field', () => {
+    const searchField = shallow(<SearchField isDisabled />);
+
+    expect(searchField).toMatchSnapshot();
+  });
+
+  it('renders a search field with a stretched container', () => {
+    const searchField = shallow(<SearchField sizing={'stretch'} />);
+
+    expect(searchField).toMatchSnapshot();
+  });
+
+  it('renders a search field with no stretch class specified if sizing is fixed', () => {
+    const searchField = shallow(<SearchField sizing={'fixed'} />);
+
+    expect(searchField).toMatchSnapshot();
+  });
 });
 
 describe('Manual Search', () => {

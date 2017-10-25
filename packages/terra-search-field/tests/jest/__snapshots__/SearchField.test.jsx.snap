@@ -6,6 +6,7 @@ exports[`Snapshots renders a basic search field 1`] = `
 >
   <Input
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
     placeholder=""
@@ -32,15 +33,82 @@ exports[`Snapshots renders a basic search field 1`] = `
 </div>
 `;
 
+exports[`Snapshots renders a disabled search field 1`] = `
+<div
+  className="searchfield"
+>
+  <Input
+    className="input"
+    disabled={true}
+    name={null}
+    onChange={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
+    value=""
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={true}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
   className="searchfield"
 >
   <Input
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
     placeholder="Test"
+    required={false}
+    type="search"
+    value=""
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field with a stretched container 1`] = `
+<div
+  className="searchfield stretch"
+>
+  <Input
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    placeholder=""
     required={false}
     type="search"
     value=""
@@ -70,12 +138,46 @@ exports[`Snapshots renders a search field with a value 1`] = `
 >
   <Input
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
     placeholder=""
     required={false}
     type="search"
     value="Test"
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field with no stretch class specified if sizing is fixed 1`] = `
+<div
+  className="searchfield"
+>
+  <Input
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
+    value=""
   />
   <Button
     className="button"

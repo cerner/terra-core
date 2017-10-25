@@ -11,6 +11,10 @@ Unreleased
 * Uplift site header to use collapsible menu view
 * Removing verbose build scripts and related files
 
+### Added
+* Example for search-field being disabled
+* Example for search-field expanding to fit its parent
+
 1.14.0 - (October 12, 2017)
 ------------------
 ### Updated

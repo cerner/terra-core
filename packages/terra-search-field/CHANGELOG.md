@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added the ability to disable
+* Added the ability to expand to its parent container through sizing prop
 
 1.13.0 - (October 24, 2017)
 ------------------
