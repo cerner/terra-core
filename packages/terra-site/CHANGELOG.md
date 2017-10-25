@@ -4,9 +4,14 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Update Form examples to use new Field props
+
+1.15.0 - (October 24, 2017)
+------------------
+### Changed
 * Lock webpack-dev-server at last version supporting IE10 (1.7.1)
 * Uplift site header to use collapsible menu view
-* Update Form examples to use new Field props 
+* Removing verbose build scripts and related files
 
 1.14.0 - (October 12, 2017)
 ------------------

@@ -9,6 +9,8 @@ Unreleased
 ### Changed
 * Uplift Field Component for OSC
 
+1.12.0 - (October 24, 2017)
+------------------
 ### Updated
 * Added disabled support to select component
 

@@ -24,9 +24,7 @@ class DataStatusProvider extends React.Component {
         <div>
           <h1>Embedded Application Lifecycle</h1>
           <p>The embedded container can have the following statuses:</p>
-          <ul id="LifeCycleStatuses">
-            <li id="Mounted">Mounted</li>
-          </ul>
+          <ul id="DataStatus-LifeCycleStatuses" />
         </div>
       </div>
     );
