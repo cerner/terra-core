@@ -10,12 +10,6 @@ describe('HorizontalDivider', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // Structure Tests
-  it('should have the class divider', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('divider');
-  });
-
   // Custom Prop Test
   it('it should pass in a custom prop', () => {
     const wrapper = shallow(<HorizontalDivider id="testDivider" />);

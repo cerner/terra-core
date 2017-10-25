@@ -5,13 +5,13 @@ import styles from './HorizontalDivider.scss';
 
 const cx = classNames.bind(styles);
 
-const HorizontalDivider = ({ ...customProps }) => {
-  const HorizontalDividerClassNames = cx([
+const horizontalDivider = ({ ...customProps }) => {
+  const horizontalDividerClassNames = cx([
     'divider',
     customProps.className,
   ]);
 
-  return (<hr {...customProps} className={HorizontalDividerClassNames} />);
+  return <hr {...customProps} className={horizontalDividerClassNames} />;
 };
 
-export default HorizontalDivider;
+export default horizontalDivider;
