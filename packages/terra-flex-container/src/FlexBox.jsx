@@ -96,7 +96,7 @@ Flexbox.propTypes = {
   ]),
   flex: PropTypes.string,
   flexBasis: PropTypes.string,
-  flexDirection: PropTypes.oneOf(['column-reverse', 'column', 'row-reverse', 'row']),
+  flexDirection: PropTypes.oneOf(['column', 'column-reverse', 'row', 'row-reverse']),
   flexGrow: PropTypes.number,
   flexShrink: PropTypes.number,
   flexWrap: PropTypes.oneOf(['nowrap', 'wrap-reverse', 'wrap']),

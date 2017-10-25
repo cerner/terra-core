@@ -62,7 +62,6 @@ const propTypes = {
   paddingLeft: PropTypes.string,
   paddingRight: PropTypes.string,
   paddingTop: PropTypes.string,
-  style: PropTypes.object,
   width: PropTypes.string,
 };
 
