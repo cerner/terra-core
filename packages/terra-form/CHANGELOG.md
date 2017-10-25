@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Implement Textarea for OCS
 
 1.11.0 - (October 6, 2017)
 ------------------
