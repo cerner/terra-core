@@ -14,11 +14,14 @@ exports[`should render a TextAreaField with the rest of the props 1`] = `
     autoFocus={false}
     cols={null}
     id="description"
+    isAutoResizable={false}
+    isInvalid={false}
     maxLength={15}
     minLength={5}
     name="profile_description"
     required={true}
     rows={null}
+    size={null}
   />
 </Field>
 `;
@@ -34,11 +37,14 @@ exports[`should render a default TextAreaField component 1`] = `
 >
   <Textarea
     cols={null}
+    isAutoResizable={false}
+    isInvalid={false}
     maxLength={null}
     minLength={null}
     name={null}
     required={false}
     rows={null}
+    size={null}
   />
 </Field>
 `;
@@ -73,12 +79,15 @@ exports[`should render as controlled when just a default value is passed into th
     >
       <Textarea
         cols={null}
+        isAutoResizable={false}
+        isInvalid={false}
         maxLength={null}
         minLength={null}
         name={null}
         onChange={[Function]}
         required={false}
         rows={null}
+        size={null}
         value="foo"
       >
         <textarea
@@ -128,11 +137,14 @@ exports[`should render as uncontrolled when just a default value is passed into 
       <Textarea
         cols={null}
         defaultValue="foo"
+        isAutoResizable={false}
+        isInvalid={false}
         maxLength={null}
         minLength={null}
         name={null}
         required={false}
         rows={null}
+        size={null}
       >
         <textarea
           className="textarea"
