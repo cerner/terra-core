@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Change to be flex-box component and adding new props to apply attributes to content containers
 
 1.12.0 - (October 6, 2017)
 ------------------
