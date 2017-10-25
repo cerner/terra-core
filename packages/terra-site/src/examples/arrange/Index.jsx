@@ -31,14 +31,17 @@ const ArrangeExamples = () => (
     <br />
     <ArrangeAlignment alignment="individual" fitStart={image} fill={simpleText} fitEnd={icon} />
     <br />
-    <h2 id="align-custom-widths">Align 10% max-widths on fitContainers using fitStart and fitEnd attributes.</h2>
+    <h2 id="align-custom-widths">Align stretch with 20% max-widths on containers using attribute props.</h2>
     <Arrange
       fitStart={image}
       fill={simpleText}
       fitEnd={icon}
-      fitStartAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden' } }}
-      fillAttributes={{ style: { wordWrap: 'break-word' } }}
-      fitEndAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden' } }}
+      alignFitStart={'stretch'}
+      alignFill={'stretch'}
+      alignFitEnd={'stretch'}
+      fitStartAttributes={{ style: { maxWidth: '20%', wordWrap: 'break-word', overflow: 'hidden' } }}
+      fillAttributes={{ style: { wordWrap: 'break-word', maxWidth: '20%' } }}
+      fitEndAttributes={{ style: { maxWidth: '20%', wordWrap: 'break-word', overflow: 'hidden', 'background-color': 'yellow' } }}
     />
   </div>
 );
