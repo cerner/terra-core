@@ -11,6 +11,7 @@ import ArrangeSrc from '!raw-loader!terra-arrange/src/Arrange';
 // Example Files
 import { icon, image, simpleText } from './examplesetup';
 import ArrangeAlignment from './ArrangeAlignment';
+import Arrange from 'terra-arrange';
 
 const ArrangeExamples = () => (
   <div>
@@ -29,6 +30,16 @@ const ArrangeExamples = () => (
     <ArrangeAlignment alignment="individual" fill={simpleText} fitEnd={icon} />
     <br />
     <ArrangeAlignment alignment="individual" fitStart={image} fill={simpleText} fitEnd={icon} />
+    <br />
+    <h2 id="align-custom-widths">Align 10% max-widths on fitContainers using fitStart and fitEnd attributes.</h2>
+    <Arrange
+      fitStart={image}
+      fill={simpleText}
+      fitEnd={icon}
+      fitStartAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden'} }}
+      fillAttributes={{ style: { wordWrap: 'break-word' } }}
+      fitEndAttributes={{ style: { maxWidth: '10%', wordWrap: 'break-word', overflow: 'hidden'} }}
+    />
   </div>
 );
 
