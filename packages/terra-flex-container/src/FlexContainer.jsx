@@ -110,37 +110,36 @@ const FlexContainer = styled(({
   ]);
   props.className = flexClassNames;
 
-  return React.createElement(element, props, children))`
-    ${props => (props.alignContent ? `align-content: ${props.alignContent};` : '')}
-    ${props => (props.alignSelf ? `align-self: ${props.alignSelf};` : '')}
-    ${props => (props.alignItems ? `align-items: ${props.alignItems};` : '')}
-    ${props => (props.display ? `display: ${props.display};` : '')}
-    ${props => (props.flex ? `flex: ${props.flex};` : '')}
-    ${props => (props.flexBasis ? `flex-basis: ${props.flexBasis};` : '')}
-    ${props => (props.flexDirection ? `flex-direction: ${props.flexDirection};` : '')}
-    ${props => (props.flexGrow ? `flex-grow: ${props.flexGrow};` : '')}
-    ${props => (props.flexShrink ? `flex-shrink: ${props.flexShrink};` : '')}
-    ${props => (props.flexWrap ? `flex-wrap: ${props.flexWrap};` : '')}
-    ${props => (props.height ? `height: ${props.height};` : '')}
-    ${props => (props.justifyContent ? `justify-content: ${props.justifyContent};` : '')}
-    ${props => (props.margin ? `margin: ${props.margin};` : '')}
-    ${props => (props.marginBottom ? `margin-bottom: ${props.marginBottom};` : '')}
-    ${props => (props.marginLeft ? `margin-left: ${props.marginLeft};` : '')}
-    ${props => (props.marginRight ? `margin-right: ${props.marginRight};` : '')}
-    ${props => (props.marginTop ? `margin-top: ${props.marginTop};` : '')}
-    ${props => (props.maxHeight ? `max-height: ${props.maxHeight};` : '')}
-    ${props => (props.maxWidth ? `max-width: ${props.maxWidth};` : '')}
-    ${props => (props.minHeight ? `min-height: ${props.minHeight};` : '')}
-    ${props => (props.minWidth ? `min-width: ${props.minWidth};` : '')}
-    ${props => (props.order ? `order: ${props.order};` : '')}
-    ${props => (props.padding ? `padding: ${props.padding};` : '')}
-    ${props => (props.paddingBottom ? `padding-bottom: ${props.paddingBottom};` : '')}
-    ${props => (props.paddingLeft ? `padding-left: ${props.paddingLeft};` : '')}
-    ${props => (props.paddingRight ? `padding-right: ${props.paddingRight};` : '')}
-    ${props => (props.paddingTop ? `padding-top: ${props.paddingTop};` : '')}
-    ${props => (props.width ? `width: ${props.width};` : '')}
-  `;
-};
+  props['align-content'] = (props.alignContent) ? props.alignContent : '';
+  props['align-self'] = (props.alignSelf) ? props.alignSelf : '';
+  props['align-items'] = (props.alignItems) ? props.alignItems : '';
+  props['display'] = (props.display) ? props.display : '';
+  props['flex'] = (props.flex) ? props.flex : '';
+  props['flex-basis'] = (props.flexBasis) ? props.flexBasis : '';
+  props['flex-direction'] = (props.flexDirection) ? props.flexDirection : '';
+  props['flex-grow'] = (props.flexGrow) ? props.flexGrow : '';
+  props['flex-shrink'] = (props.flexShrink) ? props.flexShrink : '';
+  props['flex-wrap'] = (props.flexWrap) ? props.flexWrap : '';
+  props['height'] = (props.height) ? props.height : '';
+  props['justify-content'] = (props.justifyContent) ? props.justifyContent : '';
+  props['margin'] = (props.margin) ? props.margin : '';
+  props['margin-bottom'] = (props.marginBottom) ? props.marginBottom : '';
+  props['margin-left'] = (props.marginLeft) ? props.marginLeft : '';
+  props['margin-right'] = (props.marginRight) ? props.marginRight : '';
+  props['margin-top'] = (props.marginTop) ? props.marginTop : '';
+  props['max-height'] = (props.maxHeight) ? props.maxHeight : '';
+  props['min-height'] = (props.minHeight) ? props.minHeight : '';
+  props['min-width'] = (props.minWidth) ? props.minWidth : '';
+  props['order'] = (props.order) ? props.order : '';
+  props['padding'] = (props.padding) ? props.padding : '';
+  props['padding-bottom'] = (props.paddingBottom) ? props.paddingBottom : '';
+  props['padding-left'] = (props.paddingLeft) ? props.paddingLeft : '';
+  props['padding-right'] = (props.paddingRight) ? props.paddingRight : '';
+  props['padding-top'] = (props.paddingTop) ? props.paddingTop : '';
+  props['width'] = (props.width) ? props.width : '';
+
+  return React.createElement(element, props, children);
+});
 
 FlexContainer.propTypes = propTypes;
 FlexContainer.defaultProps = defaultProps;
