@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HorizontalDivider it should pass in a custom prop 1`] = `
+<hr
+  className="divider"
+  id="testDivider"
+/>
+`;
+
 exports[`HorizontalDivider should render a basic component 1`] = `
 <hr
   className="divider"

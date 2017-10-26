@@ -13,6 +13,6 @@ describe('HorizontalDivider', () => {
   // Custom Prop Test
   it('it should pass in a custom prop', () => {
     const wrapper = shallow(<HorizontalDivider id="testDivider" />);
-    expect(wrapper.prop('id')).toEqual('testDivider');
+    expect(wrapper).toMatchSnapshot();
   });
 });
