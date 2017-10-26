@@ -1,7 +1,7 @@
 /**
  * Returns a validated max count for selection based on the rows and max provided.
  */
-const validatedMaxCount = (rows, maxSelectionCount) => {
+const validatedMaxCountSelection = (rows, maxSelectionCount) => {
   if (maxSelectionCount !== undefined) {
     return maxSelectionCount;
   }
@@ -38,13 +38,14 @@ const initialMultiSelectRowIndexes = (rows, maxSelectionCount) => {
   }
   // Find the rows which are selected and are selectable
   const selectedIndexes = [];
-  const validatedMaxSelectionCount = validatedMaxCount(rows, maxSelectionCount);
+  const validatedMaxSelectionCount = validatedMaxCountSelection(rows, maxSelectionCount);
   for (let i = 0; i < rows.length; i += 1) {
-    if (selectedIndexes.length >= validatedMaxSelectionCount) {
-      break;
-    }
     if (rows[i].props.isSelected) {
       selectedIndexes.push(i);
+
+      if (selectedIndexes.length >= validatedMaxSelectionCount) {
+        break;
+      }
     }
   }
   return selectedIndexes;
@@ -55,7 +56,7 @@ const initialMultiSelectRowIndexes = (rows, maxSelectionCount) => {
  */
 const updatedMultiSelectedIndexes = (currentIndexes, newIndex) => {
   let newIndexes = [];
-  if (currentIndexes.length) {
+  if (currentIndexes && currentIndexes.length) {
     if (currentIndexes.indexOf(newIndex) >= 0) {
       newIndexes = currentIndexes.slice();
       newIndexes.splice(newIndexes.indexOf(newIndex), 1);
@@ -78,7 +79,7 @@ const shouldHandleSingleSelectRowSelection = (currentIndex, newIndex) => current
  * Or if the index is already present, and can be removed.
  */
 const shouldHandleMultiSelectRowSelection = (children, maxSelectionCount, currentIndexes, newIndex) => {
-  if (currentIndexes.length < validatedMaxCount(children, maxSelectionCount)) {
+  if (currentIndexes.length < validatedMaxCountSelection(children, maxSelectionCount)) {
     return true;
   }
   return currentIndexes.indexOf(newIndex) >= 0;
@@ -93,7 +94,7 @@ const KEYCODES = {
 };
 
 const SelectableUtils = {
-  validatedMaxCount,
+  validatedMaxCountSelection,
   initialSingleSelectRowIndex,
   initialMultiSelectRowIndexes,
   updatedMultiSelectedIndexes,

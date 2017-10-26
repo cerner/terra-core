@@ -67,7 +67,7 @@ class MultiSelectableRows extends React.Component {
         {...customProps}
         onChange={this.handleOnChange}
         selectedIndexes={this.state.selectedIndexes}
-        disableUnselectedRows={this.state.selectedIndexes.length >= SelectableTableRows.Utils.validatedMaxCount(children, maxSelectionCount)}
+        disableUnselectedRows={this.state.selectedIndexes.length >= SelectableTableRows.Utils.validatedMaxCountSelection(children, maxSelectionCount)}
       >
         {children}
       </SelectableTableRows>
