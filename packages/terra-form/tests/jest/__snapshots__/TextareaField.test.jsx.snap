@@ -21,7 +21,7 @@ exports[`should render a TextAreaField with the rest of the props 1`] = `
     name="profile_description"
     required={true}
     rows={null}
-    size={null}
+    size="small"
   />
 </Field>
 `;
@@ -44,7 +44,7 @@ exports[`should render a default TextAreaField component 1`] = `
     name={null}
     required={false}
     rows={null}
-    size={null}
+    size="small"
   />
 </Field>
 `;
@@ -87,7 +87,7 @@ exports[`should render as controlled when just a default value is passed into th
         onChange={[Function]}
         required={false}
         rows={null}
-        size={null}
+        size="small"
         value="foo"
       >
         <textarea
@@ -144,7 +144,7 @@ exports[`should render as uncontrolled when just a default value is passed into 
         name={null}
         required={false}
         rows={null}
-        size={null}
+        size="small"
       >
         <textarea
           className="textarea"

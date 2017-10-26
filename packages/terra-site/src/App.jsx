@@ -15,6 +15,8 @@ import FormComponentNavigation from './examples/form/FormComponentNavigation';
 import ListComponentNavigation from './examples/list/ListComponentNavigation';
 import IconComponentNavigation from './examples/icon/IconComponentNavigation';
 
+import CernerConsumerTheme from 'cerner-consumer-theme/scoped-theme';
+
 const propTypes = {
   children: PropTypes.node,
 };

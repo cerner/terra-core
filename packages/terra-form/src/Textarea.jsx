@@ -44,7 +44,8 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * Value to set for the rows attribute of the textarea.
+   * Value to set for the rows attribute of the textarea. This takes presidence over size when
+   * setting the height of the textarea.
    */
   rows: PropTypes.number,
   /**
@@ -65,7 +66,8 @@ const defaultProps = {
   isInvalid: false,
   onChange: undefined,
   required: false,
-  size: null,
+  rows: null,
+  size: 'small',
   value: undefined,
 };
 

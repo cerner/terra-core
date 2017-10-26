@@ -16,6 +16,7 @@ exports[`should render a default TextArea component 1`] = `
   className="textarea"
   name={null}
   required={false}
+  rows={null}
 />
 `;
 
@@ -24,6 +25,7 @@ exports[`should render a full size textbox appropriately 1`] = `
   className="textarea full-size"
   name={null}
   required={false}
+  rows={null}
 />
 `;
 
@@ -32,7 +34,7 @@ exports[`should render a large textbox appropriately 1`] = `
   className="textarea"
   name={null}
   required={false}
-  rows={10}
+  rows={null}
 />
 `;
 
@@ -41,7 +43,7 @@ exports[`should render a medium textbox appropriately 1`] = `
   className="textarea"
   name={null}
   required={false}
-  rows={5}
+  rows={null}
 />
 `;
 
@@ -50,7 +52,7 @@ exports[`should render a small textbox appropriately 1`] = `
   className="textarea"
   name={null}
   required={false}
-  rows={2}
+  rows={null}
 />
 `;
 
@@ -61,7 +63,8 @@ exports[`should render as controlled when just a default value is passed into th
   name={null}
   onChange={[Function]}
   required={false}
-  size={null}
+  rows={null}
+  size="small"
   value="foo"
 >
   <textarea
@@ -69,6 +72,7 @@ exports[`should render as controlled when just a default value is passed into th
     name={null}
     onChange={[Function]}
     required={false}
+    rows={null}
     value="foo"
   />
 </Textarea>
@@ -81,13 +85,15 @@ exports[`should render as uncontrolled when just a default value is passed into 
   isInvalid={false}
   name={null}
   required={false}
-  size={null}
+  rows={null}
+  size="small"
 >
   <textarea
     className="textarea"
     defaultValue="foo"
     name={null}
     required={false}
+    rows={null}
   />
 </Textarea>
 `;
@@ -99,6 +105,7 @@ exports[`should set the onChange and onFocus functions appropriately when the te
   onChange={[Function]}
   onFocus={[Function]}
   required={false}
+  rows={null}
 />
 `;
 

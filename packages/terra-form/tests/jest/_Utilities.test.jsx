@@ -12,7 +12,7 @@ describe('autoResizeTextareaHeight', () => {
     });
   });
 
-  describe('when a maximum value is provided to the function', () => {
+  describe('when just a maximum row count is passed into the function', () => {
     beforeEach(() => {
       mockEvent = {
         currentTarget: {
@@ -27,24 +27,6 @@ describe('autoResizeTextareaHeight', () => {
 
     it('sets the rows correctly', () => {
       expect(mockEvent.currentTarget.rows).toEqual(4);
-    });
-  });
-
-  describe('when a maximum value is not provided to the function', () => {
-    beforeEach(() => {
-      mockEvent = {
-        currentTarget: {
-          scrollHeight: '140',
-          baseScrollHeight: '28',
-        },
-      };
-
-      autoResizeTextareaHeightFunction = Utilities.autoResizeTextareaHeight();
-      autoResizeTextareaHeightFunction(mockEvent);
-    });
-
-    it('sets the rows correctly with a minimum of 2 rows', () => {
-      expect(mockEvent.currentTarget.rows).toEqual(10);
     });
   });
 
