@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.5.0 - (October 24, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.4.0 - (October 12, 2017)
 ------------------
 ### Added
@@ -11,6 +16,7 @@ Unreleased
 
 ### Fixed
 * Issue where Menu.Item prop updates were not getting rendered immediately.
+* Conflict with new terra-popup implementation and tests.
 
 1.3.0 - (October 6, 2017)
 ------------------

@@ -35,6 +35,9 @@ The arrange component provides content containers with a fit (start and/or end r
   alignFitStart="center"
   alignFill="bottom"
   alignFitEnd="stretch"
+  fitStartAttributes={{ style: { maxWidth: '10px' } }}
+  fillAttributes={{ style: { maxWidth: '20px' } }}
+  fitEndAttributes={{ style: { maxWidth: '30%' } }}
 />
 ```
 
@@ -42,4 +45,3 @@ The arrange component provides content containers with a fit (start and/or end r
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
-

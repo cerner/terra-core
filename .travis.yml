@@ -7,8 +7,9 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
+      - oracle-java8-set-default
 before_script:
-  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - export TZ=America/Chicago
 script:
   - npm test
   - npm run danger

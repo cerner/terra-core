@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Implement Textarea for OCS
 
+1.12.0 - (October 24, 2017)
+------------------
+### Updated
+* Added disabled support to select component
+
 1.11.0 - (October 6, 2017)
 ------------------
 ### Changed

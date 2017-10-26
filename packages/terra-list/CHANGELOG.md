@@ -4,10 +4,16 @@ Changelog
 Unreleased
 ----------
 
+1.13.0 - (October 24, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.12.0 - (October 6, 2017)
 ------------------
 ### Changed
 * Update table test links to be 'Table Tests' and 'Single Select Table Links'
+* Update list to use flex and column directional to update selection height
 
 1.11.0 - (September 26, 2017)
 ------------------

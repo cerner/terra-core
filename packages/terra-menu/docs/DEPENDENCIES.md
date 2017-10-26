@@ -9,8 +9,8 @@
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-content-container | ^1.11.1 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
-| terra-list | ^1.12.1 | ^15.4.2 | terra-list |
-| terra-popup | ^1.11.1 | ^15.4.2 | The Terra Popup is higher order component, that launches tether positioned content, with the ability to display a dynamic arrow. |
+| terra-list | ^1.13.0 | ^15.4.2 | terra-list |
+| terra-popup | ^1.12.0 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 | terra-slide-group | ^1.11.1 | ^15.4.2 | A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion |
 
 ## devDependencies
@@ -27,6 +27,6 @@
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-content-container | ^1.11.1 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
-| terra-list | ^1.12.1 | ^15.4.2 | terra-list |
-| terra-popup | ^1.11.1 | ^15.4.2 | The Terra Popup is higher order component, that launches tether positioned content, with the ability to display a dynamic arrow. |
+| terra-list | ^1.13.0 | ^15.4.2 | terra-list |
+| terra-popup | ^1.12.0 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 | terra-slide-group | ^1.11.1 | ^15.4.2 | A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion |

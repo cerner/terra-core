@@ -4,6 +4,9 @@ import TimeInput from '../../src/TimeInput';
 const handleOnChange = () => {
 };
 
+const handleOnBlur = () => {
+};
+
 it('should render a default time input', () => {
   const timeInput = <TimeInput name="time-input" />;
   const wrapper = shallow(timeInput);
@@ -24,6 +27,12 @@ it('should render a time input with a default time', () => {
 
 it('should render a time input with onChange', () => {
   const timeInput = <TimeInput name="time-input" onChange={handleOnChange} />;
+  const wrapper = shallow(timeInput);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a time input with onBlur', () => {
+  const timeInput = <TimeInput name="time-input" onBlur={handleOnBlur} />;
   const wrapper = shallow(timeInput);
   expect(wrapper).toMatchSnapshot();
 });

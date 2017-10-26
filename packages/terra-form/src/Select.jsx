@@ -23,6 +23,7 @@ const propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string.isRequired,
     display: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
   })),
 
   /**
@@ -99,7 +100,9 @@ const Select = ({
       value={value}
       className={selectClasses}
     >
-      {finalOptions.map(option => <option key={`${option.value}-${option.display}`} value={option.value}>{option.display}</option>)}
+      {finalOptions.map(option => <option key={`${option.value}-${option.display}`} value={option.value} disabled={option.disabled}>
+        {option.display}
+      </option>)}
     </select>
   );
 };
