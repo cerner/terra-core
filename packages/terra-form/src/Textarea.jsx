@@ -20,7 +20,7 @@ const propTypes = {
    */
   defaultValue: PropTypes.string,
   /**
-   * Whether the textarea can be auto-resized horizontally.
+   * Whether the textarea can be auto-resized vertically.
    */
   isAutoResizable: PropTypes.bool,
   /**
