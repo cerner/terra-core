@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* isInvalid, showOptional, hideRequired and errorIcon props
+
+### Changed
+* Uplift Field Component for OSC
 
 1.12.0 - (October 24, 2017)
 ------------------

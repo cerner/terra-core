@@ -9,12 +9,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.elementPresent('input[type="text"]');
   },
 
-  'Displays a populated inline TextField with correct label, help message, and error message': (browser) => {
+  'Displays a populated inline TextField with correct label and help message': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/form-tests/text-field/populated`)
       .assert.elementPresent('#populated-text-field')
       .assert.containsText('label', 'Associate ID')
-      .assert.containsText('small', 'This is the ID you were given during orientation')
-      .assert.containsText('small:nth-child(4)', 'Associate ID is required');
+      .assert.containsText('div[class*="help-text"]', 'This is the ID you were given during orientation');
   },
 });

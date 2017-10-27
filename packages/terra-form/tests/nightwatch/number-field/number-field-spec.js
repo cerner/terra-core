@@ -9,12 +9,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.elementPresent('input[type="number"]');
   },
 
-  'Displays a populated inline NumberField with correct label, help message, and error message': (browser) => {
+  'Displays a populated inline NumberField with correct label and help message': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/form-tests/number-field/populated`)
       .assert.elementPresent('#populated-number-field')
       .assert.containsText('label', 'Sales Tax Rate')
-      .assert.containsText('small', "Your county's office may have this information")
-      .assert.containsText('small:nth-child(4)', 'This field is required');
+      .assert.containsText('div[class*="help-text"]', "Your county's office may have this information");
   },
 });

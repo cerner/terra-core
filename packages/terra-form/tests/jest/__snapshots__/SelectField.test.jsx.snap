@@ -3,8 +3,16 @@
 exports[`should render a SelectField when all the possible props are passed into it 1`] = `
 <Field
   error="jinkies!"
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help="solve the mystery"
+  hideRequired={false}
   isInline={true}
+  isInvalid={false}
   label="Meddling Kids"
   labelAttrs={
     Object {
@@ -12,6 +20,7 @@ exports[`should render a SelectField when all the possible props are passed into
     }
   }
   required={true}
+  showOptional={false}
 >
   <Select
     choices={null}
@@ -37,11 +46,20 @@ exports[`should render a SelectField when all the possible props are passed into
 exports[`should render a default SelectField component 1`] = `
 <Field
   error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help={null}
+  hideRequired={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
+  showOptional={false}
 >
   <Select
     choices={null}
@@ -86,11 +104,20 @@ exports[`should render as controlled when just the required fields and a onChang
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"
@@ -163,11 +190,20 @@ exports[`should render as uncontrolled when just the required fields and a defau
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"

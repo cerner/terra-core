@@ -1,9 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import intlContexts from './intl-context-setup';
 import NumberField from '../../src/NumberField';
 
 it('should render a default component', () => {
   const input = <NumberField />;
-  const wrapper = shallow(input);
+  const wrapper = shallow(input, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -24,24 +26,24 @@ it('should render a NumberField when all the possible props are passed into it',
       required
     />);
 
-  const wrapper = shallow(input);
+  const wrapper = shallow(input, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as uncontrolled when just a numeric default value is passed into the NumberField', () => {
   const input = <NumberField defaultValue={2} />;
-  const wrapper = shallow(input);
+  const wrapper = shallow(input, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as uncontrolled when just a string default value is passed into the NumberField', () => {
   const input = <NumberField defaultValue={'2'} />;
-  const wrapper = shallow(input);
+  const wrapper = shallow(input, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render as controlled when just a default value is passed into the NumberField', () => {
   const input = <NumberField value={2} onChange={() => {}} />;
-  const wrapper = mount(input);
+  const wrapper = mount(input, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });

@@ -3,12 +3,21 @@
 exports[`should render a TextAreaField with the rest of the props 1`] = `
 <Field
   error="Name is required"
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help="The name given to you at birth."
+  hideRequired={false}
   htmlFor="description"
   isInline={true}
+  isInvalid={false}
   label="Profile Description"
   labelAttrs={Object {}}
   required={true}
+  showOptional={false}
 >
   <Textarea
     autoFocus={false}
@@ -26,11 +35,20 @@ exports[`should render a TextAreaField with the rest of the props 1`] = `
 exports[`should render a default TextAreaField component 1`] = `
 <Field
   error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   help={null}
+  hideRequired={false}
   isInline={false}
+  isInvalid={false}
   label={null}
   labelAttrs={Object {}}
   required={false}
+  showOptional={false}
 >
   <Textarea
     cols={null}
@@ -62,11 +80,20 @@ exports[`should render as controlled when just a default value is passed into th
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"
@@ -116,11 +143,20 @@ exports[`should render as uncontrolled when just a default value is passed into 
 >
   <Field
     error={null}
+    errorIcon={
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
     help={null}
+    hideRequired={false}
     isInline={false}
+    isInvalid={false}
     label={null}
     labelAttrs={Object {}}
     required={false}
+    showOptional={false}
   >
     <div
       className="field"

@@ -1,6 +1,8 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import SelectField from '../../../lib/SelectField';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class ControlledSelectField extends React.Component {
   constructor(props) {
@@ -32,7 +34,7 @@ class ControlledSelectField extends React.Component {
 
   render() {
     return (
-      <div>
+      <Base locale={locale}>
         <form onSubmit={this.handleSubmit}>
           <SelectField
             id="controlled-populated-select-field"
@@ -51,7 +53,7 @@ class ControlledSelectField extends React.Component {
             <p id="select-submission">Submitted with data {JSON.stringify(this.state.submittedData)}</p>
           </div>
         }
-      </div>
+      </Base>
     );
   }
 }

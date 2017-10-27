@@ -6,8 +6,10 @@ import FormTests from './FormTests';
 
 import DefaultControl from './control/DefaultControl';
 import PopulatedControl from './control/PopulatedControl';
-import DefaultField from './field/DefaultField';
-import PopulatedField from './field/PopulatedField';
+import FieldCombinations from './field/FieldCombinations';
+import FieldInteractiveInvalid from './field/FieldInteractiveInvalid';
+import FieldTextWrap from './field/FieldTextWrap';
+import FieldInline from './field/FieldInline';
 import DefaultFieldset from './fieldset/DefaultFieldset';
 import PopulatedFieldset from './fieldset/PopulatedFieldset';
 import DefaultInput from './input/DefaultInput';
@@ -34,8 +36,10 @@ const routes = (
     <Route path="/tests/form-tests" component={FormTests} />
     <Route path="/tests/form-tests/control/default" component={DefaultControl} />
     <Route path="/tests/form-tests/control/populated" component={PopulatedControl} />
-    <Route path="/tests/form-tests/field/default" component={DefaultField} />
-    <Route path="/tests/form-tests/field/populated" component={PopulatedField} />
+    <Route path="/tests/form-tests/field/combinations" component={FieldCombinations} />
+    <Route path="/tests/form-tests/field/is-invalid" component={FieldInteractiveInvalid} />
+    <Route path="/tests/form-tests/field/text-wrap" component={FieldTextWrap} />
+    <Route path="/tests/form-tests/field/inline" component={FieldInline} />
     <Route path="/tests/form-tests/fieldset/default" component={DefaultFieldset} />
     <Route path="/tests/form-tests/fieldset/populated" component={PopulatedFieldset} />
     <Route path="/tests/form-tests/input/default" component={DefaultInput} />

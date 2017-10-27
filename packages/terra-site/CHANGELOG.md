@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update Form examples to use new Field props
 
 1.15.0 - (October 24, 2017)
 ------------------
