@@ -83,7 +83,7 @@ const Button = ({
 
   const iconWithTextStyle = isReversed ? cx(['text-with-icon-reverse']) : cx(['text-with-icon']);
   const textStyle = icon ? iconWithTextStyle : null;
-  const buttonText = text ? <span className={textStyle} >{text}</span> : null;
+  const buttonText = text ? <span className={textStyle}>{text}</span> : null;
 
   attributes.className = cx([
     'button',
