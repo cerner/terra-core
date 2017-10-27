@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.12.0 - (October 24, 2017)
+------------------
 ### Changed
 * Replaced tether implementation with terra-hookshot components
 
