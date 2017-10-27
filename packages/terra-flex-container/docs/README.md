@@ -1,6 +1,6 @@
-# Terra Grid
+# Terra Flex Container
 
-The flex-container component provides a flexbox based container for its content
+The flex-container component provides a flexbox based container for aligning its content.
 
 ## Getting Started
 
@@ -14,11 +14,11 @@ The flex-container component provides a flexbox based container for its content
 import React from 'react';
 import FlexContainer from 'terra-flex-container';
 
-<FlexContainer>
-</FlexContainer>
+<FlexContainer />
 ```
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
+* [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
 * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)

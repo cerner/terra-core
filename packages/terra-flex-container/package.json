@@ -1,8 +1,8 @@
 {
   "name": "terra-flex-container",
   "main": "lib/FlexContainer.js",
-  "version": "1.0.0",
-  "description": "Component that provides a flexbox based container for its content",
+  "version": "0.0.0",
+  "description": "the terra-flex-container component provides a flexbox based container for its content",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -11,7 +11,7 @@
     "Cerner",
     "Terra",
     "terra-flex-container",
-    "Form",
+    "FlexContainer",
     "UI"
   ],
   "author": "Cerner Corporation",
@@ -31,8 +31,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.6.1",
-    "styled-components": "^2.0.0"
+    "styled-components": "^2.0.0",
+    "terra-base": "^2.6.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -41,7 +41,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/FlexContainer.jsx ./src/FlexItem.jsx --out-dir ./docs/props-table",
+    "props-table": "props-table ./src/FlexContainer.jsx ./src/Flexbox --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"

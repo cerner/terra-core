@@ -1,6 +1,6 @@
 Changelog
 =========
 
-1.0.0 - (Month Day, Year)
+Unreleased
 ------------------
 Initial stable release
