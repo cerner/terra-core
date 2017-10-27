@@ -38,6 +38,7 @@ import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SignatureExamples from './examples/signature/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SelectExamples from './examples/select/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
@@ -92,6 +93,8 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SelectTestRoutes from 'terra-select/tests/nightwatch/select/SelectTestRoutes';
+import SelectOptionTestRoutes from 'terra-select/tests/nightwatch/select-option/SelectOptionTestRoutes';
 import SelectableListTestRoutes from 'terra-list/tests/nightwatch/selectable-list/SelectableListTestRoutes';
 import SelectableTableTestRoutes from 'terra-table/tests/nightwatch/selectable-table/SelectableTableTestRoutes';
 import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
@@ -146,6 +149,7 @@ ReactDOM.render((
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="select" component={SelectExamples} />
       <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
@@ -214,5 +218,7 @@ ReactDOM.render((
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
+    {SelectTestRoutes}
+    {SelectOptionTestRoutes}
   </Router>
 ), document.getElementById('root'));
