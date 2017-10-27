@@ -307,4 +307,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
     browser.expect.element('.test-content').to.have.attribute('style').which.contains('width: 200px;');
   },
+
+  'Displays a popup with automatic dimensions resizing': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/popup-tests/resize-content`);
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-height');
+    browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
+    browser.click('#resize-content');
+  },
 });

@@ -4,6 +4,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Content Resize callback
 
 1.1.0 - (October 24, 2017)
 ------------------
