@@ -16,8 +16,8 @@ Terra-table provides several different components for building tables accessible
 - HeaderCell: Renders a table header cell.
 - TableRows: Wrapper to apply onClick and onKeyDown function on each child row.
 - SelectableTableRows: Wrapper that allows for selection state management of each child row. Use in place of TableRows.
-- SingleSelectableRows: Wrapper that handles single selection state mange of each child row. Use in place of TableRows.
-- MultiSelectableRows: Wrapper that handles multiple selection state mange of each child row. Use in place of TableRows.
+- SingleSelectableRows: Wrapper that handles single selection state manage of each child row. Use in place of TableRows.
+- MultiSelectableRows: Wrapper that handles multiple selection state manage of each child row. Use in place of TableRows.
 - Row: Renders a table row.
 - Cell: Renders a table cell.
 
@@ -111,7 +111,7 @@ import Table from 'terra-table';
       <Table.Cell content="213 Raymond Road" key="ADDRESS" />
       <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
     </Table.Row>
-  </Table.SingleSelectableRows>
+  </Table.MultiSelectableRows>
 </Table>
 ```
 
