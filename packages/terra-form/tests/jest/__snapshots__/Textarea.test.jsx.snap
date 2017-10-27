@@ -5,7 +5,9 @@ exports[`should render a TextArea when all the possible props are passed into it
   aria-required="true"
   className="textarea"
   cols={15}
+  disabled={false}
   name="description"
+  onChange={[Function]}
   required={true}
   rows={5}
 />
@@ -14,50 +16,60 @@ exports[`should render a TextArea when all the possible props are passed into it
 exports[`should render a default TextArea component 1`] = `
 <textarea
   className="textarea"
+  disabled={false}
   name={null}
+  onChange={[Function]}
   required={false}
-  rows={null}
+  rows={2}
 />
 `;
 
 exports[`should render a full size textbox appropriately 1`] = `
 <textarea
   className="textarea full-size"
+  disabled={false}
   name={null}
+  onChange={[Function]}
   required={false}
-  rows={null}
 />
 `;
 
 exports[`should render a large textbox appropriately 1`] = `
 <textarea
   className="textarea"
+  disabled={false}
   name={null}
+  onChange={[Function]}
   required={false}
-  rows={null}
+  rows={10}
 />
 `;
 
 exports[`should render a medium textbox appropriately 1`] = `
 <textarea
   className="textarea"
+  disabled={false}
   name={null}
+  onChange={[Function]}
   required={false}
-  rows={null}
+  rows={5}
 />
 `;
 
 exports[`should render a small textbox appropriately 1`] = `
 <textarea
   className="textarea"
+  disabled={false}
   name={null}
+  onChange={[Function]}
   required={false}
-  rows={null}
+  rows={2}
 />
 `;
 
 exports[`should render as controlled when just a default value is passed into the Textarea 1`] = `
 <Textarea
+  disabled={false}
   isAutoResizable={false}
   isInvalid={false}
   name={null}
@@ -69,10 +81,11 @@ exports[`should render as controlled when just a default value is passed into th
 >
   <textarea
     className="textarea"
+    disabled={false}
     name={null}
     onChange={[Function]}
     required={false}
-    rows={null}
+    rows={2}
     value="foo"
   />
 </Textarea>
@@ -81,6 +94,7 @@ exports[`should render as controlled when just a default value is passed into th
 exports[`should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
 <Textarea
   defaultValue="foo"
+  disabled={false}
   isAutoResizable={false}
   isInvalid={false}
   name={null}
@@ -91,9 +105,11 @@ exports[`should render as uncontrolled when just a default value is passed into 
   <textarea
     className="textarea"
     defaultValue="foo"
+    disabled={false}
     name={null}
+    onChange={[Function]}
     required={false}
-    rows={null}
+    rows={2}
   />
 </Textarea>
 `;
@@ -101,18 +117,21 @@ exports[`should render as uncontrolled when just a default value is passed into 
 exports[`should set the onChange and onFocus functions appropriately when the textarea is autoResizable 1`] = `
 <textarea
   className="textarea"
+  disabled={false}
   name={null}
   onChange={[Function]}
   onFocus={[Function]}
   required={false}
-  rows={null}
+  rows={2}
 />
 `;
 
 exports[`should set the rows attribute appropriate when it is passed into the textarea 1`] = `
 <textarea
   className="textarea"
+  disabled={false}
   name={null}
+  onChange={[Function]}
   required={false}
   rows={7}
 />

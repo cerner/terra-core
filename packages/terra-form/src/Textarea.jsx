@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 
-import Utilities from './_Utilities';
 import styles from './Textarea.scss';
 
 const cx = classNames.bind(styles);
@@ -19,6 +18,10 @@ const propTypes = {
    * The defaultValue of the textarea. Use this to create an uncontrolled textarea.
    */
   defaultValue: PropTypes.string,
+  /**
+   * Whether the textarea is disabled.
+   */
+  disabled: PropTypes.bool,
   /**
    * Whether the textarea can be auto-resized vertically.
    */
@@ -61,6 +64,7 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
+  disabled: false,
   name: null,
   isAutoResizable: false,
   isInvalid: false,
@@ -71,54 +75,92 @@ const defaultProps = {
   value: undefined,
 };
 
-const Textarea = ({
-  name,
-  required,
-  onChange,
-  onFocus,
-  isAutoResizable,
-  isInvalid,
-  value,
-  defaultValue,
-  rows,
-  size,
-  ...customProps
-}) => {
-  const additionalTextareaProps = Object.assign({}, customProps);
+class Textarea extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const textareaClasses = cx([
-    'textarea',
-    { 'form-error': isInvalid },
-    { 'full-size': size === 'full' },
-    additionalTextareaProps.className,
-  ]);
-
-  if (required) {
-    additionalTextareaProps['aria-required'] = 'true';
+    this.onChange = this.onChange.bind(this);
   }
 
-  const textareaRows = (rows !== undefined) ? rows : TEXTAREA_ROW_SIZES[size];
-  const onFocusFunc = isAutoResizable ? Utilities.setTextareaBaseHeight(onFocus) : onFocus;
-  const onChangeFunc = isAutoResizable ? Utilities.autoResizeTextareaHeight(onChange, textareaRows) : onChange;
+  componentDidMount() {
+    if (this.props.isAutoResizable) {
+      // To Properly resize the textarea vertically, we need to record the initial height
+      // to help with the resizing calculation.
+      const savedValue = this.textarea.value;
+      this.textarea.value = '';
+      this.textarea.baseScrollHeight = this.textarea.scrollHeight;
+      this.textarea.value = savedValue;
 
-  if (value !== undefined) {
-    additionalTextareaProps.value = value;
-  } else {
-    additionalTextareaProps.defaultValue = defaultValue;
+      this.resizeTextarea();
+    }
   }
 
-  return (
-    <textarea
-      name={name}
-      onFocus={onFocusFunc}
-      onChange={onChangeFunc}
-      required={required}
-      rows={textareaRows}
-      {...additionalTextareaProps}
-      className={textareaClasses}
-    />
-  );
-};
+  onChange(e) {
+    this.resizeTextarea();
+
+    if (this.props.onChange) {
+      this.props.onChange(e);
+    }
+  }
+
+  resizeTextarea() {
+    const lineHeight = Math.ceil(parseFloat(window.getComputedStyle(this.textarea).lineHeight, 0));
+    const minRows = this.props.rows || TEXTAREA_ROW_SIZES[this.props.size];
+    this.textarea.rows = minRows;
+    const rows = Math.ceil((this.textarea.scrollHeight - this.textarea.baseScrollHeight) / lineHeight);
+    this.textarea.rows = minRows + rows;
+  }
+
+  render() {
+    const {
+      name,
+      required,
+      onChange,
+      onFocus,
+      isAutoResizable,
+      isInvalid,
+      value,
+      defaultValue,
+      rows,
+      size,
+      ...customProps
+    } = this.props;
+
+    const additionalTextareaProps = Object.assign({}, customProps);
+
+    const textareaClasses = cx([
+      'textarea',
+      { 'form-error': isInvalid },
+      { 'full-size': size === 'full' },
+      additionalTextareaProps.className,
+    ]);
+
+    if (required) {
+      additionalTextareaProps['aria-required'] = 'true';
+    }
+
+    const textareaRows = rows || TEXTAREA_ROW_SIZES[size];
+
+    if (value !== undefined) {
+      additionalTextareaProps.value = value;
+    } else {
+      additionalTextareaProps.defaultValue = defaultValue;
+    }
+
+    return (
+      <textarea
+        ref={(textarea) => { this.textarea = textarea; }}
+        name={name}
+        onFocus={this.props.onFocus}
+        onChange={this.onChange}
+        required={required}
+        rows={textareaRows}
+        {...additionalTextareaProps}
+        className={textareaClasses}
+      />
+    );
+  }
+}
 
 Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
