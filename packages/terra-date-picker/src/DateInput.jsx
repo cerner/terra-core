@@ -15,9 +15,17 @@ const propTypes = {
    */
   inputAttributes: PropTypes.object,
   /**
+   * Indicates whether or not the picker should be displayed after rendering.
+   */
+  isForceShowPicker: PropTypes.bool,
+  /**
    * Name of the date input.
    */
   name: PropTypes.string,
+  /**
+   * A callback function to execute when the calendar button is clicked.
+   */
+  onCalendarButtonClick: PropTypes.func,
   /**
    * A callback function to execute when a valid date is selected or entered.
    */
@@ -26,6 +34,10 @@ const propTypes = {
    * The onInputClick callback function from react-datepicker to show the picker when clicked.
    */
   onClick: PropTypes.func,
+  /**
+   * A callback function to execute when the date input is in focus.
+   */
+  onInputFocus: PropTypes.func,
   /**
    * The onInputKeyDown callback function from react-datepicker to handle keyboard navigation.
    */
@@ -58,6 +70,7 @@ const defaultProps = {
   releaseFocus: undefined,
   requestFocus: undefined,
   value: undefined,
+  isForceShowPicker: false,
 };
 
 const contextTypes = {
@@ -76,16 +89,23 @@ class DatePickerInput extends React.Component {
 
     this.handleOnButtonClick = this.handleOnButtonClick.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+    this.handleOnInputFocus = this.handleOnInputFocus.bind(this);
   }
 
-  handleOnButtonClick() {
+  componentDidUpdate(prevProps) {
+    if (this.props.isForceShowPicker && !prevProps.isForceShowPicker && this.props.onClick) {
+      this.props.onClick();
+    }
+  }
+
+  handleOnButtonClick(event) {
     // The picker is about to display so request focus from the containing component (e.g. modal) if it has the focus trapped.
     if (this.props.requestFocus) {
       this.props.requestFocus();
     }
 
-    if (this.props.onClick) {
-      this.props.onClick();
+    if (this.props.onCalendarButtonClick) {
+      this.props.onCalendarButtonClick(event, this.props.onClick);
     }
   }
 
@@ -104,12 +124,21 @@ class DatePickerInput extends React.Component {
     }
   }
 
+  handleOnInputFocus(event) {
+    if (this.props.onInputFocus) {
+      this.props.onInputFocus(event);
+    }
+  }
+
   render() {
     const {
       inputAttributes,
+      isForceShowPicker,
       name,
+      onCalendarButtonClick,
       onChange,
       onClick,
+      onInputFocus,
       onKeyDown,
       placeholder,
       releaseFocus,
@@ -144,6 +173,7 @@ class DatePickerInput extends React.Component {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
+          onFocus={this.handleOnInputFocus}
         />
         <Button
           className={styles.button}

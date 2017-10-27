@@ -30,6 +30,42 @@ class DateUtil {
     return momentDates.length > 0 ? momentDates : dates;
   }
 
+  // Checks if a given date is out of the range between the start and end dates.
+  static isDateOutOfRange(sourceDate, startDate, endDate) {
+    if (!sourceDate || !sourceDate.isValid() ||
+      !startDate || !startDate.isValid() ||
+      !endDate || !endDate.isValid()) {
+      return false;
+    }
+
+    if (sourceDate.isBefore(startDate) && sourceDate.isAfter(endDate)) {
+      return false;
+    }
+
+    return true;
+  }
+
+  // Checks if a given date is one of the excluded dates.
+  static isDateExcluded(sourceDate, excludedDates) {
+    if (!sourceDate || !sourceDate.isValid()) {
+      return false;
+    }
+
+    const exludeMomentDates = DateUtil.filterInvalidDates(excludedDates);
+
+    if (!exludeMomentDates || exludeMomentDates.length <= 0) {
+      return false;
+    }
+
+    for (let index = 0; index < exludeMomentDates.length; index += 1) {
+      if (sourceDate.isSame(exludeMomentDates[index], 'day')) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   // Converts date string to the ISO8601 format with only the date part. If the date string is invalid and unable to convert, the originally provided string is returned.
   static convertToISO8601(date, format) {
     if (date && format) {

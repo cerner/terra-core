@@ -293,4 +293,69 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('disabled');
     browser.expect.element('input[name="terra-date-input"]').to.not.have.attribute('disabled');
   },
+
+  'Clears the default date and time on calendar button click when the default date is excluded': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+
+    browser.click('[class*="button"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on date input focus when the default date is excluded': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+
+    browser.click('input[name="terra-date-input"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on hour input focus when the default date is excluded': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+
+    browser.click('input[name="terra-time-hour-input"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on minute input focus when the default date is excluded': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+
+    browser.click('input[name="terra-time-minute-input"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on date input focus when the default date is out of range': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-out-of-range`);
+
+    browser.click('input[name="terra-date-input"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on hour input focus when the default date is out of range': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-out-of-range`);
+
+    browser.click('input[name="terra-time-hour-input"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on minute input focus when the default date is out of range': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-out-of-range`);
+
+    browser.click('input[name="terra-time-minute-input"]');
+    browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('value').equals('');
+  },
 });

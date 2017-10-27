@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added onInputFocus and onCalendarButtonClick props to handle unacceptable default dates.
 
 1.13.0 - (October 24, 2017)
 ------------------

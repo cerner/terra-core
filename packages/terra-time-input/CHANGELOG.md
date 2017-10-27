@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added onInputFocus prop.
 
 1.13.0 - (October 24, 2017)
 ------------------

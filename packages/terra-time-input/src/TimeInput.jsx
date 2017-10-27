@@ -27,6 +27,11 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * A callback function to execute when either the hour or minute input is in focus.
+   * The first parameter is the event.
+   */
+  onInputFocus: PropTypes.func,
+  /**
    * An ISO 8601 string representation of the time value in the input.
    */
   value: PropTypes.string,
@@ -84,7 +89,11 @@ class TimeInput extends React.Component {
     });
   }
 
-  handleFocus() {
+  handleFocus(event) {
+    if (this.props.onInputFocus) {
+      this.props.onInputFocus(event);
+    }
+
     this.setState({ isFocused: true });
   }
 
@@ -257,6 +266,7 @@ class TimeInput extends React.Component {
       inputAttributes,
       onBlur,
       onChange,
+      onInputFocus,
       name,
       value,
       ...customProps

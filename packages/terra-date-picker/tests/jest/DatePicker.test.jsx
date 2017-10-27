@@ -130,3 +130,23 @@ it('throws error on missing locale prop in Base', () => {
     expect(e.message).toContain('add locale prop to Base component');
   }
 });
+
+it('should render a date picker with onCalendarButtonClick', () => {
+  const handleOnCalendarButtonClick = () => {};
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DatePicker name="date-input" onCalendarButtonClick={handleOnCalendarButtonClick} utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
+
+it('should render a date picker with onInputFocus', () => {
+  const handleOnInputFocus = () => {};
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DatePicker name="date-input" onInputFocus={handleOnInputFocus} utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});
