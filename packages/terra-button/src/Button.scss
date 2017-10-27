@@ -118,11 +118,11 @@
     padding-top: var(--terra-button-padding-top-compact, 0);
   }
 
-  .text-with-icon {
-    margin-left: 0.714em;
+  .text:first-child:not(:last-child) {
+    margin-right: 0.714em;
   }
 
-  .text-with-icon-reverse {
-    margin-right: 0.714em;
+  .text:nth-child(2) {
+    margin-left: 0.714em;
   }
 }

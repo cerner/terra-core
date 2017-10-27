@@ -122,7 +122,7 @@ it('should have a span when a text is provided', () => {
   expect(button.childAt(0).is('span')).toEqual(true);
 });
 
-it('should set the text text', () => {
+it('should set the span text', () => {
   const button = shallow(<Button text="text" />);
   expect(button.find('span').text()).toEqual('text');
 });

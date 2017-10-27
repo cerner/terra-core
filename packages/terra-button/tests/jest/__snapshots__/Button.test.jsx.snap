@@ -102,7 +102,7 @@ exports[`should render an icon and a text 1`] = `
     alt="icon"
   />
   <span
-    className="text-with-icon"
+    className="text"
   >
     text
   </span>
@@ -118,7 +118,7 @@ exports[`should render as an anchor when provided an href 1`] = `
   type="button"
 >
   <span
-    className={null}
+    className="text"
   >
     href
   </span>
@@ -134,7 +134,7 @@ exports[`should render as disabled when set 1`] = `
   type="button"
 >
   <span
-    className={null}
+    className="text"
   >
     Disabled
   </span>
@@ -149,7 +149,7 @@ exports[`should render text then an icon when reversed 1`] = `
   type="button"
 >
   <span
-    className="text-with-icon-reverse"
+    className="text"
   >
     text
   </span>
