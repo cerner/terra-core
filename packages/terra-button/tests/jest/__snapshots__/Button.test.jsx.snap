@@ -140,3 +140,21 @@ exports[`should render as disabled when set 1`] = `
   </span>
 </button>
 `;
+
+exports[`should render text then an icon when reversed 1`] = `
+<button
+  aria-disabled={false}
+  className="button default tiny"
+  disabled={false}
+  type="button"
+>
+  <span
+    className="text"
+  >
+    text
+  </span>
+  <img
+    alt="icon"
+  />
+</button>
+`;
