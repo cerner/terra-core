@@ -80,8 +80,7 @@
     "terra-time-input": "^1.13.0",
     "terra-toggle": "^1.11.1",
     "terra-toggle-button": "^1.12.1",
-    "xfc": "^1.0.0",
-    "cerner-consumer-theme": "file:../../../cerner-consumer-theme"
+    "xfc": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
