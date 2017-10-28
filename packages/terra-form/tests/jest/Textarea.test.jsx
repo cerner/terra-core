@@ -62,8 +62,26 @@ it('should set the rows attribute appropriate when it is passed into the textare
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should set the textarea as auto resizable when isAutoResizable is passed into the component', () => {
+  const textarea = <Textarea isAutoResizable />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should set the onChange and onFocus functions appropriately when the textarea is autoResizable', () => {
   const textarea = <Textarea isAutoResizable onFocus={() => {}} onChange={() => {}} />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should set the textarea to disabled when passed into the component', () => {
+  const textarea = <Textarea disabled />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should set the textarea to invalid when isInvalid is passed into the component', () => {
+  const textarea = <Textarea isInvalid />;
   const wrapper = shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });

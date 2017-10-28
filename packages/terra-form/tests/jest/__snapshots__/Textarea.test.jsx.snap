@@ -136,3 +136,36 @@ exports[`should set the rows attribute appropriate when it is passed into the te
   rows={7}
 />
 `;
+
+exports[`should set the textarea as auto resizable when isAutoResizable is passed into the component 1`] = `
+<textarea
+  className="textarea"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
+exports[`should set the textarea to disabled when passed into the component 1`] = `
+<textarea
+  className="textarea"
+  disabled={true}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
+exports[`should set the textarea to invalid when isInvalid is passed into the component 1`] = `
+<textarea
+  className="textarea form-error"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
