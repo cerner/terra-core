@@ -21,6 +21,13 @@ const FormTests = () => (
       <li><Link to="/tests/form-tests/text-field/populated">Populated TextField</Link></li>
       <li><Link to="/tests/form-tests/textarea/default">Default Textarea</Link></li>
       <li><Link to="/tests/form-tests/textarea/populated">Populated Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/auto-resizable">AutoResizable Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/small">Small Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/medium">Medium Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/large">Large Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/full">Full Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/invalid">Invalid Textarea</Link></li>
+      <li><Link to="/tests/form-tests/textarea/rows">Textarea with Rows Set</Link></li>
       <li><Link to="/tests/form-tests/textarea-field/default">Default TextareaField</Link></li>
       <li><Link to="/tests/form-tests/textarea-field/populated">Populated TextareaField</Link></li>
       <li><Link to="/tests/form-tests/select/default">Default Select</Link></li>
