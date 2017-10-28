@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added space between icons and text
 
 1.11.0 - (October 6, 2017)
 ------------------
