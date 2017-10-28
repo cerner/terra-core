@@ -1,18 +1,18 @@
-# Terra Horizontal Divider
+# Terra Divider
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-horizontal-divider.svg)](https://www.npmjs.org/package/terra-horizontal-divider)
+[![NPM version](http://img.shields.io/npm/v/terra-divider.svg)](https://www.npmjs.org/package/terra-divider)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-horizontal-divider component is used to separate content on a layout.
+The terra-divider component is used to separate content on a layout.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-horizontal-divider/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-divider/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-horizontal-divider`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-divider`
 
 ## LICENSE
 

@@ -126,15 +126,15 @@
     "--terra-demographics-banner-background-deceased": "#1c1f21",
     "--terra-demographics-banner-foreground-deceased": "#fff"
   },
+  "Divider": {
+    "--terra-horizontal-divider-border-color": "#b2b5b6",
+    "--terra-horizontal-divider-border-width": "1px"
+  },
   "Grid": {
     "--terra-grid-gutter-width": "1rem"
   },
   "HookshotContent": {
     "--terra-hookshot-content-z-index": "7001"
-  },
-  "HorizontalDivider": {
-    "--terra-horizontal-divider-border-color": "#b2b5b6",
-    "--terra-horizontal-divider-border-width": "1px"
   },
   "Image": {
     "--terra-image-rounded-border-radius": "0.3rem",

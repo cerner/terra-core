@@ -1,8 +1,8 @@
 import React from 'react';
-import HorizontalDivider from '../../src/HorizontalDivider';
+import Divider from '../../src/Divider';
 
 describe('HorizontalDivider', () => {
-  const defaultRender = <HorizontalDivider />;
+  const defaultRender = <Divider />;
 
   // Snapshot Tests
   it('should render a basic component', () => {
@@ -12,7 +12,7 @@ describe('HorizontalDivider', () => {
 
   // Custom Prop Test
   it('it should pass in a custom prop', () => {
-    const wrapper = shallow(<HorizontalDivider id="testDivider" />);
+    const wrapper = shallow(<Divider id="testDivider" />);
     expect(wrapper).toMatchSnapshot();
   });
 });
