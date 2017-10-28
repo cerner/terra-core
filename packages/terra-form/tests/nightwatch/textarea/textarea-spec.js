@@ -53,6 +53,14 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert
       .attributeEquals('textarea', 'rows', '10');
   },
+  'Does not auto-resize if the prop is not explicitly defined on the component': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/form-tests/textarea/medium`)
+      .clearValue('textarea')
+      .setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n')
+      .assert
+      .attributeEquals('textarea', 'rows', '5');
+  },
   'Displays an invalid textarea with the appropriate class': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/form-tests/textarea/invalid`)

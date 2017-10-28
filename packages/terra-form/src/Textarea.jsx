@@ -95,11 +95,13 @@ class Textarea extends React.Component {
     }
   }
 
-  onChange(e) {
-    this.resizeTextarea();
+  onChange(event) {
+    if (this.props.isAutoResizable) {
+      this.resizeTextarea();
+    }
 
     if (this.props.onChange) {
-      this.props.onChange(e);
+      this.props.onChange(event);
     }
   }
 
