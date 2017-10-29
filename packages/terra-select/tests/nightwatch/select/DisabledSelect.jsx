@@ -1,9 +1,11 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Select from '../../../lib/Select';
 
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
 const DisabledSelect = () => (
-  <div>
+  <Base locale={locale}>
     <p>Disabled select with a preselected value of kittens.</p>
     <form>
       <Select
@@ -20,7 +22,7 @@ const DisabledSelect = () => (
       </Select>
     </form>
     <br />
-  </div>
+  </Base>
 );
 
 export default DisabledSelect;

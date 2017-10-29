@@ -64,9 +64,18 @@ const defaultProps = {
   isInvalid: false,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
 class Select extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.getInitialState = this.getInitialState.bind(this);
     this.setTargetRef = this.setTargetRef.bind(this);
     this.getTargetRef = this.getTargetRef.bind(this);
@@ -183,6 +192,8 @@ class Select extends React.Component {
       ...customProps
     } = this.props;
 
+    const { intl } = this.context;
+
     const attributes = Object.assign({}, customProps);
     const selectClasses = cx([
       'select',
@@ -220,7 +231,7 @@ class Select extends React.Component {
     });
 
     if (!selectedValue) {
-      display = '- Select -';
+      display = intl.formatMessage({ id: 'Terra.select.defaultDisplay' });
       selectedValue = '';
       defaultOption = <SelectOption value={selectedValue} display={display} isSelected className={cx('default-option')} />;
       isDefaultDisplay = true;
@@ -257,7 +268,7 @@ class Select extends React.Component {
           <Arrange
             fill={<div className={cx(['display', { 'default-option': isDefaultDisplay }])}>{display}</div>}
             fitEnd={<IconCaretDown className={cx('select-arrow')} />}
-            align="center"
+            alignFitEnd="center"
           />
           <input type="hidden" name={name} required={required} disabled={disabled} value={selectedValue} />
         </div>
@@ -268,6 +279,7 @@ class Select extends React.Component {
 
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;
+Select.contextTypes = contextTypes;
 Select.Option = SelectOption;
 
 export default Select;

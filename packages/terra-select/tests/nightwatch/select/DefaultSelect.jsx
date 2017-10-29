@@ -1,9 +1,11 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Select from '../../../lib/Select';
 
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
 const DefaultSelect = () => (
-  <div>
+  <Base locale={locale}>
     <p>Basic select with no initial selected value. The placeholder select text should be displayed.</p>
     <form>
       <Select
@@ -19,7 +21,7 @@ const DefaultSelect = () => (
       </Select>
     </form>
     <br />
-  </div>
+  </Base>
 );
 
 export default DefaultSelect;

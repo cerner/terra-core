@@ -1,12 +1,12 @@
 :local {
   .option {
     background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--terra-select-option-font-color, rgba(0, 0, 0, 0.9));
     cursor: pointer;
-    font-family: var(--terra-select-font-family, Helvetica);
-    font-size: var(--terra-select-font-size, 1em);
-    line-height: var(--terra-select-line-height, 1.07);
-    padding: 0.286rem 0.714em;
+    font-family: var(--terra-select-option-font-family, Helvetica);
+    font-size: var(--terra-select-option-font-size, 1em);
+    line-height: var(--terra-select-option-line-height, 1.07);
+    padding: var(--terra-select-option-padding, 0.286rem 0.714em);
 
 
     &.is-disabled {

@@ -1,11 +1,12 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Select from '../../../lib/Select';
 
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 const display = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget metus aliquet, tincidunt lacus eu, placerat turpis. Nunc volutpat, nunc ac euismod suscipit, nunc felis porta elit, a ultrices nulla neque quis risus. Nulla at suscipit velit, eu facilisis nulla. Phasellus aliquet metus sagittis odio gravida eleifend. Nulla gravida et.';
 
 const DefaultSelect = () => (
-  <div>
+  <Base locale={locale}>
     <p>Select contains a preselected value with long text that should truncate.</p>
     <form>
       <Select
@@ -23,7 +24,7 @@ const DefaultSelect = () => (
       </Select>
     </form>
     <br />
-  </div>
+  </Base>
 );
 
 export default DefaultSelect;

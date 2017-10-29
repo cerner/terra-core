@@ -87,7 +87,8 @@
     width: 0.857em;
   }
 
-  .default-option {
+  .default-option,
+  .display.default-option {
     color: var(--terra-select-default-option-color, #bcbfc0);
     font-style: var(--terra-select-default-option-font-style, normal);
   }
@@ -110,6 +111,6 @@
     box-shadow: var(--terra-select-menu-box-shadow, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-bottom: var(--terra-select-menu-bottom-padding, 0.214em);
   }
 }

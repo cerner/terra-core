@@ -1,9 +1,11 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Select from '../../../lib/Select';
 
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
 const InvalidSelect = () => (
-  <div>
+  <Base locale={locale}>
     <p>This select has been marked as invalid.</p>
     <form>
       <Select
@@ -20,7 +22,7 @@ const InvalidSelect = () => (
       </Select>
     </form>
     <br />
-  </div>
+  </Base>
 );
 
 export default InvalidSelect;

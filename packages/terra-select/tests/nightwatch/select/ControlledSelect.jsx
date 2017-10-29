@@ -1,6 +1,8 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import Select from '../../../lib/Select';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class ControlledSelect extends React.Component {
   constructor(props) {
@@ -15,7 +17,7 @@ class ControlledSelect extends React.Component {
 
   render() {
     return (
-      <div>
+      <Base locale={locale}>
         <p>Controlled select. Uses value and onChange props to manage state. Initial value is puppies.</p>
         <form>
           <Select
@@ -33,7 +35,7 @@ class ControlledSelect extends React.Component {
           </Select>
         </form>
         <br />
-      </div>
+      </Base>
     );
   }
 }
