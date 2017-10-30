@@ -8,7 +8,7 @@ class SubMenu extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   componentDidMount() {
@@ -56,7 +56,7 @@ class SubMenu extends React.Component {
           <Menu.Item text="Default 4" key="4" />
           <Menu.Item text="Default 5" key="5" />
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="sub-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

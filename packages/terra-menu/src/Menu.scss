@@ -1,5 +1,5 @@
 :local {
-  .submenu.arrow[data-align-bottom='true']::after {
+  .submenu.arrow[data-align-arrow='bottom']::after {
     border-top-color: var(--terra-menu-submenu-background-color, #f9f9f9);
   }
 
@@ -8,6 +8,7 @@
     border-style: solid;
     border-width: 1px 0 0;
     margin-top: 2px;
+    width: 100%;
 
     &::after {
       border-color: var(--terra-menu-divider-shadow-color, #f9f9f9);
@@ -82,25 +83,21 @@
     }
   }
 
-  .main-menu:not(.fullscreen) .header {
-    display: none;
-  }
-
-  .submenu:not(.fullscreen) .close-button {
-    display: none;
-  }
-
   .list {
     padding: 6px 0;
   }
 
-  .main-menu .content {
+  .content {
     background-color: var(--terra-menu-background-color, #fff);
     color: var(--terra-menu-foreground-color, #1c1f21);
   }
 
-  .submenu .content {
+  .content.submenu {
     background-color: var(--terra-menu-submenu-background-color, #f9f9f9);
     color: var(--terra-menu-submenu-foreground-color, #1c1f21);
+  }
+
+  .hidden-page {
+    display: none;
   }
 }
