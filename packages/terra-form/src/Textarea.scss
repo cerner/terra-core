@@ -1,14 +1,89 @@
 :local {
   .textarea {
-    border: #dedfe0 solid 1px;
-    border-radius: 0.25em;
-    font-size: 1em;
-    line-height: 1.25;
-    padding: 0.178em;
+    background-color: var(--terra-form-textarea-background-color, #fff);
+    background-image: var(--terra-form-textarea-focus-animation-background, none);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: var(--terra-form-textarea-focus-background-start, 0 0);
+    border-color: var(--terra-form-textarea-border-color, #dedfe0);
+    border-radius: var(--terra-form-textarea-border-radius, 0);
+    border-style: var(--terra-form-textarea-border-style, solid);
+    border-width: var(--terra-form-textarea-border-width, 1px);
+    color: var(--terra-form-textarea-color, #000);
+    cursor: var(--terra-form-textarea-cursor, auto);
+    font-size: var(--terra-form-textarea-font-size-small, 1em);
+    line-height: var(--terra-form-textarea-line-height, 1.25);
+    opacity: var(--terra-form-textarea-focus-opacity, 1);
+    padding-bottom: var(--terra-form-textarea-padding-bottom, 0.429rem);
+    padding-left: var(--terra-form-textarea-padding-left, 0.429rem);
+    padding-right: var(--terra-form-textarea-padding-right, 0.429rem);
+    padding-top: var(--terra-form-textarea-padding-top, 0.357rem);
+    transition-duration: var(--terra-form-textarea-focus-transition-duration, 0.2s);
+    transition-property: background-size;
+    transition-timing-function: var(--terra-form-textarea-focus-transition-timing-function, ease);
     width: 100%;
 
     &[required] {
       box-shadow: unset;
+    }
+
+    &[disabled] {
+      background: var(--terra-form-textarea-disabled-background, rgba(0, 0, 0, 0.05));
+      border-color: var(--terra-form-textarea-disabled-border-color, #000);
+      border-style: var(--terra-form-textarea-disabled-border-style, solid);
+      border-width: var(--terra-form-textarea-disabled-border-width, 1px);
+      opacity: var(--terra-form-textarea-disabled-opacity, 1);
+    }
+
+    &:focus {
+      background-size: var(--terra-form-textarea-focus-mouse-animation-size, 0 0);
+      border-color: var(--terra-form-textarea-focus-mouse-border-color, #dedfe0);
+      border-style: var(--terra-form-textarea-focus-mouse-border-style, solid);
+      border-width: var(--terra-form-textarea-focus-mouse-border-width, 1px);
+      box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow, 1px 1px 0 0 #46b1eb);
+      opacity: var(--terra-form-textarea-focus-mouse-opacity, 1);
+      outline: none;
+    }
+
+    [data-whatinput='keyboard'] &:focus {
+      background-size: var(--terra-form-textarea-focus-keyboard-animation-size, 0 0);
+      border-color: var(--terra-form-textarea-focus-keyboard-border-color, #dedfe0);
+      border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
+      border-width: var(--terra-form-textarea-focus-keyboard-border-width, 1px);
+      box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-keyboard, 1px 1px 0 0 #46b1eb);
+      opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
+    }
+  }
+
+  .full-size {
+    height: 100%;
+    resize: none;
+    width: 100%;
+  }
+
+  .form-error {
+    background-image: var(--terra-form-textarea-error-focus-animation-background, linear-gradient(to bottom, #ff0b0f, #ff0b0f));
+    border-color: var(--terra-form-textarea-error-border-color, #000);
+    border-style: var(--terra-form-textarea-error-border-style, solid);
+    border-width: var(--terra-form-textarea-error-border-width, 1px);
+    opacity: var(--terra-form-textarea-error-opacity, 1);
+
+    &:focus {
+      background-size: var(--terra-form-textarea-error-focus-mouse-animation-size, 0 0);
+      border-color: var(--terra-form-textarea-error-focus-mouse-border-color, #dedfe0);
+      border-style: var(--terra-form-textarea-error-focus-mouse-border-style, solid);
+      border-width: var(--terra-form-textarea-error-focus-mouse-border-width, 1px);
+      box-shadow: var(--terra-form-textarea-error-focus-mouse-box-shadow, 0 0 1px 1px #000);
+      opacity: var(--terra-form-textarea-error-focus-mouse-opacity, 1);
+    }
+
+    [data-whatinput='keyboard'] &:focus {
+      background-size: var(--terra-form-textarea-error-focus-keyboard-animation-size, 0 0);
+      border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #dedfe0);
+      border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
+      border-width: var(--terra-form-textarea-error-focus-keyboard-border-width, 1px);
+      box-shadow: var(--terra-form-textarea-error-focus-mouse-box-shadow, 0 0 1px 1px #000);
+      opacity: var(--terra-form-textarea-error-focus-keyboard-opacity, 1);
     }
   }
 }

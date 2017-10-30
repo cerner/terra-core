@@ -16,8 +16,15 @@ import DefaultNumberField from './number-field/DefaultNumberField';
 import PopulatedNumberField from './number-field/PopulatedNumberField';
 import DefaultTextField from './text-field/DefaultTextField';
 import PopulatedTextField from './text-field/PopulatedTextField';
+import AutoResizableTextarea from './textarea/AutoResizableTextarea';
 import DefaultTextarea from './textarea/DefaultTextarea';
 import PopulatedTextarea from './textarea/PopulatedTextarea';
+import RowsTextarea from './textarea/RowsTextarea';
+import SmallTextarea from './textarea/SmallTextarea';
+import MediumTextarea from './textarea/MediumTextarea';
+import LargeTextarea from './textarea/LargeTextarea';
+import FullTextarea from './textarea/FullTextarea';
+import InvalidTextarea from './textarea/InvalidTextarea';
 import DefaultTextareaField from './textarea-field/DefaultTextareaField';
 import PopulatedTextareaField from './textarea-field/PopulatedTextareaField';
 import DefaultSelect from './select/DefaultSelect';
@@ -44,8 +51,15 @@ const routes = (
     <Route path="/tests/form-tests/number-field/populated" component={PopulatedNumberField} />
     <Route path="/tests/form-tests/text-field/default" component={DefaultTextField} />
     <Route path="/tests/form-tests/text-field/populated" component={PopulatedTextField} />
+    <Route path="/tests/form-tests/textarea/auto-resizable" component={AutoResizableTextarea} />
     <Route path="/tests/form-tests/textarea/default" component={DefaultTextarea} />
     <Route path="/tests/form-tests/textarea/populated" component={PopulatedTextarea} />
+    <Route path="/tests/form-tests/textarea/small" component={SmallTextarea} />
+    <Route path="/tests/form-tests/textarea/medium" component={MediumTextarea} />
+    <Route path="/tests/form-tests/textarea/invalid" component={InvalidTextarea} />
+    <Route path="/tests/form-tests/textarea/large" component={LargeTextarea} />
+    <Route path="/tests/form-tests/textarea/full" component={FullTextarea} />
+    <Route path="/tests/form-tests/textarea/rows" component={RowsTextarea} />
     <Route path="/tests/form-tests/textarea-field/default" component={DefaultTextareaField} />
     <Route path="/tests/form-tests/textarea-field/populated" component={PopulatedTextareaField} />
     <Route path="/tests/form-tests/select/default" component={DefaultSelect} />

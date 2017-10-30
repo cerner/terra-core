@@ -13,12 +13,16 @@ exports[`should render a TextAreaField with the rest of the props 1`] = `
   <Textarea
     autoFocus={false}
     cols={null}
+    disabled={false}
     id="description"
+    isAutoResizable={false}
+    isInvalid={false}
     maxLength={15}
     minLength={5}
     name="profile_description"
     required={true}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -34,11 +38,15 @@ exports[`should render a default TextAreaField component 1`] = `
 >
   <Textarea
     cols={null}
+    disabled={false}
+    isAutoResizable={false}
+    isInvalid={false}
     maxLength={null}
     minLength={null}
     name={null}
     required={false}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -73,23 +81,28 @@ exports[`should render as controlled when just a default value is passed into th
     >
       <Textarea
         cols={null}
+        disabled={false}
+        isAutoResizable={false}
+        isInvalid={false}
         maxLength={null}
         minLength={null}
         name={null}
         onChange={[Function]}
         required={false}
         rows={null}
+        size="small"
         value="foo"
       >
         <textarea
           className="textarea"
           cols={null}
+          disabled={false}
           maxLength={null}
           minLength={null}
           name={null}
           onChange={[Function]}
           required={false}
-          rows={null}
+          rows={2}
           value="foo"
         />
       </Textarea>
@@ -128,21 +141,27 @@ exports[`should render as uncontrolled when just a default value is passed into 
       <Textarea
         cols={null}
         defaultValue="foo"
+        disabled={false}
+        isAutoResizable={false}
+        isInvalid={false}
         maxLength={null}
         minLength={null}
         name={null}
         required={false}
         rows={null}
+        size="small"
       >
         <textarea
           className="textarea"
           cols={null}
           defaultValue="foo"
+          disabled={false}
           maxLength={null}
           minLength={null}
           name={null}
+          onChange={[Function]}
           required={false}
-          rows={null}
+          rows={2}
         />
       </Textarea>
     </div>
