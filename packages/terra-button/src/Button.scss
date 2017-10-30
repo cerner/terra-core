@@ -117,4 +117,12 @@
     padding-bottom: var(--terra-button-padding-bottom-compact, 0);
     padding-top: var(--terra-button-padding-top-compact, 0);
   }
+
+  .text:first-child:not(:last-child) {
+    margin-right: 0.714em;
+  }
+
+  .text:nth-child(2) {
+    margin-left: 0.714em;
+  }
 }
