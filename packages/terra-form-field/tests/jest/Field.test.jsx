@@ -4,12 +4,6 @@ import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import intlContexts from './intl-context-setup';
 import Field from '../../src/Field';
 
-it('should render a default component', () => {
-  const field = <Field />;
-  const wrapper = shallow(field, intlContexts.shallowContext);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('should render a field label', () => {
   const field = (
     <Field
@@ -54,9 +48,34 @@ it('should render a required field label with required hidden', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a field with a hidden label', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      isLabelHidden
+    />
+  );
+  const wrapper = shallow(field, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a required field with a hidden label', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      isLabelHidden
+      required
+    />
+  );
+  const wrapper = shallow(field, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a field error message', () => {
   const field = (
     <Field
+      label="Field Label"
+      isLabelHidden
       error="Error Text"
     />
   );
@@ -67,6 +86,8 @@ it('should render a field error message', () => {
 it('should render a field help message', () => {
   const field = (
     <Field
+      label="Field Label"
+      isLabelHidden
       help="Help Text"
     />
   );
@@ -133,8 +154,41 @@ it('should render a required field in error', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a field with a hidden label in error', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      error="Error Text"
+      help="Help Text"
+      isInvalid
+    />
+  );
+  const wrapper = shallow(field, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a required field with a hidden label in error', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      error="Error Text"
+      help="Help Text"
+      isLabelHidden
+      required
+      isInvalid
+    />
+  );
+  const wrapper = shallow(field, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a field with a custom error icon', () => {
-  const field = <Field errorIcon={<IconHelp />} />;
+  const field = (
+    <Field
+      label="Field Label"
+      errorIcon={<IconHelp />}
+    />
+  );
   const wrapper = shallow(field, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });

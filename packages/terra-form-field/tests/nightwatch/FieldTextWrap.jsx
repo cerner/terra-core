@@ -12,7 +12,7 @@ const FieldExamples = () => (
       label="Field Label Field Label Field Label Field Label Field Label Field Label Field Label Field Label"
       help="Help Message Help Message Help Message Help Message Help Message Help Message Help Message Help Message"
       error="Error Message Error Message Error Message Error Message Error Message Error Message Error Message"
-      inError
+      isInvalid
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>

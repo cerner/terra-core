@@ -41,9 +41,13 @@ const propTypes = {
    */
   isInline: PropTypes.bool,
   /**
+   * Determines whether the label is hidden.
+   */
+  isLabelHidden: PropTypes.bool,
+  /**
    * Label of the input.
    */
-  label: PropTypes.node,
+  label: PropTypes.node.isRequired,
   /**
    * Attributes to attach to the label.
    */
@@ -67,6 +71,7 @@ const defaultProps = {
   htmlFor: undefined,
   isInvalid: false,
   isInline: false,
+  isLabelHidden: false,
   label: null,
   labelAttrs: {},
   required: false,
@@ -92,6 +97,7 @@ const Field = (props, { intl }) => {
     htmlFor,
     isInvalid,
     isInline,
+    isLabelHidden,
     label,
     labelAttrs,
     required,
@@ -110,21 +116,18 @@ const Field = (props, { intl }) => {
     labelAttrs.className,
   ]);
 
-  let labelGroup;
-  if (label) {
-    labelGroup = (
-      <div className={cx('label-group')}>
-        {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
-        {<label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
-          {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
-          {label}
-          {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-          {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
-        </label>}
-        {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
-      </div>
-    );
-  }
+  const labelGroup = (
+    <div className={cx(['label-group', { 'label-group-hidden': isLabelHidden }])}>
+      {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
+      {<label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
+        {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
+        {label}
+        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
+        {showOptional && !required && <div className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</div>}
+      </label>}
+      {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
+    </div>
+  );
 
   return (
     <div {...customProps} className={fieldClasses}>

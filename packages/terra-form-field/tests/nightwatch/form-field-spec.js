@@ -3,15 +3,9 @@
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
-  'Displays a default Field': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`)
-      .expect.element('#default').to.be.present;
-  },
-
   'Displays a field with a label': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
-    browser.expect.element('#label').to.be.present;
+    browser.expect.element('#label').to.be.present.before(10000);
     browser.expect.element('#label > div[class*="label-group"] > label[class*="label"]').to.be.present;
   },
 
@@ -27,6 +21,13 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#label-required').to.be.present;
     browser.expect.element('#label-required > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
     browser.expect.element('#label-required > div[class*="label-group"] > label > div[class*="required_"]').text.to.contain('*');
+  },
+
+  'Displays a Field with a hidden label': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.expect.element('#label-hidden').to.be.present;
+    browser.expect.element('#label-hidden > div[class*="label-group"][class*="label-group-hidden"]').to.be.present;
+    browser.expect.element('#label-hidden > div[class*="label-group"]').to.have.css('display').which.equals('none');
   },
 
   'Displays a field with help text': (browser) => {
@@ -57,6 +58,14 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#required-invalid > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
     browser.expect.element('#required-invalid > div[class*="error-text"]').to.be.present;
     browser.expect.element('#required-invalid > div[class*="help-text"]').to.be.present;
+  },
+
+  'Label remains hidden when Feild is invalid': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/is-invalid`);
+
+    browser.expect.element('#label-hidden > div[class*="label-group"][class*="label-group-hidden"]').to.be.present;
+    browser.click('#toggle-is-invalid');
+    browser.expect.element('#label-hidden > div[class*="label-group"]').to.have.css('display').which.equals('none');
   },
 
   'Label maintains appropriate spacing for error-icon hidden and visible': (browser) => {

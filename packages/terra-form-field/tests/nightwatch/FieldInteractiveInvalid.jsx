@@ -72,6 +72,20 @@ class FieldExamples extends React.Component {
       </Field>
     );
 
+    const hiddenLabel = (
+      <Field
+        id="label-hidden"
+        style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+        label="Field Label"
+        help="Help Message"
+        error="Error Message"
+        isInvalid={this.state.isInvalid}
+        isLabelHidden
+      >
+        <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+      </Field>
+    );
+
     const inline = (
       <div>
         <Field
@@ -124,6 +138,8 @@ class FieldExamples extends React.Component {
         {required}
         <h3>Field - Required but Indicator Hidden</h3>
         {requiredHidden}
+        <h3>Field - Hidden Label</h3>
+        {hiddenLabel}
         <h3>Field - Inline</h3>
         {inline}
       </Base>

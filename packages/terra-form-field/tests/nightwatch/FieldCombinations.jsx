@@ -6,14 +6,6 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 const FieldExamples = () => (
   <Base locale={locale}>
-    <h3>Field - Default</h3>
-    <Field
-      id="default"
-      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-    >
-      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
-    </Field>
-
     <h3>Field - Label</h3>
     <Field
       id="label"
@@ -43,10 +35,22 @@ const FieldExamples = () => (
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
     </Field>
 
+    <h3>Field - Hidden Label</h3>
+    <Field
+      id="label-hidden"
+      style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      label="Field Label"
+      isLabelHidden
+    >
+      <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
+    </Field>
+
     <h3>Field - Help Text</h3>
     <Field
       id="help-text"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      label="Field Label"
+      isLabelHidden
       help="Help Message"
     >
       <div style={{ border: 'dashed 1px lightGrey' }}>Control Placeholder</div>
@@ -56,6 +60,8 @@ const FieldExamples = () => (
     <Field
       id="error-text"
       style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
+      label="Field Label"
+      isLabelHidden
       error="Error Message"
       isInvalid
     >
