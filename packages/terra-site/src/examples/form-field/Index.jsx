@@ -7,7 +7,7 @@ import { version } from 'terra-form-field/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import FieldSrc from '!raw-loader!terra-form/src/Field';
+import FieldSrc from '!raw-loader!terra-form-field/src/Field';
 
 // Example Files
 import FieldExamples from './FieldExamples';
