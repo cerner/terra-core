@@ -24,6 +24,8 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 const themes = {
   'Default Theme': '',
   'Consumer Theme': 'cerner-consumer-theme',
+  'Clinical Theme': 'cerner-clinical-theme',
+  'Fusion Theme': 'cerner-fusion-theme',
   'Mock Theme': 'cerner-mock-theme',
 };
 
@@ -120,6 +122,8 @@ class App extends React.Component {
             <CollapsibleMenuView.ItemGroup isSelectable key="theme-options" onChange={this.handleThemeChange} >
               <CollapsibleMenuView.Item id="Default Theme" text="Default Theme" key="default" isSelected={this.state.theme === 'Default Theme'} />
               <CollapsibleMenuView.Item id="Consumer Theme" text="Consumer Theme" key="consumer" isSelected={this.state.theme === 'Consumer Theme'} />
+              <CollapsibleMenuView.Item id="Clinical Theme" text="Clinical Theme" key="clinical" isSelected={this.state.theme === 'Clinical Theme'} />
+              <CollapsibleMenuView.Item id="Fusion Theme" text="Fusion Theme" key="fusion" isSelected={this.state.theme === 'Fusion Theme'} />
               <CollapsibleMenuView.Item id="Mock Theme" text="Mock Theme" key="mock" isSelected={this.state.theme === 'Mock Theme'} />
             </CollapsibleMenuView.ItemGroup>,
           ]}
@@ -155,6 +159,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/embedded-content-consumer">Embedded Content Consumer</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form">Form</Link>} />
           <List.Item content={<FormComponentNavigation onClick={this.handleResetScroll} />} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/select">Form Select</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/grid">Grid</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/heading">Heading</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/hookshot">Hookshot</Link>} />
@@ -173,7 +178,6 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/progress-bar">Progress Bar</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/responsive-element">Responsive Element</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/search-field">Search Field</Link>} />
-          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/select">Select</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/signature">Signature</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-group">Slide Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
