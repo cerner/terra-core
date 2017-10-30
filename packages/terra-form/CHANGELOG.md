@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Changed
 * Implement Textarea for OCS
+* Added the ability to disable textareas
+* Added the ability to auto resize textareas
+* Added the ability to set textareas as invalid
+* Added a standard set of row heights to textareas
 
 1.12.0 - (October 24, 2017)
 ------------------
