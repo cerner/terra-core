@@ -8,7 +8,7 @@ class MediumMenu extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   componentDidMount() {
@@ -66,7 +66,7 @@ class MediumMenu extends React.Component {
             <Menu.Item text="Default 153" key="153" className="TestLastItem" />
           </Menu.ItemGroup>
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="medium-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>
