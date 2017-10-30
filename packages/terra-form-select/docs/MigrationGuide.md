@@ -8,7 +8,7 @@ The following sections describe how to migrate from the select provided in the t
   - `npm install terra-form-select`
 
 
-### Props Changes
+## Props Changes
 
 Terra Forms Select has switched from using props to supply options to using an Options component that can be supplied to the select as children.
 
@@ -52,14 +52,13 @@ import Select from 'terra-form-select';
 </Select>
 ```
 
-#### Terra-form props table for select component
+### Terra-form props table for select component
 | Prop Name |	Type | Is Required | Default Value | Description |
 |-----------|------|-------------|---------------|-------------|
 |choices    |array |optional     |null	         |WARNING: This prop is deprecated, please use the options prop. List of choices to be selected. If choices and options array are supplied, options array will be used over choices.|
 |options    |array of objects structured like:
-<pre>
  {
- "value": {
+ `"value": {
   "name": "string",
   "required": true
  },
@@ -70,9 +69,8 @@ import Select from 'terra-form-select';
  "disabled": {
   "name": "bool",
   "required": false
- }
-}
-</pre> |optional| null|
+ }`
+} |optional| null|
 List of object key and value pairs for choices to be selected. If choices and options array are supplied, options array will be used over choices.|
 |onChange   |func  | optional      |undefined	     | Function to trigger when the user changes the select value. Provide a function to create a controlled input. |
 |name	      |string|optional       |null	         | Name of the select field.|
@@ -80,7 +78,7 @@ List of object key and value pairs for choices to be selected. If choices and op
 |defaultValue|string|optional      |undefined	     | The value to start the select on. |
 |value	    |string|optional	     |undefined	     | The value of the select element. Use this to create a controlled input.|
 
-#### Terra-form-select v1.0.0 props table
+### Terra-form-select v1.0.0 props table
 
 #### Select
 | Prop Name |	Type | Is Required | Default Value | Description |

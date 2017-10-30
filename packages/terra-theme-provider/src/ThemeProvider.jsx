@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 const ThemeProviderThemes = {
   CONSUMER: 'cerner-consumer-theme',
-  CLINICAL: 'cerner-clinical-theme',
-  FUSION: 'cerner-fusion-theme',
   MOCK: 'cerner-mock-theme',
 };
 

@@ -30,8 +30,7 @@
     "terra-base": "^1.0.0",
     "terra-popup": "^1.11.1",
     "terra-icon": "^1.12.1",
-    "terra-arrange": "^1.12.1",
-    "terra-mixins": "^1.11.1"
+    "terra-arrange": "^1.12.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -39,8 +38,7 @@
     "terra-base": "^1.0.0",
     "terra-popup": "^1.11.1",
     "terra-icon": "^1.12.1",
-    "terra-arrange": "^1.12.1",
-    "terra-mixins": "^1.11.1"
+    "terra-arrange": "^1.12.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
