@@ -8,7 +8,7 @@ class NonSelectableMenu extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   componentDidMount() {
@@ -45,7 +45,7 @@ class NonSelectableMenu extends React.Component {
           <Menu.Item text="Default 1" key="1" className="TestFirstItem" />
           <Menu.Item text="Default 2" key="2" className="TestSecondItem" />
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="non-selectable-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

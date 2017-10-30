@@ -1,32 +1,18 @@
-const getPopupHeight = (contentHeight) => {
-  if (contentHeight <= 160) {
-    // This will round the content height up to the nearest multiple of 40 for smaller content heights
-    return Math.ceil(contentHeight / 40) * 40;
-  }
-
-  // This will round the content height up to the nearest mulitple of 80 and take the min of that and 880
-  return Math.min(Math.ceil(contentHeight / 80) * 80, 880);
-};
-
-const isFullScreen = (boundingFrame, popupHeight, popupWidth) => {
+const isFullScreen = (isHeightBounded, isWidthBounded, boundingFrame, popupWidth) => {
   const width = popupWidth;
-  const height = popupHeight;
-  let maxHeight;
   let maxWidth;
 
-  if (boundingFrame) {
-    maxHeight = boundingFrame.clientHeight;
+  if (boundingFrame && !isWidthBounded) {
     maxWidth = boundingFrame.clientWidth;
   } else {
-    maxHeight = window.innerHeight;
     maxWidth = window.innerWidth;
   }
 
-  if (maxHeight <= 0 || maxWidth <= 0) {
+  if (maxWidth <= 0) {
     return false;
   }
 
-  return height >= maxHeight && width >= maxWidth;
+  return isHeightBounded && (width >= maxWidth || isWidthBounded);
 };
 
 const KEYCODES = {
@@ -40,7 +26,6 @@ const KEYCODES = {
 
 
 const MenuUtils = {
-  getPopupHeight,
   isFullScreen,
   KEYCODES,
 };

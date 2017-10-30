@@ -147,10 +147,10 @@ class MenuItem extends React.Component {
     if (isDisabled) {
       delete attributes.onClick;
       delete attributes.onKeyDown;
+    } else {
+      attributes.onClick = this.wrapOnClick;
+      attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
     }
-
-    attributes.onClick = this.wrapOnClick;
-    attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
 
     const itemClassNames = cx([
       'item',
