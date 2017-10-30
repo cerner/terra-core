@@ -1,6 +1,6 @@
 # Terra Divider
 
-The terra-divider component is used to separate content on a layout.
+The divider component is used to visually separate content on a layout.
 
 ## Getting Started
 

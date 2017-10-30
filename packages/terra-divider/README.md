@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-divider.svg)](https://www.npmjs.org/package/terra-divider)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-divider component is used to separate content on a layout.
+The divider component is used to visually separate content on a layout.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-divider/docs)
