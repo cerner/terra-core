@@ -17,7 +17,7 @@ const propTypes = {
    */
   error: PropTypes.node,
   /**
-   * Error Icon to display when the input is invalid on validation.
+   * Error Icon to display when the input is invalid.
    */
   errorIcon: PropTypes.element,
   /**
@@ -33,7 +33,7 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Determines whether the field is in error or not.
+   * Determines whether the field is invalid or not.
    */
   isInvalid: PropTypes.bool,
   /**
