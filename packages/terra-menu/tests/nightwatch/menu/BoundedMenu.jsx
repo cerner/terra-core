@@ -10,7 +10,7 @@ class BoundedMenu extends React.Component {
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setParentNode = this.setParentNode.bind(this);
     this.getParentNode = this.getParentNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   componentDidMount() {
@@ -70,6 +70,8 @@ class BoundedMenu extends React.Component {
             <Menu.Item text="Default 62" key="62" />
             <Menu.Item text="Default 63" key="63" />
           </Menu.ItemGroup>
+          <Menu.Item text="Default 7" key="7" />
+          <Menu.Item text="Default 8" key="8" />
         </Menu>
         <button id="bounded-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu

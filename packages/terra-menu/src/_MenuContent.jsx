@@ -37,11 +37,51 @@ const propTypes = {
    * Index within the Menu Stack.
    */
   index: PropTypes.number.isRequired,
+  /**
+   * Bounding container for the menu, will use window if no value provided.
+   */
+  boundingRef: PropTypes.func,
+  /**
+   * Indicates if the menu content should set default focus on itself.
+   */
+  isFocused: PropTypes.bool,
+  /**
+   * Indicates if menu's height has been constrained by bounding container.
+   */
+  isHeightBounded: PropTypes.bool,
+  /**
+   * Indicates if menu's width has been constrained by bounding container.
+   */
+  isWidthBounded: PropTypes.bool,
+  /**
+   * Fixed height for content.
+   */
+  fixedHeight: PropTypes.number,
+  /**
+   * Fixed width for content.
+   */
+  fixedWidth: PropTypes.number,
+  /**
+   * Width for content.
+   */
+  contentWidth: PropTypes.number,
+  /**
+   * Indicates if the content should be hidden.
+   */
+  isHidden: PropTypes.bool,
+  /**
+   * Ref callback function to be applied to content container.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
   children: [],
+  isFocused: false,
   title: '',
+  isWidthBounded: false,
+  isHeightBounded: false,
+  isHidden: false,
 };
 
 const childContextTypes = {
@@ -56,6 +96,9 @@ class MenuContent extends React.Component {
     this.buildHeader = this.buildHeader.bind(this);
     this.isSelectable = this.isSelectable.bind(this);
     this.onKeyDownBackButton = this.onKeyDownBackButton.bind(this);
+    this.validateFocus = this.validateFocus.bind(this);
+    this.needsFocus = props.isFocused;
+    this.handleContainerRef = this.handleContainerRef.bind(this);
 
     this.state = {
       focusIndex: -1,
@@ -66,11 +109,38 @@ class MenuContent extends React.Component {
     return { isSelectableMenu: this.isSelectable() };
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.isFocused) {
+      this.needsFocus = this.needsFocus || this.props.isFocused !== newProps.isFocused;
+    } else {
+      this.needsFocus = false;
+    }
+  }
+
+  componentDidUpdate() {
+    this.validateFocus(this.contentNode);
+  }
+
   onKeyDownBackButton(event) {
     if (event.nativeEvent.keyCode === MenuUtils.KEYCODES.ENTER || event.nativeEvent.keyCode === MenuUtils.KEYCODES.SPACE) {
       event.preventDefault();
       this.props.onRequestBack();
     }
+  }
+
+  validateFocus(node) {
+    if (this.needsFocus && node) {
+      node.focus();
+      this.needsFocus = document.activeElement !== node;
+    }
+  }
+
+  handleContainerRef(node) {
+    if (this.props.refCallback) {
+      this.props.refCallback(node);
+    }
+    this.contentNode = node;
+    this.validateFocus(node);
   }
 
   isSelectable() {
@@ -91,7 +161,10 @@ class MenuContent extends React.Component {
       if (this.state.focusIndex !== -1) {
         this.setState({ focusIndex: -1 });
       }
-      this.props.onRequestNext(item);
+
+      if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
+        this.props.onRequestNext(item);
+      }
 
       if (onClick) {
         onClick(event);
@@ -125,13 +198,16 @@ class MenuContent extends React.Component {
     });
   }
 
-  buildHeader() {
+  buildHeader(isFullScreen) {
     const closeIcon = <IconClose />;
-    const closeButton = this.props.onRequestClose ? (
-      <button className={cx(['header-button', 'close-button'])} onClick={this.props.onRequestClose}>
-        {closeIcon}
-      </button>
-    ) : <div />;
+    let closeButton = <div />;
+    if (this.props.onRequestClose && isFullScreen) {
+      closeButton = (
+        <button className={cx(['header-button'])} onClick={this.props.onRequestClose}>
+          {closeIcon}
+        </button>
+      );
+    }
 
     const backIcon = <IconLeft />;
     const backButton = this.props.index > 0 ? (
@@ -167,12 +243,8 @@ class MenuContent extends React.Component {
   render() {
     let index = -1;
     const items = React.Children.map(this.props.children, (item) => {
-      let onClick = item.props.onClick;
+      const onClick = this.wrapOnClick(item);
       let newItem = item;
-
-      if (item.props.subMenuItems && item.props.subMenuItems.length > 0) {
-        onClick = this.wrapOnClick(item);
-      }
 
       // Check if child is an enabled Menu.Item
       if (item.props.text && !item.props.isDisabled) {
@@ -202,15 +274,42 @@ class MenuContent extends React.Component {
 
       return newItem;
     });
+    const boundingFrame = this.props.boundingRef ? this.props.boundingRef() : undefined;
+    const isFullScreen = MenuUtils.isFullScreen(
+      this.props.isHeightBounded,
+      this.props.isWidthBounded,
+      boundingFrame,
+      this.props.contentWidth,
+    );
+    const isSubMenu = this.props.index > 0;
+    const contentClass = cx([
+      'content',
+      { submenu: isSubMenu },
+      { 'hidden-page': this.props.isHidden },
+      { fullscreen: isFullScreen },
+    ]);
 
-    const header = this.buildHeader();
+    let header;
+    if (isFullScreen || isSubMenu) {
+      header = this.buildHeader(isFullScreen);
+    }
+    const contentHeight = this.props.isHeightBounded ? '100%' : this.props.fixedHeight;
+    const contentPosition = this.props.isHeightBounded ? 'relative' : 'static';
+    const contentWidth = this.props.isWidthBounded ? undefined : this.props.fixedWidth;
 
     return (
-      <ContentContainer header={header} fill className={cx(['content'])}>
-        <List className={cx(['list'])}>
-          {items}
-        </List>
-      </ContentContainer>
+      <div
+        ref={this.handleContainerRef}
+        className={contentClass}
+        style={{ height: contentHeight, width: contentWidth, position: contentPosition }}
+        tabIndex="0"
+      >
+        <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
+          <List className={cx(['list'])}>
+            {items}
+          </List>
+        </ContentContainer>
+      </div>
     );
   }
 }
