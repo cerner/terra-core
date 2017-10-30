@@ -1,7 +1,7 @@
 import React from 'react';
 import Divider from '../../src/Divider';
 
-describe('HorizontalDivider', () => {
+describe('Divider', () => {
   const defaultRender = <Divider />;
 
   // Snapshot Tests
