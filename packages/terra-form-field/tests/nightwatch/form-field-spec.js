@@ -5,7 +5,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default Field': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/field/combinations`)
+      .url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`)
       .expect.element('#default').to.be.present;
   },
 

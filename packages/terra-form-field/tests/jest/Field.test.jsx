@@ -42,7 +42,7 @@ it('should render a required field label', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a required feild label with required hidden', () => {
+it('should render a required field label with required hidden', () => {
   const field = (
     <Field
       label="Field Label"
@@ -54,7 +54,7 @@ it('should render a required feild label with required hidden', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a feild error message', () => {
+it('should render a field error message', () => {
   const field = (
     <Field
       error="Error Text"

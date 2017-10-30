@@ -7,15 +7,17 @@ import { version } from 'terra-form-field/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import FormFieldSrc from '!raw-loader!terra-form-field/src/FormField';
+import FieldSrc from '!raw-loader!terra-form/src/Field';
 
 // Example Files
+import FieldExamples from './FieldExamples';
 
 const FormFieldExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={FormFieldSrc} />
+    <PropsTable id="props" src={FieldSrc} />
+    <FieldExamples />
   </div>
 );
 
