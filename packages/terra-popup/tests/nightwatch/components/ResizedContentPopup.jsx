@@ -39,6 +39,7 @@ class PopupExample extends React.Component {
           classNameContent="test-content"
           contentHeight="auto"
           contentWidth="auto"
+          isArrowDisplayed
           isOpen={this.state.open}
           targetRef={this.getButtonNode}
           onRequestClose={this.handleRequestClose}
