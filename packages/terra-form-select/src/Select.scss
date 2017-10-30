@@ -107,25 +107,12 @@
   }
 
   .select-menu {
-    background-color: var(--terra-select-menu-background-color, rgba(255, 255, 255, 0.5));
+    background-color: var(--terra-select-menu-background-color, #fff);
     border: solid 1px #b2b5b6;
     border-radius: var(--terra-select-menu-border-raidus, 0);
     box-shadow: var(--terra-select-menu-box-shadow, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
     list-style: none;
     margin: 0;
     padding-bottom: var(--terra-select-menu-bottom-padding, 0.214em);
-    position: relative;
-  }
-
-  .select-menu::before {
-    bottom: 0;
-    content: '';
-    filter: blur(20px);
-    left: 0;
-    margin: -35px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
   }
 }
