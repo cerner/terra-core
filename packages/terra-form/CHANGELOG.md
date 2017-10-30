@@ -9,6 +9,7 @@ Unreleased
 * Added the ability to auto resize textareas
 * Added the ability to set textareas as invalid
 * Added a standard set of row heights to textareas
+* Added the ability to set textarea as full width and height of container
 
 1.12.0 - (October 24, 2017)
 ------------------
