@@ -56,22 +56,7 @@ import Select from 'terra-form-select';
 | Prop Name |	Type | Is Required | Default Value | Description |
 |-----------|------|-------------|---------------|-------------|
 |choices    |array |optional     |null	         |WARNING: This prop is deprecated, please use the options prop. List of choices to be selected. If choices and options array are supplied, options array will be used over choices.|
-|options    |array of objects structured like:
- {
- `"value": {
-  "name": "string",
-  "required": true
- },
- "display": {
-  "name": "string",
-  "required": true
- },
- "disabled": {
-  "name": "bool",
-  "required": false
- }`
-} |optional| null|
-List of object key and value pairs for choices to be selected. If choices and options array are supplied, options array will be used over choices.|
+|options    |array of objects structured like: `{ "value": { "name": "string", "required": true},"display": {"name": "string","required": true},"disabled": {"name": "bool", "required": false}}`|optional| null|List of object key and value pairs for choices to be selected. If choices and options array are supplied, options array will be used over choices.|
 |onChange   |func  | optional      |undefined	     | Function to trigger when the user changes the select value. Provide a function to create a controlled input. |
 |name	      |string|optional       |null	         | Name of the select field.|
 |required   |bool  |optional       |false	         | Whether the select is required or not. |
