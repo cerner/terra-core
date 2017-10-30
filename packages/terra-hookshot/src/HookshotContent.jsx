@@ -66,6 +66,7 @@ class HookshotContent extends React.Component {
   componentWillUnmount() {
     this.disableEscListener();
     this.disableResizeListener();
+    this.disableContentResizeListener();
   }
 
   handleResize(event) {
@@ -182,7 +183,7 @@ class HookshotContent extends React.Component {
     delete customProps.closePortal;
 
     return (
-      <div {...customProps} className={cx(['content', customProps.className])} ref={(element) => { this.contentNode = element; this.props.refCallback(element); }}>
+      <div {...customProps} className={cx(['content', customProps.className])} ref={(element) => { this.contentNode = element; refCallback(element); }}>
         {children}
       </div>
     );
