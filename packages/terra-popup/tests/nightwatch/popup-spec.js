@@ -312,6 +312,17 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/resize-content`);
     browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-height');
     browser.expect.element('.test-content').to.have.attribute('data-terra-popup-automatic-width');
+
+    browser.getLocation('[data-terra-popup-content]', (coordinates) => {
+      browser.assert.equal(coordinates.value.x, 194);
+      browser.assert.equal(coordinates.value.y, 18);
+    });
+
     browser.click('#resize-content');
+
+    browser.getLocation('[data-terra-popup-content]', (coordinates) => {
+      browser.assert.equal(coordinates.value.x, 144);
+      browser.assert.equal(coordinates.value.y, 18);
+    });
   },
 });

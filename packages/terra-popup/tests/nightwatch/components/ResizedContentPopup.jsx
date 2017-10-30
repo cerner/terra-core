@@ -45,7 +45,7 @@ class PopupExample extends React.Component {
         >
           <div style={{ height: this.state.size.height, width: this.state.size.width, backgroundColor: 'red' }}><button id="resize-content" onClick={() => this.setState({ size: { height: '80px', width: '200px' } })}>Resize</button></div>
         </Popup>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button style={{ position: 'absolute', left: '200px' }} id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Popup
         </button>
       </div>
