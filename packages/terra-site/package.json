@@ -49,6 +49,7 @@
     "terra-demographics-banner": "^1.12.1",
     "terra-dynamic-grid": "^1.6.1",
     "terra-embedded-content-consumer": "^1.6.1",
+    "terra-form-checkbox": "^0.x",
     "terra-form": "^1.12.0",
     "terra-grid": "^3.15.1",
     "terra-heading": "^1.13.0",

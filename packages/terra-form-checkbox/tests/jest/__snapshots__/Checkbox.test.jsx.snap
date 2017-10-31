@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a ChoiceField with a checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input healtheintent-application"
+    disabled={false}
+    name="children_present"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+    value="children_present"
+  />
+  <label
+    className="label healtheintent-label-text"
+  >
+    Do you have any Children?
+  </label>
+</div>
+`;
+
+exports[`should render a checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
+
+exports[`should render a checkbox with a hidden label 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
+
+exports[`should render a controlled checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
+
+exports[`should render a disabled checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={true}
+    name={null}
+    onChange={[Function]}
+    onClick={null}
+    onKeyPress={null}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
+
+exports[`should render a required checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
+
+exports[`should render an invalid checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
+
+exports[`should render an uncontrolled checkbox 1`] = `
+<div
+  className="control"
+>
+  <input
+    checked={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+  >
+    Checkbox
+  </label>
+</div>
+`;
