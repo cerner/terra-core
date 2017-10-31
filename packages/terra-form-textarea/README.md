@@ -1,10 +1,9 @@
 # Terra Form Textarea
 
-
 [![NPM version](http://img.shields.io/npm/v/terra-form-textarea.svg)](https://www.npmjs.org/package/terra-form-textarea)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-Textarea component for building forms.
+Element for building out textareas in a form.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-textarea/docs)

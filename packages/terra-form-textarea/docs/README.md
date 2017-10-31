@@ -1,6 +1,6 @@
 # Terra Form Textarea
 
-Element for building out Textareas in a form.
+Element for building out textareas in a form.
 
 ## Getting Started
 
