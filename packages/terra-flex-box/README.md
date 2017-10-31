@@ -1,18 +1,18 @@
-# Terra Flex Container
+# Terra Flex Box
 
 
-[![NPM version](http://img.shields.io/npm/v/terra-flex-container.svg)](https://www.npmjs.org/package/terra-flex-container)
+[![NPM version](http://img.shields.io/npm/v/terra-flex-box.svg)](https://www.npmjs.org/package/terra-flex-box)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra flex container is used to as allow element to be aligned in a container using flex stylings
+The terra flex box is used to as allow element to be aligned in a container using flex stylings
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-flex-container/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-flex-box/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-flex-container`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-flex-box`
 
 ## LICENSE
 

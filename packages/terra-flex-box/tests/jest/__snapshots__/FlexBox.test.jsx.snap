@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default component with just height and width defined 1`] = `
+<div
+  className="terra-flex-box"
+  style={
+    Object {
+      "display": "flex",
+      "height": "400px",
+      "width": "40%",
+    }
+  }
+/>
+`;
+
+exports[`should render a flexbox component with all child container display properties defined 1`] = `
+<div
+  className="terra-flex-box child"
+  style={
+    Object {
+      "alignSelf": "center",
+      "display": "flex",
+      "flexBasis": "20%",
+      "flexGrow": 0,
+      "flexShrink": 0,
+      "order": 0,
+    }
+  }
+/>
+`;
+
+exports[`should render a flexbox component with all parent container display properties defined 1`] = `
+<header
+  className="terra-flex-box parent"
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "alignItems": "stretch",
+      "display": "inline-flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "justifyContent": "center",
+    }
+  }
+/>
+`;
+
+exports[`should render a flexbox component with the min and max sizing props 1`] = `
+<div
+  className="terra-flex-box"
+  style={
+    Object {
+      "display": "flex",
+      "maxHeight": "400px",
+      "maxWidth": "40%",
+      "minHeight": "400px",
+      "minWidth": "40%",
+    }
+  }
+/>
+`;

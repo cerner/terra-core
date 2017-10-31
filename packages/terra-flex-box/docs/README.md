@@ -1,20 +1,20 @@
-# Terra Flex Container
+# Terra Flex Box
 
-The flex-container component provides a flexbox based container for aligning its content.
+The flex-box component provides a flexbox based container for aligning its content.
 
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-flex-container`
-  - `yarn add terra-flex-container`
+  - `npm install terra-flex-box`
+  - `yarn add terra-flex-box`
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import FlexContainer from 'terra-flex-container';
+import FlexBox from 'terra-flex-box';
 
-<FlexContainer />
+<FlexBox />
 ```
 
 ## Component Features
