@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import onClickOutside from 'react-onclickoutside';
+import ResizeObserver from 'resize-observer-polyfill';
 import styles from './HookshotContent.scss';
 
 const cx = classNames.bind(styles);
@@ -17,6 +18,10 @@ const propTypes = {
    * The children to be displayed as content within the content.
    */
   children: PropTypes.node.isRequired,
+  /**
+   * The function callback when a child content resize event occurs.
+   */
+  onContentResize: PropTypes.func,
   /**
    * The function callback when am escape keydown event occurs.
    */
@@ -45,6 +50,8 @@ class HookshotContent extends React.Component {
     this.disableEscListener = this.disableEscListener.bind(this);
     this.enableResizeListener = this.enableResizeListener.bind(this);
     this.disableResizeListener = this.disableResizeListener.bind(this);
+    this.enableContentResizeListener = this.enableContentResizeListener.bind(this);
+    this.disableContentResizeListener = this.disableContentResizeListener.bind(this);
     this.updateListeners = this.updateListeners.bind(this);
   }
 
@@ -59,6 +66,7 @@ class HookshotContent extends React.Component {
   componentWillUnmount() {
     this.disableEscListener();
     this.disableResizeListener();
+    this.disableContentResizeListener();
   }
 
   handleResize(event) {
@@ -92,6 +100,12 @@ class HookshotContent extends React.Component {
     } else {
       this.disableResizeListener();
     }
+
+    if (this.props.onContentResize) {
+      this.enableContentResizeListener();
+    } else {
+      this.disableContentResizeListener();
+    }
   }
 
   enableEscListener() {
@@ -122,6 +136,24 @@ class HookshotContent extends React.Component {
     }
   }
 
+  enableContentResizeListener() {
+    if (!this.contentResizeListenerAdded) {
+      this.resizeObserver = new ResizeObserver((entries) => {
+        this.props.onContentResize(entries[0].contentRect);
+      });
+      this.resizeObserver.observe(this.contentNode);
+      this.contentResizeListenerAdded = true;
+    }
+  }
+
+  disableContentResizeListener() {
+    if (this.contentResizeListenerAdded) {
+      this.resizeObserver.disconnect(this.contentNode);
+      this.contentNode = null;
+      this.contentResizeListenerAdded = false;
+    }
+  }
+
   debounce(fn, delay) {
     let timer = null;
     return (...args) => {
@@ -136,6 +168,7 @@ class HookshotContent extends React.Component {
   render() {
     const {
       children,
+      onContentResize,
       onEsc,
       onOutsideClick,
       onResize,
@@ -150,7 +183,7 @@ class HookshotContent extends React.Component {
     delete customProps.closePortal;
 
     return (
-      <div {...customProps} className={cx(['content', customProps.className])} ref={refCallback}>
+      <div {...customProps} className={cx(['content', customProps.className])} ref={(element) => { this.contentNode = element; refCallback(element); }}>
         {children}
       </div>
     );

@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Consume content resize prop on HookshotContent
 
 1.12.0 - (October 24, 2017)
 ------------------

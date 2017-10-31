@@ -6,6 +6,8 @@ Unreleased
 ----------
 ### Fixed
 * Height and Width rounding
+### Added
+* Content Resize callback
 
 1.1.0 - (October 24, 2017)
 ------------------
