@@ -4,6 +4,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Height and Width rounding
 
 1.1.0 - (October 24, 2017)
 ------------------
