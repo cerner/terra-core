@@ -9,11 +9,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Children the Field contains.
+   * The form control elements the Field contains.
    */
   children: PropTypes.node,
   /**
-   * Error message for when the input is invalid on validation.
+   * Error message for when the input is invalid.
    */
   error: PropTypes.node,
   /**
@@ -25,7 +25,7 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
-   * Determines whether or not to hide the required indicator on the label.
+   * Whether or not to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
   /**
@@ -33,19 +33,19 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Determines whether the field is invalid or not.
+   * Whether or not the field is invalid.
    */
   isInvalid: PropTypes.bool,
   /**
-   * Determines whether the field is an inline field.
+   * Whether or not the field is an inline field.
    */
   isInline: PropTypes.bool,
   /**
-   * Determines whether the label is hidden.
+   * Whether or not the label is visible. Use this props to hide a label while still creating it on the DOM for accessibility.
    */
   isLabelHidden: PropTypes.bool,
   /**
-   * Label of the input.
+   * The label of the form control children.
    */
   label: PropTypes.node.isRequired,
   /**
@@ -53,11 +53,11 @@ const propTypes = {
    */
   labelAttrs: PropTypes.object,
   /**
-   * Determines whether the field is required.
+   * Whether or not the field is required.
    */
   required: PropTypes.bool,
   /**
-   * Determines whether or not to append the 'optional' label to a non-required field label.
+   * Whether or not to append the 'optional' label to a non-required field label.
    */
   showOptional: PropTypes.bool,
 };

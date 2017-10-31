@@ -60,7 +60,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#required-invalid > div[class*="help-text"]').to.be.present;
   },
 
-  'Label remains hidden when Feild is invalid': (browser) => {
+  'Label remains hidden when Field is invalid': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-field-tests/is-invalid`);
 
     browser.expect.element('#label-hidden > div[class*="label-group"][class*="label-group-hidden"]').to.be.present;

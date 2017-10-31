@@ -30,6 +30,11 @@
     display: none;
   }
 
+  .label {
+    color: var(--terra-form-field-label-color, rgba(0, 0, 0, 0.8));
+    font-weight: var(--terra-form-field-label-font-weight, bold);
+  }
+  
   .error-icon,
   .error-icon-hidden {
     display: inline-block;
@@ -40,26 +45,21 @@
     visibility: hidden;
   }
 
-  .label {
-    color: var(--terra-form-field-label-color, rgba(0, 0, 0, 0.8));
-    font-weight: var(--terra-form-field-label-font-weight, bold);
+  .required,
+  .required-hidden {
+    color: var(--terra-form-field-label-required-color , #ff232a);
+    display: inline-block;
+    padding-right: var(--terra-form-field-label-required-padding-right, 0.357em);
+  }
 
-    .required,
-    .required-hidden {
-      color: var(--terra-form-field-label-required-color , #ff232a);
-      display: inline-block;
-      padding-right: var(--terra-form-field-label-required-padding-right, 0.357em);
-    }
+  .required-hidden {
+    visibility: hidden;
+  }
 
-    .required-hidden {
-      visibility: hidden;
-    }
-
-    .optional {
-      display: inline-block;
-      font-style: var(--terra-form-field-label-optional-font-style, italic);
-      padding-left: var(--terra-form-field-label-optional-padding-left, 0.357em);
-    }
+  .optional {
+    display: inline-block;
+    font-style: var(--terra-form-field-label-optional-font-style, italic);
+    padding-left: var(--terra-form-field-label-optional-padding-left, 0.357em);
   }
 
   .help-text {

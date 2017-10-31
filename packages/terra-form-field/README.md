@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-form-field.svg)](https://www.npmjs.org/package/terra-form-field)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Form Field component handles the layout of a standard form field. It handles label, help text, error text and widget placement, as well as provides required and invalid indicators.
+The Form Field component by handles the layout of the label, help text and error text associated with a form control. Additionally, it provides required, optional, and invalid indicators.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field/docs)
