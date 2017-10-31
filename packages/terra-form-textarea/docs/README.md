@@ -2,8 +2,6 @@
 
 Element for building out Textareas in a form.
 
-**Note:** This replaces the previous implementation of textarea inside terra-form. For migration steps, consult [the migration guide](https://github.com/cerner/terra-core/tree/master/packages/terra-form-textarea/docs/MigrationGuide.md)
-
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
