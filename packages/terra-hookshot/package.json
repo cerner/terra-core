@@ -36,6 +36,7 @@
     "prop-types": "^15.5.8",
     "react-onclickoutside": "^5.11.1",
     "react-portal": "^3.0.0",
+    "resize-observer-polyfill": "^1.4.1",
     "terra-base": "^2.6.1"
   },
   "scripts": {
