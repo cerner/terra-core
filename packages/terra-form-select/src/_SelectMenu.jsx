@@ -17,7 +17,7 @@ const defaultProps = {
 };
 
 const SelectMenu = (props) => {
-  const menuClassNames = cx({ 'height-bounded': props.isHeightBounded });
+  const menuClassNames = cx({ 'height-bounded': props.isHeightBounded }, 'menu-list');
 
   return (
     <ul className={menuClassNames}>
