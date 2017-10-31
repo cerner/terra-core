@@ -48,10 +48,10 @@
   "Base": {
     "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "--terra-base-font-size": "87.5%",
-    "--terra-base-background-color": "#fff",
-    "--terra-base-color": "#1c1f21",
     "--terra-base-html-height": "100%",
     "--terra-base-html-margin": "0",
+    "--terra-base-background-color": "#fff",
+    "--terra-base-color": "#1c1f21",
     "--terra-base-body-height": "100%",
     "--terra-base-line-height": "1.42857",
     "--terra-base-body-margin": "0"
@@ -262,7 +262,7 @@
     "--terra-select-default-option-font-style": "normal",
     "--terra-select-input-text-color": "#2d3539",
     "--terra-select-disabled-font-color": "#b2b5b6",
-    "--terra-select-menu-background-color": "rgba(255, 255, 255, 0.5)",
+    "--terra-select-menu-background-color": "#fff",
     "--terra-select-menu-border-raidus": "0",
     "--terra-select-menu-box-shadow": "0 3px 6px 0 rgba(0, 0, 0, 0.25)",
     "--terra-select-menu-bottom-padding": "0.214em"
