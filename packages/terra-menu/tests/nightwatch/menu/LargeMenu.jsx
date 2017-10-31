@@ -8,7 +8,7 @@ class LargeMenu extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   componentDidMount() {
@@ -80,7 +80,7 @@ class LargeMenu extends React.Component {
           <Menu.Divider key="Divider4" />
           <Menu.Item text="Default 16" key="16" className="TestLastItem" />
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="large-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

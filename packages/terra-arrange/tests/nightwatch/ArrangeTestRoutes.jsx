@@ -9,7 +9,7 @@ import AlignedFitStartFillArrange from './AlignedFitStartFillArrange';
 import IndividuallyAlignedFitStart from './IndividuallyAlignedFitStart';
 import IndividuallyAlignedFill from './IndividuallyAlignedFill';
 import IndividuallyAlignedFitEnd from './IndividuallyAlignedFitEnd';
-
+import AlignedAllLongWords from './AlignedAllLongWords';
 
 const routes = (
   <div>
@@ -20,6 +20,7 @@ const routes = (
     <Route path="/tests/arrange-tests/aligned-individually-fit-start" component={IndividuallyAlignedFitStart} />
     <Route path="/tests/arrange-tests/aligned-individually-fill" component={IndividuallyAlignedFill} />
     <Route path="/tests/arrange-tests/aligned-individually-fit-end" component={IndividuallyAlignedFitEnd} />
+    <Route path="/tests/arrange-tests/aligned-all-arrange-long-words" component={AlignedAllLongWords} />
   </div>
 );
 

@@ -3,6 +3,16 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added option for auto width sizing.
+
+### Changed
+* Updated menu to use the auto height available through popup.
+
+### Fixed
+* Issue where tabbing would focus on Menu container before items in menu.
+* Issue where divider was no longer visible.
+* Issue where disabled items could still be selected.
 
 1.5.0 - (October 24, 2017)
 ------------------
