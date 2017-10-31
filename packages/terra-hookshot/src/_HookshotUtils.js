@@ -125,6 +125,8 @@ const getBounds = (element) => {
   box.right = Math.round(box.right);
   box.bottom = Math.round(box.bottom);
   box.left = Math.round(box.left);
+  box.height = Math.round(box.height);
+  box.width = Math.round(box.width);
 
   return box;
 };
