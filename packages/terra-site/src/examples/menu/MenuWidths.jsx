@@ -26,6 +26,7 @@ class MenuWidths extends React.Component {
             <option key="960" value="960">960</option>
             <option key="1280" value="1280">1280</option>
             <option key="1760" value="1760">1760</option>
+            <option key="auto" value="auto">Auto</option>
           </select>
           <br />
           <br />
