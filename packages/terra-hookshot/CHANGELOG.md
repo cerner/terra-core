@@ -4,6 +4,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Height and Width rounding
 ### Added
 * Content Resize callback
 
