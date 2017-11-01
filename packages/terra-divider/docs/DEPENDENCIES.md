@@ -4,14 +4,8 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
-| prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
-
-## devDependencies
-| Dependency | Version | React Version | Description |
-|-|-|-|-|
-| terra-arrange | ^1.13.0 | ^15.4.2 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
-| terra-props-table | ^1.10.1 | ^15.4.2 | terra-props-table |
+| terra-base | ^1.0.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
+| terra-toolkit | ^2.1.0 | ^15.4.2 | Utilities to help when developing terra modules. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
