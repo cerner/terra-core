@@ -37,7 +37,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Button.jsx --out-dir ./docs/props-table",
+    "props-table": "echo \"props-table is not used here as this component does not have any props\"",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
