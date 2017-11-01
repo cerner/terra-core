@@ -59,3 +59,27 @@ exports[`should render a flexbox component with the min and max sizing props 1`]
   }
 />
 `;
+
+exports[`should render a flexbox component with shorthand flex-flow prop 1`] = `
+<div
+  className="terra-flex-box"
+  style={
+    Object {
+      "display": "flex",
+      "flexFlow": "column wrap",
+    }
+  }
+/>
+`;
+
+exports[`should render a flexbox component with shorthand flex prop 1`] = `
+<div
+  className="terra-flex-box"
+  style={
+    Object {
+      "display": "flex",
+      "flex": "0 0 20%",
+    }
+  }
+/>
+`;

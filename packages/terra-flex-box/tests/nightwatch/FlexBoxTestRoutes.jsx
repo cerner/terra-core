@@ -7,6 +7,7 @@ import FlexBoxDefault from './FlexBoxDefault';
 import FlexBoxParent from './FlexBoxParent';
 import FlexBoxChild from './FlexBoxChild';
 import FlexBoxMinMaxSizing from './FlexBoxMinMaxSizing';
+import FlexBoxShorthand from './FlexBoxShorthand';
 
 const routes = (
   <div>
@@ -15,6 +16,7 @@ const routes = (
     <Route path="/tests/flexbox-tests/parent" component={FlexBoxParent} />
     <Route path="/tests/flexbox-tests/child" component={FlexBoxChild} />
     <Route path="/tests/flexbox-tests/minmax" component={FlexBoxMinMaxSizing} />
+    <Route path="/tests/flexbox-tests/shorthand" component={FlexBoxShorthand} />
   </div>
 );
 

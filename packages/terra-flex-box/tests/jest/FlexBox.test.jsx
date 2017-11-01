@@ -26,3 +26,8 @@ it('should render a flexbox component with shorthand flex-flow prop', () => {
   const wrapper = shallow(<FlexBox flexFlow="column wrap" />);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should render a flexbox component with shorthand flex prop', () => {
+  const wrapper = shallow(<FlexBox flex="0 0 20%" />);
+  expect(wrapper).toMatchSnapshot();
+});

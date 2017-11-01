@@ -46,6 +46,10 @@ const propTypes = {
    */
   flexDirection: PropTypes.oneOf(['column', 'column-reverse', 'row', 'row-reverse']),
   /**
+   * This is a shorthand flex-direction and flex-wrap properties, which together define the flex container's main and cross axes.
+   */
+  flexFlow: PropTypes.string,
+  /**
    * Defines the ability for a flex item to grow if necessary.
    */
   flexGrow: PropTypes.number,
@@ -106,6 +110,7 @@ const FlexBox = ({
   flex,
   flexBasis,
   flexDirection,
+  flexFlow,
   flexGrow,
   flexShrink,
   flexWrap,
@@ -128,6 +133,7 @@ const FlexBox = ({
   if (flex) { customProps.style.flex = flex; }
   if (flexBasis) { customProps.style.flexBasis = flexBasis; }
   if (flexDirection) { customProps.style.flexDirection = flexDirection; }
+  if (flexFlow) { customProps.style.flexFlow = flexFlow; }
   if (flexGrow !== undefined) { customProps.style.flexGrow = flexGrow; }
   if (flexShrink !== undefined) { customProps.style.flexShrink = flexShrink; }
   if (flexWrap) { customProps.style.flexWrap = flexWrap; }

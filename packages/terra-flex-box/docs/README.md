@@ -6,7 +6,6 @@ The flex-box component provides a flexbox based container for aligning its conte
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-flex-box`
-  - `yarn add terra-flex-box`
 
 ## Usage
 
@@ -14,7 +13,17 @@ The flex-box component provides a flexbox based container for aligning its conte
 import React from 'react';
 import FlexBox from 'terra-flex-box';
 
-<FlexBox />
+<FlexBox flexDirection="column">
+  <FlexBox order={2} flex="0 0 40%" alignSelf="flex-end">
+    <span>3 Test Display 3</span>
+  </FlexBox>
+  <FlexBox id="child2" order={1} flex="1 1 auto" alignSelf="center">
+    <span>2 Test Display 2</span>
+  </FlexBox>
+  <FlexBox id="child3" order={0} flex="0 0 40%" alignSelf="flex-start">
+    <span>1 Test Display 1</span>
+  </FlexBox>
+</FlexBox>
 ```
 
 ## Component Features

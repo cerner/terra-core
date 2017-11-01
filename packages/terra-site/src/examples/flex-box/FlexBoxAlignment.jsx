@@ -2,23 +2,6 @@ import React from 'react';
 import _ from 'lodash';
 import FlexBox from 'terra-flex-box';
 
-const alignContent = {
-  center: 'center',
-  flexEnd: 'flex-end',
-  flexStart: 'flex-start',
-  spaceAround: 'space-around',
-  spaceBetween: 'space-between',
-  stretch: 'stretch',
-};
-
-const alignItems = {
-  baseline: 'baseline',
-  center: 'center',
-  flexEnd: 'flex-end',
-  flexStart: 'flex-start',
-  stretch: 'stretch',
-};
-
 const display = {
   flex: 'flex',
   inlineFlex: 'inline-flex',
@@ -65,39 +48,6 @@ class FlexBoxAlignment extends React.Component {
 
   handleSelectChange(event) {
     this.setState({ [event.target.name]: event.target.value });
-  }
-
-  renderAlignContentForm() {
-    return (
-      <form>
-        <label htmlFor={this.getId('alignContent')}>Align Content</label>
-        <select id={this.getId('alignContent')} name="alignContent" value={this.state.alignContent} onChange={this.handleSelectChange}>
-          <option value="">default</option>
-          <option value={alignContent.center}>{alignContent.center}</option>
-          <option value={alignContent.flexEnd}>{alignContent.flexEnd}</option>
-          <option value={alignContent.flexStart}>{alignContent.flexStart}</option>
-          <option value={alignContent.spaceAround}>{alignContent.spaceAround}</option>
-          <option value={alignContent.spaceBetween}>{alignContent.spaceBetween}</option>
-          <option value={alignContent.stretch}>{alignContent.stretch}</option>
-        </select>
-      </form>
-    );
-  }
-
-  renderAlignItemsForm() {
-    return (
-      <form>
-        <label htmlFor={this.getId('alignItems')}>Align Items</label>
-        <select id={this.getId('alignItems')} name="alignItems" value={this.state.alignItems} onChange={this.handleSelectChange}>
-          <option value="">default</option>
-          <option value={alignItems.baseline}>{alignItems.baseline}</option>
-          <option value={alignItems.center}>{alignItems.center}</option>
-          <option value={alignItems.flexEnd}>{alignItems.flexEnd}</option>
-          <option value={alignItems.flexStart}>{alignItems.flexStart}</option>
-          <option value={alignItems.stretch}>{alignItems.stretch}</option>
-        </select>
-      </form>
-    );
   }
 
   renderDisplayForm() {
@@ -159,8 +109,6 @@ class FlexBoxAlignment extends React.Component {
   }
 
   render() {
-    const alignContentForm = this.renderAlignContentForm();
-    const alignItemsForm = this.renderAlignItemsForm();
     const displayForm = this.renderDisplayForm();
     const flexDirectionForm = this.renderFlexDirectionForm();
     const flexWrapForm = this.renderFlexWrapForm();
@@ -168,8 +116,6 @@ class FlexBoxAlignment extends React.Component {
 
     return (
       <div>
-        {alignContentForm}
-        {alignItemsForm}
         {displayForm}
         {flexDirectionForm}
         {flexWrapForm}
@@ -178,19 +124,17 @@ class FlexBoxAlignment extends React.Component {
         <FlexBox
           style={{ border: '1px solid black' }}
           className="flexBoxExample"
-          alignContent={this.state.alignContent}
-          alignItems={this.state.alignItems}
           display={this.state.display}
           flexDirection={this.state.flexDirection}
           flexWrap={this.state.flexWrap}
           justifyContent={this.state.justifyContent}
-          width="500px" minHeight="44px" id="testId"
+          id="testId"
         >
-          <span>span1</span>
-          <span>span2</span>
-          <span>span3</span>
-          <span>span4</span>
-          <span>span5</span>
+          <span>1 Test Display 1</span>
+          <span>2 Test Display 2</span>
+          <span>3 Test Display 3</span>
+          <span>4 Test Display 4</span>
+          <span>5 Test Display 5</span>
         </FlexBox>
       </div>
     );
