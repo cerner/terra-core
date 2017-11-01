@@ -1,14 +1,14 @@
+import React from 'react';
+
 /**
- * Returns a validated max count for selection based on the rows and max provided.
+ * Returns a validated max count for selection. Validates the max count prop, and if undefined
+ * returns a max of the count of children.
  */
 const validatedMaxCountSelection = (rows, maxSelectionCount) => {
   if (maxSelectionCount !== undefined) {
     return maxSelectionCount;
   }
-  if (rows) {
-    return rows.length;
-  }
-  return 0;
+  return React.Children.count(rows);
 };
 
 /**
@@ -52,7 +52,8 @@ const initialMultiSelectRowIndexes = (rows, maxSelectionCount) => {
 };
 
 /**
- * Returns a new array, updated with the newIndex being added or removed from the existing.
+ * Returns a new array of the selected indexes, updated with the newIndex being added or removed
+ * from the existing.
  */
 const updatedMultiSelectedIndexes = (currentIndexes, newIndex) => {
   let newIndexes = [];

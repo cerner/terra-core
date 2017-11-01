@@ -12,7 +12,7 @@ function expectRowForBrowserAtIndex(browser, index) {
 /**
  * Assert that the row at the 0-indexed position is selected.
  */
-function assertRowForBrowserAtIndexIsSelected(browser, index) {
+function expectRowForBrowserAtIndexIsSelected(browser, index) {
   return expectRowForBrowserAtIndex(browser, index).to.have.attribute('class')
     .which.contains('is-selected');
 }
@@ -20,20 +20,20 @@ function assertRowForBrowserAtIndexIsSelected(browser, index) {
 /**
  * Assert that the row at the 0-indexed position is not selected.
  */
-function assertRowForBrowserAtIndexIsNotSelected(browser, index) {
+function expectRowForBrowserAtIndexIsNotSelected(browser, index) {
   return expectRowForBrowserAtIndex(browser, index).to.have.attribute('class')
     .which.not.contains('is-selected');
 }
 
-let assertRowAtIndexIsSelected;
-let assertRowAtIndexIsNotSelected;
-let expectRowAtIndex;
+let expectRowIsSelected;
+let expectRowIsNotSelected;
+let expectRow;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   beforeEach: (browser) => {
-    assertRowAtIndexIsSelected = index => assertRowForBrowserAtIndexIsSelected(browser, index);
-    assertRowAtIndexIsNotSelected = index => assertRowForBrowserAtIndexIsNotSelected(browser, index);
-    expectRowAtIndex = index => expectRowForBrowserAtIndex(browser, index);
+    expectRowIsSelected = index => expectRowForBrowserAtIndexIsSelected(browser, index);
+    expectRowIsNotSelected = index => expectRowForBrowserAtIndexIsNotSelected(browser, index);
+    expectRow = index => expectRowForBrowserAtIndex(browser, index);
   },
 
   'Displays a default selectable table': (browser) => {
@@ -46,75 +46,75 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
 
     browser.click('[class*="row"]:nth-child(1)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.click('[class*="row"]:nth-child(2)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.click('[class*="row"]:nth-child(3)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsSelected(2);
   },
 
   'Display a selectable table and highlights the selected row upon enter': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(2)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsSelected(2);
   },
 
   'Display a selectable table and highlights the selected row upon space keydown': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(2)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsSelected(2);
   },
 
   'Toggle aria-selected on selectable rows': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
     browser.click('[class*="row"]:nth-child(1)');
-    expectRowAtIndex(0).to.have.attribute('aria-selected').which.contains('true');
-    expectRowAtIndex(1).to.have.attribute('aria-selected').which.contains('false');
-    expectRowAtIndex(2).to.have.attribute('aria-selected').which.contains('false');
+    expectRow(0).to.have.attribute('aria-selected').which.contains('true');
+    expectRow(1).to.have.attribute('aria-selected').which.contains('false');
+    expectRow(2).to.have.attribute('aria-selected').which.contains('false');
 
     browser.click('[class*="row"]:nth-child(2)');
-    expectRowAtIndex(0).to.have.attribute('aria-selected').which.contains('true');
-    expectRowAtIndex(1).to.have.attribute('aria-selected').which.contains('true');
-    expectRowAtIndex(2).to.have.attribute('aria-selected').which.contains('false');
+    expectRow(0).to.have.attribute('aria-selected').which.contains('true');
+    expectRow(1).to.have.attribute('aria-selected').which.contains('true');
+    expectRow(2).to.have.attribute('aria-selected').which.contains('false');
 
     browser.click('[class*="row"]:nth-child(3)');
-    expectRowAtIndex(0).to.have.attribute('aria-selected').which.contains('true');
-    expectRowAtIndex(1).to.have.attribute('aria-selected').which.contains('true');
-    expectRowAtIndex(2).to.have.attribute('aria-selected').which.contains('true');
+    expectRow(0).to.have.attribute('aria-selected').which.contains('true');
+    expectRow(1).to.have.attribute('aria-selected').which.contains('true');
+    expectRow(2).to.have.attribute('aria-selected').which.contains('true');
   },
 
   'Triggers onChange for selectable table upon clicking a row': (browser) => {
@@ -151,136 +151,136 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays a selectable table with a preselected row': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/preselected`);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays a selectable table with a non-selectable row': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/non-selectable`);
-    assertRowAtIndexIsNotSelected(0);
+    expectRowIsNotSelected(0);
   },
 
   'Displays a selectable table with a max selection count honored on click': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count`);
 
     browser.click('[class*="row"]:nth-child(1)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.click('[class*="row"]:nth-child(2)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.click('[class*="row"]:nth-child(3)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays a selectable table with a max selection count honored on enter': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(2)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays a selectable table with a max selection count honored on space keydown': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsNotSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsNotSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(2)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays a initially met max count selectable table with a max selection count honored on click': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-met`);
 
     browser.click('[class*="row"]:nth-child(3)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays a initially met max count selectable table with a max selection count honored on enter': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-met`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays a initially met max count selectable table with a max selection count honored on space keydown': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-met`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
   },
 
   'Displays an initially exceeded max count selectable table with correctly selected rows': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
 
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
-    assertRowAtIndexIsNotSelected(3);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
+    expectRowIsNotSelected(3);
   },
 
   'Displays an initially exceeded max count selectable table with a max selection count honored on click': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
 
     browser.click('[class*="row"]:nth-child(3)');
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
-    assertRowAtIndexIsNotSelected(3);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
+    expectRowIsNotSelected(3);
   },
 
   'Displays a initially exceeded max count selectable table with a max selection count honored on enter': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.ENTER);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
-    assertRowAtIndexIsNotSelected(3);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
+    expectRowIsNotSelected(3);
   },
 
   'Displays a initially exceeded max count selectable table with a max selection count honored on space keydown': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.SPACE);
-    assertRowAtIndexIsSelected(0);
-    assertRowAtIndexIsSelected(1);
-    assertRowAtIndexIsNotSelected(2);
-    assertRowAtIndexIsNotSelected(3);
+    expectRowIsSelected(0);
+    expectRowIsSelected(1);
+    expectRowIsNotSelected(2);
+    expectRowIsNotSelected(3);
   },
 });
