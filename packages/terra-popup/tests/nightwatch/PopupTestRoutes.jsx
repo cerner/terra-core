@@ -27,6 +27,7 @@ import AutomaticWidthPopup from './components/AutomaticWidthPopup';
 import AutomaticHeightBoundedPopup from './components/AutomaticHeightBoundedPopup';
 import AutomaticWidthBoundedPopup from './components/AutomaticWidthBoundedPopup';
 import DifferentAttachmentsPopup from './components/DifferentAttachmentsPopup';
+import ResizedContentPopup from './components/ResizedContentPopup';
 
 const routes = (
   <div>
@@ -55,6 +56,7 @@ const routes = (
     <Route path="/tests/popup-tests/automatic-width" component={AutomaticWidthPopup} />
     <Route path="/tests/popup-tests/bounded-automatic-height" component={AutomaticHeightBoundedPopup} />
     <Route path="/tests/popup-tests/bounded-automatic-width" component={AutomaticWidthBoundedPopup} />
+    <Route path="/tests/popup-tests/resize-content" component={ResizedContentPopup} />
   </div>
 );
 

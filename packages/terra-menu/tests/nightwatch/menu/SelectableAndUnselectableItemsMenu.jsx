@@ -9,7 +9,7 @@ class SelectableMenu extends React.Component {
     this.handleItemClick = this.handleItemClick.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true, isSelected: false };
+    this.state = { open: false, isSelected: false };
   }
 
   componentDidMount() {
