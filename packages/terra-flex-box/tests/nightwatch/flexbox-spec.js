@@ -69,6 +69,5 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#flexprop').to.be.present;
     browser.expect.element('#flexflow').to.have.css('flex-flow').which.equals('column wrap');
     browser.expect.element('#flexprop').to.have.css('flex').which.equals('1 1 20%');
-
   },
 });

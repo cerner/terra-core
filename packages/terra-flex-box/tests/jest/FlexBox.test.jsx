@@ -1,14 +1,13 @@
 import React from 'react';
-import FlexBox from '../../src/FlexBox';
 import { StyleSheetTestUtils } from 'aphrodite';
+import FlexBox from '../../src/FlexBox';
 
 describe('FlexBox', () => {
-
   // Snapshot Tests
   beforeEach(() => {
     StyleSheetTestUtils.suppressStyleInjection();
   });
-  
+
   afterEach(() => {
     StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
   });
