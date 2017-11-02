@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const Autoprefixer = require('autoprefixer');
-const rtl = require('postcss-rtl');
 const ThemingPlugin = require('./theming-plugin');
 
 module.exports = {
@@ -16,7 +15,6 @@ module.exports = {
         ],
       }),
       ThemingPlugin,
-      rtl(),
     ];
   },
 };
