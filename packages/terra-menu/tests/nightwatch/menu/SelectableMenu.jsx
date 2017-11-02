@@ -8,11 +8,7 @@ class SelectableMenu extends React.Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-    this.state = { open: true };
-  }
-
-  componentDidMount() {
-    this.forceUpdate();
+    this.state = { open: false };
   }
 
   setButtonNode(node) {
@@ -48,7 +44,7 @@ class SelectableMenu extends React.Component {
             <Menu.Item text="Group Item 3" key="3" className="TestGroupItem3" />
           </Menu.ItemGroup>
         </Menu>
-        <button id="default-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="selectable-menu-button" onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Default Menu
         </button>
       </div>

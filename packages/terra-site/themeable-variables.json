@@ -126,6 +126,10 @@
     "--terra-demographics-banner-background-deceased": "#1c1f21",
     "--terra-demographics-banner-foreground-deceased": "#fff"
   },
+  "Divider": {
+    "--terra-divider-border-color": "#dedfe0",
+    "--terra-divider-border-top-width": "1px"
+  },
   "Grid": {
     "--terra-grid-gutter-width": "1rem"
   },
