@@ -31,6 +31,7 @@ class TextareaExamples extends React.Component {
       <div>
         <form>
           <Textarea defaultValue="I'm Disabled" disabled size="small" />
+          <Textarea defaultValue="I'm Disabled with error" isInvalid disabled size="small" />
           <Textarea name="name" value={this.state.area1} required onChange={this.handleArea1Change} size="large" isAutoResizable />
           <Textarea
             name="profile_description"
