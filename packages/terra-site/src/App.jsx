@@ -154,6 +154,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/divider">Divider</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/dynamic-grid">Dynamic Grid</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/embedded-content-consumer">Embedded Content Consumer</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/flex-box">Flex Box</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form">Form</Link>} />
           <List.Item content={<FormComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/grid">Grid</Link>} />

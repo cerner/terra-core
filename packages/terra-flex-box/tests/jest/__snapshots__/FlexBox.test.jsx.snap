@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexBox should render a default component with just height and width defined 1`] = `
+<div
+  className="flexbox_1towmz4"
+/>
+`;
+
+exports[`FlexBox should render a flexbox component with all child container display properties defined 1`] = `
+<div
+  className="child flexbox_1f26s2c"
+/>
+`;
+
+exports[`FlexBox should render a flexbox component with all parent container display properties defined 1`] = `
+<header
+  className="parent flexbox_i01dur"
+/>
+`;
+
+exports[`FlexBox should render a flexbox component with shorthand flex prop 1`] = `
+<div
+  className="flexbox_17hph0y"
+/>
+`;
+
+exports[`FlexBox should render a flexbox component with shorthand flex-flow prop 1`] = `
+<div
+  className="flexbox_kna8yt"
+/>
+`;
+
+exports[`FlexBox should render a flexbox component with the min and max sizing props 1`] = `
+<div
+  className="flexbox_1gpw67o"
+/>
+`;

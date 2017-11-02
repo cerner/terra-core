@@ -21,6 +21,7 @@ import DemographicsBannerExamples from './examples/demographics-banner/Index';
 import DividerExamples from './examples/divider/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
+import FlexBoxExamples from './examples/flex-box/Index';
 import FormExamples from './examples/form/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
@@ -66,6 +67,7 @@ import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightw
 import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes';
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
+import FlexBoxTestRoutes from 'terra-flex-box/tests/nightwatch/FlexBoxTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
@@ -132,6 +134,7 @@ ReactDOM.render((
       <Route path="divider" component={DividerExamples} />
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
+      <Route path="flex-box" component={FlexBoxExamples} />
       <Route path="form" component={FormExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
@@ -178,6 +181,7 @@ ReactDOM.render((
     {DividerTestRoutes}
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}
+    {FlexBoxTestRoutes}
     {SlidePanelTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}

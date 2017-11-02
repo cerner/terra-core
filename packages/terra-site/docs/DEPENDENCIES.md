@@ -26,6 +26,7 @@
 | terra-demographics-banner | ^1.12.1 | ^15.4.2 | The demographics component is used to display demographic information about a person in a condensed, easy to read format. |
 | terra-dynamic-grid | ^1.6.1 | ^15.4.2 | The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids. |
 | terra-embedded-content-consumer | ^1.7.0 | ^15.4.2 | The Embedded Content Consumer is the application component which is embedding web content within it. |
+| terra-flex-box | ^0.0.0 | ^15.4.2 | The flex-box component provides a flexbox based container for aligning its content. |
 | terra-form | ^1.12.0 | ^15.4.2 | Components for building forms |
 | terra-grid | ^3.15.1 | ^15.4.2 | The grid component provides a flexbox based grid system. |
 | terra-heading | ^1.13.0 | ^15.4.2 | Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading. |
