@@ -1,4 +1,6 @@
 import React from 'react';
+import { StyleSheet, css } from 'aphrodite';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import 'terra-base/lib/baseStyles';
@@ -122,31 +124,34 @@ const FlexBox = ({
   minWidth,
   order,
   width,
-  ...props
+  ...customProps
 }) => {
-  const customProps = props;
-  if (!customProps.style) { customProps.style = {}; }
-  if (alignContent) { customProps.style.alignContent = alignContent; }
-  if (alignItems) { customProps.style.alignItems = alignItems; }
-  if (alignSelf) { customProps.style.alignSelf = alignSelf; }
-  if (display) { customProps.style.display = display; }
-  if (flex) { customProps.style.flex = flex; }
-  if (flexBasis) { customProps.style.flexBasis = flexBasis; }
-  if (flexDirection) { customProps.style.flexDirection = flexDirection; }
-  if (flexFlow) { customProps.style.flexFlow = flexFlow; }
-  if (flexGrow !== undefined) { customProps.style.flexGrow = flexGrow; }
-  if (flexShrink !== undefined) { customProps.style.flexShrink = flexShrink; }
-  if (flexWrap) { customProps.style.flexWrap = flexWrap; }
-  if (height) { customProps.style.height = height; }
-  if (justifyContent) { customProps.style.justifyContent = justifyContent; }
-  if (maxHeight) { customProps.style.maxHeight = maxHeight; }
-  if (maxWidth) { customProps.style.maxWidth = maxWidth; }
-  if (minHeight) { customProps.style.minHeight = minHeight; }
-  if (minWidth) { customProps.style.minWidth = minWidth; }
-  if (order !== undefined) { customProps.style.order = order; }
-  if (width) { customProps.style.width = width; }
-
-  return React.createElement(element, { ...customProps, className: classNames('terra-flex-box', customProps.className) }, children);
+  const flexHash = _.omitBy({
+    alignContent,
+    alignItems,
+    alignSelf,
+    display,
+    flex,
+    flexBasis,
+    flexDirection,
+    flexFlow,
+    flexGrow,
+    flexShrink,
+    flexWrap,
+    height,
+    justifyContent,
+    maxHeight,
+    maxWidth,
+    minHeight,
+    minWidth,
+    order,
+    width,
+  }, _.isUndefined);
+  const stylesheet = StyleSheet.create({
+    flexbox: flexHash,
+  });
+  const flexClasses = classNames(customProps.className, css(stylesheet.flexbox));
+  return React.createElement(element, { ...customProps, className: flexClasses }, children);
 };
 
 FlexBox.propTypes = propTypes;

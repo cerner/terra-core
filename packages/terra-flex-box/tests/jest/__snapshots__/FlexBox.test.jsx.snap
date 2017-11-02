@@ -1,85 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a default component with just height and width defined 1`] = `
+exports[`FlexBox should render a default component with just height and width defined 1`] = `
 <div
-  className="terra-flex-box"
-  style={
-    Object {
-      "display": "flex",
-      "height": "400px",
-      "width": "40%",
-    }
-  }
+  className="flexbox_1towmz4"
 />
 `;
 
-exports[`should render a flexbox component with all child container display properties defined 1`] = `
+exports[`FlexBox should render a flexbox component with all child container display properties defined 1`] = `
 <div
-  className="terra-flex-box child"
-  style={
-    Object {
-      "alignSelf": "center",
-      "display": "flex",
-      "flexBasis": "20%",
-      "flexGrow": 0,
-      "flexShrink": 0,
-      "order": 0,
-    }
-  }
+  className="child flexbox_1f26s2c"
 />
 `;
 
-exports[`should render a flexbox component with all parent container display properties defined 1`] = `
+exports[`FlexBox should render a flexbox component with all parent container display properties defined 1`] = `
 <header
-  className="terra-flex-box parent"
-  style={
-    Object {
-      "alignContent": "flex-start",
-      "alignItems": "stretch",
-      "display": "inline-flex",
-      "flexDirection": "column",
-      "flexWrap": "wrap",
-      "justifyContent": "center",
-    }
-  }
+  className="parent flexbox_i01dur"
 />
 `;
 
-exports[`should render a flexbox component with the min and max sizing props 1`] = `
+exports[`FlexBox should render a flexbox component with shorthand flex prop 1`] = `
 <div
-  className="terra-flex-box"
-  style={
-    Object {
-      "display": "flex",
-      "maxHeight": "400px",
-      "maxWidth": "40%",
-      "minHeight": "400px",
-      "minWidth": "40%",
-    }
-  }
+  className="flexbox_17hph0y"
 />
 `;
 
-exports[`should render a flexbox component with shorthand flex-flow prop 1`] = `
+exports[`FlexBox should render a flexbox component with shorthand flex-flow prop 1`] = `
 <div
-  className="terra-flex-box"
-  style={
-    Object {
-      "display": "flex",
-      "flexFlow": "column wrap",
-    }
-  }
+  className="flexbox_kna8yt"
 />
 `;
 
-exports[`should render a flexbox component with shorthand flex prop 1`] = `
+exports[`FlexBox should render a flexbox component with the min and max sizing props 1`] = `
 <div
-  className="terra-flex-box"
-  style={
-    Object {
-      "display": "flex",
-      "flex": "0 0 20%",
-    }
-  }
+  className="flexbox_1gpw67o"
 />
 `;
