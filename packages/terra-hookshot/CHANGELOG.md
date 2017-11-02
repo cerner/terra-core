@@ -1,9 +1,16 @@
 Changelog
 =========
 
-
 Unreleased
 ----------
+
+1.2.0 - (October 31, 2017)
+------------------
+### Fixed
+* Height and Width rounding
+
+### Added
+* Content Resize callback
 
 1.1.0 - (October 24, 2017)
 ------------------
