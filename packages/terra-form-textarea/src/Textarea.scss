@@ -69,12 +69,12 @@
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-keyboard-ltr, 0 0 1px 1px #46b1eb);
+        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
       }
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-keyboard-rtl, 0 0 1px 1px #46b1eb);
+        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
       }
 
       opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
