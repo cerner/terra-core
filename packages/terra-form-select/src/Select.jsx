@@ -52,6 +52,16 @@ const propTypes = {
    * Indicates if the select should be disabled.
    */
   disabled: PropTypes.bool,
+
+  /**
+   * A callback function to let the containing component (e.g. modal) to regain focus.
+   */
+  releaseFocus: PropTypes.func,
+
+  /**
+   * A callback function to request focus from the containing component (e.g. modal).
+   */
+  requestFocus: PropTypes.func,
 };
 
 const defaultProps = {
@@ -132,7 +142,7 @@ class Select extends React.Component {
         this.handleSelection(event, option);
       } else if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.UP_ARROW) {
         let previousFocus = event.target.previousSibling;
-        while (previousFocus.tabIndex < 0) {
+        while (previousFocus && previousFocus.tabIndex < 0) {
           previousFocus = previousFocus.previousSibling;
           if (!previousFocus) {
             return;
@@ -141,7 +151,7 @@ class Select extends React.Component {
         previousFocus.focus();
       } else if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
         let nextFocus = event.target.nextSibling;
-        while (nextFocus.tabIndex < 0) {
+        while (nextFocus && nextFocus.tabIndex < 0) {
           nextFocus = nextFocus.nextSibling;
           if (!nextFocus) {
             return;
@@ -170,7 +180,9 @@ class Select extends React.Component {
   }
 
   handleOnKeyDown(event) {
-    if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === SelectUtils.KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.SPACE
+      || event.nativeEvent.keyCode === SelectUtils.KEYCODES.UP_ARROW
+      || event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
       this.setState({ isOpen: true });
     }
   }
@@ -189,6 +201,8 @@ class Select extends React.Component {
       isInvalid,
       disabled,
       children,
+      requestFocus,
+      releaseFocus,
       ...customProps
     } = this.props;
 
@@ -233,7 +247,7 @@ class Select extends React.Component {
     if (!selectedValue) {
       display = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
       selectedValue = '';
-      defaultOption = <SelectOption value={selectedValue} display={display} isSelected className={cx('default-option')} />;
+      defaultOption = <SelectOption value={selectedValue} display={display} tabIndex="-1" isSelected className={cx('default-option')} />;
       isDefaultDisplay = true;
     }
 
@@ -249,6 +263,8 @@ class Select extends React.Component {
           isOpen={this.state.isOpen}
           targetRef={this.getTargetRef}
           classNameContent={cx('select-menu')}
+          requestFocus={requestFocus}
+          releaseFocus={releaseFocus}
         >
           <SelectMenu>
             {defaultOption}

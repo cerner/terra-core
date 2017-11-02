@@ -24,7 +24,8 @@
       color: var(--terra-select-option-selected-font-color, #fff);
       font-weight: var(--terra-select-option-selected-font-weight, bold);
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: var(--terra-select-option-selected-color, #007cc3);
       }
     }

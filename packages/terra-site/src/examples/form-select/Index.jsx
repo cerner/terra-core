@@ -16,6 +16,7 @@ import DefaultSelect from './DefaultSelect';
 import InvalidSelect from './InvalidSelect';
 import SelectWithoutDefault from './SelectWithoutDefault';
 import DisabledSelect from './DisabledSelect';
+import SelectInsideModal from './SelectInsideModal';
 
 const SelectExamples = () => (
   <div>
@@ -31,6 +32,8 @@ const SelectExamples = () => (
     <SelectWithoutDefault />
     <h2>Disabled select component</h2>
     <DisabledSelect />
+    <h2>Select inside a modal</h2>
+    <SelectInsideModal />
   </div>
 );
 

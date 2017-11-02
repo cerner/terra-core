@@ -106,6 +106,7 @@ exports[`should render Select with onChange 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        tabIndex="-1"
         value=""
       />
       <SelectOption
@@ -191,6 +192,7 @@ exports[`should render a Select with name provided 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        tabIndex="-1"
         value=""
       />
       <div
@@ -267,6 +269,7 @@ exports[`should render a default Select component 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        tabIndex="-1"
         value=""
       />
       <div
@@ -343,6 +346,7 @@ exports[`should render a disabled Select 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        tabIndex="-1"
         value=""
       />
       <div
@@ -419,6 +423,7 @@ exports[`should render a required Select 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        tabIndex="-1"
         value=""
       />
       <div
@@ -496,6 +501,7 @@ exports[`should render an invalid Select 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        tabIndex="-1"
         value=""
       />
       <div

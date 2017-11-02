@@ -34,37 +34,57 @@ const defaultProps = {
   isSelected: false,
 };
 
-const SelectOption = ({ value, display, disabled, isSelected, children, ...customProps }) => {
-  const attributes = Object.assign({}, customProps);
+class SelectOption extends React.Component {
+  constructor(props) {
+    super(props);
 
-  attributes.tabIndex = disabled ? '-1' : '0';
-  attributes['aria-disabled'] = disabled;
-
-  if (disabled) {
-    delete attributes.onClick;
-    delete attributes.onKeyDown;
+    this.setOptionRef = this.setOptionRef.bind(this);
   }
 
-  const optionClassNames = cx([
-    'option',
-    { 'is-disabled': disabled },
-    { 'is-selected': isSelected },
-    attributes.className,
-  ]);
+  componentDidMount() {
+    if (this.optionNode) {
+      this.optionNode.focus();
+    }
+  }
 
-  return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <li
-      {...attributes}
-      role="option"
-      className={optionClassNames}
-      data-value={value}
-      disabled={disabled}
-    >
-      {display || children}
-    </li>
-  );
-};
+  setOptionRef(node) {
+    this.optionNode = node;
+  }
+
+  render() {
+    const { value, display, disabled, isSelected, children, ...customProps } = this.props;
+    const attributes = Object.assign({}, customProps);
+
+    attributes['aria-disabled'] = disabled;
+
+    if (disabled) {
+      delete attributes.onClick;
+      delete attributes.onKeyDown;
+    }
+
+    const optionClassNames = cx([
+      'option',
+      { 'is-disabled': disabled },
+      { 'is-selected': isSelected },
+      attributes.className,
+    ]);
+
+    return (
+      // Setting tabIndex before attributes so it can be overridden for the case of the default option
+      <li
+        tabIndex={disabled ? '-1' : '0'}
+        {...attributes}
+        role="option"
+        className={optionClassNames}
+        data-value={value}
+        disabled={disabled}
+        ref={isSelected ? this.setOptionRef : null}
+      >
+        {display || children}
+      </li>
+    );
+  }
+}
 
 SelectOption.propTypes = propTypes;
 SelectOption.defaultProps = defaultProps;
