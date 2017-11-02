@@ -65,11 +65,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  onChange: undefined,
-  name: null,
   required: false,
-  defaultValue: undefined,
-  value: undefined,
   disabled: false,
   isInvalid: false,
 };

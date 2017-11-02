@@ -69,7 +69,6 @@ exports[`should render Select with default value 1`] = `
     />
     <input
       disabled={false}
-      name={null}
       required={false}
       type="hidden"
       value="b"
@@ -155,7 +154,6 @@ exports[`should render Select with onChange 1`] = `
     />
     <input
       disabled={false}
-      name={null}
       required={false}
       type="hidden"
       value=""
@@ -309,7 +307,6 @@ exports[`should render a default Select component 1`] = `
     />
     <input
       disabled={false}
-      name={null}
       required={false}
       type="hidden"
       value=""
@@ -386,7 +383,6 @@ exports[`should render a disabled Select 1`] = `
     />
     <input
       disabled={true}
-      name={null}
       required={false}
       type="hidden"
       value=""
@@ -464,7 +460,6 @@ exports[`should render a required Select 1`] = `
     />
     <input
       disabled={false}
-      name={null}
       required={true}
       type="hidden"
       value=""
@@ -541,7 +536,6 @@ exports[`should render an invalid Select 1`] = `
     />
     <input
       disabled={false}
-      name={null}
       required={false}
       type="hidden"
       value=""
