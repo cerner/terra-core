@@ -1,6 +1,6 @@
 # Terra Form Field
 
-The Form Field component by handles the layout of the label, help text and error text associated with a form control Additionally, it provides required, optional, and invalid indicators.
+The Form Field component by handles the layout of the label, help text and error text associated with a form element. Additionally, it provides required, optional, and invalid indicators.
 
 ## Getting Started
 
