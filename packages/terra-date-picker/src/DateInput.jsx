@@ -15,10 +15,6 @@ const propTypes = {
    */
   inputAttributes: PropTypes.object,
   /**
-   * Indicates whether or not the picker should be displayed after rendering.
-   */
-  isForceShowPicker: PropTypes.bool,
-  /**
    * Name of the date input.
    */
   name: PropTypes.string,
@@ -55,6 +51,10 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
+   * Indicates whether or not the picker should be displayed after rendering.
+   */
+  shouldShowPicker: PropTypes.bool,
+  /**
    * The selected or entered date value to display in the date input.
    */
   value: PropTypes.string,
@@ -69,8 +69,8 @@ const defaultProps = {
   placeholder: undefined,
   releaseFocus: undefined,
   requestFocus: undefined,
+  shouldShowPicker: false,
   value: undefined,
-  isForceShowPicker: false,
 };
 
 const contextTypes = {
@@ -93,7 +93,7 @@ class DatePickerInput extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.isForceShowPicker && !prevProps.isForceShowPicker && this.props.onClick) {
+    if (this.props.shouldShowPicker && !prevProps.shouldShowPicker && this.props.onClick) {
       this.props.onClick();
     }
   }
@@ -133,7 +133,7 @@ class DatePickerInput extends React.Component {
   render() {
     const {
       inputAttributes,
-      isForceShowPicker,
+      shouldShowPicker,
       name,
       onCalendarButtonClick,
       onChange,

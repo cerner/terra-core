@@ -38,7 +38,7 @@ class DateUtil {
       return false;
     }
 
-    if (sourceDate.isBefore(startDate) && sourceDate.isAfter(endDate)) {
+    if (sourceDate.isSameOrAfter(startDate) && sourceDate.isSameOrBefore(endDate)) {
       return false;
     }
 
@@ -51,15 +51,13 @@ class DateUtil {
       return false;
     }
 
-    const exludeMomentDates = DateUtil.filterInvalidDates(excludedDates);
+    const excludeMomentDates = DateUtil.filterInvalidDates(excludedDates);
 
-    if (!exludeMomentDates || exludeMomentDates.length <= 0) {
-      return false;
-    }
-
-    for (let index = 0; index < exludeMomentDates.length; index += 1) {
-      if (sourceDate.isSame(exludeMomentDates[index], 'day')) {
-        return true;
+    if (excludeMomentDates) {
+      for (let index = 0; index < excludeMomentDates.length; index += 1) {
+        if (sourceDate.isSame(excludeMomentDates[index], 'day')) {
+          return true;
+        }
       }
     }
 

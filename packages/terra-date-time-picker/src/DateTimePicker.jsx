@@ -309,17 +309,17 @@ class DateTimePicker extends React.Component {
   }
 
   validateDefaultDate() {
-    let iSAccepatable = true;
+    let isAcceptable = true;
 
     if (DateUtil.isDateOutOfRange(this.state.dateTime, DateUtil.createSafeDate(this.props.minDateTime), DateUtil.createSafeDate(this.props.maxDateTime))) {
-      iSAccepatable = false;
+      isAcceptable = false;
     }
 
     if (DateUtil.isDateExcluded(this.state.dateTime, this.props.excludeDates)) {
-      iSAccepatable = false;
+      isAcceptable = false;
     }
 
-    return iSAccepatable;
+    return isAcceptable;
   }
 
   handleDaylightSavingButtonClick() {

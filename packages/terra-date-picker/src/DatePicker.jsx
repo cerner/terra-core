@@ -113,7 +113,7 @@ class DatePicker extends React.Component {
       selectedDate: DateUtil.createSafeDate(props.selectedDate),
     };
 
-    this.isDefaultDateAcceptable = true;
+    this.isDefaultDateAcceptable = false;
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeRaw = this.handleChangeRaw.bind(this);
     this.handleOnSelect = this.handleOnSelect.bind(this);
@@ -209,17 +209,17 @@ class DatePicker extends React.Component {
   }
 
   validateDefaultDate() {
-    let iSAccepatable = true;
+    let isAcceptable = true;
 
     if (DateUtil.isDateOutOfRange(this.state.selectedDate, DateUtil.createSafeDate(this.props.minDate), DateUtil.createSafeDate(this.props.maxDate))) {
-      iSAccepatable = false;
+      isAcceptable = false;
     }
 
     if (DateUtil.isDateExcluded(this.state.selectedDate, this.props.excludeDates)) {
-      iSAccepatable = false;
+      isAcceptable = false;
     }
 
-    return iSAccepatable;
+    return isAcceptable;
   }
 
   render() {
@@ -260,12 +260,12 @@ class DatePicker extends React.Component {
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
         customInput={<DateInput
-          isForceShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
           onInputFocus={this.handleOnInputFocus}
           onCalendarButtonClick={this.handleOnCalendarButtonClick}
           inputAttributes={inputAttributes}
           releaseFocus={releaseFocus}
           requestFocus={requestFocus}
+          shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
         />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
@@ -294,12 +294,12 @@ class DatePicker extends React.Component {
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
         customInput={<DateInput
-          isForceShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
           onInputFocus={this.handleOnInputFocus}
           onCalendarButtonClick={this.handleOnCalendarButtonClick}
           inputAttributes={inputAttributes}
           releaseFocus={releaseFocus}
           requestFocus={requestFocus}
+          shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
         />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
