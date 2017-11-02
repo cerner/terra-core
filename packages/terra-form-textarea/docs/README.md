@@ -11,7 +11,7 @@ Element for building out textareas in a form.
 
 ```jsx
 import React from 'react';
-import Textarea from 'terra-form/lib/Textarea';
+import Textarea from 'terra-form-textarea';
 
 <Textarea
   name="description"
