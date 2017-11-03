@@ -4,6 +4,18 @@ Changelog
 Unreleased
 ----------
 
+### Changed
+* Added Reply All Icon
+
+### Added
+* Added Audio Icon
+* Added Featured Off Icon
+* Added Pause Icon
+* Added Pin Diagonal Icon
+* Added Pin Down Icon
+* Added Pin Diagonal Icon
+* Added Question Outline Icon
+
 1.12.0 - (October 6, 2017)
 ------------------
 ### Changed
