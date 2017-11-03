@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Chevron positioning
 
 1.14.0 - (October 31, 2017)
 ------------------
