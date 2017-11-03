@@ -10,6 +10,7 @@ Unreleased
 ### Added
 * Added Audio Icon
 * Added Featured Off Icon
+* Added Notification Off Icon
 * Added Pause Icon
 * Added Pin Diagonal Icon
 * Added Pin Down Icon
