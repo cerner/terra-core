@@ -74,6 +74,7 @@
     "terra-slide-group": "^1.11.1",
     "terra-slide-panel": "^1.11.1",
     "terra-status": "^1.13.0",
+    "terra-tab-container": "^0.x",
     "terra-table": "^1.14.0",
     "terra-text": "^1.12.0",
     "terra-theme-provider": "^1.6.1",

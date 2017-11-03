@@ -42,6 +42,7 @@ import SearchFieldExamples from './examples/search-field/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
+import TabContainerExamples from './examples/tab-container/Index';
 import TableExamples from './examples/table/Index';
 import TextExamples from './examples/text/Index';
 import ThemeProviderExamples from './examples/theme-provider/Index';
@@ -102,6 +103,8 @@ import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupT
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import TabContainerTestRoutes from 'terra-tab-container/tests/nightwatch/TabContainerTestRoutes';
+import TabIndexRoutes from './examples/tab-container/TabIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
@@ -153,6 +156,7 @@ ReactDOM.render((
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
+      <Route path="tab-container" component={TabContainerExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="theme-provider" component={ThemeProviderExamples} />
@@ -162,6 +166,7 @@ ReactDOM.render((
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
+      {TabIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
     {AlertTestRoutes}
@@ -218,5 +223,6 @@ ReactDOM.render((
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
+    {TabContainerTestRoutes}
   </Router>
 ), document.getElementById('root'));

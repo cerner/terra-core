@@ -8,14 +8,13 @@ const propTypes = {
   onClick: PropTypes.func,
 };
 
-const IconComponentNavigation = ({
+const TabComponentNavigation = ({
     onClick,
   }) =>
     <List className={[styles['site-component-nav'], styles['sub-nav']]}>
-      <List.Item content={<Link onClick={onClick} to="/site/icon/static">Static Icons</Link>} />
-      <List.Item content={<Link onClick={onClick} to="/site/icon/themeable">Themeable Icons</Link>} />
+      <List.Item content={<Link onClick={onClick} to="/site/tab-container/selectable">Selectable</Link>} />
     </List>;
 
-IconComponentNavigation.propTypes = propTypes;
+TabComponentNavigation.propTypes = propTypes;
 
-export default IconComponentNavigation;
+export default TabComponentNavigation;
