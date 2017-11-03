@@ -1,6 +1,6 @@
 :local {
   .textarea {
-    background-color: var(--terra-form-textarea-background-color, #fff);
+    background-color: var(--terra-form-textarea-background-color, #ffffff);
     background-image: var(--terra-form-textarea-focus-animation-background, none);
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -11,13 +11,14 @@
     border-width: var(--terra-form-textarea-border-width, 1px);
     color: var(--terra-form-textarea-color, #000);
     cursor: var(--terra-form-textarea-cursor, auto);
-    font-size: var(--terra-form-textarea-font-size, 1rem);
+    font-family: var(--terra-base-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+    font-size: var(--terra-form-textarea-font-size, 1.143rem);
     line-height: var(--terra-form-textarea-line-height, 1.25);
     opacity: var(--terra-form-textarea-focus-opacity, 1);
-    padding-bottom: var(--terra-form-textarea-padding-bottom, 0.429rem);
-    padding-left: var(--terra-form-textarea-padding-left, 0.429rem);
-    padding-right: var(--terra-form-textarea-padding-right, 0.429rem);
-    padding-top: var(--terra-form-textarea-padding-top, 0.357rem);
+    padding-bottom: var(--terra-form-textarea-padding-bottom, 0.286rem);
+    padding-left: var(--terra-form-textarea-padding-left, 0.286rem);
+    padding-right: var(--terra-form-textarea-padding-right, 0.286rem);
+    padding-top: var(--terra-form-textarea-padding-top, 0.286rem);
     transition-duration: var(--terra-form-textarea-focus-transition-duration, 0.2s);
     transition-property: background-size;
     transition-timing-function: var(--terra-form-textarea-focus-transition-timing-function, ease);
@@ -34,50 +35,51 @@
     }
 
     &[disabled] {
-      background-color: var(--terra-form-textarea-disabled-background-color, rgba(0, 0, 0, 0.05));
-      border-color: var(--terra-form-textarea-disabled-border-color, #000);
+      background-color: var(--terra-form-textarea-disabled-background-color, rgba(111, 116, 119, 0.05));
+      border-color: var(--terra-form-textarea-disabled-border-color, #dedfe0);
       border-style: var(--terra-form-textarea-disabled-border-style, solid);
       border-width: var(--terra-form-textarea-disabled-border-width, 1px);
+      color: var(--terra-form-textarea-disabled-color, rgba(0, 0, 0, 0.25));
       opacity: var(--terra-form-textarea-disabled-opacity, 1);
+      resize: none;
     }
 
     &:focus {
       background-size: var(--terra-form-textarea-focus-mouse-animation-size, 0 0);
-      border-color: var(--terra-form-textarea-focus-mouse-border-color, #dedfe0);
+      border-color: var(--terra-form-textarea-focus-mouse-border-color, #0092e0);
       border-style: var(--terra-form-textarea-focus-mouse-border-style, solid);
       border-width: var(--terra-form-textarea-focus-mouse-border-width, 1px);
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow-ltr, 0 0 1px 1px #46b1eb);
+        box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow-ltr, none);
       }
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow-rtl, 0 0 1px 1px #46b1eb);
+        box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow-rtl, none);
       }
 
       opacity: var(--terra-form-textarea-focus-mouse-opacity, 1);
       outline: none;
     }
 
-    [data-whatinput='keyboard'] &:focus {
+    [data-whatintent='keyboard'] &:focus {
       background-size: var(--terra-form-textarea-focus-keyboard-animation-size, 0 0);
       border-color: var(--terra-form-textarea-focus-keyboard-border-color, #dedfe0);
       border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-focus-keyboard-border-width, 1px);
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
-      }
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
-      }
-
       opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
+    }
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    [data-whatintent='keyboard'][dir=ltr] &:focus {
+      box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 1px #fff, 0 0 1px 3px rgba(76,178,233,0.5), 0 0 8px 4px rgba(76,178,233,0.35));
+    }
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    [data-whatintent='keyboard'][dir=rtl] &:focus {
+      box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 1px #fff, 0 0 1px 3px rgba(76,178,233,0.5), 0 0 8px 4px rgba(76,178,233,0.35));
     }
   }
 
@@ -95,10 +97,11 @@
     opacity: var(--terra-form-textarea-error-opacity, 1);
 
     &[disabled] {
-      background-color: var(--terra-form-textarea-error-disabled-background-color, rgba(0, 0, 0, 0.05));
-      border-color: var(--terra-form-textarea-error-disabled-border-color, #000);
+      background-color: var(--terra-form-textarea-error-disabled-background-color, rgba(111, 116, 119, 0.05));
+      border-color: var(--terra-form-textarea-error-disabled-border-color, #dedfe0);
       border-style: var(--terra-form-textarea-error-disabled-border-style, solid);
       border-width: var(--terra-form-textarea-error-disabled-border-width, 1px);
+      color: var(--terra-form-textarea-error-disabled-color, rgba(0, 0, 0, 0.25));
       opacity: var(--terra-form-textarea-error-disabled-opacity, 1);
     }
 
@@ -127,23 +130,22 @@
       opacity: var(--terra-form-textarea-error-focus-mouse-opacity, 1);
     }
 
-    [data-whatinput='keyboard'] &:focus {
+    [data-whatintent='keyboard'] &:focus {
       background-size: var(--terra-form-textarea-error-focus-keyboard-animation-size, 0 0);
       border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #dedfe0);
       border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-error-focus-keyboard-border-width, 1px);
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
-      }
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
-      }
-
       opacity: var(--terra-form-textarea-error-focus-keyboard-opacity, 1);
+    }
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    [data-whatintent='keyboard'][dir=ltr] &:focus {
+      box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
+    }
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    [data-whatintent='keyboard'][dir=rtl] &:focus {
+      box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
     }
   }
 }
