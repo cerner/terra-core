@@ -9,15 +9,6 @@
     padding: 0;
   }
 
-  // Remove this??
-  @media screen and (min-width: 544px) {
-    .field-inline {
-      display: inline-block;
-      margin-right: var(--terra-form-field-inline-margin-right, 0.7143em);
-      vertical-align: top;
-    }
-  }
-
   .label-group {
     font-family: var(--terra-form-field-label-font-family, 'Helvetica Neue');
     font-size: var(--terra-form-field-label-font-size, 14px);
@@ -34,7 +25,7 @@
     color: var(--terra-form-field-label-color, rgba(0, 0, 0, 0.8));
     font-weight: var(--terra-form-field-label-font-weight, bold);
   }
-  
+
   .error-icon,
   .error-icon-hidden {
     display: inline-block;
