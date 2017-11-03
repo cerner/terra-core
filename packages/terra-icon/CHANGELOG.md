@@ -5,7 +5,7 @@ Unreleased
 ----------
 
 ### Changed
-* Added Reply All Icon
+* Changed Reply All Icon
 
 ### Added
 * Added Audio Icon
