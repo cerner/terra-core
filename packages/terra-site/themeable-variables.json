@@ -293,6 +293,7 @@
     "--terra-form-textarea-border-width": "1px",
     "--terra-form-textarea-color": "#000",
     "--terra-form-textarea-cursor": "auto",
+    "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "--terra-form-textarea-font-size": "1.143rem",
     "--terra-form-textarea-line-height": "1.25",
     "--terra-form-textarea-focus-opacity": "1",
@@ -334,6 +335,7 @@
     "--terra-form-textarea-error-disabled-border-color": "#dedfe0",
     "--terra-form-textarea-error-disabled-border-style": "solid",
     "--terra-form-textarea-error-disabled-border-width": "1px",
+    "--terra-form-textarea-error-disabled-color": "rgba(0, 0, 0, 0.25)",
     "--terra-form-textarea-error-disabled-opacity": "1",
     "--terra-form-textarea-error-hover-border-color": "#dedfe0",
     "--terra-form-textarea-error-hover-border-style": "solid",
@@ -351,8 +353,6 @@
     "--terra-form-textarea-error-focus-keyboard-border-width": "1px",
     "--terra-form-textarea-error-focus-keyboard-opacity": "1",
     "--terra-form-textarea-error-focus-keyboard-box-shadow-ltr": "0 0 1px 1px #46b1eb",
-    "--terra-form-textarea-error-focus-keyboard-box-shadow-rtl": "0 0 1px 1px #46b1eb",
-    "--terra-form-textarea-error-disabled-color": "rgba(0, 0, 0, 0.25)",
-    "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif"
+    "--terra-form-textarea-error-focus-keyboard-box-shadow-rtl": "0 0 1px 1px #46b1eb"
   }
 }
