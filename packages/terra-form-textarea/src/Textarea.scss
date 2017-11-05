@@ -1,6 +1,6 @@
 :local {
   .textarea {
-    background-color: var(--terra-form-textarea-background-color, #ffffff);
+    background-color: var(--terra-form-textarea-background-color, #fff);
     background-image: var(--terra-form-textarea-focus-animation-background, none);
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -45,42 +45,20 @@
     }
 
     &:focus {
-      background-size: var(--terra-form-textarea-focus-mouse-animation-size, 0 0);
-      border-color: var(--terra-form-textarea-focus-mouse-border-color, #0092e0);
-      border-style: var(--terra-form-textarea-focus-mouse-border-style, solid);
-      border-width: var(--terra-form-textarea-focus-mouse-border-width, 1px);
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow-ltr, none);
-      }
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-focus-mouse-box-shadow-rtl, none);
-      }
-
-      opacity: var(--terra-form-textarea-focus-mouse-opacity, 1);
-      outline: none;
-    }
-
-    [data-whatintent='keyboard'] &:focus {
       background-size: var(--terra-form-textarea-focus-keyboard-animation-size, 0 0);
       border-color: var(--terra-form-textarea-focus-keyboard-border-color, #dedfe0);
       border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-focus-keyboard-border-width, 1px);
       opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
-    }
 
-    /* stylelint-disable-next-line selector-max-compound-selectors */
-    [data-whatintent='keyboard'][dir=ltr] &:focus {
-      box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 1px #fff, 0 0 1px 3px rgba(76,178,233,0.5), 0 0 8px 4px rgba(76,178,233,0.35));
-    }
+      [dir=ltr] & {
+        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 1px #fff, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 8px 4px rgba(76, 178, 233, 0.35));
+      }
 
-    /* stylelint-disable-next-line selector-max-compound-selectors */
-    [data-whatintent='keyboard'][dir=rtl] &:focus {
-      box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 1px #fff, 0 0 1px 3px rgba(76,178,233,0.5), 0 0 8px 4px rgba(76,178,233,0.35));
-    }
+      [dir=rtl] & {
+        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 1px #fff, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 8px 4px rgba(76, 178, 233, 0.35));
+      }
+    }    
   }
 
   .full-size {
@@ -112,40 +90,19 @@
     }
 
     &:focus {
-      background-size: var(--terra-form-textarea-error-focus-mouse-animation-size, 0 0);
-      border-color: var(--terra-form-textarea-error-focus-mouse-border-color, #dedfe0);
-      border-style: var(--terra-form-textarea-error-focus-mouse-border-style, solid);
-      border-width: var(--terra-form-textarea-error-focus-mouse-border-width, 1px);
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-error-focus-mouse-box-shadow-ltr, 0 0 1px 1px #46b1eb);
-      }
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-error-focus-mouse-box-shadow-rtl, 0 0 1px 1px #46b1eb);
-      }
-
-      opacity: var(--terra-form-textarea-error-focus-mouse-opacity, 1);
-    }
-
-    [data-whatintent='keyboard'] &:focus {
       background-size: var(--terra-form-textarea-error-focus-keyboard-animation-size, 0 0);
       border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #dedfe0);
       border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-error-focus-keyboard-border-width, 1px);
       opacity: var(--terra-form-textarea-error-focus-keyboard-opacity, 1);
-    }
 
-    /* stylelint-disable-next-line selector-max-compound-selectors */
-    [data-whatintent='keyboard'][dir=ltr] &:focus {
-      box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
-    }
+      [dir=ltr] & {
+        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
+      }
 
-    /* stylelint-disable-next-line selector-max-compound-selectors */
-    [data-whatintent='keyboard'][dir=rtl] &:focus {
-      box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
+      [dir=rtl] & {
+        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
+      }
     }
   }
 }
