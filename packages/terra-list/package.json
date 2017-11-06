@@ -1,7 +1,7 @@
 {
   "name": "terra-list",
   "main": "lib/List.js",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "terra-list",
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^1.12.1",
+    "terra-arrange": "^1.13.0",
     "terra-base": "^2.6.1",
     "terra-icon": "^1.12.1"
   },

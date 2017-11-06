@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
-Unreleased - (<!--- Insert date using June 28, 2017 format. --->)
+Unreleased
 -----------------
+
+1.0.0 - (October 31, 2017)
+------------------
 Initial stable release

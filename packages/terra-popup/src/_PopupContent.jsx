@@ -67,6 +67,10 @@ const propTypes = {
    */
   isWidthAutomatic: PropTypes.bool,
   /**
+   * The function that should be triggered when a content resize is indicated.
+   */
+  onContentResize: PropTypes.func,
+  /**
    * The function returning the frame html reference.
    */
   refCallback: PropTypes.func,
@@ -177,6 +181,7 @@ class PopupContent extends React.Component {
       isWidthAutomatic,
       onRequestClose,
       onResize,
+      onContentResize,
       refCallback,
       releaseFocus,
       requestFocus,
@@ -217,6 +222,7 @@ class PopupContent extends React.Component {
           className={contentClassNames}
           tabIndex={isFocusedDisabled ? null : '0'}
           data-terra-popup-content
+          onContentResize={(isHeightAutomatic || isWidthAutomatic) && onContentResize}
           onEsc={onRequestClose}
           onOutsideClick={onRequestClose}
           onResize={this.handleOnResize}

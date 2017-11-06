@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 -----------------
+
+1.7.0 - (October 31, 2017)
+------------------
+### Changed
 * Allow EmbeddedContentConsumer to trigger events on its application
 
 1.6.0 - (October 6, 2017)
