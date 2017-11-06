@@ -49,18 +49,18 @@
 
     &:focus {
       background-size: var(--terra-form-textarea-focus-keyboard-animation-size, 0 0);
-      border-color: var(--terra-form-textarea-focus-keyboard-border-color, #dedfe0);
+      border-color: var(--terra-form-textarea-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-focus-keyboard-border-width, 1px);
       opacity: var(--terra-form-textarea-focus-keyboard-opacity, 1);
       outline: none;
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 1px #fff, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 8px 4px rgba(76, 178, 233, 0.35));
+        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 1px #fff, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 8px 4px rgba(76, 178, 233, 0.35));
+        box-shadow: var(--terra-form-textarea-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
       }
     }    
   }
@@ -95,17 +95,17 @@
 
     &:focus {
       background-size: var(--terra-form-textarea-error-focus-keyboard-animation-size, 0 0);
-      border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #dedfe0);
+      border-color: var(--terra-form-textarea-error-focus-keyboard-border-color, #4cb2e9);
       border-style: var(--terra-form-textarea-error-focus-keyboard-border-style, solid);
       border-width: var(--terra-form-textarea-error-focus-keyboard-border-width, 1px);
       opacity: var(--terra-form-textarea-error-focus-keyboard-opacity, 1);
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 1px 1px #46b1eb);
+        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 1px 1px #46b1eb);
+        box-shadow: var(--terra-form-textarea-error-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
       }
     }
   }
