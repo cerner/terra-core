@@ -8,6 +8,7 @@ exports[`should render a TextArea when all the possible props are passed into it
   disabled={false}
   name="description"
   onChange={[Function]}
+  onFocus={[Function]}
   required={true}
   rows={5}
 />
@@ -19,6 +20,7 @@ exports[`should render a default TextArea component 1`] = `
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={2}
 />
@@ -30,6 +32,7 @@ exports[`should render a full size textbox appropriately 1`] = `
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
 />
 `;
@@ -40,6 +43,7 @@ exports[`should render a large textbox appropriately 1`] = `
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={10}
 />
@@ -51,6 +55,7 @@ exports[`should render a medium textbox appropriately 1`] = `
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={5}
 />
@@ -62,6 +67,7 @@ exports[`should render a small textbox appropriately 1`] = `
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={2}
 />
@@ -84,6 +90,7 @@ exports[`should render as controlled when just a default value is passed into th
     disabled={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     required={false}
     rows={2}
     value="foo"
@@ -108,6 +115,7 @@ exports[`should render as uncontrolled when just a default value is passed into 
     disabled={false}
     name={null}
     onChange={[Function]}
+    onFocus={[Function]}
     required={false}
     rows={2}
   />
@@ -132,6 +140,7 @@ exports[`should set the rows attribute appropriate when it is passed into the te
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={7}
 />
@@ -143,6 +152,7 @@ exports[`should set the textarea as auto resizable when isAutoResizable is passe
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={2}
 />
@@ -154,6 +164,7 @@ exports[`should set the textarea to disabled when passed into the component 1`] 
   disabled={true}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={2}
 />
@@ -165,6 +176,7 @@ exports[`should set the textarea to invalid when isInvalid is passed into the co
   disabled={false}
   name={null}
   onChange={[Function]}
+  onFocus={[Function]}
   required={false}
   rows={2}
 />

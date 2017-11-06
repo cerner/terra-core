@@ -80,18 +80,23 @@ class Textarea extends React.Component {
     super(props);
 
     this.onChange = this.onChange.bind(this);
+    this.onFocus = this.onFocus.bind(this);
   }
 
   componentDidMount() {
     if (this.props.isAutoResizable) {
-      // To Properly resize the textarea vertically, we need to record the initial height
-      // to help with the resizing calculation.
-      const savedValue = this.textarea.value;
-      this.textarea.value = '';
-      this.textarea.baseScrollHeight = this.textarea.scrollHeight;
-      this.textarea.value = savedValue;
-
+      this.setBaseScrollHeight();
       this.resizeTextarea();
+    }
+  }
+
+  onFocus(event) {
+    if (this.props.isAutoResizable) {
+      this.setBaseScrollHeight();
+    }
+
+    if (this.props.onFocus) {
+      this.props.onFocus(event);
     }
   }
 
@@ -102,6 +107,21 @@ class Textarea extends React.Component {
 
     if (this.props.onChange) {
       this.props.onChange(event);
+    }
+  }
+
+  setBaseScrollHeight() {
+    // To Properly resize the textarea vertically, we need to record the initial height
+    // to help with the resizing calculation.
+    const savedValue = this.textarea.value;
+    this.textarea.value = '';
+
+    if (this.textarea.baseScrollHeight !== this.textarea.scrollHeight) {
+      this.textarea.baseScrollHeight = this.textarea.scrollHeight;
+      this.textarea.value = savedValue;
+      this.resizeTextarea();
+    } else {
+      this.textarea.value = savedValue;
     }
   }
 
@@ -153,7 +173,7 @@ class Textarea extends React.Component {
       <textarea
         ref={(textarea) => { this.textarea = textarea; }}
         name={name}
-        onFocus={this.props.onFocus}
+        onFocus={this.onFocus}
         onChange={this.onChange}
         required={required}
         rows={textareaRows}
