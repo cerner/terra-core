@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Menu from 'terra-menu';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './TabContainer.scss';
@@ -37,23 +38,45 @@ const defaultProps = {
   isSelected: false,
 };
 
-const Tab = ({ isSelected, icon, label, customDisplay, children, ...customProps }) => {
+const contextTypes = {
+  isCollapsedTab: PropTypes.bool,
+};
+
+const Tab = ({
+  isSelected,
+  icon,
+  label,
+  customDisplay,
+  children,
+  ...customProps
+}, {
+  isCollapsedTab,
+}) => {
   const attributes = Object.assign({}, customProps);
   const tabClassNames = cx([
     'tab',
     attributes.className,
   ]);
   const tabText = <span>{label}</span>;
-  return (
-    <div {...attributes} className={tabClassNames}>
-      {customDisplay}
-      {customDisplay ? null : icon}
-      {customDisplay ? null : tabText}
-    </div>
-  );
+
+  let tab;
+  if (isCollapsedTab) {
+    tab = (<Menu.Item {...attributes} text={label} isSelected={isSelected} />);
+  } else {
+    tab = (
+      <div {...attributes} className={tabClassNames}>
+        {customDisplay}
+        {customDisplay ? null : icon}
+        {customDisplay ? null : tabText}
+      </div>
+    );
+  }
+
+  return tab;
 };
 
 Tab.propTypes = propTypes;
 Tab.defaultProps = defaultProps;
+Tab.contextTypes = contextTypes;
 
 export default Tab;

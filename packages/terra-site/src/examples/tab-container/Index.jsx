@@ -20,7 +20,6 @@ const TabContainerExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TabContainerSrc} componentName="TabContainer" />
-    <PropsTable id="tab-props" src={TabSrc} componentName="Tab" />
     <h2>Modular Tabs</h2>
     <ModularTabContainer />
     <h2>Structural Tabs</h2>

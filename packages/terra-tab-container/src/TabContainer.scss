@@ -1,5 +1,33 @@
 :local {
   .tab-container {
+    width: 100%;
+  }
 
+  .tab-panel {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .tab,
+  .tab-menu {
+    border-color: black;
+    border-width: 1px;
+    cursor: pointer;
+    flex: 1 1 auto;
+    max-width: 100px;
+    min-width: 40px;
+    padding-left: 0.714rem;
+  }
+
+  .tab > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
   }
 }

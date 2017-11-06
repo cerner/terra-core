@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ResizeObserver from 'resize-observer-polyfill';
-import Menu from 'terra-menu';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import SelectableUtils from './SelectableUtils';
 import Tab from './Tab';
+import TabPanel from './_TabPanel';
 import styles from './TabContainer.scss';
 
 const cx = classNames.bind(styles);
@@ -35,70 +34,11 @@ const defaultProps = {
 class SelectableTabContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.setTabPanelContainer = this.setTabPanelContainer.bind(this);
-    this.setMenuToggle = this.setMenuToggle.bind(this);
-    this.handleResize = this.handleResize.bind(this);
     this.wrapTabOnClick = this.wrapTabOnClick.bind(this);
     this.wrapTabOnKeyDown = this.wrapTabOnKeyDown.bind(this);
-    this.state = {
-      hiddenStartIndex: -1,
-      menuHidden: false,
-      menuOpen: false,
-    };
   }
 
-  componentDidMount() {
-    this.resizeObserver = new ResizeObserver((entries) => {
-      this.handleResize(entries[0].contentRect.width);
-    });
-    this.resizeObserver.observe(this.tabPanelContainer);
-  }
-
-  componentWillUnmount() {
-    this.resizeObserver.disconnect(this.tabPanelContainer);
-    this.tabPanelContainer = null;
-  }
-
-  setTabPanelContainer(node) {
-    if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
-    this.tabPanelContainer = node;
-  }
-
-  setMenuToggle(node) {
-    if (node === null) { return; }
-    this.menuToggle = node;
-  }
-
-  handleResize(width) {
-    let menuHidden = true;
-
-    const tabElement = this.tabPanelContainer.children[0];
-    const minWidth = window.getComputedStyle(tabElement, null).getPropertyValue('min-width');
-
-    // Calculate how many full tabs can render at their minimum widths given the width of the container.
-    let newHideIndex = Math.floor(width / minWidth);
-
-    // If all the tabs can't fit recalculate hide index with the width of the menu toggle removed from available space.
-    if (this.props.children.length > newHideIndex) {
-      const menuToggleWidth = this.menuButton.getBoundingClientRect().width;
-      const availableWidth = width - menuToggleWidth;
-
-      newHideIndex = Math.floor(availableWidth / minWidth);
-
-      // If all the the tabs can fit without the menu present, hide the menu
-      if (this.props.children.length <= newHideIndex) {
-        menuHidden = true;
-      } else {
-        menuHidden = false;
-      }
-    }
-
-    if (this.state.hideIndex !== newHideIndex) {
-      this.setState({ menuOpen: false, hideIndex: newHideIndex, menuHidden });
-    }
-  }
-
-  wrapTabOnKeyDown(tab) {
+  wrapTabOnKeyDown(tab, index) {
     return (event) => {
       if (tab.props.onKeyDown) {
         tab.props.onKeyDown(event);
@@ -134,28 +74,21 @@ class SelectableTabContainer extends React.Component {
 
     let content = null;
     const clonedTabs = [];
-    React.Children.forEach(children, (child) => {
+    React.Children.forEach(children, (child, index) => {
       if (child.props.isSelected) {
         content = child.props.children;
       }
       clonedTabs.push(React.cloneElement(child, {
         onClick: this.wrapTabOnClick(child),
-        onKeyDown: this.wrapTabOnKeyDown(child),
+        onKeyDown: this.wrapTabOnKeyDown(child, index),
       }));
     });
 
-    const menu = this.state.menuHidden ? null : (
-      <div ref={this.setMenuToggle}>
-        Menu
-      </div>
-    );
-
     return (
       <div className={tabContainerClassNames}>
-        <div className={cx('tab-panel')} ref={this.setTabPanelContainer}>
+        <TabPanel>
           {clonedTabs}
-          {menu}
-        </div>
+        </TabPanel>
         <div className={cx('tab-content')}>
           {content}
         </div>
