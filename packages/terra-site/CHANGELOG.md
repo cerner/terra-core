@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Add terra-form-field components
+* Add terra-mock-theme styles
 
 1.16.0 - (October 31, 2017)
 ------------------
