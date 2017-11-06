@@ -89,7 +89,6 @@ class DatePickerInput extends React.Component {
 
     this.handleOnButtonClick = this.handleOnButtonClick.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
-    this.handleOnInputFocus = this.handleOnInputFocus.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -121,12 +120,6 @@ class DatePickerInput extends React.Component {
 
     if (this.props.onKeyDown) {
       this.props.onKeyDown(event);
-    }
-  }
-
-  handleOnInputFocus(event) {
-    if (this.props.onInputFocus) {
-      this.props.onInputFocus(event);
     }
   }
 
@@ -173,7 +166,7 @@ class DatePickerInput extends React.Component {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          onFocus={this.handleOnInputFocus}
+          onFocus={onInputFocus}
         />
         <Button
           className={styles.button}
