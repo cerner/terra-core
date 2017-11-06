@@ -246,6 +246,17 @@
     "--terra-slide-panel-panel-width-small": "320px",
     "--terra-slide-panel-panel-width-large": "60%"
   },
+  "Spacer": {
+    "--terra-spacer-margin-left-small-minus-2": "0.214rem",
+    "--terra-spacer-margin-left-small-minus-1": "0.357rem",
+    "--terra-spacer-margin-left-small": "0.5rem",
+    "--terra-spacer-margin-left-medium": "0.714rem",
+    "--terra-spacer-margin-left-large": "0.857rem",
+    "--terra-spacer-margin-left-large-plus-1": "1.071rem",
+    "--terra-spacer-margin-left-large-plus-2": "1.429rem",
+    "--terra-spacer-margin-left-large-plus-3": "2.143rem",
+    "--terra-spacer-margin-left-large-plus-4": "3.571rem"
+  },
   "Table": {
     "--terra-table-background-color": "#fff",
     "--terra-table-border": "0",

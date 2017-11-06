@@ -1,0 +1,48 @@
+@import './variables';
+@import './mixins';
+
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  // constant value that cannot be themed
+  .margin-none {
+    margin: 0;
+  }
+
+  // themable values
+  .margin-left-small-minus-2 {
+    margin-left: var(--terra-spacer-margin-left-small-minus-2, 0.214rem); // 3px
+  }
+
+  .margin-left-small-minus-1 {
+    margin-left: var(--terra-spacer-margin-left-small-minus-1, 0.357rem); // 5px
+  }
+
+  .margin-left-small {
+    margin-left: var(--terra-spacer-margin-left-small, 0.5rem); // 7px
+  }
+
+  .margin-left-medium {
+    margin-left: var(--terra-spacer-margin-left-medium, 0.714rem); // 10px
+  }
+
+  .margin-left-large {
+    margin-left: var(--terra-spacer-margin-left-large, 0.857rem); // 12px
+  }
+
+  .margin-left-large-plus-1 {
+    margin-left: var(--terra-spacer-margin-left-large-plus-1, 1.071rem); // 15px
+  }
+
+  .margin-left-large-plus-2 {
+    margin-left: var(--terra-spacer-margin-left-large-plus-2, 1.429rem); // 20px
+  }
+
+  .margin-left-large-plus-3 {
+    margin-left: var(--terra-spacer-margin-left-large-plus-3, 2.143rem); // 30px
+  }
+
+  .margin-left-large-plus-4 {
+    margin-left: var(--terra-spacer-margin-left-large-plus-4, 3.571rem); // 50px
+  }
+  /* stylelint-enable */
+}
