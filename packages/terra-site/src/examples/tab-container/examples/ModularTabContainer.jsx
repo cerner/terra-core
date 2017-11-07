@@ -5,7 +5,7 @@ import TabContainer from 'terra-tab-container';
 
 const ModularTabContainerExample = () => {
   const labelTab = (
-    <TabContainer.Tab label="Tab with label" isSelected key="LabelTab">
+    <TabContainer.Tab label="Tab with label" key="LabelTab">
       <p>
         Content for the label tab.
       </p>
@@ -102,7 +102,7 @@ const ModularTabContainerExample = () => {
 
   return (
     <div>
-      <TabContainer variant="modular">
+      <TabContainer variant="modular" defaultActiveKey="LabelTab">
         {labelTab}
         {iconTab}
         {customTab}

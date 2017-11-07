@@ -14,8 +14,6 @@
 
   .tab,
   .tab-menu {
-    border-color: black;
-    border-width: 1px;
     cursor: pointer;
     flex: 1 1 auto;
     max-width: 100px;
@@ -23,7 +21,7 @@
     padding-left: 0.714rem;
   }
 
-  .tab > span {
+  .tab {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

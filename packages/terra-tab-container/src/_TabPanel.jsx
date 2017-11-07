@@ -8,6 +8,7 @@ import styles from './TabContainer.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  activeKey: PropTypes.string,
   children: PropTypes.node,
 };
 
@@ -20,11 +21,14 @@ class TabPanel extends React.Component {
     this.state = {
       hiddenStartIndex: -1,
       menuHidden: false,
+      isCalculating: true,
     };
   }
 
   componentDidMount() {
     this.resizeObserver = new ResizeObserver((entries) => {
+      // Resetting the state so that all elements will be rendered face-up for width calculations
+      this.setState({ hiddenStartIndex: -1, menuHidden: false, isCalculating: true });
       this.handleResize(entries[0].contentRect.width);
     });
     this.resizeObserver.observe(this.tabPanelContainer);
@@ -46,49 +50,46 @@ class TabPanel extends React.Component {
   }
 
   handleResize(width) {
-    let menuHidden = true;
+    const childCount = React.Children.count(this.props.children);
 
     const tabElement = this.tabPanelContainer.children[0];
     const minWidth = parseInt(window.getComputedStyle(tabElement, null).getPropertyValue('min-width'), 10);
 
-    // Calculate how many full tabs can render at their minimum widths given the width of the container.
+    // Calculate how many tabs can render at their minimum widths given the width of the container.
     let newHideIndex = Math.floor(width / minWidth);
 
-    // If all the tabs can't fit recalculate hide index with the width of the menu toggle removed from available space.
-    if (this.props.children.length > newHideIndex) {
+    // If we can't fit all the tabs recalculate hide index with the menu present
+    if (childCount > newHideIndex) {
       const menuToggleWidth = this.menuToggle.getBoundingClientRect().width;
       const availableWidth = width - menuToggleWidth;
 
       newHideIndex = Math.floor(availableWidth / minWidth);
-
-      // If all the the tabs can fit without the menu present, hide the menu
-      if (this.props.children.length <= newHideIndex) {
-        menuHidden = true;
-      } else {
-        menuHidden = false;
-      }
     }
 
     if (this.state.hideIndex !== newHideIndex) {
-      this.setState({ hiddenStartIndex: newHideIndex, menuHidden });
+      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: newHideIndex >= childCount, isCalculating: false });
     }
   }
 
   render() {
-    const visibleChildren = React.Children.toArray(this.props.children);
-    let hiddenChildren = null;
-    if (this.state.hiddenStartIndex >= 0) {
-      hiddenChildren = visibleChildren.splice(this.state.hiddenStartIndex);
-    }
+    const visibleChildren = [];
+    const hiddenChildren = [];
+    React.Children.forEach(this.props.children, (child, index) => {
+      if (index < this.state.hiddenStartIndex) {
+        visibleChildren.push(child);
+      } else {
+        hiddenChildren.push(child);
+      }
+    });
 
     const menu = this.state.menuHidden ? null : (
-      <Menu refCallback={this.setMenuToggle}>
+      <Menu refCallback={this.setMenuToggle} activeKey={this.props.activeKey}>
         {hiddenChildren}
       </Menu>
     );
 
     return (
-      <div className={cx('tab-panel')} ref={this.setTabPanelContainer}>
+      <div className={cx(['tab-panel', { 'is-calculating': this.state.isCalculating }])} ref={this.setTabPanelContainer}>
         {visibleChildren}
         {menu}
       </div>

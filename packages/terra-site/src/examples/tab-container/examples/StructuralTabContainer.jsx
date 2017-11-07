@@ -5,7 +5,7 @@ import TabContainer from 'terra-tab-container';
 
 const StructuralTabContainerExample = () => {
   const labelTab = (
-    <TabContainer.Tab label="Tab with label" isSelected key="LabelTab">
+    <TabContainer.Tab label="Tab with label" key="LabelTab">
       <p>
         Content for the label tab.
       </p>
@@ -38,7 +38,7 @@ const StructuralTabContainerExample = () => {
 
   return (
     <div>
-      <TabContainer variant="structural">
+      <TabContainer variant="structural" defaultActiveKey="LabelTab">
         {labelTab}
         {iconTab}
         {customTab}

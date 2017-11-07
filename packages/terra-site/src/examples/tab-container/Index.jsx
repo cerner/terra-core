@@ -14,16 +14,20 @@ import TabSrc from '!raw-loader!terra-tab-container/src/Tab';
 // Example Files
 import StructuralTabContainer from './examples/StructuralTabContainer';
 import ModularTabContainer from './examples/ModularTabContainer';
+import SelectableTabContainer from './examples/SelectableTabContainer';
 
 const TabContainerExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TabContainerSrc} componentName="TabContainer" />
+    <PropsTable id="tab-props" src={TabSrc} componentName="TabContainer.Tab" />
     <h2>Modular Tabs</h2>
     <ModularTabContainer />
     <h2>Structural Tabs</h2>
     <StructuralTabContainer />
+    <h2>Controlled Tabs</h2>
+    <SelectableTabContainer />
   </div>
 );
 

@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Menu from 'terra-menu';
 import styles from './TabContainer.scss';
-import SelectableUtils from './SelectableUtils';
+import TabUtils from './TabUtils';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  activeKey: PropTypes.string,
   children: PropTypes.node,
   refCallback: PropTypes.func,
 };
@@ -55,7 +56,7 @@ class TabMenu extends React.Component {
   }
 
   handleOnKeyDown(event) {
-    if (event.nativeEvent.keyCode === SelectableUtils.KEYCODES.ENTER) {
+    if (event.nativeEvent.keyCode === TabUtils.KEYCODES.ENTER) {
       this.setState({ isOpen: true });
     }
   }
@@ -75,33 +76,35 @@ class TabMenu extends React.Component {
 
     const menuItems = [];
     React.Children.forEach(this.props.children, (child) => {
-      menuItems.push(React.cloneElement(child, { onClick: this.wrapOnClick(child) }));
+      const { childLabel, customDisplay, icon, ...otherProps } = child.props;
+      menuItems.push((
+        <Menu.Item
+          {...otherProps}
+          text={child.props.label}
+          onClick={this.wrapOnClick(child)}
+          isSelected={this.props.activeKey === child.key}
+          isSelectable
+          key={child.key}
+        />
+      ));
     });
-    if (this.props.children) {
-      menu = (
-        <div className={cx(['tab-menu'])}>
-          <Menu
-            onRequestClose={this.handleOnRequestClose}
-            targetRef={this.getTargetRef}
-            isOpen={this.state.isOpen}
-          >
-            {menuItems}
-          </Menu>
-          <div role="button" ref={this.setTargetRef} onClick={this.handleOnClick} onKeyDown={this.handleOnKeyDown}>
-            Menu
-          </div>
-        </div>
-      );
-    } else {
-      // This should only occur on initial load when all tabs are displayed as well as the menu in order to get sizing info
-      menu = (
-        <div className={cx(['tab-menu'])} ref={this.setTargetRef}>
+
+    return (
+      <div className={cx(['tab-menu'])}>
+        <Menu
+          onRequestClose={this.handleOnRequestClose}
+          targetRef={this.getTargetRef}
+          isOpen={this.state.isOpen}
+        >
+          {menuItems}
+        </Menu>
+        {/* eslint-disable jsx-a11y/no-static-element-interactions */}
+        <div role="button" ref={this.setTargetRef} onClick={this.handleOnClick} onKeyDown={this.handleOnKeyDown}>
           Menu
         </div>
-      );
-    }
-
-    return menu;
+        {/* eslint-enable jsx-ally/no-static-element-interactions */}
+      </div>
+    );
   }
 }
 

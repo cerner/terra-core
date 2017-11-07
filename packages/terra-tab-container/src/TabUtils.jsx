@@ -7,23 +7,10 @@ const KEYCODES = {
   RIGHT_ARROW: 39,
 };
 
-const initialSelectedKey = (children) => {
-  let selectedKey = null;
-
-  React.Children.forEach(children, (child) => {
-    if (child.props.isSelected) {
-      selectedKey = child.key;
-    }
-  });
-
-  return selectedKey;
-};
-
 const shouldHandleSelection = (currentSelectedKey, newSelectedKey) => newSelectedKey !== currentSelectedKey;
 
 const SelectableUtils = {
   KEYCODES,
-  initialSelectedKey,
   shouldHandleSelection,
 };
 
