@@ -91,7 +91,7 @@ class FieldExamples extends React.Component {
         <Field
           id="inline-1"
           style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-          label="Field Label Spacing Proof"
+          label="Field Label - Spacing POC"
           error="Error Message"
           isInline
           isInvalid={this.state.isInvalid}
@@ -103,7 +103,7 @@ class FieldExamples extends React.Component {
         <Field
           id="inline-2"
           style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-          label="Field Label Spacing Proof"
+          label="Field Label - Spacing POC"
           error="Error Message"
           isInline
           isInvalid={this.state.isInvalid}
@@ -116,7 +116,7 @@ class FieldExamples extends React.Component {
         <Field
           id="inline-3"
           style={{ border: 'dashed 1px lightGrey', padding: '10px' }}
-          label="Field Label Spacing Proof"
+          label="Field Label - Spacing POC"
           error="Error Message"
           isInline
           isInvalid={this.state.isInvalid}
