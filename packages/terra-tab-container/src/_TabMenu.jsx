@@ -13,10 +13,6 @@ const propTypes = {
   refCallback: PropTypes.func,
 };
 
-const childContextTypes = {
-  isCollapsedTab: PropTypes.bool,
-};
-
 class TabMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -31,8 +27,8 @@ class TabMenu extends React.Component {
     };
   }
 
-  getChildContext() {
-    return { isCollapsedTab: true };
+  componentDidMount() {
+    this.targetWidth = this.targetRef.clientWidth;
   }
 
   getTargetRef() {
@@ -72,17 +68,23 @@ class TabMenu extends React.Component {
   }
 
   render() {
-    let menu;
-
     const menuItems = [];
+    let menuToggleText = 'Menu';
+
     React.Children.forEach(this.props.children, (child) => {
       const { childLabel, customDisplay, icon, ...otherProps } = child.props;
+      let isSelected = false;
+
+      if (this.props.activeKey === child.key) {
+        menuToggleText = child.props.label;
+        isSelected = true;
+      }
       menuItems.push((
         <Menu.Item
           {...otherProps}
           text={child.props.label}
           onClick={this.wrapOnClick(child)}
-          isSelected={this.props.activeKey === child.key}
+          isSelected={isSelected}
           isSelectable
           key={child.key}
         />
@@ -99,8 +101,8 @@ class TabMenu extends React.Component {
           {menuItems}
         </Menu>
         {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-        <div role="button" ref={this.setTargetRef} onClick={this.handleOnClick} onKeyDown={this.handleOnKeyDown}>
-          Menu
+        <div role="button" ref={this.setTargetRef} onClick={this.handleOnClick} onKeyDown={this.handleOnKeyDown} style={{ width: this.targetWidth }}>
+          {menuToggleText}
         </div>
         {/* eslint-enable jsx-ally/no-static-element-interactions */}
       </div>
@@ -109,6 +111,5 @@ class TabMenu extends React.Component {
 }
 
 TabMenu.propTypes = propTypes;
-TabMenu.childContextTypes = childContextTypes;
 
 export default TabMenu;
