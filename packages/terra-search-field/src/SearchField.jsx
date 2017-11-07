@@ -11,6 +11,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * A boolean that when true will disable the auto-search
+   */
+  disableAutoSearch: PropTypes.bool,
+
+  /**
    * Placeholder text to show while the search field is empty.
    */
   placeholder: PropTypes.string,
@@ -37,6 +42,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  disableAutoSearch: false,
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
@@ -63,7 +69,7 @@ class SearchField extends React.Component {
   handleTextChange(event) {
     this.setState({ searchText: event.target.value });
 
-    if (!this.searchTimeout) {
+    if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
     }
   }
@@ -86,7 +92,7 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, disableAutoSearch, ...customProps } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
       customProps.className,
