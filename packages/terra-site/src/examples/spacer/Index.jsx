@@ -17,7 +17,10 @@ const SpacerExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={SpacerSrc} />
-    <Spacer marginLeft="large+2" />
+    <br />
+    <h2 id="default">Spacer</h2>
+    <br />
+    <Spacer />
   </div>
 );
 
