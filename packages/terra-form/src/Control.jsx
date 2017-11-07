@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * The input type.
    */
-  type: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
   /**
    * The checked property of the Input element. Use this to generate a controlled Control Element.
    */
@@ -57,7 +57,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  type: 'checkbox',
+  type: null,
   checked: undefined,
   defaultChecked: undefined,
   id: undefined,
