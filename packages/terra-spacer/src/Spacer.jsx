@@ -48,6 +48,10 @@ const propTypes = {
    * Sets the display to be inline-block.
    */
   isInlineBlock: PropTypes.bool,
+  /**
+   * Object used to determine at what window size props should be active. e.g { 768: { marginBottom: 'small-2' }}
+   */
+  bps: PropTypes.object,
 };
 
 const defaultProps = {
@@ -60,7 +64,7 @@ const defaultProps = {
   paddingBottom: 'none',
   paddingLeft: 'none',
   paddingRight: 'none',
-  isInlineBlock: 'false',
+  isInlineBlock: false,
 };
 
 const Spacer = ({
@@ -74,6 +78,7 @@ const Spacer = ({
   paddingRight,
   isInlineBlock,
   children,
+  bps,
   ...customProps
  }) => {
   const SpacerClassNames = cx([

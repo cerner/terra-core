@@ -11,6 +11,7 @@ import SpacerSrc from '!raw-loader!terra-spacer/src/Spacer';
 
 // Example Files
 import Spacer from './SpacerExample';
+import SpacerResponsive from './SpacerResponsiveExample';
 
 const SpacerExamples = () => (
   <div>
@@ -21,6 +22,10 @@ const SpacerExamples = () => (
     <h2 id="default">Spacer</h2>
     <br />
     <Spacer />
+    <br />
+    <h2 id="default">Spacer Responsive Example</h2>
+    <br />
+    <SpacerResponsive />
   </div>
 );
 
