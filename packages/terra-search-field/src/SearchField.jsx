@@ -9,6 +9,10 @@ import styles from './SearchField.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
   /**
    * A boolean that when true will disable the auto-search
@@ -55,6 +59,7 @@ class SearchField extends React.Component {
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
 
     this.searchTimeout = null;
     this.state = {
@@ -71,6 +76,12 @@ class SearchField extends React.Component {
 
     if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  handleKeyDown(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.handleSearch();
     }
   }
 
@@ -106,6 +117,7 @@ class SearchField extends React.Component {
           placeholder={placeholder}
           value={this.state.searchText}
           onChange={this.handleTextChange}
+          onKeyDown={this.handleKeyDown}
         />
         <Button
           className={cx('button')}
