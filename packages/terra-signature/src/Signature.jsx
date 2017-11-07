@@ -38,7 +38,6 @@ const defaultProps = {
 };
 
 class Signature extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -94,13 +93,13 @@ class Signature extends React.Component {
       this.canvas.removeEventListener('touchstart', this.mouseDown);
       this.canvas.removeEventListener('touchmove', this.mouseXY);
       this.canvas.removeEventListener('touchend', this.mouseUp);
-      window.removeEventListener('touchleave', this.mouseLeave);
-      window.removeEventListener('touchcancel', this.mouseUp);
+      document.body.removeEventListener('touchleave', this.mouseLeave);
+      document.body.removeEventListener('touchcancel', this.mouseUp);
     } else {
       this.canvas.removeEventListener('mousedown', this.mouseDown);
       this.canvas.removeEventListener('mousemove', this.mouseXY);
-      window.removeEventListener('mouseleave', this.mouseLeave);
-      window.removeEventListener('mouseup', this.mouseUp);
+      document.body.removeEventListener('mouseleave', this.mouseLeave);
+      document.body.removeEventListener('mouseup', this.mouseUp);
     }
 
     window.removeEventListener('resize', this.updateDimensions);
@@ -110,7 +109,7 @@ class Signature extends React.Component {
     if ('button' in event && event.button !== MOUSECODES.LEFTCLICK) {
       return;
     }
-    this.setState({ painting: true });
+    this.setState({ lastLineSegments: [], painting: true });
 
     this.canvasRect = this.canvas.getBoundingClientRect();
 
@@ -123,7 +122,7 @@ class Signature extends React.Component {
     this.setState({ painting: false });
 
     if (this.props.onChange) {
-      this.props.onChange(event, this.state.lineSegments, this.state.lineSegments[this.state.lineSegments.length - 1]);
+      this.props.onChange(event, this.state.lineSegments, this.state.lastLineSegments);
     }
   }
 
@@ -139,7 +138,7 @@ class Signature extends React.Component {
     if (this.state.painting) {
       this.setState({ painting: false });
       if (this.props.onChange) {
-        this.props.onChange(event, this.state.lineSegments, this.state.lineSegments[this.state.lineSegments.length - 1]);
+        this.props.onChange(event, this.state.lineSegments, this.state.lastLineSegments);
       }
     }
   }
@@ -155,7 +154,10 @@ class Signature extends React.Component {
     }
 
     // Record new line segment
-    this.setState({ lineSegments: [...this.state.lineSegments, newSegment] });
+    this.setState({
+      lineSegments: [...this.state.lineSegments, newSegment],
+      lastLineSegments: [...this.state.lastLineSegments, newSegment],
+    });
   }
 
 
