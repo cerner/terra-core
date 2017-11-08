@@ -14,6 +14,7 @@
     font-family: inherit;
     font-size: var(--terra-form-textarea-font-size, 1.143rem);
     line-height: var(--terra-form-textarea-line-height, 1.25);
+    max-width: 100%;
     opacity: var(--terra-form-textarea-focus-opacity, 1);
     padding-bottom: var(--terra-form-textarea-padding-bottom, 0.286rem);
     padding-left: var(--terra-form-textarea-padding-left, 0.286rem);
