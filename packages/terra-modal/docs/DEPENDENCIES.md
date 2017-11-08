@@ -12,7 +12,7 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
+| terra-icon | ^1.13.0 | ^15.4.2 | terra-icon |
 | terra-props-table | ^1.10.1 | ^15.4.2 | terra-props-table |
 
 ## peerDependencies
