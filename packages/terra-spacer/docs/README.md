@@ -14,43 +14,24 @@ This component is needed to provide a scalar spacing between various components 
 import React from 'react';
 import Spacer from 'terra-spacer';
 
-// small view ports
+// Default
+<Spacer >
+    ...
+</Spacer>
+
+// Small view ports
 <Spacer marginTop="small" marginLeft="small-1" paddingTop="small-2">
-  <Table isStriped={false}>
-    <Table.Header>
-      <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
-    </Table.Header>
-    <Table.Rows>
-      <Table.Row key="PERSON_0">
-        <Table.Cell content="John Smith" key="NAME" />
-      </Table.Row>
-  </Table>
+  <Image src="someImageSource" alt="example image" />
 <Spacer/>
 
-// medium view ports
+// Medium view ports
 <Spacer marginLeft="medium" marginRight="medium">
-  <Table isStriped={false}>
-    <Table.Header>
-      <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
-    </Table.Header>
-    <Table.Rows>
-      <Table.Row key="PERSON_0">
-        <Table.Cell content="John Smith" key="NAME" />
-      </Table.Row>
-  </Table>
+  <Image src="someImageSource" alt="example image" />
 <Spacer/>
 
-// large and very large view ports
+// Large and very large view ports
 <Spacer paddingTop="large" paddingBottom="large+1" paddingLeft="large+2" marginLeft="large+4" marginRight="large+3">
-  <Table isStriped={false}>
-    <Table.Header>
-      <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
-    </Table.Header>
-    <Table.Rows>
-      <Table.Row key="PERSON_0">
-        <Table.Cell content="John Smith" key="NAME" />
-      </Table.Row>
-  </Table>
+  <Image src="someImageSource" alt="example image" />
 <Spacer/>
 ```
 

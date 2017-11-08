@@ -25,6 +25,8 @@ const SpacerExamples = () => (
     <br />
     <h2 id="default">Spacer Responsive Example</h2>
     <br />
+    <h4>Resize the browser to get the images more closer</h4>
+    <br />
     <SpacerResponsive />
   </div>
 );
