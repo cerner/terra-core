@@ -3,10 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+0.5.0 - (November 7, 2017)
+------------------
 ### Changed
 * Removing event listeners from the right element during component unmount
 * Fix onChange, it was returning the last segment instead of the array of the whole last line segments
-
 
 0.4.0 - (October 24, 2017)
 ------------------

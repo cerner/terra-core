@@ -7,6 +7,11 @@ Unreleased
 * Add terra-form-textarea components
 * Add terra-mock-theme styles
 
+1.17.0 - (November 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.16.0 - (October 31, 2017)
 ------------------
 ### Changed
