@@ -28,7 +28,9 @@ class TabPanel extends React.Component {
   componentDidMount() {
     this.resizeObserver = new ResizeObserver((entries) => {
       // Resetting the state so that all elements will be rendered face-up for width calculations
-      this.setState({ hiddenStartIndex: -1, menuHidden: false, isCalculating: true });
+      if (this.state.hiddenStartIndex !== -1 || this.state.menuHidden || !this.state.isCalculating) {
+        this.setState({ hiddenStartIndex: -1, menuHidden: false, isCalculating: true });
+      }
       this.handleResize(entries[0].contentRect.width);
     });
     this.resizeObserver.observe(this.tabPanelContainer);
@@ -51,7 +53,9 @@ class TabPanel extends React.Component {
 
   handleResize(width) {
     const childCount = React.Children.count(this.props.children);
+    let availableWidth = width;
 
+    // All tabs will have the same min-width so we only need to get the first one
     const tabElement = this.tabPanelContainer.children[0];
     const minWidth = parseInt(window.getComputedStyle(tabElement, null).getPropertyValue('min-width'), 10);
 
@@ -61,21 +65,33 @@ class TabPanel extends React.Component {
     // If we can't fit all the tabs recalculate hide index with the menu present
     if (childCount > newHideIndex) {
       const menuToggleWidth = this.menuToggle.getBoundingClientRect().width;
-      const availableWidth = width - menuToggleWidth;
+      availableWidth = width - menuToggleWidth;
 
       newHideIndex = Math.floor(availableWidth / minWidth);
     }
 
-    if (this.state.hideIndex !== newHideIndex) {
-      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: newHideIndex >= childCount, isCalculating: false });
+    let isLabelTruncated = false;
+    let calcWidth = 0;
+    for (let i = 0; i < this.props.children.length; i += 1) {
+      const tab = this.tabPanelContainer.children[i];
+      calcWidth += tab.getBoundingClientRect().width;
+      if (calcWidth > availableWidth) {
+        isLabelTruncated = true;
+        break;
+      }
+    }
+
+    if (this.state.hiddenStartIndex !== newHideIndex || this.state.isLabelTruncated !== isLabelTruncated) {
+      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: newHideIndex >= childCount, isCalculating: false, isLabelTruncated });
     }
   }
 
   render() {
     const visibleChildren = [];
     const hiddenChildren = [];
+
     React.Children.forEach(this.props.children, (child, index) => {
-      if (index < this.state.hiddenStartIndex) {
+      if (index < this.state.hiddenStartIndex || this.state.hiddenStartIndex < 0) {
         visibleChildren.push(child);
       } else {
         hiddenChildren.push(child);

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const KEYCODES = {
   ENTER: 13,
   SPACE: 32,
@@ -9,9 +7,9 @@ const KEYCODES = {
 
 const shouldHandleSelection = (currentSelectedKey, newSelectedKey) => newSelectedKey !== currentSelectedKey;
 
-const SelectableUtils = {
+const TabUtils = {
   KEYCODES,
   shouldHandleSelection,
 };
 
-export default SelectableUtils;
+export default TabUtils;

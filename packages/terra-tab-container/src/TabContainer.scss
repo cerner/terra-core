@@ -12,20 +12,38 @@
     width: 100%;
   }
 
+  .tab {
+    flex: 0 1 auto;
+    min-width: 40px;
+  }
+
+  .tab-menu {
+    flex: 0 0 auto;
+  }
+
+  .tab-fill {
+    .tab {
+      flex: 1 1 auto;
+    }
+  }
+
   .tab,
   .tab-menu {
     cursor: pointer;
-    flex: 1 1 auto;
-    max-width: 100px;
-    min-width: 40px;
-    padding-left: 0.714rem;
-  }
-
-  .tab {
     overflow: hidden;
+    padding: 0.714rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-break: normal;
     word-wrap: normal;
+  }
+
+  .tab-panel.is-calculating {
+    visibility: hidden;
+
+    .tab {
+      flex: 0 0 auto;
+      min-width: 0;
+    }
   }
 }

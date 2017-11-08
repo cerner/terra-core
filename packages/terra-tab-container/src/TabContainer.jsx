@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import ContentContainer from 'terra-content-container';
 import 'terra-base/lib/baseStyles';
 import TabUtils from './TabUtils';
 import Tab from './Tab';
@@ -14,6 +15,10 @@ const propTypes = {
    * Tab style. One of: "modular" or "structural"
    */
   variant: PropTypes.oneOf(['modular', 'structural']),
+
+  tabFill: PropTypes.bool,
+
+  fill: PropTypes.bool,
 
   /**
    * Callback function when selection has changed.
@@ -39,6 +44,8 @@ const propTypes = {
 
 const defaultProps = {
   variant: 'modular',
+  tabFill: false,
+  fill: false,
 };
 
 class TabContainer extends React.Component {
@@ -55,8 +62,37 @@ class TabContainer extends React.Component {
   handleOnChange(event, selectedKey) {
     if (this.props.onChange) {
       this.props.onChange(event, selectedKey);
-    } else if (TabUtils.shouldHandleSelection(this.state.activeKey, selectedKey)) {
+    } else if (this.state.activeKey !== selectedKey) {
       this.setState({ activeKey: selectedKey });
+    }
+  }
+
+  // TODO: Determine how keyboard navigation should work
+  handleOnKeyDown(event) {
+    const tabCount = React.Children.count(this.props.children);
+
+    // If we have less than 2 tabs we don't need to worry about arrow key presses
+    if (tabCount < 2) {
+      return;
+    }
+
+    let currentActiveIndex = -1;
+    React.Children.forEach(this.props.children, (child, index) => {
+      if (child.key === this.state.activeKey) {
+        currentActiveIndex = index;
+      }
+    });
+
+    if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
+      if (currentActiveIndex > 0) {
+        this.handleOnChange(event, this.props.children[currentActiveIndex - 1].key);
+      }
+    } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
+      if (currentActiveIndex === tabCount - 1) {
+        // TODO: Focus menu
+      } else {
+        this.handleOnChange(event, this.props.children[currentActiveIndex + 1].key);
+      }
     }
   }
 
@@ -73,13 +109,13 @@ class TabContainer extends React.Component {
 
       if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
         if (index > 0) {
-          this.handleOnChange(event, this.props.children[index - 1]);
+          this.handleOnChange(event, this.props.children[index - 1].key);
         }
       } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
         if (index === this.props.children.length - 1) {
           // TODO: Focus menu
         } else {
-          this.handleOnChange(event, this.props.children[index + 1]);
+          this.handleOnChange(event, this.props.children[index + 1].key);
         }
       }
     };
@@ -99,7 +135,16 @@ class TabContainer extends React.Component {
   }
 
   render() {
-    const { variant, onChange, children, activeKey, defaultActiveKey, ...customProps } = this.props;
+    const {
+      variant,
+      tabFill,
+      fill,
+      onChange,
+      children,
+      activeKey,
+      defaultActiveKey,
+      ...customProps
+    } = this.props;
     const attributes = Object.assign({}, customProps);
     const tabContainerClassNames = cx([
       'tab-container',
@@ -109,7 +154,7 @@ class TabContainer extends React.Component {
 
     let content = null;
     const clonedTabs = [];
-    React.Children.forEach(children, (child, index) => {
+    React.Children.forEach(children, (child) => {
       let isActive = false;
       if (child.key === this.state.activeKey || child.key === this.props.activeKey) {
         isActive = true;
@@ -118,19 +163,23 @@ class TabContainer extends React.Component {
       clonedTabs.push(React.cloneElement(child, {
         className: cx({ 'is-active': isActive }),
         onClick: this.wrapTabOnClick(child),
-        onKeyDown: this.wrapTabOnKeyDown(child, index),
       }));
     });
 
     return (
-      <div className={tabContainerClassNames}>
-        <TabPanel activeKey={activeKey || this.state.activeKey}>
-          {clonedTabs}
-        </TabPanel>
+      <ContentContainer
+        className={tabContainerClassNames}
+        fill={fill}
+        header={(
+          <TabPanel activeKey={activeKey || this.state.activeKey}>
+            {clonedTabs}
+          </TabPanel>
+        )}
+      >
         <div className={cx('tab-content')}>
           {content}
         </div>
-      </div>
+      </ContentContainer>
     );
   }
 }

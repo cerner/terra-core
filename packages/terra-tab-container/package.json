@@ -34,7 +34,8 @@
     "prop-types": "^15.5.8",
     "terra-base": "^2.0.0",
     "terra-menu": "^1.6.0",
-    "resize-observer-polyfill": "^1.4.1"
+    "resize-observer-polyfill": "^1.4.1",
+    "terra-content-container": "^1.11.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
