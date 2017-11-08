@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 -----------------
+
+1.4.0 - (November 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.3.0 - (October 31, 2017)
+------------------
 ### Added
 * Added option for auto width sizing.
 

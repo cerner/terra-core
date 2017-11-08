@@ -1,7 +1,7 @@
 {
   "name": "terra-popup",
   "main": "lib/Popup.js",
-  "version": "1.12.0",
+  "version": "1.14.0",
   "description": "The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow.",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "terra-app-delegate": "^1.7.1",
-    "terra-modal-manager": "^1.13.1",
+    "terra-modal-manager": "^1.14.0",
     "terra-props-table": "^1.10.1"
   },
   "peerDependencies": {
@@ -32,8 +32,8 @@
     "react-dom": "^15.4.2",
     "terra-base": "^2.6.1",
     "terra-content-container": "^1.11.1",
-    "terra-hookshot": "^1.1.0",
-    "terra-icon": "^1.12.1"
+    "terra-hookshot": "^1.2.0",
+    "terra-icon": "^1.13.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -42,8 +42,8 @@
     "react-portal": "^3.0.0",
     "terra-base": "^2.6.1",
     "terra-content-container": "^1.11.1",
-    "terra-hookshot": "^1.1.0",
-    "terra-icon": "^1.12.0"
+    "terra-hookshot": "^1.2.0",
+    "terra-icon": "^1.13.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

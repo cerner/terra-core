@@ -30,6 +30,7 @@ const PopupTests = () => (
       <li><Link to="/tests/popup-tests/vertical-right-offset">Popup - Vertical Right Attachment -- Arrow Adjustment</Link></li>
       <li><Link to="/tests/popup-tests/vertical-right-target-offset">Popup - Vertical Right Attachment -- Target Smaller than Arrow Offset</Link></li>
       <li><Link to="/tests/popup-tests/popup-inside-modal">Popup - Popup Inside Modal</Link></li>
+      <li><Link to="/tests/popup-tests/resize-content">Popup - Resize Content</Link></li>
     </ul>
   </div>
 );

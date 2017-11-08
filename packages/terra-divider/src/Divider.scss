@@ -1,0 +1,12 @@
+:local {
+  .divider {
+    border-bottom-width: 0;
+    border-color: var(--terra-divider-border-color, #dedfe0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-top-width: var(--terra-divider-border-top-width, 1px);
+    height: 0;
+    margin: 0;
+  }
+}
