@@ -84,15 +84,23 @@ class Textarea extends React.Component {
   }
 
   componentDidMount() {
+    const lineHeight = Math.ceil(parseFloat(window.getComputedStyle(this.textarea).lineHeight, 0));
+    this.textarea.currentLineHeight = lineHeight;
+    this.setBaseHeights();
+
     if (this.props.isAutoResizable) {
-      this.setBaseScrollHeight();
       this.resizeTextarea();
     }
   }
 
   onFocus(event) {
     if (this.props.isAutoResizable) {
-      this.setBaseScrollHeight();
+      const lineHeight = Math.ceil(parseFloat(window.getComputedStyle(this.textarea).lineHeight, 0));
+
+      if (this.textarea.currentLineHeight !== lineHeight) {
+        this.textarea.currentLineHeight = lineHeight;
+        this.setBaseHeights();
+      }
     }
 
     if (this.props.onFocus) {
@@ -110,26 +118,20 @@ class Textarea extends React.Component {
     }
   }
 
-  setBaseScrollHeight() {
+  setBaseHeights() {
     // To Properly resize the textarea vertically, we need to record the initial height
     // to help with the resizing calculation.
     const savedValue = this.textarea.value;
     this.textarea.value = '';
-
-    if (this.textarea.baseScrollHeight !== this.textarea.scrollHeight) {
-      this.textarea.baseScrollHeight = this.textarea.scrollHeight;
-      this.textarea.value = savedValue;
-      this.resizeTextarea();
-    } else {
-      this.textarea.value = savedValue;
-    }
+    this.textarea.baseScrollHeight = this.textarea.scrollHeight;
+    this.textarea.style.minHeight = `${this.textarea.scrollHeight}px`;
+    this.textarea.value = savedValue;
   }
 
   resizeTextarea() {
-    const lineHeight = Math.ceil(parseFloat(window.getComputedStyle(this.textarea).lineHeight, 0));
     const minRows = this.props.rows || TEXTAREA_ROW_SIZES[this.props.size];
     this.textarea.rows = minRows;
-    const rows = Math.ceil((this.textarea.scrollHeight - this.textarea.baseScrollHeight) / lineHeight);
+    const rows = Math.ceil((this.textarea.scrollHeight - this.textarea.baseScrollHeight) / this.textarea.currentLineHeight);
     this.textarea.rows = minRows + rows;
   }
 

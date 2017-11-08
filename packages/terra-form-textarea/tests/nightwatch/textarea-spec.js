@@ -6,22 +6,44 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a default Textarea': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/default`);
     browser.expect.element('textarea').to.be.present;
+
+    // The -2 accounts for the border around the textarea
+    browser.getElementSize('textarea', (result) => {
+      browser.expect.element('textarea').to.have.css('min-height').which.equals(`${result.value.height - 2}px`);
+    });
   },
   'Displays a populated Textarea with correct name': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/populated`);
     browser.expect.element('textarea[name="job_experience"]').to.be.present;
   },
-  'Displays a small textarea with the correct rows': (browser) => {
+  'Displays a small textarea with the correct rows and size': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/small`);
+
     browser.expect.element('textarea').to.have.attribute('rows').equals('2');
+
+    // The -2 accounts for the border around the textarea
+    browser.getElementSize('textarea', (result) => {
+      browser.expect.element('textarea').to.have.css('min-height').which.equals(`${result.value.height - 2}px`);
+    });
   },
   'Displays a medium textarea with the correct rows': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/medium`);
+
     browser.expect.element('textarea').to.have.attribute('rows').equals('5');
+
+    // The -2 accounts for the border around the textarea
+    browser.getElementSize('textarea', (result) => {
+      browser.expect.element('textarea').to.have.css('min-height').which.equals(`${result.value.height - 2}px`);
+    });
   },
   'Displays a large textarea with the correct rows': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/large`);
     browser.expect.element('textarea').to.have.attribute('rows').equals('10');
+
+    // The -2 accounts for the border around the textarea
+    browser.getElementSize('textarea', (result) => {
+      browser.expect.element('textarea').to.have.css('min-height').which.equals(`${result.value.height - 2}px`);
+    });
   },
   'Displays a full size textarea at 100% height of the browser window': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/full`);
