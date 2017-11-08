@@ -8,7 +8,7 @@
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-button | ^1.12.0 | ^15.4.2 | The terra-button component provides users a way to trigger actions in the UI. |
 | terra-form | ^1.12.0 | ^15.4.2 | Components for building forms |
-| terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
+| terra-icon | ^1.13.0 | ^15.4.2 | terra-icon |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -23,4 +23,4 @@
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-button | ^1.12.0 | ^15.4.2 | The terra-button component provides users a way to trigger actions in the UI. |
 | terra-form | ^1.12.0 | ^15.4.2 | Components for building forms |
-| terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
+| terra-icon | ^1.13.0 | ^15.4.2 | terra-icon |
