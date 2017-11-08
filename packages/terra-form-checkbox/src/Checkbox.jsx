@@ -81,10 +81,6 @@ class Checkbox extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.onFocus = this.onFocus.bind(this);
-
-    this.state = {
-      isChecked: false,
-    };
   }
 
   onFocus() {
@@ -141,7 +137,6 @@ class Checkbox extends React.Component {
           disabled={isDisabled}
           name={name}
           value={value}
-          onClick={!isDisabled ? this.handleOnClick : null}
           onChange={onChange}
           onFocus={this.onFocus}
           className={inputClasses}

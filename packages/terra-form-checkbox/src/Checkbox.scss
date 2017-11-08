@@ -5,8 +5,9 @@
   .control {
     color: var(terra-form-checkvbox-font-color, #383f42);
     display: inline-block;
-    font-family: var(terra-form-checkbox-font-family, 'roboto');
-    font-size: var(terra-form-checkbox-font-size, 1em);
+    font-family: inherit;
+    font-size: var(terra-form-checkbox-font-size, 1rem);
+    margin-right: 1em;
     margin-top: 0.5em;
 
     /* Hide actual input element */
@@ -14,7 +15,8 @@
     input:checked {
       border: 0;
       clip: rect(0 0 0 0);
-      height: 1px; margin: -1px;
+      height: 1px;
+      margin: -1px;
       overflow: hidden;
       padding: 0;
       position: absolute;
@@ -25,12 +27,11 @@
     input:checked + label {
       cursor: pointer;
       display: flex;
-      margin-right: 1em;
       padding-left: 1.6em;
       position: relative;
     }
 
-    /* checkbox aspect */
+    /* Checkbox aspect */
     input:not(:checked) + label::before,
     input:checked + label::before {
       background: #fff;
@@ -43,44 +44,42 @@
       display: inline-block;
       height: var(terra-form-checkbox-input-height, 1em);
       left: 0;
-      margin-top: 0.15em;
       position: absolute;
       text-align: center;
       top: 0;
       width: var(terra-form-checkbox-input-width, 1em);
     }
     
-    /* checked mark aspect */
+    /* Checked mark symbol aspect */
     input:not(:checked) + label::after,
     input:checked + label::after {
       color: var(--terra-form-checkbox-input-symbol-color, #fff);
       content: var(--terra-form-checkbox-input-symbol, '\2714');
-      left: 0.1em;
+      left: 0em;
       line-height: 1em;
       position: absolute;
       // top: 0.1em;
       transition: all 0.2s;
     }
 
-    /* check mark aspect changes */
+    /* Check mark aspect changes */
     input:not(:checked) + label::after {
       opacity: 0;
       transform: scale(0);
     }
 
-    /* Input in checked state*/
+    /* Input in checked state */
     input:checked + label::after {
       background-color: var(--terra-form-checkbox-input-checked-background-color, #396ee5);
       border-radius: var(--terra-form-checkbox-input-checked-border-radius, 0.1em);
       height: 1em;
-      margin-top: 0.15em;
       opacity: 1;
-      // text-align: center;
+      text-align: center;
       transform: scale(1);
       width: 1em;
     }
 
-    /* disabled checkbox */
+    /* Disabled checkbox */
     input:disabled:not(:checked) + label::before,
     input:disabled:checked + label::before {
       background-color: var(--terra-form-checkbox-disabled-input-background-color, #ddd); //#a2c2e0, rgba(134, 138, 140, 0.1);
@@ -92,13 +91,13 @@
     //   color: #999;
     // }
 
-    /* disabled label */
+    /* Disabled label */
     input:disabled + label {
       color: var(--terra-form-checkbox-disabled-label, #aaa);
       cursor: default;
     }
 
-    /* input focus styling */
+    /* Input focus styling */
     input:checked:focus + label::before,
     input:not(:checked):focus + label::before {
       border-color: var(--terra-form-checkbox-input-focus-border-color, #396ee5);
