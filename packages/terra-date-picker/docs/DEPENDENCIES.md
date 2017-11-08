@@ -9,7 +9,7 @@
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-button | ^1.12.0 | ^15.4.2 | The terra-button component provides users a way to trigger actions in the UI. |
 | terra-form | ^1.12.0 | ^15.4.2 | Components for building forms |
-| terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
+| terra-icon | ^1.13.0 | ^15.4.2 | terra-icon |
 | terra-responsive-element | ^1.11.1 | ^15.4.2 | The terra-responsive-element conditionally renders components based on viewport size |
 
 ## devDependencies
@@ -19,7 +19,7 @@
 | react-redux | ^5.0.4 | ^0.14.0 \|\| ^15.0.0-0 \|\| ^16.0.0-0 | Official React bindings for Redux |
 | redux | ^3.6.0 | -- | Predictable state container for JavaScript apps |
 | terra-app-delegate | ^1.7.1 | -- | An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications |
-| terra-modal-manager | ^1.13.1 | ^15.4.2 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
+| terra-modal-manager | ^1.14.0 | ^15.4.2 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
 | terra-props-table | ^1.10.1 | ^15.4.2 | terra-props-table |
 
 ## peerDependencies
@@ -30,5 +30,5 @@
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-button | ^1.12.0 | ^15.4.2 | The terra-button component provides users a way to trigger actions in the UI. |
 | terra-form | ^1.12.0 | ^15.4.2 | Components for building forms |
-| terra-icon | ^1.12.1 | ^15.4.2 | terra-icon |
+| terra-icon | ^1.13.0 | ^15.4.2 | terra-icon |
 | terra-responsive-element | ^1.11.1 | ^15.4.2 | The terra-responsive-element conditionally renders components based on viewport size |

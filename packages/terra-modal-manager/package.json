@@ -1,7 +1,7 @@
 {
   "name": "terra-modal-manager",
   "main": "lib/index.js",
-  "version": "1.13.1",
+  "version": "1.14.0",
   "description": "A Redux-backed Container component that dynamically presents components in a Terra Modal",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-base": "^2.6.1",
-    "terra-modal": "^1.13.0",
+    "terra-modal": "^1.14.0",
     "terra-responsive-element": "^1.11.1",
     "terra-slide-group": "^1.11.1"
   },
