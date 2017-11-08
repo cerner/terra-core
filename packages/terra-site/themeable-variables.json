@@ -124,7 +124,7 @@
     "--terra-form-checkbox-input-symbol-color": "#fff",
     "--terra-form-checkbox-input-symbol": "\"✔\"",
     "--terra-form-checkbox-input-checked-background-color": "#396ee5",
-    "--terra-form-checkbox-input-checked-border-radius": "5px",
+    "--terra-form-checkbox-input-checked-border-radius": "0.15em",
     "--terra-form-checkbox-disabled-input-background-color": "#ddd",
     "--terra-form-checkbox-disabled-input-border-color": "#bbb",
     "--terra-form-checkbox-disabled-label": "#aaa",

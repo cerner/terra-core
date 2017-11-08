@@ -80,17 +80,17 @@ const defaultProps = {
 class Checkbox extends React.Component {
   constructor(props, context) {
     super(props, context);
-    // this.onFocus = this.onFocus.bind(this);
+    this.onFocus = this.onFocus.bind(this);
 
     this.state = {
       isChecked: false,
     };
   }
 
-  // onFocus() {
-    // this.setState({ isChecked: !this.isChecked });
-
-  // }
+  onFocus() {
+    debugger;
+    this.container.focus();
+  }
 
   render() {
     const {
@@ -143,10 +143,11 @@ class Checkbox extends React.Component {
           value={value}
           onClick={!isDisabled ? this.handleOnClick : null}
           onChange={onChange}
+          onFocus={this.onFocus}
           className={inputClasses}
           {...controlInputAttrs}
         />
-        <label htmlFor={id} className={labelTextClasses}>{labelText}</label>
+        <label htmlFor={id} className={labelTextClasses} ref={(label) => { this.container = label; }} >{labelText} </label>
       </div>
     );
   }

@@ -25,12 +25,6 @@ it('should render a disabled checkbox', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a required checkbox', () => {
-  const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" required />);
-  const wrapper = shallow(checkBox);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('should render a checkbox with a hidden label', () => {
   const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" isLabelHidden />);
   const wrapper = shallow(checkBox);
