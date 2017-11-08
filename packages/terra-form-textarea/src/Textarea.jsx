@@ -124,6 +124,9 @@ class Textarea extends React.Component {
     const savedValue = this.textarea.value;
     this.textarea.value = '';
     this.textarea.baseScrollHeight = this.textarea.scrollHeight;
+
+    // For terra textareas, we want the gripper to not have the ability to resize the textarea to
+    // be a tiny square. Setting the minHeight restricts the area the gripper can be shrunk too
     this.textarea.style.minHeight = `${this.textarea.scrollHeight}px`;
     this.textarea.value = savedValue;
   }
