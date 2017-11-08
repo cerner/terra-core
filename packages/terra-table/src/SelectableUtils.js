@@ -33,14 +33,13 @@ const initialSingleSelectRowIndex = (rows) => {
  * To be used in the constructor, to set initial state.
  */
 const initialMultiSelectRowIndexes = (rows, maxSelectionCount) => {
-  if (!rows || !rows.length) {
-    return [];
-  }
+  const childArray = React.Children.toArray(rows);
+
   // Find the rows which are selected and are selectable
   const selectedIndexes = [];
-  const validatedMaxSelectionCount = validatedMaxCountSelection(rows, maxSelectionCount);
-  for (let i = 0; i < rows.length; i += 1) {
-    if (rows[i].props.isSelected) {
+  const validatedMaxSelectionCount = validatedMaxCountSelection(childArray, maxSelectionCount);
+  for (let i = 0; i < childArray.length; i += 1) {
+    if (childArray[i].props.isSelected) {
       selectedIndexes.push(i);
 
       if (selectedIndexes.length >= validatedMaxSelectionCount) {
