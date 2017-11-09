@@ -33,7 +33,6 @@
     border-width: var(--terra-button-border-width, 1px);
     cursor: pointer;
     display: inline-block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: map-get($terra-button-font-sizes, medium);
     font-weight: var(--terra-button-font-weight, 400);
     line-height: 1.429; // 20px when html font size is computed to 14px

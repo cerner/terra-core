@@ -4,6 +4,8 @@ Changelog
 Unreleased
 ----------
 
+1.12.0 - (November 7, 2017)
+------------------
 ### Changed
 * Changed Reply All Icon
 
