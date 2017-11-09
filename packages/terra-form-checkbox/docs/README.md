@@ -1,6 +1,6 @@
 # Terra Form Checkbox
 
-{insert description}
+The Terra Checkbox is a component that toggles between checked and unchecked states.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@
 import React from 'react';
 import FormCheckbox from 'terra-form-checkbox';
 
-<FormCheckbox {props...} />
+<Checkbox {id="checkbox" labelText="Default Checkbox" } />
 ```
 
 ## Component Features

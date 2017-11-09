@@ -80,12 +80,27 @@ const defaultProps = {
 class Checkbox extends React.Component {
   constructor(props, context) {
     super(props, context);
+    this.state = { focus: false };
     this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+    this.getFocusClass = this.getFocusClass.bind(this);
   }
 
   onFocus() {
     debugger;
-    this.container.focus();
+    this.setState({ focus: true });
+  }
+
+  onBlur() {
+    this.setState({ focus: false });
+  }
+
+  getFocusClass() {
+    debugger;
+    if (this.state.focus === false) {
+      return '';
+    }
+    return cx(['container-focus']);
   }
 
   render() {
@@ -129,8 +144,10 @@ class Checkbox extends React.Component {
       inputAttrs.className,
     ]);
 
+    // const combinedControlClasses = `${controlClasses} ${this.getFocusClass}`;
+
     return (
-      <div className={controlClasses} >
+      <div className={`${controlClasses} ${this.getFocusClass()}`} >
         <input
           type={type}
           id={id}
@@ -139,10 +156,11 @@ class Checkbox extends React.Component {
           value={value}
           onChange={onChange}
           onFocus={this.onFocus}
+          onBlur={this.onBlur}
           className={inputClasses}
           {...controlInputAttrs}
         />
-        <label htmlFor={id} className={labelTextClasses} ref={(label) => { this.container = label; }} >{labelText} </label>
+        <label htmlFor={id} className={labelTextClasses} >{labelText} </label>
       </div>
     );
   }

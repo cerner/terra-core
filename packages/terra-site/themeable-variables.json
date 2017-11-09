@@ -122,15 +122,18 @@
   },
   "Checkbox": {
     "--terra-form-checkbox-input-symbol-color": "#fff",
-    "--terra-form-checkbox-input-symbol": "\"✔\"",
+    "--terra-form-checkbox-input-symbol": "\"✓\"",
     "--terra-form-checkbox-input-checked-background-color": "#396ee5",
-    "--terra-form-checkbox-input-checked-border-radius": "0.1em",
+    "--terra-form-checkbox-input-checked-border-radius": "0.1875em",
+    "--terra-form-checkbox-input-checked-height": "1em",
+    "--terra-form-checkbox-input-checked-width": "1em",
     "--terra-form-checkbox-disabled-input-background-color": "#ddd",
     "--terra-form-checkbox-disabled-input-border-color": "#bbb",
     "--terra-form-checkbox-disabled-label": "#aaa",
     "--terra-form-checkbox-input-focus-border-color": "#396ee5",
     "--terra-form-checkbox-input-focus-border-style": "solid",
-    "--terra-form-checkbox-input-focus-border-width": "2px"
+    "--terra-form-checkbox-input-focus-border-width": "2px",
+    "--terra-control-focus-box-shadow": "0px 0px 5px 1px #0073ff"
   },
   "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",
