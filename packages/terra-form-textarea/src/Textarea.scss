@@ -70,6 +70,11 @@
     width: 100%;
   }
 
+  .resizable {
+    box-sizing: padding-box;
+    overflow: hidden;
+  }
+
   .form-error {
     background-image: var(--terra-form-textarea-error-focus-animation-background, none);
     border-color: var(--terra-form-textarea-error-border-color, #dedfe0);

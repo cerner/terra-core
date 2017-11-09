@@ -124,7 +124,7 @@ exports[`should render as uncontrolled when just a default value is passed into 
 
 exports[`should set the onChange and onFocus functions appropriately when the textarea is autoResizable 1`] = `
 <textarea
-  className="textarea"
+  className="textarea resizable"
   disabled={false}
   name={null}
   onChange={[Function]}
@@ -148,7 +148,7 @@ exports[`should set the rows attribute appropriate when it is passed into the te
 
 exports[`should set the textarea as auto resizable when isAutoResizable is passed into the component 1`] = `
 <textarea
-  className="textarea"
+  className="textarea resizable"
   disabled={false}
   name={null}
   onChange={[Function]}
