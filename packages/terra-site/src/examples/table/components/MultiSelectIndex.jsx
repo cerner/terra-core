@@ -9,14 +9,22 @@ import { version } from 'terra-table/package.json';
 import MultiSelectSrc from '!raw-loader!terra-table/src/MultiSelectableRows';
 
 // Example Files
-import MultipleRowSelectableTableExamples from '../examples/MultipleRowSelectableTable';
+import MultipleRowSelectableTableExamples from '../examples/MultiSelectableRows';
+import MultipleRowMaxSelectableExample from '../examples/MultiSelectableRowsMaxSelectable';
+import MultipleSelectableRowsWithSubheader from '../examples/MultiSelectableRowsWithSubheader';
 
 const MultiSelectIndex = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={MultiSelectSrc} />
+    <h2>Examples</h2>
+    <h3>Multiple Selectable Rows</h3>
     <MultipleRowSelectableTableExamples />
+    <h3>Multiple Selectable Rows (Max Selectable: 2)</h3>
+    <MultipleRowMaxSelectableExample />
+    <h3>Multiple Selectable Rows (Includes Subheaders)</h3>
+    <MultipleSelectableRowsWithSubheader />
   </div>
 );
 
