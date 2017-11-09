@@ -41,6 +41,7 @@ Cerner Corporation
 - Dylan Klohr [@dylan-sftwr]
 - Daniel Vu [@dv297]
 - Victor Nava [@vikonava]
+- Chase Sinclair [@ChaseSinclair]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -85,3 +86,4 @@ Cerner Corporation
 [@dylan-sftwr]: https://github.com/dylan-sftwr
 [@dv297]: https://github.com/dv297
 [@vikonava]: https://github.com/vikonava
+[@ChaseSinclair]: https://github.com/ChaseSinclair
