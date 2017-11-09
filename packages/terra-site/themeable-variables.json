@@ -1,5 +1,5 @@
 {
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-alert\\lib\\Alert": {
+  "Alert": {
     "--terra-alert-icon-font-size": "1.286em",
     "--terra-alert-custom-text-color": "#1c1f21",
     "--terra-alert-alert-background-color": "#fed1d1",
@@ -13,7 +13,7 @@
     "--terra-alert-alert-title-color": "#e50000",
     "--terra-alert-error-title-color": "#e50000"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-badge\\lib\\Badge": {
+  "Badge": {
     "--terra-badge-border-radius": "0.25em",
     "--terra-badge-display": "inline-block",
     "--terra-badge-font-size-small": "0.8rem",
@@ -45,7 +45,7 @@
     "--terra-badge-background-color-info": "#004c76",
     "--terra-badge-color-info": "#fff"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-base\\lib\\Base": {
+  "Base": {
     "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "--terra-base-font-size": "87.5%",
     "--terra-base-html-height": "100%",
@@ -56,7 +56,7 @@
     "--terra-base-line-height": "1.42857",
     "--terra-base-body-margin": "0"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-button\\lib\\Button": {
+  "Button": {
     "--terra-button-border-radius": "0.25em",
     "--terra-button-border-width": "1px",
     "--terra-button-font-size-medium": "1rem",
@@ -107,42 +107,36 @@
     "--terra-button-padding-bottom-compact": "0",
     "--terra-button-padding-top-compact": "0"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-card\\lib\\Card": {
+  "Card": {
     "--terra-card-background-color": "#fff",
     "--terra-card-border": "1px solid #c8cacb",
     "--terra-card-border-radius": "3px",
     "--terra-card-box-shadow": "none",
     "--terra-card-color": "inherit"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-card\\lib\\CardBody": {
+  "CardBody": {
     "--terra-card-padding-bottom": "10px",
     "--terra-card-padding-top": "10px",
     "--terra-card-padding-left": "10px",
     "--terra-card-padding-right": "10px"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-demographics-banner\\lib\\DemographicsBanner": {
+  "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",
     "--terra-demographics-banner-foreground": "#fff",
     "--terra-demographics-banner-background-deceased": "#1c1f21",
     "--terra-demographics-banner-foreground-deceased": "#fff"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-divider\\lib\\Divider": {
+  "Divider": {
     "--terra-divider-border-color": "#dedfe0",
     "--terra-divider-border-top-width": "1px"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-divider\\node_modules\\terra-base\\lib\\Base": {
-    "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "--terra-base-font-size": "87.5%",
-    "--terra-base-background-color": "#fff",
-    "--terra-base-color": "#1c1f21"
-  },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-grid\\lib\\Grid": {
+  "Grid": {
     "--terra-grid-gutter-width": "1rem"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-hookshot\\lib\\HookshotContent": {
+  "HookshotContent": {
     "--terra-hookshot-content-z-index": "7001"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-image\\lib\\Image": {
+  "Image": {
     "--terra-image-rounded-border-radius": "0.3rem",
     "--terra-image-circle-border-radius": "50%",
     "--terra-image-thumbnail-background-color": "#fff",
@@ -155,7 +149,7 @@
     "--terra-image-thumbnail-padding-right": "0.25rem",
     "--terra-image-thumbnail-padding-top": "0.25rem"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-list\\lib\\List": {
+  "List": {
     "--terra-list-divider-border": "1px solid #dedfe0",
     "--terra-list-chevron-color": "#bcbfc0",
     "--terra-list-item-selected-background-color": "#e2f2fc",
@@ -163,15 +157,7 @@
     "--terra-list-item-hover-background-color": "#f4fafe",
     "--terra-list-item-selected-hover-background-color": "#cbe7fa"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-list\\src\\List": {
-    "--terra-list-divider-border": "1px solid #dedfe0",
-    "--terra-list-chevron-color": "#bcbfc0",
-    "--terra-list-item-selected-background-color": "#e2f2fc",
-    "--terra-list-item-selected-divider-color": "#0092e0",
-    "--terra-list-item-hover-background-color": "#f4fafe",
-    "--terra-list-item-selected-hover-background-color": "#cbe7fa"
-  },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-menu\\lib\\Menu": {
+  "Menu": {
     "--terra-menu-submenu-background-color": "#f9f9f9",
     "--terra-menu-divider-color": "#dedfe0",
     "--terra-menu-divider-shadow-color": "#f9f9f9",
@@ -201,7 +187,7 @@
     "--terra-menu-foreground-color": "#1c1f21",
     "--terra-menu-submenu-foreground-color": "#1c1f21"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-menu\\lib\\MenuItem": {
+  "MenuItem": {
     "--terra-menu-item-hover-color": "#ebf6fd",
     "--terra-menu-item-text-color": "#1c1f21",
     "--terra-menu-item-text-font-size": "13px",
@@ -210,7 +196,12 @@
     "--terra-menu-item-chevron-icon-color": "#9b9fa1",
     "--terra-menu-item-chevron-icon-font-size": "10px"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-popup\\lib\\PopupArrow": {
+  "MockThemeComponent": {
+    "--terra-mock-background-color": "#000",
+    "--terra-mock-color": "#fff",
+    "--terra-mock-display": "inline"
+  },
+  "PopupArrow": {
     "--terra-popup-arrow-size": "11px",
     "--terra-popup-arrow-z-index": "7002",
     "--terra-popup-arrow-inner-size": "10px",
@@ -219,7 +210,7 @@
     "--terra-popup-arrow-inner-inset-size": "2px",
     "--terra-popup-arrow-inner-color": "#fff"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-popup\\lib\\PopupContent": {
+  "PopupContent": {
     "--terra-popup-content-header-border-bottom": "1px solid #dedfe0",
     "--terra-popup-content-close-background": "0 0",
     "--terra-popup-content-close-border": "0",
@@ -235,27 +226,27 @@
     "--terra-popup-content-inner-border": "1px solid #b2b5b6",
     "--terra-popup-content-inner-box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5)"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-popup\\lib\\PopupOverlay": {
+  "PopupOverlay": {
     "--terra-popup-overlay-background-color": "#fff",
     "--terra-popup-overlay-opacity": "0.01",
     "--terra-popup-overlay-z-index": "7000"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-progress-bar\\lib\\ProgressBar": {
+  "ProgressBar": {
     "--terra-progress-bar-height-small": "0.8rem",
     "--terra-progress-bar-height-tiny": "0.5rem",
     "--terra-progress-bar-height-medium": "1rem",
     "--terra-progress-bar-height-large": "1.4rem",
     "--terra-progress-bar-height-huge": "1.7rem"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-signature\\lib\\Signature": {
+  "Signature": {
     "--terra-signature-background-color": "#fff",
     "--terra-signature-line-color": "#000"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-slide-panel\\lib\\SlidePanel": {
+  "SlidePanel": {
     "--terra-slide-panel-panel-width-small": "320px",
     "--terra-slide-panel-panel-width-large": "60%"
   },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-table\\lib\\Table": {
+  "Table": {
     "--terra-table-background-color": "#fff",
     "--terra-table-border": "0",
     "--terra-table-cell-border": "0",
@@ -291,10 +282,5 @@
     "--terra-table-row-selected-border-color": "#0092e0",
     "--terra-table-row-hover-background-color": "#f4fafe",
     "--terra-table-row-selected-hover-background-color": "#cbe7fa"
-  },
-  "C:\\workspace\\dv045327_personal_repos\\terra-core\\packages\\terra-theme-provider\\tests\\nightwatch\\MockThemeComponent": {
-    "--terra-mock-background-color": "#000",
-    "--terra-mock-color": "#fff",
-    "--terra-mock-display": "inline"
   }
 }
