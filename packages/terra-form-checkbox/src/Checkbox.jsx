@@ -87,7 +87,6 @@ class Checkbox extends React.Component {
   }
 
   onFocus() {
-    debugger;
     this.setState({ focus: true });
   }
 
@@ -96,7 +95,6 @@ class Checkbox extends React.Component {
   }
 
   getFocusClass() {
-    debugger;
     if (this.state.focus === false) {
       return '';
     }
@@ -143,8 +141,6 @@ class Checkbox extends React.Component {
       'input',
       inputAttrs.className,
     ]);
-
-    // const combinedControlClasses = `${controlClasses} ${this.getFocusClass}`;
 
     return (
       <div className={`${controlClasses} ${this.getFocusClass()}`} >
