@@ -23,7 +23,7 @@ function getDirectories(srcPath, inputFileSystem) {
   return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-// Find all decendent directories by name under a root directory and return an array
+// Find all descendant directories by name under a root directory and return an array
 function findDirectories(dirName, rootDir, inputFileSystem) {
   const result = [];
   const subDirs = getDirectories(rootDir, inputFileSystem);
