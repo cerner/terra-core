@@ -38,12 +38,14 @@ class SearchFieldExampleTemplate extends React.Component {
   }
 
   render() {
+    const { disableAutoSearch } = this.props;
     return (
       <div>
         <p>{this.state.message}{this.state.searchText}</p>
         <SearchField
           onSearch={this.handleSearch}
           onInvalidSearch={this.handleInvalidSearch}
+          disableAutoSearch={disableAutoSearch}
           {...this.props}
         />
       </div>

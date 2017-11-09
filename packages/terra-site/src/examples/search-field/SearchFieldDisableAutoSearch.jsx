@@ -3,7 +3,7 @@ import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
 const SearchFieldDisableAutoSearch = () => (
   <SearchFieldExampleTemplate
-    disableAutoSearch={true}
+    disableAutoSearch
   />
 );
 

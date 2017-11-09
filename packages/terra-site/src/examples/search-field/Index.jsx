@@ -34,7 +34,7 @@ const SearchFieldExamples = () => (
     <SearchFieldDelayed />
     <h2 id="searchFieldDisableAutoSearch">Search Field with auto-search turned off</h2>
     <SearchFieldDisableAutoSearch />
-</div>
+  </div>
 );
 
 export default SearchFieldExamples;
