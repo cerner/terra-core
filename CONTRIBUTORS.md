@@ -40,6 +40,7 @@ Cerner Corporation
 - Dustin Singleton [@singleton06]
 - Dylan Klohr [@dylan-sftwr]
 - Victor Nava [@vikonava]
+- Chase Sinclair [@ChaseSinclair]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -83,3 +84,4 @@ Cerner Corporation
 [@singleton06]: https://github.com/Singleton06
 [@dylan-sftwr]: https://github.com/dylan-sftwr
 [@vikonava]: https://github.com/vikonava
+[@ChaseSinclair]: https://github.com/ChaseSinclair
