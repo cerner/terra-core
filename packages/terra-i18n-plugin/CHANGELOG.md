@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Update to allow custom translations directory to be passed in through the options
 
 1.8.0 - (October 24, 2017)
 ------------------

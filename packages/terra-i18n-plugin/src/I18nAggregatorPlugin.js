@@ -23,9 +23,16 @@ function getDirectories(srcPath, inputFileSystem) {
   return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem) {
-  // Check the directory for translations
-  const translationsDirectory = path.resolve(currentDirectory, 'translations');
+// Find all decendent directories by name under a root directory and return an array
+function findDirectories(dirName, rootDir, inputFileSystem) {
+  const result = [];
+  const subDirs = getDirectories(rootDir, inputFileSystem);
+  result.push(subDirs.filter(dir => dir === dirName).map(dir => path.join(rootDir, dir)));
+  subDirs.forEach(dir => result.push(findDirectories(dirName, path.join(rootDir, dir), inputFileSystem)));
+  return [].concat(...result);
+}
+
+function readTranslations(languageMessages, translationsDirectory, inputFileSystem) {
   try {
     // Check if the directory exists by attempting to read from it
     inputFileSystem.readdirSync(translationsDirectory);
@@ -42,7 +49,19 @@ function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem)
   } catch (e) {
     // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
+}
 
+// Aggregate all translation messages under a custom directory
+function aggregateCustomDirectory(languageMessages, rootDir, inputFileSystem) {
+  findDirectories('translations', rootDir, inputFileSystem)
+    .forEach(dir => readTranslations(languageMessages, dir, inputFileSystem));
+}
+
+// Aggregate all translation messages under node_modules
+function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem) {
+  // Check the directory for translations
+  const translationsDirectory = path.resolve(currentDirectory, 'translations');
+  readTranslations(languageMessages, translationsDirectory, inputFileSystem);
   // Check the directory's node_modules for translation files
   const nodeMoudlesPath = path.resolve(currentDirectory, 'node_modules');
   try {
@@ -70,8 +89,13 @@ function aggregateTranslationMessages(options, inputFileSystem) {
   let languageMessages = {};
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
-  // Aggregate translation messages for the directory
+  // Aggregate translation messages for node_modules
   languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, inputFileSystem);
+  // Aggregate translation messages for custom directory
+  const customTransDir = options.customTransDir;
+  if (customTransDir) {
+    aggregateCustomDirectory(languageMessages, customTransDir, inputFileSystem);
+  }
   return languageMessages;
 }
 
