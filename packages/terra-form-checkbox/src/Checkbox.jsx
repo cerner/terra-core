@@ -98,7 +98,7 @@ class Checkbox extends React.Component {
     if (this.state.focus === false) {
       return '';
     }
-    return cx(['container-focus']);
+    return cx(['focus']);
   }
 
   render() {

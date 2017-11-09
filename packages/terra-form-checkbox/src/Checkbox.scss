@@ -35,7 +35,10 @@
     /* Checkbox aspect */
     input:not(:checked) + label::before,
     input:checked + label::before {
-      background: #fff;
+      background-color: var(--terra-form-checkbox-input-background-color #fff);
+      background-image: var(--terra-form-checkbox-input-background-image, linear-gradient(316deg, rgba(227, 227, 227, 0.08), #a9a9a9));
+      background-repeat: no-repeat;
+      background-size: var(--terra-form-checkbox-input-background-size, 75% 75%);
       border-color: var(terra-form-checkbox-input-border-color, rgba(134, 138, 140, 0.4));
       border-radius: var(terra-form-checkbox-input-border-radius, 0.1875em);
       //@include terra-border-radius-start(0.1875em);
@@ -84,8 +87,8 @@
     /* Disabled checkbox */
     input:disabled:not(:checked) + label::before,
     input:disabled:checked + label::before {
-      background-color: var(--terra-form-checkbox-disabled-input-background-color, #ddd); //#a2c2e0, rgba(134, 138, 140, 0.1);
-      border-color: var(--terra-form-checkbox-disabled-input-border-color, #bbb);
+      background-color: var(--terra-form-checkbox-input-disabled-background-color, #ddd); //#a2c2e0, rgba(134, 138, 140, 0.1);
+      border-color: var(--terra-form-checkbox-input-disabled-border-color, #bbb);
       box-shadow: none;
     }
 
@@ -109,7 +112,7 @@
   }
 
   /* Input + label focus styling utilized in Clinical. */
-  .container-focus {
+  .focus {
     box-shadow: var(--terra-control-focus-box-shadow, 0px 0px 5px 1px rgba(0,115,255,1));
   }
 }
