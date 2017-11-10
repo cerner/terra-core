@@ -5,7 +5,9 @@ exports[`Snapshots renders a basic search field 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
     placeholder=""
@@ -37,7 +39,9 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
     placeholder="Test"
@@ -69,7 +73,9 @@ exports[`Snapshots renders a search field with a value 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
     placeholder=""

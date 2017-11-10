@@ -11,6 +11,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * A boolean that when true will disable the field
+   */
+  isDisabled: PropTypes.bool,
+
+  /**
    * Placeholder text to show while the search field is empty.
    */
   placeholder: PropTypes.string,
@@ -34,12 +39,19 @@ const propTypes = {
    * A callback to indicate an invalid search. Sends parameter {String} searchText.
    */
   onInvalidSearch: PropTypes.func,
+
+  /**
+   * How the component should display from a fixed size to stretching to fill its container
+   */
+  sizing: PropTypes.oneOf(['fixed', 'stretch']),
 };
 
 const defaultProps = {
+  isDisabled: false,
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
+  sizing: 'fixed',
 };
 
 class SearchField extends React.Component {
@@ -86,9 +98,19 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const {
+      isDisabled,
+      placeholder,
+      minimumSearchTextLength,
+      searchDelay,
+      onSearch,
+      onInvalidSearch,
+      sizing,
+      ...customProps
+    } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
+      (sizing === 'stretch') ? 'stretch' : '',
       customProps.className,
     ]);
 
@@ -100,11 +122,14 @@ class SearchField extends React.Component {
           placeholder={placeholder}
           value={this.state.searchText}
           onChange={this.handleTextChange}
+          disabled={isDisabled}
+          aria-disabled={isDisabled}
         />
         <Button
           className={cx('button')}
           onClick={this.handleSearch}
           isCompact
+          isDisabled={isDisabled}
         >
           <IconSearch />
         </Button>
