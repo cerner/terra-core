@@ -10,6 +10,14 @@
     justify-content: flex-start;
     position: relative;
     width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus .is-active {
+      outline-style: dotted;
+    }
   }
 
   .tab {

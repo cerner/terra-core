@@ -8,6 +8,7 @@ import styles from './Tabs.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  onKeyDown: PropTypes.func,
   activeKey: PropTypes.string,
   children: PropTypes.node,
 };
@@ -105,7 +106,12 @@ class CollapsibleTabs extends React.Component {
     );
 
     return (
-      <div className={cx(['collapsible-tabs-container', { 'is-calculating': this.state.isCalculating }])} ref={this.setContainer}>
+      <div
+        className={cx(['collapsible-tabs-container', { 'is-calculating': this.state.isCalculating }])}
+        ref={this.setContainer}
+        tabIndex="0"
+        onKeyDown={this.props.onKeyDown}
+      >
         {visibleChildren}
         {menu}
       </div>

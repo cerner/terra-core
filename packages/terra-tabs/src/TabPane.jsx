@@ -41,8 +41,6 @@ const TabPane = ({
     attributes.className,
   ]);
 
-  attributes.tabIndex = '0';
-
   return (
     <div role="tab" {...attributes} className={paneClassNames}>
       {customDisplay}

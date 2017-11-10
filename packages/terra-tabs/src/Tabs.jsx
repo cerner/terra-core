@@ -52,10 +52,11 @@ class Tabs extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.wrapPaneOnClick = this.wrapPaneOnClick.bind(this);
     this.wrapPaneOnKeyDown = this.wrapPaneOnKeyDown.bind(this);
     this.state = {
-      activeKey: this.props.defaultActiveKey,
+      activeKey: this.props.activeKey ? null : this.props.defaultActiveKey,
     };
   }
 
@@ -67,7 +68,6 @@ class Tabs extends React.Component {
     }
   }
 
-  // TODO: Determine how keyboard navigation should work
   handleOnKeyDown(event) {
     const tabCount = React.Children.count(this.props.children);
 
@@ -78,7 +78,7 @@ class Tabs extends React.Component {
 
     let currentActiveIndex = -1;
     React.Children.forEach(this.props.children, (child, index) => {
-      if (child.key === this.state.activeKey) {
+      if (child.key === this.state.activeKey || child.key === this.props.activeKey) {
         currentActiveIndex = index;
       }
     });
@@ -157,7 +157,7 @@ class Tabs extends React.Component {
     const clonedPanes = [];
     React.Children.forEach(children, (child) => {
       let isActive = false;
-      if (child.key === this.state.activeKey || child.key === this.props.activeKey) {
+      if (child.key === this.state.activeKey || child.key === activeKey) {
         isActive = true;
         content = child.props.children;
       }
