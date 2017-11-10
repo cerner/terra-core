@@ -1,6 +1,7 @@
 :local {
   .field {
     border: 0;
+    font-family: var(--terra-form-field-font-family, inherit);
     margin-bottom: var(--terra-form-field-margin-bottom, 1.428em);
     max-width: 72.857rem;
     padding: 0;
@@ -30,7 +31,7 @@
 
   .error-icon,
   .error-icon-hidden {
-    display: inline-block;
+    display: var(--terra-form-field-label-error-icon-display, none);
     padding-right: var(--terra-form-field-label-error-icon-padding-right, 0.357em);
   }
 
