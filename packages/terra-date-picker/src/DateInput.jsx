@@ -103,7 +103,7 @@ class DatePickerInput extends React.Component {
       this.props.requestFocus();
     }
 
-    if (this.props.onCalendarButtonClick) {
+    if (this.props.onCalendarButtonClick && this.props.onClick) {
       this.props.onCalendarButtonClick(event, this.props.onClick);
     }
   }

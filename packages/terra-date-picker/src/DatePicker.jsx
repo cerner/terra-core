@@ -203,6 +203,8 @@ class DatePicker extends React.Component {
     if (!this.isDefaultDateAcceptable && !this.validateDefaultDate()) {
       this.handleChange(null, event);
     } else if (onClick) {
+      // This onClick function is the onInputClick function coming from https://github.com/Hacker0x01/react-datepicker/blob/master/src/index.jsx#L326.
+      // It does not take any parameter so there is not a need to pass in the event.
       onClick();
       this.isDefaultDateAcceptable = true;
     }
