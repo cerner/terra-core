@@ -1,27 +1,27 @@
 import React from 'react';
 import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import Status from 'terra-status';
-import TabContainer from 'terra-tab-container';
+import Tabs from 'terra-tabs';
 
-const StructuralTabContainerExample = () => {
+const StructuralTabsExample = () => {
   const labelTab = (
-    <TabContainer.Tab label="Tab with label" key="LabelTab">
+    <Tabs.Pane label="Tab with label" key="LabelTab">
       <p>
         Content for the label tab.
       </p>
-    </TabContainer.Tab>
+    </Tabs.Pane>
   );
 
   const iconTab = (
-    <TabContainer.Tab label="Tab with icon" icon={<IconBriefcase />} key="IconTab">
+    <Tabs.Pane label="Tab with icon" icon={<IconBriefcase />} key="IconTab">
       <p>
         Content for the icon tab.
       </p>
-    </TabContainer.Tab>
+    </Tabs.Pane>
   );
 
   const customTab = (
-    <TabContainer.Tab
+    <Tabs.Pane
       customDisplay={(
         <Status color="blue">
           Custom display
@@ -33,18 +33,18 @@ const StructuralTabContainerExample = () => {
       <p>
         Content for the custom display tab.
       </p>
-    </TabContainer.Tab>
+    </Tabs.Pane>
   );
 
   return (
     <div>
-      <TabContainer variant="structural" defaultActiveKey="LabelTab">
+      <Tabs variant="structural" defaultActiveKey="LabelTab">
         {labelTab}
         {iconTab}
         {customTab}
-      </TabContainer>
+      </Tabs>
     </div>
   );
 };
 
-export default StructuralTabContainerExample;
+export default StructuralTabsExample;

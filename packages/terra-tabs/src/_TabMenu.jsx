@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Menu from 'terra-menu';
-import styles from './TabContainer.scss';
+import styles from './Tabs.scss';
 import TabUtils from './TabUtils';
 
 const cx = classNames.bind(styles);
@@ -92,7 +92,7 @@ class TabMenu extends React.Component {
     });
 
     return (
-      <div className={cx(['tab-menu'])}>
+      <div>
         <Menu
           onRequestClose={this.handleOnRequestClose}
           targetRef={this.getTargetRef}
@@ -101,7 +101,14 @@ class TabMenu extends React.Component {
           {menuItems}
         </Menu>
         {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-        <div role="button" ref={this.setTargetRef} onClick={this.handleOnClick} onKeyDown={this.handleOnKeyDown} style={{ width: this.targetWidth }}>
+        <div
+          role="button"
+          ref={this.setTargetRef}
+          onClick={this.handleOnClick}
+          onKeyDown={this.handleOnKeyDown}
+          style={{ width: this.targetWidth }}
+          className={cx(['tab-menu'])}
+        >
           {menuToggleText}
         </div>
         {/* eslint-enable jsx-ally/no-static-element-interactions */}

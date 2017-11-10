@@ -1,6 +1,6 @@
 {
-  "name": "terra-tab-container",
-  "main": "lib/TabContainer.js",
+  "name": "terra-tabs",
+  "main": "lib/Tabs.js",
   "version": "0.0.0",
   "description": "{insert description}",
   "repository": {
@@ -10,8 +10,8 @@
   "keywords": [
     "Cerner",
     "Terra",
-    "terra-tab-container",
-    "TabContainer",
+    "terra-tabs",
+    "Tabs",
     "UI"
   ],
   "author": "Cerner Corporation",

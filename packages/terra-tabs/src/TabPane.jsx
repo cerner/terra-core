@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './TabContainer.scss';
+import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
 
@@ -28,7 +28,7 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const Tab = ({
+const TabPane = ({
   icon,
   label,
   customDisplay,
@@ -36,7 +36,7 @@ const Tab = ({
   ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
-  const tabClassNames = cx([
+  const paneClassNames = cx([
     'tab',
     attributes.className,
   ]);
@@ -44,7 +44,7 @@ const Tab = ({
   attributes.tabIndex = '0';
 
   return (
-    <div {...attributes} className={tabClassNames}>
+    <div role="tab" {...attributes} className={paneClassNames}>
       {customDisplay}
       {customDisplay ? null : icon}
       {customDisplay ? null : label}
@@ -52,6 +52,6 @@ const Tab = ({
   );
 };
 
-Tab.propTypes = propTypes;
+TabPane.propTypes = propTypes;
 
-export default Tab;
+export default TabPane;

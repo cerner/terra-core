@@ -4,15 +4,15 @@ import classNames from 'classnames/bind';
 import ContentContainer from 'terra-content-container';
 import 'terra-base/lib/baseStyles';
 import TabUtils from './TabUtils';
-import Tab from './Tab';
-import TabPanel from './_TabPanel';
-import styles from './TabContainer.scss';
+import TabPane from './TabPane';
+import CollapsibleTabs from './_CollapsibleTabs';
+import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Tab style. One of: "modular" or "structural"
+   * Tabs style. One of: "modular" or "structural"
    */
   variant: PropTypes.oneOf(['modular', 'structural']),
 
@@ -22,22 +22,22 @@ const propTypes = {
 
   /**
    * Callback function when selection has changed.
-   * Parameters: 1. Event 2. Selected tab's key
+   * Parameters: 1. Event 2. Selected pane's key
    */
   onChange: PropTypes.func,
 
   /**
-   * Tab components to be displayed
+   * Tabs.Pane components to be displayed
    */
   children: PropTypes.node.isRequired,
 
   /**
-   * Key of the tab that should be active. Use this prop along with onChange to create controlled tabs.
+   * Key of the pane that should be active. Use this prop along with onChange to create controlled tabs.
    */
   activeKey: PropTypes.string,
 
   /**
-   * Key of the tab that should be open initially.
+   * Key of the pane that should be open initially.
    */
   defaultActiveKey: PropTypes.string,
 };
@@ -48,12 +48,12 @@ const defaultProps = {
   fill: false,
 };
 
-class TabContainer extends React.Component {
+class Tabs extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.wrapTabOnClick = this.wrapTabOnClick.bind(this);
-    this.wrapTabOnKeyDown = this.wrapTabOnKeyDown.bind(this);
+    this.wrapPaneOnClick = this.wrapPaneOnClick.bind(this);
+    this.wrapPaneOnKeyDown = this.wrapPaneOnKeyDown.bind(this);
     this.state = {
       activeKey: this.props.defaultActiveKey,
     };
@@ -96,10 +96,10 @@ class TabContainer extends React.Component {
     }
   }
 
-  wrapTabOnKeyDown(tab, index) {
+  wrapPaneOnKeyDown(pane, index) {
     return (event) => {
-      if (tab.props.onKeyDown) {
-        tab.props.onKeyDown(event);
+      if (pane.props.onKeyDown) {
+        pane.props.onKeyDown(event);
       }
 
       // If length is not defined then there is only one child element and we do not need to handle arrow key presses.
@@ -121,15 +121,15 @@ class TabContainer extends React.Component {
     };
   }
 
-  wrapTabOnClick(tab) {
+  wrapPaneOnClick(pane) {
     return (event) => {
       if (this.props.onChange) {
-        this.props.onChange(event, tab.key);
+        this.props.onChange(event, pane.key);
       } else {
-        this.handleOnChange(event, tab.key);
+        this.handleOnChange(event, pane.key);
       }
-      if (tab.props.onClick) {
-        tab.props.onClick(event);
+      if (pane.props.onClick) {
+        pane.props.onClick(event);
       }
     };
   }
@@ -146,34 +146,35 @@ class TabContainer extends React.Component {
       ...customProps
     } = this.props;
     const attributes = Object.assign({}, customProps);
-    const tabContainerClassNames = cx([
-      'tab-container',
+    const tabsClassNames = cx([
+      'tabs-container',
+      { 'tab-fill': tabFill },
       variant,
       attributes.className,
     ]);
 
     let content = null;
-    const clonedTabs = [];
+    const clonedPanes = [];
     React.Children.forEach(children, (child) => {
       let isActive = false;
       if (child.key === this.state.activeKey || child.key === this.props.activeKey) {
         isActive = true;
         content = child.props.children;
       }
-      clonedTabs.push(React.cloneElement(child, {
+      clonedPanes.push(React.cloneElement(child, {
         className: cx({ 'is-active': isActive }),
-        onClick: this.wrapTabOnClick(child),
+        onClick: this.wrapPaneOnClick(child),
       }));
     });
 
     return (
       <ContentContainer
-        className={tabContainerClassNames}
+        className={tabsClassNames}
         fill={fill}
         header={(
-          <TabPanel activeKey={activeKey || this.state.activeKey}>
-            {clonedTabs}
-          </TabPanel>
+          <CollapsibleTabs activeKey={activeKey || this.state.activeKey} onKeyDown={this.handleOnKeyDown}>
+            {clonedPanes}
+          </CollapsibleTabs>
         )}
       >
         <div className={cx('tab-content')}>
@@ -184,8 +185,8 @@ class TabContainer extends React.Component {
   }
 }
 
-TabContainer.propTypes = propTypes;
-TabContainer.defaultProps = defaultProps;
-TabContainer.Tab = Tab;
+Tabs.propTypes = propTypes;
+Tabs.defaultProps = defaultProps;
+Tabs.Pane = TabPane;
 
-export default TabContainer;
+export default Tabs;

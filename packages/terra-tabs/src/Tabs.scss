@@ -1,9 +1,9 @@
 :local {
-  .tab-container {
+  .tabs-container {
     width: 100%;
   }
 
-  .tab-panel {
+  .collapsible-tabs-container {
     display: flex;
     flex: 1 1 auto;
     flex-wrap: nowrap;
@@ -14,7 +14,8 @@
 
   .tab {
     flex: 0 1 auto;
-    min-width: 40px;
+    max-width: 200px;
+    min-width: 100px;
   }
 
   .tab-menu {
@@ -24,6 +25,8 @@
   .tab-fill {
     .tab {
       flex: 1 1 auto;
+      max-width: none;
+      text-align: center;
     }
   }
 
@@ -38,12 +41,11 @@
     word-wrap: normal;
   }
 
-  .tab-panel.is-calculating {
+  .collapsible-tabs-container.is-calculating {
     visibility: hidden;
 
     .tab {
       flex: 0 0 auto;
-      min-width: 0;
     }
   }
 }

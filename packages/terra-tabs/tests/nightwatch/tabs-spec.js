@@ -3,9 +3,9 @@
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
-  'Displays a default tab-container': (browser) => {
+  'Displays a default tabs': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/tab-container-tests/default`)
+      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/tabs-tests/default`)
       .expect.element('.tab-container').to.be.present;
   },
 });

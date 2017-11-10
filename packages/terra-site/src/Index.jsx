@@ -42,8 +42,8 @@ import SearchFieldExamples from './examples/search-field/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
-import TabContainerExamples from './examples/tab-container/Index';
 import TableExamples from './examples/table/Index';
+import TabsExamples from './examples/tabs/Index';
 import TextExamples from './examples/text/Index';
 import ThemeProviderExamples from './examples/theme-provider/Index';
 import TimeInputExamples from './examples/time-input/Index';
@@ -103,8 +103,8 @@ import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupT
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
-import TabContainerTestRoutes from 'terra-tab-container/tests/nightwatch/TabContainerTestRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
+import TabsTestRoutes from 'terra-tabs/tests/nightwatch/TabsTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
@@ -155,8 +155,8 @@ ReactDOM.render((
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="status" component={StatusExamples} />
-      <Route path="tab-container" component={TabContainerExamples} />
       <Route path="table" component={TableExamples} />
+      <Route path="tabs" component={TabsExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="theme-provider" component={ThemeProviderExamples} />
       <Route path="time-input" component={TimeInputExamples} />
@@ -221,6 +221,6 @@ ReactDOM.render((
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
-    {TabContainerTestRoutes}
+    {TabsTestRoutes}
   </Router>
 ), document.getElementById('root'));
