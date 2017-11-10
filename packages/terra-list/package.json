@@ -1,7 +1,7 @@
 {
   "name": "terra-list",
   "main": "lib/List.js",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "terra-list",
   "repository": {
     "type": "git",
@@ -27,14 +27,14 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.6.1",
-    "terra-icon": "^1.12.1"
+    "terra-icon": "^1.13.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^1.13.0",
+    "terra-arrange": "^1.14.0",
     "terra-base": "^2.6.1",
-    "terra-icon": "^1.12.1"
+    "terra-icon": "^1.13.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
