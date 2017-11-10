@@ -121,19 +121,17 @@
     "--terra-card-padding-right": "10px"
   },
   "Checkbox": {
-    "--terra-form-checkbox-input-symbol-color": "#fff",
+    "--terra-form-checkbox-input-background-image": "linear-gradient(316deg, rgba(227, 227, 227, 0.08), #a9a9a9)",
+    "--terra-form-checkbox-input-background-size": "80% 80%",
+    "--terra-form-checkbox-input-symbol-color": "black",
     "--terra-form-checkbox-input-symbol": "\"✓\"",
-    "--terra-form-checkbox-input-checked-background-color": "#396ee5",
-    "--terra-form-checkbox-input-checked-border-radius": "0.1875em",
     "--terra-form-checkbox-input-checked-height": "1em",
     "--terra-form-checkbox-input-checked-width": "1em",
-    "--terra-form-checkbox-disabled-input-background-color": "#ddd",
-    "--terra-form-checkbox-disabled-input-border-color": "#bbb",
+    "--terra-form-checkbox-input-disabled-background-color": "rgba(246, 246, 246, 0.3)",
+    "--terra-form-checkbox-input-disabled-border-color": "#bdbdbd",
     "--terra-form-checkbox-disabled-label": "#aaa",
-    "--terra-form-checkbox-input-focus-border-color": "#396ee5",
-    "--terra-form-checkbox-input-focus-border-style": "solid",
-    "--terra-form-checkbox-input-focus-border-width": "2px",
-    "--terra-control-focus-box-shadow": "0px 0px 5px 1px #0073ff"
+    "--terra-form-checkbox-input-focus-box-shadow": "0 0 0 0.0625em #4a90e2",
+    "--terra-control-focus-box-shadow": "none"
   },
   "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",

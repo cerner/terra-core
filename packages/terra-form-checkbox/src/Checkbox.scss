@@ -3,13 +3,12 @@
 
 :local {
   .control {
-    color: var(terra-form-checkvbox-font-color, #383f42);
+    color: var(terra-form-checkbox-font-color, rgb(0, 0, 0));
     display: inline-block;
     font-family: inherit;
-    font-size: var(terra-form-checkbox-font-size, 1rem);
-    margin-right: 0.5em;
-    margin-top: 0.5em;
-    padding: 0.25em;
+    font-size: var(terra-form-checkbox-font-size, 0.875rem);
+    margin-right: var(terra-form-checkbox-margin-right, 2em);
+    margin-top: var(terra-form-checkbox-margin-top, 0.625em);
 
     /* Hide actual input element */
     input:not(:checked),
@@ -35,16 +34,17 @@
     /* Checkbox aspect */
     input:not(:checked) + label::before,
     input:checked + label::before {
-      background-color: var(--terra-form-checkbox-input-background-color #fff);
+      background-color: var(--terra-form-checkbox-input-background-color #f6f6f6);
       background-image: var(--terra-form-checkbox-input-background-image, linear-gradient(316deg, rgba(227, 227, 227, 0.08), #a9a9a9));
+      background-position: 1px 1px;
       background-repeat: no-repeat;
-      background-size: var(--terra-form-checkbox-input-background-size, 75% 75%);
-      border-color: var(terra-form-checkbox-input-border-color, rgba(134, 138, 140, 0.4));
-      border-radius: var(terra-form-checkbox-input-border-radius, 0.1875em);
+      background-size: var(--terra-form-checkbox-input-background-size, 80% 80%);
+      border-color: var(terra-form-checkbox-input-border-color, #979797);
+      border-radius: var(terra-form-checkbox-input-border-radius, none);
       //@include terra-border-radius-start(0.1875em);
       border-style: var(terra-form-checkbox-input-border-style, solid);
-      border-width: var(terra-form-checkbox-input-border-width, 0.1em);
-      // box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-width: var(terra-form-checkbox-input-border-width, 0.0625em);
+      box-shadow: var(terra-form-checkbox-input-box-shadow, none);
       content: '';
       display: inline-block;
       height: var(terra-form-checkbox-input-height, 1em);
@@ -58,7 +58,7 @@
     /* Checked mark symbol aspect */
     input:not(:checked) + label::after,
     input:checked + label::after {
-      color: var(--terra-form-checkbox-input-symbol-color, #fff);
+      color: var(--terra-form-checkbox-input-symbol-color, rgb(0, 0, 0));
       content: var(--terra-form-checkbox-input-symbol, '\2713');
       left: 0;
       line-height: 1em;
@@ -75,8 +75,12 @@
 
     /* Input in checked state */
     input:checked + label::after {
-      background-color: var(--terra-form-checkbox-input-checked-background-color, #396ee5);
-      border-radius: var(--terra-form-checkbox-input-checked-border-radius, 0.1875em);
+      background-color: var(--terra-form-checkbox-input-checked-background-color none);
+      border-color: var(terra-form-checkbox-input-checked-border-color, none);
+      border-radius: var(terra-form-checkbox-input-checked-border-radius, none);
+      //@include terra-border-radius-start(0.1875em);
+      // border-style: var(terra-form-checkbox-input-border-style, solid);
+      // border-width: var(terra-form-checkbox-input-border-width, 0.0625em);
       height: var(--terra-form-checkbox-input-checked-height, 1em);
       opacity: 1;
       text-align: center;
@@ -87,14 +91,9 @@
     /* Disabled checkbox */
     input:disabled:not(:checked) + label::before,
     input:disabled:checked + label::before {
-      background-color: var(--terra-form-checkbox-input-disabled-background-color, #ddd); //#a2c2e0, rgba(134, 138, 140, 0.1);
-      border-color: var(--terra-form-checkbox-input-disabled-border-color, #bbb);
-      box-shadow: none;
+      background-color: var(--terra-form-checkbox-input-disabled-background-color, rgba(246, 246, 246, 0.3));
+      border-color: var(--terra-form-checkbox-input-disabled-border-color, #bdbdbd);
     }
-
-    // input:disabled:checked + label::after {
-    //   color: #999;
-    // }
 
     /* Disabled label */
     input:disabled + label {
@@ -105,14 +104,12 @@
     /* Input focus styling */
     input:checked:focus + label::before,
     input:not(:checked):focus + label::before {
-      border-color: var(--terra-form-checkbox-input-focus-border-color, #396ee5);
-      border-style: var(--terra-form-checkbox-input-focus-border-style, solid);
-      border-width: var(--terra-form-checkbox-input-focus-border-width, 2px);
+      box-shadow: var(--terra-form-checkbox-input-focus-box-shadow, 0 0 0 0.0625em #4a90e2);
     }
   }
 
   /* Input + label focus styling utilized in Clinical. */
   .focus {
-    box-shadow: var(--terra-control-focus-box-shadow, 0px 0px 5px 1px rgba(0,115,255,1));
+    box-shadow: var(--terra-control-focus-box-shadow, none);
   }
 }
