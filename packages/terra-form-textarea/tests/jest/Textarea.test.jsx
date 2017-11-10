@@ -1,3 +1,4 @@
+/* globals spyOn */
 import React from 'react';
 import Textarea from '../../src/Textarea';
 
@@ -62,16 +63,68 @@ it('should set the rows attribute appropriate when it is passed into the textare
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should set the onChange and onFocus functions appropriately when the textarea is autoResizable', () => {
+  const textarea = <Textarea isAutoResizable onFocus={() => {}} onChange={() => {}} />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should set the textarea as auto resizable when isAutoResizable is passed into the component', () => {
   const textarea = <Textarea isAutoResizable />;
   const wrapper = shallow(textarea);
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should set the onChange and onFocus functions appropriately when the textarea is autoResizable', () => {
-  const textarea = <Textarea isAutoResizable onFocus={() => {}} onChange={() => {}} />;
+it('should set the textarea to resizable when viewed on a large device', () => {
+  spyOn(window, 'matchMedia').and.returnValue({ matches: false });
+  const textarea = <Textarea isAutoResizable />;
   const wrapper = shallow(textarea);
   expect(wrapper).toMatchSnapshot();
+});
+
+it('should not set the textarea to resizable when viewed on browser with ontouchstart', () => {
+  spyOn(window, 'matchMedia').and.returnValue({ matches: true });
+  window.ontouchstart = 'true';
+
+  const textarea = <Textarea isAutoResizable />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+
+  delete window.ontouchstart;
+});
+
+it('should not set the textarea to resizable when viewed on browser with DocumentTouch', () => {
+  spyOn(window, 'matchMedia').and.returnValue({ matches: true });
+  window.DocumentTouch = () => {};
+  window.DocumentTouch.prototype = Document.prototype;
+
+  const textarea = <Textarea isAutoResizable />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+
+  delete window.DocumentTouch;
+});
+
+it('should not set the textarea to resizable when viewed on browser with maxTouchPoints', () => {
+  spyOn(window, 'matchMedia').and.returnValue({ matches: true });
+  navigator.maxTouchPoints = 1;
+
+  const textarea = <Textarea isAutoResizable />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+
+  navigator.maxTouchPoints = 0;
+});
+
+it('should not set the textarea to resizable when viewed on browser with msMaxTouchPoints', () => {
+  spyOn(window, 'matchMedia').and.returnValue({ matches: true });
+  navigator.msMaxTouchPoints = 1;
+
+  const textarea = <Textarea isAutoResizable />;
+  const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+
+  navigator.msMaxTouchPoints = null;
 });
 
 it('should set the textarea to disabled when passed into the component', () => {

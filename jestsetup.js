@@ -16,5 +16,7 @@ console.error = (message) => {
   }
 };
 
+window.matchMedia = () => ({ matches: true });
+
 const htmlTag = document.getElementsByTagName('html')[0];
 htmlTag.setAttribute('dir', 'ltr');

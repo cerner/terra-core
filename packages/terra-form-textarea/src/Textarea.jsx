@@ -7,6 +7,16 @@ import styles from './Textarea.scss';
 
 const cx = classNames.bind(styles);
 
+const isMobileDevice = () =>
+  window.matchMedia('(max-width: 1024px)').matches &&
+  (
+    'ontouchstart' in window ||
+    // eslint-disable-next-line no-undef
+    (window.DocumentTouch && document instanceof DocumentTouch) ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+
 const TEXTAREA_ROW_SIZES = {
   small: 2,
   medium: 5,
@@ -79,6 +89,7 @@ class Textarea extends React.Component {
   constructor(props) {
     super(props);
 
+    this.isMobileDevice = isMobileDevice();
     this.onChange = this.onChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
   }
@@ -88,13 +99,13 @@ class Textarea extends React.Component {
     this.textarea.currentLineHeight = lineHeight;
     this.setBaseHeights();
 
-    if (this.props.isAutoResizable) {
+    if (this.props.isAutoResizable && !this.isMobileDevice) {
       this.resizeTextarea();
     }
   }
 
   onFocus(event) {
-    if (this.props.isAutoResizable) {
+    if (this.props.isAutoResizable && !this.isMobileDevice) {
       const lineHeight = Math.ceil(parseInt(window.getComputedStyle(this.textarea).lineHeight, 0));
 
       if (this.textarea.currentLineHeight !== lineHeight) {
@@ -109,7 +120,7 @@ class Textarea extends React.Component {
   }
 
   onChange(event) {
-    if (this.props.isAutoResizable) {
+    if (this.props.isAutoResizable && !this.isMobileDevice) {
       this.resizeTextarea();
     }
 
@@ -159,7 +170,7 @@ class Textarea extends React.Component {
       'textarea',
       { 'form-error': isInvalid },
       { 'full-size': size === 'full' },
-      { resizable: isAutoResizable },
+      { resizable: isAutoResizable && !this.isMobileDevice },
       additionalTextareaProps.className,
     ]);
 

@@ -15,6 +15,10 @@ const FormTests = () => (
       <li><Link to="/tests/form-textarea-tests/full">Textarea - Full</Link></li>
       <li><Link to="/tests/form-textarea-tests/invalid">Textarea - Invalid</Link></li>
       <li><Link to="/tests/form-textarea-tests/rows">Textarea - Manually set rows</Link></li>
+      <li><Link to="/tests/form-textarea-tests/mobile-document-touch">Textarea - Mobile (DocumentTouch test)</Link></li>
+      <li><Link to="/tests/form-textarea-tests/mobile-ontouchstart">Textarea - Mobile (ontouchstart test)</Link></li>
+      <li><Link to="/tests/form-textarea-tests/mobile-max-touch-points">Textarea - Mobile (maxTouchPoints test)</Link></li>
+      <li><Link to="/tests/form-textarea-tests/mobile-ms-max-touch-points">Textarea - Mobile (msMaxTouchPoints test)</Link></li>
     </ul>
   </div>
 );

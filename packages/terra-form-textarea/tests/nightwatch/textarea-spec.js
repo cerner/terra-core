@@ -70,6 +70,58 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.expect.element('textarea').to.have.attribute('rows').equals('5');
   },
+  'Does not auto-resize textareas when ontouchstart exists and browser width < 1024': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/mobile-ontouchstart`);
+    browser.clearValue('textarea');
+    browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+    browser.windowSize('width', (result) => {
+      if (result.value.width < 1024) {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('2');
+      } else {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('10');
+      }
+    });
+  },
+  'Does not auto-resize textareas when DocumentTouch exists and browser width < 1024': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/mobile-document-touch`);
+    browser.clearValue('textarea');
+    browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+    browser.windowSize('width', (result) => {
+      if (result.value.width < 1024) {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('2');
+      } else {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('10');
+      }
+    });
+  },
+  'Does not auto-resize textareas when maxTouchPoints exists and browser width < 1024': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/mobile-max-touch-points`);
+    browser.clearValue('textarea');
+    browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+    browser.windowSize('width', (result) => {
+      if (result.value.width < 1024) {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('2');
+      } else {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('10');
+      }
+    });
+  },
+  'Does not auto-resize textareas when msMaxTouchPoints exists and browser width < 1024': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/mobile-ms-max-touch-points`);
+    browser.clearValue('textarea');
+    browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+    browser.windowSize('width', (result) => {
+      if (result.value.width < 1024) {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('2');
+      } else {
+        browser.expect.element('textarea').to.have.attribute('rows').equals('10');
+      }
+    });
+  },
   'Displays an invalid textarea with the appropriate class': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-textarea-tests/invalid`);
     browser.expect.element('textarea').to.have.attribute('class').which.contains('form-error');

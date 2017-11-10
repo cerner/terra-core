@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should not set the textarea to resizable when viewed on browser with DocumentTouch 1`] = `
+<textarea
+  className="textarea"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  onFocus={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
+exports[`should not set the textarea to resizable when viewed on browser with maxTouchPoints 1`] = `
+<textarea
+  className="textarea"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  onFocus={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
+exports[`should not set the textarea to resizable when viewed on browser with msMaxTouchPoints 1`] = `
+<textarea
+  className="textarea"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  onFocus={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
+exports[`should not set the textarea to resizable when viewed on browser with ontouchstart 1`] = `
+<textarea
+  className="textarea"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  onFocus={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
 exports[`should render a TextArea when all the possible props are passed into it 1`] = `
 <textarea
   aria-required="true"
@@ -173,6 +221,18 @@ exports[`should set the textarea to disabled when passed into the component 1`] 
 exports[`should set the textarea to invalid when isInvalid is passed into the component 1`] = `
 <textarea
   className="textarea form-error"
+  disabled={false}
+  name={null}
+  onChange={[Function]}
+  onFocus={[Function]}
+  required={false}
+  rows={2}
+/>
+`;
+
+exports[`should set the textarea to resizable when viewed on a large device 1`] = `
+<textarea
+  className="textarea resizable"
   disabled={false}
   name={null}
   onChange={[Function]}
