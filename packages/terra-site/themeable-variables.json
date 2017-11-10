@@ -131,7 +131,6 @@
     "--terra-divider-border-top-width": "1px"
   },
   "Field": {
-    "--terra-form-field-font-family": "inherit",
     "--terra-form-field-margin-bottom": "1.428em",
     "--terra-form-field-inline-margin-right": "0.7143em",
     "--terra-form-field-label-font-size": "1rem",
