@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Handle unacceptable default dates.
 
+1.2.0 - (November 7, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.1.0 - (October 31, 2017)
 ------------------
 ### Changed
