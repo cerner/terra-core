@@ -2,4 +2,8 @@ import React from 'react';
 
 import Spacer from '../../lib/Spacer';
 
-export default () => <Spacer id="spacer">Default Spacer Component</Spacer>;
+export default () => (
+  <div className="spacing-demo spacer-demo-margin">
+    <Spacer id="spacer">Test Component</Spacer>
+  </div>
+);

@@ -2,7 +2,6 @@
 @import './mixins';
 
 :local {
-  /* stylelint-disable selector-class-pattern  */
   .margin-top-none {
     margin-top: 0;
   }
@@ -326,5 +325,4 @@
   .is-inline-block {
     display: inline-block;
   }
-  /* stylelint-enable */
 }

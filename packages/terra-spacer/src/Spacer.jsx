@@ -65,6 +65,7 @@ const defaultProps = {
   paddingLeft: 'none',
   paddingRight: 'none',
   isInlineBlock: false,
+  bps: null,
 };
 
 const Spacer = ({
