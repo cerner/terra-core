@@ -5,7 +5,7 @@ class TextareaExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      area1: 'I automatically resize as you type in more information I automatically resize as you type in more information I automatically resize as you type in more information. I automatically resize as you type in more information. I automatically resize as you type in more information. I automatically resize as you type in more information. I automatically resize as you type in more information I automatically resize as you type in more informationI automatically resize as you type in more informationI automatically resize as you type in more informationI automatically resize as you type in more informationI automatically resize as you type in more informationI automatically resize as you type in more information',
+      area1: 'I automatically resize as you type in more information (Except in Mobile)',
       area2: 'Hello! I am a Software Engineer in Kansas City! Leaving this as blank makes this input invalid.',
       area3: 'I am full container width and height, making me non resizable.',
     };
@@ -32,7 +32,7 @@ class TextareaExamples extends React.Component {
         <form>
           <Textarea defaultValue="I'm Disabled" disabled size="small" />
           <Textarea defaultValue="I'm Disabled with error" isInvalid disabled size="small" />
-          <Textarea name="name" value={this.state.area1} required onChange={this.handleArea1Change} size="large" isAutoResizable />
+          <Textarea name="name" value={this.state.area1} required onChange={this.handleArea1Change} size="medium" isAutoResizable />
           <Textarea
             name="profile_description"
             value={this.state.area2}
