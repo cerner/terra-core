@@ -137,6 +137,7 @@
     "--terra-form-field-label-margin-bottom": "0.357em",
     "--terra-form-field-label-color": "rgba(0, 0, 0, 0.8)",
     "--terra-form-field-label-font-weight": "bold",
+    "--terra-form-field-label-error-icon-display": "none",
     "--terra-form-field-label-error-icon-padding-right": "0.357em",
     "--terra-form-field-label-required-color": "#ff232a",
     "--terra-form-field-label-required-padding-right": "0.357em",
