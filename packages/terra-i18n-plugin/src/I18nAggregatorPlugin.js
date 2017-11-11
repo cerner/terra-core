@@ -65,6 +65,7 @@ function readTranslations(languageMessages, translationsDirectory, inputFileSyst
       try {
         Object.assign(languageMessages[language], JSON.parse(inputFileSystem.readFileSync(translationFile, 'utf8')));
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.warn(`Translation file ${language}.json not found for ${translationsDirectory}`);
       }
     });
@@ -74,8 +75,10 @@ function readTranslations(languageMessages, translationsDirectory, inputFileSyst
 }
 
 // Aggregate all translation messages under a custom directory
-function aggregateCustomDirectory(languageMessages, rootDir, inputFileSystem) {
-  findDirectories('translations', rootDir, inputFileSystem)
+function aggregateCustomDirectory(languageMessages, translationsDirectory, inputFileSystem) {
+  // First find all the translations folder paths under translationsDirectory
+  // and then read the messages from each of them
+  findDirectories('translations', translationsDirectory, inputFileSystem)
     .forEach(dir => readTranslations(languageMessages, dir, inputFileSystem));
 }
 
@@ -114,9 +117,9 @@ function aggregateTranslationMessages(options, inputFileSystem) {
   // Aggregate translation messages for node_modules
   languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, inputFileSystem);
   // Aggregate translation messages for custom directory
-  const customTransDir = options.customTransDir;
-  if (customTransDir) {
-    aggregateCustomDirectory(languageMessages, customTransDir, inputFileSystem);
+  const translationsDirectory = options.translationsDirectory;
+  if (translationsDirectory) {
+    aggregateCustomDirectory(languageMessages, translationsDirectory, inputFileSystem);
   }
   return languageMessages;
 }

@@ -23,7 +23,7 @@ function createCompiler() {
 describe('i18n-aggregator-plugin', () => {
   const supportedLocales = ['en', 'es', 'pt'];
   const baseDirectory = path.join('packages', 'terra-i18n-plugin', 'tests', 'fixtures');
-  const customTransDir = path.join(baseDirectory, 'customFolder');
+  const translationsDirectory = path.join(baseDirectory, 'customFolder');
 
   describe('when throwing errors when plugin options are not provided', () => {
     const compiler = createCompiler();
@@ -136,7 +136,7 @@ describe('i18n-aggregator-plugin', () => {
       new I18nAggregatorPlugin({
         baseDirectory,
         supportedLocales,
-        customTransDir,
+        translationsDirectory,
       }).apply(compiler);
       compiler._plugins['after-environment'][0]();
     });
