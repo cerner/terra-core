@@ -23,12 +23,34 @@ function getDirectories(srcPath, inputFileSystem) {
   return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-// Find all descendant directories by name under a root directory and return an array
-function findDirectories(dirName, rootDir, inputFileSystem) {
+/* Find all descendant directories by a target name under the current directory
+   and return an array of the target folder paths
+   Assume a directory structure:
+   A: {
+     B,
+     C: {
+        B
+        D
+      },
+      E: {
+        B
+      },
+      F: {
+        G
+      }
+   }
+   findDirectories(B, A, inputFileSystem) returns: [A/B, A/C/B, A/E/B]
+*/
+
+function findDirectories(dirName, currentDirectory, inputFileSystem) {
   const result = [];
-  const subDirs = getDirectories(rootDir, inputFileSystem);
-  result.push(subDirs.filter(dir => dir === dirName).map(dir => path.join(rootDir, dir)));
-  subDirs.forEach(dir => result.push(findDirectories(dirName, path.join(rootDir, dir), inputFileSystem)));
+  // Get all current children directories
+  const childrenDirs = getDirectories(currentDirectory, inputFileSystem);
+  // Filter current childrenDirs by the target directory name and store their paths
+  result.push(childrenDirs.filter(dir => dir === dirName).map(dir => path.join(currentDirectory, dir)));
+  // Go into each childrenDir and search for target directory path
+  childrenDirs.forEach(dir => result.push(findDirectories(dirName, path.join(currentDirectory, dir), inputFileSystem)));
+  // Flatten the result into one-dimensional array
   return [].concat(...result);
 }
 
