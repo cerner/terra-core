@@ -31,20 +31,25 @@ exports[`renders small banner that contains all valid information 1`] = `
     className="person-details"
   >
     <DemographicsBannerValue
+      key="age"
       value="25 Years"
     />
     <DemographicsBannerValue
+      key="gender"
       value="Male"
     />
     <DemographicsBannerValue
+      key="dob"
       label="DOB"
       value="May 9, 1993"
     />
     <DemographicsBannerValue
+      key="identifier-MRN"
       label="MRN"
       value={12343}
     />
     <DemographicsBannerValue
+      key="identifier-REA"
       label="REA"
       value="3JSDA"
     />
