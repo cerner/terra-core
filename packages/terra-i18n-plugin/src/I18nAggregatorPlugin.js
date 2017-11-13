@@ -23,7 +23,6 @@ function getDirectories(srcPath, inputFileSystem) {
   return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-// Aggregate all translation messages under node_modules
 function aggregateDirectory(languageMessages, currentDirectory, searchNodeModules, inputFileSystem) {
   // Check the directory for translations
   const translationsDirectory = path.resolve(currentDirectory, 'translations');
@@ -44,6 +43,7 @@ function aggregateDirectory(languageMessages, currentDirectory, searchNodeModule
   } catch (e) {
     // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
+
   // Check the directory's node_modules for translation files
   const modulePath = path.resolve(currentDirectory, searchNodeModules ? 'node_modules' : '');
   try {
