@@ -6,9 +6,12 @@
     color: var(terra-form-checkbox-font-color, rgb(0, 0, 0));
     display: inline-block;
     font-family: inherit;
-    font-size: var(terra-form-checkbox-font-size, 0.875rem);
     margin-right: var(terra-form-checkbox-margin-right, 2em);
     margin-top: var(terra-form-checkbox-margin-top, 0.625em);
+
+    label {
+      font-size: var(terra-form-checkbox-font-size, 0.875rem);
+    }
 
     /* Hide actual input element */
     input:not(:checked),
