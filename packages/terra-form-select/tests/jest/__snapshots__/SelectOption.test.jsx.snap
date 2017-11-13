@@ -64,3 +64,16 @@ exports[`should render an Option with children 1`] = `
   </div>
 </li>
 `;
+
+exports[`should render an Option with display when both display and children props are set 1`] = `
+<li
+  aria-disabled={false}
+  className="option is-selected"
+  data-value="a"
+  disabled={false}
+  role="option"
+  tabIndex="0"
+>
+  Apple
+</li>
+`;

@@ -42,7 +42,13 @@ class SelectOption extends React.Component {
   }
 
   componentDidMount() {
-    if (this.optionNode) {
+    if (this.optionNode && this.props.isSelected) {
+      this.optionNode.focus();
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.optionNode && this.props.isSelected) {
       this.optionNode.focus();
     }
   }
@@ -78,7 +84,7 @@ class SelectOption extends React.Component {
         className={optionClassNames}
         data-value={value}
         disabled={disabled}
-        ref={isSelected ? this.setOptionRef : null}
+        ref={this.setOptionRef}
       >
         {display || children}
       </li>

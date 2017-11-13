@@ -39,7 +39,7 @@ const propTypes = {
   value: PropTypes.string,
 
   /**
-   * Select options
+   * Select options.
    */
   children: PropTypes.node.isRequired,
 
@@ -80,6 +80,28 @@ const contextTypes = {
 };
 
 class Select extends React.Component {
+  static handleArrowNavigation(event) {
+    if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.UP_ARROW) {
+      let previousFocus = event.target.previousSibling;
+      while (previousFocus && previousFocus.tabIndex < 0) {
+        previousFocus = previousFocus.previousSibling;
+        if (!previousFocus) {
+          return;
+        }
+      }
+      previousFocus.focus();
+    } else if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
+      let nextFocus = event.target.nextSibling;
+      while (nextFocus && nextFocus.tabIndex < 0) {
+        nextFocus = nextFocus.nextSibling;
+        if (!nextFocus) {
+          return;
+        }
+      }
+      nextFocus.focus();
+    }
+  }
+
   constructor(props, context) {
     super(props, context);
     this.getInitialState = this.getInitialState.bind(this);
@@ -130,36 +152,20 @@ class Select extends React.Component {
 
   wrapOnKeyDown(option) {
     return (event) => {
-      if (option.props.onKeyDown) {
-        option.props.onKeyDown(event);
-      }
-
       if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === SelectUtils.KEYCODES.ENTER) {
         this.handleSelection(event, option);
-      } else if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.UP_ARROW) {
-        let previousFocus = event.target.previousSibling;
-        while (previousFocus && previousFocus.tabIndex < 0) {
-          previousFocus = previousFocus.previousSibling;
-          if (!previousFocus) {
-            return;
-          }
-        }
-        previousFocus.focus();
-      } else if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
-        let nextFocus = event.target.nextSibling;
-        while (nextFocus && nextFocus.tabIndex < 0) {
-          nextFocus = nextFocus.nextSibling;
-          if (!nextFocus) {
-            return;
-          }
-        }
-        nextFocus.focus();
+      }
+
+      Select.handleArrowNavigation(event);
+
+      if (option.props.onKeyDown) {
+        option.props.onKeyDown(event);
       }
     };
   }
 
   handleSelection(event, option) {
-    if (this.props.onChange && option.props.value !== this.state.value) {
+    if (this.props.onChange && option.props.value !== this.state.selectedValue) {
       this.props.onChange(event, option.props.value);
     }
 
@@ -227,6 +233,7 @@ class Select extends React.Component {
     const clonedChildren = React.Children.map(children, (child) => {
       let isSelected = false;
 
+      // Check if child is the selected option
       if (child.props.value === value || child.props.value === this.state.selectedValue) {
         selectedValue = child.props.value;
         display = child.props.display || child.props.children;
@@ -240,10 +247,19 @@ class Select extends React.Component {
       });
     });
 
+    // If there is no selected option, or none of the options match the selected value, create the default option.
     if (!selectedValue) {
       display = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
       selectedValue = '';
-      defaultOption = <SelectOption value={selectedValue} display={display} tabIndex="-1" isSelected className={cx('default-option')} />;
+      defaultOption = (
+        <SelectOption
+          value={selectedValue}
+          display={display}
+          isSelected
+          onKeyDown={Select.handleArrowNavigation}
+          className={cx('default-option')}
+        />
+      );
       isDefaultDisplay = true;
     }
 

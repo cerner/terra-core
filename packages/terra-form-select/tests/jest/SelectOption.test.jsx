@@ -30,3 +30,9 @@ it('should render an Option with children', () => {
   const wrapper = shallow(option);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should render an Option with display when both display and children props are set', () => {
+  const option = <Option value="a" display="Apple" isSelected><div>child</div></Option>;
+  const wrapper = shallow(option);
+  expect(wrapper).toMatchSnapshot();
+});

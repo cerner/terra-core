@@ -71,9 +71,42 @@ it('should render Select with default value', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render Select with a value set', () => {
+  const select = (
+    <Select value="b">
+      <Select.Option value="m" display="moo" key="m" />
+      <Select.Option value="b" display="boo" key="b" />
+    </Select>
+  );
+  const wrapper = shallow(select, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render Select with onChange', () => {
   const select = (
     <Select onChange={() => {}}>
+      <Select.Option value="m" display="moo" key="m" />
+      <Select.Option value="b" display="boo" key="b" />
+    </Select>
+  );
+  const wrapper = shallow(select, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render Select with requestFocus', () => {
+  const select = (
+    <Select requestFocus={() => {}}>
+      <Select.Option value="m" display="moo" key="m" />
+      <Select.Option value="b" display="boo" key="b" />
+    </Select>
+  );
+  const wrapper = shallow(select, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render Select with releaseFocus', () => {
+  const select = (
+    <Select releaseFocus={() => {}}>
       <Select.Option value="m" display="moo" key="m" />
       <Select.Option value="b" display="boo" key="b" />
     </Select>
