@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* MultiSelectableRows component
+
+1.15.0 - (November 7, 2017)
+------------------
+### Changed
+* Minor version bump
 
 1.14.0 - (October 24, 2017)
 ------------------

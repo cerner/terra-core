@@ -1,0 +1,292 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selectedIndexes should only allow the first rows up to the max count to be selected 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={true}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      0,
+      1,
+    ]
+  }
+>
+  <TableRow
+    className="PERSON_1"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_3"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`selectedIndexes should only allow the first rows up to the max count to be selected 2`] = `
+<SelectableTableRows
+  disableUnselectedRows={true}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      0,
+      1,
+    ]
+  }
+>
+  <TableRow
+    className="PERSON_1"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_3"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`should render MultiSelectableRows one selectable row and one non-selectable row 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={Array []}
+>
+  <TableRow
+    className="PERSON_0"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    isSelectable={false}
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`should render MultiSelectableRows tag 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={Array []}
+>
+  <TableRow
+    className="PERSON_0"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`should render MultiSelectableRows with no rows 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={true}
+  onChange={[Function]}
+  selectedIndexes={Array []}
+/>
+`;
+
+exports[`should render MultiSelectableRows with one row 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={Array []}
+>
+  <TableRow
+    className="PERSON_0"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`should select a row 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={Array []}
+>
+  <TableRow
+    className="PERSON_0"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`should select a row 2`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={Array []}
+>
+  <TableRow
+    className="PERSON_0"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_1"
+    isSelected={false}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;

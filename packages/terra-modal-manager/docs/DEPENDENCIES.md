@@ -6,7 +6,7 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-base | ^2.6.1 | ^15.4.2 | The base component sets minimal global styles for an application. |
-| terra-modal | ^1.13.0 | ^15.4.2 | Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button. |
+| terra-modal | ^1.14.0 | ^15.4.2 | Modals are used to display content in a layer above the app. Modals consist of an overlay and container. Higher order components can provide the modal dialog with a header, body, and close button. |
 | terra-responsive-element | ^1.11.1 | ^15.4.2 | The terra-responsive-element conditionally renders components based on viewport size |
 | terra-slide-group | ^1.11.1 | ^15.4.2 | A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion |
 
