@@ -1,14 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render SingleSelectableRows one selectable row and one non-selectable row 1`] = `
+exports[`selectedIndexes should only allow the first rows up to the max count to be selected 1`] = `
 <SelectableTableRows
-  disableUnselectedRows={false}
+  disableUnselectedRows={true}
   onChange={[Function]}
   selectedIndexes={
     Array [
-      -1,
+      0,
+      1,
     ]
   }
+>
+  <TableRow
+    className="PERSON_1"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_3"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`selectedIndexes should only allow the first rows up to the max count to be selected 2`] = `
+<SelectableTableRows
+  disableUnselectedRows={true}
+  onChange={[Function]}
+  selectedIndexes={
+    Array [
+      0,
+      1,
+    ]
+  }
+>
+  <TableRow
+    className="PERSON_1"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_2"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+  <TableRow
+    className="PERSON_3"
+    isSelected={true}
+  >
+    <TableCell
+      content="John Smith"
+    />
+    <TableCell
+      content="123 Adams Drive"
+    />
+    <TableCell
+      content="111-222-3333"
+    />
+  </TableRow>
+</SelectableTableRows>
+`;
+
+exports[`should render MultiSelectableRows one selectable row and one non-selectable row 1`] = `
+<SelectableTableRows
+  disableUnselectedRows={false}
+  onChange={[Function]}
+  selectedIndexes={Array []}
 >
   <TableRow
     className="PERSON_0"
@@ -41,15 +149,11 @@ exports[`should render SingleSelectableRows one selectable row and one non-selec
 </SelectableTableRows>
 `;
 
-exports[`should render SingleSelectableRows tag 1`] = `
+exports[`should render MultiSelectableRows tag 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
-  selectedIndexes={
-    Array [
-      -1,
-    ]
-  }
+  selectedIndexes={Array []}
 >
   <TableRow
     className="PERSON_0"
@@ -82,27 +186,19 @@ exports[`should render SingleSelectableRows tag 1`] = `
 </SelectableTableRows>
 `;
 
-exports[`should render SingleSelectableRows with no rows 1`] = `
+exports[`should render MultiSelectableRows with no rows 1`] = `
 <SelectableTableRows
-  disableUnselectedRows={false}
+  disableUnselectedRows={true}
   onChange={[Function]}
-  selectedIndexes={
-    Array [
-      null,
-    ]
-  }
+  selectedIndexes={Array []}
 />
 `;
 
-exports[`should render SingleSelectableRows with one row 1`] = `
+exports[`should render MultiSelectableRows with one row 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
-  selectedIndexes={
-    Array [
-      -1,
-    ]
-  }
+  selectedIndexes={Array []}
 >
   <TableRow
     className="PERSON_0"
@@ -121,15 +217,11 @@ exports[`should render SingleSelectableRows with one row 1`] = `
 </SelectableTableRows>
 `;
 
-exports[`should select an row 1`] = `
+exports[`should select a row 1`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
-  selectedIndexes={
-    Array [
-      -1,
-    ]
-  }
+  selectedIndexes={Array []}
 >
   <TableRow
     className="PERSON_0"
@@ -162,15 +254,11 @@ exports[`should select an row 1`] = `
 </SelectableTableRows>
 `;
 
-exports[`should select an row 2`] = `
+exports[`should select a row 2`] = `
 <SelectableTableRows
   disableUnselectedRows={false}
   onChange={[Function]}
-  selectedIndexes={
-    Array [
-      -1,
-    ]
-  }
+  selectedIndexes={Array []}
 >
   <TableRow
     className="PERSON_0"
