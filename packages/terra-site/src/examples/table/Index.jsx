@@ -18,16 +18,16 @@ import TableCellSrc from '!raw-loader!terra-table/src/TableCell';
 import TableSubheaderSrc from '!raw-loader!terra-table/src/TableSubheader';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
-import NoStripedTable from './NoStripedTable';
-import NoPaddingTable from './NoPaddingTable';
-import StripedTable from './StripedTable';
-import TableWithHighlightedRows from './TableWithHighlightedRows';
-import SingleRowSelectableTable from './SingleRowSelectableTable';
-import TableWithNonSelectableRow from './TableWithNonSelectableRow';
-import TableWithSortingIndicator from './TableWithSortingIndicator';
-import TableWithLongContent from './TableWithLongContent';
-import TableWithCustomCells from './TableWithCustomCells';
-import TableWithSubheaders from './TableWithSubheaders';
+import NoStripedTable from './examples/NoStripedTable';
+import NoPaddingTable from './examples/NoPaddingTable';
+import StripedTable from './examples/StripedTable';
+import TableWithHighlightedRows from './examples/TableWithHighlightedRows';
+import SingleRowSelectableTable from './examples/SingleRowSelectableTable';
+import TableWithNonSelectableRow from './examples/TableWithNonSelectableRow';
+import TableWithSortingIndicator from './examples/TableWithSortingIndicator';
+import TableWithLongContent from './examples/TableWithLongContent';
+import TableWithCustomCells from './examples/TableWithCustomCells';
+import TableWithSubheaders from './examples/TableWithSubheaders';
 
 const TableExamples = () => (
   <div>
@@ -56,10 +56,10 @@ const TableExamples = () => (
     <h2>Table with some rows selected. Table will not select or deselect any row</h2>
     <TableWithHighlightedRows />
     <br />
-    <h2>Selectable table</h2>
+    <h2>Single Selectable table</h2>
     <SingleRowSelectableTable />
     <br />
-    <h2>Selectable table with second row as non selectable</h2>
+    <h2>Single Selectable table with second row as non selectable</h2>
     <TableWithNonSelectableRow />
     <br />
     <h2>Table with sorting indicator</h2>
