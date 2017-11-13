@@ -65,7 +65,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('[class*="row"]:nth-child(3)').to.have.attribute('class').which.contains('is-selected');
   },
 
-  'Toggle aria-selected on seletable rows': (browser) => {
+  'Toggle aria-selected on selectable rows': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/default`);
     browser.click('[class*="row"]:nth-child(1)');
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('aria-selected').which.contains('true');
