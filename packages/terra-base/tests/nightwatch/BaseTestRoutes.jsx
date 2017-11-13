@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-
 import React from 'react';
 import { Route } from 'react-router';
 import BaseTests from './BaseTests';

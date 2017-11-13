@@ -9,7 +9,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('div').text.to.contain('en').before(waitInms);
   },
 
-  // new
   'Displays an array of elements as a children': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/base-tests/array-of-children`);
     browser.assert.elementPresent('#one');

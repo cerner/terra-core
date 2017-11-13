@@ -4,7 +4,6 @@ import Base from '../../src/Base';
 // Snapshot Tests
 it('should support rendering a string without translation', () => {
   const base = shallow(<Base>String</Base>);
-
   expect(base).toMatchSnapshot();
 });
 

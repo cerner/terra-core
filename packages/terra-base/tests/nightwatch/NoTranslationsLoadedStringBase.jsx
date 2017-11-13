@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Base from '../../lib/Base';
 
 const BaseNoTranslationsLoaded = () => {
@@ -8,7 +7,6 @@ const BaseNoTranslationsLoaded = () => {
       <div>Translations</div>
     </Base>
   );
-
   return noTranslations;
 };
 
