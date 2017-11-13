@@ -75,6 +75,17 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
+  'Displays a search field that is disabled': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`)
+      .assert.elementPresent('#searchfield')
+      .assert.elementPresent('#searchfield button')
+      .assert.attributeEquals('#searchfield input', 'placeholder', '');
+
+    browser.expect.element('#searchfield input').to.have.attribute('disabled').which.contains('true');
+    browser.expect.element('#searchfield input').to.have.attribute('aria-disabled').which.contains('true');
+  },
+
   'Displays a search field that is strecthed to fill its container': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/search-field-tests/stretched`)
