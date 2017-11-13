@@ -48,6 +48,7 @@ exports[`should mount with one item 1`] = `
           }
           isSelectable={true}
           isSelected={false}
+          key=".$123"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
@@ -95,10 +96,12 @@ exports[`should render with a selectable and non-selectable item 1`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelectable={false}
     isSelected={false}
+    key="124"
   />
 </SelectableList>
 `;
@@ -119,6 +122,7 @@ exports[`should render with isDivided 1`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
 </SelectableList>
 `;
@@ -139,6 +143,7 @@ exports[`should render with items 1`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
   <ListItem
     className="stuff2"
@@ -148,6 +153,7 @@ exports[`should render with items 1`] = `
       </p>
     }
     isSelected={false}
+    key="124"
   />
   <ListItem
     className="stuff3"
@@ -157,6 +163,7 @@ exports[`should render with items 1`] = `
       </p>
     }
     isSelected={false}
+    key="125"
   />
   <ListItem
     className="stuff4"
@@ -166,6 +173,7 @@ exports[`should render with items 1`] = `
       </p>
     }
     isSelected={false}
+    key="126"
   />
   <ListItem
     className="stuff5"
@@ -175,6 +183,7 @@ exports[`should render with items 1`] = `
       </p>
     }
     isSelected={false}
+    key="127"
   />
 </SelectableList>
 `;
@@ -195,6 +204,7 @@ exports[`should select an item when maxSelectionCount is 2 1`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
   <ListItem
     className="stuff2"
@@ -204,6 +214,7 @@ exports[`should select an item when maxSelectionCount is 2 1`] = `
       </p>
     }
     isSelected={false}
+    key="124"
   />
   <ListItem
     className="stuff3"
@@ -213,6 +224,7 @@ exports[`should select an item when maxSelectionCount is 2 1`] = `
       </p>
     }
     isSelected={false}
+    key="125"
   />
   <ListItem
     className="stuff4"
@@ -222,6 +234,7 @@ exports[`should select an item when maxSelectionCount is 2 1`] = `
       </p>
     }
     isSelected={false}
+    key="126"
   />
   <ListItem
     className="stuff5"
@@ -231,6 +244,7 @@ exports[`should select an item when maxSelectionCount is 2 1`] = `
       </p>
     }
     isSelected={false}
+    key="127"
   />
 </SelectableList>
 `;
@@ -251,6 +265,7 @@ exports[`should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
   <ListItem
     className="stuff2"
@@ -260,6 +275,7 @@ exports[`should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     isSelected={false}
+    key="124"
   />
   <ListItem
     className="stuff3"
@@ -269,6 +285,7 @@ exports[`should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     isSelected={false}
+    key="125"
   />
   <ListItem
     className="stuff4"
@@ -278,6 +295,7 @@ exports[`should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     isSelected={false}
+    key="126"
   />
   <ListItem
     className="stuff5"
@@ -287,6 +305,7 @@ exports[`should select an item when maxSelectionCount is 2 2`] = `
       </p>
     }
     isSelected={false}
+    key="127"
   />
 </SelectableList>
 `;
@@ -307,6 +326,7 @@ exports[`should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
   <ListItem
     className="stuff2"
@@ -316,6 +336,7 @@ exports[`should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     isSelected={false}
+    key="124"
   />
   <ListItem
     className="stuff3"
@@ -325,6 +346,7 @@ exports[`should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     isSelected={false}
+    key="125"
   />
   <ListItem
     className="stuff4"
@@ -334,6 +356,7 @@ exports[`should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     isSelected={false}
+    key="126"
   />
   <ListItem
     className="stuff5"
@@ -343,6 +366,7 @@ exports[`should select an item when maxSelectionCount is 2 3`] = `
       </p>
     }
     isSelected={false}
+    key="127"
   />
 </SelectableList>
 `;
@@ -363,6 +387,7 @@ exports[`should select an item when maxSelectionCount is 2 4`] = `
       </p>
     }
     isSelected={false}
+    key="123"
   />
   <ListItem
     className="stuff2"
@@ -372,6 +397,7 @@ exports[`should select an item when maxSelectionCount is 2 4`] = `
       </p>
     }
     isSelected={false}
+    key="124"
   />
   <ListItem
     className="stuff3"
@@ -381,6 +407,7 @@ exports[`should select an item when maxSelectionCount is 2 4`] = `
       </p>
     }
     isSelected={false}
+    key="125"
   />
   <ListItem
     className="stuff4"
@@ -390,6 +417,7 @@ exports[`should select an item when maxSelectionCount is 2 4`] = `
       </p>
     }
     isSelected={false}
+    key="126"
   />
   <ListItem
     className="stuff5"
@@ -399,6 +427,7 @@ exports[`should select an item when maxSelectionCount is 2 4`] = `
       </p>
     }
     isSelected={false}
+    key="127"
   />
 </SelectableList>
 `;

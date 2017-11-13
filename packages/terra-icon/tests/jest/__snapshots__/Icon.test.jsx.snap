@@ -25,7 +25,7 @@ exports[`Icon IconComment should render IconBase with custom-class 1`] = `
   data-name="Layer 1"
   focusable="false"
   height="1em"
-  viewbox="0 0 48 48"
+  viewBox="0 0 48 48"
   width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
