@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Add ability to disable and stretch to fill its container
 
 1.15.0 - (November 7, 2017)
 ------------------
