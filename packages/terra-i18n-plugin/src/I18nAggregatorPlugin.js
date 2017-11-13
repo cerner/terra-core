@@ -44,7 +44,7 @@ function aggregateDirectory(languageMessages, currentDirectory, searchNodeModule
     // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
 
-  // Check the directory's node_modules for translation files
+  // If searchNodeModules is true, check the directory's node_module for translation files, otherwise check all children directories
   const modulePath = path.resolve(currentDirectory, searchNodeModules ? 'node_modules' : '');
   try {
     getDirectories(modulePath, inputFileSystem).forEach((module) => {
