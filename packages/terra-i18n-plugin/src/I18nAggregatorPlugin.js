@@ -23,38 +23,10 @@ function getDirectories(srcPath, inputFileSystem) {
   return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-/* Find all descendant directories by a target name under the current directory
-   and return an array of the target folder paths
-   Assume a directory structure:
-   A: {
-     B,
-     C: {
-        B
-        D
-      },
-      E: {
-        B
-      },
-      F: {
-        G
-      }
-   }
-   findDirectories(B, A, inputFileSystem) returns: [A/B, A/C/B, A/E/B]
-*/
-
-function findDirectories(dirName, currentDirectory, inputFileSystem) {
-  const result = [];
-  // Get all current children directories
-  const childrenDirs = getDirectories(currentDirectory, inputFileSystem);
-  // Filter current childrenDirs by the target directory name and store their paths
-  result.push(childrenDirs.filter(dir => dir === dirName).map(dir => path.join(currentDirectory, dir)));
-  // Go into each childrenDir and search for target directory path
-  childrenDirs.forEach(dir => result.push(findDirectories(dirName, path.join(currentDirectory, dir), inputFileSystem)));
-  // Flatten the result into one-dimensional array
-  return [].concat(...result);
-}
-
-function readTranslations(languageMessages, translationsDirectory, inputFileSystem) {
+// Aggregate all translation messages under node_modules
+function aggregateDirectory(languageMessages, currentDirectory, searchNodeModules, inputFileSystem) {
+  // Check the directory for translations
+  const translationsDirectory = path.resolve(currentDirectory, 'translations');
   try {
     // Check if the directory exists by attempting to read from it
     inputFileSystem.readdirSync(translationsDirectory);
@@ -72,26 +44,11 @@ function readTranslations(languageMessages, translationsDirectory, inputFileSyst
   } catch (e) {
     // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
-}
-
-// Aggregate all translation messages under a custom directory
-function aggregateCustomDirectory(languageMessages, translationsDirectory, inputFileSystem) {
-  // First find all the translations folder paths under translationsDirectory
-  // and then read the messages from each of them
-  findDirectories('translations', translationsDirectory, inputFileSystem)
-    .forEach(dir => readTranslations(languageMessages, dir, inputFileSystem));
-}
-
-// Aggregate all translation messages under node_modules
-function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem) {
-  // Check the directory for translations
-  const translationsDirectory = path.resolve(currentDirectory, 'translations');
-  readTranslations(languageMessages, translationsDirectory, inputFileSystem);
   // Check the directory's node_modules for translation files
-  const nodeMoudlesPath = path.resolve(currentDirectory, 'node_modules');
+  const modulePath = path.resolve(currentDirectory, searchNodeModules ? 'node_modules' : '');
   try {
-    getDirectories(nodeMoudlesPath, inputFileSystem).forEach((module) => {
-      aggregateDirectory(languageMessages, path.resolve(nodeMoudlesPath, module), inputFileSystem);
+    getDirectories(modulePath, inputFileSystem).forEach((module) => {
+      aggregateDirectory(languageMessages, path.resolve(modulePath, module), searchNodeModules, inputFileSystem);
     });
   } catch (e) {
     // not outputting anything here as the catching of the directories not existing is not an error in this case
@@ -115,11 +72,11 @@ function aggregateTranslationMessages(options, inputFileSystem) {
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
   // Aggregate translation messages for node_modules
-  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, inputFileSystem);
+  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, true, inputFileSystem);
   // Aggregate translation messages for custom directory
   const translationsDirectory = options.translationsDirectory;
   if (translationsDirectory) {
-    aggregateCustomDirectory(languageMessages, translationsDirectory, inputFileSystem);
+    aggregateDirectory(languageMessages, translationsDirectory, false, inputFileSystem);
   }
   return languageMessages;
 }
