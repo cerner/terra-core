@@ -72,11 +72,13 @@ function aggregateTranslationMessages(options, inputFileSystem) {
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
   // Aggregate translation messages for node_modules
-  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, true, inputFileSystem);
+  let searchNodeModules = true;
+  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, searchNodeModules, inputFileSystem);
   // Aggregate translation messages for custom directory
   const translationsDirectory = options.translationsDirectory;
   if (translationsDirectory) {
-    aggregateDirectory(languageMessages, translationsDirectory, false, inputFileSystem);
+    searchNodeModules = false;
+    aggregateDirectory(languageMessages, translationsDirectory, searchNodeModules, inputFileSystem);
   }
   return languageMessages;
 }
