@@ -26,6 +26,10 @@ const propTypes = {
    * Content to be displayed when the tab is selected.
    */
   children: PropTypes.node,
+
+  isDisabled: PropTypes.bool,
+
+  isIconOnly: PropTypes.bool,
 };
 
 const TabPane = ({
@@ -33,11 +37,15 @@ const TabPane = ({
   label,
   customDisplay,
   children,
+  isDisabled,
+  isIconOnly,
   ...customProps
 }) => {
   const attributes = Object.assign({}, customProps);
   const paneClassNames = cx([
     'tab',
+    { 'is-disabled': isDisabled },
+    { 'is-icon-only': isIconOnly },
     attributes.className,
   ]);
 
@@ -45,7 +53,7 @@ const TabPane = ({
     <div role="tab" {...attributes} className={paneClassNames}>
       {customDisplay}
       {customDisplay ? null : icon}
-      {customDisplay ? null : label}
+      {customDisplay || isIconOnly ? null : label}
     </div>
   );
 };

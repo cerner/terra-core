@@ -26,16 +26,23 @@
     min-width: 100px;
   }
 
+  .tab.is-disabled {
+    opacity: 0.3;
+  }
+
+  .tab.is-icon-only {
+    flex: 0 0 auto;
+    min-width: none;
+  }
+
   .tab-menu {
     flex: 0 0 auto;
   }
 
-  .tab-fill {
-    .tab {
-      flex: 1 1 auto;
-      max-width: none;
-      text-align: center;
-    }
+  .tab-fill .tab {
+    flex: 1 1 auto;
+    max-width: none;
+    text-align: center;
   }
 
   .tab,
