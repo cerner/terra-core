@@ -14,43 +14,55 @@ exports[`selectedIndexes should only allow the first rows up to the max count to
   <TableRow
     className="PERSON_1"
     isSelected={true}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_2"
     isSelected={true}
+    key="PERSON_2"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_3"
     isSelected={true}
+    key="PERSON_3"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -70,43 +82,55 @@ exports[`selectedIndexes should only allow the first rows up to the max count to
   <TableRow
     className="PERSON_1"
     isSelected={true}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_2"
     isSelected={true}
+    key="PERSON_2"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_3"
     isSelected={true}
+    key="PERSON_3"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -121,29 +145,37 @@ exports[`should render MultiSelectableRows one selectable row and one non-select
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     isSelectable={false}
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -158,29 +190,37 @@ exports[`should render MultiSelectableRows tag 1`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -203,15 +243,19 @@ exports[`should render MultiSelectableRows with one row 1`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -226,29 +270,37 @@ exports[`should select a row 1`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -263,29 +315,37 @@ exports[`should select a row 2`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
