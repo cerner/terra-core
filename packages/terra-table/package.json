@@ -42,7 +42,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Table.jsx ./src/TableCell.jsx ./src/TableHeader.jsx ./src/TableHeaderCell.jsx ./src/TableRow.jsx ./src/TableRows.jsx ./src/SelectableTableRows.jsx ./src/SingleSelectableRows.jsx ./src/TableSubheader.jsx --out-dir ./docs/props-table",
+    "props-table": "props-table ./src/Table.jsx ./src/TableCell.jsx ./src/TableHeader.jsx ./src/TableHeaderCell.jsx ./src/TableRow.jsx ./src/TableRows.jsx ./src/SelectableTableRows.jsx ./src/SingleSelectableRows.jsx ./src/MultiSelectableRows.jsx ./src/TableSubheader.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
