@@ -41,6 +41,14 @@ exports[`should render a date picker with min and max dates 1`] = `
 />
 `;
 
+exports[`should render a date picker with onCalendarButtonClick 1`] = `
+<DatePicker
+  name="date-input"
+  onCalendarButtonClick={[Function]}
+  utcOffset={0}
+/>
+`;
+
 exports[`should render a date picker with onChange 1`] = `
 <DatePicker
   name="date-input"
@@ -53,6 +61,14 @@ exports[`should render a date picker with onChangeRaw 1`] = `
 <DatePicker
   name="date-input"
   onChangeRaw={[Function]}
+  utcOffset={0}
+/>
+`;
+
+exports[`should render a date picker with onInputFocus 1`] = `
+<DatePicker
+  name="date-input"
+  onInputFocus={[Function]}
   utcOffset={0}
 />
 `;
