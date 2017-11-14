@@ -11,12 +11,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * When true, will disable the field
+   * When true, will disable the field.
    */
   isDisabled: PropTypes.bool,
 
   /**
-   * Whether or not the field should display as a block
+   * Whether or not the field should display as a block.
    */
   isBlock: PropTypes.bool,
 

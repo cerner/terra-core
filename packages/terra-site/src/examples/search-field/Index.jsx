@@ -33,6 +33,7 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldDelayed">Search Field with delay of 2000ms</h2>
     <SearchFieldDelayed />
+    <br />
     <h2 id="searchFieldDisabled">Search Field that is disabled</h2>
     <SearchFieldDisabled />
     <br />
