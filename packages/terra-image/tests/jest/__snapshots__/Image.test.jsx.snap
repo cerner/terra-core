@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render a circle image component with fluid behavior 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#ffe4c4",
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <Image
+    alt="circle"
+    isFluid={true}
+    src=""
+    variant="circle"
+  />
+</div>
+`;
+
 exports[`should render a thumbail image component with fluid behavior 1`] = `
 <img
   alt="thumbnail image"

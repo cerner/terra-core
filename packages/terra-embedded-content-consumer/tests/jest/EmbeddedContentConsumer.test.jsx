@@ -8,7 +8,7 @@ it('should render the embedded content consumer container', () => {
     src="https://www.google.com/"
   />);
 
-  const wrapper = shallow(embeddedContentConsumer);
+  const wrapper = render(embeddedContentConsumer);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -18,7 +18,7 @@ it('should render the embedded content consumer with custom class names', () => 
     className="container"
   />);
 
-  const wrapper = shallow(embeddedContentConsumer);
+  const wrapper = render(embeddedContentConsumer);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -45,11 +45,11 @@ it('should validate the inputs', () => {
   const wrapper = mount(embeddedContentConsumer);
 
   expect(frame).toBeTruthy();
-  expect(wrapper.props().src).toBe(src);
-  expect(wrapper.props().onMount).toBe(onMount);
-  expect(wrapper.props().onLaunch).toBe(onLaunch);
-  expect(wrapper.props().onAuthorize).toBe(onAuthorize);
-  expect(wrapper.props().options).toBe(options);
-  expect(wrapper.props().options.resizeConfig).toBe(resizeConfig);
-  expect(wrapper.props().eventHandlers).toBe(customEvents);
+  expect(wrapper.instance().props.src).toBe(src);
+  expect(wrapper.instance().props.onMount).toBe(onMount);
+  expect(wrapper.instance().props.onLaunch).toBe(onLaunch);
+  expect(wrapper.instance().props.onAuthorize).toBe(onAuthorize);
+  expect(wrapper.instance().props.options).toBe(options);
+  expect(wrapper.instance().props.options.resizeConfig).toBe(resizeConfig);
+  expect(wrapper.instance().props.eventHandlers).toBe(customEvents);
 });
