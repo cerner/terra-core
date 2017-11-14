@@ -19,6 +19,11 @@ describe('Snapshots', () => {
 
     expect(searchField).toMatchSnapshot();
   });
+
+  it('renders a search field with a defaulted value', () => {
+    const searchField = shallow(<SearchField value={'Default'} />);
+    expect(searchField).toMatchSnapshot();
+  });
 });
 
 describe('Manual Search', () => {

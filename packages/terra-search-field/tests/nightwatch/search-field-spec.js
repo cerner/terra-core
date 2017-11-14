@@ -74,4 +74,13 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       });
     });
   },
+
+  'Displays a search field with a default value': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default-value`);
+
+    browser
+      .assert.elementPresent('#searchfield')
+      .assert.elementPresent('#searchfield button')
+      .assert.attributeEquals('#searchfield input', 'value', 'Default');
+  },
 });

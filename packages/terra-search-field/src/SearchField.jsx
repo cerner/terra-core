@@ -34,12 +34,18 @@ const propTypes = {
    * A callback to indicate an invalid search. Sends parameter {String} searchText.
    */
   onInvalidSearch: PropTypes.func,
+
+  /**
+   * The text to display in the search field
+   */
+  value: PropTypes.string,
 };
 
 const defaultProps = {
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
+  value: '',
 };
 
 class SearchField extends React.Component {
@@ -52,7 +58,7 @@ class SearchField extends React.Component {
 
     this.searchTimeout = null;
     this.state = {
-      searchText: '',
+      searchText: this.props.value,
     };
   }
 

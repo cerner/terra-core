@@ -3,6 +3,7 @@
 exports[`Snapshots renders a basic search field 1`] = `
 <div
   className="searchfield"
+  value=""
 >
   <Input
     className="input"
@@ -35,6 +36,7 @@ exports[`Snapshots renders a basic search field 1`] = `
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
   className="searchfield"
+  value=""
 >
   <Input
     className="input"
@@ -67,6 +69,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
   className="searchfield"
+  value=""
 >
   <Input
     className="input"
@@ -76,6 +79,39 @@ exports[`Snapshots renders a search field with a value 1`] = `
     required={false}
     type="search"
     value="Test"
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field with a defaulted value 1`] = `
+<div
+  className="searchfield"
+  value="Default"
+>
+  <Input
+    className="input"
+    name={null}
+    onChange={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
+    value="Default"
   />
   <Button
     className="button"
