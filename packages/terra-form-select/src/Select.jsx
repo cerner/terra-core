@@ -109,6 +109,7 @@ class Select extends React.Component {
     this.getTargetRef = this.getTargetRef.bind(this);
     this.handleOnClick = this.handleOnClick.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+    this.handleKeyboardSearch = this.handleKeyboardSearch.bind(this);
     this.handleOnRequestClose = this.handleOnRequestClose.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.wrapOnClick = this.wrapOnClick.bind(this);
@@ -187,6 +188,23 @@ class Select extends React.Component {
       || event.nativeEvent.keyCode === SelectUtils.KEYCODES.DOWN_ARROW) {
       this.setState({ isOpen: true });
     }
+
+    this.handleKeyboardSearch(event);
+  }
+
+  handleKeyboardSearch(event) {
+    const key = String.fromCharCode(event.nativeEvent.keyCode);
+
+    if (!this.state.isOpen) {
+      const childArray = React.Children.toArray(this.props.children);
+      for (let i = 0; i < childArray.length; i += 1) {
+        const child = childArray[i];
+        if (!child.props.disabled && child.props.display.startsWith(key)) {
+          this.setState({ selectedValue: child.props.value });
+          break;
+        }
+      }
+    }
   }
 
   handleOnRequestClose() {
@@ -228,7 +246,7 @@ class Select extends React.Component {
 
     let selectedValue;
     let display;
-    let defaultOption;
+    let defaultOption = null;
     let isDefaultDisplay = false;
     const clonedChildren = React.Children.map(children, (child) => {
       let isSelected = false;
@@ -286,7 +304,6 @@ class Select extends React.Component {
         {/* eslint-disable jsx-a11y/no-static-element-interactions */}
         <div
           {...attributes}
-          role="listbox"
           className={selectClasses}
           ref={this.setTargetRef}
           onClick={!disabled ? this.handleOnClick : null}

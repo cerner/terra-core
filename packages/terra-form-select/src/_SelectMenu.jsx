@@ -17,10 +17,32 @@ const defaultProps = {
 };
 
 const SelectMenu = (props) => {
+  let menuRef = null;
   const menuClassNames = cx({ 'height-bounded': props.isHeightBounded }, 'menu-list');
 
+  const handleOnKeyDown = (event) => {
+    const key = String.fromCharCode(event.nativeEvent.keyCode);
+    const childrenCount = React.Children.count(props.children);
+    if (menuRef) {
+      for (let i = 0; i < childrenCount; i += 1) {
+        const child = menuRef.children[i];
+        if (child && child.tabIndex === 0 && child.textContent.startsWith(key)) {
+          child.focus();
+          break;
+        }
+      }
+    }
+  };
+
   return (
-    <ul className={menuClassNames}>
+    /* eslint-disable jsx-a11y/no-static-element-interactions */
+    <ul
+      role="listbox"
+      className={menuClassNames}
+      onKeyDown={handleOnKeyDown}
+      ref={(node) => { if (node) { menuRef = node; } }}
+    >
+      {/* eslint-enable jsx-a11y/no-static-element-interactions */}
       {props.children}
     </ul>
   );

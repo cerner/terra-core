@@ -46,7 +46,6 @@ exports[`should render Select with a value set 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -123,7 +122,6 @@ exports[`should render Select with default value 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -208,7 +206,6 @@ exports[`should render Select with onChange 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -294,7 +291,6 @@ exports[`should render Select with releaseFocus 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -380,7 +376,6 @@ exports[`should render Select with requestFocus 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -456,7 +451,6 @@ exports[`should render a Select with name provided 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -533,7 +527,6 @@ exports[`should render a default Select component 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -609,7 +602,6 @@ exports[`should render a disabled Select 1`] = `
     className="select is-disabled"
     onClick={null}
     onKeyDown={null}
-    role="listbox"
     tabIndex="-1"
   >
     <Arrange
@@ -686,7 +678,6 @@ exports[`should render a required Select 1`] = `
     className="select"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange
@@ -762,7 +753,6 @@ exports[`should render an invalid Select 1`] = `
     className="select invalid"
     onClick={[Function]}
     onKeyDown={[Function]}
-    role="listbox"
     tabIndex="0"
   >
     <Arrange

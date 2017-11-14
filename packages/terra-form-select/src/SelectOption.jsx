@@ -76,10 +76,9 @@ class SelectOption extends React.Component {
     ]);
 
     return (
-      // Setting tabIndex before attributes so it can be overridden for the case of the default option
       <li
-        tabIndex={disabled ? '-1' : '0'}
         {...attributes}
+        tabIndex={disabled ? '-1' : '0'}
         role="option"
         className={optionClassNames}
         data-value={value}
