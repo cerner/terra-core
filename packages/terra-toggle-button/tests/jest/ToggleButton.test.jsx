@@ -35,17 +35,17 @@ describe('ToggleButton', () => {
   // Prop Tests
   it('should set buttonAttrs prop correctly', () => {
     const toggleButton = shallow(<ToggleButton buttonAttrs={{ variant: 'link' }} closedButtonText="Show">Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.buttonAttrs).toEqual({ variant: 'link' });
+    expect(toggleButton.instance().props.buttonAttrs).toEqual({ variant: 'link' });
   });
 
   it('should set children prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show">Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.children).toEqual('Test');
+    expect(toggleButton.instance().props.children).toEqual('Test');
   });
 
   it('should set closedButtonText prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show">Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.closedButtonText).toEqual('Show');
+    expect(toggleButton.instance().props.closedButtonText).toEqual('Show');
   });
 
   it('should set icon prop correctly', () => {
@@ -60,39 +60,39 @@ describe('ToggleButton', () => {
 
   it('should set isAnimated prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" isAnimated>Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.isAnimated).toEqual(true);
+    expect(toggleButton.instance().props.isAnimated).toEqual(true);
   });
 
   it('should set isIconAnimated prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" isIconAnimated>Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.isIconAnimated).toEqual(true);
+    expect(toggleButton.instance().props.isIconAnimated).toEqual(true);
   });
 
   it('should set isIconOnly prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" isIconOnly>Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.isIconOnly).toEqual(true);
+    expect(toggleButton.instance().props.isIconOnly).toEqual(true);
   });
 
   it('should set isInitiallyOpen prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" isInitiallyOpen>Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.isInitiallyOpen).toEqual(true);
+    expect(toggleButton.instance().props.isInitiallyOpen).toEqual(true);
   });
 
   it('should set onOpen prop correctly', () => {
     // eslint-disable-next-line no-alert
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" onOpen={() => alert('Opened')}>Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.onOpen.toString()).toEqual('function onOpen() {return alert(\'Opened\');}');
+    expect(toggleButton.instance().props.onOpen.toString()).toEqual('function onOpen() {return alert(\'Opened\');}');
   });
 
   it('should set onClose prop correctly', () => {
     // eslint-disable-next-line no-alert
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" onClose={() => alert('Closed')}>Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.onClose.toString()).toEqual('function onClose() {return alert(\'Closed\');}');
+    expect(toggleButton.instance().props.onClose.toString()).toEqual('function onClose() {return alert(\'Closed\');}');
   });
 
   it('should set openedButtonText prop correctly', () => {
     const toggleButton = shallow(<ToggleButton closedButtonText="Show" openedButtonText="Hide">Test</ToggleButton>);
-    expect(toggleButton.unrendered.props.openedButtonText).toEqual('Hide');
+    expect(toggleButton.instance().props.openedButtonText).toEqual('Hide');
   });
 
  // Attributes

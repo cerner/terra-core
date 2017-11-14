@@ -17,7 +17,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
         data-name="Layer 1"
         focusable="false"
         height="36"
-        viewbox="0 0 48 48"
+        viewBox="0 0 48 48"
         width="36"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -50,7 +50,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
         data-name="Layer 1"
         focusable="false"
         height="36"
-        viewbox="0 0 48 48"
+        viewBox="0 0 48 48"
         width="36"
         xmlns="http://www.w3.org/2000/svg"
       >
