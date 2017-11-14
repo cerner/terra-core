@@ -7,12 +7,15 @@ exports[`should render a default table row 1`] = `
 >
   <TableCell
     content="John Smith"
+    key="NAME"
   />
   <TableCell
     content="123 Adams Drive"
+    key="ADDRESS"
   />
   <TableCell
     content="111-222-3333"
+    key="PHONE_NUMBER"
   />
 </tr>
 `;
@@ -24,12 +27,15 @@ exports[`should render a selectable table row 1`] = `
 >
   <TableCell
     content="John Smith"
+    key="NAME"
   />
   <TableCell
     content="123 Adams Drive"
+    key="ADDRESS"
   />
   <TableCell
     content="111-222-3333"
+    key="PHONE_NUMBER"
   />
 </tr>
 `;
@@ -41,12 +47,15 @@ exports[`should render a selected table row 1`] = `
 >
   <TableCell
     content="John Smith"
+    key="NAME"
   />
   <TableCell
     content="123 Adams Drive"
+    key="ADDRESS"
   />
   <TableCell
     content="111-222-3333"
+    key="PHONE_NUMBER"
   />
 </tr>
 `;

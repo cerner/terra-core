@@ -199,10 +199,12 @@ exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are give
 <CollapsibleMenu
   button={
     <Button
+      icon={undefined}
       isBlock={false}
       isCompact={false}
       isDisabled={false}
       isReversed={false}
+      onClick={undefined}
       text="Testing"
       type="button"
       variant="default"
@@ -215,6 +217,7 @@ exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are give
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="1"
     shouldCloseOnClick={true}
     text="Menu Item"
   />

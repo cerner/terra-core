@@ -38,18 +38,18 @@ it('should render a arrange with status and customProps', () => {
 it('should have all props including customProps set correctly', () => {
   const arrangeWithStatus = <Status color="green" id="id" >{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);
-  expect(wrapper.unrendered.props.color).toEqual('green');
-  expect(wrapper.unrendered.props.id).toEqual('id');
-  expect(wrapper.unrendered.props.children).toEqual(arrange);
+  expect(wrapper.instance().props.color).toEqual('green');
+  expect(wrapper.instance().props.id).toEqual('id');
+  expect(wrapper.instance().props.children).toEqual(arrange);
 });
 
 // Structure test
 it('should have indicator section of component with correct class, style and type', () => {
   const arrangeWithStatus = <Status color="green" className="testClass" >{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);
-  expect(wrapper.node.props.style.borderColor).toEqual('green');
-  expect(wrapper.node.props.className).toContain('status');
-  expect(wrapper.node.props.className).toContain('testClass');
+  expect(wrapper.getElement(0).props.style.borderColor).toEqual('green');
+  expect(wrapper.getElement(0).props.className).toContain('status');
+  expect(wrapper.getElement(0).props.className).toContain('testClass');
 });
 
 // No Color Provided

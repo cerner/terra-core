@@ -36,3 +36,9 @@ it('should render a time input with onBlur', () => {
   const wrapper = shallow(timeInput);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should render a time input with onInputFocus', () => {
+  const timeInput = <TimeInput name="time-input" onBlur={() => {}} />;
+  const wrapper = shallow(timeInput);
+  expect(wrapper).toMatchSnapshot();
+});
