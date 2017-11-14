@@ -7,6 +7,7 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
   <TransitionGroup
     childFactory={[Function]}
     component="div"
+    key="1"
   >
     <CSSTransition
       classNames={
@@ -19,6 +20,7 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
       }
       enter={true}
       exit={true}
+      key="1"
       onEntered={[Function]}
       onExit={[Function]}
       timeout={300}
@@ -26,7 +28,9 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
       <Slide
         isHidden={false}
       >
-        <div>
+        <div
+          key="1"
+        >
           First
         </div>
       </Slide>
@@ -42,6 +46,7 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
       }
       enter={true}
       exit={true}
+      key="2"
       onEntered={[Function]}
       onExit={[Function]}
       timeout={300}
@@ -49,7 +54,9 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
       <Slide
         isHidden={false}
       >
-        <div>
+        <div
+          key="2"
+        >
           Second
         </div>
       </Slide>
@@ -65,6 +72,7 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
       }
       enter={true}
       exit={true}
+      key="3"
       onEntered={[Function]}
       onExit={[Function]}
       timeout={300}
@@ -72,7 +80,9 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
       <Slide
         isHidden={false}
       >
-        <div>
+        <div
+          key="3"
+        >
           Third
         </div>
       </Slide>
@@ -88,6 +98,7 @@ exports[`should render a default SlideGroup 1`] = `
   <TransitionGroup
     childFactory={[Function]}
     component="div"
+    key="1"
   >
     <CSSTransition
       classNames={
@@ -100,6 +111,7 @@ exports[`should render a default SlideGroup 1`] = `
       }
       enter={false}
       exit={false}
+      key="1"
       onEntered={[Function]}
       onExit={[Function]}
       timeout={300}
@@ -107,7 +119,9 @@ exports[`should render a default SlideGroup 1`] = `
       <Slide
         isHidden={true}
       >
-        <div>
+        <div
+          key="1"
+        >
           First
         </div>
       </Slide>
@@ -123,6 +137,7 @@ exports[`should render a default SlideGroup 1`] = `
       }
       enter={false}
       exit={false}
+      key="2"
       onEntered={[Function]}
       onExit={[Function]}
       timeout={300}
@@ -130,7 +145,9 @@ exports[`should render a default SlideGroup 1`] = `
       <Slide
         isHidden={true}
       >
-        <div>
+        <div
+          key="2"
+        >
           Second
         </div>
       </Slide>
@@ -146,6 +163,7 @@ exports[`should render a default SlideGroup 1`] = `
       }
       enter={false}
       exit={false}
+      key="3"
       onEntered={[Function]}
       onExit={[Function]}
       timeout={300}
@@ -153,7 +171,9 @@ exports[`should render a default SlideGroup 1`] = `
       <Slide
         isHidden={false}
       >
-        <div>
+        <div
+          key="3"
+        >
           Third
         </div>
       </Slide>

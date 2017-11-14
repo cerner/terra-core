@@ -19,6 +19,10 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
+   * A callback function to execute when the calendar button is clicked.
+   */
+  onCalendarButtonClick: PropTypes.func,
+  /**
    * A callback function to execute when a valid date is selected or entered.
    */
   onChange: PropTypes.func,
@@ -26,6 +30,10 @@ const propTypes = {
    * The onInputClick callback function from react-datepicker to show the picker when clicked.
    */
   onClick: PropTypes.func,
+  /**
+   * A callback function to execute when the date input is in focus.
+   */
+  onInputFocus: PropTypes.func,
   /**
    * The onInputKeyDown callback function from react-datepicker to handle keyboard navigation.
    */
@@ -43,6 +51,10 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
+   * Indicates whether or not the picker should be displayed after rendering.
+   */
+  shouldShowPicker: PropTypes.bool,
+  /**
    * The selected or entered date value to display in the date input.
    */
   value: PropTypes.string,
@@ -57,6 +69,7 @@ const defaultProps = {
   placeholder: undefined,
   releaseFocus: undefined,
   requestFocus: undefined,
+  shouldShowPicker: false,
   value: undefined,
 };
 
@@ -78,14 +91,20 @@ class DatePickerInput extends React.Component {
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
   }
 
-  handleOnButtonClick() {
+  componentDidUpdate(prevProps) {
+    if (this.props.shouldShowPicker && !prevProps.shouldShowPicker && this.props.onClick) {
+      this.props.onClick();
+    }
+  }
+
+  handleOnButtonClick(event) {
     // The picker is about to display so request focus from the containing component (e.g. modal) if it has the focus trapped.
     if (this.props.requestFocus) {
       this.props.requestFocus();
     }
 
-    if (this.props.onClick) {
-      this.props.onClick();
+    if (this.props.onCalendarButtonClick && this.props.onClick) {
+      this.props.onCalendarButtonClick(event, this.props.onClick);
     }
   }
 
@@ -107,9 +126,12 @@ class DatePickerInput extends React.Component {
   render() {
     const {
       inputAttributes,
+      shouldShowPicker,
       name,
+      onCalendarButtonClick,
       onChange,
       onClick,
+      onInputFocus,
       onKeyDown,
       placeholder,
       releaseFocus,
@@ -144,6 +166,7 @@ class DatePickerInput extends React.Component {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
+          onFocus={onInputFocus}
         />
         <Button
           className={styles.button}

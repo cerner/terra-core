@@ -216,3 +216,46 @@ exports[`should render a time input with onChange 1`] = `
   />
 </div>
 `;
+
+exports[`should render a time input with onInputFocus 1`] = `
+<div
+  className="time-input"
+>
+  <input
+    name="time-input"
+    type="hidden"
+    value=""
+  />
+  <Input
+    className="time-input-hour"
+    maxLength="2"
+    name="terra-time-hour-time-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    pattern="\\\\d*"
+    placeholder="hh"
+    required={false}
+    type="text"
+    value=""
+  />
+  <span>
+    :
+  </span>
+  <Input
+    className="time-input-minute"
+    maxLength="2"
+    name="terra-time-minute-time-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    pattern="\\\\d*"
+    placeholder="mm"
+    required={false}
+    type="text"
+    value=""
+  />
+</div>
+`;

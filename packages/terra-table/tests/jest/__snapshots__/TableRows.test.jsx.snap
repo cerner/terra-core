@@ -4,28 +4,36 @@ exports[`should render TableRows tag 1`] = `
 <tbody>
   <TableRow
     isSelected={false}
+    key=".$PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     isSelected={false}
+    key=".$PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </tbody>
@@ -35,28 +43,36 @@ exports[`should render TableRows with multiple rows 1`] = `
 <tbody>
   <TableRow
     isSelected={false}
+    key=".$PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     isSelected={false}
+    key=".$PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </tbody>
@@ -68,15 +84,19 @@ exports[`should render TableRows with one row 1`] = `
 <tbody>
   <TableRow
     isSelected={false}
+    key=".$PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </tbody>

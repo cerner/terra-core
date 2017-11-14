@@ -118,6 +118,7 @@ class DateTimePicker extends React.Component {
     // The dateValue and timeValue are tracked outside of the react state to limit the number of renderings that occur.
     this.dateValue = '';
     this.timeValue = '';
+    this.isDefaultDateTimeAcceptable = true;
 
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleDateChangeRaw = this.handleDateChangeRaw.bind(this);
@@ -125,9 +126,11 @@ class DateTimePicker extends React.Component {
     this.handleOnSelect = this.handleOnSelect.bind(this);
     this.handleOnDateBlur = this.handleOnDateBlur.bind(this);
     this.handleOnTimeBlur = this.handleOnTimeBlur.bind(this);
-
     this.handleDaylightSavingButtonClick = this.handleDaylightSavingButtonClick.bind(this);
     this.handleStandardTimeButtonClick = this.handleStandardTimeButtonClick.bind(this);
+    this.handleOnDateInputFocus = this.handleOnDateInputFocus.bind(this);
+    this.handleOnTimeInputFocus = this.handleOnTimeInputFocus.bind(this);
+    this.handleOnCalendarButtonClick = this.handleOnCalendarButtonClick.bind(this);
   }
 
   componentWillMount() {
@@ -135,6 +138,20 @@ class DateTimePicker extends React.Component {
 
     this.dateValue = DateTimeUtils.formatMomentDateTime(this.state.dateTime, dateFormat);
     this.timeValue = DateTimeUtils.hasTime(this.props.value) ? DateTimeUtils.formatISODateTime(this.props.value, 'HH:mm') : '';
+  }
+
+  componentDidMount() {
+    this.isDefaultDateAcceptable = this.validateDefaultDate();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.value === this.props.value) {
+      return;
+    }
+
+    this.setState({
+      dateTime: DateTimeUtils.createSafeDate(nextProps.value),
+    });
   }
 
   handleOnSelect(event, selectedDate) {
@@ -264,6 +281,47 @@ class DateTimePicker extends React.Component {
     }
   }
 
+  handleOnDateInputFocus(event) {
+    this.handleOnInputFocus(event);
+  }
+
+  handleOnTimeInputFocus(event) {
+    this.handleOnInputFocus(event);
+  }
+
+  handleOnInputFocus(event) {
+    if (!this.isDefaultDateAcceptable) {
+      this.dateValue = '';
+      this.timeValue = '';
+      this.handleChange(event, null);
+      this.isDefaultDateAcceptable = true;
+    }
+  }
+
+  handleOnCalendarButtonClick(event) {
+    if (!this.isDefaultDateAcceptable && !this.validateDefaultDate()) {
+      this.dateValue = '';
+      this.timeValue = '';
+      this.handleChange(event, null);
+    } else {
+      this.isDefaultDateAcceptable = true;
+    }
+  }
+
+  validateDefaultDate() {
+    let isAcceptable = true;
+
+    if (DateUtil.isDateOutOfRange(this.state.dateTime, DateUtil.createSafeDate(this.props.minDateTime), DateUtil.createSafeDate(this.props.maxDateTime))) {
+      isAcceptable = false;
+    }
+
+    if (DateUtil.isDateExcluded(this.state.dateTime, this.props.excludeDates)) {
+      isAcceptable = false;
+    }
+
+    return isAcceptable;
+  }
+
   handleDaylightSavingButtonClick() {
     this.setState({ isTimeClarificationOpen: false });
     const newDateTime = this.state.dateTime.clone();
@@ -328,11 +386,13 @@ class DateTimePicker extends React.Component {
         />
 
         <DatePicker
+          onCalendarButtonClick={this.handleOnCalendarButtonClick}
           onChange={this.handleDateChange}
           onChangeRaw={this.handleDateChangeRaw}
           onSelect={this.handleOnSelect}
           onClickOutside={this.handleOnClickOutside}
           onBlur={this.handleOnDateBlur}
+          onInputFocus={this.handleOnDateInputFocus}
           excludeDates={excludeDates}
           filterDate={filterDate}
           includeDates={includeDates}
@@ -349,6 +409,7 @@ class DateTimePicker extends React.Component {
           <TimeInput
             onBlur={this.handleOnTimeBlur}
             onChange={this.handleTimeChange}
+            onInputFocus={this.handleOnTimeInputFocus}
             inputAttributes={timeInputAttributes}
             name="input"
             value={this.timeValue}
