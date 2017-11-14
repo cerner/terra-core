@@ -11,12 +11,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * A boolean that when true will disable the field
+   * When true, will disable the field
    */
   isDisabled: PropTypes.bool,
 
   /**
-   * A boolean that when true will stretch the field to fill its container
+   * When true, will stretch the field to fill its container
    */
   isStretched: PropTypes.bool,
 
@@ -110,7 +110,7 @@ class SearchField extends React.Component {
     } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
-      { stretch: isStretched === true },
+      { stretch: isStretched },
       customProps.className,
     ]);
 
