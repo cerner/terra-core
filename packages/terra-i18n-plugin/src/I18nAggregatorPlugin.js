@@ -23,13 +23,12 @@ function getDirectories(srcPath, inputFileSystem) {
   return inputFileSystem.readdirSync(srcPath).filter(file => inputFileSystem.statSync(path.join(srcPath, file)).isDirectory());
 }
 
-function aggregateDirectory(languageMessages, currentDirectory, searchNodeModules, inputFileSystem) {
+function readTranslations(languageMessages, currentDirectory, inputFileSystem) {
   // Check the directory for translations
   const translationsDirectory = path.resolve(currentDirectory, 'translations');
   try {
     // Check if the directory exists by attempting to read from it
     inputFileSystem.readdirSync(translationsDirectory);
-
     // Check the directory for each translation file
     supportedLocales.forEach((language) => {
       const translationFile = path.resolve(translationsDirectory, `${language}.json`);
@@ -43,18 +42,18 @@ function aggregateDirectory(languageMessages, currentDirectory, searchNodeModule
   } catch (e) {
     // not outputting anything here as the catching of the directory not existing is not an error in this case
   }
+}
 
+function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem) {
+  readTranslations(languageMessages, currentDirectory, inputFileSystem);
   // If searchNodeModules is true, check the directory's node_module for translation files, otherwise check all children directories
-  const modulePath = path.resolve(currentDirectory, searchNodeModules ? 'node_modules' : '');
   try {
-    getDirectories(modulePath, inputFileSystem).forEach((module) => {
-      aggregateDirectory(languageMessages, path.resolve(modulePath, module), searchNodeModules, inputFileSystem);
+    getDirectories(currentDirectory, inputFileSystem).forEach((module) => {
+      aggregateDirectory(languageMessages, path.resolve(currentDirectory, module), inputFileSystem);
     });
   } catch (e) {
     // not outputting anything here as the catching of the directories not existing is not an error in this case
   }
-
-  return languageMessages;
 }
 
 function aggregateTranslationMessages(options, inputFileSystem) {
@@ -68,18 +67,17 @@ function aggregateTranslationMessages(options, inputFileSystem) {
 
   supportedLocales = options.supportedLocales;
 
-  let languageMessages = {};
+  const languageMessages = {};
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
-  // Aggregate translation messages for node_modules
-  let searchNodeModules = true;
-  languageMessages = aggregateDirectory(languageMessages, options.baseDirectory, searchNodeModules, inputFileSystem);
-  // Aggregate translation messages for custom directory
-  const translationsDirectory = options.translationsDirectory;
-  if (translationsDirectory) {
-    searchNodeModules = false;
-    aggregateDirectory(languageMessages, translationsDirectory, searchNodeModules, inputFileSystem);
-  }
+  // Read translations at the baseDirectory
+  readTranslations(languageMessages, options.baseDirectory, inputFileSystem);
+  // Set translationsDirectory to root node_modules if not specified
+  const translationsDirectory = options.translationsDirectory || ['node_modules'];
+  // Search and aggregate translation messages under the custom directories
+  translationsDirectory.forEach(dir =>
+    aggregateDirectory(languageMessages, path.resolve(options.baseDirectory, dir), inputFileSystem),
+  );
   return languageMessages;
 }
 

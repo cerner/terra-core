@@ -23,7 +23,6 @@ function createCompiler() {
 describe('i18n-aggregator-plugin', () => {
   const supportedLocales = ['en', 'es', 'pt'];
   const baseDirectory = path.join('packages', 'terra-i18n-plugin', 'tests', 'fixtures');
-  const translationsDirectory = path.join(baseDirectory, 'customFolder');
 
   describe('when throwing errors when plugin options are not provided', () => {
     const compiler = createCompiler();
@@ -136,7 +135,7 @@ describe('i18n-aggregator-plugin', () => {
       new I18nAggregatorPlugin({
         baseDirectory,
         supportedLocales,
-        translationsDirectory,
+        translationsDirectory: ['node_modules', 'customFolder'],
       }).apply(compiler);
       compiler._plugins['after-environment'][0]();
     });
@@ -195,8 +194,8 @@ describe('i18n-aggregator-plugin', () => {
     });
 
     it('should create tranlsation files for all supported locales', () => {
-      expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(2);
-      expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length);
+      expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(3);
+      expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length * 2);
       expect(inputReadSourceDirectories[0]).toContain('translations');
       expect(inputReadSourceDirectories[1]).toContain('node_modules');
       supportedLocales.forEach((locale, index) => {
