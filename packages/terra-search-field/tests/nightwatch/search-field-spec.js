@@ -83,4 +83,22 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.elementPresent('#searchfield button')
       .assert.attributeEquals('#searchfield input', 'value', 'Default');
   },
+
+  'Displays a search field with a consumer onchange handler': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/onchange`);
+
+    browser
+      .assert.elementPresent('#searchfield')
+      .assert.elementPresent('#searchfield button')
+      .assert.elementPresent('#searchfield input')
+      .assert.elementPresent('#searchOnChangeCallCount')
+      .assert.elementPresent('#searchOnChangeText')
+
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('0');
+    browser.expect.element('#searchOnChangeText').text.to.equal('');
+
+    browser.setValue('input[type=search]', 'T');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('1').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('T').after(250);
+  },
 });
