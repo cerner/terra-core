@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Handle unacceptable default dates.
 
 1.2.0 - (November 7, 2017)
 ------------------

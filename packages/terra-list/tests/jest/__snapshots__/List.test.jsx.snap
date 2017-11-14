@@ -19,6 +19,7 @@ exports[`should mount with one items 1`] = `
   >
     <ListItem
       isSelected={false}
+      key="123"
     >
       <li
         className="list-item"
@@ -34,18 +35,23 @@ exports[`should render isDivided 1`] = `
 >
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
 </ul>
 `;
@@ -56,18 +62,23 @@ exports[`should render with items 1`] = `
 >
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
   <ListItem
     isSelected={false}
+    key="123"
   />
 </ul>
 `;

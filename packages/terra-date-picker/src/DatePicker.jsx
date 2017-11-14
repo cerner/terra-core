@@ -39,6 +39,10 @@ const propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
+   * A callback function to execute when the calendar button is clicked.
+   */
+  onCalendarButtonClick: PropTypes.func,
+  /**
    * A callback function to execute when a valid date is selected or entered.
    * The first parameter is the event. The second parameter is the changed date value.
    */
@@ -52,6 +56,10 @@ const propTypes = {
    * A callback function to execute when clicking outside of the picker to dismiss it.
    */
   onClickOutside: PropTypes.func,
+  /**
+   * A callback function to execute when the date input is in focus.
+   */
+  onInputFocus: PropTypes.func,
   /**
    * A callback function to execute when a date is selected from within the picker.
    */
@@ -105,10 +113,27 @@ class DatePicker extends React.Component {
       selectedDate: DateUtil.createSafeDate(props.selectedDate),
     };
 
+    this.isDefaultDateAcceptable = false;
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeRaw = this.handleChangeRaw.bind(this);
     this.handleOnSelect = this.handleOnSelect.bind(this);
     this.handleOnClickOutside = this.handleOnClickOutside.bind(this);
+    this.handleOnInputFocus = this.handleOnInputFocus.bind(this);
+    this.handleOnCalendarButtonClick = this.handleOnCalendarButtonClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.isDefaultDateAcceptable = this.validateDefaultDate();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedDate === this.props.selectedDate) {
+      return;
+    }
+
+    this.setState({
+      selectedDate: DateUtil.createSafeDate(nextProps.selectedDate),
+    });
   }
 
   handleOnSelect(selectedDate, event) {
@@ -159,6 +184,46 @@ class DatePicker extends React.Component {
     }
   }
 
+  handleOnInputFocus(event) {
+    if (this.props.onInputFocus) {
+      this.props.onInputFocus(event);
+    }
+
+    if (!this.isDefaultDateAcceptable) {
+      this.handleChange(null, event);
+      this.isDefaultDateAcceptable = true;
+    }
+  }
+
+  handleOnCalendarButtonClick(event, onClick) {
+    if (this.props.onCalendarButtonClick) {
+      this.props.onCalendarButtonClick(event);
+    }
+
+    if (!this.isDefaultDateAcceptable && !this.validateDefaultDate()) {
+      this.handleChange(null, event);
+    } else if (onClick) {
+      // This onClick function is the onInputClick function coming from https://github.com/Hacker0x01/react-datepicker/blob/master/src/index.jsx#L326.
+      // It does not take any parameter so there is not a need to pass in the event.
+      onClick();
+      this.isDefaultDateAcceptable = true;
+    }
+  }
+
+  validateDefaultDate() {
+    let isAcceptable = true;
+
+    if (DateUtil.isDateOutOfRange(this.state.selectedDate, DateUtil.createSafeDate(this.props.minDate), DateUtil.createSafeDate(this.props.maxDate))) {
+      isAcceptable = false;
+    }
+
+    if (DateUtil.isDateExcluded(this.state.selectedDate, this.props.excludeDates)) {
+      isAcceptable = false;
+    }
+
+    return isAcceptable;
+  }
+
   render() {
     const {
       inputAttributes,
@@ -168,9 +233,11 @@ class DatePicker extends React.Component {
       maxDate,
       minDate,
       name,
+      onCalendarButtonClick,
       onChange,
       onChangeRaw,
       onClickOutside,
+      onInputFocus,
       onSelect,
       requestFocus,
       releaseFocus,
@@ -194,7 +261,14 @@ class DatePicker extends React.Component {
         onChangeRaw={this.handleChangeRaw}
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
-        customInput={<DateInput inputAttributes={inputAttributes} releaseFocus={releaseFocus} requestFocus={requestFocus} />}
+        customInput={<DateInput
+          onInputFocus={this.handleOnInputFocus}
+          onCalendarButtonClick={this.handleOnCalendarButtonClick}
+          inputAttributes={inputAttributes}
+          releaseFocus={releaseFocus}
+          requestFocus={requestFocus}
+          shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
+        />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}
@@ -221,7 +295,14 @@ class DatePicker extends React.Component {
         onChangeRaw={this.handleChangeRaw}
         onClickOutside={this.handleOnClickOutside}
         onSelect={this.handleOnSelect}
-        customInput={<DateInput inputAttributes={inputAttributes} releaseFocus={releaseFocus} requestFocus={requestFocus} />}
+        customInput={<DateInput
+          onInputFocus={this.handleOnInputFocus}
+          onCalendarButtonClick={this.handleOnCalendarButtonClick}
+          inputAttributes={inputAttributes}
+          releaseFocus={releaseFocus}
+          requestFocus={requestFocus}
+          shouldShowPicker={!this.isDefaultDateAcceptable && this.state.selectedDate === null}
+        />}
         excludeDates={exludeMomentDates}
         filterDate={filterDate}
         includeDates={includeMomentDates}

@@ -120,11 +120,13 @@ exports[`should render as controlled when just the required fields and a onChang
           required={false}
         >
           <option
+            key="m-moo"
             value="m"
           >
             moo
           </option>
           <option
+            key="b-boo"
             value="b"
           >
             boo
@@ -197,11 +199,13 @@ exports[`should render as uncontrolled when just the required fields and a defau
           required={false}
         >
           <option
+            key="m-moo"
             value="m"
           >
             moo
           </option>
           <option
+            key="b-boo"
             value="b"
           >
             boo

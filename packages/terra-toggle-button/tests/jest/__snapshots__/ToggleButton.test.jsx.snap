@@ -25,7 +25,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
-            viewbox="0 0 48 48"
+            viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -81,7 +81,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
-            viewbox="0 0 48 48"
+            viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -142,7 +142,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
         data-name="Layer 1"
         focusable="false"
         height="1em"
-        viewbox="0 0 48 48"
+        viewBox="0 0 48 48"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -184,7 +184,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
-            viewbox="0 0 48 48"
+            viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
