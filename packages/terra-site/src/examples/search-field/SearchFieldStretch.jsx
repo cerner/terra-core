@@ -3,7 +3,7 @@ import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
 const SearchFieldStretch = () => (
   <SearchFieldExampleTemplate
-    sizing={'stretch'}
+    isStretched
   />
 );
 

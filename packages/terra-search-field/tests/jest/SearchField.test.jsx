@@ -27,7 +27,7 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field that stretches to fill its container', () => {
-    const searchField = shallow(<SearchField sizing={'stretch'} />);
+    const searchField = shallow(<SearchField isStretched />);
     searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
