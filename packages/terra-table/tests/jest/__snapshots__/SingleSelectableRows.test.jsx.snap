@@ -13,29 +13,37 @@ exports[`should render SingleSelectableRows one selectable row and one non-selec
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     isSelectable={false}
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -54,29 +62,37 @@ exports[`should render SingleSelectableRows tag 1`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -107,15 +123,19 @@ exports[`should render SingleSelectableRows with one row 1`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -134,29 +154,37 @@ exports[`should select an row 1`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>
@@ -175,29 +203,37 @@ exports[`should select an row 2`] = `
   <TableRow
     className="PERSON_0"
     isSelected={false}
+    key="PERSON_0"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
   <TableRow
     className="PERSON_1"
     isSelected={false}
+    key="PERSON_1"
   >
     <TableCell
       content="John Smith"
+      key="NAME"
     />
     <TableCell
       content="123 Adams Drive"
+      key="ADDRESS"
     />
     <TableCell
       content="111-222-3333"
+      key="PHONE_NUMBER"
     />
   </TableRow>
 </SelectableTableRows>

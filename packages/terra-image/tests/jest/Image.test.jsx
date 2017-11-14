@@ -56,8 +56,7 @@ it('should render a thumbail image component with non-fluid behavior', () => {
 /* Image with fluid behavior having a parent container */
 it('should render a circle image component with fluid behavior', () => {
   const wrapper = shallow(<div style={imagecontainerStyle1}>{image}</div>);
-  expect(wrapper.node.props.style).toEqual(imagecontainerStyle1);
-  expect(wrapper.unrendered.props.children).toEqual(image);
+  expect(wrapper).toMatchSnapshot();
 });
 
 /* Image with onLoad function */
