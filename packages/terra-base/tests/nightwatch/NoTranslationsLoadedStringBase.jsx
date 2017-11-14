@@ -3,7 +3,7 @@ import Base from '../../lib/Base';
 
 const BaseNoTranslationsLoaded = () => {
   const noTranslations = (
-    <Base locale="gabcdef" translationsLoadingPlaceholder={<div>No Translations</div>}>
+    <Base locale="gabcdef" translationsLoadingPlaceholder={'No Translations String'}>
       <div>Translations</div>
     </Base>
   );

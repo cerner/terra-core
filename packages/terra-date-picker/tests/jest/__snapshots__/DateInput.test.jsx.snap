@@ -23,7 +23,7 @@ exports[`should render a default date input 1`] = `
       class="icon"
       focusable="false"
       height="1em"
-      viewbox="0 0 48 48"
+      viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -63,7 +63,7 @@ exports[`should render a default date input with all props 1`] = `
       class="icon"
       focusable="false"
       height="1em"
-      viewbox="0 0 48 48"
+      viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
