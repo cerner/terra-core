@@ -89,7 +89,21 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .expect.element('#search-callback-text').text.to.equal('').after(250);
   },
 
-  'Displays the search field and handles ENTER keypress to search ': (browser) => {
+  'Displays the search field with auto searching on and handles ENTER keypress to search ': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/enter`);
+
+    browser
+      .setValue('input[type=search]', 'S')
+      .expect.element('#search-callback-text').text.to.equal('').after(250);
+    browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
+    browser.expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
+
+    browser
+      .setValue('input[type=search]', 'e')
+      .expect.element('#search-callback-text').text.to.equal('Search Text: Se').after(250);
+  },
+
+  'Displays the search field with auto searching off and handles ENTER keypress to search ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
 
     browser

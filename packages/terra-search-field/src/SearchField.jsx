@@ -15,7 +15,7 @@ const KEYCODES = {
 
 const propTypes = {
   /**
-   * A boolean that when true will disable the auto-search
+   * When true, will disable the auto-search
    */
   disableAutoSearch: PropTypes.bool,
 
