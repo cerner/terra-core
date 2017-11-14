@@ -8,7 +8,7 @@ The AppDelegate is an object that provides a set of functions used to facilitate
 their consuming Containers/Applications.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate/docs)
 - [LICENSE](#license)
 
 ## Getting Started

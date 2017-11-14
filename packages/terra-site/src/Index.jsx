@@ -88,6 +88,7 @@ import MenuItemTestRoutes from 'terra-menu/tests/nightwatch/menu-item/MenuItemTe
 import MenuItemGroupTestRoutes from 'terra-menu/tests/nightwatch/menu-item-group/MenuItemGroupTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
+import MultiSelectTableTestRoutes from 'terra-table/tests/nightwatch/multi-select-table/MultiSelectTableTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
 import OverlayContainerTestRoutes from 'terra-overlay/tests/nightwatch/OverlayContainer/OverlayContainerTestRoutes';
 import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
@@ -104,6 +105,7 @@ import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupT
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
@@ -165,6 +167,7 @@ ReactDOM.render((
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
+      {TableIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
     {AlertTestRoutes}
@@ -192,6 +195,7 @@ ReactDOM.render((
     {SelectableListTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {MultiSelectTableTestRoutes}
     {StatusTestRoutes}
     {TableTestRoutes}
     {SelectableTableTestRoutes}

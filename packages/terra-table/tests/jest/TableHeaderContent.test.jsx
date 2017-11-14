@@ -19,9 +19,3 @@ it('should render table header content tag with descending sort indicator', () =
   const tableHeaderContent = shallow(tableHeaderContentTag);
   expect(tableHeaderContent).toMatchSnapshot();
 });
-
-it('should render table header content tag with maximum height fixed', () => {
-  const defaultTableHeaderContent = <Table.HeaderCell content={'Column Heading'} />;
-  const tableHeaderContent = shallow(defaultTableHeaderContent);
-  expect(tableHeaderContent).toMatchSnapshot();
-});

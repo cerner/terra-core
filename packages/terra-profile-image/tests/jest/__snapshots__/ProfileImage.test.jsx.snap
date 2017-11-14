@@ -18,7 +18,7 @@ exports[`should render a hidden profile image and a visible avatar image 1`] = `
     <img
       className="image"
       height="75"
-      src={Object {}}
+      src={null}
       width="75"
     />
   </div>
@@ -32,7 +32,7 @@ exports[`should render the avatar image 1`] = `
       alt="avatar"
       className="image"
       height="75"
-      src={Object {}}
+      src={null}
       width="75"
     />
   </div>

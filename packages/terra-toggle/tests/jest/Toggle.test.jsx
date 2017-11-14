@@ -21,9 +21,9 @@ describe('Toggle', () => {
   // Prop Tests
   it('should have all props set correctly', () => {
     const toggle = shallow(<Toggle isAnimated isOpen>All props</Toggle>);
-    expect(toggle.unrendered.props.isAnimated).toEqual(true);
-    expect(toggle.unrendered.props.isOpen).toEqual(true);
-    expect(toggle.unrendered.props.children).toEqual('All props');
+    expect(toggle.instance().props.isAnimated).toEqual(true);
+    expect(toggle.instance().props.isOpen).toEqual(true);
+    expect(toggle.instance().props.children).toEqual('All props');
   });
 
   // Attributes
