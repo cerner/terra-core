@@ -15,6 +15,7 @@ import SearchFieldPlaceholder from './SearchFieldPlaceholder';
 import SearchFieldMinimumLength from './SearchFieldMinimumLength';
 import SearchFieldDelayed from './SearchFieldDelayed';
 import SearchFieldDefaultValue from './SearchFieldDefaultValue';
+import SearchFieldOnChange from './SearchFieldOnChange';
 
 const SearchFieldExamples = () => (
   <div>
@@ -35,6 +36,9 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldDefaultValue">Search Field with a defaulted value</h2>
     <SearchFieldDefaultValue />
+    <br />
+    <h2 id="searchFieldOnChange">Search Field with custom onChange handler</h2>
+    <SearchFieldOnChange />
   </div>
 );
 

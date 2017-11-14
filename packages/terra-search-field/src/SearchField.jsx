@@ -26,6 +26,11 @@ const propTypes = {
   searchDelay: PropTypes.number,
 
   /**
+   * Function to trigger when user changes the input value. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+
+  /**
    * A callback to perform search. Sends parameter {String} searchText.
    */
   onSearch: PropTypes.func,
@@ -67,7 +72,12 @@ class SearchField extends React.Component {
   }
 
   handleTextChange(event) {
-    this.setState({ searchText: event.target.value });
+    const searchText = event.target.value;
+    this.setState({ searchText });
+
+    if (this.props.onChange) {
+      this.props.onChange(event, searchText);
+    }
 
     if (!this.searchTimeout) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
@@ -92,7 +102,7 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const { placeholder, searchDelay, minimumSearchTextLength, onChange, onSearch, onInvalidSearch, ...customProps } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
       customProps.className,

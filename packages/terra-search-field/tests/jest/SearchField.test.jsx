@@ -138,4 +138,15 @@ describe('Auto Search', () => {
     searchField.childAt(0).simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 1000);
   });
+
+  it('should call onChange when button is selected', () => {
+    const onChange = jest.fn();
+    const searchField = shallow(<SearchField onChange={onChange} />);
+
+    searchField.childAt(0).simulate('change', { target: {} });
+    expect(onChange).toBeCalled();
+
+    searchField.childAt(0).simulate('change', { target: {} });
+    expect(onChange).toBeCalled();
+  });
 });
