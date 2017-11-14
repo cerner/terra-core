@@ -25,8 +25,8 @@
     }
   }
 
-  .stretch {
-    width: 100%;
+  .block {
+    display: flex;
   }
 
   .input::-webkit-search-cancel-button {

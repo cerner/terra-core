@@ -16,9 +16,9 @@ const propTypes = {
   isDisabled: PropTypes.bool,
 
   /**
-   * When true, will stretch the field to fill its container
+   * Whether or not the field should display as a block
    */
-  isStretched: PropTypes.bool,
+  isBlock: PropTypes.bool,
 
   /**
    * Placeholder text to show while the search field is empty.
@@ -48,7 +48,7 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
-  isStretched: false,
+  isBlock: false,
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
@@ -100,7 +100,7 @@ class SearchField extends React.Component {
   render() {
     const {
       isDisabled,
-      isStretched,
+      isBlock,
       placeholder,
       minimumSearchTextLength,
       searchDelay,
@@ -110,7 +110,7 @@ class SearchField extends React.Component {
     } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
-      { stretch: isStretched },
+      { block: isBlock },
       customProps.className,
     ]);
 

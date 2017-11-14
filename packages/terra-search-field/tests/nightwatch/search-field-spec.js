@@ -86,14 +86,14 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#searchfield input').to.have.attribute('aria-disabled').which.contains('true');
   },
 
-  'Displays a search field that is strecthed to fill its container': (browser) => {
+  'Displays a search field displayed as block style to fill its container': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/search-field-tests/stretched`)
+      .url(`${browser.launchUrl}/#/tests/search-field-tests/block`)
       .assert.elementPresent('#searchfield')
       .assert.elementPresent('#searchfield button')
       .assert.attributeEquals('#searchfield input', 'placeholder', '');
 
     browser.expect.element('#searchfield').to.have.attribute('class').which.contains('searchfield');
-    browser.expect.element('#searchfield').to.have.attribute('class').which.contains('stretch');
+    browser.expect.element('#searchfield').to.have.attribute('class').which.contains('block');
   },
 });

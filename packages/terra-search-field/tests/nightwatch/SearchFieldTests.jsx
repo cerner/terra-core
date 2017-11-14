@@ -12,7 +12,7 @@ const SearchFieldTests = () => (
       <li><Link to="/tests/search-field-tests/delayed">SearchField - 1000ms Delayed</Link></li>
       <li><Link to="/tests/search-field-tests/minimum-length">SearchField - 5 Character Minimum Length</Link></li>
       <li><Link to="/tests/search-field-tests/disabled">SearchField - Disabled</Link></li>
-      <li><Link to="/tests/search-field-tests/stretched">SearchField - Stretched</Link></li>
+      <li><Link to="/tests/search-field-tests/block">SearchField - Block Style</Link></li>
     </ul>
   </div>
 );

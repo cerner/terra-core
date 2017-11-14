@@ -1,10 +1,10 @@
 import React from 'react';
 import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
-const SearchFieldStretch = () => (
+const SearchFieldBlock = () => (
   <SearchFieldExampleTemplate
-    isStretched
+    isBlock
   />
 );
 
-export default SearchFieldStretch;
+export default SearchFieldBlock;

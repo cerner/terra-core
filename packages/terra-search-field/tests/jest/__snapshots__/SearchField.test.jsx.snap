@@ -136,9 +136,9 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 </div>
 `;
 
-exports[`Snapshots renders a search field that stretches to fill its container 1`] = `
+exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
 <div
-  className="searchfield stretch"
+  className="searchfield block"
 >
   <Input
     aria-disabled={false}
