@@ -27,6 +27,7 @@ exports[`should render Select with a value set 1`] = `
         disabled={false}
         display="moo"
         isSelected={false}
+        key=".$m"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="m"
@@ -35,6 +36,7 @@ exports[`should render Select with a value set 1`] = `
         disabled={false}
         display="boo"
         isSelected={true}
+        key=".$b"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="b"
@@ -103,6 +105,7 @@ exports[`should render Select with default value 1`] = `
         disabled={false}
         display="moo"
         isSelected={false}
+        key=".$m"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="m"
@@ -111,6 +114,7 @@ exports[`should render Select with default value 1`] = `
         disabled={false}
         display="boo"
         isSelected={true}
+        key=".$b"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="b"
@@ -187,6 +191,7 @@ exports[`should render Select with onChange 1`] = `
         disabled={false}
         display="moo"
         isSelected={false}
+        key=".$m"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="m"
@@ -195,6 +200,7 @@ exports[`should render Select with onChange 1`] = `
         disabled={false}
         display="boo"
         isSelected={false}
+        key=".$b"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="b"
@@ -272,6 +278,7 @@ exports[`should render Select with releaseFocus 1`] = `
         disabled={false}
         display="moo"
         isSelected={false}
+        key=".$m"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="m"
@@ -280,6 +287,7 @@ exports[`should render Select with releaseFocus 1`] = `
         disabled={false}
         display="boo"
         isSelected={false}
+        key=".$b"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="b"
@@ -357,6 +365,7 @@ exports[`should render Select with requestFocus 1`] = `
         disabled={false}
         display="moo"
         isSelected={false}
+        key=".$m"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="m"
@@ -365,6 +374,7 @@ exports[`should render Select with requestFocus 1`] = `
         disabled={false}
         display="boo"
         isSelected={false}
+        key=".$b"
         onClick={[Function]}
         onKeyDown={[Function]}
         value="b"
@@ -439,6 +449,7 @@ exports[`should render a Select with name provided 1`] = `
       />
       <div
         isSelected={true}
+        key=".0"
         onClick={[Function]}
         onKeyDown={[Function]}
       >
@@ -515,6 +526,7 @@ exports[`should render a default Select component 1`] = `
       />
       <div
         isSelected={true}
+        key=".0"
         onClick={[Function]}
         onKeyDown={[Function]}
       >
@@ -590,6 +602,7 @@ exports[`should render a disabled Select 1`] = `
       />
       <div
         isSelected={true}
+        key=".0"
         onClick={[Function]}
         onKeyDown={[Function]}
       >
@@ -665,6 +678,7 @@ exports[`should render a required Select 1`] = `
       />
       <div
         isSelected={true}
+        key=".0"
         onClick={[Function]}
         onKeyDown={[Function]}
       >
@@ -741,6 +755,7 @@ exports[`should render an invalid Select 1`] = `
       />
       <div
         isSelected={true}
+        key=".0"
         onClick={[Function]}
         onKeyDown={[Function]}
       >
