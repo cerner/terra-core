@@ -12,7 +12,7 @@ const propTypes = {
   /**
    * Child Nodes.
    */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * Sets top margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
@@ -56,7 +56,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: null,
   marginTop: 'none',
   marginBottom: 'none',
   marginRight: 'none',

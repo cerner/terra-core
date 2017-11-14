@@ -29,12 +29,6 @@ This component is used to provide margin and/or padding space between two compon
 import React from 'react';
 import Spacer from 'terra-spacer';
 
-// Default
-
-<Spacer >
-    ...
-</Spacer>
-
 // Small view ports
 
 <Spacer marginTop="small" marginLeft="small-1" paddingTop="small-2">
@@ -58,13 +52,13 @@ import Spacer from 'terra-spacer';
 // sets magin-top to 50px for view port sizes >= 768px, for view port sizes < 768px sets margin-top to 5px
 
 <Spacer marginTop="small-1" bps={{ 768: { marginTop: 'large+4' } }} >
-    ...
+  <Image src="someImageSource" alt="example image" />
 </Spacer>
 ```
 
 ## Note
 
-This component uses ** react-bps package ** for ** responsiveness **. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
+This component uses ** react-bps package mobile first strategy ** for ** responsiveness **. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
 
 
 ## Component Features
