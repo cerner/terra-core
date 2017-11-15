@@ -2,7 +2,6 @@ import React from 'react';
 import Spacer from '../../src/Spacer';
 
 describe('Spacer', () => {
-
   // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = render(<Spacer><div>Test Component</div></Spacer>);
