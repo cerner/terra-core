@@ -15,7 +15,7 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
     value="children_present"
   />
   <label
-    className="label healtheintent-label-text"
+    className="label-text healtheintent-label-text"
   >
     Do you have any Children?
      
@@ -28,7 +28,7 @@ exports[`should render a checkbox 1`] = `
   className="control "
 >
   <input
-    className="input"
+    className=""
     defaultChecked={false}
     disabled={false}
     name={null}
@@ -37,7 +37,7 @@ exports[`should render a checkbox 1`] = `
     type="checkbox"
   />
   <label
-    className="label"
+    className="label-text"
   >
     Checkbox
      
@@ -51,7 +51,7 @@ exports[`should render a checkbox with a hidden label 1`] = `
 >
   <input
     checked={true}
-    className="input"
+    className=""
     disabled={false}
     name={null}
     onBlur={[Function]}
@@ -60,7 +60,7 @@ exports[`should render a checkbox with a hidden label 1`] = `
     type="checkbox"
   />
   <label
-    className="label"
+    className="label-text"
   >
     Checkbox
      
@@ -74,7 +74,7 @@ exports[`should render a controlled checkbox 1`] = `
 >
   <input
     checked={true}
-    className="input"
+    className=""
     disabled={false}
     name={null}
     onBlur={[Function]}
@@ -83,7 +83,7 @@ exports[`should render a controlled checkbox 1`] = `
     type="checkbox"
   />
   <label
-    className="label"
+    className="label-text"
   >
     Checkbox
      
@@ -97,7 +97,7 @@ exports[`should render a disabled checkbox 1`] = `
 >
   <input
     checked={true}
-    className="input"
+    className=""
     disabled={true}
     name={null}
     onBlur={[Function]}
@@ -106,7 +106,7 @@ exports[`should render a disabled checkbox 1`] = `
     type="checkbox"
   />
   <label
-    className="label"
+    className="label-text"
   >
     Checkbox
      
@@ -119,7 +119,7 @@ exports[`should render an uncontrolled checkbox 1`] = `
   className="control "
 >
   <input
-    className="input"
+    className=""
     defaultChecked={true}
     disabled={false}
     name={null}
@@ -128,7 +128,7 @@ exports[`should render an uncontrolled checkbox 1`] = `
     type="checkbox"
   />
   <label
-    className="label"
+    className="label-text"
   >
     Checkbox
      

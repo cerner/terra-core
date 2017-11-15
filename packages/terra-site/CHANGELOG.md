@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Add terra-form-checkbox components
 
 1.17.0 - (November 7, 2017)
 ------------------

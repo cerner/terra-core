@@ -8,10 +8,6 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The input type. This is always set to checkbox.
-   */
-  type: PropTypes.string,
-  /**
     * The checked property of the Input element. Use this to generate a controlled Control Element.
     */
   checked: PropTypes.bool,
@@ -62,7 +58,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  type: 'checkbox',
   checked: undefined,
   defaultChecked: false,
   id: undefined,
@@ -103,7 +98,6 @@ class Checkbox extends React.Component {
 
   render() {
     const {
-      type,
       checked,
       defaultChecked,
       inputAttrs,
@@ -144,7 +138,7 @@ class Checkbox extends React.Component {
     return (
       <div className={`${controlClasses} ${this.getFocusClass()}`} >
         <input
-          type={type}
+          type='checkbox'
           id={id}
           disabled={isDisabled}
           name={name}
