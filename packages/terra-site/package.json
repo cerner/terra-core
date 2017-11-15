@@ -50,6 +50,7 @@
     "terra-dynamic-grid": "^1.6.1",
     "terra-embedded-content-consumer": "^1.7.0",
     "terra-form": "^1.12.0",
+    "terra-form-field": "^0.x",
     "terra-grid": "^3.15.1",
     "terra-heading": "^1.13.0",
     "terra-hookshot": "^1.2.0",
