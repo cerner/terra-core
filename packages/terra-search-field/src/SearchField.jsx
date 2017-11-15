@@ -43,14 +43,14 @@ const propTypes = {
   /**
    * The text to display in the search field
    */
-  value: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 const defaultProps = {
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
-  value: '',
+  defaultValue: '',
 };
 
 class SearchField extends React.Component {
@@ -63,7 +63,7 @@ class SearchField extends React.Component {
 
     this.searchTimeout = null;
     this.state = {
-      searchText: this.props.value,
+      searchText: this.props.defaultValue,
     };
   }
 
@@ -102,7 +102,7 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onChange, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const { defaultValue, placeholder, searchDelay, minimumSearchTextLength, onChange, onSearch, onInvalidSearch, ...customProps } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
       customProps.className,

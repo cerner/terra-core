@@ -3,7 +3,7 @@ import SearchFieldExampleTemplate from './SearchFieldExampleTemplate';
 
 const SearchFieldExample = () => (
   <SearchFieldExampleTemplate
-    value={'Default'}
+    defaultValue={'Default'}
   />
 );
 
