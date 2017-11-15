@@ -3,19 +3,19 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a search field with search button': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/search-field-tests/default`)
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'placeholder', '');
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
   },
 
   'Displays a search field with a placeholder value of "Search Text"': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`)
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'placeholder', 'Search Text');
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('Search Text');
   },
 
   'Displays a search field that handles search callbacks': (browser) => {
@@ -63,10 +63,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays the search button with a height that matches the input ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
 
-    browser
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'placeholder', '');
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
 
     browser.getCssProperty('#searchfield input', 'height', (inputResult) => {
       browser.getCssProperty('#searchfield button', 'height', (buttonResult) => {
@@ -78,21 +77,19 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a search field with a default value': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default-value`);
 
-    browser
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'value', 'Default');
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('value').equals('Default');
   },
 
   'Displays a search field with a consumer onchange handler': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/onchange`);
 
-    browser
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.elementPresent('#searchfield input')
-      .assert.elementPresent('#searchOnChangeCallCount')
-      .assert.elementPresent('#searchOnChangeText')
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.be.present.to.equal(true);
+    browser.expect.element('#searchOnChangeCallCount').to.be.present.to.equal(true);
+    browser.expect.element('#searchOnChangeText').to.be.present.to.equal(true);
 
     browser.expect.element('#searchOnChangeCallCount').text.to.equal('0');
     browser.expect.element('#searchOnChangeText').text.to.equal('');
