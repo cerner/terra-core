@@ -1,0 +1,23 @@
+@include cerner-mock-theme {
+  // terra-form-field
+  --terra-form-field-margin-bottom: 0.5em;
+  --terra-form-field-inline-margin-right: 0.5em;
+  --terra-form-field-label-font-size: 12px;
+  --terra-form-field-label-margin-bottom: 0.5em;
+  --terra-form-field-label-error-icon-display: inline-block;
+  --terra-form-field-label-error-icon-padding-right: 0.5em;
+  --terra-form-field-label-color: #551a8b;
+  --terra-form-field-label-font-weight: 400;
+  --terra-form-field-label-required-color: #ffa500;
+  --terra-form-field-label-required-padding-right: 0.5em;
+  --terra-form-field-label-optional-font-style: italic;
+  --terra-form-field-label-optional-padding-left: 0.5em;
+  --terra-form-field-help-text-color: #ba55d3;
+  --terra-form-field-help-text-font-size: 9px;
+  --terra-form-field-help-text-font-weight: 300;
+  --terra-form-field-help-text-margin-top: 0.5em;
+  --terra-form-field-error-text-color: #ffa500;
+  --terra-form-field-error-text-font-size: 11px;
+  --terra-form-field-error-text-font-weight: 900;
+  --terra-form-field-error-text-margin-top: 0.5em;
+}
