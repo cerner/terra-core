@@ -22,6 +22,7 @@ import DividerExamples from './examples/divider/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
 import FormExamples from './examples/form/Index';
+import FormFieldExamples from './examples/form-field/Index';
 import FormTextareaExamples from './examples/form-textarea/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
@@ -68,8 +69,9 @@ import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes'
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
-import FormTextareaRoutes from 'terra-form-textarea/tests/nightwatch/TextareaTestRoutes';
+import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
+import FormTextareaRoutes from 'terra-form-textarea/tests/nightwatch/TextareaTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
 import HookshotTestRoutes from 'terra-hookshot/tests/nightwatch/HookshotTestRoutes';
@@ -138,6 +140,7 @@ ReactDOM.render((
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
       <Route path="form-textarea" component={FormTextareaExamples} />
+      <Route path="form-field" component={FormFieldExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
       <Route path="hookshot" component={HookshotExamples} />
@@ -214,6 +217,7 @@ ReactDOM.render((
     {PopupTestRoutes}
     {FormTestRoutes}
     {FormTextareaRoutes}
+    {FormFieldTestRoutes}
     {OverlayTestRoutes}
     {LoadingOverlayTestRoutes}
     {OverlayContainerTestRoutes}
