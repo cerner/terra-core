@@ -12,16 +12,16 @@ This component is used to provide margin and/or padding space between two compon
 
 | String Name   | Computed PX Value |
 | ------------- | -------------     |
-| none          | 0px               |
-| small-2       | 3px               |
-| small-1       | 5px               |
-| small         | 7px               |
-| medium        | 10px              |
-| large         | 12px              |
-| large+1       | 15px              |
-| large+2       | 20px              |
-| large+3       | 30px              |
-| large+4       | 50px              |
+| none          | 0                 |
+| small-2       | 0.2142857143rem   |
+| small-1       | 0.3571428571rem   |
+| small         | 0.5rem            |
+| medium        | 0.7142857143rem   |
+| large         | 0.8571428571rem   |
+| large+1       | 1.0714285714rem   |
+| large+2       | 1.4285714286rem   |
+| large+3       | 2.1428571429rem   |
+| large+4       | 3.5714285714rem   |
 
 ## Usage
 
@@ -29,19 +29,19 @@ This component is used to provide margin and/or padding space between two compon
 import React from 'react';
 import Spacer from 'terra-spacer';
 
-// Small view ports
+// Small spacing
 
 <Spacer marginTop="small" marginLeft="small-1" paddingTop="small-2">
   <Image src="someImageSource" alt="example image" />
 <Spacer/>
 
-// Medium view ports
+// Medium spacing
 
 <Spacer marginLeft="medium" marginRight="medium">
   <Image src="someImageSource" alt="example image" />
 <Spacer/>
 
-// Large and very large view ports
+// Large and very large spacing
 
 <Spacer paddingTop="large" paddingBottom="large+1" paddingLeft="large+2" marginLeft="large+4" marginRight="large+3">
   <Image src="someImageSource" alt="example image" />
@@ -49,7 +49,7 @@ import Spacer from 'terra-spacer';
 
 // Responsive spacing
 
-// sets magin-top to 50px for view port sizes >= 768px, for view port sizes < 768px sets margin-top to 5px
+// sets margin-top to 50px for view port sizes >= 768px, for view port sizes < 768px sets margin-top to 5px
 
 <Spacer marginTop="small-1" bps={{ 768: { marginTop: 'large+4' } }} >
   <Image src="someImageSource" alt="example image" />
@@ -58,7 +58,7 @@ import Spacer from 'terra-spacer';
 
 ## Note
 
-This component uses ** react-bps package mobile first strategy ** for ** responsiveness **. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
+This component uses **react-bps package mobile first strategy** for **responsiveness**. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
 
 
 ## Component Features
