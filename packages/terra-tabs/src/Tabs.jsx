@@ -99,6 +99,7 @@ class Tabs extends React.Component {
     }
   }
 
+  // TODO: Move this logic to collapsible tabs
   handleOnKeyDown(event) {
     const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
     const visibleChildrenCount = this.container.children.length;
