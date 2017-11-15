@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Add ability to default value and onChange function handler
 
 1.15.0 - (November 7, 2017)
 ------------------
