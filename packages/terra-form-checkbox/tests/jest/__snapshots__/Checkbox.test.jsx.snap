@@ -2,13 +2,14 @@
 
 exports[`should render a ChoiceField with a checkbox 1`] = `
 <div
-  className="control"
+  className="control "
 >
   <input
     className="healtheintent-application"
     defaultChecked={false}
     disabled={false}
     name="children_present"
+    onBlur={[Function]}
     onFocus={[Function]}
     type="checkbox"
     value="children_present"
@@ -24,13 +25,14 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
 
 exports[`should render a checkbox 1`] = `
 <div
-  className="control"
+  className="control "
 >
   <input
     className="input"
     defaultChecked={false}
     disabled={false}
     name={null}
+    onBlur={[Function]}
     onFocus={[Function]}
     type="checkbox"
   />
@@ -45,13 +47,14 @@ exports[`should render a checkbox 1`] = `
 
 exports[`should render a checkbox with a hidden label 1`] = `
 <div
-  className="control"
+  className="control "
 >
   <input
     checked={true}
     className="input"
     disabled={false}
     name={null}
+    onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="checkbox"
@@ -67,13 +70,14 @@ exports[`should render a checkbox with a hidden label 1`] = `
 
 exports[`should render a controlled checkbox 1`] = `
 <div
-  className="control"
+  className="control "
 >
   <input
     checked={true}
     className="input"
     disabled={false}
     name={null}
+    onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="checkbox"
@@ -89,36 +93,14 @@ exports[`should render a controlled checkbox 1`] = `
 
 exports[`should render a disabled checkbox 1`] = `
 <div
-  className="control"
+  className="control "
 >
   <input
     checked={true}
     className="input"
     disabled={true}
     name={null}
-    onChange={[Function]}
-    onClick={null}
-    onFocus={[Function]}
-    type="checkbox"
-  />
-  <label
-    className="label"
-  >
-    Checkbox
-     
-  </label>
-</div>
-`;
-
-exports[`should render a required checkbox 1`] = `
-<div
-  className="control"
->
-  <input
-    checked={true}
-    className="input"
-    disabled={false}
-    name={null}
+    onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="checkbox"
@@ -134,13 +116,14 @@ exports[`should render a required checkbox 1`] = `
 
 exports[`should render an uncontrolled checkbox 1`] = `
 <div
-  className="control"
+  className="control "
 >
   <input
     className="input"
     defaultChecked={true}
     disabled={false}
     name={null}
+    onBlur={[Function]}
     onFocus={[Function]}
     type="checkbox"
   />

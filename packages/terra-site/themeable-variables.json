@@ -121,16 +121,16 @@
     "--terra-card-padding-right": "10px"
   },
   "Checkbox": {
-    "--terra-form-checkbox-input-background-image": "linear-gradient(316deg, rgba(227, 227, 227, 0.08), #a9a9a9)",
-    "--terra-form-checkbox-input-symbol-color": "black",
-    "--terra-form-checkbox-input-symbol": "\"✓\"",
-    "--terra-form-checkbox-input-checked-height": "1em",
-    "--terra-form-checkbox-input-checked-width": "1em",
-    "--terra-form-checkbox-input-disabled-background-color": "rgba(246, 246, 246, 0.3)",
-    "--terra-form-checkbox-input-disabled-border-color": "#bdbdbd",
-    "--terra-form-checkbox-disabled-label": "#aaa",
-    "--terra-form-checkbox-input-focus-box-shadow": "0 0 0 0.09375em #4a90e2, inset 0 0 0 0.0625em #f6f6f6",
-    "--terra-control-focus-box-shadow": "none"
+    "--terra-form-checkbox-background-image": "linear-gradient(316deg, rgba(227, 227, 227, 0.08), #a9a9a9)",
+    "--terra-form-checkbox-symbol-color": "black",
+    "--terra-form-checkbox-symbol": "\"✓\"",
+    "--terra-form-checkbox-checked-height": "1em",
+    "--terra-form-checkbox-checked-width": "1em",
+    "--terra-form-checkbox-disabled-background-color": "rgba(246, 246, 246, 0.3)",
+    "--terra-form-checkbox-disabled-border-color": "#bdbdbd",
+    "--terra-form-checkbox-disabled-font-color": "#aaa",
+    "--terra-form-checkbox-focus-box-shadow": "0 0 0 0.09375em #4a90e2, inset 0 0 0 0.0625em #f6f6f6",
+    "--terra-form-checkbox-container-focus-box-shadow": "none"
   },
   "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",

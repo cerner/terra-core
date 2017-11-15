@@ -33,7 +33,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays three Checkboxes': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/checkbox-tests/multiple`);
     browser.expect.element('#first').to.be.present;
+    browser.expect.element('#first').text.to.equal('First Checkbox')
     browser.expect.element('#second').to.be.present;
+    browser.expect.element('#second').text.to.equal('Second Checkbox')
     browser.expect.element('#third').to.be.present;
+    browser.expect.element('#third').text.to.equal('Third Checkbox')
   },
 });

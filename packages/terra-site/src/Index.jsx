@@ -13,6 +13,7 @@ import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import CardExamples from './examples/card/Index';
+import CheckboxExamples from './examples/checkbox/Index';
 import CollapsibleMenuViewExamples from './examples/collapsible-menu-view/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
@@ -125,6 +126,7 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="card" component={CardExamples} />
+      <Route path="checkbox" component={CheckboxExamples} />
       <Route path="collapsible-menu-view" component={CollapsibleMenuViewExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />

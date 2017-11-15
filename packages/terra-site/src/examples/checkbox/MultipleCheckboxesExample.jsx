@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Checkbox from '../../src/Checkbox';
+import Checkbox from 'terra-form-checkbox/lib/Checkbox';
 
-const checkbox = () => (
+const multipleExample = () => (
   <div>
     <Checkbox id="first" labelText="First Checkbox" />
     <Checkbox id="second" labelText="Second Checkbox" />
@@ -10,4 +10,4 @@ const checkbox = () => (
   </div>
 );
 
-export default checkbox;
+export default multipleExample;
