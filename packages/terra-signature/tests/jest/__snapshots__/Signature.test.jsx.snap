@@ -2,25 +2,25 @@
 
 exports[`Signature should have custom props 1`] = `
 <canvas
-  className="signature"
+  class="signature"
   id="foo"
 />
 `;
 
 exports[`Signature should receive line segments prop 1`] = `
 <canvas
-  className="signature"
+  class="signature"
 />
 `;
 
 exports[`Signature should receive line width prop 1`] = `
 <canvas
-  className="signature"
+  class="signature"
 />
 `;
 
 exports[`Signature should render a default component 1`] = `
 <canvas
-  className="signature"
+  class="signature"
 />
 `;

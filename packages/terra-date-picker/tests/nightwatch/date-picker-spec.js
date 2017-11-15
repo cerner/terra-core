@@ -191,4 +191,32 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.expect.element('.react-datepicker').to.not.be.present;
   },
+
+  'Clears the default date and time on calendar button click when the default date is excluded': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default-date-excluded`);
+
+    browser.click('[class*="button"]');
+    browser.expect.element('input[name="terra-date-date-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on date input focus when the default date is excluded': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default-date-excluded`);
+
+    browser.click('input[name="terra-date-date-input"]');
+    browser.expect.element('input[name="terra-date-date-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on calendar button click when the default date is out of range': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default-date-out-of-range`);
+
+    browser.click('[class*="button"]');
+    browser.expect.element('input[name="terra-date-date-input"]').to.have.attribute('value').equals('');
+  },
+
+  'Clears the default date and time on date input focus when the default date is out of range': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/date-picker-tests/default-date-out-of-range`);
+
+    browser.click('input[name="terra-date-date-input"]');
+    browser.expect.element('input[name="terra-date-date-input"]').to.have.attribute('value').equals('');
+  },
 });
