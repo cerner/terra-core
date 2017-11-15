@@ -5,16 +5,16 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a search field with search button': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
 
-    browser.expect.element('#searchfield').to.be.present;
-    browser.expect.element('#searchfield button').to.be.present;
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
   },
 
   'Displays a search field with a placeholder value of "Search Text"': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`);
 
-    browser.expect.element('#searchfield').to.be.present;
-    browser.expect.element('#searchfield button').to.be.present;
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('Search Text');
   },
 
@@ -63,8 +63,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays the search button with a height that matches the input ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
 
-    browser.expect.element('#searchfield').to.be.present;
-    browser.expect.element('#searchfield button').to.be.present;
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
 
     browser.getCssProperty('#searchfield input', 'height', (inputResult) => {
@@ -77,8 +77,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a search field that is disabled': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
 
-    browser.expect.element('#searchfield').to.be.present;
-    browser.expect.element('#searchfield button').to.be.present;
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
     browser.expect.element('#searchfield input').to.have.attribute('disabled').which.contains('true');
     browser.expect.element('#searchfield input').to.have.attribute('aria-disabled').which.contains('true');
@@ -87,8 +87,8 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a search field displayed as block style to fill its container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/block`);
 
-    browser.expect.element('#searchfield').to.be.present;
-    browser.expect.element('#searchfield button').to.be.present;
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
     browser.expect.element('#searchfield').to.have.attribute('class').which.contains('searchfield');
     browser.expect.element('#searchfield').to.have.attribute('class').which.contains('block');
