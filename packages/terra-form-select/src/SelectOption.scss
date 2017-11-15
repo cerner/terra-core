@@ -3,7 +3,6 @@
     background-color: rgba(0, 0, 0, 0);
     color: var(--terra-select-option-font-color, rgba(0, 0, 0, 0.9));
     cursor: pointer;
-    font-family: var(--terra-select-option-font-family, Helvetica);
     font-size: var(--terra-select-option-font-size, 1em);
     line-height: var(--terra-select-option-line-height, 1.07);
     padding: var(--terra-select-option-padding, 0.286rem 0.714em);
@@ -32,7 +31,7 @@
 
     &:hover,
     &:focus {
-      background-color: var(--terra-form-select-option-hover-color, #ebf6fd);
+      background-color: var(--terra-select-option-hover-color, #ebf6fd);
       outline: none;
     }
   }
