@@ -15,9 +15,13 @@ const propTypes = {
    * Tabs style. One of: "modular" or "structural"
    */
   variant: PropTypes.oneOf(['modular', 'structural']),
-
+  /**
+   * Indicates if tabs should fill the width available in the tab bar.
+   */
   tabFill: PropTypes.bool,
-
+  /**
+   * Indicates if the pane content should fill to the height of the parent container.
+   */
   fill: PropTypes.bool,
 
   /**
@@ -51,14 +55,41 @@ const defaultProps = {
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
+    this.getInitialState = this.getInitialState.bind(this);
+    this.getActiveTabIndex = this.getActiveTabIndex.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.wrapPaneOnClick = this.wrapPaneOnClick.bind(this);
-    this.wrapPaneOnKeyDown = this.wrapPaneOnKeyDown.bind(this);
+    this.handleFocusLeft = this.handleFocusLeft.bind(this);
+    this.handleFocusRight = this.handleFocusRight.bind(this);
     this.state = {
-      activeKey: this.props.activeKey ? null : this.props.defaultActiveKey,
+      activeKey: this.getInitialState(),
     };
   }
+
+  getInitialState() {
+    if (this.props.activeKey) {
+      return null;
+    } else if (this.props.defaultActiveKey) {
+      return this.props.defaultActiveKey;
+    } else if (this.props.children.length) {
+      return this.props.children[0].key;
+    }
+
+    return this.props.children.key;
+  }
+
+  getActiveTabIndex() {
+    let activeIndex = -1;
+    React.Children.forEach(this.props.children, (child, index) => {
+      if (child.key === this.state.activeKey || child.key === this.props.activeKey) {
+        activeIndex = index;
+      }
+    });
+
+    return activeIndex;
+  }
+
 
   handleOnChange(event, selectedKey) {
     if (this.props.onChange) {
@@ -69,65 +100,47 @@ class Tabs extends React.Component {
   }
 
   handleOnKeyDown(event) {
-    const tabCount = React.Children.count(this.props.children);
-
-    // If we have less than 2 tabs we don't need to worry about arrow key presses
-    if (tabCount < 2) {
-      return;
-    }
-
-    let currentActiveIndex = -1;
-    React.Children.forEach(this.props.children, (child, index) => {
-      if (child.key === this.state.activeKey || child.key === this.props.activeKey) {
-        currentActiveIndex = index;
-      }
-    });
+    const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
+    const visibleChildrenCount = this.container.children.length;
+    const lastVisibleTabIndex = this.menuRef ? visibleChildrenCount - 2 : visibleChildrenCount - 1;
+    const currentActiveIndex = this.getActiveTabIndex();
 
     if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
-      if (currentActiveIndex > 0) {
-        this.handleOnChange(event, this.props.children[currentActiveIndex - 1].key);
+      if (isRTL) {
+        this.handleFocusRight(currentActiveIndex, lastVisibleTabIndex);
+      } else {
+        this.handleFocusLeft(currentActiveIndex, lastVisibleTabIndex);
       }
     } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
-      if (currentActiveIndex === tabCount - 1) {
-        // TODO: Focus menu
+      if (isRTL) {
+        this.handleFocusLeft(currentActiveIndex, lastVisibleTabIndex);
       } else {
-        this.handleOnChange(event, this.props.children[currentActiveIndex + 1].key);
+        this.handleFocusRight(currentActiveIndex, lastVisibleTabIndex);
       }
     }
   }
 
-  wrapPaneOnKeyDown(pane, index) {
-    return (event) => {
-      if (pane.props.onKeyDown) {
-        pane.props.onKeyDown(event);
-      }
+  handleFocusRight(currentActiveIndex, lastVisibleTabIndex) {
+    if (currentActiveIndex === lastVisibleTabIndex && this.menuRef) {
+      this.menuRef.focus();
+    } else {
+      this.handleOnChange(event, this.props.children[currentActiveIndex + 1].key);
+    }
+  }
 
-      // If length is not defined then there is only one child element and we do not need to handle arrow key presses.
-      if (!this.props.children.length) {
-        return;
-      }
-
-      if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
-        if (index > 0) {
-          this.handleOnChange(event, this.props.children[index - 1].key);
-        }
-      } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
-        if (index === this.props.children.length - 1) {
-          // TODO: Focus menu
-        } else {
-          this.handleOnChange(event, this.props.children[index + 1].key);
-        }
-      }
-    };
+  handleFocusLeft(currentActiveIndex, lastVisibleTabIndex) {
+    if (this.menuRef === document.activeElement) {
+      this.handleOnChange(event, this.props.children[lastVisibleTabIndex].key);
+      this.container.focus();
+    } else if (currentActiveIndex > 0) {
+      this.handleOnChange(event, this.props.children[currentActiveIndex - 1].key);
+    }
   }
 
   wrapPaneOnClick(pane) {
     return (event) => {
-      if (this.props.onChange) {
-        this.props.onChange(event, pane.key);
-      } else {
-        this.handleOnChange(event, pane.key);
-      }
+      this.handleOnChange(event, pane.key);
+
       if (pane.props.onClick) {
         pane.props.onClick(event);
       }
@@ -163,6 +176,7 @@ class Tabs extends React.Component {
       }
       clonedPanes.push(React.cloneElement(child, {
         className: cx({ 'is-active': isActive }),
+        'aria-selected': isActive,
         onClick: this.wrapPaneOnClick(child),
       }));
     });
@@ -172,7 +186,14 @@ class Tabs extends React.Component {
         className={tabsClassNames}
         fill={fill}
         header={(
-          <CollapsibleTabs activeKey={activeKey || this.state.activeKey} onKeyDown={this.handleOnKeyDown}>
+          <CollapsibleTabs
+            activeKey={activeKey || this.state.activeKey}
+            activeIndex={this.getActiveTabIndex()}
+            onKeyDown={this.handleOnKeyDown}
+            menuRef={(node) => { if (node) { this.menuRef = node; } }}
+            variant={variant}
+            refCallback={(node) => { if (node) { this.container = node; } }}
+          >
             {clonedPanes}
           </CollapsibleTabs>
         )}

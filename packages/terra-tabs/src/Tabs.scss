@@ -26,6 +26,13 @@
     min-width: 100px;
   }
 
+  .selection-bar {
+    background-color: blue;
+    display: block;
+    height: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+
   .tab.is-disabled {
     opacity: 0.3;
   }
@@ -36,7 +43,11 @@
   }
 
   .tab-menu {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+    
+    &:focus {
+      outline-style: dotted;
+    }
   }
 
   .tab-fill .tab {

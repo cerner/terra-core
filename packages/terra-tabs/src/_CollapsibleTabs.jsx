@@ -10,7 +10,11 @@ const cx = classNames.bind(styles);
 const propTypes = {
   onKeyDown: PropTypes.func,
   activeKey: PropTypes.string,
+  activeIndex: PropTypes.number,
   children: PropTypes.node,
+  menuRef: PropTypes.func,
+  variant: PropTypes.string,
+  refCallback: PropTypes.func,
 };
 
 class CollapsibleTabs extends React.Component {
@@ -19,6 +23,7 @@ class CollapsibleTabs extends React.Component {
     this.setContainer = this.setContainer.bind(this);
     this.setMenuToggle = this.setMenuToggle.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.handleSelectionAnimation = this.handleSelectionAnimation.bind(this);
     this.state = {
       hiddenStartIndex: -1,
       menuHidden: false,
@@ -35,6 +40,12 @@ class CollapsibleTabs extends React.Component {
       this.handleResize(entries[0].contentRect.width);
     });
     this.resizeObserver.observe(this.container);
+
+    this.handleSelectionAnimation();
+  }
+
+  componentDidUpdate() {
+    this.handleSelectionAnimation();
   }
 
   componentWillUnmount() {
@@ -45,11 +56,16 @@ class CollapsibleTabs extends React.Component {
   setContainer(node) {
     if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
     this.container = node;
+
+    this.props.refCallback(node);
   }
 
   setMenuToggle(node) {
     if (node === null) { return; }
     this.menuToggle = node;
+    if (this.props.menuRef) {
+      this.props.menuRef(node);
+    }
   }
 
   handleResize(width) {
@@ -87,6 +103,26 @@ class CollapsibleTabs extends React.Component {
     }
   }
 
+  handleSelectionAnimation() {
+    if (this.selectionBar && window.getComputedStyle(this.selectionBar, null).getPropertyValue('transition-property').includes('transform')) {
+      const activeIndex = this.props.activeIndex > this.state.hiddenStartIndex ? this.state.hiddenStartIndex : this.props.activeIndex;
+      const selectedTab = this.container.children[activeIndex];
+
+      if (selectedTab) {
+        const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
+        const tabRect = selectedTab.getBoundingClientRect();
+        const barWidth = tabRect.width;
+        let barLeft = tabRect.left - this.container.getBoundingClientRect().left;
+        if (isRTL) {
+          barLeft = tabRect.right - this.container.getBoundingClientRect().right;
+        }
+
+        this.selectionBar.style.width = `${barWidth}px`;
+        this.selectionBar.style.transform = `translate3d(${barLeft}px,0,0)`;
+      }
+    }
+  }
+
   render() {
     const visibleChildren = [];
     const hiddenChildren = [];
@@ -105,15 +141,25 @@ class CollapsibleTabs extends React.Component {
       </Menu>
     );
 
+    const selectionBar = this.props.variant === 'modular' ? (
+      <div className={cx('selection-bar')} ref={(node) => { if (node) { this.selectionBar = node; } }} />
+    ) : null;
+
     return (
-      <div
-        className={cx(['collapsible-tabs-container', { 'is-calculating': this.state.isCalculating }])}
-        ref={this.setContainer}
-        tabIndex="0"
-        onKeyDown={this.props.onKeyDown}
-      >
-        {visibleChildren}
-        {menu}
+      <div>
+        {/* eslint-disable jsx-a11y/no-static-element-interactions */}
+        <div
+          className={cx(['collapsible-tabs-container', { 'is-calculating': this.state.isCalculating }])}
+          ref={this.setContainer}
+          tabIndex="0"
+          onKeyDown={this.props.onKeyDown}
+          role="tablist"
+        >
+          {/* eslint-enable jsx-ally/no-static-element-interactions */}
+          {visibleChildren}
+          {menu}
+        </div>
+        {selectionBar}
       </div>
     );
   }

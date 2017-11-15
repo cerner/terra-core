@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Menu from 'terra-menu';
+import Arrange from 'terra-arrange';
+import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
 import styles from './Tabs.scss';
 import TabUtils from './TabUtils';
 
@@ -28,7 +30,7 @@ class TabMenu extends React.Component {
   }
 
   componentDidMount() {
-    this.targetWidth = this.targetRef.clientWidth;
+    this.targetWidth = this.targetRef.getBoundingClientRect().width;
   }
 
   getTargetRef() {
@@ -103,13 +105,18 @@ class TabMenu extends React.Component {
         {/* eslint-disable jsx-a11y/no-static-element-interactions */}
         <div
           role="button"
+          tabIndex="0"
           ref={this.setTargetRef}
           onClick={this.handleOnClick}
           onKeyDown={this.handleOnKeyDown}
           style={{ width: this.targetWidth }}
           className={cx(['tab-menu'])}
         >
-          {menuToggleText}
+          <Arrange
+            fill={<div>{menuToggleText}</div>}
+            fitEnd={<IconCaretDown />}
+            align="center"
+          />
         </div>
         {/* eslint-enable jsx-ally/no-static-element-interactions */}
       </div>
