@@ -1,0 +1,75 @@
+:local {
+  .field {
+    border: 0;
+    margin-bottom: var(--terra-form-field-margin-bottom, 1.428em);
+    max-width: 72.857rem;
+    padding: 0;
+  }
+
+  .field-inline {
+    display: inline-block;
+    margin-right: var(--terra-form-field-inline-margin-right, 0.7143em);
+    vertical-align: top;
+  }
+
+  .label-group {
+    font-size: var(--terra-form-field-label-font-size, 1rem);
+    line-height: 1.29;
+    margin-bottom: var(--terra-form-field-label-margin-bottom, 0.357em);
+    text-align: left;
+  }
+
+  .label-group-hidden {
+    display: none;
+  }
+
+  .label {
+    color: var(--terra-form-field-label-color, rgba(0, 0, 0, 0.8));
+    font-weight: var(--terra-form-field-label-font-weight, bold);
+  }
+
+  .error-icon,
+  .error-icon-hidden {
+    display: var(--terra-form-field-label-error-icon-display, none);
+    padding-right: var(--terra-form-field-label-error-icon-padding-right, 0.357em);
+  }
+
+  .error-icon-hidden {
+    visibility: hidden;
+  }
+
+  .required,
+  .required-hidden {
+    color: var(--terra-form-field-label-required-color , #ff232a);
+    display: inline-block;
+    padding-right: var(--terra-form-field-label-required-padding-right, 0.357em);
+  }
+
+  .required-hidden {
+    visibility: hidden;
+  }
+
+  .optional {
+    display: inline-block;
+    font-style: var(--terra-form-field-label-optional-font-style, italic);
+    padding-left: var(--terra-form-field-label-optional-padding-left, 0.357em);
+  }
+
+  .help-text {
+    color: var(--terra-form-field-help-text-color, rgba(0, 0, 0, 0.5));
+    font-size: var(--terra-form-field-help-text-font-size, 0.857rem);
+    font-weight: var(--terra-form-field-help-text-font-weight, normal);
+    line-height: 1.25;
+    margin-top: var(--terra-form-field-help-text-margin-top, 0.357em);
+    text-align: left;
+  }
+
+  .error-text {
+    color: var(--terra-form-field-error-text-color, #e50000);
+    font-size: var(--terra-form-field-error-text-font-size, 0.857rem);
+    font-weight: var(--terra-form-field-error-text-font-weight, normal);
+    line-height: 1.25;
+    margin-top: var(--terra-form-field-error-text-margin-top, 0.357em);
+    text-align: left;
+  }
+}
