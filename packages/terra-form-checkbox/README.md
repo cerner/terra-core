@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-form-checkbox.svg)](https://www.npmjs.org/package/terra-form-checkbox)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Terra Checkbox is a component that toggles between checked and unchecked states.
+The Terra Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-checkbox/docs)

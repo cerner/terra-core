@@ -1,6 +1,6 @@
 # Terra Form Checkbox
 
-The Terra Checkbox is a component that toggles between checked and unchecked states.
+The Terra Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ The Terra Checkbox is a component that toggles between checked and unchecked sta
 
 ```jsx
 import React from 'react';
-import FormCheckbox from 'terra-form-checkbox';
+import Checkbox from 'terra-form-checkbox';
 
 <Checkbox {id="checkbox" labelText="Default Checkbox" } />
 ```

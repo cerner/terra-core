@@ -4,7 +4,7 @@ import Checkbox from '../../src/Checkbox';
 
 const checkbox = () => (
   <div>
-    <Checkbox id="first" labelText="First Checkbox" />
+    <Checkbox id="first" labelText="First Checkbox" defaultChecked />
     <Checkbox id="second" labelText="Second Checkbox" />
     <Checkbox id="third" labelText="Third Checkbox" />
   </div>

@@ -133,12 +133,11 @@ class Checkbox extends React.Component {
     ]);
 
     const labelTextClasses = cx([
-      'label',
+      'label-text',
       labelTextAttrs.className,
     ]);
 
     const inputClasses = cx([
-      'input',
       inputAttrs.className,
     ]);
 

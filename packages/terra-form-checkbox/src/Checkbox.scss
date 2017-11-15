@@ -7,7 +7,7 @@
     margin-top: var(terra-form-checkbox-margin-top, 0.625em);
     vertical-align: middle;
 
-    label {
+    .label-text {
       font-size: var(terra-form-checkbox-font-size, 1rem);
     }
 
@@ -24,8 +24,8 @@
       width: 1px;
     }
 
-    input:not(:checked) + label,
-    input:checked + label {
+    input:not(:checked) + .label-text,
+    input:checked + .label-text {
       cursor: pointer;
       display: flex;
       padding-left: 1.6em;
@@ -33,8 +33,8 @@
     }
 
     /* Checkbox aspect */
-    input:not(:checked) + label::before,
-    input:checked + label::before {
+    input:not(:checked) + .label-text::before,
+    input:checked + .label-text::before {
       background-color: var(--terra-form-checkbox-background-color #f6f6f6);
       background-image: var(--terra-form-checkbox-background-image, linear-gradient(316deg, rgba(227, 227, 227, 0.08), #a9a9a9));
       background-position: center center;
@@ -56,31 +56,31 @@
     }
     
     /* Checked mark symbol aspect */
-    input:not(:checked) + label::after,
-    input:checked + label::after {
+    input:not(:checked) + .label-text::after,
+    input:checked + .label-text::after {
       color: var(--terra-form-checkbox-symbol-color, rgb(0, 0, 0));
       content: var(--terra-form-checkbox-symbol, '\2713');
       left: 0;
       line-height: 1em;
       position: absolute;
       top: 0;
-      transition: all 0.2s;
+      transition: all 0.1s;
       vertical-align: inherit;
     }
 
     /* Check mark aspect changes */
-    input:not(:checked) + label::after {
+    input:not(:checked) + .label-text::after {
       opacity: 0;
       transform: scale(0);
     }
 
     /* Input in checked state */
-    input:checked + label::after {
+    input:checked + .label-text::after {
       background-color: var(--terra-form-checkbox-checked-background-color none);
-      border-color: var(terra-form-checkbox-checked-border-color, #979797);
+      border-color: var(terra-form-checkbox-checked-border-color, none);
       border-radius: var(terra-form-checkbox-checked-border-radius, none);
-      border-style: var(terra-form-checkbox-checked-border-style, solid);
-      border-width: var(terra-form-checkbox-checked-border-width, 0.0625em);
+      border-style: var(terra-form-checkbox-checked-border-style, none);
+      border-width: var(terra-form-checkbox-checked-border-width, none);
       height: var(--terra-form-checkbox-checked-height, 1em);
       opacity: 1;
       text-align: center;
@@ -90,21 +90,21 @@
     }
 
     /* Disabled checkbox */
-    input:disabled:not(:checked) + label::before,
-    input:disabled:checked + label::before {
+    input:disabled:not(:checked) + .label-text::before,
+    input:disabled:checked + .label-text::before {
       background-color: var(--terra-form-checkbox-disabled-background-color, rgba(246, 246, 246, 0.3));
       border-color: var(--terra-form-checkbox-disabled-border-color, #bdbdbd);
     }
 
     /* Disabled label */
-    input:disabled + label {
+    input:disabled + .label-text {
       color: var(--terra-form-checkbox-disabled-font-color, #aaa);
       cursor: default;
     }
 
     /* Input focus styling */
-    input:checked:focus + label::before,
-    input:not(:checked):focus + label::before {
+    input:checked:focus + .label-text::before,
+    input:not(:checked):focus + .label-text::before {
       box-shadow: var(--terra-form-checkbox-focus-box-shadow, 0 0 0 0.09375em #4a90e2, inset 0 0 0 0.0625em #f6f6f6);
     }
   }
