@@ -9,7 +9,7 @@
 </h1>
 
 [![Cerener OSS](https://img.shields.io/badge/Cerner-OSS-blue.svg?style=flat)](http://engineering.cerner.com/2014/01/cerner-and-open-source/)
-[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core) 
+[![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 [![lerna](https://img.shields.io/badge/Maintained%20With-Lerna-cc00ff.svg)](https://lernajs.io/)
 [![devDependencies status](https://david-dm.org/cerner/terra-core/dev-status.svg)](https://david-dm.org/cerner/terra-core?type=dev)
 
@@ -130,6 +130,15 @@ Components in beta stage may include breaking changes, new features, and bug fix
 ## Contributing
 
 Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
+
+## Local Development
+
+1. Install docker https://www.docker.com/ to run browser tests.
+2. Install dependencies and run tests.
+```sh
+npm install
+npm run test
+```
 
 ## LICENSE
 
