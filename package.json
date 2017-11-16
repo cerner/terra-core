@@ -99,7 +99,7 @@
     "stylelint": "~8.0.0",
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-toolkit": "^2.1.0",
+    "terra-toolkit": "^2.2.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "2.7.1"
   }
