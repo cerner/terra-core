@@ -15,7 +15,7 @@
     padding: var(--terra-select-input-padding, 0.571em 0.5em);
     transition-duration: var(--terra-select-focus-transition-duration, 0s);
     transition-property: background-size;
-    transition-timing-function: ease;
+    transition-timing-function: var(--terra-select-focus-transition-timing, ease);
     width: 100%;
 
     &.is-disabled {
@@ -41,8 +41,15 @@
     &.open {
       background-size: var(--terra-select-focus-animation-size, 0 0);
       border-color: var(--terra-select-input-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-select-focus-box-shadow, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff);
       outline: none;
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-select-focus-box-shadow-rtl, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff);
+      }
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-select-focus-box-shadow-ltr, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff);
+      }
     }
 
     &.invalid {
@@ -57,7 +64,16 @@
       &:focus {
         background-size: var(--terra-select-invalid-focus-animation-size, 0 0);
         border-color: var(--terra-select-invalid-focus-border-color, #4cb2e9);
-        box-shadow: var(--terra-select-invalid-focus-box-shadow, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff);
+
+        /* stylelint-disable max-nesting-depth */
+        [dir=rtl] & {
+          box-shadow: var(--terra-select-invalid-focus-box-shadow-rtl, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-select-invalid-focus-box-shadow-ltr, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff);
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }
@@ -107,6 +123,14 @@
     box-shadow: var(--terra-select-menu-box-shadow, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
     margin: 0;
     padding-bottom: var(--terra-select-menu-bottom-padding, 0.214em);
+
+    [dir=rtl] & {
+      box-shadow: var(--terra-select-menu-box-shadow-rtl, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
+    }
+
+    [dir=ltr] & {
+      box-shadow: var(--terra-select-menu-box-shadow-ltr, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
+    }
   }
 
   @supports (-webkit-backdrop-filter: blur(var(--terra-select-menu-blur, 0))) {
