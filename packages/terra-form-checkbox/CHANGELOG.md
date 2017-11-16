@@ -1,6 +1,6 @@
 ChangeLog
 =========
 
-1.0.0 - (Unreleased)
+(Unreleased)
 -----------------
 Initial stable release
