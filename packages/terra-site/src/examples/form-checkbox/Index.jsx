@@ -13,6 +13,7 @@ import CheckboxSrc from '!raw-loader!terra-form-checkbox/src/Checkbox';
 import DefaultCheckbox from './DefaultCheckboxExample';
 import DisabledCheckbox from './DisabledCheckboxExample';
 import LongTextCheckbox from './LongTextCheckboxExample';
+import InlineCheckboxes from './InlinecheckboxesExample';
 import MultipleCheckboxes from './MultipleCheckboxesExample';
 
 const CheckboxExamples = () => (
@@ -28,6 +29,9 @@ const CheckboxExamples = () => (
     <br /> <br />
     <h2 id="longtext">Long Text Checkbox</h2>
     <LongTextCheckbox />
+    <br /> <br />
+    <h2 id="inline">Multiple Inline Checkboxes</h2>
+    <InlineCheckboxes />
     <br /> <br />
     <h2 id="multiple">Multiple Checkboxes - first defaults to checked</h2>
     <MultipleCheckboxes />

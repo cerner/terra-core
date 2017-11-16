@@ -8,11 +8,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-    * The checked property of the Input element. Use this to generate a controlled Control Element.
+    * The checked property of the Input element. Use this to generate a controlled Checkbox Element.
     */
   checked: PropTypes.bool,
   /**
-    * The checked property of the Input element. Use this to generate an uncontrolled Control Element.
+    * The checked property of the Input element. Use this to generate an uncontrolled Checkbox Element.
     */
   defaultChecked: PropTypes.bool,
   /**
@@ -24,11 +24,11 @@ const propTypes = {
     */
   inputAttrs: PropTypes.object,
   /**
-   * Whether the control element is disabled or not.
+   * Whether the checkbox element is disabled or not.
    */
   isDisabled: PropTypes.bool,
   /**
-    * Whether the control element is inline or not.
+    * Whether the checkbox element is inline or not.
     */
   isInline: PropTypes.bool,
   /**
@@ -59,7 +59,7 @@ const propTypes = {
 
 const defaultProps = {
   checked: undefined,
-  defaultChecked: false,
+  defaultChecked: undefined,
   id: undefined,
   inputAttrs: {},
   isDisabled: false,
@@ -78,22 +78,20 @@ class Checkbox extends React.Component {
     this.state = { focus: false };
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
-    this.getFocusClass = this.getFocusClass.bind(this);
   }
 
   onFocus() {
     this.setState({ focus: true });
+    if(inputAttrs.onFocus !== undefined) {
+      inputAttrs.onFocus();
+    }
   }
 
   onBlur() {
     this.setState({ focus: false });
-  }
-
-  getFocusClass() {
-    if (this.state.focus === false) {
-      return '';
+    if(inputAttrs.onBlur !== undefined) {
+      inputAttrs.onBlur();
     }
-    return cx(['focus']);
   }
 
   render() {
@@ -121,8 +119,10 @@ class Checkbox extends React.Component {
       controlInputAttrs.defaultChecked = defaultChecked;
     }
 
-    const controlClasses = cx([
-      'control',
+    const checkboxClasses = cx([
+      'checkbox',
+      {'focus': this.state.focus},
+      {'checkbox-inline': isInline },
       customProps.className,
     ]);
 
@@ -132,12 +132,14 @@ class Checkbox extends React.Component {
     ]);
 
     const inputClasses = cx([
+      'hidden-input',
       inputAttrs.className,
     ]);
 
     return (
-      <div className={`${controlClasses} ${this.getFocusClass()}`} >
+      <div className={checkboxClasses} >
         <input
+          {...controlInputAttrs}
           type="checkbox"
           id={id}
           disabled={isDisabled}
@@ -147,7 +149,6 @@ class Checkbox extends React.Component {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           className={inputClasses}
-          {...controlInputAttrs}
         />
         <label htmlFor={id} className={labelTextClasses} >{labelText} </label>
       </div>
