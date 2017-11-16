@@ -5,6 +5,11 @@ Unreleased
 ----------
 * Add ability to disable the auto searching and trigger searching via ENTER key
 
+1.16.0 - (November 16, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.15.0 - (November 7, 2017)
 ------------------
 ### Changed
