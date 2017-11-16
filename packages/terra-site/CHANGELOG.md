@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.18.0 - (November 16, 2017)
+------------------
 ### Added
 * Add terra-form-textarea components
 * Add terra-form-field components
