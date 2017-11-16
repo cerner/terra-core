@@ -95,12 +95,20 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser
       .setValue('input[type=search]', 'S')
       .expect.element('#search-callback-text').text.to.equal('').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 0');
+
     browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
     browser.expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 1');
 
     browser
       .setValue('input[type=search]', 'e')
       .expect.element('#search-callback-text').text.to.equal('Search Text: Se').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 2');
+
+    browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
+    browser.expect.element('#search-callback-text').text.to.equal('Search Text: Se').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 3');
   },
 
   'Displays the search field with auto searching off and handles ENTER keypress to search ': (browser) => {
