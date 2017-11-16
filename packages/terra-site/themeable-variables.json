@@ -145,7 +145,10 @@
     "--terra-form-checkbox-disabled-border-color": "#bdbdbd",
     "--terra-form-checkbox-disabled-font-color": "#aaa",
     "--terra-form-checkbox-focus-box-shadow": "0 0 0 0.09375em #4a90e2, inset 0 0 0 0.0625em #f6f6f6",
-    "--terra-form-checkbox-container-focus-box-shadow": "none"
+    "--terra-form-checkbox-container-focus-box-shadow": "none",
+    "--terra-form-checkbox-padding-left": "1.6em",
+    "--terra-form-checkbox-background-color": "#f6f6f6",
+    "--terra-form-checkbox-checked-background-color": "none"
   },
   "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",
