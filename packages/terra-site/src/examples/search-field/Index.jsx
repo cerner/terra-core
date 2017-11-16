@@ -34,7 +34,7 @@ const SearchFieldExamples = () => (
     <h2 id="searchFieldDelayed">Search Field with delay of 2000ms</h2>
     <SearchFieldDelayed />
     <br />
-    <h2 id="searchFieldDefaultValue">Search Field with a defaulted value</h2>
+    <h2 id="searchFieldDefaultValue">Search Field with a default value</h2>
     <SearchFieldDefaultValue />
     <br />
     <h2 id="searchFieldOnChange">Search Field with custom onChange handler</h2>

@@ -98,4 +98,12 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#searchOnChangeCallCount').text.to.equal('1').after(250);
     browser.expect.element('#searchOnChangeText').text.to.equal('T').after(250);
   },
+
+  'Displays a search field with a value': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/value`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('value').equals('Test');
+  },
 });

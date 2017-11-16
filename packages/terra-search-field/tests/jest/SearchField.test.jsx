@@ -14,9 +14,7 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field with a value', () => {
-    const searchField = shallow(<SearchField />);
-    searchField.setState({ searchText: 'Test' });
-
+    const searchField = shallow(<SearchField value={'Test'} />);
     expect(searchField).toMatchSnapshot();
   });
 

@@ -11,7 +11,6 @@ exports[`Snapshots renders a basic search field 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -43,7 +42,6 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     placeholder="Test"
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -102,12 +100,12 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
 >
   <Input
     className="input"
+    defaultValue="Default"
     name={null}
     onChange={[Function]}
     placeholder=""
     required={false}
     type="search"
-    value="Default"
   />
   <Button
     className="button"

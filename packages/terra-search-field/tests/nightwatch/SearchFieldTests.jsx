@@ -13,6 +13,7 @@ const SearchFieldTests = () => (
       <li><Link to="/tests/search-field-tests/minimum-length">SearchField - 5 Character Minimum Length </Link></li>
       <li><Link to="/tests/search-field-tests/default-value">SearchField - Default Value </Link></li>
       <li><Link to="/tests/search-field-tests/onchange">SearchField - Handle On Change </Link></li>
+      <li><Link to="/tests/search-field-tests/value">SearchField - With Value </Link></li>
     </ul>
   </div>
 );

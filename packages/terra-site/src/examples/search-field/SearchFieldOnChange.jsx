@@ -8,8 +8,8 @@ class SearchFieldOnChange extends React.Component {
     this.state = { searchText: '', callCount: 0 };
   }
 
-  onChange(event, searchText) {
-    this.setState({ searchText, callCount: this.state.callCount + 1 });
+  onChange(event) {
+    this.setState({ searchText: event.target.value, callCount: this.state.callCount + 1 });
   }
 
   render() {

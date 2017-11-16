@@ -10,6 +10,7 @@ import DelayedSearchField from './DelayedSearchField';
 import MinimumLengthSearchField from './MinimumLengthSearchField';
 import SearchFieldDefaultValue from './SearchFieldDefaultValue';
 import SearchFieldOnChange from './SearchFieldOnChange';
+import SearchFieldWithValue from './SearchFieldWithValue';
 
 const routes = (
   <div>
@@ -21,6 +22,7 @@ const routes = (
     <Route path="/tests/search-field-tests/minimum-length" component={MinimumLengthSearchField} />
     <Route path="/tests/search-field-tests/default-value" component={SearchFieldDefaultValue} />
     <Route path="/tests/search-field-tests/onchange" component={SearchFieldOnChange} />
+    <Route path="/tests/search-field-tests/value" component={SearchFieldWithValue} />
   </div>
 );
 

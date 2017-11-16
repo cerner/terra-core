@@ -11,6 +11,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * The defaultValue of the search field. Use this to create an uncontrolled search field.
+   */
+  defaultValue: PropTypes.string,
+
+  /**
    * Placeholder text to show while the search field is empty.
    */
   placeholder: PropTypes.string,
@@ -41,16 +46,17 @@ const propTypes = {
   onInvalidSearch: PropTypes.func,
 
   /**
-   * The text to display in the search field
+   * The value of search field.  Use this to create a controlled search field.
    */
-  defaultValue: PropTypes.string,
+  value: PropTypes.string,
 };
 
 const defaultProps = {
-  placeholder: '',
+  defaultValue: undefined,
   minimumSearchTextLength: 2,
+  placeholder: '',
   searchDelay: 250,
-  defaultValue: '',
+  value: undefined,
 };
 
 class SearchField extends React.Component {
@@ -72,11 +78,10 @@ class SearchField extends React.Component {
   }
 
   handleTextChange(event) {
-    const searchText = event.target.value;
-    this.setState({ searchText });
+    this.setState({ searchText: event.target.value });
 
     if (this.props.onChange) {
-      this.props.onChange(event, searchText);
+      this.props.onChange(event);
     }
 
     if (!this.searchTimeout) {
@@ -102,11 +107,28 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { defaultValue, placeholder, searchDelay, minimumSearchTextLength, onChange, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const {
+      defaultValue,
+      minimumSearchTextLength,
+      placeholder,
+      searchDelay,
+      onChange,
+      onInvalidSearch,
+      onSearch,
+      value,
+      ...customProps
+    } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
       customProps.className,
     ]);
+
+    const additionalInputAttributes = {};
+    if (value !== undefined) {
+      additionalInputAttributes.value = value;
+    } else {
+      additionalInputAttributes.defaultValue = defaultValue;
+    }
 
     return (
       <div {...customProps} className={searchFieldClassNames}>
@@ -114,8 +136,8 @@ class SearchField extends React.Component {
           className={cx('input')}
           type="search"
           placeholder={placeholder}
-          value={this.state.searchText}
           onChange={this.handleTextChange}
+          {...additionalInputAttributes}
         />
         <Button
           className={cx('button')}
