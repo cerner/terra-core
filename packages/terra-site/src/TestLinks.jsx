@@ -13,7 +13,6 @@ const TestLinks = () => (
       <li><Link to="/tests/button-group-tests">Button Group Tests</Link></li>
       <li><Link to="/tests/button-tests">Button Tests</Link></li>
       <li><Link to="/tests/card-tests">Card Tests</Link></li>
-      <li><Link to="/tests/checkbox-tests">Check Box Tests</Link></li>
       <li><Link to="/tests/collapsible-menu-view-tests">Collapsible Menu View</Link></li>
       <li><Link to="/tests/content-container-tests">ContentContainer Tests</Link></li>
       <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
@@ -22,6 +21,7 @@ const TestLinks = () => (
       <li><Link to="/tests/divider-tests">Divider Tests</Link></li>
       <li><Link to="/tests/dynamic-grid-tests">Dynamic Grid Tests</Link></li>
       <li><Link to="/tests/embedded-content-consumer-tests">EmbeddedContentConsumer Tests</Link></li>
+      <li><Link to="/tests/form-checkbox-tests">Form Checkbox Tests</Link></li>
       <li><Link to="/tests/form-tests">Form Tests</Link></li>
       <li><Link to="/tests/form-field-tests">Form Field Tests</Link></li>
       <li><Link to="/tests/grid-tests">Grid Tests</Link></li>

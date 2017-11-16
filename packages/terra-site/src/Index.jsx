@@ -13,7 +13,7 @@ import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import CardExamples from './examples/card/Index';
-import CheckboxExamples from './examples/checkbox/Index';
+import FormCheckboxExamples from './examples/form-checkbox/Index';
 import CollapsibleMenuViewExamples from './examples/collapsible-menu-view/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
@@ -60,7 +60,7 @@ import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
-import CheckboxRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
+import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
@@ -130,7 +130,6 @@ ReactDOM.render((
       <Route path="button" component={ButtonExamples} />
       <Route path="button-group" component={ButtonGroupExamples} />
       <Route path="card" component={CardExamples} />
-      <Route path="checkbox" component={CheckboxExamples} />
       <Route path="collapsible-menu-view" component={CollapsibleMenuViewExamples} />
       <Route path="content-container" component={ContentContainerExamples} />
       <Route path="datepicker" component={DatePickerExamples} />
@@ -140,6 +139,7 @@ ReactDOM.render((
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
+      <Route path="form-checkbox" component={FormCheckboxExamples} />
       <Route path="form-field" component={FormFieldExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
@@ -180,7 +180,6 @@ ReactDOM.render((
     {ButtonTestRoutes}
     {ButtonGroupTestRoutes}
     {CardTestRoutes}
-    {CheckboxRoutes}
     {CollapsibleMenuViewTestRoutes}
     {DatePickerTestRoutes}
     {DateTimePickerTestRoutes}
@@ -217,6 +216,7 @@ ReactDOM.render((
     {SearchFieldTestRoutes}
     {PopupTestRoutes}
     {FormTestRoutes}
+    {FormCheckboxTestRoutes}
     {FormFieldTestRoutes}
     {OverlayTestRoutes}
     {LoadingOverlayTestRoutes}
