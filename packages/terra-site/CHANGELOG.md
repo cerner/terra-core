@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Add terra-form-checkbox components
+* Add terra-form-textarea components
 * Add terra-form-field components
 * Add terra-mock-theme styles
 

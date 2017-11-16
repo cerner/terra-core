@@ -51,6 +51,7 @@
     "terra-embedded-content-consumer": "^1.6.1",
     "terra-form-checkbox": "^0.x",
     "terra-form": "^1.12.0",
+    "terra-form-textarea": "^0.x",
     "terra-form-field": "^0.x",
     "terra-grid": "^3.15.1",
     "terra-heading": "^1.13.0",
