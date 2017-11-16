@@ -26,6 +26,13 @@
       &:focus {
         background-size: 0 0;
         border-color: var(--terra-select-disabled-border-color, #dedfe0);
+
+        /* stylelint-disable max-nesting-depth */
+        [dir=rtl] &,
+        [dir=ltr] & {
+          box-shadow: none;
+        }
+        /* stylelint-enable max-nesting-depth */
       }
 
       &:hover {
