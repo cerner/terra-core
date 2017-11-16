@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.16.0 - (November 16, 2017)
+------------------
 ### Fixed
 * Chevron positioning
 
