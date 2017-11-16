@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-base": "^1.0.0",
+    "terra-base": "^2.6.1",
     "terra-toolkit": "^2.1.0"
   },
   "scripts": {
