@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Added
+* Add terra-form-textarea components
 * Add terra-form-field components
 * Add terra-mock-theme styles
 
