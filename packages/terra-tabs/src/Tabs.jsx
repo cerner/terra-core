@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ContentContainer from 'terra-content-container';
 import 'terra-base/lib/baseStyles';
-import TabUtils from './TabUtils';
 import TabPane from './TabPane';
 import CollapsibleTabs from './_CollapsibleTabs';
 import styles from './Tabs.scss';
@@ -58,10 +57,7 @@ class Tabs extends React.Component {
     this.getInitialState = this.getInitialState.bind(this);
     this.getActiveTabIndex = this.getActiveTabIndex.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
-    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.wrapPaneOnClick = this.wrapPaneOnClick.bind(this);
-    this.handleFocusLeft = this.handleFocusLeft.bind(this);
-    this.handleFocusRight = this.handleFocusRight.bind(this);
     this.state = {
       activeKey: this.getInitialState(),
     };
@@ -96,45 +92,6 @@ class Tabs extends React.Component {
       this.props.onChange(event, selectedKey);
     } else if (this.state.activeKey !== selectedKey) {
       this.setState({ activeKey: selectedKey });
-    }
-  }
-
-  // TODO: Move this logic to collapsible tabs
-  handleOnKeyDown(event) {
-    const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
-    const visibleChildrenCount = this.container.children.length;
-    const lastVisibleTabIndex = this.menuRef ? visibleChildrenCount - 2 : visibleChildrenCount - 1;
-    const currentActiveIndex = this.getActiveTabIndex();
-
-    if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
-      if (isRTL) {
-        this.handleFocusRight(currentActiveIndex, lastVisibleTabIndex);
-      } else {
-        this.handleFocusLeft(currentActiveIndex, lastVisibleTabIndex);
-      }
-    } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
-      if (isRTL) {
-        this.handleFocusLeft(currentActiveIndex, lastVisibleTabIndex);
-      } else {
-        this.handleFocusRight(currentActiveIndex, lastVisibleTabIndex);
-      }
-    }
-  }
-
-  handleFocusRight(currentActiveIndex, lastVisibleTabIndex) {
-    if (currentActiveIndex === lastVisibleTabIndex && this.menuRef) {
-      this.menuRef.focus();
-    } else {
-      this.handleOnChange(event, this.props.children[currentActiveIndex + 1].key);
-    }
-  }
-
-  handleFocusLeft(currentActiveIndex, lastVisibleTabIndex) {
-    if (this.menuRef === document.activeElement) {
-      this.handleOnChange(event, this.props.children[lastVisibleTabIndex].key);
-      this.container.focus();
-    } else if (currentActiveIndex > 0) {
-      this.handleOnChange(event, this.props.children[currentActiveIndex - 1].key);
     }
   }
 
@@ -190,10 +147,8 @@ class Tabs extends React.Component {
           <CollapsibleTabs
             activeKey={activeKey || this.state.activeKey}
             activeIndex={this.getActiveTabIndex()}
-            onKeyDown={this.handleOnKeyDown}
-            menuRef={(node) => { if (node) { this.menuRef = node; } }}
+            onChange={this.handleOnChange}
             variant={variant}
-            refCallback={(node) => { if (node) { this.container = node; } }}
           >
             {clonedPanes}
           </CollapsibleTabs>

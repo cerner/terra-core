@@ -2,28 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ResizeObserver from 'resize-observer-polyfill';
+import TabUtils from './TabUtils';
 import Menu from './_TabMenu';
 import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  onKeyDown: PropTypes.func,
   activeKey: PropTypes.string,
   activeIndex: PropTypes.number,
   children: PropTypes.node,
-  menuRef: PropTypes.func,
   variant: PropTypes.string,
-  refCallback: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 class CollapsibleTabs extends React.Component {
   constructor(props) {
     super(props);
     this.setContainer = this.setContainer.bind(this);
-    this.setMenuToggle = this.setMenuToggle.bind(this);
+    this.setMenuRef = this.setMenuRef.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleSelectionAnimation = this.handleSelectionAnimation.bind(this);
+    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+    this.handleFocusLeft = this.handleFocusLeft.bind(this);
+    this.handleFocusRight = this.handleFocusRight.bind(this);
     this.state = {
       hiddenStartIndex: -1,
       menuHidden: false,
@@ -56,16 +58,11 @@ class CollapsibleTabs extends React.Component {
   setContainer(node) {
     if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
     this.container = node;
-
-    this.props.refCallback(node);
   }
 
-  setMenuToggle(node) {
+  setMenuRef(node) {
     if (node === null) { return; }
-    this.menuToggle = node;
-    if (this.props.menuRef) {
-      this.props.menuRef(node);
-    }
+    this.menuRef = node;
   }
 
   handleResize(width) {
@@ -81,7 +78,7 @@ class CollapsibleTabs extends React.Component {
 
     // If we can't fit all the tabs recalculate hide index with the menu present
     if (childCount > newHideIndex) {
-      const menuToggleWidth = this.menuToggle.getBoundingClientRect().width;
+      const menuToggleWidth = this.menuRef.getBoundingClientRect().width;
       availableWidth = width - menuToggleWidth;
 
       newHideIndex = Math.floor(availableWidth / minWidth);
@@ -123,6 +120,43 @@ class CollapsibleTabs extends React.Component {
     }
   }
 
+  handleOnKeyDown(event) {
+    const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
+    const visibleChildrenCount = this.container.children.length;
+    const lastVisibleTabIndex = this.menuRef ? visibleChildrenCount - 2 : visibleChildrenCount - 1;
+
+    if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
+      if (isRTL) {
+        this.handleFocusRight(lastVisibleTabIndex);
+      } else {
+        this.handleFocusLeft(lastVisibleTabIndex);
+      }
+    } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
+      if (isRTL) {
+        this.handleFocusLeft(lastVisibleTabIndex);
+      } else {
+        this.handleFocusRight(lastVisibleTabIndex);
+      }
+    }
+  }
+
+  handleFocusRight(lastVisibleTabIndex) {
+    if (this.props.activeIndex === lastVisibleTabIndex && this.menuRef) {
+      this.menuRef.focus();
+    } else {
+      this.props.onChange(event, this.props.children[this.props.activeIndex + 1].key);
+    }
+  }
+
+  handleFocusLeft(lastVisibleTabIndex) {
+    if (this.menuRef === document.activeElement) {
+      this.props.onChange(event, this.props.children[lastVisibleTabIndex].key);
+      this.container.focus();
+    } else if (this.props.activeIndex > 0) {
+      this.props.onChange(event, this.props.children[this.props.activeIndex - 1].key);
+    }
+  }
+
   render() {
     const visibleChildren = [];
     const hiddenChildren = [];
@@ -136,7 +170,7 @@ class CollapsibleTabs extends React.Component {
     });
 
     const menu = this.state.menuHidden ? null : (
-      <Menu refCallback={this.setMenuToggle} activeKey={this.props.activeKey}>
+      <Menu refCallback={this.setMenuRef} activeKey={this.props.activeKey}>
         {hiddenChildren}
       </Menu>
     );
@@ -152,7 +186,7 @@ class CollapsibleTabs extends React.Component {
           className={cx(['collapsible-tabs-container', { 'is-calculating': this.state.isCalculating }])}
           ref={this.setContainer}
           tabIndex="0"
-          onKeyDown={this.props.onKeyDown}
+          onKeyDown={this.handleOnKeyDown}
           role="tablist"
         >
           {/* eslint-enable jsx-ally/no-static-element-interactions */}
