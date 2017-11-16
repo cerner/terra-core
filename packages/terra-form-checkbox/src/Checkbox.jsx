@@ -138,7 +138,7 @@ class Checkbox extends React.Component {
     return (
       <div className={`${controlClasses} ${this.getFocusClass()}`} >
         <input
-          type='checkbox'
+          type="checkbox"
           id={id}
           disabled={isDisabled}
           name={name}

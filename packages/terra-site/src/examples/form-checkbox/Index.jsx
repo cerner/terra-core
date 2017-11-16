@@ -22,13 +22,13 @@ const CheckboxExamples = () => (
     <PropsTable id="props" src={CheckboxSrc} />
     <h2 id="default">Default Checkbox</h2>
     <DefaultCheckbox />
-    <br/> <br/>
+    <br /> <br />
     <h2 id="disabled">Disabled Checkbox</h2>
-    <DisabledCheckbox/>
-    <br/> <br/>
+    <DisabledCheckbox />
+    <br /> <br />
     <h2 id="longtext">Long Text Checkbox</h2>
     <LongTextCheckbox />
-    <br/> <br/>
+    <br /> <br />
     <h2 id="multiple">Multiple Checkboxes - first defaults to checked</h2>
     <MultipleCheckboxes />
   </div>
