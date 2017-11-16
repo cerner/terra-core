@@ -10,18 +10,18 @@ This component is used to provide margin and/or padding space between two compon
 
 ## Naming Convention
 
-| String Name   | Computed PX Value |
-| ------------- | -------------     |
-| none          | 0                 |
-| small-2       | 0.2142857143rem   |
-| small-1       | 0.3571428571rem   |
-| small         | 0.5rem            |
-| medium        | 0.7142857143rem   |
-| large         | 0.8571428571rem   |
-| large+1       | 1.0714285714rem   |
-| large+2       | 1.4285714286rem   |
-| large+3       | 2.1428571429rem   |
-| large+4       | 3.5714285714rem   |
+| Spacing scale values   | Computed REM Value |
+| --------------------   | ------------------ |
+| none                   | 0                 |
+| small-2                | 0.2142857143rem   |
+| small-1                | 0.3571428571rem   |
+| small                  | 0.5rem            |
+| medium                 | 0.7142857143rem   |
+| large                  | 0.8571428571rem   |
+| large+1                | 1.0714285714rem   |
+| large+2                | 1.4285714286rem   |
+| large+3                | 2.1428571429rem   |
+| large+4                | 3.5714285714rem   |
 
 ## Usage
 
