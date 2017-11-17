@@ -279,7 +279,7 @@
     "--terra-select-focus-box-shadow-ltr": "0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff",
     "--terra-select-invalid-focus-animation-background": "none",
     "--terra-select-invalid-border-color": "#dedfe0",
-    "--terra-select-invalid-hover-border-color": "#4cb2e9",
+    "--terra-select-invalid-hover-border-color": "#dedfe0",
     "--terra-select-invalid-focus-animation-size": "0 0",
     "--terra-select-invalid-focus-border-color": "#4cb2e9",
     "--terra-select-invalid-focus-box-shadow-rtl": "0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff",
