@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed onInputFocus, onCalendarButtonClick and shouldShowPicker props and pass them down as custom props.
+
+1.16.0 - (November 16, 2017)
+------------------
 ### Added
 * Added onInputFocus and onCalendarButtonClick props to handle unacceptable default dates.
 
