@@ -13,6 +13,7 @@ import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
 import ButtonGroupExamples from './examples/button-group/Index';
 import CardExamples from './examples/card/Index';
+import FormCheckboxExamples from './examples/form-checkbox/Index';
 import CollapsibleMenuViewExamples from './examples/collapsible-menu-view/Index';
 import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
@@ -60,6 +61,7 @@ import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
+import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
@@ -139,6 +141,7 @@ ReactDOM.render((
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
+      <Route path="form-checkbox" component={FormCheckboxExamples} />
       <Route path="form-textarea" component={FormTextareaExamples} />
       <Route path="form-field" component={FormFieldExamples} />
       <Route path="grid" component={GridExamples} />
@@ -216,6 +219,7 @@ ReactDOM.render((
     {SearchFieldTestRoutes}
     {PopupTestRoutes}
     {FormTestRoutes}
+    {FormCheckboxTestRoutes}
     {FormTextareaRoutes}
     {FormFieldTestRoutes}
     {OverlayTestRoutes}

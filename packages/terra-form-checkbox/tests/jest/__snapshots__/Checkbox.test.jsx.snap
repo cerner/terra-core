@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a ChoiceField with a checkbox 1`] = `
+<div
+  className="checkbox"
+>
+  <input
+    className="hidden-input healtheintent-application"
+    disabled={false}
+    name="children_present"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+    value="children_present"
+  />
+  <label
+    className="label-text healtheintent-label-text"
+  >
+    Do you have any Children?
+     
+  </label>
+</div>
+`;
+
+exports[`should render a checkbox 1`] = `
+<div
+  className="checkbox"
+>
+  <input
+    className="hidden-input"
+    disabled={false}
+    name={null}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label-text"
+  >
+    Checkbox
+     
+  </label>
+</div>
+`;
+
+exports[`should render a checkbox with a hidden label 1`] = `
+<div
+  className="checkbox"
+>
+  <input
+    checked={true}
+    className="hidden-input"
+    disabled={false}
+    name={null}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label-text"
+  >
+    Checkbox
+     
+  </label>
+</div>
+`;
+
+exports[`should render a controlled checkbox 1`] = `
+<div
+  className="checkbox"
+>
+  <input
+    checked={true}
+    className="hidden-input"
+    disabled={false}
+    name={null}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label-text"
+  >
+    Checkbox
+     
+  </label>
+</div>
+`;
+
+exports[`should render a disabled checkbox 1`] = `
+<div
+  className="checkbox"
+>
+  <input
+    checked={true}
+    className="hidden-input"
+    disabled={true}
+    name={null}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label-text"
+  >
+    Checkbox
+     
+  </label>
+</div>
+`;
+
+exports[`should render an uncontrolled checkbox 1`] = `
+<div
+  className="checkbox"
+>
+  <input
+    className="hidden-input"
+    defaultChecked={true}
+    disabled={false}
+    name={null}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label-text"
+  >
+    Checkbox
+     
+  </label>
+</div>
+`;
