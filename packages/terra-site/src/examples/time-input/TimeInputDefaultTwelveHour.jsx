@@ -1,12 +1,11 @@
 import React from 'react';
-import moment from 'moment';
 import TimeInput from 'terra-time-input';
 import styles from '../../site.scss';
 
 class timeInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { time: moment().format('HH:mm') };
+    this.state = { time: '21:24' };
     this.handleTimeChange = this.handleTimeChange.bind(this);
   }
 
