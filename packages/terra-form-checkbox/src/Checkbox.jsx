@@ -82,15 +82,15 @@ class Checkbox extends React.Component {
 
   onFocus() {
     this.setState({ focus: true });
-    if(inputAttrs.onFocus !== undefined) {
-      inputAttrs.onFocus();
+    if (this.inputAttrs !== undefined && this.inputAttrs.onFocus !== undefined) {
+      this.inputAttrs.onFocus();
     }
   }
 
   onBlur() {
     this.setState({ focus: false });
-    if(inputAttrs.onBlur !== undefined) {
-      inputAttrs.onBlur();
+    if (this.inputAttrs !== undefined && this.inputAttrs.onBlur !== undefined) {
+      this.inputAttrs.onBlur();
     }
   }
 
@@ -121,8 +121,8 @@ class Checkbox extends React.Component {
 
     const checkboxClasses = cx([
       'checkbox',
-      {'focus': this.state.focus},
-      {'checkbox-inline': isInline },
+      { focus: this.state.focus },
+      { 'checkbox-inline': isInline },
       customProps.className,
     ]);
 

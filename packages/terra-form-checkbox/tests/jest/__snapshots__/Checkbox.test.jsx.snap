@@ -2,11 +2,10 @@
 
 exports[`should render a ChoiceField with a checkbox 1`] = `
 <div
-  className="control "
+  className="checkbox"
 >
   <input
-    className="healtheintent-application"
-    defaultChecked={false}
+    className="hidden-input healtheintent-application"
     disabled={false}
     name="children_present"
     onBlur={[Function]}
@@ -25,11 +24,10 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
 
 exports[`should render a checkbox 1`] = `
 <div
-  className="control "
+  className="checkbox"
 >
   <input
-    className=""
-    defaultChecked={false}
+    className="hidden-input"
     disabled={false}
     name={null}
     onBlur={[Function]}
@@ -47,11 +45,11 @@ exports[`should render a checkbox 1`] = `
 
 exports[`should render a checkbox with a hidden label 1`] = `
 <div
-  className="control "
+  className="checkbox"
 >
   <input
     checked={true}
-    className=""
+    className="hidden-input"
     disabled={false}
     name={null}
     onBlur={[Function]}
@@ -70,11 +68,11 @@ exports[`should render a checkbox with a hidden label 1`] = `
 
 exports[`should render a controlled checkbox 1`] = `
 <div
-  className="control "
+  className="checkbox"
 >
   <input
     checked={true}
-    className=""
+    className="hidden-input"
     disabled={false}
     name={null}
     onBlur={[Function]}
@@ -93,11 +91,11 @@ exports[`should render a controlled checkbox 1`] = `
 
 exports[`should render a disabled checkbox 1`] = `
 <div
-  className="control "
+  className="checkbox"
 >
   <input
     checked={true}
-    className=""
+    className="hidden-input"
     disabled={true}
     name={null}
     onBlur={[Function]}
@@ -116,10 +114,10 @@ exports[`should render a disabled checkbox 1`] = `
 
 exports[`should render an uncontrolled checkbox 1`] = `
 <div
-  className="control "
+  className="checkbox"
 >
   <input
-    className=""
+    className="hidden-input"
     defaultChecked={true}
     disabled={false}
     name={null}
