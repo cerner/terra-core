@@ -3,9 +3,9 @@
     background-color: rgba(0, 0, 0, 0);
     color: var(--terra-select-option-font-color, rgba(0, 0, 0, 0.9));
     cursor: pointer;
-    font-size: var(--terra-select-option-font-size, 1em);
-    line-height: var(--terra-select-option-line-height, 1.07);
-    padding: var(--terra-select-option-padding, 0.286rem 0.714em);
+    font-size: var(--terra-select-option-font-size, 1.143rem);
+    line-height: var(--terra-select-option-line-height, 1.125);
+    padding: var(--terra-select-option-padding, 0.286rem 0.714rem);
 
 
     &.is-disabled {
@@ -21,7 +21,7 @@
     &.is-selected {
       background-color: var(--terra-select-option-selected-color, #007cc3);
       color: var(--terra-select-option-selected-font-color, #fff);
-      font-weight: var(--terra-select-option-selected-font-weight, bold);
+      font-weight: var(--terra-select-option-selected-font-weight, normal);
 
       &:hover,
       &:focus {

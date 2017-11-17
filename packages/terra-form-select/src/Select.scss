@@ -10,17 +10,18 @@
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
-    font-size: var(--terra-select-font-size, 1em);
-    line-height: var(--terra-select-line-height, 1.07);
-    padding: var(--terra-select-input-padding, 0.571em 0.5em);
+    font-size: var(--terra-select-font-size, 1.143rem);
+    line-height: var(--terra-select-line-height, 1.125);
+    padding: var(--terra-select-input-padding, 0.3572rem 0.429rem);
     transition-duration: var(--terra-select-focus-transition-duration, 0s);
     transition-property: background-size;
     transition-timing-function: var(--terra-select-focus-transition-timing, ease);
     width: 100%;
 
     &.is-disabled {
-      background-color: var(--terra-select-disabled-background-color, #f4f4f4);
+      background-color: var(--terra-select-disabled-background-color, rgba(111, 116, 119, 0.05));
       border-color: var(--terra-select-disabled-border-color, #dedfe0);
+      color: var(--terra-select-disabled-color, rgba(0, 0, 0, 0.25));
       cursor: default;
 
       &:focus {
@@ -41,7 +42,7 @@
     }
 
     &:hover {
-      border-color: var(--terra-select-input-hover-border-color, #4cb2e9);
+      border-color: var(--terra-select-input-hover-border-color, #dedfe0);
     }
 
     &:focus,
@@ -102,11 +103,10 @@
     align-self: center;
     color: var(--terra-select-arrow-color, auto);
     display: flex;
-    height: 0.5em;
-    width: 0.857em;
+    height: 0.715rem;
+    width: 1rem;
   }
 
-  .default-option,
   .display.default-option {
     color: var(--terra-select-default-option-color, #bcbfc0);
     font-style: var(--terra-select-default-option-font-style, normal);
@@ -129,7 +129,7 @@
     border-radius: var(--terra-select-menu-border-raidus, 0);
     box-shadow: var(--terra-select-menu-box-shadow, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
     margin: 0;
-    padding-bottom: var(--terra-select-menu-bottom-padding, 0.214em);
+    padding-bottom: var(--terra-select-menu-bottom-padding, 0.214rem);
 
     [dir=rtl] & {
       box-shadow: var(--terra-select-menu-box-shadow-rtl, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
