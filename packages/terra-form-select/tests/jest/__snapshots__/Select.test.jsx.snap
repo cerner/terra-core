@@ -60,7 +60,6 @@ exports[`should render Select with a value set 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display"
@@ -147,7 +146,6 @@ exports[`should render Select with default value 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display"
@@ -234,7 +232,6 @@ exports[`should render Select with onChange 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -322,7 +319,6 @@ exports[`should render Select with releaseFocus 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -410,7 +406,6 @@ exports[`should render Select with requestFocus 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -487,7 +482,6 @@ exports[`should render a Select with name provided 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -565,7 +559,6 @@ exports[`should render a default Select component 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -642,7 +635,6 @@ exports[`should render a disabled Select 1`] = `
     tabIndex="-1"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -720,7 +712,6 @@ exports[`should render a required Select 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
@@ -797,7 +788,6 @@ exports[`should render an invalid Select 1`] = `
     tabIndex="0"
   >
     <Arrange
-      alignFitEnd="center"
       fill={
         <div
           className="display default-option"
