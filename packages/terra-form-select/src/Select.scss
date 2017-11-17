@@ -103,10 +103,12 @@
     align-self: center;
     color: var(--terra-select-arrow-color, auto);
     display: flex;
-    height: 0.715rem;
-    width: 1rem;
+    height: var(--terra-select-arrow-height, 0.715rem);
+    margin: var(--terra-select-arrow-margin, 0.286rem 0);
+    width: var(--terra-select-arrow-width, 1rem);
   }
 
+  .default-option,
   .display.default-option {
     color: var(--terra-select-default-option-color, #bcbfc0);
     font-style: var(--terra-select-default-option-font-style, normal);

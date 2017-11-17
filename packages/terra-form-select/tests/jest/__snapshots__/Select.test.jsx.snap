@@ -24,6 +24,15 @@ exports[`should render Select with a value set 1`] = `
       isWidthBounded={false}
     >
       <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={false}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <SelectOption
         disabled={false}
         display="moo"
         isSelected={false}
@@ -101,6 +110,15 @@ exports[`should render Select with default value 1`] = `
       isHeightBounded={false}
       isWidthBounded={false}
     >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={false}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
       <SelectOption
         disabled={false}
         display="moo"
@@ -184,6 +202,7 @@ exports[`should render Select with onChange 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -271,6 +290,7 @@ exports[`should render Select with releaseFocus 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -358,6 +378,7 @@ exports[`should render Select with requestFocus 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -444,6 +465,7 @@ exports[`should render a Select with name provided 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -521,6 +543,7 @@ exports[`should render a default Select component 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -597,6 +620,7 @@ exports[`should render a disabled Select 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -673,6 +697,7 @@ exports[`should render a required Select 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />
@@ -750,6 +775,7 @@ exports[`should render an invalid Select 1`] = `
         disabled={false}
         display="- Select -"
         isSelected={true}
+        onClick={[Function]}
         onKeyDown={[Function]}
         value=""
       />

@@ -146,38 +146,38 @@ class Select extends React.Component {
     return this.targetRef;
   }
 
-  wrapOnClick(option) {
+  wrapOnClick(value, onClick) {
     return (event) => {
-      this.handleSelection(event, option);
+      this.handleSelection(event, value);
 
-      if (option.props.onClick) {
-        option.props.onClick(event);
+      if (onClick) {
+        onClick(event);
       }
     };
   }
 
-  wrapOnKeyDown(option) {
+  wrapOnKeyDown(value, onKeyDown) {
     return (event) => {
       if (event.nativeEvent.keyCode === SelectUtils.KEYCODES.SPACE || event.nativeEvent.keyCode === SelectUtils.KEYCODES.ENTER) {
-        this.handleSelection(event, option);
+        this.handleSelection(event, value);
       }
 
       Select.handleArrowNavigation(event);
 
-      if (option.props.onKeyDown) {
-        option.props.onKeyDown(event);
+      if (onKeyDown) {
+        onKeyDown(event);
       }
     };
   }
 
-  handleSelection(event, option) {
-    if (this.props.onChange && option.props.value !== this.state.selectedValue) {
-      this.props.onChange(event, option.props.value);
+  handleSelection(event, value) {
+    if (this.props.onChange && value !== this.state.selectedValue) {
+      this.props.onChange(event, value);
     }
 
     let newValue = null;
     if (!this.props.value) {
-      newValue = option.props.value;
+      newValue = value;
     }
 
     this.setState({ selectedValue: newValue, isOpen: false });
@@ -252,8 +252,7 @@ class Select extends React.Component {
 
     let selectedValue;
     let display;
-    let defaultOption = null;
-    let isDefaultDisplay = false;
+    let isDefaultSelected = false;
     const clonedChildren = React.Children.map(children, (child) => {
       let isSelected = false;
 
@@ -265,26 +264,19 @@ class Select extends React.Component {
       }
 
       return React.cloneElement(child, {
-        onClick: this.wrapOnClick(child),
-        onKeyDown: this.wrapOnKeyDown(child),
+        onClick: this.wrapOnClick(child.props.value, child.props.onClick),
+        onKeyDown: this.wrapOnKeyDown(child.props.value, child.props.onKeyDown),
         isSelected,
       });
     });
 
-    // If there is no selected option, or none of the options match the selected value, create the default option.
+    const defaultOptionDisplay = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
+    const defaultOptionValue = '';
+    // If there is no selected option, or none of the options match the selected value, the default option will be selected.
     if (!selectedValue) {
-      display = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-      selectedValue = '';
-      defaultOption = (
-        <SelectOption
-          value={selectedValue}
-          display={display}
-          isSelected
-          onKeyDown={Select.handleArrowNavigation}
-          className={cx('default-option')}
-        />
-      );
-      isDefaultDisplay = true;
+      display = defaultOptionDisplay;
+      selectedValue = defaultOptionValue;
+      isDefaultSelected = true;
     }
 
     return (
@@ -304,7 +296,14 @@ class Select extends React.Component {
           boundingRef={boundingRef}
         >
           <SelectMenu>
-            {defaultOption}
+            <SelectOption
+              value={defaultOptionValue}
+              display={defaultOptionDisplay}
+              isSelected={isDefaultSelected}
+              onKeyDown={this.wrapOnKeyDown(defaultOptionValue)}
+              onClick={this.wrapOnClick(defaultOptionValue)}
+              className={cx('default-option')}
+            />
             {clonedChildren}
           </SelectMenu>
         </Popup>
@@ -318,9 +317,8 @@ class Select extends React.Component {
         >
           {/* eslint-enable jsx-a11y/no-static-element-interactions */}
           <Arrange
-            fill={<div className={cx(['display', { 'default-option': isDefaultDisplay }])}>{display}</div>}
+            fill={<div className={cx(['display', { 'default-option': isDefaultSelected }])}>{display}</div>}
             fitEnd={<IconCaretDown className={cx('select-arrow')} />}
-            alignFitEnd="center"
           />
           <input type="hidden" name={name} required={required} disabled={disabled} value={selectedValue} />
         </div>

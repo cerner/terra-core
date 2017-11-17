@@ -5,7 +5,7 @@ import styles from '../../site.scss';
 class SelectExamples extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: 'invalid option' };
+    this.state = { selected: '' };
     this.handleChange = this.handleChange.bind(this);
     this.isInvalidOption = this.isInvalidOption.bind(this);
   }
@@ -15,7 +15,7 @@ class SelectExamples extends React.Component {
   }
 
   isInvalidOption() {
-    return this.state.selected === 'invalid option';
+    return this.state.selected === '';
   }
 
   render() {
@@ -24,7 +24,7 @@ class SelectExamples extends React.Component {
         <form>
           <Select
             name="zibby"
-            defaultValue="invalid option"
+            defaultValue=""
             required
             isInvalid={this.isInvalidOption()}
             onChange={this.handleChange}
