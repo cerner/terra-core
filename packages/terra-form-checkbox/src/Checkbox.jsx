@@ -121,36 +121,50 @@ class Checkbox extends React.Component {
 
     const checkboxClasses = cx([
       'checkbox',
-      { focus: this.state.focus },
       { 'checkbox-inline': isInline },
       customProps.className,
     ]);
 
-    const labelTextClasses = cx([
-      'label-text',
+    const innerDiv = cx([
+      'inner-div',
+      { focus: this.state.focus },
+    ]);
+
+    const labelClasses = cx([
+      'label',
+      { 'label-disabled': isDisabled },
       labelTextAttrs.className,
     ]);
 
     const inputClasses = cx([
-      'hidden-input',
+      'native-input',
       inputAttrs.className,
     ]);
 
+    const innerSpanClasses = cx([
+      'inner-span',
+      { 'label-hidden': isLabelHidden },
+    ]);
+
     return (
-      <div className={checkboxClasses} >
-        <input
-          {...controlInputAttrs}
-          type="checkbox"
-          id={id}
-          disabled={isDisabled}
-          name={name}
-          value={value}
-          onChange={onChange}
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
-          className={inputClasses}
-        />
-        <label htmlFor={id} className={labelTextClasses} >{labelText} </label>
+      <div className={checkboxClasses}>
+        <div className={innerDiv}>
+          <label htmlFor={id} className={labelClasses} >
+            <input
+              {...controlInputAttrs}
+              type="checkbox"
+              id={id}
+              disabled={isDisabled}
+              name={name}
+              value={value}
+              onChange={onChange}
+              onFocus={this.onFocus}
+              onBlur={this.onBlur}
+              className={inputClasses}
+            />
+            <span className={innerSpanClasses} > {labelText} </span>
+          </label>
+        </div>
       </div>
     );
   }

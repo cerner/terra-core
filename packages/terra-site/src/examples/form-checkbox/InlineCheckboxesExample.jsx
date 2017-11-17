@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Checkbox from 'terra-form-checkbox/lib/Checkbox';
+import Checkbox from 'terra-form-checkbox/src/Checkbox';
 
 const inlineCheckboxesExample = () => (
   <div>
