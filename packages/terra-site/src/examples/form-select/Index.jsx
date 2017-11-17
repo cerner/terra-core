@@ -17,6 +17,8 @@ import InvalidSelect from './InvalidSelect';
 import SelectWithoutDefault from './SelectWithoutDefault';
 import DisabledSelect from './DisabledSelect';
 import SelectInsideModal from './SelectInsideModal';
+import BoundedSelect from './BoundedSelect';
+import LongTextSelect from './LongTextSelect';
 
 const SelectExamples = () => (
   <div>
@@ -32,6 +34,10 @@ const SelectExamples = () => (
     <SelectWithoutDefault />
     <h2>Disabled select component</h2>
     <DisabledSelect />
+    <h2>Bounded Select</h2>
+    <BoundedSelect />
+    <h2>Long Text Select</h2>
+    <LongTextSelect />
     <h2>Select inside a modal</h2>
     <SelectInsideModal />
   </div>

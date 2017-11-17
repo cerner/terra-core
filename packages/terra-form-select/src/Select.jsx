@@ -62,6 +62,11 @@ const propTypes = {
    * A callback function to request focus from the containing component (e.g. modal).
    */
   requestFocus: PropTypes.func,
+
+  /**
+   * Bounding container for the select menu, will use window if no value provided.
+   */
+  boundingRef: PropTypes.func,
 };
 
 const defaultProps = {
@@ -223,6 +228,7 @@ class Select extends React.Component {
       children,
       requestFocus,
       releaseFocus,
+      boundingRef,
       ...customProps
     } = this.props;
 
@@ -295,6 +301,7 @@ class Select extends React.Component {
           classNameContent={cx('select-menu')}
           requestFocus={requestFocus}
           releaseFocus={releaseFocus}
+          boundingRef={boundingRef}
         >
           <SelectMenu>
             {defaultOption}
