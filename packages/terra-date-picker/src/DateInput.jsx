@@ -19,10 +19,6 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * A callback function to execute when the calendar button is clicked.
-   */
-  onCalendarButtonClick: PropTypes.func,
-  /**
    * A callback function to execute when a valid date is selected or entered.
    */
   onChange: PropTypes.func,
@@ -30,10 +26,6 @@ const propTypes = {
    * The onInputClick callback function from react-datepicker to show the picker when clicked.
    */
   onClick: PropTypes.func,
-  /**
-   * A callback function to execute when the date input is in focus.
-   */
-  onInputFocus: PropTypes.func,
   /**
    * The onInputKeyDown callback function from react-datepicker to handle keyboard navigation.
    */
@@ -51,10 +43,6 @@ const propTypes = {
    */
   requestFocus: PropTypes.func,
   /**
-   * Indicates whether or not the picker should be displayed after rendering.
-   */
-  shouldShowPicker: PropTypes.bool,
-  /**
    * The selected or entered date value to display in the date input.
    */
   value: PropTypes.string,
@@ -69,7 +57,6 @@ const defaultProps = {
   placeholder: undefined,
   releaseFocus: undefined,
   requestFocus: undefined,
-  shouldShowPicker: false,
   value: undefined,
 };
 
@@ -92,7 +79,7 @@ class DatePickerInput extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.shouldShowPicker && !prevProps.shouldShowPicker && this.props.onClick) {
+    if (this.shouldShowPicker && !prevProps.shouldShowPicker && this.props.onClick) {
       this.props.onClick();
     }
   }
@@ -103,8 +90,8 @@ class DatePickerInput extends React.Component {
       this.props.requestFocus();
     }
 
-    if (this.props.onCalendarButtonClick && this.props.onClick) {
-      this.props.onCalendarButtonClick(event, this.props.onClick);
+    if (this.onCalendarButtonClick && this.props.onClick) {
+      this.onCalendarButtonClick(event, this.props.onClick);
     }
   }
 
@@ -126,12 +113,9 @@ class DatePickerInput extends React.Component {
   render() {
     const {
       inputAttributes,
-      shouldShowPicker,
       name,
-      onCalendarButtonClick,
       onChange,
       onClick,
-      onInputFocus,
       onKeyDown,
       placeholder,
       releaseFocus,
@@ -139,6 +123,14 @@ class DatePickerInput extends React.Component {
       value,
       ...customProps
     } = this.props;
+
+    this.onCalendarButtonClick = customProps.onCalendarButtonClick;
+    this.onInputFocus = customProps.onInputFocus;
+    this.shouldShowPicker = customProps.shouldShowPicker;
+
+    delete customProps.onCalendarButtonClick;
+    delete customProps.onInputFocus;
+    delete customProps.shouldShowPicker;
 
     const additionalInputProps = Object.assign({}, customProps, inputAttributes);
 
@@ -166,7 +158,7 @@ class DatePickerInput extends React.Component {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          onFocus={onInputFocus}
+          onFocus={this.onInputFocus}
         />
         <Button
           className={styles.button}
