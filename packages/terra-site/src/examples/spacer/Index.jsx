@@ -20,6 +20,7 @@ const SpacerExamples = () => (
     <PropsTable id="props" src={SpacerSrc} />
     <br />
     <h2 id="default">Spacer</h2>
+    <p>Spacing default button with a padding value of large+4 and primary button with padding value of large+2</p>
     <br />
     <Spacer />
     <br />

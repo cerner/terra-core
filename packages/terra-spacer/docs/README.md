@@ -1,10 +1,6 @@
 # Terra Spacer
 
-This component is used to provide margin and/or padding space between two components based on the given values.
-
-## Note
-
-This component uses **react-bps package mobile first strategy** for **responsiveness**. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
+This component is used to provide margin and/or padding space between two components based on the given values. This component uses **react-bps package mobile first strategy** for **responsiveness**. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
 
 ## Getting Started
 
