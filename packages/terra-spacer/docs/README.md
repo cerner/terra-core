@@ -2,6 +2,10 @@
 
 This component is used to provide margin and/or padding space between two components based on the given values.
 
+## Note
+
+This component uses **react-bps package mobile first strategy** for **responsiveness**. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
@@ -12,16 +16,16 @@ This component is used to provide margin and/or padding space between two compon
 
 | Spacing scale values   | Computed REM Value |
 | --------------------   | ------------------ |
-| none                   | 0                 |
-| small-2                | 0.2142857143rem   |
-| small-1                | 0.3571428571rem   |
-| small                  | 0.5rem            |
-| medium                 | 0.7142857143rem   |
-| large                  | 0.8571428571rem   |
-| large+1                | 1.0714285714rem   |
-| large+2                | 1.4285714286rem   |
-| large+3                | 2.1428571429rem   |
-| large+4                | 3.5714285714rem   |
+| none                   | 0                  |
+| small-2                | 0.2142857143rem    |
+| small-1                | 0.3571428571rem    |
+| small                  | 0.5rem             |
+| medium                 | 0.7142857143rem    |
+| large                  | 0.8571428571rem    |
+| large+1                | 1.0714285714rem    |
+| large+2                | 1.4285714286rem    |
+| large+3                | 2.1428571429rem    |
+| large+4                | 3.5714285714rem    |
 
 ## Usage
 
@@ -55,10 +59,6 @@ import Spacer from 'terra-spacer';
   <Image src="someImageSource" alt="example image" />
 </Spacer>
 ```
-
-## Note
-
-This component uses **react-bps package mobile first strategy** for **responsiveness**. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
 
 
 ## Component Features
