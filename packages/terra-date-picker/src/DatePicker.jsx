@@ -39,10 +39,6 @@ const propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
-   * A callback function to execute when the calendar button is clicked.
-   */
-  onCalendarButtonClick: PropTypes.func,
-  /**
    * A callback function to execute when a valid date is selected or entered.
    * The first parameter is the event. The second parameter is the changed date value.
    */
@@ -56,10 +52,6 @@ const propTypes = {
    * A callback function to execute when clicking outside of the picker to dismiss it.
    */
   onClickOutside: PropTypes.func,
-  /**
-   * A callback function to execute when the date input is in focus.
-   */
-  onInputFocus: PropTypes.func,
   /**
    * A callback function to execute when a date is selected from within the picker.
    */
@@ -146,6 +138,7 @@ class DatePicker extends React.Component {
       return;
     }
 
+    this.isDefaultDateAcceptable = true;
     this.releaseFocus();
 
     if (this.props.onSelect) {
@@ -185,8 +178,8 @@ class DatePicker extends React.Component {
   }
 
   handleOnInputFocus(event) {
-    if (this.props.onInputFocus) {
-      this.props.onInputFocus(event);
+    if (this.onInputFocus) {
+      this.onInputFocus(event);
     }
 
     if (!this.isDefaultDateAcceptable) {
@@ -196,8 +189,8 @@ class DatePicker extends React.Component {
   }
 
   handleOnCalendarButtonClick(event, onClick) {
-    if (this.props.onCalendarButtonClick) {
-      this.props.onCalendarButtonClick(event);
+    if (this.onCalendarButtonClick) {
+      this.onCalendarButtonClick(event);
     }
 
     if (!this.isDefaultDateAcceptable && !this.validateDefaultDate()) {
@@ -233,17 +226,21 @@ class DatePicker extends React.Component {
       maxDate,
       minDate,
       name,
-      onCalendarButtonClick,
       onChange,
       onChangeRaw,
       onClickOutside,
-      onInputFocus,
       onSelect,
       requestFocus,
       releaseFocus,
       selectedDate,
       ...customProps
     } = this.props;
+
+    this.onCalendarButtonClick = customProps.onCalendarButtonClick;
+    this.onInputFocus = customProps.onInputFocus;
+
+    delete customProps.onCalendarButtonClick;
+    delete customProps.onInputFocus;
 
     const intl = this.context.intl;
     const todayString = intl.formatMessage({ id: 'Terra.datePicker.today' });
