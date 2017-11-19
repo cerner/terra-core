@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+# Add terra-time-input mock theme styles and 12 hour input examples.
 
 1.18.0 - (November 16, 2017)
 ------------------

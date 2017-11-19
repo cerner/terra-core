@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added variant prop to all for setting of 12 hour time input.
+* Added support for theming.
+* Added mobile only time input.
+
 ### Changed
 * Removed onInputFocus prop and pass it down as a custom prop.
 
