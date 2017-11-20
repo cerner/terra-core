@@ -93,7 +93,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#searchfield').to.have.attribute('class').which.contains('searchfield');
     browser.expect.element('#searchfield').to.have.attribute('class').which.contains('block');
   },
-  
+
   'Displays the search field and disables the auto searching ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
 
