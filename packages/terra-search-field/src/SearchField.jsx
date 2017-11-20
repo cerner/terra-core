@@ -18,12 +18,12 @@ const propTypes = {
    * When true, will disable the auto-search
    */
   disableAutoSearch: PropTypes.bool,
-  
+
   /**
    * Whether or not the field should display as a block.
    */
   isBlock: PropTypes.bool,
-  
+
   /**
    * When true, will disable the field.
    */
@@ -118,7 +118,7 @@ class SearchField extends React.Component {
     const {
       isBlock,
       isDisabled,
-      disableAutoSearch
+      disableAutoSearch,
       placeholder,
       minimumSearchTextLength,
       searchDelay,
