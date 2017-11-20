@@ -48,10 +48,10 @@
   "Base": {
     "--terra-base-font-family": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "--terra-base-font-size": "87.5%",
-    "--terra-base-background-color": "#fff",
-    "--terra-base-color": "#1c1f21",
     "--terra-base-html-height": "100%",
     "--terra-base-html-margin": "0",
+    "--terra-base-background-color": "#fff",
+    "--terra-base-color": "#1c1f21",
     "--terra-base-body-height": "100%",
     "--terra-base-line-height": "1.42857",
     "--terra-base-body-margin": "0"
@@ -387,13 +387,10 @@
     "--terra-time-input-time-input-group-margin-left": "0.357em",
     "--terra-time-input-time-input-group-margin-right": "0.357em",
     "--terra-time-input-line-height": "1.429",
-    "--terra-time-input-width-input": "3.57em",
     "--terra-time-input-input-padding-bottom": "0.357em",
     "--terra-time-input-input-padding-top": "0.357em",
-    "--terra-time-input-width-input-desktop": "1.7em",
     "--terra-time-input-desktop-input-focus-keyboard-box-shadow-ltr": "0 0 8px #a6d9f4",
     "--terra-time-input-desktop-input-focus-keyboard-box-shadow-rtl": "0 0 8px #a6d9f4",
-    "--terra-time-input-desktop-hour-input-width": "1.428em",
     "--terra-time-input-desktop-input-padding-bottom": "0.357em",
     "--terra-time-input-desktop-input-padding-top": "0.357em",
     "--terra-time-input-mobile-label-color": "rgba(0, 0, 0, 0.5)",
@@ -408,6 +405,10 @@
     "--terra-time-input-meridiem-button-hover-color": "#000",
     "--terra-time-input-meridiem-button-selected-background-color": "#4e5558",
     "--terra-time-input-meridiem-button-selected-border-color": "#d1d1d1",
-    "--terra-time-input-meridiem-button-selected-color": "#fff"
+    "--terra-time-input-meridiem-button-selected-color": "#fff",
+    "--terra-time-input-width-input": "3.57em",
+    "--terra-time-input-desktop-meridiem-button-padding-bottom": "0.357em",
+    "--terra-time-input-desktop-meridiem-button-padding-top": "0.357em",
+    "--terra-time-input-height": "2.143rem"
   }
 }

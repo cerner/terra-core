@@ -604,6 +604,7 @@ class TimeInput extends React.Component {
             onKeyDown={this.handleHourInputKeyDown}
             onFocus={this.handleFocus}
             onBlur={this.handleHourBlur}
+            size="2"
             pattern="\d*"
           />
           <label htmlFor={hourAttributes.id} className={cx('mobile-input-label')}>
@@ -626,6 +627,7 @@ class TimeInput extends React.Component {
             onKeyDown={this.handleMinuteInputKeyDown}
             onFocus={this.handleFocus}
             onBlur={this.handleMinuteBlur}
+            size="2"
             pattern="\d*"
           />
           <label htmlFor={minuteAttributes.id} className={cx('mobile-input-label')}>
@@ -714,6 +716,7 @@ class TimeInput extends React.Component {
           onKeyDown={this.handleHourInputKeyDown}
           onFocus={this.handleFocus}
           onBlur={this.handleHourBlur}
+          size="2"
           pattern="\d*"
         />
         <span className={cx('time-spacer')}>:</span>
@@ -731,6 +734,7 @@ class TimeInput extends React.Component {
           onKeyDown={this.handleMinuteInputKeyDown}
           onFocus={this.handleFocus}
           onBlur={this.handleMinuteBlur}
+          size="2"
           pattern="\d*"
         />
         {this.props.variant === FORMAT_12_HOUR && (

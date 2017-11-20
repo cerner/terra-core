@@ -69,19 +69,21 @@
     border-radius: var(--terra-time-input-border-radius, 3px);
     border-style: var(--terra-time-input-desktop-focus-border-style, solid);
     border-width: var(--terra-time-input-desktop-focus-border-width, 1px);
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: table;
-    height: auto;
+    font-size: var(--terra-time-input-font-size, 1em);
+    height: var(--terra-time-input-height, 2.143rem);
     line-height: var(--terra-time-input-line-height, 1.429);
-    margin: 0;
     min-width: var(--terra-time-input-width-input, 3.57em);
     padding-bottom: var(--terra-time-input-input-padding-bottom, 0.357em);
+    padding-left: var(--terra-time-input-input-padding-bottom, 0.357em);
+    padding-right: var(--terra-time-input-input-padding-top, 0.357em);
     padding-top: var(--terra-time-input-input-padding-top, 0.357em);
     text-align: center;
     transition-duration: var(--terra-time-input-focus-transition-duration, 0.2s);
     transition-property: background-size;
     transition-timing-function: var(--terra-time-input-focus-transition-timing-function, ease);
-    width: var(--terra-time-input-width-input, 3.57em);
+    width: 100%;
 
     &:focus {
       @include focus-styles;
@@ -101,9 +103,10 @@
       background-size: 0 0;
       border-color: transparent;
       display: inline-block;
-      min-width: var(--terra-time-input-width-input-desktop, 1.7em);
+      height: 1.85em;
+      min-width: 1.9em;
       padding: 0;
-      width: var(--terra-time-input-width-input-desktop, 1.7em);
+      width: 1.9em;
 
       &:focus {
         @include focus-styles;
@@ -123,9 +126,9 @@
     }
   }
 
-  .time-input-hour.desktop {
-    min-width: var(--terra-time-input-desktop-hour-input-width, 1.428em);
-    width: var(--terra-time-input-desktop-hour-input-width, 1.428em);
+  .time-input-minute.desktop {
+    min-width: 2.3em;
+    width: 2.3em;
   }
 
   .time-spacer {
@@ -172,10 +175,11 @@
     border-color: var(--terra-time-input-meridiem-button-border-color, #d1d1d1);
     color: var(--terra-time-input-meridiem-button-color, #000);
     font-size: var(--terra-time-input-font-size, 1em);
+    height: var(--terra-time-input-height, 2.143rem);
     line-height: var(--terra-time-input-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-time-input-desktop-input-padding-bottom, 0.357em);
-    padding-top: var(--terra-time-input-desktop-input-padding-top, 0.357em);
+    padding-bottom: var(--terra-time-input-desktop-meridiem-button-padding-bottom, 0.357em);
+    padding-top: var(--terra-time-input-desktop-meridiem-button-padding-top, 0.357em);
 
     &:hover {
       background-color: var(--terra-time-input-meridiem-button-hover-background-color, #bcbfc0);

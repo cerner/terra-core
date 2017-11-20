@@ -20,6 +20,7 @@ exports[`should ignore invalid times properly 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -39,6 +40,7 @@ exports[`should ignore invalid times properly 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -64,6 +66,7 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
       name="terra-time-hour-time-input"
       pattern="\\\\d*"
       placeholder="hh"
+      size="2"
       type="tel"
       value=""
     />
@@ -89,6 +92,7 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
       name="terra-time-minute-time-input"
       pattern="\\\\d*"
       placeholder="mm"
+      size="2"
       type="tel"
       value=""
     />
@@ -149,6 +153,7 @@ exports[`should render a 24 hour timepicker properly on mobile devices 1`] = `
       name="terra-time-hour-time-input"
       pattern="\\\\d*"
       placeholder="hh"
+      size="2"
       type="tel"
       value=""
     />
@@ -174,6 +179,7 @@ exports[`should render a 24 hour timepicker properly on mobile devices 1`] = `
       name="terra-time-minute-time-input"
       pattern="\\\\d*"
       placeholder="mm"
+      size="2"
       type="tel"
       value=""
     />
@@ -207,6 +213,7 @@ exports[`should render a default time input 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -226,6 +233,7 @@ exports[`should render a default time input 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -252,6 +260,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -271,6 +280,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -337,6 +347,7 @@ exports[`should render a time input with a default time 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value="10"
   />
@@ -356,6 +367,7 @@ exports[`should render a time input with a default time 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value="45"
   />
@@ -383,6 +395,7 @@ exports[`should render a time input with custom attributes 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -403,6 +416,7 @@ exports[`should render a time input with custom attributes 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -429,6 +443,7 @@ exports[`should render a time input with onBlur 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -448,6 +463,7 @@ exports[`should render a time input with onBlur 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -474,6 +490,7 @@ exports[`should render a time input with onChange 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -493,6 +510,7 @@ exports[`should render a time input with onChange 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -519,6 +537,7 @@ exports[`should render a time input with onInputFocus 1`] = `
     pattern="\\\\d*"
     placeholder="hh"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -538,6 +557,7 @@ exports[`should render a time input with onInputFocus 1`] = `
     pattern="\\\\d*"
     placeholder="mm"
     required={false}
+    size="2"
     type="text"
     value=""
   />
@@ -563,6 +583,7 @@ exports[`should set the labels with the correct htmlFor a 24 hour timepicker pro
       name="terra-time-hour-time-input"
       pattern="\\\\d*"
       placeholder="hh"
+      size="2"
       type="tel"
       value=""
     />
@@ -588,6 +609,7 @@ exports[`should set the labels with the correct htmlFor a 24 hour timepicker pro
       name="terra-time-minute-time-input"
       pattern="\\\\d*"
       placeholder="mm"
+      size="2"
       type="tel"
       value=""
     />
