@@ -134,7 +134,7 @@ class TimeInput extends React.Component {
       this.postMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
 
       if (hour) {
-        const parsedHour = this.parseTimeTwelveHourTime(hour, true);
+        const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
         hour = parsedHour.hourString;
         meridiem = parsedHour.meridiem;
       } else {
@@ -167,7 +167,7 @@ class TimeInput extends React.Component {
       this.postMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
 
       if (hour) {
-        const parsedHour = this.parseTimeTwelveHourTime(hour, false);
+        const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
         hour = parsedHour.hourString;
         meridiem = parsedHour.meridiem;
       }
@@ -178,33 +178,6 @@ class TimeInput extends React.Component {
       minute: TimeUtil.splitMinute(nextProps.value),
       meridiem,
     });
-  }
-
-  parseTimeTwelveHourTime(hour) {
-    const parsedHour = { hourString: hour };
-    let numericHour = parseInt(hour, 10);
-
-    if (numericHour >= 12) {
-      parsedHour.meridiem = this.postMeridiem;
-
-      if (numericHour > 12) {
-        numericHour -= 12;
-      }
-    } else {
-      parsedHour.meridiem = this.anteMeridiem;
-
-      if (numericHour === 0) {
-        numericHour = 12;
-      }
-    }
-
-    if (numericHour < 10) {
-      parsedHour.hourString = '0'.concat(numericHour.toString());
-    } else {
-      parsedHour.hourString = numericHour.toString();
-    }
-
-    return parsedHour;
   }
 
   handleFocus(event) {
