@@ -232,7 +232,8 @@ class TimeInput extends React.Component {
     const maxValue = this.props.variant === FORMAT_12_HOUR ? 12 : 23;
 
     // Ignore the entry if the value did not change or it is invalid.
-    // When 'Predictive text' is enabled on Android the maxLength attribute on the input is ignored so we have to the length of inputValue to make sure that it is less then 2.
+    // When 'Predictive text' is enabled on Android the maxLength attribute on the input is ignored so we have to
+    // check the length of inputValue to make sure that it is less then 2.
     if (inputValue === stateValue || inputValue.length > 2 || Number(inputValue) > maxValue) {
       return;
     }
@@ -279,7 +280,8 @@ class TimeInput extends React.Component {
     const maxValue = 59;
 
     // Ignore the entry if the value did not change or it is invalid.
-    // When 'Predictive text' is enabled on Android the maxLength attribute on the input is ignored so we have to the length of inputValue to make sure that it is less then 2.
+    // When 'Predictive text' is enabled on Android the maxLength attribute on the input is ignored so we have
+    // to check the length of inputValue to make sure that it is less then 2.
     if (inputValue === stateValue || inputValue.length > 2 || Number(inputValue) > maxValue) {
       return;
     }
