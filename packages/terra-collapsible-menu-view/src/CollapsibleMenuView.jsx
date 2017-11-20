@@ -91,10 +91,25 @@ class CollapsibleMenuView extends React.Component {
   render() {
     const { children, boundingRef, menuWidth, ...customProps } = this.props;
     const visibleChildren = React.Children.toArray(children);
+
     let hiddenChildren = null;
+    let singleHiddenIconChild = false;
     if (this.state.hiddenStartIndex >= 0) {
       hiddenChildren = visibleChildren.splice(this.state.hiddenStartIndex);
+
+      if (hiddenChildren.length === 1 && hiddenChildren[0].props.isIconOnly) {
+        singleHiddenIconChild = true;
+      }
     }
+
+    const ellipseMenu = (
+      <CollapsibleMenuViewItem
+        icon={<IconEllipses />}
+        subMenuItems={hiddenChildren}
+        boundingRef={boundingRef}
+        menuWidth={menuWidth}
+      />
+  );
 
     const collapsibleMenuViewClassName = cx([
       'collapsible-menu-view',
@@ -110,12 +125,7 @@ class CollapsibleMenuView extends React.Component {
       <div {...customProps} className={collapsibleMenuViewClassName} ref={this.setContainer}>
         {visibleChildren}
         <div className={menuButtonClassName} ref={this.setMenuButton}>
-          <CollapsibleMenuViewItem
-            icon={<IconEllipses />}
-            subMenuItems={hiddenChildren}
-            boundingRef={boundingRef}
-            menuWidth={menuWidth}
-          />
+          {!singleHiddenIconChild ? ellipseMenu : hiddenChildren }
         </div>
       </div>
     );

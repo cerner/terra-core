@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Changed
+* Update ellipse menu to show first hidden child if the child is an icon-only item
 
 1.5.0 - (November 16, 2017)
 ------------------
