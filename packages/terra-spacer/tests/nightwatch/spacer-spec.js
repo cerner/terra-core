@@ -1,263 +1,319 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 /* eslint-disable no-unused-expressions */
+// Background color added for context. The orange background shows margin, while the green background shows padding.
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+  // Just the spacer component with <div> tag as child and without any props set
   'Displays a default spacer': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/default`)
       .expect.element('#spacer').to.be.present;
   },
 
-  'Displays spacer with very very small margin': (browser) => {
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
+  'Displays spacer with small-2 margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerSmall2`)
-      .expect.element('#spacermarginsmall-2').to.be.present;
-    browser.expect.element('#spacerpaddingsmall-2').to.be.present;
-    browser.expect.element('#spacermarginpaddingsmall-2').to.be.present;
+      .expect.element('#spacerMarginSmall2').to.be.present;
+    browser.expect.element('#spacerPaddingSmall2').to.be.present;
+    browser.expect.element('#spacerMarginPaddingSmall2').to.be.present;
 
-    browser.expect.element('#spacermarginsmall-2').to.have.css('margin-top');
-    browser.expect.element('#spacermarginsmall-2').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginsmall-2').to.have.css('margin-left');
-    browser.expect.element('#spacermarginsmall-2').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginSmall2').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginSmall2').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginSmall2').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginSmall2').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddingsmall-2').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddingsmall-2').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddingsmall-2').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddingsmall-2').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingSmall2').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingSmall2').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingSmall2').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingSmall2').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddingsmall-2').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddingsmall-2inlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingSmall2').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingSmall2InlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
-  'Displays spacer with very small margin': (browser) => {
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
+  'Displays spacer with small-1 margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerSmall1`)
-      .expect.element('#spacermarginsmall-1').to.be.present;
-    browser.expect.element('#spacerpaddingsmall-1').to.be.present;
-    browser.expect.element('#spacermarginpaddingsmall-1').to.be.present;
+      .expect.element('#spacerMarginSmall1').to.be.present;
+    browser.expect.element('#spacerPaddingSmall1').to.be.present;
+    browser.expect.element('#spacerMarginPaddingSmall1').to.be.present;
 
-    browser.expect.element('#spacermarginsmall-1').to.have.css('margin-top');
-    browser.expect.element('#spacermarginsmall-1').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginsmall-1').to.have.css('margin-left');
-    browser.expect.element('#spacermarginsmall-1').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginSmall1').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginSmall1').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginSmall1').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginSmall1').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddingsmall-1').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddingsmall-1').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddingsmall-1').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddingsmall-1').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingSmall1').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingSmall1').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingSmall1').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingSmall1').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddingsmall-1').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddingsmall-1inlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingSmall1').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingSmall1InlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
   'Displays spacer with small margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerSmall`)
-      .expect.element('#spacermarginsmall').to.be.present;
-    browser.expect.element('#spacerpaddingsmall').to.be.present;
-    browser.expect.element('#spacermarginpaddingsmall').to.be.present;
+      .expect.element('#spacerMarginSmall').to.be.present;
+    browser.expect.element('#spacerPaddingSmall').to.be.present;
+    browser.expect.element('#spacerMarginPaddingSmall').to.be.present;
 
-    browser.expect.element('#spacermarginsmall').to.have.css('margin-top');
-    browser.expect.element('#spacermarginsmall').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginsmall').to.have.css('margin-left');
-    browser.expect.element('#spacermarginsmall').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginSmall').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginSmall').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginSmall').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginSmall').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddingsmall').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddingsmall').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddingsmall').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddingsmall').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingSmall').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingSmall').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingSmall').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingSmall').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddingsmall').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddingsmallinlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingSmall').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingSmallInlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
   'Displays spacer with medium margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerMedium`)
-      .expect.element('#spacermarginmedium').to.be.present;
-    browser.expect.element('#spacerpaddingmedium').to.be.present;
-    browser.expect.element('#spacermarginpaddingmedium').to.be.present;
+      .expect.element('#spacerMarginMedium').to.be.present;
+    browser.expect.element('#spacerPaddingMedium').to.be.present;
+    browser.expect.element('#spacerMarginPaddingMedium').to.be.present;
 
-    browser.expect.element('#spacermarginmedium').to.have.css('margin-top');
-    browser.expect.element('#spacermarginmedium').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginmedium').to.have.css('margin-left');
-    browser.expect.element('#spacermarginmedium').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginMedium').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginMedium').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginMedium').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginMedium').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddingmedium').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddingmedium').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddingmedium').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddingmedium').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingMedium').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingMedium').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingMedium').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingMedium').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddingmedium').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddingmediuminlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingMedium').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingMediumInlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
   'Displays spacer with large margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge`)
-      .expect.element('#spacermarginlarge').to.be.present;
-    browser.expect.element('#spacerpaddinglarge').to.be.present;
-    browser.expect.element('#spacermarginpaddinglarge').to.be.present;
+      .expect.element('#spacerMarginLarge').to.be.present;
+    browser.expect.element('#spacerPaddingLarge').to.be.present;
+    browser.expect.element('#spacerMarginPaddingLarge').to.be.present;
 
-    browser.expect.element('#spacermarginlarge').to.have.css('margin-top');
-    browser.expect.element('#spacermarginlarge').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginlarge').to.have.css('margin-left');
-    browser.expect.element('#spacermarginlarge').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginLarge').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginLarge').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginLarge').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginLarge').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddinglarge').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddinglarge').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddinglarge').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddinglarge').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingLarge').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingLarge').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingLarge').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingLarge').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddinglarge').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddinglargeinlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingLarge').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingLargeInlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
-  'Displays spacer with very large margin': (browser) => {
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
+  'Displays spacer with large+1 margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge1`)
-      .expect.element('#spacermarginlarge1').to.be.present;
-    browser.expect.element('#spacerpaddinglarge1').to.be.present;
-    browser.expect.element('#spacermarginpaddinglarge1').to.be.present;
+      .expect.element('#spacerMarginLarge1').to.be.present;
+    browser.expect.element('#spacerPaddingLarge1').to.be.present;
+    browser.expect.element('#spacerMarginPaddingLarge1').to.be.present;
 
-    browser.expect.element('#spacermarginlarge1').to.have.css('margin-top');
-    browser.expect.element('#spacermarginlarge1').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginlarge1').to.have.css('margin-left');
-    browser.expect.element('#spacermarginlarge1').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginLarge1').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginLarge1').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginLarge1').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginLarge1').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddinglarge1').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddinglarge1').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddinglarge1').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddinglarge1').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingLarge1').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingLarge1').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingLarge1').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingLarge1').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddinglarge1').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddinglarge1inlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingLarge1').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingLarge1InlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
-  'Displays spacer with very very large margin': (browser) => {
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
+  'Displays spacer with large+2 margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge2`)
-      .expect.element('#spacermarginlarge2').to.be.present;
-    browser.expect.element('#spacerpaddinglarge2').to.be.present;
-    browser.expect.element('#spacermarginpaddinglarge2').to.be.present;
+      .expect.element('#spacerMarginLarge2').to.be.present;
+    browser.expect.element('#spacerPaddingLarge2').to.be.present;
+    browser.expect.element('#spacerMarginPaddingLarge2').to.be.present;
 
-    browser.expect.element('#spacermarginlarge2').to.have.css('margin-top');
-    browser.expect.element('#spacermarginlarge2').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginlarge2').to.have.css('margin-left');
-    browser.expect.element('#spacermarginlarge2').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginLarge2').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginLarge2').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginLarge2').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginLarge2').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddinglarge2').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddinglarge2').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddinglarge2').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddinglarge2').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingLarge2').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingLarge2').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingLarge2').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingLarge2').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddinglarge2').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddinglarge2inlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingLarge2').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingLarge2InlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
-  'Displays spacer with very very very large margin': (browser) => {
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
+  'Displays spacer with large+3 margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge3`)
-      .expect.element('#spacermarginlarge3').to.be.present;
-    browser.expect.element('#spacerpaddinglarge3').to.be.present;
-    browser.expect.element('#spacermarginpaddinglarge3').to.be.present;
+      .expect.element('#spacerMarginLarge3').to.be.present;
+    browser.expect.element('#spacerPaddingLarge3').to.be.present;
+    browser.expect.element('#spacerMarginPaddingLarge3').to.be.present;
 
-    browser.expect.element('#spacermarginlarge3').to.have.css('margin-top');
-    browser.expect.element('#spacermarginlarge3').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginlarge3').to.have.css('margin-left');
-    browser.expect.element('#spacermarginlarge3').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginLarge3').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginLarge3').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginLarge3').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginLarge3').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddinglarge3').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddinglarge3').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddinglarge3').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddinglarge3').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingLarge3').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingLarge3').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingLarge3').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingLarge3').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddinglarge3').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddinglarge3inlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingLarge3').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingLarge3InlineBlock').to.have.css('display').which.equals('inline-block');
   },
 
-  'Displays spacer with very very very very large margin': (browser) => {
+  /*
+    Margin Applied to visual example 1
+    Padding Applied to visual example 2
+    Margin and Padding Applied to visual example 3
+    Margin, Padding and isInline Applied to visual example 4
+   */
+  'Displays spacer with large+4 margin': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge4`)
-      .expect.element('#spacermarginlarge4').to.be.present;
-    browser.expect.element('#spacerpaddinglarge4').to.be.present;
-    browser.expect.element('#spacermarginpaddinglarge4').to.be.present;
+      .expect.element('#spacerMarginLarge4').to.be.present;
+    browser.expect.element('#spacerPaddingLarge4').to.be.present;
+    browser.expect.element('#spacerMarginPaddingLarge4').to.be.present;
 
-    browser.expect.element('#spacermarginlarge4').to.have.css('margin-top');
-    browser.expect.element('#spacermarginlarge4').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginlarge4').to.have.css('margin-left');
-    browser.expect.element('#spacermarginlarge4').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginLarge4').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginLarge4').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginLarge4').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginLarge4').to.have.css('margin-right');
 
-    browser.expect.element('#spacerpaddinglarge4').to.have.css('padding-top');
-    browser.expect.element('#spacerpaddinglarge4').to.have.css('padding-bottom');
-    browser.expect.element('#spacerpaddinglarge4').to.have.css('padding-left');
-    browser.expect.element('#spacerpaddinglarge4').to.have.css('padding-right');
+    browser.expect.element('#spacerPaddingLarge4').to.have.css('padding-top');
+    browser.expect.element('#spacerPaddingLarge4').to.have.css('padding-bottom');
+    browser.expect.element('#spacerPaddingLarge4').to.have.css('padding-left');
+    browser.expect.element('#spacerPaddingLarge4').to.have.css('padding-right');
 
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('margin-top');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('margin-bottom');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('margin-left');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('margin-right');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('padding-top');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('padding-bottom');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('padding-left');
-    browser.expect.element('#spacermarginpaddinglarge4').to.have.css('padding-right');
-    browser.expect.element('#spacermarginpaddinglarge4inlineblock').to.have.css('display').which.equals('inline-block');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('margin-top');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('margin-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('margin-left');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('margin-right');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('padding-top');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('padding-bottom');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('padding-left');
+    browser.expect.element('#spacerMarginPaddingLarge4').to.have.css('padding-right');
+    browser.expect.element('#spacerMarginPaddingLarge4InlineBlock').to.have.css('display').which.equals('inline-block');
   },
 });
