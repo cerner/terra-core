@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 
-1.13.0 - (November 8, 2017)
+1.13.0 - (November 16, 2017)
 ------------------
 ### Changed
 * Removed unnecessary `font-family` rule.
