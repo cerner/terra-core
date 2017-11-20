@@ -1,4 +1,3 @@
-// Background color added for context.
 import React from 'react';
 
 import Spacer from '../../lib/Spacer';

@@ -1,4 +1,3 @@
-// Background color added for context. The orange background shows margin, while the green background shows padding.
 import React from 'react';
 import './SpacerTest.scss';
 import Spacer from '../../lib/Spacer';
