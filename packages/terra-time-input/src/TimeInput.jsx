@@ -104,7 +104,10 @@ class TimeInput extends React.Component {
     if (value && !validDateRegex.test(value)) {
       if (process.env !== 'production') {
         // eslint-disable-next-line
-        console.warn(`Invalid time ${value} pass to terra-time-picker and has been ignored. Format of time must be hh:mm.`);
+        console.warn(
+          `An invalid time value, ${value}, has been passed to the terra-time-picker.`
+          + 'This value has been ignored and will not be rendered. Time values must be in hh:mm format.',
+        );
       }
 
       value = undefined;
