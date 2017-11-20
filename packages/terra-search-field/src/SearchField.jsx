@@ -9,16 +9,25 @@ import styles from './SearchField.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
   /**
-   * When true, will disable the field.
+   * When true, will disable the auto-search
    */
-  isDisabled: PropTypes.bool,
-
+  disableAutoSearch: PropTypes.bool,
+  
   /**
    * Whether or not the field should display as a block.
    */
   isBlock: PropTypes.bool,
+  
+  /**
+   * When true, will disable the field.
+   */
+  isDisabled: PropTypes.bool,
 
   /**
    * Placeholder text to show while the search field is empty.
@@ -47,8 +56,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isDisabled: false,
+  disableAutoSearch: false,
   isBlock: false,
+  isDisabled: false,
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
@@ -61,6 +71,7 @@ class SearchField extends React.Component {
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
 
     this.searchTimeout = null;
     this.state = {
@@ -75,8 +86,14 @@ class SearchField extends React.Component {
   handleTextChange(event) {
     this.setState({ searchText: event.target.value });
 
-    if (!this.searchTimeout) {
+    if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  handleKeyDown(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.handleSearch();
     }
   }
 
@@ -99,8 +116,9 @@ class SearchField extends React.Component {
 
   render() {
     const {
-      isDisabled,
       isBlock,
+      isDisabled,
+      disableAutoSearch
       placeholder,
       minimumSearchTextLength,
       searchDelay,
@@ -124,6 +142,7 @@ class SearchField extends React.Component {
           onChange={this.handleTextChange}
           disabled={isDisabled}
           aria-disabled={isDisabled}
+          onKeyDown={this.handleKeyDown}
         />
         <Button
           className={cx('button')}

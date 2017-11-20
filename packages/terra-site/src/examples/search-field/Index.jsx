@@ -16,6 +16,7 @@ import SearchFieldMinimumLength from './SearchFieldMinimumLength';
 import SearchFieldDelayed from './SearchFieldDelayed';
 import SearchFieldDisabled from './SearchFieldDisabled';
 import SearchFieldBlock from './SearchFieldBlock';
+import SearchFieldDisableAutoSearch from './SearchFieldDisableAutoSearch';
 
 const SearchFieldExamples = () => (
   <div>
@@ -39,6 +40,8 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldBlock">Search Field that displays as block style to fill container</h2>
     <SearchFieldBlock />
+    <h2 id="searchFieldDisableAutoSearch">Search Field with auto-search turned off</h2>
+    <SearchFieldDisableAutoSearch />
   </div>
 );
 

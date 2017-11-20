@@ -10,6 +10,8 @@ import DelayedSearchField from './DelayedSearchField';
 import MinimumLengthSearchField from './MinimumLengthSearchField';
 import SearchFieldDisabled from './SearchFieldDisabled';
 import SearchFieldBlock from './SearchFieldBlock';
+import AutoSearchDisabledSearchField from './AutoSearchDisabledSearchField';
+import SearchFieldEnter from './SearchFieldEnter';
 
 const routes = (
   <div>
@@ -21,6 +23,8 @@ const routes = (
     <Route path="/tests/search-field-tests/minimum-length" component={MinimumLengthSearchField} />
     <Route path="/tests/search-field-tests/disabled" component={SearchFieldDisabled} />
     <Route path="/tests/search-field-tests/block" component={SearchFieldBlock} />
+    <Route path="/tests/search-field-tests/disable-auto-search" component={AutoSearchDisabledSearchField} />
+    <Route path="/tests/search-field-tests/enter" component={SearchFieldEnter} />
   </div>
 );
 
