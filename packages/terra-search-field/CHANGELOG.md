@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Add ability to disable the auto searching and trigger searching via ENTER key
 
 1.16.0 - (November 16, 2017)
 ------------------
