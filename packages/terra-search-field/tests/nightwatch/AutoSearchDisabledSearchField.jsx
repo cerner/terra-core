@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchField from '../../lib/SearchField';
+import SearchField from '../../src/SearchField';
 
-class CallbackSearchField extends React.Component {
+class AutoSearchDisabledSearchField extends React.Component {
 
   constructor(props) {
     super(props);
@@ -26,8 +26,8 @@ class CallbackSearchField extends React.Component {
   render() {
     return (
       <div>
-        <h3> Minimum Search Length is 3 </h3>
-        <SearchField id="searchfield" onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch} minimumSearchTextLength={3} />
+        <h3> Auto Searching is Disabled </h3>
+        <SearchField id="searchfield" onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch} disableAutoSearch />
         <div id="search-callback-text">
           {this.state.message}{this.state.searchText}
         </div>
@@ -37,4 +37,4 @@ class CallbackSearchField extends React.Component {
 
 }
 
-export default CallbackSearchField;
+export default AutoSearchDisabledSearchField;
