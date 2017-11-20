@@ -106,6 +106,26 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('value').equals('Test');
   },
+  
+  'Displays a search field that is disabled': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
+    browser.expect.element('#searchfield input').to.have.attribute('disabled').which.contains('true');
+    browser.expect.element('#searchfield input').to.have.attribute('aria-disabled').which.contains('true');
+  },
+
+  'Displays a search field displayed as block style to fill its container': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/block`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
+    browser.expect.element('#searchfield').to.have.attribute('class').which.contains('searchfield');
+    browser.expect.element('#searchfield').to.have.attribute('class').which.contains('block');
+  },
 
   'Displays the search field and disables the auto searching ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
