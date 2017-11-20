@@ -25,19 +25,14 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
-   * Placeholder text to show while the search field is empty.
-   */
-  placeholder: PropTypes.string,
-
-  /**
    * The minimum number of characters to perform a search.
    */
   minimumSearchTextLength: PropTypes.number,
 
   /**
-   * How long the component should wait (in milliseconds) after input before performing an automatic search.
+   * Placeholder text to show while the search field is empty.
    */
-  searchDelay: PropTypes.number,
+  placeholder: PropTypes.string,
 
   /**
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
@@ -55,6 +50,11 @@ const propTypes = {
   onInvalidSearch: PropTypes.func,
 
   /**
+   * How long the component should wait (in milliseconds) after input before performing an automatic search.
+   */
+  searchDelay: PropTypes.number,
+
+  /**
    * The value of search field.  Use this to create a controlled search field.
    */
   value: PropTypes.string,
@@ -63,7 +63,6 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disableAutoSearch: false,
-  placeholder: '',
   minimumSearchTextLength: 2,
   placeholder: '',
   searchDelay: 250,

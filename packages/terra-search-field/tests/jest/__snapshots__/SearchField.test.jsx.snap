@@ -106,6 +106,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     defaultValue="Default"
     name={null}
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder=""
     required={false}
     type="search"
