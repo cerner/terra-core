@@ -3,7 +3,7 @@ Changelog
 
 Unreleased
 ----------
-* Update to allow custom translations directory to be passed in through the options
+* Allow new config options: translationsDirectoryRouters as recursive search transit and translationsDirectories as absolute search path
 
 1.8.0 - (October 24, 2017)
 ------------------

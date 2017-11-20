@@ -78,7 +78,8 @@ function aggregateTranslationMessages(options, inputFileSystem) {
     );
   }
   // Set translationsDirectoryRouters to node_modules if not specified
-  const translationsDirectoryRouters = options.translationsDirectoryRouters || ['node_modules'];
+  const translationsDirectoryRouters = options.translationsDirectoryRouters || [];
+  translationsDirectoryRouters.push('node_modules');
   // Search and aggregate translation messages under each router
   translationsDirectoryRouters.forEach(router =>
     aggregateDirectory(languageMessages, options.baseDirectory, router, inputFileSystem),

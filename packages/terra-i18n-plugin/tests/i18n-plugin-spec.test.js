@@ -110,11 +110,11 @@ describe('i18n-aggregator-plugin', () => {
   describe('when searching with custom routers for translation message', () => {
     const expectedMessages = {
       'Terra.fixtures.test': 'Test...',
+      'Terra.folder.test': 'Test...',
       'Terra.fixtures1.test': 'Test...',
       'Terra.fixtures3.test': 'Test...',
       'Terra.fixtures4.test': 'Test...',
       'Terra.fixtures2.test': 'Test...',
-      'Terra.folder.test': 'Test...',
     };
     const outputtedFileName = [];
     const outputtedFileContent = [];
@@ -135,7 +135,7 @@ describe('i18n-aggregator-plugin', () => {
       new I18nAggregatorPlugin({
         baseDirectory,
         supportedLocales,
-        translationsDirectoryRouters: ['node_modules', 'customFolder'],
+        translationsDirectoryRouters: ['customFolder'],
       }).apply(compiler);
       compiler._plugins['after-environment'][0]();
     });
