@@ -4,12 +4,18 @@ import SearchField from 'terra-search-field';
 
 const propTypes = {
   /**
+   * A boolean that when true will disable the auto-search
+   */
+  disableAutoSearch: PropTypes.bool,
+
+  /**
    * The mimimum search text length if provided. Used for the invalid search length message.
    */
   minimumSearchTextLength: PropTypes.number,
 };
 
 const defaultProps = {
+  disableAutoSearch: false,
   minimumSearchTextLength: 2,
 };
 
@@ -32,12 +38,14 @@ class SearchFieldExampleTemplate extends React.Component {
   }
 
   render() {
+    const { disableAutoSearch } = this.props;
     return (
       <div>
         <p>{this.state.message}{this.state.searchText}</p>
         <SearchField
           onSearch={this.handleSearch}
           onInvalidSearch={this.handleInvalidSearch}
+          disableAutoSearch={disableAutoSearch}
           {...this.props}
         />
       </div>

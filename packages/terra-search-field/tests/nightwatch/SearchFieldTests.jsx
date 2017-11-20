@@ -14,6 +14,8 @@ const SearchFieldTests = () => (
       <li><Link to="/tests/search-field-tests/default-value">SearchField - Default Value </Link></li>
       <li><Link to="/tests/search-field-tests/onchange">SearchField - Handle On Change </Link></li>
       <li><Link to="/tests/search-field-tests/value">SearchField - With Value </Link></li>
+      <li><Link to="/tests/search-field-tests/disable-auto-search">SearchField - Auto Search Disabled </Link></li>
+      <li><Link to="/tests/search-field-tests/enter">SearchField - Enter Key </Link></li>
     </ul>
   </div>
 );

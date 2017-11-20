@@ -9,11 +9,20 @@ import styles from './SearchField.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
   /**
    * The defaultValue of the search field. Use this to create an uncontrolled search field.
    */
   defaultValue: PropTypes.string,
+
+  /**
+   * When true, will disable the auto-search
+   */
+  disableAutoSearch: PropTypes.bool,
 
   /**
    * Placeholder text to show while the search field is empty.
@@ -53,6 +62,8 @@ const propTypes = {
 
 const defaultProps = {
   defaultValue: undefined,
+  disableAutoSearch: false,
+  placeholder: '',
   minimumSearchTextLength: 2,
   placeholder: '',
   searchDelay: 250,
@@ -66,6 +77,7 @@ class SearchField extends React.Component {
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
 
     this.searchTimeout = null;
     this.state = {
@@ -84,8 +96,14 @@ class SearchField extends React.Component {
       this.props.onChange(event);
     }
 
-    if (!this.searchTimeout) {
+    if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  handleKeyDown(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.handleSearch();
     }
   }
 
@@ -109,6 +127,7 @@ class SearchField extends React.Component {
   render() {
     const {
       defaultValue,
+      disableAutoSearch,
       minimumSearchTextLength,
       placeholder,
       searchDelay,
@@ -137,6 +156,7 @@ class SearchField extends React.Component {
           type="search"
           placeholder={placeholder}
           onChange={this.handleTextChange}
+          onKeyDown={this.handleKeyDown}
           {...additionalInputAttributes}
         />
         <Button

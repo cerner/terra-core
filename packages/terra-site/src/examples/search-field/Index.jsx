@@ -16,6 +16,7 @@ import SearchFieldMinimumLength from './SearchFieldMinimumLength';
 import SearchFieldDelayed from './SearchFieldDelayed';
 import SearchFieldDefaultValue from './SearchFieldDefaultValue';
 import SearchFieldOnChange from './SearchFieldOnChange';
+import SearchFieldDisableAutoSearch from './SearchFieldDisableAutoSearch';
 
 const SearchFieldExamples = () => (
   <div>
@@ -39,6 +40,8 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldOnChange">Search Field with custom onChange handler</h2>
     <SearchFieldOnChange />
+    <h2 id="searchFieldDisableAutoSearch">Search Field with auto-search turned off</h2>
+    <SearchFieldDisableAutoSearch />
   </div>
 );
 

@@ -11,6 +11,8 @@ import MinimumLengthSearchField from './MinimumLengthSearchField';
 import SearchFieldDefaultValue from './SearchFieldDefaultValue';
 import SearchFieldOnChange from './SearchFieldOnChange';
 import SearchFieldWithValue from './SearchFieldWithValue';
+import AutoSearchDisabledSearchField from './AutoSearchDisabledSearchField';
+import SearchFieldEnter from './SearchFieldEnter';
 
 const routes = (
   <div>
@@ -23,6 +25,8 @@ const routes = (
     <Route path="/tests/search-field-tests/default-value" component={SearchFieldDefaultValue} />
     <Route path="/tests/search-field-tests/onchange" component={SearchFieldOnChange} />
     <Route path="/tests/search-field-tests/value" component={SearchFieldWithValue} />
+    <Route path="/tests/search-field-tests/disable-auto-search" component={AutoSearchDisabledSearchField} />
+    <Route path="/tests/search-field-tests/enter" component={SearchFieldEnter} />
   </div>
 );
 
