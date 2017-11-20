@@ -238,9 +238,8 @@ class TimeInput extends React.Component {
       return;
     }
 
-    // If the change made was not a deletion of a digit,
-    // then prepend '0' if the input value is a single digit value between 3 and 9 for hour or 6 and 9 for minute.
-
+    // If the change made was not a deletion of a digit, then prepend '0' if the input value is a
+    // single digit value between 3 and 9 for a 24 hour time, or 2 and 9 for a 12 hour clock
     if (inputValue.length >= stateValue.length) {
       const digitsToPrependZero = ['3', '4', '5', '6', '7', '8', '9'];
 
@@ -286,8 +285,8 @@ class TimeInput extends React.Component {
       return;
     }
 
-    // If the change made was not a deletion of a digit,
-    // then prepend '0' if the input value is a single digit value between 3 and 9 for hour or 6 and 9 for minute.
+    // If the change made was not a deletion of a digit, then prepend '0'
+    // if the input value is a single digit value between 6 and 9.
     if (inputValue.length >= stateValue.length) {
       const digitsToPrependZero = ['6', '7', '8', '9'];
       if (digitsToPrependZero.indexOf(inputValue) > -1) {
