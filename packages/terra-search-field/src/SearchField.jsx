@@ -18,7 +18,7 @@ const propTypes = {
    * The defaultValue of the search field. Use this to create an uncontrolled search field.
    */
   defaultValue: PropTypes.string,
-  
+
   /**
    * When true, will disable the auto-search.
    */
@@ -48,7 +48,7 @@ const propTypes = {
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
-  
+
   /**
    * A callback to indicate an invalid search. Sends parameter {String} searchText.
    */

@@ -106,7 +106,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
     browser.expect.element('#searchfield input').to.have.attribute('value').equals('Test');
   },
-  
+
   'Displays a search field that is disabled': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
 

@@ -117,7 +117,6 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     placeholder=""
     required={false}
     type="search"
-    value="Test"
   />
   <Button
     className="button"
@@ -152,7 +151,6 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     placeholder=""
     required={false}
     type="search"
-    value="Test"
   />
   <Button
     className="button"
@@ -178,8 +176,10 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
     defaultValue="Default"
+    disabled={false}
     name={null}
     onChange={[Function]}
     onKeyDown={[Function]}
