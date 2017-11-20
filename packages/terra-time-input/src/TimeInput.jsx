@@ -12,9 +12,6 @@ const cx = classNames.bind(styles);
 
 const validDateRegex = new RegExp('^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$');
 
-const FORMAT_12_HOUR = '12';
-const FORMAT_24_HOUR = '24';
-
 const inputType = {
   HOUR: 0,
   MINUTE: 1,
@@ -72,7 +69,7 @@ const propTypes = {
   /**
    * Type of time input to initialize. Must be '24' or '12'
    */
-  variant: PropTypes.oneOf([FORMAT_12_HOUR, FORMAT_24_HOUR]),
+  variant: PropTypes.oneOf([TimeUtil.FORMAT_12_HOUR, TimeUtil.FORMAT_24_HOUR]),
 };
 
 const defaultProps = {
@@ -83,7 +80,7 @@ const defaultProps = {
   onBlur: null,
   onChange: null,
   value: undefined,
-  variant: FORMAT_24_HOUR,
+  variant: TimeUtil.FORMAT_24_HOUR,
 };
 
 const contextTypes = {
@@ -129,7 +126,7 @@ class TimeInput extends React.Component {
     let hour = TimeUtil.splitHour(value);
     let meridiem = null;
 
-    if (props.variant === FORMAT_12_HOUR) {
+    if (props.variant === TimeUtil.FORMAT_12_HOUR) {
       this.anteMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.am' });
       this.postMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
 
@@ -162,7 +159,7 @@ class TimeInput extends React.Component {
     let hour = TimeUtil.splitHour(nextProps.value);
     let meridiem = this.state.meridiem;
 
-    if (nextProps.variant === FORMAT_12_HOUR) {
+    if (nextProps.variant === TimeUtil.FORMAT_12_HOUR) {
       this.anteMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.am' });
       this.postMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
 
@@ -202,7 +199,7 @@ class TimeInput extends React.Component {
 
     // Prepend a 0 to the value when losing focus and the value is single digit.
     if (stateValue.length === 1) {
-      if (this.props.variant === FORMAT_12_HOUR && type === inputType.HOUR && stateValue === '0') {
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR && type === inputType.HOUR && stateValue === '0') {
         stateValue = '12';
       } else {
         stateValue = '0'.concat(stateValue);
@@ -229,7 +226,7 @@ class TimeInput extends React.Component {
 
     let inputValue = event.target.value;
     const stateValue = this.state.hour;
-    const maxValue = this.props.variant === FORMAT_12_HOUR ? 12 : 23;
+    const maxValue = this.props.variant === TimeUtil.FORMAT_12_HOUR ? 12 : 23;
 
     // Ignore the entry if the value did not change or it is invalid.
     // When 'Predictive text' is enabled on Android the maxLength attribute on the input is ignored so we have to
@@ -243,7 +240,7 @@ class TimeInput extends React.Component {
     if (inputValue.length >= stateValue.length) {
       const digitsToPrependZero = ['3', '4', '5', '6', '7', '8', '9'];
 
-      if (this.props.variant === FORMAT_12_HOUR) {
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR) {
         digitsToPrependZero.push('2');
       }
 
@@ -295,7 +292,7 @@ class TimeInput extends React.Component {
     }
 
     // Move focus to the merdiem for 12 hours times if the minute input has a valid and complete entry.
-    if (this.props.variant === FORMAT_12_HOUR && inputValue.length === 2 && this.meridiemInput) {
+    if (this.props.variant === TimeUtil.FORMAT_12_HOUR && inputValue.length === 2 && this.meridiemInput) {
       this.meridiemInput.focus();
     }
 
@@ -328,141 +325,94 @@ class TimeInput extends React.Component {
 
   handleHourInputKeyDown(event) {
     let stateValue = this.state.hour;
-    const maxValue = this.props.variant === FORMAT_12_HOUR ? 12 : 23;
-    const minValue = this.props.variant === FORMAT_12_HOUR ? 1 : 0;
-
     let meridiem = this.state.meridiem;
-    let updateStateValue = false;
+    const previousStateValue = stateValue;
 
     if (event.keyCode === keyCodes.ARROWUP) {
-      // Increment the value by 1 when arrow up is pressed.
-      if (stateValue) {
-        let numericMinute = Number(stateValue);
+      stateValue = TimeUtil.incrementHour(stateValue, this.props.variant);
 
-        if (numericMinute < maxValue) {
-          numericMinute += 1;
-
-          if (numericMinute < 10) {
-            stateValue = '0'.concat(numericMinute.toString());
-          } else {
-            stateValue = numericMinute.toString();
-          }
-          updateStateValue = true;
-
-          // Hitting 12 when incrementing hour changes the meridiem
-          if (this.props.variant === FORMAT_12_HOUR && numericMinute === 12) {
-            meridiem = meridiem === this.postMeridiem ? this.anteMeridiem : this.postMeridiem;
-          }
-        } else if (this.props.variant === FORMAT_12_HOUR) {
-          stateValue = '01';
-          updateStateValue = true;
+      // Hitting 12 when incrementing up changes the meridiem
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR && stateValue === '12') {
+        if (meridiem === this.postMeridiem || !previousStateValue) {
+          meridiem = this.anteMeridiem;
+        } else {
+          meridiem = this.postMeridiem;
         }
-      } else {
-        stateValue = this.props.variant === FORMAT_12_HOUR ? '12' : '00';
-        updateStateValue = true;
-      }
-    } else if (event.keyCode === keyCodes.ARROWDOWN) {
-      // Decrement the value by 1 when arrow down is pressed.
-      if (stateValue) {
-        let numericMinute = Number(stateValue);
-
-        if (numericMinute > minValue) {
-          numericMinute -= 1;
-
-          if (numericMinute < 10) {
-            stateValue = '0'.concat(numericMinute.toString());
-          } else {
-            stateValue = numericMinute.toString();
-          }
-          updateStateValue = true;
-
-          // Hitting 11 when decrementing hour changes the meridiem
-          if (this.props.variant === FORMAT_12_HOUR && numericMinute === 11) {
-            meridiem = meridiem === this.postMeridiem ? this.anteMeridiem : this.postMeridiem;
-          }
-        } else if (this.props.variant === FORMAT_12_HOUR) {
-          stateValue = '12';
-          updateStateValue = true;
-        }
-      } else {
-        stateValue = this.props.variant === FORMAT_12_HOUR ? '12' : '00';
-        updateStateValue = true;
-      }
-    } else if (event.keyCode === keyCodes.ARROWRIGHT) {
-      // If the hour is empty or the cursor is after the value, move focus to the minute input when the right arrow is pressed.
-      if (stateValue.length === 0 || stateValue.length === this.hourInput.textInput.selectionEnd) {
-        this.minuteInput.textInput.focus();
-        this.minuteInput.textInput.setSelectionRange(0, 0);
-        event.preventDefault();
       }
     }
 
-    if (updateStateValue) {
+    if (event.keyCode === keyCodes.ARROWDOWN) {
+      stateValue = TimeUtil.decrementHour(stateValue, this.props.variant);
+
+      // Hitting 11 when incrementing down changes the meridiem
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR && stateValue === '11') {
+        meridiem = meridiem === this.postMeridiem ? this.anteMeridiem : this.postMeridiem;
+      }
+    }
+
+    if (stateValue !== previousStateValue) {
       this.handleValueChange(event, inputType.HOUR, stateValue, meridiem);
+    }
+
+    if (event.keyCode === keyCodes.ARROWRIGHT) {
+      this.focusMinute();
+    }
+  }
+
+  focusMinute() {
+    // If the hour is empty or the cursor is after the value, move focus to the minute input when the right arrow is pressed.
+    if (this.state.hour.length === 0 || this.state.hour.length === this.hourInput.textInput.selectionEnd) {
+      this.minuteInput.textInput.focus();
+      this.minuteInput.textInput.setSelectionRange(0, 0);
+      event.preventDefault();
     }
   }
 
   handleMinuteInputKeyDown(event) {
     let stateValue = this.state.minute;
-    const maxValue = 59;
-    let updateStateValue = false;
+    const previousStateValue = stateValue;
 
     if (event.keyCode === keyCodes.ARROWUP) {
-      // Increment the value by 1 when arrow up is pressed.
-      if (stateValue) {
-        let numericMinute = Number(stateValue);
+      stateValue = TimeUtil.incrementMinute(stateValue);
+    }
 
-        if (numericMinute < maxValue) {
-          numericMinute += 1;
-          if (numericMinute < 10) {
-            stateValue = '0'.concat(numericMinute.toString());
-          } else {
-            stateValue = numericMinute.toString();
-          }
-          updateStateValue = true;
-        }
-      } else {
-        stateValue = '00';
-        updateStateValue = true;
-      }
-    } else if (event.keyCode === keyCodes.ARROWDOWN) {
-      // Decrement the value by 1 when arrow down is pressed.
-      if (stateValue) {
-        let numericMinute = Number(stateValue);
+    if (event.keyCode === keyCodes.ARROWDOWN) {
+      stateValue = TimeUtil.decrementMinute(stateValue);
+    }
 
-        if (numericMinute > 0) {
-          numericMinute -= 1;
-          if (numericMinute < 10) {
-            stateValue = '0'.concat(numericMinute.toString());
-          } else {
-            stateValue = numericMinute.toString();
-          }
-          updateStateValue = true;
-        }
-      } else {
-        stateValue = '00';
-        updateStateValue = true;
-      }
-    } else if (event.keyCode === keyCodes.ARROWLEFT || event.keyCode === keyCodes.DELETE || event.keyCode === keyCodes.BACKSPACE) {
-      // When the DELETE, BACK, or LEFT ARROW key is pressed and tf the cusor is at the left most position in the minute input, is empty or the cursor is before the value, move focus to the hour input when the left arrow is pressed.
-      if (this.minuteInput.textInput.selectionEnd === 0) {
-        this.hourInput.textInput.focus();
-        if (this.state.hour) {
-          this.hourInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
-          event.preventDefault();
-        }
-      }
-    } else if (event.keyCode === keyCodes.ARROWRIGHT) {
-      // If the minute is empty or the cursor is after the value, move focus to the meridiem when
-      // the right arrow is pressed for 12 hour times.
-      if ((stateValue.length === 0 || stateValue.length === this.minuteInput.textInput.selectionEnd) && this.meridiemInput) {
-        this.meridiemInput.focus();
+    if (previousStateValue !== stateValue) {
+      this.handleValueChange(event, inputType.MINUTE, stateValue, this.state.meridiem);
+    }
+
+    if (event.keyCode === keyCodes.ARROWLEFT || event.keyCode === keyCodes.DELETE || event.keyCode === keyCodes.BACKSPACE) {
+      this.focusHour();
+    }
+
+    if (event.keyCode === keyCodes.ARROWRIGHT) {
+      this.focusMeridiem();
+    }
+  }
+
+  focusHour() {
+    // If the cursor is at the left most position in the minute input, is empty or the cursor is before the value,
+    // move focus to the hour input
+    if (this.minuteInput.textInput.selectionEnd === 0) {
+      this.hourInput.textInput.focus();
+      if (this.state.hour) {
+        this.hourInput.textInput.setSelectionRange(this.state.hour.length, this.state.hour.length);
         event.preventDefault();
       }
     }
+  }
 
-    if (updateStateValue) {
-      this.handleValueChange(event, inputType.MINUTE, stateValue, this.state.meridiem);
+  focusMeridiem() {
+    // If the minute is empty or the cursor is after the value, move focus to the meridiem.
+    if ((this.state.minute.length === 0 ||
+        this.state.minute.length === this.minuteInput.textInput.selectionEnd) &&
+        this.meridiemInput
+    ) {
+      this.meridiemInput.focus();
+      event.preventDefault();
     }
   }
 
@@ -499,7 +449,7 @@ class TimeInput extends React.Component {
 
     let tempHour = parseInt(hour, 10);
 
-    if (this.props.variant === FORMAT_12_HOUR) {
+    if (this.props.variant === TimeUtil.FORMAT_12_HOUR) {
       if (meridiem === this.postMeridiem && tempHour < 12) {
         tempHour += 12;
       } else if (meridiem === this.anteMeridiem && tempHour === 12) {
@@ -542,7 +492,7 @@ class TimeInput extends React.Component {
     if (this.state.hour.length > 0 || this.state.minute.length > 0) {
       let hour = parseInt(this.state.hour, 10);
 
-      if (this.props.variant === FORMAT_12_HOUR && this.state.meridiem === this.postMeridiem && hour > 12) {
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR && this.state.meridiem === this.postMeridiem && hour > 12) {
         hour += 12;
       }
 
@@ -611,7 +561,7 @@ class TimeInput extends React.Component {
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           </label>
         </div>
-        {this.props.variant === FORMAT_12_HOUR && (
+        {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
           <ButtonGroup isSelectable onChange={this.handleMeridiemButtonChange}>
             <ButtonGroup.Button
               key="anti_meridiem_button"
@@ -663,7 +613,7 @@ class TimeInput extends React.Component {
     if (this.state.hour.length > 0 || this.state.minute.length > 0) {
       let hour = parseInt(this.state.hour, 10);
 
-      if (this.props.variant === FORMAT_12_HOUR && this.state.meridiem === this.postMeridiem) {
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR && this.state.meridiem === this.postMeridiem) {
         hour += 12;
       }
 
@@ -714,7 +664,7 @@ class TimeInput extends React.Component {
           size="2"
           pattern="\d*"
         />
-        {this.props.variant === FORMAT_12_HOUR && (
+        {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
           [
             <span
               {...inputAttributes}

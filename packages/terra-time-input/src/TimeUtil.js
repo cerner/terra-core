@@ -34,6 +34,73 @@ class TimeUtil {
     return parsedHour;
   }
 
+  static incrementHour(stateValue, timeVariant) {
+    const maxValue = timeVariant === this.FORMAT_12_HOUR ? 12 : 23;
+
+    // Increment the value by 1 when arrow up is pressed.
+    if (stateValue) {
+      let numericMinute = Number(stateValue);
+
+      if (numericMinute < maxValue) {
+        numericMinute += 1;
+        return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
+      } else if (timeVariant === this.FORMAT_12_HOUR) {
+        return '01';
+      }
+
+      return stateValue;
+    }
+
+    return timeVariant === this.FORMAT_12_HOUR ? '12' : '00';
+  }
+
+  static decrementHour(stateValue, timeVariant) {
+    const minValue = timeVariant === this.FORMAT_12_HOUR ? 1 : 0;
+
+    if (stateValue) {
+      let numericMinute = Number(stateValue);
+
+      if (numericMinute > minValue) {
+        numericMinute -= 1;
+        return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
+      } else if (timeVariant === this.FORMAT_12_HOUR) {
+        return '12';
+      }
+    }
+
+    return timeVariant === this.FORMAT_12_HOUR ? '12' : '00';
+  }
+
+  static incrementMinute(stateValue) {
+    if (stateValue) {
+      let numericMinute = Number(stateValue);
+
+      if (numericMinute < 59) {
+        numericMinute += 1;
+        return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
+      }
+
+      return stateValue;
+    }
+
+    return '00';
+  }
+
+  static decrementMinute(stateValue) {
+    if (stateValue) {
+      let numericMinute = Number(stateValue);
+
+      if (numericMinute > 0) {
+        numericMinute -= 1;
+        return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
+      }
+
+      return stateValue;
+    }
+
+    return '00';
+  }
+
   static splitHour(time) {
     if (typeof (time) === 'string') {
       const hourAndMinute = time.split(':');
@@ -76,5 +143,19 @@ class TimeUtil {
     return '';
   }
 }
+
+Object.defineProperty(TimeUtil, 'FORMAT_12_HOUR', {
+  value: '12',
+  configurable: false,
+  enumerable: true,
+  writable: false,
+});
+
+Object.defineProperty(TimeUtil, 'FORMAT_24_HOUR', {
+  value: '24',
+  configurable: false,
+  enumerable: true,
+  writable: false,
+});
 
 export default TimeUtil;
