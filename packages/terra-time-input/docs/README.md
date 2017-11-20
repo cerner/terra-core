@@ -2,7 +2,7 @@
 
 The terra-time-input component is a controlled input component for entering time. It is a controlled component because it manages the state of the value in the input. Because this is a controlled input component, it cannot accept the defaultValue prop as it always uses the value prop. React does not allow having both the defaultValue and value props.
 
-The currently supported time format is the 24-hour format (hh:mm). The time input enforces the entry that masks to the format. The hour input only accepts values between 00 and 23 and the minute input only accepts values between 00 and 59. For example, a time of 25:65 cannot be entered. Any times that are not in the format hh:mm will be ignored when initialized a terra-time-input component.
+The currently supported time format is the 24-hour format (hh:mm). The time input enforces the entry that masks to the format. The hour input only accepts values between 00 and 23 and the minute input only accepts values between 00 and 59. For example, a time of 25:65 cannot be entered. Time values provided to the component when it is initialized which are not in the format of hh:mm will be ignored
 
 There are two types of clocks that are currently supported: A 12-hour clock and a 24-hour clock. This can be controlled through the `variant` prop on the component.
 
