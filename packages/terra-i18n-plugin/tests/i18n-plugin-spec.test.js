@@ -107,14 +107,14 @@ describe('i18n-aggregator-plugin', () => {
     });
   });
 
-  describe('when searching custom directories for translation message', () => {
+  describe('when searching with custom routers for translation message', () => {
     const expectedMessages = {
       'Terra.fixtures.test': 'Test...',
       'Terra.fixtures1.test': 'Test...',
       'Terra.fixtures3.test': 'Test...',
       'Terra.fixtures4.test': 'Test...',
       'Terra.fixtures2.test': 'Test...',
-      'Terra.folder1.test': 'Test...',
+      'Terra.folder.test': 'Test...',
     };
     const outputtedFileName = [];
     const outputtedFileContent = [];
@@ -135,7 +135,68 @@ describe('i18n-aggregator-plugin', () => {
       new I18nAggregatorPlugin({
         baseDirectory,
         supportedLocales,
-        translationsDirectory: ['node_modules', 'customFolder'],
+        translationsDirectoryRouters: ['node_modules', 'customFolder'],
+      }).apply(compiler);
+      compiler._plugins['after-environment'][0]();
+    });
+
+    it('should create tranlsation files for all supported locales', () => {
+      expect(supportedLocales.length).toEqual(outputtedFileName.length);
+      expect(SpyOnWriteFileSync).toHaveBeenCalledTimes(supportedLocales.length);
+    });
+
+    it('should log console warning for missing tranlsation files', () => {
+      expect(consoleMessage).toContain('Translation file en.json not found for');
+      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      expect(SpyOnConsoleWarn).toHaveBeenCalled();
+    });
+
+    it('should fill the tranlsation files with the expected information for each locales', () => {
+      supportedLocales.forEach((locale, index) => {
+        expect(outputtedFileName[index]).toContain(path.join('aggregated-translations', `${locale}.js`));
+        expect(outputtedFileContent[index]).toContain(`react-intl/locale-data/${locale}`);
+        if (locale === 'en') {
+          const missingTranslationMessages = Object.assign({}, expectedMessages);
+          delete missingTranslationMessages['Terra.fixtures2.test'];
+          expect(outputtedFileContent[index]).toMatch(JSON.stringify(missingTranslationMessages, null, 2));
+        } else {
+          expect(outputtedFileContent[index]).toMatch(JSON.stringify(expectedMessages, null, 2));
+        }
+        // eslint-disable-next-line no-useless-escape
+        expect(outputtedFileContent[index]).toContain(`\'${locale}\'`);
+      });
+    });
+  });
+
+  describe('when searching specific directory for translation message', () => {
+    const expectedMessages = {
+      'Terra.specific.test': 'Test...',
+      'Terra.fixtures.test': 'Test...',
+      'Terra.fixtures1.test': 'Test...',
+      'Terra.fixtures3.test': 'Test...',
+      'Terra.fixtures4.test': 'Test...',
+      'Terra.fixtures2.test': 'Test...',
+    };
+    const outputtedFileName = [];
+    const outputtedFileContent = [];
+    const compiler = createCompiler();
+    let consoleMessage;
+    let SpyOnConsoleWarn;
+    let SpyOnWriteFileSync;
+
+    beforeAll(() => {
+      SpyOnWriteFileSync = spyOn(fs, 'writeFileSync').and.callFake((fileName, content) => {
+        outputtedFileName.push(fileName);
+        outputtedFileContent.push(content);
+      });
+      SpyOnConsoleWarn = spyOn(console, 'warn').and.callFake((message) => {
+        consoleMessage = message;
+      });
+
+      new I18nAggregatorPlugin({
+        baseDirectory,
+        supportedLocales,
+        translationsDirectories: ['customFolder1'],
       }).apply(compiler);
       compiler._plugins['after-environment'][0]();
     });
@@ -194,8 +255,8 @@ describe('i18n-aggregator-plugin', () => {
     });
 
     it('should create tranlsation files for all supported locales', () => {
-      expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(3);
-      expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length * 2);
+      expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(2);
+      expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length);
       expect(inputReadSourceDirectories[0]).toContain('translations');
       expect(inputReadSourceDirectories[1]).toContain('node_modules');
       supportedLocales.forEach((locale, index) => {

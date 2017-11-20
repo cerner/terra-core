@@ -44,12 +44,13 @@ function readTranslations(languageMessages, currentDirectory, inputFileSystem) {
   }
 }
 
-function aggregateDirectory(languageMessages, currentDirectory, inputFileSystem) {
+function aggregateDirectory(languageMessages, currentDirectory, router, inputFileSystem) {
   readTranslations(languageMessages, currentDirectory, inputFileSystem);
-  // If searchNodeModules is true, check the directory's node_module for translation files, otherwise check all children directories
+  // Check the directory's router for translation files
+  const modulePath = path.resolve(currentDirectory, router);
   try {
-    getDirectories(currentDirectory, inputFileSystem).forEach((module) => {
-      aggregateDirectory(languageMessages, path.resolve(currentDirectory, module), inputFileSystem);
+    getDirectories(modulePath, inputFileSystem).forEach((module) => {
+      aggregateDirectory(languageMessages, path.resolve(modulePath, module), router, inputFileSystem);
     });
   } catch (e) {
     // not outputting anything here as the catching of the directories not existing is not an error in this case
@@ -70,13 +71,17 @@ function aggregateTranslationMessages(options, inputFileSystem) {
   const languageMessages = {};
   supportedLocales.forEach((language) => { languageMessages[language] = {}; });
 
-  // Read translations at the baseDirectory
-  readTranslations(languageMessages, options.baseDirectory, inputFileSystem);
-  // Set translationsDirectory to root node_modules if not specified
-  const translationsDirectory = options.translationsDirectory || ['node_modules'];
-  // Search and aggregate translation messages under the custom directories
-  translationsDirectory.forEach(dir =>
-    aggregateDirectory(languageMessages, path.resolve(options.baseDirectory, dir), inputFileSystem),
+  // Read translations directly from specific paths
+  if (options.translationsDirectories) {
+    options.translationsDirectories.forEach(dir =>
+      readTranslations(languageMessages, path.resolve(options.baseDirectory, dir), inputFileSystem),
+    );
+  }
+  // Set translationsDirectoryRouters to node_modules if not specified
+  const translationsDirectoryRouters = options.translationsDirectoryRouters || ['node_modules'];
+  // Search and aggregate translation messages under each router
+  translationsDirectoryRouters.forEach(router =>
+    aggregateDirectory(languageMessages, options.baseDirectory, router, inputFileSystem),
   );
   return languageMessages;
 }
