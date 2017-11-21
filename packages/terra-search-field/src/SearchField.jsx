@@ -9,7 +9,26 @@ import styles from './SearchField.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  ENTER: 13,
+};
+
 const propTypes = {
+  /**
+   * When true, will disable the auto-search
+   */
+  disableAutoSearch: PropTypes.bool,
+
+  /**
+   * Whether or not the field should display as a block.
+   */
+  isBlock: PropTypes.bool,
+
+  /**
+   * When true, will disable the field.
+   */
+  isDisabled: PropTypes.bool,
+
   /**
    * Placeholder text to show while the search field is empty.
    */
@@ -37,6 +56,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  disableAutoSearch: false,
+  isBlock: false,
+  isDisabled: false,
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
@@ -49,6 +71,7 @@ class SearchField extends React.Component {
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
 
     this.searchTimeout = null;
     this.state = {
@@ -63,8 +86,14 @@ class SearchField extends React.Component {
   handleTextChange(event) {
     this.setState({ searchText: event.target.value });
 
-    if (!this.searchTimeout) {
+    if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  handleKeyDown(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.handleSearch();
     }
   }
 
@@ -86,9 +115,20 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, ...customProps } = this.props;
+    const {
+      isBlock,
+      isDisabled,
+      disableAutoSearch,
+      placeholder,
+      minimumSearchTextLength,
+      searchDelay,
+      onSearch,
+      onInvalidSearch,
+      ...customProps
+    } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
+      { block: isBlock },
       customProps.className,
     ]);
 
@@ -100,11 +140,15 @@ class SearchField extends React.Component {
           placeholder={placeholder}
           value={this.state.searchText}
           onChange={this.handleTextChange}
+          disabled={isDisabled}
+          aria-disabled={isDisabled}
+          onKeyDown={this.handleKeyDown}
         />
         <Button
           className={cx('button')}
           onClick={this.handleSearch}
           isCompact
+          isDisabled={isDisabled}
         >
           <IconSearch />
         </Button>
