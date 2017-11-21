@@ -4,7 +4,7 @@ class TimeUtil {
    * @param {String} hour Hour to parse.
    * @param {String} anteMeridiem String representation of the anteMeridiem.
    * @param {String} postMeridiem String representation of the postMeridiem.
-   * @return {{hourString: string., meridiem: string}} Hour and meridiem associated to the passed in variables.
+   * @return {{hourString: string, meridiem: string}} Hour and meridiem associated to the passed in variables.
    *   Hour will be in 2 digit format.
    */
   static parseTwelveHourTime(hour, anteMeridiem, postMeridiem) {
