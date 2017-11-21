@@ -10,22 +10,6 @@ import styles from './TimeInput.scss';
 
 const cx = classNames.bind(styles);
 
-const validDateRegex = new RegExp('^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$');
-
-const inputType = {
-  HOUR: 0,
-  MINUTE: 1,
-};
-
-const keyCodes = {
-  BACKSPACE: 8,
-  ARROWLEFT: 37,
-  ARROWUP: 38,
-  ARROWRIGHT: 39,
-  ARROWDOWN: 40,
-  DELETE: 46,
-};
-
 const isConsideredMobileDevice = () =>
   window.matchMedia('(max-width: 1024px)').matches &&
   (
@@ -98,7 +82,7 @@ class TimeInput extends React.Component {
 
     let value = this.props.value;
 
-    if (value && !validDateRegex.test(value)) {
+    if (value && !TimeUtil.validateTime.test(value)) {
       if (process.env !== 'production') {
         // eslint-disable-next-line
         console.warn(
@@ -186,11 +170,11 @@ class TimeInput extends React.Component {
   }
 
   handleHourBlur(event) {
-    this.handleBlur(event, inputType.HOUR);
+    this.handleBlur(event, TimeUtil.inputType.HOUR);
   }
 
   handleMinuteBlur(event) {
-    this.handleBlur(event, inputType.MINUTE);
+    this.handleBlur(event, TimeUtil.inputType.MINUTE);
   }
 
   handleBlur(event, type) {
@@ -199,7 +183,9 @@ class TimeInput extends React.Component {
 
     // Prepend a 0 to the value when losing focus and the value is single digit.
     if (stateValue.length === 1) {
-      if (this.props.variant === TimeUtil.FORMAT_12_HOUR && type === inputType.HOUR && stateValue === '0') {
+      if (this.props.variant === TimeUtil.FORMAT_12_HOUR &&
+          type === TimeUtil.inputType.HOUR &&
+          stateValue === '0') {
         stateValue = '12';
       } else {
         stateValue = '0'.concat(stateValue);
@@ -258,7 +244,7 @@ class TimeInput extends React.Component {
       this.minuteInput.textInput.focus();
     }
 
-    this.handleValueChange(event, inputType.HOUR, inputValue, this.state.meridiem);
+    this.handleValueChange(event, TimeUtil.inputType.HOUR, inputValue, this.state.meridiem);
   }
 
   handleMinuteChange(event) {
@@ -296,7 +282,7 @@ class TimeInput extends React.Component {
       this.meridiemInput.focus();
     }
 
-    this.handleValueChange(event, inputType.MINUTE, inputValue, this.state.meridiem);
+    this.handleValueChange(event, TimeUtil.inputType.MINUTE, inputValue, this.state.meridiem);
   }
 
   handleMeridiemChange(event) {
@@ -304,7 +290,7 @@ class TimeInput extends React.Component {
       meridiem: event.target.value,
     });
 
-    this.handleValueChange(event, inputType.HOUR, this.state.hour.toString(), event.target.value);
+    this.handleValueChange(event, TimeUtil.inputType.HOUR, this.state.hour.toString(), event.target.value);
   }
 
   meridiemFocus() {
@@ -334,7 +320,7 @@ class TimeInput extends React.Component {
     let meridiem = this.state.meridiem;
     const previousStateValue = stateValue;
 
-    if (event.keyCode === keyCodes.ARROWUP) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWUP) {
       stateValue = TimeUtil.incrementHour(stateValue, this.props.variant);
 
       // Hitting 12 when incrementing up changes the meridiem
@@ -347,7 +333,7 @@ class TimeInput extends React.Component {
       }
     }
 
-    if (event.keyCode === keyCodes.ARROWDOWN) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWDOWN) {
       stateValue = TimeUtil.decrementHour(stateValue, this.props.variant);
 
       // Hitting 11 when incrementing down changes the meridiem
@@ -357,10 +343,10 @@ class TimeInput extends React.Component {
     }
 
     if (stateValue !== previousStateValue) {
-      this.handleValueChange(event, inputType.HOUR, stateValue, meridiem);
+      this.handleValueChange(event, TimeUtil.inputType.HOUR, stateValue, meridiem);
     }
 
-    if (event.keyCode === keyCodes.ARROWRIGHT) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWRIGHT) {
       this.focusMinute();
     }
   }
@@ -385,23 +371,25 @@ class TimeInput extends React.Component {
     let stateValue = this.state.minute;
     const previousStateValue = stateValue;
 
-    if (event.keyCode === keyCodes.ARROWUP) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWUP) {
       stateValue = TimeUtil.incrementMinute(stateValue);
     }
 
-    if (event.keyCode === keyCodes.ARROWDOWN) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWDOWN) {
       stateValue = TimeUtil.decrementMinute(stateValue);
     }
 
     if (previousStateValue !== stateValue) {
-      this.handleValueChange(event, inputType.MINUTE, stateValue, this.state.meridiem);
+      this.handleValueChange(event, TimeUtil.inputType.MINUTE, stateValue, this.state.meridiem);
     }
 
-    if (event.keyCode === keyCodes.ARROWLEFT || event.keyCode === keyCodes.DELETE || event.keyCode === keyCodes.BACKSPACE) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT ||
+        event.keyCode === TimeUtil.keyCodes.DELETE ||
+        event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
       this.focusHour();
     }
 
-    if (event.keyCode === keyCodes.ARROWRIGHT) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWRIGHT) {
       this.focusMeridiem();
     }
   }
@@ -430,7 +418,7 @@ class TimeInput extends React.Component {
   }
 
   handleValueChange(event, type, timeValue, meridiem) {
-    if (type === inputType.HOUR) {
+    if (type === TimeUtil.inputType.HOUR) {
       this.setState({
         hour: timeValue,
         meridiem,
@@ -444,8 +432,8 @@ class TimeInput extends React.Component {
     // Input values of length 1 indicate incomplete time, which means we cannot get a
     // reliable time so onChange isn't triggered.
     if (this.props.onChange && timeValue.length !== 1) {
-      const hour = type === inputType.HOUR ? timeValue : this.state.hour;
-      const minute = type === inputType.MINUTE ? timeValue : this.state.minute;
+      const hour = type === TimeUtil.inputType.HOUR ? timeValue : this.state.hour;
+      const minute = type === TimeUtil.inputType.MINUTE ? timeValue : this.state.minute;
 
       if (hour === '' && minute === '') {
         this.props.onChange(event, '');
@@ -480,7 +468,9 @@ class TimeInput extends React.Component {
   }
 
   handleMeridiemInputKeyDown(event) {
-    if (event.keyCode === keyCodes.ARROWLEFT || event.keyCode === keyCodes.DELETE || event.keyCode === keyCodes.BACKSPACE) {
+    if (event.keyCode === TimeUtil.keyCodes.ARROWLEFT ||
+        event.keyCode === TimeUtil.keyCodes.DELETE ||
+        event.keyCode === TimeUtil.keyCodes.BACKSPACE) {
       this.minuteInput.textInput.focus();
       event.preventDefault();
     }
@@ -595,7 +585,7 @@ class TimeInput extends React.Component {
   }
 
   handleMeridiemButtonChange(event, selectedIndex) {
-    this.handleValueChange(event, inputType.HOUR, this.state.hour.toString(), selectedIndex === 0 ? this.anteMeridiem : this.postMeridiem);
+    this.handleValueChange(event, TimeUtil.inputType.HOUR, this.state.hour.toString(), selectedIndex === 0 ? this.anteMeridiem : this.postMeridiem);
   }
 
   desktopInput() {

@@ -170,6 +170,22 @@ class TimeUtil {
   }
 }
 
+TimeUtil.validateTime = new RegExp('^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$');
+
+TimeUtil.inputType = {
+  HOUR: 0,
+  MINUTE: 1,
+};
+
+TimeUtil.keyCodes = {
+  BACKSPACE: 8,
+  ARROWLEFT: 37,
+  ARROWUP: 38,
+  ARROWRIGHT: 39,
+  ARROWDOWN: 40,
+  DELETE: 46,
+};
+
 Object.defineProperty(TimeUtil, 'FORMAT_12_HOUR', {
   value: '12-hour',
   configurable: false,
