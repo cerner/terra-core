@@ -10,16 +10,6 @@ import styles from './TimeInput.scss';
 
 const cx = classNames.bind(styles);
 
-const isConsideredMobileDevice = () =>
-  window.matchMedia('(max-width: 1024px)').matches &&
-  (
-    'ontouchstart' in window ||
-    // eslint-disable-next-line no-undef
-    (window.DocumentTouch && document instanceof DocumentTouch) ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
-  );
-
 const propTypes = {
   /**
    * Custom input attributes that apply to both the hour and minute inputs.
@@ -704,7 +694,7 @@ class TimeInput extends React.Component {
   }
 
   render() {
-    if (isConsideredMobileDevice()) {
+    if (TimeUtil.isConsideredMobileDevice()) {
       return this.mobileInput();
     }
 

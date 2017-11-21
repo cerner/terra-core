@@ -186,6 +186,16 @@ TimeUtil.keyCodes = {
   DELETE: 46,
 };
 
+TimeUtil.isConsideredMobileDevice = () =>
+  window.matchMedia('(max-width: 1024px)').matches &&
+  (
+    'ontouchstart' in window ||
+    // eslint-disable-next-line no-undef
+    (window.DocumentTouch && document instanceof DocumentTouch) ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+
 Object.defineProperty(TimeUtil, 'FORMAT_12_HOUR', {
   value: '12-hour',
   configurable: false,
