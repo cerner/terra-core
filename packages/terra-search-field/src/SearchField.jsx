@@ -20,6 +20,16 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
+   * Whether or not the field should display as a block.
+   */
+  isBlock: PropTypes.bool,
+
+  /**
+   * When true, will disable the field.
+   */
+  isDisabled: PropTypes.bool,
+
+  /**
    * Placeholder text to show while the search field is empty.
    */
   placeholder: PropTypes.string,
@@ -47,6 +57,8 @@ const propTypes = {
 
 const defaultProps = {
   disableAutoSearch: false,
+  isBlock: false,
+  isDisabled: false,
   placeholder: '',
   minimumSearchTextLength: 2,
   searchDelay: 250,
@@ -103,9 +115,20 @@ class SearchField extends React.Component {
   }
 
   render() {
-    const { placeholder, searchDelay, minimumSearchTextLength, onSearch, onInvalidSearch, disableAutoSearch, ...customProps } = this.props;
+    const {
+      isBlock,
+      isDisabled,
+      disableAutoSearch,
+      placeholder,
+      minimumSearchTextLength,
+      searchDelay,
+      onSearch,
+      onInvalidSearch,
+      ...customProps
+    } = this.props;
     const searchFieldClassNames = cx([
       'searchfield',
+      { block: isBlock },
       customProps.className,
     ]);
 
@@ -117,12 +140,15 @@ class SearchField extends React.Component {
           placeholder={placeholder}
           value={this.state.searchText}
           onChange={this.handleTextChange}
+          disabled={isDisabled}
+          aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
         />
         <Button
           className={cx('button')}
           onClick={this.handleSearch}
           isCompact
+          isDisabled={isDisabled}
         >
           <IconSearch />
         </Button>
