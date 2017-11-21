@@ -34,12 +34,19 @@ class TimeUtil {
     return parsedHour;
   }
 
-  static incrementHour(stateValue, timeVariant) {
+  /**
+   * Increments an hour to it's next value. Resets to 01 if the passed in hour is 12 and the variant is a 12 hour clock.
+   * @param {String} hour Hour to increment
+   * @param {String} timeVariant Variant of time the passed in hour refers to.
+   * @return {String} Returns a string representation of the value of an hour after it's incremented. If the
+   *   hour is 01 and the timeVariant is 12, it returns 01.
+   */
+  static incrementHour(hour, timeVariant) {
     const maxValue = timeVariant === this.FORMAT_12_HOUR ? 12 : 23;
 
     // Increment the value by 1 when arrow up is pressed.
-    if (stateValue) {
-      let numericMinute = Number(stateValue);
+    if (hour) {
+      let numericMinute = Number(hour);
 
       if (numericMinute < maxValue) {
         numericMinute += 1;
@@ -48,17 +55,24 @@ class TimeUtil {
         return '01';
       }
 
-      return stateValue;
+      return hour;
     }
 
     return timeVariant === this.FORMAT_12_HOUR ? '12' : '00';
   }
 
-  static decrementHour(stateValue, timeVariant) {
+  /**
+   * Decrements an hour to it's next value. Resets to 12 if the passed in hour is 01 and the variant is a 12 hour clock.
+   * @param {String} hour Hour to decrement
+   * @param {String} timeVariant Variant of time the passed in hour refers to.
+   * @return {String} Returns a string representation of the value of the an hour after it's decremented. If the
+   *   hour is 12 and the timeVariant is 12, it returns 12.
+   */
+  static decrementHour(hour, timeVariant) {
     const minValue = timeVariant === this.FORMAT_12_HOUR ? 1 : 0;
 
-    if (stateValue) {
-      let numericMinute = Number(stateValue);
+    if (hour) {
+      let numericMinute = Number(hour);
 
       if (numericMinute > minValue) {
         numericMinute -= 1;
@@ -66,36 +80,48 @@ class TimeUtil {
       } else if (timeVariant === this.FORMAT_12_HOUR) {
         return '12';
       }
+
+      return hour;
     }
 
     return timeVariant === this.FORMAT_12_HOUR ? '12' : '00';
   }
 
-  static incrementMinute(stateValue) {
-    if (stateValue) {
-      let numericMinute = Number(stateValue);
+  /**
+   * Increments a minute to it's next value
+   * @param {String} minute Minute to increment
+   * @return {String} Returns a string representation of the value of the passed in minute after it's incremented
+   */
+  static incrementMinute(minute) {
+    if (minute) {
+      let numericMinute = Number(minute);
 
       if (numericMinute < 59) {
         numericMinute += 1;
         return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
       }
 
-      return stateValue;
+      return minute;
     }
 
     return '00';
   }
 
-  static decrementMinute(stateValue) {
-    if (stateValue) {
-      let numericMinute = Number(stateValue);
+  /**
+   * Decrements a minute to it's next value
+   * @param {String} minute Minute to decrement
+   * @return {String} Returns a string representation of the value of the passed in minute after it's decremented
+   */
+  static decrementMinute(minute) {
+    if (minute) {
+      let numericMinute = Number(minute);
 
       if (numericMinute > 0) {
         numericMinute -= 1;
         return numericMinute < 10 ? '0'.concat(numericMinute.toString()) : numericMinute.toString();
       }
 
-      return stateValue;
+      return minute;
     }
 
     return '00';

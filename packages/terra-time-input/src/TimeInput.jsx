@@ -323,6 +323,12 @@ class TimeInput extends React.Component {
     });
   }
 
+  /**
+   * Takes a key input from the hour input, and processes it based on the value of the keycode.
+   * If the key is an up or down arrow, it increments/decrements the hour. If the right arrow
+   * is pressed, it shifts focus to the minute input.
+   * @param {Object} event Event object generated from the event delegation.
+   */
   handleHourInputKeyDown(event) {
     let stateValue = this.state.hour;
     let meridiem = this.state.meridiem;
@@ -368,6 +374,13 @@ class TimeInput extends React.Component {
     }
   }
 
+  /**
+   * Takes a key input from the minute input, and processes it based on the value of the keycode.
+   * If the key is an up or down arrow, it increments/decrements the minute. If the left arrow
+   * is pressed, it shifts focus to the hour input. If the right arrow is pressed, it shifts
+   * focus to the merdiem input.
+   * @param {Object} event Event object generated from the event delegation.
+   */
   handleMinuteInputKeyDown(event) {
     let stateValue = this.state.minute;
     const previousStateValue = stateValue;
