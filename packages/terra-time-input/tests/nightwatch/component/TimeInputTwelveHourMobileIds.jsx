@@ -27,7 +27,7 @@ export default class TimeInputElement extends React.Component {
           value="09:23"
           hourAttributes={{ id: 'hours-testing' }}
           minuteAttributes={{ id: 'minutes-testing' }}
-          variant="12"
+          variant="12-hour"
         />
       </Base>
     );

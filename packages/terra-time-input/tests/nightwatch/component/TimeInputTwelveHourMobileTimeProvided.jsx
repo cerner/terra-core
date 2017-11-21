@@ -39,7 +39,7 @@ export default class TimeInputElement extends React.Component {
           name="time-input"
           value={this.state.input}
           onChange={this.handleOnChange}
-          variant="12"
+          variant="12-hour"
         />
       </Base>
     );

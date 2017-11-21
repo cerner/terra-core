@@ -67,7 +67,7 @@ const propTypes = {
    */
   value: PropTypes.string,
   /**
-   * Type of time input to initialize. Must be '24' or '12'
+   * Type of time input to initialize. Must be '24-hour' or '12-hour'
    */
   variant: PropTypes.oneOf([TimeUtil.FORMAT_12_HOUR, TimeUtil.FORMAT_24_HOUR]),
 };

@@ -10,7 +10,7 @@ const TimeInputDefault = () => (
       id="timeInput"
       name="time-input"
       value="21:22"
-      variant="12"
+      variant="12-hour"
     />
   </Base>
 );

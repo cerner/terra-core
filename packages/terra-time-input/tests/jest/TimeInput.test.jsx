@@ -47,7 +47,7 @@ it('should render a time input with onInputFocus', () => {
 });
 
 it('should render a time input with 12 hour clock set', () => {
-  const timeInput = <TimeInput name="time-input" variant="12" />;
+  const timeInput = <TimeInput name="time-input" variant="12-hour" />;
   const wrapper = shallow(timeInput, intlContexts.shallowContext);
   expect(wrapper).toMatchSnapshot();
 });
@@ -85,7 +85,7 @@ it('should render a 12 hour timepicker meridiem with buttons when viewed on a mo
   spyOn(window, 'matchMedia').and.returnValue({ matches: true });
   window.ontouchstart = 'true';
 
-  const timeInput = <TimeInput name="time-input" variant="12" />;
+  const timeInput = <TimeInput name="time-input" variant="12-hour" />;
   const wrapper = render(timeInput, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
   delete window.ontouchstart;

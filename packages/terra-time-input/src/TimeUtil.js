@@ -171,14 +171,14 @@ class TimeUtil {
 }
 
 Object.defineProperty(TimeUtil, 'FORMAT_12_HOUR', {
-  value: '12',
+  value: '12-hour',
   configurable: false,
   enumerable: true,
   writable: false,
 });
 
 Object.defineProperty(TimeUtil, 'FORMAT_24_HOUR', {
-  value: '24',
+  value: '24-hour',
   configurable: false,
   enumerable: true,
   writable: false,
