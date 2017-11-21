@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Add stopDefault() to onOutsideClick
+* Add preventDefault() to onOutsideClick
 
 1.3.0 - (November 16, 2017)
 ------------------
