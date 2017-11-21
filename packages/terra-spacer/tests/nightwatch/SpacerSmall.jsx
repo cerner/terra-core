@@ -4,7 +4,7 @@ import Spacer from '../../lib/Spacer';
 
 export default () => (
   <div>
-    <h3>Background color added for context. The light orange background shows margin, the dark orange background shows padding.</h3>
+    <h3>Background color added for context. The light orange background shows margin, the green background shows padding.</h3>
     <div>Margin with value small applied</div>
     <div className="spacing-demo spacer-demo-margin">
       <Spacer id="spacerMarginSmall" className="spacer" marginTop="small" marginBottom="small" marginLeft="small" marginRight="small">
