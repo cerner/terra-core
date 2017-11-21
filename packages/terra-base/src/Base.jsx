@@ -53,8 +53,7 @@ class Base extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props === nextProps) return;
-    if (nextProps.locale !== undefined) {
+    if (nextProps.locale !== undefined && nextProps.locale !== this.props.locale) {
       i18nLoader(nextProps.locale, this.setState, this);
     }
   }
@@ -84,7 +83,6 @@ class Base extends React.Component {
 }
 
 Base.propTypes = propTypes;
-
 Base.defaultProps = defaultProps;
 
 export default Base;
