@@ -98,7 +98,7 @@ class TimeInput extends React.Component {
     this.handleMeridiemButtonChange = this.handleMeridiemButtonChange.bind(this);
 
     let hour = TimeUtil.splitHour(value);
-    let meridiem = null;
+    let meridiem = undefined;
 
     if (props.variant === TimeUtil.FORMAT_12_HOUR) {
       this.anteMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.am' });
