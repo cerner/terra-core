@@ -23,15 +23,6 @@ const templateShape = {
   */
   'grid-gap': PropTypes.string,
   /**
-  * The gap to place between the rows. Overrides rows in grid-gap if present. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
-  */
-  'grid-row-gap': PropTypes.string,
-  /**
-  * The gap to place between the columns. Overrides columns in grid-gap if present. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap.
-  */
-  'grid-column-gap': PropTypes.string,
-
-  /**
   * Additional CSS properties to apply to the grid.
   */
   style: PropTypes.object,
