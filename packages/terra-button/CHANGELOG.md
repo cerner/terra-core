@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.13.1 - (November 21, 2017)
+------------------
+### Changed
+* Corrected typo in `terra-button` comment.
+
 1.13.0 - (November 16, 2017)
 ------------------
 ### Changed
