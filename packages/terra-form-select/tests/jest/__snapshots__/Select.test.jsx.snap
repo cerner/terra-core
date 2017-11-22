@@ -1,0 +1,815 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Select with a value set 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={false}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <SelectOption
+        disabled={false}
+        display="moo"
+        isSelected={false}
+        key=".$m"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="m"
+      />
+      <SelectOption
+        disabled={false}
+        display="boo"
+        isSelected={true}
+        key=".$b"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="b"
+      />
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display"
+        >
+          boo
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value="b"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render Select with default value 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={false}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <SelectOption
+        disabled={false}
+        display="moo"
+        isSelected={false}
+        key=".$m"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="m"
+      />
+      <SelectOption
+        disabled={false}
+        display="boo"
+        isSelected={true}
+        key=".$b"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="b"
+      />
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display"
+        >
+          boo
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value="b"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render Select with onChange 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <SelectOption
+        disabled={false}
+        display="moo"
+        isSelected={false}
+        key=".$m"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="m"
+      />
+      <SelectOption
+        disabled={false}
+        display="boo"
+        isSelected={false}
+        key=".$b"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="b"
+      />
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render Select with releaseFocus 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    releaseFocus={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <SelectOption
+        disabled={false}
+        display="moo"
+        isSelected={false}
+        key=".$m"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="m"
+      />
+      <SelectOption
+        disabled={false}
+        display="boo"
+        isSelected={false}
+        key=".$b"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="b"
+      />
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render Select with requestFocus 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    requestFocus={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <SelectOption
+        disabled={false}
+        display="moo"
+        isSelected={false}
+        key=".$m"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="m"
+      />
+      <SelectOption
+        disabled={false}
+        display="boo"
+        isSelected={false}
+        key=".$b"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value="b"
+      />
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a Select with name provided 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <div
+        isSelected={true}
+        key=".0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Child
+      </div>
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      name="description"
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a default Select component 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <div
+        isSelected={true}
+        key=".0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Child
+      </div>
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a disabled Select 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <div
+        isSelected={true}
+        key=".0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Child
+      </div>
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={true}
+    className="select is-disabled"
+    onClick={null}
+    onKeyDown={null}
+    tabIndex="-1"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={true}
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a required Select 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <div
+        isSelected={true}
+        key=".0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Child
+      </div>
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    aria-required="true"
+    className="select"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={true}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render an invalid Select 1`] = `
+<div>
+  <Popup
+    attachmentBehavior="flip"
+    boundingRef={null}
+    classNameArrow={null}
+    classNameContent="select-menu"
+    classNameOverlay={null}
+    contentAttachment="top left"
+    contentHeight="auto"
+    contentWidth="auto"
+    isArrowDisplayed={false}
+    isContentFocusDisabled={false}
+    isHeaderDisabled={false}
+    isOpen={false}
+    onRequestClose={[Function]}
+    targetAttachment="bottom left"
+    targetRef={[Function]}
+  >
+    <SelectMenu
+      isHeightBounded={false}
+      isWidthBounded={false}
+    >
+      <SelectOption
+        className="default-option"
+        disabled={false}
+        display="- Select -"
+        isSelected={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        value=""
+      />
+      <div
+        isSelected={true}
+        key=".0"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Child
+      </div>
+    </SelectMenu>
+  </Popup>
+  <div
+    aria-disabled={false}
+    className="select invalid"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
+  >
+    <Arrange
+      fill={
+        <div
+          className="display default-option"
+        >
+          - Select -
+        </div>
+      }
+      fitEnd={
+        <IconCaretDown
+          className="select-arrow"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+    <input
+      disabled={false}
+      required={false}
+      type="hidden"
+      value=""
+    />
+  </div>
+</div>
+`;
