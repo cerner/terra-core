@@ -96,10 +96,7 @@ class CollapsibleMenuView extends React.Component {
     let singleHiddenIconChild = false;
     if (this.state.hiddenStartIndex >= 0) {
       hiddenChildren = visibleChildren.splice(this.state.hiddenStartIndex);
-
-      if (hiddenChildren.length === 1 && hiddenChildren[0].props.isIconOnly) {
-        singleHiddenIconChild = true;
-      }
+      singleHiddenIconChild  = hiddenChildren.length === 1 && hiddenChildren[0].props.isIconOnly;
     }
 
     const ellipseMenu = (
