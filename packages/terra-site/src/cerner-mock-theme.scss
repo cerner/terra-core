@@ -92,4 +92,56 @@
     --terra-form-textarea-focus-mouse-box-shadow-rtl: none;
     --terra-form-textarea-focus-keyboard-box-shadow-rtl: none;
   }
+
+  // terra-form-select
+  --terra-select-focus-animation-background: linear-gradient(to bottom, #badefc, #badefc);
+  --terra-select-focus-background-start: 0 2px;
+  --terra-select-input-border-color: #525252;
+  --terra-select-font-size: 12px;
+  --terra-select-line-height: 1.2;
+  --terra-select-input-padding: 3px;
+  --terra-select-focus-transition-duration: 2s;
+  --terra-select-focus-transition-timing: ease;
+  --terra-select-disabled-background-color: #efefef;
+  --terra-select-disabled-border-color: #909090;
+  --terra-select-input-hover-border-color: #badefc;
+  --terra-select-focus-animation-size: 100% 2px;
+  --terra-select-input-focus-border-color: #525252;
+  --terra-select-invalid-focus-animation-background: linear-gradient(to bottom, #b5446e, #b5446e);
+  --terra-select-invalid-border-color: #b5446e;
+  --terra-select-invalid-hover-border-color: #b5446e;
+  --terra-select-invalid-focus-animation-size: 100% 2px;
+  --terra-select-invalid-focus-border-color: #b5446e;
+  --terra-select-invalid-arrow-color: #b5446e;
+  --terra-select-disabled-arrow-color: #909090;
+  --terra-select-arrow-color: #525252;
+  --terra-select-default-option-color: #909090;
+  --terra-select-default-option-font-style: italic;
+  --terra-select-input-text-color: #525252;
+  --terra-select-disabled-font-color: #909090;
+  --terra-select-menu-background-color: rgba(255, 255, 255, 0.8);
+  --terra-select-menu-blur: 10px;
+  --terra-select-menu-blur-background-color: rgba(255, 255, 255, 0.3);
+  --terra-select-menu-border-raidus: 3px;
+  --terra-select-menu-bottom-padding: 3px;
+  --terra-select-option-font-color: #525252;
+  --terra-select-option-font-size: 12px;
+  --terra-select-option-line-height: 1.2;
+  --terra-select-option-padding: 3px;
+  --terra-select-option-selected-color: #9d44b5;
+  --terra-select-option-selected-font-color: #0affed;
+  --terra-select-option-selected-font-weight: bold;
+  --terra-select-option-hover-color: #d2aadd;
+
+  [dir=ltr]:root {
+    --terra-select-focus-box-shadow-ltr: 0 0 7px 4px rgba(186, 222, 252, 0.35), 0 0 1px 3px rgba(186, 222, 252, 0.5), 0 0 1px 0 #badefc;
+    --terra-select-invalid-focus-box-shadow-ltr: 0 0 7px 4px rgba(181, 68, 110, 0.35), 0 0 1px 3px rgba(181, 68, 110, 0.5), 0 0 1px 0 #b5446e;
+    --terra-select-menu-box-shadow-ltr: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  [dir=rtl]:root {
+    --terra-select-focus-box-shadow-rtl: 0 0 7px 4px rgba(186, 222, 252, 0.35), 0 0 1px 3px rgba(186, 222, 252, 0.5), 0 0 1px 0 #badefc;
+    --terra-select-invalid-focus-box-shadow-rtl: 0 0 7px 4px rgba(181, 68, 110, 0.35), 0 0 1px 3px rgba(181, 68, 110, 0.5), 0 0 1px 0 #b5446e;
+    --terra-select-menu-box-shadow-rtl: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  }
 }

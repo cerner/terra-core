@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Corrected typo in `terra-button` css comment. 
 
 1.13.0 - (November 16, 2017)
 ------------------
