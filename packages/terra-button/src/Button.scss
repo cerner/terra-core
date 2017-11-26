@@ -43,7 +43,7 @@
     text-align: center;
     text-decoration: none;
     text-transform: var(--terra-button-text-transform, none);
-    touch-action: manipulation; // Enable fast tap interactiion in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+    touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
     vertical-align: middle;
     white-space: normal;
