@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchField from '../../src/SearchField';
 
-
 describe('Snapshots', () => {
   it('renders a basic search field', () => {
     const searchField = shallow(<SearchField />);
@@ -15,6 +14,20 @@ describe('Snapshots', () => {
 
   it('renders a search field with a value', () => {
     const searchField = shallow(<SearchField />);
+    searchField.setState({ searchText: 'Test' });
+
+    expect(searchField).toMatchSnapshot();
+  });
+
+  it('renders a disabled search field with a value', () => {
+    const searchField = shallow(<SearchField isDisabled />);
+    searchField.setState({ searchText: 'Test' });
+
+    expect(searchField).toMatchSnapshot();
+  });
+
+  it('renders a search field that displays as a block to fill its container', () => {
+    const searchField = shallow(<SearchField isBlock />);
     searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();

@@ -3,19 +3,19 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a search field with search button': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/search-field-tests/default`)
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'placeholder', '');
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
   },
 
   'Displays a search field with a placeholder value of "Search Text"': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`)
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'placeholder', 'Search Text');
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('Search Text');
   },
 
   'Displays a search field that handles search callbacks': (browser) => {
@@ -63,15 +63,90 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays the search button with a height that matches the input ': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
 
-    browser
-      .assert.elementPresent('#searchfield')
-      .assert.elementPresent('#searchfield button')
-      .assert.attributeEquals('#searchfield input', 'placeholder', '');
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
 
     browser.getCssProperty('#searchfield input', 'height', (inputResult) => {
       browser.getCssProperty('#searchfield button', 'height', (buttonResult) => {
         browser.assert.equal(Math.round(parseFloat(inputResult.value)), Math.round(parseFloat(buttonResult.value)));
       });
     });
+  },
+
+  'Displays a search field that is disabled': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
+    browser.expect.element('#searchfield input').to.have.attribute('disabled').which.contains('true');
+    browser.expect.element('#searchfield input').to.have.attribute('aria-disabled').which.contains('true');
+  },
+
+  'Displays a search field displayed as block style to fill its container': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/block`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('placeholder').equals('');
+    browser.expect.element('#searchfield').to.have.attribute('class').which.contains('searchfield');
+    browser.expect.element('#searchfield').to.have.attribute('class').which.contains('block');
+  },
+
+  'Displays the search field and disables the auto searching ': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
+
+    browser
+      .setValue('input[type=search]', 'S')
+      .expect.element('#search-callback-text').text.to.equal('').after(250);
+    browser
+      .setValue('input[type=search]', 'e')
+      .expect.element('#search-callback-text').text.to.equal('').after(250);
+    browser
+      .setValue('input[type=search]', 'a')
+      .expect.element('#search-callback-text').text.to.equal('').after(250);
+  },
+
+  'Displays the search field with auto searching on and handles ENTER keypress to search ': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/enter`);
+
+    browser
+      .setValue('input[type=search]', 'S')
+      .expect.element('#search-callback-text').text.to.equal('').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 0');
+
+    browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
+    browser.expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 1');
+
+    browser
+      .setValue('input[type=search]', 'e')
+      .expect.element('#search-callback-text').text.to.equal('Search Text: Se').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 2');
+
+    browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
+    browser.expect.element('#search-callback-text').text.to.equal('Search Text: Se').after(250);
+    browser.expect.element('#search-count').text.to.equal('Search Count: 3');
+  },
+
+  'Displays the search field with auto searching off and handles ENTER keypress to search ': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
+
+    browser
+      .setValue('input[type=search]', 'S')
+      .expect.element('#search-callback-text').text.to.equal('').after(250);
+    browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
+    browser.expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
+
+    browser
+      .setValue('input[type=search]', 'e')
+      .expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
+    browser
+      .setValue('input[type=search]', 'a')
+      .expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
+
+    browser.sendKeys('input[type=search]', [browser.Keys.ENTER]);
+    browser.expect.element('#search-callback-text').text.to.equal('Search Text: Sea').after(250);
   },
 });

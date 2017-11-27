@@ -3,6 +3,8 @@
 The DynamicGrid component provides users a way to dynamically configure a CSS Grid using
 configuration. The component supports defining custom regions across multiple responsive breakpoints.
 
+**NOTE:** Only shorthand syntax is supported. The DynamicGrid is not a 1-to-1 mirror of the CSS Grid API due to supporting legacy IE.
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
