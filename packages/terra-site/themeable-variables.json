@@ -423,6 +423,7 @@
     "--terra-time-input-border-style": "solid",
     "--terra-time-input-border-width": "1px",
     "--terra-time-input-font-size": "1em",
+    "--terra-time-input-height": "1.857rem",
     "--terra-time-input-padding-bottom": "0.286em",
     "--terra-time-input-padding-left": "0.214em",
     "--terra-time-input-padding-right": "0.214em",
@@ -438,7 +439,6 @@
     "--terra-time-input-focus-keyboard-box-shadow-rtl": "0 0 8px #a6d9f4",
     "--terra-time-input-time-input-group-margin-left": "0.357em",
     "--terra-time-input-time-input-group-margin-right": "0.357em",
-    "--terra-time-input-height": "1.857rem",
     "--terra-time-input-line-height": "1.429",
     "--terra-time-input-width-input": "3.57em",
     "--terra-time-input-input-padding-bottom": "0.357em",
@@ -465,6 +465,7 @@
     "--terra-time-input-meridiem-button-hover-color": "#000",
     "--terra-time-input-meridiem-button-selected-background-color": "#4e5558",
     "--terra-time-input-meridiem-button-selected-border-color": "#d1d1d1",
-    "--terra-time-input-meridiem-button-selected-color": "#fff"
+    "--terra-time-input-meridiem-button-selected-color": "#fff",
+    "--terra-time-input-color": "#000"
   }
 }
