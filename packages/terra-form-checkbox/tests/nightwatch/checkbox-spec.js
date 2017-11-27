@@ -15,6 +15,12 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#disabled').to.not.be.selected;
   },
 
+  'Displays a checkbox with a hidden label': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/form-checkbox-tests/hidden`);
+    browser.expect.element('#hidden').to.have.attribute('aria-label').equals('can you see me?');
+    browser.expect.element('[for="hidden"]').text.to.equal('');
+  },
+
   'Displays a populated Checkbox with correct label, help message, and choices': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-checkbox-tests/populated`);
     browser.expect.element('[name="children_present"][value="children_present"]').to.be.present;

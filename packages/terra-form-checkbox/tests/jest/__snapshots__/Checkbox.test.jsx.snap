@@ -5,7 +5,7 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="inner-div"
+    className="focus-container"
   >
     <label
       className="label healtheintent-label-text"
@@ -20,11 +20,9 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
         value="children_present"
       />
       <span
-        className="inner-span"
+        className="label-text"
       >
-         
         Do you have any Children?
-         
       </span>
     </label>
   </div>
@@ -36,7 +34,7 @@ exports[`should render a checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="inner-div"
+    className="focus-container"
   >
     <label
       className="label"
@@ -50,11 +48,9 @@ exports[`should render a checkbox 1`] = `
         type="checkbox"
       />
       <span
-        className="inner-span"
+        className="label-text"
       >
-         
         Checkbox
-         
       </span>
     </label>
   </div>
@@ -66,12 +62,13 @@ exports[`should render a checkbox with a hidden label 1`] = `
   className="checkbox"
 >
   <div
-    className="inner-div"
+    className="is-hidden-focus-container"
   >
     <label
       className="label"
     >
       <input
+        aria-label="Checkbox"
         checked={true}
         className="native-input"
         disabled={false}
@@ -82,12 +79,8 @@ exports[`should render a checkbox with a hidden label 1`] = `
         type="checkbox"
       />
       <span
-        className="inner-span label-hidden"
-      >
-         
-        Checkbox
-         
-      </span>
+        className="label-text is-hidden"
+      />
     </label>
   </div>
 </div>
@@ -98,7 +91,7 @@ exports[`should render a controlled checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="inner-div"
+    className="focus-container"
   >
     <label
       className="label"
@@ -114,11 +107,9 @@ exports[`should render a controlled checkbox 1`] = `
         type="checkbox"
       />
       <span
-        className="inner-span"
+        className="label-text"
       >
-         
         Checkbox
-         
       </span>
     </label>
   </div>
@@ -130,10 +121,10 @@ exports[`should render a disabled checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="inner-div"
+    className="focus-container"
   >
     <label
-      className="label label-disabled"
+      className="label is-disabled"
     >
       <input
         checked={true}
@@ -146,11 +137,9 @@ exports[`should render a disabled checkbox 1`] = `
         type="checkbox"
       />
       <span
-        className="inner-span"
+        className="label-text"
       >
-         
         Checkbox
-         
       </span>
     </label>
   </div>
@@ -162,7 +151,7 @@ exports[`should render an uncontrolled checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="inner-div"
+    className="focus-container"
   >
     <label
       className="label"
@@ -177,11 +166,9 @@ exports[`should render an uncontrolled checkbox 1`] = `
         type="checkbox"
       />
       <span
-        className="inner-span"
+        className="label-text"
       >
-         
         Checkbox
-         
       </span>
     </label>
   </div>

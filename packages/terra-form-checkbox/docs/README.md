@@ -1,6 +1,6 @@
 # Terra Form Checkbox
 
-The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
+The Terra Form Checkbox is a responsive input component rendered as a box next to label text. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
 
 ## Getting Started
 
@@ -13,14 +13,12 @@ The Terra Form Checkbox is a responsive input component rendered as a box. When 
 import React from 'react';
 import Checkbox from 'terra-form-checkbox';
 
-<Checkbox {id="checkbox" labelText="Default Checkbox" } />
+<Checkbox id="checkbox" labelText="Default Checkbox" />
 ```
 
 ## Component Features
  * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
  * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
  * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
- * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
- * [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
  * [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)
 
