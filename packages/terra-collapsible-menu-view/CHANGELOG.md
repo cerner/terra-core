@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 -----------------
 ### Changed
-* Update ellipse menu to show first hidden child if the child is an icon-only item
+* Update menu to keep the last child face up if it fits within the available menu space
 
 1.5.0 - (November 16, 2017)
 ------------------

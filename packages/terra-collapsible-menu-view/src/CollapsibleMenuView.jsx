@@ -81,8 +81,8 @@ class CollapsibleMenuView extends React.Component {
       calcWidth += childWidth;
 
       if (calcWidth > availableWidth) {
-        // If last child is the same size as the menu button, leave face up
-        if (i === this.props.children.length - 1 && childWidth === menuButtonWidth) {
+        // If last child fits in the available space, leave it face up
+        if (i === this.props.children.length - 1 && calcWidth <= width) {
           break;
         }
 
