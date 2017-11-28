@@ -196,6 +196,8 @@ TimeUtil.isConsideredMobileDevice = () =>
     navigator.msMaxTouchPoints > 0
   );
 
+// These formats are designed to be the possible props for the
+// variant prop of the TimeInput. They should not change.
 Object.defineProperty(TimeUtil, 'FORMAT_12_HOUR', {
   value: '12-hour',
   configurable: false,
