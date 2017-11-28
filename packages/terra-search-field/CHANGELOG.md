@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.17.0 - (November 28, 2017)
+------------------
 ### Changed
 * Add ability to default value and onChange function handler
 * Add ability to disable and stretch to fill its container

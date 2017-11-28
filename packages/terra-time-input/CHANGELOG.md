@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.15.0 - (November 28, 2017)
+------------------
 ### Changed
 * Removed onInputFocus prop and pass it down as a custom prop.
 
