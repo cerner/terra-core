@@ -15,7 +15,12 @@ const KEYCODES = {
 
 const propTypes = {
   /**
-   * When true, will disable the auto-search
+   * The defaultValue of the search field. Use this to create an uncontrolled search field.
+   */
+  defaultValue: PropTypes.string,
+
+  /**
+   * When true, will disable the auto-search.
    */
   disableAutoSearch: PropTypes.bool,
 
@@ -30,19 +35,24 @@ const propTypes = {
   isDisabled: PropTypes.bool,
 
   /**
-   * Placeholder text to show while the search field is empty.
-   */
-  placeholder: PropTypes.string,
-
-  /**
    * The minimum number of characters to perform a search.
    */
   minimumSearchTextLength: PropTypes.number,
 
   /**
-   * How long the component should wait (in milliseconds) after input before performing an automatic search.
+   * Placeholder text to show while the search field is empty.
    */
-  searchDelay: PropTypes.number,
+  placeholder: PropTypes.string,
+
+  /**
+   * Function to trigger when user changes the input value. Provide a function to create a controlled input.
+   */
+  onChange: PropTypes.func,
+
+  /**
+   * A callback to indicate an invalid search. Sends parameter {String} searchText.
+   */
+  onInvalidSearch: PropTypes.func,
 
   /**
    * A callback to perform search. Sends parameter {String} searchText.
@@ -50,18 +60,25 @@ const propTypes = {
   onSearch: PropTypes.func,
 
   /**
-   * A callback to indicate an invalid search. Sends parameter {String} searchText.
+   * How long the component should wait (in milliseconds) after input before performing an automatic search.
    */
-  onInvalidSearch: PropTypes.func,
+  searchDelay: PropTypes.number,
+
+  /**
+   * The value of search field.  Use this to create a controlled search field.
+   */
+  value: PropTypes.string,
 };
 
 const defaultProps = {
+  defaultValue: undefined,
   disableAutoSearch: false,
   isBlock: false,
   isDisabled: false,
-  placeholder: '',
   minimumSearchTextLength: 2,
+  placeholder: '',
   searchDelay: 250,
+  value: undefined,
 };
 
 class SearchField extends React.Component {
@@ -72,11 +89,15 @@ class SearchField extends React.Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.updateSearchText = this.updateSearchText.bind(this);
 
     this.searchTimeout = null;
-    this.state = {
-      searchText: '',
-    };
+    this.state = { searchText: this.props.defaultValue };
+  }
+
+  componentDidUpdate() {
+    // if consumer updates the value prop with onChange, need to update state to match
+    this.updateSearchText(this.props.value);
   }
 
   componentWillUnmount() {
@@ -84,10 +105,21 @@ class SearchField extends React.Component {
   }
 
   handleTextChange(event) {
-    this.setState({ searchText: event.target.value });
+    const textValue = event.target.value;
+    this.updateSearchText(textValue);
+
+    if (this.props.onChange) {
+      this.props.onChange(event, textValue);
+    }
 
     if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  updateSearchText(searchText) {
+    if (searchText !== undefined && searchText !== this.state.searchText) {
+      this.setState({ searchText });
     }
   }
 
@@ -116,14 +148,17 @@ class SearchField extends React.Component {
 
   render() {
     const {
+      defaultValue,
+      disableAutoSearch,
       isBlock,
       isDisabled,
-      disableAutoSearch,
-      placeholder,
       minimumSearchTextLength,
+      placeholder,
       searchDelay,
-      onSearch,
+      onChange,
       onInvalidSearch,
+      onSearch,
+      value,
       ...customProps
     } = this.props;
     const searchFieldClassNames = cx([
@@ -132,17 +167,24 @@ class SearchField extends React.Component {
       customProps.className,
     ]);
 
+    const additionalInputAttributes = {};
+    if (value !== undefined) {
+      additionalInputAttributes.value = value;
+    } else {
+      additionalInputAttributes.defaultValue = defaultValue;
+    }
+
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
           className={cx('input')}
           type="search"
           placeholder={placeholder}
-          value={this.state.searchText}
           onChange={this.handleTextChange}
           disabled={isDisabled}
           aria-disabled={isDisabled}
           onKeyDown={this.handleKeyDown}
+          {...additionalInputAttributes}
         />
         <Button
           className={cx('button')}
