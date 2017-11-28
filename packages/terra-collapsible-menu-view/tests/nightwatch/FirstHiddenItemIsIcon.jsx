@@ -6,8 +6,6 @@ const CollapsibleMenuViewDemo = () => (
   <CollapsibleMenuView>
     <CollapsibleMenuView.Item text="Button A" className="ButtonA" key="buttonA" />
     <CollapsibleMenuView.Item text="Button B" className="ButtonB" key="buttonB" />
-    <CollapsibleMenuView.Item text="Button C" className="ButtonC" key="buttonC" />
-    <CollapsibleMenuView.Item text="Button D" className="ButtonD" key="buttonD" />
     <CollapsibleMenuView.Divider key="Divider4" />
     <CollapsibleMenuView.Item text="Button 1" className="Button1" key="button1" />
     <CollapsibleMenuView.Item text="Button 2" className="Button2" key="button2" />
