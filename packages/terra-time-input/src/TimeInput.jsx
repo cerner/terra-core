@@ -84,7 +84,11 @@ class TimeInput extends React.Component {
     });
   }
 
-  handleFocus() {
+  handleFocus(event) {
+    if (this.onInputFocus) {
+      this.onInputFocus(event);
+    }
+
     this.setState({ isFocused: true });
   }
 
@@ -261,6 +265,9 @@ class TimeInput extends React.Component {
       value,
       ...customProps
     } = this.props;
+
+    this.onInputFocus = customProps.onInputFocus;
+    delete customProps.onInputFocus;
 
     const timeInputClassNames = cx([
       'time-input',

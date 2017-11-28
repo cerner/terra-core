@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Add ability to disable and stretch to fill its container
+* Add ability to disable the auto searching and trigger searching via ENTER key
+
+1.16.0 - (November 16, 2017)
+------------------
+### Changed
+* Minor version bump
+
+1.15.0 - (November 7, 2017)
+------------------
+### Changed
+* Minor version bump
 
 1.14.0 - (October 31, 2017)
 ------------------

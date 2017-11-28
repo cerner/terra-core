@@ -22,6 +22,8 @@ import DividerExamples from './examples/divider/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
 import FormExamples from './examples/form/Index';
+import FormFieldExamples from './examples/form-field/Index';
+import FormTextareaExamples from './examples/form-textarea/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
 import HookshotExamples from './examples/hookshot/Index';
@@ -39,6 +41,7 @@ import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SignatureExamples from './examples/signature/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SelectExamples from './examples/form-select/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import StatusExamples from './examples/status/Index';
@@ -68,7 +71,9 @@ import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes'
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
+import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
+import FormTextareaRoutes from 'terra-form-textarea/tests/nightwatch/TextareaTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
 import HookshotTestRoutes from 'terra-hookshot/tests/nightwatch/HookshotTestRoutes';
@@ -87,6 +92,7 @@ import MenuItemTestRoutes from 'terra-menu/tests/nightwatch/menu-item/MenuItemTe
 import MenuItemGroupTestRoutes from 'terra-menu/tests/nightwatch/menu-item-group/MenuItemGroupTestRoutes';
 import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
+import MultiSelectTableTestRoutes from 'terra-table/tests/nightwatch/multi-select-table/MultiSelectTableTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
 import OverlayContainerTestRoutes from 'terra-overlay/tests/nightwatch/OverlayContainer/OverlayContainerTestRoutes';
 import PopupTestRoutes from 'terra-popup/tests/nightwatch/PopupTestRoutes';
@@ -95,6 +101,8 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SelectTestRoutes from 'terra-form-select/tests/nightwatch/select/SelectTestRoutes';
+import SelectOptionTestRoutes from 'terra-form-select/tests/nightwatch/select-option/SelectOptionTestRoutes';
 import SelectableListTestRoutes from 'terra-list/tests/nightwatch/selectable-list/SelectableListTestRoutes';
 import SelectableTableTestRoutes from 'terra-table/tests/nightwatch/selectable-table/SelectableTableTestRoutes';
 import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
@@ -103,6 +111,7 @@ import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupT
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TabsTestRoutes from 'terra-tabs/tests/nightwatch/TabsTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
@@ -135,6 +144,8 @@ ReactDOM.render((
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
+      <Route path="form-textarea" component={FormTextareaExamples} />
+      <Route path="form-field" component={FormFieldExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
       <Route path="hookshot" component={HookshotExamples} />
@@ -151,6 +162,7 @@ ReactDOM.render((
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="select" component={SelectExamples} />
       <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
@@ -165,6 +177,7 @@ ReactDOM.render((
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
+      {TableIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
     {AlertTestRoutes}
@@ -192,6 +205,7 @@ ReactDOM.render((
     {SelectableListTestRoutes}
     {SingleSelectListTestRoutes}
     {MultiSelectListTestRoutes}
+    {MultiSelectTableTestRoutes}
     {StatusTestRoutes}
     {TableTestRoutes}
     {SelectableTableTestRoutes}
@@ -209,6 +223,8 @@ ReactDOM.render((
     {SearchFieldTestRoutes}
     {PopupTestRoutes}
     {FormTestRoutes}
+    {FormTextareaRoutes}
+    {FormFieldTestRoutes}
     {OverlayTestRoutes}
     {LoadingOverlayTestRoutes}
     {OverlayContainerTestRoutes}
@@ -222,5 +238,7 @@ ReactDOM.render((
     {SignatureTestRoutes}
     {HookshotTestRoutes}
     {TabsTestRoutes}
+    {SelectTestRoutes}
+    {SelectOptionTestRoutes}
   </Router>
 ), document.getElementById('root'));

@@ -78,14 +78,20 @@ class DatePickerInput extends React.Component {
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
   }
 
-  handleOnButtonClick() {
+  componentDidUpdate(prevProps) {
+    if (this.shouldShowPicker && !prevProps.shouldShowPicker && this.props.onClick) {
+      this.props.onClick();
+    }
+  }
+
+  handleOnButtonClick(event) {
     // The picker is about to display so request focus from the containing component (e.g. modal) if it has the focus trapped.
     if (this.props.requestFocus) {
       this.props.requestFocus();
     }
 
-    if (this.props.onClick) {
-      this.props.onClick();
+    if (this.onCalendarButtonClick && this.props.onClick) {
+      this.onCalendarButtonClick(event, this.props.onClick);
     }
   }
 
@@ -118,6 +124,14 @@ class DatePickerInput extends React.Component {
       ...customProps
     } = this.props;
 
+    this.onCalendarButtonClick = customProps.onCalendarButtonClick;
+    this.onInputFocus = customProps.onInputFocus;
+    this.shouldShowPicker = customProps.shouldShowPicker;
+
+    delete customProps.onCalendarButtonClick;
+    delete customProps.onInputFocus;
+    delete customProps.shouldShowPicker;
+
     const additionalInputProps = Object.assign({}, customProps, inputAttributes);
 
     // react-datepicker by default will show the picker when the input has focus.
@@ -144,6 +158,7 @@ class DatePickerInput extends React.Component {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
+          onFocus={this.onInputFocus}
         />
         <Button
           className={styles.button}
