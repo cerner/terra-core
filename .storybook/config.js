@@ -1,5 +1,3 @@
-// import React from 'react';
-// import Base from '../packages/terra-base/src/Base';
 import { configure, addDecorator } from '@storybook/react';
 import { setDefaults } from '@storybook/addon-info';
 
