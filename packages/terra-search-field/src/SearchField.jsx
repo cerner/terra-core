@@ -89,11 +89,15 @@ class SearchField extends React.Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.updateSearchText = this.updateSearchText.bind(this);
 
     this.searchTimeout = null;
-    this.state = {
-      searchText: this.props.defaultValue,
-    };
+    this.state = { searchText: this.props.defaultValue };
+  }
+
+  componentDidUpdate() {
+    // if consumer updates the value prop with onChange, need to update state to match
+    this.updateSearchText(this.props.value);
   }
 
   componentWillUnmount() {
@@ -101,14 +105,21 @@ class SearchField extends React.Component {
   }
 
   handleTextChange(event) {
-    this.setState({ searchText: event.target.value });
+    const textValue = event.target.value;
+    this.updateSearchText(textValue);
 
     if (this.props.onChange) {
-      this.props.onChange(event);
+      this.props.onChange(event, textValue);
     }
 
     if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  updateSearchText(searchText) {
+    if (searchText !== undefined && searchText !== this.state.searchText) {
+      this.setState({ searchText });
     }
   }
 

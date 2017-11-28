@@ -18,6 +18,7 @@ import SearchFieldDefaultValue from './SearchFieldDefaultValue';
 import SearchFieldDisabled from './SearchFieldDisabled';
 import SearchFieldBlock from './SearchFieldBlock';
 import SearchFieldDisableAutoSearch from './SearchFieldDisableAutoSearch';
+import SearchFieldFilterNumeric from './SearchFieldFilterNumeric';
 
 const SearchFieldExamples = () => (
   <div>
@@ -47,6 +48,9 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldDisableAutoSearch">Search Field with auto-search turned off</h2>
     <SearchFieldDisableAutoSearch />
+    <br />
+    <h2 id="searchFieldFilterNumeric">Search Field with onChange event filtering numbers</h2>
+    <SearchFieldFilterNumeric />
   </div>
 );
 

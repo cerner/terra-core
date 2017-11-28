@@ -9,8 +9,12 @@ class SearchFieldOnChange extends React.Component {
     this.state = { searchText: '', callCount: 0 };
   }
 
-  onChange(event) {
-    this.setState({ searchText: event.target.value, callCount: this.state.callCount + 1 });
+  onChange(event, text) {
+    let searchText = text;
+    if (text && text.length > 0 && /\d/.test(text)) {
+      searchText = text.substring(0, text.length - 1);
+    }
+    this.setState({ searchText, callCount: this.state.callCount + 1 });
   }
 
   render() {
@@ -21,6 +25,7 @@ class SearchFieldOnChange extends React.Component {
         <SearchField
           id="searchfield"
           onChange={this.onChange}
+          value={this.state.searchText}
         />
       </div>
     );

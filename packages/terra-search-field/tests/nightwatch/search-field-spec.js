@@ -97,6 +97,18 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.setValue('input[type=search]', 'T');
     browser.expect.element('#searchOnChangeCallCount').text.to.equal('1').after(250);
     browser.expect.element('#searchOnChangeText').text.to.equal('T').after(250);
+
+    browser.setValue('input[type=search]', 'e');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('2').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('Te').after(250);
+
+    browser.setValue('input[type=search]', '5');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('3').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('Te').after(250);
+
+    browser.setValue('input[type=search]', 't');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('4').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('Tet').after(250);
   },
 
   'Displays a search field with a value': (browser) => {
