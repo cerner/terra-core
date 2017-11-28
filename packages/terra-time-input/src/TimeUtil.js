@@ -1,4 +1,14 @@
 class TimeUtil {
+
+  /**
+   * Determines if a provided nuermic input value is valid.
+   * Valid inputs are either empty strings or numeric.
+   * @param {String} value Value to validate
+   * @return True if the value is empty or numeric, false otherwise.
+   */
+  static validNumericInput(value) {
+    return value.length === 0 || /^\d+$/.test(value);
+  }
   /**
    * Finds the equivalent twelve hour time and meridiem for a given hour, anteMeridiem, and postMeridiem
    * @param {String} hour Hour to parse.

@@ -190,14 +190,8 @@ class TimeInput extends React.Component {
   }
 
   handleHourChange(event) {
-    // Ignore the input and don't update the state if the entered value is a non numeric character.
-
-    if (event.target.value.length > 0) {
-      const isNumeric = /^\d+$/.test(event.target.value);
-
-      if (!isNumeric) {
-        return;
-      }
+    if (!TimeUtil.validNumericInput(event.target.value)) {
+      return;
     }
 
     let inputValue = event.target.value;
@@ -238,13 +232,8 @@ class TimeInput extends React.Component {
   }
 
   handleMinuteChange(event) {
-    // Ignore the input and don't update the state if the entered value is a non numeric character.
-    if (event.target.value.length > 0) {
-      const isNumeric = /^\d+$/.test(event.target.value);
-
-      if (!isNumeric) {
-        return;
-      }
+    if (!TimeUtil.validNumericInput(event.target.value)) {
+      return;
     }
 
     let inputValue = event.target.value;
