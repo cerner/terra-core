@@ -1,0 +1,49 @@
+:local {
+  .structural {
+    .tab,
+    .tab-menu {
+      background-color: rgba(255, 255, 255, 0.5);
+      background-image: linear-gradient(to bottom, #4a90e2, #4a90e2);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 0 3px;
+      border-radius: 3px 3px 0 0;
+      color: #4a90e2;
+      font-size: 1rem;
+      line-height: 1.143;
+      margin-left: 2px;
+      transition-duration: 2s;
+      transition-property: background-size;
+      transition-timing-function: ease;
+
+      &.is-active {
+        background-color: rgba(255, 255, 255, 0.8);
+        background-size: 100% 3px;
+      }
+
+      &.is-disabled,
+      &.is-disabled:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: #8bc2f9;
+        cursor: default;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+
+      &:focus {
+        background-color: #fff;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .pane-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 0 0 3px 3px;
+    }
+  }
+}

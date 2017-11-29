@@ -11,13 +11,15 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Tabs style. One of: "modular" or "structural"
+   * Tabs style. One of: "modular-centered", "modular-left-aligned", or "structural"
    */
-  variant: PropTypes.oneOf(['modular', 'structural']),
+  variant: PropTypes.oneOf(['modular-centered', 'modular-left-aligned', 'structural']),
+
   /**
    * Indicates if tabs should fill the width available in the tab bar.
    */
   tabFill: PropTypes.bool,
+
   /**
    * Indicates if the pane content should fill to the height of the parent container.
    */
@@ -46,7 +48,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  variant: 'modular',
+  variant: 'modular-left-aligned',
   tabFill: false,
   fill: false,
 };
@@ -87,17 +89,19 @@ class Tabs extends React.Component {
   }
 
 
-  handleOnChange(event, selectedKey) {
-    if (this.props.onChange) {
-      this.props.onChange(event, selectedKey);
-    } else if (this.state.activeKey !== selectedKey) {
-      this.setState({ activeKey: selectedKey });
+  handleOnChange(event, selectedPane) {
+    if (!selectedPane.props.isDisabled) {
+      if (this.props.onChange) {
+        this.props.onChange(event, selectedPane.key);
+      } else if (this.state.activeKey !== selectedPane.key) {
+        this.setState({ activeKey: selectedPane.key });
+      }
     }
   }
 
   wrapPaneOnClick(pane) {
     return (event) => {
-      this.handleOnChange(event, pane.key);
+      this.handleOnChange(event, pane);
 
       if (pane.props.onClick) {
         pane.props.onClick(event);
@@ -154,7 +158,7 @@ class Tabs extends React.Component {
           </CollapsibleTabs>
         )}
       >
-        <div className={cx('tab-content')}>
+        <div className={cx('pane-content')}>
           {content}
         </div>
       </ContentContainer>

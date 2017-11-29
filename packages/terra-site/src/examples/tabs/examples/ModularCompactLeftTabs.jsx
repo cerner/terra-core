@@ -86,7 +86,7 @@ const ModularTabsExample = () => {
 
   return (
     <div>
-      <Tabs variant="modular" defaultActiveKey="LabelTab">
+      <Tabs variant="modular-left-aligned" defaultActiveKey="LabelTab">
         {labelTab}
         {iconTab}
         {customTab}

@@ -94,7 +94,21 @@ class TabMenu extends React.Component {
     });
 
     return (
-      <div>
+      /* eslint-disable jsx-a11y/no-static-element-interactions */
+      <div
+        role="button"
+        tabIndex="0"
+        ref={this.setTargetRef}
+        onClick={this.handleOnClick}
+        onKeyDown={this.handleOnKeyDown}
+        style={{ width: this.targetWidth }}
+        className={cx(['tab-menu'])}
+      >
+        <Arrange
+          fill={<div>{menuToggleText}</div>}
+          fitEnd={<IconCaretDown />}
+          align="center"
+        />
         <Menu
           onRequestClose={this.handleOnRequestClose}
           targetRef={this.getTargetRef}
@@ -102,24 +116,8 @@ class TabMenu extends React.Component {
         >
           {menuItems}
         </Menu>
-        {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-        <div
-          role="button"
-          tabIndex="0"
-          ref={this.setTargetRef}
-          onClick={this.handleOnClick}
-          onKeyDown={this.handleOnKeyDown}
-          style={{ width: this.targetWidth }}
-          className={cx(['tab-menu'])}
-        >
-          <Arrange
-            fill={<div>{menuToggleText}</div>}
-            fitEnd={<IconCaretDown />}
-            align="center"
-          />
-        </div>
-        {/* eslint-enable jsx-ally/no-static-element-interactions */}
       </div>
+      /* eslint-enable jsx-ally/no-static-element-interactions */
     );
   }
 }

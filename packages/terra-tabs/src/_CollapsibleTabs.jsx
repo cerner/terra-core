@@ -66,37 +66,38 @@ class CollapsibleTabs extends React.Component {
   }
 
   handleResize(width) {
-    const childCount = React.Children.count(this.props.children);
-    let availableWidth = width;
+    const menuToggleWidth = this.menuRef.getBoundingClientRect().width;
+    const availableWidth = width - menuToggleWidth;
 
-    // All tabs will have the same min-width so we only need to get the first one
-    const tabElement = this.container.children[0];
-    const minWidth = parseInt(window.getComputedStyle(tabElement, null).getPropertyValue('min-width'), 10);
-
-    // Calculate how many tabs can render at their minimum widths given the width of the container.
-    let newHideIndex = Math.floor(width / minWidth);
-
-    // If we can't fit all the tabs recalculate hide index with the menu present
-    if (childCount > newHideIndex) {
-      const menuToggleWidth = this.menuRef.getBoundingClientRect().width;
-      availableWidth = width - menuToggleWidth;
-
-      newHideIndex = Math.floor(availableWidth / minWidth);
-    }
-
-    let isLabelTruncated = false;
-    let calcWidth = 0;
+    // Calculate hide index
+    let newHideIndex = this.container.children.length;
+    let calcMinWidth = 0;
+    let isMenuHidden = true;
     for (let i = 0; i < this.props.children.length; i += 1) {
       const tab = this.container.children[i];
+      const minWidth = parseInt(window.getComputedStyle(tab, null).getPropertyValue('min-width'), 10);
+      calcMinWidth += minWidth;
+      if (calcMinWidth > availableWidth || (i === this.props.children.length && calcMinWidth <= width)) {
+        newHideIndex = i;
+        isMenuHidden = false;
+        break;
+      }
+    }
+
+    // Calculate if label will be truncated
+    let isLabelTruncated = false;
+    let calcWidth = 0;
+    for (let i = 0; i < newHideIndex; i += 1) {
+      const tab = this.container.children[i];
       calcWidth += tab.getBoundingClientRect().width;
-      if (calcWidth > availableWidth) {
+      if ((isMenuHidden && calcWidth > width) || (!isMenuHidden && calcWidth > availableWidth)) {
         isLabelTruncated = true;
         break;
       }
     }
 
     if (this.state.hiddenStartIndex !== newHideIndex || this.state.isLabelTruncated !== isLabelTruncated) {
-      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: newHideIndex >= childCount, isCalculating: false, isLabelTruncated });
+      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: isMenuHidden, isCalculating: false, isLabelTruncated });
     }
   }
 
@@ -121,39 +122,55 @@ class CollapsibleTabs extends React.Component {
   }
 
   handleOnKeyDown(event) {
+    // If there are less than 2 children we don't need to worry about keyboard navigation
+    if (!this.props.children.length) {
+      return;
+    }
+
     const isRTL = document.getElementsByTagName('html')[0].getAttribute('dir') === 'rtl';
-    const visibleChildrenCount = this.container.children.length;
-    const lastVisibleTabIndex = this.menuRef ? visibleChildrenCount - 2 : visibleChildrenCount - 1;
+    const visibleChildren = this.container.children;
 
     if (event.nativeEvent.keyCode === TabUtils.KEYCODES.LEFT_ARROW) {
       if (isRTL) {
-        this.handleFocusRight(lastVisibleTabIndex);
+        this.handleFocusRight(visibleChildren);
       } else {
-        this.handleFocusLeft(lastVisibleTabIndex);
+        this.handleFocusLeft(visibleChildren);
       }
     } else if (event.nativeEvent.keyCode === TabUtils.KEYCODES.RIGHT_ARROW) {
       if (isRTL) {
-        this.handleFocusLeft(lastVisibleTabIndex);
+        this.handleFocusLeft(visibleChildren);
       } else {
-        this.handleFocusRight(lastVisibleTabIndex);
+        this.handleFocusRight(visibleChildren);
       }
     }
   }
 
-  handleFocusRight(lastVisibleTabIndex) {
-    if (this.props.activeIndex === lastVisibleTabIndex && this.menuRef) {
-      this.menuRef.focus();
-    } else {
-      this.props.onChange(event, this.props.children[this.props.activeIndex + 1].key);
+  handleFocusRight(visibleChildren) {
+    for (let i = this.props.activeIndex + 1; i < visibleChildren.length; i += 1) {
+      if (!this.props.children[i].props.isDisabled) {
+        if (visibleChildren[i] === this.menuRef) {
+          this.menuRef.focus();
+          break;
+        } else {
+          this.props.onChange(event, this.props.children[i]);
+          break;
+        }
+      }
     }
   }
 
-  handleFocusLeft(lastVisibleTabIndex) {
-    if (this.menuRef === document.activeElement) {
-      this.props.onChange(event, this.props.children[lastVisibleTabIndex].key);
-      this.container.focus();
-    } else if (this.props.activeIndex > 0) {
-      this.props.onChange(event, this.props.children[this.props.activeIndex - 1].key);
+  handleFocusLeft(visibleChildren) {
+    for (let i = this.props.activeIndex - 1; i >= 0; i -= 1) {
+      if (!this.props.children[i].props.isDisabled) {
+        if (document.activeElement === this.menuRef) {
+          this.container.focus();
+          this.props.onChange(event, this.props.children[visibleChildren.length - 2]);
+          break;
+        } else {
+          this.props.onChange(event, this.props.children[i]);
+          break;
+        }
+      }
     }
   }
 

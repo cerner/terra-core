@@ -13,24 +13,26 @@ import PaneSrc from '!raw-loader!terra-tabs/src/TabPane';
 
 // Example Files
 import StructuralTabs from './examples/StructuralTabs';
-import ModularTabs from './examples/ModularTabs';
-import SelectableTabs from './examples/SelectableTabs';
-import ExpandedTabs from './examples/ExpandedTabs';
+import ModularTabs from './examples/ModularCompactLeftTabs';
+import ExpandedTabs from './examples/ModularExpandedTabs';
 
 const TabsExamples = () => (
-  <div>
+  <div style={{ backgroundColor: 'lightblue' }}>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TabsSrc} componentName="Tabs" />
-    <PropsTable id="tab-props" src={PaneSrc} componentName="Tabs.Pane" />
+    <PropsTable id="pane-props" src={PaneSrc} componentName="Tabs.Pane" />
     <h2>Modular Tabs</h2>
+    <h3>Compact - Left Aligned</h3>
     <ModularTabs />
-    <h2>Structural Tabs</h2>
-    <StructuralTabs />
-    <h2>Controlled Tabs</h2>
-    <SelectableTabs />
-    <h2>Expanded Tabs</h2>
+    <h3>Compact - Centered</h3>
+    <h3>Expanded</h3>
     <ExpandedTabs />
+    <h2>Structural Tabs</h2>
+    <h3>Compact</h3>
+    <StructuralTabs />
+    <h3>Expanded</h3>
+    <StructuralTabs tabFill />
   </div>
 );
 

@@ -86,7 +86,7 @@ const ExpandedTabsExample = () => {
 
   return (
     <div>
-      <Tabs variant="modular" defaultActiveKey="LabelTab" tabFill >
+      <Tabs variant="modular-left-aligned" defaultActiveKey="LabelTab" tabFill >
         {labelTab}
         {iconTab}
         {customTab}

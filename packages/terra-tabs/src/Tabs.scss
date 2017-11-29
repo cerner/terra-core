@@ -1,3 +1,6 @@
+@import './ModularTabs';
+@import './StructuralTabs';
+
 :local {
   .tabs-container {
     width: 100%;
@@ -14,64 +17,69 @@
     &:focus {
       outline: none;
     }
+  }
 
-    &:focus .is-active {
-      outline-style: dotted;
+  .collapsible-tabs-container.is-calculating {
+    visibility: hidden;
+
+    /*
+     * During calculations tabs should display with auto size and not grow or shrink in order to get
+     * content width for trunction logic
+     */
+    .tab {
+      flex: 0 0 auto;
     }
   }
 
   .tab {
     flex: 0 1 auto;
-    max-width: 200px;
-    min-width: 100px;
+    min-width: 8.357rem;
+
+    &.is-icon-only {
+      flex: 0 0 auto;
+      min-width: 2.571rem;
+    }
+
+    &.is-text-only {
+      min-width: 7.143rem;
+    }
+
+    //Extended Tabs
+    .tab-fill & {
+      flex: 1 1 auto;
+      max-width: none;
+      text-align: center;
+    }
   }
 
-  .selection-bar {
-    background-color: blue;
-    display: block;
-    height: 2px;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .tab.is-disabled {
-    opacity: 0.3;
-  }
-
-  .tab.is-icon-only {
-    flex: 0 0 auto;
-    min-width: none;
+  .tab .label:nth-child(2) {
+    margin-left: 0.357rem;
   }
 
   .tab-menu {
     flex: 1 1 auto;
-    
-    &:focus {
-      outline-style: dotted;
-    }
-  }
-
-  .tab-fill .tab {
-    flex: 1 1 auto;
-    max-width: none;
-    text-align: center;
+    min-width: 7.143rem;
   }
 
   .tab,
   .tab-menu {
     cursor: pointer;
     overflow: hidden;
-    padding: 0.714rem;
+    padding: 0.571rem 0.714rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-break: normal;
     word-wrap: normal;
   }
 
-  .collapsible-tabs-container.is-calculating {
-    visibility: hidden;
+  .selection-bar {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
 
-    .tab {
-      flex: 0 0 auto;
-    }
+  .tabs-container {
+    width: 100%;
   }
 }

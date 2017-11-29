@@ -46,6 +46,7 @@ const TabPane = ({
     'tab',
     { 'is-disabled': isDisabled },
     { 'is-icon-only': isIconOnly },
+    { 'is-text-only': !icon },
     attributes.className,
   ]);
 
@@ -53,7 +54,7 @@ const TabPane = ({
     <div role="tab" {...attributes} className={paneClassNames}>
       {customDisplay}
       {customDisplay ? null : icon}
-      {customDisplay || isIconOnly ? null : label}
+      {customDisplay || isIconOnly ? null : <span className={cx('label')}>{label}</span>}
     </div>
   );
 };
