@@ -171,7 +171,8 @@
     "--terra-form-checkbox-disabled-border-color": "none",
     "--terra-form-checkbox-focus-box-shadow": "none",
     "--terra-form-checkbox-container-focus-border-radius": "3px",
-    "--terra-form-checkbox-container-focus-box-shadow": "none"
+    "--terra-form-checkbox-container-focus-box-shadow": "none",
+    "--terra-form-checkboc-focus-container-padding-right": "0.214rem"
   },
   "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",
