@@ -1,7 +1,7 @@
 {
   "name": "terra-image",
   "main": "lib/Image.js",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "terra-image",
   "repository": {
     "type": "git",
@@ -38,11 +38,11 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   }
 }

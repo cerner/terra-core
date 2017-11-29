@@ -95,4 +95,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       browser.expect.element('.Button4').to.be.present;
     }
   },
+
+  'First hidden item inititally displays face-up when isIconOnly': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/collapsible-menu-view-tests/first-item-hidden`);
+    browser.expect.element('div[class*="face-up-item"] > .IconOnly').to.be.present;
+    // Replace with Visual Regression Screenshot
+  },
 });
