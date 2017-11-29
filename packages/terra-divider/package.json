@@ -1,7 +1,7 @@
 {
   "name": "terra-divider",
   "main": "lib/Divider.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The divider component is used to visually separate content on a layout.",
   "repository": {
     "type": "git",
@@ -23,11 +23,11 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-base": "^2.7.0",
+    "terra-base": "^2.8.0",
     "terra-toolkit": "^2.1.0"
   },
   "scripts": {
