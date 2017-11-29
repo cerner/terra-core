@@ -206,13 +206,15 @@ class App extends React.Component {
     );
 
     const applicationHeader = (
-      <CollapsibleMenuView className={styles['site-header']}>
-        {toggleContent}
-        {themeSwitcher}
-        {localeContent}
-        <CollapsibleMenuView.Divider />
-        {bidiContent}
-      </CollapsibleMenuView>
+      <div className={styles['site-header']}>
+        <CollapsibleMenuView className={styles['site-collapsible']}>
+          {toggleContent}
+          {themeSwitcher}
+          {localeContent}
+          <CollapsibleMenuView.Divider />
+          {bidiContent}
+        </CollapsibleMenuView>
+      </div>
     );
 
     return (
