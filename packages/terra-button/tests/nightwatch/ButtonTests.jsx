@@ -15,11 +15,6 @@ const ButtonTests = () => (
       <li><Link to="/tests/button-tests/primary">Primary Button</Link></li>
       <li><Link to="/tests/button-tests/secondary">Secondary Button</Link></li>
       <li><Link to="/tests/button-tests/long-text">Long Text Button</Link></li>
-      <li><Link to="/tests/button-tests/huge">Huge Button</Link></li>
-      <li><Link to="/tests/button-tests/large">Large Button</Link></li>
-      <li><Link to="/tests/button-tests/medium">Medium Button</Link></li>
-      <li><Link to="/tests/button-tests/small">Small Button</Link></li>
-      <li><Link to="/tests/button-tests/tiny">Tiny Button</Link></li>
       <li><Link to="/tests/button-tests/with-type-button">Button with Type Button</Link></li>
       <li><Link to="/tests/button-tests/with-type-reset">Button with Type Reset</Link></li>
       <li><Link to="/tests/button-tests/with-type-submit">Button with Type Submit</Link></li>

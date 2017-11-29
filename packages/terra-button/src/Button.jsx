@@ -36,10 +36,6 @@ const propTypes = {
    */
   onClick: PropTypes.func,
   /**
-   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`
-   */
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  /**
    * Sets the button text
    */
   text: PropTypes.string,
@@ -68,7 +64,6 @@ const Button = ({
   isBlock,
   isDisabled,
   isReversed,
-  size,
   text,
   type,
   variant,
@@ -81,7 +76,6 @@ const Button = ({
     'button',
     variant,
     { 'is-disabled': isDisabled },
-    size,
     { block: isBlock },
     attributes.className,
   ]);

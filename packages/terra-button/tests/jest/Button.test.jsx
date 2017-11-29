@@ -39,19 +39,19 @@ it('should render a button with type equal to submit', () => {
 
 it('should render an icon', () => {
   const testElement = <img alt="icon" />;
-  const button = shallow(<Button icon={testElement} size="tiny" />);
+  const button = shallow(<Button icon={testElement} />);
   expect(button).toMatchSnapshot();
 });
 
 it('should render an icon and a text', () => {
   const testElement = <img alt="icon" />;
-  const button = shallow(<Button icon={testElement} size="tiny" text="text" />);
+  const button = shallow(<Button icon={testElement} text="text" />);
   expect(button).toMatchSnapshot();
 });
 
 it('should render text then an icon when reversed', () => {
   const testElement = <img alt="icon" />;
-  const button = shallow(<Button icon={testElement} size="tiny" text="text" isReversed />);
+  const button = shallow(<Button icon={testElement} text="text" isReversed />);
   expect(button).toMatchSnapshot();
 });
 
@@ -79,16 +79,6 @@ it('should have the class terra-Button--default', () => {
 it('should have the class terra-Button--primary when variant is set to primary', () => {
   const button = shallow(<Button variant="primary" />);
   expect(button.prop('className')).toContain('primary');
-});
-
-it('should have the class terra-Button--tiny when size is set to tiny', () => {
-  const button = shallow(<Button size="tiny" />);
-  expect(button.prop('className')).toContain('tiny');
-});
-
-it('should have the class terra-Button--huge when size is set to huge', () => {
-  const button = shallow(<Button size="huge" />);
-  expect(button.prop('className')).toContain('huge');
 });
 
 it('should have the class terra-Button--block when block is enabled', () => {
