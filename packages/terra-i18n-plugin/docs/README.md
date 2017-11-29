@@ -32,3 +32,23 @@ module.exports = {
 ```
 
 Then all of the messages for a given language across all dependencies will be aggregated into an overall translation file for that language and placed into an aggregated-translations directory.  In order for these resulting files to be able to be loaded by terra-i18n, that directory then needs to be added to the list of directories that the webpack resolver looks into.
+
+By default it will search /baseDirectory/translations and the children directories of node_modules recursively. The i18n-plugin will also search and aggregate translation files under the children of custom folder name when the optional key `translationsDirectoryRouters` is specified:
+```js
+new I18nAggregatorPlugin({
+  translationsDirectoryRouters: ['customFolderName']
+}
+```
+
+It also allows searching in a specific directory for translations folder when the optional key `translationsDirectories` is specified. Assume a structure like:
+- baseDirectory
+  - mytranslations
+    - translations
+      - en.js
+      - fr.js
+
+```js
+new I18nAggregatorPlugin({
+  translationsDirectories: ['mytranslations']
+}
+```

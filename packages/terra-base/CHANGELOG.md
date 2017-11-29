@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+2.8.0 - (November 28, 2017)
+------------------
+### Changed
+* componentWillReceiveProps will now compare locale instead of props.
+
 2.7.0 - (November 16, 2017)
 ------------------
 ### Changed

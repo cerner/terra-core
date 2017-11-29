@@ -1,7 +1,7 @@
 {
   "name": "terra-menu",
   "main": "lib/Menu.js",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu.",
   "repository": {
     "type": "git",
@@ -26,24 +26,24 @@
   "peerDependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "terra-arrange": "^1.15.0",
-    "terra-base": "^2.7.0",
-    "terra-content-container": "^1.12.0",
-    "terra-icon": "^1.14.0",
-    "terra-list": "^1.16.0",
-    "terra-popup": "^1.15.0",
-    "terra-slide-group": "^1.12.0"
+    "terra-arrange": "^1.16.0",
+    "terra-base": "^2.8.0",
+    "terra-content-container": "^1.13.0",
+    "terra-icon": "^1.15.0",
+    "terra-list": "^1.17.0",
+    "terra-popup": "^1.16.0",
+    "terra-slide-group": "^1.13.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^1.15.0",
-    "terra-base": "^2.7.0",
-    "terra-content-container": "^1.12.0",
-    "terra-icon": "^1.14.0",
-    "terra-list": "^1.16.0",
-    "terra-popup": "^1.15.0",
-    "terra-slide-group": "^1.12.0"
+    "terra-arrange": "^1.16.0",
+    "terra-base": "^2.8.0",
+    "terra-content-container": "^1.13.0",
+    "terra-icon": "^1.15.0",
+    "terra-list": "^1.17.0",
+    "terra-popup": "^1.16.0",
+    "terra-slide-group": "^1.13.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

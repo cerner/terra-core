@@ -4,6 +4,12 @@ Changelog
 Unreleased
 ----------
 
+1.9.0 - (November 28, 2017)
+------------------
+### Changed
+* Minor version bump
+* Allow new config options: translationsDirectoryRouters as recursive search transit and translationsDirectories as absolute search path
+
 1.8.0 - (October 24, 2017)
 ------------------
 * Updated to allow an inputFileSystem to be passed in through the options
