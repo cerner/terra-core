@@ -45,3 +45,12 @@ $terra-button-link-color-scheme: (
   active-color: var(--terra-button-active-color-link, darken(#0065a3, 10%)),
   disabled-color: var(--terra-button-disabled-color-link, #909496),
 );
+
+// Font sizes
+$terra-button-font-sizes: (
+  tiny: var(--terra-button-font-size-tiny, 0.5rem),
+  small: var(--terra-button-font-size-small, 0.8rem),
+  medium: var(--terra-button-font-size-medium, 1rem),
+  large: var(--terra-button-font-size-large, 1.4rem),
+  huge: var(--terra-button-font-size-huge, 1.7rem)
+);

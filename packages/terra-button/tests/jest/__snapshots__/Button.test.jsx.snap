@@ -89,7 +89,7 @@ exports[`should render a secondary button 1`] = `
 exports[`should render an icon 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button default tiny"
   disabled={false}
   isCompact={false}
   type="button"
@@ -103,7 +103,7 @@ exports[`should render an icon 1`] = `
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button default tiny"
   disabled={false}
   isCompact={false}
   type="button"
@@ -156,7 +156,7 @@ exports[`should render as disabled when set 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button default tiny"
   disabled={false}
   isCompact={false}
   type="button"

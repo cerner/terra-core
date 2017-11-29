@@ -9,6 +9,7 @@ import { version } from 'terra-button/package.json';
 import ButtonSrc from '!raw-loader!terra-button/src/Button';
 
 // Example Files
+import ButtonSize from './ButtonSize';
 import ButtonBlock from './ButtonBlock';
 import ButtonAnchor from './ButtonAnchor';
 import ButtonDisabled from './ButtonDisabled';
@@ -23,6 +24,8 @@ const ButtonExamples = () => (
     <PropsTable id="props" src={ButtonSrc} />
     <h2 id="variant">Variant</h2>
     <ButtonVariant />
+    <h2 id="size">Size</h2>
+    <ButtonSize />
     <h2 id="block">Block</h2>
     <ButtonBlock />
     <h2 id="anchor">Anchor</h2>

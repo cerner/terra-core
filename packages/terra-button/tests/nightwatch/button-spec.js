@@ -44,6 +44,36 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#linkButton', 'Link');
   },
 
+  'Displays as a tiny button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/tiny`)
+      .assert.containsText('#tinyButton', 'Tiny');
+  },
+
+  'Displays as a small button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/small`)
+      .assert.containsText('#smallButton', 'Small');
+  },
+
+  'Displays as a medium button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/medium`)
+      .assert.containsText('#mediumButton', 'Medium');
+  },
+
+  'Displays as a large button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/large`)
+      .assert.containsText('#largeButton', 'Large');
+  },
+
+  'Displays as a huge button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/huge`)
+      .assert.containsText('#hugeButton', 'Huge');
+  },
+
   'Displays as a button with the type set to button and with the provided text': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/with-type-button`)
