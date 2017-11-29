@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Add preventDefault() to onOutsideClick
 
+1.4.0 - (November 28, 2017)
+------------------
+### Changed
+* Minor version bump
+
 1.3.0 - (November 16, 2017)
 ------------------
 ### Changed

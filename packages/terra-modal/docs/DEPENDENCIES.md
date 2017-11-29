@@ -7,12 +7,12 @@
 | focus-trap-react | ^3.0.2 | 0.14.x \|\| ^15.0.0 \|\| ^16.0.0 | A React component that traps focus. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-portal | ^3.0.0 | -- | React component for transportation of modals, lightboxes, loading bars... to document.body |
-| terra-base | ^2.7.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
+| terra-base | ^2.8.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-icon | ^1.14.0 | ^15.4.2 | terra-icon |
+| terra-icon | ^1.15.0 | ^15.4.2 | terra-icon |
 | terra-props-table | ^1.10.1 | ^15.4.2 | terra-props-table |
 
 ## peerDependencies

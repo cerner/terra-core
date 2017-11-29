@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n-plugin",
   "main": "lib/I18nAggregatorPlugin.js",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n.",
   "repository": {
     "type": "git",
