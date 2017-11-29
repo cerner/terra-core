@@ -1,7 +1,7 @@
 {
   "name": "terra-status",
   "main": "lib/Status.js",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "The status component provides a customizable color indictor to signify a specific condition.",
   "repository": {
     "type": "git",
@@ -33,17 +33,17 @@
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   },
   "devDependencies": {
-    "terra-arrange": "^1.15.0",
+    "terra-arrange": "^1.16.0",
     "terra-props-table": "^1.10.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   }
 }
