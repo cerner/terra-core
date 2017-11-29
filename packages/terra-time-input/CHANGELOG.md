@@ -8,6 +8,9 @@ Unreleased
 * Added support for theming.
 * Added mobile only time input.
 
+
+1.15.0 - (November 28, 2017)
+------------------
 ### Changed
 * Removed onInputFocus prop and pass it down as a custom prop.
 

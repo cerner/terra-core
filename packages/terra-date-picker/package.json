@@ -1,7 +1,7 @@
 {
   "name": "terra-date-picker",
   "main": "lib/DatePicker.js",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "description": "The terra-date-picker component provides users a way to enter or select a date from the date picker.",
   "repository": {
     "type": "git",
@@ -25,27 +25,27 @@
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "terra-app-delegate": "^1.8.0",
-    "terra-modal-manager": "^1.15.0",
+    "terra-modal-manager": "^1.16.0",
     "terra-props-table": "^1.10.1"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.7.0",
-    "terra-button": "^1.13.0",
-    "terra-form": "^1.13.0",
-    "terra-icon": "^1.14.0",
-    "terra-responsive-element": "^1.12.0"
+    "terra-base": "^2.8.0",
+    "terra-button": "^1.14.0",
+    "terra-form": "^1.14.0",
+    "terra-icon": "^1.15.0",
+    "terra-responsive-element": "^1.13.0"
   },
   "dependencies": {
     "moment": "^2.17.1",
     "prop-types": "^15.5.8",
     "react-datepicker": "^0.46.0",
-    "terra-base": "^2.7.0",
-    "terra-button": "^1.13.0",
-    "terra-form": "^1.13.0",
-    "terra-icon": "^1.14.0",
-    "terra-responsive-element": "^1.12.0"
+    "terra-base": "^2.8.0",
+    "terra-button": "^1.14.0",
+    "terra-form": "^1.14.0",
+    "terra-icon": "^1.15.0",
+    "terra-responsive-element": "^1.13.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

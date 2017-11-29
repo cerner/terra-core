@@ -74,6 +74,51 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     });
   },
 
+  'Displays a search field with a default value': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default-value`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('value').equals('Default');
+  },
+
+  'Displays a search field with a consumer onchange handler': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/onchange`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.be.present.to.equal(true);
+    browser.expect.element('#searchOnChangeCallCount').to.be.present.to.equal(true);
+    browser.expect.element('#searchOnChangeText').to.be.present.to.equal(true);
+
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('0');
+    browser.expect.element('#searchOnChangeText').text.to.equal('');
+
+    browser.setValue('input[type=search]', 'T');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('1').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('T').after(250);
+
+    browser.setValue('input[type=search]', 'e');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('2').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('Te').after(250);
+
+    browser.setValue('input[type=search]', '5');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('3').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('Te').after(250);
+
+    browser.setValue('input[type=search]', 't');
+    browser.expect.element('#searchOnChangeCallCount').text.to.equal('4').after(250);
+    browser.expect.element('#searchOnChangeText').text.to.equal('Tet').after(250);
+  },
+
+  'Displays a search field with a value': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/value`);
+
+    browser.expect.element('#searchfield').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield button').to.be.present.to.equal(true);
+    browser.expect.element('#searchfield input').to.have.attribute('value').equals('Test');
+  },
+
   'Displays a search field that is disabled': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
 
