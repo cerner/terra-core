@@ -1,7 +1,7 @@
 {
   "name": "terra-dynamic-grid",
   "main": "lib/DynamicGrid.js",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.",
   "repository": {
     "type": "git",
@@ -26,13 +26,13 @@
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   },
   "dependencies": {
     "aphrodite": "^1.2.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.7.0"
+    "terra-base": "^2.8.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
