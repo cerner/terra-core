@@ -81,10 +81,6 @@
     @include terra-button-secondary($terra-button-secondary-color-scheme);
   }
 
-  .link {
-    @include terra-button-link($terra-button-link-color-scheme);
-  }
-
   // Button size modifiers
   .tiny {
     font-size: map-get($terra-button-font-sizes, tiny);

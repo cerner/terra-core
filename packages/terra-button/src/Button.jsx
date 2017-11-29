@@ -48,9 +48,9 @@ const propTypes = {
    */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /**
-   * Sets the button variant. One of `primary`, `secondary`, or `link`
+   * Sets the button variant. One of `primary`, or `secondary`
    */
-  variant: PropTypes.oneOf(['default', 'link', 'primary', 'secondary']),
+  variant: PropTypes.oneOf(['default', 'primary', 'secondary']),
 };
 
 const defaultProps = {

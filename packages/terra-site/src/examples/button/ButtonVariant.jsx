@@ -8,7 +8,6 @@ const ButtonVariant = () => (
     <Button text="Default" style={buttonStyle} />
     <Button text="Primary" variant="primary" style={buttonStyle} />
     <Button text="Secondary" variant="secondary" style={buttonStyle} />
-    <Button text="Link" variant="link" style={buttonStyle} />
   </div>
 );
 

@@ -7,11 +7,6 @@ it('should render a default button', () => {
   expect(button).toMatchSnapshot();
 });
 
-it('should render a link button', () => {
-  const button = shallow(<Button variant="link" />);
-  expect(button).toMatchSnapshot();
-});
-
 it('should render a primary button', () => {
   const button = shallow(<Button variant="primary" />);
   expect(button).toMatchSnapshot();
@@ -99,11 +94,6 @@ it('should have the class terra-Button--block when block is enabled', () => {
 it('should have the class terra-Button--secondary when an secondary variant', () => {
   const button = shallow(<Button variant="secondary" />);
   expect(button.prop('className')).toContain('secondary');
-});
-
-it('should have the class terra-Button--link when a link variant', () => {
-  const button = shallow(<Button variant="link" />);
-  expect(button.prop('className')).toContain('link');
 });
 
 it('should be disabled when set', () => {

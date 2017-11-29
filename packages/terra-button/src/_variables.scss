@@ -40,12 +40,6 @@ $terra-button-secondary-color-scheme: (
   hover-color: var(--terra-button-hover-color-secondary, #222a2e)
 );
 
-$terra-button-link-color-scheme: (
-  color: var(--terra-button-color-link, #0065a3),
-  active-color: var(--terra-button-active-color-link, darken(#0065a3, 10%)),
-  disabled-color: var(--terra-button-disabled-color-link, #909496),
-);
-
 // Font sizes
 $terra-button-font-sizes: (
   tiny: var(--terra-button-font-size-tiny, 0.5rem),

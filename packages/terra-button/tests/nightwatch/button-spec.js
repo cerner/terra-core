@@ -20,12 +20,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#disabledButton', 'Disabled Button');
   },
 
-  'Displays a disabled link with the provided text': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/disabled-link`)
-      .assert.containsText('#disabledLink', 'Disabled Link');
-  },
-
   'Displays as a primary button with the provided text': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/primary`)
@@ -36,12 +30,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/secondary`)
       .assert.containsText('#secondaryButton', 'Secondary');
-  },
-
-  'Displays as a link with the provided text': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/link`)
-      .assert.containsText('#linkButton', 'Link');
   },
 
   'Displays as a tiny button with the provided text': (browser) => {

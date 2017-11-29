@@ -56,16 +56,6 @@ exports[`should render a default button 1`] = `
 />
 `;
 
-exports[`should render a link button 1`] = `
-<button
-  aria-disabled={false}
-  className="button link"
-  disabled={false}
-  isCompact={false}
-  type="button"
-/>
-`;
-
 exports[`should render a primary button 1`] = `
 <button
   aria-disabled={false}

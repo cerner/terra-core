@@ -55,23 +55,3 @@
     color: map-get($color-map, disabled-color);
   }
 }
-
-@mixin terra-button-link($color-map) {
-  background-color: transparent;
-  border-color: transparent;
-  color: map-get($color-map, color);
-
-  &:focus,
-  &:hover,
-  &.is-hovered,
-  &:active,
-  &.is-active {
-    color: map-get($color-map, active-color);
-    text-decoration: underline;
-  }
-
-  &:disabled,
-  &.is-disabled {
-    color: map-get($color-map, disabled-color);
-  }
-}

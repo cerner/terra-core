@@ -5,8 +5,8 @@ import { Route } from 'react-router';
 import ButtonTests from './ButtonTests';
 import { TinyButton, SmallButton, MediumButton, LargeButton, HugeButton } from './SizeButton';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
-import { DefaultButton, PrimaryButton, SecondaryButton, LinkButton } from './VariantButton';
-import { DisabledButton, DisabledLink } from './Disabled';
+import { DefaultButton, PrimaryButton, SecondaryButton } from './VariantButton';
+import DisabledButton from './Disabled';
 import { IconDefaultButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import LongTextButton from './LongTextButton';
 
@@ -15,7 +15,6 @@ const routes = (
     <Route path="/tests/button-tests" component={ButtonTests} />
     <Route path="/tests/button-tests/default" component={DefaultButton} />
     <Route path="/tests/button-tests/disabled" component={DisabledButton} />
-    <Route path="/tests/button-tests/disabled-link" component={DisabledLink} />
     <Route path="/tests/button-tests/icon-default" component={IconDefaultButton} />
     <Route path="/tests/button-tests/icon-only" component={IconOnlyButton} />
     <Route path="/tests/button-tests/icon-reversed" component={IconReversedButton} />
@@ -27,7 +26,6 @@ const routes = (
     <Route path="/tests/button-tests/medium" component={MediumButton} />
     <Route path="/tests/button-tests/small" component={SmallButton} />
     <Route path="/tests/button-tests/tiny" component={TinyButton} />
-    <Route path="/tests/button-tests/link" component={LinkButton} />
     <Route path="/tests/button-tests/with-type-button" component={ButtonWithTypeButton} />
     <Route path="/tests/button-tests/with-type-reset" component={ButtonWithTypeReset} />
     <Route path="/tests/button-tests/with-type-submit" component={ButtonWithTypeSubmit} />
