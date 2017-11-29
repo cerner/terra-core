@@ -66,9 +66,10 @@
     background-color: #80c7ee;
     border-bottom: 3px solid #047cc0;
     padding: 0.5rem 1.25rem;
+    width: 100%;
   }
 
-  .site-header > div:first-child {
+  .site-collapsible > div:first-child {
     flex: 3 0 auto;
   }
 
