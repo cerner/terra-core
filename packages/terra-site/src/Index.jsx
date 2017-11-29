@@ -44,6 +44,7 @@ import SearchFieldExamples from './examples/search-field/Index';
 import SelectExamples from './examples/form-select/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
+import SpacerExamples from './examples/spacer/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TextExamples from './examples/text/Index';
@@ -108,6 +109,7 @@ import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestR
 import SingleSelectTableTestRoutes from 'terra-table/tests/nightwatch/single-select-table/SingleSelectTableTestRoutes';
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import SpacerTestRoutes from 'terra-spacer/tests/nightwatch/SpacerTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
@@ -164,6 +166,7 @@ ReactDOM.render((
       <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="spacer" component={SpacerExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
@@ -192,6 +195,7 @@ ReactDOM.render((
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}
     {SlidePanelTestRoutes}
+    {SpacerTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}
     {ImageTestRoutes}

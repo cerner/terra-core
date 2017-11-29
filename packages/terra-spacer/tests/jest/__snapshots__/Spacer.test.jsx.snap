@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer it should pass in a custom prop 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none spacer"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a default component 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <div>
+    Test Component
+  </div>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with all margin props set to the given values 1`] = `
+<div
+  class="spacer margin-top-small margin-bottom-small-minus-1 margin-left-small-minus-2 margin-right-medium padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with all padding props set to the given values 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-large-plus-1 padding-bottom-large-plus-2 padding-left-large-plus-3 padding-right-large-plus-4"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with inline-block display 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none is-inline-block"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with large left padding 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-large padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with medium bottom margin 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-medium margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with right padding set to the given value at the given viewport size 1`] = `
+<div
+  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-large-plus-3"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
+
+exports[`Spacer should render a spacer component with small top margin 1`] = `
+<div
+  class="spacer margin-top-small margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none"
+>
+  <p>
+    Test
+  </p>
+</div>
+`;
