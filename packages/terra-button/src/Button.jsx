@@ -24,10 +24,6 @@ const propTypes = {
    */
   isBlock: PropTypes.bool,
   /**
-   * Whether or not the button has reduced padding
-   */
-  isCompact: PropTypes.bool,
-  /**
    * Whether or not the button should be disabled
    */
   isDisabled: PropTypes.bool,
@@ -70,7 +66,6 @@ const Button = ({
   children,
   icon,
   isBlock,
-  isCompact,
   isDisabled,
   isReversed,
   size,
@@ -88,7 +83,6 @@ const Button = ({
     { 'is-disabled': isDisabled },
     size,
     { block: isBlock },
-    { compact: isCompact },
     attributes.className,
   ]);
 

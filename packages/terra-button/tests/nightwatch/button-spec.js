@@ -111,10 +111,4 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#iconReversedButton > :first-child', 'Button with Icon and reversed')
       .assert.cssClassPresent('#iconReversedButton > :last-child', 'test');
   },
-
-  'Displays as a compact button with the provided text': (browser) => {
-    browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/compact`)
-      .assert.containsText('#buttonCompact', 'Compact');
-  },
 });

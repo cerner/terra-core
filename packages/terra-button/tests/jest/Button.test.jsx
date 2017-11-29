@@ -96,11 +96,6 @@ it('should have the class terra-Button--block when block is enabled', () => {
   expect(button.prop('className')).toContain('block');
 });
 
-it('should have the class terra-Button--compact when compact is enabled', () => {
-  const button = shallow(<Button isCompact />);
-  expect(button.prop('className')).toContain('compact');
-});
-
 it('should have the class terra-Button--secondary when an secondary variant', () => {
   const button = shallow(<Button variant="secondary" />);
   expect(button.prop('className')).toContain('secondary');

@@ -16,7 +16,6 @@ import ButtonDisabled from './ButtonDisabled';
 import ButtonOnClick from './ButtonOnClick';
 import ButtonIcon from './ButtonIcon';
 import ButtonVariant from './ButtonVariant';
-import ButtonCompact from './ButtonCompact';
 
 const ButtonExamples = () => (
   <div>
@@ -25,8 +24,6 @@ const ButtonExamples = () => (
     <PropsTable id="props" src={ButtonSrc} />
     <h2 id="variant">Variant</h2>
     <ButtonVariant />
-    <h2 id="compact">Compact</h2>
-    <ButtonCompact />
     <h2 id="size">Size</h2>
     <ButtonSize />
     <h2 id="block">Block</h2>

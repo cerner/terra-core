@@ -9,7 +9,6 @@ import { DefaultButton, PrimaryButton, SecondaryButton, LinkButton } from './Var
 import { DisabledButton, DisabledLink } from './Disabled';
 import { IconDefaultButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import LongTextButton from './LongTextButton';
-import CompactButton from './CompactButton';
 
 const routes = (
   <div>
@@ -32,7 +31,6 @@ const routes = (
     <Route path="/tests/button-tests/with-type-button" component={ButtonWithTypeButton} />
     <Route path="/tests/button-tests/with-type-reset" component={ButtonWithTypeReset} />
     <Route path="/tests/button-tests/with-type-submit" component={ButtonWithTypeSubmit} />
-    <Route path="/tests/button-tests/compact" component={CompactButton} />
   </div>
 );
 

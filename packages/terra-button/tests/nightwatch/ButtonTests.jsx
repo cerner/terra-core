@@ -24,7 +24,6 @@ const ButtonTests = () => (
       <li><Link to="/tests/button-tests/with-type-reset">Button with Type Reset</Link></li>
       <li><Link to="/tests/button-tests/with-type-submit">Button with Type Submit</Link></li>
       <li><Link to="/tests/button-tests/link">Link</Link></li>
-      <li><Link to="/tests/button-tests/compact">Compact</Link></li>
     </ul>
   </div>
 );
