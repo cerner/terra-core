@@ -3,10 +3,9 @@
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
-  className="button default TestClass"
+  className="button neutral TestClass"
   data-mock="data"
   disabled={false}
-  isCompact={false}
   style={
     Object {
       "height": "100px",
@@ -19,9 +18,8 @@ exports[`should render a Button with merged attributes 1`] = `
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button neutral"
   disabled={false}
-  isCompact={false}
   type="button"
 />
 `;
@@ -29,9 +27,8 @@ exports[`should render a button with type equal to button 1`] = `
 exports[`should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button neutral"
   disabled={false}
-  isCompact={false}
   type="reset"
 />
 `;
@@ -39,19 +36,17 @@ exports[`should render a button with type equal to reset 1`] = `
 exports[`should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button neutral"
   disabled={false}
-  isCompact={false}
   type="submit"
 />
 `;
 
-exports[`should render a default button 1`] = `
+exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  className="button neutral"
   disabled={false}
-  isCompact={false}
   type="button"
 />
 `;
@@ -61,7 +56,6 @@ exports[`should render a primary button 1`] = `
   aria-disabled={false}
   className="button primary"
   disabled={false}
-  isCompact={false}
   type="button"
 />
 `;
@@ -71,7 +65,6 @@ exports[`should render a secondary button 1`] = `
   aria-disabled={false}
   className="button secondary"
   disabled={false}
-  isCompact={false}
   type="button"
 />
 `;
@@ -79,9 +72,8 @@ exports[`should render a secondary button 1`] = `
 exports[`should render an icon 1`] = `
 <button
   aria-disabled={false}
-  className="button default tiny"
+  className="button neutral tiny"
   disabled={false}
-  isCompact={false}
   type="button"
 >
   <img
@@ -93,9 +85,8 @@ exports[`should render an icon 1`] = `
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
-  className="button default tiny"
+  className="button neutral tiny"
   disabled={false}
-  isCompact={false}
   type="button"
 >
   <img
@@ -112,10 +103,9 @@ exports[`should render an icon and a text 1`] = `
 exports[`should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
-  className="button default"
+  className="button neutral"
   disabled={false}
   href="MockHref"
-  isCompact={false}
   type="button"
 >
   <span
@@ -129,9 +119,8 @@ exports[`should render as an anchor when provided an href 1`] = `
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
-  className="button default is-disabled"
+  className="button neutral is-disabled"
   disabled={true}
-  isCompact={false}
   tabIndex="-1"
   type="button"
 >
@@ -146,9 +135,8 @@ exports[`should render as disabled when set 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
-  className="button default tiny"
+  className="button neutral tiny"
   disabled={false}
-  isCompact={false}
   type="button"
 >
   <span

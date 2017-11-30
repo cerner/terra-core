@@ -69,8 +69,8 @@
   }
 
   // Button modifiers
-  .default {
-    @include terra-button-color($terra-button-default-color-scheme);
+  .neutral {
+    @include terra-button-color($terra-button-neutral-color-scheme);
   }
 
   .primary {

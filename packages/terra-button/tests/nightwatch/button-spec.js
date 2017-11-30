@@ -2,10 +2,10 @@
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
-  'Displays a default button with the provided text': (browser) => {
+  'Displays a neutral button with the provided text': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/default`)
-      .assert.containsText('#defaultButton', 'Default');
+      .url(`${browser.launchUrl}/#/tests/button-tests/neutral`)
+      .assert.containsText('#neutralButton', 'Neutral');
   },
 
   'Wraps long text at smaller screen sizes': (browser) => {
@@ -82,9 +82,9 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
   'Displays an icon inline with the provided text': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/icon-default`)
-      .assert.containsText('#iconDefaultButton > :last-child', 'Button with Icon')
-      .assert.cssClassPresent('#iconDefaultButton > :first-child', 'test');
+      .url(`${browser.launchUrl}/#/tests/button-tests/icon-neutral`)
+      .assert.containsText('#iconNeutralButton > :last-child', 'Button with Icon')
+      .assert.cssClassPresent('#iconNeutralButton > :first-child', 'test');
   },
 
   'Displays an icon only': (browser) => {

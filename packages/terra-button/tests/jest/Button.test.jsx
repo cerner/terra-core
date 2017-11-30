@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../src/Button';
 
 // Snapshot Tests
-it('should render a default button', () => {
+it('should render a neutral button', () => {
   const button = shallow(<Button />);
   expect(button).toMatchSnapshot();
 });
@@ -66,9 +66,9 @@ it('should render as disabled when set', () => {
 });
 
 // Prop Tests
-it('should have the class terra-Button--default', () => {
+it('should have the class terra-Button--neutral', () => {
   const button = shallow(<Button />);
-  expect(button.prop('className')).toContain('button default');
+  expect(button.prop('className')).toContain('button neutral');
 });
 
 it('should have the class terra-Button--primary when variant is set to primary', () => {

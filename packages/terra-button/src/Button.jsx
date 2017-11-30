@@ -50,16 +50,15 @@ const propTypes = {
   /**
    * Sets the button variant. One of `primary`, or `secondary`
    */
-  variant: PropTypes.oneOf(['default', 'primary', 'secondary']),
+  variant: PropTypes.oneOf(['neutral', 'primary', 'secondary']),
 };
 
 const defaultProps = {
   isBlock: false,
-  isCompact: false,
   isDisabled: false,
   isReversed: false,
   type: 'button',
-  variant: 'default',
+  variant: 'neutral',
 };
 
 const Button = ({

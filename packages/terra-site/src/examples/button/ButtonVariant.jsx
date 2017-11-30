@@ -5,7 +5,7 @@ const buttonStyle = { margin: '5px' };
 
 const ButtonVariant = () => (
   <div>
-    <Button text="Default" style={buttonStyle} />
+    <Button text="Neutral" style={buttonStyle} />
     <Button text="Primary" variant="primary" style={buttonStyle} />
     <Button text="Secondary" variant="secondary" style={buttonStyle} />
   </div>

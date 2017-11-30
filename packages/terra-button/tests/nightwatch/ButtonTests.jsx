@@ -6,9 +6,9 @@ import { Link } from 'react-router';
 const ButtonTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/button-tests/default">Default Button</Link></li>
+      <li><Link to="/tests/button-tests/neutral">Neutral Button</Link></li>
       <li><Link to="/tests/button-tests/disabled">Disabled Button</Link></li>
-      <li><Link to="/tests/button-tests/icon-default">Icon Default Button</Link></li>
+      <li><Link to="/tests/button-tests/icon-neutral">Icon Neutral Button</Link></li>
       <li><Link to="/tests/button-tests/icon-only">Icon Only Button</Link></li>
       <li><Link to="/tests/button-tests/icon-reversed">Icon Reversed Button</Link></li>
       <li><Link to="/tests/button-tests/primary">Primary Button</Link></li>
