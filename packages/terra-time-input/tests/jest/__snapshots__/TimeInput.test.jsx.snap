@@ -67,7 +67,6 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
       pattern="\\\\d*"
       placeholder="hh"
       size="2"
-      type="tel"
       value=""
     />
     <label
@@ -93,7 +92,6 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
       pattern="\\\\d*"
       placeholder="mm"
       size="2"
-      type="tel"
       value=""
     />
     <label
@@ -154,7 +152,6 @@ exports[`should render a 24 hour timepicker properly on mobile devices 1`] = `
       pattern="\\\\d*"
       placeholder="hh"
       size="2"
-      type="tel"
       value=""
     />
     <label
@@ -180,7 +177,6 @@ exports[`should render a 24 hour timepicker properly on mobile devices 1`] = `
       pattern="\\\\d*"
       placeholder="mm"
       size="2"
-      type="tel"
       value=""
     />
     <label
@@ -584,7 +580,6 @@ exports[`should set the labels with the correct htmlFor a 24 hour timepicker pro
       pattern="\\\\d*"
       placeholder="hh"
       size="2"
-      type="tel"
       value=""
     />
     <label
@@ -610,7 +605,6 @@ exports[`should set the labels with the correct htmlFor a 24 hour timepicker pro
       pattern="\\\\d*"
       placeholder="mm"
       size="2"
-      type="tel"
       value=""
     />
     <label

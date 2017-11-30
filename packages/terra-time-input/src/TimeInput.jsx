@@ -504,7 +504,6 @@ class TimeInput extends React.Component {
             {...hourAttributes}
             ref={(inputRef) => { this.hourInput = inputRef; }}
             className={cx('time-input-hour')}
-            type="tel"
             value={this.state.hour}
             name={'terra-time-hour-'.concat(name)}
             placeholder="hh"
@@ -527,7 +526,6 @@ class TimeInput extends React.Component {
             {...minuteAttributes}
             ref={(inputRef) => { this.minuteInput = inputRef; }}
             className={cx('time-input-minute')}
-            type="tel"
             value={this.state.minute}
             name={'terra-time-minute-'.concat(name)}
             placeholder="mm"
