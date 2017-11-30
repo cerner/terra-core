@@ -7,8 +7,10 @@ const app = express();
 const port = process.env.PORT || 8081;
 // path to webpack built path
 const buildPath = path.join(__dirname, '../../packages/terra-site/build');
+const storybookPath = path.join(__dirname, '../../storybook');
 
 app.use('/static', express.static(buildPath));
+app.use('/storybook', express.static(storybookPath));
 app.get('/', (req, res) => res.redirect('/static'));
 app.listen(port);
 console.log(`Listening ${port}`);

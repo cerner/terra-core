@@ -42,7 +42,7 @@
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
-    "compile:heroku": "cd packages/terra-site && npm run compile:heroku",
+    "compile:heroku": "npm run storybook:build && cd packages/terra-site && npm run compile:heroku",
     "danger": "danger",
     "deploy": "lerna run --scope terra-site deploy",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
