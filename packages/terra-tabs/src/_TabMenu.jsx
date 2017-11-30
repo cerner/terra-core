@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Menu from 'terra-menu';
-import Arrange from 'terra-arrange';
 import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
 import styles from './Tabs.scss';
 import TabUtils from './TabUtils';
@@ -72,6 +71,7 @@ class TabMenu extends React.Component {
   render() {
     const menuItems = [];
     let menuToggleText = 'Menu';
+    let menuActive = false;
 
     React.Children.forEach(this.props.children, (child) => {
       const { childLabel, customDisplay, icon, ...otherProps } = child.props;
@@ -80,6 +80,7 @@ class TabMenu extends React.Component {
       if (this.props.activeKey === child.key) {
         menuToggleText = child.props.label;
         isSelected = true;
+        menuActive = true;
       }
       menuItems.push((
         <Menu.Item
@@ -102,13 +103,10 @@ class TabMenu extends React.Component {
         onClick={this.handleOnClick}
         onKeyDown={this.handleOnKeyDown}
         style={{ width: this.targetWidth }}
-        className={cx(['tab-menu'])}
+        className={cx(['tab-menu', { 'is-active': menuActive }])}
       >
-        <Arrange
-          fill={<div>{menuToggleText}</div>}
-          fitEnd={<IconCaretDown />}
-          align="center"
-        />
+        {menuToggleText}
+        <IconCaretDown />
         <Menu
           onRequestClose={this.handleOnRequestClose}
           targetRef={this.getTargetRef}

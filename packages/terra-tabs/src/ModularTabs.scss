@@ -1,0 +1,68 @@
+:local {
+  .modular-centered {
+    .collapsible-tabs-container {
+      justify-content: center;
+    }
+  }
+
+  .modular-left-aligned {
+    .collapsible-tabs-container {
+      justify-content: flex-start;
+    }
+  }
+
+  .modular-left-aligned,
+  .modular-centered {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .collapsible-tabs-container {
+      border-bottom-color: #8bc2f9;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      padding: 0 0.714rem;
+    }
+
+    .tab,
+    .tab-menu {
+      background-color: rgba(0, 0, 0, 0);
+      color: #8bc2f9;
+
+      &.is-active,
+      &:hover {
+        color: #4a90e2;
+      }
+
+      &.is-disabled,
+      &.is-disabled:hover {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .tab-menu:focus {
+      background-color: rgba(139, 194, 249, 0.3);
+      border-radius: 3px;
+      color: #4a90e2;
+      outline: none;
+    }
+
+    .collapsible-tabs-container:focus .is-active {
+      background-color: rgba(139, 194, 249, 0.3);
+      border-radius: 3px;
+    }
+
+    &.tab-fill .collapsible-tabs-container {
+      justify-content: space-around;
+    }
+  }
+
+
+
+  .selection-bar {
+    background-color: #4a90e2;
+    display: block;
+    height: 2px;
+    position: relative;
+    top: -2px;
+    transition: transform 0.3s ease-in-out;
+  }
+}

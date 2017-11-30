@@ -10,6 +10,7 @@ const paneContentStyle = { height: '200px', padding: '10px' };
 
 const propTypes = {
   tabFill: PropTypes.bool,
+  variant: PropTypes.string,
 };
 
 const StructuralTabsExample = (props) => {
@@ -45,17 +46,31 @@ const StructuralTabsExample = (props) => {
     </Tabs.Pane>
   );
 
+  const iconOnlyTab = (
+    <Tabs.Pane
+      icon={<IconBriefcase />}
+      label="Icon Only"
+      key="IconOnlyTab"
+      isIconOnly
+    >
+      <div style={paneContentStyle}>
+        Content for the icon only tab.
+      </div>
+    </Tabs.Pane>
+  );
+
   const disabledTab = (
     <Tabs.Pane label="Disabled Tab" icon={<IconSearch />} isDisabled key="DisabledTab" />
   );
 
   return (
     <div style={{ padding: '10px' }}>
-      <Tabs variant="structural" defaultActiveKey="LabelTab" tabFill={props.tabFill}>
+      <Tabs variant={props.variant} defaultActiveKey="LabelTab" tabFill={props.tabFill}>
         {labelTab}
         {iconTab}
         {customTab}
         {disabledTab}
+        {iconOnlyTab}
       </Tabs>
     </div>
   );

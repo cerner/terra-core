@@ -9,10 +9,8 @@
       background-size: 0 3px;
       border-radius: 3px 3px 0 0;
       color: #4a90e2;
-      font-size: 1rem;
-      line-height: 1.143;
       margin-left: 2px;
-      transition-duration: 2s;
+      transition-duration: 0.3s;
       transition-property: background-size;
       transition-timing-function: ease;
 
@@ -44,6 +42,14 @@
     .pane-content {
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 0 0 3px 3px;
+    }
+
+    //Extended Tabs
+    &.tab-fill {
+      .tab,
+      .tab-menu {
+        flex: 1 1 auto;
+      }
     }
   }
 }

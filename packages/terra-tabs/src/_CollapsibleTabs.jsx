@@ -77,7 +77,7 @@ class CollapsibleTabs extends React.Component {
       const tab = this.container.children[i];
       const minWidth = parseInt(window.getComputedStyle(tab, null).getPropertyValue('min-width'), 10);
       calcMinWidth += minWidth;
-      if (calcMinWidth > availableWidth || (i === this.props.children.length && calcMinWidth <= width)) {
+      if (calcMinWidth > availableWidth && !(i === this.props.children.length - 1 && calcMinWidth <= width)) {
         newHideIndex = i;
         isMenuHidden = false;
         break;
@@ -192,7 +192,7 @@ class CollapsibleTabs extends React.Component {
       </Menu>
     );
 
-    const selectionBar = this.props.variant === 'modular' ? (
+    const selectionBar = this.props.variant === 'modular-centered' || this.props.variant === 'modular-left-aligned' ? (
       <div className={cx('selection-bar')} ref={(node) => { if (node) { this.selectionBar = node; } }} />
     ) : null;
 
