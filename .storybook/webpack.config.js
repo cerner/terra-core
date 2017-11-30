@@ -1,8 +1,10 @@
-/*
-TODO Look into this issue: https://github.com/storybooks/storybook/issues/1411 may need to update to v3.3.0-alpha to get this fixed
-*/
-
+const Autoprefixer = require('autoprefixer');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CustomProperties = require('postcss-custom-properties');
 const path = require('path');
+const PostCSSAssetsPlugin = require('postcss-assets-webpack-plugin');
+const PostCSSCustomProperties = require('postcss-custom-properties');
+const PostCssRTL = require('postcss-rtl');
 const webpack = require('webpack');
 const I18nAggregatorPlugin = require('../packages/terra-i18n-plugin/lib/I18nAggregatorPlugin.js');
 const i18nSupportedLocales = require('../packages/terra-i18n/lib/i18nSupportedLocales.js');
@@ -15,16 +17,21 @@ module.exports =  {
   module: {
     rules: [
       {
-        test: /\.(scss|css)$/,
-        loaders: [
-          "style-loader",
-          {
-            loader: 'css-loader',
-            options: { modules: true, importLoaders: 2 }
-          },
-          "postcss-loader",
-          "sass-loader"
-        ],
+        test: /.(scss|css)$/,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+              sourceMap: true,
+              importLoaders: 2,
+              localIdentName: '[name]__[local]___[hash:base64:5]',
+            },
+            },
+            { loader: 'sass-loader' },
+          ],
+        })),
       }
     ]
   },
@@ -33,6 +40,24 @@ module.exports =  {
       baseDirectory: path.resolve(__dirname, '../'),
       translationsDirectoryRouters: ['packages'],
       supportedLocales: i18nSupportedLocales,
+    }),
+    new ExtractTextPlugin('[name].css'),
+    new PostCSSAssetsPlugin({
+      test: /\.css$/,
+      log: false,
+      plugins: [
+        Autoprefixer({
+          browsers: [
+            'ie >= 10',
+            'last 2 versions',
+            'last 2 android versions',
+            'last 2 and_chr versions',
+            'iOS >= 8',
+          ],
+        }),
+        PostCssRTL(),
+        PostCSSCustomProperties({ preserve: true }),
+      ]
     }),
     new webpack.NamedChunksPlugin(),
   ],

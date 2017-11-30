@@ -33,6 +33,7 @@
     "test:wdio": "wdio ../../wdio.conf.js"
   },
   "peerDependencies": {
+    "@storybook/react": "^3.3.0-alpha.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.8.0",
