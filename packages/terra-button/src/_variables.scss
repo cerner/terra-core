@@ -14,18 +14,18 @@ $terra-button-neutral-color-scheme: (
 );
 
 
-$terra-button-primary-color-scheme: (
-  active-background-color: var(--terra-button-active-background-color-primary, #004c76),
-  active-border-color: var(--terra-button-active-border-color-primary, #383f42),
-  active-color: var(--terra-button-active-color-primary, #fff),
-  background-color: var(--terra-button-background-color-primary, #007cc3),
-  border-color: var(--terra-button-border-color-primary, #0065a3),
-  color: var(--terra-button-color-primary, #fff),
-  disabled-background-color: var(--terra-button-disabled-background-color-primary, #cce9f9),
-  disabled-border-color: var(--terra-button-disabled-border-color-primary, #a6d9f4),
-  disabled-color: var(--terra-button-disabled-color-primary, #909496),
-  hover-background-color: var(--terra-button-hover-background-color-primary, #0065a3),
-  hover-color: var(--terra-button-hover-color-primary, #fff)
+$terra-button-emphasis-color-scheme: (
+  active-background-color: var(--terra-button-active-background-color-emphasis, #004c76),
+  active-border-color: var(--terra-button-active-border-color-emphasis, #383f42),
+  active-color: var(--terra-button-active-color-emphasis, #fff),
+  background-color: var(--terra-button-background-color-emphasis, #007cc3),
+  border-color: var(--terra-button-border-color-emphasis, #0065a3),
+  color: var(--terra-button-color-emphasis, #fff),
+  disabled-background-color: var(--terra-button-disabled-background-color-emphasis, #cce9f9),
+  disabled-border-color: var(--terra-button-disabled-border-color-emphasis, #a6d9f4),
+  disabled-color: var(--terra-button-disabled-color-emphasis, #909496),
+  hover-background-color: var(--terra-button-hover-background-color-emphasis, #0065a3),
+  hover-color: var(--terra-button-hover-color-emphasis, #fff)
 );
 
 $terra-button-secondary-color-scheme: (

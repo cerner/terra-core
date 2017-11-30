@@ -73,8 +73,8 @@
     @include terra-button-color($terra-button-neutral-color-scheme);
   }
 
-  .primary {
-    @include terra-button-color($terra-button-primary-color-scheme);
+  .emphasis {
+    @include terra-button-color($terra-button-emphasis-color-scheme);
   }
 
   .secondary {

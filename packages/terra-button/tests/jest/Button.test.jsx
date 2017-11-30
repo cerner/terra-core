@@ -7,8 +7,8 @@ it('should render a neutral button', () => {
   expect(button).toMatchSnapshot();
 });
 
-it('should render a primary button', () => {
-  const button = shallow(<Button variant="primary" />);
+it('should render a emphasis button', () => {
+  const button = shallow(<Button variant="emphasis" />);
   expect(button).toMatchSnapshot();
 });
 
@@ -71,9 +71,9 @@ it('should have the class terra-Button--neutral', () => {
   expect(button.prop('className')).toContain('button neutral');
 });
 
-it('should have the class terra-Button--primary when variant is set to primary', () => {
-  const button = shallow(<Button variant="primary" />);
-  expect(button.prop('className')).toContain('primary');
+it('should have the class terra-Button--emphasis when variant is set to emphasis', () => {
+  const button = shallow(<Button variant="emphasis" />);
+  expect(button.prop('className')).toContain('emphasis');
 });
 
 it('should have the class terra-Button--tiny when size is set to tiny', () => {

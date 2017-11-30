@@ -20,10 +20,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#disabledButton', 'Disabled Button');
   },
 
-  'Displays as a primary button with the provided text': (browser) => {
+  'Displays as a emphasis button with the provided text': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/primary`)
-      .assert.containsText('#primaryButton', 'Primary');
+      .url(`${browser.launchUrl}/#/tests/button-tests/emphasis`)
+      .assert.containsText('#emphasisButton', 'Emphasis');
   },
 
   'Displays as a secondary button with the provided text': (browser) => {
