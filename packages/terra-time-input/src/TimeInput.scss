@@ -20,6 +20,7 @@
     border-radius: var(--terra-time-input-border-radius, 3px);
     border-style: var(--terra-time-input-border-style, solid);
     border-width: var(--terra-time-input-border-width, 1px);
+    box-sizing: content-box;
     color: var(--terra-time-input-color, #000);
     direction: ltr;
     display: inline-block;
@@ -107,7 +108,6 @@
       background-size: 0 0;
       border-color: transparent;
       display: inline-block;
-      height: 100%;
       min-width: 1.9em;
       padding: 0;
       width: 1.9em;
@@ -155,9 +155,14 @@
     border-radius: var(--terra-time-input-border-radius, 3px);
     border-style: var(--terra-time-input-keyboard-border-style, solid);
     border-width: var(--terra-time-input-keyboard-border-width, 1px);
+    box-sizing: border-box;
     display: inline-block;
     line-height: var(--terra-time-input-meridiem-display-line-height, 1.429);
     margin-left: var(--terra-time-input-meridiem-display-left-margin, 0.357em);
+    padding-left: var(--terra-time-input-meridiem-padding-bottom, 0);
+    padding-left: var(--terra-time-input-meridiem-padding-left, 0);
+    padding-right: var(--terra-time-input-meridiem-padding-right, 0);
+    padding-top: var(--terra-time-input-meridiem-padding-top, 0);
 
     /* stylelint-disable max-nesting-depth */
     &.focused {
