@@ -110,7 +110,7 @@
       margin-left: 0;
       width: 0;
     }
-
+    /*stylelint-disable max-nesting-depth*/
     /* Disabled native checkbox, label text, and custom checkbox styling */
     .is-disabled {
       cursor: default;
@@ -119,15 +119,16 @@
         color: var(--terra-form-checkbox-disabled-font-color, #9b9fa1);
         cursor: default;
         opacity: var(--terra-form-checkbox-disabled-font-opacity, none);
-      }
 
-      > .label-text::before {
-        background-color: var(--terra-form-checkbox-disabled-background-color, none);
-        background-image: var(--terra-form-checkbox-disabled-background-image, none);
-        border-color: var(--terra-form-checkbox-disabled-border-color, none);
-        cursor: default;
+        &::before {
+          background-color: var(--terra-form-checkbox-disabled-background-color, none);
+          background-image: var(--terra-form-checkbox-disabled-background-image, none);
+          border-color: var(--terra-form-checkbox-disabled-border-color, none);
+          cursor: default;
+        }
       }
     }
+    /* stylelin-enable max-nesting-depth */
 
     /* Focus custom checkbox styling */
     .native-input:focus + .label-text::after {
@@ -141,7 +142,7 @@
     }
   }
 
-  /* Focus style surrounding both custom checkbox and label focus. Utilized in Clinical */
+  /* Focus style surrounding both custom checkbox and label focus. */
   .focus {
     border-radius: var(--terra-form-checkbox-container-focus-border-radius, 3px);
 
@@ -154,7 +155,6 @@
     }
   }
 
-  /* Display checkbox inline if isInline is set */
   .checkbox-inline {
     display: inline-block;
     vertical-align: middle;

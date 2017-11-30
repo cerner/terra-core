@@ -24,15 +24,15 @@ const propTypes = {
     */
   inputAttrs: PropTypes.object,
   /**
-    * Whether the checkbox element is disabled or not.
+    * Whether the checkbox element is disabled.
     */
   isDisabled: PropTypes.bool,
   /**
-    * Whether the checkbox element is inline or not.
+    * Whether the checkbox element is inline.
     */
   isInline: PropTypes.bool,
   /**
-    * Whether the label is hidden or not.
+    * Whether the label is hidden.
     */
   isLabelHidden: PropTypes.bool,
   /**
