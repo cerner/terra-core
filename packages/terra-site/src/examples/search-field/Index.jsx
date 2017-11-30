@@ -14,6 +14,11 @@ import SearchFieldBasic from './SearchFieldBasic';
 import SearchFieldPlaceholder from './SearchFieldPlaceholder';
 import SearchFieldMinimumLength from './SearchFieldMinimumLength';
 import SearchFieldDelayed from './SearchFieldDelayed';
+import SearchFieldDefaultValue from './SearchFieldDefaultValue';
+import SearchFieldDisabled from './SearchFieldDisabled';
+import SearchFieldBlock from './SearchFieldBlock';
+import SearchFieldDisableAutoSearch from './SearchFieldDisableAutoSearch';
+import SearchFieldFilterNumeric from './SearchFieldFilterNumeric';
 
 const SearchFieldExamples = () => (
   <div>
@@ -31,6 +36,21 @@ const SearchFieldExamples = () => (
     <br />
     <h2 id="searchFieldDelayed">Search Field with delay of 2000ms</h2>
     <SearchFieldDelayed />
+    <br />
+    <h2 id="searchFieldDefaultValue">Search Field with a default value</h2>
+    <SearchFieldDefaultValue />
+    <br />
+    <h2 id="searchFieldDisabled">Search Field that is disabled</h2>
+    <SearchFieldDisabled />
+    <br />
+    <h2 id="searchFieldBlock">Search Field that displays as block style to fill container</h2>
+    <SearchFieldBlock />
+    <br />
+    <h2 id="searchFieldDisableAutoSearch">Search Field with auto-search turned off</h2>
+    <SearchFieldDisableAutoSearch />
+    <br />
+    <h2 id="searchFieldFilterNumeric">Search Field with onChange event filtering numbers</h2>
+    <SearchFieldFilterNumeric />
   </div>
 );
 

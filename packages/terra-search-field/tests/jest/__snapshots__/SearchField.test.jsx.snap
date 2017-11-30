@@ -5,13 +5,15 @@ exports[`Snapshots renders a basic search field 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder=""
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -37,13 +39,15 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder="Test"
     required={false}
     type="search"
-    value=""
   />
   <Button
     className="button"
@@ -69,13 +73,119 @@ exports[`Snapshots renders a search field with a value 1`] = `
   className="searchfield"
 >
   <Input
+    aria-disabled={false}
     className="input"
+    disabled={false}
     name={null}
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder=""
     required={false}
     type="search"
     value="Test"
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a disabled search field with a value 1`] = `
+<div
+  className="searchfield"
+>
+  <Input
+    aria-disabled={true}
+    className="input"
+    disabled={true}
+    name={null}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={true}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
+<div
+  className="searchfield block"
+>
+  <Input
+    aria-disabled={false}
+    className="input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
+  />
+  <Button
+    className="button"
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  >
+    <IconSearch
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </Button>
+</div>
+`;
+
+exports[`Snapshots renders a search field with a defaulted value 1`] = `
+<div
+  className="searchfield"
+>
+  <Input
+    aria-disabled={false}
+    className="input"
+    defaultValue="Default"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    required={false}
+    type="search"
   />
   <Button
     className="button"

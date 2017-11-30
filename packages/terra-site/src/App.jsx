@@ -159,6 +159,7 @@ class App extends React.Component {
           <List.Item content={<FormComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-textarea">Form Textarea</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-field">Form Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/select">Form Select</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/grid">Grid</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/heading">Heading</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/hookshot">Hookshot</Link>} />
@@ -180,6 +181,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/signature">Signature</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-group">Slide Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/spacer">Spacer</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/table">Table</Link>} />
           <List.Item content={<TableComponentNavigation onClick={this.handleResetScroll} />} />
@@ -204,13 +206,15 @@ class App extends React.Component {
     );
 
     const applicationHeader = (
-      <CollapsibleMenuView className={styles['site-header']}>
-        {toggleContent}
-        {themeSwitcher}
-        {localeContent}
-        <CollapsibleMenuView.Divider />
-        {bidiContent}
-      </CollapsibleMenuView>
+      <div className={styles['site-header']}>
+        <CollapsibleMenuView className={styles['site-collapsible']}>
+          {toggleContent}
+          {themeSwitcher}
+          {localeContent}
+          <CollapsibleMenuView.Divider />
+          {bidiContent}
+        </CollapsibleMenuView>
+      </div>
     );
 
     return (

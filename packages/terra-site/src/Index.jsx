@@ -41,8 +41,10 @@ import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SignatureExamples from './examples/signature/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SelectExamples from './examples/form-select/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
+import SpacerExamples from './examples/spacer/Index';
 import StatusExamples from './examples/status/Index';
 import TableExamples from './examples/table/Index';
 import TextExamples from './examples/text/Index';
@@ -99,12 +101,15 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SelectTestRoutes from 'terra-form-select/tests/nightwatch/select/SelectTestRoutes';
+import SelectOptionTestRoutes from 'terra-form-select/tests/nightwatch/select-option/SelectOptionTestRoutes';
 import SelectableListTestRoutes from 'terra-list/tests/nightwatch/selectable-list/SelectableListTestRoutes';
 import SelectableTableTestRoutes from 'terra-table/tests/nightwatch/selectable-table/SelectableTableTestRoutes';
 import SignatureTestRoutes from 'terra-signature/tests/nightwatch/SignatureTestRoutes';
 import SingleSelectTableTestRoutes from 'terra-table/tests/nightwatch/single-select-table/SingleSelectTableTestRoutes';
 import SlideGroupTestRoutes from 'terra-slide-group/tests/nightwatch/SlideGroupTestRoutes';
 import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelTestRoutes';
+import SpacerTestRoutes from 'terra-spacer/tests/nightwatch/SpacerTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
@@ -157,9 +162,11 @@ ReactDOM.render((
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="select" component={SelectExamples} />
       <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />
       <Route path="slide-panel" component={SlidePanelExamples} />
+      <Route path="spacer" component={SpacerExamples} />
       <Route path="status" component={StatusExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="text" component={TextExamples} />
@@ -188,6 +195,7 @@ ReactDOM.render((
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}
     {SlidePanelTestRoutes}
+    {SpacerTestRoutes}
     {I18nTestRoutes}
     {IconTestRoutes}
     {ImageTestRoutes}
@@ -230,5 +238,7 @@ ReactDOM.render((
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
+    {SelectTestRoutes}
+    {SelectOptionTestRoutes}
   </Router>
 ), document.getElementById('root'));

@@ -1,0 +1,56 @@
+{
+  "name": "terra-form-select",
+  "main": "lib/Select.js",
+  "version": "1.0.0",
+  "description": "The select component is a form input with a drop down list of options that allows for single selection.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-form-select",
+    "Form",
+    "Select",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "devDependencies": {
+    "react-intl": "^2.3.0",
+    "terra-props-table": "^1.10.1"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "terra-arrange": "^1.16.0",
+    "terra-base": "^2.8.0",
+    "terra-icon": "^1.15.0",
+    "terra-popup": "^1.16.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-arrange": "^1.16.0",
+    "terra-base": "^2.8.0",
+    "terra-icon": "^1.15.0",
+    "terra-popup": "^1.16.0"
+  },
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
+    "props-table": "props-table ./src/Select.jsx ./src/SelectOption.jsx --out-dir ./docs/props-table",
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+  }
+}

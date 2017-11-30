@@ -48,7 +48,9 @@ const TestLinks = () => (
       <li><Link to="/tests/progress-bar-tests">ProgressBar Tests</Link></li>
       <li><Link to="/tests/props-table-tests">Props Table Tests</Link></li>
       <li><Link to="/tests/responsive-element-tests">ResponsiveElement Tests</Link></li>
-      <li><Link to="/tests/search-field-tests">Search Field</Link></li>
+      <li><Link to="/tests/search-field-tests">Search Field Tests</Link></li>
+      <li><Link to="/tests/select-tests">Select Tests</Link></li>
+      <li><Link to="/tests/select-option-tests">Select.Option Tests</Link></li>
       <li><Link to="/tests/selectable-list-tests">Selectable List Tests</Link></li>
       <li><Link to="/tests/signature-tests">Signature Tests</Link></li>
       <li><Link to="/tests/single-select-list-tests">SingleSelectList Tests</Link></li>
@@ -56,6 +58,7 @@ const TestLinks = () => (
       <li><Link to="/tests/single-select-table-tests">SingleSelectTable Tests</Link></li>
       <li><Link to="/tests/slide-group-tests">SlideGroup Tests</Link></li>
       <li><Link to="/tests/slide-panel-tests">SlidePanel Tests</Link></li>
+      <li><Link to="/tests/spacer-tests">Spacer Tests</Link></li>
       <li><Link to="/tests/status-tests">Status Tests</Link></li>
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
       <li><Link to="/tests/text-tests">Text Tests</Link></li>

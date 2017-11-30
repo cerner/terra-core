@@ -4,7 +4,12 @@ Changelog
 Unreleased
 ----------
 
-1.13.0 - (November 8, 2017)
+1.14.0 - (November 28, 2017)
+------------------
+### Changed
+* Corrected typo in `terra-button` css comment.
+
+1.13.0 - (November 16, 2017)
 ------------------
 ### Changed
 * Removed unnecessary `font-family` rule.
