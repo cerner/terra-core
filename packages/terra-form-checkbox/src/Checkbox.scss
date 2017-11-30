@@ -131,7 +131,7 @@
     /* stylelint-enable max-nesting-depth */
 
     /* Focus custom checkbox styling */
-    .native-input:focus + .label-text::after {
+    .native-input:focus + .label-text::before {
       [dir=rtl] & {
         box-shadow: var(--terra-form-checkbox-focus-box-shadow, none);
       }
