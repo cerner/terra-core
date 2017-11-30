@@ -57,5 +57,4 @@ lib
 props-table
 **/__snapshots__/screen
 **/__snapshots__/diff
-packages/terra-site/dist/
 errorShots

@@ -1,23 +1,23 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const wdioConf = require('terra-toolkit/lib/wdio/conf');
+const WebpackDevService = require('terra-toolkit/lib/wdio/services/index').WebpackDevService;
 const localIP = require('ip');
 const path = require('path');
+const webpackConfig = require('./packages/terra-site/webpack.config.js');
 
-const staticServerPort = 8080;
+const webpackPort = 8080;
+
+// Flex specs search between local pacakge and repo
+let specs = path.join('tests', 'wdio', '**', '*-spec.js');
+if (__dirname === process.cwd()) {
+  specs = path.join('packages', '**', specs);
+}
 
 const config = {
   ...wdioConf.config,
 
-  baseUrl: `http://${localIP.address()}:${staticServerPort}`,
-  specs: [
-    path.join(__dirname, 'packages', '**', 'tests', 'specs', '**'),
-  ],
-  staticServerPort,
-  staticServerLog: false,
-  staticServerFolders: [
-    { mount: '/', path: path.join(__dirname, 'packages', 'terra-site', 'dist') },
-  ],
-
+  baseUrl: `http://${localIP.address()}:${webpackPort}`,
+  specs,
   suites: {
     badge: [
       path.join(__dirname, 'packages', 'terra-badge', 'tests', 'specs', '**'),
@@ -26,12 +26,12 @@ const config = {
 
   seleniumDocker: {
     enabled: !process.env.TRAVIS,
-    cleanup: false,
   },
-  // eslint-disable-next-line global-require
-  webpackConfig: require('./packages/terra-site/webpack.config.js'),
+
+  webpackPort,
+  webpackConfig,
 };
 
 
-config.services = wdioConf.config.services.concat(['webpack', 'static-server']);
+config.services = wdioConf.config.services.concat([WebpackDevService]);
 exports.config = config;
