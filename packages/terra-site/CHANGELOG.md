@@ -4,7 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Added
-# Add terra-time-input mock theme styles and 12 hour input examples.
+* Add terra-time-input mock theme styles and 12 hour input examples.
+
+### Changed
+* Place site header background on a parent div, instead of collapsible.
+
 
 1.19.0 - (November 28, 2017)
 ------------------
