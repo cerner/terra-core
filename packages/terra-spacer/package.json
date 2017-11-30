@@ -31,7 +31,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "react-bps": "0.0.4",
     "terra-base": "^2.6.1",
     "terra-toolkit": "^2.1.0"
   },
