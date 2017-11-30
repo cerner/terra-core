@@ -104,7 +104,13 @@ const Region = ({
   });
 
   const regionClasses = classNames(customProps.className, css(stylesheet.region));
-  return (<div {...customProps} className={regionClasses}>{children}</div>);
+  return (
+    <div {...customProps} className={regionClasses}>
+      <div className="region-child-container">
+        {children}
+      </div>
+    </div>
+  );
 };
 
 Region.propTypes = propTypes;
