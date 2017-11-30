@@ -1,6 +1,6 @@
 # Terra Spacer
 
-This component is used to provide margin and/or padding space between two components based on the given values. This component uses **react-bps package mobile first strategy** for **responsiveness**. Find more information on how it is used [here](https://www.npmjs.com/package/react-bps).
+This component is used to provide margin and/or padding space between two components based on the given values.
 
 ## Getting Started
 
@@ -46,22 +46,9 @@ import Spacer from 'terra-spacer';
 <Spacer paddingTop="large" paddingBottom="large+1" paddingLeft="large+2" marginLeft="large+4" marginRight="large+3">
   <Image src="someImageSource" alt="example image" />
 <Spacer/>
-
-// Responsive spacing
-
-// sets margin-top to 50px for view port sizes >= 768px, for view port sizes < 768px sets margin-top to 5px
-
-<Spacer marginTop="small-1" bps={{ 768: { marginTop: 'large+4' } }} >
-  <Image src="someImageSource" alt="example image" />
-</Spacer>
 ```
-
 
 ## Component Features
 
  * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
- * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
- * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
- * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
- * [Localization Support](https://github.com/cerner/terra-core/wiki/Component-Features#localization-support)
  * [LTR/RTL Support](https://github.com/cerner/terra-core/wiki/Component-Features#ltr--rtl-support)

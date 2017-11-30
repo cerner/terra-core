@@ -29,11 +29,6 @@ describe('Spacer', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a spacer component with right padding set to the given value at the given viewport size', () => {
-    const wrapper = render(<Spacer bps={{ 768: { paddingRight: 'large+3' } }}><p>Test</p></Spacer>);
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render a spacer component with all margin props set to the given values', () => {
     const wrapper =
     render(
