@@ -49,10 +49,6 @@ const propTypes = {
    * Sets the display to be inline-block.
    */
   isInlineBlock: PropTypes.bool,
-  /**
-   * Object used to determine at what window size props should be active. e.g { 768: { marginBottom: 'small-2' }}
-   */
-  bps: PropTypes.object,
 };
 
 const defaultProps = {
@@ -65,7 +61,6 @@ const defaultProps = {
   paddingLeft: 'none',
   paddingRight: 'none',
   isInlineBlock: false,
-  bps: null,
 };
 
 const Spacer = ({
@@ -79,7 +74,6 @@ const Spacer = ({
   paddingRight,
   isInlineBlock,
   children,
-  bps,
   ...customProps
  }) => {
   const spacingSizes = {
@@ -115,4 +109,4 @@ const Spacer = ({
 Spacer.propTypes = propTypes;
 Spacer.defaultProps = defaultProps;
 
-export default withBps({ mobileFirst: true })(Spacer);
+export default Spacer;
