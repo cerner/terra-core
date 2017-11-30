@@ -4,10 +4,10 @@ import Button from '../../lib/Button';
 
 const NeutralButton = () => <Button id="neutralButton" text="Neutral" variant="neutral" />;
 const EmphasisButton = () => <Button id="emphasisButton" text="Emphasis" variant="emphasis" />;
-const SecondaryButton = () => <Button id="secondaryButton" text="Secondary" variant="secondary" />;
+const DeemphasisButton = () => <Button id="de-emphasisButton" text="De-emphasis" variant="de-emphasis" />;
 
 export {
   NeutralButton,
   EmphasisButton,
-  SecondaryButton,
+  DeemphasisButton,
 };

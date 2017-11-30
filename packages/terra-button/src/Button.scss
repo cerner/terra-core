@@ -77,8 +77,8 @@
     @include terra-button-color($terra-button-emphasis-color-scheme);
   }
 
-  .secondary {
-    @include terra-button-secondary($terra-button-secondary-color-scheme);
+  .de-emphasis {
+    @include terra-button-de-emphasis($terra-button-de-emphasis-color-scheme);
   }
 
   // Button size modifiers

@@ -42,6 +42,15 @@ exports[`should render a button with type equal to submit 1`] = `
 />
 `;
 
+exports[`should render a de-emphasis button 1`] = `
+<button
+  aria-disabled={false}
+  className="button de-emphasis"
+  disabled={false}
+  type="button"
+/>
+`;
+
 exports[`should render a emphasis button 1`] = `
 <button
   aria-disabled={false}
@@ -55,15 +64,6 @@ exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
   className="button neutral"
-  disabled={false}
-  type="button"
-/>
-`;
-
-exports[`should render a secondary button 1`] = `
-<button
-  aria-disabled={false}
-  className="button secondary"
   disabled={false}
   type="button"
 />

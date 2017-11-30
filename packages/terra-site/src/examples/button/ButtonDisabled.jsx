@@ -7,7 +7,7 @@ const ButtonDisabled = () => (
   <div>
     <Button text="Disabled Button" isDisabled style={buttonStyle} />
     <Button text="Disabled Emphasis" variant="emphasis" isDisabled style={buttonStyle} />
-    <Button text="Disabled Secondary" variant="secondary" isDisabled style={buttonStyle} />
+    <Button text="Disabled De-emphasis" variant="de-emphasis" isDisabled style={buttonStyle} />
   </div>
 );
 

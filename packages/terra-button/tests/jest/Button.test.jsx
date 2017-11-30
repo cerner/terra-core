@@ -12,8 +12,8 @@ it('should render a emphasis button', () => {
   expect(button).toMatchSnapshot();
 });
 
-it('should render a secondary button', () => {
-  const button = shallow(<Button variant="secondary" />);
+it('should render a de-emphasis button', () => {
+  const button = shallow(<Button variant="de-emphasis" />);
   expect(button).toMatchSnapshot();
 });
 
@@ -66,34 +66,34 @@ it('should render as disabled when set', () => {
 });
 
 // Prop Tests
-it('should have the class terra-Button--neutral', () => {
+it('should have the class neutral', () => {
   const button = shallow(<Button />);
   expect(button.prop('className')).toContain('button neutral');
 });
 
-it('should have the class terra-Button--emphasis when variant is set to emphasis', () => {
+it('should have the class emphasis when variant is set to emphasis', () => {
   const button = shallow(<Button variant="emphasis" />);
   expect(button.prop('className')).toContain('emphasis');
 });
 
-it('should have the class terra-Button--tiny when size is set to tiny', () => {
+it('should have the class tiny when size is set to tiny', () => {
   const button = shallow(<Button size="tiny" />);
   expect(button.prop('className')).toContain('tiny');
 });
 
-it('should have the class terra-Button--huge when size is set to huge', () => {
+it('should have the class huge when size is set to huge', () => {
   const button = shallow(<Button size="huge" />);
   expect(button.prop('className')).toContain('huge');
 });
 
-it('should have the class terra-Button--block when block is enabled', () => {
+it('should have the class block when block is enabled', () => {
   const button = shallow(<Button isBlock />);
   expect(button.prop('className')).toContain('block');
 });
 
-it('should have the class terra-Button--secondary when an secondary variant', () => {
-  const button = shallow(<Button variant="secondary" />);
-  expect(button.prop('className')).toContain('secondary');
+it('should have the class de-emphasis when an de-emphasis variant', () => {
+  const button = shallow(<Button variant="de-emphasis" />);
+  expect(button.prop('className')).toContain('de-emphasis');
 });
 
 it('should be disabled when set', () => {
@@ -102,7 +102,7 @@ it('should be disabled when set', () => {
 });
 
 // Structure
-it('should have the class terra-Button-text when a text is provided', () => {
+it('should have the class text when a text is provided', () => {
   const button = shallow(<Button text="text" />);
   expect(button.childAt(0).hasClass('text')).toEqual(true);
 });

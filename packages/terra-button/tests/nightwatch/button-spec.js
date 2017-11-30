@@ -26,10 +26,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#emphasisButton', 'Emphasis');
   },
 
-  'Displays as a secondary button with the provided text': (browser) => {
+  'Displays as a de-emphasis button with the provided text': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/button-tests/secondary`)
-      .assert.containsText('#secondaryButton', 'Secondary');
+      .url(`${browser.launchUrl}/#/tests/button-tests/de-emphasis`)
+      .assert.containsText('#de-emphasisButton', 'De-emphasis');
   },
 
   'Displays as a tiny button with the provided text': (browser) => {

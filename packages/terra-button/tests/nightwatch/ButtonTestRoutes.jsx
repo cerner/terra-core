@@ -5,7 +5,7 @@ import { Route } from 'react-router';
 import ButtonTests from './ButtonTests';
 import { TinyButton, SmallButton, MediumButton, LargeButton, HugeButton } from './SizeButton';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
-import { NeutralButton, EmphasisButton, SecondaryButton } from './VariantButton';
+import { NeutralButton, EmphasisButton, DeemphasisButton } from './VariantButton';
 import DisabledButton from './Disabled';
 import { IconNeutralButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import LongTextButton from './LongTextButton';
@@ -19,7 +19,7 @@ const routes = (
     <Route path="/tests/button-tests/icon-only" component={IconOnlyButton} />
     <Route path="/tests/button-tests/icon-reversed" component={IconReversedButton} />
     <Route path="/tests/button-tests/emphasis" component={EmphasisButton} />
-    <Route path="/tests/button-tests/secondary" component={SecondaryButton} />
+    <Route path="/tests/button-tests/de-emphasis" component={DeemphasisButton} />
     <Route path="/tests/button-tests/long-text" component={LongTextButton} />
     <Route path="/tests/button-tests/huge" component={HugeButton} />
     <Route path="/tests/button-tests/large" component={LargeButton} />

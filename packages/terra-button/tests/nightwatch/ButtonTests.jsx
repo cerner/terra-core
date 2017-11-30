@@ -12,7 +12,7 @@ const ButtonTests = () => (
       <li><Link to="/tests/button-tests/icon-only">Icon Only Button</Link></li>
       <li><Link to="/tests/button-tests/icon-reversed">Icon Reversed Button</Link></li>
       <li><Link to="/tests/button-tests/emphasis">Emphasis Button</Link></li>
-      <li><Link to="/tests/button-tests/secondary">Secondary Button</Link></li>
+      <li><Link to="/tests/button-tests/de-emphasis">De-emphasis Button</Link></li>
       <li><Link to="/tests/button-tests/long-text">Long Text Button</Link></li>
       <li><Link to="/tests/button-tests/huge">Huge Button</Link></li>
       <li><Link to="/tests/button-tests/large">Large Button</Link></li>

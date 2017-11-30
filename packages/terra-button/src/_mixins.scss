@@ -28,7 +28,7 @@
   }
 }
 
-@mixin terra-button-secondary($color-map) {
+@mixin terra-button-de-emphasis($color-map) {
   background-color: transparent;
   border-color: map-get($color-map, border-color);
   border-width: 1px;
