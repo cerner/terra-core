@@ -84,19 +84,19 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/icon-neutral`)
       .assert.containsText('#iconNeutralButton > :last-child', 'Button with Icon')
-      .assert.cssClassPresent('#iconNeutralButton > :first-child', 'test');
+      .assert.cssClassPresent('#iconNeutralButton > :first-child > :first-child', 'test');
   },
 
   'Displays an icon only': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/icon-only`)
-      .assert.cssClassPresent('#iconOnlyButton > :first-child', 'test');
+      .assert.cssClassPresent('#iconOnlyButton > :first-child > :first-child', 'test');
   },
 
   'Displays a button with icons and text reversed': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/icon-reversed`)
       .assert.containsText('#iconReversedButton > :first-child', 'Button with Icon and reversed')
-      .assert.cssClassPresent('#iconReversedButton > :last-child', 'test');
+      .assert.cssClassPresent('#iconReversedButton > :last-child > :first-child', 'test');
   },
 });

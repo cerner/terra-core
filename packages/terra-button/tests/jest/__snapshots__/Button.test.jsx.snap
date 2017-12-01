@@ -3,6 +3,7 @@
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral TestClass"
   data-mock="data"
   disabled={false}
@@ -12,88 +13,146 @@ exports[`should render a Button with merged attributes 1`] = `
     }
   }
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    text
+  </span>
+</button>
 `;
 
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral"
   disabled={false}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    button
+  </span>
+</button>
 `;
 
 exports[`should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral"
   disabled={false}
   type="reset"
-/>
+>
+  <span
+    className="text-only"
+  >
+    reset
+  </span>
+</button>
 `;
 
 exports[`should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral"
   disabled={false}
   type="submit"
-/>
+>
+  <span
+    className="text-only"
+  >
+    submit
+  </span>
+</button>
 `;
 
 exports[`should render a de-emphasis button 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button de-emphasis"
   disabled={false}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    de-emphasis
+  </span>
+</button>
 `;
 
 exports[`should render a emphasis button 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button emphasis"
   disabled={false}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    emphasis
+  </span>
+</button>
 `;
 
 exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral"
   disabled={false}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    neutral
+  </span>
+</button>
 `;
 
 exports[`should render an icon 1`] = `
 <button
   aria-disabled={false}
+  aria-label="isIconOnly"
   className="button neutral tiny"
   disabled={false}
   type="button"
 >
-  <img
-    alt="icon"
-  />
+  <span
+    className="icon icon-only"
+  >
+    <img
+      alt="icon"
+    />
+  </span>
 </button>
 `;
 
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral tiny"
   disabled={false}
   type="button"
 >
-  <img
-    alt="icon"
-  />
   <span
-    className="text"
+    className="icon icon-left"
+  >
+    <img
+      alt="icon"
+    />
+  </span>
+  <span
+    className="text text-right"
   >
     text
   </span>
@@ -103,13 +162,14 @@ exports[`should render an icon and a text 1`] = `
 exports[`should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
+  aria-label={null}
   className="button neutral"
   disabled={false}
   href="MockHref"
   type="button"
 >
   <span
-    className="text"
+    className="text-only"
   >
     href
   </span>
@@ -119,13 +179,14 @@ exports[`should render as an anchor when provided an href 1`] = `
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
+  aria-label={null}
   className="button neutral is-disabled"
   disabled={true}
   tabIndex="-1"
   type="button"
 >
   <span
-    className="text"
+    className="text-only"
   >
     Disabled
   </span>
@@ -135,17 +196,22 @@ exports[`should render as disabled when set 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
+  aria-label={null}
   className="button neutral tiny"
   disabled={false}
   type="button"
 >
   <span
-    className="text"
+    className="text text-left"
   >
     text
   </span>
-  <img
-    alt="icon"
-  />
+  <span
+    className="icon icon-right"
+  >
+    <img
+      alt="icon"
+    />
+  </span>
 </button>
 `;

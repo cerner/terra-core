@@ -12,43 +12,47 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Sets the href. When set will render the component as an anchor tag
+   * Sets the href. When set will render the component as an anchor tag.
    */
   href: PropTypes.string,
   /**
-   * An optional icon. Nested inline with the text when provided
+   * An optional icon. Nested inline with the text when provided.
    */
   icon: PropTypes.element,
   /**
-   * Whether or not the button should display as a block
+   * Whether or not the button should only display as an icon.
+   */
+  isIconOnly: PropTypes.bool,
+  /**
+   * Whether or not the button should display as a block.
    */
   isBlock: PropTypes.bool,
   /**
-   * Whether or not the button should be disabled
+   * Whether or not the button should be disabled.
    */
   isDisabled: PropTypes.bool,
   /**
-   * Reverses the position of the icon and text
+   * Reverses the position of the icon and text.
    */
   isReversed: PropTypes.bool,
   /**
-   * Callback function triggered when clicked
+   * Callback function triggered when clicked.
    */
   onClick: PropTypes.func,
   /**
-   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`
+   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`.
    */
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
-   * Sets the button text
+   * Sets the button text.
    */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   /**
-   * Sets the button type. One of `button`, `submit`, or `reset`
+   * Sets the button type. One of `button`, `submit`, or `reset`.
    */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /**
-   * Sets the button variant. One of `neutral`, `emphasis`, or `de-emphasis`
+   * Sets the button variant. One of `neutral`, `emphasis`, or `de-emphasis`.
    */
   variant: PropTypes.oneOf(['neutral', 'emphasis', 'de-emphasis']),
 };
@@ -56,6 +60,7 @@ const propTypes = {
 const defaultProps = {
   isBlock: false,
   isDisabled: false,
+  isIconOnly: false,
   isReversed: false,
   type: 'button',
   variant: 'neutral',
@@ -66,6 +71,7 @@ const Button = ({
   icon,
   isBlock,
   isDisabled,
+  isIconOnly,
   isReversed,
   size,
   text,
@@ -74,7 +80,22 @@ const Button = ({
   ...customProps
   }) => {
   const attributes = Object.assign({}, customProps);
-  const buttonText = text ? <span className={styles.text}>{text}</span> : null;
+
+  const buttonTextClasses = cx([
+    { text: icon },
+    { 'text-only': !icon },
+    { 'text-left': icon && isReversed },
+    { 'text-right': icon && !isReversed },
+  ]);
+  const buttonText = !isIconOnly ? <span className={buttonTextClasses}>{text}</span> : null;
+
+  const iconClasses = cx([
+    'icon',
+    { 'icon-only': isIconOnly },
+    { 'icon-left': !isIconOnly && !isReversed },
+    { 'icon-right': !isIconOnly && isReversed },
+  ]);
+  const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null;
 
   attributes.className = cx([
     'button',
@@ -89,10 +110,11 @@ const Button = ({
   attributes.disabled = isDisabled;
   attributes.tabIndex = isDisabled ? '-1' : undefined;
   attributes['aria-disabled'] = isDisabled;
+  attributes['aria-label'] = isIconOnly ? text : null;
 
   const order = isReversed ?
-    [buttonText, icon, children] :
-    [icon, buttonText, children];
+    [buttonText, iconElement, children] :
+    [iconElement, buttonText, children];
 
   return React.createElement(attributes.href ? 'a' : 'button', attributes, ...order);
 };

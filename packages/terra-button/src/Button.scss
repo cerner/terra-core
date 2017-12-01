@@ -2,10 +2,6 @@
 @import './mixins';
 
 :local {
-
-  // Button Component
-  // ====================================================
-
   // html input[type='button'].terra-Button selector used to
   // prevent a WebKit bug destroys native `audio` and `video` controls
   // in Android 4. More info:
@@ -28,24 +24,25 @@
   // stylelint-enable selector-no-qualifying-type
 
   .button {
-    border-radius: var(--terra-button-border-radius, 0.25em);
+    border-radius: var(--terra-button-border-radius, 0.2142rem);
     border-style: solid;
-    border-width: var(--terra-button-border-width, 1px);
+    border-width: 1px;
     cursor: pointer;
     display: inline-block;
-    font-size: map-get($terra-button-font-sizes, medium);
+    font-family: var(--terra-button-font-family, inherit);
+    font-size: var(--terra-button-font-size, inherit);
     font-weight: var(--terra-button-font-weight, 400);
-    line-height: 1.429; // 20px when html font size is computed to 14px
+    line-height: var(--terra-button-line-height, 1.429);
+    outline: none;
     padding-bottom: var(--terra-button-padding-bottom, 0.286em);
-    padding-left: var(--terra-button-padding-left, 0.714em);
-    padding-right: var(--terra-button-padding-right, 0.714em);
+    padding-left: 0;
+    padding-right: 0;
     padding-top: var(--terra-button-padding-top, 0.286em);
-    text-align: center;
+    text-align: var(--terra-button-text-align, left);
     text-decoration: none;
-    text-transform: var(--terra-button-text-transform, none);
+    text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
-    vertical-align: middle;
     white-space: normal;
 
     // Remove the inner border and padding in Firefox.
@@ -54,31 +51,30 @@
       padding: 0;
     }
 
-    // Restore the focus styles unset by the previous rule.
-    &:-moz-focusring {
-      outline: 1px dotted #1c1f21;
-      -moz-outline-radius: 0.25em;
+    &:focus {
+      box-shadow: var(--terra-button-focus-box-shadow, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5));
+      outline: none;
     }
 
     &:disabled,
     &.is-disabled {
       cursor: default;
-      opacity: 0.7;
+      opacity: var(--terra-button-disabled-opacity, 0.3);
       pointer-events: none; // prevent pointer interaction for anchor elements
     }
   }
 
-  // Button modifiers
+  // Button variant modifiers
   .neutral {
-    @include terra-button-color($terra-button-neutral-color-scheme);
+    @include terra-button-variant-color($terra-button-neutral-color-scheme);
   }
 
   .emphasis {
-    @include terra-button-color($terra-button-emphasis-color-scheme);
+    @include terra-button-variant-color($terra-button-emphasis-color-scheme);
   }
 
   .de-emphasis {
-    @include terra-button-de-emphasis($terra-button-de-emphasis-color-scheme);
+    @include terra-button-variant-color($terra-button-de-emphasis-color-scheme);
   }
 
   // Button size modifiers
@@ -108,11 +104,43 @@
     width: 100%;
   }
 
-  .text:first-child:not(:last-child) {
-    margin-right: 0.714em;
+  .text-only {
+    padding-left: var(--terra-button-text-only-padding-left, 0.714em);
+    padding-right: var(--terra-button-text-only-padding-right, 0.714em);
   }
 
-  .text:nth-child(2) {
-    margin-left: 0.714em;
+  .text-left {
+    padding-left: var(--terra-button-text-left-padding-left, 0.714em);
+    padding-right: var(--terra-button-text-left-padding-right, 0.714em);
+  }
+
+  .text-right {
+    padding-right: var(--terra-button-text-right-padding-right, 0.714em);
+  }
+
+
+  .icon {
+    display: inline-block;
+    padding-bottom: var(--terra-button-icon-padding-bottom, 0.2857em);
+    padding-top: var(--terra-button-icon-padding-top, 0.1428em);
+
+    > svg {
+      height: var(--terra-button-icon-height, 1em);
+      width: var(--terra-button-icon-width, 0.8714em);
+    }
+  }
+
+  .icon-only {
+    padding-left: var(--terra-button-icon-only-padding-left, 0.714em);
+    padding-right: var(--terra-button-icon-only-padding-right, 0.714em);
+  }
+
+  .icon-left {
+    padding-left: var(--terra-button-icon-left-padding-left, 0.714em);
+    padding-right: var(--terra-button-icon-left-padding-right, 0.714em);
+  }
+
+  .icon-right {
+    padding-right: var(--terra-button-icon-right-padding-right, 0.714em);
   }
 }
