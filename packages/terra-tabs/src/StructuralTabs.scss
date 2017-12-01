@@ -1,5 +1,15 @@
 :local {
   .structural {
+    .collapsed-tabs-container {
+      border-bottom-color: #8bc2f9;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-radius: 3px 3px 0 0;
+      .tab-menu {
+        background-image: none;
+      }
+    }
+
     .tab,
     .tab-menu {
       background-color: rgba(255, 255, 255, 0.5);

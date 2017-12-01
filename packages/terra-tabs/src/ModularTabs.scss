@@ -15,7 +15,8 @@
   .modular-centered {
     background-color: rgba(255, 255, 255, 0.8);
 
-    .collapsible-tabs-container {
+    .collapsible-tabs-container,
+    .collapsed-tabs-container {
       border-bottom-color: #8bc2f9;
       border-bottom-style: solid;
       border-bottom-width: 1px;

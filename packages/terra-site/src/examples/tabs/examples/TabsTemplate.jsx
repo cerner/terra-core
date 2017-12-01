@@ -59,6 +59,28 @@ const StructuralTabsExample = (props) => {
     </Tabs.Pane>
   );
 
+  const tab1 = (
+    <Tabs.Pane
+      label="Tab 1"
+      key="Tab1"
+    >
+      <div style={paneContentStyle}>
+        Content for tab 1.
+      </div>
+    </Tabs.Pane>
+  );
+
+  const tab2 = (
+    <Tabs.Pane
+      label="Tab 2"
+      key="Tab2"
+    >
+      <div style={paneContentStyle}>
+        Content for tab 2.
+      </div>
+    </Tabs.Pane>
+  );
+
   const disabledTab = (
     <Tabs.Pane label="Disabled Tab" icon={<IconSearch />} isDisabled key="DisabledTab" />
   );
@@ -71,6 +93,8 @@ const StructuralTabsExample = (props) => {
         {customTab}
         {disabledTab}
         {iconOnlyTab}
+        {tab1}
+        {tab2}
       </Tabs>
     </div>
   );

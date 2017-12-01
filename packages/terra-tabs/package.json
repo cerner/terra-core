@@ -35,6 +35,7 @@
     "terra-base": "^2.0.0",
     "terra-menu": "^1.6.0",
     "terra-icon": "^1.12.1",
+    "terra-responsive-element": "^1.12.0",
     "resize-observer-polyfill": "^1.4.1",
     "terra-content-container": "^1.11.1"
   },

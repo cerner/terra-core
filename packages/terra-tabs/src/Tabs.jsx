@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ContentContainer from 'terra-content-container';
+import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 import TabPane from './TabPane';
 import CollapsibleTabs from './_CollapsibleTabs';
+import CollapsedTabs from './_CollapsedTabs';
 import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
@@ -143,19 +145,32 @@ class Tabs extends React.Component {
       }));
     });
 
+    const collasibleTabs = (
+      <CollapsibleTabs
+        activeKey={activeKey || this.state.activeKey}
+        activeIndex={this.getActiveTabIndex()}
+        onChange={this.handleOnChange}
+        variant={variant}
+      >
+        {clonedPanes}
+      </CollapsibleTabs>
+    );
+
+    const collapsedTabs = (
+      <CollapsedTabs activeKey={activeKey || this.state.activeKey}>
+        {clonedPanes}
+      </CollapsedTabs>
+    );
+
     return (
       <ContentContainer
         className={tabsClassNames}
         fill={fill}
         header={(
-          <CollapsibleTabs
-            activeKey={activeKey || this.state.activeKey}
-            activeIndex={this.getActiveTabIndex()}
-            onChange={this.handleOnChange}
-            variant={variant}
-          >
-            {clonedPanes}
-          </CollapsibleTabs>
+          <ResponsiveElement
+            defaultElement={collapsedTabs}
+            tiny={collasibleTabs}
+          />
         )}
       >
         <div className={cx('pane-content')}>
