@@ -113,19 +113,10 @@
       width: 1.9em;
 
       &:focus {
-        @include focus-styles;
-
+        background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));
         background-size: 0 0;
-
-        /* stylelint-disable max-nesting-depth */
-        [dir=ltr] & {
-          box-shadow: var(--terra-time-input-desktop-input-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
-        }
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-time-input-desktop-input-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
-        }
-        /* stylelint-enable max-nesting-depth */
+        border-color: transparent;
+        box-shadow: unset;
       }
     }
   }
@@ -164,19 +155,9 @@
     padding-right: var(--terra-time-input-meridiem-padding-right, 0);
     padding-top: var(--terra-time-input-meridiem-padding-top, 0);
 
-    /* stylelint-disable max-nesting-depth */
     &.focused {
-      @include focus-styles;
-
-      [dir=ltr] & {
-        box-shadow: var(--terra-time-input-input-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
-      }
-
-      [dir=rtl] & {
-        box-shadow: var(--terra-time-input-input-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
-      }
+      background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));
     }
-    /* stylelint-enable max-nesting-depth */
   }
 
   .meridiem-button {
