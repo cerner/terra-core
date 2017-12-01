@@ -66,7 +66,9 @@ class CollapsibleTabs extends React.Component {
   }
 
   handleResize(width) {
-    const menuToggleWidth = this.menuRef.getBoundingClientRect().width;
+    const menuMarginLeft = parseInt(window.getComputedStyle(this.menuRef, null).getPropertyValue('margin-left'), 10);
+    const menuMarginRight = parseInt(window.getComputedStyle(this.menuRef, null).getPropertyValue('margin-right'), 10);
+    const menuToggleWidth = this.menuRef.getBoundingClientRect().width + menuMarginLeft + menuMarginRight;
     const availableWidth = width - menuToggleWidth;
 
     // Calculate hide index
@@ -75,8 +77,10 @@ class CollapsibleTabs extends React.Component {
     let isMenuHidden = true;
     for (let i = 0; i < this.props.children.length; i += 1) {
       const tab = this.container.children[i];
+      const tabMarginLeft = parseInt(window.getComputedStyle(this.menuRef, null).getPropertyValue('margin-left'), 10);
+      const tabMarginRight = parseInt(window.getComputedStyle(this.menuRef, null).getPropertyValue('margin-right'), 10);
       const minWidth = parseInt(window.getComputedStyle(tab, null).getPropertyValue('min-width'), 10);
-      calcMinWidth += minWidth;
+      calcMinWidth += (minWidth + tabMarginLeft + tabMarginRight);
       if (calcMinWidth > availableWidth && !(i === this.props.children.length - 1 && calcMinWidth <= width)) {
         newHideIndex = i;
         isMenuHidden = false;
