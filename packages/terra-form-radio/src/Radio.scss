@@ -1,5 +1,162 @@
 :local {
   .radio {
+    color: var(--terra-form-radio-font-color, rgb(0, 0, 0));
+    display: block;
+    font-family: inherit;
+    margin-left: var(--terra-form-radio-container-margin-left, none);
+    margin-right: var(--terra-form-radio-container-margin-right, 2rem);
+    margin-top: var(--terra-form-radio-container-margin-top, 0.625rem);
+    position: relative;
 
+    /* Hitbox and container focus style will only surround radio + label, instead of the div block */
+    /* Padding puts space for container focus style */
+    .focus-container {
+      display: inline-block;
+      max-width: 100%;
+      padding-left: var(--terra-form-radio-focus-container-padding-left, 0.214rem);
+      padding-right: var(--terra-form-radio-focus-container-padding-right, 0.214rem);
+      position: relative;
+    }
+
+    .is-hidden-focus-container {
+      display: inline-block;
+      padding-bottom: var(--terra-form-radio-is-hidden-focus-container-padding-bottom, 0.017rem);
+      padding-left: var(--terra-form-radio-is-hidden-focus-container-padding-left, 0.214rem);
+      padding-right: none;
+    }
+
+    /* stylelint-disable selector-max-compound-selectors */
+    .label {
+      cursor: pointer;
+      display: inline-flex;
+      font-size: var(--terra-form-radio-font-size, 1rem);
+      line-height: var(--terra-form-radio-line-height, 1.42);
+      padding-left: var(--terra-form-radio-padding-left, none);
+      position: relative;
+    }
+
+    /* Native radio shown when theme uses browser native styling */
+    .native-input {
+      border-color: var(--terra-form-radio-native-input-border-color, none);
+      border-style: var(--terra-form-radio-native-input-border-style, none);
+      border-width: var(--terra-form-radio-native-input-border-width, none);
+      clip: var(--terra-form-radio-native-input-clip, none);
+      cursor: var(--terra-form-radio-native-input-cursor, pointer);
+      font-size: var(--terra-form-radio-native-input-font-size, inherit);
+      height: var(--terra-form-radio-native-input-height, none);
+      margin-left: var(--terra-form-radio-native-input-margin-left, 0.071rem);
+      margin-right: var(--terra-form-radio-native-input-margin-right, 0.143rem);
+      overflow: var(--terra-form-radio-native-input-overflow, none);
+      padding: var(--terra-form-radio-native-input-padding, none);
+      position: absolute;
+      width: var(--terra-form-radio-native-input-width, none);
+    }
+
+    .label-text {
+      display: block;
+      margin-left: var(--terra-form-radio-label-text-margin-left, 1.4em);
+      max-width: 100%;
+    }
+
+    /* Custom radio shown when theme uses custom styling */
+    .native-input + .label-text::before {
+      background-color: var(--terra-form-radio-background-color, none);
+      background-image: var(--terra-form-radio-background-image, none);
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-color: var(--terra-form-radio-border-color, none);
+      border-radius: var(--terra-form-radio-border-radius, none);
+      border-style: var(--terra-form-radio-border-style, none);
+      border-width: var(--terra-form-radio-border-width, none);
+      content: '';
+      cursor: pointer;
+      display: inline-block;
+      height: var(--terra-form-radio-height, none);
+      left: 0;
+      margin-top: var(--terra-form-radio-margin-top, none);
+      position: absolute;
+      top: 0;
+      width: var(--terra-form-radio-width, none);
+    }
+
+    /* Custom radio in checked state */
+    .native-input:checked + .label-text::before {
+      background-color: var(--terra-form-radio-checked-background-color, none);
+      border-color: var(--terra-form-radio-checked-border-color, none);
+      border-radius: var(--terra-form-radio-checked-border-radius, none);
+      border-style: var(--terra-form-radio-checked-border-style, none);
+      border-width: var(--terra-form-radio-checked-border-width, none);
+      color: var(--terra-form-radio-symbol-color, none);
+      content: var(--terra-form-radio-symbol, none);
+      height: var(--terra-form-radio-checked-height, none);
+      left: 0;
+      line-height: 0.9;
+      margin-top: var(--terra-form-radio-margin-top, none);
+      opacity: 1;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      transform: scale(1);
+      transition: var(--terra-form-radio-transition, all 0.2s ease all);
+      vertical-align: middle;
+      visibility: visible;
+      width: var(--terra-form-radio-checked-width, none);
+    }
+
+    /* Hide label if isLabelHidden true */
+    .is-hidden {
+      cursor: default;
+      height: 1rem;
+      margin-left: 0;
+      width: 0;
+    }
+    /*stylelint-disable max-nesting-depth*/
+    /* Disabled native radio, label text, and custom radio styling */
+    .is-disabled {
+      cursor: default;
+
+      > .label-text {
+        color: var(--terra-form-radio-disabled-font-color, #9b9fa1);
+        cursor: default;
+        opacity: var(--terra-form-radio-disabled-font-opacity, none);
+
+        &::before {
+          background-color: var(--terra-form-radio-disabled-background-color, none);
+          background-image: var(--terra-form-radio-disabled-background-image, none);
+          border-color: var(--terra-form-radio-disabled-border-color, none);
+          cursor: default;
+        }
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
+
+    /* Focus custom radio styling */
+    .native-input:focus + .label-text::before {
+      [dir=rtl] & {
+        box-shadow: var(--terra-form-radio-focus-box-shadow-rtl, none);
+      }
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-form-radio-focus-box-shadow-ltr, none);
+      }
+    }
+  }
+
+  /* Focus style surrounding both custom radio and label focus. */
+  .focus {
+    border-radius: var(--terra-form-radio-container-focus-border-radius, 3px);
+
+    [dir=rtl] & {
+      box-shadow: var(--terra-form-radio-container-focus-box-shadow-rtl, none);
+    }
+
+    [dir=ltr] & {
+      box-shadow: var(--terra-form-radio-container-focus-box-shadow-ltr, none);
+    }
+  }
+
+  .radio-inline {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
