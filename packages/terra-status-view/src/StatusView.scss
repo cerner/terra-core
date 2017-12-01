@@ -1,0 +1,108 @@
+:local {
+  .status-view {
+    height: 100%;
+    padding-bottom: var(--terra-status-view-padding-bottom, 10px);
+    padding-top: var(--terra-status-view-padding-top, 30px);
+    width: 100%;
+  }
+
+  .status-view-inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .glyph {
+    flex: 0 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .glyph > svg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+  }
+
+  .glyph > .no-data {
+    background-image: var(--terra-status-view-glyph-no-data, url('../node_modules/terra-icon/src/svg/folder.svg'));
+  }
+
+  .glyph > .no-matching-results {
+    background-image: var(--terra-status-view-glyph-no-matching-results, url('../node_modules/terra-icon/src/svg/search.svg'));
+  }
+
+  .glyph > .not-authorized {
+    background-image: var(--terra-status-view-glyph-not-authorized, url('../node_modules/terra-icon/src/svg/padlock.svg'));
+  }
+
+  .glyph > .error {
+    background-image: var(--terra-status-view-glyph-error, url('../node_modules/terra-icon/src/svg/error.svg'));
+  }
+
+  .glyph > .no-service {
+    background-image: var(--terra-status-view-glyph-no-service, url('../node_modules/terra-icon/src/svg/noSignal.svg'));
+  }
+
+  .glyph > .custom {
+    background-image: var(--terra-status-view-glyph-custom, none);
+  }
+
+  .message-content-group {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .title {
+    color: var(--terra-status-view-title-color, #000);
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    font-family: var(--terra-status-view-title-font-family, 'Roboto');
+    font-size: var(--terra-status-view-title-font-size, 24px);
+    text-align: center;
+  }
+
+  .message {
+    color: var(--terra-status-view-message-color, #000);
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    font-family: var(--terra-status-view-message-font-family, 'Roboto');
+    font-size: var(--terra-status-view-message-font-size, 14px);
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .divider {
+    border-color: var(--terra-status-view-divider-color, #fff);
+    display: var(--terra-status-view-divider-display, none);
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: var(--terra-status-view-buttons-flex-direction-small-width, row);
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .buttons > button {
+    flex: var(--terra-status-view-button-flex, initial);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+}

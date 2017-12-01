@@ -331,6 +331,26 @@
     "--terra-spacer-large-plus-3": "2.14286rem",
     "--terra-spacer-large-plus-4": "3.57143rem"
   },
+  "StatusView": {
+    "--terra-status-view-padding-bottom": "10px",
+    "--terra-status-view-padding-top": "30px",
+    "--terra-status-view-glyph-no-data": "url(\"../node_modules/terra-icon/src/svg/folder.svg\")",
+    "--terra-status-view-glyph-no-matching-results": "url(\"../node_modules/terra-icon/src/svg/search.svg\")",
+    "--terra-status-view-glyph-not-authorized": "url(\"../node_modules/terra-icon/src/svg/padlock.svg\")",
+    "--terra-status-view-glyph-error": "url(\"../node_modules/terra-icon/src/svg/error.svg\")",
+    "--terra-status-view-glyph-no-service": "url(\"../node_modules/terra-icon/src/svg/noSignal.svg\")",
+    "--terra-status-view-glyph-custom": "url(\"../node_modules/terra-icon/src/svg/cancel.svg\")",
+    "--terra-status-view-title-color": "#000",
+    "--terra-status-view-title-font-family": "\"Roboto\"",
+    "--terra-status-view-title-font-size": "24px",
+    "--terra-status-view-message-color": "#000",
+    "--terra-status-view-message-font-family": "\"Roboto\"",
+    "--terra-status-view-message-font-size": "14px",
+    "--terra-status-view-divider-color": "#fff",
+    "--terra-status-view-divider-display": "none",
+    "--terra-status-view-buttons-flex-direction-small-width": "row",
+    "--terra-status-view-button-flex": "initial"
+  },
   "Table": {
     "--terra-table-background-color": "#fff",
     "--terra-table-border": "0",

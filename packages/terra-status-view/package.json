@@ -1,0 +1,51 @@
+{
+  "name": "terra-status-view",
+  "main": "lib/StatusView.js",
+  "version": "1.0.0",
+  "description": "The status view component provides a customizable icon, message, and buttons in a view.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-status-view",
+    "StatusView",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "scripts": {
+    "compile": "npm run compile:clean && npm run compile:build",
+    "compile:clean": "rimraf lib",
+    "compile:build": "babel src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
+    "props-table": "props-table ./src/StatusView.jsx --out-dir ./docs/props-table",
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+  },
+  "devDependencies": {
+    "terra-props-table": "^1.10.1"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "terra-base": "^2.7.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-base": "^2.7.0",
+    "terra-button": "^1.0.0",
+    "terra-divider": "^1.0.0",
+    "terra-icon": "^1.0.0"
+  }
+}
