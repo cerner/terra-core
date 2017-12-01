@@ -56,9 +56,11 @@
   --terra-form-checkbox-disabled-background-color: gba(0, 0, 0, 0.05);
   --terra-form-checkbox-disabled-background-image: none;
   --terra-form-checkbox-disabled-border-color: none;
-  --terra-form-checkbox-focus-box-shadow: none;
+  --terra-form-checkbox-focus-box-shadow-rtl: none;
+  --terra-form-checkbox-focus-box-shadow-ltr: none;
   --terra-form-checkbox-container-focus-border-radius: 3px;
-  --terra-form-checkbox-container-focus-box-shadow: 0 0 1px 2px #4a90e2;
+  --terra-form-checkbox-container-focus-box-shadow-rtl: 0 0 1px 2px #4a90e2;
+  --terra-form-checkbox-container-focus-box-shadow-ltr: 0 0 1px 2px #4a90e2;
   // terra-form-field
   --terra-form-field-margin-bottom: 0.5em;
   --terra-form-field-inline-margin-right: 0.5em;

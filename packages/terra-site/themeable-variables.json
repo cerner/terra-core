@@ -172,7 +172,10 @@
     "--terra-form-checkbox-focus-box-shadow": "none",
     "--terra-form-checkbox-container-focus-border-radius": "3px",
     "--terra-form-checkbox-container-focus-box-shadow": "none",
-    "--terra-form-checkboc-focus-container-padding-right": "0.214rem"
+    "--terra-form-checkbox-focus-box-shadow-rtl": "none",
+    "--terra-form-checkbox-focus-box-shadow-ltr": "none",
+    "--terra-form-checkbox-container-focus-box-shadow-rtl": "none",
+    "--terra-form-checkbox-container-focus-box-shadow-ltr": "none"
   },
   "DemographicsBanner": {
     "--terra-demographics-banner-background": "#004c76",
