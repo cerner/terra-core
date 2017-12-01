@@ -651,7 +651,6 @@ class TimeInput extends React.Component {
               className={cx(['meridiem-display', { focused: this.state.meridiemFocused }])}
               onFocus={this.meridiemFocus}
               key="meridiem_display"
-              tabIndex="0"
             >
               {this.state.meridiem}
             </span>,
