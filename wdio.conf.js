@@ -27,6 +27,10 @@ const config = {
   webpackPort,
   webpackConfig,
   before() {
+    /**
+    * Adds a custom browser.setCSSCustomProps function
+    * @param {Object} properties - An object of key/value CSS custom properties to set.
+    */
     // eslint-disable-next-line prefer-arrow-callback, func-names
     browser.addCommand('setCSSCustomProps', function (properties) {
       // eslint-disable-next-line prefer-arrow-callback, func-names
