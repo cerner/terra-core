@@ -1,3 +1,4 @@
+/* global browser */
 /* eslint-disable import/no-extraneous-dependencies */
 const wdioConf = require('terra-toolkit/lib/wdio/conf');
 const WebpackDevService = require('terra-toolkit/lib/wdio/services/index').WebpackDevService;
@@ -18,11 +19,6 @@ const config = {
 
   baseUrl: `http://${localIP.address()}:${webpackPort}`,
   specs,
-  suites: {
-    badge: [
-      path.join(__dirname, 'packages', 'terra-badge', 'tests', 'specs', '**'),
-    ],
-  },
 
   seleniumDocker: {
     enabled: !process.env.TRAVIS,
@@ -30,6 +26,18 @@ const config = {
 
   webpackPort,
   webpackConfig,
+  before() {
+    // eslint-disable-next-line prefer-arrow-callback, func-names
+    browser.addCommand('setCSSCustomProps', function (properties) {
+      // eslint-disable-next-line prefer-arrow-callback, func-names
+      this.execute(function (props) {
+        // eslint-disable-next-line prefer-arrow-callback, func-names
+        Object.keys(props).forEach(function (key) {
+          document.documentElement.style.setProperty(key, props[key]);
+        });
+      }, properties);
+    });
+  },
 };
 
 
