@@ -55,3 +55,6 @@ target
 **/aggregated-translations/*.*
 lib
 props-table
+**/__snapshots__/screen
+**/__snapshots__/diff
+errorScreenshots
