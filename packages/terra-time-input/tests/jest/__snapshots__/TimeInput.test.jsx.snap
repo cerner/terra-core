@@ -283,7 +283,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
   <span
     className="meridiem-display"
     key="meridiem_display"
-    onFocus={[Function]}
+    onClick={[Function]}
   >
     a.m.
   </span>

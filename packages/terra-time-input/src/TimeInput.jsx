@@ -600,6 +600,7 @@ class TimeInput extends React.Component {
       timeValue = 'T'.concat(hour, ':', this.state.minute);
     }
 
+    /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <div {...customProps} className={timeInputClassNames}>
         <input
@@ -649,7 +650,7 @@ class TimeInput extends React.Component {
             <span
               {...inputAttributes}
               className={cx(['meridiem-display', { focused: this.state.meridiemFocused }])}
-              onFocus={this.meridiemFocus}
+              onClick={this.meridiemFocus}
               key="meridiem_display"
             >
               {this.state.meridiem}
@@ -677,6 +678,7 @@ class TimeInput extends React.Component {
         )}
       </div>
     );
+    /* eslint-enable jsx-a11y/no-static-element-interactions */
   }
 
   render() {
