@@ -2,8 +2,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Base from 'terra-base';
-import Image from 'terra-image';
+import Base from '../../terra-base/src/Base';
+import Image from '../../terra-image/src/Image';
 import DemographicsBanner from '../src/DemographicsBanner';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import ReadMe from '!raw-loader!../docs/README.md';
