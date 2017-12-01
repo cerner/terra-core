@@ -1,4 +1,4 @@
-/* global browser, describe, it, expect, before, Terra */
+/* global browser, Terra */
 const viewports = Terra.viewports('tiny', 'medium');
 
 const shouldTheme = (customProperties) => {
