@@ -9,11 +9,7 @@ const webpack = require('webpack');
 const I18nAggregatorPlugin = require('../packages/terra-i18n-plugin/lib/I18nAggregatorPlugin.js');
 const i18nSupportedLocales = require('../packages/terra-i18n/lib/i18nSupportedLocales.js');
 
-// Export a function. Accept the base config as the only param.
 module.exports =  {
-  entry: {
-    'babel-polyfill': 'babel-polyfill'
-  },
   module: {
     rules: [
       {
