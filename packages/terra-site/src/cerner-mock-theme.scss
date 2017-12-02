@@ -144,4 +144,28 @@
     --terra-select-invalid-focus-box-shadow-rtl: 0 0 7px 4px rgba(181, 68, 110, 0.35), 0 0 1px 3px rgba(181, 68, 110, 0.5), 0 0 1px 0 #b5446e;
     --terra-select-menu-box-shadow-rtl: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   }
+
+  //terra-status-view
+  --terra-status-view-padding-bottom: 20px;
+  --terra-status-view-padding-top: 20px;
+  --terra-status-view-glyph-no-data: url('../node_modules/terra-icon/src/svg/folder.svg');
+  --terra-status-view-glyph-no-matching-results: url('../node_modules/terra-icon/src/svg/search.svg');
+  --terra-status-view-glyph-not-authorized: url('../node_modules/terra-icon/src/svg/padlock.svg');
+  --terra-status-view-glyph-error: url('../node_modules/terra-icon/src/svg/error.svg');
+  --terra-status-view-glyph-no-service: url('../node_modules/terra-icon/src/svg/noSignal.svg');
+  --terra-status-view-glyph-custom: url('../node_modules/terra-icon/src/svg/flag.svg');
+  --terra-status-view-title-color: #582c83;
+  --terra-status-view-title-font-family: 'Impact';
+  --terra-status-view-title-font-size: 36px;
+  --terra-status-view-message-color: #582c83;
+  --terra-status-view-message-font-family: 'Impact';
+  --terra-status-view-message-font-size: 24px;
+  --terra-status-view-message-padding-top: 10px;
+  --terra-status-view-message-text-align: center;
+  --terra-status-view-divider-color: #e8e9ea;
+  --terra-status-view-divider-display: none;
+  --terra-status-view-divider-padding-top: 20px;
+  --terra-status-view-buttons-flex-direction-small-width: row;
+  --terra-status-view-buttons-padding-top: 10px;
+  --terra-status-view-button-flex: initial;
 }

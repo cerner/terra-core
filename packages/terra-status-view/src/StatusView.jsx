@@ -86,9 +86,6 @@ class StatusView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showTitle: true,
-      showButtons: true,
-      showMessage: true,
       showGlyph: true,
       paddingBottom: 0,
       paddingTop: 0,
@@ -108,37 +105,46 @@ class StatusView extends React.Component {
    * with 40% of the remaining space at the top with 60% on the bottom.
    */
   showAndCenterItems() {
-    let viewHeight = this.innerNode.offsetHeight;
-    let additionalTopPadding = 0;
-    let additionBottomPadding = 0;
-    const components = [this.titleNode, this.buttonsNode, this.messageNode, this.glyphNode];
-    const showComponents = [false, false, false, false];
+    const viewHeight = this.innerNode.offsetHeight;
+    let paddingTop = 0;
+    let paddingBottom = 0;
+    let showGlyph = false;
 
-    for (let i = 0; i < components.length; i += 1) {
-      const component = components[i];
-      if (component && viewHeight > 0) {
-        viewHeight -= component.offsetHeight;
-        if (viewHeight >= 0) {
-          showComponents[i] = true;
-          if (!this.props.isAlignedTop) {
-            // calculate the remaining padding to be added for when the most amount
-            // of the components can fit into the view
-            additionalTopPadding = viewHeight * 0.4;
-            additionBottomPadding = viewHeight * 0.6;
-          }
-        }
+    // get the content heights of the nodes that are to be shown if have content and cannot be hidden
+    let componentsHeight = this.titleNode.offsetHeight;
+    if (this.buttonsNode) {
+      componentsHeight += this.buttonsNode.offsetHeight;
+    }
+    if (this.messageNode) {
+      componentsHeight += this.messageNode.offsetHeight;
+    }
+    if (this.dividerNode) {
+      componentsHeight += this.dividerNode.clientHeight;
+    }
+
+    if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.offsetHeight) {
+      // if have a glyph to show and can fit inside the containers height, distribute remaining padding to center
+      showGlyph = true;
+      if (!this.props.isAlignedTop) {
+        const remainingHeight = viewHeight - (componentsHeight + this.glyphNode.offsetHeight);
+        paddingTop = remainingHeight * 0.4;
+        paddingBottom = remainingHeight * 0.6;
+      }
+    } else if (!this.props.isAlignedTop) {
+      // glyph does not exist or does not fit, distribute remaining padding if any to center
+      const remainingHeight = viewHeight - componentsHeight;
+      if (remainingHeight > 0) {
+        paddingTop = remainingHeight * 0.4;
+        paddingBottom = remainingHeight * 0.6;
       }
     }
 
     // set which components can fit into the view and add the additional 20px
     // top and bottom padding to the remaining additional padding leftover
     this.setState({
-      showTitle: showComponents[0],
-      showButtons: showComponents[1],
-      showMessage: showComponents[2],
-      showGlyph: showComponents[3],
-      paddingTop: additionalTopPadding,
-      paddingBottom: additionBottomPadding,
+      showGlyph,
+      paddingTop,
+      paddingBottom,
     });
   }
 
@@ -157,25 +163,20 @@ class StatusView extends React.Component {
     if (!isGlyphHidden && this.state.showGlyph) {
       glyphSection = <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}><svg className={cx(variant)} /></div>;
     }
-
     let messageSection;
-    if (message && this.state.showMessage) {
+    if (message) {
       messageSection = <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>{message}</div>;
     }
-
     let buttonSection;
-    if (children.length && this.state.showButtons) {
+    if (children.length) {
       buttonSection = <div className={cx('buttons')} ref={(element) => { this.buttonsNode = element; }}>{children}</div>;
     }
-
-    let titleSection;
-    if (this.state.showTitle) {
-      let defaultTitle = title;
-      if (!defaultTitle) {
-        defaultTitle = StatusView.defaultTitle(variant);
-      }
-      titleSection = <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>{defaultTitle}</div>;
+    let defaultTitle = title;
+    if (!defaultTitle) {
+      defaultTitle = StatusView.defaultTitle(variant);
     }
+    const titleSection = <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>{defaultTitle}</div>;
+    const dividerSection = <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}><Divider /></div>;
 
     const statusViewClassNames = cx([
       'status-view',
@@ -191,7 +192,6 @@ class StatusView extends React.Component {
       <div
         {...customProps}
         className={statusViewClassNames}
-        ref={(element) => { this.contentNode = element; }}
       >
         <div
           className={cx('status-view-inner')}
@@ -199,9 +199,9 @@ class StatusView extends React.Component {
           ref={(element) => { this.innerNode = element; }}
         >
           {glyphSection}
-          <div className={cx('message-content-group')}>
+          <div className={cx('message-content-group')} >
             {titleSection}
-            <Divider className={cx('divider')} />
+            {dividerSection}
             {messageSection}
           </div>
           {buttonSection}

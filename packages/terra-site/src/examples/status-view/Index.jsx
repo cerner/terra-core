@@ -54,6 +54,11 @@ const StatusExamples = () => (
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />
     </StatusViewExample>
+    <h2 id="blank">Status View:  Glyph cannot fit</h2>
+    <StatusViewExample style={{ height: '250px' }} variant={StatusView.variants.ERROR} title="No Data" message="An exception was thrown">
+      <Button text="OK" key="1" size="medium" />
+      <Button text="Cancel" key="2" size="medium" />
+    </StatusViewExample>
   </div>
 );
 

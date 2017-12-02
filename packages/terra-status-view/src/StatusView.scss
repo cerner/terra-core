@@ -52,10 +52,11 @@
 
   .message-content-group {
     align-items: center;
-    display: flex;
+    display: block;
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
   }
 
   .title {
@@ -65,6 +66,7 @@
     font-family: var(--terra-status-view-title-font-family, 'Roboto');
     font-size: var(--terra-status-view-title-font-size, 24px);
     text-align: center;
+    width: 100%;
   }
 
   .message {
@@ -73,14 +75,15 @@
     flex-wrap: wrap;
     font-family: var(--terra-status-view-message-font-family, 'Roboto');
     font-size: var(--terra-status-view-message-font-size, 14px);
-    padding-top: 10px;
-    text-align: center;
+    padding-top: var(--terra-status-view-message-padding-top, 10px);
+    text-align: var(--terra-status-view-message-text-align, left);
+    width: 100%;
   }
 
   .divider {
-    border-color: var(--terra-status-view-divider-color, #fff);
-    display: var(--terra-status-view-divider-display, none);
-    padding-top: 20px;
+    border-color: var(--terra-status-view-divider-color, #e8e9ea);
+    display: var(--terra-status-view-divider-display, block);
+    padding-top: var(--terra-status-view-divider-padding-top, 20px);
     width: 100%;
   }
 
@@ -91,7 +94,7 @@
     justify-content: center;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: 10px;
+    padding-top: var(--terra-status-view-buttons-padding-top, 10px);
     width: 100%;
 
     @media screen and (min-width: 768px) {
