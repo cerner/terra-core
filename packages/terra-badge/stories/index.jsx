@@ -5,10 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 import Badge from '../src/Badge';
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
 import ReadMe from '!raw-loader!../docs/README.md';
-
-const Icon = (<svg className="terra-Icon" height="12px" width="12px" viewBox="0 0 48 48">
-  <path d="M24 0h-.1C10.7 0 0 10.8 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24S37.3 0 24 0zm-4 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z" fill="#FFF" />
-</svg>);
+import { mockIcon } from '../../../.storybook/mock-data';
 
 storiesOf('Badge', module)
 .addDecorator((story, context) => withInfo(ReadMe)(story)(context))
@@ -17,11 +14,11 @@ storiesOf('Badge', module)
 ))
 .add('Icon', () => (
   <div>
-    <Badge icon={Icon} text="icon" id="text-right" />
+    <Badge icon={mockIcon} text="icon" id="text-right" />
     {' '}
-    <Badge icon={Icon} text="icon" isReversed id="text-left" />
+    <Badge icon={mockIcon} text="icon" isReversed id="text-left" />
     {' '}
-    <Badge icon={Icon} id="no-text" />
+    <Badge icon={mockIcon} id="no-text" />
   </div>
 ))
 .add('Intent', () => (
@@ -52,5 +49,16 @@ storiesOf('Badge', module)
     <Badge size="large" text="Large" id="large-badge" />
     {' '}
     <Badge size="huge" text="Huge" id="huge-badge" />
+  </div>
+));
+
+storiesOf('Badge/Additional Test Cases', module)
+.add('Long Text', () => (
+  <div>
+    <Badge text="A badge with a long string of text within it" />
+    {' '}
+    <Badge icon={mockIcon} text="A badge with a long string of text within it" />
+    {' '}
+    <Badge icon={mockIcon} isReversed text="A badge with a long string of text within it" />
   </div>
 ));
