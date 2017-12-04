@@ -115,6 +115,10 @@
     .is-disabled {
       cursor: default;
 
+      > .native-input:disabled {
+        cursor: default;
+      }
+
       > .label-text {
         color: var(--terra-form-radio-disabled-font-color, #9b9fa1);
         cursor: default;
