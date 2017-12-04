@@ -654,7 +654,7 @@ class TimeInput extends React.Component {
               key="meridiem_display"
               tabIndex="-1"
             >
-              {this.state.meridiem}
+              <span className={cx(['meridiem-display-text'])}>{this.state.meridiem}</span>
             </span>,
             <div
               style={{ position: 'relative' }}

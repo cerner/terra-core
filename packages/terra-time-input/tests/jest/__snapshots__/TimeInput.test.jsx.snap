@@ -286,7 +286,11 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     onFocus={[Function]}
     tabIndex="-1"
   >
-    a.m.
+    <span
+      className="meridiem-display-text"
+    >
+      a.m.
+    </span>
   </span>
   <div
     key="meridiem_select_box"
