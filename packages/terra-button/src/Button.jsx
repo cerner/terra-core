@@ -6,6 +6,10 @@ import styles from './Button.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  SPACE: 32,
+};
+
 const propTypes = {
   /**
    * Child Nodes
@@ -66,58 +70,92 @@ const defaultProps = {
   variant: 'neutral',
 };
 
-const Button = ({
-  children,
-  icon,
-  isBlock,
-  isDisabled,
-  isIconOnly,
-  isReversed,
-  size,
-  text,
-  type,
-  variant,
-  ...customProps
-  }) => {
-  const attributes = Object.assign({}, customProps);
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: false };
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+  }
 
-  const buttonTextClasses = cx([
-    { text: icon },
-    { 'text-only': !icon },
-    { 'text-left': icon && isReversed },
-    { 'text-right': icon && !isReversed },
-  ]);
-  const buttonText = !isIconOnly ? <span className={buttonTextClasses}>{text}</span> : null;
+  handleKeyDown(event) {
+    // This is needed to add the active state to FF browsers
+    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      this.setState({ active: true });
+    }
 
-  const iconClasses = cx([
-    'icon',
-    { 'icon-only': isIconOnly },
-    { 'icon-left': !isIconOnly && !isReversed },
-    { 'icon-right': !isIconOnly && isReversed },
-  ]);
-  const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null;
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+  }
 
-  attributes.className = cx([
-    'button',
-    variant,
-    { 'is-disabled': isDisabled },
-    size,
-    { block: isBlock },
-    attributes.className,
-  ]);
+  handleKeyUp(event) {
+    if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      this.setState({ active: false });
+    }
 
-  attributes.type = type;
-  attributes.disabled = isDisabled;
-  attributes.tabIndex = isDisabled ? '-1' : undefined;
-  attributes['aria-disabled'] = isDisabled;
-  attributes['aria-label'] = isIconOnly ? text : null;
+    if (this.props.onKeyUp) {
+      this.props.onKeyUp(event);
+    }
+  }
 
-  const order = isReversed ?
-    [buttonText, iconElement, children] :
-    [iconElement, buttonText, children];
+  render() {
+    const {
+      children,
+      icon,
+      isBlock,
+      isDisabled,
+      isIconOnly,
+      isReversed,
+      size,
+      text,
+      type,
+      variant,
+      ...customProps
+    } = this.props;
+    const attributes = Object.assign({}, customProps);
 
-  return React.createElement(attributes.href ? 'a' : 'button', attributes, ...order);
-};
+    const buttonTextClasses = cx([
+      { text: icon },
+      { 'text-only': !icon },
+      { 'text-left': icon && isReversed },
+      { 'text-right': icon && !isReversed },
+    ]);
+    const buttonText = !isIconOnly ? <span className={buttonTextClasses}>{text}</span> : null;
+
+    const iconClasses = cx([
+      'icon',
+      { 'icon-only': isIconOnly },
+      { 'icon-left': !isIconOnly && !isReversed },
+      { 'icon-right': !isIconOnly && isReversed },
+    ]);
+    const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null;
+
+    attributes.className = cx([
+      'button',
+      variant,
+      { 'is-disabled': isDisabled },
+      size,
+      { block: isBlock },
+      { 'is-active': this.state.active },
+      attributes.className,
+    ]);
+
+    attributes.type = type;
+    attributes.disabled = isDisabled;
+    attributes.tabIndex = isDisabled ? '-1' : undefined;
+    attributes['aria-disabled'] = isDisabled;
+    attributes['aria-label'] = isIconOnly ? text : null;
+    attributes.onKeyDown = this.handleKeyDown;
+    attributes.onKeyUp = this.handleKeyUp;
+
+    const order = isReversed ?
+      [buttonText, iconElement, children] :
+      [iconElement, buttonText, children];
+
+    return React.createElement(attributes.href ? 'a' : 'button', attributes, ...order);
+  }
+}
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
