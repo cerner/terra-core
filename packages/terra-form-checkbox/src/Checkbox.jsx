@@ -92,15 +92,15 @@ class Checkbox extends React.Component {
 
   onFocus() {
     this.setState({ focus: true });
-    if (this.onFocus !== undefined) {
-      this.onFocus();
+    if (this.props.onFocus) {
+      this.props.onFocus();
     }
   }
 
   onBlur() {
     this.setState({ focus: false });
-    if (this.onBlur !== undefined) {
-      this.onBlur();
+    if (this.props.onBlur) {
+      this.props.onBlur();
     }
   }
 
