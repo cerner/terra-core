@@ -20,7 +20,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Meridiem input switches to a.m. when up is pressed on the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span[text()="a.m."]').useCss();
+    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
     browser.keys(browser.Keys.UP_ARROW);
     browser.expect.element('#timeInput select[name="terra-time-meridiem-time-input"]').to.have.attribute('value').equals('a.m.');
   },
@@ -28,7 +28,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Meridiem input switches to p.m. when down is pressed on the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span[text()="a.m."]').useCss();
+    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
     browser.keys(browser.Keys.DOWN_ARROW);
     browser.expect.element('#timeInput select[name="terra-time-meridiem-time-input"]').to.have.attribute('value').equals('p.m.');
   },
@@ -148,7 +148,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Toggles to the minute input when left is pressed from the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span[text()="a.m."]').useCss();
+    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
 
     browser.keys(browser.Keys.LEFT_ARROW);
     browser.keys('34p');
@@ -158,7 +158,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Toggles to the minute input when backspace is pressed from the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span[text()="a.m."]').useCss();
+    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
 
     browser.keys(browser.Keys.BACK_SPACE);
     browser.keys('34p');
