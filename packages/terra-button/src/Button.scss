@@ -77,27 +77,6 @@
     @include terra-button-variant-color($terra-button-de-emphasis-color-scheme);
   }
 
-  // Button size modifiers
-  .tiny {
-    font-size: map-get($terra-button-font-sizes, tiny);
-  }
-
-  .small {
-    font-size: map-get($terra-button-font-sizes, small);
-  }
-
-  .medium {
-    font-size: map-get($terra-button-font-sizes, medium);
-  }
-
-  .large {
-    font-size: map-get($terra-button-font-sizes, large);
-  }
-
-  .huge {
-    font-size: map-get($terra-button-font-sizes, huge);
-  }
-
   // Button style modifiers
   .block {
     display: block;
@@ -117,7 +96,6 @@
   .text-right {
     padding-right: var(--terra-button-text-right-padding-right, 0.714em);
   }
-
 
   .icon {
     display: inline-block;

@@ -3,7 +3,6 @@
 import React from 'react';
 import { Route } from 'react-router';
 import ButtonTests from './ButtonTests';
-import { TinyButton, SmallButton, MediumButton, LargeButton, HugeButton } from './SizeButton';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
 import { NeutralButton, EmphasisButton, DeemphasisButton } from './VariantButton';
 import DisabledButton from './Disabled';
@@ -21,11 +20,6 @@ const routes = (
     <Route path="/tests/button-tests/emphasis" component={EmphasisButton} />
     <Route path="/tests/button-tests/de-emphasis" component={DeemphasisButton} />
     <Route path="/tests/button-tests/long-text" component={LongTextButton} />
-    <Route path="/tests/button-tests/huge" component={HugeButton} />
-    <Route path="/tests/button-tests/large" component={LargeButton} />
-    <Route path="/tests/button-tests/medium" component={MediumButton} />
-    <Route path="/tests/button-tests/small" component={SmallButton} />
-    <Route path="/tests/button-tests/tiny" component={TinyButton} />
     <Route path="/tests/button-tests/with-type-button" component={ButtonWithTypeButton} />
     <Route path="/tests/button-tests/with-type-reset" component={ButtonWithTypeReset} />
     <Route path="/tests/button-tests/with-type-submit" component={ButtonWithTypeSubmit} />

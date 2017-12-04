@@ -44,10 +44,6 @@ const propTypes = {
    */
   onClick: PropTypes.func,
   /**
-   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`.
-   */
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-  /**
    * Sets the button text.
    */
   text: PropTypes.string.isRequired,
@@ -107,7 +103,6 @@ class Button extends React.Component {
       isDisabled,
       isIconOnly,
       isReversed,
-      size,
       text,
       type,
       variant,
@@ -135,7 +130,6 @@ class Button extends React.Component {
       'button',
       variant,
       { 'is-disabled': isDisabled },
-      size,
       { block: isBlock },
       { 'is-active': this.state.active },
       attributes.className,
