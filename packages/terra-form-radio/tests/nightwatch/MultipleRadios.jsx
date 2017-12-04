@@ -4,9 +4,9 @@ import Radio from '../../src/Radio';
 
 const radio = () => (
   <div>
-    <Radio id="first" labelText="First Radio" defaultChecked />
-    <Radio id="second" labelText="Second Radio" />
-    <Radio id="third" labelText="Third Radio" />
+    <Radio id="first" labelText="First Radio" name="multiple" defaultChecked />
+    <Radio id="second" labelText="Second Radio" name="multiple" />
+    <Radio id="third" labelText="Third Radio" name="multiple" />
   </div>
 );
 

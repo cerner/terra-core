@@ -1,6 +1,6 @@
 # Terra Form Radio
 
-The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
+The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with the space bar.
 
 ## Getting Started
 

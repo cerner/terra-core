@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-form-radio.svg)](https://www.npmjs.org/package/terra-form-radio)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
+The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio/docs)
