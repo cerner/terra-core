@@ -118,6 +118,10 @@
         border-color: transparent;
         box-shadow: unset;
       }
+
+      &::selection {
+        background-color: transparent;
+      }
     }
   }
 
