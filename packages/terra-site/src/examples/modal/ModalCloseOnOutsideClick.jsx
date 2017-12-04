@@ -31,7 +31,7 @@ class ModalCloseOnOutsideClick extends React.Component {
           closeOnOutsideClick={false}
           onRequestClose={this.handleCloseModal}
         >
-          <div className={styles['modal-closed-content']}>
+          <div className={styles['demo-modal-content']}>
             <h1>Modal disable close on outside click</h1>
             <br />
             <p>You can close the modal by:</p>

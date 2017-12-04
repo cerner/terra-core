@@ -30,7 +30,7 @@ class ModalIsOpen extends React.Component {
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
         >
-          <div className={styles['modal-opened-content']}>
+          <div className={styles['demo-modal-content']}>
             <h1>Default Modal</h1>
             <br />
             <p>You can close the modal by:</p>

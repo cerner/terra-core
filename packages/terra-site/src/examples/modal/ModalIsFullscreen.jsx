@@ -31,7 +31,7 @@ class ModalIsFullscreen extends React.Component {
           isFullscreen
           onRequestClose={this.handleCloseModal}
         >
-          <div className={styles['modal-full-screen-content']}>
+          <div className={styles['demo-modal-content']}>
             <h1>Fullscreen Modal</h1>
             <br />
             <p>This modal will always take up the full screen.</p>
