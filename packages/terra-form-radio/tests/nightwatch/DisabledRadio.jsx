@@ -2,4 +2,4 @@ import React from 'react';
 
 import Radio from '../../lib/Radio';
 
-export default () => <Radio id="disabledRadio" labelText="Disabled Radio" isDisabled />;
+export default () => <Radio id="disabled" labelText="Disabled Radio" isDisabled />;

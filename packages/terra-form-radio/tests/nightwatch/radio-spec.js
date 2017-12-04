@@ -5,10 +5,10 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default form-radio': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/form-radio-tests/default`)
-      .expect.element('.default').to.be.present;
+      .expect.element('#default').to.be.present;
   },
   'Displays a disabled Checkbox': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-checkbox-tests/disabled`);
+    browser.url(`${browser.launchUrl}/#/tests/form-radio-tests/disabled`);
     browser.expect.element('#disabled').to.not.be.enabled;
     browser.click('#disabled');
     browser.expect.element('#disabled').to.not.be.selected;
@@ -27,7 +27,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   },
 
   'Displays a long text Radio': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-radio-tests/longText`);
+    browser.url(`${browser.launchUrl}/#/tests/form-radio-tests/long-text`);
     browser.expect.element('[for="longText"]').text.to.equal(
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ' +
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua');
