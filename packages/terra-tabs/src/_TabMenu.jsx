@@ -74,18 +74,18 @@ class TabMenu extends React.Component {
     let menuActive = false;
 
     React.Children.forEach(this.props.children, (child) => {
-      const { childLabel, customDisplay, icon, ...otherProps } = child.props;
+      const { label, customDisplay, icon, isIconOnly, ...otherProps } = child.props;
       let isSelected = false;
 
       if (this.props.activeKey === child.key) {
-        menuToggleText = child.props.label;
+        menuToggleText = label;
         isSelected = true;
         menuActive = true;
       }
       menuItems.push((
         <Menu.Item
           {...otherProps}
-          text={child.props.label}
+          text={label}
           onClick={this.wrapOnClick(child)}
           isSelected={isSelected}
           isSelectable
@@ -106,7 +106,7 @@ class TabMenu extends React.Component {
         className={cx(['tab-menu', { 'is-active': menuActive }])}
       >
         {menuToggleText}
-        <IconCaretDown />
+        <IconCaretDown height="0.571rem" width="0.571rem" />
         <Menu
           onRequestClose={this.handleOnRequestClose}
           targetRef={this.getTargetRef}

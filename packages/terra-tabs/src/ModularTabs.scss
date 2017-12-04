@@ -13,57 +13,111 @@
 
   .modular-left-aligned,
   .modular-centered {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--terra-tabs-modular-background-color, #fff);
 
-    .collapsible-tabs-container,
     .collapsed-tabs-container {
-      border-bottom-color: #8bc2f9;
+      border-bottom-color: var(--terra-tabs-collapsed-modular-tab-bar-border-color, #dddedf);
       border-bottom-style: solid;
-      border-bottom-width: 1px;
-      padding: 0 0.714rem;
+      border-bottom-width: var(--terra-tabs-collapsed-modular-tab-bar-border-width, 1px);
+
+      .tab-menu:focus {
+        outline: none;
+      }
+
+      .tab-menu.is-active {
+        background-size: 0 0;
+        color: var(--terra-tabs-modular-color, #000);
+        font-weight: normal;
+      }
+
+      .tab-menu:hover {
+        background-size: 0 0;
+        color: var(--terra-tabs-modular-color, #000);
+      }
+    }
+
+    .collapsible-tabs-container {
+      border-bottom-color: var(--terra-tabs-modular-tab-bar-border-color, #dddedf);
+      border-bottom-style: solid;
+      border-bottom-width: var(--terra-tabs-modular-tab-bar-border-width, 1px);
+      padding: var(--terra-tabs-modular-tab-bar-padding, 0);
+
+      .tab-menu:focus {
+        background-color: var(--terra-tabs-modular-focus-background-color, #fff);
+        border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
+        outline: none;
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+      }
+
+      &:focus .is-active,
+      .tab-menu:focus.is-active {
+        background-color: var(--terra-tabs-modular-active-focus-background-color, #fff);
+        background-image: var(--terra-tabs-modular-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+        border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
+        z-index: 1;
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+      }
+    }
+
+    // Extended Tabs
+    &.tab-fill .collapsible-tabs-container {
+      justify-content: space-around;
+
+      .tab,
+      .tab-menu {
+        flex: var(--terra-tabs-modular-extended-flex, 0 0 auto);
+      }
     }
 
     .tab,
     .tab-menu {
-      background-color: rgba(0, 0, 0, 0);
-      color: #8bc2f9;
+      background-color: #fff;
+      background-image: var(--terra-tabs-modular-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      background-position: var(--terra-tabs-modular-background-position, 0 100%);
+      background-repeat: no-repeat;
+      background-size: var(--terra-tabs-modular-background-size, 0 2px);
+      color: var(--terra-tabs-modular-color, #007ee0);
 
-      &.is-active,
+      &.is-active {
+        background-size: var(--terra-tabs-modular-active-background-size, 100% 2px);
+        color: var(--terra-tabs-modular-active-color, #000);
+        font-weight: var(--terra-tabs-modular-active-font-weight, bold);
+      }
+
       &:hover {
-        color: #4a90e2;
+        background-image: var(--terra-tabs-modular-hover-background-image, linear-gradient(to bottom, #c8cacb, #c8cacb));
+        background-size: var(--terra-tabs-modular-hover-background-size, 100% 2px);
+        color: var(--terra-tabs-modular-hover-color, #000);
       }
 
       &.is-disabled,
       &.is-disabled:hover {
-        color: rgba(0, 0, 0, 0.3);
+        background-size: 0 0;
+        color: var(--terra-tabs-modular-disabled-color, #c8cacb);
       }
     }
 
-    .tab-menu:focus {
-      background-color: rgba(139, 194, 249, 0.3);
-      border-radius: 3px;
-      color: #4a90e2;
-      outline: none;
+    .selection-bar {
+      background-color: var(--terra-tabs-modular-selection-bar-color, #fff);
+      display: block;
+      height: var(--terra-tabs-modular-selection-bar-height, 0);
+      position: relative;
+      top: -2px;
+      transition: var(--terra-tabs-modular-selection-bar-transition, none);
     }
-
-    .collapsible-tabs-container:focus .is-active {
-      background-color: rgba(139, 194, 249, 0.3);
-      border-radius: 3px;
-    }
-
-    &.tab-fill .collapsible-tabs-container {
-      justify-content: space-around;
-    }
-  }
-
-
-
-  .selection-bar {
-    background-color: #4a90e2;
-    display: block;
-    height: 2px;
-    position: relative;
-    top: -2px;
-    transition: transform 0.3s ease-in-out;
   }
 }

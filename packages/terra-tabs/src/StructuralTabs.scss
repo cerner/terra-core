@@ -1,57 +1,59 @@
 :local {
   .structural {
     .collapsed-tabs-container {
-      border-bottom-color: #8bc2f9;
+      border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-color, #dddedf);
       border-bottom-style: solid;
       border-bottom-width: 1px;
-      border-radius: 3px 3px 0 0;
-      .tab-menu {
-        background-image: none;
+      border-radius: var(--terra-tabs-structural-collapsed-menu-bar-border-radius, 0);
+
+      .tab-menu:focus {
+        outline: none;
+      }
+
+      .tab-menu.is-active {
+        background-size: 0 0;
+        font-weight: normal;
+      }
+
+      .tab-menu:hover {
+        background-size: 0 0;
       }
     }
 
-    .tab,
-    .tab-menu {
-      background-color: rgba(255, 255, 255, 0.5);
-      background-image: linear-gradient(to bottom, #4a90e2, #4a90e2);
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 0 3px;
-      border-radius: 3px 3px 0 0;
-      color: #4a90e2;
-      margin-left: 2px;
-      transition-duration: 0.3s;
-      transition-property: background-size;
-      transition-timing-function: ease;
+    .collapsible-tabs-container {
+      border-bottom-color: var(--terra-tabs-structural-menu-bar-border-color, #dddedf);
+      border-bottom-style: solid;
+      border-bottom-width: var(--terra-tabs-structural-menu-bar-border-width, 1px);
 
-      &.is-active {
-        background-color: rgba(255, 255, 255, 0.8);
-        background-size: 100% 3px;
+      &:focus .is-active,
+      .tab-menu:focus.is-active {
+        background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
+        background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+        color: var(--terra-tabs-structural-active-focus-color, initial);
+        z-index: 1;
+
+         [dir=rtl] & {
+           box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+         }
+
+         [dir=ltr] & {
+           box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+         }
       }
 
-      &.is-disabled,
-      &.is-disabled:hover {
-        background-color: rgba(255, 255, 255, 0.4);
-        color: #8bc2f9;
-        cursor: default;
-      }
+      .tab-menu:focus {
+        background-color: var(--terra-tabs-structural-focus-background-color, #fff);
+        color: var(--terra-tabs-structural-focus-color, initial);
+        outline: none;
 
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.7);
-      }
+        [dir=rtl] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        }
 
-      &:focus {
-        background-color: #fff;
+        [dir=ltr] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        }
       }
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-
-    .pane-content {
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 0 0 3px 3px;
     }
 
     //Extended Tabs
@@ -60,6 +62,64 @@
       .tab-menu {
         flex: 1 1 auto;
       }
+    }
+
+    .tab,
+    .tab-menu {
+      background-color: var(--terra-tabs-structural-background-color, #fff);
+      background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      background-position: var(--terra-tabs-structural-background-position, 0 100%);
+      background-repeat: no-repeat;
+      background-size: var(--terra-tabs-structural-background-size, 0 2px);
+      border-color: var(--terra-tabs-structural-border-color, #dedfe0);
+      border-radius: var(--terra-tabs-structural-border-radius, 0);
+      border-style: solid;
+      border-width: var(--terra-tabs-structural-border-width, 0 1px 0 0);
+      color: var(--terra-tabs-structural-color, #007ee0);
+      margin-left: var(--terra-tabs-structural-margin-between-tabs, 0);
+      transition-duration: var(--terra-tabs-structural-transition-duration, 0);
+      transition-property: background-size;
+      transition-timing-function: var(--terra-tabs-structural-transition-timing, ease);
+
+      &.is-active {
+        background-color: var(--terra-tabs-structural-active-background-color, #fff);
+        background-size: var(--terra-tabs-structural-active-background-size, 100% 2px);
+        color: var(--terra-tabs-structural-active-color, #000);
+        font-weight: var(--terra-tabs-structural-active-font-weight, bold);
+      }
+
+      &.is-disabled,
+      &.is-disabled:hover {
+        background-color: var(--terra-tabs-structural-disabled-background-color, #fff);
+        background-size: 0 0;
+        color: var(--terra-tabs-structural-disabled-color, #909496);
+        cursor: default;
+        opacity: var(--terra-tabs-structural-disabled-opacity, 1);
+      }
+
+      &.is-disabled .label,
+      &.is-disabled svg {
+        opacity: var(--terra-tabs-structural-disabled-label-opacity, 1);
+      }
+
+      &:hover {
+        background-color: var(--terra-tabs-structural-hover-background-color, #fff);
+        background-image: var(--terra-tabs-structural-hover-background-image, linear-gradient(to bottom, #c8cacb, #c8cacb));
+        background-size: var(--terra-tabs-structural-hover-background-size, 100% 2px);
+        color: var(--terra-tabs-structural-hover-color, #000);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        border-width: var(--terra-tabs-structural-last-tab-border-width, 0);
+      }
+    }
+
+    .pane-content {
+      border-radius: var(--terra-tabs-structural-pane-content-border-radius, 0);
     }
   }
 }
