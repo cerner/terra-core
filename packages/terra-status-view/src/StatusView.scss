@@ -3,8 +3,8 @@
 :local {
   .status-view {
     height: 100%;
-    padding-bottom: var(--terra-status-view-padding-bottom, 10px);
-    padding-top: var(--terra-status-view-padding-top, 30px);
+    padding-bottom: var(--terra-status-view-padding-bottom, 20px);
+    padding-top: var(--terra-status-view-padding-top, 20px);
     width: 100%;
   }
 
@@ -78,13 +78,13 @@
     font-family: var(--terra-status-view-message-font-family, 'Roboto');
     font-size: var(--terra-status-view-message-font-size, 14px);
     padding-top: var(--terra-status-view-message-padding-top, 10px);
-    text-align: var(--terra-status-view-message-text-align, left);
+    text-align: var(--terra-status-view-message-text-align, center);
     width: 100%;
   }
 
   .divider {
     border-color: var(--terra-status-view-divider-color, #e8e9ea);
-    display: var(--terra-status-view-divider-display, block);
+    display: var(--terra-status-view-divider-display, none);
     padding-top: var(--terra-status-view-divider-padding-top, 20px);
     width: 100%;
   }
