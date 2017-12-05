@@ -11,12 +11,19 @@ Tabs are meant for organizing content that doesn’t need to be compared or acce
 
 ## Usage
 
+### Controlled
 ```jsx
 import React from 'react';
 import Tabs from 'terra-tabs';
 
-<Tabs {props...} />
+<Tabs>
+</Tabs>
 ```
+
+### Uncontrolled
+
+### Note
+The tabs component will apply the prop `isLabelHidden` to the component passed as content for Tabs.Pane. This will indicate if any of the tabs are icon only or have been truncated. When this prop is true a header should be rendered in the content area to for accessibility purposes.
 
 ## Component Features
 

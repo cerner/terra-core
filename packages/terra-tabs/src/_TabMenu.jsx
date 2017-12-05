@@ -9,14 +9,34 @@ import TabUtils from './TabUtils';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Key of the current active tab.
+   */
   activeKey: PropTypes.string,
+
+  /**
+   * Tabs that should be displayed collapsed as selectable menu items.
+   */
   children: PropTypes.node,
+
+  /**
+   * Ref callback for menu toggle.
+   */
   refCallback: PropTypes.func,
 };
 
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
+};
+
 class TabMenu extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.handleOnRequestClose = this.handleOnRequestClose.bind(this);
     this.handleOnClick = this.handleOnClick.bind(this);
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
@@ -69,8 +89,9 @@ class TabMenu extends React.Component {
   }
 
   render() {
+    const { intl } = this.context;
     const menuItems = [];
-    let menuToggleText = 'Menu';
+    let menuToggleText = intl.formatMessage({ id: 'Terra.tabs.more' });
     let menuActive = false;
 
     React.Children.forEach(this.props.children, (child) => {
@@ -106,7 +127,7 @@ class TabMenu extends React.Component {
         className={cx(['tab-menu', { 'is-active': menuActive }])}
       >
         {menuToggleText}
-        <IconCaretDown height="0.571rem" width="0.571rem" />
+        <IconCaretDown />
         <Menu
           onRequestClose={this.handleOnRequestClose}
           targetRef={this.getTargetRef}
@@ -120,6 +141,7 @@ class TabMenu extends React.Component {
   }
 }
 
+TabMenu.contextTypes = contextTypes;
 TabMenu.propTypes = propTypes;
 
 export default TabMenu;

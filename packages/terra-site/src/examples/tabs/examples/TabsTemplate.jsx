@@ -4,9 +4,7 @@ import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Status from 'terra-status';
 import Tabs from 'terra-tabs';
-
-
-const paneContentStyle = { height: '200px', padding: '10px' };
+import TabContent from './TabContentTemplate';
 
 const propTypes = {
   tabFill: PropTypes.bool,
@@ -16,17 +14,13 @@ const propTypes = {
 const StructuralTabsExample = (props) => {
   const labelTab = (
     <Tabs.Pane label="Tab with label" key="LabelTab">
-      <div style={paneContentStyle}>
-        Content for the label tab.
-      </div>
+      <TabContent label="Tab with label" />
     </Tabs.Pane>
   );
 
   const iconTab = (
     <Tabs.Pane label="Tab with icon" icon={<IconBriefcase />} key="IconTab">
-      <div style={paneContentStyle}>
-        Content for the icon tab.
-      </div>
+      <TabContent label="Tab with icon" />
     </Tabs.Pane>
   );
 
@@ -40,9 +34,7 @@ const StructuralTabsExample = (props) => {
       label="Custom display"
       key="CustomTab"
     >
-      <div style={paneContentStyle}>
-        Content for the custom display tab.
-      </div>
+      <TabContent label="Custom display" />
     </Tabs.Pane>
   );
 
@@ -51,11 +43,8 @@ const StructuralTabsExample = (props) => {
       icon={<IconBriefcase />}
       label="Icon Only"
       key="IconOnlyTab"
-      isIconOnly
     >
-      <div style={paneContentStyle}>
-        Content for the icon only tab.
-      </div>
+      <TabContent label="Icon Only" />
     </Tabs.Pane>
   );
 
@@ -64,9 +53,7 @@ const StructuralTabsExample = (props) => {
       label="Tab 1"
       key="Tab1"
     >
-      <div style={paneContentStyle}>
-        Content for tab 1.
-      </div>
+      <TabContent label="Tab 1" />
     </Tabs.Pane>
   );
 
@@ -75,9 +62,7 @@ const StructuralTabsExample = (props) => {
       label="Tab 2"
       key="Tab2"
     >
-      <div style={paneContentStyle}>
-        Content for tab 2.
-      </div>
+      <TabContent label="Tab 2" />
     </Tabs.Pane>
   );
 

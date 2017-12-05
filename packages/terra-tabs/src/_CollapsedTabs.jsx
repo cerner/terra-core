@@ -8,7 +8,14 @@ import styles from './Tabs.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Key of the current active tab.
+   */
   activeKey: PropTypes.string,
+
+  /**
+   * Tabs to display in menu.
+   */
   children: PropTypes.node,
 };
 

@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable max-nesting-depth
 :local {
   .structural {
     .collapsed-tabs-container {
@@ -24,40 +26,10 @@
       border-bottom-color: var(--terra-tabs-structural-menu-bar-border-color, #dddedf);
       border-bottom-style: solid;
       border-bottom-width: var(--terra-tabs-structural-menu-bar-border-width, 1px);
-
-      &:focus .is-active,
-      .tab-menu:focus.is-active {
-        background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
-        background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
-        color: var(--terra-tabs-structural-active-focus-color, initial);
-        z-index: 1;
-
-         [dir=rtl] & {
-           box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
-         }
-
-         [dir=ltr] & {
-           box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
-         }
-      }
-
-      .tab-menu:focus {
-        background-color: var(--terra-tabs-structural-focus-background-color, #fff);
-        color: var(--terra-tabs-structural-focus-color, initial);
-        outline: none;
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
-        }
-      }
     }
 
     //Extended Tabs
-    &.tab-fill {
+    &.tab-fill .collapsible-tabs-container:not(.is-calculating) {
       .tab,
       .tab-menu {
         flex: 1 1 auto;
@@ -115,6 +87,37 @@
 
       &:last-child {
         border-width: var(--terra-tabs-structural-last-tab-border-width, 0);
+      }
+
+      .collapsible-tabs-container:focus .is-active,
+      .tab-menu:focus.is-active {
+        background-color: var(--terra-tabs-structural-active-focus-background-color, #fff);
+        background-image: var(--terra-tabs-structural-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+        color: var(--terra-tabs-structural-active-focus-color, initial);
+        position: relative;
+        z-index: 1;
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+      }
+
+      .tab-menu:focus {
+        background-color: var(--terra-tabs-structural-focus-background-color, #fff);
+        color: var(--terra-tabs-structural-focus-color, initial);
+        outline: none;
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+        }
       }
     }
 

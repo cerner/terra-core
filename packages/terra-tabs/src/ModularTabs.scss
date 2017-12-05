@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable max-nesting-depth
 :local {
   .modular-centered {
     .collapsible-tabs-container {
@@ -41,45 +43,15 @@
       border-bottom-style: solid;
       border-bottom-width: var(--terra-tabs-modular-tab-bar-border-width, 1px);
       padding: var(--terra-tabs-modular-tab-bar-padding, 0);
-
-      .tab-menu:focus {
-        background-color: var(--terra-tabs-modular-focus-background-color, #fff);
-        border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
-        outline: none;
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
-        }
-      }
-
-      &:focus .is-active,
-      .tab-menu:focus.is-active {
-        background-color: var(--terra-tabs-modular-active-focus-background-color, #fff);
-        background-image: var(--terra-tabs-modular-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
-        border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
-        z-index: 1;
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
-        }
-      }
     }
 
     // Extended Tabs
-    &.tab-fill .collapsible-tabs-container {
+    &.tab-fill .collapsible-tabs-container:not(.is-calculating) {
       justify-content: space-around;
 
       .tab,
       .tab-menu {
-        flex: var(--terra-tabs-modular-extended-flex, 0 0 auto);
+        flex: var(--terra-tabs-modular-extended-flex, 0 1 auto);
       }
     }
 
@@ -108,6 +80,37 @@
       &.is-disabled:hover {
         background-size: 0 0;
         color: var(--terra-tabs-modular-disabled-color, #c8cacb);
+      }
+    }
+
+    .tab-menu:focus {
+      background-color: var(--terra-tabs-modular-focus-background-color, #fff);
+      border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
+      outline: none;
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+    }
+
+    .collapsible-tabs-container:focus .is-active,
+    .tab-menu:focus.is-active {
+      background-color: var(--terra-tabs-modular-active-focus-background-color, #fff);
+      background-image: var(--terra-tabs-modular-background-image, linear-gradient(to bottom, #007ee0, #007ee0));
+      border-radius: var(--terra-tabs-modular-focus-border-radius, 0);
+      position: relative;
+      z-index: 1;
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-tabs-keyboard-focus-rtl-box-shadow, 0 0 1px 2px #4a90e2);
+      }
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
       }
     }
 

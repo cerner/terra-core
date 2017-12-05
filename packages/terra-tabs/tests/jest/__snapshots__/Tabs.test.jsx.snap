@@ -1,27 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TabContainer should render a default component 1`] = `
+exports[`Tabs should render a default component 1`] = `
 <ContentContainer
-  className="tabs-container modular"
+  className="tabs-container modular-centered"
   fill={false}
   header={
-    <CollapsibleTabs
-      activeIndex={0}
-      activeKey="default"
-      onChange={[Function]}
-      variant="modular"
-    >
-      <TabPane
-        aria-selected={true}
-        className="is-active"
-        label="Default"
-        onClick={[Function]}
-      />
-    </CollapsibleTabs>
+    <ResponsiveElement
+      defaultElement={
+        <CollapsedTabs
+          activeKey="default"
+        >
+          <TabPane
+            aria-selected={true}
+            className="is-active"
+            label="Default"
+            onClick={[Function]}
+          />
+        </CollapsedTabs>
+      }
+      responsiveTo="parent"
+      tiny={
+        <CollapsibleTabs
+          activeIndex={0}
+          activeKey="default"
+          onChange={[Function]}
+          onTruncationChange={[Function]}
+          variant="modular-centered"
+        >
+          <TabPane
+            aria-selected={true}
+            className="is-active"
+            label="Default"
+            onClick={[Function]}
+          />
+        </CollapsibleTabs>
+      }
+    />
   }
 >
   <div
-    className="tab-content"
+    className="pane-content"
   />
 </ContentContainer>
 `;

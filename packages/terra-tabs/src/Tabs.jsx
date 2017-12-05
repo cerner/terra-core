@@ -50,7 +50,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  variant: 'modular-left-aligned',
+  variant: 'modular-centered',
   tabFill: false,
   fill: false,
 };
@@ -61,9 +61,11 @@ class Tabs extends React.Component {
     this.getInitialState = this.getInitialState.bind(this);
     this.getActiveTabIndex = this.getActiveTabIndex.bind(this);
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleTruncationChange = this.handleTruncationChange.bind(this);
     this.wrapPaneOnClick = this.wrapPaneOnClick.bind(this);
     this.state = {
       activeKey: this.getInitialState(),
+      isLabelTruncated: false,
     };
   }
 
@@ -101,6 +103,10 @@ class Tabs extends React.Component {
     }
   }
 
+  handleTruncationChange(isLabelTruncated) {
+    this.setState({ isLabelTruncated });
+  }
+
   wrapPaneOnClick(pane) {
     return (event) => {
       this.handleOnChange(event, pane);
@@ -131,6 +137,7 @@ class Tabs extends React.Component {
     ]);
 
     let content = null;
+    let isIconOnly = false;
     const clonedPanes = [];
     React.Children.forEach(children, (child) => {
       let isActive = false;
@@ -138,6 +145,11 @@ class Tabs extends React.Component {
         isActive = true;
         content = child.props.children;
       }
+
+      if (child.props.isIconOnly) {
+        isIconOnly = true;
+      }
+
       clonedPanes.push(React.cloneElement(child, {
         className: cx({ 'is-active': isActive }),
         'aria-selected': isActive,
@@ -145,11 +157,17 @@ class Tabs extends React.Component {
       }));
     });
 
+    content = React.Children.map(content, contentItem => (
+      React.cloneElement(contentItem, { isLabelHidden: isIconOnly || this.state.isLabelTruncated })
+    ));
+
+
     const collasibleTabs = (
       <CollapsibleTabs
         activeKey={activeKey || this.state.activeKey}
         activeIndex={this.getActiveTabIndex()}
         onChange={this.handleOnChange}
+        onTruncationChange={isIconOnly ? null : this.handleTruncationChange}
         variant={variant}
       >
         {clonedPanes}
