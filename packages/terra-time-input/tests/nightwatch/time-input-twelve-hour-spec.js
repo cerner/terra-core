@@ -20,7 +20,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Meridiem input switches to a.m. when up is pressed on the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
+    browser.click('#timeInput input[value="a.m."]');
     browser.keys(browser.Keys.UP_ARROW);
     browser.expect.element('#timeInput select[name="terra-time-meridiem-time-input"]').to.have.attribute('value').equals('a.m.');
   },
@@ -28,7 +28,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Meridiem input switches to p.m. when down is pressed on the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
+    browser.click('#timeInput input[value="a.m."]');
     browser.keys(browser.Keys.DOWN_ARROW);
     browser.expect.element('#timeInput select[name="terra-time-meridiem-time-input"]').to.have.attribute('value').equals('p.m.');
   },
@@ -138,8 +138,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.keys('730p');
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
-    browser.keys(browser.Keys.RIGHT_ARROW);
-    browser.keys(browser.Keys.BACK_SPACE);
+    browser.keys('0');
     browser.keys(browser.Keys.TAB);
 
     browser.assert.containsText('#time-input-value', '12:30');
@@ -148,8 +147,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Toggles to the minute input when left is pressed from the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
-
+    browser.click('#timeInput input[value="a.m."]');
     browser.keys(browser.Keys.LEFT_ARROW);
     browser.keys('34p');
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('value').equals('34');
@@ -158,7 +156,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Toggles to the minute input when backspace is pressed from the meridiem input': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour`);
 
-    browser.useXpath().click('//*[@id="timeInput"]/span/span[text()="a.m."]').useCss();
+    browser.click('#timeInput input[value="a.m."]');
 
     browser.keys(browser.Keys.BACK_SPACE);
     browser.keys('34p');

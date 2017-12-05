@@ -89,6 +89,8 @@ class TimeInput extends React.Component {
     this.handleHourInputKeyDown = this.handleHourInputKeyDown.bind(this);
     this.handleMinuteInputKeyDown = this.handleMinuteInputKeyDown.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
+    this.handleHourFocus = this.handleHourFocus.bind(this);
+    this.handleMinuteFocus = this.handleMinuteFocus.bind(this);
     this.handleHourBlur = this.handleHourBlur.bind(this);
     this.handleMinuteBlur = this.handleMinuteBlur.bind(this);
     this.handleMeridiemChange = this.handleMeridiemChange.bind(this);
@@ -118,6 +120,8 @@ class TimeInput extends React.Component {
       minute: TimeUtil.splitMinute(value),
       isFocused: false,
       meridiem,
+      hourInitialFocused: false,
+      minuteInitialFocused: false,
       meridiemFocused: false,
     };
   }
@@ -159,16 +163,31 @@ class TimeInput extends React.Component {
     this.setState({ isFocused: true });
   }
 
+  handleMinuteFocus() {
+    this.handleFocus(event);
+    this.setState({ minuteInitialFocused: true });
+    this.minuteInput.textInput.setSelectionRange(0, this.minuteInput.textInput.value.length);
+  }
+
+  handleHourFocus() {
+    this.handleFocus(event);
+    this.setState({ hourInitialFocused: true });
+    this.hourInput.textInput.setSelectionRange(0, this.hourInput.textInput.value.length);
+  }
+
   handleHourBlur(event) {
     this.handleBlur(event, TimeUtil.inputType.HOUR);
+    this.setState({ hourInitialFocused: false });
   }
 
   handleMinuteBlur(event) {
     this.handleBlur(event, TimeUtil.inputType.MINUTE);
+    this.setState({ minuteInitialFocused: false });
   }
 
   handleBlur(event, type) {
     this.setState({ isFocused: false });
+
     let stateValue = event.target.value;
 
     // Prepend a 0 to the value when losing focus and the value is single digit.
@@ -219,7 +238,7 @@ class TimeInput extends React.Component {
       }
     }
 
-    if (inputValue === '00') {
+    if (inputValue === '00' && this.props.variant === TimeUtil.FORMAT_12_HOUR) {
       inputValue = '12';
     }
 
@@ -401,10 +420,12 @@ class TimeInput extends React.Component {
       this.setState({
         hour: timeValue,
         meridiem,
+        hourInitialFocused: false,
       });
     } else {
       this.setState({
         minute: timeValue,
+        minuteInitialFocused: false,
       });
     }
 
@@ -614,7 +635,7 @@ class TimeInput extends React.Component {
           {...inputAttributes}
           {...minuteAttributes}
           ref={(inputRef) => { this.hourInput = inputRef; }}
-          className={cx('time-input-hour', 'desktop')}
+          className={cx('time-input-hour', 'desktop', { 'initial-focus': this.state.hourInitialFocused })}
           type="text"
           value={this.state.hour}
           name={'terra-time-hour-'.concat(name)}
@@ -622,7 +643,7 @@ class TimeInput extends React.Component {
           maxLength="2"
           onChange={this.handleHourChange}
           onKeyDown={this.handleHourInputKeyDown}
-          onFocus={this.handleFocus}
+          onFocus={this.handleHourFocus}
           onBlur={this.handleHourBlur}
           size="2"
           pattern="\d*"
@@ -632,7 +653,7 @@ class TimeInput extends React.Component {
           {...inputAttributes}
           {...minuteAttributes}
           ref={(inputRef) => { this.minuteInput = inputRef; }}
-          className={cx('time-input-minute', 'desktop')}
+          className={cx('time-input-minute', 'desktop', { 'initial-focus': this.state.minuteInitialFocused })}
           type="text"
           value={this.state.minute}
           name={'terra-time-minute-'.concat(name)}
@@ -640,22 +661,22 @@ class TimeInput extends React.Component {
           maxLength="2"
           onChange={this.handleMinuteChange}
           onKeyDown={this.handleMinuteInputKeyDown}
-          onFocus={this.handleFocus}
+          onFocus={this.handleMinuteFocus}
           onBlur={this.handleMinuteBlur}
           size="2"
           pattern="\d*"
         />
         {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
           [
-            <span
+            <Input
               {...inputAttributes}
               className={cx(['meridiem-display', { focused: this.state.meridiemFocused }])}
               onFocus={this.meridiemFocus}
               key="meridiem_display"
               tabIndex="-1"
-            >
-              <span className={cx(['meridiem-display-text'])}>{this.state.meridiem}</span>
-            </span>,
+              value={this.state.meridiem}
+              readOnly
+            />,
             <div
               style={{ position: 'relative' }}
               key="meridiem_select_box"

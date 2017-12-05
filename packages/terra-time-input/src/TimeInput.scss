@@ -113,21 +113,33 @@
       width: 1.9em;
 
       &:focus {
-        background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));
-        background-size: 0 0;
         border-color: transparent;
-        box-shadow: unset;
+        box-shadow: none;
       }
 
       &::selection {
         background-color: transparent;
       }
+
+      &.initial-focus {
+        background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));
+        background-size: 0 0;
+        border-color: transparent;
+        box-shadow: unset;
+      }
     }
   }
 
+  .time-input-hour.desktop {
+    min-width: 1.7em;
+    text-align: right;
+    width: 1.7em;
+  }
+
   .time-input-minute.desktop {
-    min-width: 2.3em;
-    width: 2.3em;
+    min-width: 2.1em;
+    text-align: left;
+    width: 2.1em;
   }
 
   .time-spacer {
@@ -152,10 +164,8 @@
     border-width: var(--terra-time-input-keyboard-border-width, 1px);
     box-sizing: border-box;
     display: inline-block;
-    height: 100%;
-    line-height: var(--terra-time-input-meridiem-display-line-height, 1.429);
-    margin-left: var(--terra-time-input-meridiem-display-left-margin, 0.357em);
-    padding-left: var(--terra-time-input-meridiem-padding-bottom, 0);
+    margin-left: var(--terra-time-input-meridiem-display-left-margin, 0);
+    padding-bottom: var(--terra-time-input-meridiem-padding-bottom, 0);
     padding-left: var(--terra-time-input-meridiem-padding-left, 0);
     padding-right: var(--terra-time-input-meridiem-padding-right, 0);
     padding-top: var(--terra-time-input-meridiem-padding-top, 0);
@@ -166,10 +176,6 @@
     &.focused {
       background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));
     }
-  }
-
-  .meridiem-display-text {
-    vertical-align: sub;
   }
 
   .meridiem-button {

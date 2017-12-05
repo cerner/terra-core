@@ -280,18 +280,16 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     type="text"
     value=""
   />
-  <span
+  <Input
     className="meridiem-display"
     key="meridiem_display"
+    name={null}
     onFocus={[Function]}
+    readOnly={true}
+    required={false}
     tabIndex="-1"
-  >
-    <span
-      className="meridiem-display-text"
-    >
-      a.m.
-    </span>
-  </span>
+    value="a.m."
+  />
   <div
     key="meridiem_select_box"
     style={
