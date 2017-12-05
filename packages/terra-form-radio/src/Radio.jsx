@@ -159,8 +159,17 @@ class Radio extends React.Component {
       { 'is-hidden': isLabelHidden },
     ]);
 
-    let labelTextContainer = null;
+    const outerRingClasses = cx([
+      'outer-ring',
+    ]);
+
+    const innerRingClasses = cx([
+      'inner-ring',
+    ]);
+
     let inputContainer = null;
+    let customRadioContainer = null;
+    let labelTextContainer = null;
     if (isLabelHidden) {
       inputContainer = (<input
         {...controlInputAttrs}
@@ -175,7 +184,8 @@ class Radio extends React.Component {
         onBlur={this.onBlur}
         className={inputClasses}
       />);
-      labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses} />;
+      // customRadioContainer = (<span {...labelTextAttrs} className={outerRingClasses}>
+      //   <span className={innerRingClasses} /></span>);
     } else {
       inputContainer = (<input
         {...controlInputAttrs}
@@ -189,14 +199,17 @@ class Radio extends React.Component {
         onBlur={this.onBlur}
         className={inputClasses}
       />);
-      labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>;
+      labelTextContainer = <span className={labelTextClasses}>{labelText}</span>;
     }
+    customRadioContainer = (<span {...labelTextAttrs} className={outerRingClasses}>
+      <span className={innerRingClasses} /></span>);
 
     return (
       <div className={radioClasses}>
         <div className={focusContainer}>
           <label htmlFor={id} className={labelClasses}>
             {inputContainer}
+            {customRadioContainer}
             {labelTextContainer}
           </label>
         </div>
