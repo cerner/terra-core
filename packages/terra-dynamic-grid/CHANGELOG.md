@@ -4,8 +4,10 @@ ChangeLog
 Unreleased
 -----------------
 
-### Changed
-* Added child container wrapper for region.
+1.9.0 - (December 5, 2017)
+------------------
+### Fixed
+* Added child container wrapper for region. Fixes https://github.com/cerner/terra-core/issues/992.
 
 1.8.0 - (November 28, 2017)
 ------------------
