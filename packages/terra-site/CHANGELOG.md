@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added styles for terra-modal content displaying div.
+
 ### Changed
 * Place site header background on a parent div, instead of collapsible.
 
