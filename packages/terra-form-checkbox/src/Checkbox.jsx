@@ -139,7 +139,7 @@ class Checkbox extends React.Component {
 
     const focusContainer = cx([
       { 'is-hidden-focus-container': isLabelHidden },
-      { 'focus-container': isLabelHidden === false },
+      { 'focus-container': !isLabelHidden },
       { focus: this.state.focus },
     ]);
 
