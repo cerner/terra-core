@@ -48,10 +48,6 @@ class TabMenu extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.targetWidth = this.targetRef.getBoundingClientRect().width;
-  }
-
   getTargetRef() {
     return this.targetRef;
   }
@@ -123,7 +119,6 @@ class TabMenu extends React.Component {
         ref={this.setTargetRef}
         onClick={this.handleOnClick}
         onKeyDown={this.handleOnKeyDown}
-        style={{ width: this.targetWidth }}
         className={cx(['tab-menu', { 'is-active': menuActive }])}
       >
         <span>{menuToggleText}</span>

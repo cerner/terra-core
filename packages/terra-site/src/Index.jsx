@@ -116,7 +116,8 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TabsIndexRoutes from './examples/tabs/TabsIndexRoutes';
-import TabsTestRoutes from 'terra-tabs/tests/nightwatch/TabsTestRoutes';
+import TabsTestRoutes from 'terra-tabs/tests/nightwatch/Tabs/TabsTestRoutes';
+import TabPaneTestRoutes from 'terra-tabs/tests/nightwatch/TabPane/TabPaneTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
@@ -243,8 +244,9 @@ ReactDOM.render((
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
-    {TabsTestRoutes}
     {SelectTestRoutes}
     {SelectOptionTestRoutes}
+    {TabsTestRoutes}
+    {TabPaneTestRoutes}
   </Router>
 ), document.getElementById('root'));

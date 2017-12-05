@@ -100,7 +100,7 @@ const TabsComponent = (props) => {
   );
 
   return (
-    <Tabs variant="modular-centered" defaultActiveKey="LabelTab" tabFill fill>
+    <Tabs variant={Tabs.Opts.Variants.MODULAR_CENTERED} defaultActiveKey="LabelTab" tabFill fill>
       {labelTab}
       {iconTab}
       {customTab}

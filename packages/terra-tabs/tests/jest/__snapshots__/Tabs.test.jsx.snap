@@ -223,6 +223,7 @@ exports[`Tabs should render a default component 1`] = `
 exports[`Tabs should render an uncontrolled component when defaultActiveKey is set 1`] = `
 <ContentContainer
   className="tabs-container modular-centered"
+  defaultKey="default"
   fill={false}
   header={
     <ResponsiveElement
@@ -345,6 +346,7 @@ exports[`Tabs should render with tabs filled when indicated 1`] = `
       }
     />
   }
+  tabsFill={true}
 >
   <div
     className="pane-content"

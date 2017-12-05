@@ -12,11 +12,17 @@ import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
 
+const variants = {
+  MODULAR_CENTERED: 'modular-centered',
+  MODULAR_LEFT_ALIGNED: 'modular-left-aligned',
+  STRUCTURAL: 'structural',
+};
+
 const propTypes = {
   /**
-   * Tabs style. One of: "modular-centered", "modular-left-aligned", or "structural"
+   * Tabs style. One of: Tabs.Opts.Variants.MODULAR_CENTERED, Tabs.Opts.Variants.MODULAR_LEFT_ALIGNED, or Tabs.Opts.Variants.STRUCTURAL.
    */
-  variant: PropTypes.oneOf(['modular-centered', 'modular-left-aligned', 'structural']),
+  variant: PropTypes.oneOf([variants.MODULAR_CENTERED, variants.MODULAR_LEFT_ALIGNED, variants.STRUCTURAL]),
 
   /**
    * Indicates if tabs should fill the width available in the tab bar.
@@ -178,6 +184,7 @@ class Tabs extends React.Component {
 
     return (
       <ContentContainer
+        {...customProps}
         className={tabsClassNames}
         fill={fill}
         header={(
@@ -199,5 +206,8 @@ Tabs.propTypes = propTypes;
 Tabs.defaultProps = defaultProps;
 Tabs.Pane = TabPane;
 Tabs.Utils = TabUtils;
+Tabs.Opts = {
+  Variants: variants,
+};
 
 export default Tabs;
