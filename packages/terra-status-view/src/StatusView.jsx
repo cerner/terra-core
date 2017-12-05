@@ -99,43 +99,31 @@ class StatusView extends React.Component {
   }
 
   setInnerNode(node) {
-    console.log('setting inner node');
-    console.log(node);
     if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
     this.innerNode = node;
   }
 
   setTitleNode(node) {
-    console.log('setting title node');
-
     if (node === null) { return; }
     this.titleNode = node;
   }
 
   setButtonsNode(node) {
-    console.log('setting buttons node');
-
     if (node === null) { return; }
     this.buttonsNode = node;
   }
 
   setMessageNode(node) {
-    console.log('setting message node');
-
     if (node === null) { return; }
     this.messageNode = node;
   }
 
   setDividerNode(node) {
-    console.log('setting divider node');
-
     if (node === null) { return; }
     this.dividerNode = node;
   }
 
   setGlyphNode(node) {
-    console.log('setting glyph node');
-
     if (node === null) { return; }
     this.glyphNode = node;
   }
