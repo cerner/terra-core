@@ -2,7 +2,7 @@
   "name": "terra-status-view",
   "main": "lib/StatusView.js",
   "version": "1.0.0",
-  "description": "The status view component provides a customizable icon, message, and buttons in a view.",
+  "description": "The status view component provides an icon, title, message, and buttons inside a view.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -33,6 +33,9 @@
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   },
   "devDependencies": {
+    "terra-button": "^1.0.0",
+    "terra-divider": "^1.0.0",
+    "terra-mixins": "^1.11.1",
     "terra-props-table": "^1.10.1"
   },
   "peerDependencies": {
@@ -44,10 +47,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
+    "react-intl": "^2.3.0",
     "terra-base": "^2.7.0",
     "terra-button": "^1.0.0",
     "terra-divider": "^1.0.0",
-    "terra-icon": "^1.0.0",
     "terra-mixins": "^1.11.1"
   }
 }
