@@ -9,7 +9,7 @@
 | react-portal | ^3.0.0 | -- | React component for transportation of modals, lightboxes, loading bars... to document.body |
 | terra-base | ^2.8.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-content-container | ^1.13.0 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
-| terra-hookshot | ^1.4.0 | ^15.4.2 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
+| terra-hookshot | ^1.5.0 | ^15.4.2 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
 | terra-icon | ^1.15.0 | ^15.4.2 | terra-icon |
 
 ## devDependencies
@@ -28,5 +28,5 @@
 | react-dom | ^15.4.2 | ^15.6.2 | React package for working with the DOM. |
 | terra-base | ^2.8.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-content-container | ^1.13.0 | ^15.4.2 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
-| terra-hookshot | ^1.4.0 | ^15.4.2 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
+| terra-hookshot | ^1.5.0 | ^15.4.2 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
 | terra-icon | ^1.15.0 | ^15.4.2 | terra-icon |
