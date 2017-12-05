@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Add terra-time-input mock theme styles and 12 hour input examples.
+* Added styles for terra-modal content displaying div.
 
 ### Changed
 * Place site header background on a parent div, instead of collapsible.

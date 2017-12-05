@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'terra-modal';
+import styles from '../../site.scss';
 
 class ModalIsOpen extends React.Component {
   constructor() {
@@ -29,7 +30,7 @@ class ModalIsOpen extends React.Component {
           isOpen={this.state.isOpen}
           onRequestClose={this.handleCloseModal}
         >
-          <div>
+          <div className={styles['demo-modal-content']}>
             <h1>Default Modal</h1>
             <br />
             <p>You can close the modal by:</p>
