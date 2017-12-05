@@ -2,6 +2,12 @@
 // stylelint-disable max-nesting-depth
 :local {
   .structural {
+    background-color: var(--terra-tabs-structural-background-color, #fff);
+
+    :nth-child(2) {
+      background-color: var(--terra-tabs-structural-content-background-color, #fff);
+    }
+
     .collapsed-tabs-container {
       border-bottom-color: var(--terra-tabs-structural-collapsed-menu-bar-border-color, #dddedf);
       border-bottom-style: solid;

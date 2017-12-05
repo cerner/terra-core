@@ -115,6 +115,7 @@ import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-selec
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
+import TabsIndexRoutes from './examples/tabs/TabsIndexRoutes';
 import TabsTestRoutes from 'terra-tabs/tests/nightwatch/TabsTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
@@ -181,6 +182,7 @@ ReactDOM.render((
       {ListIndexRoutes}
       {IconIndexRoutes}
       {TableIndexRoutes}
+      {TabsIndexRoutes}
     </Route>
     <Route path="/tests" component={TestLinks} />
     {AlertTestRoutes}

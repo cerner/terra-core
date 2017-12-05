@@ -126,7 +126,7 @@ class TabMenu extends React.Component {
         style={{ width: this.targetWidth }}
         className={cx(['tab-menu', { 'is-active': menuActive }])}
       >
-        {menuToggleText}
+        <span>{menuToggleText}</span>
         <IconCaretDown />
         <Menu
           onRequestClose={this.handleOnRequestClose}

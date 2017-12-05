@@ -27,4 +27,9 @@ describe('TabPane', () => {
     const wrapper = shallow(<Pane label="Label" customDisplay={<div>Custom Display</div>} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render with custom props', () => {
+    const wrapper = shallow(<Pane label="Default" className="customClass" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

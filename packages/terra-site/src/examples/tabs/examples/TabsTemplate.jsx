@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
-import Status from 'terra-status';
 import Tabs from 'terra-tabs';
 import TabContent from './TabContentTemplate';
 
@@ -11,7 +10,7 @@ const propTypes = {
   variant: PropTypes.string,
 };
 
-const StructuralTabsExample = (props) => {
+const TabsTemplate = (props) => {
   const labelTab = (
     <Tabs.Pane label="Tab with label" key="LabelTab">
       <TabContent label="Tab with label" />
@@ -27,9 +26,9 @@ const StructuralTabsExample = (props) => {
   const customTab = (
     <Tabs.Pane
       customDisplay={(
-        <Status color="blue">
+        <div style={{ color: 'red' }}>
           Custom display
-        </Status>
+        </div>
       )}
       label="Custom display"
       key="CustomTab"
@@ -38,31 +37,18 @@ const StructuralTabsExample = (props) => {
     </Tabs.Pane>
   );
 
-  const iconOnlyTab = (
+  const longLabel = (
     <Tabs.Pane
-      icon={<IconBriefcase />}
-      label="Icon Only"
-      key="IconOnlyTab"
+      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      key="longLabel"
     >
-      <TabContent label="Icon Only" />
+      <TabContent label="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
     </Tabs.Pane>
   );
 
   const tab1 = (
-    <Tabs.Pane
-      label="Tab 1"
-      key="Tab1"
-    >
+    <Tabs.Pane label="Tab 1" key="tab1">
       <TabContent label="Tab 1" />
-    </Tabs.Pane>
-  );
-
-  const tab2 = (
-    <Tabs.Pane
-      label="Tab 2"
-      key="Tab2"
-    >
-      <TabContent label="Tab 2" />
     </Tabs.Pane>
   );
 
@@ -77,13 +63,12 @@ const StructuralTabsExample = (props) => {
         {iconTab}
         {customTab}
         {disabledTab}
-        {iconOnlyTab}
+        {longLabel}
         {tab1}
-        {tab2}
       </Tabs>
     </div>
   );
 };
 
-StructuralTabsExample.propTypes = propTypes;
-export default StructuralTabsExample;
+TabsTemplate.propTypes = propTypes;
+export default TabsTemplate;

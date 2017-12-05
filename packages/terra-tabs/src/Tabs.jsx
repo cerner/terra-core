@@ -7,6 +7,7 @@ import 'terra-base/lib/baseStyles';
 import TabPane from './TabPane';
 import CollapsibleTabs from './_CollapsibleTabs';
 import CollapsedTabs from './_CollapsedTabs';
+import TabUtils from './TabUtils';
 import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
@@ -72,13 +73,8 @@ class Tabs extends React.Component {
   getInitialState() {
     if (this.props.activeKey) {
       return null;
-    } else if (this.props.defaultActiveKey) {
-      return this.props.defaultActiveKey;
-    } else if (this.props.children.length) {
-      return this.props.children[0].key;
     }
-
-    return this.props.children.key;
+    return TabUtils.initialSelectedTabKey(this.props.children, this.props.defaultActiveKey);
   }
 
   getActiveTabIndex() {
@@ -97,7 +93,7 @@ class Tabs extends React.Component {
     if (!selectedPane.props.isDisabled) {
       if (this.props.onChange) {
         this.props.onChange(event, selectedPane.key);
-      } else if (this.state.activeKey !== selectedPane.key) {
+      } else if (TabUtils.shouldHandleSelection(this.state.activeKey, selectedPane.key)) {
         this.setState({ activeKey: selectedPane.key });
       }
     }
@@ -191,7 +187,7 @@ class Tabs extends React.Component {
           />
         )}
       >
-        <div className={cx('pane-content')}>
+        <div className={cx(['pane-content', { 'fill-parent': fill }])}>
           {content}
         </div>
       </ContentContainer>
@@ -202,5 +198,6 @@ class Tabs extends React.Component {
 Tabs.propTypes = propTypes;
 Tabs.defaultProps = defaultProps;
 Tabs.Pane = TabPane;
+Tabs.Utils = TabUtils;
 
 export default Tabs;

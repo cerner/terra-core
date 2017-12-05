@@ -11,27 +11,12 @@ import TabsSrc from '!raw-loader!terra-tabs/src/Tabs';
 import PaneSrc from '!raw-loader!terra-tabs/src/TabPane';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 
-// Example Files
-import TabsTemplate from './examples/TabsTemplate';
-
 const TabsExamples = () => (
-  <div style={{ backgroundColor: 'lightblue' }}>
+  <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TabsSrc} componentName="Tabs" />
     <PropsTable id="pane-props" src={PaneSrc} componentName="Tabs.Pane" />
-    <h2>Modular Tabs</h2>
-    <h3>Compact - Left Aligned</h3>
-    <TabsTemplate variant="modular-left-aligned" />
-    <h3>Compact - Centered</h3>
-    <TabsTemplate variant="modular-centered" />
-    <h3>Expanded</h3>
-    <TabsTemplate tabFill />
-    <h2>Structural Tabs</h2>
-    <h3>Compact</h3>
-    <TabsTemplate variant="structural" />
-    <h3>Expanded</h3>
-    <TabsTemplate variant="structural" tabFill />
   </div>
 );
 

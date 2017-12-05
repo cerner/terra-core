@@ -37,6 +37,19 @@ exports[`TabPane should render with a custom display when provided 1`] = `
 </div>
 `;
 
+exports[`TabPane should render with custom props 1`] = `
+<div
+  className="tab is-text-only customClass"
+  role="tab"
+>
+  <span
+    className="label"
+  >
+    Default
+  </span>
+</div>
+`;
+
 exports[`TabPane should render with icon and label 1`] = `
 <div
   className="tab"

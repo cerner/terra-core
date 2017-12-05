@@ -11,19 +11,151 @@ Tabs are meant for organizing content that doesn’t need to be compared or acce
 
 ## Usage
 
-### Controlled
-```jsx
-import React from 'react';
-import Tabs from 'terra-tabs';
+### Note
+The tabs component will apply the prop `isLabelHidden` to all components passed as content for Tabs.Pane. This will indicate if any of the tabs are icon only or have been truncated. When this prop is true a header should be rendered in the content area to for accessibility purposes.
 
-<Tabs>
-</Tabs>
+### Example Tab Content Component
+
+```jsx
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  isLabelHidden: PropTypes.bool,
+  label: PropTypes.string,
+  children: PropTypes.node,
+};
+
+
+const TabContent = ({ isLabelHidden, label, children }) => (
+  <div style={{ height: '200px', padding: '10px' }}>
+    {isLabelHidden ? <h3>{label}</h3> : null}
+    {children}
+  </div>
+);
+
+TabContent.propTypes = propTypes;
+export default TabContent;
+
 ```
 
-### Uncontrolled
+### Uncontrolled Tabs
 
-### Note
-The tabs component will apply the prop `isLabelHidden` to the component passed as content for Tabs.Pane. This will indicate if any of the tabs are icon only or have been truncated. When this prop is true a header should be rendered in the content area to for accessibility purposes.
+```jsx
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
+import Tabs from 'terra-tabs';
+import TabContent from './TabContent';
+
+const TabsComponent = (props) => {
+  const labelTab = (
+    <Tabs.Pane label="Tab with label" key="LabelTab">
+      <TabContent label="Tab with label">
+        Content for the tab with label.
+      </TabContent>
+    </Tabs.Pane>
+  );
+
+  const iconTab = (
+    <Tabs.Pane label="Tab with icon" icon={<IconBriefcase />} key="IconTab">
+      <TabContent label="Tab with icon">
+        Content for tab with icon.
+      </TabContent>
+    </Tabs.Pane>
+  );
+
+  const customTab = (
+    <Tabs.Pane
+      customDisplay={(
+        <div className="customTabDisplay">
+          Custom display
+        </div>
+      )}
+      label="Custom display"
+      key="CustomTab"
+    >
+      <TabContent label="Custom display">
+        Content for custom tab.
+      </TabContent>
+    </Tabs.Pane>
+  );
+
+  const iconOnlyTab = (
+    <Tabs.Pane
+      icon={<IconBriefcase />}
+      label="Icon Only"
+      key="IconOnlyTab"
+    >
+      <TabContent label="Icon Only">
+        Content for icon only tab.
+      </TabContent>
+    </Tabs.Pane>
+  );
+
+  const disabledTab = (
+    <Tabs.Pane label="Disabled Tab" icon={<IconSearch />} isDisabled key="DisabledTab" />
+  );
+
+  return (
+    <Tabs variant="modular-centered" defaultActiveKey="LabelTab" tabFill fill>
+      {labelTab}
+      {iconTab}
+      {customTab}
+      {disabledTab}
+      {iconOnlyTab}
+    </Tabs>
+  );
+};
+
+export default TabsComponent;
+
+```
+
+### Controlled Tabs
+
+```jsx
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
+import Tabs from 'terra-tabs';
+
+const propTypes = {
+  activeKey: PropTypes.string,
+  children: PropTypes.node,
+}
+
+class CustomTabs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeKey: Tabs.Utils.initialSelectedTabKey(this.props.children, this.props.activeKey) };
+    this.handleOnChange = this.handleOnChange.bind(this);
+  }
+
+  handleOnChange(event, selectedKey) {
+    if (Tabs.Utils.shouldHandleSelection(this.state.activeKey, selectedKey)) {
+      this.setState({ activeKey: selectedKey });
+
+      // Custom Selection Logic Here
+    }
+  }
+
+  return (
+    <Tabs
+      activeKey={this.state.activeKey}
+      onChange={this.handleOnChange}
+    >
+      {children}
+    </Tabs>
+  );
+};
+
+export default CustomTabs;
+
+```
 
 ## Component Features
 

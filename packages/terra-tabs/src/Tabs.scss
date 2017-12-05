@@ -37,8 +37,12 @@
     cursor: pointer;
     font-size: var(--terra-tabs-font-size, 0.857rem);
     line-height: var(--terra-tabs-line-hight, 1.167);
-    overflow: hidden;
     padding: var(--terra-tabs-padding, 0.429rem 1.071rem 0.357rem);
+  }
+
+  .tab,
+  .tab-menu span {
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-break: normal;
@@ -72,7 +76,13 @@
     flex: 1 1 auto;
     min-width: 7.143rem;
 
+    span {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
     svg {
+      flex: 0 0 auto;
       font-size: 0.571rem;
       margin-left: var(--terra-tabs-menu-arrow-left-margin, 0.5rem);
     }
@@ -80,10 +90,18 @@
 
   .collapsed-tabs-container .tab-menu {
     justify-content: var(--terra-tabs-menu-justify-content, flex-start);
-    white-space: normal;
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    span {
+      white-space: normal;
+    }
   }
 
   .pane-content {
     background-color: var(--terra-tabs-pane-content-background-color, #fff);
+
+    &.fill-parent {
+      height: 100%;
+    }
   }
 }
