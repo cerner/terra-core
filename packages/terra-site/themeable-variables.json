@@ -348,7 +348,6 @@
     "--terra-status-view-message-font-size": "14px",
     "--terra-status-view-message-padding-top": "10px",
     "--terra-status-view-message-text-align": "center",
-    "--terra-status-view-divider-color": "#e8e9ea",
     "--terra-status-view-divider-display": "block",
     "--terra-status-view-divider-padding-top": "20px",
     "--terra-status-view-buttons-flex-direction-small-width": "row",
