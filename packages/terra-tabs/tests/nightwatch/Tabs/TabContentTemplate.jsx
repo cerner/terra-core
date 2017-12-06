@@ -10,7 +10,7 @@ const propTypes = {
 
 const TabContentTemplate = ({ isLabelHidden, label, id }) => (
   <div style={{ padding: '10px', height: '100%' }} id={id}>
-    {isLabelHidden ? <h3>{label}</h3> : null}
+    {isLabelHidden ? <h3 className="truncationHeader">{label}</h3> : null}
     Content for <i>{label}</i>
   </div>
 );
