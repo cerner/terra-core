@@ -13,16 +13,20 @@
     .focus-container {
       display: inline-block;
       max-width: 100%;
+      padding-bottom: var(--terra-form-radio-focus-container-padding-bottom, none);
       padding-left: var(--terra-form-radio-focus-container-padding-left, 0.214rem);
       padding-right: var(--terra-form-radio-focus-container-padding-right, 0.214rem);
+      padding-top: var(--terra-form-radio-focus-container-padding-top, none);
       position: relative;
     }
 
     .is-hidden-focus-container {
       display: inline-block;
+      max-width: 100%;
       padding-bottom: var(--terra-form-radio-is-hidden-focus-container-padding-bottom, 0.017rem);
       padding-left: var(--terra-form-radio-is-hidden-focus-container-padding-left, 0.214rem);
-      padding-right: none;
+      padding-right: var(--terra-form-radio-is-hidden-focus-container-padding-right, none);
+      padding-top: var(--terra-form-radio-is-hidden-focus-container-padding-top, none);
     }
 
     /* stylelint-disable selector-max-compound-selectors */
@@ -55,52 +59,75 @@
     .label-text {
       display: block;
       margin-left: var(--terra-form-radio-label-text-margin-left, 1.4em);
-      max-width: 100%;
+      max-width: 100%; //stops content overflow on IE 10/11
     }
 
     /* Custom radio shown when theme uses custom styling */
-    .native-input + .label-text::before {
-      background-color: var(--terra-form-radio-background-color, none);
-      background-image: var(--terra-form-radio-background-image, none);
-      background-position: center center;
-      background-repeat: no-repeat;
-      border-color: var(--terra-form-radio-border-color, none);
-      border-radius: var(--terra-form-radio-border-radius, none);
-      border-style: var(--terra-form-radio-border-style, none);
-      border-width: var(--terra-form-radio-border-width, none);
-      content: '';
+    .native-input + .outer-ring {
+      background-color: var(--terra-form-radio-outer-ring-background-color, none);
+      border-color: var(--terra-form-radio-outer-ring-border-color, none);
+      border-radius: var(--terra-form-radio-outer-ring-border-radius, none);
+      border-style: var(--terra-form-radio-outer-ring-border-style, none);
+      border-width: var(--terra-form-radio-outer-ring-border-width, none);
       cursor: pointer;
       display: inline-block;
-      height: var(--terra-form-radio-height, none);
+      height: var(--terra-form-radio-outer-ring-height, none);
       left: 0;
-      margin-top: var(--terra-form-radio-margin-top, none);
+      margin-top: var(--terra-form-radio-outer-ring-margin-top, none);
       position: absolute;
       top: 0;
-      width: var(--terra-form-radio-width, none);
+      width: var(--terra-form-radio-outer-ring-width, none);
+
+      .inner-ring {
+        background-color: var(--terra-form-radio-inner-ring-background-color, none);
+        border-color: var(--terra-form-radio-inner-ring-border-color, none);
+        border-radius: 50%;
+        border-style: var(--terra-form-radio-inner-ring-border-style, none);
+        border-width: var(--terra-form-radiou-inner-border-width, none);
+        height: var(--terra-form-radio-inner-ring-height, none);
+        left: 50%;
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: var(--terra-form-radio-inner-ring-width, none);
+      }
     }
 
     /* Custom radio in checked state */
-    .native-input:checked + .label-text::before {
-      background-color: var(--terra-form-radio-checked-background-color, none);
-      border-color: var(--terra-form-radio-checked-border-color, none);
-      border-radius: var(--terra-form-radio-checked-border-radius, none);
-      border-style: var(--terra-form-radio-checked-border-style, none);
-      border-width: var(--terra-form-radio-checked-border-width, none);
-      color: var(--terra-form-radio-symbol-color, none);
-      content: var(--terra-form-radio-symbol, none);
-      height: var(--terra-form-radio-checked-height, none);
+    .native-input:checked + .outer-ring {
+      background-color: var(--terra-form-radio-checked-outer-ring-background-color, none);
+      // background-image: var(--terra-form-radio-background-image, radial-gradient(hsl(0, 0%, 100%) 65%, #a2c2e0 40%));
+      // background-position: center center;
+      // background-repeat: no-repeat;
+      border-color: var(--terra-form-radio-outer-ring-checked-border-color, none);
+      border-radius: var(--terra-form-radio-outer-ring-checked-border-radius, none);
+      border-style: var(--terra-form-radio-outer-ring-checked-border-style, none);
+      border-width: var(--terra-form-radio-outer-ring-checked-border-width, none);
+      height: var(--terra-form-radio-outer-ring-checked-height, none);
       left: 0;
-      line-height: 0.9;
-      margin-top: var(--terra-form-radio-margin-top, none);
+      line-height: 0.9; //do i need this
+      margin-top: var(--terra-form-radio-outer-ring-checked-margin-top, none);
       opacity: 1;
       position: absolute;
-      text-align: center;
       top: 0;
-      transform: scale(1);
-      transition: var(--terra-form-radio-transition, all 0.2s ease all);
       vertical-align: middle;
       visibility: visible;
-      width: var(--terra-form-radio-checked-width, none);
+      width: var(--terra-form-radio-outer-ring-checked-width, none);
+
+      .inner-ring {
+        background-color: var(--terra-form-radio-inner-ring-checked-background-color, none);
+        border-color: var(--terra-form-radio-inner-ring-checked-border-color, none);
+        border-radius: 50%;
+        border-style: var(--terra-form-radio-inner-ring-checked-border-style, none);
+        border-width: var(--terra-form-radio-inner-ring-checked-border-width, none);
+        height: var(--terra-form-radio-inner-ring-checked-height, none);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: var(--terra-form-radio-inner-ring-checked-width, none);
+      }
     }
 
     /* Hide label if isLabelHidden true */
@@ -108,7 +135,7 @@
       cursor: default;
       height: 1rem;
       margin-left: 0;
-      width: 0;
+      width: 1.25rem;
     }
     /*stylelint-disable max-nesting-depth*/
     /* Disabled native radio, label text, and custom radio styling */
@@ -123,19 +150,24 @@
         color: var(--terra-form-radio-disabled-font-color, #9b9fa1);
         cursor: default;
         opacity: var(--terra-form-radio-disabled-font-opacity, none);
+      }
 
-        &::before {
-          background-color: var(--terra-form-radio-disabled-background-color, none);
-          background-image: var(--terra-form-radio-disabled-background-image, none);
-          border-color: var(--terra-form-radio-disabled-border-color, none);
-          cursor: default;
+      >.outer-ring {
+        background-color: var(--terra-form-radio-outer-ring-disabled-background-color, none);
+        background-image: var(--terra-form-radio-outer-ring-disabled-background-image, none);
+        border-color: var(--terra-form-radio-outer-ring-disabled-border-color, none);
+        cursor: default;
+
+        > .inner-ring {
+          background-color: var(--terra-form-radio-inner-ring-disabled-background-color, none);
+          border-color: var(--terra-form-radio-inner-ring-disabled-border-color, none);
         }
       }
     }
     /* stylelint-enable max-nesting-depth */
 
     /* Focus custom radio styling */
-    .native-input:focus + .label-text::before {
+    .native-input:focus + .outer-ring {
       [dir=rtl] & {
         box-shadow: var(--terra-form-radio-focus-box-shadow-rtl, none);
       }
