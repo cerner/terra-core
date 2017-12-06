@@ -207,9 +207,12 @@ class StatusView extends React.Component {
     if (!defaultTitle) {
       defaultTitle = (variant === StatusView.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
     }
+    let dividerSection;
+    if (messageSection || buttonSection) {
+      dividerSection = <div className={cx('divider')} ref={this.setDividerNode}><Divider /></div>;
+    }
 
     const titleSection = <div className={cx('title')} ref={this.setTitleNode}>{defaultTitle}</div>;
-    const dividerSection = <div className={cx('divider')} ref={this.setDividerNode}><Divider /></div>;
 
     const statusViewClassNames = cx([
       'status-view',

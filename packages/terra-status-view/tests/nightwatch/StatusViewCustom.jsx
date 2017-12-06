@@ -6,5 +6,5 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <StatusView id="statusView" variant={StatusView.variants.CUSTOM} />
+    <StatusView id="statusView" title="Custom" variant={StatusView.variants.CUSTOM} />
   </Base>;

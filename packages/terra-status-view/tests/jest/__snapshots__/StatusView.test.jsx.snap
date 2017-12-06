@@ -43,15 +43,6 @@ exports[`should render an image with a custom status-view 1`] = `
           <div
             className="title"
           />
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
-          </div>
         </div>
       </div>
     </div>
@@ -96,15 +87,6 @@ exports[`should render an image with a no-data status view that will hide the gl
             className="title"
           >
             No Results
-          </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
           </div>
         </div>
       </div>
@@ -276,15 +258,6 @@ exports[`should render an image with a no-matching-results status-view that will
           >
             No Matching Results
           </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
-          </div>
         </div>
       </div>
     </div>
@@ -336,15 +309,6 @@ exports[`should render an image with a no-service status-view 1`] = `
             className="title"
           >
             Not Connected
-          </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
           </div>
         </div>
       </div>
@@ -398,15 +362,6 @@ exports[`should render an image with a not-authorized status-view 1`] = `
           >
             Not Authorized
           </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
-          </div>
         </div>
       </div>
     </div>
@@ -459,15 +414,6 @@ exports[`should render an image with a default status view 1`] = `
           >
             Error
           </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
-          </div>
         </div>
       </div>
     </div>
@@ -519,15 +465,6 @@ exports[`should render an image with an error status-view 1`] = `
             className="title"
           >
             Error
-          </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
           </div>
         </div>
       </div>

@@ -84,7 +84,7 @@
 
   .divider {
     border-color: var(--terra-status-view-divider-color, #e8e9ea);
-    display: var(--terra-status-view-divider-display, none);
+    display: var(--terra-status-view-divider-display, block);
     padding-top: var(--terra-status-view-divider-padding-top, 20px);
     width: 100%;
   }
