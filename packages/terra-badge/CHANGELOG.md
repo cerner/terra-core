@@ -4,6 +4,14 @@ Changelog
 Unreleased
 ----------
 
+1.14.0 - (December 5, 2017)
+------------------
+### Added
+* Added screenshot tests
+
+### Removed
+* Removed nightwatch tests
+
 1.13.0 - (November 28, 2017)
 ------------------
 ### Changed

@@ -77,6 +77,7 @@ class HookshotContent extends React.Component {
 
   handleClickOutside(event) {
     if (this.props.onOutsideClick) {
+      event.preventDefault();
       this.props.onOutsideClick(event);
     }
   }

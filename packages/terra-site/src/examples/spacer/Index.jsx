@@ -11,7 +11,6 @@ import SpacerSrc from '!raw-loader!terra-spacer/src/Spacer';
 
 // Example Files
 import Spacer from './SpacerExample';
-import SpacerResponsive from './SpacerResponsiveExample';
 
 const SpacerExamples = () => (
   <div>
@@ -23,12 +22,6 @@ const SpacerExamples = () => (
     <p>Spacing default button with a padding value of large+4 and primary button with padding value of large+2</p>
     <br />
     <Spacer />
-    <br />
-    <h2 id="default">Spacer Responsive Example</h2>
-    <br />
-    <p>Resize the browser to see responsiveness</p>
-    <br />
-    <SpacerResponsive />
   </div>
 );
 

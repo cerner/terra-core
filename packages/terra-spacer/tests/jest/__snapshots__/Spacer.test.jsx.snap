@@ -70,16 +70,6 @@ exports[`Spacer should render a spacer component with medium bottom margin 1`] =
 </div>
 `;
 
-exports[`Spacer should render a spacer component with right padding set to the given value at the given viewport size 1`] = `
-<div
-  class="spacer margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-large-plus-3"
->
-  <p>
-    Test
-  </p>
-</div>
-`;
-
 exports[`Spacer should render a spacer component with small top margin 1`] = `
 <div
   class="spacer margin-top-small margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none"

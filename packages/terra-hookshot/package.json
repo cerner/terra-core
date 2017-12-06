@@ -1,7 +1,7 @@
 {
   "name": "terra-hookshot",
   "main": "lib/Hookshot.js",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected.",
   "repository": {
     "type": "git",

@@ -8,7 +8,7 @@
 | terra-arrange | ^1.16.0 | ^15.4.2 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-base | ^2.8.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-icon | ^1.15.0 | ^15.4.2 | terra-icon |
-| terra-popup | ^1.16.0 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
+| terra-popup | ^1.17.0 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -24,4 +24,4 @@
 | terra-arrange | ^1.16.0 | ^15.4.2 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-base | ^2.8.0 | ^15.4.2 | The base component sets minimal global styles for an application. |
 | terra-icon | ^1.15.0 | ^15.4.2 | terra-icon |
-| terra-popup | ^1.16.0 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
+| terra-popup | ^1.17.0 | ^15.4.2 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
