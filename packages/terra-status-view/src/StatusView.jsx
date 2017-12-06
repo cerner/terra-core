@@ -135,6 +135,7 @@ class StatusView extends React.Component {
    */
   showAndCenterItems() {
     const viewHeight = this.innerNode.getBoundingClientRect().height;
+
     let paddingTop = 0;
     let paddingBottom = 0;
     let showGlyph = false;

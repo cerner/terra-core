@@ -42,10 +42,21 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#statusView div > :nth-child(1) > :nth-child(1)').text.to.equal('Error');
   },
 
+  'Displays an error status view with the glyph being hidden with too small of a height': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/status-view-tests/height-too-small`);
+    browser.expect.element('#statusView').to.be.present.to.equal(true);
+    browser.expect.element('#statusView').to.have.attribute('style').to.equal('border: 1px solid black; height: 150px;');
+    browser.expect.element('#statusView div').to.have.attribute('style').to.not.equal('padding-top: 0px; padding-bottom: 0px;');
+
+    browser.expect.element('#statusView div > :nth-child(1)').to.have.attribute('class').which.contains('message-content-group');
+    browser.expect.element('#statusView div > :nth-child(1) > :nth-child(1)').to.have.attribute('class').which.contains('title');
+    browser.expect.element('#statusView div > :nth-child(1) > :nth-child(1)').text.to.equal('Error');
+  },
+
   'Displays a no-data status view with the content centered in its container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/status-view-tests/centered`);
     browser.expect.element('#statusView').to.be.present.to.equal(true);
-    browser.expect.element('#statusView').to.have.attribute('style').to.equal('height: 500px;');
+    browser.expect.element('#statusView').to.have.attribute('style').to.equal('border: 1px solid black; height: 500px;');
     browser.expect.element('#statusView div').to.have.attribute('style').to.not.equal('padding-top: 0px; padding-bottom: 0px;');
 
     browser.expect.element('#statusView div > :nth-child(1) > svg').to.have.attribute('class').which.contains('no-data');
@@ -55,7 +66,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
   'Displays a no-matching-results status view with the content aligned at the top in its container': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/status-view-tests/align-top`);
     browser.expect.element('#statusView').to.be.present.to.equal(true);
-    browser.expect.element('#statusView').to.have.attribute('style').to.equal('height: 500px;');
+    browser.expect.element('#statusView').to.have.attribute('style').to.equal('border: 1px solid black; height: 500px;');
     browser.expect.element('#statusView div').to.have.attribute('style').to.equal('padding-top: 0px; padding-bottom: 0px;');
 
     browser.expect.element('#statusView div > :nth-child(1) > svg').to.have.attribute('class').which.contains('no-matching-results');
@@ -70,7 +81,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#statusView div > :nth-child(2) > :nth-child(1)').text.to.equal('Not Authorized');
   },
 
-  'Displays a not-authorized status view': (browser) => {
+  'Displays a no-service status view': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/status-view-tests/no-service`);
     browser.expect.element('#statusView').to.be.present.to.equal(true);
 

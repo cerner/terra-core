@@ -6,5 +6,5 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <StatusView id="statusView" variant={StatusView.variants.NODATA} style={{ height: '500px' }} />
+    <StatusView id="statusView" variant={StatusView.variants.NODATA} style={{ border: '1px solid black', height: '500px' }} />
   </Base>;
