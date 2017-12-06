@@ -113,6 +113,7 @@ import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelT
 import SpacerTestRoutes from 'terra-spacer/tests/nightwatch/SpacerTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import StatusViewTestRoutes from 'terra-status-view/tests/nightwatch/StatusViewTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
@@ -242,5 +243,6 @@ ReactDOM.render((
     {HookshotTestRoutes}
     {SelectTestRoutes}
     {SelectOptionTestRoutes}
+    {StatusViewTestRoutes}
   </Router>
 ), document.getElementById('root'));

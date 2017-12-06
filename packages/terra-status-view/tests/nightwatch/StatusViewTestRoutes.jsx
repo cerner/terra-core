@@ -1,0 +1,31 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
+import React from 'react';
+import { Route } from 'react-router';
+import StatusViewTests from './StatusViewTests';
+
+// Test Cases
+import StatusViewDefault from './StatusViewDefault';
+import StatusViewErrorAllProps from './StatusViewErrorAllProps';
+import StatusViewGlyphHidden from './StatusViewGlyphHidden';
+import StatusViewCenter from './StatusViewCenter';
+import StatusViewAlignTop from './StatusViewAlignTop';
+import StatusViewNotAuthorized from './StatusViewNotAuthorized';
+import StatusViewNoService from './StatusViewNoService';
+import StatusViewCustom from './StatusViewCustom';
+
+const routes = (
+  <div>
+    <Route path="/tests/status-view-tests" component={StatusViewTests} />
+    <Route path="/tests/status-view-tests/default" component={StatusViewDefault} />
+    <Route path="/tests/status-view-tests/error-all-props" component={StatusViewErrorAllProps} />
+    <Route path="/tests/status-view-tests/glyph-hidden" component={StatusViewGlyphHidden} />
+    <Route path="/tests/status-view-tests/centered" component={StatusViewCenter} />
+    <Route path="/tests/status-view-tests/align-top" component={StatusViewAlignTop} />
+    <Route path="/tests/status-view-tests/not-authorized" component={StatusViewNotAuthorized} />
+    <Route path="/tests/status-view-tests/no-service" component={StatusViewNoService} />
+    <Route path="/tests/status-view-tests/custom" component={StatusViewCustom} />
+  </div>
+);
+
+export default routes;
