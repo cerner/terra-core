@@ -5,7 +5,8 @@ import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-// Alert where alertAction prop provided containing an action button
+console.log('Alert where alertAction prop provided containing an action button');
+
 class AlertActionButton extends React.Component {
   constructor(props) {
     super(props);

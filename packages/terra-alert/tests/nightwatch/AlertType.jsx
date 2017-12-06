@@ -4,7 +4,7 @@ import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-// Alerts of each of the standard types with default titles
+console.log('Alerts of each of the standard types with default titles');
 export default () =>
   <Base locale={locale}>
     <Alert id="alertAlert" type={Alert.Opts.Types.ALERT} >Alert of type Alert</Alert>

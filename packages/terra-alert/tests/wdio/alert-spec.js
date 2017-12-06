@@ -1,5 +1,7 @@
 /* global browser, Terra */
 const viewports = Terra.viewports('tiny', 'large');
+
+// TODO: Remove this once https://github.com/cerner/terra-core/issues/1057 addressed
 const ignoreContrast = {
   'color-contrast': { enabled: false },
 };
