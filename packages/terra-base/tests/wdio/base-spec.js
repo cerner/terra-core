@@ -12,14 +12,6 @@ describe('Base', () => {
     });
   });
 
-  describe('Content', () => {
-    before(() => browser.url('/#/tests/base-tests/array-of-children'));
-    it('Renders children', () => {
-      expect(browser.getText('#one')).to.equal('One');
-      expect(browser.getText('#two')).to.equal('Two');
-    });
-  });
-
   describe('No Translations Placeholder', () => {
     it('Displays a placeholder element', () => {
       browser.url('/#/tests/base-tests/no-translations-loaded');
