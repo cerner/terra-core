@@ -2,10 +2,11 @@
 // stylelint-disable max-nesting-depth
 :local {
   .structural {
-    background-color: var(--terra-tabs-structural-background-color, #fff);
+    background-color: var(--terra-tabs-structural-container-background-color, #fff);
 
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: var(--terra-tabs-structural-content-background-color, #fff);
+      border-radius: var(--terra-tabs-structural-pane-content-border-radius, 0);
     }
 
     .collapsed-tabs-container {
@@ -125,10 +126,6 @@
           box-shadow: var(--terra-tabs-keyboard-focus-ltr-box-shadow, 0 0 1px 2px #4a90e2);
         }
       }
-    }
-
-    .pane-content {
-      border-radius: var(--terra-tabs-structural-pane-content-border-radius, 0);
     }
   }
 }

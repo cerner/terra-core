@@ -395,12 +395,14 @@
     "--terra-tabs-modular-selection-bar-color": "#fff",
     "--terra-tabs-modular-selection-bar-height": "0",
     "--terra-tabs-modular-selection-bar-transition": "none",
-    "--terra-tabs-structural-background-color": "#fff",
+    "--terra-tabs-structural-container-background-color": "#fff",
     "--terra-tabs-structural-content-background-color": "#fff",
+    "--terra-tabs-structural-pane-content-border-radius": "0",
     "--terra-tabs-structural-collapsed-menu-bar-border-color": "#dddedf",
     "--terra-tabs-structural-collapsed-menu-bar-border-radius": "0",
     "--terra-tabs-structural-menu-bar-border-color": "#dddedf",
     "--terra-tabs-structural-menu-bar-border-width": "1px",
+    "--terra-tabs-structural-background-color": "#fff",
     "--terra-tabs-structural-background-image": "linear-gradient(to bottom, #007ee0, #007ee0)",
     "--terra-tabs-structural-background-position": "0 100%",
     "--terra-tabs-structural-background-size": "0 2px",
@@ -428,7 +430,6 @@
     "--terra-tabs-structural-active-focus-color": "initial",
     "--terra-tabs-structural-focus-background-color": "#fff",
     "--terra-tabs-structural-focus-color": "initial",
-    "--terra-tabs-structural-pane-content-border-radius": "0",
     "--terra-tabs-font-size": "0.857rem",
     "--terra-tabs-line-hight": "1.167",
     "--terra-tabs-padding": "0.429rem 1.071rem 0.357rem",
@@ -436,8 +437,7 @@
     "--terra-tabs-text-only-padding": "0.429rem 1.071rem 0.357rem",
     "--terra-tabs-label-margin-next-to-icon": "0.357rem",
     "--terra-tabs-menu-arrow-left-margin": "0.5rem",
-    "--terra-tabs-menu-justify-content": "flex-start",
-    "--terra-tabs-pane-content-background-color": "#fff"
+    "--terra-tabs-menu-justify-content": "flex-start"
   },
   "Textarea": {
     "--terra-form-textarea-background-color": "#fff",
