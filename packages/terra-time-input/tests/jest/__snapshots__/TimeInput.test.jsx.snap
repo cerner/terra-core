@@ -287,6 +287,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
     onFocus={[Function]}
     readOnly={true}
     required={false}
+    size={4}
     tabIndex="-1"
     value="a.m."
   />

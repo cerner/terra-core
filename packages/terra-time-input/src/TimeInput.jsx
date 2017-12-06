@@ -675,6 +675,7 @@ class TimeInput extends React.Component {
               key="meridiem_display"
               tabIndex="-1"
               value={this.state.meridiem}
+              size={this.state.meridiem.length}
               readOnly
             />,
             <div

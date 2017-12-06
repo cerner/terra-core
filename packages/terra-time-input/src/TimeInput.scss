@@ -172,7 +172,7 @@
     padding-right: var(--terra-time-input-meridiem-padding-right, 0);
     padding-top: var(--terra-time-input-meridiem-padding-top, 0);
     text-align: center;
-    width: 2.3em;
+    width: auto;
 
     &.focused {
       background-color: var(--terra-time-input-desktop-focused-input-background, rgba(139, 194, 249, 0.3));

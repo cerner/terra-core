@@ -480,6 +480,10 @@
     "--terra-time-input-meridiem-button-hover-color": "#000",
     "--terra-time-input-meridiem-button-selected-background-color": "#4e5558",
     "--terra-time-input-meridiem-button-selected-border-color": "#d1d1d1",
-    "--terra-time-input-meridiem-button-selected-color": "#fff"
+    "--terra-time-input-meridiem-button-selected-color": "#fff",
+    "--terra-time-input-time-spacer-margin-bottom": "0.357em",
+    "--terra-time-input-time-spacer-margin-left": "0.1429em",
+    "--terra-time-input-time-spacer-margin-right": "0.1429em",
+    "--terra-time-input-time-spacer-input-margin-top": "0.357em"
   }
 }
