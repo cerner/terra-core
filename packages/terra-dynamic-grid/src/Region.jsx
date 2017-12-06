@@ -2,11 +2,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './DynamicGrid.scss';
+import style from './Region.scss';
 import { region } from './styles';
 
+const cx = classNames.bind(style);
 
 const positionShape = {
   /**
@@ -104,7 +106,13 @@ const Region = ({
   });
 
   const regionClasses = classNames(customProps.className, css(stylesheet.region));
-  return (<div {...customProps} className={regionClasses}>{children}</div>);
+  return (
+    <div {...customProps} className={regionClasses}>
+      <div className={cx('region-child-container')}>
+        {children}
+      </div>
+    </div>
+  );
 };
 
 Region.propTypes = propTypes;

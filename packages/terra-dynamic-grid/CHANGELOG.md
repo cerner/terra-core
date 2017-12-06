@@ -4,10 +4,15 @@ ChangeLog
 Unreleased
 -----------------
 
+1.9.0 - (December 5, 2017)
+------------------
+### Fixed
+* Added child container wrapper for region. Fixes https://github.com/cerner/terra-core/issues/992.
+
 1.8.0 - (November 28, 2017)
 ------------------
 ### Removed
-* grid-row-gap and grid-column-gap props. Theses props were documented but never implemented. The Dynamic Grid is unable to mix these long-hand props with the short-hand, grid-gap prop because their property declarations on the objects are not ordered, resulting in non-deterministic ordering. 
+* grid-row-gap and grid-column-gap props. Theses props were documented but never implemented. The Dynamic Grid is unable to mix these long-hand props with the short-hand, grid-gap prop because their property declarations on the objects are not ordered, resulting in non-deterministic ordering.
 
 1.7.0 - (November 16, 2017)
 ------------------
