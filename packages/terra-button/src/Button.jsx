@@ -78,10 +78,17 @@ class Button extends React.Component {
     // This is needed to add the active state to FF browsers
     if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
       this.setState({ active: true });
+
+      // Follow href on space keydown when rendered as an anchor tag
+      if (this.props.href) {
+        // prevent window scrolling
+        event.preventDefault();
+        window.location.href = this.props.href;
+      }
     }
 
-    if (this.props.onKeyDown) {
-      this.props.onKeyDown(event);
+    if (this.onKeyDown) {
+      this.onKeyDown(event);
     }
   }
 
@@ -90,8 +97,8 @@ class Button extends React.Component {
       this.setState({ active: false });
     }
 
-    if (this.props.onKeyUp) {
-      this.props.onKeyUp(event);
+    if (this.onKeyUp) {
+      this.onKeyUp(event);
     }
   }
 
@@ -108,6 +115,12 @@ class Button extends React.Component {
       variant,
       ...customProps
     } = this.props;
+
+    this.onKeyDown = customProps.onKeyDown;
+    this.onKeyUp = customProps.onKeyUp;
+    delete customProps.onKeyDown;
+    delete customProps.onKeyUp;
+
     const attributes = Object.assign({}, customProps);
 
     const buttonTextClasses = cx([
