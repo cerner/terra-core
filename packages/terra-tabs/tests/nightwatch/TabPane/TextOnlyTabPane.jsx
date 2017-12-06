@@ -2,10 +2,9 @@ import React from 'react';
 import TabPane from '../../../lib/TabPane';
 
 const TextOnlyTabPane = () => (
-  <div>
-    <p>Only text in the label.</p>
+  <div role="tablist" style={{ display: 'flex' }}>
     <TabPane
-      label="Text only"
+      label="Text only tab pane"
       id="textOnly"
     />
   </div>

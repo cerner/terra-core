@@ -68,6 +68,7 @@ exports[`TabPane should render with icon and label 1`] = `
 
 exports[`TabPane should render with icon only when indicated 1`] = `
 <div
+  aria-label="Label"
   className="tab is-icon-only"
   role="tab"
 >

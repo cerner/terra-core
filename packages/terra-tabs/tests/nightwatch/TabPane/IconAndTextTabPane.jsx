@@ -3,8 +3,7 @@ import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import TabPane from '../../../lib/TabPane';
 
 const IconAndTextTabPane = () => (
-  <div>
-    <p>Tab label with icon and text.</p>
+  <div role="tablist" style={{ display: 'flex' }}>
     <TabPane
       label="Icon and Text"
       id="iconAndText"

@@ -56,6 +56,10 @@ const TabPane = ({
     attributes.className,
   ]);
 
+  if (isIconOnly) {
+    attributes['aria-label'] = label;
+  }
+
   return (
     <div {...attributes} role="tab" className={paneClassNames}>
       {customDisplay}

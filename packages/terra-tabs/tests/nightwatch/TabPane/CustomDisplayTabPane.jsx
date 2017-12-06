@@ -3,8 +3,7 @@ import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import TabPane from '../../../lib/TabPane';
 
 const CustomDisplayTabPane = () => (
-  <div>
-    <p>Tab label with custom content.</p>
+  <div role="tablist" style={{ display: 'flex' }}>
     <TabPane
       label="Custom Display"
       id="customDisplay"
