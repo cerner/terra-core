@@ -5,3 +5,14 @@ exports[`should support rendering a string without translation 1`] = `
   String
 </div>
 `;
+
+exports[`should support rendering an array of children without translation 1`] = `
+<div>
+  <div>
+    1
+  </div>
+  <div>
+    2
+  </div>
+</div>
+`;
