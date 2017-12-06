@@ -11,7 +11,7 @@ const webpackPort = 8080;
 // Flex specs search between local pacakge and repo
 let specs = path.join('tests', 'wdio', '**', '*-spec.js');
 if (__dirname === process.cwd()) {
-  specs = path.join('packages', '**', specs);
+  specs = path.join('packages', '*', specs);
 }
 
 const config = {
@@ -23,6 +23,9 @@ const config = {
   seleniumDocker: {
     enabled: !process.env.TRAVIS,
   },
+
+  // Ignore deprecation warnings. When chrome supports /actions API we'll update to use those.
+  deprecationWarnings: false,
 
   webpackPort,
   webpackConfig,
