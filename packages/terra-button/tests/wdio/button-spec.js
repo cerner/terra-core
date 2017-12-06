@@ -218,6 +218,7 @@ describe('Button', () => {
     beforeEach(() => browser.url('/#/tests/button-tests/icon-only'));
 
     // Ignore rule to ensure buttons have discernible text
+    // TODO: Remove once https://github.com/cerner/terra-core/issues/1058 is resolved
     Terra.should.beAccessible({ rules: { 'button-name': { enabled: false } } });
     Terra.should.matchScreenshot();
   });
