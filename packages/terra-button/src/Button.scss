@@ -52,8 +52,11 @@
     }
 
     &:focus {
-      box-shadow: var(--terra-button-focus-box-shadow, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5));
       outline: none;
+    }
+
+    &.is-focused {
+      box-shadow: var(--terra-button-focus-box-shadow, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5));
     }
 
     &:disabled,

@@ -7,7 +7,9 @@ import styles from './Button.scss';
 const cx = classNames.bind(styles);
 
 const KEYCODES = {
+  ENTER: 13,
   SPACE: 32,
+  TAB: 9,
 };
 
 const propTypes = {
@@ -69,22 +71,36 @@ const defaultProps = {
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = { active: false, focused: false, mouseWasClicked: false };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleOnBlur = this.handleOnBlur.bind(this);
+  }
+
+  handleOnBlur(event) {
+    this.setState({ focused: false });
+    event.stopPropagation();
+    if (this.onBlur) {
+      this.onBlur(event);
+    }
   }
 
   handleKeyDown(event) {
-    // This is needed to add the active state to FF browsers
+    // Add active state to FF browsers
     if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
       this.setState({ active: true });
 
       // Follow href on space keydown when rendered as an anchor tag
       if (this.props.href) {
-        // prevent window scrolling
+        // Prevent window scrolling
         event.preventDefault();
         window.location.href = this.props.href;
       }
+    }
+
+    // Add focus styles for keyboard navigation
+    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.setState({ focused: true });
     }
 
     if (this.onKeyDown) {
@@ -93,8 +109,14 @@ class Button extends React.Component {
   }
 
   handleKeyUp(event) {
+    // Remove active state from FF broswers
     if (event.nativeEvent.keyCode === KEYCODES.SPACE) {
       this.setState({ active: false });
+    }
+
+    // Apply focus styles for keyboard navigation
+    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+      this.setState({ focused: true });
     }
 
     if (this.onKeyUp) {
@@ -116,8 +138,11 @@ class Button extends React.Component {
       ...customProps
     } = this.props;
 
+    // Not direct props options
+    this.onBlur = customProps.onBlur;
     this.onKeyDown = customProps.onKeyDown;
     this.onKeyUp = customProps.onKeyUp;
+    delete customProps.onBlur;
     delete customProps.onKeyDown;
     delete customProps.onKeyUp;
 
@@ -144,6 +169,7 @@ class Button extends React.Component {
       { 'is-disabled': isDisabled },
       { block: isBlock },
       { 'is-active': this.state.active },
+      { 'is-focused': this.state.focused },
       attributes.className,
     ]);
 
@@ -154,6 +180,7 @@ class Button extends React.Component {
     attributes['aria-label'] = isIconOnly || variant === 'utility' ? text : null;
     attributes.onKeyDown = this.handleKeyDown;
     attributes.onKeyUp = this.handleKeyUp;
+    attributes.onBlur = this.handleOnBlur;
 
     const order = isReversed ?
       [buttonText, iconElement, children] :
