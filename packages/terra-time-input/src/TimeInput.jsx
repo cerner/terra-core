@@ -163,13 +163,13 @@ class TimeInput extends React.Component {
     this.setState({ isFocused: true });
   }
 
-  handleMinuteFocus() {
+  handleMinuteFocus(event) {
     this.handleFocus(event);
     this.setState({ minuteInitialFocused: true });
     this.minuteInput.textInput.setSelectionRange(0, this.minuteInput.textInput.value.length);
   }
 
-  handleHourFocus() {
+  handleHourFocus(event) {
     this.handleFocus(event);
     this.setState({ hourInitialFocused: true });
     this.hourInput.textInput.setSelectionRange(0, this.hourInput.textInput.value.length);

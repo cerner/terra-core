@@ -143,8 +143,10 @@
 
   .time-spacer {
     line-height: var(--terra-time-input-line-height, 1.429);
-    margin-bottom: var(--terra-time-input-desktop-input-padding-bottom, 0.357em);
-    margin-top: var(--terra-time-input-desktop-input-padding-top, 0.357em);
+    margin-bottom: var(--terra-time-input-time-spacer-margin-bottom, 0.357em);
+    margin-left: var(--terra-time-input-time-spacer-margin-left, 0.1429em);
+    margin-right: var(--terra-time-input-time-spacer-margin-right, 0.1429em);
+    margin-top: var(--terra-time-input-time-spacer-input-margin-top, 0.357em);
   }
 
   .mobile-time-picker {
@@ -164,7 +166,7 @@
     box-sizing: border-box;
     display: inline-block;
     height: var(--terra-time-input-desktop-input-height, 1.4em);
-    margin-left: var(--terra-time-input-meridiem-display-left-margin, 0);
+    margin-left: var(--terra-time-input-meridiem-display-left-margin, 0.1429em);
     padding-bottom: var(--terra-time-input-meridiem-padding-bottom, 0);
     padding-left: var(--terra-time-input-meridiem-padding-left, 0);
     padding-right: var(--terra-time-input-meridiem-padding-right, 0);
