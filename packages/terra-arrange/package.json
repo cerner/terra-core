@@ -30,7 +30,8 @@
     "props-table": "props-table ./src/Arrange.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   },
   "peerDependencies": {
     "react": "^15.4.2",
