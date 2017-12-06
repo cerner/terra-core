@@ -146,6 +146,7 @@ class Radio extends React.Component {
     const labelClasses = cx([
       'label',
       { 'is-disabled': isDisabled },
+      { 'is-hidden': isLabelHidden },
       labelTextAttrs.className,
     ]);
 
@@ -156,7 +157,6 @@ class Radio extends React.Component {
 
     const labelTextClasses = cx([
       'label-text',
-      { 'is-hidden': isLabelHidden },
     ]);
 
     const outerRingClasses = cx([
