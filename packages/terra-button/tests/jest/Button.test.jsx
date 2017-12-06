@@ -17,6 +17,16 @@ it('should render a de-emphasis button', () => {
   expect(button).toMatchSnapshot();
 });
 
+it('should render an action button', () => {
+  const button = shallow(<Button text="action" variant="action" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('should render a utility button', () => {
+  const button = shallow(<Button text="utility" variant="utility" />);
+  expect(button).toMatchSnapshot();
+});
+
 it('should render a button with type equal to button', () => {
   const button = shallow(<Button text="button" type="button" />);
   expect(button).toMatchSnapshot();
@@ -79,6 +89,16 @@ it('should have the class emphasis when variant is set to emphasis', () => {
 it('should have the class de-emphasis when an de-emphasis variant', () => {
   const button = shallow(<Button variant="de-emphasis" text="text" />);
   expect(button.prop('className')).toContain('de-emphasis');
+});
+
+it('should have the class action when variant is set to action', () => {
+  const button = shallow(<Button variant="action" text="text" />);
+  expect(button.prop('className')).toContain('action');
+});
+
+it('should have the class utility when variant is set to utility', () => {
+  const button = shallow(<Button variant="utility" text="text" />);
+  expect(button.prop('className')).toContain('utility');
 });
 
 it('should have the class block when block is enabled', () => {

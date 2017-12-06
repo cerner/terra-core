@@ -52,9 +52,9 @@ const propTypes = {
    */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /**
-   * Sets the button variant. One of `neutral`, `emphasis`, or `de-emphasis`.
+   * Sets the button variant. One of `neutral`,  `emphasis`, `de-emphasis`, `utility` or `action`.
    */
-  variant: PropTypes.oneOf(['neutral', 'emphasis', 'de-emphasis']),
+  variant: PropTypes.oneOf(['neutral', 'emphasis', 'de-emphasis', 'utility', 'action']),
 };
 
 const defaultProps = {
@@ -124,16 +124,15 @@ class Button extends React.Component {
     const attributes = Object.assign({}, customProps);
 
     const buttonTextClasses = cx([
-      { text: icon },
       { 'text-only': !icon },
       { 'text-left': icon && isReversed },
       { 'text-right': icon && !isReversed },
     ]);
-    const buttonText = !isIconOnly ? <span className={buttonTextClasses}>{text}</span> : null;
+    const buttonText = !isIconOnly && variant !== 'utility' ? <span className={buttonTextClasses}>{text}</span> : null;
 
     const iconClasses = cx([
       'icon',
-      { 'icon-only': isIconOnly },
+      { 'icon-only': isIconOnly || variant === 'utility' },
       { 'icon-left': !isIconOnly && !isReversed },
       { 'icon-right': !isIconOnly && isReversed },
     ]);
@@ -152,7 +151,7 @@ class Button extends React.Component {
     attributes.disabled = isDisabled;
     attributes.tabIndex = isDisabled ? '-1' : undefined;
     attributes['aria-disabled'] = isDisabled;
-    attributes['aria-label'] = isIconOnly ? text : null;
+    attributes['aria-label'] = isIconOnly || variant === 'utility' ? text : null;
     attributes.onKeyDown = this.handleKeyDown;
     attributes.onKeyUp = this.handleKeyUp;
 

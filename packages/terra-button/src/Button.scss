@@ -34,7 +34,7 @@
     font-weight: var(--terra-button-font-weight, 400);
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-button-padding-bottom, 0.286em);
+    padding-bottom: var(--terra-button-padding-bottom, 0.4285em);
     padding-left: 0;
     padding-right: 0;
     padding-top: var(--terra-button-padding-top, 0.286em);
@@ -77,6 +77,14 @@
     @include terra-button-variant-color($terra-button-de-emphasis-color-scheme);
   }
 
+  .action {
+    @include terra-button-variant-color($terra-button-action-color-scheme);
+  }
+
+  .utility {
+    @include terra-button-variant-color($terra-button-utility-color-scheme);
+  }
+
   // Button style modifiers
   .block {
     display: block;
@@ -99,8 +107,6 @@
 
   .icon {
     display: inline-block;
-    padding-bottom: var(--terra-button-icon-padding-bottom, 0.2857em);
-    padding-top: var(--terra-button-icon-padding-top, 0.1428em);
 
     > svg {
       height: var(--terra-button-icon-height, 1em);

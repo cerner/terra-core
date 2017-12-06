@@ -7,6 +7,7 @@ exports[`should render a Button with merged attributes 1`] = `
   className="button neutral TestClass"
   data-mock="data"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   style={
@@ -30,6 +31,7 @@ exports[`should render a button with type equal to button 1`] = `
   aria-label={null}
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -48,6 +50,7 @@ exports[`should render a button with type equal to reset 1`] = `
   aria-label={null}
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="reset"
@@ -66,6 +69,7 @@ exports[`should render a button with type equal to submit 1`] = `
   aria-label={null}
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="submit"
@@ -84,6 +88,7 @@ exports[`should render a de-emphasis button 1`] = `
   aria-label={null}
   className="button de-emphasis"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -102,6 +107,7 @@ exports[`should render a emphasis button 1`] = `
   aria-label={null}
   className="button emphasis"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -120,6 +126,7 @@ exports[`should render a neutral button 1`] = `
   aria-label={null}
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -132,12 +139,45 @@ exports[`should render a neutral button 1`] = `
 </button>
 `;
 
+exports[`should render a utility button 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="utility"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+/>
+`;
+
+exports[`should render an action button 1`] = `
+<button
+  aria-disabled={false}
+  aria-label={null}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <span
+    className="text-only"
+  >
+    action
+  </span>
+</button>
+`;
+
 exports[`should render an icon 1`] = `
 <button
   aria-disabled={false}
   aria-label="isIconOnly"
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -158,6 +198,7 @@ exports[`should render an icon and a text 1`] = `
   aria-label={null}
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -170,7 +211,7 @@ exports[`should render an icon and a text 1`] = `
     />
   </span>
   <span
-    className="text text-right"
+    className="text-right"
   >
     text
   </span>
@@ -184,6 +225,7 @@ exports[`should render as an anchor when provided an href 1`] = `
   className="button neutral"
   disabled={false}
   href="MockHref"
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
@@ -202,6 +244,7 @@ exports[`should render as disabled when set 1`] = `
   aria-label={null}
   className="button neutral is-disabled"
   disabled={true}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   tabIndex="-1"
@@ -221,12 +264,13 @@ exports[`should render text then an icon when reversed 1`] = `
   aria-label={null}
   className="button neutral"
   disabled={false}
+  onBlur={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
 >
   <span
-    className="text text-left"
+    className="text-left"
   >
     text
   </span>

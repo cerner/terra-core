@@ -32,6 +32,18 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.containsText('#de-emphasisButton', 'De-emphasis');
   },
 
+  'Displays as an action button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/action`)
+      .assert.containsText('#actionButton', 'Action');
+  },
+
+  'Displays as a utility button with the provided text': (browser) => {
+    browser
+      .url(`${browser.launchUrl}/#/tests/button-tests/utility`);
+      // .assert.containsText('#utilityButton', 'Utility');
+  },
+
   'Displays as a button with the type set to button and with the provided text': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/with-type-button`)
@@ -57,6 +69,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
       .assert.cssClassPresent('#iconNeutralButton > :first-child > :first-child', 'test');
   },
 
+  // Add check for aria-label
   'Displays an icon only': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/button-tests/icon-only`)

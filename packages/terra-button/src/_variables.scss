@@ -23,12 +23,34 @@ $terra-button-emphasis-color-scheme: (
 );
 
 $terra-button-de-emphasis-color-scheme: (
-  active-background-color: var(--terra-button-active-background-color-neutral, rgba(0, 0, 0, 0.3)),
-  active-border-color: var(--terra-button-active-border-color-neutral, #c8cacb),
-  active-color: var(--terra-button-active-color-neutral, #434a4d),
-  background-color: var(--terra-button-background-color-neutral, #fff),
-  border-color: var(--terra-button-border-color-neutral, #c8cacb),
-  color: var(--terra-button-color-neutral, #434a4d),
-  hover-background-color: var(--terra-button-hover-background-color-neutral, rgba(0, 0, 0, 0.1)),
-  hover-color: var(--terra-button-hover-color-neutral, #434a4d)
+  active-background-color: var(--terra-button-active-background-color-de-emphasis, rgba(0, 0, 0, 0.3)),
+  active-border-color: var(--terra-button-active-border-color-de-emphasis, #c8cacb),
+  active-color: var(--terra-button-active-color-de-emphasis, #434a4d),
+  background-color: var(--terra-button-background-color-de-emphasis, #fff),
+  border-color: var(--terra-button-border-color-de-emphasis, #c8cacb),
+  color: var(--terra-button-color-de-emphasis, #434a4d),
+  hover-background-color: var(--terra-button-hover-background-color-de-emphasis, rgba(0, 0, 0, 0.1)),
+  hover-color: var(--terra-button-hover-color-de-emphasis, #434a4d)
+);
+
+$terra-button-action-color-scheme: (
+  active-background-color: var(--terra-button-active-background-color-action, rgba(0, 0, 0, 0.3)),
+  active-border-color: var(--terra-button-active-border-color-action, #c8cacb),
+  active-color: var(--terra-button-active-color-action, #434a4d),
+  background-color: var(--terra-button-background-color-action, #fff),
+  border-color: var(--terra-button-border-color-action, #c8cacb),
+  color: var(--terra-button-color-action, #434a4d),
+  hover-background-color: var(--terra-button-hover-background-color-action, rgba(0, 0, 0, 0.1)),
+  hover-color: var(--terra-button-hover-color-action, #434a4d)
+);
+
+$terra-button-utility-color-scheme: (
+  active-background-color: var(--terra-button-active-background-color-utility, #fff),
+  active-border-color: var(--terra-button-active-border-color-utility, #fff),
+  active-color: var(--terra-button-active-color-utility, rgba(0, 0, 0, 0.7)),
+  background-color: var(--terra-button-background-color-utility, #fff),
+  border-color: var(--terra-button-border-color-utility, #fff),
+  color: var(--terra-button-color-utility, rgba(0, 0, 0, 0.7)),
+  hover-background-color: var(--terra-button-hover-background-color-utility, #fff),
+  hover-color: var(--terra-button-hover-color-utility, rgba(0, 0, 0, 0.7))
 );
