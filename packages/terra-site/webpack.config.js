@@ -12,6 +12,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 
+const threadLoaderRule = {
+  loader: 'thread-loader',
+  options: {
+    workerParallelJobs: 50,
+    poolParallelJobs: 50,
+    poolTimeout: 2000,
+  },
+};
 
 module.exports = {
   entry: {
@@ -23,16 +31,16 @@ module.exports = {
       test: /\.(jsx|js)$/,
       exclude: /node_modules/,
       use: [
-        'thread-loader',
+        !process.env.CI && threadLoaderRule,
         'babel-loader',
-      ],
+      ].filter(Boolean),
     },
     {
       test: /\.(scss|css)$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
-          'thread-loader',
+          !process.env.CI && threadLoaderRule,
           {
             loader: 'css-loader',
             options: {
@@ -49,15 +57,15 @@ module.exports = {
             options: {
               data: '$bundled-themes: mock, consumer;',
             },
-          }],
+          }].filter(Boolean),
       }),
     },
     {
       test: /\.md$/,
       use: [
-        'thread-loader',
+        !process.env.CI && threadLoaderRule,
         'raw-loader',
-      ],
+      ].filter(Boolean),
     },
     {
       test: /\.(png|svg|jpg|gif)$/,
