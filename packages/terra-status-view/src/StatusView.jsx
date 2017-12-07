@@ -46,14 +46,7 @@ const propTypes = {
   /**
    * Determines the type of icon to display.
    */
-  variant: PropTypes.oneOf([
-    variants.NODATA,
-    variants.NOMATCHINGRESULTS,
-    variants.NOTAUTHORIZED,
-    variants.ERROR,
-    variants.NOSERVICE,
-    variants.CUSTOM,
-  ]),
+  variant: PropTypes.oneOf(Object.values(variants)),
 };
 
 const defaultProps = {
@@ -84,48 +77,12 @@ class StatusView extends React.Component {
       paddingTop: 0,
     };
     this.showAndCenterItems = this.showAndCenterItems.bind(this);
-    this.setInnerNode = this.setInnerNode.bind(this);
-    this.setTitleNode = this.setTitleNode.bind(this);
-    this.setButtonsNode = this.setButtonsNode.bind(this);
-    this.setMessageNode = this.setMessageNode.bind(this);
-    this.setDividerNode = this.setDividerNode.bind(this);
-    this.setGlyphNode = this.setGlyphNode.bind(this);
   }
 
   componentDidMount() {
     // call after all items have rendered in the view to calculate which items
     // can be shown and center the items inside the view appropriately
     this.showAndCenterItems();
-  }
-
-  setInnerNode(node) {
-    if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
-    this.innerNode = node;
-  }
-
-  setTitleNode(node) {
-    if (node === null) { return; }
-    this.titleNode = node;
-  }
-
-  setButtonsNode(node) {
-    if (node === null) { return; }
-    this.buttonsNode = node;
-  }
-
-  setMessageNode(node) {
-    if (node === null) { return; }
-    this.messageNode = node;
-  }
-
-  setDividerNode(node) {
-    if (node === null) { return; }
-    this.dividerNode = node;
-  }
-
-  setGlyphNode(node) {
-    if (node === null) { return; }
-    this.glyphNode = node;
   }
 
   /**
@@ -193,15 +150,15 @@ class StatusView extends React.Component {
 
     let glyphSection;
     if (!isGlyphHidden && this.state.showGlyph) {
-      glyphSection = <div className={cx('glyph')} ref={this.setGlyphNode}><svg className={cx(variant)} /></div>;
+      glyphSection = <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}><svg className={cx(variant)} /></div>;
     }
     let messageSection;
     if (message) {
-      messageSection = <div className={cx('message')} ref={this.setMessageNode}>{message}</div>;
+      messageSection = <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>{message}</div>;
     }
     let buttonSection;
     if (children.length) {
-      buttonSection = <div className={cx('buttons')} ref={this.setButtonsNode}>{children}</div>;
+      buttonSection = <div className={cx('buttons')} ref={(element) => { this.buttonsNode = element; }}>{children}</div>;
     }
     let defaultTitle = title;
     if (!defaultTitle) {
@@ -209,10 +166,10 @@ class StatusView extends React.Component {
     }
     let dividerSection;
     if (messageSection || buttonSection) {
-      dividerSection = <div className={cx('divider')} ref={this.setDividerNode}><Divider /></div>;
+      dividerSection = <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}><Divider /></div>;
     }
 
-    const titleSection = <div className={cx('title')} ref={this.setTitleNode}>{defaultTitle}</div>;
+    const titleSection = <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>{defaultTitle}</div>;
 
     const statusViewClassNames = cx([
       'status-view',
@@ -232,7 +189,7 @@ class StatusView extends React.Component {
         <div
           className={cx('status-view-inner')}
           style={{ ...statusViewInnerStyles }}
-          ref={this.setInnerNode}
+          ref={(element) => { this.innerNode = element; }}
         >
           {glyphSection}
           <div className={cx('message-content-group')} >
