@@ -7,6 +7,10 @@ it('should support rendering a string without translation', () => {
   expect(base).toMatchSnapshot();
 });
 
+it('should support rendering an array of children without translation', () => {
+  const base = shallow(<Base><div>1</div><div>2</div></Base>);
+  expect(base).toMatchSnapshot();
+});
 
 it('throws error for missing required locale', () => {
   const messages = { Terra: 'Terra' };
