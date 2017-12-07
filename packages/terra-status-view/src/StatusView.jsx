@@ -91,29 +91,29 @@ class StatusView extends React.Component {
    * with 40% of the remaining space at the top with 60% on the bottom.
    */
   showAndCenterItems() {
-    const viewHeight = this.innerNode.getBoundingClientRect().height;
+    const viewHeight = this.innerNode.offsetHeight;
 
     let paddingTop = 0;
     let paddingBottom = 0;
     let showGlyph = false;
 
     // get the content heights of the nodes that are to be shown if have content and cannot be hidden
-    let componentsHeight = this.titleNode.getBoundingClientRect().height;
+    let componentsHeight = this.titleNode.offsetHeight;
     if (this.buttonsNode) {
-      componentsHeight += this.buttonsNode.getBoundingClientRect().height;
+      componentsHeight += this.buttonsNode.offsetHeight;
     }
     if (this.messageNode) {
-      componentsHeight += this.messageNode.getBoundingClientRect().height;
+      componentsHeight += this.messageNode.offsetHeight;
     }
     if (this.dividerNode) {
-      componentsHeight += this.dividerNode.getBoundingClientRect().height;
+      componentsHeight += this.dividerNode.offsetHeight;
     }
 
-    if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.getBoundingClientRect().height) {
+    if (this.glyphNode && viewHeight >= componentsHeight + this.glyphNode.offsetHeight) {
       // if have a glyph to show and can fit inside the containers height, distribute remaining padding to center
       showGlyph = true;
       if (!this.props.isAlignedTop) {
-        const remainingHeight = viewHeight - (componentsHeight + this.glyphNode.getBoundingClientRect().height);
+        const remainingHeight = viewHeight - (componentsHeight + this.glyphNode.offsetHeight);
         paddingTop = remainingHeight * 0.4;
         paddingBottom = remainingHeight * 0.6;
       }
