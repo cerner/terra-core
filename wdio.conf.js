@@ -24,7 +24,6 @@ const config = {
     enabled: !process.env.TRAVIS,
   },
 
-  maxInstances: 1,
   webpackPort,
   webpackConfig,
 
