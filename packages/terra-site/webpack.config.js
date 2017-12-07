@@ -11,26 +11,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
-const threadLoader = require('thread-loader');
 
-const threadLoaderRule = {
-  loader: 'thread-loader',
-  options: {
-    workerParallelJobs: 50,
-    poolParallelJobs: 50,
-    poolTimeout: 2000,
-  },
-};
-
-threadLoader.warmup(threadLoaderRule.options, [
-  // modules to load
-  // can be any module, i. e.
-  'babel-loader',
-  'css-loader',
-  'sass-loader',
-  'postcss-loader',
-  'raw-loader',
-]);
 
 module.exports = {
   entry: {
@@ -42,7 +23,7 @@ module.exports = {
       test: /\.(jsx|js)$/,
       exclude: /node_modules/,
       use: [
-        threadLoaderRule,
+        'thread-loader',
         'babel-loader',
       ],
     },
@@ -51,7 +32,7 @@ module.exports = {
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
-          threadLoaderRule,
+          'thread-loader',
           {
             loader: 'css-loader',
             options: {
@@ -74,7 +55,7 @@ module.exports = {
     {
       test: /\.md$/,
       use: [
-        threadLoaderRule,
+        'thread-loader',
         'raw-loader',
       ],
     },
