@@ -11,6 +11,26 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
+const threadLoader = require('thread-loader');
+
+const threadLoaderRule = {
+  loader: 'thread-loader',
+  options: {
+    workerParallelJobs: 50,
+    poolParallelJobs: 50,
+    poolTimeout: 2000,
+  },
+};
+
+threadLoader.warmup(threadLoaderRule.options, [
+  // modules to load
+  // can be any module, i. e.
+  'babel-loader',
+  'css-loader',
+  'sass-loader',
+  'postcss-loader',
+  'raw-loader',
+]);
 
 module.exports = {
   entry: {
@@ -21,34 +41,42 @@ module.exports = {
     rules: [{
       test: /\.(jsx|js)$/,
       exclude: /node_modules/,
-      use: 'babel-loader',
+      use: [
+        threadLoaderRule,
+        'babel-loader',
+      ],
     },
     {
       test: /\.(scss|css)$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: [{
-          loader: 'css-loader',
-          options: {
-            sourceMap: true,
-            importLoaders: 2,
-            localIdentName: '[name]__[local]___[hash:base64:5]',
+        use: [
+          threadLoaderRule,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 2,
+              localIdentName: '[name]__[local]___[hash:base64:5]',
+            },
+          }, {
+            loader: 'postcss-loader',
+            options: postCssConfig,
           },
-        }, {
-          loader: 'postcss-loader',
-          options: postCssConfig,
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            data: '$bundled-themes: mock, consumer;',
-          },
-        }],
+          {
+            loader: 'sass-loader',
+            options: {
+              data: '$bundled-themes: mock, consumer;',
+            },
+          }],
       }),
     },
     {
       test: /\.md$/,
-      use: 'raw-loader',
+      use: [
+        threadLoaderRule,
+        'raw-loader',
+      ],
     },
     {
       test: /\.(png|svg|jpg|gif)$/,
