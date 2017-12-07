@@ -65,9 +65,9 @@ const Padding = (storyFn) => (
 
 addDecorator(Padding);
 
+// Autoload stories via glob pattern
 function loadStories() {
-  require('../packages/terra-badge/stories/index.jsx');
-  require('../packages/terra-demographics-banner/stories/index.jsx');
+  require('glob-loader!./stories.pattern')
 }
 
 configure(loadStories, module);
