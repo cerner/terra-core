@@ -39,7 +39,9 @@ exports[`Tabs Variants should render modular-centered tabs 1`] = `
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -83,7 +85,9 @@ exports[`Tabs Variants should render modular-left-aligned tabs 1`] = `
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -127,7 +131,9 @@ exports[`Tabs Variants should render structural tabs 1`] = `
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -171,7 +177,9 @@ exports[`Tabs should render a controlled component when onChange and activeKey a
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -215,7 +223,9 @@ exports[`Tabs should render a default component 1`] = `
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -260,7 +270,9 @@ exports[`Tabs should render an uncontrolled component when defaultActiveKey is s
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -304,7 +316,9 @@ exports[`Tabs should render with content filled when indicated 1`] = `
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content fill-parent"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -349,7 +363,9 @@ exports[`Tabs should render with tabs filled when indicated 1`] = `
   tabsFill={true}
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;
@@ -393,7 +409,9 @@ exports[`Tabs should set custom props 1`] = `
   }
 >
   <div
+    aria-labelledby="Default"
     className="pane-content"
+    role="tabpanel"
   />
 </ContentContainer>
 `;

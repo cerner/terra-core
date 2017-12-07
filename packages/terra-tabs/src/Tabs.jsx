@@ -140,11 +140,13 @@ class Tabs extends React.Component {
 
     let content = null;
     let isIconOnly = false;
+    let activeLabel = '';
     const clonedPanes = [];
     React.Children.forEach(children, (child) => {
       let isActive = false;
       if (child.key === this.state.activeKey || child.key === activeKey) {
         isActive = true;
+        activeLabel = child.props.label;
         content = child.props.children;
       }
 
@@ -194,7 +196,11 @@ class Tabs extends React.Component {
           />
         )}
       >
-        <div className={cx(['pane-content', { 'fill-parent': fill }])}>
+        <div
+          role="tabpanel"
+          aria-labelledby={activeLabel}
+          className={cx(['pane-content', { 'fill-parent': fill }])}
+        >
           {content}
         </div>
       </ContentContainer>
