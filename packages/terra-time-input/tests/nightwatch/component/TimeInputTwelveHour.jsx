@@ -25,6 +25,7 @@ class TimeInputDefault extends React.Component {
           id="timeInput"
           name="time-input"
           onChange={this.handleOnChange}
+          variant="12-hour"
         />
       </Base>
     );
