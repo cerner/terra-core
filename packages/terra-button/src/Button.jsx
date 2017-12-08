@@ -158,8 +158,8 @@ class Button extends React.Component {
     const iconClasses = cx([
       'icon',
       { 'icon-only': isIconOnly || variant === 'utility' },
-      { 'icon-left': !isIconOnly && !isReversed },
-      { 'icon-right': !isIconOnly && isReversed },
+      { 'icon-left': (!isIconOnly && variant !== 'utility') && !isReversed },
+      { 'icon-right': (!isIconOnly && variant !== 'utility') && isReversed },
     ]);
     const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null;
 

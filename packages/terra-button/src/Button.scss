@@ -29,9 +29,8 @@
     border-width: 1px;
     cursor: pointer;
     display: inline-block;
-    font-family: var(--terra-button-font-family, inherit);
-    font-size: var(--terra-button-font-size, inherit);
-    font-weight: var(--terra-button-font-weight, 400);
+    font-family: inherit;
+    font-size: inherit;
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
     padding-bottom: var(--terra-button-padding-bottom, 0.4285em);
@@ -55,8 +54,9 @@
       outline: none;
     }
 
-    &.is-focused {
-      box-shadow: var(--terra-button-focus-box-shadow, 0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5));
+    &:active {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     &:disabled,
@@ -82,10 +82,12 @@
 
   .action {
     @include terra-button-variant-color($terra-button-action-color-scheme);
+    border-radius: var(--terra-button-action-border-radius, 3px);
   }
 
   .utility {
     @include terra-button-variant-color($terra-button-utility-color-scheme);
+    border-radius: var(--terra-button-utility-border-radius, 3px);
   }
 
   // Button style modifiers
@@ -113,7 +115,7 @@
 
     > svg {
       height: var(--terra-button-icon-height, 1em);
-      width: var(--terra-button-icon-width, 0.8714em);
+      width: var(--terra-button-icon-width, 1em);
     }
   }
 
