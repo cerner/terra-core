@@ -80,8 +80,8 @@
     line-height: var(--terra-time-input-line-height, 1.429);
     min-width: var(--terra-time-input-width-input, 3.57em);
     padding-bottom: var(--terra-time-input-input-padding-bottom, 0.357em);
-    padding-left: var(--terra-time-input-input-padding-bottom, 0.357em);
-    padding-right: var(--terra-time-input-input-padding-top, 0.357em);
+    padding-left: var(--terra-time-input-input-padding-left, 0.357em);
+    padding-right: var(--terra-time-input-input-padding-right, 0.357em);
     padding-top: var(--terra-time-input-input-padding-top, 0.357em);
     transition-duration: var(--terra-time-input-transition-duration, 0.2s);
     transition-property: background-size;

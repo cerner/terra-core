@@ -454,6 +454,8 @@
     "--terra-time-input-line-height": "1.429",
     "--terra-time-input-width-input": "3.57em",
     "--terra-time-input-input-padding-bottom": "0.357em",
+    "--terra-time-input-input-padding-left": "0.357em",
+    "--terra-time-input-input-padding-right": "0.357em",
     "--terra-time-input-input-padding-top": "0.357em",
     "--terra-time-input-desktop-input-height": "1.4em",
     "--terra-time-input-desktop-focused-input-background": "rgba(139, 194, 249, 0.3)",
