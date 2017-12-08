@@ -15,6 +15,7 @@ const StatusViewTests = () => (
       <li><Link to="/tests/status-view-tests/not-authorized">StatusView - Not Authorized</Link></li>
       <li><Link to="/tests/status-view-tests/no-service">StatusView - No Service</Link></li>
       <li><Link to="/tests/status-view-tests/custom">StatusView - Custom - Empty</Link></li>
+      <li><Link to="/tests/status-view-tests/text-wrapping">StatusView - Error - Text Wrapping</Link></li>
     </ul>
   </div>
 );

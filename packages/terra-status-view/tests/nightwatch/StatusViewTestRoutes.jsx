@@ -14,6 +14,7 @@ import StatusViewAlignTop from './StatusViewAlignTop';
 import StatusViewNotAuthorized from './StatusViewNotAuthorized';
 import StatusViewNoService from './StatusViewNoService';
 import StatusViewCustom from './StatusViewCustom';
+import StatusViewTextWrapping from './StatusViewTextWrapping';
 
 const routes = (
   <div>
@@ -27,6 +28,7 @@ const routes = (
     <Route path="/tests/status-view-tests/not-authorized" component={StatusViewNotAuthorized} />
     <Route path="/tests/status-view-tests/no-service" component={StatusViewNoService} />
     <Route path="/tests/status-view-tests/custom" component={StatusViewCustom} />
+    <Route path="/tests/status-view-tests/text-wrapping" component={StatusViewTextWrapping} />
   </div>
 );
 
