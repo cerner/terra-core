@@ -5,6 +5,8 @@ import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
+console.log('Alert where alertAction prop provided containing an action button');
+
 class AlertActionButton extends React.Component {
   constructor(props) {
     super(props);
@@ -15,23 +17,19 @@ class AlertActionButton extends React.Component {
   }
 
   actionFunc() {
-    const newState = this.state;
-    newState.actionButtonClickCount += 1;
-    this.setState(newState);
+    const actionButtonClickCount = this.state.actionButtonClickCount + 1;
+    this.setState({ actionButtonClickCount });
   }
 
   render() {
     return (
       <div>
         <Base locale={locale}>
-          <h2>Alert where alertAction prop provided containing an action button</h2>
-          <br />
           <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
-            This is a warning. It is configured with a custom Action button.
+            This is a warning. It is configured with a custom Action button. Action button has been
+            clicked <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span> times.
           </Alert>
         </Base>
-        <br />
-        <p>Action button has been clicked {this.state.actionButtonClickCount} times.</p>
       </div>
     );
   }
