@@ -1,13 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Tabs from 'terra-tabs';
 import TabContent from './TabContentTemplate';
 
-const propTypes = {
-  variant: PropTypes.string,
-};
-
-const TabsWithFilledContent = (props) => {
+const TabsWithFilledContent = () => {
   const tab1 = (
     <Tabs.Pane
       label="Large content"
@@ -44,7 +39,7 @@ const TabsWithFilledContent = (props) => {
 
   return (
     <div style={{ padding: '10px', height: '400px' }}>
-      <Tabs variant={props.variant} fill>
+      <Tabs fill>
         {tab1}
         {tab2}
       </Tabs>
@@ -52,5 +47,4 @@ const TabsWithFilledContent = (props) => {
   );
 };
 
-TabsWithFilledContent.propTypes = propTypes;
 export default TabsWithFilledContent;

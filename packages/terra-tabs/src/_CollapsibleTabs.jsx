@@ -57,7 +57,6 @@ class CollapsibleTabs extends React.Component {
       hiddenStartIndex: -1,
       menuHidden: false,
       isCalculating: true,
-      isLabelTruncated: false,
     };
   }
 
@@ -129,12 +128,10 @@ class CollapsibleTabs extends React.Component {
       }
     }
 
-    if (this.state.isLabelTruncated !== isLabelTruncated && this.props.onTruncationChange) {
-      this.props.onTruncationChange(isLabelTruncated);
-    }
+    this.props.onTruncationChange(isLabelTruncated);
 
-    if (this.state.hiddenStartIndex !== newHideIndex || this.state.isLabelTruncated !== isLabelTruncated) {
-      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: isMenuHidden, isCalculating: false, isLabelTruncated });
+    if (this.state.hiddenStartIndex !== newHideIndex) {
+      this.setState({ hiddenStartIndex: newHideIndex, menuHidden: isMenuHidden, isCalculating: false });
     }
   }
 

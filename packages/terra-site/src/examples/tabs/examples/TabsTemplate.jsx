@@ -7,7 +7,6 @@ import TabContent from './TabContentTemplate';
 
 const propTypes = {
   tabFill: PropTypes.bool,
-  variant: PropTypes.string,
 };
 
 const TabsTemplate = (props) => {
@@ -58,7 +57,7 @@ const TabsTemplate = (props) => {
 
   return (
     <div style={{ padding: '10px' }}>
-      <Tabs variant={props.variant} defaultActiveKey="LabelTab" tabFill={props.tabFill}>
+      <Tabs defaultActiveKey="LabelTab" tabFill={props.tabFill}>
         {labelTab}
         {iconTab}
         {customTab}

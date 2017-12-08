@@ -2,13 +2,14 @@
 
 exports[`Tabs Variants should render modular-centered tabs 1`] = `
 <ContentContainer
-  className="tabs-container modular-centered"
+  className="tabs-container structural"
   fill={false}
   header={
     <ResponsiveElement
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -25,7 +26,7 @@ exports[`Tabs Variants should render modular-centered tabs 1`] = `
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-centered"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -37,9 +38,9 @@ exports[`Tabs Variants should render modular-centered tabs 1`] = `
       }
     />
   }
+  variant="modular-centered"
 >
   <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />
@@ -48,13 +49,14 @@ exports[`Tabs Variants should render modular-centered tabs 1`] = `
 
 exports[`Tabs Variants should render modular-left-aligned tabs 1`] = `
 <ContentContainer
-  className="tabs-container modular-left-aligned"
+  className="tabs-container structural"
   fill={false}
   header={
     <ResponsiveElement
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -71,7 +73,7 @@ exports[`Tabs Variants should render modular-left-aligned tabs 1`] = `
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-left-aligned"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -83,9 +85,9 @@ exports[`Tabs Variants should render modular-left-aligned tabs 1`] = `
       }
     />
   }
+  variant="modular-left-aligned"
 >
   <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />
@@ -101,6 +103,54 @@ exports[`Tabs Variants should render structural tabs 1`] = `
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
+        >
+          <TabPane
+            aria-selected={true}
+            className="is-active"
+            label="Default"
+            onClick={[Function]}
+          />
+        </CollapsedTabs>
+      }
+      responsiveTo="parent"
+      tiny={
+        <CollapsibleTabs
+          activeIndex={0}
+          activeKey="default"
+          onChange={[Function]}
+          onTruncationChange={[Function]}
+          variant="structural"
+        >
+          <TabPane
+            aria-selected={true}
+            className="is-active"
+            label="Default"
+            onClick={[Function]}
+          />
+        </CollapsibleTabs>
+      }
+    />
+  }
+  variant="structural"
+>
+  <div
+    className="pane-content"
+    role="tabpanel"
+  />
+</ContentContainer>
+`;
+
+exports[`Tabs should render a controlled component when onChange and activeKey are set 1`] = `
+<ContentContainer
+  className="tabs-container structural"
+  fill={false}
+  header={
+    <ResponsiveElement
+      defaultElement={
+        <CollapsedTabs
+          activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -131,53 +181,6 @@ exports[`Tabs Variants should render structural tabs 1`] = `
   }
 >
   <div
-    aria-labelledby="Default"
-    className="pane-content"
-    role="tabpanel"
-  />
-</ContentContainer>
-`;
-
-exports[`Tabs should render a controlled component when onChange and activeKey are set 1`] = `
-<ContentContainer
-  className="tabs-container modular-centered"
-  fill={false}
-  header={
-    <ResponsiveElement
-      defaultElement={
-        <CollapsedTabs
-          activeKey="default"
-        >
-          <TabPane
-            aria-selected={true}
-            className="is-active"
-            label="Default"
-            onClick={[Function]}
-          />
-        </CollapsedTabs>
-      }
-      responsiveTo="parent"
-      tiny={
-        <CollapsibleTabs
-          activeIndex={0}
-          activeKey="default"
-          onChange={[Function]}
-          onTruncationChange={[Function]}
-          variant="modular-centered"
-        >
-          <TabPane
-            aria-selected={true}
-            className="is-active"
-            label="Default"
-            onClick={[Function]}
-          />
-        </CollapsibleTabs>
-      }
-    />
-  }
->
-  <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />
@@ -186,13 +189,14 @@ exports[`Tabs should render a controlled component when onChange and activeKey a
 
 exports[`Tabs should render a default component 1`] = `
 <ContentContainer
-  className="tabs-container modular-centered"
+  className="tabs-container structural"
   fill={false}
   header={
     <ResponsiveElement
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -209,7 +213,7 @@ exports[`Tabs should render a default component 1`] = `
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-centered"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -223,7 +227,6 @@ exports[`Tabs should render a default component 1`] = `
   }
 >
   <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />
@@ -232,7 +235,7 @@ exports[`Tabs should render a default component 1`] = `
 
 exports[`Tabs should render an uncontrolled component when defaultActiveKey is set 1`] = `
 <ContentContainer
-  className="tabs-container modular-centered"
+  className="tabs-container structural"
   defaultKey="default"
   fill={false}
   header={
@@ -240,6 +243,7 @@ exports[`Tabs should render an uncontrolled component when defaultActiveKey is s
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -256,7 +260,7 @@ exports[`Tabs should render an uncontrolled component when defaultActiveKey is s
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-centered"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -270,7 +274,6 @@ exports[`Tabs should render an uncontrolled component when defaultActiveKey is s
   }
 >
   <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />
@@ -279,13 +282,14 @@ exports[`Tabs should render an uncontrolled component when defaultActiveKey is s
 
 exports[`Tabs should render with content filled when indicated 1`] = `
 <ContentContainer
-  className="tabs-container modular-centered"
+  className="tabs-container structural"
   fill={true}
   header={
     <ResponsiveElement
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -302,7 +306,7 @@ exports[`Tabs should render with content filled when indicated 1`] = `
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-centered"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -316,7 +320,6 @@ exports[`Tabs should render with content filled when indicated 1`] = `
   }
 >
   <div
-    aria-labelledby="Default"
     className="pane-content fill-parent"
     role="tabpanel"
   />
@@ -325,13 +328,14 @@ exports[`Tabs should render with content filled when indicated 1`] = `
 
 exports[`Tabs should render with tabs filled when indicated 1`] = `
 <ContentContainer
-  className="tabs-container modular-centered"
+  className="tabs-container structural"
   fill={false}
   header={
     <ResponsiveElement
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -348,7 +352,7 @@ exports[`Tabs should render with tabs filled when indicated 1`] = `
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-centered"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -363,7 +367,6 @@ exports[`Tabs should render with tabs filled when indicated 1`] = `
   tabsFill={true}
 >
   <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />
@@ -372,13 +375,14 @@ exports[`Tabs should render with tabs filled when indicated 1`] = `
 
 exports[`Tabs should set custom props 1`] = `
 <ContentContainer
-  className="tabs-container modular-centered customClass"
+  className="tabs-container structural customClass"
   fill={false}
   header={
     <ResponsiveElement
       defaultElement={
         <CollapsedTabs
           activeKey="default"
+          onTruncationChange={[Function]}
         >
           <TabPane
             aria-selected={true}
@@ -395,7 +399,7 @@ exports[`Tabs should set custom props 1`] = `
           activeKey="default"
           onChange={[Function]}
           onTruncationChange={[Function]}
-          variant="modular-centered"
+          variant="structural"
         >
           <TabPane
             aria-selected={true}
@@ -409,7 +413,6 @@ exports[`Tabs should set custom props 1`] = `
   }
 >
   <div
-    aria-labelledby="Default"
     className="pane-content"
     role="tabpanel"
   />

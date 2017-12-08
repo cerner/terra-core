@@ -21,7 +21,6 @@
 
       .tab-menu.is-active {
         background-size: 0 0;
-        font-weight: normal;
       }
 
       .tab-menu:hover {
@@ -64,7 +63,6 @@
         background-color: var(--terra-tabs-structural-active-background-color, #fff);
         background-size: var(--terra-tabs-structural-active-background-size, 100% 2px);
         color: var(--terra-tabs-structural-active-color, #000);
-        font-weight: var(--terra-tabs-structural-active-font-weight, bold);
       }
 
       &.is-disabled,

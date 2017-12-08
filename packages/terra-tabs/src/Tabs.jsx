@@ -12,17 +12,22 @@ import styles from './Tabs.scss';
 
 const cx = classNames.bind(styles);
 
+/**
+NOTE: This is being commented out until descussions have been resolved around if modular tabs should be removed.
 const variants = {
   MODULAR_CENTERED: 'modular-centered',
   MODULAR_LEFT_ALIGNED: 'modular-left-aligned',
   STRUCTURAL: 'structural',
 };
+*/
 
 const propTypes = {
+
   /**
    * Tabs style. One of: Tabs.Opts.Variants.MODULAR_CENTERED, Tabs.Opts.Variants.MODULAR_LEFT_ALIGNED, or Tabs.Opts.Variants.STRUCTURAL.
-   */
+   * NOTE: This is being commented out until descussions have been resolved around if we want modular tabs.
   variant: PropTypes.oneOf([variants.MODULAR_CENTERED, variants.MODULAR_LEFT_ALIGNED, variants.STRUCTURAL]),
+  */
 
   /**
    * Indicates if tabs should fill the width available in the tab bar.
@@ -57,7 +62,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  variant: 'modular-centered',
   tabFill: false,
   fill: false,
 };
@@ -106,7 +110,9 @@ class Tabs extends React.Component {
   }
 
   handleTruncationChange(isLabelTruncated) {
-    this.setState({ isLabelTruncated });
+    if (this.state.isLabelTruncated !== isLabelTruncated) {
+      this.setState({ isLabelTruncated });
+    }
   }
 
   wrapPaneOnClick(pane) {
@@ -121,7 +127,6 @@ class Tabs extends React.Component {
 
   render() {
     const {
-      variant,
       tabFill,
       fill,
       onChange,
@@ -131,6 +136,9 @@ class Tabs extends React.Component {
       ...customProps
     } = this.props;
     const attributes = Object.assign({}, customProps);
+
+    // NOTE: Hardcoding variant to structural until descussions have resolved around if we want modular tabs.
+    const variant = 'structural';
     const tabsClassNames = cx([
       'tabs-container',
       { 'tab-fill': tabFill },
@@ -140,13 +148,11 @@ class Tabs extends React.Component {
 
     let content = null;
     let isIconOnly = false;
-    let activeLabel = '';
     const clonedPanes = [];
     React.Children.forEach(children, (child) => {
       let isActive = false;
       if (child.key === this.state.activeKey || child.key === activeKey) {
         isActive = true;
-        activeLabel = child.props.label;
         content = child.props.children;
       }
 
@@ -171,7 +177,7 @@ class Tabs extends React.Component {
         activeKey={activeKey || this.state.activeKey}
         activeIndex={this.getActiveTabIndex()}
         onChange={this.handleOnChange}
-        onTruncationChange={isIconOnly ? null : this.handleTruncationChange}
+        onTruncationChange={this.handleTruncationChange}
         variant={variant}
       >
         {clonedPanes}
@@ -179,7 +185,7 @@ class Tabs extends React.Component {
     );
 
     const collapsedTabs = (
-      <CollapsedTabs activeKey={activeKey || this.state.activeKey}>
+      <CollapsedTabs activeKey={activeKey || this.state.activeKey} onTruncationChange={this.handleTruncationChange}>
         {clonedPanes}
       </CollapsedTabs>
     );
@@ -198,7 +204,6 @@ class Tabs extends React.Component {
       >
         <div
           role="tabpanel"
-          aria-labelledby={activeLabel}
           className={cx(['pane-content', { 'fill-parent': fill }])}
         >
           {content}
@@ -212,8 +217,10 @@ Tabs.propTypes = propTypes;
 Tabs.defaultProps = defaultProps;
 Tabs.Pane = TabPane;
 Tabs.Utils = TabUtils;
+/**
+Note: This is being commented out until descussions have been resolved around if we want modular tabs.
 Tabs.Opts = {
   Variants: variants,
 };
-
+*/
 export default Tabs;

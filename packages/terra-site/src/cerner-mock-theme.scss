@@ -187,11 +187,8 @@
   --terra-tabs-structural-border-color: initial;
   --terra-tabs-structural-border-width: 0;
   --terra-tabs-structural-last-tab-border-width: 0;
-  --terra-tabs-structural-active-font-weight: normal;
   --terra-tabs-structural-hover-background-size: 0 0;
   --terra-tabs-structural-hover-background-image: none;
-  --terra-tabs-keyboard-focus-rtl-box-shadow: none;
-  --terra-tabs-keyboard-focus-ltr-box-shadow: none;
   --terra-tabs-structural-menu-bar-border-color: #f3e8ec;
   --terra-tabs-structural-menu-bar-border-width: 0;
 
@@ -214,7 +211,6 @@
   --terra-tabs-collapsed-modular-active-color: #820933;
   --terra-tabs-collapsed-modular-hover-color: #820933;
   --terra-tabs-modular-selection-bar-color: #18020a;
-  --terra-tabs-modular-active-font-weight: normal;
   --terra-tabs-modular-selection-bar-transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   --terra-tabs-modular-background-image: none;
   --terra-tabs-modular-background-position: 0 0;
@@ -223,4 +219,12 @@
   --terra-tabs-modular-hover-background-image: none;
   --terra-tabs-modular-hover-background-size: 0 0;
   --terra-tabs-modular-selection-bar-height: 2px;
+}
+
+[dir=rtl]:root {
+  --terra-tabs-keyboard-focus-rtl-box-shadow: none;
+}
+
+[dir=ltr]:root {
+  --terra-tabs-keyboard-focus-ltr-box-shadow: none;
 }
