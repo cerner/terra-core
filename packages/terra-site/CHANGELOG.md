@@ -3,7 +3,14 @@ Changelog
 
 Unreleased
 ----------
+
+1.20.0 - (December 5, 2017)
+------------------
+### Added
+* Added styles for terra-modal content displaying div.
+
 ### Changed
+* Minor version bump
 * Place site header background on a parent div, instead of collapsible.
 
 1.19.0 - (November 28, 2017)

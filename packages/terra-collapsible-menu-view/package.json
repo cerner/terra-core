@@ -1,7 +1,7 @@
 {
   "name": "terra-collapsible-menu-view",
   "main": "lib/CollapsibleMenuView.js",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu.",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "terra-form": "^1.14.0",
     "terra-icon": "^1.15.0",
     "terra-list": "^1.17.0",
-    "terra-menu": "^1.9.0"
+    "terra-menu": "^1.10.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
