@@ -55,6 +55,7 @@
       display: block;
       margin-left: var(--terra-form-checkbox-label-text-margin-left, 1.4em);
       max-width: 100%;
+      user-select: none;
     }
 
     /* Custom checkbox shown when theme uses custom styling */
