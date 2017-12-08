@@ -46,6 +46,26 @@ const propTypes = {
    */
   onClick: PropTypes.func,
   /**
+   * Callback function triggered when button loses focus.
+   */
+  onBlur: PropTypes.func,
+  /**
+   * Callback function triggered when button gains focus.
+   */
+  onFocus: PropTypes.func,
+  /**
+   * Callback function triggered when key is pressed.
+   */
+  onKeyDown: PropTypes.func,
+  /**
+   * Callback function triggered when key is released.
+   */
+  onKeyUp: PropTypes.func,
+  /**
+   *  React `ref` callback to receive and store a reference to the mounted button instance.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Sets the button text.
    */
   text: PropTypes.string.isRequired,
@@ -64,6 +84,7 @@ const defaultProps = {
   isDisabled: false,
   isIconOnly: false,
   isReversed: false,
+  refCallback: undefined,
   type: 'button',
   variant: 'neutral',
 };
@@ -80,8 +101,8 @@ class Button extends React.Component {
   handleOnBlur(event) {
     this.setState({ focused: false });
     event.stopPropagation();
-    if (this.onBlur) {
-      this.onBlur(event);
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
     }
   }
 
@@ -103,8 +124,8 @@ class Button extends React.Component {
       this.setState({ focused: true });
     }
 
-    if (this.onKeyDown) {
-      this.onKeyDown(event);
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
     }
   }
 
@@ -119,8 +140,8 @@ class Button extends React.Component {
       this.setState({ focused: true });
     }
 
-    if (this.onKeyUp) {
-      this.onKeyUp(event);
+    if (this.props.onKeyUp) {
+      this.props.onKeyUp(event);
     }
   }
 
@@ -132,28 +153,34 @@ class Button extends React.Component {
       isDisabled,
       isIconOnly,
       isReversed,
+      refCallback,
       text,
       type,
       variant,
+      href,
+      onClick,
+      onBlur,
+      onFocus,
+      onKeyDown,
+      onKeyUp,
       ...customProps
     } = this.props;
 
-    // Not direct props options
-    this.onBlur = customProps.onBlur;
-    this.onKeyDown = customProps.onKeyDown;
-    this.onKeyUp = customProps.onKeyUp;
-    delete customProps.onBlur;
-    delete customProps.onKeyDown;
-    delete customProps.onKeyUp;
+    const buttonClasses = cx([
+      'button',
+      variant,
+      { 'is-disabled': isDisabled },
+      { block: isBlock },
+      { 'is-active': this.state.active },
+      { 'is-focused': this.state.focused },
+      customProps.className,
+    ]);
 
-    const attributes = Object.assign({}, customProps);
-
-    const buttonTextClasses = cx([
+    const buttonLabelClasses = cx([
       { 'text-only': !icon },
       { 'text-left': icon && isReversed },
       { 'text-right': icon && !isReversed },
     ]);
-    const buttonText = !isIconOnly && variant !== 'utility' ? <span className={buttonTextClasses}>{text}</span> : null;
 
     const iconClasses = cx([
       'icon',
@@ -161,32 +188,34 @@ class Button extends React.Component {
       { 'icon-left': (!isIconOnly && variant !== 'utility') && !isReversed },
       { 'icon-right': (!isIconOnly && variant !== 'utility') && isReversed },
     ]);
-    const iconElement = icon ? <span className={iconClasses}>{icon}</span> : null;
 
-    attributes.className = cx([
-      'button',
-      variant,
-      { 'is-disabled': isDisabled },
-      { block: isBlock },
-      { 'is-active': this.state.active },
-      { 'is-focused': this.state.focused },
-      attributes.className,
-    ]);
+    const buttonLabel = !isIconOnly && variant !== 'utility' ? <span className={buttonLabelClasses}>{text}</span> : null;
+    const buttonIcon = icon ? <span className={iconClasses}>{icon}</span> : null;
 
-    attributes.type = type;
-    attributes.disabled = isDisabled;
-    attributes.tabIndex = isDisabled ? '-1' : undefined;
-    attributes['aria-disabled'] = isDisabled;
-    attributes['aria-label'] = isIconOnly || variant === 'utility' ? text : null;
-    attributes.onKeyDown = this.handleKeyDown;
-    attributes.onKeyUp = this.handleKeyUp;
-    attributes.onBlur = this.handleOnBlur;
+    const ComponentType = href ? 'a' : 'button';
 
-    const order = isReversed ?
-      [buttonText, iconElement, children] :
-      [iconElement, buttonText, children];
-
-    return React.createElement(attributes.href ? 'a' : 'button', attributes, ...order);
+    return (
+      <ComponentType
+        {...customProps}
+        className={buttonClasses}
+        type={type}
+        disabled={isDisabled}
+        tabIndex={isDisabled ? '-1' : undefined}
+        aria-disabled={isDisabled}
+        aria-label={isIconOnly || variant === 'utility' ? text : null}
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
+        onBlur={this.handleOnBlur}
+        onClick={onClick}
+        onFocus={onFocus}
+        href={href}
+        ref={refCallback}
+      >
+        {isReversed ? buttonLabel : buttonIcon }
+        {isReversed ? buttonIcon : buttonLabel }
+        {children}
+      </ComponentType>
+    );
   }
 }
 
