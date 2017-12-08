@@ -5,10 +5,9 @@ import IconHelp from '../../../terra-icon/lib/icon/IconHelp';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
+console.log('Custom Alerts with all permutations of title, custom color and custom icon');
 export default () =>
   <Base locale={locale}>
-    <h2>Custom Alerts with all permutations of title, custom color and custom icon</h2>
-    <br />
     <Alert id="custom1" type={Alert.Opts.Types.CUSTOM} >Custom Alert with no icon, title or custom color</Alert>
     <br />
     <Alert id="custom2" type={Alert.Opts.Types.CUSTOM} title="Custom_Alert:" >Custom Alert with title but no icon or custom color</Alert>

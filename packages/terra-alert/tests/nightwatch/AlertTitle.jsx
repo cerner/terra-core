@@ -4,10 +4,9 @@ import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
+console.log('Alerts of the standard types with custom titles');
 export default () =>
   <Base locale={locale}>
-    <h2>Alerts of the standard types with custom titles</h2>
-    <br />
     <Alert id="alertAlert" type={Alert.Opts.Types.ALERT} title="Alert_Alert:" >Alert of type Alert with custom title</Alert>
     <br />
     <Alert id="errorAlert" type={Alert.Opts.Types.ERROR} title="Error_Alert:" >Alert of type Error with custom title</Alert>
