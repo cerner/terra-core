@@ -33,10 +33,10 @@
     font-size: inherit;
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-button-padding-bottom, 0.4285em);
+    padding-bottom: var(--terra-button-padding-bottom, 0.4285rem);
     padding-left: 0;
     padding-right: 0;
-    padding-top: var(--terra-button-padding-top, 0.286em);
+    padding-top: var(--terra-button-padding-top, 0.286rem);
     text-align: var(--terra-button-text-align, left);
     text-decoration: none;
     text-transform: none;
@@ -82,12 +82,12 @@
 
   .action {
     @include terra-button-variant-color($terra-button-action-color-scheme);
-    border-radius: var(--terra-button-action-border-radius, 3px);
+    border-radius: var(--terra-button-action-border-radius, 0.2142rem);
   }
 
   .utility {
     @include terra-button-variant-color($terra-button-utility-color-scheme);
-    border-radius: var(--terra-button-utility-border-radius, 3px);
+    border-radius: var(--terra-button-utility-border-radius, 0.2142rem);
   }
 
   // Button style modifiers
@@ -97,39 +97,39 @@
   }
 
   .text-only {
-    padding-left: var(--terra-button-text-only-padding-left, 0.714em);
-    padding-right: var(--terra-button-text-only-padding-right, 0.714em);
+    margin-left: var(--terra-button-text-only-margin-left, 0.714rem);
+    margin-right: var(--terra-button-text-only-margin-right, 0.714rem);
   }
 
   .text-left {
-    padding-left: var(--terra-button-text-left-padding-left, 0.714em);
-    padding-right: var(--terra-button-text-left-padding-right, 0.714em);
+    margin-left: var(--terra-button-text-left-margin-left, 0.714rem);
+    margin-right: var(--terra-button-text-left-margin-right, 0.714rem);
   }
 
   .text-right {
-    padding-right: var(--terra-button-text-right-padding-right, 0.714em);
+    margin-right: var(--terra-button-text-right-margin-right, 0.714rem);
   }
 
   .icon {
     display: inline-block;
 
     > svg {
-      height: var(--terra-button-icon-height, 1em);
-      width: var(--terra-button-icon-width, 1em);
+      height: var(--terra-button-icon-height, 1rem);
+      width: var(--terra-button-icon-width, 1rem);
     }
   }
 
   .icon-only {
-    padding-left: var(--terra-button-icon-only-padding-left, 0.714em);
-    padding-right: var(--terra-button-icon-only-padding-right, 0.714em);
+    margin-left: var(--terra-button-icon-only-margin-left, 0.714rem);
+    margin-right: var(--terra-button-icon-only-margin-right, 0.714rem);
   }
 
   .icon-left {
-    padding-left: var(--terra-button-icon-left-padding-left, 0.714em);
-    padding-right: var(--terra-button-icon-left-padding-right, 0.714em);
+    margin-left: var(--terra-button-icon-left-margin-left, 0.714rem);
+    margin-right: var(--terra-button-icon-left-margin-right, 0.714rem);
   }
 
   .icon-right {
-    padding-right: var(--terra-button-icon-right-padding-right, 0.714em);
+    margin-right: var(--terra-button-icon-right-margin-right, 0.714rem);
   }
 }
