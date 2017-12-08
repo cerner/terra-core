@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'terra-modal';
+import styles from '../../site.scss';
 
 class ModalIsFullscreen extends React.Component {
   constructor() {
@@ -30,7 +31,7 @@ class ModalIsFullscreen extends React.Component {
           isFullscreen
           onRequestClose={this.handleCloseModal}
         >
-          <div>
+          <div className={styles['demo-modal-content']}>
             <h1>Fullscreen Modal</h1>
             <br />
             <p>This modal will always take up the full screen.</p>

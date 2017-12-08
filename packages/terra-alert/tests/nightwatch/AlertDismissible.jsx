@@ -4,6 +4,7 @@ import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
+console.log('Alert with onDismiss prop triggering Dismiss button to be rendered. Custom onDismiss callback rerenders page without the Alert.');
 class AlertDismissible extends React.Component {
   constructor(props) {
     super(props);
@@ -20,16 +21,15 @@ class AlertDismissible extends React.Component {
   }
 
   render() {
-    const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
-    let alertElem = '';
+    let alertElem = <div id="dismissed">Alert was dismissed</div>;
     if (!this.state.isDismissed) {
-      alertElem = <Alert id="dismissibleAlert" type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >{alertText}</Alert>;
+      alertElem = (<Alert id="dismissibleAlert" type={Alert.Opts.Types.SUCCESS} onDismiss={this.handleDismiss} >
+        This is a dismissable Alert;
+      </Alert>);
     }
     return (
       <div>
         <Base locale={locale}>
-          <h2>Alert with onDismiss prop triggering Dismiss button to be rendered. Custom onDismiss callback rerenders page without the Alert.</h2>
-          <br />
           {alertElem}
         </Base>
       </div>

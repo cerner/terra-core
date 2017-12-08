@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added variant prop to all for setting of 12 hour time input.
+* Added support for theming.
+* Added mobile only time input.
+
 
 1.15.0 - (November 28, 2017)
 ------------------
