@@ -22,6 +22,15 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('value').equals('00');
   },
 
+  'Ignores invalid times that are passed into a timepicker': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/invalid-time`);
+
+    browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.be.present;
+    browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('value').equals('');
+    browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.be.present;
+    browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('value').equals('');
+  },
+
   'Time input accepts valid time entry and jumps to the minute input when the hour input has a valid entry': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
 
@@ -241,5 +250,29 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
 
     browser.keys('47');
     browser.assert.containsText('#time-input-value', '07:47');
+  },
+
+  'Does not triggers onChange for hour input for key entry when hour has just one character': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys('1223');
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys(browser.Keys.RIGHT_ARROW);
+    browser.keys(browser.Keys.BACK_SPACE);
+
+    browser.assert.containsText('#time-input-value', '12:23');
+  },
+
+  'Does not triggers onChange for time-input for key entry when minute has just one character': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+
+    browser.click('#timeInput input[name="terra-time-hour-time-input"]');
+    browser.keys('1223');
+    browser.click('#timeInput input[name="terra-time-minute-time-input"]');
+    browser.keys(browser.Keys.RIGHT_ARROW);
+    browser.keys(browser.Keys.BACK_SPACE);
+
+    browser.assert.containsText('#time-input-value', '12:23');
   },
 });
