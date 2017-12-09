@@ -119,6 +119,7 @@ class CollapsibleMenuView extends React.Component {
         {visibleChildren}
         <div className={menuButtonClassName} ref={this.setMenuButton}>
           <CollapsibleMenuViewItem
+            data-collapsible-menu-toggle
             icon={<IconEllipses />}
             subMenuItems={hiddenChildren}
             boundingRef={boundingRef}
