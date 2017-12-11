@@ -12,6 +12,10 @@ const propTypes = {
    */
   header: PropTypes.node,
   /**
+   * The footer element to be placed within the footer area of the container.
+   */
+  footer: PropTypes.node,
+  /**
    * The children to be placed within the main content area of the container.
    */
   children: PropTypes.node,
@@ -23,12 +27,14 @@ const propTypes = {
 
 const defaultProps = {
   header: undefined,
+  footer: undefined,
   children: undefined,
   fill: false,
 };
 
 const ContentContainer = ({
   header,
+  footer,
   children,
   fill,
   ...customProps
@@ -48,6 +54,9 @@ const ContentContainer = ({
         <div className={cx('normalizer')}>
           {children}
         </div>
+      </div>
+      <div className={cx('footer')}>
+        {footer}
       </div>
     </div>
   );
