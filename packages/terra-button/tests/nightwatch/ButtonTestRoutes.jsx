@@ -6,7 +6,7 @@ import ButtonTests from './ButtonTests';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
 import { NeutralButton, EmphasisButton, DeemphasisButton, ActionButton, UtilityButton } from './VariantButton';
 import { IconNeutralButton, IconOnlyButton, IconReversedButton } from './IconButton';
-import LongTextButton from './LongTextButton';
+import { LongTextBlockButton, LongTextButton } from './LongTextButton';
 
 const routes = (
   <div>
@@ -19,6 +19,7 @@ const routes = (
     <Route path="/tests/button-tests/utility" component={UtilityButton} />
     <Route path="/tests/button-tests/emphasis" component={EmphasisButton} />
     <Route path="/tests/button-tests/de-emphasis" component={DeemphasisButton} />
+    <Route path="/tests/button-tests/block" component={LongTextBlockButton} />
     <Route path="/tests/button-tests/long-text" component={LongTextButton} />
     <Route path="/tests/button-tests/with-type-button" component={ButtonWithTypeButton} />
     <Route path="/tests/button-tests/with-type-reset" component={ButtonWithTypeReset} />

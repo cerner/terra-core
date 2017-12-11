@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Update button examples to use V2
 
 1.20.0 - (December 5, 2017)
 ------------------

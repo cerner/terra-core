@@ -7,7 +7,6 @@ const ButtonTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/button-tests/neutral">Neutral Button</Link></li>
-      <li><Link to="/tests/button-tests/disabled">Disabled Button</Link></li>
       <li><Link to="/tests/button-tests/icon-neutral">Icon Neutral Button</Link></li>
       <li><Link to="/tests/button-tests/icon-only">Icon Only Button</Link></li>
       <li><Link to="/tests/button-tests/icon-reversed">Icon Reversed Button</Link></li>
@@ -15,6 +14,7 @@ const ButtonTests = () => (
       <li><Link to="/tests/button-tests/de-emphasis">De-emphasis Button</Link></li>
       <li><Link to="/tests/button-tests/action">Action Button</Link></li>
       <li><Link to="/tests/button-tests/utility">Utility Button</Link></li>
+      <li><Link to="/tests/button-tests/block">Long Text Block Button</Link></li>
       <li><Link to="/tests/button-tests/long-text">Long Text Button</Link></li>
       <li><Link to="/tests/button-tests/with-type-button">Button with Type Button</Link></li>
       <li><Link to="/tests/button-tests/with-type-reset">Button with Type Reset</Link></li>
