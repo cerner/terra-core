@@ -24,6 +24,9 @@ const config = {
     enabled: !process.env.TRAVIS,
   },
 
+  // Ignore deprecation warnings. When chrome supports /actions API we'll update to use those.
+  deprecationWarnings: false,
+
   webpackPort,
   webpackConfig,
 

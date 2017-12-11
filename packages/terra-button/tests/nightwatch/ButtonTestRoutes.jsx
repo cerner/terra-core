@@ -6,7 +6,6 @@ import ButtonTests from './ButtonTests';
 import { TinyButton, SmallButton, MediumButton, LargeButton, HugeButton } from './SizeButton';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
 import { DefaultButton, PrimaryButton, SecondaryButton, LinkButton } from './VariantButton';
-import { DisabledButton, DisabledLink } from './Disabled';
 import { IconDefaultButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import LongTextButton from './LongTextButton';
 import CompactButton from './CompactButton';
@@ -15,8 +14,6 @@ const routes = (
   <div>
     <Route path="/tests/button-tests" component={ButtonTests} />
     <Route path="/tests/button-tests/default" component={DefaultButton} />
-    <Route path="/tests/button-tests/disabled" component={DisabledButton} />
-    <Route path="/tests/button-tests/disabled-link" component={DisabledLink} />
     <Route path="/tests/button-tests/icon-default" component={IconDefaultButton} />
     <Route path="/tests/button-tests/icon-only" component={IconOnlyButton} />
     <Route path="/tests/button-tests/icon-reversed" component={IconReversedButton} />
