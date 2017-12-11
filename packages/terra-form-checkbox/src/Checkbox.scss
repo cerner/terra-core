@@ -31,7 +31,7 @@
     /* stylelint-disable selector-max-compound-selectors */
     .label {
       cursor: pointer;
-      display: inline-flex;
+      display: inline-block;
       font-size: var(--terra-form-checkbox-font-size, 1rem);
       line-height: var(--terra-form-checkbox-line-height, 1.42);
       padding-left: var(--terra-form-checkbox-padding-left, none);
