@@ -4,6 +4,11 @@ import ButtonGroup from '../../src/ButtonGroup';
 const button1 = <ButtonGroup.Button key="1" />;
 const button2 = <ButtonGroup.Button key="2" />;
 
+it('should render an empty component', () => {
+  const buttonGroup = shallow(<ButtonGroup />);
+  expect(buttonGroup).toMatchSnapshot();
+});
+
 it('should render a default component', () => {
   const buttonGroup = shallow(<ButtonGroup buttons={[button1]} />);
   expect(buttonGroup).toMatchSnapshot();

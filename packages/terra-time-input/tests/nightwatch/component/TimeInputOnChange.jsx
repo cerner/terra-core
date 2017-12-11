@@ -1,5 +1,8 @@
 import React from 'react';
+import Base from 'terra-base';
 import TimeInput from '../../../lib/TimeInput';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class TimeInputDefault extends React.Component {
   constructor(props) {
@@ -14,7 +17,7 @@ class TimeInputDefault extends React.Component {
 
   render() {
     return (
-      <div>
+      <Base locale={locale}>
         <div id="time-input-value">
           <h3>Time Input: {this.state.input}</h3>
         </div>
@@ -23,7 +26,7 @@ class TimeInputDefault extends React.Component {
           name="time-input"
           onChange={this.handleOnChange}
         />
-      </div>
+      </Base>
     );
   }
 }
