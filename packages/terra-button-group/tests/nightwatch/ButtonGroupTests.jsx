@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 const ButtonGroupTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/button-group-tests/default-button-group">ButtonGroup - Default Empty</Link></li>
       <li><Link to="/tests/button-group-tests/tiny-button-group">Button Group - Tiny</Link></li>
       <li><Link to="/tests/button-group-tests/small-button-group">Button Group - Small</Link></li>
       <li><Link to="/tests/button-group-tests/medium-button-group">Button Group - Medium</Link></li>

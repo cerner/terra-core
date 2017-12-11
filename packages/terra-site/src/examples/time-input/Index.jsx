@@ -10,8 +10,10 @@ import { version } from 'terra-time-input/package.json';
 import TimeInputSrc from '!raw-loader!terra-time-input/src/TimeInput';
 
 // Example Files
-import TimeInputNoDefaultTime from './TimeInputNoDefaultTime';
 import TimeInputDefaultTime from './TimeInputDefaultTime';
+import TimeInputDefaultTwelveHour from './TimeInputDefaultTwelveHour';
+import TimeInputNoDefaultTime from './TimeInputNoDefaultTime';
+import TimeInputNoDefaultTwelveHour from './TimeInputNoDefaultTwelveHour';
 
 const TimeInputExamples = () => (
   <div>
@@ -22,6 +24,10 @@ const TimeInputExamples = () => (
     <TimeInputNoDefaultTime />
     <h2 id="default">With Default Time</h2>
     <TimeInputDefaultTime />
+    <h2 id="default">Without Default Time - 12 Hour</h2>
+    <TimeInputNoDefaultTwelveHour />
+    <h2 id="default">With Default Time - 12 Hour</h2>
+    <TimeInputDefaultTwelveHour />
   </div>
 );
 
