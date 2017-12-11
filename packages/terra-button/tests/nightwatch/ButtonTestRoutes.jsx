@@ -5,7 +5,6 @@ import { Route } from 'react-router';
 import ButtonTests from './ButtonTests';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
 import { NeutralButton, EmphasisButton, DeemphasisButton, ActionButton, UtilityButton } from './VariantButton';
-import DisabledButton from './Disabled';
 import { IconNeutralButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import LongTextButton from './LongTextButton';
 
@@ -13,7 +12,6 @@ const routes = (
   <div>
     <Route path="/tests/button-tests" component={ButtonTests} />
     <Route path="/tests/button-tests/neutral" component={NeutralButton} />
-    <Route path="/tests/button-tests/disabled" component={DisabledButton} />
     <Route path="/tests/button-tests/icon-neutral" component={IconNeutralButton} />
     <Route path="/tests/button-tests/icon-only" component={IconOnlyButton} />
     <Route path="/tests/button-tests/icon-reversed" component={IconReversedButton} />

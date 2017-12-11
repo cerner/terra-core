@@ -3,7 +3,6 @@
 import React from 'react';
 import { Route } from 'react-router';
 import ButtonGroupTests from './ButtonGroupTests';
-import EmptyButtonGroup from './DefaultButtonGroup';
 import { TinyButtonGroup, SmallButtonGroup, MediumButtonGroup, LargeButtonGroup, HugeButtonGroup } from './SizeButtonGroup';
 import CompactButtonGroup from './CompactButtonGroup';
 import { IconDefaultButtonGroup, IconReversedButtonGroup, IconOnlyButtonGroup } from './IconButtonGroupButton';
@@ -14,7 +13,6 @@ import OnChangeButtonGroup from './OnChangeButtonGroup';
 const routes = (
   <div>
     <Route path="/tests/button-group-tests" component={ButtonGroupTests} />
-    <Route path="/tests/button-group-tests/default-button-group" component={EmptyButtonGroup} />
     <Route path="/tests/button-group-tests/tiny-button-group" component={TinyButtonGroup} />
     <Route path="/tests/button-group-tests/small-button-group" component={SmallButtonGroup} />
     <Route path="/tests/button-group-tests/medium-button-group" component={MediumButtonGroup} />
