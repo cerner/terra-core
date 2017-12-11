@@ -145,7 +145,6 @@
     --terra-select-menu-box-shadow-rtl: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   }
 
-<<<<<<< HEAD
   // terra-tabs
   // Common
   --terra-tabs-icon-only-padding: 0.786rem 0.571rem;
@@ -220,15 +219,15 @@
   --terra-tabs-modular-hover-background-image: none;
   --terra-tabs-modular-hover-background-size: 0 0;
   --terra-tabs-modular-selection-bar-height: 2px;
-}
 
-[dir=rtl]:root {
-  --terra-tabs-keyboard-focus-rtl-box-shadow: none;
-}
+  [dir=rtl]:root {
+    --terra-tabs-keyboard-focus-rtl-box-shadow: none;
+  }
 
-[dir=ltr]:root {
-  --terra-tabs-keyboard-focus-ltr-box-shadow: none;
-=======
+  [dir=ltr]:root {
+    --terra-tabs-keyboard-focus-ltr-box-shadow: none;
+  }
+
   // Terra Time Input
   --terra-time-input-background: #f1A8ff;
   --terra-time-input-animation-background: linear-gradient(to bottom, #ff8fab, #ff8fab);
@@ -282,5 +281,4 @@
   --terra-time-input-meridiem-button-selected-background-color: #ff1fd4;
   --terra-time-input-meridiem-button-selected-border-color: #ff1fd4;
   --terra-time-input-meridiem-button-selected-color: #000;
->>>>>>> origin/master
 }
