@@ -35,9 +35,9 @@
   .tab,
   .tab-menu {
     cursor: pointer;
-    font-size: var(--terra-tabs-font-size, 0.857rem);
-    line-height: var(--terra-tabs-line-hight, 1.167);
-    padding: var(--terra-tabs-padding, 0.429rem 1.071rem 0.357rem);
+    font-size: var(--terra-tabs-font-size, 1rem);
+    line-height: var(--terra-tabs-line-hight, 1.4);
+    padding: var(--terra-tabs-padding, 0.643rem 1.071rem);
   }
 
   .tab,
@@ -62,7 +62,7 @@
 
     &.is-text-only {
       min-width: 7.143rem;
-      padding: var(--terra-tabs-text-only-padding, 0.429rem 1.071rem 0.357rem);
+      padding: var(--terra-tabs-text-only-padding, 0.643rem 1.071rem);
     }
 
     .label:nth-child(2) {
@@ -89,7 +89,7 @@
   }
 
   .collapsed-tabs-container .tab-menu {
-    justify-content: var(--terra-tabs-menu-justify-content, flex-start);
+    justify-content: var(--terra-tabs-menu-collapsed-justify-content, flex-start);
 
     /* stylelint-disable-next-line selector-max-compound-selectors */
     span {

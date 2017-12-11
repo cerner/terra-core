@@ -6,7 +6,7 @@ const KEYCODES = {
 };
 
 /**
- * Returns if the selected tab is not the currently selected index.
+ * Returns true if the selected tab is not the currently selected index.
  */
 const shouldHandleSelection = (currentSelectedKey, newSelectedKey) => newSelectedKey !== currentSelectedKey;
 
@@ -22,7 +22,6 @@ const initialSelectedTabKey = (tabs, activeKey) => {
   }
   return tabs.key;
 };
-
 
 const TabUtils = {
   KEYCODES,

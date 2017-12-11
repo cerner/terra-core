@@ -38,6 +38,11 @@ const propTypes = {
   isIconOnly: PropTypes.bool,
 };
 
+const defaultProps = {
+  isDisabled: false,
+  isIconOnly: false,
+};
+
 const TabPane = ({
   icon,
   label,
@@ -70,5 +75,6 @@ const TabPane = ({
 };
 
 TabPane.propTypes = propTypes;
+TabPane.defaultProps = defaultProps;
 
 export default TabPane;

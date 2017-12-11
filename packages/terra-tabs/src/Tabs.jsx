@@ -46,7 +46,7 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * Tabs.Pane components to be displayed
+   * Tabs.Pane components to be displayed.
    */
   children: PropTypes.node.isRequired,
 
@@ -170,7 +170,6 @@ class Tabs extends React.Component {
     content = React.Children.map(content, contentItem => (
       React.cloneElement(contentItem, { isLabelHidden: isIconOnly || this.state.isLabelTruncated })
     ));
-
 
     const collasibleTabs = (
       <CollapsibleTabs

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import IconBriefcase from 'terra-icon/lib/icon/IconBriefcase';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import Tabs from 'terra-tabs';
-import TabContent from './TabContentTemplate';
+import TabContentTemplate from './TabContentTemplate';
 
 const propTypes = {
   tabFill: PropTypes.bool,
@@ -12,27 +12,33 @@ const propTypes = {
 const TabsTemplate = (props) => {
   const labelTab = (
     <Tabs.Pane label="Tab with label" key="LabelTab">
-      <TabContent label="Tab with label" />
+      <TabContentTemplate label="Tab with label" />
     </Tabs.Pane>
   );
 
   const iconTab = (
     <Tabs.Pane label="Tab with icon" icon={<IconBriefcase />} key="IconTab">
-      <TabContent label="Tab with icon" />
+      <TabContentTemplate label="Tab with icon" />
     </Tabs.Pane>
   );
 
   const customTab = (
     <Tabs.Pane
       customDisplay={(
-        <div style={{ color: 'red' }}>
+        <div
+          style={{
+            color: 'red',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
           Custom display
         </div>
       )}
       label="Custom display"
       key="CustomTab"
     >
-      <TabContent label="Custom display" />
+      <TabContentTemplate label="Custom display" />
     </Tabs.Pane>
   );
 
@@ -41,13 +47,13 @@ const TabsTemplate = (props) => {
       label="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       key="longLabel"
     >
-      <TabContent label="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+      <TabContentTemplate label="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
     </Tabs.Pane>
   );
 
-  const tab1 = (
-    <Tabs.Pane label="Tab 1" key="tab1">
-      <TabContent label="Tab 1" />
+  const lastTab = (
+    <Tabs.Pane label="Last Tab" key="lastTab">
+      <TabContentTemplate label="Last Tab" />
     </Tabs.Pane>
   );
 
@@ -63,7 +69,7 @@ const TabsTemplate = (props) => {
         {customTab}
         {disabledTab}
         {longLabel}
-        {tab1}
+        {lastTab}
       </Tabs>
     </div>
   );

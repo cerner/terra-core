@@ -2,7 +2,7 @@
 
 Tabs are containers used to organize content. They allow for quick switching between groups of contextually related content. Content is divided into different containers and each container is viewable one at a time. The user can switch between containers by selecting the corresponding tab control.
 
-Tabs are meant for organizing content that doesn’t need to be compared or accessed simultaneously or if the user needs quick access through a group of contextually related content. Tabs are not intended for navigation.
+Tabs are meant to organize content as to provide quick access to a group of contextually related content that does not need to be compared or accessed simultaneously. Tabs are not intended for navigation.
 
 ## Getting Started
 
@@ -40,7 +40,13 @@ export default TabContent;
 
 ```
 
+### Controlled vs. Uncontrolled Tabs
+
+Terra-tabs allows you to use either a controlled or uncontrolled mode in order to have the amount control over the state that you need.
+
 ### Uncontrolled Tabs
+
+Uncontrolled tabs is the default mode of terra-tabs. In this mode the tabs will handle all state internally and the initial active tab can optionally be set using `defaultActiveKey` on the `<Tabs />` component.
 
 ```jsx
 
@@ -115,6 +121,8 @@ export default TabsComponent;
 ```
 
 ### Controlled Tabs
+
+In controlled mode terra-tabs does not handle any of the selection state internally, it is left up to the consumer. This mode is enabled by setting the `activeKey` prop on the `<Tabs />` component. A handler is needed for `onChange` to be notified of user selection and update the state. If both `activeKey` and `defaultActiveKey` are set, then `defaultActiveKey` will have no effect.
 
 ```jsx
 
