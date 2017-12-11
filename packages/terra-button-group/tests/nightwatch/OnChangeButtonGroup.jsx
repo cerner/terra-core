@@ -16,9 +16,7 @@ class buttonGroupExample extends React.Component {
   render() {
     return (
       <div>
-        <div id="selected-index">
-          <h3>Selected Button: {this.state.selectedIndex}</h3>
-        </div>
+        <h3>Selected Button: <span id="selected-index">{this.state.selectedIndex}</span></h3>
         <ButtonGroup
           id="button-group-onchange"
           isSelectable
