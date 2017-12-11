@@ -12,6 +12,20 @@ const KEYCODES = {
   TAB: 9,
 };
 
+const ButtonVariants = {
+  NEUTRAL: 'neutral',
+  EMPHASIS: 'emphasis',
+  'DE-EMPSHASIS': 'de-emphasis',
+  ACTION: 'action',
+  UTILITY: 'utility',
+};
+
+const ButtonTypes = {
+  BUTTON: 'button',
+  SUBMIT: 'submit',
+  RESET: 'reset',
+};
+
 const propTypes = {
   /**
    * Child Nodes
@@ -221,5 +235,8 @@ class Button extends React.Component {
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
+Button.Opts = { };
+Button.Opts.Types = ButtonTypes;
+Button.Opts.Variants = ButtonVariants;
 
 export default Button;
