@@ -13,8 +13,10 @@
     .focus-container {
       display: inline-block;
       max-width: 100%;
+      padding-bottom: var(--terra-form-checkbox-focus-container-padding-bottom, none);
       padding-left: var(--terra-form-checkbox-focus-container-padding-left, 0.214rem);
       padding-right: var(--terra-form-checkbox-focus-container-padding-right, 0.214rem);
+      padding-top: var(--terra-form-checkbox-focus-container-padding-top, none);
       position: relative;
     }
 
@@ -22,6 +24,8 @@
       display: inline-block;
       padding-bottom: var(--terra-form-checkbox-is-hidden-focus-container-padding-bottom, 0.017rem);
       padding-left: var(--terra-form-checkbox-is-hidden-focus-container-padding-left, 0.214rem);
+      padding-right: var(--terra-form-checkbox-is-hidden-focus-container-padding-right, none);
+      padding-top: var(--terra-form-checkbox-is-hidden-focus-container-padding-top, none);
     }
 
     /* stylelint-disable selector-max-compound-selectors */
@@ -54,7 +58,7 @@
     .label-text {
       display: block;
       margin-left: var(--terra-form-checkbox-label-text-margin-left, 1.4em);
-      max-width: 100%;
+      max-width: 100%; //stops content overflow on IE 10/11
       user-select: none;
     }
 
@@ -90,7 +94,7 @@
       content: var(--terra-form-checkbox-symbol, none);
       height: var(--terra-form-checkbox-checked-height, none);
       left: 0;
-      line-height: 0.9;
+      line-height: (--terra-form-checkbox-checked-line-height, 0.9);
       margin-top: var(--terra-form-checkbox-margin-top, none);
       opacity: 1;
       position: absolute;
@@ -101,6 +105,17 @@
       vertical-align: middle;
       visibility: visible;
       width: var(--terra-form-checkbox-checked-width, none);
+    }
+
+    .native-input + .is-mobile::before {
+      height: var(--terra-form-checkbox-is-mobile-height, none);
+      width: var(--terra-form-checkbox-is-mobile-width, none);
+    }
+
+    .native-input:checked + .is-mobile::before {
+      height: var(--terra-form-checkbox-is-mobile-checked-height, none);
+      line-height: (--terra-form-checkbox-is-mobile-checked-line-height, none);
+      width: var(--terra-form-checkbox-is-mobile-checked-width, none);
     }
 
     /* Hide label if isLabelHidden true */
