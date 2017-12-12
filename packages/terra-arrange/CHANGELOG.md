@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed broken image in arrange example
 
 1.16.0 - (November 28, 2017)
 ------------------
