@@ -5,6 +5,7 @@ import { Route } from 'react-router';
 import ButtonTests from './ButtonTests';
 import { ButtonWithTypeButton, ButtonWithTypeReset, ButtonWithTypeSubmit } from './ButtonTypes';
 import { NeutralButton, EmphasisButton, DeemphasisButton, ActionButton, UtilityButton } from './VariantButton';
+import ActiveVariantButtons from './ActiveVariantButtons';
 import { IconNeutralButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import { LongTextBlockButton, LongTextButton } from './LongTextButton';
 
@@ -21,6 +22,7 @@ const routes = (
     <Route path="/tests/button-tests/de-emphasis" component={DeemphasisButton} />
     <Route path="/tests/button-tests/block" component={LongTextBlockButton} />
     <Route path="/tests/button-tests/long-text" component={LongTextButton} />
+    <Route path="/tests/button-tests/active-styles" component={ActiveVariantButtons} />
     <Route path="/tests/button-tests/with-type-button" component={ButtonWithTypeButton} />
     <Route path="/tests/button-tests/with-type-reset" component={ButtonWithTypeReset} />
     <Route path="/tests/button-tests/with-type-submit" component={ButtonWithTypeSubmit} />

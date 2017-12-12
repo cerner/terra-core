@@ -16,6 +16,7 @@ const ButtonTests = () => (
       <li><Link to="/tests/button-tests/utility">Utility Button</Link></li>
       <li><Link to="/tests/button-tests/block">Long Text Block Button</Link></li>
       <li><Link to="/tests/button-tests/long-text">Long Text Button</Link></li>
+      <li><Link to="/tests/button-tests/active-styles">Active Button Styles</Link></li>
       <li><Link to="/tests/button-tests/with-type-button">Button with Type Button</Link></li>
       <li><Link to="/tests/button-tests/with-type-reset">Button with Type Reset</Link></li>
       <li><Link to="/tests/button-tests/with-type-submit">Button with Type Submit</Link></li>

@@ -1,9 +1,10 @@
 /* global browser, Terra, before */
-const shouldTheme = (customProperties) => {
+const shouldTheme = (customProperties, selector) => {
+  const selectedElement = selector || '[data-reactroot]';
   Object.entries(customProperties).forEach(([key, value]) => {
     it(`themed [${key}]`, () => {
       browser.setCSSCustomProps({ [key]: value });
-      expect(browser.checkElement('[data-reactroot]')).to.matchReference();
+      expect(browser.checkElement(selectedElement)).to.matchReference();
     });
   });
 };
@@ -25,6 +26,7 @@ describe('Button', () => {
       '--terra-button-padding-top': '20px',
       '--terra-button-disabled-opacity': '.7',
 
+      // Netural Button Vars for default state
       '--terra-button-background-color-neutral': 'purple',
       '--terra-button-border-color-neutral': 'purple',
       '--terra-button-box-shadow-neutral': '0 0 7px 4px purple',
@@ -56,7 +58,26 @@ describe('Button', () => {
         '--terra-button-focus-box-shadow-neutral': '0 0 1px 3px rgba(76, 178, 233, 0.5)',
       });
     });
+
+    describe('Neutral-Active', () => {
+      beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
+
+      shouldTheme({
+        '--terra-button-active-and-focus-background-color-neutral': 'purple',
+        '--terra-button-active-and-focus-border-color-neutral': 'purple',
+        '--terra-button-active-and-focus-box-shadow-neutral': '0 0 7px 4px purple, 0 0 1px 3px rgba(76, 178, 233, 0.5)',
+        '--terra-button-active-background-color-neutral': 'purple',
+        '--terra-button-active-border-color-neutral': 'purple',
+      }, '#neutral');
+
+      // Terra.should.beAccessible({ context: '#neutralActive' });
+      Terra.should.matchScreenshot('active', { selector: '#neutralActive' });
+
+      // Terra.should.beAccessible({ context: '#neutralActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#neutralActiveFocusSpan' });
+    });
   });
+
   describe('Emphasis', () => {
     before(() => browser.url('/#/tests/button-tests/emphasis'));
 
@@ -75,6 +96,16 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
+    });
+
+    describe('Emphasis-Active', () => {
+      beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
+
+      Terra.should.beAccessible({ context: '#emphasisActive' });
+      Terra.should.matchScreenshot('active', { selector: '#emphasisActive' });
+
+      Terra.should.beAccessible({ context: '#emphasisActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#emphasisActiveFocusSpan' });
     });
   });
 
@@ -96,6 +127,16 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
+    });
+
+    describe('De-emphasis-Active', () => {
+      beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
+
+      // Terra.should.beAccessible({ context: '#de-emphasisActive' });
+      Terra.should.matchScreenshot('active', { selector: '#de-emphasisActive' });
+
+      // Terra.should.beAccessible({ context: '#de-emphasisActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
     });
   });
 
@@ -122,6 +163,16 @@ describe('Button', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
     });
+
+    describe('Action-Active', () => {
+      beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
+
+      // Terra.should.beAccessible({ context: '#actionActive' });
+      Terra.should.matchScreenshot('active', { selector: '#actionActive' });
+
+      // Terra.should.beAccessible({ context: '#actionActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#actionActiveFocusSpan' });
+    });
   });
 
   describe('Utility', () => {
@@ -146,6 +197,16 @@ describe('Button', () => {
       shouldTheme({
         '--terra-button-utility-border-radius': '50%',
       });
+    });
+
+    describe('Utility-Active', () => {
+      beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
+
+      // Terra.should.beAccessible({ context: '#utilityActive' });
+      Terra.should.matchScreenshot('active', { selector: '#utilityActive' });
+
+      // Terra.should.beAccessible({ context: '#utilityActiveFocus' });
+      Terra.should.matchScreenshot('active and focused', { selector: '#utilityActiveFocusSpan' });
     });
   });
 
