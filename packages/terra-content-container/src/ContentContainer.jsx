@@ -55,9 +55,9 @@ const ContentContainer = ({
           {children}
         </div>
       </div>
-      <div className={cx('footer')}>
+      {footer && <div className={cx('footer')}>
         {footer}
-      </div>
+      </div>}
     </div>
   );
 };

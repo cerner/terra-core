@@ -2,6 +2,7 @@ import React from 'react';
 
 import ContentContainer from 'terra-content-container';
 import Heading from 'terra-heading';
+import Button from 'terra-button';
 
 const display1 = (<p key="1">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
@@ -23,9 +24,10 @@ pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
                  </p>);
 
 const contentheader = <Heading level={1} size={'large'}>Display Header</Heading>;
+const contentfooter = <Button text="Save" />;
 
 const container = () => (
-  <ContentContainer header={contentheader}>
+  <ContentContainer header={contentheader} footer={contentfooter}>
     <div key="1">
       {display1}
     </div>
