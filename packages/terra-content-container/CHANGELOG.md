@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Footer to allow sticky bottom-aligned content such as buttons, input, etc.
+* Footer to allow sticky bottom-aligned content
 
 1.13.0 - (November 28, 2017)
 ------------------
