@@ -120,6 +120,7 @@ class TabMenu extends React.Component {
         onClick={this.handleOnClick}
         onKeyDown={this.handleOnKeyDown}
         className={cx(['tab-menu', { 'is-active': menuActive }])}
+        data-terra-tabs-menu
       >
         <span>{menuToggleText}</span>
         <IconCaretDown />
