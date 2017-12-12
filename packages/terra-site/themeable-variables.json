@@ -162,6 +162,7 @@
     "--terra-form-checkbox-symbol-color": "none",
     "--terra-form-checkbox-symbol": "none",
     "--terra-form-checkbox-checked-height": "none",
+    "--terra-form-checkbox-checked-line-height": "0.9",
     "--terra-form-checkbox-transition": "all 0.2s ease all",
     "--terra-form-checkbox-checked-width": "none",
     "--terra-form-checkbox-disabled-font-color": "#9b9fa1",

@@ -94,7 +94,7 @@
       content: var(--terra-form-checkbox-symbol, none);
       height: var(--terra-form-checkbox-checked-height, none);
       left: 0;
-      line-height: (--terra-form-checkbox-checked-line-height, 0.9);
+      line-height: var(--terra-form-checkbox-checked-line-height, 0.9);
       margin-top: var(--terra-form-checkbox-margin-top, none);
       opacity: 1;
       position: absolute;
