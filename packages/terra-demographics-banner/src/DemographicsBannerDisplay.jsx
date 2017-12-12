@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
-import 'terra-base/lib/baseStyles';
+/* eslint-disable global-require */
+if (process.env.TEST) {
+  require('terra-base/src/baseStyles');
+} else {
+  require('terra-base/lib/baseStyles');
+}
 
+/* eslint-disable import/first */
+/* Component styles need to come after base styles */
 import './DemographicsBanner.scss';
 import SmallDemographicsBannerDisplay from './_SmallDemographicsBannerDisplay';
 import LargeDemographicsBannerDisplay from './_LargeDemographicsBannerDisplay';
