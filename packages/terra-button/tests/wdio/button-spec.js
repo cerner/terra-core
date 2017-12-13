@@ -3,21 +3,12 @@ const ignoreContrast = {
   'color-contrast': { enabled: false },
 };
 
-const shouldTheme = (customProperties) => {
-  Object.entries(customProperties).forEach(([key, value]) => {
-    it(`themed [${key}]`, () => {
-      browser.setCSSCustomProps({ [key]: value });
-      expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-    });
-  });
-};
-
 describe('Button', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
   describe('Default', () => {
     beforeEach(() => browser.url('/#/tests/button-tests/default'));
 
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-button-border-radius': '50px',
       '--terra-button-border-width': '10px',
       '--terra-button-font-weight': '800',
@@ -42,7 +33,7 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-button-hover-background-color-default': 'purple',
         '--terra-button-hover-color-default': 'purple',
       });
@@ -53,7 +44,7 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-button-active-background-color-default': 'purple',
         '--terra-button-active-border-color-default': 'purple',
         '--terra-button-active-color-default': 'purple',
@@ -66,7 +57,7 @@ describe('Button', () => {
 
     Terra.should.beAccessible({ rules: ignoreContrast });
     Terra.should.matchScreenshot();
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-button-background-color-primary': 'purple',
       '--terra-button-border-color-primary': 'purple',
       '--terra-button-color-primary': 'purple',
@@ -80,7 +71,7 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-button-hover-background-color-primary': 'purple',
         '--terra-button-hover-color-primary': 'purple',
       });
@@ -91,7 +82,7 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-button-active-background-color-primary': 'purple',
         '--terra-button-active-border-color-primary': 'purple',
         '--terra-button-active-color-primary': 'purple',
@@ -104,7 +95,7 @@ describe('Button', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-button-background-color-secondary': 'purple',
       '--terra-button-border-color-secondary': 'purple',
       '--terra-button-color-secondary': 'purple',
@@ -118,7 +109,7 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-button-hover-background-color-secondary': 'purple',
         '--terra-button-hover-color-secondary': 'purple',
       });
@@ -129,7 +120,7 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-button-active-background-color-secondary': 'purple',
         '--terra-button-active-border-color-secondary': 'purple',
         '--terra-button-active-color-secondary': 'purple',
