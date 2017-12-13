@@ -20,7 +20,7 @@ class MobileCheckbox extends React.Component {
     const { onChange } = this.props;
 
     return (
-      <Checkbox id="mobileCheckbox" labelText="Click to trigger checkbox resize" onChange={onChange} />
+      <Checkbox id="mobileCheckbox" labelText="Toggle to trigger checkbox resize. Window size needs to be less than 1024px." onChange={onChange} />
     );
   }
 

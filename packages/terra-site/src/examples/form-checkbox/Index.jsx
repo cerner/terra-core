@@ -59,7 +59,7 @@ class CheckboxExamples extends React.Component {
         <h2 id="multiple">Multiple Checkboxes - first defaults to checked</h2>
         <MultipleCheckboxes />
         <br />
-        <h2 id="mobile">[Theme Specific] Resize on non desktop, touch device</h2>
+        <h2 id="mobile">[Theme Specific] Resize checkbox on non-desktop touch device</h2>
         <MobileCheckbox onChange={this.onChange} />
       </div>
     );
