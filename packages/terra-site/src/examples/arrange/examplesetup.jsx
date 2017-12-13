@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
-import pandaPic from '../../assets/panda.jpg';
 
 const icon = <IconAlert width="4em" height="4em" />;
 // Block style is required since images are inline by default. This could be resolved by someones normalize.css
-const image = <img style={{ display: 'block' }} height="100" width="150" src={pandaPic} alt="a happy panda" />;
+const image = <img style={{ display: 'block' }} height="75" width="75" src="https://github.com/cerner/terra-core/raw/master/terra.png" alt="a happy panda" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const simpleText = <div>{ipsum}</div>;
 const textWithPadding = <div style={{ paddingLeft: '10px', paddingRight: '10px', border: '1px solid red' }}>{ipsum}</div>;
