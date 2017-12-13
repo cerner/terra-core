@@ -122,16 +122,16 @@
       display: inline-block;
       max-width: 100%;
       padding-bottom: var(--terra-form-checkbox-is-mobile-focus-container-padding-bottom, none);
-      padding-left: var(--terra-form-checkbox-is-mobile-focus-container-padding-left, none);
-      padding-right: var(--terra-form-checkbox-is-mobile-focus-container-padding-right, none);
+      padding-left: var(--terra-form-checkbox-is-mobile-focus-container-padding-left, 0.214rem);
+      padding-right: var(--terra-form-checkbox-is-mobile-focus-container-padding-right, 0.214rem);
       padding-top: var(--terra-form-checkbox-is-mobile-focus-container-padding-top, none);
       position: relative;
     }
 
     .is-mobile-is-hidden-focus-container {
       display: inline-block;
-      padding-bottom: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-bottom, none);
-      padding-left: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-left, none);
+      padding-bottom: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-bottom, 0.017rem);
+      padding-left: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-left, 0.214rem);
       padding-right: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-right, none);
       padding-top: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-top, none);
     }
