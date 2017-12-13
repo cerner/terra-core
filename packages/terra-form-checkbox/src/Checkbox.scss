@@ -90,20 +90,20 @@
       border-radius: var(--terra-form-checkbox-checked-border-radius, none);
       border-style: var(--terra-form-checkbox-checked-border-style, none);
       border-width: var(--terra-form-checkbox-checked-border-width, none);
-      color: var(--terra-form-checkbox-symbol-color, none);
       content: var(--terra-form-checkbox-symbol, none);
       height: var(--terra-form-checkbox-checked-height, none);
       left: 0;
-      line-height: var(--terra-form-checkbox-checked-line-height, 0.9);
+      line-height: var(--terra-form-checkbox-checked-line-height, none);
       margin-top: var(--terra-form-checkbox-margin-top, none);
       opacity: 1;
+      padding-left: var(--terra-form-checkbox-checked-symbol-padding-left, none);
+      padding-right: var(--terra-form-checkbox-checked-symbol-padding-right, none);
       position: absolute;
       text-align: center;
       top: 0;
-      transform: scale(1);
-      transition: var(--terra-form-checkbox-transition, all 0.2s ease all);
+      transform: var(--terra-form-checkbox-checked-transform, none);
+      transition: var(--terra-form-checkbox-checked-transition, none);
       vertical-align: middle;
-      visibility: visible;
       width: var(--terra-form-checkbox-checked-width, none);
     }
 
@@ -114,8 +114,26 @@
 
     .native-input:checked + .is-mobile::before {
       height: var(--terra-form-checkbox-is-mobile-checked-height, none);
-      line-height: (--terra-form-checkbox-is-mobile-checked-line-height, none);
+      line-height: var(--terra-form-checkbox-is-mobile-checked-line-height, none);
       width: var(--terra-form-checkbox-is-mobile-checked-width, none);
+    }
+
+    .is-mobile-focus-container {
+      display: inline-block;
+      max-width: 100%;
+      padding-bottom: var(--terra-form-checkbox-is-mobile-focus-container-padding-bottom, none);
+      padding-left: var(--terra-form-checkbox-is-mobile-focus-container-padding-left, none);
+      padding-right: var(--terra-form-checkbox-is-mobile-focus-container-padding-right, none);
+      padding-top: var(--terra-form-checkbox-is-mobile-focus-container-padding-top, none);
+      position: relative;
+    }
+
+    .is-mobile-is-hidden-focus-container {
+      display: inline-block;
+      padding-bottom: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-bottom, none);
+      padding-left: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-left, none);
+      padding-right: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-right, none);
+      padding-top: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-top, none);
     }
 
     /* Hide label if isLabelHidden true */

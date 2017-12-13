@@ -140,7 +140,9 @@ class Checkbox extends React.Component {
 
     const focusContainer = cx([
       { 'is-hidden-focus-container': isLabelHidden },
+      { 'is-mobile-is-hidden-focus-container': isLabelHidden && CheckboxUtil.isConsideredMobileDevice() },
       { 'focus-container': !isLabelHidden },
+      { 'is-mobile-focus-container': !isLabelHidden && CheckboxUtil.isConsideredMobileDevice() },
       { focus: this.state.focus },
     ]);
 

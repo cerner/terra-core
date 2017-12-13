@@ -16,30 +16,54 @@ import HiddenLabelCheckbox from './HiddenLabelCheckboxExample';
 import LongTextCheckbox from './LongTextCheckboxExample';
 import InlineCheckboxes from './InlineCheckboxesExample';
 import MultipleCheckboxes from './MultipleCheckboxesExample';
+import MobileCheckbox from './MobileCheckboxExample';
 
-const CheckboxExamples = () => (
-  <div>
-    <div id="version">Version: {version}</div>
-    <Markdown id="readme" src={ReadMe} />
-    <PropsTable id="props" src={CheckboxSrc} />
-    <h2 id="default">Default Checkbox</h2>
-    <DefaultCheckbox />
-    <br />
-    <h2 id="disabled">Disabled Checkbox</h2>
-    <DisabledCheckbox />
-    <br />
-    <h2 id="hidden">Hidden Label Checkbox</h2>
-    <HiddenLabelCheckbox />
-    <br />
-    <h2 id="longtext">Long Text Checkbox</h2>
-    <LongTextCheckbox />
-    <br />
-    <h2 id="inline">Multiple Inline Checkboxes</h2>
-    <InlineCheckboxes />
-    <br />
-    <h2 id="multiple">Multiple Checkboxes - first defaults to checked</h2>
-    <MultipleCheckboxes />
-  </div>
-);
+class CheckboxExamples extends React.Component {
+  constructor() {
+    super();
+    this.state = { isMobile: false };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange() {
+    if (!window.ontouchstart) {
+      this.setState({ isMobile: true });
+      window.ontouchstart = 'true';
+    } else if (this.state.isMobile) {
+      delete window.ontouchstart;
+      this.setState({ isMobile: false });
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div id="version">Version: {version}</div>
+        <Markdown id="readme" src={ReadMe} />
+        <PropsTable id="props" src={CheckboxSrc} />
+        <h2 id="default">Default Checkbox</h2>
+        <DefaultCheckbox />
+        <br />
+        <h2 id="disabled">Disabled Checkbox</h2>
+        <DisabledCheckbox />
+        <br />
+        <h2 id="hidden">Hidden Label Checkbox</h2>
+        <HiddenLabelCheckbox />
+        <br />
+        <h2 id="longtext">Long Text Checkbox</h2>
+        <LongTextCheckbox />
+        <br />
+        <h2 id="inline">Multiple Inline Checkboxes</h2>
+        <InlineCheckboxes />
+        <br />
+        <h2 id="multiple">Multiple Checkboxes - first defaults to checked</h2>
+        <MultipleCheckboxes />
+        <br />
+        <h2 id="mobile">[Theme Specific] Resize on non desktop, touch device</h2>
+        <MobileCheckbox onChange={this.onChange} />
+      </div>
+    );
+  }
+  }
 
 export default CheckboxExamples;
