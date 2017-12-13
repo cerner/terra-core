@@ -103,7 +103,8 @@ class Tabs extends React.Component {
     if (!selectedPane.props.isDisabled) {
       if (this.props.onChange) {
         this.props.onChange(event, selectedPane.key);
-      } else if (TabUtils.shouldHandleSelection(this.state.activeKey, selectedPane.key)) {
+      }
+      if (!this.props.activeKey && TabUtils.shouldHandleSelection(this.state.activeKey, selectedPane.key)) {
         this.setState({ activeKey: selectedPane.key });
       }
     }
@@ -135,7 +136,6 @@ class Tabs extends React.Component {
       defaultActiveKey,
       ...customProps
     } = this.props;
-    const attributes = Object.assign({}, customProps);
 
     // NOTE: Hardcoding variant to structural until descussions have resolved around if we want modular tabs.
     const variant = 'structural';
@@ -143,7 +143,7 @@ class Tabs extends React.Component {
       'tabs-container',
       { 'tab-fill': tabFill },
       variant,
-      attributes.className,
+      customProps.className,
     ]);
 
     let content = null;
