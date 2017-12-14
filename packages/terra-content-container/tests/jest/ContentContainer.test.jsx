@@ -28,6 +28,12 @@ it('should render a footer', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render header & footer', () => {
+  const container = <ContentContainer header={<p>Header</p>} footer={<p>Footer</p>} />;
+  const wrapper = shallow(container);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render content', () => {
   const container = (
     <ContentContainer>

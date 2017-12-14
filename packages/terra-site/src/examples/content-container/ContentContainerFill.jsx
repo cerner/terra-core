@@ -24,7 +24,7 @@ pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
                  </p>);
 
 const contentheader = <Heading level={1} size={'large'}>Display Header</Heading>;
-const contentfooter = <Button text="Save" />;
+const contentfooter = <p>Display Footer</p>;
 
 const container = () => (
   <div style={{ height: '200px', overflow: 'auto' }}>

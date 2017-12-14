@@ -47,9 +47,9 @@ const ContentContainer = ({
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      <div className={cx('header')}>
+      {header && <div className={cx('header')}>
         {header}
-      </div>
+      </div>}
       <div className={cx('main')}>
         <div className={cx('normalizer')}>
           {children}
