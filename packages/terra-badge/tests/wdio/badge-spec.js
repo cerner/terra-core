@@ -1,23 +1,13 @@
 /* global browser, Terra */
 const viewports = Terra.viewports('tiny', 'medium');
 
-const shouldTheme = (customProperties) => {
-  Object.entries(customProperties).forEach(([key, value]) => {
-    it(`themed [${key}]`, () => {
-      browser.setCSSCustomProps({ [key]: value });
-      expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-    });
-  });
-};
-
 describe('Badge', () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/tests/badge-tests/default'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-badge-border-radius': '20px',
       '--terra-badge-display': 'block',
       '--terra-badge-font-weight': 'normal',
@@ -35,8 +25,7 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-badge-background-color-default': 'pink',
       '--terra-badge-background-color-primary': 'pink',
       '--terra-badge-background-color-secondary': 'pink',
@@ -59,8 +48,7 @@ describe('Badge', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-badge-font-size-tiny': '50px',
       '--terra-badge-font-size-small': '50px',
       '--terra-badge-font-size-medium': '50px',
@@ -73,8 +61,7 @@ describe('Badge', () => {
     beforeEach(() => browser.url('/#/tests/badge-tests/icon'));
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-badge-child-margin': '50px',
     });
   });
