@@ -22,6 +22,7 @@ import DividerExamples from './examples/divider/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
 import FormExamples from './examples/form/Index';
+import FormCheckboxExamples from './examples/form-checkbox/Index';
 import FormFieldExamples from './examples/form-field/Index';
 import FormRadioExamples from './examples/form-radio/Index';
 import FormTextareaExamples from './examples/form-textarea/Index';
@@ -72,6 +73,7 @@ import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes'
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
+import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import FormRadioTestRoutes from 'terra-form-radio/tests/nightwatch/RadioTestRoutes';
@@ -146,6 +148,7 @@ ReactDOM.render((
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
       <Route path="form" component={FormExamples} />
+      <Route path="form-checkbox" component={FormCheckboxExamples} />
       <Route path="form-textarea" component={FormTextareaExamples} />
       <Route path="form-field" component={FormFieldExamples} />
       <Route path="form-radio" component={FormRadioExamples} />
@@ -227,6 +230,7 @@ ReactDOM.render((
     {SearchFieldTestRoutes}
     {PopupTestRoutes}
     {FormTestRoutes}
+    {FormCheckboxTestRoutes}
     {FormTextareaRoutes}
     {FormFieldTestRoutes}
     {FormRadioTestRoutes}
