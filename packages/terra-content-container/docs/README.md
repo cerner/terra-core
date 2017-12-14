@@ -1,6 +1,6 @@
-# Terra ContentContainer Documentation
+# Terra Content Container
 
-The Terra ContentContainer is a structural component for the purpose of arranging content with a header.
+The Terra ContentContainer is a structural component for the purpose of arranging content with an optional header and/or footer.
 
 ## Getting Started
 
