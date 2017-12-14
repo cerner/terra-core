@@ -17,8 +17,8 @@ const IconOnlyTabs = () => {
   );
 
   const briefcaseTab = (
-    <Tabs.Pane label="Breifcase" icon={<IconBriefcase />} isIconOnly key="Breifcase" id="breifcase">
-      <TabContent label="Breifcase" id="breifcaseContent" />
+    <Tabs.Pane label="Briefcase" icon={<IconBriefcase />} isIconOnly key="Briefcase" id="briefcase">
+      <TabContent label="Briefcase" id="briefcaseContent" />
     </Tabs.Pane>
   );
 
