@@ -17,7 +17,7 @@
      Terra.should.beAccessible();
      shouldTheme({
        '--terra-tabs-font-size': '30px',
-       '--terra-tabs-line-hight': '2',
+       '--terra-tabs-line-height': '2',
        '--terra-tabs-text-only-padding': '50px',
      });
    });
