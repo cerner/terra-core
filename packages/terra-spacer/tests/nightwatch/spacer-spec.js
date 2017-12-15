@@ -1,6 +1,6 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 /* eslint-disable no-unused-expressions */
 // Background color added for context. The orange background shows margin, while the green background shows padding.
+// eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
