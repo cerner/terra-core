@@ -12,15 +12,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const I18nAggregatorPlugin = require('terra-i18n-plugin');
 const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 
-const threadLoaderRule = {
-  loader: 'thread-loader',
-  options: {
-    workerParallelJobs: 50,
-    poolParallelJobs: 50,
-    poolTimeout: 2000,
-  },
-};
-
 module.exports = {
   entry: {
     'babel-polyfill': 'babel-polyfill',
@@ -30,42 +21,34 @@ module.exports = {
     rules: [{
       test: /\.(jsx|js)$/,
       exclude: /node_modules/,
-      use: [
-        !process.env.CI && threadLoaderRule,
-        'babel-loader',
-      ].filter(Boolean),
+      use: 'babel-loader',
     },
     {
       test: /\.(scss|css)$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: [
-          !process.env.CI && threadLoaderRule,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              importLoaders: 2,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-            },
-          }, {
-            loader: 'postcss-loader',
-            options: postCssConfig,
+        use: [{
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+            importLoaders: 2,
+            localIdentName: '[name]__[local]___[hash:base64:5]',
           },
-          {
-            loader: 'sass-loader',
-            options: {
-              data: '$bundled-themes: mock, consumer;',
-            },
-          }].filter(Boolean),
+        }, {
+          loader: 'postcss-loader',
+          options: postCssConfig,
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            data: '$bundled-themes: mock, consumer;',
+          },
+        }],
       }),
     },
     {
       test: /\.md$/,
-      use: [
-        !process.env.CI && threadLoaderRule,
-        'raw-loader',
-      ].filter(Boolean),
+      use: 'raw-loader',
     },
     {
       test: /\.(png|svg|jpg|gif)$/,
