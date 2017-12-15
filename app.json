@@ -13,8 +13,8 @@
       "description": "development environment",
       "value": "development"
     },
-    "CI": {
-      "description": "Continuous integration environment",
+    "HEROKU": {
+      "description": "Heroku environment",
       "value": "true"
     },
     "NPM_CONFIG_PRODUCTION": {
