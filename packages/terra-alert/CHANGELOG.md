@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+- Fixed lint errors
 
 1.13.0 - (November 28, 2017)
 ------------------
