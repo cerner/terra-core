@@ -1,8 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-
-// import IconCalendar from 'terra-icon/lib/IconCalendar';
-
 import Button from '../../lib/Button';
 
 const spacingStyle = { padding: '20px' };

@@ -3,10 +3,11 @@ const shouldTheme = (customProperties, selector) => {
   const selectedElement = selector || '[data-reactroot]';
   Object.entries(customProperties).forEach(([key, value]) => {
     it(`themed [${key}]`, () => {
-      browser.setCSSCustomProps({ [key]: value });
+      browser.execute(`document.documentElement.style.setProperty('${key}', '${value}')`);
       expect(browser.checkElement(selectedElement)).to.matchReference();
     });
   });
+};
 
 describe('Button', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));

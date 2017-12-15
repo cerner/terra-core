@@ -28,7 +28,7 @@ const ButtonTypes = {
 
 const propTypes = {
   /**
-   * Child Nodes
+   * Child nodes.
    */
   children: PropTypes.node,
   /**
@@ -80,17 +80,17 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Sets the button text.
+   * Sets the button text. If the button `isIconOnly` or of variant `ButtonVariants.UTILITY`, this text is set as the aria-label for accessiblity.
    */
   text: PropTypes.string.isRequired,
   /**
-   * Sets the button type. One of `button`, `submit`, or `reset`.
+   * Sets the button type. One of `ButtonTypes.BUTTON`, `ButtonTypes.SUBMIT`, or `ButtonTypes.RESET`.
    */
-  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
   /**
-   * Sets the button variant. One of `neutral`,  `emphasis`, `de-emphasis`, `utility` or `action`.
+   * Sets the button variant. One of `ButtonVariants.NEUTRAL`,  `ButtonVariants.EMPHASIS`, `ButtonVariants['DE-EMPSHASIS']`, `ButtonVariants.ACTION` or `ButtonVariants.UTILITY`.
    */
-  variant: PropTypes.oneOf(['neutral', 'emphasis', 'de-emphasis', 'utility', 'action']),
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPSHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
 };
 
 const defaultProps = {
@@ -99,8 +99,8 @@ const defaultProps = {
   isIconOnly: false,
   isReversed: false,
   refCallback: undefined,
-  type: 'button',
-  variant: 'neutral',
+  type: ButtonTypes.BUTTON,
+  variant: ButtonVariants.NEUTRAL,
 };
 
 class Button extends React.Component {
