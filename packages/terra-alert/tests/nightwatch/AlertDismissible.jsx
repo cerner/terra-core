@@ -3,7 +3,7 @@ import Base from 'terra-base';
 import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
+// eslint-disable-next-line no-console
 console.log('Alert with onDismiss prop triggering Dismiss button to be rendered. Custom onDismiss callback rerenders page without the Alert.');
 class AlertDismissible extends React.Component {
   constructor(props) {

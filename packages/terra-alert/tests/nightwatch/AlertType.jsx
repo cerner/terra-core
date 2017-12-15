@@ -3,7 +3,7 @@ import Base from 'terra-base';
 import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
+// eslint-disable-next-line no-console
 console.log('Alerts of each of the standard types with default titles');
 export default () =>
   <Base locale={locale}>
