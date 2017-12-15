@@ -31,7 +31,7 @@ module.exports = {
       test: /\.(jsx|js)$/,
       exclude: /node_modules/,
       use: [
-        !process.env.CI && threadLoaderRule,
+        !process.env.CI && !process.env.HEROKU && threadLoaderRule,
         'babel-loader',
       ].filter(Boolean),
     },
@@ -40,7 +40,7 @@ module.exports = {
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
-          !process.env.CI && threadLoaderRule,
+          !process.env.CI && !process.env.HEROKU && threadLoaderRule,
           {
             loader: 'css-loader',
             options: {
@@ -63,7 +63,7 @@ module.exports = {
     {
       test: /\.md$/,
       use: [
-        !process.env.CI && threadLoaderRule,
+        !process.env.CI && !process.env.HEROKU && threadLoaderRule,
         'raw-loader',
       ].filter(Boolean),
     },
