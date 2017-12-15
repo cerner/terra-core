@@ -1,10 +1,12 @@
-# Terra ContentContainer
+# Terra Content Container
 
 
 [![NPM version](http://img.shields.io/npm/v/terra-content-container.svg)](https://www.npmjs.org/package/terra-content-container)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The Terra ContentContainer is a structural component for the purpose of arranging content with a header.
+The Terra ContentContainer is a structural component for the purpose of arranging content with an optional header and/or footer.
+
+In mobile Safari, the footer may be overlaid by the keyboard. This is a known issue and does not affect Android web apps or native iOS apps using UIWebView.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-content-container/docs)
