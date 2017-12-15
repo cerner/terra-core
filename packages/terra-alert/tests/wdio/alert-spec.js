@@ -6,22 +6,12 @@ const ignoreContrast = {
   'color-contrast': { enabled: false },
 };
 
-const shouldTheme = (customProperties) => {
-  Object.entries(customProperties).forEach(([key, value]) => {
-    it(`themed [${key}]`, () => {
-      browser.setCSSCustomProps({ [key]: value });
-      expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-    });
-  });
-};
-
 describe('Alert', () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/tests/alert-tests/default'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports, rules: ignoreContrast });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-alert-icon-font-size': '50px',
     });
   });
@@ -36,8 +26,7 @@ describe('Alert', () => {
     beforeEach(() => browser.url('/#/tests/alert-tests/title'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports, rules: ignoreContrast });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-alert-alert-background-color': 'purple',
       '--terra-alert-error-background-color': 'purple',
       '--terra-alert-warning-background-color': 'purple',
@@ -61,8 +50,7 @@ describe('Alert', () => {
     beforeEach(() => browser.url('/#/tests/alert-tests/custom'));
     Terra.should.matchScreenshot({ viewports });
     Terra.should.beAccessible({ viewports });
-
-    shouldTheme({
+    Terra.should.themeEachCustomProperty({
       '--terra-alert-custom-text-color': 'blue',
       '--terra-alert-custom-background-color': 'purple',
       '--terra-alert-custom-shadow-color': 'purple',

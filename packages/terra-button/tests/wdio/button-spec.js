@@ -7,7 +7,6 @@ const shouldTheme = (customProperties, selector) => {
       expect(browser.checkElement(selectedElement)).to.matchReference();
     });
   });
-};
 
 describe('Button', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
