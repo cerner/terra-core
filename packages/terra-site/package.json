@@ -50,6 +50,7 @@
     "terra-dynamic-grid": "^1.9.0",
     "terra-embedded-content-consumer": "^1.9.0",
     "terra-form": "^1.14.0",
+    "terra-form-checkbox": "^0.x",
     "terra-form-field": "^1.1.0",
     "terra-form-select": "^1.1.0",
     "terra-form-textarea": "^1.1.0",
