@@ -13,6 +13,10 @@
       "description": "development environment",
       "value": "development"
     },
+    "CI": {
+      "description": "Continuous integration environment",
+      "value": "true"
+    },
     "NPM_CONFIG_PRODUCTION": {
       "description": "development environment",
       "value": "false"
