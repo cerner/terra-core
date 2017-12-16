@@ -19,6 +19,8 @@ const config = {
   baseUrl: `http://${localIP.address()}:${webpackPort}`,
   specs,
 
+  // Travis only has 1 browser instace, set maxInstances to 1 to prevent timeouts
+  maxInstances: process.env.CI ? 1 : wdioConf.config.maxInstances,
   seleniumDocker: {
     enabled: !process.env.TRAVIS,
   },
@@ -36,7 +38,6 @@ const config = {
     global.browser.refresh();
   },
 };
-
 
 config.services = wdioConf.config.services.concat([WebpackDevService]);
 exports.config = config;
