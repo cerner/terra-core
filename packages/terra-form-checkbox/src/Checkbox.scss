@@ -11,11 +11,11 @@
     position: relative;
 
     /* Hitbox will only surround checkbox + label, instead of the div block */
-    /* Padding puts space for container focus style */
+    /* Padding increases hitbox area */
     .select-container {
       display: inline-block;
-      padding-bottom: var(--terra-form-checkbox-select-container-padding-bottom, 5px);
-      padding-top: var(--terra-form-checkbox-select-container-padding-bottom, 5px);
+      padding-bottom: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
+      padding-top: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
     }
 
     /* stylelint-disable selector-max-compound-selectors */
