@@ -6,7 +6,7 @@
 
 The Terra ContentContainer is a structural component for the purpose of arranging content with an optional header and/or footer.
 
-In mobile Safari, the footer may be overlaid by the keyboard. This is a known issue and does not affect Android web apps or native iOS apps using UIWebView.
+The footer is not responsive to mobile keyboard positioning.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-content-container/docs)

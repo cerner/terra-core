@@ -26,16 +26,18 @@ const contentheader = <Heading level={3}>Display Header</Heading>;
 const contentfooter = <Heading level={3}>Display Footer</Heading>;
 
 const container = () => (
-  <ContentContainer header={contentheader} footer={contentfooter}>
-    <div key="1">
-      {display1}
-    </div>
-    <div key="2">
-      {display2}
-    </div>
-    <div key="3">
-      {display3}
-    </div>
-  </ContentContainer>);
+  <div style={{ border: '1px solid' }}>
+    <ContentContainer header={contentheader} footer={contentfooter}>
+      <div key="1">
+        {display1}
+      </div>
+      <div key="2">
+        {display2}
+      </div>
+      <div key="3">
+        {display3}
+      </div>
+    </ContentContainer>
+  </div>);
 
 export default container;

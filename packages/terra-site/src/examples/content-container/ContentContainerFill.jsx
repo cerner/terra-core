@@ -26,7 +26,7 @@ const contentheader = <Heading level={3}>Display Header</Heading>;
 const contentfooter = <Heading level={3}>Display Footer</Heading>;
 
 const container = () => (
-  <div style={{ height: '200px', overflow: 'auto' }}>
+  <div style={{ height: '200px', border: '1px solid' }}>
     <ContentContainer header={contentheader} footer={contentfooter} fill>
       <div key="1">
         {display1}
