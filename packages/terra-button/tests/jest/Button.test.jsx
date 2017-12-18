@@ -125,13 +125,13 @@ it('should set the span text', () => {
 it('should render the icon as the first child', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} text="text" />);
-  expect(button.childAt(0).hasClass('icon-left')).toEqual(true);
+  expect(button.childAt(0).childAt(0).hasClass('icon-first')).toEqual(true);
 });
 
 it('should render in order of text / icon when reverse', () => {
   const testElement = <img alt="icon" />;
   const button = shallow(<Button icon={testElement} isReversed text="text" />);
-  expect(button.childAt(0).hasClass('text-left')).toEqual(true);
+  expect(button.childAt(0).childAt(0).hasClass('text-first')).toEqual(true);
 });
 
 it('should render as an anchor tag when provided an href', () => {

@@ -114,7 +114,7 @@ class Button extends React.Component {
 
   handleOnBlur(event) {
     this.setState({ focused: false });
-    event.stopPropagation();
+
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
@@ -191,21 +191,29 @@ class Button extends React.Component {
     ]);
 
     const buttonLabelClasses = cx([
+      { 'text-and-icon': icon && !isIconOnly },
+      { 'icon-only': isIconOnly || variant === 'utility' },
       { 'text-only': !icon },
-      { 'text-left': icon && isReversed },
-      { 'text-right': icon && !isReversed },
+    ]);
+
+    const buttonTextClasses = cx([
+      { 'text-first': icon && isReversed },
     ]);
 
     const iconClasses = cx([
       'icon',
-      { 'icon-only': isIconOnly || variant === 'utility' },
-      { 'icon-left': (!isIconOnly && variant !== 'utility') && !isReversed },
-      { 'icon-right': (!isIconOnly && variant !== 'utility') && isReversed },
+      { 'icon-first': (!isIconOnly && variant !== 'utility') && !isReversed },
     ]);
 
-    const buttonLabel = !isIconOnly && variant !== 'utility' ? <span className={buttonLabelClasses}>{text}</span> : null;
+    const buttonText = !isIconOnly && variant !== 'utility' ? <span className={buttonTextClasses}>{text}</span> : null;
     const buttonIcon = icon ? <span className={iconClasses}>{icon}</span> : null;
 
+    const buttonLabel = (
+      <span className={buttonLabelClasses}>
+        {isReversed ? buttonText : buttonIcon }
+        {isReversed ? buttonIcon : buttonText }
+      </span>
+    );
     const ComponentType = href ? 'a' : 'button';
 
     return (
@@ -225,8 +233,7 @@ class Button extends React.Component {
         href={href}
         ref={refCallback}
       >
-        {isReversed ? buttonLabel : buttonIcon }
-        {isReversed ? buttonIcon : buttonLabel }
+        {buttonLabel}
         {children}
       </ComponentType>
     );

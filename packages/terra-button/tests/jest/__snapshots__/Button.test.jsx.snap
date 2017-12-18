@@ -20,7 +20,11 @@ exports[`should render a Button with merged attributes 1`] = `
   <span
     className="text-only"
   >
-    text
+    <span
+      className=""
+    >
+      text
+    </span>
   </span>
 </button>
 `;
@@ -39,7 +43,11 @@ exports[`should render a button with type equal to button 1`] = `
   <span
     className="text-only"
   >
-    button
+    <span
+      className=""
+    >
+      button
+    </span>
   </span>
 </button>
 `;
@@ -58,7 +66,11 @@ exports[`should render a button with type equal to reset 1`] = `
   <span
     className="text-only"
   >
-    reset
+    <span
+      className=""
+    >
+      reset
+    </span>
   </span>
 </button>
 `;
@@ -77,7 +89,11 @@ exports[`should render a button with type equal to submit 1`] = `
   <span
     className="text-only"
   >
-    submit
+    <span
+      className=""
+    >
+      submit
+    </span>
   </span>
 </button>
 `;
@@ -96,7 +112,11 @@ exports[`should render a de-emphasis button 1`] = `
   <span
     className="text-only"
   >
-    de-emphasis
+    <span
+      className=""
+    >
+      de-emphasis
+    </span>
   </span>
 </button>
 `;
@@ -115,7 +135,11 @@ exports[`should render a emphasis button 1`] = `
   <span
     className="text-only"
   >
-    emphasis
+    <span
+      className=""
+    >
+      emphasis
+    </span>
   </span>
 </button>
 `;
@@ -134,7 +158,11 @@ exports[`should render a neutral button 1`] = `
   <span
     className="text-only"
   >
-    neutral
+    <span
+      className=""
+    >
+      neutral
+    </span>
   </span>
 </button>
 `;
@@ -149,7 +177,11 @@ exports[`should render a utility button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   type="button"
-/>
+>
+  <span
+    className="icon-only text-only"
+  />
+</button>
 `;
 
 exports[`should render an action button 1`] = `
@@ -166,7 +198,11 @@ exports[`should render an action button 1`] = `
   <span
     className="text-only"
   >
-    action
+    <span
+      className=""
+    >
+      action
+    </span>
   </span>
 </button>
 `;
@@ -183,11 +219,15 @@ exports[`should render an icon 1`] = `
   type="button"
 >
   <span
-    className="icon icon-only"
+    className="icon-only"
   >
-    <img
-      alt="icon"
-    />
+    <span
+      className="icon"
+    >
+      <img
+        alt="icon"
+      />
+    </span>
   </span>
 </button>
 `;
@@ -204,16 +244,20 @@ exports[`should render an icon and a text 1`] = `
   type="button"
 >
   <span
-    className="icon icon-left"
+    className="text-and-icon"
   >
-    <img
-      alt="icon"
-    />
-  </span>
-  <span
-    className="text-right"
-  >
-    text
+    <span
+      className="icon icon-first"
+    >
+      <img
+        alt="icon"
+      />
+    </span>
+    <span
+      className=""
+    >
+      text
+    </span>
   </span>
 </button>
 `;
@@ -233,7 +277,11 @@ exports[`should render as an anchor when provided an href 1`] = `
   <span
     className="text-only"
   >
-    href
+    <span
+      className=""
+    >
+      href
+    </span>
   </span>
 </a>
 `;
@@ -253,7 +301,11 @@ exports[`should render as disabled when set 1`] = `
   <span
     className="text-only"
   >
-    Disabled
+    <span
+      className=""
+    >
+      Disabled
+    </span>
   </span>
 </button>
 `;
@@ -270,16 +322,20 @@ exports[`should render text then an icon when reversed 1`] = `
   type="button"
 >
   <span
-    className="text-left"
+    className="text-and-icon"
   >
-    text
-  </span>
-  <span
-    className="icon icon-right"
-  >
-    <img
-      alt="icon"
-    />
+    <span
+      className="text-first"
+    >
+      text
+    </span>
+    <span
+      className="icon"
+    >
+      <img
+        alt="icon"
+      />
+    </span>
   </span>
 </button>
 `;

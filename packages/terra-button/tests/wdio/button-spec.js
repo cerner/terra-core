@@ -22,8 +22,7 @@ describe('Button', () => {
       // Button Vars that apply to all buttons
       '--terra-button-border-radius': '50px',
       '--terra-button-line-height': '20px',
-      '--terra-button-padding-bottom': '20px',
-      '--terra-button-padding-top': '20px',
+      '--terra-button-vertical-padding': '20px',
       '--terra-button-disabled-opacity': '.7',
 
       // Netural Button Vars for default state
@@ -70,10 +69,7 @@ describe('Button', () => {
         '--terra-button-active-border-color-neutral': 'purple',
       }, '#neutral');
 
-      // Terra.should.beAccessible({ context: '#neutralActive' });
       Terra.should.matchScreenshot('active', { selector: '#neutralActive' });
-
-      // Terra.should.beAccessible({ context: '#neutralActiveFocus' });
       Terra.should.matchScreenshot('active and focused', { selector: '#neutralActiveFocusSpan' });
     });
   });
@@ -132,10 +128,7 @@ describe('Button', () => {
     describe('De-emphasis-Active', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
 
-      // Terra.should.beAccessible({ context: '#de-emphasisActive' });
       Terra.should.matchScreenshot('active', { selector: '#de-emphasisActive' });
-
-      // Terra.should.beAccessible({ context: '#de-emphasisActiveFocus' });
       Terra.should.matchScreenshot('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
     });
   });
@@ -167,10 +160,7 @@ describe('Button', () => {
     describe('Action-Active', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
 
-      // Terra.should.beAccessible({ context: '#actionActive' });
       Terra.should.matchScreenshot('active', { selector: '#actionActive' });
-
-      // Terra.should.beAccessible({ context: '#actionActiveFocus' });
       Terra.should.matchScreenshot('active and focused', { selector: '#actionActiveFocusSpan' });
     });
   });
@@ -202,10 +192,7 @@ describe('Button', () => {
     describe('Utility-Active', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/active-styles'));
 
-      // Terra.should.beAccessible({ context: '#utilityActive' });
       Terra.should.matchScreenshot('active', { selector: '#utilityActive' });
-
-      // Terra.should.beAccessible({ context: '#utilityActiveFocus' });
       Terra.should.matchScreenshot('active and focused', { selector: '#utilityActiveFocusSpan' });
     });
   });
@@ -215,10 +202,6 @@ describe('Button', () => {
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-
-    shouldTheme({
-      '--terra-button-text-align': 'center',
-    });
   });
 
   describe('Block', () => {
@@ -236,8 +219,7 @@ describe('Button', () => {
       Terra.should.matchScreenshot();
 
       shouldTheme({
-        '--terra-button-text-only-margin-left': '20px',
-        '--terra-button-text-only-margin-right': '20px',
+        '--terra-button-text-only-horizontal-margin': '20px',
       });
     });
 
@@ -262,9 +244,8 @@ describe('Button', () => {
       Terra.should.matchScreenshot();
 
       shouldTheme({
-        '--terra-button-text-left-margin-left': '20px',
-        '--terra-button-text-left-margin-right': '20px',
-        '--terra-button-icon-right-margin-right': '20px',
+        '--terra-button-text-and-icon-horizontal-margin': '20px',
+        '--terra-button-text-and-icon-margin-between': '20px',
       });
     });
 
@@ -273,12 +254,6 @@ describe('Button', () => {
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
-
-      shouldTheme({
-        '--terra-button-text-right-margin-right': '20px',
-        '--terra-button-icon-left-margin-left': '20px',
-        '--terra-button-icon-left-margin-right': '20px',
-      });
     });
 
     describe('Icon only', () => {
@@ -288,8 +263,7 @@ describe('Button', () => {
       Terra.should.matchScreenshot();
 
       shouldTheme({
-        '--terra-button-icon-only-margin-left': '20px',
-        '--terra-button-icon-only-margin-right': '20px',
+        '--terra-button-icon-only-horizontal-margin': '20px',
         '--terra-button-icon-height': '10px',
         '--terra-button-icon-width': '10px',
       });
