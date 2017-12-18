@@ -1,13 +1,4 @@
 /* global browser, Terra, before */
- const shouldTheme = (customProperties) => {
-   Object.entries(customProperties).forEach(([key, value]) => {
-     it(`themed [${key}]`, () => {
-       browser.setCSSCustomProps({ [key]: value });
-       expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-     });
-   });
- };
-
  describe('TabPane', () => {
    before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
@@ -15,7 +6,7 @@
      beforeEach(() => browser.url('/#/tests/tab-pane-tests/text-only'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
-     shouldTheme({
+     Terra.should.themeEachCustomProperty({
        '--terra-tabs-font-size': '30px',
        '--terra-tabs-line-height': '2',
        '--terra-tabs-text-only-padding': '50px',
@@ -26,7 +17,7 @@
      beforeEach(() => browser.url('/#/tests/tab-pane-tests/icon-only'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
-     shouldTheme({
+     Terra.should.themeEachCustomProperty({
        '--terra-tabs-icon-only-padding': '50px',
      });
    });
@@ -35,7 +26,7 @@
      beforeEach(() => browser.url('/#/tests/tab-pane-tests/icon-and-text'));
      Terra.should.matchScreenshot();
      Terra.should.beAccessible();
-     shouldTheme({
+     Terra.should.themeEachCustomProperty({
        '--terra-tabs-padding': '50px',
      });
    });

@@ -6,15 +6,6 @@ const ignoredA11y = {
   'aria-allowed-attr': { enabled: false },
 };
 
-const shouldTheme = (customProperties) => {
-  Object.entries(customProperties).forEach(([key, value]) => {
-    it(`themed [${key}]`, () => {
-      browser.setCSSCustomProps({ [key]: value });
-      expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-    });
-  });
-};
-
 // Verify tabs collapse appropriately
 describe('Tabs - Responsive', () => {
   viewports.forEach((viewport) => {
@@ -77,7 +68,7 @@ describe('Tabs - Responsive', () => {
         browser.moveToObject('.tabContent');
       });
 
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-tabs-structural-content-background-color': 'purple',
         '--terra-tabs-structural-background-color': 'purple',
         '--terra-tabs-structural-background-image': 'linear-gradient(to bottom, purple, purple)',
@@ -97,29 +88,13 @@ describe('Tabs - Responsive', () => {
         '--terra-tabs-structural-tab-bar-border-width': '10px',
       });
 
-      it('themed [--terra-tabs-structural-container-background-color] and [--terra-tabs-structural-content-border-radius]', () => {
-        browser.setCSSCustomProps({
-          '--terra-tabs-structural-container-background-color': 'purple',
-          '--terra-tabs-structural-content-border-radius': '0 0 50px 50px',
-        });
-        expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-      });
-
-      it('themed [--terra-tabs-structural-background-position] and [--terra-tabs-structural-background-size]', () => {
-        browser.setCSSCustomProps({
-          '--terra-tabs-structural-background-size': '100% 3px',
-          '--terra-tabs-structural-background-position': '0 0',
-        });
-        expect(browser.checkElement('[data-reactroot]')).to.matchReference();
-      });
-
       describe('Collapsible hover', () => {
         beforeEach(() => browser.moveToObject('#tab2'));
 
         Terra.should.matchScreenshot();
         Terra.should.beAccessible();
 
-        shouldTheme({
+        Terra.should.themeEachCustomProperty({
           '--terra-tabs-structural-hover-background-color': 'purple',
           '--terra-tabs-structural-hover-color': 'purple',
           '--terra-tabs-structural-hover-background-size': '100% 3px',
@@ -133,7 +108,7 @@ describe('Tabs - Responsive', () => {
         Terra.should.matchScreenshot();
         Terra.should.beAccessible();
 
-        shouldTheme({
+        Terra.should.themeEachCustomProperty({
           '--terra-tabs-structural-active-focus-background-color': 'purple',
           '--terra-tabs-structural-active-focus-color': 'purple',
           '--terra-tabs-keyboard-focus-ltr-box-shadow': 'none',
@@ -158,7 +133,7 @@ describe('Tabs - Responsive', () => {
     describe('Default', () => {
       beforeEach(() => browser.url('/#/tests/tabs-tests/default'));
 
-      shouldTheme({
+      Terra.should.themeEachCustomProperty({
         '--terra-tabs-menu-arrow-left-margin': '50px',
         '--terra-tabs-menu-collapsed-justify-content': 'center',
         '--terra-tabs-structural-collapsed-menu-bar-border-color': 'purple',
