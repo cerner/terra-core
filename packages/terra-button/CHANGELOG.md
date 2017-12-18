@@ -3,17 +3,18 @@ Changelog
 
 Unreleased
 ----------
-* See Release Notes for Migration Guide
-
 ### Added
-* refCallback, isIconOnly, onBlur, onFocus, onKeyDown, onKeyUp props
-
-### Changed
-* text prop is now required for accessibility purposes
-* variant options changes from `primary`, `secondary`, or `link` to `neutral`,  `emphasis`, `de-emphasis`, `utility` or `action`
+* isIconOnly, onBlur, onFocus, onKeyDown, and onKeyUp props
+* `neutral`,  `emphasis`, `de-emphasis`, `utility` and `action` variants
 
 ### Removed
-* size and isCompact props
+* size prop
+* isCompact prop
+* `primary`, `secondary`,  and `link` variants
+
+### Changed
+* text prop is now required to meet accessibility
+* Button is now a class and not a functional component, allowing a ref callback
 
 1.14.0 - (November 28, 2017)
 ------------------
