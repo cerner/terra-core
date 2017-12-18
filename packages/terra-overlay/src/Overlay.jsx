@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import FocusTrap from 'focus-trap-react';
 import 'terra-base/lib/baseStyles';
 import styles from './Overlay.scss';
+import Container from './OverlayContainer';
 
 const cx = classNames.bind(styles);
 
@@ -176,5 +177,6 @@ const Opts = { BackgroundStyles };
 Overlay.propTypes = propTypes;
 Overlay.defaultProps = defaultProps;
 Overlay.Opts = Opts;
+Overlay.Container = Container;
 
 export default Overlay;
