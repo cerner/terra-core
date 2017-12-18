@@ -76,10 +76,6 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
-   *  React `ref` callback to receive and store a reference to the mounted button instance.
-   */
-  refCallback: PropTypes.func,
-  /**
    * Sets the button text. If the button `isIconOnly` or of variant `ButtonVariants.UTILITY`, this text is set as the aria-label for accessiblity.
    */
   text: PropTypes.string.isRequired,
@@ -98,7 +94,6 @@ const defaultProps = {
   isDisabled: false,
   isIconOnly: false,
   isReversed: false,
-  refCallback: undefined,
   type: ButtonTypes.BUTTON,
   variant: ButtonVariants.NEUTRAL,
 };
@@ -167,7 +162,6 @@ class Button extends React.Component {
       isDisabled,
       isIconOnly,
       isReversed,
-      refCallback,
       text,
       type,
       variant,
@@ -231,7 +225,6 @@ class Button extends React.Component {
         onClick={onClick}
         onFocus={onFocus}
         href={href}
-        ref={refCallback}
       >
         {buttonLabel}
         {children}
