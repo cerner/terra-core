@@ -3,4 +3,6 @@ ChangeLog
 
 (Unreleased)
 -----------------
-Initial stable release
+### Added
+* Import terra-mixins into style sheet
+* Initial stable release
