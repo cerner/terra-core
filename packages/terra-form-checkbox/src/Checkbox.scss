@@ -15,7 +15,7 @@
     .select-container {
       display: inline-block;
       padding-bottom: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
-      padding-top: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
+      padding-top: var(--terra-form-checkbox-select-container-padding-top, 0.3125rem);
     }
 
     /* stylelint-disable selector-max-compound-selectors */
@@ -118,6 +118,14 @@
 
     .native-input:hover + .label-text::before {
       border-color: var(--terra-form-checkbox-hover-border-color, none);
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-form-checkbox-hover-shadow-rtl, none);
+      }
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-form-checkbox-hover-shadow-ltr, none);
+      }
     }
 
     /* stylelint-disable max-nesting-depth */
@@ -143,7 +151,15 @@
       }
 
       &:hover > .label-text::before {
-        border-color: var(--terra-form-checkbox-disabled-border-color, none);
+        border-color: var(--terra-form-checkbox-disabled-hover-border-color, none);
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-form-checkbox-disabled-hover-box-shadow-rtl, none);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-form-checkbox-disabled-hover-box-shadow-ltr, none);
+        }
       }
     }
     /* stylelint-enable max-nesting-depth */

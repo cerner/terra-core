@@ -56,11 +56,15 @@
   --terra-form-checkbox-is-mobile-checked-line-height: 1.2;
   --terra-form-checkbox-is-mobile-checked-width: 24px;
   --terra-form-checkbox-hover-border-color: #219c4a;
+  --terra-form-checkbox-hover-shadow-rtl: 0 0 1px 1px #219c4a;
+  --terra-form-checkbox-hover-shadow-ltr: 0 0 1px 1px #219c4a;
   --terra-form-checkbox-disabled-font-color: #9b9fa1;
   --terra-form-checkbox-disabled-font-opacity: none;
   --terra-form-checkbox-disabled-background-color: gba(0, 0, 0, 0.05);
   --terra-form-checkbox-disabled-background-image: none;
-  --terra-form-checkbox-disabled-border-color: none;
+  --terra-form-checkbox-disabled-hover-border-color: gba(0, 0, 0, 0.05);
+  --terra-form-checkbox-disabled-hover-box-shadow-rtl: gba(0, 0, 0, 0.05);
+  --terra-form-checkbox-disabled-hover-box-shadow-ltr: gba(0, 0, 0, 0.05);
   --terra-form-checkbox-focus-box-border-color: #4a90e2;
   --terra-form-checkbox-focus-box-shadow-rtl: none;
   --terra-form-checkbox-focus-box-shadow-ltr: none;
