@@ -1,3 +1,5 @@
+@import '~terra-mixins';
+
 :local {
   .checkbox {
     color: var(--terra-form-checkbox-font-color, rgb(0, 0, 0));
@@ -8,24 +10,12 @@
     margin-top: var(--terra-form-checkbox-container-margin-top, 0.625rem);
     position: relative;
 
-    /* Hitbox and container focus style will only surround checkbox + label, instead of the div block */
-    /* Padding puts space for container focus style */
-    .focus-container {
+    /* Hitbox will only surround checkbox + label, instead of the div block */
+    /* Padding increases hitbox area */
+    .select-container {
       display: inline-block;
-      max-width: 100%;
-      padding-bottom: var(--terra-form-checkbox-focus-container-padding-bottom, none);
-      padding-left: var(--terra-form-checkbox-focus-container-padding-left, 0.214rem);
-      padding-right: var(--terra-form-checkbox-focus-container-padding-right, 0.214rem);
-      padding-top: var(--terra-form-checkbox-focus-container-padding-top, none);
-      position: relative;
-    }
-
-    .is-hidden-focus-container {
-      display: inline-block;
-      padding-bottom: var(--terra-form-checkbox-is-hidden-focus-container-padding-bottom, 0.017rem);
-      padding-left: var(--terra-form-checkbox-is-hidden-focus-container-padding-left, 0.214rem);
-      padding-right: var(--terra-form-checkbox-is-hidden-focus-container-padding-right, none);
-      padding-top: var(--terra-form-checkbox-is-hidden-focus-container-padding-top, none);
+      padding-bottom: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
+      padding-top: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
     }
 
     /* stylelint-disable selector-max-compound-selectors */
@@ -118,24 +108,6 @@
       width: var(--terra-form-checkbox-is-mobile-checked-width, none);
     }
 
-    .is-mobile-focus-container {
-      display: inline-block;
-      max-width: 100%;
-      padding-bottom: var(--terra-form-checkbox-is-mobile-focus-container-padding-bottom, none);
-      padding-left: var(--terra-form-checkbox-is-mobile-focus-container-padding-left, 0.214rem);
-      padding-right: var(--terra-form-checkbox-is-mobile-focus-container-padding-right, 0.214rem);
-      padding-top: var(--terra-form-checkbox-is-mobile-focus-container-padding-top, none);
-      position: relative;
-    }
-
-    .is-mobile-is-hidden-focus-container {
-      display: inline-block;
-      padding-bottom: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-bottom, 0.017rem);
-      padding-left: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-left, 0.214rem);
-      padding-right: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-right, none);
-      padding-top: var(--terra-form-checkbox-is-mobile-is-hidden-focus-container-padding-top, none);
-    }
-
     /* Hide label if isLabelHidden true */
     .is-hidden {
       cursor: default;
@@ -143,7 +115,7 @@
       margin-left: 0;
       width: 0;
     }
-    /*stylelint-disable max-nesting-depth*/
+    /* stylelint-disable max-nesting-depth */
     /* Disabled native checkbox, label text, and custom checkbox styling */
     .is-disabled {
       cursor: default;
@@ -176,19 +148,6 @@
       [dir=ltr] & {
         box-shadow: var(--terra-form-checkbox-focus-box-shadow-ltr, none);
       }
-    }
-  }
-
-  /* Focus style surrounding both custom checkbox and label focus. */
-  .focus {
-    border-radius: var(--terra-form-checkbox-container-focus-border-radius, 3px);
-
-    [dir=rtl] & {
-      box-shadow: var(--terra-form-checkbox-container-focus-box-shadow-rtl, none);
-    }
-
-    [dir=ltr] & {
-      box-shadow: var(--terra-form-checkbox-container-focus-box-shadow-ltr, none);
     }
   }
 
