@@ -82,7 +82,6 @@ describe('Tabs - Responsive', () => {
         '--terra-tabs-structural-disabled-opacity': '0.1',
         '--terra-tabs-structural-disabled-label-opacity': '0',
         '--terra-tabs-structural-border-color': 'purple',
-        '--terra-tabs-structural-border-width': '0', // why isn't this working?!?!?
         '--terra-tabs-structural-last-tab-border-width': '1px',
         '--terra-tabs-structural-tab-bar-border-color': 'purple',
         '--terra-tabs-structural-tab-bar-border-width': '10px',

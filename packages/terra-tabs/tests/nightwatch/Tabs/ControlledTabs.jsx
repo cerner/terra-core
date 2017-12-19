@@ -5,8 +5,6 @@ import TabContent from './TabContentTemplate';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-console.log('Controlled tabs. Uses activeKey and onChange props to manage state. Initial selected tab is Tab 1.');
-
 class ControlledTabs extends React.Component {
   constructor(props) {
     super(props);

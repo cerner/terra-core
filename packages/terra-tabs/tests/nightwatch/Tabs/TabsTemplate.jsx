@@ -9,7 +9,6 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 const propTypes = {
   fill: PropTypes.bool,
   tabFill: PropTypes.bool,
-  variant: PropTypes.string,
   id: PropTypes.string,
   containerHeight: PropTypes.string,
 };
@@ -22,7 +21,6 @@ const TabsTemplate = props => (
   <Base locale={locale}>
     <div style={{ backgroundColor: 'lightgrey', height: props.containerHeight }}>
       <Tabs
-        variant={props.variant}
         tabFill={props.tabFill}
         fill={props.fill}
         id={props.id}
@@ -47,7 +45,7 @@ const TabsTemplate = props => (
           <TabContent label="Tab 7" id="tab7Content" />
         </Tabs.Pane>
         <Tabs.Pane label="Tab 8 with longer text that should truncate" key="Tab8" id="tab8">
-          <TabContent label="Tab 2" id="tab2Content" />
+          <TabContent label="Tab 8" id="tab8Content" />
         </Tabs.Pane>
         <Tabs.Pane label="Tab 9" key="Tab9" id="tab9">
           <TabContent label="Tab 9" id="tab9Content" />
