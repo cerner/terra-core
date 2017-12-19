@@ -88,7 +88,10 @@ describe('Tabs - Responsive', () => {
       });
 
       describe('Collapsible hover', () => {
-        beforeEach(() => browser.moveToObject('#tab2'));
+        beforeEach(() => {
+          browser.waitForVisible('#tab2');
+          browser.moveToObject('#tab2');
+        });
 
         Terra.should.matchScreenshot();
         Terra.should.beAccessible();
@@ -102,7 +105,10 @@ describe('Tabs - Responsive', () => {
       });
 
       describe('Collapsible active focus', () => {
-        beforeEach(() => browser.click('#tab2'));
+        beforeEach(() => {
+          browser.waitForVisible('#tab2');
+          browser.click('#tab2');
+        });
 
         Terra.should.matchScreenshot();
         Terra.should.beAccessible();
