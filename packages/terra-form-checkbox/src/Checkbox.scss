@@ -42,12 +42,15 @@
       width: var(--terra-form-checkbox-native-input-width, none);
     }
 
+    /* stylelint-disable property-no-vendor-prefix */
     .label-text {
       display: block;
       margin-left: var(--terra-form-checkbox-label-text-margin-left, 1.4em);
       max-width: 100%; //stops content overflow on IE 10/11
+      -ms-user-select: none;
       user-select: none;
     }
+    /* stylelint-enable property-no-vendor-prefix */
 
     /* Custom checkbox shown when theme uses custom styling */
     .native-input + .label-text::before {
@@ -85,6 +88,7 @@
       opacity: 1;
       padding-left: var(--terra-form-checkbox-checked-symbol-padding-left, none);
       padding-right: var(--terra-form-checkbox-checked-symbol-padding-right, none);
+      padding-top: var(--terra-form-checkbox-checked-symbol-padding-top, none);
       position: absolute;
       text-align: center;
       top: 0;
@@ -113,8 +117,9 @@
       width: 0;
     }
 
+    /* stylelint-disable max-nesting-depth */
     .label:hover {
-      > .native-input:hover + .label-text::before {
+      .label-text::before {
         border-color: var(--terra-form-checkbox-hover-border-color, none);
 
         [dir=rtl] & {
@@ -127,7 +132,6 @@
       }
     }
 
-    /* stylelint-disable max-nesting-depth */
     /* Disabled native checkbox, label text, and custom checkbox styling */
     .is-disabled {
       cursor: default;
