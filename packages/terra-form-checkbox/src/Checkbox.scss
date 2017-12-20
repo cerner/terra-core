@@ -113,15 +113,17 @@
       width: 0;
     }
 
-    .native-input:hover + .label-text::before {
-      border-color: var(--terra-form-checkbox-hover-border-color, none);
+    .label:hover {
+      > .native-input:hover + .label-text::before {
+        border-color: var(--terra-form-checkbox-hover-border-color, none);
 
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-checkbox-hover-shadow-rtl, none);
-      }
+        [dir=rtl] & {
+          box-shadow: var(--terra-form-checkbox-hover-shadow-rtl, none);
+        }
 
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-checkbox-hover-shadow-ltr, none);
+        [dir=ltr] & {
+          box-shadow: var(--terra-form-checkbox-hover-shadow-ltr, none);
+        }
       }
     }
 
