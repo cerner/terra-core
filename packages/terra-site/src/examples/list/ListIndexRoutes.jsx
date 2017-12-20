@@ -2,7 +2,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-// Form Component Indexes
+// List Component Indexes
 import MultiSelectIndex from './components/MultiSelectIndex';
 import SingleSelectIndex from './components/SingleSelectIndex';
 import SelectableListIndex from './components/SelectableListIndex';
