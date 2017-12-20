@@ -4,7 +4,7 @@ import Alert from '../../lib/Alert';
 import IconHelp from '../../../terra-icon/lib/icon/IconHelp';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-
+// eslint-disable-next-line no-console
 console.log('Custom Alerts with all permutations of title, custom color and custom icon');
 export default () =>
   <Base locale={locale}>
