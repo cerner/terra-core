@@ -221,6 +221,89 @@
     --terra-select-menu-box-shadow-rtl: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   }
 
+  // terra-tabs
+  // Common
+  --terra-tabs-icon-only-padding: 0.786rem 0.571rem;
+  --terra-tabs-text-only-padding: 0.643rem 0.857rem 0.5rem;
+  --terra-tabs-label-margin-next-to-icon: 0.571rem;
+  --terra-tabs-font-size: 1rem;
+  --terra-tabs-line-height: 1.143;
+  --terra-tabs-padding: 0.643rem 0.857rem 0.5rem 0.571rem;
+  --terra-tabs-menu-arrow-left-margin: 0.5rem;
+  --terra-tabs-menu-collapsed-justify-content: center;
+
+  // Structural
+  --terra-tabs-structural-container-background-color: none;
+  --terra-tabs-structural-content-background-color: #f3e8ec;
+  --terra-tabs-structural-collapsed-menu-bar-border-color: #820933;
+  --terra-tabs-structural-collapsed-menu-bar-border-radius: 3px 3px 0 0;
+  --terra-tabs-structural-background-color: #820933;
+  --terra-tabs-structural-background-image: linear-gradient(to bottom, #820933, #820933);
+  --terra-tabs-structural-background-position: 0 0;
+  --terra-tabs-structural-background-size: 0 3px;
+  --terra-tabs-structural-border-radius: 3px 3px 0 0;
+  --terra-tabs-structural-color: #f3e8ec;
+  --terra-tabs-structural-margin-between-tabs: 2px;
+  --terra-tabs-structural-transition-duration: 0.3s;
+  --terra-tabs-structural-transition-timing: ease;
+  --terra-tabs-structural-active-background-color: #f3e8ec;
+  --terra-tabs-structural-active-background-size: 100% 3px;
+  --terra-tabs-structural-active-color: #820933;
+  --terra-tabs-structural-disabled-background-color: #820933;
+  --terra-tabs-structural-disabled-color: #f3e8ec;
+  --terra-tabs-structural-disabled-opacity: 0.5;
+  --terra-tabs-structural-disabled-label-opacity: 0.5;
+  --terra-tabs-structural-hover-background-color: #530621;
+  --terra-tabs-structural-hover-color: #f3e8ec;
+  --terra-tabs-structural-active-focus-background-color: rgba(130, 9, 51, 0.2);
+  --terra-tabs-structural-active-focus-color: #820933;
+  --terra-tabs-structural-focus-background-color: rgba(130, 9, 51, 0.2);
+  --terra-tabs-structural-focus-color: #820933;
+  --terra-tabs-structural-content-border-radius: 0 0 3px 3px;
+  --terra-tabs-structural-border-color: initial;
+  --terra-tabs-structural-border-width: 0;
+  --terra-tabs-structural-last-tab-border-width: 0;
+  --terra-tabs-structural-hover-background-size: 0 0;
+  --terra-tabs-structural-hover-background-image: none;
+  --terra-tabs-structural-menu-bar-border-color: #f3e8ec;
+  --terra-tabs-structural-menu-bar-border-width: 0;
+
+  // Modular
+  --terra-tabs-modular-background-color: #f3e8ec;
+  --terra-tabs-modular-tab-bar-border-color: #f3e8ec;
+  --terra-tabs-modular-tab-bar-border-width: 0;
+  --terra-tabs-modular-tab-bar-padding: 0 0.714rem;
+  --terra-tabs-modular-color: #820933;
+  --terra-tabs-modular-active-color: #18020a;
+  --terra-tabs-modular-hover-color: #18020a;
+  --terra-tabs-modular-disabled-color: rgba(0, 0, 0, 0.3);
+  --terra-tabs-modular-focus-background-color: rgba(130, 9, 51, 0.2);
+  --terra-tabs-modular-focus-border-radius: 3px;
+  --terra-tabs-modular-active-focus-background-color: rgba(130, 9, 51, 0.2);
+  --terra-tabs-modular-focus-border-radius: 3px;
+  --terra-tabs-modular-extended-flex: 1 1 auto;
+  --terra-tabs-collapsed-modular-tab-bar-border-color: #820933;
+  --terra-tabs-collapsed-modular-tab-bar-border-width: 1px;
+  --terra-tabs-collapsed-modular-active-color: #820933;
+  --terra-tabs-collapsed-modular-hover-color: #820933;
+  --terra-tabs-modular-selection-bar-color: #18020a;
+  --terra-tabs-modular-selection-bar-transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  --terra-tabs-modular-background-image: none;
+  --terra-tabs-modular-background-position: 0 0;
+  --terra-tabs-modular-background-size: 0 0;
+  --terra-tabs-modular-active-background-size: 0 0;
+  --terra-tabs-modular-hover-background-image: none;
+  --terra-tabs-modular-hover-background-size: 0 0;
+  --terra-tabs-modular-selection-bar-height: 2px;
+
+  [dir=rtl]:root {
+    --terra-tabs-keyboard-focus-rtl-box-shadow: none;
+  }
+
+  [dir=ltr]:root {
+    --terra-tabs-keyboard-focus-ltr-box-shadow: none;
+  }
+
   // Terra Time Input
   --terra-time-input-background: #f1A8ff;
   --terra-time-input-animation-background: linear-gradient(to bottom, #ff8fab, #ff8fab);
