@@ -3,7 +3,9 @@ Changelog
 
 Unreleased
 ----------
-- Fixed lint errors
+### Fixed
+* Fixed lint errors
+* Fixed color contrast ratios to pass accessibility testing
 
 1.13.0 - (November 28, 2017)
 ------------------
