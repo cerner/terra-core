@@ -192,6 +192,12 @@
       width: var(--terra-form-checkbox-focus-ring-width, none);
       z-index: -1;
     }
+
+    .native-input:focus + .is-mobile-focus-ring::after {
+      content: '';
+      height: var(--terra-form-checkbox-is-mobile-focus-ring-height, none);
+      width: var(--terra-form-checkbox-is-mobile-focus-ring-width, none);
+    }
   }
 
   .checkbox-inline {

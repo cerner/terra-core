@@ -67,10 +67,12 @@
   --terra-form-checkbox-focus-box-shadow-rtl: none;
   --terra-form-checkbox-focus-box-shadow-ltr: none;
   --terra-form-checkbox-focus-ring-background-color: rgba(245, 218, 10, 0.404);
-  --terra-form-checkbox-focus-ring-left: -11.3px;
-  --terra-form-checkbox-focus-ring-height: 2.143rem;
-  --terra-form-checkbox-focus-ring-top: -7.5px;
-  --terra-form-checkbox-focus-ring-width: 2.143rem;
+  --terra-form-checkbox-focus-ring-left: -8px;
+  --terra-form-checkbox-focus-ring-height: 36px;
+  --terra-form-checkbox-focus-ring-top: -4px;
+  --terra-form-checkbox-focus-ring-width: 36px;
+  --terra-form-checkbox-is-mobile-focus-ring-height: 39px;
+  --terra-form-checkbox-is-mobile-focus-ring-width: 39px;
   // terra-form-field
   --terra-form-field-margin-bottom: 0.5em;
   --terra-form-field-inline-margin-right: 0.5em;

@@ -133,6 +133,7 @@ const Checkbox = ({
     'label-text',
     { 'is-hidden': isLabelHidden },
     { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
+    { 'is-mobile-focus-ring': CheckboxUtil.isConsideredMobileDevice() },
   ]);
 
   let labelTextContainer = null;
