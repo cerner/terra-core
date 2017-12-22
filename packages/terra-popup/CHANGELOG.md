@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Console warning 
 
 1.17.0 - (December 5, 2017)
 ------------------
