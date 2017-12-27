@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added badge mock theme
+
 ### Changed
 * Update button examples to use V2
 * Fixed broken image in arrange example
