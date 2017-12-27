@@ -43,6 +43,7 @@ Cerner Corporation
 - Victor Nava [@vikonava]
 - Chase Sinclair [@ChaseSinclair]
 - Gerard Isdell [@gerard-isdell]
+- Andy Nelson [@anelson425]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -89,3 +90,4 @@ Cerner Corporation
 [@vikonava]: https://github.com/vikonava
 [@ChaseSinclair]: https://github.com/ChaseSinclair
 [@gerard-isdell]: https://github.com/gerard-isdell
+[@anelson425]: https://github.com/anelson425
