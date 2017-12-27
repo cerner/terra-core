@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 const TableComponentNavigation = ({ onClick }) =>
-  <List className={[styles['site-form-nav'], styles['sub-nav']]}>
+  <List className={[styles['site-component-nav'], styles['sub-nav']]}>
     <List.Item content={<Link onClick={onClick} to="/site/table/multi-select">MultiSelectableRows</Link>} />
   </List>;
 

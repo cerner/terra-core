@@ -11,7 +11,7 @@ const propTypes = {
 const FormComponentNavigation = ({
     onClick,
   }) =>
-    <List className={[styles['site-form-nav'], styles['sub-nav']]}>
+    <List className={[styles['site-component-nav'], styles['sub-nav']]}>
       <List.Item content={<Link onClick={onClick} to="/site/form/field">Field</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/fieldset">Fieldset</Link>} />
       <List.Item content={<Link onClick={onClick} to="/site/form/input">Input</Link>} />
