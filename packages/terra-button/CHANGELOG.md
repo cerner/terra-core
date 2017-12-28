@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed test script
 
 1.14.0 - (November 28, 2017)
 ------------------
