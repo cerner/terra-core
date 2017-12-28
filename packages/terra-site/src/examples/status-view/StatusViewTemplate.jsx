@@ -12,7 +12,7 @@ const propTypes = {
   variant: PropTypes.string,
 };
 
-class StatusViewExample extends React.Component {
+class StatusViewTemplate extends React.Component {
 
   constructor(props) {
     super(props);
@@ -85,5 +85,5 @@ class StatusViewExample extends React.Component {
   }
 }
 
-StatusViewExample.propTypes = propTypes;
-export default StatusViewExample;
+StatusViewTemplate.propTypes = propTypes;
+export default StatusViewTemplate;
