@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* aria-selected attribute to aria-pressed
 
 1.15.0 - (November 28, 2017)
 ------------------
