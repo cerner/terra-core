@@ -49,6 +49,7 @@ import SpacerExamples from './examples/spacer/Index';
 import StatusExamples from './examples/status/Index';
 import StatusViewExamples from './examples/status-view/Index';
 import TableExamples from './examples/table/Index';
+import TabsExamples from './examples/tabs/Index';
 import TextExamples from './examples/text/Index';
 import ThemeProviderExamples from './examples/theme-provider/Index';
 import TimeInputExamples from './examples/time-input/Index';
@@ -118,6 +119,8 @@ import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
 import StatusViewTestRoutes from 'terra-status-view/tests/nightwatch/StatusViewTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
+import TabsTestRoutes from 'terra-tabs/tests/nightwatch/Tabs/TabsTestRoutes';
+import TabPaneTestRoutes from 'terra-tabs/tests/nightwatch/TabPane/TabPaneTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
@@ -175,6 +178,7 @@ ReactDOM.render((
       <Route path="status" component={StatusExamples} />
       <Route path="status-view" component={StatusViewExamples} />
       <Route path="table" component={TableExamples} />
+      <Route path="tabs" component={TabsExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="theme-provider" component={ThemeProviderExamples} />
       <Route path="time-input" component={TimeInputExamples} />
@@ -248,5 +252,7 @@ ReactDOM.render((
     {SelectTestRoutes}
     {SelectOptionTestRoutes}
     {StatusViewTestRoutes}
+    {TabsTestRoutes}
+    {TabPaneTestRoutes}
   </Router>
 ), document.getElementById('root'));
