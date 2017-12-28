@@ -46,6 +46,7 @@ Cerner Corporation
 - Chase Sinclair [@ChaseSinclair]
 - Gerard Isdell [@gerard-isdell]
 - Noah Benham [@noahbenham]
+- Andy Nelson [@anelson425]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -93,3 +94,4 @@ Cerner Corporation
 [@ChaseSinclair]: https://github.com/ChaseSinclair
 [@gerard-isdell]: https://github.com/gerard-isdell
 [@noahbenham]: https://github.com/noahbenham
+[@anelson425]: https://github.com/anelson425
