@@ -99,8 +99,8 @@ class StatusView extends React.Component {
 
     // get the content heights of the nodes that are to be shown if have content and cannot be hidden
     let componentsHeight = this.titleNode.offsetHeight;
-    if (this.buttonsNode) {
-      componentsHeight += this.buttonsNode.offsetHeight;
+    if (this.actionsNode) {
+      componentsHeight += this.actionsNode.offsetHeight;
     }
     if (this.messageNode) {
       componentsHeight += this.messageNode.offsetHeight;
@@ -156,16 +156,16 @@ class StatusView extends React.Component {
     if (message) {
       messageSection = <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>{message}</div>;
     }
-    let buttonSection;
+    let actionSection;
     if (children.length) {
-      buttonSection = <div className={cx('buttons')} ref={(element) => { this.buttonsNode = element; }}>{children}</div>;
+      actionSection = <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>{children}</div>;
     }
     let defaultTitle = title;
     if (!defaultTitle) {
       defaultTitle = (variant === StatusView.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
     }
     let dividerSection;
-    if (messageSection || buttonSection) {
+    if (messageSection || actionSection) {
       dividerSection = <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}><Divider /></div>;
     }
 
@@ -197,7 +197,7 @@ class StatusView extends React.Component {
             {dividerSection}
             {messageSection}
           </div>
-          {buttonSection}
+          {actionSection}
         </div>
       </div>
     );

@@ -18,16 +18,16 @@ const StatusExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={StatusViewSrc} />
-    <h2 id="default">Status View:  No props given</h2>
+    <h2 id="default-empty">Status View:  No props given</h2>
     <StatusViewExample style={{ width: '500px' }} />
     <br />
-    <h2 id="default">Status View:  All props given</h2>
+    <h2 id="default-all">Status View:  All props given</h2>
     <StatusViewExample style={{ width: '500px' }} variant={StatusView.variants.NODATA} title="No Data" message="No data was returned">
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />
     </StatusViewExample>
     <br />
-    <h2 id="blank">Status View:  Text Wrapping</h2>
+    <h2 id="wrap-text">Status View:  Text Wrapping</h2>
     <div style={{ width: '500px' }} >
       <StatusViewExample
         variant={StatusView.variants.ERROR}
@@ -39,22 +39,22 @@ const StatusExamples = () => (
       </StatusViewExample>
     </div>
     <br />
-    <h2 id="blank">Status View:  Glyph Hidden</h2>
+    <h2 id="glyph-hidden">Status View:  Glyph Hidden</h2>
     <StatusViewExample style={{ width: '500px' }} variant={StatusView.variants.ERROR} message="An exception was thrown" isGlyphHidden>
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />
     </StatusViewExample>
-    <h2 id="blank">Status View:  Large Container</h2>
+    <h2 id="large">Status View:  Large Container</h2>
     <StatusViewExample style={{ height: '500px', width: '500px' }} variant={StatusView.variants.ERROR} message="An exception was thrown">
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />
     </StatusViewExample>
-    <h2 id="blank">Status View:  Align Top</h2>
+    <h2 id="align-top">Status View:  Align Top</h2>
     <StatusViewExample style={{ height: '500px', width: '500px' }} isAlignedTop variant={StatusView.variants.ERROR} message="An exception was thrown">
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />
     </StatusViewExample>
-    <h2 id="blank">Status View:  Glyph cannot fit</h2>
+    <h2 id="glyph-small">Status View:  Glyph cannot fit</h2>
     <StatusViewExample style={{ height: '250px', width: '500px' }} variant={StatusView.variants.ERROR} message="An exception was thrown">
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />

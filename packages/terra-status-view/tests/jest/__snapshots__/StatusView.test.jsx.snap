@@ -158,7 +158,7 @@ exports[`should render an image with a no-data status view with all message prop
           </div>
         </div>
         <div
-          className="buttons"
+          className="actions"
         >
           <Button
             isBlock={false}

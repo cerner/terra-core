@@ -86,14 +86,14 @@
     padding-top: var(--terra-status-view-divider-padding-top, 20px);
   }
 
-  .buttons {
+  .actions {
     display: flex;
     flex: 0 0 auto;
-    flex-direction: var(--terra-status-view-buttons-flex-direction-small-width, row);
+    flex-direction: var(--terra-status-view-actions-flex-direction-small-width, row);
     justify-content: center;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: var(--terra-status-view-buttons-padding-top, 10px);
+    padding-top: var(--terra-status-view-actions-padding-top, 10px);
     width: 100%;
 
     @media screen and (min-width: 768px) {
@@ -101,7 +101,7 @@
     }
 
     > button {
-      flex: var(--terra-status-view-button-flex, initial);
+      flex: var(--terra-status-view-actions-button-flex, initial);
       flex-shrink: 1;
       margin-left: 5px;
       margin-right: 5px;

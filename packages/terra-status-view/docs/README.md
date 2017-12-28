@@ -12,9 +12,19 @@ The status view component provides a customizable icon, message, and buttons in 
 
 ```jsx
 import React from 'react';
+import Button from 'terra-button';
 import StatusView from 'terra-status-view';
 
-<StatusView </StatusView>
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant={StatusView.variants.ERROR}
+  title="A 500 error was thrown from the service."
+  message=message="A null pointer exception was thrown."
+>
+  <Button text="OK" key="1 />
+  <Button text="Cancel" key="2" />
+</StatusView>
 ```
 
 ## Component Features
