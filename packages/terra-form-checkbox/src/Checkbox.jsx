@@ -114,10 +114,6 @@ const Checkbox = ({
     customProps.className,
   ]);
 
-  const selectContainer = cx([
-    'select-container',
-  ]);
-
   const labelClasses = cx([
     'label',
     { 'is-disabled': isDisabled },
@@ -171,12 +167,10 @@ const Checkbox = ({
 
   return (
     <div className={checkboxClasses}>
-      <div className={selectContainer}>
-        <label htmlFor={id} className={labelClasses}>
-          {inputContainer}
-          {labelTextContainer}
-        </label>
-      </div>
+      <label htmlFor={id} className={labelClasses}>
+        {inputContainer}
+        {labelTextContainer}
+      </label>
     </div>
   );
 };
