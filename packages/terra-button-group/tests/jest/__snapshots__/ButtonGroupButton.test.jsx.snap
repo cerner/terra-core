@@ -2,7 +2,7 @@
 
 exports[`should render a default component 1`] = `
 <Button
-  aria-selected={false}
+  aria-pressed={false}
   className="button-group-button"
   isBlock={false}
   isCompact={false}
@@ -15,7 +15,7 @@ exports[`should render a default component 1`] = `
 
 exports[`should render as selected 1`] = `
 <Button
-  aria-selected={true}
+  aria-pressed={true}
   className="button-group-button is-active"
   isBlock={false}
   isCompact={false}
@@ -28,7 +28,7 @@ exports[`should render as selected 1`] = `
 
 exports[`should render with icon and text 1`] = `
 <Button
-  aria-selected={false}
+  aria-pressed={false}
   className="button-group-button"
   icon={
     <img
@@ -47,7 +47,7 @@ exports[`should render with icon and text 1`] = `
 
 exports[`should render with icon and text reversed 1`] = `
 <Button
-  aria-selected={false}
+  aria-pressed={false}
   className="button-group-button"
   icon={
     <img
@@ -66,7 +66,7 @@ exports[`should render with icon and text reversed 1`] = `
 
 exports[`should render with icon only 1`] = `
 <Button
-  aria-selected={false}
+  aria-pressed={false}
   className="button-group-button"
   icon={
     <img
@@ -84,7 +84,7 @@ exports[`should render with icon only 1`] = `
 
 exports[`should render with text 1`] = `
 <Button
-  aria-selected={false}
+  aria-pressed={false}
   className="button-group-button"
   isBlock={false}
   isCompact={false}

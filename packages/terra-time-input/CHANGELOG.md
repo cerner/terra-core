@@ -8,6 +8,9 @@ Unreleased
 * Added support for theming.
 * Added mobile only time input.
 
+### Changed
+* Updated tests to use aria-pressed instead of aria-selected for button group
+
 
 1.15.0 - (November 28, 2017)
 ------------------
