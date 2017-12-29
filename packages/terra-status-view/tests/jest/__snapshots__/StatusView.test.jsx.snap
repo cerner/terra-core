@@ -1,474 +1,370 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render an image with a custom status-view 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="custom"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={false}
-    variant="custom"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="custom"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
-        >
-          <svg
-            className="custom"
-          />
-        </div>
-        <div
-          className="message-content-group"
-        >
-          <div
-            className="title"
-          />
-        </div>
+          className="title"
+        />
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with a no-data status view that will hide the glyph from being shown 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={true}
+  variant="no-data"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={true}
-    variant="no-data"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="message-content-group"
       >
         <div
-          className="message-content-group"
+          className="title"
         >
-          <div
-            className="title"
-          >
-            No Results
-          </div>
+          No Results
         </div>
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with a no-data status view with all message props given 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  message="Test Message"
+  title="Test Title"
+  variant="no-data"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={false}
-    message="Test Message"
-    title="Test Title"
-    variant="no-data"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="no-data"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
+          className="title"
         >
-          <svg
-            className="no-data"
-          />
+          Test Title
         </div>
         <div
-          className="message-content-group"
+          className="divider"
         >
-          <div
-            className="title"
-          >
-            Test Title
-          </div>
-          <div
-            className="divider"
-          >
-            <Divider>
-              <hr
-                className="divider"
-              />
-            </Divider>
-          </div>
-          <div
-            className="message"
-          >
-            Test Message
-          </div>
+          <Divider>
+            <hr
+              className="divider"
+            />
+          </Divider>
         </div>
         <div
-          className="actions"
+          className="message"
         >
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isReversed={false}
-            key="1"
-            text="OK"
-            type="button"
-            variant="default"
-          >
-            <button
-              aria-disabled={false}
-              className="button default"
-              disabled={false}
-              type="button"
-            >
-              <span
-                className="text"
-              >
-                OK
-              </span>
-            </button>
-          </Button>
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isReversed={false}
-            key="2"
-            text="Cancel"
-            type="button"
-            variant="default"
-          >
-            <button
-              aria-disabled={false}
-              className="button default"
-              disabled={false}
-              type="button"
-            >
-              <span
-                className="text"
-              >
-                Cancel
-              </span>
-            </button>
-          </Button>
+          Test Message
         </div>
       </div>
+      <div
+        className="actions"
+      >
+        <Button
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isReversed={false}
+          key="1"
+          text="OK"
+          type="button"
+          variant="default"
+        >
+          <button
+            aria-disabled={false}
+            className="button default"
+            disabled={false}
+            type="button"
+          >
+            <span
+              className="text"
+            >
+              OK
+            </span>
+          </button>
+        </Button>
+        <Button
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isReversed={false}
+          key="2"
+          text="Cancel"
+          type="button"
+          variant="default"
+        >
+          <button
+            aria-disabled={false}
+            className="button default"
+            disabled={false}
+            type="button"
+          >
+            <span
+              className="text"
+            >
+              Cancel
+            </span>
+          </button>
+        </Button>
+      </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with a no-matching-results status-view that will force the content to align at the top 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={true}
+  isGlyphHidden={false}
+  variant="no-matching-results"
 >
-  <StatusView
-    isAlignedTop={true}
-    isGlyphHidden={false}
-    variant="no-matching-results"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="no-matching-results"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
+          className="title"
         >
-          <svg
-            className="no-matching-results"
-          />
-        </div>
-        <div
-          className="message-content-group"
-        >
-          <div
-            className="title"
-          >
-            No Matching Results
-          </div>
+          No Matching Results
         </div>
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with a no-service status-view 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="no-service"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={false}
-    variant="no-service"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="no-service"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
+          className="title"
         >
-          <svg
-            className="no-service"
-          />
-        </div>
-        <div
-          className="message-content-group"
-        >
-          <div
-            className="title"
-          >
-            Not Connected
-          </div>
+          Not Connected
         </div>
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with a not-authorized status-view 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="not-authorized"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={false}
-    variant="not-authorized"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="not-authorized"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
+          className="title"
         >
-          <svg
-            className="not-authorized"
-          />
-        </div>
-        <div
-          className="message-content-group"
-        >
-          <div
-            className="title"
-          >
-            Not Authorized
-          </div>
+          Not Authorized
         </div>
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with a default status view 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="error"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={false}
-    variant="error"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="error"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
+          className="title"
         >
-          <svg
-            className="error"
-          />
-        </div>
-        <div
-          className="message-content-group"
-        >
-          <div
-            className="title"
-          >
-            Error
-          </div>
+          Error
         </div>
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
 
 exports[`should render an image with an error status-view 1`] = `
-<IntlProvider
-  locale="en-US"
-  messages={
-    Object {
-      "Terra.status-view.error": "Error",
-      "Terra.status-view.no-data": "No Results",
-      "Terra.status-view.no-matching-results": "No Matching Results",
-      "Terra.status-view.no-service": "Not Connected",
-      "Terra.status-view.not-authorized": "Not Authorized",
-    }
-  }
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="error"
 >
-  <StatusView
-    isAlignedTop={false}
-    isGlyphHidden={false}
-    variant="error"
+  <div
+    className="status-view"
   >
     <div
-      className="status-view"
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
     >
       <div
-        className="status-view-inner"
-        style={
-          Object {
-            "paddingBottom": "0px",
-            "paddingTop": "0px",
-          }
-        }
+        className="glyph"
+      >
+        <svg
+          className="error"
+        />
+      </div>
+      <div
+        className="message-content-group"
       >
         <div
-          className="glyph"
+          className="title"
         >
-          <svg
-            className="error"
-          />
-        </div>
-        <div
-          className="message-content-group"
-        >
-          <div
-            className="title"
-          >
-            Error
-          </div>
+          Error
         </div>
       </div>
     </div>
-  </StatusView>
-</IntlProvider>
+  </div>
+</StatusView>
 `;
