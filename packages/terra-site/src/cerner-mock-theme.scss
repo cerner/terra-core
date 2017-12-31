@@ -3,6 +3,22 @@
 @import '~terra-mixins';
 
 @include cerner-mock-theme {
+  // terra-badge
+  --terra-badge-background-color-default: #2c3e50;
+  --terra-badge-color-default: #fff;
+  --terra-badge-background-color-primary: #3498db;
+  --terra-badge-color-primary: #fff;
+  --terra-badge-background-color-secondary: #1abc9c;
+  --terra-badge-color-secondary: #fff;
+  --terra-badge-background-color-positive: #27ae60;
+  --terra-badge-color-positive: #fff;
+  --terra-badge-background-color-negative: #c0392b;
+  --terra-badge-color-negative: #fff;
+  --terra-badge-background-color-warning: #e67e22;
+  --terra-badge-color-warning: #fff;
+  --terra-badge-background-color-info: #bdc3c7;
+  --terra-badge-color-info: #333;
+
   // terra-form-checkbox
   --terra-form-checkbox-font-color: rgb(255, 192, 203);
   --terra-form-checkbox-container-margin-left: 0.643rem;

@@ -48,7 +48,7 @@ const ButtonGroupButton = ({ isSelected, ...customProps }) => {
     { 'is-active': isSelected },
     attributes.className,
   ]);
-  attributes['aria-selected'] = isSelected;
+  attributes['aria-pressed'] = isSelected;
 
   return (
     <Button
