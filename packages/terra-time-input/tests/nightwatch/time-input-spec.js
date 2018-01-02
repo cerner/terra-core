@@ -9,7 +9,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.expect.element('#timeInput').to.be.present;
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.be.present;
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.be.present;
-    browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('placeholder').equals('hh');
+    browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('placeholder').equals('HH');
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('placeholder').equals('mm');
   },
 
