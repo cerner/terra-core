@@ -1,7 +1,7 @@
 /* global browser, Terra */
 
 const viewports = Terra.viewports('tiny', 'medium');
-const ignoreLandMarkOneMain = {
+const ignoredA11yRules = {
   'landmark-one-main': { enabled: false },
 };
 
@@ -10,7 +10,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/default'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -24,7 +24,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/error-all-props'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -47,7 +47,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/glyph-hidden'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -61,7 +61,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/height-too-small'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -84,7 +84,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/centered'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -98,7 +98,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/align-top'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -112,7 +112,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/not-authorized'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -126,7 +126,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/no-service'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -140,7 +140,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/custom'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
@@ -154,7 +154,7 @@ describe('StatusView', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/text-wrapping'));
 
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreLandMarkOneMain });
+    Terra.should.beAccessible({ viewports, rules: ignoredA11yRules });
     Terra.should.themeEachCustomProperty({
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
