@@ -110,8 +110,12 @@ const Checkbox = ({
 
   const checkboxClasses = cx([
     'checkbox',
-    { 'checkbox-inline': isInline },
+    { 'is-inline': isInline },
     customProps.className,
+  ]);
+
+  const selectContainer = cx([
+    'select-container',
   ]);
 
   const labelClasses = cx([
@@ -129,48 +133,35 @@ const Checkbox = ({
     'label-text',
     { 'is-hidden': isLabelHidden },
     { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
-    { 'is-mobile-focus-ring': CheckboxUtil.isConsideredMobileDevice() },
   ]);
 
   let labelTextContainer = null;
-  let inputContainer = null;
   if (isLabelHidden) {
-    inputContainer = (<input
-      {...controlInputAttrs}
-      aria-label={labelText}
-      type="checkbox"
-      id={id}
-      disabled={isDisabled}
-      name={name}
-      value={value}
-      onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      className={inputClasses}
-    />);
+    controlInputAttrs['aria-label'] = labelText;
     labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses} />;
   } else {
-    inputContainer = (<input
-      {...controlInputAttrs}
-      type="checkbox"
-      id={id}
-      disabled={isDisabled}
-      name={name}
-      value={value}
-      onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      className={inputClasses}
-    />);
     labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>;
   }
 
   return (
     <div className={checkboxClasses}>
-      <label htmlFor={id} className={labelClasses}>
-        {inputContainer}
-        {labelTextContainer}
-      </label>
+      <div className={selectContainer}>
+        <label htmlFor={id} className={labelClasses}>
+          <input
+            {...controlInputAttrs}
+            type="checkbox"
+            id={id}
+            disabled={isDisabled}
+            name={name}
+            value={value}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            className={inputClasses}
+          />
+          {labelTextContainer}
+        </label>
+      </div>
     </div>
   );
 };

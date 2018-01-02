@@ -24,11 +24,11 @@
   --terra-form-checkbox-container-margin-left: 0.643rem;
   --terra-form-checkbox-container-margin-right: 2rem;
   --terra-form-checkbox-container-margin-top: 0.625rem;
+  --terra-form-checkbox-select-container-padding-bottom: 0.3125rem;
+  --terra-form-checkbox-select-container-padding-top: 0.3125rem;
   --terra-form-checkbox-font-size: 1rem;
   --terra-form-checkbox-line-height: 1.42;
-  --terra-form-checkbox-padding-bottom: 0.3125rem;
   --terra-form-checkbox-padding-left: 1.2rem;
-  --terra-form-checkbox-padding-top: 0.3125rem;
   --terra-form-checkbox-native-input-clip: rect(0 0 0 0);
   --terra-form-checkbox-native-input-cursor: default;
   --terra-form-checkbox-native-input-font-size: none;
@@ -83,12 +83,10 @@
   --terra-form-checkbox-focus-box-shadow-rtl: none;
   --terra-form-checkbox-focus-box-shadow-ltr: none;
   --terra-form-checkbox-focus-ring-background-color: rgba(245, 218, 10, 0.404);
-  --terra-form-checkbox-focus-ring-left: -8px;
-  --terra-form-checkbox-focus-ring-height: 36px;
-  --terra-form-checkbox-focus-ring-top: -4px;
-  --terra-form-checkbox-focus-ring-width: 36px;
-  --terra-form-checkbox-is-mobile-focus-ring-height: 39px;
-  --terra-form-checkbox-is-mobile-focus-ring-width: 39px;
+  --terra-form-checkbox-focus-ring-left: -11.3px;
+  --terra-form-checkbox-focus-ring-height: 2.143rem;
+  --terra-form-checkbox-focus-ring-top: -7.5px;
+  --terra-form-checkbox-focus-ring-width: 2.143rem;
   // terra-form-field
   --terra-form-field-margin-bottom: 0.5em;
   --terra-form-field-inline-margin-right: 0.5em;
