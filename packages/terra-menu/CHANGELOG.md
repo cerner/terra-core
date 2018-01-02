@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Appropriate roles for accessibility
+
+### Changed
+* Divider component from an hr to an li with separator role.
 
 1.10.0 - (December 5, 2017)
 ------------------
