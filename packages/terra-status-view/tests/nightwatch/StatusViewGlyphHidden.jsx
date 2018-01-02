@@ -6,5 +6,5 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <StatusView role="main" id="statusView" variant={StatusView.variants.ERROR} isGlyphHidden />
+    <StatusView id="statusView" variant={StatusView.variants.ERROR} isGlyphHidden />
   </Base>;

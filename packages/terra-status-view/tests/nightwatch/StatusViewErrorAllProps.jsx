@@ -7,7 +7,7 @@ const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 export default () =>
   <Base locale={locale}>
-    <StatusView role="main" id="statusView" variant={StatusView.variants.ERROR} title="500" message="An exception was thrown.">
+    <StatusView id="statusView" variant={StatusView.variants.ERROR} title="500" message="An exception was thrown.">
       <Button text="OK" key="1" id="button1" />
       <Button text="Cancel" key="2" id="button2" />
     </StatusView>
