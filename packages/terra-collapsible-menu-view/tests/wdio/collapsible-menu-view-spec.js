@@ -5,8 +5,7 @@ const ignoredA11y = {
   'button-name': { enabled: false },
   // https://github.com/cerner/terra-core/issues/1061
   'aria-allowed-attr': { enabled: false },
-  // https://github.com/cerner/terra-core/issues/1066
-  list: { enabled: false },
+  'landmark-one-main': { enabled: false },
 };
 
 describe('Collapsible Menu View', () => {
