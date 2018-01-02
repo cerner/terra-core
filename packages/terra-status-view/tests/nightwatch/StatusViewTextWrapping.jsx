@@ -8,7 +8,7 @@ const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 
 export default () =>
   <Base locale={locale}>
-    <StatusView id="statusView" variant={StatusView.variants.ERROR} title={ipsum} message={ipsum}>
+    <StatusView role="main" id="statusView" variant={StatusView.variants.ERROR} title={ipsum} message={ipsum}>
       <Button text={ipsum} key="1" id="button1" />
       <Button text={ipsum} key="2" id="button2" />
     </StatusView>
