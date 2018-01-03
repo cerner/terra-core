@@ -22,19 +22,22 @@ Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu
 pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
                  </p>);
 
-const contentheader = <Heading level={1} size={'large'}>Display Header</Heading>;
+const contentheader = <Heading level={3}>Display Header</Heading>;
+const contentfooter = <Heading level={3}>Display Footer</Heading>;
 
 const container = () => (
-  <ContentContainer header={contentheader}>
-    <div key="1">
-      {display1}
-    </div>
-    <div key="2">
-      {display2}
-    </div>
-    <div key="3">
-      {display3}
-    </div>
-  </ContentContainer>);
+  <div style={{ border: '1px solid' }}>
+    <ContentContainer header={contentheader} footer={contentfooter}>
+      <div key="1">
+        {display1}
+      </div>
+      <div key="2">
+        {display2}
+      </div>
+      <div key="3">
+        {display3}
+      </div>
+    </ContentContainer>
+  </div>);
 
 export default container;

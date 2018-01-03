@@ -7,6 +7,7 @@ Unreleased
 * Added badge mock theme
 
 ### Changed
+* Update button examples to use V2
 * Fixed broken image in arrange example
 
 1.20.0 - (December 5, 2017)
