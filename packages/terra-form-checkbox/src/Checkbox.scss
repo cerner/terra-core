@@ -47,7 +47,6 @@
       display: block;
       margin-left: var(--terra-form-checkbox-label-text-margin-left, 1.4em);
       max-width: 100%; //stops content overflow on IE 10/11
-      -ms-user-select: none;
       user-select: none;
     }
     /* stylelint-enable property-no-vendor-prefix */
