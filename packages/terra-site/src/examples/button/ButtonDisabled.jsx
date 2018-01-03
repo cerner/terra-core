@@ -1,14 +1,16 @@
 import React from 'react';
 import Button from 'terra-button';
+import IconEdit from 'terra-icon/lib/icon/IconEdit';
 
 const buttonStyle = { margin: '5px' };
 
 const ButtonDisabled = () => (
   <div>
     <Button text="Disabled Button" isDisabled style={buttonStyle} />
-    <Button text="Disabled Primary" variant="primary" isDisabled style={buttonStyle} />
-    <Button text="Disabled Secondary" variant="secondary" isDisabled style={buttonStyle} />
-    <Button text="Disabled Link" variant="link" isDisabled style={buttonStyle} />
+    <Button text="Disabled Emphasis" variant="emphasis" isDisabled style={buttonStyle} />
+    <Button text="Disabled De-emphasis" variant="de-emphasis" isDisabled style={buttonStyle} />
+    <Button text="Disabled Action" variant="action" isDisabled icon={<IconEdit />} style={buttonStyle} />
+    <Button text="Disabled Utility" variant="utility" isDisabled icon={<IconEdit />} style={buttonStyle} />
   </div>
 );
 

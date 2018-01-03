@@ -4,8 +4,6 @@ import Button from 'terra-button';
 import Alert from '../../lib/Alert';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
-// eslint-disable-next-line no-console
-console.log('Alert where alertAction prop provided containing an action button');
 
 class AlertActionButton extends React.Component {
   constructor(props) {
@@ -25,7 +23,7 @@ class AlertActionButton extends React.Component {
     return (
       <div>
         <Base locale={locale}>
-          <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+          <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" onClick={this.actionFunc} />} >
             This is a warning. It is configured with a custom Action button. Action button has been
             clicked <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span> times.
           </Alert>
