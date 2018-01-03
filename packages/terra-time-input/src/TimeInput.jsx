@@ -527,7 +527,7 @@ class TimeInput extends React.Component {
             className={cx('time-input-hour')}
             value={this.state.hour}
             name={'terra-time-hour-'.concat(name)}
-            placeholder="hh"
+            placeholder={this.context.intl.formatMessage({ id: 'Terra.timeInput.hh' })}
             maxLength="2"
             onChange={this.handleHourChange}
             onKeyDown={this.handleHourInputKeyDown}
@@ -549,7 +549,7 @@ class TimeInput extends React.Component {
             className={cx('time-input-minute')}
             value={this.state.minute}
             name={'terra-time-minute-'.concat(name)}
-            placeholder="mm"
+            placeholder={this.context.intl.formatMessage({ id: 'Terra.timeInput.mm' })}
             maxLength="2"
             onChange={this.handleMinuteChange}
             onKeyDown={this.handleMinuteInputKeyDown}
@@ -639,7 +639,7 @@ class TimeInput extends React.Component {
           type="text"
           value={this.state.hour}
           name={'terra-time-hour-'.concat(name)}
-          placeholder="hh"
+          placeholder={this.context.intl.formatMessage({ id: 'Terra.timeInput.hh' })}
           maxLength="2"
           onChange={this.handleHourChange}
           onKeyDown={this.handleHourInputKeyDown}
@@ -657,7 +657,7 @@ class TimeInput extends React.Component {
           type="text"
           value={this.state.minute}
           name={'terra-time-minute-'.concat(name)}
-          placeholder="mm"
+          placeholder={this.context.intl.formatMessage({ id: 'Terra.timeInput.mm' })}
           maxLength="2"
           onChange={this.handleMinuteChange}
           onKeyDown={this.handleMinuteInputKeyDown}
