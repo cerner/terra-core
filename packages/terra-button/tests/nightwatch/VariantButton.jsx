@@ -2,29 +2,38 @@ import React from 'react';
 
 import Button from '../../lib/Button';
 
-const DefaultButton = () => <div style={{ padding: '5px' }}>
-  <Button id="defaultButton" text="Default" variant="default" />
-  <Button id="defaultButtonDisabled" text="Default Disabled" variant="default" isDisabled />
+const iconStyle = { backgroundColor: 'black' };
+const icon = <svg width="1em" height="1em" style={iconStyle} className="test"><rect width="1em" height="1em" /></svg>;
+
+const NeutralButton = () => <div id="neutral" style={{ padding: '5px' }}>
+  <Button id="neutralButton" text="Neutral" variant="neutral" />
+  <Button id="neutralButtonDisabled" text="Neutral Disabled" variant="neutral" isDisabled />
 </div>;
 
-const PrimaryButton = () => <div style={{ padding: '5px' }}>
-  <Button id="primaryButton" text="Primary" variant="primary" />
-  <Button id="primaryButtonDisabled" text="Primary Disabled" variant="primary" isDisabled />
+const EmphasisButton = () => <div id="emphasis" style={{ padding: '5px' }}>
+  <Button id="emphasisButton" text="Emphasis" variant="emphasis" />
+  <Button id="emphasisButtonDisabled" text="Emphasis Disabled" variant="emphasis" isDisabled />
 </div>;
 
-const SecondaryButton = () => <div style={{ padding: '5px' }}>
-  <Button id="secondaryButton" text="Secondary" variant="secondary" />
-  <Button id="secondaryButtonDisabled" text="Secondary Disabled" variant="secondary" isDisabled />
+const DeemphasisButton = () => <div id="de-emphasis" style={{ padding: '5px' }}>
+  <Button id="de-emphasisButton" text="De-emphasis" variant="de-emphasis" />
+  <Button id="de-emphasisButtonDisabled" text="De-emphasis Disabled" variant="de-emphasis" isDisabled />
 </div>;
 
-const LinkButton = () => <div style={{ padding: '5px' }}>
-  <Button id="linkButton" text="Link" variant="link" />
-  <Button id="linkButtonDisabled" text="Link Disabled" variant="link" isDisabled />
+const ActionButton = () => <div id="action" style={{ padding: '5px' }}>
+  <Button id="actionButton" text="Action" icon={icon} variant="action" />
+  <Button id="actionButtonDisabled" text="Action Disabled" icon={icon} variant="action" isDisabled />
+</div>;
+
+const UtilityButton = () => <div id="utility" style={{ padding: '5px' }}>
+  <Button id="utilityButton" text="Utility" icon={icon} variant="utility" />
+  <Button id="utilityButtonDisabled" text="Utility Disabled" icon={icon} variant="utility" isDisabled />
 </div>;
 
 export {
-  DefaultButton,
-  PrimaryButton,
-  SecondaryButton,
-  LinkButton,
+  NeutralButton,
+  EmphasisButton,
+  DeemphasisButton,
+  ActionButton,
+  UtilityButton,
 };

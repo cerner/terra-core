@@ -9,7 +9,7 @@ const ButtonIcon = () => (
   <div>
     <Button icon={Icon} text="icon" style={buttonStyle} />
     <Button icon={Icon} text="icon" isReversed style={buttonStyle} />
-    <Button icon={Icon} style={buttonStyle} />
+    <Button icon={Icon} isIconOnly text="isIconOnly" style={buttonStyle} />
   </div>
 );
 
