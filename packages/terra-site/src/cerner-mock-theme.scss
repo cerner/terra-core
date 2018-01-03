@@ -19,6 +19,105 @@
   --terra-badge-background-color-info: #bdc3c7;
   --terra-badge-color-info: #333;
 
+  // terra-button
+  --terra-button-border-radius: 0.5rem;
+  --terra-button-line-height: normal;
+  --terra-button-vertical-padding: 0.7rem;
+  --terra-button-disabled-opacity: 0.7;
+  --terra-button-action-border-radius: 0.8rem;
+  --terra-button-utility-border-radius: 50%;
+  --terra-button-icon-height: 1rem;
+  --terra-button-icon-width: 1rem;
+  --terra-button-icon-only-horizontal-margin: 0.9rem;
+  --terra-button-text-only-horizontal-margin: 1.1rem;
+  --terra-button-text-and-icon-horizontal-margin: 0.4rem;
+  --terra-button-text-and-icon-margin-between: 0.4rem;
+
+  --terra-button-active-and-focus-background-color-neutral: #008b8b;
+  --terra-button-active-and-focus-border-color-neutral: #fff;
+  --terra-button-active-and-focus-box-shadow-neutral: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #008b8b;
+  --terra-button-active-background-color-neutral: #008b8b;
+  --terra-button-active-border-color-neutral: #4a90e2;
+  --terra-button-active-color-neutral: rgba(0, 0, 0, 0.8);
+  --terra-button-background-color-neutral: #bc6577;
+  --terra-button-border-color-neutral: #8bc2f9;
+  --terra-button-box-shadow-neutral: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-color-neutral: rgba(0, 0, 0, 0.7);
+  --terra-button-focus-background-color-neutral: #fff;
+  --terra-button-focus-border-color-neutral: #ff8c00;
+  --terra-button-focus-box-shadow-neutral: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #8bc2f9;
+  --terra-button-font-weight-neutral: normal;
+  --terra-button-hover-background-color-neutral: rgba(202, 218, 255, 0.5);
+  --terra-button-hover-color-neutral: rgba(0, 0, 0, 0.8);
+
+  --terra-button-active-and-focus-background-color-emphasis: #ae68b7;
+  --terra-button-active-and-focus-border-color-emphasis: #fff;
+  --terra-button-active-and-focus-box-shadow-emphasis: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #4a90e2;
+  --terra-button-active-background-color-emphasis: #8bc2f9;
+  --terra-button-active-border-color-emphasis: #4a90e2;
+  --terra-button-active-color-emphasis: rgba(0, 0, 0, 0.8);
+  --terra-button-background-color-emphasis: #fff;
+  --terra-button-border-color-emphasis: #4a90e2;
+  --terra-button-box-shadow-emphasis: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-color-emphasis: rgba(0, 0, 0, 0.7);
+  --terra-button-focus-background-color-emphasis: #fff;
+  --terra-button-focus-border-color-emphasis: #65b569;
+  --terra-button-focus-box-shadow-emphasis: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 3px #ae68b7;
+  --terra-button-font-weight-emphasis: 500;
+  --terra-button-hover-background-color-emphasis: rgba(202, 218, 255, 0.5);
+  --terra-button-hover-color-emphasis: #e2fbff;
+
+  --terra-button-active-and-focus-background-color-de-emphasis: #e6e2ff;
+  --terra-button-active-and-focus-border-color-de-emphasis: #fff;
+  --terra-button-active-and-focus-box-shadow-de-emphasis: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #4a90e2;
+  --terra-button-active-background-color-de-emphasis: #8bc2f9;
+  --terra-button-active-border-color-de-emphasis: #4a90e2;
+  --terra-button-active-color-de-emphasis: rgba(0, 0, 0, 0.8);
+  --terra-button-background-color-de-emphasis: #a49fc4;
+  --terra-button-border-color-de-emphasis: #8bc2f9;
+  --terra-button-box-shadow-de-emphasis: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-color-de-emphasis: #e6e2ff;
+  --terra-button-focus-background-color-de-emphasis: #4333a5;
+  --terra-button-focus-border-color-de-emphasis: rgba(255, 255, 255, 0.4);
+  --terra-button-focus-box-shadow-de-emphasis: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 #8bc2f9;
+  --terra-button-font-weight-de-emphasis: normal;
+  --terra-button-hover-background-color-de-emphasis: rgba(202, 218, 255, 0.5);
+  --terra-button-hover-color-de-emphasis: rgba(0, 0, 0, 0.8);
+
+  --terra-button-active-and-focus-background-color-action: #e2cc3d;
+  --terra-button-active-and-focus-border-color-action: #fff;
+  --terra-button-active-and-focus-box-shadow-action: 0 3px 3px 0 #423537, 0 0 0 2px #ed7684;
+  --terra-button-active-background-color-action: #8bc2f9;
+  --terra-button-active-border-color-action: #4a90e2;
+  --terra-button-active-color-action: rgba(0, 0, 0, 0.8);
+  --terra-button-background-color-action: #ed7684;
+  --terra-button-border-color-action: #8bc2f9;
+  --terra-button-box-shadow-action: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-color-action: rgba(0, 0, 0, 0.7);
+  --terra-button-focus-background-color-action: #a00686;
+  --terra-button-focus-border-color-action: #4a90e2;
+  --terra-button-focus-box-shadow-action: 0 3px 3px 0 #423537, 0 0 0 1px #8bc2f9;
+  --terra-button-font-weight-action: normal;
+  --terra-button-hover-background-color-action: rgba(202, 218, 255, 0.5);
+  --terra-button-hover-color-action: rgba(0, 0, 0, 0.8);
+
+  --terra-button-active-and-focus-background-color-utility: rgba(136, 168, 239, 0.5);
+  --terra-button-active-and-focus-border-color-utility: #c270f9;
+  --terra-button-active-and-focus-box-shadow-utility: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-active-background-color-utility: transparent;
+  --terra-button-active-border-color-utility: #c270f9;
+  --terra-button-active-color-utility: #1c1f21;
+  --terra-button-background-color-utility: #6206a0;
+  --terra-button-border-color-utility: transparent;
+  --terra-button-box-shadow-utility: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-color-utility: #d2f970;
+  --terra-button-focus-background-color-utility: #db973f;
+  --terra-button-focus-border-color-utility: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-focus-box-shadow-utility: none;
+  --terra-button-font-weight-utility: normal;
+  --terra-button-hover-background-color-utility: transparent;
+  --terra-button-hover-color-utility: #d2f970;
+
   // terra-form-checkbox
   --terra-form-checkbox-font-color: rgb(255, 192, 203);
   --terra-form-checkbox-container-margin-left: 0.643rem;
@@ -321,7 +420,7 @@
   }
 
   // Terra Time Input
-  --terra-time-input-background: #f1A8ff;
+  --terra-time-input-background: #f1a8ff;
   --terra-time-input-animation-background: linear-gradient(to bottom, #ff8fab, #ff8fab);
   --terra-time-input-background-start: 0 4px;
   --terra-time-input-border-color: #ff1fd4;
