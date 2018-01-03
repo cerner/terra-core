@@ -56,7 +56,7 @@ const propTypes = {
     * Function to trigger when user clicks on the checkbox. Provide a function to create a controlled input.
     */
   onChange: PropTypes.func,
-    /**
+  /**
    *  Function to trigger when user focuses on the checkbox.
    */
   onFocus: PropTypes.func,
@@ -83,131 +83,88 @@ const defaultProps = {
   value: undefined,
 };
 
-class Checkbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { focus: false };
-    this.onFocus = this.onFocus.bind(this);
-    this.onBlur = this.onBlur.bind(this);
+const Checkbox = ({
+    checked,
+    defaultChecked,
+    inputAttrs,
+    id,
+    isDisabled,
+    isInline,
+    isLabelHidden,
+    labelText,
+    labelTextAttrs,
+    name,
+    onBlur,
+    onChange,
+    onFocus,
+    value,
+    ...customProps
+  }) => {
+  const controlInputAttrs = Object.assign({}, inputAttrs);
+
+  if (checked !== undefined) {
+    controlInputAttrs.checked = checked;
+  } else {
+    controlInputAttrs.defaultChecked = defaultChecked;
   }
 
-  onFocus() {
-    this.setState({ focus: true });
-    if (this.props.onFocus) {
-      this.props.onFocus();
-    }
+  const checkboxClasses = cx([
+    'checkbox',
+    { 'is-inline': isInline },
+    customProps.className,
+  ]);
+
+  const selectContainer = cx([
+    'select-container',
+  ]);
+
+  const labelClasses = cx([
+    'label',
+    { 'is-disabled': isDisabled },
+    labelTextAttrs.className,
+  ]);
+
+  const inputClasses = cx([
+    'native-input',
+    inputAttrs.className,
+  ]);
+
+  const labelTextClasses = cx([
+    'label-text',
+    { 'is-hidden': isLabelHidden },
+    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
+  ]);
+
+  let labelTextContainer = null;
+  if (isLabelHidden) {
+    controlInputAttrs['aria-label'] = labelText;
+    labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses} />;
+  } else {
+    labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>;
   }
 
-  onBlur() {
-    this.setState({ focus: false });
-    if (this.props.onBlur) {
-      this.props.onBlur();
-    }
-  }
-
-  render() {
-    const {
-      checked,
-      defaultChecked,
-      inputAttrs,
-      id,
-      isDisabled,
-      isInline,
-      isLabelHidden,
-      labelText,
-      labelTextAttrs,
-      name,
-      onBlur,
-      onChange,
-      onFocus,
-      value,
-      ...customProps
-    } = this.props;
-
-    const controlInputAttrs = Object.assign({}, inputAttrs);
-
-    if (checked !== undefined) {
-      controlInputAttrs.checked = checked;
-    } else {
-      controlInputAttrs.defaultChecked = defaultChecked;
-    }
-
-    const checkboxClasses = cx([
-      'checkbox',
-      { 'checkbox-inline': isInline },
-      customProps.className,
-    ]);
-
-    const focusContainer = cx([
-      { 'is-hidden-focus-container': isLabelHidden },
-      { 'is-mobile-is-hidden-focus-container': isLabelHidden && CheckboxUtil.isConsideredMobileDevice() },
-      { 'focus-container': !isLabelHidden },
-      { 'is-mobile-focus-container': !isLabelHidden && CheckboxUtil.isConsideredMobileDevice() },
-      { focus: this.state.focus },
-    ]);
-
-    const labelClasses = cx([
-      'label',
-      { 'is-disabled': isDisabled },
-      labelTextAttrs.className,
-    ]);
-
-    const inputClasses = cx([
-      'native-input',
-      inputAttrs.className,
-    ]);
-
-    const labelTextClasses = cx([
-      'label-text',
-      { 'is-hidden': isLabelHidden },
-      { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
-    ]);
-
-    let labelTextContainer = null;
-    let inputContainer = null;
-    if (isLabelHidden) {
-      inputContainer = (<input
-        {...controlInputAttrs}
-        aria-label={labelText}
-        type="checkbox"
-        id={id}
-        disabled={isDisabled}
-        name={name}
-        value={value}
-        onChange={onChange}
-        onFocus={this.onFocus}
-        onBlur={this.onBlur}
-        className={inputClasses}
-      />);
-      labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses} />;
-    } else {
-      inputContainer = (<input
-        {...controlInputAttrs}
-        type="checkbox"
-        id={id}
-        disabled={isDisabled}
-        name={name}
-        value={value}
-        onChange={onChange}
-        onFocus={this.onFocus}
-        onBlur={this.onBlur}
-        className={inputClasses}
-      />);
-      labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>;
-    }
-
-    return (
-      <div className={checkboxClasses}>
-        <div className={focusContainer}>
-          <label htmlFor={id} className={labelClasses}>
-            {inputContainer}
-            {labelTextContainer}
-          </label>
-        </div>
+  return (
+    <div className={checkboxClasses}>
+      <div className={selectContainer}>
+        <label htmlFor={id} className={labelClasses}>
+          <input
+            {...controlInputAttrs}
+            type="checkbox"
+            id={id}
+            disabled={isDisabled}
+            name={name}
+            value={value}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            className={inputClasses}
+          />
+          {labelTextContainer}
+        </label>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;
