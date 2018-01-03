@@ -130,6 +130,11 @@
       }
     }
 
+    /* Change outer ring to be resized */
+    // .native-input + .is-mobile {
+
+    // }
+
     /* Hide label if isLabelHidden true */
     .is-hidden {
       cursor: default;
@@ -138,6 +143,20 @@
       width: 1.25rem;
     }
     /*stylelint-disable max-nesting-depth*/
+    .label:hover {
+      .label-text::before {
+        border-color: var(--terra-form-radio-hover-border-color, none);
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-form-radio-hover-shadow-rtl, none);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-form-radio-hover-shadow-ltr, none);
+        }
+      }
+    }
+
     /* Disabled native radio, label text, and custom radio styling */
     .is-disabled {
       cursor: default;
@@ -163,6 +182,18 @@
           border-color: var(--terra-form-radio-inner-ring-disabled-border-color, none);
         }
       }
+
+      &:hover > .label-text::before {
+        border-color: var(--terra-form-radio-disabled-hover-border-color, none);
+
+        [dir=rtl] & {
+          box-shadow: var(--terra-form-radio-disabled-hover-box-shadow-rtl, none);
+        }
+
+        [dir=ltr] & {
+          box-shadow: var(--terra-form-radio-disabled-hover-box-shadow-ltr, none);
+        }
+      }
     }
     /* stylelint-enable max-nesting-depth */
 
@@ -178,18 +209,18 @@
     }
   }
 
-  /* Focus style surrounding both custom radio and label focus. */
-  .focus {
-    border-radius: var(--terra-form-radio-container-focus-border-radius, 3px);
-
-    [dir=rtl] & {
-      box-shadow: var(--terra-form-radio-container-focus-box-shadow-rtl, none);
+    /* Focus ring surrounding the checkbox */
+    .native-input:focus ~ .label-text::before {
+      background-color: var(--terra-form-radio-focus-ring-background-color, none);
+      border-radius: 50%;
+      content: '';
+      height: var(--terra-form-radio-focus-ring-height, none);
+      left: var(--terra-form-radio-focus-ring-left, none);
+      position: absolute;
+      top: var(--terra-form-radio-focus-ring-top, none);
+      width: var(--terra-form-radio-focus-ring-width, none);
+      z-index: -1;
     }
-
-    [dir=ltr] & {
-      box-shadow: var(--terra-form-radio-container-focus-box-shadow-ltr, none);
-    }
-  }
 
   .radio-inline {
     display: inline-block;

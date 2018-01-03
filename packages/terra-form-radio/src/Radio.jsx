@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './ConsumerRadio.scss';
+import styles from './ClinicalRadio.scss';
+import RadioUtil from './RadioUtil';
 
 const cx = classNames.bind(styles);
 
@@ -82,141 +83,93 @@ const defaultProps = {
   value: undefined,
 };
 
-class Radio extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { focus: false };
-    this.onFocus = this.onFocus.bind(this);
-    this.onBlur = this.onBlur.bind(this);
+const Radio = ({
+    checked,
+    defaultChecked,
+    inputAttrs,
+    id,
+    isDisabled,
+    isInline,
+    isLabelHidden,
+    labelText,
+    labelTextAttrs,
+    name,
+    onBlur,
+    onChange,
+    onFocus,
+    value,
+    ...customProps
+  }) => {
+  const controlInputAttrs = Object.assign({}, inputAttrs);
+
+  if (checked !== undefined) {
+    controlInputAttrs.checked = checked;
+  } else {
+    controlInputAttrs.defaultChecked = defaultChecked;
   }
 
-  onFocus() {
-    this.setState({ focus: true });
-    if (this.props.onFocus) {
-      this.props.onFocus();
-    }
+  const radioClasses = cx([
+    'radio',
+    { 'radio-inline': isInline },
+    customProps.className,
+  ]);
+
+  const labelClasses = cx([
+    'label',
+    { 'is-disabled': isDisabled },
+    { 'is-hidden': isLabelHidden },
+    labelTextAttrs.className,
+  ]);
+
+  const inputClasses = cx([
+    'native-input',
+    inputAttrs.className,
+  ]);
+
+  const labelTextClasses = cx([
+    'label-text',
+    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
+  ]);
+
+  const outerRingClasses = cx([
+    'outer-ring',
+  ]);
+
+  const innerRingClasses = cx([
+    'inner-ring',
+  ]);
+
+  let labelTextContainer = null;
+  if (isLabelHidden) {
+    controlInputAttrs['aria-label'] = labelText;
+    labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses} />;
+  } else {
+    labelTextContainer = <span {...labelTextAttrs} className={labelTextClasses}>{labelText}</span>;
   }
 
-  onBlur() {
-    this.setState({ focus: false });
-    if (this.props.onBlur) {
-      this.props.onBlur();
-    }
-  }
-
-  render() {
-    const {
-      checked,
-      defaultChecked,
-      inputAttrs,
-      id,
-      isDisabled,
-      isInline,
-      isLabelHidden,
-      labelText,
-      labelTextAttrs,
-      name,
-      onBlur,
-      onChange,
-      onFocus,
-      value,
-      ...customProps
-    } = this.props;
-
-    const controlInputAttrs = Object.assign({}, inputAttrs);
-
-    if (checked !== undefined) {
-      controlInputAttrs.checked = checked;
-    } else {
-      controlInputAttrs.defaultChecked = defaultChecked;
-    }
-
-    const radioClasses = cx([
-      'radio',
-      { 'radio-inline': isInline },
-      customProps.className,
-    ]);
-
-    const focusContainer = cx([
-      { 'is-hidden-focus-container': isLabelHidden },
-      { 'focus-container': isLabelHidden === false },
-      { focus: this.state.focus },
-    ]);
-
-    const labelClasses = cx([
-      'label',
-      { 'is-disabled': isDisabled },
-      { 'is-hidden': isLabelHidden },
-      labelTextAttrs.className,
-    ]);
-
-    const inputClasses = cx([
-      'native-input',
-      inputAttrs.className,
-    ]);
-
-    const labelTextClasses = cx([
-      'label-text',
-    ]);
-
-    const outerRingClasses = cx([
-      'outer-ring',
-    ]);
-
-    const innerRingClasses = cx([
-      'inner-ring',
-    ]);
-
-    let inputContainer = null;
-    let customRadioContainer = null;
-    let labelTextContainer = null;
-    if (isLabelHidden) {
-      inputContainer = (<input
-        {...controlInputAttrs}
-        aria-label={labelText}
-        type="radio"
-        id={id}
-        disabled={isDisabled}
-        name={name}
-        value={value}
-        onChange={onChange}
-        onFocus={this.onFocus}
-        onBlur={this.onBlur}
-        className={inputClasses}
-      />);
-      // customRadioContainer = (<span {...labelTextAttrs} className={outerRingClasses}>
-      //   <span className={innerRingClasses} /></span>);
-    } else {
-      inputContainer = (<input
-        {...controlInputAttrs}
-        type="radio"
-        id={id}
-        disabled={isDisabled}
-        name={name}
-        value={value}
-        onChange={onChange}
-        onFocus={this.onFocus}
-        onBlur={this.onBlur}
-        className={inputClasses}
-      />);
-      labelTextContainer = <span className={labelTextClasses}>{labelText}</span>;
-    }
-    customRadioContainer = (<span {...labelTextAttrs} className={outerRingClasses}>
-      <span className={innerRingClasses} /></span>);
-
-    return (
-      <div className={radioClasses}>
-        <div className={focusContainer}>
-          <label htmlFor={id} className={labelClasses}>
-            {inputContainer}
-            {customRadioContainer}
-            {labelTextContainer}
-          </label>
-        </div>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={radioClasses}>
+      <label htmlFor={id} className={labelClasses}>
+        <input
+          {...controlInputAttrs}
+          type="radio"
+          id={id}
+          disabled={isDisabled}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          className={inputClasses}
+        />
+        <span className={outerRingClasses}>
+          <span className={innerRingClasses} />
+        </span>
+        {labelTextContainer}
+      </label>
+    </div>
+  );
+};
 
 Radio.propTypes = propTypes;
 Radio.defaultProps = defaultProps;
