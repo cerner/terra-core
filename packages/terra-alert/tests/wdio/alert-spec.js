@@ -1,16 +1,11 @@
 /* global browser, Terra */
 const viewports = Terra.viewports('tiny', 'large');
 
-// TODO: Remove this once https://github.com/cerner/terra-core/issues/1057 addressed
-const ignoreContrast = {
-  'color-contrast': { enabled: false },
-};
-
 describe('Alert', () => {
   describe('Default', () => {
     beforeEach(() => browser.url('/#/tests/alert-tests/default'));
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreContrast });
+    Terra.should.beAccessible({ viewports });
     Terra.should.themeEachCustomProperty({
       '--terra-alert-icon-font-size': '50px',
     });
@@ -19,13 +14,13 @@ describe('Alert', () => {
   describe('Types', () => {
     beforeEach(() => browser.url('/#/tests/alert-tests/type'));
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreContrast });
+    Terra.should.beAccessible({ viewports });
   });
 
   describe('Titles', () => {
     beforeEach(() => browser.url('/#/tests/alert-tests/title'));
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports, rules: ignoreContrast });
+    Terra.should.beAccessible({ viewports });
     Terra.should.themeEachCustomProperty({
       '--terra-alert-alert-background-color': 'purple',
       '--terra-alert-error-background-color': 'purple',
@@ -65,7 +60,7 @@ describe('Alert', () => {
       });
 
       Terra.should.matchScreenshot();
-      Terra.should.beAccessible({ rules: ignoreContrast });
+      Terra.should.beAccessible();
 
       it('should be register actions', () => {
         expect(browser.getText('#actionButtonClickCount')).to.equal('0');

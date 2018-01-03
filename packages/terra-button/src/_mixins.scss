@@ -1,77 +1,35 @@
-// Mixins
+//  Map Button Variant's Color Schemes
 // ==========================
 
-@mixin terra-button-color($color-map) {
+@mixin terra-button-variant-color($color-map) {
   background-color: map-get($color-map, background-color);
   border-color: map-get($color-map, border-color);
+  box-shadow: map-get($color-map, box-shadow);
   color: map-get($color-map, color);
+  font-weight: map-get($color-map, font-weight);
 
-  &:focus,
-  &:hover,
-  &.is-hovered {
+  &.is-focused {
+    background-color: map-get($color-map, focus-background-color);
+    border-color: map-get($color-map, focus-border-color);
+    box-shadow: map-get($color-map, focus-box-shadow);
+  }
+
+  &:hover {
     background-color: map-get($color-map, hover-background-color);
     color: map-get($color-map, hover-color);
   }
 
-  &:active,
-  &.is-active {
+  &.is-active,
+  &:active {
     background-color: map-get($color-map, active-background-color);
     border-color: map-get($color-map, active-border-color);
     color: map-get($color-map, active-color);
   }
 
-  &:disabled,
-  &.is-disabled {
-    background-color: map-get($color-map, disabled-background-color);
-    border-color: map-get($color-map, disabled-border-color);
-    color: map-get($color-map, disabled-color);
-  }
-}
-
-@mixin terra-button-secondary($color-map) {
-  background-color: transparent;
-  border-color: map-get($color-map, border-color);
-  border-width: 1px;
-  color: map-get($color-map, color);
-
-  &:focus,
-  &:hover,
-  &.is-hovered {
-    background-color: map-get($color-map, hover-background-color);
-    color: map-get($color-map, hover-color);
-  }
-
-  &:active,
-  &.is-active {
-    background-color: map-get($color-map, active-background-color);
-    border-color: map-get($color-map, active-border-color);
-    color: map-get($color-map, active-color);
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: transparent;
-    border-color: map-get($color-map, disabled-border-color);
-    color: map-get($color-map, disabled-color);
-  }
-}
-
-@mixin terra-button-link($color-map) {
-  background-color: transparent;
-  border-color: transparent;
-  color: map-get($color-map, color);
-
-  &:focus,
-  &:hover,
-  &.is-hovered,
-  &:active,
-  &.is-active {
-    color: map-get($color-map, active-color);
-    text-decoration: underline;
-  }
-
-  &:disabled,
-  &.is-disabled {
-    color: map-get($color-map, disabled-color);
+  &.is-active.is-focused,
+  &:active.is-focused {
+    background-color: map-get($color-map, active-and-focus-background-color);
+    border-color: map-get($color-map, active-and-focus-border-color);
+    box-shadow: map-get($color-map, active-and-focus-box-shadow);
   }
 }
