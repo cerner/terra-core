@@ -5,14 +5,32 @@ exports[`should render a default component 1`] = `
   className="content-container"
 >
   <div
-    className="header"
-  />
+    className="main"
+  >
+    <div
+      className="normalizer"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a footer 1`] = `
+<div
+  className="content-container"
+>
   <div
     className="main"
   >
     <div
       className="normalizer"
     />
+  </div>
+  <div
+    className="footer"
+  >
+    <p>
+      Footer
+    </p>
   </div>
 </div>
 `;
@@ -43,9 +61,6 @@ exports[`should render as fill 1`] = `
   className="content-container fill"
 >
   <div
-    className="header"
-  />
-  <div
     className="main"
   >
     <div
@@ -60,9 +75,6 @@ exports[`should render content 1`] = `
   className="content-container"
 >
   <div
-    className="header"
-  />
-  <div
     className="main"
   >
     <div
@@ -72,6 +84,34 @@ exports[`should render content 1`] = `
         test content
       </p>
     </div>
+  </div>
+</div>
+`;
+
+exports[`should render header & footer 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="header"
+  >
+    <p>
+      Header
+    </p>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="normalizer"
+    />
+  </div>
+  <div
+    className="footer"
+  >
+    <p>
+      Footer
+    </p>
   </div>
 </div>
 `;

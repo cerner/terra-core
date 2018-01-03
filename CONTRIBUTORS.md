@@ -19,6 +19,7 @@ Cerner Corporation
 - Nikhil Agrawal [@nagrawal3]
 - Emily Rohrbough [@emilyrohrbough]
 - Rory Hardy [@gneatgeek]
+- Jake LaCombe [@JakeLaCombe]
 - Neil Pfeiffer [@neilpfeiffer]
 - David Schoonover [@dkschoonover]
 - Christian Alten [@cwalten]
@@ -28,6 +29,7 @@ Cerner Corporation
 - Madeline Gilbert [@madelineisabelle]
 - Michael Hemesath [@mhemesath]
 - Umesh Shimpi [@us044466]
+- Billy Rhoades [@brhoades]
 - Rishi Asthana [@rasthana]
 - Wei Hou [@kafkahw]
 - Ryan Perrin [@saedar]
@@ -43,6 +45,7 @@ Cerner Corporation
 - Victor Nava [@vikonava]
 - Chase Sinclair [@ChaseSinclair]
 - Gerard Isdell [@gerard-isdell]
+- Noah Benham [@noahbenham]
 - Andy Nelson [@anelson425]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -90,4 +93,5 @@ Cerner Corporation
 [@vikonava]: https://github.com/vikonava
 [@ChaseSinclair]: https://github.com/ChaseSinclair
 [@gerard-isdell]: https://github.com/gerard-isdell
+[@noahbenham]: https://github.com/noahbenham
 [@anelson425]: https://github.com/anelson425
