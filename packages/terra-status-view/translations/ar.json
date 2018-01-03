@@ -1,7 +1,7 @@
 {
-  "Terra.status-view.no-data": "No Results",
-  "Terra.status-view.no-matching-results": "No Matching Results",
-  "Terra.status-view.not-authorized": "Not Authorized",
-  "Terra.status-view.error": "Error",
-  "Terra.status-view.no-service": "Not Connected"
+  "Terra.status-view.no-data": "لا نتائج",
+  "Terra.status-view.no-matching-results": "لا يوجد نتائج مطابقة",
+  "Terra.status-view.not-authorized": "غير مخول",
+  "Terra.status-view.error": "خطأ",
+  "Terra.status-view.no-service": "غير متصل"
 }

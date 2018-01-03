@@ -1,7 +1,7 @@
 {
-  "Terra.status-view.no-data": "No Results",
-  "Terra.status-view.no-matching-results": "No Matching Results",
-  "Terra.status-view.not-authorized": "Not Authorized",
-  "Terra.status-view.error": "Error",
-  "Terra.status-view.no-service": "Not Connected"
+  "Terra.status-view.no-data": "Sem resultados",
+  "Terra.status-view.no-matching-results": "Não há resultados correspondentes",
+  "Terra.status-view.not-authorized": "Não autorizado",
+  "Terra.status-view.error": "Erro",
+  "Terra.status-view.no-service": "Não conectado"
 }
