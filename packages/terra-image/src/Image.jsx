@@ -24,6 +24,10 @@ const propTypes = {
    */
   alt: PropTypes.string.isRequired,
   /**
+   * An image which will be displayed during loading and in case of src load failure
+   */
+  placeholder: PropTypes.string,
+  /**
    * Sets the height of the image.
    */
   height: PropTypes.string,
@@ -47,36 +51,106 @@ const defaultProps = {
   alt: ' ',
 };
 
-const Image = ({
-  src,
-  variant,
-  isFluid,
-  alt,
-  height,
-  width,
-  onLoad,
-  onError,
-  ...customProps
-}) => {
-  const classes = cx([
-    'image',
-    variant,
-    { fluid: isFluid },
-    customProps.className,
-  ]);
+class Image extends React.Component {
 
-  return (
-    <img
-      src={src}
-      alt={alt}
-      height={height}
-      width={width}
-      onLoad={onLoad}
-      onError={onError}
-      {...customProps}
-      className={classes}
-    />);
-};
+  constructor(props) {
+    super(props);
+
+    this.state = { isLoading: true, isError: false };
+    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+
+    this.classes = cx([
+      'image',
+      variant,
+      customProps.className,
+      { fluid: isFluid },
+    ]);
+
+    this.handleOnLoad = this.handleOnLoad.bind(this);
+    this.handleOnError = this.handleOnError.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    // If a new image is being loaded, reset the state to loading
+    if (newProps.src !== this.props.src) {
+      this.setState({ isLoading: true, isError: false });
+    }
+  }
+
+  handleOnLoad() {
+    this.setState({ isLoading: false });
+    const onLoad = this.props.onLoad;
+    if (onLoad !== undefined) {
+      onLoad();
+    }
+  }
+
+  handleOnError() {
+    this.setState({ isLoading: false, isError: true });
+    const onError = this.props.onError;
+    if (onError !== undefined) {
+      onError();
+    }
+  }
+
+  createPlaceholderImage(customProps) {
+    const { placeholder, alt, height, width } = this.props;
+    return (
+      <img
+        src={placeholder}
+        alt={alt}
+        height={height}
+        width={width}
+        className={this.classes}
+        {...customProps}
+      />
+    );
+  }
+
+  createImage(customProps) {
+    const { src, alt, height, width } = this.props;
+    return (
+      <img
+        src={src}
+        alt={alt}
+        height={height}
+        width={width}
+        onLoad={this.handleOnLoad}
+        onError={this.handleOnError}
+        className={this.classes}
+        {...customProps}
+      />
+    );
+  }
+
+  render() {
+    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+    delete customProps.className;
+
+    if (placeholder) {
+      if (this.state.isLoading) {
+        return (
+          <div>
+            <div className={styles.hidden}>{this.createImage(customProps)}</div>
+            <div>{this.createPlaceholderImage(customProps)}</div>
+          </div>
+        );
+      }
+
+      return (
+        <div>
+          <div>{this.state.isError ? this.createPlaceholderImage(customProps) : this.createImage(customProps)}</div>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <div>{this.createImage(customProps)}</div>
+      </div>
+    );
+  }
+}
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;

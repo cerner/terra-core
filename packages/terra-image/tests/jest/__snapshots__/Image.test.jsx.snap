@@ -19,18 +19,83 @@ exports[`should render a circle image component with fluid behavior 1`] = `
 </div>
 `;
 
+exports[`should render a hidden src image and a visible placeholder image 1`] = `
+<div>
+  <div
+    className="hidden"
+  >
+    <img
+      alt=" "
+      className="image default"
+      height="75"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="profile.jpg"
+      width="75"
+    />
+  </div>
+  <div>
+    <img
+      alt=" "
+      className="image default"
+      height="75"
+      src="noImage.jpg"
+      width="75"
+    />
+  </div>
+</div>
+`;
+
 exports[`should render a thumbail image component with fluid behavior 1`] = `
-<img
-  alt="thumbnail image"
-  class="image thumbnail fluid"
-  src=""
-/>
+<div>
+  <div>
+    <img
+      alt="thumbnail image"
+      class="image thumbnail fluid"
+      src=""
+    />
+  </div>
+</div>
 `;
 
 exports[`should render a thumbail image component with non-fluid behavior 1`] = `
-<img
-  alt="thumbnail image"
-  class="image thumbnail"
-  src=""
-/>
+<div>
+  <div>
+    <img
+      alt="thumbnail image"
+      class="image thumbnail"
+      src=""
+    />
+  </div>
+</div>
+`;
+
+exports[`should render the placeholder image 1`] = `
+<div>
+  <div>
+    <img
+      alt="avatar"
+      className="image default"
+      height="75"
+      src="noImage.jpg"
+      width="75"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render the src image 1`] = `
+<div>
+  <div>
+    <img
+      alt="profile"
+      className="image default"
+      height="75"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="profile.jpg"
+      width="75"
+    />
+  </div>
+</div>
 `;
