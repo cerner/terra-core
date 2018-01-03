@@ -3,108 +3,261 @@
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
-  className="button default TestClass"
+  aria-label={null}
+  className="button neutral TestClass"
   data-mock="data"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   style={
     Object {
       "height": "100px",
     }
   }
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      text
+    </span>
+  </span>
+</button>
 `;
 
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      button
+    </span>
+  </span>
+</button>
 `;
 
 exports[`should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="reset"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      reset
+    </span>
+  </span>
+</button>
 `;
 
 exports[`should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="submit"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      submit
+    </span>
+  </span>
+</button>
 `;
 
-exports[`should render a default button 1`] = `
+exports[`should render a de-emphasis button 1`] = `
 <button
   aria-disabled={false}
-  className="button default"
+  aria-label={null}
+  className="button de-emphasis"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      de-emphasis
+    </span>
+  </span>
+</button>
 `;
 
-exports[`should render a link button 1`] = `
+exports[`should render a emphasis button 1`] = `
 <button
   aria-disabled={false}
-  className="button link"
+  aria-label={null}
+  className="button emphasis"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      emphasis
+    </span>
+  </span>
+</button>
 `;
 
-exports[`should render a primary button 1`] = `
+exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
-  className="button primary"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
-/>
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      neutral
+    </span>
+  </span>
+</button>
 `;
 
-exports[`should render a secondary button 1`] = `
+exports[`should render a utility button 1`] = `
 <button
   aria-disabled={false}
-  className="button secondary"
+  aria-label="utility"
+  className="button utility"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
-/>
+>
+  <span
+    className="icon-only text-only"
+  />
+</button>
+`;
+
+exports[`should render an action button 1`] = `
+<button
+  aria-disabled={false}
+  aria-label={null}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  type="button"
+>
+  <span
+    className="text-only"
+  >
+    <span
+      className=""
+    >
+      action
+    </span>
+  </span>
+</button>
 `;
 
 exports[`should render an icon 1`] = `
 <button
   aria-disabled={false}
-  className="button default tiny"
+  aria-label="isIconOnly"
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
 >
-  <img
-    alt="icon"
-  />
+  <span
+    className="icon-only"
+  >
+    <span
+      className="icon"
+    >
+      <img
+        alt="icon"
+      />
+    </span>
+  </span>
 </button>
 `;
 
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
-  className="button default tiny"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
 >
-  <img
-    alt="icon"
-  />
   <span
-    className="text"
+    className="text-and-icon"
   >
-    text
+    <span
+      className="icon icon-first"
+    >
+      <img
+        alt="icon"
+      />
+    </span>
+    <span
+      className=""
+    >
+      text
+    </span>
   </span>
 </button>
 `;
@@ -112,15 +265,23 @@ exports[`should render an icon and a text 1`] = `
 exports[`should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
-  className="button default"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
   href="MockHref"
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
 >
   <span
-    className="text"
+    className="text-only"
   >
-    href
+    <span
+      className=""
+    >
+      href
+    </span>
   </span>
 </a>
 `;
@@ -128,15 +289,23 @@ exports[`should render as an anchor when provided an href 1`] = `
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
-  className="button default is-disabled"
+  aria-label={null}
+  className="button neutral is-disabled"
   disabled={true}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   tabIndex="-1"
   type="button"
 >
   <span
-    className="text"
+    className="text-only"
   >
-    Disabled
+    <span
+      className=""
+    >
+      Disabled
+    </span>
   </span>
 </button>
 `;
@@ -144,17 +313,29 @@ exports[`should render as disabled when set 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
-  className="button default tiny"
+  aria-label={null}
+  className="button neutral"
   disabled={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
   type="button"
 >
   <span
-    className="text"
+    className="text-and-icon"
   >
-    text
+    <span
+      className="text-first"
+    >
+      text
+    </span>
+    <span
+      className="icon"
+    >
+      <img
+        alt="icon"
+      />
+    </span>
   </span>
-  <img
-    alt="icon"
-  />
 </button>
 `;
