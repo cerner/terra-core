@@ -5,7 +5,7 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="focus-container"
+    className="select-container"
   >
     <label
       className="label healtheintent-label-text"
@@ -14,8 +14,6 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
         className="native-input healtheintent-application"
         disabled={false}
         name="children_present"
-        onBlur={[Function]}
-        onFocus={[Function]}
         type="checkbox"
         value="children_present"
       />
@@ -34,7 +32,7 @@ exports[`should render a checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="focus-container"
+    className="select-container"
   >
     <label
       className="label"
@@ -43,8 +41,6 @@ exports[`should render a checkbox 1`] = `
         className="native-input"
         disabled={false}
         name={null}
-        onBlur={[Function]}
-        onFocus={[Function]}
         type="checkbox"
       />
       <span
@@ -62,7 +58,7 @@ exports[`should render a checkbox with a hidden label 1`] = `
   className="checkbox"
 >
   <div
-    className="is-hidden-focus-container"
+    className="select-container"
   >
     <label
       className="label"
@@ -73,9 +69,7 @@ exports[`should render a checkbox with a hidden label 1`] = `
         className="native-input"
         disabled={false}
         name={null}
-        onBlur={[Function]}
         onChange={[Function]}
-        onFocus={[Function]}
         type="checkbox"
       />
       <span
@@ -91,7 +85,7 @@ exports[`should render a controlled checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="focus-container"
+    className="select-container"
   >
     <label
       className="label"
@@ -101,9 +95,7 @@ exports[`should render a controlled checkbox 1`] = `
         className="native-input"
         disabled={false}
         name={null}
-        onBlur={[Function]}
         onChange={[Function]}
-        onFocus={[Function]}
         type="checkbox"
       />
       <span
@@ -121,7 +113,7 @@ exports[`should render a disabled checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="focus-container"
+    className="select-container"
   >
     <label
       className="label is-disabled"
@@ -131,9 +123,7 @@ exports[`should render a disabled checkbox 1`] = `
         className="native-input"
         disabled={true}
         name={null}
-        onBlur={[Function]}
         onChange={[Function]}
-        onFocus={[Function]}
         type="checkbox"
       />
       <span
@@ -151,7 +141,7 @@ exports[`should render an uncontrolled checkbox 1`] = `
   className="checkbox"
 >
   <div
-    className="focus-container"
+    className="select-container"
   >
     <label
       className="label"
@@ -161,8 +151,6 @@ exports[`should render an uncontrolled checkbox 1`] = `
         defaultChecked={true}
         disabled={false}
         name={null}
-        onBlur={[Function]}
-        onFocus={[Function]}
         type="checkbox"
       />
       <span
