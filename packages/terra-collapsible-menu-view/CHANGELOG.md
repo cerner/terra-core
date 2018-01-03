@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 -----------------
+
+1.8.0 - (January 3, 2018)
+------------------
 ### Changed
 * Added a data attribute to the collapsed menu trigger to make testing easier.
 
