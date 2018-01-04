@@ -15,6 +15,10 @@ const cx = classNames.bind(styles);
 const propTypes = {
   /**
    * Function to trigger when the user changes the select value.
+   * Called with the parameters:
+   *   1) Click event triggering the change
+   *   2) New selected value
+   *   3) Name of the select component
    */
   onChange: PropTypes.func,
 
@@ -172,7 +176,7 @@ class Select extends React.Component {
 
   handleSelection(event, value) {
     if (this.props.onChange && value !== this.state.selectedValue) {
-      this.props.onChange(event, value);
+      this.props.onChange(event, value, this.props.name);
     }
 
     let newValue = null;
