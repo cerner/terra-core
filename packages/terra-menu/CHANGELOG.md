@@ -9,6 +9,9 @@ Unreleased
 ### Changed
 * Divider component from an hr to an li with separator role.
 
+### Fixed
+* Fixed issue with left arrow presses on first layer.
+
 1.11.0 - (January 3, 2018)
 ------------------
 ### Changed
