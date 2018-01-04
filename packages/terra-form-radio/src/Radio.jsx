@@ -27,7 +27,7 @@ const propTypes = {
   /**
     * Whether the radio element is disabled.
     */
-  isDisabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   /**
     * Whether the radio element is inline.
     */
@@ -71,7 +71,7 @@ const defaultProps = {
   defaultChecked: undefined,
   id: undefined,
   inputAttrs: {},
-  isDisabled: false,
+  disabled: false,
   isInline: false,
   isLabelHidden: false,
   labelText: null,
@@ -88,7 +88,7 @@ const Radio = ({
     defaultChecked,
     inputAttrs,
     id,
-    isDisabled,
+    disabled,
     isInline,
     isLabelHidden,
     labelText,
@@ -116,7 +116,7 @@ const Radio = ({
 
   const labelClasses = cx([
     'label',
-    { 'is-disabled': isDisabled },
+    { 'is-disabled': disabled },
     { 'is-hidden': isLabelHidden },
     { 'is-mobile-label': RadioUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
@@ -155,7 +155,7 @@ const Radio = ({
           {...controlInputAttrs}
           type="radio"
           id={id}
-          disabled={isDisabled}
+          disabled={disabled}
           name={name}
           value={value}
           onChange={onChange}

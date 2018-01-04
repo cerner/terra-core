@@ -20,7 +20,7 @@ it('should render a controlled radio', () => {
 });
 
 it('should render a disabled radio', () => {
-  const checkBox = (<Radio checked onChange={() => {}} labelText="Radio" isDisabled />);
+  const checkBox = (<Radio checked onChange={() => {}} labelText="Radio" disabled />);
   const wrapper = shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
