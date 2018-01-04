@@ -32,7 +32,7 @@ class ActionAndDismissibleExample extends React.Component {
     let alertElem = '';
     if (!this.state.isDismissed) {
       alertElem = (
-        <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+        <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={this.handleDismiss} customStatusColor="orange" action={<Button text="Action" size="medium" variant="emphasis" onClick={this.actionFunc} />} >
           {alertText}
         </Alert>
       );
