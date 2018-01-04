@@ -27,7 +27,7 @@ const propTypes = {
   /**
     * Whether the checkbox element is disabled.
     */
-  isDisabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   /**
     * Whether the checkbox element is inline.
     */
@@ -71,7 +71,7 @@ const defaultProps = {
   defaultChecked: undefined,
   id: undefined,
   inputAttrs: {},
-  isDisabled: false,
+  disabled: false,
   isInline: false,
   isLabelHidden: false,
   labelText: null,
@@ -88,7 +88,7 @@ const Checkbox = ({
     defaultChecked,
     inputAttrs,
     id,
-    isDisabled,
+    disabled,
     isInline,
     isLabelHidden,
     labelText,
@@ -120,7 +120,7 @@ const Checkbox = ({
 
   const labelClasses = cx([
     'label',
-    { 'is-disabled': isDisabled },
+    { 'is-disabled': disabled },
     labelTextAttrs.className,
   ]);
 
@@ -151,7 +151,7 @@ const Checkbox = ({
             {...controlInputAttrs}
             type="checkbox"
             id={id}
-            disabled={isDisabled}
+            disabled={disabled}
             name={name}
             value={value}
             onChange={onChange}
