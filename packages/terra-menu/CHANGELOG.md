@@ -9,6 +9,11 @@ Unreleased
 ### Changed
 * Divider component from an hr to an li with separator role.
 
+1.11.0 - (January 3, 2018)
+------------------
+### Changed
+* Minor version bump
+
 1.10.0 - (December 5, 2017)
 ------------------
 ### Changed
