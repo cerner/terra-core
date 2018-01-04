@@ -39,7 +39,7 @@ class SmallContainerExample extends React.Component {
           </code>
         </div>
         <br />
-        <Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="emphasis" onClick={this.actionFunc} />} >
+        <Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
           {alertText}
         </Alert>
         <br />
