@@ -18,6 +18,7 @@ class listExample extends React.Component {
       <div>
         <div id="current-index">
           <h3>Triggered Item: {this.state.selectedIndex}</h3>
+          <p><strong>Note:</strong> Marking an item as selected is an implemention detail of the consumer.</p>
         </div>
         <SelectableList onChange={this.handleSelection}>
           <SelectableList.Item content={<p>test 1</p>} key="123" />
