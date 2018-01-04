@@ -10,7 +10,7 @@ const SpacerExample = () => (
       <Button text="Default" />
     </Spacer>
     <Spacer className="spacerdemoprimary" paddingTop="large+2" paddingBottom="large+2" paddingLeft="large+2" paddingRight="large+2" isInlineBlock >
-      <Button text="Primary" variant="primary" />
+      <Button text="Emphasis" variant="emphasis" />
     </Spacer>
   </div>
 );
