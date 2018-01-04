@@ -116,12 +116,12 @@ exports[`should render a disabled checkbox 1`] = `
     className="select-container"
   >
     <label
-      className="label"
+      className="label is-disabled"
     >
       <input
         checked={true}
         className="native-input"
-        disabled={false}
+        disabled={true}
         name={null}
         onChange={[Function]}
         type="checkbox"
