@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './ClinicalRadio.scss';
+import styles from './ConsumerRadio.scss';
 import RadioUtil from './RadioUtil';
 
 const cx = classNames.bind(styles);
@@ -118,6 +118,7 @@ const Radio = ({
     'label',
     { 'is-disabled': isDisabled },
     { 'is-hidden': isLabelHidden },
+    { 'is-mobile-label': RadioUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -128,11 +129,11 @@ const Radio = ({
 
   const labelTextClasses = cx([
     'label-text',
-    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
   ]);
 
   const outerRingClasses = cx([
     'outer-ring',
+    { 'is-mobile-outer-ring': RadioUtil.isConsideredMobileDevice() },
   ]);
 
   const innerRingClasses = cx([
