@@ -91,9 +91,11 @@ class Menu extends React.Component {
   }
 
   pop() {
-    const newStack = this.state.stack.slice();
-    newStack.pop();
-    this.setState({ stack: newStack });
+    if (this.state.stack.length > 1) {
+      const newStack = this.state.stack.slice();
+      newStack.pop();
+      this.setState({ stack: newStack });
+    }
   }
 
   push(item) {
