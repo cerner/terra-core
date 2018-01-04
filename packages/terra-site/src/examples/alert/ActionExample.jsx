@@ -18,7 +18,7 @@ class ActionExample extends React.Component {
   }
 
   render() {
-    const alertStartTagStr = '<Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >';
+    const alertStartTagStr = '<Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >';
     const alertEndTagStr = '</Alert>';
     const alertText = 'This is a warning. It is configured with a custom Action button.';
     return (
@@ -35,7 +35,7 @@ class ActionExample extends React.Component {
           </code>
         </div>
         <br />
-        <Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+        <Alert type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant="emphasis" onClick={this.actionFunc} />} >
           {alertText}
         </Alert>
         <br />
