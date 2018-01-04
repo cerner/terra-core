@@ -20,7 +20,7 @@ it('should render a controlled checkbox', () => {
 });
 
 it('should render a disabled checkbox', () => {
-  const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" isDisabled />);
+  const checkBox = (<Checkbox checked onChange={() => {}} labelText="Checkbox" disabled />);
   const wrapper = shallow(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
