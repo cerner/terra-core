@@ -2,6 +2,5 @@
   "Terra.status-view.no-data": "Aucun résultat",
   "Terra.status-view.no-matching-results": "Aucun résultat correspondant",
   "Terra.status-view.not-authorized": "Non autorisé",
-  "Terra.status-view.error": "Erreur",
-  "Terra.status-view.no-service": "Non connecté"
+  "Terra.status-view.error": "Erreur"
 }

@@ -213,45 +213,6 @@ exports[`should render an image with a no-matching-results status-view that will
 </StatusView>
 `;
 
-exports[`should render an image with a no-service status-view 1`] = `
-<StatusView
-  isAlignedTop={false}
-  isGlyphHidden={false}
-  variant="no-service"
->
-  <div
-    className="status-view"
-  >
-    <div
-      className="status-view-inner"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
-    >
-      <div
-        className="glyph"
-      >
-        <svg
-          className="no-service"
-        />
-      </div>
-      <div
-        className="message-content-group"
-      >
-        <div
-          className="title"
-        >
-          Not Connected
-        </div>
-      </div>
-    </div>
-  </div>
-</StatusView>
-`;
-
 exports[`should render an image with a not-authorized status-view 1`] = `
 <StatusView
   isAlignedTop={false}

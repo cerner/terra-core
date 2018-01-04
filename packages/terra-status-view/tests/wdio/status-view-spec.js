@@ -119,20 +119,6 @@ describe('StatusView', () => {
     });
   });
 
-  describe('Displays a no-service status view', () => {
-    beforeEach(() => browser.url('/#/tests/status-view-tests/no-service'));
-
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-status-view-padding-bottom': '10px',
-      '--terra-status-view-padding-top': '10px',
-      '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
-      '--terra-status-view-title-font-size': '36px',
-    });
-  });
-
   describe('Displays a custom status view that displays as empty by default', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/custom'));
 

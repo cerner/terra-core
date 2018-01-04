@@ -2,6 +2,5 @@
   "Terra.status-view.no-data": "Ei tuloksia",
   "Terra.status-view.no-matching-results": "Ei vastaavia tuloksia",
   "Terra.status-view.not-authorized": "Ei sallittu",
-  "Terra.status-view.error": "Virhe",
-  "Terra.status-view.no-service": "Ei yhteyttä"
+  "Terra.status-view.error": "Virhe"
 }

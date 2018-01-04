@@ -12,7 +12,6 @@ const variants = {
   NOMATCHINGRESULTS: 'no-matching-results',
   NOTAUTHORIZED: 'not-authorized',
   ERROR: 'error',
-  NOSERVICE: 'no-service',
   CUSTOM: 'custom',
 };
 

@@ -49,13 +49,6 @@ it('should render an image with an error status-view', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render an image with a no-service status-view', () => {
-  const statusView = (<StatusView variant={StatusView.variants.NOSERVICE} />);
-
-  const wrapper = mount(statusView, intlContexts.mountContext);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('should render an image with a custom status-view', () => {
   const statusView = (<StatusView variant={StatusView.variants.CUSTOM} />);
 

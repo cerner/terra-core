@@ -45,7 +45,6 @@ class StatusViewTemplate extends React.Component {
           <option value={StatusView.variants.NOMATCHINGRESULTS}>{StatusView.variants.NOMATCHINGRESULTS}</option>
           <option value={StatusView.variants.NOTAUTHORIZED}>{StatusView.variants.NOTAUTHORIZED}</option>
           <option value={StatusView.variants.ERROR}>{StatusView.variants.ERROR}</option>
-          <option value={StatusView.variants.NOSERVICE}>{StatusView.variants.NOSERVICE}</option>
           <option value={StatusView.variants.CUSTOM}>{StatusView.variants.CUSTOM}</option>
         </select>
       </form>
