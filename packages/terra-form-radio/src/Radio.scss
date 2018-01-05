@@ -8,27 +8,6 @@
     margin-top: var(--terra-form-radio-container-margin-top, 0.625rem);
     position: relative;
 
-    /* Hitbox and container focus style will only surround radio + label, instead of the div block */
-    /* Padding puts space for container focus style */
-    .focus-container {
-      display: inline-block;
-      max-width: 100%;
-      padding-bottom: var(--terra-form-radio-focus-container-padding-bottom, none);
-      padding-left: var(--terra-form-radio-focus-container-padding-left, 0.214rem);
-      padding-right: var(--terra-form-radio-focus-container-padding-right, 0.214rem);
-      padding-top: var(--terra-form-radio-focus-container-padding-top, none);
-      position: relative;
-    }
-
-    .is-hidden-focus-container {
-      display: inline-block;
-      max-width: 100%;
-      padding-bottom: var(--terra-form-radio-is-hidden-focus-container-padding-bottom, 0.017rem);
-      padding-left: var(--terra-form-radio-is-hidden-focus-container-padding-left, 0.214rem);
-      padding-right: var(--terra-form-radio-is-hidden-focus-container-padding-right, none);
-      padding-top: var(--terra-form-radio-is-hidden-focus-container-padding-top, none);
-    }
-
     /* stylelint-disable selector-max-compound-selectors */
     .label {
       cursor: pointer;
