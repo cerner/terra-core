@@ -9,6 +9,9 @@ Unreleased
 ### Changed
 * Added a data attribute to the collapsed menu trigger to make testing easier.
 
+### Removed
+* Removed rule disabling list accessibility tests.
+
 1.7.0 - (December 5, 2017)
 ------------------
 ### Changed
