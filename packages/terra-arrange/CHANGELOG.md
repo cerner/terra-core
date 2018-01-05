@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 
-1.17.0 - (January 3, 2018)
+1.17.0 - (January 5, 2018)
 ------------------
 ### Changed
 * Fixed broken image in arrange example

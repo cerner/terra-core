@@ -3,9 +3,6 @@ Changelog
 
 Unreleased
 ----------
-
-2.0.0 - (January 3, 2018)
-------------------
 ### Added
 * isIconOnly, onBlur, onFocus, onKeyDown, and onKeyUp props
 * `neutral`,  `emphasis`, `de-emphasis`, `utility` and `action` variants
@@ -14,6 +11,7 @@ Unreleased
 * size prop
 * isCompact prop
 * `primary`, `secondary`,  and `link` variants
+* children prop
 
 ### Changed
 * text prop is now required to meet accessibility

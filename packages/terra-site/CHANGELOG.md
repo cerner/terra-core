@@ -6,13 +6,13 @@ Unreleased
 ### Changed
 * Add context to selectable list example
 
-1.21.0 - (January 3, 2018)
+1.21.0 - (January 5, 2018)
 ------------------
 ### Added
 * Added badge mock theme
 
 ### Changed
-* Update button examples to use V2
+* Update site and button examples to use V2
 * Fixed broken image in arrange example
 
 1.20.0 - (December 5, 2017)
