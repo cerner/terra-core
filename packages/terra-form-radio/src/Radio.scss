@@ -87,7 +87,7 @@
         border-color: var(--terra-form-radio-inner-ring-border-color, none);
         border-radius: 50%;
         border-style: var(--terra-form-radio-inner-ring-border-style, none);
-        border-width: var(--terra-form-radiou-inner-border-width, none);
+        border-width: var(--terra-form-radio-inner-border-width, none);
         height: var(--terra-form-radio-inner-ring-height, none);
         left: 50%;
         max-width: 100%;
@@ -140,7 +140,7 @@
 
       .inner-ring {
         height: var(--terra-form-radio-inner-ring-is-mobile-height, none);
-        width: var(--terra-form-radio-inner-ring-is-mobile-height, none);
+        width: var(--terra-form-radio-inner-ring-is-mobile-width, none);
       }
     }
 
@@ -151,7 +151,7 @@
 
       .inner-ring {
         height: var(--terra-form-radio-inner-ring-is-mobile-checked-height, none);
-        width: var(--terra-form-radio-inner-ring-is-mobile-checked-height, none);
+        width: var(--terra-form-radio-inner-ring-is-mobile-checked-width, none);
       }
     }
 
@@ -164,7 +164,7 @@
     }
     /*stylelint-disable max-nesting-depth*/
     .label:hover {
-      .label-text::before {
+      .outer-ring {
         border-color: var(--terra-form-radio-hover-border-color, none);
 
         [dir=rtl] & {
@@ -191,7 +191,7 @@
         opacity: var(--terra-form-radio-disabled-font-opacity, none);
       }
 
-      >.outer-ring {
+      > .outer-ring {
         background-color: var(--terra-form-radio-outer-ring-disabled-background-color, none);
         background-image: var(--terra-form-radio-outer-ring-disabled-background-image, none);
         border-color: var(--terra-form-radio-outer-ring-disabled-border-color, none);
@@ -203,7 +203,7 @@
         }
       }
 
-      &:hover > .label-text::before {
+      &:hover > .outer-ring {
         border-color: var(--terra-form-radio-disabled-hover-border-color, none);
 
         [dir=rtl] & {
@@ -219,6 +219,8 @@
 
     /* Focus custom radio styling */
     .native-input:focus + .outer-ring {
+      border-color: var(--terra-form-radio-focus-box-border-color, none);
+
       [dir=rtl] & {
         box-shadow: var(--terra-form-radio-focus-box-shadow-rtl, none);
       }

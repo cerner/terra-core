@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './ConsumerRadio.scss';
+import styles from './Radio.scss';
 import RadioUtil from './RadioUtil';
 
 const cx = classNames.bind(styles);
