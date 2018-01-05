@@ -3,6 +3,9 @@ ChangeLog
 
 (Unreleased)
 ----------
+### Added
+* increase padding on mobile resize
+
 ### Removed
 * select-container css class
 

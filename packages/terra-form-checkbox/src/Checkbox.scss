@@ -20,6 +20,10 @@
       position: relative;
     }
 
+    .is-mobile-label {
+      padding-left: var(--terra-form-checkbox-is-mobile-padding-left, none);
+    }
+
     /* Native checkbox shown when theme uses browser native styling */
     .native-input {
       clip: var(--terra-form-checkbox-native-input-clip, none);
@@ -89,12 +93,12 @@
       width: var(--terra-form-checkbox-checked-width, none);
     }
 
-    .native-input + .is-mobile::before {
+    .native-input + .is-mobile-checkbox::before {
       height: var(--terra-form-checkbox-is-mobile-height, none);
       width: var(--terra-form-checkbox-is-mobile-width, none);
     }
 
-    .native-input:checked + .is-mobile::before {
+    .native-input:checked + .is-mobile-checkbox::before {
       height: var(--terra-form-checkbox-is-mobile-checked-height, none);
       line-height: var(--terra-form-checkbox-is-mobile-checked-line-height, none);
       width: var(--terra-form-checkbox-is-mobile-checked-width, none);

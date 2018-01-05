@@ -117,6 +117,7 @@ const Checkbox = ({
   const labelClasses = cx([
     'label',
     { 'is-disabled': disabled },
+    { 'is-mobile-label': CheckboxUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -128,7 +129,7 @@ const Checkbox = ({
   const labelTextClasses = cx([
     'label-text',
     { 'is-hidden': isLabelHidden },
-    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
+    { 'is-mobile-checkbox': CheckboxUtil.isConsideredMobileDevice() },
   ]);
 
   let labelTextContainer = null;
