@@ -159,24 +159,29 @@ class MenuItem extends React.Component {
       attributes.className,
     ]);
 
-    const content = <div className={cx(['title'])}>{text}</div>;
+    const textContainer = <div className={cx(['title'])}>{text}</div>;
     const hasChevron = subMenuItems.length > 0;
-
+    let content = textContainer;
     if (hasChevron || isSelectableMenu) {
-      return (
-        <li {...attributes} className={itemClassNames} ref={this.setItemNode}>
-          <Arrange
-            fitStart={isSelectableMenu ? <CheckIcon className={cx(['checkmark'])} /> : null}
-            fill={content}
-            fitEnd={hasChevron ? <ChevronIcon className={cx(['chevron'])} /> : null}
-            align={'center'}
-          />
-        </li>
+      content = (
+        <Arrange
+          fitStart={isSelectableMenu ? <CheckIcon className={cx(['checkmark'])} /> : null}
+          fill={textContainer}
+          fitEnd={hasChevron ? <ChevronIcon className={cx(['chevron'])} /> : null}
+          align={'center'}
+        />
       );
     }
 
+    let role = 'menuitem';
+    if (isGroupItem) {
+      role = 'menuitemradio';
+    } else if (isSelectable) {
+      role = 'menuitemcheckbox';
+    }
+
     return (
-      <li {...attributes} className={itemClassNames} ref={this.setItemNode} >
+      <li {...attributes} className={itemClassNames} ref={this.setItemNode} role={role} >
         {content}
       </li>
     );

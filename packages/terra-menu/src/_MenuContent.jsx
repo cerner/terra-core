@@ -305,7 +305,7 @@ class MenuContent extends React.Component {
         tabIndex="0"
       >
         <ContentContainer header={header} fill={this.props.isHeightBounded || this.props.index > 0}>
-          <List className={cx(['list'])}>
+          <List className={cx(['list'])} role="menu">
             {items}
           </List>
         </ContentContainer>
