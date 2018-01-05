@@ -40,9 +40,9 @@
 | stylelint-order | ^0.7.0 | -- | A collection of order related linting rules for stylelint. |
 | stylelint-scss | ^2.0.0 | -- | A collection of SCSS specific rules for stylelint |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
-| terra-toolkit | ^2.3.0 | ^15.4.2 | Utilities to help when developing terra modules. |
+| terra-toolkit | ^2.4.0 | ^15.4.2 | Utilities to help when developing terra modules. |
 | wdio-mocha-framework | ^0.5.11 | -- | A WebdriverIO plugin. Adapter for Mocha testing framework. |
 | wdio-visual-regression-service | ^0.8.0 | -- | Visual regression testing for WebdriverIO |
-| webdriverio | ^4.9.8 | -- | A Node.js bindings implementation for the W3C WebDriver protocol |
+| webdriverio | 4.9.9 | -- | A Node.js bindings implementation for the W3C WebDriver protocol |
 | webpack | ^3.6.0 | -- | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. |
 | webpack-dev-server | 2.7.1 | -- | Serves a webpack app. Updates the browser on changes. |
