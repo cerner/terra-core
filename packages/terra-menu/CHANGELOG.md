@@ -3,13 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+1.11.0 - (January 5, 2018)
+------------------
 ### Fixed
 * Fixed issue with left arrow presses on first layer.
-
-1.11.0 - (January 3, 2018)
-------------------
-### Changed
-* Minor version bump
 
 1.10.0 - (December 5, 2017)
 ------------------
