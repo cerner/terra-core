@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 
-1.18.0 - (January 3, 2018)
+1.18.0 - (January 5, 2018)
 ------------------
 ### Fixed
 * Console warning
