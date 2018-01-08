@@ -33,9 +33,6 @@
     "test:wdio": "wdio ../../wdio.conf.js"
   },
   "devDependencies": {
-    "terra-button": "^1.0.0",
-    "terra-divider": "^1.0.0",
-    "terra-mixins": "^1.11.1",
     "terra-props-table": "^1.10.1"
   },
   "peerDependencies": {
