@@ -3,6 +3,11 @@ ChangeLog
 
 (Unreleased)
 ----------
+### Added
+* increase padding on mobile resize
+
+### Removed
+* select-container css class
 
 1.0.0 - (January 5, 2018)
 ------------------

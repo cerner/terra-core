@@ -10,14 +10,6 @@
     margin-top: var(--terra-form-checkbox-container-margin-top, 0.625rem);
     position: relative;
 
-    /* Hitbox will only surround checkbox + label, instead of the div block */
-    /* Padding increases hitbox area */
-    .select-container {
-      display: inline-block;
-      padding-bottom: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
-      padding-top: var(--terra-form-checkbox-select-container-padding-top, 0.3125rem);
-    }
-
     /* stylelint-disable selector-max-compound-selectors */
     .label {
       cursor: pointer;
@@ -26,6 +18,10 @@
       line-height: var(--terra-form-checkbox-line-height, 1.42);
       padding-left: var(--terra-form-checkbox-padding-left, none);
       position: relative;
+    }
+
+    .is-mobile-label {
+      padding-left: var(--terra-form-checkbox-is-mobile-padding-left, none);
     }
 
     /* Native checkbox shown when theme uses browser native styling */
@@ -97,12 +93,12 @@
       width: var(--terra-form-checkbox-checked-width, none);
     }
 
-    .native-input + .is-mobile::before {
+    .native-input + .is-mobile-checkbox::before {
       height: var(--terra-form-checkbox-is-mobile-height, none);
       width: var(--terra-form-checkbox-is-mobile-width, none);
     }
 
-    .native-input:checked + .is-mobile::before {
+    .native-input:checked + .is-mobile-checkbox::before {
       height: var(--terra-form-checkbox-is-mobile-checked-height, none);
       line-height: var(--terra-form-checkbox-is-mobile-checked-line-height, none);
       width: var(--terra-form-checkbox-is-mobile-checked-width, none);

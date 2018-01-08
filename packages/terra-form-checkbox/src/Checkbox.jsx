@@ -114,13 +114,10 @@ const Checkbox = ({
     customProps.className,
   ]);
 
-  const selectContainer = cx([
-    'select-container',
-  ]);
-
   const labelClasses = cx([
     'label',
     { 'is-disabled': disabled },
+    { 'is-mobile-label': CheckboxUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -132,7 +129,7 @@ const Checkbox = ({
   const labelTextClasses = cx([
     'label-text',
     { 'is-hidden': isLabelHidden },
-    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
+    { 'is-mobile-checkbox': CheckboxUtil.isConsideredMobileDevice() },
   ]);
 
   let labelTextContainer = null;
@@ -145,23 +142,21 @@ const Checkbox = ({
 
   return (
     <div className={checkboxClasses}>
-      <div className={selectContainer}>
-        <label htmlFor={id} className={labelClasses}>
-          <input
-            {...controlInputAttrs}
-            type="checkbox"
-            id={id}
-            disabled={disabled}
-            name={name}
-            value={value}
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            className={inputClasses}
-          />
-          {labelTextContainer}
-        </label>
-      </div>
+      <label htmlFor={id} className={labelClasses}>
+        <input
+          {...controlInputAttrs}
+          type="checkbox"
+          id={id}
+          disabled={disabled}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          className={inputClasses}
+        />
+        {labelTextContainer}
+      </label>
     </div>
   );
 };

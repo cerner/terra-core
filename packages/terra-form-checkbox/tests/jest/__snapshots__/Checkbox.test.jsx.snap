@@ -4,26 +4,22 @@ exports[`should render a ChoiceField with a checkbox 1`] = `
 <div
   className="checkbox"
 >
-  <div
-    className="select-container"
+  <label
+    className="label healtheintent-label-text"
   >
-    <label
-      className="label healtheintent-label-text"
+    <input
+      className="native-input healtheintent-application"
+      disabled={false}
+      name="children_present"
+      type="checkbox"
+      value="children_present"
+    />
+    <span
+      className="label-text"
     >
-      <input
-        className="native-input healtheintent-application"
-        disabled={false}
-        name="children_present"
-        type="checkbox"
-        value="children_present"
-      />
-      <span
-        className="label-text"
-      >
-        Do you have any Children?
-      </span>
-    </label>
-  </div>
+      Do you have any Children?
+    </span>
+  </label>
 </div>
 `;
 
@@ -31,25 +27,21 @@ exports[`should render a checkbox 1`] = `
 <div
   className="checkbox"
 >
-  <div
-    className="select-container"
+  <label
+    className="label"
   >
-    <label
-      className="label"
+    <input
+      className="native-input"
+      disabled={false}
+      name={null}
+      type="checkbox"
+    />
+    <span
+      className="label-text"
     >
-      <input
-        className="native-input"
-        disabled={false}
-        name={null}
-        type="checkbox"
-      />
-      <span
-        className="label-text"
-      >
-        Checkbox
-      </span>
-    </label>
-  </div>
+      Checkbox
+    </span>
+  </label>
 </div>
 `;
 
@@ -57,26 +49,22 @@ exports[`should render a checkbox with a hidden label 1`] = `
 <div
   className="checkbox"
 >
-  <div
-    className="select-container"
+  <label
+    className="label"
   >
-    <label
-      className="label"
-    >
-      <input
-        aria-label="Checkbox"
-        checked={true}
-        className="native-input"
-        disabled={false}
-        name={null}
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="label-text is-hidden"
-      />
-    </label>
-  </div>
+    <input
+      aria-label="Checkbox"
+      checked={true}
+      className="native-input"
+      disabled={false}
+      name={null}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="label-text is-hidden"
+    />
+  </label>
 </div>
 `;
 
@@ -84,27 +72,23 @@ exports[`should render a controlled checkbox 1`] = `
 <div
   className="checkbox"
 >
-  <div
-    className="select-container"
+  <label
+    className="label"
   >
-    <label
-      className="label"
+    <input
+      checked={true}
+      className="native-input"
+      disabled={false}
+      name={null}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="label-text"
     >
-      <input
-        checked={true}
-        className="native-input"
-        disabled={false}
-        name={null}
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="label-text"
-      >
-        Checkbox
-      </span>
-    </label>
-  </div>
+      Checkbox
+    </span>
+  </label>
 </div>
 `;
 
@@ -112,27 +96,23 @@ exports[`should render a disabled checkbox 1`] = `
 <div
   className="checkbox"
 >
-  <div
-    className="select-container"
+  <label
+    className="label is-disabled"
   >
-    <label
-      className="label is-disabled"
+    <input
+      checked={true}
+      className="native-input"
+      disabled={true}
+      name={null}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="label-text"
     >
-      <input
-        checked={true}
-        className="native-input"
-        disabled={true}
-        name={null}
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <span
-        className="label-text"
-      >
-        Checkbox
-      </span>
-    </label>
-  </div>
+      Checkbox
+    </span>
+  </label>
 </div>
 `;
 
@@ -140,25 +120,21 @@ exports[`should render an uncontrolled checkbox 1`] = `
 <div
   className="checkbox"
 >
-  <div
-    className="select-container"
+  <label
+    className="label"
   >
-    <label
-      className="label"
+    <input
+      className="native-input"
+      defaultChecked={true}
+      disabled={false}
+      name={null}
+      type="checkbox"
+    />
+    <span
+      className="label-text"
     >
-      <input
-        className="native-input"
-        defaultChecked={true}
-        disabled={false}
-        name={null}
-        type="checkbox"
-      />
-      <span
-        className="label-text"
-      >
-        Checkbox
-      </span>
-    </label>
-  </div>
+      Checkbox
+    </span>
+  </label>
 </div>
 `;
