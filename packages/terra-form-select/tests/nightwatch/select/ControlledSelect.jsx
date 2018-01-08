@@ -11,14 +11,16 @@ class ControlledSelect extends React.Component {
     this.state = { selectedValue: 'puppies' };
   }
 
-  handleOnChange(event, selectedValue) {
-    this.setState({ selectedValue });
+  handleOnChange(event, selectedValue, name) {
+    this.setState({ selectedValue, name });
   }
 
   render() {
     return (
       <Base locale={locale}>
         <p>Controlled select. Uses value and onChange props to manage state. Initial value is puppies.</p>
+        <p>Selected Value: {this.state.selectedValue}</p>
+        <p id="name">Select component name: {this.state.name}</p>
         <form>
           <Select
             name="zibby"
