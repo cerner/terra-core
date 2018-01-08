@@ -221,6 +221,7 @@ class Button extends React.Component {
         onFocus={onFocus}
         href={href}
       >
+        Ok lets test this
         {buttonLabel}
       </ComponentType>
     );
