@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The source for the image which will be displayed.
+   * The source string for the image which will be loaded and displayed.
    */
   src: PropTypes.string.isRequired,
   /**
@@ -24,7 +24,7 @@ const propTypes = {
    */
   alt: PropTypes.string.isRequired,
   /**
-   * An image which will be displayed during loading and in case of src load failure
+   * The source string for the image which will be displayed during loading and in case of src load failure.
    */
   placeholder: PropTypes.string,
   /**
@@ -57,14 +57,6 @@ class Image extends React.Component {
     super(props);
 
     this.state = { isLoading: true, isError: false };
-    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
-
-    this.classes = cx([
-      'image',
-      variant,
-      customProps.className,
-      { fluid: isFluid },
-    ]);
 
     this.handleOnLoad = this.handleOnLoad.bind(this);
     this.handleOnError = this.handleOnError.bind(this);
@@ -93,7 +85,7 @@ class Image extends React.Component {
     }
   }
 
-  createPlaceholderImage(customProps) {
+  createPlaceholderImage(customProps, imageClasses) {
     const { placeholder, alt, height, width } = this.props;
     return (
       <img
@@ -101,13 +93,13 @@ class Image extends React.Component {
         alt={alt}
         height={height}
         width={width}
-        className={this.classes}
+        className={imageClasses}
         {...customProps}
       />
     );
   }
 
-  createImage(customProps) {
+  createImage(customProps, imageClasses) {
     const { src, alt, height, width } = this.props;
     return (
       <img
@@ -117,7 +109,7 @@ class Image extends React.Component {
         width={width}
         onLoad={this.handleOnLoad}
         onError={this.handleOnError}
-        className={this.classes}
+        className={imageClasses}
         {...customProps}
       />
     );
@@ -125,28 +117,41 @@ class Image extends React.Component {
 
   render() {
     const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+
+    const imageClasses = cx([
+      'image',
+      variant,
+      customProps.className,
+      { fluid: isFluid },
+    ]);
     delete customProps.className;
 
     if (placeholder) {
       if (this.state.isLoading) {
         return (
           <div>
-            <div className={styles.hidden}>{this.createImage(customProps)}</div>
-            <div>{this.createPlaceholderImage(customProps)}</div>
+            <div className={cx('hidden')}>{this.createImage(customProps, imageClasses)}</div>
+            <div>{this.createPlaceholderImage(customProps, imageClasses)}</div>
           </div>
         );
       }
 
       return (
         <div>
-          <div>{this.state.isError ? this.createPlaceholderImage(customProps) : this.createImage(customProps)}</div>
+          <div>
+            {
+              this.state.isError ?
+                this.createPlaceholderImage(customProps, imageClasses) :
+                this.createImage(customProps, imageClasses)
+            }
+          </div>
         </div>
       );
     }
 
     return (
       <div>
-        <div>{this.createImage(customProps)}</div>
+        <div>{this.createImage(customProps, imageClasses)}</div>
       </div>
     );
   }
