@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 
-1.14.0 - (January 3, 2018)
+1.14.0 - (January 5, 2018)
 ------------------
 ### Fixed
 * Fixed lint errors
