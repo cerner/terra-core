@@ -170,6 +170,7 @@
         > .inner-ring {
           background-color: var(--terra-form-radio-inner-ring-disabled-background-color, none);
           border-color: var(--terra-form-radio-inner-ring-disabled-border-color, none);
+          box-shadow: none;
         }
       }
 

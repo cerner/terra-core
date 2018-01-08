@@ -17,7 +17,7 @@ const propTypes = {
     */
   defaultChecked: PropTypes.bool,
   /**
-    * The id of the radio.
+    * The id of the radio button.
     */
   id: PropTypes.string,
   /**

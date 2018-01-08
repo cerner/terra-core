@@ -11,9 +11,10 @@ The Terra Form Radio is a responsive input component rendered as a radio button 
 
 ```jsx
 import React from 'react';
-import FormRadio from 'terra-form-radio';
+import Radio from 'terra-form-radio';
 
-<FormRadio {props...} />
+<Radio id="first-radio" labelText="First Radio" name="example" defaultChecked />
+<Radio id="second-radio" labelText="Second Radio" name="example" />
 ```
 
 ## Component Features

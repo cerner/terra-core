@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Radio from 'terra-form-radio/src/Radio';
+import Radio from 'terra-form-radio/lib/Radio';
 
 const inlineRadiosExample = () => (
   <div>
-    <Radio id="firstInline" labelText="First Radio" name="inlineExample" isInline isDisabled />
-    <Radio id="secondInline" labelText="Second Radio" name="inlineExample" isInline />
-    <Radio id="thirdInline" labelText="Third Radio" name="inlineExample" isInline />
+    <Radio id="first-inline" labelText="First Radio" name="inline-example" isInline isDisabled />
+    <Radio id="second-inline" labelText="Second Radio" name="inline-example" isInline />
+    <Radio id="third-inline" labelText="Third Radio" name="inline-example" isInline />
   </div>
 );
 
