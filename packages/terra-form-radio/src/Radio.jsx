@@ -9,11 +9,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-    * Whether or not the radio element is checked. Use this to generate a controlled radio element.
+    * Whether or not the radio button is checked. Use this to generate a controlled radio button.
     */
   checked: PropTypes.bool,
   /**
-    * The checked property of the Input element. Use this to generate an uncontrolled radio element.
+    * The checked property of the Input element. Use this to generate an uncontrolled radio button.
     */
   defaultChecked: PropTypes.bool,
   /**
@@ -25,11 +25,11 @@ const propTypes = {
     */
   inputAttrs: PropTypes.object,
   /**
-    * Whether the radio element is disabled.
+    * Whether the radio button is disabled.
     */
   disabled: PropTypes.bool,
   /**
-    * Whether the radio element is inline.
+    * Whether the radio button is inline.
     */
   isInline: PropTypes.bool,
   /**
@@ -49,15 +49,15 @@ const propTypes = {
     */
   name: PropTypes.string,
   /**
-   * Function to trigger when focus is lost from the radio.
+   * Function to trigger when focus is lost from the radio button.
    */
   onBlur: PropTypes.func,
   /**
-    * Function to trigger when user clicks on the radio. Provide a function to create a controlled input.
+    * Function to trigger when user clicks on the radio button. Provide a function to create a controlled input.
     */
   onChange: PropTypes.func,
     /**
-   *  Function to trigger when user focuses on the radio.
+   *  Function to trigger when user focuses on the radio button.
    */
   onFocus: PropTypes.func,
   /**
@@ -110,7 +110,7 @@ const Radio = ({
 
   const radioClasses = cx([
     'radio',
-    { 'radio-inline': isInline },
+    { 'is-inline': isInline },
     customProps.className,
   ]);
 

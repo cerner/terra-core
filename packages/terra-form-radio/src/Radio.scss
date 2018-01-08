@@ -11,7 +11,7 @@
     /* stylelint-disable selector-max-compound-selectors */
     .label {
       cursor: pointer;
-      display: inline-flex;
+      display: inline-block;
       font-size: var(--terra-form-radio-font-size, 1rem);
       line-height: var(--terra-form-radio-line-height, 1.42);
       padding-left: var(--terra-form-radio-padding-left, none);
@@ -24,9 +24,6 @@
 
     /* Native radio shown when theme uses browser native styling */
     .native-input {
-      border-color: var(--terra-form-radio-native-input-border-color, none);
-      border-style: var(--terra-form-radio-native-input-border-style, none);
-      border-width: var(--terra-form-radio-native-input-border-width, none);
       clip: var(--terra-form-radio-native-input-clip, none);
       cursor: var(--terra-form-radio-native-input-cursor, pointer);
       font-size: var(--terra-form-radio-native-input-font-size, inherit);
@@ -52,6 +49,7 @@
       border-radius: var(--terra-form-radio-outer-ring-border-radius, none);
       border-style: var(--terra-form-radio-outer-ring-border-style, none);
       border-width: var(--terra-form-radio-outer-ring-border-width, none);
+      box-sizing: border-box;
       cursor: pointer;
       display: inline-block;
       height: var(--terra-form-radio-outer-ring-height, none);
@@ -67,6 +65,7 @@
         border-radius: 50%;
         border-style: var(--terra-form-radio-inner-ring-border-style, none);
         border-width: var(--terra-form-radio-inner-border-width, none);
+        box-shadow: 0 0 1px 1px #fff; //Safari: overrides span not honouring border-radius
         height: var(--terra-form-radio-inner-ring-height, none);
         left: 50%;
         max-width: 100%;
@@ -80,20 +79,17 @@
 
     /* Custom radio in checked state */
     .native-input:checked + .outer-ring {
-      background-color: var(--terra-form-radio-checked-outer-ring-background-color, none);
+      background-color: var(--terra-form-radio-outer-ring-checked-background-color, none);
       border-color: var(--terra-form-radio-outer-ring-checked-border-color, none);
       border-radius: var(--terra-form-radio-outer-ring-checked-border-radius, none);
       border-style: var(--terra-form-radio-outer-ring-checked-border-style, none);
       border-width: var(--terra-form-radio-outer-ring-checked-border-width, none);
+      box-sizing: border-box;
       height: var(--terra-form-radio-outer-ring-checked-height, none);
       left: 0;
-      line-height: 0.9; //do i need this
       margin-top: var(--terra-form-radio-outer-ring-checked-margin-top, none);
-      opacity: 1;
       position: absolute;
       top: 0;
-      vertical-align: middle;
-      visibility: visible;
       width: var(--terra-form-radio-outer-ring-checked-width, none);
 
       .inner-ring {
@@ -102,6 +98,7 @@
         border-radius: 50%;
         border-style: var(--terra-form-radio-inner-ring-checked-border-style, none);
         border-width: var(--terra-form-radio-inner-ring-checked-border-width, none);
+        box-shadow: 0 0 1px 1px #fff; //Safari: overrides span not honouring border-radius
         height: var(--terra-form-radio-inner-ring-checked-height, none);
         left: 50%;
         position: absolute;
@@ -135,24 +132,18 @@
     }
 
     /* Hide label if isLabelHidden true */
+    /* Label still needs to be big enough to house the checkbox */
     .is-hidden {
       cursor: default;
-      height: 1rem;
+      height: var(--terra-form-radio-label-is-hidden-height, 14px);
       margin-left: 0;
-      width: 1.25rem;
+      width: var(--terra-form-radio-label-is-hidden-width, 14px);
     }
-    /*stylelint-disable max-nesting-depth*/
+    /* stylelint-disable max-nesting-depth*/
     .label:hover {
       .outer-ring {
         border-color: var(--terra-form-radio-hover-border-color, none);
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-form-radio-hover-shadow-rtl, none);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-form-radio-hover-shadow-ltr, none);
-        }
+        border-width: var(--terra-form-radio-hover-border-width, none);
       }
     }
 
@@ -184,33 +175,19 @@
 
       &:hover > .outer-ring {
         border-color: var(--terra-form-radio-disabled-hover-border-color, none);
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-form-radio-disabled-hover-box-shadow-rtl, none);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-form-radio-disabled-hover-box-shadow-ltr, none);
-        }
+        border-width: var(--terra-form-radio-disabled-border-width, none);
       }
     }
     /* stylelint-enable max-nesting-depth */
 
     /* Focus custom radio styling */
     .native-input:focus + .outer-ring {
-      border-color: var(--terra-form-radio-focus-box-border-color, none);
-
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-radio-focus-box-shadow-rtl, none);
-      }
-
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-radio-focus-box-shadow-ltr, none);
-      }
+      border-color: var(--terra-form-radio-focus-border-color, none);
+      border-width: var(--terra-form-radio-focus-border-width, none);
     }
   }
 
-  /* Focus ring surrounding the checkbox */
+  /* Large focus ring */
   .native-input:focus ~ .label-text::before {
     background-color: var(--terra-form-radio-focus-ring-background-color, none);
     border-radius: 50%;
@@ -223,8 +200,7 @@
     z-index: -1;
   }
 
-  .radio-inline {
+  .is-inline {
     display: inline-block;
-    vertical-align: middle;
   }
 }
