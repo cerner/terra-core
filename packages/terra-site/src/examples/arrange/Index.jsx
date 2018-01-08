@@ -41,7 +41,7 @@ const ArrangeExamples = () => (
       alignFitEnd={'stretch'}
       fitStartAttributes={{ style: { maxWidth: '20%', wordWrap: 'break-word', overflow: 'hidden' } }}
       fillAttributes={{ style: { wordWrap: 'break-word', maxWidth: '20%' } }}
-      fitEndAttributes={{ style: { maxWidth: '20%', wordWrap: 'break-word', overflow: 'hidden', 'background-color': 'yellow' } }}
+      fitEndAttributes={{ style: { maxWidth: '20%', wordWrap: 'break-word', overflow: 'hidden', backgroundColor: 'yellow' } }}
     />
   </div>
 );

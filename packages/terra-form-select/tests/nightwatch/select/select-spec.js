@@ -50,6 +50,7 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.click('#kittens');
     browser.expect.element('div[class*="select-menu"]').to.not.be.present;
     browser.expect.element('#controlledSelect').text.to.equal('Kittens');
+    browser.expect.element('#name').text.to.contain('zibby');
     browser.click('#controlledSelect');
     browser.expect.element('#kittens').to.have.attribute('class').which.contains('is-selected');
   },

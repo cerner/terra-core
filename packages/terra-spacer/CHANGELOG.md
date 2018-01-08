@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 
-1.1.0 - (January 3, 2018)
+1.1.0 - (January 5, 2018)
 ------------------
 ### Changed
 * Remove toolkit dependency

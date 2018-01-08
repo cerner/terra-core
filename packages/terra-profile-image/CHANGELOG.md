@@ -6,7 +6,7 @@ Unreleased
 ### Changed
 * Moved placeholder logic out of this component
 
-1.13.0 - (January 3, 2018)
+1.13.0 - (January 5, 2018)
 ------------------
 ### Changed
 * Minor version bump
