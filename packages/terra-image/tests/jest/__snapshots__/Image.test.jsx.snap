@@ -21,25 +21,15 @@ exports[`should render a circle image component with fluid behavior 1`] = `
 
 exports[`should render a hidden src image and a visible placeholder image 1`] = `
 <div>
-  <div
-    className="hidden"
-  >
+  <div>
     <img
       alt=" "
       className="image default"
       height="75"
       onError={[Function]}
       onLoad={[Function]}
+      placeholder="noImage.jpg"
       src="profile.jpg"
-      width="75"
-    />
-  </div>
-  <div>
-    <img
-      alt=" "
-      className="image default"
-      height="75"
-      src="noImage.jpg"
       width="75"
     />
   </div>
@@ -77,7 +67,10 @@ exports[`should render the placeholder image 1`] = `
       alt="avatar"
       className="image default"
       height="75"
-      src="noImage.jpg"
+      onError={[Function]}
+      onLoad={[Function]}
+      placeholder="noImage.jpg"
+      src="profile.jpg"
       width="75"
     />
   </div>
@@ -93,6 +86,7 @@ exports[`should render the src image 1`] = `
       height="75"
       onError={[Function]}
       onLoad={[Function]}
+      placeholder="noImage.jpg"
       src="profile.jpg"
       width="75"
     />

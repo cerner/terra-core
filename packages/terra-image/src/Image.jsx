@@ -26,7 +26,7 @@ const propTypes = {
   /**
    * The source string for the image which will be displayed during loading and in case of src load failure.
    */
-  placeholder: PropTypes.string,
+  placeholderSrc: PropTypes.string,
   /**
    * Sets the height of the image.
    */
@@ -64,7 +64,7 @@ class Image extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // If a new image is being loaded, reset the state to loading
-    if (newProps.src !== this.props.src) {
+    if (newProps.src !== this.props.src || newProps.placeholderSrc !== this.props.placeholderSrc) {
       this.setState({ isLoading: true, isError: false });
     }
   }
@@ -72,6 +72,7 @@ class Image extends React.Component {
   handleOnLoad() {
     this.setState({ isLoading: false });
     const onLoad = this.props.onLoad;
+
     if (onLoad !== undefined) {
       onLoad();
     }
@@ -80,16 +81,17 @@ class Image extends React.Component {
   handleOnError() {
     this.setState({ isLoading: false, isError: true });
     const onError = this.props.onError;
+
     if (onError !== undefined) {
       onError();
     }
   }
 
   createPlaceholderImage(customProps, imageClasses) {
-    const { placeholder, alt, height, width } = this.props;
+    const { placeholderSrc, alt, height, width } = this.props;
     return (
       <img
-        src={placeholder}
+        src={placeholderSrc}
         alt={alt}
         height={height}
         width={width}
@@ -116,7 +118,7 @@ class Image extends React.Component {
   }
 
   render() {
-    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+    const { src, variant, isFluid, alt, placeholderSrc, height, width, onLoad, onError, ...customProps } = this.props;
 
     const imageClasses = cx([
       'image',
@@ -126,7 +128,7 @@ class Image extends React.Component {
     ]);
     delete customProps.className;
 
-    if (placeholder) {
+    if (placeholderSrc) {
       if (this.state.isLoading) {
         return (
           <div>
