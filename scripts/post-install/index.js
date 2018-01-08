@@ -20,11 +20,7 @@ example: process.cwd() outputs the follow:
 const isInstalled = process.cwd().indexOf('node_modules') !== -1;
 
 if (isInstalled) {
-  console.log('getting ready to run postinstall:package');
   shell.exec('npm run postinstall:package');
-  console.log('ran postinstall:package');
 } else {
-  console.log('getting ready to run postinstall:project');
   shell.exec('npm run postinstall:project');
-  console.log('ran postinstall:project');
 }
