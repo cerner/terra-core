@@ -37,13 +37,14 @@ const propTypes = {
   message: PropTypes.string,
 
   /**
-   * The required status title to display. Status views with variants of type no-data, no-matching-results,
+   * The status view's title to display. Status views with variants of type no-data, no-matching-results,
    * not-authorized, and error will have defaulted values unless overridden with this prop.
    */
   title: PropTypes.string,
 
   /**
-   * Determines the type of icon to display.
+   * Determines the glyph to display, one of the following: 'no-data', 'no-matching-results',
+   * 'not-authorized', 'error', or 'custom'.
    */
   variant: PropTypes.oneOf(Object.values(variants)),
 };
