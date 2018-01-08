@@ -14,12 +14,9 @@ console.log(__dirname);
 // /Users/bj031910/repos/cerner-consumer-theme/node_modules/terra-core/scripts/post-install
 
 
-// link-parent-bin && npm run compile && npm run bootstrap
-
-
-const string = __dirname;
-const substring = 'node_modules';
-
-const isInstalled = string.indexOf(substring) !== -1;
+const isInstalled = process.cwd().indexOf('node_modules') !== -1;
 
 console.log(isInstalled);
+
+
+// link-parent-bin && npm run compile && npm run bootstrap
