@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* global browser, Terra, before */
 
 describe('Radio', () => {
@@ -19,13 +20,12 @@ describe('Radio', () => {
   describe('Disabled Radio', () => {
     before(() => {
       browser.url('/#//tests/form-radio-tests/disabled');
-      // browser.click('.disabled');
     });
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
     Terra.should.themeEachCustomProperty({
-      '-terra-form-radio-disabled-font-color': '#9b9fa1',
+      '--terra-form-radio-disabled-font-color': '#9b9fa1',
     });
   });
 
@@ -51,14 +51,5 @@ describe('Radio', () => {
     before(() => browser.url('/#/tests/form-radio-tests/multiple'));
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
-    Terra.should.themeEachCustomProperty({
-      '--terra-form-radio-container-margin-right': '2rem',
-      '--terra-form-radio-container-margin-top': '0.625rem',
-      '--terra-form-radio-font-size': '1rem',
-      '--terra-form-radio-line-height': '1.42',
-      '--terra-form-radio-native-input-margin-left': '0.071rem',
-      '--terra-form-radio-native-input-margin-right': '0.143rem',
-      '--terra-form-radio-label-text-margin-left': '1.4em',
-    });
   });
 });
