@@ -9,24 +9,17 @@ const iconAdd = <IconAdd />;
 const ButtonGroupWithIcons = () => (
   <div>
     <div>
-      <ButtonGroup
-        buttons={[<ButtonGroup.Button text="Icon" icon={iconEdit} key="iconDefault1" />,
-          <ButtonGroup.Button text="Icon" icon={iconAdd} key="iconDefault2" />]}
-      />
+      <ButtonGroup>
+        <ButtonGroup.Button text="Edit" key="editButton" />
+        <ButtonGroup.Button text="Add" key="addButton" />
+      </ButtonGroup>
     </div>
     <br />
     <div>
-      <ButtonGroup
-        buttons={[<ButtonGroup.Button text="Icon Reversed" icon={iconEdit} isReversed key="iconReversed1" />,
-          <ButtonGroup.Button text="Icon Reversed" icon={iconAdd} isReversed key="iconReversed2" />]}
-      />
-    </div>
-    <br />
-    <div>
-      <ButtonGroup
-        buttons={[<ButtonGroup.Button icon={iconEdit} key="iconOnly1" />,
-          <ButtonGroup.Button icon={iconAdd} key="iconOnly2" />]}
-      />
+      <ButtonGroup>
+        <ButtonGroup.Button text="Edit" icon={iconEdit} key="editIcon" />
+        <ButtonGroup.Button text="Add" icon={iconAdd} key="addIcon" />
+      </ButtonGroup>
     </div>
   </div>
 );

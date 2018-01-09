@@ -80,7 +80,6 @@ class CollapsibleMenuViewDemo extends React.Component {
             text="Table View"
             className="TableView"
             key="tableView"
-            isIconOnly
             shouldCloseOnClick={false}
             isSelected={this.state.displayType === 0}
           />
@@ -89,7 +88,6 @@ class CollapsibleMenuViewDemo extends React.Component {
             text="Expanded View"
             className="ExpandedView"
             key="expandedView"
-            isIconOnly
             shouldCloseOnClick={false}
             isSelected={this.state.displayType === 1}
           />
@@ -98,7 +96,6 @@ class CollapsibleMenuViewDemo extends React.Component {
             text="Trending View"
             className="TendingView"
             key="trendingView"
-            isIconOnly
             shouldCloseOnClick={false}
             isSelected={this.state.displayType === 2}
           />

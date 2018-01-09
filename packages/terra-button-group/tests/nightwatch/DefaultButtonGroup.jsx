@@ -1,5 +1,5 @@
 import React from 'react';
 
-import ButtonGroup from '../../lib/ButtonGroup';
+import ButtonGroup from '../../src/ButtonGroup';
 
 export default () => <ButtonGroup id="button-group-default" />;

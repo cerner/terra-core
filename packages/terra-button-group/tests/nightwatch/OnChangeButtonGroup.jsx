@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ButtonGroup from '../../lib/ButtonGroup';
+import ButtonGroup from '../../src/ButtonGroup';
 
 class buttonGroupExample extends React.Component {
   constructor(props) {
@@ -21,11 +21,12 @@ class buttonGroupExample extends React.Component {
           id="button-group-onchange"
           isSelectable
           onChange={this.handleSelection}
-          buttons={[<ButtonGroup.Button text="Compact" key="compact1" />,
-            <ButtonGroup.Button text="Compact" key="compact2" />,
-            <ButtonGroup.Button text="Compact" key="compact3" />,
-            <ButtonGroup.Button text="Compact" key="compact4" />]}
-        />
+        >
+          <ButtonGroup.Button text="Compact" key="compact1" />
+          <ButtonGroup.Button text="Compact" key="compact2" />
+          <ButtonGroup.Button text="Compact" key="compact3" />
+          <ButtonGroup.Button text="Compact" key="compact4" />
+        </ButtonGroup>
       </div>
     );
   }

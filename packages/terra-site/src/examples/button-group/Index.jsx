@@ -10,9 +10,6 @@ import ButtonGroupSrc from '!raw-loader!terra-button-group/src/ButtonGroup.jsx';
 import ButtonGroupButtonSrc from '!raw-loader!terra-button-group/src/ButtonGroupButton.jsx';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 // Examples
-import ButtonGroupVariant from './ButtonGroupVariant';
-import ButtonGroupSize from './ButtonGroupSize';
-import ButtonGroupCompact from './ButtonGroupCompact';
 import ButtonGroupSelectable from './ButtonGroupSelectable';
 import ButtonGroupWithIcons from './ButtonGroupWithIcons';
 
@@ -22,15 +19,6 @@ const ButtonGroupExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonGroupSrc} componentName="Button Group" />
     <PropsTable id="button-props" src={ButtonGroupButtonSrc} componentName="Button Group Button" />
-    <h2>Variants</h2>
-    <ButtonGroupVariant />
-    <br />
-    <h2>Sizes</h2>
-    <ButtonGroupSize />
-    <br />
-    <h2>Compact</h2>
-    <ButtonGroupCompact />
-    <br />
     <h2>Icons</h2>
     <ButtonGroupWithIcons />
     <br />

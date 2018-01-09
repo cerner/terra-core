@@ -7,21 +7,17 @@ import styles from './ButtonGroup.scss';
 
 const cx = classNames.bind(styles);
 
-const propTypes = {
-  /**
-   * Button group button components that should be grouped together
-   */
-  buttons: PropTypes.arrayOf(PropTypes.element),
+const SelectTypes = {
+  'NON-SELECTABLE': 'non-selectable',
+  'SINGLE-SELECT': 'single-select',
+  'MULTI-SELECT': 'multi-select',
+};
 
+const propTypes = {
   /**
    * Child nodes
    */
   children: PropTypes.node,
-
-  /**
-   * Indicates if the buttons should have reduced top and bottom padding
-   */
-  isCompact: PropTypes.bool,
 
   /**
    * Indicates if the button group should have toggle-style selectability
@@ -29,27 +25,20 @@ const propTypes = {
   isSelectable: PropTypes.bool,
 
   /**
-   * Callback function when the state changes
+   * Callback function when the state changes. Parameters are (event, key).
    */
   onChange: PropTypes.func,
 
   /**
-   * Sets the button size. One of `tiny`, `small`, `medium`, `large`, `huge`
+   * Sets the select type. One of `SelectTypes['NON-SELECTABLE']`, `SelectTypes['SINGLE-SELECT']`, or `SelectTypes['MULTI-SELECT']`.
    */
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
-
-  /**
-   * Sets the button group style variation. One of `defaut` or `secondary`
-   */
-  variant: PropTypes.oneOf(['default', 'secondary']),
+  selectType: PropTypes.oneOf([SelectTypes['NON-SELECTABLE'], SelectTypes['SINGLE-SELECT'], SelectTypes['MULTI-SELECT']]),
 };
 
 const defaultProps = {
-  variant: 'default',
-  isCompact: false,
   isSelectable: false,
-  buttons: [],
   children: [],
+  selectType: SelectTypes['NON-SELECTABLE'],
 };
 
 class ButtonGroup extends React.Component {
@@ -57,8 +46,8 @@ class ButtonGroup extends React.Component {
     if (!isSelectable) { return null; }
 
     for (let i = 0; i < buttons.length; i += 1) {
-      if (buttons[i].props.isSelected) {
-        return i;
+      if (buttons[i].props.isSelected && !buttons[i].props.isDisabled) {
+        return buttons[i].key;
       }
     }
 
@@ -69,26 +58,26 @@ class ButtonGroup extends React.Component {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
     this.state = {
-      selectedIndex: ButtonGroup.getInitialState(this.props.buttons.concat(this.props.children), this.props.isSelectable),
+      selectedKey: ButtonGroup.getInitialState(this.props.children, this.props.isSelectable),
     };
   }
 
-  handleOnClick(event, index) {
+  handleOnClick(event, key) {
     // No need to re-render if the button clicked is already selected
-    if (this.state.selectedIndex !== index) {
+    if (this.state.selectedKey !== key) {
       event.preventDefault();
-      this.setState({ selectedIndex: index });
+      this.setState({ selectedKey: key });
 
       if (this.props.onChange) {
-        this.props.onChange(event, index);
+        this.props.onChange(event, key);
       }
     }
   }
 
-  wrapOnClick(item, index) {
+  wrapOnClick(item) {
     const onClick = item.props.onClick;
     return (event) => {
-      this.handleOnClick(event, index);
+      this.handleOnClick(event, item.key);
 
       if (onClick) {
         onClick(event);
@@ -97,27 +86,31 @@ class ButtonGroup extends React.Component {
   }
 
   render() {
-    const { onChange, variant, size, isCompact, isSelectable, buttons, children, ...customProps } = this.props;
+    const {
+      children,
+      onChange,
+      isSelectable,
+      selectType,
+      ...customProps
+    } = this.props;
+
     const buttonGroupClassNames = cx(['button-group',
       customProps.className,
     ]);
 
-    let allButtons = buttons.concat(children);
-
-    allButtons = allButtons.map((button, i) => {
+    const allButtons = children.map((child) => {
       let onClick;
       if (isSelectable) {
-        onClick = this.wrapOnClick(button, i);
+        onClick = this.wrapOnClick(child);
       } else {
-        onClick = button.props.onClick;
+        onClick = child.props.onClick;
       }
 
-      return React.cloneElement(button, {
+      debugger;
+
+      return React.cloneElement(child, {
         onClick,
-        variant,
-        isCompact,
-        size,
-        isSelected: this.state.selectedIndex === i,
+        isSelected: this.state.selectedKey === child.key,
       });
     });
 
@@ -130,9 +123,10 @@ class ButtonGroup extends React.Component {
 }
 
 ButtonGroup.propTypes = propTypes;
-
 ButtonGroup.defaultProps = defaultProps;
-
 ButtonGroup.Button = ButtonGroupButton;
+
+ButtonGroup.Opts = {};
+ButtonGroup.Opts.selectTypes = SelectTypes;
 
 export default ButtonGroup;

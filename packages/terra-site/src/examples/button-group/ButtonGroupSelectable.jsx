@@ -3,19 +3,11 @@ import ButtonGroup from 'terra-button-group';
 
 const ButtonGroupSelectable = () => (
   <div>
-    <ButtonGroup
-      isSelectable
-      buttons={[<ButtonGroup.Button text="Selectable" key="selectable1" />,
-        <ButtonGroup.Button text="Selectable" key="selectable2" />]}
-    />
+    <ButtonGroup isSelectable>
+      <ButtonGroup.Button text="Selectable" key="selectable1" />
+      <ButtonGroup.Button text="Selectable" key="selectable2" />
+    </ButtonGroup>
     <br />
-    <br />
-    <ButtonGroup
-      isSelectable
-      variant="secondary"
-      buttons={[<ButtonGroup.Button text="Selectable" key="selectable1" />,
-        <ButtonGroup.Button text="Selectable" key="selectable2" />]}
-    />
   </div>
 );
 

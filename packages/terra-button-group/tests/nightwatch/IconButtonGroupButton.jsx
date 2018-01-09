@@ -1,33 +1,24 @@
 import React from 'react';
-import ButtonGroup from '../../lib/ButtonGroup';
+import ButtonGroup from '../../src/ButtonGroup';
 
 const iconStyle = { backgroundColor: 'black', height: '1em', width: '1em' };
 const icon = <span style={iconStyle} className="test"><svg width="1em" height="1em"><rect width="1em" height="1em" /></svg></span>;
 
-const IconDefaultButtonGroup = () => (
-  <ButtonGroup
-    id="button-group-icon-default"
-    buttons={[<ButtonGroup.Button text="Icon" icon={icon} key="iconDefault1" />,
-      <ButtonGroup.Button text="Icon" icon={icon} key="iconDefault2" />]}
-  />
+const TextButtonGroup = () => (
+  <ButtonGroup id="button-group-icon-default">
+    <ButtonGroup.Button text="Text1" key="textDefault1" />
+    <ButtonGroup.Button text="Text2" key="textDefault2" />
+  </ButtonGroup>
 );
-const IconReversedButtonGroup = () => (
-  <ButtonGroup
-    id="button-group-icon-reversed"
-    buttons={[<ButtonGroup.Button text="Icon Reversed" icon={icon} isReversed key="iconReversed1" />,
-      <ButtonGroup.Button text="Icon Reversed" icon={icon} isReversed key="iconReversed2" />]}
-  />
-);
-const IconOnlyButtonGroup = () => (
-  <ButtonGroup
-    id="button-group-icon-only"
-    buttons={[<ButtonGroup.Button icon={icon} key="iconOnly1" />,
-      <ButtonGroup.Button icon={icon} key="iconOnly2" />]}
-  />
+
+const IconButtonGroup = () => (
+  <ButtonGroup id="button-group-icon-only">
+    <ButtonGroup.Button text="Text1" icon={icon} key="icon1" />
+    <ButtonGroup.Button text="Text2" icon={icon} key="icon2" />
+  </ButtonGroup>
 );
 
 export {
-  IconDefaultButtonGroup,
-  IconReversedButtonGroup,
-  IconOnlyButtonGroup,
+  TextButtonGroup,
+  IconButtonGroup,
 };

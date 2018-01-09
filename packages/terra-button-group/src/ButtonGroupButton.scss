@@ -27,8 +27,8 @@
   }
 
   .button-group-button.is-active {
-    background-color: #4e5558;
-    border-color: #4e5558;
-    color: #fff;
+    background-color: var(--terra-button-group-active-background-color-neutral, rgba(0, 0, 0, 0.3));
+    border-color: var(--terra-button-group-active-border-color-neutral, #c8cacb);
+    color: var(--terra-button-group-active-color-neutral, #434a4d);
   }
 }

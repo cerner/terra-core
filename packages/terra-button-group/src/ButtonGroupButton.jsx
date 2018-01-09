@@ -9,38 +9,50 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Whether or not the button should be disabled.
+   */
+  isDisabled: PropTypes.bool,
+  /**
    * Indicates if the button should be selected on initial render.
    */
   isSelected: PropTypes.bool,
-  /**
-   * Sets the button text
-   */
-  text: PropTypes.string,
   /**
    * An optional icon. Nested inline with the text when provided
    */
   icon: PropTypes.element,
   /**
+   * Callback function triggered when button loses focus.
+   */
+  onBlur: PropTypes.func,
+  /**
    * Callback function triggered when clicked
    */
   onClick: PropTypes.func,
   /**
-   * Reverses the position of the icon and text
+   * Callback function triggered when button gains focus.
    */
-  isReversed: PropTypes.bool,
+  onFocus: PropTypes.func,
   /**
-   * Child Nodes
+   * Callback function triggered when key is pressed.
    */
-  children: PropTypes.node,
+  onKeyDown: PropTypes.func,
+  /**
+   * Callback function triggered when key is released.
+   */
+  onKeyUp: PropTypes.func,
+  /**
+   * Sets the button text. If an icon is provided, it will be an icon only button and this text is set as the aria-label for accessibility.
+   */
+  text: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
+  isDisabled: false,
   isSelected: false,
-  isReversed: false,
 };
 
 
-const ButtonGroupButton = ({ isSelected, ...customProps }) => {
+const ButtonGroupButton = ({ isSelected, icon, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
 
   const buttonClassName = cx([
@@ -53,6 +65,9 @@ const ButtonGroupButton = ({ isSelected, ...customProps }) => {
   return (
     <Button
       {...attributes}
+      icon={icon}
+      isIconOnly={icon != null}
+      variant={Button.Opts.Variants.NEUTRAL}
       className={buttonClassName}
     />);
 };

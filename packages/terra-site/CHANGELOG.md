@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Add context to selectable list example
+* Update button group examples to use V2
 
 1.21.0 - (January 5, 2018)
 ------------------
