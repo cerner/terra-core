@@ -9,6 +9,10 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * An optional icon. Nested inline with the text when provided
+   */
+  icon: PropTypes.element,
+  /**
    * Whether or not the button should be disabled.
    */
   isDisabled: PropTypes.bool,
@@ -16,10 +20,6 @@ const propTypes = {
    * Indicates if the button should be selected on initial render.
    */
   isSelected: PropTypes.bool,
-  /**
-   * An optional icon. Nested inline with the text when provided
-   */
-  icon: PropTypes.element,
   /**
    * Callback function triggered when button loses focus.
    */

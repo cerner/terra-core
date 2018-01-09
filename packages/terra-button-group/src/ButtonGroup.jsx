@@ -20,57 +20,82 @@ const propTypes = {
   children: PropTypes.node,
 
   /**
-   * Indicates if the button group should have toggle-style selectability
-   */
-  isSelectable: PropTypes.bool,
-
-  /**
    * Callback function when the state changes. Parameters are (event, key).
    */
   onChange: PropTypes.func,
 
   /**
-   * Sets the select type. One of `SelectTypes['NON-SELECTABLE']`, `SelectTypes['SINGLE-SELECT']`, or `SelectTypes['MULTI-SELECT']`.
+   * Sets the select type for toggle-style selectability. One of `SelectTypes['NON-SELECTABLE']`, `SelectTypes['SINGLE-SELECT']`, or `SelectTypes['MULTI-SELECT']`.
    */
   selectType: PropTypes.oneOf([SelectTypes['NON-SELECTABLE'], SelectTypes['SINGLE-SELECT'], SelectTypes['MULTI-SELECT']]),
 };
 
 const defaultProps = {
-  isSelectable: false,
   children: [],
   selectType: SelectTypes['NON-SELECTABLE'],
 };
 
 class ButtonGroup extends React.Component {
-  static getInitialState(buttons, isSelectable) {
-    if (!isSelectable) { return null; }
+  static getInitialState(buttons, selectType) {
+    const selectedKeys = [];
+    if (selectType === SelectTypes['NON-SELECTABLE']) { return selectedKeys; }
 
     for (let i = 0; i < buttons.length; i += 1) {
       if (buttons[i].props.isSelected && !buttons[i].props.isDisabled) {
-        return buttons[i].key;
+        selectedKeys.push(buttons[i].key);
+
+        if (selectType === SelectTypes['SINGLE-SELECT']) { return selectedKeys; }
       }
     }
 
-    return null;
+    // A single select button group must have one button selected by default.
+    // If non was specified, default to select the first non disabled button in the group.
+    if (selectType === SelectTypes['SINGLE-SELECT']) {
+      for (let i = 0; i < buttons.length; i += 1) {
+        if (!buttons[i].props.isDisabled) {
+          selectedKeys.push(buttons[i].key);
+          return selectedKeys;
+        }
+      }
+    }
+
+    return selectedKeys;
   }
 
   constructor(props) {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
     this.state = {
-      selectedKey: ButtonGroup.getInitialState(this.props.children, this.props.isSelectable),
+      selectedKeys: ButtonGroup.getInitialState(this.props.children, this.props.selectType),
     };
   }
 
   handleOnClick(event, key) {
-    // No need to re-render if the button clicked is already selected
-    if (this.state.selectedKey !== key) {
-      event.preventDefault();
-      this.setState({ selectedKey: key });
+    if (this.props.selectType === SelectTypes['NON-SELECTABLE']) { return; }
 
-      if (this.props.onChange) {
-        this.props.onChange(event, key);
+    const index = this.state.selectedKeys.indexOf(key);
+
+    // No need to re-render if the button clicked is already selected
+    if (this.props.selectType === SelectTypes['SINGLE-SELECT'] && index >= 0) { return; }
+
+    event.preventDefault();
+
+    let newKeys = [];
+    if (this.props.selectType === SelectTypes['SINGLE-SELECT']) {
+      newKeys.push(key);
+    } else { // selectType should be 'MULTI-SELECT'
+      newKeys = this.state.selectedKeys.slice();
+      if (index > -1) {
+        newKeys.splice(index, 1);
+      } else {
+        newKeys.push(key);
       }
+    }
+
+    this.setState({ selectedKeys: newKeys });
+
+    if (this.props.onChange) {
+      this.props.onChange(event, key);
     }
   }
 
@@ -89,7 +114,6 @@ class ButtonGroup extends React.Component {
     const {
       children,
       onChange,
-      isSelectable,
       selectType,
       ...customProps
     } = this.props;
@@ -100,17 +124,15 @@ class ButtonGroup extends React.Component {
 
     const allButtons = children.map((child) => {
       let onClick;
-      if (isSelectable) {
-        onClick = this.wrapOnClick(child);
-      } else {
+      if (selectType === SelectTypes['NON-SELECTABLE']) {
         onClick = child.props.onClick;
+      } else {
+        onClick = this.wrapOnClick(child);
       }
-
-      debugger;
 
       return React.cloneElement(child, {
         onClick,
-        isSelected: this.state.selectedKey === child.key,
+        isSelected: this.state.selectedKeys.indexOf(child.key) > -1,
       });
     });
 

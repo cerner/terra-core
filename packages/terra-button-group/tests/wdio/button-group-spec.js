@@ -81,7 +81,7 @@ describe('Button Group', () => {
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-index')).to.equal('0');
+      expect(browser.getText('#selected-key')).to.equal('button1');
     });
 
     Terra.should.beAccessible();
@@ -90,7 +90,7 @@ describe('Button Group', () => {
     it('should select the second button', () => {
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-index')).to.equal('1');
+      expect(browser.getText('#selected-key')).to.equal('button2');
     });
 
     Terra.should.beAccessible();
@@ -100,7 +100,7 @@ describe('Button Group', () => {
       browser.keys('Tab');
       browser.keys('Tab');
       browser.keys('Space');
-      expect(browser.getText('#selected-index')).to.equal('3');
+      expect(browser.getText('#selected-key')).to.equal('button4');
     });
 
     Terra.should.beAccessible();
