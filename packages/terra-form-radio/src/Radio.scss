@@ -18,7 +18,7 @@
       position: relative;
     }
 
-    .is-mobile-label {
+    .label.is-mobile {
       padding-left: var(--terra-form-radio-is-mobile-padding-left, none);
     }
 
@@ -109,7 +109,7 @@
       }
     }
 
-    .native-input + .is-mobile-outer-ring {
+    .native-input + .outer-ring.is-mobile {
       height: var(--terra-form-radio-outer-ring-is-mobile-height, none);
       margin-top: var(--terra-form-radio-outer-ring-is-mobile-margin-top, none);
       width: var(--terra-form-radio-outer-ring-is-mobile-width, none);
@@ -120,7 +120,7 @@
       }
     }
 
-    .native-input:checked + .is-mobile-outer-ring {
+    .native-input:checked + .outer-ring.is-mobile {
       height: var(--terra-form-radio-outer-ring-is-mobile-checked-height, none);
       margin-top: var(--terra-form-radio-outer-ring-is-mobile-checked-margin-top, none);
       width: var(--terra-form-radio-outer-ring-is-mobile-checked-width, none);
@@ -132,7 +132,7 @@
     }
 
     /* Hide label if isLabelHidden true */
-    /* Label still needs to be big enough to house the checkbox */
+    /* Label still needs to be big enough to house the radio */
     .is-hidden {
       cursor: default;
       height: var(--terra-form-radio-label-is-hidden-height, 14px);

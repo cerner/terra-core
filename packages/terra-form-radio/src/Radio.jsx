@@ -41,11 +41,11 @@ const propTypes = {
     */
   labelText: PropTypes.node.isRequired,
   /**
-    * Additional objects for the text object.
+    * Additional attributes for the text object.
     */
   labelTextAttrs: PropTypes.object,
   /**
-    * Name of the input attribute.
+    * Name attribute of the input.
     */
   name: PropTypes.string,
   /**
@@ -118,7 +118,7 @@ const Radio = ({
     'label',
     { 'is-disabled': disabled },
     { 'is-hidden': isLabelHidden },
-    { 'is-mobile-label': RadioUtil.isConsideredMobileDevice() },
+    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -133,7 +133,7 @@ const Radio = ({
 
   const outerRingClasses = cx([
     'outer-ring',
-    { 'is-mobile-outer-ring': RadioUtil.isConsideredMobileDevice() },
+    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
   ]);
 
   const innerRingClasses = cx([
