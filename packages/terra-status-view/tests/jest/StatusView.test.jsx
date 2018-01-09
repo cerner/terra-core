@@ -12,7 +12,7 @@ it('should render an image with a default status view', () => {
 });
 
 it('should render an image with a no-data status view with all message props given', () => {
-  const statusView = (<StatusView variant={StatusView.variants.NODATA} title="Test Title" message="Test Message">
+  const statusView = (<StatusView variant={StatusView.Opts.variants.NODATA} title="Test Title" message="Test Message">
     <Button text="OK" key="1" />
     <Button text="Cancel" key="2" />
   </StatusView>);
@@ -22,35 +22,35 @@ it('should render an image with a no-data status view with all message props giv
 });
 
 it('should render an image with a no-data status view that will hide the glyph from being shown', () => {
-  const statusView = (<StatusView variant={StatusView.variants.NODATA} isGlyphHidden />);
+  const statusView = (<StatusView variant={StatusView.Opts.variants.NODATA} isGlyphHidden />);
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an image with a no-matching-results status-view that will force the content to align at the top', () => {
-  const statusView = (<StatusView variant={StatusView.variants.NOMATCHINGRESULTS} isAlignedTop />);
+  const statusView = (<StatusView variant={StatusView.Opts.variants.NOMATCHINGRESULTS} isAlignedTop />);
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an image with a not-authorized status-view', () => {
-  const statusView = (<StatusView variant={StatusView.variants.NOTAUTHORIZED} />);
+  const statusView = (<StatusView variant={StatusView.Opts.variants.NOTAUTHORIZED} />);
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an image with an error status-view', () => {
-  const statusView = (<StatusView variant={StatusView.variants.ERROR} />);
+  const statusView = (<StatusView variant={StatusView.Opts.variants.ERROR} />);
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an image with a custom status-view', () => {
-  const statusView = (<StatusView variant={StatusView.variants.CUSTOM} />);
+  const statusView = (<StatusView variant={StatusView.Opts.variants.CUSTOM} />);
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();

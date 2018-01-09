@@ -162,7 +162,7 @@ class StatusView extends React.Component {
     }
     let defaultTitle = title;
     if (!defaultTitle) {
-      defaultTitle = (variant === StatusView.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
+      defaultTitle = (variant === StatusView.Opts.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
     }
     let dividerSection;
     if (messageSection || actionSection) {
@@ -207,5 +207,6 @@ class StatusView extends React.Component {
 StatusView.propTypes = propTypes;
 StatusView.contextTypes = contextTypes;
 StatusView.defaultProps = defaultProps;
-StatusView.variants = variants;
+StatusView.Opts = {};
+StatusView.Opts.variants = variants;
 export default StatusView;

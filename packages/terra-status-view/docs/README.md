@@ -18,7 +18,7 @@ import StatusView from 'terra-status-view';
 <StatusView
   isAlignedTop={false}
   isGlyphHidden={false}
-  variant={StatusView.variants.ERROR}
+  variant={StatusView.Opts.variants.ERROR}
   title="A 500 error was thrown from the service."
   message=message="A null pointer exception was thrown."
 >
