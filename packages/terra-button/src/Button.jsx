@@ -28,10 +28,6 @@ const ButtonTypes = {
 
 const propTypes = {
   /**
-   * Child nodes.
-   */
-  children: PropTypes.node,
-  /**
    * Sets the href. When set will render the component as an anchor tag.
    */
   href: PropTypes.string,
@@ -156,7 +152,6 @@ class Button extends React.Component {
 
   render() {
     const {
-      children,
       icon,
       isBlock,
       isDisabled,
@@ -227,7 +222,6 @@ class Button extends React.Component {
         href={href}
       >
         {buttonLabel}
-        {children}
       </ComponentType>
     );
   }

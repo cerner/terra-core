@@ -3,10 +3,12 @@ Changelog
 
 Unreleased
 ----------
+
+1.14.0 - (January 5, 2018)
+------------------
 ### Fixed
 * Fixed lint errors
 * Fixed color contrast ratios to pass accessibility testing
-* Fixed lint errors
 
 ### Removed
 * Removed console logs from test pages.

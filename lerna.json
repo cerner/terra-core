@@ -4,7 +4,8 @@
   "commands": {
     "publish": {
       "ignore": [
-        "DEPENDENCIES.md"
+        "DEPENDENCIES.md",
+        "terra-button"
       ]
     }
   },

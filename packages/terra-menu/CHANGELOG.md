@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Appropriate roles for accessibility
+
+### Changed
+* Divider component from an hr to an li with separator role.
+
+### Fixed
+* Fixed issue with left arrow presses on first layer.
+
+1.11.0 - (January 5, 2018)
+------------------
+### Fixed
+* Fixed issue with left arrow presses on first layer.
 
 1.10.0 - (December 5, 2017)
 ------------------

@@ -76,6 +76,13 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous
     browser.sendKeys('.TestNestedMenuContent', [browser.Keys.ARROW_LEFT]);
     browser.expect.element('.TestInitialMenuContent').to.be.visible;
   },
+  'Menu should not do anything when left arrow is pressed on the first layer': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/menu-tests/submenu`);
+    browser.click('#sub-menu-button');
+    browser.expect.element('.TestInitialMenuContent').to.be.present;
+    browser.sendKeys('.TestNestedMenu', [browser.Keys.LEFT_RIGHT]);
+    browser.expect.element('.TestInitialMenuContent').to.be.present;
+  },
   'Displays a selectable menu when there is one child': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/menu-tests/selectable`);
     browser.click('#selectable-menu-button');

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.15.0 - (January 5, 2018)
+------------------
 ### Removed
 * Removed mock theme from package
 

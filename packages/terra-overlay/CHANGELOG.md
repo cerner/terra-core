@@ -3,7 +3,11 @@ Changelog
 
 Unreleased
 ----------
-- Export overlay container
+
+1.15.0 - (January 5, 2018)
+------------------
+### Changed
+* Export overlay container
 
 1.14.0 - (November 28, 2017)
 ------------------

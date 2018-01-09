@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Add context to selectable list nightwatch example
+
+1.18.0 - (January 5, 2018)
+------------------
+### Changed
+* Minor version bump
 
 1.17.0 - (November 28, 2017)
 ------------------

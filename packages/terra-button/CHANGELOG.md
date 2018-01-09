@@ -11,6 +11,7 @@ Unreleased
 * size prop
 * isCompact prop
 * `primary`, `secondary`,  and `link` variants
+* children prop
 
 ### Changed
 * text prop is now required to meet accessibility
