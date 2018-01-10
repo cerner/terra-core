@@ -19,6 +19,9 @@ const ImageDefault = () => (
     <br />
     <h2>Fluid</h2>
     <Image src={placeholderPic1000x200} alt="fluid image" isFluid />
+    <br />
+    <h2>Placeholder</h2>
+    <Image src={placeholderPic150x150} placeholderSrc={placeholderPic1000x200} alt="placeholder image" />
   </div>
 );
 

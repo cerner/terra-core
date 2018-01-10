@@ -32,7 +32,7 @@ const propTypes = {
   onError: PropTypes.func,
 };
 
-const ProfileImage = props => <div><TerraImage placeholder={avatarImage} {...props} /></div>;
+const ProfileImage = props => <div><TerraImage placeholderSrc={avatarImage} {...props} /></div>;
 
 ProfileImage.propTypes = propTypes;
 
