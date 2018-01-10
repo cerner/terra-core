@@ -41,11 +41,11 @@ const propTypes = {
     */
   labelText: PropTypes.node.isRequired,
   /**
-    * Additional objects for the text object.
+    * Additional attributes for the text object.
     */
   labelTextAttrs: PropTypes.object,
   /**
-    * Name of the input attribute.
+    * Name attribute of the input.
     */
   name: PropTypes.string,
   /**
@@ -117,7 +117,7 @@ const Checkbox = ({
   const labelClasses = cx([
     'label',
     { 'is-disabled': disabled },
-    { 'is-mobile-label': CheckboxUtil.isConsideredMobileDevice() },
+    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -129,7 +129,7 @@ const Checkbox = ({
   const labelTextClasses = cx([
     'label-text',
     { 'is-hidden': isLabelHidden },
-    { 'is-mobile-checkbox': CheckboxUtil.isConsideredMobileDevice() },
+    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
   ]);
 
   let labelTextContainer = null;
