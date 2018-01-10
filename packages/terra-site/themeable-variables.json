@@ -517,7 +517,10 @@
     "--terra-status-view-divider-padding-top": "1.429rem",
     "--terra-status-view-buttons-flex-direction-small-width": "row",
     "--terra-status-view-buttons-padding-top": "0.714rem",
-    "--terra-status-view-button-flex": "initial"
+    "--terra-status-view-button-flex": "initial",
+    "--terra-status-view-actions-button-margin-left": "0.357rem",
+    "--terra-status-view-actions-button-margin-right": "0.357rem",
+    "--terra-status-view-actions-button-margin-top": "0px"
   },
   "Table": {
     "--terra-table-background-color": "#fff",

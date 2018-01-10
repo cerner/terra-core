@@ -37,6 +37,9 @@ describe('StatusView', () => {
       '--terra-status-view-actions-flex-direction-small-width': 'column',
       '--terra-status-view-actions-padding-top': '10px',
       '--terra-status-view-actions-button-flex': 'auto',
+      '--terra-status-view-actions-button-margin-left': '5px',
+      '--terra-status-view-actions-button-margin-right': '5px',
+      '--terra-status-view-actions-button-margin-top': '10px',
     });
   });
 
@@ -74,6 +77,9 @@ describe('StatusView', () => {
       '--terra-status-view-actions-flex-direction-small-width': 'column',
       '--terra-status-view-actions-padding-top': '10px',
       '--terra-status-view-actions-button-flex': 'auto',
+      '--terra-status-view-actions-button-margin-left': '5px',
+      '--terra-status-view-actions-button-margin-right': '5px',
+      '--terra-status-view-actions-button-margin-top': '10px',
     });
   });
 
@@ -153,6 +159,9 @@ describe('StatusView', () => {
       '--terra-status-view-actions-flex-direction-small-width': 'column',
       '--terra-status-view-actions-padding-top': '10px',
       '--terra-status-view-actions-button-flex': 'auto',
+      '--terra-status-view-actions-button-margin-left': '5px',
+      '--terra-status-view-actions-button-margin-right': '5px',
+      '--terra-status-view-actions-button-margin-top': '10px',
     });
   });
 });
