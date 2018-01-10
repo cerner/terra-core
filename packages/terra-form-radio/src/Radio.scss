@@ -133,11 +133,11 @@
 
     /* Hide label if isLabelHidden true */
     /* Label still needs to be big enough to house the radio */
-    .is-hidden {
+    .label.is-hidden {
       cursor: default;
-      height: var(--terra-form-radio-label-is-hidden-height, 14px);
+      height: var(--terra-form-radio-label-is-hidden-height, 1rem);
       margin-left: 0;
-      width: var(--terra-form-radio-label-is-hidden-width, 14px);
+      width: var(--terra-form-radio-label-is-hidden-width, 1rem);
     }
     /* stylelint-disable max-nesting-depth*/
     .label:hover {
@@ -148,7 +148,7 @@
     }
 
     /* Disabled native radio, label text, and custom radio styling */
-    .is-disabled {
+    .label.is-disabled {
       cursor: default;
 
       > .native-input:disabled {
@@ -201,7 +201,7 @@
     z-index: -1;
   }
 
-  .is-inline {
+  .radio.is-inline {
     display: inline-block;
   }
 }
