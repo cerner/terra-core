@@ -17,10 +17,6 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
   /**
-   * Indicates if the button should be selected on initial render.
-   */
-  isSelected: PropTypes.bool,
-  /**
    * Callback function triggered when button loses focus.
    */
   onBlur: PropTypes.func,
@@ -48,19 +44,16 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
-  isSelected: false,
 };
 
 
-const ButtonGroupButton = ({ isSelected, icon, ...customProps }) => {
+const ButtonGroupButton = ({ icon, ...customProps }) => {
   const attributes = Object.assign({}, customProps);
 
   const buttonClassName = cx([
     'button-group-button',
-    { 'is-active': isSelected },
     attributes.className,
   ]);
-  attributes['aria-pressed'] = isSelected;
 
   return (
     <Button

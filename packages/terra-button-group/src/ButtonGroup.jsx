@@ -20,9 +20,19 @@ const propTypes = {
   children: PropTypes.node,
 
   /**
+   * A list of keys of the buttons that should be selected initially.
+   */
+  defaultSelectedKeys: PropTypes.arrayOf(PropTypes.string),
+
+  /**
    * Callback function when the state changes. Parameters are (event, key).
    */
   onChange: PropTypes.func,
+
+  /**
+   * A list of keys of the buttons that should be selected. Use this prop along with onChange to create a controlled button group.
+   */
+  selectedKeys: PropTypes.arrayOf(PropTypes.string),
 
   /**
    * Sets the select type for toggle-style selectability. One of `SelectTypes['NON-SELECTABLE']`, `SelectTypes['SINGLE-SELECT']`, or `SelectTypes['MULTI-SELECT']`.
@@ -130,9 +140,12 @@ class ButtonGroup extends React.Component {
         onClick = this.wrapOnClick(child);
       }
 
+      const isActive = this.state.selectedKeys.indexOf(child.key) > -1;
+
       return React.cloneElement(child, {
         onClick,
-        isSelected: this.state.selectedKeys.indexOf(child.key) > -1,
+        className: cx({ 'is-active': isActive }),
+        'aria-pressed': isActive,
       });
     });
 

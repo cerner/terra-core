@@ -17,13 +17,13 @@
   }
 
   .button-group-button:first-child {
-    border-bottom-left-radius: 0.25em;
-    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: var(--terra-button-group-border-bottom-left-radius, 0.25em);
+    border-top-left-radius: var(--terra-button-group-border-top-left-radius, 0.25em);
   }
 
   .button-group-button:last-child {
-    border-bottom-right-radius: 0.25em;
-    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: var(--terra-button-group-border-bottom-right-radius, 0.25em);
+    border-top-right-radius: var(--terra-button-group-border-top-right-radius, 0.25em);
   }
 
   .button-group-button.is-active {
