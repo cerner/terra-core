@@ -189,6 +189,8 @@ class Tabs extends React.Component {
       </CollapsedTabs>
     );
 
+    debugger;
+
     return (
       <ContentContainer
         {...customProps}

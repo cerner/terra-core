@@ -17,12 +17,7 @@ const propTypes = {
   /**
    * Child nodes
    */
-  children: PropTypes.node,
-
-  /**
-   * A list of keys of the buttons that should be selected initially.
-   */
-  defaultSelectedKeys: PropTypes.arrayOf(PropTypes.string),
+  children: PropTypes.node.isRequired,
 
   /**
    * Callback function when the state changes. Parameters are (event, key).
@@ -30,7 +25,7 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * A list of keys of the buttons that should be selected. Use this prop along with onChange to create a controlled button group.
+   * A list of keys of the buttons that should be selected. Use this prop along with onChange to create a controlled button group. The keys will  be ignored if the selectedType is 'NON-SELECTABLE'.
    */
   selectedKeys: PropTypes.arrayOf(PropTypes.string),
 
@@ -42,42 +37,40 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
+  selectedKeys: [],
   selectType: SelectTypes['NON-SELECTABLE'],
 };
 
 class ButtonGroup extends React.Component {
-  static getInitialState(buttons, selectType) {
-    const selectedKeys = [];
-    if (selectType === SelectTypes['NON-SELECTABLE']) { return selectedKeys; }
-
-    for (let i = 0; i < buttons.length; i += 1) {
-      if (buttons[i].props.isSelected && !buttons[i].props.isDisabled) {
-        selectedKeys.push(buttons[i].key);
-
-        if (selectType === SelectTypes['SINGLE-SELECT']) { return selectedKeys; }
-      }
-    }
-
-    // A single select button group must have one button selected by default.
-    // If non was specified, default to select the first non disabled button in the group.
-    if (selectType === SelectTypes['SINGLE-SELECT']) {
-      for (let i = 0; i < buttons.length; i += 1) {
-        if (!buttons[i].props.isDisabled) {
-          selectedKeys.push(buttons[i].key);
-          return selectedKeys;
-        }
-      }
-    }
-
-    return selectedKeys;
-  }
 
   constructor(props) {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
+    this.getInitialState = this.getInitialState.bind(this);
     this.state = {
-      selectedKeys: ButtonGroup.getInitialState(this.props.children, this.props.selectType),
+      selectedKeys: this.getInitialState(),
     };
+  }
+
+  getInitialState() {
+    const initialSelectedKeys = [];
+    const selectType = this.props.selectType;
+
+    if (selectType === SelectTypes['SINGLE-SELECT']) {
+      if (this.props.selectedKeys.length) { return this.props.selectedKeys[0]; }
+
+      const buttons = this.props.children;
+      for (let i = 0; i < buttons.length; i += 1) {
+        if (!buttons[i].props.isDisabled) {
+          initialSelectedKeys.push(buttons[i].key);
+          return initialSelectedKeys;
+        }
+      }
+    } else if (selectType === SelectTypes['MULTI-SELECT']) {
+      return this.props.selectedKeys;
+    }
+
+    return initialSelectedKeys;
   }
 
   handleOnClick(event, key) {
@@ -90,19 +83,19 @@ class ButtonGroup extends React.Component {
 
     event.preventDefault();
 
-    let newKeys = [];
+    let newSelectedKeys = [];
     if (this.props.selectType === SelectTypes['SINGLE-SELECT']) {
-      newKeys.push(key);
+      newSelectedKeys.push(key);
     } else { // selectType should be 'MULTI-SELECT'
-      newKeys = this.state.selectedKeys.slice();
+      newSelectedKeys = this.state.selectedKeys.slice();
       if (index > -1) {
-        newKeys.splice(index, 1);
+        newSelectedKeys.splice(index, 1);
       } else {
-        newKeys.push(key);
+        newSelectedKeys.push(key);
       }
     }
 
-    this.setState({ selectedKeys: newKeys });
+    this.setState({ selectedKeys: newSelectedKeys });
 
     if (this.props.onChange) {
       this.props.onChange(event, key);
@@ -124,6 +117,7 @@ class ButtonGroup extends React.Component {
     const {
       children,
       onChange,
+      selectedKeys,
       selectType,
       ...customProps
     } = this.props;
@@ -141,6 +135,8 @@ class ButtonGroup extends React.Component {
       }
 
       const isActive = this.state.selectedKeys.indexOf(child.key) > -1;
+
+      debugger;
 
       return React.cloneElement(child, {
         onClick,
