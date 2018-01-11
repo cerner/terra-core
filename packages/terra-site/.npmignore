@@ -2,6 +2,7 @@
 node_modules
 reports
 build
+src
 aggregated-translations
 stats.json
 lib/App.js
