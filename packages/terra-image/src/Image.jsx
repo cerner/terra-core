@@ -24,9 +24,9 @@ const propTypes = {
    */
   alt: PropTypes.string.isRequired,
   /**
-   * The source string for the image which will be displayed during loading and in case of src load failure.
+   * A React element which will be displayed during loading and in case of src load failure.
    */
-  placeholderSrc: PropTypes.node,
+  placeholder: PropTypes.element,
   /**
    * Sets the height of the image.
    */
@@ -64,7 +64,7 @@ class Image extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // If a new image is being loaded, reset the state to loading
-    if (newProps.src !== this.props.src || newProps.placeholderSrc !== this.props.placeholderSrc) {
+    if (newProps.src !== this.props.src || newProps.placeholder !== this.props.placeholder) {
       this.setState({ isLoading: true, isError: false });
     }
   }
@@ -87,20 +87,6 @@ class Image extends React.Component {
     }
   }
 
-  createPlaceholderImage(customProps, imageClasses) {
-    const { placeholderSrc, alt, height, width } = this.props;
-    return (
-      <img
-        src={placeholderSrc}
-        alt={alt}
-        height={height}
-        width={width}
-        className={imageClasses}
-        {...customProps}
-      />
-    );
-  }
-
   createImage(customProps, imageClasses) {
     const { src, alt, height, width } = this.props;
     return (
@@ -118,7 +104,7 @@ class Image extends React.Component {
   }
 
   render() {
-    const { src, variant, isFluid, alt, placeholderSrc, height, width, onLoad, onError, ...customProps } = this.props;
+    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
 
     const imageClasses = cx([
       'image',
@@ -128,12 +114,12 @@ class Image extends React.Component {
     ]);
     delete customProps.className;
 
-    if (placeholderSrc) {
+    if (placeholder) {
       if (this.state.isLoading) {
         return (
           <div>
             <div className={cx('hidden')}>{this.createImage(customProps, imageClasses)}</div>
-            <div>{this.createPlaceholderImage(customProps, imageClasses)}</div>
+            <div>{placeholder}</div>
           </div>
         );
       }
@@ -142,7 +128,7 @@ class Image extends React.Component {
         <div>
           {
             this.state.isError ?
-              this.createPlaceholderImage(customProps, imageClasses) :
+              placeholder :
               this.createImage(customProps, imageClasses)
           }
         </div>
