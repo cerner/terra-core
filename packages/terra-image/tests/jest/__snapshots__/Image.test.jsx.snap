@@ -21,75 +21,65 @@ exports[`should render a circle image component with fluid behavior 1`] = `
 
 exports[`should render a hidden src image and a visible placeholder image 1`] = `
 <div>
-  <div>
-    <img
-      alt=" "
-      className="image default"
-      height="75"
-      onError={[Function]}
-      onLoad={[Function]}
-      placeholder="noImage.jpg"
-      src="profile.jpg"
-      width="75"
-    />
-  </div>
+  <img
+    alt=" "
+    className="image default"
+    height="75"
+    onError={[Function]}
+    onLoad={[Function]}
+    placeholder="noImage.jpg"
+    src="profile.jpg"
+    width="75"
+  />
 </div>
 `;
 
 exports[`should render a thumbail image component with fluid behavior 1`] = `
 <div>
-  <div>
-    <img
-      alt="thumbnail image"
-      class="image thumbnail fluid"
-      src=""
-    />
-  </div>
+  <img
+    alt="thumbnail image"
+    class="image thumbnail fluid"
+    src=""
+  />
 </div>
 `;
 
 exports[`should render a thumbail image component with non-fluid behavior 1`] = `
 <div>
-  <div>
-    <img
-      alt="thumbnail image"
-      class="image thumbnail"
-      src=""
-    />
-  </div>
+  <img
+    alt="thumbnail image"
+    class="image thumbnail"
+    src=""
+  />
 </div>
 `;
 
 exports[`should render the placeholder image 1`] = `
 <div>
-  <div>
-    <img
-      alt="avatar"
-      className="image default"
-      height="75"
-      onError={[Function]}
-      onLoad={[Function]}
-      placeholder="noImage.jpg"
-      src="profile.jpg"
-      width="75"
-    />
-  </div>
+  <img
+    alt="avatar"
+    className="image default"
+    height="75"
+    onError={[Function]}
+    onLoad={[Function]}
+    placeholder="noImage.jpg"
+    src="profile.jpg"
+    width="75"
+  />
 </div>
 `;
 
 exports[`should render the src image 1`] = `
 <div>
-  <div>
-    <img
-      alt="profile"
-      className="image default"
-      height="75"
-      onError={[Function]}
-      onLoad={[Function]}
-      placeholder="noImage.jpg"
-      src="profile.jpg"
-      width="75"
-    />
-  </div>
+  <img
+    alt="profile"
+    className="image default"
+    height="75"
+    onError={[Function]}
+    onLoad={[Function]}
+    placeholder="noImage.jpg"
+    src="profile.jpg"
+    width="75"
+  />
 </div>
 `;

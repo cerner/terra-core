@@ -26,7 +26,7 @@ const propTypes = {
   /**
    * The source string for the image which will be displayed during loading and in case of src load failure.
    */
-  placeholderSrc: PropTypes.string,
+  placeholderSrc: PropTypes.node,
   /**
    * Sets the height of the image.
    */
@@ -140,22 +140,16 @@ class Image extends React.Component {
 
       return (
         <div>
-          <div>
-            {
-              this.state.isError ?
-                this.createPlaceholderImage(customProps, imageClasses) :
-                this.createImage(customProps, imageClasses)
-            }
-          </div>
+          {
+            this.state.isError ?
+              this.createPlaceholderImage(customProps, imageClasses) :
+              this.createImage(customProps, imageClasses)
+          }
         </div>
       );
     }
 
-    return (
-      <div>
-        <div>{this.createImage(customProps, imageClasses)}</div>
-      </div>
-    );
+    return <div>{this.createImage(customProps, imageClasses)}</div>;
   }
 }
 
