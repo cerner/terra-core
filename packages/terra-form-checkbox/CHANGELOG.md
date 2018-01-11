@@ -4,10 +4,14 @@ ChangeLog
 (Unreleased)
 ----------
 ### Added
-* increase padding on mobile resize
+* Increase padding on mobile resize
+* Unchecked state transition
 
 ### Removed
-* select-container css class
+* Select-container css class
+
+### Changed
+* Focus styling: from box-shadow to border-width and border-color
 
 1.0.0 - (January 5, 2018)
 ------------------
