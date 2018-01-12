@@ -91,6 +91,7 @@ class Image extends React.Component {
     const { src, alt, height, width } = this.props;
     return (
       <img
+        {...customProps}
         src={src}
         alt={alt}
         height={height}
@@ -98,7 +99,6 @@ class Image extends React.Component {
         onLoad={this.handleOnLoad}
         onError={this.handleOnError}
         className={imageClasses}
-        {...customProps}
       />
     );
   }
