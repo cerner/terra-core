@@ -124,18 +124,10 @@ class Image extends React.Component {
         );
       }
 
-      return (
-        <div>
-          {
-            this.state.isError ?
-              placeholder :
-              this.createImage(customProps, imageClasses)
-          }
-        </div>
-      );
+      return this.state.isError ? placeholder : this.createImage(customProps, imageClasses);
     }
 
-    return <div>{this.createImage(customProps, imageClasses)}</div>;
+    return this.createImage(customProps, imageClasses);
   }
 }
 

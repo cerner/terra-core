@@ -43,43 +43,35 @@ exports[`should render a hidden src image and a visible placeholder image 1`] = 
 `;
 
 exports[`should render a thumbail image component with fluid behavior 1`] = `
-<div>
-  <img
-    alt="thumbnail image"
-    class="image thumbnail fluid"
-    src=""
-  />
-</div>
+<img
+  alt="thumbnail image"
+  class="image thumbnail fluid"
+  src=""
+/>
 `;
 
 exports[`should render a thumbail image component with non-fluid behavior 1`] = `
-<div>
-  <img
-    alt="thumbnail image"
-    class="image thumbnail"
-    src=""
-  />
-</div>
+<img
+  alt="thumbnail image"
+  class="image thumbnail"
+  src=""
+/>
 `;
 
 exports[`should render the placeholder image 1`] = `
 <div>
-  <div>
-    placeholder text
-  </div>
+  placeholder text
 </div>
 `;
 
 exports[`should render the src image 1`] = `
-<div>
-  <img
-    alt="profile"
-    className="image default"
-    height="75"
-    onError={[Function]}
-    onLoad={[Function]}
-    src="profile.jpg"
-    width="75"
-  />
-</div>
+<img
+  alt="profile"
+  className="image default"
+  height="75"
+  onError={[Function]}
+  onLoad={[Function]}
+  src="profile.jpg"
+  width="75"
+/>
 `;
