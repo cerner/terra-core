@@ -1,8 +1,6 @@
 *.log
 node_modules
-src
 reports
-tests
 build
 aggregated-translations
 stats.json
