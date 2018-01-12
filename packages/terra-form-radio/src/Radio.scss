@@ -3,9 +3,10 @@
     color: var(--terra-form-radio-font-color, rgb(0, 0, 0));
     display: block;
     font-family: inherit;
+    margin-bottom: var(--terra-form-radio-container-margin-bottom, 0);
     margin-left: var(--terra-form-radio-container-margin-left, none);
     margin-right: var(--terra-form-radio-container-margin-right, 2rem);
-    margin-top: var(--terra-form-radio-container-margin-top, 0.625rem);
+    margin-top: var(--terra-form-radio-container-margin-top, 0);
     position: relative;
 
     /* stylelint-disable selector-max-compound-selectors */
