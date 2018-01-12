@@ -5,9 +5,10 @@
     color: var(--terra-form-checkbox-font-color, rgb(0, 0, 0));
     display: block;
     font-family: inherit;
+    margin-bottom: var(--terra-form-checkbox-container-margin-bottom, 0);
     margin-left: var(--terra-form-checkbox-container-margin-left, none);
     margin-right: var(--terra-form-checkbox-container-margin-right, 2rem);
-    margin-top: var(--terra-form-checkbox-container-margin-top, 0.625rem);
+    margin-top: var(--terra-form-checkbox-container-margin-top, 0);
     position: relative;
 
     /* stylelint-disable selector-max-compound-selectors */
