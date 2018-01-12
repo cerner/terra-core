@@ -12,7 +12,6 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
     });
   });
@@ -26,10 +25,8 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
       '--terra-status-view-message-color': 'purple',
-      '--terra-status-view-message-font-family': 'Impact',
       '--terra-status-view-message-font-size': '24px',
       '--terra-status-view-message-padding-top': '10px',
       '--terra-status-view-message-text-align': 'left',
@@ -52,7 +49,6 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
     });
   });
@@ -66,10 +62,8 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
       '--terra-status-view-message-color': 'purple',
-      '--terra-status-view-message-font-family': 'Impact',
       '--terra-status-view-message-font-size': '24px',
       '--terra-status-view-message-padding-top': '10px',
       '--terra-status-view-message-text-align': 'left',
@@ -92,7 +86,6 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
     });
   });
@@ -106,7 +99,6 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
     });
   });
@@ -120,7 +112,6 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
     });
   });
@@ -134,7 +125,6 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
     });
   });
@@ -148,10 +138,8 @@ describe('StatusView', () => {
       '--terra-status-view-padding-bottom': '10px',
       '--terra-status-view-padding-top': '10px',
       '--terra-status-view-title-color': 'purple',
-      '--terra-status-view-title-font-family': 'Impact',
       '--terra-status-view-title-font-size': '36px',
       '--terra-status-view-message-color': 'purple',
-      '--terra-status-view-message-font-family': 'Impact',
       '--terra-status-view-message-font-size': '24px',
       '--terra-status-view-message-padding-top': '10px',
       '--terra-status-view-message-text-align': 'left',

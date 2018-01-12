@@ -37,6 +37,45 @@ exports[`should render an image with a custom status-view 1`] = `
 </StatusView>
 `;
 
+exports[`should render an image with a default status view 1`] = `
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="error"
+>
+  <div
+    className="status-view"
+  >
+    <div
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
+    >
+      <div
+        className="glyph"
+      >
+        <svg
+          className="error"
+        />
+      </div>
+      <div
+        className="message-content-group"
+      >
+        <div
+          className="title"
+        >
+          Error
+        </div>
+      </div>
+    </div>
+  </div>
+</StatusView>
+`;
+
 exports[`should render an image with a no-data status view that will hide the glyph from being shown 1`] = `
 <StatusView
   isAlignedTop={false}
@@ -245,45 +284,6 @@ exports[`should render an image with a not-authorized status-view 1`] = `
           className="title"
         >
           Not Authorized
-        </div>
-      </div>
-    </div>
-  </div>
-</StatusView>
-`;
-
-exports[`should render an image with a default status view 1`] = `
-<StatusView
-  isAlignedTop={false}
-  isGlyphHidden={false}
-  variant="error"
->
-  <div
-    className="status-view"
-  >
-    <div
-      className="status-view-inner"
-      style={
-        Object {
-          "paddingBottom": "0px",
-          "paddingTop": "0px",
-        }
-      }
-    >
-      <div
-        className="glyph"
-      >
-        <svg
-          className="error"
-        />
-      </div>
-      <div
-        className="message-content-group"
-      >
-        <div
-          className="title"
-        >
-          Error
         </div>
       </div>
     </div>

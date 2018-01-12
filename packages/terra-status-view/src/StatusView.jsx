@@ -43,8 +43,9 @@ const propTypes = {
   title: PropTypes.string,
 
   /**
-   * Determines the glyph to display, one of the following: 'no-data', 'no-matching-results',
-   * 'not-authorized', 'error', or 'custom'.
+   * Determines the glyph to display, one of the following: StatusView.Opts.variants.NODATA,
+   * StatusView.Opts.variants.NOMATCHINGRESULTS, StatusView.Opts.variants.NOTAUTHORIZED,
+   * StatusView.Opts.variants.ERROR, or StatusView.Opts.variants.CUSTOM.
    */
   variant: PropTypes.oneOf(Object.values(variants)),
 };
@@ -126,8 +127,7 @@ class StatusView extends React.Component {
       }
     }
 
-    // set which components can fit into the view and add the additional 20px
-    // top and bottom padding to the remaining additional padding leftover
+    // set which components can fit into the view
     this.setState({
       showGlyph,
       paddingTop,
@@ -150,15 +150,27 @@ class StatusView extends React.Component {
 
     let glyphSection;
     if (!isGlyphHidden && this.state.showGlyph) {
-      glyphSection = <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}><svg className={cx(variant)} /></div>;
+      glyphSection = (
+        <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
+          <svg className={cx(variant)} />
+        </div>
+      );
     }
     let messageSection;
     if (message) {
-      messageSection = <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>{message}</div>;
+      messageSection = (
+        <div className={cx('message')} ref={(element) => { this.messageNode = element; }}>
+          {message}
+        </div>
+      );
     }
     let actionSection;
     if (children.length) {
-      actionSection = <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>{children}</div>;
+      actionSection = (
+        <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>
+          {children}
+        </div>
+      );
     }
     let defaultTitle = title;
     if (!defaultTitle) {
@@ -166,10 +178,18 @@ class StatusView extends React.Component {
     }
     let dividerSection;
     if (messageSection || actionSection) {
-      dividerSection = <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}><Divider /></div>;
+      dividerSection = (
+        <div className={cx('divider')} ref={(element) => { this.dividerNode = element; }}>
+          <Divider />
+        </div>
+      );
     }
 
-    const titleSection = <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>{defaultTitle}</div>;
+    const titleSection = (
+      <div className={cx('title')} ref={(element) => { this.titleNode = element; }}>
+        {defaultTitle}
+      </div>
+    );
 
     const statusViewClassNames = cx([
       'status-view',
