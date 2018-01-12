@@ -141,7 +141,7 @@ const Checkbox = ({
   }
 
   return (
-    <div className={checkboxClasses}>
+    <div {...customProps} className={checkboxClasses}>
       <label htmlFor={id} className={labelClasses}>
         <input
           {...controlInputAttrs}
