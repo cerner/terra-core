@@ -2,6 +2,12 @@
 
 exports[`should render an image with a custom status-view 1`] = `
 <StatusView
+  customGlyph={
+    <IconDiamond
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
   isAlignedTop={false}
   isGlyphHidden={false}
   variant="custom"
@@ -21,9 +27,36 @@ exports[`should render an image with a custom status-view 1`] = `
       <div
         className="glyph"
       >
-        <svg
-          className="custom"
-        />
+        <IconDiamond
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            ariaLabel={null}
+            focusable={false}
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden="true"
+              className="icon"
+              focusable={false}
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24.8 47.7l22.9-22.9c.4-.4.4-1.1 0-1.6L24.8.3c-.4-.4-1.1-.4-1.6 0L.3 23.2c-.4.4-.4 1.1 0 1.6l22.9 22.9c.4.4 1.2.4 1.6 0z"
+                fill="#78288C"
+              />
+            </svg>
+          </IconBase>
+        </IconDiamond>
       </div>
       <div
         className="message-content-group"

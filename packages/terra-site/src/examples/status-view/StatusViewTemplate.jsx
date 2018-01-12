@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 const propTypes = {
   children: PropTypes.node,
+  customGlyph: PropTypes.node,
   isAlignedTop: PropTypes.bool,
   isGlyphHidden: PropTypes.bool,
   message: PropTypes.string,
@@ -54,6 +55,7 @@ class StatusViewTemplate extends React.Component {
   render() {
     const {
     children,
+    customGlyph,
     isAlignedTop,
     isGlyphHidden,
     message,
@@ -75,6 +77,7 @@ class StatusViewTemplate extends React.Component {
             variant={this.state.variant}
             title={title}
             message={message}
+            customGlyph={customGlyph}
           >
             {children}
           </StatusView>

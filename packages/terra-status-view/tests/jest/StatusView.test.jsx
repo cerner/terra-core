@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
+import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import intlContexts from './intl-context-setup';
 import StatusView from '../../src/StatusView';
 
@@ -50,7 +51,7 @@ it('should render an image with an error status-view', () => {
 });
 
 it('should render an image with a custom status-view', () => {
-  const statusView = (<StatusView variant={StatusView.Opts.variants.CUSTOM} />);
+  const statusView = (<StatusView variant={StatusView.Opts.variants.CUSTOM} customGlyph={<IconDiamond />} />);
 
   const wrapper = mount(statusView, intlContexts.mountContext);
   expect(wrapper).toMatchSnapshot();

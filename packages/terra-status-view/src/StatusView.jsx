@@ -22,6 +22,11 @@ const propTypes = {
   children: PropTypes.node,
 
   /**
+   * The glyph that is to be displayed for the StatusView.Opts.variants.CUSTOM variant.
+   */
+  customGlyph: PropTypes.node,
+
+  /**
    *  Determines if the content should be aligned vertically at the top of the container rather than in the middle.
    */
   isAlignedTop: PropTypes.bool,
@@ -37,8 +42,9 @@ const propTypes = {
   message: PropTypes.string,
 
   /**
-   * The status view's title to display. Status views with variants of type no-data, no-matching-results,
-   * not-authorized, and error will have defaulted values unless overridden with this prop.
+   * The status view's title to display. Status views with variants of type StatusView.Opts.variants.NODATA,
+   * StatusView.Opts.variants.NOMATCHINGRESULTS, StatusView.Opts.variants.NOTAUTHORIZED,
+   * StatusView.Opts.variants.ERROR will have defaulted values unless overridden with this prop.
    */
   title: PropTypes.string,
 
@@ -52,6 +58,7 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
+  customGlyph: undefined,
   isAlignedTop: false,
   isGlyphHidden: false,
   message: undefined,
@@ -138,6 +145,7 @@ class StatusView extends React.Component {
   render() {
     const {
     children,
+    customGlyph,
     isAlignedTop,
     isGlyphHidden,
     message,
@@ -150,11 +158,19 @@ class StatusView extends React.Component {
 
     let glyphSection;
     if (!isGlyphHidden && this.state.showGlyph) {
-      glyphSection = (
-        <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
-          <svg className={cx(variant)} />
-        </div>
-      );
+      if (variant === variants.CUSTOM) {
+        glyphSection = (
+          <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
+            {customGlyph}
+          </div>
+        );
+      } else {
+        glyphSection = (
+          <div className={cx('glyph')} ref={(element) => { this.glyphNode = element; }}>
+            <svg className={cx(variant)} />
+          </div>
+        );
+      }
     }
     let messageSection;
     if (message) {

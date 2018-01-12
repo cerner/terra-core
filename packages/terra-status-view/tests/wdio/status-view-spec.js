@@ -116,7 +116,7 @@ describe('StatusView', () => {
     });
   });
 
-  describe('Displays a custom status view that displays as empty by default', () => {
+  describe('Displays a custom status view', () => {
     beforeEach(() => browser.url('/#/tests/status-view-tests/custom'));
 
     Terra.should.matchScreenshot({ viewports });
