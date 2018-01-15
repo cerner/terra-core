@@ -86,6 +86,76 @@ const shouldHandleMultiSelect = (children, maxSelectionCount, currentIndexes, ne
  */
 const shouldHandleSingleSelect = (currentIndex, newIndex) => newIndex !== currentIndex;
 
+const wrappedOnClickForItem = (item, index, handleOnChange) => {
+  const initialOnClick = item.props.onClick;
+
+  return (event) => {
+    // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+    if (item.props.isSelectable !== false && handleOnChange) {
+      handleOnChange(event, index);
+    }
+
+    if (initialOnClick) {
+      initialOnClick(event);
+    }
+  };
+};
+
+const wrappedOnKeyDownForItem = (item, index, handleOnChange) => {
+  const initialOnKeyDown = item.props.onKeyDown;
+
+  return (event) => {
+    if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
+      // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
+      if (item.props.isSelectable !== false && handleOnChange) {
+        handleOnChange(event, index);
+      }
+    }
+
+    if (initialOnKeyDown) {
+      initialOnKeyDown(event);
+    }
+  };
+};
+
+const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems) => {
+  const isSelected = selectedIndexes.indexOf(index) >= 0;
+  const newProps = {};
+
+  // Set the isSelected attribute to false for all the items except the items whose index is set to state selectedIndex
+  if (isSelected !== item.isSelected) {
+    newProps.isSelected = isSelected;
+  }
+
+  // Set the default isSelectable attribute to true, unless the consumer specifies the item isSelectable attribute as false.
+  newProps.isSelectable = true;
+  if (item.props.isSelectable === false) {
+    newProps.isSelectable = item.props.isSelectable;
+  }
+
+  if (disableUnselectedItems && !isSelected) {
+    newProps.isSelectable = false;
+  }
+
+  // If selectable, add tabIndex on items to navigate through keyboard tab key for selectable lists and add
+  // onClick and onKeyDown functions.
+  if (newProps.isSelectable) {
+    newProps.tabIndex = '0';
+    newProps.onClick = onClick;
+    newProps.onKeyDown = onKeyDown;
+  }
+
+  // Uses the props.hasChevron value, unless the consumer specifies the item hasChevron attribute as false.
+  if (hasChevrons) {
+    newProps.hasChevron = hasChevrons;
+  }
+  if (item.props.hasChevron !== undefined) {
+    newProps.hasChevron = item.props.hasChevron;
+  }
+
+  return newProps;
+};
+
 const SelectableUtils = {
   initialSingleSelectedIndex,
   initialMultiSelectedIndexes,
@@ -94,6 +164,9 @@ const SelectableUtils = {
   shouldHandleMultiSelect,
   shouldHandleSingleSelect,
   KEYCODES,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  newPropsForItem,
 };
 
 export default SelectableUtils;
