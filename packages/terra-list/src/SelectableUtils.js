@@ -86,13 +86,16 @@ const shouldHandleMultiSelect = (children, maxSelectionCount, currentIndexes, ne
  */
 const shouldHandleSingleSelect = (currentIndex, newIndex) => newIndex !== currentIndex;
 
-const wrappedOnClickForItem = (item, index, handleOnChange) => {
+/**
+ * Returns a wrapped onClick callback function.
+ */
+const wrappedOnClickForItem = (item, index, onChange) => {
   const initialOnClick = item.props.onClick;
 
   return (event) => {
     // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
-    if (item.props.isSelectable !== false && handleOnChange) {
-      handleOnChange(event, index);
+    if (item.props.isSelectable !== false && onChange) {
+      onChange(event, index);
     }
 
     if (initialOnClick) {
@@ -101,14 +104,17 @@ const wrappedOnClickForItem = (item, index, handleOnChange) => {
   };
 };
 
-const wrappedOnKeyDownForItem = (item, index, handleOnChange) => {
+/**
+ * Returns a wrapped onKeyDown callback function with enter and space keys triggering onChange.
+ */
+const wrappedOnKeyDownForItem = (item, index, onChange) => {
   const initialOnKeyDown = item.props.onKeyDown;
 
   return (event) => {
     if (event.nativeEvent.keyCode === KEYCODES.ENTER || event.nativeEvent.keyCode === KEYCODES.SPACE) {
       // The default isSelectable attribute is either undefined or true, unless the consumer specifies the item isSelectable attribute as false.
-      if (item.props.isSelectable !== false && handleOnChange) {
-        handleOnChange(event, index);
+      if (item.props.isSelectable !== false && onChange) {
+        onChange(event, index);
       }
     }
 
@@ -118,6 +124,9 @@ const wrappedOnKeyDownForItem = (item, index, handleOnChange) => {
   };
 };
 
+/**
+ * Returns an objet containing accessiblity and selectable projects.
+ */
 const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems) => {
   const isSelected = selectedIndexes.indexOf(index) >= 0;
   const newProps = {};
