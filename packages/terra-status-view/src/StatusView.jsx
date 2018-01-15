@@ -172,6 +172,7 @@ class StatusView extends React.Component {
         );
       }
     }
+
     let messageSection;
     if (message) {
       messageSection = (
@@ -180,6 +181,7 @@ class StatusView extends React.Component {
         </div>
       );
     }
+
     let actionSection;
     if (children.length) {
       actionSection = (
@@ -188,10 +190,12 @@ class StatusView extends React.Component {
         </div>
       );
     }
+
     let defaultTitle = title;
     if (!defaultTitle) {
       defaultTitle = (variant === StatusView.Opts.variants.CUSTOM) ? '' : intl.formatMessage({ id: `Terra.status-view.${variant}` });
     }
+
     let dividerSection;
     if (messageSection || actionSection) {
       dividerSection = (
