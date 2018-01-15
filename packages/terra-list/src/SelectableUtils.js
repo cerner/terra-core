@@ -125,7 +125,7 @@ const wrappedOnKeyDownForItem = (item, index, onChange) => {
 };
 
 /**
- * Returns an objet containing accessiblity and selectable projects.
+ * Returns an object containing accessiblity and selectable properties.
  */
 const newPropsForItem = (item, index, onClick, onKeyDown, hasChevrons, selectedIndexes, disableUnselectedItems) => {
   const isSelected = selectedIndexes.indexOf(index) >= 0;
