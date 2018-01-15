@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Radio.scss';
-import RadioUtil from './RadioUtil';
+import RadioUtil from './_RadioUtil';
 
 const cx = classNames.bind(styles);
 
@@ -56,7 +56,7 @@ const propTypes = {
     * Function to trigger when user clicks on the radio button. Provide a function to create a controlled input.
     */
   onChange: PropTypes.func,
-    /**
+  /**
    *  Function to trigger when user focuses on the radio button.
    */
   onFocus: PropTypes.func,
@@ -149,7 +149,7 @@ const Radio = ({
   }
 
   return (
-    <div className={radioClasses}>
+    <div {...customProps} className={radioClasses}>
       <label htmlFor={id} className={labelClasses}>
         <input
           {...controlInputAttrs}

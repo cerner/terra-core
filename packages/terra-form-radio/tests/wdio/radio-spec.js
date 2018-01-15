@@ -1,55 +1,171 @@
 /* eslint-disable no-unused-expressions */
-/* global browser, Terra, before */
+/* global browser, Terra, beforeEach */
 
 describe('Radio', () => {
-  describe('Default Radio', () => {
-    before(() => browser.url('/#/tests/form-radio-tests/default'));
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+  beforeEach(() => {
+    browser.setViewportSize(Terra.viewports('tiny')[0]);
+
+    /* Hide native input and use custom checkbox to test themeable vars. */
     Terra.should.themeEachCustomProperty({
-      '--terra-form-radio-container-margin-right': '2rem',
-      '--terra-form-radio-container-margin-top': '0.625rem',
-      '--terra-form-radio-font-size, 1rem': '1rem',
-      '--terra-form-radio-line-height': '1.42',
-      '--terra-form-radio-native-input-margin-left': '0.071rem',
-      '--terra-form-radio-native-input-margin-right': '0.143rem',
-      '--terra-form-radio-label-text-margin-left': '1.4em',
+      '--terra-form-radio-container-margin-right': '1rem',
+      '--terra-form-radio-container-margin-top': '0',
+      '--terra-form-radio-font-size, 1rem': '1.1rem',
+      '--terra-form-radio-line-height': '1.7',
+      '--terra-form-radio-native-input-margin-left': '0.3rem',
+      '--terra-form-radio-native-input-margin-right': '0.3rem',
+      '--terra-form-radio-label-text-margin-left': '1.5em',
+      '--terra-form-radio-native-input-clip': 'rect(0 0 0 0)',
+      '--terra-form-radio-native-input-cursor': 'default',
+      '--terra-form-checkbox-native-input-font-size': 'none',
+      '--terra-form-checkbox-native-input-height': '1px',
+      '--terra-form-checkbox-native-input-margin-left': 'none',
+      '--terra-form-checkbox-native-input-margin-right': 'none',
+      '--terra-form-checkbox-native-input-overflow': 'hidden',
+      '--terra-form-checkbox-native-input-padding': 0,
+      '--terra-form-checkbox-native-input-width': '1px',
+      '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
+      '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+      '--terra-form-radio-outer-ring-border-radius': '50%',
+      '--terra-form-radio-outer-ring-border-style': 'solid',
+      '--terra-form-radio-outer-ring-border-width': '1px',
+      '--terra-form-radio-outer-ring-height': '20px',
+      '--terra-form-radio-outer-ring-margin-top': '4px',
+      '--terra-form-radio-outer-ring-width': '20px',
+      '--terra-form-radio-inner-ring-background-color': '#fff',
+      '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
+      '--terra-form-radio-inner-ring-border-style': 'solid',
+      '--terra-form-radio-inner-border-width': '1px',
+      '--terra-form-radio-inner-ring-height': '14px',
+      '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
+      '--terra-form-radio-inner-ring-width': '14px',
     });
   });
 
-  describe('Disabled Radio', () => {
-    before(() => {
-      browser.url('/#//tests/form-radio-tests/disabled');
+  describe('Default Custom Radio', () => {
+    beforeEach(() => {
+      browser.url('/#/tests/form-radio-tests/default');
     });
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
+
+    describe('Default Custom Radio - Hover', () => {
+      beforeEach(() => {
+        browser.waitForVisible('#default');
+        browser.moveToObject('#default');
+      });
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-radio-hover-border-color': '#800080',
+        '--terra-form-radio-hover-border-width': '2px',
+      });
+    });
+
+    describe('Default Custom Radio - Checked', () => {
+      beforeEach(() => {
+        browser.waitForVisible('#default');
+        browser.click('#default');
+      });
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-radio-outer-ring-checked-background-color': '#fff',
+        '--terra-form-radio-outer-ring-checked-border-color': '#4a90e2',
+        '--terra-form-radio-outer-ring-checked-border-radius': '50%',
+        '--terra-form-radio-outer-ring-checked-border-style': 'solid',
+        '--terra-form-radio-outer-ring-checked-border-width': '1px',
+        '--terra-form-radio-outer-ring-checked-height': '20px',
+        '--terra-form-radio-outer-ring-checked-margin-top': '4px',
+        '--terra-form-radio-outer-ring-checked-width': '20px',
+        '--terra-form-radio-inner-ring-checked-background-color': 'rgb(255, 0, 0)',
+        '--terra-form-radio-inner-ring-checked-border-color': 'rgb(255, 0, 0)',
+        '--terra-form-radio-inner-ring-checked-border-style': 'solid',
+        '--terra-form-radio-inner-ring-checked-border-width': '1px',
+        '--terra-form-radio-inner-ring-checked-height': '14px',
+        '--terra-form-radio-inner-ring-checked-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
+        '--terra-form-radio-inner-ring-checked-width': '14px',
+      });
+    });
+
+    describe('Default Custom Radio - Focus', () => {
+      beforeEach(() => {
+        browser.waitForVisible('#default');
+        browser.click('#default');
+      });
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-radio-focus-border-color': '#88a8ef',
+        '--terra-form-radio-focus-border-width': '2px',
+      });
+    });
+
+    describe('Default Custom Radio - Focus Ring', () => {
+      beforeEach(() => {
+        browser.waitForVisible('#default');
+        browser.moveToObject('#default');
+      });
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-radio-focus-ring-background-color': 'rgba(74, 144, 226, 0.25)',
+        '--terra-form-radio-focus-ring-height': '30px',
+        '--terra-form-radio-focus-ring-left': '-5px',
+        '--terra-form-radio-focus-ring-top': '-5px',
+        '--terra-form-radio-focus-ring-width': '30px',
+      });
+    });
+  });
+
+  describe('Disabled Custom Radio', () => {
+    beforeEach(() => {
+      browser.url('/#/tests/form-radio-tests/disabled');
+    });
+
+    Terra.should.matchScreenshot();
+    Terra.should.beAccessible();
+
     Terra.should.themeEachCustomProperty({
       '--terra-form-radio-disabled-font-color': '#9b9fa1',
+      '--terra-form-radio-outer-ring-disabled-background-color': 'rgba(0, 0, 0, 0.05)',
+      '--terra-form-radio-outer-ring-disabled-border-color': 'rgba(134, 138, 140, 0.4)',
+      '--terra-form-radio-inner-ring-disabled-background-color': 'rgba(0, 0, 0, 0.05)',
+      '--terra-form-radio-inner-ring-disabled-border-color': 'rgba(134, 138, 140, 0.4)',
+    });
+
+    describe('Disabled Custom Radio - Hover', () => {
+      beforeEach(() => {
+        browser.waitForVisible('#disabled');
+        browser.moveToObject('#disabled');
+      });
+
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
+
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-radio-disabled-hover-border-color': 'rgba(134, 138, 140, 0.4)',
+      });
     });
   });
 
   describe('Hidden Label Radio', () => {
-    before(() => browser.url('/#/tests/form-radio-tests/hidden'));
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
-  });
+    beforeEach(() => browser.url('/#/tests/form-radio-tests/hidden'));
 
-  describe('Populated Radio', () => {
-    before(() => browser.url('/#/tests/form-radio-tests/populated'));
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
-  });
 
-  describe('Long Text Radio', () => {
-    before(() => browser.url('/#/tests/form-radio-tests/longText'));
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
-  });
-
-  describe('Multiple Radios', () => {
-    before(() => browser.url('/#/tests/form-radio-tests/multiple'));
-    Terra.should.matchScreenshot();
-    Terra.should.beAccessible();
+    Terra.should.themeEachCustomProperty({
+      '--terra-form-radio-label-is-hidden-height': '20px',
+      '--terra-form-radio-label-is-hidden-width': '20px',
+    });
   });
 });

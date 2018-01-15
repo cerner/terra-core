@@ -17,7 +17,7 @@ import HiddenLabelRadio from './HiddenLabelRadioExample';
 import LongTextRadio from './LongTextRadioExample';
 import InlineRadios from './InlineRadiosExample';
 import MultipleRadios from './MultipleRadiosExample';
-import MobileCheckbox from '../form-checkbox/MobileCheckboxExample';
+import MobileButton from './MobileButton';
 
 class RadioExamples extends React.Component {
   constructor() {
@@ -61,7 +61,7 @@ class RadioExamples extends React.Component {
         <MultipleRadios />
         <br />
         <h2 id="mobile">[Theme Specific] Resize radio buttons on non-desktop touch device</h2>
-        <MobileCheckbox onChange={this.onChange} />
+        <MobileButton onChange={this.onChange} />
       </div>
     );
   }
