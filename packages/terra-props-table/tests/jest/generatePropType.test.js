@@ -63,7 +63,7 @@ describe('generatePropType', () => {
           value: { row: 'string', icon: 'element' },
         },
       };
-    expect(generatePropType(propType)).toEqual('`array of objects structured like: {\n "row": "string",\n "icon": "element"\n}`');
+    expect(generatePropType(propType)).toEqual('`array of objects structured like: {"row":"string","icon":"element"}`');
   });
 
   it('should return object format for shape', () => {
@@ -71,6 +71,6 @@ describe('generatePropType', () => {
       { name: 'shape',
         value: { row: 'string', icon: 'element' },
       };
-    expect(generatePropType(propType)).toEqual('`an object structured like: {\n "row": "string",\n "icon": "element"\n}`');
+    expect(generatePropType(propType)).toEqual('`an object structured like: {"row":"string","icon":"element"}`');
   });
 });
