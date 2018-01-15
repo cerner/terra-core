@@ -135,7 +135,7 @@ describe('Radio', () => {
     Terra.should.beAccessible();
 
     Terra.should.themeEachCustomProperty({
-      '--terra-form-radio-disabled-font-color': '#9b9fa1',
+      '--terra-form-radio-disabled-font-color': '#ffc0cb',
       '--terra-form-radio-outer-ring-disabled-background-color': 'rgba(0, 0, 0, 0.05)',
       '--terra-form-radio-outer-ring-disabled-border-color': 'rgba(134, 138, 140, 0.4)',
       '--terra-form-radio-inner-ring-disabled-background-color': 'rgba(0, 0, 0, 0.05)',
