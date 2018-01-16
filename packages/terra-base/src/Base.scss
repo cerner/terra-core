@@ -31,3 +31,35 @@ body {
 *::after {
   box-sizing: inherit;
 }
+
+a {
+  background-color: transparent; /* Remove the gray background on active links in IE 10. */
+  color: var(--terra-link-color, #0065a3);
+  outline: none;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--terra-link-visted-color, #0065a3);
+}
+
+a:hover {
+  color: var(--terra-link-hover-color, #004c76);
+}
+
+a:focus {
+  background-color: var(--terra-link-focus-background-color, rgba(136, 168, 239, 0.5));
+  border-radius: 0.2em;
+  color: var(--terra-link-focus-color, #004c76);
+}
+
+a:active {
+  color: var(--terra-link-active-color, #004c76);
+}
+
+/* stylelint-disable selector-no-qualifying-type  */
+a[aria-disabled='true'] {
+  color: var(--terra-link-hover-color, #909496);
+  pointer-events: none;
+}
+/* stylelint-enable */
