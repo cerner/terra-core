@@ -94,13 +94,6 @@ const StatusExamples = () => (
       <Button text="OK" key="1" size="medium" />
       <Button text="Cancel" key="2" size="medium" />
     </StatusViewTemplate>
-    <br />
-    <br />
-    <StatusViewTemplate
-      variant={StatusView.Opts.variants.CUSTOM}
-      customGlyph={<IconDiamond />}
-      title="Custom"
-    />
   </div>
 );
 
