@@ -25,6 +25,10 @@ const propTypes = {
    * Whether or not the list item has a disclosure indicator presented.
    */
   hasChevron: PropTypes.bool,
+  /**
+   * Function callback for the ref of the li.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -39,6 +43,7 @@ const ListItem = ({
     isSelected,
     isSelectable,
     hasChevron,
+    refCallback,
     ...customProps
   }) => {
   const listItemClassNames = cx([
@@ -52,7 +57,7 @@ const ListItem = ({
     const chevron = <span className={cx('chevron')}><ChevronRight height="0.8em" width="0.8em" /></span>;
 
     return (
-      <li {...customProps} className={listItemClassNames}>
+      <li {...customProps} className={listItemClassNames} ref={refCallback}>
         <Arrange
           fill={content}
           fitEnd={chevron}
@@ -63,7 +68,7 @@ const ListItem = ({
   }
 
   return (
-    <li {...customProps} className={listItemClassNames}>
+    <li {...customProps} className={listItemClassNames} ref={refCallback}>
       {content}
     </li>
   );
