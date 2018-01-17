@@ -41,11 +41,11 @@ const propTypes = {
     */
   labelText: PropTypes.node.isRequired,
   /**
-    * Additional objects for the text object.
+    * Additional attributes for the text object.
     */
   labelTextAttrs: PropTypes.object,
   /**
-    * Name of the input attribute.
+    * Name attribute of the input.
     */
   name: PropTypes.string,
   /**
@@ -114,13 +114,10 @@ const Checkbox = ({
     customProps.className,
   ]);
 
-  const selectContainer = cx([
-    'select-container',
-  ]);
-
   const labelClasses = cx([
     'label',
     { 'is-disabled': disabled },
+    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -144,24 +141,22 @@ const Checkbox = ({
   }
 
   return (
-    <div className={checkboxClasses}>
-      <div className={selectContainer}>
-        <label htmlFor={id} className={labelClasses}>
-          <input
-            {...controlInputAttrs}
-            type="checkbox"
-            id={id}
-            disabled={disabled}
-            name={name}
-            value={value}
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            className={inputClasses}
-          />
-          {labelTextContainer}
-        </label>
-      </div>
+    <div {...customProps} className={checkboxClasses}>
+      <label htmlFor={id} className={labelClasses}>
+        <input
+          {...controlInputAttrs}
+          type="checkbox"
+          id={id}
+          disabled={disabled}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          className={inputClasses}
+        />
+        {labelTextContainer}
+      </label>
     </div>
   );
 };

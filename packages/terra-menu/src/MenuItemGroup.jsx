@@ -31,14 +31,9 @@ class MenuItemGroup extends React.Component {
     const { children, onChange, ...customProps } = this.props;
 
     return (
-      <SingleSelectList.Item
-        {...customProps}
-        content={(
-          <SingleSelectList onChange={onChange} >
-            {children}
-          </SingleSelectList>
-        )}
-      />
+      <SingleSelectList {...customProps} onChange={onChange} role="group">
+        {children}
+      </SingleSelectList>
     );
   }
 }

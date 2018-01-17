@@ -1,5 +1,5 @@
 function formatShape(shape) {
-  return JSON.stringify(shape, null, 1);
+  return JSON.stringify(shape, null, null);
 }
 
 const generatePropType = (type) => {
