@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Add context to selectable list example
 
+### Added
+* Add terra-form-radio components
+
 1.21.0 - (January 5, 2018)
 ------------------
 ### Added
