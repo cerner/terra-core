@@ -185,6 +185,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/spacer">Spacer</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status">Status</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/status-view">Status View</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/table">Table</Link>} />
           <List.Item content={<TableComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/tabs">Tabs</Link>} />
