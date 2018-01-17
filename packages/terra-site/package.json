@@ -81,6 +81,7 @@
     "terra-slide-panel": "^1.14.0",
     "terra-spacer": "^1.1.0",
     "terra-status": "^1.17.0",
+    "terra-status-view": "^0.x",
     "terra-table": "^1.18.0",
     "terra-tabs": "^1.0.0",
     "terra-text": "^1.15.0",

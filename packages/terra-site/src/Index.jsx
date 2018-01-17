@@ -48,6 +48,7 @@ import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import SpacerExamples from './examples/spacer/Index';
 import StatusExamples from './examples/status/Index';
+import StatusViewExamples from './examples/status-view/Index';
 import TableExamples from './examples/table/Index';
 import TabsExamples from './examples/tabs/Index';
 import TextExamples from './examples/text/Index';
@@ -117,6 +118,7 @@ import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelT
 import SpacerTestRoutes from 'terra-spacer/tests/nightwatch/SpacerTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import StatusViewTestRoutes from 'terra-status-view/tests/nightwatch/StatusViewTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TabsTestRoutes from 'terra-tabs/tests/nightwatch/Tabs/TabsTestRoutes';
@@ -177,6 +179,7 @@ ReactDOM.render((
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="spacer" component={SpacerExamples} />
       <Route path="status" component={StatusExamples} />
+      <Route path="status-view" component={StatusViewExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="tabs" component={TabsExamples} />
       <Route path="text" component={TextExamples} />
@@ -252,6 +255,7 @@ ReactDOM.render((
     {HookshotTestRoutes}
     {SelectTestRoutes}
     {SelectOptionTestRoutes}
+    {StatusViewTestRoutes}
     {TabsTestRoutes}
     {TabPaneTestRoutes}
   </Router>
