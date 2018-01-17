@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Checkbox.scss';
-import CheckboxUtil from './CheckboxUtil';
+import styles from './Radio.scss';
+import RadioUtil from './_RadioUtil';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-    * Whether or not the checkbox element is checked. Use this to generate a controlled Checkbox Element.
+    * Whether or not the radio button is checked. Use this to generate a controlled radio button.
     */
   checked: PropTypes.bool,
   /**
-    * The checked property of the Input element. Use this to generate an uncontrolled Checkbox Element.
+    * The checked property of the Input element. Use this to generate an uncontrolled radio button.
     */
   defaultChecked: PropTypes.bool,
   /**
-    * The id of the checkbox.
+    * The id of the radio button.
     */
   id: PropTypes.string,
   /**
@@ -25,11 +25,11 @@ const propTypes = {
     */
   inputAttrs: PropTypes.object,
   /**
-    * Whether the checkbox element is disabled.
+    * Whether the radio button is disabled.
     */
   disabled: PropTypes.bool,
   /**
-    * Whether the checkbox element is inline.
+    * Whether the radio button is inline.
     */
   isInline: PropTypes.bool,
   /**
@@ -49,15 +49,15 @@ const propTypes = {
     */
   name: PropTypes.string,
   /**
-   * Function to trigger when focus is lost from the checkbox.
+   * Function to trigger when focus is lost from the radio button.
    */
   onBlur: PropTypes.func,
   /**
-    * Function to trigger when user clicks on the checkbox. Provide a function to create a controlled input.
+    * Function to trigger when user clicks on the radio button. Provide a function to create a controlled input.
     */
   onChange: PropTypes.func,
   /**
-   *  Function to trigger when user focuses on the checkbox.
+   *  Function to trigger when user focuses on the radio button.
    */
   onFocus: PropTypes.func,
   /**
@@ -83,7 +83,7 @@ const defaultProps = {
   value: undefined,
 };
 
-const Checkbox = ({
+const Radio = ({
     checked,
     defaultChecked,
     inputAttrs,
@@ -108,8 +108,8 @@ const Checkbox = ({
     controlInputAttrs.defaultChecked = defaultChecked;
   }
 
-  const checkboxClasses = cx([
-    'checkbox',
+  const radioClasses = cx([
+    'radio',
     { 'is-inline': isInline },
     customProps.className,
   ]);
@@ -117,7 +117,8 @@ const Checkbox = ({
   const labelClasses = cx([
     'label',
     { 'is-disabled': disabled },
-    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
+    { 'is-hidden': isLabelHidden },
+    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -128,8 +129,15 @@ const Checkbox = ({
 
   const labelTextClasses = cx([
     'label-text',
-    { 'is-hidden': isLabelHidden },
-    { 'is-mobile': CheckboxUtil.isConsideredMobileDevice() },
+  ]);
+
+  const outerRingClasses = cx([
+    'outer-ring',
+    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
+  ]);
+
+  const innerRingClasses = cx([
+    'inner-ring',
   ]);
 
   let labelTextContainer = null;
@@ -141,11 +149,11 @@ const Checkbox = ({
   }
 
   return (
-    <div {...customProps} className={checkboxClasses}>
+    <div {...customProps} className={radioClasses}>
       <label htmlFor={id} className={labelClasses}>
         <input
           {...controlInputAttrs}
-          type="checkbox"
+          type="radio"
           id={id}
           disabled={disabled}
           name={name}
@@ -155,13 +163,16 @@ const Checkbox = ({
           onBlur={onBlur}
           className={inputClasses}
         />
+        <span className={outerRingClasses}>
+          <span className={innerRingClasses} />
+        </span>
         {labelTextContainer}
       </label>
     </div>
   );
 };
 
-Checkbox.propTypes = propTypes;
-Checkbox.defaultProps = defaultProps;
+Radio.propTypes = propTypes;
+Radio.defaultProps = defaultProps;
 
-export default Checkbox;
+export default Radio;

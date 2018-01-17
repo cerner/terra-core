@@ -5,18 +5,11 @@
     color: var(--terra-form-checkbox-font-color, rgb(0, 0, 0));
     display: block;
     font-family: inherit;
+    margin-bottom: var(--terra-form-checkbox-container-margin-bottom, 0);
     margin-left: var(--terra-form-checkbox-container-margin-left, none);
     margin-right: var(--terra-form-checkbox-container-margin-right, 2rem);
-    margin-top: var(--terra-form-checkbox-container-margin-top, 0.625rem);
+    margin-top: var(--terra-form-checkbox-container-margin-top, 0);
     position: relative;
-
-    /* Hitbox will only surround checkbox + label, instead of the div block */
-    /* Padding increases hitbox area */
-    .select-container {
-      display: inline-block;
-      padding-bottom: var(--terra-form-checkbox-select-container-padding-bottom, 0.3125rem);
-      padding-top: var(--terra-form-checkbox-select-container-padding-top, 0.3125rem);
-    }
 
     /* stylelint-disable selector-max-compound-selectors */
     .label {
@@ -26,6 +19,10 @@
       line-height: var(--terra-form-checkbox-line-height, 1.42);
       padding-left: var(--terra-form-checkbox-padding-left, none);
       position: relative;
+    }
+
+    .label.is-mobile {
+      padding-left: var(--terra-form-checkbox-is-mobile-padding-left, none);
     }
 
     /* Native checkbox shown when theme uses browser native styling */
@@ -69,6 +66,7 @@
       margin-top: var(--terra-form-checkbox-margin-top, none);
       position: absolute;
       top: 0;
+      transition: var(--terra-form-checkbox-transition, none);
       width: var(--terra-form-checkbox-width, none);
     }
 
@@ -89,27 +87,25 @@
       padding-right: var(--terra-form-checkbox-checked-symbol-padding-right, none);
       padding-top: var(--terra-form-checkbox-checked-symbol-padding-top, none);
       position: absolute;
-      text-align: center;
       top: 0;
       transform: var(--terra-form-checkbox-checked-transform, none);
       transition: var(--terra-form-checkbox-checked-transition, none);
-      vertical-align: middle;
       width: var(--terra-form-checkbox-checked-width, none);
     }
 
-    .native-input + .is-mobile::before {
+    .native-input + .label-text.is-mobile::before {
       height: var(--terra-form-checkbox-is-mobile-height, none);
       width: var(--terra-form-checkbox-is-mobile-width, none);
     }
 
-    .native-input:checked + .is-mobile::before {
+    .native-input:checked + .label-text.is-mobile::before {
       height: var(--terra-form-checkbox-is-mobile-checked-height, none);
       line-height: var(--terra-form-checkbox-is-mobile-checked-line-height, none);
       width: var(--terra-form-checkbox-is-mobile-checked-width, none);
     }
 
     /* Hide label if isLabelHidden true */
-    .is-hidden {
+    .label-text.is-hidden {
       cursor: default;
       height: 1rem;
       margin-left: 0;
@@ -120,19 +116,12 @@
     .label:hover {
       .label-text::before {
         border-color: var(--terra-form-checkbox-hover-border-color, none);
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-form-checkbox-hover-shadow-rtl, none);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-form-checkbox-hover-shadow-ltr, none);
-        }
+        border-width: var(--terra-form-checkbox-hover-border-width, none);
       }
     }
 
     /* Disabled native checkbox, label text, and custom checkbox styling */
-    .is-disabled {
+    .label.is-disabled {
       cursor: default;
 
       > .native-input:disabled {
@@ -154,32 +143,18 @@
 
       &:hover > .label-text::before {
         border-color: var(--terra-form-checkbox-disabled-hover-border-color, none);
-
-        [dir=rtl] & {
-          box-shadow: var(--terra-form-checkbox-disabled-hover-box-shadow-rtl, none);
-        }
-
-        [dir=ltr] & {
-          box-shadow: var(--terra-form-checkbox-disabled-hover-box-shadow-ltr, none);
-        }
+        border-width: var(--terra-form-checkbox-disabled-hover-border-width, none);
       }
     }
     /* stylelint-enable max-nesting-depth */
 
     /* Focus custom checkbox styling */
     .native-input:focus + .label-text::before {
-      border-color: var(--terra-form-checkbox-focus-box-border-color, none);
-
-      [dir=rtl] & {
-        box-shadow: var(--terra-form-checkbox-focus-box-shadow-rtl, none);
-      }
-
-      [dir=ltr] & {
-        box-shadow: var(--terra-form-checkbox-focus-box-shadow-ltr, none);
-      }
+      border-color: var(--terra-form-checkbox-focus-border-color, none);
+      border-width: var(--terra-form-checkbox-focus-border-width, none);
     }
 
-    /* Focus ring surrounding the checkbox */
+    /* Large focus ring */
     .native-input:focus + .label-text::after {
       background-color: var(--terra-form-checkbox-focus-ring-background-color, none);
       border-radius: 50%;
@@ -193,8 +168,7 @@
     }
   }
 
-  .is-inline {
+  .checkbox.is-inline {
     display: inline-block;
-    vertical-align: middle;
   }
 }

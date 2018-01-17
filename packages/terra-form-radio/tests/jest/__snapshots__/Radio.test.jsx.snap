@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a ChoiceField with a radio 1`] = `
+<div
+  className="radio"
+>
+  <label
+    className="label healtheintent-label-text"
+  >
+    <input
+      className="native-input healtheintent-application"
+      disabled={false}
+      name="children_present"
+      type="radio"
+      value="children_present"
+    />
+    <span
+      className="outer-ring"
+    >
+      <span
+        className="inner-ring"
+      />
+    </span>
+    <span
+      className="label-text"
+    >
+      Do you have any Children?
+    </span>
+  </label>
+</div>
+`;
+
+exports[`should render a controlled radio 1`] = `
+<div
+  className="radio"
+>
+  <label
+    className="label"
+  >
+    <input
+      checked={true}
+      className="native-input"
+      disabled={false}
+      name={null}
+      onChange={[Function]}
+      type="radio"
+    />
+    <span
+      className="outer-ring"
+    >
+      <span
+        className="inner-ring"
+      />
+    </span>
+    <span
+      className="label-text"
+    >
+      Radio
+    </span>
+  </label>
+</div>
+`;
+
+exports[`should render a disabled radio 1`] = `
+<div
+  className="radio"
+>
+  <label
+    className="label is-disabled"
+  >
+    <input
+      checked={true}
+      className="native-input"
+      disabled={true}
+      name={null}
+      onChange={[Function]}
+      type="radio"
+    />
+    <span
+      className="outer-ring"
+    >
+      <span
+        className="inner-ring"
+      />
+    </span>
+    <span
+      className="label-text"
+    >
+      Radio
+    </span>
+  </label>
+</div>
+`;
+
+exports[`should render a radio 1`] = `
+<div
+  className="radio"
+>
+  <label
+    className="label"
+  >
+    <input
+      className="native-input"
+      disabled={false}
+      name={null}
+      type="radio"
+    />
+    <span
+      className="outer-ring"
+    >
+      <span
+        className="inner-ring"
+      />
+    </span>
+    <span
+      className="label-text"
+    >
+      Radio
+    </span>
+  </label>
+</div>
+`;
+
+exports[`should render a radio with a hidden label 1`] = `
+<div
+  className="radio"
+>
+  <label
+    className="label is-hidden"
+  >
+    <input
+      aria-label="Radio"
+      checked={true}
+      className="native-input"
+      disabled={false}
+      name={null}
+      onChange={[Function]}
+      type="radio"
+    />
+    <span
+      className="outer-ring"
+    >
+      <span
+        className="inner-ring"
+      />
+    </span>
+    <span
+      className="label-text"
+    />
+  </label>
+</div>
+`;
+
+exports[`should render an uncontrolled radio 1`] = `
+<div
+  className="radio"
+>
+  <label
+    className="label"
+  >
+    <input
+      className="native-input"
+      defaultChecked={true}
+      disabled={false}
+      name={null}
+      type="radio"
+    />
+    <span
+      className="outer-ring"
+    >
+      <span
+        className="inner-ring"
+      />
+    </span>
+    <span
+      className="label-text"
+    >
+      Radio
+    </span>
+  </label>
+</div>
+`;
