@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Checkbox from 'terra-form-checkbox/lib/Checkbox';
+import Button from 'terra-button/lib/Button';
 
 const propTypes = { onChange: PropTypes.func };
 const defaultProps = { onChange: undefined };
 
-class MobileCheckbox extends React.Component {
+class MobileButton extends React.Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -20,14 +20,13 @@ class MobileCheckbox extends React.Component {
     const { onChange } = this.props;
 
     return (
-      <Checkbox id="mobileCheckbox" labelText="Toggle to trigger resize. Window size needs to be less than or equal to 1024px." onChange={onChange} />
+      <Button id="mobileButton" text="Toggle" onClick={onChange} />
     );
   }
 
 }
 
-MobileCheckbox.propTypes = propTypes;
-MobileCheckbox.defaultProps = defaultProps;
+MobileButton.propTypes = propTypes;
+MobileButton.defaultProps = defaultProps;
 
-export default MobileCheckbox;
-
+export default MobileButton;
