@@ -59,7 +59,7 @@ a:active {
 
 /* stylelint-disable selector-no-qualifying-type  */
 a[aria-disabled='true'] {
-  color: var(--terra-link-hover-color, #909496);
+  color: var(--terra-link-disabled-hover-color, #909496);
   pointer-events: none;
 }
 /* stylelint-enable */
