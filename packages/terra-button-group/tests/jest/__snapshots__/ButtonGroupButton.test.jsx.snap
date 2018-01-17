@@ -2,71 +2,38 @@
 
 exports[`should render a default component 1`] = `
 <Button
-  aria-pressed={false}
   className="button-group-button"
   isBlock={false}
-  isCompact={false}
   isDisabled={false}
+  isIconOnly={false}
   isReversed={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="Default Button"
   type="button"
-  variant="default"
+  variant="neutral"
 />
 `;
 
-exports[`should render as selected 1`] = `
+exports[`should render as disabled 1`] = `
 <Button
-  aria-pressed={true}
-  className="button-group-button is-active"
+  className="button-group-button is-disabled"
   isBlock={false}
-  isCompact={false}
-  isDisabled={false}
+  isDisabled={true}
+  isIconOnly={false}
   isReversed={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="Disabled"
   type="button"
-  variant="default"
-/>
-`;
-
-exports[`should render with icon and text 1`] = `
-<Button
-  aria-pressed={false}
-  className="button-group-button"
-  icon={
-    <img
-      alt="icon"
-    />
-  }
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isReversed={false}
-  text="text"
-  type="button"
-  variant="default"
-/>
-`;
-
-exports[`should render with icon and text reversed 1`] = `
-<Button
-  aria-pressed={false}
-  className="button-group-button"
-  icon={
-    <img
-      alt="icon"
-    />
-  }
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isReversed={true}
-  text="text"
-  type="button"
-  variant="default"
+  variant="neutral"
 />
 `;
 
 exports[`should render with icon only 1`] = `
 <Button
-  aria-pressed={false}
   className="button-group-button"
   icon={
     <img
@@ -74,24 +41,96 @@ exports[`should render with icon only 1`] = `
     />
   }
   isBlock={false}
-  isCompact={false}
   isDisabled={false}
+  isIconOnly={true}
   isReversed={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="Icon Only"
   type="button"
-  variant="default"
+  variant="neutral"
 />
 `;
 
-exports[`should render with text 1`] = `
+exports[`should render with onBlur 1`] = `
 <Button
-  aria-pressed={false}
   className="button-group-button"
   isBlock={false}
-  isCompact={false}
   isDisabled={false}
+  isIconOnly={false}
   isReversed={false}
-  text="text"
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="onBlur"
   type="button"
-  variant="default"
+  variant="neutral"
+/>
+`;
+
+exports[`should render with onClick 1`] = `
+<Button
+  className="button-group-button"
+  isBlock={false}
+  isDisabled={false}
+  isIconOnly={false}
+  isReversed={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="onClick"
+  type="button"
+  variant="neutral"
+/>
+`;
+
+exports[`should render with onFocus 1`] = `
+<Button
+  className="button-group-button"
+  isBlock={false}
+  isDisabled={false}
+  isIconOnly={false}
+  isReversed={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="onFocus"
+  type="button"
+  variant="neutral"
+/>
+`;
+
+exports[`should render with onKeyDown 1`] = `
+<Button
+  className="button-group-button"
+  isBlock={false}
+  isDisabled={false}
+  isIconOnly={false}
+  isReversed={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="onKeyDown"
+  type="button"
+  variant="neutral"
+/>
+`;
+
+exports[`should render with onKeyUp 1`] = `
+<Button
+  className="button-group-button"
+  isBlock={false}
+  isDisabled={false}
+  isIconOnly={false}
+  isReversed={false}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  text="onKeyUp"
+  type="button"
+  variant="neutral"
 />
 `;

@@ -1,6 +1,6 @@
 # Terra Button Group
 
- The Terra Button Group component groups buttons and maintains a toggle selection state. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
+ The Terra Button Group component is a controlled component that groups buttons and allows the consumer to manage the selection state of each button in the group. The consumer must manage the selection state of the buttons because the Button Group does not keep track of the selection state. A controlled Button Group gives the consumer the flexibility to compose a single-select button group as well as a multi-select button group. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
 
 ## Getting Started
 
@@ -9,6 +9,8 @@
   - `yarn add terra-button-group`
 
 ## Usage
+
+### Not Selectable Button Group
 
 ```jsx
 import React from 'react';
@@ -19,12 +21,85 @@ import ButtonGroup from 'terra-button-group';
     <ButtonGroup.Button text="Button 1" key="button1" />
     <ButtonGroup.Button text="Button 2" key="button2" />
   </ButtonGroup>
+```
 
-// Selectable (toggle style) button group with second button pre-selected
-  <ButtonGroup isSelectable>
-    <ButtonGroup.Button text="Button 1" key="button1" />
-    <ButtonGroup.Button isSelected text="Button 2" key="button2" />
-  </ButtonGroup>
+### Single-Select Button Group
+```jsx
+import React from 'react';
+import ButtonGroup from '../../src/ButtonGroup';
+
+class SingleSelectButtonGroup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { selectedKey: ['1'] };
+    this.handleSelection = this.handleSelection.bind(this);
+  }
+
+  handleSelection(event, selectedKey) {
+    if (ButtonGroup.Utils.shouldHandleSingleSelection(this.state.selectedKey, selectedKey)) {
+      event.preventDefault();
+      this.setState({ selectedKey: [selectedKey] });
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Selected Button: <span id="selected-key">{this.state.selectedKey}</span></h3>
+        <ButtonGroup
+          id="button-group-single-select"
+          onChange={this.handleSelection}
+          selectedKeys={this.state.selectedKey}
+        >
+          <ButtonGroup.Button text="Single-Select 1" key="1" />
+          <ButtonGroup.Button text="Single-Select 2" key="2" />
+          <ButtonGroup.Button text="Single-Select 3" key="3" />
+          <ButtonGroup.Button text="Single-Select 4" key="4" />
+        </ButtonGroup>
+      </div>
+    );
+  }
+}
+export default SingleSelectButtonGroup;
+```
+
+### Multi-Select Button Group
+```jsx
+import React from 'react';
+import ButtonGroup from '../../src/ButtonGroup';
+
+class MultiSelectButtonGroup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { selectedKeys: [] };
+    this.handleSelection = this.handleSelection.bind(this);
+  }
+
+  handleSelection(event, key) {
+    event.preventDefault();
+    this.setState({ selectedKeys: ButtonGroup.Utils.handleMultiSelectedKeys(this.state.selectedKeys, key) });
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Selected Button(s): <span id="selected-keys">{this.state.selectedKeys.join(', ')}</span></h3>
+        <ButtonGroup
+          id="button-group-multi-select"
+          onChange={this.handleSelection}
+          selectedKeys={this.state.selectedKeys}
+        >
+          <ButtonGroup.Button text="Mult-Select 1" key="1" />
+          <ButtonGroup.Button text="Mult-Select 2" key="2" />
+          <ButtonGroup.Button text="Mult-Select 3" key="3" />
+          <ButtonGroup.Button text="Mult-Select 4" key="4" />
+        </ButtonGroup>
+      </div>
+    );
+  }
+}
+
+export default MultiSelectButtonGroup;
 ```
 
 ## Component Features

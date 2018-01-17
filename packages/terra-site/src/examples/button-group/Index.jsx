@@ -10,8 +10,11 @@ import ButtonGroupSrc from '!raw-loader!terra-button-group/src/ButtonGroup.jsx';
 import ButtonGroupButtonSrc from '!raw-loader!terra-button-group/src/ButtonGroupButton.jsx';
 /* eslint-enable import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions */
 // Examples
-import ButtonGroupSelectable from './ButtonGroupSelectable';
 import ButtonGroupWithIcons from './ButtonGroupWithIcons';
+import ButtonGroupDisabledButtons from './ButtonGroupDisabledButtons';
+import ButtonGroupSingleSelect from './ButtonGroupSingleSelect';
+import ButtonGroupMultiSelect from './ButtonGroupMultiSelect';
+
 
 const ButtonGroupExamples = () => (
   <div>
@@ -19,11 +22,14 @@ const ButtonGroupExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonGroupSrc} componentName="Button Group" />
     <PropsTable id="button-props" src={ButtonGroupButtonSrc} componentName="Button Group Button" />
-    <h2>Icons</h2>
+    <h2>Text and Icon</h2>
     <ButtonGroupWithIcons />
-    <br />
-    <h2>Selectable</h2>
-    <ButtonGroupSelectable />
+    <h2>Single Select</h2>
+    <ButtonGroupSingleSelect />
+    <h2>Multi Select</h2>
+    <ButtonGroupMultiSelect />
+    <h2>Disabled Buttons</h2>
+    <ButtonGroupDisabledButtons />
   </div>
 );
 

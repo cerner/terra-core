@@ -7,6 +7,12 @@ import styles from './ButtonGroupButton.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  ENTER: 13,
+  SPACE: 32,
+  TAB: 9,
+};
+
 const propTypes = {
   /**
    * An optional icon. Nested inline with the text when provided
@@ -46,24 +52,76 @@ const defaultProps = {
   isDisabled: false,
 };
 
+class ButtonGroupButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { focused: false };
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleOnBlur = this.handleOnBlur.bind(this);
+  }
 
-const ButtonGroupButton = ({ icon, ...customProps }) => {
-  const attributes = Object.assign({}, customProps);
+  handleOnBlur(event) {
+    this.setState({ focused: false });
 
-  const buttonClassName = cx([
-    'button-group-button',
-    attributes.className,
-  ]);
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
+    }
+  }
 
-  return (
-    <Button
-      {...attributes}
-      icon={icon}
-      isIconOnly={icon != null}
-      variant={Button.Opts.Variants.NEUTRAL}
-      className={buttonClassName}
-    />);
-};
+  handleKeyDown(event) {
+    // Add focus styles for keyboard navigation
+    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+  }
+
+  handleKeyUp(event) {
+    // Apply focus styles for keyboard navigation
+    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onKeyUp) {
+      this.props.onKeyUp(event);
+    }
+  }
+
+  render() {
+    const {
+      icon,
+      isDisabled,
+      ...customProps
+    } = this.props;
+
+    const attributes = Object.assign({}, customProps);
+
+    const buttonClassName = cx([
+      'button-group-button',
+      { 'is-disabled': isDisabled },
+      { 'is-focused': this.state.focused },
+      attributes.className,
+    ]);
+
+    return (
+      <Button
+        {...attributes}
+        icon={icon}
+        isDisabled={isDisabled}
+        isIconOnly={icon != null}
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
+        onBlur={this.handleOnBlur}
+        variant={Button.Opts.Variants.NEUTRAL}
+        className={buttonClassName}
+      />
+    );
+  }
+}
 
 ButtonGroupButton.propTypes = propTypes;
 ButtonGroupButton.defaultProps = defaultProps;
