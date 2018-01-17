@@ -1,13 +1,4 @@
 /* global $, before, browser, Terra */
-const viewports = Terra.viewports('tiny', 'medium');
-
-const ignoredA11y = {
-  // https://github.com/cerner/terra-core/issues/1058
-  'internal-link-present': { enabled: false },
-  // https://github.com/cerner/terra-core/issues/1061
-  'header-present': { enabled: false },
-};
-
 describe('Base', () => {
   describe('Switching Locales', () => {
     before(() => browser.url('/#/tests/base-tests/switch'));
@@ -37,10 +28,13 @@ describe('Base', () => {
   });
 
   describe('Anchors', () => {
+    const viewports = Terra.viewports('tiny', 'medium');
+    const ignoredA11y = {
+      'internal-link-present': { enabled: false },
+      'header-present': { enabled: false },
+    };
     beforeEach(() => browser.url('/#/tests/base-tests/anchors'));
 
-    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
-    Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty({
       '--terra-link-color': '#0065a3',
       '--terra-link-visted-color': '#0065a3',
@@ -50,5 +44,8 @@ describe('Base', () => {
       '--terra-link-active-color': '#004c76',
       '--terra-link-disabled-hover-color': '#909496',
     });
+
+    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
   });
 });
