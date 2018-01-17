@@ -4,15 +4,15 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Supports single-select and mulit-select.
-* `non-selectable`,  `single-select`, `multi-select` select types in ButtonGroup
+* selectedKeys in ButtonGroup
 * isDisabled, onBlur, onFocus, onKeyDown, onKeyUp props in ButtonGroup.Button
 
 ### Removed
-* buttons, isCompact, size, variant props in ButtonGroup
-* children, isReversed props in ButtonGroup.Button
+* buttons, isCompact, isSelectable, size, variant props in ButtonGroup
+* children, isReversed, isSelected props in ButtonGroup.Button
 
 ### Changed
+* Changed to a controlled component.
 * text prop is now required.
 
 1.16.0 - (January 5, 2018)
