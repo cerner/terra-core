@@ -16,6 +16,10 @@ const propTypes = {
    * Whether or not the child list items should have a border color applied.
    */
   isDivided: PropTypes.bool,
+  /**
+   * Function callback for the ref of the ul.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -26,6 +30,7 @@ const defaultProps = {
 const List = ({
     children,
     isDivided,
+    refCallback,
     ...customProps
   }) => {
   const listClassNames = cx([
@@ -35,7 +40,7 @@ const List = ({
   ]);
 
   return (
-    <ul {...customProps} className={listClassNames}>
+    <ul {...customProps} className={listClassNames} ref={refCallback}>
       {children}
     </ul>
   );
