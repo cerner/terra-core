@@ -34,9 +34,9 @@ describe('Button Group', () => {
     });
 
     Terra.should.themeEachCustomProperty({
-      '--terra-button-group-active-background-color': 'white',
-      '--terra-button-group-active-and-hover-background-color': 'white',
-      '--terra-button-group-active-and-focus-background-color': 'white',
+      '--terra-button-group-button-active-background-color': 'white',
+      '--terra-button-group-button-active-and-hover-background-color': 'white',
+      '--terra-button-group-button-active-and-focus-background-color': 'white',
     });
 
     Terra.should.beAccessible();
@@ -71,9 +71,9 @@ describe('Button Group', () => {
     });
 
     Terra.should.themeEachCustomProperty({
-      '--terra-button-group-active-background-color': 'white',
-      '--terra-button-group-active-and-hover-background-color': 'white',
-      '--terra-button-group-active-and-focus-background-color': 'white',
+      '--terra-button-group-button-active-background-color': 'white',
+      '--terra-button-group-button-active-and-hover-background-color': 'white',
+      '--terra-button-group-button-active-and-focus-background-color': 'white',
     });
 
     Terra.should.beAccessible();
@@ -108,9 +108,9 @@ describe('Button Group', () => {
     });
 
     Terra.should.themeEachCustomProperty({
-      '--terra-button-group-active-background-color': 'white',
-      '--terra-button-group-active-and-hover-background-color': 'white',
-      '--terra-button-group-active-and-focus-background-color': 'white',
+      '--terra-button-group-button-active-background-color': 'white',
+      '--terra-button-group-button-active-and-hover-background-color': 'white',
+      '--terra-button-group-button-active-and-focus-background-color': 'white',
     });
 
     Terra.should.beAccessible();

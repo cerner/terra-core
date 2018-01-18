@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from '../../src/ButtonGroup';
+import ButtonGroup from '../../lib/ButtonGroup';
 
 export default () => (
   <ButtonGroup id="button-group-not-selectable" >

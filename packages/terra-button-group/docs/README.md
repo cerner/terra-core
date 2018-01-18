@@ -26,37 +26,27 @@ import ButtonGroup from 'terra-button-group';
 ### Single-Select Button Group
 ```jsx
 import React from 'react';
-import ButtonGroup from '../../src/ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 
 class SingleSelectButtonGroup extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selectedKey: ['1'] };
+    this.state = { selectedKey: '1' };
     this.handleSelection = this.handleSelection.bind(this);
   }
 
   handleSelection(event, selectedKey) {
-    if (ButtonGroup.Utils.shouldHandleSingleSelection(this.state.selectedKey, selectedKey)) {
-      event.preventDefault();
-      this.setState({ selectedKey: [selectedKey] });
-    }
+    this.setState({ selectedKey: [selectedKey] });
   }
 
   render() {
     return (
-      <div>
-        <h3>Selected Button: <span id="selected-key">{this.state.selectedKey}</span></h3>
-        <ButtonGroup
-          id="button-group-single-select"
-          onChange={this.handleSelection}
-          selectedKeys={this.state.selectedKey}
-        >
-          <ButtonGroup.Button text="Single-Select 1" key="1" />
-          <ButtonGroup.Button text="Single-Select 2" key="2" />
-          <ButtonGroup.Button text="Single-Select 3" key="3" />
-          <ButtonGroup.Button text="Single-Select 4" key="4" />
-        </ButtonGroup>
-      </div>
+      <ButtonGroup onChange={this.handleSelection} selectedKeys={this.state.selectedKey}>
+        <ButtonGroup.Button text="Single-Select 1" key="1" />
+        <ButtonGroup.Button text="Single-Select 2" key="2" />
+        <ButtonGroup.Button text="Single-Select 3" key="3" />
+        <ButtonGroup.Button text="Single-Select 4" key="4" />
+      </ButtonGroup>
     );
   }
 }
@@ -66,7 +56,7 @@ export default SingleSelectButtonGroup;
 ### Multi-Select Button Group
 ```jsx
 import React from 'react';
-import ButtonGroup from '../../src/ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 
 class MultiSelectButtonGroup extends React.Component {
   constructor(props) {
@@ -75,26 +65,27 @@ class MultiSelectButtonGroup extends React.Component {
     this.handleSelection = this.handleSelection.bind(this);
   }
 
-  handleSelection(event, key) {
-    event.preventDefault();
-    this.setState({ selectedKeys: ButtonGroup.Utils.handleMultiSelectedKeys(this.state.selectedKeys, key) });
+  handleSelection(event, selectedKey) {
+    const clonedSelectedKeys = this.state.selectedKeys.slice();
+    const index = clonedSelectedKeys.indexOf(selectedKey);
+
+    if (index > -1) {
+      clonedSelectedKeys.splice(index, 1);
+    } else {
+      clonedSelectedKeys.push(newSelectedKey);
+    }
+
+    this.setState({ selectedKeys: clonedSelectedKeys });
   }
 
   render() {
     return (
-      <div>
-        <h3>Selected Button(s): <span id="selected-keys">{this.state.selectedKeys.join(', ')}</span></h3>
-        <ButtonGroup
-          id="button-group-multi-select"
-          onChange={this.handleSelection}
-          selectedKeys={this.state.selectedKeys}
-        >
-          <ButtonGroup.Button text="Mult-Select 1" key="1" />
-          <ButtonGroup.Button text="Mult-Select 2" key="2" />
-          <ButtonGroup.Button text="Mult-Select 3" key="3" />
-          <ButtonGroup.Button text="Mult-Select 4" key="4" />
-        </ButtonGroup>
-      </div>
+      <ButtonGroup onChange={this.handleSelection} selectedKeys={this.state.selectedKeys}>
+        <ButtonGroup.Button text="Mult-Select 1" key="1" />
+        <ButtonGroup.Button text="Mult-Select 2" key="2" />
+        <ButtonGroup.Button text="Mult-Select 3" key="3" />
+        <ButtonGroup.Button text="Mult-Select 4" key="4" />
+      </ButtonGroup>
     );
   }
 }

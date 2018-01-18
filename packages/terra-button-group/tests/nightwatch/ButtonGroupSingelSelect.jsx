@@ -1,17 +1,17 @@
 import React from 'react';
-import ButtonGroup from '../../src/ButtonGroup';
+import ButtonGroup from '../../lib/ButtonGroup';
 
 class ButtonGroupSingleSelect extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selectedKey: ['1'] };
+    this.state = { selectedKey: '1' };
     this.handleSelection = this.handleSelection.bind(this);
   }
 
   handleSelection(event, selectedKey) {
     if (ButtonGroup.Utils.shouldHandleSingleSelection(this.state.selectedKey, selectedKey)) {
       event.preventDefault();
-      this.setState({ selectedKey: [selectedKey] });
+      this.setState({ selectedKey });
     }
   }
 
@@ -22,7 +22,7 @@ class ButtonGroupSingleSelect extends React.Component {
         <ButtonGroup
           id="button-group-single-select"
           onChange={this.handleSelection}
-          selectedKeys={this.state.selectedKey}
+          selectedKeys={[this.state.selectedKey]}
         >
           <ButtonGroup.Button text="Single-Select 1" key="1" />
           <ButtonGroup.Button text="Single-Select 2" key="2" />
