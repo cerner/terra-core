@@ -183,7 +183,7 @@ class StatusView extends React.Component {
     }
 
     let actionSection;
-    if (children.length || !Array.isArray(children)) { // Single children are objects, not arrays
+    if (React.Children.count(children) > 0) {
       actionSection = (
         <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>
           {children}
