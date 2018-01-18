@@ -98,18 +98,16 @@ class ButtonGroupButton extends React.Component {
       ...customProps
     } = this.props;
 
-    const attributes = Object.assign({}, customProps);
-
     const buttonClassName = cx([
       'button-group-button',
       { 'is-disabled': isDisabled },
       { 'is-focused': this.state.focused },
-      attributes.className,
+      customProps.className,
     ]);
 
     return (
       <Button
-        {...attributes}
+        {...customProps}
         icon={icon}
         isDisabled={isDisabled}
         isIconOnly={icon != null}
