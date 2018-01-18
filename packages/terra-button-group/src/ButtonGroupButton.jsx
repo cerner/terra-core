@@ -15,7 +15,7 @@ const KEYCODES = {
 
 const propTypes = {
   /**
-   * An optional icon. Nested inline with the text when provided
+   * An optional icon. If an icon is provided, it will be an icon only button and the provided text is set as the aria-label for accessibility.
    */
   icon: PropTypes.element,
   /**
@@ -27,7 +27,7 @@ const propTypes = {
    */
   onBlur: PropTypes.func,
   /**
-   * Callback function triggered when clicked
+   * Callback function triggered when clicked.
    */
   onClick: PropTypes.func,
   /**
@@ -70,7 +70,8 @@ class ButtonGroupButton extends React.Component {
   }
 
   handleKeyDown(event) {
-    // Add focus styles for keyboard navigation
+    // Add focus styles for keyboard navigation.
+    // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
     if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
       this.setState({ focused: true });
     }
@@ -81,7 +82,8 @@ class ButtonGroupButton extends React.Component {
   }
 
   handleKeyUp(event) {
-    // Apply focus styles for keyboard navigation
+    // Apply focus styles for keyboard navigation.
+    // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
     if (event.nativeEvent.keyCode === KEYCODES.TAB) {
       this.setState({ focused: true });
     }
