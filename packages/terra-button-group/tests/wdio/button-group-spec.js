@@ -34,9 +34,9 @@ describe('Button Group', () => {
     });
 
     Terra.should.themeEachCustomProperty({
-      '--terra-button-group-button-active-background-color': 'white',
-      '--terra-button-group-button-active-and-hover-background-color': 'white',
-      '--terra-button-group-button-active-and-focus-background-color': 'white',
+      '--terra-button-group-button-active-background-color': '#8bc2f9',
+      '--terra-button-group-button-active-and-hover-background-color': '#8bc2f9',
+      '--terra-button-group-button-active-and-focus-background-color': '#8bc2f9',
     });
 
     Terra.should.beAccessible();
@@ -59,7 +59,7 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('3');
+    Terra.should.matchScreenshot('2');
   });
 
   describe('Single-Select', () => {
@@ -71,9 +71,9 @@ describe('Button Group', () => {
     });
 
     Terra.should.themeEachCustomProperty({
-      '--terra-button-group-button-active-background-color': 'white',
-      '--terra-button-group-button-active-and-hover-background-color': 'white',
-      '--terra-button-group-button-active-and-focus-background-color': 'white',
+      '--terra-button-group-button-active-background-color': '#8bc2f9',
+      '--terra-button-group-button-active-and-hover-background-color': '#8bc2f9',
+      '--terra-button-group-button-active-and-focus-background-color': '#8bc2f9',
     });
 
     Terra.should.beAccessible();
@@ -96,7 +96,7 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('3');
+    Terra.should.matchScreenshot('2');
   });
 
   describe('Multi-Select', () => {
@@ -108,9 +108,9 @@ describe('Button Group', () => {
     });
 
     Terra.should.themeEachCustomProperty({
-      '--terra-button-group-button-active-background-color': 'white',
-      '--terra-button-group-button-active-and-hover-background-color': 'white',
-      '--terra-button-group-button-active-and-focus-background-color': 'white',
+      '--terra-button-group-button-active-background-color': '#8bc2f9',
+      '--terra-button-group-button-active-and-hover-background-color': '#8bc2f9',
+      '--terra-button-group-button-active-and-focus-background-color': '#8bc2f9',
     });
 
     Terra.should.beAccessible();
@@ -131,7 +131,7 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('3');
+    Terra.should.matchScreenshot('2');
 
     it('should select the third button', () => {
       browser.keys('Tab');
@@ -140,7 +140,7 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('4');
+    Terra.should.matchScreenshot('3');
 
     it('should unselect the third button', () => {
       browser.keys('Space');
@@ -148,6 +148,6 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('5');
+    Terra.should.matchScreenshot('4');
   });
 });
