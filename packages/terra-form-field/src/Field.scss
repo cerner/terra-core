@@ -73,6 +73,7 @@
     color: var(--terra-form-field-error-text-color, #e50000);
     font-size: var(--terra-form-field-error-text-font-size, 0.857rem);
     font-weight: var(--terra-form-field-error-text-font-weight, normal);
+    height: var(--terra-form-field-error-text-height, 14px);
     line-height: 1.25;
     margin-top: var(--terra-form-field-error-text-margin-top, 0.357em);
     text-align: left;
