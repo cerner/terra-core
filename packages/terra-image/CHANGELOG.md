@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Implemented placeholder image for loading and error views
 
 1.14.0 - (January 5, 2018)
 ------------------

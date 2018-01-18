@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Moved placeholder logic out of this component
 
 1.13.0 - (January 5, 2018)
 ------------------
