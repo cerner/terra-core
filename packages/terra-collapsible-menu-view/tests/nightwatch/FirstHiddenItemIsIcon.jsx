@@ -14,6 +14,7 @@ const CollapsibleMenuViewDemo = () => (
       text="Button3"
       className="IconOnly"
       key="button3"
+      isIconOnly
     />
   </CollapsibleMenuView>
 );
