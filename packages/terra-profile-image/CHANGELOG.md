@@ -3,8 +3,11 @@ Changelog
 
 Unreleased
 ----------
+
+1.14.0 - (January 18, 2018)
+------------------
 ### Changed
-* Moved placeholder logic out of this component
+* Moved placeholder logic out of this component and into terra-image
 
 1.13.0 - (January 5, 2018)
 ------------------
