@@ -24,7 +24,7 @@ const Dialog = ({ name, ...customProps }) => {
     attributes.className,
   ]);
 
-  return (<div {...attributes} className={DialogClassNames} />);
+  return (<div {...attributes} className={DialogClassNames}>{name}</div>);
 };
 
 Dialog.propTypes = propTypes;

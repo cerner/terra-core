@@ -72,6 +72,7 @@ import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DateTimePickerTestRoutes from 'terra-date-time-picker/tests/nightwatch/DateTimePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import DialogTestRoutes from 'terra-dialog/tests/nightwatch/DialogTestRoutes';
 import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes';
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
@@ -206,6 +207,7 @@ ReactDOM.render((
     {DatePickerTestRoutes}
     {DateTimePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {DialogTestRoutes}
     {DividerTestRoutes}
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}

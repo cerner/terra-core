@@ -13,7 +13,7 @@ describe('Dialog', () => {
   // Prop Tests
   it('should use the default value when no value is given', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.dialog').text()).toEqual('defualt');
+    expect(wrapper.find('.dialog').text()).toEqual('default');
   });
 
   // Structure Tests

@@ -5,7 +5,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default dialog': (browser) => {
     browser
-      .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/dialog-tests/default`)
-      .expect.element('.dialog').to.be.present;
+      .url(`${browser.launchUrl}/#/tests/dialog-tests/default`)
+      .expect.element('#dialog').to.be.present;
   },
 });
