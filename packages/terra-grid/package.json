@@ -1,7 +1,7 @@
 {
   "name": "terra-grid",
   "main": "lib/Grid.js",
-  "version": "3.18.0",
+  "version": "3.19.0",
   "description": "The grid component provides a flexbox based grid system.",
   "repository": {
     "type": "git",
@@ -33,16 +33,16 @@
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   },
   "devDependencies": {
-    "terra-props-table": "^1.10.1"
+    "terra-props-table": "^1.11.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.9.0"
+    "terra-base": "^2.10.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.9.0"
+    "terra-base": "^2.10.0"
   }
 }

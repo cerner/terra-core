@@ -183,7 +183,7 @@ class StatusView extends React.Component {
     }
 
     let actionSection;
-    if (children.length) {
+    if (React.Children.count(children) > 0) {
       actionSection = (
         <div className={cx('actions')} ref={(element) => { this.actionsNode = element; }}>
           {children}

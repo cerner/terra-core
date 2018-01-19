@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.10.0 - (January 18, 2018)
+------------------
 ### Changed
 * Force JSON.stringify to output with no spaces.
 

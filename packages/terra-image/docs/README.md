@@ -10,7 +10,7 @@ The terra-image component provides styling for visual imagery.
 
 ## Usage
 
-Add the class terra-Image to the img tag. There are additional modifier classes for border radius such as rounded, circle, and thumbnail. There is also a fluid class to adjust width into the parent container.
+Add the class terra-Image to the img tag. There are additional modifier classes for border radius such as rounded, circle, and thumbnail. There is also a fluid class to adjust width into the parent container. A placeholder can be provided to be shown during loading of the source image and on failed loading attempts.
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)

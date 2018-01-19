@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import 'terra-base/lib/baseStyles';
 import TerraImage from 'terra-image';
 import avatarImage from './avatar.svg';
-import styles from './ProfileImage.scss';
 
 /* eslint react/no-unused-prop-types: [0] */
 const propTypes = {
@@ -33,65 +32,17 @@ const propTypes = {
   onError: PropTypes.func,
 };
 
-const avatarOverrideProps = { src: avatarImage, onLoad: undefined, onError: undefined };
-
-class ProfileImage extends React.Component {
-  static createAvatarImage(props) {
-    return new TerraImage(Object.assign({}, props, avatarOverrideProps));
-  }
-
-  constructor(props) {
-    super(props);
-
-    this.state = { isLoading: true, isError: false };
-  }
-
-  componentWillReceiveProps(newProps) {
-    // If a new image is being loaded, reset the state to loading
-    if (newProps.src !== this.props.src) {
-      this.setState({ isLoading: true, isError: false });
-    }
-  }
-
-  handleOnLoad(onLoad) {
-    this.setState({ isLoading: false });
-    if (onLoad !== undefined) {
-      onLoad();
-    }
-  }
-
-  handleOnError(onError) {
-    this.setState({ isLoading: false, isError: true });
-    if (onError !== undefined) {
-      onError();
-    }
-  }
-
-  createProfileImage(props) {
-    const profileOverrideProps = {
-      onLoad: () => { this.handleOnLoad(props.onLoad); },
-      onError: () => { this.handleOnError(props.onError); },
-    };
-    return new TerraImage(Object.assign({}, props, profileOverrideProps));
-  }
-
-  render() {
-    if (this.state.isLoading) {
-      return (
-        <div>
-          <div className={styles.hidden}>{this.createProfileImage(this.props)}</div>
-          <div>{ProfileImage.createAvatarImage(this.props)}</div>
-        </div>
-      );
-    }
-
-    return (
-      <div>
-        <div>{this.state.isError ? ProfileImage.createAvatarImage(this.props) : this.createProfileImage(this.props)}</div>
-      </div>
-    );
-  }
-}
+const ProfileImage = (props) => {
+  const placeholderImage = (
+    <img
+      src={avatarImage}
+      alt={props.alt}
+      height={props.height}
+      width={props.width}
+    />
+  );
+  return <div><TerraImage placeholder={placeholderImage} {...props} /></div>;
+};
 
 ProfileImage.propTypes = propTypes;
 

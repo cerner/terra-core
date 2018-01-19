@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.12.0 - (January 18, 2018)
+------------------
 ### Added
 * Appropriate roles for accessibility
 
