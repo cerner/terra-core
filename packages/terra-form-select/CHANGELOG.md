@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 -----------------
+
+1.3.0 - (January 18, 2018)
+------------------
 ### Added
 * Added name helper param to onChange callback
 

@@ -1,7 +1,7 @@
 {
   "name": "terra-list",
   "main": "lib/List.js",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "description": "terra-list",
   "repository": {
     "type": "git",
@@ -21,20 +21,20 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.10.1"
+    "terra-props-table": "^1.11.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.9.0",
-    "terra-icon": "^1.16.0"
+    "terra-base": "^2.10.0",
+    "terra-icon": "^1.17.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^1.17.0",
-    "terra-base": "^2.9.0",
-    "terra-icon": "^1.16.0"
+    "terra-arrange": "^1.18.0",
+    "terra-base": "^2.10.0",
+    "terra-icon": "^1.17.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

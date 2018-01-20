@@ -1,7 +1,7 @@
 {
   "name": "terra-form-radio",
   "main": "lib/Radio.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space.",
   "repository": {
     "type": "git",
@@ -21,17 +21,17 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.10.1"
+    "terra-props-table": "^1.11.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.0.0"
+    "terra-base": "^2.10.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.0.0"
+    "terra-base": "^2.10.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -40,7 +40,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/FormRadio.jsx --out-dir ./docs/props-table",
+    "props-table": "props-table ./src/Radio.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",

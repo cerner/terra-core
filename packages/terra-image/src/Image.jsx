@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The source for the image which will be displayed.
+   * The source string for the image which will be loaded and displayed.
    */
   src: PropTypes.string.isRequired,
   /**
@@ -23,6 +23,10 @@ const propTypes = {
    * The text content that specifies an alternative text for an image.
    */
   alt: PropTypes.string.isRequired,
+  /**
+   * A React element which will be displayed during loading and in case of src load failure.
+   */
+  placeholder: PropTypes.element,
   /**
    * Sets the height of the image.
    */
@@ -47,36 +51,85 @@ const defaultProps = {
   alt: ' ',
 };
 
-const Image = ({
-  src,
-  variant,
-  isFluid,
-  alt,
-  height,
-  width,
-  onLoad,
-  onError,
-  ...customProps
-}) => {
-  const classes = cx([
-    'image',
-    variant,
-    { fluid: isFluid },
-    customProps.className,
-  ]);
+class Image extends React.Component {
 
-  return (
-    <img
-      src={src}
-      alt={alt}
-      height={height}
-      width={width}
-      onLoad={onLoad}
-      onError={onError}
-      {...customProps}
-      className={classes}
-    />);
-};
+  constructor(props) {
+    super(props);
+
+    this.state = { isLoading: true, isError: false };
+
+    this.handleOnLoad = this.handleOnLoad.bind(this);
+    this.handleOnError = this.handleOnError.bind(this);
+  }
+
+  componentWillReceiveProps(newProps) {
+    // If a new image is being loaded, reset the state to loading
+    if (newProps.src !== this.props.src || newProps.placeholder !== this.props.placeholder) {
+      this.setState({ isLoading: true, isError: false });
+    }
+  }
+
+  handleOnLoad() {
+    this.setState({ isLoading: false });
+    const onLoad = this.props.onLoad;
+
+    if (onLoad !== undefined) {
+      onLoad();
+    }
+  }
+
+  handleOnError() {
+    this.setState({ isLoading: false, isError: true });
+    const onError = this.props.onError;
+
+    if (onError !== undefined) {
+      onError();
+    }
+  }
+
+  createImage(customProps, imageClasses) {
+    const { src, alt, height, width } = this.props;
+    return (
+      <img
+        {...customProps}
+        src={src}
+        alt={alt}
+        height={height}
+        width={width}
+        onLoad={this.handleOnLoad}
+        onError={this.handleOnError}
+        className={imageClasses}
+      />
+    );
+  }
+
+  render() {
+    const { src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, ...customProps } = this.props;
+
+    const imageClasses = cx([
+      'image',
+      variant,
+      customProps.className,
+      { fluid: isFluid },
+    ]);
+    delete customProps.className;
+
+    if (placeholder) {
+      if (this.state.isLoading) {
+        return (
+          <div>
+            <div className={cx('hidden')}>{this.createImage(customProps, imageClasses)}</div>
+            <div>{placeholder}</div>
+          </div>
+        );
+      }
+
+      return this.state.isError ? placeholder : this.createImage(customProps, imageClasses);
+    }
+
+    return this.createImage(customProps, imageClasses);
+  }
+}
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;

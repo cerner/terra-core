@@ -3,4 +3,7 @@ Changelog
 
 Unreleased
 ------------------
-Initial stable release
+
+1.0.0 - (January 18, 2018)
+------------------
+* Initial stable release
