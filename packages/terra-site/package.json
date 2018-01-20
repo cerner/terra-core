@@ -1,6 +1,6 @@
 {
   "name": "terra-site",
-  "version": "1.22.0",
+  "version": "1.22.1",
   "description": "Documentation Site for Functional Verification",
   "repository": {
     "type": "git",
@@ -81,7 +81,7 @@
     "terra-slide-panel": "^1.15.0",
     "terra-spacer": "^1.2.0",
     "terra-status": "^1.18.0",
-    "terra-status-view": "^1.0.0",
+    "terra-status-view": "^1.0.1",
     "terra-table": "^1.19.0",
     "terra-tabs": "^1.1.0",
     "terra-text": "^1.16.0",
