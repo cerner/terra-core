@@ -3,7 +3,7 @@ Changelog
 
 Unreleased
 ----------
-1.22.1 - (January 20, 2018)
+1.22.1
 ------------------
 ### Changed
 * Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
