@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+1.15.1
+------------------
+### Changed
+* Add code usage example to README.md
 
 1.15.0 - (January 18, 2018)
 ------------------
