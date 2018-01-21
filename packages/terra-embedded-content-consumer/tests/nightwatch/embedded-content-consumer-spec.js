@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'medium', 'huge'], {
   'Displays a provider embedded in the consumer that contains title text.': (browser) => {
     const consumerSrc = '#/tests/embedded-content-consumer-tests/basic-consumer';
     const providerSrc = '#/tests/embedded-content-consumer-tests/basic-provider';

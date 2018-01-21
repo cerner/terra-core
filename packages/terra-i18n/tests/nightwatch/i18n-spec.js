@@ -20,7 +20,7 @@ const defaultTranslations = enTranslations;
 
 const waitInms = 3000;
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['medium'], {
   'Displays ajax error message in default': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
