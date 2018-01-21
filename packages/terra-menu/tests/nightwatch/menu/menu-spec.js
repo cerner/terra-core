@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'medium', 'huge'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default menu with expected content': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/menu-tests/default`);
     browser.click('#default-button');

@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 
-module.exports = resizeTo(['tiny', 'medium', 'huge'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default popup & closes on width resize': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/default`);
     browser.expect.element('.test-content').to.be.present;

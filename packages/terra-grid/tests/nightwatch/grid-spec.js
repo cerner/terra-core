@@ -2,7 +2,7 @@
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
 /* eslint-disable no-unused-expressions */
-module.exports = resizeTo(['tiny', 'medium', 'huge'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default grid': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/grid-tests/default`)

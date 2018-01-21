@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'medium', 'huge'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays the time input with default props': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
 
