@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
 ### Removed
 * terra-theme-provider examples
 
