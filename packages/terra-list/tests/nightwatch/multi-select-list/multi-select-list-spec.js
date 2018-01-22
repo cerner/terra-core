@@ -6,7 +6,7 @@ const { checkElementsClass } = require('../common.js');
 const listItemSelectors = ['ul li:nth-child(1)', 'ul li:nth-child(2)', 'ul li:nth-child(3)'];
 const selectedClasses = ['selected', 'selected', 'selected'];
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a multi select list': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/multi-select-list-tests/default`)

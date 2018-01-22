@@ -3,6 +3,9 @@ ChangeLog
 
 (Unreleased)
 ----------
+
+1.1.0 - (January 18, 2018)
+------------------
 ### Added
 * Unchecked state transition
 

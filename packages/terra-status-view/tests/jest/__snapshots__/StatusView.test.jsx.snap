@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render a single child element 1`] = `
+<StatusView
+  isAlignedTop={false}
+  isGlyphHidden={false}
+  variant="error"
+>
+  <div
+    className="status-view"
+  >
+    <div
+      className="status-view-inner"
+      style={
+        Object {
+          "paddingBottom": "0px",
+          "paddingTop": "0px",
+        }
+      }
+    >
+      <div
+        className="glyph"
+      >
+        <svg
+          className="error"
+        />
+      </div>
+      <div
+        className="message-content-group"
+      >
+        <div
+          className="title"
+        >
+          Error
+        </div>
+        <div
+          className="divider"
+        >
+          <Divider>
+            <hr
+              className="divider"
+            />
+          </Divider>
+        </div>
+      </div>
+      <div
+        className="actions"
+      >
+        <Button
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isReversed={false}
+          key="1"
+          text="OK"
+          type="button"
+          variant="default"
+        >
+          <button
+            aria-disabled={false}
+            className="button default"
+            disabled={false}
+            type="button"
+          >
+            <span
+              className="text"
+            >
+              OK
+            </span>
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+</StatusView>
+`;
+
 exports[`should render an image with a custom status-view 1`] = `
 <StatusView
   customGlyph={

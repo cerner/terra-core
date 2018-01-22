@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* terra-theme-provider examples
+
+1.22.0 - (January 18, 2018)
+------------------
 ### Changed
 * Add context to selectable list example
 

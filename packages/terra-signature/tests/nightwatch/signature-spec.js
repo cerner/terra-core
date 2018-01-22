@@ -5,7 +5,7 @@
 const { resizeTo } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 const constants = require('./SignatureConstants');
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default signature': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/signature-tests/default`);
     browser.expect.element('canvas[class*="signature"]').to.be.present;

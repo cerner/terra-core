@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+1.19.0 - (January 18, 2018)
+------------------
 ### Changed
 * Add context to selectable list nightwatch example
 * Move selectable functions to utils and convert to selectable list to functional component

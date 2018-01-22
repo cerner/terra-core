@@ -3,6 +3,15 @@ Changelog
 
 Unreleased
 ----------
+1.15.1
+------------------
+### Changed
+* Add code usage example to README.md
+
+1.15.0 - (January 18, 2018)
+------------------
+### Changed
+* Implemented placeholder image for loading and error views
 
 1.14.0 - (January 5, 2018)
 ------------------
