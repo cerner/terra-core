@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default table with the provided text': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/table-tests/default`);
     browser.expect.element('#Table').to.be.present;

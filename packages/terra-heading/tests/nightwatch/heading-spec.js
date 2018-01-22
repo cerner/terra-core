@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default heading component': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/heading-tests/default`);
     browser.expect.element('#heading-default').text.to.equal('Default');
