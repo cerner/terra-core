@@ -7,7 +7,7 @@ const timeZones = ['America/Chicago', 'America/Denver', 'America/Detroit', 'Amer
   'America/Los_Angeles', 'America/New_York', 'America/Phoenix'];
 const includesTZ = timeZones.includes(moment.tz.guess());
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'huge'], {
   'Displays the DateTimePicker with default props': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default`);
 
