@@ -1,0 +1,26 @@
+:local {
+  .dialog {
+    max-width: 533px;
+    max-height: 370px;
+
+    //testing-only
+    border: solid;
+  }
+
+  .header {
+    background-color: #f4f4f4;
+    border-bottom: solid;
+    padding: 10px;
+  }
+
+  .body {
+    padding: 10px;
+  }
+
+  .footer {
+    background-color: #f4f4f4;
+    border-top: solid;
+    padding: 10px;
+    text-align: right;
+  }
+}
