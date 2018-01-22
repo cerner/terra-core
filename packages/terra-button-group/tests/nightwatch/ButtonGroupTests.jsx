@@ -12,7 +12,6 @@ const ButtonGroupTests = () => (
       <li><Link to="/tests/button-group-tests/disabled-button-group">Button Group - Disabled Buttons</Link></li>
       <li><Link to="/tests/button-group-tests/single-select-button-group">Button Group - Single-Select</Link></li>
       <li><Link to="/tests/button-group-tests/multi-select-button-group">Button Group - Multi-Select</Link></li>
-      <li><Link to="/tests/button-group-tests/on-change-button-group">Button Group - OnChange Provided</Link></li>
     </ul>
   </div>
 );
