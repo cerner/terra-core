@@ -18,6 +18,7 @@ import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DateTimePickerExamples from './examples/date-time-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
+import DialogExamples from './examples/dialog/Index';
 import DividerExamples from './examples/divider/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
@@ -70,6 +71,7 @@ import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DateTimePickerTestRoutes from 'terra-date-time-picker/tests/nightwatch/DateTimePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import DialogTestRoutes from 'terra-dialog/tests/nightwatch/DialogTestRoutes';
 import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes';
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
@@ -147,6 +149,7 @@ ReactDOM.render((
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="date-time-picker" component={DateTimePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
+      <Route path="dialog" component={DialogExamples} />
       <Route path="divider" component={DividerExamples} />
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
@@ -201,6 +204,7 @@ ReactDOM.render((
     {DatePickerTestRoutes}
     {DateTimePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {DialogTestRoutes}
     {DividerTestRoutes}
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}
