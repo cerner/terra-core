@@ -18,12 +18,6 @@ export default class TimeInputElement extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    if (this.resetontouchstart) {
-      delete window.ontouchstart;
-    }
-  }
-
   handleOnChange(event, input) {
     this.setState({ input });
   }

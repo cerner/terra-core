@@ -51,12 +51,12 @@ describe('Text', () => {
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
     const text = shallow(<Text id="id" fontSize={20} color="#f00" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Text>);
-    expect(text.instance().props.id).toEqual('id');
-    expect(text.instance().props.fontSize).toEqual(20);
-    expect(text.instance().props.color).toEqual('#f00');
-    expect(text.instance().props.weight).toEqual(200);
-    expect(text.instance().props.isItalic).toEqual(true);
-    expect(text.instance().props.isVisuallyHidden).toEqual(true);
+    expect(text.props().id).toEqual('id');
+    expect(text.props().style.color).toEqual('#f00');
+    expect(text.props().className).toContain('font-weight-200');
+    expect(text.props().className).toContain('font-size-20');
+    expect(text.props().className).toContain('italic');
+    expect(text.props().className).toContain('visually-hidden');
     expect(text.find('.text').text()).toEqual('All props and custom attrs');
   });
 

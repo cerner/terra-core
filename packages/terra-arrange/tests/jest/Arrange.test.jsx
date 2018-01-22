@@ -56,25 +56,32 @@ describe('Arrange', () => {
   it('should have all prop set correctly', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="center" fitStartAttributes={{ style: { maxWidth: '10px' } }} fillAttributes={{ style: { maxWidth: '20px' } }} fitEndAttributes={{ style: { maxWidth: '30px' } }} />;
     const wrapper = shallow(arrange);
-    expect(wrapper.instance().props.fitStart.type).toEqual('img');
-    expect(wrapper.instance().props.fitEnd.type).toEqual('a');
-    expect(wrapper.instance().props.fill.type).toEqual('div');
-    expect(wrapper.instance().props.align).toEqual('center');
-    expect(wrapper.instance().props.fitStartAttributes).toEqual({ style: { maxWidth: '10px' } });
-    expect(wrapper.instance().props.fillAttributes).toEqual({ style: { maxWidth: '20px' } });
-    expect(wrapper.instance().props.fitEndAttributes).toEqual({ style: { maxWidth: '30px' } });
+
+    const startSection = wrapper.props().children[0];
+    const fillSection = wrapper.props().children[1];
+    const endSection = wrapper.props().children[2];
+
+    expect(startSection.props.children.type).toEqual('img');
+    expect(endSection.props.children.type).toEqual('a');
+    expect(fillSection.props.children.type).toEqual('div');
+    expect(startSection.props.className).toContain('center');
+    expect(startSection.props.style).toEqual({ maxWidth: '10px' });
+    expect(fillSection.props.style).toEqual({ maxWidth: '20px' });
+    expect(endSection.props.style).toEqual({ maxWidth: '30px' });
   });
 
   it('should have align prop undefined when align not pass', () => {
     const arrange = <Arrange fitStart={fitStart} fill={fill} />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
-    expect(wrapper.instance().props.alignFitStart).toEqual(undefined);
-    expect(wrapper.instance().props.alignFitEnd).toEqual(undefined);
-    expect(wrapper.instance().props.alignFill).toEqual(undefined);
-    expect(wrapper.instance().props.fitStartAttributes).toEqual(undefined);
-    expect(wrapper.instance().props.fillAttributes).toEqual(undefined);
-    expect(wrapper.instance().props.fitEndAttributes).toEqual(undefined);
+
+    const startSection = wrapper.props().children[0];
+    const fillSection = wrapper.props().children[1];
+    const endSection = wrapper.props().children[2];
+
+    expect(startSection.props.className).toEqual('fit');
+    expect(startSection.props.style).toEqual(undefined);
+    expect(fillSection.props.style).toEqual(undefined);
+    expect(endSection.props.style).toEqual(undefined);
   });
 
   // Structure test

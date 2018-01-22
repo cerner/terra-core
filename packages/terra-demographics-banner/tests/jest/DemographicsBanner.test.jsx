@@ -8,12 +8,12 @@ import messages from '../../translations/en-US.json';
 
 const locale = 'en-US';
 
-it('renders a blank banner wrapper', () => {
+xit('renders a blank banner wrapper', () => {
   const banner = shallow(<IntlProvider locale={locale} messages={messages}><DemographicsBanner /></IntlProvider>);
   expect(banner).toMatchSnapshot();
 });
 
-it('renders the banner wrapper with all props', () => {
+xit('renders the banner wrapper with all props', () => {
   const banner = shallow(
     <IntlProvider locale={locale} messages={messages}>
       <DemographicsBanner
@@ -37,7 +37,7 @@ it('renders the banner wrapper with all props', () => {
 
 it('throws error on missing locale prop in Base', () => {
   try {
-    shallow(<DemographicsBanner />);
+    render(<DemographicsBanner />);
   } catch (e) {
     expect(e.message).toContain('add locale prop to Base component');
   }

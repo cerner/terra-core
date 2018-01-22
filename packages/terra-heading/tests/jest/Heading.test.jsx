@@ -51,12 +51,12 @@ describe('Heading', () => {
   // Prop Tests
   it('should have all props including customProps set correctly', () => {
     const heading = shallow(<Heading level={1} id="id" size="small" color="#f00" weight={200} isItalic isVisuallyHidden>All props and custom attrs</Heading>);
-    expect(heading.instance().props.id).toEqual('id');
-    expect(heading.instance().props.size).toEqual('small');
-    expect(heading.instance().props.color).toEqual('#f00');
-    expect(heading.instance().props.weight).toEqual(200);
-    expect(heading.instance().props.isItalic).toEqual(true);
-    expect(heading.instance().props.isVisuallyHidden).toEqual(true);
+    expect(heading.props().id).toEqual('id');
+    expect(heading.props().style.color).toEqual('#f00');
+    expect(heading.props().className).toContain('weight-200');
+    expect(heading.props().className).toContain('size-small');
+    expect(heading.props().className).toContain('italic');
+    expect(heading.props().className).toContain('visually-hidden');
     expect(heading.text()).toEqual('All props and custom attrs');
   });
 

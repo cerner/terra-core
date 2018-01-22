@@ -139,7 +139,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
     browser.expect.element('.react-datepicker').to.be.present;
 
-    browser.click('.react-datepicker__today-button');
+    browser.click('[aria-label="day-10"]');
 
     browser.expect.element('.react-datepicker').to.not.be.present;
   },

@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update to React 16
+
 ### Removed
 * terra-theme-provider examples
 

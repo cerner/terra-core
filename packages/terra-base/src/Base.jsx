@@ -48,13 +48,21 @@ class Base extends React.Component {
 
   componentDidMount() {
     if (this.props.locale !== undefined) {
-      i18nLoader(this.props.locale, this.setState, this);
+      try {
+        i18nLoader(this.props.locale, this.setState, this);
+      } catch (e) {
+        console.error(e);
+      }
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.locale !== undefined && nextProps.locale !== this.props.locale) {
-      i18nLoader(nextProps.locale, this.setState, this);
+      try {
+        i18nLoader(this.props.locale, this.setState, this);
+      } catch (e) {
+        console.error(e);
+      }
     }
   }
 

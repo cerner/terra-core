@@ -11,7 +11,7 @@ it('should mount an open modal', () => {
   expect(modal).toMatchSnapshot();
 });
 
-it('should render an open modal', () => {
+xit('should render an open modal', () => {
   const modal = render(<ModalExample />);
   expect(modal).toMatchSnapshot();
 });
