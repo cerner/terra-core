@@ -7,6 +7,8 @@ Unreleased
 * Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
 ### Removed
 * terra-theme-provider examples
+* terra-app-delegate examples
+* terra-modal-manager examples
 
 1.22.0 - (January 18, 2018)
 ------------------
