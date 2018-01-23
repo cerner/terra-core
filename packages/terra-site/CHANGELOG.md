@@ -3,9 +3,6 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Add context to selectable list example
-* Updated mock theme to provide values to form-field theme variables.
 
 1.22.0 - (January 18, 2018)
 ------------------

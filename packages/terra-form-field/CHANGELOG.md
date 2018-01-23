@@ -3,8 +3,6 @@ ChangeLog
 
 Unreleased
 -----------------
-### Changed
-* Refactored styles to consider theming variables for cerner-consumer-theme
 
 1.3.0 - (January 18, 2018)
 ------------------
