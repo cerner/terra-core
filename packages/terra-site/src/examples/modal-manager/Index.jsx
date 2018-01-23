@@ -12,14 +12,20 @@ import ModalManagerSrc from '!raw-loader!terra-modal-manager/src/ModalManager';
 import ModalManagerDemo from './ModalManagerDemo';
 
 // Example Files
+import ModalManagerDialogDemo from './ModalManagerDialogDemo';
 
 const ModalManagerExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ModalManagerSrc} />
+    <h2>Modal Manager - Basic</h2>
     <div style={{ height: '150px' }}>
       <ModalManagerDemo />
+    </div>
+    <h2>Modal Manager - Terra-Dialog</h2>
+    <div style={{ height: '150px' }}>
+      <ModalManagerDialogDemo />
     </div>
   </div>
 );
