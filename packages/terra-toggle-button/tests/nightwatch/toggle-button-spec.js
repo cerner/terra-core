@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default toggle-button': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/toggle-button-tests/default`)

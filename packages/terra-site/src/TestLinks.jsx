@@ -18,12 +18,14 @@ const TestLinks = () => (
       <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
       <li><Link to="/tests/date-time-picker-tests">DateTimePicker Tests</Link></li>
       <li><Link to="/tests/demographics-banner-tests">DemographicsBanner Tests</Link></li>
+      <li><Link to="/tests/dialog-tests">Dialog Tests</Link></li>
       <li><Link to="/tests/divider-tests">Divider Tests</Link></li>
       <li><Link to="/tests/dynamic-grid-tests">Dynamic Grid Tests</Link></li>
       <li><Link to="/tests/embedded-content-consumer-tests">EmbeddedContentConsumer Tests</Link></li>
       <li><Link to="/tests/form-checkbox-tests">Form Checkbox Tests</Link></li>
       <li><Link to="/tests/form-tests">Form Tests</Link></li>
       <li><Link to="/tests/form-field-tests">Form Field Tests</Link></li>
+      <li><Link to="/tests/form-radio-tests">Form Radio Tests</Link></li>
       <li><Link to="/tests/form-textarea-tests">Form Textarea Tests</Link></li>
       <li><Link to="/tests/grid-tests">Grid Tests</Link></li>
       <li><Link to="/tests/heading-tests">Heading Tests</Link></li>
@@ -39,7 +41,6 @@ const TestLinks = () => (
       <li><Link to="/tests/menu-item-tests">Menu.Item Tests</Link></li>
       <li><Link to="/tests/menu-item-group-tests">Menu.ItemGroup Tests</Link></li>
       <li><Link to="/tests/modal-tests">Modal Tests</Link></li>
-      <li><Link to="/tests/modal-manager-tests">Modal Manager Tests</Link></li>
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
       <li><Link to="/tests/multi-select-table-tests">MultiSelectTable Tests</Link></li>
       <li><Link to="/tests/overlay-tests">Overlay Tests</Link></li>
@@ -61,11 +62,11 @@ const TestLinks = () => (
       <li><Link to="/tests/slide-panel-tests">SlidePanel Tests</Link></li>
       <li><Link to="/tests/spacer-tests">Spacer Tests</Link></li>
       <li><Link to="/tests/status-tests">Status Tests</Link></li>
+      <li><Link to="/tests/status-view-tests">StatusView Tests</Link></li>
       <li><Link to="/tests/table-tests">Table Tests</Link></li>
       <li><Link to="/tests/tabs-tests">Tabs Tests</Link></li>
       <li><Link to="/tests/tab-pane-tests">Tab Pane Tests</Link></li>
       <li><Link to="/tests/text-tests">Text Tests</Link></li>
-      <li><Link to="/tests/theme-provider-tests">Theme Provider Tests</Link></li>
       <li><Link to="/tests/time-input-tests">Time Input Tests</Link></li>
       <li><Link to="/tests/toggle-tests">Toggle Tests</Link></li>
       <li><Link to="/tests/toggle-button-tests">Toggle Button Tests</Link></li>

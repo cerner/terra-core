@@ -6,7 +6,6 @@ import Home from './Home';
 
 // Examples
 import AlertExamples from './examples/alert/Index';
-import AppDelegateExamples from './examples/app-delegate/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
@@ -18,12 +17,14 @@ import ContentContainerExamples from './examples/content-container/Index';
 import DatePickerExamples from './examples/date-picker/Index';
 import DateTimePickerExamples from './examples/date-time-picker/Index';
 import DemographicsBannerExamples from './examples/demographics-banner/Index';
+import DialogExamples from './examples/dialog/Index';
 import DividerExamples from './examples/divider/Index';
 import DynamicGridExamples from './examples/dynamic-grid/Index';
 import EmbeddedContentConsumerExamples from './examples/embedded-content-consumer/Index';
 import FormExamples from './examples/form/Index';
 import FormCheckboxExamples from './examples/form-checkbox/Index';
 import FormFieldExamples from './examples/form-field/Index';
+import FormRadioExamples from './examples/form-radio/Index';
 import FormTextareaExamples from './examples/form-textarea/Index';
 import GridExamples from './examples/grid/Index';
 import HeadingExamples from './examples/heading/Index';
@@ -34,7 +35,6 @@ import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import MenuExamples from './examples/menu/Index';
 import ModalExamples from './examples/modal/Index';
-import ModalManagerExamples from './examples/modal-manager/Index';
 import OverlayExamples from './examples/overlay/Index';
 import PopupExamples from './examples/popup/Index';
 import ProfileImageExamples from './examples/profile-image/Index';
@@ -47,10 +47,10 @@ import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
 import SpacerExamples from './examples/spacer/Index';
 import StatusExamples from './examples/status/Index';
+import StatusViewExamples from './examples/status-view/Index';
 import TableExamples from './examples/table/Index';
 import TabsExamples from './examples/tabs/Index';
 import TextExamples from './examples/text/Index';
-import ThemeProviderExamples from './examples/theme-provider/Index';
 import TimeInputExamples from './examples/time-input/Index';
 import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
@@ -69,6 +69,7 @@ import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
 import DateTimePickerTestRoutes from 'terra-date-time-picker/tests/nightwatch/DateTimePickerTestRoutes';
 import DemographicsBannerTestRoutes from 'terra-demographics-banner/tests/nightwatch/DemographicsBannerTestRoutes';
+import DialogTestRoutes from 'terra-dialog/tests/nightwatch/DialogTestRoutes';
 import DividerTestRoutes from 'terra-divider/tests/nightwatch/DividerTestRoutes';
 import DynamicGridTestRoutes from 'terra-dynamic-grid/tests/nightwatch/DynamicGridTestRoutes';
 import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/tests/nightwatch/EmbeddedContentConsumerTestRoutes';
@@ -76,6 +77,7 @@ import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
+import FormRadioTestRoutes from 'terra-form-radio/tests/nightwatch/RadioTestRoutes';
 import FormTextareaRoutes from 'terra-form-textarea/tests/nightwatch/TextareaTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';
 import HeadingTestRoutes from 'terra-heading/tests/nightwatch/HeadingTestRoutes';
@@ -93,7 +95,6 @@ import MarkdownTestRoutes from 'terra-markdown/tests/nightwatch/MarkdownTestRout
 import MenuTestRoutes from 'terra-menu/tests/nightwatch/menu/MenuTestRoutes';
 import MenuItemTestRoutes from 'terra-menu/tests/nightwatch/menu-item/MenuItemTestRoutes';
 import MenuItemGroupTestRoutes from 'terra-menu/tests/nightwatch/menu-item-group/MenuItemGroupTestRoutes';
-import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import MultiSelectTableTestRoutes from 'terra-table/tests/nightwatch/multi-select-table/MultiSelectTableTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
@@ -115,12 +116,12 @@ import SlidePanelTestRoutes from 'terra-slide-panel/tests/nightwatch/SlidePanelT
 import SpacerTestRoutes from 'terra-spacer/tests/nightwatch/SpacerTestRoutes';
 import SingleSelectListTestRoutes from 'terra-list/tests/nightwatch/single-select-list/SingleSelectListTestRoutes';
 import StatusTestRoutes from 'terra-status/tests/nightwatch/StatusTestRoutes';
+import StatusViewTestRoutes from 'terra-status-view/tests/nightwatch/StatusViewTestRoutes';
 import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TabsTestRoutes from 'terra-tabs/tests/nightwatch/Tabs/TabsTestRoutes';
 import TabPaneTestRoutes from 'terra-tabs/tests/nightwatch/TabPane/TabPaneTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
-import ThemeProviderTestRoutes from 'terra-theme-provider/tests/nightwatch/ThemeProviderTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
 import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
@@ -133,7 +134,6 @@ ReactDOM.render((
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
       <Route path="alert" component={AlertExamples} />
-      <Route path="app-delegate" component={AppDelegateExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="base" component={BaseExamples} />
@@ -145,6 +145,7 @@ ReactDOM.render((
       <Route path="datepicker" component={DatePickerExamples} />
       <Route path="date-time-picker" component={DateTimePickerExamples} />
       <Route path="demographics-banner" component={DemographicsBannerExamples} />
+      <Route path="dialog" component={DialogExamples} />
       <Route path="divider" component={DividerExamples} />
       <Route path="dynamic-grid" component={DynamicGridExamples} />
       <Route path="embedded-content-consumer" component={EmbeddedContentConsumerExamples} />
@@ -152,6 +153,7 @@ ReactDOM.render((
       <Route path="form-checkbox" component={FormCheckboxExamples} />
       <Route path="form-textarea" component={FormTextareaExamples} />
       <Route path="form-field" component={FormFieldExamples} />
+      <Route path="form-radio" component={FormRadioExamples} />
       <Route path="grid" component={GridExamples} />
       <Route path="heading" component={HeadingExamples} />
       <Route path="hookshot" component={HookshotExamples} />
@@ -161,7 +163,6 @@ ReactDOM.render((
       <Route path="list" component={ListExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="modal" component={ModalExamples} />
-      <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="overlay" component={OverlayExamples} />
       <Route path="popup" component={PopupExamples} />
       <Route path="profile-image" component={ProfileImageExamples} />
@@ -174,10 +175,10 @@ ReactDOM.render((
       <Route path="slide-panel" component={SlidePanelExamples} />
       <Route path="spacer" component={SpacerExamples} />
       <Route path="status" component={StatusExamples} />
+      <Route path="status-view" component={StatusViewExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="tabs" component={TabsExamples} />
       <Route path="text" component={TextExamples} />
-      <Route path="theme-provider" component={ThemeProviderExamples} />
       <Route path="time-input" component={TimeInputExamples} />
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
@@ -198,6 +199,7 @@ ReactDOM.render((
     {DatePickerTestRoutes}
     {DateTimePickerTestRoutes}
     {DemographicsBannerTestRoutes}
+    {DialogTestRoutes}
     {DividerTestRoutes}
     {DynamicGridTestRoutes}
     {EmbeddedContentConsumerTestRoutes}
@@ -224,7 +226,6 @@ ReactDOM.render((
     {MenuItemTestRoutes}
     {MenuItemGroupTestRoutes}
     {ModalTestRoutes}
-    {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
     {PropsTableTestRoutes}
     {GridTestRoutes}
@@ -234,6 +235,7 @@ ReactDOM.render((
     {FormCheckboxTestRoutes}
     {FormTextareaRoutes}
     {FormFieldTestRoutes}
+    {FormRadioTestRoutes}
     {OverlayTestRoutes}
     {LoadingOverlayTestRoutes}
     {OverlayContainerTestRoutes}
@@ -241,13 +243,13 @@ ReactDOM.render((
     {ToggleButtonTestRoutes}
     {HeadingTestRoutes}
     {TextTestRoutes}
-    {ThemeProviderTestRoutes}
     {SlideGroupTestRoutes}
     {ProfileImageTestRoutes}
     {SignatureTestRoutes}
     {HookshotTestRoutes}
     {SelectTestRoutes}
     {SelectOptionTestRoutes}
+    {StatusViewTestRoutes}
     {TabsTestRoutes}
     {TabPaneTestRoutes}
   </Router>
