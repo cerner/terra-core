@@ -39,27 +39,31 @@ a {
   text-decoration: underline;
 }
 
-a:visited {
+// stylelint-disable selector-no-qualifying-type
+a:visited,
+a.is-visited {
   color: var(--terra-link-visted-color, #0065a3);
 }
 
-a:hover {
+a:hover,
+a.is-hovered {
   color: var(--terra-link-hover-color, #004c76);
 }
 
-a:focus {
+a:focus,
+a.is-focused {
   background-color: var(--terra-link-focus-background-color, rgba(136, 168, 239, 0.5));
   border-radius: 0.2em;
   color: var(--terra-link-focus-color, #004c76);
 }
 
-a:active {
+a:active,
+a.is-active {
   color: var(--terra-link-active-color, #0065a3);
 }
 
-/* stylelint-disable selector-no-qualifying-type  */
 a[aria-disabled='true'] {
   color: var(--terra-link-disabled-hover-color, #909496);
   pointer-events: none;
 }
-/* stylelint-enable */
+// stylelint-enable selector-no-qualifying-type

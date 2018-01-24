@@ -39,13 +39,13 @@ describe('Base', () => {
     Terra.should.beAccessible({ viewports, rules: ignoredA11y });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty({
-      '--terra-link-color': '#0065a3',
-      '--terra-link-visted-color': '#0065a3',
-      '--terra-link-hover-color': '#004c76',
-      '--terra-link-focus-background-color': 'rgba(136, 168, 239, 0.5)',
-      '--terra-link-focus-color': '#004c76',
-      '--terra-link-active-color': '#004c76',
-      '--terra-link-disabled-hover-color': '#909496',
+      '--terra-link-color': 'blue',
+      '--terra-link-visted-color': 'green',
+      '--terra-link-hover-color': 'black',
+      '--terra-link-focus-background-color': 'grey',
+      '--terra-link-focus-color': 'pink',
+      '--terra-link-active-color': 'purple',
+      '--terra-link-disabled-hover-color': 'yellow',
     });
   });
 });
