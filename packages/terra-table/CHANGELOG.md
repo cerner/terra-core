@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+###Changed
+* Moved table sort indicator 
 
 1.19.0 - (January 18, 2018)
 ------------------

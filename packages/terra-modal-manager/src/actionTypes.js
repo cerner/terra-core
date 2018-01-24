@@ -1,8 +1,0 @@
-export const OPEN = 'MODAL_MANAGER_OPEN';
-export const CLOSE = 'MODAL_MANAGER_CLOSE';
-export const PUSH = 'MODAL_MANAGER_PUSH';
-export const POP = 'MODAL_MANAGER_POP';
-export const MAXIMIZE = 'MODAL_MANAGER_MAXIMIZE';
-export const MINIMIZE = 'MODAL_MANAGER_MINIMIZE';
-export const GAIN_FOCUS = 'MODAL_MANAGER_GAIN_FOCUS';
-export const LOSE_FOCUS = 'MODAL_MANAGER_LOSE_FOCUS';

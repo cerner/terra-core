@@ -47,8 +47,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 |--------------------|---------|--------|
 | [terra-alert](https://github.com/cerner/terra-core/tree/master/packages/terra-alert) | [![NPM version](http://img.shields.io/npm/v/terra-alert.svg)](https://www.npmjs.org/package/terra-alert) | :white_check_mark: |
 | [terra-arrange](https://github.com/cerner/terra-core/tree/master/packages/terra-arrange) | [![NPM version](http://img.shields.io/npm/v/terra-arrange.svg)](https://www.npmjs.org/package/terra-arrange) | :white_check_mark: |
-| [terra-app-delegate](https://github.com/cerner/terra-core/tree/master/packages/terra-app-delegate)  | [![NPM version](http://img.shields.io/npm/v/terra-app-delegate.svg)](https://www.npmjs.org/package/terra-app-delegate) | :white_check_mark: |
-| terra-application  | [![NPM version](http://img.shields.io/npm/v/terra-application.svg)](https://www.npmjs.org/package/terra-application) | :x: |
+| terra-application | [![NPM version](http://img.shields.io/npm/v/terra-application.svg)](https://www.npmjs.org/package/terra-application) | :x: |
 | [terra-badge](https://github.com/cerner/terra-core/tree/master/packages/terra-badge) | [![NPM version](http://img.shields.io/npm/v/terra-badge.svg)](https://www.npmjs.org/package/terra-badge) | :white_check_mark: |
 | [terra-base](https://github.com/cerner/terra-core/tree/master/packages/terra-base) | [![NPM version](http://img.shields.io/npm/v/terra-base.svg)](https://www.npmjs.org/package/terra-base) | :white_check_mark: |
 | [terra-button](https://github.com/cerner/terra-core/tree/master/packages/terra-button) | [![NPM version](http://img.shields.io/npm/v/terra-button.svg)](https://www.npmjs.org/package/terra-button) | :white_check_mark: |
@@ -72,7 +71,6 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-menu](https://github.com/cerner/terra-core/tree/master/packages/terra-menu) | [![NPM version](http://img.shields.io/npm/v/terra-menu.svg)](https://www.npmjs.org/package/terra-menu) | :white_check_mark: |
 | [terra-mixins](https://github.com/cerner/terra-core/tree/master/packages/terra-mixins) | [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins) | :white_check_mark: |
 | [terra-modal](https://github.com/cerner/terra-core/tree/master/packages/terra-modal) | [![NPM version](http://img.shields.io/npm/v/terra-modal.svg)](https://www.npmjs.org/package/terra-modal) | :white_check_mark: |
-| [terra-modal-manager](https://github.com/cerner/terra-core/tree/master/packages/terra-modal-manager) | [![NPM version](http://img.shields.io/npm/v/terra-modal-manager.svg)](https://www.npmjs.org/package/terra-modal-manager) | :white_check_mark: |
 | [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay) | [![NPM version](http://img.shields.io/npm/v/terra-overlay.svg)](https://www.npmjs.org/package/terra-overlay) | :white_check_mark: |
 | [terra-popup](https://github.com/cerner/terra-core/tree/master/packages/terra-popup) | [![NPM version](http://img.shields.io/npm/v/terra-popup.svg)](https://www.npmjs.org/package/terra-popup) | :white_check_mark: |
 | [terra-progress-bar](https://github.com/cerner/terra-core/tree/master/packages/terra-progress-bar) | [![NPM version](http://img.shields.io/npm/v/terra-progress-bar.svg)](https://www.npmjs.org/package/terra-progress-bar) | :white_check_mark: |
