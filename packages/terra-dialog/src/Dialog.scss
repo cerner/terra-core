@@ -1,19 +1,10 @@
 :local {
   .dialog {
-    // testing-only
-    // remove before merge
-    border: dashed;
+    height: 100%;
+    width: 100%;
   }
 
-  .header {
-    padding: 10px;
-  }
-
-  .body {
-    padding: 10px;
-  }
-
-  .footer {
-    padding: 10px;
+  .header, .body, .footer {
+    padding: 0.875rem;
   }
 }

@@ -9,9 +9,7 @@ const body = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 const ModalContent = ({ app }) => {
   const closeButton = <button onClick={app.closeDisclosure}>Close Modal</button>;
 
-  return (<div>
-    <Dialog identifier="root-component" header={header} footer={closeButton}>{body}</Dialog>
-  </div>);
+  return (<Dialog identifier="root-component" header={header} footer={closeButton}>{body}</Dialog>);
 }
 
 export default ModalContent;

@@ -24,7 +24,7 @@ const ModalManagerExamples = () => (
       <ModalManagerDemo />
     </div>
     <h2>Modal Manager - Terra-Dialog</h2>
-    <div style={{ height: '150px' }}>
+    <div style={{ height: '250px' }}>
       <ModalManagerDialogDemo />
     </div>
   </div>

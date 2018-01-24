@@ -27,11 +27,9 @@ const Dialog = ({ header, footer, children }) => {
     'dialog',
   ]);
 
-  return (<div className={DialogClassNames}>
-            <ContentContainer fill header={<div className={cx('header')}>{header}</div>} footer={<div className={cx('footer')}>{footer}</div>}>
+  return (<div className={DialogClassNames}><ContentContainer fill header={<div className={cx('header')}>{header}</div>} footer={<div className={cx('footer')}>{footer}</div>}>
               <div className={cx('body')}>{children}</div>
-            </ContentContainer>
-          </div>)
+            </ContentContainer></div>);
 };
 
 Dialog.propTypes = propTypes;

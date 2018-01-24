@@ -7,16 +7,12 @@ import ModalManagerDialogDemoContainer from './ModalManagerDialogDemoContainer';
 
 const store = createStore(combineReducers(modalManagerReducers));
 
-class DemoApplication extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <ModalManager>
-          <ModalManagerDialogDemoContainer />
-        </ModalManager>
-      </Provider>
-    );
-  }
-}
+const ModalManagerDialogDemo = () => (
+  <Provider store={store}>
+    <ModalManager>
+      <ModalManagerDialogDemoContainer />
+    </ModalManager>
+  </Provider>
+);
 
-export default DemoApplication;
+export default ModalManagerDialogDemo;
