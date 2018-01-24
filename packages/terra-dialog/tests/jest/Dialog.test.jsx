@@ -2,7 +2,7 @@ import React from 'react';
 import Dialog from '../../src/Dialog';
 
 describe('Dialog', () => {
-  const defaultRender = <Dialog />;
+  const defaultRender = <Dialog header="Header Content" footer="Footer Content">some body content</Dialog>;
 
   // Snapshot Tests
   it('should render a default component', () => {
@@ -11,9 +11,9 @@ describe('Dialog', () => {
   });
 
   // Prop Tests
-  it('should use the default value when no value is given', () => {
+  it('should render with the provided props', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.dialog').text()).toEqual('default');
+    expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests

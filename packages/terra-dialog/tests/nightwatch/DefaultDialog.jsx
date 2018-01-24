@@ -8,4 +8,4 @@ const body = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 
 const footer = <span>Footer Stuff</span>;
 
-export default () => <div style={{ height: "400px", width: "250px" }}><Dialog id="dialog" header={header} footer={footer}>{body}</Dialog></div>;
+export default () => <div id="dialog" style={{ height: '400px', width: '250px' }}><Dialog header={header} footer={footer}>{body}</Dialog></div>;

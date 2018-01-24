@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
-import styles from './Dialog.scss';
 import ContentContainer from 'terra-content-container';
+import styles from './Dialog.scss';
 
 const cx = classNames.bind(styles);
 
@@ -27,9 +27,13 @@ const Dialog = ({ header, footer, children }) => {
     'dialog',
   ]);
 
-  return (<div className={DialogClassNames}><ContentContainer fill header={<div className={cx('header')}>{header}</div>} footer={<div className={cx('footer')}>{footer}</div>}>
-              <div className={cx('body')}>{children}</div>
-            </ContentContainer></div>);
+  return (
+    <div className={DialogClassNames}>
+      <ContentContainer fill header={<div className={cx('header')}>{header}</div>} footer={<div className={cx('footer')}>{footer}</div>}>
+        <div className={cx('body')}>{children}</div>
+      </ContentContainer>
+    </div>
+  );
 };
 
 Dialog.propTypes = propTypes;
