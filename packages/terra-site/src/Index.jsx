@@ -6,7 +6,6 @@ import Home from './Home';
 
 // Examples
 import AlertExamples from './examples/alert/Index';
-import AppDelegateExamples from './examples/app-delegate/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
@@ -36,7 +35,6 @@ import ImageExamples from './examples/image/Index';
 import ListExamples from './examples/list/Index';
 import MenuExamples from './examples/menu/Index';
 import ModalExamples from './examples/modal/Index';
-import ModalManagerExamples from './examples/modal-manager/Index';
 import OverlayExamples from './examples/overlay/Index';
 import PopupExamples from './examples/popup/Index';
 import ProfileImageExamples from './examples/profile-image/Index';
@@ -97,7 +95,6 @@ import MarkdownTestRoutes from 'terra-markdown/tests/nightwatch/MarkdownTestRout
 import MenuTestRoutes from 'terra-menu/tests/nightwatch/menu/MenuTestRoutes';
 import MenuItemTestRoutes from 'terra-menu/tests/nightwatch/menu-item/MenuItemTestRoutes';
 import MenuItemGroupTestRoutes from 'terra-menu/tests/nightwatch/menu-item-group/MenuItemGroupTestRoutes';
-import ModalManagerTestRoutes from 'terra-modal-manager/tests/nightwatch/ModalManagerTestRoutes';
 import MultiSelectListTestRoutes from 'terra-list/tests/nightwatch/multi-select-list/MultiSelectListTestRoutes';
 import MultiSelectTableTestRoutes from 'terra-table/tests/nightwatch/multi-select-table/MultiSelectTableTestRoutes';
 import OverlayTestRoutes from 'terra-overlay/tests/nightwatch/Overlay/OverlayTestRoutes';
@@ -137,7 +134,6 @@ ReactDOM.render((
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
       <Route path="alert" component={AlertExamples} />
-      <Route path="app-delegate" component={AppDelegateExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="base" component={BaseExamples} />
@@ -167,7 +163,6 @@ ReactDOM.render((
       <Route path="list" component={ListExamples} />
       <Route path="menu" component={MenuExamples} />
       <Route path="modal" component={ModalExamples} />
-      <Route path="modal-manager" component={ModalManagerExamples} />
       <Route path="overlay" component={OverlayExamples} />
       <Route path="popup" component={PopupExamples} />
       <Route path="profile-image" component={ProfileImageExamples} />
@@ -231,7 +226,6 @@ ReactDOM.render((
     {MenuItemTestRoutes}
     {MenuItemGroupTestRoutes}
     {ModalTestRoutes}
-    {ModalManagerTestRoutes}
     {ProgressBarTestRoutes}
     {PropsTableTestRoutes}
     {GridTestRoutes}

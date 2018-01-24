@@ -47,6 +47,7 @@ Cerner Corporation
 - Gerard Isdell [@gerard-isdell]
 - Noah Benham [@noahbenham]
 - Andy Nelson [@anelson425]
+- Dan Plubell [@danplubell]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -95,3 +96,4 @@ Cerner Corporation
 [@gerard-isdell]: https://github.com/gerard-isdell
 [@noahbenham]: https://github.com/noahbenham
 [@anelson425]: https://github.com/anelson425
+[@danplubell]: https://github.com/danplubell

@@ -41,7 +41,6 @@ const TestLinks = () => (
       <li><Link to="/tests/menu-item-tests">Menu.Item Tests</Link></li>
       <li><Link to="/tests/menu-item-group-tests">Menu.ItemGroup Tests</Link></li>
       <li><Link to="/tests/modal-tests">Modal Tests</Link></li>
-      <li><Link to="/tests/modal-manager-tests">Modal Manager Tests</Link></li>
       <li><Link to="/tests/multi-select-list-tests">MultiSelectList Tests</Link></li>
       <li><Link to="/tests/multi-select-table-tests">MultiSelectTable Tests</Link></li>
       <li><Link to="/tests/overlay-tests">Overlay Tests</Link></li>

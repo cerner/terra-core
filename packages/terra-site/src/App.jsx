@@ -140,7 +140,6 @@ class App extends React.Component {
       <ContentContainer header={navHeader} className={styles['site-panel']} fill>
         <List className={styles['site-nav']}>
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
-          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/app-delegate">App Delegate</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/arrange">Arrange</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/base">Base</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/badge">Badge</Link>} />
@@ -174,7 +173,6 @@ class App extends React.Component {
           <List.Item content={<ListComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/menu">Menu</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal">Modal</Link>} />
-          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/modal-manager">Modal Manager</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/overlay">Overlay</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/popup">Popup</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/profile-image">Profile Image</Link>} />
