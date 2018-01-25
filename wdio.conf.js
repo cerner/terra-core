@@ -3,7 +3,7 @@ const wdioConf = require('terra-toolkit/lib/wdio/conf');
 const WebpackDevService = require('terra-toolkit/lib/wdio/services/index').WebpackDevService;
 const localIP = require('ip');
 const path = require('path');
-const webpackConfig = require('./packages/terra-site/webpack.config.js');
+const webpackConfig = require('./webpack.config');
 
 const webpackPort = 8080;
 
