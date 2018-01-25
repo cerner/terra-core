@@ -1,20 +1,6 @@
 /* eslint-disable no-unused-expressions */
 /* global browser, Terra, beforeEach */
 
-/**
-* Generates a test for a combination of themed properties given and runs a screenshot assertion.
-* @property {Object} customProperties - An object containing the CSS custom properties to assert.
-* @property {String} testName - Name of the test
-*/
-const themeCombinationOfCustomProperties = (testName, customProperties) => {
-  global.it(`[${testName}]`, () => {
-    Object.entries(customProperties).forEach(([key, value]) => {
-      global.browser.execute(`document.documentElement.style.setProperty('${key}', '${value}')`);
-    });
-    global.expect(global.browser.checkElement('[data-reactroot]')).to.matchReference();
-  });
-};
-
 describe('Radio', () => {
   beforeEach(() => {
     browser.setViewportSize(Terra.viewports('tiny')[0]);
@@ -28,7 +14,7 @@ describe('Radio', () => {
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
 
-    themeCombinationOfCustomProperties('custom', {
+    Terra.should.themeEachCustomProperty({
       '--terra-form-radio-container-margin-right': '1rem',
       '--terra-form-radio-container-margin-top': '0',
       '--terra-form-radio-font-size, 1rem': '1.1rem',
@@ -71,7 +57,7 @@ describe('Radio', () => {
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
 
-      themeCombinationOfCustomProperties('custom', {
+      Terra.should.themeEachCustomProperty({
         '--terra-form-radio-container-margin-right': '1rem',
         '--terra-form-radio-container-margin-top': '0',
         '--terra-form-radio-font-size, 1rem': '1.1rem',
@@ -118,7 +104,7 @@ describe('Radio', () => {
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
 
-      themeCombinationOfCustomProperties('custom', {
+      Terra.should.themeEachCustomProperty({
         '--terra-form-radio-container-margin-right': '1rem',
         '--terra-form-radio-container-margin-top': '0',
         '--terra-form-radio-font-size, 1rem': '1.1rem',
@@ -178,7 +164,7 @@ describe('Radio', () => {
       Terra.should.matchScreenshot();
       Terra.should.beAccessible();
 
-      themeCombinationOfCustomProperties('custom', {
+      Terra.should.themeEachCustomProperty({
         '--terra-form-radio-container-margin-right': '1rem',
         '--terra-form-radio-container-margin-top': '0',
         '--terra-form-radio-font-size, 1rem': '1.1rem',
@@ -215,7 +201,7 @@ describe('Radio', () => {
         '--terra-form-radio-focus-border-width': '2px',
       });
 
-      themeCombinationOfCustomProperties('custom - Focus Ring', {
+      Terra.should.themeEachCustomProperty({
         '--terra-form-radio-container-margin-right': '1rem',
         '--terra-form-radio-container-margin-top': '0',
         '--terra-form-radio-font-size, 1rem': '1.1rem',
@@ -265,7 +251,7 @@ describe('Radio', () => {
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
 
-    themeCombinationOfCustomProperties('custom', {
+    Terra.should.themeEachCustomProperty({
       '--terra-form-radio-container-margin-right': '1rem',
       '--terra-form-radio-container-margin-top': '0',
       '--terra-form-radio-font-size, 1rem': '1.1rem',
@@ -312,7 +298,7 @@ describe('Radio', () => {
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();
 
-    themeCombinationOfCustomProperties('custom', {
+    Terra.should.themeEachCustomProperty({
       '--terra-form-radio-container-margin-right': '1rem',
       '--terra-form-radio-container-margin-top': '0',
       '--terra-form-radio-font-size, 1rem': '1.1rem',

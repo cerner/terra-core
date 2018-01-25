@@ -15,8 +15,8 @@ describe('Tabs - Responsive', () => {
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports: [viewport] });
+      Terra.should.beAccessible({ viewports: [viewport] });
     });
     describe('Extended', () => {
       beforeEach(() => {
@@ -24,8 +24,8 @@ describe('Tabs - Responsive', () => {
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports: [viewport] });
+      Terra.should.beAccessible({ viewports: [viewport] });
     });
     describe('Icon Only Tabs', () => {
       beforeEach(() => {
@@ -33,8 +33,8 @@ describe('Tabs - Responsive', () => {
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot({ viewports: [viewport] });
+      Terra.should.beAccessible({ viewports: [viewport] });
     });
   });
 
@@ -47,15 +47,15 @@ describe('Tabs - Responsive', () => {
         browser.click('[data-terra-tabs-menu]');
       });
 
-      Terra.should.matchScreenshot('0');
+      Terra.should.matchScreenshot('0', {});
       Terra.should.beAccessible({ rules: ignoredA11y });
 
       it('should close menu when tab is selected', () => {
         browser.click('#tab12');
       });
 
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot('1');
+      Terra.should.beAccessible({ rules: ignoredA11y });
+      Terra.should.matchScreenshot('1', {});
     });
   });
 

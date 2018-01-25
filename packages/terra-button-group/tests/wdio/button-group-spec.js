@@ -85,7 +85,7 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('0');
+    Terra.should.matchScreenshot('0', {});
 
     it('should select the second button', () => {
       browser.keys('Tab');
@@ -94,7 +94,7 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('1');
+    Terra.should.matchScreenshot('1', {});
 
     it('should select the fourth button', () => {
       browser.keys('Tab');
@@ -104,6 +104,6 @@ describe('Button Group', () => {
     });
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot('3');
+    Terra.should.matchScreenshot('3', {});
   });
 });
