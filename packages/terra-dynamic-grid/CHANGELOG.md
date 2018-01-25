@@ -3,6 +3,7 @@ ChangeLog
 
 Unreleased
 -----------------
+* Corrected example Region import path.
 
 1.11.0 - (January 18, 2018)
 ------------------
