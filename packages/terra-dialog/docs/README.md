@@ -1,6 +1,6 @@
 # Terra Dialog
 
-{insert description}
+Wrapper for terra-content-container intended to be consumed from within a modal or popup.
 
 ## Getting Started
 

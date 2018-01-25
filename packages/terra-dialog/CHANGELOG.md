@@ -3,4 +3,7 @@ ChangeLog
 
 Unreleased
 -----------------
-* Initial stable release
+* New package scaffold.
+* Basic functional component.
+* Basic jest/nightwatch/wdio tests.
+* Doc and Examples

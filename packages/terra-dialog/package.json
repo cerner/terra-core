@@ -2,7 +2,7 @@
   "name": "terra-dialog",
   "main": "lib/Dialog.js",
   "version": "0.0.0",
-  "description": "{insert description}",
+  "description": "Wrapper for terra-content-container intended to be consumed from within a modal or popup.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
