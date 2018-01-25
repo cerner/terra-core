@@ -59,7 +59,7 @@ describe('Button', () => {
           '--terra-button-active-and-focus-box-shadow-neutral': '0 0 7px 4px purple, 0 0 1px 3px rgba(76, 178, 233, 0.5)',
           '--terra-button-active-background-color-neutral': 'purple',
           '--terra-button-active-border-color-neutral': 'purple',
-        }
+        },
       );
 
       Terra.should.matchScreenshot('active', { selector: '#neutralActive' });

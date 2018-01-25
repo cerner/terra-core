@@ -6,7 +6,7 @@ describe('Badge', () => {
     beforeEach(() => browser.url('/#/tests/badge-tests/default'));
 
     Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports, selector: '#default-badge'});
+    Terra.should.matchScreenshot({ viewports, selector: '#default-badge' });
     Terra.should.themeEachCustomProperty(
       '#default-badge',
       {
@@ -19,7 +19,7 @@ describe('Badge', () => {
         '--terra-badge-padding-left': '50px',
         '--terra-badge-padding-right': '50px',
         '--terra-badge-text-transform': 'uppercase',
-      }
+      },
     );
   });
 

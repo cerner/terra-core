@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import styles from './site.scss';
 
-const TestLinks = ({ children }) => (
+const TestLinks = () => (
   <ul className={styles['site-nav']}>
     <li><Link to="/tests/alert-tests">Alert Tests</Link></li>
     <li><Link to="/tests/arrange-tests">Arrange Tests</Link></li>
