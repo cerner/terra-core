@@ -207,7 +207,6 @@
     "--terra-button-group-button-disabled-opacity": "0.3",
     "--terra-button-group-button-focus-background-color": "#fff",
     "--terra-button-group-button-focus-border-color": "#c8cacb",
-    "--terra-button-group-button-focus-border-width": "1px",
     "--terra-button-group-button-focus-box-shadow": "0 0 7px 4px rgba(76, 178, 233, 0.35), 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 1px 0 #fff))",
     "--terra-button-group-button-hover-background-color": "rgba(0, 0, 0, 0.1)",
     "--terra-button-group-button-hover-color": "rgba(0, 0, 0, 0.7)",
