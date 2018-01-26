@@ -13,7 +13,7 @@ Wrapper for terra-content-container intended to be consumed from within a modal 
 import React from 'react';
 import Dialog from 'terra-dialog';
 
-<Dialog {props...} />
+<Dialog header="Header Content" footer="Footer Content">some body content</Dialog>
 ```
 
 ## Component Features

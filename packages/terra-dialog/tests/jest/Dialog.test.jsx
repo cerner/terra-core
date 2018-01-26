@@ -11,10 +11,18 @@ describe('Dialog', () => {
   });
 
   // Prop Tests
-  it('should render with the provided props', () => {
-    const wrapper = shallow(defaultRender);
+  it('should render a header', () => {
+    const container = <Dialog header="Header Content">children required</Dialog>;
+    const wrapper = shallow(container);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render header & footer', () => {
+    const container = <Dialog header="Header Content" footer="Footer Content">children required</Dialog>;
+    const wrapper = shallow(container);
+    expect(wrapper).toMatchSnapshot();
+  });
+  
 
   // Structure Tests
   it('should have the class dialog', () => {

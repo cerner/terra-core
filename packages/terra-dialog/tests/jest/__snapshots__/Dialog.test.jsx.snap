@@ -30,7 +30,35 @@ exports[`Dialog should render a default component 1`] = `
 </div>
 `;
 
-exports[`Dialog should render with the provided props 1`] = `
+exports[`Dialog should render a header 1`] = `
+<div
+  className="dialog"
+>
+  <ContentContainer
+    fill={true}
+    footer={
+      <div
+        className="footer"
+      />
+    }
+    header={
+      <div
+        className="header"
+      >
+        Header Content
+      </div>
+    }
+  >
+    <div
+      className="body"
+    >
+      children required
+    </div>
+  </ContentContainer>
+</div>
+`;
+
+exports[`Dialog should render header & footer 1`] = `
 <div
   className="dialog"
 >
@@ -54,7 +82,7 @@ exports[`Dialog should render with the provided props 1`] = `
     <div
       className="body"
     >
-      some body content
+      children required
     </div>
   </ContentContainer>
 </div>
