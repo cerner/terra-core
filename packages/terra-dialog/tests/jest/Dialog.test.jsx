@@ -22,7 +22,7 @@ describe('Dialog', () => {
     const wrapper = shallow(container);
     expect(wrapper).toMatchSnapshot();
   });
-  
+
 
   // Structure Tests
   it('should have the class dialog', () => {
