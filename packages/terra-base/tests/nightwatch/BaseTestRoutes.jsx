@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Route } from 'react-router';
-import Anchors from './AnchorTests';
+import Anchors from './Anchors';
 import BaseTests from './BaseTests';
 import DefaultBase from './DefaultBase';
 import SwitchLocaleBase from './SwitchLocaleBase';
