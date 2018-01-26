@@ -4,14 +4,14 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default TextField with a text input': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/text-field/default`)
+      .url(`${browser.launchUrl}/#/tests/form/text-field/default-text-field`)
       .assert.elementPresent('#default-text-field')
       .assert.elementPresent('input[type="text"]');
   },
 
   'Displays a populated inline TextField with correct label, help message, and error message': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/text-field/populated`)
+      .url(`${browser.launchUrl}/#/tests/form/text-field/populated-text-field`)
       .assert.elementPresent('#populated-text-field')
       .assert.containsText('label', 'Associate ID')
       .assert.containsText('small', 'This is the ID you were given during orientation')

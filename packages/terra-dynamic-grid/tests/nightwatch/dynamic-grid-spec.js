@@ -5,7 +5,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default dynamic-grid': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/dynamic-grid-tests/default`)
+      .url(`${browser.launchUrl}/#/tests/dynamic-grid/default-dynamic-grid`)
       .expect.element('#defaultDynamicGrid').to.be.present;
 
     browser.expect.element('#defaultDynamicGrid').to.have.css('display').which.matches(/^(-ms-)?grid$/);

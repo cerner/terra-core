@@ -3,7 +3,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default OverlayContainer': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-container-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay-container/default-overlay-container`);
     browser.assert.attributeEquals('#terra-OverlayContainer', 'tabIndex', '-1');
   },
 });

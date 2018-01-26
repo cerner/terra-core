@@ -76,7 +76,6 @@ import NoTranslationsLoadedBase from './packages/terra-base/tests/nightwatch/NoT
 import NoTranslationsLoadedStringBase from './packages/terra-base/tests/nightwatch/NoTranslationsLoadedStringBase';
 import SwitchLocaleBase from './packages/terra-base/tests/nightwatch/SwitchLocaleBase';
 import CompactButtonGroup from './packages/terra-button-group/tests/nightwatch/CompactButtonGroup';
-import DefaultButtonGroup from './packages/terra-button-group/tests/nightwatch/DefaultButtonGroup';
 import IconButtonGroupButton from './packages/terra-button-group/tests/nightwatch/IconButtonGroupButton';
 import OnChangeButtonGroup from './packages/terra-button-group/tests/nightwatch/OnChangeButtonGroup';
 import SelectableButtonGroup from './packages/terra-button-group/tests/nightwatch/SelectableButtonGroup';
@@ -353,10 +352,14 @@ import ProfileImageDefault from './packages/terra-profile-image/tests/nightwatch
 import ProgressBarColor from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
 import ProgressBarDefault from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarDefault';
 import ProgressBarSize from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarSize';
-import MockComponent from './packages/terra-props-table/tests/nightwatch/MockComponent';
 import MockPropsTable from './packages/terra-props-table/tests/nightwatch/MockPropsTable';
 import MockPropsTableWithTitle from './packages/terra-props-table/tests/nightwatch/MockPropsTableWithTitle';
 import DefaultResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/DefaultResponsiveElement';
+import HugeResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/HugeResponsiveElement';
+import LargeResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/LargeResponsiveElement';
+import MediumResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/MediumResponsiveElement';
+import SmallResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/SmallResponsiveElement';
+import TinyResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/TinyResponsiveElement';
 import WindowResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/WindowResponsiveElement';
 import AutoSearchDisabledSearchField from './packages/terra-search-field/tests/nightwatch/AutoSearchDisabledSearchField';
 import CallbackSearchField from './packages/terra-search-field/tests/nightwatch/CallbackSearchField';
@@ -453,6 +456,33 @@ import OpenedButtonText from './packages/terra-toggle-button/tests/nightwatch/Op
 import AnimatedToggle from './packages/terra-toggle/tests/nightwatch/AnimatedToggle';
 import DefaultToggle from './packages/terra-toggle/tests/nightwatch/DefaultToggle';
 import OpenToggle from './packages/terra-toggle/tests/nightwatch/OpenToggle';
+import MultiRowSelectableTable from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
+import MultiRowSelectableTableMaxCount from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
+import MultiRowSelectableTableMaxCountInitiallyExceeded from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
+import MultiRowSelectableTableMaxCountInitiallyMet from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyMet';
+import MultiRowSelectableTableNonSelectable from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableNonSelectable';
+import MultiRowSelectableTableOnChange from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableOnChange';
+import MultiRowSelectableTablePreselected from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTablePreselected';
+import SelectableTableRowsAndSubheaders from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsAndSubheaders';
+import SelectableTableRowsDefault from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsDefault';
+import SelectableTableRowsDisabled from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsDisabled';
+import SelectableTableRowsNonSelectable from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsNonSelectable';
+import SelectableTableRowsNoRows from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsNoRows';
+import SelectableTableRowsOnChange from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsOnChange';
+import SelectableTableRowsOneRow from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsOneRow';
+import SelectableTableRowsPreselected from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsPreselected';
+import SelectableTable from './packages/terra-table/tests/nightwatch/single-select-table/components/SelectableTable';
+import SingleRowSelectableTableNonSelectable from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTableNonSelectable';
+import SingleRowSelectableTableOnChange from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTableOnChange';
+import SingleRowSelectableTablePreselected from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTablePreselected';
+import NoPaddingTable from './packages/terra-table/tests/nightwatch/table/components/NoPaddingTable';
+import NoStripedTable from './packages/terra-table/tests/nightwatch/table/components/NoStripedTable';
+import SingleRowTable from './packages/terra-table/tests/nightwatch/table/components/SingleRowTable';
+import StripedTable from './packages/terra-table/tests/nightwatch/table/components/StripedTable';
+import TableNoRows from './packages/terra-table/tests/nightwatch/table/components/TableNoRows';
+import TableWithHighlightedRows from './packages/terra-table/tests/nightwatch/table/components/TableWithHighlightedRows';
+import TableWithSortIndicator from './packages/terra-table/tests/nightwatch/table/components/TableWithSortIndicator';
+import TableWithSubheaders from './packages/terra-table/tests/nightwatch/table/components/TableWithSubheaders';
 
 const componentConfig = {
   'terra-site-examples': {
@@ -1147,11 +1177,6 @@ const componentConfig = {
         name: 'Compact Button Group',
         path: '/compact-button-group',
         component: CompactButtonGroup,
-      },
-      {
-        name: 'Default Button Group',
-        path: '/default-button-group',
-        component: DefaultButtonGroup,
       },
       {
         name: 'Icon Button Group Button',
@@ -2924,11 +2949,6 @@ const componentConfig = {
     path: '/props-table',
     tests: [
       {
-        name: 'Mock Component',
-        path: '/mock-component',
-        component: MockComponent,
-      },
-      {
         name: 'Mock Props Table',
         path: '/mock-props-table',
         component: MockPropsTable,
@@ -2948,6 +2968,31 @@ const componentConfig = {
         name: 'Default Responsive Element',
         path: '/default-responsive-element',
         component: DefaultResponsiveElement,
+      },
+      {
+        name: 'Huge Responsive Element',
+        path: '/huge-responsive-element',
+        component: HugeResponsiveElement,
+      },
+      {
+        name: 'Large Responsive Element',
+        path: '/large-responsive-element',
+        component: LargeResponsiveElement,
+      },
+      {
+        name: 'Medium Responsive Element',
+        path: '/medium-responsive-element',
+        component: MediumResponsiveElement,
+      },
+      {
+        name: 'Small Responsive Element',
+        path: '/small-responsive-element',
+        component: SmallResponsiveElement,
+      },
+      {
+        name: 'Tiny Responsive Element',
+        path: '/tiny-responsive-element',
+        component: TinyResponsiveElement,
       },
       {
         name: 'Window Responsive Element',
@@ -3524,6 +3569,195 @@ const componentConfig = {
         name: 'Open Toggle',
         path: '/open-toggle',
         component: OpenToggle,
+      },
+    ],
+  },
+  'terra-table': {
+    name: 'Table',
+    path: '/table',
+    tests: [
+      {
+        name: 'Multi Select Table',
+        path: '/multi-select-table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'Multi Row Selectable Table',
+                path: '/multi-row-selectable-table',
+                component: MultiRowSelectableTable,
+              },
+              {
+                name: 'Multi Row Selectable Table Max Count',
+                path: '/multi-row-selectable-table-max-count',
+                component: MultiRowSelectableTableMaxCount,
+              },
+              {
+                name: 'Multi Row Selectable Table Max Count Initially Exceeded',
+                path: '/multi-row-selectable-table-max-count-initially-exceeded',
+                component: MultiRowSelectableTableMaxCountInitiallyExceeded,
+              },
+              {
+                name: 'Multi Row Selectable Table Max Count Initially Met',
+                path: '/multi-row-selectable-table-max-count-initially-met',
+                component: MultiRowSelectableTableMaxCountInitiallyMet,
+              },
+              {
+                name: 'Multi Row Selectable Table Non Selectable',
+                path: '/multi-row-selectable-table-non-selectable',
+                component: MultiRowSelectableTableNonSelectable,
+              },
+              {
+                name: 'Multi Row Selectable Table On Change',
+                path: '/multi-row-selectable-table-on-change',
+                component: MultiRowSelectableTableOnChange,
+              },
+              {
+                name: 'Multi Row Selectable Table Preselected',
+                path: '/multi-row-selectable-table-preselected',
+                component: MultiRowSelectableTablePreselected,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Selectable Table',
+        path: '/selectable-table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'Selectable Table Rows And Subheaders',
+                path: '/selectable-table-rows-and-subheaders',
+                component: SelectableTableRowsAndSubheaders,
+              },
+              {
+                name: 'Selectable Table Rows Default',
+                path: '/selectable-table-rows-default',
+                component: SelectableTableRowsDefault,
+              },
+              {
+                name: 'Selectable Table Rows Disabled',
+                path: '/selectable-table-rows-disabled',
+                component: SelectableTableRowsDisabled,
+              },
+              {
+                name: 'Selectable Table Rows Non Selectable',
+                path: '/selectable-table-rows-non-selectable',
+                component: SelectableTableRowsNonSelectable,
+              },
+              {
+                name: 'Selectable Table Rows No Rows',
+                path: '/selectable-table-rows-no-rows',
+                component: SelectableTableRowsNoRows,
+              },
+              {
+                name: 'Selectable Table Rows On Change',
+                path: '/selectable-table-rows-on-change',
+                component: SelectableTableRowsOnChange,
+              },
+              {
+                name: 'Selectable Table Rows One Row',
+                path: '/selectable-table-rows-one-row',
+                component: SelectableTableRowsOneRow,
+              },
+              {
+                name: 'Selectable Table Rows Preselected',
+                path: '/selectable-table-rows-preselected',
+                component: SelectableTableRowsPreselected,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Single Select Table',
+        path: '/single-select-table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'Selectable Table',
+                path: '/selectable-table',
+                component: SelectableTable,
+              },
+              {
+                name: 'Single Row Selectable Table Non Selectable',
+                path: '/single-row-selectable-table-non-selectable',
+                component: SingleRowSelectableTableNonSelectable,
+              },
+              {
+                name: 'Single Row Selectable Table On Change',
+                path: '/single-row-selectable-table-on-change',
+                component: SingleRowSelectableTableOnChange,
+              },
+              {
+                name: 'Single Row Selectable Table Preselected',
+                path: '/single-row-selectable-table-preselected',
+                component: SingleRowSelectableTablePreselected,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Table',
+        path: '/table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'No Padding Table',
+                path: '/no-padding-table',
+                component: NoPaddingTable,
+              },
+              {
+                name: 'No Striped Table',
+                path: '/no-striped-table',
+                component: NoStripedTable,
+              },
+              {
+                name: 'Single Row Table',
+                path: '/single-row-table',
+                component: SingleRowTable,
+              },
+              {
+                name: 'Striped Table',
+                path: '/striped-table',
+                component: StripedTable,
+              },
+              {
+                name: 'Table No Rows',
+                path: '/table-no-rows',
+                component: TableNoRows,
+              },
+              {
+                name: 'Table With Highlighted Rows',
+                path: '/table-with-highlighted-rows',
+                component: TableWithHighlightedRows,
+              },
+              {
+                name: 'Table With Sort Indicator',
+                path: '/table-with-sort-indicator',
+                component: TableWithSortIndicator,
+              },
+              {
+                name: 'Table With Subheaders',
+                path: '/table-with-subheaders',
+                component: TableWithSubheaders,
+              },
+            ],
+          },
+        ],
       },
     ],
   },

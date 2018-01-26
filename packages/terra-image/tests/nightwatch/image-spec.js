@@ -3,20 +3,20 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays an image with default options': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/image-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/image/image-default`);
   },
 
   'Displays non fluid image examples': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/image-tests/non-fluid`);
+    browser.url(`${browser.launchUrl}/#/tests/image/image-non-fluid`);
   },
 
   'Displays fluid image examples': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/image-tests/fluid`);
+    browser.url(`${browser.launchUrl}/#/tests/image/image-fluid`);
   },
 
   'Displays an image that successfully loaded': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/image-tests/loading`)
+      .url(`${browser.launchUrl}/#/tests/image/image-loading`)
       .waitForElementPresent('#loadedImage', 1000);
   },
 
