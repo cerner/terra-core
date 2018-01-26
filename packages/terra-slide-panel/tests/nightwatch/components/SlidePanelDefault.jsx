@@ -5,6 +5,7 @@ import SlidePanel from '../../../lib/SlidePanel';
 
 const SlidePanelDefault = () => (
   <SlidePanel
+    id="test-example"
     mainContent={<SlidePanelMainContent />}
     panelContent={<SlidePanelPanelContent />}
   />

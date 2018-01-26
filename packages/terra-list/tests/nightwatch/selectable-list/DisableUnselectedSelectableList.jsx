@@ -19,7 +19,7 @@ class listExample extends React.Component {
         <div id="current-index">
           <h3>Triggered Item: {this.state.selectedIndex}</h3>
         </div>
-        <SelectableList selectedIndexes={[0, 1]} disableUnselectedItems onChange={this.handleSelection}>
+        <SelectableList id="example-list" selectedIndexes={[0, 1]} disableUnselectedItems onChange={this.handleSelection}>
           <SelectableList.Item content={<p>test 1</p>} key="123" />
           <SelectableList.Item content={<p>test 2</p>} key="124" />
           <SelectableList.Item content={<p>test 3</p>} key="125" />

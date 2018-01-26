@@ -4,42 +4,42 @@ const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays the default element when contained within a parent of default size': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/responsive-element-tests/default`)
+      .url(`${browser.launchUrl}/#/tests/responsive-element/default-responsive-element`)
       .expect.element('.terra-ResponsiveElement > :first-child').text.to.equal('Default');
   },
 
   'Displays the tiny element when contained within a parent of tiny size': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/responsive-element-tests/tiny`)
+      .url(`${browser.launchUrl}/#/tests/responsive-element/tiny-responsive-element`)
       .expect.element('.terra-ResponsiveElement > :first-child').text.to.equal('Tiny');
   },
 
   'Displays the small element when contained within a parent of small size': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/responsive-element-tests/small`)
+      .url(`${browser.launchUrl}/#/tests/responsive-element/small-responsive-element`)
       .expect.element('.terra-ResponsiveElement > :first-child').text.to.equal('Small');
   },
 
   'Displays the medium element when contained within a parent of medium size': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/responsive-element-tests/medium`)
+      .url(`${browser.launchUrl}/#/tests/responsive-element/medium-responsive-element`)
       .expect.element('.terra-ResponsiveElement > :first-child').text.to.equal('Medium');
   },
 
   'Displays the large element when contained within a parent of large size': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/responsive-element-tests/large`)
+      .url(`${browser.launchUrl}/#/tests/responsive-element/large-responsive-element`)
       .expect.element('.terra-ResponsiveElement > :first-child').text.to.equal('Large');
   },
 
   'Displays the huge element when contained within a parent of huge size': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/responsive-element-tests/huge`)
+      .url(`${browser.launchUrl}/#/tests/responsive-element/huge-responsive-element`)
       .expect.element('.terra-ResponsiveElement > :first-child').text.to.equal('Huge');
   },
 
   'Displays the correct element responsive to window size': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/responsive-element-tests/window-responsive`);
+    browser.url(`${browser.launchUrl}/#/tests/responsive-element/window-responsive-element`);
 
     const width = screenWidth(browser);
     if (width <= browser.globals.breakpoints.tiny[0]) {

@@ -4,37 +4,37 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default overlay': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/default-overlay`);
 
     browser.expect.element('#default-overlay').to.be.present;
   },
 
   'Displays a fullscreen Overlay as the default': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/default`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/default-overlay`);
 
     browser.expect.element('#default-overlay').to.have.attribute('class').which.contains('fullscreen');
   },
 
   'Displays a default Overlay relative to the triggering container': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/container`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/container-overlay`);
 
     browser.expect.element('#overlay-container div').to.have.attribute('class').which.contains('container');
   },
 
   'Displays a fullscreen Overlay with isScrollable prop': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/fullscreen-scrollable`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/fullscreen-scrollable-overlay`);
 
     browser.expect.element('#scrollable-overlay').to.have.attribute('class').which.contains('scrollable');
   },
 
   'Displays an Overlay relative to container with isScrollable prop': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/container-scrollable`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/container-scrollable-overlay`);
 
     browser.expect.element('#overlay-container div').to.have.attribute('class').which.contains('scrollable');
   },
 
   'Triggers an onRequestClose on escape keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/on-request-close`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/on-request-close-overlay`);
 
     browser.click('#trigger_fullscreen');
     browser.assert.elementPresent('#terra-Overlay--fullscreen');
@@ -50,7 +50,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers an onRequestClose on click inside of the Overlay': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/on-request-close`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/on-request-close-overlay`);
 
     browser.click('#trigger_fullscreen');
     browser.assert.elementPresent('#terra-Overlay--fullscreen');
@@ -66,7 +66,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Background does not scroll when a fullscreen Overlay is open': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/on-request-close`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/on-request-close-overlay`);
     browser.expect.element('html').to.have.attribute('style').which.equals('');
 
     browser.click('#trigger_fullscreen');
@@ -79,7 +79,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Background can scroll when a Overlay relative to contianer is open': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/on-request-close`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/on-request-close-overlay`);
     browser.expect.element('html').to.have.attribute('style').which.equals('');
 
     browser.click('#trigger_container');
@@ -92,7 +92,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Content under overlay is not clickable when Overlay is open': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/custom-content`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/custom-content-overlay`);
 
     browser.click('#trigger_fullscreen');
     browser.assert.elementPresent('#terra-Overlay--fullscreen');
@@ -103,7 +103,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Content outside of OverlayContainer is clickable when container Overlay is open': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/custom-content`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/custom-content-overlay`);
 
     browser.click('#trigger_container');
     browser.assert.elementPresent('#terra-Overlay--container');
@@ -114,19 +114,19 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a Overlay with a light theme': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/light-themed`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/light-overlay`);
 
     browser.expect.element('#light-overlay').to.have.attribute('class').which.contains('light');
   },
 
   'Displays a Overlay with a dark theme': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/dark-themed`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/dark-overlay`);
 
     browser.expect.element('#dark-overlay').to.have.attribute('class').which.contains('dark');
   },
 
   'Displays a Overlay with a clear theme': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/overlay-tests/clear-themed`);
+    browser.url(`${browser.launchUrl}/#/tests/overlay/overlay/clear-overlay`);
 
     browser.expect.element('#clear-overlay').to.have.attribute('class').which.contains('clear');
   },

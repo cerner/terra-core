@@ -26,6 +26,6 @@ function getStyle(size) {
   return { width: windowSizes[size][0], height: '200px', border: '1px dashed grey' };
 }
 
-const DefaultResponsiveElement = () => <div style={getStyle('default')}>{responsiveElement}</div>;
+const LargeResponsiveElement = () => <div style={getStyle('large')}>{responsiveElement}</div>;
 
-export default DefaultResponsiveElement;
+export default LargeResponsiveElement;

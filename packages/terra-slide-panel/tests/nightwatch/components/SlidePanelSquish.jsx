@@ -5,6 +5,7 @@ import SlidePanel from '../../../lib/SlidePanel';
 
 const SlidePanelSquish = () => (
   <SlidePanel
+    id="test-example"
     mainContent={<SlidePanelMainContent />}
     panelContent={<SlidePanelPanelContent />}
     panelBehavior="squish"
