@@ -52,9 +52,9 @@ a.is-hovered {
 
 a:focus,
 a.is-focused {
-  background: transparent;
-  border-radius: 0.2142rem;
-  box-shadow: 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35);
+  background-color: var(--terra-link-focus-background-color, transparent);
+  border-radius: var(--terra-link-focus-border-radius, 0.2142rem);
+  box-shadow: var(--terra-link-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
   color: var(--terra-link-focus-color, #004c76);
 }
 
