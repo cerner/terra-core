@@ -5,7 +5,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'enormous'], {
   'Displays a default divider': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/divider/default-divider`)
+      .url(`${browser.launchUrl}/#/raw/tests/divider/default-divider`)
       .expect.element('#divider').to.be.present;
   },
 });

@@ -4,13 +4,13 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default Input': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form/input/default-input`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/input/default-input`)
       .assert.elementPresent('input');
   },
 
   'Properly initializes Input with the correct attributes': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form/input/populated-input`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/input/populated-input`)
       .assert.elementPresent('input[name="foo"][value="bar"][required]');
   },
 });

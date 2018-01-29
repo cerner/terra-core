@@ -4,7 +4,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['tiny', 'huge'], {
   'Sets the fields appropriately for a morning time': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour-filled-morning`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour-filled-morning`);
 
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('value').equals('09');
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('value').equals('22');
@@ -12,7 +12,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Sets the fields appropriately for an evening time': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour-filled-evening`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour-filled-evening`);
 
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('value').equals('09');
     browser.expect.element('#timeInput input[name="terra-time-minute-time-input"]').to.have.attribute('value').equals('22');
@@ -20,7 +20,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Meridiem input switches to a.m. when up is pressed on the meridiem input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[value="a.m."]');
     browser.keys(browser.Keys.UP_ARROW);
@@ -28,7 +28,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Meridiem input switches to p.m. when down is pressed on the meridiem input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[value="a.m."]');
     browser.keys(browser.Keys.DOWN_ARROW);
@@ -36,7 +36,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input accepts valid time entry and jumps to the meridiem input when the hour input has a valid entry': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -46,7 +46,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input accepts valid time entry and jumps to the meridien input when the entire input has a valid entry': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -57,7 +57,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input sets the hour to 12 without changing meridiem when 00 is typed in for the hours section': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -67,7 +67,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input sets the hour to 12 without changing meridiem when 00 is typed in for the entire input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -78,7 +78,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input sets the hour to 12 without changing meridiem when up is pressed on the hour input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -88,7 +88,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input is set to 01 when up is pressed on the hour input with a value of 12': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('12');
@@ -99,7 +99,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input is set to 12 when down is pressed on the hour input with a value of 01': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('01');
@@ -110,7 +110,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input is set to 12 and meridiem is switched when up is pressed and hour is 11': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('11');
@@ -122,7 +122,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input sets the hour to 11 and changes the meridiem when down is pressed and hour is 12': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('12');
@@ -134,7 +134,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Sets time to 12 for onBlur focus change when value is 0': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('730p');
@@ -147,7 +147,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Toggles to the minute input when left is pressed from the meridiem input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[value="a.m."]');
     browser.keys(browser.Keys.LEFT_ARROW);
@@ -157,7 +157,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Toggles to the minute input when backspace is pressed from the meridiem input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input/component/time-input-twelve-hour`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour`);
 
     browser.click('#timeInput input[value="a.m."]');
 

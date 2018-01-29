@@ -19,7 +19,7 @@ class listExample extends React.Component {
         <div id="selected-index">
           <h3>Selected Item: {this.state.selectedIndex}</h3>
         </div>
-        <SingleSelectList id="example-list" onChange={this.handleSelection}>
+        <SingleSelectList onChange={this.handleSelection}>
           <SingleSelectList.Item content={<p>test 1</p>} key="123" />
           <SingleSelectList.Item content={<p>test 2</p>} key="124" isSelected />
           <SingleSelectList.Item content={<p>test 3</p>} key="125" />

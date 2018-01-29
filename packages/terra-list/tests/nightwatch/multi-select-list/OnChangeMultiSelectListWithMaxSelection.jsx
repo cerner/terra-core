@@ -16,7 +16,7 @@ class listExample extends React.Component {
   render() {
     return (
       <div>
-        <div id="selected-index">
+        <div>
           <h3>Max Selection of 2. Selected Item(s): {this.state.selectedIndexes.join(', ')}</h3>
         </div>
         <MultiSelectList id="example-list" onChange={this.handleSelection} maxSelectionCount={2}>

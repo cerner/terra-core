@@ -5,7 +5,6 @@ import SlidePanel from '../../../lib/SlidePanel';
 
 const SlidePanelLarge = () => (
   <SlidePanel
-    id="test-example"
     mainContent={<SlidePanelMainContent />}
     panelContent={<SlidePanelPanelContent />}
     panelSize="large"

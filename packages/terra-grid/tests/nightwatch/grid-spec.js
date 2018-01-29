@@ -5,7 +5,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default grid': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/grid/components/grid-default`)
+      .url(`${browser.launchUrl}/#/raw/tests/grid/components/grid-default`)
       .expect.element('#grid').to.be.present;
 
     browser.expect.element('#row').to.be.present;
@@ -18,7 +18,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a responsive grid': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/grid/components/grid-responsive`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/grid/components/grid-responsive`);
     browser.expect.element('#grid').to.be.present;
 
     browser.expect.element('#column-1').to.have.attribute('class').which.contain('tiny-12');
@@ -29,7 +29,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a nested grid': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/grid/components/grid-nested`)
+      .url(`${browser.launchUrl}/#/raw/tests/grid/components/grid-nested`)
       .expect.element('#grid').to.be.present;
 
     browser.expect.element('#nested-row').to.be.present;

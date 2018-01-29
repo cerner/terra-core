@@ -4,7 +4,7 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a default item group': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/menu/menu-item-group/menu-item-group-default`)
+      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item-group/menu-item-group-default`)
       .assert.elementPresent('.TestGroup')
       .assert.elementPresent('.TestGroupItem1')
       .assert.elementPresent('.TestGroupItem2')
@@ -12,7 +12,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
   'Items in the item group are selectable': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/menu/menu-item-group/menu-item-group-default`)
+      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item-group/menu-item-group-default`)
       .click('.TestGroupItem3')
       .assert.visible('.TestGroupItem3 svg[class*="_checkmark"]')
       .assert.containsText('#selected-index', '2')

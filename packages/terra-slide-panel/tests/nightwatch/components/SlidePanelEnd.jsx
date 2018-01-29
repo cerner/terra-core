@@ -5,7 +5,6 @@ import SlidePanel from '../../../lib/SlidePanel';
 
 const SlidePanelEnd = () => (
   <SlidePanel
-    id="test-example"
     mainContent={<SlidePanelMainContent />}
     panelContent={<SlidePanelPanelContent />}
     panelPosition="end"

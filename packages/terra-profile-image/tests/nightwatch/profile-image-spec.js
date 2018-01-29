@@ -4,18 +4,18 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a profile image': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/profile-image/profile-image-default`)
+      .url(`${browser.launchUrl}/#/raw/tests/profile-image/profile-image-default`)
       .assert.elementPresent('#loadedImage');
   },
 
   'Displays the avatar image if the profile image was not found': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/profile-image/profile-image-default`)
+      .url(`${browser.launchUrl}/#/raw/tests/profile-image/profile-image-default`)
       .assert.elementPresent('#errorImage');
   },
 
   'Displays a profile image with set attributes': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/profile-image/profile-image-default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/profile-image/profile-image-default`);
     browser.assert.attributeEquals('#loadedImage', 'width', '75');
     browser.assert.attributeEquals('#loadedImage', 'height', '75');
   },
