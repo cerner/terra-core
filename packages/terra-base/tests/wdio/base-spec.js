@@ -1,4 +1,10 @@
-/* global $, before, browser */
+/* global $, before, browser, Terra */
+const viewports = Terra.viewports('tiny', 'medium');
+// Adding this rule to to bypass interface elements (like header and navigation) and quickly arrive at the main content.
+const ignoredA11y = {
+  bypass: { enabled: false },
+};
+
 describe('Base', () => {
   describe('Switching Locales', () => {
     before(() => browser.url('/#/tests/base-tests/switch'));
@@ -24,6 +30,21 @@ describe('Base', () => {
     it('Displays a placeholder string', () => {
       browser.url('/#/tests/base-tests/no-translations-loaded-string');
       expect($('div').getText()).to.contain('No Translations String');
+    });
+  });
+
+  describe('Anchors', () => {
+    beforeEach(() => browser.url('/#/tests/base-tests/anchors'));
+
+    Terra.should.beAccessible({ viewports, rules: ignoredA11y });
+    Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeEachCustomProperty({
+      '--terra-link-color': 'blue',
+      '--terra-link-visted-color': 'green',
+      '--terra-link-hover-color': 'black',
+      '--terra-link-focus-background-color': 'grey',
+      '--terra-link-focus-color': 'pink',
+      '--terra-link-active-color': 'purple',
     });
   });
 });

@@ -31,3 +31,35 @@ body {
 *::after {
   box-sizing: inherit;
 }
+
+a {
+  background-color: transparent; /* Remove the gray background on active links in IE 10. */
+  color: var(--terra-link-color, #0065a3);
+  outline: none;
+  text-decoration: underline;
+}
+
+// stylelint-disable selector-no-qualifying-type
+a:visited,
+a.is-visited {
+  color: var(--terra-link-visted-color, #0065a3);
+}
+
+a:hover,
+a.is-hovered {
+  color: var(--terra-link-hover-color, #004c76);
+}
+
+a:focus,
+a.is-focused {
+  background-color: var(--terra-link-focus-background-color, transparent);
+  border-radius: var(--terra-link-focus-border-radius, 0.2142rem);
+  box-shadow: var(--terra-link-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+  color: var(--terra-link-focus-color, #004c76);
+}
+
+a:active,
+a.is-active {
+  color: var(--terra-link-active-color, #004c76);
+}
+// stylelint-enable selector-no-qualifying-type
