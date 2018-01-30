@@ -27,11 +27,15 @@ const defaultProps = {
 
 class SlideGroup extends React.Component {
   static hidePreviousSlide(enteredElement) {
-    enteredElement.previousSibling.setAttribute('aria-hidden', true);
+    if (enteredElement.previousSibling) {
+      enteredElement.previousSibling.setAttribute('aria-hidden', true);
+    }
   }
 
   static showPreviousSlide(exitingElement) {
-    exitingElement.previousSibling.removeAttribute('aria-hidden');
+    if (exitingElement.previousSibling) {
+      exitingElement.previousSibling.removeAttribute('aria-hidden');
+    }
   }
 
   constructor(props) {
