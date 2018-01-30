@@ -1,6 +1,6 @@
 # Terra Dialog
 
-Wrapper for terra-content-container intended to be consumed from within a modal or popup.
+Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user.
 
 ## Getting Started
 
