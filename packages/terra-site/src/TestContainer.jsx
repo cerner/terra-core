@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import styles from './site.scss';
 
 const TestContainer = ({ children }) => (
-  <div id="wdio-test-wrapper" className={styles.app} style={{ overflow: 'auto' }}>
-    {children}
+  <div className={styles.app} style={{ overflow: 'auto' }}>
+    <div  id="wdio-test-wrapper">
+      {children}
+    </div>
   </div>
 );
 

@@ -47,7 +47,7 @@ describe('Tabs - Responsive', () => {
         browser.click('[data-terra-tabs-menu]');
       });
 
-      Terra.should.matchScreenshot('0', {});
+      Terra.should.matchScreenshot('0');
       Terra.should.beAccessible({ rules: ignoredA11y });
 
       it('should close menu when tab is selected', () => {
@@ -55,7 +55,7 @@ describe('Tabs - Responsive', () => {
       });
 
       Terra.should.beAccessible({ rules: ignoredA11y });
-      Terra.should.matchScreenshot('1', {});
+      Terra.should.matchScreenshot('1');
     });
   });
 

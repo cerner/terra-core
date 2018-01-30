@@ -41,11 +41,14 @@ describe('Button', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
 
-      Terra.should.themeEachCustomProperty({
-        '--terra-button-focus-background-color-neutral': 'purple',
-        '--terra-button-focus-border-color-neutral': 'red',
-        '--terra-button-focus-box-shadow-neutral': '0 0 1px 3px rgba(76, 178, 233, 0.5)',
-      });
+      Terra.should.themeEachCustomProperty(
+        '#neutral',
+        {
+          '--terra-button-focus-background-color-neutral': 'purple',
+          '--terra-button-focus-border-color-neutral': 'red',
+          '--terra-button-focus-box-shadow-neutral': '0 0 1px 3px rgba(76, 178, 233, 0.5)',
+        }
+      );
     });
 
     describe('Neutral-Active', () => {
@@ -209,23 +212,26 @@ describe('Button', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/with-type-button'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: 'button' });
 
-      Terra.should.themeEachCustomProperty({
-        '--terra-button-text-only-horizontal-margin': '20px',
-      });
+      Terra.should.themeEachCustomProperty(
+        'button',
+        {
+          '--terra-button-text-only-horizontal-margin': '20px',
+        }
+      );
     });
 
     describe('Type reset', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/with-type-reset'));
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: 'button' });
     });
 
     describe('Type submit', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/with-type-submit'));
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: 'button' });
     });
   });
 
@@ -234,32 +240,38 @@ describe('Button', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/icon-neutral'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#iconNeutralButton' });
 
-      Terra.should.themeEachCustomProperty({
-        '--terra-button-text-and-icon-horizontal-margin': '20px',
-        '--terra-button-text-and-icon-margin-between': '20px',
-      });
+      Terra.should.themeEachCustomProperty(
+        '#iconNeutralButton',
+        {
+          '--terra-button-text-and-icon-horizontal-margin': '20px',
+          '--terra-button-text-and-icon-margin-between': '20px',
+        }
+      );
     });
 
     describe('Icon and Text Reversed', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/icon-reversed'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#iconReversedButton' });
     });
 
     describe('Icon only', () => {
       beforeEach(() => browser.url('/#/tests/button-tests/icon-only'));
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#iconOnlyButton' });
 
-      Terra.should.themeEachCustomProperty({
-        '--terra-button-icon-only-horizontal-margin': '20px',
-        '--terra-button-icon-height': '10px',
-        '--terra-button-icon-width': '10px',
-      });
+      Terra.should.themeEachCustomProperty(
+        '#iconOnlyButton',
+        {
+          '--terra-button-icon-only-horizontal-margin': '20px',
+          '--terra-button-icon-height': '10px',
+          '--terra-button-icon-width': '10px',
+        }
+      );
     });
   });
 });
