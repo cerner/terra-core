@@ -33,12 +33,6 @@ describe('Button Group', () => {
       expect(browser.getText('#selected-key')).to.equal('1');
     });
 
-    Terra.should.themeEachCustomProperty({
-      '--terra-button-group-button-active-background-color': '#8bc2f9',
-      '--terra-button-group-button-active-and-hover-background-color': '#8bc2f9',
-      '--terra-button-group-button-active-and-focus-background-color': '#8bc2f9',
-    });
-
     Terra.should.beAccessible();
     Terra.should.matchScreenshot('button1-selected');
 
@@ -68,12 +62,6 @@ describe('Button Group', () => {
       browser.keys('Tab');
       browser.keys('Space');
       expect(browser.getText('#selected-keys')).to.equal('1');
-    });
-
-    Terra.should.themeEachCustomProperty({
-      '--terra-button-group-button-active-background-color': '#8bc2f9',
-      '--terra-button-group-button-active-and-hover-background-color': '#8bc2f9',
-      '--terra-button-group-button-active-and-focus-background-color': '#8bc2f9',
     });
 
     Terra.should.beAccessible();
