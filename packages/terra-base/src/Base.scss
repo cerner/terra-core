@@ -62,9 +62,4 @@ a:active,
 a.is-active {
   color: var(--terra-link-active-color, #004c76);
 }
-
-a[aria-disabled='true'] {
-  color: var(--terra-link-disabled-hover-color, rgba(28, 31, 33, 0.33));
-  pointer-events: none;
-}
 // stylelint-enable selector-no-qualifying-type

@@ -53,10 +53,6 @@ const BaseExamples = () => (
       <div>
         <a rel="noreferrer noopener" target="_blank" href="https://my.cerner.com">hyperlink</a>
       </div>
-      <br />
-      <div>
-        <a href="https://my.cerner.com" aria-disabled="true">disabled hyperlink</a>
-      </div>
     </div>
   </Base>
 );

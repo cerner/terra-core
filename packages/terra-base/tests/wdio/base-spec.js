@@ -45,7 +45,6 @@ describe('Base', () => {
       '--terra-link-focus-background-color': 'grey',
       '--terra-link-focus-color': 'pink',
       '--terra-link-active-color': 'purple',
-      '--terra-link-disabled-hover-color': 'yellow',
     });
   });
 });
