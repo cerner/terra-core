@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Update to React 16
 
+### Fixed
+* Corrected example Region import path.
+
 1.11.0 - (January 18, 2018)
 ------------------
 ### Changed
