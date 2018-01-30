@@ -16,10 +16,10 @@ class listExample extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div id="selected-index">
           <h3>Selected Item(s): {this.state.selectedIndexes.join(', ')}</h3>
         </div>
-        <MultiSelectList id="example-list" onChange={this.handleSelection}>
+        <MultiSelectList onChange={this.handleSelection}>
           <MultiSelectList.Item content={<p>test 1</p>} key="123" />
           <MultiSelectList.Item content={<p>test 2</p>} key="124" />
           <MultiSelectList.Item content={<p>test 3</p>} key="125" />

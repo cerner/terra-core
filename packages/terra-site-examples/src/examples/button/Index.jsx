@@ -6,7 +6,7 @@ import { version } from 'terra-button/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import ButtonSrc from '!raw-loader!terra-button/src/Button';
+import ButtonSrc from '!raw-loader!../../../../terra-button/src/Button';
 
 // Example Files
 import ButtonBlock from './ButtonBlock';

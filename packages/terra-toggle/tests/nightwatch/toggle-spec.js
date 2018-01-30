@@ -14,11 +14,11 @@ module.exports = resizeTo(['medium'], {
     browser.expect.element('#toggle').to.have.attribute('aria-hidden').to.equal('true');
 
     browser
-     .click('button')
+     .click('#trigger-toggle')
      .expect.element('#toggle').to.have.attribute('aria-hidden').to.equal('false');
 
     browser
-     .click('button')
+     .click('#trigger-toggle')
      .expect.element('#toggle').to.have.attribute('aria-hidden').to.equal('true');
   },
 
@@ -33,18 +33,18 @@ module.exports = resizeTo(['medium'], {
 
     browser
      .assert.cssProperty('#toggle[aria-hidden="true"]', 'visibility', 'hidden')
-     .click('button') // Opens toggle
+     .click('#trigger-toggle') // Opens toggle
      .waitForElementPresent('#toggle[aria-hidden="false"]', 1000);
 
     browser
-     .click('button') // Closes toggle
+     .click('#trigger-toggle') // Closes toggle
      .waitForElementPresent('#toggle[aria-hidden="true"]', 1000);
   },
 
   'Enables focusable elements within animated toggle when opened': (browser) => {
     browser
      .url(`${browser.launchUrl}/#/raw/tests/toggle/animated-toggle`)
-     .click('button')
+     .click('#trigger-toggle')
      .assert.cssProperty('#toggle[aria-hidden="false"]', 'visibility', 'visible');
   },
 });

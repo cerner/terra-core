@@ -12,7 +12,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.expect.element('#defaultSelect div[class*="default-option"]').text.to.equal('- Select -');
   },
   'Displays selected value in input and closes menu': (browser) => {
-    browser.url(`${browser.launchUrl}/#tests/form-select/select/default-select`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select/default-select`);
     browser.click('#defaultSelect');
     browser.expect.element('div[class*="select-menu"]').to.be.present;
     browser.click('#kittens');
@@ -22,7 +22,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.expect.element('#kittens').to.have.attribute('class').which.contains('is-selected');
   },
   'Does not allow selection of a disabled option': (browser) => {
-    browser.url(`${browser.launchUrl}/#tests/form-select/select/default-select`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select/default-select`);
     browser.click('#defaultSelect');
     browser.expect.element('div[class*="select-menu"]').to.be.present;
     browser.click('#disabledOption');
@@ -30,12 +30,12 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.expect.element('#defaultSelect').text.to.equal('- Select -');
   },
   'When select is closed, will update selection when user enters characters if there is a matching option': (browser) => {
-    browser.url(`${browser.launchUrl}/#tests/form-select/select/default-select`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select/default-select`);
     browser.sendKeys('#defaultSelect', 'p');
     browser.expect.element('#defaultSelect').text.to.equal('Puppies');
   },
   'When select is closed, will not update selection when user enters characters that has no matching option': (browser) => {
-    browser.url(`${browser.launchUrl}/#tests/form-select/select/default-select`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select/default-select`);
     browser.sendKeys('#defaultSelect', 'i');
     browser.expect.element('#defaultSelect').text.to.equal('- Select -');
   },

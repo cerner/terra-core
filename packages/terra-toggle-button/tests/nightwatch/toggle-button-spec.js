@@ -41,38 +41,38 @@ module.exports = resizeTo(['medium'], {
   'Displays an icon only toggle-button': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/toggle-button/icon-only`)
-      .assert.attributeContains('button', 'aria-label', 'Custom Text')
-      .assert.containsText('button', '');
+      .assert.attributeContains('#iconOnlyToggleButton > button', 'aria-label', 'Custom Text')
+      .assert.containsText('#iconOnlyToggleButton > button', '');
   },
 
   'Displays an initially open toggle-button': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/toggle-button/initially-open`)
-      .assert.attributeContains('button + div', 'aria-hidden', 'false');
+      .assert.attributeContains('#initiallyOpenToggleButton > button + div', 'aria-hidden', 'false');
   },
 
   'Displays a toggle-button with customized openedButtonText': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/toggle-button/opened-button-text`)
-      .click('button')
-      .assert.containsText('button > div > div:nth-child(2) > span', 'Custom Text 2');
+      .click('#openedButtonText button')
+      .assert.containsText('#openedButtonText button > div > div:nth-child(2) > span', 'Custom Text 2');
   },
 
   'Triggers onOpen callback for ToggleButton when button is selected': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/toggle-button/on-open-toggle-button`);
 
     browser
-      .click('button') // Open ToggleButton
+      .click('#onOpenToggleButton button') // Open ToggleButton
       .assert.containsText('#on-open-event', 'Times Opened: 1')
-      .click('button'); // Close ToggleButton
+      .click('#onOpenToggleButton button'); // Close ToggleButton
 
     browser
-      .sendKeys('button', browser.Keys.SPACE) // Open ToggleButton
+      .sendKeys('#onOpenToggleButton button', browser.Keys.SPACE) // Open ToggleButton
       .assert.containsText('#on-open-event', 'Times Opened: 2')
-      .sendKeys('button', browser.Keys.SPACE);  // Close ToggleButton
+      .sendKeys('#onOpenToggleButton button', browser.Keys.SPACE);  // Close ToggleButton
 
     browser
-      .sendKeys('button', browser.Keys.ENTER) // Open ToggleButton
+      .sendKeys('#onOpenToggleButton button', browser.Keys.ENTER) // Open ToggleButton
       .assert.containsText('#on-open-event', 'Times Opened: 3');
   },
 
@@ -80,26 +80,26 @@ module.exports = resizeTo(['medium'], {
     browser.url(`${browser.launchUrl}/#/raw/tests/toggle-button/on-close-toggle-button`);
 
     browser
-      .click('button') // Open ToggleButton
-      .click('button') // Close ToggleButton
+      .click('#onCloseToggleButton button') // Open ToggleButton
+      .click('#onCloseToggleButton button') // Close ToggleButton
       .assert.containsText('#on-close-event', 'Times Closed: 1');
 
     browser
-      .click('button') // Open ToggleButton
-      .sendKeys('button', browser.Keys.SPACE) // Close ToggleButton
+      .click('#onCloseToggleButton button') // Open ToggleButton
+      .sendKeys('#onCloseToggleButton button', browser.Keys.SPACE) // Close ToggleButton
       .assert.containsText('#on-close-event', 'Times Closed: 2');
 
     browser
-      .sendKeys('button', browser.Keys.SPACE) // Open ToggleButton
-      .sendKeys('button', browser.Keys.ENTER) // Close ToggleButton
+      .sendKeys('#onCloseToggleButton button', browser.Keys.SPACE) // Open ToggleButton
+      .sendKeys('#onCloseToggleButton button', browser.Keys.ENTER) // Close ToggleButton
       .assert.containsText('#on-close-event', 'Times Closed: 3');
   },
 
   'Display toggle-button content when button is clicked': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/toggle-button/default-toggle-button`)
-      .click('button')
-      .waitForElementPresent('button + div', 1000)
-      .expect.element('button + div').to.have.attribute('aria-hidden').to.equal('false');
+      .click('#toggleButton button')
+      .waitForElementPresent('#toggleButton > button + div', 1000)
+      .expect.element('#toggleButton > button + div').to.have.attribute('aria-hidden').to.equal('false');
   },
 });

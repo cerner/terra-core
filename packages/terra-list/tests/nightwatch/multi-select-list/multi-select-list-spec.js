@@ -10,7 +10,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a multi select list': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/list/multi-select-list/default-multi-select-list`)
-      .assert.elementPresent('#example-list');
+      .assert.elementPresent('ul');
   },
 
   'Displays items in the multi select list': (browser) => {

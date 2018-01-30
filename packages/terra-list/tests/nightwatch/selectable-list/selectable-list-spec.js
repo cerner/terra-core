@@ -63,7 +63,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays items in the selectable list divided': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/items-divided-selectable-list`);
-    browser.expect.element('#example-list').to.have.attribute('class').which.contains('divided');
+    browser.expect.element('ul').to.have.attribute('class').which.contains('divided');
   },
 
   'Displays only one selected item in the selectablelist': (browser) => {

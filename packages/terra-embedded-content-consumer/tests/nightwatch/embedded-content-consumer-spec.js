@@ -4,8 +4,8 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['medium'], {
   'Displays a provider embedded in the consumer that contains title text.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/basic-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/basic-provider';
+    const consumerSrc = '#/raw/tests/embedded-content-consumer/consumers/basic-consumer';
+    const providerSrc = '#/raw/tests/embedded-content-consumer/providers/basic-provider';
 
     browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider.
@@ -21,8 +21,8 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a provider embedded in the consumer expanded to fill the parent.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/fill-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/fill-provider';
+    const consumerSrc = '#/raw/tests/embedded-content-consumer/consumers/fill-consumer';
+    const providerSrc = '#/raw/tests/embedded-content-consumer/providers/fill-provider';
 
     browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider.
@@ -37,8 +37,8 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a provider embedded in the consumer that triggers after initialization is complete.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/on-ready-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/on-ready-provider';
+    const consumerSrc = '#/raw/tests/embedded-content-consumer/consumers/on-ready-consumer';
+    const providerSrc = '#/raw/tests/embedded-content-consumer/providers/on-ready-provider';
 
     browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
@@ -56,8 +56,8 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a provider embedded in the consumer that triggers a custom event.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/custom-event-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/custom-event-provider';
+    const consumerSrc = '#/raw/tests/embedded-content-consumer/consumers/custom-event-consumer';
+    const providerSrc = '#/raw/tests/embedded-content-consumer/providers/custom-event-provider';
 
     browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
@@ -67,8 +67,8 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a provider embedded in the consumer that triggers multiple custom event.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/custom-events-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/custom-events-provider';
+    const consumerSrc = '#/raw/tests/embedded-content-consumer/consumers/custom-events-consumer';
+    const providerSrc = '#/raw/tests/embedded-content-consumer/providers/custom-events-provider';
 
     browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.
@@ -83,8 +83,8 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays the consumer life cycle status.': (browser) => {
-    const consumerSrc = '#/tests/embedded-content-consumer-tests/data-status-consumer';
-    const providerSrc = '#/tests/embedded-content-consumer-tests/data-status-provider';
+    const consumerSrc = '#/raw/tests/embedded-content-consumer/consumers/data-status-consumer';
+    const providerSrc = '#/raw/tests/embedded-content-consumer/providers/data-status-provider';
 
     browser.url(`${browser.launchUrl}/${consumerSrc}`)
     // Wait for the consumer to load the provider application.

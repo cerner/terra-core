@@ -18,7 +18,7 @@ class DatePickerOnChange extends React.Component {
   render() {
     return (
       <div>
-        <h3>Message: {this.state.message}</h3>
+        <h3>Message: <span id="message">{this.state.message}</span></h3>
         <Base locale={locale}>
           <DatePicker
             name="date-input-onclickoutside"
