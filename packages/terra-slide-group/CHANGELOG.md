@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Content visibility is maintained when multiple items are removed at the same time.
 
 1.15.0 - (January 18, 2018)
 ------------------
