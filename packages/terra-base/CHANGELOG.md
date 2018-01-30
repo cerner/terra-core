@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added terra-legacy-theme global styles to hyperlinks all over the components.
 
 2.10.0 - (January 18, 2018)
 ------------------
