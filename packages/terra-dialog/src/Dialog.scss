@@ -3,4 +3,19 @@
     height: 100%;
     width: 100%;
   }
+
+  .header { // May not be needed if action header is already themeable.
+    border-bottom: var(--terra-dialog-header-bottom-border, auto);
+  }
+
+  .dialog-body {
+    background-color: var(--terra-dialog-body-background-color, auto);
+    padding: var(--terra-dialog-body-padding, 0.7143rem);
+  }
+
+  .dialog-footer {
+    background-color: var(--terra-dialog-footer-background-color, auto);
+    border-top: var(--terra-dialog-footer-bottom-top, 1px solid #8bc2f9);
+    padding: var(--terra-dialog-footer-padding, 0.7143rem);
+  }
 }

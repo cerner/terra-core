@@ -10,12 +10,12 @@ const body = <Dialog.Body>
     <p>This is some more content.</p>
   </Dialog.Body>
 
-const DialogDefault = () => (
+const DialogNoClose = () => (
   <div style={{ height: '200px', width: '350px', border: 'dashed' }}>
-    <Dialog header={header} footer={footer} onClose={() => alert('Close')} >
+    <Dialog header={header} footer={footer}>
       {body}
     </Dialog>
   </div>
 );
 
-export default DialogDefault;
+export default DialogNoClose;
