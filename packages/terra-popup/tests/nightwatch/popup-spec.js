@@ -48,16 +48,16 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a popup with an overlay': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/overlay`);
-    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('');
 
     browser.click('#overlay-button');
-    browser.assert.elementPresent('.test-content');
+    browser.expect.element('.test-content').to.be.present;
     browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: hidden;');
 
     browser.keys([browser.Keys.ESCAPE]);
     browser.expect.element('.test-content').to.not.be.present;
 
-    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
+    browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('');
   },
 
   'Displays a popup with an arrow': (browser) => {

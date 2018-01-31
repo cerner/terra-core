@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Update to Reat 16
 * Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
 ### Removed
 * terra-theme-provider examples

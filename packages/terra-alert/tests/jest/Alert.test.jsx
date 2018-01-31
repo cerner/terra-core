@@ -24,7 +24,7 @@ describe('Alert with no props', () => {
 
   it('throws error on missing locale prop in Base', () => {
     try {
-      shallow(<Alert />);
+      render(<Alert />);
     } catch (e) {
       expect(e.message).toContain('add locale prop to Base component');
     }

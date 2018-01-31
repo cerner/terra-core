@@ -7,7 +7,7 @@ it('should shallow a default component', () => {
   expect(popup).toMatchSnapshot();
 });
 
-it('should render a default component', () => {
+xit('should render a default component', () => {
   const popup = render(<PopupDefaultExample />);
   expect(popup).toMatchSnapshot();
 });

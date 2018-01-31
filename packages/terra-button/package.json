@@ -36,8 +36,8 @@
     "terra-props-table": "^1.10.1"
   },
   "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "terra-base": "^2.8.0"
   },
   "dependencies": {

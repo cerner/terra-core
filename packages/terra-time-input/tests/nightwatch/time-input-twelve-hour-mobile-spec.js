@@ -21,12 +21,6 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large'], {
     browser.expect.element('label[for="terra-time-hour-time-input"]').text.to.equal('Hours');
     browser.expect.element('label[for="terra-time-minute-time-input"]').text.to.equal('Minutes');
   },
-  'Sets the correct for element on the labels when minutes and hours have ids attached': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour-mobile-ids`);
-
-    browser.expect.element('label[for="hours-testing"]').text.to.equal('Hours');
-    browser.expect.element('label[for="minutes-testing"]').text.to.equal('Minutes');
-  },
   'Clicking the meridiem inputs updates the time': (browser) => {
     browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour-mobile-time-provided`);
 
@@ -37,5 +31,11 @@ module.exports = resizeTo(['tiny', 'small', 'medium', 'large'], {
     browser.click('#timeInput button[aria-pressed="false"]');
     browser.expect.element('#timeInput button[aria-pressed="true"]').text.to.equal('p.m.');
     browser.expect.element('#time-input-value').text.to.contain('15:23');
+  },
+  'Sets the correct for element on the labels when minutes and hours have ids attached': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour-mobile-ids`);
+
+    browser.expect.element('label[for="hours-testing"]').text.to.equal('Hours');
+    browser.expect.element('label[for="minutes-testing"]').text.to.equal('Minutes');
   },
 });

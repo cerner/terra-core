@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactDatePicker from 'react-datepicker';
 import 'terra-base/lib/baseStyles';
 import ResponsiveElement from 'terra-responsive-element';
+import PopperContainer from './_PopperContainer';
 import DateInput from './DateInput';
 import DateUtil from './DateUtil';
 import styles from './DatePicker.scss';
@@ -311,12 +312,12 @@ class DatePicker extends React.Component {
         fixedHeight
         locale={intl.locale}
         placeholderText={dateFormat}
+        popperContainer={PopperContainer}
         popoverAttachment="top center"
         popoverTargetAttachment="bottom center"
         dropdownMode={'select'}
         showMonthDropdown
         showYearDropdown
-        tetherConstraints={[{ to: 'window', attachment: 'together', pin: true }]}
         name={name}
       />);
 

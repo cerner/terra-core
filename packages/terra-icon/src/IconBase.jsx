@@ -81,7 +81,7 @@ const IconBase = ({
 
   attributes.height = height;
   attributes.width = width;
-  attributes.focusable = focusable;
+  attributes.focusable = focusable.toString();
 
   return <svg {...attributes} className={classes}>{children}</svg>;
 };

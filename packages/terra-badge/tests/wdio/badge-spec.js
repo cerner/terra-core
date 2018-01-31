@@ -6,18 +6,21 @@ describe('Badge', () => {
     beforeEach(() => browser.url('/#/tests/badge-tests/default'));
 
     Terra.should.beAccessible({ viewports });
-    Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty({
-      '--terra-badge-border-radius': '20px',
-      '--terra-badge-display': 'block',
-      '--terra-badge-font-weight': 'normal',
-      '--terra-badge-line-height': '2em',
-      '--terra-badge-padding-bottom': '50px',
-      '--terra-badge-padding-top': '50px',
-      '--terra-badge-padding-left': '50px',
-      '--terra-badge-padding-right': '50px',
-      '--terra-badge-text-transform': 'uppercase',
-    });
+    Terra.should.matchScreenshot({ viewports, selector: '#default-badge' });
+    Terra.should.themeEachCustomProperty(
+      '#default-badge',
+      {
+        '--terra-badge-border-radius': '20px',
+        '--terra-badge-display': 'block',
+        '--terra-badge-font-weight': 'normal',
+        '--terra-badge-line-height': '2em',
+        '--terra-badge-padding-bottom': '50px',
+        '--terra-badge-padding-top': '50px',
+        '--terra-badge-padding-left': '50px',
+        '--terra-badge-padding-right': '50px',
+        '--terra-badge-text-transform': 'uppercase',
+      },
+    );
   });
 
   describe('Intent', () => {

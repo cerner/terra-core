@@ -38,9 +38,9 @@ it('should render a arrange with status and customProps', () => {
 it('should have all props including customProps set correctly', () => {
   const arrangeWithStatus = <Status color="green" id="id" >{arrange}</Status>;
   const wrapper = shallow(arrangeWithStatus);
-  expect(wrapper.instance().props.color).toEqual('green');
-  expect(wrapper.instance().props.id).toEqual('id');
-  expect(wrapper.instance().props.children).toEqual(arrange);
+  expect(wrapper.props().style.borderColor).toEqual('green');
+  expect(wrapper.props().id).toEqual('id');
+  expect(wrapper.props().children).toEqual(arrange);
 });
 
 // Structure test

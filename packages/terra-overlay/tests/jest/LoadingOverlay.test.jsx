@@ -42,7 +42,7 @@ describe('LoadingOverlay', () => {
 
   it('throws error on missing locale prop in Base', () => {
     try {
-      shallow(<LoadingOverlay />);
+      render(<LoadingOverlay />);
     } catch (e) {
       expect(e.message).toContain('add locale prop to Base component');
     }

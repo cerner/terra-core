@@ -67,6 +67,7 @@ const defaultProps = {
 const contextTypes = {
   /* eslint-disable consistent-return */
   intl: (context) => {
+    console.log('Intl Checking');
     if (context.intl === undefined) {
       return new Error('Please add locale prop to Base component to load translations');
     }
