@@ -76,6 +76,8 @@ class TabMenu extends React.Component {
 
   wrapOnClick(child) {
     return (event) => {
+      event.stopPropagation();
+
       if (child.props.onClick) {
         child.props.onClick(event);
       }
@@ -117,12 +119,12 @@ class TabMenu extends React.Component {
         role="button"
         tabIndex="0"
         ref={this.setTargetRef}
-        onClick={this.handleOnClick}
         onKeyDown={this.handleOnKeyDown}
+        onClick={this.handleOnClick}
         className={cx(['tab-menu', { 'is-active': menuActive }])}
         data-terra-tabs-menu
       >
-        <span>{menuToggleText}</span>
+        <span >{menuToggleText}</span>
         <IconCaretDown />
         <Menu
           onRequestClose={this.handleOnRequestClose}
