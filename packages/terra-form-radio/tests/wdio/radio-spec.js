@@ -68,7 +68,7 @@ describe('Radio', () => {
         browser.moveToObject('#default');
       });
 
-    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {

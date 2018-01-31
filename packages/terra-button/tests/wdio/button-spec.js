@@ -47,7 +47,7 @@ describe('Button', () => {
           '--terra-button-focus-background-color-neutral': 'purple',
           '--terra-button-focus-border-color-neutral': 'red',
           '--terra-button-focus-box-shadow-neutral': '0 0 1px 3px rgba(76, 178, 233, 0.5)',
-        }
+        },
       );
     });
 
@@ -218,7 +218,7 @@ describe('Button', () => {
         'button',
         {
           '--terra-button-text-only-horizontal-margin': '20px',
-        }
+        },
       );
     });
 
@@ -247,7 +247,7 @@ describe('Button', () => {
         {
           '--terra-button-text-and-icon-horizontal-margin': '20px',
           '--terra-button-text-and-icon-margin-between': '20px',
-        }
+        },
       );
     });
 
@@ -270,7 +270,7 @@ describe('Button', () => {
           '--terra-button-icon-only-horizontal-margin': '20px',
           '--terra-button-icon-height': '10px',
           '--terra-button-icon-width': '10px',
-        }
+        },
       );
     });
   });

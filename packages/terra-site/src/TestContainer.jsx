@@ -5,7 +5,7 @@ import styles from './site.scss';
 
 const TestContainer = ({ children }) => (
   <div className={styles.app} style={{ overflow: 'auto' }}>
-    <div  id="wdio-test-wrapper">
+    <div id="wdio-test-wrapper">
       {children}
     </div>
   </div>
