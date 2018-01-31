@@ -8,12 +8,12 @@ import messages from '../../translations/en-US.json';
 
 const locale = 'en-US';
 
-xit('renders a blank banner wrapper', () => {
+it('renders a blank banner wrapper', () => {
   const banner = shallow(<IntlProvider locale={locale} messages={messages}><DemographicsBanner /></IntlProvider>);
   expect(banner).toMatchSnapshot();
 });
 
-xit('renders the banner wrapper with all props', () => {
+it('renders the banner wrapper with all props', () => {
   const banner = shallow(
     <IntlProvider locale={locale} messages={messages}>
       <DemographicsBanner
