@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 class DateTimeUtils {
   static createSafeDate(date) {
     if (!date || (date && date.length === 0)) {
-      return '';
+      return null;
     }
 
     const momentDate = moment(date);
