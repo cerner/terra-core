@@ -1,7 +1,7 @@
 {
   "name": "terra-signature",
   "main": "lib/Signature.js",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "A signature defined by an array of line segments.",
   "repository": {
     "type": "git",
@@ -21,17 +21,17 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^1.11.0"
+    "terra-props-table": "^1.12.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "terra-base": "^2.10.0"
+    "terra-base": "^2.11.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^2.10.0"
+    "terra-base": "^2.11.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
