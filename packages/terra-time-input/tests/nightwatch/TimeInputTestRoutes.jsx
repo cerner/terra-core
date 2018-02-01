@@ -11,8 +11,6 @@ import TimeInputTwelveHour from './component/TimeInputTwelveHour';
 import TimeInputTwelveHourFilledMorning from './component/TimeInputTwelveHourFilledMorning';
 import TimeInputTwelveHourFilledEvening from './component/TimeInputTwelveHourFilledEvening';
 import TimeInputTwelveHourMobile from './component/TimeInputTwelveHourMobile';
-import TimeInputTwelveHourMobileIds from './component/TimeInputTwelveHourMobileIds';
-import TimeInputTwelveHourMobileTimeProvided from './component/TimeInputTwelveHourMobileTimeProvided';
 
 const routes = (
   <div>
@@ -25,8 +23,6 @@ const routes = (
     <Route path="/tests/time-input-tests/twelve-hour-filled-morning" component={TimeInputTwelveHourFilledMorning} />
     <Route path="/tests/time-input-tests/twelve-hour-filled-evening" component={TimeInputTwelveHourFilledEvening} />
     <Route path="/tests/time-input-tests/twelve-hour-mobile" component={TimeInputTwelveHourMobile} />
-    <Route path="/tests/time-input-tests/twelve-hour-mobile-time-provided" component={TimeInputTwelveHourMobileTimeProvided} />
-    <Route path="/tests/time-input-tests/twelve-hour-mobile-ids" component={TimeInputTwelveHourMobileIds} />
   </div>
 );
 

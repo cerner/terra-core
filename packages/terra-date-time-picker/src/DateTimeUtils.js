@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 class DateTimeUtils {
   static createSafeDate(date) {
     if (!date || (date && date.length === 0)) {
-      return null;
+      return '';
     }
 
     const momentDate = moment(date);
@@ -40,7 +40,7 @@ class DateTimeUtils {
   }
 
   static formatMomentDateTime(momentDate, format) {
-    return momentDate && momentDate.isValid() ? momentDate.format(format) : '';
+    return momentDate && momentDate.isValid() ? momentDate.format(format) : undefined;
   }
 
   static syncDateTime(momentDate, iOSdate, time) {

@@ -42,7 +42,7 @@ function determineType(type) {
         <pre> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
       return name;
     });
-    typeName = options.reduce((curr, next) => [curr, <span> or </span>, next]);
+    typeName = options.reduce((curr, next) => [curr, <span key={`${curr.value}-${next.value}`}> or </span>, next]);
   } else if (typeName === 'shape') {
     typeName = <span> an object structured like: <pre> {formatShape(type.value)} </pre></span>;
   }

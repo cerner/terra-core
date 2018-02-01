@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update to React 16
+
 ### Added
 * Added terra-legacy-theme global styles to hyperlinks all over the components.
 

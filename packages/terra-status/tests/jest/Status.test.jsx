@@ -34,15 +34,6 @@ it('should render a arrange with status and customProps', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-// Prop Tests
-it('should have all props including customProps set correctly', () => {
-  const arrangeWithStatus = <Status color="green" id="id" >{arrange}</Status>;
-  const wrapper = shallow(arrangeWithStatus);
-  expect(wrapper.instance().props.color).toEqual('green');
-  expect(wrapper.instance().props.id).toEqual('id');
-  expect(wrapper.instance().props.children).toEqual(arrange);
-});
-
 // Structure test
 it('should have indicator section of component with correct class, style and type', () => {
   const arrangeWithStatus = <Status color="green" className="testClass" >{arrange}</Status>;

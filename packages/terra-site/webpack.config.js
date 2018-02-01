@@ -23,6 +23,7 @@ const threadLoaderRule = {
 
 module.exports = {
   entry: {
+    raf: 'raf/polyfill',
     'babel-polyfill': 'babel-polyfill',
     'terra-core': path.resolve(path.join(__dirname, 'src', 'Index')),
   },
@@ -77,7 +78,7 @@ module.exports = {
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
-      chunks: ['babel-polyfill', 'terra-core'],
+      chunks: ['raf', 'babel-polyfill', 'terra-core'],
     }),
     new I18nAggregatorPlugin({
       baseDirectory: __dirname,

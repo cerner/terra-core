@@ -22,9 +22,9 @@ const ImageDefault = () => (
     <br />
     <h2>Placeholder</h2>
     <h3>Invalid src prop (placeholder will show)</h3>
-    <Image src={'/mock/failure/route'} placeholderSrc={placeholderPic1000x200} alt="placeholder image" />
+    <Image src={'/mock/failure/route'} placeholder={<Image src={placeholderPic1000x200} />} alt="placeholder image" />
     <h3>Valid src prop (src will show)</h3>
-    <Image src={placeholderPic150x150} placeholderSrc={placeholderPic1000x200} alt="src image" />
+    <Image src={placeholderPic150x150} placeholder={<Image src={placeholderPic1000x200} />} alt="src image" />
   </div>
 );
 
