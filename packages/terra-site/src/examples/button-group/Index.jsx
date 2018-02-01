@@ -22,13 +22,13 @@ const ButtonGroupExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={ButtonGroupSrc} componentName="Button Group" />
     <PropsTable id="button-props" src={ButtonGroupButtonSrc} componentName="Button Group Button" />
-    <h2>Text and Icon</h2>
+    <h2>Text and Icon - Default, no selected state</h2>
     <ButtonGroupWithIcons />
-    <h2>Single Select</h2>
+    <h2>Single Select - Manage single button selection</h2>
     <ButtonGroupSingleSelect />
-    <h2>Multi Select</h2>
+    <h2>Multi Select - Manage multiple button selections</h2>
     <ButtonGroupMultiSelect />
-    <h2>Disabled Buttons</h2>
+    <h2>Disabled Buttons - Default, no selected state</h2>
     <ButtonGroupDisabledButtons />
   </div>
 );
