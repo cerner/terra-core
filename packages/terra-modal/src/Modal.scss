@@ -1,16 +1,22 @@
 :local {
   .modal {
     background-color: var(--terra-modal-background-color, #fff);
+    border: var(--terra-modal-border, auto);
     border-radius: var(--terra-modal-border-radius, 5px);
     bottom: 10px;
+    box-shadow: var(--terra-modal-box-shadow, auto);
     display: block;
+    height: var(--terra-modal-height, auto);
     left: 10px;
+    margin: var(--terra-modal-margin, auto);
     max-height: 100%;
+    max-width: var(--terra-modal-max-width, auto);
     outline: none;
     overflow: hidden;
     position: fixed;
     right: 10px;
     top: 10px;
+    width: var(--terra-modal-width, auto);
     z-index: 6000 + 1;
   }
 
