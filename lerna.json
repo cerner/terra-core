@@ -7,7 +7,8 @@
         "DEPENDENCIES.md",
         "terra-button",
         "terra-button-group",
-        "terra-dialog"
+        "terra-dialog",
+        "terra-core-site"
       ]
     }
   },
