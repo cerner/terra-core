@@ -1,5 +1,8 @@
 import React from 'react';
+import Base from 'terra-base';
 import SearchField from '../../lib/SearchField';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class SearchFieldOnChange extends React.Component {
 
@@ -19,15 +22,17 @@ class SearchFieldOnChange extends React.Component {
 
   render() {
     return (
-      <div>
-        <p id="searchOnChangeCallCount">{this.state.callCount}</p>
-        <p id="searchOnChangeText">{this.state.searchText}</p>
-        <SearchField
-          id="searchfield"
-          onChange={this.onChange}
-          value={this.state.searchText}
-        />
-      </div>
+      <Base locale={locale}>
+        <div>
+          <p id="searchOnChangeCallCount">{this.state.callCount}</p>
+          <p id="searchOnChangeText">{this.state.searchText}</p>
+          <SearchField
+            id="searchfield"
+            onChange={this.onChange}
+            value={this.state.searchText}
+          />
+        </div>
+      </Base>
     );
   }
 }

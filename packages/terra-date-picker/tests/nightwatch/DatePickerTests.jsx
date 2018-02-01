@@ -19,6 +19,8 @@ const DatePickerTests = () => (
       <li><Link to="/tests/date-picker-tests/inside-modal">DatePicker - Presented Inside Modal</Link></li>
       <li><Link to="/tests/date-picker-tests/default-date-excluded">DatePicker - Default Date Excluded</Link></li>
       <li><Link to="/tests/date-picker-tests/default-date-out-of-range">DatePicker - Default Date Out Of Range</Link></li>
+      <li><Link to="/tests/date-picker-tests/disabled">DatePicker - Disabled</Link></li>
+      <li><Link to="/tests/date-picker-tests/readonly">DatePicker - Readonly</Link></li>
     </ul>
   </div>
 );

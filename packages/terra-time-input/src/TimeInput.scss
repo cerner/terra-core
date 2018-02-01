@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
     background-size: var(--terra-time-input-background-start, 0 0);
     border-color: var(--terra-time-input-border-color, #dedfe0);
-    border-radius: var(--terra-time-input-border-radius, 3px);
+    border-radius: var(--terra-time-input-border-radius, 0.25em);
     border-style: var(--terra-time-input-border-style, solid);
     border-width: var(--terra-time-input-border-width, 1px);
     box-sizing: content-box;
@@ -196,7 +196,7 @@
       color: var(--terra-time-input-meridiem-button-hover-color, #000);
     }
 
-    &[aria-selected='true'] {
+    &[aria-pressed='true'] {
       background-color: var(--terra-time-input-meridiem-button-selected-background-color, #4e5558);
       border-color: var(--terra-time-input-meridiem-button-selected-border-color, #d1d1d1);
       color: var(--terra-time-input-meridiem-button-selected-color, #fff);

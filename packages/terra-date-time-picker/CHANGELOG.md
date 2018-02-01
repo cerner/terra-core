@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Uplift to Button 2.0
 
 1.7.0 - (February 1, 2018)
 ------------------

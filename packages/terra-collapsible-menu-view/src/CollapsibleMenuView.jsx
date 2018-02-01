@@ -124,6 +124,7 @@ class CollapsibleMenuView extends React.Component {
             subMenuItems={hiddenChildren}
             boundingRef={boundingRef}
             menuWidth={menuWidth}
+            isIconOnly
           />
         </div>
       </div>
