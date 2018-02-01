@@ -1,5 +1,6 @@
 {
-  "name": "terra-site",
+  "name": "terra-core-site",
+  "private": true,
   "version": "1.22.1",
   "description": "Documentation Site for Functional Verification",
   "repository": {
