@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Update to React 16
 
+1.13.0 - (February 1, 2018)
+------------------
+### Changed
+* Minor version bump
+
 1.12.0 - (January 18, 2018)
 ------------------
 ### Added

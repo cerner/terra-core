@@ -13,7 +13,7 @@ before_install:
   - docker pull selenium/standalone-chrome:3.8.1-erbium
   - docker run -v /dev/shm:/dev/shm -e TZ=America/Chicago -d -p 4444:4444 selenium/standalone-chrome:3.8.1-erbium
 before_deploy:
-  - lerna run --scope terra-site compile:prod
+  - lerna run --scope terra-core-site compile:prod
 deploy:
   provider: pages
   skip_cleanup: true

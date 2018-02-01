@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
-###Changed
+### Changed
 * Update to React 16
-* Moved table sort indicator 
+
+1.20.0 - (February 1, 2018)
+------------------
+### Changed
+* Moved table sort indicator
 
 1.19.0 - (January 18, 2018)
 ------------------
