@@ -5,16 +5,16 @@
   }
 
   .header { // May not be needed if action header is already themeable.
-    border-bottom: var(--terra-dialog-header-bottom-border, auto);
+    border-bottom: var(--terra-dialog-header-bottom-border, none);
   }
 
   .dialog-body {
-    background-color: var(--terra-dialog-body-background-color, auto);
+    background-color: var(--terra-dialog-body-background-color, transparent);
     padding: var(--terra-dialog-body-padding, 0.7143rem);
   }
 
   .dialog-footer {
-    background-color: var(--terra-dialog-footer-background-color, auto);
+    background-color: var(--terra-dialog-footer-background-color, transparent);
     border-top: var(--terra-dialog-footer-bottom-top, 1px solid #8bc2f9);
     padding: var(--terra-dialog-footer-padding, 0.7143rem);
   }
