@@ -15,7 +15,7 @@ const routes = (
     <Route path="/tests/base-tests/switch" component={SwitchLocaleBase} />
     <Route path="/tests/base-tests/no-translations-loaded" component={NoTranslationsLoadedBase} />
     <Route path="/tests/base-tests/no-translations-loaded-string" component={NoTranslationsLoadedStringBase} />
-    <Route path="tests/base-tests/anchors" component={Anchors} />
+    <Route path="/tests/base-tests/anchors" component={Anchors} />
   </div>
 );
 
