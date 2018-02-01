@@ -1,6 +1,6 @@
 # Terra Button Group
 
- The Terra Button Group component is a controlled component that groups buttons and allows the consumer to manage the selection state of each button in the group. The consumer must manage the selection state of the buttons because the Button Group does not keep track of the selection state. A controlled Button Group gives the consumer the flexibility to compose a single-select button group as well as a multi-select button group. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
+ The Terra Button Group component is a controlled component that groups buttons and allows consumers to manage the selection state of each button in the group. By default, the buttons in the Button Group do not remain selected when clicked. Therefore, consumers must manage the selection state of the buttons because the Button Group does not keep track of the selection state. A controlled Button Group gives the consumer the flexibility to compose a single-select button group as well as a multi-select button group. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
 
 ## Getting Started
 
