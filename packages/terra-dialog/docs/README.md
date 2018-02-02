@@ -16,6 +16,8 @@ import Dialog from 'terra-dialog';
 <Dialog header="Header Content" footer="Footer Content">some body content</Dialog>
 ```
 
+Note: This component has an i18n dependency that requires setup per [these steps](https://github.com/cerner/terra-core/#internationalization-i18n).
+
 ## Component Features
 
 <!-- Uncomment supported features.
