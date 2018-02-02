@@ -34,8 +34,8 @@ describe('ToggleButton', () => {
 
   // Prop Tests
   it('should set buttonAttrs prop correctly', () => {
-    const toggleButton = shallow(<ToggleButton buttonAttrs={{ variant: 'link' }} closedButtonText="Show">Test</ToggleButton>);
-    expect(toggleButton.instance().props.buttonAttrs).toEqual({ variant: 'link' });
+    const toggleButton = shallow(<ToggleButton buttonAttrs={{ variant: 'emphasis' }} closedButtonText="Show">Test</ToggleButton>);
+    expect(toggleButton.instance().props.buttonAttrs).toEqual({ variant: 'emphasis' });
   });
 
   it('should set children prop correctly', () => {

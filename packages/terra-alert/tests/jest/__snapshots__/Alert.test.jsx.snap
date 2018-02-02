@@ -604,12 +604,12 @@ exports[`Alert of type success with an action button text content should render 
         isBlock={false}
         isCompact={false}
         isDisabled={false}
+        isIconOnly={false}
         isReversed={false}
         onClick={[Function]}
-        size="medium"
         text="Action"
         type="button"
-        variant="primary"
+        variant="emphasis"
       />
     }
     customIcon={null}
@@ -655,12 +655,12 @@ exports[`Alert of type success with an action button text content should render 
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Action"
               type="button"
-              variant="primary"
+              variant="emphasis"
             />
             
           </div>
@@ -703,12 +703,12 @@ exports[`Alert of type success with an action button text content should render 
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Action"
               type="button"
-              variant="primary"
+              variant="emphasis"
             />
             
           </div>
@@ -1030,12 +1030,12 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         isBlock={false}
         isCompact={false}
         isDisabled={false}
+        isIconOnly={false}
         isReversed={false}
         onClick={[Function]}
-        size="medium"
         text="Action"
         type="button"
-        variant="primary"
+        variant="emphasis"
       />
     }
     customIcon={
@@ -1090,23 +1090,23 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Action"
               type="button"
-              variant="primary"
+              variant="emphasis"
             />
             <Button
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Dismiss"
               type="button"
-              variant="secondary"
+              variant="neutral"
             />
           </div>
         </div>
@@ -1152,23 +1152,23 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Action"
               type="button"
-              variant="primary"
+              variant="emphasis"
             />
             <Button
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Dismiss"
               type="button"
-              variant="secondary"
+              variant="neutral"
             />
           </div>
         </div>
@@ -1240,12 +1240,12 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Dismiss"
               type="button"
-              variant="secondary"
+              variant="neutral"
             />
           </div>
         </div>
@@ -1287,12 +1287,12 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               isBlock={false}
               isCompact={false}
               isDisabled={false}
+              isIconOnly={false}
               isReversed={false}
               onClick={[Function]}
-              size="medium"
               text="Dismiss"
               type="button"
-              variant="secondary"
+              variant="neutral"
             />
           </div>
         </div>
