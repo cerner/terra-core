@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+# Added
+* Translations for other locales
 
 1.18.0 - (February 1, 2018)
 ------------------
