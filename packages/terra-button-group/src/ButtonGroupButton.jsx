@@ -7,55 +7,121 @@ import styles from './ButtonGroupButton.scss';
 
 const cx = classNames.bind(styles);
 
+const KEYCODES = {
+  ENTER: 13,
+  SPACE: 32,
+  TAB: 9,
+};
+
 const propTypes = {
   /**
-   * Indicates if the button should be selected on initial render.
-   */
-  isSelected: PropTypes.bool,
-  /**
-   * Sets the button text
-   */
-  text: PropTypes.string,
-  /**
-   * An optional icon. Nested inline with the text when provided
+   * An optional icon. If an icon is provided, it will be an icon only button and the provided text is set as the aria-label for accessibility.
    */
   icon: PropTypes.element,
   /**
-   * Callback function triggered when clicked
+   * Whether or not the button should be disabled.
+   */
+  isDisabled: PropTypes.bool,
+  /**
+   * Callback function triggered when button loses focus.
+   */
+  onBlur: PropTypes.func,
+  /**
+   * Callback function triggered when clicked.
    */
   onClick: PropTypes.func,
   /**
-   * Reverses the position of the icon and text
+   * Callback function triggered when button gains focus.
    */
-  isReversed: PropTypes.bool,
+  onFocus: PropTypes.func,
   /**
-   * Child Nodes
+   * Callback function triggered when key is pressed.
    */
-  children: PropTypes.node,
+  onKeyDown: PropTypes.func,
+  /**
+   * Callback function triggered when key is released.
+   */
+  onKeyUp: PropTypes.func,
+  /**
+   * Sets the button text. If an icon is provided, it will be an icon only button and this text is set as the aria-label for accessibility.
+   */
+  text: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
-  isSelected: false,
-  isReversed: false,
+  isDisabled: false,
 };
 
+class ButtonGroupButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { focused: false };
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleOnBlur = this.handleOnBlur.bind(this);
+  }
 
-const ButtonGroupButton = ({ isSelected, ...customProps }) => {
-  const attributes = Object.assign({}, customProps);
+  handleOnBlur(event) {
+    this.setState({ focused: false });
 
-  const buttonClassName = cx([
-    'button-group-button',
-    { 'is-active': isSelected },
-    attributes.className,
-  ]);
-  attributes['aria-pressed'] = isSelected;
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
+    }
+  }
 
-  return (
-    <Button
-      {...attributes}
-      className={buttonClassName}
-    />);
-};
+  handleKeyDown(event) {
+    // Add focus styles for keyboard navigation.
+    // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
+    if (event.nativeEvent.keyCode === KEYCODES.SPACE || event.nativeEvent.keyCode === KEYCODES.ENTER) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+  }
+
+  handleKeyUp(event) {
+    // Apply focus styles for keyboard navigation.
+    // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
+    if (event.nativeEvent.keyCode === KEYCODES.TAB) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onKeyUp) {
+      this.props.onKeyUp(event);
+    }
+  }
+
+  render() {
+    const {
+      icon,
+      isDisabled,
+      ...customProps
+    } = this.props;
+
+    const buttonClassName = cx([
+      'button-group-button',
+      { 'is-disabled': isDisabled },
+      { 'is-focused': this.state.focused },
+      customProps.className,
+    ]);
+
+    return (
+      <Button
+        {...customProps}
+        icon={icon}
+        isDisabled={isDisabled}
+        isIconOnly={icon != null}
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
+        onBlur={this.handleOnBlur}
+        variant={Button.Opts.Variants.NEUTRAL}
+        className={buttonClassName}
+      />
+    );
+  }
+}
 
 ButtonGroupButton.propTypes = propTypes;
 ButtonGroupButton.defaultProps = defaultProps;

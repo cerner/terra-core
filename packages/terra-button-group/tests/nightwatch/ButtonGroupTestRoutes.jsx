@@ -3,29 +3,22 @@
 import React from 'react';
 import { Route } from 'react-router';
 import ButtonGroupTests from './ButtonGroupTests';
-import { TinyButtonGroup, SmallButtonGroup, MediumButtonGroup, LargeButtonGroup, HugeButtonGroup } from './SizeButtonGroup';
-import CompactButtonGroup from './CompactButtonGroup';
-import { IconDefaultButtonGroup, IconReversedButtonGroup, IconOnlyButtonGroup } from './IconButtonGroupButton';
-import { DefaultButtonGroup, SecondaryButtonGroup } from './VariantButtonGroup';
-import SelectableButtonGroup from './SelectableButtonGroup';
-import OnChangeButtonGroup from './OnChangeButtonGroup';
+import { TextButtonGroup, IconButtonGroup, LongTextButtonGroup } from './ButtonGroupTextAndIcon';
+import ButtonGroupSingleSelect from './ButtonGroupSingleSelect';
+import ButtonGroupMultiSelect from './ButtonGroupMultiSelect';
+import ButtonGroupNotSelectable from './ButtonGroupNotSelectable';
+import ButtonGroupDisabledButtons from './ButtonGroupDisabledButtons';
 
 const routes = (
   <div>
     <Route path="/tests/button-group-tests" component={ButtonGroupTests} />
-    <Route path="/tests/button-group-tests/tiny-button-group" component={TinyButtonGroup} />
-    <Route path="/tests/button-group-tests/small-button-group" component={SmallButtonGroup} />
-    <Route path="/tests/button-group-tests/medium-button-group" component={MediumButtonGroup} />
-    <Route path="/tests/button-group-tests/large-button-group" component={LargeButtonGroup} />
-    <Route path="/tests/button-group-tests/huge-button-group" component={HugeButtonGroup} />
-    <Route path="/tests/button-group-tests/compact-button-group" component={CompactButtonGroup} />
-    <Route path="/tests/button-group-tests/icon-default-button-group" component={IconDefaultButtonGroup} />
-    <Route path="/tests/button-group-tests/icon-reversed-button-group" component={IconReversedButtonGroup} />
-    <Route path="/tests/button-group-tests/icon-only-button-group" component={IconOnlyButtonGroup} />
-    <Route path="/tests/button-group-tests/default-variant-button-group" component={DefaultButtonGroup} />
-    <Route path="/tests/button-group-tests/secondary-variant-button-group" component={SecondaryButtonGroup} />
-    <Route path="/tests/button-group-tests/selectable-button-group" component={SelectableButtonGroup} />
-    <Route path="/tests/button-group-tests/on-change-button-group" component={OnChangeButtonGroup} />
+    <Route path="/tests/button-group-tests/text-button-group" component={TextButtonGroup} />
+    <Route path="/tests/button-group-tests/long-text-button-group" component={LongTextButtonGroup} />
+    <Route path="/tests/button-group-tests/icon-button-group" component={IconButtonGroup} />
+    <Route path="/tests/button-group-tests/not-selectable-button-group" component={ButtonGroupNotSelectable} />
+    <Route path="/tests/button-group-tests/disabled-button-group" component={ButtonGroupDisabledButtons} />
+    <Route path="/tests/button-group-tests/single-select-button-group" component={ButtonGroupSingleSelect} />
+    <Route path="/tests/button-group-tests/multi-select-button-group" component={ButtonGroupMultiSelect} />
   </div>
 );
 
