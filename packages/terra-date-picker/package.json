@@ -32,7 +32,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.11.0",
-    "terra-button": "^1.14.0",
+    "terra-button": "^x.0",
     "terra-form": "^1.17.0",
     "terra-icon": "^1.18.0",
     "terra-responsive-element": "^1.16.0"
@@ -42,7 +42,7 @@
     "prop-types": "^15.5.8",
     "react-datepicker": "^0.46.0",
     "terra-base": "^2.11.0",
-    "terra-button": "^1.14.0",
+    "terra-button": "^x.0",
     "terra-form": "^1.17.0",
     "terra-icon": "^1.18.0",
     "terra-responsive-element": "^1.16.0"

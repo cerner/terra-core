@@ -107,25 +107,33 @@ exports[`should render a 12 hour timepicker meridiem with buttons when viewed on
     <button
       aria-disabled="false"
       aria-pressed="true"
-      class="button default button-group-button is-active meridiem-button"
+      class="button neutral button-group-button is-active meridiem-button"
       type="button"
     >
       <span
-        class="text"
+        class="text-only"
       >
-        a.m.
+        <span
+          class=""
+        >
+          a.m.
+        </span>
       </span>
     </button>
     <button
       aria-disabled="false"
       aria-pressed="false"
-      class="button default button-group-button meridiem-button"
+      class="button neutral button-group-button meridiem-button"
       type="button"
     >
       <span
-        class="text"
+        class="text-only"
       >
-        p.m.
+        <span
+          class=""
+        >
+          p.m.
+        </span>
       </span>
     </button>
   </div>

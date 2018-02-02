@@ -25,6 +25,11 @@ const propTypes = {
    * Button to display the menu from
    */
   button: PropTypes.element.isRequired,
+
+  /**
+   * Callback function that is called when the menu's selection state changes
+   */
+  onChange: PropTypes.func,
 };
 
 const defaultProps = {
@@ -38,12 +43,40 @@ const childContextTypes = {
 };
 
 class CollapsibleMenu extends React.Component {
+  static wrappedOnChange(item) {
+    return (event, selectedIndex) => {
+      if (item.props.onChange) {
+        let selectedKey = '';
+        React.Children.forEach(item.props.children, (child, index) => {
+          if (selectedIndex === index) {
+            selectedKey = child.key;
+          }
+        });
+
+        item.props.onChange(event, selectedKey);
+      }
+    };
+  }
+
+  static wrapChildrenOnChange(children) {
+    return React.Children.map(children, (item) => {
+      let clonedElement = item;
+
+      if (item.props.onChange) {
+        clonedElement = React.cloneElement(item, { onChange: CollapsibleMenu.wrappedOnChange(item) });
+      }
+
+      return clonedElement;
+    });
+  }
+
   constructor(props) {
     super(props);
     this.handleRequestClose = this.handleRequestClose.bind(this);
     this.wrappedOnClick = this.wrappedOnClick.bind(this);
     this.wrapButtonClick = this.wrapButtonClick.bind(this);
     this.wrapChildrenOnClick = this.wrapChildrenOnClick.bind(this);
+    this.wrapChildrenEvents = this.wrapChildrenEvents.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.state = { isOpen: false };
@@ -85,6 +118,12 @@ class CollapsibleMenu extends React.Component {
     };
   }
 
+  wrapChildrenEvents(children) {
+    const clonedChildren = CollapsibleMenu.wrapChildrenOnChange(children);
+
+    return this.wrapChildrenOnClick(clonedChildren);
+  }
+
   wrapChildrenOnClick(children) {
     return React.Children.map(children, (item) => {
       let clonedElement = item;
@@ -121,7 +160,7 @@ class CollapsibleMenu extends React.Component {
           targetRef={this.getButtonNode}
           contentWidth={contentWidth}
         >
-          {this.wrapChildrenOnClick(children)}
+          {this.wrapChildrenEvents(children)}
         </Menu>
         {clonedButton}
       </div>

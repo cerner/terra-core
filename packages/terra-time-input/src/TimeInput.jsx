@@ -563,18 +563,16 @@ class TimeInput extends React.Component {
           </label>
         </div>
         {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
-          <ButtonGroup isSelectable onChange={this.handleMeridiemButtonChange}>
+          <ButtonGroup selectedKeys={[this.state.meridiem]} onChange={this.handleMeridiemButtonChange}>
             <ButtonGroup.Button
-              key="anti_meridiem_button"
+              key={this.anteMeridiem}
               className={cx('meridiem-button')}
               text={this.anteMeridiem}
-              isSelected={this.state.meridiem === this.anteMeridiem}
             />
             <ButtonGroup.Button
-              key="post_meridiem_button"
+              key={this.postMeridiem}
               className={cx('meridiem-button')}
               text={this.postMeridiem}
-              isSelected={this.state.meridiem === this.postMeridiem}
             />
           </ButtonGroup>
         )}
@@ -582,8 +580,8 @@ class TimeInput extends React.Component {
     );
   }
 
-  handleMeridiemButtonChange(event, selectedIndex) {
-    this.handleValueChange(event, TimeUtil.inputType.HOUR, this.state.hour.toString(), selectedIndex === 0 ? this.anteMeridiem : this.postMeridiem);
+  handleMeridiemButtonChange(event, selectedKey) {
+    this.handleValueChange(event, TimeUtil.inputType.HOUR, this.state.hour.toString(), selectedKey);
   }
 
   desktopInput() {

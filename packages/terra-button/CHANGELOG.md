@@ -9,7 +9,6 @@ Unreleased
 
 ### Removed
 * size prop
-* isCompact prop
 * `primary`, `secondary`,  and `link` variants
 * children prop
 
