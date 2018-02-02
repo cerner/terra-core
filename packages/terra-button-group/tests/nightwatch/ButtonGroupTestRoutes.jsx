@@ -3,7 +3,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 import ButtonGroupTests from './ButtonGroupTests';
-import { TextButtonGroup, IconButtonGroup } from './ButtonGroupTextAndIcon';
+import { TextButtonGroup, IconButtonGroup, LongTextButtonGroup } from './ButtonGroupTextAndIcon';
 import ButtonGroupSingleSelect from './ButtonGroupSingleSelect';
 import ButtonGroupMultiSelect from './ButtonGroupMultiSelect';
 import ButtonGroupNotSelectable from './ButtonGroupNotSelectable';
@@ -13,6 +13,7 @@ const routes = (
   <div>
     <Route path="/tests/button-group-tests" component={ButtonGroupTests} />
     <Route path="/tests/button-group-tests/text-button-group" component={TextButtonGroup} />
+    <Route path="/tests/button-group-tests/long-text-button-group" component={LongTextButtonGroup} />
     <Route path="/tests/button-group-tests/icon-button-group" component={IconButtonGroup} />
     <Route path="/tests/button-group-tests/not-selectable-button-group" component={ButtonGroupNotSelectable} />
     <Route path="/tests/button-group-tests/disabled-button-group" component={ButtonGroupDisabledButtons} />

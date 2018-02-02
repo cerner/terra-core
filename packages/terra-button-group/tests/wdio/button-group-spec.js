@@ -7,6 +7,12 @@ describe('Button Group', () => {
     Terra.should.matchScreenshot();
   });
 
+  describe('Long Text Button', () => {
+    beforeEach(() => browser.url('/#/tests/button-group-tests/long-text-button-group'));
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+  });
+
   describe('Icon Button', () => {
     beforeEach(() => browser.url('/#/tests/button-group-tests/icon-button-group'));
     Terra.should.beAccessible();

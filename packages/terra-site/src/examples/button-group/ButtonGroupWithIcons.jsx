@@ -1,24 +1,24 @@
 import React from 'react';
-import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import IconAdd from 'terra-icon/lib/icon/IconAdd';
+import IconCaretUp from 'terra-icon/lib/icon/IconCaretUp';
+import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
 import ButtonGroup from 'terra-button-group';
 
-const iconEdit = <IconEdit />;
-const iconAdd = <IconAdd />;
+const iconCaretUp = <IconCaretUp />;
+const iconCaretDown = <IconCaretDown />;
 
 const ButtonGroupWithIcons = () => (
   <div>
     <div>
       <ButtonGroup>
-        <ButtonGroup.Button text="Edit" key="editButton" />
-        <ButtonGroup.Button text="Add" key="addButton" />
+        <ButtonGroup.Button text="Up" key="upButton" />
+        <ButtonGroup.Button text="Down" key="downButton" />
       </ButtonGroup>
     </div>
     <br />
     <div>
       <ButtonGroup>
-        <ButtonGroup.Button text="Edit" icon={iconEdit} key="editIcon" />
-        <ButtonGroup.Button text="Add" icon={iconAdd} key="addIcon" />
+        <ButtonGroup.Button text="Up" icon={iconCaretUp} key="upIcon" />
+        <ButtonGroup.Button text="Down" icon={iconCaretDown} key="downIcon" />
       </ButtonGroup>
     </div>
   </div>
