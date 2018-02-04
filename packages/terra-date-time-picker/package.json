@@ -33,7 +33,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.11.0",
-    "terra-button": "^x.0",
+    "terra-button": "^1.14.0",
     "terra-date-picker": "^1.21.0",
     "terra-modal": "^1.19.0",
     "terra-time-input": "^1.18.0"
@@ -44,7 +44,7 @@
     "moment-timezone": "^0.5.13",
     "prop-types": "^15.5.8",
     "terra-base": "^2.11.0",
-    "terra-button": "^x.0",
+    "terra-button": "^1.14.0",
     "terra-date-picker": "^1.21.0",
     "terra-modal": "^1.19.0",
     "terra-time-input": "^1.18.0"
