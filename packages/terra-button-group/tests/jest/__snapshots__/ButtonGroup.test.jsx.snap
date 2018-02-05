@@ -1,175 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a button group with buttons 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    variant="default"
-  />
-</div>
-`;
-
 exports[`should render a button group with children 1`] = `
 <div
   className="button-group"
 >
   <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with size = huge 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    size="huge"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with size = large 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    size="large"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with size = medium 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    size="medium"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with size = small 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    size="small"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with size = tiny 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    size="tiny"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with variant = default 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a button group with variant = secondary 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    variant="secondary"
-  />
-</div>
-`;
-
-exports[`should render a compact button group 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={true}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a default component 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
-    variant="default"
-  />
-</div>
-`;
-
-exports[`should render a selectable button group 1`] = `
-<div
-  className="button-group"
->
-  <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key=".$1"
     onClick={[Function]}
-    variant="default"
+    text="Button 1"
+  />
+</div>
+`;
+
+exports[`should render a button group with children selected 1`] = `
+<div
+  className="button-group"
+>
+  <ButtonGroupButton
+    aria-pressed={true}
+    className="is-active"
+    isDisabled={false}
+    key=".$1"
+    onClick={[Function]}
+    text="Button 1"
+  />
+  <ButtonGroupButton
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key=".$2"
+    onClick={[Function]}
+    text="Button 2"
   />
 </div>
 `;
@@ -185,20 +49,20 @@ exports[`should select a button 1`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={true}
-    key="1"
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key=".$1"
     onClick={[Function]}
-    variant="default"
+    text="Button 1"
   />
   <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="2"
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key=".$2"
     onClick={[Function]}
-    variant="default"
+    text="Button 2"
   />
 </div>
 `;
@@ -208,20 +72,20 @@ exports[`should select a button 2`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={false}
-    key="1"
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key=".$1"
     onClick={[Function]}
-    variant="default"
+    text="Button 1"
   />
   <ButtonGroupButton
-    isCompact={false}
-    isReversed={false}
-    isSelected={true}
-    key="2"
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key=".$2"
     onClick={[Function]}
-    variant="default"
+    text="Button 2"
   />
 </div>
 `;

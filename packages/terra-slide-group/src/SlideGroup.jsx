@@ -26,28 +26,26 @@ const defaultProps = {
 };
 
 class SlideGroup extends React.Component {
+  static hidePreviousSlide(enteredElement) {
+    if (enteredElement.previousSibling) {
+      enteredElement.previousSibling.setAttribute('aria-hidden', true);
+    }
+  }
+
+  static showPreviousSlide(exitingElement) {
+    if (exitingElement.previousSibling) {
+      exitingElement.previousSibling.removeAttribute('aria-hidden');
+    }
+  }
+
   constructor(props) {
     super(props);
     this.setContainer = this.setContainer.bind(this);
-    this.hidePreviousSlide = this.hidePreviousSlide.bind(this);
-    this.showPreviousSlide = this.showPreviousSlide.bind(this);
   }
 
   setContainer(node) {
     if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.slideGroup = node;
-  }
-
-  hidePreviousSlide() {
-    const slideGroupChildren = this.slideGroup.children[0].children;
-    const numberOfChildren = slideGroupChildren.length - 1;
-    slideGroupChildren[numberOfChildren - 1].setAttribute('aria-hidden', true);
-  }
-
-  showPreviousSlide() {
-    const slideGroupChildren = this.slideGroup.children[0].children;
-    const numberOfChildren = slideGroupChildren.length - 1;
-    slideGroupChildren[numberOfChildren - 1].removeAttribute('aria-hidden');
   }
 
   render() {
@@ -78,9 +76,9 @@ class SlideGroup extends React.Component {
             <CSSTransition
               classNames={transitionNames}
               enter={isAnimated}
-              onEntered={this.hidePreviousSlide}
+              onEntered={SlideGroup.hidePreviousSlide}
               exit={isAnimated}
-              onExit={this.showPreviousSlide}
+              onExit={SlideGroup.showPreviousSlide}
               timeout={300}
               key={item.key}
             >

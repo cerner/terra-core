@@ -45,7 +45,7 @@
     "compile": "lerna run compile",
     "compile:heroku": "cd packages/terra-site && npm run compile:heroku",
     "danger": "danger",
-    "deploy": "lerna run --scope terra-site deploy",
+    "deploy": "lerna run --scope terra-core-site deploy",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:heroku",
