@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fix capture outside of component bounds with touch events
 
 0.10.0 - (February 1, 2018)
 ------------------
