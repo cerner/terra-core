@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import Dialog from 'terra-dialog/src/Dialog';
+import Dialog from 'terra-dialog';
 
 const header = 'Header Stuff';
 

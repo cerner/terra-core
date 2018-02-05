@@ -14,8 +14,8 @@
   }
 
   .dialog-footer {
-    background-color: var(--terra-dialog-footer-background-color, transparent);
-    border-top: var(--terra-dialog-footer-bottom-top, 1px solid #8bc2f9);
+    background-color: var(--terra-dialog-footer-background-color, #f4f4f4);
+    border-top: var(--terra-dialog-footer-bottom-top, 1px solid #9b9fa1);
     padding: var(--terra-dialog-footer-padding, 0.7143rem);
   }
 }

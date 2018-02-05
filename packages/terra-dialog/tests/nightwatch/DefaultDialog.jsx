@@ -11,4 +11,4 @@ const body = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 
 const footer = <span>Footer Stuff</span>;
 
-export default () => <div id="dialog" style={{ height: '400px', width: '250px' }}><Base locale={locale}><Dialog header={header} footer={footer}>{body}</Dialog></Base></div>;
+export default () => <Base locale={locale}><div id="dialog" style={{ height: '400px', width: '250px' }}><Dialog header={header} footer={footer}>{body}</Dialog></div></Base>;

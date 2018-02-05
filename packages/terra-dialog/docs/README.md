@@ -13,7 +13,18 @@ Dialogs are temporary views that can be used in a myriad of ways. Dialogs have t
 import React from 'react';
 import Dialog from 'terra-dialog';
 
-<Dialog header="Header Content" footer="Footer Content">some body content</Dialog>
+const header = 'Header Content';
+
+const footer = <Dialog.Footer>Footer Content</Dialog.Footer>;
+
+const body = (<Dialog.Body>
+  <p>This is my body content.</p>
+  <p>This is some more content.</p>
+</Dialog.Body>);
+
+<Dialog header={header} footer={footer} onClose={() => alert('Close')} >
+  {body}
+</Dialog>
 ```
 
 Note: This component has an i18n dependency that requires setup per [these steps](https://github.com/cerner/terra-core/#internationalization-i18n).
