@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Uplift to ButtonGroup 2.0
+
+1.18.0 - (February 1, 2018)
+------------------
+### Changed
+* Minor version bump
 
 1.17.0 - (January 18, 2018)
 ------------------

@@ -1,36 +1,37 @@
 import React from 'react';
 import SearchField from '../../src/SearchField';
+import intlContexts from './intl-context-setup';
 
 describe('Snapshots', () => {
   it('renders a basic search field', () => {
-    const searchField = shallow(<SearchField />);
+    const searchField = shallow(<SearchField />, intlContexts.shallowContext);
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a placeholder', () => {
-    const searchField = shallow(<SearchField placeholder="Test" />);
+    const searchField = shallow(<SearchField placeholder="Test" />, intlContexts.shallowContext);
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a value', () => {
-    const searchField = shallow(<SearchField value={'Test'} />);
+    const searchField = shallow(<SearchField value={'Test'} />, intlContexts.shallowContext);
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a defaulted value', () => {
-    const searchField = shallow(<SearchField defaultValue={'Default'} />);
+    const searchField = shallow(<SearchField defaultValue={'Default'} />, intlContexts.shallowContext);
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a disabled search field with a value', () => {
-    const searchField = shallow(<SearchField isDisabled />);
+    const searchField = shallow(<SearchField isDisabled />, intlContexts.shallowContext);
     searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field that displays as a block to fill its container', () => {
-    const searchField = shallow(<SearchField isBlock />);
+    const searchField = shallow(<SearchField isBlock />, intlContexts.shallowContext);
     searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
@@ -40,7 +41,7 @@ describe('Snapshots', () => {
 describe('Manual Search', () => {
   it('triggers search on button click', () => {
     const onSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} />, intlContexts.shallowContext);
     searchField.setState({ searchText: 'Te' });
 
     expect(onSearch).not.toBeCalled();
@@ -50,7 +51,7 @@ describe('Manual Search', () => {
 
   it('does not trigger search if default minimum search text has not been met', () => {
     const onSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} />, intlContexts.shallowContext);
     searchField.setState({ searchText: 'T' });
 
     expect(onSearch).not.toBeCalled();
@@ -60,7 +61,7 @@ describe('Manual Search', () => {
 
   it('does not trigger search if minimum search text has not been met', () => {
     const onSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />, intlContexts.shallowContext);
     searchField.setState({ searchText: 'Sear' });
 
     expect(onSearch).not.toBeCalled();
@@ -69,7 +70,7 @@ describe('Manual Search', () => {
   });
 
   it('does not search when callback is not provided', () => {
-    const searchField = shallow(<SearchField minimumSearchTextLength={5} />);
+    const searchField = shallow(<SearchField minimumSearchTextLength={5} />, intlContexts.shallowContext);
     searchField.setState({ searchText: 'Searc' });
 
     searchField.childAt(1).simulate('click'); // Verifies we do not attempt to call an undefined function.
@@ -87,7 +88,7 @@ describe('Auto Search', () => {
 
   it('triggers search after delay on text change', () => {
     const onSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: { value: 'Te' } });
 
@@ -98,7 +99,7 @@ describe('Auto Search', () => {
 
   it('only triggers one search if a manual search is triggered before automatic search', () => {
     const onSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: { value: 'Te' } });
 
@@ -114,7 +115,7 @@ describe('Auto Search', () => {
   it('does not trigger search if minimum text length is not met', () => {
     jest.useFakeTimers();
     const onSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: { value: 'Sear' } });
 
@@ -127,7 +128,7 @@ describe('Auto Search', () => {
     jest.useFakeTimers();
     const onSearch = jest.fn();
     const onInvalidSearch = jest.fn();
-    const searchField = shallow(<SearchField onSearch={onSearch} onInvalidSearch={onInvalidSearch} minimumSearchTextLength={5} />);
+    const searchField = shallow(<SearchField onSearch={onSearch} onInvalidSearch={onInvalidSearch} minimumSearchTextLength={5} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: { value: 'Sear' } });
 
@@ -137,14 +138,14 @@ describe('Auto Search', () => {
   });
 
   it('uses standard timeout for search delay when not provided', () => {
-    const searchField = shallow(<SearchField />);
+    const searchField = shallow(<SearchField />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 250);
   });
 
   it('uses custom timeout for search delay when provided', () => {
-    const searchField = shallow(<SearchField searchDelay={1000} />);
+    const searchField = shallow(<SearchField searchDelay={1000} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 1000);
@@ -152,7 +153,7 @@ describe('Auto Search', () => {
 
   it('should call onChange when button is selected', () => {
     const onChange = jest.fn();
-    const searchField = shallow(<SearchField onChange={onChange} />);
+    const searchField = shallow(<SearchField onChange={onChange} />, intlContexts.shallowContext);
 
     searchField.childAt(0).simulate('change', { target: {} });
     expect(onChange).toBeCalled();

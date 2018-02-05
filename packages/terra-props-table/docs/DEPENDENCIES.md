@@ -8,7 +8,7 @@
 | lodash | ^4.17.4 | -- | Lodash modular utilities. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-docgen | ^2.15.0 | -- | A CLI and toolkit to extract information from React components for documentation generation. |
-| terra-markdown | ^1.9.1 | ^15.4.2 | terra-markdown |
+| terra-markdown | ^1.11.0 | ^15.4.2 | terra-markdown |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

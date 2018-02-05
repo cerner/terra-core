@@ -23,6 +23,15 @@
   --terra-badge-background-color-info: #bdc3c7;
   --terra-badge-color-info: #333;
 
+  // terra-base
+  --terra-link-color: #980a5f;
+  --terra-link-visted-color: #9af0a8;
+  --terra-link-hover-color: #40220f;
+  --terra-link-focus-background-color: #ffb400;
+  --terra-link-focus-color: #513100;
+  --terra-link-active-color: #604e38;
+  --terra-link-disabled-hover-color: #1b415e;
+
   // terra-button
   --terra-button-border-radius: 0.5rem;
   --terra-button-line-height: normal;
@@ -36,6 +45,8 @@
   --terra-button-text-only-horizontal-margin: 1.1rem;
   --terra-button-text-and-icon-horizontal-margin: 0.4rem;
   --terra-button-text-and-icon-margin-between: 0.4rem;
+  --terra-button-compact-padding-bottom: 0;
+  --terra-button-compact-padding-top: 0;
 
   --terra-button-active-and-focus-background-color-neutral: #008b8b;
   --terra-button-active-and-focus-border-color-neutral: #fff;
@@ -121,6 +132,33 @@
   --terra-button-font-weight-utility: normal;
   --terra-button-hover-background-color-utility: transparent;
   --terra-button-hover-color-utility: #d2f970;
+
+  // terra-button-group
+  --terra-button-group-button-background-color: rgba(136, 173, 232, 0.0);
+  --terra-button-group-button-border-color: #505b4f;
+  --terra-button-group-button-box-shadow: 0 1px 1px 0 rgba(35, 35, 29, 0.3);
+  --terra-button-group-button-color: #4664bf;
+  --terra-button-group-button-font-weight: normal;
+  --terra-button-group-button-disabled-opacity: 0.5;
+  --terra-button-group-button-focus-background-color: rgba(186, 200, 224, 0.0);
+  --terra-button-group-button-focus-border-color: #19191c;
+  --terra-button-group-button-focus-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #4a90e2;
+  --terra-button-group-button-hover-background-color: rgba(109, 119, 135, 0.2);
+  --terra-button-group-button-hover-color: #396ee5;
+  --terra-button-group-button-active-and-hover-background-color: #2c58c7;
+  --terra-button-group-button-active-and-hover-border-color: #2c58c7;
+  --terra-button-group-button-active-and-hover-color: #fff;
+  --terra-button-group-button-active-and-focus-background-color: #396ee5;
+  --terra-button-group-button-active-and-focus-border-color: #396ee5;
+  --terra-button-group-button-active-and-focus-box-shadow: 0 2px 2px 0 rgb(237, 28, 157), 0 0 0 1px #ed1c9d;
+  --terra-button-group-button-active-and-focus-color: #fff;
+  --terra-button-group-button-active-background-color: #23c91e;
+  --terra-button-group-button-active-border-color: #396ee5;
+  --terra-button-group-button-active-color: #fff;
+  --terra-button-group-button-border-bottom-left-radius: 5px;
+  --terra-button-group-button-border-bottom-right-radius: 5px;
+  --terra-button-group-button-border-top-left-radius: 5px;
+  --terra-button-group-button-border-top-right-radius: 5px;
 
   // terra-form-checkbox
   --terra-form-checkbox-font-color: rgb(255, 192, 203);

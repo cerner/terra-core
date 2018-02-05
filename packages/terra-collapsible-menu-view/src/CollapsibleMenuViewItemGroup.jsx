@@ -14,17 +14,17 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Indicates if the group should be selectable
-   */
-  isSelectable: PropTypes.bool,
-  /**
    * CollapsibleMenuView.Items to be grouped together
    */
   children: PropTypes.node.isRequired,
+  /**
+   * A list of keys of the buttons that should be selected.
+   */
+  selectedKeys: PropTypes.arrayOf(PropTypes.string),
 };
 
 const defaultProps = {
-  isSelectable: false,
+  selectedKeys: [],
 };
 
 const childContextTypes = {
@@ -37,20 +37,38 @@ const contextTypes = {
 
 
 class CollapsibleMenuViewItemGroup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleOnChange = this.handleOnChange.bind(this);
+  }
+
   getChildContext() {
     return { isCollapsibleGroupItem: true };
   }
 
+  handleOnChange(event, selectedIndex) {
+    if (this.props.onChange) {
+      let selectedKey = '';
+      React.Children.forEach(this.props.children, (child, index) => {
+        if (selectedIndex === index) {
+          selectedKey = child.key;
+        }
+      });
+
+      this.props.onChange(event, selectedKey);
+    }
+  }
+
   render() {
     const {
-      isSelectable,
       children,
+      selectedKeys,
       ...customProps
     } = this.props;
 
     const { isCollapsibleMenuItem } = this.context;
 
-    if (isCollapsibleMenuItem && isSelectable) {
+    if (isCollapsibleMenuItem && selectedKeys.length) {
       return (
         <Menu.ItemGroup {...customProps}>
           {children}
@@ -70,7 +88,7 @@ class CollapsibleMenuViewItemGroup extends React.Component {
     ]);
 
     return (
-      <ButtonGroup {...customProps} className={buttonGroupClassNames} isSelectable={isSelectable}>
+      <ButtonGroup {...customProps} className={buttonGroupClassNames} selectedKeys={selectedKeys}>
         {children}
       </ButtonGroup>
     );

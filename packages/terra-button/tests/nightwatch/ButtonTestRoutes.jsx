@@ -8,6 +8,7 @@ import { NeutralButton, EmphasisButton, DeemphasisButton, ActionButton, UtilityB
 import ActiveVariantButtons from './ActiveVariantButtons';
 import { IconNeutralButton, IconOnlyButton, IconReversedButton } from './IconButton';
 import { LongTextBlockButton, LongTextButton } from './LongTextButton';
+import CompactButton from './CompactButton';
 
 const routes = (
   <div>
@@ -20,6 +21,7 @@ const routes = (
     <Route path="/tests/button-tests/utility" component={UtilityButton} />
     <Route path="/tests/button-tests/emphasis" component={EmphasisButton} />
     <Route path="/tests/button-tests/de-emphasis" component={DeemphasisButton} />
+    <Route path="/tests/button-tests/compact" component={CompactButton} />
     <Route path="/tests/button-tests/block" component={LongTextBlockButton} />
     <Route path="/tests/button-tests/long-text" component={LongTextButton} />
     <Route path="/tests/button-tests/active-styles" component={ActiveVariantButtons} />

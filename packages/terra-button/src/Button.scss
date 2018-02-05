@@ -96,6 +96,11 @@
     width: 100%;
   }
 
+  .compact {
+    padding-bottom: var(--terra-button-compact-padding-bottom, 0);
+    padding-top: var(--terra-button-compact-padding-top, 0);
+  }
+
   .text-only {
     margin-left: var(--terra-button-text-only-horizontal-margin, 0.714rem);
     margin-right: var(--terra-button-text-only-horizontal-margin, 0.714rem);

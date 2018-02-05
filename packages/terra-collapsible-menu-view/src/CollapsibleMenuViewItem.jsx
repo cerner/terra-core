@@ -126,16 +126,18 @@ class CollapsibleMenuViewItem extends React.Component {
         />
       );
     } else if (isCollapsibleGroupItem) {
-      item = (
+      const button = (
         <ButtonGroup.Button
           {...attributes}
           icon={icon}
           text={faceUpText}
-          isReversed={isReversed}
-          isSelected={isSelected}
           isDisabled={isDisabled}
         />
       );
+
+      item = React.cloneElement(button, {
+        className: cx({ 'is-active': isSelected }),
+      });
     } else if (subMenuItems && subMenuItems.length > 0) {
       item = (
         <Menu
@@ -149,6 +151,7 @@ class CollapsibleMenuViewItem extends React.Component {
               isReversed={isReversed}
               isDisabled={isDisabled}
               onClick={this.handleButtonClick}
+              isIconOnly={faceUpText.length === 0}
             />)}
         >
           {subMenuItems}
@@ -157,7 +160,14 @@ class CollapsibleMenuViewItem extends React.Component {
     } else {
       item = (
         <div className={cx('face-up-item')}>
-          <Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} isDisabled={isDisabled} />
+          <Button
+            {...attributes}
+            icon={icon}
+            text={faceUpText}
+            isReversed={isReversed}
+            isDisabled={isDisabled}
+            isIconOnly={faceUpText.length === 0}
+          />
         </div>
       );
     }

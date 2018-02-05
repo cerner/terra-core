@@ -1,6 +1,6 @@
 # Terra Dialog
 
-{insert description}
+Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@
 import React from 'react';
 import Dialog from 'terra-dialog';
 
-<Dialog {props...} />
+<Dialog header="Header Content" footer="Footer Content">some body content</Dialog>
 ```
 
 ## Component Features

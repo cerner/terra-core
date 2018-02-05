@@ -11,6 +11,7 @@ import DialogSrc from '!raw-loader!terra-dialog/src/Dialog';
 
 // Example Files
 import DialogDefault from './DialogDefault';
+import DialogLongContent from './DialogLongContent';
 
 const DialogExamples = () => (
   <div>
@@ -19,6 +20,8 @@ const DialogExamples = () => (
     <PropsTable id="props" src={DialogSrc} />
     <h2>Dialog - Default</h2>
     <DialogDefault />
+    <h2>Dialog - Long Content</h2>
+    <DialogLongContent />
   </div>
 );
 
