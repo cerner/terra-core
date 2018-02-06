@@ -17,7 +17,6 @@ const propTypes = {
   header: PropTypes.string.isRequired,
   /**
    * The footer element to be placed within the footer area of the dialog.
-   * The footer content area will not display if this prop is not provided. UNDER EVALUATION
    */
   footer: PropTypes.node.isRequired,
   /**
@@ -32,21 +31,18 @@ const propTypes = {
 };
 
 const defaultProps = {
-  header: null,
-  footer: null,
-  children: null,
   onClose: null,
 };
 
-const Dialog = ({ header, footer, onClose, children }) => {
-  const DialogClassNames = cx([
+const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
+  const dialogClassNames = cx([
     'dialog',
   ]);
 
   const actionHeader = <ActionHeader title={header} onClose={onClose} />;
 
   return (
-    <div className={DialogClassNames}>
+    <div className={dialogClassNames}>
       <ContentContainer fill header={actionHeader} footer={<div className={cx('footer')}>{footer}</div>}>
         <div className={cx('body')}>{children}</div>
       </ContentContainer>
