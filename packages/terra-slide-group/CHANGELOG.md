@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Slide visibility is maintained when multiple items are added/removed at the same time.
+
+1.16.0 - (February 1, 2018)
+------------------
+### Changed
+* Minor version bump
 
 1.15.0 - (January 18, 2018)
 ------------------

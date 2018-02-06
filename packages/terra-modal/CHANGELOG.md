@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Added theme variables to Modal and ModalOverlay.
 
+1.19.0 - (February 1, 2018)
+------------------
+### Changed
+* Minor version bump
+
 1.18.0 - (January 18, 2018)
 ------------------
 ### Changed

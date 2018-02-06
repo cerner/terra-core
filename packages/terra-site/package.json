@@ -1,5 +1,6 @@
 {
-  "name": "terra-site",
+  "name": "terra-core-site",
+  "private": true,
   "version": "1.22.1",
   "description": "Documentation Site for Functional Verification",
   "repository": {
@@ -40,7 +41,7 @@
     "terra-badge": "^1.16.0",
     "terra-base": "^2.10.0",
     "terra-button": "^x.0",
-    "terra-button-group": "^1.17.0",
+    "terra-button-group": "^x.0",
     "terra-card": "^1.10.0",
     "terra-collapsible-menu-view": "^1.9.0",
     "terra-content-container": "^1.15.0",
@@ -77,7 +78,7 @@
     "terra-props-table": "^1.11.0",
     "terra-responsive-element": "^1.15.0",
     "terra-search-field": "^1.19.0",
-    "terra-signature": "^0.9.0",
+    "terra-signature": "^0.10.0",
     "terra-slide-group": "^1.15.0",
     "terra-slide-panel": "^1.15.0",
     "terra-spacer": "^1.2.0",
