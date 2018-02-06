@@ -44,6 +44,10 @@ const propTypes = {
    */
   isBlock: PropTypes.bool,
   /**
+   * Whether or not the button has reduced padding
+   */
+  isCompact: PropTypes.bool,
+  /**
    * Whether or not the button should be disabled.
    */
   isDisabled: PropTypes.bool,
@@ -87,6 +91,7 @@ const propTypes = {
 
 const defaultProps = {
   isBlock: false,
+  isCompact: false,
   isDisabled: false,
   isIconOnly: false,
   isReversed: false,
@@ -154,6 +159,7 @@ class Button extends React.Component {
     const {
       icon,
       isBlock,
+      isCompact,
       isDisabled,
       isIconOnly,
       isReversed,
@@ -174,6 +180,7 @@ class Button extends React.Component {
       variant,
       { 'is-disabled': isDisabled },
       { block: isBlock },
+      { compact: isCompact },
       { 'is-active': this.state.active },
       { 'is-focused': this.state.focused },
       customProps.className,

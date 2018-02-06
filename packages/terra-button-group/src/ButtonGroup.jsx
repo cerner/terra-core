@@ -71,7 +71,7 @@ class ButtonGroup extends React.Component {
 
       return React.cloneElement(child, {
         onClick: this.wrapOnClick(child),
-        className: cx({ 'is-active': isActive }),
+        className: cx([{ 'is-active': isActive }, child.props.className]),
         'aria-pressed': isActive,
       });
     });

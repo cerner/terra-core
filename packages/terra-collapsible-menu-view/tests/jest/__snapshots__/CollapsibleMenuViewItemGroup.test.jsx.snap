@@ -30,6 +30,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="key1"
     shouldCloseOnClick={true}
     text="Testing"
   />
@@ -37,6 +38,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="key2"
     shouldCloseOnClick={true}
     text="Testing"
   />
@@ -49,6 +51,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="key1"
     shouldCloseOnClick={true}
     text="Testing"
   />
@@ -56,13 +59,14 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="key2"
     shouldCloseOnClick={true}
     text="Testing"
   />
 </MenuItemGroup>
 `;
 
-exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render menu items when isSelectable is not set 1`] = `
+exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render menu items when selectedKeys is not set 1`] = `
 <List
   isDivided={false}
 >
@@ -85,11 +89,8 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render men
 
 exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
 <ButtonGroup
-  buttons={Array []}
   className="face-up-item Testing"
-  isCompact={false}
-  isSelectable={false}
-  variant="default"
+  selectedKeys={Array []}
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}
@@ -110,11 +111,8 @@ exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
 
 exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
 <ButtonGroup
-  buttons={Array []}
   className="face-up-item"
-  isCompact={false}
-  isSelectable={false}
-  variant="default"
+  selectedKeys={Array []}
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}
@@ -135,16 +133,18 @@ exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
 
 exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`] = `
 <ButtonGroup
-  buttons={Array []}
   className="face-up-item"
-  isCompact={false}
-  isSelectable={true}
-  variant="default"
+  selectedKeys={
+    Array [
+      "key1",
+    ]
+  }
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="key1"
     shouldCloseOnClick={true}
     text="Testing"
   />
@@ -152,6 +152,7 @@ exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    key="key2"
     shouldCloseOnClick={true}
     text="Testing"
   />

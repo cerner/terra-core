@@ -7,14 +7,14 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="button default"
+    class="button neutral"
     type="button"
   >
-    <div
-      class="arrange"
+    <span
+      class="text-and-icon"
     >
-      <div
-        class="fit center"
+      <span
+        class="icon icon-first"
       >
         <span
           class="icon"
@@ -34,20 +34,13 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
             />
           </svg>
         </span>
-      </div>
-      <div
-        class="fill center"
+      </span>
+      <span
+        class=""
       >
-        <span
-          class="button-text"
-        >
-          Show
-        </span>
-      </div>
-      <div
-        class="fit center"
-      />
-    </div>
+        Show
+      </span>
+    </span>
   </button>
   <div
     aria-hidden="true"
@@ -63,14 +56,14 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    class="button default"
+    class="button neutral"
     type="button"
   >
-    <div
-      class="arrange"
+    <span
+      class="text-and-icon"
     >
-      <div
-        class="fit center"
+      <span
+        class="icon icon-first"
       >
         <span
           class="icon"
@@ -90,20 +83,13 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
             />
           </svg>
         </span>
-      </div>
-      <div
-        class="fill center"
+      </span>
+      <span
+        class=""
       >
-        <span
-          class="button-text"
-        >
-          Show
-        </span>
-      </div>
-      <div
-        class="fit center"
-      />
-    </div>
+        Show
+      </span>
+    </span>
   </button>
   <div
     aria-hidden="true"
@@ -130,50 +116,14 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     aria-disabled="false"
     aria-expanded="false"
     aria-label="Show"
-    class="button default"
+    class="button neutral"
     type="button"
   >
     <span
-      class="icon"
+      class="icon-only"
     >
-      <svg
-        aria-hidden="true"
-        class="icon is-bidi"
-        data-name="Layer 1"
-        focusable="false"
-        height="1em"
-        viewBox="0 0 48 48"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-        />
-      </svg>
-    </span>
-  </button>
-  <div
-    aria-hidden="true"
-    class="toggle"
-  />
-</div>
-`;
-
-exports[`ToggleButton should render an initially open toggle-button 1`] = `
-<div
-  class="button is-open"
->
-  <button
-    aria-disabled="false"
-    aria-expanded="true"
-    class="button default"
-    type="button"
-  >
-    <div
-      class="arrange"
-    >
-      <div
-        class="fit center"
+      <span
+        class="icon"
       >
         <span
           class="icon"
@@ -193,20 +143,57 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
             />
           </svg>
         </span>
-      </div>
-      <div
-        class="fill center"
+      </span>
+    </span>
+  </button>
+  <div
+    aria-hidden="true"
+    class="toggle"
+  />
+</div>
+`;
+
+exports[`ToggleButton should render an initially open toggle-button 1`] = `
+<div
+  class="button is-open"
+>
+  <button
+    aria-disabled="false"
+    aria-expanded="true"
+    class="button neutral"
+    type="button"
+  >
+    <span
+      class="text-and-icon"
+    >
+      <span
+        class="icon icon-first"
       >
         <span
-          class="button-text"
+          class="icon"
         >
-          Show
+          <svg
+            aria-hidden="true"
+            class="icon is-bidi"
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+            />
+          </svg>
         </span>
-      </div>
-      <div
-        class="fit center"
-      />
-    </div>
+      </span>
+      <span
+        class=""
+      >
+        Show
+      </span>
+    </span>
   </button>
   <div
     aria-hidden="false"
@@ -239,32 +226,47 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
   >
     <Button
       aria-expanded={true}
+      icon={
+        <span
+          className="icon"
+        >
+          <IconChevronRight
+            className=""
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+      }
       isBlock={false}
       isCompact={false}
       isDisabled={false}
+      isIconOnly={false}
       isReversed={false}
       onClick={[Function]}
+      text="Show"
       type="button"
-      variant="default"
+      variant="neutral"
     >
       <button
         aria-disabled={false}
         aria-expanded={true}
-        className="button default"
+        aria-label={null}
+        className="button neutral"
         disabled={false}
+        onBlur={[Function]}
         onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
         type="button"
       >
-        <Arrange
-          align="center"
-          fill={
-            <span
-              className="button-text"
-            >
-              Show
-            </span>
-          }
-          fitStart={
+        <span
+          className="text-and-icon"
+        >
+          <span
+            className="icon icon-first"
+          >
             <span
               className="icon"
             >
@@ -274,70 +276,43 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                 isBidi={true}
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
-              />
-            </span>
-          }
-        >
-          <div
-            className="arrange"
-          >
-            <div
-              className="fit center"
-            >
-              <span
-                className="icon"
               >
-                <IconChevronRight
+                <IconBase
+                  ariaLabel={null}
                   className=""
                   data-name="Layer 1"
+                  focusable={false}
+                  height="1em"
                   isBidi={true}
+                  isSpin={false}
                   viewBox="0 0 48 48"
+                  width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <IconBase
-                    ariaLabel={null}
-                    className=""
+                  <svg
+                    aria-hidden="true"
+                    className="icon is-bidi"
                     data-name="Layer 1"
                     focusable={false}
                     height="1em"
-                    isBidi={true}
-                    isSpin={false}
                     viewBox="0 0 48 48"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className="icon is-bidi"
-                      data-name="Layer 1"
-                      focusable={false}
-                      height="1em"
-                      viewBox="0 0 48 48"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-                      />
-                    </svg>
-                  </IconBase>
-                </IconChevronRight>
-              </span>
-            </div>
-            <div
-              className="fill center"
-            >
-              <span
-                className="button-text"
-              >
-                Show
-              </span>
-            </div>
-            <div
-              className="fit center"
-            />
-          </div>
-        </Arrange>
+                    <path
+                      d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+                    />
+                  </svg>
+                </IconBase>
+              </IconChevronRight>
+            </span>
+          </span>
+          <span
+            className=""
+          >
+            Show
+          </span>
+        </span>
       </button>
     </Button>
     <Toggle
@@ -361,38 +336,29 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
 >
   <Button
     aria-expanded={false}
+    icon={
+      <span
+        className="icon"
+      >
+        <IconChevronRight
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+    }
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={false}
     onClick={[Function]}
+    text="Show"
     type="button"
-    variant="default"
-  >
-    <Arrange
-      align="center"
-      fill={
-        <span
-          className="button-text"
-        >
-          Show
-        </span>
-      }
-      fitStart={
-        <span
-          className="icon"
-        >
-          <IconChevronRight
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </span>
-      }
-    />
-  </Button>
+    variant="neutral"
+  />
   <Toggle
     isAnimated={false}
     isOpen={false}
@@ -408,37 +374,28 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
 >
   <Button
     aria-expanded={false}
+    icon={
+      <span
+        className="icon"
+      >
+        <IconCaretRight
+          className=""
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+    }
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={false}
     onClick={[Function]}
+    text="Show"
     type="button"
-    variant="default"
-  >
-    <Arrange
-      align="center"
-      fill={
-        <span
-          className="button-text"
-        >
-          Show
-        </span>
-      }
-      fitStart={
-        <span
-          className="icon"
-        >
-          <IconCaretRight
-            className=""
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </span>
-      }
-    />
-  </Button>
+    variant="neutral"
+  />
   <Toggle
     isAnimated={false}
     isOpen={false}
