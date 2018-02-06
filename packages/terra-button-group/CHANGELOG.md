@@ -3,6 +3,17 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* selectedKeys in ButtonGroup
+* isDisabled, onBlur, onFocus, onKeyDown, onKeyUp props in ButtonGroup.Button
+
+### Removed
+* buttons, isCompact, isSelectable, size, variant props in ButtonGroup
+* children, isReversed, isSelected props in ButtonGroup.Button
+
+### Changed
+* Changed to a controlled component.
+* text prop is now required.
 
 1.18.0 - (February 1, 2018)
 ------------------

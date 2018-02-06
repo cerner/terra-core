@@ -1,14 +1,53 @@
 :local {
   .button-group-button {
+    background-color: var(--terra-button-group-button-background-color, transparent);
+    border-color: var(--terra-button-group-button-border-color, rgba(0, 0, 0, 0.25));
     border-radius: 0;
     border-style: solid;
     border-width: 1px;
+    box-shadow: var(--terra-button-group-button-box-shadow, none);
+    color: var(--terra-button-group-button-color, rgba(28, 31, 33, 0.85));
+    font-weight: var(--terra-button-group-button-font-weight, 400);
     margin: 0;
     position: relative;
 
-    &:focus {
+    &.is-disabled,
+    &:disabled {
+      opacity: var(--terra-button-group-button-disabled-opacity, 0.3);
+    }
+
+    &.is-focused {
+      background-color: var(--terra-button-group-button-focus-background-color, transparent);
+      border-color: var(--terra-button-group-button-focus-border-color, rgba(0, 0, 0, 0.25));
+      box-shadow: var(--terra-button-group-button-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
       // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
-      z-index: 1000;
+      z-index: 1000; 
+    }
+
+    &:hover {
+      background-color: var(--terra-button-group-button-hover-background-color, rgba(0, 0, 0, 0.1));
+      color: var(--terra-button-group-button-hover-color, rgba(28, 31, 33, 0.85));
+    }
+
+    &:hover.is-active {
+      background-color: var(--terra-button-group-button-active-and-hover-background-color, #434a4d);
+      border-color: var(--terra-button-group-button-active-and-hover-border-color, #434a4d);
+      color: var(--terra-button-group-button-active-and-hover-color, #fff);
+    }
+
+    &.is-active.is-focused,
+    &:active.is-focused {
+      background-color: var(--terra-button-group-button-active-and-focus-background-color, #595f62);
+      border-color: var(--terra-button-group-button-active-and-focus-border-color, #595f62);
+      box-shadow: var(--terra-button-group-button-active-and-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      color: var(--terra-button-group-button-active-and-focus-color, #fff);
+    }
+
+    &.is-active,
+    &:active {
+      background-color: var(--terra-button-group-button-active-background-color, #595f62);
+      border-color: var(--terra-button-group-button-active-border-color, #595f62);
+      color: var(--terra-button-group-button-active-color, #fff);
     }
   }
 
@@ -17,18 +56,12 @@
   }
 
   .button-group-button:first-child {
-    border-bottom-left-radius: 0.25em;
-    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: var(--terra-button-group-button-border-bottom-left-radius, 0.2142rem);
+    border-top-left-radius: var(--terra-button-group-button-border-top-left-radius, 0.2142rem);
   }
 
   .button-group-button:last-child {
-    border-bottom-right-radius: 0.25em;
-    border-top-right-radius: 0.25em;
-  }
-
-  .button-group-button.is-active {
-    background-color: #4e5558;
-    border-color: #4e5558;
-    color: #fff;
+    border-bottom-right-radius: var(--terra-button-group-button-border-bottom-right-radius, 0.2142rem);
+    border-top-right-radius: var(--terra-button-group-button-border-top-right-radius, 0.2142rem);
   }
 }
