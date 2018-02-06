@@ -15,6 +15,7 @@ Unreleased
 ------------------
 ### Changed
 * Add context to selectable list example
+* Update button group examples to use V2
 
 ### Added
 * Add terra-form-radio components

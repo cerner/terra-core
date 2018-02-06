@@ -72,7 +72,7 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
-   * Sets the button text. If the button `isIconOnly` or of variant `ButtonVariants.UTILITY`, this text is set as the aria-label for accessiblity.
+   * Sets the button text. If the button `isIconOnly` or of variant `ButtonVariants.UTILITY`, this text is set as the aria-label for accessibility.
    */
   text: PropTypes.string.isRequired,
   /**

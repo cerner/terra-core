@@ -6,8 +6,8 @@
       "ignore": [
         "DEPENDENCIES.md",
         "terra-button",
-        "terra-dialog",
-        "terra-core-site"
+        "terra-button-group",
+        "terra-dialog"
       ]
     }
   },
