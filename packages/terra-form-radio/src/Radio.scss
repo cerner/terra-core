@@ -28,13 +28,13 @@
       clip: var(--terra-form-radio-native-input-clip, auto);
       cursor: var(--terra-form-radio-native-input-cursor, pointer);
       font-size: var(--terra-form-radio-native-input-font-size, inherit);
-      height: var(--terra-form-radio-native-input-height, 0);
+      height: var(--terra-form-radio-native-input-height, 0.929rem);
       margin-left: var(--terra-form-radio-native-input-margin-left, 0.071rem);
       margin-right: var(--terra-form-radio-native-input-margin-right, 0.143rem);
       overflow: var(--terra-form-radio-native-input-overflow, visible);
       padding: var(--terra-form-radio-native-input-padding, 0);
       position: absolute;
-      width: var(--terra-form-radio-native-input-width, 0);
+      width: var(--terra-form-radio-native-input-width, 0.857rem);
     }
 
     .label-text {
@@ -176,8 +176,8 @@
 
     /* Focus custom radio styling */
     .native-input:focus + .outer-ring {
-      border-color: var(--terra-form-radio-focus-border-color, transparent);
-      border-width: var(--terra-form-radio-focus-border-width, 0);
+      border-color: var(--terra-form-radio-focus-border-color, #000);
+      border-width: var(--terra-form-radio-focus-border-width, 3px);
     }
   }
 
