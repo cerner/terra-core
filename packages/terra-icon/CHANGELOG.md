@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Changed focusable prop from a boolean to a string
 * Update to React 16
 
 1.17.0 - (February 1, 2018)
