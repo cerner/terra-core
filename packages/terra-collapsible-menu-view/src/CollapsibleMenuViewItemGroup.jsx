@@ -18,7 +18,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * A list of keys of the buttons that should be selected.
+   * A list of keys of the CollapsibleMenuView.Items that should be selected.
    */
   selectedKeys: PropTypes.arrayOf(PropTypes.string),
 };
@@ -48,10 +48,14 @@ class CollapsibleMenuViewItemGroup extends React.Component {
 
   handleOnChange(event, selectedIndex) {
     if (this.props.onChange) {
-      let selectedKey = '';
+      let selectedKey = selectedIndex;
       React.Children.forEach(this.props.children, (child, index) => {
         if (selectedIndex === index) {
           selectedKey = child.key;
+
+          // React prepends '.$' to the original key of the element when that element is cloned using React.cloneElement.
+          // We should find a better way to handle this but for now, we have to remove '.$' from the key in order to match the original key.
+          selectedKey = selectedKey.replace(/[.$]/g, '');
         }
       });
 
@@ -62,6 +66,7 @@ class CollapsibleMenuViewItemGroup extends React.Component {
   render() {
     const {
       children,
+      onChange,
       selectedKeys,
       ...customProps
     } = this.props;
@@ -70,13 +75,13 @@ class CollapsibleMenuViewItemGroup extends React.Component {
 
     if (isCollapsibleMenuItem && selectedKeys.length) {
       return (
-        <Menu.ItemGroup {...customProps}>
+        <Menu.ItemGroup {...customProps} onChange={this.handleOnChange}>
           {children}
         </Menu.ItemGroup>
       );
     } else if (isCollapsibleMenuItem) {
       return (
-        <List {...customProps}>
+        <List {...customProps} onChange={this.handleOnChange}>
           {children}
         </List>
       );
@@ -88,7 +93,7 @@ class CollapsibleMenuViewItemGroup extends React.Component {
     ]);
 
     return (
-      <ButtonGroup {...customProps} className={buttonGroupClassNames} selectedKeys={selectedKeys}>
+      <ButtonGroup {...customProps} onChange={onChange} className={buttonGroupClassNames} selectedKeys={selectedKeys}>
         {children}
       </ButtonGroup>
     );

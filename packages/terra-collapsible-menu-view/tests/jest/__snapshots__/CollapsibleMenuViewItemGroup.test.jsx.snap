@@ -4,6 +4,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
 <List
   className="Testing"
   isDivided={false}
+  onChange={[Function]}
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}
@@ -25,6 +26,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge custom props when selectable 1`] = `
 <MenuItemGroup
   className="Testing"
+  onChange={[Function]}
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}
@@ -46,7 +48,9 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
 `;
 
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a menu item group when selectable 1`] = `
-<MenuItemGroup>
+<MenuItemGroup
+  onChange={[Function]}
+>
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
@@ -69,6 +73,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
 exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render menu items when selectedKeys is not set 1`] = `
 <List
   isDivided={false}
+  onChange={[Function]}
 >
   <CollapsibleMenuViewItem
     isIconOnly={false}
