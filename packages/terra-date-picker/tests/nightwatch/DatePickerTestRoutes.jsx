@@ -16,6 +16,7 @@ import DatePickerStartDate from './components/DatePickerStartDate';
 import DatePickerInsideModal from './components/DatePickerInsideModal';
 import DatePickerDefaultDateExcluded from './components/DatePickerDefaultDateExcluded';
 import DatePickerDefaultDateOutOfRange from './components/DatePickerDefaultDateOutOfRange';
+import { DatePickerDisabledDate, DatePickerReadonlyDate } from './components/DatePickerInputAttributes';
 
 const routes = (
   <div>
@@ -33,6 +34,8 @@ const routes = (
     <Route path="/tests/date-picker-tests/inside-modal" component={DatePickerInsideModal} />
     <Route path="/tests/date-picker-tests/default-date-excluded" component={DatePickerDefaultDateExcluded} />
     <Route path="/tests/date-picker-tests/default-date-out-of-range" component={DatePickerDefaultDateOutOfRange} />
+    <Route path="/tests/date-picker-tests/disabled" component={DatePickerDisabledDate} />
+    <Route path="/tests/date-picker-tests/readonly" component={DatePickerReadonlyDate} />
   </div>
 );
 

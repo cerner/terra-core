@@ -1,7 +1,8 @@
 # Terra Button
 
 The button component provides users a way to trigger actions in the UI.
-It can be modified in color, size, and type, and can optionally display an icon.
+It can be modified in color and type, and can optionally display an icon.
+Submit a request if additional variants not provided are needed.
 
 ## Getting Started
 
@@ -22,4 +23,3 @@ import Button from 'terra-button';
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-core/wiki/Component-Features#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-core/wiki/Component-Features#mobile-support)
-

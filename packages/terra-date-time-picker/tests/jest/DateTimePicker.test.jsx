@@ -129,3 +129,12 @@ it('throws error on missing locale prop in Base', () => {
     expect(e.message).toContain('add locale prop to Base component');
   }
 });
+
+it('should render a disabled date time picker', () => {
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DateTimePicker name="date-time-input" disabled utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});

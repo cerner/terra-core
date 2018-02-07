@@ -40,7 +40,7 @@ class AlertResponsiveToParent extends React.Component {
             to render below the message instead of beside it.</h3>
         <br />
         <Base locale={locale}>
-          <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} action={<Button text="Action" size="medium" variant="primary" onClick={this.actionFunc} />} >
+          <Alert id="actionAlert" type={Alert.Opts.Types.WARNING} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={this.actionFunc} />} >
             This is a warning. It is configured with a custom Action button.
           </Alert>
           <br />
