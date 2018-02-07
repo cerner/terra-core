@@ -1,5 +1,10 @@
 import React from 'react';
-
+import Base from 'terra-base';
 import SearchField from '../../lib/SearchField';
 
-export default () => <SearchField id="searchfield" placeholder="Search Text" />;
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
+
+export default () =>
+  <Base locale={locale}>
+    <SearchField id="searchfield" placeholder="Search Text" />
+  </Base>;

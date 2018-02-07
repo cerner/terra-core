@@ -86,7 +86,8 @@ class CollapsibleMenu extends React.Component {
   }
 
   wrapChildrenOnClick(children) {
-    return React.Children.map(children, (item) => {
+    const cloneChildren = children ? [] : undefined;
+    React.Children.forEach(children, (item) => {
       let clonedElement = item;
       if (item.props.shouldCloseOnClick) {
         clonedElement = React.cloneElement(item, { onClick: this.wrappedOnClick(item) });
@@ -97,8 +98,10 @@ class CollapsibleMenu extends React.Component {
         const subMenuItems = this.wrapChildrenOnClick(item.props.subMenuItems);
         clonedElement = React.cloneElement(item, { subMenuItems });
       }
-      return clonedElement;
+      cloneChildren.push(clonedElement);
     });
+
+    return cloneChildren;
   }
 
   render() {

@@ -13,6 +13,8 @@ import TimeInputTwelveHourFilledEvening from './component/TimeInputTwelveHourFil
 import TimeInputTwelveHourMobile from './component/TimeInputTwelveHourMobile';
 import TimeInputTwelveHourMobileIds from './component/TimeInputTwelveHourMobileIds';
 import TimeInputTwelveHourMobileTimeProvided from './component/TimeInputTwelveHourMobileTimeProvided';
+import TimeInputDisabled from './component/TimeInputDisabled';
+import TimeInputMobileDisabled from './component/TimeInputMobileDisabled';
 
 const routes = (
   <div>
@@ -27,6 +29,8 @@ const routes = (
     <Route path="/tests/time-input-tests/twelve-hour-mobile" component={TimeInputTwelveHourMobile} />
     <Route path="/tests/time-input-tests/twelve-hour-mobile-time-provided" component={TimeInputTwelveHourMobileTimeProvided} />
     <Route path="/tests/time-input-tests/twelve-hour-mobile-ids" component={TimeInputTwelveHourMobileIds} />
+    <Route path="/tests/time-input-tests/disabled" component={TimeInputDisabled} />
+    <Route path="/tests/time-input-tests/disabled-mobile" component={TimeInputMobileDisabled} />
   </div>
 );
 

@@ -90,3 +90,9 @@ it('should render a 12 hour timepicker meridiem with buttons when viewed on a mo
   expect(wrapper).toMatchSnapshot();
   delete window.ontouchstart;
 });
+
+it('should render a disabled time input', () => {
+  const timeInput = <TimeInput name="time-input" disabled />;
+  const wrapper = shallow(timeInput, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
