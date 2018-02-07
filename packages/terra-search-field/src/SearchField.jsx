@@ -9,6 +9,8 @@ import styles from './SearchField.scss';
 
 const cx = classNames.bind(styles);
 
+const Icon = <IconSearch />;
+
 const KEYCODES = {
   ENTER: 13,
 };
@@ -79,6 +81,15 @@ const defaultProps = {
   placeholder: '',
   searchDelay: 250,
   value: undefined,
+};
+
+const contextTypes = {
+  /* eslint-disable consistent-return */
+  intl: (context) => {
+    if (context.intl === undefined) {
+      return new Error('Please add locale prop to Base component to load translations');
+    }
+  },
 };
 
 class SearchField extends React.Component {
@@ -174,6 +185,8 @@ class SearchField extends React.Component {
       additionalInputAttributes.defaultValue = defaultValue;
     }
 
+    const buttonText = this.context.intl.formatMessage({ id: 'Terra.searchField.search' });
+
     return (
       <div {...customProps} className={searchFieldClassNames}>
         <Input
@@ -188,12 +201,13 @@ class SearchField extends React.Component {
         />
         <Button
           className={cx('button')}
+          text={buttonText}
           onClick={this.handleSearch}
-          isCompact
           isDisabled={isDisabled}
-        >
-          <IconSearch />
-        </Button>
+          icon={Icon}
+          isIconOnly
+          isCompact
+        />
       </div>
     );
   }
@@ -202,5 +216,6 @@ class SearchField extends React.Component {
 
 SearchField.propTypes = propTypes;
 SearchField.defaultProps = defaultProps;
+SearchField.contextTypes = contextTypes;
 
 export default SearchField;

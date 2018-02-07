@@ -6,6 +6,7 @@ Unreleased
 ### Changed
 * Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
 * Update styles for terra-form-checkbox
+* Update Collapsible Menu View and Toggle Button examples to use Button 2.0.
 
 ### Removed
 * terra-theme-provider examples

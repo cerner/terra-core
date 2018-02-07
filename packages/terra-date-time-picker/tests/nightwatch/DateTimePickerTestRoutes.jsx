@@ -18,6 +18,7 @@ import DateTimePickerDateInputAttributes from './components/DateTimePickerDateIn
 import DateTimePickerTimeInputAttributes from './components/DateTimePickerTimeInputAttributes';
 import DateTimePickerDefaultDateExcluded from './components/DateTimePickerDefaultDateExcluded';
 import DateTimePickerDefaultDateOutOfRange from './components/DateTimePickerDefaultDateOutOfRange';
+import DateTimePickerDisabled from './components/DateTimePickerDisabled';
 
 const routes = (
   <div>
@@ -37,6 +38,7 @@ const routes = (
     <Route path="/tests/date-time-picker-tests/time-input-attributes" component={DateTimePickerTimeInputAttributes} />
     <Route path="/tests/date-time-picker-tests/default-date-excluded" component={DateTimePickerDefaultDateExcluded} />
     <Route path="/tests/date-time-picker-tests/default-date-out-of-range" component={DateTimePickerDefaultDateOutOfRange} />
+    <Route path="/tests/date-time-picker-tests/disabled" component={DateTimePickerDisabled} />
   </div>
 );
 

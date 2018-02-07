@@ -21,6 +21,7 @@ const DateTimePickerTests = () => (
       <li><Link to="/tests/date-time-picker-tests/time-input-attributes">DateTimePicker - Time Input Disabled</Link></li>
       <li><Link to="/tests/date-time-picker-tests/default-date-excluded">DateTimePicker - Default Date Excluded</Link></li>
       <li><Link to="/tests/date-time-picker-tests/default-date-out-of-range">DateTimePicker - Default Date Out Of Range</Link></li>
+      <li><Link to="/tests/date-time-picker-tests/disabled">DateTimePicker - Disabled</Link></li>
     </ul>
   </div>
 );
