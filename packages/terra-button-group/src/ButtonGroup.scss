@@ -1,7 +1,14 @@
 :local {
+  /* stylelint-disable  property-no-unknown */
   .button-group {
     display: inline-flex;
     position: relative;
     white-space: nowrap;
+  }
+
+  // is-active is a className in ButtonGroupButton but ButtonGroup manages the selection and sets the is-active class on ButtonGroupButton.
+  // Since the styles are modular, ButtonGroup needs to compose the is-active className from ButtonGroupButton.
+  .is-active {
+    composes: is-active from './ButtonGroupButton.scss';
   }
 }

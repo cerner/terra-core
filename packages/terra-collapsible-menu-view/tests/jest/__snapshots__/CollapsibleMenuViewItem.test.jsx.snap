@@ -127,7 +127,6 @@ exports[`CollapsibleMenuViewItem should not set isSelected on button outside of 
 
 exports[`CollapsibleMenuViewItem should render a button group button when in an item group 1`] = `
 <ButtonGroupButton
-  className=""
   isDisabled={false}
   text="Testing"
 />
@@ -176,7 +175,6 @@ exports[`CollapsibleMenuViewItem should render a default component 1`] = `
 
 exports[`CollapsibleMenuViewItem should render a disabled button group button that is inside a button group when isDisabled is set 1`] = `
 <ButtonGroupButton
-  className=""
   isDisabled={true}
   text="Testing"
 />
@@ -279,7 +277,6 @@ exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
 
 exports[`CollapsibleMenuViewItem should set isSelected on button that is inside item group 1`] = `
 <ButtonGroupButton
-  className="is-active"
   isDisabled={false}
   text="Testing"
 />

@@ -126,7 +126,7 @@ class CollapsibleMenuViewItem extends React.Component {
         />
       );
     } else if (isCollapsibleGroupItem) {
-      const button = (
+      item = (
         <ButtonGroup.Button
           {...attributes}
           icon={icon}
@@ -134,10 +134,6 @@ class CollapsibleMenuViewItem extends React.Component {
           isDisabled={isDisabled}
         />
       );
-
-      item = React.cloneElement(button, {
-        className: cx({ 'is-active': isSelected }),
-      });
     } else if (subMenuItems && subMenuItems.length > 0) {
       item = (
         <Menu
