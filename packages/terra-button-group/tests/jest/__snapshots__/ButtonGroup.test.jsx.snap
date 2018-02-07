@@ -8,7 +8,7 @@ exports[`should render a button group with children 1`] = `
     aria-pressed={false}
     className=""
     isDisabled={false}
-    key=".$1"
+    key="1"
     onClick={[Function]}
     text="Button 1"
   />
@@ -23,7 +23,7 @@ exports[`should render a button group with children selected 1`] = `
     aria-pressed={true}
     className="is-active"
     isDisabled={false}
-    key=".$1"
+    key="1"
     onClick={[Function]}
     text="Button 1"
   />
@@ -31,7 +31,7 @@ exports[`should render a button group with children selected 1`] = `
     aria-pressed={false}
     className=""
     isDisabled={false}
-    key=".$2"
+    key="2"
     onClick={[Function]}
     text="Button 2"
   />
@@ -52,7 +52,7 @@ exports[`should select a button 1`] = `
     aria-pressed={false}
     className=""
     isDisabled={false}
-    key=".$1"
+    key="1"
     onClick={[Function]}
     text="Button 1"
   />
@@ -60,7 +60,7 @@ exports[`should select a button 1`] = `
     aria-pressed={false}
     className=""
     isDisabled={false}
-    key=".$2"
+    key="2"
     onClick={[Function]}
     text="Button 2"
   />
@@ -75,7 +75,7 @@ exports[`should select a button 2`] = `
     aria-pressed={false}
     className=""
     isDisabled={false}
-    key=".$1"
+    key="1"
     onClick={[Function]}
     text="Button 1"
   />
@@ -83,7 +83,7 @@ exports[`should select a button 2`] = `
     aria-pressed={false}
     className=""
     isDisabled={false}
-    key=".$2"
+    key="2"
     onClick={[Function]}
     text="Button 2"
   />

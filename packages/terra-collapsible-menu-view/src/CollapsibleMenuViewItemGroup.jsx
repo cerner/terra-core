@@ -52,10 +52,6 @@ class CollapsibleMenuViewItemGroup extends React.Component {
       React.Children.forEach(this.props.children, (child, index) => {
         if (selectedIndex === index) {
           selectedKey = child.key;
-
-          // React prepends '.$' to the original key of the element when that element is cloned using React.cloneElement.
-          // We should find a better way to handle this but for now, we have to remove '.$' from the key in order to match the original key.
-          selectedKey = selectedKey.replace(/[.$]/g, '');
         }
       });
 

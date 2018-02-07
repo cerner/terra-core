@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Changed React.Children.map to React.Children.forEach to prevent '.$' being prepended to the key.
 
 1.13.0 - (February 1, 2018)
 ------------------
