@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+*Added disabled prop.
+
+### Changed
+* Uplift to ButtonGroup 2.0
 
 1.18.0 - (February 1, 2018)
 ------------------

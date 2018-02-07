@@ -17,7 +17,7 @@ class CollapsibleMenuViewDemo extends React.Component {
     this.state = {
       toggle1Selection: false,
       toggle2Selection: false,
-      displayType: 0,
+      displayType: 'tableView',
     };
   }
 
@@ -29,8 +29,8 @@ class CollapsibleMenuViewDemo extends React.Component {
     this.setState({ toggle2Selection: isSelected });
   }
 
-  handleDisplayTypeChange(event, selectedIndex) {
-    this.setState({ displayType: selectedIndex });
+  handleDisplayTypeChange(event, selectedKey) {
+    this.setState({ displayType: selectedKey });
   }
 
   render() {
@@ -73,14 +73,14 @@ class CollapsibleMenuViewDemo extends React.Component {
           ]}
         />
         <CollapsibleMenuView.Divider key="Divider2" />
-        <CollapsibleMenuView.ItemGroup key="ViewTypeSelection" isSelectable onChange={this.handleDisplayTypeChange}>
+        <CollapsibleMenuView.ItemGroup key="ViewTypeSelection" selectedKeys={[this.state.displayType]} onChange={this.handleDisplayTypeChange}>
           <CollapsibleMenuView.Item
             icon={<IconTable />}
             text="Table View"
             key="tableView"
             isIconOnly
             shouldCloseOnClick={false}
-            isSelected={this.state.displayType === 0}
+            isSelected={this.state.displayType === 'tableView'}
           />
           <CollapsibleMenuView.Item
             icon={<IconFlowsheet />}
@@ -88,7 +88,7 @@ class CollapsibleMenuViewDemo extends React.Component {
             key="expandedView"
             isIconOnly
             shouldCloseOnClick={false}
-            isSelected={this.state.displayType === 1}
+            isSelected={this.state.displayType === 'expandedView'}
           />
           <CollapsibleMenuView.Item
             icon={<IconVisualization />}
@@ -96,7 +96,7 @@ class CollapsibleMenuViewDemo extends React.Component {
             key="trendingView"
             isIconOnly
             shouldCloseOnClick={false}
-            isSelected={this.state.displayType === 2}
+            isSelected={this.state.displayType === 'trendingView'}
             isDisabled
           />
         </CollapsibleMenuView.ItemGroup>

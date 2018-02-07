@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import IconChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import Toggle from 'terra-toggle';
@@ -116,6 +115,7 @@ class ToggleButton extends React.Component {
     // Set openHeaderText to the same value as closedHeaderText if its not already set
     const normalizedOpenButtonText = openedButtonText || closedButtonText;
     const buttonText = !this.state.isOpen ? closedButtonText : normalizedOpenButtonText;
+    const text = isIconOnly ? closedButtonText : buttonText;
     const toggleButtonClass = cx([
       'button',
       { 'is-open': this.state.isOpen },
@@ -123,33 +123,16 @@ class ToggleButton extends React.Component {
       customProps.className,
     ]);
 
-    let button;
-    if (isIconOnly) {
-      button = (
-        <Button
-          {...buttonAttrs}
-          aria-expanded={this.state.isOpen}
-          aria-label={closedButtonText}
-          onClick={this.handleOnClick}
-        >
-          <span className={cx('icon')}>{icon}</span>
-        </Button>
-      );
-    } else {
-      button = (
-        <Button
-          {...buttonAttrs}
-          aria-expanded={this.state.isOpen}
-          onClick={this.handleOnClick}
-        >
-          <Arrange
-            align="center"
-            fitStart={<span className={cx('icon')}>{icon}</span>}
-            fill={<span className={cx('button-text')}>{buttonText}</span>}
-          />
-        </Button>
-      );
-    }
+    const button = (
+      <Button
+        {...buttonAttrs}
+        isIconOnly={isIconOnly}
+        icon={<span className={cx('icon')}>{icon}</span>}
+        aria-expanded={this.state.isOpen}
+        text={text}
+        onClick={this.handleOnClick}
+      />
+    );
 
     return (
       <div {...customProps} className={toggleButtonClass}>

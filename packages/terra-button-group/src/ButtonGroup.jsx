@@ -66,14 +66,16 @@ class ButtonGroup extends React.Component {
       customProps.className,
     ]);
 
-    const allButtons = React.Children.map(children, (child) => {
-      const isActive = selectedKeys.indexOf(child.key) > -1;
+    const allButtons = children ? [] : undefined;
 
-      return React.cloneElement(child, {
+    React.Children.forEach(children, (child) => {
+      const isActive = selectedKeys.indexOf(child.key) > -1;
+      const cloneChild = React.cloneElement(child, {
         onClick: this.wrapOnClick(child),
-        className: cx({ 'is-active': isActive }),
+        className: cx([{ 'is-active': isActive }, child.props.className]),
         'aria-pressed': isActive,
       });
+      allButtons.push(cloneChild);
     });
 
     return (

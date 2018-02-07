@@ -50,22 +50,31 @@ exports[`should render a single child element 1`] = `
           isBlock={false}
           isCompact={false}
           isDisabled={false}
+          isIconOnly={false}
           isReversed={false}
           key="1"
           text="OK"
           type="button"
-          variant="default"
+          variant="neutral"
         >
           <button
             aria-disabled={false}
-            className="button default"
+            aria-label={null}
+            className="button neutral"
             disabled={false}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
             type="button"
           >
             <span
-              className="text"
+              className="text-only"
             >
-              OK
+              <span
+                className=""
+              >
+                OK
+              </span>
             </span>
           </button>
         </Button>
@@ -273,22 +282,31 @@ exports[`should render an image with a no-data status view with all message prop
           isBlock={false}
           isCompact={false}
           isDisabled={false}
+          isIconOnly={false}
           isReversed={false}
           key="1"
           text="OK"
           type="button"
-          variant="default"
+          variant="neutral"
         >
           <button
             aria-disabled={false}
-            className="button default"
+            aria-label={null}
+            className="button neutral"
             disabled={false}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
             type="button"
           >
             <span
-              className="text"
+              className="text-only"
             >
-              OK
+              <span
+                className=""
+              >
+                OK
+              </span>
             </span>
           </button>
         </Button>
@@ -296,22 +314,31 @@ exports[`should render an image with a no-data status view with all message prop
           isBlock={false}
           isCompact={false}
           isDisabled={false}
+          isIconOnly={false}
           isReversed={false}
           key="2"
           text="Cancel"
           type="button"
-          variant="default"
+          variant="neutral"
         >
           <button
             aria-disabled={false}
-            className="button default"
+            aria-label={null}
+            className="button neutral"
             disabled={false}
+            onBlur={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
             type="button"
           >
             <span
-              className="text"
+              className="text-only"
             >
-              Cancel
+              <span
+                className=""
+              >
+                Cancel
+              </span>
             </span>
           </button>
         </Button>

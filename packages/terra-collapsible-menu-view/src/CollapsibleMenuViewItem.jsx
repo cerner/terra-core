@@ -131,8 +131,6 @@ class CollapsibleMenuViewItem extends React.Component {
           {...attributes}
           icon={icon}
           text={faceUpText}
-          isReversed={isReversed}
-          isSelected={isSelected}
           isDisabled={isDisabled}
         />
       );
@@ -149,6 +147,7 @@ class CollapsibleMenuViewItem extends React.Component {
               isReversed={isReversed}
               isDisabled={isDisabled}
               onClick={this.handleButtonClick}
+              isIconOnly={isIconOnly}
             />)}
         >
           {subMenuItems}
@@ -157,7 +156,14 @@ class CollapsibleMenuViewItem extends React.Component {
     } else {
       item = (
         <div className={cx('face-up-item')}>
-          <Button {...attributes} icon={icon} text={faceUpText} isReversed={isReversed} isDisabled={isDisabled} />
+          <Button
+            {...attributes}
+            icon={icon}
+            text={faceUpText}
+            isReversed={isReversed}
+            isDisabled={isDisabled}
+            isIconOnly={isIconOnly}
+          />
         </div>
       );
     }
