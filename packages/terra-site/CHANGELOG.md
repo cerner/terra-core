@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
+* Update styles for terra-form-checkbox
+
 ### Removed
 * terra-theme-provider examples
 * terra-app-delegate examples
