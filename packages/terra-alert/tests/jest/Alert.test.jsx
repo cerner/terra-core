@@ -173,7 +173,7 @@ describe('Alert of type success with an action button text content', () => {
   const alertText = 'This is a success alert.';
   const actionButtonRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => {}} />} >{alertText}</Alert>
     </IntlProvider>
   );
 
@@ -189,7 +189,7 @@ describe('Dismissable Alert of type custom with action button, custom title and 
   const alertCustomTitle = 'Help!';
   const customActionDismissRender = (
     <IntlProvider locale={locale} messages={messages}>
-      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" action={<Button text="Action" size="medium" variant="primary" onClick={() => {}} />} >{alertText}</Alert>
+      <Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => {}} title={alertCustomTitle} customIcon={<IconHelp />} customStatusColor="orange" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => {}} />} >{alertText}</Alert>
     </IntlProvider>
   );
 

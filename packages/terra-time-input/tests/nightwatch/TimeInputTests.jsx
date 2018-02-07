@@ -8,6 +8,7 @@ const TimeInputTests = () => (
     <ul>
       <li><Link to="/tests/time-input-tests/default">TimeInput - Default</Link></li>
       <li><Link to="/tests/time-input-tests/default-time">TimeInput - Default Time</Link></li>
+      <li><Link to="/tests/time-input-tests/disabled">TimeInput - Disabled</Link></li>
       <li><Link to="/tests/time-input-tests/on-change">TimeInput - OnChange</Link></li>
       <li><Link to="/tests/time-input-tests/invalid-time">TimeInput - Invalid Time</Link></li>
       <li><Link to="/tests/time-input-tests/twelve-hour">TimeInput - Twelve Hour</Link></li>

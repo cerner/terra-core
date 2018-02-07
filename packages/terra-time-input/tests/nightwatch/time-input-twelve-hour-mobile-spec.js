@@ -38,4 +38,10 @@ module.exports = resizeTo(['tiny', 'small', 'medium'], {
     browser.expect.element('label[for="hours-testing"]').text.to.equal('Hours');
     browser.expect.element('label[for="minutes-testing"]').text.to.equal('Minutes');
   },
+  'Does Not Interact with Disabled Input': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/twelve-hour-mobile`);
+
+    browser.expect.element('label[for="hours-testing"]').text.to.equal('Hours');
+    browser.expect.element('label[for="minutes-testing"]').text.to.equal('Minutes');
+  },
 });

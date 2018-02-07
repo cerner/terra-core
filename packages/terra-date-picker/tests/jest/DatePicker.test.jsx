@@ -150,3 +150,12 @@ it('should render a date picker with onInputFocus', () => {
   );
   expect(datePicker).toMatchSnapshot();
 });
+
+it('should render a disabled date picker', () => {
+  const datePicker = shallow(
+    <IntlProvider locale={locale} messages={messages}>
+      <DatePicker name="date-input" disabled utcOffset={0} />
+    </IntlProvider>,
+  );
+  expect(datePicker).toMatchSnapshot();
+});

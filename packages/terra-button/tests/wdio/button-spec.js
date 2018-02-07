@@ -274,4 +274,11 @@ describe('Button', () => {
       );
     });
   });
+
+  describe('Compact Button', () => {
+    beforeEach(() => browser.url('/#/tests/button-tests/compact'));
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot({ selector: '#compactButton' });
+  });
 });

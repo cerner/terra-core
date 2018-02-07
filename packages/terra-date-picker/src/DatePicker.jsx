@@ -10,6 +10,10 @@ import styles from './DatePicker.scss';
 
 const propTypes = {
   /**
+   * Whether the date input should be disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
   excludeDates: PropTypes.arrayOf(PropTypes.string),
@@ -73,6 +77,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  disabled: false,
   excludeDates: undefined,
   filterDate: undefined,
   includeDates: undefined,

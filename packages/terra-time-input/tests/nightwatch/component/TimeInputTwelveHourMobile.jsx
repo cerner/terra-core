@@ -57,6 +57,13 @@ export default class TimeInputElement extends React.Component {
           minuteAttributes={{ id: 'minutes-testing' }}
           variant="12-hour"
         />
+        <h3>Time Input with disabled input</h3>
+        <TimeInput
+          id="timeInputDisabled"
+          name="time-input-disabled"
+          variant="12-hour"
+          disabled
+        />
       </Base>
     );
   }

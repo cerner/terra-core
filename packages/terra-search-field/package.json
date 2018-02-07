@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
+    "react-intl": "^2.3.0",
     "terra-props-table": "^1.12.0"
   },
   "peerDependencies": {

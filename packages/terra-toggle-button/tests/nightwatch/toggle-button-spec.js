@@ -11,13 +11,13 @@ module.exports = resizeTo(['medium'], {
   'Displays a toggle-button with customized button': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/toggle-button-tests/customized-button`)
-      .assert.elementPresent('#linkButton');
+      .assert.elementPresent('#emphasisButton');
   },
 
   'Displays a toggle-button with customized closedButtonText': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/toggle-button-tests/closed-button-text`)
-      .assert.containsText('#closedButtonText button > div > div:nth-child(2) > span', 'Custom Text');
+      .assert.containsText('#closedButtonText button > span > span:nth-child(2)', 'Custom Text');
   },
 
   'Displays a toggle-button with customized icon': (browser) => {
@@ -55,7 +55,7 @@ module.exports = resizeTo(['medium'], {
     browser
       .url(`${browser.launchUrl}/#/tests/toggle-button-tests/open-button-text`)
       .click('button')
-      .assert.containsText('#openedButtonText button > div > div:nth-child(2) > span', 'Custom Text 2');
+      .assert.containsText('#openedButtonText button > span > span:nth-child(2)', 'Custom Text 2');
   },
 
   'Triggers onOpen callback for ToggleButton when button is selected': (browser) => {

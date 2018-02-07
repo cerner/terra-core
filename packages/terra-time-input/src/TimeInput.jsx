@@ -12,6 +12,10 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Whether the time input should be disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * Custom input attributes that apply to both the hour and minute inputs.
    */
   inputAttributes: PropTypes.object,
@@ -47,6 +51,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  disabled: false,
   inputAttributes: {},
   minuteAttributes: {},
   hourAttributes: {},
@@ -478,6 +483,7 @@ class TimeInput extends React.Component {
 
   mobileInput() {
     const {
+      disabled,
       inputAttributes,
       minuteAttributes,
       hourAttributes,
@@ -535,6 +541,7 @@ class TimeInput extends React.Component {
             onBlur={this.handleHourBlur}
             size="2"
             pattern="\d*"
+            disabled={disabled}
           />
           <label htmlFor={hourAttributes.id} className={cx('mobile-input-label')}>
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.hours' })}
@@ -557,24 +564,25 @@ class TimeInput extends React.Component {
             onBlur={this.handleMinuteBlur}
             size="2"
             pattern="\d*"
+            disabled={disabled}
           />
           <label htmlFor={minuteAttributes.id} className={cx('mobile-input-label')}>
             {this.context.intl.formatMessage({ id: 'Terra.timeInput.minutes' })}
           </label>
         </div>
         {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
-          <ButtonGroup isSelectable onChange={this.handleMeridiemButtonChange}>
+          <ButtonGroup selectedKeys={[this.state.meridiem]} onChange={this.handleMeridiemButtonChange}>
             <ButtonGroup.Button
-              key="anti_meridiem_button"
+              key={this.anteMeridiem}
               className={cx('meridiem-button')}
               text={this.anteMeridiem}
-              isSelected={this.state.meridiem === this.anteMeridiem}
+              isDisabled={disabled}
             />
             <ButtonGroup.Button
-              key="post_meridiem_button"
+              key={this.postMeridiem}
               className={cx('meridiem-button')}
               text={this.postMeridiem}
-              isSelected={this.state.meridiem === this.postMeridiem}
+              isDisabled={disabled}
             />
           </ButtonGroup>
         )}
@@ -582,12 +590,13 @@ class TimeInput extends React.Component {
     );
   }
 
-  handleMeridiemButtonChange(event, selectedIndex) {
-    this.handleValueChange(event, TimeUtil.inputType.HOUR, this.state.hour.toString(), selectedIndex === 0 ? this.anteMeridiem : this.postMeridiem);
+  handleMeridiemButtonChange(event, selectedKey) {
+    this.handleValueChange(event, TimeUtil.inputType.HOUR, this.state.hour.toString(), selectedKey);
   }
 
   desktopInput() {
     const {
+      disabled,
       inputAttributes,
       minuteAttributes,
       hourAttributes,
@@ -647,6 +656,7 @@ class TimeInput extends React.Component {
           onBlur={this.handleHourBlur}
           size="2"
           pattern="\d*"
+          disabled={disabled}
         />
         <span className={cx('time-spacer')}>:</span>
         <Input
@@ -665,6 +675,7 @@ class TimeInput extends React.Component {
           onBlur={this.handleMinuteBlur}
           size="2"
           pattern="\d*"
+          disabled={disabled}
         />
         {this.props.variant === TimeUtil.FORMAT_12_HOUR && (
           [
@@ -677,6 +688,7 @@ class TimeInput extends React.Component {
               value={this.state.meridiem}
               size={this.state.meridiem.length}
               readOnly
+              disabled={disabled}
             />,
             <div
               style={{ position: 'relative' }}

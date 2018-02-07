@@ -242,7 +242,8 @@ class MenuContent extends React.Component {
 
   render() {
     let index = -1;
-    const items = React.Children.map(this.props.children, (item) => {
+    const items = this.props.children ? [] : undefined;
+    React.Children.map(this.props.children, (item) => {
       const onClick = this.wrapOnClick(item);
       let newItem = item;
 
@@ -259,20 +260,23 @@ class MenuContent extends React.Component {
         });
       // If the child has children then it is an item group, so iterate through it's children
       } else if (item.props.children) {
-        const children = React.Children.map(item.props.children, (child) => {
+        const children = item.props.children ? [] : undefined;
+        React.Children.forEach(item.props.children, (child) => {
           if (!child.props.isDisabled) {
             index += 1;
-            return React.cloneElement(child, {
+            const clonedElement = React.cloneElement(child, {
               onKeyDown: this.wrapOnKeyDown(child, index),
               isActive: index === this.state.focusIndex,
             });
+            children.push(clonedElement);
+          } else {
+            children.push(child);
           }
-          return child;
         });
         newItem = React.cloneElement(item, {}, children);
       }
 
-      return newItem;
+      items.push(newItem);
     });
     const boundingFrame = this.props.boundingRef ? this.props.boundingRef() : undefined;
     const isFullScreen = MenuUtils.isFullScreen(
