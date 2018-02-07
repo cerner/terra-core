@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Whether the date input should be disabled.
+   * Whether the time input should be disabled.
    */
   disabled: PropTypes.bool,
   /**

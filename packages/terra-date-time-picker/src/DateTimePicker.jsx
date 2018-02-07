@@ -18,7 +18,7 @@ const propTypes = {
    */
   dateInputAttributes: PropTypes.object,
   /**
-   * Whether the date input should be disabled.
+   * Whether the date and time inputs should be disabled.
    */
   disabled: PropTypes.bool,
   /**
