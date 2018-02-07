@@ -16,6 +16,8 @@ const TimeInputTests = () => (
       <li><Link to="/tests/time-input-tests/twelve-hour-mobile">TimeInput - Twelve Hour Mobile</Link></li>
       <li><Link to="/tests/time-input-tests/twelve-hour-mobile-time-provided">TimeInput - Twelve Hour Mobile with Time Provided</Link></li>
       <li><Link to="/tests/time-input-tests/twelve-hour-mobile-ids">TimeInput - Twelve Hour with ids provided to inputs</Link></li>
+      <li><Link to="/tests/time-input-tests/disabled">TimeInput - Disabled</Link></li>
+      <li><Link to="/tests/time-input-tests/disabled-mobile">TimeInput - Disabled Mobile</Link></li>
     </ul>
   </div>
 );

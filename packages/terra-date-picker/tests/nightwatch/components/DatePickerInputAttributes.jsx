@@ -9,7 +9,7 @@ const DatePickerDisabledDate = () => (
     <DatePicker
       name="date-input"
       selectedDate={'2017-04-01'}
-      inputAttributes={{ disabled: true }}
+      disabled
     />
   </Base>
 );

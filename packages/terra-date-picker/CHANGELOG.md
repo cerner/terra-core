@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+*Added disabled prop.
+
 ### Changed
 * Uplift to Button 2.0
 

@@ -11,6 +11,7 @@ exports[`should ignore invalid times properly 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -31,6 +32,7 @@ exports[`should ignore invalid times properly 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}
@@ -208,6 +210,7 @@ exports[`should render a default time input 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -228,6 +231,58 @@ exports[`should render a default time input 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
+    maxLength="2"
+    name="terra-time-minute-time-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    pattern="\\\\d*"
+    placeholder="mm"
+    required={false}
+    size="2"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`should render a disabled time input 1`] = `
+<div
+  className="time-input"
+>
+  <input
+    name="time-input"
+    type="hidden"
+    value=""
+  />
+  <Input
+    className="time-input-hour desktop"
+    disabled={true}
+    id="terra-time-minute-time-input"
+    maxLength="2"
+    name="terra-time-hour-time-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    pattern="\\\\d*"
+    placeholder="hh"
+    required={false}
+    size="2"
+    type="text"
+    value=""
+  />
+  <span
+    className="time-spacer"
+  >
+    :
+  </span>
+  <Input
+    className="time-input-minute desktop"
+    disabled={true}
+    id="terra-time-minute-time-input"
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}
@@ -255,6 +310,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -275,6 +331,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}
@@ -290,6 +347,7 @@ exports[`should render a time input with 12 hour clock set 1`] = `
   />
   <Input
     className="meridiem-display"
+    disabled={false}
     key="meridiem_display"
     name={null}
     onFocus={[Function]}
@@ -345,6 +403,7 @@ exports[`should render a time input with a default time 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -365,6 +424,7 @@ exports[`should render a time input with a default time 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}
@@ -392,6 +452,7 @@ exports[`should render a time input with custom attributes 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     id="terra-time-input"
     maxLength="2"
     name="terra-time-hour-time-input"
@@ -413,6 +474,7 @@ exports[`should render a time input with custom attributes 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     id="terra-time-input"
     maxLength="2"
     name="terra-time-minute-time-input"
@@ -441,6 +503,7 @@ exports[`should render a time input with onBlur 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -461,6 +524,7 @@ exports[`should render a time input with onBlur 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}
@@ -488,6 +552,7 @@ exports[`should render a time input with onChange 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -508,6 +573,7 @@ exports[`should render a time input with onChange 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}
@@ -535,6 +601,7 @@ exports[`should render a time input with onInputFocus 1`] = `
   />
   <Input
     className="time-input-hour desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-hour-time-input"
     onBlur={[Function]}
@@ -555,6 +622,7 @@ exports[`should render a time input with onInputFocus 1`] = `
   </span>
   <Input
     className="time-input-minute desktop"
+    disabled={false}
     maxLength="2"
     name="terra-time-minute-time-input"
     onBlur={[Function]}

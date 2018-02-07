@@ -287,11 +287,11 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/time-input-attributes`);
     browser.expect.element('input[name="terra-time-hour-input"]').to.be.present;
     browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('id').equals('time-input-example');
-    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('disabled');
+    browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('readOnly');
     browser.expect.element('input[name="terra-time-minute-input"]').to.be.present;
     browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('id').equals('time-input-example');
-    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('disabled');
-    browser.expect.element('input[name="terra-date-input"]').to.not.have.attribute('disabled');
+    browser.expect.element('input[name="terra-time-minute-input"]').to.have.attribute('readOnly');
+    browser.expect.element('input[name="terra-date-input"]').to.not.have.attribute('readOnly');
   },
 
   'Clears the default date and time on calendar button click when the default date is excluded': (browser) => {

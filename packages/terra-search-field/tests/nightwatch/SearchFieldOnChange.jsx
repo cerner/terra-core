@@ -23,15 +23,13 @@ class SearchFieldOnChange extends React.Component {
   render() {
     return (
       <Base locale={locale}>
-        <div>
-          <p id="searchOnChangeCallCount">{this.state.callCount}</p>
-          <p id="searchOnChangeText">{this.state.searchText}</p>
-          <SearchField
-            id="searchfield"
-            onChange={this.onChange}
-            value={this.state.searchText}
-          />
-        </div>
+        <p id="searchOnChangeCallCount">{this.state.callCount}</p>
+        <p id="searchOnChangeText">{this.state.searchText}</p>
+        <SearchField
+          id="searchfield"
+          onChange={this.onChange}
+          value={this.state.searchText}
+        />
       </Base>
     );
   }

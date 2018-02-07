@@ -17,12 +17,10 @@ class MinimumLengthSearchField extends React.Component {
   render() {
     return (
       <Base locale={locale}>
-        <div>
-          <div id="search-callback-text">
-            Search Text: {this.state.searchText}
-          </div>
-          <SearchField id="searchfieldWithMinimumLength" minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
+        <div id="search-callback-text">
+          Search Text: {this.state.searchText}
         </div>
+        <SearchField id="searchfieldWithMinimumLength" minimumSearchTextLength={5} onSearch={(searchText) => { this.setState({ searchText }); }} />
       </Base>
     );
   }
