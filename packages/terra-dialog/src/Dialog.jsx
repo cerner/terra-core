@@ -42,7 +42,7 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
   const actionHeader = <ActionHeader title={header} onClose={onClose} />;
 
   return (
-    <div className={dialogClassNames}>
+    <div className={dialogClassNames} {...customProps}>
       <ContentContainer fill header={actionHeader} footer={<div className={cx('footer')}>{footer}</div>}>
         <div className={cx('body')}>{children}</div>
       </ContentContainer>
