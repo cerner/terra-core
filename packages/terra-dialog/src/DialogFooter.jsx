@@ -18,12 +18,12 @@ const defaultProps = {
 };
 
 const DialogFooter = ({ children }) => {
-  const DialogFooterClassNames = cx([
+  const dialogFooterClassNames = cx([
     'dialog-footer',
   ]);
 
   return (
-    <div className={DialogFooterClassNames}>
+    <div className={dialogFooterClassNames}>
       {children}
     </div>
   );

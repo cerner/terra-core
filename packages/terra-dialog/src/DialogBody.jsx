@@ -18,12 +18,12 @@ const defaultProps = {
 };
 
 const DialogBody = ({ children }) => {
-  const DialogBodyClassNames = cx([
+  const dialogBodyClassNames = cx([
     'dialog-body',
   ]);
 
   return (
-    <div className={DialogBodyClassNames}>
+    <div className={dialogBodyClassNames}>
       {children}
     </div>
   );
