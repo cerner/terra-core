@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added theming variables in Overlay
 
 1.17.0 - (February 1, 2018)
 ------------------

@@ -21,7 +21,7 @@
 
   .dark {
     background: var(--terra-overlay-dark-background-color, #1c1f21);
-    background-image: var(--terra-overlay-dark-image, none);
+    background-image: var(--terra-overlay-dark-background-image, none);
     opacity: var(--terra-overlay-dark-opacity, 0.85);
 
     .content {
@@ -31,7 +31,7 @@
 
   .light {
     background: var(--terra-overlay-light-background-color, #f4f4f4);
-    background-image: var(--terra-overlay-light-image, none);
+    background-image: var(--terra-overlay-light-background-image, none);
     opacity: var(--terra-overlay-light-opacity, 0.7);
   }
 
