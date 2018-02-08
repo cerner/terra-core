@@ -143,10 +143,12 @@ class SearchField extends React.Component {
   handleSearch() {
     this.clearSearchTimeout();
 
-    if (this.state.searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
-      this.props.onSearch(this.state.searchText);
+    const searchText = this.state.searchText || '';
+
+    if (searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
+      this.props.onSearch(searchText);
     } else if (this.props.onInvalidSearch) {
-      this.props.onInvalidSearch(this.state.searchText);
+      this.props.onInvalidSearch(searchText);
     }
   }
 
