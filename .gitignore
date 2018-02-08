@@ -56,5 +56,5 @@ target
 lib
 props-table
 **/__snapshots__/screen
-**/__snapshots__/diff
+**/__snapshots__/difflll
 errorScreenshots
