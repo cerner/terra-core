@@ -20,7 +20,7 @@ const propTypes = {
   /**
    * The children to be placed within the main content area of the dialog.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * Callback function for when the close button is clicked. The close button will not display if this is not set.
    * On small viewports a back button will be displayed instead of a close button.
@@ -30,6 +30,7 @@ const propTypes = {
 
 const defaultProps = {
   onClose: null,
+  children: null,
 };
 
 const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
