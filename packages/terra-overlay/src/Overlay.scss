@@ -20,15 +20,19 @@
   }
 
   .dark {
-    background: rgba(28, 31, 33, 0.85);
+    background: var(--terra-overlay-dark-background-color, #1c1f21);
+    background-image: var(--terra-overlay-dark-image, none);
+    opacity: var(--terra-overlay-dark-opacity, 0.85);
 
     .content {
-      color: #fff;
+      color: var(--terra-overlay-dark-content-color, #fff);
     }
   }
 
   .light {
-    background: rgba(244, 244, 244, 0.7);
+    background: var(--terra-overlay-light-background-color, #f4f4f4);
+    background-image: var(--terra-overlay-light-image, none);
+    opacity: var(--terra-overlay-light-opacity, 0.7);
   }
 
   .fullscreen {
@@ -50,10 +54,10 @@
   }
 
   .content {
-    color: rgba(28, 31, 33, 1);
+    color: var(--terra-overlay-content-color, #1c1f21);
     font-size: 1rem;
     max-height: 100%;
-    padding: 1rem;
+    padding: var(--terra-overlay-content-padding, 1rem);
   }
 
   .icon {
