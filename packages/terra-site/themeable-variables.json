@@ -196,7 +196,9 @@
     "--terra-button-text-and-icon-horizontal-margin": "0.714rem",
     "--terra-button-text-and-icon-margin-between": "0.714rem",
     "--terra-button-icon-height": "1rem",
-    "--terra-button-icon-width": "1rem"
+    "--terra-button-icon-width": "1rem",
+    "--terra-button-compact-padding-bottom": "0",
+    "--terra-button-compact-padding-top": "0"
   },
   "ButtonGroup": {
     "--terra-button-group-button-background-color": "transparent",
