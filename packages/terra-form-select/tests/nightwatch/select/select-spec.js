@@ -71,4 +71,12 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.url(`${browser.launchUrl}/#/tests/select-tests/invalid`);
     browser.expect.element('#invalidSelect').to.have.attribute('class').which.contains('invalid');
   },
+  'Hides placeholder and displays default value when appropriate': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/select-tests/hidden-placeholder`);
+    browser.expect.element('#hiddenPlaceholderSelect').text.to.equal('Puppies');
+  },
+  'Hides placeholder and displays blank when no initial value is given': (browser) => {
+    browser.url(`${browser.launchUrl}/#/tests/select-tests/blank`);
+    browser.expect.element('#blankSelect').text.to.equal('');
+  },
 });

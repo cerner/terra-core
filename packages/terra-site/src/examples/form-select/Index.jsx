@@ -14,6 +14,8 @@ import SelectOptionSrc from '!raw-loader!terra-form-select/src/SelectOption';
 // Example Files
 import DefaultSelect from './DefaultSelect';
 import InvalidSelect from './InvalidSelect';
+import HiddenPlaceholderSelect from './HiddenPlaceholderSelect';
+import BlankSelect from './BlankSelect';
 import SelectWithoutDefault from './SelectWithoutDefault';
 import DisabledSelect from './DisabledSelect';
 import SelectInsideModal from './SelectInsideModal';
@@ -30,6 +32,10 @@ const SelectExamples = () => (
     <DefaultSelect />
     <h2>Invalid select component</h2>
     <InvalidSelect />
+    <h2>Select component with placeholder hidden</h2>
+    <HiddenPlaceholderSelect />
+    <h2>Select component with no default value and placeholder hidden</h2>
+    <BlankSelect />
     <h2>Select component with no initial value set</h2>
     <SelectWithoutDefault />
     <h2>Disabled select component</h2>
