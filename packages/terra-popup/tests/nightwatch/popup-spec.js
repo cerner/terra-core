@@ -70,7 +70,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.url(`${browser.launchUrl}/#/tests/popup-tests/bounded`);
     browser.expect.element('.test-content').to.be.present;
     browser.expect.element('.test-arrow').to.not.be.present;
-    browser.expect.element('svg').to.be.present;
+    browser.expect.element('span').to.be.present;
   },
 
   'Displays a bounded popup without a header': (browser) => {

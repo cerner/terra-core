@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ContentContainer from 'terra-content-container';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import FocusTrap from 'focus-trap-react';
 import Hookshot from 'terra-hookshot';
 import styles from './PopupContent.scss';
@@ -120,7 +119,7 @@ class PopupContent extends React.Component {
   }
 
   static addPopupHeader(children, onRequestClose) {
-    const icon = <IconClose height="20" width="20" />;
+    const icon = <span className={cx('close-icon')} />;
     const button = <button className={cx('close')} onClick={onRequestClose}>{icon}</button>;
     const header = <div className={cx('header')}>{button}</div>;
     return <ContentContainer header={header} fill>{children}</ContentContainer>;
