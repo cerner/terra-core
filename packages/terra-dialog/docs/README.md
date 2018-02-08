@@ -15,12 +15,12 @@ import Dialog from 'terra-dialog';
 
 const header = 'Header Content';
 
-const footer = <Dialog.Footer>Footer Content</Dialog.Footer>;
+const footer = <div>Footer Content</div>;
 
-const body = (<Dialog.Body>
+const body = (<div>
   <p>This is my body content.</p>
   <p>This is some more content.</p>
-</Dialog.Body>);
+</div>);
 
 <Dialog header={header} footer={footer} onClose={() => alert('Close')} >
   {body}

@@ -4,8 +4,6 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ContentContainer from 'terra-content-container';
 import ActionHeader from 'terra-clinical-action-header';
-import DialogBody from './DialogBody';
-import DialogFooter from './DialogFooter';
 import styles from './Dialog.scss';
 
 const cx = classNames.bind(styles);
@@ -39,12 +37,12 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
     'dialog',
   ]);
 
-  const actionHeader = <ActionHeader title={header} onClose={onClose} />;
+  const actionHeader = <div className={cx('dialog-header')}><ActionHeader title={header} onClose={onClose} /></div>;
 
   return (
     <div className={dialogClassNames} {...customProps}>
-      <ContentContainer fill header={actionHeader} footer={<div className={cx('footer')}>{footer}</div>}>
-        <div className={cx('body')}>{children}</div>
+      <ContentContainer fill header={actionHeader} footer={<div className={cx('dialog-footer')}>{footer}</div>}>
+        <div className={cx('dialog-body')}>{children}</div>
       </ContentContainer>
     </div>
   );
@@ -52,7 +50,5 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
 
 Dialog.propTypes = propTypes;
 Dialog.defaultProps = defaultProps;
-Dialog.Body = DialogBody;
-Dialog.Footer = DialogFooter;
 
 export default Dialog;

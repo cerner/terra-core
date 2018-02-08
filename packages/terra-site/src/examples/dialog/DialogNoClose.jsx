@@ -3,12 +3,12 @@ import Dialog from 'terra-dialog';
 
 const header = 'Header Stuff';
 
-const footer = <Dialog.Footer>Footer Stuff</Dialog.Footer>;
+const footer = <span>Footer Stuff</span>;
 
-const body = (<Dialog.Body>
+const body = (<div>
   <p>This is my body content.</p>
   <p>This is some more content.</p>
-</Dialog.Body>);
+</div>);
 
 const DialogNoClose = () => (
   <div style={{ height: '200px', width: '350px', border: 'dashed' }}>
