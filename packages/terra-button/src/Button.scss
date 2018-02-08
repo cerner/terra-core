@@ -82,7 +82,7 @@
 
   .action {
     @include terra-button-variant-color($terra-button-action-color-scheme);
-    border-radius: var(--terra-button-action-border-radius, 0.2142rem);
+    border-radius: var(--terra-button-action-border-radius, 5rem);
   }
 
   .utility {
@@ -96,14 +96,19 @@
     width: 100%;
   }
 
+  .compact {
+    padding-bottom: var(--terra-button-compact-padding-bottom, 0);
+    padding-top: var(--terra-button-compact-padding-top, 0);
+  }
+
   .text-only {
     margin-left: var(--terra-button-text-only-horizontal-margin, 0.714rem);
     margin-right: var(--terra-button-text-only-horizontal-margin, 0.714rem);
   }
 
   .icon-only {
-    margin-left: var(--terra-button-icon-only-horizontal-margin, 0.714rem);
-    margin-right: var(--terra-button-icon-only-horizontal-margin, 0.714rem);
+    margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
+    margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
   }
 
   .text-and-icon {
@@ -112,11 +117,11 @@
   }
 
   .text-first {
-    margin-right: var(--terra-button-text-and-icon-margin-between, 0.714rem);
+    margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
   }
 
   .icon-first {
-    margin-right: var(--terra-button-text-and-icon-margin-between, 0.714rem);
+    margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
   }
 
   .icon {

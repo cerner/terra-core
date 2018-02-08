@@ -99,10 +99,11 @@ exports[`CollapsibleMenuViewItem should merge custom props 1`] = `
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
@@ -115,18 +116,18 @@ exports[`CollapsibleMenuViewItem should not set isSelected on button outside of 
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
 
 exports[`CollapsibleMenuViewItem should render a button group button when in an item group 1`] = `
 <ButtonGroupButton
-  isReversed={false}
-  isSelected={false}
+  isDisabled={false}
   text="Testing"
 />
 `;
@@ -146,10 +147,11 @@ exports[`CollapsibleMenuViewItem should render a button with icon and no text wh
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={true}
     isReversed={false}
     text=""
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
@@ -162,10 +164,11 @@ exports[`CollapsibleMenuViewItem should render a default component 1`] = `
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
@@ -173,8 +176,6 @@ exports[`CollapsibleMenuViewItem should render a default component 1`] = `
 exports[`CollapsibleMenuViewItem should render a disabled button group button that is inside a button group when isDisabled is set 1`] = `
 <ButtonGroupButton
   isDisabled={true}
-  isReversed={false}
-  isSelected={false}
   text="Testing"
 />
 `;
@@ -187,10 +188,11 @@ exports[`CollapsibleMenuViewItem should render a disabled button when isDisabled
     isBlock={false}
     isCompact={false}
     isDisabled={true}
+    isIconOnly={false}
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
@@ -203,11 +205,12 @@ exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are give
       isBlock={false}
       isCompact={false}
       isDisabled={false}
+      isIconOnly={false}
       isReversed={false}
       onClick={undefined}
       text="Testing"
       type="button"
-      variant="default"
+      variant="neutral"
     />
   }
   isArrowDisplayed={false}
@@ -239,10 +242,11 @@ exports[`CollapsibleMenuViewItem should set icon prop on button 1`] = `
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={false}
     text="Testing"
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
@@ -262,18 +266,18 @@ exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
     isBlock={false}
     isCompact={false}
     isDisabled={false}
+    isIconOnly={false}
     isReversed={true}
     text="Testing"
     type="button"
-    variant="default"
+    variant="neutral"
   />
 </div>
 `;
 
 exports[`CollapsibleMenuViewItem should set isSelected on button that is inside item group 1`] = `
 <ButtonGroupButton
-  isReversed={false}
-  isSelected={true}
+  isDisabled={false}
   text="Testing"
 />
 `;

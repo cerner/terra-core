@@ -3,7 +3,7 @@ import DateTimePickerExampleTemplate from './DateTimePickerExampleTemplate';
 
 const DateTimePickerExample = () => (
   <DateTimePickerExampleTemplate
-    timeInputAttributes={{ id: 'time-input-example', disabled: true }}
+    timeInputAttributes={{ id: 'time-input-example', readOnly: true }}
   />
 );
 

@@ -4,6 +4,7 @@ exports[`should render a default component 1`] = `
 <Button
   className="button-group-button"
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
@@ -20,6 +21,7 @@ exports[`should render as disabled 1`] = `
 <Button
   className="button-group-button is-disabled"
   isBlock={false}
+  isCompact={false}
   isDisabled={true}
   isIconOnly={false}
   isReversed={false}
@@ -41,6 +43,7 @@ exports[`should render with icon only 1`] = `
     />
   }
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={true}
   isReversed={false}
@@ -57,6 +60,7 @@ exports[`should render with onBlur 1`] = `
 <Button
   className="button-group-button"
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
@@ -73,6 +77,7 @@ exports[`should render with onClick 1`] = `
 <Button
   className="button-group-button"
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
@@ -90,6 +95,7 @@ exports[`should render with onFocus 1`] = `
 <Button
   className="button-group-button"
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
@@ -107,6 +113,7 @@ exports[`should render with onKeyDown 1`] = `
 <Button
   className="button-group-button"
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
@@ -123,6 +130,7 @@ exports[`should render with onKeyUp 1`] = `
 <Button
   className="button-group-button"
   isBlock={false}
+  isCompact={false}
   isDisabled={false}
   isIconOnly={false}
   isReversed={false}
