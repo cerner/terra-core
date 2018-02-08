@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Added
+* WebDriverIO tests and themable  styles
+
 1.20.0 - (February 1, 2018)
 ------------------
 ### Changed
