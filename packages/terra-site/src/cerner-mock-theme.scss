@@ -183,10 +183,8 @@
   --terra-form-checkbox-label-text-margin-left: 1rem;
   --terra-form-checkbox-background-color: rgb(255, 255, 255);
   --terra-form-checkbox-background-image: none;
-  --terra-form-checkbox-border-color: #a2c2e0;
+  --terra-form-checkbox-border: #a2c2e0 solid 1px;
   --terra-form-checkbox-border-radius: 3px;
-  --terra-form-checkbox-border-style: solid;
-  --terra-form-checkbox-border-width: 1px;
   --terra-form-checkbox-height: 1rem;
   --terra-form-checkbox-checked-line-height: 0.8;
   --terra-form-checkbox-margin-top: 0.179rem;
@@ -198,10 +196,8 @@
   --terra-form-checkbox-checked-transition: all 0.4s;
   --terra-form-checkbox-width: 1rem;
   --terra-form-checkbox-checked-background-color: #4a90e2;
-  --terra-form-checkbox-checked-border-color: #4a90e2;
+  --terra-form-checkbox-checked-border: #4a90e2 solid 2px;
   --terra-form-checkbox-checked-border-radius: 3px;
-  --terra-form-checkbox-checked-border-style: solid;
-  --terra-form-checkbox-checked-border-width: 2px;
   --terra-form-checkbox-symbol: inline-svg('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#ffff"><path d="M18.4 40.9L0 22.5l4.2-4.2 14.2 14.2L43.8 7.1l4.2 4.2z"/></svg>');
   --terra-form-checkbox-checked-height: 1rem;
   --terra-form-checkbox-checked-transition: all 0.4s;

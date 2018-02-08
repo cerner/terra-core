@@ -15,8 +15,8 @@ describe('Tabs - Responsive', () => {
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
     });
     describe('Extended', () => {
       beforeEach(() => {
@@ -24,8 +24,8 @@ describe('Tabs - Responsive', () => {
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
     });
     describe('Icon Only Tabs', () => {
       beforeEach(() => {
@@ -33,8 +33,8 @@ describe('Tabs - Responsive', () => {
         browser.setViewportSize(viewport);
         browser.moveToObject('.tabContent');
       });
-      Terra.should.matchScreenshot({ viewports });
-      Terra.should.beAccessible({ viewports });
+      Terra.should.matchScreenshot();
+      Terra.should.beAccessible();
     });
   });
 
