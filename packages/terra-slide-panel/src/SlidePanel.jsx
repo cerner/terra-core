@@ -69,11 +69,8 @@ class SlidePanel extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (!this.props.isOpen && nextProps.isOpen) {
-      this.panelNode.setAttribute('aria-hidden', 'false');
-      this.isHidden = false;
-    }
+  componentDidUpdate() {
+    this.lastIsOpen = this.props.isOpen;
   }
 
   componentWillUnmount() {
@@ -105,6 +102,13 @@ class SlidePanel extends React.Component {
       fill,
       ...customProps
     } = this.props;
+
+    // React 16.3 will be deprecating componentWillRecieveProps, and removed in 17, so code execution prior to render isn't possible.
+    // As a result of this change, we are executing the code in the render block.
+    if (this.props.isOpen && !this.lastIsOpen && this.panelNode) {
+      this.panelNode.setAttribute('aria-hidden', 'false');
+      this.isHidden = false;
+    }
 
     const slidePanelClassNames = cx([
       'slide-panel',
