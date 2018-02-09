@@ -98,7 +98,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
     <div
       aria-hidden="false"
       class="rah-static"
-      style="height:0px;overflow:hidden;"
+      style="height:0;overflow:hidden"
     >
       <div>
         Test
@@ -281,7 +281,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                   ariaLabel={null}
                   className=""
                   data-name="Layer 1"
-                  focusable={false}
+                  focusable="false"
                   height="1em"
                   isBidi={true}
                   isSpin={false}
@@ -293,7 +293,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                     aria-hidden="true"
                     className="icon is-bidi"
                     data-name="Layer 1"
-                    focusable={false}
+                    focusable="false"
                     height="1em"
                     viewBox="0 0 48 48"
                     width="1em"

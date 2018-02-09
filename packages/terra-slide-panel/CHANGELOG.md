@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update to React 16
+
 ### Fixed
 * Css bug in calcuated squish behavior
 

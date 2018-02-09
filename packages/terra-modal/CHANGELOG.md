@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Added theme variables to Modal and ModalOverlay.
+* Update to React 16
 
 1.19.0 - (February 1, 2018)
 ------------------

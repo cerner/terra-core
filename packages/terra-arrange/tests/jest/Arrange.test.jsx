@@ -56,25 +56,13 @@ describe('Arrange', () => {
   it('should have all prop set correctly', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="center" fitStartAttributes={{ style: { maxWidth: '10px' } }} fillAttributes={{ style: { maxWidth: '20px' } }} fitEndAttributes={{ style: { maxWidth: '30px' } }} />;
     const wrapper = shallow(arrange);
-    expect(wrapper.instance().props.fitStart.type).toEqual('img');
-    expect(wrapper.instance().props.fitEnd.type).toEqual('a');
-    expect(wrapper.instance().props.fill.type).toEqual('div');
-    expect(wrapper.instance().props.align).toEqual('center');
-    expect(wrapper.instance().props.fitStartAttributes).toEqual({ style: { maxWidth: '10px' } });
-    expect(wrapper.instance().props.fillAttributes).toEqual({ style: { maxWidth: '20px' } });
-    expect(wrapper.instance().props.fitEndAttributes).toEqual({ style: { maxWidth: '30px' } });
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should have align prop undefined when align not pass', () => {
     const arrange = <Arrange fitStart={fitStart} fill={fill} />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
-    expect(wrapper.instance().props.alignFitStart).toEqual(undefined);
-    expect(wrapper.instance().props.alignFitEnd).toEqual(undefined);
-    expect(wrapper.instance().props.alignFill).toEqual(undefined);
-    expect(wrapper.instance().props.fitStartAttributes).toEqual(undefined);
-    expect(wrapper.instance().props.fillAttributes).toEqual(undefined);
-    expect(wrapper.instance().props.fitEndAttributes).toEqual(undefined);
+    expect(wrapper).toMatchSnapshot();
   });
 
   // Structure test
