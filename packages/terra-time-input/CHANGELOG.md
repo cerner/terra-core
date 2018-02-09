@@ -8,6 +8,7 @@ Unreleased
 * Added disabled prop.
 
 ### Changed
+* Update to React 16
 * Uplift to ButtonGroup 2.0
 
 1.18.0 - (February 1, 2018)

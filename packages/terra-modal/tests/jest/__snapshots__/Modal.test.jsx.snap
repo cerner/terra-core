@@ -18,10 +18,56 @@ exports[`should mount an open modal 1`] = `
     >
       <Portal
         isOpened={true}
-        onClose={[Function]}
-        onOpen={[Function]}
-        onUpdate={[Function]}
-      />
+      >
+        <ModalContent
+          ariaLabel="Terra Modal"
+          classNameModal={null}
+          classNameOverlay={null}
+          closeOnOutsideClick={true}
+          isFocused={true}
+          isFullscreen={false}
+          isScrollable={false}
+          onRequestClose={[Function]}
+          role="document"
+        >
+          <FocusTrap
+            _createFocusTrap={[Function]}
+            active={true}
+            focusTrapOptions={Object {}}
+            paused={false}
+            tag="div"
+          >
+            <div>
+              <ModalOverlay
+                className={null}
+                onClick={[Function]}
+              >
+                <div
+                  className="overlay"
+                  onClick={[Function]}
+                />
+              </ModalOverlay>
+              <div
+                aria-label="Terra Modal"
+                className="modal fixed-size"
+                role="document"
+                tabIndex="0"
+              >
+                <div>
+                  <h1>
+                    Terra Modal
+                  </h1>
+                  <button
+                    onClick={[Function]}
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </FocusTrap>
+        </ModalContent>
+      </Portal>
     </Modal>
     <button
       onClick={[Function]}
@@ -30,14 +76,6 @@ exports[`should mount an open modal 1`] = `
     </button>
   </div>
 </ModalExample>
-`;
-
-exports[`should render an open modal 1`] = `
-<div>
-  <button>
-    Open Modal
-  </button>
-</div>
 `;
 
 exports[`should shallow an open modal 1`] = `
