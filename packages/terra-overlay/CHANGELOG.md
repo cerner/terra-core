@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Added theming variables in Overlay
+* Update to React 16
 
 1.17.0 - (February 1, 2018)
 ------------------

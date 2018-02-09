@@ -29,6 +29,75 @@ exports[`Arrange default should render a arrange component with given fit and fi
 </div>
 `;
 
+exports[`Arrange should have align prop undefined when align not pass 1`] = `
+<div
+  className="arrange"
+>
+  <div
+    className="fit"
+  >
+    <img
+      alt="panda"
+      src="http:///uploads/2016/09/telegraph-1.jpg"
+    />
+  </div>
+  <div
+    className="fill"
+  >
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="fit"
+  />
+</div>
+`;
+
+exports[`Arrange should have all prop set correctly 1`] = `
+<div
+  className="arrange"
+>
+  <div
+    className="fit center"
+    style={
+      Object {
+        "maxWidth": "10px",
+      }
+    }
+  >
+    <img
+      alt="panda"
+      src="http:///uploads/2016/09/telegraph-1.jpg"
+    />
+  </div>
+  <div
+    className="fill center"
+    style={
+      Object {
+        "maxWidth": "20px",
+      }
+    }
+  >
+    <div>
+      FIll text
+    </div>
+  </div>
+  <div
+    className="fit center"
+    style={
+      Object {
+        "maxWidth": "30px",
+      }
+    }
+  >
+    <a
+      href="http://www.example.com"
+    />
+  </div>
+</div>
+`;
+
 exports[`Arrange should render a arrange component with given className and id 1`] = `
 <div
   className="arrange testA testB testC"

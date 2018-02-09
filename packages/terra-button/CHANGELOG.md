@@ -15,6 +15,7 @@ Unreleased
 ### Changed
 * text prop is now required to meet accessibility
 * Button is now a class and not a functional component, allowing a ref callback
+* Update to React 16
 
 1.14.0 - (November 28, 2017)
 ------------------
