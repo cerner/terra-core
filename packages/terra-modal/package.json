@@ -25,14 +25,14 @@
     "terra-props-table": "^1.12.0"
   },
   "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "focus-trap-react": "^3.0.2",
+    "focus-trap-react": "^3.1.1",
     "prop-types": "^15.5.8",
-    "react-portal": "^3.0.0",
+    "react-portal": "^4.1.2",
     "terra-base": "^2.11.0"
   },
   "scripts": {

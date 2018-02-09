@@ -127,6 +127,7 @@ import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
 
 import TestLinks from './TestLinks';
+import TestContainer from './TestContainer';
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -187,70 +188,72 @@ ReactDOM.render((
       {IconIndexRoutes}
       {TableIndexRoutes}
     </Route>
-    <Route path="/tests" component={TestLinks} />
-    {AlertTestRoutes}
-    {ArrangeTestRoutes}
-    {BadgeTestRoutes}
-    {BaseTestRoutes}
-    {ButtonTestRoutes}
-    {ButtonGroupTestRoutes}
-    {CardTestRoutes}
-    {CollapsibleMenuViewTestRoutes}
-    {DatePickerTestRoutes}
-    {DateTimePickerTestRoutes}
-    {DemographicsBannerTestRoutes}
-    {DialogTestRoutes}
-    {DividerTestRoutes}
-    {DynamicGridTestRoutes}
-    {EmbeddedContentConsumerTestRoutes}
-    {SlidePanelTestRoutes}
-    {SpacerTestRoutes}
-    {I18nTestRoutes}
-    {IconTestRoutes}
-    {ImageTestRoutes}
-    {ResponsiveElementTestRoutes}
-    {ContentContainerTestRoutes}
-    {ListTestRoutes}
-    {ListItemTestRoutes}
-    {SelectableListTestRoutes}
-    {SingleSelectListTestRoutes}
-    {MultiSelectListTestRoutes}
-    {MultiSelectTableTestRoutes}
-    {StatusTestRoutes}
-    {TableTestRoutes}
-    {SelectableTableTestRoutes}
-    {SingleSelectTableTestRoutes}
-    {TimeInputTestRoutes}
-    {MarkdownTestRoutes}
-    {MenuTestRoutes}
-    {MenuItemTestRoutes}
-    {MenuItemGroupTestRoutes}
-    {ModalTestRoutes}
-    {ProgressBarTestRoutes}
-    {PropsTableTestRoutes}
-    {GridTestRoutes}
-    {SearchFieldTestRoutes}
-    {PopupTestRoutes}
-    {FormTestRoutes}
-    {FormCheckboxTestRoutes}
-    {FormTextareaRoutes}
-    {FormFieldTestRoutes}
-    {FormRadioTestRoutes}
-    {OverlayTestRoutes}
-    {LoadingOverlayTestRoutes}
-    {OverlayContainerTestRoutes}
-    {ToggleTestRoutes}
-    {ToggleButtonTestRoutes}
-    {HeadingTestRoutes}
-    {TextTestRoutes}
-    {SlideGroupTestRoutes}
-    {ProfileImageTestRoutes}
-    {SignatureTestRoutes}
-    {HookshotTestRoutes}
-    {SelectTestRoutes}
-    {SelectOptionTestRoutes}
-    {StatusViewTestRoutes}
-    {TabsTestRoutes}
-    {TabPaneTestRoutes}
+    <Route path="/tests" component={TestContainer}>
+      <IndexRoute component={TestLinks} />
+      {AlertTestRoutes}
+      {ArrangeTestRoutes}
+      {BadgeTestRoutes}
+      {BaseTestRoutes}
+      {ButtonTestRoutes}
+      {ButtonGroupTestRoutes}
+      {CardTestRoutes}
+      {CollapsibleMenuViewTestRoutes}
+      {DatePickerTestRoutes}
+      {DateTimePickerTestRoutes}
+      {DemographicsBannerTestRoutes}
+      {DialogTestRoutes}
+      {DividerTestRoutes}
+      {DynamicGridTestRoutes}
+      {EmbeddedContentConsumerTestRoutes}
+      {SlidePanelTestRoutes}
+      {SpacerTestRoutes}
+      {I18nTestRoutes}
+      {IconTestRoutes}
+      {ImageTestRoutes}
+      {ResponsiveElementTestRoutes}
+      {ContentContainerTestRoutes}
+      {ListTestRoutes}
+      {ListItemTestRoutes}
+      {SelectableListTestRoutes}
+      {SingleSelectListTestRoutes}
+      {MultiSelectListTestRoutes}
+      {MultiSelectTableTestRoutes}
+      {StatusTestRoutes}
+      {TableTestRoutes}
+      {SelectableTableTestRoutes}
+      {SingleSelectTableTestRoutes}
+      {TimeInputTestRoutes}
+      {MarkdownTestRoutes}
+      {MenuTestRoutes}
+      {MenuItemTestRoutes}
+      {MenuItemGroupTestRoutes}
+      {ModalTestRoutes}
+      {ProgressBarTestRoutes}
+      {PropsTableTestRoutes}
+      {GridTestRoutes}
+      {SearchFieldTestRoutes}
+      {PopupTestRoutes}
+      {FormTestRoutes}
+      {FormCheckboxTestRoutes}
+      {FormTextareaRoutes}
+      {FormFieldTestRoutes}
+      {FormRadioTestRoutes}
+      {OverlayTestRoutes}
+      {LoadingOverlayTestRoutes}
+      {OverlayContainerTestRoutes}
+      {ToggleTestRoutes}
+      {ToggleButtonTestRoutes}
+      {HeadingTestRoutes}
+      {TextTestRoutes}
+      {SlideGroupTestRoutes}
+      {ProfileImageTestRoutes}
+      {SignatureTestRoutes}
+      {HookshotTestRoutes}
+      {SelectTestRoutes}
+      {SelectOptionTestRoutes}
+      {StatusViewTestRoutes}
+      {TabsTestRoutes}
+      {TabPaneTestRoutes}
+    </Route>
   </Router>
 ), document.getElementById('root'));

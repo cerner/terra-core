@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update to React 16
+
 ### Fixed
 * Slide visibility is maintained when multiple items are added/removed at the same time.
 

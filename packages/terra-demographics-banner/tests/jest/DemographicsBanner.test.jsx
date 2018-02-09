@@ -37,7 +37,7 @@ it('renders the banner wrapper with all props', () => {
 
 it('throws error on missing locale prop in Base', () => {
   try {
-    shallow(<DemographicsBanner />);
+    render(<DemographicsBanner />);
   } catch (e) {
     expect(e.message).toContain('add locale prop to Base component');
   }

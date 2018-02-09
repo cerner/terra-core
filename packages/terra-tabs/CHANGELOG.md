@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Changed
+* Update to React 16
 
 1.2.0 - (February 1, 2018)
 ------------------

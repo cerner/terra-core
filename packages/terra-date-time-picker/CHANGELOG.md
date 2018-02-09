@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* Update to React 16
 *Added disabled prop.
 
 ### Changed

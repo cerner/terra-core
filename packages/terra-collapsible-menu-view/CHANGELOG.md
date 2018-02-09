@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 -----------------
 ### Changed
+* Update to React 16
 * Uplift ButtonGroup V2
 
 ### Removed
