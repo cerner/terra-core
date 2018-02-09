@@ -318,6 +318,12 @@ class DatePicker extends React.Component {
         locale={intl.locale}
         placeholderText={dateFormat}
         popperContainer={PopperContainer}
+        popperPlacement="bottom"
+        popperModifiers={{
+          keepTogether: {
+            enabled: true,
+          },
+        }}
         popoverAttachment="top center"
         popoverTargetAttachment="bottom center"
         dropdownMode={'select'}
