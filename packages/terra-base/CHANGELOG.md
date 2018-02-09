@@ -6,6 +6,10 @@ Unreleased
 ### Changed
 * Update to React 16
 
+### Removed
+* Removed terra-legacy-theme global styles to hyperlinks all over the components.
+
+
 2.11.0 - (February 1, 2018)
 ------------------
 ### Added
