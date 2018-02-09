@@ -70,7 +70,7 @@ class SlidePanel extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.isOpen !== nextProps.isOpen && nextProps.isOpen === true) {
+    if (!this.props.isOpen && nextProps.isOpen) {
       this.panelNode.setAttribute('aria-hidden', 'false');
       this.isHidden = false;
     }
