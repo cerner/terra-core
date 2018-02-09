@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Fix capture outside of component bounds with touch events
 * Update to React 16
 
 0.10.0 - (February 1, 2018)
