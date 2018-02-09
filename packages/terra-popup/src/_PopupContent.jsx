@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 /**
  * Rounded corner size to be used when calculating the arrow offset.
  */
-const CORNER_SIZE = 3;
+const CORNER_SIZE = 2;
 
 const propTypes = {
   /**
