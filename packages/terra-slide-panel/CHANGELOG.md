@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Fixed
 * Css bug in calcuated squish behavior
+* Offscreen tab access in the panel removed
 
 1.16.0 - (February 1, 2018)
 ------------------
