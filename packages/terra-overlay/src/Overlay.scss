@@ -57,7 +57,10 @@
     color: var(--terra-overlay-content-color, #1c1f21);
     font-size: 1rem;
     max-height: 100%;
-    padding: var(--terra-overlay-content-padding, 1rem);
+    padding-bottom: var(--terra-overlay-content-padding-bottom, 1rem);
+    padding-left: var(--terra-overlay-content-padding-left, 1rem);
+    padding-right: var(--terra-overlay-content-padding-right, 1rem);
+    padding-top: var(--terra-overlay-content-padding-top, 1rem);
   }
 
   .icon {
