@@ -40,6 +40,9 @@ const config = {
       }],
     },
   },
+  terra: {
+    selector: '#wdio-test-wrapper',
+  },
 
   beforeHook() {
     // Being Terra tests are executed on an SPA, a full refresh is required

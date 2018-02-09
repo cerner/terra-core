@@ -40,7 +40,7 @@ class DateTimeUtils {
   }
 
   static formatMomentDateTime(momentDate, format) {
-    return momentDate && momentDate.isValid() ? momentDate.format(format) : '';
+    return momentDate && momentDate.isValid() ? momentDate.format(format) : undefined;
   }
 
   static syncDateTime(momentDate, iOSdate, time) {

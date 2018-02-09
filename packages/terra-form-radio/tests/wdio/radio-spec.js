@@ -11,7 +11,7 @@ const themeCombinationOfCustomProperties = (testName, customProperties) => {
     Object.entries(customProperties).forEach(([key, value]) => {
       global.browser.execute(`document.documentElement.style.setProperty('${key}', '${value}')`);
     });
-    global.expect(global.browser.checkElement('[data-reactroot]')).to.matchReference();
+    global.expect(global.browser.checkElement('#wdio-test-wrapper > *:first-child')).to.matchReference();
   });
 };
 
@@ -25,7 +25,7 @@ describe('Radio', () => {
       browser.url('/#/tests/form-radio-tests/default');
     });
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -64,7 +64,7 @@ describe('Radio', () => {
         browser.moveToObject('#default');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -107,7 +107,7 @@ describe('Radio', () => {
         browser.click('#default');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -160,7 +160,7 @@ describe('Radio', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -240,7 +240,7 @@ describe('Radio', () => {
       browser.url('/#/tests/form-radio-tests/disabled');
     });
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -284,7 +284,7 @@ describe('Radio', () => {
   describe('Hidden Label', () => {
     beforeEach(() => browser.url('/#/tests/form-radio-tests/hidden'));
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {

@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Toggle should have all props set correctly 1`] = `
+<div
+  aria-hidden={false}
+  className="toggle"
+>
+  <AnimateHeight
+    animationStateClasses={
+      Object {
+        "animating": "rah-animating",
+        "animatingDown": "rah-animating--down",
+        "animatingToHeightAuto": "rah-animating--to-height-auto",
+        "animatingToHeightSpecific": "rah-animating--to-height-specific",
+        "animatingToHeightZero": "rah-animating--to-height-zero",
+        "animatingUp": "rah-animating--up",
+        "static": "rah-static",
+        "staticHeightAuto": "rah-static--height-auto",
+        "staticHeightSpecific": "rah-static--height-specific",
+        "staticHeightZero": "rah-static--height-zero",
+      }
+    }
+    duration={250}
+    easing="ease"
+    height="auto"
+    style={Object {}}
+  >
+    All props
+  </AnimateHeight>
+</div>
+`;
+
 exports[`Toggle should render a default toggle 1`] = `
 <div
   aria-hidden="true"
@@ -15,7 +45,7 @@ exports[`Toggle should render an animated toggle 1`] = `
   <div
     aria-hidden="false"
     class="rah-static"
-    style="height:0px;overflow:hidden;"
+    style="height:0;overflow:hidden"
   >
     <div>
       Test
