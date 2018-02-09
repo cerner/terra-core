@@ -12,6 +12,7 @@ Unreleased
 * children, isReversed, isSelected props in ButtonGroup.Button
 
 ### Changed
+* Update to React 16
 * Changed to a controlled component.
 * text prop is now required.
 

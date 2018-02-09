@@ -31,7 +31,7 @@
     "moment": "^2.17.1",
     "postcss": "^6.0.9",
     "prop-types": "^15.5.8",
-    "react-intl": "^2.3.0",
+    "react-intl": "^2.4.0",
     "react-redux": "^5.0.4",
     "react-router": "^3.0.5",
     "redux": "^3.6.0",
@@ -94,8 +94,8 @@
     "xfc": "^1.0.0"
   },
   "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
@@ -115,8 +115,9 @@
     "postcss-loader": "^2.0.6",
     "postcss-rtl": "^1.1.2",
     "raw-loader": "^0.5.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "raf": "^3.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "thread-loader": "^1.1.2",

@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update to React 16
 
 ### Added
 * WebDriverIO tests and themable  styles

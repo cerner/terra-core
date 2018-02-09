@@ -1,5 +1,6 @@
 {
   "setupFiles": [
+    "raf/polyfill",
     "./jestsetup.js"
   ],
   "snapshotSerializers": [
