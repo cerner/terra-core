@@ -43,6 +43,7 @@ class Signature extends React.Component {
 
     this.state = { lineSegments: props.lineSegments, lineWidth: props.lineWidth };
 
+    this.mouseInBounds = this.mouseInBounds.bind(this);
     this.mouseDown = this.mouseDown.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.mouseXY = this.mouseXY.bind(this);
@@ -105,6 +106,11 @@ class Signature extends React.Component {
     window.removeEventListener('resize', this.updateDimensions);
   }
 
+  mouseInBounds(event) {
+    const rect = this.canvasRect;
+    return rect.top < event.pageY && rect.left < event.pageX && rect.bottom > event.pageY && rect.right > event.pageX;
+  }
+
   mouseDown(event) {
     if ('button' in event && event.button !== MOUSECODES.LEFTCLICK) {
       return;
@@ -127,7 +133,7 @@ class Signature extends React.Component {
   }
 
   mouseXY(event) {
-    if (this.state.painting) {
+    if (this.state.painting && this.mouseInBounds(event)) {
       this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, true);
 
       this.draw();

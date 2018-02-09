@@ -24,8 +24,8 @@
     "terra-props-table": "^1.12.0"
   },
   "peerDependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "terra-base": "^2.11.0"
   },
   "dependencies": {
@@ -41,8 +41,9 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/SlidePanel.jsx --out-dir ./docs/props-table",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:nightwatch && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }

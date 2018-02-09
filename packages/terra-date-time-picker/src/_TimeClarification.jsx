@@ -131,26 +131,23 @@ class TimeClarification extends React.Component {
             </div>
             <div className={cx('buttons')}>
               <Button
+                text={daylightSavingButtonLabel}
                 onClick={this.handleDaylightSavingButtonClick}
-                variant="primary"
+                variant={Button.Opts.Variants.EMPHASIS}
                 className={cx('button-daylight')}
-              >
-                {daylightSavingButtonLabel}
-              </Button>
+              />
               <Button
+                text={standardTimeButtonLabel}
                 onClick={this.handleStandardTimeButtonClick}
-                variant="primary"
+                variant={Button.Opts.Variants.EMPHASIS}
                 className={cx('button-standard')}
-              >
-                {standardTimeButtonLabel}
-              </Button>
+              />
             </div>
           </div>
         </Modal>
         <Button
           className={offsetButtonClassNames}
           onClick={this.handleOpenModal}
-          type="button"
           text={this.state.offsetDisplay}
           isCompact
         />

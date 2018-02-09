@@ -48,11 +48,6 @@ const BaseExamples = () => (
         </li>
         <li>Unordered list item</li>
       </ul>
-      <h1>Global BaseStyles Anchor tag example</h1>
-      <p>The &quot;Default Theme&quot; global styles are applied to all the anchor tag elements. Click, hover, select or focus the link to see the different shades.</p>
-      <div>
-        <a rel="noreferrer noopener" target="_blank" href="https://my.cerner.com">hyperlink</a>
-      </div>
     </div>
   </Base>
 );

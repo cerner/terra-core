@@ -19,7 +19,7 @@ const FormsExamples = () => (
     <br />
     <ControlledInput />
     <br />
-    <ToggleButton closedButtonText="Show Example Code" openedButtonText="Hide Example Code" isAnimated buttonAttrs={{ variant: 'link' }}>
+    <ToggleButton closedButtonText="Show Example Code" openedButtonText="Hide Example Code" isAnimated>
       <Markdown id="controlled-input-example" src={`${codeIndicator}jsx\n${ControlSrc}${codeIndicator}`} componentName="ControlledInput" />
     </ToggleButton>
   </div>

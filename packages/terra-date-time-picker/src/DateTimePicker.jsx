@@ -18,6 +18,10 @@ const propTypes = {
    */
   dateInputAttributes: PropTypes.object,
   /**
+   * Whether the date and time inputs should be disabled.
+   */
+  disabled: PropTypes.bool,
+  /**
    * An array of ISO 8601 string representation of the dates to disable in the picker.
    */
   excludeDates: PropTypes.arrayOf(PropTypes.string),
@@ -74,6 +78,7 @@ const propTypes = {
 
 const defaultProps = {
   dateInputAttributes: undefined,
+  disabled: false,
   excludeDates: undefined,
   filterDate: undefined,
   includeDates: undefined,
@@ -356,6 +361,7 @@ class DateTimePicker extends React.Component {
   render() {
     const {
       dateInputAttributes,
+      disabled,
       excludeDates,
       filterDate,
       includeDates,
@@ -403,6 +409,7 @@ class DateTimePicker extends React.Component {
           name="input"
           releaseFocus={releaseFocus}
           requestFocus={requestFocus}
+          disabled={disabled}
         />
 
         <div className={cx('time-facade')}>
@@ -413,6 +420,7 @@ class DateTimePicker extends React.Component {
             inputAttributes={timeInputAttributes}
             name="input"
             value={this.timeValue}
+            disabled={disabled}
           />
 
           {this.state.isAmbiguousTime ? this.renderTimeClarification() : null }
