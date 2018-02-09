@@ -5,14 +5,12 @@ class ButtonGroupDisabledButtons extends React.Component {
   constructor(props) {
     super(props);
     this.state = { selectedKey: ['single-select1'] };
-    this.handleSelection = this.handleSelection.bind(this);
   }
 
   render() {
     return (
       <ButtonGroup
         id="controlled-button-group"
-        onChange={this.handleSelection}
       >
         <ButtonGroup.Button text="Button 1" key="1" />
         <ButtonGroup.Button text="Button 2 - Disabled" key="2" isDisabled />
