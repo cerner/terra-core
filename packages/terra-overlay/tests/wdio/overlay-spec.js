@@ -5,38 +5,47 @@ describe('Overlay', () => {
     beforeEach(() => browser.url('/#/tests/overlay-tests/light-themed'));
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-overlay-light-background-color': 'green',
-      '--terra-overlay-light-background-image': 'linear-gradient(red, green)',
-      '--terra-overlay-light-opacity': '0.8',
-    });
+    Terra.should.matchScreenshot({ selector: '#light-overlay' });
+    Terra.should.themeEachCustomProperty(
+      '#light-overlay',
+      {
+        '--terra-overlay-light-background-color': 'green',
+        '--terra-overlay-light-background-image': 'linear-gradient(red, green)',
+        '--terra-overlay-light-opacity': '0.8',
+      },
+    );
   });
 
   describe('Dark Themed', () => {
     beforeEach(() => browser.url('/#/tests/overlay-tests/dark-themed'));
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-overlay-dark-background-color': 'blue',
-      '--terra-overlay-dark-background-image': 'linear-gradient(blue, green)',
-      '--terra-overlay-dark-content-color': 'red',
-      '--terra-overlay-dark-opacity': '0.8',
-    });
+    Terra.should.matchScreenshot({ selector: '#dark-overlay' });
+    Terra.should.themeEachCustomProperty(
+      '#dark-overlay',
+      {
+        '--terra-overlay-dark-background-color': 'blue',
+        '--terra-overlay-dark-background-image': 'linear-gradient(blue, green)',
+        '--terra-overlay-dark-content-color': 'red',
+        '--terra-overlay-dark-opacity': '0.8',
+      },
+    );
   });
 
   describe('Clear Themed', () => {
     beforeEach(() => browser.url('/#/tests/overlay-tests/clear-themed'));
 
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
-    Terra.should.themeEachCustomProperty({
-      '--terra-overlay-content-color': 'red',
-      '--terra-overlay-content-padding-bottom': '500px',
-      '--terra-overlay-content-padding-left': '500px',
-      '--terra-overlay-content-padding-right': '500px',
-      '--terra-overlay-content-padding-top': '500px',
-    });
+    Terra.should.matchScreenshot({ selector: '#clear-overlay' });
+    Terra.should.themeEachCustomProperty(
+      '#clear-overlay',
+      {
+        '--terra-overlay-content-color': 'red',
+        '--terra-overlay-content-padding-bottom': '500px',
+        '--terra-overlay-content-padding-left': '500px',
+        '--terra-overlay-content-padding-right': '500px',
+        '--terra-overlay-content-padding-top': '500px',
+      },
+    );
   });
 });
