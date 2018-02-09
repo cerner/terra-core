@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import SlidePanel from '../../lib/SlidePanel';
 
 class SlidePanelDemo extends React.Component {
