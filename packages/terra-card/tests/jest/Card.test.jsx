@@ -25,6 +25,6 @@ describe('Card', () => {
   // Custom Prop Test
   it('it should pass in a custom prop', () => {
     const wrapper = shallow(<Card id="testCard" />);
-    expect(wrapper.instance().props.id).toEqual('testCard');
+    expect(wrapper.props().id).toEqual('testCard');
   });
 });

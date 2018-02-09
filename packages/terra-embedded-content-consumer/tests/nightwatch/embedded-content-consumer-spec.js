@@ -30,8 +30,8 @@ module.exports = resizeTo(['medium'], {
     .getElementSize('div[class="xfc"]', (parentContainer) => {
       browser.getElementSize(`iframe[src*="${providerSrc}"]`, (frame) => {
         // Validate the provider expanded to fill the parent.
-        browser.assert.equal(frame.value.height, parentContainer.value.height);
-        browser.assert.equal(frame.value.width, parentContainer.value.width);
+        browser.assert.ok(Math.abs(frame.value.height - parentContainer.value.height) <= 5);
+        browser.assert.ok(Math.abs(frame.value.width - parentContainer.value.width) <= 5);
       });
     });
   },

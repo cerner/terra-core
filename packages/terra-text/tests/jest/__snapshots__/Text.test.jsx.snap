@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Text should have all props including customProps set correctly 1`] = `
+<span
+  className="text italic visually-hidden font-size-20 font-weight-200"
+  id="id"
+  style={
+    Object {
+      "color": "#f00",
+    }
+  }
+>
+  All props and custom attrs
+</span>
+`;
+
 exports[`Text should render a text component 1`] = `
 <span
   className="text"
