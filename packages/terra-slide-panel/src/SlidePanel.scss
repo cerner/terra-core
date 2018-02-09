@@ -70,7 +70,7 @@
     }
 
     [data-slide-panel-panel-size='large'] > .panel {
-      width: var(--terra-slide-panel-panel-width-large, 60%);
+      width: calc(100% * var(--terra-slide-panel-panel-width-large-scalar, 0.6));
     }
   }
 
@@ -95,7 +95,7 @@
       }
 
       &[data-slide-panel-panel-size='large'] > .main {
-        width: calc(100% - #{var(--terra-slide-panel-panel-width-large, 60%)});
+        width: calc(100% * (1 - #{var(--terra-slide-panel-panel-width-large-scalar, 0.6)}));
       }
 
       &[data-slide-panel-panel-position='start'] > .panel {
