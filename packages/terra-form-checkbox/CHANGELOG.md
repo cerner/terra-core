@@ -7,6 +7,7 @@ ChangeLog
 * Update to React 16
 * Update theming values to initial browser default for various properties
 * Merged border-color, border-width, and border-style into short-hand syntax
+* Removed erroneous default margin-right value of 2rem
 
 1.2.0 - (February 1, 2018)
 ------------------
