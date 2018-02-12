@@ -33,10 +33,10 @@
 
     &[disabled] {
       background-color: var(--terra-form-input-disabled-background-color, rgba(0, 0, 0, 0.05));
-      border-color: var(--terra-form-input-disabled-border-color, #4a4a4a);
+      border-color: var(--terra-form-input-disabled-border-color, #dedfe0);
       border-style: var(--terra-form-input-disabled-border-style, solid);
       border-width: var(--terra-form-input-disabled-border-width, 1px);
-      color: var(--terra-form-input-disabled-color, #000);
+      color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
       cursor: default;
       opacity: var(--terra-form-input-disabled-opacity, 1);
     }
@@ -79,7 +79,7 @@
       border-color: var(--terra-form-input-error-disabled-border-color, #ff0b0f);
       border-style: var(--terra-form-input-error-disabled-border-style, solid);
       border-width: var(--terra-form-input-error-disabled-border-width, 1px);
-      color: var(--terra-form-input-error-disabled-color, #000);
+      color: var(--terra-form-input-error-disabled-color, rgba(0, 0, 0, 0.25));
       opacity: var(--terra-form-input-error-disabled-opacity, 1);
     }
 
