@@ -5,3 +5,4 @@ Unreleased
 -----------------
 * Initial stable release
 * New component, examples, doc, tests.
+* Added theme variables.
