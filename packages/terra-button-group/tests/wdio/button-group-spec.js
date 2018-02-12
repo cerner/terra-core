@@ -4,31 +4,31 @@ describe('Button Group', () => {
   describe('Text Button', () => {
     beforeEach(() => browser.url('/#/tests/button-group-tests/text-button-group'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#button-group-text' });
   });
 
   describe('Long Text Button', () => {
     beforeEach(() => browser.url('/#/tests/button-group-tests/long-text-button-group'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#button-group-text' });
   });
 
   describe('Icon Button', () => {
     beforeEach(() => browser.url('/#/tests/button-group-tests/icon-button-group'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#button-group-icon' });
   });
 
   describe('Not Selectable', () => {
     beforeEach(() => browser.url('/#/tests/button-group-tests/not-selectable-button-group'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#button-group-not-selectable' });
   });
 
   describe('Disabled Buttons', () => {
     beforeEach(() => browser.url('/#/tests/button-group-tests/not-selectable-button-group'));
     Terra.should.beAccessible();
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#button-group-not-selectable' });
   });
 
   describe('Single-Select', () => {

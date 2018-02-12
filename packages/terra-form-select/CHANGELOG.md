@@ -5,6 +5,7 @@ Unreleased
 -----------------
 ### Changed
 * Added functionality to hide placeholder
+* Update to React 16
 
 1.4.0 - (February 1, 2018)
 ------------------

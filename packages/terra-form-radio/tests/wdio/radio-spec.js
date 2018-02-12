@@ -11,7 +11,7 @@ const themeCombinationOfCustomProperties = (testName, customProperties) => {
     Object.entries(customProperties).forEach(([key, value]) => {
       global.browser.execute(`document.documentElement.style.setProperty('${key}', '${value}')`);
     });
-    global.expect(global.browser.checkElement('[data-reactroot]')).to.matchReference();
+    global.expect(global.browser.checkElement('#wdio-test-wrapper > *:first-child')).to.matchReference();
   });
 };
 
@@ -25,7 +25,7 @@ describe('Radio', () => {
       browser.url('/#/tests/form-radio-tests/default');
     });
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -46,17 +46,13 @@ describe('Radio', () => {
       '--terra-form-checkbox-native-input-padding': 0,
       '--terra-form-checkbox-native-input-width': '1px',
       '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-      '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+      '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
       '--terra-form-radio-outer-ring-border-radius': '50%',
-      '--terra-form-radio-outer-ring-border-style': 'solid',
-      '--terra-form-radio-outer-ring-border-width': '1px',
       '--terra-form-radio-outer-ring-height': '20px',
       '--terra-form-radio-outer-ring-margin-top': '4px',
       '--terra-form-radio-outer-ring-width': '20px',
       '--terra-form-radio-inner-ring-background-color': '#fff',
-      '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-      '--terra-form-radio-inner-ring-border-style': 'solid',
-      '--terra-form-radio-inner-border-width': '1px',
+      '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 1px',
       '--terra-form-radio-inner-ring-height': '14px',
       '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
       '--terra-form-radio-inner-ring-width': '14px',
@@ -68,7 +64,7 @@ describe('Radio', () => {
         browser.moveToObject('#default');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -89,17 +85,13 @@ describe('Radio', () => {
         '--terra-form-checkbox-native-input-padding': 0,
         '--terra-form-checkbox-native-input-width': '1px',
         '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-        '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+        '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-outer-ring-border-radius': '50%',
-        '--terra-form-radio-outer-ring-border-style': 'solid',
-        '--terra-form-radio-outer-ring-border-width': '1px',
         '--terra-form-radio-outer-ring-height': '20px',
         '--terra-form-radio-outer-ring-margin-top': '4px',
         '--terra-form-radio-outer-ring-width': '20px',
         '--terra-form-radio-inner-ring-background-color': '#fff',
-        '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-        '--terra-form-radio-inner-ring-border-style': 'solid',
-        '--terra-form-radio-inner-border-width': '1px',
+        '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-inner-ring-height': '14px',
         '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
         '--terra-form-radio-inner-ring-width': '14px',
@@ -115,7 +107,7 @@ describe('Radio', () => {
         browser.click('#default');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -136,33 +128,26 @@ describe('Radio', () => {
         '--terra-form-checkbox-native-input-padding': 0,
         '--terra-form-checkbox-native-input-width': '1px',
         '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-        '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+        '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-outer-ring-border-radius': '50%',
-        '--terra-form-radio-outer-ring-border-style': 'solid',
-        '--terra-form-radio-outer-ring-border-width': '1px',
         '--terra-form-radio-outer-ring-height': '20px',
         '--terra-form-radio-outer-ring-margin-top': '4px',
         '--terra-form-radio-outer-ring-width': '20px',
         '--terra-form-radio-inner-ring-background-color': '#fff',
-        '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-        '--terra-form-radio-inner-ring-border-style': 'solid',
+        '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 0',
         '--terra-form-radio-inner-border-width': '1px',
         '--terra-form-radio-inner-ring-height': '14px',
         '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
         '--terra-form-radio-inner-ring-width': '14px',
 
         '--terra-form-radio-outer-ring-checked-background-color': '#fff',
-        '--terra-form-radio-outer-ring-checked-border-color': '#4a90e2',
+        '--terra-form-radio-outer-ring-checked-border': '#4a90e2 solid 1px',
         '--terra-form-radio-outer-ring-checked-border-radius': '50%',
-        '--terra-form-radio-outer-ring-checked-border-style': 'solid',
-        '--terra-form-radio-outer-ring-checked-border-width': '1px',
         '--terra-form-radio-outer-ring-checked-height': '20px',
         '--terra-form-radio-outer-ring-checked-margin-top': '4px',
         '--terra-form-radio-outer-ring-checked-width': '20px',
         '--terra-form-radio-inner-ring-checked-background-color': 'rgb(255, 0, 0)',
-        '--terra-form-radio-inner-ring-checked-border-color': 'rgb(255, 0, 0)',
-        '--terra-form-radio-inner-ring-checked-border-style': 'solid',
-        '--terra-form-radio-inner-ring-checked-border-width': '1px',
+        '--terra-form-radio-inner-ring-checked-border': 'rgb(255, 0, 0) solid 1px',
         '--terra-form-radio-inner-ring-checked-height': '14px',
         '--terra-form-radio-inner-ring-checked-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
         '--terra-form-radio-inner-ring-checked-width': '14px',
@@ -175,7 +160,7 @@ describe('Radio', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -196,17 +181,13 @@ describe('Radio', () => {
         '--terra-form-checkbox-native-input-padding': 0,
         '--terra-form-checkbox-native-input-width': '1px',
         '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-        '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+        '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-outer-ring-border-radius': '50%',
-        '--terra-form-radio-outer-ring-border-style': 'solid',
-        '--terra-form-radio-outer-ring-border-width': '1px',
         '--terra-form-radio-outer-ring-height': '20px',
         '--terra-form-radio-outer-ring-margin-top': '4px',
         '--terra-form-radio-outer-ring-width': '20px',
         '--terra-form-radio-inner-ring-background-color': '#fff',
-        '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-        '--terra-form-radio-inner-ring-border-style': 'solid',
-        '--terra-form-radio-inner-border-width': '1px',
+        '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-inner-ring-height': '14px',
         '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
         '--terra-form-radio-inner-ring-width': '14px',
@@ -233,16 +214,13 @@ describe('Radio', () => {
         '--terra-form-checkbox-native-input-padding': 0,
         '--terra-form-checkbox-native-input-width': '1px',
         '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-        '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+        '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-outer-ring-border-radius': '50%',
-        '--terra-form-radio-outer-ring-border-style': 'solid',
-        '--terra-form-radio-outer-ring-border-width': '1px',
         '--terra-form-radio-outer-ring-height': '20px',
         '--terra-form-radio-outer-ring-margin-top': '4px',
         '--terra-form-radio-outer-ring-width': '20px',
         '--terra-form-radio-inner-ring-background-color': '#fff',
-        '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-        '--terra-form-radio-inner-ring-border-style': 'solid',
+        '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 1px',
         '--terra-form-radio-inner-border-width': '1px',
         '--terra-form-radio-inner-ring-height': '14px',
         '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
@@ -262,7 +240,7 @@ describe('Radio', () => {
       browser.url('/#/tests/form-radio-tests/disabled');
     });
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -283,16 +261,13 @@ describe('Radio', () => {
       '--terra-form-checkbox-native-input-padding': 0,
       '--terra-form-checkbox-native-input-width': '1px',
       '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-      '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+      '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
       '--terra-form-radio-outer-ring-border-radius': '50%',
-      '--terra-form-radio-outer-ring-border-style': 'solid',
-      '--terra-form-radio-outer-ring-border-width': '1px',
       '--terra-form-radio-outer-ring-height': '20px',
       '--terra-form-radio-outer-ring-margin-top': '4px',
       '--terra-form-radio-outer-ring-width': '20px',
       '--terra-form-radio-inner-ring-background-color': '#fff',
-      '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-      '--terra-form-radio-inner-ring-border-style': 'solid',
+      '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 1px',
       '--terra-form-radio-inner-border-width': '1px',
       '--terra-form-radio-inner-ring-height': '14px',
       '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',
@@ -309,7 +284,7 @@ describe('Radio', () => {
   describe('Hidden Label', () => {
     beforeEach(() => browser.url('/#/tests/form-radio-tests/hidden'));
 
-    Terra.should.matchScreenshot();
+    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -330,16 +305,13 @@ describe('Radio', () => {
       '--terra-form-checkbox-native-input-padding': 0,
       '--terra-form-checkbox-native-input-width': '1px',
       '--terra-form-radio-outer-ring-background-color': 'rgb(255, 255, 255)',
-      '--terra-form-radio-outer-ring-border-color': '#a2c2e0',
+      '--terra-form-radio-outer-ring-border': '#a2c2e0 solid 1px',
       '--terra-form-radio-outer-ring-border-radius': '50%',
-      '--terra-form-radio-outer-ring-border-style': 'solid',
-      '--terra-form-radio-outer-ring-border-width': '1px',
       '--terra-form-radio-outer-ring-height': '20px',
       '--terra-form-radio-outer-ring-margin-top': '4px',
       '--terra-form-radio-outer-ring-width': '20px',
       '--terra-form-radio-inner-ring-background-color': '#fff',
-      '--terra-form-radio-inner-ring-border-color': '#a2c2e0',
-      '--terra-form-radio-inner-ring-border-style': 'solid',
+      '--terra-form-radio-inner-ring-border': '#a2c2e0 solid 1px',
       '--terra-form-radio-inner-border-width': '1px',
       '--terra-form-radio-inner-ring-height': '14px',
       '--terra-form-radio-inner-ring-transition': 'all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86)',

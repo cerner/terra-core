@@ -152,7 +152,7 @@ const Alert = (
   }
 
   if (onDismiss) {
-    dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} size="medium" variant="secondary" onClick={onDismiss} />);
+    dismissButton = (<Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} onClick={onDismiss} />);
   }
   if (onDismiss || action) {
     bodyClassNameForNarrowParent = 'body-narrow';

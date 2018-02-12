@@ -90,7 +90,9 @@ class DatePickerInput extends React.Component {
       this.props.requestFocus();
     }
 
-    if (this.onCalendarButtonClick && this.props.onClick) {
+    const attributes = Object.assign({}, this.props.inputAttributes);
+
+    if (!attributes.readOnly && this.onCalendarButtonClick && this.props.onClick) {
       this.onCalendarButtonClick(event, this.props.onClick);
     }
   }
@@ -139,6 +141,7 @@ class DatePickerInput extends React.Component {
     delete additionalInputProps.onFocus;
 
     const dateValue = DateUtil.convertToISO8601(value, DateUtil.getFormatByLocale(this.context.intl.locale));
+    const buttonText = this.context.intl.formatMessage({ id: 'Terra.datePicker.openCalendar' });
 
     return (
       (<div className={styles['custom-input']}>
@@ -162,11 +165,13 @@ class DatePickerInput extends React.Component {
         />
         <Button
           className={styles.button}
+          text={buttonText}
           onClick={this.handleOnButtonClick}
           onKeyDown={this.handleOnKeyDown}
           icon={Icon}
+          isIconOnly
           isCompact
-          type="button"
+          isDisabled={additionalInputProps.disabled}
         />
       </div>)
     );

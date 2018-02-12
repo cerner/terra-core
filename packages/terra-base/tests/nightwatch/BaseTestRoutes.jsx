@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Route } from 'react-router';
-import Anchors from './Anchors';
 import BaseTests from './BaseTests';
 import DefaultBase from './DefaultBase';
 import SwitchLocaleBase from './SwitchLocaleBase';
@@ -15,7 +14,6 @@ const routes = (
     <Route path="/tests/base-tests/switch" component={SwitchLocaleBase} />
     <Route path="/tests/base-tests/no-translations-loaded" component={NoTranslationsLoadedBase} />
     <Route path="/tests/base-tests/no-translations-loaded-string" component={NoTranslationsLoadedStringBase} />
-    <Route path="/tests/base-tests/anchors" component={Anchors} />
   </div>
 );
 

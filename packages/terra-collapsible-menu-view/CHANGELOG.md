@@ -3,6 +3,15 @@ ChangeLog
 
 Unreleased
 -----------------
+### Changed
+* Update to React 16
+* Uplift ButtonGroup V2
+
+### Removed
+* isSelectable prop in CollapsibleMenuViewItemGroup.
+
+### Added
+* selectedKeys prop in CollapsibleMenuViewItemGroup.
 
 1.10.0 - (February 1, 2018)
 ------------------

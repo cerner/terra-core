@@ -27,9 +27,9 @@ describe('CollapsibleMenuViewItemGroup', () => {
 
   it('should render a selectable button group', () => {
     const wrapper = shallow((
-      <CollapsibleMenuViewItemGroup isSelectable>
-        <CollapsibleMenuViewItem text="Testing" />
-        <CollapsibleMenuViewItem text="Testing" />
+      <CollapsibleMenuViewItemGroup selectedKeys={['key1']}>
+        <CollapsibleMenuViewItem text="Testing" key="key1" />
+        <CollapsibleMenuViewItem text="Testing" key="key2" />
       </CollapsibleMenuViewItemGroup>
     ));
     expect(wrapper).toMatchSnapshot();
@@ -39,9 +39,9 @@ describe('CollapsibleMenuViewItemGroup', () => {
     it('should render a menu item group when selectable', () => {
       const context = { isCollapsibleMenuItem: true };
       const wrapper = shallow((
-        <CollapsibleMenuViewItemGroup isSelectable>
-          <CollapsibleMenuViewItem text="Testing" />
-          <CollapsibleMenuViewItem text="Testing" />
+        <CollapsibleMenuViewItemGroup selectedKeys={['key1']}>
+          <CollapsibleMenuViewItem text="Testing" key="key1" />
+          <CollapsibleMenuViewItem text="Testing" key="key2" />
         </CollapsibleMenuViewItemGroup>
       ), { context });
       expect(wrapper).toMatchSnapshot();
@@ -61,15 +61,15 @@ describe('CollapsibleMenuViewItemGroup', () => {
     it('should merge custom props when selectable', () => {
       const context = { isCollapsibleMenuItem: true };
       const wrapper = shallow((
-        <CollapsibleMenuViewItemGroup className="Testing" isSelectable>
-          <CollapsibleMenuViewItem text="Testing" />
-          <CollapsibleMenuViewItem text="Testing" />
+        <CollapsibleMenuViewItemGroup className="Testing" selectedKeys={['key1']}>
+          <CollapsibleMenuViewItem text="Testing" key="key1" />
+          <CollapsibleMenuViewItem text="Testing" key="key2" />
         </CollapsibleMenuViewItemGroup>
       ), { context });
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should render menu items when isSelectable is not set', () => {
+    it('should render menu items when selectedKeys is not set', () => {
       const context = { isCollapsibleMenuItem: true };
       const wrapper = shallow((
         <CollapsibleMenuViewItemGroup>

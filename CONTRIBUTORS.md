@@ -49,6 +49,7 @@ Cerner Corporation
 - Andy Nelson [@anelson425]
 - Dan Plubell [@danplubell]
 - Mayuri Kini [@mayurikini]
+- Cyrus Duong [@cyrusduong]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -99,3 +100,4 @@ Cerner Corporation
 [@anelson425]: https://github.com/anelson425
 [@danplubell]: https://github.com/danplubell
 [@mayurikini]: https://github.com/mayurikini
+[@cyrusduong]: https://github.com/cyrusduong

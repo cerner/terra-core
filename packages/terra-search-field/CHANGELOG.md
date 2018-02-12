@@ -3,6 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update to React 16
+* Uplift to Button 2.0
+
+### Fixed
+* Fixed error when handle search with a null searchText. 
 
 1.20.0 - (February 1, 2018)
 ------------------

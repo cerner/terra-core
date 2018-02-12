@@ -22,6 +22,10 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.url(`${browser.launchUrl}/#/tests/search-field-tests/callback`);
 
     browser
+      .click('#searchfield button')
+      .expect.element('#search-callback-text').text.to.equal('INVALID Search Text:');
+
+    browser
       .setValue('input[type=search]', 'S')
       .expect.element('#search-callback-text').text.to.equal('INVALID Search Text: S').after(250);
 
