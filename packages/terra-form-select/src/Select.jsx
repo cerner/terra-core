@@ -296,18 +296,6 @@ class Select extends React.Component {
       isDefaultSelected = true;
     }
 
-    let placeholder;
-    if (!isPlaceholderHidden) {
-      placeholder = (<SelectOption
-        value={defaultOptionValue}
-        display={defaultOptionDisplay}
-        isSelected={isDefaultSelected}
-        onKeyDown={this.wrapOnKeyDown(defaultOptionValue)}
-        onClick={this.wrapOnClick(defaultOptionValue)}
-        className={cx('default-option')}
-      />);
-    }
-
     return (
       <div>
         <Popup
@@ -325,7 +313,16 @@ class Select extends React.Component {
           boundingRef={boundingRef}
         >
           <SelectMenu>
-            {placeholder}
+            { !isPlaceholderHidden &&
+              <SelectOption
+                value={defaultOptionValue}
+                display={defaultOptionDisplay}
+                isSelected={isDefaultSelected}
+                onKeyDown={this.wrapOnKeyDown(defaultOptionValue)}
+                onClick={this.wrapOnClick(defaultOptionValue)}
+                className={cx('default-option')}
+              />
+            }
             {clonedChildren}
           </SelectMenu>
         </Popup>
