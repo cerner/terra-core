@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { parse } from 'react-docgen';
 import Markdown from 'terra-markdown';
+import styles from './PropsTable.scss';
 
 const propTypes = {
   /**
@@ -32,19 +33,19 @@ function determineType(type) {
     }
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
-      typeName = <span> array of objects structured like: <pre> {formatShape(type.value.value)} </pre></span>;
+      typeName = <span> array of objects structured like: <pre className = {styles.props_table_pre}> {formatShape(type.value.value)} </pre></span>;
     } else {
       typeName = `array of ${type.value.name}s`;
     }
   } else if (typeName === 'union') {
     const options = type.value.map((option) => {
       const name = option.name === 'shape' ? (<span key={option.value}> an object structured like:
-        <pre> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
+        <pre className = {styles.props_table_pre}> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
       return name;
     });
     typeName = options.reduce((curr, next) => [curr, <span key={`${curr.value}-${next.value}`}> or </span>, next]);
   } else if (typeName === 'shape') {
-    typeName = <span> an object structured like: <pre> {formatShape(type.value)} </pre></span>;
+    typeName = <span> an object structured like: <pre className = {styles.props_table_pre}> {formatShape(type.value)} </pre></span>;
   }
 
   return typeName;
@@ -72,11 +73,11 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
       <table {...customProps}>
         <thead>
           <tr>
-            <th>Prop Name</th>
-            <th>Type</th>
-            <th>Is Required</th>
-            <th>Default Value</th>
-            <th>Description</th>
+            <th className = {styles.prop_Table_Name}>Prop Name</th>
+            <th className = {styles.prop_Table_Type}>Type</th>
+            <th className = {styles.prop_Table_Required}>Is Required</th>
+            <th className = {styles.prop_Table_Default}>Default Value</th>
+            <th className = {styles.prop_Table_Description}>Description</th>
           </tr>
         </thead>
         <tbody>

@@ -1,0 +1,13 @@
+:local {
+    .props_table_pre {
+        white-space: pre-wrap;
+    }
+
+    .prop_Table_Name .prop_Table_Required .prop_Table_Default {
+        max-width: 10%;
+    }
+
+    .prop_Table_Type .prop_Table_Description {
+        max-width: 35%;
+    }
+}
