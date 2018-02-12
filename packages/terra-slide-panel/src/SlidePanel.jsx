@@ -59,6 +59,7 @@ class SlidePanel extends React.Component {
     super(props);
     this.setPanelNode = this.setPanelNode.bind(this);
     this.handleTransitionEnd = this.handleTransitionEnd.bind(this);
+    this.preparePanelForTransition = this.preparePanelForTransition.bind(this);
 
     this.isHidden = !props.isOpen;
   }
@@ -90,6 +91,16 @@ class SlidePanel extends React.Component {
     }
   }
 
+  preparePanelForTransition() {
+    // React 16.3 will be deprecating componentWillRecieveProps and componentWillUpdate, and removed in 17, so code execution prior to render becomes difficult.
+    // As a result of this change, we are executing the code in the render block.
+    if (this.props.isOpen && !this.lastIsOpen && this.panelNode) {
+      // If the panel is opening remove the hidden attribute so the animation performs correctly.
+      this.panelNode.setAttribute('aria-hidden', 'false');
+      this.isHidden = false;
+    }
+  }
+
   render() {
     const {
       mainContent,
@@ -102,14 +113,6 @@ class SlidePanel extends React.Component {
       fill,
       ...customProps
     } = this.props;
-
-    // React 16.3 will be deprecating componentWillRecieveProps, and removed in 17, so code execution prior to render isn't possible.
-    // As a result of this change, we are executing the code in the render block.
-    if (this.props.isOpen && !this.lastIsOpen && this.panelNode) {
-      this.panelNode.setAttribute('aria-hidden', 'false');
-      this.isHidden = false;
-    }
-
     const slidePanelClassNames = cx([
       'slide-panel',
       { 'is-open': isOpen },
@@ -117,6 +120,8 @@ class SlidePanel extends React.Component {
       { fill },
       customProps.className,
     ]);
+
+    this.preparePanelForTransition();
 
     return (
       <div
