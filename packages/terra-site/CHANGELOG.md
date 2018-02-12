@@ -3,12 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+2.0.0 - (February 12, 2018)
+------------------
 ### Changed
-* Update to Reat 16
-* Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio.
-* Update Collapsible Menu View and Toggle Button examples to use Button 2.0.
-* Update styles for terra-form-checkbox.
-* Update styles for terra-form-radio.
+* Updated to use React 16
+* Removed unknown `isDisabled` prop from InlineRadiosExample.jsx for terra-form-radio
+* Update Collapsible Menu View and Toggle Button examples to use terra-button v2
+* Update styles for terra-form-checkbox
+* Update styles for terra-form-radio
 
 ### Removed
 * terra-theme-provider examples
