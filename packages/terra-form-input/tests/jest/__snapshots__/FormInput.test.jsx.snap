@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput should render a default component 1`] = `
+<input
+  aria-label="input label"
+  className="form-input"
+  disabled={false}
+  name={null}
+  required={false}
+/>
+`;
+
+exports[`FormInput should render as controlled when just a default value and \`onChange()\` is passed into the FormInput 1`] = `
+<input
+  aria-label="input label"
+  class="form-input"
+  value="foo"
+/>
+`;
+
+exports[`FormInput should render as uncontrolled when just a default value is passed into the FormInput 1`] = `
+<input
+  aria-label="input label"
+  class="form-input"
+  value="foo"
+/>
+`;
+
+exports[`FormInput should set the forminput to disabled when passed into the component 1`] = `
+<input
+  aria-label="input label"
+  class="form-input"
+  disabled=""
+/>
+`;
+
+exports[`FormInput should set the forminput to invalid when isInvalid is passed into the component 1`] = `
+<input
+  aria-label="input label"
+  class="form-input form-error"
+/>
+`;

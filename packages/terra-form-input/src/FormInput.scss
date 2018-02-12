@@ -1,0 +1,103 @@
+:local {
+  .form-input {
+    background-color: var(--terra-form-input-background-color, #fff);
+    background-image: var(--terra-form-input-focus-animation-background, none);
+    border-color: var(--terra-form-input-border-color, #4a4a4a);
+    border-radius: var(--terra-form-input-border-radius, 0.2rem);
+    border-style: var(--terra-form-input-border-style, solid);
+    border-width: var(--terra-form-input-border-width, 1px);
+    box-shadow: var(--terra-form-input-box-shadow, none);
+    color: var(--terra-form-input-color, #000);
+    font-family: inherit;
+    font-size: var(--terra-form-input-font-size, 1.143rem);
+    line-height: var(--terra-form-input-line-height, 1.143);
+    opacity: var(--terra-form-input-opacity, 1);
+    padding-bottom: var(--terra-form-input-padding-bottom, 0.571rem);
+    padding-left: var(--terra-form-input-padding-left, 0.357rem);
+    padding-right: var(--terra-form-input-padding-right, 0.357rem);
+    padding-top: var(--terra-form-input-padding-top, 0.571rem);
+    transition-duration: var(--terra-form-input-transition-duration, 0s);
+    transition-property: background-size;
+    transition-timing-function: var(--terra-form-input-transition-timing-function, ease);
+    width: 100%;
+
+    &:hover {
+      border-color: var(--terra-form-input-hover-border-color, #4a4a4a);
+      border-style: var(--terra-form-input-hover-border-style, solid);
+      border-width: var(--terra-form-input-hover-border-width, 1px);
+    }
+
+    &[required] {
+      box-shadow: unset;
+    }
+
+    &[disabled] {
+      background-color: var(--terra-form-input-disabled-background-color, rgba(0, 0, 0, 0.05));
+      border-color: var(--terra-form-input-disabled-border-color, #4a4a4a);
+      border-style: var(--terra-form-input-disabled-border-style, solid);
+      border-width: var(--terra-form-input-disabled-border-width, 1px);
+      color: var(--terra-form-input-disabled-color, #000);
+      cursor: default;
+      opacity: var(--terra-form-input-disabled-opacity, 1);
+    }
+
+    &:focus {
+      background-color: var(--terra-form-input-focus-background-color, #fff);
+      border-color: var(--terra-form-input-focus-border-color, #4a4a4a);
+      border-radius: var(--terra-form-input-focus-border-radius, 0.2rem);
+      border-style: var(--terra-form-input-focus-border-style, solid);
+      border-width: var(--terra-form-input-focus-border-width, 1px);
+      opacity: var(--terra-form-input-focus-opacity, 1);
+      outline: none;
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
+      }
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
+      }
+    }
+  }
+
+  .form-error {
+    background-image: var(--terra-form-input-error-focus-animation-background, none);
+    border-color: var(--terra-form-input-error-border-color, #ff0b0f);
+    border-radius: var(--terra-form-input-error-border-radius, 0.2rem);
+    border-style: var(--terra-form-input-error-border-style, solid);
+    border-width: var(--terra-form-input-error-border-width, 1px);
+    opacity: var(--terra-form-input-error-opacity, 1);
+
+    &:hover {
+      border-color: var(--terra-form-input-error-hover-border-color, #ff0b0f);
+      border-style: var(--terra-form-input-error-hover-border-style, solid);
+      border-width: var(--terra-form-input-error-hover-border-width, 1px);
+    }
+
+    &[disabled] {
+      background-color: var(--terra-form-input-error-disabled-background-color, rgba(0, 0, 0, 0.05));
+      border-color: var(--terra-form-input-error-disabled-border-color, #ff0b0f);
+      border-style: var(--terra-form-input-error-disabled-border-style, solid);
+      border-width: var(--terra-form-input-error-disabled-border-width, 1px);
+      color: var(--terra-form-input-error-disabled-color, #000);
+      opacity: var(--terra-form-input-error-disabled-opacity, 1);
+    }
+
+    &:focus {
+      background-color: var(--terra-form-input-error-focus-background-color, #fff);
+      border-color: var(--terra-form-input-error-focus-border-color, #ff0b0f);
+      border-radius: var(--terra-form-input-error-focus-border-radius, 0.2rem);
+      border-style: var(--terra-form-input-error-focus-border-style, solid);
+      border-width: var(--terra-form-input-error-focus-border-width, 1px);
+      opacity: var(--terra-form-input-error-focus-opacity, 1);
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-form-input-error-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
+      }
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-form-input-error-focus-keyboard-box-shadow-rtl, 0 0 8px #a6d9f4);
+      }
+    }
+  }
+}
