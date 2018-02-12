@@ -1,10 +1,13 @@
 ChangeLog
 =========
 
-(Unreleased)
+Unreleased
 ----------
+
+2.0.0 - (February 12, 2018)
+------------------
 ### Changed
-* Update to React 16
+* Updated to use React 16
 * Update theming values to initial browser default for various properties
 * Merged border-color, border-width, and border-style into short-hand syntax
 
