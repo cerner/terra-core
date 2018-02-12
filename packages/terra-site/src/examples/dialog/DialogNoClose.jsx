@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import Dialog from 'terra-dialog';
 
@@ -11,13 +10,12 @@ const body = (<div>
   <p>This is some more content.</p>
 </div>);
 
-const DialogDefault = () => (
+const DialogNoClose = () => (
   <div style={{ height: '200px', width: '350px', border: 'dashed' }}>
-    <Dialog header={header} footer={footer} onClose={() => alert('Close')} >
+    <Dialog header={header} footer={footer}>
       {body}
     </Dialog>
   </div>
 );
 
-export default DialogDefault;
-/* eslint-enable no-alert */
+export default DialogNoClose;

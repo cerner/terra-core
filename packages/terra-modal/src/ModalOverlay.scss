@@ -1,8 +1,10 @@
 :local {
   .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--terra-modal-overlay-background-color, rgba(0, 0, 0, 0.4));
     bottom: 0;
+    color: var(--terra-modal-overlay-foreground-color);
     left: 0;
+    opacity: var(--terra-modal-overlay-opacity);
     position: fixed;
     right: 0;
     top: 0;
