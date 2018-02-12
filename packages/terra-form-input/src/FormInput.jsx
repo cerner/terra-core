@@ -39,7 +39,7 @@ const propTypes = {
    */
   name: PropTypes.string,
   /**
-   * Whether the field is required.
+   * Whether the input is required.
    */
   required: PropTypes.bool,
   /**
