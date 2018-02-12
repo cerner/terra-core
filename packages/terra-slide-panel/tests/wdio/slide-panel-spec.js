@@ -29,6 +29,7 @@ describe('Toggle the slide panel click', () => {
     browser.url('/#/tests/slide-panel-tests/toggle');
     browser.click('#test-toggle');
     browser.waitForExist('#test-slide [aria-hidden="false"]');
+    browser.pause(150);
   });
 
   Terra.should.matchScreenshot();
@@ -39,8 +40,11 @@ describe('Toggle the slide panel double click', () => {
   beforeEach(() => {
     browser.url('/#/tests/slide-panel-tests/toggle');
     browser.click('#test-toggle');
+    browser.waitForExist('#test-slide [aria-hidden="false"]');
+    browser.pause(150);
     browser.click('#test-toggle');
     browser.waitForExist('#test-slide [aria-hidden="true"]');
+    browser.pause(150);
   });
 
   Terra.should.matchScreenshot();
