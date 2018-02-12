@@ -5,8 +5,6 @@
     "publish": {
       "ignore": [
         "DEPENDENCIES.md",
-        "terra-button",
-        "terra-button-group",
         "terra-dialog"
       ]
     }
