@@ -19,7 +19,7 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Whether the input is invalid
+   * Whether the input is invalid.
    */
   isInvalid: PropTypes.bool,
   /**
