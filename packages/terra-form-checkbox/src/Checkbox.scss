@@ -49,7 +49,7 @@
 
     .label-text.is-mobile {
       display: inline-block;
-      vertical-align: var(--terra-form-checkbox-is-mobile-label-text-vertical-align, 0);
+      vertical-align: var(--terra-form-checkbox-is-mobile-label-text-vertical-align);
     }
 
     /* stylelint-enable property-no-vendor-prefix */
