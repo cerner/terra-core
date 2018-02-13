@@ -10,10 +10,8 @@ describe('Form-Input', () => {
     Terra.should.themeEachCustomProperty({
       '--terra-form-input-background-color': 'red',
       '--terra-form-input-focus-animation-background': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
-      '--terra-form-input-border-color': '#4a4a41',
       '--terra-form-input-border-radius': '0.3rem',
-      '--terra-form-input-border-style': 'dashed',
-      '--terra-form-input-border-width': '2px',
+      '--terra-form-input-border': '2px dashed #4a4a41',
       '--terra-form-input-box-shadow': 'inset 5em 1em gold',
       '--terra-form-input-color': '#fff',
       '--terra-form-input-font-size': '2.143rem',
@@ -37,10 +35,8 @@ describe('Form-Input', () => {
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
       '--terra-form-input-error-focus-animation-background': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
-      '--terra-form-input-error-border-color': 'blue',
       '--terra-form-input-error-border-radius': '20rem',
-      '--terra-form-input-error-border-style': 'dashed',
-      '--terra-form-input-error-border-width': '20rem',
+      '--terra-form-input-error-border': '20rem dashed blue',
       '--terra-form-input-error-opacity': '0.5',
     });
   });
@@ -64,9 +60,7 @@ describe('Form-Input', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
-        '--terra-form-input-hover-border-color': 'blue',
-        '--terra-form-input-hover-border-style': 'dashed',
-        '--terra-form-input-hover-border-width': '20rem',
+        '--terra-form-input-hover-border': '20rem dashed blue',
       });
     });
 
@@ -80,10 +74,8 @@ describe('Form-Input', () => {
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-focus-background-color': 'red',
-        '--terra-form-input-focus-border-color': 'red',
         '--terra-form-input-focus-border-radius': '20rem',
-        '--terra-form-input-focus-border-style': 'dashed',
-        '--terra-form-input-focus-border-width': '20rem',
+        '--terra-form-input-focus-border': '20rem dashed red',
         '--terra-form-input-focus-opacity': '0.5',
       });
     });
@@ -99,9 +91,7 @@ describe('Form-Input', () => {
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-disabled-background-color': 'red',
-        '--terra-form-input-disabled-border-color': 'red',
-        '--terra-form-input-disabled-border-style': 'dashed',
-        '--terra-form-input-disabled-border-width': '20rem',
+        '--terra-form-input-disabled-border-width': '20rem dashed red',
         '--terra-form-input-disabled-color': 'red',
         '--terra-form-input-disabled-opacity': '0.5',
       });
@@ -116,9 +106,7 @@ describe('Form-Input', () => {
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
-        '--terra-form-input-hover-border-color': 'red',
-        '--terra-form-input-hover-border-style': 'dashed',
-        '--terra-form-input-hover-border-width': '20rem',
+        '--terra-form-input-hover-border': '20rem dashed red',
       });
     });
 
@@ -132,10 +120,8 @@ describe('Form-Input', () => {
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-focus-background-color': 'red',
-        '--terra-form-input-focus-border-color': 'red',
         '--terra-form-input-focus-border-radius': '20rem',
-        '--terra-form-input-focus-border-style': 'dashed',
-        '--terra-form-input-focus-border-width': '20rem',
+        '--terra-form-input-focus-border': '20rem dashed red',
         '--terra-form-input-focus-opacity': '0.5',
       });
     });

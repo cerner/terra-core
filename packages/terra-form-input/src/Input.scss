@@ -2,10 +2,8 @@
   .form-input {
     background-color: var(--terra-form-input-background-color, #fff);
     background-image: var(--terra-form-input-focus-animation-background, none);
-    border-color: var(--terra-form-input-border-color, #4a4a4a);
+    border: var(--terra-form-input-border, 1px solid #4a4a4a);
     border-radius: var(--terra-form-input-border-radius, 0.2rem);
-    border-style: var(--terra-form-input-border-style, solid);
-    border-width: var(--terra-form-input-border-width, 1px);
     box-shadow: var(--terra-form-input-box-shadow, none);
     color: var(--terra-form-input-color, #000);
     font-family: inherit;
@@ -22,9 +20,7 @@
     width: 100%;
 
     &:hover {
-      border-color: var(--terra-form-input-hover-border-color, #4a4a4a);
-      border-style: var(--terra-form-input-hover-border-style, solid);
-      border-width: var(--terra-form-input-hover-border-width, 1px);
+      border: var(--terra-form-input-hover-border, 1px solid #4a4a4a);
     }
 
     &[required] {
@@ -33,9 +29,7 @@
 
     &[disabled] {
       background-color: var(--terra-form-input-disabled-background-color, rgba(0, 0, 0, 0.05));
-      border-color: var(--terra-form-input-disabled-border-color, #dedfe0);
-      border-style: var(--terra-form-input-disabled-border-style, solid);
-      border-width: var(--terra-form-input-disabled-border-width, 1px);
+      border: var(--terra-form-input-disabled-border, 1px solid #dedfe0)
       color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
       cursor: default;
       opacity: var(--terra-form-input-disabled-opacity, 1);
@@ -43,10 +37,8 @@
 
     &:focus {
       background-color: var(--terra-form-input-focus-background-color, #fff);
-      border-color: var(--terra-form-input-focus-border-color, #4a4a4a);
       border-radius: var(--terra-form-input-focus-border-radius, 0.2rem);
-      border-style: var(--terra-form-input-focus-border-style, solid);
-      border-width: var(--terra-form-input-focus-border-width, 1px);
+      border: var(--terra-form-input-focus-border, 1px solid #4a4a4a);
       opacity: var(--terra-form-input-focus-opacity, 1);
       outline: none;
 
@@ -62,33 +54,25 @@
 
   .form-error {
     background-image: var(--terra-form-input-error-focus-animation-background, none);
-    border-color: var(--terra-form-input-error-border-color, #ff0b0f);
     border-radius: var(--terra-form-input-error-border-radius, 0.2rem);
-    border-style: var(--terra-form-input-error-border-style, solid);
-    border-width: var(--terra-form-input-error-border-width, 1px);
+    border: var(--terra-form-input-error-border: 1px solid #ff0b0f);
     opacity: var(--terra-form-input-error-opacity, 1);
 
     &:hover {
-      border-color: var(--terra-form-input-error-hover-border-color, #ff0b0f);
-      border-style: var(--terra-form-input-error-hover-border-style, solid);
-      border-width: var(--terra-form-input-error-hover-border-width, 1px);
+      border: var(--terra-form-input-error-hover-border, 1px solid #ff0b0f);
     }
 
     &[disabled] {
       background-color: var(--terra-form-input-error-disabled-background-color, rgba(0, 0, 0, 0.05));
-      border-color: var(--terra-form-input-error-disabled-border-color, #ff0b0f);
-      border-style: var(--terra-form-input-error-disabled-border-style, solid);
-      border-width: var(--terra-form-input-error-disabled-border-width, 1px);
+      border: var(--terra-form-input-error-disabled-border, 1px solid #ff0b0f);
       color: var(--terra-form-input-error-disabled-color, rgba(0, 0, 0, 0.25));
       opacity: var(--terra-form-input-error-disabled-opacity, 1);
     }
 
     &:focus {
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
-      border-color: var(--terra-form-input-error-focus-border-color, #ff0b0f);
       border-radius: var(--terra-form-input-error-focus-border-radius, 0.2rem);
-      border-style: var(--terra-form-input-error-focus-border-style, solid);
-      border-width: var(--terra-form-input-error-focus-border-width, 1px);
+      border: var(--terra-form-input-error-focus-border, 1px solid #ff0b0f);
       opacity: var(--terra-form-input-error-focus-opacity, 1);
 
       [dir=ltr] & {
