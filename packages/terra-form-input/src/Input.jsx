@@ -97,6 +97,7 @@ class FormInput extends React.Component {
 
     return (
       <input
+        {...attributes}
         aria-label="input label"
         name={name}
         onBlur={onBlur}
@@ -104,7 +105,6 @@ class FormInput extends React.Component {
         onFocus={onFocus}
         disabled={disabled}
         required={required}
-        {...attributes}
         className={formInputClassNames}
       />
     );
