@@ -33,12 +33,12 @@ const Examples = () => (
     <br />
     <h2>Examples – Uncontrolled</h2>
     <h3>Valid</h3>
-    <UncontrolledDefaultExample/>
-    <UncontrolledDisabledExample/>
+    <UncontrolledDefaultExample />
+    <UncontrolledDisabledExample />
     <br />
     <h3>Invalid</h3>
-    <UncontrolledDefaultErrorExample/>
-    <UncontrolledDisabledErrorExample/>
+    <UncontrolledDefaultErrorExample />
+    <UncontrolledDisabledErrorExample />
   </div>
 );
 

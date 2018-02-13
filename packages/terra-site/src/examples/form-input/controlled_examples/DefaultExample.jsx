@@ -15,7 +15,7 @@ class DefaultExample extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         <h4>Default</h4>
         <FormInput

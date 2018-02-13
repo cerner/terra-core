@@ -37,8 +37,8 @@
 
     &:focus {
       background-color: var(--terra-form-input-focus-background-color, #fff);
-      border-radius: var(--terra-form-input-focus-border-radius, 0.2rem);
       border: var(--terra-form-input-focus-border, 1px solid #4a4a4a);
+      border-radius: var(--terra-form-input-focus-border-radius, 0.2rem);
       opacity: var(--terra-form-input-focus-opacity, 1);
       outline: none;
 
@@ -54,8 +54,8 @@
 
   .form-error {
     background-image: var(--terra-form-input-error-focus-animation-background, none);
-    border-radius: var(--terra-form-input-error-border-radius, 0.2rem);
     border: var(--terra-form-input-error-border, 1px solid #ff0b0f);
+    border-radius: var(--terra-form-input-error-border-radius, 0.2rem);
     opacity: var(--terra-form-input-error-opacity, 1);
 
     &:hover {
@@ -71,8 +71,8 @@
 
     &:focus {
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
-      border-radius: var(--terra-form-input-error-focus-border-radius, 0.2rem);
       border: var(--terra-form-input-error-focus-border, 1px solid #ff0b0f);
+      border-radius: var(--terra-form-input-error-focus-border-radius, 0.2rem);
       opacity: var(--terra-form-input-error-focus-opacity, 1);
 
       [dir=ltr] & {

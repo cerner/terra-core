@@ -15,7 +15,7 @@ class DisabledExample extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         <h4>Disabled</h4>
         <FormInput

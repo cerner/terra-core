@@ -1,4 +1,4 @@
-/* global browser, Terra, before */
+/* global browser, Terra */
 describe('Form-Input', () => {
   describe('Valid', () => {
     beforeEach(() => {

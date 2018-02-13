@@ -8,7 +8,7 @@ import {
   DefaultFormInput,
   InvalidFormInput,
   DisabledFormInput,
-} from './FormInputPropPermutations.jsx';
+} from './FormInputPropPermutations';
 
 const routes = (
   <div>
