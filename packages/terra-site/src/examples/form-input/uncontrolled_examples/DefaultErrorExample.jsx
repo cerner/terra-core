@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FormInput from 'terra-form-input/lib/FormInput';
+import FormInput from 'terra-form-input/lib/Input';
 
 const DefaultErrorExample =  () => (
   <div>

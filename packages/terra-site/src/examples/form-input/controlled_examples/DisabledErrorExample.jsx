@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FormInput from 'terra-form-input/lib/FormInput';
+import FormInput from 'terra-form-input/lib/Input';
 
 class DisabledErrorExample extends React.Component {
   constructor(props) {
