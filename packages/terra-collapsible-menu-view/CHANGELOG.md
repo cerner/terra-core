@@ -3,9 +3,12 @@ ChangeLog
 
 Unreleased
 -----------------
+
+2.0.0 - (February 12, 2018)
+------------------
 ### Changed
-* Update to React 16
-* Uplift ButtonGroup V2
+* Updated to use React 16
+* Uplifted component to use terra-button-group V2
 
 ### Removed
 * isSelectable prop in CollapsibleMenuViewItemGroup.
