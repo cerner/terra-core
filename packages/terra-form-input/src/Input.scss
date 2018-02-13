@@ -29,7 +29,7 @@
 
     &[disabled] {
       background-color: var(--terra-form-input-disabled-background-color, rgba(0, 0, 0, 0.05));
-      border: var(--terra-form-input-disabled-border, 1px solid #dedfe0)
+      border: var(--terra-form-input-disabled-border, 1px solid #dedfe0);
       color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
       cursor: default;
       opacity: var(--terra-form-input-disabled-opacity, 1);
@@ -55,7 +55,7 @@
   .form-error {
     background-image: var(--terra-form-input-error-focus-animation-background, none);
     border-radius: var(--terra-form-input-error-border-radius, 0.2rem);
-    border: var(--terra-form-input-error-border: 1px solid #ff0b0f);
+    border: var(--terra-form-input-error-border, 1px solid #ff0b0f);
     opacity: var(--terra-form-input-error-opacity, 1);
 
     &:hover {
