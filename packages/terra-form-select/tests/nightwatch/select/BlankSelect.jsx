@@ -19,7 +19,7 @@ const BlankSelect = () => (
         <Select.Option value="snappers" display="Snappers" key="snappers" />
         <Select.Option value="bumblers" display="Bumblers" disabled key="bumblers" />
         <Select.Option value="joeys" display="Joeys" key="joeys" />
-        <Select.Option value="micros" display="Microprocessors" disabled key="miros" />
+        <Select.Option value="micros" display="Microprocessors" disabled key="micros" />
       </Select>
     </form>
     <br />
