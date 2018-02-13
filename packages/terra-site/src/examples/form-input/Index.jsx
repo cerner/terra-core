@@ -10,22 +10,36 @@ import { version } from 'terra-form-input/package.json';
 import FormInputSrc from '!raw-loader!terra-form-input/src/FormInput';
 
 // Example Files
-import DefaultExample from './DefaultExample';
-import DisabledExample from './DisabledExample';
-import DefaultErrorExample from './DefaultErrorExample';
-import DisabledErrorExample from './DisabledErrorExample';
+import ControlledDefaultExample from './controlled_examples/DefaultExample';
+import ControlledDisabledExample from './controlled_examples/DisabledExample';
+import ControlledDefaultErrorExample from './controlled_examples/DefaultErrorExample';
+import ControlledDisabledErrorExample from './controlled_examples/DisabledErrorExample';
+import UncontrolledDefaultExample from './uncontrolled_examples/DefaultExample';
+import UncontrolledDisabledExample from './uncontrolled_examples/DisabledExample';
+import UncontrolledDefaultErrorExample from './uncontrolled_examples/DefaultErrorExample';
+import UncontrolledDisabledErrorExample from './uncontrolled_examples/DisabledErrorExample';
 
 // TODO ensure that mouse changes to a cursor when hovering over <FormInput /> in all browsers
 const Examples = () => (
   <div>
-    <h2>Examples</h2>
+    <h2>Examples – Controlled</h2>
     <h3>Valid</h3>
-    <DefaultExample />
-    <DisabledExample />
+    <ControlledDefaultExample />
+    <ControlledDisabledExample />
     <br />
     <h3>Invalid</h3>
-    <DefaultErrorExample />
-    <DisabledErrorExample />
+    <ControlledDefaultErrorExample />
+    <ControlledDisabledErrorExample />
+    <br />
+    <br />
+    <h2>Examples – Uncontrolled</h2>
+    <h3>Valid</h3>
+    <UncontrolledDefaultExample/>
+    <UncontrolledDisabledExample/>
+    <br />
+    <h3>Invalid</h3>
+    <UncontrolledDefaultErrorExample/>
+    <UncontrolledDisabledErrorExample/>
   </div>
 );
 

@@ -19,8 +19,8 @@ class DefaultErrorExample extends React.Component {
       <div>
         <h4>Default</h4>
         <FormInput
-          defaultValue="Default Error Input"
           name="default error input"
+          value={this.state.input}
           onChange={this.handleChange}
           isInvalid
         />

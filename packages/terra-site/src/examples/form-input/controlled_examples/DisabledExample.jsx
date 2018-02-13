@@ -6,7 +6,7 @@ class DisabledExample extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { input: 'DisabledExample input' };
+    this.state = { input: 'Disabled Example input' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,8 +19,8 @@ class DisabledExample extends React.Component {
       <div>
         <h4>Disabled</h4>
         <FormInput
-          defaultValue="Disabled Input"
           disabled
+          value={this.state.input}
           name="disabled input"
           onChange={this.handleChange}
         />
