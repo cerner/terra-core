@@ -102,7 +102,6 @@ class FormInput extends React.Component {
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
-        ref={(input) => { this.textInput = input; }}
         disabled={disabled}
         required={required}
         {...attributes}
