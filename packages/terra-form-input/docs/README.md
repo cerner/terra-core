@@ -17,7 +17,8 @@ import Input from 'terra-form-input';
   name="description"
   value="I'm a software engineer working at Cerner"
   required
-/>```
+/>
+```
 
 ## Component Features
 
