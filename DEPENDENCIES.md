@@ -12,8 +12,8 @@
 | babel-preset-react | ^6.24.1 | -- | Babel preset for all React plugins. |
 | check-installed-dependencies | ^1.0.0 | -- | Check if the currently installed packages match package.json |
 | danger | ^1.0.0 | -- | Unit tests for Team Culture |
-| enzyme | ^3.1.1 | -- | JavaScript Testing utilities for React |
-| enzyme-adapter-react-15 | ^1.0.5 | ^15.5.0 | JavaScript Testing utilities for React |
+| enzyme | ^3.3.0 | -- | JavaScript Testing utilities for React |
+| enzyme-adapter-react-16 | ^1.1.1 | ^16.0.0-0 | JavaScript Testing utilities for React |
 | enzyme-to-json | ^3.2.2 | -- | convert enzyme wrapper to a format compatible with Jest snapshot |
 | eslint | ^3.19.0 | -- | An AST-based pattern checker for JavaScript. |
 | eslint-config-airbnb | ^14.1.0 | -- | Airbnb's ESLint config, following our styleguide |
@@ -28,11 +28,11 @@
 | lerna | ^2.1.2 | -- | Tool for managing JavaScript projects with multiple packages |
 | link-parent-bin | ^0.1.3 | -- | [![Build Status](https://travis-ci.org/nicojs/node-link-parent-bin.svg?branch=master)](https://travis-ci.org/nicojs/node-link-parent-bin) |
 | load-json-file | ^2.0.0 | -- | Read and parse a JSON file |
-| nightwatch | ^0.9.12 | -- | Easy to use Node.js based End-to-End testing solution for browser based apps and websites, using the W3C WebDriver API. |
-| react | ^15.5.4 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.5.4 | ^15.6.2 | React package for working with the DOM. |
-| react-router | ^3.0.5 | ^0.14.0 \|\| ^15.0.0 \|\| ^16.0.0-rc | A complete routing library for React |
-| react-test-renderer | ^15.5.4 | ^15.6.2 | React package for snapshot testing. |
+| nightwatch | ^0.9.19 | -- | Easy to use Node.js based End-to-End testing solution for browser based apps and websites, using the W3C WebDriver API. |
+| react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
+| react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
+| react-router | ^3.2.0 | ^0.14.0 \|\| ^15.0.0 \|\| ^16.0.0-rc | A complete routing library for React |
+| react-test-renderer | ^16.2.0 | ^16.0.0 | React package for snapshot testing. |
 | rimraf | ^2.6.1 | -- | A deep deletion module for node (like `rm -rf`) |
 | shelljs | ^0.7.7 | -- | Portable Unix shell commands for Node.js |
 | stylelint | ^8.0.0 | -- | A mighty, modern CSS linter. |

@@ -3,18 +3,21 @@ Changelog
 
 Unreleased
 ----------
+
+2.0.0 - (February 12, 2018)
+------------------
+### Changed
+* Updated to use React 16
+* Changed to a controlled component
+* The `text` prop is now required to help improve accessibility
+
 ### Added
-* selectedKeys in ButtonGroup
-* isDisabled, onBlur, onFocus, onKeyDown, onKeyUp props in ButtonGroup.Button
+* The `selectedKeys` prop has been added to the `ButtonGroup` component
+* The following props have been added to the `ButtonGroup.Button` component: `isDisabled`, `onBlur`, `onFocus`, `onKeyDown`, `onKeyUp`
 
 ### Removed
-* buttons, isCompact, isSelectable, size, variant props in ButtonGroup
-* children, isReversed, isSelected props in ButtonGroup.Button
-
-### Changed
-* Update to React 16
-* Changed to a controlled component.
-* text prop is now required.
+* The following props have been removed from the `ButtonGroup` component: `buttons`, `isCompact`, `isSelectable`, `size`, `variant`
+* The following props have been removed from the `ButtonGroup.Button` component: `children`, `isReversed`, `isSelected`
 
 1.18.0 - (February 1, 2018)
 ------------------
