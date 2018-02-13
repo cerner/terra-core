@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Add
+* Add --terra-button-group-button-focus-border-width in themeable-variables.
 
 2.0.0 - (February 12, 2018)
 ------------------
