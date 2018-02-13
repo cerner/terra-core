@@ -3,9 +3,13 @@ Changelog
 
 Unreleased
 ----------
-### Changed
-* Update to React 16
+### Added
 * Added styling to force long Props Table entries to line wrap
+
+2.0.0 - (February 12, 2018)
+------------------
+### Changed
+* Updated to use React 16
 
 1.11.0 - (February 1, 2018)
 ------------------
