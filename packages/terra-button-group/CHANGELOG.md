@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Add
+* The 'border-width' variable made themeable.
 
 2.0.0 - (February 12, 2018)
 ------------------
