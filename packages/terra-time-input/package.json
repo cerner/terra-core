@@ -26,8 +26,8 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^2.11.0",
-    "terra-form": "^1.17.0"
+    "terra-base": "^3.0.0",
+    "terra-form": "^2.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
