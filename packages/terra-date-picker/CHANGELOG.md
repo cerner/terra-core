@@ -3,12 +3,15 @@ Changelog
 
 Unreleased
 ----------
-### Added
-* Update to React 16
-*Added disabled prop.
 
+2.0.0 - (February 12, 2018)
+------------------
 ### Changed
-* Uplift to Button 2.0
+* Updated to use React 16
+* Uplifted component to use terra-button v2
+
+### Added
+* Added `disabled` prop
 
 1.20.0 - (February 1, 2018)
 ------------------
