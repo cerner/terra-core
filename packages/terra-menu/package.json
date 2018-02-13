@@ -26,13 +26,13 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-arrange": "^1.19.0",
-    "terra-base": "^2.11.0",
-    "terra-content-container": "^1.16.0",
-    "terra-icon": "^1.18.0",
-    "terra-list": "^1.20.0",
-    "terra-popup": "^1.20.0",
-    "terra-slide-group": "^1.16.0"
+    "terra-arrange": "^2.0.0",
+    "terra-base": "^3.0.0",
+    "terra-content-container": "^2.0.0",
+    "terra-icon": "^2.0.0",
+    "terra-list": "^2.0.0",
+    "terra-popup": "^2.0.0",
+    "terra-slide-group": "^2.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

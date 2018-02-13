@@ -27,7 +27,7 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^2.11.0",
+    "terra-base": "^3.0.0",
     "terra-mixins": "^1.13.0"
   },
   "dependencies": {

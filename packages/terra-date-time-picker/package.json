@@ -32,11 +32,11 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^2.11.0",
-    "terra-button": "^1.14.0",
-    "terra-date-picker": "^1.21.0",
-    "terra-modal": "^1.19.0",
-    "terra-time-input": "^1.18.0"
+    "terra-base": "^3.0.0",
+    "terra-button": "^2.0.0",
+    "terra-date-picker": "^2.0.0",
+    "terra-modal": "^2.0.0",
+    "terra-time-input": "^2.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
