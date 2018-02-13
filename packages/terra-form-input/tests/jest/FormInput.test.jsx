@@ -1,5 +1,5 @@
 import React from 'react';
-import FormInput from '../../src/FormInput';
+import FormInput from '../../src/Input';
 
 describe('FormInput', () => {
   const defaultRender = <FormInput />;

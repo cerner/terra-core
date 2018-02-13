@@ -7,7 +7,7 @@ import { version } from 'terra-form-input/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import FormInputSrc from '!raw-loader!terra-form-input/src/FormInput';
+import FormInputSrc from '!raw-loader!terra-form-input/src/Input';
 
 // Example Files
 import ControlledDefaultExample from './controlled_examples/DefaultExample';
