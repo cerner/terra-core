@@ -8,81 +8,31 @@ exports[`Dialog should render a default component 1`] = `
     fill={true}
     footer={
       <div
-        className="footer"
+        className="dialog-footer"
       >
         Footer Content
       </div>
     }
     header={
       <div
-        className="header"
+        className="dialog-header"
       >
-        Header Content
+        <ActionHeader
+          onBack={null}
+          onClose={null}
+          onMaximize={null}
+          onMinimize={null}
+          onNext={null}
+          onPrevious={null}
+          title="Header Content"
+        />
       </div>
     }
   >
     <div
-      className="body"
+      className="dialog-body"
     >
       some body content
-    </div>
-  </ContentContainer>
-</div>
-`;
-
-exports[`Dialog should render a header 1`] = `
-<div
-  className="dialog"
->
-  <ContentContainer
-    fill={true}
-    footer={
-      <div
-        className="footer"
-      />
-    }
-    header={
-      <div
-        className="header"
-      >
-        Header Content
-      </div>
-    }
-  >
-    <div
-      className="body"
-    >
-      children required
-    </div>
-  </ContentContainer>
-</div>
-`;
-
-exports[`Dialog should render header & footer 1`] = `
-<div
-  className="dialog"
->
-  <ContentContainer
-    fill={true}
-    footer={
-      <div
-        className="footer"
-      >
-        Footer Content
-      </div>
-    }
-    header={
-      <div
-        className="header"
-      >
-        Header Content
-      </div>
-    }
-  >
-    <div
-      className="body"
-    >
-      children required
     </div>
   </ContentContainer>
 </div>
