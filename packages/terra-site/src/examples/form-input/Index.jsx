@@ -19,7 +19,6 @@ import UncontrolledDisabledExample from './uncontrolled_examples/DisabledExample
 import UncontrolledDefaultErrorExample from './uncontrolled_examples/DefaultErrorExample';
 import UncontrolledDisabledErrorExample from './uncontrolled_examples/DisabledErrorExample';
 
-// TODO ensure that mouse changes to a cursor when hovering over <FormInput /> in all browsers
 const Examples = () => (
   <div>
     <h2>Examples – Controlled</h2>
