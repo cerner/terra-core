@@ -24,6 +24,7 @@
     "--terra-button-group-button-border-bottom-left-radius": "0.2142rem",
     "--terra-button-group-button-border-top-left-radius": "0.2142rem",
     "--terra-button-group-button-border-bottom-right-radius": "0.2142rem",
-    "--terra-button-group-button-border-top-right-radius": "0.2142rem"
+    "--terra-button-group-button-border-top-right-radius": "0.2142rem",
+    "--terra-button-group-button-focus-border-width": "1px",
   }
 }
