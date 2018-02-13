@@ -117,7 +117,7 @@ exports[`should render an image with a custom status-view 1`] = `
         >
           <IconBase
             ariaLabel={null}
-            focusable={false}
+            focusable="false"
             height="1em"
             isBidi={false}
             isSpin={false}
@@ -128,7 +128,7 @@ exports[`should render an image with a custom status-view 1`] = `
             <svg
               aria-hidden="true"
               className="icon"
-              focusable={false}
+              focusable="false"
               height="1em"
               viewBox="0 0 48 48"
               width="1em"

@@ -4,9 +4,14 @@ Changelog
 Unreleased
 ----------
 
+2.0.0 - (February 12, 2018)
+------------------
+### Changed
+* Updated to use React 16
+
 1.20.0 - (February 1, 2018)
 ------------------
-###Changed
+### Changed
 * Moved table sort indicator
 
 1.19.0 - (January 18, 2018)

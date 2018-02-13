@@ -1,25 +1,32 @@
 :local {
   .modal {
-    background-color: #fff;
-    border-radius: 5px;
+    background-color: var(--terra-modal-background-color, #fff);
+    border: var(--terra-modal-border);
+    border-radius: var(--terra-modal-border-radius, 5px);
     bottom: 10px;
+    box-shadow: var(--terra-modal-box-shadow);
+    color: var(--terra-modal-foreground-color);
     display: block;
+    height: var(--terra-modal-height);
     left: 10px;
+    margin: var(--terra-modal-margin);
     max-height: 100%;
+    max-width: var(--terra-modal-max-width);
     outline: none;
     overflow: hidden;
     position: fixed;
     right: 10px;
     top: 10px;
+    width: var(--terra-modal-width);
     z-index: 6000 + 1;
   }
 
   .fixed-size {
     @media screen and (min-width: 48em) {
       bottom: auto;
-      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      box-shadow: var(--terra-modal-fixed-box-shadow, 0 3px 7px rgba(0, 0, 0, 0.3));
       left: 50%;
-      margin: 0 auto;
+      margin: var(--terra-modal-fixed-margin, 0 auto);
       max-height: calc(100% - 100px);
       max-width: 40em;
       right: auto;

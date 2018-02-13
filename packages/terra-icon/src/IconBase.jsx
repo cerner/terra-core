@@ -37,7 +37,7 @@ const propTypes = {
   /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
-  focusable: PropTypes.bool,
+  focusable: PropTypes.string,
 };
 
 const defaultProps = {
@@ -47,7 +47,7 @@ const defaultProps = {
   height: '1em',
   width: '1em',
   ariaLabel: null,
-  focusable: false,
+  focusable: 'false',
 };
 
 const IconBase = ({

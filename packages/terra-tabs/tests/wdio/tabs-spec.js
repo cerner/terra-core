@@ -47,14 +47,14 @@ describe('Tabs - Responsive', () => {
         browser.click('[data-terra-tabs-menu]');
       });
 
-      Terra.should.matchScreenshot('0');
+      Terra.should.matchScreenshot('0', { selector: '#root' });
       Terra.should.beAccessible({ rules: ignoredA11y });
 
       it('should close menu when tab is selected', () => {
         browser.click('#tab12');
       });
 
-      Terra.should.beAccessible();
+      Terra.should.beAccessible({ rules: ignoredA11y });
       Terra.should.matchScreenshot('1');
     });
   });

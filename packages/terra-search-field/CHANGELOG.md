@@ -3,8 +3,15 @@ Changelog
 
 Unreleased
 ----------
+
+2.0.0 - (February 12, 2018)
+------------------
 ### Changed
-* Uplift to Button 2.0
+* Updated to use React 16
+* Uplifted component to use terra-button v2
+
+### Fixed
+* Fixed error when handle search with a null searchText.
 
 1.20.0 - (February 1, 2018)
 ------------------
