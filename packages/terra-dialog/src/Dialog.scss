@@ -5,9 +5,27 @@
   }
 
   .dialog-header {
-    background-color: var(--terra-dialog-header-background-color, transparent);
-    border-bottom: var(--terra-dialog-header-bottom-border, none);
+    align-items: center;
+    background-color: var(--terra-dialog-header-background-color, #f4f4f4);
+    border-bottom: var(--terra-dialog-header-bottom-border, 1px solid #dedfe0);
     color: var(--terra-dialog-header-foreground-color, #1c1f21);
+    display: flex;
+    height: 3.587rem;
+    justify-content: space-between;
+    padding: var(--terra-dialog-header-padding, 0.7143rem);
+  }
+
+  .dialog-header-title {
+    margin-right: 0.7143rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 90%;
+  }
+
+  .dialog-header-close {
+    float: right;
+    text-align: right;
+    width: 10%;
   }
 
   .dialog-body {
