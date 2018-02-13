@@ -9,7 +9,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    opacity: 0.8;
     outline: none;
     overflow: hidden;
     z-index: 100;
@@ -20,9 +19,8 @@
   }
 
   .dark {
-    background: var(--terra-overlay-dark-background-color, #1c1f21);
+    background: var(--terra-overlay-dark-background-color, rgba(28, 31, 33, 0.8));
     background-image: var(--terra-overlay-dark-background-image, none);
-    opacity: var(--terra-overlay-dark-opacity, 0.85);
 
     .content {
       color: var(--terra-overlay-dark-content-color, #fff);
@@ -30,9 +28,12 @@
   }
 
   .light {
-    background: var(--terra-overlay-light-background-color, #f4f4f4);
+    background: var(--terra-overlay-light-background-color, rgba(245, 245, 245, 0.7));
     background-image: var(--terra-overlay-light-background-image, none);
-    opacity: var(--terra-overlay-light-opacity, 0.7);
+
+    .content {
+      color: var(--terra-overlay-light-content-color, #1c1f21);
+    }
   }
 
   .fullscreen {

@@ -11,7 +11,7 @@ describe('Overlay', () => {
       {
         '--terra-overlay-light-background-color': 'green',
         '--terra-overlay-light-background-image': 'linear-gradient(red, green)',
-        '--terra-overlay-light-opacity': '0.8',
+        '--terra-overlay-light-content-color': 'blue',
       },
     );
   });
@@ -27,7 +27,6 @@ describe('Overlay', () => {
         '--terra-overlay-dark-background-color': 'blue',
         '--terra-overlay-dark-background-image': 'linear-gradient(blue, green)',
         '--terra-overlay-dark-content-color': 'red',
-        '--terra-overlay-dark-opacity': '0.8',
       },
     );
   });
