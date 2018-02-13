@@ -73,11 +73,11 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
       <table {...customProps}>
         <thead>
           <tr>
-            <th className = {styles.prop_Table_Name}>Prop Name</th>
-            <th className = {styles.prop_Table_Type}>Type</th>
-            <th className = {styles.prop_Table_Required}>Is Required</th>
-            <th className = {styles.prop_Table_Default}>Default Value</th>
-            <th className = {styles.prop_Table_Description}>Description</th>
+            <th className = {styles.prop_table_name}>Prop Name</th>
+            <th className = {styles.prop_table_type}>Type</th>
+            <th className = {styles.prop_table_required}>Is Required</th>
+            <th className = {styles.prop_table_default}>Default Value</th>
+            <th className = {styles.prop_table_description}>Description</th>
           </tr>
         </thead>
         <tbody>
