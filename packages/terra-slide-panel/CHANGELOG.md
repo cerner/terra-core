@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Offscreen tab access in the panel removed
 
 2.0.0 - (February 12, 2018)
 ------------------
