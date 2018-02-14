@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^2.11.0"
+    "terra-base": "^3.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

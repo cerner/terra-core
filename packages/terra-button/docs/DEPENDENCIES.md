@@ -17,4 +17,4 @@
 |-|-|-|-|
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-base | ^2.8.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-base | ^3.0.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
