@@ -10,7 +10,7 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-icon | ^2.0.0 | ^16.2.0 | terra-icon |
+| terra-icon | ^2.0.1 | ^16.2.0 | terra-icon |
 | terra-props-table | ^2.0.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
@@ -18,4 +18,4 @@
 |-|-|-|-|
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-base | ^2.11.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-base | ^3.0.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
