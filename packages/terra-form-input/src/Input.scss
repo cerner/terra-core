@@ -2,6 +2,7 @@
   .form-input {
     background-color: var(--terra-form-input-background-color, #fff);
     background-image: var(--terra-form-input-focus-animation-background, none);
+    background-size: var(--terra-form-input-focus-background-start, 0 0);
     border: var(--terra-form-input-border, 1px solid #4a4a4a);
     border-radius: var(--terra-form-input-border-radius, 0.2rem);
     box-shadow: var(--terra-form-input-box-shadow, none);
@@ -37,6 +38,7 @@
 
     &:focus {
       background-color: var(--terra-form-input-focus-background-color, #fff);
+      background-size: var(--terra-form-input-focus-keyboard-animation-size, 0 0);
       border: var(--terra-form-input-focus-border, 1px solid #4a4a4a);
       border-radius: var(--terra-form-input-focus-border-radius, 0.2rem);
       opacity: var(--terra-form-input-focus-opacity, 1);
@@ -71,6 +73,7 @@
 
     &:focus {
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
+      background-size: var(--terra-form-input-error-focus-keyboard-animation-size, 0 0);
       border: var(--terra-form-input-error-focus-border, 1px solid #ff0b0f);
       border-radius: var(--terra-form-input-error-focus-border-radius, 0.2rem);
       opacity: var(--terra-form-input-error-focus-opacity, 1);

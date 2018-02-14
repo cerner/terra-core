@@ -23,6 +23,7 @@ describe('Form-Input', () => {
       '--terra-form-input-padding-top': '1.571rem',
       '--terra-form-input-transition-duration': '2s',
       '--terra-form-input-transition-timing-function': 'ease-out',
+      '--terra-form-input-focus-background-start': '20px 20px',
     });
   });
 
@@ -77,6 +78,7 @@ describe('Form-Input', () => {
         '--terra-form-input-focus-border-radius': '20rem',
         '--terra-form-input-focus-border': '20rem dashed red',
         '--terra-form-input-focus-opacity': '0.5',
+        '--terra-form-input-focus-keyboard-animation-size': '20px 20px',
       });
     });
   });
@@ -123,6 +125,7 @@ describe('Form-Input', () => {
         '--terra-form-input-focus-border-radius': '20rem',
         '--terra-form-input-focus-border': '20rem dashed red',
         '--terra-form-input-focus-opacity': '0.5',
+        '--terra-form-input-error-focus-keyboard-animation-size': '20px 20px',
       });
     });
   });
