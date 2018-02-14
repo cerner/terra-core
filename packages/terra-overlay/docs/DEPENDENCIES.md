@@ -7,7 +7,7 @@
 | focus-trap-react | ^3.1.1 | 0.14.x \|\| ^15.0.0 \|\| ^16.0.0 | A React component that traps focus. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | terra-base | ^3.0.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-icon | ^2.0.0 | ^16.2.0 | terra-icon |
+| terra-icon | ^2.0.1 | ^16.2.0 | terra-icon |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -20,5 +20,5 @@
 |-|-|-|-|
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-base | ^2.11.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-icon | ^1.18.0 | ^16.2.0 | terra-icon |
+| terra-base | ^3.0.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-icon | ^2.0.1 | ^16.2.0 | terra-icon |
