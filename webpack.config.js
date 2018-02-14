@@ -3,7 +3,7 @@ const webpackConfig = require('terra-site/src/config/webpack.config');
 const I18nAggregatorPlugin = require('./packages/terra-i18n-plugin');
 const i18nSupportedLocales = require('./packages/terra-i18n/lib/i18nSupportedLocales');
 
-const translationsPath = path.join(process.cwd(), 'packages', 'terra-site-examples');
+const translationsPath = path.join(process.cwd(), 'packages', 'terra-site');
 
 const i18nPlugin = new I18nAggregatorPlugin({
   baseDirectory: path.resolve(translationsPath),

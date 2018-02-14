@@ -1,6 +1,6 @@
 import homeReadMe from './README.md';
 import componentConfig from './generatedComponentConfig';
-import './packages/terra-site-examples/src/cerner-mock-theme.scss';
+import './packages/terra-site/src/cerner-mock-theme.scss';
 
 const siteConfig = {
   /* The component configuration path. */
