@@ -1,7 +1,7 @@
 {
   "name": "terra-alert",
   "main": "lib/Alert.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention. The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.",
   "repository": {
     "type": "git",
@@ -28,17 +28,17 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "terra-base": "^3.0.0",
-    "terra-button": "^2.0.0",
-    "terra-icon": "^2.0.0",
-    "terra-responsive-element": "^2.0.0"
+    "terra-button": "^2.0.1",
+    "terra-icon": "^2.0.1",
+    "terra-responsive-element": "^2.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-base": "^3.0.0",
-    "terra-button": "^2.0.0",
-    "terra-icon": "^2.0.0",
-    "terra-responsive-element": "^2.0.0"
+    "terra-button": "^2.0.1",
+    "terra-icon": "^2.0.1",
+    "terra-responsive-element": "^2.0.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

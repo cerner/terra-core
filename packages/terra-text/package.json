@@ -1,7 +1,7 @@
 {
   "name": "terra-text",
   "main": "lib/Text.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Component for displaying customizable text in UI.",
   "repository": {
     "type": "git",

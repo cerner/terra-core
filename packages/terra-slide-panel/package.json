@@ -1,7 +1,7 @@
 {
   "name": "terra-slide-panel",
   "main": "lib/SlidePanel.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "terra-slide-panel",
   "repository": {
     "type": "git",

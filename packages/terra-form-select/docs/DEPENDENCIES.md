@@ -5,10 +5,10 @@
 |-|-|-|-|
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
-| terra-arrange | ^2.0.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-arrange | ^2.0.1 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 | terra-base | ^3.0.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-icon | ^2.0.0 | ^16.2.0 | terra-icon |
-| terra-popup | ^2.0.0 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
+| terra-icon | ^2.0.1 | ^16.2.0 | terra-icon |
+| terra-popup | ^2.0.1 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 
 ## devDependencies
 | Dependency | Version | React Version | Description |
@@ -21,7 +21,7 @@
 |-|-|-|-|
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
-| terra-arrange | ^1.19.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
-| terra-base | ^2.11.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-icon | ^1.18.0 | ^16.2.0 | terra-icon |
-| terra-popup | ^1.20.0 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
+| terra-arrange | ^2.0.1 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-base | ^3.0.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-icon | ^2.0.1 | ^16.2.0 | terra-icon |
+| terra-popup | ^2.0.1 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
