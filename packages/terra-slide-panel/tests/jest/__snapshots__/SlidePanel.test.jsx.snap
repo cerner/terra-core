@@ -43,7 +43,7 @@ exports[`should render a SlidePanel with an open state 1`] = `
   data-slide-panel-panel-size="small"
 >
   <div
-    aria-hidden={null}
+    aria-hidden="false"
     className="panel"
   />
   <div

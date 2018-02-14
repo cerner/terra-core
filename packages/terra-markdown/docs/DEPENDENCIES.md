@@ -10,5 +10,5 @@
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| react | ^15.4.2 | -- | React is a JavaScript library for building user interfaces. |
-| react-dom | ^15.4.2 | ^15.6.2 | React package for working with the DOM. |
+| react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
+| react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |

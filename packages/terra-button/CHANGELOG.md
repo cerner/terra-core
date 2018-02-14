@@ -3,19 +3,22 @@ Changelog
 
 Unreleased
 ----------
+
+2.0.0 - (February 12, 2018)
+------------------
+### Changed
+* Updated to use React 16
+* The `text` prop is now required to help improve accessibility
+* Button is now a class-base component and not a functional component, to allow a ref callback
+
 ### Added
-* isIconOnly, onBlur, onFocus, onKeyDown, and onKeyUp props
-* `neutral`,  `emphasis`, `de-emphasis`, `utility` and `action` variants
+* The following props have been added: `isIconOnly`, `onBlur`, `onFocus`, `onKeyDown`, and `onKeyUp`
+* The following variants have been added: `neutral`,  `emphasis`, `de-emphasis`, `utility` and `action` per UX guidance
 
 ### Removed
-* size prop
-* `primary`, `secondary`,  and `link` variants
-* children prop
-
-### Changed
-* text prop is now required to meet accessibility
-* Button is now a class and not a functional component, allowing a ref callback
-* Update to React 16
+* The size prop has been removed per UX guidance
+* The `primary`, `secondary`,  and `link` variants have been removed per UX guidance
+* The children prop has been removed
 
 1.14.0 - (November 28, 2017)
 ------------------
