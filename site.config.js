@@ -1,10 +1,10 @@
-const fs = require('fs');
+import homeReadMe from './README.md';
+import componentConfig from './generatedComponentConfig';
+import './packages/terra-site-examples/src/cerner-mock-theme.scss';
 
-const homeReadMe = fs.readFileSync('./README.md', 'utf-8');
-
-module.exports = {
+const siteConfig = {
   /* The component configuration path. */
-  componentConfigPath: './generatedComponentConfig.js',
+  componentConfig,
 
   /* The logo to display as the placeholder. */
   placeholderSrc: 'https://github.com/cerner/terra-core/raw/master/terra.png',
@@ -17,9 +17,13 @@ module.exports = {
     logoSrc: 'https://github.com/cerner/terra-core/raw/master/terra.png',
 
     /* The title for the site header. */
-    title: 'Terra',
+    title: 'Terra Core',
 
-    /* The subtitle for the site header. */
-    subtitle: 'Core',
+    themes: {
+      'Default Theme': '',
+      'Mock Theme': 'cerner-mock-theme',
+    },
   },
 };
+
+export default siteConfig;

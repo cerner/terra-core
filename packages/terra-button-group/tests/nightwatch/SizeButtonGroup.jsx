@@ -2,6 +2,8 @@ import React from 'react';
 
 import ButtonGroup from '../../lib/ButtonGroup';
 
+const spacingStyle = { padding: '20px' };
+
 const TinyButtonGroup = () => (
   <ButtonGroup
     id="button-group-size-tiny"
@@ -43,10 +45,16 @@ const HugeButtonGroup = () => (
   />
 );
 
-export {
-  TinyButtonGroup,
-  SmallButtonGroup,
-  MediumButtonGroup,
-  LargeButtonGroup,
-  HugeButtonGroup,
-};
+export default () => (
+  <div>
+    <TinyButtonGroup />
+    <div style={spacingStyle} />
+    <SmallButtonGroup />
+    <div style={spacingStyle} />
+    <MediumButtonGroup />
+    <div style={spacingStyle} />
+    <LargeButtonGroup />
+    <div style={spacingStyle} />
+    <HugeButtonGroup />
+  </div>
+);

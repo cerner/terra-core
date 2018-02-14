@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../../lib/Button';
 
+const spacingStyle = { padding: '20px' };
 const iconStyle = { backgroundColor: 'black' };
 const icon = <svg width="1em" height="1em" style={iconStyle} className="test"><rect width="1em" height="1em" /></svg>;
 
@@ -30,10 +31,16 @@ const UtilityButton = () => <div id="utility" style={{ padding: '5px' }}>
   <Button id="utilityButtonDisabled" text="Utility Disabled" icon={icon} variant="utility" isDisabled />
 </div>;
 
-export {
-  NeutralButton,
-  EmphasisButton,
-  DeemphasisButton,
-  ActionButton,
-  UtilityButton,
-};
+export default () => (
+  <div>
+    <NeutralButton />
+    <div style={spacingStyle} />
+    <EmphasisButton />
+    <div style={spacingStyle} />
+    <DeemphasisButton />
+    <div style={spacingStyle} />
+    <ActionButton />
+    <div style={spacingStyle} />
+    <UtilityButton />
+  </div>
+);

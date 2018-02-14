@@ -63,10 +63,10 @@ import AlignedAllArrange from './packages/terra-arrange/tests/nightwatch/Aligned
 import AlignedAllLongWords from './packages/terra-arrange/tests/nightwatch/AlignedAllLongWords';
 import AlignedFitEndFillArrange from './packages/terra-arrange/tests/nightwatch/AlignedFitEndFillArrange';
 import AlignedFitStartFillArrange from './packages/terra-arrange/tests/nightwatch/AlignedFitStartFillArrange';
-import Examplesetup from './packages/terra-arrange/tests/nightwatch/examplesetup';
 import IndividuallyAlignedFill from './packages/terra-arrange/tests/nightwatch/IndividuallyAlignedFill';
 import IndividuallyAlignedFitEnd from './packages/terra-arrange/tests/nightwatch/IndividuallyAlignedFitEnd';
 import IndividuallyAlignedFitStart from './packages/terra-arrange/tests/nightwatch/IndividuallyAlignedFitStart';
+import Examplesetup from './packages/terra-arrange/tests/nightwatch/examplesetup';
 import BadgeDefault from './packages/terra-badge/tests/nightwatch/BadgeDefault';
 import BadgeIcon from './packages/terra-badge/tests/nightwatch/BadgeIcon';
 import BadgeIntent from './packages/terra-badge/tests/nightwatch/BadgeIntent';
@@ -108,13 +108,13 @@ import DatePickerOnChangeRaw from './packages/terra-date-picker/tests/nightwatch
 import DatePickerOnClickOutside from './packages/terra-date-picker/tests/nightwatch/components/DatePickerOnClickOutside';
 import DatePickerOnSelect from './packages/terra-date-picker/tests/nightwatch/components/DatePickerOnSelect';
 import DatePickerStartDate from './packages/terra-date-picker/tests/nightwatch/components/DatePickerStartDate';
+import DateTimePickerDST from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDST';
 import DateTimePickerDateInputAttributes from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDateInputAttributes';
 import DateTimePickerDefault from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDefault';
 import DateTimePickerDefaultDateExcluded from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDefaultDateExcluded';
 import DateTimePickerDefaultDateOnly from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDefaultDateOnly';
 import DateTimePickerDefaultDateOutOfRange from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDefaultDateOutOfRange';
 import DateTimePickerDefaultDateTime from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDefaultDateTime';
-import DateTimePickerDST from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerDST';
 import DateTimePickerExcludeDates from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerExcludeDates';
 import DateTimePickerFilterDates from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerFilterDates';
 import DateTimePickerIncludeDates from './packages/terra-date-time-picker/tests/nightwatch/components/DateTimePickerIncludeDates';
@@ -164,9 +164,9 @@ import MultipleRadios from './packages/terra-form-radio/tests/nightwatch/Multipl
 import PopulatedRadio from './packages/terra-form-radio/tests/nightwatch/PopulatedRadio';
 import DefaultSelectOption from './packages/terra-form-select/tests/nightwatch/select-option/DefaultSelectOption';
 import DisabledSelectOption from './packages/terra-form-select/tests/nightwatch/select-option/DisabledSelectOption';
-import SelectedSelectOption from './packages/terra-form-select/tests/nightwatch/select-option/SelectedSelectOption';
 import SelectOptionLongText from './packages/terra-form-select/tests/nightwatch/select-option/SelectOptionLongText';
 import SelectOptionWithChildren from './packages/terra-form-select/tests/nightwatch/select-option/SelectOptionWithChildren';
+import SelectedSelectOption from './packages/terra-form-select/tests/nightwatch/select-option/SelectedSelectOption';
 import ControlledSelect from './packages/terra-form-select/tests/nightwatch/select/ControlledSelect';
 import DefaultSelect from './packages/terra-form-select/tests/nightwatch/select/DefaultSelect';
 import DisabledSelect from './packages/terra-form-select/tests/nightwatch/select/DisabledSelect';
@@ -217,8 +217,8 @@ import HeadingColor from './packages/terra-heading/tests/nightwatch/HeadingColor
 import HeadingItalics from './packages/terra-heading/tests/nightwatch/HeadingItalics';
 import HeadingLevels from './packages/terra-heading/tests/nightwatch/HeadingLevels';
 import HeadingSize from './packages/terra-heading/tests/nightwatch/HeadingSize';
-import HeadingVisuallyHidden from './packages/terra-heading/tests/nightwatch/HeadingVisuallyHidden';
 import HeadingVisualProps from './packages/terra-heading/tests/nightwatch/HeadingVisualProps';
+import HeadingVisuallyHidden from './packages/terra-heading/tests/nightwatch/HeadingVisuallyHidden';
 import HeadingWeight from './packages/terra-heading/tests/nightwatch/HeadingWeight';
 import DefaultHookshot from './packages/terra-hookshot/tests/nightwatch/components/DefaultHookshot';
 import HookshotAttachmentBehaviorAuto from './packages/terra-hookshot/tests/nightwatch/components/HookshotAttachmentBehaviorAuto';
@@ -392,11 +392,11 @@ import SlidePanelSmall from './packages/terra-slide-panel/tests/nightwatch/compo
 import SlidePanelSquish from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelSquish';
 import SlidePanelStart from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelStart';
 import DefaultSpacer from './packages/terra-spacer/tests/nightwatch/DefaultSpacer';
-import SpacerLarge from './packages/terra-spacer/tests/nightwatch/SpacerLarge';
 import SpacerLarge1 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+1';
 import SpacerLarge2 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+2';
 import SpacerLarge3 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+3';
 import SpacerLarge4 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+4';
+import SpacerLarge from './packages/terra-spacer/tests/nightwatch/SpacerLarge';
 import SpacerMedium from './packages/terra-spacer/tests/nightwatch/SpacerMedium';
 import SpacerSmall1 from './packages/terra-spacer/tests/nightwatch/SpacerSmall-1';
 import SpacerSmall2 from './packages/terra-spacer/tests/nightwatch/SpacerSmall-2';
@@ -415,6 +415,33 @@ import StatusDefault from './packages/terra-status/tests/nightwatch/StatusDefaul
 import StatusIcon from './packages/terra-status/tests/nightwatch/StatusIcon';
 import StatusImage from './packages/terra-status/tests/nightwatch/StatusImage';
 import StatusNoColor from './packages/terra-status/tests/nightwatch/StatusNoColor';
+import MultiRowSelectableTable from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
+import MultiRowSelectableTableMaxCount from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
+import MultiRowSelectableTableMaxCountInitiallyExceeded from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
+import MultiRowSelectableTableMaxCountInitiallyMet from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyMet';
+import MultiRowSelectableTableNonSelectable from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableNonSelectable';
+import MultiRowSelectableTableOnChange from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableOnChange';
+import MultiRowSelectableTablePreselected from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTablePreselected';
+import SelectableTableRowsAndSubheaders from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsAndSubheaders';
+import SelectableTableRowsDefault from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsDefault';
+import SelectableTableRowsDisabled from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsDisabled';
+import SelectableTableRowsNoRows from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsNoRows';
+import SelectableTableRowsNonSelectable from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsNonSelectable';
+import SelectableTableRowsOnChange from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsOnChange';
+import SelectableTableRowsOneRow from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsOneRow';
+import SelectableTableRowsPreselected from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsPreselected';
+import SelectableTable from './packages/terra-table/tests/nightwatch/single-select-table/components/SelectableTable';
+import SingleRowSelectableTableNonSelectable from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTableNonSelectable';
+import SingleRowSelectableTableOnChange from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTableOnChange';
+import SingleRowSelectableTablePreselected from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTablePreselected';
+import NoPaddingTable from './packages/terra-table/tests/nightwatch/table/components/NoPaddingTable';
+import NoStripedTable from './packages/terra-table/tests/nightwatch/table/components/NoStripedTable';
+import SingleRowTable from './packages/terra-table/tests/nightwatch/table/components/SingleRowTable';
+import StripedTable from './packages/terra-table/tests/nightwatch/table/components/StripedTable';
+import TableNoRows from './packages/terra-table/tests/nightwatch/table/components/TableNoRows';
+import TableWithHighlightedRows from './packages/terra-table/tests/nightwatch/table/components/TableWithHighlightedRows';
+import TableWithSortIndicator from './packages/terra-table/tests/nightwatch/table/components/TableWithSortIndicator';
+import TableWithSubheaders from './packages/terra-table/tests/nightwatch/table/components/TableWithSubheaders';
 import CustomDisplayTabPane from './packages/terra-tabs/tests/nightwatch/TabPane/CustomDisplayTabPane';
 import IconAndTextTabPane from './packages/terra-tabs/tests/nightwatch/TabPane/IconAndTextTabPane';
 import IconOnlyTabPane from './packages/terra-tabs/tests/nightwatch/TabPane/IconOnlyTabPane';
@@ -429,8 +456,8 @@ import DefaultText from './packages/terra-text/tests/nightwatch/DefaultText';
 import TextColor from './packages/terra-text/tests/nightwatch/TextColor';
 import TextFontSize from './packages/terra-text/tests/nightwatch/TextFontSize';
 import TextItalics from './packages/terra-text/tests/nightwatch/TextItalics';
-import TextVisuallyHidden from './packages/terra-text/tests/nightwatch/TextVisuallyHidden';
 import TextVisualProps from './packages/terra-text/tests/nightwatch/TextVisualProps';
+import TextVisuallyHidden from './packages/terra-text/tests/nightwatch/TextVisuallyHidden';
 import TextWeight from './packages/terra-text/tests/nightwatch/TextWeight';
 import TimeInputDefault from './packages/terra-time-input/tests/nightwatch/component/TimeInputDefault';
 import TimeInputDefaultTime from './packages/terra-time-input/tests/nightwatch/component/TimeInputDefaultTime';
@@ -456,580 +483,8 @@ import OpenedButtonText from './packages/terra-toggle-button/tests/nightwatch/Op
 import AnimatedToggle from './packages/terra-toggle/tests/nightwatch/AnimatedToggle';
 import DefaultToggle from './packages/terra-toggle/tests/nightwatch/DefaultToggle';
 import OpenToggle from './packages/terra-toggle/tests/nightwatch/OpenToggle';
-import MultiRowSelectableTable from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTable';
-import MultiRowSelectableTableMaxCount from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCount';
-import MultiRowSelectableTableMaxCountInitiallyExceeded from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyExceeded';
-import MultiRowSelectableTableMaxCountInitiallyMet from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableMaxCountInitiallyMet';
-import MultiRowSelectableTableNonSelectable from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableNonSelectable';
-import MultiRowSelectableTableOnChange from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTableOnChange';
-import MultiRowSelectableTablePreselected from './packages/terra-table/tests/nightwatch/multi-select-table/components/MultiRowSelectableTablePreselected';
-import SelectableTableRowsAndSubheaders from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsAndSubheaders';
-import SelectableTableRowsDefault from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsDefault';
-import SelectableTableRowsDisabled from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsDisabled';
-import SelectableTableRowsNonSelectable from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsNonSelectable';
-import SelectableTableRowsNoRows from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsNoRows';
-import SelectableTableRowsOnChange from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsOnChange';
-import SelectableTableRowsOneRow from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsOneRow';
-import SelectableTableRowsPreselected from './packages/terra-table/tests/nightwatch/selectable-table/components/SelectableTableRowsPreselected';
-import SelectableTable from './packages/terra-table/tests/nightwatch/single-select-table/components/SelectableTable';
-import SingleRowSelectableTableNonSelectable from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTableNonSelectable';
-import SingleRowSelectableTableOnChange from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTableOnChange';
-import SingleRowSelectableTablePreselected from './packages/terra-table/tests/nightwatch/single-select-table/components/SingleRowSelectableTablePreselected';
-import NoPaddingTable from './packages/terra-table/tests/nightwatch/table/components/NoPaddingTable';
-import NoStripedTable from './packages/terra-table/tests/nightwatch/table/components/NoStripedTable';
-import SingleRowTable from './packages/terra-table/tests/nightwatch/table/components/SingleRowTable';
-import StripedTable from './packages/terra-table/tests/nightwatch/table/components/StripedTable';
-import TableNoRows from './packages/terra-table/tests/nightwatch/table/components/TableNoRows';
-import TableWithHighlightedRows from './packages/terra-table/tests/nightwatch/table/components/TableWithHighlightedRows';
-import TableWithSortIndicator from './packages/terra-table/tests/nightwatch/table/components/TableWithSortIndicator';
-import TableWithSubheaders from './packages/terra-table/tests/nightwatch/table/components/TableWithSubheaders';
 
 const componentConfig = {
-  'terra-site-examples': {
-    name: 'Site Examples',
-    path: '/site-examples',
-    pages: [
-      {
-        name: 'Alert',
-        path: '/alert',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex,
-          },
-        ],
-      },
-      {
-        name: 'Arrange',
-        path: '/arrange',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex1,
-          },
-        ],
-      },
-      {
-        name: 'Badge',
-        path: '/badge',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex2,
-          },
-        ],
-      },
-      {
-        name: 'Base',
-        path: '/base',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex3,
-          },
-        ],
-      },
-      {
-        name: 'Button Group',
-        path: '/button-group',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex4,
-          },
-        ],
-      },
-      {
-        name: 'Button',
-        path: '/button',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex5,
-          },
-        ],
-      },
-      {
-        name: 'Card',
-        path: '/card',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex6,
-          },
-        ],
-      },
-      {
-        name: 'Collapsible Menu View',
-        path: '/collapsible-menu-view',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex7,
-          },
-        ],
-      },
-      {
-        name: 'Content Container',
-        path: '/content-container',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex8,
-          },
-        ],
-      },
-      {
-        name: 'Date Picker',
-        path: '/date-picker',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex9,
-          },
-        ],
-      },
-      {
-        name: 'Date Time Picker',
-        path: '/date-time-picker',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex10,
-          },
-        ],
-      },
-      {
-        name: 'Demographics Banner',
-        path: '/demographics-banner',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex11,
-          },
-        ],
-      },
-      {
-        name: 'Dialog',
-        path: '/dialog',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex12,
-          },
-        ],
-      },
-      {
-        name: 'Divider',
-        path: '/divider',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex13,
-          },
-        ],
-      },
-      {
-        name: 'Dynamic Grid',
-        path: '/dynamic-grid',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex14,
-          },
-        ],
-      },
-      {
-        name: 'Embedded Content Consumer',
-        path: '/embedded-content-consumer',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex15,
-          },
-        ],
-      },
-      {
-        name: 'Form Checkbox',
-        path: '/form-checkbox',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex16,
-          },
-        ],
-      },
-      {
-        name: 'Form Field',
-        path: '/form-field',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex17,
-          },
-        ],
-      },
-      {
-        name: 'Form Radio',
-        path: '/form-radio',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex18,
-          },
-        ],
-      },
-      {
-        name: 'Form Select',
-        path: '/form-select',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex19,
-          },
-        ],
-      },
-      {
-        name: 'Form Textarea',
-        path: '/form-textarea',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex20,
-          },
-        ],
-      },
-      {
-        name: 'Form',
-        path: '/form',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex21,
-          },
-        ],
-      },
-      {
-        name: 'Grid',
-        path: '/grid',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex22,
-          },
-        ],
-      },
-      {
-        name: 'Heading',
-        path: '/heading',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex23,
-          },
-        ],
-      },
-      {
-        name: 'Hookshot',
-        path: '/hookshot',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex24,
-          },
-        ],
-      },
-      {
-        name: 'I 18 N',
-        path: '/i-18-n',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex25,
-          },
-        ],
-      },
-      {
-        name: 'Icon',
-        path: '/icon',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex26,
-          },
-        ],
-      },
-      {
-        name: 'Image',
-        path: '/image',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex27,
-          },
-        ],
-      },
-      {
-        name: 'List',
-        path: '/list',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex28,
-          },
-        ],
-      },
-      {
-        name: 'Menu',
-        path: '/menu',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex29,
-          },
-        ],
-      },
-      {
-        name: 'Modal',
-        path: '/modal',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex30,
-          },
-        ],
-      },
-      {
-        name: 'Overlay',
-        path: '/overlay',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex31,
-          },
-        ],
-      },
-      {
-        name: 'Popup',
-        path: '/popup',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex32,
-          },
-        ],
-      },
-      {
-        name: 'Profile Image',
-        path: '/profile-image',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex33,
-          },
-        ],
-      },
-      {
-        name: 'Progress Bar',
-        path: '/progress-bar',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex34,
-          },
-        ],
-      },
-      {
-        name: 'Responsive Element',
-        path: '/responsive-element',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex35,
-          },
-        ],
-      },
-      {
-        name: 'Search Field',
-        path: '/search-field',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex36,
-          },
-        ],
-      },
-      {
-        name: 'Signature',
-        path: '/signature',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex37,
-          },
-        ],
-      },
-      {
-        name: 'Slide Group',
-        path: '/slide-group',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex38,
-          },
-        ],
-      },
-      {
-        name: 'Slide Panel',
-        path: '/slide-panel',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex39,
-          },
-        ],
-      },
-      {
-        name: 'Spacer',
-        path: '/spacer',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex40,
-          },
-        ],
-      },
-      {
-        name: 'Status View',
-        path: '/status-view',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex41,
-          },
-        ],
-      },
-      {
-        name: 'Status',
-        path: '/status',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex42,
-          },
-        ],
-      },
-      {
-        name: 'Table',
-        path: '/table',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex43,
-          },
-        ],
-      },
-      {
-        name: 'Tabs',
-        path: '/tabs',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex44,
-          },
-        ],
-      },
-      {
-        name: 'Text',
-        path: '/text',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex45,
-          },
-        ],
-      },
-      {
-        name: 'Time Input',
-        path: '/time-input',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex46,
-          },
-        ],
-      },
-      {
-        name: 'Toggle Button',
-        path: '/toggle-button',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex47,
-          },
-        ],
-      },
-      {
-        name: 'Toggle',
-        path: '/toggle',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteExamplesIndex48,
-          },
-        ],
-      },
-    ],
-  },
   'terra-alert': {
     name: 'Alert',
     path: '/alert',
@@ -1096,11 +551,6 @@ const componentConfig = {
         component: AlignedFitStartFillArrange,
       },
       {
-        name: 'Examplesetup',
-        path: '/examplesetup',
-        component: Examplesetup,
-      },
-      {
         name: 'Individually Aligned Fill',
         path: '/individually-aligned-fill',
         component: IndividuallyAlignedFill,
@@ -1114,6 +564,11 @@ const componentConfig = {
         name: 'Individually Aligned Fit Start',
         path: '/individually-aligned-fit-start',
         component: IndividuallyAlignedFitStart,
+      },
+      {
+        name: 'Examplesetup',
+        path: '/examplesetup',
+        component: Examplesetup,
       },
     ],
   },
@@ -1385,6 +840,11 @@ const componentConfig = {
         path: '/components',
         tests: [
           {
+            name: 'Date Time Picker DST',
+            path: '/date-time-picker-dst',
+            component: DateTimePickerDST,
+          },
+          {
             name: 'Date Time Picker Date Input Attributes',
             path: '/date-time-picker-date-input-attributes',
             component: DateTimePickerDateInputAttributes,
@@ -1413,11 +873,6 @@ const componentConfig = {
             name: 'Date Time Picker Default Date Time',
             path: '/date-time-picker-default-date-time',
             component: DateTimePickerDefaultDateTime,
-          },
-          {
-            name: 'Date Time Picker DST',
-            path: '/date-time-picker-dst',
-            component: DateTimePickerDST,
           },
           {
             name: 'Date Time Picker Exclude Dates',
@@ -1737,11 +1192,6 @@ const componentConfig = {
             component: DisabledSelectOption,
           },
           {
-            name: 'Selected Select Option',
-            path: '/selected-select-option',
-            component: SelectedSelectOption,
-          },
-          {
             name: 'Select Option Long Text',
             path: '/select-option-long-text',
             component: SelectOptionLongText,
@@ -1750,6 +1200,11 @@ const componentConfig = {
             name: 'Select Option With Children',
             path: '/select-option-with-children',
             component: SelectOptionWithChildren,
+          },
+          {
+            name: 'Selected Select Option',
+            path: '/selected-select-option',
+            component: SelectedSelectOption,
           },
         ],
       },
@@ -2100,14 +1555,14 @@ const componentConfig = {
         component: HeadingSize,
       },
       {
-        name: 'Heading Visually Hidden',
-        path: '/heading-visually-hidden',
-        component: HeadingVisuallyHidden,
-      },
-      {
         name: 'Heading Visual Props',
         path: '/heading-visual-props',
         component: HeadingVisualProps,
+      },
+      {
+        name: 'Heading Visually Hidden',
+        path: '/heading-visually-hidden',
+        component: HeadingVisuallyHidden,
       },
       {
         name: 'Heading Weight',
@@ -3083,6 +2538,551 @@ const componentConfig = {
       },
     ],
   },
+  'terra-site-examples': {
+    name: 'Site Examples',
+    path: '/site-examples',
+    pages: [
+      {
+        name: 'Alert',
+        path: '/alert',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex,
+          },
+        ],
+      },
+      {
+        name: 'Arrange',
+        path: '/arrange',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex1,
+          },
+        ],
+      },
+      {
+        name: 'Badge',
+        path: '/badge',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex2,
+          },
+        ],
+      },
+      {
+        name: 'Base',
+        path: '/base',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex3,
+          },
+        ],
+      },
+      {
+        name: 'Button Group',
+        path: '/button-group',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex4,
+          },
+        ],
+      },
+      {
+        name: 'Button',
+        path: '/button',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex5,
+          },
+        ],
+      },
+      {
+        name: 'Card',
+        path: '/card',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex6,
+          },
+        ],
+      },
+      {
+        name: 'Collapsible Menu View',
+        path: '/collapsible-menu-view',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex7,
+          },
+        ],
+      },
+      {
+        name: 'Content Container',
+        path: '/content-container',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex8,
+          },
+        ],
+      },
+      {
+        name: 'Date Picker',
+        path: '/date-picker',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex9,
+          },
+        ],
+      },
+      {
+        name: 'Date Time Picker',
+        path: '/date-time-picker',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex10,
+          },
+        ],
+      },
+      {
+        name: 'Demographics Banner',
+        path: '/demographics-banner',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex11,
+          },
+        ],
+      },
+      {
+        name: 'Dialog',
+        path: '/dialog',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex12,
+          },
+        ],
+      },
+      {
+        name: 'Divider',
+        path: '/divider',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex13,
+          },
+        ],
+      },
+      {
+        name: 'Dynamic Grid',
+        path: '/dynamic-grid',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex14,
+          },
+        ],
+      },
+      {
+        name: 'Embedded Content Consumer',
+        path: '/embedded-content-consumer',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex15,
+          },
+        ],
+      },
+      {
+        name: 'Form Checkbox',
+        path: '/form-checkbox',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex16,
+          },
+        ],
+      },
+      {
+        name: 'Form Field',
+        path: '/form-field',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex17,
+          },
+        ],
+      },
+      {
+        name: 'Form Radio',
+        path: '/form-radio',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex18,
+          },
+        ],
+      },
+      {
+        name: 'Form Select',
+        path: '/form-select',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex19,
+          },
+        ],
+      },
+      {
+        name: 'Form Textarea',
+        path: '/form-textarea',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex20,
+          },
+        ],
+      },
+      {
+        name: 'Form',
+        path: '/form',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex21,
+          },
+        ],
+      },
+      {
+        name: 'Grid',
+        path: '/grid',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex22,
+          },
+        ],
+      },
+      {
+        name: 'Heading',
+        path: '/heading',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex23,
+          },
+        ],
+      },
+      {
+        name: 'Hookshot',
+        path: '/hookshot',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex24,
+          },
+        ],
+      },
+      {
+        name: 'I 18 N',
+        path: '/i-18-n',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex25,
+          },
+        ],
+      },
+      {
+        name: 'Icon',
+        path: '/icon',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex26,
+          },
+        ],
+      },
+      {
+        name: 'Image',
+        path: '/image',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex27,
+          },
+        ],
+      },
+      {
+        name: 'List',
+        path: '/list',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex28,
+          },
+        ],
+      },
+      {
+        name: 'Menu',
+        path: '/menu',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex29,
+          },
+        ],
+      },
+      {
+        name: 'Modal',
+        path: '/modal',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex30,
+          },
+        ],
+      },
+      {
+        name: 'Overlay',
+        path: '/overlay',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex31,
+          },
+        ],
+      },
+      {
+        name: 'Popup',
+        path: '/popup',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex32,
+          },
+        ],
+      },
+      {
+        name: 'Profile Image',
+        path: '/profile-image',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex33,
+          },
+        ],
+      },
+      {
+        name: 'Progress Bar',
+        path: '/progress-bar',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex34,
+          },
+        ],
+      },
+      {
+        name: 'Responsive Element',
+        path: '/responsive-element',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex35,
+          },
+        ],
+      },
+      {
+        name: 'Search Field',
+        path: '/search-field',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex36,
+          },
+        ],
+      },
+      {
+        name: 'Signature',
+        path: '/signature',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex37,
+          },
+        ],
+      },
+      {
+        name: 'Slide Group',
+        path: '/slide-group',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex38,
+          },
+        ],
+      },
+      {
+        name: 'Slide Panel',
+        path: '/slide-panel',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex39,
+          },
+        ],
+      },
+      {
+        name: 'Spacer',
+        path: '/spacer',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex40,
+          },
+        ],
+      },
+      {
+        name: 'Status View',
+        path: '/status-view',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex41,
+          },
+        ],
+      },
+      {
+        name: 'Status',
+        path: '/status',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex42,
+          },
+        ],
+      },
+      {
+        name: 'Table',
+        path: '/table',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex43,
+          },
+        ],
+      },
+      {
+        name: 'Tabs',
+        path: '/tabs',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex44,
+          },
+        ],
+      },
+      {
+        name: 'Text',
+        path: '/text',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex45,
+          },
+        ],
+      },
+      {
+        name: 'Time Input',
+        path: '/time-input',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex46,
+          },
+        ],
+      },
+      {
+        name: 'Toggle Button',
+        path: '/toggle-button',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex47,
+          },
+        ],
+      },
+      {
+        name: 'Toggle',
+        path: '/toggle',
+        pages: [
+          {
+            name: 'Index',
+            path: '/index',
+            component: TerraSiteExamplesIndex48,
+          },
+        ],
+      },
+    ],
+  },
   'terra-slide-group': {
     name: 'Slide Group',
     path: '/slide-group',
@@ -3191,11 +3191,6 @@ const componentConfig = {
         component: DefaultSpacer,
       },
       {
-        name: 'Spacer Large',
-        path: '/spacer-large',
-        component: SpacerLarge,
-      },
-      {
         name: 'Spacer Large 1',
         path: '/spacer-large-1',
         component: SpacerLarge1,
@@ -3214,6 +3209,11 @@ const componentConfig = {
         name: 'Spacer Large 4',
         path: '/spacer-large-4',
         component: SpacerLarge4,
+      },
+      {
+        name: 'Spacer Large',
+        path: '/spacer-large',
+        component: SpacerLarge,
       },
       {
         name: 'Spacer Medium',
@@ -3319,6 +3319,195 @@ const componentConfig = {
       },
     ],
   },
+  'terra-table': {
+    name: 'Table',
+    path: '/table',
+    tests: [
+      {
+        name: 'Multi Select Table',
+        path: '/multi-select-table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'Multi Row Selectable Table',
+                path: '/multi-row-selectable-table',
+                component: MultiRowSelectableTable,
+              },
+              {
+                name: 'Multi Row Selectable Table Max Count',
+                path: '/multi-row-selectable-table-max-count',
+                component: MultiRowSelectableTableMaxCount,
+              },
+              {
+                name: 'Multi Row Selectable Table Max Count Initially Exceeded',
+                path: '/multi-row-selectable-table-max-count-initially-exceeded',
+                component: MultiRowSelectableTableMaxCountInitiallyExceeded,
+              },
+              {
+                name: 'Multi Row Selectable Table Max Count Initially Met',
+                path: '/multi-row-selectable-table-max-count-initially-met',
+                component: MultiRowSelectableTableMaxCountInitiallyMet,
+              },
+              {
+                name: 'Multi Row Selectable Table Non Selectable',
+                path: '/multi-row-selectable-table-non-selectable',
+                component: MultiRowSelectableTableNonSelectable,
+              },
+              {
+                name: 'Multi Row Selectable Table On Change',
+                path: '/multi-row-selectable-table-on-change',
+                component: MultiRowSelectableTableOnChange,
+              },
+              {
+                name: 'Multi Row Selectable Table Preselected',
+                path: '/multi-row-selectable-table-preselected',
+                component: MultiRowSelectableTablePreselected,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Selectable Table',
+        path: '/selectable-table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'Selectable Table Rows And Subheaders',
+                path: '/selectable-table-rows-and-subheaders',
+                component: SelectableTableRowsAndSubheaders,
+              },
+              {
+                name: 'Selectable Table Rows Default',
+                path: '/selectable-table-rows-default',
+                component: SelectableTableRowsDefault,
+              },
+              {
+                name: 'Selectable Table Rows Disabled',
+                path: '/selectable-table-rows-disabled',
+                component: SelectableTableRowsDisabled,
+              },
+              {
+                name: 'Selectable Table Rows No Rows',
+                path: '/selectable-table-rows-no-rows',
+                component: SelectableTableRowsNoRows,
+              },
+              {
+                name: 'Selectable Table Rows Non Selectable',
+                path: '/selectable-table-rows-non-selectable',
+                component: SelectableTableRowsNonSelectable,
+              },
+              {
+                name: 'Selectable Table Rows On Change',
+                path: '/selectable-table-rows-on-change',
+                component: SelectableTableRowsOnChange,
+              },
+              {
+                name: 'Selectable Table Rows One Row',
+                path: '/selectable-table-rows-one-row',
+                component: SelectableTableRowsOneRow,
+              },
+              {
+                name: 'Selectable Table Rows Preselected',
+                path: '/selectable-table-rows-preselected',
+                component: SelectableTableRowsPreselected,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Single Select Table',
+        path: '/single-select-table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'Selectable Table',
+                path: '/selectable-table',
+                component: SelectableTable,
+              },
+              {
+                name: 'Single Row Selectable Table Non Selectable',
+                path: '/single-row-selectable-table-non-selectable',
+                component: SingleRowSelectableTableNonSelectable,
+              },
+              {
+                name: 'Single Row Selectable Table On Change',
+                path: '/single-row-selectable-table-on-change',
+                component: SingleRowSelectableTableOnChange,
+              },
+              {
+                name: 'Single Row Selectable Table Preselected',
+                path: '/single-row-selectable-table-preselected',
+                component: SingleRowSelectableTablePreselected,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Table',
+        path: '/table',
+        tests: [
+          {
+            name: 'Components',
+            path: '/components',
+            tests: [
+              {
+                name: 'No Padding Table',
+                path: '/no-padding-table',
+                component: NoPaddingTable,
+              },
+              {
+                name: 'No Striped Table',
+                path: '/no-striped-table',
+                component: NoStripedTable,
+              },
+              {
+                name: 'Single Row Table',
+                path: '/single-row-table',
+                component: SingleRowTable,
+              },
+              {
+                name: 'Striped Table',
+                path: '/striped-table',
+                component: StripedTable,
+              },
+              {
+                name: 'Table No Rows',
+                path: '/table-no-rows',
+                component: TableNoRows,
+              },
+              {
+                name: 'Table With Highlighted Rows',
+                path: '/table-with-highlighted-rows',
+                component: TableWithHighlightedRows,
+              },
+              {
+                name: 'Table With Sort Indicator',
+                path: '/table-with-sort-indicator',
+                component: TableWithSortIndicator,
+              },
+              {
+                name: 'Table With Subheaders',
+                path: '/table-with-subheaders',
+                component: TableWithSubheaders,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   'terra-tabs': {
     name: 'Tabs',
     path: '/tabs',
@@ -3412,14 +3601,14 @@ const componentConfig = {
         component: TextItalics,
       },
       {
-        name: 'Text Visually Hidden',
-        path: '/text-visually-hidden',
-        component: TextVisuallyHidden,
-      },
-      {
         name: 'Text Visual Props',
         path: '/text-visual-props',
         component: TextVisualProps,
+      },
+      {
+        name: 'Text Visually Hidden',
+        path: '/text-visually-hidden',
+        component: TextVisuallyHidden,
       },
       {
         name: 'Text Weight',
@@ -3569,195 +3758,6 @@ const componentConfig = {
         name: 'Open Toggle',
         path: '/open-toggle',
         component: OpenToggle,
-      },
-    ],
-  },
-  'terra-table': {
-    name: 'Table',
-    path: '/table',
-    tests: [
-      {
-        name: 'Multi Select Table',
-        path: '/multi-select-table',
-        tests: [
-          {
-            name: 'Components',
-            path: '/components',
-            tests: [
-              {
-                name: 'Multi Row Selectable Table',
-                path: '/multi-row-selectable-table',
-                component: MultiRowSelectableTable,
-              },
-              {
-                name: 'Multi Row Selectable Table Max Count',
-                path: '/multi-row-selectable-table-max-count',
-                component: MultiRowSelectableTableMaxCount,
-              },
-              {
-                name: 'Multi Row Selectable Table Max Count Initially Exceeded',
-                path: '/multi-row-selectable-table-max-count-initially-exceeded',
-                component: MultiRowSelectableTableMaxCountInitiallyExceeded,
-              },
-              {
-                name: 'Multi Row Selectable Table Max Count Initially Met',
-                path: '/multi-row-selectable-table-max-count-initially-met',
-                component: MultiRowSelectableTableMaxCountInitiallyMet,
-              },
-              {
-                name: 'Multi Row Selectable Table Non Selectable',
-                path: '/multi-row-selectable-table-non-selectable',
-                component: MultiRowSelectableTableNonSelectable,
-              },
-              {
-                name: 'Multi Row Selectable Table On Change',
-                path: '/multi-row-selectable-table-on-change',
-                component: MultiRowSelectableTableOnChange,
-              },
-              {
-                name: 'Multi Row Selectable Table Preselected',
-                path: '/multi-row-selectable-table-preselected',
-                component: MultiRowSelectableTablePreselected,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'Selectable Table',
-        path: '/selectable-table',
-        tests: [
-          {
-            name: 'Components',
-            path: '/components',
-            tests: [
-              {
-                name: 'Selectable Table Rows And Subheaders',
-                path: '/selectable-table-rows-and-subheaders',
-                component: SelectableTableRowsAndSubheaders,
-              },
-              {
-                name: 'Selectable Table Rows Default',
-                path: '/selectable-table-rows-default',
-                component: SelectableTableRowsDefault,
-              },
-              {
-                name: 'Selectable Table Rows Disabled',
-                path: '/selectable-table-rows-disabled',
-                component: SelectableTableRowsDisabled,
-              },
-              {
-                name: 'Selectable Table Rows Non Selectable',
-                path: '/selectable-table-rows-non-selectable',
-                component: SelectableTableRowsNonSelectable,
-              },
-              {
-                name: 'Selectable Table Rows No Rows',
-                path: '/selectable-table-rows-no-rows',
-                component: SelectableTableRowsNoRows,
-              },
-              {
-                name: 'Selectable Table Rows On Change',
-                path: '/selectable-table-rows-on-change',
-                component: SelectableTableRowsOnChange,
-              },
-              {
-                name: 'Selectable Table Rows One Row',
-                path: '/selectable-table-rows-one-row',
-                component: SelectableTableRowsOneRow,
-              },
-              {
-                name: 'Selectable Table Rows Preselected',
-                path: '/selectable-table-rows-preselected',
-                component: SelectableTableRowsPreselected,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'Single Select Table',
-        path: '/single-select-table',
-        tests: [
-          {
-            name: 'Components',
-            path: '/components',
-            tests: [
-              {
-                name: 'Selectable Table',
-                path: '/selectable-table',
-                component: SelectableTable,
-              },
-              {
-                name: 'Single Row Selectable Table Non Selectable',
-                path: '/single-row-selectable-table-non-selectable',
-                component: SingleRowSelectableTableNonSelectable,
-              },
-              {
-                name: 'Single Row Selectable Table On Change',
-                path: '/single-row-selectable-table-on-change',
-                component: SingleRowSelectableTableOnChange,
-              },
-              {
-                name: 'Single Row Selectable Table Preselected',
-                path: '/single-row-selectable-table-preselected',
-                component: SingleRowSelectableTablePreselected,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'Table',
-        path: '/table',
-        tests: [
-          {
-            name: 'Components',
-            path: '/components',
-            tests: [
-              {
-                name: 'No Padding Table',
-                path: '/no-padding-table',
-                component: NoPaddingTable,
-              },
-              {
-                name: 'No Striped Table',
-                path: '/no-striped-table',
-                component: NoStripedTable,
-              },
-              {
-                name: 'Single Row Table',
-                path: '/single-row-table',
-                component: SingleRowTable,
-              },
-              {
-                name: 'Striped Table',
-                path: '/striped-table',
-                component: StripedTable,
-              },
-              {
-                name: 'Table No Rows',
-                path: '/table-no-rows',
-                component: TableNoRows,
-              },
-              {
-                name: 'Table With Highlighted Rows',
-                path: '/table-with-highlighted-rows',
-                component: TableWithHighlightedRows,
-              },
-              {
-                name: 'Table With Sort Indicator',
-                path: '/table-with-sort-indicator',
-                component: TableWithSortIndicator,
-              },
-              {
-                name: 'Table With Subheaders',
-                path: '/table-with-subheaders',
-                component: TableWithSubheaders,
-              },
-            ],
-          },
-        ],
       },
     ],
   },

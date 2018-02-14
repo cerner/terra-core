@@ -22,7 +22,7 @@ describe('Radio', () => {
 
   describe('Default', () => {
     beforeEach(() => {
-      browser.url('/#/tests/form-radio-tests/default');
+      browser.url('/#/raw/tests/form-radio/default-radio');
     });
 
     Terra.should.matchScreenshot();
@@ -259,7 +259,7 @@ describe('Radio', () => {
 
   describe('Disabled', () => {
     beforeEach(() => {
-      browser.url('/#/tests/form-radio-tests/disabled');
+      browser.url('/#/raw/tests/form-radio/disabled-radio');
     });
 
     Terra.should.matchScreenshot();
@@ -307,7 +307,7 @@ describe('Radio', () => {
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/tests/form-radio-tests/hidden'));
+    beforeEach(() => browser.url('/#/raw/tests/form-radio/hidden-radio'));
 
     Terra.should.matchScreenshot();
     Terra.should.beAccessible();

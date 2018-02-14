@@ -2,6 +2,8 @@ import React from 'react';
 
 import ButtonGroup from '../../lib/ButtonGroup';
 
+const spacingStyle = { padding: '20px' };
+
 const DefaultButtonGroup = () => (
   <ButtonGroup
     id="button-group-variant"
@@ -18,7 +20,10 @@ const SecondaryButtonGroup = () => (
   />
 );
 
-export {
-  DefaultButtonGroup,
-  SecondaryButtonGroup,
-};
+export default () => (
+  <div>
+    <DefaultButtonGroup />
+    <div style={spacingStyle} />
+    <SecondaryButtonGroup />
+  </div>
+);

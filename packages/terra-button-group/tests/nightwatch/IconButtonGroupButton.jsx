@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonGroup from '../../lib/ButtonGroup';
 
+const spacingStyle = { padding: '20px' };
 const iconStyle = { backgroundColor: 'black', height: '1em', width: '1em' };
 const icon = <span style={iconStyle} className="test"><svg width="1em" height="1em"><rect width="1em" height="1em" /></svg></span>;
 
@@ -26,8 +27,12 @@ const IconOnlyButtonGroup = () => (
   />
 );
 
-export {
-  IconDefaultButtonGroup,
-  IconReversedButtonGroup,
-  IconOnlyButtonGroup,
-};
+export default () => (
+  <div>
+    <IconDefaultButtonGroup />
+    <div style={spacingStyle} />
+    <IconReversedButtonGroup />
+    <div style={spacingStyle} />
+    <IconOnlyButtonGroup />
+  </div>
+);
