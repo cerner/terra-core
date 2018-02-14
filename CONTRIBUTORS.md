@@ -48,6 +48,7 @@ Cerner Corporation
 - Noah Benham [@noahbenham]
 - Andy Nelson [@anelson425]
 - Dan Plubell [@danplubell]
+- Sruti Paku [@paku-sruti]
 - Cyrus Duong [@cyrusduong]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
@@ -98,4 +99,5 @@ Cerner Corporation
 [@noahbenham]: https://github.com/noahbenham
 [@anelson425]: https://github.com/anelson425
 [@danplubell]: https://github.com/danplubell
+[@paku-sruti]: https://github.com/paku-sruti
 [@cyrusduong]: https://github.com/cyrusduong
