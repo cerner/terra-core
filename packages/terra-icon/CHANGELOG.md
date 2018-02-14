@@ -4,6 +4,17 @@ Changelog
 Unreleased
 ----------
 
+2.0.0 - (February 12, 2018)
+------------------
+### Changed
+* Updated to use React 16
+* Changed focusable prop from a boolean to a string
+
+1.17.0 - (February 1, 2018)
+------------------
+### Changed
+* Minor version bump
+
 1.16.0 - (January 18, 2018)
 ------------------
 ### Changed

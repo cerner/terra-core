@@ -15,7 +15,7 @@ configuration. The component supports defining custom regions across multiple re
 ```jsx
 import React from 'react';
 import DynamicGrid from 'terra-dynamic-grid';
-import Region from 'terra-dynamic-grid/Region';
+import Region from 'terra-dynamic-grid/lib/Region';
 
 const template = {
   'grid-template-columns': '1fr 1fr',

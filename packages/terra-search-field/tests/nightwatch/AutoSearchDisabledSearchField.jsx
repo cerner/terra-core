@@ -1,5 +1,8 @@
 import React from 'react';
+import Base from 'terra-base';
 import SearchField from '../../lib/SearchField';
+
+const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
 class AutoSearchDisabledSearchField extends React.Component {
 
@@ -25,13 +28,13 @@ class AutoSearchDisabledSearchField extends React.Component {
 
   render() {
     return (
-      <div>
+      <Base locale={locale}>
         <h3> Auto Searching is Disabled </h3>
         <SearchField id="searchfield" onSearch={this.handleSearch} onInvalidSearch={this.handleInvalidSearch} disableAutoSearch />
         <div id="search-callback-text">
           {this.state.message}{this.state.searchText}
         </div>
-      </div>
+      </Base>
     );
   }
 

@@ -76,6 +76,8 @@ class TabMenu extends React.Component {
 
   wrapOnClick(child) {
     return (event) => {
+      event.stopPropagation();
+
       if (child.props.onClick) {
         child.props.onClick(event);
       }

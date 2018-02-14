@@ -40,6 +40,9 @@ const config = {
       }],
     },
   },
+  terra: {
+    selector: '#wdio-test-wrapper',
+  },
 
   terra: {
     selector: '[data-terra-site-content] *:first-child',

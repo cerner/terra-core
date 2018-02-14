@@ -3,6 +3,21 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Offscreen tab access in the panel removed
+
+2.0.0 - (February 12, 2018)
+------------------
+### Changed
+* Updated to use React 16
+
+### Fixed
+* CSS bug in calculated squish behavior
+
+1.16.0 - (February 1, 2018)
+------------------
+### Changed
+* Minor version bump
 
 1.15.0 - (January 18, 2018)
 ------------------

@@ -5,9 +5,7 @@
     "publish": {
       "ignore": [
         "DEPENDENCIES.md",
-        "terra-button",
-        "terra-dialog",
-        "terra-site-examples"
+        "terra-dialog"
       ]
     }
   },

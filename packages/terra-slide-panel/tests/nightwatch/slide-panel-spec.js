@@ -49,7 +49,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   'Displays a the SlidePanel with isOpen prop set': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/slide-panel/components/slide-panel-open`);
     browser.expect.element('#test-example').to.have.attribute('class').which.contains('is-open');
-    browser.expect.element('#test-example > div[class*="panel"]:first-child').to.not.have.attribute('aria-hidden');
+    browser.expect.element('#test-example > div[class*="panel"]:first-child').to.have.attribute('aria-hidden').equals('false');
   },
 
   'Displays a the SlidePanel with isFullscreen prop set': (browser) => {

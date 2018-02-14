@@ -45,13 +45,13 @@ describe('Icon', () => {
     });
 
     describe('focusable prop', () => {
-      it('should have default focusable={false}', () => {
+      it('should have default focusable="false"', () => {
         const wrapper = shallow(<IconAdd />);
-        expect(wrapper.prop('focusable')).toEqual(false);
+        expect(wrapper.prop('focusable')).toEqual('false');
       });
-      it('should have focusable={true}', () => {
-        const wrapper = shallow(<IconAdd focusable />);
-        expect(wrapper.prop('focusable')).toEqual(true);
+      it('should have focusable="true"', () => {
+        const wrapper = shallow(<IconAdd focusable="true" />);
+        expect(wrapper.prop('focusable')).toEqual('true');
       });
     });
 
@@ -126,13 +126,13 @@ describe('Icon', () => {
     });
 
     describe('focusable prop', () => {
-      it('should have default focusable={false}', () => {
+      it('should have default focusable="false"', () => {
         const wrapper = shallow(<IconSpinner />);
-        expect(wrapper.prop('focusable')).toEqual(false);
+        expect(wrapper.prop('focusable')).toEqual('false');
       });
-      it('should have focusable={true}', () => {
-        const wrapper = shallow(<IconSpinner focusable />);
-        expect(wrapper.prop('focusable')).toEqual(true);
+      it('should have focusable="true"', () => {
+        const wrapper = shallow(<IconSpinner focusable="true" />);
+        expect(wrapper.prop('focusable')).toEqual('true');
       });
     });
 
@@ -212,13 +212,13 @@ describe('Icon', () => {
     });
 
     describe('focusable prop', () => {
-      it('should have default focusable={false}', () => {
+      it('should have default focusable="false"', () => {
         const wrapper = shallow(<IconComment />);
-        expect(wrapper.prop('focusable')).toEqual(false);
+        expect(wrapper.prop('focusable')).toEqual('false');
       });
       it('should have focusable={true}', () => {
-        const wrapper = shallow(<IconComment focusable />);
-        expect(wrapper.prop('focusable')).toEqual(true);
+        const wrapper = shallow(<IconComment focusable="true" />);
+        expect(wrapper.prop('focusable')).toEqual('true');
       });
     });
 

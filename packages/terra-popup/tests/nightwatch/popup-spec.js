@@ -51,7 +51,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: auto;');
 
     browser.click('#overlay-button');
-    browser.assert.elementPresent('.test-content');
+    browser.expect.element('.test-content').to.be.present;
     browser.expect.element('#popup-overlay-test').to.have.attribute('style').which.equals('overflow: hidden;');
 
     browser.keys([browser.Keys.ESCAPE]);
