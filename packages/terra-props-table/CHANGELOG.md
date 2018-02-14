@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Added styling to force long Props Table entries to line wrap
+* Added styling to wrap long prop-type 'type' entries
 
 2.0.0 - (February 12, 2018)
 ------------------

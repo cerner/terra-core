@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { parse } from 'react-docgen';
 import Markdown from 'terra-markdown';
+import classNames from 'classnames/bind';
 import styles from './PropsTable.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -33,19 +36,19 @@ function determineType(type) {
     }
   } else if (typeName === 'arrayOf') {
     if (type.value.name === 'shape') {
-      typeName = <span> array of objects structured like: <pre className={styles.props_table_pre}> {formatShape(type.value.value)} </pre></span>;
+      typeName = <span> array of objects structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value.value)} </pre></span>;
     } else {
       typeName = `array of ${type.value.name}s`;
     }
   } else if (typeName === 'union') {
     const options = type.value.map((option) => {
       const name = option.name === 'shape' ? (<span key={option.value}> an object structured like:
-        <pre className={styles.props_table_pre}> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
+        <pre className={cx('props-table-pre')}> {formatShape(option.value)} </pre></span>) : (<span key={option.name}> {option.name}</span>);
       return name;
     });
     typeName = options.reduce((curr, next) => [curr, <span key={`${curr.value}-${next.value}`}> or </span>, next]);
   } else if (typeName === 'shape') {
-    typeName = <span> an object structured like: <pre className={styles.props_table_pre}> {formatShape(type.value)} </pre></span>;
+    typeName = <span> an object structured like: <pre className={cx('props-table-pre')}> {formatShape(type.value)} </pre></span>;
   }
 
   return typeName;
@@ -73,11 +76,11 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
       <table {...customProps}>
         <thead>
           <tr>
-            <th className={styles.prop_table_name}>Prop Name</th>
-            <th className={styles.prop_table_type}>Type</th>
-            <th className={styles.prop_table_required}>Is Required</th>
-            <th className={styles.prop_table_default}>Default Value</th>
-            <th className={styles.prop_table_description}>Description</th>
+            <th className={cx('prop-table-name')}>Prop Name</th>
+            <th className={cx('prop-table-type')}>Type</th>
+            <th className={cx('prop-table-required')}>Is Required</th>
+            <th className={cx('prop-table-default')}>Default Value</th>
+            <th className={cx('prop-table-description')}>Description</th>
           </tr>
         </thead>
         <tbody>
