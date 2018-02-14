@@ -2,4 +2,12 @@
     .props_table_pre {
         white-space: pre-wrap;
     }
+
+    .prop_table_name .prop_table_required .prop_table_default {
+        max-width: 10%;
+    }
+
+    .prop_table_type .prop_table_description {
+        max-width: 35%;
+    }
 }
