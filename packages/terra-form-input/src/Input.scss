@@ -3,6 +3,8 @@
     background-color: var(--terra-form-input-background-color, #fff);
     background-image: var(--terra-form-input-focus-animation-background, none);
     background-size: var(--terra-form-input-focus-background-start, 0 0);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
     border: var(--terra-form-input-border, 1px solid #4a4a4a);
     border-radius: var(--terra-form-input-border-radius, 0.2rem);
     box-shadow: var(--terra-form-input-box-shadow, none);
