@@ -1,7 +1,7 @@
 {
   "name": "terra-content-container",
   "main": "lib/ContentContainer.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The Terra ContentContainer is a structural component for the purpose of arranging content with a header.",
   "repository": {
     "type": "git",
