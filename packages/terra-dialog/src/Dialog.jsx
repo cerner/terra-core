@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ContentContainer from 'terra-content-container';
-import Button from 'terra-button';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import styles from './Dialog.scss';
 
 const cx = classNames.bind(styles);
@@ -40,7 +38,7 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
     'dialog',
   ]);
 
-  const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button icon={<IconClose />} aria-label="Close Button" onClick={onClose} isIconOnly /></div> : null;
+  const closeButton = onClose ? <div className={cx('dialog-header-close')}><button className={cx('close')} onClick={onClose}><span className={cx('close-icon')} /></button></div> : null;
 
   const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
 
