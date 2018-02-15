@@ -45,8 +45,9 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/Overlay.jsx ./src/OverlayContainer.jsx ./src/LoadingOverlay.jsx --out-dir ./docs/props-table",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:nightwatch && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }
