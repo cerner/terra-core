@@ -118,4 +118,8 @@
     height: 100%;
     width: 100%;
   }
+
+  .panel[aria-hidden='true'] {
+    visibility: hidden;
+  }
 }
