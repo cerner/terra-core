@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Removed unclear button variant example
 
 2.0.0 - (February 12, 2018)
 ------------------
