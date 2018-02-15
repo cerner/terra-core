@@ -46,6 +46,12 @@
       max-width: 100%; //stops content overflow on IE 10/11
       user-select: none;
     }
+
+    .label-text.is-mobile {
+      display: inline-block;
+      vertical-align: var(--terra-form-checkbox-is-mobile-label-text-vertical-align);
+    }
+
     /* stylelint-enable property-no-vendor-prefix */
 
     /* Custom checkbox shown when theme uses custom styling */

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Theming variables for label-text alignment inline to checkbox
 
 2.0.0 - (February 12, 2018)
 ------------------
