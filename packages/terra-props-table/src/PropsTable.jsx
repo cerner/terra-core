@@ -70,6 +70,8 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
    */
   const componentProps = componentMetaData.props;
 
+  const tableEntryClass = cx('prop-table-element');
+
   return (
     <div dir="ltr" className="markdown-body">
       <h2>{componentName} Props</h2>
@@ -90,15 +92,15 @@ const PropsTable = ({ componentName, src, ...customProps }) => {
 
             return (
               <tr key={key} style={{ fontSize: '90%' }}>
-                <td style={{ fontWeight: 'bold' }}>{key}</td>
-                <td>{(prop.type ? type : '')}</td>
+                <td className={tableEntryClass} style={{ fontWeight: 'bold' }}>{key}</td>
+                <td className={tableEntryClass}>{(prop.type ? type : '')}</td>
                 {(prop.required ?
-                  <td style={{ color: '#d53700' }}>required</td>
-              : <td style={{ color: '#444' }}>optional</td>)}
+                  <td className={tableEntryClass} style={{ color: '#d53700' }}>required</td>
+              : <td className={tableEntryClass} style={{ color: '#444' }}>optional</td>)}
                 {(prop.defaultValue ?
-                  <td style={{ fontWeight: 'bold' }}>{prop.defaultValue.value}</td>
-              : <td style={{ color: '#444' }}>none</td>)}
-                <td><Markdown src={prop.description} /></td>
+                  <td className={tableEntryClass} style={{ fontWeight: 'bold' }}>{prop.defaultValue.value}</td>
+              : <td className={tableEntryClass} style={{ color: '#444' }}>none</td>)}
+                <td className={tableEntryClass}><Markdown src={prop.description} /></td>
               </tr>
             );
           })}
