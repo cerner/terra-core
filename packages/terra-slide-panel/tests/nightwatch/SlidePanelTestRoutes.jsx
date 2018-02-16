@@ -14,6 +14,7 @@ import SlidePanelOpen from './components/SlidePanelOpen';
 import SlidePanelFill from './components/SlidePanelFill';
 import SlidePanelFullscreen from './components/SlidePanelFullscreen';
 import SlidePanelSquishLarge from '../../examples/test-examples/SlidePanelSquishLarge';
+import SlidePanelToggle from '../../examples/test-examples/SlidePanelToggle';
 
 const routes = (
   <div>
@@ -29,6 +30,7 @@ const routes = (
     <Route path="/tests/slide-panel-tests/fill" component={SlidePanelFill} />
     <Route path="/tests/slide-panel-tests/fullscreen" component={SlidePanelFullscreen} />
     <Route path="/tests/slide-panel-tests/behavior-squish-size-large" component={SlidePanelSquishLarge} />
+    <Route path="/tests/slide-panel-tests/toggle" component={SlidePanelToggle} />
   </div>
 );
 

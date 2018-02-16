@@ -17,6 +17,7 @@ const SlidePanelTests = () => (
       <li><Link to="/tests/slide-panel-tests/fill">SlidePanel - Fill</Link></li>
       <li><Link to="/tests/slide-panel-tests/fullscreen">SlidePanel - Fullscreen</Link></li>
       <li><Link to="/tests/slide-panel-tests/behavior-squish-size-large">SlidePanel - SquishLarge</Link></li>
+      <li><Link to="/tests/slide-panel-tests/toggle">SlidePanel - Toggle</Link></li>
     </ul>
   </div>
 );

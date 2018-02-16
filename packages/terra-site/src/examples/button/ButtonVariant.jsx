@@ -10,7 +10,6 @@ const ButtonVariant = () => (
     <Button text="Emphasis" variant="emphasis" style={buttonStyle} />
     <Button text="De-emphasis" variant="de-emphasis" style={buttonStyle} />
     <Button text="Action" variant="action" icon={<IconEdit />} style={buttonStyle} />
-    <Button isIconOnly text="Action" variant="action" icon={<IconEdit />} style={buttonStyle} />
     <Button text="Utility" variant="utility" icon={<IconEdit />} style={buttonStyle} />
   </div>
 );
