@@ -41,6 +41,7 @@
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
     "terra-base": "^3.0.0",
+    "terra-button": "^2.0.1",
     "terra-content-container": "^2.0.1",
     "terra-hookshot": "^2.0.1",
     "terra-icon": "^2.0.1"
