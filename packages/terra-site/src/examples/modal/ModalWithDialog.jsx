@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'terra-modal';
 import Dialog from 'terra-dialog';
-import styles from '../../site.scss';
 
 class ModalWithDialog extends React.Component {
   constructor() {
