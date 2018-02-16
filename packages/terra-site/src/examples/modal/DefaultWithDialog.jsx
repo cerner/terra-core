@@ -31,7 +31,7 @@ class ModalIsOpen extends React.Component {
           onRequestClose={this.handleCloseModal}
         >
           <div style={{ height: '450px', width: '450px' }}>
-            <Dialog header={<h1>Default Modal</h1>} footer={<button onClick={this.handleCloseModal}>Close Modal</button>}>
+            <Dialog header={<h1>Default Modal</h1>} footer={<button onClick={this.handleCloseModal}>Close Modal</button>} onClose={this.handleCloseModal}>
               <p>You can close the modal by:</p>
               <ul>
                 <li>- Pressing the ESC key</li>
