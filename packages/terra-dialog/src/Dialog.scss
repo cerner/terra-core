@@ -19,7 +19,6 @@
   }
 
   .dialog-header-title {
-    margin-right: 0.7143rem;
     overflow: hidden;
     white-space: nowrap;
   }
@@ -30,17 +29,13 @@
   }
 
   .close {
-    background: var(--terra-dialog-close-button-background, 0 0);
-    border: var(--terra-dialog-close-button-border, 0);
+    background: var(--terra-dialog-close-button-background, transparent);
+    border: var(--terra-dialog-close-button-border, none);
     border-radius: var(--terra-dialog-close-button-border-radius);
     cursor: pointer;
     margin-left: var(--terra-dialog-close-button-margin-left, 0.3571rem);
     margin-right: var(--terra-dialog-close-button-margin-right, 0);
     padding: var(--terra-dialog-close-button-padding, 4px);
-
-    &:focus {
-      outline: var(--terra-dialog-close-button-focus-outline, none);
-    }
   }
 
   .close-icon {
