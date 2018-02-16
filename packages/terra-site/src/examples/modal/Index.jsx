@@ -12,6 +12,8 @@ import ModalSrc from '!raw-loader!terra-modal/src/Modal';
 import ModalIsOpened from './ModalIsOpened';
 import ModalCloseOnOutsideClick from './ModalCloseOnOutsideClick';
 import ModalIsFullscreen from './ModalIsFullscreen';
+import ModalWithDialog from './ModalWithDialog';
+import DefaultWithDialog from './DefaultWithDialog';
 
 const ModalExamples = () => (
   <div>
@@ -26,6 +28,10 @@ const ModalExamples = () => (
     <br />
     <h2 id="isFullscreen">Fullscreen Modal</h2>
     <ModalIsFullscreen />
+    <h2 id="fullWithDialog">Fullscreen Modal w/ Dialog</h2>
+    <ModalWithDialog />
+    <h2 id="defaultWithDialog">Default Modal w/ Dialog</h2>
+    <DefaultWithDialog />
   </div>
 );
 
