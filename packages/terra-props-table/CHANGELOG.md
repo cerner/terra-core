@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added styling to wrap long prop-type 'type' entries
+* Aligned Props Table entries to the top of their rows
 
 2.0.0 - (February 12, 2018)
 ------------------
