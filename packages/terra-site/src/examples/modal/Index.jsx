@@ -23,15 +23,16 @@ const ModalExamples = () => (
     <h2 id="isOpened">Default Modal</h2>
     <ModalIsOpened />
     <br />
+    <h2 id="defaultWithDialog">Default Modal w/ Dialog</h2>
+    <DefaultWithDialog />
     <h2 id="closeOnOutsideClick">Disable closing the modal when clicking on the overlay</h2>
     <ModalCloseOnOutsideClick />
     <br />
     <h2 id="isFullscreen">Fullscreen Modal</h2>
     <ModalIsFullscreen />
+    <br />
     <h2 id="fullWithDialog">Fullscreen Modal w/ Dialog</h2>
     <ModalWithDialog />
-    <h2 id="defaultWithDialog">Default Modal w/ Dialog</h2>
-    <DefaultWithDialog />
   </div>
 );
 
