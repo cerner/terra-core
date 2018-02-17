@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
+import Button from 'terra-button';
 import ContentContainer from 'terra-content-container';
-import ActionHeader from 'terra-clinical-action-header';
 import styles from './Dialog.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The text string to be placed within the header area of the dialog.
+   * React node to be placed within the header area of the dialog.
    */
-  header: PropTypes.string.isRequired,
+  header: PropTypes.node.isRequired,
   /**
-   * The footer element to be placed within the footer area of the dialog.
+   * React node to be placed within the footer area of the dialog.
+   * Content exceeding the available space will be hidden.
    */
   footer: PropTypes.node.isRequired,
   /**
@@ -38,11 +39,13 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
     'dialog',
   ]);
 
-  const actionHeader = <div className={cx('dialog-header')}><ActionHeader title={header} onClose={onClose} /></div>;
+  const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
+
+  const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
 
   return (
     <div className={dialogClassNames} {...customProps}>
-      <ContentContainer fill header={actionHeader} footer={<div className={cx('dialog-footer')}>{footer}</div>}>
+      <ContentContainer fill header={dialogHeader} footer={<div className={cx('dialog-footer')}>{footer}</div>}>
         <div className={cx('dialog-body')}>{children}</div>
       </ContentContainer>
     </div>
