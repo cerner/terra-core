@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const FormInputTests = () => (
+const InputTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/form-input-tests/default">Default</Link></li>
@@ -12,4 +12,4 @@ const FormInputTests = () => (
   </div>
 );
 
-export default FormInputTests;
+export default InputTests;

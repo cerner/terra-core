@@ -78,7 +78,7 @@ import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
-import FormInputTestRoutes from 'terra-form-input/tests/nightwatch/FormInputTestRoutes';
+import FormInputTestRoutes from 'terra-form-input/tests/nightwatch/InputTestRoutes';
 import FormRadioTestRoutes from 'terra-form-radio/tests/nightwatch/RadioTestRoutes';
 import FormTextareaRoutes from 'terra-form-textarea/tests/nightwatch/TextareaTestRoutes';
 import GridTestRoutes from 'terra-grid/tests/nightwatch/GridTestRoutes';

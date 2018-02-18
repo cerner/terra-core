@@ -1,8 +1,8 @@
 import React from 'react';
-import FormInput from '../../src/Input';
+import Input from '../../src/Input';
 
 describe('Input', () => {
-  const defaultRender = <FormInput />;
+  const defaultRender = <Input />;
 
   // Snapshot Tests
   it('should render a default component', () => {
@@ -11,26 +11,26 @@ describe('Input', () => {
   });
 
   it('should render as uncontrolled when just a default value is passed into the Input', () => {
-    const forminput = <FormInput defaultValue="foo" />;
-    const wrapper = render(forminput);
+    const input = <Input defaultValue="foo" />;
+    const wrapper = render(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render as controlled when just a default value and `onChange()` is passed into the Input', () => {
-    const forminput = <FormInput value="foo" onChange={() => {}} />;
-    const wrapper = render(forminput);
+    const input = <Input value="foo" onChange={() => {}} />;
+    const wrapper = render(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set the forminput to disabled when passed into the component', () => {
-    const forminput = <FormInput disabled />;
-    const wrapper = render(forminput);
+    const input = <Input disabled />;
+    const wrapper = render(input);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should set the forminput to invalid when isInvalid is passed into the component', () => {
-    const forminput = <FormInput isInvalid />;
-    const wrapper = render(forminput);
+    const input = <Input isInvalid />;
+    const wrapper = render(input);
     expect(wrapper).toMatchSnapshot();
   });
 });
