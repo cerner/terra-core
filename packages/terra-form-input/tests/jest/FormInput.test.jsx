@@ -1,7 +1,7 @@
 import React from 'react';
 import FormInput from '../../src/Input';
 
-describe('FormInput', () => {
+describe('Input', () => {
   const defaultRender = <FormInput />;
 
   // Snapshot Tests
@@ -10,13 +10,13 @@ describe('FormInput', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render as uncontrolled when just a default value is passed into the FormInput', () => {
+  it('should render as uncontrolled when just a default value is passed into the Input', () => {
     const forminput = <FormInput defaultValue="foo" />;
     const wrapper = render(forminput);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render as controlled when just a default value and `onChange()` is passed into the FormInput', () => {
+  it('should render as controlled when just a default value and `onChange()` is passed into the Input', () => {
     const forminput = <FormInput value="foo" onChange={() => {}} />;
     const wrapper = render(forminput);
     expect(wrapper).toMatchSnapshot();

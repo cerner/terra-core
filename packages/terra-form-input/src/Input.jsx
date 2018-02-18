@@ -64,7 +64,7 @@ const defaultProps = {
   value: undefined,
 };
 
-class FormInput extends React.Component {
+class Input extends React.Component {
   render() {
     const {
       defaultValue,
@@ -111,7 +111,7 @@ class FormInput extends React.Component {
   }
 }
 
-FormInput.propTypes = propTypes;
-FormInput.defaultProps = defaultProps;
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
 
-export default FormInput;
+export default Input;
