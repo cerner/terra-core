@@ -6,10 +6,6 @@ describe('Overlay', () => {
 
     Terra.should.beAccessible({ selector: '#default-overlay' });
     Terra.should.matchScreenshot({ selector: '#default-overlay' });
-
-    it('Expect default to have full screen', () => {
-      expect(browser.getAttribute('#default-overlay', 'class')).contains('fullscreen');
-    });
   });
 
   describe('Overlay container', () => {
@@ -37,11 +33,17 @@ describe('Overlay', () => {
     describe('OnRequestClose- Full Screen Overlay', () => {
       before(() => {
         browser.url('/#/tests/overlay-tests/on-request-close');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('Before');
+
+      it('Clicks on the Full screen overlay button', () => {
         browser.click('#trigger_fullscreen');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot('After');
     });
 
     it('Background does not scroll when a fullscreen Overlay is open', () => {
@@ -54,32 +56,50 @@ describe('Overlay', () => {
       before(() => {
         browser.url('/#/tests/overlay-tests/on-request-close');
         browser.click('#trigger_fullscreen');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('Before');
+
+      it('Escape key press', () => {
         browser.keys('Escape');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot('After');
     });
 
     describe('Full Screen Overlay- Triggers an onRequestClose on click inside of the Overlay', () => {
       before(() => {
         browser.url('/#/tests/overlay-tests/on-request-close');
         browser.click('#trigger_fullscreen');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('Before');
+
+      it('Click inside of the overlay', () => {
         browser.click('#terra-Overlay--fullscreen');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot('After');
     });
 
     describe('OnRequestClose- Container Overlay', () => {
       before(() => {
         browser.url('/#/tests/overlay-tests/on-request-close');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('Before');
+
+      it('Clicks on Container Overlay', () => {
         browser.click('#trigger_container');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot('After');
     });
 
     it('Container Overlay- Background can scroll when Overlay relative to contianer is open', () => {
@@ -92,22 +112,34 @@ describe('Overlay', () => {
       before(() => {
         browser.url('/#/tests/overlay-tests/on-request-close');
         browser.click('#trigger_container');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('Before');
+
+      it('Escape key press', () => {
         browser.keys('Escape');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot('After');
     });
 
     describe('Container Overlay-Triggers an onRequestClose on click inside of the Overlay', () => {
       before(() => {
         browser.url('/#/tests/overlay-tests/on-request-close');
         browser.click('#trigger_container');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot('Before');
+
+      it('Clicks on the inside of Overlay', () => {
         browser.click('#terra-Overlay--container');
       });
 
       Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot('After');
     });
   });
 
