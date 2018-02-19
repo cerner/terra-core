@@ -1,11 +1,11 @@
 import React from 'react';
 
-import FormInput from 'terra-form-input/lib/Input';
+import Input from 'terra-form-input';
 
 const DisabledErrorExample = () => (
   <div>
     <h4>Disabled</h4>
-    <FormInput
+    <Input
       disabled
       defaultValue="Disabled Error Example input – Uncontrolled"
       name="disabled input"

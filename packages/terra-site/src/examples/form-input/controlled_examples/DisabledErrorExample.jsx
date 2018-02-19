@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FormInput from 'terra-form-input/lib/Input';
+import Input from 'terra-form-input';
 
 class DisabledErrorExample extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class DisabledErrorExample extends React.Component {
     return (
       <div>
         <h4>Disabled</h4>
-        <FormInput
+        <Input
           disabled
           value={this.state.input}
           name="disabled input"

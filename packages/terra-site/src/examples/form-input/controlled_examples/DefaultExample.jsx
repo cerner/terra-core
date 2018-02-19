@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FormInput from 'terra-form-input/lib/Input';
+import Input from 'terra-form-input';
 
 class DefaultExample extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class DefaultExample extends React.Component {
     return (
       <div>
         <h4>Default</h4>
-        <FormInput
+        <Input
           name="default input"
           value={this.state.input}
           onChange={this.handleChange}

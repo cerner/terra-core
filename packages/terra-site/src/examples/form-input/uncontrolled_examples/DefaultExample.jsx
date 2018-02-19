@@ -1,11 +1,11 @@
 import React from 'react';
 
-import FormInput from 'terra-form-input/lib/Input';
+import Input from 'terra-form-input';
 
 const DefaultExample = () => (
   <div>
     <h4>Default</h4>
-    <FormInput
+    <Input
       name="default input"
       defaultValue="Default Input – Uncontrolled"
     />
