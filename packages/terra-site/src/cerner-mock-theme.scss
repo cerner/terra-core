@@ -108,21 +108,15 @@
   --terra-button-hover-color-action: rgba(0, 0, 0, 0.8);
 
   --terra-button-active-and-focus-background-color-utility: rgba(136, 168, 239, 0.5);
-  --terra-button-active-and-focus-border-color-utility: #c270f9;
-  --terra-button-active-and-focus-box-shadow-utility: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-active-and-focus-border-color-utility: none;
   --terra-button-active-background-color-utility: transparent;
-  --terra-button-active-border-color-utility: #c270f9;
-  --terra-button-active-color-utility: #1c1f21;
-  --terra-button-background-color-utility: #6206a0;
+  --terra-button-background-color-utility: transparent;
   --terra-button-border-color-utility: transparent;
-  --terra-button-box-shadow-utility: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
   --terra-button-color-utility: #d2f970;
-  --terra-button-focus-background-color-utility: #db973f;
-  --terra-button-focus-border-color-utility: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  --terra-button-focus-background-color-utility: rgba(136, 168, 239, 0.5);
   --terra-button-focus-box-shadow-utility: none;
   --terra-button-font-weight-utility: normal;
-  --terra-button-hover-background-color-utility: transparent;
-  --terra-button-hover-color-utility: #d2f970;
+  --terra-button-utility-border-radius: 100%;
 
   // terra-button-group
   --terra-button-group-button-background-color: rgba(136, 173, 232, 0.0);
