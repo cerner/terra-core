@@ -8,6 +8,10 @@ const InputTests = () => (
       <li><Link to="/tests/form-input-tests/default">Default</Link></li>
       <li><Link to="/tests/form-input-tests/invalid">Invalid</Link></li>
       <li><Link to="/tests/form-input-tests/disabled">Disabled</Link></li>
+      <li><Link to="/tests/form-input-tests/onChangeInput">On Change</Link></li>
+      <li><Link to="/tests/form-input-tests/onBlurInput">On Blur</Link></li>
+      <li><Link to="/tests/form-input-tests/onFocusInput">On Focus</Link></li>
+      <li><Link to="/tests/form-input-tests/required">Required</Link></li>
     </ul>
   </div>
 );
