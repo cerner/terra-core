@@ -43,8 +43,7 @@
     "terra-base": "^3.0.0",
     "terra-button": "^2.0.1",
     "terra-content-container": "^2.0.1",
-    "terra-hookshot": "^2.0.1",
-    "terra-icon": "^2.0.1"
+    "terra-hookshot": "^2.0.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
