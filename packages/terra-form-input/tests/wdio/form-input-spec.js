@@ -16,7 +16,6 @@ describe('Form-Input', () => {
       '--terra-form-input-color': '#fff',
       '--terra-form-input-font-size': '2.143rem',
       '--terra-form-input-line-height': '2.143',
-      '--terra-form-input-opacity': '0.5',
       '--terra-form-input-padding-bottom': '1.571rem',
       '--terra-form-input-padding-left': '1.357rem',
       '--terra-form-input-padding-right': '1.357rem',
@@ -37,7 +36,6 @@ describe('Form-Input', () => {
     Terra.should.themeEachCustomProperty({
       '--terra-form-input-error-focus-animation-background': 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)',
       '--terra-form-input-error-border': '20rem dashed blue',
-      '--terra-form-input-error-opacity': '0.5',
     });
   });
 
@@ -75,7 +73,6 @@ describe('Form-Input', () => {
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-focus-background-color': 'red',
         '--terra-form-input-focus-border': '20rem dashed red',
-        '--terra-form-input-focus-opacity': '0.5',
         '--terra-form-input-focus-keyboard-animation-size': '20px 20px',
       });
     });
@@ -121,7 +118,6 @@ describe('Form-Input', () => {
       Terra.should.themeEachCustomProperty({
         '--terra-form-input-focus-background-color': 'red',
         '--terra-form-input-focus-border': '20rem dashed red',
-        '--terra-form-input-focus-opacity': '0.5',
         '--terra-form-input-error-focus-keyboard-animation-size': '20px 20px',
       });
     });

@@ -12,7 +12,6 @@
     font-family: inherit;
     font-size: var(--terra-form-input-font-size, 1.143rem);
     line-height: var(--terra-form-input-line-height, 1.143);
-    opacity: var(--terra-form-input-opacity, 1);
     padding-bottom: var(--terra-form-input-padding-bottom, 0.571rem);
     padding-left: var(--terra-form-input-padding-left, 0.357rem);
     padding-right: var(--terra-form-input-padding-right, 0.357rem);
@@ -42,7 +41,6 @@
       background-color: var(--terra-form-input-focus-background-color, #fff);
       background-size: var(--terra-form-input-focus-keyboard-animation-size, 0 0);
       border: var(--terra-form-input-focus-border, 1px solid #4a4a4a);
-      opacity: var(--terra-form-input-focus-opacity, 1);
       outline: none;
 
       [dir=ltr] & {
@@ -58,7 +56,6 @@
   .form-error {
     background-image: var(--terra-form-input-error-focus-animation-background, none);
     border: var(--terra-form-input-error-border, 1px solid #ff0b0f);
-    opacity: var(--terra-form-input-error-opacity, 1);
 
     &:hover {
       border: var(--terra-form-input-error-hover-border, 1px solid #ff0b0f);
@@ -75,7 +72,6 @@
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
       background-size: var(--terra-form-input-error-focus-keyboard-animation-size, 0 0);
       border: var(--terra-form-input-error-focus-border, 1px solid #ff0b0f);
-      opacity: var(--terra-form-input-error-focus-opacity, 1);
 
       [dir=ltr] & {
         box-shadow: var(--terra-form-input-error-focus-keyboard-box-shadow-ltr, 0 0 8px #a6d9f4);
