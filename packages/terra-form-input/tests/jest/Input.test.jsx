@@ -33,4 +33,10 @@ describe('Input', () => {
     const wrapper = render(input);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should set the forminput to required when required is passed into the component', () => {
+    const input = <Input required />;
+    const wrapper = render(input);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
