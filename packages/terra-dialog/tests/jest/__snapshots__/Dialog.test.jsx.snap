@@ -17,15 +17,11 @@ exports[`Dialog should render a default component 1`] = `
       <div
         className="dialog-header"
       >
-        <ActionHeader
-          onBack={null}
-          onClose={null}
-          onMaximize={null}
-          onMinimize={null}
-          onNext={null}
-          onPrevious={null}
-          title="Header Content"
-        />
+        <div
+          className="dialog-header-title"
+        >
+          Header Content
+        </div>
       </div>
     }
   >
