@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Fixed bug where new locales did not update correctly
 
 3.0.0 - (February 12, 2018)
 ------------------
