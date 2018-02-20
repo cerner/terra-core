@@ -1,3 +1,4 @@
+// added to allow this component to be class based for the input ref callback below
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import PropTypes from 'prop-types';
