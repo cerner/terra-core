@@ -2,7 +2,7 @@ import React from 'react';
 
 import Input from 'terra-form-input';
 
-const DefaultErrorExample = () => (
+const DefaultInvalidExample = () => (
   <div>
     <h4>Default</h4>
     <Input
@@ -13,4 +13,4 @@ const DefaultErrorExample = () => (
   </div>
 );
 
-export default DefaultErrorExample;
+export default DefaultInvalidExample;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Input from 'terra-form-input';
 
-const DisabledErrorExample = () => (
+const DisabledInvalidExample = () => (
   <div>
     <h4>Disabled</h4>
     <Input
@@ -14,4 +14,4 @@ const DisabledErrorExample = () => (
   </div>
 );
 
-export default DisabledErrorExample;
+export default DisabledInvalidExample;

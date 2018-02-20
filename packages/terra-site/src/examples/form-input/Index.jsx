@@ -14,12 +14,12 @@ import BlankExample from './examples/BlankExample';
 import PlaceholderExample from './examples/PlaceholderExample';
 import ControlledDefaultExample from './controlled_examples/DefaultExample';
 import ControlledDisabledExample from './controlled_examples/DisabledExample';
-import ControlledDefaultErrorExample from './controlled_examples/DefaultErrorExample';
-import ControlledDisabledErrorExample from './controlled_examples/DisabledErrorExample';
+import ControlledDefaultInvalidExample from './controlled_examples/DefaultInvalidExample';
+import ControlledDisabledInvalidExample from './controlled_examples/DisabledInvalidExample';
 import UncontrolledDefaultExample from './uncontrolled_examples/DefaultExample';
 import UncontrolledDisabledExample from './uncontrolled_examples/DisabledExample';
-import UncontrolledDefaultErrorExample from './uncontrolled_examples/DefaultErrorExample';
-import UncontrolledDisabledErrorExample from './uncontrolled_examples/DisabledErrorExample';
+import UncontrolledDefaultInvalidExample from './uncontrolled_examples/DefaultInvalidExample';
+import UncontrolledDisabledInvalidExample from './uncontrolled_examples/DisabledInvalidExample';
 
 const Examples = () => (
   <div>
@@ -32,8 +32,8 @@ const Examples = () => (
     <ControlledDisabledExample />
     <br />
     <h3>Invalid</h3>
-    <ControlledDefaultErrorExample />
-    <ControlledDisabledErrorExample />
+    <ControlledDefaultInvalidExample />
+    <ControlledDisabledInvalidExample />
     <br />
     <br />
     <h2>Examples – Uncontrolled</h2>
@@ -42,8 +42,8 @@ const Examples = () => (
     <UncontrolledDisabledExample />
     <br />
     <h3>Invalid</h3>
-    <UncontrolledDefaultErrorExample />
-    <UncontrolledDisabledErrorExample />
+    <UncontrolledDefaultInvalidExample />
+    <UncontrolledDisabledInvalidExample />
   </div>
 );
 

@@ -2,11 +2,11 @@ import React from 'react';
 
 import Input from 'terra-form-input';
 
-class DisabledErrorExample extends React.Component {
+class DefaultInvalidExample extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { input: 'Disabled Error Example input' };
+    this.state = { input: 'Default Error Input' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -17,11 +17,10 @@ class DisabledErrorExample extends React.Component {
   render() {
     return (
       <div>
-        <h4>Disabled</h4>
+        <h4>Default</h4>
         <Input
-          disabled
+          name="default error input"
           value={this.state.input}
-          name="disabled input"
           onChange={this.handleChange}
           isInvalid
         />
@@ -31,4 +30,4 @@ class DisabledErrorExample extends React.Component {
   }
 }
 
-export default DisabledErrorExample;
+export default DefaultInvalidExample;
