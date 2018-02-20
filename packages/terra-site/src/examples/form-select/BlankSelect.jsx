@@ -5,7 +5,7 @@ import styles from '../../site.scss';
 class SelectExamples extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: 'snappers' };
+    this.state = { selected: '' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,8 +19,8 @@ class SelectExamples extends React.Component {
         <form>
           <Select
             name="zibby"
-            defaultValue="snappers"
-            required
+            isInvalid
+            isPlaceholderHidden
             onChange={this.handleChange}
           >
             <Select.Option value="puppies" display="Puppies" key="puppies" />
