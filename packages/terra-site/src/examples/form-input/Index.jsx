@@ -10,6 +10,8 @@ import { version } from 'terra-form-input/package.json';
 import FormInputSrc from '!raw-loader!terra-form-input/src/Input';
 
 // Example Files
+import BlankExample from './examples/BlankExample';
+import PlaceholderExample from './examples/PlaceholderExample';
 import ControlledDefaultExample from './controlled_examples/DefaultExample';
 import ControlledDisabledExample from './controlled_examples/DisabledExample';
 import ControlledDefaultErrorExample from './controlled_examples/DefaultErrorExample';
@@ -21,6 +23,9 @@ import UncontrolledDisabledErrorExample from './uncontrolled_examples/DisabledEr
 
 const Examples = () => (
   <div>
+    <h2>Examples</h2>
+    <BlankExample />
+    <PlaceholderExample />
     <h2>Examples – Controlled</h2>
     <h3>Valid</h3>
     <ControlledDefaultExample />
