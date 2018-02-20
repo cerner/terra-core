@@ -41,9 +41,9 @@
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
     "terra-base": "^3.0.0",
+    "terra-button": "^2.0.1",
     "terra-content-container": "^2.0.1",
-    "terra-hookshot": "^2.0.1",
-    "terra-icon": "^2.0.1"
+    "terra-hookshot": "^2.0.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -53,8 +53,9 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/Popup.jsx --out-dir ./docs/props-table",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:nightwatch && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }
