@@ -22,6 +22,7 @@ class SelectExamples extends React.Component {
             defaultValue="snappers"
             required
             onChange={this.handleChange}
+            isPlaceholderHidden
           >
             <Select.Option value="puppies" display="Puppies" key="puppies" />
             <Select.Option value="kittens" display="Kittens" key="kittens" />

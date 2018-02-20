@@ -53,6 +53,11 @@ const propTypes = {
   isInvalid: PropTypes.bool,
 
   /**
+   * Indicates if the placeholder is hidden
+   */
+  isPlaceholderHidden: PropTypes.bool,
+
+  /**
    * Indicates if the select should be disabled.
    */
   disabled: PropTypes.bool,
@@ -77,6 +82,7 @@ const defaultProps = {
   required: false,
   disabled: false,
   isInvalid: false,
+  isPlaceholderHidden: false,
 };
 
 const contextTypes = {
@@ -226,6 +232,7 @@ class Select extends React.Component {
       name,
       required,
       defaultValue,
+      isPlaceholderHidden,
       value,
       isInvalid,
       disabled,
@@ -274,8 +281,14 @@ class Select extends React.Component {
       });
     });
 
-    const defaultOptionDisplay = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const defaultOptionValue = '';
+    let defaultOptionDisplay;
+    let defaultOptionValue = defaultValue;
+
+    if (!isPlaceholderHidden) {
+      defaultOptionDisplay = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
+      defaultOptionValue = '';
+    }
+
     // If there is no selected option, or none of the options match the selected value, the default option will be selected.
     if (!selectedValue) {
       display = defaultOptionDisplay;
@@ -300,14 +313,16 @@ class Select extends React.Component {
           boundingRef={boundingRef}
         >
           <SelectMenu>
-            <SelectOption
-              value={defaultOptionValue}
-              display={defaultOptionDisplay}
-              isSelected={isDefaultSelected}
-              onKeyDown={this.wrapOnKeyDown(defaultOptionValue)}
-              onClick={this.wrapOnClick(defaultOptionValue)}
-              className={cx('default-option')}
-            />
+            { !isPlaceholderHidden &&
+              <SelectOption
+                value={defaultOptionValue}
+                display={defaultOptionDisplay}
+                isSelected={isDefaultSelected}
+                onKeyDown={this.wrapOnKeyDown(defaultOptionValue)}
+                onClick={this.wrapOnClick(defaultOptionValue)}
+                className={cx('default-option')}
+              />
+            }
             {clonedChildren}
           </SelectMenu>
         </Popup>
