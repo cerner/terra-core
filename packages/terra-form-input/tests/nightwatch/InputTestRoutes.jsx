@@ -11,7 +11,7 @@ import {
   OnChangeInput,
   OnBlurInput,
   OnFocusInput,
-  RequiredInput
+  RequiredInput,
 } from './InputPropPermutations';
 
 const routes = (

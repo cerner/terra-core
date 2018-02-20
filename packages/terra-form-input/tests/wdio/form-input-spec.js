@@ -23,7 +23,7 @@ describe('Form-Input', () => {
       '--terra-form-input-transition-duration': '2s',
       '--terra-form-input-transition-timing-function': 'ease-out',
       '--terra-form-input-focus-background-start': '20px 20px',
-      '--terra-form-input-line-height': '40px',
+      '--terra-form-input-height': '40px',
     });
   });
 
