@@ -4,17 +4,18 @@ import Select from '../../../lib/Select';
 
 const locale = document.getElementsByTagName('html')[0].getAttribute('lang');
 
-const InvalidSelect = () => (
+const BlankSelect = () => (
   <Base locale={locale}>
     <p>This select has been marked as invalid.</p>
     <form>
       <Select
         name="zibby"
         isInvalid
-        id="invalidSelect"
+        isPlaceholderHidden
+        id="blankSelect"
       >
         <Select.Option value="puppies" display="Puppies" key="puppies" />
-        <Select.Option value="kittens" display="Kittens" key="kittens" isSelected />
+        <Select.Option value="kittens" display="Kittens" key="kittens" />
         <Select.Option value="snappers" display="Snappers" key="snappers" />
         <Select.Option value="bumblers" display="Bumblers" disabled key="bumblers" />
         <Select.Option value="joeys" display="Joeys" key="joeys" />
@@ -25,4 +26,4 @@ const InvalidSelect = () => (
   </Base>
 );
 
-export default InvalidSelect;
+export default BlankSelect;
