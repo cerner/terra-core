@@ -3,7 +3,7 @@ Changelog
 
 Unreleased
 ----------
-### Added (February 20, 2018)
+### Changed (February 20, 2018)
 * Updated WebDriverIO tests
 
 2.0.0 - (February 12, 2018)
