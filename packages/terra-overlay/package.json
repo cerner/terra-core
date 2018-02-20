@@ -1,7 +1,7 @@
 {
   "name": "terra-overlay",
   "main": "lib/Overlay.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.",
   "repository": {
     "type": "git",
@@ -27,15 +27,15 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^2.11.0",
-    "terra-icon": "^1.18.0"
+    "terra-base": "^3.0.0",
+    "terra-icon": "^2.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "focus-trap-react": "^3.1.1",
     "prop-types": "^15.5.8",
     "terra-base": "^3.0.0",
-    "terra-icon": "^2.0.0"
+    "terra-icon": "^2.0.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -45,8 +45,9 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/Overlay.jsx ./src/OverlayContainer.jsx ./src/LoadingOverlay.jsx --out-dir ./docs/props-table",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "test": "npm run test:jest && npm run test:nightwatch && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }

@@ -60,6 +60,33 @@ it('should render an invalid Select', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render Select without placeholder', () => {
+  const select = (
+    <Select
+      isPlaceholderHidden
+    >
+      <div>Child</div>
+    </Select>
+  );
+
+  const wrapper = shallow(select, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a blank Select without placeholder', () => {
+  const select = (
+    <Select
+      defaultValue=""
+      isPlaceholderHidden
+    >
+      <div>Child</div>
+    </Select>
+  );
+
+  const wrapper = shallow(select, intlContexts.shallowContext);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render Select with default value', () => {
   const select = (
     <Select defaultValue="b">
