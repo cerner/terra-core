@@ -48,7 +48,7 @@
     "terra-date-picker": "^2.0.1",
     "terra-date-time-picker": "^2.0.1",
     "terra-demographics-banner": "^2.0.1",
-    "terra-dialog": "^0.x",
+    "terra-dialog": "^0.0.0",
     "terra-divider": "^2.0.1",
     "terra-dynamic-grid": "^2.0.1",
     "terra-embedded-content-consumer": "^2.0.1",

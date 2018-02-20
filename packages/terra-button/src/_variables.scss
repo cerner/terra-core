@@ -90,6 +90,6 @@ $terra-button-utility-color-scheme: (
   focus-border-color: var(--terra-button-focus-border-color-utility, transparent),
   focus-box-shadow: var(--terra-button-focus-box-shadow-utility, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35)),
   font-weight: var(--terra-button-font-weight-utility, 400),
-  hover-background-color: var(--terra-button-hover-background-color-utility, transparent),
+  hover-background-color: var(--terra-button-hover-background-color-utility),
   hover-color: var(--terra-button-hover-color-utility, #1c1f21)
 );
