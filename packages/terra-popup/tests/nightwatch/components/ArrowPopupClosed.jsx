@@ -11,10 +11,6 @@ class ArrowPopupClosed extends React.Component {
     this.state = { open: false };
   }
 
-  componentDidMount() {
-    this.forceUpdate();
-  }
-
   setButtonNode(node) {
     this.buttonNode = node;
   }
@@ -32,10 +28,6 @@ class ArrowPopupClosed extends React.Component {
   }
 
   render() {
-    const buttonStyle = {
-      margin: '50px',
-    };
-
     return (
       <div>
         <Popup
@@ -49,7 +41,7 @@ class ArrowPopupClosed extends React.Component {
         >
           <p>this is popup content</p>
         </Popup>
-        <button id="arrow-button" style={buttonStyle} onClick={this.handleButtonClick} ref={this.setButtonNode}>
+        <button id="arrow-button" style={{ margin: '50px' }} onClick={this.handleButtonClick} ref={this.setButtonNode}>
           Arrow Popup
         </button>
       </div>

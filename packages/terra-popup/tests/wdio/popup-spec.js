@@ -24,13 +24,11 @@ describe('Popup', () => {
   });
 
   Terra.viewports('tiny', 'medium').forEach((viewport) => {
-    describe('Arrow Popup closed', () => {
+    describe('Arrow Popup viewports', () => {
       before(() => {
         browser.url('/#/tests/popup-tests/arrow-closed');
-        browser.waitForVisible('#arrow-button');
         browser.setViewportSize(viewport);
         browser.click('#arrow-button');
-        browser.waitForVisible('#arrow-button');
       });
 
       Terra.should.matchScreenshot('#root');
@@ -38,7 +36,7 @@ describe('Popup', () => {
   });
 
   Terra.viewports('tiny', 'medium').forEach((viewport) => {
-    describe('Bounded Popup closed', () => {
+    describe('Bounded Popup viewports', () => {
       before(() => {
         browser.url('/#/tests/popup-tests/bounded-closed');
         browser.setViewportSize(viewport);

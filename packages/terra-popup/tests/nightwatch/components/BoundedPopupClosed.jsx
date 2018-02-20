@@ -13,10 +13,6 @@ class BoundedPopupClosed extends React.Component {
     this.state = { open: false };
   }
 
-  componentDidMount() {
-    this.forceUpdate();
-  }
-
   setButtonNode(node) {
     this.buttonNode = node;
   }
