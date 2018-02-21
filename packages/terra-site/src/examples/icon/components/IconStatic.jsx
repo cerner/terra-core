@@ -6,14 +6,18 @@ import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import IconSuccessInverse from 'terra-icon/lib/icon/IconSuccessInverse';
 import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
 import IconComplete from 'terra-icon/lib/icon/IconComplete';
+import IconNoRisk from 'terra-icon/lib/icon/IconNoRisk';
 import IconScheduled from 'terra-icon/lib/icon/IconScheduled';
 import IconHighPriority from 'terra-icon/lib/icon/IconHighPriority';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
+import IconModerate from 'terra-icon/lib/icon/IconModerate';
 import IconUnspecified from 'terra-icon/lib/icon/IconUnspecified';
 import IconCritical from 'terra-icon/lib/icon/IconCritical';
+import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
+import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
@@ -22,6 +26,7 @@ import IconUnexpected from 'terra-icon/lib/icon/IconUnexpected';
 import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
 import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
 import IconHigh from 'terra-icon/lib/icon/IconHigh';
+import IconHighInverse from 'terra-icon/lib/icon/IconHighInverse';
 import IconLow from 'terra-icon/lib/icon/IconLow';
 import IconMax from 'terra-icon/lib/icon/IconMax';
 import IconMin from 'terra-icon/lib/icon/IconMin';
@@ -30,6 +35,10 @@ import IconDeviceCheck from 'terra-icon/lib/icon/IconDeviceCheck';
 import IconDeviceAlert from 'terra-icon/lib/icon/IconDeviceAlert';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import IconPharmacyReject from 'terra-icon/lib/icon/IconPharmacyReject';
+import IconBedAssigned from 'terra-icon/lib/icon/IconBedAssigned';
+import IconDischargeComplete from 'terra-icon/lib/icon/IconDischargeComplete';
+import IconDischargeComingDue from 'terra-icon/lib/icon/IconDischargeComingDue';
+import IconDischargeOverDue from 'terra-icon/lib/icon/IconDischargeOverDue';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -67,6 +76,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconNoRisk height='2em' width='2em' /></td>
+        <td>noRisk</td>
+        <td>
+          import IconNoRisk from 'terra-icon/lib/icon/IconNoRisk';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconScheduled height='2em' width='2em' /></td>
         <td>scheduled</td>
         <td>
@@ -95,6 +111,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconModerate height='2em' width='2em' /></td>
+        <td>moderate</td>
+        <td>
+          import IconModerate from 'terra-icon/lib/icon/IconModerate';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconUnspecified height='2em' width='2em' /></td>
         <td>unspecified</td>
         <td>
@@ -109,6 +132,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconCriticalInverse height='2em' width='2em' /></td>
+        <td>critical_inverse</td>
+        <td>
+          import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconInformation height='2em' width='2em' /></td>
         <td>information</td>
         <td>
@@ -120,6 +150,13 @@ const IconAll = () => (
         <td>information_inverse</td>
         <td>
           import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconErrorDark height='2em' width='2em' /></td>
+        <td>error_dark</td>
+        <td>
+          import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -179,6 +216,13 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconHighInverse height='2em' width='2em' /></td>
+        <td>high_inverse</td>
+        <td>
+          import IconHighInverse from 'terra-icon/lib/icon/IconHighInverse';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconLow height='2em' width='2em' /></td>
         <td>low</td>
         <td>
@@ -232,6 +276,34 @@ const IconAll = () => (
         <td>pharmacyReject</td>
         <td>
           import IconPharmacyReject from 'terra-icon/lib/icon/IconPharmacyReject';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconBedAssigned height='2em' width='2em' /></td>
+        <td>bedAssigned</td>
+        <td>
+          import IconBedAssigned from 'terra-icon/lib/icon/IconBedAssigned';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDischargeComplete height='2em' width='2em' /></td>
+        <td>dischargeComplete</td>
+        <td>
+          import IconDischargeComplete from 'terra-icon/lib/icon/IconDischargeComplete';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDischargeComingDue height='2em' width='2em' /></td>
+        <td>dischargeComingDue</td>
+        <td>
+          import IconDischargeComingDue from 'terra-icon/lib/icon/IconDischargeComingDue';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconDischargeOverDue height='2em' width='2em' /></td>
+        <td>dischargeOverDue</td>
+        <td>
+          import IconDischargeOverDue from 'terra-icon/lib/icon/IconDischargeOverDue';
         </td>
       </tr>
     </Table.Rows>
