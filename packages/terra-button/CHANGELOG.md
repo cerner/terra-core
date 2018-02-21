@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated button types and variants syntax in docs
 
 2.0.0 - (February 12, 2018)
 ------------------
