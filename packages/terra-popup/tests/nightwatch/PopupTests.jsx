@@ -9,6 +9,7 @@ const PopupTests = () => (
       <li><Link to="/tests/popup-tests/default">Popup - Default</Link></li>
       <li><Link to="/tests/popup-tests/overlay">Popup - Overlay</Link></li>
       <li><Link to="/tests/popup-tests/arrow">Popup - With Arrow</Link></li>
+      <li><Link to="/tests/popup-tests/arrow-closed">Closed Popup - With Arrow</Link></li>
       <li><Link to="/tests/popup-tests/class-name">Popup - ClassName</Link></li>
       <li><Link to="/tests/popup-tests/invalid">Popup - Invalid Dimensions</Link></li>
       <li><Link to="/tests/popup-tests/small">Popup - Small</Link></li>
@@ -18,6 +19,7 @@ const PopupTests = () => (
       <li><Link to="/tests/popup-tests/automatic-width">Popup - Automatic Width</Link></li>
       <li><Link to="/tests/popup-tests/no-header">Popup - No Header</Link></li>
       <li><Link to="/tests/popup-tests/bounded">Popup - Bounded</Link></li>
+      <li><Link to="/tests/popup-tests/bounded-closed">Closed Popup - Bounded</Link></li>
       <li><Link to="/tests/popup-tests/bounded-height">Popup - Bounded Height</Link></li>
       <li><Link to="/tests/popup-tests/bounded-automatic-height">Popup - Bounded Automatic Height </Link></li>
       <li><Link to="/tests/popup-tests/bounded-width">Popup - Bounded Width</Link></li>

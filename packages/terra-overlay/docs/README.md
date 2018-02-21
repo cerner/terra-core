@@ -53,7 +53,7 @@ export default OverlayExample;
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
-import Overlay.LoadingOverlay from 'terra-overlay';
+import Overlay from 'terra-overlay';
 
 class LoadingOverlayExample extends React.Component {
   constructor() {
@@ -73,7 +73,7 @@ class LoadingOverlayExample extends React.Component {
   render() {
     return (
       <div>
-        <LoadingOverlay isOpen={this.state.show} isAnimated />
+        <Overlay.LoadingOverlay isOpen={this.state.show} isAnimated />
         <Button onClick={this.handleTriggerOverlay}>Trigger Loading Overlay</Button>
       </div>
     );
