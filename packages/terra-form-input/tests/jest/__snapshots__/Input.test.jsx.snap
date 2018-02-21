@@ -23,6 +23,13 @@ exports[`Input should render as uncontrolled when just a default value is passed
 />
 `;
 
+exports[`Input should render w/ placeholder text when just a placeholder prop is passed into the Input 1`] = `
+<input
+  class="form-input"
+  placeholder="foo"
+/>
+`;
+
 exports[`Input should set the forminput to disabled when passed into the component 1`] = `
 <input
   class="form-input"
