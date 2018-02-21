@@ -9,6 +9,7 @@ const OnChangeInput = () => <Input aria-label="onChange testable form input" onC
 const OnBlurInput = () => <Input aria-label="onBlur testable form input" onBlur={() => {}} id="form-input-onBlur" />;
 const OnFocusInput = () => <Input aria-label="onFocus testable form input" onFocus={() => {}} id="form-input-onFocus" />;
 const RequiredInput = () => <Input aria-label="Required testable form input" required id="form-input-required" />;
+const FocussedInput = () => <Input style={{ caretColor: 'transparent' }} aria-label="Focussed form input" required id="form-input-focussed-input" />;
 
 export {
   DefaultInput,
@@ -18,4 +19,5 @@ export {
   OnBlurInput,
   OnFocusInput,
   RequiredInput,
+  FocussedInput,
 };

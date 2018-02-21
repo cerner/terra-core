@@ -12,6 +12,7 @@ const InputTests = () => (
       <li><Link to="/tests/form-input-tests/onBlurInput">On Blur</Link></li>
       <li><Link to="/tests/form-input-tests/onFocusInput">On Focus</Link></li>
       <li><Link to="/tests/form-input-tests/required">Required</Link></li>
+      <li><Link to="/tests/form-input-tests/focussed">Focussed</Link></li>
     </ul>
   </div>
 );

@@ -65,7 +65,7 @@ describe('Form-Input', () => {
 
     describe('Enabled Keyboard-Focused', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/default');
+        browser.url('/#tests/form-input-tests/focussed');
         browser.keys('Tab');
       });
 

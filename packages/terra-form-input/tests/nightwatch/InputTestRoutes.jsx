@@ -12,6 +12,7 @@ import {
   OnBlurInput,
   OnFocusInput,
   RequiredInput,
+  FocussedInput,
 } from './InputPropPermutations';
 
 const routes = (
@@ -24,6 +25,7 @@ const routes = (
     <Route path="/tests/form-input-tests/onBlurInput" component={OnBlurInput} />
     <Route path="/tests/form-input-tests/onFocusInput" component={OnFocusInput} />
     <Route path="/tests/form-input-tests/required" component={RequiredInput} />
+    <Route path="/tests/form-input-tests/focussed" component={FocussedInput} />
   </div>
 );
 
