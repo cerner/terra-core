@@ -37,6 +37,7 @@ const defaultProps = {
 const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
   const dialogClassNames = cx([
     'dialog',
+    customProps.className,
   ]);
 
   const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
@@ -44,7 +45,7 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
   const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
 
   return (
-    <div className={dialogClassNames} {...customProps}>
+    <div {...customProps} className={dialogClassNames}>
       <ContentContainer fill header={dialogHeader} footer={<div className={cx('dialog-footer')}>{footer}</div>}>
         <div className={cx('dialog-body')}>{children}</div>
       </ContentContainer>
