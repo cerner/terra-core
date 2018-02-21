@@ -13,6 +13,7 @@
   .list-item {
     margin: 0;
     padding: 0;
+    background-color: var(--terra-list-item-background-color);
   }
 
   .divided > .list-item {
@@ -53,14 +54,24 @@
   .is-selectable {
     cursor: pointer;
 
-    &.list-item:hover,
-    &.list-item:focus {
+    &.list-item:hover {
       background-color: var(--terra-list-item-hover-background-color, lighten(#ebf6fd, 2%)) !important;
     }
 
-    &.selected:hover,
-    &.selected:focus {
+    &.list-item:focus {
+      outline: none;
+      background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
+      border: var(--terra-list-item-focus-border-color);
+    }
+
+    &.selected:hover {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+    }
+
+    &.selected:focus {
+      outline: none;
+      background-color: var(--terra-list-item-selected-focus-background-color, darken(#ebf6fd, 7%)) !important;
+      border: var(--terra-list-item-focus-border-color) !important;
     }
   }
 }
