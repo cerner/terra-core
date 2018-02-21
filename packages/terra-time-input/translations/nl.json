@@ -1,8 +1,8 @@
 {
   "Terra.timeInput.am": "",
   "Terra.timeInput.pm": "",
-  "Terra.timeInput.hours": "Stunden",
+  "Terra.timeInput.hours": "Uren",
   "Terra.timeInput.minutes": "Minuten",
-  "Terra.timeInput.hh": "hh",
+  "Terra.timeInput.hh": "uu",
   "Terra.timeInput.mm": "mm"
 }
