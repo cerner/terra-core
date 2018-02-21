@@ -40,7 +40,6 @@ describe('Popup', () => {
       before(() => {
         browser.url('/#/tests/popup-tests/bounded-closed');
         browser.setViewportSize(viewport);
-        browser.waitForVisible('#bounded-button');
         browser.click('#bounded-button');
       });
 
