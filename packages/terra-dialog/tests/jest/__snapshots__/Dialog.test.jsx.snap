@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dialog should render a Dialog with merged attributes 1`] = `
+<div
+  className="dialog TestClass"
+>
+  <ContentContainer
+    fill={true}
+    footer={
+      <div
+        className="dialog-footer"
+      >
+        Footer Content
+      </div>
+    }
+    header={
+      <div
+        className="dialog-header"
+      >
+        <div
+          className="dialog-header-title"
+        >
+          Header Content
+        </div>
+      </div>
+    }
+  >
+    <div
+      className="dialog-body"
+    >
+      some body content
+    </div>
+  </ContentContainer>
+</div>
+`;
+
 exports[`Dialog should render a default component 1`] = `
 <div
   className="dialog"
