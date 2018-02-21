@@ -3,6 +3,27 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* High Icon
+* Low Icon
+
+### Added
+* Bed Assigned Icon
+* Bed Requested Icon
+* Critical Inverse Icon
+* Discharge Comming Due Icon
+* Discharge Complete Icon
+* Discharge Overdue Icon
+* Error Dark Icon
+* External Link Icon
+* Flip Horizontal Icon
+* Flip Vertical Icon
+* High Inverse Icon
+* Hold Icon
+* Moderate Icon
+* No Risk Icon
+* Rotate Left Icon
+* Rotate Right Icon
 
 2.0.0 - (February 12, 2018)
 ------------------
