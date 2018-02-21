@@ -82,11 +82,11 @@ const propTypes = {
   /**
    * Sets the button type. One of `Button.Opts.Types.BUTTON`, `Button.Opts.Types.SUBMIT`, or `Button.Opts.Types.RESET`.
    */
-  type: PropTypes.oneOf([Button.Opts.Types.BUTTON, Button.Opts.Types.SUBMIT, Button.Opts.Types.RESET]),
+  type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
   /**
    * Sets the button variant. One of `Button.Opts.Variants.NEUTRAL`,  `Button.Opts.Variants.EMPHASIS`, `Button.Opts.Variants['DE-EMPSHASIS']`, `Button.Opts.Variants.ACTION` or `Button.Opts.Variants.UTILITY`.
    */
-  variant: PropTypes.oneOf([Button.Opts.Variants.NEUTRAL, Button.Opts.Variants.EMPHASIS, Button.Opts.Variants['DE-EMPSHASIS'], Button.Opts.Variants.ACTION, Button.Opts.Variants.UTILITY]),
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPSHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
 };
 
 const defaultProps = {
