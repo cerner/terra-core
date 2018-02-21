@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Removed unstyled div from the group, it was causing issues within IE10 with height.
 
 2.0.0 - (February 12, 2018)
 ------------------
