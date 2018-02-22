@@ -27,6 +27,18 @@ describe('Form-Input', () => {
     });
   });
 
+  describe('Placeholder Text', () => {
+    beforeEach(() => {
+      browser.url('/#tests/form-input-tests/placeholder');
+    });
+
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+    Terra.should.themeEachCustomProperty({
+      '--terra-form-input-placeholder-color': 'red',
+    });
+  });
+
   describe('Invalid', () => {
     beforeEach(() => {
       browser.url('/#tests/form-input-tests/invalid');
@@ -120,6 +132,18 @@ describe('Form-Input', () => {
         '--terra-form-input-focus-background-color': 'red',
         '--terra-form-input-focus-border': '20rem dashed red',
         '--terra-form-input-error-focus-keyboard-animation-size': '20px 20px',
+      });
+    });
+
+    describe('Disabled Placeholder Text', () => {
+      beforeEach(() => {
+        browser.url('/#tests/form-input-tests/placeholderDisabled');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+      Terra.should.themeEachCustomProperty({
+        '--terra-form-input-disabled-placeholder-color': 'red',
       });
     });
   });
