@@ -6,8 +6,10 @@ import PopupTests from './PopupTests';
 import DefaultPopup from './components/DefaultPopup';
 import OverlayPopup from './components/OverlayPopup';
 import ArrowPopup from './components/ArrowPopup';
+import ArrowPopupClosed from './components/ArrowPopupClosed';
 import ClassNamePopup from './components/ClassNamePopup';
 import BoundedPopup from './components/BoundedPopup';
+import BoundedPopupClosed from './components/BoundedPopupClosed';
 import BoundedHeightPopup from './components/BoundedHeightPopup';
 import BoundedWidthPopup from './components/BoundedWidthPopup';
 import NoHeaderPopup from './components/NoHeaderPopup';
@@ -35,8 +37,10 @@ const routes = (
     <Route path="/tests/popup-tests/default" component={DefaultPopup} />
     <Route path="/tests/popup-tests/overlay" component={OverlayPopup} />
     <Route path="/tests/popup-tests/arrow" component={ArrowPopup} />
+    <Route path="/tests/popup-tests/arrow-closed" component={ArrowPopupClosed} />
     <Route path="/tests/popup-tests/class-name" component={ClassNamePopup} />
     <Route path="/tests/popup-tests/bounded" component={BoundedPopup} />
+    <Route path="/tests/popup-tests/bounded-closed" component={BoundedPopupClosed} />
     <Route path="/tests/popup-tests/bounded-height" component={BoundedHeightPopup} />
     <Route path="/tests/popup-tests/bounded-width" component={BoundedWidthPopup} />
     <Route path="/tests/popup-tests/no-header" component={NoHeaderPopup} />

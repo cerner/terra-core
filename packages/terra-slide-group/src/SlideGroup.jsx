@@ -70,25 +70,24 @@ class SlideGroup extends React.Component {
     };
 
     return (
-      <div {...customProps} ref={this.setContainer} className={cx(['slide-group', customProps.className])}>
-        <TransitionGroup key={transitionGroupKey}>
-          {items.map((item, index) => (
-            <CSSTransition
-              classNames={transitionNames}
-              enter={isAnimated}
-              onEntered={SlideGroup.hidePreviousSlide}
-              exit={isAnimated}
-              onExit={SlideGroup.showPreviousSlide}
-              timeout={300}
-              key={item.key}
-            >
-              <Slide isHidden={!isAnimated && index !== itemCount}>
-                {item}
-              </Slide>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
-      </div>
+      <TransitionGroup {...customProps} ref={this.setContainer} className={cx(['slide-group', customProps.className])} key={transitionGroupKey}>
+        {items.map((item, index) => (
+          <CSSTransition
+            classNames={transitionNames}
+            enter={isAnimated}
+            onEntered={SlideGroup.hidePreviousSlide}
+            exit={isAnimated}
+            onExit={SlideGroup.showPreviousSlide}
+            timeout={300}
+            key={item.key}
+            id={'shmmoop'}
+          >
+            <Slide isHidden={!isAnimated && index !== itemCount}>
+              {item}
+            </Slide>
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
     );
   }
 }
