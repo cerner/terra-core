@@ -1,0 +1,17 @@
+:local {
+    .props-table-pre {
+        white-space: pre-wrap;
+    }
+
+    .prop-table-name, .prop-table-required, .prop-table-default {
+        width: 10%;
+    }
+
+    .prop-table-type, .prop-table-description {
+        width: 35%;
+    }
+
+    .prop-table-row {
+        vertical-align: top;
+    }
+}

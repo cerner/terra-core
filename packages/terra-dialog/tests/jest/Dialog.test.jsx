@@ -15,4 +15,9 @@ describe('Dialog', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper.prop('className')).toContain('dialog');
   });
+
+  it('should render a Dialog with merged attributes', () => {
+    const wrapper = shallow(<Dialog header="Header Content" footer="Footer Content" className="TestClass">some body content</Dialog>);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

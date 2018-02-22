@@ -108,8 +108,17 @@ class TimeInput extends React.Component {
     let meridiem;
 
     if (props.variant === TimeUtil.FORMAT_12_HOUR) {
-      this.anteMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.am' });
-      this.postMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
+      if (!context.intl.messages['Terra.timeInput.am'] || !context.intl.messages['Terra.timeInput.pm']) {
+        if (process.env !== 'production') {
+          console.warn('This locale only uses 24 hour clock. The ante meridiem and post meridiem will not be displayed');
+        }
+
+        this.anteMeridiem = '';
+        this.postMeridiem = '';
+      } else {
+        this.anteMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.am' });
+        this.postMeridiem = context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
+      }
 
       if (hour) {
         const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
@@ -143,8 +152,17 @@ class TimeInput extends React.Component {
     let meridiem = this.state.meridiem;
 
     if (nextProps.variant === TimeUtil.FORMAT_12_HOUR) {
-      this.anteMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.am' });
-      this.postMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
+      if (!this.context.intl.messages['Terra.timeInput.am'] || !this.context.intl.messages['Terra.timeInput.pm']) {
+        if (process.env !== 'production') {
+          console.warn('This locale only uses 24 hour clock. The ante meridiem and post meridiem will not be displayed');
+        }
+
+        this.anteMeridiem = '';
+        this.postMeridiem = '';
+      } else {
+        this.anteMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.am' });
+        this.postMeridiem = this.context.intl.formatMessage({ id: 'Terra.timeInput.pm' });
+      }
 
       if (hour) {
         const parsedHour = TimeUtil.parseTwelveHourTime(hour, this.anteMeridiem, this.postMeridiem);
@@ -686,7 +704,7 @@ class TimeInput extends React.Component {
               key="meridiem_display"
               tabIndex="-1"
               value={this.state.meridiem}
-              size={this.state.meridiem.length}
+              size={this.state.meridiem.length || 1}
               readOnly
               disabled={disabled}
             />,

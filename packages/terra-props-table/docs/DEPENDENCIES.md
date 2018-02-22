@@ -3,6 +3,7 @@
 ## dependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
+| classnames | ^2.2.5 | -- | A simple javascript utility for conditionally joining classNames together | 
 | commander | ^2.9.0 | -- | the complete solution for node.js command-line programs |
 | glob | ^7.1.2 | -- | a little globber |
 | lodash | ^4.17.4 | -- | Lodash modular utilities. |

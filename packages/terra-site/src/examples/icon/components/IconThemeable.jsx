@@ -148,6 +148,13 @@ import IconPinDown from 'terra-icon/lib/icon/IconPinDown';
 import IconPinDiagonal from 'terra-icon/lib/icon/IconPinDiagonal';
 import IconPause from 'terra-icon/lib/icon/IconPause';
 import IconAudio from 'terra-icon/lib/icon/IconAudio';
+import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
+import IconBedRequested from 'terra-icon/lib/icon/IconBedRequested';
+import IconFlipHorizontal from 'terra-icon/lib/icon/IconFlipHorizontal';
+import IconFlipVertical from 'terra-icon/lib/icon/IconFlipVertical';
+import IconRotateLeft from 'terra-icon/lib/icon/IconRotateLeft';
+import IconRotateRight from 'terra-icon/lib/icon/IconRotateRight';
+import IconHold from 'terra-icon/lib/icon/IconHold';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -1176,6 +1183,55 @@ const IconAll = () => (
         <td>audio</td>
         <td>
           import IconAudio from 'terra-icon/lib/icon/IconAudio';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconExternalLink height='2em' width='2em' /></td>
+        <td>externalLink</td>
+        <td>
+          import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconBedRequested height='2em' width='2em' /></td>
+        <td>bedRequested</td>
+        <td>
+          import IconBedRequested from 'terra-icon/lib/icon/IconBedRequested';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconFlipHorizontal height='2em' width='2em' /></td>
+        <td>flipHorizontal</td>
+        <td>
+          import IconFlipHorizontal from 'terra-icon/lib/icon/IconFlipHorizontal';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconFlipVertical height='2em' width='2em' /></td>
+        <td>flipVertical</td>
+        <td>
+          import IconFlipVertical from 'terra-icon/lib/icon/IconFlipVertical';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconRotateLeft height='2em' width='2em' /></td>
+        <td>rotateLeft</td>
+        <td>
+          import IconRotateLeft from 'terra-icon/lib/icon/IconRotateLeft';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconRotateRight height='2em' width='2em' /></td>
+        <td>rotateRight</td>
+        <td>
+          import IconRotateRight from 'terra-icon/lib/icon/IconRotateRight';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconHold height='2em' width='2em' /></td>
+        <td>hold</td>
+        <td>
+          import IconHold from 'terra-icon/lib/icon/IconHold';
         </td>
       </tr>
     </Table.Rows>

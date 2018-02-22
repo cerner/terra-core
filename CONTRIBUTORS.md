@@ -51,6 +51,8 @@ Cerner Corporation
 - Mayuri Kini [@mayurikini]
 - Sruti Paku [@paku-sruti]
 - Cyrus Duong [@cyrusduong]
+- Nathan Faltermeier [@Blackop778]
+- Carter Harwood [@harwood]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -103,3 +105,6 @@ Cerner Corporation
 [@mayurikini]: https://github.com/mayurikini
 [@paku-sruti]: https://github.com/paku-sruti
 [@cyrusduong]: https://github.com/cyrusduong
+[@paku-sruti]: https://github.com/paku-sruti
+[@Blackop778]: https://github.com/Blackop778
+[@harwood]: https://github.com/harwood

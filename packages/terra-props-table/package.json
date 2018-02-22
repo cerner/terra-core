@@ -28,6 +28,7 @@
     "react-dom": "^16.2.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "commander": "^2.9.0",
     "glob": "^7.1.2",
     "lodash": "^4.17.4",

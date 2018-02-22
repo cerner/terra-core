@@ -76,15 +76,15 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
-   * Sets the button text. If the button `isIconOnly` or of variant `ButtonVariants.UTILITY`, this text is set as the aria-label for accessibility.
+   * Sets the button text. If the button `isIconOnly` or of variant `Button.Opts.Variants.UTILITY`, this text is set as the aria-label for accessibility.
    */
   text: PropTypes.string.isRequired,
   /**
-   * Sets the button type. One of `ButtonTypes.BUTTON`, `ButtonTypes.SUBMIT`, or `ButtonTypes.RESET`.
+   * Sets the button type. One of `Button.Opts.Types.BUTTON`, `Button.Opts.Types.SUBMIT`, or `Button.Opts.Types.RESET`.
    */
   type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
   /**
-   * Sets the button variant. One of `ButtonVariants.NEUTRAL`,  `ButtonVariants.EMPHASIS`, `ButtonVariants['DE-EMPSHASIS']`, `ButtonVariants.ACTION` or `ButtonVariants.UTILITY`.
+   * Sets the button variant. One of `Button.Opts.Variants.NEUTRAL`,  `Button.Opts.Variants.EMPHASIS`, `Button.Opts.Variants['DE-EMPSHASIS']`, `Button.Opts.Variants.ACTION` or `Button.Opts.Variants.UTILITY`.
    */
   variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPSHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
 };
