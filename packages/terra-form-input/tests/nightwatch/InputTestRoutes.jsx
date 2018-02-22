@@ -13,8 +13,6 @@ import {
   OnFocusInput,
   RequiredInput,
   FocussedInput,
-  PlaceholderInput,
-  PlaceholderDisabledInput,
 } from './InputPropPermutations';
 
 const routes = (
@@ -28,8 +26,6 @@ const routes = (
     <Route path="/tests/form-input-tests/onFocusInput" component={OnFocusInput} />
     <Route path="/tests/form-input-tests/required" component={RequiredInput} />
     <Route path="/tests/form-input-tests/focussed" component={FocussedInput} />
-    <Route path="/tests/form-input-tests/placeholder" component={PlaceholderInput} />
-    <Route path="/tests/form-input-tests/placeholderDisabled" component={PlaceholderDisabledInput} />
   </div>
 );
 

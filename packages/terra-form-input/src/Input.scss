@@ -36,16 +36,6 @@
       color: var(--terra-form-input-disabled-color, rgba(0, 0, 0, 0.25));
       cursor: default;
       opacity: var(--terra-form-input-disabled-opacity);
-
-      /* stylelint-disable, selector-no-vendor-prefix */
-      // Added these in response to autoprefixer not properly adding browser imports
-      &::placeholder,
-      &:-ms-input-placeholder,
-      &::-ms-input-placeholder {
-        color: var(--terra-form-input-disabled-placeholder-color, rgba(0, 0, 0, 0.1));
-        opacity: 1;
-      }
-      /* stylelint-enable, selector-no-vendor-prefix */
     }
 
     &:focus {
@@ -62,17 +52,6 @@
         box-shadow: var(--terra-form-input-focus-keyboard-box-shadow-rtl);
       }
     }
-
-    /* stylelint-disable, selector-no-vendor-prefix */
-    // Added these in response to autoprefixer not properly adding browser imports
-    &::placeholder,
-    &:-ms-input-placeholder,
-    &::-ms-input-placeholder {
-      color: var(--terra-form-input-placeholder-color, #bcbfc0);
-      opacity: 1; 
-    }
-    /* stylelint-enable selector-no-vendor-prefix*/
-
   }
 
   .form-error {
