@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added css variables for focus border when selected
 
 2.0.0 - (February 12, 2018)
 ------------------
