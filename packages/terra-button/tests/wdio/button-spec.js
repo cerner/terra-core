@@ -14,6 +14,7 @@ describe('Button', () => {
       '--terra-button-line-height': '20px',
       '--terra-button-vertical-padding': '20px',
       '--terra-button-disabled-opacity': '.7',
+      '--terra-button-font-size': '50px',
 
       // Netural Button Vars for default state
       '--terra-button-background-color-neutral': 'purple',
