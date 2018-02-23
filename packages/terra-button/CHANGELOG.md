@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Added font-size theming variable to Button component.
+
+2.0.0 - (February 23, 2018)
+----------
+### Changed
 * Updated button types and variants syntax in docs
 
 2.0.0 - (February 12, 2018)

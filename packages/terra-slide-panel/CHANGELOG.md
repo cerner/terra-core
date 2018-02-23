@@ -6,6 +6,9 @@ Unreleased
 ### Fixed
 * Offscreen tab access in the panel removed
 
+### Changed
+* Updated aria hidden to use the string entry.
+
 2.0.0 - (February 12, 2018)
 ------------------
 ### Changed

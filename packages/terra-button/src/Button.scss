@@ -30,7 +30,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: inherit;
-    font-size: inherit;
+    font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
     padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
