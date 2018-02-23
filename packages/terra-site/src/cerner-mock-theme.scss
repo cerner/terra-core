@@ -572,4 +572,26 @@
   --terra-status-view-actions-button-margin-left: 0.357rem;
   --terra-status-view-actions-button-margin-right: 0.357rem;
   --terra-status-view-actions-button-margin-top: 0.714rem;
+
+  //--terra-form-input-transition-duration
+  --terra-form-input-focus-animation-background: linear-gradient(to bottom, red, blue);
+  --terra-form-input-focus-background-start: 0 0.143rem;
+  --terra-form-input-focus-keyboard-animation-size: 100% 0.214rem;
+  --terra-form-input-error-focus-keyboard-animation-size: 100% 0.214rem;
+  --terra-form-input-error-focus-animation-background: linear-gradient(to bottom, red, blue);
+  --terra-form-input-border: 1px solid purple;
+  --terra-form-input-color: orange;
+  --terra-form-input-padding-bottom: 0.357rem;
+  --terra-form-input-padding-left: 0.357rem;
+  --terra-form-input-padding-right: 0.357rem;
+  --terra-form-input-padding-top: 0.2857rem;
+  --terra-form-input-transition-duration: 0.75s;
+  --terra-form-input-hover-border: 1px solid green;
+  --terra-form-input-disabled-border: 1px solid pink;
+  --terra-form-input-disabled-background-color: red;
+  --terra-form-input-focus-border: 1px solid blue;
+  --terra-form-input-error-border: 1px solid yellow;
+  --terra-form-input-error-hover-border: 1px solid orange;
+  --terra-form-input-error-disabled-background-color: black;
+  --terra-form-input-error-disabled-border: 1px solid white;
 }
