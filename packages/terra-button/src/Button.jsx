@@ -15,7 +15,7 @@ const KEYCODES = {
 const ButtonVariants = {
   NEUTRAL: 'neutral',
   EMPHASIS: 'emphasis',
-  'DE-EMPSHASIS': 'de-emphasis',
+  'DE-EMPHASIS': 'de-emphasis',
   ACTION: 'action',
   UTILITY: 'utility',
 };
@@ -86,7 +86,7 @@ const propTypes = {
   /**
    * Sets the button variant. One of `Button.Opts.Variants.NEUTRAL`,  `Button.Opts.Variants.EMPHASIS`, `Button.Opts.Variants['DE-EMPSHASIS']`, `Button.Opts.Variants.ACTION` or `Button.Opts.Variants.UTILITY`.
    */
-  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPSHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
 };
 
 const defaultProps = {

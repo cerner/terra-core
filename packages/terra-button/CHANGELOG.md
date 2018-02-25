@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Added font-size theming variable to Button component.
+* Corrected `DE-EMPHSASIS` button variant typo
 
 2.0.0 - (February 23, 2018)
 ----------
