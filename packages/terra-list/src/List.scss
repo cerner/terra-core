@@ -65,7 +65,10 @@
       outline: var(--terra-list-item-focus-outline);
     }
 
-    &.selected:hover,
+    &.selected:hover {
+      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+    }
+
     &.selected:focus {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
