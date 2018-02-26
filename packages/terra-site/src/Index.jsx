@@ -43,6 +43,7 @@ import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SignatureExamples from './examples/signature/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SectionHeaderExamples from './examples/section-header/Index';
 import SelectExamples from './examples/form-select/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
@@ -173,6 +174,7 @@ ReactDOM.render((
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="section-header" component={SectionHeaderExamples} />
       <Route path="select" component={SelectExamples} />
       <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />

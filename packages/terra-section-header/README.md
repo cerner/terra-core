@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-section-header.svg)](https://www.npmjs.org/package/terra-section-header)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-{insert description}
+Section Header presentational component that provides an onClick callback and animateable status icon.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-section-header/docs)
