@@ -1,8 +1,8 @@
 {
-  "Terra.timeInput.am": "a.m.",
-  "Terra.timeInput.pm": "p.m.",
-  "Terra.timeInput.hours": "Hours",
-  "Terra.timeInput.minutes": "Minutes",
-  "Terra.timeInput.hh": "hh",
-  "Terra.timeInput.mm": "mm"
+  "Terra.timeInput.am": "مساءً",
+  "Terra.timeInput.pm": "صباحًا",
+  "Terra.timeInput.hours": "ساعات",
+  "Terra.timeInput.minutes": "دقائق",
+  "Terra.timeInput.hh": "س س",
+  "Terra.timeInput.mm": "د د"
 }

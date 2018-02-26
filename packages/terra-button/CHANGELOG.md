@@ -4,6 +4,22 @@ Changelog
 Unreleased
 ----------
 
+2.1.0 - (February 26, 2018)
+------------------
+### Changed
+* Added font-size theming variable to Button component
+* Corrected `DE-EMPHSASIS` button variant typo
+
+2.0.1 - (February 13, 2018)
+------------------
+### Changed
+* Updated peerDependencies
+
+2.0.0 - (February 23, 2018)
+----------
+### Changed
+* Updated button types and variants syntax in docs
+
 2.0.0 - (February 12, 2018)
 ------------------
 ### Changed

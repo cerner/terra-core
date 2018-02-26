@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Button from 'terra-button';
 import ContentContainer from 'terra-content-container';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import FocusTrap from 'focus-trap-react';
 import Hookshot from 'terra-hookshot';
 import styles from './PopupContent.scss';
@@ -18,6 +18,7 @@ const propTypes = {
    * The children to be presented as the popup's content.
    */
   children: PropTypes.node.isRequired,
+
   /**
    * The height value in px, to be applied to the content container.
    */
@@ -120,8 +121,8 @@ class PopupContent extends React.Component {
   }
 
   static addPopupHeader(children, onRequestClose) {
-    const icon = <IconClose height="20" width="20" />;
-    const button = <button className={cx('close')} onClick={onRequestClose}>{icon}</button>;
+    const icon = <span className={cx('close-icon')} />;
+    const button = <Button variant="utility" className={cx('close')} isIconOnly icon={icon} onClick={onRequestClose} />;
     const header = <div className={cx('header')}>{button}</div>;
     return <ContentContainer header={header} fill>{children}</ContentContainer>;
   }

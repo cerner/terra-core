@@ -9,7 +9,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    opacity: 0.8;
     outline: none;
     overflow: hidden;
     z-index: 100;
@@ -20,15 +19,21 @@
   }
 
   .dark {
-    background: rgba(28, 31, 33, 0.85);
+    background: var(--terra-overlay-dark-background-color, rgba(28, 31, 33, 0.8));
+    background-image: var(--terra-overlay-dark-background-image, none);
 
     .content {
-      color: #fff;
+      color: var(--terra-overlay-dark-content-color, #fff);
     }
   }
 
   .light {
-    background: rgba(244, 244, 244, 0.7);
+    background: var(--terra-overlay-light-background-color, rgba(245, 245, 245, 0.7));
+    background-image: var(--terra-overlay-light-background-image, none);
+
+    .content {
+      color: var(--terra-overlay-light-content-color, #1c1f21);
+    }
   }
 
   .fullscreen {
@@ -50,10 +55,13 @@
   }
 
   .content {
-    color: rgba(28, 31, 33, 1);
+    color: var(--terra-overlay-content-color, #1c1f21);
     font-size: 1rem;
     max-height: 100%;
-    padding: 1rem;
+    padding-bottom: var(--terra-overlay-content-padding-bottom, 1rem);
+    padding-left: var(--terra-overlay-content-padding-left, 1rem);
+    padding-right: var(--terra-overlay-content-padding-right, 1rem);
+    padding-top: var(--terra-overlay-content-padding-top, 1rem);
   }
 
   .icon {

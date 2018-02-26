@@ -1,3 +1,5 @@
+@import '~terra-mixins';
+
 :local {
   .dialog {
     height: 100%;
@@ -5,9 +7,33 @@
   }
 
   .dialog-header {
-    background-color: var(--terra-dialog-header-background-color, transparent);
-    border-bottom: var(--terra-dialog-header-bottom-border, none);
+    align-items: center;
+    background-color: var(--terra-dialog-header-background-color, #f4f4f4);
+    border-bottom: var(--terra-dialog-header-bottom-border, 1px solid #dedfe0);
     color: var(--terra-dialog-header-foreground-color, #1c1f21);
+    display: flex;
+    font-size: var(--terra-dialog-header-font-size);
+    height: 3.587rem;
+    justify-content: space-between;
+    padding: var(--terra-dialog-header-padding, 0.7143rem);
+  }
+
+  .dialog-header-title {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .dialog-header-close {
+    float: right;
+    text-align: right;
+  }
+
+  .close-icon {
+    background: var(--terra-dialog-header-close-icon, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='rgba(17, 17, 17, 1)' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>"));
+    display: inline-block;
+    height: 1.25em;
+    margin-top: 2px;
+    width: 1.25em;
   }
 
   .dialog-body {
