@@ -1,7 +1,7 @@
 {
   "name": "terra-collapsible-menu-view",
   "main": "lib/CollapsibleMenuView.js",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "The collapsible menu view is a mechanism that can be used in toolbar scenarios where actionable items will be displayed face-up and flex based on the space available. Any items that can not fit in the available space will be rolled into an ellipsis menu.",
   "repository": {
     "type": "git",
@@ -21,24 +21,24 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^2.0.0"
+    "terra-props-table": "^2.1.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.0.0"
+    "terra-base": "^3.1.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-base": "^3.0.0",
-    "terra-button": "^2.0.1",
-    "terra-button-group": "^2.0.1",
-    "terra-form": "^2.0.1",
-    "terra-icon": "^2.0.1",
-    "terra-list": "^2.0.1",
-    "terra-menu": "^2.0.1"
+    "terra-base": "^3.1.0",
+    "terra-button": "^2.1.0",
+    "terra-button-group": "^2.1.0",
+    "terra-form": "^2.1.0",
+    "terra-icon": "^2.1.0",
+    "terra-list": "^2.1.0",
+    "terra-menu": "^2.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
