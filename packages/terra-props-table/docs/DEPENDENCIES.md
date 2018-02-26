@@ -3,13 +3,13 @@
 ## dependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| classnames | ^2.2.5 | -- | A simple javascript utility for conditionally joining classNames together | 
+| classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | commander | ^2.9.0 | -- | the complete solution for node.js command-line programs |
 | glob | ^7.1.2 | -- | a little globber |
 | lodash | ^4.17.4 | -- | Lodash modular utilities. |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-docgen | ^2.15.0 | -- | A CLI and toolkit to extract information from React components for documentation generation. |
-| terra-markdown | ^2.0.0 | ^16.2.0 | terra-markdown |
+| terra-markdown | ^2.1.0 | ^16.2.0 | terra-markdown |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
