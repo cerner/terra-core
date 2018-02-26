@@ -4,8 +4,7 @@
   "commands": {
     "publish": {
       "ignore": [
-        "DEPENDENCIES.md",
-        "terra-dialog"
+        "DEPENDENCIES.md"
       ]
     }
   },
