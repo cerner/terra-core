@@ -88,7 +88,7 @@ const propTypes = {
   /**
    * Sets the button variant. One of `Button.Opts.Variants.NEUTRAL`,  `Button.Opts.Variants.EMPHASIS`, `Button.Opts.Variants['DE-EMPHASIS']`, `Button.Opts.Variants.ACTION` or `Button.Opts.Variants.UTILITY`.
    */
-  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPHASIS'], ButtonVariants['DE-EMPHSASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]), // TODO: remove `DE-EMPHSASIS` variant on next major version bump
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
 };
 
 const defaultProps = {
