@@ -3,12 +3,13 @@ Changelog
 
 Unreleased
 ----------
+* Bold the import statements on terra-icon site to make documentation more readable
 
 2.1.0 - (February 26, 2018)
 ------------------
 ### Changed
 * Removed unclear button variant example
-* Update styles for terra-form-checkbox
+* Update styles for terra-form-checkbox 
 
 2.0.0 - (February 12, 2018)
 ------------------
