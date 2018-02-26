@@ -15,6 +15,8 @@ const KEYCODES = {
 const ButtonVariants = {
   NEUTRAL: 'neutral',
   EMPHASIS: 'emphasis',
+  // TODO: this should be removed on the next major version bump
+  'DE-EMPHSASIS': 'de-emphasis',
   'DE-EMPHASIS': 'de-emphasis',
   ACTION: 'action',
   UTILITY: 'utility',
@@ -84,9 +86,9 @@ const propTypes = {
    */
   type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
   /**
-   * Sets the button variant. One of `Button.Opts.Variants.NEUTRAL`,  `Button.Opts.Variants.EMPHASIS`, `Button.Opts.Variants['DE-EMPSHASIS']`, `Button.Opts.Variants.ACTION` or `Button.Opts.Variants.UTILITY`.
+   * Sets the button variant. One of `Button.Opts.Variants.NEUTRAL`,  `Button.Opts.Variants.EMPHASIS`, `Button.Opts.Variants['DE-EMPHASIS']`, `Button.Opts.Variants.ACTION` or `Button.Opts.Variants.UTILITY`.
    */
-  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants['DE-EMPHASIS'], ButtonVariants['DE-EMPHSASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]), // TODO: remove `DE-EMPHSASIS` variant on next major version bump
 };
 
 const defaultProps = {
