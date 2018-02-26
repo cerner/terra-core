@@ -61,10 +61,10 @@
 
     &.list-item:focus {
       background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      outline: none;
-      box-shadow: var(--terra-list-item-box-shadow);
+      outline: var(--terra-list-item-focus-outline);
+      box-shadow: var(--terra-list-item-focus-box-shadow);
     }
-    
+
     &.selected:hover,
     &.selected:focus {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
