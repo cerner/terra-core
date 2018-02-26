@@ -4,7 +4,8 @@ Changelog
 Unreleased
 ----------
 ### Added
-* Added css variables for focus border when selected
+* Box shadow css variable for list-item focus
+* css variable for default list-item color
 
 2.0.0 - (February 12, 2018)
 ------------------

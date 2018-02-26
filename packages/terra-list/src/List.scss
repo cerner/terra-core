@@ -51,6 +51,7 @@
     }
   }
 
+
   .is-selectable {
     cursor: pointer;
 
@@ -59,19 +60,14 @@
     }
 
     &.list-item:focus {
-      outline: none;
       background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      border: var(--terra-list-item-focus-border-color);
-    }
-
-    &.selected:hover {
-      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
-    }
-
-    &.selected:focus {
       outline: none;
-      background-color: var(--terra-list-item-selected-focus-background-color, darken(#ebf6fd, 7%)) !important;
-      border: var(--terra-list-item-focus-border-color) !important;
+      box-shadow: var(--terra-list-item-box-shadow);
+    }
+    
+    &.selected:hover,
+    &.selected:focus {
+      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }
   }
 }
