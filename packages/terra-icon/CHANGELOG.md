@@ -9,6 +9,7 @@ Unreleased
 ### Changed
 * High Icon
 * Low Icon
+* Bold the import statements on terra-icon site to make documentation more readable
 
 ### Added
 * Bed Assigned Icon

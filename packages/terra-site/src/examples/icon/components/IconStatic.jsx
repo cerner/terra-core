@@ -50,260 +50,334 @@ const IconAll = () => (
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconSuccess height='2em' width='2em' /></td>
         <td>success</td>
-        <td>
-          import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconSuccessInverse height='2em' width='2em' /></td>
         <td>success_inverse</td>
-        <td>
-          import IconSuccessInverse from 'terra-icon/lib/icon/IconSuccessInverse';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconSuccessInverse from 'terra-icon/lib/icon/IconSuccessInverse';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconAvailable height='2em' width='2em' /></td>
         <td>available</td>
-        <td>
-          import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconComplete height='2em' width='2em' /></td>
         <td>complete</td>
-        <td>
-          import IconComplete from 'terra-icon/lib/icon/IconComplete';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconComplete from 'terra-icon/lib/icon/IconComplete';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconNoRisk height='2em' width='2em' /></td>
         <td>noRisk</td>
-        <td>
-          import IconNoRisk from 'terra-icon/lib/icon/IconNoRisk';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconNoRisk from 'terra-icon/lib/icon/IconNoRisk';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconScheduled height='2em' width='2em' /></td>
         <td>scheduled</td>
-        <td>
-          import IconScheduled from 'terra-icon/lib/icon/IconScheduled';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconScheduled from 'terra-icon/lib/icon/IconScheduled';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconHighPriority height='2em' width='2em' /></td>
         <td>highPriority</td>
-        <td>
-          import IconHighPriority from 'terra-icon/lib/icon/IconHighPriority';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconHighPriority from 'terra-icon/lib/icon/IconHighPriority';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconAlert height='2em' width='2em' /></td>
         <td>alert</td>
-        <td>
-          import IconAlert from 'terra-icon/lib/icon/IconAlert';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconAlert from 'terra-icon/lib/icon/IconAlert';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconWarning height='2em' width='2em' /></td>
         <td>warning</td>
-        <td>
-          import IconWarning from 'terra-icon/lib/icon/IconWarning';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconWarning from 'terra-icon/lib/icon/IconWarning';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconModerate height='2em' width='2em' /></td>
         <td>moderate</td>
-        <td>
-          import IconModerate from 'terra-icon/lib/icon/IconModerate';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconModerate from 'terra-icon/lib/icon/IconModerate';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconUnspecified height='2em' width='2em' /></td>
         <td>unspecified</td>
-        <td>
-          import IconUnspecified from 'terra-icon/lib/icon/IconUnspecified';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconUnspecified from 'terra-icon/lib/icon/IconUnspecified';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconCritical height='2em' width='2em' /></td>
         <td>critical</td>
-        <td>
-          import IconCritical from 'terra-icon/lib/icon/IconCritical';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconCritical from 'terra-icon/lib/icon/IconCritical';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconCriticalInverse height='2em' width='2em' /></td>
         <td>critical_inverse</td>
-        <td>
-          import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconInformation height='2em' width='2em' /></td>
         <td>information</td>
-        <td>
-          import IconInformation from 'terra-icon/lib/icon/IconInformation';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconInformation from 'terra-icon/lib/icon/IconInformation';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconInformationInverse height='2em' width='2em' /></td>
         <td>information_inverse</td>
-        <td>
-          import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconErrorDark height='2em' width='2em' /></td>
         <td>error_dark</td>
-        <td>
-          import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconError height='2em' width='2em' /></td>
         <td>error</td>
-        <td>
-          import IconError from 'terra-icon/lib/icon/IconError';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconError from 'terra-icon/lib/icon/IconError';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDoNotDisturb height='2em' width='2em' /></td>
         <td>doNotDisturb</td>
-        <td>
-          import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconHelp height='2em' width='2em' /></td>
         <td>help</td>
-        <td>
-          import IconHelp from 'terra-icon/lib/icon/IconHelp';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconHelp from 'terra-icon/lib/icon/IconHelp';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconHelpInverse height='2em' width='2em' /></td>
         <td>help_inverse</td>
-        <td>
-          import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconUnexpected height='2em' width='2em' /></td>
         <td>unexpected</td>
-        <td>
-          import IconUnexpected from 'terra-icon/lib/icon/IconUnexpected';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconUnexpected from 'terra-icon/lib/icon/IconUnexpected';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDueSoon height='2em' width='2em' /></td>
         <td>dueSoon</td>
-        <td>
-          import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOverDue height='2em' width='2em' /></td>
         <td>overDue</td>
-        <td>
-          import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconHigh height='2em' width='2em' /></td>
         <td>high</td>
-        <td>
-          import IconHigh from 'terra-icon/lib/icon/IconHigh';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconHigh from 'terra-icon/lib/icon/IconHigh';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconHighInverse height='2em' width='2em' /></td>
         <td>high_inverse</td>
-        <td>
-          import IconHighInverse from 'terra-icon/lib/icon/IconHighInverse';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconHighInverse from 'terra-icon/lib/icon/IconHighInverse';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconLow height='2em' width='2em' /></td>
         <td>low</td>
-        <td>
-          import IconLow from 'terra-icon/lib/icon/IconLow';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconLow from 'terra-icon/lib/icon/IconLow';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconMax height='2em' width='2em' /></td>
         <td>max</td>
-        <td>
-          import IconMax from 'terra-icon/lib/icon/IconMax';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconMax from 'terra-icon/lib/icon/IconMax';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconMin height='2em' width='2em' /></td>
         <td>min</td>
-        <td>
-          import IconMin from 'terra-icon/lib/icon/IconMin';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconMin from 'terra-icon/lib/icon/IconMin';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconAbnormal height='2em' width='2em' /></td>
         <td>abnormal</td>
-        <td>
-          import IconAbnormal from 'terra-icon/lib/icon/IconAbnormal';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconAbnormal from 'terra-icon/lib/icon/IconAbnormal';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDeviceCheck height='2em' width='2em' /></td>
         <td>deviceCheck</td>
-        <td>
-          import IconDeviceCheck from 'terra-icon/lib/icon/IconDeviceCheck';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDeviceCheck from 'terra-icon/lib/icon/IconDeviceCheck';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDeviceAlert height='2em' width='2em' /></td>
         <td>deviceAlert</td>
-        <td>
-          import IconDeviceAlert from 'terra-icon/lib/icon/IconDeviceAlert';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDeviceAlert from 'terra-icon/lib/icon/IconDeviceAlert';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDiamond height='2em' width='2em' /></td>
         <td>diamond</td>
-        <td>
-          import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconPharmacyReject height='2em' width='2em' /></td>
         <td>pharmacyReject</td>
-        <td>
-          import IconPharmacyReject from 'terra-icon/lib/icon/IconPharmacyReject';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconPharmacyReject from 'terra-icon/lib/icon/IconPharmacyReject';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconBedAssigned height='2em' width='2em' /></td>
         <td>bedAssigned</td>
-        <td>
-          import IconBedAssigned from 'terra-icon/lib/icon/IconBedAssigned';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconBedAssigned from 'terra-icon/lib/icon/IconBedAssigned';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDischargeComplete height='2em' width='2em' /></td>
         <td>dischargeComplete</td>
-        <td>
-          import IconDischargeComplete from 'terra-icon/lib/icon/IconDischargeComplete';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDischargeComplete from 'terra-icon/lib/icon/IconDischargeComplete';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDischargeComingDue height='2em' width='2em' /></td>
         <td>dischargeComingDue</td>
-        <td>
-          import IconDischargeComingDue from 'terra-icon/lib/icon/IconDischargeComingDue';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDischargeComingDue from 'terra-icon/lib/icon/IconDischargeComingDue';
+          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDischargeOverDue height='2em' width='2em' /></td>
         <td>dischargeOverDue</td>
-        <td>
-          import IconDischargeOverDue from 'terra-icon/lib/icon/IconDischargeOverDue';
+        <td style={{ fontWeight: 'bold' }}>
+          <code>
+            import IconDischargeOverDue from 'terra-icon/lib/icon/IconDischargeOverDue';
+          </code>
         </td>
       </tr>
     </Table.Rows>
