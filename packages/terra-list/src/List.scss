@@ -11,9 +11,9 @@
   }
 
   .list-item {
+    background-color: var(--terra-list-item-background-color);
     margin: 0;
     padding: 0;
-    background-color: var(--terra-list-item-background-color);
   }
 
   .divided > .list-item {
@@ -61,8 +61,8 @@
 
     &.list-item:focus {
       background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
-      outline: var(--terra-list-item-focus-outline);
       box-shadow: var(--terra-list-item-focus-box-shadow);
+      outline: var(--terra-list-item-focus-outline);
     }
 
     &.selected:hover,
