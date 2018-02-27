@@ -44,7 +44,7 @@
 
   .dialog-footer {
     background-color: var(--terra-dialog-footer-background-color, #f4f4f4);
-    border-top: var(--terra-dialog-footer-bottom-top, 1px solid #dedfe0);
+    border-top: var(--terra-dialog-footer-top-border, 1px solid #dedfe0);
     color: var(--terra-dialog-footer-foreground-color, #1c1f21);
     padding: var(--terra-dialog-footer-padding, 0.7143rem);
   }
