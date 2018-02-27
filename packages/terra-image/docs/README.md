@@ -11,8 +11,8 @@ The terra-image component provides styling for visual imagery.
 ## Usage
 
 ```jsx
-import React from 'react;
-import Image from 'terra-image;
+import React from 'react';
+import Image from 'terra-image';
 
 import placeholderSrc from './mock/valid/path/placeholder.png';
 import invalidImageSrc from './mock/invalid/path/image.png';
