@@ -10,6 +10,7 @@ const CardTests = () => (
       <li><Link to="/tests/card-tests/padding">Card - Padding</Link></li>
       <li><Link to="/tests/card-tests/paddingvertical">Card - Padding Vertical</Link></li>
       <li><Link to="/tests/card-tests/paddinghorizontal">Card - Padding Horizontal</Link></li>
+      <li><Link to="/tests/card-tests/contentcenter">Card - Content Center</Link></li>
     </ul>
   </div>
 );
