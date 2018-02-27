@@ -1,7 +1,7 @@
 {
   "name": "terra-progress-bar",
   "main": "lib/ProgressBar.js",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "terra-progress-bar",
   "repository": {
     "type": "git",
@@ -33,16 +33,16 @@
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   },
   "devDependencies": {
-    "terra-props-table": "^2.0.0"
+    "terra-props-table": "^2.1.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.0.0"
+    "terra-base": "^3.1.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.0.0"
+    "terra-base": "^3.1.0"
   }
 }

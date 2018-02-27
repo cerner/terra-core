@@ -111,7 +111,7 @@
     "stylelint-scss": "^2.0.0",
     "stylelint-suitcss": "^1.0.0",
     "terra-site": "git://github.com/cerner/terra-site.git#master",
-    "terra-toolkit": "^2.7.0",
+    "terra-toolkit": "^2.8.1",
     "wdio-mocha-framework": "^0.5.11",
     "wdio-visual-regression-service": "^0.8.0",
     "webdriverio": "4.9.9",

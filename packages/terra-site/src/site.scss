@@ -82,6 +82,13 @@
   }
 }
 
+.demo-modal-dialog {
+  @media screen and (min-width: 48em) {
+    height: 450px !important;
+    width: 450px !important;
+  }
+}
+
 #site-body {
   height: 100%;
   overflow: hidden;

@@ -1,4 +1,4 @@
-# Terra Image
+# Terra Profile Image
 
 The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.
 

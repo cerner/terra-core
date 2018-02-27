@@ -1,8 +1,8 @@
 {
-  "Terra.timeInput.am": "vormittags",
-  "Terra.timeInput.pm": "nachmittags",
-  "Terra.timeInput.hours": "Hours",
-  "Terra.timeInput.minutes": "Minutes",
-  "Terra.timeInput.hh": "HH",
+  "Terra.timeInput.am": "",
+  "Terra.timeInput.pm": "",
+  "Terra.timeInput.hours": "Stunden",
+  "Terra.timeInput.minutes": "Minuten",
+  "Terra.timeInput.hh": "hh",
   "Terra.timeInput.mm": "mm"
 }

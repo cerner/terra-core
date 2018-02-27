@@ -60,7 +60,7 @@ class Base extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.locale !== undefined && nextProps.locale !== this.props.locale) {
       try {
-        i18nLoader(this.props.locale, this.setState, this);
+        i18nLoader(nextProps.locale, this.setState, this);
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e);

@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
@@ -21,18 +21,18 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^2.0.0"
+    "terra-props-table": "^2.1.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.0.0"
+    "terra-base": "^3.1.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^0.9.5",
-    "terra-base": "^3.0.0"
+    "terra-base": "^3.1.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
