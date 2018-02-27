@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Box shadow css variable for list-item focus
+* css variable for default list-item color
 
 2.1.0 - (February 26, 2018)
 ------------------

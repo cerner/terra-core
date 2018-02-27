@@ -54,6 +54,7 @@ Cerner Corporation
 - Nathan Faltermeier [@Blackop778]
 - Carter Harwood [@harwood]
 - Mukul Dhariwal [@mukuldhariwal94]
+- Praneeth Madamsetti [@praneethm381]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -110,3 +111,4 @@ Cerner Corporation
 [@Blackop778]: https://github.com/Blackop778
 [@harwood]: https://github.com/harwood
 [@mukuldhariwal94]: https://github.com/mukuldhariwal94
+[@praneethm381]: https://github.com/praneethm381
