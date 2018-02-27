@@ -14,13 +14,7 @@ React component to render a table view for the props metadata of another react c
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-props-table`
 
-## CLI
-Props table is also a command utility used to generate markdown tables. The CLI accepts multiple files as input and has a single output directory.
-
 ### Usage
-```
-props-table src/Status.jsx --out-dir ./docs
-```
 
 
 

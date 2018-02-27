@@ -8,11 +8,6 @@
 | terra-base | ^3.1.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 | terra-button | ^2.1.0 | ^16.2.0 | The terra-button component provides users a way to trigger actions in the UI. |
 
-## devDependencies
-| Dependency | Version | React Version | Description |
-|-|-|-|-|
-| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
-
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

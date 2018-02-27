@@ -10,11 +10,6 @@
 | terra-content-container | ^2.1.0 | ^16.2.0 | The Terra ContentContainer is a structural component for the purpose of arranging content with a header. |
 | terra-icon | ^2.1.0 | ^16.2.0 | terra-icon |
 
-## devDependencies
-| Dependency | Version | React Version | Description |
-|-|-|-|-|
-| terra-props-table | ^1.10.1 | ^15.4.2 | terra-props-table |
-
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

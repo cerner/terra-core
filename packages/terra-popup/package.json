@@ -24,8 +24,7 @@
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "terra-app-delegate": "^1.9.0",
-    "terra-modal-manager": "^1.18.0",
-    "terra-props-table": "^2.1.0"
+    "terra-modal-manager": "^1.18.0"
   },
   "peerDependencies": {
     "react": "^16.2.0",
@@ -52,7 +51,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Popup.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js",

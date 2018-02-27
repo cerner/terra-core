@@ -10,11 +10,6 @@
 | terra-icon | ^2.1.0 | ^16.2.0 | terra-icon |
 | terra-toggle | ^2.1.0 | ^16.2.0 | Toggle component that transitions content in and out. |
 
-## devDependencies
-| Dependency | Version | React Version | Description |
-|-|-|-|-|
-| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
-
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

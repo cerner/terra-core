@@ -19,7 +19,6 @@
 | redux | ^3.6.0 | -- | Predictable state container for JavaScript apps |
 | terra-app-delegate | ^1.9.0 | -- | An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications |
 | terra-modal-manager | ^1.18.0 | ^15.4.2 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
-| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

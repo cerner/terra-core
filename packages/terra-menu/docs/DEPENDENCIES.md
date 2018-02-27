@@ -13,11 +13,6 @@
 | terra-popup | ^2.1.0 | ^16.2.0 | The Terra Popup is higher order component that launches terra-hookshot positioned content with the ability to display a dynamic arrow. |
 | terra-slide-group | ^2.1.0 | ^16.2.0 | A component that utilizes the `react-transition-group` library to present a stack of components in an animated fashion |
 
-## devDependencies
-| Dependency | Version | React Version | Description |
-|-|-|-|-|
-| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
-
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

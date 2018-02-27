@@ -22,7 +22,6 @@
 | terra-app-delegate | ^1.9.0 | -- | An object that provides a set of functions used to facilitate communcation between Containers and their consuming Containers/Applications |
 | terra-date-picker | ^2.1.0 | ^16.2.0 | The terra-date-picker component provides users a way to enter or select a date from the date picker. |
 | terra-modal-manager | ^1.18.0 | ^15.4.2 | A Redux-backed Container component that dynamically presents components in a Terra Modal |
-| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

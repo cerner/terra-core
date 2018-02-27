@@ -10,7 +10,6 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
 | xfc | ^1.0.0 | -- | A Cross Frame Container that handles securely embedding web content into a 3rd party domain |
 
 ## peerDependencies
