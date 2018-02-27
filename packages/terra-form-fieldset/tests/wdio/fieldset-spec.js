@@ -10,7 +10,7 @@ describe('Fieldset', () => {
   });
 
   describe('Populated', () => {
-    beforeEach(() => browser.url('/#/tests/form-tests/field/populated'));
+    beforeEach(() => browser.url('/#/tests/form-tests/fieldset/populated'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
