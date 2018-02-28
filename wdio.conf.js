@@ -42,7 +42,7 @@ const config = {
   },
 
   terra: {
-    selector: '[data-terra-site-content] *:first-child',
+    selector: '[data-terra-dev-site-content] *:first-child',
   },
 
   beforeHook() {

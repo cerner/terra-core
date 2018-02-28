@@ -7,7 +7,7 @@ describe('Base', () => {
     });
 
     it('Displays a customized en-US locale message', () => {
-      browser.click('button');
+      browser.click('#switch');
       expect(browser.getText('#message')).to.equal('en-US');
     });
   });

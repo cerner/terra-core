@@ -77,13 +77,12 @@ import NoTranslationsLoadedBase from './packages/terra-base/tests/nightwatch/NoT
 import NoTranslationsLoadedStringBase from './packages/terra-base/tests/nightwatch/NoTranslationsLoadedStringBase';
 import SwitchLocaleBase from './packages/terra-base/tests/nightwatch/SwitchLocaleBase';
 import ButtonGroupDisabledButtons from './packages/terra-button-group/tests/nightwatch/ButtonGroupDisabledButtons';
+import ButtonGroupIcon from './packages/terra-button-group/tests/nightwatch/ButtonGroupIcon';
+import ButtonGroupLongText from './packages/terra-button-group/tests/nightwatch/ButtonGroupLongText';
 import ButtonGroupMultiSelect from './packages/terra-button-group/tests/nightwatch/ButtonGroupMultiSelect';
 import ButtonGroupNotSelectable from './packages/terra-button-group/tests/nightwatch/ButtonGroupNotSelectable';
 import ButtonGroupSingleSelect from './packages/terra-button-group/tests/nightwatch/ButtonGroupSingleSelect';
-import ButtonGroupTextAndIcon from './packages/terra-button-group/tests/nightwatch/ButtonGroupTextAndIcon';
-import IconButtonGroupButton from './packages/terra-button-group/tests/nightwatch/IconButtonGroupButton';
-import SizeButtonGroup from './packages/terra-button-group/tests/nightwatch/SizeButtonGroup';
-import VariantButtonGroup from './packages/terra-button-group/tests/nightwatch/VariantButtonGroup';
+import ButtonGroupText from './packages/terra-button-group/tests/nightwatch/ButtonGroupText';
 import ActiveVariantButtons from './packages/terra-button/tests/nightwatch/ActiveVariantButtons';
 import ButtonTypes from './packages/terra-button/tests/nightwatch/ButtonTypes';
 import CompactButton from './packages/terra-button/tests/nightwatch/CompactButton';
@@ -162,7 +161,12 @@ import FieldCombinations from './packages/terra-form-field/tests/nightwatch/Fiel
 import FieldInline from './packages/terra-form-field/tests/nightwatch/FieldInline';
 import FieldInteractiveInvalid from './packages/terra-form-field/tests/nightwatch/FieldInteractiveInvalid';
 import FieldTextWrap from './packages/terra-form-field/tests/nightwatch/FieldTextWrap';
-import InputPropPermutations from './packages/terra-form-input/tests/nightwatch/InputPropPermutations';
+import DefaultFormInput from './packages/terra-form-input/tests/nightwatch/DefaultFormInput';
+import DisabledFormInput from './packages/terra-form-input/tests/nightwatch/DisabledFormInput';
+import InvalidFormInput from './packages/terra-form-input/tests/nightwatch/InvalidFormInput';
+import OnChangeFormInput from './packages/terra-form-input/tests/nightwatch/OnChangeFormInput';
+import OnFocusFormInput from './packages/terra-form-input/tests/nightwatch/OnFocusFormInput';
+import RequiredFormInput from './packages/terra-form-input/tests/nightwatch/RequiredFormInput';
 import DefaultRadio from './packages/terra-form-radio/tests/nightwatch/DefaultRadio';
 import DisabledRadio from './packages/terra-form-radio/tests/nightwatch/DisabledRadio';
 import HiddenRadio from './packages/terra-form-radio/tests/nightwatch/HiddenRadio';
@@ -646,6 +650,16 @@ const componentConfig = {
         component: ButtonGroupDisabledButtons,
       },
       {
+        name: 'Button Group Icon',
+        path: '/button-group-icon',
+        component: ButtonGroupIcon,
+      },
+      {
+        name: 'Button Group Long Text',
+        path: '/button-group-long-text',
+        component: ButtonGroupLongText,
+      },
+      {
         name: 'Button Group Multi Select',
         path: '/button-group-multi-select',
         component: ButtonGroupMultiSelect,
@@ -661,24 +675,9 @@ const componentConfig = {
         component: ButtonGroupSingleSelect,
       },
       {
-        name: 'Button Group Text And Icon',
-        path: '/button-group-text-and-icon',
-        component: ButtonGroupTextAndIcon,
-      },
-      {
-        name: 'Icon Button Group Button',
-        path: '/icon-button-group-button',
-        component: IconButtonGroupButton,
-      },
-      {
-        name: 'Size Button Group',
-        path: '/size-button-group',
-        component: SizeButtonGroup,
-      },
-      {
-        name: 'Variant Button Group',
-        path: '/variant-button-group',
-        component: VariantButtonGroup,
+        name: 'Button Group Text',
+        path: '/button-group-text',
+        component: ButtonGroupText,
       },
     ],
   },
@@ -1167,9 +1166,34 @@ const componentConfig = {
     path: '/form-input',
     tests: [
       {
-        name: 'Input Prop Permutations',
-        path: '/input-prop-permutations',
-        component: InputPropPermutations,
+        name: 'Default Form Input',
+        path: '/default-form-input',
+        component: DefaultFormInput,
+      },
+      {
+        name: 'Disabled Form Input',
+        path: '/disabled-form-input',
+        component: DisabledFormInput,
+      },
+      {
+        name: 'Invalid Form Input',
+        path: '/invalid-form-input',
+        component: InvalidFormInput,
+      },
+      {
+        name: 'On Change Form Input',
+        path: '/on-change-form-input',
+        component: OnChangeFormInput,
+      },
+      {
+        name: 'On Focus Form Input',
+        path: '/on-focus-form-input',
+        component: OnFocusFormInput,
+      },
+      {
+        name: 'Required Form Input',
+        path: '/required-form-input',
+        component: RequiredFormInput,
       },
     ],
   },
