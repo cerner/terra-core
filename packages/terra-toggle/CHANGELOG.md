@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated package to use latest minor release of react-animate-height
 
 2.1.0 - (February 26, 2018)
 ------------------

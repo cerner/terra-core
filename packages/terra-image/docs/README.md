@@ -11,18 +11,18 @@ The terra-image component provides styling for visual imagery.
 ## Usage
 
 ```jsx
-import React from 'react;
-import Image from 'terra-image;
+import React from 'react';
+import Image from 'terra-image';
 
 import placeholderSrc from './mock/valid/path/placeholder.png';
 import invalidImageSrc from './mock/invalid/path/image.png';
 import validImageSrc from './mock/valid/path/image.png';
 
-// Providing an invalid or unresolvable path with cause the placeholderSrc image to be displayed.
-<Image src={invalidImageSrc} placeholderSrc={placeholderSrc} alt="placeholder image" />
+// Providing an invalid or unresolvable path with cause the placeholder image to be displayed.
+<Image src={invalidImageSrc} placeholder={placeholderSrc} alt="placeholder image" />
 
 // Providing a valid path will cause the src image to be displayed.
-<Image src={validImageSrc} placeholderSrc={placeholderSrc} alt="placeholder image" />
+<Image src={validImageSrc} placeholder={placeholderSrc} alt="placeholder image" />
 ```
 
 ## Component Features
