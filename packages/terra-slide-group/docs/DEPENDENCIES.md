@@ -8,6 +8,11 @@
 | react-transition-group | ^2.2.0 | >=15.0.0 | A react component toolset for managing animations |
 | terra-base | ^3.1.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 
+## devDependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
+
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

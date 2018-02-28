@@ -10,6 +10,11 @@
 | resize-observer-polyfill | ^1.4.1 | -- | A polyfill for the Resize Observer API |
 | terra-base | ^3.1.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 
+## devDependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
+
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

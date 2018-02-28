@@ -14,6 +14,11 @@
 | terra-list | ^2.1.0 | ^16.2.0 | terra-list |
 | terra-menu | ^2.1.0 | ^16.2.0 | The menu is a popup component that displays a list of items, item groups, and dividers. Menu Items can be actionable, have toggle-style selection, or have nested submenu items. Menu Item groups are a single-select grouping of menu items. The Menu will determine the height of the popup based on the number of items in the main menu. |
 
+## devDependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
+
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

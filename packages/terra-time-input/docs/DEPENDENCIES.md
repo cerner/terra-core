@@ -10,6 +10,11 @@
 | terra-button-group | ^2.1.0 | ^16.2.0 | terra-button-group |
 | terra-form | ^2.1.0 | ^16.2.0 | Components for building forms |
 
+## devDependencies
+| Dependency | Version | React Version | Description |
+|-|-|-|-|
+| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
+
 ## peerDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|

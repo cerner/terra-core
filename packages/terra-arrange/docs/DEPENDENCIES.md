@@ -11,6 +11,7 @@
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
 | terra-icon | ^2.1.0 | ^16.2.0 | terra-icon |
+| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

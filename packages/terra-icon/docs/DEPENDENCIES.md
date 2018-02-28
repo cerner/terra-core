@@ -14,6 +14,7 @@
 | jsdom | ^9.11.0 | -- | A JavaScript implementation of the DOM and HTML standards |
 | one-cerner-style-icons | https://github.com/cerner/one-cerner-style-icons/archive/1.13.1.tar.gz | -- | One Cerner Style Icon Repository |
 | svgo | ^0.7.2 | -- | Nodejs-based tool for optimizing SVG vector graphics files |
+| terra-props-table | ^2.1.0 | ^16.2.0 | terra-props-table |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
