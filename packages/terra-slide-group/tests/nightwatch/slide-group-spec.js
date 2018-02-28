@@ -67,7 +67,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Disables content on hidden slides for a SlideGroup': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/slide-group-tests/non-animated`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/slide-group/non-animated-slide-group`);
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').to.not.have.attribute('aria-hidden');
     browser.expect.element('#SlideGroup > div[class*="slide"]:nth-child(1)').text.to.contain('Slide 1');
 

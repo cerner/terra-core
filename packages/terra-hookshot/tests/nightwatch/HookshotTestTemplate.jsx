@@ -84,7 +84,7 @@ class HookshotTemplate extends React.Component {
       ...hookshotProps
     } = this.props;
     return (
-      <div id={`${id}-bounds`} style={{ margin: '-15px', border: '1px dashed grey', height: '145px', width: boundingWidth }}>
+      <div id={`${id}-bounds`} style={{ border: '1px dashed grey', height: '145px', width: boundingWidth }}>
         <Hookshot
           id={id}
           contentAttachment={attachmentValues(contentAttachment)}

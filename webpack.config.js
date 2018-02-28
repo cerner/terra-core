@@ -1,5 +1,5 @@
 const path = require('path');
-const webpackConfig = require('terra-site/src/config/webpack.config');
+const webpackConfig = require('terra-dev-site/src/config/webpack.config');
 const I18nAggregatorPlugin = require('./packages/terra-i18n-plugin');
 const i18nSupportedLocales = require('./packages/terra-i18n/lib/i18nSupportedLocales');
 

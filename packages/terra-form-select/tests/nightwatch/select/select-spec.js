@@ -72,14 +72,14 @@ module.exports = resizeTo(['tiny', 'huge'], {
     browser.expect.element('#invalidSelect').to.have.attribute('class').which.contains('invalid');
   },
   'Hides placeholder and displays default value when appropriate': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/select-tests/hidden-placeholder`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select/hidden-placeholder-select`);
     browser.expect.element('#hiddenPlaceholderSelect').text.to.equal('Puppies');
     browser.click('#hiddenPlaceholderSelect');
     browser.expect.element('div[class*="select-menu"]').to.be.present;
     browser.expect.element('ul li:nth-child(1)').text.to.not.equal('- Select -');
   },
   'Hides placeholder and displays blank when no initial value is given': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/select-tests/blank`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select/blank-select`);
     browser.expect.element('#blankSelect').text.to.equal('');
     browser.click('#blankSelect');
     browser.expect.element('div[class*="select-menu"]').to.be.present;
