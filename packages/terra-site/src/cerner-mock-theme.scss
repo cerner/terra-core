@@ -571,4 +571,32 @@
   --terra-status-view-actions-button-margin-left: 0.357rem;
   --terra-status-view-actions-button-margin-right: 0.357rem;
   --terra-status-view-actions-button-margin-top: 0.714rem;
+
+  //terra-tag
+  --terra-tag-border-style: dotted;
+  --terra-tag-font-size: 20px;
+  --terra-tag-font-weight: 700;
+  --terra-tag-line-height: 2rem;
+  --terra-tag-margin-top: 5px;
+  --terra-tag-margin-right: 5px;
+  --terra-tag-margin-bottom: 5px;
+  --terra-tag-margin-left: 5px;
+  --terra-tag-padding-top: 5px;
+  --terra-tag-padding-right: 5px;
+  --terra-tag-padding-bottom: 5px;
+  --terra-tag-padding-left: 5px;
+  --terra-tag-normal-theme-background-color: #008b8b;
+  --terra-tag-normal-theme-border-color: #582c83;
+  --terra-tag-normal-theme-box-shadow: none;
+  --terra-tag-icon-margin-top: 5px;
+  --terra-tag-icon-margin-right: 5px;
+  --terra-tag-icon-height: 1.5rem;
+  --terra-tag-icon-width: 1.5rem;
+  --terra-tag-focus-background-color: #ff1fd4;
+  --terra-tag-focused-border-color: rgba(28, 31, 33, 0.04);
+  --terra-tag-focus-box-shadow: 0 0 5px 3px rgba(76, 178, 233, 0.5);
+  --terra-tag-focused-text-decoration: underline;
+  --terra-tag-hover-background-color: rgba(76, 178, 233, 0.5);
+  --terra-tag-hover-box-shadow: 0 0 5px 3px rgba(76, 178, 233, 0.5);
+  --terra-tag-hover-text-decoration: overline;
 }
