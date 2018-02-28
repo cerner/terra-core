@@ -45,7 +45,7 @@
 
   .error {
     color: var(--terra-form-fieldset-error-color, #e50000);
-    display: var(--terra-form-fieldset-error-display, block);
+    display: block;
     line-height: 1;
     margin-bottom: 0.357em;
     outline: 0;

@@ -18,7 +18,6 @@ describe('Fieldset', () => {
       '--terra-form-fieldset-legend-color': 'yellow',
       '--terra-form-fieldset-legend-font-weight': '100',
       '--terra-form-fieldset-error-color': 'green',
-      '--terra-form-fieldset-error-display': 'inline-block',
     });
   });
 });
