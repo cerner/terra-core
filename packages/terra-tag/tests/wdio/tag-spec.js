@@ -23,6 +23,7 @@ describe('Tag', () => {
         '--terra-tag-margin-bottom': '1px',
         '--terra-tag-margin-left': '1px',
         '--terra-tag-margin-right': '1px',
+        '--terra-tag-text-decoration': 'underline',
       });
     });
 
@@ -37,8 +38,8 @@ describe('Tag', () => {
       Terra.should.themeEachCustomProperty({
         '--terra-tag-focus-background-color': 'purple',
         '--terra-tag-focus-box-shadow': '4px 4px 4px 4px green',
-        '--terra-tag-focused-border-color': 'yellow',
-        '--terra-tag-focused-text-decoration': 'overline',
+        '--terra-tag-focus-border-color': 'yellow',
+        '--terra-tag-focus-text-decoration': 'overline',
       });
     });
 

@@ -19,7 +19,7 @@
     padding-top: var(--terra-tag-padding-top, 0.1428rem);
     position: relative;
     text-align: left;
-    text-decoration: none;
+    text-decoration: var(--terra-tag-text-decoration, none);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on tags on mobile devices
@@ -37,9 +37,9 @@
 
     &.is-focused {
       background-color: var(--terra-tag-focus-background-color, #fff);
-      border-color: var(--terra-tag-focused-border-color, rgba(76, 178, 233, 0.5));
+      border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
       box-shadow: var(--terra-tag-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-      text-decoration: var(--terra-tag-focused-text-decoration, none);
+      text-decoration: var(--terra-tag-focus-text-decoration, none);
     }
 
     &:hover {

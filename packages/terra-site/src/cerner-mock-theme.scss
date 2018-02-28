@@ -593,10 +593,11 @@
   --terra-tag-icon-height: 1.5rem;
   --terra-tag-icon-width: 1.5rem;
   --terra-tag-focus-background-color: #ff1fd4;
-  --terra-tag-focused-border-color: rgba(28, 31, 33, 0.04);
+  --terra-tag-focus-border-color: rgba(28, 31, 33, 0.04);
   --terra-tag-focus-box-shadow: 0 0 5px 3px rgba(76, 178, 233, 0.5);
-  --terra-tag-focused-text-decoration: underline;
+  --terra-tag-focus-text-decoration: underline;
   --terra-tag-hover-background-color: rgba(76, 178, 233, 0.5);
   --terra-tag-hover-box-shadow: 0 0 5px 3px rgba(76, 178, 233, 0.5);
   --terra-tag-hover-text-decoration: overline;
+  --terra-tag-text-decoration: underline;
 }
