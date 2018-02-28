@@ -20,7 +20,7 @@ const propTypes = {
    */
   href: PropTypes.string,
   /**
-   * An optional icon. Nested inline with the text when provided.
+   * An optional icon.
    */
   icon: PropTypes.element,
   /**
