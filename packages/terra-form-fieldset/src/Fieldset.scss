@@ -25,12 +25,6 @@
     }
   }
 
-  .label {
-    display: block;
-    font-weight: var(--terra-form-fieldset-error-font-weight, bold);
-    margin-bottom: 0.357em;
-  }
-
   .legend {
     border: 0;
     color: var(--terra-form-fieldset-legend-color, rgba(0, 0, 0, 0.8));

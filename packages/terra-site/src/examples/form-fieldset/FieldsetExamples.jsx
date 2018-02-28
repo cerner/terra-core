@@ -1,6 +1,6 @@
 import React from 'react';
 import Field from 'terra-form/lib/Field';
-import Fieldset from 'terra-form/lib/Fieldset';
+import Fieldset from 'terra-form-fieldset/lib/Fieldset';
 import Input from 'terra-form/lib/Input';
 import styles from '../../site.scss';
 
