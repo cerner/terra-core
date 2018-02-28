@@ -8,7 +8,7 @@
     border-radius: 50%;
     box-shadow: var(--terra-avatar-box-shadow);
     color: var(--terra-avatar-color, rgb(155, 159, 161));
-    display: flex;
+    display: inline-flex;
     height: var(--terra-avatar-size, 3.429rem);
     justify-content: center;
     line-height: 0;
