@@ -3,7 +3,7 @@ import componentConfig from './generatedComponentConfig';
 import './packages/terra-site/src/cerner-mock-theme.scss';
 
 const siteConfig = {
-  /* The component configuration path. */
+  /* The component configuration. */
   componentConfig,
 
   /* The logo to display as the placeholder. */
@@ -19,6 +19,7 @@ const siteConfig = {
     /* The title for the site header. */
     title: 'Terra Core',
 
+    /* The themes to toggle in the site. */
     themes: {
       'Default Theme': '',
       'Mock Theme': 'cerner-mock-theme',
