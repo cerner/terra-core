@@ -3,15 +3,19 @@ Changelog
 
 Unreleased
 ----------
+
+2.1.0 - (February 26, 2018)
+------------------
 ### Changed
 * High Icon
 * Low Icon
+* Bold the import statements on terra-icon site to make documentation more readable
 
 ### Added
 * Bed Assigned Icon
 * Bed Requested Icon
 * Critical Inverse Icon
-* Discharge Comming Due Icon
+* Discharge Coming Due Icon
 * Discharge Complete Icon
 * Discharge Overdue Icon
 * Error Dark Icon
@@ -24,6 +28,11 @@ Unreleased
 * No Risk Icon
 * Rotate Left Icon
 * Rotate Right Icon
+
+2.0.1 - (February 13, 2018)
+------------------
+### Changed
+* Updated peerDependencies
 
 2.0.0 - (February 12, 2018)
 ------------------

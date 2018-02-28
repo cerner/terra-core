@@ -3,8 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.1.0 - (February 26, 2018)
+------------------
+### Changed
 * Reduced erroneous default margin-right value of 2rem
 * Add theming variable to native-input margin-top when is-mobile
+
+2.0.1 - (February 13, 2018)
+------------------
+### Changed
+* Updated peerDependencies
 
 2.0.0 - (February 12, 2018)
 ------------------

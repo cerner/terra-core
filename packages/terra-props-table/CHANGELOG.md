@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.1.0 - (February 26, 2018)
+------------------
 ### Added
 * Added styling to wrap long prop-type 'type' entries
 * Aligned Props Table entries to the top of their rows
