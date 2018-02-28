@@ -10,7 +10,7 @@
     font-weight: var(--terra-tag-font-weight, normal);
     line-height: var(--terra-tag-line-height, 1.14285rem);
     margin-bottom: var(--terra-tag-margin-bottom, 0.357rem);
-    margin-left: var(--terra-tag-margin-left, 0);
+    margin-left: var(--terra-tag-margin-left);
     margin-right: var(--terra-tag-margin-right, 0.714rem);
     margin-top: var(--terra-tag-margin-top, 0.357rem);
     padding-bottom: var(--terra-tag-padding-bottom, 0.1428rem);
@@ -38,7 +38,7 @@
     &.is-focused {
       background-color: var(--terra-tag-focus-background-color, #fff);
       border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
-      box-shadow: var(--terra-tag-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
+      box-shadow: var(--terra-tag-focus-box-shadow, inset 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
       text-decoration: var(--terra-tag-focus-text-decoration, none);
     }
 

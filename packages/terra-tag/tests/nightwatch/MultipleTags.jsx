@@ -3,7 +3,7 @@ import IconBookmark from '../../../terra-icon/lib/icon/IconTile';
 import Tag from '../../lib/Tag';
 
 const icon = <IconBookmark />;
-const text = 'Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long';
+const text = 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ';
 
 const IconTag = () => <Tag icon={icon} text="Icon Tag" id="iconTag" />;
 const LongTextIconTag = () => <Tag icon={icon} text={text} id="longTextIcon" />;

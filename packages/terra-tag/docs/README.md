@@ -1,6 +1,6 @@
 # Terra Tag
 
-The tag component is used for tagging and provides users a way to trigger actions in the UI. Each tag should have a text.
+The tag component is used for tagging and provides users a way to trigger actions in the UI. Each tag should have text.
 It can optionally display an icon along with the text.
 
 ## Getting Started

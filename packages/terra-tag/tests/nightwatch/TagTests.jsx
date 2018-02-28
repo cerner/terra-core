@@ -8,7 +8,7 @@ const TagTests = () => (
       <li><Link to="/tests/tag-tests/default-tag">Tag - Default</Link></li>
       <li><Link to="/tests/tag-tests/href-tag">Tag - Href</Link></li>
       <li><Link to="/tests/tag-tests/icon-and-text-tag">Tag - Icon and Text</Link></li>
-      <li><Link to="/tests/tag-tests/icon-and-long-text-tag">Tag - Icon and long Text</Link></li>
+      <li><Link to="/tests/tag-tests/icon-and-long-text-tag">Tag - Icon and Long Text</Link></li>
       <li><Link to="/tests/tag-tests/multiple-tags">Tag - Multiple</Link></li>
     </ul>
   </div>

@@ -44,7 +44,7 @@ const propTypes = {
    */
   text: PropTypes.string.isRequired,
   /**
-   * Sets the Tag theme.
+   * Sets the tag theme.
    */
   theme: PropTypes.string,
 };

@@ -27,7 +27,6 @@ describe('Tag', () => {
     expect(tag.prop('className')).toContain('tag normal');
   });
 
-
   // Structure Tests
   it('should have the class tag', () => {
     const wrapper = shallow(defaultRender);
