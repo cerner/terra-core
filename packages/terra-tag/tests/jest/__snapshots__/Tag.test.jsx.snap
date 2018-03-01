@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag should render a tag 1`] = `
-<button
+<span
   className="tag normal"
   onBlur={[Function]}
   onKeyUp={[Function]}
@@ -9,11 +9,11 @@ exports[`Tag should render a tag 1`] = `
   <span>
     Normal
   </span>
-</button>
+</span>
 `;
 
 exports[`Tag should render an icon and a text 1`] = `
-<button
+<span
   className="tag normal"
   onBlur={[Function]}
   onKeyUp={[Function]}
@@ -28,12 +28,12 @@ exports[`Tag should render an icon and a text 1`] = `
   <span>
     text
   </span>
-</button>
+</span>
 `;
 
 exports[`Tag should render as an anchor when provided an href 1`] = `
 <a
-  className="tag normal"
+  className="tag normal is-interactive"
   href="MockHref"
   onBlur={[Function]}
   onKeyUp={[Function]}

@@ -6,13 +6,15 @@ const icon = <IconBookmark />;
 const text = 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ';
 
 const IconTag = () => <Tag icon={icon} text="Icon Tag" id="iconTag" />;
-const LongTextIconTag = () => <Tag icon={icon} text={text} id="longTextIcon" />;
+const LongTextIconTag = () => <Tag icon={icon} text={text} id="longTextIcon" onClick={() => 1} />;
 const DefaultTag = () => <Tag id="default" text="Default Tag" />;
+const OnClickTag = () => <Tag id="default" text="Clickable Tag" onClick={() => 1} />;
 
 const MultipleTags = () =>
   <div>
     <IconTag />
     <DefaultTag />
+    <OnClickTag />
     <LongTextIconTag />
   </div>;
 

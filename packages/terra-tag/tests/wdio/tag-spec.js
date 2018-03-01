@@ -8,10 +8,15 @@ describe('Tag', () => {
     describe('Default Tag', () => {
       beforeEach(() => browser.url('/#/tests/tag-tests/default-tag'));
 
+      it('Checks if is-interactive class was not applied', () => {
+        expect(browser.getAttribute('span', 'className')).to.not.contains('is-interactive');
+      });
+
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
         '--terra-tag-font-size': '25px',
+        '--terra-tag-color': 'red',
         '--terra-tag-font-weight': '700',
         '--terra-tag-padding-top': '1px',
         '--terra-tag-padding-bottom': '1px',
@@ -24,37 +29,6 @@ describe('Tag', () => {
         '--terra-tag-margin-left': '1px',
         '--terra-tag-margin-right': '1px',
         '--terra-tag-text-decoration': 'underline',
-      });
-    });
-
-    describe('Default - Keyboard focus', () => {
-      beforeEach(() => {
-        browser.url('/#/tests/tag-tests/default-tag');
-        browser.keys('Tab');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
-      Terra.should.themeEachCustomProperty({
-        '--terra-tag-focus-background-color': 'purple',
-        '--terra-tag-focus-box-shadow': '4px 4px 4px 4px green',
-        '--terra-tag-focus-border-color': 'yellow',
-        '--terra-tag-focus-text-decoration': 'overline',
-      });
-    });
-
-    describe('Default - Hover', () => {
-      beforeEach(() => {
-        browser.url('/#/tests/tag-tests/default-tag');
-        browser.moveToObject('button');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
-      Terra.should.themeEachCustomProperty({
-        '--terra-tag-hover-background-color': 'purple',
-        '--terra-tag-hover-box-shadow': '4px 4px 4px 4px green',
-        '--terra-tag-hover-text-decoration': 'overline',
       });
     });
 
@@ -76,6 +50,10 @@ describe('Tag', () => {
   describe('Href Tag', () => {
     before(() => browser.url('/#/tests/tag-tests/href-tag'));
     Terra.should.matchScreenshot();
+
+    it('Check if is-interactive class was applied', () => {
+      expect(browser.getAttribute('a', 'className')).contains('is-interactive');
+    });
   });
 
   describe('Icon and Text Tag', () => {
@@ -103,5 +81,50 @@ describe('Tag', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
+  });
+
+  describe('OnClick Tag', () => {
+    before(() => browser.url('/#/tests/tag-tests/on-click-tag'));
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+    Terra.should.themeEachCustomProperty({
+      '--terra-tag-interactive-color': 'purple',
+    });
+
+    describe('OnClick Tag - Keyboard focus', () => {
+      beforeEach(() => {
+        browser.url('/#/tests/tag-tests/on-click-tag');
+        browser.keys('Tab');
+      });
+
+      it('Check if is-interactive class was applied', () => {
+        expect(browser.getAttribute('button', 'className')).contains('is-interactive');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+      Terra.should.themeEachCustomProperty({
+        '--terra-tag-focus-background-color': 'purple',
+        '--terra-tag-focus-box-shadow': '4px 4px 4px 4px green',
+        '--terra-tag-focus-border-color': 'yellow',
+        '--terra-tag-focus-text-decoration': 'overline',
+      });
+    });
+
+    describe('OnClick Tag - Hover', () => {
+      beforeEach(() => {
+        browser.url('/#/tests/tag-tests/on-click-tag');
+        browser.moveToObject('button');
+      });
+
+      Terra.should.beAccessible();
+      Terra.should.matchScreenshot();
+      Terra.should.themeEachCustomProperty({
+        '--terra-tag-hover-background-color': 'purple',
+        '--terra-tag-hover-box-shadow': '4px 4px 4px 4px green',
+        '--terra-tag-hover-text-decoration': 'overline',
+        '--terra-tag-hover-color': 'yellow',
+      });
+    });
   });
 });

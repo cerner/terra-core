@@ -98,6 +98,7 @@ class Tag extends React.Component {
       'tag',
       theme,
       { 'is-focused': this.state.focused },
+      { 'is-interactive': href || onClick },
       customProps.className,
     ]);
 
@@ -105,8 +106,9 @@ class Tag extends React.Component {
 
     const tagText = <span>{text}</span>;
     const tagIcon = icon ? <span className={iconClass}>{icon}</span> : null;
-
-    const ComponentType = href ? 'a' : 'button';
+    const isClickable = href || onClick;
+    const clickableComponent = href ? 'a' : 'button';
+    const ComponentType = isClickable ? clickableComponent : 'span';
 
     return (
       <ComponentType

@@ -27,6 +27,11 @@ describe('Tag', () => {
     expect(tag.prop('className')).toContain('tag normal');
   });
 
+  it('should have the class is-interactive', () => {
+    const tag = shallow(<Tag text="text" onClick={() => 1} />);
+    expect(tag.prop('className')).toContain('tag normal is-interactive');
+  });
+
   // Structure Tests
   it('should have the class tag', () => {
     const wrapper = shallow(defaultRender);
@@ -45,7 +50,12 @@ describe('Tag', () => {
   });
 
   it('should render as an button tag when href is not provided', () => {
-    const tag = shallow(<Tag text="text" />);
+    const tag = shallow(<Tag text="text" onClick={() => 1} />);
     expect(tag.is('button')).toEqual(true);
+  });
+
+  it('should render as span tag when href and Onclick is not provided', () => {
+    const tag = shallow(<Tag text="text" />);
+    expect(tag.is('span')).toEqual(true);
   });
 });
