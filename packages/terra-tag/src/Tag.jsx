@@ -10,7 +10,7 @@ const KEYCODES = {
   TAB: 9,
 };
 
-const TagTheme = {
+const tagTheme = {
   NORMAL: 'normal',
 };
 
@@ -50,13 +50,14 @@ const propTypes = {
 };
 
 const defaultProps = {
-  theme: TagTheme.NORMAL,
+  text: '',
+  theme: tagTheme.NORMAL,
 };
 
 class Tag extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { focused: false, mouseWasClicked: false };
+    this.state = { focused: false };
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
   }
