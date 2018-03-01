@@ -110,7 +110,7 @@
     "stylelint-order": "^0.7.0",
     "stylelint-scss": "^2.0.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-dev-site": "0.1.0",
+    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#emilyrohrbough-patch-1",
     "terra-toolkit": "^2.8.1",
     "wdio-mocha-framework": "^0.5.11",
     "wdio-visual-regression-service": "^0.8.0",
