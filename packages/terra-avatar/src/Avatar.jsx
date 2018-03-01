@@ -22,7 +22,7 @@ const propTypes = {
    */
   image: PropTypes.string,
   /**
-   * The initials to display.
+   * The initials to display. Can be two or three characters, otherwise a fallback icon displays.
    */
   initials: PropTypes.string,
   /**
@@ -35,7 +35,7 @@ const defaultProps = {
   variant: AvatarVariants.USER,
 };
 
-export const propsErrorMsg = 'Only one of the props: [image, initials] should be supplied.';
+const propsWarningMsg = 'Only one of the props: [image, initials] should be supplied.';
 
 const Avatar = ({
   alt,
@@ -44,19 +44,22 @@ const Avatar = ({
   variant,
   ...customProps
   }) => {
-  if (image && initials) {
-    throw new Error(propsErrorMsg);
+  // Checks to run when not in production
+  if (process.env.NODE_ENV !== 'production') {
+    if (image && initials) {
+      // eslint-disable-next-line
+      console.warn(propsWarningMsg);
+    }
   }
 
   const attributes = Object.assign({}, customProps);
 
-  const AvatarClassNames = cx([
+  const avatarClassNames = cx([
     'avatar',
     attributes.className,
   ]);
 
-  const AvatarTextClassNames = cx([
-    'avatar-text',
+  const avatarTextClassNames = cx([
     { 'avatar-text-small': initials !== undefined && initials.length === 3 },
     { 'avatar-text-large': initials !== undefined && initials.length === 2 },
   ]);
@@ -67,23 +70,20 @@ const Avatar = ({
     </div>
   );
 
-  const AvatarContent = () => {
-    let avatarContent = null;
-    if (image) {
-      avatarContent = <TerraImage src={image} placeholder={icon} alt={alt} />;
-    } else if (initials && (initials.length === 2 || initials.length === 3)) {
-      avatarContent = <text className={AvatarTextClassNames}>{initials.toUpperCase()}</text>;
-    } else {
-      avatarContent = icon;
-    }
-    return (
-      <circle aria-label="Avatar" {...attributes} className={AvatarClassNames} >
-        {avatarContent}
-      </circle>
-    );
-  };
+  let avatarContent;
+  if (image) {
+    avatarContent = <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
+  } else if (initials && (initials.length === 2 || initials.length === 3)) {
+    avatarContent = <text className={avatarTextClassNames}>{initials.toUpperCase()}</text>;
+  } else {
+    avatarContent = icon;
+  }
 
-  return <AvatarContent />;
+  return (
+    <circle aria-label="Avatar" {...attributes} className={avatarClassNames} >
+      {avatarContent}
+    </circle>
+  );
 };
 
 Avatar.propTypes = propTypes;

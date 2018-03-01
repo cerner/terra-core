@@ -2,6 +2,8 @@ import React from 'react';
 import Avatar from '../../src/Avatar';
 import exampleProfilePhoto from '../assets/150x150.jpg';
 
+const propsWarningMsg = 'Only one of the props: [image, initials] should be supplied.';
+
 describe('Avatar', () => {
   // Snapshot Tests
   it('should render user avatar when variant is user', () => {
@@ -56,5 +58,14 @@ describe('Avatar', () => {
     const avatar = <Avatar image="https://path/to/invalid_image.jpg" variant="facility" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should display warning when both image and initials props are provided', () => {
+    const avatar = <Avatar image="https://path/to/invalid_image.jpg" initials="JS" />;
+    try {
+      render(avatar);
+    } catch (object) {
+      expect(object.message).toContain(propsWarningMsg);
+    }
   });
 });

@@ -1,6 +1,6 @@
 # Terra Avatar
 
-The terra-avatar component displays an avatar which can be either an image or text. If neither an image or text is provided, a variant-based fallback icon is used. The avatar displays in a circular wrapper.
+The terra-avatar component displays an avatar, which can be either an image or text, in a circular frame. If neither an image or text is provided, a variant-based fallback icon is used.
 
 ## Getting Started
 

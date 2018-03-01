@@ -26,7 +26,7 @@ exports[`Avatar should render fallback facility avatar when invalid image is pas
     >
       <img
         alt=" "
-        class="image default"
+        class="image default avatar-image"
         src="https://path/to/invalid_image.jpg"
       />
     </div>
@@ -84,7 +84,7 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
     >
       <img
         alt=" "
-        class="image default"
+        class="image default avatar-image"
         src="https://path/to/invalid_image.jpg"
       />
     </div>
@@ -112,7 +112,7 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
     >
       <img
         alt="placeholder"
-        class="image default"
+        class="image default avatar-image"
         src="test-file-stub"
       />
     </div>
@@ -135,7 +135,7 @@ exports[`Avatar should render three intials avatar when three initials are passe
   class="avatar"
 >
   <text
-    class="avatar-text avatar-text-small"
+    class="avatar-text-small"
   >
     JSR
   </text>
@@ -148,7 +148,7 @@ exports[`Avatar should render two intials avatar when two initials are passed in
   class="avatar"
 >
   <text
-    class="avatar-text avatar-text-large"
+    class="avatar-text-large"
   >
     JS
   </text>
