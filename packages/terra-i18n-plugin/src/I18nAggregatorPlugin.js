@@ -87,6 +87,12 @@ function aggregateTranslationMessages(options, inputFileSystem) {
   return languageMessages;
 }
 
+function mkdirpSync(directory) {
+  if (fs.existsSync(directory) && fs.statSync(directory).isDirectory()) return;
+  mkdirpSync(path.dirname(directory));
+  fs.mkdirSync(directory);
+}
+
 function aggregateTranslations(options, compiler) {
   compiler.plugin('after-environment', () => {
     let inputFileSystem = options.inputFileSystem;
@@ -104,9 +110,7 @@ function aggregateTranslations(options, compiler) {
       outputFileSystem.mkdirpSync(directoryPath);
     } else {
       outputFileSystem = fs;
-      if (!outputFileSystem.existsSync(directoryPath)) {
-        outputFileSystem.mkdirSync(directoryPath);
-      }
+      mkdirpSync(directoryPath);
     }
 
     // Create a file for each language for the aggregated messages
