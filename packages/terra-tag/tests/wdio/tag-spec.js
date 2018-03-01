@@ -89,6 +89,7 @@ describe('Tag', () => {
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
       '--terra-tag-interactive-color': 'purple',
+      '--terra-tag-interactive-text-decoration': 'underline',
     });
 
     describe('OnClick Tag - Keyboard focus', () => {

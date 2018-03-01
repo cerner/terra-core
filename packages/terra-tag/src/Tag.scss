@@ -39,6 +39,7 @@
   .is-interactive {
     color: var(--terra-tag-interactive-color, #0059a8);
     cursor: pointer;
+    text-decoration: var(--terra-tag-interactive-text-decoration, none);
 
     &.is-focused {
       background-color: var(--terra-tag-focus-background-color, #fff);

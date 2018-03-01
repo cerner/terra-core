@@ -598,6 +598,7 @@
 
   //terra-tag
   --terra-tag-border-style: dotted;
+  --terra-tag-color: #582c83;
   --terra-tag-font-size: 1rem;
   --terra-tag-font-weight: 700;
   --terra-tag-line-height: 2rem;
@@ -616,6 +617,8 @@
   --terra-tag-icon-margin-right: 0.357rem;
   --terra-tag-icon-height: 1.5rem;
   --terra-tag-icon-width: 1.5rem;
+  --terra-tag-interactive-color: #008b8b;
+  --terra-tag-interactive-text-decoration: overline;
   --terra-tag-focus-background-color: #ff1fd4;
   --terra-tag-focus-border-color: rgba(28, 31, 33, 0.04);
   --terra-tag-focus-box-shadow: 0 0 0.357rem 0.357rem rgba(76, 178, 233, 0.5);
@@ -623,5 +626,6 @@
   --terra-tag-hover-background-color: rgba(76, 178, 233, 0.5);
   --terra-tag-hover-box-shadow: 0 0 0.357rem 0.357rem rgba(76, 178, 233, 0.5);
   --terra-tag-hover-text-decoration: overline;
+  --terra-tag-hover-color: #ff1fd4;
   --terra-tag-text-decoration: underline;
 }
