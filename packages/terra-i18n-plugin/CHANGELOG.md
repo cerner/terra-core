@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Updated to make directories recursively for `aggregated-translations`
 
 2.0.0 - (February 12, 2018)
 ------------------

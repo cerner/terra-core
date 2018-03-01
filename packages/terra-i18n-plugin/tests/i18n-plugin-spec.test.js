@@ -328,4 +328,36 @@ describe('i18n-aggregator-plugin', () => {
       });
     });
   });
+
+  describe('when the output filesystem base directory does not exist', () => {
+    const createdDirectories = [];
+    const extraDirectories = ['intermediate', 'folders'];
+    const newDirectories = [
+      ['intermediate'],
+      ['intermediate', 'folders'],
+      ['intermediate', 'folders', 'aggregated-translations'],
+    ].map(dirs => path.resolve(baseDirectory, ...dirs));
+    const compiler = createCompiler();
+
+    let SpyOnMkdirSync;
+
+    beforeAll(() => {
+      SpyOnMkdirSync = spyOn(fs, 'mkdirSync').and.callFake((directoryName) => {
+        createdDirectories.push(directoryName);
+      });
+      spyOn(fs, 'writeFileSync');
+      spyOn(console, 'warn'); // Silence warnings tested above
+
+      new I18nAggregatorPlugin({
+        baseDirectory: path.join(baseDirectory, ...extraDirectories),
+        supportedLocales,
+      }).apply(compiler);
+      compiler._plugins['after-environment'][0]();
+    });
+
+    it('should create missing directories along the path', () => {
+      expect(SpyOnMkdirSync).toHaveBeenCalledTimes(newDirectories.length);
+      expect(createdDirectories).toEqual(newDirectories);
+    });
+  });
 });
