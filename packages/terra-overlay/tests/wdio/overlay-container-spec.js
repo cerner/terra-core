@@ -1,7 +1,7 @@
 /* global before, browser, Terra */
 
 describe('Overlay Container Default', () => {
-  before(() => browser.url('/#/tests/overlay-container-tests/default'));
+  before(() => browser.url('/#/raw/tests/overlay/overlay-container/default-overlay-container'));
 
   Terra.should.beAccessible();
   Terra.should.matchScreenshot();
