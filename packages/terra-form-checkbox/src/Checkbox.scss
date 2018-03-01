@@ -91,12 +91,14 @@
 
     .native-input + .label-text.is-mobile::before {
       height: var(--terra-form-checkbox-is-mobile-height, 0);
+      margin-top: var(--terra-form-checkbox-is-mobile-margin-top, 0);
       width: var(--terra-form-checkbox-is-mobile-width, 0);
     }
 
     .native-input:checked + .label-text.is-mobile::before {
       height: var(--terra-form-checkbox-is-mobile-checked-height, 0);
       line-height: var(--terra-form-checkbox-is-mobile-checked-line-height, normal);
+      margin-top: var(--terra-form-checkbox-is-mobile-margin-top, 0);
       width: var(--terra-form-checkbox-is-mobile-checked-width, 0);
     }
 

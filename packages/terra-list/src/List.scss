@@ -11,6 +11,7 @@
   }
 
   .list-item {
+    background-color: var(--terra-list-item-background-color);
     margin: 0;
     padding: 0;
   }
@@ -50,15 +51,24 @@
     }
   }
 
+
   .is-selectable {
     cursor: pointer;
 
-    &.list-item:hover,
-    &.list-item:focus {
+    &.list-item:hover {
       background-color: var(--terra-list-item-hover-background-color, lighten(#ebf6fd, 2%)) !important;
     }
 
-    &.selected:hover,
+    &.list-item:focus {
+      background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%)) !important;
+      box-shadow: var(--terra-list-item-focus-box-shadow);
+      outline: var(--terra-list-item-focus-outline);
+    }
+
+    &.selected:hover {
+      background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
+    }
+
     &.selected:focus {
       background-color: var(--terra-list-item-selected-hover-background-color, darken(#ebf6fd, 7%)) !important;
     }

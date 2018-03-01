@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+4.1.0 - (February 26, 2018)
+------------------
+### Changed
+* Minor version bump
+
+4.0.1 - (February 13, 2018)
+------------------
+### Changed
+* Updated peerDependencies
+
 4.0.0 - (February 12, 2018)
 ------------------
 ### Changed

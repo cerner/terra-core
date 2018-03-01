@@ -3,6 +3,19 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Box shadow css variable for list-item focus
+* css variable for default list-item color
+
+2.1.0 - (February 26, 2018)
+------------------
+### Changed
+* Minor version bump
+
+2.0.1 - (February 13, 2018)
+------------------
+### Changed
+* Updated peerDependencies
 
 2.0.0 - (February 12, 2018)
 ------------------

@@ -20,6 +20,7 @@ exports[`Toggle should have all props set correctly 1`] = `
         "staticHeightZero": "rah-static--height-zero",
       }
     }
+    applyInlineTransitions={true}
     duration={250}
     easing="ease"
     height="auto"

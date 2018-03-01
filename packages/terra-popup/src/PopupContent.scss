@@ -1,3 +1,5 @@
+@import '~terra-mixins';
+
 :local {
   // These are relative to screen coordinates, so no bidi changes needed
   [dir=ltr],
@@ -7,7 +9,7 @@
     }
 
     .rounded-corners {
-      border-radius: 5px;
+      border-radius: 3px;
     }
 
     .header {
@@ -17,21 +19,12 @@
       width: 100%;
     }
 
-    .close {
-      background: var(--terra-popup-content-close-background, 0 0);
-      border: var(--terra-popup-content-close-border, 0);
-      color: var(--terra-popup-content-close-color, #111);
-      cursor: pointer;
-      font-size: var(--terra-popup-content-close-font-size, 1.45rem);
-      font-weight: var(--terra-popup-content-close-font-weight, bold);
-      line-height: var(--terra-popup-content-close-line-height, 0);
-      margin-left: var(--terra-popup-content-close-margin-left, 0.3571rem);
-      margin-right: var(--terra-popup-content-close-margin-right, 0);
-      padding: var(--terra-popup-content-close-padding, 4px);
-
-      &:hover {
-        color: var(--terra-popup-content-close-hover-color, #999);
-      }
+    .close-icon {
+      background: var(--terra-popup-content-close-icon, inline-svg("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='rgba(17, 17, 17, 1)' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>"));
+      display: inline-block;
+      height: 1.25rem;
+      margin-top: 0.125rem;
+      width: 1.25rem;
     }
 
     .inner {

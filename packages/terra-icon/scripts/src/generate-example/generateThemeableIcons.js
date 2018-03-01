@@ -35,8 +35,10 @@ const generateIconAll = iconObjs => new Promise((resolve) => {
     outputfile.write(`      <tr style={{ backgroundColor: '#EEEEEE' }}>\n`);
     outputfile.write(`        <td>${iconObj.syntaxComponent}</td>\n`);
     outputfile.write(`        <td>${iconObj.name}</td>\n`);
-    outputfile.write('        <td>\n');
-    outputfile.write(`          ${iconObj.syntaxImport}`);
+    outputfile.write(`        <td style={{ fontWeight: 'bold' }}>\n`);
+    outputfile.write('          <code>\n');
+    outputfile.write(`            ${iconObj.syntaxImport}`);
+    outputfile.write('          </code>\n');
     outputfile.write('        </td>\n');
     outputfile.write('      </tr>\n');
   });

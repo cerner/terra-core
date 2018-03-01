@@ -29,7 +29,7 @@ describe('Collapsible Menu View', () => {
         browser.click('[data-collapsible-menu-toggle]');
       });
 
-      Terra.should.matchScreenshot();
+      Terra.should.matchScreenshot({ selector: '#root' });
       Terra.should.beAccessible({ rules: ignoredA11y });
     });
   });

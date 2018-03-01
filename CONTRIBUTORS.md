@@ -48,8 +48,13 @@ Cerner Corporation
 - Noah Benham [@noahbenham]
 - Andy Nelson [@anelson425]
 - Dan Plubell [@danplubell]
+- Mayuri Kini [@mayurikini]
 - Sruti Paku [@paku-sruti]
 - Cyrus Duong [@cyrusduong]
+- Nathan Faltermeier [@Blackop778]
+- Carter Harwood [@harwood]
+- Mukul Dhariwal [@mukuldhariwal94]
+- Praneeth Madamsetti [@praneethm381]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -99,5 +104,11 @@ Cerner Corporation
 [@noahbenham]: https://github.com/noahbenham
 [@anelson425]: https://github.com/anelson425
 [@danplubell]: https://github.com/danplubell
+[@mayurikini]: https://github.com/mayurikini
 [@paku-sruti]: https://github.com/paku-sruti
 [@cyrusduong]: https://github.com/cyrusduong
+[@paku-sruti]: https://github.com/paku-sruti
+[@Blackop778]: https://github.com/Blackop778
+[@harwood]: https://github.com/harwood
+[@mukuldhariwal94]: https://github.com/mukuldhariwal94
+[@praneethm381]: https://github.com/praneethm381
