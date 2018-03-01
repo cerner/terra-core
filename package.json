@@ -57,7 +57,6 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "lerna run lint:scss",
     "nightwatch": "nightwatch",
-    "props-table": "lerna run props-table",
     "pretest": "npm run lint",
     "postinstall": "node scripts/post-install/index.js",
     "postinstall:package": "npm run compile && npm run bootstrap",
