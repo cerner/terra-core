@@ -18,6 +18,10 @@ const propTypes = {
    */
   alt: PropTypes.string,
   /**
+   * The text content of the aria-label for accessibility.
+   */
+  ariaLabel: PropTypes.string.isRequired,
+  /**
    * The image to display.
    */
   image: PropTypes.string,
@@ -39,6 +43,7 @@ const propsWarningMsg = 'Only one of the props: [image, initials] should be supp
 
 const Avatar = ({
   alt,
+  ariaLabel,
   image,
   initials,
   variant,
@@ -74,15 +79,15 @@ const Avatar = ({
   if (image) {
     avatarContent = <TerraImage className={cx('avatar-image')} src={image} placeholder={icon} alt={alt} />;
   } else if (initials && (initials.length === 2 || initials.length === 3)) {
-    avatarContent = <text className={avatarTextClassNames}>{initials.toUpperCase()}</text>;
+    avatarContent = <span className={avatarTextClassNames}>{initials.toUpperCase()}</span>;
   } else {
     avatarContent = icon;
   }
 
   return (
-    <circle aria-label="Avatar" {...attributes} className={avatarClassNames} >
+    <div {...attributes} aria-label={ariaLabel} className={avatarClassNames} >
       {avatarContent}
-    </circle>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import exampleAvatarImage from '../../assets/150x150.jpg';
 import Avatar from '../../../../../packages/terra-avatar/src/Avatar';
 
 const AvatarImage = () => (
-  <Avatar image={exampleAvatarImage} alt="placeholder" />
+  <Avatar ariaLabel="user" image={exampleAvatarImage} alt="placeholder" />
 );
 
 export default AvatarImage;

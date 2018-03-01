@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar should render facility avatar when variant is facility 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="facility"
   class="avatar"
 >
   <div
@@ -12,12 +12,12 @@ exports[`Avatar should render facility avatar when variant is facility 1`] = `
       class="facility"
     />
   </div>
-</circle>
+</div>
 `;
 
 exports[`Avatar should render fallback facility avatar when invalid image is passed in with facility variant 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="facility"
   class="avatar"
 >
   <div>
@@ -40,12 +40,12 @@ exports[`Avatar should render fallback facility avatar when invalid image is pas
       </div>
     </div>
   </div>
-</circle>
+</div>
 `;
 
 exports[`Avatar should render fallback facility avatar when more than three initials are passed in and variant is facility 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="facility"
   class="avatar"
 >
   <div
@@ -55,12 +55,12 @@ exports[`Avatar should render fallback facility avatar when more than three init
       class="facility"
     />
   </div>
-</circle>
+</div>
 `;
 
 exports[`Avatar should render fallback user avatar when fewer than two initials are passed in and variant is user 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="user"
   class="avatar"
 >
   <div
@@ -70,12 +70,12 @@ exports[`Avatar should render fallback user avatar when fewer than two initials 
       class="user"
     />
   </div>
-</circle>
+</div>
 `;
 
 exports[`Avatar should render fallback user avatar when invalid image is passed in with user variant 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="user"
   class="avatar"
 >
   <div>
@@ -98,12 +98,12 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
       </div>
     </div>
   </div>
-</circle>
+</div>
 `;
 
 exports[`Avatar should render image avatar when image is passed in 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="user"
   class="avatar"
 >
   <div>
@@ -126,38 +126,38 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
       </div>
     </div>
   </div>
-</circle>
+</div>
 `;
 
 exports[`Avatar should render three intials avatar when three initials are passed in 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="user"
   class="avatar"
 >
-  <text
+  <span
     class="avatar-text-small"
   >
     JSR
-  </text>
-</circle>
+  </span>
+</div>
 `;
 
 exports[`Avatar should render two intials avatar when two initials are passed in 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="user"
   class="avatar"
 >
-  <text
+  <span
     class="avatar-text-large"
   >
     JS
-  </text>
-</circle>
+  </span>
+</div>
 `;
 
 exports[`Avatar should render user avatar when variant is user 1`] = `
-<circle
-  aria-label="Avatar"
+<div
+  aria-label="user"
   class="avatar"
 >
   <div
@@ -167,5 +167,5 @@ exports[`Avatar should render user avatar when variant is user 1`] = `
       class="user"
     />
   </div>
-</circle>
+</div>
 `;
