@@ -17,7 +17,9 @@ describe('Fieldset', () => {
     Terra.should.themeEachCustomProperty('#root', {
       '--terra-form-fieldset-legend-color': 'yellow',
       '--terra-form-fieldset-legend-font-weight': '100',
-      '--terra-form-fieldset-error-color': 'green',
+      '--terra-form-fieldset-help-text-color': 'green',
+      '--terra-form-fieldset-help-text-font-size': '60px',
+      '--terra-form-fieldset-help-text-font-weight': '900',
     });
   });
 });

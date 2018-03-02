@@ -1,5 +1,4 @@
 :local {
-  .field,
   .fieldset {
     border: 0;
     margin-bottom: 1.428em;
@@ -7,7 +6,6 @@
   }
 
   @media screen and (min-width: 544px) {
-    .field-inline,
     .fieldset-inline {
       display: inline-block;
       margin-right: 0.7143em;
@@ -15,10 +13,9 @@
     }
   }
 
-  .field-required > .label:first-child,
   .fieldset-required > .legend:first-child {
     &::before {
-      color: #e50000;
+      color: var(--terra-form-fieldset-required-color, #e50000);
       content: '*';
       display: inline-block;
       padding-right: 0.357em;
@@ -27,7 +24,7 @@
 
   .legend {
     border: 0;
-    color: var(--terra-form-fieldset-legend-color, rgba(0, 0, 0, 0.8));
+    color: var(--terra-form-fieldset-legend-color);
     display: block;
     font-weight: var(--terra-form-fieldset-legend-font-weight, bold);
     margin-bottom: 0.357em;
@@ -37,15 +34,10 @@
   }
 
   .help-text {
+    color: var(--terra-form-fieldset-help-text-color, rgba(0, 0, 0, 0.8));
     display: block;
-    line-height: 1;
-    margin-bottom: 0.357em;
-    outline: 0;
-  }
-
-  .error {
-    color: var(--terra-form-fieldset-error-color, #e50000);
-    display: block;
+    font-size: var(--terra-form-fieldset-help-text-font-size, 0.857rem);
+    font-weight: var(--terra-form-fieldset-help-text-font-weight, normal);
     line-height: 1;
     margin-bottom: 0.357em;
     outline: 0;

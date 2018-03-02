@@ -14,10 +14,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Error message for when the input is invalid.
-   */
-  error: PropTypes.node,
-  /**
    * Help element to display with the input.
    */
   help: PropTypes.node,
@@ -41,7 +37,6 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  error: null,
   help: null,
   isInline: false,
   legend: null,
@@ -49,7 +44,7 @@ const defaultProps = {
   required: false,
 };
 
-const Fieldset = ({ children, error, help, isInline, legend, legendAttrs, required, ...customProps }) => {
+const Fieldset = ({ children, help, isInline, legend, legendAttrs, required, ...customProps }) => {
   const fieldsetClasses = cx([
     'fieldset',
     { 'fieldset-inline': isInline },
@@ -66,7 +61,6 @@ const Fieldset = ({ children, error, help, isInline, legend, legendAttrs, requir
     <fieldset {...customProps} className={fieldsetClasses}>
       {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
       {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
-      {error && <small className={cx('error')} tabIndex="-1">{error}</small>}
       <div className={cx('fieldset-children')}>
         {children}
       </div>
