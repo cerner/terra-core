@@ -2,7 +2,7 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import IndexTemplate from 'terra-site/src/IndexPageTemplate';
+import IndexTemplate from 'terra-dev-site/src/IndexPageTemplate';
 
 import ReadMe from 'terra-action-footer/docs/README.md';
 import { version } from 'terra-action-footer/package.json';
