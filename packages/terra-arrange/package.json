@@ -27,7 +27,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/Arrange.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:wdio": "wdio ../../wdio.conf.js"
@@ -43,7 +42,6 @@
     "terra-base": "^3.1.0"
   },
   "devDependencies": {
-    "terra-icon": "^2.1.0",
-    "terra-props-table": "^2.1.0"
+    "terra-icon": "^2.1.0"
   }
 }
