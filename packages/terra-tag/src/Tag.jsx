@@ -50,7 +50,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  text: '',
   theme: tagTheme.NORMAL,
 };
 
