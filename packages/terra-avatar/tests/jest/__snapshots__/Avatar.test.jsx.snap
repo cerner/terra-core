@@ -5,13 +5,9 @@ exports[`Avatar should render facility avatar when variant is facility 1`] = `
   aria-label="facility"
   class="avatar"
 >
-  <div
-    class="avatar-icon"
-  >
-    <svg
-      class="facility"
-    />
-  </div>
+  <span
+    class="avatar-icon facility"
+  />
 </div>
 `;
 
@@ -31,13 +27,9 @@ exports[`Avatar should render fallback facility avatar when invalid image is pas
       />
     </div>
     <div>
-      <div
-        class="avatar-icon"
-      >
-        <svg
-          class="facility"
-        />
-      </div>
+      <span
+        class="avatar-icon facility"
+      />
     </div>
   </div>
 </div>
@@ -48,13 +40,9 @@ exports[`Avatar should render fallback facility avatar when more than three init
   aria-label="facility"
   class="avatar"
 >
-  <div
-    class="avatar-icon"
-  >
-    <svg
-      class="facility"
-    />
-  </div>
+  <span
+    class="avatar-icon facility"
+  />
 </div>
 `;
 
@@ -63,13 +51,9 @@ exports[`Avatar should render fallback user avatar when fewer than two initials 
   aria-label="user"
   class="avatar"
 >
-  <div
-    class="avatar-icon"
-  >
-    <svg
-      class="user"
-    />
-  </div>
+  <span
+    class="avatar-icon user"
+  />
 </div>
 `;
 
@@ -89,13 +73,9 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
       />
     </div>
     <div>
-      <div
-        class="avatar-icon"
-      >
-        <svg
-          class="user"
-        />
-      </div>
+      <span
+        class="avatar-icon user"
+      />
     </div>
   </div>
 </div>
@@ -117,13 +97,9 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
       />
     </div>
     <div>
-      <div
-        class="avatar-icon"
-      >
-        <svg
-          class="user"
-        />
-      </div>
+      <span
+        class="avatar-icon user"
+      />
     </div>
   </div>
 </div>
@@ -160,12 +136,8 @@ exports[`Avatar should render user avatar when variant is user 1`] = `
   aria-label="user"
   class="avatar"
 >
-  <div
-    class="avatar-icon"
-  >
-    <svg
-      class="user"
-    />
-  </div>
+  <span
+    class="avatar-icon user"
+  />
 </div>
 `;

@@ -66,16 +66,17 @@ const Avatar = ({
     attributes.className,
   ]);
 
+  const avatarIconClassNames = cx([
+    'avatar-icon',
+    variant,
+  ]);
+
   const avatarTextClassNames = cx([
     { 'avatar-text-small': initials && initials.length === 3 },
     { 'avatar-text-large': initials && initials.length === 2 },
   ]);
 
-  const icon = (
-    <div className={cx('avatar-icon')}>
-      <svg className={cx(variant)} />
-    </div>
-  );
+  const icon = <span className={avatarIconClassNames} />;
 
   let avatarContent;
   if (image) {
