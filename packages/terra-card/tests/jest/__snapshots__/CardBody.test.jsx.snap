@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBody should render a default component 1`] = `
+<div
+  className="vertical-padding horizontal-padding"
+/>
+`;
