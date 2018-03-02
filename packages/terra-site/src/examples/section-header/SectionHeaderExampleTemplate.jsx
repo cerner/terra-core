@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// TODO: update this to use the real path
-import SectionHeader from '../../../../terra-section-header/src/SectionHeader';
+import SectionHeader from 'terra-section-header';
 
 const propTypes = {
   /**
