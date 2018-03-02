@@ -46,12 +46,12 @@ const SectionHeader = ({
   }
 
   const iconClassNames = cx([
-    'icon',
+    'accordion-icon',
     { 'is-open': onClick && isOpen },
   ]);
 
   const accordionIcon = (
-    <div className={cx('icon-wrapper')}>
+    <div className={cx('accordion-icon-wrapper')}>
       <span className={iconClassNames} />
     </div>
   );
