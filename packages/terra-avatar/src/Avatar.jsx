@@ -20,26 +20,28 @@ const propTypes = {
   /**
    * The text content of the aria-label for accessibility.
    */
-  ariaLabel: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string,
   /**
    * The image to display.
    */
   image: PropTypes.string,
   /**
-   * The initials to display. Can be two or three characters, otherwise a fallback icon displays.
+   * Two or three letters to display.
    */
   initials: PropTypes.string,
   /**
    * The avatar variant. One of `AvatarVariants.FACILITY`, `AvatarVariants.USER`.
    */
-  variant: PropTypes.oneOf([AvatarVariants.FACILITY, AvatarVariants.USER]),
+  variant: PropTypes.oneOf([...Object.values(AvatarVariants)]),
 };
 
 const defaultProps = {
+  alt: undefined,
+  ariaLabel: undefined,
+  image: undefined,
+  initials: undefined,
   variant: AvatarVariants.USER,
 };
-
-const propsWarningMsg = 'Only one of the props: [image, initials] should be supplied.';
 
 const Avatar = ({
   alt,
@@ -53,7 +55,7 @@ const Avatar = ({
   if (process.env.NODE_ENV !== 'production') {
     if (image && initials) {
       // eslint-disable-next-line
-      console.warn(propsWarningMsg);
+      console.warn('Only one of the props: [image, initials] should be supplied.');
     }
   }
 
@@ -65,8 +67,8 @@ const Avatar = ({
   ]);
 
   const avatarTextClassNames = cx([
-    { 'avatar-text-small': initials !== undefined && initials.length === 3 },
-    { 'avatar-text-large': initials !== undefined && initials.length === 2 },
+    { 'avatar-text-small': initials && initials.length === 3 },
+    { 'avatar-text-large': initials && initials.length === 2 },
   ]);
 
   const icon = (
@@ -85,7 +87,7 @@ const Avatar = ({
   }
 
   return (
-    <div {...attributes} aria-label={ariaLabel} className={avatarClassNames} >
+    <div {...attributes} aria-label={ariaLabel} className={avatarClassNames}>
       {avatarContent}
     </div>
   );

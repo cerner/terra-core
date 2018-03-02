@@ -16,7 +16,7 @@ import Avatar from 'terra-avatar';
 <Avatar
   image="https://path/to/image.jpg"
   alt="placeholder"
-  ariaLabel="user"
+  ariaLabel="John Doe"
   variant="user" 
 />
 ```

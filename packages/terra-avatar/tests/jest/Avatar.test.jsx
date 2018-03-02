@@ -2,8 +2,6 @@ import React from 'react';
 import Avatar from '../../src/Avatar';
 import exampleProfilePhoto from '../assets/150x150.jpg';
 
-const propsWarningMsg = 'Only one of the props: [image, initials] should be supplied.';
-
 describe('Avatar', () => {
   // Snapshot Tests
   it('should render user avatar when variant is user', () => {
@@ -18,13 +16,13 @@ describe('Avatar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render two intials avatar when two initials are passed in', () => {
+  it('should render two initials avatar when two initials are passed in', () => {
     const avatar = <Avatar initials="JS" variant="user" ariaLabel="user" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render three intials avatar when three initials are passed in', () => {
+  it('should render three initials avatar when three initials are passed in', () => {
     const avatar = <Avatar initials="JSR" variant="user" ariaLabel="user" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
@@ -65,7 +63,7 @@ describe('Avatar', () => {
     try {
       render(avatar);
     } catch (object) {
-      expect(object.message).toContain(propsWarningMsg);
+      expect(object.message).toContain('Only one of the props: [image, initials] should be supplied.');
     }
   });
 });
