@@ -4,7 +4,7 @@
   .section-header {
     @include terra-padding-end(var(--terra-section-header-padding-end, 0.7142857143rem));
     @include terra-padding-start(var(--terra-section-header-padding-start, 0.7142857143rem));
-   
+
     background: var(--terra-section-header-background, #e8e9ea);
     border-bottom: var(--terra-section-header-border-bottom, 1px solid #c8cacb);
     border-left: var(--terra-section-header-border-left);
@@ -61,7 +61,7 @@
     font-weight: var(--terra-section-header-font-weight, bold);
     line-height: var(--terra-section-header-line-height, 1.142857143rem);
     text-transform: var(--terra-section-header-text-transform);
-  } 
+  }
 
   .accordion-icon-wrapper {
     @include terra-margin-start(var(--terra-section-header-accordion-icon-margin-start));
@@ -86,7 +86,7 @@
       transform: scaleX(-1);
     }
 
-    // tells the rtl postcss plugin to not transform this by default 
+    // tells the rtl postcss plugin to not transform this by default
     [dir] &.is-open {
       transform: rotate(90deg);
     }

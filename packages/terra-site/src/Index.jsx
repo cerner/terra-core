@@ -110,6 +110,7 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SectionHeaderTestRoutes from 'terra-section-header/tests/nightwatch/SectionHeaderTestRoutes';
 import SelectTestRoutes from 'terra-form-select/tests/nightwatch/select/SelectTestRoutes';
 import SelectOptionTestRoutes from 'terra-form-select/tests/nightwatch/select-option/SelectOptionTestRoutes';
 import SelectableListTestRoutes from 'terra-list/tests/nightwatch/selectable-list/SelectableListTestRoutes';
@@ -241,6 +242,7 @@ ReactDOM.render((
       {PropsTableTestRoutes}
       {GridTestRoutes}
       {SearchFieldTestRoutes}
+      {SectionHeaderTestRoutes}
       {PopupTestRoutes}
       {FormTestRoutes}
       {FormCheckboxTestRoutes}

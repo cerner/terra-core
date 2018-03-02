@@ -43,6 +43,7 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "test": "npm run test:jest",
-    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }
