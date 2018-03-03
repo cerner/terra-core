@@ -41,7 +41,6 @@ const SectionHeader = ({
   const attributes = Object.assign({}, customProps);
 
   if (onClick) {
-    // makes the div tabable
     attributes.tabIndex = '0';
   }
 
