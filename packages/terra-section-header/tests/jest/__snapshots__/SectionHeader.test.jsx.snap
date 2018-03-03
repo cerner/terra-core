@@ -28,10 +28,10 @@ exports[`SectionHeader should render with an accordion icon in the open position
       class="fit"
     >
       <div
-        class="icon-wrapper"
+        class="accordion-icon-wrapper"
       >
         <span
-          class="icon is-open"
+          class="accordion-icon is-open"
         />
       </div>
     </div>
@@ -63,10 +63,10 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
       class="fit"
     >
       <div
-        class="icon-wrapper"
+        class="accordion-icon-wrapper"
       >
         <span
-          class="icon"
+          class="accordion-icon"
         />
       </div>
     </div>
