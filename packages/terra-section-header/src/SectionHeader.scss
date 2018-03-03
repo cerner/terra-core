@@ -54,6 +54,8 @@
   }
 
   .title {
+    display: inline;
+    font-size: 1rem;
     font-weight: var(--terra-section-header-font-weight, bold);
     text-transform: var(--terra-section-header-text-transform);
   } 

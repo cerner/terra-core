@@ -67,7 +67,7 @@ const SectionHeader = ({
     <div {...attributes} onClick={onClick} className={sectionHeaderClassNames}>
       <Arrange
         fitStart={onClick && accordionIcon}
-        fill={<span className={cx('title')}>{title}</span>}
+        fill={<h2 className={cx('title')}>{title}</h2>}
       />
     </div>
   );
