@@ -2,7 +2,7 @@
   "name": "terra-section-header",
   "main": "lib/SectionHeader.js",
   "version": "0.0.0",
-  "description": "Section Header presentational component that provides an onClick callback and animateable status icon.",
+  "description": "Interactive header component that provides a status indicator.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
