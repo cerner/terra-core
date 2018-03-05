@@ -13,7 +13,7 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   const input = (
     <Fieldset
       legend="Text"
-      className="fieldset"
+      className="fieldset-custom"
       legendAttrs={{ className: 'healtheintent-legend' }}
       help="This is a test input"
       isInline
