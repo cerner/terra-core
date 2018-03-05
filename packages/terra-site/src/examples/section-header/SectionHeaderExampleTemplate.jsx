@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * Props to be spread onto SectionHeader
    */
-  /* eslint-disable react/forbid-prop-types */
+  // eslint-disable-next-line react/forbid-prop-types
   exampleProps: PropTypes.object.isRequired,
 };
 
