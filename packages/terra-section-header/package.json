@@ -46,7 +46,6 @@
     "lint:scss": "stylelint src/**/*.scss",
     "props-table": "props-table ./src/SectionHeader.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:wdio",
-    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:wdio": "wdio ../../wdio.conf.js"
+    "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json"
   }
 }
