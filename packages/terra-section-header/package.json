@@ -2,7 +2,7 @@
   "name": "terra-section-header",
   "main": "lib/SectionHeader.js",
   "version": "0.0.0",
-  "description": "Interactive header component that provides a status indicator.",
+  "description": "Section Header component that contains text and can be optionally interacted with.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
