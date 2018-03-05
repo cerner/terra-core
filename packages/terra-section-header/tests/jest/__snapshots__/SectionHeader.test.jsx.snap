@@ -6,11 +6,11 @@ exports[`SectionHeader should render a default component 1`] = `
 >
   <Arrange
     fill={
-      <span
+      <h2
         className="title"
       >
         foo
-      </span>
+      </h2>
     }
   />
 </div>
@@ -38,11 +38,11 @@ exports[`SectionHeader should render with an accordion icon in the open position
     <div
       class="fill"
     >
-      <span
+      <h2
         class="title"
       >
         foo
-      </span>
+      </h2>
     </div>
     <div
       class="fit"
@@ -73,11 +73,11 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
     <div
       class="fill"
     >
-      <span
+      <h2
         class="title"
       >
         foo
-      </span>
+      </h2>
     </div>
     <div
       class="fit"
@@ -99,11 +99,11 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
     <div
       class="fill"
     >
-      <span
+      <h2
         class="title"
       >
         foo
-      </span>
+      </h2>
     </div>
     <div
       class="fit"
