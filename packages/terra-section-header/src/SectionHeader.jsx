@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * Text to be displayed on the SectionHeader.
    */
-  title: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */
@@ -20,17 +20,24 @@ const propTypes = {
    * Whether the accordion icon should be displayed in its 'open' or 'closed' position.
    */
   isOpen: PropTypes.bool,
+  /**
+   * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`, or `custom`. Specifically, `custom` will NOT supply any
+   * heading element as a backer, and assumes that the content being passed via the `title` prop is the desired structure.
+   */
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 'custom']).isRequired,
 };
 
 const defaultProps = {
   onClick: undefined,
   isOpen: false,
+  level: 2,
 };
 
 const SectionHeader = ({
   title,
   onClick,
   isOpen,
+  level,
   ...customProps
 }) => {
   if ((process.env.NODE_ENV !== 'production') && (!onClick && isOpen)) {
@@ -61,13 +68,15 @@ const SectionHeader = ({
     customProps.className,
   ]);
 
+  const Element = `h${level}`;
+
   // allows us to set an onClick on the div
   /* eslint-disable jsx-a11y/no-static-element-interactions */
   return (
     <div {...attributes} onClick={onClick} className={sectionHeaderClassNames}>
       <Arrange
         fitStart={onClick && accordionIcon}
-        fill={<h2 className={cx('title')}>{title}</h2>}
+        fill={<Element className={cx('title')}>{title}</Element>}
       />
     </div>
   );

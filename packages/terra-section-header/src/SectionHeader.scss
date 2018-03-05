@@ -55,8 +55,8 @@
   .title {
     display: inline;
     font-size: 1rem;
-    font-weight: var(--terra-section-header-font-weight, bold);
     font-size: var(--terra-section-header-font-size, 1rem);
+    font-weight: var(--terra-section-header-font-weight, bold);
     line-height: var(--terra-section-header-line-height, 1.142857143rem);
     text-transform: var(--terra-section-header-text-transform);
   } 
