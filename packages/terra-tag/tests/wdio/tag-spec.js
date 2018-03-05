@@ -29,20 +29,9 @@ describe('Tag', () => {
         '--terra-tag-margin-left': '1px',
         '--terra-tag-margin-right': '1px',
         '--terra-tag-text-decoration': 'underline',
-      });
-    });
-
-    describe('Default - Normal Theme', () => {
-      beforeEach(() => {
-        browser.url('/#/tests/tag-tests/default-tag');
-      });
-
-      Terra.should.beAccessible();
-      Terra.should.matchScreenshot();
-      Terra.should.themeEachCustomProperty({
-        '--terra-tag-normal-theme-background-color': 'green',
-        '--terra-tag-normal-theme-border-color': 'yellow',
-        '--terra-tag-normal-theme-box-shadow': '0 0 10px 10px blue',
+        '--terra-tag-background-color': 'green',
+        '--terra-tag-border-color': 'yellow',
+        '--terra-tag-box-shadow': '0 0 10px 10px blue',
       });
     });
   });

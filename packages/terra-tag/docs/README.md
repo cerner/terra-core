@@ -17,7 +17,7 @@ import Tag from 'terra-tag';
 <Tag text="Default"
   icon={icon}
   theme="normal"
-  OnClick={function}
+  onClick={function}
 />
 ```
 

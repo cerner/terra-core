@@ -4,8 +4,11 @@ import { Route } from 'react-router';
 import TagTests from './TagTests';
 
 // Test Cases
-import { DefaultTag, OnClickTag, HrefTag } from './DefaultTag';
-import { IconTag, LongTextIconTag } from './IconAndTextTag';
+import DefaultTag from './DefaultTag';
+import OnClickTag from './OnClickTag';
+import HrefTag from './HrefTag';
+import IconTag from './IconAndTextTag';
+import LongTextIconTag from './LongTextTag';
 import MultipleTags from './MultipleTags';
 
 const routes = (

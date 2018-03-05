@@ -2,7 +2,7 @@
 
 exports[`Tag should render a tag 1`] = `
 <span
-  className="tag normal"
+  className="tag"
   onBlur={[Function]}
   onKeyUp={[Function]}
 >
@@ -14,7 +14,7 @@ exports[`Tag should render a tag 1`] = `
 
 exports[`Tag should render an icon and a text 1`] = `
 <span
-  className="tag normal"
+  className="tag"
   onBlur={[Function]}
   onKeyUp={[Function]}
 >
@@ -33,7 +33,7 @@ exports[`Tag should render an icon and a text 1`] = `
 
 exports[`Tag should render as an anchor when provided an href 1`] = `
 <a
-  className="tag normal is-interactive"
+  className="tag is-interactive"
   href="MockHref"
   onBlur={[Function]}
   onKeyUp={[Function]}

@@ -10,10 +10,6 @@ const KEYCODES = {
   TAB: 9,
 };
 
-const tagTheme = {
-  NORMAL: 'normal',
-};
-
 const propTypes = {
   /**
    * Sets the href. When set will render the component as an anchor tag.
@@ -43,14 +39,6 @@ const propTypes = {
    * Sets the tag text.
    */
   text: PropTypes.string.isRequired,
-  /**
-   * Sets the tag theme.
-   */
-  theme: PropTypes.string,
-};
-
-const defaultProps = {
-  theme: tagTheme.NORMAL,
 };
 
 class Tag extends React.Component {
@@ -84,7 +72,6 @@ class Tag extends React.Component {
     const {
       icon,
       text,
-      theme,
       href,
       onClick,
       onBlur,
@@ -95,7 +82,6 @@ class Tag extends React.Component {
 
     const tagClasses = cx([
       'tag',
-      theme,
       { 'is-focused': this.state.focused },
       { 'is-interactive': href || onClick },
       customProps.className,
@@ -111,6 +97,7 @@ class Tag extends React.Component {
 
     return (
       <ComponentType
+        {...customProps}
         className={tagClasses}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
@@ -126,5 +113,4 @@ class Tag extends React.Component {
 }
 
 Tag.propTypes = propTypes;
-Tag.defaultProps = defaultProps;
 export default Tag;

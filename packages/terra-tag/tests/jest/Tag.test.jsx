@@ -22,14 +22,9 @@ describe('Tag', () => {
   });
 
   // Prop Tests
-  it('should have the class normal', () => {
-    const tag = shallow(<Tag text="text" />);
-    expect(tag.prop('className')).toContain('tag normal');
-  });
-
   it('should have the class is-interactive', () => {
     const tag = shallow(<Tag text="text" onClick={() => 1} />);
-    expect(tag.prop('className')).toContain('tag normal is-interactive');
+    expect(tag.prop('className')).toContain('tag is-interactive');
   });
 
   // Structure Tests
