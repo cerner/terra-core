@@ -1,0 +1,9 @@
+@import './variables';
+
+:local {
+  .action-footer-container {
+    background-color: $background-color;
+    border-top: $border-top;
+    min-height: 2.857142857142857rem;
+  }
+}

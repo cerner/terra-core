@@ -1,0 +1,9 @@
+@import './variables';
+
+:local {
+  .empty-action-footer {
+    background-color: $background-color;
+    border-top: $border-top;
+    height: 0.714285714285714rem;
+  }
+}

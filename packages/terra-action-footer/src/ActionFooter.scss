@@ -1,18 +1,16 @@
+@import './variables';
+
 :local {
   .action-footer {
-    background-color: var(--terra-action-footer-background-color, transparent);
-    border-top: var(--terra-action-footer-border-top, 0.071428571428571rem solid #cfd0d1);
+    display: flex;
   }
 
-  .center {
-    text-align: center;
+  .empty-center {
+    flex: 1 1 auto;
   }
 
-  .with-content {
-    min-height: 2.857142857142857rem;
-  }
-
-  .empty-footer {
-    height: 0.714285714285714rem;
+  .socket {
+    align-self: center;
+    flex: 0 0 auto;
   }
 }

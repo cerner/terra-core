@@ -1,0 +1,9 @@
+@import './variables';
+
+:local {
+  .centered-action-footer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
