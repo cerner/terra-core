@@ -1,6 +1,6 @@
 # Terra Form Fieldset
 
-Generic form fieldset component which handles the layout of a standard form fieldset including errors, help text, legend, value and widget placement.
+Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.
 
 ## Getting Started
 
@@ -16,7 +16,6 @@ import Fieldset from 'terra-form/lib/Fieldset';
 <Fieldset
   legend="Do you have any Children?"
   legendAttrs={{ className: 'healtheintent-application' }}
-  error="This field is required"
   help="Families are eligible for family package plans"
   required
   isInline

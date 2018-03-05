@@ -14,7 +14,6 @@ it('should render a Fieldset when all the possible props are passed into it', ()
     <Fieldset
       legend="Text"
       legendAttrs={{ className: 'healtheintent-legend' }}
-      error="This field is required"
       help="This is a test input"
       isInline
       required

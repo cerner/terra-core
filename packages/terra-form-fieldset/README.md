@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-form-fieldset.svg)](https://www.npmjs.org/package/terra-form-fieldset)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-Generic form fieldset component which handles the layout of a standard form fieldset including errors, help text, legend, value and widget placement.
+Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-fieldset/docs)
