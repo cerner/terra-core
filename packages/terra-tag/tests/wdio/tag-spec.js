@@ -36,6 +36,16 @@ describe('Tag', () => {
     });
   });
 
+  describe('Default OnClick Tag', () => {
+    before(() => browser.url('/#/tests/tag-tests/default-on-click-tag'));
+    Terra.should.beAccessible();
+    Terra.should.matchScreenshot();
+
+    it('Check if is-interactive class was applied', () => {
+      expect(browser.getAttribute('button', 'className')).contains('is-interactive');
+    });
+  });
+
   describe('Href Tag', () => {
     before(() => browser.url('/#/tests/tag-tests/href-tag'));
     Terra.should.matchScreenshot();

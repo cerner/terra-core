@@ -65,6 +65,7 @@
 
     > svg {
       height: var(--terra-tag-icon-height, 1rem);
+      vertical-align: middle;
       width: var(--terra-tag-icon-width, 1rem);
     }
   }
