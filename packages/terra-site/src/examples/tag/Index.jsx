@@ -18,7 +18,7 @@ const TagExamples = () => (
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TagSrc} />
-    <h2 id="default">Tag</h2>
+    <h2 id="default">Default Tag</h2>
     <TagDefault />
     <h2 id="icon-and-text">Icon and Text Tag</h2>
     <TagIconAndText />
