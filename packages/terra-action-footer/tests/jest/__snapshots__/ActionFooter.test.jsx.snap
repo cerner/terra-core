@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionFooter Snapshot Tests should render a footer with both start and end socket buttons 1`] = `
+<ActionFooterContainer
+  className="action-footer"
+>
+  <div
+    className="socket"
+  >
+    <button>
+      Start Socket
+    </button>
+  </div>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <button>
+      End Socket
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only an end socket button 1`] = `
+<ActionFooterContainer
+  className="action-footer"
+>
+  <div
+    className="socket"
+  />
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <button>
+      End Socket
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only one start socket button 1`] = `
+<ActionFooterContainer
+  className="action-footer"
+>
+  <div
+    className="socket"
+  >
+    <button>
+      Start Socket
+    </button>
+  </div>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  />
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only two end socket buttons 1`] = `
+<ActionFooterContainer
+  className="action-footer"
+>
+  <div
+    className="socket"
+  />
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <div>
+      <button>
+        End Socket 1
+      </button>
+      <button>
+        End Socket 2
+      </button>
+    </div>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only two start socket buttons 1`] = `
+<ActionFooterContainer
+  className="action-footer"
+>
+  <div
+    className="socket"
+  >
+    <div>
+      <button>
+        Start Socket 1
+      </button>
+      <button>
+        Start Socket 2
+      </button>
+    </div>
+  </div>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  />
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `<EmptyActionFooter />`;

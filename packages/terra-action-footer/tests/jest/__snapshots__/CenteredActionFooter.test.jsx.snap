@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CenteredActionFooter Snapshot Tests should render a footer with an anchor 1`] = `
+<ActionFooterContainer
+  className="centered-action-footer"
+>
+  <a
+    href="/"
+  >
+    Test
+  </a>
+</ActionFooterContainer>
+`;
+
+exports[`CenteredActionFooter Snapshot Tests should render a footer with two buttons 1`] = `
+<ActionFooterContainer
+  className="centered-action-footer"
+>
+  <div>
+    <button>
+      Button 1
+    </button>
+    <button>
+      Button 2
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`CenteredActionFooter Snapshot Tests should render an empty footer 1`] = `<EmptyActionFooter />`;
