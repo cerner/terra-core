@@ -89,7 +89,6 @@ class Tag extends React.Component {
 
     const iconClass = cx('icon');
 
-    const tagText = <span>{text}</span>;
     const tagIcon = icon ? <span className={iconClass}>{icon}</span> : null;
     const isClickable = href || onClick;
     const clickableComponent = href ? 'a' : 'button';
@@ -106,7 +105,7 @@ class Tag extends React.Component {
         href={href}
       >
         {tagIcon}
-        {tagText}
+        {text}
       </ComponentType>
     );
   }

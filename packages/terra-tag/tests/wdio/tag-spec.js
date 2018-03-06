@@ -8,10 +8,6 @@ describe('Tag', () => {
     describe('Default Tag', () => {
       beforeEach(() => browser.url('/#/tests/tag-tests/default-tag'));
 
-      it('Checks if is-interactive class was not applied', () => {
-        expect(browser.getAttribute('span', 'className')).to.not.contains('is-interactive');
-      });
-
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
       Terra.should.themeEachCustomProperty({
@@ -40,19 +36,11 @@ describe('Tag', () => {
     before(() => browser.url('/#/tests/tag-tests/default-on-click-tag'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
-
-    it('Check if is-interactive class was applied', () => {
-      expect(browser.getAttribute('button', 'className')).contains('is-interactive');
-    });
   });
 
   describe('Href Tag', () => {
     before(() => browser.url('/#/tests/tag-tests/href-tag'));
     Terra.should.matchScreenshot();
-
-    it('Check if is-interactive class was applied', () => {
-      expect(browser.getAttribute('a', 'className')).contains('is-interactive');
-    });
   });
 
   describe('Icon and Text Tag', () => {
@@ -89,16 +77,13 @@ describe('Tag', () => {
     Terra.should.themeEachCustomProperty({
       '--terra-tag-interactive-color': 'purple',
       '--terra-tag-interactive-text-decoration': 'underline',
+      '--terra-tag-interactive-background-color': 'yellow',
     });
 
     describe('OnClick Tag - Keyboard focus', () => {
       beforeEach(() => {
         browser.url('/#/tests/tag-tests/on-click-tag');
         browser.keys('Tab');
-      });
-
-      it('Check if is-interactive class was applied', () => {
-        expect(browser.getAttribute('button', 'className')).contains('is-interactive');
       });
 
       Terra.should.beAccessible();

@@ -6,9 +6,7 @@ exports[`Tag should render a tag 1`] = `
   onBlur={[Function]}
   onKeyUp={[Function]}
 >
-  <span>
-    Normal
-  </span>
+  Normal
 </span>
 `;
 
@@ -25,10 +23,19 @@ exports[`Tag should render an icon and a text 1`] = `
       alt="icon"
     />
   </span>
-  <span>
-    text
-  </span>
+  text
 </span>
+`;
+
+exports[`Tag should render an interactive tag 1`] = `
+<button
+  className="tag is-interactive"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+>
+  text
+</button>
 `;
 
 exports[`Tag should render as an anchor when provided an href 1`] = `
@@ -38,8 +45,6 @@ exports[`Tag should render as an anchor when provided an href 1`] = `
   onBlur={[Function]}
   onKeyUp={[Function]}
 >
-  <span>
-    href
-  </span>
+  href
 </a>
 `;

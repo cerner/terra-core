@@ -22,9 +22,9 @@ describe('Tag', () => {
   });
 
   // Prop Tests
-  it('should have the class is-interactive', () => {
-    const tag = shallow(<Tag text="text" onClick={() => 1} />);
-    expect(tag.prop('className')).toContain('tag is-interactive');
+  it('should render an interactive tag', () => {
+    const tag = shallow(<Tag text="text" onClick={() => {}} />);
+    expect(tag).toMatchSnapshot();
   });
 
   // Structure Tests
@@ -39,13 +39,8 @@ describe('Tag', () => {
     expect(tag.childAt(0).hasClass('icon')).toEqual(true);
   });
 
-  it('should render as an anchor tag when provided an href', () => {
-    const tag = shallow(<Tag href="MockHref" text="text" />);
-    expect(tag.is('a')).toEqual(true);
-  });
-
   it('should render as an button tag when href is not provided', () => {
-    const tag = shallow(<Tag text="text" onClick={() => 1} />);
+    const tag = shallow(<Tag text="text" onClick={() => {}} />);
     expect(tag.is('button')).toEqual(true);
   });
 
