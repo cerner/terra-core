@@ -15,11 +15,11 @@
     padding-bottom: var(--terra-section-header-padding-bottom, 0.5rem);
     padding-top: var(--terra-section-header-padding-top, 0.5rem);
     width: 100%;
-
+    
     &.is-interactable {
       @include terra-padding-start(var(--terra-section-header-accordion-padding-start, 0.5rem));
       cursor: pointer;
-
+      
       &:hover {
         background: var(--terra-section-header-hover-background, #d7d8d9);
         border-bottom: var(--terra-section-header-hover-border-bottom, 1px solid #c8cacb);
@@ -29,7 +29,7 @@
         box-shadow: var(--terra-section-header-hover-box-shadow);
         color: var(--terra-section-header-hover-color, #1c1f21);
       }
-
+      
       &:focus {
         background: var(--terra-section-header-focus-background, #e8e9ea);
         border-bottom: var(--terra-section-header-focus-border-bottom, 1px solid #c8cacb);
@@ -38,6 +38,7 @@
         border-top: var(--terra-section-header-focus-border-top);
         box-shadow: var(--terra-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
         color: var(--terra-section-header-focus-color, #1c1f21);
+        outline: none;
       }
 
       &:active,
