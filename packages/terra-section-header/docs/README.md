@@ -1,6 +1,6 @@
 # Terra Section Header
 
-Section Header presentational component that provides an onClick callback and animatable status icon.
+Section Header presentational component that provides an onClick callback.
 
 ## Getting Started
 
@@ -15,7 +15,6 @@ import SectionHeader from 'terra-section-header';
 
 <SectionHeader
   title="Section Header Example"
-  isAnimated
   onClick={() => {
     // eslint-disable-next-line no-alert
     window.alert('The Section Header has been clicked!');
