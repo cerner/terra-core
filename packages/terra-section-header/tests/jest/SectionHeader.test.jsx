@@ -10,19 +10,19 @@ describe('SectionHeader', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render without an accordion icon when no \'onClick()\' is passed', () => {
+  it("should render without an accordion icon when no 'onClick()' is passed", () => {
     const sectionHeader = <SectionHeader title="foo" />;
     const wrapper = render(sectionHeader);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render with an accordion icon when an \'onClick()\' callback is passed', () => {
+  it("should render with an accordion icon when an 'onClick()' callback is passed", () => {
     const sectionHeader = <SectionHeader title="foo" onClick={() => {}} />;
     const wrapper = render(sectionHeader);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render with an accordion icon in the open position when an \'onClick()\' callback and \'isOpen\' is passed', () => {
+  it("should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed", () => {
     const sectionHeader = <SectionHeader title="foo" onClick={() => {}} isOpen />;
     const wrapper = render(sectionHeader);
     expect(wrapper).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe('SectionHeader', () => {
     expect(wrapper.prop('className')).toContain('section-header');
   });
 
-  it('should have the class is-interactable when \'onClick()\' is provided.', () => {
+  it("should have the class is-interactable when 'onClick()' is provided.", () => {
     const sectionHeader = <SectionHeader title="foo" onClick={() => {}} />;
     const wrapper = shallow(sectionHeader);
     expect(wrapper.type()).toEqual('div');
