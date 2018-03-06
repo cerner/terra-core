@@ -141,6 +141,7 @@ class App extends React.Component {
         <List className={styles['site-nav']}>
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/arrange">Arrange</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/avatar">Avatar</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/base">Base</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/badge">Badge</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button">Button</Link>} />
