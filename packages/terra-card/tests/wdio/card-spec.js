@@ -29,6 +29,7 @@ describe('Badge', () => {
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
+
   describe('Card Body Padded', () => {
     beforeEach(() => browser.url('/#/tests/card-tests/padding'));
 
@@ -40,5 +41,12 @@ describe('Badge', () => {
       '--terra-card-padding-left': '50px',
       '--terra-card-padding-right': '50px',
     });
+  });
+
+  describe('Card Body Centered', () => {
+    beforeEach(() => browser.url('/#/tests/card-tests/contentcenter'));
+
+    Terra.should.beAccessible({ viewports });
+    Terra.should.matchScreenshot({ viewports });
   });
 });

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 -----------------
+### Changed
+* Added new prop isContentCentered in CardBody to center content
 
 2.1.0 - (February 26, 2018)
 ------------------
