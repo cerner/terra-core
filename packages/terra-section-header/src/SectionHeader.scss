@@ -22,33 +22,33 @@
 
       &:hover {
         background: var(--terra-section-header-hover-background, #d7d8d9);
-        border-bottom: var(--terra-section-header-hover-border-bottom);
+        border-bottom: var(--terra-section-header-hover-border-bottom, 1px solid #c8cacb);
         border-left: var(--terra-section-header-hover-border-left);
         border-right: var(--terra-section-header-hover-border-right);
         border-top: var(--terra-section-header-hover-border-top);
         box-shadow: var(--terra-section-header-hover-box-shadow);
-        color: var(--terra-section-header-hover-color);
+        color: var(--terra-section-header-hover-color, #1c1f21);
       }
 
       &:focus {
         background: var(--terra-section-header-focus-background, #e8e9ea);
-        border-bottom: var(--terra-section-header-focus-border-bottom);
+        border-bottom: var(--terra-section-header-focus-border-bottom, 1px solid #c8cacb);
         border-left: var(--terra-section-header-focus-border-left);
         border-right: var(--terra-section-header-focus-border-right);
         border-top: var(--terra-section-header-focus-border-top);
         box-shadow: var(--terra-section-header-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
-        color: var(--terra-section-header-focus-color);
+        color: var(--terra-section-header-focus-color, #1c1f21);
       }
 
       &:active,
       &.is-active {
         background: var(--terra-section-header-active-background, #d7d8d9);
-        border-bottom: var(--terra-section-header-active-border-bottom);
+        border-bottom: var(--terra-section-header-active-border-bottom, 1px solid #c8cacb);
         border-left: var(--terra-section-header-active-border-left);
         border-right: var(--terra-section-header-active-border-right);
         border-top: var(--terra-section-header-active-border-top);
         box-shadow: var(--terra-section-header-active-box-shadow);
-        color: var(--terra-section-header-active-color);
+        color: var(--terra-section-header-active-color, #1c1f21);
       }
     }
   }
