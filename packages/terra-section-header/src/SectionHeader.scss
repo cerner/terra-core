@@ -40,7 +40,8 @@
         color: var(--terra-section-header-focus-color);
       }
 
-      &:active {
+      &:active,
+      &.is-active {
         background: var(--terra-section-header-active-background, #d7d8d9);
         border-bottom: var(--terra-section-header-active-border-bottom);
         border-left: var(--terra-section-header-active-border-left);
