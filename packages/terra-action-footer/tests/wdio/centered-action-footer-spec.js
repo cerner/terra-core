@@ -1,9 +1,9 @@
 /* global browser, Terra */
 const viewports = Terra.viewports('tiny', 'medium', 'large');
 
-describe('ActionFooter', () => {
+describe('CenteredActionFooter', () => {
   describe('Empty', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/empty-action-footer'));
+    beforeEach(() => browser.url('/#/tests/centered-action-footer/empty-centered-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
