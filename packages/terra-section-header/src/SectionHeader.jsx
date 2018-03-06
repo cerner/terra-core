@@ -26,10 +26,9 @@ const propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
-   * Sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`, or `custom`. Specifically, `custom` will NOT supply any
-   * heading element as a backer, and assumes that the content being passed via the `title` prop is the desired structure.
+   * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=2`.
    */
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 'custom']).isRequired,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 
 const defaultProps = {
