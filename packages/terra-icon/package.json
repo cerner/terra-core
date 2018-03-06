@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "terra-icon",
   "repository": {
     "type": "git",
@@ -28,12 +28,12 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.1.0"
+    "terra-base": "^3.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.1.0"
+    "terra-base": "^3.2.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
