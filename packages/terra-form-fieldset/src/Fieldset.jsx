@@ -14,7 +14,7 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Help element to display with the input.
+   * Help element to display with other elements.
    */
   help: PropTypes.node,
   /**
@@ -36,10 +36,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: null,
-  help: null,
   isInline: false,
-  legend: null,
   legendAttrs: {},
   required: false,
 };

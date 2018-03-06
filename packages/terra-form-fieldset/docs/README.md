@@ -11,7 +11,7 @@ Generic form fieldset component which handles the layout of a standard form fiel
 
 ```jsx
 import React from 'react';
-import Fieldset from 'terra-form/lib/Fieldset';
+import Fieldset from 'terra-form-fieldset/lib/Fieldset';
 
 <Fieldset
   legend="Do you have any Children?"

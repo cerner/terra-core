@@ -13,7 +13,6 @@ const routes = (
     <Route path="/tests/form-fieldset-tests" component={FieldsetTests} />
     <Route path="/tests/form-fieldset-tests/fieldset/default" component={DefaultFieldset} />
     <Route path="/tests/form-fieldset-tests/fieldset/populated" component={PopulatedFieldset} />
-    <Route path="/tests/form-fieldset-tests/fieldset/try" component={PopulatedFieldset} />
   </div>
 );
 

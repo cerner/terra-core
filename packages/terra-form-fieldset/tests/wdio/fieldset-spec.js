@@ -14,7 +14,7 @@ describe('Fieldset', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty('#root', {
+    Terra.should.themeEachCustomProperty({
       '--terra-form-fieldset-legend-color': 'yellow',
       '--terra-form-fieldset-legend-font-weight': '100',
       '--terra-form-fieldset-help-text-color': 'green',
