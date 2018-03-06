@@ -27,17 +27,4 @@ describe('SectionHeader', () => {
     const wrapper = render(sectionHeader);
     expect(wrapper).toMatchSnapshot();
   });
-
-  // Structure Tests
-  it('should have the class section-header', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('section-header');
-  });
-
-  it("should have the class is-interactable when 'onClick()' is provided.", () => {
-    const sectionHeader = <SectionHeader title="foo" onClick={() => {}} />;
-    const wrapper = shallow(sectionHeader);
-    expect(wrapper.type()).toEqual('div');
-    expect(wrapper.hasClass('is-interactable')).toEqual(true);
-  });
 });
