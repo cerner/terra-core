@@ -1,6 +1,6 @@
 # Terra Action Footer
 
-The Terra Action Footer is a footer bar that contains two sockets, start and end, to place items in the form of buttons and hyperlinks used to perform actions.
+The terra-action-footer component is a footer bar that contains two sockets, start and end, to place items in the form of buttons and hyperlinks used to perform actions. If no actions are provided, the footer bar defaults to a 10px equivalent height and maintains the top border.
 
 ## Getting Started
 

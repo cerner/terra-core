@@ -1,6 +1,6 @@
 # Terra Centered Action Footer
 
-The Terra Centered Action Footer is a footer bar that contains a single, centered socket to place items in the form of buttons and hyperlinks used to perform actions.
+The Terra Centered Action Footer is a footer bar that contains a single, centered socket to place items in the form of buttons and hyperlinks used to perform actions. If no actions are provided, the footer bar defaults to a 10px equivalent height and maintains the top border.
 
 ## Usage
 
