@@ -23,16 +23,23 @@
   "devDependencies": {
     "babel-jest": "^19.0.0"
   },
+  "bin": {
+    "aggregate-translations": "./bin/aggregate-translations.js"
+  },
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "commander": "^2.9.0",
+    "glob": "^7.1.1",
     "intl": "^1.2.5",
+    "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
-    "react-intl": "^2.4.0"
-  },
+    "react-intl": "^2.4.0",
+    "rimraf": "^2.6.1"
+    },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
