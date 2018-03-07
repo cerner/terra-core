@@ -10,7 +10,7 @@ exports[`Tag should render a tag 1`] = `
 </span>
 `;
 
-exports[`Tag should render an icon and a text 1`] = `
+exports[`Tag should render an icon and text 1`] = `
 <span
   className="tag"
   onBlur={[Function]}
