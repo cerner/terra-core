@@ -1,8 +1,10 @@
 import React from 'react';
+import Button from '../../../../terra-button/lib/Button';
 import CenteredActionFooter from '../../../lib/CenteredActionFooter';
 
 export default () => (
   <CenteredActionFooter
-    center={<button>Action</button>}
+    id="centered-action-footer-single-action"
+    center={<Button text="Action" />}
   />
 );

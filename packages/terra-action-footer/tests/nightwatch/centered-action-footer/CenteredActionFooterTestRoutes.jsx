@@ -11,9 +11,9 @@ import SingleActionCenteredActionFooter from './SingleActionCenteredActionFooter
 const routes = (
   <div>
     <Route path="/tests/centered-action-footer" component={CenteredActionFooterTests} />
-    <Route path="/tests/centered-action-footer/empty-centered-action-footer" component={EmptyCenteredActionFooter} />
-    <Route path="/tests/centered-action-footer/multiple-action-centered-action-footer" component={MultipleActionCenteredActionFooter} />
-    <Route path="/tests/centered-action-footer/single-action-centered-action-footer" component={SingleActionCenteredActionFooter} />
+    <Route path="/tests/centered-action-footer/empty" component={EmptyCenteredActionFooter} />
+    <Route path="/tests/centered-action-footer/multiple-actions" component={MultipleActionCenteredActionFooter} />
+    <Route path="/tests/centered-action-footer/single-action" component={SingleActionCenteredActionFooter} />
   </div>
 );
 

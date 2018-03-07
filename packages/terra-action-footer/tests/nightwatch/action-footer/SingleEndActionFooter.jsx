@@ -4,6 +4,7 @@ import ActionFooter from '../../../lib/ActionFooter';
 
 export default () => (
   <ActionFooter
-    end={<a href="/">End Action</a>}
+    id="action-footer-single-end-action"
+    end="Fake link"
   />
 );

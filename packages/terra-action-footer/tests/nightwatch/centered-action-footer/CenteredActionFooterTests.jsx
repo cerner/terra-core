@@ -5,9 +5,9 @@ import { Link } from 'react-router';
 const ActionFooterTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/action-footer/empty-action-footer">ActionFooter - Empty</Link></li>
-      <li><Link to="/tests/action-footer/multiple-action-action-footer">ActionFooter - Multiple Action</Link></li>
-      <li><Link to="/tests/action-footer/single-action-centered-action-footer">ActionFooter - Single Action</Link></li>
+      <li><Link to="/tests/centered-action-footer/empty">CenteredActionFooter - Empty</Link></li>
+      <li><Link to="/tests/centered-action-footer/multiple-actions">CenteredActionFooter - Multiple Actions</Link></li>
+      <li><Link to="/tests/centered-action-footer/single-action">CenteredActionFooter - Single Action</Link></li>
     </ul>
   </div>
 );

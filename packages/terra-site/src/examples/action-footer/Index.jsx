@@ -2,7 +2,6 @@
 import React from 'react';
 import PropsTable from 'terra-props-table';
 import Markdown from 'terra-markdown';
-import IndexTemplate from 'terra-dev-site/src/IndexPageTemplate';
 
 import ReadMe from 'terra-action-footer/docs/README.md';
 import { version } from 'terra-action-footer/package.json';
@@ -12,22 +11,36 @@ import { version } from 'terra-action-footer/package.json';
 import ActionFooterSrc from '!raw-loader!terra-action-footer/src/ActionFooter';
 
 // Example Files
-import DefaultActionFooter from './DefaultActionFooter';
-import DefaultActionFooterSrc from '!raw-loader!./DefaultActionFooter.jsx';
+import EmptyExample from './examples/action-footer/Empty';
+import EmptyInCardExample from './examples/action-footer/EmptyInCard';
+import SingleStartActionExample from './examples/action-footer/SingleStartAction';
+import SingleStartActionInCardExample from './examples/action-footer/SingleStartActionInCard';
+import SingleEndActionExample from './examples/action-footer/SingleEndAction';
+import SingleEndActionInCardExample from './examples/action-footer/SingleEndActionInCard';
+import MultipleStartEndActionsExample from './examples/action-footer/MultipleStartEndActions';
+import MultipleStartEndActionsInCardExample from './examples/action-footer/MultipleStartEndActionsInCard';
 
 const ActionFooterExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
-
-    <h1 style={{ paddingBottom: '0.3em', borderBottom: '1px solid #eaecef' }}>Examples</h1>
-    <IndexTemplate
-      title="ActionFooter - Default"
-      example={<DefaultActionFooter />}
-      exampleSrc={DefaultActionFooterSrc}
-    />
-
     <PropsTable id="props" src={ActionFooterSrc} />
+    <h2 id="empty">Empty</h2>
+    <EmptyExample />
+    <h2 id="empty-in-card">Empty in Card</h2>
+    <EmptyInCardExample />
+    <h2 id="single-start-action">Single Start Action</h2>
+    <SingleStartActionExample />
+    <h2 id="single-start-action-in-card">Single Start Action in Card</h2>
+    <SingleStartActionInCardExample />
+    <h2 id="single-end-action">Single End Action</h2>
+    <SingleEndActionExample />
+    <h2 id="single-end-action-in-card">Single End Action in Card</h2>
+    <SingleEndActionInCardExample />
+    <h2 id="multiple-start-end-actions">Multiple Start and End Actions</h2>
+    <MultipleStartEndActionsExample />
+    <h2 id="multiple-start-end-actions-in-card">Multiple Start and End Actions in Card</h2>
+    <MultipleStartEndActionsInCardExample />
   </div>
 );
 

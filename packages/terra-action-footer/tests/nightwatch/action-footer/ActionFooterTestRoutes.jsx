@@ -15,13 +15,13 @@ import SingleStartEndActionFooter from './SingleStartEndActionFooter';
 const routes = (
   <div>
     <Route path="/tests/action-footer" component={ActionFooterTests} />
-    <Route path="/tests/action-footer/empty-action-footer" component={EmptyActionFooter} />
-    <Route path="/tests/action-footer/multiple-end-action-footer" component={MultipleEndActionFooter} />
-    <Route path="/tests/action-footer/multiple-start-action-footer" component={MultipleStartActionFooter} />
-    <Route path="/tests/action-footer/multiple-start-end-action-footer" component={MultipleStartEndActionFooter} />
-    <Route path="/tests/action-footer/single-end-action-footer" component={SingleEndActionFooter} />
-    <Route path="/tests/action-footer/single-start-action-footer" component={SingleStartActionFooter} />
-    <Route path="/tests/action-footer/single-start-end-action-footer" component={SingleStartEndActionFooter} />
+    <Route path="/tests/action-footer/empty" component={EmptyActionFooter} />
+    <Route path="/tests/action-footer/multiple-end-actions" component={MultipleEndActionFooter} />
+    <Route path="/tests/action-footer/multiple-start-actions" component={MultipleStartActionFooter} />
+    <Route path="/tests/action-footer/multiple-start-end-actions" component={MultipleStartEndActionFooter} />
+    <Route path="/tests/action-footer/single-end-action" component={SingleEndActionFooter} />
+    <Route path="/tests/action-footer/single-start-action" component={SingleStartActionFooter} />
+    <Route path="/tests/action-footer/single-start-end-action" component={SingleStartEndActionFooter} />
   </div>
 );
 
