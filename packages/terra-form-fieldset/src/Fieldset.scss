@@ -1,0 +1,41 @@
+:local {
+  .fieldset {
+    border: 0;
+    margin-bottom: 1.428em;
+    padding: 0;
+  }
+
+  .fieldset-required > .legend:first-child {
+    &::before {
+      color: var(--terra-form-fieldset-required-color, #e50000);
+      content: '*';
+      display: inline-block;
+      padding-right: 0.357em;
+    }
+  }
+
+  .legend {
+    border: 0;
+    color: var(--terra-form-fieldset-legend-color);
+    display: block;
+    font-weight: var(--terra-form-fieldset-legend-font-weight, bold);
+    margin-bottom: 0.357em;
+    max-width: 100%; // IE11 fix to ensure legends wrap
+    padding: 0;
+    width: auto;
+  }
+
+  .help-text {
+    color: var(--terra-form-fieldset-help-text-color, rgba(0, 0, 0, 0.8));
+    display: block;
+    font-size: var(--terra-form-fieldset-help-text-font-size, 0.857rem);
+    font-weight: var(--terra-form-fieldset-help-text-font-weight, normal);
+    line-height: 1;
+    margin-bottom: 0.357em;
+    outline: 0;
+  }
+
+  .fieldset-children {
+    margin-top: 0.714em;
+  }
+}

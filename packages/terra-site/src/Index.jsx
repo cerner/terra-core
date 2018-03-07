@@ -25,6 +25,7 @@ import EmbeddedContentConsumerExamples from './examples/embedded-content-consume
 import FormExamples from './examples/form/Index';
 import FormCheckboxExamples from './examples/form-checkbox/Index';
 import FormFieldExamples from './examples/form-field/Index';
+import FormFieldsetExamples from './examples/form-fieldset/Index';
 import FormInputExamples from './examples/form-input/Index';
 import FormRadioExamples from './examples/form-radio/Index';
 import FormTextareaExamples from './examples/form-textarea/Index';
@@ -79,6 +80,7 @@ import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/t
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
+import FormFieldsetTestRoutes from 'terra-form-fieldset/tests/nightwatch/FieldsetTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import FormInputTestRoutes from 'terra-form-input/tests/nightwatch/InputTestRoutes';
 import FormRadioTestRoutes from 'terra-form-radio/tests/nightwatch/RadioTestRoutes';
@@ -159,6 +161,7 @@ ReactDOM.render((
       <Route path="form-checkbox" component={FormCheckboxExamples} />
       <Route path="form-textarea" component={FormTextareaExamples} />
       <Route path="form-field" component={FormFieldExamples} />
+      <Route path="form-fieldset" component={FormFieldsetExamples} />
       <Route path="form-input" component={FormInputExamples} />
       <Route path="form-radio" component={FormRadioExamples} />
       <Route path="grid" component={GridExamples} />
@@ -244,6 +247,7 @@ ReactDOM.render((
       {FormCheckboxTestRoutes}
       {FormTextareaRoutes}
       {FormFieldTestRoutes}
+      {FormFieldsetTestRoutes}
       {FormInputTestRoutes}
       {FormRadioTestRoutes}
       {OverlayTestRoutes}

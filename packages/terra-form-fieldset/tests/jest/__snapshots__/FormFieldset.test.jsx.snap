@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a Fieldset when all the possible props are passed into it 1`] = `
+<fieldset
+  className="fieldset fieldset-inline fieldset-required fieldset-custom"
+>
+  <legend
+    className="legend healtheintent-legend"
+  >
+    Text
+  </legend>
+  <small
+    className="help-text"
+    tabIndex="-1"
+  >
+    This is a test input
+  </small>
+  <div
+    className="fieldset-children"
+  >
+    <input
+      type="radio"
+      value="Test"
+    />
+  </div>
+</fieldset>
+`;
+
+exports[`should render a default component 1`] = `
+<fieldset
+  className="fieldset"
+>
+  <div
+    className="fieldset-children"
+  />
+</fieldset>
+`;
