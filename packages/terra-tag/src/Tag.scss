@@ -7,7 +7,7 @@
     border-radius: 0.2142rem;
     border-style: var(--terra-tag-border-style, solid);
     border-width: 0.07142rem;
-    box-shadow: var(--terra-tag-box-shadow, none);
+    box-shadow: var(--terra-tag-box-shadow);
     color: var(--terra-tag-color, #434a4d);
     display: inline-flex;
     font-size: var(--terra-tag-font-size, 1rem);
@@ -22,7 +22,7 @@
     padding-right: var(--terra-tag-padding-right, 0.5rem);
     padding-top: var(--terra-tag-padding-top, 0.1428rem);
     text-align: left;
-    text-decoration: var(--terra-tag-text-decoration, none);
+    text-decoration: var(--terra-tag-text-decoration);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on tags on mobile and desktop.
@@ -43,18 +43,18 @@
     background-color: var(--terra-tag-interactive-background-color);
     color: var(--terra-tag-interactive-color, #0059a8);
     cursor: pointer;
-    text-decoration: var(--terra-tag-interactive-text-decoration, none);
+    text-decoration: var(--terra-tag-interactive-text-decoration);
 
     &.is-focused {
       background-color: var(--terra-tag-focus-background-color, #fff);
       border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
       box-shadow: var(--terra-tag-focus-box-shadow, 0 0 0.0714rem 0.2142rem rgba(76, 178, 233, 0.5), 0 0 0.5rem 0.285rem rgba(76, 178, 233, 0.35));
-      text-decoration: var(--terra-tag-focus-text-decoration, none);
+      text-decoration: var(--terra-tag-focus-text-decoration);
     }
 
     &:hover {
       background-color: var(--terra-tag-hover-background-color, rgba(28, 31, 33, 0.04));
-      box-shadow: var(--terra-tag-hover-box-shadow, none);
+      box-shadow: var(--terra-tag-hover-box-shadow);
       color: var(--terra-tag-hover-color, #001f67);
       text-decoration: var(--terra-tag-hover-text-decoration, underline);
     }

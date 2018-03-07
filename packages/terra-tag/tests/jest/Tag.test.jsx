@@ -2,8 +2,6 @@ import React from 'react';
 import Tag from '../../src/Tag';
 
 describe('Tag', () => {
-  const defaultRender = <Tag text="default" />;
-
   // Snapshot Tests
   it('should render a tag', () => {
     const tag = shallow(<Tag text="Normal" />);
@@ -15,7 +13,7 @@ describe('Tag', () => {
     expect(tag).toMatchSnapshot();
   });
 
-  it('should render an icon and a text', () => {
+  it('should render an icon and text', () => {
     const testElement = <img alt="icon" />;
     const tag = shallow(<Tag icon={testElement} text="text" />);
     expect(tag).toMatchSnapshot();
@@ -28,11 +26,6 @@ describe('Tag', () => {
   });
 
   // Structure Tests
-  it('should have the class tag', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('tag');
-  });
-
   it('should have the class icon when icon is provided', () => {
     const testElement = <img alt="icon" />;
     const tag = shallow(<Tag icon={testElement} text="text" />);
@@ -41,11 +34,6 @@ describe('Tag', () => {
 
   it('should render as an button tag when href is not provided', () => {
     const tag = shallow(<Tag text="text" onClick={() => {}} />);
-    expect(tag.is('button')).toEqual(true);
-  });
-
-  it('should render as span tag when href and Onclick is not provided', () => {
-    const tag = shallow(<Tag text="text" />);
-    expect(tag.is('span')).toEqual(true);
+    expect(tag).toMatchSnapshot();
   });
 });

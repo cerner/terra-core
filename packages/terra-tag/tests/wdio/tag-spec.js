@@ -56,7 +56,7 @@ describe('Tag', () => {
     });
   });
 
-  describe('Icon and Text long Tag', () => {
+  describe('Icon and Text Long Tag', () => {
     beforeEach(() => browser.url('/#/tests/tag-tests/icon-and-long-text-tag'));
 
     Terra.should.beAccessible();

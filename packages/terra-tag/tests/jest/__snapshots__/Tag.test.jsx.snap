@@ -48,3 +48,14 @@ exports[`Tag should render as an anchor when provided an href 1`] = `
   href
 </a>
 `;
+
+exports[`Tag should render as an button tag when href is not provided 1`] = `
+<button
+  className="tag is-interactive"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+>
+  text
+</button>
+`;
