@@ -4,8 +4,7 @@ import ActionFooter from '../../../lib/ActionFooter';
 
 export default () => (
   <ActionFooter
-    id="action-footer-single-start-end-action"
     start={<Button text="Start Action" />}
-    end="Fake link"
+    end="FakeLink End Action"
   />
 );

@@ -4,11 +4,10 @@ import ActionFooter from '../../../lib/ActionFooter';
 
 export default () => (
   <ActionFooter
-    id="action-footer-multiple-end-actions"
     end={
       <div>
         <Button text="End Action 1" />
-        <a href="/#/tests/action-footer">End Action 2</a>
+        FakeLink End Action 2
         <Button text="End Action 3" />
       </div>
     }

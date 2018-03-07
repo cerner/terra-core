@@ -4,10 +4,9 @@ import CenteredActionFooter from '../../../lib/CenteredActionFooter';
 
 export default () => (
   <CenteredActionFooter
-    id="centered-action-footer-multiple-actions"
     center={
       <div>
-        Fake link
+        FakeLink Action
         <Button text="Button Action" />
       </div>
     }
