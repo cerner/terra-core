@@ -15,6 +15,7 @@ import SectionHeader from 'terra-section-header';
 
 <SectionHeader
   title="Section Header Example"
+  level={1}
   onClick={() => {
     // eslint-disable-next-line no-alert
     window.alert('The Section Header has been clicked!');
