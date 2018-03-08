@@ -56,6 +56,7 @@
     "terra-form": "^2.2.0",
     "terra-form-checkbox": "^2.2.0",
     "terra-form-field": "^2.2.0",
+    "terra-form-fieldset": "^0.x",
     "terra-form-input": "^1.1.0",
     "terra-form-radio": "^2.2.0",
     "terra-form-select": "^2.2.0",
