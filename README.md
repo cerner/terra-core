@@ -85,7 +85,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input) | [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-toggle](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle) | [![NPM version](http://img.shields.io/npm/v/terra-toggle.svg)](https://www.npmjs.org/package/terra-toggle) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-toggle-button](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-button) | [![NPM version](http://img.shields.io/npm/v/terra-toggle-button.svg)](https://www.npmjs.org/package/terra-toggle-button) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
-
+| [terra-tag](https://github.com/cerner/terra-core/tree/master/packages/terra-tag) | [![NPM version](http://img.shields.io/npm/v/terra-text.svg)](https://www.npmjs.org/package/terra-text) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 ## Supported Browsers
 
 | Browser                     | Version |

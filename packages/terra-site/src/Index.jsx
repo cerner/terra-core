@@ -53,6 +53,7 @@ import StatusExamples from './examples/status/Index';
 import StatusViewExamples from './examples/status-view/Index';
 import TableExamples from './examples/table/Index';
 import TabsExamples from './examples/tabs/Index';
+import TagExamples from './examples/tag/Index';
 import TextExamples from './examples/text/Index';
 import TimeInputExamples from './examples/time-input/Index';
 import ToggleExamples from './examples/toggle/Index';
@@ -127,6 +128,7 @@ import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TabsTestRoutes from 'terra-tabs/tests/nightwatch/Tabs/TabsTestRoutes';
 import TabPaneTestRoutes from 'terra-tabs/tests/nightwatch/TabPane/TabPaneTestRoutes';
+import TagTestRoutes from 'terra-tag/tests/nightwatch/TagTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
 import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
@@ -188,6 +190,7 @@ ReactDOM.render((
       <Route path="status-view" component={StatusViewExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="tabs" component={TabsExamples} />
+      <Route path="tag" component={TagExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="time-input" component={TimeInputExamples} />
       <Route path="toggle" component={ToggleExamples} />
@@ -266,6 +269,7 @@ ReactDOM.render((
       {StatusViewTestRoutes}
       {TabsTestRoutes}
       {TabPaneTestRoutes}
+      {TagTestRoutes}
     </Route>
   </Router>
 ), document.getElementById('root'));

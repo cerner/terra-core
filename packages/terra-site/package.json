@@ -89,6 +89,7 @@
     "terra-status-view": "^2.2.0",
     "terra-table": "^2.2.0",
     "terra-tabs": "^2.2.0",
+    "terra-tag": "^0.x",
     "terra-text": "^2.2.0",
     "terra-theme-provider": "^1.10.0",
     "terra-time-input": "^2.2.0",

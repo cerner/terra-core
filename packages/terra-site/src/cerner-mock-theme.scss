@@ -584,6 +584,7 @@
   --terra-status-view-actions-button-margin-right: 0.357rem;
   --terra-status-view-actions-button-margin-top: 0.714rem;
 
+
   //--terra-form-input-transition-duration
   --terra-form-input-focus-animation-background: linear-gradient(to bottom, red, blue);
   --terra-form-input-focus-background-start: 0 0.143rem;
@@ -605,4 +606,37 @@
   --terra-form-input-error-hover-border: 1px solid orange;
   --terra-form-input-error-disabled-background-color: black;
   --terra-form-input-error-disabled-border: 1px solid white;
+
+  //terra-tag
+  --terra-tag-border-style: dotted;
+  --terra-tag-color: #582c83;
+  --terra-tag-font-size: 1rem;
+  --terra-tag-font-weight: 700;
+  --terra-tag-line-height: 2rem;
+  --terra-tag-margin-top: 0.357rem;
+  --terra-tag-margin-right: 0.357rem;
+  --terra-tag-margin-bottom: 0.357rem;
+  --terra-tag-margin-left: 0.357rem;
+  --terra-tag-padding-top: 0.357rem;
+  --terra-tag-padding-right: 0.357rem;
+  --terra-tag-padding-bottom: 0.357rem;
+  --terra-tag-padding-left: 0.357rem;
+  --terra-tag-background-color: #008b8b;
+  --terra-tag-border-color: #582c83;
+  --terra-tag-box-shadow: none;
+  --terra-tag-icon-margin-top: 0.357rem;
+  --terra-tag-icon-margin-right: 0.357rem;
+  --terra-tag-icon-height: 1.5rem;
+  --terra-tag-icon-width: 1.5rem;
+  --terra-tag-interactive-color: #008b8b;
+  --terra-tag-interactive-text-decoration: overline;
+  --terra-tag-focus-background-color: #ff1fd4;
+  --terra-tag-focus-border-color: rgba(28, 31, 33, 0.04);
+  --terra-tag-focus-box-shadow: 0 0 0.357rem 0.357rem rgba(76, 178, 233, 0.5);
+  --terra-tag-focus-text-decoration: underline;
+  --terra-tag-hover-background-color: rgba(76, 178, 233, 0.5);
+  --terra-tag-hover-box-shadow: 0 0 0.357rem 0.357rem rgba(76, 178, 233, 0.5);
+  --terra-tag-hover-text-decoration: overline;
+  --terra-tag-hover-color: #ff1fd4;
+  --terra-tag-text-decoration: underline;
 }
