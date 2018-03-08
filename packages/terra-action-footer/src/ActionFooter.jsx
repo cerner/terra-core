@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ActionFooterContainer from './_ActionFooterContainer';
-import EmptyActionFooter from './_EmptyActionFooter';
 import styles from './ActionFooter.scss';
 
 const cx = classNames.bind(styles);
@@ -31,22 +30,13 @@ const ActionFooter = ({
 }) => {
   const isEmpty = !start && !end;
 
-  const actionFooterClassNames = cx([
-    'action-footer',
-    customProps.className,
-  ]);
-
   return (isEmpty ?
-    <EmptyActionFooter {...customProps} />
+    <ActionFooterContainer {...customProps} className={cx(customProps.className)} />
     :
-    <ActionFooterContainer {...customProps} className={actionFooterClassNames}>
-      <div className={cx('socket')}>
-        {start}
-      </div>
+    <ActionFooterContainer {...customProps} className={cx(customProps.className)}>
+      { start && <div className={cx('socket')}>{start}</div> }
       <div className={cx('empty-center')} />
-      <div className={cx('socket')}>
-        {end}
-      </div>
+      { end && <div className={cx('socket')}>{end}</div> }
     </ActionFooterContainer>
   );
 };

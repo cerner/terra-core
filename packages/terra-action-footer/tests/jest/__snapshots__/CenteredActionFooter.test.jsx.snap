@@ -27,4 +27,8 @@ exports[`CenteredActionFooter Snapshot Tests should render a footer with two but
 </ActionFooterContainer>
 `;
 
-exports[`CenteredActionFooter Snapshot Tests should render an empty footer 1`] = `<EmptyActionFooter />`;
+exports[`CenteredActionFooter Snapshot Tests should render an empty footer 1`] = `
+<ActionFooterContainer
+  className="centered-action-footer"
+/>
+`;

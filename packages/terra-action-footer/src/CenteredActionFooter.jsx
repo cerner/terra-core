@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import ActionFooterContainer from './_ActionFooterContainer';
-import EmptyActionFooter from './_EmptyActionFooter';
 import styles from './CenteredActionFooter.scss';
 
 const cx = classNames.bind(styles);
@@ -23,17 +22,16 @@ const CenteredActionFooter = ({
   center,
   ...customProps
 }) => {
-  const isEmpty = !center;
-
   const centeredActionFooterClassNames = cx([
     'centered-action-footer',
     customProps.className,
   ]);
 
-  return (isEmpty ?
-    <EmptyActionFooter {...customProps} />
-    :
-    <ActionFooterContainer {...customProps} className={centeredActionFooterClassNames}>
+  return (
+    <ActionFooterContainer
+      {...customProps}
+      className={centeredActionFooterClassNames}
+    >
       {center}
     </ActionFooterContainer>
   );

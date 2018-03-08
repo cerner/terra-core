@@ -2,7 +2,7 @@
 
 exports[`ActionFooter Snapshot Tests should render a footer with both start and end socket buttons 1`] = `
 <ActionFooterContainer
-  className="action-footer"
+  className=""
 >
   <div
     className="socket"
@@ -26,11 +26,8 @@ exports[`ActionFooter Snapshot Tests should render a footer with both start and 
 
 exports[`ActionFooter Snapshot Tests should render a footer with only an end socket button 1`] = `
 <ActionFooterContainer
-  className="action-footer"
+  className=""
 >
-  <div
-    className="socket"
-  />
   <div
     className="empty-center"
   />
@@ -46,7 +43,7 @@ exports[`ActionFooter Snapshot Tests should render a footer with only an end soc
 
 exports[`ActionFooter Snapshot Tests should render a footer with only one start socket button 1`] = `
 <ActionFooterContainer
-  className="action-footer"
+  className=""
 >
   <div
     className="socket"
@@ -58,19 +55,13 @@ exports[`ActionFooter Snapshot Tests should render a footer with only one start 
   <div
     className="empty-center"
   />
-  <div
-    className="socket"
-  />
 </ActionFooterContainer>
 `;
 
 exports[`ActionFooter Snapshot Tests should render a footer with only two end socket buttons 1`] = `
 <ActionFooterContainer
-  className="action-footer"
+  className=""
 >
-  <div
-    className="socket"
-  />
   <div
     className="empty-center"
   />
@@ -91,7 +82,7 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two end so
 
 exports[`ActionFooter Snapshot Tests should render a footer with only two start socket buttons 1`] = `
 <ActionFooterContainer
-  className="action-footer"
+  className=""
 >
   <div
     className="socket"
@@ -108,10 +99,11 @@ exports[`ActionFooter Snapshot Tests should render a footer with only two start 
   <div
     className="empty-center"
   />
-  <div
-    className="socket"
-  />
 </ActionFooterContainer>
 `;
 
-exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `<EmptyActionFooter />`;
+exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `
+<ActionFooterContainer
+  className=""
+/>
+`;

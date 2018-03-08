@@ -6,14 +6,12 @@ describe('ActionFooter', () => {
   describe('Snapshot Tests', () => {
     it('should render an empty footer', () => {
       const component = <ActionFooter />;
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only one start socket button', () => {
       const component = <ActionFooter start={<button>Start Socket</button>} />;
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two start socket buttons', () => {
@@ -27,14 +25,12 @@ describe('ActionFooter', () => {
           }
         />
       );
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only an end socket button', () => {
       const component = <ActionFooter end={<button>End Socket</button>} />;
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with only two end socket buttons', () => {
@@ -48,8 +44,7 @@ describe('ActionFooter', () => {
           }
         />
       );
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with both start and end socket buttons', () => {
@@ -59,101 +54,109 @@ describe('ActionFooter', () => {
           end={<button>End Socket</button>}
         />
       );
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
   });
 
   // Prop Tests
   describe('Prop Tests', () => {
-    it('should render an EmptyActionFooter without start and end props', () => {
-      const component = <ActionFooter />;
-      const wrapper = mount(component);
-      expect(wrapper.prop('center')).toEqual(undefined);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(1);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(0);
-      expect(wrapper.text()).toEqual('');
-      expect(wrapper.contains(<div className="empty-action-footer" />)).toEqual(true);
-    });
+    describe('without start or end actions', () => {
+      const actionFooter = mount(<ActionFooter />);
 
-    it('should default to an EmptyActionFooter when given falsey start and end props', () => {
-      const falseyList = ['', false, null, undefined, NaN, 0];
-      falseyList.forEach(start => (
-        falseyList.forEach((end) => {
-          const wrapper = mount(<ActionFooter start={start} end={end} />);
-          expect(wrapper.find('EmptyActionFooter').length).toEqual(1);
-          expect(wrapper.find('ActionFooterContainer').length).toEqual(0);
-          expect(wrapper.text()).toEqual('');
-          expect(wrapper.contains(<div className="empty-action-footer" />)).toEqual(true);
-        })
+      it('should display no actions', () => (
+        expect(actionFooter.text()).toEqual('')
       ));
     });
 
-    it('should render an ActionFooterContainer with a div containing two spans as the start prop', () => {
-      const start = (
-        <div>
-          <span>One</span>
-          <span>Two</span>
-        </div>
-      );
-      const wrapper = mount(<ActionFooter start={start} />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(0);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(1);
-      expect(wrapper.text()).toEqual('OneTwo');
-      expect(wrapper.contains(start)).toEqual(true);
+    describe('with only a start action', () => {
+      const actionFooter = mount(<ActionFooter start="Start Action" />);
+
+      it('should only display a start action', () => (
+        expect(actionFooter.text()).toEqual('Start Action')
+      ));
     });
 
-    it('should render an ActionFooterContainer with a div containing two spans as the end prop', () => {
-      const end = (
-        <div>
-          <span>One</span>
-          <span>Two</span>
-        </div>
-      );
-      const wrapper = mount(<ActionFooter end={end} />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(0);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(1);
-      expect(wrapper.text()).toEqual('OneTwo');
-      expect(wrapper.contains(end)).toEqual(true);
+    describe('with only an end action', () => {
+      const actionFooter = mount(<ActionFooter end="End Action" />);
+
+      it('should only display an end action', () => (
+        expect(actionFooter.text()).toEqual('End Action')
+      ));
     });
 
-    it('should render an ActionFooterContainer with complex start and end props', () => {
-      const start = (
-        <div>
-          <button>Start One</button>
-          <button>Start Two</button>
-          <button>Start Three</button>
-        </div>
-      );
-      const end = (
-        <div>
-          <span>End One</span>
-          <span>End Two</span>
-        </div>
-      );
-      const wrapper = mount(<ActionFooter start={start} end={end} />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(0);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(1);
-      expect(wrapper.text()).toEqual('Start OneStart TwoStart ThreeEnd OneEnd Two');
-      expect(wrapper.contains(start)).toEqual(true);
-      expect(wrapper.contains(end)).toEqual(true);
+    describe('with both start and end actions', () => {
+      const actionFooter = mount(<ActionFooter start="Start Action" end="End Action" />);
+
+      it('should display both start and end actions', () => (
+        expect(actionFooter.text()).toEqual('Start ActionEnd Action')
+      ));
     });
   });
 
   // Structure Tests
   describe('Structure Tests', () => {
-    it('should render an EmptyActionFooter', () => {
-      const wrapper = mount(<ActionFooter />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(1);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(0);
-      expect(wrapper.find('EmptyActionFooter').children().hasClass('empty-action-footer')).toEqual(true);
+    describe('without start or end actions', () => {
+      const actionFooter = shallow(<ActionFooter />);
+
+      it("should render an 'ActionFooterContainer'", () => (
+        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
+
+      it('should contain no socket class', () => (
+        expect(actionFooter.find('.socket').length).toBe(0)
+      ));
+
+      it('should contain no empty-center class', () => (
+        expect(actionFooter.find('.empty-center').length).toBe(0)
+      ));
     });
 
-    it('should render an ActionFooterContainer', () => {
-      const wrapper = mount(<ActionFooter start="Start" end="End" />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(0);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(1);
-      expect(wrapper.find('ActionFooterContainer').children().hasClass('action-footer-container')).toEqual(true);
+    describe('with only a start action', () => {
+      const actionFooter = shallow(<ActionFooter start="Start Action" />);
+
+      it("should render an 'ActionFooterContainer'", () => (
+        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
+
+      it('should contain one socket class', () => (
+        expect(actionFooter.find('.socket').length).toBe(1)
+      ));
+
+      it('should contain one empty-center class', () => (
+        expect(actionFooter.find('.empty-center').length).toBe(1)
+      ));
+    });
+
+    describe('with only an end action', () => {
+      const actionFooter = shallow(<ActionFooter end="End Action" />);
+
+      it("should render an 'ActionFooterContainer'", () => (
+        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
+
+      it('should contain one socket class', () => (
+        expect(actionFooter.find('.socket').length).toBe(1)
+      ));
+
+      it('should contain one empty-center class', () => (
+        expect(actionFooter.find('.empty-center').length).toBe(1)
+      ));
+    });
+
+    describe('with both start and end actions', () => {
+      const actionFooter = shallow(<ActionFooter start="Start Action" end="End Action" />);
+
+      it("should render an 'ActionFooterContainer'", () => (
+        expect(actionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
+
+      it('should contain two socket classes', () => (
+        expect(actionFooter.find('.socket').length).toBe(2)
+      ));
+
+      it('should contain one empty-center class', () => (
+        expect(actionFooter.find('.empty-center').length).toBe(1)
+      ));
     });
   });
 });

@@ -1,9 +1,15 @@
-@import './variables';
-
 :local {
   .action-footer-container {
-    background-color: $background-color;
-    border-top: $border-top;
+    background-color: var(--terra-action-footer-background-color, transparent);
+    border-top: var(--terra-action-footer-border-top, 0.071428571428571rem solid #cfd0d1);
+    display: flex;
+  }
+
+  .has-children {
     min-height: 2.857142857142857rem;
+  }
+
+  .is-empty {
+    height: 0.714285714285714rem;
   }
 }

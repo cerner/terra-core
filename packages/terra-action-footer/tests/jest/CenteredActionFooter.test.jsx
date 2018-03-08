@@ -6,8 +6,7 @@ describe('CenteredActionFooter', () => {
   describe('Snapshot Tests', () => {
     it('should render an empty footer', () => {
       const component = <CenteredActionFooter />;
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with an anchor', () => {
@@ -16,8 +15,7 @@ describe('CenteredActionFooter', () => {
           center={<a href="/">Test</a>}
         />
       );
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
 
     it('should render a footer with two buttons', () => {
@@ -31,63 +29,53 @@ describe('CenteredActionFooter', () => {
           }
         />
       );
-      const wrapper = shallow(component);
-      expect(wrapper).toMatchSnapshot();
+      expect(shallow(component)).toMatchSnapshot();
     });
   });
 
   // Prop Tests
   describe('Prop Tests', () => {
-    it('should render an EmptyActionFooter without a center prop', () => {
-      const component = <CenteredActionFooter />;
-      const wrapper = mount(component);
-      expect(wrapper.prop('center')).toEqual(undefined);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(1);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(0);
-      expect(wrapper.text()).toEqual('');
-      expect(wrapper.contains(<div className="empty-action-footer" />)).toEqual(true);
+    describe('without a center action', () => {
+      const centeredActionFooter = mount(<CenteredActionFooter />);
+
+      it('should display no actions', () => (
+        expect(centeredActionFooter.text()).toEqual('')
+      ));
     });
 
-    it('should default to an EmptyActionFooter when given a falsey center prop', () => {
-      const falseyList = ['', false, null, undefined, NaN, 0];
-      falseyList.forEach((f) => {
-        const wrapper = mount(<CenteredActionFooter center={f} />);
-        expect(wrapper.find('EmptyActionFooter').length).toEqual(1);
-        expect(wrapper.find('ActionFooterContainer').length).toEqual(0);
-        expect(wrapper.text()).toEqual('');
-        expect(wrapper.contains(<div className="empty-action-footer" />)).toEqual(true);
-      });
-    });
+    describe('with a center action', () => {
+      const centeredActionFooter = mount(<CenteredActionFooter center="Center Action" />);
 
-    it('should render an ActionFooterContainer with a div containing two spans as the center prop', () => {
-      const center = (
-        <div>
-          <span>One</span>
-          <span>Two</span>
-        </div>
-      );
-      const wrapper = mount(<CenteredActionFooter center={center} />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(0);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(1);
-      expect(wrapper.text()).toEqual('OneTwo');
-      expect(wrapper.contains(center)).toEqual(true);
+      it('should display a center action', () => (
+        expect(centeredActionFooter.text()).toEqual('Center Action')
+      ));
     });
   });
 
   // Structure Tests
   describe('Structure Tests', () => {
-    it('should render an EmptyActionFooter', () => {
-      const wrapper = mount(<CenteredActionFooter />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(1);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(0);
-      expect(wrapper.find('EmptyActionFooter').children().hasClass('empty-action-footer')).toEqual(true);
+    describe('without a center action', () => {
+      const centeredActionFooter = shallow(<CenteredActionFooter />);
+
+      it('should contain the centered-action-footer class', () => (
+        expect(centeredActionFooter.find('.centered-action-footer').length).toBe(1)
+      ));
+
+      it("should render an 'ActionFooterContainer'", () => (
+        expect(centeredActionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
     });
 
-    it('should render an ActionFooterContainer', () => {
-      const wrapper = mount(<CenteredActionFooter center="Example" />);
-      expect(wrapper.find('EmptyActionFooter').length).toEqual(0);
-      expect(wrapper.find('ActionFooterContainer').length).toEqual(1);
-      expect(wrapper.find('ActionFooterContainer').children().hasClass('action-footer-container')).toEqual(true);
+    describe('with a center action', () => {
+      const centeredActionFooter = shallow(<CenteredActionFooter center="Center Action" />);
+
+      it('should contain the centered-action-footer class', () => (
+        expect(centeredActionFooter.find('.centered-action-footer').length).toBe(1)
+      ));
+
+      it("should render an 'ActionFooterContainer'", () => (
+        expect(centeredActionFooter.find('ActionFooterContainer').length).toBe(1)
+      ));
     });
   });
 });

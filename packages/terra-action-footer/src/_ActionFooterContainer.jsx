@@ -25,11 +25,31 @@ const actionFooterPadding = {
 const ActionFooterContainer = ({
   children,
   ...customProps
-}) => (
-  <Spacer {...actionFooterPadding} className={cx('action-footer-container', customProps.className)}>
-    {children}
-  </Spacer>
-);
+}) => {
+  const isEmpty = !React.Children.count(children);
+
+  const actionFooterContainerClassNames = cx([
+    'action-footer-container',
+    { 'is-empty': isEmpty },
+    { 'has-children': !isEmpty },
+    customProps.className,
+  ]);
+
+  return (isEmpty ?
+    <div
+      {...customProps}
+      className={actionFooterContainerClassNames}
+    />
+    :
+    <Spacer
+      {...customProps}
+      {...actionFooterPadding}
+      className={actionFooterContainerClassNames}
+    >
+      {children}
+    </Spacer>
+  );
+};
 
 ActionFooterContainer.propTypes = propTypes;
 ActionFooterContainer.defaultProps = defaultProps;
