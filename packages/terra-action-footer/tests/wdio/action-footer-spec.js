@@ -1,10 +1,5 @@
 /* global browser, Terra */
-const themeables = {
-  '--terra-action-footer-background-color': '#f00',
-  '--terra-action-footer-border-top': 'thick double #0f0',
-};
-
-const viewports = Terra.viewports('tiny', 'small', 'medium');
+import { themeables, viewports } from './common';
 
 describe('ActionFooter', () => {
   describe('Empty', () => {

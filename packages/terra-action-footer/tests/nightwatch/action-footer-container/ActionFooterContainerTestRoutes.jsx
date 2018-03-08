@@ -4,16 +4,14 @@ import { Route } from 'react-router';
 import ActionFooterContainerTests from './ActionFooterContainerTests';
 
 // Test Cases
-import EmptyActionFooterContainer from './EmptyActionFooterContainer';
-import MultipleActionActionFooterContainer from './MultipleActionActionFooterContainer';
-import SingleActionActionFooterContainer from './SingleActionActionFooterContainer';
+import NoChildrenActionFooterContainer from './NoChildrenActionFooterContainer';
+import WithChildrenActionFooterContainer from './WithChildrenActionFooterContainer';
 
 const routes = (
   <div>
     <Route path="/tests/action-footer-container" component={ActionFooterContainerTests} />
-    <Route path="/tests/action-footer-container/empty" component={EmptyActionFooterContainer} />
-    <Route path="/tests/action-footer-container/multiple-actions" component={MultipleActionActionFooterContainer} />
-    <Route path="/tests/action-footer-container/single-action" component={SingleActionActionFooterContainer} />
+    <Route path="/tests/action-footer-container/no-children" component={NoChildrenActionFooterContainer} />
+    <Route path="/tests/action-footer-container/with-children" component={WithChildrenActionFooterContainer} />
   </div>
 );
 

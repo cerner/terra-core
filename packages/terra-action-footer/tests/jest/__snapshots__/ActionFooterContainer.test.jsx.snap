@@ -4,10 +4,6 @@ exports[`ActionFooterContainer Snapshot Tests should render a footer with some c
 <Spacer
   className="action-footer-container has-children"
   isInlineBlock={false}
-  marginBottom="none"
-  marginLeft="none"
-  marginRight="none"
-  marginTop="none"
   paddingBottom="small-1"
   paddingLeft="small-1"
   paddingRight="small-1"
