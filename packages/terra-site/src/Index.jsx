@@ -59,6 +59,7 @@ import TextExamples from './examples/text/Index';
 import TimeInputExamples from './examples/time-input/Index';
 import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
+import ToggleSectionHeaderExamples from './examples/toggle-section-header/Index';
 
 // Test Routes
 /* eslint-disable import/first, import/no-extraneous-dependencies */
@@ -198,6 +199,7 @@ ReactDOM.render((
       <Route path="time-input" component={TimeInputExamples} />
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
+      <Route path="toggle-section-header" component={ToggleSectionHeaderExamples} />
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
