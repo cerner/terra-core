@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const ActionFooterTests = () => (
+const CenteredActionFooterTests = () => (
   <div>
     <ul>
       <li><Link to="/tests/centered-action-footer/empty">CenteredActionFooter - Empty</Link></li>
@@ -12,4 +12,4 @@ const ActionFooterTests = () => (
   </div>
 );
 
-export default ActionFooterTests;
+export default CenteredActionFooterTests;
