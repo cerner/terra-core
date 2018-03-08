@@ -161,6 +161,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-checkbox">Form Checkbox</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-textarea">Form Textarea</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-field">Form Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-fieldset">Form Fieldset</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-input">Form Input</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-radio">Form Radio</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/select">Form Select</Link>} />
