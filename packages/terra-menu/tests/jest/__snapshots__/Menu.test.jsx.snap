@@ -3,7 +3,6 @@
 exports[`Menu should render a default component 1`] = `
 <div>
   <Menu
-    contentWidth="240"
     isArrowDisplayed={false}
     isOpen={true}
     onRequestClose={[Function]}
@@ -13,7 +12,6 @@ exports[`Menu should render a default component 1`] = `
       isActive={false}
       isDisabled={false}
       isSelected={false}
-      subMenuItems={Array []}
       text="testing"
     />
   </Menu>

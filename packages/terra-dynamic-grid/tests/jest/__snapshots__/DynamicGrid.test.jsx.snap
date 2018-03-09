@@ -22,14 +22,7 @@ exports[`DynamicGrid should render a default component 2`] = `
 <div
   className="grid_3hmsj"
 >
-  <Region
-    defaultPosition={Object {}}
-    huge={Object {}}
-    large={Object {}}
-    medium={Object {}}
-    small={Object {}}
-    tiny={Object {}}
-  >
+  <Region>
     Hello
   </Region>
 </div>

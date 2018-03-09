@@ -84,14 +84,10 @@ exports[`should shallow an open modal 1`] = `
     ariaLabel="Terra Modal"
     classNameModal={null}
     classNameOverlay={null}
-    closeOnEsc={true}
-    closeOnOutsideClick={true}
-    isFocused={true}
     isFullscreen={false}
     isOpen={true}
     isScrollable={false}
     onRequestClose={[Function]}
-    role="document"
   >
     <div>
       <h1>
