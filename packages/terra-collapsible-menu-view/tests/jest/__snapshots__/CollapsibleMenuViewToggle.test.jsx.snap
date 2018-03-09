@@ -6,7 +6,6 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should render a sele
   isDisabled={false}
   isSelectable={true}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -17,7 +16,6 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isDisable
   isDisabled={true}
   isSelectable={true}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -28,7 +26,6 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set isSelecta
   isDisabled={false}
   isSelectable={false}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -39,7 +36,6 @@ exports[`CollapsibleMenuViewToggle Collapsible Menu Context should set selected 
   isDisabled={false}
   isSelectable={true}
   isSelected={true}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -58,7 +54,6 @@ exports[`CollapsibleMenuViewToggle should disable checkbox when isSelectable is 
     }
     isInline={false}
     labelText="Testing"
-    labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
     type="checkbox"
@@ -80,7 +75,6 @@ exports[`CollapsibleMenuViewToggle should merge custom props 1`] = `
     }
     isInline={false}
     labelText="Testing"
-    labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
     type="checkbox"
@@ -102,7 +96,6 @@ exports[`CollapsibleMenuViewToggle should render a default component 1`] = `
     }
     isInline={false}
     labelText="Testing"
-    labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
     type="checkbox"
@@ -124,7 +117,6 @@ exports[`CollapsibleMenuViewToggle should set defaultChecked prop 1`] = `
     }
     isInline={false}
     labelText="Testing"
-    labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
     type="checkbox"
@@ -146,7 +138,6 @@ exports[`CollapsibleMenuViewToggle should set isDisabled prop 1`] = `
     }
     isInline={false}
     labelText="Testing"
-    labelTextAttrs={Object {}}
     name={null}
     onChange={[Function]}
     type="checkbox"

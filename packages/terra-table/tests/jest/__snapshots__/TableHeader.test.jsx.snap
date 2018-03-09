@@ -6,17 +6,14 @@ exports[`should render table header tag 1`] = `
     <TableHeaderCell
       content="Name"
       key=".$NAME"
-      minWidth="small"
     />
     <TableHeaderCell
       content="Address"
       key=".$ADDRESS"
-      minWidth="small"
     />
     <TableHeaderCell
       content="Phone Number"
       key=".$PHONE_NUMBER"
-      minWidth="small"
     />
   </tr>
 </thead>

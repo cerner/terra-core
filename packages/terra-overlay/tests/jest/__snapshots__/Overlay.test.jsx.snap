@@ -4,11 +4,7 @@ exports[`Overlay should render a null component when isOpen is not provided 1`] 
 
 exports[`Overlay when isOpen is provided -backgroundStyle- should render with the clear backgroundStyle 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen clear"
@@ -24,11 +20,7 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
 
 exports[`Overlay when isOpen is provided -backgroundStyle- should render with the dark backgroundStyle 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen dark"
@@ -44,11 +36,7 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
 
 exports[`Overlay when isOpen is provided -backgroundStyle- should render with the light backgroundStyle 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen light"
@@ -64,11 +52,7 @@ exports[`Overlay when isOpen is provided -backgroundStyle- should render with th
 
 exports[`Overlay when isOpen is provided -default Overlay when isOpen- should render a default component 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen light"
@@ -84,11 +68,7 @@ exports[`Overlay when isOpen is provided -default Overlay when isOpen- should re
 
 exports[`Overlay when isOpen is provided should render with content 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen light"
@@ -118,11 +98,7 @@ exports[`Overlay when isOpen is provided should render with isRelativeToContaine
 
 exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen light scrollable"
@@ -138,11 +114,7 @@ exports[`Overlay when isOpen is provided should render with isScrollable 1`] = `
 
 exports[`Overlay when isOpen is provided should render with onRequestClose 1`] = `
 <FocusTrap
-  _createFocusTrap={[Function]}
-  active={true}
-  focusTrapOptions={Object {}}
   paused={false}
-  tag="div"
 >
   <div
     className="overlay fullscreen light"

@@ -5,7 +5,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon on
   isActive={false}
   isDisabled={false}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -15,7 +14,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set icon pr
   isActive={false}
   isDisabled={false}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -25,7 +23,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set isRever
   isActive={false}
   isDisabled={false}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -35,7 +32,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should not set selecte
   isActive={false}
   isDisabled={false}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -45,7 +41,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a disabl
   isActive={false}
   isDisabled={true}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -55,7 +50,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should render a menu i
   isActive={false}
   isDisabled={false}
   isSelected={false}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -85,7 +79,6 @@ exports[`CollapsibleMenuViewItem Collapsible Menu Context should set selected pr
   isActive={false}
   isDisabled={false}
   isSelected={true}
-  subMenuItems={Array []}
   text="Testing"
 />
 `;
@@ -102,8 +95,6 @@ exports[`CollapsibleMenuViewItem should merge custom props 1`] = `
     isIconOnly={false}
     isReversed={false}
     text="Testing"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -119,8 +110,6 @@ exports[`CollapsibleMenuViewItem should not set isSelected on button outside of 
     isIconOnly={false}
     isReversed={false}
     text="Testing"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -150,8 +139,6 @@ exports[`CollapsibleMenuViewItem should render a button with icon and no text wh
     isIconOnly={true}
     isReversed={false}
     text=""
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -167,8 +154,6 @@ exports[`CollapsibleMenuViewItem should render a default component 1`] = `
     isIconOnly={false}
     isReversed={false}
     text="Testing"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -191,8 +176,6 @@ exports[`CollapsibleMenuViewItem should render a disabled button when isDisabled
     isIconOnly={false}
     isReversed={false}
     text="Testing"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -221,7 +204,6 @@ exports[`CollapsibleMenuViewItem should render a menu when subMenuItems are give
     isReversed={false}
     isSelected={false}
     key="1"
-    shouldCloseOnClick={true}
     text="Menu Item"
   />
 </CollapsibleMenu>
@@ -245,8 +227,6 @@ exports[`CollapsibleMenuViewItem should set icon prop on button 1`] = `
     isIconOnly={false}
     isReversed={false}
     text="Testing"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -269,8 +249,6 @@ exports[`CollapsibleMenuViewItem should set isReversed prop on button 1`] = `
     isIconOnly={false}
     isReversed={true}
     text="Testing"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
