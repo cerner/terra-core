@@ -9,11 +9,12 @@ const propTypes = {
 };
 
 const ActionFooterComponentNavigation = ({
-    onClick,
-  }) =>
-    <List className={[styles['site-component-nav'], styles['sub-nav']]}>
-      <List.Item content={<Link onClick={onClick} to="/site/action-footer/centered">Centered Action Footer</Link>} />
-    </List>;
+  onClick,
+}) => (
+  <List className={[styles['site-component-nav'], styles['sub-nav']]}>
+    <List.Item content={<Link onClick={onClick} to="/site/action-footer/centered">Centered Action Footer</Link>} />
+  </List>
+);
 
 ActionFooterComponentNavigation.propTypes = propTypes;
 

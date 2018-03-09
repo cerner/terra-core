@@ -9,7 +9,7 @@ The terra-action-footer component is a footer bar that contains two sockets, sta
 
 ## Usage
 
-### Action Footer with a Start and End Actions
+### Action Footer with Start and End Actions
 ```jsx
 import React from 'react';
 import ActionFooter from 'terra-action-footer';
@@ -19,8 +19,8 @@ import Button from 'terra-button';
   start={<a href="/link/to/somewhere">A link</a>}
   end={
     <div>
-      <Button text="Left End Button"/>
-      <Button text="Right End Button"/>
+      <Button text="Cancel"/>
+      <Button text="Submit"/>
     </div>
   }
 />

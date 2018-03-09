@@ -14,7 +14,7 @@ import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
 />
 ```
 
-### Centered Action Footer with mutliple Actions
+### Centered Action Footer with Mutliple Actions
 ```jsx
 import React from 'react';
 import Button from 'terra-button';
@@ -23,8 +23,8 @@ import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
 <CenteredActionFooter
   center={
     <div>
-      <Button text="Left Center Button"/>
-      <Button text="Right Center Button"/>
+      <Button text="Cancel"/>
+      <Button text="Submit"/>
     </div>
   }
 />
