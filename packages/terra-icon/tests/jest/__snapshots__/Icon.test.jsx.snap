@@ -4,9 +4,12 @@ exports[`Icon IconAdd should shallow IconBase 1`] = `
 <IconBase
   ariaLabel={null}
   data-name="Layer 1"
+  focusable="false"
+  height="1em"
   isBidi={false}
   isSpin={false}
   viewBox="0 0 48 48"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -37,9 +40,12 @@ exports[`Icon IconComment should shallow IconBase 1`] = `
   ariaLabel={null}
   className=""
   data-name="Layer 1"
+  focusable="false"
+  height="1em"
   isBidi={true}
   isSpin={false}
   viewBox="0 0 48 48"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -53,9 +59,12 @@ exports[`Icon IconSpinner should shallow IconBase 1`] = `
   ariaLabel={null}
   className=""
   data-name="Layer 1"
+  focusable="false"
+  height="1em"
   isBidi={false}
   isSpin={true}
   viewBox="0 0 48 48"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path

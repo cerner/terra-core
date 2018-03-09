@@ -356,6 +356,8 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Show"
+    type="button"
+    variant="neutral"
   />
   <Toggle
     isAnimated={false}
@@ -391,6 +393,8 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Show"
+    type="button"
+    variant="neutral"
   />
   <Toggle
     isAnimated={false}

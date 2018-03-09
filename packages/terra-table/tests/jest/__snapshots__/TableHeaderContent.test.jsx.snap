@@ -21,6 +21,9 @@ exports[`should render table header content tag with ascending sort indicator 1`
   >
     <IconCaretUp
       className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
     />
   </span>
 </th>
@@ -38,6 +41,9 @@ exports[`should render table header content tag with descending sort indicator 1
   >
     <IconCaretDown
       className=""
+      isBidi={true}
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
     />
   </span>
 </th>
