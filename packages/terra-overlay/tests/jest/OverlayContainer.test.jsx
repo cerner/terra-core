@@ -5,7 +5,7 @@ import Overlay from '../../src/Overlay';
 describe('OverlayContainer', () => {
   const defaultRender = <OverlayContainer />;
   const standardRender = (
-    <OverlayContainer>
+    <OverlayContainer className={'user-defined-class'}>
       <Overlay />
       Some Text Content
     </OverlayContainer>
@@ -24,5 +24,11 @@ describe('OverlayContainer', () => {
   it('should render when children are provided', () => {
     const wrapper = shallow(standardRender);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render the class overlay-container along with user defined class', () => {
+    const wrapper = shallow(standardRender);
+    expect(wrapper.prop('className')).toContain('overlay-container');
+    expect(wrapper.prop('className')).toContain('user-defined-class');
   });
 });
