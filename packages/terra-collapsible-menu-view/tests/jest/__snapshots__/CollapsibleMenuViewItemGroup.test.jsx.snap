@@ -10,12 +10,14 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </List>
@@ -31,6 +33,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
     isReversed={false}
     isSelected={false}
     key="key1"
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
@@ -38,6 +41,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should merge cust
     isReversed={false}
     isSelected={false}
     key="key2"
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </MenuItemGroup>
@@ -52,6 +56,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
     isReversed={false}
     isSelected={false}
     key="key1"
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
@@ -59,6 +64,7 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render a m
     isReversed={false}
     isSelected={false}
     key="key2"
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </MenuItemGroup>
@@ -73,12 +79,14 @@ exports[`CollapsibleMenuViewItemGroup Collapsible Menu Context should render men
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </List>
@@ -93,12 +101,14 @@ exports[`CollapsibleMenuViewItemGroup should merge custom props 1`] = `
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </ButtonGroup>
@@ -113,12 +123,14 @@ exports[`CollapsibleMenuViewItemGroup should render a default component 1`] = `
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
     isIconOnly={false}
     isReversed={false}
     isSelected={false}
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </ButtonGroup>
@@ -138,6 +150,7 @@ exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`
     isReversed={false}
     isSelected={false}
     key="key1"
+    shouldCloseOnClick={true}
     text="Testing"
   />
   <CollapsibleMenuViewItem
@@ -145,6 +158,7 @@ exports[`CollapsibleMenuViewItemGroup should render a selectable button group 1`
     isReversed={false}
     isSelected={false}
     key="key2"
+    shouldCloseOnClick={true}
     text="Testing"
   />
 </ButtonGroup>
