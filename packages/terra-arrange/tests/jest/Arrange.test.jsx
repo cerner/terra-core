@@ -43,16 +43,6 @@ describe('Arrange', () => {
   });
 
   // Prop Tests
-  describe('props validation', () => {
-    it('should log error in console when no fit provided', () => {
-      try {
-        shallow(<Arrange fill={fill} />);
-      } catch (object) {
-        expect(object.message).toContain('At least one of the props: [fitStart, fitEnd] should be supplied.');
-      }
-    });
-  });
-
   it('should have all prop set correctly', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="center" fitStartAttributes={{ style: { maxWidth: '10px' } }} fillAttributes={{ style: { maxWidth: '20px' } }} fitEndAttributes={{ style: { maxWidth: '30px' } }} />;
     const wrapper = shallow(arrange);
