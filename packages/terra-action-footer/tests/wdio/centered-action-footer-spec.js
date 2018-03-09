@@ -1,5 +1,5 @@
 /* global browser, Terra */
-import { themeables, viewports } from './common';
+const { themeables, viewports } = require('./common');
 
 describe('CenteredActionFooter', () => {
   describe('Empty', () => {
