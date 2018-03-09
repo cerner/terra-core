@@ -3,6 +3,7 @@ Changelog
 
 Unreleased
 ----------
+* Allow Popup 'Up' Arrow to be Themeable
 
 2.2.0 - (March 6, 2018)
 ------------------
