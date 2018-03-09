@@ -7,6 +7,7 @@ exports[`should render a TextAreaField with the rest of the props 1`] = `
   htmlFor="description"
   isInline={true}
   label="Profile Description"
+  labelAttrs={Object {}}
   required={true}
 >
   <Textarea
@@ -28,6 +29,7 @@ exports[`should render a default TextAreaField component 1`] = `
   help={null}
   isInline={false}
   label={null}
+  labelAttrs={Object {}}
   required={false}
 >
   <Textarea

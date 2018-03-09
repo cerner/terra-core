@@ -12,6 +12,8 @@ exports[`should render a default component 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="Default Button"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -27,6 +29,8 @@ exports[`should render as disabled 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="Disabled"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -47,6 +51,8 @@ exports[`should render with icon only 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="Icon Only"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -62,6 +68,8 @@ exports[`should render with onBlur 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onBlur"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -78,6 +86,8 @@ exports[`should render with onClick 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onClick"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -94,6 +104,8 @@ exports[`should render with onFocus 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onFocus"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -109,6 +121,8 @@ exports[`should render with onKeyDown 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onKeyDown"
+  type="button"
+  variant="neutral"
 />
 `;
 
@@ -124,5 +138,7 @@ exports[`should render with onKeyUp 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onKeyUp"
+  type="button"
+  variant="neutral"
 />
 `;

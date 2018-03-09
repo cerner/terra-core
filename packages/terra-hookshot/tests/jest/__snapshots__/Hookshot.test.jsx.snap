@@ -11,6 +11,7 @@ exports[`should render a default component 1`] = `
 exports[`should shallow a default component 1`] = `
 <div>
   <Hookshot
+    attachmentBehavior="auto"
     attachmentMargin={0}
     contentAttachment={
       Object {
@@ -18,8 +19,20 @@ exports[`should shallow a default component 1`] = `
         "vertical": "top",
       }
     }
+    contentOffset={
+      Object {
+        "horizontal": 0,
+        "vertical": 0,
+      }
+    }
     isEnabled={true}
     isOpen={false}
+    targetOffset={
+      Object {
+        "horizontal": 0,
+        "vertical": 0,
+      }
+    }
     targetRef={[Function]}
   >
     <OnClickOutside(HookshotContent)

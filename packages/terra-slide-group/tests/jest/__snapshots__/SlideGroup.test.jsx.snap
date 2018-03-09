@@ -2,7 +2,9 @@
 
 exports[`should render a SlideGroup with animation enabled 1`] = `
 <TransitionGroup
+  childFactory={[Function]}
   className="slide-group"
+  component="div"
   key="1"
 >
   <CSSTransition
@@ -91,7 +93,9 @@ exports[`should render a SlideGroup with animation enabled 1`] = `
 
 exports[`should render a default SlideGroup 1`] = `
 <TransitionGroup
+  childFactory={[Function]}
   className="slide-group"
+  component="div"
   key="1"
 >
   <CSSTransition
