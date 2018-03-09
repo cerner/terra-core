@@ -10,6 +10,6 @@ exports[`ActionFooterContainer Snapshot Tests should render a footer with some c
 
 exports[`ActionFooterContainer Snapshot Tests should render an empty footer 1`] = `
 <div
-  className="action-footer-container is-empty"
+  className="action-footer-container"
 />
 `;

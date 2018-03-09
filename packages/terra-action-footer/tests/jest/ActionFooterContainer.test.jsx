@@ -53,10 +53,6 @@ describe('ActionFooterContainer', () => {
         expect(actionFooterContainer.find('.action-footer-container').length).toBe(1)
       ));
 
-      it('should contain the is-empty class', () => (
-        expect(actionFooterContainer.find('.is-empty').length).toBe(1)
-      ));
-
       it('should not contain the has-children class', () => (
         expect(actionFooterContainer.find('.has-children').length).toBe(0)
       ));
@@ -76,10 +72,6 @@ describe('ActionFooterContainer', () => {
 
       it('should contain the has-children class', () => (
         expect(actionFooterContainer.find('.has-children').length).toBe(1)
-      ));
-
-      it('should not contain the is-empty class', () => (
-        expect(actionFooterContainer.find('.is-empty').length).toBe(0)
       ));
     });
   });
