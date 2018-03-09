@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const wdioConf = require('terra-toolkit/lib/wdio/conf');
-const WebpackDevService = require('terra-toolkit/lib/wdio/services/index').WebpackDevService;
 const ExpressDevService = require('terra-toolkit/lib/wdio/services/index').ExpressDevService;
 const localIP = require('ip');
 const path = require('path');
