@@ -3,6 +3,7 @@
 exports[`should render a Terra image with a placeholder prop 1`] = `
 <div>
   <Image
+    alt=" "
     height="75"
     isFluid={false}
     placeholder={
@@ -14,6 +15,7 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
       />
     }
     src="profile.jpg"
+    variant="default"
     width="75"
   />
 </div>

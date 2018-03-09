@@ -3,10 +3,14 @@
 exports[`should shallow a default component 1`] = `
 <div>
   <Popup
+    attachmentBehavior="auto"
     boundingRef={null}
     classNameArrow={null}
     classNameContent={null}
     classNameOverlay={null}
+    contentAttachment="top center"
+    contentHeight="80"
+    contentWidth="240"
     isArrowDisplayed={false}
     isContentFocusDisabled={false}
     isHeaderDisabled={false}
