@@ -1,3 +1,5 @@
+$default-padding: 0.357142857142857rem;
+
 :local {
   .action-footer-container {
     background-color: var(--terra-action-footer-background-color, transparent);
@@ -7,6 +9,10 @@
 
   .has-children {
     min-height: 2.857142857142857rem;
+    padding-bottom: var(--terra-action-footer-padding-bottom, $default-padding);
+    padding-left: var(--terra-action-footer-padding-left, $default-padding);
+    padding-right: var(--terra-action-footer-padding-right, $default-padding);
+    padding-top: var(--terra-action-footer-padding-top, $default-padding);
   }
 
   .is-empty {

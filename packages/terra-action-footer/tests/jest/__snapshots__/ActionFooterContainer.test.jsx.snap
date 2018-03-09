@@ -1,16 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionFooterContainer Snapshot Tests should render a footer with some content 1`] = `
-<Spacer
+<div
   className="action-footer-container has-children"
-  isInlineBlock={false}
-  paddingBottom="small-1"
-  paddingLeft="small-1"
-  paddingRight="small-1"
-  paddingTop="small-1"
 >
   Some Content
-</Spacer>
+</div>
 `;
 
 exports[`ActionFooterContainer Snapshot Tests should render an empty footer 1`] = `

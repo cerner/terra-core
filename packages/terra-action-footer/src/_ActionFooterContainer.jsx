@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Spacer from 'terra-spacer';
 import 'terra-base/lib/baseStyles';
 import styles from './ActionFooterContainer.scss';
 
@@ -13,13 +12,6 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-};
-
-const actionFooterPadding = {
-  paddingTop: 'small-1',
-  paddingRight: 'small-1',
-  paddingBottom: 'small-1',
-  paddingLeft: 'small-1',
 };
 
 const ActionFooterContainer = ({
@@ -41,13 +33,12 @@ const ActionFooterContainer = ({
       className={actionFooterContainerClassNames}
     />
     :
-    <Spacer
+    <div
       {...customProps}
-      {...actionFooterPadding}
       className={actionFooterContainerClassNames}
     >
       {children}
-    </Spacer>
+    </div>
   );
 };
 
