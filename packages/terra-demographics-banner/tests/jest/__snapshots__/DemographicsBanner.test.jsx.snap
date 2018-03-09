@@ -5,7 +5,6 @@ exports[`renders a blank banner wrapper 1`] = `
   applicationContent={null}
   deceasedDate={null}
   gestationalAge={null}
-  identifiers={Object {}}
   photo={null}
   postMenstrualAge={null}
   preferredFirstName={null}

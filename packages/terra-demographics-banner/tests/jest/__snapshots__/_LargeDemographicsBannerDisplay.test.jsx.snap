@@ -22,7 +22,6 @@ exports[`renders large banner that contains all valid information 1`] = `
       alt="My Cat"
       isFluid={false}
       src=""
-      variant="default"
     />
   </div>
   <div

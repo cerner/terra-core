@@ -31,8 +31,6 @@ exports[`Snapshots renders a basic search field 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Search"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -68,8 +66,6 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Search"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -105,8 +101,6 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     isReversed={false}
     onClick={[Function]}
     text="Search"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -143,8 +137,6 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Search"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -180,8 +172,6 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Search"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
@@ -218,8 +208,6 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isReversed={false}
     onClick={[Function]}
     text="Search"
-    type="button"
-    variant="neutral"
   />
 </div>
 `;
