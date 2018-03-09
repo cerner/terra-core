@@ -81,6 +81,7 @@
     "terra-props-table": "^2.2.0",
     "terra-responsive-element": "^2.2.0",
     "terra-search-field": "^2.2.0",
+    "terra-section-header": "^0.x",
     "terra-signature": "^1.2.0",
     "terra-slide-group": "^2.2.0",
     "terra-slide-panel": "^2.2.0",
