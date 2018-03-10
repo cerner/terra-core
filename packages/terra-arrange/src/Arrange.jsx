@@ -63,10 +63,6 @@ const Arrange = ({
   fitEndAttributes,
   ...customProps
   }) => {
-  if (fitStart === undefined && fitEnd === undefined) {
-    throw new Error('At least one of the props: [fitStart, fitEnd] should be supplied.');
-  }
-
   const fitStartProps = Object.assign({}, fitStartAttributes);
   const fillProps = Object.assign({}, fillAttributes);
   const fitEndProps = Object.assign({}, fitEndAttributes);

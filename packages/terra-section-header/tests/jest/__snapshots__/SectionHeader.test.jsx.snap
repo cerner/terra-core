@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionHeader should render a default component 1`] = `
+<div
+  className="section-header"
+>
+  <Arrange
+    fill={
+      <h2
+        className="title"
+      >
+        foo
+      </h2>
+    }
+  />
+</div>
+`;
+
+exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
+<div
+  class="section-header is-interactable"
+  tabindex="0"
+>
+  <div
+    class="arrange"
+  >
+    <div
+      class="fit"
+    >
+      <div
+        class="accordion-icon-wrapper"
+      >
+        <span
+          class="accordion-icon is-open"
+        />
+      </div>
+    </div>
+    <div
+      class="fill"
+    >
+      <h2
+        class="title"
+      >
+        foo
+      </h2>
+    </div>
+    <div
+      class="fit"
+    />
+  </div>
+</div>
+`;
+
+exports[`SectionHeader should render with an accordion icon when an 'onClick()' callback is passed 1`] = `
+<div
+  class="section-header is-interactable"
+  tabindex="0"
+>
+  <div
+    class="arrange"
+  >
+    <div
+      class="fit"
+    >
+      <div
+        class="accordion-icon-wrapper"
+      >
+        <span
+          class="accordion-icon"
+        />
+      </div>
+    </div>
+    <div
+      class="fill"
+    >
+      <h2
+        class="title"
+      >
+        foo
+      </h2>
+    </div>
+    <div
+      class="fit"
+    />
+  </div>
+</div>
+`;
+
+exports[`SectionHeader should render without an accordion icon when no 'onClick()' is passed 1`] = `
+<div
+  class="section-header"
+>
+  <div
+    class="arrange"
+  >
+    <div
+      class="fit"
+    />
+    <div
+      class="fill"
+    >
+      <h2
+        class="title"
+      >
+        foo
+      </h2>
+    </div>
+    <div
+      class="fit"
+    />
+  </div>
+</div>
+`;
