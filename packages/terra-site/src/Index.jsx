@@ -64,8 +64,8 @@ import ToggleSectionHeaderExamples from './examples/toggle-section-header/Index'
 
 // Test Routes
 /* eslint-disable import/first, import/no-extraneous-dependencies */
-import ActionFooterTestRoutes from 'terra-action-footer/tests/nightwatch/action-footer/ActionFooterTestRoutes';
-import ActionFooterContainerTestRoutes from 'terra-action-footer/tests/nightwatch/action-footer-container/ActionFooterContainerTestRoutes';
+import ActionFooterTestRoutes from 'terra-action-footer/examples/test-examples/action-footer/ActionFooterTestRoutes';
+import ActionFooterContainerTestRoutes from 'terra-action-footer/examples/test-examples/action-footer-container/ActionFooterContainerTestRoutes';
 import ActionFooterIndexRoutes from './examples/action-footer/ActionFooterIndexRoutes';
 import AlertTestRoutes from 'terra-alert/tests/nightwatch/AlertTestRoutes';
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
@@ -75,7 +75,7 @@ import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
-import CenteredActionFooterTestRoutes from 'terra-action-footer/tests/nightwatch/centered-action-footer/CenteredActionFooterTestRoutes';
+import CenteredActionFooterTestRoutes from 'terra-action-footer/examples/test-examples/centered-action-footer/CenteredActionFooterTestRoutes';
 import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
