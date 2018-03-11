@@ -74,6 +74,7 @@ const TestLinks = () => (
     <li><Link to="/tests/time-input-tests">Time Input Tests</Link></li>
     <li><Link to="/tests/toggle-tests">Toggle Tests</Link></li>
     <li><Link to="/tests/toggle-button-tests">Toggle Button Tests</Link></li>
+    <li><Link to="/tests/toggle-section-header-tests">Toggle Section Header Tests</Link></li>
   </ul>
 );
 

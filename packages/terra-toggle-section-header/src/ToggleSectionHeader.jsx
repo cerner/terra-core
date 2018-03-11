@@ -42,7 +42,7 @@ const propTypes = {
   /**
    * Sets the toggle-section-header initial state to open.
    */
-  isInitialyOpen: PropTypes.bool,
+  isInitiallyOpen: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -54,15 +54,15 @@ class ToggleSectionHeader extends React.Component {
   constructor(props) {
     super(props);
 
-    const { isInitialyOpen = false } = this.props;
-    this.state = { isOpen: isInitialyOpen };
+    const { isInitiallyOpen = false } = this.props;
+    this.state = { isOpen: isInitiallyOpen };
 
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.isInitialyOpen !== this.props.isInitialyOpen) {
-      this.setState({ isOpen: this.props.isInitialyOpen });
+    if (nextProps.isInitiallyOpen !== this.props.isInitiallyOpen) {
+      this.setState({ isOpen: this.props.isInitiallyOpen });
     }
   }
 
@@ -89,7 +89,7 @@ class ToggleSectionHeader extends React.Component {
       level,
       selectionHeaderAttrs,
       isAnimated,
-      isInitialyOpen,
+      isInitiallyOpen,
       ...customProps
     } = this.props;
 

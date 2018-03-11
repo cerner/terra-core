@@ -3,7 +3,7 @@ import React from 'react';
 import ToggleSectionHeader from '../../lib/ToggleSectionHeader';
 
 export default () => (
-  <ToggleSectionHeader title="Default Toggle Section Header">
+  <ToggleSectionHeader isInitialyOpen title="Open Toggle Section Header">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
