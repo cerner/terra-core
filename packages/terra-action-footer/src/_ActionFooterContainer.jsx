@@ -10,6 +10,10 @@ const propTypes = {
   children: PropTypes.node,
 };
 
+const defaultProps = {
+  children: undefined,
+};
+
 const ActionFooterContainer = ({
   children,
   ...customProps
@@ -30,5 +34,6 @@ const ActionFooterContainer = ({
 };
 
 ActionFooterContainer.propTypes = propTypes;
+ActionFooterContainer.defaultProps = defaultProps;
 
 export default ActionFooterContainer;
