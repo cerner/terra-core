@@ -89,7 +89,6 @@ class ToggleSectionHeader extends React.Component {
       ...customProps
     } = this.props;
 
-
     return (
       <div {...customProps}>
         <SectionHeader
