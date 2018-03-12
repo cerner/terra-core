@@ -58,7 +58,7 @@ class ToggleSectionHeader extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isInitiallyOpen !== this.props.isInitiallyOpen) {
-      this.setState({ isOpen: this.props.isInitiallyOpen });
+      this.setState({ isOpen: nextProps.isInitiallyOpen });
     }
   }
 
