@@ -30,17 +30,20 @@ describe('ToggleSectionHeader', () => {
     const sectionHeaderAttrProps = { backgroundColor: 'red' };
     const toggleSectionHeader = shallow(<ToggleSectionHeader sectionHeaderAttrs={sectionHeaderAttrProps} title="sectionHeaderAttrs props test">Test</ToggleSectionHeader>);
     expect(toggleSectionHeader.instance().props.sectionHeaderAttrs).toEqual(sectionHeaderAttrProps);
+    expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should set the children prop correctly', () => {
     const children = 'test child';
     const toggleSectionHeader = shallow(<ToggleSectionHeader title="sectionHeaderAttrs props test">{children}</ToggleSectionHeader>);
     expect(toggleSectionHeader.instance().props.children).toEqual(children);
+    expect(toggleSectionHeader).toMatchSnapshot();
   });
 
   it('should set the level prop correctly', () => {
     const level = 1;
     const toggleSectionHeader = shallow(<ToggleSectionHeader level={level} title="sectionHeaderAttrs props test">Test</ToggleSectionHeader>);
     expect(toggleSectionHeader.instance().props.level).toEqual(level);
+    expect(toggleSectionHeader).toMatchSnapshot();
   });
 });

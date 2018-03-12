@@ -212,3 +212,58 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
   </div>
 </ToggleSectionHeader>
 `;
+
+exports[`ToggleSectionHeader should set sectionHeaderAttrs prop correctly 1`] = `
+<div>
+  <SectionHeader
+    aria-expanded={false}
+    backgroundColor="red"
+    isOpen={false}
+    level={2}
+    onClick={[Function]}
+    title="sectionHeaderAttrs props test"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    Test
+  </Toggle>
+</div>
+`;
+
+exports[`ToggleSectionHeader should set the children prop correctly 1`] = `
+<div>
+  <SectionHeader
+    aria-expanded={false}
+    isOpen={false}
+    level={2}
+    onClick={[Function]}
+    title="sectionHeaderAttrs props test"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    test child
+  </Toggle>
+</div>
+`;
+
+exports[`ToggleSectionHeader should set the level prop correctly 1`] = `
+<div>
+  <SectionHeader
+    aria-expanded={false}
+    isOpen={false}
+    level={1}
+    onClick={[Function]}
+    title="sectionHeaderAttrs props test"
+  />
+  <Toggle
+    isAnimated={false}
+    isOpen={false}
+  >
+    Test
+  </Toggle>
+</div>
+`;
