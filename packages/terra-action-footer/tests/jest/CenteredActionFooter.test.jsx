@@ -10,11 +10,7 @@ describe('CenteredActionFooter', () => {
     });
 
     it('should render a footer with an anchor', () => {
-      const component = (
-        <CenteredActionFooter
-          center={<a href="/">Test</a>}
-        />
-      );
+      const component = <CenteredActionFooter center={<a href="/">Test</a>} />;
       expect(shallow(component)).toMatchSnapshot();
     });
 
@@ -39,7 +35,7 @@ describe('CenteredActionFooter', () => {
       const centeredActionFooter = mount(<CenteredActionFooter />);
 
       it('should display no actions', () => (
-        expect(centeredActionFooter.text()).toEqual('')
+        expect(centeredActionFooter).toMatchSnapshot()
       ));
     });
 
@@ -47,7 +43,7 @@ describe('CenteredActionFooter', () => {
       const centeredActionFooter = mount(<CenteredActionFooter center="Center Action" />);
 
       it('should display a center action', () => (
-        expect(centeredActionFooter.text()).toEqual('Center Action')
+        expect(centeredActionFooter).toMatchSnapshot()
       ));
     });
   });

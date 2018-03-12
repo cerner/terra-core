@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CenteredActionFooter Prop Tests with a center action should display a center action 1`] = `
+<CenteredActionFooter
+  center="Center Action"
+>
+  <ActionFooterContainer
+    className="centered-action-footer"
+  >
+    <div
+      className="action-footer-container with-actions centered-action-footer"
+    >
+      Center Action
+    </div>
+  </ActionFooterContainer>
+</CenteredActionFooter>
+`;
+
+exports[`CenteredActionFooter Prop Tests without a center action should display no actions 1`] = `
+<CenteredActionFooter>
+  <ActionFooterContainer
+    className="centered-action-footer"
+  >
+    <div
+      className="action-footer-container centered-action-footer"
+    />
+  </ActionFooterContainer>
+</CenteredActionFooter>
+`;
+
 exports[`CenteredActionFooter Snapshot Tests should render a footer with an anchor 1`] = `
 <ActionFooterContainer
   className="centered-action-footer"

@@ -64,7 +64,7 @@ describe('ActionFooter', () => {
       const actionFooter = mount(<ActionFooter />);
 
       it('should display no actions', () => (
-        expect(actionFooter.text()).toEqual('')
+        expect(actionFooter).toMatchSnapshot()
       ));
     });
 
@@ -72,7 +72,7 @@ describe('ActionFooter', () => {
       const actionFooter = mount(<ActionFooter start="Start Action" />);
 
       it('should only display a start action', () => (
-        expect(actionFooter.text()).toEqual('Start Action')
+        expect(actionFooter).toMatchSnapshot()
       ));
     });
 
@@ -80,7 +80,7 @@ describe('ActionFooter', () => {
       const actionFooter = mount(<ActionFooter end="End Action" />);
 
       it('should only display an end action', () => (
-        expect(actionFooter.text()).toEqual('End Action')
+        expect(actionFooter).toMatchSnapshot()
       ));
     });
 
@@ -88,7 +88,7 @@ describe('ActionFooter', () => {
       const actionFooter = mount(<ActionFooter start="Start Action" end="End Action" />);
 
       it('should display both start and end actions', () => (
-        expect(actionFooter.text()).toEqual('Start ActionEnd Action')
+        expect(actionFooter).toMatchSnapshot()
       ));
     });
   });

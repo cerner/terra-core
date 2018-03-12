@@ -10,11 +10,7 @@ describe('ActionFooterContainer', () => {
     });
 
     it('should render a footer with some actions', () => {
-      const actionFooterContainer = (
-        <ActionFooterContainer>
-          Some actions
-        </ActionFooterContainer>
-      );
+      const actionFooterContainer = <ActionFooterContainer>Some actions</ActionFooterContainer>;
       expect(shallow(actionFooterContainer)).toMatchSnapshot();
     });
   });
@@ -25,21 +21,16 @@ describe('ActionFooterContainer', () => {
       const actionFooterContainer = mount(<ActionFooterContainer />);
 
       it('should display no actions', () => (
-        expect(actionFooterContainer.text()).toEqual('')
+        expect(actionFooterContainer).toMatchSnapshot()
       ));
     });
 
     describe('with actions', () => {
       const content = 'Some content';
-      const component = (
-        <ActionFooterContainer>
-          {content}
-        </ActionFooterContainer>
-      );
-      const actionFooterContainer = mount(component);
+      const actionFooterContainer = mount(<ActionFooterContainer>{content}</ActionFooterContainer>);
 
       it('should display no actions', () => (
-        expect(actionFooterContainer.text()).toEqual(content)
+        expect(actionFooterContainer).toMatchSnapshot()
       ));
     });
   });
