@@ -22,7 +22,7 @@ const propTypes = {
   /**
    * Sets the heading level. One of 1, 2, 3, 4, 5, or 6.
    */
-  level: PropTypes.oneOf(...VALID_LEVELS),
+  level: PropTypes.oneOf(VALID_LEVELS),
   /**
    * Callback function triggered when toggle-section-header is closed.
    */
