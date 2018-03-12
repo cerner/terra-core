@@ -28,7 +28,7 @@ const propTypes = {
    */
   onOpen: PropTypes.func,
   /**
-   * Used to set props and HTML attributes on the toggle-section-header section-header.
+   * Used to set props and HTML attributes on the underlying section-header.
    */
   sectionHeaderAttrs: PropTypes.object,
   /**
