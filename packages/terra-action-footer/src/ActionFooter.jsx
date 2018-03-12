@@ -27,19 +27,13 @@ const ActionFooter = ({
   start,
   end,
   ...customProps
-}) => {
-  const isEmpty = !start && !end;
-
-  return (isEmpty ?
-    <ActionFooterContainer {...customProps} className={cx(customProps.className)} />
-    :
-    <ActionFooterContainer {...customProps} className={cx(customProps.className)}>
-      { start && <div className={cx('socket')}>{start}</div> }
-      <div className={cx('empty-center')} />
-      { end && <div className={cx('socket')}>{end}</div> }
-    </ActionFooterContainer>
-  );
-};
+}) => (
+  <ActionFooterContainer {...customProps} className={cx(customProps.className)}>
+    { start && <div className={cx('socket')}>{start}</div> }
+    { (start || end) && <div className={cx('empty-center')} /> }
+    { end && <div className={cx('socket')}>{end}</div> }
+  </ActionFooterContainer>
+);
 
 ActionFooter.propTypes = propTypes;
 ActionFooter.defaultProps = defaultProps;

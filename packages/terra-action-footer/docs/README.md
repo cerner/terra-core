@@ -34,7 +34,7 @@ import ActionFooter from 'terra-action-footer';
 <ActionFooter />
 ```
 
-Terra also provides a Centered Action Footer variant.
+Terra also provides a Centered Action Footer variation.
 * [Centered Action Footer](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer/docs/CenteredActionFooter.md)
 
 ## Component Features
