@@ -24,6 +24,7 @@
     "babel-jest": "^19.0.0"
   },
   "bin": {
+    "terra-aggregate": "./bin/aggregate-translations.js",
     "aggregate-translations": "./bin/aggregate-translations.js"
   },
   "peerDependencies": {
@@ -37,15 +38,15 @@
     "intl": "^1.2.5",
     "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
-    "react-intl": "^2.4.0",
-    "rimraf": "^2.6.1"
-    },
+    "react-intl": "^2.4.0"
+  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "rimraf lib",
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "postinstall": "node scripts/post-install/write-default-loaders.js",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"

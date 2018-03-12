@@ -1,8 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const commander = require('commander');
-const i18nPackageJson = require('../package.json');
-const supportedLocales = require('../src/i18nSupportedLocales');
+const i18nPackageJson = require('../../package.json');
+const supportedLocales = require('../../src/i18nSupportedLocales');
 
 const aggregateTranslations = require('./aggregate-translations');
 

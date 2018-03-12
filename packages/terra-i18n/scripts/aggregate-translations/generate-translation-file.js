@@ -16,24 +16,24 @@ const sortMessages = (messages) => {
   return sortedMessages;
 };
 
-const translationFile = (language, messages) => (
+const translationFile = (locale, messages) => (
   `import { addLocaleData } from 'react-intl';
-import localeData from 'react-intl/locale-data/${language.split('-')[0]}';
+import localeData from 'react-intl/locale-data/${locale.split('-')[0]}';
 
 addLocaleData(localeData);
 
 const messages = ${JSON.stringify(messages, null, 2)};
 const areTranslationsLoaded = true;
-const locale = '${language}';
+const locale = '${locale}';
 export {
   areTranslationsLoaded,
   locale,
   messages
 };`);
 
-const generateTranslationFile = (language, messages) => {
+const generateTranslationFile = (locale, messages) => {
   const sortedMessages = sortMessages(messages);
-  return translationFile(language, sortedMessages);
+  return translationFile(locale, sortedMessages);
 };
 
 module.exports = generateTranslationFile;

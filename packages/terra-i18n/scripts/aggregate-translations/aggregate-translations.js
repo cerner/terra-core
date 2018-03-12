@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
-const supportedLocales = require('../src/i18nSupportedLocales');
+const supportedLocales = require('../../src/i18nSupportedLocales');
 
 const aggregateMessages = require('./aggregate-messages');
 const writeAggregatedTranslations = require('./write-aggregated-translations');
@@ -34,7 +34,7 @@ const aggregatedTranslations = (options) => {
   });
 
   // Aggregate translation messages for each of the translations directories
-  const aggregatedMessages = aggregateMessages(translationDirectories, locales, fileSystem);
+  const aggregatedMessages = aggregateMessages(translationDirectories, locales);
 
   // Write aggregated translation messages to a file for each locale
   writeAggregatedTranslations(aggregatedMessages, locales, fileSystem, outputDir);

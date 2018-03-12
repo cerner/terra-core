@@ -1,6 +1,6 @@
 const path = require('path');
 const startCase = require('lodash.startcase');
-const supportedLocales = require('../src/i18nSupportedLocales');
+const supportedLocales = require('../../src/i18nSupportedLocales');
 
 const createIntlloader = (loaderName, locale) => (
   `const ${loaderName} = () =>

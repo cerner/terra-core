@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../scripts/aggregate-translations-cli');
+require('../scripts/aggregate-translations/aggregate-translations-cli');
