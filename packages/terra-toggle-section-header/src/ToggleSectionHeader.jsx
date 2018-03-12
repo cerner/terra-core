@@ -12,7 +12,7 @@ const VALID_LEVELS = [1, 2, 3, 4, 5, 6];
 
 const propTypes = {
   /**
-   * Content in the body of the toggle section header component that will be expanded or hidden.doc
+   * Content in the body of the toggle section header component that will be expanded or hidden.
    */
   children: PropTypes.node.isRequired,
   /**
