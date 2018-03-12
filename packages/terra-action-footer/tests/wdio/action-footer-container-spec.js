@@ -1,20 +1,24 @@
 /* global browser, Terra */
-const { themeables, viewports } = require('./common');
+const {
+  viewports,
+  withActionsThemeables,
+  withoutActionsThemeables,
+} = require('./common');
 
 describe('ActionFooterContainer', () => {
-  describe('No Children', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer-container/no-children'));
+  describe('No Actions', () => {
+    beforeEach(() => browser.url('/#/tests/action-footer-container/without-actions'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(themeables);
+    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
   });
 
-  describe('With Children', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer-container/with-children'));
+  describe('With Actions', () => {
+    beforeEach(() => browser.url('/#/tests/action-footer-container/with-actions'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(themeables);
+    Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 });

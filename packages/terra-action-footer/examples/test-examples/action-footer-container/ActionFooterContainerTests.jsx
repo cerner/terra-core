@@ -5,8 +5,8 @@ import { Link } from 'react-router';
 const ActionFooterContainerTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/action-footer-container/no-children">ActionFooterContainer - No Children</Link></li>
-      <li><Link to="/tests/action-footer-container/with-children">ActionFooterContainer - With Children</Link></li>
+      <li><Link to="/tests/action-footer-container/without-actions">ActionFooterContainer - Without Actions</Link></li>
+      <li><Link to="/tests/action-footer-container/with-actions">ActionFooterContainer - With Actions</Link></li>
     </ul>
   </div>
 );

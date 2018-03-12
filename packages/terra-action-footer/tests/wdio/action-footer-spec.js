@@ -1,5 +1,9 @@
 /* global browser, Terra */
-const { themeables, viewports } = require('./common');
+const {
+  viewports,
+  withActionsThemeables,
+  withoutActionsThemeables,
+} = require('./common');
 
 describe('ActionFooter', () => {
   describe('Empty', () => {
@@ -7,7 +11,7 @@ describe('ActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(themeables);
+    Terra.should.themeEachCustomProperty(withoutActionsThemeables);
   });
 
   describe('Multiple End Actions', () => {
@@ -15,7 +19,6 @@ describe('ActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(themeables);
   });
 
   describe('Multiple Start Actions', () => {
@@ -30,6 +33,7 @@ describe('ActionFooter', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
+    Terra.should.themeEachCustomProperty(withActionsThemeables);
   });
 
   describe('Single End Action', () => {
