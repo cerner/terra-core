@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-action-footer.svg)](https://www.npmjs.org/package/terra-action-footer)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-action-footer component is a footer bar that contains sockets for placing actionable items such as buttons and hyperlinks. The default variant contains a start and end socket, while the centered variant has only a center socket. If no actions are provided, the footer bar collapses to a themeable height (default of 10px) and maintains the top border.
+The terra-action-footer component is a footer bar that contains sockets for placing actionable items such as buttons and hyperlinks. The default variant contains a start and end socket, while the centered variant has only a center socket. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer/docs)

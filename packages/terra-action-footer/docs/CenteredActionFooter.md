@@ -1,6 +1,6 @@
 # Terra Centered Action Footer
 
-The terra-centered-action-footer component is a footer bar that contains a single, centered socket for placing actionable items such as buttons and hyperlinks. If no actions are provided, the footer bar collapses to a themeable height (default of 10px) and maintains the top border.
+The terra-centered-action-footer component is a footer bar that contains a single, centered socket for placing actionable items such as buttons and hyperlinks. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.
 
 ## Usage
 
