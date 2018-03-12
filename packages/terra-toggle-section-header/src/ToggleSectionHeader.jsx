@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import SectionHeader from 'terra-section-header';
 import Toggle from 'terra-toggle';
-import styles from './ToggleSectionHeader.scss';
-
-const cx = classNames.bind(styles);
 
 const VALID_LEVELS = [1, 2, 3, 4, 5, 6];
 
@@ -93,13 +89,9 @@ class ToggleSectionHeader extends React.Component {
       ...customProps
     } = this.props;
 
-    const ToggleSectionHeaderClassNames = cx([
-      'toggle-section-header',
-      customProps.className,
-    ]);
 
     return (
-      <div {...customProps} className={ToggleSectionHeaderClassNames}>
+      <div {...customProps}>
         <SectionHeader
           {...selectionHeaderAttrs}
           aria-expanded={this.state.isOpen}

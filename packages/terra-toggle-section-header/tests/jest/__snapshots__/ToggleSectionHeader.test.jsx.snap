@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleSectionHeader should render a default toggle section header 1`] = `
-<div
-  class="toggle-section-header"
->
+<div>
   <div
     aria-expanded="false"
     class="section-header is-interactable"
@@ -45,9 +43,7 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
 `;
 
 exports[`ToggleSectionHeader should render an animated toggle section header 1`] = `
-<div
-  class="toggle-section-header"
->
+<div>
   <div
     aria-expanded="false"
     class="section-header is-interactable"
@@ -89,9 +85,7 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
 `;
 
 exports[`ToggleSectionHeader should render an initially open toggle section header 1`] = `
-<div
-  class="toggle-section-header"
->
+<div>
   <div
     aria-expanded="true"
     class="section-header is-interactable"
@@ -140,9 +134,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
   selectionHeaderAttrs={Object {}}
   title="opens on click title"
 >
-  <div
-    className="toggle-section-header"
-  >
+  <div>
     <SectionHeader
       aria-expanded={true}
       isOpen={true}
