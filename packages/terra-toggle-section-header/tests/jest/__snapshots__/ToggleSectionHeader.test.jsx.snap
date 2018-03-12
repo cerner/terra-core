@@ -131,7 +131,7 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
 exports[`ToggleSectionHeader should render an open toggle section header when clicked 1`] = `
 <ToggleSectionHeader
   level={2}
-  selectionHeaderAttrs={Object {}}
+  sectionHeaderAttrs={Object {}}
   title="opens on click title"
 >
   <div>

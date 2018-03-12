@@ -30,7 +30,7 @@ const propTypes = {
   /**
    * Used to set props and HTML attributes on the toggle-section-header section-header.
    */
-  selectionHeaderAttrs: PropTypes.object,
+  sectionHeaderAttrs: PropTypes.object,
   /**
    * Sets the toggle-section-header to be animated when it is opened or closed.
    */
@@ -43,7 +43,7 @@ const propTypes = {
 
 const defaultProps = {
   level: 2,
-  selectionHeaderAttrs: {},
+  sectionHeaderAttrs: {},
 };
 
 class ToggleSectionHeader extends React.Component {
@@ -83,7 +83,7 @@ class ToggleSectionHeader extends React.Component {
       children,
       title,
       level,
-      selectionHeaderAttrs,
+      sectionHeaderAttrs,
       isAnimated,
       isInitiallyOpen,
       ...customProps
@@ -92,7 +92,7 @@ class ToggleSectionHeader extends React.Component {
     return (
       <div {...customProps}>
         <SectionHeader
-          {...selectionHeaderAttrs}
+          {...sectionHeaderAttrs}
           aria-expanded={this.state.isOpen}
           isOpen={this.state.isOpen}
           level={level}
