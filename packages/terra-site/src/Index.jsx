@@ -136,7 +136,7 @@ import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
 import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
-import ToggleSectionHeaderTestRoutes from 'terra-toggle-section-header/tests/nightwatch/ToggleSectionHeaderTestRoutes';
+import ToggleSectionHeaderTestRoutes from 'terra-toggle-section-header/examples/test-examples/ToggleSectionHeaderTestRoutes';
 
 import TestLinks from './TestLinks';
 import TestContainer from './TestContainer';
