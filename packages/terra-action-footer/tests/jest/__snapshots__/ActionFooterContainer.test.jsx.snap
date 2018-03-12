@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionFooterContainer Snapshot Tests should render a footer with some content 1`] = `
+exports[`ActionFooterContainer Snapshot Tests should render a footer with some actions 1`] = `
 <div
-  className="action-footer-container has-children"
+  className="action-footer-container with-actions"
 >
-  Some Content
+  Some actions
 </div>
 `;
 

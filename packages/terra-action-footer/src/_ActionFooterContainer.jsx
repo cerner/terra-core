@@ -22,7 +22,7 @@ const ActionFooterContainer = ({
 
   const actionFooterContainerClassNames = cx([
     'action-footer-container',
-    { 'has-children': !isEmpty },
+    { 'with-actions': !isEmpty },
     customProps.className,
   ]);
 

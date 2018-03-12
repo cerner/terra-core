@@ -9,10 +9,10 @@ describe('ActionFooterContainer', () => {
       expect(shallow(actionFooterContainer)).toMatchSnapshot();
     });
 
-    it('should render a footer with some content', () => {
+    it('should render a footer with some actions', () => {
       const actionFooterContainer = (
         <ActionFooterContainer>
-          Some Content
+          Some actions
         </ActionFooterContainer>
       );
       expect(shallow(actionFooterContainer)).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('ActionFooterContainer', () => {
 
   // Prop Tests
   describe('Prop Tests', () => {
-    describe('without content', () => {
+    describe('without actions', () => {
       const actionFooterContainer = mount(<ActionFooterContainer />);
 
       it('should display no actions', () => (
@@ -29,7 +29,7 @@ describe('ActionFooterContainer', () => {
       ));
     });
 
-    describe('with content', () => {
+    describe('with actions', () => {
       const content = 'Some content';
       const component = (
         <ActionFooterContainer>
@@ -46,22 +46,22 @@ describe('ActionFooterContainer', () => {
 
   // Structure Tests
   describe('Structure Tests', () => {
-    describe('without content', () => {
+    describe('without actions', () => {
       const actionFooterContainer = shallow(<ActionFooterContainer />);
 
       it('should contain the action-footer-container class', () => (
         expect(actionFooterContainer.find('.action-footer-container').length).toBe(1)
       ));
 
-      it('should not contain the has-children class', () => (
-        expect(actionFooterContainer.find('.has-children').length).toBe(0)
+      it('should not contain the with-actions class', () => (
+        expect(actionFooterContainer.find('.with-actions').length).toBe(0)
       ));
     });
 
-    describe('with content', () => {
+    describe('with actions', () => {
       const component = (
         <ActionFooterContainer>
-          Some content
+          Some actions
         </ActionFooterContainer>
       );
       const actionFooterContainer = shallow(component);
@@ -70,8 +70,8 @@ describe('ActionFooterContainer', () => {
         expect(actionFooterContainer.find('.action-footer-container').length).toBe(1)
       ));
 
-      it('should contain the has-children class', () => (
-        expect(actionFooterContainer.find('.has-children').length).toBe(1)
+      it('should contain the with-actions class', () => (
+        expect(actionFooterContainer.find('.with-actions').length).toBe(1)
       ));
     });
   });

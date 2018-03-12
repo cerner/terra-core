@@ -5,11 +5,11 @@ $default-padding: 0.3571428571rem;
     background-color: var(--terra-action-footer-background-color, transparent);
     border-top: var(--terra-action-footer-border-top, 0.0714285714rem solid #cfd0d1);
     display: flex;
-    height: 0.7142857143rem;
+    height: var(--terra-action-footer-empty-height, 0.7142857143rem);
 
-    &.has-children {
+    &.with-actions {
       height: auto;
-      min-height: 2.8571428571rem;
+      min-height: var(--terra-action-footer-with-actions-min-height, 2.8571428571rem);
       padding-bottom: var(--terra-action-footer-padding-bottom, $default-padding);
       padding-left: var(--terra-action-footer-padding-left, $default-padding);
       padding-right: var(--terra-action-footer-padding-right, $default-padding);
