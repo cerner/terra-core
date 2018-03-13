@@ -3,8 +3,11 @@
 exports[`ToggleSectionHeader should call any custom onClick that is provided by the user correctly when clicked 1`] = `
 <ToggleSectionHeader
   level={2}
-  onClick={[Function]}
-  sectionHeaderAttrs={Object {}}
+  sectionHeaderAttrs={
+    Object {
+      "onClick": [Function],
+    }
+  }
   title="custom onClick title"
 >
   <div>

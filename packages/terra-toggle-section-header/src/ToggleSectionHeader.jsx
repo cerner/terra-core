@@ -65,7 +65,7 @@ class ToggleSectionHeader extends React.Component {
   handleOnClick(event) {
     event.preventDefault();
 
-    const { onOpen, onClose } = this.props;
+    const { onOpen, onClose, sectionHeaderAttrs } = this.props;
 
     if (onOpen && !this.state.isOpen) {
       onOpen();
@@ -73,19 +73,13 @@ class ToggleSectionHeader extends React.Component {
       onClose();
     }
 
+    if (sectionHeaderAttrs.onClick) {
+      sectionHeaderAttrs.onClick();
+    }
+
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
     }));
-  }
-
-  wrapOnClick(onClick) {
-    return ((event) => {
-      this.handleOnClick(event);
-
-      if (onClick) {
-        onClick(event);
-      }
-    });
   }
 
   render() {
@@ -99,18 +93,15 @@ class ToggleSectionHeader extends React.Component {
       ...customProps
     } = this.props;
 
-    const sectionHeaderProps = Object.assign({}, sectionHeaderAttrs);
-    sectionHeaderProps.onClick = this.wrapOnClick(customProps.onClick);
-    delete customProps.onClick;
-
     return (
       <div {...customProps}>
         <SectionHeader
-          {...sectionHeaderProps}
+          {...sectionHeaderAttrs}
           aria-expanded={this.state.isOpen}
           isOpen={this.state.isOpen}
           level={level}
           title={title}
+          onClick={this.handleOnClick}
         />
         <Toggle isAnimated={isAnimated} isOpen={this.state.isOpen}>
           {children}
