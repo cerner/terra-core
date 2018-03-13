@@ -44,6 +44,8 @@ const propTypes = {
 const defaultProps = {
   level: 2,
   sectionHeaderAttrs: {},
+  isAnimated: false,
+  isInitiallyOpen: false,
 };
 
 class ToggleSectionHeader extends React.Component {
