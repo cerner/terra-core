@@ -98,3 +98,4 @@ Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
 
 export default Avatar;
+export { AvatarVariants };
