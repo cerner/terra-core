@@ -207,7 +207,8 @@ class Button extends React.Component {
 
     let buttonIcon = null;
     if (icon) {
-      const cloneIcon = React.cloneElement(icon, { className: cx('icon-svg') });
+      const iconSvgClasses = icon.props.className ? `${icon.props.className} ${cx('icon-svg')}` : cx('icon-svg');
+      const cloneIcon = React.cloneElement(icon, { className: iconSvgClasses });
       buttonIcon = <span className={iconClasses}>{cloneIcon}</span>;
     }
 
