@@ -27,6 +27,7 @@
     "terra-action-footer": "^1.0.0",
     "terra-alert": "^2.3.0",
     "terra-app-delegate": "^1.9.0",
+    "terra-action-header": "^0.x",
     "terra-arrange": "^2.3.0",
     "terra-avatar": "^1.1.0",
     "terra-badge": "^2.2.0",

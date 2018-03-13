@@ -1,0 +1,62 @@
+:local {
+  .flex-header {
+    background-color: var(--terra-action-header-background-color, #fff);
+    border-bottom: var(--terra-action-header-border-bottom, 1px solid #1c1f21);
+    border-left: var(--terra-action-header-border-left, 1px solid #1c1f21);
+    border-right: var(--terra-action-header-border-right, 1px solid #1c1f21);
+    border-top: var(--terra-action-header-border-top, 1px solid #1c1f21);
+    box-shadow: var(--terra-action-header-box-shadow);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--terra-action-header-padding, 0.714rem);
+    position: relative;
+    width: 100%;
+  }
+
+  .flex-fill {
+    align-self: center;
+    flex: 1 1 auto;
+    height: 100%;
+    min-width: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .flex-end {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    height: 100%;
+    position: relative;
+  }
+
+  .flex-collapse {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    height: 100%;
+    max-width: 40%;
+    position: relative;
+  }
+
+  .title-container {
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .title {
+    color: var(--terra-action-header-font-color, #1c1f21);
+    font-family: var(--terra-action-header-font-family);
+    font-size: var(--terra-action-header-font-size, 1rem);
+    font-weight: normal;
+    height: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+    word-break: normal;
+    word-wrap: normal;
+  }
+}

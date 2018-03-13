@@ -3,6 +3,18 @@
 @import '~terra-mixins';
 
 @include cerner-mock-theme {
+  // terra-action-header
+  --terra-action-header-background-color: #8098b8;
+  --terra-action-header-border-bottom: none;
+  --terra-action-header-border-left: none;
+  --terra-action-header-border-right: none;
+  --terra-action-header-border-top: none;
+  --terra-action-header-box-shadow: 0 1px 0 0 #cfd0d1;
+  --terra-action-header-padding: 0.714rem;
+  --terra-action-header-font-color: #551a8b;
+  --terra-action-header-font-family: Roboto;
+  --terra-action-header-font-size: 1.5rem;
+
   // terra-avatar
   --terra-avatar-background-color: rgba(150, 194, 254, 1);
   --terra-avatar-border: 0.07143rem solid rgb(73, 131, 209);
