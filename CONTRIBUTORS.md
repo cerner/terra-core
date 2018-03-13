@@ -56,6 +56,7 @@ Cerner Corporation
 - Mukul Dhariwal [@mukuldhariwal94]
 - Praneeth Madamsetti [@praneethm381]
 - Vaibhav Paliwal [@vaibhavpaliwal]
+- Alvin Cheung [@pseudofaux]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -114,3 +115,4 @@ Cerner Corporation
 [@mukuldhariwal94]: https://github.com/mukuldhariwal94
 [@praneethm381]: https://github.com/praneethm381
 [@vaibhavpaliwal]: https://github.com/vaibhavpaliwal
+[@pseudofaux]: https://github.com/pseudofaux
