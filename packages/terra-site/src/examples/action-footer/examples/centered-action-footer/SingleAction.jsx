@@ -1,10 +1,11 @@
 import React from 'react';
 import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
+import ExampleTemplate from '../template';
 
-const SingleActionExample = () => (
-  <CenteredActionFooter
-    center={<a href="/#/site/action-footer/centered">A link</a>}
-  />
+export default () => (
+  <ExampleTemplate>
+    <CenteredActionFooter
+      center={<a href="/#/site/action-footer/centered">A link</a>}
+    />
+  </ExampleTemplate>
 );
-
-export default SingleActionExample;

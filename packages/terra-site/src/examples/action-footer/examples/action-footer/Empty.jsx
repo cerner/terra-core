@@ -1,8 +1,10 @@
 import React from 'react';
 import ActionFooter from 'terra-action-footer';
 
-const EmptyExample = () => (
-  <ActionFooter />
-);
+import ExampleTemplate from '../template';
 
-export default EmptyExample;
+export default () => (
+  <ExampleTemplate>
+    <ActionFooter />
+  </ExampleTemplate>
+);

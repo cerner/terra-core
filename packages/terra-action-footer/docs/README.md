@@ -19,8 +19,8 @@ import Button from 'terra-button';
   start={<a href="/link/to/somewhere">A link</a>}
   end={
     <div>
-      <Button text="Cancel"/>
       <Button text="Submit"/>
+      <Button text="Cancel"/>
     </div>
   }
 />

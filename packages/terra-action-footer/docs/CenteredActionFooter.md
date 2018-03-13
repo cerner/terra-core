@@ -23,8 +23,8 @@ import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
 <CenteredActionFooter
   center={
     <div>
-      <Button text="Cancel"/>
-      <Button text="Submit"/>
+      <Button text="First Action"/>
+      <Button text="Second Action"/>
     </div>
   }
 />
