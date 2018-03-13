@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from '../../../../terra-button/lib/Button';
 import ActionFooter from '../../../lib/ActionFooter';
+import Button from '../../../../terra-button/lib/Button';
+
 
 export default () => (
   <ActionFooter

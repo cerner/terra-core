@@ -1,7 +1,4 @@
 import React from 'react';
-
 import CenteredActionFooter from '../../../lib/CenteredActionFooter';
 
-export default () => (
-  <CenteredActionFooter />
-);
+export default () => <CenteredActionFooter />;
