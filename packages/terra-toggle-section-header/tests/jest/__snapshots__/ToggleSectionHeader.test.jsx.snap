@@ -2,6 +2,8 @@
 
 exports[`ToggleSectionHeader should call any custom onClick that is provided by the user correctly when clicked 1`] = `
 <ToggleSectionHeader
+  isAnimated={false}
+  isInitiallyOpen={false}
   level={2}
   sectionHeaderAttrs={
     Object {
@@ -229,6 +231,8 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
 
 exports[`ToggleSectionHeader should render an open toggle section header when clicked 1`] = `
 <ToggleSectionHeader
+  isAnimated={false}
+  isInitiallyOpen={false}
   level={2}
   sectionHeaderAttrs={Object {}}
   title="opens on click title"
