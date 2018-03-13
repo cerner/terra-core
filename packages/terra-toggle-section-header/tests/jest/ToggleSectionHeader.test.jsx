@@ -27,7 +27,8 @@ describe('ToggleSectionHeader', () => {
 
   it('should call any custom onClick that is provided by the user correctly when clicked', () => {
     const customOnClick = jest.fn();
-    const toggleSectionHeader = mount(<ToggleSectionHeader sectionHeaderAttrs={{ onClick: customOnClick }} title="custom onClick title">triggers a custom onClick when clicked section header</ToggleSectionHeader>);    toggleSectionHeader.find('SectionHeader').simulate('click');
+    const toggleSectionHeader = mount(<ToggleSectionHeader sectionHeaderAttrs={{ onClick: customOnClick }} title="custom onClick title">triggers a custom onClick when clicked section header</ToggleSectionHeader>);
+    toggleSectionHeader.find('SectionHeader').simulate('click');
     expect(toggleSectionHeader).toMatchSnapshot();
     expect(customOnClick).toHaveBeenCalled();
   });
