@@ -18,7 +18,7 @@ const ActionFooterContainer = ({
   children,
   ...customProps
 }) => {
-  const isEmpty = !React.Children.count(children);
+  const isEmpty = !React.Children.toArray(children).length;
 
   const actionFooterContainerClassNames = cx([
     'action-footer-container',

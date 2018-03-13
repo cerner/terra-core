@@ -81,7 +81,7 @@ exports[`ActionFooter Prop Tests without start or end actions should display no 
     className=""
   >
     <div
-      className="action-footer-container with-actions"
+      className="action-footer-container"
     />
   </ActionFooterContainer>
 </ActionFooter>
