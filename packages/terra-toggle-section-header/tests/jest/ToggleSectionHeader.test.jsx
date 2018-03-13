@@ -9,7 +9,7 @@ describe('ToggleSectionHeader', () => {
   });
 
   it('should render an animated toggle section header', () => {
-    const toggleSectionHeader = render(<ToggleSectionHeader title="animated title">Test</ToggleSectionHeader>);
+    const toggleSectionHeader = render(<ToggleSectionHeader isAnimated title="animated title">Test</ToggleSectionHeader>);
     expect(toggleSectionHeader).toMatchSnapshot();
   });
 

@@ -80,7 +80,17 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
   <div
     aria-hidden="true"
     class="toggle"
-  />
+  >
+    <div
+      aria-hidden="false"
+      class="rah-static"
+      style="height:0;overflow:hidden"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
