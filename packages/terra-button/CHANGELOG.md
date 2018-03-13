@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Create a flattened svg css selector.
 
 2.2.0 - (March 6, 2018)
 ------------------
