@@ -1,5 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ToggleSectionHeader should call any custom onClick that is provided by the user correctly when clicked 1`] = `
+<ToggleSectionHeader
+  level={2}
+  onClick={[Function]}
+  sectionHeaderAttrs={Object {}}
+  title="custom onClick title"
+>
+  <div>
+    <SectionHeader
+      aria-expanded={true}
+      isOpen={true}
+      level={2}
+      onClick={[Function]}
+      title="custom onClick title"
+    >
+      <div
+        aria-expanded={true}
+        className="section-header is-interactable"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        tabIndex="0"
+      >
+        <Arrange
+          fill={
+            <h2
+              className="title"
+            >
+              custom onClick title
+            </h2>
+          }
+          fitStart={
+            <div
+              className="accordion-icon-wrapper"
+            >
+              <span
+                className="accordion-icon is-open"
+              />
+            </div>
+          }
+        >
+          <div
+            className="arrange"
+          >
+            <div
+              className="fit"
+            >
+              <div
+                className="accordion-icon-wrapper"
+              >
+                <span
+                  className="accordion-icon is-open"
+                />
+              </div>
+            </div>
+            <div
+              className="fill"
+            >
+              <h2
+                className="title"
+              >
+                custom onClick title
+              </h2>
+            </div>
+            <div
+              className="fit"
+            />
+          </div>
+        </Arrange>
+      </div>
+    </SectionHeader>
+    <Toggle
+      isAnimated={false}
+      isOpen={true}
+    >
+      <div
+        aria-hidden={false}
+        className="toggle"
+      >
+        triggers a custom onClick when clicked section header
+      </div>
+    </Toggle>
+  </div>
+</ToggleSectionHeader>
+`;
+
 exports[`ToggleSectionHeader should render a default toggle section header 1`] = `
 <div>
   <div
