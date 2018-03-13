@@ -16,7 +16,7 @@ const propTypes = {
    */
   title: PropTypes.string.isRequired,
   /**
-   * Sets the heading level. One of 1, 2, 3, 4, 5, or 6.
+   * Sets the heading level. One of h1, h2, h3, h4, h5, or h6.
    */
   level: PropTypes.oneOf(VALID_LEVELS),
   /**
