@@ -9,8 +9,9 @@ const rtl = require('postcss-rtl');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const I18nAggregatorPlugin = require('terra-i18n-plugin');
-const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
+const aggregateTranslations = require('terra-i18n/scripts/aggregate-translations/aggregate-translations');
+
+aggregateTranslations({ baseDirectory: __dirname });
 
 const threadLoaderRule = {
   loader: 'thread-loader',
@@ -79,10 +80,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
       chunks: ['raf', 'babel-polyfill', 'terra-core'],
-    }),
-    new I18nAggregatorPlugin({
-      baseDirectory: __dirname,
-      supportedLocales: i18nSupportedLocales,
     }),
     new PostCSSAssetsPlugin({
       test: /\.css$/,
