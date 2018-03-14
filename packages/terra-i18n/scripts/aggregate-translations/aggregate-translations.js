@@ -11,20 +11,20 @@ const processPath = process.cwd();
 const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
 
 const defaultSearchPatterns = [
-  path.resolve(rootPath, 'translations'), // root level tranlsations
-  path.resolve(rootPath, 'node_modules', 'terra-*', 'translations'), // root level dependency tranlsations
-  path.resolve(rootPath, 'packages', 'terra-*', 'translations'), // package level tranlsations
-  path.resolve(rootPath, 'packages', 'terra-*', 'node_modules', 'terra-*', 'translations'), // package level dependency tranlsations
+  path.resolve(rootPath, 'translations'), // root level translations
+  path.resolve(rootPath, 'node_modules', 'terra-*', 'translations'), // root level dependency translations
+  path.resolve(rootPath, 'packages', 'terra-*', 'translations'), // package level translations
+  path.resolve(rootPath, 'packages', 'terra-*', 'node_modules', 'terra-*', 'translations'), // package level dependency translations
 ];
 
 const aggregatedTranslations = (options) => {
-  const directories = options.directories || [];
-  const fileSystem = options.fileSystem || fs;
-  const locales = options.locales || supportedLocales;
+  const directories = (options || {}).directories || [];
+  const fileSystem = (options || {}).fileSystem || fs;
+  const locales = (options || {}).locales || supportedLocales;
   if (!locales.includes('en')) {
     locales.push('en');
   }
-  const outputDir = options.outputDir || './aggregated-translations';
+  const outputDirectory = (options || {}).outputDir || './aggregated-translations';
 
   const searchPaths = defaultSearchPatterns.concat(directories);
 
@@ -36,8 +36,12 @@ const aggregatedTranslations = (options) => {
   // Aggregate translation messages for each of the translations directories
   const aggregatedMessages = aggregateMessages(translationDirectories, locales);
 
+  const outputDir = path.resolve(rootPath, outputDirectory);
+
   // Write aggregated translation messages to a file for each locale
   writeAggregatedTranslations(aggregatedMessages, locales, fileSystem, outputDir);
+
+  // Write intl and tranlsations loaders for the specified locales
   writeI18nLoaders(locales, fileSystem, outputDir);
 };
 

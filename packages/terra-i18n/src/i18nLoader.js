@@ -1,6 +1,6 @@
 /* eslint-disable */
 import loadIntl from './intlLoaders';
-import loadTranslations from './translationLoaders';
+import loadTranslations from './translationsLoaders';
 
 import supportedLocales from './i18nSupportedLocales';
 

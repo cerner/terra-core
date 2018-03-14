@@ -24,10 +24,7 @@ Object.keys(testFileSystems).forEach((testFS) => {
         return hash;
       });
 
-      let spyFunction = 'mkdirpSync';
-      if (fileSystem === fs) {
-        spyFunction = 'mkdirSync';
-      }
+      const spyFunction = fileSystem === fs ? 'mkdirSync' : 'mkdirpSync';
       makeDirSpy = spyOn(fileSystem, spyFunction).and.callFake(fileName => fileName);
     });
 

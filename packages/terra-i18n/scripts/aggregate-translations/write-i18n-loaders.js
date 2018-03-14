@@ -2,14 +2,14 @@ const path = require('path');
 const startCase = require('lodash.startcase');
 const supportedLocales = require('../../src/i18nSupportedLocales');
 
-const createIntlloader = (loaderName, locale) => (
+const createIntlLoader = (loaderName, locale) => (
   `const ${loaderName} = () =>
 require.ensure([],
   require => require('intl/locale-data/jsonp/${locale}.js'),
   '${locale}-intl-local');\n
 `);
 
-const createTranslationloader = (loaderName, locale) => (
+const createTranslationLoader = (loaderName, locale) => (
   `const ${loaderName} = (callback, scope) => {
   require.ensure([], (require) => {
     // eslint-disable-next-line
@@ -19,7 +19,7 @@ const createTranslationloader = (loaderName, locale) => (
 };\n
 `);
 
-const writeLoaders = (type, locales, fileSystem, outputPath) => {
+const writeLoaders = (type, locales, fileSystem, outputDir) => {
   const loaders = {};
   let loaderFile = '';
 
@@ -27,13 +27,18 @@ const writeLoaders = (type, locales, fileSystem, outputPath) => {
   locales.forEach((locale) => {
     if (type === 'intl' && !supportedLocales.includes(locale)) {
       // eslint-disable-next-line no-console
-      console.warn(`WARNING: ${locale} is NOT a Terra supported locale. Creating an translation and intl loader for ${locale}, but be sure the lanaguage specified is supported by intl, otherwise no locale-date will exist and the import will result in an error.`);
+      console.warn(`WARNING: ${locale} is NOT a Terra supported locale. Creating a translation and intl loader for ${locale}, but be sure the lanaguage specified is supported by intl, otherwise no locale-date will exist and the import will result in an error.`);
     }
 
     const localeLoaderName = startCase(locale).replace(' ', '');
     const loaderName = `load${localeLoaderName}${startCase(type)}`;
     loaders[`'${locale}'`] = loaderName;
-    loaderFile += type === 'intl' ? createIntlloader(loaderName, locale) : createTranslationloader(loaderName, locale);
+
+    if (type === 'intl') {
+      loaderFile = createIntlLoader(loaderName, locale);
+    } else {
+      loaderFile = createTranslationLoader(loaderName, locale);
+    }
   });
 
   // Create the loader exports
@@ -41,13 +46,13 @@ const writeLoaders = (type, locales, fileSystem, outputPath) => {
   loaderFile += `const ${type}Loaders = ${loaderString};\n\nmodule.exports = ${type}Loaders;`;
 
   // Write the loaders file
-  const loaderPath = path.resolve(outputPath, `${type}Loaders.js`);
+  const loaderPath = path.resolve(outputDir, `${type}Loaders.js`);
   fileSystem.writeFileSync(loaderPath, loaderFile);
 };
 
-const writeI18nLoaders = (locales, fileSystem, outputPath) => {
-  writeLoaders('intl', locales, fileSystem, outputPath);
-  writeLoaders('translations', locales, fileSystem, outputPath);
+const writeI18nLoaders = (locales, fileSystem, outputDir) => {
+  writeLoaders('intl', locales, fileSystem, outputDir);
+  writeLoaders('translations', locales, fileSystem, outputDir);
 };
 
 module.exports = writeI18nLoaders;
