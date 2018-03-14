@@ -3,6 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Implement locale fallback pattern in translations and locale loaders. Fallback pattern of try regional locale then base locale then en lastly throw error if none provided.
+* Aggregate-translations pre-build tool to aggregate translations and build dynamic intlLoader and translationLoader modules that are configured for the specified locales. This tool is offered as a CLI script and as a setup function.
+
+### Changed
+* Open up the i18nLoader restrictions such that non-terra-supported locales will load.
+
+### Fixed
+* Only load the specified aggregated-translation locales.
 
 2.1.0 - (February 26, 2018)
 ------------------
