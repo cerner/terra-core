@@ -3,7 +3,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 import I18nTests from './I18nTests';
-import DefaultI18n from './DefaultI18n';
+import DefaultI18n from '../../examples/test-examples/DefaultI18n';
 
 const routes = (
   <div>

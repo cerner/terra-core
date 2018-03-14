@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { I18nProvider, i18nLoader } from '../../lib/I18n';
+import i18nSupportedLocales from '../../lib/i18nSupportedLocales';
+
+// Zulu & Zulu-South African locales as test locales (supported by intl)
+const testLocales = i18nSupportedLocales.concat(['zu', 'zu-ZA']);
 
 class Base extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedLocale: 'en',
       areTranslationsLoaded: false,
       locale: props.locale,
       messages: {},
@@ -20,6 +25,7 @@ class Base extends React.Component {
   }
 
   handleLocaleChange(e) {
+    this.setState({ selectedLocale: e.target.value });
     i18nLoader(e.target.value, this.setState, this);
   }
 
@@ -32,18 +38,15 @@ class Base extends React.Component {
         locale={this.state.locale}
         messages={this.state.messages}
       >
-        <FormattedMessage id="Terra.ajax.error" />
-        <label htmlFor="locale"> Current locale: {this.state.locale} </label>
-        <select onChange={this.handleLocaleChange}>
-          <option value="en">en</option>
-          <option value="en-GB">en-GB</option>
-          <option value="en-US">en-US</option>
-          <option value="de">de</option>
-          <option value="es">es</option>
-          <option value="fr">fr</option>
-          <option value="pt">pt</option>
-          <option value="fi-FI">fi-FI</option>
+        <label htmlFor="locale"> Current locale: </label>
+        <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
+          {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
         </select>
+        <p><span style={{ fontWeight: 'bold' }}> Loaded locale message: </span>
+          <FormattedMessage id="Terra.ajax.error" />
+        </p>
+        {(this.state.selectedLocale).includes('zu')
+          && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the en locale as fallback.</p>}
       </I18nProvider>
     );
   }
