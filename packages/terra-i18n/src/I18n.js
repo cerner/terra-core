@@ -5,4 +5,5 @@ import i18nLoader from './i18nLoader';
 module.exports = {
   I18nProvider,
   i18nLoader,
+  injectIntl,
 };
