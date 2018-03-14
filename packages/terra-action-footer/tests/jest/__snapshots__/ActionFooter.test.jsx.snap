@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionFooter Prop Tests with both start and end actions should display both start and end actions 1`] = `
+<ActionFooter
+  end="End Action"
+  start="Start Action"
+>
+  <ActionFooterContainer
+    className=""
+  >
+    <div
+      className="action-footer-container with-actions"
+    >
+      <div
+        className="socket"
+      >
+        Start Action
+      </div>
+      <div
+        className="empty-center"
+      />
+      <div
+        className="socket"
+      >
+        End Action
+      </div>
+    </div>
+  </ActionFooterContainer>
+</ActionFooter>
+`;
+
+exports[`ActionFooter Prop Tests with only a start action should only display a start action 1`] = `
+<ActionFooter
+  start="Start Action"
+>
+  <ActionFooterContainer
+    className=""
+  >
+    <div
+      className="action-footer-container with-actions"
+    >
+      <div
+        className="socket"
+      >
+        Start Action
+      </div>
+      <div
+        className="empty-center"
+      />
+    </div>
+  </ActionFooterContainer>
+</ActionFooter>
+`;
+
+exports[`ActionFooter Prop Tests with only an end action should only display an end action 1`] = `
+<ActionFooter
+  end="End Action"
+>
+  <ActionFooterContainer
+    className=""
+  >
+    <div
+      className="action-footer-container with-actions"
+    >
+      <div
+        className="empty-center"
+      />
+      <div
+        className="socket"
+      >
+        End Action
+      </div>
+    </div>
+  </ActionFooterContainer>
+</ActionFooter>
+`;
+
+exports[`ActionFooter Prop Tests without start or end actions should display no actions 1`] = `
+<ActionFooter>
+  <ActionFooterContainer
+    className=""
+  >
+    <div
+      className="action-footer-container"
+    />
+  </ActionFooterContainer>
+</ActionFooter>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with both start and end socket buttons 1`] = `
+<ActionFooterContainer
+  className=""
+>
+  <div
+    className="socket"
+  >
+    <button>
+      Start Socket
+    </button>
+  </div>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <button>
+      End Socket
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only an end socket button 1`] = `
+<ActionFooterContainer
+  className=""
+>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <button>
+      End Socket
+    </button>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only one start socket button 1`] = `
+<ActionFooterContainer
+  className=""
+>
+  <div
+    className="socket"
+  >
+    <button>
+      Start Socket
+    </button>
+  </div>
+  <div
+    className="empty-center"
+  />
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only two end socket buttons 1`] = `
+<ActionFooterContainer
+  className=""
+>
+  <div
+    className="empty-center"
+  />
+  <div
+    className="socket"
+  >
+    <div>
+      <button>
+        End Socket 1
+      </button>
+      <button>
+        End Socket 2
+      </button>
+    </div>
+  </div>
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render a footer with only two start socket buttons 1`] = `
+<ActionFooterContainer
+  className=""
+>
+  <div
+    className="socket"
+  >
+    <div>
+      <button>
+        Start Socket 1
+      </button>
+      <button>
+        Start Socket 2
+      </button>
+    </div>
+  </div>
+  <div
+    className="empty-center"
+  />
+</ActionFooterContainer>
+`;
+
+exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `
+<ActionFooterContainer
+  className=""
+/>
+`;

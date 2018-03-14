@@ -11,6 +11,7 @@ import ThemeProvider from 'terra-theme-provider';
 import CollapsibleMenuView from 'terra-collapsible-menu-view';
 import styles from './site.scss';
 
+import ActionFooterComponentNavigation from './examples/action-footer/ActionFooterComponentNavigation';
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
 import ListComponentNavigation from './examples/list/ListComponentNavigation';
 import IconComponentNavigation from './examples/icon/IconComponentNavigation';
@@ -139,6 +140,8 @@ class App extends React.Component {
     const panelContent = (
       <ContentContainer header={navHeader} className={styles['site-panel']} fill>
         <List className={styles['site-nav']}>
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/action-footer">Action Footer</Link>} />
+          <List.Item content={<ActionFooterComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/arrange">Arrange</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/avatar">Avatar</Link>} />

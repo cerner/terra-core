@@ -5,6 +5,7 @@ import App from './App';
 import Home from './Home';
 
 // Examples
+import ActionFooterExamples from './examples/action-footer/Index';
 import AlertExamples from './examples/alert/Index';
 import ArrangeExamples from './examples/arrange/Index';
 import AvatarExamples from './examples/avatar/Index';
@@ -63,6 +64,9 @@ import ToggleSectionHeaderExamples from './examples/toggle-section-header/Index'
 
 // Test Routes
 /* eslint-disable import/first, import/no-extraneous-dependencies */
+import ActionFooterTestRoutes from 'terra-action-footer/examples/test-examples/action-footer/ActionFooterTestRoutes';
+import ActionFooterContainerTestRoutes from 'terra-action-footer/examples/test-examples/action-footer-container/ActionFooterContainerTestRoutes';
+import ActionFooterIndexRoutes from './examples/action-footer/ActionFooterIndexRoutes';
 import AlertTestRoutes from 'terra-alert/tests/nightwatch/AlertTestRoutes';
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
 import AvatarTestRoutes from 'terra-avatar/tests/nightwatch/AvatarTestRoutes';
@@ -71,6 +75,7 @@ import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
+import CenteredActionFooterTestRoutes from 'terra-action-footer/examples/test-examples/centered-action-footer/CenteredActionFooterTestRoutes';
 import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
@@ -146,6 +151,7 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
+      <Route path="action-footer" component={ActionFooterExamples} />
       <Route path="alert" component={AlertExamples} />
       <Route path="avatar" component={AvatarExamples} />
       <Route path="arrange" component={ArrangeExamples} />
@@ -201,6 +207,7 @@ ReactDOM.render((
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
       <Route path="toggle-section-header" component={ToggleSectionHeaderExamples} />
+      {ActionFooterIndexRoutes}
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
@@ -208,6 +215,8 @@ ReactDOM.render((
     </Route>
     <Route path="/tests" component={TestContainer}>
       <IndexRoute component={TestLinks} />
+      {ActionFooterTestRoutes}
+      {ActionFooterContainerTestRoutes}
       {AlertTestRoutes}
       {ArrangeTestRoutes}
       {AvatarTestRoutes}
@@ -216,6 +225,7 @@ ReactDOM.render((
       {ButtonTestRoutes}
       {ButtonGroupTestRoutes}
       {CardTestRoutes}
+      {CenteredActionFooterTestRoutes}
       {CollapsibleMenuViewTestRoutes}
       {DatePickerTestRoutes}
       {DateTimePickerTestRoutes}

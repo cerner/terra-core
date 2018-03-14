@@ -5,6 +5,8 @@ import styles from './site.scss';
 
 const TestLinks = () => (
   <ul className={styles['site-nav']}>
+    <li><Link to="/tests/action-footer">Action Footer Tests</Link></li>
+    <li><Link to="/tests/action-footer-container">Action Footer Container Tests</Link></li>
     <li><Link to="/tests/alert-tests">Alert Tests</Link></li>
     <li><Link to="/tests/arrange-tests">Arrange Tests</Link></li>
     <li><Link to="/tests/avatar-tests">Avatar Tests</Link></li>
@@ -13,6 +15,7 @@ const TestLinks = () => (
     <li><Link to="/tests/button-group-tests">Button Group Tests</Link></li>
     <li><Link to="/tests/button-tests">Button Tests</Link></li>
     <li><Link to="/tests/card-tests">Card Tests</Link></li>
+    <li><Link to="/tests/centered-action-footer">Centered Action Footer Tests</Link></li>
     <li><Link to="/tests/collapsible-menu-view-tests">Collapsible Menu View</Link></li>
     <li><Link to="/tests/content-container-tests">ContentContainer Tests</Link></li>
     <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
