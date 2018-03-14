@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 ----------
 
+1.1.0 - (March 14, 2018)
+-----------------
 ### Changed
 * Exported AvatarVariants constants.
 

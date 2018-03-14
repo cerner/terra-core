@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.3.0 - (March 14, 2018)
+------------------
 ### Changed
 * Updated to add user defined class along with default class on DOM element rendered by OverlayContainer.
 

@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+
+2.3.0 - (March 14, 2018)
+------------------
+### Changed
 * Removed error thrown when fitStart or fitEnd isn't provided.
 
 2.2.0 - (March 6, 2018)
