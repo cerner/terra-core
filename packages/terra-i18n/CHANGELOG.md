@@ -4,6 +4,9 @@ Changelog
 Unreleased
 ----------
 
+### Added
+* Exported react-intl's injectIntl
+
 2.2.0 - (March 6, 2018)
 ------------------
 ### Removed
