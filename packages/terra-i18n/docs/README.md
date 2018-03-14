@@ -55,6 +55,20 @@ Note that the state of the object needs to contain keys as follows for the i18nL
 }
 ```
 
+Children of the `I18nProvider` can use the provided `injectIntl` higher-order component generator to interface with the `I18nProvider` context:
+
+```jsx
+import React from 'react';
+import { injectIntl } from 'terra-i18n';
+
+const ChildComponent = ({ intl }) => (
+  <p>{intl.formatMessage({ id: 'my.string.id' })}</p>
+);
+
+export default injectIntl(ChildComponent);
+```
+
+
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-core/wiki/Component-Features#cross-browser-support)
 * [Internationalization Support](https://github.com/cerner/terra-core/wiki/Component-Features#internationalization-i18n-support)
