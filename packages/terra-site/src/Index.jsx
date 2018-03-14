@@ -5,8 +5,10 @@ import App from './App';
 import Home from './Home';
 
 // Examples
+import ActionFooterExamples from './examples/action-footer/Index';
 import AlertExamples from './examples/alert/Index';
 import ArrangeExamples from './examples/arrange/Index';
+import AvatarExamples from './examples/avatar/Index';
 import BadgeExamples from './examples/badge/Index';
 import BaseExamples from './examples/base/Index';
 import ButtonExamples from './examples/button/Index';
@@ -24,6 +26,7 @@ import EmbeddedContentConsumerExamples from './examples/embedded-content-consume
 import FormExamples from './examples/form/Index';
 import FormCheckboxExamples from './examples/form-checkbox/Index';
 import FormFieldExamples from './examples/form-field/Index';
+import FormFieldsetExamples from './examples/form-fieldset/Index';
 import FormInputExamples from './examples/form-input/Index';
 import FormRadioExamples from './examples/form-radio/Index';
 import FormTextareaExamples from './examples/form-textarea/Index';
@@ -43,6 +46,7 @@ import ProgressBarExamples from './examples/progress-bar/Index';
 import ResponsiveElementExamples from './examples/responsive-element/Index';
 import SignatureExamples from './examples/signature/Index';
 import SearchFieldExamples from './examples/search-field/Index';
+import SectionHeaderExamples from './examples/section-header/Index';
 import SelectExamples from './examples/form-select/Index';
 import SlideGroupExamples from './examples/slide-group/Index';
 import SlidePanelExamples from './examples/slide-panel/Index';
@@ -51,20 +55,27 @@ import StatusExamples from './examples/status/Index';
 import StatusViewExamples from './examples/status-view/Index';
 import TableExamples from './examples/table/Index';
 import TabsExamples from './examples/tabs/Index';
+import TagExamples from './examples/tag/Index';
 import TextExamples from './examples/text/Index';
 import TimeInputExamples from './examples/time-input/Index';
 import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
+import ToggleSectionHeaderExamples from './examples/toggle-section-header/Index';
 
 // Test Routes
 /* eslint-disable import/first, import/no-extraneous-dependencies */
+import ActionFooterTestRoutes from 'terra-action-footer/examples/test-examples/action-footer/ActionFooterTestRoutes';
+import ActionFooterContainerTestRoutes from 'terra-action-footer/examples/test-examples/action-footer-container/ActionFooterContainerTestRoutes';
+import ActionFooterIndexRoutes from './examples/action-footer/ActionFooterIndexRoutes';
 import AlertTestRoutes from 'terra-alert/tests/nightwatch/AlertTestRoutes';
 import ArrangeTestRoutes from 'terra-arrange/tests/nightwatch/ArrangeTestRoutes';
+import AvatarTestRoutes from 'terra-avatar/tests/nightwatch/AvatarTestRoutes';
 import BadgeTestRoutes from 'terra-badge/tests/nightwatch/BadgeTestRoutes';
 import BaseTestRoutes from 'terra-base/tests/nightwatch/BaseTestRoutes';
 import ButtonTestRoutes from 'terra-button/tests/nightwatch/ButtonTestRoutes';
 import ButtonGroupTestRoutes from 'terra-button-group/tests/nightwatch/ButtonGroupTestRoutes';
 import CardTestRoutes from 'terra-card/tests/nightwatch/CardTestRoutes';
+import CenteredActionFooterTestRoutes from 'terra-action-footer/examples/test-examples/centered-action-footer/CenteredActionFooterTestRoutes';
 import CollapsibleMenuViewTestRoutes from 'terra-collapsible-menu-view/tests/nightwatch/CollapsibleMenuViewTestRoutes';
 import ContentContainerTestRoutes from 'terra-content-container/tests/nightwatch/ContentContainerTestRoutes';
 import DatePickerTestRoutes from 'terra-date-picker/tests/nightwatch/DatePickerTestRoutes';
@@ -77,6 +88,7 @@ import EmbeddedContentConsumerTestRoutes from 'terra-embedded-content-consumer/t
 import FormTestRoutes from 'terra-form/tests/nightwatch/FormTestRoutes';
 import FormCheckboxTestRoutes from 'terra-form-checkbox/tests/nightwatch/CheckboxTestRoutes';
 import FormFieldTestRoutes from 'terra-form-field/tests/nightwatch/FieldTestRoutes';
+import FormFieldsetTestRoutes from 'terra-form-fieldset/tests/nightwatch/FieldsetTestRoutes';
 import FormIndexRoutes from './examples/form/FormIndexRoutes';
 import FormInputTestRoutes from 'terra-form-input/tests/nightwatch/InputTestRoutes';
 import FormRadioTestRoutes from 'terra-form-radio/tests/nightwatch/RadioTestRoutes';
@@ -107,6 +119,7 @@ import ProgressBarTestRoutes from 'terra-progress-bar/tests/nightwatch/ProgressB
 import PropsTableTestRoutes from 'terra-props-table/tests/nightwatch/PropsTableTestRoutes';
 import ResponsiveElementTestRoutes from 'terra-responsive-element/tests/nightwatch/ResponsiveElementTestRoutes';
 import SearchFieldTestRoutes from 'terra-search-field/tests/nightwatch/SearchFieldTestRoutes';
+import SectionHeaderTestRoutes from 'terra-section-header/tests/nightwatch/SectionHeaderTestRoutes';
 import SelectTestRoutes from 'terra-form-select/tests/nightwatch/select/SelectTestRoutes';
 import SelectOptionTestRoutes from 'terra-form-select/tests/nightwatch/select-option/SelectOptionTestRoutes';
 import SelectableListTestRoutes from 'terra-list/tests/nightwatch/selectable-list/SelectableListTestRoutes';
@@ -123,10 +136,12 @@ import TableIndexRoutes from './examples/table/TableIndexRoutes';
 import TableTestRoutes from 'terra-table/tests/nightwatch/table/TableTestRoutes';
 import TabsTestRoutes from 'terra-tabs/tests/nightwatch/Tabs/TabsTestRoutes';
 import TabPaneTestRoutes from 'terra-tabs/tests/nightwatch/TabPane/TabPaneTestRoutes';
+import TagTestRoutes from 'terra-tag/tests/nightwatch/TagTestRoutes';
 import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
 import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
+import ToggleSectionHeaderTestRoutes from 'terra-toggle-section-header/examples/test-examples/ToggleSectionHeaderTestRoutes';
 
 import TestLinks from './TestLinks';
 import TestContainer from './TestContainer';
@@ -136,7 +151,9 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
+      <Route path="action-footer" component={ActionFooterExamples} />
       <Route path="alert" component={AlertExamples} />
+      <Route path="avatar" component={AvatarExamples} />
       <Route path="arrange" component={ArrangeExamples} />
       <Route path="badge" component={BadgeExamples} />
       <Route path="base" component={BaseExamples} />
@@ -156,6 +173,7 @@ ReactDOM.render((
       <Route path="form-checkbox" component={FormCheckboxExamples} />
       <Route path="form-textarea" component={FormTextareaExamples} />
       <Route path="form-field" component={FormFieldExamples} />
+      <Route path="form-fieldset" component={FormFieldsetExamples} />
       <Route path="form-input" component={FormInputExamples} />
       <Route path="form-radio" component={FormRadioExamples} />
       <Route path="grid" component={GridExamples} />
@@ -173,6 +191,7 @@ ReactDOM.render((
       <Route path="progress-bar" component={ProgressBarExamples} />
       <Route path="responsive-element" component={ResponsiveElementExamples} />
       <Route path="search-field" component={SearchFieldExamples} />
+      <Route path="section-header" component={SectionHeaderExamples} />
       <Route path="select" component={SelectExamples} />
       <Route path="signature" component={SignatureExamples} />
       <Route path="slide-group" component={SlideGroupExamples} />
@@ -182,10 +201,13 @@ ReactDOM.render((
       <Route path="status-view" component={StatusViewExamples} />
       <Route path="table" component={TableExamples} />
       <Route path="tabs" component={TabsExamples} />
+      <Route path="tag" component={TagExamples} />
       <Route path="text" component={TextExamples} />
       <Route path="time-input" component={TimeInputExamples} />
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
+      <Route path="toggle-section-header" component={ToggleSectionHeaderExamples} />
+      {ActionFooterIndexRoutes}
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
@@ -193,13 +215,17 @@ ReactDOM.render((
     </Route>
     <Route path="/tests" component={TestContainer}>
       <IndexRoute component={TestLinks} />
+      {ActionFooterTestRoutes}
+      {ActionFooterContainerTestRoutes}
       {AlertTestRoutes}
       {ArrangeTestRoutes}
+      {AvatarTestRoutes}
       {BadgeTestRoutes}
       {BaseTestRoutes}
       {ButtonTestRoutes}
       {ButtonGroupTestRoutes}
       {CardTestRoutes}
+      {CenteredActionFooterTestRoutes}
       {CollapsibleMenuViewTestRoutes}
       {DatePickerTestRoutes}
       {DateTimePickerTestRoutes}
@@ -235,11 +261,13 @@ ReactDOM.render((
       {PropsTableTestRoutes}
       {GridTestRoutes}
       {SearchFieldTestRoutes}
+      {SectionHeaderTestRoutes}
       {PopupTestRoutes}
       {FormTestRoutes}
       {FormCheckboxTestRoutes}
       {FormTextareaRoutes}
       {FormFieldTestRoutes}
+      {FormFieldsetTestRoutes}
       {FormInputTestRoutes}
       {FormRadioTestRoutes}
       {OverlayTestRoutes}
@@ -247,6 +275,7 @@ ReactDOM.render((
       {OverlayContainerTestRoutes}
       {ToggleTestRoutes}
       {ToggleButtonTestRoutes}
+      {ToggleSectionHeaderTestRoutes}
       {HeadingTestRoutes}
       {TextTestRoutes}
       {SlideGroupTestRoutes}
@@ -258,6 +287,7 @@ ReactDOM.render((
       {StatusViewTestRoutes}
       {TabsTestRoutes}
       {TabPaneTestRoutes}
+      {TagTestRoutes}
     </Route>
   </Router>
 ), document.getElementById('root'));

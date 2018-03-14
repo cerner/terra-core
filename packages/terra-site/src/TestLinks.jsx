@@ -5,13 +5,17 @@ import styles from './site.scss';
 
 const TestLinks = () => (
   <ul className={styles['site-nav']}>
+    <li><Link to="/tests/action-footer">Action Footer Tests</Link></li>
+    <li><Link to="/tests/action-footer-container">Action Footer Container Tests</Link></li>
     <li><Link to="/tests/alert-tests">Alert Tests</Link></li>
     <li><Link to="/tests/arrange-tests">Arrange Tests</Link></li>
+    <li><Link to="/tests/avatar-tests">Avatar Tests</Link></li>
     <li><Link to="/tests/badge-tests">Badge Tests</Link></li>
     <li><Link to="/tests/base-tests">Base Tests</Link></li>
     <li><Link to="/tests/button-group-tests">Button Group Tests</Link></li>
     <li><Link to="/tests/button-tests">Button Tests</Link></li>
     <li><Link to="/tests/card-tests">Card Tests</Link></li>
+    <li><Link to="/tests/centered-action-footer">Centered Action Footer Tests</Link></li>
     <li><Link to="/tests/collapsible-menu-view-tests">Collapsible Menu View</Link></li>
     <li><Link to="/tests/content-container-tests">ContentContainer Tests</Link></li>
     <li><Link to="/tests/date-picker-tests">DatePicker Tests</Link></li>
@@ -24,6 +28,7 @@ const TestLinks = () => (
     <li><Link to="/tests/form-checkbox-tests">Form Checkbox Tests</Link></li>
     <li><Link to="/tests/form-tests">Form Tests</Link></li>
     <li><Link to="/tests/form-field-tests">Form Field Tests</Link></li>
+    <li><Link to="/tests/form-fieldset-tests">Form Fieldset Tests</Link></li>
     <li><Link to="/tests/form-input-tests">Form Input Tests</Link></li>
     <li><Link to="/tests/form-radio-tests">Form Radio Tests</Link></li>
     <li><Link to="/tests/form-textarea-tests">Form Textarea Tests</Link></li>
@@ -51,6 +56,7 @@ const TestLinks = () => (
     <li><Link to="/tests/props-table-tests">Props Table Tests</Link></li>
     <li><Link to="/tests/responsive-element-tests">ResponsiveElement Tests</Link></li>
     <li><Link to="/tests/search-field-tests">Search Field Tests</Link></li>
+    <li><Link to="/tests/section-header-tests">Section Header Tests</Link></li>
     <li><Link to="/tests/select-tests">Select Tests</Link></li>
     <li><Link to="/tests/select-option-tests">Select.Option Tests</Link></li>
     <li><Link to="/tests/selectable-list-tests">Selectable List Tests</Link></li>
@@ -66,10 +72,12 @@ const TestLinks = () => (
     <li><Link to="/tests/table-tests">Table Tests</Link></li>
     <li><Link to="/tests/tabs-tests">Tabs Tests</Link></li>
     <li><Link to="/tests/tab-pane-tests">Tab Pane Tests</Link></li>
+    <li><Link to="/tests/tag-tests">Tag Tests</Link></li>
     <li><Link to="/tests/text-tests">Text Tests</Link></li>
     <li><Link to="/tests/time-input-tests">Time Input Tests</Link></li>
     <li><Link to="/tests/toggle-tests">Toggle Tests</Link></li>
     <li><Link to="/tests/toggle-button-tests">Toggle Button Tests</Link></li>
+    <li><Link to="/tests/toggle-section-header-tests">Toggle Section Header Tests</Link></li>
   </ul>
 );
 

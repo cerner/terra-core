@@ -226,6 +226,7 @@ exports[`should render an icon 1`] = `
     >
       <img
         alt="icon"
+        className="icon-svg"
       />
     </span>
   </span>
@@ -251,6 +252,7 @@ exports[`should render an icon and a text 1`] = `
     >
       <img
         alt="icon"
+        className="icon-svg"
       />
     </span>
     <span
@@ -334,6 +336,7 @@ exports[`should render text then an icon when reversed 1`] = `
     >
       <img
         alt="icon"
+        className="icon-svg"
       />
     </span>
   </span>

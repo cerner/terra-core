@@ -13,6 +13,11 @@ Unreleased
 ### Fixed
 * Only load the specified aggregated-translation locales.
 
+2.2.0 - (March 6, 2018)
+------------------
+### Removed
+* Removed props-table script from package.json
+
 2.1.0 - (February 26, 2018)
 ------------------
 ### Changed

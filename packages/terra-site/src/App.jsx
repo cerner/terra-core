@@ -11,6 +11,7 @@ import ThemeProvider from 'terra-theme-provider';
 import CollapsibleMenuView from 'terra-collapsible-menu-view';
 import styles from './site.scss';
 
+import ActionFooterComponentNavigation from './examples/action-footer/ActionFooterComponentNavigation';
 import FormComponentNavigation from './examples/form/FormComponentNavigation';
 import ListComponentNavigation from './examples/list/ListComponentNavigation';
 import IconComponentNavigation from './examples/icon/IconComponentNavigation';
@@ -139,8 +140,11 @@ class App extends React.Component {
     const panelContent = (
       <ContentContainer header={navHeader} className={styles['site-panel']} fill>
         <List className={styles['site-nav']}>
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/action-footer">Action Footer</Link>} />
+          <List.Item content={<ActionFooterComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/alert">Alert</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/arrange">Arrange</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/avatar">Avatar</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/base">Base</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/badge">Badge</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/button">Button</Link>} />
@@ -160,6 +164,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-checkbox">Form Checkbox</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-textarea">Form Textarea</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-field">Form Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-fieldset">Form Fieldset</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-input">Form Input</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/form-radio">Form Radio</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/select">Form Select</Link>} />
@@ -180,6 +185,7 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/progress-bar">Progress Bar</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/responsive-element">Responsive Element</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/search-field">Search Field</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/section-header">Section Header</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/signature">Signature</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-group">Slide Group</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/slide-panel">Slide Panel</Link>} />
@@ -189,10 +195,12 @@ class App extends React.Component {
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/table">Table</Link>} />
           <List.Item content={<TableComponentNavigation onClick={this.handleResetScroll} />} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/tabs">Tabs</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/tag">Tag</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/text">Text</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/time-input">Time Input</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle">Toggle</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle-button">Toggle Button</Link>} />
+          <List.Item content={<Link onClick={this.handleResetScroll} to="/site/toggle-section-header">Toggle Section Header</Link>} />
           <List.Item content={<Link onClick={this.handleResetScroll} to="/tests">Tests</Link>} />
         </List>
       </ContentContainer>

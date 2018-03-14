@@ -8,7 +8,7 @@
   Terra Core
 </h1>
 
-[![Cerener OSS](https://img.shields.io/badge/Cerner-OSS-blue.svg?style=flat)](http://engineering.cerner.com/2014/01/cerner-and-open-source/)
+[![Cerner OSS](https://img.shields.io/badge/Cerner-OSS-blue.svg?style=flat)](http://engineering.cerner.com/2014/01/cerner-and-open-source/)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 [![lerna](https://img.shields.io/badge/Maintained%20With-Lerna-cc00ff.svg)](https://lernajs.io/)
 [![devDependencies status](https://david-dm.org/cerner/terra-core/dev-status.svg)](https://david-dm.org/cerner/terra-core?type=dev)
@@ -85,7 +85,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input) | [![NPM version](http://img.shields.io/npm/v/terra-time-input.svg)](https://www.npmjs.org/package/terra-time-input) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-toggle](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle) | [![NPM version](http://img.shields.io/npm/v/terra-toggle.svg)](https://www.npmjs.org/package/terra-toggle) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-toggle-button](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-button) | [![NPM version](http://img.shields.io/npm/v/terra-toggle-button.svg)](https://www.npmjs.org/package/terra-toggle-button) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
-
+| [terra-tag](https://github.com/cerner/terra-core/tree/master/packages/terra-tag) | [![NPM version](http://img.shields.io/npm/v/terra-text.svg)](https://www.npmjs.org/package/terra-text) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 ## Supported Browsers
 
 | Browser                     | Version |
