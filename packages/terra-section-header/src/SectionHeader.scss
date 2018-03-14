@@ -69,7 +69,7 @@
     @include terra-padding-start(var(--terra-section-header-accordion-icon-padding-start));
     @include terra-padding-end(var(--terra-section-header-accordion-icon-padding-end));
     padding-bottom: var(--terra-section-header-accordion-icon-padding-bottom);
-    padding-top: var(--terra-section-header-accordion-icon-padding-top, 0.142857143rem);
+    padding-top: var(--terra-section-header-accordion-icon-padding-top, 0.214285714rem);
   }
 
   .accordion-icon {

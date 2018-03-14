@@ -96,6 +96,7 @@
     "terra-time-input": "^2.2.0",
     "terra-toggle": "^2.2.0",
     "terra-toggle-button": "^2.2.0",
+    "terra-toggle-section-header": "^0.x",
     "xfc": "^1.0.0"
   },
   "peerDependencies": {

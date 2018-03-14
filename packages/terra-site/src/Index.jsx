@@ -59,6 +59,7 @@ import TextExamples from './examples/text/Index';
 import TimeInputExamples from './examples/time-input/Index';
 import ToggleExamples from './examples/toggle/Index';
 import ToggleButtonExamples from './examples/toggle-button/Index';
+import ToggleSectionHeaderExamples from './examples/toggle-section-header/Index';
 
 // Test Routes
 /* eslint-disable import/first, import/no-extraneous-dependencies */
@@ -135,6 +136,7 @@ import TextTestRoutes from 'terra-text/tests/nightwatch/TextTestRoutes';
 import TimeInputTestRoutes from 'terra-time-input/tests/nightwatch/TimeInputTestRoutes';
 import ToggleTestRoutes from 'terra-toggle/tests/nightwatch/ToggleTestRoutes';
 import ToggleButtonTestRoutes from 'terra-toggle-button/tests/nightwatch/ToggleButtonTestRoutes';
+import ToggleSectionHeaderTestRoutes from 'terra-toggle-section-header/examples/test-examples/ToggleSectionHeaderTestRoutes';
 
 import TestLinks from './TestLinks';
 import TestContainer from './TestContainer';
@@ -198,6 +200,7 @@ ReactDOM.render((
       <Route path="time-input" component={TimeInputExamples} />
       <Route path="toggle" component={ToggleExamples} />
       <Route path="toggle-button" component={ToggleButtonExamples} />
+      <Route path="toggle-section-header" component={ToggleSectionHeaderExamples} />
       {FormIndexRoutes}
       {ListIndexRoutes}
       {IconIndexRoutes}
@@ -262,6 +265,7 @@ ReactDOM.render((
       {OverlayContainerTestRoutes}
       {ToggleTestRoutes}
       {ToggleButtonTestRoutes}
+      {ToggleSectionHeaderTestRoutes}
       {HeadingTestRoutes}
       {TextTestRoutes}
       {SlideGroupTestRoutes}
