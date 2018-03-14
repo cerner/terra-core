@@ -7,7 +7,7 @@
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-intl | ^2.4.0 | ^0.14.9 \|\| ^15.0.0 \|\| ^16.0.0 | Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations. |
 | terra-base | ^3.2.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
-| terra-button-group | ^2.2.0 | ^16.2.0 | terra-button-group |
+| terra-button-group | ^2.3.0 | ^16.2.0 | terra-button-group |
 | terra-form | ^2.2.0 | ^16.2.0 | Components for building forms |
 
 ## peerDependencies

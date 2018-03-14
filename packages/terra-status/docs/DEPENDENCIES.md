@@ -10,7 +10,7 @@
 ## devDependencies
 | Dependency | Version | React Version | Description |
 |-|-|-|-|
-| terra-arrange | ^2.2.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
+| terra-arrange | ^2.3.0 | ^16.2.0 | The arrange component is used for horizontally arranging and vertically aligning a single row of container elements. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |
