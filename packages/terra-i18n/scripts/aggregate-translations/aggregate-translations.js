@@ -7,17 +7,18 @@ const aggregateMessages = require('./aggregate-messages');
 const writeAggregatedTranslations = require('./write-aggregated-translations');
 const writeI18nLoaders = require('./write-i18n-loaders');
 
-const processPath = process.cwd();
-const rootPath = processPath.includes('packages') ? processPath.split('packages')[0] : processPath;
+const defaultSearchPatterns = baseDirectory => ([
+  path.resolve(baseDirectory, 'translations'), // root level translations
+  path.resolve(baseDirectory, 'node_modules', 'terra-*', 'translations'), // root level dependency translations
+  path.resolve(baseDirectory, 'packages', 'terra-*', 'translations'), // package level translations
+  path.resolve(baseDirectory, 'packages', 'terra-*', 'node_modules', 'terra-*', 'translations'), // package level dependency translations
+]);
 
-const defaultSearchPatterns = [
-  path.resolve(rootPath, 'translations'), // root level translations
-  path.resolve(rootPath, 'node_modules', 'terra-*', 'translations'), // root level dependency translations
-  path.resolve(rootPath, 'packages', 'terra-*', 'translations'), // package level translations
-  path.resolve(rootPath, 'packages', 'terra-*', 'node_modules', 'terra-*', 'translations'), // package level dependency translations
-];
+const customDirectories = (baseDirectory, directories) =>
+  (directories.map(dir => path.resolve(baseDirectory, dir)));
 
 const aggregatedTranslations = (options) => {
+  const baseDirectory = (options || {}).baseDirectory || process.cwd();
   const directories = (options || {}).directories || [];
   const fileSystem = (options || {}).fileSystem || fs;
   const locales = (options || {}).locales || supportedLocales;
@@ -26,7 +27,7 @@ const aggregatedTranslations = (options) => {
   }
   const outputDirectory = (options || {}).outputDir || './aggregated-translations';
 
-  const searchPaths = defaultSearchPatterns.concat(directories);
+  const searchPaths = defaultSearchPatterns(baseDirectory).concat(customDirectories(baseDirectory, directories));
 
   let translationDirectories = [];
   searchPaths.forEach((searchPath) => {
@@ -36,7 +37,7 @@ const aggregatedTranslations = (options) => {
   // Aggregate translation messages for each of the translations directories
   const aggregatedMessages = aggregateMessages(translationDirectories, locales);
 
-  const outputDir = path.resolve(rootPath, outputDirectory);
+  const outputDir = path.resolve(baseDirectory, outputDirectory);
 
   // Write aggregated translation messages to a file for each locale
   writeAggregatedTranslations(aggregatedMessages, locales, fileSystem, outputDir);

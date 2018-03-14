@@ -30,7 +30,12 @@ module.exports = translationsLoaders;"
 `;
 
 exports[`write i18n loaders for fs fileSystem writes loader files 1`] = `
-"const loadEsIntl = () =>
+"const loadEnIntl = () =>
+require.ensure([],
+  require => require('intl/locale-data/jsonp/en.js'),
+  'en-intl-local');
+
+const loadEsIntl = () =>
 require.ensure([],
   require => require('intl/locale-data/jsonp/es.js'),
   'es-intl-local');
@@ -44,7 +49,15 @@ module.exports = intlLoaders;"
 `;
 
 exports[`write i18n loaders for fs fileSystem writes loader files 2`] = `
-"const loadEsTranslations = (callback, scope) => {
+"const loadEnTranslations = (callback, scope) => {
+  require.ensure([], (require) => {
+    // eslint-disable-next-line
+    const i18n = require('en.js');
+    callback.call(scope, i18n);
+  }, 'en-translations');
+};
+
+const loadEsTranslations = (callback, scope) => {
   require.ensure([], (require) => {
     // eslint-disable-next-line
     const i18n = require('es.js');
@@ -90,7 +103,12 @@ module.exports = translationsLoaders;"
 `;
 
 exports[`write i18n loaders for memoryFS fileSystem writes loader files 1`] = `
-"const loadEsIntl = () =>
+"const loadEnIntl = () =>
+require.ensure([],
+  require => require('intl/locale-data/jsonp/en.js'),
+  'en-intl-local');
+
+const loadEsIntl = () =>
 require.ensure([],
   require => require('intl/locale-data/jsonp/es.js'),
   'es-intl-local');
@@ -104,7 +122,15 @@ module.exports = intlLoaders;"
 `;
 
 exports[`write i18n loaders for memoryFS fileSystem writes loader files 2`] = `
-"const loadEsTranslations = (callback, scope) => {
+"const loadEnTranslations = (callback, scope) => {
+  require.ensure([], (require) => {
+    // eslint-disable-next-line
+    const i18n = require('en.js');
+    callback.call(scope, i18n);
+  }, 'en-translations');
+};
+
+const loadEsTranslations = (callback, scope) => {
   require.ensure([], (require) => {
     // eslint-disable-next-line
     const i18n = require('es.js');

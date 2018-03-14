@@ -7,12 +7,12 @@ const i18nSupportedLocales = require('../../src/i18nSupportedLocales');
 const aggregateTranslations = require('../../scripts/aggregate-translations/aggregate-translations');
 
 global.console = { warn: jest.fn() };
-const defaultSearchPatterns = [
-  expect.stringContaining('translations'),
-  expect.stringContaining(`node_modules${path.sep}terra-*${path.sep}translations`),
-  expect.stringContaining(`packages${path.sep}terra-*${path.sep}translations`),
-  expect.stringContaining(`packages${path.sep}terra-*${path.sep}node_modules${path.sep}terra-*${path.sep}translations`),
-];
+const defaultSearchPatterns = baseDirectory => ([
+  `${baseDirectory}${path.sep}translations`,
+  `${baseDirectory}${path.sep}node_modules${path.sep}terra-*${path.sep}translations`,
+  `${baseDirectory}${path.sep}packages${path.sep}terra-*${path.sep}translations`,
+  `${baseDirectory}${path.sep}packages${path.sep}terra-*${path.sep}node_modules${path.sep}terra-*${path.sep}translations`,
+]);
 
 describe('aggregate-translations', () => {
   let searchedDirectories;
@@ -36,16 +36,20 @@ describe('aggregate-translations', () => {
     aggregateTranslations();
 
     expect(globSpy).toHaveBeenCalledTimes(4);
-    expect(searchedDirectories).toEqual(expect.arrayContaining(defaultSearchPatterns));
+    expect(searchedDirectories).toEqual(expect.arrayContaining(defaultSearchPatterns(process.cwd())));
   });
 
   it('aggregates on the default search patterns and custom directory patterns', () => {
-    defaultSearchPatterns.push(expect.stringContaining(`test${path.sep}*${path.sep}pattern`));
-
-    aggregateTranslations({ directories: './test/*/pattern' });
+    aggregateTranslations({ directories: ['./test/*/pattern'] });
 
     expect(globSpy).toHaveBeenCalledTimes(5);
-    expect(searchedDirectories).toEqual(defaultSearchPatterns);
+    expect(searchedDirectories).toEqual(expect.arrayContaining([`${process.cwd()}${path.sep}test${path.sep}*${path.sep}pattern`]));
+  });
+
+  it('uses the custom base directory', () => {
+    aggregateTranslations({ baseDirectory: './fixtures' });
+
+    expect(searchedDirectories).toEqual(defaultSearchPatterns(path.resolve('./fixtures')));
   });
 
   it('uses the fs fileSystem by default', () => {
@@ -92,8 +96,8 @@ describe('aggregate-translations', () => {
 
   it('always aggregates on en locale even if not specfied', () => {
     const translationsFiles = [
-      expect.stringContaining(`aggregated-translations${path.sep}en.js`),
-      expect.stringContaining(`aggregated-translations${path.sep}es.js`),
+      `${process.cwd()}${path.sep}aggregated-translations${path.sep}en.js`,
+      `${process.cwd()}${path.sep}aggregated-translations${path.sep}es.js`,
     ];
 
     aggregateTranslations({ locales: ['es'] });
@@ -104,8 +108,8 @@ describe('aggregate-translations', () => {
 
   it('writes the intl and tranlsations loaders', () => {
     const loaderFiles = [
-      expect.stringContaining(`aggregated-translations${path.sep}intlLoaders.js`),
-      expect.stringContaining(`aggregated-translations${path.sep}translationsLoaders.js`),
+      `${process.cwd()}${path.sep}aggregated-translations${path.sep}intlLoaders.js`,
+      `${process.cwd()}${path.sep}aggregated-translations${path.sep}translationsLoaders.js`,
     ];
 
     aggregateTranslations();
@@ -116,7 +120,7 @@ describe('aggregate-translations', () => {
   });
 
   it('writes to the default output directory', () => {
-    const expectedOutputDir = expect.stringContaining('aggregated-translations');
+    const expectedOutputDir = expect.stringContaining(`${process.cwd()}${path.sep}aggregated-translations`);
 
     aggregateTranslations();
 
@@ -124,7 +128,7 @@ describe('aggregate-translations', () => {
   });
 
   it('writes to the provided output directory', () => {
-    const expectedOutputDir = expect.stringContaining(`translations${path.sep}folder`);
+    const expectedOutputDir = expect.stringContaining(`${process.cwd()}${path.sep}translations${path.sep}folder`);
 
     aggregateTranslations({ outputDir: './translations/folder' });
 

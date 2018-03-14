@@ -35,9 +35,9 @@ const writeLoaders = (type, locales, fileSystem, outputDir) => {
     loaders[`'${locale}'`] = loaderName;
 
     if (type === 'intl') {
-      loaderFile = createIntlLoader(loaderName, locale);
+      loaderFile += createIntlLoader(loaderName, locale);
     } else {
-      loaderFile = createTranslationLoader(loaderName, locale);
+      loaderFile += createTranslationLoader(loaderName, locale);
     }
   });
 
