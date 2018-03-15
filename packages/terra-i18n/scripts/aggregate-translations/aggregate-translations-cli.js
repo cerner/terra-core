@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const commander = require('commander');
 const i18nPackageJson = require('../../package.json');
 const supportedLocales = require('../../src/i18nSupportedLocales');
@@ -22,19 +21,17 @@ const localeList = list => (
 // Parse process arguments
 commander
   .version(i18nPackageJson.version)
-  .option('-b, --base [baseDirectory]', 'The directory to start searching from and to prepend to the output directory', process.cwd())
+  .option('-b, --baseDir [baseDir]', 'The directory to start searching from and to prepend to the output directory', process.cwd())
   .option('-d, --directories [directories]', 'Regex pattern to glob search for translations', addCustomDirectory)
-  .option('-f, --file-system [fileSystem]', 'The filesystem to write the translation and loader files to', fs)
   .option('-l, --locales <locales>', 'The list of locale codes aggregate on and combine into a single, respective translation file ', localeList, supportedLocales)
-  .option('-o, --output [outputDir]', 'The output location of the generated configuration file', './aggregated-translations')
+  .option('-o, --outputDir [outputDir]', 'The output location of the generated configuration file', './aggregated-translations')
   .parse(process.argv);
 
 const aggregationOption = {
-  baseDirectory: commander.base,
+  baseDirectory: commander.baseDir,
   directories: customSearchDirectories,
-  fileSystem: commander.fileSystem,
   locales: commander.locales,
-  outputDir: commander.output,
+  outputDir: commander.outputDir,
 };
 
 aggregateTranslations(aggregationOption);

@@ -47,7 +47,7 @@ describe('aggregate-translations', () => {
   });
 
   it('uses the custom base directory', () => {
-    aggregateTranslations({ baseDirectory: './fixtures' });
+    aggregateTranslations({ baseDir: './fixtures' });
 
     expect(searchedDirectories).toEqual(defaultSearchPatterns(path.resolve('./fixtures')));
   });

@@ -11,7 +11,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const aggregateTranslations = require('terra-i18n/scripts/aggregate-translations/aggregate-translations');
 
-aggregateTranslations({ baseDirectory: __dirname });
+aggregateTranslations({ baseDir: __dirname });
 
 const threadLoaderRule = {
   loader: 'thread-loader',

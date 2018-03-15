@@ -18,7 +18,7 @@ const customDirectories = (baseDirectory, directories) =>
   (directories.map(dir => path.resolve(baseDirectory, dir)));
 
 const aggregatedTranslations = (options) => {
-  const baseDirectory = (options || {}).baseDirectory || process.cwd();
+  const baseDir = (options || {}).baseDir || process.cwd();
   const directories = (options || {}).directories || [];
   const fileSystem = (options || {}).fileSystem || fs;
   const locales = (options || {}).locales || supportedLocales;
@@ -27,7 +27,7 @@ const aggregatedTranslations = (options) => {
   }
   const outputDirectory = (options || {}).outputDir || './aggregated-translations';
 
-  const searchPaths = defaultSearchPatterns(baseDirectory).concat(customDirectories(baseDirectory, directories));
+  const searchPaths = defaultSearchPatterns(baseDir).concat(customDirectories(baseDir, directories));
 
   let translationDirectories = [];
   searchPaths.forEach((searchPath) => {
@@ -37,7 +37,7 @@ const aggregatedTranslations = (options) => {
   // Aggregate translation messages for each of the translations directories
   const aggregatedMessages = aggregateMessages(translationDirectories, locales);
 
-  const outputDir = path.resolve(baseDirectory, outputDirectory);
+  const outputDir = path.resolve(baseDir, outputDirectory);
 
   // Write aggregated translation messages to a file for each locale
   writeAggregatedTranslations(aggregatedMessages, locales, fileSystem, outputDir);
