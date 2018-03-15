@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Import the correct Fieldset source file
 
 2.3.0 - (March 14, 2018)
 ------------------

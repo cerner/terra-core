@@ -6,7 +6,7 @@ import { version } from 'terra-form-fieldset/package.json';
 
 // Component Source
 // eslint-disable-next-line import/no-webpack-loader-syntax, import/first, import/no-unresolved, import/extensions
-import FieldsetSrc from '!raw-loader!terra-form/src/Fieldset';
+import FieldsetSrc from '!raw-loader!terra-form-fieldset/src/Fieldset';
 
 // Example Files
 import FieldsetExamples from './FieldsetExamples';
