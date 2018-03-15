@@ -44,7 +44,7 @@ describe('Badge', () => {
   });
 
   describe('Card Body Centered', () => {
-    beforeEach(() => browser.url('/#/tests/card-tests/contentcenter'));
+    beforeEach(() => browser.url('/#/raw/tests/card/card-content-center'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

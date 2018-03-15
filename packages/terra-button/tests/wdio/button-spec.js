@@ -3,7 +3,7 @@ describe('Button', () => {
   before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
   describe('Neutral', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/variant-button'));
+    beforeEach(() => browser.url('/#/raw/tests/button/variants/neutral-button'));
 
     Terra.should.beAccessible({ context: '#neutral' });
     Terra.should.matchScreenshot({ selector: '#neutral' });
@@ -66,7 +66,7 @@ describe('Button', () => {
   });
 
   describe('Emphasis', () => {
-    before(() => browser.url('/#/raw/tests/button/variant-button'));
+    before(() => browser.url('/#/raw/tests/button/variants/emphasis-button'));
 
     Terra.should.beAccessible({ context: '#emphasis' });
     Terra.should.matchScreenshot({ selector: '#emphasis' });
@@ -79,7 +79,7 @@ describe('Button', () => {
     });
 
     describe('Emphasis-Keyboard Focus', () => {
-      beforeEach(() => browser.keys(['Tab', 'Tab']));
+      beforeEach(() => browser.keys('Tab'));
 
       Terra.should.beAccessible({ context: '#emphasis' });
       Terra.should.matchScreenshot({ selector: '#emphasis' });
@@ -97,7 +97,7 @@ describe('Button', () => {
   });
 
   describe('De-emphasis', () => {
-    beforeEach(() => browser.url('/#/raw/tests/button/variant-button'));
+    beforeEach(() => browser.url('/#/raw/tests/button/variants/deemphasis-button'));
 
     Terra.should.beAccessible({ context: '#de-emphasis' });
     Terra.should.matchScreenshot({ selector: '#de-emphasis' });
@@ -110,7 +110,7 @@ describe('Button', () => {
     });
 
     describe('De-emphasis-Keyboard Focus', () => {
-      beforeEach(() => browser.keys(['Tab', 'Tab', 'Tab']));
+      beforeEach(() => browser.keys('Tab'));
 
       Terra.should.beAccessible({ context: '#de-emphasis' });
       Terra.should.matchScreenshot({ selector: '#de-emphasis' });
@@ -125,7 +125,7 @@ describe('Button', () => {
   });
 
   describe('Action', () => {
-    before(() => browser.url('/#/raw/tests/button/variant-button'));
+    before(() => browser.url('/#/raw/tests/button/variants/action-button'));
 
     Terra.should.beAccessible({ context: '#action' });
     Terra.should.matchScreenshot({ selector: '#action' });
@@ -142,7 +142,7 @@ describe('Button', () => {
     });
 
     describe('Action-Keyboard Focus', () => {
-      beforeEach(() => browser.keys(['Tab', 'Tab', 'Tab', 'Tab']));
+      beforeEach(() => browser.keys('Tab'));
 
       Terra.should.beAccessible({ context: '#action' });
       Terra.should.matchScreenshot({ selector: '#action' });
@@ -157,7 +157,7 @@ describe('Button', () => {
   });
 
   describe('Utility', () => {
-    before(() => browser.url('/#/raw/tests/button/variant-button'));
+    before(() => browser.url('/#/raw/tests/button/variants/utility-button'));
 
     Terra.should.beAccessible({ context: '#utility' });
     Terra.should.matchScreenshot({ selector: '#utility' });
@@ -170,7 +170,7 @@ describe('Button', () => {
     });
 
     describe('Utility-Keyboard Focus', () => {
-      beforeEach(() => browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Tab']));
+      beforeEach(() => browser.keys('Tab'));
 
       Terra.should.beAccessible({ context: '#utility' });
       Terra.should.matchScreenshot({ selector: '#utility' });
