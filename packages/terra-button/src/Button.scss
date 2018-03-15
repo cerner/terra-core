@@ -126,10 +126,10 @@
 
   .icon {
     display: inline-block;
+  }
 
-    > svg {
-      height: var(--terra-button-icon-height, 1rem);
-      width: var(--terra-button-icon-width, 1rem);
-    }
+  .icon-svg {
+    height: var(--terra-button-icon-height, 1rem);
+    width: var(--terra-button-icon-width, 1rem);
   }
 }

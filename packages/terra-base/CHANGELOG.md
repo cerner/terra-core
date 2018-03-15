@@ -6,6 +6,11 @@ Unreleased
 ### Fixed
 * Add missing eslint-disable-next-line no-console
 
+3.2.0 - (March 6, 2018)
+------------------
+### Removed
+* Removed props-table script from package.json
+
 3.1.0 - (February 26, 2018)
 ------------------
 ### Fixed

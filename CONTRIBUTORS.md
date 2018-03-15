@@ -55,6 +55,9 @@ Cerner Corporation
 - Carter Harwood [@harwood]
 - Mukul Dhariwal [@mukuldhariwal94]
 - Praneeth Madamsetti [@praneethm381]
+- Vaibhav Paliwal [@vaibhavpaliwal]
+- Alvin Cheung [@pseudofaux]
+- Cody Price [@dev-cprice]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -112,3 +115,7 @@ Cerner Corporation
 [@harwood]: https://github.com/harwood
 [@mukuldhariwal94]: https://github.com/mukuldhariwal94
 [@praneethm381]: https://github.com/praneethm381
+[@vaibhavpaliwal]: https://github.com/vaibhavpaliwal
+[@pseudofaux]: https://github.com/pseudofaux
+[@dev-cprice]: https://github.com/dev-cprice
+

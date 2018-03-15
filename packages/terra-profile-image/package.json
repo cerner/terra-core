@@ -1,7 +1,7 @@
 {
   "name": "terra-profile-image",
   "main": "lib/ProfileImage.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.",
   "repository": {
     "type": "git",
@@ -27,23 +27,19 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "props-table ./src/ProfileImage.jsx --out-dir ./docs/props-table",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
   },
-  "devDependencies": {
-    "terra-props-table": "^2.1.0"
-  },
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.1.0",
-    "terra-image": "^2.1.0"
+    "terra-base": "^3.2.0",
+    "terra-image": "^2.2.0"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
-    "terra-base": "^3.1.0",
-    "terra-image": "^2.1.0"
+    "terra-base": "^3.2.0",
+    "terra-image": "^2.2.0"
   }
 }

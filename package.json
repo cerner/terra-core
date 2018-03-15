@@ -34,7 +34,7 @@
       "<rootDir>/node_modules/enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.(svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(svg|jpg|png)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
   },
@@ -59,11 +59,10 @@
     "lint:scss": "lerna run lint:scss",
     "nightwatch": "nightwatch",
     "pretest": "npm run lint",
-    "props-table": "lerna run props-table",
     "postinstall": "node scripts/post-install/index.js",
     "postinstall:package": "npm run compile && npm run bootstrap",
     "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap",
-    "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
+    "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
     "start": "webpack-dev-server --progress",
     "start:build": "npm run generate-config && npm run start",
@@ -110,8 +109,8 @@
     "stylelint-order": "^0.7.0",
     "stylelint-scss": "^2.0.0",
     "stylelint-suitcss": "^1.0.0",
-    "terra-dev-site": "git://github.com/cerner/terra-dev-site.git#emilyrohrbough-patch-1",
-    "terra-toolkit": "^2.8.1",
+    "terra-dev-site": "^0.2.0",
+    "terra-toolkit": "^2.9.0",
     "wdio-mocha-framework": "^0.5.11",
     "wdio-visual-regression-service": "^0.8.0",
     "webdriverio": "4.9.9",
