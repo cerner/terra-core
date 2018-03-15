@@ -17,7 +17,7 @@ describe('Popup', () => {
     beforeEach(() => browser.url('/#/raw/tests/popup/bounded-popup'));
 
     Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty('#root', {
+    Terra.should.themeEachCustomProperty({
       '--terra-popup-content-header-border-bottom': '15px double red',
       '--terra-popup-content-close-icon': 'green',
     });
