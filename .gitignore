@@ -46,7 +46,6 @@ jspm_packages
 lib-cov
 logs
 node_modules
-!packages/terra-i18n/tests/jest/fixtures/node_modules
 npm-debug.log*
 pids
 package-lock.json
