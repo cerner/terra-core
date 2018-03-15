@@ -26,6 +26,7 @@ const aggregateTranslations = require('terra-i18n/scripts/aggregate-translations
 
 aggregateOptions = {
     baseDir: __dirname,
+    directories: ['./src/**/translations', './translations']
     locales: ['en', 'en-US'],
     outputDir: './aggregated-translations'
 }
@@ -40,7 +41,7 @@ The `aggregate-translations` CLI is supplied as a bin script, called `aggregate-
 ```js
 scripts: {
     // ...other scripts
-    "aggregate-translations": "aggregate-translations -b ./ -l ['en', 'es'] -o ./aggregated-translations",
+    "aggregate-translations": "aggregate-translations -b ./ -d ./src/**/translations -d ./translations -l ['en', 'es'] -o ./aggregated-translations",
     "start:build": "npm run aggregate-translations && npm run start"
 }
 ```
