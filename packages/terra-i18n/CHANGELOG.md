@@ -13,6 +13,9 @@ Unreleased
 ### Fixed
 * Only load the specified aggregated-translation locales.
 
+### Added
+* Exported react-intl's injectIntl and intlShape
+
 2.2.0 - (March 6, 2018)
 ------------------
 ### Removed
