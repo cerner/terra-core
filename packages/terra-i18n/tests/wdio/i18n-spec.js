@@ -21,8 +21,6 @@ describe('I18n', () => {
         browser.url('/#/tests/i18n-tests/default');
         browser.waitForVisible('select', 3000);
         browser.element('select').selectByValue(locale);
-
-        browser.pause(3000);
       });
 
 
