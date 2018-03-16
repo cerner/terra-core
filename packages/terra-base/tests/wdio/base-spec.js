@@ -12,18 +12,15 @@ describe('Base', () => {
     });
   });
 
-  // NOTE: This test is designed to assume that tests won't fail on an error.  If it starts failing,
-  // we can remove it and either deem that this scenario is not needed in night watch or find a
-  // better solution.
-  describe('No Translations Placeholder', () => {
+  describe('No Translations Fallsback to En', () => {
     it('Displays a placeholder element', () => {
       browser.url('/#/tests/base-tests/no-translations-loaded');
-      expect($('div').getText()).to.contain('No Translations');
+      expect($('div').getText()).to.not.contain('No Translations');
     });
 
     it('Displays a placeholder string', () => {
       browser.url('/#/tests/base-tests/no-translations-loaded-string');
-      expect($('div').getText()).to.contain('No Translations String');
+      expect($('div').getText()).to.not.contain('No Translations String');
     });
   });
 });
