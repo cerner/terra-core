@@ -40,7 +40,11 @@ const Dialog = ({ header, footer, onClose, children, ...customProps }) => {
     customProps.className,
   ]);
 
-  const closeButton = onClose ? <div className={cx('dialog-header-close')}><Button variant="utility" onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} />} /></div> : null;
+  const closeButton = onClose ? (
+    <div className={cx('dialog-header-close')}>
+      <Button variant="utility" onClick={onClose} isIconOnly icon={<span className={cx('close-icon')} aria-label="close" />} />
+    </div>)
+    : null;
 
   const dialogHeader = <div className={cx('dialog-header')}><div className={cx('dialog-header-title')}>{header}</div>{closeButton}</div>;
 
