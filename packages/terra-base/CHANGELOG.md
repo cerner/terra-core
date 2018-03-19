@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Add missing eslint-disable-next-line no-console
 
 3.2.0 - (March 6, 2018)
 ------------------

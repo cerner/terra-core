@@ -6,7 +6,7 @@ describe('Tag', () => {
     before(() => browser.setViewportSize(Terra.viewports('tiny')[0]));
 
     describe('Default Tag', () => {
-      beforeEach(() => browser.url('/#/tests/tag-tests/default-tag'));
+      beforeEach(() => browser.url('/#/raw/tests/tag/default-tag'));
 
       Terra.should.beAccessible();
       Terra.should.matchScreenshot();
@@ -33,18 +33,18 @@ describe('Tag', () => {
   });
 
   describe('Default OnClick Tag', () => {
-    before(() => browser.url('/#/tests/tag-tests/default-on-click-tag'));
+    before(() => browser.url('/#/raw/tests/tag/default-on-click-tag'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Href Tag', () => {
-    before(() => browser.url('/#/tests/tag-tests/href-tag'));
+    before(() => browser.url('/#/raw/tests/tag/href-tag'));
     Terra.should.matchScreenshot();
   });
 
   describe('Icon and Text Tag', () => {
-    beforeEach(() => browser.url('/#/tests/tag-tests/icon-and-text-tag'));
+    beforeEach(() => browser.url('/#/raw/tests/tag/icon-and-text-tag'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
@@ -57,21 +57,21 @@ describe('Tag', () => {
   });
 
   describe('Icon and Text Long Tag', () => {
-    beforeEach(() => browser.url('/#/tests/tag-tests/icon-and-long-text-tag'));
+    beforeEach(() => browser.url('/#/raw/tests/tag/long-text-tag'));
 
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
   });
 
   describe('Multiple Tags', () => {
-    beforeEach(() => browser.url('/#/tests/tag-tests/multiple-tags'));
+    beforeEach(() => browser.url('/#/raw/tests/tag/multiple-tags'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('OnClick Tag', () => {
-    before(() => browser.url('/#/tests/tag-tests/on-click-tag'));
+    before(() => browser.url('/#/raw/tests/tag/on-click-tag'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot();
     Terra.should.themeEachCustomProperty({
@@ -82,7 +82,7 @@ describe('Tag', () => {
 
     describe('OnClick Tag - Keyboard focus', () => {
       beforeEach(() => {
-        browser.url('/#/tests/tag-tests/on-click-tag');
+        browser.url('/#/raw/tests/tag/on-click-tag');
         browser.keys('Tab');
       });
 
@@ -98,7 +98,7 @@ describe('Tag', () => {
 
     describe('OnClick Tag - Hover', () => {
       beforeEach(() => {
-        browser.url('/#/tests/tag-tests/on-click-tag');
+        browser.url('/#/raw/tests/tag/on-click-tag');
         browser.moveToObject('button');
       });
 

@@ -2,7 +2,7 @@
 
 describe('Loading Overlay', () => {
   describe('Loading Overlay Default', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/default'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/default-loading-overlay'));
 
     Terra.should.beAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.should.matchScreenshot({ selector: '#terra-LoadingOverlay' });
@@ -13,21 +13,21 @@ describe('Loading Overlay', () => {
   });
 
   describe('Loading Overlay Container', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/container'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/container-loading-overlay'));
 
     Terra.should.beAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.should.matchScreenshot({ selector: '#terra-LoadingOverlay' });
   });
 
   describe('Loading Custom Message', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/custom-message'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/custom-message-loading-overlay'));
 
     Terra.should.beAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.should.matchScreenshot({ selector: '#terra-LoadingOverlay' });
   });
 
   describe('Animated', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/animated'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/animated-loading-overlay'));
 
     it('Expect Icon to be animated', () => {
       expect(browser.getAttribute('#terra-LoadingOverlay div svg', 'class')).contains('is-spin');
@@ -35,7 +35,7 @@ describe('Loading Overlay', () => {
   });
 
   describe('Light Loading Theme', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/light-themed'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/light-loading-overlay'));
 
     Terra.should.beAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.should.matchScreenshot({ selector: '#terra-LoadingOverlay' });
@@ -50,7 +50,7 @@ describe('Loading Overlay', () => {
   });
 
   describe('Dark Loading Overlay Theme', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/dark-themed'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/dark-loading-overlay'));
 
     Terra.should.beAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.should.matchScreenshot({ selector: '#terra-LoadingOverlay' });
@@ -65,7 +65,7 @@ describe('Loading Overlay', () => {
   });
 
   describe('Clear Loading Overlay Theme', () => {
-    before(() => browser.url('/#/tests/loading-overlay-tests/clear-themed'));
+    before(() => browser.url('/#/raw/tests/overlay/loading-overlay/clear-loading-overlay'));
 
     Terra.should.beAccessible({ selector: '#terra-LoadingOverlay' });
     Terra.should.matchScreenshot({ selector: '#terra-LoadingOverlay' });

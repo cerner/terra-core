@@ -29,7 +29,7 @@ let expectRowIsSelected;
 let expectRowIsNotSelected;
 let expectRow;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   beforeEach: (browser) => {
     expectRowIsSelected = index => expectRowForBrowserAtIndexIsSelected(browser, index);
     expectRowIsNotSelected = index => expectRowForBrowserAtIndexIsNotSelected(browser, index);
@@ -38,12 +38,12 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a default selectable table': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table`)
       .expect.element('tr[class*="is-selectable"]').to.be.present;
   },
 
   'Display a selectable table and highlights the selected row upon clicking': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table`);
 
     browser.click('[class*="row"]:nth-child(1)');
     expectRowIsSelected(0);
@@ -62,7 +62,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Display a selectable table and highlights the selected row upon enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.ENTER);
     expectRowIsSelected(0);
@@ -81,7 +81,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Display a selectable table and highlights the selected row upon space keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.SPACE);
     expectRowIsSelected(0);
@@ -100,7 +100,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Toggle aria-selected on selectable rows': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table`);
     browser.click('[class*="row"]:nth-child(1)');
     expectRow(0).to.have.attribute('aria-selected').which.contains('true');
     expectRow(1).to.have.attribute('aria-selected').which.contains('false');
@@ -118,7 +118,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers onChange for selectable table upon clicking a row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/onchange`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-on-change`);
 
     browser.click('[class*="row"]:nth-child(1)');
     browser.assert.containsText('#selected-indexes', '0');
@@ -134,7 +134,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'onChange returns indexes in order rows were clicked': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/onchange`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-on-change`);
 
     browser.click('[class*="row"]:nth-child(2)');
     browser.assert.containsText('#selected-indexes', '1');
@@ -150,19 +150,19 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a selectable table with a preselected row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/preselected`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-preselected`);
     expectRowIsSelected(0);
     expectRowIsNotSelected(1);
     expectRowIsNotSelected(2);
   },
 
   'Displays a selectable table with a non-selectable row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/non-selectable`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-non-selectable`);
     expectRowIsNotSelected(0);
   },
 
   'Displays a selectable table with a max selection count honored on click': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count`);
 
     browser.click('[class*="row"]:nth-child(1)');
     expectRowIsSelected(0);
@@ -181,7 +181,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a selectable table with a max selection count honored on enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.ENTER);
     expectRowIsSelected(0);
@@ -200,7 +200,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a selectable table with a max selection count honored on space keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.SPACE);
     expectRowIsSelected(0);
@@ -219,7 +219,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a initially met max count selectable table with a max selection count honored on click': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-met`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-met`);
 
     browser.click('[class*="row"]:nth-child(3)');
     expectRowIsSelected(0);
@@ -228,7 +228,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a initially met max count selectable table with a max selection count honored on enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-met`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-met`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.ENTER);
     expectRowIsSelected(0);
@@ -237,7 +237,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a initially met max count selectable table with a max selection count honored on space keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-met`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-met`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.SPACE);
     expectRowIsSelected(0);
@@ -246,7 +246,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays an initially exceeded max count selectable table with correctly selected rows': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-exceeded`);
 
     expectRowIsSelected(0);
     expectRowIsSelected(1);
@@ -255,7 +255,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays an initially exceeded max count selectable table with a max selection count honored on click': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-exceeded`);
 
     browser.click('[class*="row"]:nth-child(3)');
     expectRowIsSelected(0);
@@ -265,7 +265,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a initially exceeded max count selectable table with a max selection count honored on enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-exceeded`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.ENTER);
     expectRowIsSelected(0);
@@ -275,7 +275,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a initially exceeded max count selectable table with a max selection count honored on space keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/multi-select-table-tests/max-count-initially-exceeded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/multi-select-table/multi-row-selectable-table-max-count-initially-exceeded`);
 
     browser.sendKeys('[class*="row"]:nth-child(3)', browser.Keys.SPACE);
     expectRowIsSelected(0);

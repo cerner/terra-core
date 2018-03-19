@@ -5,14 +5,14 @@
 const { resizeTo } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 const constants = require('./SignatureConstants');
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default signature': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/signature-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
     browser.expect.element('canvas[class*="signature"]').to.be.present;
   },
 
   'Draw a line signature and verify canvas': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/signature-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
@@ -30,7 +30,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Draw line, exit canvas to another element, then continue drawing': (browser) => {
-    browser.url(`${browser.launchUrl}/#tests/signature-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
@@ -49,7 +49,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Validates right click drawing is disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/signature-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
@@ -67,7 +67,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Validates middle click drawing is disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/signature-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/signature/signature-default`);
     browser.expect.element('canvas#drawline').to.be.present;
 
     browser
