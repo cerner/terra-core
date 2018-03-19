@@ -29,7 +29,7 @@ let expectRowIsSelected;
 let expectRowIsNotSelected;
 let expectRow;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   beforeEach: (browser) => {
     expectRowIsSelected = index => expectRowForBrowserAtIndexIsSelected(browser, index);
     expectRowIsNotSelected = index => expectRowForBrowserAtIndexIsNotSelected(browser, index);

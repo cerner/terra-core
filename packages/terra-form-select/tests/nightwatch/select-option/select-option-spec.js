@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays default option': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/form-select/select-option/default-select-option`);
     browser.expect.element('#defaultOption').text.to.equal('Default');

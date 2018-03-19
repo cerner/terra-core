@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default progress bar': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/progress-bar/progress-bar-default`); // Browser computes #304FFE to rgba(48, 79, 254, 1);
   },

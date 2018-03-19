@@ -18,10 +18,6 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
-   * Determines whether the fieldset is an inline fieldset.
-   */
-  isInline: PropTypes.bool,
-  /**
    * Legend for the input group.
    */
   legend: PropTypes.string,
@@ -36,15 +32,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isInline: false,
   legendAttrs: {},
   required: false,
 };
 
-const Fieldset = ({ children, help, isInline, legend, legendAttrs, required, ...customProps }) => {
+const Fieldset = ({ children, help, legend, legendAttrs, required, ...customProps }) => {
   const fieldsetClasses = cx([
     'fieldset',
-    { 'fieldset-inline': isInline },
     { 'fieldset-required': required },
     customProps.className,
   ]);

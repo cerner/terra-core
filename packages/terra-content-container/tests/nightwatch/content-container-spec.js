@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'enormous'], {
+module.exports = resizeTo(['medium'], {
   'Displays a content container with default props': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/content-container/default-content-container`);
     browser.expect.element('#content-container').to.be.present;
