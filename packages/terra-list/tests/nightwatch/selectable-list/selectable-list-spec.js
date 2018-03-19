@@ -5,23 +5,23 @@ const { checkElementsClass } = require('../common.js');
 const listItemSelectors = ['ul li:nth-child(1)', 'ul li:nth-child(2)', 'ul li:nth-child(3)'];
 const selectedClasses = ['selected', 'selected', 'selected'];
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a selectable list': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/selectable-list-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/default-selectable-list`)
       .assert.elementPresent('ul');
   },
 
   'Displays items in the selectable list': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/selectable-list-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/default-selectable-list`)
       .assert.containsText('ul li:nth-child(1)', 'test 1')
       .assert.containsText('ul li:nth-child(2)', 'test 2')
       .assert.containsText('ul li:nth-child(3)', 'test 3');
   },
 
   'Triggers onChange for a selectable list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/on-change-selectable-list`);
 
     browser.sendKeys('ul li:nth-child(1)', browser.Keys.SPACE);
     browser.assert.containsText('#current-index', '0');
@@ -34,7 +34,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers onChange for disabled unselected': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/disabled-on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/disable-unselected-selectable-list`);
 
     browser.sendKeys('ul li:nth-child(1)', browser.Keys.ENTER);
     browser.assert.containsText('#current-index', '0');
@@ -47,32 +47,32 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays items in the selectable list with a chevron from hasChevrons prop': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/chevron`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/chevron-selectable-list`);
     browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
   },
 
   'Displays chevron selectable list with one non-chevron item': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/single-non-chevron`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/single-non-chevron-selectable-list`);
     browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
   },
 
   'Displays selectable list with one chevron item': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/single-chevron`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/single-chevron-selectable-list`);
     browser.expect.element('li span').to.have.attribute('class').which.contains('chevron');
   },
 
   'Displays items in the selectable list divided': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/items-divided`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/items-divided-selectable-list`);
     browser.expect.element('ul').to.have.attribute('class').which.contains('divided');
   },
 
   'Displays only one selected item in the selectablelist': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/preselected`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/preselected-item-selectable-list`);
     checkElementsClass(browser, listItemSelectors, selectedClasses, [false, true, false]);
   },
 
   'Displays a non-selectable item in the selectable list': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/selectable-list-tests/non-selectable`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/non-selectable-item-selectable-list`);
     browser.expect.element('ul li:nth-child(3)').to.have.attribute('class').which.not.contains('is-selectable');
 
     browser.click('ul li:nth-child(3)');
@@ -81,21 +81,14 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a selectable list with one item': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/selectable-list-tests/one-item`)
+      .url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/one-item-selectable-list`)
       .assert.elementPresent('ul');
-    browser
-      .url(`${browser.launchUrl}/#/tests/selectable-list-tests/one-item`)
-      .assert.elementPresent('li');
   },
 
   'Displays a selectable list with no items': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/selectable-list-tests/no-items`)
+      .url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/no-items-selectable-list`)
       .assert.elementPresent('ul');
-
-    browser
-      .url(`${browser.launchUrl}/#/tests/selectable-list-tests/no-items`)
-      .assert.elementNotPresent('li');
   },
 
 });

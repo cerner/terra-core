@@ -2,15 +2,15 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default selectable table': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/single-select-table-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/selectable-table`)
       .expect.element('tr[class*="is-selectable"]').to.be.present;
   },
 
   'Display a selectable table and highlights the selected row upon clicking': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/selectable-table`);
     browser.click('[class*="row"]:nth-child(1)');
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
     browser.expect.element('[class*="row"]:nth-child(2)').to.have.attribute('class').which.not.contains('is-selected');
@@ -28,7 +28,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Display a selectable table and highlights the selected row upon enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/selectable-table`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.ENTER);
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
@@ -47,7 +47,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Display a selectable table and highlights the selected row upon space keydown': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/selectable-table`);
 
     browser.sendKeys('[class*="row"]:nth-child(1)', browser.Keys.SPACE);
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
@@ -66,7 +66,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Toggle aria-selected on selectable rows': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/selectable-table`);
     browser.click('[class*="row"]:nth-child(1)');
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('aria-selected').which.contains('true');
     browser.expect.element('[class*="row"]:nth-child(2)').to.have.attribute('aria-selected').which.contains('false');
@@ -84,7 +84,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers onChange for selectable table upon clicking a row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/onchange`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/single-row-selectable-table-on-change`);
 
     browser.click('[class*="row"]:nth-child(1)');
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
@@ -106,14 +106,14 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a selectable table with a preselected row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/preselected`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/single-row-selectable-table-preselected`);
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.attribute('class').which.contains('is-selected');
     browser.expect.element('[class*="row"]:nth-child(2)').to.have.attribute('class').which.not.contains('is-selected');
     browser.expect.element('[class*="row"]:nth-child(3)').to.have.attribute('class').which.not.contains('is-selected');
   },
 
   'Displays a selectable table with a non-selectable row': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/single-select-table-tests/non-selectable`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/table/single-select-table/single-row-selectable-table-non-selectable`);
     browser.expect.element('[class*="row"]:nth-child(1)').to.have.not.attribute('class').which.contains('is-selectable');
   },
 });

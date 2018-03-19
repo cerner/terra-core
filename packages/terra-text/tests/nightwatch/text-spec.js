@@ -3,18 +3,18 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 
 module.exports = resizeTo(['medium'], {
   'Displays a default text component': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/text/default-text`);
     browser.expect.element('#text').text.to.equal('Default');
     browser.expect.element('#text').to.be.an('span');
   },
 
   'Displays a text component with a set color': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/color`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/text/text-color`);
     browser.assert.cssProperty('#textColor', 'color', 'rgba(48, 79, 254, 1)'); // Browser computes #304FFE to rgba(48, 79, 254, 1)
   },
 
   'Displays a text component with a set font size': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/font-size`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/text/text-font-size`);
     // Chrome browser computes to the hundredths, rem units to pixels, when retrieved
     browser.assert.cssProperty('#textFontSize100', 'font-size', '100.002px');
     browser.assert.cssProperty('#textFontSize32', 'font-size', '32.004px');
@@ -28,19 +28,19 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a text component with set italics': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/italics`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/text/text-italics`);
     browser.assert.cssProperty('#textItalic', 'font-style', 'italic');
   },
 
   'Displays a text component with a set weight': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/weight`);
+    browser.url(`${browser.launchUrl}/#tests/text/text-weight`);
     browser.assert.cssProperty('#textFontWeight700', 'font-weight', '700');
     browser.assert.cssProperty('#textFontWeight400', 'font-weight', '400');
     browser.assert.cssProperty('#textFontWeight200', 'font-weight', '200');
   },
 
   'Displays a text component with set hidden visibility': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/visually-hidden`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/text/text-visually-hidden`);
     browser.assert.cssProperty('#textVisuallyHidden', 'border', '0px none rgb(28, 31, 33)'); // Browser computes 0 as 0px none rgb(28, 31, 33)
     browser.assert.cssProperty('#textVisuallyHidden', 'clip', 'rect(0px 0px 0px 0px)');
     browser.assert.cssProperty('#textVisuallyHidden', 'height', '1px');
@@ -52,7 +52,7 @@ module.exports = resizeTo(['medium'], {
   },
 
   'Displays a text component with all visual props set': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/text-tests/visual-props`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/text/text-visual-props`);
     browser.expect.element('#textVisualProps').text.to.equal('All Visual Props Set');
   },
 });

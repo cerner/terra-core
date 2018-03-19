@@ -23,7 +23,7 @@ const waitInms = 3000;
 module.exports = resizeTo(['medium'], {
   'Displays ajax error message in default': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms);
 
     browser.expect.element('div').text.to.contain(defaultTranslations['Terra.ajax.error']).before(waitInms);
@@ -31,7 +31,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in de': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="de"]');
 
@@ -40,7 +40,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in en': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="en"]');
 
@@ -49,7 +49,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in en-GB': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="en-GB"]');
 
@@ -58,7 +58,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in en-US': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="en-US"]');
 
@@ -67,7 +67,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in es': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="es"]');
 
@@ -76,7 +76,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in fi-FI': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="fi-FI"]');
 
@@ -85,7 +85,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in fr': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="fr"]');
 
@@ -94,7 +94,7 @@ module.exports = resizeTo(['medium'], {
 
   'Displays ajax error message in pt': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/i18n-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/i-18-n/default-i-18-n`)
       .waitForElementVisible('select', waitInms)
       .click('select option[value="pt"]');
 

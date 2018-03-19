@@ -6,6 +6,7 @@ import SlidePanel from '../../../lib/SlidePanel';
 const SlidePanelFill = () => (
   <div style={{ height: '200px', overflow: 'auto' }}>
     <SlidePanel
+      id="test-example"
       mainContent={<SlidePanelMainContent />}
       panelContent={<SlidePanelPanelContent />}
       isOpen

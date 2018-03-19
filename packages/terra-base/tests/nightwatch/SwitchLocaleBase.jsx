@@ -35,7 +35,7 @@ class SwitchLocaleBase extends React.Component {
         customMessages={customMessages[this.state.locale]}
       >
         <div id="message"><FormattedMessage id="App.locale" /></div>
-        <button onClick={this.handleSwitchLocale}>
+        <button id="switch" onClick={this.handleSwitchLocale}>
           Switch
         </button>
       </Base>

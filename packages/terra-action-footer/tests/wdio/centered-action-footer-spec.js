@@ -7,7 +7,7 @@ const {
 
 describe('CenteredActionFooter', () => {
   describe('Empty', () => {
-    beforeEach(() => browser.url('/#/tests/centered-action-footer/empty'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/centered-action-footer/empty-centered-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -15,7 +15,7 @@ describe('CenteredActionFooter', () => {
   });
 
   describe('Multiple Actions', () => {
-    beforeEach(() => browser.url('/#/tests/centered-action-footer/multiple-actions'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/centered-action-footer/multiple-action-centered-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -23,7 +23,7 @@ describe('CenteredActionFooter', () => {
   });
 
   describe('Single Action', () => {
-    beforeEach(() => browser.url('/#/tests/centered-action-footer/single-action'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/centered-action-footer/single-action-centered-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

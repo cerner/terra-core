@@ -38,7 +38,7 @@ const onAuthorize = () => {
 
 const DataStatusConsumer = () => (
   <EmbeddedContentConsumer
-    src="#/tests/embedded-content-consumer-tests/data-status-provider"
+    src="#/raw/tests/embedded-content-consumer/providers/data-status-provider"
     onMount={onMount}
     onLaunch={onLaunch}
     onAuthorize={onAuthorize}

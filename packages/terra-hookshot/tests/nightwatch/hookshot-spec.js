@@ -2,10 +2,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   // minimum props
   'Displays default hookshot': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/default-hookshot`);
     browser.click('#hookshot-standard-button');
     browser.expect.element('#testDefaultContent').to.be.present;
   },
@@ -16,7 +16,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
     // mirror: valid primary position, valid 180 degree, pushed by bounds
     // auto: valid primary position, valid 180 degree, valid 90 degree, valid -90 degree, pushed by bounds
   'Displays in primary position when there is enough room with no attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-none`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-none`);
     browser.click('#position-primary');
     browser.click('#trigger-attachment-behavior-none');
     browser.expect.element('#attachment-behavior-none-content').to.be.present;
@@ -27,7 +27,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position pushed when there is not enough room in primary position with no attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-none`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-none`);
     browser.click('#position-pushed');
     browser.click('#trigger-attachment-behavior-none');
     browser.expect.element('#attachment-behavior-none-content').to.be.present;
@@ -38,7 +38,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays in primary position when there is enough room with flip attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-flip`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-flip`);
     browser.click('#position-primary');
     browser.click('#trigger-attachment-behavior-flip');
     browser.expect.element('#attachment-behavior-flip-content').to.be.present;
@@ -49,7 +49,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position flipped when there is not enough room in primary position with flip attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-flip`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-flip`);
     browser.click('#position-flipped');
     browser.click('#trigger-attachment-behavior-flip');
     browser.expect.element('#attachment-behavior-flip-content').to.be.present;
@@ -60,7 +60,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position pushed when there is not enough room in primary or flipped position with flip attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-flip`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-flip`);
     browser.click('#position-pushed');
     browser.click('#trigger-attachment-behavior-flip');
     browser.expect.element('#attachment-behavior-flip-content').to.be.present;
@@ -71,7 +71,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays in primary position when there is enough room with auto attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-auto`);
     browser.click('#position-primary');
     browser.click('#trigger-attachment-behavior-auto');
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
@@ -82,7 +82,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position flipped when there is not enough room in primary position with auto attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-auto`);
     browser.click('#position-flipped');
     browser.click('#trigger-attachment-behavior-auto');
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
@@ -93,7 +93,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position rotated 90 degrees when there is not enough room in primary or flipped positions with auto attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-auto`);
     browser.click('#position-90-deg');
     browser.click('#trigger-attachment-behavior-auto');
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
@@ -104,7 +104,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position rotated -90 degrees when there is not enough room in primary, flipped, or 90 degree positions with auto attachment behavior': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-auto`);
     browser.click('#position-neg-90-deg');
     browser.click('#trigger-attachment-behavior-auto');
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
@@ -115,7 +115,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with position pushed when there is not enough room in primary, flipped, 90 degree, or -90 degree positions with auto attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-behavior-auto`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-behavior-auto`);
     browser.click('#position-pushed');
     browser.click('#trigger-attachment-behavior-auto');
     browser.expect.element('#attachment-behavior-auto-content').to.be.present;
@@ -127,7 +127,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   // attachmentMargin: validate number set adjusts positioning by so much.
   'Displays with given margin between the attachment points - Middle Start Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-MS');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -138,7 +138,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Middle End Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-ME');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -149,7 +149,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays without margin between the attachment points - Middle Center Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-MC');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -160,7 +160,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Bottom Start Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-BS');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -171,7 +171,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Bottom End Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-BE');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -182,7 +182,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Bottom Center Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-BC');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -193,7 +193,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Top Start Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-TS');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -204,7 +204,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Top End Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-TE');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -215,7 +215,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays with given margin between the attachment points - Top Center Content Attachment': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/attachment-margin`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-attachment-margin`);
     browser.click('#attach-TC');
     browser.click('#trigger-attachment-margin');
     browser.expect.element('#attachment-margin-content').to.be.present;
@@ -227,7 +227,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   // boundingRef: test - top bottom start end bounding container adjustments.
   'Displays content pushed start by bounding container': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-bounding-container`);
     browser.click('#push-left');
     browser.click('#trigger-bounding-container');
     browser.expect.element('#bounding-container-content').to.be.present;
@@ -238,7 +238,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays content pushed end by bounding container': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-bounding-container`);
     browser.click('#push-right');
     browser.click('#trigger-bounding-container');
     browser.expect.element('#bounding-container-content').to.be.present;
@@ -249,7 +249,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays content pushed down by bounding container': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-bounding-container`);
     browser.click('#push-down');
     browser.click('#trigger-bounding-container');
     browser.expect.element('#bounding-container-content').to.be.present;
@@ -260,7 +260,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays content pushed up by bounding container': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/bounding-container`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-bounding-container`);
     browser.click('#push-up');
     browser.click('#trigger-bounding-container');
     browser.expect.element('#bounding-container-content').to.be.present;
@@ -272,7 +272,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
     // Verify Content Offset Positioning
   'Display the content offset correctly for dir=ltr': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-offset`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-offset`);
     browser.expect.element('#ContentOffset-content').to.be.present;
     // Offset Applied (20px, -10px).
     // For the defined content attachment: "bottom end" & target attachment: "bottom start"
@@ -304,7 +304,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   // Verify Target Offset Positioning
   'Display the target offset correctly for dir=ltr': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/target-offset`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-target-offset`);
     browser.expect.element('#TargetOffset-content').to.be.present;
     // Offset Applied (-10px, -20px).
     // For the defined content attachment: "bottom start" & target attachment: "top start"
@@ -336,7 +336,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   // Verify Enabled Behaviors
   'Content is positioned and visible when isEnabled={true}': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/enabled-behaviors`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-enabled-behaviors`);
     browser.expect.element('#Enabled-content').to.be.present;
     browser.expect.element('#Enabled-content').to.have.css('opacity').which.equals('1');
     browser.expect.element('#Enabled-content').to.have.css('position').which.equals('absolute');
@@ -350,7 +350,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   // Verify Close Behaviors
   'Closes the hookshot content on ESC when all close behavior is present': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/close-behaviors`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-close-behaviors`);
     browser.click('#trigger-AllBehavior');
     browser.expect.element('#AllBehavior-content').to.be.present;
     browser.keys(browser.Keys.ESCAPE);
