@@ -7,7 +7,7 @@ Consumer.init();
 
 const OnReadyConsumer = () => (
   <EmbeddedContentConsumer
-    src="#/tests/embedded-content-consumer-tests/on-ready-provider"
+    src="#/raw/tests/embedded-content-consumer/providers/on-ready-provider"
   />
 );
 

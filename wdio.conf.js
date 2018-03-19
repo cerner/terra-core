@@ -3,7 +3,7 @@ const wdioConf = require('terra-toolkit/lib/wdio/conf');
 const ExpressDevService = require('terra-toolkit/lib/wdio/services/index').ExpressDevService;
 const localIP = require('ip');
 const path = require('path');
-const webpackConfig = require('./packages/terra-site/webpack.config.js');
+const webpackConfig = require('./webpack.config');
 
 const webpackPort = 8080;
 
@@ -39,8 +39,9 @@ const config = {
       }],
     },
   },
+
   terra: {
-    selector: '#wdio-test-wrapper',
+    selector: '[data-terra-dev-site-content] *:first-child',
   },
 
   beforeHook() {

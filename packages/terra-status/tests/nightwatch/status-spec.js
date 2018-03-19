@@ -4,25 +4,25 @@ const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resi
 module.exports = resizeTo(['medium'], {
   'Displays a default status': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/status-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/status/status-default`)
       .expect.element('#status').text.to.contain('Sample text');
   },
 
   'Displays arrange status example': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/status-tests/arrange`)
+      .url(`${browser.launchUrl}/#/raw/tests/status/status-arrange`)
       .expect.element('#statusArrange').text.to.contain('Sample text');
   },
 
   'Displays icon status example': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/status-tests/icon`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/status/status-icon`);
   },
 
   'Displays image status example': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/status-tests/image`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/status/status-image`);
   },
 
   'Displays status with no style': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/status-tests/no-color`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/status/status-no-color`);
   },
 });

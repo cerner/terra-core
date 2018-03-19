@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny');
 
 describe('Badge', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/tests/card-tests/default'));
+    beforeEach(() => browser.url('/#/raw/tests/card/default-card'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -17,21 +17,21 @@ describe('Badge', () => {
   });
 
   describe('Card Body Padding Horizontal', () => {
-    beforeEach(() => browser.url('/#/tests/card-tests/paddinghorizontal'));
+    beforeEach(() => browser.url('/#/raw/tests/card/card-padding-horizontal'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Card Body Padding Vertical', () => {
-    beforeEach(() => browser.url('/#/tests/card-tests/paddingvertical'));
+    beforeEach(() => browser.url('/#/raw/tests/card/card-padding-vertical'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Card Body Padded', () => {
-    beforeEach(() => browser.url('/#/tests/card-tests/padding'));
+    beforeEach(() => browser.url('/#/raw/tests/card/card-padding'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -44,7 +44,7 @@ describe('Badge', () => {
   });
 
   describe('Card Body Centered', () => {
-    beforeEach(() => browser.url('/#/tests/card-tests/contentcenter'));
+    beforeEach(() => browser.url('/#/raw/tests/card/card-content-center'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

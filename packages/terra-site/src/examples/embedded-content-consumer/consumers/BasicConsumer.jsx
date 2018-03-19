@@ -3,7 +3,7 @@ import EmbeddedContentConsumer from 'terra-embedded-content-consumer';
 
 const BasicConsumer = () => (
   <EmbeddedContentConsumer
-    src="#/tests/embedded-content-consumer-tests/basic-provider"
+    src="#/raw/tests/embedded-content-consumer/providers/basic-provider"
   />
 );
 

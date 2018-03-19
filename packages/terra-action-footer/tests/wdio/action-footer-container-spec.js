@@ -7,7 +7,7 @@ const {
 
 describe('ActionFooterContainer', () => {
   describe('No Actions', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer-container/without-actions'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer-container/without-actions-action-footer-container'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -15,7 +15,7 @@ describe('ActionFooterContainer', () => {
   });
 
   describe('With Actions', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer-container/with-actions'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer-container/with-actions-action-footer-container'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

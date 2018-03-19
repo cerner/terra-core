@@ -1,10 +1,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default SelectField with a single option': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/select-field/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/select-field/default-select-field`)
       .assert.elementPresent('#default-select-field')
       .assert.elementPresent('select')
       .assert.elementPresent('option:nth-of-type(1)') // 1 option present
@@ -13,7 +13,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a SelectField with a single option, using deprecated choices prop': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/select-field/choices_prop`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/select-field/choices-prop-select-field`)
       .assert.elementPresent('#prop-select-field')
       .assert.elementPresent('select')
       .assert.elementPresent('option:nth-of-type(1)') // 1 option present
@@ -22,7 +22,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a populated SelectField with multiple options': (browser) => {
     browser // Field attributes
-      .url(`${browser.launchUrl}/#/tests/form-tests/select-field/populated`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/select-field/populated-select-field`)
       .assert.elementPresent('#populated-select-field')
       .assert.containsText('label', 'Meddling Kids')
       .assert.containsText('small', 'solve the mystery')
@@ -36,7 +36,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a populated SelectField with a defaultValue selected and can change selection': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/select-field/populated`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/select-field/populated-select-field`)
       .assert.value('select[name="zounds"]', 'b')
       .assert.containsText('select[name="zounds"]', 'boo')
       .setValue('select[name="zounds"]', 'm')
@@ -46,7 +46,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a populated Select Field with a onChange and value for controlled form submission': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/select-field/populated_controlled`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/select-field/populated-select-field-controlled`)
       .assert.elementPresent('#controlled-populated-select-field')
       .assert.value('select[name="animal"]', 'micros')
       .assert.elementPresent('option:nth-of-type(4)') // 4 options present
@@ -55,7 +55,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Controlled Select Field correctly submits form data': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-tests/select-field/populated_controlled`)
+      .url(`${browser.launchUrl}/#/raw/tests/form/select-field/populated-select-field-controlled`)
       .assert.value('select[name="animal"]', 'micros')
       .setValue('select[name="animal"]', 'kittens')
       .click('#select-submit')

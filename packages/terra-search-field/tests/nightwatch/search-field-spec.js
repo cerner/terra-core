@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a search field with search button': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/default-search-field`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -11,7 +11,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field with a placeholder value of "Search Text"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/placeholder`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/placeholder-search-field`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -19,7 +19,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field that handles search callbacks': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/callback`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/callback-search-field`);
 
     browser
       .click('#searchfield button')
@@ -40,7 +40,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field with a search delay of 1000': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/delayed`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/delayed-search-field`);
 
     browser
       .setValue('input[type=search]', 'Test')
@@ -51,7 +51,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field with a minimum search text length of 5 characters': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/minimum-length`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/minimum-length-search-field`);
 
     browser
       .setValue('input[type=search]', 'Test')
@@ -65,7 +65,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the search button with a height that matches the input ': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/default-search-field`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -79,7 +79,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field with a default value': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/default-value`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/search-field-default-value`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -87,7 +87,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field with a consumer onchange handler': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/onchange`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/search-field-on-change`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -116,7 +116,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field with a value': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/value`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/search-field-with-value`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -124,7 +124,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field that is disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disabled`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/search-field-disabled`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -134,7 +134,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a search field displayed as block style to fill its container': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/block`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/search-field-block`);
 
     browser.expect.element('#searchfield').to.be.present.to.equal(true);
     browser.expect.element('#searchfield button').to.be.present.to.equal(true);
@@ -144,7 +144,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the search field and disables the auto searching ': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/auto-search-disabled-search-field`);
 
     browser
       .setValue('input[type=search]', 'S')
@@ -158,7 +158,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the search field with auto searching on and handles ENTER keypress to search ': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/enter`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/search-field-enter`);
 
     browser
       .setValue('input[type=search]', 'S')
@@ -180,7 +180,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the search field with auto searching off and handles ENTER keypress to search ': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/search-field-tests/disable-auto-search`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/search-field/auto-search-disabled-search-field`);
 
     browser
       .setValue('input[type=search]', 'S')

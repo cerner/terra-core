@@ -5,7 +5,7 @@ const { resizeTo } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 module.exports = resizeTo(['small'], {
   // Verifty contentAttachment = "top start"
   '[1] Display correctly for contentAttachment="top start" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-start`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-ts`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
@@ -106,7 +106,7 @@ module.exports = resizeTo(['small'], {
 
     // Verifty contentAttachment = "top center"
   '[10] Display correctly for contentAttachment="top center" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-center`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-tc`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
@@ -207,7 +207,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "top end"
   '[19] Display correctly for contentAttachment="top end" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-top-end`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-te`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
@@ -308,7 +308,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "middle start"
   '[28] Display correctly for contentAttachment="middle start" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-start`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-ms`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
@@ -409,7 +409,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "middle center"
   '[37] Display correctly for contentAttachment="middle center" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-center`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-mc`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
@@ -510,7 +510,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "middle end"
   '[46] Display correctly for contentAttachment="middle end" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-middle-end`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-me`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1
@@ -611,7 +611,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "bottom start"
   '[55] Display correctly for contentAttachment="bottom start" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-start`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-bs`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) + 1
@@ -712,7 +712,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "bottom center"
   '[64] Display correctly for contentAttachment="bottom center" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-center`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-bc`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200/2 (half content width) + 1
@@ -813,7 +813,7 @@ module.exports = resizeTo(['small'], {
 
   // Verifty contentAttachment = "bottom end"
   '[73] Display correctly for contentAttachment="bottom end" & targetAttachment="top start"': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/hookshot-tests/content-attachment-bottom-end`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/hookshot-content-attachment-be`);
     browser.click('#attach-TS');
     browser.expect.element('#attachment-content').to.be.present;
     // x value calculation: value = 220 (margin) - 200 (content width) + 1

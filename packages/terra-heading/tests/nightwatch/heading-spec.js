@@ -1,20 +1,20 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default heading component': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/default-heading`);
     browser.expect.element('#heading-default').text.to.equal('Default');
     browser.expect.element('#heading-default').to.be.an('h1');
   },
 
   'Displays a heading component with a set color': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/color`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-color`);
     browser.assert.cssProperty('#heading-color', 'color', 'rgba(48, 79, 254, 1)'); // Browser computes #304FFE to rgba(48, 79, 254, 1)
   },
 
   'Displays a heading component with a set size': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/size`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-size`);
     // Chrome browser computes to the hundredths, rem units to pixels, when retrieved
     browser.assert.cssProperty('#heading-size-huge', 'font-size', '32.004px');
     browser.assert.cssProperty('#heading-size-large', 'font-size', '23.996px');
@@ -25,12 +25,12 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a heading component with set italics': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/italics`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-italics`);
     browser.assert.cssProperty('#heading-italic', 'font-style', 'italic');
   },
 
   'Displays a heading component with set levels': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/levels`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-levels`);
     // Chrome browser computes to the hundredths, rem units to pixels, when retrieved
     browser.assert.cssProperty('#heading-level-1', 'font-size', '32.004px');
     browser.assert.cssProperty('#heading-level-2', 'font-size', '23.996px');
@@ -41,14 +41,14 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a heading component with a set weight': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/weight`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-weight`);
     browser.assert.cssProperty('#heading-weight-700', 'font-weight', '700');
     browser.assert.cssProperty('#heading-weight-400', 'font-weight', '400');
     browser.assert.cssProperty('#heading-weight-200', 'font-weight', '200');
   },
 
   'Displays a heading component with set hidden visibility': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/visually-hidden`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-visually-hidden`);
     browser.assert.cssProperty('#heading-visually-hidden', 'border', '0px none rgb(28, 31, 33)'); // Browser computes 0 as 0px none rgb(28, 31, 33)
     browser.assert.cssProperty('#heading-visually-hidden', 'clip', 'rect(0px 0px 0px 0px)');
     browser.assert.cssProperty('#heading-visually-hidden', 'height', '1px');
@@ -60,7 +60,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays a heading component with all visual props set': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/heading-tests/visual-props`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/heading/heading-visual-props`);
     browser.expect.element('#heading-visual-props').text.to.equal('All Visual Props Set');
   },
 });

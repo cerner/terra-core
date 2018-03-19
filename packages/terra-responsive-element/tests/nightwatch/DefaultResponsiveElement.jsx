@@ -27,17 +27,5 @@ function getStyle(size) {
 }
 
 const DefaultResponsiveElement = () => <div style={getStyle('default')}>{responsiveElement}</div>;
-const TinyResponsiveElement = () => <div style={getStyle('tiny')}>{responsiveElement}</div>;
-const SmallResponsiveElement = () => <div style={getStyle('small')}>{responsiveElement}</div>;
-const MediumResponsiveElement = () => <div style={getStyle('medium')}>{responsiveElement}</div>;
-const LargeResponsiveElement = () => <div style={getStyle('large')}>{responsiveElement}</div>;
-const HugeResponsiveElement = () => <div style={getStyle('huge')}>{responsiveElement}</div>;
 
-export {
-  DefaultResponsiveElement,
-  TinyResponsiveElement,
-  SmallResponsiveElement,
-  MediumResponsiveElement,
-  LargeResponsiveElement,
-  HugeResponsiveElement,
-};
+export default DefaultResponsiveElement;

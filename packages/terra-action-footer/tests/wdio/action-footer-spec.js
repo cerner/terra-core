@@ -7,7 +7,7 @@ const {
 
 describe('ActionFooter', () => {
   describe('Empty', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/empty'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/empty-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -15,21 +15,21 @@ describe('ActionFooter', () => {
   });
 
   describe('Multiple End Actions', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/multiple-end-actions'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/multiple-end-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Multiple Start Actions', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/multiple-start-actions'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/multiple-start-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Multiple Start and End Actions', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/multiple-start-end-actions'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/multiple-start-end-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -37,21 +37,21 @@ describe('ActionFooter', () => {
   });
 
   describe('Single End Action', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/single-end-action'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/single-end-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Single Start Action', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/single-start-action'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/single-start-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
   });
 
   describe('Single Start and End Action', () => {
-    beforeEach(() => browser.url('/#/tests/action-footer/single-start-end-action'));
+    beforeEach(() => browser.url('/#/raw/tests/action-footer/action-footer/single-start-end-action-footer'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });

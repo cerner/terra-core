@@ -11,7 +11,6 @@ const fieldset = () =>
     value="children_present"
     help="Families are eligible for family package plans"
     required
-    isInline
   />;
 
 export default fieldset;

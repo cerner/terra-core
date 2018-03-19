@@ -2,9 +2,9 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays the time input with default props': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.expect.element('#timeInput').to.be.present;
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.be.present;
@@ -14,7 +14,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the time input with a default time': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default-time`);
 
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.be.present;
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('value').equals('12');
@@ -23,7 +23,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Ignores invalid times that are passed into a timepicker': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/invalid-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-invalid-date`);
 
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.be.present;
     browser.expect.element('#timeInput input[name="terra-time-hour-time-input"]').to.have.attribute('value').equals('');
@@ -32,7 +32,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Time input accepts valid time entry and jumps to the minute input when the hour input has a valid entry': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -42,7 +42,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Prepends 0 on deblur when the value in the hour input is a single digit': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('2');
@@ -51,7 +51,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Prepends 0 on deblur when the value in the minute input is a single digit': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -61,7 +61,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Hour input prepends 0 to the hour if the entered hour is >= 3': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -70,7 +70,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Hour input does not prepends 0 to the hour if the entered hour is < 3': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -79,7 +79,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Hour input does not accept entered hour is > 23': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -88,7 +88,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Minute input prepends 0 to the minute if the entered minute is >= 6': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -97,7 +97,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Minute input does not prepends 0 to the minute if the entered minute is < 6': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -106,7 +106,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Minute input does not accept entered minute is > 59': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -115,7 +115,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the DOWN_ARROW key decrements the hour by 1 hour': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default-time`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -125,7 +125,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the UP_ARROW key increments the hour by 1 hour': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default-time`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -135,7 +135,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the UP_ARROW key is ignored when the hour has reached 23': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -146,7 +146,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the DOWN_ARROW key is ignored when the hour is 00': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
@@ -156,7 +156,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the DOWN_ARROW key decrements the minute by 1 minute': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
     browser.keys('30');
@@ -167,7 +167,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the UP_ARROW key increments the minute by 1 minute': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
     browser.keys('30');
@@ -178,7 +178,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the UP_ARROW key is ignored when the minute has reached 59': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -189,7 +189,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the DOWN_ARROW key is ignored when the minute is 00': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.click('#timeInput input[name="terra-time-minute-time-input"]');
 
@@ -199,7 +199,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Pressing the DELETE key in the minute input when there is no value will move focus to the hour input': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default-time`);
     // Click puts the cursor at the end of hour input feild, then key to the beginning of the minute input field.
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys(browser.keys.RIGHT_ARROW);
@@ -209,21 +209,21 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Creates a hidden input with a name atribute of "time-input" and an empty value attribute when no time is entered': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default`);
 
     browser.expect.element('#timeInput input[type="hidden"]').to.have.attribute('name').which.equals('time-input');
     browser.expect.element('#timeInput input[type="hidden"]').to.have.attribute('value').which.equals('');
   },
 
   'Creates a hidden input with a name atribute of "time-input" and sets the time in the value attribute.': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/default-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-default-time`);
 
     browser.expect.element('#timeInput input[type="hidden"]').to.have.attribute('name').which.equals('time-input');
     browser.expect.element('#timeInput input[type="hidden"]').to.have.attribute('value').which.equals('T12:00');
   },
 
   'Triggers onChange for time-input for key entry': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-on-change`);
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
 
     browser.keys('1023');
@@ -231,7 +231,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers onChange for time-input for arrow entry': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-on-change`);
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('1023');
 
@@ -243,7 +243,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers onChange for time-input for onBlur focus change': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-on-change`);
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('7');
     browser.assert.containsText('#time-input-value', '07:');
@@ -253,7 +253,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Does not triggers onChange for hour input for key entry when hour has just one character': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-on-change`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('1223');
@@ -265,7 +265,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Does not triggers onChange for time-input for key entry when minute has just one character': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/time-input-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-on-change`);
 
     browser.click('#timeInput input[name="terra-time-hour-time-input"]');
     browser.keys('1223');

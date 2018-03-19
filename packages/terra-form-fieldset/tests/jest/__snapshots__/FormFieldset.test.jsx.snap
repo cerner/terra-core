@@ -2,7 +2,7 @@
 
 exports[`should render a Fieldset when all the possible props are passed into it 1`] = `
 <fieldset
-  className="fieldset fieldset-inline fieldset-required fieldset-custom"
+  className="fieldset fieldset-required fieldset-custom"
 >
   <legend
     className="legend healtheintent-legend"

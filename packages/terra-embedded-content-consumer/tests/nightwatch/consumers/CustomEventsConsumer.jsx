@@ -22,7 +22,7 @@ const eventHandlers = [
 const CustomEventsConsumer = () => (
   <div id="CustomEvents">
     <EmbeddedContentConsumer
-      src="#/tests/embedded-content-consumer-tests/custom-events-provider"
+      src="#/raw/tests/embedded-content-consumer/providers/custom-events-provider"
       eventHandlers={eventHandlers}
     />
   </div>
