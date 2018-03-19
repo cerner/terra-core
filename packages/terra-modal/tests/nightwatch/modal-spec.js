@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Opens and closes a modal correctly': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/modal/modal-is-open`);
     browser.waitForElementPresent('.button-open-modal', 5000);

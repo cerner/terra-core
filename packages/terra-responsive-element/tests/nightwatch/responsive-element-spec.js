@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays the default element when contained within a parent of default size': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/responsive-element/default-responsive-element`)

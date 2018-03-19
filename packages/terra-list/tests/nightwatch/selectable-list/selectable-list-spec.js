@@ -5,7 +5,7 @@ const { checkElementsClass } = require('../common.js');
 const listItemSelectors = ['ul li:nth-child(1)', 'ul li:nth-child(2)', 'ul li:nth-child(3)'];
 const selectedClasses = ['selected', 'selected', 'selected'];
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a selectable list': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/raw/tests/list/selectable-list/default-selectable-list`)

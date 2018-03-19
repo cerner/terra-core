@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { resizeTo, screenWidth } = require('terra-toolkit/lib/nightwatch/responsive-helpers');
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   // minimum props
   'Displays default hookshot': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/hookshot/default-hookshot`);
