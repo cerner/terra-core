@@ -7,7 +7,7 @@ module.exports = resizeTo(['medium'], {
   // Just the spacer component with <div> tag as child and without any props set
   'Displays a default spacer': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/default-spacer`)
       .expect.element('#spacer').to.be.present;
   },
 
@@ -19,7 +19,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with small-2 margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerSmall2`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-small-2`)
       .expect.element('#spacerMarginSmall2').to.be.present;
     browser.expect.element('#spacerPaddingSmall2').to.be.present;
     browser.expect.element('#spacerMarginPaddingSmall2').to.be.present;
@@ -53,7 +53,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with small-1 margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerSmall1`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-small-1`)
       .expect.element('#spacerMarginSmall1').to.be.present;
     browser.expect.element('#spacerPaddingSmall1').to.be.present;
     browser.expect.element('#spacerMarginPaddingSmall1').to.be.present;
@@ -87,7 +87,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with small margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerSmall`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-small`)
       .expect.element('#spacerMarginSmall').to.be.present;
     browser.expect.element('#spacerPaddingSmall').to.be.present;
     browser.expect.element('#spacerMarginPaddingSmall').to.be.present;
@@ -121,7 +121,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with medium margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerMedium`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-medium`)
       .expect.element('#spacerMarginMedium').to.be.present;
     browser.expect.element('#spacerPaddingMedium').to.be.present;
     browser.expect.element('#spacerMarginPaddingMedium').to.be.present;
@@ -155,7 +155,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with large margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-large`)
       .expect.element('#spacerMarginLarge').to.be.present;
     browser.expect.element('#spacerPaddingLarge').to.be.present;
     browser.expect.element('#spacerMarginPaddingLarge').to.be.present;
@@ -189,7 +189,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with large+1 margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge1`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-large-1`)
       .expect.element('#spacerMarginLarge1').to.be.present;
     browser.expect.element('#spacerPaddingLarge1').to.be.present;
     browser.expect.element('#spacerMarginPaddingLarge1').to.be.present;
@@ -223,7 +223,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with large+2 margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge2`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-large-2`)
       .expect.element('#spacerMarginLarge2').to.be.present;
     browser.expect.element('#spacerPaddingLarge2').to.be.present;
     browser.expect.element('#spacerMarginPaddingLarge2').to.be.present;
@@ -257,7 +257,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with large+3 margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge3`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-large-3`)
       .expect.element('#spacerMarginLarge3').to.be.present;
     browser.expect.element('#spacerPaddingLarge3').to.be.present;
     browser.expect.element('#spacerMarginPaddingLarge3').to.be.present;
@@ -291,7 +291,7 @@ module.exports = resizeTo(['medium'], {
    */
   'Displays spacer with large+4 margin': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/spacer-tests/SpacerLarge4`)
+      .url(`${browser.launchUrl}/#/raw/tests/spacer/spacer-large-4`)
       .expect.element('#spacerMarginLarge4').to.be.present;
     browser.expect.element('#spacerPaddingLarge4').to.be.present;
     browser.expect.element('#spacerMarginPaddingLarge4').to.be.present;

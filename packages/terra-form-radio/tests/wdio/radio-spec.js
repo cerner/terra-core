@@ -11,7 +11,7 @@ const themeCombinationOfCustomProperties = (testName, customProperties) => {
     Object.entries(customProperties).forEach(([key, value]) => {
       global.browser.execute(`document.documentElement.style.setProperty('${key}', '${value}')`);
     });
-    global.expect(global.browser.checkElement('#wdio-test-wrapper > *:first-child')).to.matchReference();
+    global.expect(global.browser.checkElement('[data-terra-dev-site-content] *:first-child')).to.matchReference();
   });
 };
 
@@ -22,10 +22,10 @@ describe('Radio', () => {
 
   describe('Default', () => {
     beforeEach(() => {
-      browser.url('/#/tests/form-radio-tests/default');
+      browser.url('/#/raw/tests/form-radio/default-radio');
     });
 
-    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+    Terra.should.matchScreenshot();
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -64,7 +64,7 @@ describe('Radio', () => {
         browser.moveToObject('#default');
       });
 
-      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+      Terra.should.matchScreenshot();
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -107,7 +107,7 @@ describe('Radio', () => {
         browser.click('#default');
       });
 
-      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+      Terra.should.matchScreenshot();
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -160,7 +160,7 @@ describe('Radio', () => {
         browser.keys('Tab');
       });
 
-      Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+      Terra.should.matchScreenshot();
       Terra.should.beAccessible();
 
       themeCombinationOfCustomProperties('custom', {
@@ -237,10 +237,10 @@ describe('Radio', () => {
 
   describe('Disabled', () => {
     beforeEach(() => {
-      browser.url('/#/tests/form-radio-tests/disabled');
+      browser.url('/#/raw/tests/form-radio/disabled-radio');
     });
 
-    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+    Terra.should.matchScreenshot();
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {
@@ -282,9 +282,9 @@ describe('Radio', () => {
   });
 
   describe('Hidden Label', () => {
-    beforeEach(() => browser.url('/#/tests/form-radio-tests/hidden'));
+    beforeEach(() => browser.url('/#/raw/tests/form-radio/hidden-radio'));
 
-    Terra.should.matchScreenshot({ selector: '#wdio-test-wrapper > *:first-child' });
+    Terra.should.matchScreenshot();
     Terra.should.beAccessible();
 
     themeCombinationOfCustomProperties('custom', {

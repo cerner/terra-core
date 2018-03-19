@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const wdioConf = require('terra-toolkit/lib/wdio/conf');
-const WebpackDevService = require('terra-toolkit/lib/wdio/services/index').WebpackDevService;
+const ExpressDevService = require('terra-toolkit/lib/wdio/services/index').ExpressDevService;
 const localIP = require('ip');
 const path = require('path');
-const webpackConfig = require('./packages/terra-site/webpack.config.js');
+const webpackConfig = require('./webpack.config');
 
 const webpackPort = 8080;
 
@@ -28,7 +28,6 @@ const config = {
   // Ignore deprecation warnings. When chrome supports /actions API we'll update to use those.
   deprecationWarnings: false,
 
-  webpackPort,
   webpackConfig,
 
   axe: {
@@ -40,8 +39,9 @@ const config = {
       }],
     },
   },
+
   terra: {
-    selector: '#wdio-test-wrapper',
+    selector: '[data-terra-dev-site-content] *:first-child',
   },
 
   beforeHook() {
@@ -52,5 +52,5 @@ const config = {
   },
 };
 
-config.services = wdioConf.config.services.concat([WebpackDevService]);
+config.services = wdioConf.config.services.concat([ExpressDevService]);
 exports.config = config;

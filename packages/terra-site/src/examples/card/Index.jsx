@@ -15,6 +15,7 @@ import CardPadding from './CardPadding';
 import CardPaddingVertical from './CardPaddingVertical';
 import CardPaddingHorizontal from './CardPaddingHorizontal';
 import CardPaddingHR from './CardPaddingHR';
+import CardContentCentered from './CardContentCentered';
 
 // Example Files
 
@@ -34,6 +35,8 @@ const CardExamples = () => (
     <CardPaddingHorizontal />
     <h2 id="CardPaddingHR">Card plus padded and non-padded children</h2>
     <CardPaddingHR />
+    <h2 id="CardContentCentered">Centered content inside card</h2>
+    <CardContentCentered />
   </div>
 );
 

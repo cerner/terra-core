@@ -4,6 +4,14 @@ Changelog
 Unreleased
 ----------
 
+2.2.0 - (March 6, 2018)
+------------------
+### Removed
+* Removed props-table script from package.json
+
+### Changed
+* Updated package to use latest minor release of react-animate-height
+
 2.1.0 - (February 26, 2018)
 ------------------
 ### Changed

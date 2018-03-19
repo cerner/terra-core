@@ -1,7 +1,7 @@
 {
   "name": "terra-divider",
   "main": "lib/Divider.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "The divider component is used to visually separate content on a layout.",
   "repository": {
     "type": "git",
@@ -23,11 +23,11 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "terra-base": "^3.1.0"
+    "terra-base": "^3.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "terra-base": "^3.1.0"
+    "terra-base": "^3.2.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
@@ -36,7 +36,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
-    "props-table": "echo \"props-table is not used here as this component does not have any props\"",
     "test": "npm run test:jest && npm run test:nightwatch",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
     "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"

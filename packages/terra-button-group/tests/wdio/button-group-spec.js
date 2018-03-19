@@ -2,37 +2,37 @@
 
 describe('Button Group', () => {
   describe('Text Button', () => {
-    beforeEach(() => browser.url('/#/tests/button-group-tests/text-button-group'));
+    beforeEach(() => browser.url('/#/raw/tests/button-group/button-group-text'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-text' });
   });
 
   describe('Long Text Button', () => {
-    beforeEach(() => browser.url('/#/tests/button-group-tests/long-text-button-group'));
+    beforeEach(() => browser.url('/#/raw/tests/button-group/button-group-long-text'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-text' });
   });
 
   describe('Icon Button', () => {
-    beforeEach(() => browser.url('/#/tests/button-group-tests/icon-button-group'));
+    beforeEach(() => browser.url('/#/raw/tests/button-group/button-group-icon'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-icon' });
   });
 
   describe('Not Selectable', () => {
-    beforeEach(() => browser.url('/#/tests/button-group-tests/not-selectable-button-group'));
+    beforeEach(() => browser.url('/#/raw/tests/button-group/button-group-not-selectable'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-not-selectable' });
   });
 
   describe('Disabled Buttons', () => {
-    beforeEach(() => browser.url('/#/tests/button-group-tests/not-selectable-button-group'));
+    beforeEach(() => browser.url('/#/raw/tests/button-group/button-group-disabled-buttons'));
     Terra.should.beAccessible();
     Terra.should.matchScreenshot({ selector: '#button-group-not-selectable' });
   });
 
   describe('Single-Select', () => {
-    before(() => browser.url('/#/tests/button-group-tests/single-select-button-group'));
+    before(() => browser.url('/#/raw/tests/button-group/button-group-single-select'));
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');
@@ -63,7 +63,7 @@ describe('Button Group', () => {
   });
 
   describe('Multi-Select', () => {
-    before(() => browser.url('/#/tests/button-group-tests/multi-select-button-group'));
+    before(() => browser.url('/#/raw/tests/button-group/button-group-multi-select'));
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');

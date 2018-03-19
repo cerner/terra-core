@@ -1,10 +1,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default item group': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/menu-item-group-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item-group/menu-item-group-default`)
       .assert.elementPresent('.TestGroup')
       .assert.elementPresent('.TestGroupItem1')
       .assert.elementPresent('.TestGroupItem2')
@@ -12,7 +12,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
   'Items in the item group are selectable': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/menu-item-group-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/menu/menu-item-group/menu-item-group-default`)
       .click('.TestGroupItem3')
       .assert.visible('.TestGroupItem3 svg[class*="_checkmark"]')
       .assert.containsText('#selected-index', '2')

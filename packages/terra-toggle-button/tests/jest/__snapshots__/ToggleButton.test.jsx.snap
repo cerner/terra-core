@@ -17,7 +17,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
         class="icon icon-first"
       >
         <span
-          class="icon"
+          class="icon icon-svg"
         >
           <svg
             aria-hidden="true"
@@ -66,7 +66,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
         class="icon icon-first"
       >
         <span
-          class="icon"
+          class="icon icon-svg"
         >
           <svg
             aria-hidden="true"
@@ -126,7 +126,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
         class="icon"
       >
         <span
-          class="icon"
+          class="icon icon-svg"
         >
           <svg
             aria-hidden="true"
@@ -170,7 +170,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
         class="icon icon-first"
       >
         <span
-          class="icon"
+          class="icon icon-svg"
         >
           <svg
             aria-hidden="true"
@@ -268,7 +268,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
             className="icon icon-first"
           >
             <span
-              className="icon"
+              className="icon icon-svg"
             >
               <IconChevronRight
                 className=""

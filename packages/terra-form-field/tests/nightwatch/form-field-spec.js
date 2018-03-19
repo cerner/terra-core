@@ -2,48 +2,48 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a field with a label': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#label').to.be.present.before(10000);
     browser.expect.element('#label > div[class*="label-group"] > label[class*="label"]').to.be.present;
   },
 
   'Displays an optional field': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#label-optional').to.be.present;
     browser.expect.element('#label-optional > div[class*="label-group"] > label > div[class*="optional"]').to.be.present;
     browser.expect.element('#label-optional > div[class*="label-group"] > label div[class*="optional"]').text.to.contain('(optional)');
   },
 
   'Displays an required field': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#label-required').to.be.present;
     browser.expect.element('#label-required > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
     browser.expect.element('#label-required > div[class*="label-group"] > label > div[class*="required_"]').text.to.contain('*');
   },
 
   'Displays a Field with a hidden label': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#label-hidden').to.be.present;
     browser.expect.element('#label-hidden > div[class*="label-group"][class*="label-group-hidden"]').to.be.present;
     browser.expect.element('#label-hidden > div[class*="label-group"]').to.have.css('display').which.equals('none');
   },
 
   'Displays a field with help text': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#help-text').to.be.present;
     browser.expect.element('#help-text > div[class*="help-text"]').to.be.present;
   },
 
   'Displays a field with error text': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#error-text').to.be.present;
     browser.expect.element('#error-text > div[class*="error-text"]').to.be.present;
   },
 
   'Displays an invalid optional field with a label, help text and error text': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#optional-invalid').to.be.present;
     browser.expect.element('#optional-invalid > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
     browser.expect.element('#optional-invalid > div[class*="label-group"] > label').to.be.present;
@@ -52,7 +52,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays an invalid required field with a label, help text and error text': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/combinations`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-combinations`);
     browser.expect.element('#required-invalid').to.be.present;
     browser.expect.element('#required-invalid > div[class*="label-group"] > div[class*="error-icon"]').to.be.present;
     browser.expect.element('#required-invalid > div[class*="label-group"] > label > div[class*="required_"]').to.be.present;
@@ -61,7 +61,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Label remains hidden when Field is invalid': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/is-invalid`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-interactive-invalid`);
 
     browser.expect.element('#label-hidden > div[class*="label-group"][class*="label-group-hidden"]').to.be.present;
     browser.click('#toggle-is-invalid');
@@ -69,7 +69,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Label maintains appropriate spacing for error-icon hidden and visible': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/is-invalid`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-interactive-invalid`);
 
     browser.expect.element('#default > div[class*="label-group"] > label[class*="label"]').to.be.present;
     browser.expect.element('#default > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
@@ -90,7 +90,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Hidden required label maintains appropriate spacing for error-icon hidden and visible': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/is-invalid`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-interactive-invalid`);
 
     browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
     browser.expect.element('#required-hidden > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
@@ -115,7 +115,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Field maintains width when is-invalid': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/is-invalid`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-interactive-invalid`);
 
     browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon_"]').to.not.be.present;
     browser.expect.element('#inline-2 > div[class*="label-group"] > div[class*="error-icon-hidden"]').to.be.present;
@@ -140,7 +140,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays inline field correctly': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/form-field-tests/inline`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/form-field/field-inline`);
     browser.expect.element('#inline-1"]').to.not.be.present;
     browser.expect.element('#inline-2"]').to.not.be.present;
     browser.expect.element('#inline-3"]').to.not.be.present;
@@ -148,7 +148,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a default Field with the correct text wrapping': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/form-field-tests/text-wrap`)
+      .url(`${browser.launchUrl}/#/raw/tests/form-field/field-text-wrap`)
       .expect.element('#field').to.be.present;
   },
 });

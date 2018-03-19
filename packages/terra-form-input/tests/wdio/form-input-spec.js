@@ -2,7 +2,7 @@
 describe('Form-Input', () => {
   describe('Valid', () => {
     beforeEach(() => {
-      browser.url('/#tests/form-input-tests/default');
+      browser.url('/#/raw/tests/form-input/default-form-input');
     });
 
     Terra.should.beAccessible();
@@ -29,7 +29,7 @@ describe('Form-Input', () => {
 
   describe('Invalid', () => {
     beforeEach(() => {
-      browser.url('/#tests/form-input-tests/invalid');
+      browser.url('/#/raw/tests/form-input/invalid-form-input');
     });
 
     Terra.should.beAccessible();
@@ -43,7 +43,7 @@ describe('Form-Input', () => {
   describe('Enabled', () => {
     describe('Enabled Non-Selected', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/default');
+        browser.url('/#/raw/tests/form-input/default-form-input');
       });
 
       Terra.should.beAccessible();
@@ -52,7 +52,7 @@ describe('Form-Input', () => {
 
     describe('Enabled Hovered', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/default');
+        browser.url('/#/raw/tests/form-input/default-form-input');
         browser.moveToObject('input');
       });
 
@@ -65,8 +65,13 @@ describe('Form-Input', () => {
 
     describe('Enabled Keyboard-Focused', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/focussed');
+        browser.url('/#/raw/tests/form-input/default-form-input');
         browser.keys('Tab');
+        // remove the blinking cursor for the screenshots
+        browser.execute(() => {
+          const inputElement = document.getElementById('form-input-default');
+          inputElement.style.caretColor = 'transparent';
+        });
       });
 
       Terra.should.beAccessible();
@@ -82,7 +87,7 @@ describe('Form-Input', () => {
   describe('Disabled', () => {
     describe('Disabled Non-Selected', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/disabled');
+        browser.url('/#/raw/tests/form-input/disabled-form-input');
       });
 
       Terra.should.beAccessible();
@@ -97,7 +102,7 @@ describe('Form-Input', () => {
 
     describe('Disabled Hovered', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/disabled');
+        browser.url('/#raw/tests/form-input/disabled-form-input');
         browser.moveToObject('input');
       });
 
@@ -110,7 +115,7 @@ describe('Form-Input', () => {
 
     describe('Disabled Keyboard-Focused', () => {
       beforeEach(() => {
-        browser.url('/#tests/form-input-tests/disabled');
+        browser.url('/#/raw/tests/form-input/disabled-form-input');
         browser.keys('Tab');
       });
 

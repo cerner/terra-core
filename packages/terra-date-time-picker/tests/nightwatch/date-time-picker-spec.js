@@ -7,9 +7,9 @@ const timeZones = ['America/Chicago', 'America/Denver', 'America/Detroit', 'Amer
   'America/Los_Angeles', 'America/New_York', 'America/Phoenix'];
 const includesTZ = timeZones.includes(moment.tz.guess());
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays the DateTimePicker with default props': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default`);
 
     browser.expect.element('[data-terra-date-time-input-hidden]').to.be.present;
     browser.expect.element('[data-terra-date-time-input-hidden]').to.have.attribute('value').which.equals('');
@@ -25,7 +25,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DateTimePicker with a default date only': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/date-only`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-only`);
 
     browser.expect.element('[data-terra-date-time-input-hidden]').to.be.present;
     browser.expect.element('[data-terra-date-time-input-hidden]').to.have.attribute('value').which.contains('2017-08-08');
@@ -40,7 +40,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DateTimePicker with a default date and time': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/date-time`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-time`);
 
     browser.expect.element('[data-terra-date-time-input-hidden]').to.be.present;
     browser.expect.element('[data-terra-date-time-input-hidden]').to.have.attribute('value').which.contains('2017-08-08T10:30:00');
@@ -56,7 +56,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays the Time Clarification dialog': (browser) => {
     if (includesTZ) {
-      browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
+      browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-dst`);
 
       browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -76,7 +76,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Dismisses the Time Clarification dialog': (browser) => {
     if (includesTZ) {
-      browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
+      browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-dst`);
 
       browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -94,7 +94,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays the offset button after clicking the daylight button': (browser) => {
     if (includesTZ) {
-      browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
+      browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-dst`);
 
       browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -114,7 +114,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays the offset button after clicking the standard time button': (browser) => {
     if (includesTZ) {
-      browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
+      browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-dst`);
 
       browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -134,7 +134,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Hides the offset button when the date/time is no longer ambiguous': (browser) => {
     if (includesTZ) {
-      browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/dst`);
+      browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-dst`);
 
       browser.expect.element('[class*="button-offset"]').to.not.be.present;
 
@@ -159,36 +159,36 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Triggers onChange when a valid date and time value is entered': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/on-change`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-on-change`);
 
     browser.setValue('input[name="terra-date-input"]', '07/12/2017');
-    browser.expect.element('h3').text.to.contain('2017-07-12T00:00');
+    browser.expect.element('#selected-date').text.to.contain('2017-07-12T00:00');
 
     browser.setValue('input[name="terra-time-hour-input"]', '10');
-    browser.expect.element('h3').text.to.contain('2017-07-12T00:00');
+    browser.expect.element('#selected-date').text.to.contain('2017-07-12T00:00');
 
     browser.setValue('input[name="terra-time-minute-input"]', '30');
-    browser.expect.element('h3').text.to.contain('2017-07-12T10:30');
+    browser.expect.element('#selected-date').text.to.contain('2017-07-12T10:30');
   },
 
   'Triggers onChangeRaw when a date or time value is changed': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/on-change-raw`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-on-change-raw`);
 
     browser.setValue('input[name="terra-date-input"]', '07/12');
-    browser.expect.element('h3').text.to.contain('07/12');
+    browser.expect.element('#selected-date').text.to.contain('07/12');
 
     browser.setValue('input[name="terra-time-hour-input"]', '10');
-    browser.expect.element('h3').text.to.contain('10:');
+    browser.expect.element('#selected-date').text.to.contain('10:');
 
     browser.setValue('input[name="terra-time-minute-input"]', '30');
-    browser.expect.element('h3').text.to.contain('10:30');
+    browser.expect.element('#selected-date').text.to.contain('10:30');
 
     browser.setValue('input[name="terra-date-input"]', '/2017');
-    browser.expect.element('h3').text.to.contain('07/12/2017');
+    browser.expect.element('#selected-date').text.to.contain('07/12/2017');
   },
 
   'Displays the DatePicker with excluded dates being disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/exclude-dates`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-exclude-dates`);
 
     browser.click('[class*="button"]');
 
@@ -198,7 +198,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DatePicker with filtered dates being disabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/filter-dates`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-filter-dates`);
 
     browser.click('[class*="button"]');
 
@@ -208,7 +208,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DatePicker with include dates being enabled': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/include-dates`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-include-dates`);
 
     browser.click('[class*="button"]');
 
@@ -217,7 +217,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses after selecting a date': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -230,7 +230,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Enter': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -243,7 +243,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Escape': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -262,7 +262,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DatePicker inside the modal manager and dismisses when hitting Tab': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/inside-modal`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-inside-modal`);
 
     browser.click('[class*="disclose"]');
     browser.click('[class*="custom-input"] > [class*="button"]');
@@ -275,7 +275,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DateTimePicker with custom date input attributes': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/date-input-attributes`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-date-input-attributes`);
     browser.expect.element('input[name="terra-date-input"]').to.be.present;
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('id').equals('date-input-example');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('disabled');
@@ -284,7 +284,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Displays the DateTimePicker with custom time input attributes': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/time-input-attributes`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-time-input-attributes`);
     browser.expect.element('input[name="terra-time-hour-input"]').to.be.present;
     browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('id').equals('time-input-example');
     browser.expect.element('input[name="terra-time-hour-input"]').to.have.attribute('readOnly');
@@ -295,7 +295,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on calendar button click when the default date is excluded': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-excluded`);
 
     browser.click('[class*="button"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
@@ -304,7 +304,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on date input focus when the default date is excluded': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-excluded`);
 
     browser.click('input[name="terra-date-input"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
@@ -313,7 +313,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on hour input focus when the default date is excluded': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-excluded`);
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
@@ -323,7 +323,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on minute input focus when the default date is excluded': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-excluded`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-excluded`);
 
     browser.click('input[name="terra-time-minute-input"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
@@ -333,7 +333,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on date input focus when the default date is out of range': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-out-of-range`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-out-of-range`);
 
     browser.click('input[name="terra-date-input"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
@@ -342,7 +342,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on hour input focus when the default date is out of range': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-out-of-range`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-out-of-range`);
 
     browser.click('input[name="terra-time-hour-input"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');
@@ -351,7 +351,7 @@ module.exports = resizeTo(['tiny', 'huge'], {
   },
 
   'Clears the default date and time on minute input focus when the default date is out of range': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/date-time-picker-tests/default-date-out-of-range`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/date-time-picker/date-time-picker-default-date-out-of-range`);
 
     browser.click('input[name="terra-time-minute-input"]');
     browser.expect.element('input[name="terra-date-input"]').to.have.attribute('value').equals('');

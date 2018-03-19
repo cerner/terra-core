@@ -2,15 +2,15 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a blank demographics banner with the empty text identifier': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/demographics-banner-tests/blank`)
+      .url(`${browser.launchUrl}/#/raw/tests/demographics-banner/blank-demographics-banner`)
       .expect.element('#blank-demographics-banner').text.to.contain('--\n--\nDOB:\n--');
   },
 
   'Displays all the content when it is provided to the banner': (browser) => {
-    browser.url(`${browser.launchUrl}/#/tests/demographics-banner-tests/populated`);
+    browser.url(`${browser.launchUrl}/#/raw/tests/demographics-banner/populated-demographics-banner`);
     browser.expect.element('#populated-demographics h1').text.to.contain('John');
     browser.expect.element('#populated-demographics h1').text.to.contain('Johnathon Doe');
 
@@ -33,25 +33,25 @@ module.exports = resizeTo(['tiny', 'huge'], {
 
   'Displays a deceased demographics banner': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/demographics-banner-tests/deceased`)
+      .url(`${browser.launchUrl}/#/raw/tests/demographics-banner/deceased-demographics-banner`)
       .expect.element('#deceased-demographics').text.to.contain('Deceased:\nMarch 12, 2017');
   },
 
   'Displays a deceased demographics banner with a default label when one is not provided': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/demographics-banner-tests/deceased_no_label`)
+      .url(`${browser.launchUrl}/#/raw/tests/demographics-banner/deceased-demographics-banner-no-label`)
       .expect.element('#deceased-demographics-no-label').text.to.contain('Deceased:\nMarch 12, 2017');
   },
 
   'Displays post menstrural age with a default label when one is not provided': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/demographics-banner-tests/post_menstrual_age_no_label`)
+      .url(`${browser.launchUrl}/#/raw/tests/demographics-banner/post-menstrual-age-demographics-banner-no-label`)
       .expect.element('#post-menstrual-no-label').text.to.contain('PMA:\nApril 5, 2016');
   },
 
   'Displays gestational age with a default label when one is not provided': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/demographics-banner-tests/gestational_age_no_label`)
+      .url(`${browser.launchUrl}/#/raw/tests/demographics-banner/gestational-age-demographics-banner-no-label`)
       .expect.element('#gestational-age-no-label').text.to.contain('GA:\nApril 5, 2016');
   },
 });

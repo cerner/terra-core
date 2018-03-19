@@ -30,7 +30,6 @@ More specifically, this command will:
 - Check if the currently installed packages match the versions in the package.json
 - Run each package's `compile` command to generate the distributed code
 - Run tests for each package
-- Run each package's `props-table` command to generate the props-table documentation as a markdown file
 - Run the equivalent of `lerna updated` to determine which packages need to be published
 - Prompt for a new version for each updated package
 - Update the package.json of all updated packages to their new versions

@@ -51,6 +51,7 @@ class Base extends React.Component {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e);
       }
     }
@@ -61,6 +62,7 @@ class Base extends React.Component {
       try {
         i18nLoader(nextProps.locale, this.setState, this);
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.error(e);
       }
     }

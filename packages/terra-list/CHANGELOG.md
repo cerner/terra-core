@@ -3,9 +3,20 @@ Changelog
 
 Unreleased
 ----------
+
+2.3.0 - (March 14, 2018)
+------------------
+### Changed
+* Minor version bump
+
+2.2.0 - (March 6, 2018)
+------------------
 ### Added
-* Box shadow css variable for list-item focus
-* css variable for default list-item color
+* box-shadow CSS variable for list-item focus
+* CSS variable for default list-item color
+
+### Removed
+* Removed props-table script from package.json
 
 2.1.0 - (February 26, 2018)
 ------------------

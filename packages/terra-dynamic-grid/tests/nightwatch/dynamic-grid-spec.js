@@ -2,10 +2,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'huge'], {
+module.exports = resizeTo(['medium'], {
   'Displays a default dynamic-grid': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/dynamic-grid-tests/default`)
+      .url(`${browser.launchUrl}/#/raw/tests/dynamic-grid/default-dynamic-grid`)
       .expect.element('#defaultDynamicGrid').to.be.present;
 
     browser.expect.element('#defaultDynamicGrid').to.have.css('display').which.matches(/^(-ms-)?grid$/);
