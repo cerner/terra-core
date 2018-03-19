@@ -364,6 +364,13 @@ import ModalNoFocusableContent from './packages/terra-modal/tests/nightwatch/com
 import ModalOverrideRole from './packages/terra-modal/tests/nightwatch/components/ModalOverrideRole';
 import ModalScrollableFalse from './packages/terra-modal/tests/nightwatch/components/ModalScrollableFalse';
 import ModalScrollableTrue from './packages/terra-modal/tests/nightwatch/components/ModalScrollableTrue';
+import AnimatedLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/AnimatedLoadingOverlay';
+import ClearLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/ClearLoadingOverlay';
+import ContainerLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/ContainerLoadingOverlay';
+import CustomMessageLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/CustomMessageLoadingOverlay';
+import DarkLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/DarkLoadingOverlay';
+import DefaultLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/DefaultLoadingOverlay';
+import LightLoadingOverlay from './packages/terra-overlay/tests/nightwatch/LoadingOverlay/LightLoadingOverlay';
 import ClearOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/ClearOverlay';
 import ContainerOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/ContainerOverlay';
 import ContainerScrollableOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/ContainerScrollableOverlay';
@@ -2372,6 +2379,47 @@ const componentConfig = {
     name: 'Overlay',
     path: '/overlay',
     tests: [
+      {
+        name: 'Loading Overlay',
+        path: '/loading-overlay',
+        tests: [
+          {
+            name: 'Animated Loading Overlay',
+            path: '/animated-loading-overlay',
+            component: AnimatedLoadingOverlay,
+          },
+          {
+            name: 'Clear Loading Overlay',
+            path: '/clear-loading-overlay',
+            component: ClearLoadingOverlay,
+          },
+          {
+            name: 'Container Loading Overlay',
+            path: '/container-loading-overlay',
+            component: ContainerLoadingOverlay,
+          },
+          {
+            name: 'Custom Message Loading Overlay',
+            path: '/custom-message-loading-overlay',
+            component: CustomMessageLoadingOverlay,
+          },
+          {
+            name: 'Dark Loading Overlay',
+            path: '/dark-loading-overlay',
+            component: DarkLoadingOverlay,
+          },
+          {
+            name: 'Default Loading Overlay',
+            path: '/default-loading-overlay',
+            component: DefaultLoadingOverlay,
+          },
+          {
+            name: 'Light Loading Overlay',
+            path: '/light-loading-overlay',
+            component: LightLoadingOverlay,
+          },
+        ],
+      },
       {
         name: 'Overlay',
         path: '/overlay',
