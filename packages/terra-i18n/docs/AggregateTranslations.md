@@ -7,7 +7,7 @@ The terra-i18n package provides the `aggregate-translations` pre-build tool to a
 This script globs the specified translation directory regex pattern(s) to locate the translation directories. Then,
 for each specified locale, the message-translation pairs from each translation json is extracted and added to the locale's message hash. When all messages have been extracted, the `aggregate-translations` script will create a single translation javascript file for each locale that exports the `messages` object, `areTranslationsLoaded` boolean and `locale` string. When a translation file is requested by terra-i18n's `I18nProvider`, this information is returned and used to provide the locale information.
 
-Once all of the translation files are created for the specified locales, the script will create a intl loader and translation loader that is specified to the specified locales. This is utilized by the by terra-i18n's `I18nLoader` to load on-demand locale information.
+Once all of the translation files are created for the specified locales, the script will create a intl loader and translation loader that is specific to the specified locales. This is utilized by the by terra-i18n's `I18nLoader` to load on-demand locale information.
 
 ### `aggregate-translations` Options
 | Option | CLI Option | Type | Description | Default |
