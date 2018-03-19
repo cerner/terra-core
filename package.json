@@ -48,7 +48,7 @@
     "danger": "danger",
     "deploy": "webpack --config webpack.prod.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
-    "generate-config": "generate-config -s 'packages/terra-site/src/examples/**/+(Icon!(*Navigation|*Routes|*Tabs)|*Index).jsx' -s 'packages/terra-*/tests/{nightwatch,nightwatch/*}/!(*-spec|*Tests|*TestRoutes|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)' -s 'packages/terra-table/tests/nightwatch/*/components/!(*-spec|*Tests|*TestRoutes|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)'",
+    "generate-config": "generate-config -s 'packages/terra-site/src/examples/**/+(Icon!(*Navigation|*Routes|*Tabs)|*Index).jsx' -s 'packages/terra-*/tests/{nightwatch,nightwatch/*}/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)' -s 'packages/terra-table/tests/nightwatch/*/components/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)'",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:heroku",
     "jest": "jest",
