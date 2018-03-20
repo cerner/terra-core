@@ -8,7 +8,7 @@ describe('I18n', () => {
   before(() => browser.setViewportSize(Terra.viewports('medium')[0]));
   describe('Initial Load', () => {
     before(() => {
-      browser.url('/#/tests/i18n-tests/default');
+      browser.url('/#/raw/tests/i-18-n/default-i-18-n');
       browser.waitForVisible('select', 3000);
     });
 
@@ -18,7 +18,7 @@ describe('I18n', () => {
   testLocales.forEach((locale) => {
     describe(`${locale} Locale`, () => {
       before(() => {
-        browser.url('/#/tests/i18n-tests/default');
+        browser.url('/#/raw/tests/i-18-n/default-i-18-n');
         browser.waitForVisible('select', 3000);
         browser.element('select').selectByValue(locale);
       });

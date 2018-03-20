@@ -110,6 +110,7 @@ class TimeInput extends React.Component {
     if (props.variant === TimeUtil.FORMAT_12_HOUR) {
       if (!context.intl.messages['Terra.timeInput.am'] || !context.intl.messages['Terra.timeInput.pm']) {
         if (process.env !== 'production') {
+          // eslint-disable-next-line no-console
           console.warn('This locale only uses 24 hour clock. The ante meridiem and post meridiem will not be displayed');
         }
 
@@ -154,6 +155,7 @@ class TimeInput extends React.Component {
     if (nextProps.variant === TimeUtil.FORMAT_12_HOUR) {
       if (!this.context.intl.messages['Terra.timeInput.am'] || !this.context.intl.messages['Terra.timeInput.pm']) {
         if (process.env !== 'production') {
+          // eslint-disable-next-line no-console
           console.warn('This locale only uses 24 hour clock. The ante meridiem and post meridiem will not be displayed');
         }
 

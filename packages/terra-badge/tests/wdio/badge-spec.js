@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny', 'medium');
 
 describe('Badge', () => {
   describe('Default', () => {
-    beforeEach(() => browser.url('/#/tests/badge-tests/default'));
+    beforeEach(() => browser.url('/#/raw/tests/badge/badge-default'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports, selector: '#default-badge' });
@@ -24,7 +24,7 @@ describe('Badge', () => {
   });
 
   describe('Intent', () => {
-    beforeEach(() => browser.url('/#/tests/badge-tests/intent'));
+    beforeEach(() => browser.url('/#/raw/tests/badge/badge-intent'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -47,7 +47,7 @@ describe('Badge', () => {
   });
 
   describe('Size', () => {
-    beforeEach(() => browser.url('/#/tests/badge-tests/size'));
+    beforeEach(() => browser.url('/#/raw/tests/badge/badge-size'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
@@ -61,7 +61,7 @@ describe('Badge', () => {
   });
 
   describe('Icons', () => {
-    beforeEach(() => browser.url('/#/tests/badge-tests/icon'));
+    beforeEach(() => browser.url('/#/raw/tests/badge/badge-icon'));
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
     Terra.should.themeEachCustomProperty({

@@ -1,25 +1,25 @@
 /* global $, before, browser */
 describe('Base', () => {
   describe('Switching Locales', () => {
-    before(() => browser.url('/#/tests/base-tests/switch'));
+    before(() => browser.url('/#/raw/tests/base/switch-locale-base'));
     it('Displays a default en locale message', () => {
       expect(browser.getText('#message')).to.equal('en');
     });
 
     it('Displays a customized en-US locale message', () => {
-      browser.click('button');
+      browser.click('#switch');
       expect(browser.getText('#message')).to.equal('en-US');
     });
   });
 
   describe('No Translations Fallsback to En', () => {
     it('Displays a placeholder element', () => {
-      browser.url('/#/tests/base-tests/no-translations-loaded');
+      browser.url('/#/raw/tests/base/no-translations-loaded-base');
       expect($('div').getText()).to.not.contain('No Translations');
     });
 
     it('Displays a placeholder string', () => {
-      browser.url('/#/tests/base-tests/no-translations-loaded-string');
+      browser.url('/#/raw/tests/base/no-translations-loaded-string-base');
       expect($('div').getText()).to.not.contain('No Translations String');
     });
   });

@@ -3,7 +3,7 @@ const viewports = Terra.viewports('tiny', 'medium');
 
 describe('Popup', () => {
   describe('Arrow Popup', () => {
-    beforeEach(() => browser.url('/#/tests/popup-tests/arrow'));
+    beforeEach(() => browser.url('/#/raw/tests/popup/arrow-popup'));
 
     Terra.should.beAccessible({ viewports });
     Terra.should.themeEachCustomProperty('#root', {
@@ -14,10 +14,13 @@ describe('Popup', () => {
   });
 
   describe('Bounded Popup', () => {
-    beforeEach(() => browser.url('/#/tests/popup-tests/bounded'));
+    beforeEach(() => browser.url('/#/raw/tests/popup/bounded-popup'));
 
-    Terra.should.beAccessible({ viewports });
-    Terra.should.themeEachCustomProperty('#root', {
+    // Remove when #1353 is resolved
+    const rules = { 'button-name': { enabled: false } };
+
+    Terra.should.beAccessible({ viewports, rules });
+    Terra.should.themeEachCustomProperty({
       '--terra-popup-content-header-border-bottom': '15px double red',
       '--terra-popup-content-close-icon': 'green',
     });
@@ -26,7 +29,7 @@ describe('Popup', () => {
   Terra.viewports('tiny', 'medium').forEach((viewport) => {
     describe('Arrow Popup viewports', () => {
       before(() => {
-        browser.url('/#/tests/popup-tests/arrow-closed');
+        browser.url('/#/raw/tests/popup/arrow-popup-closed');
         browser.setViewportSize(viewport);
         browser.click('#arrow-button');
       });
@@ -38,7 +41,7 @@ describe('Popup', () => {
   Terra.viewports('tiny', 'medium').forEach((viewport) => {
     describe('Bounded Popup viewports', () => {
       before(() => {
-        browser.url('/#/tests/popup-tests/bounded-closed');
+        browser.url('/#/raw/tests/popup/bounded-popup-closed');
         browser.setViewportSize(viewport);
         browser.click('#bounded-button');
       });
