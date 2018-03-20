@@ -45,6 +45,7 @@
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",
     "compile:heroku": "webpack --config webpack.prod.config --p",
+    "compile:prod": "webpack --config webpack.prod.config --p",
     "danger": "danger",
     "deploy": "webpack --config webpack.prod.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
