@@ -12,7 +12,7 @@ describe('Base', () => {
     });
   });
 
-  describe('No Translations Fallsback to En', () => {
+  describe('No Translations- Fallback to En', () => {
     it('Displays a placeholder element', () => {
       browser.url('/#/raw/tests/base/no-translations-loaded-base');
       expect($('div').getText()).to.not.contain('No Translations');

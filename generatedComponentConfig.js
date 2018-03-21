@@ -299,7 +299,7 @@ import HookshotContentAttachmentTS from './packages/terra-hookshot/tests/nightwa
 import HookshotContentOffset from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentOffset';
 import HookshotEnabledBehaviors from './packages/terra-hookshot/tests/nightwatch/components/HookshotEnabledBehaviors';
 import HookshotTargetOffset from './packages/terra-hookshot/tests/nightwatch/components/HookshotTargetOffset';
-import DefaultI18N from './packages/terra-i18n/tests/nightwatch/DefaultI18n';
+import DefaultI18N from './packages/terra-i18n/examples/test-examples/DefaultI18n.example';
 import IconAppendClass from './packages/terra-icon/tests/nightwatch/components/IconAppendClass';
 import IconAria from './packages/terra-icon/tests/nightwatch/components/IconAria';
 import IconBidi from './packages/terra-icon/tests/nightwatch/components/IconBidi';

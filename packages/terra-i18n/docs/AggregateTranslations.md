@@ -1,5 +1,5 @@
 # Aggregating Translations
-The terra-i18n packages provides internationalization for a React component to load translations and locale data on demand. To successfully render an internationalized component, all translation information must be provided as a single file for each locale.
+The terra-i18n package provides internationalization for React components to load translations and locale data on demand. To successfully render an internationalized component, all translation information must be provided as a single file for each locale.
 
 The terra-i18n package provides the `aggregate-translations` pre-build tool to assist with creating the translation, intl loader and translation loader files that are configured for the specified locales. This tool is offered as a CLI script and as a setup function.
 

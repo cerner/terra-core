@@ -19,7 +19,7 @@ const writeAggregatedTranslations = (aggregatedMessages, locales, fileSystem, ou
     fileSystem.mkdirpSync(outputDir);
   }
 
-  // Create an file of aggregated translaiton messages for each locale
+  // Create a file of aggregated translation messages for each locale
   locales.forEach((locale) => {
     if (locale in aggregatedMessages) {
       if (!supportedLocales.includes(locale)) {

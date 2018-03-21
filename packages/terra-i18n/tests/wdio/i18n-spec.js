@@ -23,7 +23,6 @@ describe('I18n', () => {
         browser.element('select').selectByValue(locale);
       });
 
-
       Terra.should.matchScreenshot();
     });
   });

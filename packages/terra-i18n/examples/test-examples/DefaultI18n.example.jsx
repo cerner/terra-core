@@ -38,7 +38,7 @@ class Base extends React.Component {
         locale={this.state.locale}
         messages={this.state.messages}
       >
-        <label htmlFor="locale"> Current locale: </label>
+        <label htmlFor="change-locale"> Current locale: </label>
         <select id="change-locale" onChange={this.handleLocaleChange} value={this.state.selectedLocale}>
           {testLocales.map(locale => (<option key={locale} value={locale}>{locale}</option>))}
         </select>

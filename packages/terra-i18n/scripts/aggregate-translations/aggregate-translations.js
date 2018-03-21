@@ -42,7 +42,7 @@ const aggregatedTranslations = (options) => {
   // Write aggregated translation messages to a file for each locale
   writeAggregatedTranslations(aggregatedMessages, locales, fileSystem, outputDir);
 
-  // Write intl and tranlsations loaders for the specified locales
+  // Write intl and translations loaders for the specified locales
   writeI18nLoaders(locales, fileSystem, outputDir);
 };
 

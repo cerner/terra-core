@@ -94,7 +94,7 @@ describe('aggregate-translations', () => {
     expect(writtenFilePaths.length).toEqual(3);
   });
 
-  it('always aggregates on en locale even if not specfied', () => {
+  it('always aggregates on en locale even if not specified', () => {
     const translationsFiles = [
       `${process.cwd()}${path.sep}aggregated-translations${path.sep}en.js`,
       `${process.cwd()}${path.sep}aggregated-translations${path.sep}es.js`,
@@ -106,7 +106,7 @@ describe('aggregate-translations', () => {
     expect(writtenFilePaths.length).toEqual(4);
   });
 
-  it('writes the intl and tranlsations loaders', () => {
+  it('writes the intl and translations loaders', () => {
     const loaderFiles = [
       `${process.cwd()}${path.sep}aggregated-translations${path.sep}intlLoaders.js`,
       `${process.cwd()}${path.sep}aggregated-translations${path.sep}translationsLoaders.js`,
