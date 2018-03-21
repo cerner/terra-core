@@ -79,11 +79,6 @@ describe('i18n-aggregator-plugin', () => {
       compiler._plugins['after-environment'][0]();
     });
 
-    beforeEach(() => {
-      // eslint-disable-next-line no-console
-      console.warn.mockClear();
-    });
-
     it('should create tranlsation files for all supported locales', () => {
       expect(supportedLocales.length).toEqual(outputtedFileName.length);
       expect(SpyOnWriteFileSync).toHaveBeenCalledTimes(supportedLocales.length);
@@ -146,11 +141,6 @@ describe('i18n-aggregator-plugin', () => {
         translationsDirectoryRouters: ['customFolder'],
       }).apply(compiler);
       compiler._plugins['after-environment'][0]();
-    });
-
-    beforeEach(() => {
-      // eslint-disable-next-line no-console
-      console.warn.mockClear();
     });
 
     it('should create tranlsation files for all supported locales', () => {
@@ -217,11 +207,6 @@ describe('i18n-aggregator-plugin', () => {
       compiler._plugins['after-environment'][0]();
     });
 
-    beforeEach(() => {
-      // eslint-disable-next-line no-console
-      console.warn.mockClear();
-    });
-
     it('should create tranlsation files for all supported locales', () => {
       expect(supportedLocales.length).toEqual(outputtedFileName.length);
       expect(SpyOnWriteFileSync).toHaveBeenCalledTimes(supportedLocales.length);
@@ -278,11 +263,6 @@ describe('i18n-aggregator-plugin', () => {
       compiler._plugins['after-environment'][0]();
     });
 
-    beforeEach(() => {
-      // eslint-disable-next-line no-console
-      console.warn.mockClear();
-    });
-
     it('should create tranlsation files for all supported locales', () => {
       expect(SpyOnInputReadDirSync).toHaveBeenCalledTimes(2);
       expect(SpyOnInputReadFileSync).toHaveBeenCalledTimes(supportedLocales.length);
@@ -328,11 +308,6 @@ describe('i18n-aggregator-plugin', () => {
         outputFileSystem,
       }).apply(compiler);
       compiler._plugins['after-environment'][0]();
-    });
-
-    beforeEach(() => {
-      // eslint-disable-next-line no-console
-      console.warn.mockClear();
     });
 
     it('should create tranlsation files for all supported locales', () => {

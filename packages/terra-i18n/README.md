@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-i18n.svg)](https://www.npmjs.org/package/terra-i18n)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-i18n package provides on-the-demand internationalization of React components. Additionally it provides an `aggregate-translations` pre-build tool to aggregate translations and build dynamic intlLoader and translationLoader modules.
+The terra-i18n package provides on-demand internationalization of React components. Additionally it provides an `aggregate-translations` pre-build tool to aggregate translations and build dynamic intlLoader and translationLoader modules.
 
 - [Getting Started](#getting-started)
 - [Documentation](#documentation)
