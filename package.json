@@ -40,7 +40,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean:all": "lerna clean && node scripts/clean-modules/index.js",
+    "clean:all": "lerna clean --yes && node scripts/clean-modules/index.js",
     "clean:install": "npm run clean:all && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
     "compile": "lerna run compile",

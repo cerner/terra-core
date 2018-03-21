@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = resizeTo(['tiny', 'small', 'medium'], {
+module.exports = resizeTo(['medium'], {
   'Sets the fields appropriately for a morning time': (browser) => {
     browser.url(`${browser.launchUrl}/#/raw/tests/time-input/component/time-input-twelve-hour-mobile`);
 
