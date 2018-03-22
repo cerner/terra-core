@@ -1,4 +1,12 @@
 :local {
+  .progress-bar-gradient {
+    &::-webkit-progress-value {
+      background:
+        linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
+        linear-gradient(to left, currentColor, currentColor);
+    }
+  }
+
   .progress-bar {
     background: #d3d4d5;
     border-radius: 0.5em;
@@ -50,6 +58,14 @@
 
   // Firefox styles must be entirely separate as it doesn't work well with WebKit styles
   @-moz-document url-prefix('') {
+    .progress-bar-gradient {
+      &::-moz-progress-bar {
+        background:
+          linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
+          linear-gradient(to left, currentColor, currentColor);
+      }
+    }
+
     .progress-bar {
       border-radius: 0.5em;
       overflow: hidden;

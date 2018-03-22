@@ -23,21 +23,28 @@ const propTypes = {
    * Sets the maximum possible fill-value.
    */
   max: PropTypes.number,
+  /**
+   * Boolean check for gradient.
+   */
+  gradient: PropTypes.bool,
 };
 
 const defaultProps = {
   heightSize: 'small',
   max: 100,
   value: 0,
+  gradient: false,
 };
 
 const ProgressBar = ({
   heightSize,
   value,
   max,
+  gradient,
   ...customProps
 }) => {
   const classes = cx([
+    gradient && 'progress-bar-gradient',
     'progress-bar',
     heightSize,
     customProps.className,
