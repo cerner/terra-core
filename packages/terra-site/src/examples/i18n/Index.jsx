@@ -17,7 +17,7 @@ const I18nExamples = () => (
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={I18nProvider} componentName="I18nProvider" />
     <h2 id="baseWithI18n">I18nProvider Example</h2>
-    <p style={{ fontStyle: 'italic' }}><span style={{ fontWeight: 'bold' }}>Note:</span> This is an example of a nested I18nProvider. The site overall is an example of using an application-level I18nProvider through the terra-base component.</p>
+    <p style={{ fontStyle: 'italic' }}><span style={{ fontWeight: 'bold' }}>Note:</span> This is an example of a nested I18nProvider. The site overall is an example of using an application-level I18nProvider implemented through the terra-base component.</p>
     <I18nDemo />
   </div>
 );
