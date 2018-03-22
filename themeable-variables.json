@@ -9,6 +9,16 @@
     "--terra-action-footer-padding-right": "0.35714rem",
     "--terra-action-footer-padding-top": "0.35714rem"
   },
+  "ActionHeaderContainer": {
+    "--terra-action-header-background-color": "#fff",
+    "--terra-action-header-border-bottom": "1px solid #1c1f21",
+    "--terra-action-header-border-left": "1px solid #1c1f21",
+    "--terra-action-header-border-right": "1px solid #1c1f21",
+    "--terra-action-header-border-top": "1px solid #1c1f21",
+    "--terra-action-header-padding": "0.714rem",
+    "--terra-action-header-font-color": "#1c1f21",
+    "--terra-action-header-font-size": "1rem"
+  },
   "Alert": {
     "--terra-alert-icon-font-size": "1.286em",
     "--terra-alert-custom-text-color": "#1c1f21",
