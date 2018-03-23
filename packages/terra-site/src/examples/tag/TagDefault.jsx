@@ -1,10 +1,11 @@
 import React from 'react';
+import IconTag from 'terra-icon/lib/icon/IconTag';
 import Tag from 'terra-tag';
 
 const TagDefault = () => (
   <div>
-    <Tag text="DefaultTag" />
-    <Tag text="OnClick DefaultTag" onClick={() => window.alert('Tag has been clicked!')} />
+    <Tag text="Default OnClick Tag" onClick={() => window.alert('Tag has been clicked!')} />
+    <Tag icon={<IconTag />} onClick={() => window.alert('Tag has been clicked!')} text="Icon &amp; Text OnClick Tag" />
   </div>
 );
 
