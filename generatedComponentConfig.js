@@ -94,7 +94,7 @@ import BackCloseActionHeader from './packages/terra-action-header/examples/test-
 import CustomButtonActionHeader from './packages/terra-action-header/examples/test-examples/CustomButtonActionHeader.example';
 import DefaultActionHeader from './packages/terra-action-header/examples/test-examples/DefaultActionHeader.example';
 import KeepCloseActionHeader from './packages/terra-action-header/examples/test-examples/KeepCloseActionHeader.example';
-import LevelActionHeader from './packages/terra-action-header/examples/test-examples/LevelActionHeader.example';
+import WrappedTitleActionHeader from './packages/terra-action-header/examples/test-examples/WrappedTitleActionHeader.example';
 import AlertActionButton from './packages/terra-alert/tests/nightwatch/AlertActionButton';
 import AlertDismissible from './packages/terra-alert/tests/nightwatch/AlertDismissible';
 import AlertResponsiveToParent from './packages/terra-alert/tests/nightwatch/AlertResponsiveToParent';
@@ -684,9 +684,9 @@ const componentConfig = {
         component: KeepCloseActionHeader,
       },
       {
-        name: 'Level Action Header',
-        path: '/level-action-header',
-        component: LevelActionHeader,
+        name: 'Wrapped Title Action Header',
+        path: '/wrapped-title-action-header',
+        component: WrappedTitleActionHeader,
       },
     ],
   },

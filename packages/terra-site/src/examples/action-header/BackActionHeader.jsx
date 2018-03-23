@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import ActionHeader from '../../../../terra-action-header'; // TODO: Resolve paths
+import ActionHeader from 'terra-action-header';
 
 const ActionHeaderExample = () => (
   <div>

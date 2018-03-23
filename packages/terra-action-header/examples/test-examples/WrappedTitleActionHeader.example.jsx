@@ -9,6 +9,10 @@ const locale = 'en-US';
 
 export default () => (
   <IntlProvider locale={locale} messages={messages}>
-    <ActionHeader title="Level Action Header" level={3} />
+    <ActionHeader
+      title="Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Long Title Action Header"
+      onBack={() => alert('You clicked back!')}
+      onClose={() => alert('You clicked close!')}
+    />
   </IntlProvider>
 );
