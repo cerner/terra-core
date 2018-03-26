@@ -35,9 +35,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: '',
-  startContent: null,
-  endContent: null,
+  title: undefined,
+  startContent: undefined,
+  endContent: undefined,
 };
 
 const ActionHeaderContainer = ({ children, title, startContent, endContent, level, ...customProps }) => {

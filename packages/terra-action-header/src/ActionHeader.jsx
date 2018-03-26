@@ -38,10 +38,10 @@ const propTypes = {
 const defaultProps = {
   title: undefined,
   level: 1,
-  onClose: null,
-  onBack: null,
+  onClose: undefined,
+  onBack: undefined,
   keepCloseButton: false,
-  children: null,
+  children: undefined,
 };
 
 const contextTypes = {

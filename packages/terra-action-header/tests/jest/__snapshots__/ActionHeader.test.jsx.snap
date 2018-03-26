@@ -4,8 +4,6 @@ exports[`ActionHeader should render a default action header 1`] = `
 <ActionHeader
   keepCloseButton={false}
   level={1}
-  onBack={null}
-  onClose={null}
 />
 `;
 
@@ -24,7 +22,6 @@ exports[`ActionHeader should render an action header with back button and title 
   keepCloseButton={false}
   level={1}
   onBack={[Function]}
-  onClose={null}
   title="Action Header"
 />
 `;
@@ -33,7 +30,6 @@ exports[`ActionHeader should render an action header with close button and title
 <ActionHeader
   keepCloseButton={false}
   level={1}
-  onBack={null}
   onClose={[Function]}
   title="Action Header"
 />
@@ -43,8 +39,6 @@ exports[`ActionHeader should render an action header with custom button and titl
 <ActionHeader
   keepCloseButton={false}
   level={1}
-  onBack={null}
-  onClose={null}
   title="Action Header"
 >
   <Button
@@ -65,8 +59,6 @@ exports[`ActionHeader should render an action header with level three header ele
 <ActionHeader
   keepCloseButton={false}
   level={3}
-  onBack={null}
-  onClose={null}
   title="Action Header"
 />
 `;
@@ -75,8 +67,6 @@ exports[`ActionHeader should render an action header with title 1`] = `
 <ActionHeader
   keepCloseButton={false}
   level={1}
-  onBack={null}
-  onClose={null}
   title="Action Header"
 />
 `;
