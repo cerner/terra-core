@@ -67,18 +67,13 @@ const ActionHeader = ({
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });
   const closeText = intl.formatMessage({ id: 'Terra.actionHeader.close' });
 
+  const isCloseButtonAllowedOnSmallViewport = !(onClose && !onBack && !keepCloseButton);
+
   const closeButton = onClose ? <Button variant="utility" isIconOnly icon={<IconClose />} text={closeText} onClick={onClose} /> : null;
   const backButton = onBack ? <Button variant="utility" isIconOnly icon={<IconLeft />} text={backText} onClick={onBack} /> : null;
 
-  let closeButtonSmall;
-  let backButtonSmall;
-  if (onClose && !onBack && !keepCloseButton) {
-    backButtonSmall = <Button variant="utility" isIconOnly icon={<IconLeft />} text={backText} onClick={onClose} />;
-    closeButtonSmall = null;
-  } else {
-    closeButtonSmall = closeButton;
-    backButtonSmall = backButton;
-  }
+  const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
+  const backButtonSmall = isCloseButtonAllowedOnSmallViewport ? backButton : <Button variant="utility" isIconOnly icon={<IconLeft />} text={backText} onClick={onClose} />;
 
   const actionHeader = (
     <ActionHeaderContainer
