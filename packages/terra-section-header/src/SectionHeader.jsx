@@ -121,6 +121,7 @@ class SectionHeader extends React.Component {
     const Element = `h${level}`;
 
     // allows us to set an onClick on the div
+    /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <div {...attributes} onClick={onClick} className={sectionHeaderClassNames}>
         <Arrange
@@ -129,6 +130,7 @@ class SectionHeader extends React.Component {
         />
       </div>
     );
+    /* eslint-enable jsx-a11y/no-static-element-interactions */
   }
 }
 
