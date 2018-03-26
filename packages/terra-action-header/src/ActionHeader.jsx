@@ -21,7 +21,7 @@ const propTypes = {
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
-   * Callback function for when the close button is clicked. The back button will not display if this is not set.
+   * Callback function for when the close button is clicked.
    * On small viewports a back button will be displayed instead of a close button when a separate onBack callback is not set.
    */
   onClose: PropTypes.func,
@@ -40,7 +40,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: '',
+  title: undefined,
   level: 1,
   onClose: null,
   onBack: null,

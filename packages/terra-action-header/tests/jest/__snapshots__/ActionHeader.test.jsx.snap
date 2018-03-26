@@ -6,7 +6,6 @@ exports[`ActionHeader should render a default action header 1`] = `
   level={1}
   onBack={null}
   onClose={null}
-  title=""
 />
 `;
 
