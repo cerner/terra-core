@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import Button from 'terra-button';
 import IconLeft from 'terra-icon/lib/icon/IconLeft';
@@ -7,9 +6,6 @@ import IconClose from 'terra-icon/lib/icon/IconClose';
 import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 import ActionHeaderContainer from './_ActionHeaderContainer';
-import styles from './ActionHeader.scss';
-
-const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -67,7 +63,7 @@ const ActionHeader = ({
   ...customProps }, {
   intl,
 }) => {
-  const attributes = Object.assign({}, customProps);
+  const attributes = { ...customProps };
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });
   const closeText = intl.formatMessage({ id: 'Terra.actionHeader.close' });
 
@@ -84,20 +80,12 @@ const ActionHeader = ({
     backButtonSmall = backButton;
   }
 
-  const leftButtonsDefault = backButton ? <div className={cx('left-buttons')}>{backButton}</div> : null;
-
-  const rightButtonsDefault = closeButton ? <div className={cx('right-buttons')}>{closeButton}</div> : null;
-
-  const leftButtonsSmall = backButtonSmall ? <div className={cx('left-buttons')}>{backButtonSmall}</div> : null;
-
-  const rightButtonsSmall = closeButtonSmall ? <div className={cx('right-buttons')}>{closeButtonSmall}</div> : null;
-
   const actionHeader = (
     <ActionHeaderContainer
       {...attributes}
-      startContent={leftButtonsDefault}
+      startContent={backButton}
       title={title}
-      endContent={rightButtonsDefault}
+      endContent={closeButton}
       level={level}
     >
       {children}
@@ -107,9 +95,9 @@ const ActionHeader = ({
   const smallActionHeader = (
     <ActionHeaderContainer
       {...attributes}
-      startContent={leftButtonsSmall}
+      startContent={backButtonSmall}
       title={title}
-      endContent={rightButtonsSmall}
+      endContent={closeButtonSmall}
       level={level}
     >
       {children}
