@@ -44,7 +44,6 @@ const ProgressBar = ({
   ...customProps
 }) => {
   const classes = cx([
-    // Add this class if gradient is true
     { 'progress-bar-gradient': hasGradient },
     'progress-bar',
     heightSize,
