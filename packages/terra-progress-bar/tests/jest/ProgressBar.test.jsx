@@ -22,6 +22,11 @@ it('should render a ProgressBar component with default heightSize 50% fill and c
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a ProgressBar component with gradient', () => {
+  const wrapper = shallow(<ProgressBar value={8} max={10} hasGradient />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 // Prop Tests
 describe('Default progress bar', () => {
   it('should have classes progressbar, small and zero fill value', () => {
@@ -58,5 +63,14 @@ describe('Progress bar with title as custom prop', () => {
     expect(wrapper.prop('value')).toEqual(30);
     expect(wrapper.prop('max')).toEqual(100);
     expect(wrapper.prop('title')).toEqual('ProgressBarTest');
+  });
+});
+
+describe('Progress bar with gradient prop true', () => {
+  it('value=8, max=10; should have class progress-bar-gradient', () => {
+    const wrapper = shallow(<ProgressBar value={8} max={10} hasGradient />);
+    expect(wrapper.prop('value')).toEqual(80);
+    expect(wrapper.prop('max')).toEqual(100);
+    expect(wrapper.prop('className')).toContain('progress-bar-gradient');
   });
 });

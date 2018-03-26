@@ -26,25 +26,26 @@ const propTypes = {
   /**
    * Boolean check for gradient.
    */
-  gradient: PropTypes.bool,
+  hasGradient: PropTypes.bool,
 };
 
 const defaultProps = {
   heightSize: 'small',
   max: 100,
   value: 0,
-  gradient: false,
+  hasGradient: false,
 };
 
 const ProgressBar = ({
   heightSize,
   value,
   max,
-  gradient,
+  hasGradient,
   ...customProps
 }) => {
   const classes = cx([
-    gradient && 'progress-bar-gradient',
+    // Add this class if gradient is true
+    { 'progress-bar-gradient': hasGradient },
     'progress-bar',
     heightSize,
     customProps.className,

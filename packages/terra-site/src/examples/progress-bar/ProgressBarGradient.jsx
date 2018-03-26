@@ -3,13 +3,13 @@ import ProgressBar from 'terra-progress-bar';
 
 const ProgressBarDefault = () => (
   <div>
-    <ProgressBar value={3} max={10} color="green" gradient />
+    <ProgressBar value={3} max={10} color="green" hasGradient />
     <br />
     <br />
-    <ProgressBar value={5} max={10} color="Orange" gradient />
+    <ProgressBar value={5} max={10} color="Orange" hasGradient />
     <br />
     <br />
-    <ProgressBar value={8} max={10} color="blue" gradient />
+    <ProgressBar value={8} max={10} color="blue" hasGradient />
   </div>
 );
 
