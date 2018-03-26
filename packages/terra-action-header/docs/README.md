@@ -1,6 +1,6 @@
 # Terra Action Header
 
-The terra-action-header component is a header bar that contains sockets for placing actionable items such as buttons and hyperlinks.
+The terra-action-header component is a header bar containing a title and optional actionable items.
 
 ## Getting Started
 

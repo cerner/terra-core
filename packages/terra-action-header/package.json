@@ -2,7 +2,7 @@
   "name": "terra-action-header",
   "main": "lib/ActionHeader.js",
   "version": "0.0.0",
-  "description": "The terra-action-header component is a header bar that contains sockets for placing actionable items such as buttons and hyperlinks.",
+  "description": "The terra-action-header component is a header bar containing a title and optional actionable items.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

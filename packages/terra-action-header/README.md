@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-action-header.svg)](https://www.npmjs.org/package/terra-action-header)
 [![Build Status](https://travis-ci.org/cerner/terra-core.svg?branch=master)](https://travis-ci.org/cerner/terra-core)
 
-The terra-action-header component is a header bar that contains sockets for placing actionable items such as buttons and hyperlinks.
+The terra-action-header component is a header bar containing a title and optional actionable items.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header/docs)

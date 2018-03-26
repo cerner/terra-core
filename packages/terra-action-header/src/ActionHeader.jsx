@@ -6,7 +6,7 @@ import IconLeft from 'terra-icon/lib/icon/IconLeft';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
-import ActionHeaderContainer from './ActionHeaderContainer';
+import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.scss';
 
 const cx = classNames.bind(styles);
@@ -84,29 +84,13 @@ const ActionHeader = ({
     backButtonSmall = backButton;
   }
 
-  const leftButtonsDefault = (
-    <div className={cx('left-buttons')}>
-      {backButton}
-    </div>
-  );
+  const leftButtonsDefault = backButton ? <div className={cx('left-buttons')}>{backButton}</div> : null;
 
-  const rightButtonsDefault = (
-    <div className={cx('right-buttons')}>
-      {closeButton}
-    </div>
-  );
+  const rightButtonsDefault = closeButton ? <div className={cx('right-buttons')}>{closeButton}</div> : null;
 
-  const leftButtonsSmall = (
-    <div className={cx('left-buttons')}>
-      {backButtonSmall}
-    </div>
-  );
+  const leftButtonsSmall = backButtonSmall ? <div className={cx('left-buttons')}>{backButtonSmall}</div> : null;
 
-  const rightButtonsSmall = (
-    <div className={cx('right-buttons')}>
-      {closeButtonSmall}
-    </div>
-  );
+  const rightButtonsSmall = closeButtonSmall ? <div className={cx('right-buttons')}>{closeButtonSmall}</div> : null;
 
   const actionHeader = (
     <ActionHeaderContainer
