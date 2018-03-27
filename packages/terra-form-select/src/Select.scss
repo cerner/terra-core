@@ -1,6 +1,6 @@
 :local {
   .select {
-    background-color: #fff;
+    background-color: var(--terra-select-background-color, #fff);
     background-image: var(--terra-select-focus-animation-background, none);
     background-position: 0 100%;
     background-repeat: no-repeat;
