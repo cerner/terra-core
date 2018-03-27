@@ -18,7 +18,7 @@ describe('ActionHeader', () => {
         '--terra-action-header-font-color': '#4682B4',
         '--terra-action-header-font-family': 'Roboto',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-padding': '0.714rem',
+        '--terra-action-header-padding': '1rem',
       },
     );
   });
@@ -39,7 +39,7 @@ describe('ActionHeader', () => {
         '--terra-action-header-font-color': '#4682B4',
         '--terra-action-header-font-family': 'Roboto',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-padding': '0.714rem',
+        '--terra-action-header-padding': '1rem',
       },
     );
   });
@@ -60,7 +60,7 @@ describe('ActionHeader', () => {
         '--terra-action-header-font-color': '#4682B4',
         '--terra-action-header-font-family': 'Roboto',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-padding': '0.714rem',
+        '--terra-action-header-padding': '1rem',
       },
     );
   });
@@ -81,7 +81,7 @@ describe('ActionHeader', () => {
         '--terra-action-header-font-color': '#4682B4',
         '--terra-action-header-font-family': 'Roboto',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-padding': '0.714rem',
+        '--terra-action-header-padding': '1rem',
       },
     );
   });
@@ -102,7 +102,7 @@ describe('ActionHeader', () => {
         '--terra-action-header-font-color': '#4682B4',
         '--terra-action-header-font-family': 'Roboto',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-padding': '0.714rem',
+        '--terra-action-header-padding': '1rem',
       },
     );
   });
@@ -123,7 +123,7 @@ describe('ActionHeader', () => {
         '--terra-action-header-font-color': '#4682B4',
         '--terra-action-header-font-family': 'Roboto',
         '--terra-action-header-font-size': '0.5rem',
-        '--terra-action-header-padding': '0.714rem',
+        '--terra-action-header-padding': '1rem',
       },
     );
   });

@@ -66,7 +66,7 @@ describe('ActionHeader', () => {
   it('should render an action header with custom button and title', () => {
     const actionHeader = shallow(
       <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header" >
+        <ActionHeader title="Action Header">
           <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
         </ActionHeader>
       </IntlProvider>,
