@@ -1,5 +1,5 @@
 /* globals spyOn */
-const fs = require('fs');
+const fse = require('fs-extra');
 const path = require('path');
 const MemoryFileSystem = require('memory-fs');
 const writeAggregatedTranslations = require('../../scripts/aggregate-translations/write-aggregated-translations');
@@ -9,23 +9,19 @@ global.console = { warn: jest.fn() };
 const defaultMessages = { en: {}, es: {} };
 const locales = ['en', 'es'];
 const memoryFS = new MemoryFileSystem();
-const testFileSystems = { fs, memoryFS };
+const testFileSystems = { fse, memoryFS };
 
 Object.keys(testFileSystems).forEach((testFS) => {
   describe(`write aggregated translations for ${testFS} fileSystem`, () => {
     const fileSystem = testFileSystems[testFS];
     const outputDir = '/aggregated-translations';
     let writtenFiles;
-    let makeDirSpy;
     beforeEach(() => {
       writtenFiles = [];
       spyOn(fileSystem, 'writeFileSync').and.callFake((fileName, hash) => {
         writtenFiles.push(fileName);
         return hash;
       });
-
-      const spyFunction = fileSystem === fs ? 'mkdirSync' : 'mkdirpSync';
-      makeDirSpy = spyOn(fileSystem, spyFunction).and.callFake(fileName => fileName);
     });
 
     it('writes translations files', () => {
@@ -56,20 +52,6 @@ Object.keys(testFileSystems).forEach((testFS) => {
       ];
 
       writeAggregatedTranslations({ cy: {} }, ['cy'], fileSystem, outputDir);
-      expect(makeDirSpy).toHaveBeenCalledWith(outputDir);
-      expect(writtenFiles).toEqual(outputFiles);
-    });
-
-    it('creates nested directories if needed', () => {
-      const nestedOutputDir = './nested/translations/output';
-      const outputFiles = [
-        path.resolve(process.cwd(), nestedOutputDir, 'en.js'),
-        path.resolve(process.cwd(), nestedOutputDir, 'es.js'),
-      ];
-
-      writeAggregatedTranslations(defaultMessages, locales, fileSystem, nestedOutputDir);
-
-      expect(makeDirSpy).toHaveBeenCalledWith(nestedOutputDir);
       expect(writtenFiles).toEqual(outputFiles);
     });
   });

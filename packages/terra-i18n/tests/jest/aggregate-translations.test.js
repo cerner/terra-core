@@ -1,5 +1,5 @@
 /* globals spyOn */
-const fs = require('fs');
+const fse = require('fs-extra');
 const glob = require('glob');
 const path = require('path');
 const MemoryFileSystem = require('memory-fs');
@@ -14,10 +14,13 @@ const defaultSearchPatterns = baseDirectory => ([
   `${baseDirectory}${path.sep}packages${path.sep}terra-*${path.sep}node_modules${path.sep}terra-*${path.sep}translations`,
 ]);
 
+const nestedOutputDir = './translations/folder';
+
 describe('aggregate-translations', () => {
   let searchedDirectories;
   let writtenFilePaths;
-  let fsSpy;
+  let fseSpy;
+  let fseMakeDirSpy;
   let globSpy;
   beforeEach(() => {
     searchedDirectories = [];
@@ -25,11 +28,11 @@ describe('aggregate-translations', () => {
     globSpy = spyOn(glob, 'sync').and.callFake((fileName) => {
       searchedDirectories.push(fileName); return fileName;
     });
-    fsSpy = spyOn(fs, 'writeFileSync').and.callFake((fileName) => {
+    fseSpy = spyOn(fse, 'writeFileSync').and.callFake((fileName) => {
       writtenFilePaths.push(fileName);
     });
 
-    spyOn(fs, 'mkdirSync');
+    fseMakeDirSpy = spyOn(fse, 'mkdirpSync');
   });
 
   it('aggregates on the default search patterns', () => {
@@ -52,23 +55,23 @@ describe('aggregate-translations', () => {
     expect(searchedDirectories).toEqual(defaultSearchPatterns(path.resolve('./fixtures')));
   });
 
-  it('uses the fs fileSystem by default', () => {
+  it('uses the fs fileSystem for output by default', () => {
     aggregateTranslations();
 
-    expect(fsSpy).toHaveBeenCalled();
+    expect(fseSpy).toHaveBeenCalled();
   });
 
-  it('uses the specified fileSystem', () => {
+  it('uses the specified outputFileSystem', () => {
     const memoryFS = new MemoryFileSystem();
     const memoryFsSpy = spyOn(memoryFS, 'writeFileSync');
     spyOn(memoryFS, 'mkdirpSync');
 
-    aggregateTranslations({ fileSystem: memoryFS });
+    aggregateTranslations({ outputFileSystem: memoryFS });
 
     expect(memoryFsSpy).toHaveBeenCalled();
   });
 
-  it('aggregates on the terra-supported locales by defualt', () => {
+  it('aggregates on the terra-supported locales by default', () => {
     const translationsFiles = [];
     i18nSupportedLocales.forEach(locale =>
       translationsFiles.push(
@@ -130,8 +133,24 @@ describe('aggregate-translations', () => {
   it('writes to the provided output directory', () => {
     const expectedOutputDir = expect.stringContaining(`${process.cwd()}${path.sep}translations${path.sep}folder`);
 
-    aggregateTranslations({ outputDir: './translations/folder' });
+    aggregateTranslations({ outputDir: nestedOutputDir });
 
+    expect(fseMakeDirSpy).toHaveBeenCalledWith(expectedOutputDir);
+    expect(writtenFilePaths).toEqual(expect.arrayContaining([expectedOutputDir]));
+  });
+
+  it('writes to the provided output directory with defined outputFileSystem', () => {
+    const memoryFS = new MemoryFileSystem();
+    spyOn(memoryFS, 'writeFileSync').and.callFake((fileName) => {
+      writtenFilePaths.push(fileName);
+    });
+    const memoryFsMakeDirSpy = spyOn(memoryFS, 'mkdirpSync');
+
+    const expectedOutputDir = expect.stringContaining(`${process.cwd()}${path.sep}translations${path.sep}folder`);
+
+    aggregateTranslations({ outputDir: nestedOutputDir, outputFileSystem: memoryFS });
+
+    expect(memoryFsMakeDirSpy).toHaveBeenCalledWith(expectedOutputDir);
     expect(writtenFilePaths).toEqual(expect.arrayContaining([expectedOutputDir]));
   });
 });

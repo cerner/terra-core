@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`write i18n loaders for fs fileSystem writes a translation file for a non-terra-supported locale 1`] = `
+exports[`write i18n loaders for fse fileSystem writes a translation file for a non-terra-supported locale 1`] = `
 "const loadCyIntl = () =>
 require.ensure([],
   require => require('intl/locale-data/jsonp/cy.js'),
@@ -13,7 +13,7 @@ const intlLoaders = {
 module.exports = intlLoaders;"
 `;
 
-exports[`write i18n loaders for fs fileSystem writes a translation file for a non-terra-supported locale 2`] = `
+exports[`write i18n loaders for fse fileSystem writes a translation file for a non-terra-supported locale 2`] = `
 "const loadCyTranslations = (callback, scope) => {
   require.ensure([], (require) => {
     // eslint-disable-next-line
@@ -29,7 +29,7 @@ const translationsLoaders = {
 module.exports = translationsLoaders;"
 `;
 
-exports[`write i18n loaders for fs fileSystem writes loader files 1`] = `
+exports[`write i18n loaders for fse fileSystem writes loader files 1`] = `
 "const loadEnIntl = () =>
 require.ensure([],
   require => require('intl/locale-data/jsonp/en.js'),
@@ -48,7 +48,7 @@ const intlLoaders = {
 module.exports = intlLoaders;"
 `;
 
-exports[`write i18n loaders for fs fileSystem writes loader files 2`] = `
+exports[`write i18n loaders for fse fileSystem writes loader files 2`] = `
 "const loadEnTranslations = (callback, scope) => {
   require.ensure([], (require) => {
     // eslint-disable-next-line

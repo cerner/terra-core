@@ -1,8 +1,8 @@
 # Terra Base
 
-The `terra-base` component will handle locale changes, manage the locale loading state, and receive customized translation messages from an application and pass theme into the `terra-in18n` I18nProvider. It also sets minimal global styles for an application; styles include CSS to help normalize box-sizing, reset margins and paddings, and define global font styles.
+The `terra-base` component will handle locale changes, manage the locale loading state, and receive customized translation messages from an application and pass them into the `terra-i18n` I18nProvider. It also sets minimal global styles for an application; styles include CSS to help normalize box-sizing, reset margins and paddings, and define global font styles.
 
-**Note: This component should be imported before the other terra components in your app.** This is to help ensure that these styles are defined at the beginning of the [extracted stylesheet](https://github.com/webpack-contrib/extract-text-webpack-plugin) and are inherited down to the other terra components. Additionally, when used to internationalize an application, it will wrap the application’s root component such that the entire application is within the same configured i18n context.
+**Note: This component must be imported before the other terra components in your app.** This is to help ensure that these styles are defined at the beginning of the [extracted stylesheet](https://github.com/webpack-contrib/extract-text-webpack-plugin) and are inherited by the other terra components. Additionally, when used to internationalize an application, it will wrap the application’s root component such that the entire application is within the same configured i18n context.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs)

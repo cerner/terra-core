@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+const fse = require('fs-extra');
 const glob = require('glob');
 const supportedLocales = require('../../src/i18nSupportedLocales');
 
@@ -20,7 +20,7 @@ const customDirectories = (baseDirectory, directories) =>
 const aggregatedTranslations = (options) => {
   const baseDir = (options || {}).baseDir || process.cwd();
   const directories = (options || {}).directories || [];
-  const fileSystem = (options || {}).fileSystem || fs;
+  const fileSystem = (options || {}).outputFileSystem || fse;
   const locales = (options || {}).locales || supportedLocales;
   if (!locales.includes('en')) {
     locales.push('en');
@@ -38,6 +38,7 @@ const aggregatedTranslations = (options) => {
   const aggregatedMessages = aggregateMessages(translationDirectories, locales);
 
   const outputDir = path.resolve(baseDir, outputDirectory);
+  fileSystem.mkdirpSync(outputDir);
 
   // Write aggregated translation messages to a file for each locale
   writeAggregatedTranslations(aggregatedMessages, locales, fileSystem, outputDir);

@@ -1,5 +1,5 @@
 /* globals spyOn */
-const fs = require('fs');
+const fse = require('fs-extra');
 const path = require('path');
 const MemoryFileSystem = require('memory-fs');
 const writeI18nLoaders = require('../../scripts/aggregate-translations/write-i18n-loaders');
@@ -8,7 +8,7 @@ global.console = { warn: jest.fn() };
 
 const locales = ['en', 'es'];
 const memoryFS = new MemoryFileSystem();
-const testFileSystems = { fs, memoryFS };
+const testFileSystems = { fse, memoryFS };
 
 Object.keys(testFileSystems).forEach((testFS) => {
   describe(`write i18n loaders for ${testFS} fileSystem`, () => {

@@ -11,13 +11,29 @@ Note: the `i18nLoader` state object for the callback must containing the followi
 - `locale` - string
 - `messages` - key-value pairs such that the key is the message name and the value is the translation message
 
-### i18nProvider
+### I18nProvider
 
 The `I18nProvider` component configures the react-intl's `IntlProvider` and supplies it with the translation-needing components such that the i18n context is accessible. Usually, one `I18nProvider` will wrap an application's root component such that the entire application is within the same configured i18n context, however it is possible to render nested `I1n8nProvider` components to provide different, or modified i18n context.
 
 ### Supported Locales
 
-Terra supports the following locales: ar, en, en-US, en-GB, es, es-US, es-ES, de, fi-FI, fr, fr-FR, pt, and pt-BR.
+Terra supports the following locales:
+
+| Locale ID | Locale |
+|-|-|
+| ar | Arabic |
+| en | English |
+| en-US | English - United States |
+| en-GB | English - Great Britain |
+| es | Spanish |
+| es-US | Spanish - United States |
+| es-ES | Spanish - Spain (Traditional) |
+| de | German |
+| fi-FI | Finnish - Finland |
+| fr | French |
+| fr-FR | French - France|
+| pt | Portuguese |
+| pt-BR | Portuguese - Brazil|
 
 #### Non-Supported Locales
 
@@ -42,7 +58,7 @@ See the [aggregate-translations documentation](https://github.com/cerner/terra-c
 
 ## Getting Started
 
-It is recommended to use the `terra-base` component implementation; `terra-base` will handle locale changes, manage the locale loading state and receive customized translation messages from an application and pass theme into the `I18nProvider`. See [`terra-base documentation`](https://github.com/cerner/terra-core/tree/master/packages/terra-base) to get started.
+It is recommended to use the `terra-base` component implementation; `terra-base` will handle locale changes, manage the locale loading state and receive customized translation messages from an application and pass them into the `I18nProvider`. See [`terra-base documentation`](https://github.com/cerner/terra-core/tree/master/packages/terra-base) to get started.
 
 However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
   - `npm install terra-i18n`

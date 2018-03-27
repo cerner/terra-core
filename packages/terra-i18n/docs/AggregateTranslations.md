@@ -7,14 +7,14 @@ The terra-i18n package provides the `aggregate-translations` pre-build tool to a
 This script globs the specified translation directory regex pattern(s) to locate the translation directories. Then,
 for each specified locale, the message-translation pairs from each translation json is extracted and added to the locale's message hash. When all messages have been extracted, the `aggregate-translations` script will create a single translation javascript file for each locale that exports the `messages` object, `areTranslationsLoaded` boolean and `locale` string. When a translation file is requested by terra-i18n's `I18nProvider`, this information is returned and used to provide the locale information.
 
-Once all of the translation files are created for the specified locales, the script will create a intl loader and translation loader that is specific to the specified locales. This is utilized by the by terra-i18n's `I18nLoader` to load on-demand locale information.
+Once all of the translation files are created for the specified locales, the script will create an intl loader and translation loader that is specific to the specified locales. This is utilized by the by terra-i18n's `I18nLoader` to load on-demand locale information.
 
 ### `aggregate-translations` Options
 | Option | CLI Option | Type | Description | Default |
 |-|-|-|-|-|
 | baseDir | -b, --baseDir | Path | Directory to search from and to prepend to the output directory. | current working directory |
 | directories | -d, --directories | Array of Strings | Translation directory regex pattern(s) to glob, in addition to the default search patterns. | [ ] |
-| fileSystem | N/A | File System Module | The filesystem to use to write the translation and loader files. | [fs](https://www.npmjs.com/package/fs) |
+| outputFileSystem | N/A | File System Module | The filesystem to use to write the translation and loader files. Note: The file system provide must support `mkdirp`. | [fs-extra](https://www.npmjs.com/package/fs-extra) |
 | locales  | -l, --locales | Array of Strings | The list of locale codes to aggregate. Note: 'en' is always added if not specified. | [terra-supported locales](https://github.com/cerner/terra-core/blob/master/packages/terra-i18n/src/i18nSupportedLocales.js) |
 | outputDir | -o, --ouputDir | String | Output directory for the translation and loader files | ./aggregated-translations |
 
@@ -24,12 +24,12 @@ The `aggregate-translations` setup function can be used as follows:
 // webpack config file
 const aggregateTranslations = require('terra-i18n/scripts/aggregate-translations/aggregate-translations');
 
-aggregateOptions = {
+const aggregateOptions = {
     baseDir: __dirname,
-    directories: ['./src/**/translations', './translations']
+    directories: ['./src/**/translations', './translations'],
     locales: ['en', 'en-US'],
-    outputDir: './aggregated-translations'
-}
+    outputDir: './aggregated-translations',
+};
 
 aggregateTranslations(aggregateOptions);
 

@@ -1,24 +1,8 @@
 const path = require('path');
-const fs = require('fs');
 const supportedLocales = require('../../src/i18nSupportedLocales');
 const generateTranslationFile = require('./generate-translation-file');
 
 const writeAggregatedTranslations = (aggregatedMessages, locales, fileSystem, outputDir) => {
-  // Make the output directory
-  if (fileSystem === fs) {
-    const outputDirectories = outputDir.split(path.sep);
-    let makeDir = outputDirectories.shift();
-
-    outputDirectories.forEach((dir) => {
-      makeDir = makeDir + path.sep + dir;
-      if (!fileSystem.existsSync(makeDir)) {
-        fileSystem.mkdirSync(makeDir);
-      }
-    });
-  } else {
-    fileSystem.mkdirpSync(outputDir);
-  }
-
   // Create a file of aggregated translation messages for each locale
   locales.forEach((locale) => {
     if (locale in aggregatedMessages) {
