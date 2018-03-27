@@ -1,10 +1,12 @@
+$default-border: 1px solid #1c1f21;
+
 :local {
   .flex-header {
     background-color: var(--terra-action-header-background-color, #fff);
-    border-bottom: var(--terra-action-header-border-bottom, 1px solid #1c1f21);
-    border-left: var(--terra-action-header-border-left, 1px solid #1c1f21);
-    border-right: var(--terra-action-header-border-right, 1px solid #1c1f21);
-    border-top: var(--terra-action-header-border-top, 1px solid #1c1f21);
+    border-bottom: var(--terra-action-header-border-bottom, $default-border);
+    border-left: var(--terra-action-header-border-left, $default-border);
+    border-right: var(--terra-action-header-border-right, $default-border);
+    border-top: var(--terra-action-header-border-top, $default-border);
     box-shadow: var(--terra-action-header-box-shadow);
     display: flex;
     justify-content: space-between;
