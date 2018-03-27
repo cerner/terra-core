@@ -18,7 +18,7 @@ const propTypes = {
    */
   minWidth: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'huge']),
   /**
-   * Whether or not data in table is sorted
+   * Whether or not data in table is sorted (asc, desc)
    */
   sort: PropTypes.oneOf(['asc', 'desc']),
 };
