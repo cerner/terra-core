@@ -69,11 +69,11 @@ const ActionHeader = ({
 
   const isCloseButtonAllowedOnSmallViewport = !(onClose && !onBack && !keepCloseButton);
 
-  const closeButton = onClose ? <Button variant="utility" isIconOnly icon={<IconClose />} text={closeText} onClick={onClose} /> : null;
-  const backButton = onBack ? <Button variant="utility" isIconOnly icon={<IconLeft />} text={backText} onClick={onBack} /> : null;
+  const closeButton = onClose ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<IconClose />} text={closeText} onClick={onClose} /> : null;
+  const backButton = onBack ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<IconLeft />} text={backText} onClick={onBack} /> : null;
 
   const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
-  const backButtonSmall = isCloseButtonAllowedOnSmallViewport ? backButton : <Button variant="utility" isIconOnly icon={<IconLeft />} text={backText} onClick={onClose} />;
+  const backButtonSmall = isCloseButtonAllowedOnSmallViewport ? backButton : <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<IconLeft />} text={backText} onClick={onClose} />;
 
   const actionHeader = (
     <ActionHeaderContainer
