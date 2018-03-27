@@ -1,0 +1,22 @@
+@import '~terra-mixins';
+
+:local {
+  .header-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-bottom: var(--terra-action-header-icon-margin-bottom);
+    margin-top: var(--terra-action-header-icon-margin-top, 4px);
+    
+    /* Disabling so that single quotes can be used in svg string */
+    /* stylelint-disable string-quotes */
+    &.back {
+      background: var(--terra-action-header-back-icon, inline-svg("<svg class='Icon__icon___XA18N Icon__is-bidi___2qF4d Button__icon-svg___D8gRQ' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' aria-hidden='true' focusable='false'><path d='M48 21H10.6L27.3 3.9 23.5.1 0 24l23.5 23.9 3.8-3.8L10.6 27H48z'></path></svg>"));
+    }
+
+    &.close {
+      background: var(--terra-action-header-close-icon, inline-svg("<svg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' class='Icon__icon___XA18N Button__icon-svg___D8gRQ' aria-hidden='true' focusable='false'><path d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'></path></svg>"));
+    }
+    /* stylelint-enable string-quotes */
+  }
+}

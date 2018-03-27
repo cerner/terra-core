@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import Button from 'terra-button';
-import IconLeft from 'terra-icon/lib/icon/IconLeft';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import ResponsiveElement from 'terra-responsive-element';
 import 'terra-base/lib/baseStyles';
 import ActionHeaderContainer from './_ActionHeaderContainer';
+import styles from './ActionHeader.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
@@ -69,11 +71,11 @@ const ActionHeader = ({
 
   const isCloseButtonAllowedOnSmallViewport = !(onClose && !onBack && !keepCloseButton);
 
-  const closeButton = onClose ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<IconClose />} text={closeText} onClick={onClose} /> : null;
-  const backButton = onBack ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<IconLeft />} text={backText} onClick={onBack} /> : null;
+  const closeButton = onClose ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<span className={cx('header-icon', 'close')} />} text={closeText} onClick={onClose} /> : null;
+  const backButton = onBack ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onBack} /> : null;
 
   const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
-  const backButtonSmall = isCloseButtonAllowedOnSmallViewport ? backButton : <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<IconLeft />} text={backText} onClick={onClose} />;
+  const backButtonSmall = isCloseButtonAllowedOnSmallViewport ? backButton : <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onClose} />;
 
   const actionHeader = (
     <ActionHeaderContainer
