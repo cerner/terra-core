@@ -10,20 +10,22 @@ import TagSrc from '!raw-loader!terra-tag/src/Tag';
 
 // Example Files
 import TagDefault from './TagDefault';
-import TagIconAndText from './TagIconAndText';
 import TagHref from './HrefTag';
+import TagFallbacks from './TagFallbacks';
 
 const TagExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={TagSrc} />
-    <h2 id="default">Default Tag</h2>
+    <h2 id="default">Default Tag with onClick</h2>
     <TagDefault />
-    <h2 id="icon-and-text">Icon and Text Tag</h2>
-    <TagIconAndText />
-    <h2 id="href">Href Tag</h2>
+    <br />
+    <h2 id="href">Tag with href</h2>
     <TagHref />
+    <br />
+    <br />
+    <TagFallbacks />
   </div>
 );
 

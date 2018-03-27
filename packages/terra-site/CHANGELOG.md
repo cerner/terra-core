@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update Tag examples
+
 ### Fixed
 * Import the correct Fieldset source file
 
