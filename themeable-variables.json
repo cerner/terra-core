@@ -770,6 +770,7 @@
     "--terra-tag-padding-left": "0.5rem",
     "--terra-tag-padding-right": "0.5rem",
     "--terra-tag-padding-top": "0.1428rem",
+    "--terra-tag-interactive-background-color": "rgba(28, 31, 33, 0.04)",
     "--terra-tag-interactive-color": "#0059a8",
     "--terra-tag-focus-background-color": "#fff",
     "--terra-tag-focus-border-color": "rgba(76, 178, 233, 0.5)",
