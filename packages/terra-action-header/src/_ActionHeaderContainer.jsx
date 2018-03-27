@@ -41,46 +41,22 @@ const defaultProps = {
 };
 
 const ActionHeaderContainer = ({ children, title, startContent, endContent, level, ...customProps }) => {
-  let startElement;
-  if (startContent) {
-    startElement = <div className={cx('flex-end')}>{startContent}</div>;
-  }
-
   const HeaderElement = `h${level}`;
-
-  let titleElement;
-  if (title) {
-    titleElement = (
-      <div className={cx('title-container')}>
-        <HeaderElement className={cx('title')}>
-          {title}
-        </HeaderElement>
-      </div>
-    );
-  }
-
-  let endElement;
-  if (endContent) {
-    endElement = <div className={cx('flex-end')}>{endContent}</div>;
-  }
-
-  let childElement;
-  if (children) {
-    const childClassNames = cx([
-      'flex-collapse',
-      children.props.className,
-    ]);
-    childElement = React.cloneElement(children, { className: childClassNames });
-  }
 
   return (
     <header {...customProps} className={cx('flex-header', customProps.className)}>
-      {startElement}
+      {startContent && <div className={cx('flex-end')}>{startContent}</div>}
       <div className={cx('flex-fill')}>
-        {titleElement}
+        {title &&
+          <div className={cx('title-container')}>
+            <HeaderElement className={cx('title')}>
+              {title}
+            </HeaderElement>
+          </div>
+        }
       </div>
-      {childElement}
-      {endElement}
+      {children && React.cloneElement(children, { className: cx('flex-collapse', children.props.className) })}
+      {endContent && <div className={cx('flex-end')}>{endContent}</div>}
     </header>
   );
 };
