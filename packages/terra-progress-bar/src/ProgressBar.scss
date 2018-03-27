@@ -1,6 +1,6 @@
 :local {
 
-  @mixin gradient($from-color, $to-color) {
+  @mixin terra-gradient($from-color, $to-color) {
     background:
       linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
       linear-gradient(to left, $from-color, $to-color);
@@ -8,7 +8,7 @@
 
   .progress-bar-gradient {
     &::-webkit-progress-value {
-        @include gradient(currentColor, currentColor)
+      @include terra-gradient(currentColor, currentColor);
     }
   }
 
@@ -65,7 +65,7 @@
   @-moz-document url-prefix('') {
     .progress-bar-gradient {
       &::-moz-progress-bar {
-        @include gradient(currentColor, currentColor)
+        @include terra-gradient(currentColor, currentColor);
       }
     }
 
