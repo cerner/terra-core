@@ -1,9 +1,14 @@
 :local {
+
+  @mixin gradient($from-color, $to-color) {
+    background:
+      linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
+      linear-gradient(to left, $from-color, $to-color);
+  }
+
   .progress-bar-gradient {
     &::-webkit-progress-value {
-      background:
-        linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
-        linear-gradient(to left, currentColor, currentColor);
+        @include gradient(currentColor, currentColor)
     }
   }
 
@@ -60,9 +65,7 @@
   @-moz-document url-prefix('') {
     .progress-bar-gradient {
       &::-moz-progress-bar {
-        background:
-          linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
-          linear-gradient(to left, currentColor, currentColor);
+        @include gradient(currentColor, currentColor)
       }
     }
 
