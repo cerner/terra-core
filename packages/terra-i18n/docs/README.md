@@ -17,8 +17,6 @@ The `I18nProvider` component configures the react-intl's `IntlProvider` and supp
 
 ### Supported Locales
 
-Terra supports the following locales:
-
 | Locale ID | Locale |
 |-|-|
 | ar | Arabic |
