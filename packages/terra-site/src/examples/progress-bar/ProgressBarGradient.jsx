@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressBar from 'terra-progress-bar';
 
-const ProgressBarDefault = () => (
+const ProgressBarGradient = () => (
   <div>
     <ProgressBar value={3} max={10} color="green" hasGradient />
     <br />
@@ -13,4 +13,4 @@ const ProgressBarDefault = () => (
   </div>
 );
 
-export default ProgressBarDefault;
+export default ProgressBarGradient;
