@@ -33,10 +33,10 @@
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
+    padding-bottom: var(--terra-button-vertical-padding, 0.5rem);
     padding-left: 0;
     padding-right: 0;
-    padding-top: var(--terra-button-vertical-padding, 0.286rem);
+    padding-top: var(--terra-button-vertical-padding, 0.5rem);
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -107,6 +107,7 @@
   }
 
   .icon-only {
+    display: flex;
     margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
     margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
   }
@@ -125,7 +126,7 @@
   }
 
   .icon {
-    display: inline-block;
+    display: flex;
   }
 
   .icon-svg {
