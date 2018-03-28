@@ -97,6 +97,7 @@ class SectionHeader extends React.Component {
       attributes.tabIndex = '0';
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
       attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
+      attributes.role = 'button';
     }
 
     const iconClassNames = cx([

@@ -19,6 +19,7 @@ exports[`SectionHeader should render a default component 1`] = `
 exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
 <div
   class="section-header is-interactable"
+  role="button"
   tabindex="0"
 >
   <div
@@ -54,6 +55,7 @@ exports[`SectionHeader should render with an accordion icon in the open position
 exports[`SectionHeader should render with an accordion icon when an 'onClick()' callback is passed 1`] = `
 <div
   class="section-header is-interactable"
+  role="button"
   tabindex="0"
 >
   <div
