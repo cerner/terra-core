@@ -26,6 +26,7 @@ exports[`ToggleSectionHeader should call any custom onClick that is provided by 
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
+        role="button"
         tabIndex="0"
       >
         <Arrange
@@ -96,6 +97,7 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
   <div
     aria-expanded="false"
     class="section-header is-interactable"
+    role="button"
     tabindex="0"
   >
     <div
@@ -138,6 +140,7 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
   <div
     aria-expanded="false"
     class="section-header is-interactable"
+    role="button"
     tabindex="0"
   >
     <div
@@ -190,6 +193,7 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
   <div
     aria-expanded="true"
     class="section-header is-interactable"
+    role="button"
     tabindex="0"
   >
     <div
@@ -251,6 +255,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
+        role="button"
         tabIndex="0"
       >
         <Arrange
