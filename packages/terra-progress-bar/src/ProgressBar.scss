@@ -3,11 +3,14 @@
   @mixin terra-gradient($from-color, $to-color) {
     background:
       linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5)),
-      linear-gradient(to left, $from-color, $to-color);
   }
 
   .progress-bar-gradient {
     &::-webkit-progress-value {
+      @include terra-gradient(currentColor, currentColor);
+    }
+
+    &::-ms-fill {
       @include terra-gradient(currentColor, currentColor);
     }
   }
