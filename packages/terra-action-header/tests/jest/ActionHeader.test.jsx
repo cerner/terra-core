@@ -10,7 +10,7 @@ const locale = 'en-US';
 describe('ActionHeader', () => {
   // Snapshot Tests
   it('should render a default action header', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader />
       </IntlProvider>,
@@ -19,7 +19,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with title', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader title="Action Header" />
       </IntlProvider>,
@@ -28,7 +28,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with back button and title', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader title="Action Header" onBack={() => {}} />
       </IntlProvider>,
@@ -37,7 +37,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with close button and title', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader title="Action Header" onClose={() => {}} />
       </IntlProvider>,
@@ -46,7 +46,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with back and close buttons and title', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader title="Action Header" onBack={() => {}} onClose={() => {}} />
       </IntlProvider>,
@@ -55,7 +55,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with level three header element and title', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader title="Action Header" level={3} />
       </IntlProvider>,
@@ -64,7 +64,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with custom button and title', () => {
-    const actionHeader = shallow(
+    const actionHeader = render(
       <IntlProvider locale={locale} messages={messages}>
         <ActionHeader title="Action Header">
           <Button text="Custom Button" onClick={() => alert('You clicked me!')} />

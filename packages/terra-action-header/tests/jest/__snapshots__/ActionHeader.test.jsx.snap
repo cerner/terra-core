@@ -1,72 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionHeader should render a default action header 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={1}
-/>
-`;
+exports[`ActionHeader should render a default action header 1`] = `<div />`;
 
-exports[`ActionHeader should render an action header with back and close buttons and title 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={1}
-  onBack={[Function]}
-  onClose={[Function]}
-  title="Action Header"
-/>
-`;
+exports[`ActionHeader should render an action header with back and close buttons and title 1`] = `<div />`;
 
-exports[`ActionHeader should render an action header with back button and title 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={1}
-  onBack={[Function]}
-  title="Action Header"
-/>
-`;
+exports[`ActionHeader should render an action header with back button and title 1`] = `<div />`;
 
-exports[`ActionHeader should render an action header with close button and title 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={1}
-  onClose={[Function]}
-  title="Action Header"
-/>
-`;
+exports[`ActionHeader should render an action header with close button and title 1`] = `<div />`;
 
-exports[`ActionHeader should render an action header with custom button and title 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={1}
-  title="Action Header"
->
-  <Button
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isIconOnly={false}
-    isReversed={false}
-    onClick={[Function]}
-    text="Custom Button"
-    type="button"
-    variant="neutral"
-  />
-</ActionHeader>
-`;
+exports[`ActionHeader should render an action header with custom button and title 1`] = `<div />`;
 
-exports[`ActionHeader should render an action header with level three header element and title 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={3}
-  title="Action Header"
-/>
-`;
+exports[`ActionHeader should render an action header with level three header element and title 1`] = `<div />`;
 
-exports[`ActionHeader should render an action header with title 1`] = `
-<ActionHeader
-  keepCloseButton={false}
-  level={1}
-  title="Action Header"
-/>
-`;
+exports[`ActionHeader should render an action header with title 1`] = `<div />`;
