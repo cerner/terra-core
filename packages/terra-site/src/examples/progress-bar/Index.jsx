@@ -31,7 +31,7 @@ const ProgressBarExamples = () => (
     <ProgressBarColor />
     <br />
     <br />
-    <h2 id="color">Gradient</h2>
+    <h2 id="gradient">Gradient</h2>
     <ProgressBarGradient />
   </div>
 );
