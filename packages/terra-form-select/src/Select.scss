@@ -1,6 +1,6 @@
 :local {
   .select {
-    background-color: #fff;
+    background-color: var(--terra-select-background-color, #fff);
     background-image: var(--terra-select-focus-animation-background, none);
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -127,8 +127,10 @@
 
   .select-menu {
     background-color: var(--terra-select-menu-background-color, #fff);
-    border: solid 1px #b2b5b6;
+    border-color: var(--terra-select-menu-input-border-color, #b2b5b6);
     border-radius: var(--terra-select-menu-border-raidus, 0);
+    border-style: solid;
+    border-width: 1px;
     box-shadow: var(--terra-select-menu-box-shadow, 0 3px 6px 0 rgba(0, 0, 0, 0.25));
     margin: 0;
     padding-bottom: var(--terra-select-menu-bottom-padding, 0.214rem);
