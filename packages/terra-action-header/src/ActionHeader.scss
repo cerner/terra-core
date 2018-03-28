@@ -1,12 +1,22 @@
 @import '~terra-mixins';
 
 :local {
+  .header-back-button {
+    margin-right: var(--terra-action-header-margin-right, 1.429rem);
+  }
+  
+  .header-close-button {
+    margin-left: var(--terra-action-header-margin-left, 1.429rem);
+  }
+  
   .header-icon {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     margin-bottom: var(--terra-action-header-icon-margin-bottom);
-    margin-top: var(--terra-action-header-icon-margin-top, 4px);
+    margin-left: var(--terra-action-header-icon-margin-left);
+    margin-right: var(--terra-action-header-icon-margin-right);
+    margin-top: var(--terra-action-header-icon-margin-top, 0.2143rem);
     
     /* Disabling so that single quotes can be used in svg string */
     /* stylelint-disable string-quotes */

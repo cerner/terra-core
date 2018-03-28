@@ -20,7 +20,7 @@ const propTypes = {
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * Callback function for when the close button is clicked.
-   * On small viewports a back button will be displayed instead of a close button when a separate onBack callback is not set.
+   * On small viewports, this will be triggered by a back button if onBack is not set.
    */
   onClose: PropTypes.func,
   /**
@@ -71,8 +71,8 @@ const ActionHeader = ({
 
   const isCloseButtonAllowedOnSmallViewport = !(onClose && !onBack && !keepCloseButton);
 
-  const closeButton = onClose ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<span className={cx('header-icon', 'close')} />} text={closeText} onClick={onClose} /> : null;
-  const backButton = onBack ? <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onBack} /> : null;
+  const closeButton = onClose ? <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx('header-icon', 'close')} />} text={closeText} onClick={onClose} /> : null;
+  const backButton = onBack ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onBack} /> : null;
 
   const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
   const backButtonSmall = isCloseButtonAllowedOnSmallViewport ? backButton : <Button variant={Button.Opts.Variants.UTILITY} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onClose} />;

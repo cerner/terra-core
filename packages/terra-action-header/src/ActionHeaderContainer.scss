@@ -1,12 +1,10 @@
-$default-border: 1px solid #1c1f21;
-
 :local {
   .flex-header {
-    background-color: var(--terra-action-header-background-color, #fff);
-    border-bottom: var(--terra-action-header-border-bottom, $default-border);
-    border-left: var(--terra-action-header-border-left, $default-border);
-    border-right: var(--terra-action-header-border-right, $default-border);
-    border-top: var(--terra-action-header-border-top, $default-border);
+    background-color: var(--terra-action-header-background-color, #f4f4f4);
+    border-bottom: var(--terra-action-header-border-bottom, 1px solid #dedfe0);
+    border-left: var(--terra-action-header-border-left);
+    border-right: var(--terra-action-header-border-right);
+    border-top: var(--terra-action-header-border-top);
     box-shadow: var(--terra-action-header-box-shadow);
     display: flex;
     justify-content: space-between;
@@ -50,8 +48,7 @@ $default-border: 1px solid #1c1f21;
 
   .title {
     color: var(--terra-action-header-font-color, #1c1f21);
-    font-family: var(--terra-action-header-font-family);
-    font-size: var(--terra-action-header-font-size, 1rem);
+    font-size: var(--terra-action-header-font-size, 1.286rem);
     font-weight: normal;
     height: 100%;
     margin-bottom: 0;
