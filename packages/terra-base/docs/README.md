@@ -22,7 +22,7 @@ import Base from 'terra-base';
 
 ## I18n
 
-The `locale` prop provided to `Base` will be used to loaded the appropriate translation messages. `Base` additionally wraps its children with an `I18nProvider` component (as provided by `terra-i18n`) that exposes the loaded messages to its children through its context.
+The `locale` prop provided to `Base` will be used to load the appropriate translation messages. `Base` additionally wraps its children with an `I18nProvider` component (as provided by `terra-i18n`) that exposes the loaded messages to its children through its context.
 
 Children of `Base` should use the provided `injectIntl` higher-order component generator to interface with the `I18nProvider` context. The `intlShape` prop type is also available for use in those components' prop type specifications.
 
