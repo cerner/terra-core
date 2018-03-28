@@ -59,19 +59,18 @@ import TerraSiteIndex38 from './packages/terra-site/src/examples/search-field/In
 import TerraSiteIndex39 from './packages/terra-site/src/examples/section-header/Index';
 import TerraSiteIndex40 from './packages/terra-site/src/examples/signature/Index';
 import TerraSiteIndex41 from './packages/terra-site/src/examples/slide-group/Index';
-import TerraSiteIndex42 from './packages/terra-site/src/examples/slide-panel/Index';
-import TerraSiteIndex43 from './packages/terra-site/src/examples/spacer/Index';
-import TerraSiteIndex44 from './packages/terra-site/src/examples/status-view/Index';
-import TerraSiteIndex45 from './packages/terra-site/src/examples/status/Index';
-import TerraSiteIndex46 from './packages/terra-site/src/examples/table/Index';
+import TerraSiteIndex42 from './packages/terra-site/src/examples/spacer/Index';
+import TerraSiteIndex43 from './packages/terra-site/src/examples/status-view/Index';
+import TerraSiteIndex44 from './packages/terra-site/src/examples/status/Index';
+import TerraSiteIndex45 from './packages/terra-site/src/examples/table/Index';
 import TerraSiteMultiSelectIndex1 from './packages/terra-site/src/examples/table/components/MultiSelectIndex';
-import TerraSiteIndex47 from './packages/terra-site/src/examples/tabs/Index';
-import TerraSiteIndex48 from './packages/terra-site/src/examples/tag/Index';
-import TerraSiteIndex49 from './packages/terra-site/src/examples/text/Index';
-import TerraSiteIndex50 from './packages/terra-site/src/examples/time-input/Index';
-import TerraSiteIndex51 from './packages/terra-site/src/examples/toggle-button/Index';
-import TerraSiteIndex52 from './packages/terra-site/src/examples/toggle-section-header/Index';
-import TerraSiteIndex53 from './packages/terra-site/src/examples/toggle/Index';
+import TerraSiteIndex46 from './packages/terra-site/src/examples/tabs/Index';
+import TerraSiteIndex47 from './packages/terra-site/src/examples/tag/Index';
+import TerraSiteIndex48 from './packages/terra-site/src/examples/text/Index';
+import TerraSiteIndex49 from './packages/terra-site/src/examples/time-input/Index';
+import TerraSiteIndex50 from './packages/terra-site/src/examples/toggle-button/Index';
+import TerraSiteIndex51 from './packages/terra-site/src/examples/toggle-section-header/Index';
+import TerraSiteIndex52 from './packages/terra-site/src/examples/toggle/Index';
 
 // Component Test Examples
 import WithActionsActionFooterContainer from './packages/terra-action-footer/examples/test-examples/action-footer-container/WithActionsActionFooterContainer.example';
@@ -397,20 +396,6 @@ import AnimatedSlideGroup from './packages/terra-slide-group/tests/nightwatch/An
 import DefaultSlideGroup from './packages/terra-slide-group/tests/nightwatch/DefaultSlideGroup';
 import NonAnimatedSlideGroup from './packages/terra-slide-group/tests/nightwatch/NonAnimatedSlideGroup';
 import OneItemSlideGroup from './packages/terra-slide-group/tests/nightwatch/OneItemSlideGroup';
-import SlidePanelSquishLarge from './packages/terra-slide-panel/examples/test-examples/SlidePanelSquishLarge.example';
-import SlidePanelToggle from './packages/terra-slide-panel/examples/test-examples/SlidePanelToggle.example';
-import SlidePanelDefault from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelDefault';
-import SlidePanelEnd from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelEnd';
-import SlidePanelFill from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelFill';
-import SlidePanelFullscreen from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelFullscreen';
-import SlidePanelLarge from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelLarge';
-import SlidePanelMainContent from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelMainContent';
-import SlidePanelOpen from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelOpen';
-import SlidePanelOverlay from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelOverlay';
-import SlidePanelPanelContent from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelPanelContent';
-import SlidePanelSmall from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelSmall';
-import SlidePanelSquish from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelSquish';
-import SlidePanelStart from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelStart';
 import DefaultSpacer from './packages/terra-spacer/tests/nightwatch/DefaultSpacer';
 import SpacerLarge1 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+1';
 import SpacerLarge2 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+2';
@@ -3087,24 +3072,13 @@ const componentConfig = {
         ],
       },
       {
-        name: 'Slide Panel',
-        path: '/slide-panel',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteIndex42,
-          },
-        ],
-      },
-      {
         name: 'Spacer',
         path: '/spacer',
         pages: [
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex43,
+            component: TerraSiteIndex42,
           },
         ],
       },
@@ -3115,7 +3089,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex44,
+            component: TerraSiteIndex43,
           },
         ],
       },
@@ -3126,7 +3100,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex45,
+            component: TerraSiteIndex44,
           },
         ],
       },
@@ -3137,7 +3111,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex46,
+            component: TerraSiteIndex45,
           },
           {
             name: 'Multi Select Index',
@@ -3153,7 +3127,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex47,
+            component: TerraSiteIndex46,
           },
         ],
       },
@@ -3164,7 +3138,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex48,
+            component: TerraSiteIndex47,
           },
         ],
       },
@@ -3175,7 +3149,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex49,
+            component: TerraSiteIndex48,
           },
         ],
       },
@@ -3186,7 +3160,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex50,
+            component: TerraSiteIndex49,
           },
         ],
       },
@@ -3197,7 +3171,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex51,
+            component: TerraSiteIndex50,
           },
         ],
       },
@@ -3208,7 +3182,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex52,
+            component: TerraSiteIndex51,
           },
         ],
       },
@@ -3219,7 +3193,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex53,
+            component: TerraSiteIndex52,
           },
         ],
       },
@@ -3248,82 +3222,6 @@ const componentConfig = {
         name: 'One Item Slide Group',
         path: '/one-item-slide-group',
         component: OneItemSlideGroup,
-      },
-    ],
-  },
-  'terra-slide-panel': {
-    name: 'Slide Panel',
-    path: '/slide-panel',
-    tests: [
-      {
-        name: 'Slide Panel Squish Large',
-        path: '/slide-panel-squish-large',
-        component: SlidePanelSquishLarge,
-      },
-      {
-        name: 'Slide Panel Toggle',
-        path: '/slide-panel-toggle',
-        component: SlidePanelToggle,
-      },
-      {
-        name: 'Slide Panel Default',
-        path: '/slide-panel-default',
-        component: SlidePanelDefault,
-      },
-      {
-        name: 'Slide Panel End',
-        path: '/slide-panel-end',
-        component: SlidePanelEnd,
-      },
-      {
-        name: 'Slide Panel Fill',
-        path: '/slide-panel-fill',
-        component: SlidePanelFill,
-      },
-      {
-        name: 'Slide Panel Fullscreen',
-        path: '/slide-panel-fullscreen',
-        component: SlidePanelFullscreen,
-      },
-      {
-        name: 'Slide Panel Large',
-        path: '/slide-panel-large',
-        component: SlidePanelLarge,
-      },
-      {
-        name: 'Slide Panel Main Content',
-        path: '/slide-panel-main-content',
-        component: SlidePanelMainContent,
-      },
-      {
-        name: 'Slide Panel Open',
-        path: '/slide-panel-open',
-        component: SlidePanelOpen,
-      },
-      {
-        name: 'Slide Panel Overlay',
-        path: '/slide-panel-overlay',
-        component: SlidePanelOverlay,
-      },
-      {
-        name: 'Slide Panel Panel Content',
-        path: '/slide-panel-panel-content',
-        component: SlidePanelPanelContent,
-      },
-      {
-        name: 'Slide Panel Small',
-        path: '/slide-panel-small',
-        component: SlidePanelSmall,
-      },
-      {
-        name: 'Slide Panel Squish',
-        path: '/slide-panel-squish',
-        component: SlidePanelSquish,
-      },
-      {
-        name: 'Slide Panel Start',
-        path: '/slide-panel-start',
-        component: SlidePanelStart,
       },
     ],
   },
