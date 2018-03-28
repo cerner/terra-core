@@ -5,8 +5,8 @@ import { FormattedMessage } from 'react-intl';
 import { I18nProvider, i18nLoader } from '../../lib/I18n';
 import i18nSupportedLocales from '../../lib/i18nSupportedLocales';
 
-// Zulu & Zulu-South African locales as test locales (supported by intl)
-const testLocales = i18nSupportedLocales.concat(['zu', 'zu-ZA']);
+// Add Portuguese-Guinea-Bissau, Zulu & Zulu-South African locales as test locales (supported by intl)
+const testLocales = i18nSupportedLocales.concat(['pt-GW', 'zu', 'zu-ZA']);
 
 class Base extends React.Component {
   constructor(props) {
@@ -47,6 +47,8 @@ class Base extends React.Component {
         </p>
         {(this.state.selectedLocale).includes('zu')
           && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the en locale as fallback.</p>}
+        {this.state.selectedLocale === 'pt-GW'
+          && <p style={{ color: 'red', fontWeight: 'bold' }}>Using the pt locale as fallback.</p>}
       </I18nProvider>
     );
   }
