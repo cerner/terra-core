@@ -40,40 +40,37 @@ import TerraSiteTextareaFieldIndex from './packages/terra-site/src/examples/form
 import TerraSiteTextareaIndex from './packages/terra-site/src/examples/form/components/TextareaIndex';
 import TerraSiteIndex26 from './packages/terra-site/src/examples/grid/Index';
 import TerraSiteIndex27 from './packages/terra-site/src/examples/heading/Index';
-import TerraSiteIndex28 from './packages/terra-site/src/examples/hookshot/Index';
-import TerraSiteIndex29 from './packages/terra-site/src/examples/i18n/Index';
-import TerraSiteIndex30 from './packages/terra-site/src/examples/icon/Index';
+import TerraSiteIndex28 from './packages/terra-site/src/examples/i18n/Index';
+import TerraSiteIndex29 from './packages/terra-site/src/examples/icon/Index';
 import TerraSiteIconStatic from './packages/terra-site/src/examples/icon/components/IconStatic';
 import TerraSiteIconThemeable from './packages/terra-site/src/examples/icon/components/IconThemeable';
-import TerraSiteIndex31 from './packages/terra-site/src/examples/image/Index';
-import TerraSiteIndex32 from './packages/terra-site/src/examples/list/Index';
+import TerraSiteIndex30 from './packages/terra-site/src/examples/image/Index';
+import TerraSiteIndex31 from './packages/terra-site/src/examples/list/Index';
 import TerraSiteMultiSelectIndex from './packages/terra-site/src/examples/list/components/MultiSelectIndex';
 import TerraSiteSelectableListIndex from './packages/terra-site/src/examples/list/components/SelectableListIndex';
 import TerraSiteSingleSelectIndex from './packages/terra-site/src/examples/list/components/SingleSelectIndex';
-import TerraSiteIndex33 from './packages/terra-site/src/examples/menu/Index';
-import TerraSiteIndex34 from './packages/terra-site/src/examples/modal/Index';
-import TerraSiteIndex35 from './packages/terra-site/src/examples/overlay/Index';
-import TerraSiteIndex36 from './packages/terra-site/src/examples/popup/Index';
-import TerraSiteIndex37 from './packages/terra-site/src/examples/profile-image/Index';
-import TerraSiteIndex38 from './packages/terra-site/src/examples/progress-bar/Index';
-import TerraSiteIndex39 from './packages/terra-site/src/examples/responsive-element/Index';
-import TerraSiteIndex40 from './packages/terra-site/src/examples/search-field/Index';
-import TerraSiteIndex41 from './packages/terra-site/src/examples/section-header/Index';
-import TerraSiteIndex42 from './packages/terra-site/src/examples/signature/Index';
-import TerraSiteIndex43 from './packages/terra-site/src/examples/slide-group/Index';
-import TerraSiteIndex44 from './packages/terra-site/src/examples/slide-panel/Index';
-import TerraSiteIndex45 from './packages/terra-site/src/examples/spacer/Index';
-import TerraSiteIndex46 from './packages/terra-site/src/examples/status-view/Index';
-import TerraSiteIndex47 from './packages/terra-site/src/examples/status/Index';
-import TerraSiteIndex48 from './packages/terra-site/src/examples/table/Index';
+import TerraSiteIndex32 from './packages/terra-site/src/examples/menu/Index';
+import TerraSiteIndex33 from './packages/terra-site/src/examples/modal/Index';
+import TerraSiteIndex34 from './packages/terra-site/src/examples/overlay/Index';
+import TerraSiteIndex35 from './packages/terra-site/src/examples/profile-image/Index';
+import TerraSiteIndex36 from './packages/terra-site/src/examples/progress-bar/Index';
+import TerraSiteIndex37 from './packages/terra-site/src/examples/responsive-element/Index';
+import TerraSiteIndex38 from './packages/terra-site/src/examples/search-field/Index';
+import TerraSiteIndex39 from './packages/terra-site/src/examples/section-header/Index';
+import TerraSiteIndex40 from './packages/terra-site/src/examples/signature/Index';
+import TerraSiteIndex41 from './packages/terra-site/src/examples/slide-group/Index';
+import TerraSiteIndex42 from './packages/terra-site/src/examples/spacer/Index';
+import TerraSiteIndex43 from './packages/terra-site/src/examples/status-view/Index';
+import TerraSiteIndex44 from './packages/terra-site/src/examples/status/Index';
+import TerraSiteIndex45 from './packages/terra-site/src/examples/table/Index';
 import TerraSiteMultiSelectIndex1 from './packages/terra-site/src/examples/table/components/MultiSelectIndex';
-import TerraSiteIndex49 from './packages/terra-site/src/examples/tabs/Index';
-import TerraSiteIndex50 from './packages/terra-site/src/examples/tag/Index';
-import TerraSiteIndex51 from './packages/terra-site/src/examples/text/Index';
-import TerraSiteIndex52 from './packages/terra-site/src/examples/time-input/Index';
-import TerraSiteIndex53 from './packages/terra-site/src/examples/toggle-button/Index';
-import TerraSiteIndex54 from './packages/terra-site/src/examples/toggle-section-header/Index';
-import TerraSiteIndex55 from './packages/terra-site/src/examples/toggle/Index';
+import TerraSiteIndex46 from './packages/terra-site/src/examples/tabs/Index';
+import TerraSiteIndex47 from './packages/terra-site/src/examples/tag/Index';
+import TerraSiteIndex48 from './packages/terra-site/src/examples/text/Index';
+import TerraSiteIndex49 from './packages/terra-site/src/examples/time-input/Index';
+import TerraSiteIndex50 from './packages/terra-site/src/examples/toggle-button/Index';
+import TerraSiteIndex51 from './packages/terra-site/src/examples/toggle-section-header/Index';
+import TerraSiteIndex52 from './packages/terra-site/src/examples/toggle/Index';
 
 // Component Test Examples
 import WithActionsActionFooterContainer from './packages/terra-action-footer/examples/test-examples/action-footer-container/WithActionsActionFooterContainer.example';
@@ -280,25 +277,6 @@ import HeadingSize from './packages/terra-heading/tests/nightwatch/HeadingSize';
 import HeadingVisualProps from './packages/terra-heading/tests/nightwatch/HeadingVisualProps';
 import HeadingVisuallyHidden from './packages/terra-heading/tests/nightwatch/HeadingVisuallyHidden';
 import HeadingWeight from './packages/terra-heading/tests/nightwatch/HeadingWeight';
-import DefaultHookshot from './packages/terra-hookshot/tests/nightwatch/components/DefaultHookshot';
-import HookshotAttachmentBehaviorAuto from './packages/terra-hookshot/tests/nightwatch/components/HookshotAttachmentBehaviorAuto';
-import HookshotAttachmentBehaviorFlip from './packages/terra-hookshot/tests/nightwatch/components/HookshotAttachmentBehaviorFlip';
-import HookshotAttachmentBehaviorNone from './packages/terra-hookshot/tests/nightwatch/components/HookshotAttachmentBehaviorNone';
-import HookshotAttachmentMargin from './packages/terra-hookshot/tests/nightwatch/components/HookshotAttachmentMargin';
-import HookshotBoundingContainer from './packages/terra-hookshot/tests/nightwatch/components/HookshotBoundingContainer';
-import HookshotCloseBehaviors from './packages/terra-hookshot/tests/nightwatch/components/HookshotCloseBehaviors';
-import HookshotContentAttachmentBC from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentBC';
-import HookshotContentAttachmentBE from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentBE';
-import HookshotContentAttachmentBS from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentBS';
-import HookshotContentAttachmentMC from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentMC';
-import HookshotContentAttachmentME from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentME';
-import HookshotContentAttachmentMS from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentMS';
-import HookshotContentAttachmentTC from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentTC';
-import HookshotContentAttachmentTE from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentTE';
-import HookshotContentAttachmentTS from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentAttachmentTS';
-import HookshotContentOffset from './packages/terra-hookshot/tests/nightwatch/components/HookshotContentOffset';
-import HookshotEnabledBehaviors from './packages/terra-hookshot/tests/nightwatch/components/HookshotEnabledBehaviors';
-import HookshotTargetOffset from './packages/terra-hookshot/tests/nightwatch/components/HookshotTargetOffset';
 import DefaultI18N from './packages/terra-i18n/tests/nightwatch/DefaultI18n';
 import IconAppendClass from './packages/terra-icon/tests/nightwatch/components/IconAppendClass';
 import IconAria from './packages/terra-icon/tests/nightwatch/components/IconAria';
@@ -381,35 +359,6 @@ import FullscreenScrollableOverlay from './packages/terra-overlay/tests/nightwat
 import LightOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/LightOverlay';
 import OnRequestCloseOverlay from './packages/terra-overlay/tests/nightwatch/Overlay/OnRequestCloseOverlay';
 import DefaultOverlayContainer from './packages/terra-overlay/tests/nightwatch/OverlayContainer/DefaultOverlayContainer';
-import ArrowHorizontalAttachmentsPopup from './packages/terra-popup/tests/nightwatch/components/ArrowHorizontalAttachmentsPopup';
-import ArrowHorizontalTargetPopup from './packages/terra-popup/tests/nightwatch/components/ArrowHorizontalTargetPopup';
-import ArrowPopup from './packages/terra-popup/tests/nightwatch/components/ArrowPopup';
-import ArrowPopupClosed from './packages/terra-popup/tests/nightwatch/components/ArrowPopupClosed';
-import ArrowSmallTargetLeftPopup from './packages/terra-popup/tests/nightwatch/components/ArrowSmallTargetLeftPopup';
-import ArrowSmallTargetRightPopup from './packages/terra-popup/tests/nightwatch/components/ArrowSmallTargetRightPopup';
-import ArrowVerticalAttachmentsPopup from './packages/terra-popup/tests/nightwatch/components/ArrowVerticalAttachmentsPopup';
-import ArrowVerticalLeftAdjustmentPopup from './packages/terra-popup/tests/nightwatch/components/ArrowVerticalLeftAdjustmentPopup';
-import ArrowVerticalRightAdjustmentPopup from './packages/terra-popup/tests/nightwatch/components/ArrowVerticalRightAdjustmentPopup';
-import AutomaticHeightBoundedPopup from './packages/terra-popup/tests/nightwatch/components/AutomaticHeightBoundedPopup';
-import AutomaticHeightPopup from './packages/terra-popup/tests/nightwatch/components/AutomaticHeightPopup';
-import AutomaticWidthBoundedPopup from './packages/terra-popup/tests/nightwatch/components/AutomaticWidthBoundedPopup';
-import AutomaticWidthPopup from './packages/terra-popup/tests/nightwatch/components/AutomaticWidthPopup';
-import BoundedHeightPopup from './packages/terra-popup/tests/nightwatch/components/BoundedHeightPopup';
-import BoundedPopup from './packages/terra-popup/tests/nightwatch/components/BoundedPopup';
-import BoundedPopupClosed from './packages/terra-popup/tests/nightwatch/components/BoundedPopupClosed';
-import BoundedWidthPopup from './packages/terra-popup/tests/nightwatch/components/BoundedWidthPopup';
-import ClassNamePopup from './packages/terra-popup/tests/nightwatch/components/ClassNamePopup';
-import DefaultPopup from './packages/terra-popup/tests/nightwatch/components/DefaultPopup';
-import DifferentAttachmentsPopup from './packages/terra-popup/tests/nightwatch/components/DifferentAttachmentsPopup';
-import NoHeaderPopup from './packages/terra-popup/tests/nightwatch/components/NoHeaderPopup';
-import OverlayPopup from './packages/terra-popup/tests/nightwatch/components/OverlayPopup';
-import PopupInsideModal from './packages/terra-popup/tests/nightwatch/components/PopupInsideModal';
-import PopupModalContainer from './packages/terra-popup/tests/nightwatch/components/PopupModalContainer';
-import ResizedContentPopup from './packages/terra-popup/tests/nightwatch/components/ResizedContentPopup';
-import SizeInvalidPopup from './packages/terra-popup/tests/nightwatch/components/SizeInvalidPopup';
-import SizeLargePopup from './packages/terra-popup/tests/nightwatch/components/SizeLargePopup';
-import SizeMediumPopup from './packages/terra-popup/tests/nightwatch/components/SizeMediumPopup';
-import SizeSmallPopup from './packages/terra-popup/tests/nightwatch/components/SizeSmallPopup';
 import ProfileImageDefault from './packages/terra-profile-image/tests/nightwatch/ProfileImageDefault';
 import ProgressBarColor from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
 import ProgressBarDefault from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarDefault';
@@ -448,20 +397,6 @@ import AnimatedSlideGroup from './packages/terra-slide-group/tests/nightwatch/An
 import DefaultSlideGroup from './packages/terra-slide-group/tests/nightwatch/DefaultSlideGroup';
 import NonAnimatedSlideGroup from './packages/terra-slide-group/tests/nightwatch/NonAnimatedSlideGroup';
 import OneItemSlideGroup from './packages/terra-slide-group/tests/nightwatch/OneItemSlideGroup';
-import SlidePanelSquishLarge from './packages/terra-slide-panel/examples/test-examples/SlidePanelSquishLarge.example';
-import SlidePanelToggle from './packages/terra-slide-panel/examples/test-examples/SlidePanelToggle.example';
-import SlidePanelDefault from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelDefault';
-import SlidePanelEnd from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelEnd';
-import SlidePanelFill from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelFill';
-import SlidePanelFullscreen from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelFullscreen';
-import SlidePanelLarge from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelLarge';
-import SlidePanelMainContent from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelMainContent';
-import SlidePanelOpen from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelOpen';
-import SlidePanelOverlay from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelOverlay';
-import SlidePanelPanelContent from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelPanelContent';
-import SlidePanelSmall from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelSmall';
-import SlidePanelSquish from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelSquish';
-import SlidePanelStart from './packages/terra-slide-panel/tests/nightwatch/components/SlidePanelStart';
 import DefaultSpacer from './packages/terra-spacer/tests/nightwatch/DefaultSpacer';
 import SpacerLarge1 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+1';
 import SpacerLarge2 from './packages/terra-spacer/tests/nightwatch/SpacerLarge+2';
@@ -1860,107 +1795,6 @@ const componentConfig = {
       },
     ],
   },
-  'terra-hookshot': {
-    name: 'Hookshot',
-    path: '/hookshot',
-    tests: [
-      {
-        name: 'Default Hookshot',
-        path: '/default-hookshot',
-        component: DefaultHookshot,
-      },
-      {
-        name: 'Hookshot Attachment Behavior Auto',
-        path: '/hookshot-attachment-behavior-auto',
-        component: HookshotAttachmentBehaviorAuto,
-      },
-      {
-        name: 'Hookshot Attachment Behavior Flip',
-        path: '/hookshot-attachment-behavior-flip',
-        component: HookshotAttachmentBehaviorFlip,
-      },
-      {
-        name: 'Hookshot Attachment Behavior None',
-        path: '/hookshot-attachment-behavior-none',
-        component: HookshotAttachmentBehaviorNone,
-      },
-      {
-        name: 'Hookshot Attachment Margin',
-        path: '/hookshot-attachment-margin',
-        component: HookshotAttachmentMargin,
-      },
-      {
-        name: 'Hookshot Bounding Container',
-        path: '/hookshot-bounding-container',
-        component: HookshotBoundingContainer,
-      },
-      {
-        name: 'Hookshot Close Behaviors',
-        path: '/hookshot-close-behaviors',
-        component: HookshotCloseBehaviors,
-      },
-      {
-        name: 'Hookshot Content Attachment BC',
-        path: '/hookshot-content-attachment-bc',
-        component: HookshotContentAttachmentBC,
-      },
-      {
-        name: 'Hookshot Content Attachment BE',
-        path: '/hookshot-content-attachment-be',
-        component: HookshotContentAttachmentBE,
-      },
-      {
-        name: 'Hookshot Content Attachment BS',
-        path: '/hookshot-content-attachment-bs',
-        component: HookshotContentAttachmentBS,
-      },
-      {
-        name: 'Hookshot Content Attachment MC',
-        path: '/hookshot-content-attachment-mc',
-        component: HookshotContentAttachmentMC,
-      },
-      {
-        name: 'Hookshot Content Attachment ME',
-        path: '/hookshot-content-attachment-me',
-        component: HookshotContentAttachmentME,
-      },
-      {
-        name: 'Hookshot Content Attachment MS',
-        path: '/hookshot-content-attachment-ms',
-        component: HookshotContentAttachmentMS,
-      },
-      {
-        name: 'Hookshot Content Attachment TC',
-        path: '/hookshot-content-attachment-tc',
-        component: HookshotContentAttachmentTC,
-      },
-      {
-        name: 'Hookshot Content Attachment TE',
-        path: '/hookshot-content-attachment-te',
-        component: HookshotContentAttachmentTE,
-      },
-      {
-        name: 'Hookshot Content Attachment TS',
-        path: '/hookshot-content-attachment-ts',
-        component: HookshotContentAttachmentTS,
-      },
-      {
-        name: 'Hookshot Content Offset',
-        path: '/hookshot-content-offset',
-        component: HookshotContentOffset,
-      },
-      {
-        name: 'Hookshot Enabled Behaviors',
-        path: '/hookshot-enabled-behaviors',
-        component: HookshotEnabledBehaviors,
-      },
-      {
-        name: 'Hookshot Target Offset',
-        path: '/hookshot-target-offset',
-        component: HookshotTargetOffset,
-      },
-    ],
-  },
   'terra-i18n': {
     name: 'I 18 N',
     path: '/i-18-n',
@@ -2482,157 +2316,6 @@ const componentConfig = {
             component: DefaultOverlayContainer,
           },
         ],
-      },
-    ],
-  },
-  'terra-popup': {
-    name: 'Popup',
-    path: '/popup',
-    tests: [
-      {
-        name: 'Arrow Horizontal Attachments Popup',
-        path: '/arrow-horizontal-attachments-popup',
-        component: ArrowHorizontalAttachmentsPopup,
-      },
-      {
-        name: 'Arrow Horizontal Target Popup',
-        path: '/arrow-horizontal-target-popup',
-        component: ArrowHorizontalTargetPopup,
-      },
-      {
-        name: 'Arrow Popup',
-        path: '/arrow-popup',
-        component: ArrowPopup,
-      },
-      {
-        name: 'Arrow Popup Closed',
-        path: '/arrow-popup-closed',
-        component: ArrowPopupClosed,
-      },
-      {
-        name: 'Arrow Small Target Left Popup',
-        path: '/arrow-small-target-left-popup',
-        component: ArrowSmallTargetLeftPopup,
-      },
-      {
-        name: 'Arrow Small Target Right Popup',
-        path: '/arrow-small-target-right-popup',
-        component: ArrowSmallTargetRightPopup,
-      },
-      {
-        name: 'Arrow Vertical Attachments Popup',
-        path: '/arrow-vertical-attachments-popup',
-        component: ArrowVerticalAttachmentsPopup,
-      },
-      {
-        name: 'Arrow Vertical Left Adjustment Popup',
-        path: '/arrow-vertical-left-adjustment-popup',
-        component: ArrowVerticalLeftAdjustmentPopup,
-      },
-      {
-        name: 'Arrow Vertical Right Adjustment Popup',
-        path: '/arrow-vertical-right-adjustment-popup',
-        component: ArrowVerticalRightAdjustmentPopup,
-      },
-      {
-        name: 'Automatic Height Bounded Popup',
-        path: '/automatic-height-bounded-popup',
-        component: AutomaticHeightBoundedPopup,
-      },
-      {
-        name: 'Automatic Height Popup',
-        path: '/automatic-height-popup',
-        component: AutomaticHeightPopup,
-      },
-      {
-        name: 'Automatic Width Bounded Popup',
-        path: '/automatic-width-bounded-popup',
-        component: AutomaticWidthBoundedPopup,
-      },
-      {
-        name: 'Automatic Width Popup',
-        path: '/automatic-width-popup',
-        component: AutomaticWidthPopup,
-      },
-      {
-        name: 'Bounded Height Popup',
-        path: '/bounded-height-popup',
-        component: BoundedHeightPopup,
-      },
-      {
-        name: 'Bounded Popup',
-        path: '/bounded-popup',
-        component: BoundedPopup,
-      },
-      {
-        name: 'Bounded Popup Closed',
-        path: '/bounded-popup-closed',
-        component: BoundedPopupClosed,
-      },
-      {
-        name: 'Bounded Width Popup',
-        path: '/bounded-width-popup',
-        component: BoundedWidthPopup,
-      },
-      {
-        name: 'Class Name Popup',
-        path: '/class-name-popup',
-        component: ClassNamePopup,
-      },
-      {
-        name: 'Default Popup',
-        path: '/default-popup',
-        component: DefaultPopup,
-      },
-      {
-        name: 'Different Attachments Popup',
-        path: '/different-attachments-popup',
-        component: DifferentAttachmentsPopup,
-      },
-      {
-        name: 'No Header Popup',
-        path: '/no-header-popup',
-        component: NoHeaderPopup,
-      },
-      {
-        name: 'Overlay Popup',
-        path: '/overlay-popup',
-        component: OverlayPopup,
-      },
-      {
-        name: 'Popup Inside Modal',
-        path: '/popup-inside-modal',
-        component: PopupInsideModal,
-      },
-      {
-        name: 'Popup Modal Container',
-        path: '/popup-modal-container',
-        component: PopupModalContainer,
-      },
-      {
-        name: 'Resized Content Popup',
-        path: '/resized-content-popup',
-        component: ResizedContentPopup,
-      },
-      {
-        name: 'Size Invalid Popup',
-        path: '/size-invalid-popup',
-        component: SizeInvalidPopup,
-      },
-      {
-        name: 'Size Large Popup',
-        path: '/size-large-popup',
-        component: SizeLargePopup,
-      },
-      {
-        name: 'Size Medium Popup',
-        path: '/size-medium-popup',
-        component: SizeMediumPopup,
-      },
-      {
-        name: 'Size Small Popup',
-        path: '/size-small-popup',
-        component: SizeSmallPopup,
       },
     ],
   },
@@ -3216,24 +2899,13 @@ const componentConfig = {
         ],
       },
       {
-        name: 'Hookshot',
-        path: '/hookshot',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteIndex28,
-          },
-        ],
-      },
-      {
         name: 'I 18 N',
         path: '/i-18-n',
         pages: [
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex29,
+            component: TerraSiteIndex28,
           },
         ],
       },
@@ -3244,7 +2916,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex30,
+            component: TerraSiteIndex29,
           },
           {
             name: 'Icon Static',
@@ -3265,7 +2937,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex31,
+            component: TerraSiteIndex30,
           },
         ],
       },
@@ -3276,7 +2948,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex32,
+            component: TerraSiteIndex31,
           },
           {
             name: 'Multi Select Index',
@@ -3302,7 +2974,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex33,
+            component: TerraSiteIndex32,
           },
         ],
       },
@@ -3313,7 +2985,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex34,
+            component: TerraSiteIndex33,
           },
         ],
       },
@@ -3324,18 +2996,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex35,
-          },
-        ],
-      },
-      {
-        name: 'Popup',
-        path: '/popup',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteIndex36,
+            component: TerraSiteIndex34,
           },
         ],
       },
@@ -3346,7 +3007,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex37,
+            component: TerraSiteIndex35,
           },
         ],
       },
@@ -3357,7 +3018,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex38,
+            component: TerraSiteIndex36,
           },
         ],
       },
@@ -3368,7 +3029,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex39,
+            component: TerraSiteIndex37,
           },
         ],
       },
@@ -3379,7 +3040,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex40,
+            component: TerraSiteIndex38,
           },
         ],
       },
@@ -3390,7 +3051,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex41,
+            component: TerraSiteIndex39,
           },
         ],
       },
@@ -3401,7 +3062,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex42,
+            component: TerraSiteIndex40,
           },
         ],
       },
@@ -3412,18 +3073,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex43,
-          },
-        ],
-      },
-      {
-        name: 'Slide Panel',
-        path: '/slide-panel',
-        pages: [
-          {
-            name: 'Index',
-            path: '/index',
-            component: TerraSiteIndex44,
+            component: TerraSiteIndex41,
           },
         ],
       },
@@ -3434,7 +3084,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex45,
+            component: TerraSiteIndex42,
           },
         ],
       },
@@ -3445,7 +3095,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex46,
+            component: TerraSiteIndex43,
           },
         ],
       },
@@ -3456,7 +3106,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex47,
+            component: TerraSiteIndex44,
           },
         ],
       },
@@ -3467,7 +3117,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex48,
+            component: TerraSiteIndex45,
           },
           {
             name: 'Multi Select Index',
@@ -3483,7 +3133,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex49,
+            component: TerraSiteIndex46,
           },
         ],
       },
@@ -3494,7 +3144,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex50,
+            component: TerraSiteIndex47,
           },
         ],
       },
@@ -3505,7 +3155,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex51,
+            component: TerraSiteIndex48,
           },
         ],
       },
@@ -3516,7 +3166,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex52,
+            component: TerraSiteIndex49,
           },
         ],
       },
@@ -3527,7 +3177,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex53,
+            component: TerraSiteIndex50,
           },
         ],
       },
@@ -3538,7 +3188,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex54,
+            component: TerraSiteIndex51,
           },
         ],
       },
@@ -3549,7 +3199,7 @@ const componentConfig = {
           {
             name: 'Index',
             path: '/index',
-            component: TerraSiteIndex55,
+            component: TerraSiteIndex52,
           },
         ],
       },
@@ -3578,82 +3228,6 @@ const componentConfig = {
         name: 'One Item Slide Group',
         path: '/one-item-slide-group',
         component: OneItemSlideGroup,
-      },
-    ],
-  },
-  'terra-slide-panel': {
-    name: 'Slide Panel',
-    path: '/slide-panel',
-    tests: [
-      {
-        name: 'Slide Panel Squish Large',
-        path: '/slide-panel-squish-large',
-        component: SlidePanelSquishLarge,
-      },
-      {
-        name: 'Slide Panel Toggle',
-        path: '/slide-panel-toggle',
-        component: SlidePanelToggle,
-      },
-      {
-        name: 'Slide Panel Default',
-        path: '/slide-panel-default',
-        component: SlidePanelDefault,
-      },
-      {
-        name: 'Slide Panel End',
-        path: '/slide-panel-end',
-        component: SlidePanelEnd,
-      },
-      {
-        name: 'Slide Panel Fill',
-        path: '/slide-panel-fill',
-        component: SlidePanelFill,
-      },
-      {
-        name: 'Slide Panel Fullscreen',
-        path: '/slide-panel-fullscreen',
-        component: SlidePanelFullscreen,
-      },
-      {
-        name: 'Slide Panel Large',
-        path: '/slide-panel-large',
-        component: SlidePanelLarge,
-      },
-      {
-        name: 'Slide Panel Main Content',
-        path: '/slide-panel-main-content',
-        component: SlidePanelMainContent,
-      },
-      {
-        name: 'Slide Panel Open',
-        path: '/slide-panel-open',
-        component: SlidePanelOpen,
-      },
-      {
-        name: 'Slide Panel Overlay',
-        path: '/slide-panel-overlay',
-        component: SlidePanelOverlay,
-      },
-      {
-        name: 'Slide Panel Panel Content',
-        path: '/slide-panel-panel-content',
-        component: SlidePanelPanelContent,
-      },
-      {
-        name: 'Slide Panel Small',
-        path: '/slide-panel-small',
-        component: SlidePanelSmall,
-      },
-      {
-        name: 'Slide Panel Squish',
-        path: '/slide-panel-squish',
-        component: SlidePanelSquish,
-      },
-      {
-        name: 'Slide Panel Start',
-        path: '/slide-panel-start',
-        component: SlidePanelStart,
       },
     ],
   },
