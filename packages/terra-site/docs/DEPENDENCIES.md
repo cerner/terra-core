@@ -40,7 +40,6 @@
 | terra-form-textarea | ^2.2.0 | ^16.2.0 | Element for building out textareas in a form. |
 | terra-grid | ^4.2.0 | ^16.2.0 | The grid component provides a flexbox based grid system. |
 | terra-heading | ^2.2.0 | ^16.2.0 | Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading. |
-| terra-hookshot | ^2.2.0 | ^16.2.0 | The Terra Hookshot component positions portaled content according to target and content attachments, ensuring they stay visually connected. |
 | terra-i18n | ^2.2.0 | ^16.2.0 | The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand. |
 | terra-i18n-plugin | ^2.0.0 | ^16.2.0 | The terra-i18n-plugin component is a webpack config plugin that examines all dependencies for translation files and then aggregates all translations for a single language into one file. Each language file is placed into an aggregated-translations directory that is then loaded by terra-i18n. |
 | terra-icon | ^2.2.0 | ^16.2.0 | terra-icon |
