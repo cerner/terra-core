@@ -33,10 +33,10 @@
     font-size: var(--terra-button-font-size, 1rem);
     line-height: var(--terra-button-line-height, 1.429);
     outline: none;
-    padding-bottom: var(--terra-button-vertical-padding, 0.5rem);
+    padding-bottom: var(--terra-button-vertical-padding, 0.286rem);
     padding-left: 0;
     padding-right: 0;
-    padding-top: var(--terra-button-vertical-padding, 0.5rem);
+    padding-top: var(--terra-button-vertical-padding, 0.286rem);
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -107,12 +107,15 @@
   }
 
   .icon-only {
+    align-items: center;
     display: flex;
     margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
     margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
   }
 
   .text-and-icon {
+    align-items: center;
+    display: flex;
     margin-left: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
     margin-right: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
   }
@@ -123,10 +126,6 @@
 
   .icon-first {
     margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
-  }
-
-  .icon {
-    display: flex;
   }
 
   .icon-svg {

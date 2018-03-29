@@ -199,7 +199,6 @@ class Button extends React.Component {
     ]);
 
     const iconClasses = cx([
-      'icon',
       { 'icon-first': (!isIconOnly && variant !== 'utility') && !isReversed },
     ]);
 
