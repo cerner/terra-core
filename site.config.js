@@ -24,6 +24,10 @@ const siteConfig = {
       'Default Theme': '',
       'Mock Theme': 'cerner-mock-theme',
     },
+
+    extensions: {
+      gitHubUrl: 'https://github.com/cerner/terra-core',
+    },
   },
 };
 

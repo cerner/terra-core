@@ -3,8 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed unused terra-mixins package
+* Removed out-dated theme mixin
+
 ### Fixed
-* Add missing eslint-disable-next-line no-console
+* Added missing eslint-disable-next-line no-console
+
+### Added
+* Exported injectIntl/intlShape from package
 
 3.2.0 - (March 6, 2018)
 ------------------

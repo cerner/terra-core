@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update lower bound version of moment.js to latest release
 
 2.3.0 - (March 14, 2018)
 ------------------

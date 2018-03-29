@@ -15,8 +15,8 @@
 
 - [Supported Browsers](#supported-browsers)
 - [Packages](#packages)
-- [Internationalization](#internationalizationi18n)
-  - [Packages Required I18n](#packages-required-i18n)
+- [Internationalization](#internationalization-i18n)
+  - [Packages Required I18n](#packages-requiring-i18n)
 - [Contributing](#contributing)
 - [LICENSE](#license)
 
@@ -61,7 +61,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-grid](https://github.com/cerner/terra-core/tree/master/packages/terra-grid) | [![NPM version](http://img.shields.io/npm/v/terra-grid.svg)](https://www.npmjs.org/package/terra-grid) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-heading](https://github.com/cerner/terra-core/tree/master/packages/terra-heading) | [![NPM version](http://img.shields.io/npm/v/terra-heading.svg)](https://www.npmjs.org/package/terra-heading) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-i18n](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n) | [![NPM version](http://img.shields.io/npm/v/terra-i18n.svg)](https://www.npmjs.org/package/terra-i18n) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
-| [terra-i18n-plugin](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n-plugin) | [![NPM version](http://img.shields.io/npm/v/terra-i18n-plugin.svg)](https://www.npmjs.org/package/terra-i18n-plugin) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
+| [terra-i18n-plugin](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n-plugin) | [![NPM version](http://img.shields.io/npm/v/terra-i18n-plugin.svg)](https://www.npmjs.org/package/terra-i18n-plugin) | ![Stable](https://img.shields.io/badge/status-Deprecated-lightgrey.svg) |
 | [terra-icon](https://github.com/cerner/terra-core/tree/master/packages/terra-icon) | [![NPM version](http://img.shields.io/npm/v/terra-icon.svg)](https://www.npmjs.org/package/terra-icon) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-image](https://github.com/cerner/terra-core/tree/master/packages/terra-image) | [![NPM version](http://img.shields.io/npm/v/terra-image.svg)](https://www.npmjs.org/package/terra-image) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-legacy-theme](https://github.com/cerner/terra-core/tree/master/packages/terra-legacy-theme) | [![NPM version](http://img.shields.io/npm/v/terra-legacy-theme.svg)](https://www.npmjs.org/package/terra-legacy-theme) | ![Deprecated](https://img.shields.io/badge/status-Deprecated-lightgrey.svg) |
@@ -71,13 +71,11 @@ Components in beta stage may include breaking changes, new features, and bug fix
 | [terra-mixins](https://github.com/cerner/terra-core/tree/master/packages/terra-mixins) | [![NPM version](http://img.shields.io/npm/v/terra-mixins.svg)](https://www.npmjs.org/package/terra-mixins) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-modal](https://github.com/cerner/terra-core/tree/master/packages/terra-modal) | [![NPM version](http://img.shields.io/npm/v/terra-modal.svg)](https://www.npmjs.org/package/terra-modal) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay) | [![NPM version](http://img.shields.io/npm/v/terra-overlay.svg)](https://www.npmjs.org/package/terra-overlay) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
-| [terra-popup](https://github.com/cerner/terra-core/tree/master/packages/terra-popup) | [![NPM version](http://img.shields.io/npm/v/terra-popup.svg)](https://www.npmjs.org/package/terra-popup) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-progress-bar](https://github.com/cerner/terra-core/tree/master/packages/terra-progress-bar) | [![NPM version](http://img.shields.io/npm/v/terra-progress-bar.svg)](https://www.npmjs.org/package/terra-progress-bar) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-props-table](https://github.com/cerner/terra-core/tree/master/packages/terra-props-table)  | [![NPM version](http://img.shields.io/npm/v/terra-props-table.svg)](https://www.npmjs.org/package/terra-props-table) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-responsive-element](https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element) | [![NPM version](http://img.shields.io/npm/v/terra-responsive-element.svg)](https://www.npmjs.org/package/terra-responsive-element) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-search-field](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field) | [![NPM version](http://img.shields.io/npm/v/terra-search-field.svg)](https://www.npmjs.org/package/terra-search-field) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-slide-group](https://github.com/cerner/terra-core/tree/master/packages/terra-slide-group) | [![NPM version](http://img.shields.io/npm/v/terra-slide-group.svg)](https://www.npmjs.org/package/terra-slide-group) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
-| [terra-slide-panel](https://github.com/cerner/terra-core/tree/master/packages/terra-slide-panel) | [![NPM version](http://img.shields.io/npm/v/terra-slide-panel.svg)](https://www.npmjs.org/package/terra-slide-panel) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-status](https://github.com/cerner/terra-core/tree/master/packages/terra-status) | [![NPM version](http://img.shields.io/npm/v/terra-status.svg)](https://www.npmjs.org/package/terra-status) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-status-view](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view) | [![NPM version](http://img.shields.io/npm/v/terra-status-view.svg)](https://www.npmjs.org/package/terra-status-view) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
 | [terra-table](https://github.com/cerner/terra-core/tree/master/packages/terra-table) | [![NPM version](http://img.shields.io/npm/v/terra-table.svg)](https://www.npmjs.org/package/terra-table) | ![Stable](https://img.shields.io/badge/status-Stable-brightgreen.svg) |
@@ -99,9 +97,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 ## Internationalization (I18n)
 
 1. Please follow [Base Getting Started](packages/terra-base/README.md#getting-started) to install `Base`, and consume it with `locale` props.
-2. Install and config `terra-i18n-plugin`:
-    - Follow [terra-i18n-plugin Getting Started](packages/terra-i18n-plugin#getting-started) to install `terra-i18n-plugin` to aggregate translations in `node_modules`.
-    - Follow [terra-i18n-plugin Wiki Guide](https://github.com/cerner/terra-core/wiki/Terra-i18n-plugin-Guide) to config i18n plugin.
+2. Please follow [terra-i18n Aggregate Translations Guide](https://github.com/cerner/terra-core/blob/master/packages/terra-i18n/docs/AggregateTranslations.md) to set up aggregated translations.
 3. Install and config `react-intl`
     - Install it `npm install --save react-intl`.
     - Add alias webpack config to avoid importing duplicate `react-intl`.
@@ -122,9 +118,13 @@ Components in beta stage may include breaking changes, new features, and bug fix
 - [terra-date-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-picker)
 - [terra-date-time-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-date-time-picker)
 - [terra-demographics-banner](https://github.com/cerner/terra-core/tree/master/packages/terra-demographics-banner)
+- [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field)
+- [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
 - [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)
+- [terra-search-field](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field)
+- [terra-status-view](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view)
 - [terra-tabs](https://github.com/cerner/terra-core/tree/master/packages/terra-tabs)
-- [terra-time-picker](https://github.com/cerner/terra-core/tree/master/packages/terra-time-picker)
+- [terra-time-input](https://github.com/cerner/terra-core/tree/master/packages/terra-time-input)
 
 ## Contributing
 
