@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed unused terra-mixins package
 
 1.1.0 - (March 14, 2018)
 -----------------

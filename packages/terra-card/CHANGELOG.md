@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 -----------------
+### Removed
+* Removed unused terra-mixins package
+* Removed out-dated theme mixin
 
 2.2.0 - (March 6, 2018)
 ------------------

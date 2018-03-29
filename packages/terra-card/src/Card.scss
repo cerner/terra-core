@@ -1,6 +1,3 @@
-@import '~terra-mixins';
-@import './themes';
-
 :local {
   .card {
     background-color: var(--terra-card-background-color, #fff);
