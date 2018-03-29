@@ -118,6 +118,9 @@ function aggregateTranslations(options, compiler) {
         throw new Error(`Translation file found for ${language}.json, but translations were not loaded correctly. Please check that your translated modules were installed correctly.`);
       }
     });
+
+    // eslint-disable-next-line no-console
+    console.warn('WARNING: The terra-i18n aggregate-translations setup function should be used instead of the terra-i18n-plugin. Terra-i18n-plugin will be deprecated in the future. See https://github.com/cerner/terra-core/blob/master/packages/terra-i18n/docs/AggregateTranslations.md for usage.');
   });
 }
 
