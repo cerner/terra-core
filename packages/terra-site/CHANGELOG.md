@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Update Tag examples
+* Update lower bound version of moment.js to latest release
 
 ### Fixed
 * Import the correct Fieldset source file
