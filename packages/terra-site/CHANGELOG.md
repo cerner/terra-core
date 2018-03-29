@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added example with multiple onClick handlers in table header
+
 ### Changed
 * Update Tag examples
 * Update lower bound version of moment.js to latest release
