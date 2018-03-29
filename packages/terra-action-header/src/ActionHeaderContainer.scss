@@ -11,6 +11,15 @@
     padding: var(--terra-action-header-padding, 0.714rem);
     position: relative;
     width: 100%;
+    
+    .flex-collapse {
+      align-items: center;
+      display: flex;
+      flex: 0 0 auto;
+      height: 100%;
+      max-width: 40%;
+      position: relative;
+    }
   }
 
   .flex-fill {
@@ -26,15 +35,6 @@
     display: flex;
     flex: 0 0 auto;
     height: 100%;
-    position: relative;
-  }
-
-  .flex-collapse {
-    align-items: center;
-    display: flex;
-    flex: 0 0 auto;
-    height: 100%;
-    max-width: 40%;
     position: relative;
   }
 

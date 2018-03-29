@@ -71,11 +71,11 @@ const ActionHeader = ({
 
   const isCloseButtonAllowedOnSmallViewport = keepCloseButton || (onClose && !onBack);
 
-  const closeButton = onClose ? <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx('header-icon', 'close')} />} text={closeText} onClick={onClose} /> : null;
-  const backButton = onBack ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onBack} /> : null;
+  const closeButton = onClose ? <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx(['header-icon', 'close'])} />} text={closeText} onClick={onClose} /> : null;
+  const backButton = onBack ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onBack} /> : null;
 
   const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
-  const backButtonSmall = isCloseButtonAllowedOnSmallViewport && backButton ? backButton : <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onClose} />;
+  const backButtonSmall = isCloseButtonAllowedOnSmallViewport && backButton ? backButton : <Button className={cx(['header-back-button'])} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onClose} />;
 
   const actionHeader = (
     <ActionHeaderContainer
