@@ -1,82 +1,37 @@
-const loadArIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/ar.js'),
-    'ar-intl-local');
+/* eslint-disable */
+import intlLoaders from 'intlLoaders';
 
-const loadEnIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/en.js'),
-    'en-intl-local');
+const loadFallbackIntl = (localeContext) => {
+  try {
+    intlLoaders['en']();
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(`Locale data was not supplied for the ${localeContext}. Using en data as the fallback locale data.`);
+    }
+  } catch (e) {
+    throw new Error(`Locale data was not supplied for the ${localeContext}, or the en fallback locale.`);
+  }
+}
 
-const loadEnGBIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/en-GB.js'),
-    'en-GB-intl-local');
-
-const loadEnUSIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/en-US.js'),
-    'en-US-intl-local');
-
-const loadDeIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/de.js'),
-    'de-intl-local');
-
-const loadPtIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/pt.js'),
-    'pt-intl-local');
-
-const loadPtBRIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/pt-BR.js'),
-    'pt-BR-intl-local');
-
-const loadFrIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/fr.js'),
-    'fr-intl-local');
-
-const loadFrFRIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/fr-FR.js'),
-    'fr-FR-intl-local');
-
-const loadEsIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/es.js'),
-    'es-intl-local');
-
-const loadEsUSIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/es-US.js'),
-    'es-US-intl-local');
-
-const loadEsESIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/es-ES.js'),
-    'es-ES-intl-local');
-
-const loadFiFIIntl = () =>
-  require.ensure([],
-    require => require('intl/locale-data/jsonp/fi-FI.js'),
-    'fi-FI-intl-local');
-
-const intlLoaders = {
-  ar: loadArIntl,
-  en: loadEnIntl,
-  'en-GB': loadEnGBIntl,
-  'en-US': loadEnUSIntl,
-  de: loadDeIntl,
-  pt: loadPtIntl,
-  'pt-BR': loadPtBRIntl,
-  fr: loadFrIntl,
-  'fr-FR': loadFrFRIntl,
-  es: loadEsIntl,
-  'es-US': loadEsUSIntl,
-  'es-ES': loadEsESIntl,
-  'fi-FI': loadFiFIIntl,
+const loadIntl = (locale) => {
+  const fallbackLocale = locale.split('-').length > 1 ? locale.split('-')[0] : false;
+  try {
+     intlLoaders[locale]();
+  } catch (e) {
+    if(fallbackLocale) {
+      try {
+        intlLoaders[fallbackLocale]();
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn(`Locale data was not supplied for the ${locale} locale. Using ${fallbackLocale} data as the fallback locale data.`);
+        }
+      } catch (e) {
+        const localeContext = `${locale} or ${fallbackLocale} locales`;
+        loadFallbackIntl(localeContext);
+      }
+    } else {
+      const localeContext = `${locale} locale`;
+      loadFallbackIntl(localeContext);
+    }
+  }
 };
 
-module.exports = intlLoaders;
+module.exports = loadIntl;

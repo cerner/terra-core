@@ -59,7 +59,7 @@ describe('i18n-aggregator-plugin', () => {
     const outputtedFileName = [];
     const outputtedFileContent = [];
     const compiler = createCompiler();
-    let consoleMessage;
+    const consoleMessages = [];
     let SpyOnConsoleWarn;
     let SpyOnWriteFileSync;
 
@@ -69,7 +69,7 @@ describe('i18n-aggregator-plugin', () => {
         outputtedFileContent.push(content);
       });
       SpyOnConsoleWarn = spyOn(console, 'warn').and.callFake((message) => {
-        consoleMessage = message;
+        consoleMessages.push(message);
       });
 
       new I18nAggregatorPlugin({
@@ -85,8 +85,11 @@ describe('i18n-aggregator-plugin', () => {
     });
 
     it('should log console warning for missing tranlsation files', () => {
-      expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const missingTranslation = expect.stringContaining('Translation file en.json not found for');
+      const missingPath = expect.stringContaining(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const deprecationWarning = expect.stringContaining('Terra-i18n-plugin will be deprecated in the future.');
+
+      expect(consoleMessages).toEqual(expect.arrayContaining([missingTranslation, missingPath, deprecationWarning]));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
@@ -119,7 +122,7 @@ describe('i18n-aggregator-plugin', () => {
     const outputtedFileName = [];
     const outputtedFileContent = [];
     const compiler = createCompiler();
-    let consoleMessage;
+    const consoleMessages = [];
     let SpyOnConsoleWarn;
     let SpyOnWriteFileSync;
 
@@ -129,7 +132,7 @@ describe('i18n-aggregator-plugin', () => {
         outputtedFileContent.push(content);
       });
       SpyOnConsoleWarn = spyOn(console, 'warn').and.callFake((message) => {
-        consoleMessage = message;
+        consoleMessages.push(message);
       });
 
       new I18nAggregatorPlugin({
@@ -146,8 +149,11 @@ describe('i18n-aggregator-plugin', () => {
     });
 
     it('should log console warning for missing tranlsation files', () => {
-      expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const missingTranslation = expect.stringContaining('Translation file en.json not found for');
+      const missingPath = expect.stringContaining(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const deprecationWarning = expect.stringContaining('Terra-i18n-plugin will be deprecated in the future.');
+
+      expect(consoleMessages).toEqual(expect.arrayContaining([missingTranslation, missingPath, deprecationWarning]));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
@@ -180,7 +186,7 @@ describe('i18n-aggregator-plugin', () => {
     const outputtedFileName = [];
     const outputtedFileContent = [];
     const compiler = createCompiler();
-    let consoleMessage;
+    const consoleMessages = [];
     let SpyOnConsoleWarn;
     let SpyOnWriteFileSync;
 
@@ -190,7 +196,7 @@ describe('i18n-aggregator-plugin', () => {
         outputtedFileContent.push(content);
       });
       SpyOnConsoleWarn = spyOn(console, 'warn').and.callFake((message) => {
-        consoleMessage = message;
+        consoleMessages.push(message);
       });
 
       new I18nAggregatorPlugin({
@@ -207,8 +213,11 @@ describe('i18n-aggregator-plugin', () => {
     });
 
     it('should log console warning for missing tranlsation files', () => {
-      expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const missingTranslation = expect.stringContaining('Translation file en.json not found for');
+      const missingPath = expect.stringContaining(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const deprecationWarning = expect.stringContaining('Terra-i18n-plugin will be deprecated in the future.');
+
+      expect(consoleMessages).toEqual(expect.arrayContaining([missingTranslation, missingPath, deprecationWarning]));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
@@ -280,7 +289,7 @@ describe('i18n-aggregator-plugin', () => {
     const outputtedFileContent = [];
     const compiler = createCompiler();
     const outputFileSystem = new MemoryFileSystem();
-    let consoleMessage;
+    const consoleMessages = [];
     let SpyOnConsoleWarn;
     let SpyOnWriteFileSync;
 
@@ -290,7 +299,7 @@ describe('i18n-aggregator-plugin', () => {
         outputtedFileContent.push(content);
       });
       SpyOnConsoleWarn = spyOn(console, 'warn').and.callFake((message) => {
-        consoleMessage = message;
+        consoleMessages.push(message);
       });
 
       new I18nAggregatorPlugin({
@@ -307,8 +316,11 @@ describe('i18n-aggregator-plugin', () => {
     });
 
     it('should log console warning for missing tranlsation files', () => {
-      expect(consoleMessage).toContain('Translation file en.json not found for');
-      expect(consoleMessage).toContain(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const missingTranslation = expect.stringContaining('Translation file en.json not found for');
+      const missingPath = expect.stringContaining(path.join('tests', 'fixtures', 'node_modules', 'fixtures2', 'translations'));
+      const deprecationWarning = expect.stringContaining('Terra-i18n-plugin will be deprecated in the future.');
+
+      expect(consoleMessages).toEqual(expect.arrayContaining([missingTranslation, missingPath, deprecationWarning]));
       expect(SpyOnConsoleWarn).toHaveBeenCalled();
     });
 
