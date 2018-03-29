@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Removed
+* Removed unused terra-mixins package
+* Removed out-dated theme mixin
+
 ### Fixed
 * Added missing eslint-disable-next-line no-console
 
