@@ -2,7 +2,7 @@
   "name": "terra-i18n",
   "main": "lib/I18n.js",
   "version": "2.2.0",
-  "description": "The terra-i18n component provides the internationalization to the React component. Terra supports the following locales: 'de' 'es' 'en' 'en-US' 'en-GB', 'fi-FI', 'fr', 'pt'. All locales related files are loading on demand.",
+  "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "babel-jest": "^19.0.0"
+    "babel-jest": "^19.0.0",
+    "memory-fs": "^0.4.1"
+  },
+  "bin": {
+    "aggregate-translations": "./bin/aggregate-translations.js"
   },
   "peerDependencies": {
     "react": "^16.2.0",
@@ -29,7 +33,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "commander": "^2.9.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.1",
     "intl": "^1.2.5",
+    "lodash.startcase": "^4.4.0",
     "prop-types": "^15.5.8",
     "react-intl": "^2.4.0"
   },
@@ -39,8 +47,9 @@
     "compile:build": "babel src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "test": "npm run test:jest && npm run test:nightwatch",
+    "postinstall": "node scripts/post-install/write-default-loaders.js",
+    "test": "npm run test:jest && npm run test:wdio",
     "test:jest": "jest ./tests/jest/* --config ../../jestconfig.json",
-    "test:nightwatch": "nightwatch -c ../../nightwatch.conf.js"
+    "test:wdio": "wdio ../../wdio.conf.js"
   }
 }

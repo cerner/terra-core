@@ -29,8 +29,8 @@ Thanks.
 * Open a [pull request][6].
 * The pull request will be reviewed by the community and merged by the project committers.
 
-## Project Governance 
-* This project is maintained and goverend following the [terra governance document](https://github.com/cerner/terra-ui/blob/master/GOVERNANCE.md).
+## Project Governance
+* This project is maintained and governed following the [terra governance document](https://github.com/cerner/terra-ui/blob/master/GOVERNANCE.md).
 
 [1]: https://github.com/cerner/terra-core/issues
 [2]: http://gun.io/blog/how-to-github-fork-branch-and-pull-request

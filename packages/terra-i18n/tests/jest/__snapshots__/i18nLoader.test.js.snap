@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`i18nLoader when callback is not function throws error 1`] = `"Second argument must be function"`;
+exports[`i18nLoader permitParams - prod environment still throws error when callback is not function 1`] = `"Second argument must be function"`;
 
-exports[`i18nLoader when locale is not supported throws error 1`] = `"invalidLocale is not supported, supported locales:ar,en,en-US,en-GB,es,es-US,es-ES,de,fi-FI,fr,fr-FR,pt,pt-BR"`;
+exports[`i18nLoader permitParams throws error when callback is not function 1`] = `"Second argument must be function"`;
