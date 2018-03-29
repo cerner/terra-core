@@ -3,6 +3,15 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Implement locale fallback strategy in translations and locale loaders. Fallback strategy will be first try the regional locale, then try the base locale, then try 'en' english base locale, and lastly throw an error if 'en' is not provided.
+* Aggregate-translations pre-build tool to aggregate translations and build dynamic intlLoader and translationLoader modules that are configured for the specified locales. This tool is offered as a CLI script and as a setup function.
+
+### Changed
+* Open up the i18nLoader restrictions such that non-terra-supported locales will load.
+
+### Fixed
+* Only load the specified aggregated-translation locales.
 
 ### Added
 * Exported react-intl's injectIntl and intlShape
