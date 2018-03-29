@@ -54,7 +54,7 @@ const TableExamples = () => (
     <h2>Table without padding</h2>
     <NoPaddingTable />
     <br />
-    <h2>Table with multiple header onClick handlers (Click "Name" header to preview)</h2>
+    <h2>Table with multiple header onClick handlers (Click &ldquo;Name&rdquo; header to preview)</h2>
     <TableWithMultipleOnClicks />
     <br />
     <h2>Table with some rows selected. Table will not select or deselect any row</h2>
