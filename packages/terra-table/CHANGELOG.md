@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Fixed issue with setting onClick handler on TableHeaderCell
 
 2.2.0 - (March 6, 2018)
 ------------------
