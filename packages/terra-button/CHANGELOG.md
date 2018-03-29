@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Added flexbox styles to nested spans to provide more predictable vertical centering
 
 2.3.0 - (March 14, 2018)
 ------------------

@@ -107,11 +107,15 @@
   }
 
   .icon-only {
+    align-items: center;
+    display: flex;
     margin-left: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
     margin-right: var(--terra-button-icon-only-horizontal-margin, 0.5rem);
   }
 
   .text-and-icon {
+    align-items: center;
+    display: flex;
     margin-left: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
     margin-right: var(--terra-button-text-and-icon-horizontal-margin, 0.714rem);
   }
@@ -122,10 +126,6 @@
 
   .icon-first {
     margin-right: var(--terra-button-text-and-icon-margin-between, 0.3571rem);
-  }
-
-  .icon {
-    display: inline-block;
   }
 
   .icon-svg {
