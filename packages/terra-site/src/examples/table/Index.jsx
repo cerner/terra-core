@@ -21,6 +21,7 @@ import TableSubheaderSrc from '!raw-loader!terra-table/src/TableSubheader';
 import NoStripedTable from './examples/NoStripedTable';
 import NoPaddingTable from './examples/NoPaddingTable';
 import StripedTable from './examples/StripedTable';
+import TableWithMultipleOnClicks from './examples/TableWithMultipleOnClicks';
 import TableWithHighlightedRows from './examples/TableWithHighlightedRows';
 import SingleRowSelectableTable from './examples/SingleRowSelectableTable';
 import TableWithNonSelectableRow from './examples/TableWithNonSelectableRow';
@@ -52,6 +53,9 @@ const TableExamples = () => (
     <br />
     <h2>Table without padding</h2>
     <NoPaddingTable />
+    <br />
+    <h2>Table with multiple header onClick handlers (Click "Name" header to preview)</h2>
+    <TableWithMultipleOnClicks />
     <br />
     <h2>Table with some rows selected. Table will not select or deselect any row</h2>
     <TableWithHighlightedRows />
