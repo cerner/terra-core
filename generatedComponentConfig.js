@@ -363,6 +363,7 @@ import ProfileImageDefault from './packages/terra-profile-image/tests/nightwatch
 import ProgressBarColor from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarColor';
 import ProgressBarDefault from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarDefault';
 import ProgressBarSize from './packages/terra-progress-bar/tests/nightwatch/components/ProgressBarSize';
+import ProgressBarGradient from './packages/terra-progress-bar/tests/nightwatch/ProgressBarGradient';
 import MockPropsTable from './packages/terra-props-table/tests/nightwatch/MockPropsTable';
 import MockPropsTableWithTitle from './packages/terra-props-table/tests/nightwatch/MockPropsTableWithTitle';
 import DefaultResponsiveElement from './packages/terra-responsive-element/tests/nightwatch/DefaultResponsiveElement';
@@ -2333,6 +2334,11 @@ const componentConfig = {
     name: 'Progress Bar',
     path: '/progress-bar',
     tests: [
+      {
+        name: 'Progress Bar Gradient',
+        path: '/progress-bar-gradient',
+        component: ProgressBarGradient,
+      },
       {
         name: 'Progress Bar Color',
         path: '/progress-bar-color',
