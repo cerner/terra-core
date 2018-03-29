@@ -12,6 +12,7 @@ import ProgressBarSrc from '!raw-loader!terra-progress-bar/src/ProgressBar';
 import ProgressBarDefault from './ProgressBarDefault';
 import ProgressBarSize from './ProgressBarSize';
 import ProgressBarColor from './ProgressBarColor';
+import ProgressBarGradient from './ProgressBarGradient';
 
 const ProgressBarExamples = () => (
   <div>
@@ -28,6 +29,10 @@ const ProgressBarExamples = () => (
     <br />
     <h2 id="color">Color</h2>
     <ProgressBarColor />
+    <br />
+    <br />
+    <h2 id="gradient">Gradient</h2>
+    <ProgressBarGradient />
   </div>
 );
 

@@ -18,6 +18,23 @@ exports[`should render a ProgressBar component with default heightSize 50% fill 
 />
 `;
 
+exports[`should render a ProgressBar component with gradient 1`] = `
+<progress
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={80}
+  className="progress-bar-gradient progress-bar small"
+  max={100}
+  style={
+    Object {
+      "color": undefined,
+    }
+  }
+  tabIndex="-1"
+  value={80}
+/>
+`;
+
 exports[`should render a ProgressBar component with large heightSize and 60% fill 1`] = `
 <progress
   aria-valuemax={100}
