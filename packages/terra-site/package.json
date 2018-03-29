@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "moment": "^2.17.1",
+    "moment": "^2.21.0",
     "postcss": "^6.0.9",
     "prop-types": "^15.5.8",
     "react": "^16.2.0",

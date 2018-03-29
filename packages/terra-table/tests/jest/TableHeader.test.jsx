@@ -2,7 +2,8 @@ import React from 'react';
 import Table from '../../src/Table';
 
 // Constants
-const headerData1 = <Table.HeaderCell content={'Name'} key={'NAME'} />;
+const clickHandler = e => e;
+const headerData1 = <Table.HeaderCell content={'Name'} key={'NAME'} onClick={clickHandler} />;
 const headerData2 = <Table.HeaderCell content={'Address'} key={'ADDRESS'} />;
 const headerData3 = <Table.HeaderCell content={'Phone Number'} key={'PHONE_NUMBER'} />;
 const header = [headerData1, headerData2, headerData3];

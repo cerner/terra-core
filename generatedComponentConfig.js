@@ -277,7 +277,7 @@ import HeadingSize from './packages/terra-heading/tests/nightwatch/HeadingSize';
 import HeadingVisualProps from './packages/terra-heading/tests/nightwatch/HeadingVisualProps';
 import HeadingVisuallyHidden from './packages/terra-heading/tests/nightwatch/HeadingVisuallyHidden';
 import HeadingWeight from './packages/terra-heading/tests/nightwatch/HeadingWeight';
-import DefaultI18N from './packages/terra-i18n/tests/nightwatch/DefaultI18n';
+import DefaultI18N from './packages/terra-i18n/examples/test-examples/DefaultI18n.example';
 import IconAppendClass from './packages/terra-icon/tests/nightwatch/components/IconAppendClass';
 import IconAria from './packages/terra-icon/tests/nightwatch/components/IconAria';
 import IconBidi from './packages/terra-icon/tests/nightwatch/components/IconBidi';
