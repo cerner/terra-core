@@ -74,6 +74,7 @@ const ActionHeader = ({
   const backButton = onBack ? <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onBack} /> : null;
 
   const closeButtonSmall = isCloseButtonAllowedOnSmallViewport ? closeButton : null;
+  // Must have a default back button for small viewports even if user does not supply onBack property
   const backButtonSmall = isCloseButtonAllowedOnSmallViewport && backButton ? backButton : <Button className={cx(['header-back-button'])} isIconOnly icon={<span className={cx('header-icon', 'back')} />} text={backText} onClick={onClose} />;
 
   const actionHeader = (

@@ -20,8 +20,8 @@
     "--terra-action-header-background-color": "#f4f4f4",
     "--terra-action-header-border-bottom": "1px solid #dedfe0",
     "--terra-action-header-padding": "0.714rem",
-    "--terra-action-header-font-color": "#1c1f21",
-    "--terra-action-header-font-size": "1.286rem"
+    "--terra-action-header-font-size": "1.286rem",
+    "--terra-action-header-box-shadow": "5px 5px 5px #551a8b"
   },
   "Alert": {
     "--terra-alert-icon-font-size": "1.286em",
