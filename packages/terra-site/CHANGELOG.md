@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.4.0 - (March 30, 2018)
+------------------
 ### Added
 * Added example with multiple onClick handlers in table header
 
