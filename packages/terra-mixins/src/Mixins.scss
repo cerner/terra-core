@@ -617,3 +617,7 @@ $bundled-themes: false !default;
 @function inline-svg($string) {
   @return url('data:image/svg+xml;charset=US-ASCII,#{url-encode($string)}');
 }
+
+@mixin terra-inline-svg-var($var, $svg) {
+  #{$var}: inline-svg(#{$svg});
+}
