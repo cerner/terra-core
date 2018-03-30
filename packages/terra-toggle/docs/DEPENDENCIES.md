@@ -6,7 +6,7 @@
 | classnames | ^2.2.5 | -- | A simple utility for conditionally joining classNames together |
 | prop-types | ^15.5.8 | -- | Runtime type checking for React props and similar objects. |
 | react-animate-height | ^0 | >=15.6.2 | Lightweight React component for animating height using CSS transitions. |
-| terra-base | ^3.2.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
+| terra-base | ^3.3.0 | ^16.2.0 | The base component sets minimal global styles for an application. |
 
 ## peerDependencies
 | Dependency | Version | React Version | Description |

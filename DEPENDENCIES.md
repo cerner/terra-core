@@ -20,7 +20,8 @@
 | eslint-plugin-import | ^2.2.0 | -- | Import with sanity. |
 | eslint-plugin-jsx-a11y | ^4.0.0 | -- | Static AST checker for accessibility rules on JSX elements. |
 | eslint-plugin-react | ^6.9.0 | -- | React specific linting rules for ESLint |
-| express | ^4.15.2 | -- | Fast, unopinionated, minimalist web framework |
+| express | ^4.16.3 | -- | Fast, unopinionated, minimalist web framework |
+| gh-pages | ^0.12.0 | -- | Publish to a gh-pages branch on GitHub (or any other branch on any other remote) |
 | glob | ^7.1.1 | -- | a little globber |
 | identity-obj-proxy | ^3.0.0 | -- | an identity object using ES6 proxies |
 | ip | ^1.1.5 | -- | [![](https://badge.fury.io/js/ip.svg)](https://www.npmjs.com/package/ip) |
@@ -32,6 +33,7 @@
 | react | ^16.2.0 | -- | React is a JavaScript library for building user interfaces. |
 | react-dom | ^16.2.0 | ^16.0.0 | React package for working with the DOM. |
 | react-router | ^3.2.0 | ^0.14.0 \|\| ^15.0.0 \|\| ^16.0.0 | A complete routing library for React |
+| react-router-dom | ^4.0.0 | >=15 | DOM bindings for React Router |
 | react-test-renderer | ^16.2.0 | ^16.0.0 | React package for snapshot testing. |
 | rimraf | ^2.6.1 | -- | A deep deletion module for node (like `rm -rf`) |
 | shelljs | ^0.7.7 | -- | Portable Unix shell commands for Node.js |
@@ -40,6 +42,7 @@
 | stylelint-order | ^0.7.0 | -- | A collection of order related linting rules for stylelint. |
 | stylelint-scss | ^2.0.0 | -- | A collection of SCSS specific rules for stylelint |
 | stylelint-suitcss | ^1.0.0 | -- | A collection of stylelint plugins for SUIT CSS |
+| terra-dev-site | 0.3.0 | ^16.2.0 | Dynamically builds a react-hash-routed site based on site configuration, navigation configuration and component configuration. |
 | terra-toolkit | ^2.9.0 | -- | Utilities to help when developing terra modules. |
 | wdio-mocha-framework | ^0.5.11 | -- | A WebdriverIO plugin. Adapter for Mocha testing framework. |
 | wdio-visual-regression-service | ^0.8.0 | -- | Visual regression testing for WebdriverIO |
