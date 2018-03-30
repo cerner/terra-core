@@ -44,8 +44,6 @@ describe('ActionHeader', () => {
       {
         '--terra-action-header-margin-left': '2rem',
         '--terra-action-header-margin-right': '2rem',
-        '--terra-action-header-icon-top': '0.2rem',
-        '--terra-action-header-back-icon': '#551A8B',
         '--terra-action-header-close-icon': '#551A8B',
       },
     );
@@ -56,13 +54,6 @@ describe('ActionHeader', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(
-      {
-        '--terra-action-header-margin-left': '2rem',
-        '--terra-action-header-close-icon': '#551A8B',
-        '--terra-action-header-icon-top': '0.2rem',
-      },
-    );
   });
 
   describe('Custom Button', () => {
@@ -77,14 +68,5 @@ describe('ActionHeader', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
-    Terra.should.themeEachCustomProperty(
-      {
-        '--terra-action-header-margin-left': '2rem',
-        '--terra-action-header-margin-right': '2rem',
-        '--terra-action-header-icon-top': '0.2rem',
-        '--terra-action-header-back-icon': '#551A8B',
-        '--terra-action-header-close-icon': '#551A8B',
-      },
-    );
   });
 });
