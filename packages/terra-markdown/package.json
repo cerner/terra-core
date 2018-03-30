@@ -1,7 +1,7 @@
 {
   "name": "terra-markdown",
   "main": "lib/Markdown.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "terra-markdown",
   "repository": {
     "type": "git",

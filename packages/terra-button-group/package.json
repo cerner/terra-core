@@ -1,7 +1,7 @@
 {
   "name": "terra-button-group",
   "main": "lib/ButtonGroup.js",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "terra-button-group",
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.2.0",
-    "terra-button": "^2.3.0"
+    "terra-base": "^3.3.0",
+    "terra-button": "^2.4.0"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",

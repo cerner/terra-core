@@ -1,7 +1,7 @@
 {
   "name": "terra-progress-bar",
   "main": "lib/ProgressBar.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "terra-progress-bar",
   "repository": {
     "type": "git",
@@ -40,6 +40,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-base": "^3.2.0"
+    "terra-base": "^3.3.0"
   }
 }
