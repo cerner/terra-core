@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import React from 'react';
 import ActionHeader from 'terra-action-header';
 
@@ -13,4 +12,3 @@ const ActionHeaderExample = () => (
 );
 
 export default ActionHeaderExample;
-/* eslint-enable no-alert */

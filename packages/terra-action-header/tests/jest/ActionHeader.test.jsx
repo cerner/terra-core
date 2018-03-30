@@ -1,77 +1,57 @@
 /* eslint-disable import/no-extraneous-dependencies, no-alert */
 import React from 'react';
-import { IntlProvider } from 'react-intl';
 import Button from 'terra-button';
+import intlContexts from './intl-context-setup';
 import ActionHeader from '../../src/ActionHeader';
-import messages from '../../translations/en-US.json';
-
-const locale = 'en-US';
 
 describe('ActionHeader', () => {
   // Snapshot Tests
   it('should render a default action header', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader />
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with title', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header" />
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader title="Action Header" />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with back button and title', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header" onBack={() => {}} />
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader title="Action Header" onBack={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with close button and title', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header" onClose={() => {}} />
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader title="Action Header" onClose={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with back and close buttons and title', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header" onBack={() => {}} onClose={() => {}} />
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader title="Action Header" onBack={() => {}} onClose={() => {}} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with level three header element and title', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header" level={3} />
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader title="Action Header" level={3} />;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with custom button and title', () => {
-    const actionHeader = render(
-      <IntlProvider locale={locale} messages={messages}>
-        <ActionHeader title="Action Header">
-          <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
-        </ActionHeader>
-      </IntlProvider>,
-    );
-    expect(actionHeader).toMatchSnapshot();
+    const actionHeader = <ActionHeader title="Action Header"><Button text="Custom Button" onClick={() => alert('You clicked me!')} /></ActionHeader>;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an action header with multiple custom buttons and title', () => {
+    const actionHeader = <ActionHeader title="Action Header"><span><Button text="Custom Button" onClick={() => alert('You clicked me!')} /><Button text="Custom Button" onClick={() => alert('You clicked me!')} /></span></ActionHeader>;
+    const wrapper = shallow(actionHeader, intlContexts.shallowContext);
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

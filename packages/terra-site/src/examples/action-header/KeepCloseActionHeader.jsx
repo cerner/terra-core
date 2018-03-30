@@ -15,3 +15,4 @@ const ActionHeaderExample = () => (
 );
 
 export default ActionHeaderExample;
+/* eslint-enable no-alert */

@@ -65,7 +65,6 @@ const ActionHeader = ({
   ...customProps }, {
   intl,
 }) => {
-  const attributes = { ...customProps };
   const backText = intl.formatMessage({ id: 'Terra.actionHeader.back' });
   const closeText = intl.formatMessage({ id: 'Terra.actionHeader.close' });
 
@@ -79,7 +78,7 @@ const ActionHeader = ({
 
   const actionHeader = (
     <ActionHeaderContainer
-      {...attributes}
+      {...customProps}
       startContent={backButton}
       title={title}
       endContent={closeButton}
@@ -91,7 +90,7 @@ const ActionHeader = ({
 
   const smallActionHeader = (
     <ActionHeaderContainer
-      {...attributes}
+      {...customProps}
       startContent={backButtonSmall}
       title={title}
       endContent={closeButtonSmall}

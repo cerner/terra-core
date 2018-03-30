@@ -13,8 +13,8 @@
     "--terra-action-header-margin-right": "1.429rem",
     "--terra-action-header-margin-left": "1.429rem",
     "--terra-action-header-icon-top": "0.1429rem",
-    "--terra-action-header-back-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20class%3D%27Icon__icon___XA18N%20Icon__is-bidi___2qF4d%20Button__icon-svg___D8gRQ%27%20viewBox%3D%270%200%2048%2048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20data-name%3D%27Layer%201%27%20aria-hidden%3D%27true%27%20focusable%3D%27false%27%3E%3Cpath%20d%3D%27M48%2021H10.6L27.3%203.9%2023.5.1%200%2024l23.5%2023.9%203.8-3.8L10.6%2027H48z%27%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
-    "--terra-action-header-close-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%270%200%2048%2048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20data-name%3D%27Layer%201%27%20class%3D%27Icon__icon___XA18N%20Button__icon-svg___D8gRQ%27%20aria-hidden%3D%27true%27%20focusable%3D%27false%27%3E%3Cpath%20d%3D%27M28.2%2024L42.9%209.1%2040.8%207l-1.7-1.6-.4-.5L24%2019.7%209.4%204.9%207.2%207%205.6%208.6l-.5.5L19.8%2024%205.1%2038.9%207.2%2041l1.7%201.6.5.5L24%2028.3l14.7%2014.8.4-.5%201.7-1.6%202.1-2.1L28.2%2024z%27%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")"
+    "--terra-action-header-back-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%3Cpath%20d%3D%22M48%2021H10.6L27.3%203.9%2023.5.1%200%2024l23.5%2023.9%203.8-3.8L10.6%2027H48z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")",
+    "--terra-action-header-close-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22Layer%201%22%20class%3D%22Icon__icon___XA18N%20Button__icon-svg___D8gRQ%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%3Cpath%20d%3D%22M28.2%2024L42.9%209.1%2040.8%207l-1.7-1.6-.4-.5L24%2019.7%209.4%204.9%207.2%207%205.6%208.6l-.5.5L19.8%2024%205.1%2038.9%207.2%2041l1.7%201.6.5.5L24%2028.3l14.7%2014.8.4-.5%201.7-1.6%202.1-2.1L28.2%2024z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E\")"
   },
   "ActionHeaderContainer": {
     "--terra-action-header-background-color": "#f4f4f4",
@@ -683,6 +683,7 @@
     "--terra-section-header-accordion-icon": "url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2048%2048%22%20enable-background%3D%22new%200%200%2048%2048%22%20xml%3Aspace%3D%22preserve%22%3E%3Ctitle%3E0023_caretRight_a%3C%2Ftitle%3E%3Cpath%20id%3D%22caretRight%22%20d%3D%22M12%2C0l24%2C24L12%2C48V0z%22%2F%3E%3C%2Fsvg%3E\")"
   },
   "Select": {
+    "--terra-select-background-color": "#fff",
     "--terra-select-focus-animation-background": "none",
     "--terra-select-focus-background-start": "0 0",
     "--terra-select-input-border-color": "#dedfe0",
@@ -717,6 +718,7 @@
     "--terra-select-input-text-color": "#2d3539",
     "--terra-select-disabled-font-color": "#b2b5b6",
     "--terra-select-menu-background-color": "#fff",
+    "--terra-select-menu-input-border-color": "#b2b5b6",
     "--terra-select-menu-border-raidus": "0",
     "--terra-select-menu-box-shadow": "0 3px 6px 0 rgba(0, 0, 0, 0.25)",
     "--terra-select-menu-bottom-padding": "0.214rem",
