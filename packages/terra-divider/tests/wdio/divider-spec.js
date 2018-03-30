@@ -1,5 +1,5 @@
 /* global browser, Terra */
-const viewports = Terra.viewports('tiny', 'medium');
+const viewports = Terra.viewports('medium');
 
 describe('Divider', () => {
   describe('Default', () => {
