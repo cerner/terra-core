@@ -7,5 +7,10 @@ describe('Divider', () => {
 
     Terra.should.beAccessible({ viewports });
     Terra.should.matchScreenshot({ viewports });
+
+    Terra.should.themeEachCustomProperty({
+      '--terra-divider-border-color': 'blue',
+      '--terra-divider-border-top-width': '10px',
+    });
   });
 });
