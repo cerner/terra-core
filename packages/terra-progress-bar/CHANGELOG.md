@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.3.0 - (March 30, 2018)
+------------------
 ### Changed
 * Added new prop hasGradient
 

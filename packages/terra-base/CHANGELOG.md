@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+3.3.0 - (March 30, 2018)
+------------------
 ### Removed
 * Removed unused terra-mixins package
 * Removed out-dated theme mixin

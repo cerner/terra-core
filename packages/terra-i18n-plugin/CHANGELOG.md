@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.1.0 - (March 30, 2018)
+------------------
 ### Added
 * Add deprecation warning to redirect use from terra-i18n-plugin to the terra-i18n aggregation-translations setup helper
 

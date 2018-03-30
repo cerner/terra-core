@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+2.4.0 - (March 30, 2018)
+------------------
 ### Changed
 * Update lower bound version of moment.js to latest release
 
