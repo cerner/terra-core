@@ -1,6 +1,6 @@
-import homeReadMe from './README.md';
-import componentConfig from './generatedComponentConfig';
-import './packages/terra-site/src/cerner-mock-theme.scss';
+import homeReadMe from '../README.md';
+import componentConfig from '../generatedComponentConfig';
+import '../packages/terra-site/src/cerner-mock-theme.scss';
 
 const siteConfig = {
   /* The component configuration. */
@@ -18,6 +18,8 @@ const siteConfig = {
 
     /* The title for the site header. */
     title: 'Terra Core',
+
+    defaultTheme: 'Default Theme',
 
     /* The themes to toggle in the site. */
     themes: {
