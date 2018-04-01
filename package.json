@@ -48,7 +48,7 @@
     "danger": "danger",
     "deploy": "webpack --config webpack.prod.config -p && gh-pages -d build",
     "dependency-markdown": "node scripts/dependency-markdown-generator/DependencyMarkdownGenerator.js",
-    "generate-config": "generate-config -s 'packages/terra-site/src/examples/**/+(Icon!(*Navigation|*Routes|*Tabs)|*Index).jsx' -s 'packages/terra-*/tests/{nightwatch,nightwatch/*}/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)' -s 'packages/terra-table/tests/nightwatch/*/components/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)'",
+    "generate-config": "generate-config -o 'dev-site-config' -s 'packages/terra-site/src/examples/**/+(Icon!(*Navigation|*Routes|*Tabs)|*Index).jsx' -s 'packages/terra-*/tests/{nightwatch,nightwatch/*}/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)' -s 'packages/terra-table/tests/nightwatch/*/components/!(*-spec|*Template|common|MockComponent|SignatureConstants)+(.jsx|.js)'",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.1.2 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest",
@@ -64,9 +64,9 @@
     "postinstall:project": "link-parent-bin && npm run compile && npm run bootstrap",
     "publish": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
     "postpublish": "npm run dependency-markdown && git add --all && git commit -m 'Updated DEPENDENCIES.md files'",
-    "start": "webpack-serve --config webpack.config ",
+    "start": "start:terra-dev-site",
     "start:build": "npm run generate-config && npm run start",
-    "start:express": "node scripts/express/app.js",
+    "start:express": "start:express",
     "test": "jest && nightwatch && wdio",
     "wdio": "wdio"
   },
@@ -116,7 +116,6 @@
     "wdio-visual-regression-service": "^0.8.0",
     "webdriverio": "4.9.9",
     "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13",
-    "webpack-serve": "0.3.0"
+    "webpack-cli": "^2.0.13"
   }
 }
