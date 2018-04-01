@@ -46,6 +46,13 @@ import Spacer from 'terra-spacer';
 <Spacer paddingTop="large" paddingBottom="large+1" paddingLeft="large+2" marginLeft="large+4" marginRight="large+3">
   <Image src="someImageSource" alt="example image" />
 <Spacer/>
+
+// Shorthand consumption
+
+<Spacer padding="large none large+1 large+2" margin="none large+3 none large+4">
+  <Image src="someImageSource" alt="example image" />
+<Spacer/>
+
 ```
 
 ## Component Features

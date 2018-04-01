@@ -4,8 +4,17 @@ import classNames from 'classnames/bind';
 import 'terra-base/lib/baseStyles';
 import styles from './Spacer.scss';
 
+import { mapShorthandToObject, shorthandValidator } from './_spacerShorthandUtils';
+import { SpacerSizes, SpacerClassMappings } from './_spacerConstants';
+
 const cx = classNames.bind(styles);
-const values = ['none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'];
+
+/*
+  NOTE: this is needed in order to ensure that the types `marginTop`, `marginRight`, `paddingTop`, `paddingRight`, etc. are recognized by terra-props-table
+  as defined. Currently, simply putting `Object.values(SpacerSizes)` causes all other `marginX` and `paddingX` props to be recognized as `undefined`
+  in the PropsTable.
+*/
+const arrayOfTypes = [...Object.values(SpacerSizes)];
 
 const propTypes = {
   /**
@@ -13,37 +22,45 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * Sets margin in a syntax similar to the standard CSS spec https://developer.mozilla.org/en-US/docs/Web/CSS/margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
+   */
+  margin: shorthandValidator,
+  /**
    * Sets top margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginTop: PropTypes.oneOf(values),
+  marginTop: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets bottom margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginBottom: PropTypes.oneOf(values),
+  marginBottom: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets left margin One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginLeft: PropTypes.oneOf(values),
+  marginLeft: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets right margin. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  marginRight: PropTypes.oneOf(values),
+  marginRight: PropTypes.oneOf(arrayOfTypes),
+  /**
+   * Sets padding in a syntax similar to the standard CSS spec https://developer.mozilla.org/en-US/docs/Web/CSS/padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
+   */
+  padding: shorthandValidator,
   /**
    * Sets top padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingTop: PropTypes.oneOf(values),
+  paddingTop: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets bottom padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingBottom: PropTypes.oneOf(values),
+  paddingBottom: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets left padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingLeft: PropTypes.oneOf(values),
+  paddingLeft: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets right padding. One of 'none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'.
    */
-  paddingRight: PropTypes.oneOf(values),
+  paddingRight: PropTypes.oneOf(arrayOfTypes),
   /**
    * Sets the display to be inline-block.
    */
@@ -51,22 +68,26 @@ const propTypes = {
 };
 
 const defaultProps = {
-  marginTop: 'none',
-  marginBottom: 'none',
-  marginRight: 'none',
-  marginLeft: 'none',
-  paddingTop: 'none',
-  paddingBottom: 'none',
-  paddingLeft: 'none',
-  paddingRight: 'none',
+  margin: undefined,
+  marginTop: SpacerSizes.NONE,
+  marginBottom: SpacerSizes.NONE,
+  marginRight: SpacerSizes.NONE,
+  marginLeft: SpacerSizes.NONE,
+  padding: undefined,
+  paddingTop: SpacerSizes.NONE,
+  paddingBottom: SpacerSizes.NONE,
+  paddingLeft: SpacerSizes.NONE,
+  paddingRight: SpacerSizes.NONE,
   isInlineBlock: false,
 };
 
 const Spacer = ({
+  margin,
   marginTop,
   marginBottom,
   marginLeft,
   marginRight,
+  padding,
   paddingTop,
   paddingBottom,
   paddingLeft,
@@ -74,30 +95,36 @@ const Spacer = ({
   isInlineBlock,
   children,
   ...customProps
- }) => {
-  const spacingSizes = {
-    none: 'none',
-    'small-2': 'small-minus-2',
-    'small-1': 'small-minus-1',
-    small: 'small',
-    medium: 'medium',
-    large: 'large',
-    'large+1': 'large-plus-1',
-    'large+2': 'large-plus-2',
-    'large+3': 'large-plus-3',
-    'large+4': 'large-plus-4',
+}) => {
+  const marginShorthand = margin ? mapShorthandToObject('margin', margin) : {};
+  const paddingShorthand = padding ? mapShorthandToObject('padding', padding) : {};
+
+  const marginAttributes = {
+    marginTop,
+    marginRight,
+    marginBottom,
+    marginLeft,
+    ...marginShorthand,
+  };
+
+  const paddingAttributes = {
+    paddingTop,
+    paddingRight,
+    paddingBottom,
+    paddingLeft,
+    ...paddingShorthand,
   };
 
   const SpacerClassNames = cx([
     'spacer',
-    `margin-top-${spacingSizes[marginTop]}`,
-    `margin-bottom-${spacingSizes[marginBottom]}`,
-    `margin-left-${spacingSizes[marginLeft]}`,
-    `margin-right-${spacingSizes[marginRight]}`,
-    `padding-top-${spacingSizes[paddingTop]}`,
-    `padding-bottom-${spacingSizes[paddingBottom]}`,
-    `padding-left-${spacingSizes[paddingLeft]}`,
-    `padding-right-${spacingSizes[paddingRight]}`,
+    `margin-top-${SpacerClassMappings[marginAttributes.marginTop]}`,
+    `margin-bottom-${SpacerClassMappings[marginAttributes.marginBottom]}`,
+    `margin-left-${SpacerClassMappings[marginAttributes.marginLeft]}`,
+    `margin-right-${SpacerClassMappings[marginAttributes.marginRight]}`,
+    `padding-top-${SpacerClassMappings[paddingAttributes.paddingTop]}`,
+    `padding-bottom-${SpacerClassMappings[paddingAttributes.paddingBottom]}`,
+    `padding-left-${SpacerClassMappings[paddingAttributes.paddingLeft]}`,
+    `padding-right-${SpacerClassMappings[paddingAttributes.paddingRight]}`,
     { 'is-inline-block': isInlineBlock },
     customProps.className,
   ]);
@@ -105,6 +132,7 @@ const Spacer = ({
   return <div {...customProps} className={SpacerClassNames}>{children}</div>;
 };
 
+Spacer.Sizes = SpacerSizes;
 Spacer.propTypes = propTypes;
 Spacer.defaultProps = defaultProps;
 

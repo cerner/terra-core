@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+2.6.1
+------------------
+### Changed
+* Added `padding` and `margin` shorthand props.
 
 2.6.0 - (April 20, 2018)
 ------------------
@@ -18,6 +22,7 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
+=======
 
 2.3.0 - (March 30, 2018)
 ------------------
